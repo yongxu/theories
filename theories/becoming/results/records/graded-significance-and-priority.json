@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-20T12:09:50+00:00",
+  "reviewed_at_utc": "2026-10-22T14:40:29+00:00",
   "statement": {
     "en": "Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides transfers C leaves mixed, and a threshold of sufficiency ties above it.",
     "zh": "等级不变则“是否算数”不变，反之不然。在延续的层级上，严格递增的变换把每个扩大排得更高，直到某界严格凹的变换决定 C 留为混合的转移，充足的阈值在其之上持平。"
@@ -228,7 +228,6 @@
         "Becoming.Weighting.concave_gap",
         "Becoming.Weighting.cond_mul",
         "Becoming.Weighting.cond_one_pos",
-        "Becoming.Weighting.cond_pos",
         "Becoming.Weighting.exceeds_or_includes",
         "Becoming.Weighting.le_of_strict",
         "Becoming.Weighting.level",
@@ -238,10 +237,6 @@
         "Becoming.Weighting.mixed_either_way",
         "Becoming.Weighting.mul_lt_mul_pos",
         "Becoming.Weighting.neutral_ranks_by_number",
-        "Becoming.Weighting.outweighing",
-        "Becoming.Weighting.outweighing_positive",
-        "Becoming.Weighting.outweighing_term_at",
-        "Becoming.Weighting.outweighing_term_le_one",
         "Becoming.Weighting.outweighs",
         "Becoming.Weighting.perm4",
         "Becoming.Weighting.prior",
@@ -284,7 +279,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "bad83c9cbc1745a3caa9df153bfaa5b579cb62e3a85c1ecb2fc54d8b13abe485"
+      "sha256": "3958644149c0a0dec9df9a38f00a8082c10ebe687b79a6d50c9ca5ac9725e6de"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T120729.506720Z/verification.json",
@@ -309,7 +304,7 @@
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "3af7b5f0d97a9ed110f6252830d56c971af85d179079366c02cd156220e8b129"
+      "sha256": "2292c4759386ae55d7692830baad967472f0dcba45d6e438ff6db7a2e2b147a3"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -327,12 +322,17 @@
       "role": "receipt",
       "sha256": "67b039a811c584e6830e9534e064ca22c400d553ded709a4942f7eb48aea2dfc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
+      "role": "receipt",
+      "sha256": "f4e648fa8c916a7f20628de0d5ade39ddbb197b2d531b1f4fb21f57968a97341"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -342,6 +342,10 @@
     {
       "en": "20 October 2026: added (IV2), graded significance, standing against status, and priority and sufficiency on levels of continuation, after a literature check (significance review, section \"the de se question and graded significance\"); readings D60; study section 260.",
       "zh": "2026年10月20日：新增（IV2），分级的意义、“是否算数”与“算多少”、延续层级上的优先与充足，此前做了文献核查（显著性审查“从己问题与分级的意义”一节）；读法 D60；研究第 260 节。"
+    },
+    {
+      "en": "22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.",
+      "zh": "2026年10月22日，VT1：Becoming.Weightings 扩充（净加权、对表述的排序、比值之内的权重）；被去掉的五项声明（outweighing 及其四条引理）移出引用列表；本记录的规律不变；研究第 367 节。"
     }
   ]
 }

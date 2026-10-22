@@ -893,6 +893,8 @@
 | [跨立场的一步达到哪里](../results/records/what-the-step-across-standpoints-reaches.md) | 不加前提的定理 | — | §6.5 |
 | [扩大即每个加权所排者](../results/records/widening-as-what-every-weighting-ranks.md) | 在所述前提下的定理 | 有限列举；接纳可判定 | §6.1 |
 | [分级的意义与优先](../results/records/graded-significance-and-priority.md) | 在所述前提下的定理 | 有限列举；层级为所接纳的步 | §6.5 |
+| [缩小排在其扩大之上](../results/records/a-narrowing-above-its-widening.md) | 在所述前提下的定理 | 有限列举；接纳可判定 | §6.5 |
+| [比值之内的权重越过它即一致](../results/records/weights-within-a-ratio-agree-past-it.md) | 在所述前提下的定理 | 有限列举；接纳可判定 | §6.5 |
 | [合起来的耦合及于什么](../results/records/what-pooled-coupling-reaches.md) | 在所述前提下的定理 | 给出的交换之律 | §7.3 |
 | [一组的动作回应什么](../results/records/what-a-pools-acts-respond-to.md) | 在所述前提下的定理 | 给出的交换之律 | §7.4 |
 | [训练安装什么](../results/records/what-training-installs.md) | 在所述前提下的定理 | 读已立者的律；经每个候选自身的进程读它的训练；闭包之律需经耦合而读与可行；超出之律需每个候选进程中的其前提 | §7.1、§7.7 |
@@ -982,11 +984,15 @@
 <a id="t5-伦理的次序为每个评价者所共有"></a>
 ### T5. 伦理的次序为每个计入所涉一切的评价者所共有
 
-*主张。* 称扩大更好，除了对所计入者作正的评价之外不需要别的。扩大恰是每个正的加权都排得更高者，也是每个随接纳增加的序（可加或不可加）都排得更高者；每个混合的比较都被某个正的加权排向任一方。所以在各自正地计入所涉一切的评价者之间，分歧只能落在混合的比较上；把缩小排在其扩大之上，来自负的评价（恶意、嫉妒、不平等厌恶、位置关切）或误读了情形。这是分歧能落在哪里的界限，不是它落在哪里的预测：同时计数（等权重）的评价者，在每个有较大一方的混合比较上都一致，他们的分歧聚在数目相等处。
+*主张。* 称扩大更好，除了对所计入者作正的评价之外不需要别的。扩大恰是每个正的加权都排得更高者，也是每个随接纳增加的序（可加或不可加）都排得更高者；每个混合的比较都被某个正的加权排向任一方。所以在各自正地计入所涉一切的评价者之间，分歧只能落在混合的比较上；把缩小排在其扩大之上，来自负的评价（恶意、嫉妒、不平等厌恶、位置关切），或误读、被框定的情形，别无其他。这是分歧能落在哪里的界限，不是它落在哪里的预测。权重彼此在比值 `r` 之内的评价者，在较大一方独有者多于另一方独有者 `r` 倍的每个混合比较上都一致；计数（等权重，`r = 1`）的评价者，在每个有较大一方的混合比较上都一致，他们的分歧聚在数目相等处。
 
-- *地位。* 归约对列出的项与二值接纳已证（`Weighting.widens_iff_every_positive`、`Weighting.widens_iff_every_of_class`、`Weighting.mixed_either_way`、`Weighting.weighed_lt_of_widens`；在网上 `Web.widens_iff_every_weighting`）。评价者正地评价，是 C 的前提挪了位置，不是得到根据（§8.5）。经验主张分两部分，地位不同。*落点预测*，即结构预测分歧落在哪里（混合比较有争议，扩大没有），由 VD1 在 96 个 AI 评价者上检验，对他们被驳倒；它从论题中撤回，因为这些评价者计数，裁定大小配齐的混合比较几乎与扩大一样一致。*界限*，即正地计入所涉一切、正确读了情形的评价者不把缩小排在其扩大之上，对 96 个 AI 评价者得到 VD2 的支持。VD2 与排序分开地测量每个评价者对每个形成的正负号。在该正负号强为正之处，没有一个模型在超过 0.7% 的读对情形中选较窄方案。在每个评价者之内，违反在其自己的正负号不为正之处约为强为正之处的十二倍。但界限的完整形式只对六个模型中的五个成立，测得的收益并不可靠地付诸排序，且两个事先未点名的立足点也给出收益。VD1 只在事后找到负评价，其界限规则（A1、A2、R1）失败。界限对一般的评价者仍是猜想；其例外对这些评价者已有测得的内容（证据见下；[实验](../../../experiments/valuer-agreement/README.md)，[研究 §297](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)，[研究 §330](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#330-the-sign-measured-apart-from-the-ranking-vd2)）。
-- *禁止。* 对所涉一切的评价测得为正、正确读了情形的评价者，把缩小排在其扩大之上；扩大比较上的分歧与混合比较上一样稳固。
-- *驳倒它的观察。* 这样的排序多于误读率，且在与该排序分开的任务中测不到负的评价。负评价的例外只有在与它要解释的排序分开测量时才有内容；若从排序本身读出，论题就不可证伪。
+- *地位。* 归约对列出的项与二值接纳已证（`Weighting.widens_iff_every_positive`、`Weighting.widens_iff_every_of_class`、`Weighting.mixed_either_way`、`Weighting.weighed_lt_of_widens`；在网上 `Web.widens_iff_every_weighting`）。评价者正地评价，是 C 的前提挪了位置，不是得到根据（§8.5）。经验主张现在是三条定理与三个有待测量的前提（VT1，[研究 §367](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#367-the-valuer-tests-as-theorems-vt1)，[缩小排在其扩大之上](../results/records/a-narrowing-above-its-widening.md)，[比值之内的权重越过它即一致](../results/records/weights-within-a-ratio-agree-past-it.md)）。VD1 与 VD2 在 AI 角色上检验的，正是前提成立时这些定理所定者。
+  - *例外是定理。* 把评价者的判断看作对表述的排序：表述是带着措辞与次序的方案，各保住一组形成。设它把一个缩小排在其仅多一个形成的扩大之上。那么，要么它没有按自己对所保集合的次序来排这一对（误读或框定：表述不变在这一对上不成立），要么该形成对它的权重为零或以下（`Weighting.narrower_above_net`；对在所加形成处递增的任何次序，`Weighting.reads_increasingAt`）。读对时，它恰在该形成权重低于零处把缩小排在上面，为零则两者都不在上（`Weighting.reads_ranksNet`、`Weighting.ranksNet_ties`）。两个原因各自都足够：即使该形成权重高于零，框定也足以造成（`Framed.framing_alone`）。可加的评价按所加形成的权重来排仅多一个形成的扩大，不论两方案另外保住什么（`Weighting.ranksNet_widensBy`）。读对且每个形成都高于零时，它不把任何扩大排在下面，不论多一个形成还是多个（`Weighting.reads_ranksNet_widens`）。
+  - *分开测得的正负号在一个前提下预测排序。* 读对时，次序从较窄方案到较宽方案的增量的正负号决定裁定（`Weighting.reads_increment`）。所以不出示方案而测得的正负号，恰在它是这一对语境中该增量的正负号时预测排序。可加的评价把正负号从一个语境带到每个语境（`Weighting.ranksNet_increment_alike`）。相互作用的评价则不必：在 `Interacting` 中，一个形成的终止单独看是损失，与另一个并存时是收益，恰按集合读的评价者就把缩小排在上面（`Interacting.increment_differs`；没有可加的评价给出这一次序，`Interacting.not_net`）。分开的评价与联合的评价正是在这一前提上分开（Hsee 1996）。VD2 的规则测的就是它：X1s 与 X2 通过，说明它在正负号强为正之处成立；X3 失败，说明它对收益不成立。
+  - *落点在权重不分散之处成立。* 设两个方案，一个保住另一个没有的 `p` 个形成，另一个保住 `q` 个。权重彼此在比值 `r` 之内的每个正加权，恰在 `p > r q` 时把前者排得更高；在边界上，偏向后者的加权使两者持平（`Weighting.every_within_iff`、`Weighting.tilted_ties`）。两个这样的评价者把一对混合比较排成相反方向，恰当 `r` 同时超过 `p / q` 与 `q / p`（`Weighting.opposite_within_iff`）；等权重（`r = 1`）从不如此（`Weighting.neutral_ranks_by_number`）。VD1 的混合对中 `p : q` 为 2 : 1（M1）、3 : 1（M2）与 1 : 1（M0），所以其上的分歧需要权重分散超过 2、3 与 1。运行之后读，VD1 的平均分歧依这些阈值排列：M0 为 0.27，M1 为 0.10，M2 为 0.08。在 M1 中读对而选较小方案、且每个权重都为正，需要权重分散超过两倍，所以“评价者计数”说的是他们的权重大多分散不到两倍，不是结构没能界定分歧落在哪里。
+  - *仍属经验的*，是实际的评价者是否满足三个前提。表述不变由每个判断自己的读出列表、并对同一对改写措辞或次序来测。联系由在透明的表述中对仅差一个形成的一对排序、与分开测得的正负号并列来测。分散由分级的正负号（轻微损失对严重损失）来测。VD1 与 VD2 对 96 个 AI 评价者测了这些；它们在立足点提示下的判断是角色扮演，不是自己的评价。界限对一般的评价者仍是猜想；其例外对这些评价者已有测得的内容（证据见下；[实验](../../../experiments/valuer-agreement/README.md)，[核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#valuer-theorems-check)，[研究 §297](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)，[研究 §330](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#330-the-sign-measured-apart-from-the-ranking-vd2)）。
+- *禁止。* 对所涉一切的评价测得为正、正确读了情形的评价者，把缩小排在其扩大之上；扩大比较上的分歧与混合比较上一样稳固；权重测得彼此在比值 `r` 之内的评价者，在一方独有者多于另一方独有者 `r` 倍处，把一对混合比较排成相反方向。
+- *驳倒它的观察。* 这样的排序多于误读率，且在与该排序分开的任务中测不到负的评价。按这些定理，这样的排序不违反任何规律：情形被误读或框定了，或分开测得的正负号不是联合增量的正负号。所以它驳倒的是论题关于计入所涉一切的评价者满足这些前提的主张，不是归约。负评价的例外只有在与它要解释的排序分开测量时才有内容；若从排序本身读出，论题就不可证伪。
 - *至今的证据。* VD1，在任何模型调用前冻结：六个家族的六个模型（DeepSeek、GLM、Qwen、GPT-6 luna、Claude Haiku、Nemotron），在十六个立足点提示下，共 96 个评价者。比较的是十六个决策中的成对方案，每对的类别由各方案保住什么算出，混合对与扩大对按大小配齐。每条冻结规则都失败，含不含理论自己的家族都一样。
   - *扩大并非每个立足点都认同。* 在 W1 与 W2 的判断中，较窄方案分别占 6.3% 与 3.3%；六个模型中有三个超过冻结的 3%。在自己列出的集合正确读出扩大的判断中，按模型为 2.9–10.8%，冻结界限是 1%。
   - *违反集中。* 大多落在提示本身设定了负权重的两个立足点：认为“进步就是让过时的东西让位”的城市规划者（该立足点扩大判断的 41.7%），以及把人们珍视之物看作“杂物”的工程师（14.1%）。其余十四个立足点各自至多 4.2%。
@@ -1003,7 +1009,7 @@
     - *负的立足点不只是点名者（S2 失败）。* 佛教提示（“执着于事物”）下 6.3% 的回答是收益，多为 Claude Haiku；自由至上主义提示下 10.1%，多为 Nemotron 与 GLM，针对机构与承袭之物。
     - *评判者分量重。* 它们把 428 个读对违反中的 73 个判为误读；没有它们，强为正格子对 GLM（1.3%）与 Nemotron（2.4%）失败。裁定之后随机读 16 个被判误读者，全都错述了方案。
     - *它表明什么。* 例外对这些评价者有测得的内容：违反来自他们自己分开测得的非正正负号，强为正的正负号除误读外不被逆排。反方向较弱：非正的正负号常常并不产生违反，分开的评价与联合的排序有别，如 Hsee 的联合与分开评价。
-  - *开放。* 人类评价者；在同一比较的用语中测量正负号的检验；Claude Haiku 在 VD1 中的排序与其 VD2 正负号相悖之处的交叉表述扩大（次要规则 X1s′ 只在那里失败）。
+  - *开放。* 人类评价者，并测其三个前提；在同一比较的用语中测量正负号的检验；Claude Haiku 在 VD1 中的排序与其 VD2 正负号相悖之处的交叉表述扩大（次要规则 X1s′ 只在那里失败）；分歧的评价者所占比例与其权重分散程度的关系，即在可交换的权重上的概率形式。
 
 ### T6. 只有经耦合入断裂者的，才能预先看到断裂
 
@@ -1037,7 +1043,7 @@
 | 实质上已知 | 本理论超出来源领域的主张 | 跨领域的预测 | 地位 |
 |---|---|---|---|
 | 部分观察下的监督控制（Ramadge 与 Wonham 1987；Lin 与 Wonham 1988；[监督检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#oversight-check)） | 奖励、训练、自然选择（Price 的选择项）、市场价格与投票是同一种经耦合的选择，有同一种失败方式：耦合之外被同样选择；有余地处被抽干；只以阈值耦合处不被看见地断裂 | 每个领域中抽干都落在余地之处：竞争性状的选择耗尽竞争者共享的资源而不耗尽不共享者（Rankin、Bargum 与 Kokko 2007）；可替代被定价投入的未定价条件被汲尽，其他不被；训练中见 T3 | 规律已证；跨领域为一条律是猜想（T3） |
-| 帕累托一致：帕累托关系是所有排序所共有者（Sen 1970、1977）；机会集的单调性（Pattanaik 与 Xu 1990） | 伦理的次序不过是把这一致用于能形成者：C 不是又一个价值，而是每个正地计入所涉一切的评价者已经持有的，其余都是混合的 | 在正地计入所涉一切的评价者之间，分歧只能落在混合比较上：结构界定它能落在哪里，不说它落在哪里（T5） | 归约已证；落点预测由 VD1 检验，对其评价者被驳倒（他们计数）；界限是猜想，VD2 在分开测得正负号下对其评价者给以支持（强为正格子与评价者内风险比通过；完整格子对六个模型中的一个失败，测得的收益并不可靠地付诸排序） |
+| 帕累托一致：帕累托关系是所有排序所共有者（Sen 1970、1977）；机会集的单调性（Pattanaik 与 Xu 1990） | 伦理的次序不过是把这一致用于能形成者：C 不是又一个价值，而是每个正地计入所涉一切的评价者已经持有的，其余都是混合的 | 在正地计入所涉一切的评价者之间，分歧只能落在混合比较上：结构界定它能落在哪里，不说它落在哪里（T5） | 归约已证；例外与落点在三个可测的前提下已证（表述不变、分开测得的正负号与联合增量相联、权重分散；VT1）；不带分散前提的落点预测由 VD1 检验，对其评价者被驳倒（他们计数）；界限是猜想，VD2 在分开测得正负号下对其评价者给以支持（强为正格子与评价者内风险比通过；完整格子对六个模型中的一个失败，测得的收益并不可靠地付诸排序） |
 | Landauer 原理与 Bennett 的历史带（Landauer 1961；Bennett 1973） | 计算、热、灭绝与遗忘中的不可逆是一回事，即构形的合并（`Law.lossless_iff_returns`、`Law.loss_needs_merge`、`Law.Lossless.narrowing_spreads`、`Law.withHistory_never_returns`） | 有界的记录者不能保存其全部历史而持续；这些是计数律，在一个领域中的内容只在于找出合并，作为论题禁止得很少，所以作为律保留，不作为猜想陈述 | 已证；物理一致（Bérut 等 2012 测得 Landauer 界） |
 | Zhuang 与 Hadfield-Menell（2020）定理 1 | 这就是生态中的过冲、市场中的外部性与机构中的 Goodhart 定律：有余地时最优者的一条律，对每个升高的序成立，退化读作被打断的依存 | 排在奖励之后的副作用项在有余地处什么也保护不了，设在需要处的约束被用到需要：存量唯一的保护是一个限度、目标随捕获升高之处，存量被保持在限度而不在其上；受约束的强化学习中约束最终是起作用的 | 最优之律已证；跨领域是猜想（T3），在模拟中有支持（MQ1 B5） |
 
@@ -1113,15 +1119,15 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261022T142108.117415Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 366 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#366-what-cancer-is-and-what-keeps-a-part-from-turning-back-ca1)）。
+**当前回执**是运行 [`20261022T143810.042893Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 367 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#367-the-valuer-tests-as-theorems-vt1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 293 个模块，12,894 条定理 |
+| 核心模块（含根 `Becoming`） | 293 个模块，12,959 条定理 |
 | 实例模块 | 7 个模块，581 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 309 个模块，13,728 条定理 |
+| 闭包（核心、环与根基） | 309 个模块，13,793 条定理 |
 | 审计的脊柱声明 | 18,702 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 204 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |

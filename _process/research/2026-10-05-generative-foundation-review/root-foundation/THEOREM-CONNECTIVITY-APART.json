@@ -2576,6 +2576,61 @@
    "module": "Becoming.Founding",
    "category": "model-witness",
    "reason": "with the next founders from the variants, the mean founding value falls although selection among wholes goes for holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Weighting.narrower_above_net": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a ranking of presentations putting a narrowing above its widening by one item does not read the pair as a net weighting ranks the sets, or the item weighs at zero or below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a net weighting puts a narrowing above its widening by one item exactly where the item weighs below zero: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet_widens": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right on every pair, a net weighting with every item above zero never ranks a widening below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_increment": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a sign measured apart fixes the verdict exactly where it is the sign of the increment in the pair's context: a law of any order on courses, any ranking of any presentations and any sign, with no world"
+  },
+  "Becoming.Weighting.ranksNet_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a net weighting ranks a widening by one item weighing zero neither above nor below: a law of any finite listing and any net weighting, with no world"
+  },
+  "Becoming.Weighting.every_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "every positive weighting within n / d ranks a above b exactly where n q < d p: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.opposite_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "two positive weightings within n / d rank a pair opposite ways exactly where d q < n p and d p < n q: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.tilted_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "on the boundary n q = d p the weighting tilted toward the smaller side ties the two courses: a law of any finite listing and any ratio, with no world"
+  },
+  "Becoming.Weighting.widensOn_of_widensBy": {
+   "module": "Becoming.Weightings",
+   "category": "support",
+   "reason": "a widening by one item alone is a widening: a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.Framed.framing_alone": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "one item weighing one for and nothing against, where a framed presentation keeping nothing is ranked above an unframed one keeping the item; a fact about one constructed ranking, not a law of the unfolding"
+  },
+  "Becoming.Interacting.not_net": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "two items, adding one raising a course keeping nothing and lowering one keeping the other, an order no net weighting gives; a fact about one constructed order, not a law of the unfolding"
   }
  },
  "instances": {
