@@ -1,0 +1,345 @@
+{
+  "segments": [
+    {
+      "seg_id": "en0273",
+      "referents": [
+        {
+          "span": "the clearer",
+          "sort": "relatum or role",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "A",
+          "tags": ["centre/will"]
+        }
+      ],
+      "omissions": ["R", "M", "bears", "offers", "rep", "rs", "more", "m", "later"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "en0234",
+      "referents": [
+        {
+          "span": "determinacy",
+          "sort": "claim or predicate",
+          "status": "matched",
+          "counterpart": "Becoming.Determined P",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "the record",
+          "sort": "history or run",
+          "status": "matched",
+          "counterpart": "r; also rendered by the run and its whole history",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "a move",
+          "sort": "move",
+          "status": "matched",
+          "counterpart": "b; also rendered by that move and one's own act",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "outcome",
+          "sort": "configuration",
+          "status": "matched",
+          "counterpart": "u; also rendered by what one's own act would have done otherwise",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "there",
+          "sort": "configuration",
+          "status": "matched",
+          "counterpart": "s; also rendered by the configuration",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "one",
+          "sort": "relatum or role",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "A",
+          "tags": ["centre/will"]
+        },
+        {
+          "span": "what it did",
+          "sort": "move",
+          "status": "matched",
+          "counterpart": "r.act n in the U1 body of Becoming.Run.Takes",
+          "rule": "M5",
+          "class": "none",
+          "tags": []
+        }
+      ],
+      "omissions": ["P", "t", "untaken", "x", "y", "two"],
+      "connective_mismatches": [],
+      "predicate_excess": [
+        {
+          "span": "keeping its whole history",
+          "note": "Attributes history retention to the matched run; the supplied statement and U1 contain no retention relation."
+        }
+      ]
+    },
+    {
+      "seg_id": "en0289",
+      "referents": [
+        {
+          "span": "the coupling closure",
+          "sort": "claim or predicate",
+          "status": "matched",
+          "counterpart": "Becoming.WithinClosure (L.CoupledFrom W obs) f g; also the antecedent of the final it",
+          "rule": "M5",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "it",
+          "sort": "relatum or role",
+          "status": "matched",
+          "counterpart": "g, reading the first it as the participant held within the closure",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "observation",
+          "sort": "claim or predicate",
+          "status": "matched",
+          "counterpart": "obs",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        }
+      ],
+      "omissions": ["C", "L", "W", "f", "within"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "en0450",
+      "referents": [
+        {
+          "span": "balance",
+          "sort": "claim or predicate",
+          "status": "matched",
+          "counterpart": "L.Balances W",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "nothing",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "0 in unfed",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "a draw",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "L.taken (T + j) c",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "everything drawn before it",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "Becoming.drawnBefore (fun i => L.taken (T + i) c) j",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "the starting stock",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "W.level T c; also rendered by a stock",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "half the starting stock",
+          "sort": "amount",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        },
+        {
+          "span": "every step",
+          "sort": "step",
+          "status": "matched",
+          "counterpart": "T + j",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "n",
+          "sort": "step",
+          "status": "matched",
+          "counterpart": "n",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "2^n − 1",
+          "sort": "amount",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        },
+        {
+          "span": "2",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "2 in 2 ^ n",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "1",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "1 in W.level T c + 1",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        }
+      ],
+      "omissions": ["F", "C", "c", "T"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "en0179",
+      "referents": [
+        {
+          "span": "a model of structure",
+          "sort": "map, lumping or feature",
+          "status": "matched",
+          "counterpart": "π; also described as a lumping and a model of change",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "structure",
+          "sort": "claim or predicate",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        },
+        {
+          "span": "change",
+          "sort": "law or process",
+          "status": "matched",
+          "counterpart": "Becoming.Law.process next",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "the step",
+          "sort": "map, lumping or feature",
+          "status": "matched",
+          "counterpart": "next",
+          "rule": "M1",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "two",
+          "sort": "amount",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        },
+        {
+          "span": "one",
+          "sort": "amount",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        }
+      ],
+      "omissions": ["S", "K"],
+      "connective_mismatches": [
+        {
+          "kind": "iff_one_way",
+          "note": "The biconditional between GoAlike and Lumped is rendered as identity: the two are one."
+        }
+      ],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "en0009",
+      "referents": [
+        {
+          "span": "the one change",
+          "sort": "claim or predicate",
+          "status": "matched",
+          "counterpart": "The transition ¬W.active t f ∧ W.active (t + 1) f in the U1 body of Becoming.Web.Arises",
+          "rule": "M5",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "one",
+          "sort": "amount",
+          "status": "matched",
+          "counterpart": "1 in t + 1",
+          "rule": "M4",
+          "class": "none",
+          "tags": []
+        },
+        {
+          "span": "the tally",
+          "sort": "amount",
+          "status": "excess",
+          "counterpart": "",
+          "rule": "none",
+          "class": "E",
+          "tags": []
+        }
+      ],
+      "omissions": ["F", "C", "W", "t", "f", "g", "c"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    }
+  ]
+}
+
+── cx · ok · session 01a163dc-f27b-71f0-8762-58aadc2f19b9 · gpt-6-astra/high · bypass (mirrors Claude) · 311s · 31.4k tokens · 0 cmds
+continue: cx -r 01a163dc-f27b-71f0-8762-58aadc2f19b9 "…"
+log: /Users/ren/.cache/cx/runs/20261022-204626-61910

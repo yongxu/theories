@@ -1,0 +1,293 @@
+{
+  "segments": [
+    {
+      "seg_id": "zhrec0101",
+      "referents": [
+        {"span":"水平 l","sort":"map, lumping or feature","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"t","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"形成 f","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]},
+        {"span":"每项要求","sort":"relatum or role","status":"matched","counterpart":"Admits 的 U1 中满足 W.requires t f c 的 c","rule":"M5","class":"none","tags":[]},
+        {"span":"接纳形成 f","sort":"claim or predicate","status":"matched","counterpart":"W.Admits l t f","rule":"M1","class":"none","tags":[]},
+        {"span":"支持","sort":"claim or predicate","status":"matched","counterpart":"W.Supported t f","rule":"M1","class":"none","tags":[]},
+        {"span":"现有水平","sort":"map, lumping or feature","status":"matched","counterpart":"W.level t","rule":"M1","class":"none","tags":[]},
+        {"span":"现有水平的接纳","sort":"claim or predicate","status":"matched","counterpart":"W.Admits (W.level t) t f","rule":"M1","class":"none","tags":[]},
+        {"span":"更低的水平","sort":"map, lumping or feature","status":"matched","counterpart":"l'","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": [],
+      "connective_mismatches": [
+        {"kind":"iff_one_way","note":"supported_iff_admits 的 ↔ 写成“支持就是……”，采用普通系词陈述。"}
+      ],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0080",
+      "referents": [
+        {"span":"域之兼","sort":"relatum or role","status":"matched","counterpart":"w","rule":"M1","class":"none","tags":[]},
+        {"span":"步","sort":"step","status":"excess","counterpart":"所给 Whole 条目未提供定义体；可见 binders 和 U1 中没有步变量。","rule":"none","class":"E","tags":[]},
+        {"span":"运","sort":"claim or predicate","status":"excess","counterpart":"所给条目未展示 W.active 或 Whole 的定义体。","rule":"none","class":"E","tags":[]},
+        {"span":"其所合之待者","sort":"claim or predicate","status":"matched","counterpart":"parts : F → Prop","rule":"M1","class":"none","tags":[]},
+        {"span":"一运者","sort":"relatum or role","status":"excess","counterpart":"可见条目没有作为部分见证的 p；不能将该部分与整体 w 合并。","rule":"none","class":"R","tags":[]}
+      ],
+      "omissions": ["C","W"],
+      "connective_mismatches": [],
+      "predicate_excess": [
+        {"span":"所合","note":"部分角色可对应 parts，但所给 L(D) 未展示定义该角色的并合关系。"}
+      ]
+    },
+    {
+      "seg_id": "shuo0262",
+      "referents": [
+        {"span":"先取","sort":"world, web or flow","status":"matched","counterpart":"Becoming.Preemption.flow","rule":"M6","class":"none","tags":[]},
+        {"span":"一个所待","sort":"relatum or role","status":"matched","counterpart":"Preemption 构造中的 Unit 条件；RenewingAt U1 中的 c","rule":"M6","class":"none","tags":[]},
+        {"span":"已形成之待","sort":"claim or predicate","status":"matched","counterpart":"W.requires t g c","rule":"M5","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"matched","counterpart":"RenewingAt 的 t","rule":"M4","class":"none","tags":[]},
+        {"span":"一步之类","sort":"map, lumping or feature","status":"excess","counterpart":"所给 L(D) 没有按步归并的映射或读法。","rule":"none","class":"E","tags":["reading"]},
+        {"span":"资之者","sort":"relatum or role","status":"matched","counterpart":"Bool.true","rule":"M6","class":"none","tags":[]},
+        {"span":"资之者之事","sort":"value","status":"excess","counterpart":"键义为形成与步组成的事件；所给 L(D) 未形成相应 F × Nat 项。","rule":"none","class":"E","tags":[]},
+        {"span":"其步","sort":"step","status":"matched","counterpart":"Preemption 构造中的 0","rule":"M6","class":"none","tags":[]},
+        {"span":"在恒之内","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Web.RenewingAt 0 Bool.true","rule":"M1","class":"none","tags":[]},
+        {"span":"运","sort":"claim or predicate","status":"matched","counterpart":"W.active t f；Preemption.web.active 0 Bool.true","rule":"M5","class":"none","tags":[]},
+        {"span":"每一待","sort":"claim or predicate","status":"matched","counterpart":"RenewingAt U1 中的 W.requires t g c","rule":"M5","class":"none","tags":[]},
+        {"span":"持","sort":"claim or predicate","status":"matched","counterpart":"W.Kept t g c","rule":"M5","class":"none","tags":[]},
+        {"span":"剥","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Web.UnderminingAt 0 Bool.true","rule":"M1","class":"none","tags":[]},
+        {"span":"待此所待之物","sort":"relatum or role","status":"matched","counterpart":"RenewingAt U1 中的 g","rule":"M5","class":"none","tags":[]},
+        {"span":"有它之体","sort":"map, lumping or feature","status":"matched","counterpart":"Becoming.Preemption.drawerPart","rule":"M6","class":"none","tags":[]},
+        {"span":"此后能形成之一物","sort":"relatum or role","status":"matched","counterpart":"Bool.false","rule":"M6","class":"none","tags":[]},
+        {"span":"所能容者","sort":"relatum or role","status":"matched","counterpart":"Includes U1 中被 W.Admits (l' t) t f 约束的 f","rule":"M5","class":"none","tags":[]},
+        {"span":"所容","sort":"claim or predicate","status":"matched","counterpart":"Includes U1 中由 W.Admits 所给出的容纳条件","rule":"M5","class":"none","tags":[]},
+        {"span":"赅","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Preemption.web.Includes Becoming.Preemption.web.level l","rule":"M1","class":"none","tags":[]},
+        {"span":"狭","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Preemption.web.Widens l Becoming.Preemption.web.level","rule":"M1","class":"none","tags":[]},
+        {"span":"全行","sort":"history or run","status":"matched","counterpart":"Becoming.Preemption.web.level","rule":"M1","class":"none","tags":[]},
+        {"span":"全行之类","sort":"map, lumping or feature","status":"excess","counterpart":"所给 L(D) 没有全行的归并映射或读法。","rule":"none","class":"E","tags":["reading"]},
+        {"span":"恒持","sort":"claim or predicate","status":"matched","counterpart":"RenewingIn U1 中的 W.Renewed c","rule":"M5","class":"none","tags":[]},
+        {"span":"竭","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Preemption.web.ConsumingIn Bool.true","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["Pos","l","without","sig","unrestricted","p"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "zhrec0006",
+      "referents": [
+        {"span":"依存网","sort":"world, web or flow","status":"matched","counterpart":"W","rule":"M1","class":"none","tags":[]},
+        {"span":"一个规定","sort":"claim or predicate","status":"matched","counterpart":"p","rule":"M1","class":"none","tags":[]},
+        {"span":"之前","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"之后","sort":"step","status":"matched","counterpart":"t + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"matched","counterpart":"U1 中 t + 1 所表示的一步推进","rule":"M4","class":"none","tags":[]},
+        {"span":"开始成立","sort":"claim or predicate","status":"matched","counterpart":"Becoming.ComesToBe p t","rule":"M5","class":"none","tags":[]},
+        {"span":"不再成立","sort":"claim or predicate","status":"matched","counterpart":"Becoming.CeasesToBe p t","rule":"M5","class":"none","tags":[]},
+        {"span":"形成","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]},
+        {"span":"生起","sort":"claim or predicate","status":"matched","counterpart":"W.Arises t f","rule":"M1","class":"none","tags":[]},
+        {"span":"止息","sort":"claim or predicate","status":"matched","counterpart":"W.Ceases t f","rule":"M1","class":"none","tags":[]},
+        {"span":"依存","sort":"claim or predicate","status":"matched","counterpart":"W.requires x g c","rule":"M1","class":"none","tags":[]},
+        {"span":"依存的形成","sort":"claim or predicate","status":"matched","counterpart":"W.Forms t g c","rule":"M1","class":"none","tags":[]},
+        {"span":"消解","sort":"claim or predicate","status":"matched","counterpart":"W.Dissolves t g c","rule":"M1","class":"none","tags":[]},
+        {"span":"条件","sort":"relatum or role","status":"matched","counterpart":"c","rule":"M1","class":"none","tags":[]},
+        {"span":"不再作为条件而在","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Web.CeasesToStand 的谓词","rule":"M1","class":"none","tags":[]},
+        {"span":"变化","sort":"claim or predicate","status":"matched","counterpart":"change_readings 中 ComesToBe／CeasesToBe 给出的变化条件","rule":"M1","class":"none","tags":[]},
+        {"span":"活动","sort":"claim or predicate","status":"matched","counterpart":"W.active x f","rule":"M1","class":"none","tags":[]},
+        {"span":"水平","sort":"map, lumping or feature","status":"excess","counterpart":"所给 change_readings 结论被截断；可见部分及 U1 未展示 level 项。","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions": ["g"],
+      "connective_mismatches": [
+        {"kind":"iff_one_way","note":"change_readings 的多个 ↔ 被合写为“是这同一种变化”，没有明确表达双向条件。"}
+      ],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0488",
+      "referents": [
+        {"span":"衡","sort":"claim or predicate","status":"matched","counterpart":"L.Balances W","rule":"M1","class":"none","tags":[]},
+        {"span":"T","sort":"step","status":"matched","counterpart":"T","rule":"M4","class":"none","tags":[]},
+        {"span":"n","sort":"step","status":"matched","counterpart":"n","rule":"M4","class":"none","tags":[]},
+        {"span":"所待 c","sort":"relatum or role","status":"matched","counterpart":"c","rule":"M1","class":"none","tags":[]},
+        {"span":"所与","sort":"amount","status":"matched","counterpart":"L.given (T + i) c","rule":"M1","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"matched","counterpart":"j；相应实际索引 T + j","rule":"M4","class":"none","tags":[]},
+        {"span":"共取","sort":"amount","status":"matched","counterpart":"L.taken (T + j) c","rule":"M1","class":"none","tags":[]},
+        {"span":"自第 T 步至其前于 c 之共取之和","sort":"amount","status":"matched","counterpart":"Becoming.drawnBefore (fun i => L.taken (T + i) c) j","rule":"M1","class":"none","tags":[]},
+        {"span":"c 之积","sort":"amount","status":"matched","counterpart":"W.level (T + j) c","rule":"M1","class":"none","tags":[]},
+        {"span":"第 T 步之积","sort":"amount","status":"matched","counterpart":"W.level T c","rule":"M1","class":"none","tags":[]},
+        {"span":"第 T 步之积之半","sort":"amount","status":"excess","counterpart":"half_stands 形成的是当前水平的两项之和，未形成初始水平的一半这一量。","rule":"none","class":"E","tags":[]},
+        {"span":"二","sort":"amount","status":"matched","counterpart":"2","rule":"M4","class":"none","tags":[]},
+        {"span":"二之 n 次方","sort":"amount","status":"matched","counterpart":"2 ^ n","rule":"M4","class":"none","tags":[]},
+        {"span":"一","sort":"amount","status":"matched","counterpart":"doubling_needs 结论中的 1","rule":"M4","class":"none","tags":[]},
+        {"span":"二之 n 次方减一","sort":"amount","status":"excess","counterpart":"结论为 2 ^ n ≤ W.level T c + 1；虽然下界表述等价，可见 L(D) 未形成 2 ^ n - 1 项。","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions": ["F"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0318",
+      "referents": [
+        {"span":"资域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinFeeding W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"扰域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinInfluence W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"感域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinCoupling W obs f g","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["F","C","L","W","obs","f","g"],
+      "connective_mismatches": [
+        {"kind":"forall_generic","note":"对形成及目标普遍成立的闭包包含关系，写成未量化的泛称陈述。"}
+      ],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0217",
+      "referents": [
+        {"span":"所触","sort":"map, lumping or feature","status":"matched","counterpart":"r.touch","rule":"M5","class":"none","tags":[]},
+        {"span":"其取与","sort":"world, web or flow","status":"matched","counterpart":"r.flow","rule":"M5","class":"none","tags":[]},
+        {"span":"不触之物","sort":"relatum or role","status":"matched","counterpart":"Contains U1 中的 x : X","rule":"M5","class":"none","tags":[]},
+        {"span":"其步","sort":"step","status":"matched","counterpart":"Contains U1 中的 n","rule":"M4","class":"none","tags":[]},
+        {"span":"在场","sort":"claim or predicate","status":"matched","counterpart":"x ∈ r.flow.present n","rule":"M5","class":"none","tags":[]},
+        {"span":"跨步不移","sort":"claim or predicate","status":"matched","counterpart":"r.web.Unmoved n x","rule":"M5","class":"none","tags":[]},
+        {"span":"有穷之一段","sort":"step","status":"matched","counterpart":"区间长度 m","rule":"M4","class":"none","tags":[]},
+        {"span":"一取与","sort":"step","status":"matched","counterpart":"Keeps U1 中的 i","rule":"M4","class":"none","tags":[]},
+        {"span":"另一取与","sort":"step","status":"matched","counterpart":"Keeps U1 中的 j","rule":"M4","class":"none","tags":[]},
+        {"span":"相连","sort":"claim or predicate","status":"matched","counterpart":"r.Joined i j","rule":"M5","class":"none","tags":[]},
+        {"span":"另一取与所触之物","sort":"relatum or role","status":"excess","counterpart":"Joined 未在所给 U1 中展开；可见 L(D) 未给出第二个独立的被触关系项。","rule":"none","class":"R","tags":[]},
+        {"span":"终","sort":"step","status":"excess","counterpart":"所给 U1 未展开 Unmoved 或 Joined，未展示该交换终点的索引项。","rule":"none","class":"E","tags":[]},
+        {"span":"重排","sort":"history or run","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"所能至","sort":"claim or predicate","status":"matched","counterpart":"结论左侧关于 ts、EachStep、Independent 和 place 的存在命题","rule":"M1","class":"none","tags":[]},
+        {"span":"先后","sort":"claim or predicate","status":"matched","counterpart":"Keeps U1 中的 i < j 与 π i < π j","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions": ["S","σ"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0081",
+      "referents": [
+        {"span":"域之兼","sort":"relatum or role","status":"matched","counterpart":"w","rule":"M1","class":"none","tags":[]},
+        {"span":"域之兼作","sort":"claim or predicate","status":"matched","counterpart":"W.Arises t w","rule":"M1","class":"none","tags":[]},
+        {"span":"一体","sort":"relatum or role","status":"matched","counterpart":"p","rule":"M1","class":"none","tags":[]},
+        {"span":"步","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"而作","sort":"claim or predicate","status":"matched","counterpart":"W.Arises t p","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["C","parts"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "zhrec0166",
+      "referents": [
+        {"span":"所经配置","sort":"configuration","status":"matched","counterpart":"keepHistory U1 中的 h.fst","rule":"M5","class":"none","tags":[]},
+        {"span":"动作","sort":"move","status":"matched","counterpart":"keepHistory U1 中的 a","rule":"M5","class":"none","tags":[]},
+        {"span":"历史","sort":"family or list","status":"matched","counterpart":"h.snd；(r.state n).snd","rule":"M5","class":"none","tags":[]},
+        {"span":"保留其所经配置与动作之历史的过程","sort":"law or process","status":"matched","counterpart":"Becoming.keepHistory P","rule":"M1","class":"none","tags":[]},
+        {"span":"P","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"matched","counterpart":"n；keepHistory_new 中比较的 i、j","rule":"M4","class":"none","tags":[]},
+        {"span":"一","sort":"amount","status":"matched","counterpart":"keepHistory U1 中每次向历史前置的单个 (h.fst, a) 项","rule":"M5","class":"none","tags":[]},
+        {"span":"确定性","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Determined P；Becoming.Determined (Becoming.keepHistory P)","rule":"M1","class":"none","tags":[]},
+        {"span":"两个不同的配置","sort":"configuration","status":"matched","counterpart":"x","rule":"M1","class":"none","tags":[]},
+        {"span":"两个不同的配置","sort":"configuration","status":"matched","counterpart":"y","rule":"M1","class":"none","tags":[]},
+        {"span":"自己的动作","sort":"move","status":"matched","counterpart":"b","rule":"M1","class":"none","tags":[]},
+        {"span":"所做的","sort":"move","status":"matched","counterpart":"r.act n","rule":"M1","class":"none","tags":[]},
+        {"span":"什么","sort":"configuration","status":"matched","counterpart":"结论 ¬∃ u 中的 u","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": [
+        "next",
+        "Becoming.Law.withHistory.h",
+        "Becoming.keepHistory_fixes_nothing_else.t",
+        "Becoming.keepHistory_new.a"
+      ],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0195",
+      "referents": [
+        {"span":"法","sort":"law or process","status":"matched","counterpart":"Becoming.Law.process next","rule":"M1","class":"none","tags":[]},
+        {"span":"状","sort":"configuration","status":"matched","counterpart":"Law.process U1 中的 s","rule":"M5","class":"none","tags":[]},
+        {"span":"动","sort":"move","status":"matched","counterpart":"Law.process U1 中 step 的动作参数 x","rule":"M5","class":"none","tags":[]},
+        {"span":"次状","sort":"configuration","status":"matched","counterpart":"next s","rule":"M5","class":"none","tags":[]},
+        {"span":"一类","sort":"map, lumping or feature","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"理","sort":"claim or predicate","status":"matched","counterpart":"Becoming.GoAlike (Becoming.Law.process next) π","rule":"M1","class":"none","tags":[]},
+        {"span":"次状之类","sort":"value","status":"matched","counterpart":"π (next s)","rule":"M1","class":"none","tags":[]},
+        {"span":"此类","sort":"value","status":"matched","counterpart":"Lumped U1 中的 π i、π i'","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions": ["next"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0398",
+      "referents": [
+        {"span":"阶","sort":"step","status":"matched","counterpart":"j（采用包中登记的 step sort）","rule":"M4","class":"none","tags":[]},
+        {"span":"可致","sort":"amount","status":"matched","counterpart":"Becoming.carriedWithin cs part σ k present δ j τ c","rule":"M1","class":"none","tags":[]},
+        {"span":"诸路","sort":"family or list","status":"excess","counterpart":"U1 有 routePoints 和 routeWeight，但未展示路径或路径族；不能把路径与点族同一。","rule":"none","class":"E","tags":[]},
+        {"span":"诸路之和","sort":"amount","status":"matched","counterpart":"Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c)","rule":"M1","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"excess","counterpart":"所指到达点的 τ 在包中登记为 amount，不能跨 sort 匹配为 step；T 是另一个上界参数。","rule":"none","class":"E","tags":[]},
+        {"span":"j+1","sort":"step","status":"matched","counterpart":"j + 1","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions": ["F","C","cs","part","σ","k","present","δ","T","τ","a","c"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "shuo0157",
+      "referents": [
+        {"span":"待者","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M2","class":"none","tags":[]},
+        {"span":"资域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinFeeding W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"扰域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinInfluence W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"感域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinCoupling W obs f g","rule":"M1","class":"none","tags":[]},
+        {"span":"及域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinReach W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"群域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinSystem W f g","rule":"M1","class":"none","tags":[]},
+        {"span":"诸域相含之次","sort":"claim or predicate","status":"matched","counterpart":"withinInfluence_of_withinFeeding、withinCoupling_of_withinInfluence、withinSystem_of_withinInfluence 和 withinSystem_of_withinReach 的包含命题","rule":"M1","class":"none","tags":[]},
+        {"span":"源","sort":"relatum or role","status":"matched","counterpart":"Becoming.Clearing.Formation.source","rule":"M6","class":"none","tags":[]},
+        {"span":"清除者","sort":"relatum or role","status":"matched","counterpart":"Becoming.Clearing.Formation.clearer","rule":"M6","class":"none","tags":[]},
+        {"span":"栖者","sort":"relatum or role","status":"matched","counterpart":"Becoming.Clearing.Formation.dweller","rule":"M6","class":"none","tags":[]},
+        {"span":"狼","sort":"relatum or role","status":"excess","counterpart":"所给 Trophic 结论与构造体均被截断，可见部分没有展示狼的见证常量。","rule":"none","class":"R","tags":[]},
+        {"span":"林","sort":"relatum or role","status":"matched","counterpart":"Becoming.Trophic.Formation.forest","rule":"M6","class":"none","tags":[]},
+        {"span":"感域超出扰域者","sort":"relatum or role","status":"matched","counterpart":"g","rule":"M1","class":"none","tags":[]},
+        {"span":"积","sort":"amount","status":"matched","counterpart":"Balances U1 中的 W.level t c","rule":"M5","class":"none","tags":[]},
+        {"span":"感","sort":"claim or predicate","status":"matched","counterpart":"obs : F → C → Prop","rule":"M1","class":"none","tags":[]},
+        {"span":"一所待","sort":"relatum or role","status":"matched","counterpart":"Taking 等 U1 中的 c","rule":"M5","class":"none","tags":[]},
+        {"span":"取与","sort":"world, web or flow","status":"matched","counterpart":"L；U1 展示其 take、give 字段","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["Becoming.Flow.WithinSystem.symm.within"],
+      "connective_mismatches": [
+        {"kind":"iff_one_way","note":"withinCoupling_thresholdOnly 的 ↔ 被写成“感域超出扰域者，只经以积感入”，仅表达超出时所需的条件。"}
+      ],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "zhrec0126",
+      "referents": [
+        {"span":"P","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]},
+        {"span":"动作","sort":"move","status":"matched","counterpart":"a : A","rule":"M1","class":"none","tags":[]},
+        {"span":"π","sort":"map, lumping or feature","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"像","sort":"law or process","status":"matched","counterpart":"Becoming.Image P π","rule":"M1","class":"none","tags":[]},
+        {"span":"k","sort":"value","status":"matched","counterpart":"k","rule":"M1","class":"none","tags":[]},
+        {"span":"κ","sort":"value","status":"matched","counterpart":"κ","rule":"M1","class":"none","tags":[]},
+        {"span":"投影为 k 的配置","sort":"configuration","status":"matched","counterpart":"Image U1 中的 s","rule":"M5","class":"none","tags":[]},
+        {"span":"投影为 κ 的配置","sort":"configuration","status":"matched","counterpart":"Image U1 中的 u","rule":"M5","class":"none","tags":[]},
+        {"span":"在 k 与 κ 之间有一步 a","sort":"claim or predicate","status":"matched","counterpart":"(Becoming.Image P π).step k a κ","rule":"M1","class":"none","tags":[]},
+        {"span":"P 的某一步 a","sort":"claim or predicate","status":"matched","counterpart":"P.step s a u","rule":"M5","class":"none","tags":[]},
+        {"span":"P 的步骤经 π 分解到它的像","sort":"claim or predicate","status":"matched","counterpart":"Becoming.FactorsThrough P π (Becoming.Image P π)","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["Q"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    },
+    {
+      "seg_id": "jing0127",
+      "referents": [
+        {"span":"法","sort":"law or process","status":"matched","counterpart":"Becoming.Law.process next","rule":"M5","class":"none","tags":[]},
+        {"span":"无同归","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Law.Lossless next","rule":"M1","class":"none","tags":[]},
+        {"span":"凡状","sort":"configuration","status":"matched","counterpart":"reset 中的 x；结论中的 s","rule":"M1","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"excess","counterpart":"所给 L(D) 有 next x，但没有 Nat 步索引或一步的数值项。","rule":"none","class":"E","tags":[]},
+        {"span":"其体","sort":"relatum or role","status":"matched","counterpart":"part (next x)","rule":"M1","class":"none","tags":[]},
+        {"span":"同一者 p","sort":"relatum or role","status":"matched","counterpart":"p","rule":"M1","class":"none","tags":[]},
+        {"span":"一状","sort":"configuration","status":"matched","counterpart":"y","rule":"M1","class":"none","tags":[]},
+        {"span":"一状之体","sort":"relatum or role","status":"matched","counterpart":"part y","rule":"M1","class":"none","tags":[]},
+        {"span":"族","sort":"family or list","status":"matched","counterpart":"all : List S","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions": ["next","part"],
+      "connective_mismatches": [],
+      "predicate_excess": []
+    }
+  ]
+}
+
+── cx · ok · session 01a163ef-17a2-7b40-8751-0389d76c9d6b · gpt-6-astra/high · bypass (mirrors Claude) · 905s · 75.4k tokens · 0 cmds
+continue: cx -r 01a163ef-17a2-7b40-8751-0389d76c9d6b "…"
+log: /Users/ren/.cache/cx/runs/20261022-210615-96090

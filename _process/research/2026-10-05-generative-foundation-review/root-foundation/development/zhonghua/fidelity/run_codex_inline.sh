@@ -7,7 +7,14 @@ name=$(basename "$PACKET" .json)
 work=$(mktemp -d /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/fc-codex/run.XXXXXX)
 cp "$SCHEMA" "$work/schema.json"
 { cat "$BRIEF"; printf '\n\n## The packet\n\nAnswer from the packet below only; do not run commands or open files. Answer for every segment.\n\n```json\n'; cat "$PACKET"; printf '\n```\n'; } > "$work/brief.md"
-( cd "$work" && cx --fresh --clean -m astra -e high --schema schema.json -C . < brief.md > raw.txt 2>&1 )
+# retry a capacity or transient failure with backoff (the model is shared)
+i=0
+while :; do
+  ( cd "$work" && cx --fresh --clean -m astra -e high --schema schema.json -C . < brief.md > raw.txt 2>&1 )
+  grep -q '── cx · ok' "$work/raw.txt" && break
+  i=$((i+1)); [ $i -ge 8 ] && break
+  sleep $((60 * i))
+done
 python3 -I - "$work/raw.txt" "$OUT/$name.json" <<'PY'
 import json, sys
 t = open(sys.argv[1], encoding='utf-8').read()
