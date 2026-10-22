@@ -65,6 +65,18 @@ declaration has an empty axiom report.
   meet the greatest (`equal_share_iff`), giving more than the total need exactly where needs differ
   (`equal_share_exceeds`, `equal_share_even`); two parts needing one and three are short in equal
   shares of what suffices by need (`uneven_short`).
+* **What position reads.** Two profiles of amounts give every part the same position exactly where
+  every part's amount differs between them by one amount common to all (`Keeps`, read by the counts
+  above; `keeps_iff_common`): positions read the amounts up to a common amount. Adding an amount to
+  every part keeps every position and adds it to the total once for each part (`keeps_add`); taking
+  the least part's amount from every part keeps every position and leaves the spread above the least
+  part (`keeps_least`). So with given positions the total is at least the spread (`spread_le`), above
+  a bound exactly where the spread is (`exceeds_iff_spread`), and above every bound for some profile
+  (`keeps_exceeds`): positions bound the total from below and never from above. In `Lasting` the
+  renewer gives two units at every step, as in `Race`, and the two racers have the race's positions
+  at every step; there what is taken is within what is given and every part is active at every step,
+  while in the race every part ends (`Lasting.same_positions_apart`). What separates them is the
+  total drawn, which positions do not read.
 -/
 
 namespace Becoming
@@ -252,6 +264,109 @@ the part needing three is not supported. -/
 theorem uneven_short :
     total [1, 3] id = 4 ∧ [1, 3].length * 2 = 4 ∧ ¬ (∀ p, p ∈ [1, 3] → id p ≤ 2) :=
   ⟨rfl, rfl, fun all => absurd (all 3 (.tail _ (.head _))) (Nat.not_succ_le_self 2)⟩
+
+
+/-! ## What position reads -/
+
+/-- The change from `a` to `b` keeps every part's position: at each part the rise count is the
+fall count. With signed amounts, each part's position `n * a p - total ps a` is the same read
+under `b`. -/
+def Keeps (ps : List P) (a b : P → Nat) : Prop :=
+  ∀ p, p ∈ ps → riseCount ps a b p = fallCount ps a b p
+
+/-- A family with a member has a part. -/
+theorem length_pos_of_mem {p : P} : ∀ {ps : List P}, p ∈ ps → 0 < ps.length
+  | _ :: _, _ => Nat.succ_pos _
+
+/-- Four terms regrouped. -/
+theorem regroup (x y u v : Nat) : (x + y) + (u + v) = (x + v) + (y + u) :=
+  (congrArg ((x + y) + ·) (Nat.add_comm u v)).trans (Nat.add_add_add_comm x y v u)
+
+/-- **Position reads amounts up to a common amount.** A change keeps every part's position
+exactly where every part's amount changes by one amount common to all: for any two parts, what
+one had before with what the other has after is what the other had before with what the one has
+after. -/
+theorem keeps_iff_common {ps : List P} {a b : P → Nat} :
+    Keeps ps a b ↔ ∀ p q, p ∈ ps → q ∈ ps → a p + b q = a q + b p :=
+  ⟨fun keeps p q inp inq =>
+    have hp : ps.length * b p + total ps a = ps.length * a p + total ps b := keeps p inp
+    have hq : ps.length * b q + total ps a = ps.length * a q + total ps b := keeps q inq
+    have scaled : ps.length * (a p + b q) + (total ps a + total ps b) =
+        ps.length * (a q + b p) + (total ps a + total ps b) :=
+      calc ps.length * (a p + b q) + (total ps a + total ps b)
+          = (ps.length * a p + total ps b) + (ps.length * b q + total ps a) := by
+            rw [Nat.left_distrib]; exact regroup _ _ _ _
+        _ = (ps.length * b p + total ps a) + (ps.length * a q + total ps b) := by
+            rw [← hp, hq]
+        _ = ps.length * (a q + b p) + (total ps a + total ps b) := by
+            rw [Nat.left_distrib, Nat.add_comm (ps.length * a q) (ps.length * b p)]
+            exact Nat.add_add_add_comm _ _ _ _
+    Nat.eq_of_mul_eq_mul_left (length_pos_of_mem inp) (Becoming.add_right_cancel _ scaled),
+   fun common p inp =>
+    have summed : ps.length * a p + total ps b = total ps a + ps.length * b p :=
+      calc ps.length * a p + total ps b
+          = total ps (fun q => a p + b q) :=
+            ((congrArg (· + total ps b) (total_const (a p) ps).symm).trans
+              (total_add (fun _ => a p) b ps).symm)
+        _ = total ps (fun q => a q + b p) := total_congr_on fun q inq => common p q inp inq
+        _ = total ps a + ps.length * b p :=
+            (total_add a (fun _ => b p) ps).trans
+              (congrArg (total ps a + ·) (total_const (b p) ps))
+    (Nat.add_comm _ _).trans summed.symm⟩
+
+/-- Adding one amount to every part keeps every position, and adds it to the total once for
+each part. -/
+theorem keeps_add (ps : List P) (a : P → Nat) (c : Nat) :
+    Keeps ps a (fun p => a p + c) ∧ total ps (fun p => a p + c) = total ps a + ps.length * c :=
+  ⟨keeps_iff_common.mpr fun p q _ _ =>
+    (Nat.add_assoc _ _ _).symm.trans
+      ((congrArg (· + c) (Nat.add_comm (a p) (a q))).trans (Nat.add_assoc _ _ _)),
+   (total_add a (fun _ => c) ps).trans (congrArg (total ps a + ·) (total_const c ps))⟩
+
+/-- Taking the least part's amount from every part keeps every position, leaves the least part
+at nothing, and leaves the total short of the family's by that amount counted once for each
+part: the spread above the least part. -/
+theorem keeps_least {ps : List P} {a : P → Nat} {l : P} (least : Least ps a l) :
+    Keeps ps a (fun p => a p - a l) ∧ a l - a l = 0 ∧
+      total ps (fun p => a p - a l) + ps.length * a l = total ps a :=
+  ⟨keeps_iff_common.mpr fun p q inp inq =>
+    calc a p + (a q - a l) = (a l + (a p - a l)) + (a q - a l) :=
+          congrArg (· + (a q - a l)) (add_sub_of_le (least p inp)).symm
+      _ = (a l + (a q - a l)) + (a p - a l) := Nat.add_right_comm _ _ _
+      _ = a q + (a p - a l) := congrArg (· + (a p - a l)) (add_sub_of_le (least q inq)),
+   Nat.sub_self (a l),
+   (congrArg (_ + ·) (total_const (a l) ps).symm).trans
+    ((total_add (fun p => a p - a l) (fun _ => a l) ps).symm.trans
+      (total_congr_on fun q inq => Naturals.sub_add_cancel (least q inq)))⟩
+
+/-- **The total with given positions is at least the spread.** Whatever profile keeps every
+position, its total with the least part's amount counted once for each part is at least the
+family's total. -/
+theorem spread_le {ps : List P} {a b : P → Nat} {l : P} (inl : l ∈ ps) (keeps : Keeps ps a b) :
+    total ps a ≤ total ps b + ps.length * a l :=
+  Nat.le_trans (Nat.le_add_left _ (ps.length * b l))
+    (Nat.le_of_eq ((keeps l inl).trans (Nat.add_comm _ _)))
+
+/-- **No position bounds the total from above.** In a family with a part, every bound is
+exceeded by a profile that keeps every position. -/
+theorem keeps_exceeds {ps : List P} {p : P} (inp : p ∈ ps) (a : P → Nat) (r : Nat) :
+    ∃ b, Keeps ps a b ∧ r < total ps b :=
+  ⟨fun q => a q + (r + 1), (keeps_add ps a (r + 1)).1,
+   Nat.lt_of_lt_of_le (Nat.lt_succ_self r)
+    (Nat.le_trans (Nat.le_mul_of_pos_left (r + 1) (length_pos_of_mem inp))
+      (Nat.le_trans (Nat.le_add_left _ _) (Nat.le_of_eq (keeps_add ps a (r + 1)).2.symm)))⟩
+
+/-- **Positions bound the total from below exactly by the spread.** With `l` a least part, every
+profile keeping every position has its total above `r` exactly where the spread above the least
+part is above `r`. -/
+theorem exceeds_iff_spread {ps : List P} {a : P → Nat} {l : P} (inl : l ∈ ps)
+    (least : Least ps a l) (r : Nat) :
+    (∀ b, Keeps ps a b → r < total ps b) ↔ r + ps.length * a l < total ps a :=
+  ⟨fun all => Nat.lt_of_lt_of_le
+      (Nat.add_lt_add_right (all _ (keeps_least least).1) _)
+      (Nat.le_of_eq (keeps_least least).2.2),
+   fun above _ keeps => Nat.lt_of_add_lt_add_right
+      (Nat.lt_of_lt_of_le above (spread_le inl keeps))⟩
 
 end RelativePosition
 
@@ -495,6 +610,103 @@ theorem greatest_ends :
      (show 2 < 2 + 1 from Nat.lt_succ_self 2) k f trivial (Nat.le_refl 1)⟩
 
 end Race
+
+namespace Lasting
+
+/-! ## The same positions, the condition standing -/
+
+abbrev Member := Witnesses.Member
+
+/-- At every step the renewer gives two units, as in the race, the first part takes one and the
+second none. -/
+def flow : Flow Member Unit := Witnesses.relay (fun _ => [.renewer, .first, .second]) 2 1 0
+
+/-- The condition stands at one more than the step count, and each is active at every step and
+depends on it at need one. -/
+def web : Web Member Unit := Witnesses.relayWeb (fun t => t + 1) fun _ _ => True
+
+theorem balances : flow.Balances web := fun _ () => rfl
+
+theorem acting : flow.Acting web := fun _ _ _ _ _ => trivial
+
+theorem dependent : web.Dependent := fun t _ _ _ _ => Nat.succ_le_succ (Nat.zero_le t)
+
+/-- The two that take in the race. -/
+def racers : List Member := [.first, .second]
+
+/-- At every step the race's first part has drawn as much more than here as its second has. -/
+theorem drawn_common : ∀ t,
+    Race.flow.drawn () t .first + flow.drawn () t .second =
+      Race.flow.drawn () t .second + flow.drawn () t .first
+  | 0 => rfl
+  | t + 1 => by
+    show (Race.flow.drawn () t .first + 2) + flow.drawn () t .second =
+        (Race.flow.drawn () t .second + 1) + (flow.drawn () t .first + 1)
+    rw [Nat.add_right_comm, drawn_common t, Nat.add_add_add_comm]
+
+/-- Read by what each has drawn, the race and this flow give the two racers the same positions
+at every step. -/
+theorem keeps (t : Nat) : Keeps racers (Race.flow.drawn () t) (flow.drawn () t) :=
+  keeps_iff_common.mpr fun p q inp inq => match p, q, inp, inq with
+    | .first, .first, _, _ => rfl
+    | .second, .second, _, _ => rfl
+    | .first, .second, _, _ => drawn_common t
+    | .second, .first, _, _ => (drawn_common t).symm
+
+theorem drawn_second : ∀ t, flow.drawn () t .second = 0
+  | 0 => rfl
+  | t + 1 => drawn_second t
+
+theorem drawn_renewer : ∀ t, flow.drawn () t .renewer = 0
+  | 0 => rfl
+  | t + 1 => drawn_renewer t
+
+theorem first_greatest (t : Nat) : Greatest racers (flow.drawn () t) .first :=
+  fun q _ => match q with
+    | .renewer => Nat.le_trans (Nat.le_of_eq (drawn_renewer t)) (Nat.zero_le _)
+    | .first => Nat.le_refl _
+    | .second => Nat.le_trans (Nat.le_of_eq (drawn_second t)) (Nat.zero_le _)
+
+/-- **The same positions, the opposite fates.** Read by what each racer has drawn, this flow and
+the race give the two racers the same positions at every step, so the same greatest part and the
+same changes of position, and the first part's position rises across the race's two steps in
+both. Both balance, give only while active and keep activity supported, and in both the renewer
+gives two units at each step it takes part. In the race the condition is drawn jointly beyond
+what is given and every part is inactive from step two on; here what is taken is within what is
+given at every step, the condition rises and every part is active at every step. What separates
+them is the total drawn, which positions do not read: at every step the race's two racers have
+drawn twice the step count more. -/
+theorem same_positions_apart :
+    (∀ t, Keeps racers (Race.flow.drawn () t) (flow.drawn () t)) ∧
+      (∀ t, Greatest racers (Race.flow.drawn () t) .first ∧
+        Greatest racers (flow.drawn () t) .first) ∧
+      fallCount racers (flow.drawn () 0) (flow.drawn () 2) .first <
+        riseCount racers (flow.drawn () 0) (flow.drawn () 2) .first ∧
+      fallCount racers (Race.flow.drawn () 0) (Race.flow.drawn () 2) .first <
+        riseCount racers (Race.flow.drawn () 0) (Race.flow.drawn () 2) .first ∧
+      flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
+      (∀ t, flow.given t () = 2) ∧ (∀ t, flow.WithinJoint t ()) ∧ (∀ t f, web.active t f) ∧
+      (∀ t, Race.flow.given t () < Race.flow.taken t () ∨ t ≥ 2) ∧
+      ∀ k f, ¬ Race.web.active (0 + 2 + k) f :=
+  ⟨keeps,
+   fun t => ⟨fun q _ => match q with
+      | .renewer => Nat.le_trans (Nat.le_of_eq (Race.drawn_renewer t)) (Nat.zero_le _)
+      | .first => Nat.le_refl _
+      | .second => Race.drawn_second_le t,
+     first_greatest t⟩,
+   show 2 < 4 from Nat.lt_of_lt_of_le (Nat.lt_succ_self 2) (Nat.le_succ 3),
+   show 6 < 8 from Nat.lt_of_lt_of_le (Nat.lt_succ_self 6) (Nat.le_succ 7),
+   balances, acting, dependent,
+   fun _ => rfl,
+   fun _ => Nat.le_succ 1,
+   fun _ _ => trivial,
+   fun t => match t with
+    | 0 => .inl (show 2 < 3 from Nat.lt_succ_self 2)
+    | 1 => .inl (show 2 < 3 from Nat.lt_succ_self 2)
+    | _ + 2 => .inr (Nat.le_add_left 2 _),
+   Race.greatest_ends.2.2.2.2.2⟩
+
+end Lasting
 
 namespace Restored
 
