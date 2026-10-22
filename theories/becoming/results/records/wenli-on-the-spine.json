@@ -49,8 +49,8 @@
     "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
   },
   "next_delta": {
-    "en": "The H2 reading test and the fidelity count (experiments/wenli-reading-transfer); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
-    "zh": "H2 阅读试验与忠实之测（experiments/wenli-reading-transfer）；Lean 中：守值载法之最粗之类作一条定理，文之律接到 Web.AlikeThroughUpTo 与 CrossSituational，各先在看板认领；文理生生之 G1 作脊柱之查询层。"
+    "en": "The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
+    "zh": "H2 阅读试验（忠实之测已运行，fidelity-of-the-classical-statements）；Lean 中：守值载法之最粗之类作一条定理，文之律接到 Web.AlikeThroughUpTo 与 CrossSituational，各先在看板认领；文理生生之 G1 作脊柱之查询层。"
   },
   "correspondence": {
     "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
@@ -146,7 +146,7 @@
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b"
+      "sha256": "a2cf7be779eca2b95a9aacc8197bf7be89bdd59ea5534c941ebe0eb838f84400"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -215,6 +215,10 @@
     {
       "en": "22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.",
       "zh": "2026年10月22日，WL2：本章所列之 Lean 项已证，于原注之处引之；研究第 351 节。"
+    },
+    {
+      "en": "22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.",
+      "zh": "2026年10月22日（FC1，研究第 370 节）：忠实之测已运行；见 fidelity-of-the-classical-statements。"
     }
   ]
 }

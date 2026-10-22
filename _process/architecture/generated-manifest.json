@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "96b1ad9efbbf015c6b2ddba21712c16692a96ab2cec2dcf1ad43e6dbe139261c",
+    "README.md": "ab535fce5f6f25204d3f438cd5a94465193a545a3d260598e029386a5c44acde",
     "RESEARCH.md": "58769f37ec9d2d57dcb31f8cab019a49963ec04a46c283fe5998ad6c25818a74",
-    "RESULTS.md": "586265155a64cee322d4b42f18296097f9ac397137ad27630f4980975aea8cca",
+    "RESULTS.md": "26087d13289705d3ff9464b08cfed0836eacc4bfe3714ae805ddc5e85fbdb1bc",
     "GOALS.md": "967c32083eeb999ae08284fcf018820cc9aa795e7716e865f7d137920b90a1ad",
-    "DEPENDENCIES.md": "cbfeabfb65bf4cdb859e548ee9de6d29241c8215630b486fa14ccdb23be7d40f",
+    "DEPENDENCIES.md": "25692c1900755cc5cecd04625408f06f3ea5d9dad57f988935d6eee239b6ac61",
     "_process/BRIEF.md": "746932ccf78a6acecfdf42f51fae45c5989a474060ec89ebebac2ae6bd81cd38",
     "theories/becoming/README.md": "1b0956e329e311025518754beb399f5ef36711f6bbcbb8cea216d0070324dda3",
     "theories/becoming/results/ROADMAP.md": "f7bcb082edd444bb6d2aee897c817b27ca9a21128f54272b065f999087b2696d",
@@ -43,7 +43,7 @@
     "theories/becoming/results/records/trace-law-equivalence.md": "58f1aeead76cb8ebd71d23ff6cd061cdc1b8bbecbb4ef92f51b38b0b4b4a7dec",
     "theories/becoming/results/records/transition-grouping-word-partition.md": "e3c3f8f72c952077f5c22d6a565af6877e11c915ac4ad3acceb9f4f07e2f44af",
     "theories/becoming/results/records/wisdom-root.md": "16aeb546837a2551edcb59b1825d953cc59d386cfde1cfc790875df9ec1ddb6b",
-    "theories/becoming/results/RESULT-REGISTER.md": "3c979ec0e593a6cb7f09bbc0266f5dd85473ade6b368eaff3d1bcf781efae3b1",
+    "theories/becoming/results/RESULT-REGISTER.md": "878727efab149ac390458b8da2e8609bc060dbb2bebff91b94a20176ce3a1c64",
     "theories/becoming/results/records/universal-practical-warrant.md": "eedd767d58ca12ac202eef60ebe3271f68e421816864d5d69faa982f11fe4f0e",
     "theories/becoming/results/records/enacted-scene-binding.md": "afda30044df72ee2d09384992d1a42ba7453b1414441181196c28549830b142c",
     "theories/becoming/results/records/market-protected-continuation.md": "dbde2b0a538e543cc57a65a6ce4e7dc5f42eabb1e6a581d4b567feddbfdec12c",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "3174f73eb6b6216b31051bfb6df91d1a2a48c23e0f1b1ac23d91c95e1c01d118",
     "theories/becoming/results/records/worlds-are-runs.md": "15fa530d777f8ff3a254ab3f65675564ec17afacc1be394c5892d7bd0a468354",
     "theories/becoming/chapters/README.md": "e541bc02f10cb1071fda51ba141d8b99d91a168ae20a793b9e987104b09b1acd",
-    "_process/research/README.md": "cc55f863b896c6deb5766dbd2b74c86b23f076221591591fa47cb4e1812173c9",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "ac61053284f7f04c15ba5a58f5be1769dc9e8de976bff9a924c7df99b9f8adcb",
+    "_process/research/README.md": "3b372d832f6c0329057547806c4f25dc295c43f67d1216f1ebb16670ee98f185",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "5369ab0cd1526c958957f2bb763e7dd4dc042712900ac0805da0a90d61b6c576",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0bb673488ebb025ba6f081c5c1944c234c5198aeedcedefc52603a2cfce22b60",
     "sources/README.md": "9aa0b0d8fa56f54ac961ad88bb4319072b523e203315ec1042846863aa3a4886",
     "_process/DIRECTIVE-INDEX.md": "2017214a8d116dbde15e03ca894539d3db0d911de2ec67b823ec6302d71c859f",
@@ -253,7 +253,7 @@
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
     "theories/becoming/results/data/lean-index.json": "87cf3f4146f479fba9fb764a3d27f4c6338a54f7e15b11dc859135fa49fc483e",
-    "theories/becoming/results/data/source-index.json": "628eecd3da73f59d81b0a0f1e703accb6f75088093ec767600e101e2f4d8a9e7",
+    "theories/becoming/results/data/source-index.json": "bd00b9a0c4c0da4d1e4d20eb62260d97e26062c1b2ec13f6b158584ab8ec38d4",
     "theories/becoming/results/LEAN-INDEX.md": "2d19cfc9a222f15596aac813c4b1628a61129afa14a5230ba4376ec4881b9274",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "0fc5562f6354ac0bd1d21f952df3482c03f3082ec7811f8781b871cdda5ad406",
     "theories/becoming/results/lean-declarations/becoming-core.md": "8f815c25ef22defbdaf885b69a4613d082a3f988dfba5c1a728040d8146a83df",
@@ -438,7 +438,7 @@
     "theories/becoming/results/records/two-rules-lock-together.md": "75e9d2284bb381242bc97e8796749394c4cbfbdf6a0d9d7bc29c1fc22f64621f",
     "theories/becoming/results/records/what-the-claims-do-not-read.md": "332089143fd9680299397fcba0920efb586830dc1d1ffb8b5c4963abe399f533",
     "theories/becoming/results/records/forming-anew-necessary-and-sufficient.md": "90c64518b41096a3e65ddad180561fd0ab8c581322fd6c7ea9e1649684248916",
-    "theories/becoming/results/records/wenli-on-the-spine.md": "21b6a4cd8d20ac7add66b4ca86825d91a9fbea41a0adc6a6c044a448ef1f74a9",
+    "theories/becoming/results/records/wenli-on-the-spine.md": "44e497a413e027630aa5ab356cad9c49ec55e3b70db8414a1bc915c8178894b1",
     "theories/becoming/results/records/what-the-dynamics-leave-open.md": "3aac5a43a4c088d7d062a466047086562dc1314104c7595d1e6694df0c58e6d0",
     "theories/becoming/results/records/balance-from-the-first-law.md": "4655f05c7183b0f1bd01f8b7f299b2599bcd969346d11a74b10ef86ea99e0de6",
     "theories/becoming/results/records/slowing-down-before-an-own-end.md": "50d7efae45c3501c6ca92865d59ddc2a031099bf2190fdb93af4ba5b4bba1895",
@@ -463,6 +463,7 @@
     "theories/becoming/results/records/mutation-and-the-balance-it-sets.md": "1ec336f8c2d63728ab2f5eafe60aba65e8f26d66e5bfda923e5719e66329efb7",
     "theories/becoming/results/records/the-breeding-value.md": "4ee17e2c23509c433557cec791e8eb808b13423e2ceaea14d4e885a8efdd5995",
     "theories/becoming/results/records/laws-with-noise.md": "174869e92ed0272fab8fe71c1f6cff0913b6ca7ab664394614d3ac26430ef0d7",
-    "theories/becoming/results/records/requirement-is-the-weakest-sound-reading.md": "591982e3a11a47bc648a7c9398184f38421f4de278dbcf3f363502e7694f2be9"
+    "theories/becoming/results/records/requirement-is-the-weakest-sound-reading.md": "591982e3a11a47bc648a7c9398184f38421f4de278dbcf3f363502e7694f2be9",
+    "theories/becoming/results/records/fidelity-of-the-classical-statements.md": "567f9ec48c613867164a777ea195cdb1c7c54187d214ddd873f0c476cce6938e"
   }
 }

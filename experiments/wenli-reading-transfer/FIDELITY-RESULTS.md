@@ -38,7 +38,7 @@ The like-for-like main comparison has one coder (Claude) on both sides. Means ar
 
 | | 經 | English | difference | 95% CI | Wilcoxon p |
 |---|---:|---:|---:|---|---:|
-| X (excess referents) | 0.10 | 0.81 | −0.71 | [−0.92, −0.54] | < 10⁻⁶ |
+| X (excess referents) | 0.09 | 0.81 | −0.71 | [−0.92, −0.54] | < 10⁻⁶ |
 | X_A (agents) | 0.00 | 0.026 | −0.026 | [−0.042, −0.013] | 0.0004 |
 | X_R (relata) | 0.012 | 0.068 | −0.056 | [−0.090, −0.025] | 0.0004 |
 | X_E (entities) | 0.083 | 0.71 | −0.63 | [−0.83, −0.47] | < 10⁻⁶ |
@@ -68,7 +68,7 @@ The cross-family check is the calibration set, which both coders coded in full (
 
 ## What limits the result
 
-- **The coder who wrote the 經 coded them.** Claude wrote the 中华本 and coded every main-set 經. In calibration it found no excess referent in any 經, where the GPT coder found a mean of 0.58. The main-set 經 figure (0.10) is therefore best read as a lower bound. Both coders agree on the direction, but the cross-family evidence on the 經 rests on 13 條 only.
+- **The coder who wrote the 經 coded them.** Claude wrote the 中华本 and coded every main-set 經. In calibration it found no excess referent in any 經, where the GPT coder found a mean of 0.58. The main-set 經 figure (0.09) is therefore best read as a lower bound. Both coders agree on the direction, but the cross-family evidence on the 經 rests on 13 條 only.
 - **Reliability is low on the Chinese side.** Krippendorff's α on per-segment X is:
   - English: 0.69 (main, 320 segments) and 0.78 (calibration);
   - Chinese: 0.53 (calibration, after one revision of the codebook), below the design's 0.8.

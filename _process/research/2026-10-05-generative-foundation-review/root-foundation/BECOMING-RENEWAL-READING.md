@@ -16455,3 +16455,35 @@ Output → input: chapter §0 block C, §8.1 items 6 and 7, §8.5, §8.9 (EN, ZH
 **Noise.** `NoisyLaw` reads a noise value at each step; its relation opens the exchanges some noise value gives. Along each realization the law is a law of exchange (`NoisyLaw.realize`) whose course is a run of the relation, so every form of `World.ReadOffExchange` holds of it, with requirement read as necessary response over every noise value: a formation requires a condition where no noise value lets it exchange with the condition below the need. Balance is linear and passes to the expectation over any distribution of the noise with integrable amounts. Rest is not: a condition standing at one until a random step, the step `ω` having weight one half to the power `ω + 1`, rests along every realization, while its expected level is one half to the power `t` and falls at every step. Laws that state that something stops, ends or rests hold path by path, not of the expectation.
 
 **Rate one.** For the step of a web in a normed algebra over the reals, the rate of `c M` is `|c|` times the rate of `M`, so where the rate is at most one, the web scaled by `1 / r` for any `r > 1` has rate below one and vanishes: `‖M ^ n‖ / r ^ n → 0`. The identity has rate one and stays at one; the dual number `1 + ε` (two conditions, the second held and passed whole to the first) has `‖(1 + ε) ^ n‖ = 1 + n`, unbounded, and rate one, the infimum of `(k + 2) ^ (1 / (k + 1))`. So at rate one the growth is below every exponential and boundedness is not decided by the rate.
+
+## 370. The fidelity count, run (FC1)
+
+```text
+Result(s): fidelity-of-the-classical-statements (new); wenli-on-the-spine (history note, next step)
+Delta: the fidelity measure of FIDELITY.md (frozen in dcf2e5175) run on the 中华本 and the canonical chapter:
+       for 672 pairs (條, declaration) in 270 條, the referents each wording introduces that the
+       Lean statement lacks. The 經 introduce fewer: 0.09 against 0.81 per pair, difference
+       -0.71, 95% CI [-0.92, -0.54] (one coder, Claude, on both sides); agents 0.00 against
+       0.026; they leave out fewer of each statement's binders (O-rate 0.18 against
+       0.42). The second coder (GPT) agrees in direction on the 13 calibration 條 (0.58
+       against 1.61, CI [-1.98, -0.22]). F1 and F2 supported; F3 and F4 not measured
+Supplied premises / correspondence: codebook v1.1 (two logged clarifications of v1 from the calibration); the Lean
+       statements dumped from receipt 20261022T110022.458880Z with one level of unfolding; the registered sort table
+Evidence: alignment of 1,399 經 clauses by both coders (exact agreement 1,303, κ 0.952; 96 adjudicated); coding of
+          every main segment by Claude and of 320 English main segments and the whole
+          calibration set by GPT (gpt-6-astra through cx, blind); α on X 0.69 (English, main),
+          0.53 (Chinese, calibration); cluster bootstrap, Wilcoxon, McNemar, cluster-robust Poisson
+Boundary: no human audit; the main-set 經 coded only by the AI that wrote them (a lower bound); register not separated
+          from language (F3 not run); the naive pass and the reading test not run; one pair of texts
+```
+
+The design ([FIDELITY.md](../../../../experiments/wenli-reading-transfer/FIDELITY.md)) registered four predictions. The run's plan was fixed before any main result was read ([ANALYSIS-PLAN.md](development/zhonghua/fidelity/ANALYSIS-PLAN.md)); its two amendments record the scope cut by direction during the run: first the naive pass and the genre-matched segments, so F3 and F4 are not measured; then the second coder, which by then had coded English segments only.
+
+**What was found.** In the main set, with one coder on both sides, the 經 introduce fewer excess referents than the English clauses (0.09 against 0.81, CI [-0.92, -0.54]), fewer agents, relata and entities, fewer connective mismatches, and leave out fewer binders, so the lower count is not bought by omission. The difference holds without negated referents, without the 條 that carry readings, and in 17 of 18 篇; counting matches made only through unfolding as excess, it shrinks to -0.40 (CI [-0.66, -0.14]), the 經's names leaning on defined constants. On the calibration set both coders coded everything and agree in direction.
+
+**What limits it.** The AI that wrote the 經 coded every main-set 經; in calibration it found no excess in any 經 where the other coder found a mean of 0.58, so the main figure is a lower bound. Agreement between the coders on the Chinese side is low (α 0.53 in calibration). The 經 are full statements and the English clauses summarize, and the comparison that would separate register from language was not run. No human audit was available. Full statement: [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-transfer/FIDELITY-RESULTS.md).
+
+*Reading* [AI reading, D63]. On this core the classical statements are the more exact reading code of the two compared. This supports the WL chapter's narrower claim that the classical code is a fitting reading layer, not that classical Chinese is the best expression.
+
+**Not done.** The naive pass (F4), the genre-matched comparison (F3), the second coder on the main-set 經, a human audit, and the reading test (DESIGN-H2).
+

@@ -37,7 +37,7 @@ Canonical source: [WENLI-AND-BECOMING.md](../../chapters/WENLI-AND-BECOMING.md)
 <a id="next--下一步"></a>
 ## Next
 
-The H2 reading test and the fidelity count (experiments/wenli-reading-transfer); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.
+The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -59,6 +59,8 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 - related, not a proved adapter: [what-an-extrapolation-given-nothing-fixes](what-an-extrapolation-given-nothing-fixes.md). learnable_iff_reading, reading_predicts and given_nothing_not_every: a state value learnable exactly when eventually a reading of the course, prediction given that reading, and no extrapolation given nothing learning every learnable value.
 - related, not a proved adapter: [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md). The RO map, whose kinds and layers are used.
 - related, not a proved adapter: [a-formations-own-course](a-formations-own-course.md). WL2: 识 reads the prefix of its own course where what couples in is read as values.
+
+**Used by:** [fidelity-of-the-classical-statements](fidelity-of-the-classical-statements.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -83,6 +85,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 
 - 22 October 2026: added (WL), on Ren's request to join 文理生生 with the epistemology of 文 at the centre and to name 文; study section 346; readings D63.
 - 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.
+- 22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.
 
 </details>
 

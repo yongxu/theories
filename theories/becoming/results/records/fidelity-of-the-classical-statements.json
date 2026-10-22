@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "id": "fidelity-of-the-classical-statements",
+  "title": {
+    "en": "The fidelity count: the classical statements against the English chapter",
+    "zh": "忠实之测：中华本之经对英文本之句"
+  },
+  "kind": "assessment",
+  "status": "reviewed-scoped",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T15:58:23+00:00",
+  "statement": {
+    "en": "Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (0.09 against 0.81 per pair, CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.",
+    "zh": "在 270 條上，中华本之经引入 Lean 陈述所没有之所指少于英文本之句（每对 0.09 对 0.81），施动者亦少，所漏变元亦少；大模型编码，暂定。"
+  },
+  "hypotheses": [
+    {
+      "en": "Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder (Claude) on both sides of the main set.",
+      "zh": "编码本 v1.1（FIDELITY.md §3，加校准中记录之两条澄清）；回执 20261022T110022.458880Z 之 Lean 陈述，展开一层；经之子句与声明之对齐由二编码者与一裁定者定；主集两边皆由一编码者（Claude）编。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That classical Chinese is the best expression of the core: one English text is compared, in another register.",
+      "zh": "古汉语是核心最好之表达：只比较了一个英文本，且体裁不同。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the result survives a human audit or a second coder on the main-set 經: neither was run, and the coder of the main-set 經 wrote them.",
+      "zh": "结果经得起人工复核或主集之经之第二编码者：二者皆未运行，且主集之经之编码者即其作者。",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about readers (H2): the reading test is not run.",
+      "zh": "任何关于读者之事（H2）：阅读试验未运行。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Alignment by two coders (κ 0.952); coding of 672 pairs by Claude, and of the calibration set and 320 English segments by GPT (blind, separate languages); α on X 0.69 English, 0.53 Chinese (calibration); cluster bootstrap over 條, Wilcoxon, McNemar, cluster-robust Poisson; plan and amendments fixed before any main result was read.",
+    "zh": "对齐由二编码者为之（κ 0.952）；672 对由 Claude 编码，校准集与 320 段英文由 GPT 编码（盲，分语言）；X 之 α 英文 0.69，中文 0.53（校准）；按條之聚类自助法、Wilcoxon、McNemar、聚类稳健之 Poisson；计划与修订皆定于读主结果之前。"
+  },
+  "next_delta": {
+    "en": "The second coder on the main-set 經, a human audit, the genre-matched comparison (F3), the naive pass (F4), and the reading test (DESIGN-H2).",
+    "zh": "主集之经之第二编码者、人工复核、体裁对照（F3）、naive 一遍（F4），与阅读试验（DESIGN-H2）。"
+  },
+  "correspondence": {
+    "en": "Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run (provenance, not warrant). Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.",
+    "zh": "看板项 FC1，按 Ren 运行忠实之测之要求；范围在运行中按其指示收缩（来历，不是根据）。读法（AI 的，D63）：所比二者中，古典之经是较精确之读码，不是最好之表达。"
+  },
+  "canonical_source": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
+  "aliases": [
+    "the fidelity count",
+    "忠实之测",
+    "FC1",
+    "excess referents"
+  ],
+  "dependencies": [
+    {
+      "id": "wenli-on-the-spine",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Tests the WL chapter's claim that the classical code is a fitting reading layer.",
+        "zh": "检验 WL 一章「古典之码是贴切之读法层」之说。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
+      "role": "statement",
+      "sha256": "d70d985c588784933e52f5aacfb9f87404db386f8ea39c0d3c9af9d6da87bbef"
+    },
+    {
+      "path": "experiments/wenli-reading-transfer/FIDELITY.md",
+      "role": "statement",
+      "sha256": "acbfb047c2ae080cb045ce80ad1388da992c52d56fd0abef9b2e3e6b69ce99a4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/ANALYSIS-PLAN.md",
+      "role": "integration",
+      "sha256": "00a91e0391d73e9f71c80c7f7e7ce6a78b313541bfffac95e678b84c9996ed39"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/CODEBOOK-REVISIONS.md",
+      "role": "integration",
+      "sha256": "fa2e737fe0528c4387c45c8c6cf8cab0f096fa5398046eeeb789ffc09436ee26"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/data/results_main.json",
+      "role": "integration",
+      "sha256": "98d160ef493e40ff3299cc15ef93d9cef2239731df9d44ae6ef66691c74121d5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/data/results_calib.json",
+      "role": "integration",
+      "sha256": "d81d8fe977ca801beebce76b88db90076e81ab9213f5e9bace1fc7af00820908"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/score.py",
+      "role": "integration",
+      "sha256": "e6b41341f2ee52abc044e32f363506b8513d966013195dce561fe0e56ab2f9e0"
+    },
+    {
+      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "a2cf7be779eca2b95a9aacc8197bf7be89bdd59ea5534c941ebe0eb838f84400"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "review",
+      "sha256": "97500bb02f9bacdb614419c7a5d2bc4d8c587c5e72f410261af6990d81d3f410"
+    }
+  ],
+  "proof_bindings": [],
+  "progress": [
+    {
+      "en": "The fidelity count run on the reduced scope.",
+      "zh": "忠实之测在收缩之范围上运行。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#370-the-fidelity-count-run-fc1"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (FC1); study section 370.",
+      "zh": "2026年10月22日：新增（FC1）；研究第 370 节。"
+    }
+  ]
+}
