@@ -1,0 +1,1103 @@
+[
+ {
+  "tiao_alignments": [
+   {
+    "tiao": "凡·八",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Neutral"
+      ],
+      "reason": "莫 (no member of the domain holds) is what Neutral defines (Neutral is the 无X used for 无亲/无方); the other quantifier words go to other declarations."
+     }
+    ]
+   },
+   {
+    "tiao": "凡·十一",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Derivation.Derives"
+      ],
+      "reason": "故 introduces the consequent coming out of (derived from) the antecedent, the relation Derives defines; clauses 3-5 then use it."
+     }
+    ]
+   },
+   {
+    "tiao": "凡·十六",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Comparison",
+       "Becoming.Unrestricted"
+      ],
+      "reason": "States the two ethical premises and their roles: the first fixes scope without ordering (Unrestricted), the second alone fixes better (Comparison)."
+     }
+    ]
+   },
+   {
+    "tiao": "一·二",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.roles"
+      ],
+      "reason": "One thing occupying both roles is what Web.roles builds (a web on F ⊕ C)."
+     },
+     {
+      "clause": 9,
+      "declarations": [
+       "Becoming.Web"
+      ],
+      "reason": "Completes the definition of 待网: its records are indexed by step, part of what Web defines."
+     }
+    ]
+   },
+   {
+    "tiao": "一·五",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.persists",
+       "Becoming.persists_of_em"
+      ],
+      "reason": "Asserts persistence under per-step decidedness; persists states it, and persists_of_em is the case where excluded middle supplies the decidedness."
+     }
+    ]
+   },
+   {
+    "tiao": "一·九",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.SpliceClosed",
+       "Becoming.family_iff"
+      ],
+      "reason": "States family_iff and spells out its right side, containing every run of the process the family shows, which is SpliceClosed's content; ShownBy is only referred to."
+     },
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.live",
+       "Becoming.same_histories_iff"
+      ],
+      "reason": "States same_histories_iff, with 有行所经之移 spelling out live (the transitions some run passes)."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.DeadEnd.no_history"
+      ],
+      "reason": "The claim that history does not show transitions no run passes is witnessed by the dead-end law (a step with no run at all)."
+     }
+    ]
+   },
+   {
+    "tiao": "一·十",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Run.ofWithMove_toWithMove",
+       "Becoming.withMove"
+      ],
+      "reason": "Describes the construction (move put into the state, withMove) and the round trip leaving state and move unchanged."
+     }
+    ]
+   },
+   {
+    "tiao": "一·十二",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.World",
+       "Becoming.World.move",
+       "Becoming.everyStep"
+      ],
+      "reason": "Defines 宇 (World) with its parts: exchange moves between steps (World.move) and a run of the process admitting every transition (everyStep)."
+     }
+    ]
+   },
+   {
+    "tiao": "一·十四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.World"
+      ],
+      "reason": "诸宇 is the type of all modelled worlds, the type World."
+     }
+    ]
+   },
+   {
+    "tiao": "一·二十",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [],
+      "reason": "Only introduces 观 as a collective name; it gives none of the content of Process, Frame or World."
+     }
+    ]
+   },
+   {
+    "tiao": "一·二十一",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Parting.freeRun_course",
+       "Becoming.SameAhead",
+       "Becoming.alike_moments_iff"
+      ],
+      "reason": "Every sequence is a course (freeRun_course); alike steps iff the values agree from them on (alike_moments_iff), the latter spelled out as SameAhead."
+     }
+    ]
+   },
+   {
+    "tiao": "一·二十四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Rectangular",
+       "Becoming.Separated",
+       "Becoming.separation_faithful_iff"
+      ],
+      "reason": "States separation_faithful_iff and spells out its two defs: the separate description (Separated) and free pairing (Rectangular)."
+     },
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.separation_admits_extra",
+       "Becoming.separation_faithful_iff"
+      ],
+      "reason": "The other direction of the iff (not rectangular means separation adds pairs), with the equality relation as the witness of an extra pair."
+     }
+    ]
+   },
+   {
+    "tiao": "一·二十六",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Contextual.world",
+       "Becoming.Contextual.world_active"
+      ],
+      "reason": "Contextual propositions as relata of a world along a run (Contextual.world), active exactly where within and shown with that value (world_active); indexed_fits concerns a frame's realization, not the world."
+     }
+    ]
+   },
+   {
+    "tiao": "二·十",
+    "clauses": [
+     {
+      "clause": 6,
+      "declarations": [
+       "Becoming.Web.Carries.ends_within",
+       "Becoming.Web.Decays"
+      ],
+      "reason": "States ends_within and spells out its hypothesis Decays (the reserve drops whenever positive at an unsupported step)."
+     }
+    ]
+   },
+   {
+    "tiao": "二·十二",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Web.active_along",
+       "Becoming.Web.bearing"
+      ],
+      "reason": "Activity propagates along chains of positive-need dependence on embodied things: active_along, with the chain relation bearing spelled out."
+     }
+    ]
+   },
+   {
+    "tiao": "三·四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [],
+      "reason": "Only defines the word 消息 as the balance equation; the assertion that it holds is clause 2 (held_over_stretch)."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Listed",
+       "Becoming.Listed.over_stretch"
+      ],
+      "reason": "Balance for listed holdings without finiteness: Listed.over_stretch, with the listing hypothesis (each listed once per step) spelled out as Listed."
+     }
+    ]
+   },
+   {
+    "tiao": "三·六",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Listed.coming_of_ceasing",
+       "Becoming.coming_of_ceasing_covered"
+      ],
+      "reason": "Reads clause 2's law on activity; that law's main hypothesis is recurrent covering, with listing as its parenthetical case, so both versions apply."
+     }
+    ]
+   },
+   {
+    "tiao": "四·一",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Flow.Capacity",
+       "Becoming.Flow.More.renewers_unbounded"
+      ],
+      "reason": "States renewers_unbounded and spells out its hypothesis Capacity (each gives at most a fixed amount per step)."
+     }
+    ]
+   },
+   {
+    "tiao": "四·二十",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Flow.joint_excess_ends",
+       "Becoming.Flow.outrun_ends"
+      ],
+      "reason": "Joint take exceeding giving over n steps ends what needs at least m: joint_excess_ends; outrun_ends is the case where a group of takers alone outruns the giving."
+     }
+    ]
+   },
+   {
+    "tiao": "五·一",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Law.returns_iff"
+      ],
+      "reason": "States returns_iff; Law.Returns is only used (复 is defined in clause 1), not defined here."
+     }
+    ]
+   },
+   {
+    "tiao": "五·二十五",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Web.MetAbove",
+       "Becoming.Web.UnderminingAt",
+       "Becoming.Web.UnderminingOn"
+      ],
+      "reason": "Defines 剥 for a thing using a condition (UnderminingOn, and UnderminingAt for the thing at the step), with the unbroken dependence whose need was met (MetAbove) spelled out."
+     }
+    ]
+   },
+   {
+    "tiao": "六·五",
+    "clauses": [
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.Flow.Balances.withheld"
+      ],
+      "reason": "Under a balanced flow (凡衡) the identity is Balances.withheld; withheld_at assumes only local balance, a more general law the clause does not state."
+     }
+    ]
+   },
+   {
+    "tiao": "六·十四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Web.WidensAlong"
+      ],
+      "reason": "Defines inclusion along a reading, the first conjunct of WidensAlong (clause 3 only names the conjunction)."
+     },
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.WidensAlong"
+      ],
+      "reason": "Defines exceeding along a reading, the second conjunct of WidensAlong."
+     },
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.Web.grow_widensAlong_iff_new",
+       "Becoming.Web.grow_widens_unregistered"
+      ],
+      "reason": "States grow_widensAlong_iff_new; clause 6 continues the sentence, which with this clause gives grow_widens_unregistered (its first conjunct is asserted here)."
+     }
+    ]
+   },
+   {
+    "tiao": "六·十八",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Web.widens_iff_every_weighting"
+      ],
+      "reason": "Stated for histories over a listed family with decided admission, which is the web theorem; the abstract list version is a more general lemma not stated."
+     },
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.widens_iff_every_of_class"
+      ],
+      "reason": "Any class of orders containing the positive weightings, each increasing: widens_iff_every_of_class for histories; the all-increasing abstract version is not stated."
+     }
+    ]
+   },
+   {
+    "tiao": "七·四",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.PropositionIdentity.Extensional",
+       "Becoming.PropositionIdentity.extensional_iff_lumped"
+      ],
+      "reason": "States extensional_iff_lumped and spells out Extensional (propositions that imply each other are one)."
+     }
+    ]
+   },
+   {
+    "tiao": "八·三",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Interleavings.LocalLaw.Connected",
+       "Becoming.Interleavings.LocalLaw.unique_iff"
+      ],
+      "reason": "States unique_iff and spells out Connected (every exchange touches a thing; any two are equal or share one)."
+     }
+    ]
+   },
+   {
+    "tiao": "九·一",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Web.CoupledInto",
+       "Becoming.Web.DependsOn",
+       "Becoming.Web.alike_of_threshold"
+      ],
+      "reason": "Defines coupling via dependence and asserts the depended condition enters only through its need's threshold, which alike_of_threshold proves."
+     },
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.CoupledInto",
+       "Becoming.Web.observed_level_couples"
+      ],
+      "reason": "The given level coupling is part of CoupledInto, and that it couples the level in is observed_level_couples."
+     }
+    ]
+   },
+   {
+    "tiao": "九·二",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Web.AlikeThroughUpTo",
+       "Becoming.Web.SelectsThrough"
+      ],
+      "reason": "Defines selection through coupling (SelectsThrough) and spells out its condition, no difference up to a step (AlikeThroughUpTo)."
+     }
+    ]
+   },
+   {
+    "tiao": "九·十一",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.ExchangeLaw.ReadsFinitely",
+       "Becoming.ExchangeLaw.ReadsFinitely.least_coupling",
+       "Becoming.ExchangeLaw.ReadsFinitely.through_sensitive"
+      ],
+      "reason": "States through_sensitive (first conjunct of least_coupling) under the hypothesis ReadsFinitely, which the clause spells out."
+     }
+    ]
+   },
+   {
+    "tiao": "九·十四",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.ExcludesWithin",
+       "Becoming.Web.excludesWithin_iff_conjunction"
+      ],
+      "reason": "Introduces exclusion within admitted histories (ExcludesWithin) by its characterization, excludesWithin_iff_conjunction."
+     }
+    ]
+   },
+   {
+    "tiao": "九·十七",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Scope.secures",
+       "Generative.InquirySufficiency.Sound"
+      ],
+      "reason": "States Scope.secures and spells out its hypothesis Sound (admissible questions, common answers, abandon only on empty belief)."
+     }
+    ]
+   },
+   {
+    "tiao": "九·二十四",
+    "clauses": [
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.Remainder",
+       "Becoming.split"
+      ],
+      "reason": "States split and spells out Remainder (if it adheres then it is inside)."
+     },
+     {
+      "clause": 7,
+      "declarations": [
+       "Becoming.ByPrefixes",
+       "Becoming.Passes",
+       "Becoming.refutable_passes_iff_markov"
+      ],
+      "reason": "States refutable_passes_iff_markov and spells out ByPrefixes (marks fixed by the prefix) and Passes (marked false at every step)."
+     }
+    ]
+   },
+   {
+    "tiao": "九·三十二",
+    "clauses": [
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.Learning.held_rest_unrefuted"
+      ],
+      "reason": "About this law's orbit held in the family: held_rest_unrefuted; rest_unrefuted for any lasso is a more general lemma not stated here."
+     }
+    ]
+   },
+   {
+    "tiao": "九·三十四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Learning.Training.Through",
+       "Becoming.Learning.Training.loss_through"
+      ],
+      "reason": "Defines 习 as selecting through what is seen (Through) and states that selection by a loss computed from the data is through (loss_through)."
+     }
+    ]
+   },
+   {
+    "tiao": "十·一",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.SharedCodes.ReadsAs"
+      ],
+      "reason": "The name of a sense is what the code assigns it, which is ReadsAs (the name x reads as sense n under code c)."
+     },
+     {
+      "clause": 4,
+      "declarations": [],
+      "reason": "Defines 码 (a code, a map from senses to names), a type, not any listed declaration."
+     }
+    ]
+   },
+   {
+    "tiao": "十·四",
+    "clauses": [
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.carries_law_iff",
+       "Becoming.goAlike_const"
+      ],
+      "reason": "载法 is carries_law_iff's left side; for the universal name it follows from goAlike_const through carries_law_iff."
+     }
+    ]
+   },
+   {
+    "tiao": "十·十五",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.SharedCodes.impose_agrees"
+      ],
+      "reason": "Agreement right after imposing is impose_agrees; agreement through later listening (run_from_imposition) needs clause 5."
+     },
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.SharedCodes.impose_loses_iff",
+       "Becoming.SharedCodes.source_loses_nothing"
+      ],
+      "reason": "Exactly what is lost, and the source losing nothing, for the imposed code; the run version (run_from_imposition) is clause 5's extension."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·三",
+    "clauses": [
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.Complement.carry",
+       "Becoming.supply_carried_by_complement"
+      ],
+      "reason": "The complement family carries every response fixed by d's level (Complement.carry), with the supply response as the case that clause 3 contrasts (supply_carried_by_complement)."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·八",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Flow.CoupledFromEither",
+       "Becoming.Flow.WithinResponse"
+      ],
+      "reason": "Defines the response domain (WithinResponse) as closure under exchange in either flow on a condition coupled into a thing, spelling out CoupledFromEither."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·十一",
+    "clauses": [
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.Flow.changes_through_coupling_apart",
+       "Becoming.Flow.closer_couples_apart",
+       "Becoming.Flow.closes_through_coupling_apart"
+      ],
+      "reason": "Any change of sameness passes through an outside exchanger whose coupling differs; closing (apart then equal, clause 3's 复合) is such a change, so closes_through_coupling_apart is a case."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·二十",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Law.perturbation_reabsorbed",
+       "Becoming.Law.reabsorbed"
+      ],
+      "reason": "Next state depends only on the rule, so states with the same rule agree from the next step: reabsorbed for any rule reading, perturbation_reabsorbed for state paired with rule."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·二十四",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.ClosedCapture.Unread",
+       "Becoming.ClosedCapture.unread_course"
+      ],
+      "reason": "States unread_course and spells out its hypothesis Unread (neither the next share nor the read rule reads the outside part)."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.ClosedCapture.Accrues",
+       "Becoming.ClosedCapture.lock_outlives_loss"
+      ],
+      "reason": "States lock_outlives_loss and spells out its hypothesis Accrues (outside part grows by at least one each step)."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·二十五",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.ExcludesWithin",
+       "Becoming.Web.SelectsThroughAll",
+       "Becoming.Web.observed_raise_couples"
+      ],
+      "reason": "Each named route has its formal content: coupling by level seeing a raise (observed_raise_couples), admitted histories (ExcludesWithin), pooled coupling (SelectsThroughAll)."
+     }
+    ]
+   },
+   {
+    "tiao": "十一·二十七",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Web.AlikeThroughAll",
+       "Becoming.Web.SelectsThroughAll"
+      ],
+      "reason": "Defines pooled selection (SelectsThroughAll) and spells out no difference through every member's coupling up to a step (AlikeThroughAll)."
+     }
+    ]
+   },
+   {
+    "tiao": "十二·一",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.gap_le_carried",
+       "Becoming.most_difference_arrives"
+      ],
+      "reason": "States the iff most_difference_arrives; taking a as what is carried gives gap_le_carried, its bounding half."
+     }
+    ]
+   },
+   {
+    "tiao": "十二·三",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.forms_by_closing",
+       "Becoming.onLoop_of_closing"
+      ],
+      "reason": "Loop formation: a step's coupling closing a chain makes a loop (onLoop_of_closing), and a loop first exists only so (forms_by_closing)."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.forms_by_closing",
+       "Becoming.onLoop_succ_iff"
+      ],
+      "reason": "Every loop by T+1 was there at T or formed by a coupling at T: the forward direction of onLoop_succ_iff, which for a new loop is forms_by_closing."
+     }
+    ]
+   },
+   {
+    "tiao": "十二·十",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.LoopReturn.scaling",
+       "Becoming.LoopReturn.whole_factors"
+      ],
+      "reason": "Links multiplying by whole numbers spell out scaling; product zero gives zero after the first round (whole_factors, first conjunct)."
+     }
+    ]
+   },
+   {
+    "tiao": "十二·十一",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.LoopReturn.RespondsByReturn"
+      ],
+      "reason": "Defines 还, the return that RespondsByReturn formalizes (equivalent under balance to the gap recurrence, clause 2)."
+     }
+    ]
+   },
+   {
+    "tiao": "十二·十二",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.ExchangeLaw.ReadsBelow",
+       "Becoming.break_carried_nowhere"
+      ],
+      "reason": "States break_carried_nowhere and spells out its hypothesis ReadsBelow (the law reads c only below its threshold)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·四",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Flow.DependsOnDrawn",
+       "Becoming.Flow.inherits_of_drawn",
+       "Becoming.Web.DrawingDepends"
+      ],
+      "reason": "States inherits_of_drawn and spells out both hypotheses: offspring gathers only what parents used (DependsOnDrawn), using implies depending (DrawingDepends)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·六",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Flow.DescendsAt.supported",
+       "Becoming.Flow.transmitted_supported"
+      ],
+      "reason": "Defines 传择 by its content: only supported things have offspring (DescendsAt.supported), and needs transmitted within a bound are selected within it (transmitted_supported)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·七",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.offspring",
+       "Becoming.price",
+       "Becoming.selected"
+      ],
+      "reason": "States price and spells out offspring (total over offspring) and selected (parents' amounts weighted by offspring count)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·十",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.SelectionTerm.Flow.Descended",
+       "Becoming.SelectionTerm.Flow.support_not_lower"
+      ],
+      "reason": "States support_not_lower and spells out Descended (each generation formed from the offspring of the last)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·十八",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Drift.sampled",
+       "Becoming.Drift.sampled_count"
+      ],
+      "reason": "Spells out the weighted sum over sampled k-generation histories (sampled) and states its value (sampled_count)."
+     }
+    ]
+   },
+   {
+    "tiao": "十三·十九",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Learning.selects_through_lumping",
+       "Becoming.Relabel.selected_alike_iff"
+      ],
+      "reason": "States selected_alike_iff; its 'same value, selected alike' half for every equivariant selection is selects_through_lumping."
+     }
+    ]
+   },
+   {
+    "tiao": "十四·十四",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Flow.drawn_positions",
+       "Becoming.RelativePosition.positions_balance"
+      ],
+      "reason": "For any reading of amounts positions sum to zero (positions_balance); drawn amounts are such a reading (drawn_positions, first conjunct)."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Flow.drawn_positions",
+       "Becoming.RelativePosition.change_balances"
+      ],
+      "reason": "Rises equal falls for any change of amounts (change_balances), with drawn amounts as a case (drawn_positions)."
+     },
+     {
+      "clause": 6,
+      "declarations": [
+       "Becoming.Flow.drawn_positions",
+       "Becoming.RelativePosition.rise_needs_fall"
+      ],
+      "reason": "A rise needs another's fall (rise_needs_fall), with drawn amounts as a case (drawn_positions)."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·五",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [],
+      "reason": "Asserts that the withheld-levels history exists; WithheldLevels is only referred to (defined in 六·五) and no listed declaration states existence."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·十一",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.LivingSignificance",
+       "Becoming.Valuation.Significant"
+      ],
+      "reason": "Defines 活皆有顾 (every living proposition significant from every position), which both defs formalize at the valuation and frame levels."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·十四",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Conditions.significant_iff_of_common",
+       "Becoming.Web.significant_iff_of_common"
+      ],
+      "reason": "Given a position and a living event, significance iff seed, no 亲, no 方: the same law in the web model and along a run's conditions."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·十五",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Valuation.significant_iff_held"
+      ],
+      "reason": "Continues clause 1's iff by saying it needs neither connection nor no-transmission, the exact hypotheses of significant_iff_held."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·二十二",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Conditions.significant_of_unrestricted",
+       "Becoming.Web.selfValuation_of_unrestricted",
+       "Becoming.Web.significant_of_unrestricted"
+      ],
+      "reason": "The step, relation and whole-run readings as instances of clause 1, including the stepwise self-valuation."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·二十六",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [],
+      "reason": "A universal claim (whatever is widened loses a significant continuation); the inflow example is one instance whose specifics the clause does not state."
+     }
+    ]
+   },
+   {
+    "tiao": "十五·二十八",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.SubTrue",
+       "Becoming.subTrue_significantWithin_iff"
+      ],
+      "reason": "States subTrue_significantWithin_iff and spells out SubTrue (true in some admissible boundary)."
+     },
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.SuperTrue",
+       "Becoming.presupposition_scopes"
+      ],
+      "reason": "True in every admissible boundary (SuperTrue) iff everything is significant: presupposition_scopes' second conjunct."
+     }
+    ]
+   },
+   {
+    "tiao": "十六·四",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [
+       "Becoming.Profiles.both_respect",
+       "Becoming.Profiles.different_selections"
+      ],
+      "reason": "That widening-as-better does not fix the order of mixed pairs is witnessed by two appraisals that both respect Comparison yet select differently."
+     }
+    ]
+   },
+   {
+    "tiao": "十六·八",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.articulatesLiving",
+       "Becoming.universal_reason_of_unrestricted"
+      ],
+      "reason": "States universal_reason_of_unrestricted with A read for living propositions (articulatesLiving) spelled out."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·一",
+    "clauses": [
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.RegimeMargin.beyond_draw_iff",
+       "Becoming.RegimeMargin.ends_iff_below"
+      ],
+      "reason": "The drying threshold set by renewal (ending iff below H+y, ends_iff_below) lies above need plus take iff renewal at the need falls short of the take (beyond_draw_iff)."
+     },
+     {
+      "clause": 7,
+      "declarations": [
+       "Becoming.Pair.own_not_joint"
+      ],
+      "reason": "Each take within giving shows nothing: the pair example where every one is within its own giving but the joint take is not."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·三",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Optimum.least_of_shared",
+       "Becoming.Optimum.optimum_beyond",
+       "Becoming.Optimum.optimum_lowers_iff",
+       "Becoming.Optimum.optimum_untouched"
+      ],
+      "reason": "Optimum lowers outside conditions to the least eligible level (least_of_shared, optimum_beyond), exactly where drawable (optimum_lowers_iff, optimum_untouched); least_iff's exact condition is not stated."
+     },
+     {
+      "clause": 7,
+      "declarations": [],
+      "reason": "A conjecture about actually trained systems near the optimum; no listed declaration is about such systems."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·四",
+    "clauses": [
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.BoundaryInvariant",
+       "Becoming.Unrestricted"
+      ],
+      "reason": "Scope includes unnamed things (Unrestricted) and unnamed regions (boundary invariance)."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·五",
+    "clauses": [
+     {
+      "clause": 2,
+      "declarations": [
+       "Becoming.Comparison",
+       "Becoming.Unrestricted"
+      ],
+      "reason": "Says what each premise amounts to: calling widening better (Comparison) is counting by positive weights; counting everything is Unrestricted's scope."
+     },
+     {
+      "clause": 6,
+      "declarations": [
+       "Becoming.Weighting.weighed_lt_of_widens"
+      ],
+      "reason": "Positive-weight positions agree on every widening pair (weighed_lt_of_widens), so differences fall only on mixed pairs."
+     },
+     {
+      "clause": 7,
+      "declarations": [
+       "Becoming.Weighting.weighed_lt_of_widens"
+      ],
+      "reason": "Ranking a history above one that widens it needs a non-positive weight or a misreading: the contrapositive of weighed_lt_of_widens."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·六",
+    "clauses": [
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Web.break_not_bounded",
+       "Becoming.Web.observed_raise_couples"
+      ],
+      "reason": "Distance to break is readable exactly where coupled: observed level distinguishes a raise (observed_raise_couples), unobserved does not bound it (break_not_bounded)."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·七",
+    "clauses": [
+     {
+      "clause": 5,
+      "declarations": [
+       "Becoming.ClosedCapture.lock_outlives_loss",
+       "Becoming.ClosedCapture.turned_by_loss"
+      ],
+      "reason": "Abandoned only where reading the outside changes the rule (turned_by_loss), not by growing evidence alone (lock_outlives_loss)."
+     }
+    ]
+   },
+   {
+    "tiao": "纲·八",
+    "clauses": [
+     {
+      "clause": 1,
+      "declarations": [],
+      "reason": "A thesis with undecided grounds; it does not assert the conclusion of identifiesAlike_iff or separation_faithful_iff."
+     },
+     {
+      "clause": 2,
+      "declarations": [],
+      "reason": "A thesis about how distinctions are drawn; it does not assert separation_faithful_iff's formal conclusion."
+     },
+     {
+      "clause": 3,
+      "declarations": [
+       "Becoming.Comparison"
+      ],
+      "reason": "Reading the good as widening what is admitted is the content of Comparison (widening is better)."
+     },
+     {
+      "clause": 4,
+      "declarations": [
+       "Becoming.Comparison",
+       "Becoming.Unrestricted"
+      ],
+      "reason": "Scope over everything (Unrestricted) and order by widening (Comparison); boundary invariance is not stated here."
+     }
+    ]
+   }
+  ]
+ }
+]

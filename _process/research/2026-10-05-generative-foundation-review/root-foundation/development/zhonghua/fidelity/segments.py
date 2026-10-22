@@ -102,7 +102,7 @@ def find_terms(text, gl):
     return found
 
 
-def lean_form(L, limit=400, max_unfold=10):
+def lean_form(L, limit=300, max_unfold=8):
     def cut(s):
         return s if len(s) <= limit else s[:limit] + ' …'
     return {'decl': L['decl'], 'kind': L['kind'],
