@@ -2256,10 +2256,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Synonyms do no harm and homonyms do; a coined form brings back a merged distinction; taking what
   most hold agrees on an odd split and rests on an even one; imposing a code keeps the exchange of
   formations and privileges forms.
-  Through a code the course of forms of every course of senses is one state where the course of
-  senses is exactly where the code tells the senses apart; where resolution reads every encoded
-  sequence, it reads the course of forms of every course of words as its course of meanings, step by
-  step.
+  Through a code the course of forms of every course of senses is one state at exactly the moments
+  the course of senses is, exactly where the code tells the senses apart; where resolution reads
+  every encoded sequence, it reads the course of forms of every course of words as its course of
+  meanings, step by step.
 * `Becoming.Likeness` (L1): the laws stated with equality, completed up to likeness, with no
   premise. A description carries a law up to likeness exactly where some equivalence
   registering the claims makes configurations go alike, the law stated with equality being the
@@ -2966,11 +2966,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.HorizonWebs` (L1): the horizon in the support-gated law, on its webs.
 * `Becoming.IdentificationRuns` (L1): the states of a run and what a bounded record fixes.
   The same course through the map is the coarsest relation keeping a map's values that a determined
-  law keeps, and a class keeping the values and carrying the law merges exactly the configurations
-  with the same course exactly where it is the coarsest such class. Where what couples into a
-  formation is read as values, being alike through its couplings up to a step is one prefix of its
-  own course, a selection through them reads that prefix, and an own course with at most N and N'
-  states fixes what the formation tells apart within N + N' - 1 steps, exactly.
+  law keeps; a class keeping the values and carrying the law is coarser than every such relation
+  exactly where it merges exactly the configurations with the same course, and, where a list holds
+  every configuration, coarsest among such classes into the universe of the values exactly there.
+  Where a reading gives the values of what couples into a formation, being alike through its
+  couplings up to a step is one prefix of its own course, a selection through them selects by that
+  prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1
+  steps, a bound attained.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

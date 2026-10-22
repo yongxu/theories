@@ -54,14 +54,14 @@ Hearing is a process of the spine (`process`), a stretch of its run is an order 
   along runs two codes that each tell two senses apart, one hearing the other at one sense, leave
   the hearer with one form for both (`TwoFormations.homonym`).
 * **The course of forms.** Through a code, the course of forms of every course of senses is one
-  state at the moments the course of senses is, exactly where the code tells the senses apart
-  (`course_states_iff`). Where grouping recovers the words of every encoded sequence and
+  state at exactly the moments the course of senses is, exactly where the code tells the senses
+  apart (`course_states_iff`). Where grouping recovers the words of every encoded sequence and
   resolution reads every encoded sequence as its meanings (`CrossSituational.reads_every_iff`),
   resolution reads the course of forms of every course of words as its course of meanings, step
   by step, so two moments that are one state of the forms are one state of the meanings
-  (`course_read`); a code whose every sequence of forms resolution reads back tells the senses
-  apart, and its course of forms is one state exactly where the course of senses is
-  (`code_read_every`).
+  (`course_read`); a code whose every encoded sequence of senses resolution reads back tells the
+  senses apart, and its course of forms is one state at exactly the moments the course of senses
+  is (`code_read_every`).
 * **No form is privileged.** Hearing under a rule that reads codes alike after a renaming keeps the
   renaming (`hearBy_keeps_renaming`, `hear_keeps_renaming`), so runs through one order from starts
   that differ by a renaming differ by it at every step (`run_renamed`), and their forms agree
@@ -752,26 +752,24 @@ theorem renamed_carries_iff {S : Type u} {A : Type v} {K : Type w} {K' : Type w}
 
 /-! ### The course of forms -/
 
-/-- The course taking `a` at the first step and `b` at every later one. -/
-def firstThen (a b : M) : Nat → M
-  | 0 => a
-  | _ + 1 => b
-
 /-- **A code's course of forms has the states of every course of senses exactly where the code
 tells the senses apart.** Two moments are one state of the course of forms of a course of senses
 through `c` exactly where they are one state of the course of senses, for every course, exactly
-where no two senses share a form; where two do, the course of forms of `firstThen` merges two
-moments its senses tell apart. -/
+where no two senses share a form. (Where two senses `a` and `b` share one, the proof's witness is
+the course holding `a` at the first step and `b` after, `Learning.holdFrom`: its course of forms
+merges its first two moments, which its senses tell apart.) -/
 theorem course_states_iff (c : M → F) :
     (∀ (m : Nat → M) t t', SameAhead (fun n => c (m n)) t t' ↔ SameAhead m t t') ↔
       TellsApart c :=
   ⟨fun every a b same =>
-    have merged : SameAhead (fun n => c (firstThen a b n)) 0 1 := fun n =>
+    have merged : SameAhead (fun n => c (Learning.holdFrom (fun _ => a) 1 b n)) 0 1 := fun n =>
       match n with
       | 0 => same
       | _ + 1 => rfl
-    (every (firstThen a b) 0 1).mp merged 0,
+    (every (Learning.holdFrom (fun _ => a) 1 b) 0 1).mp merged 0,
    fun tells _ _ _ => ⟨fun same n => tells _ _ (same n), fun same n => congrArg c (same n)⟩⟩
+
+universe uα uW uR
 
 open Segmentation CrossSituational in
 /-- **A course of meanings read off a course of forms.** Where grouping by `r` recovers the words
@@ -780,7 +778,7 @@ the meanings of its words, resolution reads the form of every course of words as
 each step (by `CrossSituational.reads_every_iff`, each word's bearing records separate its
 meaning): the course of meanings is the course of forms read through the resolution. So two
 moments that are one state of the course of forms are one state of the course of meanings. -/
-theorem course_read [DecidableEq M] {α : Type u} {W : Type v} {R : Type w} (r : α → α → Bool)
+theorem course_read [DecidableEq M] {α : Type uα} {W : Type uW} {R : Type uR} (r : α → α → Bool)
     (word : W → List α) (meaning : W → M) (bears : List α → R → Bool) (offers : R → M → Bool)
     {rep : List M} (distinct : Distinct rep) (rs : List R)
     (segments : ∀ ws, chunks r (encode word ws) = ws.map word)
@@ -799,23 +797,23 @@ theorem course_read [DecidableEq M] {α : Type u} {W : Type v} {R : Type w} (r :
        (read _)))⟩
 
 open Segmentation CrossSituational in
-/-- **A code whose every sequence of forms resolution reads back tells the senses apart, and its
-course of forms has the states of every course of senses.** Where grouping recovers the forms of
-every encoded sequence of senses and resolution reads every such sequence as its senses, no two
-senses share a form, so through the code the course of forms and the course of senses are one
-state at the same moments. -/
-theorem code_read_every [DecidableEq M] {α : Type w} {R : Type w} (r : α → α → Bool)
+/-- **A code whose every encoded sequence of senses resolution reads back tells the senses apart,
+and its course of forms has the states of every course of senses.** Where grouping recovers the
+forms of every encoded sequence of senses and resolution reads every such sequence as its senses,
+no two senses share a form, so through the code the course of forms and the course of senses are
+one state at exactly the same moments. -/
+theorem code_read_every [DecidableEq M] {α : Type uα} {R : Type uR} (r : α → α → Bool)
     (c : M → List α) (bears : List α → R → Bool) (offers : R → M → Bool) {rep : List M}
     (distinct : Distinct rep) (rs : List R)
     (segments : ∀ ms, chunks r (encode c ms) = ms.map c)
     (every : ∀ ms, readAll (fun f => unique (candidates (bears f) offers rep rs))
       (chunks r (encode c ms)) = some (ms.map fun m => m)) :
     TellsApart c ∧ ∀ (m : Nat → M) t t', SameAhead (fun n => c (m n)) t t' ↔ SameAhead m t t' :=
+  have read : ∀ a, unique (candidates (bears (c a)) offers rep rs) = some a := fun a =>
+    (course_read r c (fun m => m) bears offers distinct rs segments every (fun _ => a)).1 0
   have tells : TellsApart c := fun a b same =>
-    (course_read r c (fun m => m) bears offers distinct rs segments every (firstThen a b)).2 0 1
-      (fun n => match n with
-        | 0 => same
-        | _ + 1 => rfl) 0
+    Option.some.inj ((read a).symm.trans
+      ((congrArg (fun f => unique (candidates (bears f) offers rep rs)) same).trans (read b)))
   ⟨tells, (course_states_iff c).mpr tells⟩
 
 variable {I : Type u} [DecidableEq I] [DecidableEq M]

@@ -9,21 +9,14 @@ from pathlib import Path
 PKG = Path('experiments/integrated-correction/general-framework/generative-basis/lean/becoming')
 D = {
  'IdentificationRuns': (
-   "The same course through the map is the coarsest relation keeping a map's values that a determined law keeps, and a "
-   "class keeping the values and carrying the law merges exactly the configurations with the same course exactly where "
-   "it is the coarsest such class. Where what couples into a formation is read as values, being alike through its "
-   "couplings up to a step is one prefix of its own course, a selection through them reads that prefix, and an own "
-   "course with at most N and N' states fixes what the formation tells apart within N + N' - 1 steps, exactly.",
+   "The same course through the map is the coarsest relation keeping a map's values that a determined law keeps; a class keeping the values and carrying the law is coarser than every such relation exactly where it merges exactly the configurations with the same course, and, where a list holds every configuration, coarsest among such classes into the universe of the values exactly there. Where a reading gives the values of what couples into a formation, being alike through its couplings up to a step is one prefix of its own course, a selection through them selects by that prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1 steps, a bound attained.",
    "the coarsest class keeping the map's values and carrying the law (`Law.KeepsAndCarries`, `Law.sameFuture_coarsest`, "
-   "`Law.coarsest_iff`, `Law.coarsest_class`); a formation's own course (`Web.courseThrough`, "
-   "`Web.alikeThroughUpTo_iff_prefix`, `Web.selectsThrough_iff_reading`, `Web.alike_of_bounded`, `Web.bounded_exact`)",
+   "`Law.coarsest_iff`, `Law.coarsest_class`); " + "a formation's own course (`Web.ValuesThrough`, `Web.courseThrough`, `Web.alikeThroughUpTo_iff_prefix`, `Web.selectsThrough_iff_prefix`, `Web.alike_of_bounded`, `Web.bounded_exact`, `Web.alike_of_joint_bounded`, `Web.states_by_reading`)",
    "守象之值而载法之最粗之类（`Law.KeepsAndCarries`、`Law.sameFuture_coarsest`、`Law.coarsest_iff`、`Law.coarsest_class`）；"
-   "待者自身之文（`Web.courseThrough`、`Web.alikeThroughUpTo_iff_prefix`、`Web.selectsThrough_iff_reading`、"
+   "待者自身之文（`Web.courseThrough`、`Web.alikeThroughUpTo_iff_prefix`、`Web.selectsThrough_iff_prefix`、"
    "`Web.alike_of_bounded`、`Web.bounded_exact`）"),
  'SharedCodes': (
-   "Through a code the course of forms of every course of senses is one state where the course of senses is exactly "
-   "where the code tells the senses apart; where resolution reads every encoded sequence, it reads the course of forms "
-   "of every course of words as its course of meanings, step by step.",
+   'Through a code the course of forms of every course of senses is one state at exactly the moments the course of senses is, exactly where the code tells the senses apart; where resolution reads every encoded sequence, it reads the course of forms of every course of words as its course of meanings, step by step.',
    "the course of forms (`course_states_iff`, `course_read`, `code_read_every`)",
    "名之文（`course_states_iff`、`course_read`、`code_read_every`）"),
 }
