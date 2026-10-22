@@ -313,8 +313,8 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   every level (`Optimum.InTurn.BestAt`, `Optimum.InTurn.Perfect`). Backward from the horizon, whatever
   the first leaves the second draws, and whatever the second leaves the first draws at its next
   move, so every perfect profile has both leave nothing at every step, whatever stands at nothing
-  (`Optimum.InTurn.perfect_ends`, the case of two drawers below); the base
-  stands from the first step at what stands at nothing (`Optimum.InTurn.perfect_levels`), and
+  (`Optimum.InTurn.Many.perfect_ends`, of which two drawers are the case below); the base stands from
+  the first step at what stands at nothing (`Optimum.InTurn.Many.perfect_levels`), and
   drawing everything is perfect over every horizon (`Optimum.InTurn.perfect_of_zero`). On a web,
   every dependence on the base whose need, met at the start, lies above what stands at nothing is
   broken at the first step (`Web.perfect_broken`). `Holding.gated_in_turn` is the instance: under a
@@ -8172,26 +8172,11 @@ theorem perfect_pair {first second : Nat → Nat → Nat} {N : Nat} (perfect : I
 
 end Many
 
-/-- **Every perfect profile draws everything.** Along every profile perfect over `N` steps both
-drawers leave nothing at every step before the horizon, from every level, whatever stands at
-nothing: the case of two drawers (`Many.perfect_ends`). -/
-theorem perfect_ends {N : Nat} (perfect : Perfect G first second N) {t : Nat} (before : t < N) :
-    (∀ z, first t z = 0) ∧ ∀ a, second t a = 0 :=
-  have all := Many.perfect_ends (Nat.le_refl 2) (Many.perfect_pair perfect) before
-  ⟨all 0 (Nat.zero_lt_succ 1), all 1 (Nat.lt_succ_self 1)⟩
-
 /-- **Leaving nothing ends the base at once.** Where both leave nothing at every step before `N`, from
 every level, the base stands at what stands at nothing at every step from the first to the `N`-th. -/
 theorem levels_of_zero (zeros : ∀ t, t < N → (∀ z, first t z = 0) ∧ ∀ a, second t a = 0) (s : Nat)
     {t : Nat} (before : t < N) : levels G first second s (t + 1) = G t 0 :=
   congrArg (G t) ((congrArg (second t) ((zeros t before).1 _)).trans ((zeros t before).2 0))
-
-/-- **The base stands at what stands at nothing.** Along every profile perfect over `N` steps, at
-every step from the first to the `N`-th the base stands at what stands at nothing; where nothing
-stands at nothing, the base ends at once. -/
-theorem perfect_levels {N : Nat} (perfect : Perfect G first second N) (s : Nat) {t : Nat}
-    (before : t < N) : levels G first second s (t + 1) = G t 0 :=
-  levels_of_zero (fun _ lt => perfect_ends perfect lt) s before
 
 /-- Where each draws everything, the second draws nothing. -/
 theorem zero_secondDrawn : ∀ j t z,
@@ -8396,7 +8381,7 @@ def PerfectWithin (G : Nat → Nat → Nat) (low₁ low₂ : Nat → Nat → Nat
 
 /-- **With no limit, perfect within capacities is perfect.** Where both floors are nothing, a profile is
 perfect within the capacities exactly where it is perfect, so every such profile draws everything
-(`perfect_ends`). -/
+(`Many.perfect_ends`, `Many.perfect_pair`). -/
 theorem within_zero_iff {N : Nat} :
     PerfectWithin G (fun _ _ => 0) (fun _ _ => 0) first second N ↔ Perfect G first second N :=
   ⟨fun ⟨l₁, l₂, best⟩ => ⟨fun t z => (l₁ t z).2, fun t a => (l₂ t a).2, fun t j at_ =>
