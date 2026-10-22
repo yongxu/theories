@@ -470,6 +470,7 @@ SCOPE = (
     "(`World.drop_but`). Under the named finite, balance, dissipation, embodiment and support "
     "conditions, a reading of drawing together with drawing being depending derives transmission "
     "(`World.transmitting_of_drawn`). "
+    "A dependence forms anew exactly where the descendant depends on what its giver did not draw on; the reading of drawing is inheritance with the givers drawing what they pass on. "
     "Succession: `Successive.relay` gives a balanced, dissipative flow in which only active "
     "formations give, the pool is fed at every step, and each source participates and is active "
     "at its own step only. Continuing to be fed needs no source formation to recur. This advances "

@@ -100,6 +100,16 @@ actual descent forms dependences so, how reconstruction and development carry th
 descent forms new dependences, as when young come to depend on their parents, are matters of
 correspondence. The readings are the AI's, adopted on Ren's delegation of 15 October 2026
 (DELEGATED-CHOICES D31). No ethical predicate, ranking or axiom occurs.
+* **Forming anew, necessary and sufficient.** A dependence forms anew at a descent (`Web.NewAt`: the
+  descendant holds it, the giver did not) exactly where inheritance fails, the giver's dependence
+  stable (`Web.inheritsAt_iff_not_new`), and, depending and drawing coinciding at the giver, exactly
+  where the descendant depends on what its giver did not draw on (`Web.new_iff_undrawn`).
+  Inheritance gives the drawing reading at a descent exactly where the giver draws on what it holds
+  and passes on (`Web.drawn_necessary_iff`), so the reading of drawing is inheritance with the
+  givers drawing what they pass on (`Flow.PassesDrawn`, `Flow.dependsOnDrawn_iff`), the necessary
+  half of `inherits_of_drawn`; with depending and drawing coinciding, inheritance, the reading of
+  drawing and no descendant depending on what its giver did not draw on are one
+  (`Flow.inherits_iff_none_undrawn`).
 -/
 
 namespace Becoming
@@ -201,6 +211,40 @@ theorem drop_keeps_next {x : F} {d : C} (depends : W.requires (t + 1) x d) :
 theorem drop_not_inherits {x : F} (depends : W.requires (t + 1) x c) :
     ¬ (W.drop t g c).InheritsAt t x g c :=
   fun inherits => (inherits (drop_keeps_next depends)).2 ⟨rfl, rfl, rfl⟩
+
+/-! ## Forming anew, necessary and sufficient -/
+
+/-- A dependence on `c` forms anew at a descent across the step from `t`: the descendant `x`
+holds it at its first standing step and the giver `g` did not hold it at the giving step. -/
+def NewAt (t : Nat) (x g : F) (c : C) : Prop :=
+  W.requires (t + 1) x c ∧ ¬ W.requires t g c
+
+/-- **Inheritance is no dependence forming anew.** Inheritance at a descent excludes a
+dependence forming anew there; back, where the giver's dependence is stable (double negation
+removable, as wherever it is decided), excluding it gives inheritance. -/
+theorem inheritsAt_iff_not_new {t : Nat} {x g : F} {c : C}
+    (stable : ¬ ¬ W.requires t g c → W.requires t g c) :
+    W.InheritsAt t x g c ↔ ¬ W.NewAt t x g c :=
+  ⟨fun inherits ⟨depends, fresh⟩ => fresh (inherits depends),
+   fun none depends => stable fun fresh => none ⟨depends, fresh⟩⟩
+
+/-- **A dependence forms anew exactly where the descendant depends on what its giver did not
+draw on**, where depending and drawing coincide at the giver at the giving step: the law of
+forming, necessary and sufficient, in the vocabulary of drawing and depending. -/
+theorem new_iff_undrawn {t : Nat} {x g : F} {c : C}
+    (link : W.draws t g c → W.requires t g c) (held : W.requires t g c → W.draws t g c) :
+    W.NewAt t x g c ↔ W.requires (t + 1) x c ∧ ¬ W.draws t g c :=
+  ⟨fun ⟨depends, fresh⟩ => ⟨depends, fun draws => fresh (link draws)⟩,
+   fun ⟨depends, undrawn⟩ => ⟨depends, fun holds => undrawn (held holds)⟩⟩
+
+/-- **Where inheritance reads off the drawing.** At a descent, inheritance gives that the giver
+drew on what the descendant depends on exactly where the giver draws on what it holds and passes
+on: a dependence the giver held without drawing on it is inherited without being drawn. -/
+theorem drawn_necessary_iff {t : Nat} {x g : F} {c : C} :
+    (W.InheritsAt t x g c → W.requires (t + 1) x c → W.draws t g c) ↔
+      (W.requires (t + 1) x c → W.requires t g c → W.draws t g c) :=
+  ⟨fun reads depends holds => reads (fun _ => holds) depends,
+   fun passes inherits depends => passes depends (inherits depends)⟩
 
 end Web
 
@@ -524,6 +568,43 @@ theorem DependsOnDrawn.drop {c : X} (drawn : L.DependsOnDrawn W c) (t : Nat) (g 
 theorem DependsOnFed.drop {c : X} (fed : L.DependsOnFed W c) (t : Nat) (g d : X) :
     L.DependsOnFed (W.drop t g d) c :=
   fun s x h descends depends => fed s x h descends depends.1
+
+/-- The givers draw on what they hold and pass on: at every descent, a dependence on `c` the
+descendant holds at its first standing step and the giver held at the giving step, the giver drew
+on. -/
+def PassesDrawn (L : Flow X X) (W : Web X X) (c : X) : Prop :=
+  ∀ t x g, L.DescendsAt W t x g → W.requires (t + 1) x c → W.requires t g c → W.draws t g c
+
+/-- **The reading of drawing is inheritance with the givers drawing what they pass on**: the
+necessary half, with no premise; the sufficient half needs drawing to be depending
+(`inherits_of_drawn`). So under that link the reading of drawing is necessary and sufficient for
+inheritance exactly where the givers draw on what they pass on, and a dependence the giver holds
+without drawing is inherited without the reading. -/
+theorem dependsOnDrawn_iff {c : X} (link : W.DrawingDepends c) :
+    L.DependsOnDrawn W c ↔ L.Inherits W c ∧ L.PassesDrawn W c :=
+  ⟨fun drawn => ⟨inherits_of_drawn drawn link,
+     fun t x g descends depends _ => drawn t x g descends depends⟩,
+   fun ⟨inherits, passes⟩ t x g descends depends =>
+     passes t x g descends depends (inherits t x g descends depends)⟩
+
+/-- **No dependence forms anew by descent exactly where the reading of drawing holds**, where
+depending and drawing coincide at the givers and the givers' dependences are stable: inheritance,
+the reading of drawing, and no descendant depending on what its giver did not draw on are one. -/
+theorem inherits_iff_none_undrawn {c : X} (link : W.DrawingDepends c)
+    (held : ∀ t g, W.requires t g c → W.draws t g c)
+    (stable : ∀ t g, ¬ ¬ W.requires t g c → W.requires t g c) :
+    (L.Inherits W c ↔ L.DependsOnDrawn W c) ∧
+      (L.Inherits W c ↔ ∀ t x g, L.DescendsAt W t x g →
+        ¬ (W.requires (t + 1) x c ∧ ¬ W.draws t g c)) :=
+  ⟨⟨fun inherits => (dependsOnDrawn_iff link).mpr
+      ⟨inherits, fun t _ g _ _ holds => held t g holds⟩,
+    fun drawn => inherits_of_drawn drawn link⟩,
+   ⟨fun inherits t x g descends new =>
+      (Web.inheritsAt_iff_not_new (stable t g)).mp (inherits t x g descends)
+        ((Web.new_iff_undrawn (link t g) (held t g)).mpr new),
+    fun none t x g descends =>
+      (Web.inheritsAt_iff_not_new (stable t g)).mpr fun new =>
+        none t x g descends ((Web.new_iff_undrawn (link t g) (held t g)).mp new)⟩⟩
 
 end Flow
 
