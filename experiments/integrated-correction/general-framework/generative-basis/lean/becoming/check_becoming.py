@@ -77,7 +77,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
-        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance",
+        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
         "Becoming.Regions", "Becoming.Growth", "Becoming.Retaining", "Becoming.OwnWidening", "Becoming.Clearing", "Becoming.Extension",
         "Becoming.Metaethics", "Becoming.Lifting", "Becoming.Ranking", "Becoming.ActiveReading", "Becoming.LossMatching", "Becoming.StrictTransport", "Becoming.MatchedCourses",
@@ -1814,6 +1814,12 @@ SCOPE = (
     "windows, a binary code reads a condition at depth k within 2^k steps, items with Kraft weights "
     "at most 2^D are all read by one code, and windows with whole weights 2^(D+1) <= q c a c "
     "totalling at most 2^D are read by one schedule and kept. "
+    "Continuity: over relata listed without repetition, transfers moving only between relata "
+    "adjacent under a Bool relation balance a step exactly where the total is conserved on every "
+    "family the relation closes, the transfers routed one relatum at a time; a law reading only a "
+    "relatum and those adjacent to it and conserving the total from every configuration conserves "
+    "it on every closed family, so its runs balance along the relation; swapping two levels "
+    "balances along the full relation and not along the empty one. "
     "Loops: the amount carried by routes of at most j responses rises with j to the carried "
     "amount and is exact up to step j; where no chain of j + 1 couplings ends at a condition, "
     "order j is exact there, and with every condition listed a chain as long as the list passes "

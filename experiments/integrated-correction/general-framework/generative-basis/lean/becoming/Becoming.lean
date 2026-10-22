@@ -74,6 +74,7 @@ import Becoming.InAmounts
 import Becoming.Entropy
 import Becoming.Units
 import Becoming.Imbalance
+import Becoming.Continuity
 import Becoming.Continuation
 import Becoming.RenewalFlow
 import Becoming.Admission
@@ -1031,6 +1032,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   activity premises hold of the extended flow exactly where they hold of the flow and it
   balances there. Adopted, the landed laws keep their statements, with balance a local
   condition read as the rest idle. The readings are the AI's, adopted with the re-founding.
+* `Becoming.Continuity` (L1): balance from conservation along a relation. Over finitely many
+  relata, with the relation a computable test and equality of relata decided, transfers that
+  move only between adjacent relata and balance a step exist exactly where the total is
+  conserved on every family the relation closes (`Continuity.balancing_iff`); the transfers
+  are computed one relatum at a time (`Continuity.route`). A law whose next level at a
+  relatum reads only it and the relata adjacent to it, conserving the total from every
+  configuration, conserves it on every closed family (`Continuity.conservedOn_of_law`), so
+  every run of it balances along the relation (`Continuity.balancesOn_of_law`). Swapping two
+  levels conserves the total and balances along the full relation, not along the empty one
+  (`Continuity.Teleport`). The transfers depend on the whole configuration: a local flux is
+  known for cellular automata on lattices (Hattori and Takesue 1991; Pivato 2002), not shown
+  here. A leaf: nothing builds on the transfers yet.
 * `Becoming.Continuation` (L1): what a continuing formation must count, with no ethical
   premise. Across a step something is conveyed from one condition to another when a
   formation taking part takes from the first and gives to the second, and a family is fed

@@ -1,0 +1,22 @@
+<a id="continuity-check"></a>
+## A check before building: balance from conservation along a relation (22 October 2026, FL2)
+
+An AI check (one session, 22 October), made before the Lean. FL1 grounded balance in the first law with locality but stated locality as one transfer per exchange and store. The question: given only levels before and after a step and a relation among the relata, when are there transfers along the relation that balance the step, and does a law that reads only related relata give them? **Verdict: the step form is known (flows with prescribed divergence); the local flux is known for cellular automata on lattices and is not reproduced. What the module adds is the statement on the spine's relations, computed with an empty axiom report, and the step from a local law to conservation on every closed family.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| A flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component | network flows; the standard spanning-forest construction | `Continuity.balancing_iff` is this, with the spine's families in place of components and the flow computed by `Continuity.route` |
+| A conserved additive quantity of a cellular automaton on a lattice has a flux depending only on a finite window, and a discrete continuity equation | Hattori and Takesue, "Additive conserved quantities in discrete-time lattice dynamical systems", Physica D 49 (1991); Pivato, "Conservation laws in cellular automata", Nonlinearity 15 (2002), Proposition 12 ([arXiv math/0111014](https://arxiv.org/abs/math/0111014)) | Not proved here: `route` depends on the whole configuration. The local flux is the module's next step |
+| Number-conserving rules have particle-displacement representations: each unit moves to a neighbour | one dimension: Fukś 2000; Moreira, Boccara and Goles 2004 ([arXiv nlin/0306040](https://arxiv.org/abs/nlin/0306040)); two dimensions, radius one half: Kari and Taati 2008 (JAC 2008; Taati's thesis, Turku 2009); three or more open | Not proved here: a routed transfer may exceed what stands on its source within the step |
+| The continuity equation of a locally conserved quantity | physics; FL1 (§348) for energy and available work | `Continuity.conservedOn_of_law` is its discrete, relational form: a local law conserving its total conserves it on every closed family |
+
+**What is claimed, and what is not.** No new mathematics. The module states on the spine's relations that balance along a relation is conservation on every family the relation closes, computes the transfers, and proves that a law reading only related relata and conserving its total from every configuration conserves it on every closed family. The flux is not local and the moves are not displacements bounded by occupancy; both are known on lattices and left as the next step.
+
+```text
+Result(s): new record balance-from-conservation-along-a-relation (FL2, new core module Becoming.Continuity)
+Delta: transfers along a relation balancing a step exist exactly where the total is conserved on every family the relation closes; a local law conserving its total conserves it on every closed family; Teleport along the empty relation
+Supplied premises / correspondence: finitely many relata, equality decided, the relation a Bool test, whole-number levels. Correspondence: network flows; Hattori and Takesue 1991; Pivato 2002; Fukś 2000; Moreira, Boccara and Goles 2004; Kari and Taati 2008
+Evidence: web searches on 22 October 2026 (Hattori and Takesue; Pivato's paper read for its flux proposition; particle displacements in one and two dimensions); Hattori and Takesue, Fukś and Kari and Taati cited from abstracts and secondary sources, not reread; Lean in the record's receipt
+Boundary: AI check, one session; the local flux and bounded displacements not proved
+Integration: chapter premise card C, §8.7's balance bullet, the relation to known results, the record table
+```
