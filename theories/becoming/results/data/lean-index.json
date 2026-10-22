@@ -15312,7 +15312,9 @@
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
-      "direct_documentation_links_from": [],
+      "direct_documentation_links_from": [
+        "RESULTS.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {

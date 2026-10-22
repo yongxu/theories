@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "id": "slowing-down-before-an-own-end",
+  "title": {
+    "en": "Slowing down before a condition's own end",
+    "zh": "条件自身终止之前的慢化"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
+  "statement": {
+    "en": "Where a condition is observed, the margin to its own end couples into its fluctuations: the stationary variance Var E/(1 − a²) and lag-1 autocorrelation a rise as the return multiplier a rises to one before a fold or transcritical end, and give back the margin; a dependent's need enters neither.",
+    "zh": "条件本身被观察之处，到其自身终止的余量耦合入其涨落：在折叠或跨临界终止之前，回复乘数 a 升向一，平稳方差 Var E/(1 − a²) 与一阶自相关 a 随之上升，并读回余量；依存者的需要不进入任一者。"
+  },
+  "laws": [
+    {
+      "en": "One step of a deviation about a rest, the return multiplier times the deviation plus noise independent of it, has variance a² Var Y + Var E and covariance a Var Y with the deviation now.",
+      "zh": "围绕静止的偏离走一步（回复乘数乘偏离，加上与之独立的噪声），其方差为 a² Var Y + Var E，与当下偏离的协方差为 a Var Y。",
+      "declarations": [
+        "Becoming.SlowingDown.step",
+        "Becoming.SlowingDown.memLp_step",
+        "Becoming.SlowingDown.variance_step",
+        "Becoming.SlowingDown.covariance_step"
+      ]
+    },
+    {
+      "en": "Where the variance stays the same across the step and a² < 1, it is Var E / (1 − a²), and the lag-1 autocorrelation is the multiplier itself.",
+      "zh": "方差跨步不变且 a² < 1 之处，方差为 Var E / (1 − a²)，一阶自相关即乘数本身。",
+      "declarations": [
+        "Becoming.SlowingDown.stationaryVariance",
+        "Becoming.SlowingDown.stationary_variance",
+        "Becoming.SlowingDown.lag1",
+        "Becoming.SlowingDown.stationary_lag1"
+      ]
+    },
+    {
+      "en": "The stationary variance rises strictly with the multiplier on [0, 1) and tends to infinity as the multiplier rises to one.",
+      "zh": "平稳方差在 [0, 1) 上随乘数严格上升，乘数升向一时趋于无穷。",
+      "declarations": [
+        "Becoming.SlowingDown.stationaryVariance_strictMonoOn",
+        "Becoming.SlowingDown.stationaryVariance_tendsto"
+      ]
+    },
+    {
+      "en": "At a fold, x + h (m − x²) with rest √m, the multiplier is 1 − 2h√m; it rises to one as the margin m goes to zero, the variance rises strictly as the margin shrinks and without bound, and m = ((1 − a) / (2h))².",
+      "zh": "在折叠 x + h (m − x²)（静止 √m）处，乘数为 1 − 2h√m；余量 m 趋于零时它升向一，方差随余量缩小严格上升且无界，且 m = ((1 − a) / (2h))²。",
+      "declarations": [
+        "Becoming.SlowingDown.foldStep",
+        "Becoming.SlowingDown.foldStep_rest",
+        "Becoming.SlowingDown.foldMultiplier",
+        "Becoming.SlowingDown.foldStep_hasDerivAt",
+        "Becoming.SlowingDown.foldMultiplier_tendsto",
+        "Becoming.SlowingDown.fold_variance_strictAntiOn",
+        "Becoming.SlowingDown.fold_variance_tendsto",
+        "Becoming.SlowingDown.fold_margin_read"
+      ]
+    },
+    {
+      "en": "Under logistic renewal with a proportional draw, rest K (1 − q / r), the multiplier is 1 − h (r − q) = 1 − h r x* / K, so the stock slows in proportion to its own level, the level is read back as K (1 − a) / (h r), and as the draw rises to the renewal rate the variance rises strictly and without bound.",
+      "zh": "比例汲取下的逻辑斯谛更新（静止 K (1 − q / r)）中，乘数为 1 − h (r − q) = 1 − h r x* / K，故存量按其自身水平成比例地慢化，水平读回为 K (1 − a) / (h r)；汲取升向更新速率时方差严格上升且无界。",
+      "declarations": [
+        "Becoming.SlowingDown.drawnStep",
+        "Becoming.SlowingDown.drawnRest",
+        "Becoming.SlowingDown.drawnStep_rest",
+        "Becoming.SlowingDown.drawnMultiplier",
+        "Becoming.SlowingDown.drawnStep_hasDerivAt",
+        "Becoming.SlowingDown.drawn_multiplier_level",
+        "Becoming.SlowingDown.drawn_level_read",
+        "Becoming.SlowingDown.drawnMultiplier_tendsto",
+        "Becoming.SlowingDown.drawn_variance_strictMonoOn",
+        "Becoming.SlowingDown.drawn_variance_tendsto"
+      ]
+    },
+    {
+      "en": "A dependent's need enters neither statistic: every reading of the margin to it from the multiplier is wrong for some need, and with the need measured the margin is read exactly (by construction).",
+      "zh": "依存者的需要不进入任一统计量：由乘数读出到它的余量，每种读法对某个需要都错；测得需要，则余量恰可读出（按构造）。",
+      "declarations": [
+        "Becoming.SlowingDown.need_not_read",
+        "Becoming.SlowingDown.need_margin_read"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Periphery: the declarations use Lean's standard axioms through Mathlib. Discrete steps; one variable; the deviation read in the linearization about a rest (the step's derivative there); noise independent of the deviation with finite variance; stationarity supplied as the variance being the same across the step; for the limits, the step length and noise variance positive.",
+      "zh": "外围：各声明经 Mathlib 用 Lean 的标准公理。离散步；一个变量；偏离在静止附近的线性化中读出（步在该处的导数）；噪声与偏离独立且方差有限；平稳性以方差跨步不变给出；求极限时步长与噪声方差为正。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a run of the nonlinear step stays near its rest, or reaches the stationary variance; that finite rolling-window estimates converge to the stationary values; the error of the linearization near the fold, where the basin narrows.",
+      "zh": "非线性之步的运行停留在其静止附近，或达到平稳方差；有限滚动窗口的估计收敛于平稳值；折叠附近（吸引域变窄处）线性化的误差。",
+      "kind": "scope"
+    },
+    {
+      "en": "Red noise, several variables (where the critical mode loads on some only), flickering, noise-induced transitions, and regime shifts with no bifurcation.",
+      "zh": "红噪声、多个变量（临界模态只落在其中一些上）、闪变、噪声诱发的转换，以及无分岔的体制转换。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual dependents leave their stock's law unchanged as they near their needs: the need's not being read holds by construction, and its content in the world is the premise of negligible feedback, measured apart by the field tests.",
+      "zh": "实际依存者接近其需要时不改变其存量之律：需要不被读出按构造成立，其在世界中的内容是反馈可忽略这一前提，由野外检验另外测量。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the periphery module SlowingDown's 22 theorems (30 declaration audits) by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261022T104044.892409Z), each on Lean's standard axioms only; it imports no core module. Built and reviewed in one session, with no separate reviewer; author review in study section 349; not independently reviewed by a person.",
+    "zh": "机器检查：外围模块 SlowingDown 的 22 个定理（30 项声明审计）由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261022T104044.892409Z），只用 Lean 标准公理；它不导入核心模块。一个会话中构建并审查，无另设审查者；作者审查见研究第 349 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Convergence of the variance recursion to the stationary value from any start with a² < 1; red noise and several variables; a bound on the linearization near the fold; a core statement in natural amounts if one is natural; an independent review.",
+    "zh": "a² < 1 时方差递推自任何起点收敛于平稳值；红噪声与多个变量；折叠附近线性化的界；若自然，以自然数量在核心中陈述；独立审查。"
+  },
+  "correspondence": {
+    "en": "Critical slowing down: the recovery rate falls to zero at a bifurcation (Wissel 1984; Wiesenfeld 1985), so variance and autocorrelation rise before it (Scheffer et al. 2009; Dakos et al. 2008, 2012 for the AR(1) reading of rolling windows), before a transcritical end too (Kéfi et al. 2013), seen before a fold in yeast (Dai et al. 2012). The theory adds only the reading: the statistic reads the observed condition's own rate of return, never a dependent's need.",
+    "zh": "临界慢化：回复速率在分岔处降为零（Wissel 1984；Wiesenfeld 1985），故其前方差与自相关上升（Scheffer 等 2009；滚动窗口的 AR(1) 读法见 Dakos 等 2008、2012），在跨临界的终止之前亦然（Kéfi 等 2013），在酵母中折叠之前被看到（Dai 等 2012）。本理论只添加读法：统计量读被观察条件自身的回复速率，从不读依存者的需要。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean",
+  "aliases": [
+    "slowing down before an own end",
+    "T6's seen half",
+    "critical slowing down on the spine",
+    "临界慢化",
+    "Becoming.SlowingDown.stationary_lag1",
+    "Becoming.SlowingDown.fold_variance_tendsto",
+    "Becoming.SlowingDown.drawn_multiplier_level"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "runaway-distance-uncoupled",
+      "detail": {
+        "en": "T6's unseen half: where the stock couples in by threshold only, nothing coupled in bounds the distance to the break (Web.break_not_bounded); this record states the seen half, where the condition is itself observed.",
+        "zh": "T6 不可见的一半：存量只以阈值耦合入之处，耦合入的任何东西都界定不了到断裂的距离（Web.break_not_bounded）；本记录陈述可见的一半，即条件本身被观察之处。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SlowingDown.step",
+        "Becoming.SlowingDown.memLp_step",
+        "Becoming.SlowingDown.variance_step",
+        "Becoming.SlowingDown.covariance_step",
+        "Becoming.SlowingDown.stationaryVariance",
+        "Becoming.SlowingDown.stationary_variance",
+        "Becoming.SlowingDown.lag1",
+        "Becoming.SlowingDown.stationary_lag1",
+        "Becoming.SlowingDown.stationaryVariance_strictMonoOn",
+        "Becoming.SlowingDown.stationaryVariance_tendsto",
+        "Becoming.SlowingDown.foldStep",
+        "Becoming.SlowingDown.foldStep_rest",
+        "Becoming.SlowingDown.foldMultiplier",
+        "Becoming.SlowingDown.foldStep_hasDerivAt",
+        "Becoming.SlowingDown.foldMultiplier_tendsto",
+        "Becoming.SlowingDown.fold_variance_strictAntiOn",
+        "Becoming.SlowingDown.fold_variance_tendsto",
+        "Becoming.SlowingDown.fold_margin_read",
+        "Becoming.SlowingDown.drawnStep",
+        "Becoming.SlowingDown.drawnRest",
+        "Becoming.SlowingDown.drawnStep_rest",
+        "Becoming.SlowingDown.drawnMultiplier",
+        "Becoming.SlowingDown.drawnStep_hasDerivAt",
+        "Becoming.SlowingDown.drawn_multiplier_level",
+        "Becoming.SlowingDown.drawn_level_read",
+        "Becoming.SlowingDown.drawnMultiplier_tendsto",
+        "Becoming.SlowingDown.drawn_variance_strictMonoOn",
+        "Becoming.SlowingDown.drawn_variance_tendsto",
+        "Becoming.SlowingDown.need_not_read",
+        "Becoming.SlowingDown.need_margin_read"
+      ],
+      "sha256": "4ab7d5f9b66e6f63bbaac790117af0377a130b997a54b1ed6fbffdb00fa14291"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json",
+      "role": "receipt",
+      "sha256": "8eeff3e7583634fb6fd68080f8ef29895902019808a8eb416b787ff69aeec457"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/check_slowing_down.py",
+      "role": "integration",
+      "sha256": "0035ecaab01dc25c9fbe1aa6a8692850ba64a614a4fd117bd7ec18bf1f4dd700"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "de3ae64484487cb8fe5451b39e7255867f5c747080a6ff8d20f38cbf49f52953"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json",
+      "sha256_pointer": "/source_sha256/SlowingDown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (CS1), T6's seen half proved in its model in the periphery: stationary variance and lag-1 autocorrelation of a linear step with independent noise, their rise at a fold and at a transcritical end, the margin read back, and the need not read; study section 349.",
+      "zh": "2026年10月22日：新增（CS1），T6 可见的一半在外围于其模型中已证：带独立噪声的线性之步的平稳方差与一阶自相关，它们在折叠与跨临界终止处的上升，余量的读回，以及需要不被读出；研究第 349 节。"
+    }
+  ]
+}

@@ -74,3 +74,14 @@ Board item EW3, 22 October 2026. EW2's frozen test, unchanged, on series to 2020
 | [ew3.py](ew3.py) | The layout, the generators and dry runs, and the frozen test, on EW2's statistics (`ew2.py`) |
 | [posthoc_ew3.py](posthoc_ew3.py) | After the run, not a verdict: the combined partial correlation and its 95% interval |
 | [results/ew3/](results/ew3/) | `layout.json`, `dry.json`, `FROZEN-AT`; after the run, `test.json` and `posthoc.json` |
+
+### Results
+
+Run once, after the freeze landed on main (`836281856`). Study section [350](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3).
+
+| Verdict | Statistic | Result |
+|---|---|---|
+| V1 | lag-1 autocorrelation of the prey's 8-year window, given level and draw; Benguela (29 years, 10 poor) and Røst (28 years, 9 poor) | **passed**: Z = 0.12, one-sided p = 0.452; partial r 0.14 (Benguela), −0.20 (Røst) |
+| V2 | variance of the same window | **passed**: Z = −1.10, p = 0.864; partial r −0.04, −0.53 |
+
+Combined partial correlation (`posthoc_ew3.py`, not a verdict): +0.02 for autocorrelation (95% interval −0.35 to 0.40), −0.20 for variance (−0.52 to 0.16). EW2's positive estimate did not hold up at about twice the power; by the frozen reading rule the variance resolves it toward T6 and the autocorrelation leaves it open. On the rows EW2 did not test (R5), Benguela's estimates are 0.64 and 0.61 on 15 rows with six covariates, Røst's −0.15 and −0.30. Everything reported only is in `results/ew3/test.json` and `posthoc.json`.

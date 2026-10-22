@@ -3,60 +3,60 @@
   "id": "七·十二",
   "find": "这是四条已检之律之合（又 `Becoming.Law.alike_iff_sameFuture`、`Becoming.identifiesAlike_iff`），不是一条定理。",
   "replace": "这是一条定理：守象之值而为理之类，凡守值而为法所守之关系所连之二状皆并之、凡文同之二状皆并之、所并恰是文同之状、为正名，四者一也（`Becoming.Law.coarsest_iff`）；文同自身是守值而为法所守之关系中最粗者，无设（`Becoming.Law.sameFuture_coarsest`）；一族尽其状时，以前段之名（⟦十·十五⟧）为类，即守值之理中最粗者（`Becoming.Law.coarsest_class`）。不给一族时，以文同取商可以有，商并文同之状须 `Quot.sound`，核心不用，故只立其关系。",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved: the coarsest value-keeping class as one law"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved: the coarsest value-keeping class as one law"
  },
  {
   "id": "七·十二",
   "find": "`Becoming.Law.identifiesAlike_of_law`、`Becoming.carries_law_alike_iff`",
   "replace": "`Becoming.Law.identifiesAlike_of_law`、`Becoming.Law.KeepsAndCarries`、`Becoming.Law.sameFuture_coarsest`、`Becoming.Law.coarsest_iff`、`Becoming.Law.coarsest_class`、`Becoming.carries_law_alike_iff`",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved"
  },
  {
   "id": "十一·九",
   "find": "以积感入者增，缘感之择仍缘感。",
   "replace": "以积感入者增，缘感之择仍缘感。感读作值时，二历缘其感至某步无异，恰当其自身之文至此步之往同；缘其感之择，恰是依此往之择；其自身之文于二历下各不过 N、N′ 状，则二历缘其感于 N＋N′－1 步之前无异者，永无异。",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved: a formation's own course"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved: a formation's own course"
  },
  {
   "id": "十一·九",
   "find": "讀（AI，D25）：AI 训练中给奖励者是择者",
   "replace": "感读作值（`Becoming.Web.ValuesThrough`：每步二组积之值同，恰当其同容或同不容此待者、以积感入之所待其积亦同；容已定然否、以积感入之所待列尽时，容否与所列诸积即是，`Becoming.Web.listed_values`），待者自身之文是每步感入它者之值（`Becoming.Web.courseThrough`，⟦WEN-1⟧）：二历缘其感至某步无异，恰当其自身之文至此步之往同（`Becoming.Web.alikeThroughUpTo_iff_prefix`）；一择缘其感，恰当它依此往而择（`Becoming.Web.selectsThrough_iff_prefix`）。所以缘感而择，就是读自身之文之往。自身之文于二历下各不过 N、N′ 状，则二历缘其感于 N＋N′－1 步之前每步无异，即永无异（`Becoming.Web.alike_of_bounded`，⟦九·二十五⟧），此界确切（`Becoming.Web.bounded_exact`，构造之例，一待者一所待）；二文合读不过 P 状，则 P 步之前无异即足（`Becoming.Web.alike_of_joint_bounded`）。文之状比较异步之值，感只比较同步之二历，故文之状随读而定：一待者一所待之例中，积恒为零之历，以积读之其文一状，连步数读之其文之状多于每一界（`Becoming.Web.states_by_reading`）。缘感无异一般是关系，不是象：容是一辞，以积感入之所待可以无穷。讀（AI，D25）：AI 训练中给奖励者是择者",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved: a formation's own course"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved: a formation's own course"
  },
  {
   "id": "十一·九",
   "find": "`Becoming.Clearing.selected_by_dweller`；记录",
   "replace": "`Becoming.Clearing.selected_by_dweller`、`Becoming.Web.ValuesThrough`、`Becoming.Web.listed_values`、`Becoming.Web.courseThrough`、`Becoming.Web.alikeThroughUpTo_iff_prefix`、`Becoming.Web.selectsThrough_iff_prefix`、`Becoming.Web.alike_of_bounded`、`Becoming.Web.bounded_exact`、`Becoming.Web.alike_of_joint_bounded`、`Becoming.Web.states_by_reading`；记录",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved"
  },
  {
   "id": "十一·九",
   "find": "[testing-within-couplings](../results/records/testing-within-couplings.md)。",
   "replace": "[testing-within-couplings](../results/records/testing-within-couplings.md)、[a-formations-own-course](../results/records/a-formations-own-course.md)。",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved"
  },
  {
   "id": "九·一",
   "find": "只随其感所作之类而定；感之外之差",
   "replace": "只随其感所作之类而定；感读作值时，此类恰是其自身之文之往（⟦十一·九⟧），所以识所读者是它自身之文；感之外之差",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved: 识 reads the prefix of its own course"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved: 识 reads the prefix of its own course"
  },
  {
   "id": "十·十一",
   "find": "对照（相合，mojing-tong-yi-hou-dui）",
   "replace": "一部书是以名为值之文（⟦WEN-1⟧）。分组能复原每一串编码之词、以通意读出每一串之义项时，通意逐步把名之文读为义之文：名之文二步同，则义之文二步同（`Becoming.SharedCodes.course_read`）。经一码，凡义之文，其名之文与义之文同状，恰当此码辨诸义（`Becoming.SharedCodes.course_states_iff`）；以通意读回每一串之码，必辨诸义（`Becoming.SharedCodes.code_read_every`）。对照（相合，mojing-tong-yi-hou-dui）",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved: the course of names"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved: the course of names"
  },
  {
   "id": "十·十一",
   "find": "`Becoming.CrossSituational.Omitted.wrong_unique`；记录",
   "replace": "`Becoming.CrossSituational.Omitted.wrong_unique`、`Becoming.SharedCodes.course_read`、`Becoming.SharedCodes.course_states_iff`、`Becoming.SharedCodes.code_read_every`；记录",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved"
  },
  {
   "id": "十·十一",
   "find": "[encounter-selection-and-revision](../results/records/encounter-selection-and-revision.md)。",
   "replace": "[encounter-selection-and-revision](../results/records/encounter-selection-and-revision.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。",
-  "why": "WL2 (study section 349): the open Lean items of WENLI-AND-BECOMING proved"
+  "why": "WL2 (study section 351): the open Lean items of WENLI-AND-BECOMING proved"
  }
 ]

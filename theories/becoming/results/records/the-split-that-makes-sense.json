@@ -224,8 +224,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: each cited module's current bytes are bound to a passing receipt (proof_bindings), every source declaration has an empty axiom report, and core purity is verified; the coarsest-class laws WL2 added by receipt 20261022T110022.458880Z. Author counterreview in the integration notes (for WL2 study section 349, with an independent AI review), which state the scope of the independent review.",
-    "zh": "Lean 4.29.1 合并检查器实查：所引各模块之当前字节绑定于通过之回执（proof_bindings），源声明公理报告全空，并核对核心纯净；WL2 所加最粗之类诸律由回执 20261022T110022.458880Z 检查。作者反审见整合文档（WL2 见研究第 349 节，并经一次独立的 AI 审查），其中也说明独立审查的范围。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: each cited module's current bytes are bound to a passing receipt (proof_bindings), every source declaration has an empty axiom report, and core purity is verified; the coarsest-class laws WL2 added by receipt 20261022T110022.458880Z. Author counterreview in the integration notes (for WL2 study section 351, with an independent AI review), which state the scope of the independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：所引各模块之当前字节绑定于通过之回执（proof_bindings），源声明公理报告全空，并核对核心纯净；WL2 所加最粗之类诸律由回执 20261022T110022.458880Z 检查。作者反审见整合文档（WL2 见研究第 351 节，并经一次独立的 AI 审查），其中也说明独立审查的范围。"
   },
   "next_delta": {
     "zh": "有分支的框架下最粗切分与部分单独的形式；状态有限时可判定的命名。",
@@ -820,8 +820,8 @@
       "zh": "2026-10-20：45 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/60d26132566767b0/the-split-that-makes-sense.json 和 git 中。"
     },
     {
-      "en": "22 October 2026, WL2: the coarsest class keeping the values and carrying the law stated as one law, with the coarsest relation (no premise) and the class where a list holds every configuration (Law.sameFuture_coarsest, Law.coarsest_iff, Law.coarser_of_exact, Law.coarsest_class); it gathers sameFuture_of_law, identifiesAlike_of_law and alike_iff_sameFuture, and adds the coarsest property; Law.KeepsRelation moved here from SharedCodes; the statement and the scope note on naming revised; study section 349.",
-      "zh": "2026年10月22日，WL2：守值载法之最粗之类作一条律，含最粗之关系（无设）与一列表尽其状时之类（Law.sameFuture_coarsest、Law.coarsest_iff、Law.coarser_of_exact、Law.coarsest_class）；它合 sameFuture_of_law、identifiesAlike_of_law 与 alike_iff_sameFuture，并加最粗之性；Law.KeepsRelation 自 SharedCodes 移来；改陈述与命名之范围注；研究第 349 节。"
+      "en": "22 October 2026, WL2: the coarsest class keeping the values and carrying the law stated as one law, with the coarsest relation (no premise) and the class where a list holds every configuration (Law.sameFuture_coarsest, Law.coarsest_iff, Law.coarser_of_exact, Law.coarsest_class); it gathers sameFuture_of_law, identifiesAlike_of_law and alike_iff_sameFuture, and adds the coarsest property; Law.KeepsRelation moved here from SharedCodes; the statement and the scope note on naming revised; study section 351.",
+      "zh": "2026年10月22日，WL2：守值载法之最粗之类作一条律，含最粗之关系（无设）与一列表尽其状时之类（Law.sameFuture_coarsest、Law.coarsest_iff、Law.coarser_of_exact、Law.coarsest_class）；它合 sameFuture_of_law、identifiesAlike_of_law 与 alike_iff_sameFuture，并加最粗之性；Law.KeepsRelation 自 SharedCodes 移来；改陈述与命名之范围注；研究第 351 节。"
     }
   ],
   "text_versions": [

@@ -5676,7 +5676,7 @@ Definitions and types:
 <details>
 <summary>SlowingDown.lean — 30 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean`
 
