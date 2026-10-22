@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 349); not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 351); not independently reviewed by a person.
 
 Canonical source: [ClosedCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
@@ -87,7 +87,7 @@ Aliases: `readers drawn from the selected`, `从所选者中抽出的读者`, `s
 <a id="history--沿革"></a>
 ### History
 
-- 22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 349; readings D64; an independent read-only review applied.
+- 22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 351; readings D64; an independent read-only review applied.
 
 </details>
 

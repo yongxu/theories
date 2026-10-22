@@ -98,7 +98,7 @@ Aliases: `closed capture`, `闭合的捕获`, `the loop closed in its readings`,
 
 - 20 October 2026: added (MA1), the meta-attractor's loop closed on the spine: OPENING's note on the meta-attractor said the loop was not on the spine; study section 242; readings D58.
 - 21 October 2026, LU1: a law added, Unread read as the law of a part read alone (identifiesAlike_iff_unread, courses_alike_iff_unread); unread_course derived from Law.sameFuture_of_goAlike, its statement unchanged; study section 309. The other laws are unchanged.
-- 22 October 2026, MA2: the next step revised, the reading formed by a selection among readers, a reading of the share and part of what lies beyond by a pool, and a loss read late now stated in readers-drawn-from-the-selected; the module gained that record's declarations, so the evidence counts this record's own; study section 349. The laws are unchanged.
+- 22 October 2026, MA2: the next step revised, the reading formed by a selection among readers, a reading of the share and part of what lies beyond by a pool, and a loss read late now stated in readers-drawn-from-the-selected; the module gained that record's declarations, so the evidence counts this record's own; study section 351. The laws are unchanged.
 
 </details>
 
