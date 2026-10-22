@@ -1,0 +1,115 @@
+@Becoming.Hexagram.same_eq : ∀ {a b : Bool}, Becoming.Hexagram.same a b = true → a = b
+Becoming.Hexagram.same_self : ∀ (a : Bool), Becoming.Hexagram.same a a = true
+@Becoming.Hexagram.eq_of_eqb : ∀ {s t : Becoming.Hexagram}, s.eqb t = true → s = t
+Becoming.Hexagram.eqb_self : ∀ (s : Becoming.Hexagram), s.eqb s = true
+@Becoming.Hexagram.ne_of_eqb : ∀ {s t : Becoming.Hexagram}, s.eqb t = false → s ≠ t
+@Becoming.Hexagram.mem_of_memb : ∀ {s : Becoming.Hexagram} {l : List Becoming.Hexagram}, s.memb l = true → s ∈ l
+Becoming.Hexagram.order_length : Becoming.Hexagram.order.length = 64
+Becoming.Hexagram.mem_order : ∀ (s : Becoming.Hexagram), s ∈ Becoming.Hexagram.order
+Becoming.Hexagram.complement_complement : ∀ (s : Becoming.Hexagram), s.complement.complement = s
+@Becoming.Hexagram.paired_of_pairedb : ∀ {s t : Becoming.Hexagram}, s.pairedb t = true → s.Paired t
+@Becoming.Hexagram.paired_of_allPaired : ∀ {l : List (Becoming.Hexagram × Becoming.Hexagram)},
+  Becoming.Hexagram.allPaired l = true → ∀ (q : Becoming.Hexagram × Becoming.Hexagram), q ∈ l → q.fst.Paired q.snd
+Becoming.Hexagram.order_paired : ∀ (q : Becoming.Hexagram × Becoming.Hexagram),
+  q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order → q.fst.Paired q.snd
+Becoming.Hexagram.flip_flip : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Hexagram.flip k (Becoming.Hexagram.flip k s) = s
+Becoming.Hexagram.changes_returns : ∀ (s : Becoming.Hexagram), Becoming.Branching.Returns Becoming.Hexagram.changes s
+Becoming.Hexagram.changes_merges : Becoming.Branching.Merges Becoming.Hexagram.changes
+Becoming.Hexagram.changes_keeps : Becoming.Branching.KeepsPossibilities Becoming.Hexagram.changes ∧
+  ¬Becoming.Branching.Lossless Becoming.Hexagram.changes
+Becoming.Hexagram.line_step : ∀ (x y : Bool), y = x ∨ y = !x
+@Becoming.Hexagram.lift : ∀ {α β : Type} (g : α → β) {x y z : α}, y = x ∨ y = z → g y = g x ∨ g y = g z
+@Becoming.Hexagram.toward : ∀ {k : Becoming.Hexagram.Place} {s t : Becoming.Hexagram},
+  t = s ∨ t = Becoming.Hexagram.flip k s → Becoming.Reach Becoming.Hexagram.changes s t
+Becoming.Hexagram.reach_every : ∀ (s t : Becoming.Hexagram), Becoming.Reach Becoming.Hexagram.changes s t
+Becoming.Hexagram.changes_run_revisits : ∀ (r : Becoming.Run Becoming.Hexagram.changes) (T : Nat),
+  ∃ i j, T ≤ i ∧ i < j ∧ r.state i = r.state j
+Becoming.Hexagram.unwax_wax : ∀ (s : Becoming.Hexagram), s.waxWane.unwaxWane = s
+Becoming.Hexagram.waxWane_lossless : Becoming.Law.Lossless Becoming.Hexagram.waxWane
+Becoming.Hexagram.waxWane_returns : ∀ (s : Becoming.Hexagram), Becoming.Law.Returns Becoming.Hexagram.waxWane s
+Becoming.Hexagram.waxWane_process_returns : ∀ (s : Becoming.Hexagram),
+  Becoming.Branching.Returns (Becoming.Law.process Becoming.Hexagram.waxWane) s
+Becoming.Hexagram.six_steps : ∀ (s : Becoming.Hexagram), Becoming.Law.orbit Becoming.Hexagram.waxWane s 6 = s.complement
+Becoming.Hexagram.run_six_steps : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 6) =
+    ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).complement
+Becoming.Hexagram.twelve_steps : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 12) = (Becoming.Law.run Becoming.Hexagram.waxWane s).state n
+Becoming.Hexagram.order_paired_by_law : ∀ (q : Becoming.Hexagram × Becoming.Hexagram),
+  q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order →
+    q.fst.reverse ≠ q.fst ∧ q.snd = q.fst.reverse ∨
+      q.fst.reverse = q.fst ∧ q.snd = (Becoming.Law.run Becoming.Hexagram.waxWane q.fst).state 6
+Becoming.Hexagram.not_le_six : ∀ (k : Nat), ¬k + 7 ≤ 6
+Becoming.Hexagram.waxing : ∀ (k : Nat),
+  k ≤ 6 → (Becoming.Law.run Becoming.Hexagram.waxWane (Becoming.Hexagram.rising 0)).state k = Becoming.Hexagram.rising k
+Becoming.Hexagram.waning : ∀ (k : Nat),
+  k ≤ 6 →
+    (Becoming.Law.run Becoming.Hexagram.waxWane (Becoming.Hexagram.rising 6)).state k = Becoming.Hexagram.falling k
+Becoming.Hexagram.seventh_step : (Becoming.Law.run Becoming.Hexagram.waxWane (Becoming.Hexagram.rising 6)).state 7 =
+  Becoming.Hexagram.rising 1
+Becoming.Hexagram.not_lt_twelve : ∀ (k : Nat), ¬k + 12 < 12
+Becoming.Hexagram.first_return : ∀ (p : Nat),
+  0 < p →
+    p < 12 →
+      (Becoming.Law.run Becoming.Hexagram.waxWane (Becoming.Hexagram.rising 0)).state p ≠ Becoming.Hexagram.rising 0
+Becoming.Hexagram.fourth_step : (Becoming.Law.run Becoming.Hexagram.waxWane Becoming.Hexagram.sui).state 4 =
+    Becoming.Hexagram.sui ∧
+  (Becoming.Law.run Becoming.Hexagram.waxWane Becoming.Hexagram.sui).state 2 ≠ Becoming.Hexagram.sui
+Becoming.Hexagram.wane_merges : Becoming.Law.Merges Becoming.Hexagram.wane
+Becoming.Hexagram.wane_six : ∀ (s : Becoming.Hexagram),
+  (Becoming.Law.run Becoming.Hexagram.wane s).state 6 = Becoming.Hexagram.allBroken
+Becoming.Hexagram.allBroken_absorbing : Becoming.Law.Absorbing Becoming.Hexagram.wane fun s =>
+  s = Becoming.Hexagram.allBroken
+@Becoming.Hexagram.wane_drawn : ∀ {s : Becoming.Hexagram},
+  s ≠ Becoming.Hexagram.allBroken →
+    Becoming.Law.DrawnInto Becoming.Hexagram.wane (fun x => x = Becoming.Hexagram.allBroken) s
+@Becoming.Hexagram.wane_never_back : ∀ {s : Becoming.Hexagram},
+  s ≠ Becoming.Hexagram.allBroken → ∀ (k : Nat), (Becoming.Law.run Becoming.Hexagram.wane s).state (6 + k) ≠ s
+@Becoming.Hexagram.wane_not_returns : ∀ {s : Becoming.Hexagram},
+  s ≠ Becoming.Hexagram.allBroken → ¬Becoming.Branching.Returns (Becoming.Law.process Becoming.Hexagram.wane) s
+Becoming.Hexagram.wane_loses : ¬Becoming.Branching.KeepsPossibilities (Becoming.Law.process Becoming.Hexagram.wane)
+Becoming.Hexagram.wane_process_merges : Becoming.Branching.Merges (Becoming.Law.process Becoming.Hexagram.wane)
+Becoming.Hexagram.every_returns_iff : ∀ (next : Becoming.Hexagram → Becoming.Hexagram),
+  (∀ (s : Becoming.Hexagram), Becoming.Branching.Returns (Becoming.Law.process next) s) ↔
+    Becoming.Branching.Lossless (Becoming.Law.process next)
+Becoming.Hexagram.waxWane_complement : ∀ (s : Becoming.Hexagram), s.complement.waxWane = s.waxWane.complement
+Becoming.Hexagram.reverse_wax : ∀ (s : Becoming.Hexagram), s.waxWane.reverse = s.reverse.unwaxWane
+Becoming.Hexagram.reverse_waxWane : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).reverse =
+    ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).reverse.unwaxWane
+Becoming.Hexagram.pairOf_cases : ∀ (s : Becoming.Hexagram), s.pairOf = s ∨ s.pairOf = s.complement
+@Becoming.Hexagram.complement_inj : ∀ {s t : Becoming.Hexagram}, s.complement = t.complement → s = t
+@Becoming.Hexagram.pairOf_eq : ∀ {s t : Becoming.Hexagram}, s.pairOf = t.pairOf → t = s ∨ t = s.complement
+Becoming.Hexagram.pairOf_complement : ∀ (s : Becoming.Hexagram), s.complement.pairOf = s.pairOf
+Becoming.Hexagram.pairs_lumped : Becoming.Learning.Lumped Becoming.Hexagram.pairOf fun s => s.waxWane.pairOf
+Becoming.Hexagram.pairs_goAlike : Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.waxWane)
+  Becoming.Hexagram.pairOf
+Becoming.Hexagram.yang_not_lumped : ¬Becoming.Learning.Lumped Becoming.Hexagram.yang fun s => s.waxWane.yang
+Becoming.Hexagram.yang_not_goAlike : ¬Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.waxWane)
+    Becoming.Hexagram.yang
+Becoming.Hexagram.complement_l1 : ∀ (s : Becoming.Hexagram), s.complement.l1 = !s.l1
+Becoming.Hexagram.bottom_turns : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.orbit Becoming.Hexagram.waxWane s (n + 6)).l1 = !(Becoming.Law.orbit Becoming.Hexagram.waxWane s n).l1
+Becoming.Hexagram.rises_between : ∀ (p : Nat → Bool) (n a : Nat),
+  p a = false → p (a + n) = true → ∃ i, a ≤ i ∧ i < a + n ∧ p i = false ∧ p (i + 1) = true
+@Becoming.Hexagram.not_true_of_false : ∀ {b : Bool}, b = false → ¬b = true
+@Becoming.Hexagram.opposite_false : ∀ {b : Bool}, b = true → (!b) = false
+Becoming.Hexagram.arising_recurs : ∀ (s : Becoming.Hexagram),
+  Becoming.Recurs Becoming.Hexagram.places fun k =>
+    Becoming.ComesToBe fun n =>
+      Becoming.Hexagram.lines.realized ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n) k
+Becoming.Hexagram.ceasing_recurs : ∀ (s : Becoming.Hexagram),
+  Becoming.Recurs Becoming.Hexagram.places fun k =>
+    Becoming.CeasesToBe fun n =>
+      Becoming.Hexagram.lines.realized ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n) k
+Becoming.Hexagram.world_arising_recurs : ∀ (s : Becoming.Hexagram),
+  Becoming.Recurs Becoming.Hexagram.places fun k t =>
+    (Becoming.Hexagram.lines.world (Becoming.Law.run Becoming.Hexagram.waxWane s)).web.Arises t k
+Becoming.Hexagram.world_ceasing_recurs : ∀ (s : Becoming.Hexagram),
+  Becoming.Recurs Becoming.Hexagram.places fun k t =>
+    (Becoming.Hexagram.lines.world (Becoming.Law.run Becoming.Hexagram.waxWane s)).web.Ceases t k
+@Becoming.Hexagram.revisits_within_order : ∀ {A : Type} {P : Generative.Process Becoming.Hexagram A}
+  (r : Becoming.Run P), ∃ i j, i < j ∧ j ≤ 64 ∧ r.state i = r.state j
+Becoming.Hexagram.kept_history_unlisted : ∀ (h : Becoming.Hexagram × List Becoming.Hexagram),
+  ¬∃ l, ∀ (n : Nat), (Becoming.Law.run (Becoming.Law.withHistory Becoming.Hexagram.waxWane) h).state n ∈ l

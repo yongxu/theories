@@ -1,0 +1,81 @@
+@Becoming.bounded_whole : ∀ {F Pos : Type}, Becoming.Unrestricted (Becoming.bounded fun x x_1 => True)
+@Becoming.Web.retains_bounded_iff_retains : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ {region : Pos → F → Prop} {p : Pos} {l l' : Nat → C → Nat},
+      (∀ (t : Nat) (f : F), W.Admits (l' t) t f → region p f ∨ W.Admits (l t) t f) →
+        (W.Retains (Becoming.bounded region) p l l' ↔ W.Retains sig p l l')
+@Becoming.Flow.within_closure_iff_retains : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {sig : F → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ {p : F},
+      (∀ (f : F), L.WithinFeeding W p f) →
+        ∀ {l l' : Nat → C → Nat}, W.Retains (Becoming.bounded (L.WithinFeeding W)) p l l' ↔ W.Retains sig p l l'
+@Becoming.Flow.feeding_unrestricted_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type} {t : Nat} {c : C},
+  (∀ (g : F), g ∈ L.present t ∧ W.requires t g c ∧ 0 < L.give t g c) →
+    ∀ (center : Pos → F), Becoming.Unrestricted (Becoming.bounded fun q => L.WithinFeeding W (center q))
+@Becoming.Flow.bounded_system_whole : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {Pos : Type}
+  {center : Pos → F},
+  (∀ (p : Pos) (g : F), L.WithinSystem W (center p) g) →
+    Becoming.Unrestricted (Becoming.bounded fun p => L.WithinSystem W (center p))
+@Becoming.Overshoot.within_closure_iff_retains : ∀ {sig : Bool → Nat → Bool → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (p : Bool) {l l' : Nat → Bool → Nat},
+      Becoming.Overshoot.web.Retains (Becoming.bounded (Becoming.Overshoot.flow.WithinFeeding Becoming.Overshoot.web)) p
+          l l' ↔
+        Becoming.Overshoot.web.Retains sig p l l'
+@Becoming.Trophic.mediated_uncoupled : ∀ {l : Nat → Becoming.Trophic.Place → Nat},
+  Becoming.Trophic.flow.WithheldLevels Becoming.Trophic.wolvesPart Becoming.Trophic.web l →
+    ∀ {Pos : Type} {sig : Pos → Nat → Becoming.Trophic.Formation → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Trophic.flow.WithinInfluence Becoming.Trophic.web Becoming.Trophic.Formation.forest
+              Becoming.Trophic.Formation.wolves ∧
+            ¬Becoming.Trophic.flow.Reaches Becoming.Trophic.web Becoming.Trophic.wolvesPart
+                  Becoming.Trophic.Formation.forest ∧
+              (∀ (t : Nat),
+                  Becoming.Trophic.web.Supported t Becoming.Trophic.Formation.forest ↔
+                    Becoming.Trophic.web.Admits (l t) t Becoming.Trophic.Formation.forest) ∧
+                Becoming.Trophic.web.Includes l Becoming.Trophic.web.level ∧
+                  Becoming.Trophic.web.Exceeds l Becoming.Trophic.web.level ∧
+                    ¬Becoming.Trophic.web.Retains sig p Becoming.Trophic.web.level l
+@Becoming.Trophic.responsive_mixed : ∀ {Pos : Type} {sig : Pos → Nat → Becoming.Trophic.Formation → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (p : Pos),
+      Becoming.Trophic.web.Exceeds Becoming.Trophic.web.level Becoming.Trophic.responsiveWeb.level ∧
+        Becoming.Trophic.web.Exceeds Becoming.Trophic.responsiveWeb.level Becoming.Trophic.web.level ∧
+          ¬Becoming.Trophic.web.Retains sig p Becoming.Trophic.web.level Becoming.Trophic.responsiveWeb.level ∧
+            ¬Becoming.Trophic.web.Retains sig p Becoming.Trophic.responsiveWeb.level Becoming.Trophic.web.level
+@Becoming.Trophic.mixed_part : ∀ {l : Nat → Becoming.Trophic.Place → Nat},
+  Becoming.Trophic.flow.WithheldLevels Becoming.Trophic.farWolvesPart Becoming.Trophic.web l →
+    ∀ {sig : Becoming.Trophic.Formation → Nat → Becoming.Trophic.Formation → Prop},
+      Becoming.Unrestricted sig →
+        Becoming.Trophic.farWolvesPart Becoming.Trophic.Formation.far = true ∧
+          ¬Becoming.Trophic.flow.WithinSystem Becoming.Trophic.web Becoming.Trophic.Formation.far
+                Becoming.Trophic.Formation.wolves ∧
+            Becoming.Trophic.web.Retains (Becoming.bounded (Becoming.Trophic.flow.WithinSystem Becoming.Trophic.web))
+                Becoming.Trophic.Formation.far Becoming.Trophic.web.level l ∧
+              ¬Becoming.Trophic.web.Retains sig Becoming.Trophic.Formation.far Becoming.Trophic.web.level l
+@Becoming.Clearing.within_closure_yet_loses : ∀ {Pos : Type} {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ {sig : Pos → Nat → Becoming.Clearing.Formation → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Clearing.web.Retains (Becoming.bounded (Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web))
+              Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l ∧
+            ¬Becoming.Clearing.web.Retains sig p Becoming.Clearing.web.level l ∧
+              Becoming.Clearing.web.Adds (Becoming.bounded (Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web))
+                Becoming.Clearing.Formation.dweller l Becoming.Clearing.web.level
+Becoming.Clearing.system_whole : (∀ (p g : Becoming.Clearing.Formation),
+    Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web p g) ∧
+  Becoming.Unrestricted (Becoming.bounded (Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web))
+@Becoming.Clearing.reach_counts_dweller : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ¬Becoming.Unrestricted (Becoming.bounded (Becoming.Clearing.flow.WithinReach Becoming.Clearing.web)) ∧
+      Becoming.Clearing.web.Adds (Becoming.bounded (Becoming.Clearing.flow.WithinReach Becoming.Clearing.web))
+          Becoming.Clearing.Formation.clearer l Becoming.Clearing.web.level ∧
+        ¬Becoming.Clearing.web.Retains (Becoming.bounded (Becoming.Clearing.flow.WithinReach Becoming.Clearing.web))
+              Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l ∧
+          (Becoming.Clearing.web.Retains (Becoming.bounded (Becoming.Clearing.flow.WithinReach Becoming.Clearing.web))
+              Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l ↔
+            Becoming.Clearing.web.Includes Becoming.Clearing.web.level l)

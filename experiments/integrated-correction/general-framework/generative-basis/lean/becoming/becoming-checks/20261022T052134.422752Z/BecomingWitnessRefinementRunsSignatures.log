@@ -1,0 +1,157 @@
+@Becoming.WitnessRefinementRuns.mem_step : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    ∀ (h : H), h ∈ ns ↔ h ∈ ms ∧ Becoming.WitnessRefinement.compatible roster (faults h) (answer h) reports = true
+@Becoming.WitnessRefinementRuns.run_narrows : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool}
+  (r : Becoming.Run (Becoming.WitnessRefinementRuns.inspection roster faults answer)) (n k : Nat) (h : H),
+  h ∈ r.state (n + k) → h ∈ r.state n
+@Becoming.WitnessRefinementRuns.silent_step : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms (fun x => none) ns →
+    ∀ (h : H), h ∈ ns ↔ h ∈ ms ∧ faults h ≠ []
+@Becoming.WitnessRefinementRuns.step_admits : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    ∀ {h : H}, h ∈ ns → faults h ≠ []
+@Becoming.WitnessRefinementRuns.step_pool_empty_iff : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    (Becoming.WitnessRefinementRuns.pool faults ns = [] ↔ ns = [])
+@Becoming.WitnessRefinementRuns.step_certificate_candidate : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool),
+      Becoming.FaultEnvelopes.certificate roster (Becoming.WitnessRefinementRuns.pool faults ns) supports = true →
+        ns ≠ []
+@Becoming.WitnessRefinementRuns.complete_step_agrees : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    Becoming.WitnessRefinementRuns.Complete roster reports →
+      ∀ {h h' : H},
+        h ∈ ns →
+          h' ∈ ns → Becoming.WitnessRefinement.CrossSeparated roster (faults h) (faults h') → answer h = answer h'
+@Becoming.WitnessRefinementRuns.complete_run_agrees : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool}
+  (r : Becoming.Run (Becoming.WitnessRefinementRuns.inspection roster faults answer)) {n : Nat},
+  Becoming.WitnessRefinementRuns.Complete roster (r.act n) →
+    ∀ (k : Nat) {h h' : H},
+      h ∈ r.state (n + 1 + k) →
+        h' ∈ r.state (n + 1 + k) →
+          Becoming.WitnessRefinement.CrossSeparated roster (faults h) (faults h') → answer h = answer h'
+@Becoming.WitnessRefinementRuns.responsive_step_excludes : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain) (x : Bool),
+      (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → reports d = some x) →
+        ∀ {h : H},
+          answer h ≠ x →
+            (∀ (b : List Becoming.FaultEnvelopes.Domain), b ∈ faults h → ∃ d, d ∈ roster ∧ ¬d ∈ bad ∧ ¬d ∈ b) → ¬h ∈ ns
+@Becoming.WitnessRefinementRuns.covering_step_keeps_both : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms : List H} {h h' : H},
+  h ∈ ms →
+    h' ∈ ms →
+      ∀ {a b : List Becoming.FaultEnvelopes.Domain},
+        a ∈ faults h →
+          b ∈ faults h' →
+            (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → d ∈ a ∨ d ∈ b) →
+              ∃ reports,
+                Becoming.WitnessRefinementRuns.Complete roster reports ∧
+                  ∀ (ns : List H),
+                    (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+                      h ∈ ns ∧
+                        h' ∈ ns ∧
+                          (Becoming.FaultEnvelopes.certificate roster (Becoming.WitnessRefinementRuns.pool faults ns)
+                              fun d => !a.contains d) =
+                            false
+@Becoming.WitnessRefinementRuns.diagnosable_iff : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {h h' : H},
+  answer h ≠ answer h' →
+    ((∀ (ms : List H) (reports : Becoming.WitnessRefinement.Reports) (ns : List H),
+        Becoming.WitnessRefinementRuns.Complete roster reports →
+          (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns → h ∈ ns → ¬h' ∈ ns) ↔
+      Becoming.WitnessRefinement.CrossSeparated roster (faults h) (faults h'))
+@Becoming.WitnessRefinementRuns.all_append : ∀ {α : Type} (p : α → Bool) (l m : List α),
+  (l ++ m).all p = (l.all p && m.all p)
+Becoming.WitnessRefinementRuns.and_self' : ∀ (b : Bool), (b && b) = b
+@Becoming.WitnessRefinementRuns.any_congr : ∀ {α : Type} {p q : α → Bool},
+  (∀ (x : α), p x = q x) → ∀ (l : List α), l.any p = l.any q
+@Becoming.WitnessRefinementRuns.filter_congr : ∀ {α : Type} {p q : α → Bool},
+  (∀ (x : α), p x = q x) → ∀ (l : List α), List.filter p l = List.filter q l
+@Becoming.WitnessRefinementRuns.doubled_roster_same : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} (ms ns : List H)
+  (reports : Becoming.WitnessRefinement.Reports) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  ((Becoming.WitnessRefinementRuns.inspection (roster ++ roster) faults answer).step ms reports ns ↔
+      (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns) ∧
+    Becoming.FaultEnvelopes.certificate (roster ++ roster) (Becoming.WitnessRefinementRuns.pool faults ns) supports =
+      Becoming.FaultEnvelopes.certificate roster (Becoming.WitnessRefinementRuns.pool faults ns) supports
+@Becoming.WitnessRefinementRuns.total_fault_kept : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool} {ms ns : List H}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinementRuns.inspection roster faults answer).step ms reports ns →
+    ∀ {h : H}, h ∈ ms → roster ∈ faults h → h ∈ ns
+@Becoming.WitnessRefinementRuns.total_fault_blocks : ∀ {H : Type} {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : H → Becoming.FaultEnvelopes.Envelope} {answer : H → Bool}
+  (r : Becoming.Run (Becoming.WitnessRefinementRuns.inspection roster faults answer)) {n : Nat} {h : H},
+  h ∈ r.state n →
+    roster ∈ faults h →
+      ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool) (k : Nat),
+        h ∈ r.state (n + k) ∧
+          Becoming.FaultEnvelopes.certificate roster (Becoming.WitnessRefinementRuns.pool faults (r.state (n + k)))
+              supports =
+            false
+@Becoming.WitnessRefinementRuns.test_emptied : ∀ {H : Type} {test : H → Bool} {ms : List H} {a : Bool},
+  (Becoming.WitnessRefinementRuns.testing test).step ms a [] →
+    ∀ (describe : H → Becoming.Reconfiguration.Arrangement) (roster' : List Becoming.FaultEnvelopes.Domain)
+      (supports : Becoming.FaultEnvelopes.Domain → Bool),
+      (∀ (h : H), h ∈ ms → test h ≠ a) ∧
+        Becoming.FaultEnvelopes.certificate roster' (Becoming.PooledEnvelopes.pooled describe []) supports = false
+@Becoming.WitnessRefinementRuns.test_step_completes : ∀ {H : Type} {test : H → Bool}
+  (describe : H → Becoming.Reconfiguration.Arrangement) {ms ns : List H} {actual : H},
+  (Becoming.WitnessRefinementRuns.testing test).step ms (test actual) ns →
+    actual ∈ ms →
+      ∀ (roots : List Nat),
+        Becoming.Reconfiguration.Covered (describe actual) roots →
+          Becoming.FaultEnvelopes.separated (describe actual).roster (Becoming.PooledEnvelopes.pooled describe ns) →
+            ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+              (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+              Becoming.Transactions.fresh w p = true →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ (describe actual).roster →
+                      Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                        reads d = some (Becoming.Transactions.expected p)) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ (describe actual).roster →
+                        Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                          approvals d = some p) →
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ (describe actual).roster →
+                          Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                            ∀ (o : Becoming.Transactions.Observation),
+                              reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                      (∀ (d : Becoming.FaultEnvelopes.Domain),
+                          d ∈ (describe actual).roster →
+                            Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                              approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                        Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.reserve →
+                          w.state.time + Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.deadline →
+                            (Becoming.Transactions.guardedExecute (describe actual).roster
+                                    (Becoming.PooledEnvelopes.pooled describe ns)
+                                    (Becoming.PooledEnvelopes.pooled describe ns) w p reads approvals).succeeded =
+                                true ∧
+                              (Becoming.Transactions.guardedExecute (describe actual).roster
+                                          (Becoming.PooledEnvelopes.pooled describe ns)
+                                          (Becoming.PooledEnvelopes.pooled describe ns) w p reads
+                                          approvals).installation.state.completed =
+                                  true ∧
+                                Becoming.Transactions.withinScope w p = true
+@Becoming.WitnessRefinementRuns.inquiry_step_testing : ∀ {q : Becoming.PooledEnvelopes.Inspection}
+  {s t : Becoming.PooledEnvelopes.Situation},
+  Becoming.PooledEnvelopes.inquiry.step s (some q) t →
+    ∃ a, (Becoming.WitnessRefinementRuns.testing (Becoming.PooledEnvelopes.queryLaw q)).step s.candidates a t.candidates

@@ -1,0 +1,277 @@
+@Becoming.Web.arises_persisting_iff : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop},
+  (∀ (t : Nat) (f : F), W.active t f → h t f) →
+    ∀ {t : Nat} {f : F}, (W.persisting h).Arises t f ∧ W.active (t + 1) f ↔ W.Arises t f ∧ ¬h t f
+@Becoming.Web.waking_not_arising : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop} {t : Nat} {f : F},
+  h t f → ¬(W.persisting h).Arises t f
+@Becoming.Web.ceases_persisting_iff : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop},
+  (∀ (t : Nat) (f : F), W.active t f → h t f) →
+    ∀ {t : Nat} {f : F}, (W.persisting h).Ceases t f ∧ W.active t f ↔ W.Ceases t f ∧ ¬h (t + 1) f
+@Becoming.Web.arisesFrom_of_arises : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {f : F},
+  (∀ (g : F), W.active t g → R t g f → g = f) → W.Arises t f → W.ArisesFrom R t f
+@Becoming.Web.keepsActive_of_held : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  (∀ (t : Nat) (f : F), W.active t f → h t f) → σ.KeepsActive (W.persisting h) → σ.KeepsActive W
+@Becoming.Web.keepsTenure_of_held : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  (∀ (t : Nat) (f : F) (c : C), W.requires t f c → h t f) → σ.KeepsActive (W.persisting h) → σ.KeepsTenure W
+@Becoming.Web.steady_held : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  σ.KeepsActive (W.persisting h) →
+    ∀ {g : F} {s t : Nat}, (∀ (u : Nat), s ≤ u → u ≤ t → h u g) → ∀ (u : Nat), s ≤ u → u ≤ t → σ.new u g = σ.new t g
+@Becoming.Web.named_throughout : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  σ.KeepsActive (W.persisting h) → ∀ {f : F}, (∀ (t : Nat), h t f) → ∀ (t : Nat), σ.old t (σ.new 0 f) = f
+@Becoming.Web.renewingIn_held : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  σ.KeepsActive (W.persisting h) →
+    ∀ {f : F}, (∀ (t : Nat), h t f) → ((W.reidentify σ).RenewingIn (σ.new 0 f) ↔ W.RenewingIn f)
+@Becoming.Web.consumingIn_held : ∀ {F F' C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop}
+  {σ : Becoming.Reidentify F F'},
+  σ.KeepsActive (W.persisting h) →
+    ∀ {f : F}, (∀ (t : Nat), h t f) → ((W.reidentify σ).ConsumingIn (σ.new 0 f) ↔ W.ConsumingIn f)
+@Becoming.Web.persisting_census : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop} {R : Nat → F → F → Prop}
+  [(t : Nat) → (f : F) → Decidable ((W.persisting h).active t f)]
+  [(t : Nat) → (f : F) → Decidable ((W.persisting h).Continues R t f)]
+  [(t : Nat) → (g : F) → Decidable ((W.persisting h).Continued R t g)] [(t : Nat) → (g f : F) → Decidable (R t g f)]
+  {alive : Nat → List F},
+  (W.persisting h).Census alive →
+    ((W.persisting h).NoSplit R →
+        (∀ (N : Nat), ∃ t g, N ≤ t ∧ (W.persisting h).CeasesFrom R t g) → (W.persisting h).UnceasingFrom R) ∧
+      ((W.persisting h).NoMerge R →
+        ∀ {T B : Nat},
+          (∀ (t : Nat), T ≤ t → (alive t).length ≤ B) →
+            (W.persisting h).UnceasingFrom R → ∀ (N : Nat), ∃ t g, N ≤ t ∧ (W.persisting h).CeasesFrom R t g)
+Becoming.Hibernation.swap_swap : ∀ (f : Becoming.Hibernation.Formation),
+  Becoming.Hibernation.swap (Becoming.Hibernation.swap f) = f
+Becoming.Hibernation.holds_always : ∀ (t : Nat),
+  Becoming.Hibernation.web.Holds t Becoming.Hibernation.Formation.hibernator
+Becoming.Hibernation.pool_consumed : Becoming.Hibernation.web.Consumed Becoming.Hibernation.Condition.pool
+Becoming.Hibernation.pool_not_renewed : ¬Becoming.Hibernation.web.Renewed Becoming.Hibernation.Condition.pool
+Becoming.Hibernation.renewing : Becoming.Hibernation.web.RenewingIn Becoming.Hibernation.Formation.hibernator
+Becoming.Hibernation.exchanged_consuming : (Becoming.Hibernation.web.reidentify
+      Becoming.Hibernation.exchange).ConsumingIn
+  Becoming.Hibernation.Formation.hibernator
+Becoming.Hibernation.exchanged_not_renewing : ¬(Becoming.Hibernation.web.reidentify
+        Becoming.Hibernation.exchange).RenewingIn
+    Becoming.Hibernation.Formation.hibernator
+Becoming.Hibernation.readings : Becoming.Hibernation.web.Dependent ∧
+  ¬Becoming.Hibernation.web.active 1 Becoming.Hibernation.Formation.hibernator ∧
+    Becoming.Hibernation.web.Holds 1 Becoming.Hibernation.Formation.hibernator ∧
+      Becoming.Hibernation.web.Arises 1 Becoming.Hibernation.Formation.hibernator ∧
+        ¬(Becoming.Hibernation.web.persisting Becoming.Hibernation.web.Holds).Arises 1
+              Becoming.Hibernation.Formation.hibernator ∧
+          Becoming.Hibernation.web.Arises 1 Becoming.Hibernation.Formation.forager ∧
+            (Becoming.Hibernation.web.persisting Becoming.Hibernation.web.Holds).Arises 1
+                Becoming.Hibernation.Formation.forager ∧
+              Becoming.Hibernation.exchange.KeepsActive Becoming.Hibernation.web ∧
+                Becoming.Hibernation.exchange.back.KeepsActive
+                    (Becoming.Hibernation.web.reidentify Becoming.Hibernation.exchange) ∧
+                  Becoming.Hibernation.exchange.KeepsTenure Becoming.Hibernation.web ∧
+                    Becoming.Hibernation.exchange.back.KeepsTenure
+                        (Becoming.Hibernation.web.reidentify Becoming.Hibernation.exchange) ∧
+                      ¬Becoming.Hibernation.exchange.KeepsActive
+                            (Becoming.Hibernation.web.persisting Becoming.Hibernation.web.Holds) ∧
+                        Becoming.Hibernation.web.RenewingIn Becoming.Hibernation.Formation.hibernator ∧
+                          (Becoming.Hibernation.web.reidentify Becoming.Hibernation.exchange).ConsumingIn
+                              Becoming.Hibernation.Formation.hibernator ∧
+                            ¬(Becoming.Hibernation.web.reidentify Becoming.Hibernation.exchange).RenewingIn
+                                  Becoming.Hibernation.Formation.hibernator ∧
+                              ∀ (σ : Becoming.Reidentify Becoming.Hibernation.Formation Becoming.Hibernation.Formation),
+                                σ.KeepsActive (Becoming.Hibernation.web.persisting Becoming.Hibernation.web.Holds) →
+                                  (Becoming.Hibernation.web.reidentify σ).RenewingIn
+                                    (σ.new 0 Becoming.Hibernation.Formation.hibernator)
+Becoming.Dormancy.held_both : Becoming.Dormancy.join.KeepsActive
+    (Becoming.Dormancy.web.persisting Becoming.Dormancy.web.Holds) ∧
+  Becoming.Dormancy.join.back.KeepsActive
+      ((Becoming.Dormancy.web.persisting Becoming.Dormancy.web.Holds).reidentify Becoming.Dormancy.join) ∧
+    Becoming.Dormancy.web.RenewingIn Becoming.Dormancy.Formation.early ∧
+      ¬Becoming.Dormancy.joined.RenewingIn Becoming.Dormancy.Formation.early
+Becoming.Seed.held_readings : Becoming.Seed.web.Arises 0 () ∧
+  Becoming.Seed.web.Arises 2 () ∧
+    (∀ (t : Nat), (Becoming.Seed.web.persisting Becoming.Seed.web.Holds).active t ()) ∧
+      (∀ (t : Nat), ¬(Becoming.Seed.web.persisting Becoming.Seed.web.Holds).Arises t ()) ∧
+        (∀ (t : Nat),
+            ¬(Becoming.Seed.web.persisting fun t f => Becoming.Seed.web.active t f ∨ 0 < Becoming.Seed.reserve t).Arises
+                t ()) ∧
+          (Becoming.Seed.web.persisting fun t f => Becoming.Seed.web.active t f ∨ 0 < Becoming.Seed.reserve t).Ceases 3
+            ()
+Becoming.Sleeper.held_readings : Becoming.Sleeper.web.Unceasing ∧
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ Becoming.Sleeper.web.Ceases t ()) ∧
+    ∀ (t : Nat),
+      ¬(Becoming.Sleeper.web.persisting fun t x =>
+              Becoming.Sleeper.web.active t x ∨ 0 < Becoming.Sleeper.web.level t x).Arises
+          t ()
+@Becoming.World.reidentify_taken : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R') (t : Nat)
+  (y : R'), (w.reidentify σ).flow.taken t y = w.flow.taken t (σ.old t y)
+@Becoming.World.reidentify_given : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R') (t : Nat)
+  (y : R'), (w.reidentify σ).flow.given t y = w.flow.given t (σ.old t y)
+@Becoming.World.balanced_iff_conserves : ∀ {w : Becoming.World},
+  w.Balanced ↔ ∀ (t : Nat) (c : w.Relatum), w.Conserves t c c
+@Becoming.World.balanced_reidentify_iff : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R'),
+  (w.reidentify σ).Balanced ↔ ∀ (t : Nat) (c : w.Relatum), w.Conserves t c (σ.old (t + 1) (σ.new t c))
+@Becoming.World.conserves_iff : ∀ {w : Becoming.World},
+  w.Balanced → ∀ {t : Nat} {g f : w.Relatum}, w.Conserves t g f ↔ w.web.level (t + 1) f = w.web.level (t + 1) g
+@Becoming.World.balanced_reidentify_iff_alike : ∀ {w : Becoming.World} {R' : Type},
+  w.Balanced →
+    ∀ (σ : Becoming.Reidentify w.Relatum R'),
+      (w.reidentify σ).Balanced ↔
+        ∀ (t : Nat),
+          Becoming.Alike (Becoming.exchangeFrame w.Relatum) (Becoming.exchangeFrame w.Relatum)
+            (fun c => w.web.level (t + 1) (σ.old (t + 1) (σ.new t c))) (w.web.level (t + 1))
+@Becoming.World.standing_after : ∀ {w : Becoming.World} {R' : Type},
+  w.Balanced →
+    ∀ {σ : Becoming.Reidentify w.Relatum R'},
+      (w.reidentify σ).Balanced →
+        ∀ (t : Nat) (y : R'), w.web.level (t + 1) (σ.old (t + 1) y) = w.web.level (t + 1) (σ.old t y)
+@Becoming.World.kept_broken_reidentify : ∀ {w : Becoming.World} {R' : Type},
+  w.Balanced →
+    ∀ {σ : Becoming.Reidentify w.Relatum R'},
+      (w.reidentify σ).Balanced →
+        ∀ (t : Nat) (x y : R'),
+          ((w.reidentify σ).web.Kept t x y ↔ w.web.Kept t (σ.old t x) (σ.old t y)) ∧
+            ((w.reidentify σ).web.Broken t x y ↔ w.web.Broken t (σ.old t x) (σ.old t y))
+@Becoming.transpose_left : ∀ {X : Type} [inst : DecidableEq X] (c d : X), Becoming.transpose c d c = d
+@Becoming.transpose_right : ∀ {X : Type} [inst : DecidableEq X] (c d : X), Becoming.transpose c d d = c
+@Becoming.transpose_other : ∀ {X : Type} [inst : DecidableEq X] {c d x : X},
+  ¬x = c → ¬x = d → Becoming.transpose c d x = x
+@Becoming.transpose_transpose : ∀ {X : Type} [inst : DecidableEq X] (c d x : X),
+  Becoming.transpose c d (Becoming.transpose c d x) = x
+@Becoming.transpose_alike : ∀ {X : Type} [inst : DecidableEq X] {q : X → Nat} {c d : X},
+  q d = q c → ∀ (x : X), q (Becoming.transpose c d x) = q x
+Becoming.stepBeyond_self : ∀ (t : Nat), Becoming.stepBeyond t t = false
+Becoming.stepBeyond_next : ∀ (t : Nat), Becoming.stepBeyond t (t + 1) = true
+Becoming.stepBeyond_zero : ∀ (t : Nat), Becoming.stepBeyond t 0 = false
+Becoming.stepBeyond_step : ∀ (t s : Nat), ¬s = t → Becoming.stepBeyond t (s + 1) = Becoming.stepBeyond t s
+@Becoming.Reidentify.exchangeAfter_at : ∀ {X : Type} [inst : DecidableEq X] (t : Nat) (c d x : X),
+  (Becoming.Reidentify.exchangeAfter t c d).old t x = x ∧ (Becoming.Reidentify.exchangeAfter t c d).new t x = x
+@Becoming.Reidentify.exchangeAfter_next : ∀ {X : Type} [inst : DecidableEq X] (t : Nat) (c d x : X),
+  (Becoming.Reidentify.exchangeAfter t c d).new (t + 1) x = Becoming.transpose c d x
+@Becoming.Reidentify.exchangeAfter_across : ∀ {X : Type} [inst : DecidableEq X] (t : Nat) (c d x : X),
+  (Becoming.Reidentify.exchangeAfter t c d).old (t + 1) ((Becoming.Reidentify.exchangeAfter t c d).new t x) =
+    Becoming.transpose c d x
+@Becoming.Reidentify.exchangeAfter_elsewhere : ∀ {X : Type} [inst : DecidableEq X] {t s : Nat},
+  ¬s = t →
+    ∀ (c d x : X),
+      (Becoming.Reidentify.exchangeAfter t c d).old (s + 1) ((Becoming.Reidentify.exchangeAfter t c d).new s x) = x
+@Becoming.World.exchangeAfter_balanced : ∀ {w : Becoming.World} [dec : DecidableEq w.Relatum],
+  w.Balanced →
+    ∀ {t : Nat} {c d : w.Relatum},
+      w.web.level (t + 1) d = w.web.level (t + 1) c → (w.reidentify (Becoming.Reidentify.exchangeAfter t c d)).Balanced
+@Becoming.World.fixed_iff : ∀ {w : Becoming.World} [dec : DecidableEq w.Relatum],
+  w.Balanced →
+    ∀ (t : Nat) (c : w.Relatum),
+      (∀ (σ : Becoming.Reidentify w.Relatum w.Relatum), (w.reidentify σ).Balanced → σ.old (t + 1) (σ.new t c) = c) ↔
+        ∀ (d : w.Relatum), w.web.level (t + 1) d = w.web.level (t + 1) c → d = c
+@Becoming.World.arises_fixed_iff : ∀ {w : Becoming.World} [dec : DecidableEq w.Relatum],
+  w.Balanced →
+    ∀ (t : Nat) (f : w.Relatum),
+      (∀ (σ : Becoming.Reidentify w.Relatum w.Relatum),
+          (w.reidentify σ).Balanced → (w.reidentify σ).web.Arises t (σ.new (t + 1) f)) ↔
+        w.web.ArisesFrom w.Conserves t f
+@Becoming.World.ceases_fixed_iff : ∀ {w : Becoming.World} [dec : DecidableEq w.Relatum],
+  w.Balanced →
+    ∀ (t : Nat) (g : w.Relatum),
+      (∀ (σ : Becoming.Reidentify w.Relatum w.Relatum),
+          (w.reidentify σ).Balanced → (w.reidentify σ).web.Ceases t (σ.new t g)) ↔
+        w.web.CeasesFrom w.Conserves t g
+@Becoming.World.conserves_noSplit : ∀ {w : Becoming.World},
+  w.Balanced →
+    (∀ (t : Nat) (f f' : w.Relatum),
+        w.web.active (t + 1) f → w.web.active (t + 1) f' → w.web.level (t + 1) f = w.web.level (t + 1) f' → f = f') →
+      w.web.NoSplit w.Conserves
+@Becoming.World.conserves_noMerge : ∀ {w : Becoming.World},
+  w.Balanced →
+    (∀ (t : Nat) (g g' : w.Relatum),
+        w.web.active t g → w.web.active t g' → w.web.level (t + 1) g = w.web.level (t + 1) g' → g = g') →
+      w.web.NoMerge w.Conserves
+@Becoming.World.still_of_apart : ∀ {w : Becoming.World} {R' : Type},
+  w.Balanced →
+    (∀ (t : Nat) (c d : w.Relatum), w.web.level (t + 1) c = w.web.level (t + 1) d → c = d) →
+      ∀ {σ : Becoming.Reidentify w.Relatum R'},
+        (w.reidentify σ).Balanced → ∀ (t : Nat) (x : R'), σ.old (t + 1) x = σ.old t x
+@Becoming.Reidentify.old_still : ∀ {F F' : Type} {σ : Becoming.Reidentify F F'},
+  (∀ (t : Nat) (x : F'), σ.old (t + 1) x = σ.old t x) → ∀ (t : Nat) (x : F'), σ.old t x = σ.old 0 x
+@Becoming.World.renewed_still : ∀ {w : Becoming.World} {R' : Type} {σ : Becoming.Reidentify w.Relatum R'},
+  (∀ (t : Nat) (x : R'), σ.old (t + 1) x = σ.old t x) →
+    ∀ (y : R'), (w.reidentify σ).web.Renewed y ↔ w.web.Renewed (σ.old 0 y)
+@Becoming.World.consumed_still : ∀ {w : Becoming.World} {R' : Type} {σ : Becoming.Reidentify w.Relatum R'},
+  (∀ (t : Nat) (x : R'), σ.old (t + 1) x = σ.old t x) →
+    ∀ (y : R'), (w.reidentify σ).web.Consumed y ↔ w.web.Consumed (σ.old 0 y)
+@Becoming.World.classes_still : ∀ {w : Becoming.World} {R' : Type} {σ : Becoming.Reidentify w.Relatum R'},
+  (∀ (t : Nat) (x : R'), σ.old (t + 1) x = σ.old t x) →
+    ∀ (x : R'),
+      ((w.reidentify σ).web.RenewingIn x ↔ w.web.RenewingIn (σ.old 0 x)) ∧
+        ((w.reidentify σ).web.ConsumingIn x ↔ w.web.ConsumingIn (σ.old 0 x)) ∧
+          ∀ (t : Nat), (w.reidentify σ).web.Arises t x ↔ w.web.Arises t (σ.old 0 x)
+@Becoming.World.classes_fixed : ∀ {w : Becoming.World} {R' : Type},
+  w.Balanced →
+    (∀ (t : Nat) (c d : w.Relatum), w.web.level (t + 1) c = w.web.level (t + 1) d → c = d) →
+      ∀ {σ : Becoming.Reidentify w.Relatum R'},
+        (w.reidentify σ).Balanced →
+          ∀ (x : R'),
+            ((w.reidentify σ).web.RenewingIn x ↔ w.web.RenewingIn (σ.old 0 x)) ∧
+              ((w.reidentify σ).web.ConsumingIn x ↔ w.web.ConsumingIn (σ.old 0 x)) ∧
+                ∀ (t : Nat), (w.reidentify σ).web.Arises t x ↔ w.web.Arises t (σ.old 0 x)
+@Becoming.World.ofRoles_reidentify_balanced : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F'), ((Becoming.World.ofRoles L W).reidentify σ.roles).Balanced ↔ L.Balances W
+@Becoming.World.ofRoles_reidentify_arises : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (t : Nat) (x : F'),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.Arises t (Sum.inl x) ↔ (W.reidentify σ).Arises t x
+@Becoming.World.ofRoles_reidentify_unceasing : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F'),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.Unceasing ↔ (W.reidentify σ).Unceasing
+@Becoming.World.ofRoles_reidentify_renewed : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (c : C),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.Renewed (Sum.inr c) ↔ W.Renewed c
+@Becoming.World.ofRoles_reidentify_renewed_formation : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (f : F'), ((Becoming.World.ofRoles L W).reidentify σ.roles).web.Renewed (Sum.inl f)
+@Becoming.World.ofRoles_reidentify_consumed : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (c : C),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.Consumed (Sum.inr c) ↔ W.Consumed c
+@Becoming.World.ofRoles_reidentify_renewingIn : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (x : F'),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.RenewingIn (Sum.inl x) ↔ (W.reidentify σ).RenewingIn x
+@Becoming.World.ofRoles_reidentify_consumingIn : ∀ {F F' C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (σ : Becoming.Reidentify F F') (x : F'),
+  ((Becoming.World.ofRoles L W).reidentify σ.roles).web.ConsumingIn (Sum.inl x) ↔ (W.reidentify σ).ConsumingIn x
+Becoming.Shuttle.holder_only : ∀ (t : Nat) (g : Bool), 0 < Becoming.Shuttle.stands g t → g = Becoming.Shuttle.holder t
+Becoming.Shuttle.conserved : (∀ (t : Nat),
+    Becoming.World.shuttle.web.ArisesFrom Becoming.World.shuttle.Conserves t (Becoming.Shuttle.holder (t + 1))) ∧
+  (∀ (σ : Becoming.Reidentify Bool Bool),
+      (Becoming.World.shuttle.reidentify σ).Balanced → (Becoming.World.shuttle.reidentify σ).web.Unceasing) ∧
+    Becoming.Shuttle.asOne.KeepsActive Becoming.World.shuttle.web ∧
+      ¬(Becoming.World.shuttle.reidentify Becoming.Shuttle.asOne).Balanced
+Becoming.Shuttle.alternates : ∀ (t : Nat),
+  Becoming.Shuttle.even t = 1 ∧ Becoming.Shuttle.even (t + 1) = 0 ∨
+    Becoming.Shuttle.even t = 0 ∧ Becoming.Shuttle.even (t + 1) = 1
+Becoming.Shuttle.apart : ∀ (t : Nat) (c d : Bool),
+  Becoming.Shuttle.stands c (t + 1) = Becoming.Shuttle.stands d (t + 1) → c = d
+@Becoming.Shuttle.named_as_themselves : ∀ {σ : Becoming.Reidentify Bool Bool},
+  (Becoming.World.shuttle.reidentify σ).Balanced →
+    (∀ (t : Nat) (x : Bool), σ.old t x = σ.old 0 x) ∧
+      ∀ (x : (Becoming.World.shuttle.reidentify σ).Relatum) (t : Nat),
+        (Becoming.World.shuttle.reidentify σ).web.Arises t x ↔ Becoming.World.shuttle.web.Arises t (σ.old 0 x)
+Becoming.Lineage.world_readings : (Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).Balanced ∧
+  ((Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).reidentify Becoming.Lineage.one.roles).Balanced ∧
+    (Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).web.Unceasing ∧
+      (∀ (t : Nat)
+          (x :
+            ((Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).reidentify
+                Becoming.Lineage.one.roles).Relatum),
+          ¬((Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).reidentify
+                    Becoming.Lineage.one.roles).web.Arises
+              t x) ∧
+        ∀ (t : Nat) (x : (Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).Relatum),
+          ¬(Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).web.ArisesFrom
+              (Becoming.World.ofRoles Becoming.Flow.still Becoming.Lineage.web).Conserves t x
+Becoming.Hibernation.world_readings : (Becoming.World.ofRoles Becoming.Flow.still Becoming.Hibernation.web).Balanced ∧
+  ((Becoming.World.ofRoles Becoming.Flow.still Becoming.Hibernation.web).reidentify
+        Becoming.Hibernation.exchange.roles).Balanced ∧
+    (Becoming.World.ofRoles Becoming.Flow.still Becoming.Hibernation.web).web.RenewingIn
+        (Sum.inl Becoming.Hibernation.Formation.hibernator) ∧
+      ((Becoming.World.ofRoles Becoming.Flow.still Becoming.Hibernation.web).reidentify
+                Becoming.Hibernation.exchange.roles).web.ConsumingIn
+          (Sum.inl Becoming.Hibernation.Formation.hibernator) ∧
+        ¬((Becoming.World.ofRoles Becoming.Flow.still Becoming.Hibernation.web).reidentify
+                  Becoming.Hibernation.exchange.roles).web.RenewingIn
+            (Sum.inl Becoming.Hibernation.Formation.hibernator)

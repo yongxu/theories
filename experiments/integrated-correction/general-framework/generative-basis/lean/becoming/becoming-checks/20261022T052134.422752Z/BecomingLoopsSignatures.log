@@ -1,0 +1,463 @@
+Becoming.Loops.zero_or_pos : ∀ (n : Nat), n = 0 ∨ 0 < n
+Becoming.Loops.ble_succ_self : ∀ (n : Nat), (n + 1).ble n = false
+@Becoming.Loops.extend_below : ∀ {C : Type} {v : Nat → C} {n : Nat} {c : C} {i : Nat},
+  i ≤ n → Becoming.Loops.extend v n c i = v i
+@Becoming.Loops.extend_next : ∀ {C : Type} (v : Nat → C) (n : Nat) (c : C), Becoming.Loops.extend v n c (n + 1) = c
+@Becoming.Loops.total_lt : ∀ {α : Type} {f g : α → Nat} {as : List α} {a : α},
+  (∀ (b : α), b ∈ as → f b ≤ g b) → a ∈ as → f a < g a → Becoming.total as f < Becoming.total as g
+@Becoming.Loops.total_mul_const : ∀ {α : Type} (q : α → Nat) (g : Nat) (as : List α),
+  (Becoming.total as fun a => q a * g) = Becoming.total as q * g
+@Becoming.Loops.mul_lt_mul_of_pos : ∀ {m a b : Nat}, 0 < m → a < b → m * a < m * b
+@Becoming.Loops.le_mul_of_pos : ∀ {m : Nat}, 0 < m → ∀ (n : Nat), n ≤ m * n
+Becoming.Loops.mul_swap : ∀ (a b c : Nat), a * b * c = b * (a * c)
+Becoming.Loops.one_add_mul : ∀ (m x : Nat), (1 + m) * x = x + m * x
+@Becoming.carriedGive_of_part : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {t : Nat} {h : F} {c : C} {l : Nat → C → Nat},
+  part h = true → Becoming.carriedGive cs part σ k t h c l = σ t h c
+@Becoming.carriedGive_of_rest : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {t : Nat} {h : F} {c : C} {l : Nat → C → Nat},
+  part h = false →
+    Becoming.carriedGive cs part σ k t h c l =
+      Becoming.total (Becoming.steps 0 (t + 1)) fun s => Becoming.total cs fun d => k t h c s d * l s d
+@Becoming.carriedGive_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {t : Nat} {h : F} {c : C} {l l' : Nat → C → Nat},
+  (∀ (s : Nat) (d : C), s ≤ t → d ∈ cs → l s d ≤ l' s d) →
+    Becoming.carriedGive cs part σ k t h c l ≤ Becoming.carriedGive cs part σ k t h c l'
+@Becoming.carriedGive_congr : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {t : Nat} {h : F} {c : C} {l l' : Nat → C → Nat},
+  (∀ (s : Nat) (d : C), s ≤ t → d ∈ cs → part h = false → 0 < k t h c s d → l s d = l' s d) →
+    Becoming.carriedGive cs part σ k t h c l = Becoming.carriedGive cs part σ k t h c l'
+@Becoming.carriedFrom_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (l : Nat → C → Nat) (t : Nat) (c : C),
+  Becoming.carriedFrom cs part σ k present δ l (t + 1) c =
+    Becoming.carriedFrom cs part σ k present δ l t c +
+      Becoming.total (present t) fun h => Becoming.carriedGive cs part σ k t h c l
+@Becoming.carriedFrom_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carriedFrom cs part σ k present δ (Becoming.carried cs part σ k present δ) t c =
+    Becoming.carried cs part σ k present δ t c
+@Becoming.carriedFrom_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {l l' : Nat → C → Nat},
+  (∀ (s : Nat) (d : C), d ∈ cs → l s d ≤ l' s d) →
+    ∀ (t : Nat) (c : C),
+      Becoming.carriedFrom cs part σ k present δ l t c ≤ Becoming.carriedFrom cs part σ k present δ l' t c
+@Becoming.carriedFrom_congr : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {l l' : Nat → C → Nat} (t : Nat),
+  (∀ (s : Nat) (d : C), s < t → d ∈ cs → l s d = l' s d) →
+    ∀ (c : C), Becoming.carriedFrom cs part σ k present δ l t c = Becoming.carriedFrom cs part σ k present δ l' t c
+@Becoming.carriedFrom_eq_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {l : Nat → C → Nat} {c : C},
+  (∀ (t : Nat) (h : F),
+      h ∈ present t →
+        Becoming.carriedGive cs part σ k t h c l =
+          Becoming.carriedGive cs part σ k t h c (Becoming.carried cs part σ k present δ)) →
+    ∀ (t : Nat), Becoming.carriedFrom cs part σ k present δ l t c = Becoming.carried cs part σ k present δ t c
+@Becoming.carriedWithin_le_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j t : Nat) (c : C),
+  Becoming.carriedWithin cs part σ k present δ j t c ≤ Becoming.carried cs part σ k present δ t c
+@Becoming.carriedWithin_le_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j t : Nat) (c : C),
+  Becoming.carriedWithin cs part σ k present δ j t c ≤ Becoming.carriedWithin cs part σ k present δ (j + 1) t c
+@Becoming.carriedWithin_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {j j' : Nat},
+  j ≤ j' →
+    ∀ (t : Nat) (c : C),
+      Becoming.carriedWithin cs part σ k present δ j t c ≤ Becoming.carriedWithin cs part σ k present δ j' t c
+@Becoming.carriedWithin_exact : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j t : Nat),
+  t ≤ j → ∀ (c : C), Becoming.carriedWithin cs part σ k present δ j t c = Becoming.carried cs part σ k present δ t c
+@Becoming.carried_eq_carriedWithin : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carried cs part σ k present δ t c = Becoming.carriedWithin cs part σ k present δ t t c
+@Becoming.Coupled.extend : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {v v' : Nat → C} {j : Nat},
+  Becoming.Coupled cs part k present v j →
+    (∀ (i : Nat), i ≤ j → v' i = v i) →
+      Becoming.Couples cs part k present (v j) (v' (j + 1)) → Becoming.Coupled cs part k present v' (j + 1)
+@Becoming.coupledInto_zero : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} (c : C), Becoming.CoupledInto cs part k present 0 c
+@Becoming.CoupledInto.succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {j : Nat} {d c : C},
+  Becoming.CoupledInto cs part k present j d →
+    Becoming.Couples cs part k present d c → Becoming.CoupledInto cs part k present (j + 1) c
+@Becoming.CoupledInto.shorten : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {i j : Nat} {c : C},
+  Becoming.CoupledInto cs part k present j c → i ≤ j → Becoming.CoupledInto cs part k present i c
+@Becoming.loop_of_coupledInto : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {c : C},
+      Becoming.CoupledInto cs part k present cs.length c →
+        ∃ e, Becoming.OnLoop cs part k present e ∧ Becoming.Upstream cs part k present e c
+@Becoming.carriedWithin_exact_of_not_coupledInto : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j : Nat) (c : C),
+  ¬Becoming.CoupledInto cs part k present (j + 1) c →
+    ∀ (t : Nat), Becoming.carriedWithin cs part σ k present δ j t c = Becoming.carried cs part σ k present δ t c
+@Becoming.carriedWithin_exact_of_no_loop : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {c : C},
+      (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ (t : Nat), Becoming.carriedWithin cs part σ k present δ n t c = Becoming.carried cs part σ k present δ t c
+@Becoming.carriedWithin_eq_carriedFrom : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j t : Nat) (c : C),
+  Becoming.carriedWithin cs part σ k present δ j t c =
+    Becoming.carriedFrom cs part σ k present δ (Becoming.orderBelow cs part σ k present δ j) t c
+@Becoming.orderBelow_le_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (j s : Nat) (d : C),
+  Becoming.orderBelow cs part σ k present δ j s d ≤ Becoming.carried cs part σ k present δ s d
+@Becoming.orderBelow_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {j j' : Nat},
+  j ≤ j' →
+    ∀ (s : Nat) (d : C),
+      Becoming.orderBelow cs part σ k present δ j s d ≤ Becoming.orderBelow cs part σ k present δ j' s d
+@Becoming.carriedFrom_lt : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {l : Nat → C → Nat} {s : Nat} {d c : C},
+  (∀ (s : Nat) (d : C), d ∈ cs → l s d ≤ Becoming.carried cs part σ k present δ s d) →
+    l s d < Becoming.carried cs part σ k present δ s d →
+      (∃ h, h ∈ present s ∧ part h = false ∧ d ∈ cs ∧ 0 < k s h c s d) →
+        Becoming.carriedFrom cs part σ k present δ l (s + 1) c < Becoming.carried cs part σ k present δ (s + 1) c
+@Becoming.orderBelow_lt_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {j s : Nat} {d c : C},
+  Becoming.orderBelow cs part σ k present δ j s d < Becoming.carried cs part σ k present δ s d →
+    (∃ h, h ∈ present s ∧ part h = false ∧ d ∈ cs ∧ 0 < k s h c s d) →
+      Becoming.orderBelow cs part σ k present δ (j + 1) (s + 1) c < Becoming.carried cs part σ k present δ (s + 1) c
+@Becoming.orderBelow_lt_later : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {j t : Nat} {c : C},
+  Becoming.orderBelow cs part σ k present δ j t c < Becoming.carried cs part σ k present δ t c →
+    Becoming.orderBelow cs part σ k present δ j (t + 1) c < Becoming.carried cs part σ k present δ (t + 1) c
+@Becoming.orderBelow_lt_along : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {j s : Nat},
+  Becoming.orderBelow cs part σ k present δ j s (v 0) < Becoming.carried cs part σ k present δ s (v 0) →
+    ∀ {p : Nat},
+      Becoming.CoupledAlways cs part k present v p →
+        Becoming.orderBelow cs part σ k present δ (j + p) (s + p) (v p) <
+          Becoming.carried cs part σ k present δ (s + p) (v p)
+@Becoming.orderBelow_lt_around : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {m : Nat} {e : C},
+  v 0 = e →
+    v m = e →
+      Becoming.CoupledAlways cs part k present v m →
+        ∀ {j s : Nat},
+          Becoming.orderBelow cs part σ k present δ j s e < Becoming.carried cs part σ k present δ s e →
+            ∀ (R : Nat),
+              ∃ t,
+                Becoming.orderBelow cs part σ k present δ (j + m * R) t e < Becoming.carried cs part σ k present δ t e
+@Becoming.carriedWithin_lt_of_loop : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e c : C} {s : Nat},
+  0 < Becoming.carried cs part σ k present δ s e →
+    ∀ {v : Nat → C} {m : Nat},
+      0 < m →
+        v 0 = e →
+          v m = e →
+            Becoming.CoupledAlways cs part k present v m →
+              ∀ {u : Nat → C} {q : Nat},
+                u 0 = e →
+                  u q = c →
+                    Becoming.CoupledAlways cs part k present u q →
+                      ∀ (J : Nat),
+                        ∃ t,
+                          Becoming.carriedWithin cs part σ k present δ J t c <
+                            Becoming.carried cs part σ k present δ t c
+@Becoming.finite_order_iff_no_loop : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    (∀ (d c : C), Becoming.Couples cs part k present d c → Becoming.CouplesAlways cs part k present d c) →
+      ∀ (c : C),
+        (∀ (δ : C → Nat),
+            ∃ j,
+              ∀ (t : Nat),
+                Becoming.carriedWithin cs part σ k present δ j t c = Becoming.carried cs part σ k present δ t c) ↔
+          ∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e
+@Becoming.carried_le_add : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C) (r : Nat),
+  Becoming.carried cs part σ k present δ t c ≤ Becoming.carried cs part σ k present δ (t + r) c
+@Becoming.carried_mono_steps : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {s t : Nat},
+  s ≤ t → ∀ (c : C), Becoming.carried cs part σ k present δ s c ≤ Becoming.carried cs part σ k present δ t c
+@Becoming.carried_step_ge : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {t : Nat} {d c : C} {w : Nat},
+  (∃ h, h ∈ present t ∧ part h = false ∧ d ∈ cs ∧ w ≤ k t h c t d) →
+    Becoming.carried cs part σ k present δ t c + w * Becoming.carried cs part σ k present δ t d ≤
+      Becoming.carried cs part σ k present δ (t + 1) c
+@Becoming.carried_along : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {p : Nat},
+  Becoming.CoupledWith cs part k present v w p →
+    ∀ (t : Nat),
+      Becoming.Loops.product w p * Becoming.carried cs part σ k present δ t (v 0) ≤
+        Becoming.carried cs part σ k present δ (t + p) (v p)
+@Becoming.carried_around : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledWith cs part k present v w (m + 1) →
+        ∀ (t : Nat),
+          (1 + Becoming.Loops.product w (m + 1)) * Becoming.carried cs part σ k present δ t e ≤
+            Becoming.carried cs part σ k present δ (t + (m + 1)) e
+@Becoming.carried_runaway : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledWith cs part k present v w (m + 1) →
+        ∀ (t R : Nat),
+          (1 + Becoming.Loops.product w (m + 1)) ^ R * Becoming.carried cs part σ k present δ t e ≤
+            Becoming.carried cs part σ k present δ (t + (m + 1) * R) e
+Becoming.Loops.withinBound_zero : ∀ (M D t : Nat), Becoming.Loops.withinBound M D 0 t = D
+Becoming.Loops.withinBound_le_succ : ∀ (M D j t : Nat),
+  Becoming.Loops.withinBound M D j t ≤ Becoming.Loops.withinBound M D j (t + 1)
+Becoming.Loops.withinBound_mono : ∀ (M D j : Nat) {s t : Nat},
+  s ≤ t → Becoming.Loops.withinBound M D j s ≤ Becoming.Loops.withinBound M D j t
+Becoming.Loops.geomBound_mono : ∀ (M D : Nat) {s t : Nat},
+  s ≤ t → Becoming.Loops.geomBound M D s ≤ Becoming.Loops.geomBound M D t
+Becoming.Loops.missBound_le_succ : ∀ (M D j t : Nat),
+  Becoming.Loops.missBound M D j t ≤ Becoming.Loops.missBound M D j (t + 1)
+Becoming.Loops.missBound_mono : ∀ (M D j : Nat) {s t : Nat},
+  s ≤ t → Becoming.Loops.missBound M D j s ≤ Becoming.Loops.missBound M D j t
+Becoming.Loops.missBound_add_withinBound : ∀ (M D j t : Nat),
+  Becoming.Loops.missBound M D j t + Becoming.Loops.withinBound M D j t = Becoming.Loops.geomBound M D t
+Becoming.Loops.geomBound_eq : ∀ (M D t : Nat), Becoming.Loops.geomBound M D t = D * (1 + M) ^ t
+Becoming.Loops.binom_zero : ∀ (n : Nat), Becoming.Loops.binom n 0 = 1
+Becoming.Loops.orderSum_zero : ∀ (M t : Nat), Becoming.Loops.orderSum M 0 t = 1
+Becoming.Loops.pow_step : ∀ (b M i : Nat), b * M ^ (i + 1) = M * (b * M ^ i)
+Becoming.Loops.orderSum_succ : ∀ (M j t : Nat),
+  Becoming.Loops.orderSum M (j + 1) t =
+    1 + Becoming.total (Becoming.steps 0 (j + 1)) fun i => Becoming.Loops.binom t (i + 1) * M ^ (i + 1)
+Becoming.Loops.orderSum_start : ∀ (M j : Nat), Becoming.Loops.orderSum M j 0 = 1
+Becoming.Loops.orderSum_step : ∀ (M j t : Nat),
+  Becoming.Loops.orderSum M (j + 1) (t + 1) = Becoming.Loops.orderSum M (j + 1) t + M * Becoming.Loops.orderSum M j t
+Becoming.Loops.withinBound_eq : ∀ (M D j t : Nat),
+  Becoming.Loops.withinBound M D j t = D * Becoming.Loops.orderSum M j t
+@Becoming.total_give_le_add : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {t : Nat} {c : C} {l l' : Nat → C → Nat} {X : Nat},
+  (∀ (s : Nat) (d : C), s ≤ t → d ∈ cs → l s d ≤ l' s d + X) →
+    (Becoming.total (present t) fun h => Becoming.carriedGive cs part (fun x x_1 x_2 => 0) k t h c l) ≤
+      (Becoming.total (present t) fun h => Becoming.carriedGive cs part (fun x x_1 x_2 => 0) k t h c l') +
+        Becoming.inflow cs part k present t c * X
+@Becoming.total_give_le_inflow : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {t : Nat} {c : C} {l : Nat → C → Nat} {X : Nat},
+  (∀ (s : Nat) (d : C), s ≤ t → d ∈ cs → l s d ≤ X) →
+    (Becoming.total (present t) fun h => Becoming.carriedGive cs part (fun x x_1 x_2 => 0) k t h c l) ≤
+      Becoming.inflow cs part k present t c * X
+@Becoming.carriedWithin_zero_quiet : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carriedWithin cs part (fun x x_1 x_2 => 0) k present δ 0 t c = δ c
+@Becoming.carriedWithin_le_withinBound : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {M D : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ (j t : Nat) (c : C),
+        Becoming.carriedWithin cs part (fun x x_1 x_2 => 0) k present δ j t c ≤ Becoming.Loops.withinBound M D j t
+@Becoming.carried_le_geomBound : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ (t : Nat) (c : C),
+        Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ Becoming.Loops.geomBound M D t
+@Becoming.carried_le_carriedWithin_add : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {M D : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ (j t : Nat) (c : C),
+        Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤
+          Becoming.carriedWithin cs part (fun x x_1 x_2 => 0) k present δ j t c + Becoming.Loops.missBound M D j t
+@Becoming.carried_le_polynomial : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {c : C},
+      (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ {M D : Nat},
+              (∀ (c : C), δ c ≤ D) →
+                (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+                  ∀ (t : Nat),
+                    Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ D * Becoming.Loops.orderSum M n t
+Becoming.Loops.SelfLoop.give : ∀ (M t : Nat) (l : Nat → Unit → Nat),
+  (Becoming.total [()] fun h =>
+      Becoming.carriedGive [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) t h () l) =
+    M * l t ()
+Becoming.Loops.SelfLoop.inflow_eq : ∀ (M t : Nat),
+  Becoming.inflow [()] (fun x => false) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()]) t () = M
+Becoming.Loops.SelfLoop.carried_eq : ∀ (M D t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+      (fun x => D) t () =
+    Becoming.Loops.geomBound M D t
+Becoming.Loops.SelfLoop.carriedWithin_eq : ∀ (M D j t : Nat),
+  Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M)
+      (fun x => [()]) (fun x => D) j t () =
+    Becoming.Loops.withinBound M D j t
+Becoming.Loops.SelfLoop.attained : ∀ (M D j t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+      (fun x => D) t () =
+    Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M)
+        (fun x => [()]) (fun x => D) j t () +
+      Becoming.Loops.missBound M D j t
+Becoming.Loops.Once.give_zero : ∀ (l : Nat → Unit → Nat),
+  (Becoming.total [()] fun h =>
+      Becoming.carriedGive [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths 0 h () l) =
+    l 0 ()
+Becoming.Loops.Once.give_succ : ∀ (t : Nat) (l : Nat → Unit → Nat),
+  (Becoming.total [()] fun h =>
+      Becoming.carriedGive [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths (t + 1) h () l) =
+    0
+Becoming.Loops.Once.onLoop : Becoming.OnLoop [()] (fun x => false) Becoming.Loops.Once.strengths (fun x => [()]) ()
+Becoming.Loops.Once.exact : ∀ (δ : Unit → Nat) (t : Nat),
+  Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths (fun x => [()]) δ 1 t
+      () =
+    Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths (fun x => [()]) δ t ()
+Becoming.Loops.Once.not_always : Becoming.OnLoop [()] (fun x => false) Becoming.Loops.Once.strengths (fun x => [()])
+    () ∧
+  ∀ (δ : Unit → Nat),
+    ∃ j,
+      ∀ (t : Nat),
+        Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths (fun x => [()])
+            δ j t () =
+          Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) Becoming.Loops.Once.strengths (fun x => [()]) δ t
+            ()
+@Becoming.stationary_now : ∀ {F C : Type} (K : F → C → C → Nat) (t : Nat) (h : F) (c d : C),
+  Becoming.stationary K t h c t d = K h c d
+@Becoming.couplesAlways_of_stationary : ∀ {F C : Type} {cs : List C} {part : F → Bool} {K : F → C → C → Nat}
+  {hs : List F} {d c : C},
+  Becoming.Couples cs part (Becoming.stationary K) (fun x => hs) d c →
+    Becoming.CouplesAlways cs part (Becoming.stationary K) (fun x => hs) d c
+@Becoming.finite_order_iff_no_loop_stationary : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ (K : F → C → C → Nat) (hs : List F) (c : C),
+      (∀ (δ : C → Nat),
+          ∃ j,
+            ∀ (t : Nat),
+              Becoming.carriedWithin cs part σ (Becoming.stationary K) (fun x => hs) δ j t c =
+                Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ t c) ↔
+        ∀ (e : C),
+          Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+            ¬Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e
+Becoming.Loops.product_ones : ∀ (j : Nat), Becoming.Loops.product (fun x => 1) j = 1
+@Becoming.carried_doubles_around : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat} {δ : C → Nat}
+  {K : F → C → C → Nat} {hs : List F} {v : Nat → C} {m : Nat} {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      (∀ (i : Nat), i < m + 1 → ∃ h, h ∈ hs ∧ part h = false ∧ v i ∈ cs ∧ 0 < K h (v (i + 1)) (v i)) →
+        ∀ (t R : Nat),
+          2 ^ R * Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ t e ≤
+            Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ (t + (m + 1) * R) e
+Becoming.Loops.pow_mul_nat : ∀ (b a n : Nat), (b ^ a) ^ n = b ^ (a * n)
+Becoming.Loops.mul_pow_nat : ∀ (x y n : Nat), (x * y) ^ n = x ^ n * y ^ n
+@Becoming.Loops.pow_le_pow_base : ∀ {a b : Nat}, a ≤ b → ∀ (n : Nat), a ^ n ≤ b ^ n
+@Becoming.Loops.pow_le_pow_exp : ∀ {b : Nat}, 0 < b → ∀ {x y : Nat}, x ≤ y → b ^ x ≤ b ^ y
+Becoming.Loops.two_pow_pos : ∀ (a : Nat), 0 < 2 ^ a
+Becoming.Loops.two_pow_succ : ∀ (a : Nat), 2 ^ (a + 1) = 2 ^ a + 2 ^ a
+Becoming.Loops.lt_two_pow : ∀ (n : Nat), n < 2 ^ n
+Becoming.Loops.odd_lt_two_pow : ∀ (a : Nat), 2 * (a + 3) + 1 < 2 ^ (a + 3)
+Becoming.Loops.sq_lt_two_pow : ∀ (a : Nat), (a + 5) * (a + 5) < 2 ^ (a + 5)
+Becoming.Loops.linear_lt_two_pow : ∀ (c d : Nat), ∃ a, c * a + d < 2 ^ a
+Becoming.Loops.poly_lt_two_pow : ∀ (K n : Nat), ∃ R, K * (R + 1) ^ n < 2 ^ R
+@Becoming.Loops.not_poly_of_doubling : ∀ {f : Nat → Nat} {t₀ m : Nat},
+  (∀ (R : Nat), 2 ^ R ≤ f (t₀ + (m + 1) * R)) → ∀ (A n : Nat), ¬∀ (t : Nat), f t ≤ A * (t + 1) ^ n
+Becoming.Loops.binom_le_pow : ∀ (t i : Nat), Becoming.Loops.binom t i ≤ (t + 1) ^ i
+Becoming.Loops.orderSum_le_poly : ∀ (M n t : Nat), Becoming.Loops.orderSum M n t ≤ (n + 1) * (1 + M) ^ n * (t + 1) ^ n
+@Becoming.inflow_stationary : ∀ {F C : Type} {cs : List C} {part : F → Bool} (K : F → C → C → Nat) (hs : List F)
+  (t : Nat) (c : C),
+  Becoming.inflow cs part (Becoming.stationary K) (fun x => hs) t c = Becoming.inflowStationary cs part K hs c
+@Becoming.strength_of_couples : ∀ {F C : Type} {cs : List C} {part : F → Bool} {K : F → C → C → Nat} {hs : List F}
+  {d c : C},
+  Becoming.Couples cs part (Becoming.stationary K) (fun x => hs) d c →
+    ∃ h, h ∈ hs ∧ part h = false ∧ d ∈ cs ∧ 0 < K h c d
+@Becoming.carried_along_stationary : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {δ : C → Nat} {K : F → C → C → Nat} {hs : List F} {u : Nat → C} {q : Nat},
+  Becoming.Coupled cs part (Becoming.stationary K) (fun x => hs) u q →
+    ∀ (t : Nat),
+      Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ t (u 0) ≤
+        Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ (t + q) (u q)
+@Becoming.carried_doubles_into : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat} {δ : C → Nat}
+  {K : F → C → C → Nat} {hs : List F} {e c : C},
+  Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+    Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e →
+      ∃ q m,
+        ∀ (t R : Nat),
+          2 ^ R * Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ t e ≤
+            Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ (t + (m + 1) * R + q) c
+@Becoming.polynomial_iff_no_loop : ∀ {F C : Type} {cs : List C} {part : F → Bool},
+  (∀ (c : C), c ∈ cs) →
+    ∀ (K : F → C → C → Nat) (hs : List F) (c : C),
+      (∀ (δ : C → Nat),
+          ∃ A n,
+            ∀ (t : Nat),
+              Becoming.carried cs part (fun x x_1 x_2 => 0) (Becoming.stationary K) (fun x => hs) δ t c ≤
+                A * (t + 1) ^ n) ↔
+        ∀ (e : C),
+          Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+            ¬Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e
+@Becoming.most_difference_within : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ {c : C},
+        (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+          ∀ {n : Nat},
+            cs.length ≤ n + 1 →
+              ∀ (T a : Nat),
+                (∀ (law : Becoming.ExchangeLaw F C) (L L' : Becoming.Flow F C) (W W' : Becoming.Web F C),
+                    law.Nonanticipating →
+                      L.Balances W →
+                        L'.Balances W' →
+                          (∀ (t : Nat), L.present t = present t) →
+                            (∀ (t : Nat), L'.present t = present t) →
+                              L.Follows law part W.level →
+                                L'.Follows law part W'.level →
+                                  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                                      part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                                    (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ σ t h c) →
+                                      (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                        Becoming.gap (W.level T c) (W'.level T c) ≤ a) ↔
+                  Becoming.carriedWithin cs part σ k present δ n T c ≤ a
+@Becoming.gap_le_polynomial : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {c : C},
+      (∀ (e : C), Becoming.Upstream cs part k present e c → ¬Becoming.OnLoop cs part k present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ {M D : Nat},
+              (∀ (c : C), δ c ≤ D) →
+                (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+                  ∀ {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+                    law.Nonanticipating →
+                      L.Balances W →
+                        L'.Balances W' →
+                          (∀ (t : Nat), L.present t = present t) →
+                            (∀ (t : Nat), L'.present t = present t) →
+                              L.Follows law part W.level →
+                                L'.Follows law part W'.level →
+                                  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                                      part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                                    (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ 0) →
+                                      (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                        ∀ (t : Nat),
+                                          Becoming.gap (W.level t c) (W'.level t c) ≤ D * Becoming.Loops.orderSum M n t
+@Becoming.gap_polynomial_iff_no_loop : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (K : F → C → C → Nat) (hs : List F) (c : C),
+        (∀ (δ : C → Nat),
+            ∃ A n,
+              ∀ (t : Nat) (law : Becoming.ExchangeLaw F C) (L L' : Becoming.Flow F C) (W W' : Becoming.Web F C),
+                law.Nonanticipating →
+                  L.Balances W →
+                    L'.Balances W' →
+                      (∀ (t : Nat), L.present t = hs) →
+                        (∀ (t : Nat), L'.present t = hs) →
+                          L.Follows law part W.level →
+                            L'.Follows law part W'.level →
+                              (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                                  part h = false →
+                                    s ≤ t → law.RespondsWithin t h c s d (Becoming.stationary K t h c s d)) →
+                                (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ 0) →
+                                  (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                    Becoming.gap (W.level t c) (W'.level t c) ≤ A * (t + 1) ^ n) ↔
+          ∀ (e : C),
+            Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+              ¬Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e

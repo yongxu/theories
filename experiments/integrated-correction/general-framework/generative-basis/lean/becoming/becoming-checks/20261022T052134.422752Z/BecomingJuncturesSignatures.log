@@ -1,0 +1,175 @@
+@Becoming.Branching.Juncture.reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x : S},
+  Becoming.Branching.Juncture P s x → Becoming.Reach P x s
+@Becoming.Branching.Juncture.outcomes_differ : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x : S},
+  Becoming.Branching.Juncture P s x → ∃ a y b z, P.step x a y ∧ P.step x b z ∧ y ≠ z
+@Becoming.Branching.Juncture.possiblyDrawn : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x : S},
+  Becoming.Branching.Juncture P s x → Becoming.Branching.PossiblyDrawn P x
+@Becoming.Branching.Juncture.returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x : S},
+  Becoming.Reach P s x → Becoming.Branching.Juncture P s x → Becoming.Branching.Returns P x
+@Becoming.Branching.step_back : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s → ∀ {x : S}, Becoming.Reach P x s → ∃ a y, P.step x a y ∧ Becoming.Reach P y s
+@Becoming.Branching.loss_passes_juncture_from : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s →
+    ∀ {x t : S} {as : List A},
+      Generative.Trace P x as t →
+        Becoming.Reach P x s →
+          ¬Becoming.Reach P t s →
+            ¬¬∃ y a z,
+                  Becoming.Reach P x y ∧
+                    P.step y a z ∧ Becoming.Reach P z t ∧ ¬Becoming.Reach P z s ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.loss_passes_juncture : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s →
+    ∀ {t : S} {as : List A},
+      Generative.Trace P s as t →
+        ¬Becoming.Reach P t s →
+          ¬¬∃ y a z,
+                Becoming.Reach P s y ∧
+                  P.step y a z ∧ Becoming.Reach P z t ∧ ¬Becoming.Reach P z s ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.PossiblyDrawn.passes_juncture : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {s : S},
+  Becoming.Branching.Returns P s →
+    Becoming.Branching.PossiblyDrawn P s → ¬¬∃ y, Becoming.Reach P s y ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.loss_passes_juncture_decided_from : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {s : S},
+  Becoming.Branching.Returns P s →
+    (∀ (y : S), Becoming.Reach P s y → Becoming.Reach P y s ∨ ¬Becoming.Reach P y s) →
+      ∀ {x t : S} {as : List A},
+        Generative.Trace P x as t →
+          Becoming.Reach P s x →
+            Becoming.Reach P x s →
+              ¬Becoming.Reach P t s →
+                ∃ y a z,
+                  Becoming.Reach P x y ∧
+                    P.step y a z ∧ Becoming.Reach P z t ∧ ¬Becoming.Reach P z s ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.loss_passes_juncture_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s →
+    (∀ (y : S), Becoming.Reach P s y → Becoming.Reach P y s ∨ ¬Becoming.Reach P y s) →
+      ∀ {t : S} {as : List A},
+        Generative.Trace P s as t →
+          ¬Becoming.Reach P t s →
+            ∃ y a z,
+              Becoming.Reach P s y ∧
+                P.step y a z ∧ Becoming.Reach P z t ∧ ¬Becoming.Reach P z s ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.any_congr : ∀ {S : Type u_1} {p q : S → Bool},
+  (∀ (y : S), p y = q y) → ∀ (l : List S), l.any p = l.any q
+@Becoming.Branching.leadsWithin_sound : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+    ∀ {k : Nat} {z : S},
+      Becoming.Branching.leadsWithin all edge s k z = true → ∃ a y, P.step z a y ∧ Becoming.Reach P y s
+@Becoming.Branching.leadsWithin_complete : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+      ∀ {y : S} {as : List A},
+        Generative.Trace P y as s →
+          ∀ (z : S) (a : A), P.step z a y → Becoming.Branching.leadsWithin all edge s (as.length + 1) z = true
+@Becoming.Branching.leadsWithin_up : ∀ {S : Type u_1} {s : S} {all : List S} {edge : S → S → Bool} {k : Nat} {z : S},
+  Becoming.Branching.leadsWithin all edge s k z = true → Becoming.Branching.leadsWithin all edge s (k + 1) z = true
+@Becoming.Branching.LeadsSteady.next : ∀ {S : Type u_1} {s : S} {all : List S} {edge : S → S → Bool} {k : Nat},
+  Becoming.Branching.LeadsSteady all edge s k → Becoming.Branching.LeadsSteady all edge s (k + 1)
+@Becoming.Branching.leads_steady_or_rises : ∀ {S : Type u_1} {s : S} {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    ∀ (k : Nat),
+      Becoming.Branching.LeadsSteady all edge s k ∨
+        ∃ z,
+          z ∈ all ∧
+            Becoming.Branching.leadsWithin all edge s k z = false ∧
+              Becoming.Branching.leadsWithin all edge s (k + 1) z = true
+@Becoming.Branching.leads_settles : ∀ {S : Type u_1} {s : S} {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) → Becoming.Branching.LeadsSteady all edge s all.length
+@Becoming.Branching.leads_bound : ∀ {S : Type u_1} {s : S} {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    ∀ {k : Nat} {z : S},
+      Becoming.Branching.leadsWithin all edge s k z = true →
+        Becoming.Branching.leadsWithin all edge s all.length z = true
+@Becoming.Branching.reach_iff_leads : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+      Becoming.Branching.Returns P s →
+        ∀ {y : S}, Becoming.Reach P y s ↔ Becoming.Branching.leadsWithin all edge s all.length y = true
+@Becoming.Branching.reach_decided_listed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+      Becoming.Branching.Returns P s → ∀ (y : S), Becoming.Reach P y s ∨ ¬Becoming.Reach P y s
+@Becoming.Branching.loss_passes_juncture_listed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+      Becoming.Branching.Returns P s →
+        ∀ {t : S} {as : List A},
+          Generative.Trace P s as t →
+            ¬Becoming.Reach P t s →
+              ∃ y a z,
+                Becoming.Reach P s y ∧
+                  P.step y a z ∧ Becoming.Reach P z t ∧ ¬Becoming.Reach P z s ∧ Becoming.Branching.Juncture P s y
+@Becoming.Branching.SubProcess.reach : ∀ {S : Type u_1} {A : Type u_2} {P Q : Generative.Process S A},
+  Becoming.Branching.SubProcess Q P → ∀ {x y : S}, Becoming.Reach Q x y → Becoming.Reach P x y
+@Becoming.Branching.keeping_sub : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.SubProcess (Becoming.Branching.keeping P s) P
+@Becoming.Branching.losing_sub : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.SubProcess (Becoming.Branching.losing P s) P
+@Becoming.Branching.juncture_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x : S},
+  Becoming.Branching.Juncture P s x ↔
+    (∃ a y, (Becoming.Branching.keeping P s).step x a y) ∧ ∃ b z, (Becoming.Branching.losing P s).step x b z
+@Becoming.Branching.reach_keeping_of_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s y : S}
+  {as : List A}, Generative.Trace P y as s → Becoming.Reach (Becoming.Branching.keeping P s) y s
+@Becoming.Branching.reach_keeping_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s y : S},
+  Becoming.Reach (Becoming.Branching.keeping P s) y s ↔ Becoming.Reach P y s
+@Becoming.Branching.keeping_keeps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Keeps (Becoming.Branching.keeping P s) s
+@Becoming.Branching.keeping_returns_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns (Becoming.Branching.keeping P s) s ↔ Becoming.Branching.Returns P s
+@Becoming.Branching.keeping_greatest : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S A},
+  Becoming.Branching.SubProcess Q P →
+    Becoming.Branching.Keeps Q s →
+      ∀ {x y : S} {a : A}, Becoming.Reach Q s x → Q.step x a y → (Becoming.Branching.keeping P s).step x a y
+@Becoming.Branching.keeping_removes_at_juncture : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s →
+    ∀ {x y : S} {a : A},
+      Becoming.Reach (Becoming.Branching.keeping P s) s x →
+        P.step x a y →
+          ¬(Becoming.Branching.keeping P s).step x a y → ¬Becoming.Reach P y s ∧ Becoming.Branching.Juncture P s x
+@Becoming.Branching.losing_not_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  ¬Becoming.Branching.Returns (Becoming.Branching.losing P s) s
+@Becoming.Branching.losing_loses : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s y : S},
+  Becoming.Reach (Becoming.Branching.losing P s) s y → s = y ∨ ¬Becoming.Reach P y s
+@Becoming.Branching.no_juncture_of_keeps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Keeps P s → ∀ {x : S}, Becoming.Reach P s x → ¬Becoming.Branching.Juncture P s x
+Becoming.Branching.Many.options : ∀ (n : Nat), Becoming.Branching.Many.process.step () n ()
+Becoming.Branching.Many.no_juncture : ∀ (x : Unit), ¬Becoming.Branching.Juncture Becoming.Branching.Many.process () x
+Becoming.Branching.OneWay.juncture : Becoming.Branching.Juncture Becoming.Branching.OneWay.process false false
+@Becoming.Branching.Hidden.to_origin : ∀ {α : Nat → Bool} {x y : Becoming.Branching.Hidden.Pos} {as : List Unit},
+  Generative.Trace (Becoming.Branching.Hidden.process α) x as y →
+    y = Becoming.Branching.Hidden.Pos.origin → x = Becoming.Branching.Hidden.Pos.origin ∨ ∃ k, α k = true
+@Becoming.Branching.Hidden.sink_stuck : ∀ {α : Nat → Bool} {a : Unit} {z : Becoming.Branching.Hidden.Pos},
+  ¬(Becoming.Branching.Hidden.process α).step Becoming.Branching.Hidden.Pos.sink a z
+@Becoming.Branching.Hidden.sink_lost : ∀ {α : Nat → Bool},
+  ¬Becoming.Reach (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.sink
+      Becoming.Branching.Hidden.Pos.origin
+@Becoming.Branching.Hidden.chain_reach : ∀ {α : Nat → Bool} (k : Nat),
+  Becoming.Reach (Becoming.Branching.Hidden.process α) (Becoming.Branching.Hidden.Pos.chain 0)
+    (Becoming.Branching.Hidden.Pos.chain k)
+@Becoming.Branching.Hidden.fork_back : ∀ {α : Nat → Bool} {k : Nat},
+  α k = true →
+    Becoming.Reach (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.fork
+      Becoming.Branching.Hidden.Pos.origin
+@Becoming.Branching.Hidden.returns : ∀ {α : Nat → Bool},
+  Becoming.Branching.Returns (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.origin
+@Becoming.Branching.Hidden.path : ∀ {α : Nat → Bool},
+  Generative.Trace (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.origin [(), ()]
+    Becoming.Branching.Hidden.Pos.sink
+@Becoming.Branching.Hidden.juncture_decides : ∀ {α : Nat → Bool},
+  (∃ y,
+      Becoming.Reach (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.origin y ∧
+        Becoming.Reach (Becoming.Branching.Hidden.process α) y Becoming.Branching.Hidden.Pos.sink ∧
+          Becoming.Branching.Juncture (Becoming.Branching.Hidden.process α) Becoming.Branching.Hidden.Pos.origin y) →
+    (∃ k, α k = true) ∨ ∀ (k : Nat), α k = false
+Becoming.Branching.lpo_of_junctures_found : (∀ (S A : Type) (P : Generative.Process S A) (s t : S) (as : List A),
+    Becoming.Branching.Returns P s →
+      Generative.Trace P s as t →
+        ¬Becoming.Reach P t s → ∃ y, Becoming.Reach P s y ∧ Becoming.Reach P y t ∧ Becoming.Branching.Juncture P s y) →
+  Becoming.LPO

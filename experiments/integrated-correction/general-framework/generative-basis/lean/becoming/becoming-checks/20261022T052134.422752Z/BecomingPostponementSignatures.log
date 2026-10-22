@@ -1,0 +1,40 @@
+@Becoming.Frame.postponed_members : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C),
+  Becoming.Bisimulation F.postponed F.postponed fun X X' => ∀ (s : S), X s ↔ X' s
+@Becoming.Frame.postponed_determinedAt : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (X : S → Prop), Becoming.DeterminedAt F.postponed X
+@Becoming.Frame.postponed_trace_members : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  {X Y : S → Prop} {as : List A},
+  Generative.Trace F.postponed.P X as Y → ∀ (t : S), Y t ↔ ∃ s, X s ∧ Generative.Trace F.P s as t
+@Becoming.Frame.postponed_trace_inhabited : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  {X Y : S → Prop} {as : List A}, Generative.Trace F.postponed.P X as Y → (∃ s, X s) → ∃ t, Y t
+@Becoming.Frame.postponed_trace_of : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  {X : S → Prop} {as : List A}, (∃ s t, X s ∧ Generative.Trace F.P s as t) → ∃ Y, Generative.Trace F.postponed.P X as Y
+@Becoming.Frame.postponed_trace_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  {X : S → Prop},
+  (∃ s, X s) → ∀ (as : List A), (∃ Y, Generative.Trace F.postponed.P X as Y) ↔ ∃ s t, X s ∧ Generative.Trace F.P s as t
+@Becoming.Frame.postponed_tests_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (X : S → Prop) (as : List A) (c : C),
+  (∃ Y, Generative.Trace F.postponed.P X as Y ∧ F.postponed.realized Y c) ↔
+    ∃ s t, X s ∧ Generative.Trace F.P s as t ∧ F.realized t c
+@Becoming.Frame.postponed_trace_one : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S)
+  (as : List A), (∃ Y, Generative.Trace F.postponed.P (Eq s) as Y) ↔ ∃ t, Generative.Trace F.P s as t
+@Becoming.Frame.postponed_tests_one : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S)
+  (as : List A) (c : C),
+  (∃ Y, Generative.Trace F.postponed.P (Eq s) as Y ∧ F.postponed.realized Y c) ↔
+    ∃ t, Generative.Trace F.P s as t ∧ F.realized t c
+@Becoming.sameTests_postponed : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S),
+  Becoming.SameTests F F.postponed s (Eq s)
+@Becoming.sameTests_postponed_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.SameTests F.postponed G.postponed (Eq s) (Eq s') ↔ Becoming.SameTests F G s s'
+@Becoming.sameTests_iff_postponed_alike : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.SameTests F G s s' ↔ Becoming.Alike F.postponed G.postponed (Eq s) (Eq s')
+@Becoming.DeterminedAt.of_alike_postponed : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {s : S}, Becoming.Alike F F.postponed s (Eq s) → Becoming.DeterminedAt F s
+@Becoming.alike_postponed_iff_determined : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (s : S), Becoming.Alike F F.postponed s (Eq s)) ↔ ∀ (s : S), Becoming.DeterminedAt F s
+Becoming.Choosing.postponed_alike : Becoming.Alike Becoming.Choosing.late.postponed Becoming.Choosing.early.postponed
+  (Eq Becoming.Choosing.Pos.p0) (Eq Becoming.Choosing.Pos.p0)
+Becoming.Choosing.early_not_alike_postponed : ¬Becoming.Alike Becoming.Choosing.early Becoming.Choosing.early.postponed
+    Becoming.Choosing.Pos.p0 (Eq Becoming.Choosing.Pos.p0)

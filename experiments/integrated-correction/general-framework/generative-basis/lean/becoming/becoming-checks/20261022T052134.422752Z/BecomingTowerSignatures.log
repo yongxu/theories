@@ -1,0 +1,18 @@
+@Becoming.Tower.web_zero : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) (n : Nat),
+  T.web 0 = (T.web n).sample (T.reads n)
+@Becoming.Tower.level_zero : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) (n s : Nat) (c : C),
+  (T.web 0).level s c = (T.web n).level (T.reads n s) c
+@Becoming.Tower.reads_strict : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) (n : Nat),
+  Becoming.Strict (T.reads n)
+@Becoming.Tower.balances_coarser : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) {n : Nat},
+  (T.flow (n + 1)).Once → (T.flow (n + 1)).Balances (T.web (n + 1)) → (T.flow n).Balances (T.web n)
+@Becoming.Tower.dissipative_coarser : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) {n : Nat},
+  (T.flow (n + 1)).Dissipative → (T.flow n).Dissipative
+@Becoming.Tower.changes_within : ∀ {F C : Type} [inst : DecidableEq F] (T : Becoming.Tower F C) {n S N : Nat}
+  {stand : Nat → List C},
+  (T.web n).StandingCensus stand →
+    (∀ (t : Nat),
+        t ∈ Becoming.steps (T.reads n S) (T.reads n (S + N) - T.reads n S) → ¬¬(T.flow n).RunsDown (T.web n) t) →
+      Becoming.count (Becoming.steps (T.reads n S) (T.reads n (S + N) - T.reads n S))
+          (Becoming.fall fun t => (T.web n).stock (stand t) t) ≤
+        (T.web 0).stock (stand (T.reads n S)) S

@@ -1,0 +1,61 @@
+@Becoming.Frame.regroup_same_realized_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  F.RespectsAt q s →
+    F.RespectsAt q t →
+      ((∀ (d : D), (F.regroup q).realized s d ↔ (F.regroup q).realized t d) ↔
+        ∀ (c : C), F.realized s c ↔ F.realized t c)
+@Becoming.Frame.regroup_through : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D},
+  (∀ (s : S), F.RespectsAt q s) →
+    ∀ {select : S → Prop},
+      Becoming.Learning.Training.Through (fun s t => ∀ (c : C), F.realized s c ↔ F.realized t c) select →
+        Becoming.Learning.Training.Through
+          (fun s t => ∀ (d : D), (F.regroup q).realized s d ↔ (F.regroup q).realized t d) select
+@Becoming.Frame.respectsAt_iff_claims_through : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s : S},
+  F.RespectsAt q s ↔ Becoming.Learning.Training.Through (fun c e => q c = q e) (F.realized s)
+@Becoming.Frame.regroup_keeps_claim_selections_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s : S},
+  (∀ (select : C → Prop),
+      Becoming.Learning.Training.Through (fun c e => F.realized s c ↔ F.realized s e) select →
+        Becoming.Learning.Training.Through (fun c e => q c = q e) select) ↔
+    F.RespectsAt q s
+@Becoming.Frame.constant_content_keeps_state_selections : ∀ {S A C D : Type} {F : Becoming.Frame S A C} (q : C → D),
+  (∀ (s t : S) (c : C), F.realized s c ↔ F.realized t c) →
+    ∀ (select : S → Prop),
+      Becoming.Learning.Training.Through (fun s t => ∀ (c : C), F.realized s c ↔ F.realized t c) select →
+        Becoming.Learning.Training.Through
+          (fun s t => ∀ (d : D), (F.regroup q).realized s d ↔ (F.regroup q).realized t d) select
+@Becoming.Frame.literal_claims_separate_preservation : ∀ {S A : Type} (P : Generative.Process S A) (s : S),
+  have F := { P := P, realized := fun x c => c = true };
+  have q := fun x => ();
+  (∀ (select : S → Prop),
+      Becoming.Learning.Training.Through (fun s t => ∀ (c : Bool), F.realized s c ↔ F.realized t c) select →
+        Becoming.Learning.Training.Through
+          (fun s t => ∀ (d : Unit), (F.regroup q).realized s d ↔ (F.regroup q).realized t d) select) ∧
+    ¬F.RespectsAt q s ∧
+      ¬∀ (select : Bool → Prop),
+          Becoming.Learning.Training.Through (fun c e => F.realized s c ↔ F.realized s e) select →
+            Becoming.Learning.Training.Through (fun c e => q c = q e) select
+@Becoming.Frame.regroup_bisimulation : ∀ {S A C D T : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame T A C}
+  {R : S → T → Prop} (q : C → D), Becoming.Bisimulation F G R → Becoming.Bisimulation (F.regroup q) (G.regroup q) R
+@Becoming.Frame.regroup_bisimulation_iff : ∀ {S A C D T : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame T A C}
+  {R : S → T → Prop} {q : C → D},
+  (∀ (s : S) (t : T), R s t → F.RespectsAt q s ∧ G.RespectsAt q t) →
+    (Becoming.Bisimulation (F.regroup q) (G.regroup q) R ↔ Becoming.Bisimulation F G R)
+@Becoming.Frame.regroup_alike_iff : ∀ {S A C D T : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame T A C}
+  {q : C → D},
+  (∀ (s : S), F.RespectsAt q s) →
+    (∀ (t : T), G.RespectsAt q t) →
+      ∀ {s : S} {t : T}, Becoming.Alike (F.regroup q) (G.regroup q) s t ↔ Becoming.Alike F G s t
+@Becoming.Web.group_keeps_selections_iff_faithful : ∀ {F C D : Type} {W : Becoming.Web F C} (q : F → D)
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)),
+  (∀ (t : Nat) (select : F → Prop),
+      Becoming.Learning.Training.Through
+          (fun f g => ∀ (c : C), W.requiredLevel decides t f c = W.requiredLevel decides t g c) select →
+        Becoming.Learning.Training.Through (fun f g => q f = q g) select) ↔
+    ∀ (l : Nat → C → Nat), W.paths.RespectsAt (Becoming.Web.groupEvent q) l
+@Becoming.Web.merged_requirement_loses_selection : ∀ {F C D : Type} {W : Becoming.Web F C} {q : F → D}
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)) {f g : F} {t : Nat} {c : C},
+  q f = q g →
+    W.requiredLevel decides t f c ≠ W.requiredLevel decides t g c →
+      ∃ select,
+        Becoming.Learning.Training.Through
+            (fun a b => ∀ (c : C), W.requiredLevel decides t a c = W.requiredLevel decides t b c) select ∧
+          ¬Becoming.Learning.Training.Through (fun a b => q a = q b) select

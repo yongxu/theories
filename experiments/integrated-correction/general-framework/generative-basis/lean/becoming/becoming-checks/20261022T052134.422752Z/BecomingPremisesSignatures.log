@@ -1,0 +1,131 @@
+@Becoming.lt_beyond : ∀ {m : Nat} {l : List Nat}, m ∈ l → m < Becoming.beyond l
+Becoming.beyond_not_mem : ∀ (l : List Nat), ¬Becoming.beyond l ∈ l
+@Becoming.mem_keep : ∀ {α : Type} {p : α → Prop} [inst : (a : α) → Decidable (p a)] {x : α} {as : List α},
+  x ∈ Becoming.keep p as ↔ x ∈ as ∧ p x
+@Becoming.keep_distinct : ∀ {α : Type} {p : α → Prop} [inst : (a : α) → Decidable (p a)] {as : List α},
+  Becoming.Distinct as → Becoming.Distinct (Becoming.keep p as)
+@Becoming.listed_of_ever : ∀ {α : Type} {p : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)]
+  {L : List α},
+  Becoming.Distinct L →
+    (∀ (t : Nat) (a : α), p a t → a ∈ L) → Becoming.Listed p fun t => Becoming.keep (fun a => p a t) L
+@Becoming.gives_nothing : ∀ {G T : Nat}, G = 0 → G + Becoming.sign T ≤ T
+@Becoming.World.Dependent.carried : ∀ {w : Becoming.World}, w.Dependent → w.Carried
+@Becoming.World.keep_lists : ∀ {w : Becoming.World} {t : Nat} [inst : (x : w.Relatum) → Decidable (w.web.active t x)]
+  {l : List w.Relatum},
+  Becoming.Distinct l →
+    (∀ (x : w.Relatum), w.web.active t x → x ∈ l) →
+      Becoming.Distinct (Becoming.keep (w.web.active t) l) ∧
+        ∀ (x : w.Relatum), w.web.active t x ↔ x ∈ Becoming.keep (w.web.active t) l
+@Becoming.World.Finite.counted : ∀ {w : Becoming.World} [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)],
+  w.Finite → w.Counted
+@Becoming.World.counted_of_ever : ∀ {w : Becoming.World} [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)]
+  {L : List w.Relatum}, Becoming.Distinct L → (∀ (t : Nat) (x : w.Relatum), w.web.active t x → x ∈ L) → w.Counted
+@Becoming.World.Finite.enclosed : ∀ {w : Becoming.World}, w.Finite → ∀ (t : Nat), w.flow.Enclosed t
+@Becoming.World.acting_across_on : ∀ {w : Becoming.World} {t : Nat} {cs : List w.Relatum},
+  w.flow.ClosedAt cs t →
+    w.flow.DissipatesOn cs t →
+      (∀ (f c : w.Relatum), f ∈ w.flow.present t → 0 < w.flow.take t f c → w.web.active t f) →
+        ∀ {f c : w.Relatum}, f ∈ w.flow.present t → 0 < w.flow.give t f c → w.web.active t f
+@Becoming.World.acting_across : ∀ {w : Becoming.World},
+  w.Taking →
+    w.Dissipative →
+      ∀ {t : Nat},
+        w.flow.Enclosed t → ∀ {f c : w.Relatum}, f ∈ w.flow.present t → 0 < w.flow.give t f c → w.web.active t f
+@Becoming.World.acting_of_enclosed : ∀ {w : Becoming.World},
+  w.Taking → w.Dissipative → (∀ (t : Nat), w.flow.Enclosed t) → w.Acting
+@Becoming.World.Finite.acting : ∀ {w : Becoming.World}, w.Finite → w.Taking → w.Dissipative → w.Acting
+Becoming.World.follows : (∀ (w : Becoming.World), w.Dependent → w.Carried) ∧
+  (∀ (w : Becoming.World), w.Embodied → w.ArisingEmbodied) ∧
+    (∀ (w : Becoming.World) [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)], w.Finite → w.Counted) ∧
+      (∀ (w : Becoming.World), (∀ (t : Nat), w.flow.Enclosed t) → w.Taking → w.Dissipative → w.Acting) ∧
+        ∀ (w : Becoming.World), w.Finite → ∀ (t : Nat), w.flow.Enclosed t
+@Becoming.World.Premised.of : ∀ {w : Becoming.World},
+  w.Dependent → w.Balanced → w.Acting → w.Taking → w.Dissipative → w.Embodied → w.Counted → w.Transmitting → w.Premised
+@Becoming.World.MeetsAllBut.of : ∀ {w : Becoming.World} {P : Becoming.World → Prop},
+  (P ≠ Becoming.World.Dependent → w.Dependent) →
+    (P ≠ Becoming.World.Balanced → w.Balanced) →
+      (P ≠ Becoming.World.Acting → w.Acting) →
+        (P ≠ Becoming.World.Taking → w.Taking) →
+          (P ≠ Becoming.World.Dissipative → w.Dissipative) →
+            (P ≠ Becoming.World.Embodied → w.Embodied) →
+              (P ≠ Becoming.World.Counted → w.Counted) →
+                (P ≠ Becoming.World.Transmitting → w.Transmitting) → ¬P w → w.MeetsAllBut P
+@Becoming.World.still_vacuous : ∀ {R : Type} (W : Becoming.Web R R),
+  (Becoming.World.of R Becoming.Flow.still W).Acting ∧
+    (Becoming.World.of R Becoming.Flow.still W).Taking ∧
+      (Becoming.World.of R Becoming.Flow.still W).Dissipative ∧ (Becoming.World.of R Becoming.Flow.still W).Transmitting
+@Becoming.World.steady_transmitting : ∀ {w : Becoming.World},
+  (∀ (t : Nat) (x : w.Relatum), w.web.level (t + 1) x = w.web.level t x) → w.Transmitting
+Becoming.World.strained_finite : Becoming.World.strained.Finite
+Becoming.World.strained_but : Becoming.World.strained.MeetsAllBut Becoming.World.Dependent
+Becoming.World.unbalanced_but : Becoming.World.unbalanced.MeetsAllBut Becoming.World.Balanced
+Becoming.World.draining_but : Becoming.World.draining.MeetsAllBut Becoming.World.Balanced ∧
+  ∀ (t : Nat),
+    Becoming.World.Leaking.flow.ClosedAt [true, false] t ∧
+      0 < Becoming.total [true, false] (Becoming.World.Leaking.flow.take t (Becoming.Shuttle.holder t))
+Becoming.World.Scatter.outside : ∀ (cs : List Becoming.World.Scatter.Relatum),
+  ¬Becoming.World.Scatter.Relatum.ground (Becoming.beyond (List.map Becoming.World.Scatter.index cs)) ∈ cs
+Becoming.World.scatter_but : Becoming.World.scatter.MeetsAllBut Becoming.World.Acting
+Becoming.World.morsel_finite : Becoming.World.morsel.Finite
+Becoming.World.morsel_but : Becoming.World.morsel.MeetsAllBut Becoming.World.Taking
+Becoming.World.lossless_finite : Becoming.World.lossless.Finite
+Becoming.World.lossless_but : Becoming.World.lossless.MeetsAllBut Becoming.World.Dissipative
+Becoming.World.latent_finite : Becoming.World.latent.Finite
+Becoming.World.latent_but : Becoming.World.latent.MeetsAllBut Becoming.World.Embodied
+Becoming.World.multitude_but : Becoming.World.multitude.MeetsAllBut Becoming.World.Counted
+Becoming.World.Novel.fuel_mem_or : ∀ (cs : List Becoming.World.Novel.Relatum),
+  Becoming.World.Novel.Relatum.fuel ∈ cs ∨ ¬Becoming.World.Novel.Relatum.fuel ∈ cs
+Becoming.World.novel_finite : Becoming.World.novel.Finite
+Becoming.World.novel_dissipative : Becoming.World.novel.Dissipative
+Becoming.World.novel_but : Becoming.World.novel.MeetsAllBut Becoming.World.Transmitting
+Becoming.World.independent : Becoming.World.strained.MeetsAllBut Becoming.World.Dependent ∧
+  Becoming.World.unbalanced.MeetsAllBut Becoming.World.Balanced ∧
+    Becoming.World.scatter.MeetsAllBut Becoming.World.Acting ∧
+      Becoming.World.morsel.MeetsAllBut Becoming.World.Taking ∧
+        Becoming.World.lossless.MeetsAllBut Becoming.World.Dissipative ∧
+          Becoming.World.latent.MeetsAllBut Becoming.World.Embodied ∧
+            Becoming.World.multitude.MeetsAllBut Becoming.World.Counted ∧
+              Becoming.World.novel.MeetsAllBut Becoming.World.Transmitting
+Becoming.World.none_follows : ∀ (P : Becoming.World → Prop),
+  P ∈ Becoming.World.premises →
+    ¬∀ (w : Becoming.World), (∀ (Q : Becoming.World → Prop), Q ∈ Becoming.World.premises → Q ≠ P → Q w) → P w
+Becoming.World.mutualism_premised : Becoming.World.mutualism.Premised
+@Becoming.World.premised_rests_unrefuted : ∀ {w : Becoming.World}, w.Finite → w.Premised → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.Premised.meets : ∀ {w : Becoming.World}, w.Premised → ∀ (S : Becoming.World.Premise → Bool), w.Meets S
+@Becoming.World.Finite.not_binds : ∀ {w : Becoming.World}, w.Finite → ¬w.Binds
+@Becoming.World.Hatch.taking_part : ∀ {t : Nat} {g : Becoming.World.Hatch.Relatum},
+  g ∈ Becoming.World.Hatch.flow.present t → t = 0 ∧ g = Becoming.World.Hatch.Relatum.parent
+Becoming.World.Hatch.kin_distinct : Becoming.Distinct Becoming.World.Hatch.kin
+Becoming.World.Hatch.closed : ∀ (t : Nat), Becoming.World.Hatch.flow.ClosedAt Becoming.World.Hatch.kin t
+Becoming.World.Hatch.outside : ∀ (cs : List Becoming.World.Hatch.Relatum),
+  ¬Becoming.World.Hatch.Relatum.ground (Becoming.beyond (List.map Becoming.World.Hatch.index cs)) ∈ cs
+Becoming.World.hatch_balanced : Becoming.World.hatch.Balanced
+Becoming.World.hatch_dissipative : Becoming.World.hatch.Dissipative
+Becoming.World.hatch_counted : Becoming.World.hatch.Counted
+Becoming.World.hatch_binds : Becoming.World.hatch.Premised ∧ Becoming.World.hatch.Binds
+@Becoming.World.FiniteHatch.taking_part : ∀ {t : Nat} {g : Becoming.World.FiniteHatch.Relatum},
+  g ∈ Becoming.World.FiniteHatch.flow.present t → t = 0 ∧ g = Becoming.World.FiniteHatch.Relatum.parent
+Becoming.World.FiniteHatch.kin_distinct : Becoming.Distinct Becoming.World.FiniteHatch.kin
+Becoming.World.FiniteHatch.closed : ∀ (t : Nat),
+  Becoming.World.FiniteHatch.flow.ClosedAt Becoming.World.FiniteHatch.kin t
+Becoming.World.finiteHatch_finite : Becoming.World.finiteHatch.Finite
+Becoming.World.finiteHatch_balanced : Becoming.World.finiteHatch.Balanced
+Becoming.World.finiteHatch_dissipative : Becoming.World.finiteHatch.Dissipative
+Becoming.World.finiteHatch_premised : Becoming.World.finiteHatch.Premised
+Becoming.World.finiteHatch_binds_but_census : Becoming.World.finiteHatch.Finite ∧
+  Becoming.World.finiteHatch.Premised ∧
+    ¬Becoming.World.finiteHatch.Binds ∧
+      ∀ (p : Becoming.World.Premise), p ≠ Becoming.World.Premise.counted → p.Binds Becoming.World.finiteHatch
+Becoming.World.hatch_ever : ∀ (t : Nat) (x : Becoming.World.hatch.Relatum),
+  Becoming.World.hatch.web.active t x → x ∈ Becoming.World.Hatch.kin
+Becoming.World.hatch_idle : ∀ (t n : Nat),
+  Becoming.World.hatch.web.level t (Becoming.World.Hatch.Relatum.ground n) = 0 ∧
+    ¬Becoming.World.hatch.web.active t (Becoming.World.Hatch.Relatum.ground n) ∧
+      ¬Becoming.World.Hatch.Relatum.ground n ∈ Becoming.World.hatch.flow.present t ∧
+        (∀ (f : Becoming.World.hatch.Relatum),
+            Becoming.World.hatch.flow.take t f (Becoming.World.Hatch.Relatum.ground n) = 0 ∧
+              Becoming.World.hatch.flow.give t f (Becoming.World.Hatch.Relatum.ground n) = 0) ∧
+          (∀ (f : Becoming.World.hatch.Relatum),
+              ¬Becoming.World.hatch.web.requires t f (Becoming.World.Hatch.Relatum.ground n)) ∧
+            ∀ (f : Becoming.World.hatch.Relatum),
+              ¬Becoming.World.hatch.web.draws t f (Becoming.World.Hatch.Relatum.ground n)

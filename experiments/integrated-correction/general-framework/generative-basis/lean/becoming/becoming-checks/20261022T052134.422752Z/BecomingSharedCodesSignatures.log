@@ -1,0 +1,588 @@
+@Becoming.Law.KeepsRelation.run : ∀ {S : Type u_1} {T : S → S} {rel : S → S → Prop},
+  Becoming.Law.KeepsRelation T rel →
+    ∀ {x y : S}, rel x y → ∀ (n : Nat), rel ((Becoming.Law.run T x).state n) ((Becoming.Law.run T y).state n)
+@Becoming.Law.Commutes.keepsRelation : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ → Becoming.Law.KeepsRelation T fun x y => y = σ x
+@Becoming.SharedCodes.bool_false_ne_true : ∀ {b : Bool}, b = false → b ≠ true
+@Becoming.SharedCodes.hearBy_other : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {e : Becoming.SharedCodes.Hearing I M} {X : I → M → F}
+  {i : I} {m : M}, i ≠ e.hearer ∨ m ≠ e.sense → Becoming.SharedCodes.hearBy adopt e X i m = X i m
+@Becoming.SharedCodes.hearBy_taken : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {e : Becoming.SharedCodes.Hearing I M}
+  {X : I → M → F},
+  adopt (X e.hearer) (X e.speaker) e.sense = true →
+    Becoming.SharedCodes.hearBy adopt e X e.hearer e.sense = X e.speaker e.sense
+@Becoming.SharedCodes.hearBy_refused : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {e : Becoming.SharedCodes.Hearing I M}
+  {X : I → M → F},
+  adopt (X e.hearer) (X e.speaker) e.sense = false →
+    ∀ (i : I) (m : M), Becoming.SharedCodes.hearBy adopt e X i m = X i m
+@Becoming.SharedCodes.hearBy_held : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} (e : Becoming.SharedCodes.Hearing I M) (X : I → M → F)
+  (i : I) (m : M),
+  Becoming.SharedCodes.hearBy adopt e X i m = X e.speaker m ∨ Becoming.SharedCodes.hearBy adopt e X i m = X i m
+@Becoming.SharedCodes.changes_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {e : Becoming.SharedCodes.Hearing I M} {X : I → M → F}
+  {i : I} {m : M},
+  Becoming.SharedCodes.hearBy adopt e X i m ≠ X i m ↔
+    i = e.hearer ∧ m = e.sense ∧ adopt (X e.hearer) (X e.speaker) e.sense = true ∧ X e.speaker m ≠ X i m
+@Becoming.SharedCodes.kept_at : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop} {X : I → M → F} {m : M}
+  {e : Becoming.SharedCodes.Hearing I M},
+  Becoming.SharedCodes.AgreeAt G X m →
+    Becoming.SharedCodes.Closed G m e → ∀ {i : I}, G i → Becoming.SharedCodes.hearBy adopt e X i m = X i m
+@Becoming.SharedCodes.agreement_kept : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop} {X : I → M → F} {m : M}
+  {e : Becoming.SharedCodes.Hearing I M},
+  Becoming.SharedCodes.AgreeAt G X m →
+    Becoming.SharedCodes.Closed G m e → Becoming.SharedCodes.AgreeAt G (Becoming.SharedCodes.hearBy adopt e X) m
+@Becoming.SharedCodes.kept_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop} {X : I → M → F} {m : M}
+  {e : Becoming.SharedCodes.Hearing I M},
+  Becoming.SharedCodes.AgreeAt G X m →
+    ∀ {j : I},
+      G j →
+        j ≠ e.hearer →
+          (Becoming.SharedCodes.AgreeAt G (Becoming.SharedCodes.hearBy adopt e X) m ↔
+            G e.hearer → e.sense = m → adopt (X e.hearer) (X e.speaker) e.sense = true → X e.speaker m = X e.hearer m)
+@Becoming.SharedCodes.runBy_held : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} (es : List (Becoming.SharedCodes.Hearing I M))
+  (X : I → M → F) (i : I) (m : M), ∃ j, Becoming.SharedCodes.runBy adopt es X i m = X j m
+@Becoming.SharedCodes.back_held : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I] [inst_1 : DecidableEq M]
+  (m : M) (e : Becoming.SharedCodes.Hearing I M) (j : I),
+  Becoming.SharedCodes.back m e j = e.speaker ∨ Becoming.SharedCodes.back m e j = j
+@Becoming.SharedCodes.hear_back : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (e : Becoming.SharedCodes.Hearing I M) (X : I → M → F) (j : I) (m : M),
+  Becoming.SharedCodes.hear e X j m = X (Becoming.SharedCodes.back m e j) m
+@Becoming.SharedCodes.run_origin : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (es : List (Becoming.SharedCodes.Hearing I M)) (X : I → M → F) (i : I) (m : M),
+  Becoming.SharedCodes.runBy Becoming.SharedCodes.always es X i m = X (Becoming.SharedCodes.origin m es i) m
+@Becoming.SharedCodes.agrees_every_start_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {a b : F},
+  a ≠ b →
+    ∀ (es : List (Becoming.SharedCodes.Hearing I M)) (m : M),
+      (∀ (X : I → M → F) (i j : I),
+          Becoming.SharedCodes.runBy Becoming.SharedCodes.always es X i m =
+            Becoming.SharedCodes.runBy Becoming.SharedCodes.always es X j m) ↔
+        ∀ (i j : I), Becoming.SharedCodes.origin m es i = Becoming.SharedCodes.origin m es j
+@Becoming.SharedCodes.back_to : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I] [inst_1 : DecidableEq M]
+  (o k : I) (m : M), Becoming.SharedCodes.back m { hearer := k, speaker := o, sense := m } k = o
+@Becoming.SharedCodes.back_from : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I] [inst_1 : DecidableEq M]
+  (o k : I) (m : M), Becoming.SharedCodes.back m { hearer := k, speaker := o, sense := m } o = o
+@Becoming.SharedCodes.broadcast_holds : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (o : I) (m : M) (l : List I) (Y : I → M → F) (Q : I → Prop),
+  (∀ (k : I), Q k → Y k m = Y o m) →
+    Becoming.SharedCodes.runBy Becoming.SharedCodes.always (Becoming.SharedCodes.broadcast o m l) Y o m = Y o m ∧
+      ∀ (k : I),
+        Q k ∨ k ∈ l →
+          Becoming.SharedCodes.runBy Becoming.SharedCodes.always (Becoming.SharedCodes.broadcast o m l) Y k m = Y o m
+@Becoming.SharedCodes.broadcast_reaches : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {all : List I},
+  (∀ (i : I), i ∈ all) →
+    ∀ (o : I) (m : M) (X : I → M → F) (i : I),
+      Becoming.SharedCodes.runBy Becoming.SharedCodes.always (Becoming.SharedCodes.broadcast o m all) X i m = X o m
+@Becoming.SharedCodes.shared_iff_in_use : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {all : List I},
+  (∀ (i : I), i ∈ all) →
+    ∀ (i₀ : I) (X : I → M → F) (m : M) (x : F),
+      (∃ es, ∀ (i : I), Becoming.SharedCodes.runBy Becoming.SharedCodes.always es X i m = x) ↔ ∃ o, X o m = x
+@Becoming.SharedCodes.step_at : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) (n : Nat) (i : I) (m : M),
+  r.state (n + 1) i m = Becoming.SharedCodes.hearBy adopt (r.act n) (r.state n) i m
+@Becoming.SharedCodes.step_from : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {X : I → M → F}
+  {e : Becoming.SharedCodes.Hearing I M},
+  r.state n = X → r.act n = e → ∀ (i : I) (m : M), r.state (n + 1) i m = Becoming.SharedCodes.hearBy adopt e X i m
+@Becoming.SharedCodes.window_runBy : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) (k n : Nat) (i : I) (m : M),
+  r.state (n + k) i m = Becoming.SharedCodes.runBy adopt (r.window n k) (r.state n) i m
+@Becoming.SharedCodes.run_kept : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M},
+  Becoming.SharedCodes.AgreeAt G (r.state n) m →
+    (∀ (k : Nat), Becoming.SharedCodes.Closed G m (r.act (n + k))) →
+      ∀ (k : Nat) (i : I), G i → r.state (n + k) i m = r.state n i m
+@Becoming.SharedCodes.run_agreement_kept : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M},
+  Becoming.SharedCodes.AgreeAt G (r.state n) m →
+    (∀ (k : Nat), Becoming.SharedCodes.Closed G m (r.act (n + k))) →
+      ∀ (k : Nat), Becoming.SharedCodes.AgreeAt G (r.state (n + k)) m
+@Becoming.SharedCodes.run_changes_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) (n : Nat) (i : I) (m : M),
+  r.state (n + 1) i m ≠ r.state n i m ↔
+    i = (r.act n).hearer ∧
+      m = (r.act n).sense ∧
+        adopt (r.state n (r.act n).hearer) (r.state n (r.act n).speaker) (r.act n).sense = true ∧
+          r.state n (r.act n).speaker m ≠ r.state n i m
+@Becoming.SharedCodes.run_kept_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {G : I → Prop}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M},
+  Becoming.SharedCodes.AgreeAt G (r.state n) m →
+    ∀ {j : I},
+      G j →
+        j ≠ (r.act n).hearer →
+          (Becoming.SharedCodes.AgreeAt G (r.state (n + 1)) m ↔
+            G (r.act n).hearer →
+              (r.act n).sense = m →
+                adopt (r.state n (r.act n).hearer) (r.state n (r.act n).speaker) (r.act n).sense = true →
+                  r.state n (r.act n).speaker m = r.state n (r.act n).hearer m)
+@Becoming.SharedCodes.all_agree_rest : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M},
+  (∀ (i j : I), r.state n i m = r.state n j m) → ∀ (k : Nat) (i : I), r.state (n + k) i m = r.state n i m
+@Becoming.SharedCodes.pair_kept : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M} {f g : I},
+  r.state n f m = r.state n g m →
+    (∀ (k : Nat),
+        (r.act (n + k)).sense = m →
+          (r.act (n + k)).hearer = f ∨ (r.act (n + k)).hearer = g →
+            (r.act (n + k)).speaker = f ∨ (r.act (n + k)).speaker = g) →
+      ∀ (k : Nat), r.state (n + k) f m = r.state (n + k) g m
+@Becoming.SharedCodes.run_held : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) (n k : Nat) (i : I) (m : M),
+  ∃ j, r.state (n + k) i m = r.state n j m
+@Becoming.SharedCodes.run_origin_window : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)) (n k : Nat)
+  (i : I) (m : M), r.state (n + k) i m = r.state n (Becoming.SharedCodes.origin m (r.window n k) i) m
+@Becoming.SharedCodes.hearings_congr : ∀ {I : Type u_1} {M : Type u_2}
+  {acts acts' : Nat → Becoming.SharedCodes.Hearing I M},
+  (∀ (t : Nat), acts t = acts' t) →
+    ∀ (n k : Nat), Becoming.SharedCodes.hearings acts n k = Becoming.SharedCodes.hearings acts' n k
+@Becoming.SharedCodes.hearings_shift : ∀ {I : Type u_1} {M : Type u_2} (acts : Nat → Becoming.SharedCodes.Hearing I M)
+  (n k : Nat), Becoming.SharedCodes.hearings acts (n + 1) k = Becoming.SharedCodes.hearings (fun t => acts (t + 1)) n k
+@Becoming.SharedCodes.window_hearings : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  {r : Becoming.Run (Becoming.SharedCodes.process adopt)} {acts : Nat → Becoming.SharedCodes.Hearing I M},
+  (∀ (t : Nat), r.act t = acts t) → ∀ (k n : Nat), r.window n k = Becoming.SharedCodes.hearings acts n k
+@Becoming.SharedCodes.state_hearings : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {acts : Nat → Becoming.SharedCodes.Hearing I M},
+  (∀ (t : Nat), r.act t = acts t) →
+    ∀ (k : Nat) (i : I) (m : M),
+      r.state k i m = Becoming.SharedCodes.runBy adopt (Becoming.SharedCodes.hearings acts 0 k) (r.state 0) i m
+@Becoming.SharedCodes.run_agrees_every_start_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {a b : F},
+  a ≠ b →
+    ∀ (acts : Nat → Becoming.SharedCodes.Hearing I M) (k : Nat) (m : M),
+      (∀ (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)),
+          (∀ (t : Nat), r.act t = acts t) → ∀ (i j : I), r.state k i m = r.state k j m) ↔
+        ∀ (i j : I),
+          Becoming.SharedCodes.origin m (Becoming.SharedCodes.hearings acts 0 k) i =
+            Becoming.SharedCodes.origin m (Becoming.SharedCodes.hearings acts 0 k) j
+@Becoming.SharedCodes.hearings_listed : ∀ {I : Type u_1} {M : Type u_2} (fill : Becoming.SharedCodes.Hearing I M)
+  (es : List (Becoming.SharedCodes.Hearing I M)),
+  Becoming.SharedCodes.hearings (Becoming.SharedCodes.listed fill es) 0 es.length = es
+@Becoming.SharedCodes.run_shared_iff_in_use : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {all : List I},
+  (∀ (i : I), i ∈ all) →
+    ∀ (i₀ : I) (X : I → M → F) (m : M) (x : F), (∃ r k, r.state 0 = X ∧ ∀ (i : I), r.state k i m = x) ↔ ∃ o, X o m = x
+@Becoming.SharedCodes.follow_state : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} (p : I → I) (X : I → M → F)
+  (n : Nat) (i : I), (Becoming.Law.run (Becoming.SharedCodes.follow p) X).state n i = X (Becoming.Law.orbit p i n)
+@Becoming.SharedCodes.follow_agrees_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [DecidableEq I] [DecidableEq M]
+  {a b : F},
+  a ≠ b →
+    ∀ (p : I → I) (n : Nat) (m : M),
+      (∀ (X : I → M → F) (i j : I),
+          (Becoming.Law.run (Becoming.SharedCodes.follow p) X).state n i m =
+            (Becoming.Law.run (Becoming.SharedCodes.follow p) X).state n j m) ↔
+        ∀ (i j : I), Becoming.Law.orbit p i n = Becoming.Law.orbit p j n
+@Becoming.SharedCodes.self_reads_iff : ∀ {M : Type u_1} {F : Type u_2} (c : M → F),
+  (∀ (m n : M), Becoming.SharedCodes.ReadsAs c (c m) n ↔ n = m) ↔ Becoming.SharedCodes.TellsApart c
+@Becoming.SharedCodes.reads_iff : ∀ {M : Type u_1} {F : Type u_2} {cf cg : M → F},
+  Becoming.SharedCodes.TellsApart cg →
+    ∀ (m : M), (∀ (n : M), Becoming.SharedCodes.ReadsAs cg (cf m) n ↔ n = m) ↔ cf m = cg m
+@Becoming.SharedCodes.reads_other : ∀ {M : Type u_1} {F : Type u_2} {cf cg : M → F},
+  Becoming.SharedCodes.TellsApart cg →
+    ∀ {m n : M},
+      n ≠ m → cg n = cf m → Becoming.SharedCodes.ReadsAs cg (cf m) n ∧ ¬Becoming.SharedCodes.ReadsAs cg (cf m) m
+@Becoming.SharedCodes.renamed_tells_apart_iff : ∀ {M : Type u_1} {F F' : Type u_2} {σ : F → F'},
+  (∀ (x y : F), σ x = σ y → x = y) →
+    ∀ (c : M → F), (Becoming.SharedCodes.TellsApart fun n => σ (c n)) ↔ Becoming.SharedCodes.TellsApart c
+@Becoming.SharedCodes.renamed_goAlike_iff : ∀ {S : Type u_1} {A : Type u_2} {K K' : Type u_3}
+  {P : Generative.Process S A} {π : S → K} {σ : K → K'},
+  (∀ (x y : K), σ x = σ y → x = y) → ((Becoming.GoAlike P fun s => σ (π s)) ↔ Becoming.GoAlike P π)
+@Becoming.SharedCodes.renamed_carries_iff : ∀ {S : Type u_1} {A : Type u_2} {K K' : Type u_3}
+  {P : Generative.Process S A} {π : S → K} {σ : K → K'},
+  (∀ (x y : K), σ x = σ y → x = y) →
+    ((∃ Q, Becoming.Determined Q ∧ Becoming.FactorsThrough P (fun s => σ (π s)) Q) ↔
+      ∃ Q, Becoming.Determined Q ∧ Becoming.FactorsThrough P π Q)
+@Becoming.SharedCodes.keeps_apart_iff : ∀ {M : Type u_2} {F : Type u_3} {I : Type u_1} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {e : Becoming.SharedCodes.Hearing I M} {X : I → M → F},
+  Becoming.SharedCodes.TellsApart (X e.hearer) →
+    (Becoming.SharedCodes.TellsApart (Becoming.SharedCodes.hear e X e.hearer) ↔
+      ∀ (n : M), n ≠ e.sense → X e.hearer n ≠ X e.speaker e.sense)
+@Becoming.SharedCodes.run_keeps_apart_iff : ∀ {M : Type u_2} {F : Type u_3} {I : Type u_1} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)) (n : Nat),
+  Becoming.SharedCodes.TellsApart (r.state n (r.act n).hearer) →
+    (Becoming.SharedCodes.TellsApart (r.state (n + 1) (r.act n).hearer) ↔
+      ∀ (m : M), m ≠ (r.act n).sense → r.state n (r.act n).hearer m ≠ r.state n (r.act n).speaker (r.act n).sense)
+@Becoming.SharedCodes.run_reads_kept : ∀ {M : Type u_2} {F : Type u_3} {I : Type u_1} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {m : M} {f g : I},
+  r.state n f m = r.state n g m →
+    (∀ (k : Nat),
+        (r.act (n + k)).sense = m →
+          (r.act (n + k)).hearer = f ∨ (r.act (n + k)).hearer = g →
+            (r.act (n + k)).speaker = f ∨ (r.act (n + k)).speaker = g) →
+      ∀ (k : Nat),
+        Becoming.SharedCodes.TellsApart (r.state (n + k) g) →
+          ∀ (n' : M), Becoming.SharedCodes.ReadsAs (r.state (n + k) g) (r.state (n + k) f m) n' ↔ n' = m
+@Becoming.SharedCodes.run_reads_iff : ∀ {M : Type u_2} {F : Type u_3} {I : Type u_1} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) (n : Nat) {f g : I},
+  Becoming.SharedCodes.TellsApart (r.state n g) →
+    ∀ (m : M),
+      ((∀ (n' : M), Becoming.SharedCodes.ReadsAs (r.state n g) (r.state n f m) n' ↔ n' = m) ↔
+          r.state n f m = r.state n g m) ∧
+        ∀ (n' : M),
+          n' ≠ m →
+            r.state n g n' = r.state n f m →
+              Becoming.SharedCodes.ReadsAs (r.state n g) (r.state n f m) n' ∧
+                ¬Becoming.SharedCodes.ReadsAs (r.state n g) (r.state n f m) m
+@Becoming.SharedCodes.keeps_both : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {T : (I → M → F) → I → M → F}
+  {π : I → I} {τ : M → F → F},
+  Becoming.SharedCodes.KeepsExchange T π →
+    Becoming.SharedCodes.KeepsRenaming T τ → Becoming.Law.KeepsRelation T (Becoming.SharedCodes.Relabels π τ)
+@Becoming.SharedCodes.agrees_only_fixed : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {T : (I → M → F) → I → M → F}
+  {π : I → I} {τ : M → F → F},
+  Becoming.Law.KeepsRelation T (Becoming.SharedCodes.Relabels π τ) →
+    ∀ {X : I → M → F},
+      Becoming.SharedCodes.Relabels π τ X X →
+        ∀ (n : Nat) (i : I) (m : M),
+          (Becoming.Law.run T X).state n i m = (Becoming.Law.run T X).state n (π i) m →
+            τ m ((Becoming.Law.run T X).state n i m) = (Becoming.Law.run T X).state n i m
+@Becoming.SharedCodes.never_agrees : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {T : (I → M → F) → I → M → F}
+  {π : I → I} {τ : M → F → F},
+  Becoming.Law.KeepsRelation T (Becoming.SharedCodes.Relabels π τ) →
+    ∀ {X : I → M → F},
+      Becoming.SharedCodes.Relabels π τ X X →
+        ∀ {m : M},
+          (∀ (x : F), τ m x ≠ x) →
+            ∀ (n : Nat) (i : I), (Becoming.Law.run T X).state n i m ≠ (Becoming.Law.run T X).state n (π i) m
+@Becoming.SharedCodes.never_agrees_of_both : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3}
+  {T : (I → M → F) → I → M → F} {π : I → I} {τ : M → F → F},
+  Becoming.SharedCodes.KeepsExchange T π →
+    Becoming.SharedCodes.KeepsRenaming T τ →
+      ∀ {X : I → M → F},
+        Becoming.SharedCodes.Relabels π τ X X →
+          ∀ {m : M},
+            (∀ (x : F), τ m x ≠ x) →
+              ∀ (n : Nat) (i : I), (Becoming.Law.run T X).state n i m ≠ (Becoming.Law.run T X).state n (π i) m
+@Becoming.SharedCodes.pair_agrees_only_fixed : ∀ {F : Type u_1} {T : F × F → F × F} {τ : F → F},
+  Becoming.Law.Commutes T (Becoming.SharedCodes.exchange τ) →
+    ∀ {p : F × F},
+      Becoming.SharedCodes.exchange τ p = p →
+        ∀ (n : Nat),
+          ((Becoming.Law.run T p).state n).fst = ((Becoming.Law.run T p).state n).snd →
+            τ ((Becoming.Law.run T p).state n).fst = ((Becoming.Law.run T p).state n).fst
+@Becoming.SharedCodes.pair_never_agrees : ∀ {T : Bool × Bool → Bool × Bool},
+  Becoming.Law.Commutes T (Becoming.SharedCodes.exchange not) →
+    ∀ {p : Bool × Bool},
+      Becoming.SharedCodes.exchange not p = p →
+        ∀ (n : Nat), ((Becoming.Law.run T p).state n).fst ≠ ((Becoming.Law.run T p).state n).snd
+@Becoming.SharedCodes.hearBy_keeps_renaming : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {τ : M → F → F}
+  [inst : DecidableEq I] [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool},
+  (∀ (X Y : I → M → F),
+      Becoming.SharedCodes.Relabels (fun i => i) τ X Y →
+        ∀ (e : Becoming.SharedCodes.Hearing I M),
+          adopt (Y e.hearer) (Y e.speaker) e.sense = adopt (X e.hearer) (X e.speaker) e.sense) →
+    ∀ (e : Becoming.SharedCodes.Hearing I M), Becoming.SharedCodes.KeepsRenaming (Becoming.SharedCodes.hearBy adopt e) τ
+@Becoming.SharedCodes.hear_keeps_renaming : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {τ : M → F → F}
+  [inst : DecidableEq I] [inst_1 : DecidableEq M] (e : Becoming.SharedCodes.Hearing I M),
+  Becoming.SharedCodes.KeepsRenaming (Becoming.SharedCodes.hear e) τ
+@Becoming.SharedCodes.run_renamed : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {τ : M → F → F}
+  [inst : DecidableEq I] [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool},
+  (∀ (X Y : I → M → F),
+      Becoming.SharedCodes.Relabels (fun i => i) τ X Y →
+        ∀ (e : Becoming.SharedCodes.Hearing I M),
+          adopt (Y e.hearer) (Y e.speaker) e.sense = adopt (X e.hearer) (X e.speaker) e.sense) →
+    ∀ (r r' : Becoming.Run (Becoming.SharedCodes.process adopt)),
+      (∀ (n : Nat), r'.act n = r.act n) →
+        Becoming.SharedCodes.Relabels (fun i => i) τ (r.state 0) (r'.state 0) →
+          ∀ (n : Nat), Becoming.SharedCodes.Relabels (fun i => i) τ (r.state n) (r'.state n)
+@Becoming.SharedCodes.reached_differ_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {τ : M → F → F}
+  [inst : DecidableEq I] [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool},
+  (∀ (X Y : I → M → F),
+      Becoming.SharedCodes.Relabels (fun i => i) τ X Y →
+        ∀ (e : Becoming.SharedCodes.Hearing I M),
+          adopt (Y e.hearer) (Y e.speaker) e.sense = adopt (X e.hearer) (X e.speaker) e.sense) →
+    ∀ (r r' : Becoming.Run (Becoming.SharedCodes.process adopt)),
+      (∀ (n : Nat), r'.act n = r.act n) →
+        Becoming.SharedCodes.Relabels (fun i => i) τ (r.state 0) (r'.state 0) →
+          ∀ (n : Nat) (i : I) (m : M), r'.state n i m = r.state n i m ↔ τ m (r.state n i m) = r.state n i m
+@Becoming.SharedCodes.run_renamed_tells_apart_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3}
+  [inst : DecidableEq I] [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool} {σ : F → F},
+  (∀ (x y : F), σ x = σ y → x = y) →
+    (∀ (X Y : I → M → F),
+        Becoming.SharedCodes.Relabels (fun i => i) (fun x => σ) X Y →
+          ∀ (e : Becoming.SharedCodes.Hearing I M),
+            adopt (Y e.hearer) (Y e.speaker) e.sense = adopt (X e.hearer) (X e.speaker) e.sense) →
+      ∀ (r r' : Becoming.Run (Becoming.SharedCodes.process adopt)),
+        (∀ (n : Nat), r'.act n = r.act n) →
+          Becoming.SharedCodes.Relabels (fun i => i) (fun x => σ) (r.state 0) (r'.state 0) →
+            ∀ (n : Nat) (i : I),
+              Becoming.SharedCodes.TellsApart (r'.state n i) ↔ Becoming.SharedCodes.TellsApart (r.state n i)
+@Becoming.SharedCodes.impose_agrees : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} (c : M → F) (X : I → M → F)
+  (i j : I) (m : M), Becoming.SharedCodes.impose c X i m = Becoming.SharedCodes.impose c X j m
+@Becoming.SharedCodes.impose_loses_iff : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {c : M → F} {X : I → M → F}
+  {i : I} {m m' : M},
+  Becoming.SharedCodes.Loses X (Becoming.SharedCodes.impose c X) i m m' ↔ X i m ≠ X i m' ∧ c m = c m'
+@Becoming.SharedCodes.source_loses_nothing : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {X : I → M → F} (q : I)
+  (m m' : M), ¬Becoming.SharedCodes.Loses X (Becoming.SharedCodes.impose (X q) X) q m m'
+@Becoming.SharedCodes.held_stays : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (adopt : (M → F) → (M → F) → M → Bool) {X : I → M → F} {m : M} {x : F},
+  (∀ (j : I), X j m = x) →
+    ∀ (es : List (Becoming.SharedCodes.Hearing I M)) (i : I), Becoming.SharedCodes.runBy adopt es X i m = x
+@Becoming.SharedCodes.run_imposed_stays : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {c : M → F},
+  (∀ (i : I) (m : M), r.state n i m = c m) → ∀ (k : Nat) (i : I) (m : M), r.state (n + k) i m = c m
+@Becoming.SharedCodes.outside_needed : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {G : I → Bool} {c : M → F} {m : M},
+  (∀ (i : I), G i = true → r.state n i m = c m) →
+    (∀ (j : I), G j = false → r.state n j m = c m) → ∀ (k : Nat) (i : I), r.state (n + k) i m = c m
+@Becoming.SharedCodes.outside_returns : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)) {n : Nat}
+  {c : M → F} {h j : I} {m m' : M},
+  r.act n = { hearer := h, speaker := j, sense := m } →
+    m' ≠ m → r.state n j m ≠ c m → r.state n h m' = c m' → c m = c m' → r.state (n + 1) h m ≠ r.state (n + 1) h m'
+@Becoming.SharedCodes.run_from_imposition : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {adopt : (M → F) → (M → F) → M → Bool}
+  (r : Becoming.Run (Becoming.SharedCodes.process adopt)) {n : Nat} {c : M → F},
+  (∀ (i : I) (m : M), r.state n i m = c m) →
+    ∀ (X : I → M → F) (k : Nat),
+      (∀ (i j : I) (m : M), r.state (n + k) i m = r.state (n + k) j m) ∧
+        (∀ (i j : I),
+            (∀ (m n' : M), Becoming.SharedCodes.ReadsAs (r.state (n + k) i) (r.state (n + k) j m) n' ↔ n' = m) ↔
+              Becoming.SharedCodes.TellsApart c) ∧
+          (∀ (i : I) (m m' : M), Becoming.SharedCodes.Loses X (r.state (n + k)) i m m' ↔ X i m ≠ X i m' ∧ c m = c m') ∧
+            ∀ (q : I), (∀ (m : M), c m = X q m) → ∀ (m m' : M), ¬Becoming.SharedCodes.Loses X (r.state (n + k)) q m m'
+@Becoming.SharedCodes.resolve_mem : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {rs : List R} {e : M}, Becoming.SharedCodes.resolve bears offers rep rs = some e → e ∈ rep
+@Becoming.SharedCodes.nextCohort_of_resolved : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} {rep : List M} {writes : M → R} {rs : List R} {e : M},
+  Becoming.SharedCodes.resolve bears offers rep rs = some e →
+    Becoming.SharedCodes.nextCohort bears offers rep writes rs = [writes e]
+@Becoming.SharedCodes.resolve_written : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} [DecidableEq M],
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    Becoming.Distinct rep → ∀ {e : M}, e ∈ rep → Becoming.SharedCodes.resolve bears offers rep [writes e] = some e
+@Becoming.SharedCodes.written_rests : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} [DecidableEq M],
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    Becoming.Distinct rep →
+      ∀ {rs : List R} {e : M},
+        Becoming.SharedCodes.resolve bears offers rep rs = some e →
+          ∀ (n : Nat),
+            (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1) = [writes e]
+@Becoming.SharedCodes.every_cohort_resolves : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} [DecidableEq M],
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    Becoming.Distinct rep →
+      ∀ {rs : List R} {e : M},
+        Becoming.SharedCodes.resolve bears offers rep rs = some e →
+          ∀ (n : Nat),
+            Becoming.SharedCodes.resolve bears offers rep
+                ((Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state n) =
+              some e
+@Becoming.SharedCodes.resolved_alike_merged : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} {rs rs' : List R} {e : M},
+  Becoming.SharedCodes.resolve bears offers rep rs = some e →
+    Becoming.SharedCodes.resolve bears offers rep rs' = some e →
+      ∀ (n : Nat),
+        (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1) =
+          (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs').state (n + 1)
+@Becoming.SharedCodes.no_reading_recovers : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} {K : Type u_3} (reading : List R → K) {rs rs' : List R} {e : M},
+  Becoming.SharedCodes.resolve bears offers rep rs = some e →
+    Becoming.SharedCodes.resolve bears offers rep rs' = some e →
+      ∀ (n : Nat),
+        reading ((Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1)) =
+          reading ((Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs').state (n + 1))
+@Becoming.SharedCodes.nextCohort_merges : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} {rs rs' : List R},
+  rs ≠ rs' →
+    ∀ {e : M},
+      Becoming.SharedCodes.resolve bears offers rep rs = some e →
+        Becoming.SharedCodes.resolve bears offers rep rs' = some e →
+          Becoming.Law.Merges (Becoming.SharedCodes.nextCohort bears offers rep writes) ∧
+            ∀ (n : Nat),
+              (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1) =
+                (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs').state (n + 1)
+@Becoming.SharedCodes.covered_rest : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} [DecidableEq M],
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    Becoming.Distinct rep →
+      ∀ {rs : List R} {t e : M},
+        t ∈ rep →
+          (∀ (r : R), r ∈ rs → bears r = true → offers r t = true) →
+            Becoming.SharedCodes.resolve bears offers rep rs = some e →
+              ∀ (n : Nat),
+                (Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1) =
+                  [writes t]
+@Becoming.SharedCodes.omitted_rest : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} [DecidableEq M],
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    Becoming.Distinct rep →
+      ∀ {rs : List R} {t e : M},
+        t ≠ e →
+          Becoming.SharedCodes.resolve bears offers rep rs = some e →
+            ∀ (n : Nat),
+              ¬t ∈
+                    Becoming.CrossSituational.candidates bears offers rep
+                      ((Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1)) ∧
+                e ∈
+                  Becoming.CrossSituational.candidates bears offers rep
+                    ((Becoming.Law.run (Becoming.SharedCodes.nextCohort bears offers rep writes) rs).state (n + 1))
+@Becoming.SharedCodes.kept_bars : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {rs more : List R} {e e' : M},
+  Becoming.SharedCodes.resolve bears offers rep rs = some e →
+    Becoming.SharedCodes.resolve bears offers rep (rs ++ more) = some e' → e' = e
+@Becoming.SharedCodes.adding_prefix : ∀ {R : Type u_1} (r : Becoming.Run Becoming.SharedCodes.adding) (n : Nat),
+  ∃ more, r.state n = r.state 0 ++ more
+@Becoming.SharedCodes.added_never_replaced : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} (r : Becoming.Run Becoming.SharedCodes.adding) {e : M},
+  Becoming.SharedCodes.resolve bears offers rep (r.state 0) = some e →
+    ∀ (n : Nat) {e' : M}, Becoming.SharedCodes.resolve bears offers rep (r.state n) = some e' → e' = e
+@Becoming.SharedCodes.keep_of_resolved : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R} {rs : List R} {e : M},
+  Becoming.SharedCodes.resolve bears offers rep rs = some e →
+    Becoming.SharedCodes.keep bears offers rep writes rs = rs ++ [writes e]
+@Becoming.SharedCodes.resolve_kept : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R},
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    ∀ {rs : List R} {e : M},
+      Becoming.SharedCodes.resolve bears offers rep rs = some e →
+        Becoming.SharedCodes.resolve bears offers rep (rs ++ [writes e]) = some e
+@Becoming.SharedCodes.kept_rests : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {writes : M → R},
+  Becoming.SharedCodes.WritesExactly bears offers writes →
+    ∀ {rs : List R} {e : M},
+      Becoming.SharedCodes.resolve bears offers rep rs = some e →
+        ∀ (n : Nat),
+          Becoming.SharedCodes.resolve bears offers rep
+                ((Becoming.Law.run (Becoming.SharedCodes.keep bears offers rep writes) rs).state n) =
+              some e ∧
+            ∃ more, (Becoming.Law.run (Becoming.SharedCodes.keep bears offers rep writes) rs).state n = rs ++ more
+Becoming.SharedCodes.TwoFormations.start_symmetric : Becoming.SharedCodes.Relabels not (fun x => not)
+  Becoming.SharedCodes.TwoFormations.start Becoming.SharedCodes.TwoFormations.start
+Becoming.SharedCodes.TwoFormations.order_decides : ∀
+  (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)),
+  r.state 0 = Becoming.SharedCodes.TwoFormations.start →
+    (r.act 0 = { hearer := false, speaker := true, sense := () } →
+        r.state 1 false () = true ∧ r.state 1 true () = true) ∧
+      (r.act 0 = { hearer := true, speaker := false, sense := () } →
+        r.state 1 false () = false ∧ r.state 1 true () = false)
+Becoming.SharedCodes.TwoFormations.crossing_keeps_exchange : Becoming.SharedCodes.KeepsExchange
+  Becoming.SharedCodes.TwoFormations.crossing not
+Becoming.SharedCodes.TwoFormations.crossing_keeps_renaming : ∀ (τ : Unit → Bool → Bool),
+  Becoming.SharedCodes.KeepsRenaming Becoming.SharedCodes.TwoFormations.crossing τ
+Becoming.SharedCodes.TwoFormations.crossing_never_agrees : ∀ (n : Nat) (i : Bool),
+  (Becoming.Law.run Becoming.SharedCodes.TwoFormations.crossing Becoming.SharedCodes.TwoFormations.start).state n i () ≠
+    (Becoming.Law.run Becoming.SharedCodes.TwoFormations.crossing Becoming.SharedCodes.TwoFormations.start).state n (!i)
+      ()
+Becoming.SharedCodes.TwoFormations.bor_comm : ∀ (a b : Bool), (a || b) = (b || a)
+Becoming.SharedCodes.TwoFormations.centre_keeps_renaming : ∀ (τ : Unit → Bool → Bool),
+  Becoming.SharedCodes.KeepsRenaming Becoming.SharedCodes.TwoFormations.centre τ
+Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange : Becoming.SharedCodes.KeepsExchange
+  Becoming.SharedCodes.TwoFormations.preferred not
+Becoming.SharedCodes.TwoFormations.ordered_keeps_renaming : ∀ (τ : Unit → Bool → Bool),
+  Becoming.SharedCodes.KeepsRenaming Becoming.SharedCodes.TwoFormations.ordered τ
+Becoming.SharedCodes.TwoFormations.three_agree : (Becoming.Law.run Becoming.SharedCodes.TwoFormations.centre
+          Becoming.SharedCodes.TwoFormations.start).state
+      1 false () =
+    (Becoming.Law.run Becoming.SharedCodes.TwoFormations.centre Becoming.SharedCodes.TwoFormations.start).state 1 true
+      () ∧
+  (Becoming.Law.run Becoming.SharedCodes.TwoFormations.preferred Becoming.SharedCodes.TwoFormations.start).state 1 false
+        () =
+      (Becoming.Law.run Becoming.SharedCodes.TwoFormations.preferred Becoming.SharedCodes.TwoFormations.start).state 1
+        true () ∧
+    (Becoming.Law.run Becoming.SharedCodes.TwoFormations.ordered Becoming.SharedCodes.TwoFormations.start).state 1 false
+        () =
+      (Becoming.Law.run Becoming.SharedCodes.TwoFormations.ordered Becoming.SharedCodes.TwoFormations.start).state 1
+        true ()
+Becoming.SharedCodes.TwoFormations.centre_breaks_exchange : ¬Becoming.SharedCodes.KeepsExchange
+    Becoming.SharedCodes.TwoFormations.centre not
+Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming : ¬Becoming.SharedCodes.KeepsRenaming
+    Becoming.SharedCodes.TwoFormations.preferred fun x => not
+Becoming.SharedCodes.TwoFormations.ordered_breaks_exchange : ¬Becoming.SharedCodes.KeepsExchange
+    Becoming.SharedCodes.TwoFormations.ordered not
+Becoming.SharedCodes.TwoFormations.homonym : ∀
+  (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)),
+  r.state 0 = Becoming.SharedCodes.TwoFormations.crossed →
+    r.act 0 = { hearer := false, speaker := true, sense := true } →
+      Becoming.SharedCodes.TellsApart (r.state 0 true) ∧
+        Becoming.SharedCodes.TellsApart (r.state 0 false) ∧
+          r.state 1 false true = r.state 1 true true ∧ ¬Becoming.SharedCodes.TellsApart (r.state 1 false)
+Becoming.SharedCodes.Path.joined : ∀ (i j : Becoming.SharedCodes.Path.Node),
+  i = j ∨
+    Becoming.SharedCodes.Path.couples i j ∨
+      Becoming.SharedCodes.Path.couples i Becoming.SharedCodes.Path.Node.c ∧
+        Becoming.SharedCodes.Path.couples Becoming.SharedCodes.Path.Node.c j
+Becoming.SharedCodes.Path.least_coupled : ∀ (i : Becoming.SharedCodes.Path.Node),
+  Becoming.SharedCodes.Path.least i = i ∨ Becoming.SharedCodes.Path.couples i (Becoming.SharedCodes.Path.least i)
+Becoming.SharedCodes.Path.least_least : ∀ (i j : Becoming.SharedCodes.Path.Node),
+  j = i ∨ Becoming.SharedCodes.Path.couples i j →
+    Becoming.SharedCodes.Path.rank (Becoming.SharedCodes.Path.least i) ≤ Becoming.SharedCodes.Path.rank j
+Becoming.SharedCodes.Path.stays_a : ∀ (n : Nat),
+  Becoming.Law.orbit Becoming.SharedCodes.Path.least Becoming.SharedCodes.Path.Node.a n =
+    Becoming.SharedCodes.Path.Node.a
+Becoming.SharedCodes.Path.stays_b : ∀ (n : Nat),
+  Becoming.Law.orbit Becoming.SharedCodes.Path.least Becoming.SharedCodes.Path.Node.b n =
+    Becoming.SharedCodes.Path.Node.b
+Becoming.SharedCodes.Path.never_agree : (∀ (i j : Becoming.SharedCodes.Path.Node),
+    i = j ∨
+      Becoming.SharedCodes.Path.couples i j ∨
+        Becoming.SharedCodes.Path.couples i Becoming.SharedCodes.Path.Node.c ∧
+          Becoming.SharedCodes.Path.couples Becoming.SharedCodes.Path.Node.c j) ∧
+  (∀ (i : Becoming.SharedCodes.Path.Node),
+      Becoming.SharedCodes.Path.least i = i ∨ Becoming.SharedCodes.Path.couples i (Becoming.SharedCodes.Path.least i)) ∧
+    (∀ (i j : Becoming.SharedCodes.Path.Node),
+        j = i ∨ Becoming.SharedCodes.Path.couples i j →
+          Becoming.SharedCodes.Path.rank (Becoming.SharedCodes.Path.least i) ≤ Becoming.SharedCodes.Path.rank j) ∧
+      ∀ (n : Nat),
+        (Becoming.Law.run (Becoming.SharedCodes.follow Becoming.SharedCodes.Path.least) fun i x => i).state n
+            Becoming.SharedCodes.Path.Node.a () ≠
+          (Becoming.Law.run (Becoming.SharedCodes.follow Becoming.SharedCodes.Path.least) fun i x => i).state n
+            Becoming.SharedCodes.Path.Node.b ()
+Becoming.SharedCodes.Gloss.exact : Becoming.SharedCodes.WritesExactly (fun x => true)
+  Becoming.SharedCodes.Gloss.offersOne id
+Becoming.SharedCodes.Gloss.zero_ne_one : 0 ≠ 1
+Becoming.SharedCodes.Gloss.distinct : Becoming.Distinct Becoming.SharedCodes.Gloss.rep
+Becoming.SharedCodes.Gloss.earlier_rests : ∀ (n : Nat),
+  (Becoming.Law.run
+          (Becoming.SharedCodes.nextCohort (fun x => true) Becoming.SharedCodes.Gloss.offersOne
+            Becoming.SharedCodes.Gloss.rep id)
+          [0]).state
+      (n + 1) =
+    [0]
+Becoming.SharedCodes.Gloss.taken_up_locks : ∀ (n : Nat),
+  (Becoming.Law.run
+            (Becoming.SharedCodes.nextCohort (fun x => true) Becoming.SharedCodes.Gloss.offersOne
+              Becoming.SharedCodes.Gloss.rep id)
+            [1]).state
+        (n + 1) =
+      [1] ∧
+    ¬0 ∈
+        Becoming.CrossSituational.candidates (fun x => true) Becoming.SharedCodes.Gloss.offersOne
+          Becoming.SharedCodes.Gloss.rep
+          ((Becoming.Law.run
+                (Becoming.SharedCodes.nextCohort (fun x => true) Becoming.SharedCodes.Gloss.offersOne
+                  Becoming.SharedCodes.Gloss.rep id)
+                [1]).state
+            (n + 1))
+Becoming.SharedCodes.Gloss.uptake_loses : Becoming.SharedCodes.resolve (fun x => true)
+      Becoming.SharedCodes.Gloss.offersOne Becoming.SharedCodes.Gloss.rep (Becoming.SharedCodes.Gloss.uptake.state 0) =
+    some 0 ∧
+  ∀ (n : Nat),
+    Becoming.SharedCodes.resolve (fun x => true) Becoming.SharedCodes.Gloss.offersOne Becoming.SharedCodes.Gloss.rep
+        (Becoming.SharedCodes.Gloss.uptake.state (n + 1)) =
+      none

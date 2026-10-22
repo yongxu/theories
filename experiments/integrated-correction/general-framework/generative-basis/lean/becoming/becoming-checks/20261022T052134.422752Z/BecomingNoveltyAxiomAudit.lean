@@ -1,0 +1,21 @@
+import Becoming.Novelty
+#print axioms Becoming.upto_or_fails
+#print axioms Becoming.Web.revisits_of_bounded
+#print axioms Becoming.Web.revisits_of_nonrising
+#print axioms Becoming.Web.returns_of_bounded
+#print axioms Becoming.Web.exceeds_of_new
+#print axioms Becoming.Web.unbounded_of_new
+#print axioms Becoming.Web.unbounded_of_never_revisits
+#print axioms Becoming.Web.unread_of_new_record
+#print axioms Becoming.Web.unread_of_unbounded
+#print axioms Becoming.Web.never_revisits_of_loses
+#print axioms Becoming.Web.changes_le_stock
+#print axioms Becoming.Web.rests_of_loses
+#print axioms Becoming.Web.counting
+#print axioms Becoming.Web.counting_new
+#print axioms Becoming.Web.counting_gains
+#print axioms Becoming.Flow.Balances.bounded
+#print axioms Becoming.Flow.bounded_counting_rest
+#print axioms Becoming.Flow.uncarried_of_bounded
+#print axioms Becoming.World.forgets_of_bounded
+#print axioms Becoming.first_law_cases

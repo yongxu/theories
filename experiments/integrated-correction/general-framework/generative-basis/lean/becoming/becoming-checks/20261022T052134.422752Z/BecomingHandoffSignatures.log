@@ -1,0 +1,159 @@
+@Becoming.Handoff.handed_off_progress : ∀ {S : Type} (states : Nat → S) (rank : Nat → S → Nat) (completed : Nat → Prop),
+  (∀ (n : Nat), ¬completed n → rank n (states (n + 1)) < rank n (states n)) →
+    (∀ (n : Nat), ¬completed n → rank (n + 1) (states (n + 1)) ≤ rank n (states (n + 1))) →
+      ∀ (n : Nat), ¬completed n → rank (n + 1) (states (n + 1)) < rank n (states n)
+@Becoming.Handoff.newContent_by_bound : ∀ {H S Q : Type} (admitted : H → Prop) (states : H → Nat → S)
+  (rank : H → Nat → S → Nat) (completed : H → Nat → Prop)
+  (decideEvent : (h : H) → (n : Nat) → Decidable (completed h n)) (appears : H → Nat → Q → Prop) (living : Q → Prop)
+  (before : H → Q → Prop) (bound : Nat),
+  (∀ (h : H), admitted h → rank h 0 (states h 0) ≤ bound) →
+    (∀ (h : H), admitted h → ∀ (n : Nat), ¬completed h n → rank h n (states h (n + 1)) < rank h n (states h n)) →
+      (∀ (h : H),
+          admitted h → ∀ (n : Nat), ¬completed h n → rank h (n + 1) (states h (n + 1)) ≤ rank h n (states h (n + 1))) →
+        (∀ (h : H), admitted h → ∀ (n : Nat), completed h n → ∃ q, living q ∧ appears h n q ∧ ¬before h q) →
+          ∀ (h : H),
+            admitted h → ∃ q, living q ∧ (Becoming.Handoff.boundedFrame appears bound).realized h q ∧ ¬before h q
+@Becoming.Handoff.securesNewContent_by_bound : ∀ {H Q : Type} (admitted : H → Prop) (appears : H → Nat → Q → Prop)
+  (living : Q → Prop) (before : H → Q → Prop) (bound : Nat) (relevance : H → Q → Prop),
+  Becoming.LivingSignificance (Becoming.Handoff.boundedFrame appears bound) living relevance →
+    (∀ (h : H), admitted h → ∃ q, living q ∧ (Becoming.Handoff.boundedFrame appears bound).realized h q ∧ ¬before h q) →
+      ∀ (h : H), admitted h → ∃ q, relevance h q ∧ ¬before h q
+@Becoming.Handoff.securesNewContent_by_bound_of_unrestricted : ∀ {H Q F Pos : Type} (admitted : H → Prop)
+  (appears : H → Nat → Q → Prop) (living : Q → Prop) (before : H → Q → Prop) (bound : Nat) {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (h : H),
+          admitted h → ∃ q, living q ∧ (Becoming.Handoff.boundedFrame appears bound).realized h q ∧ ¬before h q) →
+        ∀ (h : H),
+          admitted h →
+            ∃ q, (Becoming.Handoff.boundedFrame appears bound).relevance living sig formation step h q ∧ ¬before h q
+@Becoming.Handoff.revised_newContent_by_bound_of_unrestricted : ∀ {H S Q F Pos : Type} (admitted : H → Prop)
+  (states : H → Nat → S) (rank : H → Nat → S → Nat) (completed : H → Nat → Prop)
+  (decideEvent : (h : H) → (n : Nat) → Decidable (completed h n)) (appears : H → Nat → Q → Prop) (living : Q → Prop)
+  (before : H → Q → Prop) (bound : Nat),
+  (∀ (h : H), admitted h → rank h 0 (states h 0) ≤ bound) →
+    (∀ (h : H), admitted h → ∀ (n : Nat), ¬completed h n → rank h n (states h (n + 1)) < rank h n (states h n)) →
+      (∀ (h : H),
+          admitted h → ∀ (n : Nat), ¬completed h n → rank h (n + 1) (states h (n + 1)) ≤ rank h n (states h (n + 1))) →
+        (∀ (h : H), admitted h → ∀ (n : Nat), completed h n → ∃ q, living q ∧ appears h n q ∧ ¬before h q) →
+          ∀ {sig : Pos → Nat → F → Prop},
+            Becoming.Unrestricted sig →
+              ∀ (formation : Q → F) (step : Q → Nat) (h : H),
+                admitted h →
+                  ∃ q,
+                    (Becoming.Handoff.boundedFrame appears bound).relevance living sig formation step h q ∧ ¬before h q
+@Becoming.Handoff.newContent_by_bound_on_runs : ∀ {S A H Q F Pos : Type} {P : Generative.Process S A}
+  (r : H → Becoming.Run P) (admitted : H → Prop) (rank : H → Nat → S → Nat) (completed : H → Nat → Prop)
+  (decideEvent : (h : H) → (n : Nat) → Decidable (completed h n)) (appears : H → Nat → Q → Prop) (living : Q → Prop)
+  (before : H → Q → Prop) (bound : Nat),
+  (∀ (h : H), admitted h → rank h 0 ((r h).state 0) ≤ bound) →
+    (∀ (h : H), admitted h → ∀ (n : Nat), ¬completed h n → rank h n ((r h).state (n + 1)) < rank h n ((r h).state n)) →
+      (∀ (h : H),
+          admitted h →
+            ∀ (n : Nat), ¬completed h n → rank h (n + 1) ((r h).state (n + 1)) ≤ rank h n ((r h).state (n + 1))) →
+        (∀ (h : H), admitted h → ∀ (n : Nat), completed h n → ∃ q, living q ∧ appears h n q ∧ ¬before h q) →
+          ∀ {sig : Pos → Nat → F → Prop},
+            Becoming.Unrestricted sig →
+              ∀ (formation : Q → F) (step : Q → Nat) (h : H),
+                admitted h →
+                  ∃ q,
+                    (Becoming.Handoff.boundedFrame appears bound).relevance living sig formation step h q ∧ ¬before h q
+@Becoming.Handoff.Run.novel_by_handoff : ∀ {S A Q : Type} (M : Becoming.Frame S A Q) (r : Becoming.Run M.P)
+  (living : Q → Prop) (before : S → Q → Prop) (rank : Nat → S → Nat) (completed : Nat → Prop)
+  (decision : (n : Nat) → Decidable (completed n)) (bound : Nat),
+  rank 0 (r.state 0) ≤ bound →
+    (∀ (n : Nat), ¬completed n → rank n (r.state (n + 1)) < rank n (r.state n)) →
+      (∀ (n : Nat), ¬completed n → rank (n + 1) (r.state (n + 1)) ≤ rank n (r.state (n + 1))) →
+        (∀ (n : Nat), completed n → Becoming.Novel M living before (r.state (n + 1))) →
+          ∃ n, n ≤ bound ∧ Becoming.Novel M living before (r.state (n + 1))
+@Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted : ∀ {S A Q F Pos : Type} (M : Becoming.Frame S A Q)
+  (r : Becoming.Run M.P) (living : Q → Prop) (before : S → Q → Prop) (rank : Nat → S → Nat) (completed : Nat → Prop)
+  (decision : (n : Nat) → Decidable (completed n)) (bound : Nat),
+  rank 0 (r.state 0) ≤ bound →
+    (∀ (n : Nat), ¬completed n → rank n (r.state (n + 1)) < rank n (r.state n)) →
+      (∀ (n : Nat), ¬completed n → rank (n + 1) (r.state (n + 1)) ≤ rank n (r.state (n + 1))) →
+        (∀ (n : Nat), completed n → Becoming.Novel M living before (r.state (n + 1))) →
+          ∀ {sig : Pos → Nat → F → Prop},
+            Becoming.Unrestricted sig →
+              ∀ (formation : Q → F) (step : Q → Nat),
+                ∃ n,
+                  n ≤ bound ∧
+                    ∃ q, M.relevance living sig formation step (r.state (n + 1)) q ∧ ¬before (r.state (n + 1)) q
+Becoming.Handoff.each_fixed_rule_finishes : ∀ (p : Becoming.Handoff.Rule) (s : Becoming.Handoff.Stage),
+  Becoming.Handoff.completed (Becoming.Handoff.advance p (Becoming.Handoff.advance p s))
+Becoming.Handoff.each_rule_local_progress : ∀ (p : Becoming.Handoff.Rule) (s : Becoming.Handoff.Stage),
+  ¬Becoming.Handoff.completed (Becoming.Handoff.advance p s) →
+    Becoming.Handoff.remaining p (Becoming.Handoff.advance p s) < Becoming.Handoff.remaining p s
+Becoming.Handoff.revising_run_stays_unfinished : ∀ (n : Nat),
+  Becoming.Handoff.revisingRun n = Becoming.Handoff.Stage.leftReady ∨
+    Becoming.Handoff.revisingRun n = Becoming.Handoff.Stage.rightReady
+Becoming.Handoff.revising_unfinished : ∀ (n : Nat), ¬Becoming.Handoff.completed (Becoming.Handoff.revisingRun n)
+Becoming.Handoff.revised_rules_can_fail_forever : (∀ (n : Nat),
+    Becoming.Handoff.completed
+      (Becoming.Handoff.advance (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun n))
+        (Becoming.Handoff.advance (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun n))
+          (Becoming.Handoff.revisingRun n)))) ∧
+  (∀ (n : Nat),
+      Becoming.Handoff.remaining (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun n))
+          (Becoming.Handoff.revisingRun (n + 1)) <
+        Becoming.Handoff.remaining (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun n))
+          (Becoming.Handoff.revisingRun n)) ∧
+    ∀ (n : Nat), ¬Becoming.Handoff.completed (Becoming.Handoff.revisingRun n)
+Becoming.Handoff.revision_resets_remaining : ∀ (n : Nat),
+  Becoming.Handoff.remaining (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun n))
+        (Becoming.Handoff.revisingRun (n + 1)) =
+      1 ∧
+    Becoming.Handoff.remaining (Becoming.Handoff.restartChoice (Becoming.Handoff.revisingRun (n + 1)))
+        (Becoming.Handoff.revisingRun (n + 1)) =
+      2
+Becoming.Handoff.changed_form_with_valid_handoff : Becoming.Handoff.advance Becoming.Handoff.Rule.left
+      Becoming.Handoff.Stage.leftReady =
+    Becoming.Handoff.Stage.rightReady ∧
+  Becoming.Handoff.remaining Becoming.Handoff.Rule.directRight Becoming.Handoff.Stage.rightReady ≤
+      Becoming.Handoff.remaining Becoming.Handoff.Rule.left Becoming.Handoff.Stage.rightReady ∧
+    Becoming.Handoff.advance Becoming.Handoff.Rule.directRight Becoming.Handoff.Stage.rightReady =
+        Becoming.Handoff.Stage.formedRight ∧
+      Becoming.Handoff.advance Becoming.Handoff.Rule.left Becoming.Handoff.Stage.rightReady =
+        Becoming.Handoff.Stage.formedLeft
+Becoming.Handoff.realized_form_need_not_be_fixed : (∀ (p : Bool),
+    ∃ q,
+      Becoming.Handoff.realizes
+        (Becoming.Handoff.advance (if p = true then Becoming.Handoff.Rule.directRight else Becoming.Handoff.Rule.left)
+          Becoming.Handoff.Stage.rightReady)
+        q) ∧
+  ¬∃ q,
+      ∀ (p : Bool),
+        Becoming.Handoff.realizes
+          (Becoming.Handoff.advance (if p = true then Becoming.Handoff.Rule.directRight else Becoming.Handoff.Rule.left)
+            Becoming.Handoff.Stage.rightReady)
+          q
+@Becoming.Handoff.step_iff : ∀ {s t : Becoming.Handoff.Stage} {p : Becoming.Handoff.Rule},
+  Becoming.Handoff.process.step s p t ↔ t = Becoming.Handoff.advance p s
+Becoming.Handoff.revising_state : ∀ (n : Nat), Becoming.Handoff.revising.state n = Becoming.Handoff.revisingRun n
+Becoming.Handoff.changed_form : Generative.Trace Becoming.Handoff.process Becoming.Handoff.Stage.leftReady
+    [Becoming.Handoff.Rule.left, Becoming.Handoff.Rule.directRight] Becoming.Handoff.Stage.formedRight ∧
+  Generative.Trace Becoming.Handoff.process Becoming.Handoff.Stage.leftReady
+      [Becoming.Handoff.Rule.left, Becoming.Handoff.Rule.left] Becoming.Handoff.Stage.formedLeft ∧
+    Becoming.Handoff.remaining Becoming.Handoff.Rule.directRight Becoming.Handoff.Stage.rightReady ≤
+      Becoming.Handoff.remaining Becoming.Handoff.Rule.left Becoming.Handoff.Stage.rightReady
+Becoming.Handoff.outcome_not_fixed : (∀ (p : Bool),
+    ∃ t q,
+      Generative.Trace Becoming.Handoff.process Becoming.Handoff.Stage.rightReady
+          [if p = true then Becoming.Handoff.Rule.directRight else Becoming.Handoff.Rule.left] t ∧
+        Becoming.Handoff.frame.realized t q) ∧
+  ¬∃ q,
+      ∀ (p : Bool) (t : Becoming.Handoff.Stage),
+        Generative.Trace Becoming.Handoff.process Becoming.Handoff.Stage.rightReady
+            [if p = true then Becoming.Handoff.Rule.directRight else Becoming.Handoff.Rule.left] t →
+          Becoming.Handoff.frame.realized t q
+Becoming.Handoff.fails_forever : (∀ (n : Nat),
+    Becoming.Handoff.completed
+      (Becoming.Handoff.advance (Becoming.Handoff.revising.act n)
+        (Becoming.Handoff.advance (Becoming.Handoff.revising.act n) (Becoming.Handoff.revising.state n)))) ∧
+  (∀ (n : Nat),
+      Becoming.Handoff.remaining (Becoming.Handoff.revising.act n) (Becoming.Handoff.revising.state (n + 1)) <
+        Becoming.Handoff.remaining (Becoming.Handoff.revising.act n) (Becoming.Handoff.revising.state n)) ∧
+    ∀ (n : Nat), ¬Becoming.Handoff.completed (Becoming.Handoff.revising.state n)
+Becoming.Handoff.resets_remaining : ∀ (n : Nat),
+  Becoming.Handoff.remaining (Becoming.Handoff.revising.act n) (Becoming.Handoff.revising.state (n + 1)) = 1 ∧
+    Becoming.Handoff.remaining (Becoming.Handoff.revising.act (n + 1)) (Becoming.Handoff.revising.state (n + 1)) = 2

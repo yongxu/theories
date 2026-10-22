@@ -1,0 +1,110 @@
+@Becoming.SituationTraces.distinct_map : ∀ {α : Type u_1} {β : Type u_2} {g : α → β},
+  (∀ (a b : α), g a = g b → a = b) → ∀ {l : List α}, Becoming.Distinct l → Becoming.Distinct (List.map g l)
+@Becoming.SituationTraces.distinct_joinMap : ∀ {α : Type u_1} {β : Type u_2} {g : α → List β} {l : List α},
+  Becoming.Distinct l →
+    (∀ (a : α), a ∈ l → Becoming.Distinct (g a)) →
+      (∀ (a b : α) (x : β), x ∈ g a → x ∈ g b → a = b) → Becoming.Distinct (Becoming.joinMap g l)
+Becoming.SituationTraces.distinct_upto : ∀ (k : Nat), Becoming.Distinct (Becoming.Undecided.upto k)
+@Becoming.SituationTraces.occ_pos : ∀ {α : Type u_1} [inst : DecidableEq α] {x : α} {k : List α},
+  x ∈ k → 1 ≤ Becoming.Situations.occ k x
+@Becoming.SituationTraces.distinct_of_occ : ∀ {α : Type u_1} [inst : DecidableEq α] {l : List α},
+  (∀ (a : α), Becoming.Situations.occ l a ≤ 1) → Becoming.Distinct l
+@Becoming.SituationTraces.distinct_openSteps : ∀ {S : Type u_1} {A : Type u_2} {moves : List A} {all : List S},
+  Becoming.Distinct moves → Becoming.Distinct all → Becoming.Distinct (Becoming.openSteps moves all)
+@Becoming.SituationTraces.distinct_finerSteps : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat)
+  {moves : List A} {all : List S},
+  Becoming.Distinct moves →
+    Becoming.Distinct all → ∀ (s : S), Becoming.Distinct (Becoming.Situations.finerSteps weight moves all s)
+@Becoming.SituationTraces.distinct_finer : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) {moves : List A}
+  {all : List S},
+  Becoming.Distinct moves →
+    Becoming.Distinct all → ∀ (n : Nat) (s : S), Becoming.Distinct (Becoming.Situations.finer weight moves all n s)
+@Becoming.SituationTraces.finer_traces : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) {moves : List A}
+  {all : List S},
+  Becoming.Distinct moves →
+    Becoming.Distinct all →
+      ∀ (n : Nat) (s : S),
+        Becoming.SituationTraces.Traces weight moves all n s (Becoming.Situations.finer weight moves all n s)
+Becoming.SituationTraces.finer_twoTraces : ∀ (p q n : Nat) (s : Bool),
+  Becoming.SituationTraces.TwoTraces p q n s
+    (Becoming.Situations.finer (Becoming.Typicality.stepWeight p q) [()] [true, false] n s)
+@Becoming.SituationTraces.traces_count : ∀ {p q n : Nat} {s : Bool} {l : List (List (Unit × Bool × Nat))},
+  Becoming.SituationTraces.TwoTraces p q n s l → l.length = (p + q) ^ n
+@Becoming.SituationTraces.course_traces : ∀ {p q : Nat} {s : Bool} {l : List (List (Unit × Bool × Nat))}
+  {w : List Bool},
+  Becoming.SituationTraces.TwoTraces p q w.length s l →
+    (Becoming.counting.sum l fun h => if List.map Prod.snd (Becoming.Situations.coarse h) = w then 1 else 0) =
+      Becoming.Typicality.weight p q w
+@Becoming.SituationTraces.traces_typical : ∀ {p q n : Nat} {s : Bool} {l : List (List (Unit × Bool × Nat))},
+  Becoming.SituationTraces.TwoTraces p q n s l →
+    ∀ (d : Nat),
+      (Becoming.counting.sum l fun h =>
+            Becoming.Situations.far p q d (List.map Prod.snd (Becoming.Situations.coarse h))) *
+          d ≤
+        n * (p * q * (p + q) ^ n)
+@Becoming.SituationTraces.event_traces_count : ∀ {V : Type u_1} {vals : List V} {n : Nat} {s : V}
+  {l : List (List (Unit × V × Nat))} (wt : V → Nat),
+  Becoming.Distinct vals →
+    Becoming.SituationTraces.Traces (Becoming.Situations.valueWeight wt) [()] vals n s l →
+      l.length = Becoming.counting.sum vals wt ^ n
+@Becoming.SituationTraces.event_traces_typical : ∀ {V : Type u_1} {vals : List V} {n : Nat} {s : V}
+  {l : List (List (Unit × V × Nat))} (wt : V → Nat) (event : V → Bool) (d : Nat),
+  Becoming.Distinct vals →
+    Becoming.SituationTraces.Traces (Becoming.Situations.valueWeight wt) [()] vals n s l →
+      (Becoming.counting.sum l fun h =>
+            Becoming.Situations.far (Becoming.Situations.inside vals wt event)
+              (Becoming.Situations.outside vals wt event) d
+              (Becoming.Situations.seen event (Becoming.Situations.coarse h))) *
+          d ≤
+        n *
+          (Becoming.Situations.inside vals wt event * Becoming.Situations.outside vals wt event *
+            (Becoming.Situations.inside vals wt event + Becoming.Situations.outside vals wt event) ^ n)
+@Becoming.SituationTraces.event_traces_concentrated : ∀ {V : Type u_1} {vals : List V} {n : Nat} {s : V}
+  {l : List (List (Unit × V × Nat))} (wt : V → Nat) (event : V → Bool) (k : Nat) {u v : Nat},
+  v ≤ u →
+    Becoming.Distinct vals →
+      Becoming.SituationTraces.Traces (Becoming.Situations.valueWeight wt) [()] vals n s l →
+        (Becoming.counting.sum l fun h =>
+              if k ≤ Becoming.Typicality.ones (Becoming.Situations.seen event (Becoming.Situations.coarse h)) then 1
+              else 0) *
+            (u ^ k * v ^ n) ≤
+          (Becoming.Situations.inside vals wt event * u + Becoming.Situations.outside vals wt event * v) ^ n * v ^ k
+@Becoming.SituationTraces.course_traces_listed : ∀ {S : Type u_1} {A : Type u_2} [inst : DecidableEq A]
+  [inst_1 : DecidableEq S] (weight : S → A → S → Nat) {moves : List A} {all : List S},
+  (∀ (a : A), Becoming.Situations.occ moves a = 1) →
+    (∀ (m : S), Becoming.Situations.occ all m = 1) →
+      ∀ (s : S) (c : List (A × S)) {l : List (List (A × S × Nat))},
+        Becoming.SituationTraces.Traces weight moves all c.length s l →
+          (Becoming.counting.sum l fun h => if Becoming.Situations.coarse h = c then 1 else 0) =
+            Becoming.counting.along weight (fun x => 1) s c
+@Becoming.SituationTraces.signed_traces : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat × Nat)
+  {moves : List A} {all : List S},
+  Becoming.Distinct moves →
+    Becoming.Distinct all →
+      ∀ (n : Nat) (s : S) {l : List (List (A × S × Nat))},
+        Becoming.SituationTraces.Traces (Becoming.Situations.both weight) moves all n s l →
+          Becoming.signed.transfer weight moves all (fun x => Becoming.signed.one) n s =
+            (Becoming.counting.sum l fun h =>
+                if Becoming.Situations.signs Becoming.signed (Becoming.Situations.sign weight) s h = (1, 0) then 1
+                else 0,
+              Becoming.counting.sum l fun h =>
+                if Becoming.Situations.signs Becoming.signed (Becoming.Situations.sign weight) s h = (0, 1) then 1
+                else 0)
+@Becoming.SituationTraces.cancels_traces : ∀ {l : List (List (Bool × Unit × Nat))},
+  Becoming.SituationTraces.Traces (Becoming.Situations.both Becoming.Interference.weight) [true, false] [()] 1 () l →
+    l.length = 2
+@Becoming.SituationTraces.cancels_counts : ∀ {l : List (List (Bool × Unit × Nat))},
+  Becoming.SituationTraces.Traces (Becoming.Situations.both Becoming.Interference.weight) [true, false] [()] 1 () l →
+    (Becoming.counting.sum l fun h =>
+          if
+              Becoming.Situations.signs Becoming.signed (Becoming.Situations.sign Becoming.Interference.weight) () h =
+                (1, 0) then
+            1
+          else 0,
+        Becoming.counting.sum l fun h =>
+          if
+              Becoming.Situations.signs Becoming.signed (Becoming.Situations.sign Becoming.Interference.weight) () h =
+                (0, 1) then
+            1
+          else 0) =
+      (1, 1)

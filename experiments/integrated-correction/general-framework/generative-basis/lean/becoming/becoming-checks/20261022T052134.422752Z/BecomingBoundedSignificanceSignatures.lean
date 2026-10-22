@@ -1,0 +1,13 @@
+import Becoming.BoundedSignificance
+#check @Becoming.bounded_whole
+#check @Becoming.Web.retains_bounded_iff_retains
+#check @Becoming.Flow.within_closure_iff_retains
+#check @Becoming.Flow.feeding_unrestricted_of_common
+#check @Becoming.Flow.bounded_system_whole
+#check @Becoming.Overshoot.within_closure_iff_retains
+#check @Becoming.Trophic.mediated_uncoupled
+#check @Becoming.Trophic.responsive_mixed
+#check @Becoming.Trophic.mixed_part
+#check @Becoming.Clearing.within_closure_yet_loses
+#check @Becoming.Clearing.system_whole
+#check @Becoming.Clearing.reach_counts_dweller
