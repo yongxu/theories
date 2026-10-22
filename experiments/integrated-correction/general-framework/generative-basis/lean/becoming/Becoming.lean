@@ -1396,7 +1396,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Diversion` is an instance, and its supplying flow, which gains, shows the premise binds.
   Graded by the containing family's inflow the laws need no such premise: wherever what couples
   in rises by more than that inflow, a formation raising it takes from beyond, the rise past the
-  inflow is paid from beyond in full, and a selection rewarding such a rise favours reaching
+  inflow is drawn from beyond in full, and a selection rewarding such a rise favours reaching
   beyond; the gainless laws are the case of no inflow, and the supplying flow, rising by exactly
   its inflow, shows the bound exact.
 * `Becoming.DrawnBeyond` (L1): whose dependence a rise breaks, and the share that reaches beyond.

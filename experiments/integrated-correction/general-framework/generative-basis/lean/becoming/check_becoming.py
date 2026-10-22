@@ -2075,7 +2075,7 @@ SCOPE = (
     "couples in rises holds only on flows "
     "reaching beyond the coupling; Diversion is an instance, and its supplying flow shows the "
     "premise binds; graded by the containing family's inflow, where the family rises by more than "
-    "that inflow a formation raising it takes from beyond, the rise past the inflow is paid from "
+    "that inflow a formation raising it takes from beyond, the rise past the inflow is drawn from "
     "beyond in full and a selection rewarding such a rise favours reaching beyond, the supplying "
     "flow rising by exactly its inflow. "
     "DrawnBeyond: in a balanced flow, where the family with the conditions beyond it gains nothing "

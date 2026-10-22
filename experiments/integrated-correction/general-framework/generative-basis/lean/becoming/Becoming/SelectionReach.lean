@@ -35,7 +35,7 @@ finishing". No premise enters beyond what each theorem names.
   that premise, where the family's stock rises by more than the containing family's inflow, a
   formation taking part gives it more than it takes from it and takes from beyond
   (`Flow.Balances.rise_draws_beyond_inflow`, `Flow.Balances.rise_takes_beyond_inflow`); the rise past
-  the inflow is paid from beyond in full (`Flow.Balances.rise_paid_from_beyond_inflow`); and every
+  the inflow is drawn from beyond in full (`Flow.Balances.rise_le_inflow_beyond`); and every
   selection holding only where the family rises past the inflow favours reaching beyond
   (`Flow.favours_reaching_beyond_inflow`). The gainless laws above are their case of no inflow. The
   bound is exact: the supplying flow raises the store by exactly its inflow, taking nothing
@@ -139,11 +139,11 @@ theorem Balances.rise_draws_beyond (balances : L.Balances W) (distinct : Distinc
         (Nat.add_zero _))) rises) with
   | ⟨f, present, _, more, beyond⟩ => ⟨f, present, more, beyond⟩
 
-/-- **The rise past the inflow is paid from beyond, in full.** In a balanced flow, across every step,
+/-- **The rise past the inflow is drawn from beyond, in full.** In a balanced flow, across every step,
 a family without repetition's stock after the step is at most its stock before, the inflow of a
 family containing it, and what the formations taking part take from the containing family beyond
 what they take from the family itself. -/
-theorem Balances.rise_paid_from_beyond_inflow (balances : L.Balances W) (distinct : Distinct ds)
+theorem Balances.rise_le_inflow_beyond (balances : L.Balances W) (distinct : Distinct ds)
     (sub : ∀ c, c ∈ ds → c ∈ es) :
     W.stock ds (t + 1) ≤ W.stock ds t + L.inflow es t +
       total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f) :=
@@ -179,13 +179,13 @@ theorem Balances.rise_paid_from_beyond_inflow (balances : L.Balances W) (distinc
 /-- **The rise is paid from beyond, in full.** In a balanced flow, where a family containing a
 family without repetition gains nothing across a step, the family's stock after the step is at most
 its stock before plus what the formations taking part take from the containing family beyond what
-they take from the family itself: the case of `Flow.Balances.rise_paid_from_beyond_inflow` with no
+they take from the family itself: the case of `Flow.Balances.rise_le_inflow_beyond` with no
 inflow. -/
 theorem Balances.rise_paid_from_beyond (balances : L.Balances W) (distinct : Distinct ds)
     (sub : ∀ c, c ∈ ds → c ∈ es) (gainless : L.GainlessOn es t) :
     W.stock ds (t + 1) ≤
       W.stock ds t + total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f) :=
-  Nat.le_trans (balances.rise_paid_from_beyond_inflow distinct sub)
+  Nat.le_trans (balances.rise_le_inflow_beyond distinct sub)
     (Nat.le_of_eq (congrArg (· + _) ((congrArg (W.stock ds t + ·)
       (gainlessOn_iff_inflow.mp gainless)).trans (Nat.add_zero _))))
 
