@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-381 registered results: 356 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 893 curated edges join 333 results to the results they draw on.
+382 registered results: 356 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 896 curated edges join 334 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -313,6 +313,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [valuing-what-is-left-at-the-horizon][] ← <a id="valuing-what-is-left-at-the-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="valuing-what-is-left-at-the-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][]
 - [webs-with-a-recent-giving][] ← <a id="webs-with-a-recent-giving--thresholds-beyond-a-band"></a>[thresholds-beyond-a-band][] · <a id="webs-with-a-recent-giving--rest-on-coupled-webs"></a>[rest-on-coupled-webs][]
 - [weights-count-situations][] ← <a id="weights-count-situations--typicality-by-counting"></a>[typicality-by-counting][] · <a id="weights-count-situations--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="weights-count-situations--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][]
+- [wenli-on-the-spine][] ← <a id="wenli-on-the-spine--civilization-thought-on-the-spine"></a>[civilization-thought-on-the-spine][] *(interpretive)* · <a id="wenli-on-the-spine--learnable-through-a-map"></a>[learnable-through-a-map][] *(interpretive)* · <a id="wenli-on-the-spine--identification-where-bounded"></a>[identification-where-bounded][] *(interpretive)*
 - [what-a-commuting-law-keeps-apart][] ← <a id="what-a-commuting-law-keeps-apart--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="what-a-commuting-law-keeps-apart--readings-within-what-they-read"></a>[readings-within-what-they-read][] · <a id="what-a-commuting-law-keeps-apart--returning-where-the-course-branches"></a>[returning-where-the-course-branches][] · <a id="what-a-commuting-law-keeps-apart--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] *(application)* · <a id="what-a-commuting-law-keeps-apart--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="what-a-commuting-law-keeps-apart--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][]
 - [what-a-cut-loses][] ← <a id="what-a-cut-loses--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="what-a-cut-loses--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="what-a-cut-loses--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [what-a-finite-history-refutes][] ← <a id="what-a-finite-history-refutes--becoming-finite-horizon"></a>[becoming-finite-horizon][]
@@ -677,6 +678,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [versioned-request-completion]: theories/becoming/results/records/versioned-request-completion.md
 [webs-with-a-recent-giving]: theories/becoming/results/records/webs-with-a-recent-giving.md
 [weights-count-situations]: theories/becoming/results/records/weights-count-situations.md
+[wenli-on-the-spine]: theories/becoming/results/records/wenli-on-the-spine.md
 [what-a-commuting-law-keeps-apart]: theories/becoming/results/records/what-a-commuting-law-keeps-apart.md
 [what-a-cut-loses]: theories/becoming/results/records/what-a-cut-loses.md
 [what-a-finite-history-refutes]: theories/becoming/results/records/what-a-finite-history-refutes.md
