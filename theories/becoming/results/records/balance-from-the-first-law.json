@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
+  "reviewed_at_utc": "2026-10-22T18:00:00+00:00",
   "statement": {
     "en": "A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, the first law and the entropy balance give balance where no store generates entropy, and the exchanges' exergy balance: balance and least loss from one reading.",
     "zh": "只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，第一定律与熵平衡在没有储存生熵之处给出平衡，也给出交换的㶲平衡：平衡与最小损失出自同一读法。"
@@ -251,6 +251,13 @@
         "en": "There least loss is the first law plus a record held in the conserved amount; here the physical first law with locality gives balance, and with the entropy balance the record.",
         "zh": "那里最小损失是第一律加上守恒量中所持的记录；这里物理的第一定律加局部性给出平衡，加上熵平衡给出记录。"
       }
+    },
+    {
+      "id": "balance-from-conservation-along-a-relation",
+      "detail": {
+        "en": "Locality, stated here as one transfer per exchange and store, is derived there: transfers along a relation balancing a step exist exactly where the total is conserved on every family it closes.",
+        "zh": "这里陈述为每对交换与储存一个转移的局部性，在那里被推出：沿关系使一步平衡的转移，恰在总量于其封闭的每个家族上守恒时存在。"
+      }
     }
   ],
   "references": [
@@ -358,6 +365,10 @@
     {
       "en": "22 October 2026, board item FL1: added for the question whether balance should come from conservation of energy, as dissipation comes from the second law; balance and the exchanges' exergy balance derived from the first law and the entropy balance in one reading of amounts as available work.",
       "zh": "2026年10月22日，工作板条目 FL1：为“平衡是否应来自能量守恒，如同耗散来自第二定律”之问而加；在把量读作可用功的同一读法中，由第一定律与熵平衡推出平衡与交换的㶲平衡。"
+    },
+    {
+      "en": "22 October 2026, FL2 (study section 354): related to balance-from-conservation-along-a-relation, which derives the transfers this record assumes. The claim is unchanged.",
+      "zh": "2026年10月22日，FL2（研究第 354 节）：关联 balance-from-conservation-along-a-relation，它推出本记录所假设的转移。论断不变。"
     }
   ]
 }

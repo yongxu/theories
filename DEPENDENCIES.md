@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-387 registered results: 361 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 904 curated edges join 338 results to the results they draw on.
+388 registered results: 362 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 905 curated edges join 339 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -36,6 +36,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [any-number-of-drawers-in-turn][] ← <a id="any-number-of-drawers-in-turn--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [arising-needs-change][] ← <a id="arising-needs-change--support-from-the-supported"></a>[support-from-the-supported][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [balance-from-conservation-along-a-relation][] ← <a id="balance-from-conservation-along-a-relation--balance-from-the-first-law"></a>[balance-from-the-first-law][] *(interpretive)*
 - [balance-from-the-first-law][] ← <a id="balance-from-the-first-law--least-loss-from-entropy-production"></a>[least-loss-from-entropy-production][]
 - [bands-of-the-three-powers][] ← <a id="bands-of-the-three-powers--place-relations-in-context"></a>[place-relations-in-context][]
 - [basic-priority-step-by-step][] ← <a id="basic-priority-step-by-step--ranking-under-readings"></a>[ranking-under-readings][] · <a id="basic-priority-step-by-step--relation-level-law-of-easing"></a>[relation-level-law-of-easing][]
@@ -376,6 +377,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [arising-needs-change]: theories/becoming/results/records/arising-needs-change.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
 [attraction-is-not-returning]: theories/becoming/results/records/attraction-is-not-returning.md
+[balance-from-conservation-along-a-relation]: theories/becoming/results/records/balance-from-conservation-along-a-relation.md
 [balance-from-the-first-law]: theories/becoming/results/records/balance-from-the-first-law.md
 [bands-of-the-three-powers]: theories/becoming/results/records/bands-of-the-three-powers.md
 [basic-priority-step-by-step]: theories/becoming/results/records/basic-priority-step-by-step.md

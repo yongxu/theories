@@ -1,11 +1,11 @@
 {
- "commit": "934bfc9cc2edc4a0bee812a5f2738a3aae600a24",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261022T110022.458880Z",
+ "commit": "8d4afbf18a1ebf8d22efd7615d032d1fb192abdc",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261022T122330.896153Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 301,
- "constants": 40284,
- "spine_theorems": 13330,
+ "tracked_modules": 302,
+ "constants": 40360,
+ "spine_theorems": 13373,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 1005,
   "statement on Process/Frame/Run/Trace": 2949,
-  "statement on World/Flow/Web": 3107,
+  "statement on World/Flow/Web": 3110,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 164,
-  "used by a theorem on the base": 4949,
+  "used by a theorem on the base": 4984,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 670,
+  "apart: own vocabulary": 675,
   "apart: prelude-only statement": 70
  },
- "apart": 740,
+ "apart": 745,
  "apart_general_structure_by_design": 219,
- "apart_otherwise": 521,
+ "apart_otherwise": 526,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 81,
   "of them on the base": 66,
@@ -73,10 +73,10 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 490,
- "apart_roots": 490,
+ "apart_used_by_nothing": 492,
+ "apart_roots": 492,
  "apart_roots_by_category": {
-  "model-witness": 258,
+  "model-witness": 260,
   "support": 96,
   "general-structure": 107,
   "logical-strength": 12,
@@ -329,6 +329,10 @@
   "Becoming.Verification": [
    6,
    87
+  ],
+  "Becoming.Continuity": [
+   5,
+   43
   ],
   "Becoming.FaultEnvelopes": [
    5,
@@ -613,18 +617,18 @@
  },
  "rings": {
   "core": {
-   "modules": 285,
-   "theorems": 12570,
-   "apart": 646,
+   "modules": 286,
+   "theorems": 12613,
+   "apart": 651,
    "classes": {
     "statement on both families": 991,
     "statement on Process/Frame/Run/Trace": 2738,
-    "statement on World/Flow/Web": 3082,
+    "statement on World/Flow/Web": 3085,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 153,
-    "used by a theorem on the base": 4590,
+    "used by a theorem on the base": 4625,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 577,
+    "apart: own vocabulary": 582,
     "apart: prelude-only statement": 69
    }
   },
@@ -725,12 +729,12 @@
  "records_by_best_alias_class": {
   "statement on both families": 72,
   "statement on Process/Frame/Run/Trace": 131,
-  "statement on World/Flow/Web": 115,
+  "statement on World/Flow/Web": 116,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 3,
   "used by a theorem on the base": 8,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 16
+  "apart: own vocabulary": 17
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -803,6 +807,12 @@
    "id": "selection-right-exactly-where-read",
    "modules": [
     "Becoming.Learning"
+   ]
+  },
+  {
+   "id": "selection-with-returns-to-groupmates",
+   "modules": [
+    "Becoming.SelectionLevels"
    ]
   },
   {
@@ -6151,6 +6161,49 @@
   "Becoming.Flow.withImbalance_acting_iff": "statement on World/Flow/Web",
   "Becoming.Flow.withImbalance_taking_iff": "statement on World/Flow/Web",
   "Becoming.Flow.withImbalance_acting_taking_iff": "statement on World/Flow/Web",
+  "Becoming.Continuity.adj_symm": "used by a theorem on the base",
+  "Becoming.Continuity.within_true": "used by a theorem on the base",
+  "Becoming.Continuity.within_false": "used by a theorem on the base",
+  "Becoming.Continuity.within_add": "used by a theorem on the base",
+  "Becoming.Continuity.inside_of_true": "used by a theorem on the base",
+  "Becoming.Continuity.inside_of_false": "used by a theorem on the base",
+  "Becoming.Continuity.within_sent": "used by a theorem on the base",
+  "Becoming.Continuity.within_received": "used by a theorem on the base",
+  "Becoming.Continuity.conserved_of_balancing": "used by a theorem on the base",
+  "Becoming.Continuity.conservedOn_of_law": "used by a theorem on the base",
+  "Becoming.Continuity.direct_add_via": "used by a theorem on the base",
+  "Becoming.Continuity.joined_of_adj": "used by a theorem on the base",
+  "Becoming.Continuity.joined_of_both": "used by a theorem on the base",
+  "Becoming.Continuity.joined_apart": "used by a theorem on the base",
+  "Becoming.Continuity.not_eq_of_mem_rest": "used by a theorem on the base",
+  "Becoming.Continuity.add_pos_cases": "used by a theorem on the base",
+  "Becoming.Continuity.via_through": "used by a theorem on the base",
+  "Becoming.Continuity.route_cons": "used by a theorem on the base",
+  "Becoming.Continuity.edge_pos": "used by a theorem on the base",
+  "Becoming.Continuity.total_edge": "used by a theorem on the base",
+  "Becoming.Continuity.within_edge_off": "used by a theorem on the base",
+  "Becoming.Continuity.total_within_edge": "used by a theorem on the base",
+  "Becoming.Continuity.rearrange": "used by a theorem on the base",
+  "Becoming.Continuity.expand_sent": "used by a theorem on the base",
+  "Becoming.Continuity.expand_received": "used by a theorem on the base",
+  "Becoming.Continuity.expand_sent_x": "used by a theorem on the base",
+  "Becoming.Continuity.expand_received_x": "used by a theorem on the base",
+  "Becoming.Continuity.expand_along": "used by a theorem on the base",
+  "Becoming.Continuity.shift": "used by a theorem on the base",
+  "Becoming.Continuity.conservedOn_rest": "used by a theorem on the base",
+  "Becoming.Continuity.kept_alone": "used by a theorem on the base",
+  "Becoming.Continuity.mid": "used by a theorem on the base",
+  "Becoming.Continuity.mid2": "used by a theorem on the base",
+  "Becoming.Continuity.route_balancing": "used by a theorem on the base",
+  "Becoming.Continuity.balancing_iff": "used by a theorem on the base",
+  "Becoming.Continuity.balancesOn_iff_conserved": "statement on World/Flow/Web",
+  "Becoming.Continuity.balances_of_conserved": "statement on World/Flow/Web",
+  "Becoming.Continuity.balancesOn_of_law": "statement on World/Flow/Web",
+  "Becoming.Continuity.Teleport.distinct": "apart: own vocabulary",
+  "Becoming.Continuity.Teleport.conserves": "apart: own vocabulary",
+  "Becoming.Continuity.Teleport.reads": "apart: own vocabulary",
+  "Becoming.Continuity.Teleport.no_transfers_apart": "apart: own vocabulary",
+  "Becoming.Continuity.Teleport.balanced_together": "apart: own vocabulary",
   "Becoming.Flow.not_inward_of_fed": "statement on World/Flow/Web",
   "Becoming.Flow.inward_of_not_fed": "statement on World/Flow/Web",
   "Becoming.Flow.inward_iff_not_fed": "statement on World/Flow/Web",

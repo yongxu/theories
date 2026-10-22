@@ -2441,6 +2441,16 @@
    "module": "Becoming.SelectionLevels",
    "category": "model-witness",
    "reason": "assortment below one loses where assortment one would win: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Continuity.Teleport.no_transfers_apart": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "Swapping the levels of two relata conserves their total, and along the empty relation the family of one relatum is closed and loses its unit, so no transfers along that relation balance the swap: a fact about one constructed law showing that conservation of the whole total does not give balance along a relation (FL2)."
+  },
+  "Becoming.Continuity.Teleport.balanced_together": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "The same swap reads both relata, and along the full relation the routed transfers balance it from every configuration: the constructed law meeting the premises of conservedOn_of_law and route_balancing (FL2)."
   }
  },
  "instances": {
