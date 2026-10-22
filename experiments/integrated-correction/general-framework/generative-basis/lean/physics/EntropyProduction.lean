@@ -4,14 +4,29 @@ import Mathlib.Analysis.Complex.Exponential
 import Becoming.Entropy
 
 /-!
-# Entropy production: which physical premises give the spine's least loss
+# Entropy production: which physical premises give the spine's balance and least loss
 
-The spine's dissipation (`Flow.Dissipative`) says that across every step, over every family
-without repetition closed across it, each formation taking part gives back at least one unit
-less than it takes. This module states, on the spine's own flows, the physical premises that
-give it and its weaker forms, and proves each step from those premises to the spine. That
-the premises hold of a given system is physics; the correspondence of a flow's amounts to
-available work is stated, not proved.
+The spine's balance (`Flow.Balances`) says that every change of a condition's level is what
+the formations taking part take from it and give to it; its dissipation (`Flow.Dissipative`)
+says that across every step, over every family without repetition closed across it, each
+formation taking part gives back at least one unit less than it takes. This module states,
+on the spine's own flows, the physical premises that give both, and the weaker forms of the
+second, in one reading of amounts as available work, and proves each step from those
+premises to the spine. That the premises hold of a given system is physics; the
+correspondence of a flow's amounts to available work is stated, not proved.
+
+* **The first law with locality gives balance.** A quantity carried only by the exchanges
+  taking part (`LocalBalance`) balances the levels it is read on exactly where no condition
+  produces any of it (`balances_iff_unproduced`); conserved locally, as energy is, it
+  balances (`balances_of_conserved`). Conservation of the total alone does not give balance
+  (`Teleport.conserved_not_balanced`). With the first law and the entropy balance at each
+  store, available work relative to an environment at `T0` is destroyed in a store exactly
+  where it generates entropy (`StoreLaws.availableWork`), so the levels balance exactly
+  where no store generates entropy (`balances_iff_stores_generate_nothing`); a store that
+  degrades within itself is an exchange to be counted (`Leaking`). The same two laws at each
+  exchange give its exergy balance below, with the destroyed exergy `T0` times the entropy it
+  generates (`exergyBalance_of_laws`), so balance and least loss come from one reading
+  (`balance_and_least_loss`), and the premises hold together in `Burning`.
 
 * **Read in available work.** Read each unit of amount as `u` of exergy (available work
   relative to one environment), and let `σ t f` be the exergy that formation `f`'s exchange
@@ -216,6 +231,402 @@ theorem dissipativeBy_of_efficiency (balance : ExergyBalance L u σ) (unit : 0 <
       u * ((q : ℝ) * (total cs (L.take t f) : ℝ)) := by
     push_cast; nlinarith
   exact_mod_cast le_of_mul_le_mul_left this unit
+
+/-! ## The first law: balance
+
+The spine's balance (`Flow.Balances`) says that every change of a condition's level is what
+the formations taking part take from it and give to it. Read physically, it is the first
+law with locality: a quantity carried only by the exchanges taking part balances exactly
+where the conditions produce none of it themselves (`balances_iff_unproduced`), so a
+quantity conserved locally, as energy and mass are, balances (`balances_of_conserved`).
+Conservation of the total without locality does not give it (`Teleport.conserved_not_balanced`).
+Read in available work relative to one environment, as the least loss is read above, the
+first law and the entropy balance at each store give available work a local balance whose
+source is the exergy the store destroys (`StoreLaws.availableWork`), so the levels balance
+exactly where no store generates entropy (`balances_iff_stores_generate_nothing`); the same
+two laws at each exchange give `ExergyBalance`, with the destroyed exergy `T0` times the
+entropy the exchange generates (`exergyBalance_of_laws`). Balance and least loss then come
+from one reading (`balance_and_least_loss`): a store that degrades within itself is
+counted as an exchange, or its condition does not balance (`Leaking`). -/
+
+section FirstLaw
+
+/-- The total of a real quantity over a finite list. -/
+def rtotal {α : Type} : List α → (α → ℝ) → ℝ
+  | [], _ => 0
+  | a :: as, q => q a + rtotal as q
+
+theorem cast_total {α : Type} (l : List α) (q : α → Nat) :
+    ((total l q : Nat) : ℝ) = rtotal l (fun a => (q a : ℝ)) := by
+  induction l with
+  | nil => simp [total, rtotal]
+  | cons a as ih => simp [total, rtotal, ih]
+
+theorem rtotal_combine {α : Type} (l : List α) (p q : α → ℝ) (a b : ℝ) :
+    rtotal l (fun x => a * p x + b * q x) = a * rtotal l p + b * rtotal l q := by
+  induction l with
+  | nil => simp [rtotal]
+  | cons x xs ih => simp only [rtotal, ih]; ring
+
+theorem rtotal_congr_on {α : Type} {l : List α} {p q : α → ℝ}
+    (h : ∀ x, x ∈ l → p x = q x) : rtotal l p = rtotal l q := by
+  induction l with
+  | nil => rfl
+  | cons x xs ih =>
+    simp only [rtotal]
+    rw [h x (by simp), ih (fun y m => h y (by simp [m]))]
+
+/-- Amounts taken less amounts given, read at the unit `u` and totalled, are `u` times the
+totals taken less the totals given. -/
+theorem rtotal_read {α : Type} (l : List α) (k g : α → Nat) (u : ℝ) :
+    rtotal l (fun a => u * ((k a : ℝ) - (g a : ℝ))) =
+      u * (((total l k : Nat) : ℝ) - ((total l g : Nat) : ℝ)) := by
+  induction l with
+  | nil => simp [rtotal, total]
+  | cons a as ih => simp only [rtotal, total, ih]; push_cast; ring
+
+variable {W : Web F C} {q : Nat → C → ℝ} {x : Nat → F → C → ℝ} {p : Nat → C → ℝ}
+  {E S : Nat → C → ℝ} {e s : Nat → F → C → ℝ} {g : Nat → C → ℝ} {T0 : ℝ}
+  {Q γ : Nat → F → ℝ}
+
+/-- A quantity held on the conditions is carried only by the exchanges taking part: across
+the step from `t`, what stands on `c` changes by what the formations present carry out of it,
+`x t f c`, and by what `c` itself produces of it, `p t c`. With `p` zero the quantity is
+conserved locally, as energy is by the first law; otherwise `p` is its source, as entropy
+generated within a store is. -/
+def LocalBalance (L : Flow F C) (q : Nat → C → ℝ) (x : Nat → F → C → ℝ) (p : Nat → C → ℝ) :
+    Prop :=
+  ∀ t c, q (t + 1) c = q t c - rtotal (L.present t) (fun f => x t f c) + p t c
+
+/-- What stands on each condition is `u` times its level. -/
+def ReadsLevels (W : Web F C) (u : ℝ) (q : Nat → C → ℝ) : Prop :=
+  ∀ t c, q t c = u * (W.level t c : ℝ)
+
+/-- What each exchange taking part carries out of a condition is `u` times what it takes from
+it less what it gives to it. -/
+def ReadsTransfers (L : Flow F C) (u : ℝ) (x : Nat → F → C → ℝ) : Prop :=
+  ∀ t f c, f ∈ L.present t → x t f c = u * ((L.take t f c : ℝ) - (L.give t f c : ℝ))
+
+/-- Read at the unit, what the exchanges taking part carry out of a condition is `u` times
+what they take from it less what they give to it. -/
+theorem ReadsTransfers.carried (read : ReadsTransfers L u x) (t : Nat) (c : C) :
+    rtotal (L.present t) (fun f => x t f c) = u * ((L.taken t c : ℝ) - (L.given t c : ℝ)) :=
+  (rtotal_congr_on fun f present => read t f c present).trans
+    (rtotal_read (L.present t) (fun f => L.take t f c) (fun f => L.give t f c) u)
+
+/-- Read at the unit, what a condition produces across a step is `u` times what its level and
+what is taken from it come to, less what stood on it and what is given to it. -/
+theorem LocalBalance.produced (bal : LocalBalance L q x p) (levels : ReadsLevels W u q)
+    (transfers : ReadsTransfers L u x) (t : Nat) (c : C) :
+    p t c = u * (((W.level (t + 1) c + L.taken t c : Nat) : ℝ) -
+      ((W.level t c + L.given t c : Nat) : ℝ)) := by
+  have h := bal t c
+  rw [transfers.carried t c, levels, levels] at h
+  push_cast
+  linarith
+
+/-- **Balance is local conservation.** A quantity carried only by the exchanges taking part,
+read at a unit on the levels and on the exchanges, balances the levels exactly where no
+condition produces any of it. -/
+theorem balances_iff_unproduced (bal : LocalBalance L q x p) (levels : ReadsLevels W u q)
+    (transfers : ReadsTransfers L u x) (unit : 0 < u) :
+    L.Balances W ↔ ∀ t c, p t c = 0 := by
+  constructor
+  · intro balances t c
+    rw [bal.produced levels transfers t c, balances t c, sub_self, mul_zero]
+  · intro none t c
+    have h := bal.produced levels transfers t c
+    rw [none t c] at h
+    have : ((W.level (t + 1) c + L.taken t c : Nat) : ℝ) =
+        ((W.level t c + L.given t c : Nat) : ℝ) := by
+      rcases mul_eq_zero.mp h.symm with z | z
+      · exact absurd z unit.ne'
+      · linarith
+    exact_mod_cast this
+
+/-- A quantity conserved locally, carried only by the exchanges taking part, balances the
+levels it is read on. -/
+theorem balances_of_conserved (bal : LocalBalance L q x (fun _ _ => 0))
+    (levels : ReadsLevels W u q) (transfers : ReadsTransfers L u x) (unit : 0 < u) :
+    L.Balances W :=
+  (balances_iff_unproduced bal levels transfers unit).mpr fun _ _ => rfl
+
+/-- The first law and the entropy balance at each condition, read as a store: across the step
+from `t`, its energy `E` changes only by the energy `e t f c` the exchanges taking part draw
+from it, and its entropy `S` by the entropy `s t f c` they draw from it and the entropy
+`g t c` it generates within itself. -/
+def StoreLaws (L : Flow F C) (E S : Nat → C → ℝ) (e s : Nat → F → C → ℝ) (g : Nat → C → ℝ) :
+    Prop :=
+  LocalBalance L E e (fun _ _ => 0) ∧ LocalBalance L S s g
+
+/-- Relative to an environment at temperature `T0`, a store's available work `E - T0 * S`
+is carried by the exchanges as `e - T0 * s`, and its source is `-(T0 * g)`: available work
+is destroyed exactly where the store generates entropy (Gouy–Stodola). -/
+theorem StoreLaws.availableWork (h : StoreLaws L E S e s g) (T0 : ℝ) :
+    LocalBalance L (fun t c => E t c - T0 * S t c) (fun t f c => e t f c - T0 * s t f c)
+      (fun t c => -(T0 * g t c)) := by
+  intro t c
+  have hE : E (t + 1) c = E t c - rtotal (L.present t) (fun f => e t f c) := by
+    have := h.1 t c; simp only [add_zero] at this; exact this
+  have hS := h.2 t c
+  have split := rtotal_combine (L.present t) (fun f => e t f c) (fun f => s t f c) 1 (-T0)
+  show E (t + 1) c - T0 * S (t + 1) c =
+    E t c - T0 * S t c - rtotal (L.present t) (fun f => e t f c - T0 * s t f c) + -(T0 * g t c)
+  rw [show (fun f => e t f c - T0 * s t f c) = (fun f => 1 * e t f c + -T0 * s t f c) from
+    funext fun f => by ring, split, hE, hS]
+  ring
+
+/-- **Balance from the first law.** Read in available work relative to an environment at
+`T0 > 0`, with the first law and the entropy balance at every store and each exchange's
+transfers read at the unit, the levels balance exactly where no store generates entropy. -/
+theorem balances_iff_stores_generate_nothing (stores : StoreLaws L E S e s g)
+    (levels : ReadsLevels W u (fun t c => E t c - T0 * S t c))
+    (transfers : ReadsTransfers L u (fun t f c => e t f c - T0 * s t f c)) (unit : 0 < u)
+    (warm : 0 < T0) : L.Balances W ↔ ∀ t c, g t c = 0 := by
+  rw [balances_iff_unproduced (stores.availableWork T0) levels transfers unit]
+  constructor
+  · intro h t c
+    have z : -(T0 * g t c) = 0 := h t c
+    rcases mul_eq_zero.mp (neg_eq_zero.mp z) with z | z
+    · exact absurd z warm.ne'
+    · exact z
+  · intro h t c
+    show -(T0 * g t c) = 0
+    rw [h t c, mul_zero, neg_zero]
+
+/-- Where no store generates negative entropy, no level rises beyond what the exchanges
+taking part bring to it. -/
+theorem stores_within (stores : StoreLaws L E S e s g)
+    (levels : ReadsLevels W u (fun t c => E t c - T0 * S t c))
+    (transfers : ReadsTransfers L u (fun t f c => e t f c - T0 * s t f c)) (unit : 0 < u)
+    (warm : 0 ≤ T0) (second : ∀ t c, 0 ≤ g t c) (t : Nat) (c : C) :
+    W.level (t + 1) c + L.taken t c ≤ W.level t c + L.given t c := by
+  have h : -(T0 * g t c) = u * (((W.level (t + 1) c + L.taken t c : Nat) : ℝ) -
+      ((W.level t c + L.given t c : Nat) : ℝ)) :=
+    (stores.availableWork T0).produced levels transfers t c
+  have hg : 0 ≤ T0 * g t c := mul_nonneg warm (second t c)
+  have : ((W.level (t + 1) c + L.taken t c : Nat) : ℝ) ≤
+      ((W.level t c + L.given t c : Nat) : ℝ) := by
+    by_contra hlt
+    have : 0 < u * (((W.level (t + 1) c + L.taken t c : Nat) : ℝ) -
+        ((W.level t c + L.given t c : Nat) : ℝ)) := mul_pos unit (by linarith [not_le.mp hlt])
+    linarith
+  exact_mod_cast this
+
+/-- The first law and the entropy balance at each exchange, which holds nothing across its
+step: over a family closed across the step, the energy it draws from the family leaves as
+heat `Q t f` to the environment at temperature `T0`, and the entropy it draws from the
+family, with the entropy `γ t f` it generates, leaves with that heat. -/
+def ExchangeLaws (L : Flow F C) (T0 : ℝ) (e s : Nat → F → C → ℝ) (Q γ : Nat → F → ℝ) :
+    Prop :=
+  ∀ cs t, Distinct cs → L.ClosedAt cs t → ∀ f, f ∈ L.present t →
+    rtotal cs (e t f) = Q t f ∧ rtotal cs (s t f) + γ t f = Q t f / T0
+
+/-- **The exergy balance from the first law.** With the first law and the entropy balance at
+each exchange and its transfers read at the unit, each exchange meets the exergy balance,
+the exergy it destroys being `T0` times the entropy it generates. -/
+theorem exergyBalance_of_laws (exchanges : ExchangeLaws L T0 e s Q γ)
+    (transfers : ReadsTransfers L u (fun t f c => e t f c - T0 * s t f c)) (warm : 0 < T0) :
+    ExergyBalance L u (fun t f => T0 * γ t f) := by
+  intro cs t distinct closed f present
+  obtain ⟨energy, entropy⟩ := exchanges cs t distinct closed f present
+  have read : rtotal cs (fun c => e t f c - T0 * s t f c) =
+      u * ((total cs (L.take t f) : ℝ) - (total cs (L.give t f) : ℝ)) :=
+    (rtotal_congr_on fun c _ => transfers t f c present).trans
+      (rtotal_read cs (L.take t f) (L.give t f) u)
+  have split : rtotal cs (fun c => e t f c - T0 * s t f c) =
+      rtotal cs (e t f) - T0 * rtotal cs (s t f) := by
+    rw [show (fun c => e t f c - T0 * s t f c) = (fun c => 1 * e t f c + -T0 * s t f c) from
+      funext fun c => by ring, rtotal_combine]
+    ring
+  have heat : T0 * rtotal cs (s t f) + T0 * γ t f = Q t f := by
+    rw [← mul_add, entropy, mul_div_cancel₀ _ warm.ne']
+  show u * (total cs (L.give t f) : ℝ) + T0 * γ t f = u * (total cs (L.take t f) : ℝ)
+  linarith
+
+/-- Where no exchange generates negative entropy, the second law holds of the exergy they
+destroy. -/
+theorem secondLaw_of_generation (warm : 0 ≤ T0)
+    (generates : ∀ t f, f ∈ L.present t → 0 ≤ γ t f) : SecondLaw L (fun t f => T0 * γ t f) :=
+  fun t f present => mul_nonneg warm (generates t f present)
+
+/-- Where every exchange that takes from a closed family generates some entropy, every such
+exchange destroys some exergy. -/
+theorem irreversible_of_generation (warm : 0 < T0)
+    (strict : ∀ cs t, Distinct cs → L.ClosedAt cs t → ∀ f, f ∈ L.present t →
+      0 < total cs (L.take t f) → 0 < γ t f) : Irreversible L (fun t f => T0 * γ t f) :=
+  fun cs t distinct closed f present takes =>
+    mul_pos warm (strict cs t distinct closed f present takes)
+
+/-- **Balance and least loss from one reading.** Read each unit of amount as `u` of available
+work relative to one environment at `T0 > 0`, with the first law and the entropy balance at
+every store and every exchange, and the transfers between them read at the unit. Then the
+levels balance exactly where no store generates entropy; where no exchange generates
+negative entropy, nothing comes from nothing at the unit; and where, besides, every exchange
+that takes from a closed family generates some, the flow is dissipative. -/
+theorem balance_and_least_loss (stores : StoreLaws L E S e s g)
+    (exchanges : ExchangeLaws L T0 e s Q γ)
+    (levels : ReadsLevels W u (fun t c => E t c - T0 * S t c))
+    (transfers : ReadsTransfers L u (fun t f c => e t f c - T0 * s t f c)) (unit : 0 < u)
+    (warm : 0 < T0) :
+    (L.Balances W ↔ ∀ t c, g t c = 0) ∧
+      ((∀ t f, f ∈ L.present t → 0 ≤ γ t f) → L.Gainless) ∧
+      ((∀ t f, f ∈ L.present t → 0 ≤ γ t f) →
+        (∀ cs t, Distinct cs → L.ClosedAt cs t → ∀ f, f ∈ L.present t →
+          0 < total cs (L.take t f) → 0 < γ t f) → L.Dissipative) :=
+  ⟨balances_iff_stores_generate_nothing stores levels transfers unit warm,
+   fun generates => gainless_of_secondLaw (exergyBalance_of_laws exchanges transfers warm)
+     (secondLaw_of_generation warm.le generates) unit,
+   fun generates strict => dissipative_of_irreversible
+     (exergyBalance_of_laws exchanges transfers warm) (secondLaw_of_generation warm.le generates)
+     (irreversible_of_generation warm strict) unit⟩
+
+end FirstLaw
+
+/-! ## Conservation of the total does not give balance -/
+
+namespace Teleport
+
+/-- No exchange takes part at any step. -/
+def flow : Flow Unit Bool where
+  present _ := []
+  take _ _ _ := 0
+  give _ _ _ := 0
+
+/-- One unit stands on `true` before the first step and on `false` after it. -/
+def web : Web Unit Bool where
+  level t c := if t = 0 then (if c then 1 else 0) else (if c then 0 else 1)
+  active _ _ := False
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+/-- The total over both conditions stays at one, and the levels do not balance: the unit
+moves with no exchange to carry it. -/
+theorem conserved_not_balanced :
+    (∀ t, total [true, false] (web.level t) = 1) ∧ ¬ flow.Balances web := by
+  refine ⟨fun t => ?_, fun balances => ?_⟩
+  · by_cases h : t = 0 <;> simp [web, total, h]
+  · have := balances 0 true
+    simp [web, flow, Flow.taken, Flow.given, total] at this
+
+end Teleport
+
+/-! ## The premises together, and a store that degrades within itself -/
+
+namespace Burning
+
+/-- At the first step one exchange takes the one unit that stands on the store and gives
+nothing back; no exchange takes part afterwards. -/
+def flow : Flow Unit Unit where
+  present t := if t = 0 then [()] else []
+  take _ _ _ := 1
+  give _ _ _ := 0
+
+/-- One unit stands on the store before the first step, none after it. -/
+def web : Web Unit Unit where
+  level t _ := if t = 0 then 1 else 0
+  active _ _ := False
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+/-- The store's energy: one before the first step, none after it. -/
+def energy (t : Nat) (_ : Unit) : ℝ := if t = 0 then 1 else 0
+
+/-- The store's entropy, zero throughout. -/
+def entropy (_ : Nat) (_ : Unit) : ℝ := 0
+
+/-- The exchange draws one unit of energy and no entropy from the store. -/
+def energyDrawn (_ : Nat) (_ _ : Unit) : ℝ := 1
+
+/-- The exchange draws no entropy from the store. -/
+def entropyDrawn (_ : Nat) (_ _ : Unit) : ℝ := 0
+
+/-- The store generates no entropy. -/
+def storeGenerates (_ : Nat) (_ : Unit) : ℝ := 0
+
+/-- The exchange passes one unit of heat to the environment. -/
+def heat (_ : Nat) (_ : Unit) : ℝ := 1
+
+/-- The exchange generates one unit of entropy, at an environment at temperature one. -/
+def generates (_ : Nat) (_ : Unit) : ℝ := 1
+
+theorem family {cs : List Unit} (distinct : Distinct cs) {t : Nat} (closed : flow.ClosedAt cs t)
+    (present : () ∈ flow.present t) : cs = [()] := by
+  match cs, distinct with
+  | [], _ => exact absurd (closed () present () (by simp)).1 (by simp [flow])
+  | [()], _ => rfl
+  | () :: () :: _, ⟨fresh, _⟩ => exact absurd (by simp) fresh
+
+/-- The premises of `balance_and_least_loss` hold together, with every exchange that takes
+generating entropy. -/
+theorem meets :
+    StoreLaws flow energy entropy energyDrawn entropyDrawn storeGenerates ∧
+      ExchangeLaws flow 1 energyDrawn entropyDrawn heat generates ∧
+      ReadsLevels web 1 (fun t c => energy t c - 1 * entropy t c) ∧
+      ReadsTransfers flow 1 (fun t f c => energyDrawn t f c - 1 * entropyDrawn t f c) ∧
+      (∀ t f, f ∈ flow.present t → 0 ≤ generates t f) ∧
+      (∀ cs t, Distinct cs → flow.ClosedAt cs t → ∀ f, f ∈ flow.present t →
+        0 < total cs (flow.take t f) → 0 < generates t f) := by
+  refine ⟨⟨fun t c => ?_, fun t c => ?_⟩, fun cs t distinct closed f present => ?_,
+    fun t c => ?_, fun t f c _ => ?_, fun _ _ _ => ?_, fun _ _ _ _ _ _ _ => ?_⟩
+  · by_cases h : t = 0 <;> simp [energy, energyDrawn, flow, rtotal, h]
+  · by_cases h : t = 0 <;> simp [entropy, entropyDrawn, storeGenerates, flow, rtotal, h]
+  · cases f
+    rw [family distinct closed present]
+    simp [rtotal, energyDrawn, entropyDrawn, heat, generates]
+  · by_cases h : t = 0 <;> simp [energy, entropy, web, h]
+  · simp [energyDrawn, entropyDrawn, flow]
+  · simp [generates]
+  · simp [generates]
+
+/-- So the store's level balances and the flow is dissipative. -/
+theorem balanced_and_dissipative : flow.Balances web ∧ flow.Dissipative := by
+  obtain ⟨stores, exchanges, levels, transfers, nonneg, strict⟩ := meets
+  have both := balance_and_least_loss stores exchanges levels transfers one_pos one_pos
+  exact ⟨both.1.mpr fun _ _ => rfl, both.2.2 nonneg strict⟩
+
+end Burning
+
+namespace Leaking
+
+/-- No exchange takes part at any step. -/
+def flow : Flow Unit Unit where
+  present _ := []
+  take _ _ _ := 0
+  give _ _ _ := 0
+
+/-- One unit stands on the store before the first step, none after it. -/
+def web : Web Unit Unit where
+  level t _ := if t = 0 then 1 else 0
+  active _ _ := False
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+/-- The store's entropy: zero before the first step, one after it. -/
+def entropy (t : Nat) (_ : Unit) : ℝ := if t = 0 then 0 else 1
+
+/-- The store generates one unit of entropy across the first step. -/
+def storeGenerates (t : Nat) (_ : Unit) : ℝ := if t = 0 then 1 else 0
+
+/-- The store keeps its energy and generates entropy within itself, and its level, read in
+available work, does not balance: energy conserved at each store does not give balance in
+available work. -/
+theorem energy_conserved_not_balanced :
+    StoreLaws flow (fun _ _ => 1) entropy (fun _ _ _ => 0) (fun _ _ _ => 0) storeGenerates ∧
+      ReadsLevels web 1 (fun t c => 1 - 1 * entropy t c) ∧
+      ReadsTransfers flow 1 (fun _ _ _ => 0 - 1 * 0) ∧ ¬ flow.Balances web := by
+  refine ⟨⟨fun t c => ?_, fun t c => ?_⟩, fun t c => ?_, fun _ _ _ absent => absurd absent (by simp [flow]), ?_⟩
+  · simp [flow, rtotal]
+  · by_cases h : t = 0 <;> simp [entropy, storeGenerates, flow, rtotal, h]
+  · by_cases h : t = 0 <;> simp [entropy, web, h]
+  · intro balances
+    have := balances 0 ()
+    simp [web, flow, Flow.taken, Flow.given, total] at this
+
+end Leaking
 
 /-! ## The statistical form -/
 

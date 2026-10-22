@@ -15510,3 +15510,313 @@ Output → input: OPENING [^ethics] (README note 8), chapter §5 (Web.significan
 **Self-review.** The independence theorems are thin by design: their content lies in the quantifier, every statement whose truth does not change with the significance, and the record says which part is the representation. They replace a meta-theoretic sentence by a stated theorem; they do not show that becoming leaves significance undetermined, nor that the condition is needed. Names: `Rival` takes the existing word of `rival_of_outside` and `bounded_rival`; `ReadsOnlyDynamics` states exactly what the hypothesis is. `Web.significance_undetermined` is not a case (it reads `Retains` and `Significant`, which take the significance), so rule 9 moves nothing.
 
 **The run.** Core closure passed with no core axiom; 73 Lean steps ran, 1,131 reused.
+
+## 348. Balance from the first law (FL1)
+
+```text
+Result(s): balance-from-the-first-law (new); reused: least-loss-from-entropy-production (ExergyBalance,
+           SecondLaw, Irreversible, gainless_of_secondLaw, dissipative_of_irreversible); related:
+           premises-read-off-the-exchange, place-transition-nets-on-the-spine, entropy-history-and-record
+Delta: the physical premise of balance, the other half of §201. A quantity carried only by the exchanges
+       taking part balances the levels exactly where no condition produces it; a conserved total without
+       locality does not. Read in available work, the first law and the entropy balance at each store give
+       Flow.Balances exactly where no store generates entropy, and at each exchange give §201's
+       ExergyBalance, the destroyed exergy T0 times the generated entropy. §201's exergy balance is no
+       longer a separate premise: balance and least loss come from one reading.
+Supplied premises / correspondence: amounts read as available work relative to one environment at
+       T0 > 0, at fixed volume and composition; locality (one transfer per exchange and store, what leaves
+       the one entering the other); each exchange holds nothing across its step; each a hypothesis of a
+       theorem and a correspondence to physics, not proved
+Evidence: periphery module EntropyProduction (now 44 theorems, 74 declarations; Lean 4.30.0-rc2 and the
+          pinned Mathlib; axioms propext, Classical.choice, Quot.sound only), periphery receipt
+          `20261022T103802.432439Z`, checker check_entropy_production.py; the core modules it imports
+          match passed receipts
+Boundary: the step from physics to the Lean; changing volume or composition; amounts that may be dense;
+          a core (prelude-only) form
+Integration: least-loss-from-entropy-production re-pointed and related; OPENING [^conditions]; chapter
+          premise card C and §8.7 (EN, ZH)
+```
+
+The question was whether balance should come from conservation of energy, as dissipation comes from the second law in §201. §201 left it without physics: "Balance needs no bridge (it holds by reading, premise card C)". That is true of a world read off an exchange, but the reading relocates the premise rather than removing it: with the rest counted, balance holds exactly where the rest is never active, and under a law of what has stood exactly where the course is feasible (`World.withRest_closed_iff`, `ExchangeLaw.course_balances_iff`). What says that the counted exchanges are all there is, and that nothing on a condition changes by itself, is physics, and it was nowhere stated.
+
+**Why energy conservation alone is not it.** Three things stand between "energy is conserved" and `Flow.Balances`. Conservation of a total says nothing about one condition: the total over two conditions can stay fixed while a unit moves between them with no exchange (`Teleport.conserved_not_balanced`), so the premise is locality, the continuity equation, not the global law. The levels the dissipation half reads are available work, not energy (§201's move: energy is conserved, so with the environment counted every exchange is lossless), and available work is not conserved: a store that keeps its energy and degrades within itself loses level with no exchange (`Leaking.energy_conserved_not_balanced`). And the conditions are not all energy: mass of an element and a count of individuals obey the same local balance, so the core keeps `Flow.Balances` general and the periphery gives its physical sources.
+
+**What is proved** (each a theorem of `EntropyProduction`, from the stated hypotheses):
+
+- *Balance is local conservation.* `LocalBalance L q x p`: what stands on a condition changes by what the exchanges present carry out of it and what it produces itself. Read at a unit `u > 0` on the levels and the exchanges, what a condition produces is `u` times its departure from balance (`LocalBalance.produced`), so the levels balance exactly where nothing is produced (`balances_iff_unproduced`), and every quantity conserved locally balances (`balances_of_conserved`).
+- *Stores.* The first law and the entropy balance at each store (`StoreLaws`: energy a local balance with no source, entropy one with the store's own generation `g` as source) give available work `E − T0 S` a local balance carried as `e − T0 s` with source `−T0 g` (`StoreLaws.availableWork`, Gouy–Stodola at the store). So with `T0 > 0` the levels balance exactly where no store generates entropy (`balances_iff_stores_generate_nothing`), and where none generates negative entropy no level rises beyond what the exchanges bring (`stores_within`).
+- *Exchanges.* The first law and the entropy balance at each exchange that holds nothing across its step, its heat passing to the environment (`ExchangeLaws`), give §201's `ExergyBalance` with `σ = T0 γ` (`exergyBalance_of_laws`); generation never negative gives `SecondLaw`, and generation whenever it takes gives `Irreversible` (`secondLaw_of_generation`, `irreversible_of_generation`). Heat drawn from the environment carries no available work, so §201's worry that heat from outside gives a formation more than it took does not arise in this reading.
+- *One reading.* `balance_and_least_loss`: under the store and exchange laws with one transfer read on both sides, the levels balance exactly where no store generates entropy, the flow is gainless where no exchange generates negative entropy, and dissipative where every taking exchange generates some. In `Burning` (one store, one exchange that takes its unit and passes it as heat) all the premises hold together, and the flow balances and is dissipative (`Burning.meets`, `Burning.balanced_and_dissipative`), so the hypotheses are not jointly empty.
+
+**What it does not do.** Balance is not thereby a theorem of the dynamics: it is relocated to the first law with locality and to a reading of amounts, which stay hypotheses and a correspondence. Stores whose volume or composition changes carry pressure and chemical terms of available work that are not represented, and levels are whole numbers, so a store's available work is read as a whole number of units; amounts that may be dense are the next step, with a core form needing no Mathlib.
+
+## 349. Slowing down before a condition's own end: T6's seen half (CS1)
+
+```text
+Result(s): new record slowing-down-before-an-own-end (the periphery module SlowingDown, a leaf: a model over the
+       reals in which statistical warnings are read; nothing in the core needs it); reuses runaway-distance-uncoupled
+       (Web.break_not_bounded, T6's unseen half) only as the half it complements.
+Delta: T6's seen half, which the chapter called "known and not proved here", proved in its model. One step of a
+       deviation about a rest is the return multiplier a times the deviation plus noise independent of it; its
+       variance is a^2 Var Y + Var E and its covariance with the deviation now a Var Y (variance_step,
+       covariance_step). Where the variance stays the same across the step and a^2 < 1, it is Var E / (1 - a^2) and the
+       lag-1 autocorrelation is a (stationary_variance, stationary_lag1); the stationary variance rises strictly with
+       a on [0, 1) and tends to infinity as a rises to one (stationaryVariance_strictMonoOn,
+       stationaryVariance_tendsto). At the fold step x + h (m - x^2), rest sqrt m, the step's derivative at the rest is
+       1 - 2 h sqrt m (foldStep_hasDerivAt); it rises to one as the margin m goes to zero (foldMultiplier_tendsto), the
+       variance rises strictly as the margin shrinks (fold_variance_strictAntiOn) and without bound
+       (fold_variance_tendsto), and m = ((1 - a) / (2 h))^2 (fold_margin_read). Under logistic renewal with a
+       proportional draw, rest K (1 - q / r), the multiplier is 1 - h (r - q) (drawnStep_hasDerivAt) = 1 - h r x* / K
+       (drawn_multiplier_level), the level is K (1 - a) / (h r) (drawn_level_read), and as the draw rises to the
+       renewal rate the variance rises strictly and without bound (drawn_variance_strictMonoOn,
+       drawn_variance_tendsto). A dependent's need enters neither statistic: every reading of the margin to it from the
+       multiplier is wrong for some need (need_not_read), and with the need measured the margin is read exactly
+       (need_margin_read).
+Premises / correspondence: discrete steps; the deviation read in the linearization about a rest (the step's
+       derivative there); noise independent of the deviation, with finite variance; stationarity supplied as a
+       hypothesis (the variance the same across the step), not derived from a run; one variable; white noise.
+       Correspondence: critical slowing down (Wissel 1984; Wiesenfeld 1985; Scheffer et al. 2009), before a
+       transcritical end (Kefi et al. 2013), the AR(1) reading of rolling-window indicators (Dakos et al. 2008, 2012).
+Evidence: periphery receipt 20261022T104044.892409Z (passed; 22 theorems, Lean 4.30.0-rc2 and the pinned Mathlib,
+       each declaration on Lean's standard axioms); the literature from memory, not reread.
+Boundary: the known result stated on the theory's terms, not a new result about slowing down; no law here says a
+       run of the nonlinear step stays near its rest, or that a finite window's estimates converge to the stationary
+       values; red noise, several variables (where the critical mode loads on some variables only, Boerlijst et al.
+       2013), flickering and noise-induced transitions are not stated; the need's not being read holds by
+       construction, and its content in the world is the premise that the dependent's feedback onto the stock is
+       negligible, which the field tests measure apart (EW2, EW3).
+Output -> input: chapter T6's standing (EN, ZH); OPENING [^cancer] ("the seen half is the early-warning literature"
+       replaced by the theorem with its premises); new record; board CS1 to the history file.
+```
+
+**What was asked.** OPENING's note on cancer says the warning comes only to those who couple into what breaks, and calls that thesis T6, "whose unseen half is the theorem and whose seen half is the early-warning literature". The unseen half is `Web.break_not_bounded`: a stock coupled by threshold only bounds nothing about how near the break is. The seen half had no Lean. The question was whether it can be proved, and in which model, without claiming more than the literature does.
+
+**What was built** (periphery, `lean/warning/SlowingDown.lean`, with Mathlib's variance, covariance and independence). The model is the one rolling-window indicators are read in: a deviation from a rest that steps by a multiplier plus independent noise. The stochastic step is stated on random variables, not as a moment recursion: the variance and covariance laws come from Mathlib's `IndepFun.variance_add` and `IndepFun.covariance_eq_zero`. Two normal forms then supply the multiplier as the step's derivative at its rest, and give the two ends T6's evidence names: the fold, where the yeast of Dai et al. (2012) collapse, and the transcritical end of a renewal under a rising proportional draw, the case EW1 used against T6's first wording. In that second form the multiplier is `1 − h r x*/K`, so the stock's slowing down tracks its own level. That is why its statistics rise before any dependent's need is crossed on the way down, and why they say nothing about where the need lies.
+
+**The uncoupled side.** `need_not_read` is deliberately weak: the need is not an argument of anything the stock's statistics depend on, so no function of them gives the margin to it for every need. The chapter already said the uncoupled side "holds by construction"; the theorem says no more. What is empirical is whether actual dependents leave their stock's law unchanged, which is what EW2 tested and EW3 will test on longer series.
+
+**Self-review.** Two judgments could be wrong. First, stationarity is a hypothesis: the theorem says what the variance is where it stays the same across a step, not that a run reaches that state. For `a² < 1` the variance recursion converges to the fixed point, but that is not stated here. Second, the derivative at the rest stands in for the nonlinear step near it. That is the standard reading, but nothing here bounds the error of the linearization near the fold, where the basin narrows as the margin goes to zero. Neither changes what the note in OPENING now says, which names the model and calls its fit to measured fluctuations a correspondence.
+
+## 350. Early warnings before seabird breeding failures, on longer series (EW3)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A second frozen field test of thesis T6's
+       uncoupled side (section 289's open item), experiments/break-warnings (ew3.py on ew2.py's statistics).
+Delta: EW2's design, unchanged, on series EW2 had not read: Sydeman et al.'s breeding success to 2020-2021
+       (BCO-DMO 985565), the 2024 South African sardine and anchovy data records (November survey biomass west of
+       Cape Agulhas and to Port Alfred; monthly catches), ICES's 2025 Norwegian spring-spawning herring assessment
+       (recruitment at age 2 read as the year class two years earlier; catches), with the catch in the year and the
+       year before added to EW2's four level covariates as the draw. Benguela 1992-2020 (29 usable years, 10
+       failures), Rost 1994-2021 (28, 9). V1 passed (p = 0.452), V2 passed (p = 0.864). Combined partial r +0.02 for
+       AR1 (95% interval -0.35 to 0.40), -0.20 for variance (-0.52 to 0.16), post hoc. By the frozen reading rule
+       the variance resolves EW2's estimate toward T6 and the AR1 leaves it open.
+Supplied premises / correspondence: EW2's (T6's refutation clause read as conditional independence given the
+       stock's own course, here level and draw; the birds' small share measured apart, Saraux et al. 2021); the new
+       series matched to EW2's on the prey alone (Benguela 0.87, Rost 0.95, raw values in the survey's year and two
+       years before the recruitment year).
+Evidence: frozen predictions, code, layout and dry runs landed on main at 836281856 before any statistic relating a
+       prey series to a breeding series was computed; dry runs: every null at most 0.030, power 0.91 (AR1) and 0.88
+       (variance) against EW2's effect; one run (b8e5787b0), results/ew3/test.json and posthoc.json.
+Boundary: half of Benguela's rows and a quarter of Rost's were EW2's, so the verdicts are not independent of EW2;
+       the series are revised survey and assessment outputs, not Cury et al.'s; the herring's draw falls on adults,
+       not on the year class read; failure relative; feedback not seen by the design; Shetland and the Farallon birds
+       not run (their prey series to 2020 not obtained).
+Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'s field-test sentence; board EW3 to
+       the history file.
+```
+
+**What was asked.** EW2 passed at the frozen level, but every estimate lay in the direction T6's refutation clause names, with a combined partial correlation of about 0.3 ([§289](#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2)). That section named the next test: the same design on longer, unread series, with the catch as the draw, since the clause compares with what "the stock's own level and draw predict". Ren approved the downloads in chat.
+
+**What was done before the freeze.** The breeding success came from BCO-DMO 985565, which has no prey series. The prey and catch came from the data records of the 2024 South African sardine and anchovy assessments and from ICES's summary table for the 2025 herring assessment. The new prey series were matched to EW2's on the prey alone: Benguela's sum of sardine west of Cape Agulhas and anchovy in the survey's year correlates 0.87 with Cury et al.'s series, and ICES's recruitment at age 2, two years later, correlates 0.95 with their age-0 herring. So the series are read as raw values, z-scored, as Cury et al. did. The herring and survey tables' values were seen while they were parsed; no breeding-success value was displayed, and no statistic relating prey to birds was computed. The dry runs took EW2's generators onto the new calendar, with the catch observed and one more null (breeding success also falling with the catch). Every null rejected at most 0.030, and the power against EW2's effect rose from about 0.7 to about 0.9.
+
+**What it found.** Both verdicts passed by wide margins (p = 0.45 and 0.86). The estimates moved toward zero and below: +0.02 for autocorrelation and −0.20 for variance combined, Benguela near zero (0.14, −0.04) and Røst negative (−0.20, −0.53). Without the draw (R4) the estimates were the same within 0.03 for autocorrelation; the draw did not carry them. Windows of 6 and 10 years gave +0.16 and −0.16 for autocorrelation. On the rows EW2 did not test alone (R5), Benguela's partial correlations were 0.64 and 0.61, on 15 rows with six covariates and eight residual degrees of freedom, and Røst's were −0.15 and −0.30; the combined estimates there (+0.17 and +0.03) have intervals of about ±0.5.
+
+**What it means for T6.** The association EW2's estimates pointed to did not appear at more than twice the power. The variance's interval excludes EW2's size; the autocorrelation's does not, so by the rule frozen before the run that half stays open. T6's uncoupled side stays conjectured, now with two passes, the second of moderate power. Nothing here bears on the birds' feedback, which the design cannot see.
+
+**Self-review.** Three judgments could be wrong. First, the verdicts reuse EW2's rows, so a reader who wants independent evidence has only R5, which is weak and whose Benguela estimates are large and positive. A third test on stocks never read (the Farallon juvenile rockfish to 2021, the Shetland sandeel) would settle that. Second, the draw for Røst is the catch of adults, not of the year class read as the prey, so it adjusts the stock's course only through the spawners. Third, the Benguela anchovy is surveyed to Port Alfred, wider than the birds' foraging range west of Cape Agulhas; the 0.87 against Cury et al.'s series bounds how far that matters.
+
+## 351. The laws of 文 as theorems: the coarsest value-keeping class, a formation's own course, the course of forms (WL2)
+
+```text
+Result(s): record the-split-that-makes-sense extended (the coarsest class, one law); new record
+       a-formations-own-course; record a-code-formed-between-formations extended (the course of forms).
+Delta: (1) The same course through the map is the coarsest relation that keeps the map's values and that the law keeps,
+       with no premise (Law.sameFuture_coarsest). For a class keeping the values and carrying the law
+       (Law.KeepsAndCarries), being coarser than every such relation, merging every two configurations with the same
+       course, merging exactly those and making sense are one (Law.coarsest_iff); a class merging exactly those is
+       coarser than every class keeping the values and carrying the law, in every universe (Law.coarser_of_exact).
+       Where a list holds every configuration the names are such a class, and a class keeping the values and carrying
+       the law is coarser than every such class into the names' universe exactly where it merges exactly the
+       configurations with the same course (Law.coarsest_class). (2) Where what couples into a formation is read as
+       values (Web.ValuesThrough; given where admission is decided and the conditions coupled in by level are listed,
+       Web.listed_values), its own course is the value at each step of what couples in then (Web.courseThrough); being
+       alike through its couplings up to a step is one prefix of it (Web.alikeThroughUpTo_iff_prefix), a selection is
+       through them exactly where it selects by that prefix (Web.selectsThrough_iff_prefix), and own courses with at
+       most N and N' states alike before N + N' - 1 are alike through the couplings at every step
+       (Web.alike_of_bounded, Web.selects_alike_of_bounded), a bound attained (Web.bounded_exact); two courses read
+       together with at most P states need agreement before P only (IdentificationRuns.joint_agree,
+       Web.alike_of_joint_bounded); the states of an own course depend on the reading (Web.states_by_reading). (3)
+       Through a code, the course of forms of every course of senses is one state at exactly the moments the course
+       of senses is, exactly where the code tells the senses apart (SharedCodes.course_states_iff); where resolution reads every encoded sequence, it reads
+       the course of forms of every course of words as its course of meanings step by step
+       (SharedCodes.course_read), and a code whose every encoded sequence resolution reads back tells the senses apart
+       (SharedCodes.code_read_every).
+Premises / correspondence: (1) none for the relation; a list holding every configuration for the class. (2) a reading
+       of what couples in as values; for the bound, at most N and N' states of the own courses under that reading.
+       (3) the premises of CrossSituational.reads_every_iff. The bounds hold under every reading and say most under
+       the reading with the fewest states. Correspondence: 理 read off the 文 (D63); 识 as a
+       formation reading its own course (D45, D63); a book as a course of names read back as its senses.
+Evidence: core receipt 20261022T110022.458880Z (passed).
+Boundary: for a law on any type no class merging exactly the configurations with the same course is constructed
+       (the quotient can be formed; that it merges them takes Quot.sound, which the core does not use); being alike through a formation's couplings is in general a relation
+       (admission is a claim, the conditions coupled in by level may be infinitely many); the states of an own course
+       compare values at different steps and so depend on the reading.
+Output → input: chapter WENLI-AND-BECOMING (its 「本节未立者」 item 5, §四 law 6, §六, §七 and the table); 中华本
+       一·二十一, 七·二, 九·三, 九·十三, 十·六; chapter §3.3 and §3.4 (EN, ZH); records the-split-that-makes-sense,
+       a-code-formed-between-formations, wenli-on-the-spine.
+```
+
+**What was built.** In `Becoming.IdentificationRuns`: `Law.KeepsAndCarries`, `Law.sameFuture_coarsest`, `Law.KeepsAndCarries.of_exact`, `Law.coarser_of_exact`, `Law.coarsest_iff`, `Law.coarsest_class`; `Law.KeepsRelation` and `Law.KeepsRelation.run` moved there unchanged from `Becoming.SharedCodes`, so that the coarsest relation is stated with them and the run law keeps one proof (board rule 9; `Becoming.SharedCodes` now imports `Becoming.IdentificationRuns`); `IdentificationRuns.joint_agree`; `Web.ValuesThrough`, `Web.courseThrough`, `Web.listed_values` (through `Becoming.Gain`'s `map_eq_at` and `map_eq_on`, now imported), `Web.alikeThrough_iff`, `Web.alikeThroughUpTo_iff_prefix`, `Web.selectsThrough_iff_prefix`, `Web.selects_alike_iff_prefix`, `Web.alike_of_bounded`, `Web.selects_alike_of_bounded`, `Web.alike_of_joint_bounded`, `Web.oneCondition`, `Web.oneCondition_values`, `Web.bounded_exact`, `Web.states_by_reading`. In `Becoming.SharedCodes`: `course_states_iff` (its witness `Learning.holdFrom`), `course_read`, `code_read_every`. Three modules depend on `Becoming.IdentificationRuns` and none on `Becoming.SharedCodes`, so each run recompiled 23 steps. A first receipt (`20261022T104642.753699Z`, passed) preceded the review; the review's changes were checked again by 20261022T110022.458880Z.
+
+**The exact statement for a formation's coupling.** `Web.AlikeThroughUpTo` compares two level histories at the same steps: admission as a claim (by `↔`) and the levels of the conditions coupled in by level (by `=`, one for each). It is a relation. The evident map with that kernel, to the claim of admission and the family of levels, has it as kernel only with `propext` and function extensionality, or through a quotient; the core gives no map with that kernel in general. So the laws are stated where `value` gives the values of what couples in (`Web.ValuesThrough`), and the core gives such a reading where admission at the formation is decided and the conditions coupled in by level are listed (`Web.listed_values`: whether the levels admit it, and the listed levels). There the formation's own course is a course in the sense of D63, and the laws of the course apply to it: being alike through its couplings is the same prefix, selecting through them is selecting by that prefix, and the bound on states of `Identification.bounded_agree` becomes a bound on what the formation ever tells apart. The states of the own course compare values at different steps, which the coupling never compares: they belong to the reading. `Web.states_by_reading` shows it in the web of one condition: read by the level, a history holding the level at zero has one state; read with the step, more than every bound. The bounded laws hold under every reading, and say most under the reading with the fewest states. Read together, two courses may need fewer steps: where the pair of courses has at most P states, agreement before P is enough (`IdentificationRuns.joint_agree`).
+
+*Reading* [AI reading, D45, D63]. 识, a formation's own further course read through what couples into it, reads exactly the prefix of its own course: nothing about two histories enters its selections beyond that prefix. Where its own courses have finitely many states, everything it will ever tell apart between two histories it tells apart within N + N' − 1 steps; two histories alike through its couplings for T steps and apart later give own courses with more than T + 1 states between them. 理 read off the 文 is one law: among the classes keeping the values and carrying the law, being coarsest against the relations is merging exactly the configurations with the same course, and the relation of the same course is always the coarsest such relation. A book is a course of names: where every sequence is read back, its course of senses is its course of names read through the reading, and the two have the same states where the code tells senses apart.
+
+**Review.** An independent AI review (one agent, read-only) checked statements against docstrings, the index arithmetic of `bounded_exact` (right), naming and stale references. Applied: the binding of `Law.KeepsRelation` in record a-code-formed-between-formations moved to `Becoming.IdentificationRuns` (it would have failed the record check); the package-root and header text no longer say the coarsest-among-classes property holds without the list premise, and name the universe of `Law.coarsest_class`; `Law.coarsest_iff`'s docstring states the comparison with relations, not a coarsest class that might not exist; the quotient remark corrected (the core can form the quotient; that it merges takes `Quot.sound`); the claim that the reading fixes the states got its Lean witness (`Web.states_by_reading`); the headline of `Web.alike_of_bounded` puts the bound on the own courses, not on the formation; `Web.ReadsAsValues` renamed `Web.ValuesThrough` (the old name was close to `SharedCodes.ReadsAs`) and its reading `value`; `selectsThrough_iff_reading` renamed `selectsThrough_iff_prefix`; a new list lemma dropped for `Becoming.Gain`'s `map_eq_at` and `map_eq_on`; `firstThen` dropped for `Learning.holdFrom`; `bounded_exact` carries its reading as a conjunct; `code_read_every` proved from `course_read` directly, with free universes; the joint bound added, as the review suggested. Kept: `code_read_every`'s hypothesis in the form `reads_every_iff` takes with the identity as the meaning, which needs no new list lemma.
+
+**Self-review.** (1) `Law.coarsest_iff` gathers what `sameFuture_of_law`, `identifiesAlike_of_law` and `alike_iff_sameFuture` gave together; what it adds is the coarsest property against every relation keeping the values and kept by the law, with `Law.sameFuture_coarsest`, which needs no premise, and the comparison among classes with existence where a list holds every configuration (`Law.coarsest_class`). The record says so. (2) `Web.alikeThrough_iff` and the prefix form unpack `Web.ValuesThrough`; the content is in `Web.selectsThrough_iff_prefix` (constructed without choice: the reading of the prefix is the class of histories with that prefix), in the bounds with their attainment, which carry `Identification.bounded_agree` and `Identification.bounded_agree_exact` to a formation through a web of one condition, and in `Web.states_by_reading`. (3) The code laws join `CrossSituational.reads_every_iff` to the states of a course; `course_read` lifts that the meaning of a word is read off its form, step by step. The three code theorems stand apart from the base; `code_read_every`, the root, is registered as general structure.
+
+**The run.** Core 285 modules and 12,547 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. Connectivity: 717 of 13,307 apart; the one new apart root of WL2, SharedCodes.code_read_every, registered (general structure); the Law and Web laws reach the base; unregistered roots of other landings, not WL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival.
+
+## 352. Early warnings before Farallon seabird breeding failures (EW4)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A third frozen field test of thesis T6's
+       uncoupled side (section 350's open item: a stock no verdict had used), experiments/break-warnings (ew4.py on
+       ew2.py's statistics).
+Delta: EW2's design, unchanged, with EW2's four level covariates and no draw, on the Southeast Farallon common
+       murres, rhinoceros auklets and pigeon guillemots (BCO-DMO 985565) and the young-of-year rockfish in the core
+       area of the NMFS midwater trawl survey (ERDDAP FED_Rockfish_Catch; the mean over core hauls of log(1 + catch),
+       0.935 with Cury et al.'s series), 1998-2021: 24 usable years, 8 failures, 14 after the years EW2 read. V1
+       passed (p = 0.354), V2 passed (p = 0.373); partial r +0.09 (95% interval -0.37 to 0.51) and +0.08 (-0.38 to
+       0.50), post hoc.
+Supplied premises / correspondence: T6's refutation clause read as conditional independence given the level path;
+       scope by mechanism, the birds' share of the year class unmeasured (Warzybok et al. 2018 give consumption, not
+       a share): the survey reads the year class the birds then eat, and their take reaches later years only through
+       spawners several years on; no draw, since the birds' rockfish are young of the year, mostly the unfished
+       shortbelly rockfish.
+Evidence: frozen predictions, code, layout and dry runs landed on main at 74204a684 before any statistic relating
+       the prey to the birds was computed; dry runs: every null at most 0.028, power 0.57 (AR1) and 0.51 (variance)
+       against EW2's effect, EW2's stop rule met narrowly; one run (79dfef1e0), results/ew4/test.json and posthoc.json.
+Boundary: one stock and 24 years, power about 0.5 only against a large association; scope argued, not measured; a
+       simple index, not the survey's standardized one; ten rows overlap years EW2 read as a reported-only
+       secondary; Shetland not run, since ICES's 2025 assessment of Shetland sandeel carries catches only.
+Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'s field-test sentence; board EW4 to
+       the history file.
+```
+
+**What was asked.** EW3's verdicts reused EW2's rows, so a stock no verdict had used was needed ([§350](#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3)). The candidates named were the Farallon seabirds and the Shetland sandeel. Before claiming, two facts were raised with Ren: EW2 had run both as reported-only secondaries to 2007-2009, and neither was in scope as EW2 drew it, Shetland being the coupled case (the seabird community takes 26-96% near its need) and Farallon's share unmeasured. Ren chose Farallon as the verdict stock after a scope check, with Shetland as the coupled contrast.
+
+**The scope check.** Warzybok et al. (2018) give the Farallon seabirds' consumption by prey and conclude that the rockfish they eat are almost all young of the year, mostly shortbelly rockfish, which is not fished, so competition with the fisheries is "likely to be modest". No source read gives the take as a share of the year class. So the premise that the birds' feedback onto the observed series is negligible is argued by mechanism, as for Røst in EW2: the survey reads each year's young of the year in May-June, the birds eat that year class during and after the survey, and the next year's index is a new year class spawned by adults the birds do not eat, with recruitment weakly tied to spawners. A same-year take during the survey lowers that year's index, which the level covariates match. Shetland could not be run at all: ICES's 2025 assessment of Shetland sandeel carries catches only.
+
+**What it found.** Both verdicts passed (p = 0.35 and 0.37), with partial correlations of +0.09 and +0.08, intervals from about -0.37 to 0.51. Without the level covariates the variance's association was +0.39 (interval -0.02 to 0.68): the poor years follow the stock's low years, the decline T6 allows, and the level path carries it. Windows of 6 and 10 years gave +0.09 and -0.12 for autocorrelation; with the two cormorants added, +0.14 and -0.25; on the rows after EW2's years alone, +0.13 and -0.12 on 14 rows.
+
+**What it means for T6.** A third pass, the first on a stock no verdict had used, and at power about 0.5 against EW2's effect. Across EW2, EW3 and EW4, no stock's prey statistics carried information on the birds' poor years beyond the prey's own course at the frozen levels, and the positive estimates of EW2 have not recurred. The passes are weak in different ways: EW2's by power, EW3's by reuse of EW2's rows, EW4's by power and by scope argued rather than measured. T6's uncoupled side stays conjectured.
+
+**Self-review.** First, the stop rule was met by 0.006 on variance; a slightly different generator could have stopped the test, and the frozen rule was kept. Second, the index is the mean of log catches over whatever core hauls a year had (15 in 2020), not the survey's standardized index; its 0.935 with Cury et al.'s series bounds the difference before 2008, not after. Third, scope by mechanism leaves open a large share of the year class taken during the survey itself, which would enter the level as a same-year effect and could add variance the covariates do not match.
+
+## 353. Groups founded mixed, and the rule of returns to groupmates (EV12)
+
+```text
+Result(s): Becoming.SelectionLevels (78 theorems (55 before), 31 declarations added (23 theorems), none removed) states selection with returns to groupmates. For any family read with a
+       weight, an amount and a reading o, where each member's weight with k per unit of its own amount is a base with
+       b per unit of o, the weight's concordance with the amount, with k times the amount's spread (its concordance
+       with itself) and b times o's discordance with it, is the weight's discordance with b times o's concordance
+       (returns_balance, from covariation and Reproduction.variation with the relation carried to the totals,
+       returns_total, returns_weighted); so the whole selects for the amount exactly where b times o's covariation
+       with it exceeds k times its spread (rises_iff_reading). For a family listed as groups of m members, where each
+       unit a member keeps gives b to every member of its group, its own included, and takes c from the keeper: the
+       spread over the whole is k times the groups' own spreads with the spread among them (spread_levels); within
+       the groups the offspring number goes against the amount by b + c times their spreads (within_returns), so
+       selection within goes against keeping wherever a group varies (within_against); among groups read by their
+       totals it goes for keeping exactly where b + c falls short of m b (among_returns, among_for_iff); and the
+       whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread
+       among groups (rises_iff_returns). Groups uniform in the amount (assortment one) select for it, where they
+       differ, exactly where b (m - 1) exceeds c (rises_iff_returns_of_uniform); groups alike in total (assortment
+       none) never do (not_rises_of_alike); over listed generations with exact transmission the mean rises across a
+       step exactly so (rises_exact_iff_returns). Witnesses: Founding.either_verdict (the same returns, keepers
+       together selected for, keepers apart selected against); Partly.below_one (two thirds of the spread among
+       pairs; the rule met at assortment one, b (m - 1) = 3 > 2 = c, and yet the whole selects against keeping, 45
+       against 36). Record selection-with-returns-to-groupmates.
+Delta: the evolution chapter's next connection 1 asked when selection within groups against keeping a condition loses
+       to selection among groups for it; for groups founded mixed (assortment below one) with additive returns, the
+       answer is exact: where m b times the share of the spread among groups exceeds b + c. Record
+       groups-formed-by-descent stated the complete-assortment end and left the share as a function of assortment
+       unstated. No new module: the laws lie in Becoming.SelectionLevels (board rule 9), which now imports
+       Becoming.Reproduction for the amount's spread (variation, discord_self).
+Premises: offspring numbers depending on own and groupmates' amounts additively (each unit kept giving b to every
+       member of its group, own included, and taking c from the keeper; no synergy), groups of equal size; for the
+       step law, exact transmission. Natural numbers: the premise is written w p + (b + c) a p = B + b A_g, nothing
+       subtracted.
+Evidence: core receipt 20261022T122330.896153Z (passed; Becoming.SelectionLevels every axiom report empty; core 285 modules and 12,570 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,197 reused); the
+       connectivity rerun (740 of 13,330 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: additive returns only: synergy (returns depending on the product of own and groupmates' amounts) is not
+       stated, nor groups of unequal size for the returns law, nor how assortment arises (how groups are founded is
+       given). The share of the spread among groups is read off the given grouping at the step; how it changes over
+       generations (selection within re-entering at each step, migration, inexact transmission) is not stated.
+       Natural-number amounts and returns, finite lists, discrete generations.
+Output → input: EV11 gave the complete-assortment end: groups formed by descent from uniform groups, selection among
+       lineages alone. Here every assortment between: within goes against keeping by b + c times the spread within,
+       among goes for it by m b - (b + c) times the spread among, so the verdict is read off how the spread divides,
+       the multilevel division of Price's equation meeting Hamilton's rule in one balance. The same returns give
+       either verdict by how the groups are founded, so the collective concern of chapter section 7 turns on how
+       the groups whose members give to each other are formed. Next: drift with selection in one draw; mutation
+       (transmission not exact); several carried amounts and Fisher's identity.
+```
+
+The kit is [`development/ev12-returns/`](development/ev12-returns/): the module as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev12.txt`), record (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **One balance from three covariations.** With `ew`, `ea`, `eo` the covariations of weight, amount and reading with the amount, `ew + k·ea + b·(eo reversed)` sums to `n·W_w + k·n·W_a + b·T_o·T_a + (D_w + b·C_o) = T_w·T_a + k·T_a² + b·n·W_o + (C_w + k·S + b·D_o)`. The premise carried to the totals gives `n·W_w + k·n·W_a = n·B·T_a + b·n·W_o` and `T_w·T_a + k·T_a² = n·B·T_a + b·T_o·T_a`, so both sides open with the same three terms and cancel to the balance.
+- **Within.** Read on one group, the reading is the group's total, uniform there: nothing concordant or discordant, so `C_g(w) + (b + c)·S_g = D_g(w)`.
+- **Among.** A group's totals satisfy `W_g + (b + c)·A_g = m·B + m·b·A_g`; the balance read on the groups, with `D(A, A) = 0`, gives `C_A(w) + (b + c)·S_A = D_A(w) + m·b·S_A`.
+- **Whole.** `levels` with the two laws: `k·C_W(w) + C_A(w) + (b + c)·(k·S_W + S_A) = k·D_W(w) + D_A(w) + m·b·S_A`, read through `lt_iff_of_balance`.
+- **Reading over the rationals.** With N members, `S = N²·V_T` and `S_A = N²·V_A` (the variance of group means, member-weighted), so the rule is `m·b·ρ > b + c` with `ρ = V_A / V_T`; with the regression of groupmates' mean amount on own `r = (m·ρ − 1)/(m − 1)`, it is `r·b·(m − 1) > c`.
+
+**Self-review.** The rule is known: Hamilton (1964) for kin, Hamilton (1975) reading the Price equation's among-group share through relatedness within groups, and the equivalence of the multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006; Marshall 2015), all from memory and not reread. What is stated here is that equivalence in counting form with nothing subtracted and no regression coefficient formed: one balance whose within and among parts are the multilevel division of the selection term, and whose whole is the rule. The witnesses show the content beyond the complete-assortment end: the same returns give either verdict by how the groups are founded, and assortment below one can lose where assortment one would win. Synergy, unequal sizes and the change of assortment over generations stay open; the rule does not say how groups are founded.
+
+## 354. Balance from conservation along a relation (FL2)
+
+```text
+Result(s): balance-from-conservation-along-a-relation (new); reused: Flow.Balances, Flow.BalancesOn, Prelude total
+           and Distinct, Dissipation.total_eq_zero; related: balance-from-the-first-law (§348), premises-read-off-the-
+           exchange
+Delta: FL1 grounded balance in the first law with locality, but stated locality as a property of transfers
+       (LocalBalance assumes each exchange carries a definite transfer). Here the transfers are derived. Over finitely
+       many relata, with the relation a computable test: transfers moving only between adjacent relata that balance a
+       step exist exactly where the total is conserved on every family the relation closes (Continuity.balancing_iff),
+       the transfers computed one relatum at a time (Continuity.route, Continuity.route_balancing); a law whose next
+       level at a relatum reads only it and the relata adjacent to it and that conserves the total from every
+       configuration conserves it on every closed family (Continuity.conservedOn_of_law), so each of its runs
+       balances along the relation (Continuity.balancesOn_of_law). Teleport: swapping two levels conserves the total
+       and balances along the full relation, not along the empty one (Continuity.Teleport.no_transfers_apart,
+       Continuity.Teleport.balanced_together).
+Supplied premises / correspondence: finitely many relata listed without repetition; equality of relata decided and
+       the relation a Bool test; levels whole numbers; for the law, conservation from every configuration, the one with
+       nothing anywhere included
+Evidence: core module Becoming.Continuity, 43 theorems in 64 declarations, empty axiom reports; core
+          receipt `20261022T124646.497747Z` (core 286 modules and 12,613 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,201 reused); connectivity: 745 of 13,373 apart, 5 of the module's 43; its two apart roots, the Teleport witnesses, registered (model witness); unregistered roots of other landings, not FL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival
+Boundary: the transfers depend on the whole configuration (no local flux); a transfer may exceed what stands on its
+          source; infinitely many relata; a relation that is not decided
+Integration: balance-from-the-first-law related; chapter premise card C, §8.7's balance bullet, the relation to known
+          results and §9 (EN, ZH); significance review, continuity check
+```
+
+The question left by §348 was whether balance could be more than a premise about transfers. FL1 derived it from the first law with locality, but `LocalBalance` already assumes that what leaves a store is carried by one transfer per exchange. Given only the levels before and after a step and a relation among the relata, are there transfers along the relation that account for every change, and when?
+
+**The answer is conservation on every closed family.** Read a family as a test on the relata. A family is closed when no two adjacent relata lie one inside it and one outside. If transfers move only between adjacent relata and balance the step, the total on a closed family changes only by what crosses its boundary, and nothing does: `conserved_of_balancing`, by swapping the double sum of what moves inside the family. Conversely, where every closed family keeps its total, `route` builds the transfers. It removes the first listed relatum `x`, exchanges `x`'s change with the first relatum `y` adjacent to it (`y` sends `next x - prev x` to `x`, `x` sends `prev x - next x` to `y`, one of them zero), and routes the rest with two neighbours of `x` taken as adjacent; a move between two relata that were adjacent only through `x` is passed through `x`, which receives and sends the same amount. The family condition passes to the smaller problem because a family closed once `x` is removed, extended to `x` by its value at `y`, is closed before (`conservedOn_rest`); where `x` has no neighbour, `{x}` is itself closed and keeps its level (`kept_alone`). The construction is a function, not an existence claim, so it gives transfers at every step of a run with no choice principle, and every declaration has an empty axiom report.
+
+**Where locality enters.** The equivalence uses no property of a law, only of a step. Locality enters through `conservedOn_of_law`: if the law's next level at a relatum reads only that relatum and its neighbours, and the law conserves the total from every configuration, then on a closed family it conserves the total too. From the configuration with nothing anywhere, conservation gives nothing anywhere; from the part of any configuration on a closed family, the law gives on the family what it gives from the whole (the family's relata read only the family) and outside it what it gives from nothing. So a local law that conserves its total balances every run along the relation it reads. FL1's Teleport fails exactly here: along the empty relation the family of `true` alone is closed and the swap moves its unit out, so no transfers along that relation balance it; along the relation the swap actually reads, they do.
+
+**Literature.** A flow on a finite graph with a prescribed divergence exists exactly where the divergence sums to zero on each connected component; that is the network-flow fact behind `balancing_iff`, here stated with the spine's families and computed. For cellular automata on lattices more is known: a globally conserved additive quantity has a flux that depends only on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and in two (Kari and Taati 2008). Neither the locality of the flux nor a displacement bounded by occupancy is shown here; `route` depends on the whole configuration, and a move may exceed what stands on its source within the step.
+
+**What it does not do.** It does not make balance a theorem of every dynamics: conservation on closed families is the content, and it fails where a law creates or destroys the quantity. It covers finitely many relata with a decided relation; an infinite world needs totals that the core does not state, and the local flux of the lattice literature is the next step.

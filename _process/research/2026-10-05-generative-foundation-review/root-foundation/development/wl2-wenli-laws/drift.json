@@ -1,0 +1,353 @@
+{
+ "errors": [
+  "the-split-that-makes-sense: validation_scope: length: en 702 chars > 600",
+  "the-split-that-makes-sense: validation_scope: length: zh 334 chars > 260"
+ ],
+ "source_drift": [
+  {
+   "id": "a-formations-own-course",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+   "reviewed_sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254",
+   "current_sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22",
+   "changed_sections": [
+    "## 篇九　感、识与知"
+   ]
+  },
+  {
+   "id": "a-step-coupling-keeps-at-every-horizon",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "a-weighting-faster-than-renewal-ends-the-base",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "any-number-of-drawers-in-turn",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
+   ]
+  },
+  {
+   "id": "civilization-thought-on-the-spine",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+   "reviewed_sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254",
+   "current_sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22",
+   "changed_sections": [
+    "## 篇一　大化",
+    "## 篇七　类与理",
+    "## 篇九　感、识与知",
+    "## 篇十　名"
+   ]
+  },
+  {
+   "id": "closed-capture",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+   "reviewed_sha256": "9564da982531bc1652257f0be08e69f99a2702ae957e61854af80099cb029867",
+   "current_sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "consequence-revised-reference-plan",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "drawers-in-turn-draw-everything",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
+   ]
+  },
+  {
+   "id": "drawers-in-turn-within-capacities",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
+   ]
+  },
+  {
+   "id": "horizon-optima-hold-the-greatest-renewal",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "identification-where-bounded",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+   "reviewed_sha256": "9564da982531bc1652257f0be08e69f99a2702ae957e61854af80099cb029867",
+   "current_sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "imposing-a-code-breaks-the-symmetry",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+   "reviewed_sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2",
+   "current_sha256": "787286e05f9bfe145fe144f8748dba51a893285656902bfac9b6439f9feb3e46",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "keeping-forgoes-the-renewal-at-the-need",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "optima-rebuild-a-depleted-base",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "others-drawing-first-end-the-base",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "raising-what-couples-in-draws-from-beyond",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "re-optimizing-above-a-renewal-ends-it",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "recurring-reference-revision",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "revision-comes-to-drawing-everything",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
+   ]
+  },
+  {
+   "id": "room-read-off-the-exchange",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "runaway-distance-uncoupled",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "seeking-boundary",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "selection-through-a-model-of-the-options",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "selection-through-couplings",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "several-optimizers-drain-by-their-joint-capacity",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "synonyms-and-coined-forms",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+   "reviewed_sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2",
+   "current_sha256": "787286e05f9bfe145fe144f8748dba51a893285656902bfac9b6439f9feb3e46",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "taking-what-most-hold",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+   "reviewed_sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2",
+   "current_sha256": "787286e05f9bfe145fe144f8748dba51a893285656902bfac9b6439f9feb3e46",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "target-capture",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "the-boundary-of-enough-under-undetermined-laws",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "the-gap-for-ones-own-act",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "the-last-change-of-a-run",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "wenli-on-the-spine",
+   "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+   "reviewed_sha256": "a37e7781ba0d7c27f565cac5fd45f1c103ca220e456f060c2dcc837f50d775bd",
+   "current_sha256": "805700c9d0a2dd7dfae85b910bc9347da71f62e6b416b05b7884c7a48208e242",
+   "changed_sections": [
+    "## 文、理与读：核心的认识论在文中",
+    "(before the first heading)"
+   ]
+  },
+  {
+   "id": "wenli-on-the-spine",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+   "reviewed_sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254",
+   "current_sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22",
+   "changed_sections": [
+    "## 篇一　大化",
+    "## 篇七　类与理",
+    "## 篇九　感、识与知",
+    "## 篇十　名"
+   ]
+  },
+  {
+   "id": "what-a-rise-draws-from-beyond",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "what-an-optimum-does-beyond-what-couples-in",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "when-the-runs-of-a-process-settle",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry"
+   ]
+  },
+  {
+   "id": "widening-along-a-reading",
+   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "reviewed_sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13",
+   "current_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+   "changed_sections": [
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
+   ]
+  }
+ ]
+}

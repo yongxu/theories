@@ -5545,7 +5545,7 @@ Contains 25 textual `#print axioms` commands; their results belong to the origin
 <a id="module-38befb7a7fdb"></a>
 
 <details>
-<summary>EntropyProduction.lean — 33 explicit declarations</summary>
+<summary>EntropyProduction.lean — 74 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
@@ -5555,42 +5555,83 @@ Imports: `Mathlib.MeasureTheory.Integral.Bochner.Basic`, `Mathlib.MeasureTheory.
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.EntropyProduction.ExergyBalance.give_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L98) | 98 |
-| [Becoming.EntropyProduction.gainless_of_secondLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L107) | 107 |
-| [Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L113) | 113 |
-| [Becoming.EntropyProduction.passing_balance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L134) | 134 |
-| [Becoming.EntropyProduction.secondLaw_not_dissipative](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L144) | 144 |
-| [Becoming.EntropyProduction.dissipative_of_irreversible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L153) | 153 |
-| [Becoming.EntropyProduction.loss_of_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L172) | 172 |
-| [Becoming.EntropyProduction.dissipative_of_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L184) | 184 |
-| [Becoming.EntropyProduction.loss_at_finer_unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L194) | 194 |
-| [Becoming.EntropyProduction.dissipativeBy_of_efficiency](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L207) | 207 |
-| [Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L242) | 242 |
-| [Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L257) | 257 |
-| [Becoming.EntropyProduction.expected_runs_down](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L279) | 279 |
-| [Becoming.EntropyProduction.expected_takers_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L299) | 299 |
-| [Becoming.EntropyProduction.expected_stock_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L315) | 315 |
-| [Becoming.EntropyProduction.taking_probability_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L319) | 319 |
-| [Becoming.EntropyProduction.taking_probability_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L333) | 333 |
-| [Becoming.EntropyProduction.taking_not_recurring_ae](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L347) | 347 |
-| [Becoming.EntropyProduction.Fluctuation.integral_coin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L388) | 388 |
-| [Becoming.EntropyProduction.Fluctuation.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L394) | 394 |
-| [Becoming.EntropyProduction.Fluctuation.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L399) | 399 |
-| [Becoming.EntropyProduction.Fluctuation.gains_in_one_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L405) | 405 |
-| [Becoming.EntropyProduction.expected_production_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L432) | 432 |
-| [Becoming.EntropyProduction.gain_probability_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L448) | 448 |
+| [Becoming.EntropyProduction.ExergyBalance.give_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L113) | 113 |
+| [Becoming.EntropyProduction.gainless_of_secondLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L122) | 122 |
+| [Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L128) | 128 |
+| [Becoming.EntropyProduction.passing_balance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L149) | 149 |
+| [Becoming.EntropyProduction.secondLaw_not_dissipative](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L159) | 159 |
+| [Becoming.EntropyProduction.dissipative_of_irreversible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L168) | 168 |
+| [Becoming.EntropyProduction.loss_of_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L187) | 187 |
+| [Becoming.EntropyProduction.dissipative_of_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L199) | 199 |
+| [Becoming.EntropyProduction.loss_at_finer_unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L209) | 209 |
+| [Becoming.EntropyProduction.dissipativeBy_of_efficiency](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L222) | 222 |
+| [Becoming.EntropyProduction.cast_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L259) | 259 |
+| [Becoming.EntropyProduction.rtotal_combine](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L265) | 265 |
+| [Becoming.EntropyProduction.rtotal_congr_on](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L271) | 271 |
+| [Becoming.EntropyProduction.rtotal_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L281) | 281 |
+| [Becoming.EntropyProduction.ReadsTransfers.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L312) | 312 |
+| [Becoming.EntropyProduction.LocalBalance.produced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L319) | 319 |
+| [Becoming.EntropyProduction.balances_iff_unproduced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L331) | 331 |
+| [Becoming.EntropyProduction.balances_of_conserved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L349) | 349 |
+| [Becoming.EntropyProduction.StoreLaws.availableWork](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L365) | 365 |
+| [Becoming.EntropyProduction.balances_iff_stores_generate_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L382) | 382 |
+| [Becoming.EntropyProduction.stores_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L399) | 399 |
+| [Becoming.EntropyProduction.exergyBalance_of_laws](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L428) | 428 |
+| [Becoming.EntropyProduction.secondLaw_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L449) | 449 |
+| [Becoming.EntropyProduction.irreversible_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L455) | 455 |
+| [Becoming.EntropyProduction.balance_and_least_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L467) | 467 |
+| [Becoming.EntropyProduction.Teleport.conserved_not_balanced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L506) | 506 |
+| [Becoming.EntropyProduction.Burning.family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L555) | 555 |
+| [Becoming.EntropyProduction.Burning.meets](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L564) | 564 |
+| [Becoming.EntropyProduction.Burning.balanced_and_dissipative](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L585) | 585 |
+| [Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L617) | 617 |
+| [Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L653) | 653 |
+| [Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L668) | 668 |
+| [Becoming.EntropyProduction.expected_runs_down](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L690) | 690 |
+| [Becoming.EntropyProduction.expected_takers_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L710) | 710 |
+| [Becoming.EntropyProduction.expected_stock_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L726) | 726 |
+| [Becoming.EntropyProduction.taking_probability_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L730) | 730 |
+| [Becoming.EntropyProduction.taking_probability_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L744) | 744 |
+| [Becoming.EntropyProduction.taking_not_recurring_ae](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L758) | 758 |
+| [Becoming.EntropyProduction.Fluctuation.integral_coin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L799) | 799 |
+| [Becoming.EntropyProduction.Fluctuation.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L805) | 805 |
+| [Becoming.EntropyProduction.Fluctuation.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L810) | 810 |
+| [Becoming.EntropyProduction.Fluctuation.gains_in_one_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L816) | 816 |
+| [Becoming.EntropyProduction.expected_production_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L843) | 843 |
+| [Becoming.EntropyProduction.gain_probability_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L859) | 859 |
 
 Definitions and types:
 
-- `def` [Becoming.EntropyProduction.ExergyBalance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L74) (L74)
-- `def` [Becoming.EntropyProduction.SecondLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L79) (L79)
-- `def` [Becoming.EntropyProduction.Irreversible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L84) (L84)
-- `def` [Becoming.EntropyProduction.DestroysAtLeast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L90) (L90)
-- `def` [Becoming.EntropyProduction.ExpectedDissipatesOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L228) (L228)
-- `def` [Becoming.EntropyProduction.HasExpectations](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L233) (L233)
-- `def` [Becoming.EntropyProduction.Fluctuation.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L372) (L372)
-- `def` [Becoming.EntropyProduction.Fluctuation.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L378) (L378)
-- `def` [Becoming.EntropyProduction.Fluctuation.coin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L386) (L386)
+- `def` [Becoming.EntropyProduction.ExergyBalance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L89) (L89)
+- `def` [Becoming.EntropyProduction.SecondLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L94) (L94)
+- `def` [Becoming.EntropyProduction.Irreversible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L99) (L99)
+- `def` [Becoming.EntropyProduction.DestroysAtLeast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L105) (L105)
+- `def` [Becoming.EntropyProduction.rtotal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L255) (L255)
+- `def` [Becoming.EntropyProduction.LocalBalance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L297) (L297)
+- `def` [Becoming.EntropyProduction.ReadsLevels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L302) (L302)
+- `def` [Becoming.EntropyProduction.ReadsTransfers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L307) (L307)
+- `def` [Becoming.EntropyProduction.StoreLaws](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L358) (L358)
+- `def` [Becoming.EntropyProduction.ExchangeLaws](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L420) (L420)
+- `def` [Becoming.EntropyProduction.Teleport.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L491) (L491)
+- `def` [Becoming.EntropyProduction.Teleport.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L497) (L497)
+- `def` [Becoming.EntropyProduction.Burning.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L521) (L521)
+- `def` [Becoming.EntropyProduction.Burning.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L527) (L527)
+- `def` [Becoming.EntropyProduction.Burning.energy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L535) (L535)
+- `def` [Becoming.EntropyProduction.Burning.entropy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L538) (L538)
+- `def` [Becoming.EntropyProduction.Burning.energyDrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L541) (L541)
+- `def` [Becoming.EntropyProduction.Burning.entropyDrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L544) (L544)
+- `def` [Becoming.EntropyProduction.Burning.storeGenerates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L547) (L547)
+- `def` [Becoming.EntropyProduction.Burning.heat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L550) (L550)
+- `def` [Becoming.EntropyProduction.Burning.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L553) (L553)
+- `def` [Becoming.EntropyProduction.Leaking.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L595) (L595)
+- `def` [Becoming.EntropyProduction.Leaking.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L601) (L601)
+- `def` [Becoming.EntropyProduction.Leaking.entropy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L609) (L609)
+- `def` [Becoming.EntropyProduction.Leaking.storeGenerates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L612) (L612)
+- `def` [Becoming.EntropyProduction.ExpectedDissipatesOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L639) (L639)
+- `def` [Becoming.EntropyProduction.HasExpectations](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L644) (L644)
+- `def` [Becoming.EntropyProduction.Fluctuation.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L783) (L783)
+- `def` [Becoming.EntropyProduction.Fluctuation.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L789) (L789)
+- `def` [Becoming.EntropyProduction.Fluctuation.coin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean#L797) (L797)
 
 </details>
 
@@ -5635,7 +5676,7 @@ Definitions and types:
 <details>
 <summary>SlowingDown.lean — 30 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean`
 

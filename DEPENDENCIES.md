@@ -5,14 +5,15 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-383 registered results: 357 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 897 curated edges join 335 results to the results they draw on.
+388 registered results: 362 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 905 curated edges join 339 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
 ## Edges
 
-- [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="a-code-formed-between-formations--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][]
 - [a-coupling-saturated-by-what-it-has-carried][] ← <a id="a-coupling-saturated-by-what-it-has-carried--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="a-coupling-saturated-by-what-it-has-carried--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="a-coupling-saturated-by-what-it-has-carried--how-loops-form"></a>[how-loops-form][]
+- [a-formations-own-course][] ← <a id="a-formations-own-course--selection-through-couplings"></a>[selection-through-couplings][] · <a id="a-formations-own-course--identification-where-bounded"></a>[identification-where-bounded][]
 - [a-goal-along-a-lineage][] ← <a id="a-goal-along-a-lineage--need-drift-along-a-lineage"></a>[need-drift-along-a-lineage][]
 - [a-history-read-off-its-finite-stretches][] ← <a id="a-history-read-off-its-finite-stretches--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][]
 - [a-law-through-a-projection-along-one-run][] ← <a id="a-law-through-a-projection-along-one-run--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-law-through-a-projection-along-one-run--experiment-needs-return"></a>[experiment-needs-return][] · <a id="a-law-through-a-projection-along-one-run--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="a-law-through-a-projection-along-one-run--finite-trace-transport"></a>[finite-trace-transport][] · <a id="a-law-through-a-projection-along-one-run--determinacy-up-to-likeness"></a>[determinacy-up-to-likeness][] · <a id="a-law-through-a-projection-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-a-projection-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-a-projection-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
@@ -35,6 +36,8 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [any-number-of-drawers-in-turn][] ← <a id="any-number-of-drawers-in-turn--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [arising-needs-change][] ← <a id="arising-needs-change--support-from-the-supported"></a>[support-from-the-supported][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [balance-from-conservation-along-a-relation][] ← <a id="balance-from-conservation-along-a-relation--balance-from-the-first-law"></a>[balance-from-the-first-law][] *(interpretive)*
+- [balance-from-the-first-law][] ← <a id="balance-from-the-first-law--least-loss-from-entropy-production"></a>[least-loss-from-entropy-production][]
 - [bands-of-the-three-powers][] ← <a id="bands-of-the-three-powers--place-relations-in-context"></a>[place-relations-in-context][]
 - [basic-priority-step-by-step][] ← <a id="basic-priority-step-by-step--ranking-under-readings"></a>[ranking-under-readings][] · <a id="basic-priority-step-by-step--relation-level-law-of-easing"></a>[relation-level-law-of-easing][]
 - [basins-of-a-determined-law][] ← <a id="basins-of-a-determined-law--attraction-is-not-returning"></a>[attraction-is-not-returning][]
@@ -267,6 +270,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [selection-term-over-generations][] ← <a id="selection-term-over-generations--evolution-on-descent"></a>[evolution-on-descent][] · <a id="selection-term-over-generations--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
 - [selection-through-couplings][] ← <a id="selection-through-couplings--testing-within-couplings"></a>[testing-within-couplings][] · <a id="selection-through-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="selection-through-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="selection-through-couplings--target-capture"></a>[target-capture][]
 - [selection-under-registration-revision][] ← <a id="selection-under-registration-revision--selection-through-couplings"></a>[selection-through-couplings][] · <a id="selection-under-registration-revision--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="selection-under-registration-revision--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
+- [selection-with-returns-to-groupmates][] ← <a id="selection-with-returns-to-groupmates--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-with-returns-to-groupmates--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][] · <a id="selection-with-returns-to-groupmates--groups-formed-by-descent"></a>[groups-formed-by-descent][]
 - [selection-within-and-among-groups][] ← <a id="selection-within-and-among-groups--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [selection-within-and-among-groups-of-any-sizes][] ← <a id="selection-within-and-among-groups-of-any-sizes--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-within-and-among-groups-of-any-sizes--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [sensitivity-is-the-least-coupling][] ← <a id="sensitivity-is-the-least-coupling--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="sensitivity-is-the-least-coupling--testing-within-couplings"></a>[testing-within-couplings][]
@@ -349,6 +353,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 
 [a-code-formed-between-formations]: theories/becoming/results/records/a-code-formed-between-formations.md
 [a-coupling-saturated-by-what-it-has-carried]: theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md
+[a-formations-own-course]: theories/becoming/results/records/a-formations-own-course.md
 [a-goal-along-a-lineage]: theories/becoming/results/records/a-goal-along-a-lineage.md
 [a-history-read-off-its-finite-stretches]: theories/becoming/results/records/a-history-read-off-its-finite-stretches.md
 [a-law-through-a-projection-along-one-run]: theories/becoming/results/records/a-law-through-a-projection-along-one-run.md
@@ -372,6 +377,8 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [arising-needs-change]: theories/becoming/results/records/arising-needs-change.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
 [attraction-is-not-returning]: theories/becoming/results/records/attraction-is-not-returning.md
+[balance-from-conservation-along-a-relation]: theories/becoming/results/records/balance-from-conservation-along-a-relation.md
+[balance-from-the-first-law]: theories/becoming/results/records/balance-from-the-first-law.md
 [bands-of-the-three-powers]: theories/becoming/results/records/bands-of-the-three-powers.md
 [basic-priority-step-by-step]: theories/becoming/results/records/basic-priority-step-by-step.md
 [basins-of-a-determined-law]: theories/becoming/results/records/basins-of-a-determined-law.md
@@ -628,6 +635,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [selection-through-a-model-of-the-options]: theories/becoming/results/records/selection-through-a-model-of-the-options.md
 [selection-through-couplings]: theories/becoming/results/records/selection-through-couplings.md
 [selection-under-registration-revision]: theories/becoming/results/records/selection-under-registration-revision.md
+[selection-with-returns-to-groupmates]: theories/becoming/results/records/selection-with-returns-to-groupmates.md
 [selection-within-and-among-groups]: theories/becoming/results/records/selection-within-and-among-groups.md
 [selection-within-and-among-groups-of-any-sizes]: theories/becoming/results/records/selection-within-and-among-groups-of-any-sizes.md
 [sensitivity-is-the-least-coupling]: theories/becoming/results/records/sensitivity-is-the-least-coupling.md

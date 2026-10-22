@@ -2387,6 +2387,71 @@
    "category": "general-structure",
    "reason": "Where more than half the members read alike on two histories, taking what most read goes alike on them: a counting law of every majority reading over a list of members, in its own vocabulary (ZG7)."
   },
+  "Becoming.SharedCodes.code_read_every": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "A code whose every sequence of forms resolution reads back tells senses apart, and its course of forms is one state exactly where the course of senses is: a law of every code on any type of senses and forms and of courses of any values (with course_states_iff and course_read, which it uses). A course is the values of a run read through a map and every course is the course of a run of free branching (Parting.freeRun_course), so it holds of the courses of runs without naming one (WL2)."
+  },
+  "Becoming.SelectionLevels.rises_iff_reading": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "where a weight with k per unit of the amount is a base with b per unit of a reading, the whole selects for the amount exactly where b times the reading's covariation with it exceeds k times its spread: a law of any finite family read with weights and amounts, with no world"
+  },
+  "Becoming.SelectionLevels.within_against": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "selection within groups goes against keeping wherever a group varies in it: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.among_for_iff": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "selection among groups goes for keeping exactly where b + c falls short of m b times the spread among them: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.rises_iff_returns_of_uniform": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "groups uniform in the amount select for it, where they differ, exactly where b (m - 1) exceeds c: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.not_rises_of_alike": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "groups alike in their totals of the amount never select for it: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.rises_exact_iff_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "over listed generations with exact transmission, the mean rises across a step exactly where the rule of returns to groupmates holds: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.Founding.mixed_equal": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the mixed founding lists two groups of two: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Founding.mixed_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the mixed founding's offspring numbers meet the returns premise: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Founding.either_verdict": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the same returns select for keeping with the keepers together and against it with them apart: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Partly.below_one": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "assortment below one loses where assortment one would win: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Continuity.Teleport.no_transfers_apart": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "Swapping the levels of two relata conserves their total, and along the empty relation the family of one relatum is closed and loses its unit, so no transfers along that relation balance the swap: a fact about one constructed law showing that conservation of the whole total does not give balance along a relation (FL2)."
+  },
+  "Becoming.Continuity.Teleport.balanced_together": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "The same swap reads both relata, and along the full relation the routed transfers balance it from every configuration: the constructed law meeting the premises of conservedOn_of_law and route_balancing (FL2)."
+  },
   "Becoming.Optimum.InTurn.Stopping.not_least": {
    "module": "Becoming.Optimum",
    "category": "model-witness",

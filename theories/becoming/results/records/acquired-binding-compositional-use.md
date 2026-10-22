@@ -45,7 +45,7 @@ Does not derive the full meanings of prior operations, category/attention origin
 **Preserved conditions:** The new history preserves idealBond and acquires each word binding from encounters; it does not invoke fixed decodeChunk. [AcquiredBinding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean)
 
 
-**Used by:** [enacted-scene-binding](enacted-scene-binding.md) · [historical-source-binding](historical-source-binding.md) · [retrospective-source-binding](retrospective-source-binding.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [a-code-formed-between-formations](a-code-formed-between-formations.md) · [enacted-scene-binding](enacted-scene-binding.md) · [historical-source-binding](historical-source-binding.md) · [retrospective-source-binding](retrospective-source-binding.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

@@ -64,6 +64,8 @@ Fisher 1930's fundamental theorem in its general form, read by Price 1972: the c
 - related, not a proved adapter: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Fisher's exact case, the top of this bound.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The selection term proper, bounded here by the spreads.
 
+**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

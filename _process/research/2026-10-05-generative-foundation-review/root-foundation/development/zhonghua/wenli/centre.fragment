@@ -89,7 +89,7 @@
 | 衢 | 二行之文于某步之前皆同，于此步异（`Becoming.Parting.PartAt`） | 于衢，没有一个知来于此步于二行皆得（`Becoming.Parting.not_right_on_both`） |
 | 不测 | 对角之文：知来于其上所出之每值皆不符（`Becoming.Learning.diagonal`） | 有一象移动每一值时，知来于它的不测之文上所出之每值皆不符（`Becoming.Learning.diagonal_misses`），无一步起每步皆得（`Becoming.Learning.diagonal_unrested`）。这一文是一法之轨经一象所读（读其最近之值），此法之状藏其全往，没有一族尽此法之轨上之状（`Becoming.Learning.diagonal_open`） |
 
-讀（AI，D63）：所以这条线是 文 → 往 → 知来、符、得、阙 → 过则改 → 终而复始 → 有界则往定其行 → 可知 → 衢 → 不测。类、理、推类都不是文（§四）；理自文读出只在一义：法经一象示之，守象之值之最粗之理所并者恰为文同之状（一·二十一）。识是一个待者经其感读它自身之所历，也在展开之中（§六）。
+讀（AI，D63）：所以这条线是 文 → 往 → 知来、符、得、阙 → 过则改 → 终而复始 → 有界则往定其行 → 可知 → 衢 → 不测。类、理、推类都不是文（§四）；理自文读出只在一义：法经一象示之，守象之值之最粗之理所并者恰为文同之状（一·二十一，`Becoming.Law.coarsest_iff`）。识是一个待者经其感读它自身之所历，也在展开之中：感读作值时，它所择者恰依它自身之文之往（§六）。
 
 **古书。**
 
@@ -106,7 +106,7 @@
   - 定域：读文，读出它的状与法（律 1），有界方定（律 4）。彖传没有说出界这一条件。
   - 这里的观、察、时是常语，不带名表之观（视图）、察（敏感）、时（情境）。交错（名表之名，`Becoming.Interleavings`，八·一）与错（卦之错）都不由此借。「觀乎人文，以化成天下」的教化与治理之用不带。
 - 「理者，成物之文也」〔CV1-S-JL〕
-  - 定域：此句之文是成物之纹，同篇以理为「方圓、短長、麤靡、堅脆之分」〔CV1-S-JL〕，是一时之纹，即像，不是名中的文（讀，AI，D63）；以名中之文读之，理不是文，自文读出只在一义（一·二十一）。理是一类（七·二）。法经一象示之时，凡守象之值而为理之类，所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守象之值、为理而又并凡文同之状者，是正名（`Becoming.Law.identifiesAlike_of_law`）。所以守象之值、为理、又并凡文同之状的类，所并者恰是文同之状，它是守值之理中最粗的。一族尽其状时，这样的类是有的：以自每状起之文前 N＋N－1 步之往名此状（N 为族之员数），即是正名，且载一法（`Becoming.Law.name_identifiesAlike`、`Becoming.Law.name_carries`）。这是几条已检之律合起来的结论，没有一条定理单独陈述「理所并者恰是文同者」。
+  - 定域：此句之文是成物之纹，同篇以理为「方圓、短長、麤靡、堅脆之分」〔CV1-S-JL〕，是一时之纹，即像，不是名中的文（讀，AI，D63）；以名中之文读之，理不是文，自文读出只在一义（一·二十一）。理是一类（七·二）。法经一象示之时，凡守象之值而为理之类，所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守象之值、为理而又并凡文同之状者，是正名（`Becoming.Law.identifiesAlike_of_law`）。一条定理说出全部（`Becoming.Law.coarsest_iff`）：守象之值而为理之类，凡守值而为法所守之关系所连之二状皆并之、凡文同之二状皆并之、所并恰是文同之状、为正名，四者是一。文同本身是守值而为法所守之关系中最粗者，不加前提（`Becoming.Law.sameFuture_coarsest`）。所以守值之理中最粗者，所并恰是文同之状。作为类，一族尽其状时有之：以自每状起之文前 N＋N－1 步之往名此状（N 为族之员数），这些名守值、为理、恰并文同之状；守值之理粗于每一守值之理（其值与象之值同一 universe），恰当它恰并文同之状（`Becoming.Law.coarsest_class`）。不给一族时，以文同取商可以有，但商并文同之状须 `Quot.sound`，核心不用，所以只立其关系。
   - 讀（AI，D63）：同段「物有理，不可以相薄」〔CV1-S-JL〕可以读作守象之值之理不并不文同之状（`Becoming.Law.sameFuture_of_law`）。
   - 解老的理是分：「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕。七·二已判这一句为定域（jielao-li-fen）：理是一类，这一半相合；一个分何时是理，原句没有说。名表理之注写明，携带律是另加的条件。
   - 同段「道者，萬物之所以成也」〔CV1-S-JL〕立一个先在的根据，判为相分（道不立为名，见中华本附录二）。
@@ -329,7 +329,9 @@
      - 若：π 相同者，o 值也相同；`GoAlike (Law.process next) π`；凡经 o 文同的两状，π 都把它们并在一起。
      - 则：π 为正名（`IdentifiesAlike (frameBy next o) π`），恰把同者并为一（一·二十三）。
    - `Becoming.Law.sameFuture_of_law`（只用前两条若）：凡守 o 之值而为理的类，所并的两状都经 o 文同，不失去 o 所分开的任何东西。
-   - 所以，守 o 之值、为理、又并凡经 o 文同之状的类，所并者恰是经 o 文同之状，是守值之理中最粗的，并且它是正名。这是上二律与 `Becoming.Law.kernel_bisimulation`、`Becoming.Law.alike_iff_sameFuture` 合起来的结论，没有一条定理单独陈述它。一族尽其状时，这样的类是有的：以自每状起之文前 N＋N－1 步之往名此状（N 为族之员数；`Becoming.Law.name_identifiesAlike`、`Becoming.Law.name_carries`）。
+   - `Becoming.Law.coarsest_iff`（若：π 守 o 之值，且 `GoAlike (Law.process next) π`，即 `Becoming.Law.KeepsAndCarries`）：以下四者是一：凡守 o 之值而为法所守（`Becoming.Law.KeepsRelation`）之关系所连之二状，π 皆并之；凡经 o 文同之二状，π 皆并之；π 所并恰是经 o 文同之状；π 为正名。
+   - `Becoming.Law.sameFuture_coarsest`（无设）：经 o 文同守 o 之值、为法所守，且含每一守 o 之值而为法所守之关系。所以守 o 之值之理中最粗者，所并恰是经 o 文同之状，且为正名；恰并经 o 文同之状之类，粗于每一守 o 之值而为理之类（`Becoming.Law.coarser_of_exact`）。
+   - `Becoming.Law.coarsest_class`（若：一族尽其状）：以自每状起之文前 N＋N－1 步之往名此状（N 为族之员数），这些名守 o 之值、为理、所并恰是经 o 文同之状；守 o 之值而为理之类，粗于每一守值为理、其值与 o 之值同一 universe 之类，恰当它恰并经 o 文同之状。不给一族时，核心不立这样的类：以文同取商可以有，商并文同之状须 `Quot.sound`；最粗者作为关系仍在。
    - 另一面：经象文同的两状，每一步之往都相同（`Becoming.Learnable.prefixes_same`），任何知来都分不开它们。可知与否也落在文同上（`learnable_iff` 的条件，§三 (2)）。
    - 法使每状不改时（若：一族尽其状、像之同异定然否），经象可知的，恰是随此象之类而同的状值（`Becoming.Learnable.still_learnable_iff_lumped`）。
 
@@ -384,7 +386,16 @@
   - `Becoming.Web.SelectsThrough`（定义）：缘感而择，是说凡缘择者之感至 t 无异的两段历，择之皆同（九·二）。
   - `Becoming.Web.selects_alike_iff`：两段历被每一个缘 g 之感至 t 的择同样地择，恰当两段历缘 g 之感至 t 无异。这条律说出的是定义所筑入的东西（九·十三）。
   - `Becoming.Learning.Training.web_selectsThrough_iff`：缘感而择，就是经「缘感无异」这个类而择（`Iff.rfl`；九·三十四）。
-  - 讀（AI，D45、D63）：所以知者之感作一个类：缘感无异（`Becoming.Web.AlikeThroughUpTo`：至 t 每步，两段历于此待者同容或同不容，以积感入之所待其积亦同）。它所择，只依其所历在这个类中之所在。可以读作：它所读的，是它自身之所历经其感逐步所显者，即它的文；文的状与法读自文（§一）。但缘感无异是一个关系，不是一个象。脊柱还没有一条定理把文之诸律接到缘感无异上，这是一个须在看板认领的 Lean 项。
+  - 讀（AI，D45、D63）：所以知者之感作一个类：缘感无异（`Becoming.Web.AlikeThroughUpTo`：至 t 每步，两段历于此待者同容或同不容，以积感入之所待其积亦同）。它所择，只依其所历在这个类中之所在。缘感无异一般是一个关系，不是一个象：容是一辞，以积感入之所待可以无穷。下面的律说它在何处是一个象，那时它所读的就是它自身之所历经其感逐步所显者，即它的文；文的状与法读自文（§一）。
+- **待者自身之文**（感读作值之处）：
+  - `Becoming.Web.ValuesThrough`（定义）：value 给出感入 g 者之值，是说每一步，两组积之值相同，恰当二者同容或同不容 g、以积感入 g 之所待其积亦同。待者自身之文（`Becoming.Web.courseThrough`）是每步感入它者经 value 之值。
+  - `Becoming.Web.listed_values`（若：g 之容已定然否，以积感入 g 之所待列尽）：容与否连同所列诸积，就给出这样的值。
+  - `Becoming.Web.alikeThroughUpTo_iff_prefix`：两段历缘 g 之感至 t 无异，恰当 g 自身之文在二历下至 t 之往相同。
+  - `Becoming.Web.selectsThrough_iff_prefix`：一择缘 g 之感至 t，恰当它依 g 自身之文至 t 之往而择（有一辞读往，此择恰依之）；`Becoming.Web.selects_alike_iff_prefix`：二历被每一缘 g 之感至 t 之择同样地择，恰当其往相同。所以缘感而择，就是读自身之文之往。
+  - `Becoming.Web.alike_of_bounded`（若：g 自身之文在二历下各不过 N、N′ 状）：二历缘 g 之感在 N＋N′－1 步之前每步无异，则至每一步都无异；凡缘其感之择，于每一步都同样地择这二历（`Becoming.Web.selects_alike_of_bounded`）。这是有界则往定其行（九·三十三，`Becoming.Identification.bounded_agree`）用在待者自身之文上。二文合读不过 P 状时，P 步之前无异即足（`Becoming.Web.alike_of_joint_bounded`，`Becoming.IdentificationRuns.joint_agree`）。
+  - `Becoming.Web.bounded_exact`（构造之例，一待者一所待，以积感入，以积读之）：对每一 M、M′，有二历，其文各不过 M＋1、M′＋1 状，于 M＋M′ 之前每步缘感无异，于 M＋M′ 步有异。所以界 N＋N′－1 确切。
+  - `Becoming.Web.states_by_reading`（同一构造之例）：连步数之积也给出感入者之值；积恒为零之历，以积读之，其文一状，连步数读之，其文之状多于每一界。文之状比较异步之值，感只比较同一步之二历，所以文之状随读而定。
+  - 讀（AI，D45、D63）：识所读的，是它自身之文之往。它自身之文之状有穷时，凡它所能分开的二历，于 N＋N′－1 步之内都已分开；二历缘其感于前 T 步无异、其后有异，则它在二历下的文之状数之和大于 T＋1。这条律只在一种读之下说话，读越粗，所说越多。
 - **所据与不可见：**
   - `Becoming.Web.alike_of_threshold`（若：所待之同异定然否；其他感入此待者之所待，此步之积都相同；此所待不以积感入；此步若待之，两段历之积皆足其需或皆不足）：则两段历于此步缘此待者之感无异。唯以阈感入的所待，只传过需之足否（九·一、九·四）。
   - `Becoming.Flow.unselected_beyond_coupling`（有设而然，以衡为若）：
@@ -431,7 +442,12 @@
 - **读出一切词之串：** `Becoming.CrossSituational.reads_every_iff`。
   - 若：义项之同异定然否；义项之族其员各异；分组能在每一串编码之词中复原各词之名。
   - 则：逐组以通意读之，读出每一串各词的义项，恰当每一个词都满足三条：其义项在族中；凡遇其名之录都予之；族中其他每个义项，都有某一遇其名之录不予之。
-  - 讀（AI，D63）：一部书是以名为值之文，其名经码配义项（§一）；这条律说一个读者何时能从这样的文读回每一名之义项。文之律（§一）与这条律之间，脊柱还没有定理相接。
+  - 讀（AI，D63）：一部书是以名为值之文，其名经码配义项（§一）；这条律说一个读者何时能从这样的文读回每一名之义项。
+- **名之文：**
+  - `Becoming.SharedCodes.course_states_iff`：一码之下，凡义之文，其名之文二步同，恰当义之文二步同，恰当此码辨诸义（不二义同名，`Becoming.SharedCodes.TellsApart`）。二义同名，则先取其一、后皆取其二之义之文（`Becoming.Learning.holdFrom`），其名之文并了义之文所分之首二步。
+  - `Becoming.SharedCodes.course_read`（若：同上条之三若；以通意读出每一串）：于每一词之文，通意逐步把名读为义，义之文就是名之文经此读所得；名之文二步同，则义之文二步同。
+  - `Becoming.SharedCodes.code_read_every`（若：同上，词就是义，名由一码给出）：以通意读回每一串之码，必辨诸义，所以名之文与义之文同状。
+  - 讀（AI，D63）：读回每一名之义项的读者，从名之文读出的状，并于义之文之状之中；码辨诸义时，二者恰同，文之律（§一）对名之文所说的状，就是对义之文所说的状。有异名同义者，名之文之状可多于义之文之状。
 - **兼不在两两之中：**
   - `Becoming.separation_faithful_iff`：分述二体，能复原其兼，恰当兼是矩形的（一·二十四）。
   - `Becoming.whole_not_in_pairs`（构造之例）：三体中任两体都可以自由相配，而三者合起来有一个关系。
@@ -456,7 +472,7 @@
 | 有界则往定其行（九·三十三；「极其数」是揲蓍之数，不带） | `Identification.sameAhead_iff_below`、`Identification.sameAhead_iff_within`、`Identification.bounded_agree`、`Identification.bounded_agree_exact`、`Law.sameFuture_iff_within` | 界所给之处；二文之长 N＋N′－1 确切，一文之内 N－1 步已足 | 不给界：无往定其次值（`Learning.no_prefix_fixes_next`） |
 | 物相杂，故曰文 | `SameAhead`、`SameAhead.new_each` | 杂者为逐步之值之处：文的诸状只由值之异分开 | 一时之杂是一状（卦），不是文；「爻有等」「文不当」仍相分 |
 | 观乎天文，以察时变 | `alike_moments_iff`、`SameAhead.next`、`Identification.bounded_agree`、`Run.law_through_iff` | 读文读出其状与法；有界方定；一行经象所读不忒之处有法 | 不给界（`Learning.no_prefix_fixes_next`）；未采之动（`Run.not_fixesThrough_of_untaken`） |
-| 理者，成物之文也 | `Law.sameFuture_of_law`、`Law.identifiesAlike_of_law`、`Law.alike_iff_sameFuture`、`Law.name_identifiesAlike` | 守值、为理、并凡文同之状的类，所并恰是文同之状，且为正名；一族尽其状时有之（几条律合起来，非一条定理） | 理不是文；并而不为理之类（`Hexagram.yang_not_goAlike`，构造之例）；达名为理而什么都不分开（`goAlike_const`） |
+| 理者，成物之文也 | `Law.coarsest_iff`、`Law.sameFuture_coarsest`、`Law.coarser_of_exact`、`Law.coarsest_class` | 守值、为理之类，粗于每一守值而为法所守之关系，恰当它恰并文同之状，恰当它为正名（一条定理）；文同是这样的关系中最粗者；作为类，一族尽其状时有之 | 理不是文；并而不为理之类（`Hexagram.yang_not_goAlike`，构造之例）；达名为理而什么都不分开（`goAlike_const`） |
 | 以其类代状之变为法（七·二） | `Image`、`factors_image`、`Image.least`、`image_determined_iff`、`carries_law_iff`、`Courses.reducedRun` | 每一变、每一类都有；为法恰在其类为理；是变经此类所相若的最小之变 | 其路可多于变之路（`image_exact_iff`，`Stuck.goAlike_not_matches` 构造之例）；类为理与变为法互不蕴含（`Coarse.carries`、`Switching.not_goAlike`，构造之例） |
 | 律读自展开，无外在的立法者 | `Shown.run`、`shown_le_iff`、`shown_determined_iff`、`exists_law_iff`、`Shown.agrees`、`alike_moments_iff` | 每一历都有其自然之法，恰在不忒之处为法；每一文都读出其状与法 | 历忒之处无法许之（`exists_law_iff`）；外加之法与自然之法之异只在未采之动，往不定之（`Shown.agrees`、`Run.not_fixes_of_untaken`） |
 | 读书百遍 | `Identification.bounded_agree`、`Identification.leastBound_exact`、`Learnable.ahead_fixes` | 文之状有界；法之轨在一族之中 | 重读同一往不增所知（`Learning.byElimination_through_prefix`）；过则改不止息之文，都不是轨上之状有一族尽之的文（`Learning.diagonal_misses`、`Learning.diagonal_open`、`Identification.held_byElimination_rests`） |
@@ -466,7 +482,8 @@
 | 压缩与推广 | `Learning.goAlike_iff_lumped`、`Learning.determines_lumped_iff`、`Learning.lumped_right_iff`、`Law.identifiesAlike_of_law` | 压缩是理 | 不是理的简化（`Hexagram.yang_not_goAlike`，构造之例）；只记不贯（`keepHistory_fixes_nothing_else`） |
 | 书不尽言 | `Courses.runs_no_restore` | 象于某步并了二行之异状之处 | 象不如此并时能否尽，此律不说 |
 | 最小的读 | `ExchangeLaw.ReadsFinitely.least_coupling` | 法读有穷之处，以不可非之形 | 尾（`tailLaw_no_least_coupling`）；反例给出 WLPO（`wlpo_of_not_through_sensitive`） |
-| 观／证 | `Web.SelectsThrough`、`Web.selects_alike_iff`、`Web.Excludes.not_of_alike` | 知者之感以内 | 没有在上的镜子（`Learning.merged_unrested`、`Diagonal.gap_unsaid`；无顶是 讀，AI，D26） |
+| 观／证 | `Web.SelectsThrough`、`Web.selects_alike_iff`、`Web.Excludes.not_of_alike`、`Web.selectsThrough_iff_prefix`、`Web.alike_of_bounded`、`Web.bounded_exact` | 知者之感以内；感读作值之处（容已定、以积感入者列尽时有之），所据即自身之文之往，自身之文有界则所分者 N＋N′－1 步内分尽 | 没有在上的镜子（`Learning.merged_unrested`、`Diagonal.gap_unsaid`；无顶是 讀，AI，D26） |
+| 文²：一部书是以名为值之文，名经码配义项 | `CrossSituational.reads_every_iff`、`SharedCodes.course_read`、`SharedCodes.course_states_iff`、`SharedCodes.code_read_every` | 读出每一串之处：义之文是名之文经通意之读；码辨诸义时二文同状 | 二义同名之码，名之文并义之文所分之步；读不出每一串之处 |
 | 字合为模 | `Generative.trace_append_iff`、`goAlike_image_iff`、`CodeAcquisition.acquired_every_expression`、`CrossSituational.reads_every_iff` | 所给的组成之语法，且有接之所问 | 非组合之律（`CodeAcquisition.nonuniform_fails_transfer`，构造之例）；兼不在两两之中（`whole_not_in_pairs`，构造之例） |
 
 ### 本节未立者
@@ -475,4 +492,4 @@
 2. **文理生生的 H2：理解这些组合可改善对未见实例的结构重建、解释与迁移。** 律只说明从文中学到状值在什么时候可能、经由什么程序可能。人类读者是否这样学、读者怎样到达他的类，都没有导出，须另做实验（实验设计见总计划 §八；文理生生 18 号审计记其「尚未进行」）。
 3. **古汉语是核心的最佳媒介。** 未经检验。一一改名不改变所载之法（`Becoming.SharedCodes.renamed_carries_iff`）；认识论在文与其状、法之中，不在某一种书写之中。
 4. **任意系统的最小概念语法（H3）。** 脊柱只有对某一条法、某一个类的最小之读（`Becoming.Image.least`、`Becoming.ExchangeLaw.ReadsFinitely.least_coupling`、`Becoming.Law.identifiesAlike_of_law`），没有一个普遍的最小语法。
-5. **「同理恰在文同」作为一条定理。** 它是 `Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`、`Becoming.Law.kernel_bisimulation`、`Becoming.Law.alike_iff_sameFuture` 合起来的结论；一族尽其状时这样的类之有，另由 `Becoming.Law.name_identifiesAlike` 给出。文之律与 `Becoming.CrossSituational`、`Becoming.Web.AlikeThroughUpTo` 之间也没有定理相接。这几项都是须在看板认领的 Lean 项，本节没有认领。
+5. **恰并文同之类，于任一法皆有。** 一族尽其状时有之（`Becoming.Law.coarsest_class`）；一般以文同取商，商并文同之状须 `Quot.sound`，核心不用，只立其关系（`Becoming.Law.sameFuture_coarsest`）。缘感无异之为象亦然：一般而言要以此关系取商，核心只在容已定、以积感入者列尽之处给出其值（`Becoming.Web.listed_values`）。原列于此的三项 Lean，已由看板项 WL2 证出，见 §四 律 6、§六、§七（[研究第 351 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）。

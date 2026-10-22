@@ -1,0 +1,218 @@
+{
+  "schema_version": 2,
+  "id": "a-formations-own-course",
+  "title": {
+    "en": "A formation's own course",
+    "zh": "待者自身之文"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
+  "statement": {
+    "en": "Where what couples into a formation is read as values, being alike through its couplings up to a step is one prefix of its own course, a selection through them selects by that prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1 steps, a bound attained.",
+    "zh": "感读作值之处，缘待者之感至某步无异即其自身之文之往同，缘感之择即依此往而择；自身之文不过 N、N′ 状者，所分者于 N＋N′－1 步内分尽，此界达到。"
+  },
+  "laws": [
+    {
+      "en": "Where value gives the values of what couples into a formation (at each step two levels take one value exactly where they admit it alike and the conditions coupled in by level stand alike), its own course under a level history is the value at each step of what couples in then; where admission is decided and the conditions coupled in by level are listed, whether it is admitted and the listed levels give such values.",
+      "zh": "值给出感入一待者者（每步二组积同值，恰当其同容或同不容、以积感入者其积亦同）时，其自身之文是每步感入者之值；容已定、以积感入者列尽时，容否与所列诸积即给出如此之值。",
+      "declarations": [
+        "Becoming.Web.ValuesThrough",
+        "Becoming.Web.courseThrough",
+        "Becoming.Web.listed_values"
+      ]
+    },
+    {
+      "en": "Being alike through its couplings at a step is one value of its own course there, and up to a step one prefix of it; two histories are selected alike by every selection through its couplings exactly where the prefixes agree.",
+      "zh": "一步缘其感无异即其自身之文于此步同值，至某步无异即其往同；二历被每一缘其感之择同样地择，恰当其往同。",
+      "declarations": [
+        "Becoming.Web.alikeThrough_iff",
+        "Becoming.Web.alikeThroughUpTo_iff_prefix",
+        "Becoming.Web.selects_alike_iff_prefix"
+      ]
+    },
+    {
+      "en": "A selection is through its couplings up to a step exactly where it selects each history by the prefix of its own course before the next step.",
+      "zh": "一择缘其感至某步，恰当它依其自身之文至此步之往而择。",
+      "declarations": [
+        "Becoming.Web.selectsThrough_iff_prefix"
+      ]
+    },
+    {
+      "en": "Where its own courses under two histories have at most N and N' states and the histories are alike through its couplings before N + N' - 1, they are alike at every step and every selection through its couplings selects them alike; where the two courses read together have at most P states, alike before P is enough.",
+      "zh": "其自身之文于二历下各不过 N、N′ 状，二历于 N＋N′－1 步前缘其感无异，则永无异，凡缘其感之择皆同择之；二文合读不过 P 状时，P 步前无异即足。",
+      "declarations": [
+        "Becoming.Web.alike_of_bounded",
+        "Becoming.Web.selects_alike_of_bounded",
+        "Becoming.IdentificationRuns.joint_agree",
+        "Becoming.Web.alike_of_joint_bounded"
+      ]
+    },
+    {
+      "en": "The bound is attained in a web of one condition read by its level: for every M and M' two histories whose own courses have at most M + 1 and M' + 1 states are alike before M + M' and apart at M + M'. In the same web, read with the step, a constant history's own course has more than every bound of states, and read by the level one.",
+      "zh": "此界于一所待之网（以积读之）中达到：对每一 M、M′，二历其文各不过 M＋1、M′＋1 状，于 M＋M′ 前无异、于 M＋M′ 有异。同网中连步数读之，积恒定之历其文之状多于每一界，以积读之则一状。",
+      "declarations": [
+        "Becoming.Web.oneCondition",
+        "Becoming.Web.oneCondition_values",
+        "Becoming.Web.bounded_exact",
+        "Becoming.Web.states_by_reading"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A reading of what couples in as values (ValuesThrough), given; where admission at the formation is decided and the conditions coupled in by level are listed, one is given (listed_values). For the bounds, at most N and N' states of the own courses, or P of the two read together, under that reading; discrete steps, natural levels.",
+      "zh": "不加公理。感读作值（ValuesThrough）是所给的；容已定、以积感入者列尽时，有一种给出（listed_values）。界之律设自身之文于此读下各不过 N、N′ 状，或合读不过 P 状；离散步，自然数之积。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That what couples in is a value in general: being alike through the couplings is a relation (admission is a claim, the conditions coupled in by level may be infinitely many), and a reading as values for every web is not constructed.",
+      "zh": "一般而言感入者是值：缘感无异是关系（容是一辞，以积感入者可以无穷），对每一网读作值者没有构造。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the states of an own course are fixed by the coupling: they compare values at different steps and depend on the reading (Web.states_by_reading); the bounded laws are as strong as the reading with the fewest states.",
+      "zh": "自身之文之状由感而定：它们比较异步之值，随读而定（Web.states_by_reading）；界之律之强，在于状最少之读。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a formation reads, learns or predicts its own course: the laws say what a selection through its couplings can depend on.",
+      "zh": "待者读、学或预测其自身之文：诸律只说缘其感之择能依于什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110022.458880Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built in one session, with an independent AI review applied; author review in study section 351; not independently reviewed by a person. The definitional laws (alikeThrough_iff and the prefix form) unpack ValuesThrough; the content is the selection by the prefix, the bounds with their attainment, and the dependence of the states on the reading.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110022.458880Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并经一次独立的 AI 审查；作者审查见研究第 351 节；未经人的独立审查。定义性之律（alikeThrough_iff 与往之形）只是展开 ValuesThrough；内容在依往而择、界及其达到、状随读而定。"
+  },
+  "next_delta": {
+    "en": "A reading as values derived from the web where admission is decided; an independent review.",
+    "zh": "容已定之处由网导出感之值之读；独立审查。"
+  },
+  "correspondence": {
+    "en": "识 (D45): a formation's own further course read through what couples into it; 缘感无异, read as values, is the same prefix of its own course (文, D63).",
+    "zh": "识（D45）：一待者自身之后程经其感而读；缘感无异读作值时，即其自身之文（D63）之往同。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+  "aliases": [
+    "A formation's own course",
+    "待者自身之文",
+    "Becoming.Web.courseThrough"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.AlikeThroughUpTo, Web.SelectsThrough and selects_alike_iff.",
+        "zh": "Web.AlikeThroughUpTo、Web.SelectsThrough 与 selects_alike_iff。"
+      }
+    },
+    {
+      "id": "identification-where-bounded",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Identification.bounded_agree, bounded_agree_exact and prefix_eq_iff.",
+        "zh": "Identification.bounded_agree、bounded_agree_exact 与 prefix_eq_iff。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "wenli-on-the-spine",
+      "detail": {
+        "en": "States the open Lean item of its §六 (识 and 缘感无异).",
+        "zh": "陈述其 §六 所列之 Lean 项（识与缘感无异）。"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "detail": {
+        "en": "Web.AlikeThrough and the coupling into a formation.",
+        "zh": "Web.AlikeThrough 与感入一待者者。"
+      }
+    },
+    {
+      "id": "the-split-that-makes-sense",
+      "detail": {
+        "en": "States read off a course; the coarsest value-keeping class.",
+        "zh": "自文读状；守值之最粗之类。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.IdentificationRuns.joint_agree",
+        "Becoming.Web.ValuesThrough",
+        "Becoming.Web.alikeThroughUpTo_iff_prefix",
+        "Becoming.Web.alikeThrough_iff",
+        "Becoming.Web.alike_of_bounded",
+        "Becoming.Web.alike_of_joint_bounded",
+        "Becoming.Web.bounded_exact",
+        "Becoming.Web.courseThrough",
+        "Becoming.Web.listed_values",
+        "Becoming.Web.oneCondition",
+        "Becoming.Web.oneCondition_values",
+        "Becoming.Web.selectsThrough_iff_prefix",
+        "Becoming.Web.selects_alike_iff_prefix",
+        "Becoming.Web.selects_alike_of_bounded",
+        "Becoming.Web.states_by_reading"
+      ],
+      "sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "role": "receipt",
+      "sha256": "9f5bb21571a19c50267843a5484f876b12f87f6059a9c6920305cee179fd3077"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "721514bfa17552922843632bd503596e9e8a9ab20cde3de9ff61f91ddc1f802c"
+    },
+    {
+      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "role": "statement",
+      "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (WL2), for the open Lean item of WENLI-AND-BECOMING §六; study section 351.",
+      "zh": "2026年10月22日：新增（WL2），补 WENLI-AND-BECOMING §六 所列之 Lean 项；研究第 351 节。"
+    }
+  ]
+}

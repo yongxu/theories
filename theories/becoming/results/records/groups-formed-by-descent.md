@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Groups founded mixed (assortment below one, relatedness within groups below one), migration between lineages and inexact transmission are not stated; so the share of selection among groups as a function of assortment (Hamilton 1975) is not stated.
+- Migration between lineages and inexact transmission are not stated, nor how assortment changes over generations; groups founded mixed, with additive returns to groupmates, are stated in record selection-with-returns-to-groupmates.
 - Why the lower lineages end: their members not being active is a hypothesis wherever it enters.
 - That keeping what ending selected is better: the mean is read in the counts; ranking goes through the comparison C.
 - **Counterexample:** Groups formed across lineages need not keep their differences: in Exhausted the next groups are alike in holding back and the mean falls below where it started (Exhausted.next_step), while with the groups formed by descent it stays (Assorted.kept). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
@@ -41,7 +41,7 @@ Canonical source: [SelectionLevels.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-Groups founded mixed (assortment below one); migration between lineages; inexact transmission; an independent review.
+How assortment changes over generations; migration between lineages; inexact transmission; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -64,6 +64,9 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Groups formed across lineages, where ending used up the differences it acted on.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Ending among groups, read here by lineage.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The mean's course over generations, chained here over lineages.
+- related, not a proved adapter: [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md). Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.
+
+**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -77,6 +80,7 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 
 Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortment`, `由世系形成的组`, `同类聚合`, `Becoming.SelectionLevels.rises_iff_lineages`, `Becoming.GroupEnding.Flow.lineages_not_lower`
 
@@ -84,6 +88,7 @@ Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortm
 ### History
 
 - 21 October 2026: added (EV11), groups formed by descent: lineages keep the values their groups were founded at, selection among them alone, and on the base the mean never falling back where the lower lineages end; study section 281.
+- 22 October 2026, EV12: groups founded mixed, with returns to groupmates, stated (record selection-with-returns-to-groupmates, study section 353); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.
 
 </details>
 

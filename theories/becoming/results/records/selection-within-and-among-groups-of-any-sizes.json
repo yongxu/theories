@@ -315,7 +315,7 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "9241e078267cbec92455476c9e88a7b021c5139930134d9d168fa964b01fde2d"
+      "sha256": "f6cb9359ec15d601e97d1e4768fa197293d3092581c5202207eadcadc74baa55"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
@@ -382,24 +382,30 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4265685bbaa34f6a8747d0bd35729482fc8158b493569920c35dd5c0343e6753"
+      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "65757a112124544398d656391c164cebe7f3f2d3c48d3bdfdbcfa2c4260fb5fc"
+      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
       "role": "receipt",
       "sha256": "ddd42ba8ce21f5b313e27b3b13c680ec5781cad4a8e9946af1822e60228f8a2f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
+      "role": "receipt",
+      "sha256": "89035973bd7cbbc9087d59bd0c3988d80217507e29e482b8d5ff1f523376596b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"

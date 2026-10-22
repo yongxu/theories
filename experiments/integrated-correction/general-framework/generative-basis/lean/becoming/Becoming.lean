@@ -74,6 +74,7 @@ import Becoming.InAmounts
 import Becoming.Entropy
 import Becoming.Units
 import Becoming.Imbalance
+import Becoming.Continuity
 import Becoming.Continuation
 import Becoming.RenewalFlow
 import Becoming.Admission
@@ -757,7 +758,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   group's lineage over generations): with exact transmission, lineages of groups uniform in an
   amount keep the value each was founded at, the family is the union of the lineages, nothing is
   selected within them, and the mean rises exactly where the lineages' means select for the
-  amount. Witnesses: two groups of two with one member holding back, the whole going either way.
+  amount. Returns to groupmates: where each unit a member keeps gives b to every member of its
+  group and takes c from the keeper, selection within goes against keeping, among groups for it
+  exactly where b + c falls short of m times b, and the whole selects for it exactly where b + c
+  times the spread falls short of m times b times the spread among groups (Hamilton's rule with
+  the assortment the share of the spread among groups). Witnesses: two groups of two with one
+  member holding back, the whole going either way; the same returns either way by how the groups
+  are founded; assortment below one losing where assortment one would win.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -1029,6 +1036,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   activity premises hold of the extended flow exactly where they hold of the flow and it
   balances there. Adopted, the landed laws keep their statements, with balance a local
   condition read as the rest idle. The readings are the AI's, adopted with the re-founding.
+* `Becoming.Continuity` (L1): balance from conservation along a relation. Over finitely many
+  relata, with the relation a computable test and equality of relata decided, transfers that
+  move only between adjacent relata and balance a step exist exactly where the total is
+  conserved on every family the relation closes (`Continuity.balancing_iff`); the transfers
+  are computed one relatum at a time (`Continuity.route`). A law whose next level at a
+  relatum reads only it and the relata adjacent to it, conserving the total from every
+  configuration, conserves it on every closed family (`Continuity.conservedOn_of_law`), so
+  every run of it balances along the relation (`Continuity.balancesOn_of_law`). Swapping two
+  levels conserves the total and balances along the full relation, not along the empty one
+  (`Continuity.Teleport`). The transfers depend on the whole configuration: a local flux is
+  known for cellular automata on lattices (Hattori and Takesue 1991; Pivato 2002), not shown
+  here. A leaf: nothing builds on the transfers yet.
 * `Becoming.Continuation` (L1): what a continuing formation must count, with no ethical
   premise. Across a step something is conveyed from one condition to another when a
   formation taking part takes from the first and gives to the second, and a family is fed
@@ -2277,6 +2296,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Synonyms do no harm and homonyms do; a coined form brings back a merged distinction; taking what
   most hold agrees on an odd split and rests on an even one; imposing a code keeps the exchange of
   formations and privileges forms.
+  Through a code the course of forms of every course of senses is one state at exactly the moments
+  the course of senses is, exactly where the code tells the senses apart; where resolution reads
+  every encoded sequence, it reads the course of forms of every course of words as its course of
+  meanings, step by step.
 * `Becoming.Likeness` (L1): the laws stated with equality, completed up to likeness, with no
   premise. A description carries a law up to likeness exactly where some equivalence
   registering the claims makes configurations go alike, the law stated with equality being the
@@ -2982,6 +3005,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relatum.
 * `Becoming.HorizonWebs` (L1): the horizon in the support-gated law, on its webs.
 * `Becoming.IdentificationRuns` (L1): the states of a run and what a bounded record fixes.
+  The same course through the map is the coarsest relation keeping a map's values that a determined
+  law keeps; a class keeping the values and carrying the law is coarser than every such relation
+  exactly where it merges exactly the configurations with the same course, and, where a list holds
+  every configuration, coarsest among such classes into the universe of the values exactly there.
+  Where a reading gives the values of what couples into a formation, being alike through its
+  couplings up to a step is one prefix of its own course, a selection through them selects by that
+  prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1
+  steps, a bound attained.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

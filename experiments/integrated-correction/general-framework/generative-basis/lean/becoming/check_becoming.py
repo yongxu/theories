@@ -77,7 +77,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
-        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance",
+        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
         "Becoming.Regions", "Becoming.Growth", "Becoming.Retaining", "Becoming.OwnWidening", "Becoming.Clearing", "Becoming.Extension",
         "Becoming.Metaethics", "Becoming.Lifting", "Becoming.Ranking", "Becoming.ActiveReading", "Becoming.LossMatching", "Becoming.StrictTransport", "Becoming.MatchedCourses",
@@ -988,7 +988,13 @@ SCOPE = (
     "transmission the mean rises exactly where the two levels together select for the amount; "
     "lineages of groups uniform in an amount keep the value each was founded at under exact "
     "transmission, so nothing is selected within them and the mean rises exactly where the "
-    "lineages' means select for the amount; witnesses where the whole goes either way. "
+    "lineages' means select for the amount; where each member's offspring number with k per unit "
+    "of its own amount is a base with b per unit of a reading, the selection term is b times the "
+    "reading's covariation with the amount less k times its spread; with returns to groupmates in "
+    "groups of m, selection within goes against keeping by b + c times the groups' spreads, among "
+    "groups for it exactly where b + c falls short of m b, and the whole selects for it exactly where "
+    "b + c times the spread falls short of m b times the spread among groups; witnesses where the "
+    "whole goes either way, by the counts and by how the groups are founded. "
     "GroupEnding: where every group with less of an amount than another leaves no offspring nothing "
     "is discordant among the groups, so the whole selects for the amount exactly where k times the "
     "within-group discordance is below k times the within-group concordance with the concordance "
@@ -1812,6 +1818,12 @@ SCOPE = (
     "windows, a binary code reads a condition at depth k within 2^k steps, items with Kraft weights "
     "at most 2^D are all read by one code, and windows with whole weights 2^(D+1) <= q c a c "
     "totalling at most 2^D are read by one schedule and kept. "
+    "Continuity: over relata listed without repetition, transfers moving only between relata "
+    "adjacent under a Bool relation balance a step exactly where the total is conserved on every "
+    "family the relation closes, the transfers routed one relatum at a time; a law reading only a "
+    "relatum and those adjacent to it and conserving the total from every configuration conserves "
+    "it on every closed family, so its runs balance along the relation; swapping two levels "
+    "balances along the full relation and not along the empty one. "
     "Loops: the amount carried by routes of at most j responses rises with j to the carried "
     "amount and is exact up to step j; where no chain of j + 1 couplings ends at a condition, "
     "order j is exact there, and with every condition listed a chain as long as the list passes "
@@ -2009,6 +2021,7 @@ SCOPE = (
     "Sampling, section ExchangeFlows: uniform descent, and what a sampled flow keeps of an absent relatum. "
     "HorizonWebs: the horizon in the support-gated law, on its webs. "
     "IdentificationRuns: the states of a run and what a bounded record fixes. "
+    "The same course through the map is the coarsest relation keeping a map's values that a determined law keeps; a class keeping the values and carrying the law is coarser than every such relation exactly where it merges exactly the configurations with the same course, and, where a list holds every configuration, coarsest among such classes into the universe of the values exactly there. Where a reading gives the values of what couples into a formation, being alike through its couplings up to a step is one prefix of its own course, a selection through them selects by that prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1 steps, a bound attained. "
     "Composition, section JointPlanFrames: joint plans of joint frames: nested decompositions read through a description. "
     "LastingRuns: lasting and reaching on runs and courses. "
     "LearningRuns: what a run's registered record fixes and what a learner reaching it does. "
@@ -2654,6 +2667,7 @@ SCOPE = (
     "the histories before it and is barred only by records kept from before; where records "
     "are only added a resolution is lost but never replaced. "
     "Synonyms do no harm and homonyms do; a coined form brings back a merged distinction; taking what most hold agrees on an odd split and rests on an even one; imposing a code keeps the exchange of formations and privileges forms. "
+    "Through a code the course of forms of every course of senses is one state at exactly the moments the course of senses is, exactly where the code tells the senses apart; where resolution reads every encoded sequence, it reads the course of forms of every course of words as its course of meanings, step by step. "
     "PlaceTransitionNets: a place/transition net, defined by its own rules (pre and post "
     "multiplicities, enabling, firing, firing sequences), is a law of exchange reading nothing "
     "whose course is its flow and whose levels along a firing sequence are its markings; the flow "
