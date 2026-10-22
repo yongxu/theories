@@ -278,7 +278,7 @@
       "declarations": [
         "Becoming.Optimum.sub_le_sub_left_of_le"
       ],
-      "sha256": "50c37906fce3a368e8dc9a3b1ff584665ae9238a3eefa3db341d1ae8b904232d"
+      "sha256": "350b9e9a3935b0aea89d896f8c95a82a43a19040d9539141879a52dc9718b87c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
@@ -402,6 +402,12 @@
       "role": "receipt",
       "sha256": "2e55e957277c6850ab333116aff5b4dff2fce182955a5c60e4c0d6e9aeabbb0c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
+      "role": "receipt",
+      "sha256": "2df21afb87f40cc1d5a2be2ed77cbab2bd7712fe6085c8d599e8f2f2b684b8b1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -435,7 +441,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
