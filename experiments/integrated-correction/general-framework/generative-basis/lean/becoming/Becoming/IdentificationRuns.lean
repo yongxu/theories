@@ -47,11 +47,35 @@ courses is `Courses.reachedFrom`. This module states those laws of runs and of r
   setting a third part to the parity of the first two (`parity`), the reached whole is the even
   triples (`parity_reached_iff`): every two parts are free in it and the three are not
   (`parity_whole_not_in_pairs`).
+* **The coarsest class keeping the map's values and carrying the law.** The same course through
+  the map is the coarsest relation that keeps the map's values and that the law keeps
+  (`Law.sameFuture_coarsest`), with no premise. For a class that keeps the values and carries the
+  law (`Law.KeepsAndCarries`), being coarser than every such relation, merging every two
+  configurations with the same course, merging exactly those and making sense are one
+  (`Law.coarsest_iff`); a class merging exactly those is coarser than every class that keeps the
+  values and carries the law (`Law.coarser_of_exact`). Where a list holds every configuration the
+  names are such a class, and a class keeping the values and carrying the law is coarser than
+  every other exactly where it merges exactly the configurations with the same course
+  (`Law.coarsest_class`). For every law, a class merging exactly those would be a quotient by the
+  same course, which the core does not form; the relation is always there.
+* **The course of what couples into a formation.** Where what couples into a formation is read as
+  values (`Web.ReadsAsValues`; where admission is decided and the conditions coupled in by level
+  are listed, `Web.listed_reads`), its own course under a level history is the value, at each
+  step, of what couples in then (`Web.courseThrough`). Two histories are alike through its
+  couplings up to a step exactly where its own courses under them share their prefix to that step
+  (`Web.alikeThroughUpTo_iff_prefix`); a selection is through its couplings exactly where it
+  selects each history by that prefix (`Web.selectsThrough_iff_reading`,
+  `Web.selects_alike_iff_prefix`). Where its own courses under two histories have at most `N` and
+  `N'` states, histories alike through its couplings before `N + N' - 1` are alike through them
+  at every step (`Web.alike_of_bounded`, `Web.selects_alike_of_bounded`), and the bound is exact
+  (`Web.bounded_exact`). The states of the own course compare values at different steps, which
+  the coupling, comparing two histories at one step, does not fix: the reading fixes them.
 
 No ethical predicate, ranking or axiom occurs.
 
 Declarations moved here unchanged, with their names, from `Becoming.Description` and
-`Becoming.Identification` (board item W): see the sections so headed.
+`Becoming.Identification` (board item W), and `Law.KeepsRelation` with `Law.KeepsRelation.run`
+from `Becoming.SharedCodes` (board item WL2): see the sections so headed.
 -/
 
 /-! ## Laws that identify alike configurations (moved from `Becoming.Description`) -/
@@ -253,6 +277,112 @@ theorem name_carries {next : S → S} {o : S → R} {l : List S} (world : ∀ s,
 def decideAlike [DecidableEq R] {next : S → S} {o : S → R} {l : List S} (world : ∀ s, s ∈ l)
     (s s' : S) : Decidable (Alike (Law.frameBy next o) (Law.frameBy next o) s s') :=
   decidable_of_iff _ (name_identifiesAlike world s s')
+
+end Law
+
+end Becoming
+
+
+/-! ## The coarsest class keeping the map's values and carrying the law -/
+
+namespace Becoming
+
+open Generative
+
+universe u v w w'
+
+namespace Law
+
+variable {S : Type u} {R : Type v} {K : Type w} {K' : Type w'}
+
+/-! Declarations moved here unchanged, with their names, from `Becoming.SharedCodes` (board item
+WL2), so that the coarsest relation below is stated with them. -/
+
+/-- A law keeps a relation of configurations: related configurations go on to related
+configurations. -/
+def KeepsRelation (T : S → S) (rel : S → S → Prop) : Prop := ∀ x y, rel x y → rel (T x) (T y)
+
+/-- **A kept relation holds at every step** of the runs from related configurations. -/
+theorem KeepsRelation.run {T : S → S} {rel : S → S → Prop} (keeps : KeepsRelation T rel) {x y : S}
+    (related : rel x y) : ∀ n, rel ((run T x).state n) ((run T y).state n)
+  | 0 => related
+  | n + 1 => keeps _ _ (KeepsRelation.run keeps related n)
+
+/-- A class keeps the map's values and carries the law: configurations it merges take the same
+value through the map and go by a step to configurations it merges. -/
+def KeepsAndCarries (next : S → S) (o : S → R) (π : S → K) : Prop :=
+  (∀ s s', π s = π s' → o s = o s') ∧ GoAlike (process next) π
+
+variable {next : S → S} {o : S → R}
+
+/-- **The same course through the map is the coarsest relation that keeps the map's values and
+that the law keeps**, with no premise: it keeps the values, the law keeps it, and it holds every
+relation that does both. -/
+theorem sameFuture_coarsest :
+    (∀ s s', SameFuture next o s s' → o s = o s') ∧ KeepsRelation next (SameFuture next o) ∧
+      ∀ E : S → S → Prop, (∀ s s', E s s' → o s = o s') → KeepsRelation next E →
+        ∀ s s', E s s' → SameFuture next o s s' :=
+  ⟨fun _ _ same => same 0,
+   fun s s' same n => (congrArg o (orbit_shift next s n)).symm.trans
+      ((same (n + 1)).trans (congrArg o (orbit_shift next s' n))),
+   fun _ keeps kept _ _ related n => keeps _ _ (KeepsRelation.run kept related n)⟩
+
+/-- A class merging exactly the configurations with the same course through the map keeps the
+values and carries the law. -/
+theorem KeepsAndCarries.of_exact {π : S → K}
+    (exact : ∀ s s', π s = π s' ↔ SameFuture next o s s') : KeepsAndCarries next o π :=
+  ⟨fun s s' same => (exact s s').mp same 0,
+   Learning.goAlike_iff_lumped.mpr fun s s' same =>
+     (exact (next s) (next s')).mpr (sameFuture_coarsest.2.1 s s' ((exact s s').mp same))⟩
+
+/-- **A class merging exactly the configurations with the same course through the map is coarser
+than every class that keeps the values and carries the law**, in every universe. -/
+theorem coarser_of_exact {π : S → K} (exact : ∀ s s', π s = π s' ↔ SameFuture next o s s')
+    {κ : S → K'} (other : KeepsAndCarries next o κ) : ∀ s s', κ s = κ s' → π s = π s' :=
+  fun _ _ same => (exact _ _).mpr (sameFuture_of_law other.1 other.2 same)
+
+/-- **The coarsest class that keeps the map's values and carries the law merges exactly the
+configurations with the same course through the map.** For a class that keeps the values and
+carries the law, four conditions are one: it merges every two configurations that some relation
+keeping the values and kept by the law relates; it merges every two with the same course through
+the map; it merges exactly those; it makes sense. -/
+theorem coarsest_iff {π : S → K} (lawful : KeepsAndCarries next o π) :
+    ((∀ E : S → S → Prop, (∀ s s', E s s' → o s = o s') → KeepsRelation next E →
+        ∀ s s', E s s' → π s = π s') ↔
+      ∀ s s', SameFuture next o s s' → π s = π s') ∧
+    ((∀ s s', SameFuture next o s s' → π s = π s') ↔
+      ∀ s s', π s = π s' ↔ SameFuture next o s s') ∧
+    ((∀ s s', π s = π s' ↔ SameFuture next o s s') ↔ IdentifiesAlike (frameBy next o) π) :=
+  ⟨⟨fun every => every (SameFuture next o) sameFuture_coarsest.1 sameFuture_coarsest.2.1,
+    fun merges E keeps kept s s' related =>
+      merges s s' (sameFuture_coarsest.2.2 E keeps kept s s' related)⟩,
+   ⟨fun merges s s' => ⟨fun same => sameFuture_of_law lawful.1 lawful.2 same, merges s s'⟩,
+    fun exact s s' => (exact s s').mpr⟩,
+   ⟨fun exact s s' => (exact s s').trans alike_iff_sameFuture.symm,
+    fun sense s s' => (sense s s').trans alike_iff_sameFuture⟩⟩
+
+/-- **The coarsest class, named.** Where a list holds every configuration, the names, each
+configuration's course through the map before `N + N - 1` with `N` the list's length, keep the
+values, carry the law and merge exactly the configurations with the same course; and a class that
+keeps the values and carries the law is coarser than every class into the names' universe that
+does both exactly where it merges exactly the configurations with the same course. -/
+theorem coarsest_class {l : List S} (world : ∀ s, s ∈ l) :
+    (KeepsAndCarries next o (name next o (l.length + l.length - 1)) ∧
+      ∀ s s', name next o (l.length + l.length - 1) s = name next o (l.length + l.length - 1) s' ↔
+        SameFuture next o s s') ∧
+    ∀ {π : S → K}, KeepsAndCarries next o π →
+      ((∀ {K'' : Type v} (κ : S → K''), KeepsAndCarries next o κ →
+          ∀ s s', κ s = κ s' → π s = π s') ↔
+        ∀ s s', π s = π s' ↔ SameFuture next o s s') :=
+  have exact : ∀ s s', name next o (l.length + l.length - 1) s =
+      name next o (l.length + l.length - 1) s' ↔ SameFuture next o s s' :=
+    fun s s' => (name_identifiesAlike world s s').trans alike_iff_sameFuture
+  ⟨⟨KeepsAndCarries.of_exact exact, exact⟩,
+   fun lawful =>
+    ⟨fun coarser s s' =>
+      ⟨fun same => sameFuture_of_law lawful.1 lawful.2 same,
+       fun same => coarser _ (KeepsAndCarries.of_exact exact) s s' ((exact s s').mpr same)⟩,
+     fun exact' _ _ other => coarser_of_exact exact' other⟩⟩
 
 end Law
 
@@ -529,5 +659,168 @@ theorem parity_whole_not_in_pairs :
      fun reached => odd ((parity_reached_iff _).mp reached)⟩
 
 end IdentificationRuns
+
+end Becoming
+
+/-! ## The course of what couples into a formation -/
+
+namespace Becoming
+
+open Generative
+
+universe u
+
+/-- **Two lists are mapped alike exactly where the maps agree on their members**: the converse of
+`map_eq_of` on a list. -/
+theorem map_eq_iff_members {X : Type} {Y : Type u} {x y : X → Y} :
+    ∀ {cs : List X}, cs.map x = cs.map y ↔ ∀ c, c ∈ cs → x c = y c
+  | [] => ⟨fun _ _ mem => (nomatch mem), fun _ => rfl⟩
+  | c :: cs =>
+    ⟨fun same =>
+      match List.cons.inj same with
+      | ⟨head, rest⟩ => fun d mem =>
+        match mem with
+        | .head _ => head
+        | .tail _ later => map_eq_iff_members.mp rest d later,
+     fun agree =>
+      (congrArg (· :: cs.map x) (agree c (.head cs))).trans
+        (congrArg (y c :: ·) (map_eq_iff_members.mpr fun d mem => agree d (.tail c mem)))⟩
+
+namespace Web
+
+variable {F C : Type} {O : Type u}
+
+/-- What couples into `g` is read as values by `sense`: at each step, two levels take one value
+exactly where they admit `g` alike and the conditions coupled into `g` by level stand alike. -/
+def ReadsAsValues (W : Web F C) (obs : F → C → Prop) (g : F) (sense : Nat → (C → Nat) → O) :
+    Prop :=
+  ∀ t x y, sense t x = sense t y ↔ (W.Admits x t g ↔ W.Admits y t g) ∧ ∀ c, obs g c → x c = y c
+
+/-- A formation's own course under a level history: the value, at each step, of what couples
+into it then. -/
+def courseThrough (sense : Nat → (C → Nat) → O) (l : Nat → C → Nat) : Nat → O :=
+  fun t => sense t (l t)
+
+variable {W : Web F C} {obs : F → C → Prop} {g : F} {sense : Nat → (C → Nat) → O}
+  {l l' : Nat → C → Nat}
+
+/-- **Where admission at `g` is decided and the conditions coupled into `g` by level are listed,
+what couples into `g` is read as values**: whether the levels admit `g`, and the listed levels. -/
+theorem listed_reads {admits : Nat → (C → Nat) → Bool}
+    (decides : ∀ t x, admits t x = true ↔ W.Admits x t g) {cs : List C}
+    (listed : ∀ c, obs g c ↔ c ∈ cs) :
+    W.ReadsAsValues obs g (fun t x => (admits t x, cs.map x)) :=
+  fun t x y =>
+    ⟨fun same =>
+      match Prod.mk.inj same with
+      | ⟨admitted, levels⟩ =>
+        ⟨(decides t x).symm.trans
+          ((Eq.subst (motive := fun b => admits t x = true ↔ b = true) admitted Iff.rfl).trans
+            (decides t y)),
+         fun c observed => map_eq_iff_members.mp levels c ((listed c).mp observed)⟩,
+     fun ⟨admitted, levels⟩ =>
+      (congrArg (Prod.mk · (cs.map x))
+          (bool_eq_of_iff ((decides t x).trans (admitted.trans (decides t y).symm)))).trans
+        (congrArg (Prod.mk (admits t y))
+          (map_eq_iff_members.mpr fun c mem => levels c ((listed c).mpr mem)))⟩
+
+/-- **Alike through a formation's couplings at a step is one value of its own course there.** -/
+theorem alikeThrough_iff (reads : W.ReadsAsValues obs g sense) {t : Nat} :
+    W.AlikeThrough obs g l l' t ↔ courseThrough sense l t = courseThrough sense l' t :=
+  (reads t (l t) (l' t)).symm
+
+/-- **Alike through a formation's couplings up to a step is one prefix of its own course**: its
+own courses under the two histories agree before the next step. -/
+theorem alikeThroughUpTo_iff_prefix (reads : W.ReadsAsValues obs g sense) {t : Nat} :
+    W.AlikeThroughUpTo obs g l l' t ↔
+      Learning.prefixOf (courseThrough sense l) (t + 1) =
+        Learning.prefixOf (courseThrough sense l') (t + 1) :=
+  Iff.trans
+    ⟨fun alike n lt => (alikeThrough_iff reads).mp (alike n (Nat.le_of_lt_succ lt)),
+     fun agree s le => (alikeThrough_iff reads).mpr (agree s (Nat.lt_succ_of_le le))⟩
+    Identification.prefix_eq_iff.symm
+
+/-- **A selection through a formation's couplings is a reading of the prefix of its own course.**
+A selection is through `g`'s couplings up to `t` exactly where it selects each history by the
+prefix of `g`'s own course before `t + 1`. -/
+theorem selectsThrough_iff_reading (reads : W.ReadsAsValues obs g sense) {t : Nat}
+    {select : (Nat → C → Nat) → Prop} :
+    W.SelectsThrough obs g t select ↔
+      ∃ choose : List O → Prop,
+        ∀ l, select l ↔ choose (Learning.prefixOf (courseThrough sense l) (t + 1)) :=
+  ⟨fun through =>
+    ⟨fun p => ∃ l, Learning.prefixOf (courseThrough sense l) (t + 1) = p ∧ select l,
+     fun l => ⟨fun chosen => ⟨l, rfl, chosen⟩,
+      fun ⟨l', same, chosen⟩ =>
+        (through l' l ((alikeThroughUpTo_iff_prefix reads).mpr same)).mp chosen⟩⟩,
+   fun ⟨choose, by_prefix⟩ l l' alike =>
+    have same := (alikeThroughUpTo_iff_prefix reads).mp alike
+    (by_prefix l).trans
+      ((Eq.subst (motive := fun p =>
+          choose (Learning.prefixOf (courseThrough sense l) (t + 1)) ↔ choose p) same Iff.rfl).trans
+        (by_prefix l').symm)⟩
+
+/-- **Two histories are selected alike by every selection through a formation's couplings up to
+`t` exactly where its own courses under them share their prefix before `t + 1`.** -/
+theorem selects_alike_iff_prefix (reads : W.ReadsAsValues obs g sense) {t : Nat} :
+    (∀ select, W.SelectsThrough obs g t select → (select l ↔ select l')) ↔
+      Learning.prefixOf (courseThrough sense l) (t + 1) =
+        Learning.prefixOf (courseThrough sense l') (t + 1) :=
+  selects_alike_iff.trans (alikeThroughUpTo_iff_prefix reads)
+
+/-- **What a bounded formation tells apart, it tells apart within `N + N' - 1` steps.** Where its
+own courses under two histories have at most `N` and `N'` states and the histories are alike
+through its couplings at every step before `N + N' - 1`, they are alike through them up to every
+step. -/
+theorem alike_of_bounded (reads : W.ReadsAsValues obs g sense) {N N' : Nat}
+    (bound : StatesBelow (courseThrough sense l) N)
+    (bound' : StatesBelow (courseThrough sense l') N')
+    (alike : ∀ s, s < N + N' - 1 → W.AlikeThrough obs g l l' s) :
+    ∀ t, W.AlikeThroughUpTo obs g l l' t :=
+  have every := Identification.bounded_agree bound bound' fun n lt =>
+    (alikeThrough_iff reads).mp (alike n lt)
+  fun _ s _ => (alikeThrough_iff reads).mpr (every s)
+
+/-- So every selection through its couplings, at every step, selects the two alike. -/
+theorem selects_alike_of_bounded (reads : W.ReadsAsValues obs g sense) {N N' : Nat}
+    (bound : StatesBelow (courseThrough sense l) N)
+    (bound' : StatesBelow (courseThrough sense l') N')
+    (alike : ∀ s, s < N + N' - 1 → W.AlikeThrough obs g l l' s) {t : Nat}
+    {select : (Nat → C → Nat) → Prop} (through : W.SelectsThrough obs g t select) :
+    select l ↔ select l' :=
+  through l l' (alike_of_bounded reads bound bound' alike t)
+
+/-- One formation and one condition, which the formation requires nothing of. -/
+def oneCondition : Web Unit Unit :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ _ _ => False, fun _ _ _ => 0, fun _ _ _ => False⟩
+
+/-- In `oneCondition`, with the condition coupled into the formation by level, its level reads
+what couples in as values. -/
+theorem oneCondition_reads :
+    oneCondition.ReadsAsValues (fun _ _ => True) () (fun _ x => x ()) :=
+  fun _ _ _ =>
+    ⟨fun same => ⟨⟨fun _ _ never => (nomatch never), fun _ _ never => (nomatch never)⟩,
+       fun c _ => match c with | () => same⟩,
+     fun ⟨_, levels⟩ => levels () trivial⟩
+
+/-- **The bound is exact.** For every `M` and `M'` there are two histories whose own courses
+through the formation of `oneCondition`, read by the level, have at most `M + 1` and `M' + 1`
+states, alike through its couplings at every step before `M + M'` and apart at `M + M'`, the step
+before `(M + 1) + (M' + 1) - 1`. -/
+theorem bounded_exact (M M' : Nat) :
+    ∃ l l' : Nat → Unit → Nat,
+      StatesBelow (courseThrough (fun _ x => x ()) l) (M + 1) ∧
+        StatesBelow (courseThrough (fun _ x => x ()) l') (M' + 1) ∧
+        (∀ s, s < M + M' → oneCondition.AlikeThrough (fun _ _ => True) () l l' s) ∧
+        ¬ oneCondition.AlikeThrough (fun _ _ => True) () l l' (M + M') :=
+  match Identification.bounded_agree_exact (O := Nat) (x := 0) (y := 1) (fun h => nomatch h) M M'
+  with
+  | ⟨o, o', bound, bound', same, apart⟩ =>
+    ⟨fun t _ => o t, fun t _ => o' t, bound, bound',
+     fun s lt =>
+      (alikeThrough_iff oneCondition_reads).mpr (Identification.prefix_eq_iff.mp same s lt),
+     fun alike => apart ((alikeThrough_iff oneCondition_reads).mp alike)⟩
+
+end Web
 
 end Becoming
