@@ -572,13 +572,13 @@
       "path": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
       "role": "statement",
       "declarations": [],
-      "sha256": "ed5be7fe7a35c9a573fc14943f627b3503290fef6d024c4b7376f37340f6eb7e"
+      "sha256": "314c5f042d9fbb3c8a8e4b83016d8b778a0947df8b6201cfaea0ed9fcff2f0e9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
       "role": "integration",
       "declarations": [],
-      "sha256": "f310f7dd9976a44f0f6ad4142165b0b5cfec2b8e4769b5e78846e7ffa65e222e"
+      "sha256": "dc48a4155d58232d116a7d62794d33d7d483f24ef435cb621804e58b2fb70e26"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py",
@@ -764,6 +764,10 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/9d81f98aa9c8f966/hexagrams-on-the-spine.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/9d81f98aa9c8f966/hexagrams-on-the-spine.json 和 git 中。"
+    },
+    {
+      "en": "22 October 2026, ZHK (decision D62): in the passage map, 繫辭下「天下之動，貞夫一者也」 changed from agreement to exact scope, as the 脉络 map judged it: of World.unity's four parts the first two hold of every world by construction, and the two with content, a world's own readings gluing everywhere, hold exactly where it balances, which is where the rest is never active (World.withRest_balanced, Flow.changeReadings_glue_everywhere_iff, World.withRest_closed_iff added). The map's counts become 51 agreements, 27 exact scopes, 12 divergences; passages.json and YI-ZHUAN-AND-BECOMING.md (table and summary) follow. The laws and the claim are unchanged.",
+      "zh": "2026年10月22日，ZHK（决定 D62）：逐句对应中，繫辭下「天下之動，貞夫一者也」依脉络之图之判由相合改为定域：World.unity 四项中前两项由构造对每个世界成立，有内容的后两项，即世界自身的读法处处粘合，恰在它平衡之处成立，平衡恰是其余从不活跃之处（加 World.withRest_balanced、Flow.changeReadings_glue_everywhere_iff、World.withRest_closed_iff）。对应之计数变为相合 51、定域 27、相分 12；passages.json 与 YI-ZHUAN-AND-BECOMING.md（表与概述）随之。诸律与论断不变。"
     }
   ],
   "text_versions": [

@@ -699,13 +699,13 @@
       "path": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
       "role": "statement",
       "declarations": [],
-      "sha256": "ed5be7fe7a35c9a573fc14943f627b3503290fef6d024c4b7376f37340f6eb7e"
+      "sha256": "314c5f042d9fbb3c8a8e4b83016d8b778a0947df8b6201cfaea0ed9fcff2f0e9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
       "role": "integration",
       "declarations": [],
-      "sha256": "f310f7dd9976a44f0f6ad4142165b0b5cfec2b8e4769b5e78846e7ffa65e222e"
+      "sha256": "dc48a4155d58232d116a7d62794d33d7d483f24ef435cb621804e58b2fb70e26"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py",

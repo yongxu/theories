@@ -639,11 +639,14 @@
    "fragments": [
     "天下之動，貞夫一者也"
    ],
-   "kind": "agreement",
+   "kind": "scope",
    "declarations": [
-    "Becoming.World.unity"
+    "Becoming.World.unity",
+    "Becoming.World.withRest_balanced",
+    "Becoming.Flow.changeReadings_glue_everywhere_iff",
+    "Becoming.World.withRest_closed_iff"
    ],
-   "reading": "每一世界是交换律的一次运行，其平衡即其诸读法之粘合。"
+   "reading": "每一世界是交换律的一次运行；算入其余，其变化的读法每步粘合，这由构造对一切世界成立。有内容的是：世界自身的读法处处粘合，恰当它平衡，平衡恰当其余从不活跃。所以“贞夫一”读作诸读法之粘合，恰在平衡处成立；“以一为准”的标准义脊柱不给，“一”不立为先在之实体。"
   },
   {
    "id": "dieyong-gangrou",

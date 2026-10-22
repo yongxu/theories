@@ -11,7 +11,8 @@ and preserve the atlas texts they quote. usage: python3 -B build_passages.py [--
   sources/chinese-classical-texts/<atlas>/ (never over an existing file) and PROVENANCE.json is written.
 The mappers' readings are the AI's; this script does not change them, except where FIXES says
 (a source, locator or fragments replaced, or a sentence of a reading replaced after review, or, where a later item
-proved what an entry computed or its gap named, declarations and records added and the gap marked closed).
+proved what an entry computed or its gap named, declarations and records added and the gap marked closed, or, where a
+later decision judged the structure an entry reads differently, its kind and its whole reading replaced).
 passages.json changes only through FIXES, never in place: a build rewrites the whole file, so an edit made
 in place would be lost on the next build. With --check nothing is written: the file is compared with the
 build, and differs only where it was edited in place (verify_ro.py runs it)."""
@@ -78,6 +79,8 @@ OTHER = [  # the other slice, by work
     ('兵家、法家与轻重纵横', ('孙子', '吴子', '韩非', '商君', '管子', '鬼谷子')),
     ('佛教', ('阿含', '中论', '唯识', '华严', '坛经', '天台', '般若', '涅槃')),
 ]
+
+ZHK_WHY = ('ZHK: decision D62 (chapter CIVILIZATION-THOUGHT-AND-BECOMING, section 六) judged the structure this entry reads, read again by the 脉络 map, as exact scope; kind changed from agreement and the reading rewritten to say where the claim holds, from the 脉络 entries')
 
 # Corrections, each with its reason. Keys: entry id; values: the fields replaced.
 FIXES = {
@@ -508,6 +511,74 @@ FIXES = {
                             'between m and the present one, and the level then settles at m '
                             '(Flow.withinGap_iff_between, Flow.settles); a response beyond it crosses m.')],
         'why': 'RG: 中节 read as a response within the gap, the bound two-sided regulation proves exact'},
+
+    # ZHK: five entries whose structure the 脉络 map (ZH, decision D62) read again and judged exact scope; each
+    # reading rewritten from the 脉络 entries (development/zhonghua/passages.json) to say where the claim holds.
+    'xunzi-hua-yi-shi': {
+        'kind': 'scope',
+        'declarations_add': ['Becoming.World.balanced_reidentify_iff_alike'],
+        'reading': ('AI 读法：“二实”以“所”计数，所是关系：一个描述有意义，恰当它等同关系相同者、并等同凡相同者（identifiesAlike_iff）；'
+                    '把在每一关系上都相同的两者分开命名没有意义（Twins.naming_not_identifiesAlike、left_alike_right，构造模型中的见证），'
+                    '而处所不同即关系不同，故为二；此处“状同”只是在若干关系上相同，不含所处之关系。“化”是跨步的同一：在平衡、关系项的同一可判定的世界中，'
+                    '守恒在一步上固定一关系项的同一，恰当此步之后没有其他关系项与它水平相同（World.fixed_iff）；使世界平衡的命名恰是守恒内的一一延续'
+                    '（balanced_reidentify_iff）。定域：荀子把“实无别”当作可以稽察的事实，律只在上述之处定下它；步后有别的关系项与它水平相同之处，'
+                    '守恒定不下谁是谁，要选一个延续，同一只定到水平相似为止（World.balanced_reidentify_iff_alike）。以所别实，也只在所即关系之处成立。'
+                    '说文“化，教行也”是另一义，见下。'),
+        'reading_en': ('AI reading, exact scope: 荀子 counts 实 by relation (different 所 makes two; naming apart what is alike in every '
+                       'relation makes no sense), and 化 is identity across a step, which conservation fixes exactly where '
+                       'nothing else stands after the step at the level of the relatum (World.fixed_iff); elsewhere a '
+                       'continuation must be chosen and identity is fixed only up to likeness of standing '
+                       '(balanced_reidentify_iff_alike), so 实无别 is a fact only where the law fixes it.'),
+        'why': ZHK_WHY},
+    'sunzi-wu-yue-tong-zhou': {
+        'kind': 'scope',
+        'declarations_add': ['Becoming.Flow.mutuallyDependent_of_common'],
+        'records_add': ['mutual-dependence-and-its-pace'],
+        'reading': ('AI 读法：吴越相恶，是各自为界的中心彼此不一（centers_disagree，构造之例）；同舟遇风，二者依赖同一条件，'
+                    '依赖链到达一个不活跃的关系项就终结链上一切（Web.coextinct, Web.Dependent）；一个人人依赖并交换的共同条件使二者相互依赖'
+                    '（mutuallyDependent_of_common）。在共同供给条件下，以各中心供给闭包为界的意义就是延续条件（feeding_unrestricted_of_common，'
+                    '这是条件句，不断言延续条件）：各自为界的意义已覆盖对方。共同依存的结构与经文相合，"不得已"即此依赖。定域：同一片段说'
+                    '"携手若使一人"，使之如一的是将帅；下文"能愚士卒之耳目，使之无知""帅与之期，如登高而去其梯"表明，这一处境是将帅使士卒无知、'
+                    '去其梯而有意造成的，这一层是单一中心。所以同舟之依存成立，作为用兵之术，由一个中心设置众人之处境，不在脊柱之中。脊柱也不推出"相救"的行为。'),
+        'reading_en': ('AI reading, exact scope: 吴 and 越 as self-bounded centers disagree (centers_disagree); in the storm both depend '
+                       'on one boat, and a chain of dependence reaching an inactive relatum ends everything on it '
+                       '(coextinct); a common condition all depend on makes them mutually dependent '
+                       '(mutuallyDependent_of_common), and under it each center\'s bounded significance is already the '
+                       'continuation condition (feeding_unrestricted_of_common). The structure of common dependence '
+                       'agrees; but in the same passage the general makes them act as one man, and the text goes on to '
+                       'his keeping the soldiers ignorant and removing the ladder: the situation is set by a single '
+                       'centre, a layer the spine does not take. The rescuing behavior is not derived.'),
+        'why': ZHK_WHY},
+    'zaahan-ci-you-gu-bi-you': {
+        'kind': 'scope',
+        'reading': ('AI 读法："此无故彼无，此灭故彼灭"是依赖的必要方向：活跃只在所依赖条件支持时（Web.Dependent），依赖链到达不活跃者就终结链上一切'
+                    '（coextinct）；每个满足的依赖在每步或保持或断开（kept_or_broken）。定域："此有故彼有，此生故彼生"若读作由此之有导出彼之有'
+                    '（充分方向），脊柱不给：依赖只说活跃者须受支持，从不由支持推出活跃；此句只在彼已活跃之处成立，读作彼之有须此之有，即依赖结构中的共起。'
+                    '"见世间集则不生无见，见世间灭则不生有见"：生起与止息是一个变化的读法（change_readings），有限族中生起反复恰当止息反复'
+                    '（arising_recurs_iff），这一句在此结构上相合。'),
+        'reading_en': ('AI reading, exact scope: "this not being, that is not" is the necessary direction of dependence (Web.Dependent, '
+                       'coextinct); "this being, that is", read as sufficiency, the spine never gives, since dependence '
+                       'says only that what is active is supported: it holds only where that is already active, as '
+                       'co-arising within dependence. Seeing arising removes the view "is not" and seeing ceasing '
+                       'removes "is", as arising and ceasing are one change read (change_readings, arising_recurs_iff).'),
+        'why': ZHK_WHY},
+    'lao-76-rou-ruo-sheng-zhi-tu': {
+        'kind': 'scope',
+        'declarations_add': ['Becoming.Tolerance.gives_needs_sparing', 'Becoming.Tolerance.total_stays'],
+        'reading': ('AI 的读法：把“柔弱”读作容忍（一个形成可以缺少其所等待者中的若干而仍然给予），把“坚强”读作容忍为零（要求所等待者全部给予）。'
+                    '脊柱：容忍为零就是等待全部（`Tolerance.tolerating_zero`）；有记忆时，一处扣留终结它所达的全部给予（`Withholding.withholding_absorbs`）；'
+                    '三个互相等待的形成中，从一处扣留起，容忍 0 在第二步处处扣留，容忍 1 在一步内吸收（`Triad.spreads`、`Triad.absorbed`）；'
+                    '稀薄的扣留在容忍之内一步消散（`thin_absorbed`），每个只在其容忍之外等待的集合一直给予（`kept_set`）。'
+                    '所以“柔弱者生之徒”在“吸收局部扣留”之处成立。定域：自全面扣留起，任何形成之给予都须有一个形成的容忍不少于其所等待者之数'
+                    '（`Tolerance.gives_needs_sparing`）；无此者，全面扣留永续（`Tolerance.total_stays`；三者之例中容忍为一亦然，`Triad.total_kept`）。'
+                    '所以“柔弱者生之徒”作全称断言，在扣留落在容忍之内时成立，在全面扣留而无一形成全容时不成立：柔弱不是万能的。'
+                    '第七十八章“柔之胜刚”是跨律比较，脊柱只在见证中有，没有一般定律，见缺口。帛书甲作“木強則恆”，乙作“木強則兢”。'),
+        'reading_en': ("AI reading, exact scope: read as tolerance, softness absorbs a withholding within tolerance in one step while "
+                       "zero tolerance lets one withholding end all giving it reaches; from total withholding, giving "
+                       "needs some formation whose tolerance is at least the number it waits on, and without one total "
+                       "withholding stays (gives_needs_sparing, total_stays), so 柔弱者生之徒 holds where withholding is "
+                       "local, not universally; the comparison 'the soft overcomes the hard' across laws is a gap."),
+        'why': ZHK_WHY},
 }
 
 # Renamed declarations, a correction of every entry that names one: the Lean renamed them after the mappers
@@ -658,7 +729,7 @@ def main():
                 'source': src,
                 'locator': fix.get('locator', e.get('locator', '')),
                 'fragments': fix.get('fragments', e['fragments']),
-                'kind': e['kind'],
+                'kind': fix.get('kind', e['kind']),
                 'declarations': e.get('declarations', []) + fix.get('declarations_add', []),
                 'records': e.get('records', []) + fix.get('records_add', []),
                 'atlas_ids': ids,
@@ -672,6 +743,8 @@ def main():
                     p[k] = e[k]
             if fix.get('gap_closed') and 'gap' in p:
                 p['gap'] = dict(p['gap'], closed=fix['gap_closed'])
+            if 'reading' in fix:
+                p['reading'], p['reading_en'] = fix['reading'], fix['reading_en']
             for old, new in fix.get('reading_sub', []):
                 if old not in p['reading']:
                     problems.append(f'{pid}: reading correction does not apply: {old}')

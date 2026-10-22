@@ -109,7 +109,7 @@
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "3422f2eb6a69a87b2bf6e89e31d5f75c3ca48d6f020cf3dfe4e0efd62450611f"
+      "sha256": "ba134aef8360adcf4c76a6e9ea69207b30cc3cbe749aa8ac18334a6f0d435928"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -149,7 +149,7 @@
     {
       "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "db0e4d2eca1afaecec80fa3a7f1e2cb0edd8531568c1af00db16f5d2e0da7118"
+      "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },
     {
       "path": "sources/civilization-thought-v1.0/PROVENANCE.json",
