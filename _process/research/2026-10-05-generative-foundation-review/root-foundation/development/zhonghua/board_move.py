@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Move ZH's row from the live board to the history file (board rule 4) and name the landing first in the queue
-note: python3 -I board_move.py STATE NOTE   (from the repository root)
-  STATE  the new state cell, links relative to the live board (re-rooted for the history file)
-  NOTE   the sentence put first in the queue note ("ZH landed (…)")"""
+"""Move a landed row from the live board to the history file (board rule 4) and name the landing first in the queue
+note: python3 -I board_move.py STATE NOTE [ROW_PREFIX]   (from the repository root)
+  STATE       the new state cell, links relative to the live board (re-rooted for the history file)
+  NOTE        the sentence put first in the queue note ("ZH landed (…)")
+  ROW_PREFIX  the row's opening, ZH's by default (WL: '| **WL: 文理生生 joined')"""
 import sys
 from pathlib import Path
 
 BOARD = '_process/BECOMING-WORKBOARD.md'
 HISTORY = '_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md'
-PREFIX = '| **ZH: the 中华 edition of the theory'
+PREFIX = sys.argv[3] if len(sys.argv) > 3 else '| **ZH: the 中华 edition of the theory'
 state, note = sys.argv[1], sys.argv[2]
 board = Path(BOARD).read_text(encoding='utf-8')
 history = Path(HISTORY).read_text(encoding='utf-8')
@@ -29,4 +30,4 @@ assert len(q) == 1, len(q)
 lines[q[0]] = '- **Queue:** ' + note + '; ' + lines[q[0]][len('- **Queue:** '):]
 Path(BOARD).write_text('\n'.join(lines), encoding='utf-8')
 Path(HISTORY).write_text('\n'.join(hist), encoding='utf-8')
-print('moved the ZH row to', HISTORY)
+print('moved the row', PREFIX, 'to', HISTORY)

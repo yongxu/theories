@@ -60,7 +60,17 @@ for x in rev['decisions']:
 import sys; sys.path.insert(0, H); from renumber_pian1 import renumber
 SPLIT = [('「凡物之有形者易裁也……有形則有短長」〔CV1-S-JL〕', '「凡物之有形者易裁也」〔CV1-S-JL〕、「有形則有短長」〔CV1-S-JL〕'),
          ('「剛柔交錯，天文也……觀乎天文，以察時變」〔YD-JP22〕', '「剛柔交錯，天文也」〔YD-JP22〕、「觀乎天文，以察時變」〔YD-JP22〕'),
-         ('；字之常义是去、离开', '字之常义是去、离开'), ('以之名历程之前段', '以之名文之前段')]
+         ('；字之常义是去、离开', '字之常义是去、离开'), ('以之名历程之前段', '以之名文之前段'),
+         # the final review (agents/wl/final-review.json): D63 is the decision; 「极其数」 is the yarrow count, as
+         # 一·二十一 and xici-can-wu-cuo-zong read it; 察's name is now 敏感; a code maps 义项 to 名; 理 is read off
+         # the 文 only as the coarsest value-keeping 理; 九·三十三's adopted wording
+         ('（讀，AI；须一决定记录）', '（讀，AI，D63）'),
+         ('「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；揲蓍之「参伍」「错综」，与同章「遂知来物」（九·三十，相分），皆不带。',
+          '「参伍」「错综」与「极其数，遂定天下之象」讲揲蓍之数，数不读作状之种数之界（全段之条定域，xici-can-wu-cuo-zong；给界则有穷之往定文之状是九·三十三之律，不由此句），与同章「遂知来物」（九·三十，相分），皆不带。'),
+         ('察（敏感性）', '察（敏感）'), ('一书是名经码之文；', '一书是以名为值之文，其名经码配义项；'),
+         ('类、理自文读出而非文（见理）', '类、理不是文；理自文读出只在一义：法经一象示之，守象之值之最粗之理所并恰为文同之状（见理）'),
+         ('读作定域：理是自文读出之类，不是文。', '读作定域：理不是文，自文读出只在一义。'),
+         ('恰当其文经类于族之员数减一步之前皆同', '恰当其文于族之员数减一步之前皆同')]
 def corrected(t):
     for a, b in SPLIT:
         t = t.replace(a, b)

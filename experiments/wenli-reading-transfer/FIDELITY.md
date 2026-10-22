@@ -198,7 +198,7 @@ lean_dump.py    -> writes TREE/FidelityDump.lean (driver below) with the needed 
                    fallback: a `#check @d` driver with pp.fullNames, parsed for ∀/∃ binder groups
 sorts.py        -> sort per Lean referent from a registered type-head table (reviewed once)
 align.py        -> per 經 clause, candidate decls by anchor overlap + 證 order; output for coder confirmation
-candidates.py   -> zh: longest-match over 447 names + 37 not adopted, 者/所 nominalizations, variables,
+candidates.py   -> zh: longest-match over 449 names + 37 not adopted, 者/所 nominalizations, variables,
                    numerals, agent lexicon, characters whose wenli 08 senses require an Agent parameter,
                    hazard flag from the name table's 注 (本体|实体|推动者|主宰|意志|中心|先在|本原|天意|神|人格);
                    en: glossary §10(a)(b) terms with anchors, NP chunks, pronouns, variables, agent lexicon;

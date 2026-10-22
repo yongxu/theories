@@ -1,0 +1,905 @@
+[
+ {
+  "key": "lean",
+  "findings": [
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "所读之构不是文，而是理：自文读出、展开随之而同的类（文³；`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中恰是一个关系：理自文读出。",
+    "problem": "Overstated. It folds 「自文读出」 into what 理 is, and asserts 「理自文读出」 as the exact relation of 文 and 理. The two cited laws hold only for a law `next : S → S` read through a map `o`, and only for a class π that keeps the map's value (`keeps`) and carries the law (`GoAlike`). For such a π they give two things: it joins only 文同 states, and, if it also joins every 文同 pair, it is 正名. A 理 in general (七·二, `GoAlike`) need not keep the value. So a 理 is not in general read off the 文.",
+    "evidence": "IdentificationRuns.lean:81 `sameFuture_of_law (keeps : ∀ s s', π s = π s' → o s = o s') (alike : GoAlike (process next) π) (same : π s = π s') : SameFuture next o s s'`. Line 87 `identifiesAlike_of_law` adds the hypothesis `coarsest : ∀ s s', SameFuture … → π s = π s'`. Counterexample to the general claim: Mechanism.lean:129 `goAlike_const : GoAlike P (fun _ => k)`. The constant class is a 理 for every 变. By `const_identifiesAlike_iff` it is 正名 only where every two states are 文同, so it joins 文异 states wherever the map's value differs. The book itself limits the claim: 一·二十一 說 says 「理自文读出只在此义」, and 七·二 說 says 「这是四条已检之律之合…不是一条定理」. The chapter's own 本节未立者 item 5 says 「同理恰在文同」 is not a theorem. The centre's 讀 at line 140 (「理不并文异之状」) shares the problem: it holds only of value-keeping 理.",
+    "new": "所读之构不是文，而是理：展开随之而同的类（文³）。法经一象示之时，守象之值之理所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守值、为理而又并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中是一个关系：守值之理中最粗者，所并恰是文同之状；理自文读出，只在此义。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "「极其数，遂定天下之象」定域（讀，AI，D63）。读作：界给出时，有穷之往定文之全（`Becoming.Identification.bounded_agree`），也定文之诸状（`Becoming.Identification.sameAhead_iff_below`）。原句没有说界须所给；",
+    "problem": "Contradicts the book's 一·二十一 說 and the checked passage record. The chapter reads 「极其数」 as the bound on the number of states. The book says the opposite and does not carry the sentence.",
+    "evidence": "一·二十一 說 says: 「同段「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带」. The passage entry xici-can-wu-cuo-zong in development/zhonghua/passages.json says: 「此段讲揲蓍…「极其数，遂定天下之象」是推尽策数而定出卦象。把「数」读为状态数之界只是字同，不取。」 The 总表 row and the name table's 文 row (「「极其数，遂定天下之象」读作给界则有穷之往定文之状」) repeat the chapter's reading. All three need to be brought into line with the book.",
+    "new": "「极其数，遂定天下之象」不带：此句讲揲蓍，是推尽策数而定卦象，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界（中华本一·二十一）。界给出时有穷之往定文之全（`Becoming.Identification.bounded_agree`）、也定文之诸状（`Becoming.Identification.sameAhead_iff_below`），是九·三十三之律，不由此句；",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "| 极其数，遂定天下之象 | `Identification.sameAhead_iff_below`",
+    "problem": "The 总表 row pairs 「极其数，遂定天下之象」 with the bound laws, as though it were a place where the claim holds. The book's 一·二十一 說 and passage xici-can-wu-cuo-zong say the 数 here is the yarrow count, not a bound on the states, and that the sentence is not carried.",
+    "evidence": "一·二十一 說: 「数不读作状之种数之界，皆不带」. passages.json xici-can-wu-cuo-zong: 「把「数」读为状态数之界只是字同，不取」. The laws in the row (bounded_agree, bounded_agree_exact, sameAhead_iff_below/within, sameFuture_iff_within) are those of 九·三十三 「有界则往定其行」.",
+    "new": "| 有界则往定其行（九·三十三；「极其数」为揲蓍之数，不带） | `Identification.sameAhead_iff_below`",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "一行之往，是其状与动经恒等之象逐步所成之文之前段",
+    "problem": "Inexact gloss of the 往 that `Run.Fixes` uses. Fixes is relative to the steps (moves: state, act, next state) before t, which include the state at t as the target of the last move. The prefix before t of a (状, 动) course stops at state t−1. Under that reading, the outcome of a move taken at step t−1 lies outside the 往, yet 「往定其果」 (`Run.fixes_of_takes`) holds for it. The name table's 往 row has the exact form: 「诸移（状、动、次状）」.",
+    "evidence": "Experiment.lean:80 `Fixes r t s a u := ∀ Q, Determined Q → r.StepsOf Q t → …`, where StepsOf r Q t means Q admits each step `r.state n →(r.act n) r.state (n+1)` for n < t. Takes (line 70) is `∃ n, n < t ∧ r.state n = s ∧ r.act n = a`. With n = t−1 the fixed outcome is `r.state t`. names-decisions.tsv, row 往: 「一行之往（Run.Fixes：于某步之前之诸移）是其诸移（状、动、次状）逐步所成之文之前段」.",
+    "new": "一行之往，是其诸移（状、动、次状）经恒等之象逐步所成之文之前段",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "只是一有穷之步；二行于其前之往（其状与动所成之文之前段）全同",
+    "problem": "The 說 glosses `Run.AgreeUpTo` as equality of the 往 before the 涯, that is, the (状, 动) course before h. AgreeUpTo also requires the states at the 涯 itself to agree. The 經 states this correctly (「其状至涯（含）皆同，其动于涯前皆同」), so the 說 understates the definition and differs from its own 經.",
+    "evidence": "Horizon.lean:100 `Run.AgreeUpTo h r r' := (∀ t, t ≤ h → r.state t = r'.state t) ∧ ∀ t, t < h → r.act t = r'.act t`. The states go up to and including h; the acts stop before h.",
+    "new": "只是一有穷之步；二行至涯而同，是其状与动所成之文于涯前全同，且涯上之状亦同",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "九·十八与八·九之说写明：一行之往，是其状与动逐步所成之文之前段",
+    "problem": "The WL change list repeats the inexact gloss from the book. A run's 往 in `Run.Fixes` is the prefix of its moves (state, act, next state). `Run.AgreeUpTo` also fixes the state at the 涯. Neither is the (状, 动) prefix alone.",
+    "evidence": "Experiment.lean:80 (Fixes via StepsOf, steps n < t including state n+1). Horizon.lean:100 (AgreeUpTo: states t ≤ h, acts t < h). names-decisions.tsv row 往: 「诸移（状、动、次状）」.",
+    "new": "九·十八与八·九之说写明：一行之往，是其诸移（状、动、次状）逐步所成之文之前段；二行至涯而同，又须涯上之状同",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "所需的 Lean 项列在第一部分末与「未决与限度」中",
+    "problem": "Wrong cross-reference. The 「未决与限度」 section lists no Lean item to claim. Its five bullets are: 最好未经检验; 立名是约定; 相合非独立证实; 文理生生的形式结果没有 Lean 证明; 文本未对校. The one further proof item is in 「文理生生的形式部分与八卦」: the G1 embedding, 「须在定然否之下证明两边相等，这是一个可以认领的后续项目」.",
+    "evidence": "Chapter lines 659–665 (未决与限度) and line 632 (形式部分). The Lean items are in 本节未立者 item 5 (line 503).",
+    "new": "所需的 Lean 项列在第一部分末（「本节未立者」）与「文理生生的形式部分与八卦」一节中",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "文中这一条线，是核心之语言与认识论的最贴近的表达：以相杂为文，以动与构之合为字，以反复读中重建内在生成之理为知。理由是它与核心已证明的东西同构（见本章第一部分）。",
+    "problem": "Overstated. A superlative (「最贴近」, closest of all expressions) is presented as 「已有理由支持」. The reason given, agreement with checked laws, supports fidelity, not closeness compared with other expressions. That comparison is exactly what the chapter's unrun FIDELITY and H2 tests are designed to measure. It also conflicts with the head (「本章不说文理生生或古汉语是核心之最好的表达」) and with 本节未立者 3 (「古汉语是核心的最佳媒介。未经检验」). Part one does not show 「同构」 throughout: several of its correspondences are 定域 or have failures shown by 构造之例 (for example `CodeAcquisition.nonuniform_fails_transfer`, `whole_not_in_pairs`).",
+    "evidence": "Head line 30; 本节未立者 item 3 (line 501); 总表 rows with 不成立于 columns (lines 479–495); FIDELITY design (line 655) still to be run.",
+    "new": "文中这一条线，是核心之语言与认识论的一种贴切的表达：以相杂为文，以动与构之合为字，以反复读中重建内在生成之理为知。理由是它的每一环在核心中都有已检之律，并写明其成立与不成立之处（见本章第一部分）；它是否比其他表达更贴近，与是否「最好」一样，尚未检验。",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "The old text appears verbatim once, at line 13 of WENLI-AND-BECOMING.md, in the head's list of reasons labelled 讀（AI，D63）. It defines 理 without qualification as 「自文读出、展开随之而同的类」 and says 「恰是一个关系：理自文读出」, citing two laws. Both laws (IdentificationRuns.lean:81, 87) assume `keeps : π s = π s' → o s = o s'` and `GoAlike (process next) π`, and identifiesAlike_of_law also assumes `coarsest`. A 理 in general (七·二, GoAlike) need not keep the value: by `goAlike_const` the constant class is a 理 for every law, and `const_identifiesAlike_iff` makes it 正名 only where all states are 文同. The book itself limits the claim (一·二十一 說: 「理自文读出只在此义」; 七·二 說: 「四条已检之律之合…不是一条定理」), and so does the chapter's own centre (line 136) and 本节未立者 item 5. So the head overstates and contradicts the book. The proposed replacement is correct. I add the 'not one theorem' caveat that the book and the chapter's line 136 both carry.",
+    "new": "所读之构不是文，而是理：展开随之而同的类（文³）。法经一象示之时，守象之值之理所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守值、为理而又并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中是一个关系：守值之理中最粗者，所并恰是文同之状（几条已检之律之合，非一条定理）；理自文读出，只在此义。"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The old text appears verbatim at chapter line 130. The book's 一·二十一 說 says: 「「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带」. The checked passage entry xici-can-wu-cuo-zong in passages.json (clusters/C07/entries/14) says: 「「极其数，遂定天下之象」是推尽策数而定出卦象。把「数」读为状态数之界只是字同，不取。」 agents/wl/book-check.json shows that the book chose 不带. The chapter's 定域 reading of 「极其数」 as the bound therefore contradicts the book. The book's appendix 文 row and names-decisions.tsv still carry the old reading and need the same alignment. One fix to the replacement: sameAhead_iff_below is cited in 一·二十一, not in 九·三十三 (whose 證 lists bounded_agree but not sameAhead_iff_below). So the attribution should name the chapter's 律 4 and both 條.",
+    "new": "「极其数，遂定天下之象」不带：此句讲揲蓍，是推尽策数而定卦象，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界（一·二十一）。界给出时有穷之往定文之全（`Becoming.Identification.bounded_agree`）、也定文之诸状（`Becoming.Identification.sameAhead_iff_below`），是律 4 之所言（一·二十一、九·三十三），不由此句；"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "The old text appears verbatim once, at chapter line 481 (the 总表, hand-written in centre.fragment, not in a generated ZH-TABLE). The row presents 「极其数，遂定天下之象」 as a claim that holds where a bound is given. The book's 一·二十一 and passage xici-can-wu-cuo-zong say this 数 is the yarrow count and the sentence is not carried. The laws in the row are 律 4 (一·二十一 and 九·三十三). 「有界则往定其行」 is the 九·三十三 link already used in the chain table (line 118), and the table already has rows for the book's own claims (for example 「以其类代状之变为法（七·二）」). The replacement fits.",
+    "new": "| 有界则往定其行（九·三十三；「极其数」为揲蓍之数，不带） | `Identification.sameAhead_iff_below`"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "The old text appears verbatim at line 1893 of the book (九·十八 說). In Experiment.lean, `Run.Fixes r t` uses `StepsOf r Q t := ∀ n < t, Q.step (r.state n) (r.act n) (r.state (n+1))`, so the record before t includes `r.state t`. The prefix before t of the (状, 动) course, by `prefixOf` (values at n < t), stops at (state (t−1), act (t−1)). So the outcome that `fixes_of_takes` fixes for n = t−1 lies outside that prefix, and no length of the (状, 动) prefix equals the moves before t exactly. The name table's 往 row has the exact form 「于某步之前之诸移…诸移（状、动、次状）逐步所成之文之前段」, and the 經 of 九·十八 itself speaks of 「此步之前每一移」. The replacement is exact.",
+    "new": "一行之往，是其诸移（状、动、次状）经恒等之象逐步所成之文之前段"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "The old text appears verbatim at line 1606 of the book (八·九 說). In Horizon.lean:100, `Run.AgreeUpTo h r r' := (∀ t ≤ h, r.state t = r'.state t) ∧ ∀ t < h, r.act t = r'.act t`. The 說 says only that the (状, 动) prefix before the 涯 agrees; that covers states t < h and acts t < h and leaves out the state at h. The 經 of 八·九 states it correctly (「其状至涯（含）皆同，其动于涯前皆同」), so the 說 understates both the definition and its own 經. The replacement (the (状, 动) course agrees before the 涯, and the state at the 涯 also agrees) is exact for every h, including h = 0.",
+    "new": "只是一有穷之步；二行至涯而同，是其状与动所成之文于涯前全同，且涯上之状亦同"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "The old text appears verbatim at chapter line 159, in the list of changes to the book. As a statement of what 往 is, it carries the same inexactness as findings 3 and 4. Fixes uses the moves (state, act, next state) before t, and AgreeUpTo also requires the state at the 涯. Once the book is corrected it would also misreport the book. The proposed replacement is right in substance. I reword its second clause to match the book's corrected 八·九 text exactly; it is followed by the existing 「；历是所给之序…」.",
+    "new": "九·十八与八·九之说写明：一行之往，是其诸移（状、动、次状）逐步所成之文之前段；二行至涯而同，是其状与动所成之文于涯前全同，且涯上之状亦同"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "The old text appears verbatim at chapter line 29. The 「未决与限度」 section (lines 659–665) has five bullets and none of them is a Lean item. The Lean items are in 「本节未立者」 item 5 (line 503: 「这几项都是须在看板认领的 Lean 项」), at the end of part one. The one further proof item is the G1 embedding in 「文理生生的形式部分与八卦」 (line 632: 「须在定然否之下证明两边相等，这是一个可以认领的后续项目」). The cross-reference is wrong, and the replacement points to the right places.",
+    "new": "所需的 Lean 项列在第一部分末（「本节未立者」）与「文理生生的形式部分与八卦」一节中"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "The old text appears verbatim once, at line 649 under 「已有理由支持的」. Its superlative 「最贴近的表达」 is a comparison with all other expressions. The reason given (「同构」 with part one) does not support that comparison. Part one shows correspondences with stated failures in the 总表 columns 不成立于 (for example `CodeAcquisition.nonuniform_fails_transfer` and `whole_not_in_pairs`, both 构造之例). 本节未立者 item 1 calls the book correspondence 「一种对应，不是定理；相合不是印证」 and item 3 calls 「古汉语是核心的最佳媒介」 untested. The head (line 30) disclaims 「最好的表达」, and the FIDELITY test that would measure closeness has not been run. So the sentence overstates its support and conflicts with the chapter. The replacement is good. I make one small wording change, 「都有已检之律相对」, so that the claim is correspondence and not identity.",
+    "new": "文中这一条线，是核心之语言与认识论的一种贴切的表达：以相杂为文，以动与构之合为字，以反复读中重建内在生成之理为知。理由是它的每一环在核心中都有已检之律相对，并写明其成立与不成立之处（见本章第一部分）；它是否比其他表达更贴近，与是否「最好」一样，尚未检验。"
+   }
+  ]
+ },
+ {
+  "key": "text",
+  "findings": [
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「极其数，遂定天下之象」定域（讀，AI，D63）。读作：界给出时，有穷之往定文之全（`Becoming.Identification.bounded_agree`），也定文之诸状（`Becoming.Identification.sameAhead_iff_below`）。原句没有说界须所给；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。",
+    "problem": "This contradicts the book's 一·二十一 and the 脉络 entry it cites. The chapter (line 130, generated from this fragment) reads 「极其数」 as the bound on the number of states and judges it 定域. 一·二十一 says that 「参伍以变，错综其数」 and 「极其数，遂定天下之象」 are about the stalks of divination, that the number is not read as a bound on the number of states, and that neither is carried.",
+    "evidence": "Book 一·二十一 說: 「同段「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带」. passages.json entry xici-can-wu-cuo-zong, reading: 「「极其数，遂定天下之象」是推尽策数而定出卦象。把「数」读为状态数之界只是字同，不取」.",
+    "new": "「极其数，遂定天下之象」与「参伍以变，错综其数」同讲揲蓍之数，不带（中华本一·二十一；全段之条判定域，xici-can-wu-cuo-zong：数是蓍策之数，不读作状之种数之界）。界之律由脊柱另给：界给出时，有穷之往定文之全（`Becoming.Identification.bounded_agree`），也定文之诸状（`Becoming.Identification.sameAhead_iff_below`）；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "| 极其数，遂定天下之象 | ",
+    "problem": "The summary table (chapter line 481) lists 「极其数，遂定天下之象」 as a claim with the bound laws in their scope. Both the book's 一·二十一 and entry xici-can-wu-cuo-zong refuse to read this sentence as a bound on the number of states, so the row repeats the contradiction above. The laws in the row belong to 九·三十三.",
+    "evidence": "一·二十一: 「数不读作状之种数之界，皆不带」. The laws in the row (sameAhead_iff_below, bounded_agree, bounded_agree_exact, sameFuture_iff_within) are those of 九·三十三 「有界则往定其行」.",
+    "new": "| 有界则往定其行（九·三十三） | ",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；揲蓍之「参伍」「错综」，与同章「遂知来物」（九·三十，相分），皆不带。",
+    "problem": "The 文 row's note (changed in the seventh pass, and printed in the book's 附录一) reads 「极其数」 as a given bound, 定域. The book's own 一·二十一 says the number is not read as a bound on the number of states and that the sentence is not carried, so the book's appendix contradicts its 一·二十一.",
+    "evidence": "一·二十一 說: 「…讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带」. Entry xici-can-wu-cuo-zong: 「把「数」读为状态数之界只是字同，不取」. The same string appears once in THE-THEORY-OF-BECOMING-ZHONGHUA.md (appendix), so the appendix must be regenerated.",
+    "new": "揲蓍之「参伍以变，错综其数」「极其数，遂定天下之象」讲蓍策之数（定域，xici-can-wu-cuo-zong），数不读作状之种数之界，与同章「遂知来物」（九·三十，相分），皆不带。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/xu.fragment",
+    "old": "在以外在的意志或先在的根据收尾的解释中不成立，因为那里没有可读出的律。",
+    "problem": "The 序's paragraph 「文与读」 (also in the book's 序) gives a reason that contradicts the chapter it cites. The chapter proves that every history and every 文 reads out its law with no premise. What fails under an external will is that the 义 cannot be read off the 文, not that there is no law to read off.",
+    "evidence": "WENLI §二 域: 「每一历都有它的自然之法，无设……每一文都读出它的状与法，无设」 (`Becoming.Shown.run`, `Becoming.alike_moments_iff`). §三 失效 (a): 「若一部书之义由读所不及者（一个意志）来定，同一个文可以有两种义，而且两者之异屡见，读多少遍都不能定下」 (`Becoming.Learnable.not_predicts_on_both`).",
+    "new": "在以外在的意志或先在的根据收尾的解释中不成立，因为那里的义由读所不及者来定：文同而义屡异，读多少遍也定不下来。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "一份冻结样本上的两人试标及其一致之数；",
+    "problem": "The chapter (line 552) says 两人 (two people) annotated the sample. 文理生生's two pilot annotations were made by AI, and the project itself says they are not a human experiment.",
+    "evidence": "sources/wenli-shengsheng-v0.4/research/README.md:82: 「两份标注是共享研究背景下的AI独立试标，不是人类实验或代表性抽样」. corpus/independent_review.md:38: 「分别完成的两份AI试标」.",
+    "new": "一份冻结样本上的两份 AI 试标（分别完成，非人类实验）及其一致之数；",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "文理生生以 245 个义项各附出处，本书据此逐一复核了两边读法不同的 29 处",
+    "problem": "The chapter (line 561) says each of the 245 senses carries a source. Nine of the 245 have no source id: they are project definitions or modern syntactic glosses.",
+    "evidence": "08_组合文法逐字类型词典_v0.3.json: 236 of 245 senses have non-empty source_ids. Empty for core.023.01 互, core.039.01–02 层, core.077.01 坏 (「项目定义，未以古典引文证明此技术用法」), syntax.02 未, syntax.05 而, syntax.06 以 (「所选语例与现代句法解释」) and extension.15–16 改 (「项目定义」).",
+    "new": "文理生生的 245 个义项中，236 个附出处号（其余 9 个自注为项目定义或现代句法解释），本书据此逐一复核了两边读法不同的 29 处",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "文理生生的词典（每个义项附出处号）",
+    "problem": "The chapter (line 284) makes the same overstatement: not every sense in the dictionary has a source id.",
+    "evidence": "08 dictionary JSON: 236 of 245 senses have source_ids; 9 are empty, among them core.039.01 层 and extension.15 改.",
+    "new": "文理生生的词典（245 个义项中 236 个附出处号）",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "在 117 个有实义的字中相合者 88 字",
+    "problem": "The denominator is described wrongly (chapter line 530). 117 is 144 minus the 6 function words minus the 21 characters the table does not use. Those 21 (质实克本末用…善弱欲学) are content characters, so 有实义 would be 138. The figure of about three quarters (88/117) holds only among the characters the table makes a judgment on.",
+    "evidence": "crosswalk.tsv: S 59 + O 13 + D 22 + NC 16 + ND 7 = 117. G (虚词) 6. W (本表未用) 21: 质实克本末用层兴盛养守坏熄死治乱觉善弱欲学. 88 = 59+13+16. Over the 138 content characters, 88 is 64%.",
+    "new": "在本表有所判读的 117 字中（144 字除去虚词 6 字与本表未用的 21 字）相合者 88 字",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "后一层可以检验，设计已经写好，都还没有运行：",
+    "problem": "The chapter (line 652) says whether this line is 「最好」 among all possible expressions can be tested by the two designs. The design it links says it cannot decide this, and the experiments' README says the same of the fidelity test.",
+    "evidence": "experiments/wenli-reading-transfer/DESIGN-H2.md §1, 「What the test cannot decide」: 「Whether classical Chinese is best among all languages. Only the arms that are run are compared.」 README.md: 「A win for the classical code on fidelity alone would support \"the most exact reading code\", not \"the best language\"」.",
+    "new": "后一层不能由一项试验判定：下面的设计只比较所运行的几种码（如古典之码与受控之英文码），不判定是否「最好」于一切表达（DESIGN-H2 §1）。设计已经写好，都还没有运行：",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "那是有待检验的假说（文理生生的 H2）",
+    "problem": "The head (chapter line 30) attributes to 文理生生's H2 the hypothesis that 文理生生 or classical Chinese is the best expression of the core. H2 says nothing about a best expression. The chapter's own 「本节未立者」 keeps the two apart, as item 2 (H2) and item 3 (古汉语是核心的最佳媒介).",
+    "evidence": "01 总计划 §1.1: 「H2 认知性｜理解这些组合可改善对**未见实例**的结构重建、解释与迁移」. Audit 18:204: 「H2：这些组合改善理解、重建与迁移」. Chapter 本节未立者 items 2 and 3 are separate.",
+    "new": "那是有待检验的假说，不是文理生生的 H2；H2 说理解这些组合可改善对未见实例的结构重建、解释与迁移（见「本节未立者」2、3）",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "两边独立地读出了同样的结构，例子如下。",
+    "problem": "Independence is described inconsistently. Twenty lines earlier (chapter line 507ff.) the chapter says independence is only partial, and line 663 repeats that the agreement is not independent confirmation. This line (532) calls the shared readings independent without qualification.",
+    "evidence": "Chapter line 507: 「但独立只是部分的」 (same Wikisource editions; 文理生生's 八卦 part uses 《中华思想脉络》 as a read-only reference; both written by AI). Book 序: 「独立只是部分的」.",
+    "new": "两边分别读出了同样的结构（独立只是部分的，见上），例子如下。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "两边因此各自独立地走到了同一个两层的结构",
+    "problem": "Same inconsistency at chapter line 555: the convergence is called independent, against the chapter's own statement that independence is only partial.",
+    "evidence": "Chapter line 507–513: 「但独立只是部分的……它不是统计意义上的独立证实」. Line 663: 「两个项目的相合不是统计意义上的独立证实」.",
+    "new": "两边因此分别走到了同一个两层的结构（两者都由 AI 写成，独立只是部分的）",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "须改写（经）：五·六「往，历程至某步之前段也」改「往，文至某步之前段也」",
+    "problem": "The 文 row's note is printed in the book's 附录一 and still says the 經 must be rewritten. The rewrite has already been made: 五·六 now reads 「往，文至某步之前段也」, and the seventeen 历程 in 九·三十–九·三十三 are already 文. The appendix therefore contradicts the current 經.",
+    "evidence": "Book 五·六 經: 「往，文至某步之前段也」. 九·三十–九·三十三 經 have 0 occurrences of 历程 (17 in the previous commit 709246320). The string appears once in the book's appendix.",
+    "new": "已改（经，WL）：五·六「往，历程至某步之前段也」改「往，文至某步之前段也」",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "须改写（经）：一·二十二「恰当经此象其后每步之值皆同」改「恰当其文同」",
+    "problem": "The 文同 row's note (printed in the book's 附录一) is a stale instruction: 一·二十二, 九·三十三 and 九·三十五 have already been rewritten.",
+    "evidence": "Book 一·二十二 經 now ends 「恰当其文同」. 九·三十五 經: 「凡经此类文同之二状」.",
+    "new": "已改（经，WL）：一·二十二「恰当经此象其后每步之值皆同」改「恰当其文同」",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "改「族中二状经类文同，恰当其文经类于族之员数减一步之前皆同」",
+    "problem": "The 文同 note quotes the new wording of 九·三十三 differently from the book. The book's 經 has no 经类 in the second clause.",
+    "evidence": "Book 九·三十三 經: 「族中二状经类文同，恰当其文于族之员数减一步之前皆同」.",
+    "new": "改「族中二状经类文同，恰当其文于族之员数减一步之前皆同」",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "- **出处相合。** 系辞上「通其变，遂成天下之文」〔DS02〕：文沿一变之行而成；「物相杂，故曰文」〔DS03〕：文的诸状只由逐步之值之异分开。",
+    "problem": "相合 is a defined kind (凡·二十六). The head (chapter line 11) files 「物相杂，故曰文」 under 「出处相合」. The centre (line 133), the summary table and the book's 一·二十一 all judge it 定域, because the sentence's 杂 is a hexagram's six lines at once, a state rather than a 文.",
+    "evidence": "Centre: 「「物相杂，故曰文」定域……原句所说的杂，是一卦六爻同时之杂。那是一状（卦），不是文」. Book 一·二十一: 「对照（定域；讀，AI，D63）：「物相杂，故曰文」」.",
+    "new": "- **出处。** 系辞上「通其变，遂成天下之文」〔DS02〕：文沿一变之行而成（相合）；「物相杂，故曰文」〔DS03〕：文的诸状只由逐步之值之异分开（定域：原句之杂是一卦六爻同时之杂，是一状，不是文）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "另有五个名随「文」之立而改。** 往、历、理、终而复始、不测。",
+    "problem": "The count leaves out two rows. The seventh pass also changed the notes of 今 and 錄 because 往 became the prefix of a 文. The generated table directly below lists both (注改写) with no explanation in the prose.",
+    "evidence": "seventh-pass.json: 今 note-replace 「（名表往：历程之前段）」→「（名表往：文之前段）」, why 「WL: 往 is the prefix of a 文」. 錄 note-replace 「…并改名文之前段（WL）」. The ZH-TABLE:wl_revisions table lists 今 and 录. (歷's own change, like theirs, is to its note only.)",
+    "new": "另有七个名随「文」之立而改。** 往、历、理、终而复始、不测；今、录二名之注亦随往（今名文之前段）而改。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "但每处在注中补写了字的常义、文理生生的读法，以及本书之名与它的距离。",
+    "problem": "每处 overstates what the record shows (chapter line 567). 游 was kept with 「No change」. 节 has no row; its senses went into 中節's note. The seven characters the table does not adopt (易德礼信虚反人) got additions to their 不采之理由 recording 文理生生's mapping, not notes on the ordinary sense and its distance from a name.",
+    "evidence": "revisions-check.json: 游 「decision: keep, change: No change.」; 节 「No row of its own. The senses are recorded in the new 中節 note」. seventh-pass.json: 易/德/礼/信/虚/反/人 are 「notad-append」 (mappings only). The keep decisions with note edits are 18 for the 同字异构 characters.",
+    "new": "其中十八处在名表之注中补写了文理生生的读法，多数并写明字的常义与本书之名的距离；七个不采之字（易、德、礼、信、虚、反、人）在不采之理由中补写了文理生生的读法；游无改。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "§一 所列对中华本之经的改写是提议，经看板 WL 项落地。",
+    "problem": "The centre (chapter line 59) calls the rewrites of the book's 經 proposals. The head says the book has gained a 條, and §一 「对中华本的改动（WL）」 lists them as done. The book already carries every one of them: the new 一·二十一 and the rewritten 五·六, 九·三十–三十三 and the rest. make_chapter.py's docstring says the centre's proposals were to be 「written as the changes made」.",
+    "evidence": "Head: 「《变化论》中华本因此增一条（一·二十一「文与文同」）」. git diff 709246320..582feda4c: the 經 of 凡·十九, 凡·二十六–二十八, 五·六, 七·二, 九·三十–三十三, 九·三十五, 十·一, 十·三, 十·十 and 十三·二十 have changed, and 一·二十一 is new. make_chapter.py: 「its proposals written as the changes made」.",
+    "new": "§一 所列对中华本之经的改写已写入中华本，随看板 WL 项落地。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "「固定有穷的观察半径不能判定任意长链上的可达」",
+    "problem": "The chapter (line 624) presents this as 文理生生's result in quotation marks, but the wording is not in the imported files. The result as 文理生生 states it is narrower: a fixed local vocabulary, forward modalities and no closure.",
+    "evidence": "sources/wenli-shengsheng-v0.4/research/basis/lower_bound_review.md:120: 「在固定局部原子词汇、前向关系／模态组合、有限表达式与不依模型大小改写的条件下，无界有限可达性不能由固定有限观察半径的表达式统一替代。」 A grep for 固定有穷 across the import finds nothing.",
+    "new": "「无界有限可达性不能由固定有限观察半径的表达式统一替代」（限于固定局部原子词汇、前向模态、无闭包之片段；basis/lower_bound_review.md）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "所需的 Lean 项列在第一部分末与「未决与限度」中",
+    "problem": "Wrong cross-reference (chapter line 29). 「未决与限度」 lists no Lean item. The items the chapter names are in 「本节未立者」 5, in §六 (连接文之律与缘感无异: 「这是一个须在看板认领的 Lean 项」) and in 「文理生生的形式部分与八卦」 (embedding G1: 「这是一个可以认领的后续项目」).",
+    "evidence": "「未决与限度」 has five bullets: 最好未检验, 立名是约定, 相合非独立证实, 形式结果无 Lean 证明, 电子转录. None is a Lean item to claim.",
+    "new": "所需的 Lean 项列在第一部分末（「本节未立者」与 §六）与「文理生生的形式部分与八卦」中",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "所以两边的相合说明原文对读法的约束很强，是同一线索的两次阅读。",
+    "problem": "The inference contradicts the caveats just listed (chapter line 513). Both projects were written by AI and share the editions and the 脉络 reference, so the agreement cannot show that the original texts constrain the readings strongly. Shared authorship and shared references would explain it equally well.",
+    "evidence": "Lines 509–511 list the shared conditions: the same Wikisource editions, 文理生生's 八卦 part using 《中华思想脉络》 as a read-only reference, and 「两者都由 AI 写成」.",
+    "new": "所以两边的相合可能出于原文对读法的约束，也可能出于共同的 AI 写作与共用的参照，两者分不开；它是同一线索的两次阅读。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "是核心之语言与认识论的最贴近的表达",
+    "problem": "The chapter (line 649) lists a superlative, 「最贴近」, as 已有理由支持. The only reason given is isomorphism with the core, which shows an exact expression, not the closest of several. The experiments' own README says closeness (the most exact code) is what the unrun FIDELITY measure would test. The head also says the chapter does not claim a best expression.",
+    "evidence": "experiments/wenli-reading-transfer/README.md: 「A win for the classical code on fidelity alone would support \"the most exact reading code\"」 and 「Neither result exists yet」. Head: 「本章不说文理生生或古汉语是核心之最好的表达」.",
+    "new": "是核心之语言与认识论的一种确切的表达（讀，AI，D63；是否最贴近，待 FIDELITY 之测）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "不带名表之观（视图）、察（敏感性）、时（情境）",
+    "problem": "The 文 row's note, written in the same seventh pass, still gives 察 its old 所名. The same pass changed 察's 所名 from 「敏感性：…」 to 「敏感」, and the chapter writes 「察（敏感）」.",
+    "evidence": "seventh-pass.json: 察 what-set 「敏感（sensitivity）：一待者之取与于某步，非独由他所待至此步之积而定」. Chapter §一: 「不带名表之观（视图）、察（敏感）、时（情境）」.",
+    "new": "不带名表之观（视图）、察（敏感）、时（情境）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/experiments/wenli-reading-transfer/DESIGN-H2.md",
+    "old": "`names-decisions.tsv` (447 rows)",
+    "problem": "Stale count: after the seventh pass the name table has 449 rows (文 and 文同 were added).",
+    "evidence": "names-decisions.tsv has 449 data rows (450 lines with the header). The chapter and the CIVILIZATION chapter both say 449.",
+    "new": "`names-decisions.tsv` (449 rows)",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/experiments/wenli-reading-transfer/DESIGN-H2.md",
+    "old": "its 凡例, 447 names and 11 function words",
+    "problem": "Stale count in the definition of the classical code K_zh: the table now has 449 names.",
+    "evidence": "names-decisions.tsv: 449 names after the seventh pass.",
+    "new": "its 凡例, 449 names and 11 function words",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/experiments/wenli-reading-transfer/FIDELITY.md",
+    "old": "longest-match over 447 names + 37 not adopted",
+    "problem": "Stale count: the matcher must cover all 449 names, including 文 and 文同, which are central to this round.",
+    "evidence": "names-decisions.tsv: 449 names.",
+    "new": "longest-match over 449 names + 37 not adopted",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "Confirmed. In centre.fragment line 98, 「极其数，遂定天下之象」 is judged 定域 and the 数 is read as a bound on the number of states. The book's 一·二十一 說 says this sentence and 「参伍以变，错综其数」 「讲揲蓍之数……数不读作状之种数之界，皆不带」. The record passages.json xici-can-wu-cuo-zong says 「把「数」读为状态数之界只是字同，不取」. The proposed replacement repeats 「参伍以变，错综其数」, which the next bullet already marks 不带 (「揲蓍之「参伍」「错综」不带」). The text below drops the repetition and keeps the bound laws as the spine's own laws.",
+    "new": "「极其数，遂定天下之象」讲揲蓍：推尽策数而定出卦象，数是蓍策之数，不读作状之种数之界，不带（中华本一·二十一；全段之条判定域，xici-can-wu-cuo-zong）。界之律由脊柱另给：界给出时，有穷之往定文之全（`Becoming.Identification.bounded_agree`），也定文之诸状（`Becoming.Identification.sameAhead_iff_below`）；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The string occurs once, at centre.fragment line 449. Once finding 0 is fixed, this summary-table row would still present the refused reading of 极其数 as a claim. Every law listed in the row is a law of 九·三十三, and the row's columns (界所给之处 / 不给界) fit that 條. Labelling the row by the book's 條, as in the row 「以其类代状之变为法（七·二）」, fits the table's style.",
+    "new": "| 有界则往定其行（九·三十三） | "
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "The text occurs once in names-decisions.tsv (文 row) and is printed in the book's 附录一. It contradicts the same book's 一·二十一 and the record xici-can-wu-cuo-zong. The proposed parenthesis 「讲蓍策之数（定域，…）」 makes it look as if 'speaking of stalk numbers' were the 定域 judgment. The text below follows the wording of 一·二十一 instead.",
+    "new": "「参伍以变，错综其数」「极其数，遂定天下之象」讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，与同章「遂知来物」（九·三十，相分）皆不带。"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "The 序 (xu.fragment line 25, printed at book line 25) gives as its reason that such explanations have no law that can be read off. The chapter says the opposite in §二 域: 「每一历都有它的自然之法，无设……每一文都读出它的状与法，无设」 (Shown.run, alike_moments_iff). What fails is reading the 义 off the 文, which is §三 失效 (a), Learnable.not_predicts_on_both. The proposed replacement says 「文同而义屡异」 as if this always happens. The chapter only says 「同一个文可以有两种义」. The text below keeps that modal.",
+    "new": "在以外在的意志或先在的根据收尾的解释中不成立，因为那里的义由读所不及者来定：同一个文可以有两种屡异之义，读多少遍也定不下来。"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "Confirmed. sources/wenli-shengsheng-v0.4/research/README.md:82 says 「两份标注是共享研究背景下的AI独立试标，不是人类实验或代表性抽样」. annotation_b.json says 「属于独立AI试标，不是独立人类实证」. So 「两人试标」 is false.",
+    "new": "一份冻结样本上的两份 AI 试标（分别完成，非人类实验）及其一致之数；"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "Recounted from 08_组合文法逐字类型词典_v0.3.json. Of the 245 senses, 236 have non-empty source_ids. Nine are empty: core.023.01, core.039.01–02, core.077.01 and extension.15–16 are marked 「项目定义」, and syntax.02, 05 and 06 are marked 「所选语例与现代句法解释」. So 「245 个义项各附出处」 is false.",
+    "new": "文理生生的 245 个义项中，236 个附出处号（其余 9 个自注为项目定义或现代句法解释），本书据此逐一复核了两边读法不同的 29 处"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "Same count: 236 of 245 senses have source ids. One further point: the same sentence's 「中华本的名表（每个名附所引之句）」 is also false. Of the 449 rows of names-decisions.tsv, 201 have 引 「—」 and only 248 carry a quotation. That clause needs the same correction, for example 「（449 个名中 248 个附所引之句）」.",
+    "new": "文理生生的词典（245 个义项中 236 个附出处号）"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "crosswalk.tsv counts: S59 + O13 + D22 + NC16 + ND7 = 117; G (虚词) 6; W (本表未用) 21. The 21 W characters (质实克本末用…善弱欲学) are content characters, so 「117 个有实义的字」 mislabels the denominator. The proposed phrase 「本表有所判读」 is also loose, because W is itself a judgment (本表未用). Stating the subtraction is exact.",
+    "new": "在除去虚词 6 字与本表未用之 21 字后的 117 字中，相合者 88 字"
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "DESIGN-H2.md §1, 「What the test cannot decide」, says: 'Whether classical Chinese is best among all languages. Only the arms that are run are compared.' The README says a fidelity win supports 'the most exact reading code', not 'the best language', while a loss on the reading test would refute the stronger claim. So the second layer can be refuted but not established by these designs. The proposed text omits the refutation side; the text below keeps it.",
+    "new": "后一层只能部分地检验：下面的设计只比较所运行的几种码（如古典之码与受控之英文码），古典之码输了可以推翻这一层，赢了也不判定它「最好」于一切表达（DESIGN-H2 §1）。设计已经写好，都还没有运行："
+   },
+   {
+    "index": 9,
+    "real": true,
+    "reason": "H2 in 01 §1.1 reads 「理解这些组合可改善对未见实例的结构重建、解释与迁移」 and says nothing about a best expression. The chapter's own 本节未立者 lists H2 (item 2) apart from 「古汉语是核心的最佳媒介。未经检验」 (item 3). Since finding 8 shows the 'best' claim is not decidable by the designs, 「有待检验」 should become 「未经检验」, matching item 3.",
+    "new": "那是未经检验的假说（第一部分「本节未立者」3），不是文理生生的 H2；H2 说理解这些组合可改善对未见实例的结构重建、解释与迁移（同处 2）"
+   },
+   {
+    "index": 10,
+    "real": true,
+    "reason": "The chapter says 「但独立只是部分的」 a few lines earlier, giving shared Wikisource editions, the shared 脉络 reference and AI authorship. Line 111 repeats that the agreement 「不是统计意义上的独立证实」. Saying here, without qualification, that the two sides read 「独立地」 contradicts both.",
+    "new": "两边分别读出了同样的结构（独立只是部分的，见上），例子如下。"
+   },
+   {
+    "index": 11,
+    "real": true,
+    "reason": "The same contradiction applies to the shared two-layer architecture. Both projects were written by AI, and 文理生生's founding dialogue had the 生生不息论 as background, so 「各自独立地走到」 overstates what the chapter's own caveats allow.",
+    "new": "两边因此分别走到了同一个两层的结构（两者都由 AI 写成，独立只是部分的）"
+   },
+   {
+    "index": 12,
+    "real": false,
+    "reason": "「须改写（经）：…」 is the name table's standing way of recording the rewrite a naming decision requires, and the note is kept after the rewrite is made. names-decisions.tsv has 36 such notes, and the book's appendix prints all 36. Earlier ones have been carried out and still read 「须改写」: 倍率, 守恒之续 and 互为最优 no longer occur in the book's body. So the note does not claim that the 經 is still unrevised. Changing only this row to 「已改」 would make it inconsistent with the other 35.",
+    "new": "已改（经，WL）：五·六「往，历程至某步之前段也」改「往，文至某步之前段也」"
+   },
+   {
+    "index": 13,
+    "real": false,
+    "reason": "Same convention as finding 12. The 36 「须改写」 notes record the required rewrite and are kept after it is done; examples from earlier passes show this. This is not a claim about the current 經.",
+    "new": "已改（经，WL）：一·二十二「恰当经此象其后每步之值皆同」改「恰当其文同」"
+   },
+   {
+    "index": 14,
+    "real": true,
+    "reason": "The book's 九·三十三 經 reads 「族中二状经类文同，恰当其文于族之员数减一步之前皆同」, with no second 经类. The 文同 note quotes target wording that does not appear in the book. Under the 须改写 convention the note should give the wording actually adopted.",
+    "new": "改「族中二状经类文同，恰当其文于族之员数减一步之前皆同」"
+   },
+   {
+    "index": 15,
+    "real": true,
+    "reason": "相合 is a defined kind in the chapter's 体例 (凡·二十六). The centre (「「物相杂，故曰文」定域……那是一状（卦），不是文」), the summary table and the book's 一·二十一 (「对照（定域；讀，AI，D63）：「物相杂，故曰文」」) all judge this sentence 定域. Filing it under 「出处相合」 contradicts them.",
+    "new": "- **出处。** 系辞上「通其变，遂成天下之文」〔DS02〕：文沿一变之行而成（相合）；「物相杂，故曰文」〔DS03〕：文的诸状只由逐步之值之异分开（定域：原句之杂是一卦六爻同时之杂，是一状，不是文）。"
+   },
+   {
+    "index": 16,
+    "real": true,
+    "reason": "seventh-pass.json has note-replace edits on 今 and 錄 with the reasons 'WL: 往 is the prefix of a 文' and 'the suggestion was taken and 往 now names the prefix of a 文'. The generated wl_revisions table lists 今 and 录 (注改写), but the prose counts only five names. The proposed parenthesis 「（今名文之前段）」 is ambiguous: 今 is one of the names in the same sentence, so it reads as '今 names the prefix of a 文'. The text below rewords it.",
+    "new": "另有七个名随「文」之立而改。** 往、历、理、终而复始、不测；又今、录二名之注，随往改名文之前段而改。"
+   },
+   {
+    "index": 17,
+    "real": true,
+    "reason": "revisions-check.json records 游 as 'decision: keep, change: No change.' The seven characters the table does not adopt (易德礼信虚反人) received notad-append additions to their 不采之理由, not notes on a name. 节 has no row of its own; its senses went into the 中節 note, which does not cite 文理生生 explicitly. Note edits cover 18 characters: 系形因承界生开闭聚散往亡中节正观察明宇 minus 察, which was revised, plus 中/节 counted separately. The proposed wording says all 18 added 「文理生生的读法」. For 节 the note gives senses only, so the text below says 读法或字义.",
+    "new": "其中十八处在名表之注中补写了文理生生的读法或字义，多数并写明字的常义与本书之名的距离；七个不采之字（易、德、礼、信、虚、反、人）在不采之理由中补写了文理生生的读法；游无改。"
+   },
+   {
+    "index": 18,
+    "real": true,
+    "reason": "The book on this branch already carries every rewrite §一 lists: the new 一·二十一 and the rewritten 經 of 五·六, 九·三十 to 九·三十三, 九·三十五, 一·二十二, 十·一, 十·十, 七·二, 凡·十九, 凡·二十六 to 凡·二十八 and 十三·二十 (checked against the current 經 text). The head says 「中华本因此增一条」, and make_chapter.py's docstring says 'its proposals written as the changes made'. Calling them 提议 contradicts all of this.",
+    "new": "§一 所列对中华本之经的改写已写入中华本，随看板 WL 项落地。"
+   },
+   {
+    "index": 19,
+    "real": true,
+    "reason": "The 「」 wording does not occur anywhere in the import; a grep for 固定有穷 finds nothing. Elsewhere in the chapter, 「」 around 文理生生 text marks a verbatim quotation. The source's own statement, at basis/lower_bound_review.md:120, is narrower: a fixed local atom vocabulary, forward relation/modal compositions, and finite expressions without star (line 4: 「任何一条有限、无 `star` 的前向关系／模态表达式」). The proposed scope wording is slightly loose; the text below gives it in the source's terms.",
+    "new": "「无界有限可达性不能由固定有限观察半径的表达式统一替代」（限于固定局部原子词汇、前向关系／模态组合、无闭包之有限表达式；basis/lower_bound_review.md）"
+   },
+   {
+    "index": 20,
+    "real": true,
+    "reason": "「未决与限度」 has five bullets, and none is a Lean item to claim. The Lean items are in 本节未立者 item 5, which already includes the §六 link to Web.AlikeThroughUpTo and the CrossSituational link, and in the G1 embedding in 「文理生生的形式部分与八卦」. The proposed 「第一部分末（「本节未立者」与 §六）」 wrongly places §六 at the end of part one; §七, the 总表 and 本节未立者 come after it.",
+    "new": "所需的 Lean 项列在第一部分末（「本节未立者」5）与「文理生生的形式部分与八卦」中"
+   },
+   {
+    "index": 21,
+    "real": true,
+    "reason": "The sentence draws its conclusion right after listing shared editions, the shared 脉络 reference and shared AI authorship. Those shared conditions explain the agreement equally well, so the agreement cannot show 「原文对读法的约束很强」. The overstatement contradicts the caveats it follows.",
+    "new": "所以两边的相合可能出于原文对读法的约束，也可能出于共同的 AI 写作与共用的参照，两者分不开；它是同一线索的两次阅读。"
+   },
+   {
+    "index": 22,
+    "real": true,
+    "reason": "「最贴近」 is a comparison with other expressions, but the only reason given is isomorphism with the core, which supports closeness, not being closest. The experiments README says a comparison of exactness would come from the unrun fidelity measure ('Neither result exists yet'), and even that compares only two editions. The claim is also an AI reading and is not labelled. The proposed 「待 FIDELITY 之测」 overstates what FIDELITY can decide, since it compares only the 中华本 with the English edition.",
+    "new": "是核心之语言与认识论的一种贴近的表达（讀，AI，D63；是否最贴近，未经检验）"
+   },
+   {
+    "index": 23,
+    "real": true,
+    "reason": "察's 所名 was 「敏感性：读有限多条件之律之最小耦合」 at 709246320 and is now 「敏感（sensitivity）：…」; the chapter lists this under 改了三处 (「察：所名改为「敏感」」). The 文 row, written in the same pass and printed in the book's appendix, still gives the superseded 所名. The chapter's own sentence reads 「察（敏感）」.",
+    "new": "不带名表之观（视图）、察（敏感）、时（情境）"
+   },
+   {
+    "index": 24,
+    "real": true,
+    "reason": "names-decisions.tsv has 450 lines, so 449 rows after the header. The design describes 'today's' freeze, and the CIVILIZATION chapter and WENLI head both say 449.",
+    "new": "`names-decisions.tsv` (449 rows)"
+   },
+   {
+    "index": 25,
+    "real": true,
+    "reason": "Same stale count in the definition of K_zh. The table frozen today has 449 names, including 文 and 文同.",
+    "new": "its 凡例, 449 names and 11 function words"
+   },
+   {
+    "index": 26,
+    "real": true,
+    "reason": "Stale count. The name table has 449 rows; symbols-not-adopted.tsv has 37 rows (38 lines), so the second figure is correct.",
+    "new": "longest-match over 449 names + 37 not adopted"
+   }
+  ]
+ },
+ {
+  "key": "account",
+  "findings": [
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "「极其数，遂定天下之象」定域（讀，AI，D63）。读作：界给出时，有穷之往定文之全（`Becoming.Identification.bounded_agree`），也定文之诸状（`Becoming.Identification.sameAhead_iff_below`）。原句没有说界须所给；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。",
+    "problem": "The chapter reads 数 in 「极其数」 as a bound on the number of states. The book and the passage record both refuse that reading, so the chapter contradicts the book.",
+    "evidence": "中华本一·二十一說: 「同段「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带」. passages.json, xici-can-wu-cuo-zong reading: 「把「数」读为状态数之界只是字同，不取」; a later note: 「xici-can-wu-cuo-zong 已删去状态数之界之读」. 凡·二十六: 共用一字不算相合.",
+    "new": "「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong）：数是蓍策之数，读作状之种数之界只是字同，不带（中华本一·二十一）。有界则往定其文，其律见九·三十三，不以此句为出处；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "| 极其数，遂定天下之象 |",
+    "problem": "This summary-table row attributes the bounded-identification laws to 「极其数，遂定天下之象」, a reading the book and the passage record reject.",
+    "evidence": "中华本一·二十一: 「数不读作状之种数之界，皆不带」. passages.json xici-can-wu-cuo-zong: 「把「数」读为状态数之界只是字同，不取」. The row's laws (sameAhead_iff_below, bounded_agree, …) belong to 九·三十三 「有界则往定其行」.",
+    "new": "| 有界则往定其行（九·三十三；极其数之句讲揲蓍，不带） |",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；",
+    "problem": "The 文 row's note keeps the bound reading of 极其数. The row is rendered into the book's name appendix (book line 3893), so the book now contradicts its own 一·二十一說.",
+    "evidence": "Book line 3893 (rendered 文 row): 「「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）」. Book 一·二十一說: 「数不读作状之种数之界，皆不带」. passages.json xici-can-wu-cuo-zong: 「已删去状态数之界之读」.",
+    "new": "「极其数，遂定天下之象」讲揲蓍之数，数不读作状之种数之界（xici-can-wu-cuo-zong：字同，不取）；",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "一行之往，是其状与动经恒等之象逐步所成之文之前段：历是所给之序，文是所读之值，同一序列之二读",
+    "problem": "In 九·十八說, a run's 往 is defined as the prefix of (state, move) read through the identity map. That is not a 文 under 一·二十一 經, which reads a history's states (not its moves) through a map. It also drops the next state, which is what Run.Fixes needs. It disagrees with the name table's 往 row, and the reading is not labelled.",
+    "evidence": "Experiment.lean:74 `StepsOf r Q t := ∀ n, n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))`. Run.Fixes quantifies over StepsOf, so at t it uses r.state t. `fixes_of_takes` with n = t−1 fixes the outcome r.state t, which is not in the prefix before t of n ↦ (state n, act n). 一·二十一 經: 「文，一历之状经一象逐步之值也」. Name table 往 row: 「一行之往…是其诸移（状、动、次状）逐步所成之文之前段」.",
+    "new": "一行之往，是其诸移（状、动、次状）逐步所成之文之前段（凡逐步之值皆文，一·二十一；讀，AI，D63）：历是所给之序，文是所读之值，同一序列之二读",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "二行于其前之往（其状与动所成之文之前段）全同",
+    "problem": "八·九說 glosses 至涯而同 as equality of the 往 before 涯. That omits the state at 涯, which the 經 and Lean include, and it is again a (state, move) 文 that 一·二十一's definition does not give. The reading is not labelled.",
+    "evidence": "Horizon.lean:100 `Run.AgreeUpTo h r r' := (∀ t, t ≤ h → r.state t = r'.state t) ∧ ∀ t, t < h → r.act t = r'.act t`. The prefix before h covers states 0..h−1 only. 八·九 經: 「其状至涯（含）皆同，其动于涯前皆同」.",
+    "new": "二行之状之文至涯（含）全同，其动之文于涯前全同（皆文之前段，一·二十一；讀，AI，D63）",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "九·十八与八·九之说写明：一行之往，是其状与动逐步所成之文之前段；",
+    "problem": "The chapter reports the same off-by-one, non-definitional 往 of a run as the change made to the book. It conflicts with the name table's 往 row and with the Lean (StepsOf, AgreeUpTo).",
+    "evidence": "See the 九·十八 and 八·九 findings. Name table 往: 「其诸移（状、动、次状）逐步所成之文之前段」. StepsOf uses r.state (n+1) for n < t. AgreeUpTo includes the state at h.",
+    "new": "九·十八之说写明：一行之往，是其诸移（状、动、次状）逐步所成之文之前段（讀，AI，D63）；八·九之说写明：二行至涯而同，即其状之文至涯（含）、其动之文于涯前皆同；",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "文中这一条线，是核心之语言与认识论的最贴近的表达：以相杂为文，以动与构之合为字，以反复读中重建内在生成之理为知。理由是它与核心已证明的东西同构（见本章第一部分）。",
+    "problem": "This presents a superlative (最贴近的表达) as already supported, on the ground that it is isomorphic to proved results. The chapter itself grants none of the three parts as proved: 物相杂 is only 定域, composition of characters has only a supplied-grammar law, and readers' reconstruction is not derived. It contradicts §七, 本节未立者 2–3 and line 30.",
+    "evidence": "§一: 「物相杂，故曰文」定域. §七 域: 「这是一个所给的有穷律族之律，不是语言之律」. 本节未立者 2: 「人类读者是否这样学…都没有导出」. 本节未立者 3: 「古汉语是核心的最佳媒介。未经检验」. Line 30: 「本章不说文理生生或古汉语是核心之最好的表达」.",
+    "new": "讀（AI，D63）：文中这一条线与核心之认识论在多处结构相合：以逐步之值为文，自文读出状与法，有界则往定文（见本章第一部分）。其中「物相杂，故曰文」〔DS03〕只是定域；「以动与构之合为字」在脊柱上只有所给之语法中之律（§七）；读者是否以反复读重建内在生成之理，没有导出（「本节未立者」2）。是否「最贴近」，未经比较。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "后一层可以检验，设计已经写好，都还没有运行：",
+    "problem": "The sentence says the designs can test whether the expression is best among all possible expressions. The design the chapter links says that question is not decidable by the test.",
+    "evidence": "experiments/wenli-reading-transfer/DESIGN-H2.md §1, 'What the test cannot decide': 'Whether classical Chinese is best among all languages. Only the arms that are run are compared.' The bullet before it reads: 「尚未检验的。它是否「最好」于一切可能的表达」.",
+    "new": "它是否胜过受控之他码，可以检验，设计已经写好，都还没有运行；它是否「最好」于一切可能的表达，只比所运行之臂的试验定不下（DESIGN-H2 §1）：",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "本章不说文理生生或古汉语是核心之最好的表达；那是有待检验的假说（文理生生的 H2）。",
+    "problem": "The 'best expression' claim is misattributed to 文理生生's H2. H2 is a cognitive hypothesis about readers' transfer, says nothing about this core, and makes no 'best' claim. The 'best' claim is also not testable by the H2 design.",
+    "evidence": "总计划 01 §1.1: 「H2 认知性 | 理解这些组合可改善对未见实例的结构重建、解释与迁移」. The chapter's own 本节未立者 2 states H2 this way. DESIGN-H2 §1 calls the tested claim CL, an adaptation, and excludes 'best among all languages'.",
+    "new": "本章不说文理生生或古汉语是核心之最好的表达。相关而较弱的认知假说是文理生生的 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移），尚未检验；「最好」于一切表达，只比所运行之臂的试验定不下。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "它只在内在生成的文本中成立；在以外在的意志或先在的根据收尾的解释中不成立，因为那里没有可读出的律。",
+    "problem": "The 序 states, unlabelled and as fact, what holds of actual texts, and gives a false reason: that a will-terminated text has no readable law. On the chapter's own laws every history and every 文 reads off its law. What fails is reading the 义, and only where it differs on alike 文s. The chapter says no actual book is shown to satisfy the conditions.",
+    "evidence": "`Becoming.Shown.run`: every history is a run of its natural law. Chapter §二 域: 「每一文都读出它的状与法，无设」. Chapter §三 (a) (`Learnable.not_predicts_on_both`): 「这条律说的是义能否从文中读出，不说那个义本身的真伪」. 本节未立者 1: 「任一实际的书满足上述条件…这是一种对应，不是定理」.",
+    "new": "讀（AI，D63）：这可以读作，义是自文读出之一读、文之状有界之处，有穷之往定之；义若由读所不及者（一个意志）定，同一文可有屡异之二义，读多少遍也定不下（不是那里没有可读出的律：每一历都有其自然之法）。某一部书是否如此，律不说。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "本书的认识论，在文中有一条现成的线索。字把动与构合为小模；反复读许多不同的表现，便从组合中重建出一个能推广的模型，这就是“读书百遍，其义自见”。",
+    "problem": "Two problems. First, 文 here means the written language, two sentences before the same paragraph names 文 the course. That is the 一字二义 the WL round removed elsewhere (古文→古书 in 凡例). Second, the claim about characters and readers is the untested reading hypothesis (H2), stated unlabelled as fact.",
+    "evidence": "Same paragraph: 「本书因此以「文」名一历之状经一象逐步之值」. Chapter line 163: 「古文」改「古书」，「免一字二义」. Chapter 本节未立者 2: H2 未导出. 18 号审计: 「尚未进行足以回答该假说的认知或迁移比较」.",
+    "new": "本书的认识论，在古书与汉字中有一条现成的线索。讀（AI，D63）：字把动与构合为小模；反复读许多不同的表现，便可从组合中重建出一个能推广的模型，这可以读作“读书百遍，其义自见”；读者是否如此学，是未经检验的假说（文理生生 H2）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "天文是世界之文，一书是名经码之文，理是自文读出之类。",
+    "problem": "Three problems. 「名经码之文」 reverses the code's direction: a code maps 义项 to 名, so names are its values, not what passes through it. 「理是自文读出之类」 drops the book's own restriction. The 天文 gloss is an unlabelled reading.",
+    "evidence": "十·一 經: 「码，以名配诸义项者也」. SharedCodes.lean doc: 'A code is a map from senses to forms'. 一·二十一說: 「一书是以名为值之文，其名经码配义项」, and 「守象之值之最粗之理所并者恰为文同之状（七·二），理自文读出只在此义」. `Law.sameFuture_of_law` and `Law.identifiesAlike_of_law` need `keeps` (π preserves o) and `coarsest`. 达名 is 理 for every 变 (`goAlike_const`) and is not read off any 文.",
+    "new": "天文可读作世界之文（讀，AI，D63），一书是以名为值之文、其名经码配义项，理是展开随之而同之类，其守象之值之最粗者所并恰为文同之状（一·二十一）。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "讀（AI，D63）：一部书是名经码之文，逐步之值是名；",
+    "problem": "「名经码之文」 reverses the code's direction. The same sentence says the code maps 义项 to 名, so 义项 go through the code and 名 are the values. The book's 一·二十一 has the correct form.",
+    "evidence": "Same sentence: 「码是每一待者所持、自义项至名的映射」. 十·一 經: 「码，以名配诸义项者也」. SharedCodes: 'A code is a map from senses to forms'. 一·二十一說: 「一书是以名为值之文，其名经码配义项」. The pattern 「X经Y之文」 (一·二十一 經: 一历之状经一象) means X passed through map Y.",
+    "new": "讀（AI，D63）：一部书是以名为值之文，其名经码配义项，逐步之值是名；",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "一部书是名经码之文（§一）；一名之义项",
+    "problem": "Same reversed direction of the code as in §一 (名经码 instead of 义项经码).",
+    "evidence": "十·一 經: 「码，以名配诸义项者也」. 一·二十一說: 「一书是以名为值之文，其名经码配义项」.",
+    "new": "一部书是以名为值之文（§一）；一名之义项",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "一部书是名经码之文（§一）；这条律说",
+    "problem": "Same reversed direction of the code (名经码 instead of 义项经码).",
+    "evidence": "十·一 經: 「码，以名配诸义项者也」. 一·二十一說: 「一书是以名为值之文，其名经码配义项」.",
+    "new": "一部书是以名为值之文（§一）；这条律说",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "一书是名经码之文；文不名符号",
+    "problem": "The 文 row's note reverses the code's direction. The row is rendered into the book's appendix, where it contradicts 一·二十一說.",
+    "evidence": "十·一 經: 「码，以名配诸义项者也」. 一·二十一說: 「一书是以名为值之文，其名经码配义项」.",
+    "new": "一书是以名为值之文，其名经码配义项；文不名符号",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "所读之构不是文，而是理：自文读出、展开随之而同的类（文³；`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中恰是一个关系：理自文读出。",
+    "problem": "The head defines 理 in general as 「自文读出」 and calls the relation exact (恰). The cited laws give this only for the coarsest value-preserving 理. A finer 理 (the identity under a law) or 达名 is not read off any 文. This contradicts 一·二十一 and the chapter's §四.",
+    "evidence": "`Law.sameFuture_of_law` needs keeps (π s = π s' → o s = o s') and GoAlike. `identifiesAlike_of_law` also needs coarsest. `goAlike_const`: 达名 is 理 for every 变. 一·二十一說: 「理自文读出只在此义」. Chapter §四: 「读者怎样到达他的类，脊柱不导出」.",
+    "new": "所读之构不是文，而是理：展开随之而同的类；其中守象之值之最粗之理，所并者恰为文同之状，自文读出（文³；`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中是一个关系：此理自文读出。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "- 类、理、推类读自文，而不是文（§四）。",
+    "problem": "This says 类 in general is read off the 文, which contradicts §四 of the same chapter (the spine does not derive how a reader reaches a class). It also drops 一·二十一's restriction on 理.",
+    "evidence": "Chapter §四: 「读者怎样到达他的类，脊柱不导出。`Becoming.Learning` 明言不导出的，正是一个形成实际经过或能够到达哪些候选、类或归并」. 七·一: 类 is any assignment of values that lumps. 一·二十一說: 「理自文读出只在此义」.",
+    "new": "- 类、理、推类都不是文（§四）。理自文读出，只在守象之值之最粗之理所并者恰为文同之状这一义（一·二十一）；读者怎样到达他的类，脊柱不导出（§四）。",
+    "severity": "error"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "类、理、推类都读自文，但都不是文（§四）。",
+    "problem": "This makes the same general claim that 类 and 理 are read off the 文. It contradicts §四 and the restriction in 一·二十一.",
+    "evidence": "Chapter §四: 「读者怎样到达他的类，脊柱不导出」. 一·二十一說: 「理自文读出只在此义」. Only the coarsest value-preserving 理 merges exactly the 文同 states (`Law.sameFuture_of_law` + `Law.identifiesAlike_of_law`).",
+    "new": "类、理、推类都不是文（§四）；理自文读出只在一义：守象之值之最粗之理所并者恰为文同之状（一·二十一）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "**出处相合。** 系辞上「通其变，遂成天下之文」〔DS02〕：文沿一变之行而成；「物相杂，故曰文」〔DS03〕：",
+    "problem": "The heading calls both sources 相合, a defined term (凡·二十六). The chapter and the book judge 「物相杂，故曰文」 定域 only: the original's mix is simultaneous (a state), not a 文.",
+    "evidence": "Chapter §一: 「「物相杂，故曰文」定域…原句所说的杂，是一卦六爻同时之杂。那是一状（卦），不是文」. 一·二十一說: 「对照（定域；讀，AI，D63）：「物相杂，故曰文」」.",
+    "new": "**出处。** 系辞上「通其变，遂成天下之文」〔DS02〕（相合）：文沿一变之行而成；「物相杂，故曰文」〔DS03〕（定域：原句之杂是一卦六爻同时之杂）：",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "文理生生的词典给文三义：可读之纹（文¹）、书写之文（文²）、所读之构（文³）。",
+    "problem": "The 文¹/文²/文³ triple is attributed to the dictionary, but it comes from the plan (总计划 §2.1). Dictionary 08 labels the senses 可辨样态, 文字表达 and 模型表达, and it forbids coercion between text, representation and world objects. That is relevant to 「三义归于一文一理」 and is not mentioned.",
+    "evidence": "01 总计划 §2.1: 「文¹：世界中可辨的样态与纹理…文²：被标记、命名、叙述的符号形式…文³：从语篇中读出的结构与生成规则」. 08 JSON core.001.01–03 labels: 可辨样态, 文字表达, 模型表达; forbidden_coercions: 「文本、表征、世界对象不可互相强制转换」.",
+    "new": "文理生生给文三义（总计划 §2.1 记作文¹、文²、文³；词典 08 名之为可辨样态、文字表达、模型表达）：可辨之纹（文¹）、书写之文（文²）、所读之构（文³），并禁「文本、表征、世界对象」互相强制转换。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "知来、符、阙、终而复始、不测、可知、衢都是文上之辞",
+    "problem": "辞 is a name in the book (claims a 系辞 attaches to a state). 知来 is a map from prefixes to a value or silence, and 不测 is itself a 文, so neither is a 辞 on a 文.",
+    "evidence": "一·十九: 系辞, 「每状各系于此状然之辞」. 九·二十九: 知来 is `pred : List O → Option O`. 一·二十一說: 「不测是一知来之对角之文」.",
+    "new": "知来、符、阙、终而复始、不测、可知、衢都陈述在文上（不测本身是一文）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "两边独立地读出了同样的结构，例子如下。",
+    "problem": "This contradicts the same section's statement that the two projects are only partly independent.",
+    "evidence": "Same chapter: 「但独立只是部分的：两者读同一套经典…文理生生的八卦部分以《中华思想脉络》为只读参照…两者都由 AI 写成」, and 「它不是统计意义上的独立证实」.",
+    "new": "两边分别读出了同样的结构（独立只是部分的，见上），例子如下。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "两边因此各自独立地走到了同一个两层的结构",
+    "problem": "Claiming the two projects reached the same two-layer structure independently contradicts the chapter's own statement that independence is only partial.",
+    "evidence": "Chapter: 「独立只是部分的」 and 「它不是统计意义上的独立证实」. The dialogue record (02, line 192) shows 文理生生 began with 生生不息论 as background.",
+    "new": "两边因此分别走到了同一个两层的结构（独立只是部分的）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "old": "文与文同二名已入名表（第七次名表之改），其决定记录为 D63。",
+    "problem": "This cites decision record D63, which does not exist. DELEGATED-CHOICES.md ends at D62. By 凡·十九, a reading not yet in the decision record carries the D62 label, so the many 「讀（AI，D63）」 labels point to nothing.",
+    "evidence": "grep 'D63' in _process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md finds nothing; its index ends at row 'D62 | the readings of 《中华思想脉络》…'. 凡·十九說: 「未入者…标为「讀（AI，D62）」」. Commit 582feda4c: 'D63 pending'.",
+    "new": "文与文同二名已入名表（第七次名表之改）；其决定记录 D63 尚未写入决定记录（未决），写入之前，本章所标 D63 之讀，依凡·十九与 D62 同其地位。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "名之读法见[决定记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) D63。",
+    "problem": "一·二十一證 cites D63 in the decision record, but no D63 exists there yet. The cross-reference is dangling.",
+    "evidence": "DELEGATED-CHOICES.md contains no 'D63'; its last entry is D62. Name table 文 row: 「讀，AI；须一决定记录」.",
+    "new": "名之读法之决定记录 D63 尚未写入[决定记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md)（未决：待补）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "old": "慧远同文以神为",
+    "problem": "五·十七說 writes 「同文」 to mean 'in the same text'. 一·二十一 says the book does not write 「同文」, to keep it apart from 书同文's code and from 文同. This leaves a third sense of 同文 in the book.",
+    "evidence": "一·二十一說: 「不写「同文」，免与「书同文」之码（十·十五）相混」. Book line 1226 (五·十七): 「慧远同文以神为「感物而非物故物化而不滅」〔IN1-S03〕者」.",
+    "new": "慧远同篇以神为",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+    "old": "类、理自文读出而非文（见理）",
+    "problem": "The 文 row's division-of-labour note says 类 and 理 are read off the 文 without restriction. It is rendered into the book's appendix and contradicts 一·二十一說, which restricts this to the coarsest value-preserving 理.",
+    "evidence": "一·二十一說: 「类与理不是文…守象之值之最粗之理所并者恰为文同之状（七·二），理自文读出只在此义」. 七·一: 类 is any lumping. Chapter §四: 「读者怎样到达他的类，脊柱不导出」.",
+    "new": "类、理不是文；守象之值之最粗之理所并者恰为文同之状，理自文读出只在此义（见理）",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "Confirmed. passages.json xici-can-wu-cuo-zong reads 数 as the count of yarrow stalks and rejects the bound reading: 「把「数」读为状态数之界只是字同，不取」. A later note says 「已删去状态数之界之读」. 中华本一·二十一說 says the same: 「数不读作状之种数之界，皆不带」. Chapter line 130 still judges the sentence 定域 under the bound reading, so it contradicts the book. The proposed replacement is correct but repeats 参伍/错综, which the next sub-bullet already sets aside, so I tightened it. The chapter is assembled from the wenli fragments, so the edit goes in the fragment.",
+    "new": "「极其数，遂定天下之象」不带：此段讲揲蓍，数是蓍策之数，读作状之种数之界只是字同，不取（xici-can-wu-cuo-zong，全段定域；中华本一·二十一）。有界则往定其文，其律在九·三十三（`Becoming.Identification.bounded_agree`），不以此句为出处；不给界，则没有一个往定其次值（`Becoming.Learning.no_prefix_fixes_next`）。"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "Confirmed. Line 481 of the summary table attaches the bounded laws to 「极其数，遂定天下之象」, the same reading that passages.json and 一·二十一 reject. The other first-column entries already include the chapter's own claims (文之状与法读自文, 最小的读), so labelling the row by 九·三十三 fits the table.",
+    "new": "| 有界则往定其行（九·三十三；极其数之句讲揲蓍，不带） |"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "Confirmed. The 文 row of names-decisions.tsv carries 「「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；」, and that row is rendered at book line 3893. This contradicts 一·二十一說 and the passage record. The replacement is accurate. The appendix must be regenerated afterwards.",
+    "new": "「极其数，遂定天下之象」讲揲蓍之数，数不读作状之种数之界（xici-can-wu-cuo-zong：字同，不取）；"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "Confirmed against Experiment.lean. `StepsOf r Q t := ∀ n, n < t → Q.step (r.state n) (r.act n) (r.state (n+1))`, and `Fixes` quantifies over StepsOf, so the record before t includes r.state t. The (state, move) prefix before t stops at state t−1. The same 說 sentence then speaks of 「凡许此行诸移之法」, and the name table's 往 row reads 「其诸移（状、动、次状）逐步所成之文之前段」, so the book contradicts both. The moves reading is exact for every t, t = 0 included, since then StepsOf is vacuous. The landing text has the same gloss: land_wl.py decision item 二, 「一行之往，是其状与动经恒等之象所成之文之前段」, also needs this fix.",
+    "new": "一行之往，是其诸移（状、动、次状）逐步所成之文之前段（凡逐步之值皆文，一·二十一；讀，AI，D63）：历是所给之序，文是所读之值，同一序列之二读"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "Confirmed against Horizon.lean: `Run.AgreeUpTo h r r' := (∀ t, t ≤ h → r.state t = r'.state t) ∧ ∀ t, t < h → r.act t = r'.act t`. The 說 glosses this as the (state, move) prefix before 涯, which drops the state at 涯 that the 經 includes (「其状至涯（含）皆同」). I checked an alternative gloss through 诸移: it would miss state 0 when h = 0, so the proposed split into a state-文 up to 涯 inclusive and a move-文 before 涯 is the exact one.",
+    "new": "二行之状之文至涯（含）全同，其动之文于涯前全同（皆文之前段，一·二十一；讀，AI，D63）"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "Confirmed. Line 159 reports the same off-by-one gloss as the change made to 九·十八 and 八·九. It conflicts with StepsOf (which uses r.state (n+1)), with AgreeUpTo (which includes the state at h) and with the name table's 往 row. In the proposed replacement the next clause, 「历是所给之序…同一序列之二读」, would end up attached to 八·九, so I reordered it to keep that clause after 九·十八.",
+    "new": "八·九之说写明：二行至涯而同，即其状之文至涯（含）、其动之文于涯前皆同；九·十八之说写明：一行之往，是其诸移（状、动、次状）逐步所成之文之前段（讀，AI，D63）；"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "Confirmed. Line 649 calls the line in the texts 「最贴近的表达」 and lists it under 已有理由支持的, with no comparison behind it. Line 30 says 「本章不说…是核心之最好的表达」, and §一 judges 「物相杂，故曰文」 only 定域 (原句之杂是同时之杂，一状，不是文), so 「以相杂为文」 contradicts the chapter. Per §七, composition has only the law of a supplied grammar. Per 本节未立者 2, reader reconstruction is not derived. The proposed replacement still writes 「文中这一条线」 (文 in the sense of writing, the one-character-two-senses the round removed) and uses the defined term 相合 loosely, so I corrected both.",
+    "new": "讀（AI，D63）：古书与汉字中这一条线，在多处与核心已检之律对应：以逐步之值为文，状与法自文读出，有界则往定其文（见本章第一部分）。但「物相杂，故曰文」〔DS03〕只是定域；「以动与构之合为字」在脊柱上只有所给之语法中之律（§七）；读者是否以反复读重建内在生成之理，没有导出（「本节未立者」2）。对应不是印证；是否「最贴近」，未经比较。"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "Confirmed. DESIGN-H2 §1, under 'What the test cannot decide', says: 'Whether classical Chinese is best among all languages. Only the arms that are run are compared.' FIDELITY likewise compares the 中华本 only with the English clauses. 「后一层」 refers to 「它是否「最好」于一切可能的表达」, so saying it 可以检验 overstates what the designs test. The replacement is accurate.",
+    "new": "它是否胜过受控之他码，可以检验，设计已经写好，都还没有运行；它是否「最好」于一切可能的表达，只比所运行之臂的试验定不下（DESIGN-H2 §1）："
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "Confirmed. 总计划 01 §1.1 states H2 as 「理解这些组合可改善对未见实例的结构重建、解释与迁移」: a claim about readers, not that classical Chinese is the best expression of this core. DESIGN-H2 calls its adapted claim CL and excludes 'best among all languages'. The landing text has the same misattribution: land_wl.py decision item 六 reads 「是否为核心最好之表达，是一假说（其 H2）」. The replacement is accurate.",
+    "new": "本章不说文理生生或古汉语是核心之最好的表达。相关而较弱的认知假说是文理生生的 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移），尚未检验；「最好」于一切表达，只比所运行之臂的试验定不下。"
+   },
+   {
+    "index": 9,
+    "real": true,
+    "reason": "Confirmed. The 序 says, without a 讀 label, that the reading succeeds only in internally generative texts, 「因为那里没有可读出的律」. The chapter's own laws say otherwise: `Shown.run` gives every history its natural law, and §二 域 says 「每一文都读出它的状与法，无设」. The 序's next bullet also says 「律从展开中读出」. The chapter places the failure in §三 (a) (`not_predicts_on_both`): the 义 differs recurrently on alike 文s, while a law still exists. 本节未立者 1 says that real books meeting the conditions is not a theorem. The proposed replacement is right in substance; I worded it more exactly (a world listing all its states, 义 eventually a reading of the 文) and kept the 先在的根据 case the original names.",
+    "new": "讀（AI，D63）：一族尽其状、而义自某步起是文之一读之处，义可从文中读出；义若由读所不及者（一个意志或先在的根据）定，同一文可有屡异之二义，读多少遍也定不下。所失不在律：每一历都有其自然之法，每一文都读出其状与法；所失在义不是文之读。某一部书是否如此，律不说。"
+   },
+   {
+    "index": 10,
+    "real": true,
+    "reason": "Confirmed. 「这条线在核心里有确切的律」 shows that 「在文中」 here means the classical writing, two sentences before 文 is named the course. That is the one-character-two-senses the round removed elsewhere (古文→古书, 文法→语法). The claim that rereading reconstructs a generalizable model is H2's mechanism, which the chapter itself calls not derived and untested (本节未立者 2; audit 18: 尚未进行). The 序 states it as fact. The replacement is accurate.",
+    "new": "本书的认识论，在古书与汉字中有一条现成的线索。讀（AI，D63）：字把动与构合为小模；反复读许多不同的表现，便可从组合中重建出一个能推广的模型，这可以读作“读书百遍，其义自见”；读者是否如此学，是未经检验的假说（文理生生 H2）。"
+   },
+   {
+    "index": 11,
+    "real": true,
+    "reason": "Confirmed. 十·一 經 has 「码，以名配诸义项者也」, and SharedCodes says 'A code is a map from senses to forms'. Under the book's pattern X经Y (一历之状经一象), 「名经码」 makes 名 the code's input, which reverses the direction. 一·二十一 writes it correctly: 「一书是以名为值之文，其名经码配义项」. 「理是自文读出之类」 drops 一·二十一's restriction 「理自文读出只在此义」: `sameFuture_of_law` needs `keeps`, `identifiesAlike_of_law` also needs `coarsest`, and 达名 is a 理 for every 变 (`goAlike_const`). I added 法经一象示之 and used 变 to match 七·二.",
+    "new": "天文可读作世界之文（讀，AI，D63），一书是以名为值之文、其名经码配义项，理是变随之而同之类；法经一象示之，守象之值之最粗之理所并者恰为文同之状，理自文读出只在此义（一·二十一）。"
+   },
+   {
+    "index": 12,
+    "real": true,
+    "reason": "Confirmed. The same sentence (line 145) defines the code as 自义项至名的映射, so 「名经码之文」 reverses its direction. The proposed replacement repeats 以名为值 and 逐步之值是名, so I removed the duplicate.",
+    "new": "讀（AI，D63）：一部书是以名为值之文，其名经码配义项；"
+   },
+   {
+    "index": 13,
+    "real": true,
+    "reason": "Confirmed. Line 276 reverses the code's direction in the same way. 十·一 經 and 一·二十一說 give 「以名为值之文，其名经码配义项」.",
+    "new": "一部书是以名为值之文（§一）；一名之义项"
+   },
+   {
+    "index": 14,
+    "real": true,
+    "reason": "Confirmed. Line 460 has the same reversed direction.",
+    "new": "一部书是以名为值之文（§一）；这条律说"
+   },
+   {
+    "index": 15,
+    "real": true,
+    "reason": "Confirmed. The 文 row of the TSV, rendered into the book appendix at line 3893, says 「一书是名经码之文」, which contradicts 一·二十一說 and 十·一. The replacement is accurate.",
+    "new": "一书是以名为值之文，其名经码配义项；文不名符号"
+   },
+   {
+    "index": 16,
+    "real": true,
+    "reason": "Confirmed against IdentificationRuns.lean. `sameFuture_of_law` needs `keeps` and `GoAlike`. `identifiesAlike_of_law` adds `coarsest`. A finer value-keeping 理 (the identity, say) is a 理 that is not read off the 文, and 达名 is a 理 for every 变 (`goAlike_const`). The head's unrestricted 「理：自文读出」 and 「恰是一个关系」 contradict 一·二十一's 「理自文读出只在此义」. I added the condition 法经一象示之 to the replacement.",
+    "new": "所读之构不是文，而是理：展开随之而同的类；法经一象示之，守象之值之最粗之理所并者恰为文同之状，此理自文读出（文³；`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`）。所以「文理」二字，在本表中是一个关系：此理自文读出。"
+   },
+   {
+    "index": 17,
+    "real": true,
+    "reason": "Confirmed. Line 151 says in general that 类 and 理 are read off the 文. §四 of the same chapter (「读者怎样到达他的类，脊柱不导出」) contradicts that. A 类 is any lumping (七·一). 一·二十一 restricts 理 to the coarsest value-keeping one. The replacement is accurate.",
+    "new": "- 类、理、推类都不是文（§四）。理自文读出，只在守象之值之最粗之理所并者恰为文同之状这一义（一·二十一）；读者怎样到达他的类，脊柱不导出（§四）。"
+   },
+   {
+    "index": 18,
+    "real": true,
+    "reason": "Confirmed. Line 123 makes the same general claim, contradicting §四 and 一·二十一. The replacement is accurate.",
+    "new": "类、理、推类都不是文（§四）；理自文读出只在一义：守象之值之最粗之理所并者恰为文同之状（一·二十一）。"
+   },
+   {
+    "index": 19,
+    "real": true,
+    "reason": "Confirmed. 相合 is a defined grade (体例, 凡·二十六). The chapter's §一 and 一·二十一 judge 「物相杂，故曰文」 only 定域, because the original's mix is the simultaneous mix of six lines, a state rather than a 文. A heading that grades both sources 相合 contradicts that. The replacement is accurate.",
+    "new": "**出处。** 系辞上「通其变，遂成天下之文」〔DS02〕（相合）：文沿一变之行而成；「物相杂，故曰文」〔DS03〕（定域：原句之杂是一卦六爻同时之杂）："
+   },
+   {
+    "index": 20,
+    "real": false,
+    "reason": "Not a defect. Dictionary 08 does give 文 exactly three senses: 可辨样态, 文字表达 and 模型表达 (JSON core.001.01–03 and the md table row). They correspond to the chapter's three glosses, so 「词典给文三义」 is true. The superscripts are only notation; the sentence does not quote the dictionary's labels. The forbidden coercion (「文本、表征、世界对象不可互相强制转换」; md: 不将文本对象当世界状态) is not violated, because the chapter reads a text and a world pattern as two 文s with different values and does not identify one with the other. The chapter already credits the 不强制转换 discipline in its comparison (line 551). This is attribution precision at the level of taste.",
+    "new": ""
+   },
+   {
+    "index": 21,
+    "real": true,
+    "reason": "Confirmed. 辭 is a name in the book (name table row 辭 = 主张 claim; 一·十九 系辞与辞). 知来 is `pred : List O → Option O`, a map, not a claim, and 不测 is itself a 文 (一·二十一說: 不测是一知来之对角之文). Calling them 文上之辞 uses the name in a wrong meaning. The replacement is accurate.",
+    "new": "知来、符、阙、终而复始、不测、可知、衢都陈述在文上（不测本身是一文）"
+   },
+   {
+    "index": 22,
+    "real": true,
+    "reason": "Confirmed. Lines 507–513 say 「独立只是部分的」 and 「它不是统计意义上的独立证实」. Line 532's 「两边独立地读出」 overstates against that. The replacement is accurate.",
+    "new": "两边分别读出了同样的结构（独立只是部分的，见上），例子如下。"
+   },
+   {
+    "index": 23,
+    "real": true,
+    "reason": "Confirmed. Line 555's 「各自独立地走到了」 contradicts the chapter's own statement of partial independence (same canon, the 脉络 as reference, both AI-written, 生生不息论 as background, line 511).",
+    "new": "两边因此分别走到了同一个两层的结构（独立只是部分的）"
+   },
+   {
+    "index": 24,
+    "real": false,
+    "reason": "Not a defect of the landed text. D63 is absent from DELEGATED-CHOICES.md today by design: commit 582feda4c says 'D63 pending'. The landing script wenli/land_wl.py (run as `land_wl.py SECTION D`) writes decision D in both registers (table row, request line, section). Its decision text at line 176 is the D63 content. The proposed replacement, 「D63 尚未写入…未决」, would itself become false at landing. The landing step must pass 63 as D.",
+    "new": ""
+   },
+   {
+    "index": 25,
+    "real": false,
+    "reason": "Same as [24]. The link target DELEGATED-CHOICES.md exists, and land_wl.py writes the D63 entry at landing. Changing 一·二十一證 to say D63 is not yet written would make it wrong once WL lands.",
+    "new": ""
+   },
+   {
+    "index": 26,
+    "real": true,
+    "reason": "Confirmed, minor. 一·二十一說 says 「不写「同文」，免与「书同文」之码（十·十五）相混」, and the name table's 文同 row repeats it. Yet 五·十七說 (book line 1226) still writes 「慧远同文以神为…」 in the sense 'in the same text', which now also reads as 'same 文'. Both quotations carry the same source id 〔IN1-S03〕, the same piece of 慧远, and the book uses 同篇 for this 15 times. So 同篇 is exact.",
+    "new": "慧远同篇以神为"
+   },
+   {
+    "index": 27,
+    "real": true,
+    "reason": "Confirmed. The 文 row's 分工 note in the TSV, rendered into the appendix, says 「类、理自文读出而非文」 without restriction. That contradicts 一·二十一說 「理自文读出只在此义」 and the Lean hypotheses (`keeps`, `coarsest`). The 理 row (line 114) opens 「理是自文读出之类，不是文」 before stating the restriction, and could be tightened the same way. The replacement is accurate.",
+    "new": "类、理不是文；守象之值之最粗之理所并者恰为文同之状，理自文读出只在此义（见理）"
+   }
+  ]
+ }
+]

@@ -7,7 +7,7 @@
 
 The plan states H2 as: understanding these compositions improves structural reconstruction, explanation and transfer on unseen instances. As it bears on the theory, the claim under test is CL:
 
-> **CL.** Take the frozen core R. Some readers learn R's laws through the controlled classical code K_zh: the 中华本's 經, its 凡例, 447 names and 11 function words. Others learn the same laws through a controlled English code K_en, at equal length and equal fidelity. The K_zh readers reconstruct the structure of unseen cases, and handle counterexamples, better than the K_en readers. The advantage arises through the mechanism the plan names: rereading internally generative text lets the reader reconstruct its rules.
+> **CL.** Take the frozen core R. Some readers learn R's laws through the controlled classical code K_zh: the 中华本's 經, its 凡例, 449 names and 11 function words. Others learn the same laws through a controlled English code K_en, at equal length and equal fidelity. The K_zh readers reconstruct the structure of unseen cases, and handle counterexamples, better than the K_en readers. The advantage arises through the mechanism the plan names: rereading internally generative text lets the reader reconstruct its rules.
 
 CL splits into separately tested parts.
 
@@ -43,7 +43,7 @@ R consists of:
 
 - the commit of main and the core receipt current at registration (today, receipt `20261022T040548.209667Z`, with its recorded source commit);
 - `THE-THEORY-OF-BECOMING-ZHONGHUA.md`;
-- `names-decisions.tsv` (447 rows) and `symbols-not-adopted.tsv`;
+- `names-decisions.tsv` (449 rows) and `symbols-not-adopted.tsv`;
 - `THE-THEORY-OF-BECOMING.md`.
 
 The registration file records the SHA-256 of each. Committed scripts generate every arm text from these frozen sources. Reading materials change after registration only through the gate procedure (§2.5), and every revision is logged.

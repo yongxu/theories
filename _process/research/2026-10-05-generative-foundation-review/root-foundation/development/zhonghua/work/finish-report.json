@@ -840,6 +840,10 @@
   "applied": 61,
   "failed": []
  },
+ "round7-edits.json": {
+  "applied": 2,
+  "failed": []
+ },
  "global-replacements": {
   "applied": 64,
   "failed": []

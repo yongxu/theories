@@ -40,13 +40,13 @@
  {
   "id": "九·十二",
   "find": "往（历程之前段，`Becoming.Learning.prefixOf`）所定者",
-  "replace": "往（文之前段，`Becoming.Learning.prefixOf`；一行之往，是其状与动经恒等之象逐步所成之文之前段：历是所给之序，文是所读之值，同一序列之二读）所定者",
-  "why": "WL: a run's 往 is the prefix of the 文 its states and moves give when read through the identity map; the 历 (as given) and the 文 (as read) are two readings of one sequence"
+  "replace": "往（文之前段，`Becoming.Learning.prefixOf`；一行之往，是其诸移（状、动、次状）逐步所成之文之前段（凡逐步之值皆文，⟦WEN-1⟧；讀，AI，D63）：历是所给之序，文是所读之值，同一序列之二读）所定者",
+  "why": "WL: a run's 往 (Run.Fixes, through StepsOf) is the prefix of the 文 of its moves (state, act, next state); every sequence of values is a 文 (freeRun_course); review lean-3, account-3"
  },
  {
   "id": "八·八",
   "find": "二行于其前之往（历程之前段）全同",
-  "replace": "二行于其前之往（其状与动所成之文之前段）全同",
-  "why": "WL: a run's 往 is the prefix of the 文 its states and moves give when read through the identity map; the 历 (as given) and the 文 (as read) are two readings of one sequence"
+  "replace": "二行至涯而同，是其状之文至涯（含）全同、其动之文于涯前全同（皆文之前段，⟦WEN-1⟧；讀，AI，D63）",
+  "why": "WL: Run.AgreeUpTo h fixes states t ≤ h and acts t < h; review lean-4, account-4"
  }
 ]

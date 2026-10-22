@@ -1,0 +1,14 @@
+[
+ {
+  "id": "七·十二",
+  "find": "理自文读出，不是文（⟦WEN-1⟧）。",
+  "replace": "理不是文，自文读出只在一义（⟦WEN-1⟧）：",
+  "why": "final review lean-0, account-16/18: a 理 in general (GoAlike) need not keep the values; only the coarsest value-keeping 理 merges exactly the states with the same 文"
+ },
+ {
+  "id": "三·二十二",
+  "find": "慧远同文以神为",
+  "replace": "慧远同篇以神为",
+  "why": "final review account-26: 一·二十一 does not write 同文 (书同文 is a code, 文同 a name); the book writes 同篇 for the same piece"
+ }
+]
