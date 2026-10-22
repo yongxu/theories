@@ -295,11 +295,11 @@
 <a id="what-a-collectives-continuation-needs"></a>
 ### 4.3 相对位置，与集体的延续需要什么
 
-**要点。** 一个部分相对于其他部分读出的位置按计数相加为零：它的上升是其余的下降之和，没有变化能提高每个部分。位置不保护：联合超出经依存在其终点终结一个部分，不论其位置。集体的延续问的是运行，不是位置：保持一个部分不是更新，整体没有一个数，条件是相连而不是相乘，反向回路须及于规则怎样读取，不变量是律，不是公理。
+**要点。** 一个部分相对于其他部分读出的位置按计数相加为零：它的上升是其余的下降之和，没有变化能提高每个部分。位置读各量，只读到差一个各部分共有的量为止，所以它从下以展布界定总共所汲，从不从上界定。位置不保护：联合超出经依存在其终点终结一个部分，不论其位置。集体的延续问的是运行，不是位置：保持一个部分不是更新，整体没有一个数，条件是相连而不是相乘，反向回路须及于规则怎样读取，不变量是律，不是公理。
 
-**定理。** 本节陈述 `RelativePosition.change_balances`、`Flow.ends_at_race_end`、`Renewable.kept_part_not_renewal`、`Viability.kernel_and_iff`、`ChoicePoint.no_rule_decides_joint`；完整陈述见[英文版 §4.3](THE-THEORY-OF-BECOMING.md#43-relative-position-and-what-a-collectives-continuation-needs)。
+**定理。** 本节陈述 `RelativePosition.change_balances`、`RelativePosition.keeps_iff_common`、`RelativePosition.exceeds_iff_spread`、`Flow.excess_iff_spread`、`RaceWithin.same_positions_apart`、`Flow.ends_at_race_end`、`Renewable.kept_part_not_renewal`、`Viability.kernel_and_iff`、`ChoicePoint.no_rule_decides_joint`；完整陈述见[英文版 §4.3](THE-THEORY-OF-BECOMING.md#43-relative-position-and-what-a-collectives-continuation-needs)。
 
-记录：[conditions-kept-together](../results/records/conditions-kept-together.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)、[protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)。
+记录：[conditions-kept-together](../results/records/conditions-kept-together.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)、[what-position-reads](../results/records/what-position-reads.md)、[protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)。
 
 ### 4.4 等待给予的给予、容忍、回路、步调与调节
 
@@ -826,6 +826,7 @@
 | [共同保持的条件，以及保持一个部分](../results/records/conditions-kept-together.md) | 不加前提的定理 | — | §4.3 |
 | [基本条件优先](../results/records/protection-priority-excludes-uniform-aggregation.md) | 在所述前提下的定理 | 生命意义、C、J1–J4 | §4.3 |
 | [相对位置是零和的；竞逐只经由依赖终结领先者](../results/records/relative-position-is-zero-sum.md) | 定理，条件在其假设中 | 条件（一条定理） | §4.3 |
+| [位置所读](../results/records/what-position-reads.md) | 无前提定理 | — | §4.3 |
 | [等待给出的给出](../results/records/giving-that-waits-on-giving.md) | 不加前提的定理 | — | §4.4 |
 | [规则可以多快地改变](../results/records/how-fast-a-rule-may-change.md) | 不加前提的定理 | — | §4.4 |
 | [从最坏的开始恢复给出](../results/records/restoring-giving-from-the-worst-start.md) | 不加前提的定理 | — | §4.4 |

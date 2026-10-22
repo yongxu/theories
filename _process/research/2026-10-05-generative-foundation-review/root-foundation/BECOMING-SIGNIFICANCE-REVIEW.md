@@ -870,6 +870,8 @@ Integration: none applied; TH1's three corrections listed for its owner and for 
 
 *Version 11 (22 October 2026, OP11).* Version 10's far-sight clause repeated SA2's B9 finding: it stated a law of optima as what an optimizer does. On Ren's "please" ([source](../../../../sources/15-codex-theory-conversations/2026-10-22-opening-v11.md)), it now reads "at its optimum".
 
+*Version 12 (22 October 2026, NL1).* The sentence on the three theories had said that none of their features is "among the laws" and that winning "need not" measure what lasts. A list shows what is listed, not what follows from it, and the second rested on one example. On Ren's "we should aim frontier, not my past understanding" ([source](../../../../sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md)), it now reads that none of them is a law, each failing in a world the laws admit, and that position, read against the others, bounds what all draw only from below, so no winning certifies that anything lasts ([what-position-reads](../../../../theories/becoming/results/records/what-position-reads.md)). The readings of each feature as a law are the note's, labelled as such.
+
 <a id="horizon-check"></a>
 ## A check: courses ranked over a horizon (21 October 2026, SG5)
 

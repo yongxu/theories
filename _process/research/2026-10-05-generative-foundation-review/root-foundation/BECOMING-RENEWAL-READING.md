@@ -15912,3 +15912,38 @@ What is not shown: that actual races are played in turn, by drawers ranking posi
 *Premises.* Reach and influence read through dependence at some step and exchange at some step (`Becoming.Feedback`); finitely many formations and decided reach where stated. No axiom: 22 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
 
 *Output → input.* Chapter §5 and §8.1 item 3; record [where-a-formations-acts-return](../../../../theories/becoming/results/records/where-a-formations-acts-return.md); the generative-alignment overview.
+
+## 361. What position reads (NL1)
+
+```text
+Result(s): new record what-position-reads.
+Delta: two profiles of amounts give every part of a family the same position exactly where every part's amount
+       differs between them by one amount common to all (RelativePosition.Keeps, keeps_iff_common): positions read
+       the amounts up to a common amount. Adding an amount to every part keeps every position and adds it to the
+       total once for each part (keeps_add); taking the least part's amount from every part keeps every position
+       and leaves the spread above the least part (keeps_least). So with given positions the total is at least the
+       spread (spread_le), every bound is exceeded (keeps_exceeds), and every profile with those positions has its
+       total above r exactly where the spread is above r (exceeds_iff_spread). Witness RaceWithin: the renewer gives two
+       units at every step, as in Race, and its two racers have the race's positions (RaceWithin.keeps), the same greatest part and the same rise of the first;
+       it balances, gives only while active and keeps activity supported; what is taken is within what is given and
+       every part is active at every step, while in Race every part is inactive from step two on
+       (RaceWithin.same_positions_apart). Read on a flow by what a step's takers take, every profile with the
+       step's positions takes more than the step gives exactly where the spread does, and some profile always does
+       (Flow.excess_iff_spread): positions certify joint excess, joint_excess_ends' hypothesis, only through the
+       spread.
+Premises / correspondence: none for the counting laws (whole-number amounts, a finite family with a part).
+       Correspondence: competition read as position, the opening's "winning".
+Evidence: core receipt 20261022T133248.097273Z (passed).
+Boundary: positions certify joint excess at a step only through the spread; the end needs joint_excess_ends' other
+       premises; positions across many steps against a responding renewal, ranks, shares and signed amounts are not
+       treated.
+Output → input: OPENING [^no-law] (what each leaves out; two of the features, read as laws of position, refuted by
+       constructed flows); chapter §4.3 and the record table; record relative-position-is-zero-sum (its next step,
+       positions read otherwise, partly taken: what positions read of amounts).
+```
+
+**What was built.** In `Becoming.RelativePosition`: `Keeps`, `length_pos_of_mem`, `regroup`, `keeps_iff_common`, `keeps_add`, `keeps_least`, `spread_le`, `keeps_exceeds`, `exceeds_iff_spread`; on the flow `Flow.excess_iff_spread`; and the witness `RaceWithin` (`flow`, `web`, `balances`, `acting`, `dependent`, `racers`, `drawn_common`, `keeps`, `drawn_second`, `drawn_renewer`, `first_greatest`, `same_positions_apart`). `Keeps` is stated with the counts the module already had: the change from `a` to `b` keeps a part's position where its rise count is its fall count. The proofs avoid `omega` and the `Nat` lemmas whose reports carry `propext` (`Nat.add_right_cancel`, `Nat.add_sub_assoc`, `Nat.sub_add_cancel`), using the prelude's `add_right_cancel`, `add_sub_of_le` and `Naturals.sub_add_cancel`.
+
+**Why this pushes the note.** The note said that "winning need not measure what lasts" rested on one constructed example, and that no struggle, competition or sovereign self being among the laws was "read off the list of laws, not a theorem". A list read off shows what is listed, not what follows: a feature absent from the list could still be derived from it. A law holds in every world, so a feature that fails in a constructed world is not a law. Read as laws of position, two of the features are now refuted that way: "the greatest continue" fails in `Race` and holds in `Clearing` (already proved, not cited by the note), and "position measures what lasts" fails in `RaceWithin` against `Race`. The general law says why the second fails everywhere and not only in the witness: what positions read of amounts is everything except one common amount, and the total drawn, which balance compares with what is given, is exactly what that leaves out above the spread.
+
+**Self-review.** (1) The exactness is two-sided: `keeps_iff_common` is an equivalence, and `exceeds_iff_spread` gives the lower bound with its attainment, so "positions bound the total only from below, by the spread" is stated, not read. (2) The spread is not nothing: positions alone can force a total above what is renewed, where the parts' amounts are spread wider than what is renewed. The note therefore says "never certify that no more is drawn than is renewed", not "measure nothing", and leaves the opening's body ("need not measure anything of what lasts", Ren's voice) unchanged; the stronger reading ("no position certifies that anything lasts") is offered as a proposal, not applied. (3) The witness reads positions among the two that take, not the renewer: with the renewer in the family, a common shift would need it to draw, which it does not. (4) `RaceWithin` and `Race` have the same renewal (two units at each step the renewer takes part) and the same positions among the racers at every step; the separation is carried by the totals alone (the race's racers draw two more per step jointly), which is the law's point. (5) Board item RP1 (drawers in turn ranking position draw everything, in `Optimum.InTurn`, for OPENING `[^race]`) is the complement: it derives the joint excess from ranking position under stated premises, where this item shows what position reads of the total; neither reproves the other. (6) The composition with `Flow.joint_excess_ends` is proved at a step (`Flow.excess_iff_spread`, which also joins the two arithmetic laws to the base, where the connectivity check had found them used by nothing); the end over many steps still needs that law's other premises, and the record's `does_not_show` says so. (7) The witness was first named `Lasting`; `Becoming.Lasting` is another module's namespace (`Lasting.Reaches`), so it is `RaceWithin`, a race drawn within what is given.

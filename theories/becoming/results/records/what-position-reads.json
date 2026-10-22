@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "id": "what-position-reads",
+  "title": {
+    "en": "What position reads",
+    "zh": "位置所读"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T13:34:35+00:00",
+  "statement": {
+    "en": "Positions in a family read the amounts exactly up to one amount common to every part. So they bound the total drawn from below, by the spread above the least part, and never from above: the same positions at every step go with a condition that ends and one that lasts.",
+    "zh": "一族中的位置读各量，恰读到差一个各部分共有的量为止。所以位置从下以高出最少者的展布界定总共所汲，从不从上界定：每一步相同的位置，可伴随一个终结的条件，也可伴随一个延续的条件。"
+  },
+  "laws": [
+    {
+      "en": "Two profiles of amounts give every part the same position exactly where, for any two parts, what one had under the first with what the other has under the second is what the other had with what the one has: every amount differs by one common amount.",
+      "zh": "两组量给每个部分相同的位置，恰在任两部分中，一个在前一组的量加另一个在后一组的量，等于另一个在前一组的量加这一个在后一组的量之处：每个量相差同一个共有的量。",
+      "declarations": [
+        "Becoming.RelativePosition.Keeps",
+        "Becoming.RelativePosition.keeps_iff_common",
+        "Becoming.RelativePosition.length_pos_of_mem",
+        "Becoming.RelativePosition.regroup"
+      ]
+    },
+    {
+      "en": "Adding one amount to every part keeps every position and adds it to the total once for each part; taking the least part's amount from every part keeps every position and leaves the spread above the least part.",
+      "zh": "给每个部分加同一个量，保持每个位置，并按部分数把它加进总量；从每个部分减去最少者的量，保持每个位置，留下高出最少者的展布。",
+      "declarations": [
+        "Becoming.RelativePosition.keeps_add",
+        "Becoming.RelativePosition.keeps_least"
+      ]
+    },
+    {
+      "en": "With given positions the total is at least the spread; every profile with those positions has its total above a bound exactly where the spread is above it, and some profile with them exceeds every bound.",
+      "zh": "位置给定时，总量至少是展布；具这些位置的每一组量，其总量高于一界，恰在展布高于该界之处；且具这些位置的某组量超过任一界。",
+      "declarations": [
+        "Becoming.RelativePosition.spread_le",
+        "Becoming.RelativePosition.keeps_exceeds",
+        "Becoming.RelativePosition.exceeds_iff_spread"
+      ]
+    },
+    {
+      "en": "Read on a flow by what a step's takers take: every profile of takes with the step's positions takes more than the step gives exactly where the takes' spread does, and some profile with them always does. So positions certify joint excess, the joint-excess law's hypothesis, only through the spread.",
+      "zh": "以一步中取用者之所取读于流上：具该步位置的每一组所取，取多于该步所给，恰在所取之展布如此之处；且具这些位置的某组所取总是如此。所以位置只经由展布保证联合超出，即联合超出律之假设。",
+      "declarations": [
+        "Becoming.Flow.excess_iff_spread"
+      ]
+    },
+    {
+      "en": "In RaceWithin the renewer gives two units at every step, as in Race, and the two racers have the race's positions at every step, the same greatest part and the same rise of the first; what is taken stays within what is given and every part is active at every step, while in the race every part is inactive from step two on.",
+      "zh": "在 RaceWithin 中，更新者每步给两个单位，与 Race 相同；两个竞逐者每一步都有竞逐中的位置、相同的最大者、首者相同的上升；所取不超过所给，每个部分每一步都活跃，而在竞逐中每个部分自第二步起不再活跃。",
+      "declarations": [
+        "Becoming.RaceWithin.Member",
+        "Becoming.RaceWithin.flow",
+        "Becoming.RaceWithin.web",
+        "Becoming.RaceWithin.balances",
+        "Becoming.RaceWithin.acting",
+        "Becoming.RaceWithin.dependent",
+        "Becoming.RaceWithin.racers",
+        "Becoming.RaceWithin.drawn_common",
+        "Becoming.RaceWithin.keeps",
+        "Becoming.RaceWithin.drawn_second",
+        "Becoming.RaceWithin.drawn_renewer",
+        "Becoming.RaceWithin.first_greatest",
+        "Becoming.RaceWithin.same_positions_apart"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The counting laws use no premise: whole-number amounts, any finite family with a part. RaceWithin and Race are constructed flows with balance, only active formations giving and activity needing support.",
+      "zh": "无公理。计数规律不用前提：自然数的量，任何有一部分的有限族。RaceWithin 与 Race 是构造的流，具平衡、只有活跃者给予、活跃需要支持。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That positions read nothing of the total: the spread above the least part bounds it from below, so a spread wider than what is renewed forces more to be drawn whatever the common amount.",
+      "zh": "位置对总量毫无所读：高出最少者的展布从下界定总量，所以宽于所更新者的展布，不论共有的量为何，都使所汲多于所更新。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a race ends or lasts: positions certify joint excess at a step only through the spread, and the end needs the joint-excess law's other premises (balance, dependence, gated renewal).",
+      "zh": "竞逐终结或延续：位置只经由展布保证一步中的联合超出，而终结还需联合超出律的其余前提（平衡、依赖、受门控的更新）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Positions read as ranks, shares or signed amounts.",
+      "zh": "以名次、份额或带号的量读的位置。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual competitors' positions are read off what they draw from one shared condition, or how much an actual condition renews.",
+      "zh": "实际竞争者的位置读自它们从一个共享条件所汲，或实际条件更新多少。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T133248.097273Z): the declarations Becoming.RelativePosition gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 361; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T133248.097273Z）：Becoming.RelativePosition 新增声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 361 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Positions read as ranks or shares; positions across many steps against a renewal that responds to the level; an independent review.",
+    "zh": "以名次或份额读的位置；多步中的位置与随水平而应的更新；独立审查。"
+  },
+  "correspondence": {
+    "en": "Competition read as position, the opening's \"winning\": a standing read against the others, by amount drawn or held, reads the amounts up to a common amount, while whether a shared condition lasts reads the total against what is renewed. With this record the opening's body, in Ren's voice, was brought to its law on his word (version 12): \"position, read against the others, bounds what all draw only from below, so no winning certifies that anything lasts\", in place of \"so winning need not measure anything of what lasts\"; its note [^no-law] states the laws and the readings.",
+    "zh": "以位置读的竞争，即开篇的「赢」：相对他者、按所汲或所持读出的地位，读各量只到差一个共有的量为止；而共享条件是否延续，读的是总量与所更新者之比。随本记录，开篇正文（Ren 之语）经其同意改到此律（第十二版）：「位置相对他者而读，只从下界定众所汲，所以没有赢能保证任何东西延续」，取代「所以赢不必衡量所延续的任何东西」；其注 [^no-law] 陈述诸律与读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
+  "aliases": [
+    "What position reads",
+    "位置所读",
+    "position reads amounts up to a common amount",
+    "Becoming.RelativePosition.keeps_iff_common",
+    "Becoming.RaceWithin.same_positions_apart"
+  ],
+  "dependencies": [
+    {
+      "id": "relative-position-is-zero-sum",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its rise and fall counts, least and greatest parts, and the Race witness; the delta is what positions read of the amounts, exactly, and a witness with the race's positions that lasts.",
+        "zh": "其升降计数、最少与最大部分，以及 Race 见证；增量是位置对各量所读之恰当所在，以及一个具竞逐之位置而延续的见证。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "own-count-misses-joint-excess",
+      "detail": {
+        "en": "Its joint-excess law reads the total drawn against what is given; this record shows positions read that total only from below.",
+        "zh": "其联合超出律以所给读总共所汲；本记录表明位置只从下读此总量。"
+      }
+    },
+    {
+      "id": "whole-first-and-bounded-centers",
+      "detail": {
+        "en": "Both are cited by the opening's note on what the laws contain.",
+        "zh": "二者同为开篇关于诸律所含之注所引。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.drawn",
+        "Becoming.Flow.excess_iff_spread",
+        "Becoming.Race.drawn_renewer",
+        "Becoming.Race.drawn_second_le",
+        "Becoming.Race.flow",
+        "Becoming.Race.greatest_ends",
+        "Becoming.Race.web",
+        "Becoming.RaceWithin.Member",
+        "Becoming.RaceWithin.acting",
+        "Becoming.RaceWithin.balances",
+        "Becoming.RaceWithin.dependent",
+        "Becoming.RaceWithin.drawn_common",
+        "Becoming.RaceWithin.drawn_renewer",
+        "Becoming.RaceWithin.drawn_second",
+        "Becoming.RaceWithin.first_greatest",
+        "Becoming.RaceWithin.flow",
+        "Becoming.RaceWithin.keeps",
+        "Becoming.RaceWithin.racers",
+        "Becoming.RaceWithin.same_positions_apart",
+        "Becoming.RaceWithin.web",
+        "Becoming.RelativePosition.Greatest",
+        "Becoming.RelativePosition.Keeps",
+        "Becoming.RelativePosition.Least",
+        "Becoming.RelativePosition.exceeds_iff_spread",
+        "Becoming.RelativePosition.fallCount",
+        "Becoming.RelativePosition.keeps_add",
+        "Becoming.RelativePosition.keeps_exceeds",
+        "Becoming.RelativePosition.keeps_iff_common",
+        "Becoming.RelativePosition.keeps_least",
+        "Becoming.RelativePosition.length_pos_of_mem",
+        "Becoming.RelativePosition.regroup",
+        "Becoming.RelativePosition.riseCount",
+        "Becoming.RelativePosition.spread_le"
+      ],
+      "sha256": "e81542b402d13537801a820ae58251b8ef43852aaa993bbec39282fd6c9363c3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "role": "receipt",
+      "sha256": "67438a4250795993c0b215b4891d7d83788ee830e41db1e945319b76b3c45904"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d1293c0d02ef4c9da1f17a4bce50f152aa2bcfdb3d51a9a1fda0d17ddd160f4a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "bcc33e825c71b8aae3ad574deccc2ed6a54cec6551d5596d5aad6c5bd7f1b45e"
+    },
+    {
+      "path": "theories/becoming/OPENING.md",
+      "role": "provenance",
+      "sha256": "6785f059d4e099719805d6533b94e408f5caed5455d241e8d8185de59e062224"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md",
+      "role": "provenance",
+      "sha256": "a4b86669015288f0b6aa5aaa14ae7f8c8a5f678ee0c38e1b90c34cddc2bbe3c8"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RelativePosition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026, NL1 (asked whether OPENING's note [^no-law] could be pushed further): created; study section 361; the note states the laws, and each of the three features, read as a law, is refuted by a constructed flow; on Ren's word the opening's body sentence was brought to the law (version 12).",
+      "zh": "2026年10月22日，NL1（问开篇注 [^no-law] 能否更进一步）：新建；研究第 361 节；该注陈述诸律，三项特征各读作一律，均由构造的流驳倒；依 Ren 之言，开篇正文该句改到此律（第十二版）。"
+    }
+  ]
+}
