@@ -262,6 +262,24 @@ theorem withinGap_iff_between {m t : Nat} {c : C} (balances : L.BalancesOn W [c]
     L.WithinGap W m t c ↔ Between m (W.level t c) (W.level (t + 1) c) :=
   within_iff_between (balances c (.head []))
 
+/-- **Beyond the gap, no rest at `m`.** With balance at the condition across the step, a joint
+exchange exceeding the gap to `m` on some side leaves the next level off `m`: at `m` it would lie
+between `m` and any level. -/
+theorem not_at_of_beyond {m t : Nat} {c : C} (balances : L.BalancesOn W [c] t)
+    (beyond : ¬ L.WithinGap W m t c) : W.level (t + 1) c ≠ m :=
+  fun atLevel => beyond ((withinGap_iff_between balances).mpr
+    (Eq.subst (motive := fun y => Between m (W.level t c) y) atLevel.symm
+      ⟨fun mx => ⟨Nat.le_refl m, mx⟩, fun xm => ⟨xm, Nat.le_refl m⟩⟩))
+
+/-- **Overcorrecting at every step never comes to rest at `m`.** With balance at the condition
+and the joint exchange beyond the gap to `m` at each step from `T`, the level is off `m` at every
+step after `T`. -/
+theorem never_at_of_beyond {m T : Nat} {c : C} (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (beyond : ∀ t, T ≤ t → ¬ L.WithinGap W m t c) : ∀ t, T < t → W.level t c ≠ m
+  | 0, late => absurd late (Nat.not_lt_zero T)
+  | t + 1, late => not_at_of_beyond (balances t (Nat.le_of_lt_succ late))
+      (beyond t (Nat.le_of_lt_succ late))
+
 /-- Within the gap, the gap to `m` does not rise across the step. -/
 theorem gap_le_of_within {m t : Nat} {c : C} (balances : L.BalancesOn W [c] t)
     (within : L.WithinGap W m t c) : gap (W.level (t + 1) c) m ≤ gap (W.level t c) m :=

@@ -219,12 +219,25 @@ section Keeps
 
 variable {next : (α → Prop) → α → Prop}
 
+/-- One law keeps inclusion into another: from configurations within others, the first gives
+at the next step only where the second does. A law keeps inclusion exactly where it keeps it into
+itself. -/
+def KeepsInclusionInto (next next' : (α → Prop) → α → Prop) : Prop :=
+  ∀ s s' : α → Prop, (∀ a, s a → s' a) → ∀ a, next s a → next' s' a
+
+/-- **A law keeping inclusion into another keeps it along their courses**: a start within another
+gives a course of the first within the second's course from the other start, at every step. -/
+theorem KeepsInclusionInto.course {next' : (α → Prop) → α → Prop}
+    (keeps : KeepsInclusionInto next next') {s s' : α → Prop} (sub : ∀ a, s a → s' a) :
+    ∀ n a, (Law.run next s).state n a → (Law.run next' s').state n a
+  | 0 => sub
+  | n + 1 => keeps _ _ (KeepsInclusionInto.course keeps sub n)
+
 /-- **A law keeping inclusion keeps it along its courses**: a start within another gives a course
 within the other's, at every step. -/
 theorem KeepsInclusion.course (keeps : KeepsInclusion next) {s s' : α → Prop}
-    (sub : ∀ a, s a → s' a) : ∀ n a, (Law.run next s).state n a → (Law.run next s').state n a
-  | 0 => sub
-  | n + 1 => keeps _ _ (KeepsInclusion.course keeps sub n)
+    (sub : ∀ a, s a → s' a) : ∀ n a, (Law.run next s).state n a → (Law.run next s').state n a :=
+  KeepsInclusionInto.course keeps sub
 
 /-- **The worst start is total withholding.** Under a law keeping inclusion, a formation gives at
 step `n` from every start exactly where it gives at `n` from the start at which nothing gives. -/
@@ -281,10 +294,23 @@ theorem givesFirst_keeps (src : α → Prop) (up : α → α → Prop) :
     KeepsInclusion (givesFirst src up) :=
   fun _ _ sub _ gives => gives.elim Or.inl fun all => Or.inr fun b link => sub b (all b link)
 
+/-- The tolerating law keeps inclusion into the tolerating law of tolerances no smaller. -/
+theorem tolerating_into {tol tol' : α → Nat} (le : ∀ a, tol a ≤ tol' a) (ups : α → List α) :
+    KeepsInclusionInto (tolerating tol ups) (tolerating tol' ups) :=
+  fun _ _ sub a gives => AllBut.mono_count (le a) (AllBut.mono_set sub gives)
+
 /-- The tolerating law keeps inclusion. -/
 theorem tolerating_keeps (tol : α → Nat) (ups : α → List α) :
     KeepsInclusion (tolerating tol ups) :=
-  fun _ _ sub _ gives => AllBut.mono_set sub gives
+  tolerating_into (fun a => Nat.le_refl (tol a)) ups
+
+/-- **More tolerance gives no less, at every step.** For the same waits and the same start, a
+formation giving under the tolerating law gives under every law tolerating at least as much, at
+every step of the course. -/
+theorem tolerating_mono {tol tol' : α → Nat} (le : ∀ a, tol a ≤ tol' a) (ups : α → List α)
+    (s : α → Prop) : ∀ n a, (Law.run (tolerating tol ups) s).state n a →
+      (Law.run (tolerating tol' ups) s).state n a :=
+  (tolerating_into le ups).course fun _ start => start
 
 /-! ## Restoring under the tolerating law -/
 

@@ -289,13 +289,21 @@ theorem drawn_iff_lost {next : S → S} {all : List S} (every : ∀ x, x ∈ all
   ⟨fun drawn always => drawn.not_returns ((returns_iff_always_reachable every).mpr always),
     fun lost => drawn_iff_not_returns.mpr fun returns => lost returns.reachable⟩
 
+/-- **Within finitely many configurations, every course enters what returns, before as many
+steps as there are configurations.** With `m` configurations listed, the course is at a returning
+configuration at some step below `m`. -/
+theorem enters_returning_within {next : S → S} {all : List S} (every : ∀ x, x ∈ all) (s : S) :
+    ∃ n, n < all.length ∧ Returns next (orbit next s n) :=
+  let ⟨i, _, lt, le, same⟩ := revisits_within all (orbit next s) (fun _ _ => every _)
+  let ⟨d, gap⟩ := gap_of_lt lt
+  ⟨i, Nat.lt_of_lt_of_le lt le, returns_iff.mpr ⟨d + 1, Nat.succ_pos d,
+    (orbit_add next s i (d + 1)).symm.trans ((congrArg (orbit next s) gap.symm).trans same.symm)⟩⟩
+
 /-- **Within finitely many configurations, every course enters what returns.** -/
 theorem enters_returning {next : S → S} {all : List S} (every : ∀ x, x ∈ all) (s : S) :
     ∃ n, Returns next (orbit next s n) :=
-  let ⟨i, _, lt, _, same⟩ := revisits_within all (orbit next s) (fun _ _ => every _)
-  let ⟨d, gap⟩ := gap_of_lt lt
-  ⟨i, returns_iff.mpr ⟨d + 1, Nat.succ_pos d,
-    (orbit_add next s i (d + 1)).symm.trans ((congrArg (orbit next s) gap.symm).trans same.symm)⟩⟩
+  match enters_returning_within every s with
+  | ⟨n, _, returns⟩ => ⟨n, returns⟩
 
 /-- **Within finitely many configurations, what returns is the attractor.** Every
 configuration that does not return is drawn into the absorbing region of what returns. -/

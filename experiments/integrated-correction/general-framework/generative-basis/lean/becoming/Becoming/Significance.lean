@@ -163,6 +163,14 @@ continuation of anything has significance at every step. This is boundary neutra
 def Unrestricted (sig : Pos → Nat → F → Prop) : Prop :=
   Neutral fun i : Pos × Nat × F => sig i.1 i.2.1 i.2.2
 
+/-- **A rule accepted inside a formed boundary is a rival wherever something lies outside it.** The
+rule holding exactly within a region of standpoints, steps and formations accepts the continuation
+condition's rule within the region, and where some point lies outside it, it is not the
+continuation condition. -/
+theorem rival_of_outside (region : Pos × Nat × F → Prop) :
+    Within region region ∧ ((∃ i, ¬ region i) → ¬ Unrestricted (fun p t f => region (p, t, f))) :=
+  ⟨fun _ inside => inside, fun ⟨i, outside⟩ all => outside (all i)⟩
+
 /-- A bounded significance is the continuation condition's rule accepted inside a formed boundary. Where some
 formation lies outside some standpoint's region, it is not the continuation condition. This is all
 the theorem proves; that such a rival is consistent with every law of the dynamics holds only
@@ -170,7 +178,23 @@ because significance is not a field of the representation. -/
 theorem bounded_rival {region : Pos → F → Prop} :
     Within (fun i : Pos × Nat × F => region i.1 i.2.2) (fun i => bounded region i.1 i.2.1 i.2.2) ∧
       ((∃ p f, ¬ region p f) → ¬ Unrestricted (bounded region)) :=
-  ⟨fun _ inside => inside, fun ⟨p, f, outside⟩ all => outside (all (p, 0, f))⟩
+  ⟨(rival_of_outside (fun i : Pos × Nat × F => region i.1 i.2.2)).1,
+   fun ⟨p, f, outside⟩ => (rival_of_outside (fun i : Pos × Nat × F => region i.1 i.2.2)).2
+     ⟨(p, 0, f), outside⟩⟩
+
+/-- The significance bounded in time: only continuations at steps up to `T` have significance. -/
+def boundedInTime (T : Nat) : Pos → Nat → F → Prop :=
+  fun _ t _ => t ≤ T
+
+/-- **A rule bounded in time is a rival.** It accepts the continuation condition's rule within its
+time bound, and with any standpoint and formation it is not the continuation condition: the step
+after the bound is outside it. -/
+theorem bounded_in_time_rival (T : Nat) :
+    Within (fun i : Pos × Nat × F => i.2.1 ≤ T) (fun i => boundedInTime T i.1 i.2.1 i.2.2) ∧
+      (Pos → F → ¬ Unrestricted (boundedInTime (Pos := Pos) (F := F) T)) :=
+  ⟨(rival_of_outside (fun i : Pos × Nat × F => i.2.1 ≤ T)).1,
+   fun p f => (rival_of_outside (fun i : Pos × Nat × F => i.2.1 ≤ T)).2
+     ⟨(p, T + 1, f), Nat.not_succ_le_self T⟩⟩
 
 /-! ## Retaining under the continuation condition -/
 
@@ -291,6 +315,27 @@ theorem clearer_loses_dweller {l : Nat → Place → Nat} (without : flow.Withhe
   ⟨adds, fun retains => retains.not_added adds,
    fun t f _ _ => admitted_all_without without t f,
    fun t => ⟨dependent t .clearer trivial, admitted_all_without without t .clearer⟩⟩
+
+/-- At the first two steps the levels with the clearer's part admit every formation. -/
+theorem admits_early : ∀ t, t ≤ 1 → ∀ f, web.Admits (web.level t) t f
+  | _, _, .clearer, .resource, _ => Nat.le_refl 1
+  | 0, _, .dweller, .habitat, _ => Nat.le_succ 1
+  | 1, _, .dweller, .habitat, _ => Nat.le_refl 1
+  | _ + 2, late, .dweller, .habitat, _ => absurd (Nat.le_of_succ_le_succ late) (Nat.not_succ_le_zero _)
+  | _, _, .source, _, no => nomatch no
+  | _, _, .clearer, .habitat, no => nomatch no
+  | _, _, .clearer, .fuel _, no => nomatch no
+  | _, _, .dweller, .resource, no => nomatch no
+  | _, _, .dweller, .fuel _, no => nomatch no
+
+/-- **Caring for this generation only, the clearer's part loses nothing; caring for every
+generation, it loses the dweller.** Under the significance bounded at the second step, from every
+standpoint the levels with the clearer's part retain what has significance along any levels;
+under the continuation condition they do not retain what has significance without the part. -/
+theorem time_bounded_permits {l : Nat → Place → Nat} (without : flow.WithheldLevels clearerPart web l)
+    {sig : Pos → Nat → Formation → Prop} (unrestricted : Unrestricted sig) (p : Pos) :
+    web.Retains (boundedInTime 1) p web.level l ∧ ¬ web.Retains sig p web.level l :=
+  ⟨fun t f early _ => admits_early t early f, (clearer_loses_dweller without unrestricted p).2.1⟩
 
 end Clearing
 

@@ -2552,6 +2552,32 @@ theorem idle_unmatched :
 
 end Pair
 
+/-! ## Exchanges sharing a relatum need not commute -/
+
+namespace Shared
+
+/-- One relatum and two exchanges touching it: the first adds one to its amount, the second
+doubles it. -/
+def law : LocalLaw Unit Bool Nat where
+  touches _ _ := true
+  act e s _ := match e with
+    | true => s () + 1
+    | false => 2 * s ()
+  keeps _ _ _ no := nomatch no
+  reads e _ _ _ same _ := match e with
+    | true => congrArg (· + 1) (same () rfl)
+    | false => congrArg (2 * ·) (same () rfl)
+
+/-- **The condition of `act_comm` cannot be dropped.** The two exchanges share their relatum,
+and taken in the two orders from the same configuration they reach different configurations:
+adding then doubling gives two, doubling then adding gives one. -/
+theorem order_matters :
+    ¬ law.Apart true false ∧ law.run [true, false] (fun _ => 0) () = 2 ∧
+      law.run [false, true] (fun _ => 0) () = 1 :=
+  ⟨fun apart => (nomatch apart () rfl), rfl, rfl⟩
+
+end Shared
+
 end Interleavings
 
 end Becoming

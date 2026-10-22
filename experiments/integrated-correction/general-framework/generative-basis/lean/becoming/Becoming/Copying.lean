@@ -1116,41 +1116,58 @@ theorem inspect_keeps_counts (ci ce : Nat) (ref : Nat → Option α) (i : Nat) (
 
 end Pool
 
-/-! ## Doubling -/
+/-! ## Copying, and doubling its case -/
+
+/-- Units drawn for beyond the start in `n` rounds of copying `b`-fold from `k` units. -/
+def requiredBy (b : Nat) : Nat → Nat → Nat
+  | 0, _ => 0
+  | n + 1, k => k + requiredBy b n (b * k)
+
+theorem mul_pow_succ (b k n : Nat) : b * k * b ^ n = k * b ^ (n + 1) :=
+  calc b * k * b ^ n = k * b * b ^ n := congrArg (· * b ^ n) (Nat.mul_comm b k)
+    _ = k * (b * b ^ n) := mul_assoc_nat k b (b ^ n)
+    _ = k * (b ^ n * b) := congrArg (k * ·) (Nat.mul_comm b (b ^ n))
+
+/-- **What copying draws.** Copying `c + 1`-fold, `c` times what `n` rounds draw for, with the `k`
+units of the start, make `k * (c + 1) ^ n`. -/
+theorem requiredBy_add (c : Nat) : ∀ n k : Nat, c * requiredBy (c + 1) n k + k = k * (c + 1) ^ n
+  | 0, k => (congrArg (· + k) (Nat.mul_zero c)).trans ((Nat.zero_add k).trans (Nat.mul_one k).symm)
+  | n + 1, k =>
+    calc c * (k + requiredBy (c + 1) n ((c + 1) * k)) + k
+        = c * requiredBy (c + 1) n ((c + 1) * k) + (c * k + k) :=
+          (congrArg (· + k) ((Nat.left_distrib c k _).trans (Nat.add_comm _ _))).trans
+            (Nat.add_assoc _ _ _)
+      _ = c * requiredBy (c + 1) n ((c + 1) * k) + (c + 1) * k :=
+          congrArg (_ + ·) ((Nat.mul_comm (c + 1) k).trans ((Nat.left_distrib k c 1).trans
+            (congr (congrArg (· + ·) (Nat.mul_comm k c)) (Nat.mul_one k)))).symm
+      _ = (c + 1) * k * (c + 1) ^ n := requiredBy_add c n ((c + 1) * k)
+      _ = k * (c + 1) ^ (n + 1) := mul_pow_succ (c + 1) k n
 
 /-- Units drawn for beyond the start in `n` rounds of doubling from `k` units: `k * (2 ^ n - 1)`. -/
-def required : Nat → Nat → Nat
-  | 0, _ => 0
-  | n + 1, k => k + required n (2 * k)
+def required : Nat → Nat → Nat := requiredBy 2
 
-theorem two_mul_pow (k n : Nat) : 2 * k * 2 ^ n = k * 2 ^ (n + 1) :=
-  calc 2 * k * 2 ^ n = k * 2 * 2 ^ n := congrArg (· * 2 ^ n) (Nat.mul_comm 2 k)
-    _ = k * (2 * 2 ^ n) := mul_assoc_nat k 2 (2 ^ n)
-    _ = k * (2 ^ n * 2) := congrArg (k * ·) (Nat.mul_comm 2 (2 ^ n))
+theorem two_mul_pow (k n : Nat) : 2 * k * 2 ^ n = k * 2 ^ (n + 1) := mul_pow_succ 2 k n
 
 /-- **What doubling draws.** `required n k` and the `k` units of the start make `k * 2 ^ n`. -/
-theorem required_add : ∀ n k : Nat, required n k + k = k * 2 ^ n
-  | 0, k => (Nat.zero_add k).trans (Nat.mul_one k).symm
-  | n + 1, k =>
-    calc k + required n (2 * k) + k = required n (2 * k) + (k + k) := by
-          rw [Nat.add_comm k (required n (2 * k)), Nat.add_assoc]
-      _ = required n (2 * k) + 2 * k := by rw [Nat.two_mul]
-      _ = 2 * k * 2 ^ n := required_add n (2 * k)
-      _ = k * 2 ^ (n + 1) := two_mul_pow k n
+theorem required_add (n k : Nat) : required n k + k = k * 2 ^ n :=
+  (congrArg (· + k) (Nat.one_mul (required n k)).symm).trans (requiredBy_add 1 n k)
 
-/-- One round: every unit draws `d` from the stock and becomes two. -/
-def doubling (d : Nat) : Process (Nat × Nat) Unit :=
-  ⟨fun s _ t => d * s.1 ≤ s.2 ∧ t = (2 * s.1, s.2 - d * s.1)⟩
+/-- One round of copying `b`-fold: every unit draws `d` from the stock and becomes `b`. -/
+def copying (b d : Nat) : Process (Nat × Nat) Unit :=
+  ⟨fun s _ t => d * s.1 ≤ s.2 ∧ t = (b * s.1, s.2 - d * s.1)⟩
+
+/-- One round of doubling: every unit draws `d` from the stock and becomes two. -/
+def doubling (d : Nat) : Process (Nat × Nat) Unit := copying 2 d
 
 /-- `n` rounds. -/
 def rounds (n : Nat) : List Unit := List.replicate n ()
 
-/-- **Doubling.** Where every unit draws `d` from one stock and becomes two, `n` rounds from `k`
-units with stock `m` run exactly when `d * required n k ≤ m`, and end with `k * 2 ^ n` units and
-what the stock has left. -/
-theorem doubling_iff (d : Nat) : ∀ (n k m : Nat) (t : Nat × Nat),
-    Trace (doubling d) (k, m) (rounds n) t ↔
-      d * required n k ≤ m ∧ t = (k * 2 ^ n, m - d * required n k)
+/-- **Copying.** Where every unit draws `d` from one stock and becomes `b`, `n` rounds from `k`
+units with stock `m` run exactly when `d * requiredBy b n k ≤ m`, and end with `k * b ^ n` units
+and what the stock has left. -/
+theorem copying_iff (b d : Nat) : ∀ (n k m : Nat) (t : Nat × Nat),
+    Trace (copying b d) (k, m) (rounds n) t ↔
+      d * requiredBy b n k ≤ m ∧ t = (k * b ^ n, m - d * requiredBy b n k)
   | 0, k, m, t =>
     ⟨fun path => match path with
       | .nil _ => ⟨Nat.zero_le m, congrArg (·, m) (Nat.mul_one k).symm⟩,
@@ -1159,24 +1176,44 @@ theorem doubling_iff (d : Nat) : ∀ (n k m : Nat) (t : Nat × Nat),
       subst e
       exact .nil _⟩
   | n + 1, k, m, t =>
-    have split : d * required (n + 1) k = d * k + d * required n (2 * k) := Nat.left_distrib _ _ _
+    have split : d * requiredBy b (n + 1) k = d * k + d * requiredBy b n (b * k) :=
+      Nat.left_distrib _ _ _
     ⟨fun path => match path with
       | .cons ⟨first, moved⟩ rest => by
         subst moved
-        have ⟨more, ended⟩ := (doubling_iff d n (2 * k) (m - d * k) t).mp rest
+        have ⟨more, ended⟩ := (copying_iff b d n (b * k) (m - d * k) t).mp rest
         refine ⟨?_, ?_⟩
         · rw [split]
           exact add_le_iff.mpr ⟨first, more⟩
-        · rw [ended, two_mul_pow, Naturals.sub_sub, split],
+        · rw [ended, mul_pow_succ, Naturals.sub_sub, split],
      fun ⟨covered, ended⟩ => by
       rw [split] at covered ended
       have ⟨first, more⟩ := add_le_iff.mp covered
-      refine .cons ⟨first, rfl⟩ ((doubling_iff d n (2 * k) (m - d * k) t).mpr ⟨more, ?_⟩)
-      rw [ended, two_mul_pow, Naturals.sub_sub]⟩
+      refine .cons ⟨first, rfl⟩ ((copying_iff b d n (b * k) (m - d * k) t).mpr ⟨more, ?_⟩)
+      rw [ended, mul_pow_succ, Naturals.sub_sub]⟩
+
+/-- Copying runs every number of rounds where the stock covers what they draw. -/
+theorem copying_runs (b d n k m : Nat) (covered : d * requiredBy b n k ≤ m) :
+    Trace (copying b d) (k, m) (rounds n) (k * b ^ n, m - d * requiredBy b n k) :=
+  (copying_iff b d n k m _).mpr ⟨covered, rfl⟩
+
+/-- **Doubling.** Where every unit draws `d` from one stock and becomes two, `n` rounds from `k`
+units with stock `m` run exactly when `d * required n k ≤ m`, and end with `k * 2 ^ n` units and
+what the stock has left. -/
+theorem doubling_iff (d : Nat) (n k m : Nat) (t : Nat × Nat) :
+    Trace (doubling d) (k, m) (rounds n) t ↔
+      d * required n k ≤ m ∧ t = (k * 2 ^ n, m - d * required n k) :=
+  copying_iff 2 d n k m t
 
 /-- Doubling runs every number of rounds where the stock covers what they draw. -/
 theorem doubling_runs (d n k m : Nat) (covered : d * required n k ≤ m) :
     Trace (doubling d) (k, m) (rounds n) (k * 2 ^ n, m - d * required n k) :=
-  (doubling_iff d n k m _).mpr ⟨covered, rfl⟩
+  copying_runs 2 d n k m covered
+
+/-- **Ten from one, five rounds.** Copying tenfold, each unit drawing one, five rounds from one unit
+run from a stock of 11,111 and end with 100,000 units and none left: one teaches ten, ten a
+hundred, and so to a hundred thousand. -/
+theorem tenfold : Trace (copying 10 1) (1, 11111) (rounds 5) (100000, 0) :=
+  copying_runs 10 1 5 1 11111 (Nat.le_refl _)
 
 end Becoming.Copying

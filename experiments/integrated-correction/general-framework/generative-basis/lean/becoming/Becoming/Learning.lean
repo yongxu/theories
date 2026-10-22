@@ -1025,6 +1025,25 @@ theorem values_right_of_reads {r : K → V} {f : K → W} (h : V → W) (reads :
     EquivariantValue (fun (r' : K → V) (i : K) => h (r' i)) ∧ ∀ i, h (r i) = f i :=
   ⟨fun _ _ _ _ relabel i => congrArg h (relabel i), fun i => (reads i).symm⟩
 
+omit [DecidableEq K] in
+/-- **Going alike across a lumping is being read off the map.** What matters goes alike across the
+alternatives the map `r` lumps together exactly where it is read off the map: through what holds
+of some alternative the map gives that entry. -/
+theorem through_iff_reads {r : K → V} {p : K → Prop} :
+    Training.Through (fun i i' => r i = r i') p ↔ ∃ q : V → Prop, ∀ i, p i ↔ q (r i) :=
+  ⟨fun through => ⟨fun v => ∃ j, r j = v ∧ p j, fun i =>
+      ⟨fun holds => ⟨i, rfl, holds⟩, fun ⟨j, tie, holds⟩ => (through j i tie).mp holds⟩⟩,
+   fun ⟨q, reads⟩ i i' tie => (reads i).trans ((iff_of_eq (congrArg q tie)).trans (reads i').symm)⟩
+
+/-- **Some selection through a map selects what matters exactly where the map reads it.** A
+selection through `r` selecting exactly the alternatives satisfying `p` exists exactly where `p`
+goes alike across the lumping of `r`, which is exactly where `p` is read off `r`. -/
+theorem selects_right_iff {r : K → V} {p : K → Prop} :
+    (∃ select : (K → V) → K → Prop, Equivariant select ∧ ∀ i, select r i ↔ p i) ↔
+      ∃ q : V → Prop, ∀ i, p i ↔ q (r i) :=
+  ⟨fun ⟨_, equivariant, right⟩ => through_iff_reads.mp (selects_right_through equivariant right),
+   fun ⟨q, reads⟩ => ⟨_, selects_right_of_reads q reads⟩⟩
+
 end Model
 
 /-! ## Witnesses -/

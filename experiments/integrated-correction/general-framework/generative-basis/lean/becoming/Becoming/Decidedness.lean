@@ -101,6 +101,15 @@ def Decided (p : Prop) : Prop :=
 theorem not_not_decided (p : Prop) : ¬ ¬ Decided p :=
   fun refuted => refuted (.inr fun holds => refuted (.inl holds))
 
+/-- **Arguing by cases into a stable conclusion.** Where a conclusion follows from a proposition
+and from its failure, it holds wherever it is stable, with the proposition left undecided: that
+the proposition is decided cannot be refuted (`not_not_decided`). Every negation, and every
+equation of numbers, is stable. -/
+theorem Decided.cases_stable {p q : Prop} (stable : ¬ ¬ q → q) (yes : p → q) (no : ¬ p → q) : q :=
+  stable fun fails => not_not_decided p fun decided => match decided with
+    | .inl holds => fails (yes holds)
+    | .inr refuted => fails (no refuted)
+
 /-- A decided proposition holds wherever its failure is refuted. -/
 theorem Decided.of_not_not {p : Prop} (decided : Decided p) (not_not : ¬ ¬ p) : p :=
   match decided with

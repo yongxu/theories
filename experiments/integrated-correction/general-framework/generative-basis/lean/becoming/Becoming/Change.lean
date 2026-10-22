@@ -294,6 +294,28 @@ the step. -/
 def CeasesToBe (p : Nat → Prop) (t : Nat) : Prop :=
   p t ∧ ¬ p (t + 1)
 
+/-- **What ceases to be is the coming to be of its negation.** No premise. -/
+theorem CeasesToBe.not_comes {p : Nat → Prop} {t : Nat} (ceases : CeasesToBe p t) :
+    ComesToBe (fun s => ¬ p s) t :=
+  ⟨fun fails => fails ceases.1, ceases.2⟩
+
+/-- **What comes to be is the ceasing of its negation.** No premise. -/
+theorem ComesToBe.not_ceases {p : Nat → Prop} {t : Nat} (comes : ComesToBe p t) :
+    CeasesToBe (fun s => ¬ p s) t :=
+  ⟨comes.1, fun fails => fails comes.2⟩
+
+/-- The converse readings need the determination stable where it is read back: the negation's
+coming to be across `t` is the determination's ceasing exactly where `p t` follows from its
+double negation, and the negation's ceasing is the determination's coming to be where
+`p (t + 1)` does. -/
+theorem ComesToBe.of_not {p : Nat → Prop} {t : Nat} (stable : ¬ ¬ p t → p t)
+    (comes : ComesToBe (fun s => ¬ p s) t) : CeasesToBe p t :=
+  ⟨stable comes.1, comes.2⟩
+
+theorem CeasesToBe.of_not {p : Nat → Prop} {t : Nat} (stable : ¬ ¬ p (t + 1) → p (t + 1))
+    (ceases : CeasesToBe (fun s => ¬ p s) t) : ComesToBe p t :=
+  ⟨ceases.1, stable ceases.2⟩
+
 section Determination
 
 variable {p : Nat → Prop} [∀ t, Decidable (p t)]

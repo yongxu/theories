@@ -266,6 +266,12 @@ variable (W : Web F C)
 def Admits (l : C → Nat) (t : Nat) (f : F) : Prop :=
   ∀ c, W.requires t f c → W.need t f c ≤ l c
 
+/-- The levels `l` keep `f` within its band at `t`: each condition `f` then requires stands at
+least at its need and at most at its cap. A need with a cap is harmed by too much as by too
+little. -/
+def FitsBand (cap : Nat → F → C → Nat) (l : C → Nat) (t : Nat) (f : F) : Prop :=
+  ∀ c, W.requires t f c → W.need t f c ≤ l c ∧ l c ≤ cap t f c
+
 /-- The level path `l` includes `l'`: at every step it admits every formation `l'` admits. -/
 def Includes (l l' : Nat → C → Nat) : Prop :=
   ∀ t f, W.Admits (l' t) t f → W.Admits (l t) t f
@@ -275,6 +281,11 @@ def Exceeds (l l' : Nat → C → Nat) : Prop :=
   ∃ t f, W.Admits (l t) t f ∧ ¬ W.Admits (l' t) t f
 
 variable {W}
+
+/-- Levels within a band admit. -/
+theorem FitsBand.admits {cap : Nat → F → C → Nat} {l : C → Nat} {t : Nat} {f : F}
+    (fits : W.FitsBand cap l t f) : W.Admits l t f :=
+  fun c requires => (fits c requires).1
 
 /-- Support is admission by the levels that stand. -/
 theorem supported_iff_admits {t : Nat} {f : F} : W.Supported t f ↔ W.Admits (W.level t) t f :=
@@ -506,6 +517,30 @@ theorem Balances.changes_nothing (balances : L.Balances W) {l : Nat → C → Na
     W.Includes W.level l ∧ W.Includes l W.level :=
   ⟨balances.closes_nothing without fun t c => Nat.le_of_eq (even t c),
    balances.opens_nothing without fun t c => Nat.le_of_eq (even t c).symm⟩
+
+/-- **The band is exact on both sides.** With balance only at the conditions `f` requires,
+across the steps before `t`, the levels that stand keep `f` within its band exactly when, at each
+such condition, its need with what the part has taken is at most the level without the part with
+what the part has given, and that is at most the cap with what the part has taken: the part opens
+the band from below by giving and closes it from above by giving beyond the margin to the cap. -/
+theorem fitsBand_iff_within_margins_at {cap : Nat → F → C → Nat} {l : Nat → C → Nat}
+    (without : L.WithheldLevels part W l) {t : Nat} {f : F}
+    (balances : ∀ c, W.requires t f c → ∀ s, s < t → L.BalancesOn W [c] s) :
+    W.FitsBand cap (W.level t) t f ↔ ∀ c, W.requires t f c →
+      W.need t f c + total (steps 0 t) (fun s => L.partTaken part s c) ≤
+          l t c + total (steps 0 t) (fun s => L.partGiven part s c) ∧
+        l t c + total (steps 0 t) (fun s => L.partGiven part s c) ≤
+          cap t f c + total (steps 0 t) (fun s => L.partTaken part s c) :=
+  ⟨fun fits c requires =>
+    have same := withheld_at without t (balances c requires)
+    ⟨Nat.le_trans (Nat.add_le_add_right (fits c requires).1 _) (Nat.le_of_eq same),
+     Nat.le_trans (Nat.le_of_eq same.symm) (Nat.add_le_add_right (fits c requires).2 _)⟩,
+   fun within c requires =>
+    have same := withheld_at without t (balances c requires)
+    ⟨le_of_add_le_add_right (total (steps 0 t) fun s => L.partTaken part s c)
+        (Nat.le_trans (within c requires).1 (Nat.le_of_eq same.symm)),
+     le_of_add_le_add_right (total (steps 0 t) fun s => L.partTaken part s c)
+        (Nat.le_trans (Nat.le_of_eq same) (within c requires).2)⟩⟩
 
 end Withholding
 

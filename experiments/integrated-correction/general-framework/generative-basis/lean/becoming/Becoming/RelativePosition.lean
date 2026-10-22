@@ -186,6 +186,67 @@ theorem greatest_exists (a : P → Nat) :
           | .head _ => Nat.le_refl _
           | .tail _ rest => Nat.le_trans (greatest r rest) ge⟩
 
+/-! ## Least parts, and equal shares -/
+
+/-- `l` is a least part of the family under the amounts: no part's amount is below its own. -/
+def Least (ps : List P) (a : P → Nat) (l : P) : Prop :=
+  ∀ q, q ∈ ps → a l ≤ a q
+
+/-- **A least part's position is not above the family's**: its amount counted once for each part
+is at most the family's total. -/
+theorem least_not_ahead {ps : List P} {a : P → Nat} {l : P} (least : Least ps a l) :
+    ps.length * a l ≤ total ps a :=
+  Nat.le_trans (Nat.le_of_eq (total_const (a l) ps).symm) (total_le ps least)
+
+/-- Every nonempty family has a least part. -/
+theorem least_exists (a : P → Nat) :
+    ∀ (p : P) (ps : List P), ∃ l, l ∈ p :: ps ∧ Least (p :: ps) a l
+  | p, [] => ⟨p, .head [], fun _ mem => match mem with
+      | .head _ => Nat.le_refl _
+      | .tail _ no => nomatch no⟩
+  | p, q :: qs => match least_exists a q qs with
+    | ⟨l, mem, least⟩ => match Nat.lt_or_ge (a l) (a p) with
+      | .inl lt => ⟨l, .tail p mem, fun r inside => match inside with
+          | .head _ => Nat.le_of_lt lt
+          | .tail _ rest => least r rest⟩
+      | .inr ge => ⟨p, .head _, fun r inside => match inside with
+          | .head _ => Nat.le_refl _
+          | .tail _ rest => Nat.le_trans ge (least r rest)⟩
+
+/-- **Guarding everywhere, little anywhere.** Where a family's total is at most `T`, its least
+part, counted once for each of at least `n` parts, is at most `T`: more parts with no more in all
+leave the least part no more. -/
+theorem least_bound {ps : List P} {a : P → Nat} {l : P} (least : Least ps a l) {T n : Nat}
+    (within : total ps a ≤ T) (many : n ≤ ps.length) : n * a l ≤ T :=
+  Nat.le_trans (Nat.mul_le_mul_right (a l) many) (Nat.le_trans (least_not_ahead least) within)
+
+/-- **Equal shares support exactly where the share meets the greatest need.** Each part of a
+family receiving the share `q`, every part's need is met exactly where the greatest part's is. -/
+theorem equal_share_iff {ps : List P} {need : P → Nat} {g : P} (mem : g ∈ ps)
+    (greatest : Greatest ps need g) {q : Nat} :
+    (∀ p, p ∈ ps → need p ≤ q) ↔ need g ≤ q :=
+  ⟨fun all => all g mem, fun le p inside => Nat.le_trans (greatest p inside) le⟩
+
+/-- **Equal shares cost more where needs differ.** Equal shares meeting every need give at least
+the greatest need counted once for each part, which is the family's total need exactly where no
+need falls short of the greatest, and exceeds it where one does. -/
+theorem equal_share_exceeds {ps : List P} {need : P → Nat} {g : P} (greatest : Greatest ps need g)
+    {p : P} (mem : p ∈ ps) (short : need p < need g) : total ps need < ps.length * need g :=
+  Nat.lt_of_lt_of_le (total_lt_of_mem mem short greatest)
+    (Nat.le_of_eq (total_const (need g) ps))
+
+/-- Where every need is the greatest, equal shares meeting it give exactly the total need. -/
+theorem equal_share_even {ps : List P} {need : P → Nat} {g : P}
+    (even : ∀ p, p ∈ ps → need p = need g) : total ps need = ps.length * need g :=
+  (total_congr_on even).trans (total_const (need g) ps)
+
+/-- **Enough in all, short for one.** Two parts needing one and three: four given is the sum of
+the needs, so given by need it supports both, while in equal shares of two, which also total four,
+the part needing three is not supported. -/
+theorem uneven_short :
+    total [1, 3] id = 4 ∧ [1, 3].length * 2 = 4 ∧ ¬ (∀ p, p ∈ [1, 3] → id p ≤ 2) :=
+  ⟨rfl, rfl, fun all => absurd (all 3 (.tail _ (.head _))) (Nat.not_succ_le_self 2)⟩
+
 end RelativePosition
 
 open RelativePosition

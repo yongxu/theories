@@ -187,6 +187,32 @@ theorem rising_fed_from_beyond [DecidableEq C] (balances : L.Balances W)
   rising_fed_from_beyond_from distinct around (fun t _ => balances.on ds t)
     (fun t _ es => dissipative es t) rising N
 
+/-- A step at which something is conveyed from a member of a family has a formation taking from
+the family. -/
+theorem takers_pos_of_conveys {ds : List C} {t : Nat} {c d : C} (inside : c ∈ ds)
+    (conveys : L.Conveys t c d) : 0 < L.takers ds t :=
+  match conveys with
+  | ⟨_, present, takes, _⟩ => total_pos_of_mem (q := fun f => sign (total ds (L.take t f))) present
+      (sign_pos (total_pos_of_mem inside takes))
+
+/-- **Far conveying runs the family down by a step for each stage.** Balanced and dissipated on
+across each of `N` steps from `S`, with something conveyed from a member of the family at each,
+the family's stock falls by at least `N`; so from a stock of `S₀` at most `S₀` stages are
+conveyed. -/
+theorem conveyed_loses {ds : List C} {S N : Nat}
+    (balances : ∀ t, S ≤ t → t < S + N → L.BalancesOn W ds t)
+    (dissipates : ∀ t, S ≤ t → t < S + N → L.DissipatesOn ds t)
+    (conveyed : ∀ t, S ≤ t → t < S + N → ∃ c d, c ∈ ds ∧ L.Conveys t c d) :
+    W.stock ds (S + N) + N ≤ W.stock ds S ∧ N ≤ W.stock ds S :=
+  have each : N ≤ total (steps S N) (L.takers ds) :=
+    Nat.le_trans (Nat.le_of_eq ((steps_length S N).symm.trans (total_ones (steps S N)).symm))
+      (total_le (steps S N) fun t mem => match between_of_mem_steps mem with
+        | ⟨from_, below⟩ => match conveyed t from_ below with
+          | ⟨_, _, inside, conveys⟩ => takers_pos_of_conveys inside conveys)
+  have lost := takers_within_on S N balances dissipates
+  ⟨Nat.le_trans (Nat.add_le_add_left each _) lost,
+   Nat.le_trans (Nat.le_add_left N _) (Nat.le_trans (Nat.add_le_add_left each _) lost)⟩
+
 end Conveying
 
 /-! ## Counting one's own draw and the joint draw -/
