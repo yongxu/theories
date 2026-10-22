@@ -1,0 +1,90 @@
+## {N}. What cancer is, and what keeps a part from turning back (CA1)
+
+```text
+Result(s): Becoming.Founding ({THEOREMS} theorems in {DECLS} declarations, a new core module on GroupEnding and
+       Reproduction) states what selection within a whole can and cannot carry. On the base (Founding.Flow): where a
+       family of conditions ran into excess under the coupled gate (Flow.family_excess_ends), every member of a later
+       generation of descent is the offspring of a member that depended on no condition of the family at the gate's
+       need (survivors_independent), and a lineage of a group of the first generation every later member of which
+       depends on the family has no member at any generation after the family's end (confined_ends), both through
+       GroupEnding.Flow.family_childless. Rise names a lineage that selection within goes for while a family runs
+       into excess: at a step before the end an amount marks the lineage there (positive exactly at its members) and
+       offspring number is concordant with it beyond its discordance, a member of the lineage takes from the family
+       during the excess, and the family's renewal is gated on it and runs into excess from a stock below n + m.
+       ConfinedRise extends it by confinement (from T + n on every member of the lineage depends on the family), the
+       conjunction read as cancer; ConfinedRise.ends is confined_ends (the rise's other clauses do not enter): the
+       lineage has no member after T + n, whatever selection within had raised it to. Selection within needs
+       variation: in generations founded uniform at v, exact transmission before t keeps every member at t at v
+       (uniform_until), so nothing is selected within at t for any weight (none_within_until); transmission that
+       raised and lowered nothing is exact (exact_of_none); deciding each earlier step (changed_or_none), wherever
+       offspring number is concordant or discordant with the amount at t, transmission raised or lowered it at some
+       step before t (varied_before). What a founding carries (Nested: generations of wholes, each whole read over its
+       own generations from its founder, founding the next wholes from its members at a span): under Founded (one
+       founder carrying the whole's value; each next founder a member of the whole at the span, carrying what it
+       carries there), what transmission raised and lowered across a generation of wholes is exactly how far the next
+       founders moved from their founder within the whole (raised_carried, lowered_carried), so the mean founding
+       value rises exactly where selection among wholes with that within-whole change as Price's transmission term
+       comes out positive (raises_iff_carried, the Raises of the wholes' generations rewritten); under Sequestered
+       (every next founder carries its founder's value) transmission across generations of wholes is exact
+       (exact_of_sequestered) and the mean founding value rises exactly where selection among wholes goes for it
+       (raises_iff_among, the exact case of Generations.raises_exact_iff); within each whole of a founded reading,
+       selection at a step needs variation arisen within it (varied_within). Witnesses: Body, one body condition at
+       two in excess across the first step, two lineages each marked by its own amount; both meet every clause of
+       Rise (confined_rise, spread_rise, with confined_marks and spread_marks); the confined lineage meets ConfinedRise
+       and ends (confined_ended); the spreading lineage's descendant depends on a condition outside the body
+       (spread_unconfined), and the lineage has a member at the second generation (spread_outlasts), after every part
+       depending on the body has ended (body_ended); it has none from the third, the witness modelling no new whole.
+       Germline: within the first whole a variant not holding back arises from the founder (transmission lowers
+       holding back) and selection within goes against holding back (within_against); among wholes the whole holding
+       back founds the next and the other none (by construction). With the next founder from the line carrying the
+       founder's value the mean founding value rises from a half to one (sequestered_rises: sizes 2 then 1, sums 1
+       then 1); with the next founders from the variants it falls from a half to none although selection among wholes
+       goes for holding back (unsequestered_falls: sums 1 then 0). Record {RID}.
+Delta: OPENING [^transitions] said that no law states what keeps a part from turning back; GroupEnding's lineage
+       laws already stated the founding-by-descent half, and this states what a confined rise loses, the founding
+       laws (sequestration as their exact case) and variation after founding, with the boundary case of a lineage
+       whose confinement fails. A new module is a leaf by reason: it reads the levels and ending laws across a whole's
+       foundings, and nothing below it needs it; it generalizes no existing law (board rule 9).
+Premises: for the base laws, balance, only active formations giving, activity needing support, descent, the coupled
+       gate on the family, n steps of the family's excess from a stock below n + m, and, for confined_ends,
+       confinement as a hypothesis; for varied_before, a first generation uniform in the amount; for the founding
+       laws, Founded, and for raises_iff_among, Sequestered. Which family runs into excess, which members depend on
+       it, and how the next founders are drawn are hypotheses wherever they enter.
+Evidence: core receipt {RECEIPT} (passed; Becoming.Founding every axiom report empty; {CORE_LINE}); the connectivity
+       rerun ({APART}); render, check, links and tests; an independent review by a separate agent (seven must-fix
+       findings, all applied: the rise's selection made to mark the lineage, Rise split from ConfinedRise with the
+       spreading lineage shown a Rise, "goes on" and "falls to none" stated as proved, the exact-transmission premise
+       and the AI label in the OPENING note, and its claim narrowed to two ways that keep a part from turning back).
+Boundary: How parts first come to live as one (the transitions themselves) is not stated: the laws hold of a whole
+       once formed and of its foundings. Removal of parts by the whole's rule (policing in the literature) is not
+       stated. Confinement and the excess are hypotheses; that a given tumour meets the clauses of ConfinedRise is
+       empirical. The rise's drawing clause says the lineage takes from the family during the excess, not that it
+       causes it. The spreading lineage has a member for one generation past the end; a lineage founding a new whole
+       elsewhere is not modelled. Sequestered states an outcome (each next founder carries its founder's value), read
+       as what a germ line set apart gives where it does not vary; germ lines do vary. varied_before reads variation
+       as transmission raising or lowering the amount (Price's transmission term), not as a mechanism of mutation.
+       Nested has one founder per whole; foundings by several parts (the colonial and aggregative routes) are not
+       stated. raises_iff_among states the rise; a fall is the same identity read the other way and is not separately
+       stated. Natural-number amounts, finite lists, discrete generations.
+Output → input: GroupEnding fixed the among-group part by ending and EV11 kept it by descent from uniform founders.
+       Here the two levels meet in one whole: a lineage selected for within the whole and confined to its conditions
+       has no member once they end, so what selection within raised is not carried past them; a whole founded by one
+       part has nothing selected within it until variation arises in it; and where every next founder carries its
+       founder's value, selection among wholes alone decides whether the mean founding value rises. These are known
+       results (Price 1970, 1972; Buss 1987; Grosberg and Strathmann 1998; Michod 1999; Michod and Roze 2001; on
+       cancer, Aktipis et al. 2015; on transmissible cancers, Metzger et al. 2015) restated with the flow. OPENING
+       [^transitions] now cites them. Next: wholes founded by several parts (aggregation, assortment below one with
+       EV12), removal of parts by the whole's rule on Regulation, and how parts first come to live as one.
+```
+
+The kit is [`development/ca1-founding/`](development/ca1-founding/): the module (`tree/`), its joining (`integrate.py`), this landing's text (`apply_text.py`, `study_ca1.txt`), record (`make_record.py`), apart roots (`apart.py`), re-pointing (`repoint.sh`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Survivors.** A member of generation `T + n + k + 1` is an offspring of some member `p` of generation `T + n + k` (`mem_flatMap_iff`); were `p` to depend on a condition of the family at need `m`, `family_childless` would make its descent across that step impossible.
+- **Confined.** The same for a member of the lineage: its parent is in the lineage at `T + n + k`, hence in the generation (`lineage_within`), and depends on the family by confinement; so the lineage at `T + n + k + 1` has no member and is empty (`nil_of_none`).
+- **Uniform until.** By induction on `t`: a member at `t + 1` is an offspring of a member at `t`, exact transmission gives it its parent's value, which is `v`. Uniform amounts make `concord` and `discord` zero (`concord_alike`, `discord_alike`).
+- **Exact of none.** Each `excess (b k) (a p)` and `excess (a p) (b k)` is at most its total (`le_total_of_mem`), hence zero; `le_of_excess_zero` both ways gives `b k = a p`.
+- **Varied before.** `changed_or_none` decides, step by step from 0, whether `raisedAt s` and `loweredAt s` are zero (`Nat.decEq`); where all are, every step before `t` is exact and `none_within_until` contradicts the selection at `t`.
+- **Carried.** `raisedAt t` is `total (family t) fun f => total (kids t f) fun k => excess (amount (t+1) k) (amount t f)`; `Founded` rewrites `amount (t+1) k` to the soma's value at the span and `amount t f` to the founder's (`total_eq_of_mem`, twice).
+- **Witnesses.** `Body`: levels body 2 then 0, outside 1, each offspring 0 then 1; `need f c = ofBody f · 2 · atBody c + beyond f · atOutside c`, `requires` is a positive need; both founders take one unit of the body at step 0; balance, acting and dependence by cases; the generations `generationsBy mark` share the kids and differ in the mark (`ofConfined`, `ofSpread`), so `descended` holds for both. `Germline`: holding back 1 at the founder, germ and germ₂, 0 elsewhere; within the first whole the founder leaves germ and variant, germ one offspring and variant two; next wholes at span 2.
+
+**Self-review.** The base laws are compositions of `family_childless` with lineages, and what they add is the reading: the end of a family of conditions is the horizon of every lineage confined to it, whatever selection within had done, and only lineages with a member independent of the family go past it. `Body` shows the confinement premise does real work: both lineages are rises on one body, and among what the base leaves free they differ only in where one descendant's need lies. The founding laws are Price's equation one level up with the transmission term read through the whole (the transmission bias that within-organism selection enters; Michod 1999); sequestration makes it vanish, and `raises_iff_among` is then the exact case of the selection term. `varied_before` is the counting form of "no within-group selection without within-group variation", with the bottleneck as the uniform founding. None of this says that every tumour meets the clauses, that wholes formed by aggregation behave alike, that a whole's removal of parts keeps them from turning back, or how a transition starts.
