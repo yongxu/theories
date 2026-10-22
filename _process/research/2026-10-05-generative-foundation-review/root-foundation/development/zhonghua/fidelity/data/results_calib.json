@@ -1391,6 +1391,10 @@
  "decisions": {
   "F1": "undecided",
   "F2": "supported",
+  "F1 (claude alone)": "undecided",
+  "F2 (claude alone)": "supported",
+  "F1 (codex alone)": "undecided",
+  "F2 (codex alone)": "supported",
   "F4": "undecided",
   "F3": "undecided"
  }

@@ -43,8 +43,8 @@ def main():
     out += ['', '## Decisions on the registered predictions', '']
     for coder in ('consensus', 'claude', 'codex'):
         cc = R['comparisons'][coder]
-        out.append('- **%s**: F1 (X_A) %s; F2 (X) %s; F4 (load) %s' % (
-            coder, 'CI ' + ci(cc['X_A']['ci95']), 'CI ' + ci(cc['X']['ci95']), 'CI ' + ci(cc['load']['ci95'])))
+        out.append('- **%s**: X_A difference CI %s; X difference CI %s' % (
+            coder, ci(cc['X_A']['ci95']), ci(cc['X']['ci95'])))
     out += ['', 'Decision by the plan (consensus): ' + ', '.join('%s %s' % kv for kv in R['decisions'].items()), '']
     for coder in ('consensus', 'claude', 'codex'):
         cc = R['comparisons'][coder]
@@ -52,8 +52,9 @@ def main():
                 '| comparison (zh − en) | 條 | mean zh | mean en | mean diff | 95% CI | Wilcoxon p |',
                 '|---|---:|---:|---:|---:|---|---:|']
         for k in ('X', 'X_A', 'X_R', 'X_E', 'O', 'O_rate', 'S', 'P', 'X_U0', 'X_noneg', 'X_noreading', 'naive_X', 'load'):
-            out.append(row(cc[k]))
-        for k, v in cc['genre'].items():
+            if k in cc:
+                out.append(row(cc[k]))
+        for k, v in cc.get('genre', {}).items():
             out.append(row(v))
         out.append('')
     out += ['## By 篇 (consensus X)', '', '| 篇 | 條 | mean zh | mean en | mean diff | 95% CI | Wilcoxon p |',

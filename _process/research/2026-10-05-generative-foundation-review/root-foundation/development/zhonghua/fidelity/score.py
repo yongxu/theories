@@ -24,7 +24,10 @@ def load(name):
 
 def codings(coder, pass_, which):
     out = {}
-    for p in sorted((DATA / 'coded' / coder / ('%s_%s' % (pass_, which))).glob('*.json')):
+    dirs = [DATA / 'coded' / coder / ('%s_%s' % (pass_, which))]
+    if pass_ == 'table' and which == 'main':
+        dirs.append(DATA / 'coded' / coder / ('core_' + coder))   # the packets of the reduced scope (plan amendment)
+    for p in sorted(q for d in dirs for q in d.glob('*.json')):
         for s in json.loads(p.read_text())['segments']:
             out[s['seg_id']] = s
     return out
@@ -217,7 +220,11 @@ def main():
     L = {d['decl']: d for d in load('lean_table.jsonl')}
     S = {s['seg_id']: s for s in load('segments.jsonl')}
     units = [u for u in load('units.jsonl') if u['calibration'] == (which == 'calib')]
-    C = {(c, p): codings(c, p, which) for c in CODERS for p in ('table', 'naive')}
+    # scope (plan amendment): the main set is scored on the table pass of the 經 and E1 segments only
+    PASSES = ('table', 'naive') if which == 'calib' else ('table',)
+    keep = {u[k] for u in units for k in (('jing', 'en') if which == 'main' else ('jing', 'en', 'enrec', 'zhrec', 'shuo'))
+            if k in u}
+    C = {(c, p): {k: v for k, v in codings(c, p, which).items() if k in keep} for c in CODERS for p in PASSES}
     cnt = {}
     for (c, p), cod in C.items():
         for sid, x in cod.items():
@@ -235,7 +242,7 @@ def main():
            'coded_segments': {'%s/%s' % k: len(v) for k, v in C.items()}}
     # reliability
     rel = {}
-    for pass_ in ('table', 'naive'):
+    for pass_ in PASSES:
         for lang in ('zh', 'en'):
             sids = [s for s in S if S[s]['lang'] == lang and all((c, pass_, s) in cnt for c in CODERS)]
             for key in ('X', 'O'):
@@ -264,6 +271,9 @@ def main():
         def load_(u, side):
             a, b = val(coder, 'naive', u[side], 'X'), val(coder, 'table', u[side], 'X')
             return None if a is None or b is None else a - b
+        if which == 'main':
+            comps[coder] = cc
+            continue
         cc['load'] = compare(units, lambda u: load_(u, 'jing'), lambda u: load_(u, 'en'), 'inherited-sense load')
         cc['naive_X'] = compare(units, lambda u: val(coder, 'naive', u['jing'], 'X'),
                                 lambda u: val(coder, 'naive', u['en'], 'X'), '經 − E1, naive X')
@@ -318,9 +328,17 @@ def main():
         den = math.sqrt(sum((a - ma) ** 2 for a in ra) * sum((b - mb) ** 2 for b in rb))
         res['x_anchor_spearman'] = {'rho': num / den if den else None, 'n': len(xs)}
     cs = comps['consensus']
-    dec = {'F1': decide(cs['X_A']['ci95'], 'lower'), 'F2': decide(cs['X']['ci95'], 'no_more'),
-           'F4': decide(cs['load']['ci95'], 'higher')}
-    if cs['X']['ci95'] and cs['X']['ci95'][1] < 0:
+    dec = {'F1': decide(cs['X_A']['ci95'], 'lower'), 'F2': decide(cs['X']['ci95'], 'no_more')}
+    for coder in CODERS:
+        dec['F1 (%s alone)' % coder] = decide(comps[coder]['X_A']['ci95'], 'lower')
+        dec['F2 (%s alone)' % coder] = decide(comps[coder]['X']['ci95'], 'no_more')
+    if which == 'main':
+        dec['F3'] = dec['F4'] = 'not measured (scope reduced by direction, plan amendment)'
+    elif 'load' in cs:
+        dec['F4'] = decide(cs['load']['ci95'], 'higher')
+    if which == 'main':
+        pass
+    elif cs['X']['ci95'] and cs['X']['ci95'][1] < 0:
         gx, go = cs['genre']['jing_vs_enrec/X']['ci95'], cs['genre']['jing_vs_enrec/O_rate']['ci95']
         if gx and go and gx[1] < 0 and go[0] <= 0:
             dec['F3'] = 'supported'

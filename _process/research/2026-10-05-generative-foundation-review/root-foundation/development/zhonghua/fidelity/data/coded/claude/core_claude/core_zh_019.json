@@ -1,0 +1,1700 @@
+{
+ "segments": [
+  {
+   "seg_id": "jing0404",
+   "referents": [
+    {
+     "span": "诸环节",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "links : List (Nat → Nat)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所交",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "g x (hypothesis up: what a link passes on)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所受",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "x (hypothesis up: what a link receives)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "差",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "(Law.run (LoopReturn.returnMap links) d).state n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "匝",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n (applications of returnMap along Law.run)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其初",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "d",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0365",
+   "referents": [
+    {
+     "span": "胶",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "hypothesis locked (RuleCapture.Locked … (Pace.paced … c t))",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "率",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "(Pace.paced (byRule f) (readers read mind) reads c t).fst and at t + k, ordered by P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "规",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "G component of Pace.paced … ordered by MG",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "读",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "Q component (readers' state) of Pace.paced … ordered by MQ (third conjunct of the truncated conclusion)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "降",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "P.le / MG.le / MQ.le between steps t and t + k (negated falling)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "c",
+    "t",
+    "k",
+    "f",
+    "read",
+    "mind",
+    "reads",
+    "raises",
+    "upper",
+    "readMono",
+    "formed"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0548",
+   "referents": [
+    {
+     "span": "宇",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "Mortal.flow / Mortal.web (witness world)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "衡",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Mortal.flow.Balances Mortal.web",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "有待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Mortal.web.Dependent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一物",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Mortal.Member.mortal",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Mortal.web.active (Dependence.active)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第零步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 0 of the witness (Mortal.live)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第一步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 1 of the witness (Mortal.live)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "容",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Mortal.web.Supported t Member.mortal",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第二步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "2 in ¬Mortal.web.active 2 …",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "与之者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Mortal.Member.renewer",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "后继者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Mortal.Member.successor",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第三步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 3 onward (nested n in the truncated conjunct)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸物",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "nested ∀ f : Mortal.Member",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0112",
+   "referents": [
+    {
+     "span": "衡",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "balances : L.Balances W",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f in Flow.Acting body (present and giving ⇒ active)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "与",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "0 < L.give t f c (Acting body, gated)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "之",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "有待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "dependent : W.Dependent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "与之者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "e in gated (e ∈ L.present t, 0 < L.give t e c)",
+     "rule": "M2",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.requires t e c (gated); W.requires (T + n + k) h c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "需",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.need t e c; W.need (T + n + k) h c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "m",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "m",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一物",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "n 步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n (steps T + j, j < n)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "全取",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "L.TakesAll (T + j) f c (hypothesis all)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "他物",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "g (with apart : f ≠ g)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "在场",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "g ∈ L.present (T + j) (hypothesis other)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "取",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "0 < L.take (T + j) g c (hypothesis other)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "始",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "T",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "积",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.level T c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "n＋m",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "n + m",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "自此",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "T + n (onward: T + n + k)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "以不下于 m 之需待之者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "h (with requires (T + n + k) h c and m ≤ need (T + n + k) h c)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.active (T + n + k) h (negated in the conclusion)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "然",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "conclusion ¬W.active (T + n + k) h instantiated at h := f",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0433",
+   "referents": [
+    {
+     "span": "读",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "law.readWorld present start need",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "取与之法",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "law : ExchangeLaw R R",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所生之程",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "law.course present start (U1 body of ExchangeLaw.readWorld)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其余",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "the extra relatum (Option.none) of (…).withRest (U1 of World.withRest)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "前四设",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "withRest.Balanced, withRest.Acting, withRest.Taking, withRest.Dependent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "然",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "the four conjuncts holding (conclusion)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "R",
+    "present",
+    "start",
+    "need"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0227",
+   "referents": [
+    {
+     "span": "比",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Hexagram.alternates s j",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一际",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "j : Hexagram.Seam",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "二爻",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "the two lines of s on either side of j (fields l1…l6 of Hexagram)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "值",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "the Bool values of those fields",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0222",
+   "referents": [
+    {
+     "span": "诸步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "the steps of a history, each weighted weight s p.fst p.snd (U1 body of Weights.along)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "重",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "weight : S → A → S → R",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸选",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "alternative courses summed: elements of courses moves all n / openSteps moves all (transfer body)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "加",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "W.add (field of Weights)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "乘",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "W.mul (field of Weights)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其律",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "axiom fields of Weights (add_assoc … right_distrib)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸动",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "A (type of moves)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸状",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "S (type of configurations)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一族",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "moves : List A; all : List S (one each)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "尽",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none: L(D) has no hypothesis that moves or all list every move or configuration",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "n 步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸历程",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "elements of Becoming.courses moves all n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其重",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "W.along weight f s h",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "终状",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "last state of a history (along: s, [] => f s)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所读",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "f : S → R",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "和",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "W.sum (courses moves all n) (W.along weight f s)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "逐步而算之所得",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "W.transfer weight moves all f n s",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一状",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一步诸移",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "openSteps moves all (U1 body of Weights.transfer)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其后之所得",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "transfer from p.snd for the remaining steps (x.1 p.snd in transfer body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": [
+    {
+     "span": "求",
+     "note": "求和: under the key 求 = seeking (activity toward a target); attached to the matched sum 和, L(D) has W.sum but no seeking relation (in context the arithmetic idiom 'find the sum')"
+    }
+   ]
+  },
+  {
+   "seg_id": "jing0023",
+   "referents": [
+    {
+     "span": "宇",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "w : World",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "衡",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "w.Balanced",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其余",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Option.none in w.withRest",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "每步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "nested ∀ t : Nat",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "w.withRest.web.active t Option.none (negated)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0523",
+   "referents": [
+    {
+     "span": "自顾",
+     "sort": "significance",
+     "status": "matched",
+     "counterpart": "Valuation.SelfSignificance V p",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一方",
+     "sort": "standpoint",
+     "status": "matched",
+     "counterpart": "p : Pos",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "己",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "V.own p (own region, field of Valuation)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "活",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "V.living (field of Valuation)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "辞",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "c : C (elements read by the Valuation fields)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "顾",
+     "sort": "significance",
+     "status": "matched",
+     "counterpart": "V.sig p (field of Valuation)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0134",
+   "referents": [
+    {
+     "span": "一族",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "all : List S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "尽",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "every : ∀ x, x ∈ all",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸状",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "S / x in every",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "状之同异",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "equality on S decided by inst",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "定然否",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "inst : DecidableEq S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "法",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "next : S → S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "同归",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Law.Lossless next (no merging)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "任何二状",
+     "sort": "configuration",
+     "status": "excess",
+     "counterpart": "none at U1: Law.Lossless unfolds only to Branching.Lossless (Law.process next); the pair of configurations appears at U2",
+     "rule": "none",
+     "class": "E",
+     "tags": [
+      "neg"
+     ]
+    },
+    {
+     "span": "无状",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "nested ∀ s : S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "入",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Law.Drawn next s",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0415",
+   "referents": [
+    {
+     "span": "未穷之法",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "ExchangeLaw.standing law mark θ",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "c",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "c : C",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "应倍",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "strength argument of RespondsWithin (0 in standing_unread; k … in standing_no_loop)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "零",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "0 in (standing mark θ).RespondsWithin t h e s c 0",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所读之感",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "restrictReads (offStock mark) k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "环",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "loop v of Becoming.OnLoop (U1: ∃ v m, 0 < m ∧ v 0 = e ∧ v m = e ∧ Coupled …)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "下游",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "nested e with Upstream cs part (restrictReads …) present c e",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "part",
+    "r",
+    "marked",
+    "only",
+    "h",
+    "out",
+    "t",
+    "e",
+    "s",
+    "cs",
+    "present",
+    "strengths"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0007",
+   "referents": [
+    {
+     "span": "待网",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "Becoming.Web F C (= Dependence Nat F C)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "步步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "S (the step index; Nat for Web)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸所待",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "C",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "积",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "field level of Dependence",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "诸待者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "F",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "field active of Dependence",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其所待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "field requires of Dependence",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "需",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "field need of Dependence",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所资者",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "field draws of Dependence",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "所记",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "the fields of Dependence taken together",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "可变",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "each field indexed by the step S (may differ step to step)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0242",
+   "referents": [
+    {
+     "span": "以积感入者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "conditions c with obs g c / obs' g c (hypothesis larger)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "积",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "level histories l, l' : Nat → C → Nat (U1 body of Web.SelectsThrough)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "感",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "obs, obs' : F → C → Prop",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "择",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "select : (Nat → C → Nat) → Prop",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "W",
+    "g",
+    "t"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0141",
+   "referents": [
+    {
+     "span": "变",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "P : Generative.Process S A (bound in found)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "机",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "y with Branching.Juncture P s y (∃ y in found)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "无穷可尽",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.LPO",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": [
+    {
+     "span": "能指出",
+     "note": "agentive 'can point out' attached to the matched juncture 机; L(D) has only the constructive ∃ y, no pointing relation"
+    }
+   ]
+  },
+  {
+   "seg_id": "jing0547",
+   "referents": [
+    {
+     "span": "宇",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "Downstream.flow / Downstream.web (witness world)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "衡",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Downstream.flow.Balances Downstream.web",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "有待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Downstream.web.Dependent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Downstream.Formation.self",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "待",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Downstream.web.requires t Formation.self c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一所待",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Downstream.Condition.ground",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "每步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "nested ∀ t : Nat",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "运",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Downstream.web.active (Dependence.active)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "容",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Web.Supported (U1 body of Web.Dependent)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "资",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "draws / take of Formation.down on Condition.output (Downstream.web / Downstream.flow bodies)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其所与",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Downstream.Condition.output",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "物",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Downstream.Formation.down",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第四步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 4 onward (nested n in the truncated conjunct)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0250",
+   "referents": [
+    {
+     "span": "一辞",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Clearing.DwellerEnded",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "一待者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Clearing.Formation.clearer",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "无步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "nested ∀ t : Nat (under ¬Excludes)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "他待者",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Clearing.Formation.dweller (truncated conjunct)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "第三步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 3 of the witness (truncated conjunct)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0294",
+   "referents": [
+    {
+     "span": "猜",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "∃ g : Nat → Run (Law.process next) → Option V",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "类",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "reg : S → R",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "往",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "prefix reg (r.state n), n < k (U1 body of LearnableRuns.FixedThrough)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "极",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "∃ n, ∀ k, n ≤ k (U1 body of Limit.Tracks)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "此特征",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "val : S → V",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "inst",
+    "next",
+    "l",
+    "world"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0272",
+   "referents": [
+    {
+     "span": "变",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "P : Generative.Process S A (bound in law)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "征",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.Verifiable K",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "读",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "K : Run P → Prop",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "其补",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "fun r => ¬K r",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "驳",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.Refutable",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "非皆否则有是",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.Markov",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": [
+    {
+     "span": "问",
+     "note": "于凡变问之: agentive 'ask' attached to the matched processes 变; L(D) has a universal hypothesis, no asking relation"
+    }
+   ]
+  },
+  {
+   "seg_id": "jing0422",
+   "referents": [
+    {
+     "span": "一流",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "Regulation.Overshooting.web (witness)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "每步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t (never_at)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "衡",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none: neither declaration states Balances or has a flow; only Overshooting.web.level appears",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "两侧",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "the sides above and below 1 in oscillates (1 < level (2n), level (2n+1) < 1)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "反",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none at U1: no response countering the deviation (Overshooting.web.level unfolds only to amount (high t))",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "其离",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none: no deviation from 1 is formed in L(D)",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "过正",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "oscillates conclusion: 1 < level (2n) ∧ level (2n+1) < 1",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "偶步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "2 * n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "奇步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "2 * n + 1",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "m",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "1 (witness level)",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "jing0131",
+   "referents": [
+    {
+     "span": "n 步",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "可得者",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Law.Reachable next n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "闭",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Law.Absorbing next",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "next"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  }
+ ]
+}
