@@ -1,0 +1,41 @@
+## {N}. Drawing at once, the same law (UM3)
+
+```text
+Result(s): record drawers-in-turn (Becoming.Optimum): drawing at once added as a second arrangement on the one law;
+       its open item on drawing at once with a rule of sharing answered where each portion returns less than one for
+       one.
+Delta: the one law (kept_returns) was stated for drawers in turn. Its strict form is stated once: where every amount
+       kept above the floor would bring back later less than it keeps, a best response keeps nothing above the floor
+       (InTurn.floor_of_less; leaves_floor is its case). Drawing at once: at each step the level is divided into
+       portions, all draw at once from theirs, and what all leave, added, stands next as G says (Optimum.AtOnce:
+       drawn, later, Revises, Perfect). What a drawer leaves comes back to it only through its portion of what stands
+       next; where that return is less than one for one (ReturnsLess), revision from any profile with no floor
+       draws everything at the last c steps from round c on (revisions_drain, through later_less), drawing everything
+       is perfect and every perfect profile draws everything (drains), the base stands at what stands at nothing
+       (levels_drained), and a dependence above it is broken at the first step (Web.at_once_broken).
+Premises / correspondence: any law G; k drawers each given a portion of the level, all drawing at once; what lies in no
+       portion does not stand; no floor; each portion returning what its drawer leaves less than one for one; natural
+       amounts, discrete steps. Correspondence: the n-player commons, each player internalizing only its share of the
+       stock effect (Gordon 1954; Levhari and Mirman 1980).
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: drawing at once where a portion returns at least one for one; floors drawing at once; sharing rules that
+       depend on what the others claim.
+Output → input: chapter §3.4, §7.1, item 10 and the record row (EN, ZH); Optimum's header; record drawers-in-turn;
+       significance review, at-once check.
+```
+
+**The question.** The record's last open item was drawing at once with a rule of sharing. In turn, what a drawer leaves goes to the next drawer; at once, it goes into what stands next, of which the drawer has a portion.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The law's strict form* (`Optimum.InTurn.floor_of_less`). Where every amount kept above the floor would bring back later less than it keeps, a best response keeps nothing above the floor. `leaves_floor`, where what is kept brings back nothing, is now its case (rule 9).
+- *Drawing at once* (`Optimum.AtOnce.sumTo`, `pool`, `next`, `drawn`, `later`, `levels`, `Revises`, `Perfect`, `ReturnsLess`, and the sums' laws `sumTo_congr`, `sumTo_zeros`, `sumTo_zero`, `sumTo_set`). Each drawer is given its portion of the level; what all leave, added, stands next by `G`. A drawer's later draws depend on what it leaves only through its portion of what stands next, the others' leavings added.
+- *Every perfect profile draws everything* (`Optimum.AtOnce.drawn_step`, `later_less`, `revisions_drain`, `drains`, `levels_drained`, `Web.at_once_broken`). Where the others draw everything later, what a drawer keeps returns to it, through its portion, less than one for one, so by the strict law it keeps nothing. Over a sequence of revisions this takes one round a step back, the others at the same step entering only as an added amount; a perfect profile is its own sequence. Drawing everything is perfect under the same premise, so the law is not vacuous.
+
+**Against the prior form** ([significance review, at-once check](BECOMING-SIGNIFICANCE-REVIEW.md#at-once-check)). In the n-player commons each player internalizes only its share of the effect of the stock on the future, the source of over-extraction (Gordon 1954; Levhari and Mirman 1980). The spine's form states the exact condition, a portion returning less than one for one, and derives the drain from the same law as the drawers in turn.
+
+*Reading* [AI reading, D45]. In turn or at once, a drawer keeps only what returns to it. In turn, what it leaves goes to the next; at once, it goes back to it only through its portion. Where that portion returns less than it left, keeping is never its best response, however far-sighted.
+
+**Self-review.** Every premise is used: the return condition for the strict law, no floor so that drawing everything is the floor. What lies in no portion does not stand, a modelling choice; where portions cover the level it is no restriction. Drawing at once where a portion returns at least one for one, with floors, or under sharing rules that depend on the others' claims, is not covered.
+
+**The run.** {CORE_LINE}. Becoming.Optimum {OPT_LINE}; all with empty axiom reports. Connectivity: {APART}.
