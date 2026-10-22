@@ -15687,3 +15687,41 @@ Output → input: chapter WENLI-AND-BECOMING (its 「本节未立者」 item 5, 
 **Self-review.** (1) `Law.coarsest_iff` gathers what `sameFuture_of_law`, `identifiesAlike_of_law` and `alike_iff_sameFuture` gave together; what it adds is the coarsest property against every relation keeping the values and kept by the law, with `Law.sameFuture_coarsest`, which needs no premise, and the comparison among classes with existence where a list holds every configuration (`Law.coarsest_class`). The record says so. (2) `Web.alikeThrough_iff` and the prefix form unpack `Web.ValuesThrough`; the content is in `Web.selectsThrough_iff_prefix` (constructed without choice: the reading of the prefix is the class of histories with that prefix), in the bounds with their attainment, which carry `Identification.bounded_agree` and `Identification.bounded_agree_exact` to a formation through a web of one condition, and in `Web.states_by_reading`. (3) The code laws join `CrossSituational.reads_every_iff` to the states of a course; `course_read` lifts that the meaning of a word is read off its form, step by step. The three code theorems stand apart from the base; `code_read_every`, the root, is registered as general structure.
 
 **The run.** Core 285 modules and 12,547 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. Connectivity: 717 of 13,307 apart; the one new apart root of WL2, SharedCodes.code_read_every, registered (general structure); the Law and Web laws reach the base; unregistered roots of other landings, not WL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival.
+
+## 352. Early warnings before Farallon seabird breeding failures (EW4)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A third frozen field test of thesis T6's
+       uncoupled side (section 350's open item: a stock no verdict had used), experiments/break-warnings (ew4.py on
+       ew2.py's statistics).
+Delta: EW2's design, unchanged, with EW2's four level covariates and no draw, on the Southeast Farallon common
+       murres, rhinoceros auklets and pigeon guillemots (BCO-DMO 985565) and the young-of-year rockfish in the core
+       area of the NMFS midwater trawl survey (ERDDAP FED_Rockfish_Catch; the mean over core hauls of log(1 + catch),
+       0.935 with Cury et al.'s series), 1998-2021: 24 usable years, 8 failures, 14 after the years EW2 read. V1
+       passed (p = 0.354), V2 passed (p = 0.373); partial r +0.09 (95% interval -0.37 to 0.51) and +0.08 (-0.38 to
+       0.50), post hoc.
+Supplied premises / correspondence: T6's refutation clause read as conditional independence given the level path;
+       scope by mechanism, the birds' share of the year class unmeasured (Warzybok et al. 2018 give consumption, not
+       a share): the survey reads the year class the birds then eat, and their take reaches later years only through
+       spawners several years on; no draw, since the birds' rockfish are young of the year, mostly the unfished
+       shortbelly rockfish.
+Evidence: frozen predictions, code, layout and dry runs landed on main at 74204a684 before any statistic relating
+       the prey to the birds was computed; dry runs: every null at most 0.028, power 0.57 (AR1) and 0.51 (variance)
+       against EW2's effect, EW2's stop rule met narrowly; one run (79dfef1e0), results/ew4/test.json and posthoc.json.
+Boundary: one stock and 24 years, power about 0.5 only against a large association; scope argued, not measured; a
+       simple index, not the survey's standardized one; ten rows overlap years EW2 read as a reported-only
+       secondary; Shetland not run, since ICES's 2025 assessment of Shetland sandeel carries catches only.
+Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'s field-test sentence; board EW4 to
+       the history file.
+```
+
+**What was asked.** EW3's verdicts reused EW2's rows, so a stock no verdict had used was needed ([§350](#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3)). The candidates named were the Farallon seabirds and the Shetland sandeel. Before claiming, two facts were raised with Ren: EW2 had run both as reported-only secondaries to 2007-2009, and neither was in scope as EW2 drew it, Shetland being the coupled case (the seabird community takes 26-96% near its need) and Farallon's share unmeasured. Ren chose Farallon as the verdict stock after a scope check, with Shetland as the coupled contrast.
+
+**The scope check.** Warzybok et al. (2018) give the Farallon seabirds' consumption by prey and conclude that the rockfish they eat are almost all young of the year, mostly shortbelly rockfish, which is not fished, so competition with the fisheries is "likely to be modest". No source read gives the take as a share of the year class. So the premise that the birds' feedback onto the observed series is negligible is argued by mechanism, as for Røst in EW2: the survey reads each year's young of the year in May-June, the birds eat that year class during and after the survey, and the next year's index is a new year class spawned by adults the birds do not eat, with recruitment weakly tied to spawners. A same-year take during the survey lowers that year's index, which the level covariates match. Shetland could not be run at all: ICES's 2025 assessment of Shetland sandeel carries catches only.
+
+**What it found.** Both verdicts passed (p = 0.35 and 0.37), with partial correlations of +0.09 and +0.08, intervals from about -0.37 to 0.51. Without the level covariates the variance's association was +0.39 (interval -0.02 to 0.68): the poor years follow the stock's low years, the decline T6 allows, and the level path carries it. Windows of 6 and 10 years gave +0.09 and -0.12 for autocorrelation; with the two cormorants added, +0.14 and -0.25; on the rows after EW2's years alone, +0.13 and -0.12 on 14 rows.
+
+**What it means for T6.** A third pass, the first on a stock no verdict had used, and at power about 0.5 against EW2's effect. Across EW2, EW3 and EW4, no stock's prey statistics carried information on the birds' poor years beyond the prey's own course at the frozen levels, and the positive estimates of EW2 have not recurred. The passes are weak in different ways: EW2's by power, EW3's by reuse of EW2's rows, EW4's by power and by scope argued rather than measured. T6's uncoupled side stays conjectured.
+
+**Self-review.** First, the stop rule was met by 0.006 on variance; a slightly different generator could have stopped the test, and the frozen rule was kept. Second, the index is the mean of log catches over whatever core hauls a year had (15 in 2020), not the survey's standardized index; its 0.935 with Cury et al.'s series bounds the difference before 2008, not after. Third, scope by mechanism leaves open a large share of the year class taken during the survey itself, which would enter the level as a same-year effect and could add variance the covariates do not match.
+

@@ -96,3 +96,14 @@ Board item EW4, 22 October 2026. EW2's frozen test, unchanged (four level covari
 | [ew4.py](ew4.py) | Extraction of the rockfish index, layout, dry runs and the frozen test, on EW2's statistics |
 | [posthoc_ew4.py](posthoc_ew4.py) | After the run, not a verdict: the partial correlation and its 95% interval |
 | [results/ew4/](results/ew4/) | `layout.json`, `dry.json`, `FROZEN-AT`; after the run, `test.json` and `posthoc.json` |
+
+### Results
+
+Run once, after the freeze landed on main (`74204a684`). Study section [352](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#352-early-warnings-before-farallon-seabird-breeding-failures-ew4).
+
+| Verdict | Statistic | Result |
+|---|---|---|
+| V1 | lag-1 autocorrelation of the prey's 8-year window, given the level path; Southeast Farallon (24 years, 8 poor) | **passed**: Z = 0.37, one-sided p = 0.354; partial r +0.09 (95% −0.37 to 0.51) |
+| V2 | variance of the same window | **passed**: Z = 0.33, p = 0.373; partial r +0.08 (−0.38 to 0.50) |
+
+Without the level covariates the variance's association is +0.39: the poor years follow the stock's decline, which T6 allows. The scope premise is argued by mechanism, not measured. Everything reported only is in `results/ew4/test.json` and `posthoc.json`.
