@@ -1,0 +1,22 @@
+<a id="gaps-check"></a>
+## A check: the short laws, regulation and wholes the classical texts ask for (22 October 2026, ZG1-ZG3)
+
+An AI check (one session, 22 October), made while the Lean was written, of the 25 gap notes ZG1-ZG3 answer. **Verdict: each law is known in its kind; what the spine adds is that each is stated on its relations (webs, flows, runs) and joined to the laws it generalizes, the earlier ones derived as cases.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The minimum is at most the mean; equal versus needs-based shares | elementary (from memory) | `RelativePosition.least_not_ahead`, `equal_share_exceeds` |
+| Geometric growth and its consumption | elementary (from memory) | `Copying.copying_iff` |
+| Monotone threshold dynamics | Granovetter 1978 (from memory) | `Tolerance.tolerating_mono` |
+| Decentralized control; ratchets | control theory (from memory) | `Flow.opposes_of_each`, `Flow.stock_settles`, `Flow.never_returns_below` |
+| Forced linear response to repeated impulses | linear systems (from memory) | `carried_le_disturbed` |
+| Functional graphs of finite maps: components each with one cycle | combinatorics (from memory) | `Law.basin_one_cycle` |
+
+```text
+Result(s): sixteen new records (ZG1-ZG3)
+Delta: the gap notes' laws, each proved where it belongs, earlier laws derived as cases
+Supplied premises / correspondence: as each record names
+Evidence: the prior forms from memory, not reread; Lean in the records' receipt
+Boundary: AI check, one session
+Integration: the ZH map's entries and chapter §八; the chapter's record tables
+```

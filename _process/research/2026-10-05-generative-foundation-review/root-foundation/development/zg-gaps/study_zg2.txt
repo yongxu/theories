@@ -1,0 +1,25 @@
+## {N}. Regulation from one side and locally, and repeated disturbance (ZG2)
+
+```text
+Result(s): new records regulation-from-one-side-and-locally, repeated-disturbance.
+Delta: with balance, a joint exchange giving no more than it takes below m holds a level below m and never lets it
+       return (Flow.held_below, never_returns_below; the gated Flow.stays_below its case through given_zero_below).
+       Formations each opposing on their own condition make the joint exchange oppose, shares of the gap keep it
+       within (opposes_of_each, withinGap_of_shares), and a family so regulated condition by condition settles in total
+       with nothing reading the total (stock_settles). With the part disturbing by at most E at marked steps, the
+       carried amount is at most (D + E d)(1 + M)^a (carried_le_disturbed; carried_le_count the case of none).
+Premises / correspondence: balance; the per-formation conditions; whole numbers. Correspondence: decentralized
+       control, ratchets; forced linear response.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: one-sided regulation reading the whole, and the attainment of the disturbance bound, are not stated.
+Output → input: the ZH map's 老子 entries (29, 37, 57, 60, 矫枉过正); records two-sided-regulation-and-late-reading,
+       how-often-couplings-act; chapter §八 item 3.
+```
+
+**What was built.** `Flow.held_below`, `Flow.never_returns_below`, `Flow.given_zero_below` (in `Becoming.Continuation`, below `Flow.stays_below`); `Flow.total_lt_of_le_of_mem`, `Flow.opposes_of_each`, `Flow.withinGap_of_shares`, `Flow.stock_settles` (in `Becoming.Regulation`); `carriedGive_with_gaps`, `one_le_pow_add`, `count_step`, `carried_le_disturbed` (in `Becoming.Frequency`, `carried_le_count` now its case).
+
+*Reading* [AI reading, D45]. 老子三十七章「鎮之」and 二十九章「去甚」: holding from one side holds only from that side. 五十七章「我好静而民自正」: each formation reading only its own condition, the whole settles with no one reading the whole. 六十章「若烹小鮮」: each stirring adds what the later couplings multiply.
+
+**Self-review.** The one-sided law generalizes the gated one, which is now derived from it (rule 9); the local law is stated through the joint exchange and so needs only per-formation premises; the disturbance bound generalizes the rate, which is derived.
+
+**The run.** {CORE_LINE}. Connectivity: {APART}.

@@ -1,0 +1,29 @@
+## {N}. Wholes through lasting parts, dormancy, change, lineages and basins (ZG3)
+
+```text
+Result(s): new records a-whole-carried-by-lasting-parts, dormancy-over-a-stretch, arising-needs-change,
+       need-drift-along-a-lineage, basins-of-a-determined-law.
+Delta: a whole persists where parts keep arising within every d steps and each lasts d steps (converse of
+       Whole.arises_within). Bounded dormancy needs its premises only over the stretch (decays_by_on, ends_within_on;
+       the from-S laws their cases); a final ending stays, so a late return finds none; a reserve spanning the gap
+       bridges it. A formation active exactly where supported does not arise across a step at which nothing it reads
+       changes. Need drifts at most δ a generation along a lineage. Under any determined law courses meeting is an
+       equivalence; a course reaches every returning configuration of its basin, so with finitely many configurations
+       each basin holds one cycle.
+Premises / correspondence: as each law names. Correspondence: renewal processes, seed dormancy, no change without
+       cause, bounded mutation, functional graphs of finite maps.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: the support chain the 系辞 entry asks for (support passed on from formations that themselves gained it
+       later) is not stated here.
+Output → input: the ZH map's entries (中庸, 王弼, 孟子, 唯识, 论语「因損益」, 系辞「同歸而殊塗」); records
+       whole-persists-through-generation, reserve-defers-ending, support-from-the-supported,
+       transmission-is-inheritance-and-need, attraction-is-not-returning.
+```
+
+**What was built.** `Web.Whole.persists_of_arising`, `Web.Whole.persists_from`; `Web.decays_by_on`, `Web.ends_within_on`, `Web.ended_for_good`, `Web.late_return_finds_none`, `Bridged`; `Web.not_arises_of_unchanged`; `Flow.transmitted_along`, `Flow.transmitted_along_supported`; `Law.Meet`, `Law.Meet.refl`, `Law.Meet.symm`, `Law.Meet.later`, `Law.Meet.trans`, `Law.Meet.reaches_returning`, `Law.basin_one_cycle`.
+
+*Reading* [AI reading, D45]. 中庸「不息則久」needs the parts to last; 王弼「復之不速，遂至迷凶」and 孟子「一日暴之，十日寒之」: a return later than the reserve finds no one; 唯识「常無轉變，不可說有能生用」: what does not change gives no arising; 论语「所損益可知」: drift is bounded by the generations; 系辞「同歸而殊塗」: many ways, one return in each basin.
+
+**Self-review.** The dormancy laws generalize the from-S laws, which are derived (rule 9); meeting needs no finiteness, the one cycle needs it. Finality is a premise, not hidden in a definition, since a supported formation may be active again.
+
+**The run.** {CORE_LINE}. Connectivity: {APART}.
