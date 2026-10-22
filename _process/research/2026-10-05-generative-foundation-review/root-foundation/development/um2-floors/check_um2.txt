@@ -1,0 +1,18 @@
+<a id="floors-check"></a>
+## A check: where floors bind (22 October 2026, UM2)
+
+An AI check (one session, 22 October) of the generalized drain against known forms. **Verdict: known in its kind. In commons games, restraint is an equilibrium only where what a player leaves returns to it; that two players without a limit already force taking everything in every subgame-perfect profile of movers in turn, whatever the others' limits, is the exact form here.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Capacity-constrained extraction; conservation only where restraint returns to the restrainer | the resource-economics literature on harvest capacity (from memory, not reread) | `Optimum.InTurn.perfect_at_floors`, `Optimum.Holding.doubling_capacity` |
+| Backward induction over movers in turn | Selten (1965) (from memory) | `Optimum.InTurn.revisions_reach_floors` |
+
+```text
+Result(s): record drawers-in-turn (UM2)
+Delta: where two drawers have no floor, whatever the others' floors, every perfect profile is the floor profile and revision reaches it; one free drawer is not enough
+Supplied premises / correspondence: UM's model; two free drawers. Correspondence: capacity-constrained extraction; backward induction
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; at most one free drawer away from the last step not characterized
+Integration: chapter §3.4, §7.1, row 6, item 10 and the record row
+```

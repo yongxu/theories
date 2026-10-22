@@ -1,0 +1,40 @@
+## {N}. Where floors bind: two drawers with no floor drain (UM2)
+
+```text
+Result(s): record drawers-in-turn (Becoming.Optimum): the drain's premise generalized, its open item on binding floors
+       answered where two drawers have no floor.
+Delta: UM proved the drain and the revision with no floor anywhere and two or more drawers, and left open which
+       profiles are perfect where a floor binds. Where two drawers u < v have no floor, whatever floors the others have,
+       no keeping returns: through a drawer that leaves nothing nothing passes (pass_through), after one the others
+       draw nothing (after_draw_nothing), so by the one law a drawer after it, and a drawer before one, leaves its
+       floor (floor_after, floor_through). One induction over a sequence of revisions brings every drawer to its floor
+       at the last c steps from round p c on, p three, or two where u is the first drawer (revisions_reach_floors); a
+       perfect profile, its own sequence, is the floor profile (perfect_at_floors), which is perfect (floors_perfect);
+       revision reaches it from any profile (revised_at_floors); where a drawer leaves nothing the base stands at what
+       stands at nothing (levels_through) and the web law reads any such drawer (Web.drained_broken). With no floor
+       anywhere this is UM's drain, whose laws it replaces (rule 9). One drawer with no floor is not enough: the doubling
+       witness has one, and restraint is its unique best response.
+Premises / correspondence: UM's model; two drawers with no floor; for revision the start leaving at most what it is
+       given; natural amounts, discrete steps. Correspondence: backward induction; the dynamic commons with capacity
+       constraints.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: which profiles are perfect where at most one drawer has no floor, away from the last step; drawing at once.
+Output → input: chapter §3.4, §7.1, row 6, item 10 and the record row (EN, ZH); Optimum's header; record drawers-in-turn;
+       significance review, floors check.
+```
+
+**The question.** UM's record left open which profiles are perfect where a floor binds ([§335](#335-one-model-of-drawers-in-turn-and-one-law-of-exact-thresholds-um)). Its drain needed no floor anywhere, but its proof used only that some drawers take whatever they are given.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *Nothing passes a drawer that leaves nothing* (`Optimum.InTurn.pass_through`, `Optimum.InTurn.after_draw_nothing`). Of whatever drawer `d` is given, drawers `d, …, d + c - 1` leave nothing where one of them leaves nothing; where drawer `u` leaves nothing at every later step, every drawer after `u` draws nothing later.
+- *Drawing to its floor, by position* (`Optimum.InTurn.floor_after`, `Optimum.InTurn.floor_through`). In a revision, a drawer after one that leaves nothing later, and a drawer before one that leaves nothing now, leaves its floor: what it keeps does not come back to it, so by `kept_returns` it keeps nothing above the floor.
+- *Every perfect profile is the floor profile* (`Optimum.InTurn.revisions_reach_floors`, `Optimum.InTurn.perfect_at_floors`, `Optimum.InTurn.floors_perfect`, `Optimum.InTurn.revised_at_floors`, `Optimum.InTurn.levels_through`, `Web.drained_broken`). With two drawers `u < v` free of any floor: drawers after `u` come to their floors once `u` leaves nothing later, `u` once `v` leaves nothing at the step, and drawers before `u` once `u` does. That is three rounds a step back, two where `u` is the first drawer, so revision from any profile reaches the floor profile. A perfect profile, its own sequence of revisions, is the floor profile, which is perfect. UM's `pass_of_first`, `others_draw_nothing`, `revisions_end`, `perfect_ends`, `levels_of_first`, `perfect_of_zero` and `revised_draw_all` are removed, the case with no floor anywhere (rule 9).
+
+**Against the prior form** ([significance review, floors check](BECOMING-SIGNIFICANCE-REVIEW.md#floors-check)). In extraction games with capacity constraints, conservation can be an equilibrium only where some player's restraint benefits that player. The spine's form makes that condition exact for movers in turn: two players without a limit already make every subgame-perfect profile the one where all take as much as they can.
+
+*Reading* [AI reading, D45]. Restraint needs all but one of those who share a base to be limited in what they can take. Two who can take everything are enough to make taking everything everyone's best response, whatever the others' limits.
+
+**Self-review.** Every premise is used: the two free drawers for the passing argument (`doubling_capacity` has one free drawer and keeps the base), the start's bound for revision. The round count is the induction's, three a step, two where the first drawer is free; not claimed tight. Where at most one drawer is free, perfect profiles away from the last step are characterized only by `kept_returns`.
+
+**The run.** {CORE_LINE}. Becoming.Optimum {OPT_LINE}; all with empty axiom reports. Connectivity: {APART}.
