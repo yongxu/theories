@@ -1,0 +1,39 @@
+<a id="wholes-check"></a>
+## A check: a whole of every part, and a graded whole (22 October 2026, WH1)
+
+An AI check (one session, 22 October), made while the Lean was written, of the gap the ZH reading raised from 华严六相 and 墨经: a whole that does not stand without a part, or stands diminished. **Verdict: the mathematics is known in its kind. Reliability theory names the whole of every part, of some part and of at least k parts as series, parallel and k-out-of-n systems, and the life of a series system is the least of its components' lives. The spine's form adds that the grade is a count existing exactly where the parts' activity is decided, with an account across each step from which the arising and ceasing of every such whole through a part follow.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Series, parallel and k-out-of-n systems; structure functions of coherent systems | Barlow and Proschan, *Statistical Theory of Reliability and Life Testing* (1975), chapter 2 (from memory) | `Web.AllWhole`, `Web.Whole`, `Web.AtLeastWhole`, `Web.AtLeastWhole.whole`, `Web.AtLeastWhole.allWhole` |
+| The life of a series system is the minimum of its components' lives | the same (from memory) | `Web.AllWhole.ends_of_part`, `Web.AllWhole.persists_iff` |
+| Threshold functions: conjunction and disjunction as the thresholds n and 1 | Boolean function theory, e.g. Muroga, *Threshold Logic and its Applications* (1971) (from memory) | `Web.AtLeastWhole` |
+
+```text
+Result(s): new record a-whole-of-every-part (WH1, new laws of Becoming.Wholes)
+Delta: the whole of every part beside the whole of some part; the grade of listed parts and its account across a step; the whole of at least j parts arising and ceasing through a part; the diminished whole
+Supplied premises / correspondence: listed parts and decided activity where the grade enters; discrete steps. Correspondence: series, parallel and k-out-of-n systems; threshold functions
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; weighted parts and wholes of wholes not stated
+Integration: chapter §2.2 and the record tables; the ZH map's entries and chapter §八
+```
+
+<a id="saturation-check"></a>
+## A check: a coupling saturated by what it has carried (22 October 2026, SAT1)
+
+An AI check (one session, 22 October), made while the Lean was written, of the gap the ZH reading raised from 老子七十二章 and 韩非解老: a coupling whose strength falls with what has passed through it. **Verdict: the mathematics is known in its kind. A response falling with repeated use is habituation, and a synapse whose efficacy is spent by what it transmits is short-term depression; a coupling carrying until a budget is spent is the case with a step response. The spine's form ties it to the stopping of couplings: the line between stopping and recurring is whether the response reaches zero, not how far it falls, and a coupling that stops leaves a finite order exact.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Habituation: response decrement with repeated stimulation | Thompson and Spencer, *Psychological Review* 73 (1966) (from memory) | `Saturation.strengths`, `Saturation.stops_iff` |
+| Short-term synaptic depression: efficacy spent by transmission | Tsodyks and Markram, *PNAS* 94 (1997) (from memory) | `Saturation.passed`, `Saturation.course_succ` |
+| A non-increasing sequence of naturals settles, but where needs omniscience | constructive analysis, e.g. Bridges and Richman, *Varieties of Constructive Mathematics* (1987) (from memory) | `Saturation.floored` states the contrast without it |
+
+```text
+Result(s): new record a-coupling-saturated-by-what-it-has-carried (SAT1, new laws of Becoming.Frequency)
+Delta: strengths read off what has passed through each coupling; stopping where the strength reaches zero, by the threshold as a step where the coupling acts until saturated, exactly where the response reaches zero; recurring when floored
+Supplied premises / correspondence: whole numbers; the response given; discrete steps. Correspondence: habituation, synaptic depression, a budget spent by use
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; recovery after rest and responses to other couplings not stated
+Integration: chapter §2.6 and the record tables; the ZH map's entries and chapter §八
+```

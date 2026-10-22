@@ -1,0 +1,53 @@
+## {N}. A coupling saturated by what it has carried (SAT1)
+
+```text
+Result(s): new record a-coupling-saturated-by-what-it-has-carried (new laws of Becoming.Frequency); reuses
+       how-often-couplings-act (StopsBy, StopsBy.not_recurs), what-a-cut-loses (exact_of_reading_before,
+       unbounded_of_recurring_loop), how-loops-form (ReadsBefore, formedCourse, formedCourse_succ) and
+       how-much-difference-arrives (the carrying law, carriedGive).
+Delta: strengths were given, or read off the levels; none fell with what had passed through the coupling. Added: the
+       amount passed from d into c before t (Saturation.passed, by recursion on the steps) and strengths read off it
+       (Saturation.strengths: each reading of d into c has the strength sat a, a that amount). They read the levels
+       before (Saturation.readsBefore), so the carrying law with them generates a course, and what passes is what the
+       course carries through the coupling (Saturation.course_succ). Where the strengths are zero once A has passed
+       and A has passed by step N, the coupling stops by N (Saturation.stops): it does not recur, nothing more passes,
+       and where every coupling has so saturated a finite order is exact (Saturation.not_recurs, passed_from, exact).
+       What passes in all is below A and the most one step passes (Saturation.passed_lt). A coupling acting at each
+       step until saturated, from a level that stands, has passed A by step A and stops by step A
+       (Saturation.stops_by; in the formed course, from a level standing at the start, course_stops_by). With
+       strengths f a times a coupling acting at each step, f not rising, the coupling stops by some step exactly where
+       f reaches zero at some amount, and by step A where f is zero at A (Saturation.stops_iff, stops_by_zero; in the
+       formed course course_stops_iff); floored at one it recurs and at least one more passes at every step
+       (Saturation.floored), and a condition so coupled into itself leaves every finite order inexact
+       (Saturation.floored_inexact). In the formed course a response A - a stops it by step A (wearing_stops).
+Premises / correspondence: whole-number amounts and strengths; strengths read off what has passed, per coupling;
+       for stopping by the threshold, a coupling acting at each step until saturated and a level that stands;
+       discrete steps. Correspondence: habituation and synaptic depression (a response falling with use); a resource
+       spent by use.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: that a non-rising response which never reaches zero is eventually constant needs the limited principle of
+       omniscience and is not stated; recovery (a strength rising again after rest), strengths read off what passed
+       through other couplings, and amounts beyond whole numbers are not covered.
+Output → input: chapter §2.6 (a law of the line; record tables, EN and ZH); Frequency's header; record
+       how-often-couplings-act (related); ZH map entries lao-72-min-bu-wei-wei and jielao-shi-qiang-mu-buming (their
+       gap stated); record civilization-thought-on-the-spine (its gap list); chapter CIVILIZATION-THOUGHT-AND-BECOMING
+       §八; significance review, saturation check.
+```
+
+**The question.** 老子七十二章 「民不畏威，則大威至」 and 韩非解老 「視強，則目不明；聽甚，則耳不聰」 describe a coupling worn by what it carries: 威 used through 畏 until 畏 no longer couples, a sense used too strongly until it no longer reads. The ZH reading ([§328](#328-中华思想脉络-on-the-spine-and-the-中华本-zh)) could read the end state, a strength of zero (`ExchangeLaw.insensitiveAt_iff_strength_zero`), but not the course to it: the spine's strengths were given or read off levels, none falling with what had passed. In a relation-first account a coupling is a relation with a history; the question is whether that history, what has passed through it, can end it, and when.
+
+**What was built** (new laws of `Becoming.Frequency`, pure core, every axiom report empty).
+
+- *What has passed, and strengths read off it* (`Saturation.passingAt`, `Saturation.passed`, `Saturation.strengths`, `Saturation.Antitone`, `Saturation.ZeroFrom`, `Saturation.Antitone.zeroFrom`, `Saturation.scaled`). What the couplings of `d` into `c` pass at a step is what the formations present outside the part give `c` from the levels of `d` up to it. What has passed is their sum over the earlier steps, each step's strengths those of `sat a`, `a` what had passed before it: a definition by recursion, since each step's strength depends on what the earlier strengths passed. Strengths that do not rise as more passes and are zero at `A` are zero from `A` on.
+- *They read before* (`Saturation.passingAt_congr`, `Saturation.passed_congr`, `Saturation.readsBefore`, `Saturation.passed_le_succ`, `Saturation.passed_le_add`, `Saturation.passed_mono`). What has passed before a step reads the levels before it, so the strengths at each step read the levels up to it (`ReadsBefore`), and the carrying law with them generates a course (`formedCourse`). What has passed never falls.
+- *Saturation stops the coupling* (`Saturation.passingAt_zero`, `Saturation.stops`, `Saturation.not_recurs`, `Saturation.exact`, `Saturation.passed_from`, `Saturation.passed_lt`). Where the strengths are zero once `A` has passed and `A` has passed by step `N`, no coupling of `d` into `c` acts from `N` on: the coupling stops by `N` (`StopsBy`), so it does not recur, and nothing more passes. Where every coupling has so saturated by `N`, order `N` is exact at every condition and step (`exact_of_reading_before`). Where no step passes more than `m`, what passes in all is below `A + m`.
+- *When* (`Saturation.one_le_passingAt`, `Saturation.climbs`, `Saturation.stops_by`, `Saturation.stops_by_zero`, `Saturation.stops_iff`, `Saturation.floored`, `Saturation.floored_inexact`). A coupling that, while not saturated, reads the level of `d` at each step through a formation present outside the part with positive strength, that level standing, passes at least one more at each step until it saturates. So with the strengths zero once `A` has passed, `A` has passed by step `A` and the coupling stops by step `A`. With strengths `f a` times a coupling acting at each step and `f` not rising, the coupling stops by some step exactly where `f` is zero at some amount: if it stops, the strength at the stopping step is zero; if `f` is zero at `A`, it stops by step `A`, since by then `A` has passed or the response is already zero. Floored at one, it recurs and at least one more passes at every step however far it has weakened, and a condition so coupled into itself is a loop of a recurring coupling, so no finite order is exact there at every step (`unbounded_of_recurring_loop`)..
+- *In the formed course* (`Saturation.carriedGive_split`, `Saturation.total_carriedGive`, `Saturation.course_succ`, `Saturation.course_stands`, `Saturation.course_stops_by`, `Saturation.course_stops_iff`, `Saturation.wearing_stops`). A formation's gift splits into the part's gap and what each coupling of a listed condition passes; so the course at `c` grows across each step by the part's gaps and what passes through each coupling into `c`. What has passed is what the course carries through the coupling. The course never falls, so a level standing at the start stands throughout, and the coupling stops by its threshold as a step, does not recur, and nothing more passes after; it stops exactly where its response reaches zero, and the response `A - a` stops it by step `A`.
+
+**Against the prior form** ([significance review, saturation check](BECOMING-SIGNIFICANCE-REVIEW.md#saturation-check)). A response falling with repeated use is habituation in behaviour and depression at a synapse whose efficacy is spent by what it transmits; a coupling that carries until a budget is spent is the same law with a step response. The spine's form ties it to the stopping of couplings: zero strength once reached is the coupling's stopping, a finite order is then exact, and the line between stopping and recurring is whether the response reaches zero, not how far it falls.
+
+*Reading* [AI reading, D45]. 「民不畏威」 is read as the coupling of 威 through 畏 saturated by what has passed through it: where the strength is zero once enough 威 has passed, the coupling stops (`Saturation.stops`), and the loop of regulation through 畏 no longer returns (`Saturation.not_recurs`); 王弼's note 「任其威权，则物扰而民僻，威不能复制民」 is the course to it. 「大威至」 keeps its reading as the break that nothing before it bounds (`Web.break_not_bounded`). 解老's 「視強，則目不明」 and 「聽甚，則耳不聰」 are read as a reading coupling worn to zero by what it carried: it stops exactly where its response reaches zero (`Saturation.stops_iff`), and a response that only weakens, never reaching zero, does not stop it (`Saturation.floored`). That use wears a coupling this way is the premise, `sat` or `f` given; whether eyes, ears or a people's fear do is empirical. 「思慮過度，則智識亂」 stays unread.
+
+**Self-review.** Every premise is used: the zero from `A` for stopping, the bound `m` for the bound on what passes, acting at each step and a standing level for stopping by step `A`, `f` not rising for the exact line. The gap's second theorem asked that a non-rising response never reaching zero is eventually a positive constant; in whole numbers it is, but saying at which step needs the limited principle of omniscience (by hand, not in Lean: a response one at each amount before the first at which a Boolean sequence is true, and zero from there, does not rise, and its eventual value decides whether the sequence is false throughout), so it is not stated. What is stated suffices for the contrast: such a coupling recurs, and coupled into itself leaves every finite order inexact. The doubling around a loop (`carried_doubles_roundTrip`) applies once the loop's couplings act at each return, and is not restated. The laws on any level history are joined to the base through their instances in the formed course; the bound on what passes (`Saturation.passed_lt`) is not, and stands apart as general structure in the connectivity register. Nothing earlier is generalized: the saturated strengths are a case of strengths read before, and `StopsBy` and `exact_of_reading_before` are used as they stand. Limits: recovery after rest, strengths read off what passed through other couplings, amounts beyond whole numbers.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Frequency, {THEOREMS} of them theorems, none removed, all with empty axiom reports. Connectivity: {APART}.
