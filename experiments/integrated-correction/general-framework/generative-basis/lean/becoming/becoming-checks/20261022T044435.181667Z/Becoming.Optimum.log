@@ -1,0 +1,3 @@
+Becoming/Optimum.lean:8275:11: warning: unused variable `t`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
