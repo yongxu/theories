@@ -1,0 +1,142 @@
+@Becoming.Valuation.Connected.transfer : ∀ {Pos C : Type} {V V' : Becoming.Valuation Pos C},
+  (∀ (c : C), V.living c ↔ V'.living c) → (∀ (c d : C), V.related c d → V'.related c d) → V.Connected → V'.Connected
+@Becoming.Valuation.connected_iff_of_map : ∀ {Pos Pos' C C' : Type} {V : Becoming.Valuation Pos C}
+  {V' : Becoming.Valuation Pos' C'} (q : C → C'),
+  (∀ (c d : C), q c = q d → c = d) →
+    (∀ (c' : C'), V'.living c' → ∃ c, q c = c') →
+      (∀ (c : C), V'.living (q c) ↔ V.living c) →
+        (∀ (c d : C), V'.related (q c) (q d) ↔ V.related c d) → (V'.Connected ↔ V.Connected)
+@Becoming.Web.Interacts.symm : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {e e' : F × Nat},
+  W.Interacts c e e' → W.Interacts c e' e
+@Becoming.Web.Interacts.participates : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {e e' : F × Nat},
+  W.Interacts c e e' → W.Participates e.snd e.fst c ∧ W.Participates e'.snd e'.fst c
+@Becoming.Web.Idle.not_interacts : ∀ {F C : Type} {W : Becoming.Web F C} {c : C},
+  W.Idle c → ∀ (e e' : F × Nat), ¬W.Interacts c e e'
+@Becoming.Web.UnderminingOn.interacts : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F} {c : C},
+  Becoming.Web.UnderminingOn t f c → ∃ g, W.Bearing t g c ∧ W.Interacts c (f, t) (g, t)
+@Becoming.Web.Idle.not_undermining : ∀ {F C : Type} {W : Becoming.Web F C} {c : C},
+  W.Idle c → ∀ (t : Nat) (f : F), ¬Becoming.Web.UnderminingOn t f c
+@Becoming.Web.interaction_narrows : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  (e e' : F × Nat),
+  ((W.interaction own sig).living e ↔ (W.valuation own sig).living e) ∧
+    ((W.interaction own sig).related e e' → (W.valuation own sig).related e e')
+@Becoming.Web.interacts_reach : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop) {c : C}
+  {e e' : F × Nat},
+  W.Interacts c e e' → (W.interaction own sig).living e' → Becoming.Reach (W.interaction own sig).relations e e'
+@Becoming.Web.connected_of_renewable : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  (c₀ : C),
+  (∀ (e : F × Nat), (W.interaction own sig).living e → W.draws e.snd e.fst c₀ ∨ W.Bearing e.snd e.fst c₀) →
+    ∀ {d g : F × Nat},
+      (W.interaction own sig).living d →
+        W.draws d.snd d.fst c₀ →
+          (W.interaction own sig).living g → W.Bearing g.snd g.fst c₀ → (W.interaction own sig).Connected
+@Becoming.Web.significant_iff_of_renewable : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  (c₀ : C),
+  (∀ (e : F × Nat), (W.interaction own sig).living e → W.draws e.snd e.fst c₀ ∨ W.Bearing e.snd e.fst c₀) →
+    ∀ {d g : F × Nat},
+      (W.interaction own sig).living d →
+        W.draws d.snd d.fst c₀ →
+          (W.interaction own sig).living g →
+            W.Bearing g.snd g.fst c₀ →
+              ∀ (p₀ : Pos), (W.interaction own sig).Significant ↔ (W.interaction own sig).Grounds
+@Becoming.Web.valuing_undermining_reaches : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop),
+  Becoming.Neutral (W.interaction own sig).transmits →
+    ∀ {t : Nat} {f : F} {c : C},
+      Becoming.Web.UnderminingOn t f c →
+        ∃ g,
+          W.Bearing t g c ∧
+            ∀ (p : Pos),
+              (W.interaction own sig).sig p (f, t) →
+                ∀ (t' : Nat),
+                  W.Bearing t' g c → (W.interaction own sig).living (g, t') → (W.interaction own sig).sig p (g, t')
+@Becoming.Web.drawing_reaches : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop),
+  Becoming.Neutral (W.interaction own sig).transmits →
+    ∀ {f g : F} {t t' : Nat} {c : C},
+      W.draws t f c →
+        W.Bearing t' g c →
+          (W.interaction own sig).living (g, t') →
+            ∀ (p : Pos), (W.interaction own sig).sig p (f, t) → (W.interaction own sig).sig p (g, t')
+@Becoming.Web.adjoin_living : ∀ {F C Pos : Type} {W : Becoming.Web F C} {own sig : Pos → F × Nat → Prop}
+  {k : Becoming.Web.Condition F},
+  (∀ (t : Nat) (f : F), ¬Becoming.Web.UnderminingOn t f none) →
+    ∀ (e : F × Nat), ((W.adjoin k).interaction own sig).living e ↔ (W.interaction own sig).living e
+@Becoming.Web.adjoin_connected_iff : ∀ {F C Pos : Type} {W : Becoming.Web F C} {own sig : Pos → F × Nat → Prop}
+  {k : Becoming.Web.Condition F},
+  (W.adjoin k).Idle none → (((W.adjoin k).interaction own sig).Connected ↔ (W.interaction own sig).Connected)
+@Becoming.Web.inert_connects : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop),
+  (∀ (e : F × Nat),
+      ((W.adjoin Becoming.Web.Condition.inert).valuation own sig).living e ↔ (W.valuation own sig).living e) ∧
+    ((W.adjoin Becoming.Web.Condition.inert).valuation own sig).Connected ∧
+      (((W.adjoin Becoming.Web.Condition.inert).interaction own sig).Connected ↔ (W.interaction own sig).Connected)
+@Becoming.Web.universal_connects : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop),
+  (W.adjoin Becoming.Web.Condition.universal).Renewed none ∧
+    (∀ (e : F × Nat),
+        ((W.adjoin Becoming.Web.Condition.universal).interaction own sig).living e ↔ (W.interaction own sig).living e) ∧
+      ((W.adjoin Becoming.Web.Condition.universal).interaction own sig).Connected
+@Becoming.Web.one_use_connects : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  {d : F × Nat},
+  (W.interaction own sig).living d →
+    (W.adjoin (Becoming.Web.Condition.single d)).Renewed none ∧
+      (∀ (e : F × Nat),
+          ((W.adjoin (Becoming.Web.Condition.single d)).interaction own sig).living e ↔
+            (W.interaction own sig).living e) ∧
+        ((W.adjoin (Becoming.Web.Condition.single d)).interaction own sig).Connected
+Becoming.Later.drawing_connects_earlier : ∀ (own sig : Unit → Becoming.Later.Formation × Nat → Prop),
+  Becoming.Later.web.Dependent ∧
+    (Becoming.Later.web.interaction own sig).living (Becoming.Later.Formation.early, 0) ∧
+      (Becoming.Later.web.interaction own sig).living (Becoming.Later.Formation.late, 5) ∧
+        Becoming.Later.web.Interacts () (Becoming.Later.Formation.late, 5) (Becoming.Later.Formation.early, 0) ∧
+          (Becoming.Later.web.interaction own sig).Connected
+Becoming.Pinned.drawing_interacts : (Becoming.Pinned.dependence.along Becoming.Pinned.taking).Interacts ()
+    (Becoming.Pinned.Formation.drawer, 1) (Becoming.Pinned.Formation.old, 1) ∧
+  ∀ (t : Nat),
+    (Becoming.Pinned.dependence.along Becoming.Pinned.taking).level t () =
+      (Becoming.Pinned.dependence.along Becoming.Pinned.resting).level t ()
+Becoming.Shared.dependent : ∀ (level : Nat → Nat), (Becoming.Shared.web level).Dependent
+Becoming.Shared.participates : ∀ (level : Nat → Nat) (e : Becoming.Shared.Formation × Nat),
+  (Becoming.Shared.web level).active e.snd e.fst → (Becoming.Shared.web level).Participates e.snd e.fst ()
+Becoming.Shared.user_undermines : Becoming.Web.UnderminingAt 0 Becoming.Shared.Formation.user
+Becoming.Shared.no_living_drawer : ∀ (own sig : Unit → Becoming.Shared.Formation × Nat → Prop)
+  (e : Becoming.Shared.Formation × Nat),
+  ((Becoming.Shared.web Becoming.Shared.falling).interaction own sig).living e →
+    ¬(Becoming.Shared.web Becoming.Shared.falling).draws e.snd e.fst ()
+Becoming.Shared.first_isolated : ∀ (own sig : Unit → Becoming.Shared.Formation × Nat → Prop),
+  Becoming.Invariant ((Becoming.Shared.web Becoming.Shared.falling).interaction own sig).relations fun e =>
+    e.fst = Becoming.Shared.Formation.first
+Becoming.Shared.connection_by_living_use : ∀ (own sig : Unit → Becoming.Shared.Formation × Nat → Prop),
+  ((Becoming.Shared.web Becoming.Shared.steady).interaction own sig).Connected ∧
+    ((Becoming.Shared.web Becoming.Shared.falling).interaction own sig).living (Becoming.Shared.Formation.first, 0) ∧
+      ((Becoming.Shared.web Becoming.Shared.falling).interaction own sig).living (Becoming.Shared.Formation.second, 0) ∧
+        ¬((Becoming.Shared.web Becoming.Shared.falling).interaction own sig).Connected ∧
+          ((Becoming.Shared.web Becoming.Shared.steady).valuation own sig).Connected ∧
+            ((Becoming.Shared.web Becoming.Shared.falling).valuation own sig).Connected
+@Becoming.Web.roles_valuation_connected : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  (own' sig' : Pos → (F ⊕ C) × Nat → Prop), (W.roles.valuation own' sig').Connected ↔ (W.valuation own sig).Connected
+@Becoming.Web.roles_interaction_connected : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own sig : Pos → F × Nat → Prop)
+  (own' sig' : Pos → (F ⊕ C) × Nat → Prop),
+  (W.roles.interaction own' sig').Connected ↔ (W.interaction own sig).Connected
+@Becoming.Web.SelfBearing.interacts : ∀ {X : Type} {W : Becoming.Web X X} {x : X},
+  W.SelfBearing x → ∀ {e : X × Nat}, W.draws e.snd e.fst x → ∀ {s : Nat}, W.active s x → W.Interacts x e (x, s)
+@Becoming.Web.relabel_valuation_connected : ∀ {Pos X : Type} {W : Becoming.Web X X} {π : X → X},
+  (∀ (c : X), ∃ y, π y = c) →
+    ∀ (own sig : Pos → X × Nat → Prop), ((W.relabel π).valuation own sig).Connected ↔ (W.valuation own sig).Connected
+@Becoming.Web.relabel_interaction_connected : ∀ {Pos X : Type} {W : Becoming.Web X X} {π : X → X},
+  (∀ (c : X), ∃ y, π y = c) →
+    ∀ (own sig : Pos → X × Nat → Prop),
+      ((W.relabel π).interaction own sig).Connected ↔ (W.interaction own sig).Connected
+@Becoming.Mutualism.connected : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop),
+  (Becoming.Mutualism.web.interaction own sig).Connected
+@Becoming.Mutualism.significant_iff : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop)
+  (p₀ : Pos),
+  (Becoming.Mutualism.web.interaction own sig).Significant ↔ (Becoming.Mutualism.web.interaction own sig).Grounds
+@Becoming.Mutualism.apart_participates : ∀ {t : Nat} {x c : Becoming.Mutualism.Relatum},
+  Becoming.Mutualism.apart.Participates t x c → c = Becoming.Mutualism.other x
+@Becoming.Mutualism.apart_not_connected : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop),
+  ¬(Becoming.Mutualism.apart.valuation own sig).Connected
+@Becoming.Mutualism.apart_not_interacting : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop),
+  ¬(Becoming.Mutualism.apart.interaction own sig).Connected
+@Becoming.Mutualism.apart_embodied : ∀ {Pos : Type} (own sig : Pos → Becoming.Mutualism.Relatum × Nat → Prop),
+  (∀ (x : Becoming.Mutualism.Relatum), Becoming.Mutualism.apart.Embodied x) ∧
+    Becoming.Mutualism.apart.Dependent ∧
+      ¬(Becoming.Mutualism.apart.valuation own sig).Connected ∧
+        ¬(Becoming.Mutualism.apart.interaction own sig).Connected

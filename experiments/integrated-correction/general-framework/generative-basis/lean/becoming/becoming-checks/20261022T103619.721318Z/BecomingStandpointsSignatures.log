@@ -1,0 +1,111 @@
+@Becoming.Valuation.significant_iff_held : ∀ {Pos C : Type} {V : Becoming.Valuation Pos C},
+  V.Held → (V.Significant ↔ (∀ (p : Pos), V.SelfSignificance p) ∧ Becoming.Neutral V.shares)
+@Becoming.Valuation.significant_iff_reached : ∀ {Pos C : Type} {V : Becoming.Valuation Pos C}
+  [(c : C) → Decidable (∃ p, V.own p c)],
+  (∀ (c : C), V.living c → ∃ c₀ p, V.living c₀ ∧ V.own p c₀ ∧ Becoming.Reach V.relations c₀ c) →
+    (V.Significant ↔
+      (∀ (p : Pos), V.SelfSignificance p) ∧
+        Becoming.Neutral V.shares ∧ Becoming.Within (fun i => V.Unheld i.snd.snd) V.transmits)
+@Becoming.Valuation.own_transmission : ∀ {Pos C : Type} {V : Becoming.Valuation Pos C},
+  (∀ (p : Pos), V.SelfSignificance p) → Becoming.Within (fun i => V.own i.fst i.snd.snd) V.transmits
+@Becoming.Valuation.significant_of_transmits : ∀ {Pos C : Type} {V : Becoming.Valuation Pos C},
+  V.Connected →
+    (∀ (p : Pos), ∃ c, V.own p c ∧ V.living c) →
+      (∀ (p : Pos), V.SelfSignificance p) → Becoming.Neutral V.transmits → V.Significant
+@Becoming.Web.held_by_formations : ∀ {F Cond : Type} (W : Becoming.Web F Cond) (sig : F → F × Nat → Prop),
+  (W.valuation (fun f e => e.fst = f) sig).Held
+@Becoming.Web.significant_iff_self : ∀ {F Cond : Type} (W : Becoming.Web F Cond) (sig : F → F × Nat → Prop),
+  (W.valuation (fun f e => e.fst = f) sig).Significant ↔
+    (∀ (f : F), (W.valuation (fun f e => e.fst = f) sig).SelfSignificance f) ∧
+      Becoming.Neutral (W.valuation (fun f e => e.fst = f) sig).shares
+Becoming.Apart.not_enough : Becoming.Apart.valuation.Held ∧
+  (∀ (p : Bool), Becoming.Apart.valuation.SelfSignificance p) ∧
+    ¬Becoming.Neutral Becoming.Apart.valuation.shares ∧
+      ¬Becoming.Neutral Becoming.Apart.valuation.transmits ∧ ¬Becoming.Apart.valuation.Significant
+Becoming.Unclaimed.held_is_needed : ¬Becoming.Unclaimed.valuation.Held ∧
+  (∀ (p : Unit), Becoming.Unclaimed.valuation.SelfSignificance p) ∧
+    Becoming.Neutral Becoming.Unclaimed.valuation.shares ∧ ¬Becoming.Unclaimed.valuation.Significant
+Becoming.Relayed.transmission_is_needed : (∀ (c : Bool),
+    Becoming.Relayed.valuation.living c →
+      ∃ c₀ p,
+        Becoming.Relayed.valuation.living c₀ ∧
+          Becoming.Relayed.valuation.own p c₀ ∧ Becoming.Reach Becoming.Relayed.valuation.relations c₀ c) ∧
+  (∀ (p : Unit), Becoming.Relayed.valuation.SelfSignificance p) ∧
+    Becoming.Neutral Becoming.Relayed.valuation.shares ∧
+      ¬Becoming.Within (fun i => Becoming.Relayed.valuation.Unheld i.snd.snd) Becoming.Relayed.valuation.transmits ∧
+        ¬Becoming.Relayed.valuation.Significant
+@Becoming.Flow.conveyance_idle : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} {x : X} {t : Nat},
+  (∀ (f : X), f ∈ L.present t → L.take t f x = 0 ∧ L.give t f x = 0) →
+    ∀ (e : X × Nat), ¬(L.conveyance W own sig).related (x, t) e
+@Becoming.Flow.boundary_crossed : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} [DecidableEq X],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List X},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) →
+                ∀ (N : Nat),
+                  ¬∀ (t : Nat), N ≤ t → ¬∃ c d, ¬c ∈ ds ∧ d ∈ ds ∧ (L.conveyance W own sig).related (c, t) (d, t)
+@Becoming.Flow.valuing_reaches_source : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop},
+  Becoming.Neutral (L.conveyance W own sig).transmits →
+    ∀ {p : Pos} {c d : X} {t : Nat},
+      L.Conveys t c d → sig p (d, t) → (L.conveyance W own sig).living (c, t) → sig p (c, t)
+@Becoming.Flow.region_not_a_cut : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} [DecidableEq X],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List X},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) →
+                ¬Becoming.Flow.Cut (L.conveyance W own sig) fun e => e.fst ∈ ds
+@Becoming.Flow.roles_conveyance : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (own sig : Pos → (F ⊕ C) × Nat → Prop) {t : Nat} {c d : C},
+  L.Conveys t c d → (L.roles.conveyance W.roles own sig).related (Sum.inr c, t) (Sum.inr d, t)
+@Becoming.Flow.roles_conditions_unrelated : ∀ {F C Pos : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C)
+  (own sig : Pos → (F ⊕ C) × Nat → Prop) (c d : C) (t t' : Nat),
+  ¬(W.roles.interaction own sig).related (Sum.inr c, t) (Sum.inr d, t') ∧
+    ¬(W.roles.sustenance own sig).related (Sum.inr c, t) (Sum.inr d, t') ∧
+      ¬(L.roles.descent W.roles own sig).related (Sum.inr c, t) (Sum.inr d, t')
+@Becoming.Clearing.crossed : ∀ {Pos : Type}
+  (own sig : Pos → (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat → Prop) (t : Nat),
+  (Becoming.Clearing.flow.roles.conveyance Becoming.Clearing.web.roles own sig).related
+    (Sum.inr (Becoming.Clearing.Place.fuel t), t) (Sum.inr Becoming.Clearing.Place.resource, t)
+@Becoming.Clearing.resource_not_cut : ∀ {Pos : Type}
+  (own sig : Pos → (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat → Prop),
+  ¬Becoming.Flow.Cut (Becoming.Clearing.flow.roles.conveyance Becoming.Clearing.web.roles own sig) fun e =>
+      e.fst ∈ [Sum.inr Becoming.Clearing.Place.resource]
+@Becoming.Clearing.conveyance_only : ∀ {Pos : Type}
+  (own sig : Pos → (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat → Prop) (t : Nat),
+  (Becoming.Clearing.flow.roles.conveyance Becoming.Clearing.web.roles own sig).related
+      (Sum.inr (Becoming.Clearing.Place.fuel t), t) (Sum.inr Becoming.Clearing.Place.resource, t) ∧
+    ¬(Becoming.Clearing.web.roles.interaction own sig).related (Sum.inr (Becoming.Clearing.Place.fuel t), t)
+          (Sum.inr Becoming.Clearing.Place.resource, t) ∧
+      ¬(Becoming.Clearing.web.roles.sustenance own sig).related (Sum.inr (Becoming.Clearing.Place.fuel t), t)
+            (Sum.inr Becoming.Clearing.Place.resource, t) ∧
+        ¬(Becoming.Clearing.flow.roles.descent Becoming.Clearing.web.roles own sig).related
+            (Sum.inr (Becoming.Clearing.Place.fuel t), t) (Sum.inr Becoming.Clearing.Place.resource, t)
+@Becoming.Clearing.resource_not_cut_living_on : ∀ {Pos : Type}
+  (own sig : Pos → (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat → Prop),
+  ¬Becoming.Flow.Cut (Becoming.Clearing.web.roles.sustenance own sig) fun e =>
+      e.fst ∈ [Sum.inr Becoming.Clearing.Place.resource]
+Becoming.Clearing.clearer_not_living : Becoming.Clearing.web.active 1 Becoming.Clearing.Formation.clearer ∧
+  Becoming.Clearing.own Becoming.Clearing.Formation.clearer (Becoming.Clearing.Formation.clearer, 1) ∧
+    ¬Becoming.Clearing.valuation.living (Becoming.Clearing.Formation.clearer, 1)
+Becoming.Clearing.center_not_derived : Becoming.Clearing.valuation.Held ∧
+  (∀ (f : Becoming.Clearing.Formation), Becoming.Clearing.valuation.SelfSignificance f) ∧
+    (∀ (p : Becoming.Clearing.Formation) (e e' : Becoming.Clearing.Formation × Nat),
+        Becoming.Clearing.valuation.sig p e →
+          Becoming.Clearing.flow.FedBy Becoming.Clearing.web e e' → Becoming.Clearing.valuation.sig p e') ∧
+      Becoming.Clearing.valuation.living (Becoming.Clearing.Formation.dweller, 0) ∧
+        ¬Becoming.Clearing.valuation.sig Becoming.Clearing.Formation.clearer (Becoming.Clearing.Formation.dweller, 0) ∧
+          ¬Becoming.Neutral Becoming.Clearing.valuation.shares ∧
+            ¬Becoming.Clearing.valuation.Significant ∧
+              Becoming.Clearing.valuation.related (Becoming.Clearing.Formation.clearer, 0)
+                  (Becoming.Clearing.Formation.dweller, 0) ∧
+                ¬Becoming.Within (fun i => Becoming.Clearing.own i.fst i.snd.fst) Becoming.Clearing.valuation.transmits

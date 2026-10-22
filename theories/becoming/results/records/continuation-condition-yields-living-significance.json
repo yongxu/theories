@@ -552,7 +552,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
       "role": "proof",
-      "sha256": "76ddaf3b84995431587da1a77e643cdc1c1863b24f8609c7872f01cd421bb1c3",
+      "sha256": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b",
       "declarations": [
         "Becoming.Unrestricted",
         "Becoming.bounded_rival",
@@ -707,7 +707,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "e6794db69749231cbce5e116953bf9600b9fc98fc61b31c442949ce5eecff4c5"
+      "sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
@@ -893,12 +893,18 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b95161950a33c0786cd1b0deb2afc0d821998ca4a4420c3a594d048252c57fb",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Significance",
       "success_pointer": "/status",
       "success_value": "passed"
