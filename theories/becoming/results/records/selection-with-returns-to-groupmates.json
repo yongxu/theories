@@ -377,12 +377,12 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "9e2fe596762d6a422a95fd717dd2f2d9e350d4840108df93cbf00ab281ef3f12"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "0fe652dc01bca8df9bbe3a593e4043da5b05a817dd8a2b2bc77d693418036daf"
     }
   ],
   "proof_bindings": [

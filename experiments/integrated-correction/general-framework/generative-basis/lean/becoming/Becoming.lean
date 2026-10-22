@@ -56,6 +56,7 @@ import Becoming.SelectionTerm
 import Becoming.Reproduction
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.Founding
 import Becoming.Drift
 import Becoming.Space
 import Becoming.Premises
@@ -789,6 +790,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   wherever a lineage founded higher leaves offspring beside a lower one with members. Witnesses:
   selection within the keeping group outweighed, and outweighing; mixed groups regrouped by
   descent falling back, and lineages keeping what ending selected.
+* `Becoming.Founding` (L1): selection within a whole, a lineage confined to it, and what a
+  founding carries. Where a family of conditions ran into excess under the coupled gate, every
+  member of a later generation of descent is the offspring of a member that did not depend on
+  the family, and a lineage every later member of which depends on the family has no member
+  after its end, whatever selection within had raised it to: a rise confined to the family ends
+  with it. In generations founded uniform, selection within at a step
+  needs transmission that raised or lowered the amount at some step before it. Read over
+  wholes each founded by one part, what transmission raised and lowered across a generation of
+  wholes is how far the next founders moved from their founder within the whole; where the
+  next founders carry their founder's value (sequestered), the mean founding value rises exactly
+  where selection among wholes goes for it. Witnesses: two rises on one body, the confined one
+  ending and the other still having a member after the body's parts end; foundings with and
+  without a line carrying the founder's value.
 * `Becoming.Drift` (L1): offspring sampled rather than listed. A next generation of two kinds
   sampled n times from listed offspring, p of the first kind and q of the second, each sampling
   a course of `Becoming.Typicality` weighed by the ways of drawing it: on average the sampled

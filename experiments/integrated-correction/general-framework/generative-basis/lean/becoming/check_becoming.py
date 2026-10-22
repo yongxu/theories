@@ -75,7 +75,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
         "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
-        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Drift", "Becoming.Space",
+        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
         "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
@@ -1019,6 +1019,14 @@ SCOPE = (
     "groups uniform in an amount and exact transmission, where at each step the lineages founded "
     "lower are not active nothing is discordant and the mean never falls below where it started, "
     "rising wherever a higher lineage leaves offspring beside a lower one. "
+    "Founding: where a family of conditions ran into excess under the coupled gate every member of a "
+    "later generation of descent is the offspring of a member not depending on the family, and a "
+    "lineage confined to the family has no member after its end, whatever selection within had "
+    "raised it to; in generations founded uniform, selection within at a step needs transmission that "
+    "raised or lowered the amount before it; over wholes each founded by one part, transmission across "
+    "a generation of wholes is how far the next founders moved within the whole, and where the "
+    "next founders carry their founder's value the mean founding value rises exactly where selection among "
+    "wholes goes for it. "
     "Drift: a next generation of two kinds sampled n times from listed offspring, p of the first "
     "kind and q of the second, each sampling weighed by the ways of drawing it; p + q times the "
     "weighted count of the first kind is n p times the whole weight (p + q)^n, and likewise for the "

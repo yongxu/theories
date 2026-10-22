@@ -205,6 +205,13 @@
         "en": "Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.",
         "zh": "聚合由零到一之间的每一情形：组员间回报的 Hamilton 规则，本记录是其聚合为一的一端。"
       }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "detail": {
+        "en": "Within one whole founded by one part, a lineage confined to its conditions in excess has no member once they end, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it.",
+        "zh": "在由一个部分奠基的整体内，局限于过度之条件的世系在其终结后不再有成员；下一批奠基者携带原奠基者之值时，平均奠基值恰在整体间选择为它时上升。"
+      }
     }
   ],
   "references": [
@@ -382,12 +389,12 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "9e2fe596762d6a422a95fd717dd2f2d9e350d4840108df93cbf00ab281ef3f12"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "0fe652dc01bca8df9bbe3a593e4043da5b05a817dd8a2b2bc77d693418036daf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
@@ -427,6 +434,10 @@
     {
       "en": "22 October 2026, EV12: groups founded mixed, with returns to groupmates, stated (record selection-with-returns-to-groupmates, study section 353); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.",
       "zh": "2026年10月22日，EV12：混合建立的组在组员间回报下已陈述（记录 selection-with-returns-to-groupmates，研究第 353 节）；本记录关于聚合的“未表明”项与下一步已更新；定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.",
+      "zh": "2026年10月22日，CA1：与 confined-rise-within-a-whole 相关（研究第 366 节）；本记录的定律与陈述不变。"
     }
   ]
 }
