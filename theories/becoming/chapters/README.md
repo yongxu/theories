@@ -8,7 +8,7 @@ Status: **canonical** is the entry that states the theory; **reference** keeps m
 
 ## Files in this directory
 
-1 canonical, 30 kept, 1 generated, 11 Chinese edition.
+1 canonical, 31 kept, 1 generated, 11 Chinese edition.
 
 | File | Title | Status | Role in section 11 | Note |
 |---|---|---|---|---|
@@ -40,6 +40,7 @@ Status: **canonical** is the entry that states the theory; **reference** keeps m
 | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](THE-THEORY-OF-BECOMING-ZHONGHUA.md) | 变化论 | kept | — | Not listed in the canonical chapter’s section 11. |
 | [THE-THEORY-OF-EVOLUTION.md](THE-THEORY-OF-EVOLUTION.md) | The Theory of Evolution | kept | Programme chapter | The chapter of the separately authorized evolution programme (goal `theory-of-evolution`), written on 8 and 9 October 2026 and cited by §2 and §8.2. It holds the programme's six completion requirements, its current theoretical focus and its next connection, which this chapter does not restate; two experiment checkers read its requirement rows. |
 | [WANG-YANGMING.md](WANG-YANGMING.md) | 王阳明与生成／变化之论：一体之仁、知行与工夫 | kept | Open direction | The reading of Wang Yangming as one whole (大学问, 心即理 in conduct, 知行, 致良知, 偏蔽, 差等, the competing reading), in current terms; 知行合一 and 心外无事 on the spine in CHINESE-SOURCES-AND-BECOMING. The 7 October text, its formal entry through the periphery module `SituatedPractice` superseded, moved to [history](../history/WANG-YANGMING.md) (RH, 19 October 2026). |
+| [WENLI-AND-BECOMING.md](WENLI-AND-BECOMING.md) | 文理生生与变化论：文、理与读 | kept | — | Not listed in the canonical chapter’s section 11. |
 | [WISDOM-AND-CONTEXT.md](WISDOM-AND-CONTEXT.md) | Wisdom, context and the common core | kept | Statement source | Statement source of the open target [wisdom-root](../results/records/wisdom-root.md) (§8.1). |
 | [YI-ZHUAN-AND-BECOMING.md](YI-ZHUAN-AND-BECOMING.md) | 易传与生成／变化之论：周易的构形在脊柱上 | kept | Statement source | The 易传 passage by passage on the spine (19 October 2026); statement source of [hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md), [place-relations-in-context](../results/records/place-relations-in-context.md), [hexagram-world-laws](../results/records/hexagram-world-laws.md), [fixed-places-and-sole-lines](../results/records/fixed-places-and-sole-lines.md) and [hexagram-arrangements-and-laws](../results/records/hexagram-arrangements-and-laws.md). |
 | [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](ZERO-AXIOM-PRACTICAL-JUDGMENT.md) | Zero-axiom Practical judgment | kept | Statement source | Statement source of the open target [universal-practical-warrant](../results/records/universal-practical-warrant.md) (§8.1). |

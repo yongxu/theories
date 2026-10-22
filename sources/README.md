@@ -4,7 +4,7 @@
 
 Original material and its provenance: Ren's writings and directions, exported conversations, imported papers and data. Files here are kept byte for byte and are never edited or moved; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.
 
-58 groups: 43 numbered and 15 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
+59 groups: 43 numbered and 16 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
 
 ## Numbered groups
 
@@ -72,6 +72,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 | `nishida-zen-no-kenkyu/` | — | 2 |  |
 | `situated-recovery/` | — | 76 |  |
 | [tclab-benchmark/](tclab-benchmark/README.md) | TCLab physical benchmark sources | 30 |  |
+| `wenli-shengsheng-v0.4/` | — | 99 |  |
 | [zhouyi-yizhuan/](zhouyi-yizhuan/README.md) | The 周易 and the 易传: Chinese Wikisource revisions | 81 |  |
 
 Descriptions are the first heading of each group's README, where it has one. Rerun `make research-render` after an import.

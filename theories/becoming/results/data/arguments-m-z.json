@@ -1698,8 +1698,8 @@
     "title_en": "The Theory of Becoming in classical Chinese names (中华本)",
     "category": "synthesis",
     "status": "以古典之名陈述理论；同一律、同一检查；无新 Lean / The theory stated in classical names; same laws and checks; no new Lean",
-    "argument_zh": "理论以 447 个古典之名陈述：凡例、十六篇与论纲，393 條，每条有经（浅近文言）、说（现代汉语）与证（Lean 声明与记录），篇末列相对照之古典文字。从一个关系之展开说起，至感、识、知、名、择、环、传、群、顾与权；伦理之两个设分立，凡续皆有顾定范围，以广为愈定次序。",
-    "argument_en": "The theory stated in 447 classical names: 凡例, sixteen 篇 and 论纲, 393 條, each with 經 (plain classical Chinese), 說 (modern Chinese) and 證 (Lean declarations and records), classical passages set beside each 篇. It runs from one relational unfolding to coupling, knowing, names, selection, loops, passing, groups, significance and judgment; the ethics' two premises kept apart, the continuation condition for scope and calling widening better for order.",
+    "argument_zh": "理论以 449 个古典之名陈述：凡例、十六篇与论纲，394 條，每条有经（浅近文言）、说（现代汉语）与证（Lean 声明与记录），篇末列相对照之古典文字。从一个关系之展开说起，至感、识、知、名、择、环、传、群、顾与权；伦理之两个设分立，凡续皆有顾定范围，以广为愈定次序。",
+    "argument_en": "The theory stated in 449 classical names: 凡例, sixteen 篇 and 论纲, 394 條, each with 經 (plain classical Chinese), 說 (modern Chinese) and 證 (Lean declarations and records), classical passages set beside each 篇. It runs from one relational unfolding to coupling, knowing, names, selection, loops, passing, groups, significance and judgment; the ethics' two premises kept apart, the continuation condition for scope and calling widening better for order.",
     "significance_zh": "理论有一个中文之本，用一套受检之古典词表，不是英文本之译；英文本与现代汉语版不变。",
     "significance_en": "The theory has a Chinese edition in one checked classical vocabulary, not a translation; the English chapter and its modern Chinese edition are unchanged.",
     "scope_zh": "同英文本之律与条件；名为约定（D62）；论纲之地位见其篇首；未经人之通读。",
@@ -1713,7 +1713,7 @@
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/finish.py",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py"
     ],
-    "source_sha256": "273bd9e499e23bef9c8c551b527bcfcaa017cbb089d4dfbfd729bc27b04aa5dc"
+    "source_sha256": "6f1f56609e41394082939b85c3a8930a989b5cc48d6ed2e5469421b12c566a51"
   },
   {
     "id": "the-theory-of-evolution",
@@ -2026,6 +2026,31 @@
     ],
     "source_sha256": "4e483664f92a47e9f712c3c0ba9119947d06ebcb7c4bab9af05129f2e2f6dbb2",
     "status_code": "integrated-universal-open"
+  },
+  {
+    "id": "wenli-and-becoming",
+    "source": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "title_zh": "文理生生与变化论：文、理与读",
+    "title_en": "文理生生 and the theory of becoming: 文, 理 and reading",
+    "category": "classical-comparison",
+    "status": "文已立名，认识论对到已检之律；无新 Lean / 文 named, the epistemology tied to checked laws; no new Lean",
+    "argument_zh": "以文名一历之状经一象逐步之值（文同即二状之文逐步皆同），名取「通其变，遂成天下之文」。文之状与法自文读出；律读自展开；读书百遍其义自见是三条律（有界则往定文、一族尽其状时状值可知恰当它自某步起是文之一读、给其读则自见），各有其失效；理不是文，只在一义自文读出。文理生生之 144 字逐字对照名表，88 / 117 相合。",
+    "argument_en": "文 names a run's states read through a map step by step (文同: two states whose courses agree), from 「通其变，遂成天下之文」. A 文's states and law are read off it; laws are read off the unfolding; 读书百遍其义自见 is three laws (a bound makes a prefix fix the course; a state value is learnable exactly when it is eventually a reading of the course, in a world a list holds; given that reading it shows itself), each with its failure; 理 is not the 文 and is read off it in one sense only. 文理生生's 144 characters are compared with the name table: 88 of 117 agree.",
+    "significance_zh": "理论之认识论有一古典之对应，每一环有已检之律相对，各写其域（对应不是印证）；中华本为知之对象立名。",
+    "significance_en": "The theory's epistemology has a classical counterpart whose every link has a corresponding checked law with its scope (a correspondence, not a confirmation); the 中华本 names the object of knowing.",
+    "scope_zh": "名与读法为 AI 之约定与读（D63）；不新增 Lean；不说任何实际之书满足诸律之条件；古汉语是否最好之表达未经检验。",
+    "scope_en": "The name and readings are the AI's (D63); no new Lean; not a claim that any actual book meets the laws' conditions; whether classical Chinese is the best expression is untested.",
+    "next_zh": "建议：运行 H2 阅读试验与忠实之测；认领本章所列之 Lean 项。",
+    "next_en": "Proposed: run the H2 reading test and the fidelity count; claim the Lean items the chapter lists.",
+    "lean": [],
+    "evidence": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/crosswalk.tsv",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/seventh-pass.json",
+      "sources/wenli-shengsheng-v0.4/PROVENANCE.json",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
+    ],
+    "source_sha256": "87bd55204cbc897386ec431b7abc3aa88ea88cd0d8c80eec9981f24a530a73b4"
   },
   {
     "id": "wisdom-and-context",

@@ -5,7 +5,7 @@
 
 `civilization-thought-on-the-spine` · **reviewed-scoped** · assessment · F01 · [record](civilization-thought-on-the-spine.json) · [register](../../../../RESULTS.md)
 
-> Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 447 classical names, one per concept, state the theory in the 中华本《变化论》.
+> Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -17,7 +17,7 @@
 
 - That any passage is true as stated, or that its authors meant these laws; agreement means the spine has a law of that structure, often under conditions the reading names.
 - That the language or the tradition is relational by nature: the relational start is a dominant thread strongest at the earliest layer, not a property of every system; the distribution by era is of this corpus, whose later texts were chosen for their debates on ground and nature.
-- That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 96 classical words in the table carry no checked quotation.
+- That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 95 classical words in the table carry no checked quotation.
 - That a divergence of standing (a text asserting what the theory gives only under the continuation condition) shows the text wrong; the theory asserts no ethical axiom.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
@@ -92,6 +92,8 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 - related, not a proved adapter: [a-source-before-a-juncture](a-source-before-a-juncture.md). States gaps its map found (ZG).
 - related, not a proved adapter: [forming-anew-necessary-and-sufficient](forming-anew-necessary-and-sufficient.md). States gaps its map found (ZG).
 
+**Used by:** [wenli-on-the-spine](wenli-on-the-spine.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -120,6 +122,7 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 - 22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.
 - 22 October 2026, ZG7: the last open gap notes. Nine entries are stated (seven records; study section 344), 老子七十九章 answered by laws on the spine with its signed form out of scope, 孟子「亲亲而仁民」 marked a scope remark, and 唯识「無因」 left open as the chapter's open problem with its reason. The map's kinds and counts are unchanged.
 - 22 October 2026, ZG8: the last open gap note, 唯识「無因」, reads the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient; study section 345); no gap note of the map is open.
+- 22 October 2026 (WL, study section 346, D63): the name table's seventh pass adds 文 and 文同 (449 names) and revises others against 文理生生's sources; the 中华本 gains 一·二十一; the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do; see wenli-on-the-spine.
 
 </details>
 

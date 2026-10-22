@@ -8,8 +8,8 @@
   "scope_type": "authorized-session",
   "state": "unmarked",
   "scope": {
-    "en": "The relational ontology of Chinese thought read against the Theory of Becoming: the 易 and 易传, the 道家, the 儒家, the script (止戈为武 among it) and other lines, mapped passage by passage onto the formal spine and integrated where the map finds a law the spine lacks. Requested by Ren on 19 October 2026 and shown in the README at his request the same day. The thesis that these lines continue one relational ontology is tested, not assumed. Extended on 21 October 2026, at his request of 19 October, to every complete judgment of 《中华思想脉络》 v1.0 and to a 中华 edition of the theory written in classical names.",
-    "zh": "以生成之论读中国思想的关系本体：易与易传、道家、儒家、文字（其中有止戈为武）及其他各线，逐段对应到形式脊柱上，并在对应发现脊柱所缺之律处加以整合。Ren 于2026年10月19日提出，同日要求列入 README。诸线延续同一种关系本体之说是要检验的论题，不是前提。2026年10月21日，按 Ren 10月19日的要求，扩展到《中华思想脉络》v1.0 的全部完整判断，以及以古典之名写成的理论中华本。"
+    "en": "The relational ontology of Chinese thought read against the Theory of Becoming: the 易 and 易传, the 道家, the 儒家, the script (止戈为武 among it) and other lines, mapped passage by passage onto the formal spine and integrated where the map finds a law the spine lacks. Requested by Ren on 19 October 2026 and shown in the README at his request the same day. The thesis that these lines continue one relational ontology is tested, not assumed. Extended on 21 October 2026, at his request of 19 October, to every complete judgment of 《中华思想脉络》 v1.0 and to a 中华 edition of the theory written in classical names. Extended on 22 October 2026, at his request of that day, to 文理生生 (a classical-Chinese concept grammar built apart from the 中华本), with the epistemology of 文 at the centre and 文 named the course.",
+    "zh": "以生成之论读中国思想的关系本体：易与易传、道家、儒家、文字（其中有止戈为武）及其他各线，逐段对应到形式脊柱上，并在对应发现脊柱所缺之律处加以整合。Ren 于2026年10月19日提出，同日要求列入 README。诸线延续同一种关系本体之说是要检验的论题，不是前提。2026年10月21日，按 Ren 10月19日的要求，扩展到《中华思想脉络》v1.0 的全部完整判断，以及以古典之名写成的理论中华本。2026年10月22日应其当日之要求，扩展到文理生生（与中华本分开所建之古汉语概念文法），以文之认识论为中心，以文名一历逐步之值。"
   },
   "objective": {
     "en": "Tie each passage, quoted verbatim from a preserved text, to checked declarations and records as agreement, exact scope or divergence; state where each tradition's universal forms need a scope and where it diverges; prove in the pure core the laws the passages point at and the spine lacks, or show them false.",
@@ -30,7 +30,9 @@
     "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
     "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
     "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
-    "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md"
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
+    "theories/becoming/chapters/WENLI-AND-BECOMING.md"
   ],
   "result_ids": [
     "chinese-sources-on-the-spine",
@@ -42,7 +44,8 @@
     "hexagram-arrangements-and-laws",
     "a-code-formed-between-formations",
     "capture-through-the-rule",
-    "two-sided-regulation-and-late-reading"
+    "two-sided-regulation-and-late-reading",
+    "wenli-on-the-spine"
   ],
   "overview": {
     "title": {
@@ -50,8 +53,8 @@
       "zh": "中国思想的关系本体，逐段对应到脊柱"
     },
     "summary": {
-      "en": "248 passages of nine parts of Chinese thought (the 易传, the 老子 with its commentaries and excavated witnesses, the 儒家, the script with 止戈为武, 庄子 and 玄学, 墨辩 and 名家, 兵家 and 法家, Buddhist lines) are quoted verbatim from hash-bound texts and tied to checked laws of the spine: 91 agree, 98 hold within an exact scope, 59 diverge. The relational start holds across the lines; their universal forms mostly need a scope; four non-relational overlays (a prior ground, a fixed nature, a single centre, contest and rank) recur, each answered inside its own tradition. The script is relational as a system of readings, not in the shapes of its graphs. Gaps the map found are being proved in the core: the arrangements of the 傳 (`Becoming.HexagramSequences`), a code formed between formations (约定俗成, `Becoming.SharedCodes`), capture through the rule (二柄, 据有余而制不足; `Becoming.RuleCapture`) and two-sided regulation of a level and regulation that reads the level late (中和, 宽猛相济; `Becoming.Regulation`) have landed, and the four earlier Chinese chapters keep only what the map and the spine do not carry. The map was then extended to every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 (庄, 墨, 名辩, 兵 and 法 with 儒, 道, 佛 and the 易): 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries; agreements and exact scopes are 81% of the judgments mapped, divergences 19%, 13% in pre-Qin texts. From those texts and the drafting 446 classical names were fixed, one per concept, 240 of the 246 quoted names witnessed before 秦, and the theory is stated in them in the 中华本《变化论》, with 經, 說 and 證 for each law.",
-      "zh": "中国思想九个部分的 248 段文字（易传、老子及其注与出土诸本、儒家、文字与止戈为武、庄子与玄学、墨辩与名家、兵家与法家、汉传佛教各线）从以哈希绑定的文本逐字引出，对应到脊柱上已检查之律：相合 91 段，定域 98 段，相分 59 段。关系性的起点贯穿诸线；其全称形式大多需要定域；四种非关系之层（先在的根据、固定的性、单一中心、争胜与等级）反复出现，各在本传统内部得到回应。文字作为读法系统是关系的，而不在字形。对应所发现的缺口正在核心中证明：传之排列（`Becoming.HexagramSequences`），在形成之间形成的编码、约定俗成（`Becoming.SharedCodes`），经由规则的捕获（二柄、据有余而制不足；`Becoming.RuleCapture`），以及水平的双向调节与迟到读法下的调节（中和、宽猛相济；`Becoming.Regulation`）已落地，较早的四个中国章节只保留对应与脊柱所不承载者。其后对应扩展到《中华思想脉络》v1.0 的全部 5,673 条完整判断（庄、墨、名辩、兵、法，以及儒、道、佛与易）：3,499 条关乎理论的某一结构，各落一处，归为 1,300 个已检查条目；已对应的判断中相合与定域占 81%，相分 19%，先秦文本中 13%。由这些文字与起草定出 446 个古典之名，每个概念一个，录有引文的 246 个中 240 个见于先秦文本；理论以这些名写成中华本《变化论》，每条律有经、说、证。"
+      "en": "248 passages of nine parts of Chinese thought (the 易传, the 老子 with its commentaries and excavated witnesses, the 儒家, the script with 止戈为武, 庄子 and 玄学, 墨辩 and 名家, 兵家 and 法家, Buddhist lines) are quoted verbatim from hash-bound texts and tied to checked laws of the spine: 91 agree, 98 hold within an exact scope, 59 diverge. The relational start holds across the lines; their universal forms mostly need a scope; four non-relational overlays (a prior ground, a fixed nature, a single centre, contest and rank) recur, each answered inside its own tradition. The script is relational as a system of readings, not in the shapes of its graphs. Gaps the map found are being proved in the core: the arrangements of the 傳 (`Becoming.HexagramSequences`), a code formed between formations (约定俗成, `Becoming.SharedCodes`), capture through the rule (二柄, 据有余而制不足; `Becoming.RuleCapture`) and two-sided regulation of a level and regulation that reads the level late (中和, 宽猛相济; `Becoming.Regulation`) have landed, and the four earlier Chinese chapters keep only what the map and the spine do not carry. The map was then extended to every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 (庄, 墨, 名辩, 兵 and 法 with 儒, 道, 佛 and the 易): 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries; agreements and exact scopes are 81% of the judgments mapped, divergences 19%, 13% in pre-Qin texts. From those texts and the drafting 449 classical names were fixed, one per concept, 242 of the 248 quoted names witnessed before 秦, and the theory is stated in them in the 中华本《变化论》, with 經, 說 and 證 for each law.",
+      "zh": "中国思想九个部分的 248 段文字（易传、老子及其注与出土诸本、儒家、文字与止戈为武、庄子与玄学、墨辩与名家、兵家与法家、汉传佛教各线）从以哈希绑定的文本逐字引出，对应到脊柱上已检查之律：相合 91 段，定域 98 段，相分 59 段。关系性的起点贯穿诸线；其全称形式大多需要定域；四种非关系之层（先在的根据、固定的性、单一中心、争胜与等级）反复出现，各在本传统内部得到回应。文字作为读法系统是关系的，而不在字形。对应所发现的缺口正在核心中证明：传之排列（`Becoming.HexagramSequences`），在形成之间形成的编码、约定俗成（`Becoming.SharedCodes`），经由规则的捕获（二柄、据有余而制不足；`Becoming.RuleCapture`），以及水平的双向调节与迟到读法下的调节（中和、宽猛相济；`Becoming.Regulation`）已落地，较早的四个中国章节只保留对应与脊柱所不承载者。其后对应扩展到《中华思想脉络》v1.0 的全部 5,673 条完整判断（庄、墨、名辩、兵、法，以及儒、道、佛与易）：3,499 条关乎理论的某一结构，各落一处，归为 1,300 个已检查条目；已对应的判断中相合与定域占 81%，相分 19%，先秦文本中 13%。由这些文字与起草定出 449 个古典之名，每个概念一个，录有引文的 248 个中 242 个见于先秦文本；理论以这些名写成中华本《变化论》，每条律有经、说、证。"
     },
     "next_step": {
       "en": "The three open gaps: a graded order by closure level and whether it is the same from every standpoint (亲亲之杀), division across several conditions (分), and tolerance compared across laws (柔弱者生之徒). From the full reading: a conjunctive or graded whole, saturation of a coupling, one-sided and local regulation, equal division, copying growth, witnesses that are functions of one another, measures of a juncture.",

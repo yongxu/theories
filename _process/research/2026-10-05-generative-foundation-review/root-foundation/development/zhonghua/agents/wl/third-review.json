@@ -1,0 +1,555 @@
+[
+ {
+  "key": "outputs",
+  "findings": [
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "and {shuo_changed} 說 changed in all, among them",
+    "problem": "Study §346's Delta says \"18 經 and 27 說 changed in all\". In fact 42 條 have a changed 說. The script's shuo_changed counts only the 條 whose block changed while the first 經 line stayed the same, so 條 where both 經 and 說 changed count only under 經. Read as a total (\"in all\"), the 說 figure is short by 15.",
+    "evidence": "I compared the 條 blocks of `git show main:THE-THEORY-OF-BECOMING-ZHONGHUA.md` with the working tree, using the script's own blocks() split and extracting the **經** and **說** paragraphs. 經 changed in 18 條: 凡·十九, 凡·二十六–二十八, 一·二十二, 四·十二, 五·六, 七·二, 九·二十二, 九·三十–三十三, 九·三十五, 十·一, 十·三, 十·十, 十三·二十. 說 changed in 42 條. These include 凡·十九, 一·二十二, 五·六, 七·二, 九·三十, 九·三十二, 九·三十三, 九·三十五, 十·一, 十·三 and 十·十, whose 經 also changed. The script's measure gives 18 and 27, and 27 = 45 changed 條 − 18. No 條 changed outside its 經 or 說.",
+    "new": "changed, and the 說 alone of {shuo_changed} more 條, among them",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "for s in (SRC, CH):",
+    "problem": "The landing extends the goal record's scope, but its overview summary keeps stale name figures, and README.md and GOALS.md display that summary. EN: \"446 classical names were fixed, one per concept, 240 of the 246 quoted names witnessed before 秦\". ZH: 「定出 446 个古典之名…录有引文的 246 个中 240 个见于先秦文本」. After the seventh pass the table has 449 names, and the 中华本's own preface (updated in WL) says 248 quoted, 242 of them pre-Qin. The summary also does not mention 文理生生. The same landing updates the civilization record and catalogue counts but not these.",
+    "evidence": "_process/goals/chinese-sources-and-becoming.json overview.summary.en/zh, rendered in README.md and GOALS.md (grep '446 classical names' finds them). names-decisions.tsv has 449 rows, 248 with 引. THE-THEORY-OF-BECOMING-ZHONGHUA.md line 39: 「录有出处的 248 个名中，242 个的出处在先秦文本」 (main had 246/240). Commit c1a02e42f shows landings update \"the goal record's figures\".",
+    "new": "w = re.search(r'录有出处的 (\\d+) 个名中，(\\d+) 个', (ROOT / ED).read_text(encoding='utf-8')).groups()\ng['overview']['summary']['en'] = re.sub(r'\\d+ classical names were fixed, one per concept, \\d+ of the \\d+ quoted', f'{names} classical names were fixed, one per concept, {w[1]} of the {w[0]} quoted', g['overview']['summary']['en'])\ng['overview']['summary']['zh'] = re.sub(r'定出 \\d+ 个古典之名，每个概念一个，录有引文的 \\d+ 个中 \\d+ 个', f'定出 {names} 个古典之名，每个概念一个，录有引文的 {w[0]} 个中 {w[1]} 个', g['overview']['summary']['zh'])\nfor s in (SRC, CH):",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "`Becoming.Identification.bounded_agree`, exact; in a world a list holds, a state value is learnable exactly when",
+    "problem": "In study §346 (The epistemology) the Lean names are not cited for exactly what they prove. \"exact\" is credited to bounded_agree, but exactness is bounded_agree_exact. bounded_agree only says that two courses with N and N′ states that agree before N+N′−1 agree everywhere. Two hypotheses of learnable_iff and learnable_iff_reading are also dropped: values through the map decidably equal or not (DecidableEq R), and, for the reading form, a value v₀. The chapter's §三 (2) and the book's preface both state them.",
+    "evidence": "Identification.lean:345 bounded_agree has no exactness clause. The chapter's §一 律 4 and §三 (1) cite 「此长确切（`Becoming.Identification.bounded_agree_exact`）」. Learnable.lean:221 (section Exactly, `variable … [DecidableEq R]`) holds learnable_iff, which takes `(world : ∀ s, s ∈ l)`. Unrolling.lean:190 `[DecidableEq R]` and :270 learnable_iff_reading take `(world …) (v₀ : V)`. The chapter's §三 (2) reads 「若：像之同异定然否（DecidableEq R）；world」 and, for the reading form, 「若同上，且状值之值域中有一值 v₀」. The 中华本 preface reads 「一族尽其状、像之同异定然否、状值之值域有一值时」.",
+    "new": "`Becoming.Identification.bounded_agree`, exact by `Becoming.Identification.bounded_agree_exact`; in a world a list holds, with values through the map decidably equal or not (and, for the reading form, some state value v₀), a state value is learnable exactly when",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "), exactly where it carries a law (`Becoming.Learning.goAlike_iff_lumped`)",
+    "problem": "Study §346 says \"compression and generalization are one class (determines_lumped_iff), exactly where it carries a law (goAlike_iff_lumped)\". That makes \"reach = what is merged\" conditional on carrying a law. determines_lumped_iff holds for every class (given decidable classes and two values). goAlike_iff_lumped says something else: for a law, the class is a 理 exactly when the next state's class goes alike across it, so the model of structure and the model of change are one class. The conditional form is the chapter's 讀, given here unlabelled and stronger than the laws.",
+    "evidence": "Learning.lean:850: \"A lumping generalizes exactly where it lumps\", `theorem determines_lumped_iff [DecidableEq K] … (two : y ≠ z)`, with no law in its statement. LearningRuns.lean:98–100: \"Structure and change are one lumping. A determined law goes alike under π exactly where the next configuration… goes alike\". Chapter §四 域: 「推广所及恰是压缩所并，这对任何类都成立（determines_lumped_iff…）…就变化而言，就是此类为理之处（goAlike_iff_lumped）。讀（AI，D63）：压缩与推广是同一件事，恰在压缩是理之处」.",
+    "new": "), for any class; for a law, the class is a 理 exactly where the next state's class goes alike across it, so the models of structure and of change are one class (`Becoming.Learning.goAlike_iff_lumped`)",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "such steps stay one state, `Becoming.SameAhead.next`",
+    "problem": "Study §346 (The name) glosses SameAhead.next as \"such steps stay one state\". The law says that the steps after two steps that are one state are also one state. That is what makes the states' law readable from the 文. \"Stay one state\" does not say this.",
+    "evidence": "Description.lean:361: `theorem SameAhead.next (h : SameAhead o t t') : SameAhead o (t + 1) (t' + 1)`, docstring \"The states read off the history go on as themselves: their law is read off too.\" Chapter §一 律 1: 「二步为一状，则其次步也为一状（`Becoming.SameAhead.next`）」.",
+    "new": "the steps after two such steps are one state too, `Becoming.SameAhead.next`",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "refuse the same characters as names,",
+    "problem": "Study §346 (The two projects) says the two projects \"refuse the same characters as names\". The crosswalk gives 16 shared refusals, but 7 characters the name table refuses (易, 德, 礼, 信, 虚, 反, 人) are interfaces in 文理生生. The refusals overlap; they are not the same. The chapter claims only the shared ones (道, 气, 天, 性, 仁, 义, 阴阳, 五行).",
+    "evidence": "crosswalk.tsv 类别 counts: NC 16 (道气性仁义天有无阴阳木火土金水胜), ND 7 (易德礼信虚反人, 「本表不立、文理生生立为接口」). Chapter 两个项目的对照: 「两边都不以道、气、天、性、仁、义、阴阳、五行立名」.",
+    "new": "both refuse 16 of them as names (道, 气, 天, 性, 仁, 义 among them), while 7 the name table refuses are interfaces in 文理生生,",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "**Self-review.** Every quotation, declaration, record link and generated table in the three chapters is checked by verify_zh.py;",
+    "problem": "Study §346's self-review overstates what verify_zh.py checks. It matches only 「…」〔ID〕 classical quotations and backticked `Becoming.…` names. The chapter also quotes 文理生生's files and Ren's English words, which have no 〔ID〕, and cites names verify_zh.py does not see: the 总表's names without the `Becoming.` prefix, and `Generative.trace_append_iff`. Those quotations were checked by hand.",
+    "evidence": "verify_zh.py section 5: `re.finditer(r'「([^」]{2,})」〔([A-Za-z0-9\\-]+)〕', t)` and `re.finditer(r'`(Becoming\\.[A-Za-z0-9_.\\'₀-₉]+)`', t)`. WENLI-AND-BECOMING.md quotes 总计划 §八 「遇到高度可组合…」, the README's 「“合”不能在几个层次间无声明地换义」 and the English \"You know, in Chinese…\" without an ID. agents/wl/section-check.json notes: \"文理生生 and conversation quotations. All were checked against sources/wenli-shengsheng-v0.4, and all are exact.\"",
+    "new": "**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`;",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "('learning-by-refutation', 'Learning by elimination and no prefix fixing the next value.', '过则改，与往不定其次值。'),",
+    "problem": "The record wenli-on-the-spine leans on learnable_iff_reading (其义 as a reading) and reading_predicts (自见), and the study and catalogue use them too. It links neither to the record that holds them. Its only learnable link is learnable-through-a-map, whose detail names learnable_iff_reading, a declaration that record does not contain. 自见, the third law of 读书百遍其义自见, therefore has no record link.",
+    "evidence": "grep over records/*.json: learnable_iff_reading and reading_predicts appear only in what-an-extrapolation-given-nothing-fixes.json (which also holds given_nothing_not_every and ahead_fixes), not in learnable-through-a-map.json. Chapter §三 (2)–(3) cite `Becoming.Learnable.learnable_iff_reading`, `Becoming.Learnable.reading_predicts` and `Becoming.Learnable.given_nothing_not_every`.",
+    "new": "('learning-by-refutation', 'Learning by elimination and no prefix fixing the next value.', '过则改，与往不定其次值。'),\n        ('what-an-extrapolation-given-nothing-fixes', 'learnable_iff_reading, reading_predicts and given_nothing_not_every: the state value eventually a reading of the course, and prediction given only that reading.', 'learnable_iff_reading、reading_predicts 与 given_nothing_not_every：状值自某步起是文之一读，只给其读则自见。'),",
+    "severity": "missing"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "- **另有七个名随「文」之立而改。** 往、历、理、终而复始、不测；又今、录二名之注中往之释，随往改名文之前段而改。",
+    "problem": "The chapter's list of names changed because 文 was named misses 得. Its note was also changed for the new name: 「不测之程」 became 「不测之文」. The generated table directly below lists 得 as 注改写. With 得 left out, the 37 rows do not add up: 2 new + 18 notes + 3 revised + 7 not adopted + these names.",
+    "evidence": "work/seventh-pass.json: {\"row\": \"得\", \"op\": \"note-replace\", \"old\": \"不测之程上无一步起每步皆得\", \"new\": \"不测之文上无一步起每步皆得\", \"why\": \"WL: 不测 is the diagonal 文 (九·三十), not a 程\"}. 得 is not one of the 29 divergent readings in agents/wl/revisions-check.json. The chapter's wl_revisions table has the row 「| 得 | 注改写 |」.",
+    "new": "- **另有八个名随「文」之立而改。** 往、历、理、终而复始、不测；又今、录二名之注中往之释，随往改名文之前段而改；得之注中「不测之程」改「不测之文」。",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "Confirmed with the script's own blocks() split, comparing main and the working tree: 18 條 changed their 經 and 42 changed their 說, and 15 changed both. Every one of the 45 changed 條 changed its 經 or its 說. The script's shuo_changed counts only the 說-only 條 (27 = 45 − 18), so the rendered \"18 經 and 27 說 changed in all\" (BECOMING-RENEWAL-READING.md §346) understates the 說 by 15. The proposed text has a flaw: \"among them 凡例's 古文 to 古书\" would then attach to the 說-only 條, but the 古文→古书 changes are 經 changes (凡·十九, 二十六–二十八). The corrected replacement gives the computed total so that \"among them\" covers all 45.",
+    "new": "changed, and the 說 alone in {shuo_changed} more, {jing_changed + shuo_changed} 條 in all; among them"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The goal record's overview.summary (rendered in README.md and GOALS.md) still says 446 names and 240 of 246 quoted names. This landing makes the table 449 names (verify_zh, and the civilization record updated by the same script). It also changes the 中华本 preface from 246/240 (main) to 「录有出处的 248 个名中，242 个」. The same script updates the counts in the civilization record and the catalogue, but leaves the goal summary contradicting the book. The proposed regexes match the current en and zh summary text exactly, the preface search returns ('248','242'), and the substitution is idempotent.",
+    "new": "w = re.search(r'录有出处的 (\\d+) 个名中，(\\d+) 个', (ROOT / ED).read_text(encoding='utf-8')).groups()\ng['overview']['summary']['en'] = re.sub(r'\\d+ classical names were fixed, one per concept, \\d+ of the \\d+ quoted', f'{names} classical names were fixed, one per concept, {w[1]} of the {w[0]} quoted', g['overview']['summary']['en'])\ng['overview']['summary']['zh'] = re.sub(r'定出 \\d+ 个古典之名，每个概念一个，录有引文的 \\d+ 个中 \\d+ 个', f'定出 {names} 个古典之名，每个概念一个，录有引文的 {w[0]} 个中 {w[1]} 个', g['overview']['summary']['zh'])\nfor s in (SRC, CH):"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "bounded_agree (Identification.lean:345) proves only that courses with N and N' states agreeing before N+N'−1 agree everywhere. Exactness is bounded_agree_exact (line 478), which the study does not cite. learnable_iff sits in section Exactly with [DecidableEq R] (Learnable.lean:221), and learnable_iff_reading sits in a section with [DecidableEq R] (Unrolling.lean:190) and also takes v₀ : V (line 271). v₀ is needed: with no states and an empty V, no G exists. The second review added only the world hypothesis. The chapter, the 中华本 preface and the record's dependency detail all state the decidability, and the record's hypotheses promise it 'where they apply'. In the corrected replacement the exactness phrase matches the record's wording ('with the exact length'), and v₀ is described as a value of the value type rather than a value of some state.",
+    "new": "`Becoming.Identification.bounded_agree`, with the exact length, `Becoming.Identification.bounded_agree_exact`; in a world a list holds, with values through the map decidably equal or not (and, for the reading form, a value v₀ of the state values' type), a state value is learnable exactly when"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "determines_lumped_iff (Learning.lean:853) holds for any π, given DecidableEq K and two distinct values, and no law appears in it. goAlike_iff_lumped (LearningRuns.lean:100) says that π is a 理 of a law exactly when π∘next is Lumped by π. The study's \"exactly where it carries a law\" therefore conditions a law that holds for every class. It also gives, unlabelled, the chapter's 讀（AI，D63）「恰在压缩是理之处」. The chapter separates three things: reach equals what is merged for any class (determines_lumped_iff); the transfer is right where the world goes alike across the class (lumped_right_iff, Learning.lean:870); and for change, that is where the class is a 理 (goAlike_iff_lumped). The proposed replacement reads awkwardly after \"are one class (...)\" (\"for any class\") and omits lumped_right_iff. The corrected text follows the chapter.",
+    "new": "), which holds of any class given decidable classes and two values; generalization is right exactly where the world goes alike across the class (`Becoming.Learning.lumped_right_iff`), and, for the class of the next state under a law, exactly where the class is a 理 (`Becoming.Learning.goAlike_iff_lumped`)"
+   },
+   {
+    "index": 4,
+    "real": false,
+    "reason": "\"Such steps stay one state\" paraphrases SameAhead.next (Description.lean:361: SameAhead o t t' → SameAhead o (t+1) (t'+1)) in the same terms as the Lean's own docstring (\"The states read off the history go on as themselves\"). \"Stay\" means that, stepping on together, they remain one state, which is what the theorem says. The gloss is loose, but it does not misstate the law, and the study sentence makes no further claim about the law being read off. This is not a defect.",
+    "new": "the steps after two such steps are one state too, `Becoming.SameAhead.next`"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "crosswalk.tsv has NC 16 (道气性仁义天有无阴阳木火土金水胜, refused by both) and ND 7 (易德礼信虚反人: 「本表不立、文理生生立为接口」). The study's own Delta counts ND as non-agreement (agree = S+O+NC = 88 of 117). \"Refuse the same characters as names\" therefore overstates the overlap and contradicts the Delta. The chapter claims only the shared refusals (道、气、天、性、仁、义、阴阳、五行). The proposed replacement is right in substance, but its \"both refuse ..., while ..., and reached\" breaks the sentence's list. The corrected text keeps the list grammatical.",
+    "new": "refuse 16 of them as names alike (道, 气, 天, 性, 仁, 义 among them, while 7 the name table refuses are interfaces in 文理生生),"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "verify_zh.py section 5 matches only 「…」〔ID〕 (line 170) and backticked `Becoming.…` (line 174). WENLI-AND-BECOMING.md quotes 文理生生's files (「遇到高度可组合…」, plan §八) and the conversation (the English \"You know, in Chinese…\", found in sources/wenli-shengsheng-v0.4/research/references/02_对话全记录…) without an ID. It also cites about 81 backticked Lean names without the Becoming. prefix (Identification.bounded_agree, SameAhead.next, Generative.trace_append_iff, …), which the script never checks. section-check.json records that the 文理生生 and conversation quotations were checked against sources/wenli-shengsheng-v0.4. That check covers the conversation quotations too, because the conversation log is inside that import. The replacement is accurate.",
+    "new": "**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`;"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "Among the records, learnable_iff_reading, reading_predicts and given_nothing_not_every are held only by what-an-extrapolation-given-nothing-fixes.json; learnable-through-a-map.json holds learnable_iff but not learnable_iff_reading. The wenli record's dependency detail nevertheless names learnable_iff_reading under learnable-through-a-map, and 自见 (reading_predicts) has no record link. The second review suggested this link (finding 18) and it was not applied. The proposed en detail names given_nothing_not_every but does not say what it shows. The corrected en and zh state each law, following Unrolling.lean:153–161 and the chapter's 自见 row.",
+    "new": "('learning-by-refutation', 'Learning by elimination and no prefix fixing the next value.', '过则改，与往不定其次值。'),\n        ('what-an-extrapolation-given-nothing-fixes', 'learnable_iff_reading, reading_predicts and given_nothing_not_every: a state value learnable exactly when eventually a reading of the course, prediction given that reading, and no extrapolation given nothing learning every learnable value.', 'learnable_iff_reading、reading_predicts 与 given_nothing_not_every：状值可知恰当它自某步起是文之一读；给其读则自见；什么都不给，就不能于每一种可知的状值皆得。'),"
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "In seventh-pass.json, 得 changes 「不测之程上无一步起每步皆得」 to 「不测之文…」, \"WL: 不测 is the diagonal 文 (九·三十), not a 程\". 得 is not one of the 29 divergent readings, and the wl_revisions table shows 「| 得 | 注改写 |」. So 得 also changed because 文 was named, and the prose list omits it. The finding's arithmetic is wrong, though. With 往 listed both among the 18 notes and in this list, the current 7 makes 2+18+3+7+7 = 37 add up by coincidence, and 8 gives 38 with 往 counted twice. The omission is still a real defect: the list says seven when eight names (往, 历, 理, 终而复始, 不测, 今, 录, 得) changed with 文, and the table row 得 has no account in the prose. The replacement is correct.",
+    "new": "- **另有八个名随「文」之立而改。** 往、历、理、终而复始、不测；又今、录二名之注中往之释，随往改名文之前段而改；得之注中「不测之程」改「不测之文」。"
+   }
+  ]
+ },
+ {
+  "key": "philology",
+  "findings": [
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "——定域（[易传一章 p-yijian](YI-ZHUAN-AND-BECOMING.md#p-yijian)）：一种简化是理，恰当它是律所同行的归并。",
+    "problem": "The chapter (line 318) gives 「易简，而天下之理得矣」 the sense \"a simplification (a coarser class)\" as if that were what the sentence says. It does not mark this as an analogy. In context 易简 is glossed by the same chapter of 系辞上 as the ease of 乾 and the simplicity of 坤. The judged entry for this sentence says outright that the coarse-class reading is not the original sense and is only an AI analogy.",
+    "evidence": "DS02 第一章: 「干以易知，坤以简能；易则易知，简则易从；……易简，而天下之理得矣」. passages.json xici-yi-jian-li-de (scope, checked passed): 「「易简」，上文自释为「干以易知，坤以简能；易则易知，简则易从」，说的是乾之平直可知与坤之简约可能，不是最粗之归并。以下是 AI 类比：若把「简」读为一个粗的读法……」. The chapter cites only YI-ZHUAN p-yijian and has no 讀 label on the simplification sense.",
+    "new": "——定域（[易传一章 p-yijian](YI-ZHUAN-AND-BECOMING.md#p-yijian)，xici-yi-jian-li-de）：原文之易简，上文自释为「干以易知，坤以简能」〔DS02〕，是乾之易、坤之简，不是归并之粗。讀（AI，D63）：以简为粗之读是类比：一种简化是理，恰当它是律所同行的归并。",
+    "severity": "error"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/moves-after-rounds.json",
+    "old": "一卦六爻同时之杂是一状（卦，⟦八·十七⟧；「六爻相杂」〔DS03〕，⟦八·十九⟧），不是文。",
+    "problem": "The book's 一·二十一 cites 「六爻相杂」〔DS03〕 as support for reading the 杂 of 「物相杂，故曰文」 as a simultaneous mix of six lines. The cited sentence does not support simultaneity. Its own context in 系辞下 orders the six lines from beginning to end. The sentence that does support the positional reading is in the same paragraph as 物相杂: the six are the positions of 三材.",
+    "evidence": "DS03 (frozen): 「易之为书也，原始要终以为质也。六爻相杂，唯其时物也。其初难知，其上易知，本末也。初辞拟之，卒成之终。」 (孔疏 reads 原始 as 乾初九潜龙 and 要终 as 上九亢龙, i.e. stages of one matter). The 物相杂 paragraph: 「兼三材而两之，故六。六者，非它也，三材之道也。道有变动，故曰爻；爻有等，故曰物；物相杂，故曰文」. The book's own 八·十七 (xici-liuyao-xiangza) reads 「六爻相杂」 for positions as contexts, not for simultaneity.",
+    "new": "一卦六爻同时之杂是一状（卦，⟦八·十七⟧；同段之六是三材之位：「六者，非它也，三材之道也」〔DS03〕），不是文；「六爻相杂，唯其时物也」〔DS03〕之上文「原始要终以为质也」〔DS03〕以六爻为一事之始终，不证同时。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「擧一隅，不以三隅反，則不復也。」〔RU1-S-LY〕——定域。",
+    "problem": "The kind contradicts the judged entry for this exact sentence, and the chapter neither cites nor explains the difference. The sentence states no universal for a 定域 to restrict (凡·二十七: 定域 改其全称之形). It presupposes that the four corners are one class, which is how the judged entry reads it as 相合.",
+    "evidence": "passages.json lunyu-ju-yi-yu (kind agreement, checked corrected), fragment 「擧一隅，不以三隅反，則不復也。」: 「这个读法把四隅放在「隅」这一个类下」, with determines_lumped_iff and lumped_right_iff as its conditions. 凡·二十六 allows 相合 under conditions written in a 讀 (「许多相合只在讀（AI，D62）写明的条件下然」). The chapter (line 288) gives no slug.",
+    "new": "「擧一隅，不以三隅反，則不復也。」〔RU1-S-LY〕——相合（lunyu-ju-yi-yu）：原句以四隅为一类而推，不立全称；推之为对的条件见下（讀，AI，D63）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「三年之後」定域：读者怎样到达他的类，脊柱不导出。",
+    "problem": "定域 is misapplied. By definition a 定域 gives the exact range in which the sentence holds. Here the chapter gives no law and no range, and says the spine does not derive the matter. That is a case of no correspondence, which the book writes as 不立对应 or 不带, not a 定域.",
+    "evidence": "凡·二十七 經: 「定域，脊柱给出一段古书所言然之确切范围，而改其全称之形也」. The book's wording for such cases, e.g. 一·二十五: 「脊柱不定其所施之范围，此处不携带，不立对应」. Chapter line 322 cites only that `Becoming.Learning` does not derive how a formation reaches its classes. passages.json has no entry for 三年之後.",
+    "new": "「三年之後」不立对应：读者怎样到达他的类，脊柱不导出，所以不给其成立之域。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "——相合（[RO 一章 p-mobian-qi-ran-suo-yi-ran](CHINESE-SOURCES-AND-BECOMING.md#p-mobian-qi-ran-suo-yi-ran)，那里读「以说出故」须有返回与变动）。",
+    "problem": "The 相合 borrowed from RO covers 其然/所以然 and 以说出故, read through the Confound laws. The chapter uses the sentence for a different reading: 名, 辞 and 说 as layers of composition, with 辞合名而成意. The judged entry for this sentence rates that part 定域, because 以辞抒意 holds only where the codes agree. It holds only in a given family, which the chapter's own §七 域 also says. Filing the composition reading under 相合 misstates its kind.",
+    "evidence": "passages.json mobian-ming-ju-shi (scope, corrected): 「所以「以辭抒意」只在两码一致之处成立，律给出它的范围而修正其无条件的说法；三句合看记为定域」 and 「那一族不是表意的一般模型」. RO p-mobian-qi-ran-suo-yi-ran cites Confound.misattributes/confounded/varied_refutes, Run.not_fixes_of_untaken and apart_only_downstream. Chapter §七 域: 「这是一个所给的有穷律族之律，不是语言之律」.",
+    "new": "——「以说出故」相合（[RO 一章 p-mobian-qi-ran-suo-yi-ran](CHINESE-SOURCES-AND-BECOMING.md#p-mobian-qi-ran-suo-yi-ran)，那里读「以说出故」须有返回与变动）；三句合看定域（mobian-ming-ju-shi）：「以辞抒意」只在说者与听者之码于所需之处一致时成立。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "定域：理不是文，自文读出只在一义（一·二十一）。理是一类（七·二）。",
+    "problem": "The 定域 for 「理者，成物之文也」 corrects the sentence as if its 文 were the named 文 (the course). In 解老 the 文 of formed things is their pattern or markings, and the same piece explains 理 as distinctions like square and round, long and short. That is a synchronic pattern. By the chapter's own three senses, a pattern at one time is a 像 (文¹), not the named 文. So 「理不是文」 corrects a claim the sentence does not make, unless the sense is stated first.",
+    "evidence": "CV1-S-JL (frozen): 「理者，成物之文也；道者，萬物之所以成也」 and, in the same piece, 「凡理者，方圓、短長、麤靡、堅脆之分也」. The chapter head (line 13): 「一时之纹是一状经一象之值，即像；沿步而读，就是文（文¹）」. §四 (line 310) treats 「鸟兽之文」 the same way: 「一时之纹样，即一状经一象之值（像），不是名中的文」.",
+    "new": "定域：此句之文是成物之纹（同篇以理为「方圓、短長、麤靡、堅脆之分」），即一时之纹，像（文¹），不是名中的文；以名中之文读之，理不是文，自文读出只在一义（一·二十一）。理是一类（七·二）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "立一个先在的根据，判为相分（道不立为名，见中华本附录二）。",
+    "problem": "The chapter says 解老's 「道者，萬物之所以成也」 「判为相分」, as if a recorded judgment existed. No passage entry judges it 相分. The book's 七·二, which reads the same 解老 passage, says this sentence is not carried, and so does the checked 解老 entry. One account should not give the sentence two different standings.",
+    "evidence": "Book 七·二 說: 「同篇以理为物之制、以道为万物之所以成，皆不带」. passages.json jielao-bu-de-bu-hua: 「所不带：同篇「道者，萬物之所以成也」以「道」为万物所以成的根据」. No CV1-S-JL entry in passages.json has this fragment with kind divergence.",
+    "new": "立一个先在的根据（凡·二十八所列非关系之层之一），不带（中华本七·二，jielao-bu-de-bu-hua；道不立为名，见中华本附录二）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/moves-after-rounds.json",
+    "old": "以天文作占；文字，及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；吉凶。",
+    "problem": "The senses of 文 listed as not carried differ between the book's 一·二十一 and the chapter. The chapter's list (line 153) and the name table's 文 row (book 附录一) both exclude 荀子礼论之文理. The book's 一·二十一 所不带 omits it.",
+    "evidence": "Chapter line 153: 「……文字，以及《说文》文与字之分；荀子礼论之文理；吉凶。」. Name table 文 row (names-decisions.tsv, printed at book line 3894): 「……文字及《说文》文／字之分；荀子礼论之文理；吉凶」. Book 一·二十一 說: 「……以天文作占；文字，及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；吉凶。」",
+    "new": "以天文作占；文字，及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；荀子礼论之文理；吉凶。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "文字，以及《说文》文与字之分；荀子礼论之文理；吉凶。",
+    "problem": "The converse inconsistency. The book's 一·二十一 excludes 《文言》 as a book title and the plain classical style of the book's 經. The chapter's list of senses not carried omits it, so the two lists of 所不带 differ.",
+    "evidence": "Book 一·二十一 說 所不带: 「……《文言》之书名与本编经所用之浅近文言；吉凶。」. Chapter line 153 has no such item.",
+    "new": "文字，以及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；荀子礼论之文理；吉凶。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "old": "脊柱只取有限之数穷尽而定之结构：",
+    "problem": "The chapter (lines 130 and 481) and the book's 一·二十一 say that 「极其数，遂定天下之象」 is the yarrow count, that the number is not read as a bound on the number of states, and that the sentence is not carried. A second judged entry for the same words, xici-ji-qi-shu, still takes the bound laws (prefix_fixes, bounded_induction) as this sentence's structure. The chapter's reading therefore contradicts a judged entry for the sentence it discusses. The outlier entry should be aligned with the decided reading.",
+    "evidence": "passages.json xici-ji-qi-shu (scope, corrected), fragment 「极其数，遂定天下之象」: 「脊柱只取有限之数穷尽而定之结构：至多 N 与 N′ 个状态之两历史……（Identification.prefix_fixes）」. xici-can-wu-cuo-zong: 「把「数」读为状态数之界只是字同，不取」. Book 一·二十一: 「数不读作状之种数之界，皆不带」.",
+    "new": "把「数」读为状之种数之界只是字同，不取（xici-can-wu-cuo-zong，中华本一·二十一）；以下只是与有界则往定其行（九·三十三）之对照，不是此句之读：",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "- 「剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。」〔YD-JP22〕",
+    "problem": "The chapter quotes 「剛柔交錯，天文也」 as the 彖 of 贲 and discusses 交错 in it. It does not note a well-known textual problem: the four characters 剛柔交錯 are absent from the received 王弼 text of the 彖. They were supplied from 王弼's note by 郭京's 《周易举正》, and 朱熹 accepted this only tentatively. The general caveat in 未决与限度 (texts not collated) does not flag a known variant in a sentence the chapter reads.",
+    "evidence": "Frozen YD-JP22 has 「剛柔交錯，天文也」 in its main text (notes_removed is empty). Standard commentary: 王弼本 彖 reads 「分剛上而文柔，故小利有攸往。天文也」, with 王弼注 「剛柔交錯而成文焉，天之文也」; 郭京《周易举正》 says four characters were lost; 朱熹本义 「先儒說天文上當有剛柔交錯四字，理或然也」. Chapter line 137: 「交错（名表之名……）与错（卦之错）都不由此借」.",
+    "new": "- 「剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。」〔YD-JP22〕\n  - 「剛柔交錯」四字，通行王弼本彖传无之，王弼注作“刚柔交错而成文焉，天之文也”；唐郭京《周易举正》以为脱文而补，朱熹本义说“理或然也”（皆不在冻结语料中）。冻结本有此四字；本节之读只依「觀乎天文，以察時變」。",
+    "severity": "missing"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「参伍以变，错综其数」与「极其数，遂定天下之象」不带：它们讲揲蓍，是推尽策数而定卦象，",
+    "problem": "The text says the two flanking clauses are not carried because they are about divination by yarrow stalks. This implies the middle clause, the name's source, is not about divination. In context the whole sentence describes the yarrow procedure. 通其变 is carrying the successive changes of the count through, and 天下之文 is the lines drawn from them. The judged entry for the whole fragment says the passage is about the yarrow procedure. The 相合 should be stated against that context, which in fact fits the name: the drawn lines are values obtained change by change.",
+    "evidence": "DS02 第十章, after 「十有八变而成卦」 (第九章): 「参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象」. 朱熹本义 (not frozen): 「此亦皆謂揲蓍求卦之事。蓋通三揲兩手之策，以成陰陽老少之畫；究七八九六之數，以定卦爻動靜之象也」. passages.json xici-can-wu-cuo-zong, fragment including 「通其变，遂成天下之文」: 「此段讲揲蓍……可取之一半是：文与象从变化之组合读出」.",
+    "new": "全句讲揲蓍：「通其变，遂成天下之文」是通筮之诸变而成所画之爻（朱熹本义：通三揲两手之策，以成阴阳老少之画；不在冻结语料中）；讀（AI，D63）：所画之爻逐变而得，即一文，相合在此。「参伍以变，错综其数」与「极其数，遂定天下之象」不带：它们讲策数，是推尽策数而定卦象，",
+    "severity": "missing"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「圣人立象以尽意」〔DS02〕——定域：在一族尽其状的宇中，状值能从文中读出",
+    "problem": "The chapter gives only a positive range for 尽意 and does not cite the judged entry for this sentence. That entry sets two limits: 象 supplements what speech merges and is exact only where the meaning is constant on what speech and 象 merge together, and 尽 as a universal fails. A reader of the chapter sees 尽意 granted within a range with the judged limits silently dropped.",
+    "evidence": "passages.json xici-li-xiang-jin-yi (scope, corrected), fragment 「圣人立象以尽意，」: 「在有截面的映射下，精确读法存在，恰当意在映射所合并处同值（exact_exists_iff）……范围：「尽」不成立——每个展开每步都缺其自身之缺（Diagonal.Unfolds.incomplete）……象能补言之所合并，不能尽意」. Chapter line 374 cites no slug.",
+    "new": "「圣人立象以尽意」〔DS02〕——定域（xici-li-xiang-jin-yi：象补言之所并，只在意于言与象共并之处同值时尽；「尽」作全称不成立）：在一族尽其状的宇中，状值能从文中读出",
+    "severity": "missing"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "Confirmed; severity low-moderate. The old text occurs once in centre.fragment (line 286). Frozen DS02 第一章 glosses 易简 itself: 「干以易知，坤以简能；易则易知，简则易从」. The checked map entry xici-yi-jian-li-de (kind scope, passed) says the coarse-lumping sense is not the original sense and only an AI analogy. The book never treats this sentence. The chapter follows the older YI-ZHUAN p-yijian wording and presents the lumping sense as what the sentence says, with no 讀 label. The quotation in the replacement is verbatim in DS02, where the frozen text writes 干 for 乾. Polished: note 干 = 乾, and keep the analogy explicit.",
+    "new": "——定域（[易传一章 p-yijian](YI-ZHUAN-AND-BECOMING.md#p-yijian)，xici-yi-jian-li-de）：原句之易简，上文自释为「干以易知，坤以简能」〔DS02〕（冻结本作干，即乾），是乾之易知、坤之简能，不是归并之粗。讀（AI，D63）：以简为一个粗的读法是类比；依此类比，一种简化是理，恰当它是律所同行的归并。"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The defect is real (severity low), but the proposed replacement is wrong. The old text occurs once in moves-after-rounds.json, and it renders as 一·二十一's 「卦，八·十五；「六爻相杂」〔DS03〕，八·十七」. Frozen DS03 places 「六爻相杂，唯其时物也」 between 「原始要终以为质也」 and 「其初难知，其上易知，本末也」. That context reads the six lines from 初 to 上 as the beginning and end of one matter, and gives each line its 时. So the sentence cannot support 「同时之杂」. The replacement cites 「六者，非它也，三材之道也」 as support, but the book explicitly does not carry 三才: 八·十五 says 「三才、阴阳之说不带」, and the 卦 row of 附录一 excludes 「兼三才而兩之」之三才. Corrected: rest the state reading on 卦 (八·十五: 卦，六爻自下而上之一状也), and say why 「六爻相杂」 is not evidence. All quotations are verbatim in DS03.",
+    "new": "一卦六爻同时之杂是一状（卦，⟦八·十七⟧），不是文；「六爻相杂，唯其时物也」〔DS03〕不证同时：其上下文「原始要终以为质也」〔DS03〕、「其初难知，其上易知，本末也」〔DS03〕以初、上为一事之始终（其位之读见⟦八·十九⟧）。"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "Confirmed; severity low. The old text occurs once (centre.fragment line 256). The checked map entry lunyu-ju-yi-yu has kind agreement (corrected). Its gap note says that 四隅同类 and the world agreeing across the class are the reading's premises, not theorems. 凡·二十七 defines 定域 as correcting a universal form (改其全称之形), and this sentence states no universal. 凡·二十六 allows 相合 under conditions written in a 讀. The chapter's own conclusion (「四隅同属一类、且变经此类相若于一法之处成立」) is that premise. One account should give the sentence one kind, or cite the map. The replacement fits.",
+    "new": "「擧一隅，不以三隅反，則不復也。」〔RU1-S-LY〕——相合（lunyu-ju-yi-yu）：原句以四隅为一类而推，不立全称；推之为对的条件是这一读之前提，见下（讀，AI，D63）。"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "Confirmed; severity low. The old text occurs once (line 290). 凡·二十七 經: 定域 gives the exact range in which a passage holds. Here the chapter gives no range and no law, only that the spine does not derive how a reader reaches a class. passages.json has no entry for 「三年之後」 (the ZH1-S03 entries cover only 依乎天理, 有間, 族 and 有涯). The book writes such cases as 不立对应 (一·二十五: 「脊柱不定其所施之范围，此处不携带，不立对应」). The replacement fits, and the following sentence on `Becoming.Learning` still reads correctly after it.",
+    "new": "「三年之後」不立对应：读者怎样到达他的类，脊柱不导出，所以不给其成立之域。"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "Confirmed; severity low-moderate. The old text occurs once (line 413). RO p-mobian-qi-ran-suo-yi-ran's 相合 covers 其然/所以然 and 以说出故 through the Confound laws and apart_only_downstream. It does not cover the composition reading the chapter uses here (辞合名而成意). The checked map entry mobian-ming-ju-shi (kind scope, corrected) reads 以辞抒意 exactly so and records the three sentences together as 定域. Its reason is that 以辞抒意 holds only where the codes agree (SharedCodes.reads_iff). In Lean, reads_iff has the hypothesis TellsApart cg: the reader's code tells the senses apart. The replacement drops that hypothesis and names no law. Corrected: add both.",
+    "new": "——「以说出故」相合（[RO 一章 p-mobian-qi-ran-suo-yi-ran](CHINESE-SOURCES-AND-BECOMING.md#p-mobian-qi-ran-suo-yi-ran)，那里读「以说出故」须有返回与变动）；三句合看定域（mobian-ming-ju-shi）：听者之码分开诸义项时，「以辞抒意」恰在说者与听者之码于此义项一致之处成立（`Becoming.SharedCodes.reads_iff`）。"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "Confirmed; severity moderate. In frozen CV1-S-JL, the same piece explains 理 as 「方圓、短長、麤靡、堅脆之分」 and as 「短長、大小、方圓、堅脆、輕重、白黑之謂理」. So 成物之文 is the pattern of a formed thing at one time. By the chapter's own head (「一时之纹是一状经一象之值，即像」) and §四 (鸟兽之文 is 像, 「不是名中的文」), that is a 像, not the named 文. 「理不是文」 therefore corrects a claim the sentence does not make. The replacement's 「像（文¹）」 blurs the head's split, where 文¹ is 像 at one time and 文 along steps, and its quotation lacks a source tag. Corrected below; the tagged quotation is verbatim in CV1-S-JL. The book's 七·二 has the same wording (「亦定域（讀，AI，D63）：理不是文，自文读出只在一义」, source work/book-2.json and round6-edits.json) and needs the same change.",
+    "new": "定域：此句之文是成物之纹，同篇以理为「方圓、短長、麤靡、堅脆之分」〔CV1-S-JL〕，是一时之纹，即像，不是名中的文（讀，AI，D63）；以名中之文读之，理不是文，自文读出只在一义（一·二十一）。理是一类（七·二）。"
+   },
+   {
+    "index": 6,
+    "real": false,
+    "reason": "Refuted. The finding says no entry judges this sentence 相分. But the checked map entry jielao-chang-wu-ding-li (kind divergence, corrected) puts it in its 相分 half: 「另一半相分，所查之层为本原：…并以道为「萬物之所以成」，即诸物所以成之根据」. 凡·二十八 also lists 先在的根据 as a non-relational layer where 相分 falls. 七·二's 「皆不带」 says only that the sentence is not carried in that 條. That is compatible with a 相分 judgment, in the same way the chapter writes 「九·三十已判它为相分（xici-sui-zhi-lai-wu），此处不带」. Changing 相分 to 不带 would drop a correct judgment. Citing the slug jielao-chang-wu-ding-li would be an optional improvement, not a defect fix.",
+    "new": "立一个先在的根据，判为相分（道不立为名，见中华本附录二）。"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "Confirmed; severity low. The old text occurs once in moves-after-rounds.json. The 文 row of names-decisions.tsv (printed at book line 3894) and the chapter (line 153) both exclude 「荀子礼论之文理」. The book's own 一·二十一 所不带 omits it, so the 條 and the appendix row for the same name disagree. The item matters because 一·二十一 discusses how 文 and 理 relate. The replacement fits. For full parity the name-table row should also gain the 《文言》 item (see 8).",
+    "new": "以天文作占；文字，及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；荀子礼论之文理；吉凶。"
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "The defect is real (severity low), but the replacement is worded in the wrong voice. The old text occurs once in centre.fragment. The book's 一·二十一 excludes 「《文言》之书名与本编经所用之浅近文言」 and the chapter's list does not. The chapter's compound remark (「文本」「原文」「经文」一类合成之词是常语) only partly covers this item. The proposed wording copies 「本编」, the book speaking of itself. The chapter never uses 本编: it calls the book 中华本 and its text 中华本的经. Corrected wording below.",
+    "new": "文字，以及《说文》文与字之分；《文言》之书名与中华本之经所用之浅近文言；荀子礼论之文理；吉凶。"
+   },
+   {
+    "index": 9,
+    "real": true,
+    "reason": "Confirmed; severity low. The old text occurs once in passages.json (entry xici-ji-qi-shu, kind scope). That entry takes the bound laws (prefix_fixes, bounded_induction) as the structure of 「极其数，遂定天下之象」. The checked entry xici-can-wu-cuo-zong refuses that reading (「把「数」读为状态数之界只是字同，不取」), and the book's 一·二十一 and the chapter now follow it. So the map holds two opposite readings of one sentence. Kind scope stays coherent after the fix: the remaining 定域 is the entry's last sentence (a finite procedure fixes a figure; taking it as 天下之象 to know what comes is refused). Wording adjusted to the map's own vocabulary (状态数之界). Because passages.json's SHA-256 is bound in the civilization-thought-on-the-spine record, that record must be regenerated afterwards.",
+    "new": "把「数」读为状态数之界只是字同，不取（xici-can-wu-cuo-zong，中华本一·二十一）；以下有界之律只作对照（九·三十三），不是此句之读："
+   },
+   {
+    "index": 10,
+    "real": true,
+    "reason": "Confirmed as a real omission; severity low. The frozen YD-JP22 main text has 「剛柔交錯，天文也」 and no variant note survives the import. The received 王弼 (注疏) text of the 賁 彖 reads 「…故小利有攸往，天文也」 without the four characters. 王弼's note there reads 「剛柔交錯而成文焉，天之文也」. 朱熹本义 says 「先儒說天文上當有剛柔交錯四字，理或然也」, a supplement usually traced to 郭京's 周易舉正. The chapter quotes the four characters and comments on 交错 in them, so the general caveat (texts not collated) does not flag this known variant. The replacement is acceptable. It is restyled below to mark the outside quotations as not checked, like line 176's 「此句不在冻结语料之中，本节未能逐字核对」. The chapter's reading depends only on 觀乎天文，以察時變.",
+    "new": "- 「剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。」〔YD-JP22〕\n  - 异文：通行王弼注本之彖无「剛柔交錯」四字，王弼注作“刚柔交错而成文焉，天之文也”；唐郭京《周易举正》以为此处脱文，朱熹本义说“先儒说天文上当有刚柔交错四字，理或然也”（皆不在冻结语料中，本节未能逐字核对）。冻结本有此四字；本节之读只依「觀乎天文，以察時變」。"
+   },
+   {
+    "index": 11,
+    "real": true,
+    "reason": "The defect is real (severity low), but the replacement needs correcting. In frozen DS02, the sentence follows 「十有八变而成卦」 (第九章) and sits in the 卜筮 paragraph of 第十章. xici-can-wu-cuo-zong says 「此段讲揲蓍」 of the whole fragment, including 通其变. The chapter says the flanking clauses are not carried because they are about yarrow, which implies the name's own clause is not. The replacement's 「相合在此」 moves the basis of the 相合 away from the preceding bullet's reading through the name table, which reads 通 as a continuable run and 变 as a process. Corrected: state the original divinatory sense, and say the 相合 takes only the structure.",
+    "new": "全句讲揲蓍：「通其变，遂成天下之文」原指通筮之诸变而成所画之爻（朱熹本义：通三揲两手之策，以成阴阳老少之画；不在冻结语料中）；上条之相合只取其结构，值沿变之行而成，不带揲蓍。「参伍以变，错综其数」与「极其数，遂定天下之象」不带：它们讲策数，是推尽策数而定卦象，"
+   },
+   {
+    "index": 12,
+    "real": false,
+    "reason": "Refuted. The chapter does not grant 尽 universally. Its 定域 limits 尽意 to universes with a list of all states, and only where the state value is eventually a reading of the 文 (learnable_iff_reading). It also states the failure: a value that depends on the whole and on no part of it, a tail, cannot be exhausted by any finite reading. The entry xici-li-xiang-jin-yi is also 定域, but it reads a different structure: 象 as a finer map added to 言 (PartialReadout.exact_exists_iff, Diagonal.Unfolds.incomplete). The two ranges do not contradict each other. The book does not treat this sentence, and one account does not require the chapter to repeat every law of a compatible map entry. Citing the slug would be optional.",
+    "new": "「圣人立象以尽意」〔DS02〕——定域：在一族尽其状的宇中，状值能从文中读出"
+   }
+  ]
+ },
+ {
+  "key": "complete",
+  "findings": [
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "「像」（文于一步之值即像）。二状于一法经一象逐步之值皆同，谓之文同",
+    "problem": "The naming answer leaves out two alternatives a careful reader would raise. (1) 文 as 象: in 易传, 文 and 象 are paired (「成天下之文……定天下之象」, 「八卦以象告」), but no reason is given for not calling the course 象. (2) 文 as a configuration at one time: 文理生生's own reading in reference 15. Its diagram labels 文 「交错组织的整体」 and §二 reads 「物相杂」 as 「有位次的差异组织」. The head mentions this only indirectly, inside the 出处 bullet (定域). It never says that this is 文理生生's reading, and it never states the reason for declining it: that object is already named 状.",
+    "evidence": "Name table: 象 = 「模型：映射本身（r : K → V）」, 状 = 「构形（configuration）：展开在一步之所是，它怎样相关」. Both are introduced at 一·三 (chapter §一 「象与读（一·三）」, 「状、动、步（一·三）」). sources/wenli-shengsheng-v0.4/research/references/15_易传通过文连接卦象语词与系统_v0.1.md §一 diagram node 「文 在此指交错组织的整体」; §二 「把文解释为有位次的差异组织」. The head's 不取的名 lists only 历程、序、迹、像.",
+    "new": "「像」（文于一步之值即像）；「象」（名表已名映射本身，一·三；一历经异象得异文，文是象沿行所给之值，不是象）。文也可以名一时有位次的差异之组织，文理生生 15 号即如此读（「交错组织的整体」）；不取，因为那是一状（一·三），它经一象之值是像，二者名表已有，「物相杂」之定域即在此。二状于一法经一象逐步之值皆同，谓之文同",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "「所以迹」不采为名，中华本附录二）。",
+    "problem": "The 名之分工 list of names not taken has the same gap as the head. It gives no reason for not taking 象 (the map) or 文理生生's configuration reading of 文 (15 号). The two lists of names not taken should agree.",
+    "evidence": "centre.fragment line 122: 「不取：以「历程」为名……；序……；像……；迹……」. Neither 象 nor the configuration reading appears. Name table rows 象 and 状 (book 附录一). 15 号 §一–§二.",
+    "new": "「所以迹」不采为名，中华本附录二）；象（名表已名映射本身；文是象沿行所给之值）。以文名一时有位次的差异之组织（文理生生 15 号之读）也不取：那是一状，其经象之值是像。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "- 文只给值，不给状与动。文于一步之值，就是那一步之状的像。",
+    "problem": "The chapter names 文 without using what 文理生生 itself says 文 is. Three of its statements bear on the name, and the chapter cites none of them. (1) Its working definition includes 时序. (2) Its per-character mapping says 文 「跟踪配置随时间改变」. (3) Its model skeleton writes observation as y_t = H_c(S_t, 观测条件). A sequence of y_t along a run is the same structure as Parting.course (reg (r.state n)). The project also says that taking 文 as its base is an entry point, not a derivation; the naming should carry the same caveat.",
+    "evidence": "03_文理生生_基础全图与动态文法_v0.2.md §一: 「有差异的成分，在一定关系与时序中呈现出的可辨样态」 and 「「以文为基」在当前版本中是研究入口与组织原则，并非从一个更原初的文概念逻辑推导出五元」. §五: 「观察记为 y_t = H_c(S_t, 观测条件)，包含漏检、分辨率及误差」. 04_逐字动态映射与古文出处_v0.2.md, 文 row: 「描述差异成分如何形成可辨配置，跟踪配置随时间改变」. The chapter links only 01, 02, the README and basis/lower_bound_review into the research.",
+    "new": "- 文只给值，不给状与动。文于一步之值，就是那一步之状的像。\n- 文理生生之文与此名（讀，AI，D63）：它的工作定义是「有差异的成分，在一定关系与时序中呈现出的可辨样态」，其模型骨架把观察记为 `y_t = H_c(S_t, 观测条件)`（[基础全图 §一、§五](../../../sources/wenli-shengsheng-v0.4/research/references/03_文理生生_基础全图与动态文法_v0.2.md)）；其逐字映射说文「描述差异成分如何形成可辨配置，跟踪配置随时间改变」（[04 号](../../../sources/wenli-shengsheng-v0.4/research/references/04_逐字动态映射与古文出处_v0.2.md)文行）。H_c 相当于象，一行逐步之 y_t 就是此处所名之文（同构；H_c 另含观测条件与误差，核心之象是一函数）。文理生生也说，以文为基是「研究入口与组织原则」，不从文推出五元（03 号 §一）；此处之名同样是一项约定（「未决与限度」）。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "- 象是映射，像是一者之值，状值是每一状之值。往是文的前段。",
+    "problem": "The chapter never cites or places reference 15, 「易传通过文连接卦象语词与系统」, the project's account of how 文 links 象, 卦, 辞 and action. Reference 15 puts 文 as a layer between the 卦爻 configuration and 辞, which is a different position from the course. The 名之分工 is where to say how that chain maps onto the book's names (象, 状, 系辞, 择) and how the two readings of 文 relate.",
+    "evidence": "15 号 §一 diagram: 象 → 卦爻配置 → 「文 在此指交错组织的整体」 → 辞 → 行动. §九: 「“文作为差异的关系组织”、总图、概念职责表、现代对应条件及G1接口，均为本项目的综合重建」. Name table: 系辞 = `Becoming.Frame` (claims attached to each configuration); 缘感而择 = `Becoming.Web.SelectsThrough`. grep finds no link to 15 in WENLI-AND-BECOMING.md.",
+    "new": "- 象是映射，像是一者之值，状值是每一状之值。往是文的前段。\n- 文理生生 15 号把《易传》读作一条链：观物取象，立卦成卦爻之配置，配置相杂而成文（「交错组织的整体」），系辞把情境、条件与判断说完整，再及于行动（[易传通过文连接卦象语词与系统](../../../sources/wenli-shengsheng-v0.4/research/references/15_易传通过文连接卦象语词与系统_v0.1.md) §一、§二）。依本表之名：象是所施之映射，卦爻之配置是一状，辞系于每一状（系辞，`Becoming.Frame`），择缘感而行（`Becoming.Web.SelectsThrough`）；15 号之文是一状及其像，本表之文是象沿行逐步之值。两读之异只在文名一时之组织还是名沿步之值（部分同构）；15 号自言此链是「综合重建」。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "**古书。** 「读书百遍而义自见」。总计划 §八 的出处校正引《三国志·王肃传》裴松之注所引董遇之事。此句不在冻结语料之中，本节未能逐字核对。",
+    "problem": "The chapter does not use 文理生生's evidence index and collation notes (05), which settle exactly this passage. It repeats the plan's uncorrected attribution (a 王肃传) and an unchecked wording. It also says it cannot check the wording, although the imported index gives the verbatim page text, a second witness, the corrected location, and the limits of what the anecdote supports.",
+    "evidence": "05_原典证据索引与校勘说明_v0.2.md, 「董遇与反复阅读」: D1 「《三国志》卷13，《王朗传》附王肃，裴松之注引《魏略》董遇事：“讀書百徧而義自見”」, with the boundary 「不能证明百遍这一数量必然有效，也不能证明中文独有迁移效果」; D2 《太平御览》卷616 「當先讀百遍，而義自見」. 「本轮重要校正」 8: 「董遇不是三国志单立本传。准确位置是王朗传附王肃的裴注引《魏略》。本页作“读书百徧而义自见”；“读书百遍，其义自见”可标通行转述」.",
+    "new": "**古书。** 「讀書百徧而義自見」，见《三国志》卷十三王朗传附王肃，裴松之注引《魏略》董遇之事（文理生生[原典证据索引](../../../sources/wenli-shengsheng-v0.4/research/references/05_原典证据索引与校勘说明_v0.2.md) D1）；《太平御览》卷六一六引作「當先讀百遍，而義自見」（D2）。此句不在冻结语料之中，本节依该索引转引，未能对冻结原文逐字核对。总计划 §八 作「读书百遍而义自见」、记在王肃传，索引之校正第八条改正其位置，并说「读书百遍，其义自见」是通行之转述。索引又说，此事「不能证明百遍这一数量必然有效，也不能证明中文独有迁移效果」。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "   - 所以一类是否为理，不随其粗细单调变化，也不在类本身，而在所行之法（七·二）。",
+    "problem": "Reference 16's water-tank model (§六–§七, verified in 17) is not accounted for. It has the same structure as 律 5: water level is not a 理, just as the count of yang lines is not. 16's own remedy (an abstraction with several successors, checked for spurious paths) is 律 4's 以类代状之变 together with image_exact_iff. The model is also a direct application of the chapter's central claim, 律 1: the states read off the water-level 文 recover the pump mode that the coarse class drops. That makes it the clearest case where the epistemology of 文 meets 文理生生's own model.",
+    "evidence": "16_文的组合规则与系统推演_v0.1.md §六: 「3开下一步为4停，3停下一步为2开」; cycle 「4停 → 3停 → 2开 → 3开 → 4停」. §七: 「如果只保存水量而删去泵模式，3开和3停都会被映为3，却分别走向4和2」; 「为分类够用的表示，未必为预测够用」; 「改用允许多个后继的抽象；后一种做法还应检查它是否增加了现实中不存在的路径」. 17 README: 「保留水量但删去泵模式，会丢失决定下一步的信息」. Chapter 律 5: 「泰、否各有三刚爻，下一步一成四、一成二」. For the 文 4,3,2,3,…: steps 1 and 3 both have value 3 but are followed by 2 and 4, so they are not SameAhead. The sequence has period 4, which gives four states.",
+    "new": "   - 所以一类是否为理，不随其粗细单调变化，也不在类本身，而在所行之法（七·二）。\n   - 文理生生的止行水箱（[16 号 §六、§七](../../../sources/wenli-shengsheng-v0.4/research/references/16_文的组合规则与系统推演_v0.1.md)；17 号）是同一结构：状是水量与泵之模式，三开下一步至四停，三停下一步至二开。以水量为类，三开与三停并为一类，下一步却一至四、一至二，所以水量之类不是理，与刚爻之数同（同构；文理生生之构造之例）。16 号说「为分类够用的表示，未必为预测够用」；它的另一办法，改用允许多个后继的抽象并检查是否增加不存在的路径，就是律 4 的以类代状之变与其路之条件（`Becoming.image_exact_iff`）。\n   - 讀（AI，D63）：从水量之文也读得出被删去的模式。循环中水量之文是 4，3，2，3，4，3，2，3，…：第 1 步与第 3 步（自第 0 步起数）之值皆三，其次值一为二、一为四，所以这二步不为一状（`Becoming.SameAhead` 之定义）；此文终而复始，读出之状恰四种，正是循环中的四停、三停、二开、三开（§一 律 1、律 3）。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "这与文理生生所说「过程顺接要求实际中间状态相同」相合。",
+    "problem": "Reference 16, 「文的组合规则与系统推演」, the project's own composition rules for 文, is not accounted for. The chapter's §七 cites only the README sentence on process concatenation. Three parts of 16 are missing: its composition law 转合, C(P,π,Q) and C(Q,ρ,R) giving C(P,π;ρ,R) with a non-emptiness requirement; its two junction kinds (configurations joined through a common object, processes through pre- and postconditions); and its eight composition rules. The chapter should state how each relates to the spine: trace_append_iff is only the existential half, and the eight rules are grammar design, not laws.",
+    "evidence": "16 号 §二: the eight rules 选义、定位、联结、成式、定时、明变、转合、断辞. §三: 「配置通过共同对象接合，过程通过前后条件接合」. §四: C(P, π, Q) := P ⇒ (〈π〉真 ∧ [π]Q), 「P成立时，π至少有一次允许执行，而且所有允许终态都满足Q」, 「要求非空，是为了避免把“没有任何后继，所以没有反例”误当成过程成功」. GenerativeCore.lean trace_append_iff: Trace P s (xs ++ ys) t ↔ ∃ m, Trace P s xs m ∧ Trace P m ys t.",
+    "new": "这与文理生生所说「过程顺接要求实际中间状态相同」相合。\n- **转合与两种接点**（[16 号 §二至§四](../../../sources/wenli-shengsheng-v0.4/research/references/16_文的组合规则与系统推演_v0.1.md)）：文理生生定 C(P, π, Q)：「P成立时，π至少有一次允许执行，而且所有允许终态都满足Q」；由 C(P, π, Q) 与 C(Q, ρ, R) 得 C(P, π;ρ, R)，并要求非空，免于把「没有任何后继，所以没有反例」当作成功。它又分两种接点：配置经同一对象相接，过程经前后条件相接。`Generative.trace_append_iff` 只给其中存在之一面（两串动相接，恰在有同一中间之状）；全称一面与非空之要求合成的转合之律，本章不对应。16 号的八条组合规则（选义、定位、联结、成式、定时、明变、转合、断辞）是文理生生文法之设计，不是律，不对照。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "认识论在文与它所读出的状与法之中，不在字形之中；它在字所绑定的关系之中。",
+    "problem": "§七 opens with the dialogue's claim that Chinese concepts compose like small system models. It never reports 文理生生's own audit verdict on that claim or on 「复合词是微型理论」. The verdict accepts only a conditional modern reconstruction and only a schema sense of 「微型理论」. It also says that content added in modelling is not information the word encodes. That last point is the same direction as the chapter's own code laws, where a code read off probes is right on unprobed forms only under a further premise.",
+    "evidence": "18_核心研究主张与完成边界审计_v0.1.md §一, table: 「Chinese concepts compose like small system models.」 → 「条件化的现代重构已实现」, 「选定词义、句法、角色及领域条件后，一些概念可作为小型关系与过程模型的组合接口」. §三: 「若用“miniature theory”，应说明这是图式意义上的宽义用法」; 「补入内容不能再被记作词面已经编码的信息」. The chapter cites 18 only for H2 not run and for §5.2.",
+    "new": "认识论在文与它所读出的状与法之中，不在字形之中；它在字所绑定的关系之中。\n- 文理生生的审计对「概念组合像小的系统模型」「复合词是微型理论」两说的裁定（[18 号 §一、§三](../../../sources/wenli-shengsheng-v0.4/research/references/18_核心研究主张与完成边界审计_v0.1.md)）：选定词义、句法、角色及领域条件之后，一些概念可作小型关系与过程模型的组合接口，这是条件化的现代重构；「微型理论」只在图式的宽义上可说；补入的内容「不能再被记作词面已经编码的信息」。这与上面码之律同向：所问排除不了在别处相反的律，读出之码在未问之式上为对，依于另给的前提。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "- 相生不是因果，有向之环不是反馈。",
+    "problem": "The twelve construction cards (生生、感应、中和、变通、分合、名实、本末、虚实、阴阳、自然、无为、相生) and their thirteen micro-models are a central part of v0.4, and the chapter does not account for them. §七 mentions only the card format. Five of the 同读 bullets match card conclusions but are not tied to their cards. 生生, 中和, 本末, 虚实, 阴阳 and 无为 are not compared at all. Some of these differ in kind from the book's names: the book's 中和 and 变通 take other structures, and 无为 and 虚 are not adopted.",
+    "evidence": "research/constructions/构式与微型模型.md: twelve cards CX01–CX12, with 13 models because 相生 has two readings; failure cases, e.g. CX01 「一次/有限次生成⇒永远生生；静态不死⇒正在生成」, CX07 「本治必然末治」, CX09 「据名称声称必然相变或守恒即越出证据」. Name table: 生生 `Becoming.Web.Widens`; 存 `Becoming.Web.Holds`; 中和 `Becoming.Regulation` (「此名只取其构」); 中节 `Becoming.Flow.WithinGap`; 变通 `Becoming.Pace` (「规则读取所处之构形而变」); 通 `Becoming.Onward.run_iff_continues`; 小故 = 必要条件; 以广为愈 = 「唯一排序历程的前提」; 虚、阴阳、无为 not adopted (附录二). All cited declarations are in receipt 20261022T070506.681048Z.",
+    "new": "- 相生不是因果，有向之环不是反馈。\n\n**十二构式与十三个微型模型**（讀，AI，D63）。文理生生把原 32 组表达统一登记，展开生生、感应、中和、变通、分合、名实、本末、虚实、阴阳、自然、无为、相生十二张构式卡；相生分概念相待与有向支持两读，所以有十三个微型模型（[构式与微型模型](../../../sources/wenli-shengsheng-v0.4/research/constructions/构式与微型模型.md)）。每卡以有穷之例拒一些推论。各卡与本书之关系如下；微型模型是文理生生之构造之例，不入脊柱。\n\n| 构式 | 卡所拒之推论 | 本书 | 关系 |\n|---|---|---|---|\n| 生生 | 有限次生成⇒永远生生；静态不死⇒正在生成 | 生生名整体中的生及其继续生成（`Becoming.Web.Widens`）；一步之持存名存（`Becoming.Web.Holds`），跨步之持续名久 | 部分同构：两边都不以持存为生成；卡计生成之接续，本书以广比较（篇六） |\n| 感应 | 感应⇒反馈；先后相随⇒已识别之因果；反馈⇒稳 | 感（`Becoming.Web.CoupledInto`）、应（`Becoming.ExchangeLaw.RespondsTo`） | 同构（上「应不是反馈，反馈不是稳」） |\n| 中和 | 未发⇒必和；合宜⇒可行 | 中和只取其构：相反给向，中节给界（`Becoming.Regulation`、`Becoming.Flow.WithinGap`） | 同字异构：情之未发与合节之评价本书不带 |\n| 变通 | 变⇒通；通⇒久；有好路径⇒行者能择之 | 变通名规则读取所处之构形而变（`Becoming.Pace`）；通名行之可续（`Becoming.Onward.run_iff_continues`）；择只缘所感（`Becoming.Web.SelectsThrough`） | 部分：「变不蕴含通」同构；两边之变通不同构 |\n| 分合 | 合是分之逆；成员守恒⇒组织身份恒定 | 复只指构形再得（`Becoming.Branching.Returns`），续是跨步之同一（`Becoming.Web.Continues`） | 同构（上「复」） |\n| 名实 | 由标签推对象之性；同类之名⇒同一者 | 名、码、义项（`Becoming.SharedCodes`）；一一改名不改所载之法（`Becoming.SharedCodes.renamed_carries_iff`） | 同构（上「名无固宜」）；实本表未用 |\n| 本末 | 本治⇒末治；先后之序是自然律 | 小故（必要条件）；以广为愈是唯一排序之设 | 部分：必要而不充分与小故同构；次序须另设，与本书同向；本、末本表未用 |\n| 虚实 | 据旧观测之择跨时仍对；分类是对象之本质 | 虚不采为名，容、余地另名 | 不可比 |\n| 阴阳 | 名为阴阳⇒必交替 | 爻值名刚柔；环在所行之法（`Becoming.Hexagram.waxWane`） | 两边皆不立为名；环在法不在名，与第一部分 §四 律 5 同向 |\n| 自然 | 自然⇒自复而不须外来之与 | 自外来、自然之法 | 同构（上「自然不免于外来之与」） |\n| 无为 | 无为⇒不作任何动作；许可⇒有效 | 无为不采为名（附录二） | 本表不立 |\n| 相生（二读） | 相待⇒互因；有向之环⇒反馈；令牌环可运行⇒实物无限增殖 | — | 同构（上「相生不是因果，有向之环不是反馈」） |\n\n原 32 组中其余登记层之行未展开为卡，不另对照。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "这是一个可以认领的后续项目。",
+    "problem": "The chapter does not mention the eight-character typed rule graph or the three engine models behind it. The graph gives 13 edges over 生变势理分合中和: nine modern rules and four normative interfaces. Its senses differ from the book's names, so the edges cannot be carried over as laws. Some edges still have exact spine counterparts. edge_03 (tightening allowed edges does not enlarge reach) is Becoming.Branching.SubProcess.reach. edge_04 (reassembly does not restore the old whole) matches 复/续. The normative interfaces keep feasibility and fitness apart, the same direction as significance_undetermined.",
+    "evidence": "research/graph/八字有类型规则图.md: 「9条有明确边界的现代规则、4条规范接口」. Senses: 生 core.044.02 实例进入模式; 势 core.061.01 配置决定的可达画像; 理 core.002.02 可行路径的限制. edge_03: 「Reach_R′(s) ⊆ Reach_R(s)」. edge_04: 「终态整体是D≠A」. Edges 05/06/09/13 are 「明确规范接口」. Junctures.lean: theorem SubProcess.reach (sub : SubProcess Q P) : Reach Q x y → Reach P x y (in receipt as Becoming.Branching.SubProcess.reach). 18 号 §五: 「不是八卦」, 「而非已经恢复的古典知识总拓扑」.",
+    "new": "这是一个可以认领的后续项目。\n\n**八字有类型规则图。** 文理生生把生、变、势、理、分、合、中、和八字之图的十三条邻接逐条处置：九条限定之现代规则，四条规范接口；每条有所选义项、前提、结论、反例与可复跑之查询，依重组、约束可达、表达与评价三个公开的模型（[八字有类型规则图](../../../sources/wenli-shengsheng-v0.4/research/graph/八字有类型规则图.md)，[规则案例](../../../sources/wenli-shengsheng-v0.4/research/engine/README.md)）。图中八字所取之义多与本书之名不同（生取实例入类，势取可达画像，理取允许边之限），所以十三条规则不移作脊柱之律，只按结构对照（讀，AI，D63）：\n\n- edge_03（势—理）：收紧允许之边，可达不扩大。同构：一变之步皆在另一变之中，则前者所能至者后者皆能至（`Becoming.Branching.SubProcess.reach`）。\n- edge_04（分—合）：分而再合，部件重聚而原整体不复（新整体 D 不是 A），谱系不等于同一。与本书复只指构形再得、续另名跨步之同一、所出另名世系相合（见上「复」）。\n- 四条规范接口（edge_05、06、09、13）：可行与合宜分算，可行不推出合宜，合宜不保证可行。与脊柱「所表示的动力学不定顾」（`Becoming.Web.significance_undetermined`）同向。\n- 其余诸边依所选之义与模型而立，本章不对应。\n\n图自言是研究之索引，不是八卦，也不是古典知识之总拓扑（18 号 §五）。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "  - 取象的对应条件，就是本理论的 `Lumped`。",
+    "problem": "The 八卦 comparison leaves out three results in references 11 and 14. (1) Coarsening a system onto trigrams can create cycles that do not exist. 11 §十 gives the repair condition: every concrete state's successors, read through β, are exactly the abstract successors. With aggregated edges that condition is MatchesThrough, and image_exact_iff is the exact law. (2) The same eight trigrams under three different rules have different long-run structure. (3) The synchronization (common endpoint) counterexample. The chapter's §四 律 4 states the spine law but never ties it to these results.",
+    "evidence": "11_八卦系统与组合文法_动力结构与转化_v0.1.md §十: 「具体系统只有两条边：a→b与c→d……令a、d都编码为乾，b、c都编码为坤……就得到 乾→坤→乾」; 「若每个具体状态s都满足 β(Post_tick(s))=Post_抽象tick(β(s))……就能排除上例这种隐藏死端」; 「同步约束还有共同终点问题」. 14 abstraction_results.json path_counterexample: forward lifting holds, backward fails, 「existentially aggregated edges may concatenate different representatives and create spurious indefinite paths」. 14 README: 「相同的八种结构可以支持保持、收敛、循环等不同历程」. LawAlongRun.lean: MatchesThrough P π := ∀ s s' a u', π s = π s' → P.step s' a u' → ∃ u, P.step s a u ∧ π u = π u'; image_exact_iff.",
+    "new": "  - 取象的对应条件，就是本理论的 `Lumped`。\n  - 粗化可造出不存在的环（[11 号 §十](../../../sources/wenli-shengsheng-v0.4/research/references/11_八卦系统与组合文法_动力结构与转化_v0.1.md)、[14 号](../../../sources/wenli-shengsheng-v0.4/research/references/14_八卦动力学验证_v0.1/README.md)之抽象反例：只有 a→b、c→d 二边，a、d 记为乾，b、c 记为坤，聚合之卦间边成乾→坤→乾）：这就是以类代状之变之路多于变之路。11 号所立之条件（每一具体之状，其后继经取象恰是抽象之后继），在取聚合之边时就是 `Becoming.MatchesThrough`；以类代状之变如实给出诸路，恰在此条件之处（`Becoming.image_exact_iff`，第一部分 §四 律 4）。同构（讀，AI，D63）。\n  - 同一组八卦，在保持、清零、反相轮换三法之下长期结构各异（14 号）；本理论中一类是否为理也随所行之法而变（`Becoming.Hexagram.yangOdd_goAlike`、`Becoming.Hexagram.nuclear_yang_not_goAlike`）。同向。\n  - 同步之共同终点（11 号 §十、14 号：每一原子过程各自可提升，二者之交仍可不保）：本章不对应。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "- 同归失其分。",
+    "problem": "The atlas data is imported but only said to be imported. Its central design choice has a spine counterpart that the chapter does not state. Every relation is stored as a node that keeps all its participants, and a line between two characters is only an undirected projection, never a pairwise inference. The spine counterpart is that a whole need not be recovered from its pairs (separation_faithful_iff, whole_not_in_pairs). The atlas's 49 model and diagram records are also unaccounted for.",
+    "evidence": "atlas/integrity.json: relationNodesWithParticipants 2806, all_relations_keep_full_participants true; modelCoverage timeExecutable 37, analyticDisplays 3, staticOrSchematic 9 (models 49). atlas/word-network.json criteria.unit: 「有出处的多元证据组；图上两字连线只是无向投影。」; criteria.construction: 「不把共现当作两两充分推论」. RELEASE-README: 49 records are 「多来源的记录及反例，不代表49套独立理论」.",
+    "new": "- 同归失其分。\n- 兼不在两两之中：文理生生之图谱把每一关系存为保留全部参与者的一个节点（2806 个关系节点），字与字的连线只是无向之投影，不当作两两之推论（[图谱完整性](../../../sources/wenli-shengsheng-v0.4/atlas/integrity.json)、[字际关系](../../../sources/wenli-shengsheng-v0.4/atlas/word-network.json)）。脊柱上，分述二体能复原其兼，恰在兼是矩形之处（`Becoming.separation_faithful_iff`）；三体中任两体都可以自由相配，而三者合起来有一个关系（`Becoming.whole_not_in_pairs`，构造之例）。同构（讀，AI，D63）。图谱另汇 49 个模型与图示之记录（37 个可推进，3 个解析展示，9 个静态示意），是文理生生诸模型之汇集，不另对照。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "- 「复」：两边都读作构形之返回，不是同一个体之返回。",
+    "problem": "Reference 06, the project's full review report, is not accounted for. Most of it is a v0.2 process record that 18 says was superseded. Its main substantive correction (R01) has a counterpart on the spine that the chapter should state: separating the identity relation from lineage, which can fork and merge. The book likewise separates 续 (identity across steps) from 所出 (descent).",
+    "evidence": "06_文理生生_全面复核报告_v0.2.md §2 R01: 「分开同一关系 I 与谱系承接 L；L可分叉、汇合，身份须另判」, applied to 03 §五 and 04. 18 号 「结论」: 「03、06中早期“尚不可执行”的评价也已被07—10更新」. Name table: 续 = 「跨步之同一」 `Becoming.Web.Continues`; 所出 = 世系 `Becoming.Flow.DescendsAt`.",
+    "new": "- 「复」：两边都读作构形之返回，不是同一个体之返回。\n- 同一与谱系：文理生生 06 号复核之 R01 分开同一关系（I）与谱系承接（L，可分叉、汇合，身份须另判），已入 03—05（[全面复核报告](../../../sources/wenli-shengsheng-v0.4/research/references/06_文理生生_全面复核报告_v0.2.md) §2）；本书分续（跨步之同一，`Becoming.Web.Continues`）与所出（世系，`Becoming.Flow.DescendsAt`）。相合（讀，AI，D63）。06 号其余是 v0.2 之过程记录，其「尚不可执行」之评已为 07—10 所更新（18 号「结论」），不另对照。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "有一处本理论更彻底：文理生生把观与证放在模型之外，作为元层；本理论把知放在展开之内（识）。",
+    "problem": "The candidate grammar at the centre of 文理生生, 「五元一镜」, is never named. The chapter covers the 镜 (§六), but the five operations 辨、系、序、化、限 are not mentioned as an organization. Nothing says how they relate to the spine: the individual characters appear in the crosswalk, the project itself does not claim they are primitives, and the book has no table of primitives.",
+    "evidence": "01 总计划 §三 「候选最小文法：五元一镜」; 03 基础全图 §三 「五元各自是什么操作」. 18 号 §7.1: 「“辨、系、序、化、限”现阶段是组织这些能力的五类接口，尚未被定义并证明为五个不可替代的语义原子」. crosswalk.tsv: 辨、序、化 S (同构); 限 O (部分同构); 系 D (同字异构). grep finds no 「五元」 in WENLI-AND-BECOMING.md.",
+    "new": "有一处本理论更彻底：文理生生把观与证放在模型之外，作为元层；本理论把知放在展开之内（识）。\n\n文理生生的候选文法是「五元一镜」：辨、系、序、化、限五类操作并列，观／证为镜（[总计划 §三](../../../sources/wenli-shengsheng-v0.4/research/references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md)，[基础全图 §三](../../../sources/wenli-shengsheng-v0.4/research/references/03_文理生生_基础全图与动态文法_v0.2.md)）。镜见第一部分 §六。五元之字分见逐字之对照（辨、序、化同构，限部分同构，系同字异构）。作为五个原语，文理生生自己说它们「尚未被定义并证明为五个不可替代的语义原子」（18 号 §七）；本书不立原语之表，状与法自文读出（第一部分 §一），所立之最小只对一条法、一个类而言（第一部分「本节未立者」4）。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "或只是历史上的对应表。",
+    "problem": "The chapter states the status of H2 and H3 but never mentions H1, the first of 文理生生's three hypotheses. It also gives the 88/117 agreement figure without saying what that figure does not show. It compares two AI readings of 144 selected characters. It is not a measure of how many reusable compositions classical texts contain, which is what H1 claims.",
+    "evidence": "01 总计划 §1.1: 「H1 文本性 | 古文中存在可复用的结构、关系、过程、制约之概念组合。」. 18 号 §八: H1 「选定材料中的存在性和可重构性已有实质支持；总体覆盖仍未测定。」. The chapter's 「本节未立者」 has items for H2 (2) and H3 (4) only; grep finds no H1.",
+    "new": "或只是历史上的对应表。这些数不是文理生生 H1（「古文中存在可复用的结构、关系、过程、制约之概念组合」，总计划 §1.1）的检验：所比的是两份 AI 对 144 个选定之字的读法，不是古文中有多少可复用之组合；文理生生 18 号 §八 记 H1 在选定材料中已有实质支持，总体覆盖仍未测定。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "- 文理生生的形式部分与八卦，逐项对照。",
+    "problem": "The head's list of what was built names only the formal part and the 八卦 as compared item by item. If the omissions above are added (construction cards, the eight-character rule graph, the atlas, reference 15), the summary should name them. This finding depends on those insertions being applied.",
+    "evidence": "head.fragment line 23. The chapter-rest sections that the findings above extend: 同读之处; 文理生生的形式部分与八卦.",
+    "new": "- 文理生生的形式部分、十二构式与微型模型、八字有类型规则图、图谱与八卦，逐项对照。",
+    "severity": "missing"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": false,
+    "reason": "Already accounted for. In the head, the 三义 bullet places 文理生生's configuration sense (文¹; dictionary 08 文 sense 1 可辨样态, sourced from Y01/Y02, the same texts 15 号 reads) as 「一时之纹是一状经一象之值，即像；沿步而读，就是文」. The 出处 bullet says the 杂 of 物相杂 is a state, not a 文. So the alternative object and the reason for not naming it 文 are both already there. Attributing the reading to 15 号 belongs in the centre (finding 3, accepted). Adding 象 as a declined name is not worth a sentence: the defining sentence 「一历之状经一象逐步之值」 uses 象 as the map, so no reader can take 象 for the course.",
+    "new": ""
+   },
+   {
+    "index": 1,
+    "real": false,
+    "reason": "The two lists of names not taken already agree: both decline 历程, 序, 像 and 迹. The same 名之分工 list says 「象是映射，像是一者之值」 one line above. The configuration reading is handled in the centre's 物相杂 bullet (「那是一状（卦），不是文」) and its 鸟兽之文 bullet (像). Finding 3, accepted, attributes 15 号's reading in this same 名之分工.",
+    "new": ""
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "Verified. 03 §一 defines 文 as 「有差异的成分，在一定关系与时序中呈现出的可辨样态」, says this definition already borrows 差异、关系与时序, and calls 以文为基 「研究入口与组织原则」. The 文 row of 04 says 「描述差异成分如何形成可辨配置，跟踪配置随时间改变」. 03 §五 writes observation as y_t = H_c(S_t, 观测条件), with 漏检、分辨率及误差. The chapter links neither 03 nor 04, although this is the project's own evidence bearing on the name. Two fixes to the replacement. (1) It calls the y_t course 同构 and then lists differences (observation conditions, error), so it should say 部分同构. (2) 「同样是一项约定」 draws the wrong parallel: 03's point is that 文 borrows 差异、关系与时序, so the matching point is that this 文 also borrows the shared step index and equality of values (the name table's 文 note, 所依之拟).",
+    "new": "- 文只给值，不给状与动。文于一步之值，就是那一步之状的像。\n- 文理生生之文与此名（讀，AI，D63）：文理生生给文的工作定义是「有差异的成分，在一定关系与时序中呈现出的可辨样态」，并说这一定义已借用差异、关系与时序，所以「以文为基」是「研究入口与组织原则」，不从文推出五元（[基础全图 §一](../../../sources/wenli-shengsheng-v0.4/research/references/03_文理生生_基础全图与动态文法_v0.2.md)）。其逐字映射说文「描述差异成分如何形成可辨配置，跟踪配置随时间改变」（[逐字映射](../../../sources/wenli-shengsheng-v0.4/research/references/04_逐字动态映射与古文出处_v0.2.md)文行）；其模型骨架把观察记为 `y_t = H_c(S_t, 观测条件)`，含漏检、分辨率与误差（基础全图 §五）。沿一轨迹逐步之 y_t 与此处之文部分同构：H_c 当象，但另含观测条件与误差，核心之象是一函数。此处之文也有所借：共同之步标，与以相等比较之值（名表文之注「所依之拟」）；其名是一项约定（「未决与限度」）。"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "Verified that WENLI-AND-BECOMING.md never links reference 15, which is 文理生生's own account of how 文 links 象, 卦, 辞 and action. Its diagram has 「文 在此指交错组织的整体」 between the 卦爻 configuration and 辞, and §九 calls the chain 「综合重建」. One sentence placing it in the book's names is warranted. Three fixes to the replacement. 「两读之异只在……」 overclaims: 15 also says 文's meaning changes with context and treats 文 as an interpretive layer. Mapping 行动 to 缘感而择 is a stretch, so it is dropped. 辞 is described as 15 describes it, including 变化.",
+    "new": "- 象是映射，像是一者之值，状值是每一状之值。往是文的前段。\n- 文理生生 15 号把《易传》读作一条链：观物取象，立卦成卦爻之配置，爻物相杂而成可辨之配置，即文（「交错组织的整体」），辞把情境、条件、变化与判断说完整，再及于行动（[易传通过文连接卦象语词与系统](../../../sources/wenli-shengsheng-v0.4/research/references/15_易传通过文连接卦象语词与系统_v0.1.md) §一、§二）。依本表之名：象是所施之映射，卦爻之配置是一状，辞系于每一状（系辞，`Becoming.Frame`）；15 号之文是一状及其像，本表之文是象沿行逐步之值。两读之异，在文名一时之组织，还是名沿步之值（部分同构；15 号也说文之义随语境而变）。15 号自言此链是「综合重建」。"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "Verified. The chapter repeats the plan's 《三国志·王肃传》 and says it cannot check the wording. 文理生生's imported 05 gives three things here. D1 has the page text 「讀書百徧而義自見」, with the location 卷13 王朗传附王肃, 裴注引《魏略》, and the boundary 「不能证明百遍这一数量必然有效，也不能证明中文独有迁移效果」. D2 has 《太平御览》卷616 「當先讀百遍，而義自見」. Correction 8 says 董遇 has no separate biography and that 「读书百遍，其义自见」 is a common paraphrase. The replacement is accurate. It keeps the following sentence on Ren's wording intact and adds no 〔〕 id, so verify_zh is unaffected.",
+    "new": "**古书。** 「讀書百徧而義自見」，见《三国志》卷十三王朗传附王肃，裴松之注引《魏略》董遇之事（文理生生[原典证据索引](../../../sources/wenli-shengsheng-v0.4/research/references/05_原典证据索引与校勘说明_v0.2.md) D1）；《太平御览》卷六一六引作「當先讀百遍，而義自見」（D2）。此句不在冻结语料之中，本节依该索引转引，未能对冻结原文逐字核对。总计划 §八 作「读书百遍而义自见」、记在王肃传，索引之校正第八条改正其位置，并说「读书百遍，其义自见」是通行之转述。索引又说，此事「不能证明百遍这一数量必然有效，也不能证明中文独有迁移效果」。"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "Verified against 16 §六–§七. The cycle 4停→3停→2开→3开→4停 gives the water-level 文 4,3,2,3,…, with period 4. Steps 1 and 3 both have the value 3, but the next values are 2 and 4, so they are not SameAhead, and exactly four states are read off. Under the water-level class, 3开 and 3停 go to 4 and 2, so the class is not GoAlike, the same structure as 律 5's yang count. 16's alternative, an abstraction with several successors checked for spurious paths, matches Image and image_exact_iff. This applies the chapter's central 律 1 to 文理生生's own model, so it is worth adding. Fixes: the first bullet's structural correspondence is an AI reading and now carries 讀（AI，D63）; 17 号 gets a link; 「就是」 becomes 「对应」.",
+    "new": "   - 所以一类是否为理，不随其粗细单调变化，也不在类本身，而在所行之法（七·二）。\n   - 文理生生的止行水箱（[16 号 §六、§七](../../../sources/wenli-shengsheng-v0.4/research/references/16_文的组合规则与系统推演_v0.1.md)；[17 号](../../../sources/wenli-shengsheng-v0.4/research/references/17_文卦系统映射验证_v0.1/README.md)）是同一结构（讀，AI，D63；文理生生之构造之例）：状是水量与泵之模式，三开下一步至四停，三停下一步至二开。以水量为类，三开与三停并为一类，下一步却一至四、一至二，所以水量之类不是理，与刚爻之数同。16 号说「为分类够用的表示，未必为预测够用」；它的另一办法，改用允许多个后继的抽象并检查是否增加现实中不存在的路径，对应律 4 的以类代状之变与其路之条件（`Becoming.image_exact_iff`）。\n   - 讀（AI，D63）：从水量之文也读得出被删去的模式。自四停起，水量之文是 4，3，2，3，4，3，2，3，…：第 1 步与第 3 步（自第 0 步起数）之值皆三，其次值一为二、一为四，所以这二步不为一状（`Becoming.SameAhead` 之定义）；此文终而复始，读出之状恰四种，正是循环中的四停、三停、二开、三开（§一 律 1、律 3）。"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "The omission is real: §七 is about composition and cites only the README, not 16's composition law 转合 or its two junction kinds (configuration through a common object, process through pre- and postconditions). But the replacement's 「全称一面……本章不对应」 is wrong in effect, because the current receipt 20261022T070506.681048Z has a counterpart in the foundation layer with an empty axiom report: Generative.InquirySufficiency.completes_append_iff. It states that Completes over (past ++ future) holds iff past completes the goal 「Completes future」. Completes requires every move to be Enabled and every successor to continue, which is 16's C with non-emptiness at each step. Its one-move case is Becoming.MoveOutcomeProcesses.completes_one_iff. The law is partly isomorphic, since it is stronger than 〈π〉真. Corrected text below. Note: after this insertion, the 体例 sentence 「两处例外：……Generative.trace_append_iff 在基础层」 should also name completes_append_iff.",
+    "new": "这与文理生生所说「过程顺接要求实际中间状态相同」相合。\n- **转合与两种接点**（[16 号 §二至§四](../../../sources/wenli-shengsheng-v0.4/research/references/16_文的组合规则与系统推演_v0.1.md)）：文理生生定 C(P, π, Q)：「P成立时，π至少有一次允许执行，而且所有允许终态都满足Q」；由 C(P, π, Q) 与 C(Q, ρ, R) 得 C(P, π;ρ, R)，并要求非空，免于把「没有任何后继，所以没有反例」当作成功。它又分两种接点：配置经共同之对象相接，过程经前后条件相接。`Generative.trace_append_iff` 只给存在之一面。全称而非空之一面，基础层有部分同构之律（讀，AI，D63）：一串动自一状成其所求，是每一动于所至之处皆可行、所至之状皆续、终处皆合所求（`safe` 取恒真）；两串相接而成，恰当前串成「后串于此成其所求」（`Generative.InquirySufficiency.completes_append_iff`，与 `Generative.trace_append_iff` 同在基础层，公理报告空）。它要求每一所至之处皆可行，比「至少有一次允许执行」更强。16 号的八条组合规则（选义、定位、联结、成式、定时、明变、转合、断辞）是文理生生文法之设计，不是律，不对照。"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "Verified in 18 §一 and §三. The audit judges 「Chinese concepts compose like small system models」 as 条件化的现代重构已实现: some concepts become composition interfaces only after sense, syntax, roles and domain conditions are chosen. It allows 「miniature theory」 only in a broad, schematic sense, and says 「补入内容不能再被记作词面已经编码的信息」. §七 opens with this dialogue claim and never reports the project's own verdict on it; it cites 18 only for H2 and §5.2. The addition is minor but on point. Fix: the paraphrased English claims are no longer set in 「」 as though they were Chinese quotations.",
+    "new": "认识论在文与它所读出的状与法之中，不在字形之中；它在字所绑定的关系之中。\n- 文理生生的审计对概念组合像小的系统模型、复合词是微型理论两说（审计所列之主张，原为英文）的裁定（[18 号 §一、§三](../../../sources/wenli-shengsheng-v0.4/research/references/18_核心研究主张与完成边界审计_v0.1.md)）：选定词义、句法、角色及领域条件之后，一些概念可作小型关系与过程模型的组合接口，这是条件化的现代重构；微型理论只在图式的宽义上可说；补入的内容「不能再被记作词面已经编码的信息」。这与上面码之律同向：所问排除不了在别处相反的律，读出之码在未问之式上为对，依于另给的前提。"
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "Real and significant. The twelve cards and thirteen micro-models are a named part of v0.4: the release counts 12 重点构式与13微型模型, and they are listed in the AI context of Ren's request source. The chapter mentions only the card format, and five 同读 bullets come from cards (CX02, CX04, CX05, CX10, CX12; see agents/wenli/read-dictionary.json) without citing them. Each row was checked against 构式与微型模型.md, the name table and the receipt. Rejected inferences: CX01, CX03, CX04, CX05, CX06, CX07 (本治必然末治; 避免把顺序判断伪装成自然律), CX08 (旧标签; 不能把分类说成对象本质), CX09, CX10, CX11 (不是不做任何动作; 伦理许可和事实效能不可混同), CX12. Every cited Lean name is in the receipt. Fixes: (1) The 分合 card's lesson is 同归失其分 (CX05.R2 against Law.Merges.loses), not only 复, so the row now cites both. (2) 名实 against 名无固宜 is 同向, not 同构. (3) 虚实 「不可比」 is not one of the chapter's categories; symbols-not-adopted says 容纳之构名容、余量名余地, so the relation is 本表不立. (4) 篇六 is narrowed to 六·十六. (5) 分合 is a supplementary entry, not one of the original 32.",
+    "new": "- 相生不是因果，有向之环不是反馈。\n\n**十二构式与十三个微型模型**（讀，AI，D63）。文理生生统一登记原 32 组表达（另补分合一组），展开生生、感应、中和、变通、分合、名实、本末、虚实、阴阳、自然、无为、相生十二张构式卡；相生分概念相待与有向支持两读，所以有十三个微型模型（[构式与微型模型](../../../sources/wenli-shengsheng-v0.4/research/constructions/构式与微型模型.md)）。每卡以有穷之例拒一些推论。各卡与本书之关系如下；微型模型是文理生生之构造之例，不入脊柱。\n\n| 构式 | 卡所拒之推论 | 本书 | 关系 |\n|---|---|---|---|\n| 生生 | 有限次生成⇒永远生生；静态不死⇒正在生成 | 生生名整体中的生及其继续生成（`Becoming.Web.Widens`）；一步之持存名存（`Becoming.Web.Holds`），跨步之持续名久 | 部分同构：两边都不以持存为生成；卡计生成之接续，本书以广比较（六·十六） |\n| 感应 | 感应⇒反馈；先后相随⇒已识别之因果；反馈⇒稳 | 感（`Becoming.Web.CoupledInto`）、应（`Becoming.ExchangeLaw.RespondsTo`） | 同构（上「应不是反馈，反馈不是稳」） |\n| 中和 | 未发⇒必和；合宜⇒可行 | 中和只取其构：相反给向，中节给界（`Becoming.Regulation`、`Becoming.Flow.WithinGap`） | 同字异构：情之未发与合节之评价本书不带 |\n| 变通 | 变⇒通；通⇒久；有好路径⇒行者能择之 | 变通名规则读取所处之构形而变（`Becoming.Pace`）；通名行之可续（`Becoming.Onward.run_iff_continues`）；择只缘所感（`Becoming.Web.SelectsThrough`） | 部分：「变不蕴含通」同构；两边之变通不同构 |\n| 分合 | 合是分之逆；成员守恒⇒组织身份恒定 | 同归（`Becoming.Law.Merges`）失其分；复只指构形再得（`Becoming.Branching.Returns`）；续是跨步之同一（`Becoming.Web.Continues`） | 同构（上「同归失其分」「复」） |\n| 名实 | 由标签推对象之性；同类之名⇒同一者 | 名、码、义项（`Becoming.SharedCodes`）；一一改名不改所载之法（`Becoming.SharedCodes.renamed_carries_iff`） | 同向（上「名无固宜」）；实本表未用 |\n| 本末 | 本治⇒末治；先后之序是自然律 | 小故（必要条件）；以广为愈是唯一排序之设 | 部分：必要而不充分与小故同构；次序须另设，与本书同向；本、末本表未用 |\n| 虚实 | 据旧观测之择跨时仍对；分类是对象之本质 | 虚不采为名，容纳之构名容，余量名余地 | 本表不立 |\n| 阴阳 | 名为阴阳⇒必交替 | 爻值名刚柔；环在所行之法（`Becoming.Hexagram.waxWane`） | 两边皆不立为名；环在法不在名，与第一部分 §四 律 5 同向 |\n| 自然 | 自然⇒自复而不须外来之与 | 自外来（`Becoming.Flow.FedFromBeyond`）、自然之法（`Becoming.Shown`） | 同构（上「自然不免于外来之与」） |\n| 无为 | 无为⇒不作任何动作；许可⇒有效 | 无为不采为名（中华本附录二） | 本表不立 |\n| 相生（二读） | 相待⇒互因；有向之环⇒反馈；令牌环可运行⇒实物无限增殖 | — | 同构（上「相生不是因果，有向之环不是反馈」） |\n\n原 32 组中其余登记层之行未展开为卡，不另对照。"
+   },
+   {
+    "index": 9,
+    "real": true,
+    "reason": "Real. The eight-character typed rule graph (13 edges: 9 bounded modern rules and 4 norm interfaces, run on three models: reorganization, constraints, expression_norms) is a named v0.4 component that the chapter never mentions. Checked: edge_03 「Reach_R′(s) ⊆ Reach_R(s)」 matches Becoming.Branching.SubProcess.reach (SubProcess Q P → Reach Q x y → Reach P x y, in the receipt). edge_04 has D≠A, and §二 says 谱系不等于严格同一. Edges 05, 06, 09 and 13 are 明确规范接口. Fixes: (1) 「图自言……」 was wrong, since 「不是八卦」 and 「总拓扑」 are the audit's words (18 §五, §5.2), not the graph's, so they are now attributed to the audit. (2) The graph's 理 uses both 结构条理 and 可行路径的限制.",
+    "new": "这是一个可以认领的后续项目。\n\n**八字有类型规则图。** 文理生生把生、变、势、理、分、合、中、和八字之图的十三条邻接逐条处置：九条有界之现代规则，四条规范接口；每条有所选义项、前提、结论、反例与可复跑之查询，依重组、约束可达、表达与评价三个公开的模型（[八字有类型规则图](../../../sources/wenli-shengsheng-v0.4/research/graph/八字有类型规则图.md)，[规则案例](../../../sources/wenli-shengsheng-v0.4/research/engine/README.md)）。图中八字所取之义多与本书之名不同（生取实例入类，势取可达画像，理取结构条理与可行路径之限），所以十三条规则不移作脊柱之律，只按结构对照（讀，AI，D63）：\n\n- edge_03（势—理）：收紧允许之边，可达不扩大。同构：一变之步皆在另一变之中，则前者所能至者后者皆能至（`Becoming.Branching.SubProcess.reach`）。\n- edge_04（分—合）：分而再合，部件重聚而原整体不复（新整体 D 不是 A），谱系不等于同一。与本书复只指构形再得、续另名跨步之同一、所出另名世系相合（见上「复」）。\n- 四条规范接口（edge_05、06、09、13）：可行与合宜分算，可行不推出合宜，合宜不保证可行。与脊柱「所表示的动力学不定顾」（`Becoming.Web.significance_undetermined`）同向。\n- 其余诸边依所选之义与模型而立，本章不对应。\n\n文理生生的审计说，此图是一项研究取舍，不是八卦，也不是已经恢复的古典知识之总拓扑（18 号 §五）。"
+   },
+   {
+    "index": 10,
+    "real": true,
+    "reason": "Item (1) is real. 11 §十 and 14 (abstraction_results: forward lifting holds, backward fails, 「existentially aggregated edges may concatenate different representatives and create spurious indefinite paths」) give the spurious-cycle counterexample. 11's repair condition, β(Post(s)) = Post_abs(β(s)) for every s with aggregated edges, is exactly MatchesThrough for the move, and image_exact_iff is the law. The head claims 八卦 is compared item by item, so this is worth a sentence. Item (2) is wrong as written. To show the same class changing with the law, the pair is yangOdd_goAlike against nuclear_yangOdd_not_goAlike (as in 律 5), not nuclear_yang_not_goAlike. The point is also already made by the existing 同读 bullet (坤之吸收属于所选之律), so (2) is dropped. Item (3) is folded into the same bullet.",
+    "new": "  - 取象的对应条件，就是本理论的 `Lumped`。\n  - 粗化可造出不存在的环（[11 号 §十](../../../sources/wenli-shengsheng-v0.4/research/references/11_八卦系统与组合文法_动力结构与转化_v0.1.md)、[14 号](../../../sources/wenli-shengsheng-v0.4/research/references/14_八卦动力学验证_v0.1/README.md)之抽象反例）：具体只有 a→b、c→d 二边，a、d 记为乾，b、c 记为坤，聚合之卦间边成乾→坤→乾，可以无尽地循环，具体却没有一条二步之路。这就是以类代状之变之路多于变之路（第一部分 §四 律 4）。11 号所立之条件（每一具体之状，其后继经取象恰是抽象之后继），在取聚合之边时就是 `Becoming.MatchesThrough`；以类代状之变如实给出诸路，恰在此条件成立之处（`Becoming.image_exact_iff`）。同构（讀，AI，D63）。11 号与 14 号另有同步之共同终点之反例（每一原子过程各自可提升，二者之交仍可不保），本章不对应。"
+   },
+   {
+    "index": 11,
+    "real": true,
+    "reason": "Real but minor. Ren's request was to integrate the 图谱 itself, yet the chapter only says its data was imported. Checked: integrity.json has relationNodesWithParticipants 2806 and all_relations_keep_full_participants true; modelCoverage is 37 time-executable, 3 analytic, 9 static or schematic. word-network.json criteria say 「图上两字连线只是无向投影」 and 「不把共现当作两两充分推论」. Fixes: (1) A storage design and a law are not 同构, so the relation is 同向. (2) The 49 records are described as the release README describes them: 多来源的记录及反例，不代表49套独立理论.",
+    "new": "- 同归失其分。\n- 兼不在两两之中：文理生生之图谱把每一关系存为保留全部参与者的一个节点（2806 个关系节点），字与字的连线只是无向之投影，不把共现当作两两之推论（[图谱完整性](../../../sources/wenli-shengsheng-v0.4/atlas/integrity.json)、[字际关系](../../../sources/wenli-shengsheng-v0.4/atlas/word-network.json)）。脊柱上，分述二体能复原其兼，恰在兼是矩形之处（`Becoming.separation_faithful_iff`）；三体中任两体都可以自由相配，而三者合起来有一个关系（`Becoming.whole_not_in_pairs`，构造之例）。同向（讀，AI，D63）：图谱之存法不把兼拆成两两，脊柱之律说兼可不在两两之中。图谱另汇 49 个模型与图示之记录（37 个可推进，3 个解析展示，9 个静态示意），是多来源之记录与反例，不是 49 套独立之理论（[发布说明](../../../sources/wenli-shengsheng-v0.4/RELEASE-README.md)），不另对照。"
+   },
+   {
+    "index": 12,
+    "real": false,
+    "reason": "Not worth a separate entry. 06 is a superseded v0.2 process review: 18's conclusion says its 「尚不可执行」 assessments were updated by 07–10. Its R01 correction, separating I from L, is now part of 03 §五. The 同读 list is explicitly a list of examples (「例子如下」), not an exhaustive one. The identity-versus-lineage point is already carried by 「化」与「一实」 (跨步之同一) and 「复」 (不是同一个体之返回). With finding 9 accepted, edge_04 also states 「谱系不等于同一」 and ties it to 续 and 所出 (世系).",
+    "new": ""
+   },
+   {
+    "index": 13,
+    "real": true,
+    "reason": "Verified. The candidate grammar 五元一镜 is the headline of 01 §三 and 03 §三, and the word 「五元」 never appears in the chapter. 18 §7.1 says 「尚未被定义并证明为五个不可替代的语义原子」. The crosswalk gives 辨、序、化 S, 限 O, 系 D. Fix: 「本书不立原语之表」 is an unverified claim about the book and is replaced by what 「本节未立者」 4 actually says.",
+    "new": "有一处本理论更彻底：文理生生把观与证放在模型之外，作为元层；本理论把知放在展开之内（识）。\n\n文理生生的候选文法是「五元一镜」：辨、系、序、化、限五类操作并列使用，观／证为镜（[总计划 §三](../../../sources/wenli-shengsheng-v0.4/research/references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md)，[基础全图 §三](../../../sources/wenli-shengsheng-v0.4/research/references/03_文理生生_基础全图与动态文法_v0.2.md)）。镜见第一部分 §六。五元之字分见逐字之对照：辨、序、化同构，限部分同构，系同字异构（本表以系名系辞）。作为五个原语，文理生生自己说它们「尚未被定义并证明为五个不可替代的语义原子」（18 号 §七）；脊柱上的最小只对一条法、一个类而言，没有一个普遍的最小语法（第一部分「本节未立者」4）。"
+   },
+   {
+    "index": 14,
+    "real": false,
+    "reason": "Not worth a sentence. The chapter never presents the 88/117 figure as evidence for H1. It describes the figure as agreement between the two projects' character readings, says independence is partial, and says both are AI-written. H1 is a claim about classical texts that the chapter neither uses nor asserts. 「本节未立者」 lists only what the chapter itself might be taken to claim (H2, H3, best medium), so a disclaimer about a hypothesis it does not invoke adds nothing.",
+    "new": ""
+   },
+   {
+    "index": 15,
+    "real": true,
+    "reason": "Conditional on findings 8, 9, 10 and 11, which were accepted: the head's list of what was built should then name the cards and the rule graph. The proposed text overclaims on the 图谱: it is not compared item by item. Only one design point is compared, and its 49 model records are explicitly not compared. Corrected so the atlas is pointed to, not listed as compared item by item.",
+    "new": "- 文理生生的形式部分、十二构式与十三个微型模型、八字有类型规则图与八卦，逐项对照；图谱存关系之法见「同读之处」。"
+   }
+  ]
+ }
+]

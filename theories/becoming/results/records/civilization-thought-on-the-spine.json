@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T22:12:39+00:00",
   "statement": {
-    "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 447 classical names, one per concept, state the theory in the 中华本《变化论》.",
-    "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；447 个古典之名，每概念一个，写成中华本《变化论》。"
+    "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.",
+    "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。"
   },
   "hypotheses": [
     {
@@ -31,8 +31,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 96 classical words in the table carry no checked quotation.",
-      "zh": "古典之名复原了文本之意，或未录出处之名在先秦已有用例：名表中 96 个古名与复名没有经核对的引文。",
+      "en": "That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 95 classical words in the table carry no checked quotation.",
+      "zh": "古典之名复原了文本之意，或未录出处之名在先秦已有用例：名表中 95 个古名与复名没有经核对的引文。",
       "kind": "scope"
     },
     {
@@ -375,17 +375,17 @@
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "0912771b8a34b0650c01eb53c0ab2d32acc21f10952018d841286acd2a0e0822"
+      "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
-      "sha256": "273bd9e499e23bef9c8c551b527bcfcaa017cbb089d4dfbfd729bc27b04aa5dc"
+      "sha256": "6f1f56609e41394082939b85c3a8930a989b5cc48d6ed2e5469421b12c566a51"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "39e70de4690cc6d8a4870c303333486e08e12312585670331b9b6d3c7cfc6f07"
+      "sha256": "c32cc989794d54f344c652545597c844c1e24878ab657c4e244bfd664dc84701"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -395,22 +395,22 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
       "role": "integration",
-      "sha256": "6d3d9920e756fdf4e5cff436efedf99f73400aad0310bac26755f7f422140c5a"
+      "sha256": "efc6057952af18de57becde1ac27bbd1f9d1e5c0a85ed71ceed60ab2f87ee440"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "467d0a0b4449cf9b37d51945f24f6134158ca5e7b8189c13c14875f89d8a6609"
+      "sha256": "83448941bc3e65efcb563246fc7ba00bd0f6eb33f0682d23a072fb4b4ff09f91"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",
       "role": "integration",
-      "sha256": "cddb8fe87e548638ba4778f020da31242ce557a1bb53aba330d71662273bfa1c"
+      "sha256": "95391e1689a5e3a14eb407e818c8ad6f9046def021a097735f590a7e27cff0e9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "review",
-      "sha256": "b42e8238e805aa0756bb4448dffd3e923b3c867f7e30f8f81aab7cb05e46472b"
+      "sha256": "3a53265df4060a584e7ebeca0d8bf0a1606138cf1f4e27128676a092f3e3b787"
     },
     {
       "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
@@ -460,6 +460,10 @@
     {
       "en": "22 October 2026, ZG8: the last open gap note, 唯识「無因」, reads the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient; study section 345); no gap note of the map is open.",
       "zh": "2026年10月22日，ZG8：最后仍开之 gap 注唯识「無因」改读充要之形成之律（记录 forming-anew-necessary-and-sufficient；研究第 345 节）；对应中已无仍开之 gap 注。"
+    },
+    {
+      "en": "22 October 2026 (WL, study section 346, D63): the name table's seventh pass adds 文 and 文同 (449 names) and revises others against 文理生生's sources; the 中华本 gains 一·二十一; the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do; see wenli-on-the-spine.",
+      "zh": "2026年10月22日（WL，研究第 346 节，D63）：名表第七次之改立文与文同（449 个名），并据文理生生之出处修订他名；中华本增一·二十一；对应表条目 xici-ji-qi-shu 读「极其数」只为揲蓍之数，有界之律只作对照，与 xici-can-wu-cuo-zong 及一·二十一同；见 wenli-on-the-spine。"
     }
   ]
 }

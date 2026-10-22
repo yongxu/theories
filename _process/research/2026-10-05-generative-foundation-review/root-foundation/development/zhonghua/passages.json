@@ -23850,7 +23850,7 @@
       "identification-where-bounded",
       "learning-by-refutation"
      ],
-     "reading": "AI读法：此‘数’是揲蓍之数，原文说筮法做到底而定卦象（Y1 dayan 以数占筮为相分）。脊柱只取有限之数穷尽而定之结构：至多 N 与 N′ 个状态之两历史，在 N+N′−1 步前之前段相同，则处处相同（Identification.prefix_fixes）；至多 N 个状态之历史上，N 之内的套索候选在 N+N−1 步前不失误，则永不失误，归纳即演绎（Identification.bounded_induction）；无界之处无前段固定下一值（Learning.no_prefix_fixes_next）。筮法由数定卦只是一个有限之程序，不在争议之中；以所定之卦为天下之象、由之知来，不被承认。",
+     "reading": "AI读法：此‘数’是揲蓍之数，原文说筮法做到底而定卦象（Y1 dayan 以数占筮为相分）。把「数」读为状态数之界只是字同，不取（xici-can-wu-cuo-zong，中华本一·二十一）；以下有界之律只作对照（九·三十三），不是此句之读：至多 N 与 N′ 个状态之两历史，在 N+N′−1 步前之前段相同，则处处相同（Identification.prefix_fixes）；至多 N 个状态之历史上，N 之内的套索候选在 N+N−1 步前不失误，则永不失误，归纳即演绎（Identification.bounded_induction）；无界之处无前段固定下一值（Learning.no_prefix_fixes_next）。筮法由数定卦只是一个有限之程序，不在争议之中；以所定之卦为天下之象、由之知来，不被承认。",
      "names_used": [],
      "checked": "corrected"
     },

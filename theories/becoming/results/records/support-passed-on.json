@@ -115,12 +115,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "39e70de4690cc6d8a4870c303333486e08e12312585670331b9b6d3c7cfc6f07"
+      "sha256": "c32cc989794d54f344c652545597c844c1e24878ab657c4e244bfd664dc84701"
     },
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "0912771b8a34b0650c01eb53c0ab2d32acc21f10952018d841286acd2a0e0822"
+      "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",

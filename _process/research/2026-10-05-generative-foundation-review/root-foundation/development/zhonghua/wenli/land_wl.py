@@ -102,7 +102,7 @@ Result(s): {ID} (new); civilization-thought-on-the-spine (history note: the name
 Delta: 文 named the course, a run's states read through a map step by step (Becoming.Parting.course,
        Becoming.Learnable.course), and 文同 the sameness of two states' courses under a law (Becoming.Law.SameFuture);
        the 中华本 gains 一·二十一「文与文同」 ({ntiao} 條) and states 篇九's line of knowing on 文 ({jing_changed} 經
-       and {shuo_changed} 說 changed in all, among them 凡例's 古文 to 古书 and references renumbered after 一·二十一); the
+       changed, and the 說 alone in {shuo_changed} more, {jing_changed + shuo_changed} 條 in all; among them 凡例's 古文 to 古书 and references renumbered after 一·二十一); the
        epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 read off the 文 in one sense only, the least reading, knowing within the unfolding, composition) tied link by link to checked laws,
        each with where it holds and where it fails; 文理生生's {len(cw)} characters against the name table
        ({cat['S']} same structure, {cat['O']} partly, {cat['D']} same character with another structure, {cat['NC']}
@@ -131,8 +131,8 @@ Ren, 22 October 2026, after the AI's comparison of 文理生生 with the theory:
 
 **What was found.**
 - *The name.* The spine has one object every link of 篇九's line of knowing is stated on and the name table lacked: a run's states read through a map step by step (`o : Nat → O`). 文 names it, from 「通其变，遂成天下之文」: its states are read off it (two steps from which every value agrees are one state, `Becoming.SameAhead`; such steps stay one state, `Becoming.SameAhead.next`), and under a law they are exactly the alike classes (`Becoming.IdentificationRuns.sameAhead_iff_alike`). 历 stays the given states and moves; the same sequence read as values is a 文. 文理生生's three senses fall into one 文 (the visible pattern; writing, a 文 whose values are names, matched to senses by a code) and 理 (the structure read: the coarsest value-keeping 理 merges exactly the states with the same 文, by four checked laws together).
-- *The epistemology.* The laws are read off the unfolding (`Becoming.Shown.run`, `Becoming.exists_law_iff`); 读书百遍其义自见 is three laws (a bound makes a finite prefix fix the course, `Becoming.Identification.bounded_agree`, exact; in a world a list holds, a state value is learnable exactly when it is eventually a reading of the course, `Becoming.Learnable.learnable_iff`, `Becoming.Learnable.learnable_iff_reading`; given only that reading, prediction succeeds, `Becoming.Learnable.reading_predicts`), with its failures (meaning fixed outside the course, `Becoming.Learnable.not_predicts_on_both`; the diagonal course, `Becoming.Learning.diagonal_misses`); compression and generalization are one class (`Becoming.Learning.determines_lumped_iff`), exactly where it carries a law (`Becoming.Learning.goAlike_iff_lumped`).
-- *The two projects.* They agree on about three quarters of the 117 characters both judge, refuse the same characters as names, and reached the same two layers (a formal core and a classical reading layer); independence is partial (the same corpus, both AI-written). 文理生生 places 观/证 above the model; the core places knowing within the unfolding (识).
+- *The epistemology.* The laws are read off the unfolding (`Becoming.Shown.run`, `Becoming.exists_law_iff`); 读书百遍其义自见 is three laws (a bound makes a finite prefix fix the course, `Becoming.Identification.bounded_agree`, with the exact length, `Becoming.Identification.bounded_agree_exact`; in a world a list holds, with values through the map decidably equal or not (and, for the reading form, a value v₀ of the state values' type), a state value is learnable exactly when it is eventually a reading of the course, `Becoming.Learnable.learnable_iff`, `Becoming.Learnable.learnable_iff_reading`; given only that reading, prediction succeeds, `Becoming.Learnable.reading_predicts`), with its failures (meaning fixed outside the course, `Becoming.Learnable.not_predicts_on_both`; the diagonal course, `Becoming.Learning.diagonal_misses`); compression and generalization are one class (`Becoming.Learning.determines_lumped_iff`), which holds of any class given decidable classes and two values; generalization is right exactly where the world goes alike across the class (`Becoming.Learning.lumped_right_iff`), and, for the class of the next state under a law, exactly where the class is a 理 (`Becoming.Learning.goAlike_iff_lumped`).
+- *The two projects.* They agree on about three quarters of the 117 characters both judge, refuse 16 of them as names alike (道, 气, 天, 性, 仁, 义 among them, while 7 the name table refuses are interfaces in 文理生生), and reached the same two layers (a formal core and a classical reading layer); independence is partial (the same corpus, both AI-written). 文理生生 places 观/证 above the model; the core places knowing within the unfolding (识).
 
 **What this changes.** The epistemology of the theory has a classical counterpart whose every link has a corresponding checked law with its scope (a correspondence, not a confirmation); the 中华本 names the object of knowing; the name table's notes add, at eighteen places where 文理生生 reads a character differently, its reading or the character's sense, most with the character's ordinary sense and the distance of the name from it. The English chapter and its modern Chinese edition are unchanged.
 
@@ -140,7 +140,7 @@ Ren, 22 October 2026, after the AI's comparison of 文理生生 with the theory:
 
 **Not done.** The H2 reading test and the fidelity count (`experiments/wenli-reading-transfer/`); the Lean items the chapter lists (the coarsest value-keeping 理 merging exactly the states with the same 文, as one theorem; the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational), each to be claimed on the board; G1 embedded as a query layer.
 
-**Self-review.** Every quotation, declaration, record link and generated table in the three chapters is checked by verify_zh.py; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed twice by independent lenses with a skeptic for each; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
+**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed twice by independent lenses with a skeptic for each; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
 '''
 
 row = (f'| D{D} | 文 named the course, and the epistemology of 文 (22 October) | adopted with exact scope: 文 = a run\'s states '
@@ -264,6 +264,7 @@ record = {
          'alike_moments_iff 与 identifiesAlike_of_law：自文读状，名同之类。'),
         ('generalization-through-lumping', 'Compression and generalization by one class.', '压缩与推广同一类。'),
         ('learning-by-refutation', 'Learning by elimination and no prefix fixing the next value.', '过则改，与往不定其次值。'),
+        ('what-an-extrapolation-given-nothing-fixes', 'learnable_iff_reading, reading_predicts and given_nothing_not_every: a state value learnable exactly when eventually a reading of the course, prediction given that reading, and no extrapolation given nothing learning every learnable value.', 'learnable_iff_reading、reading_predicts 与 given_nothing_not_every：状值可知恰当它自某步起是文之一读；给其读则自见；什么都不给，就不能于每一种可知的状值皆得。'),
         ('chinese-sources-on-the-spine', 'The RO map, whose kinds and layers are used.', 'RO 之对应，用其关系与层。')]
         if (RECORDS / f'{r}.json').exists()],
     'references': [{'path': p, 'role': role, 'sha256': sha(p)} for p, role in [
@@ -289,11 +290,14 @@ for k in ('en', 'zh'):
     for x in z['does_not_show']:
         x[k] = re.sub(r'\d+( classical words in the table| 个古名与复名)', str(unq) + r'\1', x[k])
 note = {'en': (f'22 October 2026 (WL, study section {S}, D{D}): the name table\'s seventh pass adds 文 and 文同 '
-               f'({names} names) and revises others against 文理生生\'s sources; the 中华本 gains 一·二十一; see {ID}.'),
+               f'({names} names) and revises others against 文理生生\'s sources; the 中华本 gains 一·二十一; the map entry '
+               f'xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong '
+               f'and 一·二十一 do; see {ID}.'),
         'zh': (f'2026年10月22日（WL，研究第 {S} 节，D{D}）：名表第七次之改立文与文同（{names} 个名），并据文理生生之出处修订他名；'
-               f'中华本增一·二十一；见 {ID}。')}
+               f'中华本增一·二十一；对应表条目 xici-ji-qi-shu 读「极其数」只为揲蓍之数，有界之律只作对照，与 xici-can-wu-cuo-zong 及一·二十一同；见 {ID}。')}
 z['history'] = [h for h in z['history'] if not h['en'].startswith('22 October 2026 (WL')] + [note]
-changed = {ED, MAP, f'{KIT}/work/names-decisions.tsv', f'{KIT}/verify_zh.py', f'{KIT}/build_tables.py', STUDY}
+changed = {ED, MAP, f'{KIT}/work/names-decisions.tsv', f'{KIT}/verify_zh.py', f'{KIT}/build_tables.py', STUDY,
+           f'{KIT}/passages.json'}
 for r in z['references']:
     if r['path'] in changed:
         r['sha256'] = sha(r['path'])
@@ -348,6 +352,9 @@ add = {'en': (' Extended on 22 October 2026, at his request of that day, to 文�
 for k in ('en', 'zh'):
     if add[k].strip() not in g['scope'][k]:
         g['scope'][k] = g['scope'][k].rstrip() + add[k]
+w = re.search(r'录有出处的 (\d+) 个名中，(\d+) 个', (ROOT / ED).read_text(encoding='utf-8')).groups()
+g['overview']['summary']['en'] = re.sub(r'\d+ classical names were fixed, one per concept, \d+ of the \d+ quoted', f'{names} classical names were fixed, one per concept, {w[1]} of the {w[0]} quoted', g['overview']['summary']['en'])
+g['overview']['summary']['zh'] = re.sub(r'定出 \d+ 个古典之名，每个概念一个，录有引文的 \d+ 个中 \d+ 个', f'定出 {names} 个古典之名，每个概念一个，录有引文的 {w[0]} 个中 {w[1]} 个', g['overview']['summary']['zh'])
 for s in (SRC, CH):
     if s not in g['sources']:
         g['sources'].append(s)

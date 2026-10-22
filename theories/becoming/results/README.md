@@ -36,7 +36,7 @@ Readings of 8 October 2026 and later · [Repository home](../../../README.md) ·
 <a id="覆盖与证据含义--coverage-and-evidence"></a>
 ## Coverage and evidence
 
-This reading edition covers **145 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 90 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
+This reading edition covers **146 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 89 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
 
 | Category | Meaning |
 |---|---|
@@ -197,6 +197,7 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`valuation-development`](../history/ARGUMENTS-M-Z-2026-10-08.md#valuation-development) | How valuation develops | mechanism mathematics |
 | [`valuation-identification-bounds`](../history/ARGUMENTS-M-Z-2026-10-08.md#valuation-identification-bounds) | Bounds for identifying changed evaluation | identification mathematics |
 | [`wang-yangming`](../history/ARGUMENTS-M-Z-2026-10-08.md#wang-yangming) | Wang Yangming, benevolence and situated practice | classical ethical |
+| [`wenli-and-becoming`](../chapters/WENLI-AND-BECOMING.md) | 文理生生 and the theory of becoming: 文, 理 and reading | classical comparison |
 | [`wisdom-and-context`](../history/ARGUMENTS-M-Z-2026-10-08.md#wisdom-and-context) | Wisdom, context and the common core | philosophical epistemic |
 | [`yi-zhuan-and-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#yi-zhuan-and-becoming) | The 易传 and the theory of becoming: the configurations of the 周易 on the spine | classical comparison |
 | [`zero-axiom-practical-judgment`](../history/ARGUMENTS-M-Z-2026-10-08.md#zero-axiom-practical-judgment) | Zero-axiom practical judgment | normative foundation |

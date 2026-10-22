@@ -296,6 +296,7 @@
         "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
         "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
         "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+        "theories/becoming/chapters/WENLI-AND-BECOMING.md",
         "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
       ]
     },
@@ -657,6 +658,7 @@
         "sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md",
         "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
         "sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md",
+        "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
         "sources/zhouyi-yizhuan/PROVENANCE.json",
         "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
         "theories/becoming/chapters/DAO-AND-GENERATIVITY.md",
@@ -996,6 +998,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/seventh-pass.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
         "sources/06-zhishan/shengsheng/生生不息论v1/生生不息论.md",
         "sources/07-shengsheng-buxi/ssbx-repo/README.md",
@@ -1034,11 +1037,13 @@
         "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
         "sources/15-codex-theory-conversations/2026-10-20-meta-attractor-note-taken-care-of.md",
         "sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md",
+        "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
         "sources/16-claude-code-directions/2026-09-25-the-mind-not-the-approach.md",
         "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
         "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
         "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
         "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+        "theories/becoming/chapters/WENLI-AND-BECOMING.md",
         "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
         "theories/meta-attractor/README.md"
@@ -1066,6 +1071,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/seventh-pass.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
         "sources/06-zhishan/shengsheng/生生不息论v1/生生不息论.md",
         "sources/07-shengsheng-buxi/ssbx-repo/README.md",
@@ -1102,10 +1108,12 @@
         "sources/15-codex-theory-conversations/2026-10-19-relational-ontology-of-chinese-thought.md",
         "sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md",
         "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
+        "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
         "sources/16-claude-code-directions/2026-09-25-the-mind-not-the-approach.md",
         "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
         "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
         "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+        "theories/becoming/chapters/WENLI-AND-BECOMING.md",
         "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md"
       ]
