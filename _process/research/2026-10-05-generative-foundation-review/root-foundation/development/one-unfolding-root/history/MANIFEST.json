@@ -10,6 +10,15 @@
       "batch": "moves-2026-10-23-one-unfolding-plan-v8",
       "reason": "superseded by plan version 9 (continuity as the root's centre)",
       "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/PLAN-v9.md",
+      "sha256": "135cba5e5d5ee1ea61acbd4229de78e5187e0807c266e65874aa6c0276f4d019",
+      "blob": "53aa6f2818138521f1726a527dd99893f9c7bbca",
+      "batch": "moves-2026-10-23-one-unfolding-plan-v9",
+      "reason": "superseded by plan version 10 (the three reviews of version 9 taken)",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md"
     }
   ]
 }

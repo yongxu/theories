@@ -6,3 +6,4 @@ Retired material, moved here with its bytes unchanged. Each file's former path, 
 | Here | Came from | Files | Reason | Batch |
 |---|---|---|---|---|
 | [PLAN-v8.md](PLAN-v8.md) | `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md` | 1 | superseded by plan version 9 (continuity as the root's centre) | moves-2026-10-23-one-unfolding-plan-v8 |
+| [PLAN-v9.md](PLAN-v9.md) | `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md` | 1 | superseded by plan version 10 (the three reviews of version 9 taken) | moves-2026-10-23-one-unfolding-plan-v9 |
