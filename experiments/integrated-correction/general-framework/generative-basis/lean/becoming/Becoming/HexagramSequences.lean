@@ -1020,6 +1020,34 @@ def gen : Bool × Bool × Bool := (false, false, true)
 /-- 坤. -/
 def kun : Bool × Bool × Bool := (false, false, false)
 
+/-- The line of three at a height (1 the bottom) turned. -/
+def flip3 : Nat → Bool × Bool × Bool → Bool × Bool × Bool
+  | 1, (a, b, c) => (!a, b, c)
+  | 2, (a, b, c) => (a, !b, c)
+  | _, (a, b, c) => (a, b, !c)
+
+/-- The line at a height is the one line of three that differs from the other two, which agree. -/
+def soleAt : Nat → Bool × Bool × Bool → Bool
+  | 1, (a, b, c) => (b == c) && (a != b)
+  | 2, (a, b, c) => (a == c) && (b != a)
+  | _, (a, b, c) => (a == b) && (c != a)
+
+/-- **One search, one line (說卦 「一索」「再索」「三索」).** A line of three is the sole line differing
+from the others exactly where the three are 乾 or 坤 with the line at that height turned: 震, 坎, 艮
+are 坤 searched at the bottom, the middle and the top, and 巽, 離, 兌 are 乾 so searched. -/
+theorem sole_iff_searched (t : Bool × Bool × Bool) :
+    soleAt 1 t = (t == flip3 1 qian || t == flip3 1 kun) ∧
+      soleAt 2 t = (t == flip3 2 qian || t == flip3 2 kun) ∧
+      soleAt 3 t = (t == flip3 3 qian || t == flip3 3 kun) := by
+  obtain ⟨a, b, c⟩ := t
+  cases a <;> cases b <;> cases c <;> exact ⟨rfl, rfl, rfl⟩
+
+/-- 震, 坎, 艮 are 坤 searched once, twice and three times; 巽, 離, 兌 are 乾 so searched. -/
+theorem searched :
+    flip3 1 kun = zhen ∧ flip3 2 kun = kan ∧ flip3 3 kun = gen ∧
+      flip3 1 qian = xun ∧ flip3 2 qian = li ∧ flip3 3 qian = dui :=
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩
+
 /-- Every line of three turned (錯). -/
 def complement3 : Bool × Bool × Bool → Bool × Bool × Bool
   | (a, b, c) => (!a, !b, !c)

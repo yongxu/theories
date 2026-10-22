@@ -1024,6 +1024,187 @@ below the line.** -/
 theorem fallStatements_agree : ∀ q, q ∈ fallStatements → falls (number q.1) q.2 = true :=
   fallsHold_sound rfl
 
+/-! ## Censuses of the 小象 and the 彖 (ZG6) -/
+
+/-- Every listed line is middle, told line by line. -/
+def middlesHold : List (Nat × Place) → Bool
+  | [] => true
+  | q :: l => middle q.2 && middlesHold l
+
+theorem middlesHold_sound : ∀ {l : List (Nat × Place)}, middlesHold l = true →
+    ∀ q, q ∈ l → middle q.2 = true
+  | [], _, _, mem => nomatch mem
+  | _ :: _, h, _, .head _ => (bool_of_and_true h).1
+  | _ :: _, h, q, .tail _ mem => middlesHold_sound (bool_of_and_true h).2 q mem
+
+/-- The 小象's sentences that say a line is 中 (以中, 得中, 中道, 在中, 中正, 正中, 中行, 中直, 中節,
+中以為志 and the like), by configuration and place, in the received order. -/
+def xiaoxiangMiddle : List (Nat × Place) := [
+    (2, .p5), (5, .p2), (5, .p5), (6, .p5), (7, .p2), (7, .p5), (8, .p5), (9, .p2), (10, .p2),
+    (11, .p2), (11, .p5), (13, .p5), (14, .p2), (15, .p2), (16, .p2), (16, .p5), (17, .p5),
+    (18, .p2), (19, .p5), (24, .p5), (26, .p2), (29, .p2), (29, .p5), (30, .p2), (32, .p2),
+    (34, .p2), (35, .p2), (39, .p5), (40, .p2), (41, .p2), (43, .p2), (43, .p5), (44, .p5),
+    (45, .p2), (47, .p2), (47, .p5), (48, .p5), (50, .p5), (51, .p5), (52, .p5), (54, .p5),
+    (57, .p2), (57, .p5), (60, .p5), (61, .p2), (63, .p2), (64, .p2)
+  ]
+
+/-- The 小象's other sentences with 中: 泰六四 「中心願也」 (the heart), 復六四 「中行獨復」 (quoting
+its line text), 豐九四 「日中見斗」 (noon), and 震上六 「中未得也」, which says the line has not the
+middle. -/
+def xiaoxiangMiddleOther : List (Nat × Place) := [(11, .p4), (24, .p4), (51, .p6), (55, .p4)]
+
+/-- **Every 小象 sentence saying a line is 中 is of a middle place**, the second or the fifth; the
+four other sentences with 中 are of places that are not middle, and none of them says the line is
+中. -/
+theorem xiaoxiangMiddle_census :
+    (∀ q, q ∈ xiaoxiangMiddle → middle q.2 = true) ∧ xiaoxiangMiddle.length = 47 ∧
+      ∀ q, q ∈ xiaoxiangMiddleOther → middle q.2 = false :=
+  ⟨middlesHold_sound rfl, rfl, fun q mem => match q, mem with
+    | _, .head _ => rfl
+    | _, .tail _ (.head _) => rfl
+    | _, .tail _ (.tail _ (.head _)) => rfl
+    | _, .tail _ (.tail _ (.tail _ (.head _))) => rfl⟩
+
+/-- The top place. -/
+def isTop : Place → Bool
+  | .p1 => false
+  | .p2 => false
+  | .p3 => false
+  | .p4 => false
+  | .p5 => false
+  | .p6 => true
+
+/-- Every listed place is the top, told one by one. -/
+def topsHold : List (Nat × Place) → Bool
+  | [] => true
+  | q :: l => isTop q.2 && topsHold l
+
+theorem topsHold_sound : ∀ {l : List (Nat × Place)}, topsHold l = true → ∀ q, q ∈ l → isTop q.2 = true
+  | [], _, _, mem => nomatch mem
+  | _ :: _, h, _, .head _ => (bool_of_and_true h).1
+  | _ :: _, h, q, .tail _ mem => topsHold_sound (bool_of_and_true h).2 q mem
+
+/-- The sentences saying a line's way is spent (窮, 亢): the 小象's 乾上九 「亢龍有悔」, 坤上六
+「其道窮也」, 隨上六 「上窮也」, 无妄上九 「窮之災也」, 姤上九 「上窮吝也」, 巽上九 「上窮也」, 節上六
+「其道窮也」, 小過上六 「已亢也」, and 比's 彖 「後夫凶，其道窮也」 of its top line. -/
+def spentStatements : List (Nat × Place) := [
+    (1, .p6), (2, .p6), (8, .p6), (17, .p6), (25, .p6), (44, .p6), (57, .p6), (60, .p6), (62, .p6)
+  ]
+
+/-- The 小象's other sentences with 窮: 屯六三 「往吝窮也」, 豫初六 「志窮凶也」, 大壯初九 「其孚窮也」,
+旅初六 「志窮災也」, 巽九三 「志窮也」, of will, trust or going, not of a way spent. -/
+def spentOther : List (Nat × Place) := [(3, .p3), (16, .p1), (34, .p1), (56, .p1), (57, .p3)]
+
+/-- **Every sentence saying a line's way is spent is of the top place**; the other sentences with
+窮 are of lower places. -/
+theorem spent_census :
+    (∀ q, q ∈ spentStatements → isTop q.2 = true) ∧
+      ∀ q, q ∈ spentOther → isTop q.2 = false :=
+  ⟨topsHold_sound rfl, fun q mem => match q, mem with
+    | _, .head _ => rfl
+    | _, .tail _ (.head _) => rfl
+    | _, .tail _ (.tail _ (.head _)) => rfl
+    | _, .tail _ (.tail _ (.tail _ (.head _))) => rfl
+    | _, .tail _ (.tail _ (.tail _ (.tail _ (.head _)))) => rfl⟩
+
+/-- Every listed seam rises, told seam by seam. -/
+def risesHold : List (Nat × Seam) → Bool
+  | [] => true
+  | q :: l => rises (number q.1) q.2 && risesHold l
+
+theorem risesHold_sound : ∀ {l : List (Nat × Seam)}, risesHold l = true →
+    ∀ q, q ∈ l → rises (number q.1) q.2 = true
+  | [], _, _, mem => nomatch mem
+  | _ :: _, h, _, .head _ => (bool_of_and_true h).1
+  | _ :: _, h, q, .tail _ mem => risesHold_sound (bool_of_and_true h).2 q mem
+
+/-- The sentences of a broken line carrying an unbroken one above it (承, 順乎剛): 節六四's 小象
+「承上道也」 (the seam above the fourth line), 旅's 彖 「柔得中乎外，而順乎剛」 (the fifth below the
+top), and 巽's 彖 「柔皆順乎剛」 (the first below the second, the fourth below the fifth). The 小象's
+other 承 (師九二 「承天寵」, 蠱 「承考」 「承以德」, 歸妹 「相承」 「承虛筐」) are receiving, carrying on,
+helping or holding, not of one line under another. -/
+def riseStatements : List (Nat × Seam) := [(56, .s56), (57, .s12), (57, .s45), (60, .s45)]
+
+/-- **Every sentence of a broken line carrying an unbroken one is of a rise at its seam.** -/
+theorem riseStatements_agree : ∀ q, q ∈ riseStatements → rises (number q.1) q.2 = true :=
+  risesHold_sound rfl
+
+/-- The 彖's sentences that a line is 中正, by the line they speak of: 訟 「尚中正也」, 履 「剛中正」,
+同人 「中正而應」 (the second and the fifth), 觀 「中正以觀天下」, 離 「柔麗乎中正」, 益 「中正有慶」
+(the second and the fifth), 姤 「剛遇中正」, 巽 「剛巽乎中正」 and 節 「中正以通」. -/
+def tuanCentreStatements : List (Nat × Place) := [
+    (6, .p5), (10, .p5), (13, .p2), (13, .p5), (20, .p5), (30, .p2), (42, .p2), (42, .p5),
+    (44, .p5), (57, .p5), (60, .p5)
+  ]
+
+/-- **Every 彖 sentence that a line is 中正 is of a middle line in phase.** -/
+theorem tuanCentreStatements_agree :
+    ∀ q, q ∈ tuanCentreStatements → middle q.2 = true ∧ inPhase (number q.1) q.2 = true :=
+  centresHold_sound rfl
+
+/-- Two more of the 小象's statements of place: 恆九四 「久非其位」 and 渙九五 「王居无咎，正位也」. 噬嗑
+六五's 「得當也」 is not listed: its line is broken at the fifth place and out of phase, its 彖 says
+「雖不當位」, and 「得當」 there is not a statement of place. -/
+def placeStatementsMore : List (Nat × Place × Bool) := [(32, .p4, false), (59, .p5, true)]
+
+/-- **They agree with the phase of their lines.** -/
+theorem placeStatementsMore_agree :
+    ∀ q, q ∈ placeStatementsMore → inPhase (number q.1) q.2.1 = q.2.2 :=
+  placesHold_sound rfl
+
+/-! ## The three powers (三才) -/
+
+/-- The three bands of 說卦's 「兼三才而兩之」: earth (lines 1, 2), man (3, 4) and heaven (5, 6). -/
+inductive Band where
+  | earth
+  | man
+  | heaven
+  deriving DecidableEq
+
+deriving instance DecidableEq for Height
+deriving instance DecidableEq for Seam
+
+/-- The band of a place. -/
+def bandOf : Place → Band
+  | .p1 => .earth
+  | .p2 => .earth
+  | .p3 => .man
+  | .p4 => .man
+  | .p5 => .heaven
+  | .p6 => .heaven
+
+/-- The seam within a band. -/
+def bandSeam : Band → Seam
+  | .earth => .s12
+  | .man => .s34
+  | .heaven => .s56
+
+/-- **Bands and heights are two divisions**: two places of one band have different heights, and two
+places of one height lie in different bands, so neither is a function of the other. -/
+theorem bands_and_heights (k k' : Place) :
+    bandOf k = bandOf k' → heightOf k = heightOf k' → k = k' := by
+  cases k <;> cases k' <;> intro band height <;> first | rfl | (cases band; done) | (cases height; done)
+
+/-- **Each band spans exactly one seam**, and the band of man spans the junction of the two
+trigrams: its lower place is the top of the lower trigram and its upper place the bottom of the
+upper one. -/
+theorem band_seams (b : Band) :
+    bandOf (below (bandSeam b)) = b ∧ bandOf (above (bandSeam b)) = b ∧
+      below (bandSeam .man) = place .lower .high ∧ above (bandSeam .man) = place .upper .low := by
+  cases b <;> exact ⟨rfl, rfl, rfl, rfl⟩
+
+/-- Only the band's own seam lies within it. -/
+theorem band_seam_unique (b : Band) (j : Seam) :
+    bandOf (below j) = b ∧ bandOf (above j) = b → j = bandSeam b := by
+  cases b <;> cases j <;> decide
+
+/-- Neither division is a function of the other: the first and fourth places share a height and not
+a band, the first and second a band and not a height. -/
+theorem neither_function :
+    heightOf .p1 = heightOf .p4 ∧ bandOf .p1 ≠ bandOf .p4 ∧
+      bandOf .p1 = bandOf .p2 ∧ heightOf .p1 ≠ heightOf .p2 := by
+  decide
+
 /-- The 彖's statements of an unbroken middle line opposed (剛中而應), in the received order. -/
 def middleOppositionStatements : List Nat := [7, 19, 25, 45, 46]
 
