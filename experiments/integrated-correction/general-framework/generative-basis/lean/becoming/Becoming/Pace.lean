@@ -241,6 +241,19 @@ theorem rule_at_reading {r : Nat} (at_r : reads r = true) (c : S × R) :
   rw [paced_succ, at_r]
   rfl
 
+/-- **Reading through what is heard together, at the times of reading.** Where the rule reads the
+fast configuration only through what a pool reads of it (`h x g = H (read x) g`), two courses with
+one rule at a reading step, whose fast configurations the pool reads alike there, have one rule
+after it; so rules part across a reading step only where what the pool reads parts. Between
+reading steps no fast difference reaches the rule (`rule_alike_until_reading`). -/
+theorem rule_through_pool {read : S → O} {H : O → R → R} (through : ∀ x g, h x g = H (read x) g)
+    {r : Nat} (at_r : reads r = true) {c c' : S × R}
+    (rule : (paced f h reads c r).2 = (paced f h reads c' r).2)
+    (heard : read (paced f h reads c r).1 = read (paced f h reads c' r).1) :
+    (paced f h reads c (r + 1)).2 = (paced f h reads c' (r + 1)).2 :=
+  (rule_at_reading at_r c).trans ((through _ _).trans
+    ((congr (congrArg H heard) rule).trans ((through _ _).symm.trans (rule_at_reading at_r c').symm)))
+
 end Pace
 
 /-! ## Witness: the reading step is exact

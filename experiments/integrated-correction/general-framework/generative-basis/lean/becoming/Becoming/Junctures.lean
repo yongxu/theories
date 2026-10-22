@@ -292,7 +292,41 @@ theorem loss_passes_juncture_listed (every : ∀ x, x ∈ all)
   loss_passes_juncture_decided returns
     (fun y _ => reach_decided_listed every decides returns y) path lost
 
+/-- A configuration leading into `s` within `k` steps has a step and a course of fewer than `k`
+steps after it into `s`. -/
+theorem leadsWithin_trace (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) :
+    ∀ {k : Nat} {z : S}, leadsWithin all edge s k z = true →
+      ∃ a y as, P.step z a y ∧ Trace P y as s ∧ as.length < k
+  | 0, _, h => Bool.noConfusion h
+  | k + 1, z, h => match ListTests.or_true_iff.mp h with
+    | .inl into => match (decides z s).mp into with
+      | ⟨a, step⟩ => ⟨a, s, [], step, .nil s, Nat.succ_pos k⟩
+    | .inr via => match ListTests.any_true_iff.mp via with
+      | ⟨y, _, both⟩ => match ListTests.and_true_iff.mp both with
+        | ⟨edge_on, leads⟩ => match (decides z y).mp edge_on, leadsWithin_trace decides leads with
+          | ⟨a, step⟩, ⟨b, _, as, step', path, short⟩ =>
+            ⟨a, y, b :: as, step, .cons step' path, Nat.succ_lt_succ short⟩
+
+/-- **What can be had is had within the count.** With every configuration listed, steps decided and
+`s` returning, a configuration that can have `s` again has it along a course of at most as many
+steps as there are configurations: after a keeping step at a juncture, `s` is had within that many
+steps, and no keeping needs more. -/
+theorem reach_within_listed (every : ∀ x, x ∈ all)
+    (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) (returns : Returns P s) {y : S}
+    (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s :=
+  match leadsWithin_trace decides ((reach_iff_leads every decides returns).mp reach) with
+  | ⟨a, _, as, step, path, short⟩ => ⟨a :: as, Nat.succ_le_of_lt short, .cons step path⟩
+
 end Listed
+
+/-- **Before a juncture no step needs choosing.** At a configuration with a step after which `s`
+can still be had, and which is not a juncture for `s`, no step can be refuted to keep `s`: the
+choice comes only at a juncture, where keeping must leave out the losing steps
+(`keeping_removes_at_juncture`), and after a losing step nothing brings `s` back
+(`losing_not_returns`). -/
+theorem keeps_before_juncture {x : S} (keeps : ∃ a y, P.step x a y ∧ Reach P y s)
+    (none : ¬ Juncture P s x) : ∀ b z, P.step x b z → ¬ ¬ Reach P z s :=
+  fun b z step lost => none ⟨keeps, b, z, step, lost⟩
 
 /-! ## Keeping and losing -/
 

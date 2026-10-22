@@ -1,6 +1,7 @@
 import Becoming.Continuation
 import Becoming.Admission
 import Becoming.Witnesses
+import Becoming.JointPlans
 
 /-!
 # Exclusion: what taking all that is given excludes, and the joint course that keeps all
@@ -296,6 +297,38 @@ theorem level_kept (balances : L.Balances W) {c : C} (within : ∀ t, L.WithinJo
     ∀ t, W.level 0 c ≤ W.level t c
   | 0 => Nat.le_refl _
   | t + 1 => Nat.le_trans (level_kept balances within t) (joint_keeps balances (within t))
+
+/-- A list with no member twice is a list without repetition. -/
+theorem distinct_of_nodup {α : Type} : ∀ {l : List α}, l.Nodup → Distinct l
+  | [], _ => trivial
+  | a :: _, .cons fresh rest => ⟨fun mem => fresh a mem rfl, distinct_of_nodup rest⟩
+
+/-- **Division by exclusive footprints keeps the joint draw within what is given.** Where what the
+formations take from `c` across the step is what the leaves of a plan draw on, the plan realized
+at a whole each of whose parts' footprints lies within its whole's and shares nothing with the
+other part's, and the root's footprint lies within a list of units no longer than what is given
+to `c`, the joint draw is within what is given. -/
+theorem withinJoint_of_plan {S R : Type} {footprint : S → R → Prop} {J : S → S → S → Prop}
+    (within : PartsWithin footprint J) (apart : PartsApart footprint J) (p : JointPlan (List R))
+    {s : S} (realizes : JointPlan.Realizes J (Supports footprint) s p) {avail : List R}
+    (root : ∀ a, footprint s a → a ∈ avail) {t : Nat} {c : C}
+    (drawn : L.taken t c = p.draws.length) (given : avail.length ≤ L.given t c) : L.WithinJoint t c :=
+  match JointPlan.supports_of_realizes within apart p s realizes with
+  | ⟨distinct, inside⟩ => Nat.le_trans (Nat.le_of_eq drawn)
+      (Nat.le_trans (length_le_of_sub (distinct_of_nodup distinct) fun a mem => root a (inside a mem))
+        given)
+
+/-- **So the level stands.** Under balance, where at every step the joint draw on `c` is such a
+division, the level of `c` never falls below its start: 群分 keeps what it shares. -/
+theorem level_kept_of_plans (balances : L.Balances W) {S R : Type} {footprint : S → R → Prop}
+    {J : S → S → S → Prop} (within : PartsWithin footprint J) (apart : PartsApart footprint J)
+    {c : C} (plans : ∀ t, ∃ (p : JointPlan (List R)) (s : S) (avail : List R),
+      JointPlan.Realizes J (Supports footprint) s p ∧ (∀ a, footprint s a → a ∈ avail) ∧
+      L.taken t c = p.draws.length ∧ avail.length ≤ L.given t c) :
+    ∀ t, W.level 0 c ≤ W.level t c :=
+  level_kept balances fun t => match plans t with
+    | ⟨p, _, _, realizes, root, drawn, given⟩ =>
+      withinJoint_of_plan within apart p realizes root drawn given
 
 /-- **The joint course keeps every formation supported** where the formations depend on that
 condition alone, at needs it met at the start. -/

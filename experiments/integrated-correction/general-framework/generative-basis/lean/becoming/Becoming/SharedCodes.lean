@@ -958,6 +958,17 @@ def Loses (X Y : I → M → F) (i : I) (m m' : M) : Prop := X i m ≠ X i m' �
 theorem impose_agrees (c : M → F) (X : I → M → F) (i j : I) (m : M) :
     impose c X i m = impose c X j m := rfl
 
+/-- **Imposing a code privileges no formation**: it keeps every exchange of formations. -/
+theorem impose_keeps_exchange (c : M → F) (π : I → I) : KeepsExchange (impose (I := I) c) π :=
+  fun _ _ _ _ _ => rfl
+
+/-- **Imposing a code privileges its forms.** Where a renaming moves the form the code gives a
+sense, imposing does not keep it: from a symmetric disagreement agreement comes only through a law
+privileging a form or a formation (`never_agrees_of_both`), and imposing privileges forms. -/
+theorem impose_privileges_forms {c : M → F} {τ : M → F → F} {m : M} (moves : τ m (c m) ≠ c m)
+    (X : I → M → F) (i : I) : ¬ KeepsRenaming (impose (I := I) c) τ :=
+  fun keeps => moves (keeps X (fun j n => τ n (X j n)) (fun _ _ => rfl) i m).symm
+
 /-- **Each formation loses exactly the distinctions its code made that the imposed code
 merges.** -/
 theorem impose_loses_iff {c : M → F} {X : I → M → F} {i : I} {m m' : M} :
