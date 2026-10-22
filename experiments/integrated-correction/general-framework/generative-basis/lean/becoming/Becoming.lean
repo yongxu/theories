@@ -1010,7 +1010,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   function of the configuration, coming to rest or any arrow merges two configurations
   while merging none keeps change going and coming back. An arrow without end under exact
   conservation draws on relata beyond the family. In proportion, what is taken is at most
-  `q + 1` times what is dissipated.
+  `q + 1` times what is dissipated. A family's inflow, what each formation taking part gives it
+  beyond what it takes from it, is zero exactly where it gains nothing; in a balanced flow the
+  stock after a step with what the family loses is the stock before with what it gains, which is
+  at most the inflow, and over a stretch the stock rises by at most the stretch's inflow. Losing
+  exactly what is dissipated is the case of no inflow.
 * `Becoming.Units` (L1): the laws of one step at a finer unit, the test of the commitment
   to whole units. Arising needing an active giver holds at every resolution with no condition
   on the split; the law of one exchange holds with change read in the unit (read in raw counts
@@ -1390,6 +1394,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   beyond in full. So every selection
   holding only where what couples in rises holds only on flows reaching beyond the coupling.
   `Diversion` is an instance, and its supplying flow, which gains, shows the premise binds.
+  Graded by the containing family's inflow the laws need no such premise: wherever what couples
+  in rises by more than that inflow, a formation raising it takes from beyond, the rise past the
+  inflow is paid from beyond in full, and a selection rewarding such a rise favours reaching
+  beyond; the gainless laws are the case of no inflow, and the supplying flow, rising by exactly
+  its inflow, shows the bound exact.
 * `Becoming.DrawnBeyond` (L1): whose dependence a rise breaks, and the share that reaches beyond.
   In a balanced flow, where the family with the conditions beyond it gains nothing across a
   step, the two stocks after the step with what the whole loses are the two before, so the
@@ -1402,7 +1411,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   reaching beyond; over generations whose more offspring go only to raisers the share reaching
   beyond has no discordant pair, does not fall where reaching is transmitted and with exact
   transmission moves only upward. Closed over a stretch, the family rises by at most what the
-  beyond loses; a rise above all the whole held needs an open step. Witnesses on `Diversion`.
+  beyond loses; a rise above all the whole held needs an open step. Graded by the whole's
+  inflow: the beyond falls by at least the rise less the inflow, a rise above the slack and the
+  inflow breaks a dependence beyond and a selection rewarding it favours the break, a formation
+  raising the family by more than it adds to the whole takes from beyond, and over a stretch the
+  family rises by at most what the beyond lost and the stretch's inflow; the gainless laws are the
+  case of no inflow. Witnesses on `Diversion`.
 * `Becoming.JointDraw` (L1): which dependence breaks when several formations take at once, and
   restraint over any number of drawers. In a balanced flow a dependence breaks exactly where its
   need with all that is taken exceeds the level with all that is given; the highest needs break
@@ -1522,7 +1536,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   every revision reaching it; with no floor anywhere, drawing everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
   the dweller; under doubling a one-unit floor on the second keeps it. Drawing at once from
   portions is the same law: where each portion returns what its drawer leaves less than one
-  for one, every perfect profile and every revision draws everything.
+  for one, every perfect profile and every revision draws everything. Drawers in turn ranking
+  their position, what each draws counted once for each drawer against what all draw: at the
+  last step every best response draws everything; where what stands from nothing is at most what
+  stands from anything left and there are at least two drawers, every profile perfect for
+  position draws everything at every step, drawing everything is perfect, and the base stands at
+  what stands from nothing. With one drawer every profile is perfect; where something left stops
+  what stands next (`Stopping`), drawing everything is not perfect, a drawer given something
+  keeping it to stop what the first drawer would draw next.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

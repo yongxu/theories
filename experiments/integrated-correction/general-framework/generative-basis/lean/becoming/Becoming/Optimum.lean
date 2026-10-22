@@ -4,6 +4,9 @@ import Becoming.Frontier
 /-!
 # Optimum: what optimizing through couplings does beyond them
 
+(Drawers in turn ranking their position rather than their draw, the race of
+`Becoming.RelativePosition` read on the draws, are in `InTurn`'s section *A race for position*.)
+
 `Becoming.DrawnBeyond` showed that where the whole gains nothing the beyond falls by the rise and
 the loss, that above the slack a dependence beyond breaks, and that a selection rewarding the rise
 rewards that break unseen. It did not say what an *optimum* does: how far a selection that takes
@@ -8251,6 +8254,329 @@ theorem revised_at_floors {u v p : Nat} (uv : u < v) (vk : v < k) (floors : ∀ 
       N 0 (Nat.zero_add N) m enough t (Nat.zero_le t) lt
   ⟨floorsAt, fun s _ lt => levels_through (leaves m) (Nat.lt_trans uv vk)
     (fun t lt' a => (floorsAt t lt' u (Nat.lt_trans uv vk) a).trans (freeU t a)) s lt⟩
+
+/-! ### A race for position
+
+Each drawer ranks its position over the steps that remain, not its draw: what it draws counted once
+for each of the `k` drawers, against what all of them draw, the count of `Becoming.RelativePosition`
+(`n * a p` against `total ps a`) read on the draws. What every drawer drew before is the same
+whatever a drawer leaves, so ranking the position over the steps that remain ranks the position.
+One law carries the results (`position_keeps_nothing`): where what a drawer keeps comes back to it in
+no later draw, what passes on of it is at most it, and all draw no less later for it, a best response
+for position keeps nothing, since what it keeps lowers its own count by `k` times that and the count
+of all by at most once that. So at the last step every best response draws everything
+(`position_last`), with no premise on what stands next; and where what stands from nothing is at most
+what stands from anything left (`G t 0 ≤ G t x`) and there are at least two drawers, every perfect
+profile draws everything at every step before the horizon (`position_perfect_ends`), the base stands
+at what stands from nothing (`position_levels`), and drawing everything is perfect
+(`zero_position_perfect`). Each premise binds: with one drawer every profile is perfect
+(`position_one`); where something left stops what stands next, drawing everything is not perfect,
+and in every perfect profile a drawer given something keeps it, so that what stands next is stopped
+before the first drawer draws it (`Stopping`). -/
+
+/-- What all `k` drawers draw over `j` steps from step `t` at level `z`. -/
+def drawnAll (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k j t z : Nat) : Nat :=
+  total (steps 0 k) fun e => drawn G rules k e j t z
+
+/-- What all drawers draw from drawer `d` on at step `t` and over the `j` steps after it, where `d` is
+given `a` and leaves `b`: `a` less what passes the drawers after `d`, and what all draw later. -/
+def whole (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k d j t a b : Nat) : Nat :=
+  a - pass rules t (d + 1) (k - (d + 1)) b +
+    drawnAll G rules k j (t + 1) (G t (pass rules t (d + 1) (k - (d + 1)) b))
+
+/-- **A revision for position.** Each rule of `rules'` leaves at most what it is given, and over a
+horizon of `N` steps, at every step from every level, it leaves what places its drawer highest
+against the profile `rules`: of what drawer `d` is given at `t`, `k` times what it draws there and
+later, against what all draw from it on. -/
+def RevisesPosition (G : Nat → Nat → Nat) (rules rules' : Nat → Nat → Nat → Nat) (k N : Nat) :
+    Prop :=
+  (∀ d t a, rules' d t a ≤ a) ∧
+  ∀ t j, t + j + 1 = N → ∀ d, d < k → ∀ a b, b ≤ a →
+    k * (a - b + later G rules k d j t b) + whole G rules k d j t a (rules' d t a) ≤
+      k * (a - rules' d t a + later G rules k d j t (rules' d t a)) + whole G rules k d j t a b
+
+/-- **Perfect for position over a horizon**: the profile revises itself for position. -/
+def PerfectPosition (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k N : Nat) : Prop :=
+  RevisesPosition G rules rules k N
+
+/-- **What a drawer keeps for position, it keeps for nothing.** Of `a`, leaving `r` rather than
+nothing, where its own later draw is the same, what passes on of `r` is at most `r`, and all draw no
+less later: if leaving `r` places the drawer no lower among `k ≥ 2` drawers, `r` is nothing. Keeping
+`r` lowers `k` times its own draw by `k r` and what all draw by at most `r`. -/
+theorem position_keeps_nothing {k a r own own' all all' through : Nat} (two : 2 ≤ k) (le : r ≤ a)
+    (best : k * (a + own) + (a - through + all') ≤ k * (a - r + own') + (a + all))
+    (same : own' = own) (within : through ≤ r) (grows : all ≤ all') : r = 0 := by
+  match le_dest le with
+  | ⟨m, ha⟩ =>
+    subst ha
+    subst same
+    have low : m + all ≤ r + m - through + all' :=
+      Nat.add_le_add (Nat.le_trans (Nat.le_of_eq (Naturals.add_sub_cancel_left r m).symm)
+        (sub_le_sub_left_of_le within (r + m))) grows
+    have split : k * (r + m + own') = k * (m + own') + k * r :=
+      (congrArg (k * ·) (Nat.add_assoc r m own')).trans
+        ((Nat.left_distrib k r (m + own')).trans (Nat.add_comm _ _))
+    have best' : k * (m + own') + (k * r + (r + m - through + all')) ≤
+        k * (m + own') + (r + (m + all)) :=
+      Nat.le_trans (Nat.le_of_eq ((Nat.add_assoc _ _ _).symm.trans (congrArg (· + _) split.symm)))
+        (Nat.le_trans best (Nat.le_of_eq ((congrArg (fun x => k * (x + own') + (r + m + all))
+          (Naturals.add_sub_cancel_left r m)).trans
+            (congrArg (k * (m + own') + ·) (Nat.add_assoc r m all)))))
+    have kept : k * r + (m + all) ≤ r + (m + all) :=
+      Nat.le_trans (Nat.add_le_add_left low _) (le_of_add_le_add_right (k * (m + own'))
+        (Nat.le_trans (Nat.le_of_eq (Nat.add_comm _ _)) (Nat.le_trans best' (Nat.le_of_eq (Nat.add_comm _ _)))))
+    have kr : 2 * r ≤ r := Nat.le_trans (Nat.mul_le_mul_right r two)
+      (le_of_add_le_add_right (m + all) kept)
+    have rr : r + r ≤ 0 + r := Nat.le_trans (Nat.le_of_eq (Nat.two_mul r).symm)
+      (Nat.le_trans kr (Nat.le_of_eq (Nat.zero_add r).symm))
+    exact Nat.eq_zero_of_le_zero (le_of_add_le_add_right r rr)
+
+/-- **Drawing everything places a drawer no lower.** Of `a`, leaving `b` rather than nothing, where
+its own later draw is the same, what passes on of `b` is at most `b`, and all draw no less later for
+`b`, leaving nothing places the drawer among `k ≥ 1` drawers at least as high. -/
+theorem position_nothing_best {k a b own all all' through : Nat} (one : 1 ≤ k) (le : b ≤ a)
+    (within : through ≤ b) (grows : all ≤ all') :
+    k * (a - b + own) + (a + all) ≤ k * (a + own) + (a - through + all') := by
+  match le_dest le with
+  | ⟨m, ha⟩ =>
+    subst ha
+    have low : m + all ≤ b + m - through + all' :=
+      Nat.add_le_add (Nat.le_trans (Nat.le_of_eq (Naturals.add_sub_cancel_left b m).symm)
+        (sub_le_sub_left_of_le within (b + m))) grows
+    have split : k * (b + m + own) = k * (m + own) + k * b :=
+      (congrArg (k * ·) (Nat.add_assoc b m own)).trans
+        ((Nat.left_distrib k b (m + own)).trans (Nat.add_comm _ _))
+    have kb : b ≤ k * b := Nat.le_trans (Nat.le_of_eq (Nat.one_mul b).symm)
+      (Nat.mul_le_mul_right b one)
+    exact Nat.le_trans
+      (Nat.le_of_eq (congrArg (fun x => k * (x + own) + (b + m + all))
+        (Naturals.add_sub_cancel_left b m)))
+      (Nat.le_trans (Nat.add_le_add_left (Nat.le_trans (Nat.le_of_eq (Nat.add_assoc b m all))
+          (Nat.add_le_add kb low)) _)
+        (Nat.le_of_eq ((Nat.add_assoc _ _ _).symm.trans (congrArg (· + _) split.symm))))
+
+variable {G : Nat → Nat → Nat} {rules rules' : Nat → Nat → Nat → Nat} {k N : Nat}
+
+/-- What passes drawers who leave at most what they are given is at most what they were given. -/
+theorem pass_le (leaves : ∀ d t a, rules d t a ≤ a) (t : Nat) : ∀ d c b, pass rules t d c b ≤ b
+  | _, 0, _ => Nat.le_refl _
+  | d, c + 1, b => Nat.le_trans (pass_le leaves t (d + 1) c (rules d t b)) (leaves d t b)
+
+/-- **Where every drawer draws everything at a step, the first draws the level** and stands at what
+stands from nothing after it. -/
+theorem drawn_first_none (leaves : ∀ d t a, rules d t a ≤ a) (one : 0 < k) {s : Nat}
+    (none : ∀ d, d < k → ∀ a, rules d s a = 0) (j w : Nat) :
+    drawn G rules k 0 (j + 1) s w = w + drawn G rules k 0 j (s + 1) (G s 0) := by
+  show w - rules 0 s w + drawn G rules k 0 j (s + 1) (G s (pass rules s 0 k w)) = _
+  rw [none 0 one w, pass_through leaves (none 0 one) k 0 w (Nat.le_refl 0)
+    (Nat.lt_of_lt_of_le one (Nat.le_of_eq (Nat.zero_add k).symm))]
+  rfl
+
+/-- **And every other drawer draws nothing there.** -/
+theorem drawn_other_none (leaves : ∀ d t a, rules d t a ≤ a) (one : 0 < k) {s : Nat}
+    (none : ∀ d, d < k → ∀ a, rules d s a = 0) {e : Nat} (pos : 0 < e) (j w : Nat) :
+    drawn G rules k e (j + 1) s w = drawn G rules k e j (s + 1) (G s 0) := by
+  show pass rules s 0 e w - rules e s (pass rules s 0 e w) +
+    drawn G rules k e j (s + 1) (G s (pass rules s 0 k w)) = _
+  rw [pass_through leaves (none 0 one) e 0 w (Nat.le_refl 0)
+      (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (Nat.zero_add e).symm)),
+    pass_through leaves (none 0 one) k 0 w (Nat.le_refl 0)
+      (Nat.lt_of_lt_of_le one (Nat.le_of_eq (Nat.zero_add k).symm)), Nat.zero_sub, Nat.zero_add]
+
+/-- **What all draw from a step at which every drawer draws everything** is the level with what all
+draw from what stands from nothing after it. -/
+theorem drawnAll_none (leaves : ∀ d t a, rules d t a ≤ a) (one : 0 < k) {s : Nat}
+    (none : ∀ d, d < k → ∀ a, rules d s a = 0) (j w : Nat) :
+    drawnAll G rules k (j + 1) s w = w + drawnAll G rules k j (s + 1) (G s 0) :=
+  match k, one, leaves, none with
+  | k' + 1, one, leaves, none => by
+    show drawn G rules (k' + 1) 0 (j + 1) s w +
+        total (steps 1 k') (fun e => drawn G rules (k' + 1) e (j + 1) s w) =
+      w + (drawn G rules (k' + 1) 0 j (s + 1) (G s 0) +
+        total (steps 1 k') (fun e => drawn G rules (k' + 1) e j (s + 1) (G s 0)))
+    rw [drawn_first_none leaves one none j w, Nat.add_assoc,
+      total_congr_on fun e mem => drawn_other_none leaves one none
+        (Nat.lt_of_lt_of_le (Nat.zero_lt_one) (between_of_mem_steps mem).1) j w]
+
+/-- **What a drawer after the first draws later is the same whatever it leaves**, where its later
+steps begin with every drawer drawing everything, or there are none. -/
+theorem later_same (leaves : ∀ d t a, rules d t a ≤ a) (one : 0 < k) {t j d : Nat}
+    (next : j = 0 ∨ ∀ d, d < k → ∀ a, rules d (t + 1) a = 0) (pos : 0 < d) (b : Nat) :
+    later G rules k d j t b = later G rules k d j t 0 :=
+  match j, next with
+  | 0, _ => rfl
+  | _ + 1, .inl zero => Nat.noConfusion zero
+  | j' + 1, .inr held =>
+    (drawn_other_none leaves one held pos j' _).trans (drawn_other_none leaves one held pos j' _).symm
+
+/-- **All draw no less later from what stands from more**, where what stands from nothing is least
+and the later steps begin with every drawer drawing everything, or there are none. -/
+theorem drawnAll_grows (leaves : ∀ d t a, rules d t a ≤ a) (one : 0 < k) {t j : Nat}
+    (next : j = 0 ∨ ∀ d, d < k → ∀ a, rules d (t + 1) a = 0) {x y : Nat} (le : G t x ≤ G t y) :
+    drawnAll G rules k j (t + 1) (G t x) ≤ drawnAll G rules k j (t + 1) (G t y) :=
+  match j, next with
+  | 0, _ => Nat.le_refl _
+  | _ + 1, .inl zero => Nat.noConfusion zero
+  | j' + 1, .inr held => Nat.le_trans (Nat.le_of_eq (drawnAll_none leaves one held j' _))
+      (Nat.le_trans (Nat.add_le_add_right le _)
+        (Nat.le_of_eq (drawnAll_none leaves one held j' _).symm))
+
+/-- **A step of the race.** In a revision for position among `k ≥ 2` drawers, where drawer `d`'s
+later draw is the same whatever it leaves and all draw no less later from what passes on than from
+nothing, `d` leaves nothing. -/
+theorem position_step (rev : RevisesPosition G rules rules' k N)
+    (leaves : ∀ d t a, rules d t a ≤ a) (two : 2 ≤ k) {t j : Nat} (at_ : t + j + 1 = N) {d : Nat}
+    (dk : d < k) (a : Nat) (same : ∀ b, later G rules k d j t b = later G rules k d j t 0)
+    (grows : ∀ b, drawnAll G rules k j (t + 1) (G t 0) ≤
+      drawnAll G rules k j (t + 1) (G t (pass rules t (d + 1) (k - (d + 1)) b))) :
+    rules' d t a = 0 := by
+  have best := rev.2 t j at_ d dk a 0 (Nat.zero_le a)
+  show rules' d t a = 0
+  unfold whole at best
+  rw [pass_zero leaves t (d + 1) (k - (d + 1))] at best
+  exact position_keeps_nothing two (rev.1 d t a) best (same _) (pass_le leaves t _ _ _)
+    (grows _)
+
+/-- **At the last step every best response for position draws everything**, among at least two
+drawers, whatever stands next. -/
+theorem position_last (rev : RevisesPosition G rules rules' k N)
+    (leaves : ∀ d t a, rules d t a ≤ a) (two : 2 ≤ k) {t : Nat} (at_ : t + 1 = N) :
+    ∀ d, d < k → ∀ a, rules' d t a = 0 := fun _ dk a =>
+  position_step (j := 0) rev leaves two at_ dk a (fun _ => rfl) fun _ => Nat.le_refl _
+
+/-- **Racing for position, every perfect profile draws everything.** Among at least two drawers with
+no floor, each ranking its position over the steps that remain, where what stands from nothing is at
+most what stands from anything left, every profile perfect for position over `N` steps leaves
+nothing at every step `t` with `t + c + 1 = N`, from every level: from the horizon back, a drawer
+after the first keeps nothing since what it keeps comes back only to others, and then the first
+keeps nothing since what it keeps passes to the others. -/
+theorem position_perfect_ends (perfect : PerfectPosition G rules k N) (two : 2 ≤ k)
+    (least : ∀ t x, G t 0 ≤ G t x) :
+    ∀ c t, t + c + 1 = N → ∀ d, d < k → ∀ a, rules d t a = 0
+  | 0, _, at_ => position_last perfect (fun d t a => (perfect.1 d t a)) two at_
+  | c + 1, t, at_ =>
+    have leaves : ∀ d t a, rules d t a ≤ a := perfect.1
+    have one : 0 < k := Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two
+    have none : ∀ d, d < k → ∀ a, rules d (t + 1) a = 0 :=
+      position_perfect_ends perfect two least c (t + 1)
+        ((congrArg (· + 1) (Nat.add_right_comm t 1 c)).trans at_)
+    have after : ∀ d, 0 < d → d < k → ∀ a, rules d t a = 0 := fun _ pos dk a =>
+      position_step perfect leaves two at_ dk a (later_same leaves one (.inr none) pos)
+        fun _ => drawnAll_grows leaves one (.inr none) (least t _)
+    fun d dk a => match d with
+      | 0 =>
+        have through : ∀ b, pass rules t 1 (k - 1) b = 0 := fun b =>
+          pass_through leaves (after 1 (Nat.zero_lt_one) two) (k - 1) 1 b (Nat.le_refl 1)
+            (Nat.lt_of_lt_of_le (Nat.lt_of_lt_of_le (Nat.lt_succ_self 1) two)
+              (Nat.le_of_eq (Becoming.add_sub_of_le (Nat.le_trans (Nat.le_succ 1) two)).symm))
+        position_step perfect leaves two at_ dk a
+          (fun b => congrArg (fun z => drawn G rules k 0 (c + 1) (t + 1) (G t z))
+            ((through b).trans (through 0).symm))
+          (fun b => Nat.le_of_eq (congrArg (fun z => drawnAll G rules k (c + 1) (t + 1) (G t z))
+            (through b).symm))
+      | d' + 1 => after (d' + 1) (Nat.zero_lt_succ d') dk a
+
+/-- **Before the horizon, racing for position draws everything.** -/
+theorem position_perfect_draws (perfect : PerfectPosition G rules k N) (two : 2 ≤ k)
+    (least : ∀ t x, G t 0 ≤ G t x) {t : Nat} (before : t < N) :
+    ∀ d, d < k → ∀ a, rules d t a = 0 :=
+  position_perfect_ends perfect two least (N - (t + 1)) t
+    ((Nat.add_right_comm t (N - (t + 1)) 1).trans (Becoming.add_sub_of_le before))
+
+/-- **So the base stands at what stands from nothing**, from the first step to the `N`-th. -/
+theorem position_levels (perfect : PerfectPosition G rules k N) (two : 2 ≤ k)
+    (least : ∀ t x, G t 0 ≤ G t x) (s : Nat) {t : Nat} (before : t < N) :
+    levels G rules k s (t + 1) = G t 0 :=
+  levels_through perfect.1 (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two)
+    (fun _ lt a => position_perfect_draws perfect two least lt 0
+      (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) a) s before
+
+/-- **Drawing everything is perfect for position**, among at least two drawers, where what stands
+from nothing is least. -/
+theorem zero_position_perfect (two : 2 ≤ k) (least : ∀ t x, G t 0 ≤ G t x) (N : Nat) :
+    PerfectPosition G (fun _ _ _ => 0) k N :=
+  have leaves : ∀ (d t a : Nat), (fun _ _ _ => 0 : Nat → Nat → Nat → Nat) d t a ≤ a :=
+    fun _ _ a => Nat.zero_le a
+  have one : 0 < k := Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two
+  have none : ∀ s d, d < k → ∀ a, (fun _ _ _ => 0 : Nat → Nat → Nat → Nat) d s a = 0 :=
+    fun _ _ _ _ => rfl
+  ⟨fun _ _ a => Nat.zero_le a, fun t j _ d _ a b le => by
+    show k * (a - b + later G (fun _ _ _ => 0) k d j t b) +
+        whole G (fun _ _ _ => 0) k d j t a 0 ≤
+      k * (a - 0 + later G (fun _ _ _ => 0) k d j t 0) + whole G (fun _ _ _ => 0) k d j t a b
+    unfold whole
+    rw [pass_zero leaves t (d + 1) (k - (d + 1))]
+    match d with
+    | 0 =>
+      have through : ∀ b, pass (fun _ _ _ => 0) t 1 (k - 1) b = 0 := fun b =>
+        pass_through leaves (u := 1) (fun _ => rfl) (k - 1) 1 b (Nat.le_refl 1)
+          (Nat.lt_of_lt_of_le (Nat.lt_of_lt_of_le (Nat.lt_succ_self 1) two)
+            (Nat.le_of_eq (Becoming.add_sub_of_le (Nat.le_trans (Nat.le_succ 1) two)).symm))
+      have same : later G (fun _ _ _ => 0) k 0 j t b = later G (fun _ _ _ => 0) k 0 j t 0 :=
+        congrArg (fun z => drawn G (fun _ _ _ => 0) k 0 j (t + 1) (G t z))
+          ((through b).trans (through 0).symm)
+      rw [same]
+      exact position_nothing_best one le (Nat.le_trans (Nat.le_of_eq (through b)) (Nat.zero_le b))
+        (Nat.le_of_eq (congrArg (fun z => drawnAll G (fun _ _ _ => 0) k j (t + 1) (G t z))
+          (through b).symm))
+    | d' + 1 =>
+      rw [later_same (G := G) leaves one (j := j) (t := t) (.inr (none (t + 1)))
+        (Nat.zero_lt_succ d') b]
+      exact position_nothing_best one le (pass_le leaves t _ _ _)
+        (drawnAll_grows leaves one (.inr (none (t + 1))) (least t _))⟩
+
+/-- **With one drawer, every profile is perfect for position**: its draw is all that is drawn. -/
+theorem position_one (leaves : ∀ d t a, rules d t a ≤ a) (N : Nat) : PerfectPosition G rules 1 N :=
+  ⟨leaves, fun t j _ d dk a b _ => by
+    match d, dk with
+    | 0, _ =>
+      show 1 * (a - b + later G rules 1 0 j t b) + (a - rules 0 t a +
+          (drawn G rules 1 0 j (t + 1) (G t (rules 0 t a)) + 0)) ≤
+        1 * (a - rules 0 t a + later G rules 1 0 j t (rules 0 t a)) +
+          (a - b + (drawn G rules 1 0 j (t + 1) (G t b) + 0))
+      rw [Nat.one_mul, Nat.one_mul, Nat.add_zero, Nat.add_zero]
+      exact Nat.le_of_eq (Nat.add_comm _ _)
+    | d' + 1, dk => exact absurd (Nat.le_of_succ_le_succ dk) (Nat.not_succ_le_zero d')⟩
+
+/-- A world where something left stops what stands next: from nothing two stand, from anything
+left nothing. -/
+def stopping : Nat → Nat → Nat
+  | _, 0 => 2
+  | _, _ + 1 => 0
+
+namespace Stopping
+
+/-- What stands from nothing is not least: it stands above what stands from one unit. -/
+theorem not_least : ¬ ∀ t x, stopping t 0 ≤ stopping t x :=
+  fun least => absurd (least 0 1) (by decide)
+
+/-- **Drawing everything is not perfect for position.** With two drawers over two steps, the second,
+given one unit at the first step, places itself higher by keeping it: what it keeps stops the two
+units the first drawer would draw next. -/
+theorem zero_not_perfect : ¬ PerfectPosition stopping (fun _ _ _ => 0) 2 2 :=
+  fun perfect => absurd (perfect.2 0 1 rfl 1 (by decide) 1 1 (Nat.le_refl 1)) (by decide)
+
+/-- **In every perfect profile the second drawer keeps what it is given at the first step**, a unit
+of one, so that nothing stands for the first drawer next. -/
+theorem perfect_keeps {rules : Nat → Nat → Nat → Nat} (perfect : PerfectPosition stopping rules 2 2) :
+    rules 1 0 1 = 1 := by
+  have leaves : ∀ d t a, rules d t a ≤ a := perfect.1
+  have last := position_last perfect leaves (Nat.le_refl 2) (t := 1) rfl
+  have none : ∀ d, d < 2 → ∀ a, rules d 1 a = 0 := last
+  have own : ∀ b, later stopping rules 2 1 1 0 b = 0 := fun b =>
+    (drawn_other_none (G := stopping) leaves (Nat.zero_lt_succ 1) none (Nat.zero_lt_one) 0 _).trans rfl
+  have all : ∀ b, whole stopping rules 2 1 1 0 1 b = 1 - b + stopping 0 b := fun b =>
+    congrArg (1 - b + ·) ((drawnAll_none (G := stopping) leaves (Nat.zero_lt_succ 1) none 0 _).trans
+      (Nat.add_zero _))
+  have best := perfect.2 0 1 rfl 1 (by decide) 1 1 (Nat.le_refl 1)
+  rw [own, own, all, all] at best
+  have le := leaves 1 0 1
+  match h : rules 1 0 1 with
+  | 0 => rw [h] at best; exact absurd best (by decide)
+  | 1 => rfl
+  | n + 2 => rw [h] at le; exact absurd (Nat.le_of_succ_le_succ le) (Nat.not_succ_le_zero n)
+
+end Stopping
 
 end InTurn
 
