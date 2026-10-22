@@ -1,0 +1,31 @@
+## {N}. Junctures within the count, reading through a pool, division by exclusive footprints, support passed on (ZG5)
+
+```text
+Result(s): new records reaching-before-and-after-a-juncture, reading-through-a-pool,
+       division-by-exclusive-footprints, support-passed-on.
+Delta: with every configuration listed and steps decided, what can be had again is had within the count of
+       configurations (Branching.reach_within_listed, leadsWithin_trace); at a configuration that is not a juncture no
+       step can be refuted to keep s (keeps_before_juncture). Where the rule reads through a pool, rules part at a
+       reading step only where the pool's reading parts (Pace.rule_through_pool). A realized joint plan with parts'
+       footprints within and apart and the root's within what is given keeps the joint draw within what is given, and
+       under balance the level (Flow.withinJoint_of_plan, level_kept_of_plans). In a balanced flow with bounded support
+       spells, support gained ever later cannot be refuted to come from givers that gained it after any given step
+       (Flow.support_passes_on).
+Premises / correspondence: finite listing for the bound; the per-law premises named in the records.
+       Correspondence: shortest paths within the number of states; sampled control through an aggregating sensor;
+       disjoint allocation; relay of resources.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: how long s stays obtainable along a course has no general bound (a cycle keeps it obtainable for ever); the
+       support chain is a double negation and carries no direction.
+Output → input: the ZH map's 系辞「知幾其神」, 孙子「其節短」, 扁鹊, 荀子「兼聽而時稽之」「群分」, 韩非「使不相干」,
+       系辞「生生之謂易」 entries; records every-loss-passes-a-juncture, how-fast-a-rule-may-change,
+       exclusive-footprint-support, what-taking-all-excludes, support-from-the-supported.
+```
+
+**What was built.** `Branching.leadsWithin_trace`, `Branching.reach_within_listed`, `Branching.keeps_before_juncture` (in `Becoming.Junctures`); `Pace.rule_through_pool`; `Flow.distinct_of_nodup`, `Flow.withinJoint_of_plan`, `Flow.level_kept_of_plans` (`Becoming.Exclusion` now imports `Becoming.JointPlans`); `Flow.comes_within_not_not`, `Flow.support_passes_on` (in `Becoming.Admission`).
+
+*Reading* [AI reading, D45]. 系辞「幾者，動之微」and 孙子「其節短」: what a juncture keeps is had within the count; 扁鹊: before the juncture nothing need be refused, at it the losing steps must be. 荀子「兼聽而時稽之」: the rule hears through the many, at the times it reads. 「群分」 and 韩非「使雞司夜，令狸執鼠」: exclusive footprints keep the draw within what is given. 系辞「生生之謂易」: support passed on by those who gained it later, a chain, not yet 生生.
+
+**Self-review.** The bound within the count is stated where a configuration list is given and needs it; the juncture law needs nothing. `withinJoint_of_plan` joins the footprint support of `JointPlans` to the joint draw of `Exclusion`, the interface the map found missing. `support_passes_on` is a double negation, constructive: it does not choose the step.
+
+**The run.** {CORE_LINE}. Connectivity: {APART}.

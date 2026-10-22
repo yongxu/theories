@@ -1,0 +1,25 @@
+## {N}. The censuses of the Changes, bands of the three powers, one search one line (ZG6)
+
+```text
+Result(s): new records censuses-of-the-xiang-and-tuan, bands-of-the-three-powers, one-search-one-line.
+Delta: forty-seven 小象 sentences saying a line is 中 are of the second or fifth place, four others with 中 not so;
+       nine sentences of a way exhausted (窮, 亢) are of the top place, five with 窮 of will, trust or going lower;
+       four of a broken line carrying an unbroken one are of rises; eleven 彖 中正 are of middle lines in phase; 恆九四
+       and 渙九五 agree with their phase (噬嗑六五「得當」 not a statement of place, its reason in the Lean). Bands and
+       heights are two divisions, jointly fixing a place, neither a function of the other, each band spanning one seam.
+       On three lines a line is sole exactly where 乾 or 坤 is searched at its height.
+Premises / correspondence: the sentence lists, extracted from sources/zhouyi-yizhuan by script and checked by
+       evaluation. Correspondence: the commentarial reading of 中, 上 and 承 by place; 說卦's searches.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: the lists are complete for the texts read, not beyond them; the census says where the sentences are, not
+       what they judge.
+Output → input: the ZH map's 小象 and 說卦 entries; records place-relations-in-context, fixed-places-and-sole-lines.
+```
+
+**What was built.** In `Becoming.HexagramPlaces`: `middlesHold`, `middlesHold_sound`, `xiaoxiangMiddle`, `xiaoxiangMiddleOther`, `xiaoxiangMiddle_census`; `isTop`, `topsHold`, `topsHold_sound`, `exhaustedStatements`, `exhaustedOther`, `exhausted_census`; `risesHold`, `risesHold_sound`, `riseStatements`, `riseStatements_agree`; `tuanCentreStatements`, `tuanCentreStatements_agree`; `placeStatementsMore`, `placeStatementsMore_agree`; `Band`, `bandOf`, `bandSeam`, `bands_and_heights`, `band_seams`, `band_seam_unique`, `neither_function`. In `Becoming.HexagramSequences`: `Trigram.flip3`, `Trigram.soleAt`, `Trigram.sole_iff_searched`, `Trigram.searched`.
+
+*Reading* [AI reading, D45]. 小象's 中 is a place, as its sentences show; 窮 at the top is the line's end, while 志窮 below is not; 承 is a rise; 中正 is middle and in phase. 說卦「兼三才而兩之」 pairs the places in a division of its own; 「一索而得男」 is one line turned.
+
+**Self-review.** Each census is a checked Boolean scan with a soundness lemma, written without wildcard matches so the reports stay empty. The exceptions are listed, not dropped, and the 噬嗑 reason is kept beside the list.
+
+**The run.** {CORE_LINE}. Connectivity: {APART}.

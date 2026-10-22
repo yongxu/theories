@@ -1,0 +1,94 @@
+python3 -B -m unittest discover -s tools/research/tests -p 'test_*.py'
+...........................................................................................................................................................................usage: python3 -m unittest [-h] --en EN --zh ZH [--report REPORT] file
+python3 -m unittest: error: an output path is the input file
+..........................s.....
+----------------------------------------------------------------------
+Ran 203 tests in 161.116s
+
+OK (skipped=1)
+{
+  "source": "DOC.md",
+  "source_bytes": 642,
+  "en": {
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmptkvyhk24/en.md",
+    "bytes": 484,
+    "lines": 27
+  },
+  "zh": {
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmptkvyhk24/DOC.zh.md",
+    "bytes": 537,
+    "lines": 33
+  },
+  "tables": {
+    "split": 1,
+    "zh_only": 1,
+    "en_only": 0,
+    "mixed": 0
+  },
+  "rule": "zh-only: a Chinese block with no English block in the same section whose length is comparable (zh/en prose length between 0.12 and 1.2); a Chinese-only table counts in full.",
+  "zh_only": {
+    "spans": 3,
+    "bytes": 139,
+    "by_section": {
+      "生成之论 / The Theory": {
+        "spans": 1,
+        "bytes": 75,
+        "chars": 25
+      },
+      "1. 生成：同一展开 / Becoming: one unfolding": {
+        "spans": 1,
+        "bytes": 49,
+        "chars": 31
+      },
+      "只有中文": {
+        "spans": 1,
+        "bytes": 15,
+        "chars": 5
+      }
+    }
+  },
+  "mixed_script_units": 1
+}
+{
+  "source": "DOC.md",
+  "source_bytes": 642,
+  "en": {
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmptkvyhk24/en.md",
+    "bytes": 484,
+    "lines": 27
+  },
+  "zh": {
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmptkvyhk24/DOC.zh.md",
+    "bytes": 537,
+    "lines": 33
+  },
+  "tables": {
+    "split": 1,
+    "zh_only": 1,
+    "en_only": 0,
+    "mixed": 0
+  },
+  "rule": "zh-only: a Chinese block with no English block in the same section whose length is comparable (zh/en prose length between 0.12 and 1.2); a Chinese-only table counts in full.",
+  "zh_only": {
+    "spans": 3,
+    "bytes": 139,
+    "by_section": {
+      "生成之论 / The Theory": {
+        "spans": 1,
+        "bytes": 75,
+        "chars": 25
+      },
+      "1. 生成：同一展开 / Becoming: one unfolding": {
+        "spans": 1,
+        "bytes": 49,
+        "chars": 31
+      },
+      "只有中文": {
+        "spans": 1,
+        "bytes": 15,
+        "chars": 5
+      }
+    }
+  },
+  "mixed_script_units": 1
+}

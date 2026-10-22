@@ -1,0 +1,30 @@
+## {N}. Copied witnesses, codes with synonyms, coined forms and majority, imposing, and the move alone (ZG4)
+
+```text
+Result(s): new records copied-witnesses-change-nothing, synonyms-and-coined-forms, taking-what-most-hold,
+       imposing-a-code-breaks-the-symmetry, the-move-alone-underdetermines.
+Delta: witnesses copying witnesses on the roster (in reports, support and every fault set) change no step of
+       inspection and no certificate (WitnessRefinementRuns.copied_witnesses_same, FaultEnvelopes.copied_roster_same;
+       the doubled and duplicated rosters their cases). A code letting a sense hold several forms reads back exactly
+       where no two senses share a form (SharedCodes.synonyms_read_iff; one form a sense its case). Coining is the step
+       hearing lacks: a form coined at m and heard by all brings back a distinction an imposed code merged
+       (coined_returns). Taking what most hold makes no form; two of three agree at once, one of two rests. Imposing a
+       code keeps every exchange of formations and keeps no renaming moving its forms, for any family. Where a move has
+       two situations reaching two configurations, no law from configuration and move alone is right on both
+       (Situations.move_underdetermines; Confound.misattributes its case).
+Premises / correspondence: none beyond the models' finite lists and decidable equalities. Correspondence:
+       common-cause redundancy; synonymy and homonymy; majority dynamics; symmetry breaking; confounding.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: majority agreement from every start is not claimed (an even split rests); a witness merely agreeing with
+       another, without copying it, is outside the law.
+Output → input: the ZH map's 韩非 (八经, 八奸, 二柄's 一多心), 荀子 正名, 王弼 明彖, 大取 entries; records
+       fallible-witness-diagnosability, a-code-formed-between-formations, weights-count-situations.
+```
+
+**What was built.** `FaultEnvelopes.or_absorbed`, `FaultEnvelopes.copied_roster_same` (`duplicated_roster_same` now derived); `WitnessRefinementRuns.any_congr_on`, `and_absorbed`, `witnessed_copy`, `copied_witnesses_same` (`doubled_roster_same` now derived); `SharedCodes.synonyms_read_iff`, `one_form_reads_iff`, `coin`, `coin_at`, `coin_other_sense`, `runBy_other_sense`, `coined_returns`, `holders`, `majority`, `majority_held`, `Majority.three`, `Majority.two`, `Majority.odd_agrees`, `Majority.even_rests`, `impose_keeps_exchange`, `impose_privileges_forms`; `Situations.move_underdetermines`.
+
+*Reading* [AI reading, D45]. 韩非「十人云疑，百人然乎，千人不可解也」: hearsay passed on adds no witness. 荀子「單與兼無所相避則共」: synonyms are harmless where no form is shared. 「有作於新名」: a coined form, heard by all, brings back what an imposed name merged. 韩非「一多心」: taking what most hold still needs a break of symmetry. 王弼「至寡」: imposing a code agrees without a formation above the others, for any family. 大取「非彼其行益也」: what the move does not determine is not set down to it.
+
+**Self-review.** The copy laws generalize the doubled rosters, which are derived (rule 9). The synonym law and coining are stated on codes as they are, with no new type; the majority witnesses are small and say only what they show. `move_underdetermines` needs only two positive weights; its proof is short because the content is the finer law's definition, now stated generally.
+
+**The run.** {CORE_LINE}. A first run on the same sources passed but listed three new names under market words (`spent…`); the census was renamed (`exhausted…`) and the run repeated; the first run's receipt is not kept. Connectivity: {APART}.

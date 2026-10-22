@@ -1,0 +1,22 @@
+<a id="gaps-check-2"></a>
+## A check: witnesses, codes, junctures, division and the Changes the classical texts ask for (22 October 2026, ZG4-ZG6)
+
+An AI check (one session, 22 October), made while the Lean was written, of the 21 gap notes ZG4-ZG6 answer and the 13 marked as scope remarks. **Verdict: each law is known in its kind; the spine states each on its own relations (rosters, codes, courses, flows, places), and the copy laws derive the earlier doubled rosters as cases. The censuses are new only as checks of the texts against the places.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Redundant evidence from a common cause | evidence theory (from memory) | `copied_witnesses_same` |
+| Synonymy harmless, homonymy harmful, for decoding | coding theory (from memory) | `synonyms_read_iff` |
+| Majority dynamics: odd splits settle, even tie | voter models (from memory) | `Majority.odd_agrees`, `even_rests` |
+| Symmetry breaking needs an asymmetric term | dynamical systems (from memory) | `impose_privileges_forms` with `never_agrees_of_both` |
+| Shortest paths within the number of states | graph theory (from memory) | `reach_within_listed` |
+| Disjoint allocation within capacity | resource allocation (from memory) | `withinJoint_of_plan` |
+
+```text
+Result(s): twelve new records (ZG4-ZG6)
+Delta: the gap notes' laws, each proved where it belongs; 13 notes marked as scope remarks with their reasons
+Supplied premises / correspondence: as each record names
+Evidence: the prior forms from memory, not reread; Lean in the records' receipt
+Boundary: AI check, one session; three entries whose kind rested on a gap keep their kind, left to the ZH reading
+Integration: the ZH map's entries and chapter §八; the chapter's record tables
+```

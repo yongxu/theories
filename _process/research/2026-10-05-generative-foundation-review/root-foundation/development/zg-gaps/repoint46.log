@@ -1,0 +1,475 @@
+{
+ "records": 59,
+ "apply": true,
+ "by_record": {
+  "a-code-formed-between-formations": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean"
+   ]
+  },
+  "a-coupling-saturated-by-what-it-has-carried": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json"
+   ],
+   "rebound": []
+  },
+  "a-law-through-a-projection-along-one-run": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "a-law-through-changing-coupling-along-one-run": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "a-need-with-a-cap": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "a-whole-carried-by-lasting-parts": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "a-whole-of-every-part": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json"
+   ],
+   "rebound": []
+  },
+  "any-number-of-drawers-in-turn": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "arising-needs-change": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "basins-of-a-determined-law": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "capture-through-the-rule": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean"
+   ],
+   "rebound": []
+  },
+  "civilization-thought-on-the-spine": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "closed-capture": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean"
+   ],
+   "rebound": []
+  },
+  "closing-needs-net-draw": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "closure-verdict-meets-continuation-condition": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "comparison-by-widening": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "comparison-content-under-regrouping": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "comparison-within-reach": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "continuation-condition-yields-living-significance": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "copying-b-fold": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json"
+   ],
+   "rebound": []
+  },
+  "differences-below-threshold": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "dormancy-over-a-stretch": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-draw-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-within-capacities": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "every-loss-passes-a-juncture": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean"
+   ]
+  },
+  "fallible-witness-diagnosability": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean"
+   ]
+  },
+  "far-conveying-runs-the-family-down": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "feedback-and-reach": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "fixed-places-and-sole-lines": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean"
+   ]
+  },
+  "four-cases-of-a-part": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "hexagram-arrangements-and-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean"
+   ]
+  },
+  "hexagram-world-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean"
+   ]
+  },
+  "how-fast-a-rule-may-change": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean"
+   ]
+  },
+  "least-parts-and-equal-shares": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json"
+   ],
+   "rebound": []
+  },
+  "loops-within-what-a-law-reads": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "loss-beyond-a-region": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "need-drift-along-a-lineage": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "negation-change-and-stable-cases": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "order-of-exchanges-sharing-a-relatum": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "own-widening-within-the-margin": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ],
+   "rebound": []
+  },
+  "place-relations-in-context": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean"
+   ]
+  },
+  "ranking-under-readings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "regulation-from-one-side-and-locally": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json"
+   ],
+   "rebound": []
+  },
+  "repeated-disturbance": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "represented-boundary-against-dependence": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "revision-comes-to-drawing-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "rivals-bounded-in-time": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "selection-right-exactly-where-read": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "significance-retained-within-margin": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "support-from-the-supported": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "testing-within-couplings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "the-rest-outruns-the-renewal": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean"
+   ]
+  },
+  "thresholds-of-waiting": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean"
+   ],
+   "rebound": []
+  },
+  "tolerance-monotone-across-laws": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "weights-count-situations": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean"
+   ]
+  },
+  "what-a-commuting-law-keeps-apart": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean"
+   ],
+   "rebound": []
+  },
+  "what-dependence-alone-carries-of-a-level": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "what-taking-all-excludes": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean"
+   ]
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
