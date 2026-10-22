@@ -198,6 +198,100 @@ theorem pool_adds (alike : W.AlikeThroughUpTo obs g l l' t)
   ⟨fun m => W.AlikeThroughAll obs group l m t, pooledClass_selects,
    fun through => differ ((through l l' alike).mp (AlikeThroughAll.refl t))⟩
 
+/-! ## A pool read by what most of its members read -/
+
+/-- How many of the listed members a test holds of. -/
+def holdsCount (p : F → Bool) : List F → Nat
+  | [] => 0
+  | g :: gs => (p g).toNat + holdsCount p gs
+
+theorem toNat_le_of_imp : ∀ {a b : Bool}, (a = true → b = true) → a.toNat ≤ b.toNat
+  | false, _, _ => Nat.zero_le _
+  | true, true, _ => Nat.le_refl 1
+  | true, false, imp => Bool.noConfusion (imp rfl)
+
+theorem holdsCount_le_of_imp {p q : F → Bool} :
+    ∀ {gs : List F}, (∀ g, g ∈ gs → p g = true → q g = true) → holdsCount p gs ≤ holdsCount q gs
+  | [], _ => Nat.le_refl 0
+  | _ :: _, imp => Nat.add_le_add (toNat_le_of_imp (imp _ (.head _)))
+      (holdsCount_le_of_imp fun g mem => imp g (.tail _ mem))
+
+theorem holdsCount_congr {p q : F → Bool} :
+    ∀ {gs : List F}, (∀ g, g ∈ gs → p g = q g) → holdsCount p gs = holdsCount q gs
+  | [], _ => rfl
+  | g :: gs, same => show (p g).toNat + holdsCount p gs = (q g).toNat + holdsCount q gs from
+      congr (congrArg (· + ·) (congrArg Bool.toNat (same g (.head _))))
+        (holdsCount_congr fun g' mem => same g' (.tail _ mem))
+
+theorem toNat_add_not : ∀ a : Bool, a.toNat + (!a).toNat = 1
+  | false => rfl
+  | true => rfl
+
+/-- A test and its negation count every member once. -/
+theorem holdsCount_add_not (p : F → Bool) :
+    ∀ gs : List F, holdsCount p gs + holdsCount (fun g => !p g) gs = gs.length
+  | [] => rfl
+  | g :: gs => show (p g).toNat + holdsCount p gs + ((!p g).toNat + holdsCount (fun g => !p g) gs) =
+      gs.length + 1 from (Nat.add_add_add_comm _ _ _ _).trans
+      ((congrArg (· + _) (toNat_add_not (p g))).trans
+        ((congrArg (1 + ·) (holdsCount_add_not p gs)).trans (Nat.add_comm 1 gs.length)))
+
+theorem and_left_true : ∀ {a b : Bool}, (a && b) = true → a = true
+  | true, _, _ => rfl
+  | false, _, h => h
+
+theorem and_right_true : ∀ {a b : Bool}, (a && b) = true → b = true
+  | true, _, h => h
+  | false, _, h => Bool.noConfusion h
+
+/-- **Taking what most of the members read**: a history is selected where more than half the
+listed members' readings hold of it. -/
+def MajorityHolds (members : List F) (read : F → (Nat → C → Nat) → Bool) (l : Nat → C → Nat) :
+    Prop :=
+  members.length < 2 * holdsCount (fun g => read g l) members
+
+/-- **A pool read by what most members read selects through the pooled coupling**, where each
+member reads through its own coupling: so it separates no two histories the pool does not. -/
+theorem majority_through_all {members : List F} {read : F → (Nat → C → Nat) → Bool}
+    (inGroup : ∀ g, g ∈ members → group g)
+    (through : ∀ g, g ∈ members → ∀ l l', W.AlikeThroughUpTo obs g l l' t → read g l = read g l') :
+    W.SelectsThroughAll obs group t (MajorityHolds members read) :=
+  fun l l' alike =>
+    have same : holdsCount (fun g => read g l) members = holdsCount (fun g => read g l') members :=
+      holdsCount_congr fun g mem => through g mem l l' (alike g (inGroup g mem))
+    ⟨fun most => Eq.subst (motive := fun k => members.length < 2 * k) same most,
+     fun most => Eq.subst (motive := fun k => members.length < 2 * k) same.symm most⟩
+
+/-- **A distinction held by fewer than half is outvoted.** Where more than half the members' readings
+hold of both histories, or more than half fail of both, taking what most read goes alike on the
+two, however many members tell them apart; the pool itself separates them wherever one member does
+(`separates_all_iff_member`). So the shares of the members, not only which couplings are present,
+decide what a pool read by its majority separates. -/
+theorem majority_outvoted {members : List F} {read : F → (Nat → C → Nat) → Bool}
+    {l l' : Nat → C → Nat}
+    (most : members.length < 2 * holdsCount (fun g => read g l && read g l') members ∨
+      members.length < 2 * holdsCount (fun g => !read g l && !read g l') members) :
+    (MajorityHolds members read l ↔ MajorityHolds members read l') :=
+  match most with
+  | .inl hold =>
+    have at_l := Nat.lt_of_lt_of_le hold (Nat.mul_le_mul_left 2
+      (holdsCount_le_of_imp fun _ _ both => and_left_true both))
+    have at_l' := Nat.lt_of_lt_of_le hold (Nat.mul_le_mul_left 2
+      (holdsCount_le_of_imp fun _ _ both => and_right_true both))
+    ⟨fun _ => at_l', fun _ => at_l⟩
+  | .inr fail =>
+    have fails : ∀ m : Nat → C → Nat,
+        (∀ g, g ∈ members → (!read g l && !read g l') = true → (!read g m) = true) →
+        ¬ MajorityHolds members read m := fun m imp holds =>
+      Nat.lt_irrefl (members.length + members.length)
+        (Nat.lt_of_lt_of_le (Nat.add_lt_add (Nat.lt_of_lt_of_le fail
+            (Nat.mul_le_mul_left 2 (holdsCount_le_of_imp imp))) holds)
+          (Nat.le_of_eq ((Nat.left_distrib 2 _ _).symm.trans
+            ((congrArg (2 * ·) ((Nat.add_comm _ _).trans (holdsCount_add_not (fun g => read g m) members))).trans
+              (Nat.two_mul _)))))
+    ⟨fun holds => absurd holds (fails l fun _ _ both => and_left_true both),
+     fun holds => absurd holds (fails l' fun _ _ both => and_right_true both)⟩
+
 end Web
 
 /-! ## Blind beyond a pool's coupling closure -/

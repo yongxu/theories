@@ -374,6 +374,46 @@ theorem pair_locks {P : Ideals.Preorder S} {M₁ : Ideals.Preorder R₁} {M₂ :
 
 end Pair
 
+/-! ## A reading against the share -/
+
+section Against
+
+variable {P : Ideals.Preorder S} {M : Ideals.Preorder R} {favours : R → Prop}
+  {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+
+/-- Along a course whose rules favour, the share falls at no step and so at no stretch. -/
+theorem share_kept_along (raises : Raises P favours f) {c : S × R}
+    (favouring : ∀ t, favours (paced f h reads c t).2) (t : Nat) :
+    ∀ k, P.le (paced f h reads c t).1 (paced f h reads c (t + k)).1
+  | 0 => P.refl _
+  | k + 1 => P.trans (share_kept_along raises favouring t k)
+      (Eq.subst (motive := fun y => P.le (paced f h reads c (t + k)).1 y)
+        (paced_fast_succ c (t + k)).symm (raises _ _ (favouring (t + k))))
+
+/-- **A reading against the share does not ratchet.** Where selection under a favouring rule does
+not lower the share and the rule is read against the share (`ReadsShare P (reverse M) h`: read at a
+share not lower, the rule is not higher), along a course whose rules favour, the rule read at a
+later reading step is not above the rule read at an earlier one. The lock rests on the rule not
+falling as the share rises (`locked_not_below`); read against the share, as by those the selection
+presses down, the rule cannot rise with it. -/
+theorem against_not_rising (raises : Raises P favours f) (against : ReadsShare P (reverse M) h)
+    {c : S × R} (favouring : ∀ t, favours (paced f h reads c t).2) {r r' : Nat}
+    (first : reads r = true) (second : reads r' = true) (le : r ≤ r') :
+    M.le (paced f h reads c (r' + 1)).2 (paced f h reads c (r + 1)).2 :=
+  have read_at : ∀ q, reads q = true → (paced f h reads c (q + 1)).2 =
+      h (paced f h reads c q).1 (paced f h reads c q).2 := fun q at_q =>
+    congrArg Prod.snd ((paced_succ c q).trans (congrArg (fun b => turn f h b _) at_q))
+  match le_dest le with
+  | ⟨d, at_r'⟩ =>
+    have rose : P.le (paced f h reads c r).1 (paced f h reads c r').1 :=
+      Eq.subst (motive := fun n => P.le (paced f h reads c r).1 (paced f h reads c n).1) at_r'.symm
+        (share_kept_along raises favouring r d)
+    Eq.subst (motive := fun g => M.le (paced f h reads c (r' + 1)).2 g) (read_at r first).symm
+      (Eq.subst (motive := fun g => M.le g (h (paced f h reads c r).1 (paced f h reads c r).2))
+        (read_at r' second).symm (against _ _ _ _ rose))
+
+end Against
+
 section Order
 
 variable {P : Ideals.Preorder S} {M : Ideals.Preorder R}
