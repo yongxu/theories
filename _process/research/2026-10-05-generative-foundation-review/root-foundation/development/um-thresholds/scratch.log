@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/um-thresholds/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/um-thresholds/tree",
+  "modules": 62,
+  "ran": [
+    "Becoming.RegimeMargin",
+    "BecomingRegimeMarginAxiomAudit"
+  ],
+  "reused": 61,
+  "unclean": [],
+  "audits": {
+    "Becoming.RegimeMargin": {
+      "theorems": 244,
+      "declarations": 334,
+      "with_axioms": {}
+    }
+  }
+}

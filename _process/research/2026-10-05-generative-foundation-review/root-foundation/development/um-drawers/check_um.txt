@@ -1,0 +1,18 @@
+<a id="unified-check"></a>
+## A check: one model of drawers in turn (22 October 2026, UM)
+
+An AI check (one session, 22 October) of the unified model's one law against known forms. **Verdict: known in its kind. That a choice keeps a unit only where the unit's later value is at least what it yields now is the first-order condition of dynamic programming; backward induction over movers in turn and best-response dynamics give the rest. The spine's form states it once, exactly, in natural amounts with a floor, and derives from it the drain of any number of drawers, its reach by revision, drawing to capacity and the witnesses' restraint.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Optimality condition: marginal value of what is kept against what is taken now | Bellman (1957) (from memory) | `Optimum.InTurn.kept_returns`: what a best response keeps above its floor returns to it at least one for one |
+| The dynamic commons; backward induction; best-response dynamics | Levhari and Mirman (1980); Selten (1965); Fudenberg and Levine (1998) (from memory) | `Optimum.InTurn.perfect_ends`, `Optimum.InTurn.revisions_end` |
+
+```text
+Result(s): new record drawers-in-turn (UM), superseding four drawer records; one law of exact thresholds in two margin records
+Delta: one model of drawers in turn with floors; one law of best response; the drain, revision, capacity and witnesses from it; one law of exact thresholds
+Supplied premises / correspondence: as the record states. Correspondence: dynamic programming; backward induction; best-response dynamics
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; drawing at once not stated
+Integration: chapter §2.3, §3.4, §7.1, item 10, row 6 and the record table
+```

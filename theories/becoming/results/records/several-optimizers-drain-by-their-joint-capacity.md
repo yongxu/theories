@@ -102,6 +102,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 
 Aliases: `several optimizers drain by their joint capacity`, `a mutual best response beyond`, `the blind commons`, `多个优化者以合计容量抽干`, `Becoming.Optimum.MutualBest`, `Becoming.Optimum.mutual_beyond`, `Becoming.Optimum.mutual_as_one`
 

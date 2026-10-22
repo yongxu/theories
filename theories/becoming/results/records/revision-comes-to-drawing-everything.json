@@ -6,7 +6,7 @@
     "zh": "修订达到全部抽取"
   },
   "kind": "theorem",
-  "status": "recorded-checked",
+  "status": "superseded",
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T21:36:01+00:00",
   "statement": {
@@ -98,13 +98,11 @@
     "en": "Best-response dynamics settles on the backward-induction outcome in finite games of perfect information (Fudenberg and Levine 1998); cooperation unravels from the last period (Selten 1978).",
     "zh": "在有限完美信息博弈中，最优回应动态落在逆向归纳的结果上（Fudenberg 与 Levine 1998）；合作自最后一期瓦解（Selten 1978）。"
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean",
   "aliases": [
     "revision comes to drawing everything",
     "how drawers come to a mutual best response",
-    "修订达到全部抽取",
-    "Becoming.Optimum.InTurn.revised_draw_all",
-    "Becoming.Optimum.InTurn.revisions_end"
+    "修订达到全部抽取"
   ],
   "dependencies": [
     {
@@ -127,15 +125,15 @@
           "en": "Best-response revision.",
           "zh": "最优回应修订。"
         },
-        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean"
       }
     }
   ],
   "related": [],
   "references": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "role": "proof",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean",
+      "role": "provenance",
       "declarations": [
         "Becoming.Optimum.Holding.gate",
         "Becoming.Optimum.Holding.gated_restraint_keeps",
@@ -182,7 +180,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "fc5d2929697d0add12c22cd557657685fd737b80a08f08590e39ef6327a7d5c6"
+      "sha256": "07480c3fde0ba5298b69503733972d3348b7f9a5f6c1c9ea1da2af6ac1ead4ce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
@@ -197,15 +195,7 @@
       "declarations": []
     }
   ],
-  "proof_bindings": [
-    {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.Optimum",
-      "success_pointer": "/status",
-      "success_value": "passed"
-    }
-  ],
+  "proof_bindings": [],
   "history": [
     {
       "en": "22 October 2026: added (SG16), revision toward best responses comes to drawing everything within 2N rounds; study section 326.",
@@ -214,6 +204,11 @@
     {
       "en": "22 October 2026, SG17: the two drawers' perfect_ends and perfect_levels, removed as the case k = 2 of the general laws, are cited as Many.perfect_ends and Many.perfect_levels (record any-number-of-drawers-in-turn); its laws are unchanged.",
       "zh": "2026年10月22日，SG17：两个抽取者的 perfect_ends 与 perfect_levels 作为一般之律 k = 2 的情形被移除，今以 Many.perfect_ends 与 Many.perfect_levels 引用（记录 any-number-of-drawers-in-turn）；其律不变。"
+    },
+    {
+      "en": "22 October 2026, UM: superseded by drawers-in-turn, one model of drawers in turn on one law of best response, of which these laws are cases; the Lean they cited was replaced, and is kept as provenance in the receipt copy experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean (study section 335). The claim is unchanged.",
+      "zh": "2026年10月22日，UM：被 drawers-in-turn 取代（依一条最优回应之律的轮流抽取者的一个模型，本记录之律为其情形）；所引 Lean 已被替换，作为来源保存在回执副本 experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean 中（研究第 335 节）。主张不变。"
     }
-  ]
+  ],
+  "superseded_by": "drawers-in-turn"
 }

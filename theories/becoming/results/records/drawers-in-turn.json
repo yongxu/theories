@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "id": "drawers-in-turn",
+  "title": {
+    "en": "Drawers in turn",
+    "zh": "轮流的抽取者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T04:54:10+00:00",
+  "statement": {
+    "en": "Drawers in turn are one model, each with a floor, on one law of best response: what a drawer keeps above its floor returns to it at least one for one; so with no floor and two or more drawers revision and perfection both draw everything.",
+    "zh": "轮流的抽取者是一个模型，各有下限，依一条最优回应之律：抽取者在下限之上所留至少一对一地回到自身；故无下限且两个及以上抽取者时，修订与完美都全部抽取。"
+  },
+  "laws": [
+    {
+      "en": "One model: at each step k drawers draw in turn, drawer d leaving of what it is given at least its floor and at most all of it; a profile revises another where each rule is a best response against it at every step from every level, and is perfect where it revises itself.",
+      "zh": "一个模型：每步 k 个抽取者轮流，抽取者 d 对所给至少留其下限、至多全留；一个组合修订另一个，若每条规则在每步、从每个水平都是对它的最优回应；组合修订自身即完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.pass",
+        "Becoming.Optimum.InTurn.next",
+        "Becoming.Optimum.InTurn.drawn",
+        "Becoming.Optimum.InTurn.later",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.Revises",
+        "Becoming.Optimum.InTurn.Perfect"
+      ]
+    },
+    {
+      "en": "One law: what a best response keeps above its floor returns to it at least one for one; so it leaves its floor where nothing it keeps returns, a drawer draws to capacity wherever what it draws later is fixed, and every drawer at the last step.",
+      "zh": "一条律：最优回应在下限之上所留至少一对一地回到自身；故无所回之处留下限，此后所抽固定之处抽到容量，最后一步每者皆然。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.kept_returns",
+        "Becoming.Optimum.InTurn.leaves_floor",
+        "Becoming.Optimum.InTurn.at_floor",
+        "Becoming.Optimum.InTurn.last_at_floor"
+      ]
+    },
+    {
+      "en": "With no floor and two or more drawers, every drawer after the first draws nothing later and what the first leaves goes to the second: every sequence of revisions draws everything from round 2N on, a revision always exists, and every perfect profile draws everything.",
+      "zh": "无下限且两个及以上抽取者时，第一者之后的每者此后不抽，第一者所留归第二者：每个修订序列自第 2N 轮起全部抽取，修订总存在，每个完美组合全部抽取。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.pass_zero",
+        "Becoming.Optimum.InTurn.pass_of_first",
+        "Becoming.Optimum.InTurn.others_draw_nothing",
+        "Becoming.Optimum.InTurn.revisions_end",
+        "Becoming.Optimum.InTurn.perfect_ends",
+        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.bestUpTo",
+        "Becoming.Optimum.InTurn.bestUpTo_le",
+        "Becoming.Optimum.InTurn.bestUpTo_max",
+        "Becoming.Optimum.InTurn.best_from",
+        "Becoming.Optimum.InTurn.revise",
+        "Becoming.Optimum.InTurn.revise_revises",
+        "Becoming.Optimum.InTurn.revised",
+        "Becoming.Optimum.InTurn.revised_leaves",
+        "Becoming.Optimum.InTurn.revised_draw_all"
+      ]
+    },
+    {
+      "en": "Where the first drawer leaves nothing the base stands at what stands at nothing, and on a web every dependence above it, met at the start, is broken at the first step.",
+      "zh": "第一者不留之处，基础立于零处所立者；在网上，起始时被满足、高于它的每个依存在第一步被打破。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.levels_of_first",
+        "Becoming.Web.drained_broken"
+      ]
+    },
+    {
+      "en": "Witnesses: under the gate, alone an optimum keeps the dweller, restraint keeps it, and every perfect profile and every revision from restraint breaks it; under doubling with a one-unit floor on the second, the first leaves everything from three and the dweller is kept.",
+      "zh": "见证：门控下单独的最优与克制保持居者，每个完美组合与自克制的每次修订打破它；倍增且第二者下限为一单位时，第一者自三全留，居者得以保持。",
+      "declarations": [
+        "Becoming.Optimum.Holding.pass_keep",
+        "Becoming.Optimum.Holding.restraint_keeps",
+        "Becoming.Optimum.Holding.gated_in_turn",
+        "Becoming.Optimum.Holding.oneUnit",
+        "Becoming.Optimum.Holding.keepsFirst",
+        "Becoming.Optimum.Holding.keeping",
+        "Becoming.Optimum.Holding.keepsFirst_le",
+        "Becoming.Optimum.Holding.twice_sum",
+        "Becoming.Optimum.Holding.keepsFirst_best",
+        "Becoming.Optimum.Holding.only_three",
+        "Becoming.Optimum.Holding.doubling_capacity"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Any law G of what stands; k drawers in turn at each step, each leaving between its floor and what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; for the drain and the revision no floor and k at least two, the start leaving at most what it is given; natural amounts, discrete steps.",
+      "zh": "不加公理。任一所立之律 G；每步 k 个轮流的抽取者，各自留于其下限与所给之间；其后各步之和；规则读取抽取者、步与水平；抽干与修订无下限且 k 至少为二，起始组合至多留所给；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Drawing at once with a rule of sharing; which profiles are perfect where a floor binds away from the last step.",
+      "zh": "按分享规则同时抽取；下限起作用时最后一步之外何种组合完美。",
+      "kind": "scope"
+    },
+    {
+      "en": "Revision that is not a best response: noisy, partial or local learning.",
+      "zh": "非最优回应的修订：有噪声、部分或局部的学习。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the drain is a harm or restraint better: no evaluation enters; the laws say what profiles do.",
+      "zh": "抽干是伤害或克制更好：没有评价进入；这些律只说组合做什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T045034.169350Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built and reviewed in one session; author review in study section 335; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T045034.169350Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 335 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Drawing at once with a rule of sharing; perfect profiles where a floor binds; an independent review.",
+    "zh": "按分享规则同时抽取；下限起作用时的完美组合；独立审查。"
+  },
+  "correspondence": {
+    "en": "The optimality condition of dynamic programming (Bellman 1957); the dynamic commons (Levhari and Mirman 1980); backward induction (Selten 1965); best-response dynamics (Fudenberg and Levine 1998).",
+    "zh": "动态规划的最优条件（Bellman 1957）；动态公地（Levhari 与 Mirman 1980）；逆向归纳（Selten 1965）；最优回应动态（Fudenberg 与 Levine 1998）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "drawers in turn",
+    "one model of drawers in turn",
+    "轮流的抽取者",
+    "Becoming.Optimum.InTurn.kept_returns",
+    "Becoming.Optimum.InTurn.revisions_end"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "detail": {
+        "en": "Superseded by this record, its laws now cases of the one model.",
+        "zh": "被本记录取代，其律今为一个模型的情形。"
+      }
+    },
+    {
+      "id": "revision-comes-to-drawing-everything",
+      "detail": {
+        "en": "Superseded by this record, its laws now cases of the one model.",
+        "zh": "被本记录取代，其律今为一个模型的情形。"
+      }
+    },
+    {
+      "id": "drawers-in-turn-within-capacities",
+      "detail": {
+        "en": "Superseded by this record, its laws now cases of the one model.",
+        "zh": "被本记录取代，其律今为一个模型的情形。"
+      }
+    },
+    {
+      "id": "any-number-of-drawers-in-turn",
+      "detail": {
+        "en": "Superseded by this record, its laws now cases of the one model.",
+        "zh": "被本记录取代，其律今为一个模型的情形。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.doubling_capacity",
+        "Becoming.Optimum.Holding.gate",
+        "Becoming.Optimum.Holding.gated_alike",
+        "Becoming.Optimum.Holding.gated_in_turn",
+        "Becoming.Optimum.Holding.keeping",
+        "Becoming.Optimum.Holding.keepsFirst",
+        "Becoming.Optimum.Holding.keepsFirst_best",
+        "Becoming.Optimum.Holding.keepsFirst_le",
+        "Becoming.Optimum.Holding.onSource",
+        "Becoming.Optimum.Holding.oneUnit",
+        "Becoming.Optimum.Holding.only_three",
+        "Becoming.Optimum.Holding.pass_keep",
+        "Becoming.Optimum.Holding.restraint_keeps",
+        "Becoming.Optimum.Holding.twice_sum",
+        "Becoming.Optimum.InTurn.Perfect",
+        "Becoming.Optimum.InTurn.Revises",
+        "Becoming.Optimum.InTurn.at_floor",
+        "Becoming.Optimum.InTurn.bestUpTo",
+        "Becoming.Optimum.InTurn.bestUpTo_le",
+        "Becoming.Optimum.InTurn.bestUpTo_max",
+        "Becoming.Optimum.InTurn.best_from",
+        "Becoming.Optimum.InTurn.drawn",
+        "Becoming.Optimum.InTurn.kept_returns",
+        "Becoming.Optimum.InTurn.last_at_floor",
+        "Becoming.Optimum.InTurn.later",
+        "Becoming.Optimum.InTurn.leaves_floor",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.levels_of_first",
+        "Becoming.Optimum.InTurn.next",
+        "Becoming.Optimum.InTurn.others_draw_nothing",
+        "Becoming.Optimum.InTurn.pass",
+        "Becoming.Optimum.InTurn.pass_of_first",
+        "Becoming.Optimum.InTurn.pass_zero",
+        "Becoming.Optimum.InTurn.perfect_ends",
+        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.revise",
+        "Becoming.Optimum.InTurn.revise_revises",
+        "Becoming.Optimum.InTurn.revised",
+        "Becoming.Optimum.InTurn.revised_draw_all",
+        "Becoming.Optimum.InTurn.revised_leaves",
+        "Becoming.Optimum.InTurn.revisions_end",
+        "Becoming.Web.drained_broken"
+      ],
+      "sha256": "e9523bee6cf0f7ba706f04ae10c3a57268fca0259fed0db9a81dd0eb0ef1ddcc"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "role": "receipt",
+      "sha256": "1e74422727acd0467bc4e68475b978f5397a2059a38c3f83b1ec1850a948e309"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "3a1bf8ee94b7a2b26063db790b8138f9c65997956d7bc70164e2eb8b99f491b6"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "291f027f51552408c3a3589b18a141b69a6d4270262d3e6a13cfdf33e707e36e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "07480c3fde0ba5298b69503733972d3348b7f9a5f6c1c9ea1da2af6ac1ead4ce"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (UM), one model of drawers in turn with floors on one law of best response, superseding drawers-in-turn-draw-everything, revision-comes-to-drawing-everything, drawers-in-turn-within-capacities, any-number-of-drawers-in-turn; study section 335.",
+      "zh": "2026年10月22日：新增（UM），依一条最优回应之律、各有下限的轮流抽取者的一个模型，取代 drawers-in-turn-draw-everything、revision-comes-to-drawing-everything、drawers-in-turn-within-capacities、any-number-of-drawers-in-turn；研究第 335 节。"
+    }
+  ]
+}
