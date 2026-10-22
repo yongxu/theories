@@ -100,10 +100,10 @@ actual descent forms dependences so, how reconstruction and development carry th
 descent forms new dependences, as when young come to depend on their parents, are matters of
 correspondence. The readings are the AI's, adopted on Ren's delegation of 15 October 2026
 (DELEGATED-CHOICES D31). No ethical predicate, ranking or axiom occurs.
-* **Forming anew, necessary and sufficient.** A dependence forms anew at a descent (`Web.NewAt`: the
+* **Forming anew, necessary and sufficient.** A dependence forms anew at a descent (`Web.FormsAnewAt`: the
   descendant holds it, the giver did not) exactly where inheritance fails, the giver's dependence
-  stable (`Web.inheritsAt_iff_not_new`), and, depending and drawing coinciding at the giver, exactly
-  where the descendant depends on what its giver did not draw on (`Web.new_iff_undrawn`).
+  stable (`Web.inheritsAt_iff_not_formsAnew`), and, depending and drawing coinciding at the giver, exactly
+  where the descendant depends on what its giver did not draw on (`Web.formsAnew_iff_undrawn`).
   Inheritance gives the drawing reading at a descent exactly where the giver draws on what it holds
   and passes on (`Web.drawn_necessary_iff`), so the reading of drawing is inheritance with the
   givers drawing what they pass on (`Flow.PassesDrawn`, `Flow.dependsOnDrawn_iff`), the necessary
@@ -216,24 +216,24 @@ theorem drop_not_inherits {x : F} (depends : W.requires (t + 1) x c) :
 
 /-- A dependence on `c` forms anew at a descent across the step from `t`: the descendant `x`
 holds it at its first standing step and the giver `g` did not hold it at the giving step. -/
-def NewAt (t : Nat) (x g : F) (c : C) : Prop :=
+def FormsAnewAt (t : Nat) (x g : F) (c : C) : Prop :=
   W.requires (t + 1) x c ∧ ¬ W.requires t g c
 
 /-- **Inheritance is no dependence forming anew.** Inheritance at a descent excludes a
 dependence forming anew there; back, where the giver's dependence is stable (double negation
 removable, as wherever it is decided), excluding it gives inheritance. -/
-theorem inheritsAt_iff_not_new {t : Nat} {x g : F} {c : C}
+theorem inheritsAt_iff_not_formsAnew {t : Nat} {x g : F} {c : C}
     (stable : ¬ ¬ W.requires t g c → W.requires t g c) :
-    W.InheritsAt t x g c ↔ ¬ W.NewAt t x g c :=
+    W.InheritsAt t x g c ↔ ¬ W.FormsAnewAt t x g c :=
   ⟨fun inherits ⟨depends, fresh⟩ => fresh (inherits depends),
    fun none depends => stable fun fresh => none ⟨depends, fresh⟩⟩
 
 /-- **A dependence forms anew exactly where the descendant depends on what its giver did not
 draw on**, where depending and drawing coincide at the giver at the giving step: the law of
 forming, necessary and sufficient, in the vocabulary of drawing and depending. -/
-theorem new_iff_undrawn {t : Nat} {x g : F} {c : C}
+theorem formsAnew_iff_undrawn {t : Nat} {x g : F} {c : C}
     (link : W.draws t g c → W.requires t g c) (held : W.requires t g c → W.draws t g c) :
-    W.NewAt t x g c ↔ W.requires (t + 1) x c ∧ ¬ W.draws t g c :=
+    W.FormsAnewAt t x g c ↔ W.requires (t + 1) x c ∧ ¬ W.draws t g c :=
   ⟨fun ⟨depends, fresh⟩ => ⟨depends, fun draws => fresh (link draws)⟩,
    fun ⟨depends, undrawn⟩ => ⟨depends, fun holds => undrawn (held holds)⟩⟩
 
@@ -600,11 +600,11 @@ theorem inherits_iff_none_undrawn {c : X} (link : W.DrawingDepends c)
       ⟨inherits, fun t _ g _ _ holds => held t g holds⟩,
     fun drawn => inherits_of_drawn drawn link⟩,
    ⟨fun inherits t x g descends new =>
-      (Web.inheritsAt_iff_not_new (stable t g)).mp (inherits t x g descends)
-        ((Web.new_iff_undrawn (link t g) (held t g)).mpr new),
+      (Web.inheritsAt_iff_not_formsAnew (stable t g)).mp (inherits t x g descends)
+        ((Web.formsAnew_iff_undrawn (link t g) (held t g)).mpr new),
     fun none t x g descends =>
-      (Web.inheritsAt_iff_not_new (stable t g)).mpr fun new =>
-        none t x g descends ((Web.new_iff_undrawn (link t g) (held t g)).mp new)⟩⟩
+      (Web.inheritsAt_iff_not_formsAnew (stable t g)).mpr fun new =>
+        none t x g descends ((Web.formsAnew_iff_undrawn (link t g) (held t g)).mp new)⟩⟩
 
 end Flow
 
