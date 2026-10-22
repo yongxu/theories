@@ -38,3 +38,7 @@ Reported beside the predictions: Wilcoxon signed-rank on per-條 means, McNemar 
 ## What the result can and cannot say
 
 It scores referents, not truth: a wording that says nothing scores X = 0, which is why O and S are reported. It compares two codes written by the same AI, coded by two AIs; a human audit would decide. A result in either direction speaks to these two texts, not to classical Chinese or English in general.
+
+## Amendment, 22 October 2026: scope reduced by direction, before any main result was read
+
+During the main run, the person who asked for the measure directed it be cut to the main comparison: "停掉 naive 一遍和体裁对照段，只编主比较所需的經和英文句，F3、F4 记为未测" (stop the naive pass and the genre-matched segments; code only the 經 and English clauses the main comparison needs; record F3 and F4 as not measured). Only the table pass of the 經 (jing) and E1 (en) segments is coded and scored. **F3 and F4 are not measured.** The genre-matched cells, the naive X and the inherited-sense load are not reported. Codings already made of those segments (the GPT coder's first 20 naive packets, and the record-law segments in the Claude coder's English packets) are kept in `data/coded/` and not analysed. No main result had been scored when the run stopped; the calibration results were already known and are reported as they stand.
