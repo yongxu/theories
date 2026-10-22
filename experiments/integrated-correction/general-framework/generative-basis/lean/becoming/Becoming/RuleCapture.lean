@@ -93,6 +93,12 @@ which readings formations live under; that offspring carry their parents' target
 margin. A reading against the share is not this lock: in `Switching` (of `Becoming.Pace`) the rule takes
 the value the fast level lacks, and both values recur. The representation commits to discrete steps, natural
 counts and, in `CarrierCounts`, others present. No ethical predicate, ranking or axiom occurs.
+* **Two rules, and a reading against the share.** Two rules each read monotonically from one share
+  are read so together (`ReadsShare.pair`), so where both favour at every share the pair is locked
+  from the step after the first reading step (`pair_locks`). Read against the share (`ReadsShare P
+  (reverse M) h`), along a course whose rules favour the share falls at no stretch
+  (`share_kept_along`) and the rule read at a later reading step is not above the rule read at an
+  earlier one (`against_not_rising`): the rise the lock rests on does not form.
 -/
 
 namespace Becoming

@@ -65,6 +65,12 @@ pass. No ethical predicate, ranking or axiom occurs.
   (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within
   that count; at a configuration that is not a juncture, no step can be refuted to keep `s`
   (`keeps_before_juncture`): choosing is needed only at a juncture.
+* **A source arriving before a juncture.** With `Becoming.TimedResponse`: where a source has not
+  reached a reader by `D`, a reader whose step at `x` is chosen from its answer read through its
+  couplings up to `D` takes the same step in both courses, so a losing step in one is losing in the
+  other (`TimedResponse.same_step_unreached`); where the chosen steps keep `s` in one course and
+  lose it in the other, `x` is a juncture and the source has, not not, reached the reader by `D`
+  (`TimedResponse.turned_at_juncture`).
 -/
 
 namespace Becoming

@@ -81,6 +81,12 @@ The two tiers on a frame (`Lexical.Frame.Above` and its laws, `Lexical.tierFrame
 `Lexical.above_iff_frame`, `Lexical.included_basicSide_iff`, `Lexical.included_gainSide_iff`) are in
 `Becoming.FrontierFrames`, which states the commitments on a frame, so this module does not import
 the frame (board item W).
+* **What the claims do not read.** `Above` reads the claims alone (`Above.congr_left`,
+  `Above.congr_right`, through `Included.congr`, `StrictIncluded.congr`), so under `BasicPriority`
+  two alternatives realizing the same claims are compared alike, neither better than the other
+  (`BasicPriority.same_claims_alike`): a loss imposed by another's part and the same loss self-borne
+  are not ordered unless the agent is among the claims; adjoined as a basic claim, it orders them
+  (`Above.agent_adjoined`).
 -/
 
 namespace Becoming

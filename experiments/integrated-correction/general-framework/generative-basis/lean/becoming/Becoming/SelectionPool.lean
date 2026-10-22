@@ -115,6 +115,11 @@ separates takes the members as listed and each member's coupling of the two hist
 hypotheses named where they enter. The selections here are of level histories up to a step; no
 law is stated of a claim about every later step, such as a formation's ending. The representation
 commits to discrete steps and natural amounts. No ethical predicate, ranking or axiom occurs.
+* **A pool read by what most members read.** Taking what more than half the members read
+  (`Web.MajorityHolds`, counted by `Web.holdsCount`) selects through the pooled coupling where each
+  member reads through its own (`Web.majority_through_all`), so it separates no more than the pool;
+  and where more than half read alike on two histories it goes alike on them, however many tell them
+  apart (`Web.majority_outvoted`): shares, not only the couplings present, decide what it separates.
 -/
 
 namespace Becoming

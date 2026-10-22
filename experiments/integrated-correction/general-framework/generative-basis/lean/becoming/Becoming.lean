@@ -696,6 +696,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   met there only when the bound is zero, and in a balanced flow what is taken from and
   given to the condition in between sets that level.
   Along a lineage need drifts at most δ a generation.
+  A goal descends exactly where it passes across each descent from a carrier.
 * `Becoming.Capture` (L1): how a target that cannot rest is selected and where the selection
   is held (B5 of the boundary for 无明). Carriers of a target leaving at least as many offspring
   as the others, the target's share among the offspring does not fall, and rises where they
@@ -1302,6 +1303,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the condition (`Flow.feeding_unrestricted_of_common`); and in `Clearing` and `Trophic` the
   bounded verdict and the condition's part (`Clearing.within_closure_yet_loses`,
   `Clearing.reach_counts_dweller`, `Trophic.mixed_part`).
+  Care bounded by feeding from each step withdraws as feeding stops, and permits what the condition
+  counts as a loss.
 * `Becoming.Cuts` (L1): which links a closure needs, with no premise. Removing links changes
   no closure exactly where every removed link is bypassed, its ends staying within each other's
   closure under what remains; joining one link adds exactly what passes through it. Attaching a
@@ -1540,6 +1543,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   couplings is that fine. In `Clearing`, pooling
   with the dweller closes the clearer's gap; reading the clearer's couplings does not, and reading
   the dweller's does.
+  A pool read by its majority separates by shares: a distinction held by fewer than half is
+  outvoted.
 * `Becoming.PoolResponse` (L1): what a pool's acts respond to. Where a law of exchange reads
   through the coupling of each formation outside a part, a selection through the acts of a group
   outside it is a selection through the group's pooled coupling, and what the pool's acts
@@ -1714,6 +1719,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   favour the others the lock needs its start condition: a rule against the reading read one step
   late alternates without end (`Alternating`), and a reversing perturbation carried across a
   threshold locks the course the other way (`Reversed`).
+  Two rules read from one share lock together; a rule read against the share does not ratchet.
 * `Becoming.ClosedCapture` (L1): a loop whose every level reads only the share. On `RuleCapture`'s
   two-level course with the fast configuration a pair, the share and what lies beyond it: where
   neither the next share nor the rule read reads what lies beyond, courses alike in share and rule
@@ -1780,6 +1786,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   at junctures; losing never returns. Many options make no juncture.
   What can be had is had within the count of configurations, and before a juncture no step needs
   choosing.
+  To turn a reader's step at a juncture, a source must reach it before.
 * `Becoming.Commuting` (L1): what a commuting law keeps apart. Where a law commutes with a map
   that moves every configuration, its runs from a configuration and from its image are never at
   one configuration at the same step: to merge what a symmetry tells apart a law must break it.
@@ -1917,6 +1924,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   classification holds generally exactly when excluded middle does; along a generative
   extension no decision is needed. Ported from `PracticalJudgment`, `ConcernExtension` and
   `ClassificationRobustJudgment` (F3J, 18 October 2026).
+  The comparison cannot weigh what the claims do not read; with the agent among the basic claims,
+  imposed and self-borne loss are ordered.
 * `Becoming.Frontier` (L1): the frontier of a comparison among eligible alternatives, what it
   requires, assignment, succession of service and discharge; the frontier exists where the
   comparison is weakly decided on a listed menu, and under `BasicPriority` it is the lexical

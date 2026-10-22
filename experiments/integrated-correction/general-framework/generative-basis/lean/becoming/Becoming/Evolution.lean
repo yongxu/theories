@@ -67,6 +67,11 @@ occurs.
   until it gives, transmission within `δ` keeps the need after `i + 1` descents within the founder's
   need, or the condition's level where the founder was supported, plus `(i + 1) * δ`
   (`Flow.transmitted_along`, `Flow.transmitted_along_supported`).
+* **A goal along a lineage.** A goal carried at each step passes down a lineage where it passes
+  across each descent and each member keeps it until it gives (`Flow.goal_along`); descendants of
+  carriers carry it exactly where it passes across every descent from a carrier
+  (`Flow.goal_descends_iff`): the condition is the passing at a single descent, and nothing in
+  descent makes it hold.
 -/
 
 namespace Becoming

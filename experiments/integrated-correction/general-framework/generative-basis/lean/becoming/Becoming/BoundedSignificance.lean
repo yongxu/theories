@@ -35,6 +35,12 @@ Every declaration moved here unchanged, with its name, in R31 (20 October 2026),
 `Clearing.within_closure_yet_loses`) and `Becoming.Feedback` (the rest), so that those modules
 and the modules importing them do not import the condition. The condition is supplied, not
 asserted; no ranking or axiom occurs.
+* **Feeding from a step.** The feeding closure from step `s` (`Flow.WithinFeedingFrom`) is the
+  feeding closure from the first step (`Flow.withinFeedingFrom_zero`) and shrinks with time
+  (`Flow.WithinFeedingFrom.earlier`); what gives to no requirement from `s` on lies outside every
+  other closure from `s` (`Flow.not_withinFeedingFrom`). So care bounded by feeding from each step
+  permits ending a formation that feeds no more (`Flow.feedingFrom_permits`), which the continuation
+  condition counts as a loss (`Flow.feedingFrom_parts`).
 -/
 
 namespace Becoming
