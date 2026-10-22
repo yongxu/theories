@@ -81,6 +81,7 @@ Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-g
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `groups founded mixed`, `组员间回报`, `Hamilton 规则`, `Becoming.SelectionLevels.rises_iff_returns`, `Becoming.SelectionLevels.returns_balance`
 

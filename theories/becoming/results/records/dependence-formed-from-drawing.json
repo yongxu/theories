@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "id": "dependence-formed-from-drawing",
+  "title": {
+    "en": "A dependence formed from drawing",
+    "zh": "来自汲取的依存"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "statement": {
+    "en": "Where depending and drawing part at the giver, under the reading of drawing a dependence forms anew at a descent exactly where the giver drew on what it did not depend on: a dependence formed by descent is a giver's drawing become its descendant's dependence.",
+    "zh": "给予者处依存与汲取相分时，在汲取之读法下，依存恰在给予者汲取其所不依存者之处于世系中新结：世系形成的依存即给予者的汲取成为其后代的依存。"
+  },
+  "laws": [
+    {
+      "en": "At a descent where the descendant depends on a condition, the giver's holding alone decides inheritance against forming anew; the giver held it and drew on it, held it only, drew on it only, or neither.",
+      "zh": "在后代依于某条件的世系处，只有给予者是否持有决定继承还是新结；给予者持有并汲取、只持有、只汲取，或皆无。",
+      "declarations": [
+        "Becoming.Web.inheritsAt_iff_held",
+        "Becoming.Web.four_cases",
+        "Becoming.Web.formsAnew_iff_drawn_or_neither"
+      ]
+    },
+    {
+      "en": "Under the reading of drawing at the descent the case of neither is excluded, so a dependence forms anew exactly where the giver drew on what it did not depend on; with drawing depending as well, nothing forms anew.",
+      "zh": "在该世系处的汲取之读法下，皆无的情形被排除，故依存恰在给予者汲取其所不依存者之处新结；汲取亦为依存时，无物新结。",
+      "declarations": [
+        "Becoming.Web.DependsOnDrawnAt",
+        "Becoming.Web.DependsOnDrawnAt.not_undrawn",
+        "Becoming.Web.formsAnew_iff_drawn_unheld",
+        "Becoming.Web.formsAnew_iff_neither",
+        "Becoming.Web.DependsOnDrawnAt.not_formsAnew",
+        "Becoming.Web.dependsOnDrawnAt_iff"
+      ]
+    },
+    {
+      "en": "For the flow, the reading of drawing is passing on what is drawn with forming from drawing, and under balance a relatum coming to stand depends only on what some giver drew on.",
+      "zh": "对流而言，汲取之读法即传递所汲者加上自汲取结成，在平衡下首立的关系者只依于某一给予者所汲者。",
+      "declarations": [
+        "Becoming.Flow.dependsOnDrawn_iff_at",
+        "Becoming.Flow.FormsFromDrawn",
+        "Becoming.Flow.dependsOnDrawn_iff_split",
+        "Becoming.Flow.Inherits.formsFromDrawn",
+        "Becoming.Flow.DependsOnDrawn.formsAnew",
+        "Becoming.Flow.drawn_by_giver",
+        "Becoming.Flow.formed_from_drawing",
+        "Becoming.Flow.no_dependence_undrawn",
+        "Becoming.Flow.DependsOnDrawn.none_formsAnew"
+      ]
+    },
+    {
+      "en": "Witnesses: a parent drawing on food it does not depend on, its child coming to depend on it; a dependence formed from nothing drawn where the reading fails; a dependence passed on without drawing.",
+      "zh": "见证：亲代汲取其所不依存的食物，子代开始依于它；读法不成立处自无所汲者结成的依存；不经汲取而传递的依存。",
+      "declarations": [
+        "Becoming.World.droppedHatch_formed",
+        "Becoming.World.novel_formed_undrawn",
+        "Becoming.TwoGivers.passed_undrawn"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The reading of drawing at the descent as a hypothesis; balance at the relatum coming to stand for the flow laws; decidability only for the case splits.",
+      "zh": "不加公理。该世系处的汲取之读法作为假设；流的定律需首立之关系者处平衡；只有分情形需可判定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Why a descendant comes to depend on what its giver drew on: the law says where a new dependence comes from.",
+      "zh": "后代为何依于其给予者所汲者：此律说的是新依存从何而来。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the reading of drawing holds in any actual descent.",
+      "zh": "汲取之读法在任何实际世系中成立。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "detail": {
+        "en": "Without the reading of drawing a dependence forms from nothing the giver drew on (World.novel_formed_undrawn).",
+        "zh": "没有汲取之读法时，依存可自给予者无所汲者结成（World.novel_formed_undrawn）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T145016.701975Z): every declaration of Becoming.Transmission has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 368; not independently reviewed by a person. The proofs were written by a subagent of the session from a stated specification and rebuilt by the session.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z）：Becoming.Transmission 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 368 节；未经人的独立审查。证明由本会话的子代理依所述规格写出，并由本会话重新构建。"
+  },
+  "next_delta": {
+    "en": "Why drawing becomes depending; an independent review.",
+    "zh": "汲取为何成为依存；独立审查。"
+  },
+  "correspondence": {
+    "en": "Niche construction and developmental inheritance (Odling-Smee, Laland and Feldman 2003): what a parent uses or modifies becomes a condition its offspring depend on. Readings (the AI's): drawing become depending.",
+    "zh": "生态位构建与发育遗传（Odling-Smee、Laland 与 Feldman 2003）：亲代所用或所改变者成为其后代所依的条件。读法（AI 的）：汲取成为依存。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+  "aliases": [
+    "dependence formed from drawing",
+    "dependences formed by descent",
+    "来自汲取的依存",
+    "世系形成的依存",
+    "Becoming.Web.formsAnew_iff_drawn_unheld"
+  ],
+  "dependencies": [
+    {
+      "id": "forming-anew-necessary-and-sufficient",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ZG8's law is the case where depending and drawing coincide at the giver.",
+        "zh": "ZG8 的定律是给予者处依存与汲取相合的情形。"
+      },
+      "interface": {
+        "output": {
+          "en": "Forming anew where depending and drawing coincide.",
+          "zh": "依存与汲取相合时的新结。"
+        },
+        "input": {
+          "en": "Forming anew where they part.",
+          "zh": "二者相分时的新结。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "forming-anew-necessary-and-sufficient",
+      "detail": {
+        "en": "The law of forming where depending and drawing coincide.",
+        "zh": "依存与汲取相合时的形成之律。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Drawdown.carried",
+        "Becoming.Flow.DependsOnDrawn",
+        "Becoming.Flow.DependsOnDrawn.drop",
+        "Becoming.Flow.DependsOnDrawn.formsAnew",
+        "Becoming.Flow.DependsOnDrawn.none_formsAnew",
+        "Becoming.Flow.DependsOnFed",
+        "Becoming.Flow.DependsOnFed.drop",
+        "Becoming.Flow.FormsFromDrawn",
+        "Becoming.Flow.Inherits",
+        "Becoming.Flow.Inherits.formsFromDrawn",
+        "Becoming.Flow.Inherits.from_giver",
+        "Becoming.Flow.NeedsWithin",
+        "Becoming.Flow.PassesDrawn",
+        "Becoming.Flow.TransmitsFromSome",
+        "Becoming.Flow.TransmitsWithin.fromSome",
+        "Becoming.Flow.dependsOnDrawn_iff",
+        "Becoming.Flow.dependsOnDrawn_iff_at",
+        "Becoming.Flow.dependsOnDrawn_iff_split",
+        "Becoming.Flow.dependsOnDrawn_of_fed",
+        "Becoming.Flow.descendant_supported_at",
+        "Becoming.Flow.descends_of_comes",
+        "Becoming.Flow.drawn_by_giver",
+        "Becoming.Flow.drop_untransmitted",
+        "Becoming.Flow.embodied_descendant",
+        "Becoming.Flow.formed_from_drawing",
+        "Becoming.Flow.forms_from_giver",
+        "Becoming.Flow.fromSome_supported",
+        "Becoming.Flow.fromSome_within",
+        "Becoming.Flow.inherited_from_giver",
+        "Becoming.Flow.inherited_supported",
+        "Becoming.Flow.inherited_supported_at",
+        "Becoming.Flow.inherited_within",
+        "Becoming.Flow.inherited_within_at",
+        "Becoming.Flow.inherits_iff_none_undrawn",
+        "Becoming.Flow.inherits_of_drawn",
+        "Becoming.Flow.inherits_of_fed",
+        "Becoming.Flow.needsWithin_of_embodied",
+        "Becoming.Flow.no_dependence_undrawn",
+        "Becoming.Flow.no_new_dependence",
+        "Becoming.Flow.transmitsWithin_iff",
+        "Becoming.Flow.transmitsWithin_iff_forming",
+        "Becoming.Flow.transmitsWithin_iff_split",
+        "Becoming.Split.descends",
+        "Becoming.Split.flow",
+        "Becoming.Split.toDescendant",
+        "Becoming.Split.web",
+        "Becoming.TwoGivers.Relatum",
+        "Becoming.TwoGivers.acting",
+        "Becoming.TwoGivers.balances",
+        "Becoming.TwoGivers.comes_child",
+        "Becoming.TwoGivers.dependent",
+        "Becoming.TwoGivers.descends_first",
+        "Becoming.TwoGivers.descends_second",
+        "Becoming.TwoGivers.flow",
+        "Becoming.TwoGivers.passed_undrawn",
+        "Becoming.TwoGivers.toChild",
+        "Becoming.TwoGivers.twofold",
+        "Becoming.TwoGivers.web",
+        "Becoming.Web.DependsOnDrawnAt",
+        "Becoming.Web.DependsOnDrawnAt.not_formsAnew",
+        "Becoming.Web.DependsOnDrawnAt.not_undrawn",
+        "Becoming.Web.DrawingDepends",
+        "Becoming.Web.FormsAnewAt",
+        "Becoming.Web.InheritsAt",
+        "Becoming.Web.InheritsAt.split",
+        "Becoming.Web.NeedsWithinAt",
+        "Becoming.Web.dependsOnDrawnAt_iff",
+        "Becoming.Web.drawn_necessary_iff",
+        "Becoming.Web.drop",
+        "Becoming.Web.drop_dependent",
+        "Becoming.Web.drop_keeps_next",
+        "Becoming.Web.drop_not_inherits",
+        "Becoming.Web.drop_supported",
+        "Becoming.Web.formsAnew_iff_drawn_or_neither",
+        "Becoming.Web.formsAnew_iff_drawn_unheld",
+        "Becoming.Web.formsAnew_iff_neither",
+        "Becoming.Web.formsAnew_iff_undrawn",
+        "Becoming.Web.four_cases",
+        "Becoming.Web.inheritsAt_iff_forming",
+        "Becoming.Web.inheritsAt_iff_held",
+        "Becoming.Web.inheritsAt_iff_not_formsAnew",
+        "Becoming.Web.inheritsAt_not_not",
+        "Becoming.Web.inheritsAt_of_split",
+        "Becoming.Web.needsWithinAt_of_supported",
+        "Becoming.Web.transmits_at_iff",
+        "Becoming.World.Finite.level_le",
+        "Becoming.World.bearingHatch",
+        "Becoming.World.bearingHatch_derived",
+        "Becoming.World.drawn_and_link_needed",
+        "Becoming.World.drawn_not_enough",
+        "Becoming.World.drawn_without_link",
+        "Becoming.World.drop",
+        "Becoming.World.drop_but",
+        "Becoming.World.drop_finite",
+        "Becoming.World.drop_holds",
+        "Becoming.World.drop_untransmitting",
+        "Becoming.World.droppedHatch",
+        "Becoming.World.droppedHatch_formed",
+        "Becoming.World.finiteHatch_descends",
+        "Becoming.World.finiteHatch_drawn",
+        "Becoming.World.finiteHatch_pair",
+        "Becoming.World.link_without_drawn",
+        "Becoming.World.novel_formed_undrawn",
+        "Becoming.World.stock_le_start",
+        "Becoming.World.transmitting_iff_inherits",
+        "Becoming.World.transmitting_iff_inherits_bounded",
+        "Becoming.World.transmitting_of_drawn",
+        "Becoming.World.transmitting_of_fed",
+        "Becoming.World.vacuous_of_drop_invariant",
+        "Becoming.split_iff_em",
+        "Becoming.split_of_em"
+      ],
+      "sha256": "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d69642f3c92aa499eb66bd53794a65a05174f0d7d347295cbe2dad789db8eac5"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Transmission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (EV16), a dependence formed from drawing where depending and drawing part at the giver; study section 368.",
+      "zh": "2026年10月22日：新增（EV16），给予者处依存与汲取相分时来自汲取的依存；研究第 368 节。"
+    }
+  ]
+}

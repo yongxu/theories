@@ -1,0 +1,331 @@
+{
+  "schema_version": 2,
+  "id": "fixation-with-selection",
+  "title": {
+    "en": "Fixation with selection in the draw",
+    "zh": "抽取中有选择时的固定"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "statement": {
+    "en": "With replacement one at a time, up with weight a and down with b, the fixation share tends to a potential's ratio: the starting share where a = b, above it from every mixed start where b < a, and the favoured kind lost with weight at least b^i.",
+    "zh": "一次替换一个、上升权重 a、下降 b 时，固定份额趋于势之比：a = b 时为起始份额，b < a 时自每个混合起点高于它，受青睐的一类以至少 b^i 的权重失去。"
+  },
+  "laws": [
+    {
+      "en": "Replacement one at a time among M + 1: from a mixed population the count goes up with weight a and down with b, a population of one kind staying; the histories are counted step by step and compose.",
+      "zh": "M + 1 个成员中一次替换一个：混合种群中计数以权重 a 上升、以 b 下降，单一类的种群保持；历史逐步计数并可复合。",
+      "declarations": [
+        "Becoming.Drift.Replacement.Mixed",
+        "Becoming.Drift.Replacement.value",
+        "Becoming.Drift.Replacement.value_mixed",
+        "Becoming.Drift.Replacement.value_one_kind",
+        "Becoming.Drift.Replacement.value_stays",
+        "Becoming.Drift.Replacement.value_add",
+        "Becoming.Drift.Replacement.value_mul",
+        "Becoming.Drift.Replacement.value_le",
+        "Becoming.Drift.Replacement.value_const",
+        "Becoming.Drift.Replacement.value_comp",
+        "Becoming.Drift.Replacement.value_congr"
+      ]
+    },
+    {
+      "en": "The potential with steps b^j a^(M - j) is harmonic for the steps, a times a step being b times the one below, so it keeps its weighted value over any number of steps.",
+      "zh": "步长为 b^j a^(M - j) 的势对这些步是调和的（a 乘一步等于 b 乘其下一步），故在任意步数中保持其加权值。",
+      "declarations": [
+        "Becoming.Drift.Replacement.rise",
+        "Becoming.Drift.Replacement.potential",
+        "Becoming.Drift.Replacement.rise_step",
+        "Becoming.Drift.Replacement.potential_harmonic",
+        "Becoming.Drift.Replacement.value_potential",
+        "Becoming.Drift.Replacement.potential_le_succ",
+        "Becoming.Drift.Replacement.potential_mono",
+        "Becoming.Drift.Replacement.potential_beyond",
+        "Becoming.Drift.Replacement.potential_le_top"
+      ]
+    },
+    {
+      "en": "The histories fixing the first kind weigh, times the potential at the top, at most the whole weight times the potential at the start, and with the varied ones at least it; the varied ones vanish geometrically, so the fixation share tends to the potential's ratio.",
+      "zh": "固定第一类的历史乘顶端之势，至多为总权重乘起点之势，加上仍有差异者则至少为它；仍有差异者几何地消失，故固定份额趋于势之比。",
+      "declarations": [
+        "Becoming.Drift.Replacement.fixed",
+        "Becoming.Drift.Replacement.lost",
+        "Becoming.Drift.Replacement.varied",
+        "Becoming.Drift.Replacement.partition",
+        "Becoming.Drift.Replacement.value_partition",
+        "Becoming.Drift.Replacement.fixed_below",
+        "Becoming.Drift.Replacement.potential_within",
+        "Becoming.Drift.Replacement.fixation_bounds",
+        "Becoming.Drift.Replacement.climbs",
+        "Becoming.Drift.Replacement.varied_step",
+        "Becoming.Drift.Replacement.varied_vanishes",
+        "Becoming.Drift.Replacement.fixation"
+      ]
+    },
+    {
+      "en": "With a = b the share is the starting share; with b <= a at least it; with b < a strictly above it from every mixed start; and the favoured kind is lost with weight at least b^i.",
+      "zh": "a = b 时份额即起始份额；b <= a 时至少为它；b < a 时自每个混合起点严格高于它；受青睐的一类以至少 b^i 的权重失去。",
+      "declarations": [
+        "Becoming.Drift.Replacement.rise_neutral",
+        "Becoming.Drift.Replacement.potential_neutral",
+        "Becoming.Drift.Replacement.neutral_share",
+        "Becoming.Drift.Replacement.rise_antitone",
+        "Becoming.Drift.Replacement.rise_antitone_le",
+        "Becoming.Drift.Replacement.potential_above",
+        "Becoming.Drift.Replacement.potential_from",
+        "Becoming.Drift.Replacement.favoured_share",
+        "Becoming.Drift.Replacement.favoured_share_above",
+        "Becoming.Drift.Replacement.lost_ge"
+      ]
+    },
+    {
+      "en": "Witness: two members, up two and down one, the first kind fixing with share two of three.",
+      "zh": "见证：两个成员，上升二、下降一，第一类以三分之二的份额固定。",
+      "declarations": [
+        "Becoming.Drift.Favoured.two_members"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Two kinds; replacement one at a time with constant natural-number weights a and b; only the steps that change the count read; no mutation.",
+      "zh": "不加公理。两类；以恒定自然数权重 a 与 b 一次替换一个；只读改变计数的步；无突变。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Selection in sampled generations (Wright-Fisher with selection), where the fixation share has no closed count.",
+      "zh": "多代抽样中的选择（有选择的 Wright-Fisher），其固定份额没有封闭的计数。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the common factor of the one-birth-one-death chain drops is read, with no fuller chain stated.",
+      "zh": "一生一死链的公因子可约去是读法，未陈述更完整的链。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which history happens: the counts weigh histories; ranking goes through the comparison C.",
+      "zh": "哪一历史发生：计数只称量历史；排序经由比较 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "detail": {
+        "en": "The favoured kind is not sure to fix: from i its loss weighs at least b^i times every later history (Replacement.lost_ge).",
+        "zh": "受青睐的一类不必然固定：自 i 起，其失去的权重至少为 b^i 乘此后的每一历史（Replacement.lost_ge）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T145016.701975Z): every declaration of Becoming.Drift has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 368; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z）：Becoming.Drift 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 368 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Selection in sampled generations; mutation with drift; an independent review.",
+    "zh": "多代抽样中的选择；伴随漂变的突变；独立审查。"
+  },
+  "correspondence": {
+    "en": "The Moran process with selection (Moran 1958): fixation probability (1 - (b/a)^i) / (1 - (b/a)^N), here the potential's ratio with denominators cleared, by the harmonic-function argument for birth-death chains. Readings (the AI's): selection bends the potential the histories keep.",
+    "zh": "有选择的 Moran 过程（Moran 1958）：固定概率 (1 - (b/a)^i) / (1 - (b/a)^N)，此处为消去分母的势之比，用生灭链的调和函数论证。读法（AI 的）：选择使历史所保持的势弯曲。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+  "aliases": [
+    "fixation with selection",
+    "Moran fixation probability",
+    "replacement one at a time",
+    "抽取中有选择时的固定",
+    "Becoming.Drift.Replacement.fixation"
+  ],
+  "dependencies": [
+    {
+      "id": "fixation-by-drift",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The neutral case: with a = b the share is the starting share, as for sampled generations.",
+        "zh": "中性情形：a = b 时份额即起始份额，与多代抽样相同。"
+      },
+      "interface": {
+        "output": {
+          "en": "The neutral fixation share.",
+          "zh": "中性的固定份额。"
+        },
+        "input": {
+          "en": "The fixation share with selection.",
+          "zh": "有选择时的固定份额。"
+        },
+        "conditions": {
+          "en": "Two kinds.",
+          "zh": "两类。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "fixation-by-drift",
+      "detail": {
+        "en": "Drift alone, fixing each kind with its starting share.",
+        "zh": "单凭漂变，以起始份额固定各类。"
+      }
+    },
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "One sampled generation undoing selection.",
+        "zh": "一代抽样撤销选择。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Drift.Favoured.two_members",
+        "Becoming.Drift.Flow.ended_falls_back",
+        "Becoming.Drift.Generations.expected_sampled",
+        "Becoming.Drift.Generations.raised_falls_back",
+        "Becoming.Drift.OneDraw.falls_back",
+        "Becoming.Drift.Replacement.Mixed",
+        "Becoming.Drift.Replacement.climbs",
+        "Becoming.Drift.Replacement.favoured_share",
+        "Becoming.Drift.Replacement.favoured_share_above",
+        "Becoming.Drift.Replacement.fixation",
+        "Becoming.Drift.Replacement.fixation_bounds",
+        "Becoming.Drift.Replacement.fixed",
+        "Becoming.Drift.Replacement.fixed_below",
+        "Becoming.Drift.Replacement.lost",
+        "Becoming.Drift.Replacement.lost_ge",
+        "Becoming.Drift.Replacement.neutral_share",
+        "Becoming.Drift.Replacement.partition",
+        "Becoming.Drift.Replacement.potential",
+        "Becoming.Drift.Replacement.potential_above",
+        "Becoming.Drift.Replacement.potential_beyond",
+        "Becoming.Drift.Replacement.potential_from",
+        "Becoming.Drift.Replacement.potential_harmonic",
+        "Becoming.Drift.Replacement.potential_le_succ",
+        "Becoming.Drift.Replacement.potential_le_top",
+        "Becoming.Drift.Replacement.potential_mono",
+        "Becoming.Drift.Replacement.potential_neutral",
+        "Becoming.Drift.Replacement.potential_within",
+        "Becoming.Drift.Replacement.rise",
+        "Becoming.Drift.Replacement.rise_antitone",
+        "Becoming.Drift.Replacement.rise_antitone_le",
+        "Becoming.Drift.Replacement.rise_neutral",
+        "Becoming.Drift.Replacement.rise_step",
+        "Becoming.Drift.Replacement.value",
+        "Becoming.Drift.Replacement.value_add",
+        "Becoming.Drift.Replacement.value_comp",
+        "Becoming.Drift.Replacement.value_congr",
+        "Becoming.Drift.Replacement.value_const",
+        "Becoming.Drift.Replacement.value_le",
+        "Becoming.Drift.Replacement.value_mixed",
+        "Becoming.Drift.Replacement.value_mul",
+        "Becoming.Drift.Replacement.value_one_kind",
+        "Becoming.Drift.Replacement.value_partition",
+        "Becoming.Drift.Replacement.value_potential",
+        "Becoming.Drift.Replacement.value_stays",
+        "Becoming.Drift.Replacement.varied",
+        "Becoming.Drift.Replacement.varied_step",
+        "Becoming.Drift.Replacement.varied_vanishes",
+        "Becoming.Drift.TwoMembers.one_generation",
+        "Becoming.Drift.count_le",
+        "Becoming.Drift.expected_ones",
+        "Becoming.Drift.expected_zeros",
+        "Becoming.Drift.fallsBack",
+        "Becoming.Drift.falls_back",
+        "Becoming.Drift.falls_back_ge",
+        "Becoming.Drift.falls_back_le",
+        "Becoming.Drift.far_back",
+        "Becoming.Drift.fixation",
+        "Becoming.Drift.fixed",
+        "Becoming.Drift.fixed_le",
+        "Becoming.Drift.from_all",
+        "Becoming.Drift.from_none",
+        "Becoming.Drift.gap_le",
+        "Becoming.Drift.lost",
+        "Becoming.Drift.lost_false",
+        "Becoming.Drift.lost_le",
+        "Becoming.Drift.lost_true",
+        "Becoming.Drift.lost_weight",
+        "Becoming.Drift.one_le_pow",
+        "Becoming.Drift.ones_le",
+        "Becoming.Drift.sampled",
+        "Becoming.Drift.sampled_add",
+        "Becoming.Drift.sampled_all",
+        "Becoming.Drift.sampled_count",
+        "Becoming.Drift.sampled_le",
+        "Becoming.Drift.sampled_mul",
+        "Becoming.Drift.sampled_none",
+        "Becoming.Drift.sampled_one",
+        "Becoming.Drift.sampled_succ",
+        "Becoming.Drift.square_mul",
+        "Becoming.Drift.step_expected",
+        "Becoming.Drift.step_ones",
+        "Becoming.Drift.step_zeros",
+        "Becoming.Drift.sub_self_zero",
+        "Becoming.Drift.varied",
+        "Becoming.Drift.varied_self",
+        "Becoming.Drift.varied_step",
+        "Becoming.Drift.varied_vanishes",
+        "Becoming.Drift.varied_zero",
+        "Becoming.Drift.weighted_ones",
+        "Becoming.Drift.weighted_ones_step",
+        "Becoming.Drift.weighted_zeros_step",
+        "Becoming.Drift.whole",
+        "Becoming.Drift.whole_false",
+        "Becoming.Drift.whole_true",
+        "Becoming.Drift.whole_weight"
+      ],
+      "sha256": "97e50aedd8f289901cca75e33badc706109dd05e4cfa882c38513edfdb645b00"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d69642f3c92aa499eb66bd53794a65a05174f0d7d347295cbe2dad789db8eac5"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Drift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (EV13), fixation with selection in the draw; study section 368.",
+      "zh": "2026年10月22日：新增（EV13），抽取中有选择时的固定；研究第 368 节。"
+    }
+  ]
+}

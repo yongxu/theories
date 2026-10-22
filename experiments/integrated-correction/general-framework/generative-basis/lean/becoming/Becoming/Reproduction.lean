@@ -1,5 +1,6 @@
 import Becoming.SelectionTerm
 import Becoming.Dissipation
+import Becoming.Integers
 
 /-!
 # Reproduction: what bounds offspring numbers, and selection on offspring number itself
@@ -75,6 +76,47 @@ module states both and joins them.
   transmitted exactly at every step up to the stock (`Flow.closed_not_exact`). What Fisher's
   theorem leaves to the transmission term (his "deterioration of the environment") is forced
   here by dissipation within a family nothing flows into.
+* **Mutation: transmission that is not exact.** Carriers of an amount each leave `k` offspring
+  that carry it and `m` that do not; every other member leaves `w`, none carrying it. From `c`
+  carriers and `d` others, the carriers' share, compared across the step by cross-multiplying,
+  rises exactly where `d · k` exceeds `c · m + d · w`, is kept exactly where they are equal and
+  falls exactly where `d · k` falls short (`Mutation.step_balance`, `Mutation.rises_iff`,
+  `Mutation.kept_iff`, `Mutation.falls_iff`). Where a carrier's carrying offspring do not outnumber
+  another's offspring (`k ≤ w`) the share never rises, whatever it is, and with any loss to
+  mutation it falls at every step (`Mutation.never_rises`, `Mutation.falls_of_outrun`): the error
+  threshold, what mutation takes from the carriers outrunning their advantage. Where they exceed
+  them by `s`, the share is kept exactly at `s / (s + m)` (`Mutation.kept_share`), and a run
+  started at or below that balance stays at or below it, the share never falling, while one above
+  stays above (`Mutation.run`, `Mutation.below_always`, `Mutation.not_falls_below`,
+  `Mutation.above_always`). Read as generations of descent (`Mutation.generations`), transmission
+  lowers the amount by `c · m` across the step and raises nothing (`Mutation.lowered_count`), and the
+  step is balanced, the selection term proper against what transmission lowers, exactly where the
+  count balance holds (`Mutation.balanced_iff`): mutation–selection balance is Price's balance of
+  selection against transmission.
+* **The breeding value: several carried amounts.** Counted, the covariance of a weight with an
+  amount is a difference pair, its concordance against its discordance (`Breeding.covPair`,
+  compared as differences by `Integers.Same`). It is additive in the amount
+  (`Breeding.covariance_add`), a multiple of the amount multiplies both parts
+  (`Breeding.concord_mul`, `Breeding.discord_mul`, through `Breeding.excess_mul`) and a constant
+  amount covaries with nothing (`Breeding.covPair_const`); so the covariance with a combination of
+  carried amounts, each with a coefficient, is the combination of the covariances
+  (`Breeding.covPair_combine`). A breeding value is read scaled by a common denominator `d` and as a
+  two-sided combination, a constant with the amounts of positive coefficient against those of
+  negative coefficient (`Breeding.Combination`), so that rational coefficients of either sign need
+  no subtraction; its covariance with any weight is then the `pos` part less the `neg` part
+  (`Breeding.covPair_combination`). Where it satisfies the normal equation of every amount it
+  combines (`Breeding.Normal`: its covariance with the amount is `d` times that of offspring number
+  with it, the regression's equations), `d` times its covariance with offspring number is its own
+  spread (`Breeding.breeding_balance`): divided through, the covariance of offspring number with
+  the breeding value is the breeding value's variance, Fisher's additive variance. With the counted
+  Cauchy–Schwarz bound, that part is at most the whole: the breeding value's spread is at most `d²`
+  times that of offspring number (`Breeding.additive_part_le`). One carried amount is the case of a
+  single pair (`Breeding.one_amount`, with `Breeding.normal_append`). Over generations, with the
+  amount read as the breeding value and transmitted exactly across a step, `d` times the
+  cross-multiplied rise of its mean is its spread (`Breeding.response`): the mean breeding value
+  rises by the additive variance over the mean offspring number, Fisher's fundamental theorem with
+  breeding values, so it never falls and rises exactly where the breeding value varies
+  (`Breeding.response_rises_iff`).
 * **Witnesses.** A parent with two offspring beside a parent with none: the mean over offspring
   of their parent's offspring number is two, over parents one (`Spread`). A parent takes three
   units from a pool and gives one to each of two offspring, which never reproduce: the pool and
@@ -83,10 +125,19 @@ module states both and joins them.
   within a family of stock one goes on at every step: two relata each give their one unit to
   the other in turn, losing nothing (`Relay`). Three members with offspring numbers one to three,
   the middle one alone carrying an amount: no covariance, while both vary (`Unrelated`).
+  Carriers with two carrying offspring and one not, beside others with two: at the threshold the
+  carriers fall from a half; with three carrying, a half is the balance (`Threshold`). Over the
+  four ways of holding two amounts, offspring number one with the first and twice the second:
+  with denominator one the breeding value is the first with twice the second and the additive
+  part is the whole (`Additive`). Offspring number one where both are held, none otherwise: with
+  denominator four the breeding value is twice each amount, and its spread, thirty-two, is below
+  sixteen times that of offspring number, forty-eight (`Interaction`).
 
 Nothing is supposed about what the offspring are; descent is `Flow.DescendsAt` (the parent
 takes part, gives to the offspring, and the offspring comes to stand). Modelling choices:
-natural-number amounts, discrete steps and generations, finite families as lists. Every bound
+natural-number amounts, discrete steps and generations, finite families as lists; for
+mutation, two kinds, loss in one direction only (no back mutation) and constant offspring
+numbers. Every bound
 on the base needs dissipation on a family holding the offspring: where something flows into
 it from outside, the bounds read only the family's own stock and what flows in, and a lossless
 exchange keeps a lineage going (`Relay`). No ethical predicate, ranking or axiom occurs; every
@@ -668,6 +719,490 @@ theorem closed_not_exact {ds : List X} (descended : SelectionTerm.Flow.Descended
 
 end Flow
 
+/-! ## Mutation: transmission that is not exact -/
+
+namespace Mutation
+
+/-- One step of carriers and others: carriers each leave `k` offspring that carry the amount and
+`m` that do not, every other member leaves `w`, none carrying it. From `c` carriers and `d` others
+the next generation has `c · k` carriers and `c · m + d · w` others; the carriers' share is compared
+across the step by cross-multiplying. -/
+theorem step_balance (k m w c d : Nat) :
+    c * k * (c + d) + c * (c * m + d * w) = c * (c * k + (c * m + d * w)) + c * (d * k) :=
+  (congrArg (· + c * (c * m + d * w)) ((Nat.left_distrib (c * k) c d).trans
+      (Naturals.add_congr (Nat.mul_comm (c * k) c)
+        ((mul_assoc_nat c k d).trans (congrArg (c * ·) (Nat.mul_comm k d)))))).trans
+    ((Nat.add_right_comm _ _ _).trans
+      (congrArg (· + c * (d * k)) (Nat.left_distrib c (c * k) (c * m + d * w)).symm))
+
+/-- The carriers' share rises across the step exactly where the carrying offspring of the others'
+places, `d · k`, outnumber what the step gives the others, `c · m + d · w`. -/
+theorem rises_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
+    c * (c * k + (c * m + d * w)) < c * k * (c + d) ↔ c * m + d * w < d * k :=
+  (lt_iff_of_balance (step_balance k m w c d)).trans
+    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
+
+/-- It is kept exactly where they are equal. -/
+theorem kept_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
+    c * (c * k + (c * m + d * w)) = c * k * (c + d) ↔ c * m + d * w = d * k :=
+  (eq_iff_of_balance (step_balance k m w c d)).trans
+    ⟨Nat.eq_of_mul_eq_mul_left pos, congrArg (c * ·)⟩
+
+/-- And falls exactly where they fall short. -/
+theorem falls_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
+    c * k * (c + d) < c * (c * k + (c * m + d * w)) ↔ d * k < c * m + d * w :=
+  (lt_iff_of_balance (step_balance k m w c d).symm).trans
+    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
+
+/-- **The threshold.** Where a carrier's carrying offspring do not outnumber another's offspring
+(`k ≤ w`), the carriers' share never rises, whatever it is. -/
+theorem never_rises {k w : Nat} (outrun : k ≤ w) (m c d : Nat) :
+    ¬ c * (c * k + (c * m + d * w)) < c * k * (c + d) := fun rise =>
+  Nat.lt_irrefl (c * (d * k)) (Nat.lt_of_le_of_lt
+    (Nat.mul_le_mul_left c (Nat.le_trans (Nat.mul_le_mul_left d outrun) (Nat.le_add_left _ _)))
+    ((lt_iff_of_balance (step_balance k m w c d)).mp rise))
+
+/-- And with any loss to mutation it falls at every step. -/
+theorem falls_of_outrun {k w m c : Nat} (outrun : k ≤ w) (loss : 0 < m) (pos : 0 < c) (d : Nat) :
+    c * k * (c + d) < c * (c * k + (c * m + d * w)) :=
+  (falls_iff k m w d pos).mpr (Nat.lt_of_le_of_lt (Nat.mul_le_mul_left d outrun)
+    (Nat.lt_add_of_pos_left (Nat.mul_pos pos loss)))
+
+/-- **The balance.** Where the carriers' carrying offspring exceed the others' by `s`
+(`k = w + s`), the share is kept exactly where it is `s / (s + m)`: `c · (s + m) = (c + d) · s`. -/
+theorem kept_share (m w s c d : Nat) :
+    c * m + d * w = d * (w + s) ↔ c * (s + m) = (c + d) * s := by
+  have left : d * (w + s) = d * w + d * s := Nat.left_distrib d w s
+  have right : c * (s + m) = (c + d) * s ↔ c * m = d * s := by
+    rw [Nat.left_distrib, add_mul_split]
+    exact ⟨Naturals.add_left_cancel, congrArg (c * s + ·)⟩
+  exact ⟨fun same => right.mpr (Naturals.add_right_cancel ((same.trans left).trans (Nat.add_comm _ _))),
+    fun same => ((congrArg (· + d * w) (right.mp same)).trans (Nat.add_comm _ _)).trans left.symm⟩
+
+/-- **No overshoot.** At or below the balance (`c · m + d · w ≤ d · k`) the next generation is at
+or below it too. -/
+theorem below_stays {k m w c d : Nat} (below : c * m + d * w ≤ d * k) :
+    c * k * m + (c * m + d * w) * w ≤ (c * m + d * w) * k :=
+  Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul_right w below) _)
+    (Nat.le_of_eq (Naturals.add_congr (Naturals.mul_right_comm c k m)
+      (Naturals.mul_right_comm d k w) |>.trans (add_mul_split (c * m) (d * w) k).symm))
+
+/-- And at or above it, at or above it. -/
+theorem above_stays {k m w c d : Nat} (above : d * k ≤ c * m + d * w) :
+    (c * m + d * w) * k ≤ c * k * m + (c * m + d * w) * w :=
+  Nat.le_trans (Nat.le_of_eq ((add_mul_split (c * m) (d * w) k).trans
+      (Naturals.add_congr (Naturals.mul_right_comm c k m).symm (Naturals.mul_right_comm d k w).symm)))
+    (Nat.add_le_add_left (Nat.mul_le_mul_right w above) _)
+
+/-- Carriers and others over generations. -/
+def run (k m w : Nat) (c d : Nat) : Nat → Nat × Nat
+  | 0 => (c, d)
+  | n + 1 => ((run k m w c d n).1 * k, (run k m w c d n).1 * m + (run k m w c d n).2 * w)
+
+/-- Started at or below the balance, every generation is at or below it. -/
+theorem below_always {k m w c d : Nat} (below : c * m + d * w ≤ d * k) :
+    ∀ n, (run k m w c d n).1 * m + (run k m w c d n).2 * w ≤ (run k m w c d n).2 * k
+  | 0 => below
+  | n + 1 => below_stays (below_always below n)
+
+/-- So below the balance the carriers' share never falls, from one generation to the next. -/
+theorem not_falls_below {k m w c d : Nat} (below : c * m + d * w ≤ d * k) (n : Nat) :
+    (run k m w c d n).1 * ((run k m w c d (n + 1)).1 + (run k m w c d (n + 1)).2) ≤
+      (run k m w c d (n + 1)).1 * ((run k m w c d n).1 + (run k m w c d n).2) :=
+  have b := step_balance k m w (run k m w c d n).1 (run k m w c d n).2
+  Naturals.le_of_add_le_add_right (Nat.le_trans
+    (Nat.add_le_add_left (Nat.mul_le_mul_left _ (below_always below n)) _) (Nat.le_of_eq b.symm))
+
+/-- Started at or above the balance, every generation is at or above it. -/
+theorem above_always {k m w c d : Nat} (above : d * k ≤ c * m + d * w) :
+    ∀ n, (run k m w c d n).2 * k ≤ (run k m w c d n).1 * m + (run k m w c d n).2 * w
+  | 0 => above
+  | n + 1 => above_stays (above_always above n)
+
+/-! ### Read on the spine's generations -/
+
+/-- Holding the amount: one for a carrier, none otherwise. -/
+def holds : Bool → Nat
+  | true => 1
+  | false => 0
+
+/-- A carrier's offspring: `k` carrying, `m` not; another's: `w`, none carrying. -/
+def offspring (k m w : Nat) : Bool → List Bool
+  | true => List.replicate k true ++ List.replicate m false
+  | false => List.replicate w false
+
+/-- The step as generations of descent: `c` carriers and `d` others. -/
+def generations (k m w c d : Nat) : SelectionTerm.Generations Bool where
+  first := List.replicate c true ++ List.replicate d false
+  kids _ := offspring k m w
+  amount _ := holds
+
+theorem total_replicate (f : Bool → Nat) (x : Bool) : ∀ n, total (List.replicate n x) f = n * f x
+  | 0 => (Nat.zero_mul _).symm
+  | n + 1 => (congrArg (f x + ·) (total_replicate f x n)).trans
+      ((Nat.add_comm _ _).trans (Nat.succ_mul n (f x)).symm)
+
+theorem total_kinds (f : Bool → Nat) (c d : Nat) :
+    total (List.replicate c true ++ List.replicate d false) f = c * f true + d * f false :=
+  (total_append f _ _).trans (Naturals.add_congr (total_replicate f true c) (total_replicate f false d))
+
+/-- What mutation does on the spine's terms: transmission lowers the amount by `c · m` across the
+step (each carrier's `m` offspring not carrying it) and raises nothing. -/
+theorem lowered_count (k m w c d : Nat) :
+    (generations k m w c d).loweredAt 0 = c * m ∧ (generations k m w c d).raisedAt 0 = 0 := by
+  have own : ∀ b : Bool, total (offspring k m w b) (fun x => excess (holds b) (holds x)) =
+      (if b then m else 0) := fun b => match b with
+    | true => (total_kinds (fun x => excess 1 (holds x)) k m).trans (by
+        show k * 0 + m * 1 = m
+        rw [Nat.mul_zero, Nat.zero_add, Nat.mul_one])
+    | false => (total_replicate _ false w).trans (Nat.mul_zero w)
+  have up : ∀ b : Bool, total (offspring k m w b) (fun x => excess (holds x) (holds b)) = 0 :=
+    fun b => match b with
+    | true => (total_kinds (fun x => excess (holds x) 1) k m).trans (by
+        show k * 0 + m * 0 = 0
+        rw [Nat.mul_zero, Nat.mul_zero])
+    | false => (total_replicate _ false w).trans (Nat.mul_zero w)
+  constructor
+  · show total (List.replicate c true ++ List.replicate d false)
+        (fun p => total (offspring k m w p) fun x => excess (holds p) (holds x)) = c * m
+    rw [total_congr own, total_kinds]
+    show c * m + d * 0 = c * m
+    rw [Nat.mul_zero, Nat.add_zero]
+  · show total (List.replicate c true ++ List.replicate d false)
+        (fun p => total (offspring k m w p) fun x => excess (holds x) (holds p)) = 0
+    rw [total_congr up, total_kinds, Nat.mul_zero, Nat.mul_zero]
+
+theorem size_first (k m w c d : Nat) : (generations k m w c d).size 0 = c + d :=
+  (total_ones _).symm.trans ((total_kinds (fun _ => 1) c d).trans
+    (Naturals.add_congr (Nat.mul_one c) (Nat.mul_one d)))
+
+theorem sum_first (k m w c d : Nat) : (generations k m w c d).sum 0 = c :=
+  (total_kinds holds c d).trans (by show c * 1 + d * 0 = c; rw [Nat.mul_one, Nat.mul_zero, Nat.add_zero])
+
+theorem size_next (k m w c d : Nat) :
+    (generations k m w c d).size 1 = c * k + (c * m + d * w) :=
+  (total_ones _).symm.trans ((SelectionTerm.Generations.total_flatMap _ _ _).trans
+    ((total_kinds (fun b => total (offspring k m w b) fun _ => 1) c d).trans (by
+      show c * total (List.replicate k true ++ List.replicate m false) (fun _ => 1) +
+        d * total (List.replicate w false) (fun _ => 1) = _
+      rw [total_kinds, total_replicate, Nat.mul_one, Nat.mul_one, Nat.mul_one, Nat.left_distrib,
+        Nat.add_assoc])))
+
+theorem sum_next (k m w c d : Nat) : (generations k m w c d).sum 1 = c * k :=
+  (SelectionTerm.Generations.total_flatMap _ _ _).trans
+    ((total_kinds (fun b => total (offspring k m w b) holds) c d).trans (by
+      show c * total (List.replicate k true ++ List.replicate m false) holds +
+        d * total (List.replicate w false) holds = c * k
+      rw [total_kinds, total_replicate]
+      show c * (k * 1 + m * 0) + d * (w * 0) = c * k
+      rw [Nat.mul_one, Nat.mul_zero, Nat.add_zero, Nat.mul_zero, Nat.mul_zero, Nat.add_zero]))
+
+/-- **Mutation–selection balance is Price's balance.** Read as generations of descent, the step is
+balanced (the selection term proper against what transmission lowers) exactly where the count
+balance holds: `c · m + d · w = d · k`. -/
+theorem balanced_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
+    (generations k m w c d).Balanced 0 ↔ c * m + d * w = d * k := by
+  have h : (generations k m w c d).size 1 * (generations k m w c d).sum 0 =
+      (generations k m w c d).size 0 * (generations k m w c d).sum 1 ↔ (generations k m w c d).Balanced 0 :=
+    (generations k m w c d).kept_step_iff 0
+  rw [size_next, sum_first, size_first, sum_next, Nat.mul_comm (c * k + (c * m + d * w)) c,
+    Nat.mul_comm (c + d) (c * k)] at h
+  exact h.symm.trans (kept_iff k m w d pos)
+
+end Mutation
+
+/-! ## The breeding value: several carried amounts -/
+
+namespace Breeding
+
+/-- The covariation of a weight with an amount as a difference pair, its concordance and its
+discordance: the counted covariance, compared with others as a difference (`Integers.Same`). -/
+def covPair (ps : List α) (f h : α → Nat) : Nat × Nat := (concord ps f h, discord ps f h)
+
+/-- A pair with both parts multiplied. -/
+def scale (k : Nat) (x : Nat × Nat) : Nat × Nat := (k * x.1, k * x.2)
+
+/-- Alike pairs scale to alike pairs. -/
+theorem same_scale (k : Nat) {x y : Nat × Nat} (same : Integers.Same x y) :
+    Integers.Same (scale k x) (scale k y) :=
+  show k * x.1 + k * y.2 = k * y.1 + k * x.2 by
+    rw [← Nat.left_distrib, ← Nat.left_distrib]
+    exact congrArg (k * ·) same
+
+theorem scale_plus (k : Nat) (x y : Nat × Nat) :
+    scale k (Integers.plus x y) = Integers.plus (scale k x) (scale k y) :=
+  show (k * (x.1 + y.1), k * (x.2 + y.2)) = (k * x.1 + k * y.1, k * x.2 + k * y.2) by
+    rw [Nat.left_distrib, Nat.left_distrib]
+
+theorem scale_scale (k m : Nat) (x : Nat × Nat) : scale k (scale m x) = scale m (scale k x) :=
+  show (k * (m * x.1), k * (m * x.2)) = (m * (k * x.1), m * (k * x.2)) by
+    rw [mul_turn k m x.1, mul_turn k m x.2]
+
+/-- What is added on one side is taken on the other. -/
+theorem same_move {x y z : Nat × Nat} (same : Integers.Same (Integers.plus x y) z) :
+    Integers.Same x (Integers.plus z (Integers.swap y)) :=
+  have h : x.1 + y.1 + z.2 = z.1 + (x.2 + y.2) := same
+  show x.1 + (z.2 + y.1) = z.1 + y.2 + x.2 by
+    rw [Nat.add_comm z.2 y.1, ← Nat.add_assoc, Nat.add_assoc z.1, Nat.add_comm y.2 x.2]
+    exact h
+
+theorem same_zero_plus (y : Nat × Nat) : Integers.Same (Integers.plus (0, 0) y) y :=
+  show 0 + y.1 + y.2 = y.1 + (0 + y.2) by rw [Nat.zero_add, Nat.zero_add]
+
+/-- The covariation pair is the number of members times the weighted total against the product of
+the totals (`covariation`, read as a difference). -/
+theorem covPair_same (ps : List α) (f h : α → Nat) :
+    Integers.Same (covPair ps f h) (ps.length * weighted ps f h, total ps f * total ps h) :=
+  (Nat.add_comm _ _).trans (covariation ps f h).symm
+
+/-- Amounts that agree have the same covariation pair. -/
+theorem covPair_congr (ps : List α) (f : α → Nat) {h h' : α → Nat} (agree : ∀ p, h p = h' p) :
+    covPair ps f h = covPair ps f h' :=
+  have c : concord ps f h = concord ps f h' :=
+    total_congr (fun p => total_congr (fun q => by rw [agree p, agree q]) ps) ps
+  have d : discord ps f h = discord ps f h' :=
+    total_congr (fun p => total_congr (fun q => by rw [agree p, agree q]) ps) ps
+  show (concord ps f h, discord ps f h) = (concord ps f h', discord ps f h') by rw [c, d]
+
+/-- **The covariance is additive in the amount.** The concordance with a sum of amounts, with
+the discordances with each, is the discordance with the sum, with the concordances with each:
+counted, the covariance with a sum is the sum of the covariances. No premise. -/
+theorem covariance_add (ps : List α) (f h₁ h₂ : α → Nat) :
+    concord ps f (fun p => h₁ p + h₂ p) + (discord ps f h₁ + discord ps f h₂) =
+      concord ps f h₁ + concord ps f h₂ + discord ps f (fun p => h₁ p + h₂ p) :=
+  have sum : (ps.length * weighted ps f (fun p => h₁ p + h₂ p),
+        total ps f * total ps (fun p => h₁ p + h₂ p)) =
+      Integers.plus (ps.length * weighted ps f h₁, total ps f * total ps h₁)
+        (ps.length * weighted ps f h₂, total ps f * total ps h₂) := by
+    show (ps.length * weighted ps f (fun p => h₁ p + h₂ p),
+        total ps f * total ps (fun p => h₁ p + h₂ p)) =
+      (ps.length * weighted ps f h₁ + ps.length * weighted ps f h₂,
+        total ps f * total ps h₁ + total ps f * total ps h₂)
+    have w : weighted ps f (fun p => h₁ p + h₂ p) = weighted ps f h₁ + weighted ps f h₂ :=
+      (total_congr (fun p => Nat.left_distrib (f p) (h₁ p) (h₂ p)) ps).trans (total_add _ _ ps)
+    rw [w, total_add h₁ h₂ ps, Nat.left_distrib, Nat.left_distrib]
+  ((covPair_same ps f _).trans ((Integers.Same.of_eq sum).trans
+    (Integers.Same.add (covPair_same ps f h₁) (covPair_same ps f h₂)).symm) :
+      Integers.Same (covPair ps f fun p => h₁ p + h₂ p)
+        (Integers.plus (covPair ps f h₁) (covPair ps f h₂)))
+
+theorem covPair_add (ps : List α) (f h₁ h₂ : α → Nat) :
+    Integers.Same (covPair ps f fun p => h₁ p + h₂ p)
+      (Integers.plus (covPair ps f h₁) (covPair ps f h₂)) :=
+  covariance_add ps f h₁ h₂
+
+/-- Excess scales with its amounts. -/
+theorem excess_mul (c x y : Nat) : excess (c * x) (c * y) = c * excess x y :=
+  match Nat.le_total x y with
+  | .inl le => (excess_of_le (Nat.mul_le_mul_left c le)).trans
+      ((Nat.mul_zero c).symm.trans (congrArg (c * ·) (excess_of_le le).symm))
+  | .inr le => match le_dest le with
+    | ⟨e, at_x⟩ => by rw [at_x, Nat.left_distrib, excess_add_left, excess_add_left]
+
+/-- **A multiple of the amount multiplies the concordance.** -/
+theorem concord_mul (ps : List α) (f h : α → Nat) (c : Nat) :
+    concord ps f (fun p => c * h p) = c * concord ps f h :=
+  (total_congr (fun p => (total_congr (fun q =>
+      (congrArg (excess (f p) (f q) * ·) (excess_mul c (h p) (h q))).trans
+        (mul_turn _ c _)) ps).trans (total_mul c _ ps)) ps).trans (total_mul c _ ps)
+
+/-- And the discordance. -/
+theorem discord_mul (ps : List α) (f h : α → Nat) (c : Nat) :
+    discord ps f (fun p => c * h p) = c * discord ps f h :=
+  (total_congr (fun p => (total_congr (fun q =>
+      (congrArg (excess (f p) (f q) * ·) (excess_mul c (h q) (h p))).trans
+        (mul_turn _ c _)) ps).trans (total_mul c _ ps)) ps).trans (total_mul c _ ps)
+
+theorem covPair_mul (ps : List α) (f h : α → Nat) (c : Nat) :
+    covPair ps f (fun p => c * h p) = scale c (covPair ps f h) :=
+  show (concord ps f (fun p => c * h p), discord ps f (fun p => c * h p)) =
+      (c * concord ps f h, c * discord ps f h) by
+    rw [concord_mul, discord_mul]
+
+/-- A constant amount covaries with nothing. -/
+theorem covPair_const (ps : List α) (f : α → Nat) (B : Nat) :
+    covPair ps f (fun _ => B) = (0, 0) :=
+  show (concord ps f (fun _ => B), discord ps f (fun _ => B)) = (0, 0) by
+    rw [concord_alike (fun _ _ => rfl) f, discord_alike (fun _ _ => rfl) f]
+
+/-- Carried amounts each with a coefficient, combined at a member: the total of each amount times
+its coefficient. -/
+def combine (L : List ((α → Nat) × Nat)) (p : α) : Nat := total L fun z => z.2 * z.1 p
+
+/-- A weight's covariation pairs with the carried amounts, each times its coefficient, totalled. -/
+def combined (ps : List α) (f : α → Nat) (L : List ((α → Nat) × Nat)) : Nat × Nat :=
+  (total L fun z => z.2 * concord ps f z.1, total L fun z => z.2 * discord ps f z.1)
+
+/-- **The covariance with a combination is the combination of the covariances.** No premise. -/
+theorem covPair_combine (ps : List α) (f : α → Nat) :
+    ∀ L : List ((α → Nat) × Nat), Integers.Same (covPair ps f (combine L)) (combined ps f L)
+  | [] => Integers.Same.of_eq (covPair_const ps f 0)
+  | z :: L => (covPair_add ps f (fun p => z.2 * z.1 p) (combine L)).trans
+      (Integers.Same.add (Integers.Same.of_eq (covPair_mul ps f z.1 z.2))
+        (covPair_combine ps f L))
+
+/-- A breeding value scaled by a common denominator and read as a two-sided combination: at every
+member, it with the combination of `neg` is a constant `B` with the combination of `pos`. So
+coefficients may be any rationals of that denominator, of either sign, with no subtraction. -/
+def Combination (g : α → Nat) (B : Nat) (pos neg : List ((α → Nat) × Nat)) : Prop :=
+  ∀ p, g p + combine neg p = B + combine pos p
+
+/-- The normal equation of a carried amount `z`, scaled by `d`: the covariance of `g` with `z` is
+`d` times that of `w` with `z` (concordance less discordance, cross-added). -/
+def Normal (ps : List α) (w g : α → Nat) (d : Nat) (z : α → Nat) : Prop :=
+  concord ps g z + d * discord ps w z = d * concord ps w z + discord ps g z
+
+/-- **The covariance with a two-sided combination.** For any weight, its covariation with the
+combination is that with the `pos` amounts less that with the `neg` amounts, each times its
+coefficient; the constant does not enter. -/
+theorem covPair_combination {g : α → Nat} {B : Nat} {pos neg : List ((α → Nat) × Nat)}
+    (comb : Combination g B pos neg) (ps : List α) (f : α → Nat) :
+    Integers.Same (covPair ps f g)
+      (Integers.plus (combined ps f pos) (Integers.swap (combined ps f neg))) :=
+  same_move ((Integers.Same.add (Integers.Same.refl (covPair ps f g))
+      (covPair_combine ps f neg).symm).trans
+    ((covPair_add ps f g (combine neg)).symm.trans
+      ((Integers.Same.of_eq (covPair_congr ps f comb)).trans
+        ((covPair_add ps f (fun _ => B) (combine pos)).trans
+          ((Integers.Same.of_eq (congrArg (Integers.plus · (covPair ps f (combine pos)))
+              (covPair_const ps f B))).trans
+            ((same_zero_plus _).trans (covPair_combine ps f pos)))))))
+
+/-- Under the normal equations of a list of amounts, the combined covariations of `g` are `d`
+times those of `w`. -/
+theorem combined_normal (ps : List α) (w g : α → Nat) (d : Nat) :
+    ∀ L : List ((α → Nat) × Nat), (∀ z, z ∈ L → Normal ps w g d z.1) →
+      Integers.Same (combined ps g L) (scale d (combined ps w L))
+  | [], _ => show 0 + d * 0 = d * 0 + 0 by rw [Nat.mul_zero]
+  | z :: L, normal =>
+    (Integers.Same.add (same_scale (x := covPair ps g z.1) (y := scale d (covPair ps w z.1)) z.2
+          (normal z (.head L)))
+        (combined_normal ps w g d L fun z' mem => normal z' (.tail z mem))).trans
+      (Integers.Same.of_eq ((congrArg (Integers.plus · (scale d (combined ps w L)))
+          (scale_scale z.2 d (covPair ps w z.1))).trans (scale_plus d _ _).symm))
+
+/-- **Fisher's identity for the breeding value, counted.** Where `g` is, scaled by `d`, a
+two-sided combination of carried amounts satisfying the normal equations of every amount it
+combines, `d` times the concordance of `w` with `g` is `d` times their discordance with the
+concordance of `g` with itself: divided through by `d²` and the square of the number of members,
+the covariance of `w` with the breeding value `g / d` is the variance of the breeding value, the
+additive variance. No premise beyond the combination and the normal equations. -/
+theorem breeding_balance {ps : List α} {w g : α → Nat} {B d : Nat}
+    {pos neg : List ((α → Nat) × Nat)} (comb : Combination g B pos neg)
+    (normal : ∀ z, z ∈ pos ++ neg → Normal ps w g d z.1) :
+    d * concord ps w g = d * discord ps w g + concord ps g g :=
+  have same : Integers.Same (covPair ps g g) (scale d (covPair ps w g)) :=
+    (covPair_combination comb ps g).trans
+      ((Integers.Same.add
+          (combined_normal ps w g d pos fun z mem => normal z (List.mem_append_left neg mem))
+          (Integers.Same.swap (combined_normal ps w g d neg
+            fun z mem => normal z (List.mem_append_right pos mem)))).trans
+        ((Integers.Same.of_eq
+            (scale_plus d (combined ps w pos) (Integers.swap (combined ps w neg))).symm).trans
+          (same_scale d (covPair_combination comb ps w).symm)))
+  have h : concord ps g g + d * discord ps w g = d * concord ps w g + discord ps g g := same
+  ((congrArg (d * concord ps w g + ·) (discord_self ps g)).symm.trans h.symm).trans
+    (Nat.add_comm _ _)
+
+/-- **The additive part is at most the whole.** Under the same premises, the concordance of the
+breeding value with itself is at most `d²` times that of `w` with itself: divided through, the
+additive variance is at most the variance of `w`. From the identity and the counted
+Cauchy–Schwarz bound (`additive_le`), cancelling the breeding value's spread where it is not
+none. -/
+theorem additive_part_le {ps : List α} {w g : α → Nat} {B d : Nat}
+    {pos neg : List ((α → Nat) × Nat)} (comb : Combination g B pos neg)
+    (normal : ∀ z, z ∈ pos ++ neg → Normal ps w g d z.1) :
+    concord ps g g ≤ d * d * concord ps w w :=
+  have bal := breeding_balance comb normal
+  have le : concord ps g g ≤ d * (concord ps w g + discord ps w g) :=
+    Nat.le_trans (Nat.le_add_left _ (d * discord ps w g))
+      (Nat.le_trans (Nat.le_of_eq bal.symm) (Nat.mul_le_mul_left d (Nat.le_add_right _ _)))
+  have sq : concord ps g g * concord ps g g ≤ concord ps g g * (d * d * concord ps w w) :=
+    Nat.le_trans (Nat.mul_le_mul le le)
+      (Nat.le_trans (Nat.le_of_eq (square_mul d _))
+        (Nat.le_trans (Nat.mul_le_mul_left (d * d) (additive_le ps w g))
+          (Nat.le_of_eq ((mul_assoc_nat (d * d) (concord ps w w) (concord ps g g)).symm.trans
+            (Nat.mul_comm _ _)))))
+  match Nat.lt_or_ge 0 (concord ps g g) with
+  | .inl pos => le_of_mul_le_mul pos sq
+  | .inr ge => Nat.le_trans ge (Nat.zero_le _)
+
+/-- Amounts satisfying their normal equations on each side satisfy them on both. -/
+theorem normal_append {ps : List α} {w g : α → Nat} {d : Nat} {pos neg : List ((α → Nat) × Nat)}
+    (onPos : ∀ z, z ∈ pos → Normal ps w g d z.1) (onNeg : ∀ z, z ∈ neg → Normal ps w g d z.1) :
+    ∀ z, z ∈ pos ++ neg → Normal ps w g d z.1 :=
+  fun z mem => match mem_append_cases mem with
+    | .inl inPos => onPos z inPos
+    | .inr inNeg => onNeg z inNeg
+
+/-- **One carried amount is the case.** Where `g` is, scaled by `d`, a constant with `β` times one
+amount `z`, and the single normal equation holds (the regression of `w` on `z`), the identity and
+the bound hold: Fisher's identity for one amount is the case of the list `[(z, β)]`. -/
+theorem one_amount {ps : List α} {w g z : α → Nat} {B β d : Nat} (line : ∀ p, g p = B + β * z p)
+    (normal : Normal ps w g d z) :
+    d * concord ps w g = d * discord ps w g + concord ps g g ∧
+      concord ps g g ≤ d * d * concord ps w w :=
+  have comb : Combination g B [(z, β)] [] := fun p =>
+    (Nat.add_zero (g p)).trans ((line p).trans (congrArg (B + ·) (Nat.add_zero (β * z p)).symm))
+  have all : ∀ z', z' ∈ [(z, β)] ++ [] → Normal ps w g d z'.1 :=
+    normal_append (fun z' mem => match z', mem with
+        | _, .head _ => normal
+        | _, .tail _ m => nomatch m)
+      fun _ mem => nomatch mem
+  ⟨breeding_balance comb all, additive_part_le comb all⟩
+
+/-- **Fisher's fundamental theorem with breeding values, counted.** Read the generations' amount
+at `t` as the breeding value (scaled by `d`, a two-sided combination of carried amounts satisfying
+their normal equations against offspring number at `t`), transmitted exactly across the step. Then
+`d` times the size times the next total is `d` times the next size times the total with the
+breeding value's concordance with itself. Divided through by `d` and the sizes, with the
+next size over the size the mean offspring number: the mean breeding value rises across the step
+by the additive variance over the mean offspring number. -/
+theorem response {G : Generations α} {t : Nat} {B d : Nat}
+    {pos neg : List ((α → Nat) × Nat)}
+    (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (comb : Combination (G.amount t) B pos neg)
+    (normal : ∀ z, z ∈ pos ++ neg →
+      Normal (G.family t) (G.offspringNumber t) (G.amount t) d z.1) :
+    d * (G.size t * G.sum (t + 1)) =
+      d * (G.size (t + 1) * G.sum t) + concord (G.family t) (G.amount t) (G.amount t) := by
+  have step := G.mean_step t
+  unfold SelectionTerm.Generations.raisedAt SelectionTerm.Generations.loweredAt at step
+  rw [raised_exact exact, lowered_exact exact, Nat.mul_zero, Nat.zero_add, Nat.add_zero] at step
+  have bal := breeding_balance comb normal
+  exact Naturals.add_right_cancel (calc
+    d * (G.size t * G.sum (t + 1)) + d * G.discordAt t
+        = d * (G.size (t + 1) * G.sum t + G.concordAt t) :=
+          (Nat.left_distrib d _ _).symm.trans
+            (congrArg (d * ·) (step.trans
+              (congrArg (G.size (t + 1) * G.sum t + ·) (Nat.add_zero (G.concordAt t)))))
+    _ = d * (G.size (t + 1) * G.sum t) +
+          (d * G.discordAt t + concord (G.family t) (G.amount t) (G.amount t)) := by
+        rw [Nat.left_distrib]; exact congrArg (_ + ·) bal
+    _ = d * (G.size (t + 1) * G.sum t) + concord (G.family t) (G.amount t) (G.amount t) +
+          d * G.discordAt t := by
+        rw [Nat.add_assoc, Nat.add_comm (d * G.discordAt t)])
+
+/-- So with a positive denominator the mean breeding value never falls across a step of exact
+transmission, and rises exactly where the breeding value varies. -/
+theorem response_rises_iff {G : Generations α} {t : Nat} {B d : Nat}
+    {pos neg : List ((α → Nat) × Nat)} (positive : 0 < d)
+    (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (comb : Combination (G.amount t) B pos neg)
+    (normal : ∀ z, z ∈ pos ++ neg →
+      Normal (G.family t) (G.offspringNumber t) (G.amount t) d z.1) :
+    G.size (t + 1) * G.sum t ≤ G.size t * G.sum (t + 1) ∧
+      (G.size (t + 1) * G.sum t < G.size t * G.sum (t + 1) ↔
+        0 < concord (G.family t) (G.amount t) (G.amount t)) :=
+  have same : d * (G.size t * G.sum (t + 1)) + 0 =
+      d * (G.size (t + 1) * G.sum t) + concord (G.family t) (G.amount t) (G.amount t) :=
+    response exact comb normal
+  ⟨le_of_mul_le_mul positive (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq same.symm)),
+    ⟨fun lt => (lt_iff_of_balance same).mp (Nat.mul_lt_mul_of_pos_left lt positive),
+      fun pos => lt_of_mul_lt_mul ((lt_iff_of_balance same).mpr pos)⟩⟩
+
+end Breeding
+
 /-! ## Witnesses -/
 
 namespace Spread
@@ -927,6 +1462,92 @@ theorem unrelated :
   ⟨rfl, rfl, rfl, rfl⟩
 
 end Unrelated
+
+namespace Threshold
+
+/-- One carrier and one other. With two carrying offspring and one not beside the other's two, the
+carriers' share falls from a half to two of five; with three carrying, a half is kept. -/
+theorem at_threshold :
+    1 * 2 * (1 + 1) < 1 * (1 * 2 + (1 * 1 + 1 * 2)) ∧
+      1 * (1 * 3 + (1 * 1 + 1 * 2)) = 1 * 3 * (1 + 1) ∧
+      (Mutation.generations 3 1 2 1 1).Balanced 0 :=
+  ⟨by decide, rfl, (Mutation.balanced_iff 3 1 2 1 (Nat.succ_pos 0)).mpr rfl⟩
+
+end Threshold
+
+namespace Additive
+
+/-- Four members, one for each way of holding or not two carried amounts. -/
+def kinds : List (Bool × Bool) := [(false, false), (false, true), (true, false), (true, true)]
+
+/-- Holding the first amount. -/
+def first (p : Bool × Bool) : Nat := Mutation.holds p.1
+
+/-- Holding the second amount. -/
+def second (p : Bool × Bool) : Nat := Mutation.holds p.2
+
+/-- Offspring number: one, with the first amount, with twice the second. -/
+def number (p : Bool × Bool) : Nat := 1 + first p + 2 * second p
+
+def amounts : List ((Bool × Bool → Nat) × Nat) := [(first, 1), (second, 2)]
+
+/-- The breeding value: the first amount with twice the second. -/
+def value (p : Bool × Bool) : Nat := Breeding.combine amounts p
+
+/-- Offspring number a combination of two carried amounts: with denominator one, the breeding
+value satisfies both normal equations and its concordance with itself is that of offspring number
+(twenty), so the additive part is the whole; the constant one does not enter. -/
+theorem normal : ∀ z, z ∈ amounts ++ [] → Breeding.Normal kinds number value 1 z.1 :=
+  Breeding.normal_append (fun z (mem : z ∈ [(first, 1), (second, 2)]) => match z, mem with
+      | _, .head _ => (rfl : 5 + 1 * 1 = 1 * 5 + 1)
+      | _, .tail _ (.head _) => (rfl : 8 + 1 * 0 = 1 * 8 + 0)
+      | _, .tail _ (.tail _ m) => nomatch m)
+    fun _ mem => nomatch mem
+
+theorem additive :
+    Breeding.Combination value 0 amounts [] ∧
+      (∀ z, z ∈ amounts ++ [] → Breeding.Normal kinds number value 1 z.1) ∧
+      concord kinds value value = 1 * 1 * concord kinds number number ∧
+      concord kinds number number = 20 :=
+  ⟨fun _ => (Nat.add_zero _).trans (Nat.zero_add _).symm, normal, rfl, rfl⟩
+
+end Additive
+
+namespace Interaction
+
+/-- Offspring number one where both amounts are held, none otherwise. -/
+def number (p : Bool × Bool) : Nat := Additive.first p * Additive.second p
+
+def amounts : List ((Bool × Bool → Nat) × Nat) := [(Additive.first, 2), (Additive.second, 2)]
+
+/-- The breeding value scaled by four: twice each amount (the regression of offspring number on
+the two amounts is a quarter less than a half of each). -/
+def value (p : Bool × Bool) : Nat := Breeding.combine amounts p
+
+/-- Offspring number depending on the two amounts together, not additively: with denominator four
+the breeding value satisfies both normal equations; four times its concordance with offspring
+number (eight, with no discordance) is its concordance with itself, thirty-two, below sixteen
+times that of offspring number, forty-eight. Divided through, the additive variance is an eighth
+against a variance of three sixteenths. -/
+theorem normal :
+    ∀ z, z ∈ amounts ++ [] → Breeding.Normal Additive.kinds number value 4 z.1 :=
+  Breeding.normal_append
+    (fun z (mem : z ∈ [(Additive.first, 2), (Additive.second, 2)]) => match z, mem with
+      | _, .head _ => (rfl : 8 + 4 * 0 = 4 * 2 + 0)
+      | _, .tail _ (.head _) => (rfl : 8 + 4 * 0 = 4 * 2 + 0)
+      | _, .tail _ (.tail _ m) => nomatch m)
+    fun _ mem => nomatch mem
+
+theorem interaction :
+    Breeding.Combination value 0 amounts [] ∧
+      (∀ z, z ∈ amounts ++ [] → Breeding.Normal Additive.kinds number value 4 z.1) ∧
+      concord Additive.kinds number value = 8 ∧ discord Additive.kinds number value = 0 ∧
+      concord Additive.kinds value value = 32 ∧
+      4 * 4 * concord Additive.kinds number number = 48 ∧
+      concord Additive.kinds value value < 4 * 4 * concord Additive.kinds number number :=
+  ⟨fun _ => (Nat.add_zero _).trans (Nat.zero_add _).symm, normal, rfl, rfl, rfl, rfl, by decide⟩
+
+end Interaction
 
 end Reproduction
 

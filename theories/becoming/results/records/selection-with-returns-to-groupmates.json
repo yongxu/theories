@@ -362,7 +362,7 @@
         "Becoming.Reproduction.variation",
         "Becoming.Reproduction.discord_self"
       ],
-      "sha256": "3f1a5fb1f6697a96a0002c167a4e93a16de0bc1c9832e7cef26309abdc8f0ae9"
+      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
@@ -377,12 +377,18 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9e2fe596762d6a422a95fd717dd2f2d9e350d4840108df93cbf00ab281ef3f12"
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "0fe652dc01bca8df9bbe3a593e4043da5b05a817dd8a2b2bc77d693418036daf"
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -402,7 +408,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"

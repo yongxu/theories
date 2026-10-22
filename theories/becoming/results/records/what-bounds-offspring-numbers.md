@@ -86,6 +86,7 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `what bounds offspring numbers`, `什么约束后代数`, `selection on offspring number itself`, `variance form of the response to selection`, `counting form of Fisher's fundamental theorem`, `a lineage within a closed family ends`, `Becoming.Reproduction.variation`, `Becoming.Reproduction.Flow.lineage_ends`, `Becoming.Reproduction.Flow.closed_lineage_lowered`
 

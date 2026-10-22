@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-401 registered results: 374 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 928 curated edges join 352 results to the results they draw on.
+405 registered results: 378 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 932 curated edges join 356 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -97,6 +97,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [coupled-regimes][] ← <a id="coupled-regimes--margin-of-a-regime"></a>[margin-of-a-regime][] · <a id="coupled-regimes--regime-in-any-amounts"></a>[regime-in-any-amounts][] · <a id="coupled-regimes--threshold-in-the-state-plane"></a>[threshold-in-the-state-plane][] · <a id="coupled-regimes--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="coupled-regimes--the-last-change-of-a-run"></a>[the-last-change-of-a-run][]
 - [coupled-webs][] ← <a id="coupled-webs--coupled-regimes"></a>[coupled-regimes][] · <a id="coupled-webs--regime-in-any-amounts"></a>[regime-in-any-amounts][]
 - [coupling-closures-of-training-pipelines][] ← <a id="coupling-closures-of-training-pipelines--alignment-approaches-under-the-selection-laws"></a>[alignment-approaches-under-the-selection-laws][] *(application)* · <a id="coupling-closures-of-training-pipelines--a-pool-that-recruits-through-itself"></a>[a-pool-that-recruits-through-itself][] *(application)*
+- [dependence-formed-from-drawing][] ← <a id="dependence-formed-from-drawing--forming-anew-necessary-and-sufficient"></a>[forming-anew-necessary-and-sufficient][]
 - [derived-extent-limits][] ← <a id="derived-extent-limits--continuing-self-fed-from-beyond"></a>[continuing-self-fed-from-beyond][] · <a id="derived-extent-limits--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="derived-extent-limits--living-significance-on-held-lives"></a>[living-significance-on-held-lives][] · <a id="derived-extent-limits--becoming-stepwise-reading"></a>[becoming-stepwise-reading][]
 - [derived-history-law-exactness][] ← <a id="derived-history-law-exactness--finite-trace-transport"></a>[finite-trace-transport][]
 - [determinacy-up-to-likeness][] ← <a id="determinacy-up-to-likeness--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="determinacy-up-to-likeness--experiment-needs-return"></a>[experiment-needs-return][] · <a id="determinacy-up-to-likeness--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="determinacy-up-to-likeness--joint-difference-making"></a>[joint-difference-making][]
@@ -125,6 +126,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [finite-granularity-question-recovery][] ← <a id="finite-granularity-question-recovery--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="finite-granularity-question-recovery--retained-reference-joining-recovery"></a>[retained-reference-joining-recovery][]
 - [finite-joining-tree-lifting][] ← <a id="finite-joining-tree-lifting--multivalued-joining-common-structure"></a>[multivalued-joining-common-structure][]
 - [fixation-by-drift][] ← <a id="fixation-by-drift--drift-offspring-sampled"></a>[drift-offspring-sampled][] · <a id="fixation-by-drift--typicality-by-counting"></a>[typicality-by-counting][]
+- [fixation-with-selection][] ← <a id="fixation-with-selection--fixation-by-drift"></a>[fixation-by-drift][]
 - [fixed-places-and-sole-lines][] ← <a id="fixed-places-and-sole-lines--place-relations-in-context"></a>[place-relations-in-context][] · <a id="fixed-places-and-sole-lines--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] · <a id="fixed-places-and-sole-lines--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="fixed-places-and-sole-lines--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [formed-copying-correction][] ← <a id="formed-copying-correction--formed-copying-registration"></a>[formed-copying-registration][]
 - [formed-copying-registration][] ← <a id="formed-copying-registration--inherited-structural-copying"></a>[inherited-structural-copying][]
@@ -192,6 +194,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [merge-of-a-part-kept-by-the-rest][] ← <a id="merge-of-a-part-kept-by-the-rest--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [more-needs-renewers][] ← <a id="more-needs-renewers--unceasing-generation-needs-renewal"></a>[unceasing-generation-needs-renewal][] · <a id="more-needs-renewers--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][]
 - [multivalued-joining-common-structure][] ← <a id="multivalued-joining-common-structure--branching-tests-bisimulation"></a>[branching-tests-bisimulation][]
+- [mutation-and-the-balance-it-sets][] ← <a id="mutation-and-the-balance-it-sets--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [mutual-dependence-and-its-pace][] ← <a id="mutual-dependence-and-its-pace--levels-of-closure"></a>[levels-of-closure][] · <a id="mutual-dependence-and-its-pace--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="mutual-dependence-and-its-pace--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="mutual-dependence-and-its-pace--target-capture"></a>[target-capture][]
 - [naming-attention-coverage][] ← <a id="naming-attention-coverage--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)*
 - [necessarily-drawn-is-not-returning][] ← <a id="necessarily-drawn-is-not-returning--attraction-is-not-returning"></a>[attraction-is-not-returning][] · <a id="necessarily-drawn-is-not-returning--target-capture"></a>[target-capture][] · <a id="necessarily-drawn-is-not-returning--returning-where-the-course-branches"></a>[returning-where-the-course-branches][]
@@ -298,6 +301,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [target-capture][] ← <a id="target-capture--evolution-on-descent"></a>[evolution-on-descent][] · <a id="target-capture--laws-of-one-step"></a>[laws-of-one-step][] · <a id="target-capture--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [testing-within-couplings][] ← <a id="testing-within-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="testing-within-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="testing-within-couplings--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="testing-within-couplings--four-cases-of-a-part"></a>[four-cases-of-a-part][]
 - [tests-fix-likeness-where-determined][] ← <a id="tests-fix-likeness-where-determined--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="tests-fix-likeness-where-determined--identification-where-bounded"></a>[identification-where-bounded][]
+- [the-breeding-value][] ← <a id="the-breeding-value--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][]
 - [the-gap-for-ones-own-act][] ← <a id="the-gap-for-ones-own-act--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-gap-for-ones-own-act--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
 - [the-rest-outruns-the-renewal][] ← <a id="the-rest-outruns-the-renewal--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="the-rest-outruns-the-renewal--what-taking-all-excludes"></a>[what-taking-all-excludes][]
@@ -455,6 +459,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [coupled-regimes]: theories/becoming/results/records/coupled-regimes.md
 [coupled-webs]: theories/becoming/results/records/coupled-webs.md
 [coupling-closures-of-training-pipelines]: theories/becoming/results/records/coupling-closures-of-training-pipelines.md
+[dependence-formed-from-drawing]: theories/becoming/results/records/dependence-formed-from-drawing.md
 [derivation-soundness]: theories/becoming/results/records/derivation-soundness.md
 [derived-extent-limits]: theories/becoming/results/records/derived-extent-limits.md
 [derived-history-law-exactness]: theories/becoming/results/records/derived-history-law-exactness.md
@@ -489,6 +494,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [finite-joining-tree-lifting]: theories/becoming/results/records/finite-joining-tree-lifting.md
 [finite-trace-transport]: theories/becoming/results/records/finite-trace-transport.md
 [fixation-by-drift]: theories/becoming/results/records/fixation-by-drift.md
+[fixation-with-selection]: theories/becoming/results/records/fixation-with-selection.md
 [fixed-places-and-sole-lines]: theories/becoming/results/records/fixed-places-and-sole-lines.md
 [formed-copying-correction]: theories/becoming/results/records/formed-copying-correction.md
 [formed-copying-registration]: theories/becoming/results/records/formed-copying-registration.md
@@ -565,6 +571,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [metaethical-core-characterization]: theories/becoming/results/records/metaethical-core-characterization.md
 [more-needs-renewers]: theories/becoming/results/records/more-needs-renewers.md
 [multivalued-joining-common-structure]: theories/becoming/results/records/multivalued-joining-common-structure.md
+[mutation-and-the-balance-it-sets]: theories/becoming/results/records/mutation-and-the-balance-it-sets.md
 [mutual-dependence-and-its-pace]: theories/becoming/results/records/mutual-dependence-and-its-pace.md
 [naming-attention-coverage]: theories/becoming/results/records/naming-attention-coverage.md
 [necessarily-drawn-is-not-returning]: theories/becoming/results/records/necessarily-drawn-is-not-returning.md
@@ -678,6 +685,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [target-capture]: theories/becoming/results/records/target-capture.md
 [testing-within-couplings]: theories/becoming/results/records/testing-within-couplings.md
 [tests-fix-likeness-where-determined]: theories/becoming/results/records/tests-fix-likeness-where-determined.md
+[the-breeding-value]: theories/becoming/results/records/the-breeding-value.md
 [the-gap-for-ones-own-act]: theories/becoming/results/records/the-gap-for-ones-own-act.md
 [the-last-change-of-a-run]: theories/becoming/results/records/the-last-change-of-a-run.md
 [the-move-alone-underdetermines]: theories/becoming/results/records/the-move-alone-underdetermines.md

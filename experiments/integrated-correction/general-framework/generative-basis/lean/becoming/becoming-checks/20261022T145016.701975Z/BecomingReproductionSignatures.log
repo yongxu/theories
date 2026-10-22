@@ -1,0 +1,446 @@
+Becoming.Reproduction.excess_cross : ∀ (x y : Nat), Becoming.excess x y * Becoming.excess y x = 0
+@Becoming.Reproduction.le_of_excess_zero : ∀ {a b : Nat}, Becoming.excess a b = 0 → a ≤ b
+@Becoming.Reproduction.discord_self : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  Becoming.SelectionTerm.discord ps w w = 0
+@Becoming.Reproduction.concord_self : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  Becoming.SelectionTerm.concord ps w w =
+    Becoming.total ps fun p => Becoming.total ps fun q => Becoming.excess (w p) (w q) * Becoming.excess (w p) (w q)
+@Becoming.Reproduction.variation : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  ps.length * Becoming.SelectionTerm.weighted ps w w =
+    Becoming.total ps w * Becoming.total ps w + Becoming.SelectionTerm.concord ps w w
+@Becoming.Reproduction.never_against : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  Becoming.total ps w * Becoming.total ps w ≤ ps.length * Becoming.SelectionTerm.weighted ps w w
+@Becoming.Reproduction.concord_self_zero_iff : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  Becoming.SelectionTerm.concord ps w w = 0 ↔ ∀ (p q : α), p ∈ ps → q ∈ ps → w p = w q
+@Becoming.Reproduction.none_iff_uniform : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  Becoming.total ps w * Becoming.total ps w = ps.length * Becoming.SelectionTerm.weighted ps w w ↔
+    ∀ (p q : α), p ∈ ps → q ∈ ps → w p = w q
+@Becoming.Reproduction.number_variation : ∀ {α : Type} (ps : List α) (kids : α → List α),
+  (ps.length * Becoming.selected ps kids fun p => (kids p).length) =
+    Becoming.SelectionTerm.born ps kids * Becoming.SelectionTerm.born ps kids +
+      Becoming.SelectionTerm.concord ps (fun p => (kids p).length) fun p => (kids p).length
+@Becoming.Reproduction.number_never_against : ∀ {α : Type} (ps : List α) (kids : α → List α),
+  Becoming.SelectionTerm.born ps kids * Becoming.SelectionTerm.born ps kids ≤
+    ps.length * Becoming.selected ps kids fun p => (kids p).length
+@Becoming.Reproduction.number_none_iff : ∀ {α : Type} (ps : List α) (kids : α → List α),
+  (Becoming.SelectionTerm.born ps kids * Becoming.SelectionTerm.born ps kids =
+      ps.length * Becoming.selected ps kids fun p => (kids p).length) ↔
+    ∀ (p q : α), p ∈ ps → q ∈ ps → (kids p).length = (kids q).length
+@Becoming.Reproduction.twice_le_of_le : ∀ {x y : Nat}, x ≤ y → 2 * (x * y) ≤ x * x + y * y
+Becoming.Reproduction.twice_le : ∀ (x y : Nat), 2 * (x * y) ≤ x * x + y * y
+Becoming.Reproduction.square_mul : ∀ (a b : Nat), a * b * (a * b) = a * a * (b * b)
+Becoming.Reproduction.cross_mul : ∀ (a b c d : Nat), a * b * (c * d) = a * d * (c * b)
+Becoming.Reproduction.twice_mul : ∀ (a b : Nat), (a + a) * (b + b) = 2 * 2 * (a * b)
+@Becoming.Reproduction.bound_sq : ∀ {β : Type} (L : List β) (x y : β → Nat),
+  ((Becoming.total L fun i => x i * y i) * Becoming.total L fun i => x i * y i) ≤
+    (Becoming.total L fun i => x i * x i) * Becoming.total L fun i => y i * y i
+@Becoming.Reproduction.total_bind : ∀ {α β : Type} (f : α → List β) (q : β → Nat) (ps : List α),
+  Becoming.total (List.flatMap f ps) q = Becoming.total ps fun p => Becoming.total (f p) q
+@Becoming.Reproduction.total_pairsOf : ∀ {α : Type} (ps : List α) (F : α → α → Nat),
+  (Becoming.total (Becoming.Reproduction.pairsOf ps) fun pq => F pq.fst pq.snd) =
+    Becoming.total ps fun p => Becoming.total ps (F p)
+Becoming.Reproduction.dist_mul : ∀ (a b c d : Nat), (a + b) * (c + d) = a * c + a * d + (b * c + b * d)
+@Becoming.Reproduction.total_dist : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.total ps fun p =>
+      Becoming.total ps fun q => Becoming.Reproduction.dist (w p) (w q) * Becoming.Reproduction.dist (a p) (a q)) =
+    Becoming.SelectionTerm.concord ps w a + Becoming.SelectionTerm.discord ps w a +
+      (Becoming.SelectionTerm.concord ps w a + Becoming.SelectionTerm.discord ps w a)
+@Becoming.Reproduction.additive_le : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.SelectionTerm.concord ps w a + Becoming.SelectionTerm.discord ps w a) *
+      (Becoming.SelectionTerm.concord ps w a + Becoming.SelectionTerm.discord ps w a) ≤
+    Becoming.SelectionTerm.concord ps w w * Becoming.SelectionTerm.concord ps a a
+@Becoming.Reproduction.covariance_sq_le : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.SelectionTerm.concord ps w a - Becoming.SelectionTerm.discord ps w a) *
+        (Becoming.SelectionTerm.concord ps w a - Becoming.SelectionTerm.discord ps w a) ≤
+      Becoming.SelectionTerm.concord ps w w * Becoming.SelectionTerm.concord ps a a ∧
+    (Becoming.SelectionTerm.discord ps w a - Becoming.SelectionTerm.concord ps w a) *
+        (Becoming.SelectionTerm.discord ps w a - Becoming.SelectionTerm.concord ps w a) ≤
+      Becoming.SelectionTerm.concord ps w w * Becoming.SelectionTerm.concord ps a a
+@Becoming.Reproduction.additive_self : ∀ {α : Type} (ps : List α) (w : α → Nat),
+  (Becoming.SelectionTerm.concord ps w w + Becoming.SelectionTerm.discord ps w w) *
+      (Becoming.SelectionTerm.concord ps w w + Becoming.SelectionTerm.discord ps w w) =
+    Becoming.SelectionTerm.concord ps w w * Becoming.SelectionTerm.concord ps w w
+@Becoming.Reproduction.sub_le_of_le_add : ∀ {x y c : Nat}, x ≤ y + c → x - y ≤ c
+@Becoming.Reproduction.search : ∀ {P : Nat → Prop} (dec : (t : Nat) → Decidable (P t)) (T : Nat),
+  (¬∀ (t : Nat), t < T → ¬P t) → ∃ t, t < T ∧ P t
+@Becoming.Reproduction.Generations.falls_step_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} (t : Nat),
+  G.size t * G.sum (t + 1) < G.size (t + 1) * G.sum t ↔
+    G.concordAt t + G.size t * G.raisedAt t < G.size t * G.loweredAt t + G.discordAt t
+@Becoming.Reproduction.Generations.fell_step : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {T : Nat},
+  G.size 0 * G.sum T < G.size T * G.sum 0 → ∃ t, t < T ∧ G.size t * G.sum (t + 1) < G.size (t + 1) * G.sum t
+@Becoming.Reproduction.Generations.empty_from : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {t : Nat},
+  G.size t = 0 → ∀ (n : Nat), G.size (t + n) = 0
+@Becoming.Reproduction.Generations.response_sq_le : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {t : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    (G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t) * (G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t) ≤
+        Becoming.SelectionTerm.concord (G.family t) (G.offspringNumber t) (G.offspringNumber t) *
+          Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t) ∧
+      (G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1)) * (G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1)) ≤
+        Becoming.SelectionTerm.concord (G.family t) (G.offspringNumber t) (G.offspringNumber t) *
+          Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t)
+@Becoming.Reproduction.Generations.ByNumber.sum_eq : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G → ∀ (t : Nat), G.sum t = G.size (t + 1)
+@Becoming.Reproduction.Generations.ByNumber.discord_none : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G → ∀ (t : Nat), G.discordAt t = 0
+@Becoming.Reproduction.Generations.ByNumber.concord_eq : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ (t : Nat), G.concordAt t = Becoming.SelectionTerm.concord (G.family t) (G.offspringNumber t) (G.offspringNumber t)
+@Becoming.Reproduction.Generations.ByNumber.step : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ (t : Nat),
+      G.size t * G.size (t + 1 + 1) + G.size t * G.loweredAt t =
+        G.size (t + 1) * G.size (t + 1) + (G.concordAt t + G.size t * G.raisedAt t)
+@Becoming.Reproduction.Generations.ByNumber.not_lower_step : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat}, G.loweredAt t = 0 → G.size (t + 1) * G.size (t + 1) ≤ G.size t * G.size (t + 1 + 1)
+@Becoming.Reproduction.Generations.ByNumber.rises_exact_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat},
+      Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+        (G.size (t + 1) * G.size (t + 1) < G.size t * G.size (t + 1 + 1) ↔ 0 < G.concordAt t)
+@Becoming.Reproduction.Generations.ByNumber.kept_exact_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G →
+    ∀ {t : Nat},
+      Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+        (G.size (t + 1) * G.size (t + 1) = G.size t * G.size (t + 1 + 1) ↔
+          ∀ (p q : α), p ∈ G.family t → q ∈ G.family t → G.offspringNumber t p = G.offspringNumber t q)
+@Becoming.Reproduction.mem_append_cases : ∀ {α : Type} {a : α} {l m : List α}, a ∈ l ++ m → a ∈ l ∨ a ∈ m
+@Becoming.Reproduction.mem_flatMap_cases : ∀ {α β : Type} {f : α → List β} {k : β} {ps : List α},
+  k ∈ List.flatMap f ps → ∃ p, p ∈ ps ∧ k ∈ f p
+@Becoming.Reproduction.exists_mem_of_length_pos : ∀ {α : Type} {l : List α}, 0 < l.length → ∃ a, a ∈ l
+@Becoming.Reproduction.born_flatMap : ∀ {α : Type} (ps : List α) (kids : α → List α),
+  Becoming.SelectionTerm.born ps kids = (List.flatMap kids ps).length
+@Becoming.Reproduction.Flow.born_le_given : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat}
+  {p : X} {ks : List X}, (∀ (k : X), k ∈ ks → L.DescendsAt W t k p) → ks.length ≤ Becoming.total ks (L.give t p)
+@Becoming.Reproduction.Flow.born_le_given_family : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat}
+  {ps : List X} {kids : X → List X},
+  (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+    Becoming.SelectionTerm.born ps kids ≤ Becoming.total ps fun p => Becoming.total (kids p) (L.give t p)
+@Becoming.Reproduction.Flow.number_within_take : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {ds : List X} {t : Nat},
+  L.DissipatesOn ds t →
+    ∀ {p : X} {ks : List X},
+      (∀ (k : X), k ∈ ks → L.DescendsAt W t k p) →
+        (∀ (k : X), k ∈ ks → k ∈ ds) →
+          Becoming.Distinct ks → ks.length + Becoming.sign ks.length ≤ Becoming.total ds (L.take t p)
+@Becoming.Reproduction.Flow.born_within_stock : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {ds : List X} {t : Nat},
+  L.BalancesOn W ds t →
+    L.DissipatesOn ds t →
+      ∀ {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          (∀ (p k : X), p ∈ ps → k ∈ kids p → k ∈ ds) →
+            Becoming.Distinct (List.flatMap kids ps) →
+              Becoming.SelectionTerm.born ps kids + L.takers ds t ≤ W.stock ds t
+@Becoming.Reproduction.Flow.takers_pos_of_born : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {ds : List X} {t : Nat},
+  L.DissipatesOn ds t →
+    ∀ {ps : List X} {kids : X → List X},
+      (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → k ∈ ds) → 0 < Becoming.SelectionTerm.born ps kids → 0 < L.takers ds t
+@Becoming.Reproduction.Flow.reproducing_le_takers : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      ∀ {t : Nat}, L.DissipatesOn ds t → Becoming.sign (G.size (t + 1)) ≤ L.takers ds t
+@Becoming.Reproduction.Flow.reproducing_within : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      ∀ (T : Nat),
+        (∀ (t : Nat), t < T → L.BalancesOn W ds t) →
+          (∀ (t : Nat), t < T → L.DissipatesOn ds t) →
+            (W.stock ds T + Becoming.total (Becoming.steps 0 T) fun t => Becoming.sign (G.size (t + 1))) ≤ W.stock ds 0
+@Becoming.Reproduction.Flow.lineage_ends : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < W.stock ds 0 + 1 → L.BalancesOn W ds t) →
+        (∀ (t : Nat), t < W.stock ds 0 + 1 → L.DissipatesOn ds t) → G.size (W.stock ds 0 + 1) = 0
+@Becoming.Reproduction.Flow.last_reproducing : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {S : Nat},
+  0 < G.size 0 → G.size (S + 1) = 0 → ∃ m, m < S + 1 ∧ 0 < G.size m ∧ G.size (m + 1) = 0
+@Becoming.Reproduction.Flow.closed_lineage_lowered : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < W.stock ds 0 + 1 → L.BalancesOn W ds t) →
+        (∀ (t : Nat), t < W.stock ds 0 + 1 → L.DissipatesOn ds t) →
+          Becoming.Reproduction.Generations.ByNumber G →
+            0 < G.size 1 → ∃ t, t < W.stock ds 0 ∧ G.concordAt t + G.size t * G.raisedAt t < G.size t * G.loweredAt t
+@Becoming.Reproduction.Flow.closed_not_exact : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < W.stock ds 0 + 1 → L.BalancesOn W ds t) →
+        (∀ (t : Nat), t < W.stock ds 0 + 1 → L.DissipatesOn ds t) →
+          Becoming.Reproduction.Generations.ByNumber G →
+            0 < G.size 1 →
+              ¬∀ (t : Nat),
+                  t < W.stock ds 0 →
+                    Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))
+Becoming.Reproduction.Mutation.step_balance : ∀ (k m w c d : Nat),
+  c * k * (c + d) + c * (c * m + d * w) = c * (c * k + (c * m + d * w)) + c * (d * k)
+Becoming.Reproduction.Mutation.rises_iff : ∀ (k m w : Nat) {c : Nat} (d : Nat),
+  0 < c → (c * (c * k + (c * m + d * w)) < c * k * (c + d) ↔ c * m + d * w < d * k)
+Becoming.Reproduction.Mutation.kept_iff : ∀ (k m w : Nat) {c : Nat} (d : Nat),
+  0 < c → (c * (c * k + (c * m + d * w)) = c * k * (c + d) ↔ c * m + d * w = d * k)
+Becoming.Reproduction.Mutation.falls_iff : ∀ (k m w : Nat) {c : Nat} (d : Nat),
+  0 < c → (c * k * (c + d) < c * (c * k + (c * m + d * w)) ↔ d * k < c * m + d * w)
+@Becoming.Reproduction.Mutation.never_rises : ∀ {k w : Nat},
+  k ≤ w → ∀ (m c d : Nat), ¬c * (c * k + (c * m + d * w)) < c * k * (c + d)
+@Becoming.Reproduction.Mutation.falls_of_outrun : ∀ {k w m c : Nat},
+  k ≤ w → 0 < m → 0 < c → ∀ (d : Nat), c * k * (c + d) < c * (c * k + (c * m + d * w))
+Becoming.Reproduction.Mutation.kept_share : ∀ (m w s c d : Nat), c * m + d * w = d * (w + s) ↔ c * (s + m) = (c + d) * s
+@Becoming.Reproduction.Mutation.below_stays : ∀ {k m w c d : Nat},
+  c * m + d * w ≤ d * k → c * k * m + (c * m + d * w) * w ≤ (c * m + d * w) * k
+@Becoming.Reproduction.Mutation.above_stays : ∀ {k m w c d : Nat},
+  d * k ≤ c * m + d * w → (c * m + d * w) * k ≤ c * k * m + (c * m + d * w) * w
+@Becoming.Reproduction.Mutation.below_always : ∀ {k m w c d : Nat},
+  c * m + d * w ≤ d * k →
+    ∀ (n : Nat),
+      (Becoming.Reproduction.Mutation.run k m w c d n).fst * m +
+          (Becoming.Reproduction.Mutation.run k m w c d n).snd * w ≤
+        (Becoming.Reproduction.Mutation.run k m w c d n).snd * k
+@Becoming.Reproduction.Mutation.not_falls_below : ∀ {k m w c d : Nat},
+  c * m + d * w ≤ d * k →
+    ∀ (n : Nat),
+      (Becoming.Reproduction.Mutation.run k m w c d n).fst *
+          ((Becoming.Reproduction.Mutation.run k m w c d (n + 1)).fst +
+            (Becoming.Reproduction.Mutation.run k m w c d (n + 1)).snd) ≤
+        (Becoming.Reproduction.Mutation.run k m w c d (n + 1)).fst *
+          ((Becoming.Reproduction.Mutation.run k m w c d n).fst + (Becoming.Reproduction.Mutation.run k m w c d n).snd)
+@Becoming.Reproduction.Mutation.above_always : ∀ {k m w c d : Nat},
+  d * k ≤ c * m + d * w →
+    ∀ (n : Nat),
+      (Becoming.Reproduction.Mutation.run k m w c d n).snd * k ≤
+        (Becoming.Reproduction.Mutation.run k m w c d n).fst * m +
+          (Becoming.Reproduction.Mutation.run k m w c d n).snd * w
+Becoming.Reproduction.Mutation.total_replicate : ∀ (f : Bool → Nat) (x : Bool) (n : Nat),
+  Becoming.total (List.replicate n x) f = n * f x
+Becoming.Reproduction.Mutation.total_kinds : ∀ (f : Bool → Nat) (c d : Nat),
+  Becoming.total (List.replicate c true ++ List.replicate d false) f = c * f true + d * f false
+Becoming.Reproduction.Mutation.lowered_count : ∀ (k m w c d : Nat),
+  (Becoming.Reproduction.Mutation.generations k m w c d).loweredAt 0 = c * m ∧
+    (Becoming.Reproduction.Mutation.generations k m w c d).raisedAt 0 = 0
+Becoming.Reproduction.Mutation.size_first : ∀ (k m w c d : Nat),
+  (Becoming.Reproduction.Mutation.generations k m w c d).size 0 = c + d
+Becoming.Reproduction.Mutation.sum_first : ∀ (k m w c d : Nat),
+  (Becoming.Reproduction.Mutation.generations k m w c d).sum 0 = c
+Becoming.Reproduction.Mutation.size_next : ∀ (k m w c d : Nat),
+  (Becoming.Reproduction.Mutation.generations k m w c d).size 1 = c * k + (c * m + d * w)
+Becoming.Reproduction.Mutation.sum_next : ∀ (k m w c d : Nat),
+  (Becoming.Reproduction.Mutation.generations k m w c d).sum 1 = c * k
+Becoming.Reproduction.Mutation.balanced_iff : ∀ (k m w : Nat) {c : Nat} (d : Nat),
+  0 < c → ((Becoming.Reproduction.Mutation.generations k m w c d).Balanced 0 ↔ c * m + d * w = d * k)
+Becoming.Reproduction.Breeding.same_scale : ∀ (k : Nat) {x y : Nat × Nat},
+  Becoming.Integers.Same x y →
+    Becoming.Integers.Same (Becoming.Reproduction.Breeding.scale k x) (Becoming.Reproduction.Breeding.scale k y)
+Becoming.Reproduction.Breeding.scale_plus : ∀ (k : Nat) (x y : Nat × Nat),
+  Becoming.Reproduction.Breeding.scale k (Becoming.Integers.plus x y) =
+    Becoming.Integers.plus (Becoming.Reproduction.Breeding.scale k x) (Becoming.Reproduction.Breeding.scale k y)
+Becoming.Reproduction.Breeding.scale_scale : ∀ (k m : Nat) (x : Nat × Nat),
+  Becoming.Reproduction.Breeding.scale k (Becoming.Reproduction.Breeding.scale m x) =
+    Becoming.Reproduction.Breeding.scale m (Becoming.Reproduction.Breeding.scale k x)
+@Becoming.Reproduction.Breeding.same_move : ∀ {x y z : Nat × Nat},
+  Becoming.Integers.Same (Becoming.Integers.plus x y) z →
+    Becoming.Integers.Same x (Becoming.Integers.plus z (Becoming.Integers.swap y))
+Becoming.Reproduction.Breeding.same_zero_plus : ∀ (y : Nat × Nat),
+  Becoming.Integers.Same (Becoming.Integers.plus (0, 0) y) y
+@Becoming.Reproduction.Breeding.covPair_same : ∀ {α : Type} (ps : List α) (f h : α → Nat),
+  Becoming.Integers.Same (Becoming.Reproduction.Breeding.covPair ps f h)
+    (ps.length * Becoming.SelectionTerm.weighted ps f h, Becoming.total ps f * Becoming.total ps h)
+@Becoming.Reproduction.Breeding.covPair_congr : ∀ {α : Type} (ps : List α) (f : α → Nat) {h h' : α → Nat},
+  (∀ (p : α), h p = h' p) →
+    Becoming.Reproduction.Breeding.covPair ps f h = Becoming.Reproduction.Breeding.covPair ps f h'
+@Becoming.Reproduction.Breeding.covariance_add : ∀ {α : Type} (ps : List α) (f h₁ h₂ : α → Nat),
+  (Becoming.SelectionTerm.concord ps f fun p => h₁ p + h₂ p) +
+      (Becoming.SelectionTerm.discord ps f h₁ + Becoming.SelectionTerm.discord ps f h₂) =
+    Becoming.SelectionTerm.concord ps f h₁ + Becoming.SelectionTerm.concord ps f h₂ +
+      Becoming.SelectionTerm.discord ps f fun p => h₁ p + h₂ p
+@Becoming.Reproduction.Breeding.covPair_add : ∀ {α : Type} (ps : List α) (f h₁ h₂ : α → Nat),
+  Becoming.Integers.Same (Becoming.Reproduction.Breeding.covPair ps f fun p => h₁ p + h₂ p)
+    (Becoming.Integers.plus (Becoming.Reproduction.Breeding.covPair ps f h₁)
+      (Becoming.Reproduction.Breeding.covPair ps f h₂))
+Becoming.Reproduction.Breeding.excess_mul : ∀ (c x y : Nat), Becoming.excess (c * x) (c * y) = c * Becoming.excess x y
+@Becoming.Reproduction.Breeding.concord_mul : ∀ {α : Type} (ps : List α) (f h : α → Nat) (c : Nat),
+  (Becoming.SelectionTerm.concord ps f fun p => c * h p) = c * Becoming.SelectionTerm.concord ps f h
+@Becoming.Reproduction.Breeding.discord_mul : ∀ {α : Type} (ps : List α) (f h : α → Nat) (c : Nat),
+  (Becoming.SelectionTerm.discord ps f fun p => c * h p) = c * Becoming.SelectionTerm.discord ps f h
+@Becoming.Reproduction.Breeding.covPair_mul : ∀ {α : Type} (ps : List α) (f h : α → Nat) (c : Nat),
+  (Becoming.Reproduction.Breeding.covPair ps f fun p => c * h p) =
+    Becoming.Reproduction.Breeding.scale c (Becoming.Reproduction.Breeding.covPair ps f h)
+@Becoming.Reproduction.Breeding.covPair_const : ∀ {α : Type} (ps : List α) (f : α → Nat) (B : Nat),
+  (Becoming.Reproduction.Breeding.covPair ps f fun x => B) = (0, 0)
+@Becoming.Reproduction.Breeding.covPair_combine : ∀ {α : Type} (ps : List α) (f : α → Nat) (L : List ((α → Nat) × Nat)),
+  Becoming.Integers.Same (Becoming.Reproduction.Breeding.covPair ps f (Becoming.Reproduction.Breeding.combine L))
+    (Becoming.Reproduction.Breeding.combined ps f L)
+@Becoming.Reproduction.Breeding.covPair_combination : ∀ {α : Type} {g : α → Nat} {B : Nat}
+  {pos neg : List ((α → Nat) × Nat)},
+  Becoming.Reproduction.Breeding.Combination g B pos neg →
+    ∀ (ps : List α) (f : α → Nat),
+      Becoming.Integers.Same (Becoming.Reproduction.Breeding.covPair ps f g)
+        (Becoming.Integers.plus (Becoming.Reproduction.Breeding.combined ps f pos)
+          (Becoming.Integers.swap (Becoming.Reproduction.Breeding.combined ps f neg)))
+@Becoming.Reproduction.Breeding.combined_normal : ∀ {α : Type} (ps : List α) (w g : α → Nat) (d : Nat)
+  (L : List ((α → Nat) × Nat)),
+  (∀ (z : (α → Nat) × Nat), z ∈ L → Becoming.Reproduction.Breeding.Normal ps w g d z.fst) →
+    Becoming.Integers.Same (Becoming.Reproduction.Breeding.combined ps g L)
+      (Becoming.Reproduction.Breeding.scale d (Becoming.Reproduction.Breeding.combined ps w L))
+@Becoming.Reproduction.Breeding.breeding_balance : ∀ {α : Type} {ps : List α} {w g : α → Nat} {B d : Nat}
+  {pos neg : List ((α → Nat) × Nat)},
+  Becoming.Reproduction.Breeding.Combination g B pos neg →
+    (∀ (z : (α → Nat) × Nat), z ∈ pos ++ neg → Becoming.Reproduction.Breeding.Normal ps w g d z.fst) →
+      d * Becoming.SelectionTerm.concord ps w g =
+        d * Becoming.SelectionTerm.discord ps w g + Becoming.SelectionTerm.concord ps g g
+@Becoming.Reproduction.Breeding.additive_part_le : ∀ {α : Type} {ps : List α} {w g : α → Nat} {B d : Nat}
+  {pos neg : List ((α → Nat) × Nat)},
+  Becoming.Reproduction.Breeding.Combination g B pos neg →
+    (∀ (z : (α → Nat) × Nat), z ∈ pos ++ neg → Becoming.Reproduction.Breeding.Normal ps w g d z.fst) →
+      Becoming.SelectionTerm.concord ps g g ≤ d * d * Becoming.SelectionTerm.concord ps w w
+@Becoming.Reproduction.Breeding.normal_append : ∀ {α : Type} {ps : List α} {w g : α → Nat} {d : Nat}
+  {pos neg : List ((α → Nat) × Nat)},
+  (∀ (z : (α → Nat) × Nat), z ∈ pos → Becoming.Reproduction.Breeding.Normal ps w g d z.fst) →
+    (∀ (z : (α → Nat) × Nat), z ∈ neg → Becoming.Reproduction.Breeding.Normal ps w g d z.fst) →
+      ∀ (z : (α → Nat) × Nat), z ∈ pos ++ neg → Becoming.Reproduction.Breeding.Normal ps w g d z.fst
+@Becoming.Reproduction.Breeding.one_amount : ∀ {α : Type} {ps : List α} {w g z : α → Nat} {B β d : Nat},
+  (∀ (p : α), g p = B + β * z p) →
+    Becoming.Reproduction.Breeding.Normal ps w g d z →
+      d * Becoming.SelectionTerm.concord ps w g =
+          d * Becoming.SelectionTerm.discord ps w g + Becoming.SelectionTerm.concord ps g g ∧
+        Becoming.SelectionTerm.concord ps g g ≤ d * d * Becoming.SelectionTerm.concord ps w w
+@Becoming.Reproduction.Breeding.response : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {t B d : Nat}
+  {pos neg : List ((α → Nat) × Nat)},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    Becoming.Reproduction.Breeding.Combination (G.amount t) B pos neg →
+      (∀ (z : (α → Nat) × Nat),
+          z ∈ pos ++ neg →
+            Becoming.Reproduction.Breeding.Normal (G.family t) (G.offspringNumber t) (G.amount t) d z.fst) →
+        d * (G.size t * G.sum (t + 1)) =
+          d * (G.size (t + 1) * G.sum t) + Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t)
+@Becoming.Reproduction.Breeding.response_rises_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {t B d : Nat} {pos neg : List ((α → Nat) × Nat)},
+  0 < d →
+    Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+      Becoming.Reproduction.Breeding.Combination (G.amount t) B pos neg →
+        (∀ (z : (α → Nat) × Nat),
+            z ∈ pos ++ neg →
+              Becoming.Reproduction.Breeding.Normal (G.family t) (G.offspringNumber t) (G.amount t) d z.fst) →
+          G.size (t + 1) * G.sum t ≤ G.size t * G.sum (t + 1) ∧
+            (G.size (t + 1) * G.sum t < G.size t * G.sum (t + 1) ↔
+              0 < Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t))
+Becoming.Reproduction.Spread.spread : Becoming.SelectionTerm.born Becoming.Reproduction.Spread.parents
+      Becoming.Reproduction.Spread.kids =
+    2 ∧
+  (Becoming.selected Becoming.Reproduction.Spread.parents Becoming.Reproduction.Spread.kids fun p =>
+        (Becoming.Reproduction.Spread.kids p).length) =
+      4 ∧
+    (Becoming.SelectionTerm.concord Becoming.Reproduction.Spread.parents
+          (fun p => (Becoming.Reproduction.Spread.kids p).length) fun p =>
+          (Becoming.Reproduction.Spread.kids p).length) =
+        4 ∧
+      Becoming.SelectionTerm.born Becoming.Reproduction.Spread.parents Becoming.Reproduction.Spread.kids *
+          Becoming.SelectionTerm.born Becoming.Reproduction.Spread.parents Becoming.Reproduction.Spread.kids <
+        Becoming.Reproduction.Spread.parents.length *
+          Becoming.selected Becoming.Reproduction.Spread.parents Becoming.Reproduction.Spread.kids fun p =>
+            (Becoming.Reproduction.Spread.kids p).length
+Becoming.Reproduction.OnePool.balances : Becoming.Reproduction.OnePool.flow.Balances Becoming.Reproduction.OnePool.web
+Becoming.Reproduction.OnePool.dissipates : ∀ (t : Nat),
+  Becoming.Reproduction.OnePool.flow.DissipatesOn Becoming.Reproduction.OnePool.family t
+Becoming.Reproduction.OnePool.descended : Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.OnePool.flow
+  Becoming.Reproduction.OnePool.web Becoming.Reproduction.OnePool.generations
+Becoming.Reproduction.OnePool.within : ∀ (t : Nat) (p k : Becoming.Reproduction.OnePool.Relatum),
+  p ∈ Becoming.Reproduction.OnePool.generations.family t →
+    k ∈ Becoming.Reproduction.OnePool.generations.kids t p → k ∈ Becoming.Reproduction.OnePool.family
+Becoming.Reproduction.OnePool.one_pool : Becoming.Reproduction.OnePool.web.stock Becoming.Reproduction.OnePool.family
+      0 =
+    3 ∧
+  Becoming.Reproduction.OnePool.generations.size 1 = 2 ∧
+    Becoming.Reproduction.OnePool.generations.size 4 = 0 ∧
+      Becoming.Reproduction.OnePool.generations.loweredAt 0 = 4 ∧
+        Becoming.Reproduction.OnePool.generations.concordAt 0 = 0 ∧
+          Becoming.Reproduction.OnePool.generations.raisedAt 0 = 0 ∧
+            ∃ t,
+              t < Becoming.Reproduction.OnePool.web.stock Becoming.Reproduction.OnePool.family 0 ∧
+                Becoming.Reproduction.OnePool.generations.concordAt t +
+                    Becoming.Reproduction.OnePool.generations.size t *
+                      Becoming.Reproduction.OnePool.generations.raisedAt t <
+                  Becoming.Reproduction.OnePool.generations.size t *
+                    Becoming.Reproduction.OnePool.generations.loweredAt t
+Becoming.Reproduction.Relay.exchange : ∀ (e c : Bool),
+  Becoming.Reproduction.Relay.on (!e) c +
+      (Becoming.Reproduction.Relay.on e e * Becoming.Reproduction.Relay.on e c + 0) =
+    Becoming.Reproduction.Relay.on e c +
+      (Becoming.Reproduction.Relay.on e e * Becoming.Reproduction.Relay.on (!e) c + 0)
+Becoming.Reproduction.Relay.balances : Becoming.Reproduction.Relay.flow.Balances Becoming.Reproduction.Relay.web
+Becoming.Reproduction.Relay.not_dissipates : ∀ (t : Nat),
+  ¬Becoming.Reproduction.Relay.flow.DissipatesOn Becoming.Reproduction.Relay.family t
+Becoming.Reproduction.Relay.family_eq : ∀ (t : Nat),
+  Becoming.Reproduction.Relay.generations.family t = [Becoming.Reproduction.Relay.turn t]
+Becoming.Reproduction.Relay.descends : ∀ (t : Nat),
+  Becoming.Reproduction.Relay.flow.DescendsAt Becoming.Reproduction.Relay.web t (!Becoming.Reproduction.Relay.turn t)
+    (Becoming.Reproduction.Relay.turn t)
+Becoming.Reproduction.Relay.descended : Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.Relay.flow
+  Becoming.Reproduction.Relay.web Becoming.Reproduction.Relay.generations
+Becoming.Reproduction.Relay.relay : Becoming.Reproduction.Relay.flow.Balances Becoming.Reproduction.Relay.web ∧
+  (∀ (t : Nat), ¬Becoming.Reproduction.Relay.flow.DissipatesOn Becoming.Reproduction.Relay.family t) ∧
+    Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+        Becoming.Reproduction.Relay.generations ∧
+      ∀ (n : Nat),
+        Becoming.Reproduction.Relay.generations.size n = 1 ∧
+          Becoming.Reproduction.Relay.web.stock Becoming.Reproduction.Relay.family n = 1
+Becoming.Reproduction.Unrelated.unrelated : Becoming.SelectionTerm.concord [0, 1, 2] (fun p => p + 1)
+      Becoming.Reproduction.Unrelated.amount =
+    1 ∧
+  Becoming.SelectionTerm.discord [0, 1, 2] (fun p => p + 1) Becoming.Reproduction.Unrelated.amount = 1 ∧
+    (Becoming.SelectionTerm.concord [0, 1, 2] (fun p => p + 1) fun p => p + 1) = 6 ∧
+      Becoming.SelectionTerm.concord [0, 1, 2] Becoming.Reproduction.Unrelated.amount
+          Becoming.Reproduction.Unrelated.amount =
+        2
+Becoming.Reproduction.Threshold.at_threshold : 1 * 2 * (1 + 1) < 1 * (1 * 2 + (1 * 1 + 1 * 2)) ∧
+  1 * (1 * 3 + (1 * 1 + 1 * 2)) = 1 * 3 * (1 + 1) ∧ (Becoming.Reproduction.Mutation.generations 3 1 2 1 1).Balanced 0
+Becoming.Reproduction.Additive.normal : ∀ (z : (Bool × Bool → Nat) × Nat),
+  z ∈ Becoming.Reproduction.Additive.amounts ++ [] →
+    Becoming.Reproduction.Breeding.Normal Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Additive.number
+      Becoming.Reproduction.Additive.value 1 z.fst
+Becoming.Reproduction.Additive.additive : Becoming.Reproduction.Breeding.Combination
+    Becoming.Reproduction.Additive.value 0 Becoming.Reproduction.Additive.amounts [] ∧
+  (∀ (z : (Bool × Bool → Nat) × Nat),
+      z ∈ Becoming.Reproduction.Additive.amounts ++ [] →
+        Becoming.Reproduction.Breeding.Normal Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Additive.number
+          Becoming.Reproduction.Additive.value 1 z.fst) ∧
+    Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Additive.value
+          Becoming.Reproduction.Additive.value =
+        1 * 1 *
+          Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Additive.number
+            Becoming.Reproduction.Additive.number ∧
+      Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Additive.number
+          Becoming.Reproduction.Additive.number =
+        20
+Becoming.Reproduction.Interaction.normal : ∀ (z : (Bool × Bool → Nat) × Nat),
+  z ∈ Becoming.Reproduction.Interaction.amounts ++ [] →
+    Becoming.Reproduction.Breeding.Normal Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Interaction.number
+      Becoming.Reproduction.Interaction.value 4 z.fst
+Becoming.Reproduction.Interaction.interaction : Becoming.Reproduction.Breeding.Combination
+    Becoming.Reproduction.Interaction.value 0 Becoming.Reproduction.Interaction.amounts [] ∧
+  (∀ (z : (Bool × Bool → Nat) × Nat),
+      z ∈ Becoming.Reproduction.Interaction.amounts ++ [] →
+        Becoming.Reproduction.Breeding.Normal Becoming.Reproduction.Additive.kinds
+          Becoming.Reproduction.Interaction.number Becoming.Reproduction.Interaction.value 4 z.fst) ∧
+    Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Interaction.number
+          Becoming.Reproduction.Interaction.value =
+        8 ∧
+      Becoming.SelectionTerm.discord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Interaction.number
+            Becoming.Reproduction.Interaction.value =
+          0 ∧
+        Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Interaction.value
+              Becoming.Reproduction.Interaction.value =
+            32 ∧
+          4 * 4 *
+                Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds
+                  Becoming.Reproduction.Interaction.number Becoming.Reproduction.Interaction.number =
+              48 ∧
+            Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds Becoming.Reproduction.Interaction.value
+                Becoming.Reproduction.Interaction.value <
+              4 * 4 *
+                Becoming.SelectionTerm.concord Becoming.Reproduction.Additive.kinds
+                  Becoming.Reproduction.Interaction.number Becoming.Reproduction.Interaction.number

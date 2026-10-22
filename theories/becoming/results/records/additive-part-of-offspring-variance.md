@@ -63,8 +63,10 @@ Fisher 1930's fundamental theorem in its general form, read by Price 1972: the c
   - Preserved conditions: Exact transmission for the course over generations. [SelectionTerm.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean)
 - related, not a proved adapter: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Fisher's exact case, the top of this bound.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The selection term proper, bounded here by the spreads.
+- related, not a proved adapter: [mutation-and-the-balance-it-sets](mutation-and-the-balance-it-sets.md). Mutation, the transmission side of the same step.
+- related, not a proved adapter: [the-breeding-value](the-breeding-value.md). Several carried amounts at once: the breeding value.
 
-**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
+**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md) · [the-breeding-value](the-breeding-value.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -77,6 +79,7 @@ Fisher 1930's fundamental theorem in its general form, read by Price 1972: the c
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `additive part of Fisher's theorem`, `additive genetic variance`, `Cauchy-Schwarz counted`, `后代数方差的加性部分`, `Becoming.Reproduction.additive_le`, `Becoming.Reproduction.bound_sq`, `Becoming.Reproduction.Generations.response_sq_le`
 
@@ -84,6 +87,8 @@ Aliases: `additive part of Fisher's theorem`, `additive genetic variance`, `Cauc
 ### History
 
 - 20 October 2026: added (EV10), the additive part of Fisher's theorem through one carried amount: counted Cauchy-Schwarz, the additive variance at most the whole, the response over generations bounded; study section 279.
+- 22 October 2026, EV13-EV16: related record mutation-and-the-balance-it-sets added (study section 368); its laws and their statements are unchanged.
+- 22 October 2026, EV13-EV16: related record the-breeding-value added (study section 368); its laws and their statements are unchanged.
 
 </details>
 

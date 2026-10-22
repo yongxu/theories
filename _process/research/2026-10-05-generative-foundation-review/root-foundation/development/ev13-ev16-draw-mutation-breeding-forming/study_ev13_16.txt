@@ -1,0 +1,98 @@
+## {N}. Selection in the draw, mutation, the breeding value, and dependences formed from drawing (EV13-EV16)
+
+```text
+Result(s): Becoming.Drift ({DRIFT_LINE}) states selection in the draw. Among M + 1 members, replacement one at a time,
+       reading only the steps that change the count: from a mixed population up with weight a, down with b, a
+       population of one kind staying (Replacement.value, its histories counted step by step; value_add, value_mul,
+       value_le, value_congr, value_const, value_stays, value_comp). The potential with steps b^j a^(M - j)
+       (rise, potential) is harmonic for the steps, a times a step being b times the one below (rise_step,
+       potential_harmonic), so it keeps its weighted value over any number of steps (value_potential). The
+       histories fixing the first kind weigh, times the potential at the top, at most (a + b)^k times the potential
+       at the start, and with the histories still varied at least that (fixation_bounds); within M + 1 steps the
+       histories climbing straight up weigh at least a^(M + 1) (climbs), so the varied ones weigh at most r^m after m
+       rounds, r + a^(M + 1) = (a + b)^(M + 1) (varied_step, varied_vanishes), and the fixation share tends to the
+       potential at the start over the potential at the top (fixation). With a = b the share is the starting share
+       (rise_neutral, potential_neutral, neutral_share); with b <= a at least it (rise_antitone, potential_above,
+       potential_from, favoured_share); with b < a strictly above it from every mixed start (favoured_share_above).
+       From i the histories losing the favoured kind weigh at least b^i times every later history (lost_ge).
+       Witness Favoured.two_members (share two of three from one of two).
+       Becoming.Reproduction ({REPRO_LINE}) states mutation. Carriers each leave k offspring that carry the amount and m
+       that do not, the others w, none carrying it: from c carriers and d others the share, cross-multiplied,
+       rises exactly where d k exceeds c m + d w, is kept where they are equal and falls where d k falls short
+       (Mutation.step_balance, rises_iff, kept_iff, falls_iff); where k <= w it never rises and with any loss
+       falls at every step (never_rises, falls_of_outrun); where k = w + s it is kept exactly at s / (s + m)
+       (kept_share), and a run at or below that balance stays at or below it with the share never falling, one
+       above staying above (run, below_stays, below_always, not_falls_below, above_stays, above_always). Read as
+       generations of descent (Mutation.generations), transmission lowers the amount by c m and raises nothing
+       (lowered_count; size_first, sum_first, size_next, sum_next), and the step is balanced exactly where the
+       count balance holds (balanced_iff). Witness Threshold.at_threshold.
+       Becoming.Reproduction also states the breeding value (EV15). The counted covariance is linear in the amount
+       (Breeding.covPair, covariance_add, excess_mul, concord_mul, discord_mul, covPair_const, combine,
+       covPair_combine, read through Integers.Same). A breeding value g combines carried amounts with natural
+       coefficients on each side and a base (Combination) and reproduces, d times, offspring number's covariation
+       with each (Normal, the normal equations with denominators cleared); then d times its covariation with
+       offspring number is its own spread (breeding_balance), at most d^2 times offspring number's
+       (additive_part_le: the additive part at most the whole), one carried amount its case (one_amount), and with
+       exact transmission d times the cross-multiplied rise of its mean is that spread (response, response_rises_iff):
+       Fisher's fundamental theorem with breeding values. Witnesses Additive.additive (the additive part the whole)
+       and Interaction.interaction (offspring number the product of two amounts: 32 against 48).
+       Becoming.Transmission ({TRANS_LINE}) states dependences formed by descent where depending and drawing part at
+       the giver (EV16). At a descent where the descendant depends on c, the giver's holding alone decides
+       inheritance against forming anew (Web.inheritsAt_iff_held; the four cases, Web.four_cases,
+       Web.formsAnew_iff_drawn_or_neither); under the reading of drawing at the descent (Web.DependsOnDrawnAt) the
+       case of neither held nor drawn is excluded (DependsOnDrawnAt.not_undrawn) and a dependence forms anew exactly
+       where the giver drew on c without depending on it (Web.formsAnew_iff_drawn_unheld); with drawing depending,
+       only the case of neither is left (Web.formsAnew_iff_neither), and with both nothing forms anew
+       (DependsOnDrawnAt.not_formsAnew, Flow.DependsOnDrawn.none_formsAnew). For the flow, the reading of drawing is
+       passing on what is drawn with forming from drawing (Flow.FormsFromDrawn, Flow.dependsOnDrawn_iff_split,
+       Flow.Inherits.formsFromDrawn), and under balance a relatum coming to stand depends only on what some giver drew
+       on (Flow.drawn_by_giver, Flow.formed_from_drawing, Flow.no_dependence_undrawn). Witnesses
+       World.droppedHatch_formed (formed from drawing), World.novel_formed_undrawn (formed from nothing drawn, the
+       reading failing), TwoGivers.passed_undrawn (passed on without drawing). Records {RID13}, {RID14}, {RID15},
+       {RID16}.
+Delta: the evolution chapter's next connections 2 and 3 left open drift and selection in one draw, mutation read
+       through the transmission term, several carried amounts at once and Fisher's identity; chapter section 8.1 item
+       9 left open how dependences form where depending and drawing part at the givers. All are stated. No new
+       module: the replacement chain lies in Becoming.Drift, mutation and the breeding value in Becoming.Reproduction
+       (which now imports Becoming.Integers for its difference pairs), the forming law in Becoming.Transmission (board
+       rule 9).
+Premises: for selection in the draw, two kinds, replacement one at a time with constant natural-number weights a and b
+       (the common factor i (M + 1 - i) of the one-birth-one-death chain dropped, only the steps that change the
+       count read), no mutation; for mutation, two kinds, loss in one direction only, constant offspring numbers; for
+       the breeding value, an amount combining the carried amounts satisfying the scaled normal equations (its
+       existence, the solving of the normal equations, is given, not constructed); for the forming law, the reading of
+       drawing at the descent as a hypothesis, and balance for the flow laws.
+Evidence: core receipt {RECEIPT} (passed; Becoming.Drift, Becoming.Reproduction and Becoming.Transmission every
+       axiom report empty;
+       {CORE_LINE}); the connectivity rerun ({APART}); render, check, links and tests.
+Boundary: selection in the draw is stated for replacement one at a time; for sampled generations (Wright-Fisher with
+       selection) the fixation share has no closed count and is not stated. Mutation is one-way and without drift:
+       back mutation, mutation with drift (the balance of mutation and drift) and the stationary weights of a run
+       with both are not stated. The breeding value is any solution of the normal equations; that one exists with
+       natural coefficients after clearing denominators is not proved here. The forming law says where a new
+       dependence comes from, not why a descendant comes to depend on what its giver drew on. Natural-number weights
+       and counts, discrete steps.
+Output → input: EV9 gave drift alone fixing each kind with its starting share. With selection in the draw the potential
+       replaces the count as what the weighted histories keep, so the fixation share moves off the starting share
+       exactly as far as the potential bends: up for the favoured kind, and never to certainty, the favoured kind
+       lost with weight at least b^i. Mutation enters as the transmission term of Price's equation: the carriers'
+       advantage must outrun what mutation takes from them, else they decline whatever their share, the error
+       threshold. The breeding value turns the additive part into an equality: the spread of the best additive
+       predictor is its covariation with offspring number, so Fisher's theorem is Price's equation read on that
+       predictor, and an interacting offspring number leaves a part no combination carries. And dependences formed by
+       descent are drawing become depending: what a giver drew on without depending on it is where its descendant's
+       new dependence comes from. Next: mutation both ways and with drift; selection in sampled generations; why
+       drawing becomes depending.
+```
+
+The kit is [`development/ev13-ev16-draw-mutation-breeding-forming/`](development/ev13-ev16-draw-mutation-breeding-forming/): the modules as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev13.txt`), records (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Harmonic potential.** With `d_j = b^j a^(M−j)` for `j ≤ M` and nothing beyond, `a·d_{j+1} = b·d_j` for `j < M`; for `0 < i ≤ M`, `a·h(i+1) + b·h(i−1) = a·h(i) + a·d_i + b·h(i−1) = a·h(i) + b·d_{i−1} + b·h(i−1) = (a+b)·h(i)`.
+- **Bounds.** `h(N)·[N ≤ j] ≤ h(j)` and `h(j) ≤ h(N)·([N ≤ j] + [0 < j < N])` (the potential stays at `h(N)` beyond the top and is `0` at `0`), read through `value_le` and `value_potential`.
+- **Vanishing.** From a mixed `j`, `M + 1` steps up reach and stay at the top with weight at least `a^{M+1}`; the partition of every history into fixed, lost and varied gives `V(M+1, j) + a^{M+1} ≤ (a+b)^{M+1}`; composition (`value_comp`) gives `V((M+1)(m+1), i) ≤ r·V((M+1)m, i)`.
+- **Against the starting share.** With steps not growing, `h(i+t) ≤ h(i) + t·d_i` and `i·d_i ≤ h(i)`, so `i·h(i+t) ≤ (i+t)·h(i)`; with `b < a`, `d_1 < d_0`, and `h(j+1) ≥ d_0 + j·d_{j+1} > (j+1)·d_{j+1}`.
+- **Mutation.** `c'·(c+d) + c·(c m + d w) = c·(c' + d') + c·(d k)` with `c' = c k`, `d' = c m + d w`; the next generation's two sides share `c k m`, and differ by `w` times this generation's.
+- **Breeding value.** The counted covariance as a difference pair (`Integers.Same`) is linear in the amount; with `g` a two-sided combination, `Cov(·, g)` is the coefficients' combination of `Cov(·, z)`, and the normal equations turn `Cov(g, g)` into `d · Cov(w, g)`. Counted Cauchy–Schwarz (`additive_le`) then gives `Var(g)² ≤ d²·Var(w)·Var(g)`.
+- **Forming.** At a descent with the descendant depending on `c`, inheritance is the giver's holding and forming anew its not holding; the reading of drawing makes drawing necessary, which removes the case of neither.
+
+**Self-review.** Both are known: the Moran fixation probability with selection, `(1 − (b/a)^i)/(1 − (b/a)^N)` (Moran 1958; the harmonic-function argument is standard for birth–death chains), and mutation–selection balance with the error threshold (Haldane 1927; Eigen 1971), all from memory and not reread. What is stated here is each in counts, axiom-free: the fixation share as a limit of weighted histories with explicit bounds (the potential's ratio is the Moran formula with denominators cleared), and the balance read as Price's balance, so mutation is the transmission term the selection term's course already carries. The replacement chain reads only the steps that change the count; that the common factor `i·(N−i)` drops is stated, not proved from a fuller one-birth-one-death chain. Wright–Fisher with selection and mutation with drift stay open. The breeding value and Fisher's fundamental theorem with breeding values are standard (Fisher 1930; Price 1972 read it through the covariance), here in counts with the normal equations as a premise. The forming law is short once the cases are set out; its content is the split of the reading of drawing into passing on what is drawn and forming from drawing. EV15 and EV16 were proved by subagents of this session from a written specification, then reviewed and rebuilt here.

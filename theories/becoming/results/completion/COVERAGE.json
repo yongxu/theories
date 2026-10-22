@@ -416,6 +416,9 @@
         "selection-term-over-generations",
         "what-bounds-offspring-numbers",
         "additive-part-of-offspring-variance",
+        "mutation-and-the-balance-it-sets",
+        "the-breeding-value",
+        "dependence-formed-from-drawing",
         "selection-within-and-among-groups",
         "selection-among-groups-by-ending",
         "groups-whose-conditions-are-coupled",
@@ -425,6 +428,7 @@
         "selection-with-returns-to-groupmates",
         "drift-offspring-sampled",
         "fixation-by-drift",
+        "fixation-with-selection",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [

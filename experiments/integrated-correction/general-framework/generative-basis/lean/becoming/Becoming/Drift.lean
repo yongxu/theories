@@ -54,13 +54,38 @@ it; the `(p + q) ^ n` ways of drawing `n` times are all counted (`Typicality.tot
   Hence the histories fixing the first kind weigh, times `N`, at most `h · (N ^ N) ^ k` and with
   `N · r ^ k` at least that (`fixation`): their share tends to `h / N`, the neutral fixation
   probability. Witness: two members, one of each kind, one generation (`TwoMembers.one_generation`).
+* **Selection in the draw: fixation leaves the starting share.** Among `M + 1` members, replace
+  one at a time, reading only the steps that change the count: from a mixed population the count
+  of the first kind goes up with weight `a` and down with weight `b` (in the one-birth-one-death
+  chain both carry the factor `i · (M + 1 - i)` of the pairs that can change it, which drops from
+  the ratio), and a population of one kind stays (`Replacement.value`, its histories counted
+  step by step; composed, `Replacement.value_comp`). The potential with steps `b ^ j · a ^ (M - j)`
+  (`Replacement.potential`, `Replacement.rise`) is harmonic for the steps, `a` times a step being
+  `b` times the one below (`Replacement.rise_step`, `Replacement.potential_harmonic`), so it keeps
+  its weighted value over any number of steps (`Replacement.value_potential`). Hence the histories
+  fixing the first kind weigh, times the potential at the top, at most `(a + b) ^ k` times the
+  potential at the start, and with the histories still varied at least that
+  (`Replacement.fixation_bounds`); from a mixed population the histories climbing straight up weigh
+  at least `a ^ (M + 1)` within `M + 1` steps (`Replacement.climbs`), so the varied ones weigh at
+  most `r ^ m` after `m` rounds, with `r + a ^ (M + 1) = (a + b) ^ (M + 1)`
+  (`Replacement.varied_vanishes`): the fixation share tends to the potential at the start over the
+  potential at the top (`Replacement.fixation`), Moran's fixation probability with selection. With
+  `a = b` the potential counts its steps and the share is the starting share
+  (`Replacement.neutral_share`), as for sampled generations; with `b ≤ a` it is at least the
+  starting share (`Replacement.favoured_share`), and with `b < a` strictly above it from every
+  mixed start (`Replacement.favoured_share_above`). The favoured kind is never sure: from `i` the
+  histories losing it weigh at least `b ^ i` times every later history
+  (`Replacement.lost_ge`). Witness: two members, up two and down one, fixing the first kind with
+  share two of three (`Favoured.two_members`).
 
 Nothing here says which sampling happens: counting weighs the samplings, and as
 `Becoming.Typicality` states, no record shows that the course that happens is among the many.
 Drift is read as a count of the ways a sample can differ from its list, not as a chance supposed
 of the unfolding. Modelling choices: two kinds; draws with replacement from the listed offspring,
 each counted once (the Wright–Fisher sampling); over many generations a constant population size
-and no selection or mutation in the draw; natural-number counts; discrete generations. No
+and no selection or mutation in the draw; for selection in the draw, replacement one at a time
+with constant natural-number weights `a` and `b` for the kinds (only the steps that change the
+count read) and no mutation; natural-number counts; discrete generations. No
 ethical predicate, ranking or axiom occurs; every declaration has an empty axiom report.
 -/
 
@@ -599,6 +624,415 @@ theorem fixation {N r : Nat} (two : r + 2 = N ^ N) (k h : Nat) (within : h ≤ N
       (Nat.le_trans (Nat.le_of_eq ((sampled_add N _ _ k h).trans (by rw [sampled_mul, sampled_mul])))
         (Nat.add_le_add_left (Nat.mul_le_mul_left N (varied_vanishes two k h within)) _)))⟩
 
+/-! ## Selection in the draw -/
+
+namespace Replacement
+
+/-- Both kinds present among `M + 1` members. -/
+def Mixed (M i : Nat) : Prop := 0 < i ∧ i < M + 1
+
+instance (M i : Nat) : Decidable (Mixed M i) := inferInstanceAs (Decidable (0 < i ∧ i < M + 1))
+
+/-- **Replacement one at a time.** Among `M + 1` members, `i` of the first kind: from a mixed
+population a step moves the count up with weight `a` (a member of the first kind replaces one of
+the second) and down with weight `b`; a population of one kind stays, with weight `a + b`.
+`value M a b f k i` totals a reading `f` of the count after `k` steps from `i`, each history
+weighed by its steps. -/
+def value (M a b : Nat) (f : Nat → Nat) : Nat → Nat → Nat
+  | 0, i => f i
+  | k + 1, i => if Mixed M i then a * value M a b f k (i + 1) + b * value M a b f k (i - 1)
+      else (a + b) * value M a b f k i
+
+variable {M a b : Nat}
+
+theorem value_mixed (f : Nat → Nat) (k : Nat) {i : Nat} (mixed : Mixed M i) :
+    value M a b f (k + 1) i = a * value M a b f k (i + 1) + b * value M a b f k (i - 1) :=
+  if_pos mixed
+
+theorem value_one_kind (f : Nat → Nat) (k : Nat) {i : Nat} (one : ¬ Mixed M i) :
+    value M a b f (k + 1) i = (a + b) * value M a b f k i :=
+  if_neg one
+
+/-- A population of one kind stays: its total is `(a + b) ^ k` times the reading. -/
+theorem value_stays (f : Nat → Nat) {i : Nat} (one : ¬ Mixed M i) :
+    ∀ k, value M a b f k i = (a + b) ^ k * f i
+  | 0 => (Nat.one_mul _).symm
+  | k + 1 => (value_one_kind f k one).trans ((congrArg ((a + b) * ·) (value_stays f one k)).trans
+      ((mul_assoc_nat _ _ _).symm.trans (congrArg (· * f i) (Nat.mul_comm _ _))))
+
+theorem value_add (f g : Nat → Nat) :
+    ∀ k i, value M a b (fun j => f j + g j) k i = value M a b f k i + value M a b g k i
+  | 0, _ => rfl
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, value_mixed _ k mixed, value_mixed _ k mixed, value_add f g k (i + 1),
+        value_add f g k (i - 1), Nat.left_distrib, Nat.left_distrib, Nat.add_add_add_comm]
+    else by
+      rw [value_one_kind _ k mixed, value_one_kind _ k mixed, value_one_kind _ k mixed, value_add f g k i,
+        Nat.left_distrib]
+
+theorem value_mul (c : Nat) (f : Nat → Nat) :
+    ∀ k i, value M a b (fun j => c * f j) k i = c * value M a b f k i
+  | 0, _ => rfl
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, value_mixed _ k mixed, value_mul c f k (i + 1), value_mul c f k (i - 1),
+        mul_turn a c, mul_turn b c, ← Nat.left_distrib]
+    else by
+      rw [value_one_kind _ k mixed, value_one_kind _ k mixed, value_mul c f k i, mul_turn]
+
+theorem value_le {f g : Nat → Nat} (le : ∀ j, f j ≤ g j) :
+    ∀ k i, value M a b f k i ≤ value M a b g k i
+  | 0, i => le i
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, value_mixed _ k mixed]
+      exact Nat.add_le_add (Nat.mul_le_mul_left _ (value_le le k (i + 1)))
+        (Nat.mul_le_mul_left _ (value_le le k (i - 1)))
+    else by
+      rw [value_one_kind _ k mixed, value_one_kind _ k mixed]
+      exact Nat.mul_le_mul_left _ (value_le le k i)
+
+/-- Every history weighs its steps: a constant reading totals `(a + b) ^ k` times itself. -/
+theorem value_const (c : Nat) : ∀ k i, value M a b (fun _ => c) k i = (a + b) ^ k * c
+  | 0, _ => (Nat.one_mul c).symm
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, value_const c k (i + 1), value_const c k (i - 1), ← add_mul_split,
+        ← mul_assoc_nat, Nat.mul_comm (a + b), Nat.pow_succ]
+    else by
+      rw [value_one_kind _ k mixed, value_const c k i, ← mul_assoc_nat, Nat.mul_comm (a + b), Nat.pow_succ]
+
+/-- Histories compose: `n` more steps after `k` read the total of the last `n` as the reading. -/
+theorem value_comp (f : Nat → Nat) (n : Nat) :
+    ∀ k i, value M a b f (n + k) i = value M a b (value M a b f n) k i
+  | 0, _ => rfl
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      show value M a b f (n + k + 1) i = _
+      rw [value_mixed _ _ mixed, value_mixed _ _ mixed, value_comp f n k (i + 1), value_comp f n k (i - 1)]
+    else by
+      show value M a b f (n + k + 1) i = _
+      rw [value_one_kind _ _ mixed, value_one_kind _ _ mixed, value_comp f n k i]
+
+/-! ### The potential -/
+
+/-- The steps of the potential: `b ^ j · a ^ (M - j)` up to the top, nothing beyond. -/
+def rise (M a b j : Nat) : Nat := if j ≤ M then b ^ j * a ^ (M - j) else 0
+
+/-- The potential: the steps below a count, totalled. -/
+def potential (M a b : Nat) : Nat → Nat
+  | 0 => 0
+  | j + 1 => potential M a b j + rise M a b j
+
+/-- Each step up weighs `a` against each step down `b`: `a` times a step is `b` times the one
+below it. -/
+theorem rise_step {j : Nat} (below : j < M) : a * rise M a b (j + 1) = b * rise M a b j := by
+  have le1 : j + 1 ≤ M := below
+  have le0 : j ≤ M := Nat.le_of_lt below
+  obtain ⟨t, top⟩ := le_dest le1
+  have e1 : M - (j + 1) = t := by rw [top]; exact Naturals.add_sub_cancel_left (j + 1) t
+  have e0 : M - j = t + 1 := by
+    rw [top, Nat.add_assoc, Nat.add_comm 1 t]; exact Naturals.add_sub_cancel_left j (t + 1)
+  show a * (if j + 1 ≤ M then b ^ (j + 1) * a ^ (M - (j + 1)) else 0) =
+    b * (if j ≤ M then b ^ j * a ^ (M - j) else 0)
+  rw [if_pos le1, if_pos le0, e1, e0, Nat.pow_succ, Nat.pow_succ, mul_turn a, Nat.mul_comm (a ^ t) a,
+    mul_assoc_nat (b ^ j) b, Nat.mul_comm b (a * a ^ t), ← mul_assoc_nat (b ^ j) (a * a ^ t) b, Nat.mul_comm _ b]
+
+/-- The potential is harmonic for the steps: from a mixed count, `a` times the potential above
+with `b` times the one below is `a + b` times its own. -/
+theorem potential_harmonic {i : Nat} (mixed : Mixed M i) :
+    a * potential M a b (i + 1) + b * potential M a b (i - 1) = (a + b) * potential M a b i :=
+  match i, mixed with
+  | j + 1, ⟨_, lt⟩ => by
+    show a * (potential M a b j + rise M a b j + rise M a b (j + 1)) + b * potential M a b j =
+      (a + b) * (potential M a b j + rise M a b j)
+    rw [Nat.left_distrib a, rise_step (Nat.lt_of_succ_lt_succ lt), add_mul_split, Nat.left_distrib b,
+      Nat.add_right_comm (a * (potential M a b j + rise M a b j)), Nat.add_assoc]
+
+/-- So the potential keeps its weighted value over any number of steps. -/
+theorem value_potential : ∀ k i, value M a b (potential M a b) k i = (a + b) ^ k * potential M a b i
+  | 0, _ => (Nat.one_mul _).symm
+  | k + 1, i =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, value_potential k (i + 1), value_potential k (i - 1), mul_turn a,
+        mul_turn b, ← Nat.left_distrib, potential_harmonic mixed, Nat.pow_succ, mul_assoc_nat]
+    else by
+      rw [value_one_kind _ k mixed, value_potential k i, Nat.pow_succ, mul_assoc_nat, mul_turn]
+
+theorem potential_le_succ (j : Nat) : potential M a b j ≤ potential M a b (j + 1) :=
+  Nat.le_add_right _ _
+
+theorem potential_mono {i : Nat} : ∀ {j}, i ≤ j → potential M a b i ≤ potential M a b j
+  | _, .refl => Nat.le_refl _
+  | _ + 1, .step le => Nat.le_trans (potential_mono le) (potential_le_succ _)
+
+/-- Beyond the top the potential stays. -/
+theorem potential_beyond : ∀ t, potential M a b (M + 1 + t) = potential M a b (M + 1)
+  | 0 => rfl
+  | t + 1 => by
+    show potential M a b (M + 1 + t) + rise M a b (M + 1 + t) = _
+    have beyond : ¬ M + 1 + t ≤ M := fun le =>
+      Nat.lt_irrefl M (Nat.lt_of_lt_of_le (Nat.lt_of_lt_of_le (Nat.lt_succ_self M) (Nat.le_add_right _ t)) le)
+    show _ + (if M + 1 + t ≤ M then _ else 0) = _
+    rw [if_neg beyond, Nat.add_zero, potential_beyond t]
+
+theorem potential_le_top (j : Nat) : potential M a b j ≤ potential M a b (M + 1) :=
+  match Nat.le_total j (M + 1) with
+  | .inl le => potential_mono le
+  | .inr ge => match le_dest ge with
+    | ⟨t, same⟩ => Nat.le_of_eq (same ▸ potential_beyond t)
+
+/-! ### Fixation with selection -/
+
+/-- Fixed: every member of the first kind. -/
+def fixed (M i : Nat) : Nat := if M + 1 ≤ i then 1 else 0
+
+/-- Lost: none of the first kind. -/
+def lost (i : Nat) : Nat := if i = 0 then 1 else 0
+
+/-- Still varied. -/
+def varied (M i : Nat) : Nat := if Mixed M i then 1 else 0
+
+theorem partition (M i : Nat) : fixed M i + lost i + varied M i = 1 :=
+  if z : i = 0 then by
+    show (if M + 1 ≤ i then 1 else 0) + (if i = 0 then 1 else 0) + (if Mixed M i then 1 else 0) = 1
+    rw [if_pos z, z, if_neg (fun le => Nat.not_succ_le_zero M le),
+      if_neg (fun m : Mixed M 0 => Nat.lt_irrefl 0 m.1)]
+  else if top : M + 1 ≤ i then by
+    show (if M + 1 ≤ i then 1 else 0) + (if i = 0 then 1 else 0) + (if Mixed M i then 1 else 0) = 1
+    rw [if_pos top, if_neg z, if_neg (fun m : Mixed M i => Nat.lt_irrefl i (Nat.lt_of_lt_of_le m.2 top))]
+  else by
+    show (if M + 1 ≤ i then 1 else 0) + (if i = 0 then 1 else 0) + (if Mixed M i then 1 else 0) = 1
+    rw [if_neg top, if_neg z, if_pos ⟨Nat.pos_of_ne_zero z, Nat.lt_of_not_le top⟩]
+
+theorem value_congr {f g : Nat → Nat} (same : ∀ j, f j = g j) (k i : Nat) :
+    value M a b f k i = value M a b g k i :=
+  Nat.le_antisymm (value_le (fun j => Nat.le_of_eq (same j)) k i)
+    (value_le (fun j => Nat.le_of_eq (same j).symm) k i)
+
+/-- Every history ends fixed, lost or varied: their totals add up to the whole weight. -/
+theorem value_partition (k i : Nat) :
+    value M a b (fixed M) k i + value M a b lost k i + value M a b (varied M) k i = (a + b) ^ k :=
+  (congrArg (· + value M a b (varied M) k i) (value_add (fixed M) lost k i).symm).trans
+    ((value_add (fun j => fixed M j + lost j) (varied M) k i).symm.trans
+      ((value_congr (fun j => partition M j) k i).trans ((value_const 1 k i).trans (Nat.mul_one _))))
+
+theorem fixed_below (j : Nat) : potential M a b (M + 1) * fixed M j ≤ potential M a b j :=
+  if top : M + 1 ≤ j then by
+    show _ * (if M + 1 ≤ j then 1 else 0) ≤ _
+    rw [if_pos top, Nat.mul_one]; exact potential_mono top
+  else by
+    show _ * (if M + 1 ≤ j then 1 else 0) ≤ _
+    rw [if_neg top, Nat.mul_zero]; exact Nat.zero_le _
+
+theorem potential_within (j : Nat) :
+    potential M a b j ≤ potential M a b (M + 1) * fixed M j + potential M a b (M + 1) * varied M j :=
+  if z : j = 0 then by rw [z]; exact Nat.zero_le _
+  else if top : M + 1 ≤ j then by
+    show _ ≤ _ * (if M + 1 ≤ j then 1 else 0) + _
+    rw [if_pos top, Nat.mul_one]; exact Nat.le_trans (potential_le_top j) (Nat.le_add_right _ _)
+  else by
+    show _ ≤ _ + _ * (if Mixed M j then 1 else 0)
+    rw [if_pos ⟨Nat.pos_of_ne_zero z, Nat.lt_of_not_le top⟩, Nat.mul_one]
+    exact Nat.le_trans (potential_le_top j) (Nat.le_add_left _ _)
+
+/-- **Where fixation stands.** Over `k` steps from `i`, the histories fixing the first kind weigh,
+times the potential at the top, at most `(a + b) ^ k` times the potential at `i`, and with the
+histories still varied, at least that. -/
+theorem fixation_bounds (k i : Nat) :
+    potential M a b (M + 1) * value M a b (fixed M) k i ≤ (a + b) ^ k * potential M a b i ∧
+      (a + b) ^ k * potential M a b i ≤
+        potential M a b (M + 1) * value M a b (fixed M) k i +
+          potential M a b (M + 1) * value M a b (varied M) k i :=
+  ⟨Nat.le_trans (Nat.le_of_eq (value_mul _ _ k i).symm)
+      (Nat.le_trans (value_le fixed_below k i) (Nat.le_of_eq (value_potential k i))),
+    Nat.le_trans (Nat.le_of_eq (value_potential k i).symm) (Nat.le_trans (value_le potential_within k i)
+      (Nat.le_of_eq ((value_add _ _ k i).trans (by rw [value_mul, value_mul]))))⟩
+
+/-- Climbing: from a member of the first kind, within reach of the top in `k` steps, the
+histories fixing it weigh at least `a ^ k`. -/
+theorem climbs : ∀ k i, 0 < i → M + 1 ≤ i + k → a ^ k ≤ value M a b (fixed M) k i
+  | 0, i, _, reach => by
+    show 1 ≤ (if M + 1 ≤ i then 1 else 0)
+    rw [if_pos (show M + 1 ≤ i from reach)]; exact Nat.le_refl 1
+  | k + 1, i, pos, reach =>
+    if mixed : Mixed M i then by
+      rw [value_mixed _ k mixed, Nat.pow_succ, Nat.mul_comm (a ^ k)]
+      exact Nat.le_trans (Nat.mul_le_mul_left a (climbs k (i + 1) (Nat.succ_pos i)
+        (Nat.le_trans reach (Nat.le_of_eq (Nat.succ_add i k).symm)))) (Nat.le_add_right _ _)
+    else by
+      have top : M + 1 ≤ i := Nat.le_of_not_lt fun lt => mixed ⟨pos, lt⟩
+      rw [value_one_kind _ k mixed, Nat.pow_succ, Nat.mul_comm (a ^ k)]
+      exact Nat.mul_le_mul (Nat.le_add_right a b)
+        (climbs k i pos (Nat.le_trans top (Nat.le_add_right i k)))
+
+/-- From a varied population, in `M + 1` steps, the histories still varied weigh at most
+`(a + b) ^ (M + 1)` less `a ^ (M + 1)`; from one of one kind, none. -/
+theorem varied_step (j : Nat) :
+    value M a b (varied M) (M + 1) j + a ^ (M + 1) * varied M j ≤ (a + b) ^ (M + 1) * varied M j :=
+  if mixed : Mixed M j then by
+    have one : varied M j = 1 := if_pos mixed
+    have up := climbs (M := M) (a := a) (b := b) (M + 1) j mixed.1 (Nat.le_add_left _ _)
+    rw [one, Nat.mul_one, Nat.mul_one, ← value_partition (M := M) (a := a) (b := b) (M + 1) j,
+      Nat.add_comm (value M a b (varied M) (M + 1) j)]
+    exact Nat.add_le_add_right (Nat.le_trans up (Nat.le_add_right _ _)) _
+  else by
+    have zero : varied M j = 0 := if_neg mixed
+    rw [value_stays _ mixed, zero, Nat.mul_zero, Nat.mul_zero]
+    exact Nat.le_refl 0
+
+/-- **Selection in the draw ends variation.** With `r + a ^ (M + 1) = (a + b) ^ (M + 1)`, the
+histories still varied after `m` rounds of `M + 1` steps weigh at most `r ^ m`: out of
+`(a + b) ^ ((M + 1) · m)`, a share falling geometrically where `a` is positive. -/
+theorem varied_vanishes {r : Nat} (split : r + a ^ (M + 1) = (a + b) ^ (M + 1)) :
+    ∀ m i, value M a b (varied M) ((M + 1) * m) i ≤ r ^ m
+  | 0, i => by
+    show (if Mixed M i then 1 else 0) ≤ 1
+    exact if mixed : Mixed M i then by rw [if_pos mixed]; exact Nat.le_refl 1
+      else by rw [if_neg mixed]; exact Nat.zero_le 1
+  | m + 1, i => by
+    have each : ∀ j, value M a b (varied M) (M + 1) j ≤ r * varied M j := fun j =>
+      Naturals.le_of_add_le_add_right (k := a ^ (M + 1) * varied M j) (Nat.le_trans (varied_step j)
+        (Nat.le_of_eq ((congrArg (· * varied M j) split.symm).trans (add_mul_split _ _ _))))
+    rw [Nat.mul_succ, Nat.add_comm, value_comp]
+    exact Nat.le_trans (value_le each _ i) (Nat.le_trans (Nat.le_of_eq (value_mul r (varied M) _ i))
+      (Nat.le_trans (Nat.mul_le_mul_left r (varied_vanishes split m i))
+        (Nat.le_of_eq (Nat.mul_comm r (r ^ m)))))
+
+/-- **Fixation with selection in the draw.** Over `m` rounds of `M + 1` steps from `i`, the histories
+fixing the first kind weigh, times the potential at the top, at most `(a + b) ^ ((M + 1) · m)`
+times the potential at `i`, and with the potential at the top times `r ^ m`, at least that: their
+share tends to the potential at `i` over the potential at the top. -/
+theorem fixation {r : Nat} (split : r + a ^ (M + 1) = (a + b) ^ (M + 1)) (m i : Nat) :
+    potential M a b (M + 1) * value M a b (fixed M) ((M + 1) * m) i ≤
+        (a + b) ^ ((M + 1) * m) * potential M a b i ∧
+      (a + b) ^ ((M + 1) * m) * potential M a b i ≤
+        potential M a b (M + 1) * value M a b (fixed M) ((M + 1) * m) i +
+          potential M a b (M + 1) * r ^ m :=
+  ⟨(fixation_bounds _ i).1, Nat.le_trans (fixation_bounds _ i).2
+    (Nat.add_le_add_left (Nat.mul_le_mul_left _ (varied_vanishes split m i)) _)⟩
+
+/-! ### Where fixation stands against the starting share -/
+
+/-- Without selection in the draw (`a = b`) each step of the potential is the same. -/
+theorem rise_neutral {j : Nat} (le : j ≤ M) : rise M a a j = a ^ M := by
+  obtain ⟨t, top⟩ := le_dest le
+  show (if j ≤ M then a ^ j * a ^ (M - j) else 0) = a ^ M
+  rw [if_pos le, top, Naturals.add_sub_cancel_left, ← Naturals.pow_add]
+
+/-- So the potential below the top counts its steps: `i` times `a ^ M`. -/
+theorem potential_neutral : ∀ i, i ≤ M + 1 → potential M a a i = i * a ^ M
+  | 0, _ => (Nat.zero_mul _).symm
+  | i + 1, le => by
+    show potential M a a i + rise M a a i = (i + 1) * a ^ M
+    rw [potential_neutral i (Nat.le_of_succ_le le), rise_neutral (Nat.le_of_succ_le_succ le), Nat.succ_mul]
+
+/-- Where the first kind is favoured or alike (`b ≤ a`, `a` positive), the steps do not grow. -/
+theorem rise_antitone (pos : 0 < a) (favoured : b ≤ a) (j : Nat) :
+    rise M a b (j + 1) ≤ rise M a b j :=
+  if below : j < M then
+    SelectionTerm.le_of_mul_le_mul pos (Nat.le_trans (Nat.le_of_eq (rise_step below))
+      (Nat.mul_le_mul_right _ favoured))
+  else by
+    show (if j + 1 ≤ M then _ else 0) ≤ _
+    rw [if_neg (show ¬ (j + 1 ≤ M) from below)]; exact Nat.zero_le _
+
+theorem rise_antitone_le (pos : 0 < a) (favoured : b ≤ a) {i : Nat} :
+    ∀ {j}, i ≤ j → rise M a b j ≤ rise M a b i
+  | _, .refl => Nat.le_refl _
+  | _ + 1, .step le => Nat.le_trans (rise_antitone pos favoured _) (rise_antitone_le pos favoured le)
+
+/-- With steps that do not grow, the potential rises from `i` over `t` more counts by at most `t`
+of the step at `i`. -/
+theorem potential_above (pos : 0 < a) (favoured : b ≤ a) (i : Nat) :
+    ∀ t, potential M a b (i + t) ≤ potential M a b i + t * rise M a b i
+  | 0 => Nat.le_of_eq (by rw [Nat.zero_mul]; rfl)
+  | t + 1 => by
+    show potential M a b (i + t) + rise M a b (i + t) ≤ _
+    rw [Nat.succ_mul, ← Nat.add_assoc]
+    exact Nat.add_le_add (potential_above pos favoured i t)
+      (rise_antitone_le pos favoured (Nat.le_add_right i t))
+
+/-- And from `s`, over `j` more counts, by at least `j` of the step at `s + j`. -/
+theorem potential_from (pos : 0 < a) (favoured : b ≤ a) (s : Nat) :
+    ∀ j, potential M a b s + j * rise M a b (s + j) ≤ potential M a b (s + j)
+  | 0 => Nat.le_of_eq (by rw [Nat.zero_mul]; rfl)
+  | j + 1 => by
+    show _ ≤ potential M a b (s + j) + rise M a b (s + j)
+    rw [Nat.succ_mul, ← Nat.add_assoc]
+    exact Nat.add_le_add (Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul_left j
+      (rise_antitone pos favoured (s + j))) _) (potential_from pos favoured s j))
+      (rise_antitone pos favoured (s + j))
+
+/-- **The favoured kind fixes with at least its starting share.** Where `b ≤ a` and `a` is
+positive, `i` times the potential at the top is at most `M + 1` times the potential at `i`: the
+fixation share is at least `i / (M + 1)`, with equality where `a = b`. -/
+theorem favoured_share (pos : 0 < a) (favoured : b ≤ a) {i t : Nat} (top : i + t = M + 1) :
+    i * potential M a b (M + 1) ≤ (M + 1) * potential M a b i := by
+  have below := potential_from (M := M) pos favoured 0 i
+  rw [Nat.zero_add] at below
+  have lower : i * rise M a b i ≤ potential M a b i :=
+    Nat.le_trans (Nat.le_add_left _ _) below
+  rw [← top]
+  exact Nat.le_trans (Nat.mul_le_mul_left i (potential_above pos favoured i t))
+    (Nat.le_trans (Nat.le_of_eq (by rw [Nat.left_distrib, mul_turn i t]))
+      (Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul_left t lower) _)
+        (Nat.le_of_eq (add_mul_split i t _).symm)))
+
+/-- Without selection in the draw the fixation share is the starting share. -/
+theorem neutral_share {i : Nat} (le : i ≤ M + 1) :
+    i * potential M a a (M + 1) = (M + 1) * potential M a a i := by
+  rw [potential_neutral (M + 1) (Nat.le_refl _), potential_neutral i le, mul_turn i (M + 1)]
+
+/-- **And strictly above it where it is favoured.** Where `b < a`, from a mixed start `i` of
+`M + 1`, `i` times the potential at the top is below `M + 1` times the potential at `i`. -/
+theorem favoured_share_above (favoured : b < a) {i t : Nat} (start : 0 < i) (rest : 0 < t)
+    (top : i + t = M + 1) :
+    i * potential M a b (M + 1) < (M + 1) * potential M a b i := by
+  have pos : 0 < a := Nat.lt_of_le_of_lt (Nat.zero_le b) favoured
+  have le := Nat.le_of_lt favoured
+  obtain ⟨j, rfl⟩ : ∃ j, i = j + 1 := ⟨i - 1, (Nat.succ_pred_eq_of_pos start).symm⟩
+  have one_le : 1 ≤ M := Nat.le_of_succ_le_succ (Nat.le_trans (Nat.add_le_add (Nat.le_add_left 1 j) rest)
+    (Nat.le_of_eq top))
+  have r0 : rise M a b 0 = a ^ M := by
+    show (if 0 ≤ M then b ^ 0 * a ^ (M - 0) else 0) = a ^ M
+    rw [if_pos (Nat.zero_le M), Nat.pow_zero, Nat.one_mul, Nat.sub_zero]
+  have r0pos : 0 < rise M a b 0 := r0 ▸ one_le_pow pos M
+  have r1 : rise M a b 1 < rise M a b 0 :=
+    SelectionTerm.lt_of_mul_lt_mul (Nat.lt_of_le_of_lt (Nat.le_of_eq (rise_step (Nat.lt_of_lt_of_le Nat.zero_lt_one one_le)))
+      (Nat.mul_lt_mul_of_pos_right favoured r0pos))
+  have strict : (j + 1) * rise M a b (j + 1) < potential M a b (j + 1) := by
+    have from1 := potential_from (M := M) pos le 1 j
+    rw [Nat.add_comm 1 j] at from1
+    have p1 : potential M a b 1 = rise M a b 0 := Nat.zero_add _
+    rw [p1] at from1
+    rw [Nat.succ_mul]
+    have h1 : rise M a b (j + 1) ≤ rise M a b 1 := rise_antitone_le pos le (Nat.le_add_left 1 j)
+    exact Nat.lt_of_lt_of_le (Nat.add_lt_add_left (Nat.lt_of_le_of_lt h1 r1) _)
+      (Nat.le_trans (Nat.le_of_eq (Nat.add_comm _ _)) from1)
+  rw [← top]
+  exact Nat.lt_of_le_of_lt (Nat.mul_le_mul_left (j + 1) (potential_above pos le (j + 1) t))
+    (Nat.lt_of_lt_of_le (by
+      rw [Nat.left_distrib, mul_turn (j + 1) t]
+      exact Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_left strict rest) _)
+      (Nat.le_of_eq (add_mul_split (j + 1) t _).symm))
+
+/-- **Never ruled out.** From `i` mixed or none, the histories losing the favoured kind weigh at
+least `b ^ i` times every later history: a lineage of `i` steps down. -/
+theorem lost_ge (k : Nat) : ∀ i, i ≤ M → b ^ i * (a + b) ^ k ≤ value M a b lost (k + i) i
+  | 0, _ => Nat.le_of_eq (by
+      rw [Nat.pow_zero, Nat.one_mul, Nat.add_zero, value_stays lost (fun m : Mixed M 0 => Nat.lt_irrefl 0 m.1)]
+      show _ = _ * (if 0 = 0 then 1 else 0)
+      rw [if_pos rfl, Nat.mul_one])
+  | i + 1, le => by
+    have mixed : Mixed M (i + 1) := ⟨Nat.succ_pos i, Nat.succ_lt_succ le⟩
+    show _ ≤ value M a b lost (k + i + 1) (i + 1)
+    rw [value_mixed _ _ mixed, Nat.pow_succ, Nat.mul_comm (b ^ i) b, mul_assoc_nat]
+    exact Nat.le_trans (Nat.mul_le_mul_left b (lost_ge k i (Nat.le_of_succ_le le))) (Nat.le_add_left _ _)
+
+end Replacement
+
 /-! ## Witness -/
 
 namespace OneDraw
@@ -623,6 +1057,20 @@ theorem one_generation :
   ⟨rfl, rfl, rfl, rfl⟩
 
 end TwoMembers
+
+namespace Favoured
+
+/-- Two members, one of each kind, each step up weighing two and each down one: the potential is two
+at one and three at the top, so the first kind fixes with share two of three, above its starting
+share of a half; over one round of two steps the histories fixing it weigh six of nine and none
+stays varied. -/
+theorem two_members :
+    Replacement.potential 1 2 1 1 = 2 ∧ Replacement.potential 1 2 1 2 = 3 ∧
+      Replacement.value 1 2 1 (Replacement.fixed 1) 2 1 = 6 ∧
+      Replacement.value 1 2 1 (Replacement.varied 1) 2 1 = 0 ∧ 1 * 3 < 2 * 2 :=
+  ⟨rfl, rfl, rfl, rfl, by decide⟩
+
+end Favoured
 
 end Drift
 

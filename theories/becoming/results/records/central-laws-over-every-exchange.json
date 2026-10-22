@@ -293,7 +293,7 @@
     {
       "path": "theories/becoming/results/completion/COVERAGE.json",
       "role": "integration",
-      "sha256": "630cc2564db63ecd2bf041cff997748d281e8d7cab1370dd7dc0053b67e930d1"
+      "sha256": "2ac033b736665e705a8d12566e91740becdcce27300f539ab67e0d40f051643b"
     },
     {
       "path": "tools/research/completion.py",
@@ -313,7 +313,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "e8e675b431353ddbb03bb4208f4f9e2bbdef63fa1a32c8c4a616686ee65e946e"
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
     }
   ],
   "proof_bindings": [

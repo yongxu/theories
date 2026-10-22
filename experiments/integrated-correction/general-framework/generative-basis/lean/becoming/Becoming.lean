@@ -508,7 +508,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.Weighted` (L1): Weighted histories and their losses (P82). Given weights with their laws and finite lists of moves and configurations, the sum of histories over a finite horizon is exactly stepwise transfer (`Weights.sum_courses`). Possibility is the core's trace relation, and counting preserves possibility. For a description with representatives, exact preservation at every horizon is exactly one-step lumpability (`Weights.lumped_iff`); truncation, cancellation, unkept memory and loops have explicit boundary witnesses.
 * `Becoming.Transmission` (L1): The exact conditions and boundary of transmission (P84). Transmission is exactly inheritance with a need bound (`Flow.transmitsWithin_iff`); where no dependence was held before, inheritance is the forming law, while the general forming/holding split uses decidedness. Dropping one dependence of a giver keeps the other premises and breaks binding transmission (`World.drop_but`). Under the named finite, balance, dissipation, embodiment and support conditions, a reading of drawing together with drawing being depending derives transmission (`World.transmitting_of_drawn`).
   A dependence forms anew exactly where the descendant depends on what its giver did not draw on;
-  the reading of drawing is inheritance with the givers drawing what they pass on.
+  the reading of drawing is inheritance with the givers drawing what they pass on. Where depending
+  and drawing part at the giver, its holding alone decides inheritance against forming anew, and
+  under the reading of drawing a dependence forms anew exactly where the giver drew on what it did
+  not depend on: a dependence formed by descent is a giver's drawing become its descendant's
+  dependence; in a balanced flow nothing comes to depend on what no participant drew on.
 * `Becoming.Succession` (L1): Fed without any source recurring (P85). `Successive.relay` gives a balanced, dissipative flow in which only active formations give, the pool is fed at every step, and each source participates and is active at its own step only. Continuing to be fed needs no source formation to recur. This advances continuing-self-fed-from-beyond and is not a separate result.
 * `Becoming.Attraction` (L1): for every determined law, with no premise, a configuration is
   drawn into an absorbing region exactly where it does not return, and what is drawn in never
@@ -751,6 +755,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   differences of offspring numbers over pairs times those of the amount (the additive variance at
   most the whole, all of it where the amount is offspring number itself); with exact
   transmission the rise of the amount's mean, cross-multiplied and squared, is at most that.
+  Mutation: carriers leaving k carrying offspring and m not, others w: the carriers' share rises
+  exactly where d · k exceeds c · m + d · w, never where k ≤ w (the error threshold), is kept at
+  s / (s + m) where k = w + s and is approached without overshoot; read as generations, the step
+  is balanced exactly there, transmission lowering c · m. The breeding value: an amount combining
+  carried amounts that reproduces, d times, offspring number's covariation with each (the normal
+  equations cleared of denominators) has d times its covariation with offspring number equal to
+  its own spread, at most d² times offspring number's (the additive part at most the whole), and
+  with exact transmission the cross-multiplied rise of its mean, d times, is that spread: Fisher's
+  fundamental theorem with breeding values, one carried amount its case.
 * `Becoming.SelectionLevels` (L1): selection within groups and among them, the multilevel form
   of Price's equation (no premise beyond groups of equal size). Over a family listed as k groups
   of m members, the whole's concordance, with k times the groups' own discordance and the
@@ -816,8 +829,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   population of N, the final count summed over the histories is its start times the whole
   weight, the ends absorb, the histories still varied after k generations weigh at most r^k with
   r + 2 = N^N, and the histories fixing the first kind weigh, times N, within N · r^k of h times
-  the whole weight: drift ends variation and fixes each kind with its starting share h/N.
-  Witnesses: one draw falling back with weight two of five; two members over one generation.
+  the whole weight: drift ends variation and fixes each kind with its starting share h/N. With selection in the
+  draw, replacement one at a time (up with weight a, down with b): the potential with steps
+  b^j · a^(M − j) keeps its weighted value, so the fixation share tends to its value at the start
+  over its value at the top, the starting share where a = b and above it where b < a; the
+  favoured kind is lost with weight at least b^i. Witnesses: one draw falling back with weight two
+  of five; two members over one generation; two members fixing the favoured kind two of three.
 * `Becoming.Space` (L1): the whole and its parts, one structure for Ren's proposal (an AI
   reading). The space is every world, a world being relata read with one kind, their flow
   and their web. The laws stated with no premise hold of every world; in a finite world

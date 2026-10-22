@@ -1,0 +1,382 @@
+{
+  "schema_version": 2,
+  "id": "the-breeding-value",
+  "title": {
+    "en": "The breeding value",
+    "zh": "育种值"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "statement": {
+    "en": "An amount combining carried amounts that reproduces offspring number's covariation with each has its covariation with offspring number equal to its own spread, at most the whole; with exact transmission its mean rises by that spread: Fisher's fundamental theorem with breeding values.",
+    "zh": "组合所载之量、与每一量的协变同于后代数的量，其与后代数的协变等于其自身离散，至多为全部；传递精确时其均值以该离散上升：以育种值陈述的 Fisher 基本定理。"
+  },
+  "laws": [
+    {
+      "en": "The counted covariance is linear in the amount: sums, multiples and a common shift, and so any two-sided combination of carried amounts with natural coefficients.",
+      "zh": "计数协方差对该量是线性的：和、倍数与共同平移，故对所载之量以自然数系数的两侧组合亦然。",
+      "declarations": [
+        "Becoming.Reproduction.Breeding.covPair",
+        "Becoming.Reproduction.Breeding.covPair_same",
+        "Becoming.Reproduction.Breeding.covPair_congr",
+        "Becoming.Reproduction.Breeding.covariance_add",
+        "Becoming.Reproduction.Breeding.covPair_add",
+        "Becoming.Reproduction.Breeding.excess_mul",
+        "Becoming.Reproduction.Breeding.concord_mul",
+        "Becoming.Reproduction.Breeding.discord_mul",
+        "Becoming.Reproduction.Breeding.covPair_mul",
+        "Becoming.Reproduction.Breeding.covPair_const",
+        "Becoming.Reproduction.Breeding.combine",
+        "Becoming.Reproduction.Breeding.combined",
+        "Becoming.Reproduction.Breeding.covPair_combine"
+      ]
+    },
+    {
+      "en": "A breeding value, a combination reproducing d times offspring number's covariation with each carried amount, has d times its covariation with offspring number equal to its own spread, at most d squared times offspring number's.",
+      "zh": "育种值，即与每一所载之量的协变为后代数之 d 倍的组合，d 乘其与后代数的协变等于其自身离散，至多为后代数离散的 d 平方倍。",
+      "declarations": [
+        "Becoming.Reproduction.Breeding.Combination",
+        "Becoming.Reproduction.Breeding.Normal",
+        "Becoming.Reproduction.Breeding.covPair_combination",
+        "Becoming.Reproduction.Breeding.combined_normal",
+        "Becoming.Reproduction.Breeding.breeding_balance",
+        "Becoming.Reproduction.Breeding.additive_part_le",
+        "Becoming.Reproduction.Breeding.normal_append",
+        "Becoming.Reproduction.Breeding.one_amount"
+      ]
+    },
+    {
+      "en": "With exact transmission, d times the cross-multiplied rise of its mean is that spread: it never falls and rises exactly where it varies. Fisher's fundamental theorem with breeding values.",
+      "zh": "传递精确时，d 乘其均值交叉相乘的上升即该离散：从不下降，恰在其有差异时上升。以育种值陈述的 Fisher 基本定理。",
+      "declarations": [
+        "Becoming.Reproduction.Breeding.response",
+        "Becoming.Reproduction.Breeding.response_rises_iff"
+      ]
+    },
+    {
+      "en": "Witnesses: offspring number additive in two amounts, the additive part the whole; offspring number their product, a part no combination carries (32 against 48).",
+      "zh": "见证：后代数在两量上可加时，加性部分即全部；后代数为其乘积时，留下任何组合都不携带的部分（32 对 48）。",
+      "declarations": [
+        "Becoming.Reproduction.Additive.normal",
+        "Becoming.Reproduction.Additive.additive",
+        "Becoming.Reproduction.Interaction.normal",
+        "Becoming.Reproduction.Interaction.interaction"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The breeding value is given as a combination with natural coefficients on each side satisfying the normal equations scaled by d; exact transmission for the response.",
+      "zh": "不加公理。育种值作为两侧自然数系数的组合给出，满足乘以 d 的正规方程；响应需传递精确。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the normal equations have such a solution: solving them is given.",
+      "zh": "正规方程有此种解：其求解是给定的。",
+      "kind": "scope"
+    },
+    {
+      "en": "Inexact transmission of the breeding value, where Fisher's environment term enters.",
+      "zh": "育种值不精确的传递，即 Fisher 的环境项进入之处。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a larger additive part is better: the counts read spreads; ranking goes through the comparison C.",
+      "zh": "加性部分更大更好：计数读的是离散；排序经由比较 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "detail": {
+        "en": "Offspring number the product of two amounts: the best combination carries 32 of 48, so the additive part is strictly less than the whole (Interaction.interaction).",
+        "zh": "后代数为两量之积：最佳组合携带 48 中的 32，加性部分严格小于全部（Interaction.interaction）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T145016.701975Z): every declaration of Becoming.Reproduction has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 368; not independently reviewed by a person. The proofs were written by a subagent of the session from a stated specification and rebuilt by the session.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z）：Becoming.Reproduction 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 368 节；未经人的独立审查。证明由本会话的子代理依所述规格写出，并由本会话重新构建。"
+  },
+  "next_delta": {
+    "en": "Solving the normal equations; inexact transmission of the breeding value; an independent review.",
+    "zh": "正规方程的求解；育种值不精确的传递；独立审查。"
+  },
+  "correspondence": {
+    "en": "Fisher (1930): the additive genetic variance as the variance of the best linear predictor of fitness, and the fundamental theorem; Price (1972) read it through the covariance. Here in counts, with the normal equations cleared of denominators and nothing subtracted. Readings (the AI's): Fisher's theorem is Price's equation read on the best additive predictor.",
+    "zh": "Fisher（1930）：加性遗传方差即适合度最佳线性预测量的方差，及基本定理；Price（1972）经协方差读之。此处以计数陈述，正规方程消去分母，不作减法。读法（AI 的）：Fisher 定理即在最佳加性预测量上读出的 Price 方程。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+  "aliases": [
+    "breeding value",
+    "Fisher's fundamental theorem with breeding values",
+    "Fisher's identity",
+    "several carried amounts",
+    "育种值",
+    "Becoming.Reproduction.Breeding.breeding_balance",
+    "Becoming.Reproduction.Breeding.response"
+  ],
+  "dependencies": [
+    {
+      "id": "additive-part-of-offspring-variance",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The bound reads counted Cauchy-Schwarz (additive_le) on the breeding value.",
+        "zh": "界在育种值上读计数形式的 Cauchy-Schwarz（additive_le）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The additive part through one amount at most the whole.",
+          "zh": "经一量的加性部分至多为全部。"
+        },
+        "input": {
+          "en": "The breeding value at most the whole.",
+          "zh": "育种值至多为全部。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "additive-part-of-offspring-variance",
+      "detail": {
+        "en": "The additive part through one carried amount.",
+        "zh": "经一个所载之量的加性部分。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "Price's equation, read here on the breeding value.",
+        "zh": "在育种值上读出的 Price 方程。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reproduction.Additive.additive",
+        "Becoming.Reproduction.Additive.amounts",
+        "Becoming.Reproduction.Additive.first",
+        "Becoming.Reproduction.Additive.kinds",
+        "Becoming.Reproduction.Additive.normal",
+        "Becoming.Reproduction.Additive.number",
+        "Becoming.Reproduction.Additive.second",
+        "Becoming.Reproduction.Additive.value",
+        "Becoming.Reproduction.Breeding.Combination",
+        "Becoming.Reproduction.Breeding.Normal",
+        "Becoming.Reproduction.Breeding.additive_part_le",
+        "Becoming.Reproduction.Breeding.breeding_balance",
+        "Becoming.Reproduction.Breeding.combine",
+        "Becoming.Reproduction.Breeding.combined",
+        "Becoming.Reproduction.Breeding.combined_normal",
+        "Becoming.Reproduction.Breeding.concord_mul",
+        "Becoming.Reproduction.Breeding.covPair",
+        "Becoming.Reproduction.Breeding.covPair_add",
+        "Becoming.Reproduction.Breeding.covPair_combination",
+        "Becoming.Reproduction.Breeding.covPair_combine",
+        "Becoming.Reproduction.Breeding.covPair_congr",
+        "Becoming.Reproduction.Breeding.covPair_const",
+        "Becoming.Reproduction.Breeding.covPair_mul",
+        "Becoming.Reproduction.Breeding.covPair_same",
+        "Becoming.Reproduction.Breeding.covariance_add",
+        "Becoming.Reproduction.Breeding.discord_mul",
+        "Becoming.Reproduction.Breeding.excess_mul",
+        "Becoming.Reproduction.Breeding.normal_append",
+        "Becoming.Reproduction.Breeding.one_amount",
+        "Becoming.Reproduction.Breeding.response",
+        "Becoming.Reproduction.Breeding.response_rises_iff",
+        "Becoming.Reproduction.Breeding.same_move",
+        "Becoming.Reproduction.Breeding.same_scale",
+        "Becoming.Reproduction.Breeding.same_zero_plus",
+        "Becoming.Reproduction.Breeding.scale",
+        "Becoming.Reproduction.Breeding.scale_plus",
+        "Becoming.Reproduction.Breeding.scale_scale",
+        "Becoming.Reproduction.Flow.born_le_given",
+        "Becoming.Reproduction.Flow.born_le_given_family",
+        "Becoming.Reproduction.Flow.born_within_stock",
+        "Becoming.Reproduction.Flow.closed_lineage_lowered",
+        "Becoming.Reproduction.Flow.closed_not_exact",
+        "Becoming.Reproduction.Flow.last_reproducing",
+        "Becoming.Reproduction.Flow.lineage_ends",
+        "Becoming.Reproduction.Flow.number_within_take",
+        "Becoming.Reproduction.Flow.reproducing_le_takers",
+        "Becoming.Reproduction.Flow.reproducing_within",
+        "Becoming.Reproduction.Flow.takers_pos_of_born",
+        "Becoming.Reproduction.Generations.ByNumber",
+        "Becoming.Reproduction.Generations.ByNumber.concord_eq",
+        "Becoming.Reproduction.Generations.ByNumber.discord_none",
+        "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.not_lower_step",
+        "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.step",
+        "Becoming.Reproduction.Generations.ByNumber.sum_eq",
+        "Becoming.Reproduction.Generations.empty_from",
+        "Becoming.Reproduction.Generations.falls_step_iff",
+        "Becoming.Reproduction.Generations.fell_step",
+        "Becoming.Reproduction.Generations.response_sq_le",
+        "Becoming.Reproduction.Interaction.amounts",
+        "Becoming.Reproduction.Interaction.interaction",
+        "Becoming.Reproduction.Interaction.normal",
+        "Becoming.Reproduction.Interaction.number",
+        "Becoming.Reproduction.Interaction.value",
+        "Becoming.Reproduction.Mutation.above_always",
+        "Becoming.Reproduction.Mutation.above_stays",
+        "Becoming.Reproduction.Mutation.balanced_iff",
+        "Becoming.Reproduction.Mutation.below_always",
+        "Becoming.Reproduction.Mutation.below_stays",
+        "Becoming.Reproduction.Mutation.falls_iff",
+        "Becoming.Reproduction.Mutation.falls_of_outrun",
+        "Becoming.Reproduction.Mutation.generations",
+        "Becoming.Reproduction.Mutation.holds",
+        "Becoming.Reproduction.Mutation.kept_iff",
+        "Becoming.Reproduction.Mutation.kept_share",
+        "Becoming.Reproduction.Mutation.lowered_count",
+        "Becoming.Reproduction.Mutation.never_rises",
+        "Becoming.Reproduction.Mutation.not_falls_below",
+        "Becoming.Reproduction.Mutation.offspring",
+        "Becoming.Reproduction.Mutation.rises_iff",
+        "Becoming.Reproduction.Mutation.run",
+        "Becoming.Reproduction.Mutation.size_first",
+        "Becoming.Reproduction.Mutation.size_next",
+        "Becoming.Reproduction.Mutation.step_balance",
+        "Becoming.Reproduction.Mutation.sum_first",
+        "Becoming.Reproduction.Mutation.sum_next",
+        "Becoming.Reproduction.Mutation.total_kinds",
+        "Becoming.Reproduction.Mutation.total_replicate",
+        "Becoming.Reproduction.OnePool.Relatum",
+        "Becoming.Reproduction.OnePool.balances",
+        "Becoming.Reproduction.OnePool.descended",
+        "Becoming.Reproduction.OnePool.dissipates",
+        "Becoming.Reproduction.OnePool.family",
+        "Becoming.Reproduction.OnePool.firstKids",
+        "Becoming.Reproduction.OnePool.flow",
+        "Becoming.Reproduction.OnePool.generations",
+        "Becoming.Reproduction.OnePool.give",
+        "Becoming.Reproduction.OnePool.giveFirst",
+        "Becoming.Reproduction.OnePool.kids",
+        "Becoming.Reproduction.OnePool.level",
+        "Becoming.Reproduction.OnePool.one_pool",
+        "Becoming.Reproduction.OnePool.present",
+        "Becoming.Reproduction.OnePool.take",
+        "Becoming.Reproduction.OnePool.takeFirst",
+        "Becoming.Reproduction.OnePool.web",
+        "Becoming.Reproduction.OnePool.within",
+        "Becoming.Reproduction.Relay.balances",
+        "Becoming.Reproduction.Relay.descended",
+        "Becoming.Reproduction.Relay.descends",
+        "Becoming.Reproduction.Relay.exchange",
+        "Becoming.Reproduction.Relay.family",
+        "Becoming.Reproduction.Relay.family_eq",
+        "Becoming.Reproduction.Relay.flow",
+        "Becoming.Reproduction.Relay.generations",
+        "Becoming.Reproduction.Relay.not_dissipates",
+        "Becoming.Reproduction.Relay.on",
+        "Becoming.Reproduction.Relay.relay",
+        "Becoming.Reproduction.Relay.turn",
+        "Becoming.Reproduction.Relay.web",
+        "Becoming.Reproduction.Spread.kids",
+        "Becoming.Reproduction.Spread.parents",
+        "Becoming.Reproduction.Spread.spread",
+        "Becoming.Reproduction.Threshold.at_threshold",
+        "Becoming.Reproduction.Unrelated.amount",
+        "Becoming.Reproduction.Unrelated.unrelated",
+        "Becoming.Reproduction.additive_le",
+        "Becoming.Reproduction.additive_self",
+        "Becoming.Reproduction.born_flatMap",
+        "Becoming.Reproduction.bound_sq",
+        "Becoming.Reproduction.concord_self",
+        "Becoming.Reproduction.concord_self_zero_iff",
+        "Becoming.Reproduction.covariance_sq_le",
+        "Becoming.Reproduction.cross_mul",
+        "Becoming.Reproduction.discord_self",
+        "Becoming.Reproduction.dist",
+        "Becoming.Reproduction.dist_mul",
+        "Becoming.Reproduction.excess_cross",
+        "Becoming.Reproduction.exists_mem_of_length_pos",
+        "Becoming.Reproduction.le_of_excess_zero",
+        "Becoming.Reproduction.mem_append_cases",
+        "Becoming.Reproduction.mem_flatMap_cases",
+        "Becoming.Reproduction.never_against",
+        "Becoming.Reproduction.none_iff_uniform",
+        "Becoming.Reproduction.number_never_against",
+        "Becoming.Reproduction.number_none_iff",
+        "Becoming.Reproduction.number_variation",
+        "Becoming.Reproduction.pairsOf",
+        "Becoming.Reproduction.search",
+        "Becoming.Reproduction.square_mul",
+        "Becoming.Reproduction.sub_le_of_le_add",
+        "Becoming.Reproduction.total_bind",
+        "Becoming.Reproduction.total_dist",
+        "Becoming.Reproduction.total_pairsOf",
+        "Becoming.Reproduction.twice_le",
+        "Becoming.Reproduction.twice_le_of_le",
+        "Becoming.Reproduction.twice_mul",
+        "Becoming.Reproduction.variation"
+      ],
+      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d69642f3c92aa499eb66bd53794a65a05174f0d7d347295cbe2dad789db8eac5"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Integers.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Integers.Same"
+      ],
+      "sha256": "e654e58cc8f95725d95cbb6e8bee28086a3eeb08e4826473051da2a7298ca54f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (EV15), the breeding value and Fisher's fundamental theorem with breeding values; study section 368.",
+      "zh": "2026年10月22日：新增（EV15），育种值与以育种值陈述的 Fisher 基本定理；研究第 368 节。"
+    }
+  ]
+}

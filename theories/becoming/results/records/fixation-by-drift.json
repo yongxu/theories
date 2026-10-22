@@ -204,6 +204,13 @@
         "en": "Ending among groups uses up the differences it acts on; drift uses up variation too.",
         "zh": "组间终止耗尽其所作用的差异；漂变同样耗尽差异。"
       }
+    },
+    {
+      "id": "fixation-with-selection",
+      "detail": {
+        "en": "With selection in the draw, replacement one at a time: the fixation share a potential's ratio.",
+        "zh": "抽取中有选择时，一次替换一个：固定份额为势之比。"
+      }
     }
   ],
   "references": [
@@ -264,7 +271,7 @@
         "Becoming.Drift.whole_true",
         "Becoming.Drift.whole_weight"
       ],
-      "sha256": "4aad9f6d7701fec29527ad9556e0e9bdf64fa145aca2aa878b9df4e9f93b379a"
+      "sha256": "97e50aedd8f289901cca75e33badc706109dd05e4cfa882c38513edfdb645b00"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
@@ -291,18 +298,24 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9e2fe596762d6a422a95fd717dd2f2d9e350d4840108df93cbf00ab281ef3f12"
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Drift",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -319,6 +332,10 @@
     {
       "en": "20 October 2026: added (EV9), fixation by drift over many sampled generations: the count kept, the ends absorbing, variation ending geometrically, the fixing share h/N; study section 278.",
       "zh": "2026年10月20日：新增（EV9），多代抽样中漂变导致的固定：计数保持、两端吸收、差异按几何速率终结、固定份额 h/N；研究第 278 节。"
+    },
+    {
+      "en": "22 October 2026, EV13-EV16: related record fixation-with-selection added (study section 368); its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV13-EV16：加入相关记录 fixation-with-selection（研究第 368 节）；定律及其陈述不变。"
     }
   ]
 }

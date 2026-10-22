@@ -1,0 +1,394 @@
+{
+  "schema_version": 2,
+  "id": "mutation-and-the-balance-it-sets",
+  "title": {
+    "en": "Mutation and the balance it sets",
+    "zh": "突变及其设定的平衡"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "statement": {
+    "en": "Carriers losing m offspring to mutation hold their share exactly where their advantage s balances the loss, at s / (s + m), approached from below without overshoot; with no advantage they decline whatever their share. It is the balance of Price's equation, selection against transmission.",
+    "zh": "因突变失去 m 个后代的携带者，恰在其优势 s 抵消损失处保持份额，即 s / (s + m)，自下方无超越地趋近；无优势时无论份额为何都下降。此平衡即选择与传递的 Price 平衡。"
+  },
+  "laws": [
+    {
+      "en": "Carriers leaving k carrying offspring and m not, others w: the carriers' share rises exactly where d k exceeds c m + d w, is kept where they are equal and falls where d k falls short.",
+      "zh": "携带者各留 k 个携带后代与 m 个不携带的，其余各留 w 个：携带者份额恰在 d k 超过 c m + d w 时上升，相等时保持，不足时下降。",
+      "declarations": [
+        "Becoming.Reproduction.Mutation.step_balance",
+        "Becoming.Reproduction.Mutation.rises_iff",
+        "Becoming.Reproduction.Mutation.kept_iff",
+        "Becoming.Reproduction.Mutation.falls_iff"
+      ]
+    },
+    {
+      "en": "Where k <= w the share never rises and with any loss falls at every step, whatever it is: the error threshold.",
+      "zh": "k <= w 时份额从不上升，有任何损失即每步下降，无论其为何：误差阈值。",
+      "declarations": [
+        "Becoming.Reproduction.Mutation.never_rises",
+        "Becoming.Reproduction.Mutation.falls_of_outrun"
+      ]
+    },
+    {
+      "en": "Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one above stays above.",
+      "zh": "k = w + s 时份额恰保持于 s / (s + m)；在此平衡处或其下开始的过程保持在其处或其下、份额从不下降，在其上者保持在其上。",
+      "declarations": [
+        "Becoming.Reproduction.Mutation.kept_share",
+        "Becoming.Reproduction.Mutation.below_stays",
+        "Becoming.Reproduction.Mutation.above_stays",
+        "Becoming.Reproduction.Mutation.run",
+        "Becoming.Reproduction.Mutation.below_always",
+        "Becoming.Reproduction.Mutation.not_falls_below",
+        "Becoming.Reproduction.Mutation.above_always"
+      ]
+    },
+    {
+      "en": "Read as generations of descent, transmission lowers the amount by c m and raises nothing, and the step is balanced exactly where the count balance holds: mutation-selection balance is the balance of Price's equation.",
+      "zh": "按世代读，传递使该量降低 c m、不升高任何，该步恰在计数平衡成立处平衡：突变与选择的平衡即 Price 平衡。",
+      "declarations": [
+        "Becoming.Reproduction.Mutation.holds",
+        "Becoming.Reproduction.Mutation.offspring",
+        "Becoming.Reproduction.Mutation.generations",
+        "Becoming.Reproduction.Mutation.total_replicate",
+        "Becoming.Reproduction.Mutation.total_kinds",
+        "Becoming.Reproduction.Mutation.lowered_count",
+        "Becoming.Reproduction.Mutation.size_first",
+        "Becoming.Reproduction.Mutation.sum_first",
+        "Becoming.Reproduction.Mutation.size_next",
+        "Becoming.Reproduction.Mutation.sum_next",
+        "Becoming.Reproduction.Mutation.balanced_iff"
+      ]
+    },
+    {
+      "en": "Witness: one carrier and one other, at the threshold falling from a half to two of five, and a half kept at the balance.",
+      "zh": "见证：一个携带者与一个其他成员，在阈值处由一半降到五分之二，在平衡处保持一半。",
+      "declarations": [
+        "Becoming.Reproduction.Threshold.at_threshold"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Two kinds; loss in one direction only; constant offspring numbers k, m and w.",
+      "zh": "不加公理。两类；只单向损失；后代数 k、m、w 恒定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Back mutation, and mutation with drift (the balance of mutation and drift).",
+      "zh": "回复突变，以及伴随漂变的突变（突变与漂变的平衡）。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a run converges to the balance: started below it, it stays at or below it and its share never falls.",
+      "zh": "过程收敛于平衡：自其下方开始时保持在其处或其下，份额从不下降。",
+      "kind": "scope"
+    },
+    {
+      "en": "That keeping the carriers is better: the counts read the share; ranking goes through the comparison C.",
+      "zh": "保住携带者更好：计数读的是份额；排序经由比较 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "detail": {
+        "en": "Carriers with two carrying offspring and one lost, beside others with two, fall from a half (Threshold.at_threshold).",
+        "zh": "携带者有两个携带后代、一个失去，其余成员有两个时，携带者由一半下降（Threshold.at_threshold）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T145016.701975Z): every declaration of Becoming.Reproduction has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 368; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z）：Becoming.Reproduction 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 368 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Mutation both ways; mutation with drift; an independent review.",
+    "zh": "双向突变；伴随漂变的突变；独立审查。"
+  },
+  "correspondence": {
+    "en": "Mutation-selection balance (Haldane 1927) and the error threshold (Eigen 1971): a haploid carrier share at equilibrium (w1(1 - u) - w0)/(w1 - w0), here s / (s + m) in counts. Readings (the AI's): mutation is the transmission term the selection term's course already carries.",
+    "zh": "突变与选择的平衡（Haldane 1927）与误差阈值（Eigen 1971）：单倍体携带者的平衡份额 (w1(1 - u) - w0)/(w1 - w0)，此处为计数中的 s / (s + m)。读法（AI 的）：突变即选择项进程本已带有的传递项。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+  "aliases": [
+    "mutation",
+    "mutation-selection balance",
+    "error threshold",
+    "突变",
+    "突变与选择的平衡",
+    "误差阈值",
+    "Becoming.Reproduction.Mutation.balanced_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The step read as Generations.kept_step_iff, transmission lowering c m.",
+        "zh": "该步按 Generations.kept_step_iff 读，传递降低 c m。"
+      },
+      "interface": {
+        "output": {
+          "en": "The mean kept exactly where the step is balanced.",
+          "zh": "均值恰在该步平衡处保持。"
+        },
+        "input": {
+          "en": "Mutation-selection balance.",
+          "zh": "突变与选择的平衡。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "additive-part-of-offspring-variance",
+      "detail": {
+        "en": "The selection side of the same step, bounded through any carried amount.",
+        "zh": "同一步的选择一侧，经任一所载之量有界。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "Price's equation with its transmission term.",
+        "zh": "带传递项的 Price 方程。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reproduction.Additive.additive",
+        "Becoming.Reproduction.Additive.amounts",
+        "Becoming.Reproduction.Additive.first",
+        "Becoming.Reproduction.Additive.kinds",
+        "Becoming.Reproduction.Additive.normal",
+        "Becoming.Reproduction.Additive.number",
+        "Becoming.Reproduction.Additive.second",
+        "Becoming.Reproduction.Additive.value",
+        "Becoming.Reproduction.Breeding.Combination",
+        "Becoming.Reproduction.Breeding.Normal",
+        "Becoming.Reproduction.Breeding.additive_part_le",
+        "Becoming.Reproduction.Breeding.breeding_balance",
+        "Becoming.Reproduction.Breeding.combine",
+        "Becoming.Reproduction.Breeding.combined",
+        "Becoming.Reproduction.Breeding.combined_normal",
+        "Becoming.Reproduction.Breeding.concord_mul",
+        "Becoming.Reproduction.Breeding.covPair",
+        "Becoming.Reproduction.Breeding.covPair_add",
+        "Becoming.Reproduction.Breeding.covPair_combination",
+        "Becoming.Reproduction.Breeding.covPair_combine",
+        "Becoming.Reproduction.Breeding.covPair_congr",
+        "Becoming.Reproduction.Breeding.covPair_const",
+        "Becoming.Reproduction.Breeding.covPair_mul",
+        "Becoming.Reproduction.Breeding.covPair_same",
+        "Becoming.Reproduction.Breeding.covariance_add",
+        "Becoming.Reproduction.Breeding.discord_mul",
+        "Becoming.Reproduction.Breeding.excess_mul",
+        "Becoming.Reproduction.Breeding.normal_append",
+        "Becoming.Reproduction.Breeding.one_amount",
+        "Becoming.Reproduction.Breeding.response",
+        "Becoming.Reproduction.Breeding.response_rises_iff",
+        "Becoming.Reproduction.Breeding.same_move",
+        "Becoming.Reproduction.Breeding.same_scale",
+        "Becoming.Reproduction.Breeding.same_zero_plus",
+        "Becoming.Reproduction.Breeding.scale",
+        "Becoming.Reproduction.Breeding.scale_plus",
+        "Becoming.Reproduction.Breeding.scale_scale",
+        "Becoming.Reproduction.Flow.born_le_given",
+        "Becoming.Reproduction.Flow.born_le_given_family",
+        "Becoming.Reproduction.Flow.born_within_stock",
+        "Becoming.Reproduction.Flow.closed_lineage_lowered",
+        "Becoming.Reproduction.Flow.closed_not_exact",
+        "Becoming.Reproduction.Flow.last_reproducing",
+        "Becoming.Reproduction.Flow.lineage_ends",
+        "Becoming.Reproduction.Flow.number_within_take",
+        "Becoming.Reproduction.Flow.reproducing_le_takers",
+        "Becoming.Reproduction.Flow.reproducing_within",
+        "Becoming.Reproduction.Flow.takers_pos_of_born",
+        "Becoming.Reproduction.Generations.ByNumber",
+        "Becoming.Reproduction.Generations.ByNumber.concord_eq",
+        "Becoming.Reproduction.Generations.ByNumber.discord_none",
+        "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.not_lower_step",
+        "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.step",
+        "Becoming.Reproduction.Generations.ByNumber.sum_eq",
+        "Becoming.Reproduction.Generations.empty_from",
+        "Becoming.Reproduction.Generations.falls_step_iff",
+        "Becoming.Reproduction.Generations.fell_step",
+        "Becoming.Reproduction.Generations.response_sq_le",
+        "Becoming.Reproduction.Interaction.amounts",
+        "Becoming.Reproduction.Interaction.interaction",
+        "Becoming.Reproduction.Interaction.normal",
+        "Becoming.Reproduction.Interaction.number",
+        "Becoming.Reproduction.Interaction.value",
+        "Becoming.Reproduction.Mutation.above_always",
+        "Becoming.Reproduction.Mutation.above_stays",
+        "Becoming.Reproduction.Mutation.balanced_iff",
+        "Becoming.Reproduction.Mutation.below_always",
+        "Becoming.Reproduction.Mutation.below_stays",
+        "Becoming.Reproduction.Mutation.falls_iff",
+        "Becoming.Reproduction.Mutation.falls_of_outrun",
+        "Becoming.Reproduction.Mutation.generations",
+        "Becoming.Reproduction.Mutation.holds",
+        "Becoming.Reproduction.Mutation.kept_iff",
+        "Becoming.Reproduction.Mutation.kept_share",
+        "Becoming.Reproduction.Mutation.lowered_count",
+        "Becoming.Reproduction.Mutation.never_rises",
+        "Becoming.Reproduction.Mutation.not_falls_below",
+        "Becoming.Reproduction.Mutation.offspring",
+        "Becoming.Reproduction.Mutation.rises_iff",
+        "Becoming.Reproduction.Mutation.run",
+        "Becoming.Reproduction.Mutation.size_first",
+        "Becoming.Reproduction.Mutation.size_next",
+        "Becoming.Reproduction.Mutation.step_balance",
+        "Becoming.Reproduction.Mutation.sum_first",
+        "Becoming.Reproduction.Mutation.sum_next",
+        "Becoming.Reproduction.Mutation.total_kinds",
+        "Becoming.Reproduction.Mutation.total_replicate",
+        "Becoming.Reproduction.OnePool.Relatum",
+        "Becoming.Reproduction.OnePool.balances",
+        "Becoming.Reproduction.OnePool.descended",
+        "Becoming.Reproduction.OnePool.dissipates",
+        "Becoming.Reproduction.OnePool.family",
+        "Becoming.Reproduction.OnePool.firstKids",
+        "Becoming.Reproduction.OnePool.flow",
+        "Becoming.Reproduction.OnePool.generations",
+        "Becoming.Reproduction.OnePool.give",
+        "Becoming.Reproduction.OnePool.giveFirst",
+        "Becoming.Reproduction.OnePool.kids",
+        "Becoming.Reproduction.OnePool.level",
+        "Becoming.Reproduction.OnePool.one_pool",
+        "Becoming.Reproduction.OnePool.present",
+        "Becoming.Reproduction.OnePool.take",
+        "Becoming.Reproduction.OnePool.takeFirst",
+        "Becoming.Reproduction.OnePool.web",
+        "Becoming.Reproduction.OnePool.within",
+        "Becoming.Reproduction.Relay.balances",
+        "Becoming.Reproduction.Relay.descended",
+        "Becoming.Reproduction.Relay.descends",
+        "Becoming.Reproduction.Relay.exchange",
+        "Becoming.Reproduction.Relay.family",
+        "Becoming.Reproduction.Relay.family_eq",
+        "Becoming.Reproduction.Relay.flow",
+        "Becoming.Reproduction.Relay.generations",
+        "Becoming.Reproduction.Relay.not_dissipates",
+        "Becoming.Reproduction.Relay.on",
+        "Becoming.Reproduction.Relay.relay",
+        "Becoming.Reproduction.Relay.turn",
+        "Becoming.Reproduction.Relay.web",
+        "Becoming.Reproduction.Spread.kids",
+        "Becoming.Reproduction.Spread.parents",
+        "Becoming.Reproduction.Spread.spread",
+        "Becoming.Reproduction.Threshold.at_threshold",
+        "Becoming.Reproduction.Unrelated.amount",
+        "Becoming.Reproduction.Unrelated.unrelated",
+        "Becoming.Reproduction.additive_le",
+        "Becoming.Reproduction.additive_self",
+        "Becoming.Reproduction.born_flatMap",
+        "Becoming.Reproduction.bound_sq",
+        "Becoming.Reproduction.concord_self",
+        "Becoming.Reproduction.concord_self_zero_iff",
+        "Becoming.Reproduction.covariance_sq_le",
+        "Becoming.Reproduction.cross_mul",
+        "Becoming.Reproduction.discord_self",
+        "Becoming.Reproduction.dist",
+        "Becoming.Reproduction.dist_mul",
+        "Becoming.Reproduction.excess_cross",
+        "Becoming.Reproduction.exists_mem_of_length_pos",
+        "Becoming.Reproduction.le_of_excess_zero",
+        "Becoming.Reproduction.mem_append_cases",
+        "Becoming.Reproduction.mem_flatMap_cases",
+        "Becoming.Reproduction.never_against",
+        "Becoming.Reproduction.none_iff_uniform",
+        "Becoming.Reproduction.number_never_against",
+        "Becoming.Reproduction.number_none_iff",
+        "Becoming.Reproduction.number_variation",
+        "Becoming.Reproduction.pairsOf",
+        "Becoming.Reproduction.search",
+        "Becoming.Reproduction.square_mul",
+        "Becoming.Reproduction.sub_le_of_le_add",
+        "Becoming.Reproduction.total_bind",
+        "Becoming.Reproduction.total_dist",
+        "Becoming.Reproduction.total_pairsOf",
+        "Becoming.Reproduction.twice_le",
+        "Becoming.Reproduction.twice_le_of_le",
+        "Becoming.Reproduction.twice_mul",
+        "Becoming.Reproduction.variation"
+      ],
+      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d69642f3c92aa499eb66bd53794a65a05174f0d7d347295cbe2dad789db8eac5"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.kept_step_iff",
+        "Becoming.SelectionTerm.Generations.total_flatMap"
+      ],
+      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (EV14), mutation, transmission that is not exact, and the balance it sets; study section 368.",
+      "zh": "2026年10月22日：新增（EV14），突变即不精确的传递及其设定的平衡；研究第 368 节。"
+    }
+  ]
+}

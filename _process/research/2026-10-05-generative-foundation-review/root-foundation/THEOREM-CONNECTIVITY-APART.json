@@ -2631,6 +2631,96 @@
    "module": "Becoming.Weightings",
    "category": "model-witness",
    "reason": "two items, adding one raising a course keeping nothing and lowering one keeping the other, an order no net weighting gives; a fact about one constructed order, not a law of the unfolding"
+  },
+  "Becoming.Drift.Favoured.two_members": {
+   "module": "Becoming.Drift",
+   "category": "model-witness",
+   "reason": "two members: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Drift.Replacement.favoured_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.favoured_share_above": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share above: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.fixation": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "fixation: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.lost_ge": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "lost ge: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.neutral_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "neutral share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Reproduction.Additive.additive": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "additive: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Breeding.one_amount": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "one amount: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Breeding.response_rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "response rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Interaction.interaction": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "interaction: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Mutation.above_always": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "above always: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.falls_of_outrun": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "falls of outrun: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.kept_share": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "kept share: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.lowered_count": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "lowered count: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.never_rises": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "never rises: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.not_falls_below": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "not falls below: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Threshold.at_threshold": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "at threshold: a fact about one constructed population or world, not a law of the unfolding"
   }
  },
  "instances": {
