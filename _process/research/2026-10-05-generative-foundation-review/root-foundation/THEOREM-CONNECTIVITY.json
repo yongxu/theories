@@ -1,11 +1,11 @@
 {
- "commit": "52031c89aa27e4f7ec5c9db23dfa6955c10443ad",
+ "commit": "da3c5a04f0c3dc911a7b74b920499d23aaf4018c",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261022T045034.169350Z",
+ "core_receipt_at_commit": "20261022T051213.108860Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39804,
- "spine_theorems": 13129,
+ "constants": 39805,
+ "spine_theorems": 13131,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -31,7 +31,7 @@
   "statement on World/Flow/Web": 3055,
   "statement on the base only through a law of its own module": 259,
   "proof through a base family": 162,
-  "used by a theorem on the base": 4917,
+  "used by a theorem on the base": 4919,
   "instance on the base recorded": 155,
   "apart: own vocabulary": 589,
   "apart: prelude-only statement": 59
@@ -514,7 +514,7 @@
   ],
   "Becoming.Optimum": [
    1,
-   449
+   451
   ],
   "Becoming.LoopReturn": [
    1,
@@ -584,7 +584,7 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12383,
+   "theorems": 12385,
    "apart": 568,
    "classes": {
     "statement on both families": 989,
@@ -592,7 +592,7 @@
     "statement on World/Flow/Web": 3030,
     "statement on the base only through a law of its own module": 213,
     "proof through a base family": 151,
-    "used by a theorem on the base": 4558,
+    "used by a theorem on the base": 4560,
     "instance on the base recorded": 155,
     "apart: own vocabulary": 510,
     "apart: prelude-only statement": 58
@@ -7676,18 +7676,20 @@
   "Becoming.Optimum.InTurn.at_floor": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.last_at_floor": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.pass_zero": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.pass_of_first": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.others_draw_nothing": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.revisions_end": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.perfect_ends": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.levels_of_first": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.perfect_of_zero": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.pass_through": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.after_draw_nothing": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.floor_after": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.floor_through": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.revisions_reach_floors": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.perfect_at_floors": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.levels_through": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.floors_perfect": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.bestUpTo_le": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.bestUpTo_max": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.best_from": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.revise_revises": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.revised_leaves": "used by a theorem on the base",
-  "Becoming.Optimum.InTurn.revised_draw_all": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.revised_at_floors": "used by a theorem on the base",
   "Becoming.Web.drained_broken": "statement on World/Flow/Web",
   "Becoming.Optimum.Holding.pass_keep": "used by a theorem on the base",
   "Becoming.Optimum.Holding.restraint_keeps": "used by a theorem on the base",
