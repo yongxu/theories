@@ -1541,7 +1541,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   last step every best response draws everything; where what stands from nothing is at most what
   stands from anything left and there are at least two drawers, every profile perfect for
   position draws everything at every step, drawing everything is perfect, and the base stands at
-  what stands from nothing. With one drawer every profile is perfect; where something left stops
+  what stands from nothing, breaking at the first step every dependence above it. With one drawer every profile is perfect; where something left stops
   what stands next (`Stopping`), drawing everything is not perfect, a drawer given something
   keeping it to stop what the first drawer would draw next.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's

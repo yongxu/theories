@@ -71,7 +71,7 @@ LAW = need('Becoming.Optimum', [I + n for n in ['position_keeps_nothing', 'posit
 STEP = need('Becoming.Optimum', [I + n for n in ['drawn_first_none', 'drawn_other_none', 'drawnAll_none', 'later_same',
                                                  'drawnAll_grows', 'position_step', 'position_last']])
 DRAIN = need('Becoming.Optimum', [I + n for n in ['position_perfect_ends', 'position_perfect_draws', 'position_levels',
-                                                  'zero_position_perfect']])
+                                                  'zero_position_perfect']] + ['Becoming.Web.position_broken'])
 BIND = need('Becoming.Optimum', [I + n for n in ['position_one', 'stopping', 'Stopping.not_least', 'Stopping.zero_not_perfect',
                                                  'Stopping.perfect_keeps']])
 BOUNDARIES = ['no-ethical-premise', 'no-evaluation', 'discrete-steps', 'formal-not-empirical', 'names-provisional',
@@ -229,7 +229,7 @@ race = {
          'declarations': STEP},
         {**t('Where what stands from nothing is at most what stands from anything left and there are at least two drawers, every '
              'profile perfect for position draws everything at every step before the horizon, the base stands at what stands from '
-             'nothing, and drawing everything is perfect.',
+             'nothing, a dependence above it met at the start breaking at the first step, and drawing everything is perfect.',
              '无中所立至多是任何所留所立、至少两个抽取者时，每个为位次完美的组合在视野前每一步都全部抽取，基础立于无中所立，全部抽取即完美。'),
          'declarations': DRAIN},
         {**t('Each premise binds: with one drawer every profile is perfect; in Stopping, where anything left stops what stands next, '

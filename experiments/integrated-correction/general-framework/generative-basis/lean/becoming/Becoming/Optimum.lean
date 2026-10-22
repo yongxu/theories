@@ -8792,6 +8792,23 @@ theorem at_once_broken {G : Nat → Nat → Nat} {portion rules : Nat → Nat �
     (start : W.need 0 f c ≤ W.level 0 c) : W.Broken 0 f c :=
   ⟨depends, start, Nat.lt_of_le_of_lt (Nat.le_of_eq ((follows 1 long).trans
     (Optimum.AtOnce.levels_drained ((Optimum.AtOnce.drains returns).2 rules perfect) s long))) low⟩
+/-- **Racing for position, every perfect profile breaks at the first step every dependence above what
+stands from nothing.** Among at least two drawers in turn ranking their position, where what stands
+from nothing is at most what stands from anything left, along every profile perfect for position over
+a horizon of at least one step, the base stands from the first step at what stands from nothing: a
+formation depending on it, whose need, met at the start, lies above what stands from nothing at the
+first step, is broken there (`Optimum.InTurn.position_perfect_draws`). -/
+theorem position_broken {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k N s : Nat}
+    (perfect : Optimum.InTurn.PerfectPosition G rules k N) (two : 2 ≤ k)
+    (least : ∀ t x, G t 0 ≤ G t x)
+    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.levels G rules k s t)
+    (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
+    (start : W.need 0 f c ≤ W.level 0 c) :
+    W.Broken 0 f c ∧ ∀ t, t < N → W.level (t + 1) c = G t 0 :=
+  drained_broken (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) perfect.1
+    (fun _ before a => Optimum.InTurn.position_perfect_draws perfect two least before 0
+      (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) a) follows long depends low start
+
 end Web
 
 namespace Optimum

@@ -2299,7 +2299,7 @@ SCOPE = (
     "step; drawers in turn ranking position, k times their draw against what all draw: at the last "
     "step every best response draws everything; where G t 0 is at most G t x and there are at least "
     "two drawers every profile perfect for position draws everything at every step, drawing "
-    "everything is perfect and the base stands at G t 0; with one drawer every profile is perfect, "
+    "everything is perfect and the base stands at G t 0, a dependence above G 0 0 met at the start broken at the first step; with one drawer every profile is perfect, "
     "and in Stopping, where anything left stops what stands next, drawing everything is not perfect "
     "and every perfect profile has the second drawer keep the unit it is given at the first step. "
     "LawAlongRun: under an equivalence, some process going alike under it admits a run's steps "
