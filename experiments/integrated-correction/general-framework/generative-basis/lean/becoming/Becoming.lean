@@ -1618,7 +1618,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Each law is read along the runs of the spine: of waxing and waning, of the change of one line,
   of the law backward, and of any process. Four censuses of the 彖 and the 小象 are checked on
   their configurations; the chapter on the 易传 reads each passage.
-  The 象 and 彖 sentences on middles, spent tops, rises, 中正 and places are counted against the places;
+  The 象 and 彖 sentences on middles, exhausted tops, rises, 中正 and places are counted against the places;
   bands and heights are two divisions.
 * `Becoming.HexagramLaws` (L1): four more laws on the sixty-four configurations and the census
   of the law of waxing and waning, with no premise, stated along the runs of the spine. The

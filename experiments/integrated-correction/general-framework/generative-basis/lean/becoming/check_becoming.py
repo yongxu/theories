@@ -2461,7 +2461,7 @@ SCOPE = (
     "of one line, of the law backward from the turned-over configuration, or of any process; the "
     "listed statements of four censuses of the text hold of their configurations. No ethical "
     "premise is used. "
-    "The 象 and 彖 sentences on middles, spent tops, rises, 中正 and places are counted against the places; bands and heights are two divisions. "
+    "The 象 and 彖 sentences on middles, exhausted tops, rises, 中正 and places are counted against the places; bands and heights are two divisions. "
     "HexagramLaws: the nuclear law, lines 2 to 4 below and 3 to 5 above, is fixed by the four "
     "inner lines, merges and loses a possibility, leaves only lines 3 and 4 three times over after "
     "two steps, rests exactly at all unbroken and all broken, takes the two alternating "

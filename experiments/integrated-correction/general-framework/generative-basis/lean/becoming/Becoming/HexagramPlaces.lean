@@ -113,8 +113,8 @@ states them on the configurations and proves what they do under the laws of `Bec
 
 No ethical predicate, ranking or axiom occurs.
 * **Censuses and bands.** Every 小象 sentence saying a line is 中 is of a middle place, four other
-  sentences listed apart (`xiaoxiangMiddle_census`); every sentence saying a line's way is spent is
-  of the top place, five others apart (`spent_census`); every sentence of a broken line carrying an
+  sentences listed apart (`xiaoxiangMiddle_census`); every sentence saying a line's way is exhausted is
+  of the top place, five others apart (`exhausted_census`); every sentence of a broken line carrying an
   unbroken one is of a rise (`riseStatements_agree`); every 彖 中正 is of a middle line in phase
   (`tuanCentreStatements_agree`); two more place statements agree (`placeStatementsMore_agree`). The
   bands of the three powers and the heights are two divisions, jointly fixing a place and neither a
@@ -1092,22 +1092,22 @@ theorem topsHold_sound : ∀ {l : List (Nat × Place)}, topsHold l = true → �
   | _ :: _, h, _, .head _ => (bool_of_and_true h).1
   | _ :: _, h, q, .tail _ mem => topsHold_sound (bool_of_and_true h).2 q mem
 
-/-- The sentences saying a line's way is spent (窮, 亢): the 小象's 乾上九 「亢龍有悔」, 坤上六
+/-- The sentences saying a line's way is exhausted (窮, 亢): the 小象's 乾上九 「亢龍有悔」, 坤上六
 「其道窮也」, 隨上六 「上窮也」, 无妄上九 「窮之災也」, 姤上九 「上窮吝也」, 巽上九 「上窮也」, 節上六
 「其道窮也」, 小過上六 「已亢也」, and 比's 彖 「後夫凶，其道窮也」 of its top line. -/
-def spentStatements : List (Nat × Place) := [
+def exhaustedStatements : List (Nat × Place) := [
     (1, .p6), (2, .p6), (8, .p6), (17, .p6), (25, .p6), (44, .p6), (57, .p6), (60, .p6), (62, .p6)
   ]
 
 /-- The 小象's other sentences with 窮: 屯六三 「往吝窮也」, 豫初六 「志窮凶也」, 大壯初九 「其孚窮也」,
-旅初六 「志窮災也」, 巽九三 「志窮也」, of will, trust or going, not of a way spent. -/
-def spentOther : List (Nat × Place) := [(3, .p3), (16, .p1), (34, .p1), (56, .p1), (57, .p3)]
+旅初六 「志窮災也」, 巽九三 「志窮也」, of will, trust or going, not of a way exhausted. -/
+def exhaustedOther : List (Nat × Place) := [(3, .p3), (16, .p1), (34, .p1), (56, .p1), (57, .p3)]
 
-/-- **Every sentence saying a line's way is spent is of the top place**; the other sentences with
+/-- **Every sentence saying a line's way is exhausted is of the top place**; the other sentences with
 窮 are of lower places. -/
-theorem spent_census :
-    (∀ q, q ∈ spentStatements → isTop q.2 = true) ∧
-      ∀ q, q ∈ spentOther → isTop q.2 = false :=
+theorem exhausted_census :
+    (∀ q, q ∈ exhaustedStatements → isTop q.2 = true) ∧
+      ∀ q, q ∈ exhaustedOther → isTop q.2 = false :=
   ⟨topsHold_sound rfl, fun q mem => match q, mem with
     | _, .head _ => rfl
     | _, .tail _ (.head _) => rfl
