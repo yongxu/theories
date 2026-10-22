@@ -1396,3 +1396,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; rest within a band for webs with a recent giving not stated
 Integration: chapter's coupled-web paragraph, thesis T1's sentence and record table
 ```
+
+<a id="many-check"></a>
+## A check: any number of drawers in turn (22 October 2026, SG17)
+
+An AI check (one session, 22 October), made while the Lean was written, of whether more than two drawers change SG14's open-access outcome ([in-turn check](#in-turn-check)). **Verdict: known in its kind. In the n-player dynamic commons the equilibrium stock falls as players are added, and with linear payoffs and no discounting the subgame-perfect outcome depletes the stock at once. The spine's form gives every perfect profile for every number of drawers in turn from two, over any law of what stands, with the two-drawer law its case.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The n-player dynamic commons: the equilibrium stock falls as players are added | Levhari and Mirman (1980) (from memory) | `Optimum.InTurn.Many.perfect_ends`: from two drawers up every perfect profile draws everything |
+| Backward induction in finite games of perfect information | Selten (1965, 1975) (from memory) | `Optimum.InTurn.Many.ends_at`: the induction from the horizon over any number of movers |
+
+```text
+Result(s): new record any-number-of-drawers-in-turn (SG17, new laws of Becoming.Optimum)
+Delta: with any number of drawers in turn from two, every perfect profile draws everything; two drawers the case k = 2
+Supplied premises / correspondence: SG14's model with k drawers, k at least two; natural amounts; discrete steps. Correspondence: the n-player dynamic commons; backward induction
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; drawing at once not stated
+Integration: chapter §3.4, §7.1, item 10 and the record table
+```

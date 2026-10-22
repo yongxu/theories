@@ -61,11 +61,12 @@ The alternating-move dynamic commons depletes the stock at its subgame-perfect o
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.doubling_capacity`, `Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.BestWithin`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.PerfectWithin`, `Becoming.Optimum.InTurn.eq_of_sub_le_sub`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.first_at_floor`, `Becoming.Optimum.InTurn.last_at_floor`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.second_at_floor`, `Becoming.Optimum.InTurn.within_zero_iff`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.sub_le_sub_left_of_le`, `Becoming.Web.perfect_broken` |
+| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.doubling_capacity`, `Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.BestWithin`, `Becoming.Optimum.InTurn.Many.perfect_ends`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.PerfectWithin`, `Becoming.Optimum.InTurn.eq_of_sub_le_sub`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.first_at_floor`, `Becoming.Optimum.InTurn.last_at_floor`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.second_at_floor`, `Becoming.Optimum.InTurn.within_zero_iff`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.sub_le_sub_left_of_le`, `Becoming.Web.perfect_broken` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
 
 Aliases: `drawers in turn within capacities`, `capacity limits a draw`, `容量内的轮流抽取者`, `Becoming.Optimum.InTurn.last_at_floor`, `Becoming.Optimum.Holding.doubling_capacity`
 
@@ -73,6 +74,7 @@ Aliases: `drawers in turn within capacities`, `capacity limits a draw`, `容量�
 ### History
 
 - 22 October 2026: added (SG15), drawers in turn whose capacity limits a draw; zero_of_le_sub now the case of eq_of_sub_le_sub; study section 329.
+- 22 October 2026, SG17: the two drawers' perfect_ends and perfect_levels, removed as the case k = 2 of the general laws, are cited as Many.perfect_ends and Many.perfect_levels (record any-number-of-drawers-in-turn); its laws are unchanged.
 
 </details>
 

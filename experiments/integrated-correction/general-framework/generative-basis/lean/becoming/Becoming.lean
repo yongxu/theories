@@ -1499,6 +1499,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Where capacities limit a draw, each draws to capacity at the last step and wherever what the
   other draws after is fixed; with no limit this is the perfect profile. Witness: under doubling, a
   one-unit limit on the second makes leaving everything the first's best response, keeping the dweller.
+  With any number of drawers in turn from two, every perfect profile has every drawer leave
+  nothing; two drawers are the case k = 2. Witness: under the gate, any number breaks the dweller.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

@@ -11,7 +11,7 @@
 ## Laws
 
 1. Two drawers in turn at each step, the first leaving part of the level and the second part of that, what remains standing at the next step by a law G; what each draws over the steps that remain, defined back from the horizon; a profile perfect where each leaves at most what it is given and the two are at a mutual best response at every step from every level. (`Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Perfect`)
-2. Backward from the horizon: where the second draws nothing over the rest, a mutual best response has both leave nothing, whatever the first leaves the second drawing and whatever the second leaves the first drawing at its next move; so every perfect profile has both leave nothing at every step, whatever stands at nothing, and the base stands from the first step at what stands at nothing. (`Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.InTurn.step_ends`, `Becoming.Optimum.InTurn.ends_at`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Optimum.InTurn.perfect_levels`)
+2. Backward from the horizon: where the second draws nothing over the rest, a mutual best response has both leave nothing, whatever the first leaves the second drawing and whatever the second leaves the first drawing at its next move; so every perfect profile has both leave nothing at every step, whatever stands at nothing, and the base stands from the first step at what stands at nothing. (`Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.InTurn.Many.step_ends`, `Becoming.Optimum.InTurn.Many.ends_at`, `Becoming.Optimum.InTurn.Many.perfect_ends`, `Becoming.Optimum.InTurn.Many.perfect_levels`)
 3. Drawing everything is perfect over every horizon. (`Becoming.Optimum.InTurn.zero_secondDrawn`, `Becoming.Optimum.InTurn.perfect_of_zero`)
 4. On a web, along every perfect profile a dependence on the base whose need, met at the start, is above what stands at nothing is broken at the first step. (`Becoming.Web.perfect_broken`)
 5. Witness: under a gate from the dweller's need two, alone the course holding the source at two is an optimum keeping the dweller through the horizon; in turn, drawing everything is perfect and every perfect profile breaks the dweller at the first step. (`Becoming.Optimum.Holding.gated_in_turn`)
@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- More than two drawers, or drawing at once with a rule of sharing; with capacities limiting a draw, which profiles are perfect away from the last step (record drawers-in-turn-within-capacities).
+- Drawing at once with a rule of sharing (more than two drawers in turn: record any-number-of-drawers-in-turn); with capacities limiting a draw, which profiles are perfect away from the last step (record drawers-in-turn-within-capacities).
 - How drawers come to a mutual best response other than by best-response revision (revision-comes-to-drawing-everything); rules reading more than the step and the level.
 - That the drain is a harm or restraint better: no evaluation enters; the laws say what perfect profiles do.
 
@@ -40,7 +40,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-More than two drawers or drawing at once; noisy or partial revision; an independent review.
+Drawing at once; noisy or partial revision; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -63,23 +63,25 @@ The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). At one step several optimizers at a mutual best response drain by their joint capacity; here over courses.
 - related, not a proved adapter: [revision-comes-to-drawing-everything](revision-comes-to-drawing-everything.md). Revising toward best responses, from any profile, drawers in turn come to drawing everything within 2N rounds.
 - related, not a proved adapter: [drawers-in-turn-within-capacities](drawers-in-turn-within-capacities.md). With capacities limiting a draw, each draws to capacity at the last step, and a limit on the other's draw can make restraint the best response.
+- related, not a proved adapter: [any-number-of-drawers-in-turn](any-number-of-drawers-in-turn.md). With any number of drawers in turn from two every perfect profile draws everything; these two drawers are the case k = 2.
 
-**Used by:** [drawers-in-turn-within-capacities](drawers-in-turn-within-capacities.md) · [revision-comes-to-drawing-everything](revision-comes-to-drawing-everything.md)
+**Used by:** [any-number-of-drawers-in-turn](any-number-of-drawers-in-turn.md) · [drawers-in-turn-within-capacities](drawers-in-turn-within-capacities.md) · [revision-comes-to-drawing-everything](revision-comes-to-drawing-everything.md)
 
 <a id="sources--来源"></a>
 ### Sources
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_alike`, `Becoming.Optimum.Holding.gated_in_turn`, `Becoming.Optimum.Holding.onSource`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.ends_at`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Optimum.InTurn.perfect_levels`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.step_ends`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.InTurn.zero_secondDrawn`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.leftBy`, `Becoming.Optimum.OpenCourse`, `Becoming.Optimum.byDrawn`, `Becoming.Web.perfect_broken` |
+| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_alike`, `Becoming.Optimum.Holding.gated_in_turn`, `Becoming.Optimum.Holding.onSource`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Many.ends_at`, `Becoming.Optimum.InTurn.Many.perfect_ends`, `Becoming.Optimum.InTurn.Many.perfect_levels`, `Becoming.Optimum.InTurn.Many.step_ends`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.InTurn.zero_secondDrawn`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.leftBy`, `Becoming.Optimum.OpenCourse`, `Becoming.Optimum.byDrawn`, `Becoming.Web.perfect_broken` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
 
-Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流的抽取者全部抽取`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Web.perfect_broken`
+Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流的抽取者全部抽取`, `Becoming.Web.perfect_broken`
 
 <a id="history--沿革"></a>
 ### History
@@ -87,6 +89,7 @@ Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流�
 - 22 October 2026: added (SG14), drawers in turn, each ranking courses: every perfect profile draws everything, the base standing from the first step at what stands at nothing; study section 324.
 - 22 October 2026, SG16: how drawers come to a mutual best response is answered for best-response revision (record revision-comes-to-drawing-everything, study section 326). Its laws are unchanged.
 - 22 October 2026, SG15: capacities limiting a draw are stated in part (record drawers-in-turn-within-capacities, study section 329); zero_of_le_sub now reads eq_of_sub_le_sub. Its laws are unchanged.
+- 22 October 2026, SG17: more than two drawers in turn stated (record any-number-of-drawers-in-turn, study section 332); step_ends, ends_at, perfect_ends and perfect_levels now cited in their general form, the Many laws of which these two drawers are the case; the statements of its laws are unchanged.
 
 </details>
 
