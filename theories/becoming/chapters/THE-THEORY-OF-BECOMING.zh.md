@@ -674,6 +674,7 @@
 | [带上限之需](../results/records/a-need-with-a-cap.md) | 有所述前提的定理 | 所需条件上衡 | §1.5 |
 | [容忍之跨律单调](../results/records/tolerance-monotone-across-laws.md) | 不加前提的定理 | — | §1.5 |
 | [以时为界之对手](../results/records/rivals-bounded-in-time.md) | 不加前提的定理 | — | §1.5 |
+| [动力于延续条件所留之开放，与何者闭之](../results/records/what-the-dynamics-leave-open.md) | 不加前提的定理 | —（所述处意义已定） | §6.4 |
 | [共享关系项之交换不必可交换](../results/records/order-of-exchanges-sharing-a-relatum.md) | 见证 | — | §1.5 |
 | [择恰在要紧者由象读出处为对](../results/records/selection-right-exactly-where-read.md) | 不加前提的定理 | — | §1.5 |
 | [单侧、越界与局部之调节](../results/records/regulation-from-one-side-and-locally.md) | 有所述前提的定理 | 衡；各形成之相反与份额 | §1.5 |
