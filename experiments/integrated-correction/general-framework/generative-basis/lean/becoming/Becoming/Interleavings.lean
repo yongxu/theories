@@ -104,6 +104,9 @@ they do not change, in a footprint of their own (here what an exchange reads and
 change are one footprint); a reading of activity as a state of a relatum between steps, under
 which Reordering's commutations could relate two interleavings' worlds (here activity is taking
 part in the exchange across a step). No ethical predicate, ranking or axiom occurs.
+* **Shared relata need not commute.** Two exchanges sharing their relatum, taken in two orders from
+  one configuration, can reach different configurations (`Shared.order_matters`): the condition of
+  `act_comm` cannot be dropped.
 -/
 
 namespace Becoming

@@ -129,6 +129,9 @@ these to an actual formation that learns. No ethical predicate, ranking or axiom
 `Learning.GoAlikeAt`, `Learning.goAlike_iff_at`, `Learning.transfer_right_iff` and
 `Learning.goAlike_iff_lumped` are in `Becoming.LearningRuns`, so this module does not import the
 frame (board item W).
+* **Read off the map.** What matters goes alike across a map's lumping exactly where it is read off
+  the map (`through_iff_reads`), so some selection through the map selects it exactly where the map
+  reads it (`selects_right_iff`).
 -/
 
 namespace Becoming

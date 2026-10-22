@@ -507,6 +507,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   attraction is merging and what returns draws in everything else, while an open world
   separates them; under a process, entering an invariant region locks in. The readings are the
   AI's, adopted on Ren's delegation of 15 October 2026.
+  Within m configurations every course enters what returns before step m; courses that meet form
+  basins, each with one cycle where configurations are finitely many.
 * `Becoming.Substitution` (L1): in the support-gated law, a consumer that substitutes
   a condition persists and still consumes on the whole-run reading, while the stepwise
   reading credits it until the sustaining formation loses support and withholds it from
@@ -540,6 +542,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   many formations whose activity is decided, arising recurs exactly when ceasing
   recurs. Where the core states only a weaker form, the stronger form can imply the
   limited principle of omniscience (`LPO`), which has no constructive proof.
+  What ceases to be is the coming to be of its negation, and back where the determination is stable.
 * `Becoming.Population` (L1): how many formations are active. Under a census of the
   active formations, with each formation taking part listed once and only active
   formations taking, more generation without end makes generation unceasing. Under a
@@ -611,6 +614,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   step, so a whole active while at least `j` of them are arises and ceases only through a part;
   at `j` one it is the whole of some part, at the number listed the whole of every one, and
   where some parts are active and not all the whole is diminished.
+  Parts arising within every d steps and each lasting d steps carry the whole.
 * `Becoming.Dissipation` (L1): when every formation gives a closed family less than it
   takes from it, the family runs down and taking from it stops. A finite family from
   which taking recurs, whether of more, of generation or of maintenance, is open at
@@ -678,6 +682,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   omniscience. A relatum
   standing while active, absent earlier, came to stand before it was active: generation
   bears replenishment where standing rises, not where activity does.
+  Bounded dormancy needs its premises only over the stretch; a final ending stays, so a return later
+  than the reserve finds none.
 * `Becoming.Evolution` (L1): descent, transmission, variation and selection. A relatum
   descends from a formation that takes part in a step, gives to it, and across which it
   comes to stand. Over any finite family of parents and offspring, the offspring's total
@@ -689,6 +695,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   descendant's need is at most its condition's level at the giving step, plus the bound,
   met there only when the bound is zero, and in a balanced flow what is taken from and
   given to the condition in between sets that level.
+  Along a lineage need drifts at most δ a generation.
 * `Becoming.Capture` (L1): how a target that cannot rest is selected and where the selection
   is held (B5 of the boundary for 无明). Carriers of a target leaving at least as many offspring
   as the others, the target's share among the offspring does not fall, and rises where they
@@ -848,6 +855,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   none; decided from some step on, the recurrence law holds. The rest theorems of
   `Becoming.Space` and `Becoming.Openness` use no decision procedure. The readings are the
   AI's, adopted on Ren's delegation of 15 October 2026.
+  A conclusion following from a proposition and from its failure holds wherever it is stable, with
+  the proposition undecided.
 * `Becoming.Refinement` (L1): a chain of equivalences stops within its classes (P83c), with no
   premise beyond the decisions it counts. Members a list holds that a relation keeps pairwise
   apart are no more than the list; where two members joined at one step are apart at the next, a
@@ -1035,6 +1044,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one's continuation depends on; it ends with the want, and a clearer that meets every
   requirement derived here can still end a life it does not need. Ren's proposal of 10
   October 2026 (an AI reading).
+  Conveying runs a family down by a step for each stage; regulation from one side holds a level from
+  that side only, gated renewal its case.
 * `Becoming.RenewalFlow` (L1): every law of the support-gated renewal family is a balanced flow
   on its static web, so the family's restoration, its loss for good and the ending of joint
   drawing beyond renewal are instances of the laws of every balanced flow; on the webs, formation
@@ -1058,6 +1069,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and opening needs a net give. Compared by inclusion, a part widens, narrows, keeps the
   same or is mixed, each exceeding the other, which inclusion does not order. Reading
   these as Ren's generative, degenerative and neutral is the AI's reading.
+  A need with a cap is harmed by too much as by too little, the band exact on both sides; what does
+  not change gives no arising.
 * `Becoming.Exclusion` (L1): what taking all that is given excludes, with no ethical premise.
   A formation takes all that is given to a condition across a step where it takes part and
   takes from it at least all that the step gives to it; alongside it, any other taker makes
@@ -1225,6 +1238,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   is ordered, so the continuation condition is needed. The reading is the AI's, adopted on Ren's delegation of 15
   October 2026. Living significance is a theorem of this condition and, since Ren folded it on 11 October 2026, no longer
   an axiom.
+  A rule bounded in time is a rival of the continuation condition, and in the clearer's witness it
+  permits what the condition counts as a loss.
 * `Becoming.RelativePosition` (L2): the game of relative position. A part's position is its
   amount read against the others' (its amount counted once for each part, against the family's
   total). Zero-sum is a counting law: across every change of amounts, whatever the amounts do,
@@ -1239,6 +1254,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   greatest part that does not depend on what it draws down continues (`Clearing`); what it loses
   is a continuation with significance, and that loss needs a significance, such as the
   continuation condition.
+  A least part is not above the average, and with no more in all more parts leave it no more; equal
+  shares meet every need exactly where they meet the greatest, which gives more than the total need
+  where needs differ.
 * `Becoming.ValuationFrames` (L2): the valuations of `Becoming.Metaethics` and the continuation
   condition of `Becoming.Significance` read on frames and runs of a labelled process (the relations
   a valuation reads off a frame, living significance and `universal_reason`, comparison and
@@ -1552,6 +1570,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   reads it, the modeling of the laws of structure and of change; the other readings are the AI's,
   adopted on Ren's delegation of 15 October 2026 or, for selection through a model, approved by
   Ren on 16 October 2026.
+  A selection through a map can be right exactly where what matters is read off the map.
 * `Becoming.PropositionIdentity` (L1): what identifying interderivable propositions (`propext`)
   keeps and loses, with no axiom. `propext`, as a proposition, holds exactly where every reading
   of propositions is lumped (`Learning.Lumped`) by interderivability, read through the two ends
@@ -1727,6 +1746,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   supported the step before, support is the run of the tolerating law with tolerance the number
   upstream less `k` (`web_tolerating`), and with `k` all upstream it is `Becoming.Withholding`'s
   law without memory (`web_answers`).
+  More tolerance gives no less at every step, for every structure of waiting.
 * `Becoming.Revision` (L1): Selection when the lumping itself changes.
 * `Becoming.Undecided` (L1): the third value and revision, with no premise. With values true,
   undecided and false, undecided below the decided ones in information, a term with no constant
@@ -2174,6 +2194,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   defects exactly where the reference is faithful; doubling for `n` rounds from `k` units runs
   exactly when the stock covers a draw for each of the `k * (2 ^ n - 1)` units beyond the
   start.
+  Copying b-fold runs exactly where the stock covers what it draws for, doubling its case.
 * `Becoming.Retrodiction` (L1): reading an earlier relation from later dated records, for every
   type of histories, dates, relations, probes and reports, with no premise. The actual history
   always fits its records; every explanation of an earlier packet by a family history fitting
@@ -2502,6 +2523,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relay overshoots its band by lateness times step; past `b + 2 ≤ a + (ℓ + 1) M` a start held
   below the band crosses both ends without end, within it every such start settles, and the
   relay runs for every start where `(ℓ + 1) M ≤ b + 1`, so the threshold is exact.
+  Overcorrecting never rests at m; formations each opposing on their own condition make the joint
+  exchange regulate it, and a family whose conditions are each so regulated settles in total with
+  nothing reading the total.
 * `Becoming.ReadingSchedule` (L1): one reader, several conditions. A schedule reads one
   condition a step, and a drawer on a condition is withdrawn `ℓ` steps after a step that reads
   it: the selection only withdraws. With `(a + ℓ) d ≤ m < (a + 1 + ℓ) d`, a schedule keeps a
@@ -2670,6 +2694,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`touch_contains_iff`), and the footprint around each step contains them but joins every two
   consecutive exchanges, so Reordering's commutations reach no other interleaving
   (`around_keeps_identity`).
+  Exchanges sharing a relatum need not commute.
 * `Becoming.CensusCounts` (L1): the laws of counting where the counts exist, with no decision
   procedure for activity and for every property of the counts. The counts of a census are taken as
   relations (`Counts`); across a step a ceasing or coming count exists exactly where, for each
@@ -2756,6 +2781,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   it stops by the threshold as a step. With a response not rising, it stops exactly where the
   response reaches zero; floored at one, it recurs and, coupled into itself, leaves every finite
   order inexact.
+  Repeated disturbance adds what the later couplings multiply, the undisturbed rate its case.
 * `Becoming.MutualDependence` (L2): formations whose continuations depend on one another, and the
   pace it gives, with no premise beyond the hypotheses each statement names. Three readings, each
   strictly stronger: every system the whole (sharing conditions throughout), every influence closure

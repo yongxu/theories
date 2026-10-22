@@ -63,6 +63,10 @@ amount. Fitness is not defined: the number of offspring enters only as the weigh
 parents' dependences is a premise (`Flow.TransmitsWithin`), as reconstruction is in the
 theory of evolution; the spine does not derive it. No ethical predicate, ranking or axiom
 occurs.
+* **Drift along a lineage.** Along a lineage each member depending on `c` with its need not rising
+  until it gives, transmission within `δ` keeps the need after `i + 1` descents within the founder's
+  need, or the condition's level where the founder was supported, plus `(i + 1) * δ`
+  (`Flow.transmitted_along`, `Flow.transmitted_along_supported`).
 -/
 
 namespace Becoming

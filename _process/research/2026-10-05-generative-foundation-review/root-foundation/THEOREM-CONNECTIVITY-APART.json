@@ -2201,6 +2201,61 @@
    "module": "Becoming.Frequency",
    "category": "general-structure",
    "reason": "a bound on what passes through a coupling whose strengths, read off what has passed, are zero once A has passed: below A + m for any level history, m the most one step passes, in its own vocabulary; the formed course is one history, and the stopping it rests on, Saturation.stops, feeds the base through Saturation.exact and Saturation.course_stops_by (SAT1)"
+  },
+  "Becoming.Decided.cases_stable": {
+   "module": "Becoming.Decidedness",
+   "category": "support",
+   "reason": "arguing by cases into a stable conclusion with the case left undecided: a statement of logic using only the prelude; the census laws (Counts.over_stretch) use the same pattern inline, and the ZH map reads 墨辩「無窮不害兼」 by it (ZG1)"
+  },
+  "Becoming.Interleavings.Shared.order_matters": {
+   "module": "Becoming.Interleavings",
+   "category": "model-witness",
+   "reason": "one constructed local law (adding, then doubling, at one relatum) showing that act_comm needs its exchanges apart: taken in two orders they reach different configurations (ZG1)"
+  },
+  "Becoming.Law.Meet.refl": {
+   "module": "Becoming.Attraction",
+   "category": "support",
+   "reason": "a one-line unpacking of the module's own Meet (a course meets itself at step zero), completing the equivalence whose symmetry and transitivity feed basin_one_cycle (ZG3)"
+  },
+  "Becoming.Learning.selects_right_iff": {
+   "module": "Becoming.Learning",
+   "category": "general-structure",
+   "reason": "a law of every selection through every map on any types: some equivariant selection selects what matters exactly where it is read off the map; the base supplies no reading of maps of alternatives (ZG1)"
+  },
+  "Becoming.RelativePosition.least_exists": {
+   "module": "Becoming.RelativePosition",
+   "category": "support",
+   "reason": "a list lemma of the module's own Least, dual to greatest_exists: every nonempty family has a least part (ZG1)"
+  },
+  "Becoming.RelativePosition.least_bound": {
+   "module": "Becoming.RelativePosition",
+   "category": "support",
+   "reason": "arithmetic of amounts on a list: with no more in all, a least part counted once for each of at least n parts is at most the total (孙子「無所不備，則無所不寡」, ZG1)"
+  },
+  "Becoming.RelativePosition.equal_share_iff": {
+   "module": "Becoming.RelativePosition",
+   "category": "support",
+   "reason": "arithmetic of shares on a list: equal shares meet every need exactly where they meet the greatest (论语「不患寡而患不均」, ZG1)"
+  },
+  "Becoming.RelativePosition.equal_share_exceeds": {
+   "module": "Becoming.RelativePosition",
+   "category": "support",
+   "reason": "arithmetic of shares on a list: equal shares meeting every need give more than the total need where some need falls short of the greatest (ZG1)"
+  },
+  "Becoming.RelativePosition.equal_share_even": {
+   "module": "Becoming.RelativePosition",
+   "category": "support",
+   "reason": "arithmetic of shares on a list: with every need the greatest, equal shares give exactly the total need (ZG1)"
+  },
+  "Becoming.RelativePosition.uneven_short": {
+   "module": "Becoming.RelativePosition",
+   "category": "model-witness",
+   "reason": "two parts needing one and three: four suffices given by need and equal shares of two leave the second short (ZG1)"
+  },
+  "Becoming.bounded_in_time_rival": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every significance bounded in time on any types of standpoints and formations, the case of rival_of_outside for a time bound; its instance on the base is Clearing.time_bounded_permits (大取「愛尚世與愛後世」, ZG1)"
   }
  },
  "instances": {

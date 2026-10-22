@@ -85,6 +85,11 @@ moves it admits occur. Which of two merged configurations is drawn needs decidin
 double-negation form is stated.
 
 No ethical predicate, ranking or axiom occurs.
+* **Entering within the count, and basins.** Within `m` listed configurations every course enters
+  what returns before step `m` (`Law.enters_returning_within`). The courses of two configurations
+  meeting is an equivalence under any determined law (`Law.Meet`, `Law.Meet.trans`): a course
+  reaches every returning configuration of its basin (`Law.Meet.reaches_returning`), so within
+  finitely many configurations each basin holds one cycle (`Law.basin_one_cycle`).
 -/
 
 namespace Becoming

@@ -106,6 +106,11 @@ it waits on.
 What is not derived: which formations wait on which, their tolerances and sources, and how a law
 that tolerates or gives first forms. No ethical predicate, ranking or axiom occurs. The readings
 belong to the chapter.
+* **More tolerance gives no less.** A law keeping inclusion into another keeps it along their
+  courses (`KeepsInclusionInto.course`; `KeepsInclusion.course` its case); the tolerating law keeps
+  inclusion into any tolerating more (`tolerating_into`), so for the same waits and start a
+  formation giving under it gives under every law tolerating at least as much, at every step
+  (`tolerating_mono`).
 -/
 
 namespace Becoming

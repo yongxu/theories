@@ -59,6 +59,12 @@ actual race depend on the condition it draws down, as the opening's entangled Ea
 is an empirical premise, not a law of the spine. The continuation condition enters only as a
 hypothesis of `Clearing.loss_needs_significance`; no ethical predicate is asserted, and every
 declaration has an empty axiom report.
+* **Least parts and equal shares.** A least part's amount counted once for each part is at most the
+  family's total (`least_not_ahead`, `least_exists`), so with no more in all and at least `n` parts
+  it is at most the total over `n` (`least_bound`). Equal shares meet every need exactly where they
+  meet the greatest (`equal_share_iff`), giving more than the total need exactly where needs differ
+  (`equal_share_exceeds`, `equal_share_even`); two parts needing one and three are short in equal
+  shares of what suffices by need (`uneven_short`).
 -/
 
 namespace Becoming

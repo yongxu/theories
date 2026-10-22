@@ -63,6 +63,11 @@ to be decidable at each step.
 These laws hold of the whole space of unfoldings; a law that needs a premise names it, and
 the premise picks out a part of that space. No ethical predicate, ranking or axiom
 occurs.
+* **Coming to be of a negation.** What ceases to be is the coming to be of its negation and what
+  comes to be the ceasing of its negation, with no premise (`CeasesToBe.not_comes`,
+  `ComesToBe.not_ceases`); read back, the determination must be stable where it is read
+  (`ComesToBe.of_not`, `CeasesToBe.of_not`); on a web, a formation ceasing is its inactivity coming
+  to be (`Web.ceasing_readings`).
 -/
 
 namespace Becoming
@@ -513,6 +518,18 @@ theorem change_readings (t : Nat) (f g : F) (c : C) :
     (W.ComesToStand t c ↔ ComesToBe (0 < W.level · c) t) ∧
     (W.CeasesToStand t c ↔ CeasesToBe (0 < W.level · c) t) :=
   ⟨.rfl, .rfl, .rfl, .rfl, .rfl, .rfl⟩
+
+/-- **A formation ceasing is its inactivity coming to be**, and its arising is its inactivity
+ceasing; no premise. Read back, the formation's activity is needed decided only where the
+inactivity's change is read as the activity's. -/
+theorem ceasing_readings (t : Nat) (f : F) :
+    (W.Ceases t f → ComesToBe (fun s => ¬ W.active s f) t) ∧
+      (W.Arises t f → CeasesToBe (fun s => ¬ W.active s f) t) ∧
+      ((¬ ¬ W.active t f → W.active t f) → ComesToBe (fun s => ¬ W.active s f) t → W.Ceases t f) ∧
+      ((¬ ¬ W.active (t + 1) f → W.active (t + 1) f) →
+        CeasesToBe (fun s => ¬ W.active s f) t → W.Arises t f) :=
+  ⟨CeasesToBe.not_comes (p := fun s => W.active s f), ComesToBe.not_ceases (p := fun s => W.active s f),
+   ComesToBe.of_not (p := fun s => W.active s f), CeasesToBe.of_not (p := fun s => W.active s f)⟩
 
 /-- Support changes only through relations: a formation supported at `s` is supported at
 `t` where each dependence it has at `t` it had at `s`, at no greater need, on a condition

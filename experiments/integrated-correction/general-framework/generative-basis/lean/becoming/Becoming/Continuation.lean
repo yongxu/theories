@@ -92,6 +92,12 @@ in `Flow.Enclosed.around`. No ethical predicate, ranking or axiom occurs.
 
 Declarations moved here unchanged, with their names, from `Becoming.Standpoints` (board item W): see
 the sections so headed.
+* **Far conveying, and one side.** Balanced and dissipated on across `N` steps, each conveying from
+  a member of the family, the family's stock falls by at least `N`, so from a stock of `S` at most
+  `S` stages are conveyed (`Flow.conveyed_loses`). With balance, a joint exchange giving no more
+  than it takes below `m` holds a level below `m` there, never returning to `m` (`Flow.held_below`,
+  `Flow.never_returns_below`); gated renewal is the case where nothing is given below `m`
+  (`Flow.given_zero_below`, `Flow.stays_below`).
 -/
 
 namespace Becoming

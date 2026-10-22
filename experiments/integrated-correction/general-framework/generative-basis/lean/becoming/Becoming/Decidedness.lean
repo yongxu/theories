@@ -85,6 +85,9 @@ of recurrence hold with none, doubly negated.
 
 Declarations moved here unchanged, with their names, from `Becoming.Likeness`, `Becoming.Joining`
 and `Becoming.Coverage` (board item W): see the sections so headed.
+* **Cases into a stable conclusion.** A conclusion following from a proposition and from its failure
+  holds wherever it is stable, the proposition left undecided (`Decided.cases_stable`): every
+  negation and every equation of numbers is stable.
 -/
 
 namespace Becoming

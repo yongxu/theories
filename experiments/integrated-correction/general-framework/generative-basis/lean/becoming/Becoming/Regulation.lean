@@ -76,6 +76,14 @@ steps, whole-number amounts, and one condition read at a time; the rest's record
 amounts a step. The relay is the simplest regulation by thresholds, and its threshold is stated
 for it alone; the band a late reading needs (`Regulation.no_narrower_band`) holds for every rule.
 Every declaration has an empty axiom report. No ethical predicate, ranking or axiom occurs.
+* **Beyond the gap, and local regulation.** With balance, a joint exchange beyond the gap leaves the
+  next level off `m`, so overcorrecting at every step never comes to rest at `m`
+  (`Flow.not_at_of_beyond`, `Flow.never_at_of_beyond`). Each formation weakly opposing, some
+  strictly, makes the joint exchange oppose (`Flow.opposes_of_each`), and shares of the gap keep it
+  within (`Flow.withinGap_of_shares`): each formation reads only the condition it exchanges with.
+  Where each condition of a family is so regulated at its own level, the family's stock settles at
+  their total with nothing reading the stock (`Flow.stock_settles`). One side does not restore
+  (`Flow.never_returns_below`, in `Becoming.Continuation`).
 -/
 
 namespace Becoming

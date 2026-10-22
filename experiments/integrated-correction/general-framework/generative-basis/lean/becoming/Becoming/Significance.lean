@@ -149,6 +149,12 @@ commits to discrete steps, natural quantities and a decided part.
 
 `Conditions.significant_of_unrestricted` and the paths of a web (`Web.paths` and its comparison
 theorems) are in `Becoming.ValuationFrames` (board item W).
+* **Rivals of a formed boundary, and a rule bounded in time.** A rule holding exactly within a
+  region accepts the continuation condition's rule there and is not it where something lies outside
+  (`rival_of_outside`; `bounded_rival` its case); a rule bounded in time (`boundedInTime`) is such a
+  rival (`bounded_in_time_rival`). In the clearer's witness, caring for the first two steps only,
+  the clearer's part loses nothing, while under the continuation condition it loses the dweller
+  (`Clearing.time_bounded_permits`).
 -/
 
 namespace Becoming

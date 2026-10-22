@@ -88,6 +88,12 @@ mapping onto Ren's terms is the AI's reading:
 The comparison counts formations admitted. It does not compare renewal capacity or
 richness of relations, which Ren also named. The representation commits to discrete steps,
 natural quantities and a decided part.
+* **A need with a cap, and no arising without change.** Levels keep a formation within its band
+  where each required condition stands between its need and its cap (`Web.FitsBand`); with balance
+  the band is exact on both sides, the part opening it from below by giving and closing it from
+  above by giving beyond the margin to the cap (`Flow.fitsBand_iff_within_margins_at`). A formation
+  active exactly where supported does not arise across a step at which what it reads does not change
+  (`Web.not_arises_of_unchanged`).
 -/
 
 namespace Becoming

@@ -54,6 +54,10 @@ repeated doubling draws. The constructed copy machines of the periphery are inst
 
 No premise is added; the module imports only the core and every declaration has an empty axiom
 report.
+* **Copying `b`-fold.** Where every unit draws `d` and becomes `b`, `n` rounds from `k` units run
+  exactly where the stock covers `d` times what they draw for, ending with `k * b ^ n` units
+  (`copying_iff`, `copying_runs`, `requiredBy_add`); doubling is the case `b = 2` (`doubling_iff`);
+  one teaching ten, five rounds give a hundred thousand from a stock of 11,111 (`tenfold`).
 -/
 
 namespace Becoming.Copying
@@ -1145,8 +1149,6 @@ theorem requiredBy_add (c : Nat) : ∀ n k : Nat, c * requiredBy (c + 1) n k + k
 
 /-- Units drawn for beyond the start in `n` rounds of doubling from `k` units: `k * (2 ^ n - 1)`. -/
 def required : Nat → Nat → Nat := requiredBy 2
-
-theorem two_mul_pow (k n : Nat) : 2 * k * 2 ^ n = k * 2 ^ (n + 1) := mul_pow_succ 2 k n
 
 /-- **What doubling draws.** `required n k` and the `k` units of the start make `k * 2 ^ n`. -/
 theorem required_add (n k : Nat) : required n k + k = k * 2 ^ n :=

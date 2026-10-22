@@ -71,6 +71,11 @@ condition a formation holds is supplied by the application, and where one is hel
 which reading of the dependence is used is a correspondence premise bearing on the
 valuation. That what is held is finite is the physical content. No ethical predicate,
 ranking or axiom occurs.
+* **Dormancy over a stretch, and final ending.** The decay and ending laws need their premises only
+  over the stretch (`decays_by_on`, `ends_within_on`; the from-`S` forms their cases). An ending
+  that is final stays whatever support returns (`ended_for_good`), so a return later than the
+  reserve finds none (`late_return_finds_none`), while a reserve spanning the gap bridges it
+  (`Bridged.bridged`).
 -/
 
 namespace Becoming

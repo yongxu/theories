@@ -122,6 +122,9 @@ is Bishop's (Bishop 1967; Bridges and Richman 1987), and `settled_iff_recursOrSt
 `RecursOrStops` is excluded middle at level Σ⁰₂ of the arithmetical hierarchy (Akama, Berardi,
 Hayashi and Kohlenbach 2004), strictly stronger than `LPO`: it gives `LPO` here
 (`RecursOrStops.lpo`), and the converse is neither stated nor, by that hierarchy, available.
+* **Repeated disturbance.** With the part giving gaps at most `E` at the steps a schedule marks, the
+  carried amount is at most `(D + E * d) * (1 + M) ^ a`, `d` the disturbed steps and `a` the
+  coupling steps (`carried_le_disturbed`; `carried_le_count` the case of none).
 -/
 
 namespace Becoming

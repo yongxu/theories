@@ -107,6 +107,10 @@ the level of the whole, as arising that recurs through renewal, lineages and mem
 within it (DELEGATED-CHOICES D5). That a collective is the whole of its lives, that what it
 draws on is what its lives arise through, and that the joint draw is its consuming are readings
 (OPENING note `collective`). No ethical predicate, ranking or axiom occurs.
+* **Lasting parts carry a whole.** Where from `T` on a part arises within every `d` steps and each
+  arising part lasts `d` steps, the whole is active at every step from `T + d` on
+  (`Whole.persists_of_arising`, `Whole.persists_from`): the converse of `Whole.arises_within`,
+  needing the parts to last (`Gaps` fails without it).
 -/
 
 namespace Becoming
