@@ -1562,7 +1562,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   position draws everything at every step, drawing everything is perfect, and the base stands at
   what stands from nothing, breaking at the first step every dependence above it. With one drawer every profile is perfect; where something left stops
   what stands next (`Stopping`), drawing everything is not perfect, a drawer given something
-  keeping it to stop what the first drawer would draw next.
+  keeping it to stop what the first drawer would draw next. Drawing at once, conversely, drawing
+  everything is perfect exactly where no portion returns more than one for one on what its
+  drawer alone leaves; where each returns less, in whole amounts a portion never rises with
+  what is left and no profile draws any drawer more, so restraint pays none; where the drain
+  is perfect and holding the level draws each more at every later step, holding draws each
+  more over a long horizon, and for a drawer given the whole drawing everything is not perfect where the whole
+  returns more than one for one.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

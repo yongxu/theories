@@ -1,0 +1,31 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/al1/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/al1-aligned/tree",
+  "modules": 301,
+  "ran": [
+    "Becoming.Optimum",
+    "Becoming.RegimeMargin",
+    "Becoming",
+    "BecomingOptimumAxiomAudit",
+    "BecomingRegimeMarginAxiomAudit",
+    "BecomingAxiomAudit"
+  ],
+  "reused": 298,
+  "unclean": [],
+  "audits": {
+    "Becoming.Optimum": {
+      "theorems": 483,
+      "declarations": 609,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 244,
+      "declarations": 334,
+      "with_axioms": {}
+    },
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}
