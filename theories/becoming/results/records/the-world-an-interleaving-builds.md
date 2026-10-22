@@ -91,6 +91,7 @@ The twentieth review's G10 asked that Interleavings, which reads the step index 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T070914.793352Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T101723.692082Z/verification.json) | — |
 | proof | [Reordering.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean) | `Becoming.Reindexes`, `Becoming.Footprinted`, `Becoming.Footprinted.Contains`, `Becoming.Footprinted.Joined`, `Becoming.Footprinted.Keeps`, `Becoming.Flow.SameExchange`, `Becoming.Web.Unmoved` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `the world an interleaving builds`, `交错所构造的世界`, `course of standings`, `所立之串`, `Becoming.Interleavings.LocalLaw.world_swap`, `Becoming.Interleavings.LocalLaw.world_balances`, `index map`, `索引映射`, `Becoming.Interleavings.LocalLaw.world_index`, `Becoming.Interleavings.LocalLaw.world_reads_alike`, `one renumbering of the steps`, `步的单一重编号`, `Becoming.Interleavings.LocalLaw.renumber_reindexes`, `Becoming.Interleavings.LocalLaw.world_renumber_reads`, `Becoming.Interleavings.LocalLaw.around_keeps_identity`, `Becoming.Interleavings.Pair.apart_differs`
 

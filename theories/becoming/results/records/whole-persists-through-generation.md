@@ -65,7 +65,7 @@ Contains no ethical predicate; Whole is coincidence of activity, not constitutio
 - Related, not a proved adapter: [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md). How a whole of ending listed parts ends where their arising stops, and a draw beyond renewal that stops it.
 - Related, not a proved adapter: [a-whole-of-every-part](a-whole-of-every-part.md). The whole of every part, beside this whole of some part: it ends as soon as one part ends; the grade and the diminished whole lie between them.
 
-**Used by:** [a-pattern-lasts-through-passing](a-pattern-lasts-through-passing.md) · [a-whole-of-every-part](a-whole-of-every-part.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
+**Used by:** [a-pattern-lasts-through-passing](a-pattern-lasts-through-passing.md) · [a-whole-carried-by-lasting-parts](a-whole-carried-by-lasting-parts.md) · [a-whole-of-every-part](a-whole-of-every-part.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
@@ -94,6 +94,7 @@ Contains no ethical predicate; Whole is coincidence of activity, not constitutio
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Hashes in the editable record bind the reviewed source versions. The checker does not audit transitive Lean imports or establish premise warrant.
 

@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "id": "need-drift-along-a-lineage",
+  "title": {
+    "en": "Need drift along a lineage",
+    "zh": "世系上之需要漂移"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Along a lineage each member depending on c with its need not rising until it gives, transmission within δ keeps the need after i + 1 descents within the founder's need, or the level where the founder was supported, plus (i + 1) δ.",
+    "zh": "世系每员依 c 且所需在其给予前不升时，在 δ 内之传使 i + 1 代后之所需至多为始祖所需（或始祖受支持处之水平）加 (i + 1)·δ。"
+  },
+  "laws": [
+    {
+      "en": "With the dependence transmitted within δ, each member descending, depending on c at its first standing step, and its need not rising until it gives in turn, the need after i + 1 descents is at most the founder's plus (i + 1) δ, or the level where the founder was supported plus (i + 1) δ.",
+      "zh": "依赖在 δ 内传递，每员出生、首立之步依 c、所需至其给予时不升，则 i + 1 代后之所需至多为始祖所需加 (i + 1)·δ，或始祖受支持处之水平加 (i + 1)·δ。",
+      "declarations": [
+        "Becoming.Flow.transmitted_along",
+        "Becoming.Flow.transmitted_along_supported"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; descents as given; whole-number needs.",
+      "zh": "不加公理；出生如所给；整数之需要。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual inheritance drifts by at most a fixed δ.",
+      "zh": "实际之遗传漂移至多一固定 δ。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 340; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 340 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Bounded mutation accumulating along a lineage.",
+    "zh": "沿世系累积之有界变异。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+  "aliases": [
+    "Need drift along a lineage",
+    "世系上之需要漂移",
+    "Becoming.Flow.transmitted_along"
+  ],
+  "dependencies": [
+    {
+      "id": "transmission-is-inheritance-and-need",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its one-step law is applied along a lineage.",
+        "zh": "其一步之律沿世系应用。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries lunyu-yin-sun-yi).",
+        "zh": "陈述其对应所发现之缺口（条目 lunyu-yin-sun-yi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.transmitted_along",
+        "Becoming.Flow.transmitted_along_supported"
+      ],
+      "sha256": "49f9c6c9dc8cce99a7713012d4e4ee26901ddbd7652de97e6448edc51ac75a9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Evolution",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 340 节。"
+    }
+  ]
+}

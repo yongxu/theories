@@ -8395,14 +8395,20 @@
      "declarations": [
       "Becoming.ComesToBe",
       "Becoming.CeasesToBe",
-      "Becoming.Web.change_readings"
+      "Becoming.Web.change_readings",
+      "Becoming.CeasesToBe.not_comes",
+      "Becoming.ComesToBe.not_ceases",
+      "Becoming.ComesToBe.of_not",
+      "Becoming.CeasesToBe.of_not",
+      "Becoming.Web.ceasing_readings"
      ],
      "records": [
       "coming-and-ceasing-keep-pace",
-      "laws-of-one-step"
+      "laws-of-one-step",
+      "negation-change-and-stable-cases"
      ],
-     "reading": "AI读法：《經上》以「已」为一事之完成，分成、亡两向；《經說上》（MI1-S-SS）举例「已，爲衣，成也。治病，亡也。」：衣这一规定由不成立到成立，是成；病这一规定由成立到不成立，是亡。同篇「爲，存、亡、易、蕩、治、化。」把亡列为施为的一种，所以在墨经语境中成、亡是施为的两种完成；本条去掉施为者，只取一个规定在一步之间的两种变，这是 AI 的推广。脊柱上这两种变依定义就是 ComesToBe p t（¬p t ∧ p (t+1)）与 CeasesToBe p t（p t ∧ ¬p (t+1)），对象是任一规定，不预设实体。生起与止息、形成与消解、开始与不再作为条件而在，是这同一种变用于活动、要求、0 < 水平三种不同规定的读法，依定义成立（Web.change_readings，六条 Iff.rfl），不是一个事件读作三事。治病一例还显出：病之亡即愈之成，这是一条两行引理（见 gap），不是新结果。名表以「已」名止息，所引正是本条；但本条之已兼成与亡，见名表问题。",
-     "gap": "引理（非缺口结果）：CeasesToBe p t → ComesToBe (fun s => ¬ p s) t 与 ComesToBe p t → CeasesToBe (fun s => ¬ p s) t 构成性成立（各两行，可期空公理报告）；逆向 ComesToBe (fun s => ¬ p s) t → CeasesToBe p t 需要 ¬¬p t → p t，即 p t 可判定。已 grep Becoming/*.lean：没有此陈述；ComesToBe／CeasesToBe 只施于活动、要求、水平、爻之实现等谓词。记为 mojing-yi-cheng-wang、xici-gang-rou-xiang-tui、zhuangzi-ri-ye-xiang-dai 三条共用的引理，不列入缺口结果。",
+     "reading": "AI读法：《經上》以「已」为一事之完成，分成、亡两向；《經說上》（MI1-S-SS）举例「已，爲衣，成也。治病，亡也。」：衣这一规定由不成立到成立，是成；病这一规定由成立到不成立，是亡。同篇「爲，存、亡、易、蕩、治、化。」把亡列为施为的一种，所以在墨经语境中成、亡是施为的两种完成；本条去掉施为者，只取一个规定在一步之间的两种变，这是 AI 的推广。脊柱上这两种变依定义就是 ComesToBe p t（¬p t ∧ p (t+1)）与 CeasesToBe p t（p t ∧ ¬p (t+1)），对象是任一规定，不预设实体。生起与止息、形成与消解、开始与不再作为条件而在，是这同一种变用于活动、要求、0 < 水平三种不同规定的读法，依定义成立（Web.change_readings，六条 Iff.rfl），不是一个事件读作三事。治病一例还显出：病之亡即愈之成：一规定之止息即其否定之生起，无前提（CeasesToBe.not_comes）；这是一条引理，不是新结果。名表以「已」名止息，所引正是本条；但本条之已兼成与亡，见名表问题。",
+     "gap": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。",
      "locator": "《墨子·經上》「已」条；经说见《經說上》",
      "tradition": "墨／名辩",
      "work": "《墨子·經上》",
@@ -8963,15 +8969,21 @@
       "Becoming.Hexagram.ceasing_recurs",
       "Becoming.Negation.each_through_other",
       "Becoming.ComesToBe",
-      "Becoming.CeasesToBe"
+      "Becoming.CeasesToBe",
+      "Becoming.CeasesToBe.not_comes",
+      "Becoming.ComesToBe.not_ceases",
+      "Becoming.ComesToBe.of_not",
+      "Becoming.CeasesToBe.of_not",
+      "Becoming.Web.ceasing_readings"
      ],
      "records": [
       "hexagrams-on-the-spine",
       "the-split-that-makes-sense",
-      "coming-and-ceasing-keep-pace"
+      "coming-and-ceasing-keep-pace",
+      "negation-change-and-stable-cases"
      ],
-     "reading": "AI读法：「刚柔相推而生变化。」：一爻之刚退即柔进，变化由二者相推而有；下文「变化者，进退之象也。刚柔者，昼夜之象也。」支持此读。脊柱上，十二卦的消长之律下（Hexagram.waxWane），沿任一运行，某爻在任意晚之步成为刚，也在任意晚之步不再为刚（Hexagram.arising_recurs、Hexagram.ceasing_recurs）。在一个构造的见证中（Negation），两态相继互入：一态在下一步进入另一态，另一态又进入前者（Negation.each_through_other）；这是相继互入，可作相推的结构。刚之不再成立即柔之开始成立，是一条两行引理：一规定之不再成立（CeasesToBe）蕴含其否定之开始成立（ComesToBe），在构成逻辑中成立；逆向需要该规定可判定（见 gap）。爻值只有刚柔两值且可判定，所以对爻而言两向都成立。",
-     "gap": "引理（非缺口结果）：CeasesToBe p t → ComesToBe (fun s => ¬ p s) t 与 ComesToBe p t → CeasesToBe (fun s => ¬ p s) t 构成性成立（各两行，可期空公理报告）；逆向 ComesToBe (fun s => ¬ p s) t → CeasesToBe p t 需要 ¬¬p t → p t，即 p t 可判定。已 grep Becoming/*.lean：没有此陈述；ComesToBe／CeasesToBe 只施于活动、要求、水平、爻之实现等谓词。记为 mojing-yi-cheng-wang、xici-gang-rou-xiang-tui、zhuangzi-ri-ye-xiang-dai 三条共用的引理，不列入缺口结果。",
+     "reading": "AI读法：「刚柔相推而生变化。」：一爻之刚退即柔进，变化由二者相推而有；下文「变化者，进退之象也。刚柔者，昼夜之象也。」支持此读。脊柱上，十二卦的消长之律下（Hexagram.waxWane），沿任一运行，某爻在任意晚之步成为刚，也在任意晚之步不再为刚（Hexagram.arising_recurs、Hexagram.ceasing_recurs）。在一个构造的见证中（Negation），两态相继互入：一态在下一步进入另一态，另一态又进入前者（Negation.each_through_other）；这是相继互入，可作相推的结构。刚之不再成立即柔之开始成立，是一条两行引理：一规定之不再成立（CeasesToBe）蕴含其否定之开始成立（ComesToBe），在构成逻辑中成立；逆向需要该规定在所读之处稳定（ComesToBe.of_not、CeasesToBe.of_not）。爻值只有刚柔两值且可判定，所以对爻而言两向都成立。",
+     "gap": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。",
      "locator": "系辞上·冻结第二章",
      "tradition": "易",
      "work": "《周易·繫辭上》",
@@ -9633,13 +9645,19 @@
       "Becoming.Web.arising_recurs_iff",
       "Becoming.keep_pace",
       "Becoming.ComesToBe",
-      "Becoming.CeasesToBe"
+      "Becoming.CeasesToBe",
+      "Becoming.CeasesToBe.not_comes",
+      "Becoming.ComesToBe.not_ceases",
+      "Becoming.ComesToBe.of_not",
+      "Becoming.CeasesToBe.of_not",
+      "Becoming.Web.ceasing_readings"
      ],
      "records": [
-      "coming-and-ceasing-keep-pace"
+      "coming-and-ceasing-keep-pace",
+      "negation-change-and-stable-cases"
      ],
-     "reading": "AI读法：《德充符》列死生、存亡诸对，说「是事之變，命之行也，日夜相代乎前」：这些事之变日夜不停地相互更替于前；日夜是时间状语，相代的主语是这些互补之对。结构是交替：一态之不再成立（CeasesToBe）即其补态之开始成立（ComesToBe），这是一条两行引理（见 gap）。在有限且各规定可判定的族中，开始成立在任意晚之步复现，当且仅当不再成立也如此（coming_recurs_iff；活动的形式为 Web.arising_recurs_iff）；开始成立与不再成立之数相差不过成员数（keep_pace），这是交替在族上的计数界，本身不要求互补。若把「命之行」读为定数，则不带入；「知不能規乎其始」不是理论需要的断言。",
-     "gap": "引理（非缺口结果）：CeasesToBe p t → ComesToBe (fun s => ¬ p s) t 与 ComesToBe p t → CeasesToBe (fun s => ¬ p s) t 构成性成立（各两行，可期空公理报告）；逆向 ComesToBe (fun s => ¬ p s) t → CeasesToBe p t 需要 ¬¬p t → p t，即 p t 可判定。已 grep Becoming/*.lean：没有此陈述；ComesToBe／CeasesToBe 只施于活动、要求、水平、爻之实现等谓词。记为 mojing-yi-cheng-wang、xici-gang-rou-xiang-tui、zhuangzi-ri-ye-xiang-dai 三条共用的引理，不列入缺口结果。",
+     "reading": "AI读法：《德充符》列死生、存亡诸对，说「是事之變，命之行也，日夜相代乎前」：这些事之变日夜不停地相互更替于前；日夜是时间状语，相代的主语是这些互补之对。结构是交替：一态之不再成立（CeasesToBe）即其补态之开始成立（ComesToBe），这是一条两行引理（CeasesToBe.not_comes、ComesToBe.not_ceases）。在有限且各规定可判定的族中，开始成立在任意晚之步复现，当且仅当不再成立也如此（coming_recurs_iff；活动的形式为 Web.arising_recurs_iff）；开始成立与不再成立之数相差不过成员数（keep_pace），这是交替在族上的计数界，本身不要求互补。若把「命之行」读为定数，则不带入；「知不能規乎其始」不是理论需要的断言。",
+     "gap": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。",
      "locator": "《庄子·德充符》",
      "tradition": "道",
      "work": "《庄子·德充符》",
@@ -9739,20 +9757,22 @@
       "Becoming.Generations.generations",
       "Becoming.Lineage.readings",
       "Becoming.Web.Whole.needs_arising",
-      "Becoming.Accretion.never_ceases"
+      "Becoming.Accretion.never_ceases",
+      "Becoming.Web.not_arises_of_unchanged"
      ],
      "records": [
       "whole-persists-through-generation",
       "identity-across-steps",
-      "coming-and-ceasing-keep-pace"
+      "coming-and-ceasing-keep-pace",
+      "arising-needs-change"
      ],
-     "reading": "AI读法：唯识论种子的六个条件中，「剎那滅」说种子才生即灭，以此遮破常法：「常無轉變，不可說有能生用故」；「恒隨轉」说要长时一类相续。相合之处：在一个构造的见证中（Generations），每个成员只活动两步并终止，谱系却每步都活动，每步都有成员生起（Generations.generations）；另一见证中（Lineage），分开命名则生起不息，作一命名则生起不复现（Lineage.readings）：同一相续可读为不断新起，也可读为一类。一般地，一个整体自某步起每步活动，由各自会终止的部分组成，且活动部分有一张逐步的名单，则不会自某步起再无部分生起（Web.Whole.needs_arising）：一类相续只靠成员不断生起。定域之处：刹那必灭不是律，理论不要求每一成员每步止息；在一个构造的见证中（Accretion），形成永不止息（Accretion.never_ceases）。不变者无能生之用，在脊柱上尚未找到对应定理，列为待查（见 gap）。",
+     "reading": "AI读法：唯识论种子的六个条件中，「剎那滅」说种子才生即灭，以此遮破常法：「常無轉變，不可說有能生用故」；「恒隨轉」说要长时一类相续。相合之处：在一个构造的见证中（Generations），每个成员只活动两步并终止，谱系却每步都活动，每步都有成员生起（Generations.generations）；另一见证中（Lineage），分开命名则生起不息，作一命名则生起不复现（Lineage.readings）：同一相续可读为不断新起，也可读为一类。一般地，一个整体自某步起每步活动，由各自会终止的部分组成，且活动部分有一张逐步的名单，则不会自某步起再无部分生起（Web.Whole.needs_arising）：一类相续只靠成员不断生起。定域之处：刹那必灭不是律，理论不要求每一成员每步止息；在一个构造的见证中（Accretion），形成永不止息（Accretion.never_ceases）。不变者无能生之用：一个恰在受支持时活跃的形成，跨一步时若其所读者（所需、需要之量与各条件之水平）皆不变，就不生起（Web.not_arises_of_unchanged）；生起需要所读者有变。",
      "names_used": [
       "相续",
       "兼",
       "体"
      ],
-     "gap": "待查：「不可說有能生用」——不变者对他者没有使之生起的效力（因果效力）。已 grep Becoming/*.lean：stays_failing 只关乎该规定自身（不成立且此后从不开始成立者此后一直不成立），不是此结构；尚未找到“自某步起不变的条件不能使依存者在任意晚之步生起”一类定理。最近：Becoming.stays_failing、Becoming.Web.Carries.arising_not_recurring。",
+     "gap": "已补（ZG3，2026年10月22日）：Becoming.Web.not_arises_of_unchanged。见记录 arising-needs-change。",
      "locator": "卷二·种子六义；T31n1585",
      "relational": "动态的；剎那必灭之普遍化不取",
      "tradition": "佛（唯识）",
@@ -12735,13 +12755,16 @@
      "declarations": [
       "Becoming.Flow.Balances.supported_iff_within_margin",
       "Becoming.Flow.Balances.supported_of_net_give",
-      "Becoming.Flow.Balances.retains_iff_within_margin"
+      "Becoming.Flow.Balances.retains_iff_within_margin",
+      "Becoming.Web.FitsBand",
+      "Becoming.Flow.fitsBand_iff_within_margins_at"
      ],
      "records": [
       "closing-needs-net-draw",
-      "significance-retained-within-margin"
+      "significance-retained-within-margin",
+      "a-need-with-a-cap"
      ],
-     "reading": "AI读法：自选条目。经下「損而不害。說在餘。」，经说：从饱者去其多出之量，恰足者不受害。这是余地之界：取在余地之内不使任何依存者失去被容，越过余地才害。脊柱确切：衡之下，一个形成在某步被容，恰当在它所需的每个条件上，所需连同部分至今所取，不多于偏去此部分时的水平连同部分至今所给，即部分的净取在余地之内（Flow.Balances.supported_iff_within_margin）；净给予的部分不阖（supported_of_net_give）；在一个顾、一个方之下，有顾者被保留恰当净取在余地之内（retains_iff_within_margin，带 sig、p 参数）。「能害飽」（过饱亦害）是另一侧的界：脊柱之容只读所需的下界，过多之害没有对应之律，见 gap。",
+     "reading": "AI读法：自选条目。经下「損而不害。說在餘。」，经说：从饱者去其多出之量，恰足者不受害。这是余地之界：取在余地之内不使任何依存者失去被容，越过余地才害。脊柱确切：衡之下，一个形成在某步被容，恰当在它所需的每个条件上，所需连同部分至今所取，不多于偏去此部分时的水平连同部分至今所给，即部分的净取在余地之内（Flow.Balances.supported_iff_within_margin）；净给予的部分不阖（supported_of_net_give）；在一个顾、一个方之下，有顾者被保留恰当净取在余地之内（retains_iff_within_margin，带 sig、p 参数）。「能害飽」（过饱亦害）是另一侧的界：所需带上限时，水平须在所需与上限之间（Web.FitsBand）；平衡之下此带两侧皆确切，部分以给予自下开之，以给予越过上限之余地自上阖之（Flow.fitsBand_iff_within_margins_at）。",
      "names_used": [
       "余地",
       "偏去",
@@ -12752,7 +12775,7 @@
       "方",
       "衡"
      ],
-     "gap": "尚缺带上界的容及其对偶定理：所需带一个上界（过多亦不被容）时，衡之下“净给予越过上界一侧的余地才阖”。可由带余地条件的所需写出。最近的声明：Becoming.Web.Admits、Becoming.Flow.Balances.supported_iff_within_margin、Becoming.Flow.withinGap_iff_between、Becoming.Flow.Opposes。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Web.FitsBand、Flow.fitsBand_iff_within_margins_at。见记录 a-need-with-a-cap。",
      "layer_checked": "",
      "locator": "墨子·经说下",
      "work": "墨子·墨经",
@@ -12888,15 +12911,17 @@
       "Becoming.Flow.Conveys",
       "Becoming.Flow.Balances.runs_down",
       "Becoming.Flow.takers_within_on",
-      "Becoming.Flow.fed_from_beyond"
+      "Becoming.Flow.fed_from_beyond",
+      "Becoming.Flow.conveyed_loses"
      ],
      "records": [
       "conveyance-crosses-the-boundary",
       "laws-of-one-step",
       "no-finite-part-bears-taking",
-      "continuing-self-fed-from-beyond"
+      "continuing-self-fed-from-beyond",
+      "far-conveying-runs-the-family-down"
      ],
-     "reading": "AI读法：远输是一程接一程的输送，每一程一取一与（Flow.Conveys）。若沿途每程之家族跨步衡且耗，则每一步家族至少下降取者之数（Flow.Balances.runs_down），一段步上取者之总数不多于起点存量（takers_within_on），所以输送越远，损失越多。孙子「食敵一鍾，當吾二十鍾」是经验之数，律只给下界。「取用於國，因糧於敵」则是：衡且耗之下，被围住而取用不停的有限家族不能自足，不能自某步起皆无自外来者（Flow.fed_from_beyond）。相合在输送之耗及自外来；「敵」的争胜一层不携带。缺口见 gap。",
+     "reading": "AI读法：远输是一程接一程的输送，每一程一取一与（Flow.Conveys）。若沿途每程之家族跨步衡且耗，则每一步家族至少下降取者之数（Flow.Balances.runs_down），一段步上取者之总数不多于起点存量（takers_within_on），所以输送越远，损失越多。孙子「食敵一鍾，當吾二十鍾」是经验之数，律只给下界。「取用於國，因糧於敵」则是：衡且耗之下，被围住而取用不停的有限家族不能自足，不能自某步起皆无自外来者（Flow.fed_from_beyond）。相合在输送之耗及自外来；「敵」的争胜一层不携带。沿 N 程输送（每程自族之一员有所输送，族跨步衡且耗），族之存量至少降 N，起点存量为 S 者至多输送 S 程（Flow.conveyed_loses）。",
      "names_used": [
       "输",
       "取",
@@ -12907,7 +12932,7 @@
       "围",
       "衡"
      ],
-     "gap": "脊柱没有把输送之程数跟损失直接连起的定理：“沿 k 程输送（每程一取一与，每程之家族跨步衡且耗），至少失 k；起点存量为 S 时，至多输送 S 程”。它可由 Flow.Balances.runs_down 逐步相加及 Flow.takers_within_on 得到，但未作为关于 Flow.Conveys 之链的陈述写出；最近的声明：Becoming.Flow.Conveys、Becoming.Flow.takers_within_on、Becoming.Flow.Balances.runs_down、Becoming.Amounts.loses_times。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Flow.conveyed_loses（由 Flow.takers_within_on）。见记录 far-conveying-runs-the-family-down。",
      "layer_checked": "",
      "locator": "孙子·作战",
      "work": "孙子",
@@ -12930,16 +12955,19 @@
       "Becoming.RelativePosition.total_split",
       "Becoming.RelativePosition.positions_balance",
       "Becoming.RelativePosition.rise_needs_fall",
-      "Becoming.RelativePosition.not_all_rise"
+      "Becoming.RelativePosition.not_all_rise",
+      "Becoming.RelativePosition.least_not_ahead",
+      "Becoming.RelativePosition.least_bound"
      ],
      "records": [
-      "relative-position-is-zero-sum"
+      "relative-position-is-zero-sum",
+      "least-parts-and-equal-shares"
      ],
-     "reading": "AI读法：总量一定，备于此则少于彼。脊柱：一个家族之总等于一部分之量加上其他部分之总（RelativePosition.total_split）；按计数的相对位置（称）是零和的（positions_balance）；一部分之称升，需要另一部分之称降（rise_needs_fall）；没有一次改变使每一部分之称都升（not_all_rise）。「無所不備，則無所不寡」更进一步：所备之处越多，每处越少；这一条是缺口，见 gap。敌我的争胜一层不携带。",
+     "reading": "AI读法：总量一定，备于此则少于彼。脊柱：一个家族之总等于一部分之量加上其他部分之总（RelativePosition.total_split）；按计数的相对位置（称）是零和的（positions_balance）；一部分之称升，需要另一部分之称降（rise_needs_fall）；没有一次改变使每一部分之称都升（not_all_rise）。「無所不備，則無所不寡」更进一步：所备之处越多，每处越少；最小一处不在平均之上（RelativePosition.least_not_ahead），处数增多而总量不增，则最小一处不增（RelativePosition.least_bound）：无所不备，则无所不寡。敌我的争胜一层不携带。",
      "names_used": [
       "称"
      ],
-     "gap": "脊柱有最大一处不在家族平均之下（Becoming.RelativePosition.greatest_not_behind：家族之总不多于最大一处之量的处数倍；Becoming.RelativePosition.greatest_exists），缺其对偶：最小一处之量的处数倍不多于家族之总，即最小一处不在平均之上；也缺“处数增多而总量不增，则最小一处不增”。最近的声明：Becoming.RelativePosition.greatest_not_behind、Becoming.RelativePosition.greatest_exists、Becoming.RelativePosition.total_split、Becoming.le_total_of_mem。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.RelativePosition.Least、least_not_ahead、least_exists、least_bound。见记录 least-parts-and-equal-shares。",
      "layer_checked": "",
      "locator": "孙子·虚实",
      "work": "孙子",
@@ -14333,16 +14361,21 @@
       "Becoming.Web.lasts_on",
       "Becoming.Web.ends_within_from",
       "Becoming.Web.Carries.consumed_lasts",
-      "Becoming.Web.RestoredWithin"
+      "Becoming.Web.RestoredWithin",
+      "Becoming.Web.ends_within_on",
+      "Becoming.Web.ended_for_good",
+      "Becoming.Web.late_return_finds_none",
+      "Becoming.Bridged.bridged"
      ],
      "records": [
       "whether-a-loop-closes-a-difference",
       "becoming-return-grades",
-      "reserve-defers-ending"
+      "reserve-defers-ending",
+      "dormancy-over-a-stretch"
      ],
      "relational": "迟复是条件再被满足所需之时与依存者所持储备之间的关系。",
-     "gap": "缺：把期与依存者之储备相连的定律。精确陈述：在 Web 上，g 对 c 的依存自 T 起不变，c 自 T+1 至 T+p−1 低于 T 时之需（g 在这些步不受支持），在 T+p 再被满足（Becoming.Web.RestoredWithin p T g c 的一个实例）；r 在这些步上承载并衰减 g（Becoming.Web.CarriesAcross、Becoming.Web.DecaysAcross）。（i）一段上的有界休眠：若 r (T+1) g ≤ n 且 T+1+n ≤ T+p−1，则 g 在 T+1+n 不活跃。现有 Becoming.Web.ends_within_from 的前提是自某步起每一步都无支持，复足之例不满足；其证明只用到该段（与 Becoming.Web.lasts_on、Becoming.Web.decays_by_from 同），所以只问一段的形式应可直接立出。（ii）终结前提以 Becoming.Web.Arises 之定义（t 不活跃、t+1 活跃）陈述：对每个 t ≥ T+1+n，若 g 在 t 不活跃且 r t g = 0，则 ¬ Web.Arises t g 且 r (t+1) g = 0（储备耗尽者不再生起，休眠中储备也不回升）。由（i）之一段证明（decays_by_from 之一段形式）r (T+1+n) g = 0，于是 g 自 T+1+n 起每步不活跃，T+p 及其后皆然：迟到的复足不再有依存者。只写“r t g = 0 时不生起”不够：复足之步 g 受支持，Becoming.Web.CarriesAcross 不约束受支持之步的储备，储备可以回升而 g 再生起。Web 中受支持之形成可以再活跃，所以终局性必须作为前提写出，不能藏在定义里。（iii）若 p − 1 ≤ r (T+1) g，存在一个 Web 使 g 每步活跃直至 T+p。合起来：期长于依存者之储备且终结是终局时，迟复成迷；储备足以跨过者可以不成迷（（iii）只是存在之例，不是逆命题）。最近声明：Becoming.Web.lasts_on、Becoming.Web.ends_within_from、Becoming.Web.decays_by_from、Becoming.Web.Carries.consumed_lasts、Becoming.Web.RestoredWithin、Becoming.Slowing.slowing_recovery。",
-     "reading": "AI读法：王弼把迟复与迷连起来：「復之不速，遂至迷凶」。一半与脊柱同构，与周敦颐「识不早，力不易也」（RU2-S-S01；RO ru-zhoudunyi-shi）相同：回路之报不动零差且对每个正差都低于所受时，偏差为 d 者在 d 轮内闭合，此界确切（LoopReturn.closes_within、closes_within_exact）——偏差越大，闭合之界越大。另一半「遂至」，即迟则成迷，在条件一方不成立：恢复无界变慢者每次仍复足，不被消耗（Slowing.slowing_recovery）。使王弼之句成立的条件在依存者一方：被储备承载而无支持的一段内，形成的活跃次数至多如其起始储备（Web.lasts_on）；自某步起被承载、储备衰减而永无支持者，经过与该步储备等数之步后不再活跃（Web.ends_within_from）；条件被消耗且依存不变时，有储备者也不在任意晚之步仍活跃（Web.Carries.consumed_lasts）。所以期（Web.RestoredWithin 之 p）长于依存者之储备时，条件回来之前依存者已有多步不活跃，蛰有其界；但现有的有界休眠之律要求自某步起永无支持，而复足恰是支持回来，从不活跃到迷（复足之时依存者已不再生起）还缺两件，见 gap。",
+     "gap": "已补（ZG3，2026年10月22日）：（i）Becoming.Web.decays_by_on、Web.ends_within_on；（ii）Web.ended_for_good、Web.late_return_finds_none；（iii）Bridged.bridged。见记录 dormancy-over-a-stretch。",
+     "reading": "AI读法：王弼把迟复与迷连起来：「復之不速，遂至迷凶」。一半与脊柱同构，与周敦颐「识不早，力不易也」（RU2-S-S01；RO ru-zhoudunyi-shi）相同：回路之报不动零差且对每个正差都低于所受时，偏差为 d 者在 d 轮内闭合，此界确切（LoopReturn.closes_within、closes_within_exact）——偏差越大，闭合之界越大。另一半「遂至」，即迟则成迷，在条件一方不成立：恢复无界变慢者每次仍复足，不被消耗（Slowing.slowing_recovery）。使王弼之句成立的条件在依存者一方：被储备承载而无支持的一段内，形成的活跃次数至多如其起始储备（Web.lasts_on）；自某步起被承载、储备衰减而永无支持者，经过与该步储备等数之步后不再活跃（Web.ends_within_from）；条件被消耗且依存不变时，有储备者也不在任意晚之步仍活跃（Web.Carries.consumed_lasts）。所以期（Web.RestoredWithin 之 p）长于依存者之储备时，条件回来之前依存者已有多步不活跃，蛰有其界；有界休眠之律只需其前提在一段上成立（Web.ends_within_on），终结为终局时，此后无论支持是否回来，依存者皆不再活跃（Web.ended_for_good）；所以期长于储备者，迟复成迷（Web.late_return_finds_none），储备足以跨过此段者可以不迷（Bridged.bridged，存在之例）。",
      "names_used": [
       "复足",
       "期",
@@ -15417,15 +15450,18 @@
       "Becoming.Web.Whole.arises_within",
       "Becoming.Shifts.shifts",
       "Becoming.Web.Covered.arises_within",
-      "Becoming.Web.ByPassing.present_of_le"
+      "Becoming.Web.ByPassing.present_of_le",
+      "Becoming.Web.Whole.persists_of_arising",
+      "Becoming.Web.Whole.persists_from"
      ],
      "records": [
       "whole-persists-through-generation",
-      "a-pattern-lasts-through-passing"
+      "a-pattern-lasts-through-passing",
+      "a-whole-carried-by-lasting-parts"
      ],
      "relational": "久经由每个生起之部分持续多久而与不息相关。",
-     "gap": "缺：Web.Whole.arises_within 之逆。精确陈述：在 Web 上，w 为 parts 之整体（Becoming.Web.Whole parts w：w 在 t 活跃恰当某部分在 t 活跃）；若自 T 起每 d 个相继步内都有某部分 p 与某 t 满足 Becoming.Web.Arises t p（t 不活跃、t+1 活跃），且每当 Web.Arises t p，p 自 t+1 起至少连续活跃 d 步，则 w 自 T + d 起每步活跃。最近声明：Becoming.Web.Whole.arises_within（逆方向）、Becoming.Web.Covered.arises_within、Becoming.Gaps.gaps（无持续前提时失败）、Becoming.Shifts.shifts（d = 2 的实例）、Becoming.Web.ByPassing.present_of_le（样式在传递前提下的对应）。",
-     "reading": "AI读法：「不息則久」是否成立，取决于不息与久各读作什么。若把「息」读作不在场：只经由传递而延续的样式，后来在场蕴涵此前每步在场（Web.ByPassing.present_of_le），所以在任意晚之步在场即每步在场，经文方向是定理；但这不是本编之不息。本编之不息是生起无止地复现（Web.Unceasing）；读作整体之部分不息，经文方向不成立：在一个构造之例中，部分在任意晚之步生起、各自终结、为清单所列，而整体在每个偶数步不活跃（Gaps.gaps）。成立的是反方向：自某步起每步活跃的整体，其部分各终且为清单所列，则不会自某步起无一部分生起（Web.Whole.needs_arising，结论为否定形）；部分不在相隔 d 步的两步皆活跃时，不会有连续 d 步无一部分生起（Web.Whole.arises_within）；部分轮班两步、整体每步活跃的构造之例达到此界（Shifts.shifts）。所以对整体，「不息則久」需要一个附加前提：每个生起之部分至少持续到下一个生起之时，见 gap。「至誠」与「久則徵」以下不映射。",
+     "gap": "已补（ZG3，2026年10月22日）：Becoming.Web.Whole.persists_of_arising、Whole.persists_from。见记录 a-whole-carried-by-lasting-parts。",
+     "reading": "AI读法：「不息則久」是否成立，取决于不息与久各读作什么。若把「息」读作不在场：只经由传递而延续的样式，后来在场蕴涵此前每步在场（Web.ByPassing.present_of_le），所以在任意晚之步在场即每步在场，经文方向是定理；但这不是本编之不息。本编之不息是生起无止地复现（Web.Unceasing）；读作整体之部分不息，经文方向不成立：在一个构造之例中，部分在任意晚之步生起、各自终结、为清单所列，而整体在每个偶数步不活跃（Gaps.gaps）。成立的是反方向：自某步起每步活跃的整体，其部分各终且为清单所列，则不会自某步起无一部分生起（Web.Whole.needs_arising，结论为否定形）；部分不在相隔 d 步的两步皆活跃时，不会有连续 d 步无一部分生起（Web.Whole.arises_within）；部分轮班两步、整体每步活跃的构造之例达到此界（Shifts.shifts）。所以对整体，「不息則久」需要一个附加前提：每个生起之部分至少持续到下一个生起之时；有此前提，整体自 T + d 起每步活跃（Whole.persists_of_arising、Whole.persists_from），无此前提则不成（Gaps）。「至誠」与「久則徵」以下不映射。",
      "names_used": [
       "不息",
       "久",
@@ -16421,15 +16457,19 @@
       "Becoming.Web.lasts_on",
       "Becoming.Web.ends_within_from",
       "Becoming.Web.carries_zero",
-      "Becoming.Slowing.slowing_recovery"
+      "Becoming.Slowing.slowing_recovery",
+      "Becoming.Web.ends_within_on",
+      "Becoming.Web.late_return_finds_none",
+      "Becoming.Bridged.bridged"
      ],
      "records": [
       "becoming-return-grades",
-      "reserve-defers-ending"
+      "reserve-defers-ending",
+      "dormancy-over-a-stretch"
      ],
      "relational": "生长是依存者与间歇之支持的关系：支持之间隔长于依存者之储备则不生。",
-     "gap": "与 wangbi-fu-bu-su 之 gap 同：一段上的有界休眠（Becoming.Web.ends_within_from 只对自某步起永无支持者成立），以及以 Becoming.Web.Arises 写出的终结前提（须含储备耗尽者休眠中储备不回升，见该 gap 之（ii））。",
-     "reading": "AI读法：容易生长之物，一日得其所需（暴），十日失之（寒），则不能生长。在条件之水平与依存之需上读：所需每十一步只在一步被满足，即在被满足之步之后以十一为期复足（Web.RestoredWithin 11 之型），不是每步皆持。脊柱给它成立的范围：被储备承载而无支持的一段内，形成的活跃次数至多如其起始储备（Web.lasts_on）；自某步起被承载、储备衰减而永无支持者，经过与该步储备等数之步后不再活跃（Web.ends_within_from）；储备为零恰是活跃须受支持（Web.carries_zero）。所以「未有能生」在无支持之段（十日）长于依存者之储备、且终结为终局时成立（从此到“未有能生”还缺一条只问一段之律，见 gap）；储备足以跨过此段者，间隔之复足可以维持（只是存在之例，亦见 gap）。反过来，条件每次都复足而期无界变慢，也不被消耗（Slowing.slowing_recovery）：问题在依存者，不在条件。「吾见亦罕矣，吾退而寒之者至矣」是对王之应用，弈秋之喻说专心，不映射。",
+     "gap": "已补（ZG3，2026年10月22日）：同 wangbi-fu-bu-su，见记录 dormancy-over-a-stretch。",
+     "reading": "AI读法：容易生长之物，一日得其所需（暴），十日失之（寒），则不能生长。在条件之水平与依存之需上读：所需每十一步只在一步被满足，即在被满足之步之后以十一为期复足（Web.RestoredWithin 11 之型），不是每步皆持。脊柱给它成立的范围：被储备承载而无支持的一段内，形成的活跃次数至多如其起始储备（Web.lasts_on）；自某步起被承载、储备衰减而永无支持者，经过与该步储备等数之步后不再活跃（Web.ends_within_from）；储备为零恰是活跃须受支持（Web.carries_zero）。所以「未有能生」在无支持之段（十日）长于依存者之储备、且终结为终局时成立（Web.ends_within_on、Web.late_return_finds_none）；储备足以跨过此段者，间隔之复足可以维持（Bridged.bridged，只是存在之例）。反过来，条件每次都复足而期无界变慢，也不被消耗（Slowing.slowing_recovery）：问题在依存者，不在条件。「吾见亦罕矣，吾退而寒之者至矣」是对王之应用，弈秋之喻说专心，不映射。",
      "names_used": [
       "复足",
       "期",
@@ -20357,14 +20397,18 @@
       "Becoming.Hexagram.waxWane_complement",
       "Becoming.Hexagram.waxWane_apart",
       "Becoming.Hexagram.qian_not_reach_jiJi",
-      "Becoming.Law.Merges.not_both_return"
+      "Becoming.Law.Merges.not_both_return",
+      "Becoming.Law.Meet.trans",
+      "Becoming.Law.Meet.reaches_returning",
+      "Becoming.Law.basin_one_cycle"
      ],
      "records": [
       "attraction-is-not-returning",
       "hexagram-world-laws",
-      "what-a-commuting-law-keeps-apart"
+      "what-a-commuting-law-keeps-apart",
+      "basins-of-a-determined-law"
      ],
-     "reading": "AI读法：此句上文是「天下何思何虑」，所说是思虑之同归；以下只取其结构。「同归而殊途」在此读为：许多不同之起点，经各自之行程，入同一所归。所归为一个构形时，入之即与他者合于一处，是中华本之同归（行程之合并）；所归为回环时，入同一回环者可以不合并（回环上相位不同者），故入同一所归不必同归，文句之「同归」宽于中华本之名。脊柱：构形有限时，不复之构形都入会复返者之域（Law.drawnInto_returning）。卦中一例：互卦之法下，第二步时十六卦在乾、十六卦在坤、三十二卦在既济未济之轮转（Hexagram.basin_counts），即三个势，所归有三，不是一；既济未济在轮转上永不合一。要把一切带到同一构形，法不能与任何移动每一构形之对称交换（Law.Commutes.not_drawn_to_one）；要合并对称所分开者，法须破坏对称（Law.Commutes.breaks），使每一卦入全柔之法即如此（Hexagram.wane_breaks）；消息之法与六爻皆变交换（Hexagram.waxWane_complement），一卦与其全变之卦永不合一（Hexagram.waxWane_apart），从乾不达既济（Hexagram.qian_not_reach_jiJi）。被合并之二不都复（Law.Merges.not_both_return）：同归必有所失。「一致而百虑」之「一」不读为本原。",
+     "reading": "AI读法：此句上文是「天下何思何虑」，所说是思虑之同归；以下只取其结构。「同归而殊途」在此读为：许多不同之起点，经各自之行程，入同一所归。所归为一个构形时，入之即与他者合于一处，是中华本之同归（行程之合并）；所归为回环时，入同一回环者可以不合并（回环上相位不同者），故入同一所归不必同归，文句之「同归」宽于中华本之名。脊柱：构形有限时，不复之构形都入会复返者之域（Law.drawnInto_returning）。卦中一例：互卦之法下，第二步时十六卦在乾、十六卦在坤、三十二卦在既济未济之轮转（Hexagram.basin_counts），即三个势，所归有三，不是一；既济未济在轮转上永不合一。要把一切带到同一构形，法不能与任何移动每一构形之对称交换（Law.Commutes.not_drawn_to_one）；要合并对称所分开者，法须破坏对称（Law.Commutes.breaks），使每一卦入全柔之法即如此（Hexagram.wane_breaks）；消息之法与六爻皆变交换（Hexagram.waxWane_complement），一卦与其全变之卦永不合一（Hexagram.waxWane_apart），从乾不达既济（Hexagram.qian_not_reach_jiJi）。被合并之二不都复（Law.Merges.not_both_return）：同归必有所失。「一致而百虑」之「一」不读为本原。已补：确定之法下，诸构形之行程相会是等价关系，相会者成势（Law.Meet、Law.Meet.trans）；构形有限时，每一行程在构形数之内入复返之域（Law.enters_returning_within），每势中复返之构形彼此可达，即一个回环（Law.Meet.reaches_returning、Law.basin_one_cycle）：同归而殊途。",
      "names_used": [
       "同归",
       "所归",
@@ -20373,7 +20417,7 @@
       "复",
       "法"
      ],
-     "gap": "构形有限时，确定之法下，每一构形入会复返之域中之一个回环，诸回环之势分全体（各势构成划分）；脊柱只在互卦之法上有此例（Becoming.Hexagram.qian_basin、kun_basin、cycle_basin、basin_counts），一般只有 Becoming.Law.drawnInto_returning（入整个会复返之域）",
+     "gap": "已补（ZG3，2026年10月22日）：Becoming.Law.Meet、Law.Meet.trans、Law.Meet.reaches_returning、Law.basin_one_cycle。见记录 basins-of-a-determined-law。",
      "locator": "系辞下·冻结第4章·编者论证段1",
      "relational": "殊途与所归：不同之起点经其行程关联于所入之处；合并与入同一回环分开",
      "ro_passage": "xici-tonggui-shutu",
@@ -20399,14 +20443,16 @@
       "Becoming.Law.returning_absorbing",
       "Becoming.Law.drawnInto_returning",
       "Becoming.Law.succ_drawn_lossless",
-      "Becoming.unheld_of_new"
+      "Becoming.unheld_of_new",
+      "Becoming.Law.enters_returning_within"
      ],
      "records": [
       "hexagram-arrangements-and-laws",
       "attraction-is-not-returning",
-      "recurrence-without-premise"
+      "recurrence-without-premise",
+      "basins-of-a-determined-law"
      ],
-     "reading": "AI读法：《序卦》以卦名之字相承，「進必有所歸」之「歸」为接引「歸妹」而设（女子出嫁曰归），「必」是叙述之必；渐与归妹在一对之内（Hexagram.order_paired：每一对非倒转即六爻皆变），对内之递承见 xugua-within-pair。以下只就其字面结构定域。若读为凡行程必入一所归：构形有限时，每一行程都进入会复返者（Law.enters_returning，只断言存在），会复返者之域是闭（Law.returning_absorbing），不复之构形都入之（Law.drawnInto_returning）。开放之处不成立：后继之法这一个模型中，零被入而无一合并（Law.succ_drawn_lossless）；一个永不重访构形之序列，不在任何有限列表之中（unheld_of_new）。所以「必有所歸」之字面结构是有限构形之法，不是一切行程之法。",
+     "reading": "AI读法：《序卦》以卦名之字相承，「進必有所歸」之「歸」为接引「歸妹」而设（女子出嫁曰归），「必」是叙述之必；渐与归妹在一对之内（Hexagram.order_paired：每一对非倒转即六爻皆变），对内之递承见 xugua-within-pair。以下只就其字面结构定域。若读为凡行程必入一所归：构形有限时，每一行程都进入会复返者（Law.enters_returning，只断言存在），会复返者之域是闭（Law.returning_absorbing），不复之构形都入之（Law.drawnInto_returning）。开放之处不成立：后继之法这一个模型中，零被入而无一合并（Law.succ_drawn_lossless）；一个永不重访构形之序列，不在任何有限列表之中（unheld_of_new）。所以「必有所歸」之字面结构是有限构形之法，不是一切行程之法。已补：列出 m 个构形时，每一行程在第 m 步之前入复返之域（Law.enters_returning_within）。",
      "names_used": [
       "所归",
       "入",
@@ -20414,7 +20460,7 @@
       "复",
       "法"
      ],
-     "gap": "列出 m 个构形时，每一行程在 m 步之前入返回域（存在 n < m 使 orbit n 返回）；证明已在 Becoming.revisits_within（i < j ≤ m）之中，但 Becoming.Law.enters_returning 之陈述只给存在 n",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Law.enters_returning_within（存在 n < m）；Law.enters_returning 为其推论。见记录 basins-of-a-determined-law。",
      "locator": "序卦·下篇·编者论证段24",
      "relational": "行程与其所终之域；《序卦》之「歸」是卦名相承之辞",
      "tradition": "共享经典",
@@ -21709,20 +21755,23 @@
       "Becoming.Learning.selects_right_through",
       "Becoming.Learning.selects_not_right_of_parted",
       "Becoming.Learning.selects_right_of_reads",
-      "Becoming.Learning.goAlike_iff_lumped"
+      "Becoming.Learning.goAlike_iff_lumped",
+      "Becoming.Learning.through_iff_reads",
+      "Becoming.Learning.selects_right_iff"
      ],
      "records": [
       "selection-through-a-model-of-the-options",
-      "generalization-through-lumping"
+      "generalization-through-lumping",
+      "selection-right-exactly-where-read"
      ],
-     "reading": "AI读法：苏辙同章注说「聖人動必循理理之所在或直或曲要于通而已」；此句说，不循理的直不是直，循理的曲才是至直。这里把苏辙的理读作择所经之象（对诸选项的映射；象给同一项的选项归为一类）。脊柱：经象之择若恰好选出要紧者（p），p 在象所归为一类者上必然一致（Learning.selects_right_through，这只是必要的一向）；象若把 p 所分开的二者归为一类，就没有经它的择能恰好选出 p（selects_not_right_of_parted）——这是「直而非理則非直也」的结构：以表面的直为象，归并了要紧的区分，择就不能对。p 能由象读出时，经象来读的择恰好选出 p（selects_right_of_reads），这是充分的一向——「循理雖枉而天下之至直也」在这个条件下成立。理论中的理是承载变化之律的归并（goAlike_iff_lumped）；苏辙的理作为择所经之象时，择对不对不由「循理」本身保证，只在要紧者跨象之类一致之处才可能对，在要紧者由象读出之处必定能对。要紧者是给定的条件；这几条律只说择是否恰中要紧者，不给出「至」的排序（排序只在以广为愈）。",
+     "reading": "AI读法：苏辙同章注说「聖人動必循理理之所在或直或曲要于通而已」；此句说，不循理的直不是直，循理的曲才是至直。这里把苏辙的理读作择所经之象（对诸选项的映射；象给同一项的选项归为一类）。脊柱：经象之择若恰好选出要紧者（p），p 在象所归为一类者上必然一致（Learning.selects_right_through，这只是必要的一向）；象若把 p 所分开的二者归为一类，就没有经它的择能恰好选出 p（selects_not_right_of_parted）——这是「直而非理則非直也」的结构：以表面的直为象，归并了要紧的区分，择就不能对。p 能由象读出时，经象来读的择恰好选出 p（selects_right_of_reads），这是充分的一向——「循理雖枉而天下之至直也」在这个条件下成立。理论中的理是承载变化之律的归并（goAlike_iff_lumped）；苏辙的理作为择所经之象时，择对不对不由「循理」本身保证，只在要紧者跨象之类一致之处才可能对，在要紧者由象读出之处必定能对。要紧者是给定的条件；这几条律只说择是否恰中要紧者，不给出「至」的排序（排序只在以广为愈）。已补：跨象一致恰是由象读出（through_iff_reads），故经象之择恰能选出要紧者，恰在要紧者由象读出之处（selects_right_iff）。",
      "names_used": [
       "理",
       "象",
       "择",
       "类"
      ],
-     "gap": "必要一向与充分一向分别由两个定理给出；「跨象一致」与「由象读出」相等，是一个简单的构造性步骤，Lean 中没有把它写成一个定理。苏辙「要于通」中的「通」不在此条。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Learning.through_iff_reads、Learning.selects_right_iff。见记录 selection-right-exactly-where-read。",
      "locator": "苏辙《老子解》第22章",
      "relational": "行之曲直依理而定",
      "ro_passage": "",
@@ -36255,17 +36304,20 @@
       "Becoming.Flow.crosses_of_above",
       "Becoming.Flow.crosses_of_below",
       "Becoming.Regulation.Overshooting.oscillates",
-      "Becoming.Regulation.Overshooting.never_at"
+      "Becoming.Regulation.Overshooting.never_at",
+      "Becoming.Flow.not_at_of_beyond",
+      "Becoming.Flow.never_at_of_beyond"
      ],
      "records": [
-      "two-sided-regulation-and-late-reading"
+      "two-sided-regulation-and-late-reading",
+      "regulation-from-one-side-and-locally"
      ],
-     "reading": "AI读法：程颐以「若矯枉而過正過所以就正也」说小过之亨，是本簇「过正」的出处之一。脊柱（平衡之下，交换与偏离相反）：交换在与 m 之距以内，恰当下一水平落在 m 与当前水平之间（Flow.withinGap_iff_between，中节）；界内不越过 m（Flow.stays_between_at）；自某步起每步都在界内且相反，则距用尽时定于 m（Flow.settles，起步可取任一步）；越出其距则越过 m（Flow.crosses_of_above、crosses_of_below，过正）。由此定域：（一）就正不须过：能在界内相反者不越过而定于 m，脊柱没有一条律说须先过而后正，过只在相反之交换越出其距时发生；（二）过后能就正，恰在过后每步都回到界内且相反之时（Flow.settles 以过后一步为起步）；（三）每步越界者永不就正：下一水平若为 m，则交换必在界内（withinGap_iff_between 的一步推论，AI 所推，未单列为定理，见缺口）；Regulation.Overshooting 是其构造见证，两侧相反而每步越界，在 m 两侧往复而永不到 m（oscillates、never_at）。所以「過所以就正」不是一般之法，只在过后复归中节处成立。程颐另加两条限定：「不失時宜之謂正」以时宜定正，「所過者小事也事之大者豈可過也」以事之大小限过；脊柱中过能否就正只由此后之交换是否在界内定，时宜与事之大小无对应之律，这两条不承，也不能说与律一致。卦象爻位层（阴居尊位、阳失位）不采纳。",
+     "reading": "AI读法：程颐以「若矯枉而過正過所以就正也」说小过之亨，是本簇「过正」的出处之一。脊柱（平衡之下，交换与偏离相反）：交换在与 m 之距以内，恰当下一水平落在 m 与当前水平之间（Flow.withinGap_iff_between，中节）；界内不越过 m（Flow.stays_between_at）；自某步起每步都在界内且相反，则距用尽时定于 m（Flow.settles，起步可取任一步）；越出其距则越过 m（Flow.crosses_of_above、crosses_of_below，过正）。由此定域：（一）就正不须过：能在界内相反者不越过而定于 m，脊柱没有一条律说须先过而后正，过只在相反之交换越出其距时发生；（二）过后能就正，恰在过后每步都回到界内且相反之时（Flow.settles 以过后一步为起步）；（三）每步越界者永不就正：下一水平若为 m，则交换必在界内，所以越界之步后水平不为 m（Flow.not_at_of_beyond），自某步起每步越界者此后永不为 m（Flow.never_at_of_beyond）；Regulation.Overshooting 是其构造见证，两侧相反而每步越界，在 m 两侧往复而永不到 m（oscillates、never_at）。所以「過所以就正」不是一般之法，只在过后复归中节处成立。程颐另加两条限定：「不失時宜之謂正」以时宜定正，「所過者小事也事之大者豈可過也」以事之大小限过；脊柱中过能否就正只由此后之交换是否在界内定，时宜与事之大小无对应之律，这两条不承，也不能说与律一致。卦象爻位层（阴居尊位、阳失位）不采纳。",
      "names_used": [
       "过正",
       "中节"
      ],
-     "gap": "脊柱未单列：平衡之下，若自某步起每步交换都越出与 m 之距，则此后水平永不为 m。这是 Flow.withinGap_iff_between 的一步推论（下一水平为 m 时 Regulation.Between m x m 恒成立，故交换在界内），AI 手推，未经 Lean。最近：Becoming.Flow.withinGap_iff_between、Becoming.Regulation.Between、Becoming.Regulation.Overshooting.never_at。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Flow.not_at_of_beyond、Flow.never_at_of_beyond。见记录 regulation-from-one-side-and-locally。",
      "locator": "伊川易传·卷4·第62卦·卦首总论及卦辞注",
      "relational": "矫枉越过正点，越过是为了回到正；有些事须过而后能亨；正以时宜定，过限于小事。",
      "ro_passage": "",
@@ -36376,16 +36428,19 @@
       "Becoming.Flow.settles",
       "Becoming.Regulation.OneSided.restores_premise",
       "Becoming.Regulation.OneSided.above",
-      "Becoming.Regulation.OneSided.not_opposes"
+      "Becoming.Regulation.OneSided.not_opposes",
+      "Becoming.Flow.held_below",
+      "Becoming.Flow.never_returns_below"
      ],
      "records": [
-      "two-sided-regulation-and-late-reading"
+      "two-sided-regulation-and-late-reading",
+      "regulation-from-one-side-and-locally"
      ],
      "relational": "物化而欲起，由一镇者只对上升一侧施抑。",
      "ro_passage": "lao-37-wu-wei-er-wu-bu-wei",
-     "gap": "脊柱缺：有交换的单侧之律。设交换在 m 的一侧与偏离相反、以距为界，在另一侧不读水平（或顺之），证明水平不定于 m，并给出它停留的一侧之带；与两侧有界之定（Flow.settles）对照。现有 Regulation.OneSided 是空流的见证：流为空、水平恒为 2、m=1，下侧之相反与恢复前提只空真成立，它只说明满足单侧前提不是调节，不是一个有交换的单侧之律。最近：Becoming.Flow.Opposes、Becoming.Flow.WithinGap、Becoming.Flow.settles、Becoming.Regulation.OneSided.above、Becoming.Regulation.OneSided.not_opposes。",
+     "gap": "已补（ZG2，2026年10月22日）：Becoming.Flow.held_below、Flow.never_returns_below（Flow.stays_below 为其门控之情形）。见记录 regulation-from-one-side-and-locally。",
      "layer_checked": "",
-     "reading": "AI读法：本条只收「化而欲作，吾将镇之以无名之朴」。结构是一偏：镇只对一侧（欲作，上升）回应。脊柱对一偏只有一个空见证：Regulation.OneSided 中流为空，水平恒为 2，m=1；下侧之相反与恢复前提空真成立（OneSided.restores_premise），水平永在 m 之上（OneSided.above），上侧不相反（OneSided.not_opposes）。它只说明〈满足单侧前提〉不等于调节；有交换的单侧之律（只镇上而不举下）脊柱没有，见缺口。两侧相反且有界时水平定于 m（Flow.Opposes、Flow.settles），这是中和，与「镇」之单侧不同。RO 的声明处理同章「无为而无不为」（谁的动作是历程的读法），不是本句，本条不沿用。「吾将镇之」是一个镇者对他者之作的镇抑，触及四种非关系层的〈意志或单一中心〉层；异文要紧：郭店作「○（化）而○（欲）○（作），○（将）贞（镇）之以亡名之○（朴）」，没有「吾」字，镇者未被定为一个中心；帛书乙「而欲作吾將闐」有「吾」。所以中心层在传世本与帛书乙中明显，在郭店中不显；一偏之结构各本皆同。「无名之朴」作为镇之手段，律不采纳。",
+     "reading": "AI读法：本条只收「化而欲作，吾将镇之以无名之朴」。结构是一偏：镇只对一侧（欲作，上升）回应。脊柱对一偏只有一个空见证：Regulation.OneSided 中流为空，水平恒为 2，m=1；下侧之相反与恢复前提空真成立（OneSided.restores_premise），水平永在 m 之上（OneSided.above），上侧不相反（OneSided.not_opposes）。它只说明〈满足单侧前提〉不等于调节；有交换的单侧之律（只镇上而不举下）：平衡之下，m 之下交换不给多于取，则水平一旦在 m 之下即不再回到 m（Flow.held_below、Flow.never_returns_below）；所以只镇一侧者只从该侧定之。两侧相反且有界时水平定于 m（Flow.Opposes、Flow.settles），这是中和，与「镇」之单侧不同。RO 的声明处理同章「无为而无不为」（谁的动作是历程的读法），不是本句，本条不沿用。「吾将镇之」是一个镇者对他者之作的镇抑，触及四种非关系层的〈意志或单一中心〉层；异文要紧：郭店作「○（化）而○（欲）○（作），○（将）贞（镇）之以亡名之○（朴）」，没有「吾」字，镇者未被定为一个中心；帛书乙「而欲作吾將闐」有「吾」。所以中心层在传世本与帛书乙中明显，在郭店中不显；一偏之结构各本皆同。「无名之朴」作为镇之手段，律不采纳。",
      "names_used": [
       "一偏",
       "中和"
@@ -36416,19 +36471,23 @@
       "Becoming.polynomial_iff_no_loop",
       "Becoming.Flow.Opposes",
       "Becoming.Flow.WithinGap",
-      "Becoming.Flow.settles"
+      "Becoming.Flow.settles",
+      "Becoming.Flow.opposes_of_each",
+      "Becoming.Flow.withinGap_of_shares",
+      "Becoming.Flow.stock_settles"
      ],
      "records": [
       "how-loops-form",
       "how-a-carried-difference-grows",
       "whether-a-loop-closes-a-difference",
-      "two-sided-regulation-and-late-reading"
+      "two-sided-regulation-and-late-reading",
+      "regulation-from-one-side-and-locally"
      ],
      "relational": "法令愈彰而盗贼愈多；在上者好静而民自正。",
      "ro_passage": "",
-     "gap": "脊柱缺：对一族形成、各自只读其邻近条件之水平而无一形成读整体水平的局部之律，给出其联合交换在 m 两侧都与偏离相反且以与 m 之距为界（Flow.Opposes 与 Flow.WithinGap 对联合交换成立）的充分条件，从而整体水平定于 m（「自正」「自定」）。最近：Becoming.Flow.Opposes、Becoming.Flow.WithinGap、Becoming.Flow.regulates、Becoming.Flow.settles。",
+     "gap": "已补（ZG2，2026年10月22日）：Becoming.Flow.opposes_of_each、Flow.withinGap_of_shares、Flow.stock_settles。见记录 regulation-from-one-side-and-locally。",
      "layer_checked": "",
-     "reading": "AI读法：传世本「法令滋彰，盗贼多有」读作一个环：法令回应盗贼之水平，盗贼回应法令之水平。脊柱：环由闭合一条耦合之链形成（onLoop_of_closing、forms_by_closing），条件在某步恰经闭合而上环（onLoop_succ_iff）；每环节至少加倍则第 n 圈后至少 2^n·d（LoopReturn.runs_away），这是滋。携带量超过每个多项式恰经由环（polynomial_iff_no_loop），其前提要紧：强度不随时间变、每步同一组形成、一切条件都已列出、部分自起点后不再给出差异。版本要紧：郭店作「法勿（物）慈（滋）章（彰）」，河上公作「法物滋彰，盗贼多有」（注「法物，好物也」），是所欲之物引出盗贼，是一条链，未必成环；帛书乙此句作「物茲章而盜賊」，「物」前缺文，不能定其作法物或法令。经由制度之环的读法只属传世本。「我好静而民自正」（LL-R025 所记）：没有一个镇者施力而整体自定。脊柱有两侧调节之定（Flow.Opposes、Flow.WithinGap、Flow.settles），但相反与界是联合交换的特点，脊柱没有从各形成的局部之律导出联合交换两侧相反的定理，见缺口；所以「自正」定域为：联合交换两侧相反且有界时成立。",
+     "reading": "AI读法：传世本「法令滋彰，盗贼多有」读作一个环：法令回应盗贼之水平，盗贼回应法令之水平。脊柱：环由闭合一条耦合之链形成（onLoop_of_closing、forms_by_closing），条件在某步恰经闭合而上环（onLoop_succ_iff）；每环节至少加倍则第 n 圈后至少 2^n·d（LoopReturn.runs_away），这是滋。携带量超过每个多项式恰经由环（polynomial_iff_no_loop），其前提要紧：强度不随时间变、每步同一组形成、一切条件都已列出、部分自起点后不再给出差异。版本要紧：郭店作「法勿（物）慈（滋）章（彰）」，河上公作「法物滋彰，盗贼多有」（注「法物，好物也」），是所欲之物引出盗贼，是一条链，未必成环；帛书乙此句作「物茲章而盜賊」，「物」前缺文，不能定其作法物或法令。经由制度之环的读法只属传世本。「我好静而民自正」（LL-R025 所记）：没有一个镇者施力而整体自定。脊柱有两侧调节之定（Flow.Opposes、Flow.WithinGap、Flow.settles）；各形成只读其所交换之条件、各自弱相反而有其一严格相反时，联合交换即相反（Flow.opposes_of_each），各形成之偏离以其份额为界、份额之和不过间距时，联合交换在界内（Flow.withinGap_of_shares）；一族中每一条件如此局部调节于其水平，则族之总量定于诸水平之和，无一形成读总量（Flow.stock_settles）；所以「自正」定域为：联合交换两侧相反且有界时成立。",
      "names_used": [
       "滋",
       "环",
@@ -36895,17 +36954,20 @@
       "Becoming.Tolerance.total_stays",
       "Becoming.Tolerance.Triad.spreads",
       "Becoming.Tolerance.Triad.absorbed",
-      "Becoming.Tolerance.Triad.total_kept"
+      "Becoming.Tolerance.Triad.total_kept",
+      "Becoming.Tolerance.tolerating_mono",
+      "Becoming.Tolerance.KeepsInclusionInto.course"
      ],
      "records": [
       "thresholds-of-waiting",
-      "restoring-giving-from-the-worst-start"
+      "restoring-giving-from-the-worst-start",
+      "tolerance-monotone-across-laws"
      ],
-     "reading": "AI读法：两章以「胜」立言：第三十六章在「将欲夺之，必固与之」之后说「柔弱胜刚强」，第七十八章以水「攻坚强者，莫之能胜」说「弱之胜强，柔之胜刚」。这是一者压过另一者之比，属四种非关系层中的〈争胜与等级〉，理论不断言；而且文本所比，脊柱只在一个构造见证中给出：故为相分。可承之构不在「胜」：若把柔读为不求备（容忍至少为一）、把刚读为容忍为零（AI 读法，同 RO 第七十六章条），脊柱比较的是同一等待结构下的两条律，不是一者胜过另一者。一般之律：起点在某集之外皆给、每个形成在集内所等待者不超过其容忍时，自第一步起处处皆给（thin_absorbed）；起点皆给、每个成员在集外所等待者不超过其容忍的集合，每步都给（kept_set）；没有一个形成能宽免其所等待之全部时，全面扣留一旦出现便一直如此（total_stays）。〈容忍大者处处给予不少于容忍小者〉只在 Triad 一个构造见证中有：三者互等、一处扣留，容忍 0 自第二步起处处扣留，容忍 1 自第一步起处处皆给（Triad.spreads、Triad.absorbed）；容忍 1 也不恢复全面扣留（Triad.total_kept）。一般的跨律单调未经 Lean，见缺口。注层：苏辙说「吾以不校坐待其弊此所謂勝也」，仍以他者之弊为胜，属同一层；他随即说「聖人豈有意為此以勝物哉」，只去谋胜之意，不去胜之结局。脊柱中容忍所做的是吸收局部扣留、使给予延续，不排胜负。",
+     "reading": "AI读法：两章以「胜」立言：第三十六章在「将欲夺之，必固与之」之后说「柔弱胜刚强」，第七十八章以水「攻坚强者，莫之能胜」说「弱之胜强，柔之胜刚」。这是一者压过另一者之比，属四种非关系层中的〈争胜与等级〉，理论不断言；而且文本所比，脊柱只在一个构造见证中给出：故为相分。可承之构不在「胜」：若把柔读为不求备（容忍至少为一）、把刚读为容忍为零（AI 读法，同 RO 第七十六章条），脊柱比较的是同一等待结构下的两条律，不是一者胜过另一者。一般之律：起点在某集之外皆给、每个形成在集内所等待者不超过其容忍时，自第一步起处处皆给（thin_absorbed）；起点皆给、每个成员在集外所等待者不超过其容忍的集合，每步都给（kept_set）；没有一个形成能宽免其所等待之全部时，全面扣留一旦出现便一直如此（total_stays）。〈容忍大者处处给予不少于容忍小者〉只在 Triad 一个构造见证中有：三者互等、一处扣留，容忍 0 自第二步起处处扣留，容忍 1 自第一步起处处皆给（Triad.spreads、Triad.absorbed）；容忍 1 也不恢复全面扣留（Triad.total_kept）。一般的跨律单调已证：同一等待结构与同一起点，容忍逐点更大者每步给予不少于容忍小者（tolerating_mono，由 KeepsInclusionInto.course）。注层：苏辙说「吾以不校坐待其弊此所謂勝也」，仍以他者之弊为胜，属同一层；他随即说「聖人豈有意為此以勝物哉」，只去谋胜之意，不去胜之结局。脊柱中容忍所做的是吸收局部扣留、使给予延续，不排胜负。",
      "names_used": [
       "不求备"
      ],
-     "gap": "脊柱缺：容忍的跨律单调——对同一等待结构 ups 与同一起点 s，若 tol ≤ tol'（逐点），则在每一步 (Law.run (Tolerance.tolerating tol ups) s).state n 蕴含 (Law.run (Tolerance.tolerating tol' ups) s).state n。这是一个短推论（AI 手算，未经 Lean）：对步数归纳，用 tolerating_keeps 把前一步的包含推进一步，再用 AllBut.mono_count 从 tol 换到 tol'。缺的是这条陈述本身；有了它，〈容忍逐点更大者处处给予不少于容忍小者〉才对每个等待结构成立，而不只在 Triad 一例中。最近：Becoming.Tolerance.AllBut.mono_count、Becoming.Tolerance.tolerating_keeps、Becoming.Tolerance.KeepsInclusion.course、Becoming.Tolerance.Triad.absorbed。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Tolerance.tolerating_mono（由 KeepsInclusionInto.course、tolerating_into）。见记录 tolerance-monotone-across-laws。",
      "locator": "《老子》第36章「将欲夺之，必固与之……柔弱胜刚强」；第78章「天下莫柔弱于水……弱之胜强，柔之胜刚」",
      "relational": "柔弱者胜过刚强者；水攻坚强莫之能胜；天下皆知而莫能行。",
      "ro_passage": "",
@@ -36972,16 +37034,18 @@
       "Becoming.carried_le_coupling",
       "Becoming.Frequency.SelfLoop.carried_eq",
       "Becoming.Frequency.SelfLoop.polynomial_iff",
-      "Becoming.carried_le_of_rare"
+      "Becoming.carried_le_of_rare",
+      "Becoming.carried_le_disturbed"
      ],
      "records": [
-      "how-often-couplings-act"
+      "how-often-couplings-act",
+      "repeated-disturbance"
      ],
      "relational": "治大国如烹小鱼，不可频繁翻动。",
      "ro_passage": "",
-     "gap": "脊柱缺：部分反复给出差异（σ≠0，即「數撓」）时携带量与作用次数的律。现有 carried_le_count 设部分自起点后不再给出差异（σ=0），所以只覆盖一次扰动之后的回应次数，不覆盖反复的扰动。另一面，「數變法」是规则之变（Pace），其害不经携带量计算，属另一结构。最近：Becoming.carried_le_count、Becoming.carried_le_coupling、Becoming.Frequency.SelfLoop.carried_eq、Becoming.Pace.never_reads_lost。",
+     "gap": "已补（ZG2，2026年10月22日）：Becoming.carried_le_disturbed（carried_le_count 为其情形）。见记录 repeated-disturbance。",
      "layer_checked": "",
-     "reading": "AI读法：《解老》读此章为「烹小鮮而數撓之，則賊其澤；治大國而數變法，則民苦之」：害在次数，不在强弱。频数：在部分自起点后不再给出差异（σ=0）、起始差至多 D、每步流入至多 M、未被日程标记之步流入为零的前提下，携带量至多 D·(1+M)^a，a 为日程所标作用之步数（carried_le_count）；以任何耦合作用之步数计亦然（carried_le_coupling）。Frequency.SelfLoop 是一个构造见证，自环恰达此界（SelfLoop.carried_eq），在 M≥1、D≥1 时自环为多项式增长恰当 2 的作用步数次方为多项式（SelfLoop.polynomial_iff）；耦合稀少处，不论强度如何都不失控（carried_le_of_rare）。所以「若烹小鲜」在作用经由环回到所作用者处有确切形式：作用越频，携带量之界越高。范围要紧：「數撓」是部分反复给出差异（σ≠0），正是 carried_le_count 所设为零者，脊柱没有，见缺口；「數變法」是规则之变，不是耦合次数，不由频数计算；《解老》以「一人之作，日亡半日，十日則亡五人之功矣」所计之失是线性的，与自环之几何增长不同。王弼、苏辙、河上公的不扰之读是同一方向。",
+     "reading": "AI读法：《解老》读此章为「烹小鮮而數撓之，則賊其澤；治大國而數變法，則民苦之」：害在次数，不在强弱。频数：在部分自起点后不再给出差异（σ=0）、起始差至多 D、每步流入至多 M、未被日程标记之步流入为零的前提下，携带量至多 D·(1+M)^a，a 为日程所标作用之步数（carried_le_count）；以任何耦合作用之步数计亦然（carried_le_coupling）。Frequency.SelfLoop 是一个构造见证，自环恰达此界（SelfLoop.carried_eq），在 M≥1、D≥1 时自环为多项式增长恰当 2 的作用步数次方为多项式（SelfLoop.polynomial_iff）；耦合稀少处，不论强度如何都不失控（carried_le_of_rare）。所以「若烹小鲜」在作用经由环回到所作用者处有确切形式：作用越频，携带量之界越高。范围要紧：「數撓」是部分反复给出差异（σ≠0）：每次扰动至多 E 时，携带量至多 (D + E·d)·(1 + M)^a，d 为扰动之步数，a 为耦合之步数（carried_le_disturbed；carried_le_count 为无扰动之情形），每次扰动所加者为其后之耦合所倍；「數變法」是规则之变，不是耦合次数，不由频数计算；《解老》以「一人之作，日亡半日，十日則亡五人之功矣」所计之失是线性的，与自环之几何增长不同。王弼、苏辙、河上公的不扰之读是同一方向。",
      "names_used": [
       "频数",
       "环"
@@ -37064,20 +37128,22 @@
       "Becoming.Flow.stays_between_at",
       "Becoming.Flow.crosses_of_above",
       "Becoming.Flow.restores",
-      "Becoming.Regulation.OneSided.above"
+      "Becoming.Regulation.OneSided.above",
+      "Becoming.Flow.never_returns_below"
      ],
      "records": [
       "two-sided-regulation-and-late-reading",
-      "own-count-misses-joint-excess"
+      "own-count-misses-joint-excess",
+      "regulation-from-one-side-and-locally"
      ],
-     "reading": "AI读法：经文先说「天下神器，不可为也，为者败之，执者失之」，再说物或行或随、或强或羸、或挫或隳，皆向两侧走，圣人只「去甚，去奢，去泰」：不驱物归于一点，只去其过。脊柱：取多于给之一步使水平至少降一（Flow.excess_lowers）；所取以其超出 m 之距为界，恰当下一水平落在 m 与当前之间（Flow.withinGap_iff_between），界内不越过 m（Flow.stays_between_at），越界则越过（Flow.crosses_of_above，过正）。去甚只去其过而不越过，可读为（AI）中节之取。定域：所去只在上侧（甚、奢、泰皆是过多），对下侧之羸、隳无回应，是一偏，不是两侧之调节（中和）。下侧回到 m 须另有给多于取之交换（Flow.restores）；经文把两侧往复交给物自身，苏辙说「皆物之自然而勢之不免者也」，所以去甚只在下侧自有复原处才与之合为两侧。脊柱对一偏只有镜像之构造见证：Regulation.OneSided 是空流，下侧复原之前提每步成立而水平一直在 m 之上（OneSided.above）；只对上侧回应之镜像与有交换的单侧之律未单列，见缺口。注层：河上公以「甚谓贪淫声色。奢谓服饰饮食。泰谓宫室台榭。」，把去甚读为去除治者自身过多之取（自身取多于给则水平下降，Flow.excess_lowers），又说「去此三者，处中和，行无为，则天下自化」，补成两侧；苏辙读为「順以待之」「使不至于過而傷物」。圣人之中心义不采纳为结构名。",
+     "reading": "AI读法：经文先说「天下神器，不可为也，为者败之，执者失之」，再说物或行或随、或强或羸、或挫或隳，皆向两侧走，圣人只「去甚，去奢，去泰」：不驱物归于一点，只去其过。脊柱：取多于给之一步使水平至少降一（Flow.excess_lowers）；所取以其超出 m 之距为界，恰当下一水平落在 m 与当前之间（Flow.withinGap_iff_between），界内不越过 m（Flow.stays_between_at），越界则越过（Flow.crosses_of_above，过正）。去甚只去其过而不越过，可读为（AI）中节之取。定域：所去只在上侧（甚、奢、泰皆是过多），对下侧之羸、隳无回应，是一偏，不是两侧之调节（中和）。下侧回到 m 须另有给多于取之交换（Flow.restores）；经文把两侧往复交给物自身，苏辙说「皆物之自然而勢之不免者也」，所以去甚只在下侧自有复原处才与之合为两侧。脊柱对一偏只有镜像之构造见证：Regulation.OneSided 是空流，下侧复原之前提每步成立而水平一直在 m 之上（OneSided.above）；有交换的单侧之律：平衡之下，m 之下交换不给多于取者，水平在 m 之下时不回到 m（Flow.never_returns_below）。注层：河上公以「甚谓贪淫声色。奢谓服饰饮食。泰谓宫室台榭。」，把去甚读为去除治者自身过多之取（自身取多于给则水平下降，Flow.excess_lowers），又说「去此三者，处中和，行无为，则天下自化」，补成两侧；苏辙读为「順以待之」「使不至于過而傷物」。圣人之中心义不采纳为结构名。",
      "names_used": [
       "中节",
       "过正",
       "一偏",
       "中和"
      ],
-     "gap": "脊柱未单列：有交换的单侧之律——平衡之下，交换在水平高于 m 时取多于给、在 m 之下不给多于取，则水平在 m 之下时不回到 m。现有 Regulation.OneSided 是空流且为镜像（只满足下侧复原之前提而一直在 m 之上）。最近：Becoming.Regulation.OneSided.above、Becoming.Flow.restores、Becoming.Flow.excess_lowers、Becoming.Flow.stays_between_at。",
+     "gap": "已补（ZG2，2026年10月22日）：Becoming.Flow.held_below、Flow.never_returns_below。见记录 regulation-from-one-side-and-locally。",
      "locator": "《老子》第29章；起句“将欲取天下而为之”，所论在“故物或行或随，或歔或吹。或强或羸”以下",
      "relational": "天下不可强为；物各向两侧行；圣人去其过甚、过奢、过泰。",
      "ro_passage": "",
@@ -40128,20 +40194,24 @@
       "Becoming.Copying.required_add",
       "Becoming.Copying.lineage_all_iff",
       "Becoming.ResponseLearning.lesson_stock",
-      "Becoming.ResponseLearning.every_cohort_holds"
+      "Becoming.ResponseLearning.every_cohort_holds",
+      "Becoming.Copying.copying_iff",
+      "Becoming.Copying.requiredBy_add",
+      "Becoming.Copying.tenfold"
      ],
      "records": [
       "recurrent-chain-assembly",
-      "inherited-structural-copying"
+      "inherited-structural-copying",
+      "copying-b-fold"
      ],
-     "reading": "AI读法：一人教十、十人教百，逐级扩到三军。脊柱给出其确切范围：每个单元从一个存量汲取 d 后得两个单元之处，从 k 个单元起 n 轮恰在存量至少 d·k·(2ⁿ−1) 之处都能走完（Copying.doubling_iff、Copying.required_add）；从一个池及支撑抄录 n 次，恰在池中每种料都够 n 倍所用、支撑够 n 倍之处全部放出（Copying.lineage_all_iff）；一课之后两者存量加所汲不改（ResponseLearning.lesson_stock，构造内一般），教不添存量；所述构造中每一代都带着所学之程序（ResponseLearning.every_cohort_holds，构造内一般）。所以逐级之教在所汲被覆盖之处为真，不是无界的；十倍之律本身脊柱尚未陈述（见缺口）。教之效率不映射。",
+     "reading": "AI读法：一人教十、十人教百，逐级扩到三军。脊柱给出其确切范围：每个单元从一个存量汲取 d 后得两个单元之处，从 k 个单元起 n 轮恰在存量至少 d·k·(2ⁿ−1) 之处都能走完（Copying.doubling_iff、Copying.required_add）；从一个池及支撑抄录 n 次，恰在池中每种料都够 n 倍所用、支撑够 n 倍之处全部放出（Copying.lineage_all_iff）；一课之后两者存量加所汲不改（ResponseLearning.lesson_stock，构造内一般），教不添存量；所述构造中每一代都带着所学之程序（ResponseLearning.every_cohort_holds，构造内一般）。所以逐级之教在所汲被覆盖之处为真，不是无界的；b 倍抄录之律：每单元汲取 d 而成 b 个，n 轮恰在存量足其所汲之处走完，终有 k·bⁿ 个单元（Copying.copying_iff）；一教十，五轮自一成十万，耗存量 11,111（Copying.tenfold）。教之效率不映射。",
      "names_used": [],
      "relational": "逐级之教受存量所界",
      "tradition": "兵",
      "work": "吴子",
      "locator": "治兵第三",
      "layer_checked": "",
-     "gap": "b 倍抄录律：每个单元从一个存量汲取 d 后得 b 个单元（b ≥ 1），从 k 个单元起 n 轮恰在 d·R_b(n,k) ≤ m 之处都能走完，其中 R_b(0,k)=0、R_b(n+1,k)=k+R_b(n,b·k)（即 R_b(n,k)·(b−1)+k = k·bⁿ），走完后有 k·bⁿ 个单元、存量余 m−d·R_b(n,k)；b=2 即 Copying.doubling_iff。最近：Becoming.Copying.doubling_iff、Becoming.Copying.required_add、Becoming.Copying.doubling_runs。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Copying.copying_iff、requiredBy_add、copying_runs；倍增为 b = 2 之情形（doubling_iff）；见证 Copying.tenfold。见记录 copying-b-fold。",
      "checked": "passed"
     },
     {
@@ -40382,16 +40452,19 @@
       "Becoming.World.novel_but",
       "Becoming.World.novel_finite",
       "Becoming.Learning.no_prefix_fixes_next",
-      "Becoming.Learning.determines_lumped_iff"
+      "Becoming.Learning.determines_lumped_iff",
+      "Becoming.Flow.transmitted_along",
+      "Becoming.Flow.transmitted_along_supported"
      ],
      "records": [
       "transmission-is-inheritance-and-need",
       "evolution-on-descent",
       "generalization-through-lumping",
       "learning-by-refutation",
-      "map-of-premises"
+      "map-of-premises",
+      "need-drift-along-a-lineage"
      ],
-     "reading": "AI读法：「殷因於夏禮，所損益可知也」：后代接下前代之制，其增减可知；「雖百世可知」。名表取「因」名承继、取「損益」名变异（升与降），此章是二名共有之出处。脊柱给出其确切范围。因（Web.InheritsAt）讲的是：后代聚后所依之条件，给予者在给予之步也依；后代可以少依，不能依给予者所不依者。传（Flow.TransmitsWithin）是因再加所需之界：后代之所需至多较给予者多 δ（Flow.transmitsWithin_iff）——它只界所需之升，不界其降。Price 之计数等式（price）不加前提：后代总量加所降（lowered）等于按后代数加计之亲代总量加所升（raised），「所損益」即所升所降。加计之总量不是选择本身：每个亲代各有 k 个后代之处，它是亲代总量之 k 倍（selected_uniform），每个亲代恰有一个后代之处它就是亲代总量；它是计数，不是因（依存之所依）。一项全新之制：在平衡及因之下，此步无在场者依之条件，后代也不依（Flow.no_new_dependence），所以它在因之外；有一个有限世界具备除传以外之一切前提，其中新依存结起（World.novel_but、World.novel_finite）。「可知」：没有一段前缀能定下一个值（Learning.no_prefix_fixes_next）；在跨一个归并取值一样之映射中，有限之所见定下未见者之值，恰在某所见者跟它被归并为一之处（Learning.determines_lumped_iff）——「百世可知」只在后世跟所见之代被一个归并并在一起之处为真，不由所因之多担保。C08 以「可知」、C10 以选择读这一章，三读请整合者统一。",
+     "reading": "AI读法：「殷因於夏禮，所損益可知也」：后代接下前代之制，其增减可知；「雖百世可知」。名表取「因」名承继、取「損益」名变异（升与降），此章是二名共有之出处。脊柱给出其确切范围。因（Web.InheritsAt）讲的是：后代聚后所依之条件，给予者在给予之步也依；后代可以少依，不能依给予者所不依者。传（Flow.TransmitsWithin）是因再加所需之界：后代之所需至多较给予者多 δ（Flow.transmitsWithin_iff）——它只界所需之升，不界其降。Price 之计数等式（price）不加前提：后代总量加所降（lowered）等于按后代数加计之亲代总量加所升（raised），「所損益」即所升所降。加计之总量不是选择本身：每个亲代各有 k 个后代之处，它是亲代总量之 k 倍（selected_uniform），每个亲代恰有一个后代之处它就是亲代总量；它是计数，不是因（依存之所依）。一项全新之制：在平衡及因之下，此步无在场者依之条件，后代也不依（Flow.no_new_dependence），所以它在因之外；有一个有限世界具备除传以外之一切前提，其中新依存结起（World.novel_but、World.novel_finite）。「可知」：没有一段前缀能定下一个值（Learning.no_prefix_fixes_next）；在跨一个归并取值一样之映射中，有限之所见定下未见者之值，恰在某所见者跟它被归并为一之处（Learning.determines_lumped_iff）——「百世可知」只在后世跟所见之代被一个归并并在一起之处为真，不由所因之多担保。C08 以「可知」、C10 以选择读这一章，三读请整合者统一。已补：多步之界：沿世系每代所需漂移至多 δ，i + 1 代之后所需至多始祖所需（或其受支持之步之水平）加 (i + 1)·δ（Flow.transmitted_along、Flow.transmitted_along_supported）：所損益可知。",
      "names_used": [
       "因",
       "损益",
@@ -40409,7 +40482,7 @@
      "work": "论语",
      "locator": "为政 2.23",
      "layer_checked": "",
-     "gap": "多步之界：一条世系 x₀ → x₁ → … → x_n（x_{i+1} 在步 t_i 出于 x_i）上，若每一步都有传、且各 x_i 在两次世系之间一直依 c 而所需不升，则 need(t_{n−1}+1, x_n, c) ≤ need(t₀, x₀, c) + n·δ；在 Flow.Acting、Web.Dependent 之下，首步用 Flow.transmitted_supported，可改为 ≤ level(t₀, c) + n·δ。现有之律都在一步上（Flow.transmitted_supported、Flow.transmitted_within）。最近：Becoming.Flow.transmitted_supported、Becoming.Flow.transmitted_within、Becoming.Flow.TransmitsWithin。",
+     "gap": "已补（ZG3，2026年10月22日）：Becoming.Flow.transmitted_along、Flow.transmitted_along_supported。见记录 need-drift-along-a-lineage。",
      "checked": "corrected"
     },
     {
@@ -41555,19 +41628,23 @@
       "Becoming.Flow.WithinJoint",
       "Becoming.Flow.level_kept",
       "Becoming.Pair.own_not_joint",
-      "Becoming.Flow.Balances.rise_paid_from_beyond"
+      "Becoming.Flow.Balances.rise_paid_from_beyond",
+      "Becoming.RelativePosition.equal_share_iff",
+      "Becoming.RelativePosition.equal_share_exceeds",
+      "Becoming.RelativePosition.uneven_short"
      ],
      "records": [
       "draws-on-a-shared-stock",
       "own-count-misses-joint-excess",
-      "raising-what-couples-in-draws-from-beyond"
+      "raising-what-couples-in-draws-from-beyond",
+      "least-parts-and-equal-shares"
      ],
-     "reading": "AI读法：「不患寡而患不均」把问题从总量移到共同条件之所给能否覆盖依此条件者之所需。脊柱：存量过程之一个路程可执行，恰当它被覆盖（Stock.feasible_iff_covered）；合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept）。所以「均無貧」只在所给覆盖所需之处成立；所给小于所需之和时，任何分法都至少使一员不足，这是算术，不是脊柱之律；荀子「欲多而物寡」是另一情形，各自取在所给之内而合起来超出（Pair.own_not_joint，构造之例）；均分时需要不高于均份者仍被支持，也只是算术，脊柱没有均分之律（见 gap）。「不均」之害若要说，只能用流之平衡：在平衡之流中，一族跨一步不得益时，其中一个子族之上升至多是参与者从外取得之量（Flow.Balances.rise_paid_from_beyond），这是存量之律，不是份额之律。文本之层：冻结本之「蓋均無貧，和無寡，安無傾」以均配貧、以和配寡、以安配傾，与上句以寡配均、以貧配安相交错，旧有校勘以为上句当互乙，本读法不以「寡」「均」之配对立论。旧注又有读「均」为各得其分者，如此则对应〈分〉而非等份。语境是季氏將伐顓臾，对象是「有國有家者」。「遠人不服，則修文德以來之」以吸引而非强制扩大关系（RU1-LY-16-01-R01）。定域：均与安是条件，不是充分条件。",
+     "reading": "AI读法：「不患寡而患不均」把问题从总量移到共同条件之所给能否覆盖依此条件者之所需。脊柱：存量过程之一个路程可执行，恰当它被覆盖（Stock.feasible_iff_covered）；合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept）。所以「均無貧」只在所给覆盖所需之处成立；所给小于所需之和时，任何分法都至少使一员不足，这是算术，不是脊柱之律；荀子「欲多而物寡」是另一情形，各自取在所给之内而合起来超出（Pair.own_not_joint，构造之例）；均分之律：等份满足每一需要，恰当满足最大之需要（RelativePosition.equal_share_iff）；需要不等之处，均分所给多于需要之和（equal_share_exceeds），所以存在所给足以按需支持全体而均分仍使需要高者不被支持之情形（uneven_short）。「不均」之害若要说，只能用流之平衡：在平衡之流中，一族跨一步不得益时，其中一个子族之上升至多是参与者从外取得之量（Flow.Balances.rise_paid_from_beyond），这是存量之律，不是份额之律。文本之层：冻结本之「蓋均無貧，和無寡，安無傾」以均配貧、以和配寡、以安配傾，与上句以寡配均、以貧配安相交错，旧有校勘以为上句当互乙，本读法不以「寡」「均」之配对立论。旧注又有读「均」为各得其分者，如此则对应〈分〉而非等份。语境是季氏將伐顓臾，对象是「有國有家者」。「遠人不服，則修文德以來之」以吸引而非强制扩大关系（RU1-LY-16-01-R01）。定域：均与安是条件，不是充分条件。",
      "names_used": [
       "分",
       "出入相揜"
      ],
-     "gap": "均分之律：对一个 n 个成员之有限族与一个共同条件，一步之所给 G 按等份分给各成员时，每个依此条件之成员被支持，恰当等份不少于诸成员需要之最大者；与之对照，各取其需时，G 不少于需要之和即支持全体；所以在需要不等之处，存在 G 不少于需要之和而均分仍使需要高于均份者不被支持之情形。脊柱没有均分之谓词，只有存量之覆盖（Stock.feasible_iff_covered）与合取在所给之内（Flow.WithinJoint、Flow.level_kept）。注：若「均」读为各得其分，则此 gap 归入〈分〉到合取之 gap（见 xunzi-wangzhi-qun-fen-yi）。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.RelativePosition.equal_share_iff、equal_share_exceeds、equal_share_even，见证 uneven_short。见记录 least-parts-and-equal-shares。",
      "layer_checked": "",
      "locator": "论语·季氏（脉络 RU1-LY-16-01）",
      "relational": "是：寡、均、安都是共同条件上所给与所需之关系",
@@ -47767,15 +47844,19 @@
       "Becoming.Brood.descent_connected",
       "Becoming.Flow.descent_reaches",
       "Becoming.bounded_rival",
-      "Becoming.Clearing.loses_beyond"
+      "Becoming.Clearing.loses_beyond",
+      "Becoming.boundedInTime",
+      "Becoming.bounded_in_time_rival",
+      "Becoming.Clearing.time_bounded_permits"
      ],
      "records": [
       "continuation-condition-yields-living-significance",
       "significance-retained-within-margin",
       "living-on-and-descent",
-      "loss-beyond-a-region"
+      "loss-beyond-a-region",
+      "rivals-bounded-in-time"
      ],
-     "reading": "AI读法：「愛尚世與愛後世，一若今之世」：顾不以时间为界。凡续皆有顾是对一切方、一切步、一切形成的全称（Unrestricted）。后世指尚未出生者，即尚未形成的形成；在一个构造模型中，一个汲取者第一步活动且不剥，它的部分却使一个此后再也得不到支持的可能不能形成，在凡续皆有顾下这一部分从每个方都有丧（Preemption.not_undermining_yet_loses，见证）：尚未形成者也被计入。世代相连：在构造模型中各代由上一代所给而以所出相连（Brood.descent_connected，见证），在无亲下，顾一个形成的事件会到达所出于它的每个活事件（Flow.descent_reaches）。剩余：「尚世」（过去之世）的延续在理论中是从那时起的未来；脊柱还没有以时间为界的对手规则（只顾到某一步）的定理。有界意义在其界内是别，只要某物落在界外它就不是凡续皆有顾（bounded_rival）；在清除者的模型中，损失从第三步起在依存之外出现（Clearing.loses_beyond，见证），所以只顾今世的规则会许可终结后世（见 gap）。",
+     "reading": "AI读法：「愛尚世與愛後世，一若今之世」：顾不以时间为界。凡续皆有顾是对一切方、一切步、一切形成的全称（Unrestricted）。后世指尚未出生者，即尚未形成的形成；在一个构造模型中，一个汲取者第一步活动且不剥，它的部分却使一个此后再也得不到支持的可能不能形成，在凡续皆有顾下这一部分从每个方都有丧（Preemption.not_undermining_yet_loses，见证）：尚未形成者也被计入。世代相连：在构造模型中各代由上一代所给而以所出相连（Brood.descent_connected，见证），在无亲下，顾一个形成的事件会到达所出于它的每个活事件（Flow.descent_reaches）。剩余：「尚世」（过去之世）的延续在理论中是从那时起的未来；以时间为界的对手规则（只顾到某一步，boundedInTime）在其时间之界内接受条件的规则，却不是延续之条件（bounded_in_time_rival）。有界意义在其界内是别，只要某物落在界外它就不是凡续皆有顾（bounded_rival）；在清除者的模型中，损失从第三步起在依存之外出现（Clearing.loses_beyond，见证）；只顾前两步的规则下清除者之部分无所失，而在延续之条件下它失去居住者（Clearing.time_bounded_permits）：只顾今世的规则许可终结后世。",
      "names_used": [
       "凡续皆有顾",
       "方",
@@ -47786,7 +47867,7 @@
       "顾",
       "别"
      ],
-     "gap": "缺：以时间为界的对手规则。令 sig_T p t f := t ≤ T。(1) 立得，由 sig_T 的定义：Within (fun i => i.2.1 ≤ T) (fun i => sig_T i.1 i.2.1 i.2.2) 成立，即 sig_T 在其时间之界内接受条件的规则（Becoming.bounded_rival 第一合取在时间之界上的对应）；又 sig_T p (T + 1) f 不成立，所以 ¬ Unrestricted sig_T。(2) 实质命题：在 Clearing 的流中取 T = 1（小于 Becoming.Clearing.loses_beyond 中居住者开始在依存之外不被容纳的那一步，即下标 2），清除者的部分在 sig_T 下从每个方保留一切有意义者（Web.Retains sig_T p web.level l），而在 Unrestricted 下丧失居住者（Becoming.Clearing.clearer_loses_dweller）。即：只顾到某一代的规则在其时间之界内接受条件的规则，却许可终结后世。最近的声明：Becoming.bounded_rival、Becoming.Clearing.loses_beyond、Becoming.Clearing.clearer_loses_dweller、Becoming.Clearing.pool_closes_gap、Becoming.Flow.descent_reaches、Becoming.Preemption.not_undermining_yet_loses。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.boundedInTime、bounded_in_time_rival（由 rival_of_outside）、Clearing.time_bounded_permits。见记录 rivals-bounded-in-time。",
      "layer_checked": "",
      "locator": "大取",
      "relational": "关系层：世代相连；非关系层：无。",
@@ -52587,14 +52668,16 @@
       "Becoming.nat_eq_of_not_not",
       "Becoming.LastChange.not_not_settles",
       "Becoming.LastChange.lpo_iff_settles",
-      "Becoming.LPO"
+      "Becoming.LPO",
+      "Becoming.Decided.cases_stable"
      ],
      "records": [
       "counts-exist-where-decided",
       "the-last-change-of-a-run",
-      "sensitivity-is-the-least-coupling"
+      "sensitivity-is-the-least-coupling",
+      "negation-change-and-stable-cases"
      ],
-     "reading": "AI读法：这是经下“無窮不害兼，說在盈否”的解说。难者说：南方有穷无穷未可知，则可尽不可尽未可知；人之盈否未可知，则人之可尽与否亦未可知，而断言人可尽爱，是誖。答者（冻结文本中在引号内）不判定盈否，分两种情形：人不盈无穷则人有穷，尽之无难；盈无穷则无穷已被尽，尽之也无难。第二情形之“盡有窮無難”文有校改之争，此处不据其字立论。这是对一个未定命题（盈否）的分情形论证。在构造的读法中，这样的论证一般只得结论之不可非；此处结论“無難”是否定式，而否定式总是稳定的（¬¬¬q 推出 ¬q），所以论证不需盈否定然否也成立。这是理论对论证形式的读法，不归于墨经的自觉。脊柱的普查之律用同一模式：中间各步是否成立未定，借定然否之不可非（not_not_decided）分情形，所得是数的等式，而数的等式不可非即成立（nat_eq_of_not_not），所以 Counts.over_stretch 不需定然否。对比：一次运行终将定住，脊柱只证其不可非（LastChange.not_not_settles，在构形有穷、无变化回路的前提下）；要对一切这样的有穷过程断言每一运行定住，恰等价于 LPO（LastChange.lpo_iff_settles），即无穷可尽之一。",
+     "reading": "AI读法：这是经下“無窮不害兼，說在盈否”的解说。难者说：南方有穷无穷未可知，则可尽不可尽未可知；人之盈否未可知，则人之可尽与否亦未可知，而断言人可尽爱，是誖。答者（冻结文本中在引号内）不判定盈否，分两种情形：人不盈无穷则人有穷，尽之无难；盈无穷则无穷已被尽，尽之也无难。第二情形之“盡有窮無難”文有校改之争，此处不据其字立论。这是对一个未定命题（盈否）的分情形论证。在构造的读法中，这样的论证一般只得结论之不可非；此处结论“無難”是否定式，而否定式总是稳定的（¬¬¬q 推出 ¬q），所以论证不需盈否定然否也成立。这是理论对论证形式的读法，不归于墨经的自觉。脊柱的普查之律用同一模式：中间各步是否成立未定，借定然否之不可非（not_not_decided）分情形，所得是数的等式，而数的等式不可非即成立（nat_eq_of_not_not），所以 Counts.over_stretch 不需定然否。对比：一次运行终将定住，脊柱只证其不可非（LastChange.not_not_settles，在构形有穷、无变化回路的前提下）；要对一切这样的有穷过程断言每一运行定住，恰等价于 LPO（LastChange.lpo_iff_settles），即无穷可尽之一。已补：此论证形式单列为 Decided.cases_stable：结论稳定时，由一命题与由其否定分别推出者成立，不需该命题定然否。",
      "names_used": [
       "不可非",
       "定然否",
@@ -52605,7 +52688,7 @@
      "ro_passage": "",
      "tradition": "墨家（名辩）",
      "work": "《墨子·經說下》",
-     "gap": "theorem Decided.cases_stable {p q : Prop} (stable : ¬¬q → q) (yes : p → q) (no : ¬p → q) : q——结论稳定时对一个未定命题分情形论证成立。纯逻辑引理，Counts.over_stretch 与 CountsAcross.keep_pace 的证明已内联同一模式；按规则是需要它之项的引理，不是独立结果，列为最低一级。最近的声明：Becoming.not_not_decided、Becoming.nat_eq_of_not_not、Becoming.Counts.over_stretch。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Decided.cases_stable。见记录 negation-change-and-stable-cases。",
      "layer_checked": "",
      "checked": "passed"
     },
@@ -56629,18 +56712,20 @@
       "Becoming.Interleavings.LocalLaw.Apart",
       "Becoming.Interleavings.LocalLaw.act_comm",
       "Becoming.Interleavings.LocalLaw.unique_iff",
-      "Becoming.Interleavings.LocalLaw.Interleaves"
+      "Becoming.Interleavings.LocalLaw.Interleaves",
+      "Becoming.Interleavings.Shared.order_matters"
      ],
      "records": [
-      "the-step-index-from-own-courses"
+      "the-step-index-from-own-courses",
+      "order-of-exchanges-sharing-a-relatum"
      ],
-     "reading": "AI读法：「卒未親附而罰之，則不服」：罚在亲附之前，则不服。「卒已親附而罰不行，則不可用也」：亲附而缺罚，则不可用；这一句说的是缺了一步，不是两步次序颠倒。下文「令之以文，齊之以武」说两步都要，且文在先。所以此处的先后是：两步都要，亲附在先、罚在后。亲附与罚共享关系项（将与卒），正落在 act_comm 的条件之外：在 LocalLaw 之设下，只有不共享关系项（Apart）的两步可以交换而结果相同（act_comm）；共享关系项的两步，其先后记在共享者的自身进程之中；自身进程唯一固定交错，恰在每次交换都触及某一关系项、每两次交换都相同或共享关系项之时（unique_iff）。定域：脊柱尚无一个具体的见证，给出两步共享关系项而两种次序到达不同构形（gap）。",
+     "reading": "AI读法：「卒未親附而罰之，則不服」：罚在亲附之前，则不服。「卒已親附而罰不行，則不可用也」：亲附而缺罚，则不可用；这一句说的是缺了一步，不是两步次序颠倒。下文「令之以文，齊之以武」说两步都要，且文在先。所以此处的先后是：两步都要，亲附在先、罚在后。亲附与罚共享关系项（将与卒），正落在 act_comm 的条件之外：在 LocalLaw 之设下，只有不共享关系项（Apart）的两步可以交换而结果相同（act_comm）；共享关系项的两步，其先后记在共享者的自身进程之中；自身进程唯一固定交错，恰在每次交换都触及某一关系项、每两次交换都相同或共享关系项之时（unique_iff）。定域：两步共享关系项时次序可以要紧：一个具体见证中，二交换共享其关系项，以两种次序自同一构形到达不同构形（Interleavings.Shared.order_matters），所以 act_comm 之前提不可去。",
      "names_used": [
       "先后"
      ],
      "locator": "行军第九",
      "relational": "亲附与罚共享关系项（将与卒），两步都要，亲附在先。",
-     "gap": "在 Interleavings 的局部律中给出一个见证：两次交换 e、f 共享一个关系项，L = [e, f] 与 M = [f, e] 从同一构形到达不同构形（run L s ≠ run M s），从而说明 act_comm 中两交换不共享关系项这一条件不可去掉。最近：Becoming.Interleavings.LocalLaw.unique_iff、Becoming.Interleavings.LocalLaw.act_comm、Becoming.Interleavings.LocalLaw.run_of_courses。",
+     "gap": "已补（ZG1，2026年10月22日）：Becoming.Interleavings.Shared.order_matters。见记录 order-of-exchanges-sharing-a-relatum。",
      "tradition": "兵",
      "work": "《孙子·行军》",
      "checked": "passed"

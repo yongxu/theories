@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "id": "dormancy-over-a-stretch",
+  "title": {
+    "en": "Dormancy over a stretch, and final ending",
+    "zh": "一段上之休眠与终局之终结"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Bounded dormancy needs its premises only over the stretch; an ending that is final stays whatever support returns, so a return later than the reserve finds none, while a reserve spanning the gap bridges it.",
+    "zh": "有界休眠只需其前提在一段上成立；终局之终结无论支持是否回来皆持续，所以迟于储备之复足无所得，而跨过此段之储备可以架之。"
+  },
+  "laws": [
+    {
+      "en": "Carried, decaying and unsupported across the n steps from S, a reserve has fallen by n or been spent; with a reserve at most n, the formation is inactive at S + n with its reserve spent. The from-S laws are their cases.",
+      "zh": "自 S 起 n 步皆承载、衰减且无支持，储备降 n 或耗尽；储备至多 n 时，形成在 S + n 不活跃且储备耗尽；自 S 起之律为其情形。",
+      "declarations": [
+        "Becoming.Web.decays_by_on",
+        "Becoming.Web.ends_within_on"
+      ]
+    },
+    {
+      "en": "Where from U on a formation inactive with its reserve spent neither arises nor regains reserve, one inactive and spent at U is inactive at every later step; so support returning after the reserve is spent finds no dependent.",
+      "zh": "自 U 起不活跃且储备耗尽之形成既不生起亦不复其储备，则 U 时如此者此后每步不活跃；所以储备耗尽之后之复足无依存者。",
+      "declarations": [
+        "Becoming.Web.ended_for_good",
+        "Becoming.Web.late_return_finds_none"
+      ]
+    },
+    {
+      "en": "Unsupported at the first three steps with a reserve of three, a formation is active at every step: the reserve bridges the gap.",
+      "zh": "前三步无支持而储备为三之形成每步活跃：储备跨过此段。",
+      "declarations": [
+        "Becoming.Bridged.standing",
+        "Becoming.Bridged.reserve",
+        "Becoming.Bridged.web",
+        "Becoming.Bridged.bridged"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; reserve, decay and finality as stated; discrete steps.",
+      "zh": "不加公理；储备、衰减与终局如所述；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That ending is final for actual dependents.",
+      "zh": "实际依存者之终结为终局。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 8 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 340; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 8 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 340 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Seed viability and dormancy; hysteresis of collapse.",
+    "zh": "种子活力与休眠；崩溃之滞后。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+  "aliases": [
+    "Dormancy over a stretch, and final ending",
+    "一段上之休眠与终局之终结",
+    "Becoming.Web.decays_by_on"
+  ],
+  "dependencies": [
+    {
+      "id": "reserve-defers-ending",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its from-S laws are the stretch laws' cases.",
+        "zh": "其自 S 起之律为一段之律之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries wangbi-fu-bu-su, mengzi-yi-ri-pu-zhi).",
+        "zh": "陈述其对应所发现之缺口（条目 wangbi-fu-bu-su、mengzi-yi-ri-pu-zhi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Bridged.bridged",
+        "Becoming.Bridged.reserve",
+        "Becoming.Bridged.standing",
+        "Becoming.Bridged.web",
+        "Becoming.Web.decays_by_on",
+        "Becoming.Web.ended_for_good",
+        "Becoming.Web.ends_within_on",
+        "Becoming.Web.late_return_finds_none"
+      ],
+      "sha256": "362343bb40ad5bb126267d6378835ff42262eb6a2a3146a0a167d9c0ac60cb0c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reserve",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 340 节。"
+    }
+  ]
+}

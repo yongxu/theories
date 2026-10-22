@@ -60,6 +60,8 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 - related, not a proved adapter: [selection-through-couplings](selection-through-couplings.md). A law of the same form: selection through the couplings selects alike exactly what is alike through them (Web.selects_alike_iff), and selection through a map separates exactly what the map separates.
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). The map is a lumping: a selection through it is right only where what matters goes alike across the lumping, the form of lumped_right_iff.
 
+**Used by:** [selection-right-exactly-where-read](selection-right-exactly-where-read.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -93,6 +95,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261020T162018.010437Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Relabel.selected_alike_iff`, `Becoming.Relabel.singled_iff_untied`, `Becoming.Relabel.Equivariant`, `Becoming.Relabel.EquivariantValue.tied`, `Becoming.Relabel.EquivariantChoice.withholds_of_full_tie`, `selection by the record alone`, `只读记录的选择`, `exchange-invariant selection`, `equivariant selection`, `selection-by-the-record-alone`, `selection through a model of the options`, `经选项模型的选择`, `Becoming.Learning.selects_right_through`, `Becoming.Learning.selects_not_right_of_parted`
 

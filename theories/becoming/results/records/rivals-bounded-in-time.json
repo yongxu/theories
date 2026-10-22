@@ -1,0 +1,159 @@
+{
+  "schema_version": 2,
+  "id": "rivals-bounded-in-time",
+  "title": {
+    "en": "Rivals bounded in time",
+    "zh": "以时为界之对手"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "A rule holding exactly within a region accepts the continuation condition's rule there and is not it where something lies outside; a rule bounded in time is such a rival, and in the clearer's witness it permits what the condition counts as a loss.",
+    "zh": "恰在一域内成立之规则在其中接受条件之规则，域外有物则非之；以时为界之规则即此对手，在清除者之见证中它许可条件所计之失。"
+  },
+  "laws": [
+    {
+      "en": "A rule holding exactly within a region of standpoints, steps and formations is a rival wherever something lies outside it; the bounded significance is its case.",
+      "zh": "恰在立场、步与形成之一域内成立之规则，域外有物处即为对手；有界之意义为其情形。",
+      "declarations": [
+        "Becoming.rival_of_outside"
+      ]
+    },
+    {
+      "en": "A significance bounded in time accepts the rule within its bound and is not the continuation condition.",
+      "zh": "以时为界之意义在其界内接受规则，而非延续之条件。",
+      "declarations": [
+        "Becoming.boundedInTime",
+        "Becoming.bounded_in_time_rival"
+      ]
+    },
+    {
+      "en": "In the clearer's witness every formation is admitted at the first two steps; under the significance bounded at the second step the levels with the clearer's part retain what has significance, under the continuation condition they do not.",
+      "zh": "清除者之见证中前两步容一切形成；以第二步为界之意义下，有清除者部分之水平保留有意义者，延续之条件下则否。",
+      "declarations": [
+        "Becoming.Clearing.admits_early",
+        "Becoming.Clearing.time_bounded_permits"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the continuation condition only as a hypothesis where stated.",
+      "zh": "不加公理；延续之条件只在所述之处作为前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which significance holds: rivals are consistent with every law of the dynamics.",
+      "zh": "何种意义成立：对手与动力之一切律相容。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 5 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 5 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Discounting and time-bounded horizons in welfare evaluation.",
+    "zh": "福利评价中之贴现与有时界之视野。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+  "aliases": [
+    "Rivals bounded in time",
+    "以时为界之对手",
+    "Becoming.rival_of_outside"
+  ],
+  "dependencies": [
+    {
+      "id": "whole-first-and-bounded-centers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its bounded_rival is the case of a region of standpoints and formations.",
+        "zh": "其 bounded_rival 为立场与形成之域之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries daqu-ai-shang-shi-hou-shi).",
+        "zh": "陈述其对应所发现之缺口（条目 daqu-ai-shang-shi-hou-shi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Clearing.admits_early",
+        "Becoming.Clearing.time_bounded_permits",
+        "Becoming.boundedInTime",
+        "Becoming.bounded_in_time_rival",
+        "Becoming.rival_of_outside"
+      ],
+      "sha256": "76ddaf3b84995431587da1a77e643cdc1c1863b24f8609c7872f01cd421bb1c3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Significance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

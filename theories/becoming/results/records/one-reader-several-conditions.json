@@ -306,7 +306,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
       "role": "proof",
-      "sha256": "18019a38bc150177260583a2ca498a775666f9f09572f51054c64ec209df24d7"
+      "sha256": "05a308a0dfd56e9be23e40a7a649dd78aa14b0a75aefd9bebedb0a932452419f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json",

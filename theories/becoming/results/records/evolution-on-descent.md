@@ -114,6 +114,7 @@ The unification plan asks for transmission, variation and selection through desc
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.price`, `Becoming.offspring`, `Becoming.selected`, `Becoming.raised`, `Becoming.lowered`, `Becoming.Flow.DescendsAt`, `Becoming.Flow.DescendsAt.supported`, `Becoming.Flow.unsupported_childless`, `Becoming.Flow.never_supported_childless`, `Becoming.Flow.selected_le`, `Becoming.Flow.selection_within`, `Becoming.Flow.TransmitsWithin`, `Becoming.Flow.transmitted_supported`, `Becoming.Flow.transmitted_within`, `Becoming.Drawdown.drawdown`, `Becoming.Unchecked.unchecked`, `Becoming.selected_uniform`, `Becoming.unselected`, `Becoming.Slack.slack`
 

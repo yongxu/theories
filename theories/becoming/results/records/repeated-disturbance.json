@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "id": "repeated-disturbance",
+  "title": {
+    "en": "Repeated disturbance",
+    "zh": "反复扰动"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "With the part giving gaps at most E at the steps a schedule marks, the carried amount is at most (D + E d) times (1 + M) to the a, d the disturbed steps and a the coupling steps; each disturbance adds what the later couplings multiply.",
+    "zh": "部分在时程所标之步给出至多 E 之差时，携带量至多 (D + E·d)·(1 + M)^a，d 为扰动步数，a 为耦合步数；每次扰动所加者为其后之耦合所倍。"
+  },
+  "laws": [
+    {
+      "en": "A formation's gift with the part's gaps is its gift with none and the part's gap; a disturbance of E at a marked step adds E to E times the count.",
+      "zh": "含部分之差之所给为无差之所给加部分之差；所标之步之扰动 E 使 E 乘计数增 E。",
+      "declarations": [
+        "Becoming.carriedGive_with_gaps",
+        "Becoming.count_step",
+        "Becoming.one_le_pow_add"
+      ]
+    },
+    {
+      "en": "With starting gaps at most D, strengths into each condition at most M and none at unmarked steps, part gaps at most E at disturbed steps and none else, the carried amount is at most (D + E d)(1 + M)^a; with no disturbance it is the rate D (1 + M)^a.",
+      "zh": "起始之差至多 D、入每一条件之强度至多 M 且未标之步为零、部分之差在扰动之步至多 E 余步为零，则携带量至多 (D + E·d)(1 + M)^a；无扰动时即速率 D(1 + M)^a。",
+      "declarations": [
+        "Becoming.carried_le_disturbed",
+        "Becoming.carried_le_count"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; whole-number amounts and strengths; the schedules of coupling and disturbance given.",
+      "zh": "不加公理；整数之量与强度；耦合与扰动之时程给定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the bound is attained with disturbance (attainment is shown without it).",
+      "zh": "有扰动时此界可达（无扰动时之可达已证）。",
+      "kind": "scope"
+    },
+    {
+      "en": "That governing disturbs at a given rate.",
+      "zh": "治理以给定之频率扰动。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 4 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 339; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 4 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 339 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Forced linear systems: the response to repeated impulses sums each impulse's propagated effect.",
+    "zh": "受迫线性系统：对反复冲击之响应为各冲击传播之效之和。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+  "aliases": [
+    "Repeated disturbance",
+    "反复扰动",
+    "Becoming.carriedGive_with_gaps"
+  ],
+  "dependencies": [
+    {
+      "id": "how-often-couplings-act",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its rate is the case of no disturbance.",
+        "zh": "其速率为无扰动之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries lao-60-peng-xiao-xian).",
+        "zh": "陈述其对应所发现之缺口（条目 lao-60-peng-xiao-xian）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.carriedGive_with_gaps",
+        "Becoming.carried_le_count",
+        "Becoming.carried_le_disturbed",
+        "Becoming.count_step",
+        "Becoming.one_le_pow_add"
+      ],
+      "sha256": "16d1e35f8069cdf22104cbbb581b8f7a86db0a8d8062693e3c22c5090df185e0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frequency",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 339.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 339 节。"
+    }
+  ]
+}

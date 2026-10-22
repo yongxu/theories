@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "id": "basins-of-a-determined-law",
+  "title": {
+    "en": "Basins of a determined law",
+    "zh": "确定之律之势"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Under any determined law, courses meeting is an equivalence whose classes are basins; a course reaches every returning configuration of its basin, so within finitely many configurations each basin holds one cycle, entered before as many steps as there are configurations.",
+    "zh": "任一确定之律下，行程相会是等价关系，其类为势；行程达其势中每一复返之构形，故构形有限时每势一个回环，在构形数之内入之。"
+  },
+  "laws": [
+    {
+      "en": "Within m listed configurations every course enters what returns before step m.",
+      "zh": "列出 m 个构形时，每一行程在第 m 步之前入复返之域。",
+      "declarations": [
+        "Becoming.Law.enters_returning_within"
+      ]
+    },
+    {
+      "en": "The courses of two configurations meet where at some steps they are at one configuration; after meeting they run together, and meeting is reflexive, symmetric and transitive under any determined law.",
+      "zh": "二构形之行程于某步同处一构形即相会；相会后同行，任一确定之律下相会自反、对称、传递。",
+      "declarations": [
+        "Becoming.Law.Meet",
+        "Becoming.Law.Meet.refl",
+        "Becoming.Law.Meet.symm",
+        "Becoming.Law.Meet.later",
+        "Becoming.Law.Meet.trans"
+      ]
+    },
+    {
+      "en": "A course reaches every returning configuration of its basin; within finitely many configurations each basin holds one cycle.",
+      "zh": "行程达其势中每一复返之构形；构形有限时每势一个回环。",
+      "declarations": [
+        "Becoming.Law.Meet.reaches_returning",
+        "Becoming.Law.basin_one_cycle"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; a determined law; finitely many configurations listed where stated.",
+      "zh": "不加公理；确定之律；所述之处构形有限且列出。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How many basins an actual law has.",
+      "zh": "实际之律有几势。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 8 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 340; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 8 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 340 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Basins of attraction of a finite map: its functional graph splits into components, each with one cycle.",
+    "zh": "有限映射之吸引域：其函数图分为诸分支，每支一个回环。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+  "aliases": [
+    "Basins of a determined law",
+    "确定之律之势",
+    "Becoming.Law.enters_returning_within"
+  ],
+  "dependencies": [
+    {
+      "id": "attraction-is-not-returning",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its enters_returning is derived from the bound within the count.",
+        "zh": "其 enters_returning 由构形数内之界导出。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xugua-jin-bi-you-suo-gui, xici-tong-gui-shu-tu).",
+        "zh": "陈述其对应所发现之缺口（条目 xugua-jin-bi-you-suo-gui、xici-tong-gui-shu-tu）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.Meet",
+        "Becoming.Law.Meet.later",
+        "Becoming.Law.Meet.reaches_returning",
+        "Becoming.Law.Meet.refl",
+        "Becoming.Law.Meet.symm",
+        "Becoming.Law.Meet.trans",
+        "Becoming.Law.basin_one_cycle",
+        "Becoming.Law.enters_returning_within"
+      ],
+      "sha256": "032aa2020011d229357413b040d4bad31beb8e8deb9fb2127f9c7b44a03a0a76"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Attraction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 340 节。"
+    }
+  ]
+}

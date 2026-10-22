@@ -53,7 +53,7 @@ Boundary source: [RecurrentAssembly.lean](../../../../experiments/integrated-cor
 **Preserved conditions:** Only the checked chain class and endpoint correspondence between formation routes; local laws and costs are not identified. [RecurrentAssembly.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean)
 
 
-**Used by:** [inherited-structural-copying](inherited-structural-copying.md) · [organizational-rule-inheritance](organizational-rule-inheritance.md) (interpretive)
+**Used by:** [copying-b-fold](copying-b-fold.md) · [inherited-structural-copying](inherited-structural-copying.md) · [organizational-rule-inheritance](organizational-rule-inheritance.md) (interpretive)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
@@ -73,6 +73,7 @@ Boundary source: [RecurrentAssembly.lean](../../../../experiments/integrated-cor
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Hashes in the editable record bind the reviewed source versions. The checker does not audit transitive Lean imports or establish premise warrant.
 

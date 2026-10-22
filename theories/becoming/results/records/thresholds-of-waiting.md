@@ -63,6 +63,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: None. [Withholding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean)
 - related, not a proved adapter: [restoring-giving-from-the-worst-start](restoring-giving-from-the-worst-start.md). The tolerating law keeps inclusion, so its restoring is read off the course from total withholding.
 
+**Used by:** [tolerance-monotone-across-laws](tolerance-monotone-across-laws.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -81,6 +83,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | proof | [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean) | `Becoming.Web.Supported` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `thresholds of waiting`, `等待的阈值`, `tolerance`, `Becoming.Tolerance.kept_set`, `Becoming.Tolerance.thin_absorbed`, `fault tolerance in giving (reading)`
 

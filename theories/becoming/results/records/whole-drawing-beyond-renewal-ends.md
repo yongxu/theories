@@ -79,6 +79,7 @@ OPENING note collective: "a collective made of lives that each end goes on only 
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [OPENING.md](../../OPENING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `a whole that draws its parts' arising beyond its renewal ends`, `a collective consuming what it goes on through`, `ending parts end together without arising`, `汲取其部分之生起超过更新的整体终结`, `Becoming.Web.Whole.family_excess_ends`, `Becoming.Web.Whole.joint_excess_ends`, `Becoming.Web.Listed.end_without_arising`, `Becoming.Web.Whole.ends_without_arising`
 

@@ -99,7 +99,7 @@ Since P6 the open programme has listed ‘relax Dependent (buffers, reserves, la
 - related, not a proved adapter: [generation-is-replenishment](generation-is-replenishment.md). The same module states standing beyond activity: a seed is given its standing while dormant (Provisioned), and waking needs nothing given (Sleeper).
 - related, not a proved adapter: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Substitution defers the end without escaping it (substitution_defers): the same pattern.
 
-**Used by:** [map-of-premises](map-of-premises.md) · [rest-at-every-resolution](rest-at-every-resolution.md) · [space-and-its-parts](space-and-its-parts.md)
+**Used by:** [dormancy-over-a-stretch](dormancy-over-a-stretch.md) · [map-of-premises](map-of-premises.md) · [rest-at-every-resolution](rest-at-every-resolution.md) · [space-and-its-parts](space-and-its-parts.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -132,6 +132,7 @@ Since P6 the open programme has listed ‘relax Dependent (buffers, reserves, la
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Carries`, `Becoming.Web.carries_zero`, `Becoming.Web.Carries.pos`, `Becoming.Web.Carries.active_not_recurring`, `Becoming.Web.Carries.lasts`, `Becoming.Web.Carries.lasts_within`, `Becoming.Web.Carries.arising_not_recurring`, `Becoming.Web.Carries.consumed_lasts`, `Becoming.Web.Carries.coextinct_lasts`, `Becoming.Flow.carries_of_held`, `Becoming.Web.Decays`, `Becoming.Web.Carries.decays_by`, `Becoming.Web.Carries.ends_within`, `Becoming.Seed.seed`, `Becoming.Viable.viable`, `Becoming.Famine.famine`, `Becoming.Famine.transformed_dependent`, `Becoming.Web.chainEnd`, `Becoming.Web.Carries.chain_ends`, `Becoming.Web.chainEnd_zero`, `Becoming.Web.Carries.chain_ends_of_em`, `Becoming.Cascade.cascade`, `Becoming.Web.no_unending_chain`, `Becoming.Web.lpo_of_ending`, `Becoming.short_cascade`
 

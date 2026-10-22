@@ -80,6 +80,7 @@ The open programme of the chapter named one exception to the localized decidabil
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T060542.295041Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T075104.511517Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `counting where the counts exist`, `计数存在之处的计数`, `counted census`, `被计数的普查`, `counts as relations`, `计数作为关系`, `counting laws for every property`, `对每个性质的计数之律`, `binding laws over counted censuses`, `被计数的普查上的约束之律`
 

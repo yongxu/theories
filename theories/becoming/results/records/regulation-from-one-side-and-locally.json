@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "id": "regulation-from-one-side-and-locally",
+  "title": {
+    "en": "Regulation from one side, beyond the gap, and locally",
+    "zh": "单侧、越界与局部之调节"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "With balance, a level below m with no exchange raising it there never returns to m; overcorrecting never rests at m; formations each opposing on their own condition regulate it, and a family so regulated settles in total with nothing reading the total.",
+    "zh": "平衡之下，m 之下无交换举之者不回到 m；矫枉过正者永不止于 m；各形成在其条件上相反即调节之，如此调节之族其总量定，无一形成读总量。"
+  },
+  "laws": [
+    {
+      "en": "With balance from T, the joint exchange giving no more than it takes wherever the level is below m, a level below m at T is at most that level after and never returns to m; gated renewal, nothing given below m, is its case.",
+      "zh": "自 T 起衡，水平在 m 之下处联合交换所给不多于所取，则 T 时在 m 之下之水平此后至多为该水平，永不回到 m；门控之更新（m 之下无所给）为其情形。",
+      "declarations": [
+        "Becoming.Flow.held_below",
+        "Becoming.Flow.never_returns_below",
+        "Becoming.Flow.given_zero_below"
+      ]
+    },
+    {
+      "en": "With balance, a joint exchange beyond the gap to m leaves the next level off m, so beyond it at every step from T the level is off m at every later step.",
+      "zh": "平衡之下，联合交换越出与 m 之距，则下一水平不为 m；自 T 起每步越出者此后每步皆不为 m。",
+      "declarations": [
+        "Becoming.Flow.not_at_of_beyond",
+        "Becoming.Flow.never_at_of_beyond"
+      ]
+    },
+    {
+      "en": "Each formation weakly opposing departure from m on its condition, some strictly on each side, makes the joint exchange oppose; shares of the gap bounding each formation's departure, totalling at most the gap, keep the joint exchange within it.",
+      "zh": "各形成在其条件上弱相反、两侧皆有其一严格相反，则联合交换相反；以份额为界、份额之和不过间距，则联合交换在界内。",
+      "declarations": [
+        "Becoming.Flow.total_lt_of_le_of_mem",
+        "Becoming.Flow.opposes_of_each",
+        "Becoming.Flow.withinGap_of_shares"
+      ]
+    },
+    {
+      "en": "Under balance, each condition of a family within the gap to its own level and opposing at every step from T, the family's stock is the total of those levels from the step by which each has settled; no formation reads the stock.",
+      "zh": "平衡之下，族之每一条件自 T 起每步在其水平之间距内且相反，则自各已定之步起族之存量为诸水平之和；无一形成读存量。",
+      "declarations": [
+        "Becoming.Flow.stock_settles"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; balance at the conditions; the per-formation and per-condition premises as stated; whole-number levels.",
+      "zh": "不加公理；条件上衡；各形成与各条件之前提如所述；整数之水平。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual formations read only their own conditions.",
+      "zh": "实际之形成只读其自身之条件。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Rest at m from one side only, under exchanges reading the whole: not stated.",
+      "zh": "读整体之交换下仅自一侧之定：未述。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 9 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 339; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 9 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 339 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Decentralized control: local feedback loops whose sum regulates the aggregate; one-sided (ratchet) control.",
+    "zh": "分散控制：其和调节总量之局部反馈；单侧（棘轮式）控制。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+  "aliases": [
+    "Regulation from one side, beyond the gap, and locally",
+    "单侧、越界与局部之调节",
+    "Becoming.Flow.held_below"
+  ],
+  "dependencies": [
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its two-sided law (withinGap_iff_between, settles) is used and read locally.",
+        "zh": "用其两侧之律（withinGap_iff_between、settles）并局部读之。"
+      }
+    },
+    {
+      "id": "the-rest-outruns-the-renewal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its gated stays_below is now the case of never_returns_below.",
+        "zh": "其门控之 stays_below 今为 never_returns_below 之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries cy-xiaoguo-jiaowang-guozheng, lao-37-zhen-zhi, lao-29-qu-shen-qu-tai, lao-57-fa-ling-zi-zhang).",
+        "zh": "陈述其对应所发现之缺口（条目 cy-xiaoguo-jiaowang-guozheng、lao-37-zhen-zhi、lao-29-qu-shen-qu-tai、lao-57-fa-ling-zi-zhang）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.never_at_of_beyond",
+        "Becoming.Flow.not_at_of_beyond",
+        "Becoming.Flow.opposes_of_each",
+        "Becoming.Flow.stock_settles",
+        "Becoming.Flow.total_lt_of_le_of_mem",
+        "Becoming.Flow.withinGap_of_shares"
+      ],
+      "sha256": "05a308a0dfd56e9be23e40a7a649dd78aa14b0a75aefd9bebedb0a932452419f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.given_zero_below",
+        "Becoming.Flow.held_below",
+        "Becoming.Flow.never_returns_below"
+      ],
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Regulation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 339.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 339 节。"
+    }
+  ]
+}

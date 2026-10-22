@@ -71,7 +71,7 @@ Ren's first confirmed reading: possibilities are what can form next from what ex
 - related, not a proved adapter: [joint-difference-making](joint-difference-making.md). Its but-for test holds the move fixed; this comparison holds the rest of the exchange fixed. A part's contribution here is to what can form, not to an ending.
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Joint excess compares each step's totals; the difference here follows one part's cumulative net exchange.
 
-**Used by:** [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [differences-below-threshold](differences-below-threshold.md) · [feedback-and-reach](feedback-and-reach.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [loss-beyond-a-region](loss-beyond-a-region.md) · [ranking-under-readings](ranking-under-readings.md) · [significance-retained-within-margin](significance-retained-within-margin.md) · [testing-within-couplings](testing-within-couplings.md)
+**Used by:** [a-need-with-a-cap](a-need-with-a-cap.md) · [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [differences-below-threshold](differences-below-threshold.md) · [feedback-and-reach](feedback-and-reach.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [loss-beyond-a-region](loss-beyond-a-region.md) · [ranking-under-readings](ranking-under-readings.md) · [significance-retained-within-margin](significance-retained-within-margin.md) · [testing-within-couplings](testing-within-couplings.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -100,6 +100,7 @@ Ren's first confirmed reading: possibilities are what can form next from what ex
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Admits`, `Becoming.Web.supported_iff_admits`, `Becoming.Web.Admits.mono`, `Becoming.Flow.withhold`, `Becoming.Flow.partTaken`, `Becoming.Flow.partGiven`, `Becoming.Flow.WithheldLevels`, `Becoming.Flow.taken_withhold`, `Becoming.Flow.given_withhold`, `Becoming.Flow.WithheldLevels.unique`, `Becoming.Flow.Balances.withheld`, `Becoming.Flow.Balances.supported_iff_within_margin`, `Becoming.Flow.Balances.supported_of_net_give`, `Becoming.Flow.Balances.admits_of_net_draw`
 

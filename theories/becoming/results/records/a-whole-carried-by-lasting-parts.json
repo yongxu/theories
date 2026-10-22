@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "id": "a-whole-carried-by-lasting-parts",
+  "title": {
+    "en": "A whole carried by lasting parts",
+    "zh": "持续之部分承整体"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Where from T on a part arises within every d steps and each arising part lasts d steps, the whole is active at every step from T + d on: the converse of a whole's needing its parts' arising, which needs the parts to last.",
+    "zh": "自 T 起每 d 步内有部分生起、且每一生起之部分持续 d 步，则整体自 T + d 起每步活跃：整体需部分生起之逆，须部分持续。"
+  },
+  "laws": [
+    {
+      "en": "A part arising within every d consecutive steps from T, each lasting d steps after arising, the whole of some part is active at the step d after every step from T on, so at every step from T + d on.",
+      "zh": "自 T 起每 d 个相继之步内有部分生起、生起后各持续 d 步，则某部分之整体在自 T 起每步之后第 d 步活跃，故自 T + d 起每步活跃。",
+      "declarations": [
+        "Becoming.Web.Whole.persists_of_arising",
+        "Becoming.Web.Whole.persists_from"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the parts' arising and lasting as stated; discrete steps.",
+      "zh": "不加公理；部分之生起与持续如所述；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual parts last until the next arises.",
+      "zh": "实际之部分持续至下一生起。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 340; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 340 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Covering a timeline by intervals: renewal processes with overlapping lifetimes.",
+    "zh": "以区间覆盖时间线：寿命重叠之更新过程。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+  "aliases": [
+    "A whole carried by lasting parts",
+    "持续之部分承整体",
+    "Becoming.Web.Whole.persists_of_arising"
+  ],
+  "dependencies": [
+    {
+      "id": "whole-persists-through-generation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The converse of its Whole.arises_within; its Gaps shows lasting needed.",
+        "zh": "Whole.arises_within 之逆；其 Gaps 显示须持续。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries zhongyong-bu-xi-ze-jiu).",
+        "zh": "陈述其对应所发现之缺口（条目 zhongyong-bu-xi-ze-jiu）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Whole.persists_from",
+        "Becoming.Web.Whole.persists_of_arising"
+      ],
+      "sha256": "e2f3bb61157203ed30b2b1303e59c9477bb51b693ad75da59969ae76c6c09f56"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Wholes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 340 节。"
+    }
+  ]
+}

@@ -15174,3 +15174,100 @@ Output → input: chapter §3.4, §7.1, item 10 and the record row (EN, ZH); Opt
 **Self-review.** Every premise is used: the return condition for the strict law, no floor so that drawing everything is the floor. What lies in no portion does not stand, a modelling choice; where portions cover the level it is no restriction. Drawing at once where a portion returns at least one for one, with floors, or under sharing rules that depend on the others' claims, is not covered.
 
 **The run.** Core 285 modules and 12,396 theorems, instances 7 and 567, applications 6 and 179; 13 Lean steps ran, 1,191 reused. Becoming.Optimum 462 theorems (451 before), 20 declarations added (11 theorems), 0 removed; all with empty axiom reports. Connectivity: 648 of 13,142 apart, unchanged; no new apart root, every law stated on the web or read by a law that is; register check passes.
+
+## 338. Short laws the classical texts ask for (ZG1)
+
+```text
+Result(s): new records negation-change-and-stable-cases, least-parts-and-equal-shares, copying-b-fold,
+       far-conveying-runs-the-family-down, a-need-with-a-cap, tolerance-monotone-across-laws, rivals-bounded-in-time,
+       order-of-exchanges-sharing-a-relatum, selection-right-exactly-where-read (with the bound on entering the return
+       and the beyond-the-gap laws in basins-of-a-determined-law and regulation-from-one-side-and-locally).
+Delta: twelve laws the ZH map's gap notes stated precisely, each proved where it belongs and, where an existing law was
+       its case, below it (rule 9): KeepsInclusion.course from KeepsInclusionInto.course, bounded_rival from
+       rival_of_outside, doubling from copying b-fold, enters_returning from enters_returning_within.
+Premises / correspondence: no axiom; whole numbers; balance and dissipation where stated. Correspondence: averaging
+       inequalities, geometric growth, tolerance ranges, monotone threshold dynamics, discounting, non-commuting
+       operations, measurability (a function factors through a map exactly where constant on its fibres).
+Evidence: core receipt 20261022T054058.112616Z (passed).
+Boundary: each law is stated for the structure named; which actual distributions, supply lines, needs, rules or maps
+       are of these kinds is not.
+Output → input: the ZH map's entries (gap notes pointing to the laws), chapter CIVILIZATION-THOUGHT-AND-BECOMING §八,
+       record civilization-thought-on-the-spine, the chapter's record tables; significance review, gaps check.
+```
+
+**What was built** (pure core, every axiom report empty).
+
+- *A negation's change* (`CeasesToBe.not_comes`, `ComesToBe.not_ceases`, `ComesToBe.of_not`, `CeasesToBe.of_not`, `Web.ceasing_readings`): what ceases to be is the coming to be of its negation, and what comes to be the ceasing of its negation, with no premise; read back, the determination must be stable where it is read. 墨经「已，成、亡」, 系辞「剛柔相推」, 庄子「日夜相代」.
+- *Cases into a stable conclusion* (`Decided.cases_stable`): a conclusion following from a proposition and from its failure holds wherever it is stable. 墨辩「無窮不害兼」.
+- *Least parts and equal shares* (`RelativePosition.Least`, `least_not_ahead`, `least_exists`, `least_bound`, `equal_share_iff`, `equal_share_exceeds`, `equal_share_even`, `uneven_short`). 孙子「無所不備，則無所不寡」, 论语「不患寡而患不均」.
+- *Entering the return within the count* (`Law.enters_returning_within`). 序卦「進必有所歸」.
+- *No rest beyond the gap* (`Flow.not_at_of_beyond`, `Flow.never_at_of_beyond`). 矫枉过正.
+- *Tolerance across laws* (`Tolerance.KeepsInclusionInto`, `KeepsInclusionInto.course`, `tolerating_into`, `tolerating_mono`). 老子「柔弱勝剛強」.
+- *A rule bounded in time* (`rival_of_outside`, `boundedInTime`, `bounded_in_time_rival`, `Clearing.admits_early`, `Clearing.time_bounded_permits`). 大取「愛尚世與愛後世」.
+- *Copying b-fold* (`Copying.requiredBy`, `mul_pow_succ`, `requiredBy_add`, `copying`, `copying_iff`, `copying_runs`, `tenfold`; `doubling` and `required` now its case `b = 2`, `two_mul_pow` dropped for `mul_pow_succ`). 吴子「一人學戰，教成十人」.
+- *Far conveying* (`Flow.takers_pos_of_conveys`, `Flow.conveyed_loses`). 孙子「遠輸」.
+- *A need with a cap* (`Web.FitsBand`, `Web.FitsBand.admits`, `Flow.fitsBand_iff_within_margins_at`). 墨经「損，飽者去餘，適足不害，能害飽」.
+- *Order where a relatum is shared* (`Interleavings.Shared.law`, `Interleavings.Shared.order_matters`). 孙子 on punishment before attachment.
+- *Read off the map* (`Learning.through_iff_reads`, `Learning.selects_right_iff`). 苏辙「循理」.
+
+*Reading* [AI reading, D45]. Each entry's reading names its law; the texts' claims hold of the structures the laws state, under their premises.
+
+**Self-review.** Where a statement does not touch the base (logic, arithmetic of shares, a model witness, laws of every selection or significance), it is registered apart with its category, or joined through its instance on a web (`Web.ceasing_readings`). No earlier statement changed; `Flow.stays_below`, `carried_le_count`, `bounded_rival`, `doubling_iff` and `enters_returning` keep theirs as cases.
+
+**The run.** Core 285 modules and 12,457 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. Connectivity: 662 of 13,203 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 339. Regulation from one side and locally, and repeated disturbance (ZG2)
+
+```text
+Result(s): new records regulation-from-one-side-and-locally, repeated-disturbance.
+Delta: with balance, a joint exchange giving no more than it takes below m holds a level below m and never lets it
+       return (Flow.held_below, never_returns_below; the gated Flow.stays_below its case through given_zero_below).
+       Formations each opposing on their own condition make the joint exchange oppose, shares of the gap keep it
+       within (opposes_of_each, withinGap_of_shares), and a family so regulated condition by condition settles in total
+       with nothing reading the total (stock_settles). With the part disturbing by at most E at marked steps, the
+       carried amount is at most (D + E d)(1 + M)^a (carried_le_disturbed; carried_le_count the case of none).
+Premises / correspondence: balance; the per-formation conditions; whole numbers. Correspondence: decentralized
+       control, ratchets; forced linear response.
+Evidence: core receipt 20261022T054058.112616Z (passed).
+Boundary: one-sided regulation reading the whole, and the attainment of the disturbance bound, are not stated.
+Output → input: the ZH map's 老子 entries (29, 37, 57, 60, 矫枉过正); records two-sided-regulation-and-late-reading,
+       how-often-couplings-act; chapter §八 item 3.
+```
+
+**What was built.** `Flow.held_below`, `Flow.never_returns_below`, `Flow.given_zero_below` (in `Becoming.Continuation`, below `Flow.stays_below`); `Flow.total_lt_of_le_of_mem`, `Flow.opposes_of_each`, `Flow.withinGap_of_shares`, `Flow.stock_settles` (in `Becoming.Regulation`); `carriedGive_with_gaps`, `one_le_pow_add`, `count_step`, `carried_le_disturbed` (in `Becoming.Frequency`, `carried_le_count` now its case).
+
+*Reading* [AI reading, D45]. 老子三十七章「鎮之」and 二十九章「去甚」: holding from one side holds only from that side. 五十七章「我好静而民自正」: each formation reading only its own condition, the whole settles with no one reading the whole. 六十章「若烹小鮮」: each stirring adds what the later couplings multiply.
+
+**Self-review.** The one-sided law generalizes the gated one, which is now derived from it (rule 9); the local law is stated through the joint exchange and so needs only per-formation premises; the disturbance bound generalizes the rate, which is derived.
+
+**The run.** Core 285 modules and 12,457 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. Connectivity: 662 of 13,203 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 340. Wholes through lasting parts, dormancy, change, lineages and basins (ZG3)
+
+```text
+Result(s): new records a-whole-carried-by-lasting-parts, dormancy-over-a-stretch, arising-needs-change,
+       need-drift-along-a-lineage, basins-of-a-determined-law.
+Delta: a whole persists where parts keep arising within every d steps and each lasts d steps (converse of
+       Whole.arises_within). Bounded dormancy needs its premises only over the stretch (decays_by_on, ends_within_on;
+       the from-S laws their cases); a final ending stays, so a late return finds none; a reserve spanning the gap
+       bridges it. A formation active exactly where supported does not arise across a step at which nothing it reads
+       changes. Need drifts at most δ a generation along a lineage. Under any determined law courses meeting is an
+       equivalence; a course reaches every returning configuration of its basin, so with finitely many configurations
+       each basin holds one cycle.
+Premises / correspondence: as each law names. Correspondence: renewal processes, seed dormancy, no change without
+       cause, bounded mutation, functional graphs of finite maps.
+Evidence: core receipt 20261022T054058.112616Z (passed).
+Boundary: the support chain the 系辞 entry asks for (support passed on from formations that themselves gained it
+       later) is not stated here.
+Output → input: the ZH map's entries (中庸, 王弼, 孟子, 唯识, 论语「因損益」, 系辞「同歸而殊塗」); records
+       whole-persists-through-generation, reserve-defers-ending, support-from-the-supported,
+       transmission-is-inheritance-and-need, attraction-is-not-returning.
+```
+
+**What was built.** `Web.Whole.persists_of_arising`, `Web.Whole.persists_from`; `Web.decays_by_on`, `Web.ends_within_on`, `Web.ended_for_good`, `Web.late_return_finds_none`, `Bridged`; `Web.not_arises_of_unchanged`; `Flow.transmitted_along`, `Flow.transmitted_along_supported`; `Law.Meet`, `Law.Meet.refl`, `Law.Meet.symm`, `Law.Meet.later`, `Law.Meet.trans`, `Law.Meet.reaches_returning`, `Law.basin_one_cycle`.
+
+*Reading* [AI reading, D45]. 中庸「不息則久」needs the parts to last; 王弼「復之不速，遂至迷凶」and 孟子「一日暴之，十日寒之」: a return later than the reserve finds no one; 唯识「常無轉變，不可說有能生用」: what does not change gives no arising; 论语「所損益可知」: drift is bounded by the generations; 系辞「同歸而殊塗」: many ways, one return in each basin.
+
+**Self-review.** The dormancy laws generalize the from-S laws, which are derived (rule 9); meeting needs no finiteness, the one cycle needs it. Finality is a premise, not hidden in a definition, since a supported formation may be active again.
+
+**The run.** Core 285 modules and 12,457 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. Connectivity: 662 of 13,203 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.

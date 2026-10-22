@@ -1,0 +1,149 @@
+{
+  "schema_version": 2,
+  "id": "a-need-with-a-cap",
+  "title": {
+    "en": "A need with a cap",
+    "zh": "带上限之需"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Where a need has a cap, levels keep a formation within its band between need and cap; with balance the band is exact on both sides, a part opening it from below by giving and closing it from above by giving beyond the margin to the cap.",
+    "zh": "所需带上限时，水平使形成在所需与上限之间之带内；平衡之下此带两侧皆确切，部分以给予自下开之，以越过上限余地之给予自上阖之。"
+  },
+  "laws": [
+    {
+      "en": "Levels keep a formation within its band at a step where each condition it requires stands between its need and its cap; levels within the band admit it.",
+      "zh": "水平使形成在某步处于其带内，恰当其所需之每一条件在所需与上限之间；带内之水平容之。",
+      "declarations": [
+        "Becoming.Web.FitsBand",
+        "Becoming.Web.FitsBand.admits"
+      ]
+    },
+    {
+      "en": "With balance at the conditions required across the steps before, the levels that stand keep the formation within its band exactly where, at each, need plus what the part took is at most the level without the part plus what it gave, which is at most the cap plus what it took.",
+      "zh": "此前各步所需条件上皆衡时，现水平使形成在带内，恰当每一条件上所需加部分所取至多为无部分之水平加其所给，后者至多为上限加其所取。",
+      "declarations": [
+        "Becoming.Flow.fitsBand_iff_within_margins_at"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; balance at the conditions the formation requires, across the steps before; whole-number levels.",
+      "zh": "不加公理；此前各步形成所需之条件上衡；整数之水平。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which needs have caps in an actual world.",
+      "zh": "实际世界中哪些所需带上限。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 3 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Tolerance ranges: too much harms as too little does (an optimal band).",
+    "zh": "耐受范围：过多与过少皆害（适宜之带）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+  "aliases": [
+    "A need with a cap",
+    "带上限之需",
+    "Becoming.Web.FitsBand"
+  ],
+  "dependencies": [
+    {
+      "id": "closing-needs-net-draw",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its margin below is the lower side of the band.",
+        "zh": "其下侧余地是带之下侧。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries mojing-sun-er-bu-hai).",
+        "zh": "陈述其对应所发现之缺口（条目 mojing-sun-er-bu-hai）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.fitsBand_iff_within_margins_at",
+        "Becoming.Web.FitsBand",
+        "Becoming.Web.FitsBand.admits"
+      ],
+      "sha256": "be2732f6554e6cb9ec1e5331a2c8c0762101a072038c96925028b62583955ab9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

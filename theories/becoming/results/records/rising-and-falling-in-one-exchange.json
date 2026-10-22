@@ -406,7 +406,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "4c3d2114c715be447066cf3b6b3824e7641a638dbe4a19b520769074ecdbdd2d",
+      "sha256": "b0a65b07a1aff0e87d8ff284d0f1137098455461e223cc5b0c7fee222196c998",
       "declarations": [
         "Becoming.excess_pos",
         "Becoming.rise",

@@ -454,7 +454,7 @@
         "Becoming.mark_pos",
         "Becoming.mark_iff"
       ],
-      "sha256": "4c3d2114c715be447066cf3b6b3824e7641a638dbe4a19b520769074ecdbdd2d"
+      "sha256": "b0a65b07a1aff0e87d8ff284d0f1137098455461e223cc5b0c7fee222196c998"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
@@ -462,7 +462,7 @@
       "declarations": [
         "Becoming.Decided"
       ],
-      "sha256": "e7c3fd01f372115c0b598aad9aafc697c1974efc81aaef7000a588804ed232a7"
+      "sha256": "cb8df8564a4a249f119c84551c84297c31002ba4c57ec992edc6e20a99e62ff3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T165934.927469Z/verification.json",

@@ -86,6 +86,7 @@ Sustaining, drawing and repair differentiate roles within one unfolding. The inh
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `RenewalRecovery.inactive_pair_absorbs`, `RenewalRecovery.supported_repair_step`, `RenewalRecovery.repair_window_progress`, `RenewalRecovery.repair_restores_sustaining_support`, `RenewalRecovery.same_future_inputs`, `RenewalRecovery.two_actual_pulses`, `RenewalRecovery.supported_pulse_recovers`, `RenewalRecovery.unsupported_pulse_never_recovers`, `RenewalRecovery.recovered_history_neither_global_class`, `Becoming.Flow.restores`, `Becoming.SupportGated.repair_restores`, `Becoming.SupportGated.pulse_restores (retired module)`
 

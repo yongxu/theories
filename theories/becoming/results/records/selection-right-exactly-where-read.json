@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "id": "selection-right-exactly-where-read",
+  "title": {
+    "en": "Selection right exactly where what matters is read",
+    "zh": "择恰在要紧者由象读出处为对"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "What matters goes alike across a map's lumping exactly where it is read off the map, so some selection through the map selects exactly what matters exactly where the map reads it.",
+    "zh": "要紧者跨象之归并一致，恰当它由象读出；所以经象之某择恰选出要紧者，恰在象读出它之处。"
+  },
+  "laws": [
+    {
+      "en": "What matters goes alike across the alternatives a map lumps together exactly where it is read off the map, through what holds of some alternative the map gives that entry.",
+      "zh": "要紧者在象所归并之选项上一致，恰当它由象读出，经象给某一项之某选项所成立者。",
+      "declarations": [
+        "Becoming.Learning.through_iff_reads"
+      ]
+    },
+    {
+      "en": "A selection through a map selecting exactly what matters exists exactly where what matters is read off the map.",
+      "zh": "经象而恰选出要紧者之择存在，恰当要紧者由象读出。",
+      "declarations": [
+        "Becoming.Learning.selects_right_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; any types of alternatives and entries.",
+      "zh": "不加公理；选项与项之任意类型。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which map a selector uses.",
+      "zh": "择者用何象。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Measurability: a function factors through a map exactly where it is constant on its fibres.",
+    "zh": "可测性：一函数经一映射分解恰当它在其纤维上为常值。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+  "aliases": [
+    "Selection right exactly where what matters is read",
+    "择恰在要紧者由象读出处为对",
+    "Becoming.Learning.through_iff_reads"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-through-a-model-of-the-options",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its necessary and sufficient directions are joined.",
+        "zh": "合其必要与充分两向。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries suzhe-22-xun-li).",
+        "zh": "陈述其对应所发现之缺口（条目 suzhe-22-xun-li）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Learning.selects_right_iff",
+        "Becoming.Learning.through_iff_reads"
+      ],
+      "sha256": "aa142f84b784dd1816a650a2c3a35b9e1e261cd3f76c071aa1442cf5296ee9a8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Learning",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

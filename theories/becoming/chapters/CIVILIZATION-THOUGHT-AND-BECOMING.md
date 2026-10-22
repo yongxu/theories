@@ -310,13 +310,13 @@ Ren 说：“其中大多重要的符号，应该在先秦就存在了”。这�
 
 ## 八、古典文字提出的缺口
 
-61 个条目写出了一个缺口：原文说了一种结构，脊柱还没有它的律。去掉重复，主要有以下几类。前两类已证（WH1、SAT1），述及它们的 5 个条目改读新律，其 `gap` 注指向新律：
+61 个条目写出了一个缺口：原文说了一种结构，脊柱还没有它的律。去掉重复，主要有以下几类。第 1 至 5 类已证（WH1、SAT1、ZG1、ZG2）；连同其余有精确陈述者，共 30 个条目改读新律，其 `gap` 注以「已补」起首、指向新律（[研究第 338 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#338-short-laws-the-classical-texts-ask-for-zg1)、[第 339 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#339-regulation-from-one-side-and-locally-and-repeated-disturbance-zg2)、[第 340 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#340-wholes-through-lasting-parts-dormancy-change-lineages-and-basins-zg3)）：
 
 1. **合取的或分级的整体。** 华严六相「去却椽即無舍」〔FO2-FQ〕与墨经「謂其存者損」〔MI1-S-SS〕都说缺一部分时整体不成，或成为减损的整体。脊柱原有的整体（`Becoming.Web.Whole`）是析取的：某部分活跃，整体就活跃。已证：每个部分之整体（`Becoming.Web.AllWhole`）一个部分终结即终结，所列部分之等级（`Becoming.Web.Grade`）跨一步增其生起者、减其止息者，减损之整体恰是某部分之整体活跃而每个部分之整体不活跃（`Becoming.Web.diminished_iff`）（WH1，[研究第 333 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#333-a-whole-of-every-part-and-a-graded-whole-wh1)，[a-whole-of-every-part](../results/records/a-whole-of-every-part.md)）。
 2. **饱和之律。** 老子七十二章“民不畏威”：耦合的强度随已经传过的量而降。已证：强度读自经耦合已传之量时，强度归零则耦合停止（`Becoming.Saturation.stops`），恰在响应归零处停止，以一为下限则复现（`Becoming.Saturation.stops_iff`、`Becoming.Saturation.floored`）（SAT1，[研究第 334 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#334-a-coupling-saturated-by-what-it-has-carried-sat1)，[a-coupling-saturated-by-what-it-has-carried](../results/records/a-coupling-saturated-by-what-it-has-carried.md)）。
-3. **单侧与局部的调节。** 老子三十七章“自定”、五十七章“自正”：每个形成只读其邻近条件的水平时，整体水平在什么条件下定于一处。
-4. **均分之律。** 论语“不患寡而患不均”：所给按等份分配时，每个依存者被支持，恰当等份不少于最大的需要。由此，需要不等之处，总给足够而均分仍可使人不被支持。
-5. **抄录之律。** 吴子「一人學戰，教成十人」〔BI1-S-WZ〕：每个单元汲取后得 b 个单元，n 轮之后有几个单元，以及存量在什么条件下够用。
+3. **单侧与局部的调节。** 老子三十七章“自定”、五十七章“自正”：每个形成只读其邻近条件的水平时，整体水平在什么条件下定于一处。已证：各形成在其条件上相反即调节之，如此调节之族其总量定，无一形成读总量；只镇一侧者只从该侧定之（`Becoming.Flow.stock_settles`、`Becoming.Flow.never_returns_below`；ZG2，[regulation-from-one-side-and-locally](../results/records/regulation-from-one-side-and-locally.md)）。
+4. **均分之律。** 论语“不患寡而患不均”：所给按等份分配时，每个依存者被支持，恰当等份不少于最大的需要。由此，需要不等之处，总给足够而均分仍可使人不被支持。已证（`Becoming.RelativePosition.equal_share_iff`、`Becoming.RelativePosition.equal_share_exceeds`，见证 `Becoming.RelativePosition.uneven_short`；ZG1，[least-parts-and-equal-shares](../results/records/least-parts-and-equal-shares.md)）。
+5. **抄录之律。** 吴子「一人學戰，教成十人」〔BI1-S-WZ〕：每个单元汲取后得 b 个单元，n 轮之后有几个单元，以及存量在什么条件下够用。已证（`Becoming.Copying.copying_iff`，见证 `Becoming.Copying.tenfold`；ZG1，[copying-b-fold](../results/records/copying-b-fold.md)）。
 6. **相通的见证。** 韩非八经「十人云疑，百人然乎，千人不可解也」〔FA1-S-H48〕、八奸「不使羣臣相爲語」〔FA1-S-H09〕：一个见证者的报告若是另一个的函数，且与之在同样的情形下出错，加入它不改变任何检查。
 7. **机之度量。** 孙子「其勢險，其節短」〔BI1-S-SZ〕、韩非扁鹊章：入势之深、从机到所至的步数，以及机前保住所需之较少。
 8. **按份额加权的池之律**，以及读取与兼感合一之律（荀子“兼听而时稽之”）。

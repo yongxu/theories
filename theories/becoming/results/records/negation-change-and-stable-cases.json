@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "id": "negation-change-and-stable-cases",
+  "title": {
+    "en": "A negation's change, and cases into a stable conclusion",
+    "zh": "否定之变与归于稳定结论之分情形"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "What ceases to be is the coming to be of its negation, and back where the determination is stable; a conclusion following from a proposition and from its failure holds wherever it is stable, the proposition undecided.",
+    "zh": "止息即其否定之生起，规定稳定处反之亦然；由一命题与其否定分别推出之结论，凡稳定处即成立，该命题不须定然否。"
+  },
+  "laws": [
+    {
+      "en": "What ceases to be is the coming to be of its negation, and what comes to be the ceasing of its negation, with no premise; read back, the determination must be stable where it is read; on a web, a formation ceasing is its inactivity coming to be.",
+      "zh": "止息即其否定之生起，生起即其否定之止息，无前提；反读时该规定须在所读之处稳定；在网上，一形成之止息即其不活跃之生起。",
+      "declarations": [
+        "Becoming.CeasesToBe.not_comes",
+        "Becoming.ComesToBe.not_ceases",
+        "Becoming.ComesToBe.of_not",
+        "Becoming.CeasesToBe.of_not",
+        "Becoming.Web.ceasing_readings"
+      ]
+    },
+    {
+      "en": "A conclusion following from a proposition and from its failure holds wherever it is stable, the proposition left undecided; every negation and every equation of numbers is stable.",
+      "zh": "由一命题与其否定分别推出之结论，凡稳定处即成立，该命题不须判定；一切否定与数之等式皆稳定。",
+      "declarations": [
+        "Becoming.Decided.cases_stable"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; a determination is any predicate of steps; stability (double negation elimination at the point read) where stated.",
+      "zh": "不加公理；规定是步上之任一谓词；所述之处须稳定（在所读之点双重否定可消去）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a determination is decided: only stability where read is used.",
+      "zh": "规定可判定：只用所读之处之稳定。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 6 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 6 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Constructive logic: double negation is stable on negations and on decidable propositions.",
+    "zh": "构造逻辑：否定与可判定之命题上双重否定稳定。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+  "aliases": [
+    "A negation's change, and cases into a stable conclusion",
+    "否定之变与归于稳定结论之分情形",
+    "Becoming.CeasesToBe.not_comes"
+  ],
+  "dependencies": [
+    {
+      "id": "coming-and-ceasing-keep-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Change read as coming to be and ceasing to be; the negation reading is added.",
+        "zh": "以生起与止息读变；增否定之读。"
+      }
+    },
+    {
+      "id": "counts-exist-where-decided",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The census laws argue by the same stable cases.",
+        "zh": "普查之律以同样稳定之分情形论证。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries mojing-yi-cheng-wang, xici-gang-rou-xiang-tui, zhuangzi-ri-ye-xiang-dai, mobian-wu-qiong-ying-fou).",
+        "zh": "陈述其对应所发现之缺口（条目 mojing-yi-cheng-wang、xici-gang-rou-xiang-tui、zhuangzi-ri-ye-xiang-dai、mobian-wu-qiong-ying-fou）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.CeasesToBe.not_comes",
+        "Becoming.CeasesToBe.of_not",
+        "Becoming.ComesToBe.not_ceases",
+        "Becoming.ComesToBe.of_not",
+        "Becoming.Web.ceasing_readings"
+      ],
+      "sha256": "b0a65b07a1aff0e87d8ff284d0f1137098455461e223cc5b0c7fee222196c998"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Decided.cases_stable"
+      ],
+      "sha256": "cb8df8564a4a249f119c84551c84297c31002ba4c57ec992edc6e20a99e62ff3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Decidedness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "id": "far-conveying-runs-the-family-down",
+  "title": {
+    "en": "Far conveying runs the family down",
+    "zh": "远输使族耗减"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "Balanced and dissipated on across N steps, each conveying from a member of the family, the family's stock falls by at least N; so from a stock of S at most S stages are conveyed.",
+    "zh": "族跨 N 步皆衡且耗、每步自族之一员有所输送，则族之存量至少降 N；所以起点存量为 S 者至多输送 S 程。"
+  },
+  "laws": [
+    {
+      "en": "A step conveying from a member of a family has a formation taking from the family; balanced and dissipated on across N such steps, the family's stock falls by at least N, and N is at most its stock at the start.",
+      "zh": "自族之一员有所输送之步有取于族之形成；跨 N 个如此之步皆衡且耗，族之存量至少降 N，且 N 至多为起点存量。",
+      "declarations": [
+        "Becoming.Flow.takers_pos_of_conveys",
+        "Becoming.Flow.conveyed_loses"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; balance and dissipation on the family at each step of the stretch; whole-number amounts.",
+      "zh": "不加公理；该段每步族上衡且耗；整数之量。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual supply lines dissipate at each stage.",
+      "zh": "实际之补给线每程皆耗。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Loss along a supply chain; transport cost proportional to distance.",
+    "zh": "补给链上之损耗；运输之耗与程数成比例。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+  "aliases": [
+    "Far conveying runs the family down",
+    "远输使族耗减",
+    "Becoming.Flow.takers_pos_of_conveys"
+  ],
+  "dependencies": [
+    {
+      "id": "no-finite-part-bears-taking",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its loss law over a stretch (takers_within_on) is used.",
+        "zh": "用其一段上之损失之律（takers_within_on）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries sunzi-yuan-shu).",
+        "zh": "陈述其对应所发现之缺口（条目 sunzi-yuan-shu）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.conveyed_loses",
+        "Becoming.Flow.takers_pos_of_conveys"
+      ],
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

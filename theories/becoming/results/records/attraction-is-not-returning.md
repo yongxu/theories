@@ -84,7 +84,7 @@ Ren asked “hows cause–effect system comparing to our theory?” and pasted a
 - related, not a proved adapter: [support-from-the-supported](support-from-the-supported.md). Admission's absorbing end (Flow.unsupported_stays) is, on flows and webs and under its premises, the absorption of the region in which no member is supported; instance theorems between the two representations are not given.
 - related, not a proved adapter: [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md). The main law for every process: necessarily drawn is exactly not returning, possibly drawn allows return on another course; Captured's rule region is an absorbing region.
 
-**Used by:** [hexagram-world-laws](hexagram-world-laws.md) · [hexagrams-on-the-spine](hexagrams-on-the-spine.md) · [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md)
+**Used by:** [basins-of-a-determined-law](basins-of-a-determined-law.md) · [hexagram-world-laws](hexagram-world-laws.md) · [hexagrams-on-the-spine](hexagrams-on-the-spine.md) · [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -111,6 +111,7 @@ Ren asked “hows cause–effect system comparing to our theory?” and pasted a
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Law.Absorbing`, `Becoming.Law.DrawnInto`, `Becoming.Law.Drawn`, `Becoming.Law.Ahead`, `Becoming.Law.Absorbing.orbit`, `Becoming.Law.DrawnInto.never_back`, `Becoming.Law.Drawn.not_returns`, `Becoming.Law.drawn_iff_not_returns`, `Becoming.Law.reachable_absorbing`, `Becoming.Law.lost_drawn`, `Becoming.Law.returning_absorbing`, `Becoming.Law.Merges.not_both_return`, `Becoming.Law.merge_draws`, `Becoming.Law.lossless_iff_none_drawn`, `Becoming.Law.drawn_iff_lost`, `Becoming.Law.drawnInto_returning`, `Becoming.Law.succ_drawn_lossless`, `Becoming.Law.pred_drawn_keeps`, `Becoming.Law.absorbing_iff_invariant`, `Becoming.AbsorbingUnder`, `Becoming.invariant_iff_every_move`, `Becoming.Invariant.locks_out`, `Becoming.Run.locked_in`, `Becoming.Run.leaving_needs`, `Becoming.Ratchet.false_never_returns`, `Becoming.Exit.leaving_takes`, `attractor`, `吸引子`, `basin`, `吸引域`, `absorbing region`, `吸收区域`, `lock-in`, `锁定`, `path dependence`, `路径依赖`
 

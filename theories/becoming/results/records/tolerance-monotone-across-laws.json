@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "id": "tolerance-monotone-across-laws",
+  "title": {
+    "en": "Tolerance monotone across laws",
+    "zh": "容忍之跨律单调"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "statement": {
+    "en": "For the same waits and the same start, a formation giving under a tolerating law gives under every law tolerating at least as much, at every step: a law keeping inclusion into another keeps it along their courses.",
+    "zh": "同一等待结构与同一起点，容忍律下给予之形成，在容忍不少之每一律下每步皆给予：保持包含入另一律者沿其行程保持之。"
+  },
+  "laws": [
+    {
+      "en": "One law keeps inclusion into another where, from configurations within others, it gives only where the other does; it then keeps it along their courses, keeping inclusion its case.",
+      "zh": "一律保持包含入另一律，恰当自包含于他者之构形它只在另一律给予之处给予；则沿其行程保持之，保持包含为其情形。",
+      "declarations": [
+        "Becoming.Tolerance.KeepsInclusionInto",
+        "Becoming.Tolerance.KeepsInclusionInto.course"
+      ]
+    },
+    {
+      "en": "The tolerating law keeps inclusion into the tolerating law of tolerances no smaller, so more tolerance gives no less at every step.",
+      "zh": "容忍律保持包含入容忍不小之容忍律，所以更大之容忍每步给予不少。",
+      "declarations": [
+        "Becoming.Tolerance.tolerating_into",
+        "Becoming.Tolerance.tolerating_mono"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; tolerances and waits given; any start.",
+      "zh": "不加公理；容忍与等待给定；任一起点。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That more tolerance is better: only that it gives no less.",
+      "zh": "更大之容忍更好：只说给予不少。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T054058.112616Z): the 4 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 338; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T054058.112616Z）：本记录所引之新增 4 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 338 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Monotone threshold dynamics (lower thresholds activate supersets).",
+    "zh": "单调阈值动力学（较低阈值激活超集）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
+  "aliases": [
+    "Tolerance monotone across laws",
+    "容忍之跨律单调",
+    "Becoming.Tolerance.KeepsInclusionInto"
+  ],
+  "dependencies": [
+    {
+      "id": "thresholds-of-waiting",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its KeepsInclusion.course is the case of one law.",
+        "zh": "其 KeepsInclusion.course 为一律之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries lao-36-78-rou-sheng-gang).",
+        "zh": "陈述其对应所发现之缺口（条目 lao-36-78-rou-sheng-gang）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Tolerance.KeepsInclusionInto",
+        "Becoming.Tolerance.KeepsInclusionInto.course",
+        "Becoming.Tolerance.tolerating_into",
+        "Becoming.Tolerance.tolerating_mono"
+      ],
+      "sha256": "6747a2fdbe170363a7132f9eb84af47792313a95ce50920576cdaae3959fa2c2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f8a06bce9b99a4aa6e52a0e9b09e5be0d3efd9949d65c023707ebf9751534a8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "b1c0c06d79fc0bda37fd6c68193715baa2dab9ae4a796852c0ea9044f16a1f48"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Tolerance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    }
+  ]
+}

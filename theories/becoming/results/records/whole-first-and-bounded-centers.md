@@ -82,7 +82,7 @@ Ren's statement of the continuation condition, which Ren then called an axiom, i
 - related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). The order of Retains.within reads as three readings of the presupposition: super-true; sub-true along affecting, at the reach closure; sub-true along the empty relation, at the self (Flow.presupposition_order; the AI's reading, adopted on Ren's delegation).
 - related, not a proved adapter: [levels-of-closure](levels-of-closure.md). The reach closure, not the system, reads Ren's middle level “the system that one is in” (adopted on Ren's delegation): one common condition makes the system the whole.
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [rivals-bounded-in-time](rivals-bounded-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -113,6 +113,7 @@ Ren's statement of the continuation condition, which Ren then called an axiom, i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Retains.of_fewer`, `Becoming.Web.retains_bounded_iff`, `Becoming.Web.Retains.within`, `Becoming.Clearing.admitted_all_without`, `Becoming.Clearing.clearer_loses_dweller`, `Becoming.Clearing.dependenceRegion`, `Becoming.Clearing.centers_disagree`
 

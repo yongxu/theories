@@ -667,6 +667,22 @@
 | [差别到达多少](../results/records/how-much-difference-arrives.md) | 不加前提的定理 | — | §2.6 |
 | [耦合多常作用：安定、失控与其速度](../results/records/how-often-couplings-act.md) | 不加前提的定理 | — | §2.6 |
 | [为所传之量所饱和的耦合](../results/records/a-coupling-saturated-by-what-it-has-carried.md) | 有所述前提的定理 | 强度读自已传之量，响应给定；至阈值之步停止，须未饱和时每步作用、源之水平常在 | §2.6 |
+| [否定之变与归于稳定结论之分情形](../results/records/negation-change-and-stable-cases.md) | 不加前提的定理 | — | §1.5 |
+| [最小之处与均分](../results/records/least-parts-and-equal-shares.md) | 不加前提的定理 | — | §1.5 |
+| [b 倍抄录](../results/records/copying-b-fold.md) | 不加前提的定理 | — | §1.5 |
+| [远输使族耗减](../results/records/far-conveying-runs-the-family-down.md) | 有所述前提的定理 | 族上衡且耗 | §1.5 |
+| [带上限之需](../results/records/a-need-with-a-cap.md) | 有所述前提的定理 | 所需条件上衡 | §1.5 |
+| [容忍之跨律单调](../results/records/tolerance-monotone-across-laws.md) | 不加前提的定理 | — | §1.5 |
+| [以时为界之对手](../results/records/rivals-bounded-in-time.md) | 不加前提的定理 | — | §1.5 |
+| [共享关系项之交换不必可交换](../results/records/order-of-exchanges-sharing-a-relatum.md) | 见证 | — | §1.5 |
+| [择恰在要紧者由象读出处为对](../results/records/selection-right-exactly-where-read.md) | 不加前提的定理 | — | §1.5 |
+| [单侧、越界与局部之调节](../results/records/regulation-from-one-side-and-locally.md) | 有所述前提的定理 | 衡；各形成之相反与份额 | §1.5 |
+| [反复扰动](../results/records/repeated-disturbance.md) | 有所述前提的定理 | 强度与扰动在给定时程上有界 | §1.5 |
+| [持续之部分承整体](../results/records/a-whole-carried-by-lasting-parts.md) | 有所述前提的定理 | 每 d 步内有部分生起，各持续 d 步 | §1.5 |
+| [一段上之休眠与终局之终结](../results/records/dormancy-over-a-stretch.md) | 有所述前提的定理 | 储备在段上承载衰减；终局之终结 | §1.5 |
+| [生起需变](../results/records/arising-needs-change.md) | 有所述前提的定理 | 恰在受支持时活跃 | §1.5 |
+| [世系上之需要漂移](../results/records/need-drift-along-a-lineage.md) | 有所述前提的定理 | δ 内之传；两代间所需不升 | §1.5 |
+| [确定之律之势](../results/records/basins-of-a-determined-law.md) | 不加前提的定理 | —（回环须构形有限） | §1.5 |
 | [回路在律所读之内，经储量起作用的回路在断裂处形成](../results/records/loops-within-what-a-law-reads.md) | 不加前提的定理 | — | §2.6 |
 | [观察不出下游：差别只往下游去](../results/records/observation-is-a-route.md) | 不加前提的定理 | — | §2.6 |
 | [携带差别的阶作为历史之和](../results/records/orders-as-a-sum-over-histories.md) | 不加前提的定理 | — | §2.6 |
@@ -1059,16 +1075,16 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261022T052909.207642Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 337 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#337-drawing-at-once-the-same-law-um3)）。
+**当前回执**是运行 [`20261022T054058.112616Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 338 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#338-short-laws-the-classical-texts-ask-for-zg1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,396 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,457 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 301 个模块，13,216 条定理 |
-| 审计的脊柱声明 | 18,008 |
+| 闭包（核心、环与根基） | 301 个模块，13,277 条定理 |
+| 审计的脊柱声明 | 18,080 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 202 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。

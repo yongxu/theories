@@ -124,6 +124,7 @@ Answering Ren's “what is that "make sense" itself? what makes a pair, a pair?�
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `Becoming.Law.identifiesAlike_of_law`, `Becoming.Law.const_identifiesAlike_iff`, `Becoming.Law.whole_identifiesAlike`, `Becoming.Law.now_identifiesAlike_iff_goAlike`, `Becoming.Law.part_identifiesAlike_iff_step`, `Becoming.Law.adaptive_identifiesAlike_iff`, `Becoming.Motion.neither_alone`, `Becoming.SameAhead`, `Becoming.alike_moments_iff`, `Becoming.shared_below`, `Becoming.finitely_many_states_iff`, `Becoming.Law.Returns.states`, `Becoming.Negation.two_states`, `split that makes sense`, `有意义的切分`, `what makes a pair`, `什么使一对成为一对`, `states from a history`, `从历史读出的状态`, `causal states`, `因果状态`, `Becoming.lasso_iff_sameAhead`, `Becoming.finitely_many_states_iff_lasso`
 

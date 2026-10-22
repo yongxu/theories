@@ -143,7 +143,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
       "role": "proof",
-      "sha256": "51958e3a8afa07e2a57253374e81095e5fb2761114b3715d86e55cab1d43d152",
+      "sha256": "a0a17038af5ced70e8a6489b4aaaa604c939a0938b40e27b68f56f739e257928",
       "declarations": [
         "Becoming.Interleavings.LocalLaw.Connected",
         "Becoming.Interleavings.LocalLaw.act_comm",
@@ -218,12 +218,18 @@
       "role": "receipt",
       "sha256": "b67e032b7f84614716ea36c481759f31a3999b2c4684fae52dfcb84c2ee8643e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T101723.692082Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Interleavings",
       "success_pointer": "/status",
       "success_value": "passed"

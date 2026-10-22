@@ -76,7 +76,7 @@ The map of Chinese sources onto the spine found no law for a level held from bot
 - related, not a proved adapter: [how-fast-a-rule-may-change](how-fast-a-rule-may-change.md). A slow rule reading a fast level at stretches; reading late, here, needs a band of 2(l + 1)d.
 - related, not a proved adapter: [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md). Closes the first gap of the map: 损有余而补不足 and 张弓, 冲气以为和, 济其不及以泄其过 and 宽猛相济, and 中节 are re-pointed to these laws.
 
-**Used by:** [one-reader-several-conditions](one-reader-several-conditions.md)
+**Used by:** [one-reader-several-conditions](one-reader-several-conditions.md) · [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -97,6 +97,7 @@ The map of Chinese sources onto the spine found no law for a level held from bot
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 
 Aliases: `two-sided regulation`, `regulation that reads late`, `late reading`, `late relay`, `双向调节`, `迟读的调节`, `Becoming.Flow.withinGap_iff_between`, `Becoming.Flow.settles`, `Becoming.Regulation.no_narrower_band`, `Becoming.Regulation.lateReturn_band`, `Becoming.Regulation.relay_threshold`
 
