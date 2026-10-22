@@ -15,8 +15,9 @@ order every standpoint shares when each weighs what can form in its own way.
   it counts every listed item (`Weighting.Positive`).
 * **Widening is what every positive weighting ranks higher.** Inclusion never lowers a weighted
   count (`Weighting.weighed_le_of_includes`); every positive weighting ranks a widening strictly
-  higher (`Weighting.weighed_lt_of_widens`); where one course admits an item the other does not,
-  some positive weighting ranks it higher (`Weighting.outweighs`), so a mixed comparison is decided
+  higher (`Weighting.weighed_lt_of_widens`, the case of net weightings below with nothing against);
+  where one course admits an item the other does not, some positive weighting ranks it higher
+  (`Weighting.outweighs`, a case of weights within a ratio below), so a mixed comparison is decided
   both ways by positive weightings (`Weighting.mixed_either_way`); hence on the listed items one
   course widens another exactly when every positive weighting ranks it higher
   (`Weighting.widens_iff_every_positive`). On a web, where what either level path admits is listed
@@ -38,7 +39,48 @@ order every standpoint shares when each weighs what can form in its own way.
   does not rank a widening that adds only that item.
 * **The same weight for every item ranks by number.** Under one positive weight for all items, a
   course weighs more exactly when it admits more items (`Weighting.weighed_const`,
-  `Weighting.neutral_ranks_by_number`).
+  `Weighting.neutral_ranks_by_number`): the ratio one of weights within a ratio below.
+* **What each course admits beyond the other.** Under any weights two courses compare as what each
+  admits beyond the other (`Weighting.beyond`, `Weighting.weighed_split`,
+  `Weighting.weighed_lt_iff_beyond`): what they share weighs the same in both.
+* **Net weightings: an item can weigh below zero.** A net weighting counts each listed item for a
+  course that admits it (`pos`) and against it (`neg`) (`Weighting.ranksNet`). It ranks two courses
+  by what each admits beyond the other (`Weighting.ranksNet_iff_beyond`) and a widening higher where
+  every item the widening adds weighs above zero (`Weighting.ranksNet_lt_of_widens`). A widening by
+  one item alone (`Weighting.WidensBy`) it ranks as that item weighs, whatever else either course
+  keeps: above where the item weighs above zero, below where it weighs below zero, and neither where
+  it weighs zero (`Weighting.ranksNet_widensBy`, `Weighting.ranksNet_ties`); so the sign of its
+  increment at an item (`Weighting.IncrementIs`) is the same in every context
+  (`Weighting.ranksNet_increment_alike`), and it increases at every item weighing above zero
+  (`Weighting.IncreasingAt`, `Weighting.ranksNet_increasingAt`).
+* **Rankings of presentations: the exception.** A presentation is a plan with its wording and the
+  order in which it is told; a ranking of presentations reads the sets on a pair where it ranks the
+  two, each way, as an order on courses ranks what they keep (`Weighting.ReadsSetsOn`; on every
+  pair, `Weighting.ReadsSets`). Read right, an order increasing at the item a wider plan alone adds
+  ranks the wider above and never the narrower (`Weighting.reads_increasingAt`). Under a net
+  weighting a narrowing ranked above its widening by one item is a pair not read right or an item
+  weighing at zero or below (`Weighting.narrower_above_net`); read right, the narrowing is ranked
+  above exactly where the item weighs below zero (`Weighting.reads_ranksNet`); read right on every
+  pair with every item above zero, no widening by any number of items is ranked below
+  (`Weighting.reads_ranksNet_widens`). A framing alone, the item weighing above zero, ranks a
+  narrowing above its widening (`Framed.framing_alone`).
+* **A sign measured apart.** Read right, the sign of the order's increment from the narrower course
+  to the wider fixes the verdict exactly (`Weighting.reads_increment`): a sign measured with no
+  plan shown predicts the ranking of a pair exactly where it is that increment's sign in the pair's
+  context. Under a net weighting that holds in every context once it holds in one; in `Interacting`
+  adding an item raises a course keeping nothing and lowers one keeping the other item, and no net
+  weighting gives that order (`Interacting.increment_differs`, `Interacting.not_net`).
+* **Weights within a ratio.** Where every two listed weights stand within `n / d` of each other
+  (`Weighting.RatioWithin`), what each course alone admits bounds what it weighs
+  (`Weighting.beyond_within`). Every positive weighting within `n / d` ranks `a` above `b` exactly
+  where `n` times the number of items `b` alone admits is less than `d` times the number `a` alone
+  admits (`Weighting.ranks_past_ratio`, `Weighting.every_within_iff`); the weighting tilted toward
+  `b` (`Weighting.tilted`) decides the boundary and ties on it (`Weighting.tilted_lt_iff`,
+  `Weighting.tilted_ties`). Some weighting within the ratio ranks `b` higher exactly short of it
+  (`Weighting.some_within_reverses_iff`), so two rank a pair opposite ways exactly where `n / d`
+  exceeds both what each side alone admits over what the other alone admits
+  (`Weighting.opposite_within_iff`). Equal weights are the ratio one
+  (`Weighting.const_lt_iff_beyond`).
 * **Closing is never required.** Where the levels `l'` admit a formation at a step and `l` do not,
   `l` neither widens nor keeps `l'` (`Web.not_widens_of_closes`).
 * **What the step across standpoints reaches.** Let each standpoint's presupposition about its own
@@ -108,16 +150,32 @@ proposition. Then the step across standpoints is exactly the de dicto reading of
 presupposition, the de se reading gives each center its own closure, and the two part exactly
 where centers' closures differ: drawn along being related at all in a connected unfolding they
 agree, so the de se question has force only together with a drawing along a narrower relation.
+
+Read a presentation as a plan as it is told and a ranking of presentations as a valuer's
+judgment. Then T5's exception is `narrower_above_net` and `reads_increasingAt`: a valuer that reads
+the case right ranks a narrowing above its widening only where the added formation weighs at zero
+or below for it, zero giving a tie; otherwise the case was misread or framed. A sign measured apart
+predicts the judgment exactly where it is the sign of the joint increment (`reads_increment`), which
+an additive valuation carries from one context to every other and an interacting one need not:
+where the two part, separate and joint evaluation part (Hsee). Read the ratio within which a
+valuer's weights stand as how nearly alike it weighs everything at stake: valuers whose weights
+stand within `r` of each other all rank the larger side of a mixed comparison higher where what it
+alone keeps exceeds `r` times what the other alone keeps. Their disagreement needs weights
+dispersed past that ratio, and it is easiest where the two sides alone keep alike in number.
+
 Read a grade's positivity as standing (whether a formation counts) and the grade as status (how
 much): the step, applied to two-valued significance, makes standing invariant and leaves status
 to each standpoint; status invariant is a further premise. Read a formation's level as how long
 its continuation is admitted: priority to the worse off agrees with C wherever C ranks and
 decides transfers C leaves mixed; a threshold of sufficiency is a denial of scope above it.
 
-What is not derived: whether the self's presupposition is held de se; that a standpoint's order is increasing in admission (monotonicity, and that it
-counts every item, are supplied; additivity is not needed for the shared order); which weighting a standpoint has; that the impartial order is what every
-standpoint shares rather than one privileged weighting; which formations are centers; the step of
-invariance itself. The representation commits to finite listings of steps and formations,
+What is not derived: whether the self's presupposition is held de se; that a standpoint's order
+is increasing in admission (monotonicity, and that it counts every item, are supplied; additivity
+is not needed for the shared order); which weighting a standpoint has; whether a valuer reads the
+sets of a case, whether its sign measured apart is the sign of the joint increment, and how
+dispersed its weights are, each measurable and none derived; that the impartial order is what
+every standpoint shares rather than one privileged weighting; which formations are centers; the
+step of invariance itself. The representation commits to finite listings of steps and formations,
 two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
 -/
 
@@ -163,6 +221,20 @@ theorem term_lt {w : Nat} (positive : 0 < w) :
     ∀ {a b : Bool}, a = true → b = false → cond b w 0 < cond a w 0
   | _, _, rfl, rfl => positive
 
+theorem term_le_of {m n : Nat} : ∀ {v : Bool}, (v = true → m ≤ n) → cond v m 0 ≤ cond v n 0
+  | true, le => le rfl
+  | false, _ => Nat.le_refl 0
+
+theorem term_lt_of {m n : Nat} : ∀ {v : Bool}, v = true → m < n → cond v m 0 < cond v n 0
+  | _, rfl, lt => lt
+
+theorem term_eq_at {m n : Nat} : ∀ {v : Bool}, (v = true → m = n) → cond v m 0 = cond v n 0
+  | true, same => same rfl
+  | false, _ => rfl
+
+theorem cond_one_pos : ∀ {v : Bool}, v = true → 0 < cond v 1 0
+  | _, rfl => Nat.succ_pos 0
+
 theorem total_lt {p q : X → Nat} :
     ∀ {as : List X}, (∀ a, a ∈ as → p a ≤ q a) → (∃ a, a ∈ as ∧ p a < q a) →
       total as p < total as q
@@ -187,105 +259,79 @@ theorem weighed_le_of_includes {items : List X} {a b : X → Bool} (w : X → Na
     (includes : IncludesOn items a b) : weighed items w b ≤ weighed items w a :=
   total_le items fun x listed => term_le (includes x listed)
 
-/-- **Every positive weighting ranks a widening higher.** -/
-theorem weighed_lt_of_widens {items : List X} {a b : X → Bool} {w : X → Nat}
-    (positive : Positive items w) (widens : WidensOn items a b) :
-    weighed items w b < weighed items w a :=
-  match widens.2 with
-  | ⟨x, listed, admits, not⟩ =>
-    total_lt (fun y member => term_le (widens.1 y member))
-      ⟨x, listed, term_lt (positive x listed) admits not⟩
+/-! ### What each course admits beyond the other -/
 
-/-- **A weight of zero on what a course adds ties it with the course it includes**: where every
-item `a` admits beyond `b` weighs nothing, the weighted counts agree, so a widening that adds
-only such items is not ranked. -/
-theorem weighed_eq_of_unweighted {items : List X} {a b : X → Bool} {w : X → Nat}
-    (includes : IncludesOn items a b)
-    (unweighted : ∀ x, x ∈ items → a x = true → b x = false → w x = 0) :
-    weighed items w a = weighed items w b :=
-  total_congr_on fun x listed => match ha : a x, hb : b x with
-    | true, true => rfl
-    | true, false => unweighted x listed ha hb
-    | false, false => rfl
-    | false, true => Bool.noConfusion (ha.symm.trans (includes x listed hb))
+/-- What `a` admits beyond `b`: the items `a` admits and `b` does not. -/
+def beyond (a b : X → Bool) : X → Bool :=
+  fun x => a x && !b x
 
-/-- Comparing what two courses admit item by item: either `a` admits an item `b` does not, or
-`b` admits every item `a` admits. -/
-theorem exceeds_or_includes (a b : X → Bool) :
-    ∀ items : List X, ExceedsOn items a b ∨ IncludesOn items b a
-  | [] => .inr fun _ member => nomatch member
-  | x :: rest => match exceeds_or_includes a b rest with
-    | .inl ⟨y, listed, admits, not⟩ => .inl ⟨y, .tail x listed, admits, not⟩
-    | .inr includes => match ha : a x, hb : b x with
-      | true, false => .inl ⟨x, .head rest, ha, hb⟩
-      | true, true => .inr fun y member admits => match mem_cons_cases member with
-        | .inl same => Eq.subst (motive := fun z => b z = true) same.symm hb
-        | .inr listed => includes y listed admits
-      | false, _ => .inr fun y member admits => match mem_cons_cases member with
-        | .inl same => Bool.noConfusion
-            (ha.symm.trans (Eq.subst (motive := fun z => a z = true) same admits))
-        | .inr listed => includes y listed admits
+/-- The number of listed items a course admits. -/
+def size (items : List X) (a : X → Bool) : Nat :=
+  weighed items (fun _ => 1) a
 
-/-- The weighting that puts weight `M` on what `b` admits beyond `a` and one on every other
-item. -/
-def outweighing (M : Nat) (a b : X → Bool) : X → Nat :=
-  fun x => cond (b x && !a x) M 1
+theorem term_split (v : Nat) : ∀ p q : Bool, cond p v 0 = cond (p && q) v 0 + cond (p && !q) v 0
+  | true, true => rfl
+  | true, false => (Nat.zero_add v).symm
+  | false, _ => rfl
 
-theorem cond_pos (M : Nat) : ∀ v : Bool, 0 < cond v (M + 1) 1
-  | true => Nat.succ_pos M
-  | false => Nat.succ_pos 0
+theorem and_parts : ∀ {p q : Bool}, (p && q) = true → p = true ∧ q = true
+  | true, true, _ => ⟨rfl, rfl⟩
+  | true, false, no => Bool.noConfusion no
+  | false, _, no => Bool.noConfusion no
 
-theorem outweighing_positive (M : Nat) (a b : X → Bool) (items : List X) :
-    Positive items (outweighing (M + 1) a b) :=
-  fun x _ => cond_pos M (b x && !a x)
+theorem and_of_parts : ∀ {p q : Bool}, p = true → q = true → (p && q) = true
+  | _, _, rfl, rfl => rfl
 
-theorem outweighing_term_le_one {M : Nat} : ∀ (ax bx : Bool),
-    cond ax (cond (bx && !ax) M 1) 0 ≤ 1
-  | true, true => Nat.le_refl 1
-  | true, false => Nat.le_refl 1
-  | false, _ => Nat.zero_le 1
+theorem and_swap : ∀ p q : Bool, (p && q) = (q && p)
+  | true, true => rfl
+  | true, false => rfl
+  | false, true => rfl
+  | false, false => rfl
 
-theorem outweighing_term_at {M : Nat} : ∀ {ax bx : Bool}, bx = true → ax = false →
-    M ≤ cond bx (cond (bx && !ax) M 1) 0
-  | _, _, rfl, rfl => Nat.le_refl M
+/-- **A weighted count is what a course shares with another and what it admits beyond it.** -/
+theorem weighed_split (items : List X) (w : X → Nat) (a b : X → Bool) :
+    weighed items w a = weighed items w (fun x => a x && b x) + weighed items w (beyond a b) :=
+  (total_congr (fun x => term_split (w x) (a x) (b x)) items).trans (total_add _ _ items)
 
-/-- **A course admitting an item the other does not is ranked higher by some positive
-weighting.** -/
-theorem outweighs {items : List X} {a b : X → Bool} (exceeds : ExceedsOn items b a) :
-    ∃ w, Positive items w ∧ weighed items w a < weighed items w b :=
-  ⟨outweighing (items.length + 1) a b, outweighing_positive items.length a b items,
-   match exceeds with
-   | ⟨_, listed, admits, not⟩ =>
-     Nat.lt_of_le_of_lt
-       (Nat.le_trans (total_le items fun y _ => outweighing_term_le_one (a y) (b y))
-         (Nat.le_of_eq (total_ones items)))
-       (Nat.lt_of_lt_of_le (Nat.lt_succ_self items.length)
-         (Nat.le_trans (outweighing_term_at admits not)
-           (le_total_of_mem (q := fun y => cond (b y) (outweighing (items.length + 1) a b y) 0)
-             listed)))⟩
+theorem weighed_shared (items : List X) (w : X → Nat) (a b : X → Bool) :
+    weighed items w (fun x => a x && b x) = weighed items w (fun x => b x && a x) :=
+  total_congr (fun x => congrArg (fun v => cond v (w x) 0) (and_swap (a x) (b x))) items
 
-/-- **A mixed comparison is decided both ways by positive weightings**: some positive weighting
-ranks the one higher, and some the other. -/
-theorem mixed_either_way {items : List X} {a b : X → Bool} (mixed : MixedOn items a b) :
-    (∃ w, Positive items w ∧ weighed items w b < weighed items w a) ∧
-      ∃ w, Positive items w ∧ weighed items w a < weighed items w b :=
-  ⟨outweighs mixed.1, outweighs mixed.2⟩
+theorem weighed_split_right (items : List X) (w : X → Nat) (a b : X → Bool) :
+    weighed items w b = weighed items w (fun x => a x && b x) + weighed items w (beyond b a) :=
+  (weighed_split items w b a).trans
+    (congrArg (· + weighed items w (beyond b a)) (weighed_shared items w b a))
 
-/-- **Widening is what every positive weighting ranks higher.** On the listed items, `a` widens
-`b` exactly when every weighting positive on them weighs `a` above `b`. -/
-theorem widens_iff_every_positive {items : List X} {a b : X → Bool} :
-    WidensOn items a b ↔ ∀ w, Positive items w → weighed items w b < weighed items w a :=
-  ⟨fun widens _ positive => weighed_lt_of_widens positive widens,
-   fun every =>
-    ⟨fun x listed admits => match h : a x with
-      | true => rfl
-      | false => match outweighs ⟨x, listed, admits, h⟩ with
-        | ⟨w, positive, lt⟩ => absurd (every w positive) (Nat.lt_asymm lt),
-     match exceeds_or_includes a b items with
-     | .inl exceeds => exceeds
-     | .inr includes =>
-       absurd (every (fun _ => 1) fun _ _ => Nat.succ_pos 0)
-         (Nat.not_lt_of_le (weighed_le_of_includes _ includes))⟩⟩
+theorem add_lt_add_iff {k m n : Nat} : k + m < k + n ↔ m < n :=
+  ⟨Nat.lt_of_add_lt_add_left, fun lt => Nat.add_lt_add_left lt k⟩
+
+theorem add_le_add_iff {k m n : Nat} : k + m ≤ k + n ↔ m ≤ n :=
+  ⟨fun le => Nat.le_of_lt_succ (Nat.lt_of_add_lt_add_left (Nat.lt_succ_of_le le)),
+   fun le => Nat.add_le_add_left le k⟩
+
+/-- **Two courses compare as what each admits beyond the other**, whatever the weights: what they
+share weighs the same in both. -/
+theorem weighed_lt_iff_beyond (items : List X) (w : X → Nat) (a b : X → Bool) :
+    weighed items w b < weighed items w a ↔
+      weighed items w (beyond b a) < weighed items w (beyond a b) := by
+  rw [weighed_split_right items w a b, weighed_split items w a b]
+  exact add_lt_add_iff
+
+theorem weighed_le_iff_beyond (items : List X) (w : X → Nat) (a b : X → Bool) :
+    weighed items w b ≤ weighed items w a ↔
+      weighed items w (beyond b a) ≤ weighed items w (beyond a b) := by
+  rw [weighed_split_right items w a b, weighed_split items w a b]
+  exact add_le_add_iff
+
+theorem beyond_term_zero (v : Nat) : ∀ {p q : Bool}, (q = true → p = true) → cond (q && !p) v 0 = 0
+  | _, false, _ => rfl
+  | true, true, _ => rfl
+  | false, true, kept => Bool.noConfusion (kept rfl)
+
+/-- Nothing a course admits beyond one that includes it weighs anything. -/
+theorem weighed_beyond_of_includes {items : List X} {a b : X → Bool} (w : X → Nat)
+    (includes : IncludesOn items a b) : weighed items w (beyond b a) = 0 :=
+  (total_congr_on fun x listed => beyond_term_zero (w x) (includes x listed)).trans (total_zero items)
 
 theorem cond_mul (k : Nat) : ∀ v : Bool, cond v k 0 = k * cond v 1 0
   | true => (Nat.mul_one k).symm
@@ -310,19 +356,559 @@ theorem lt_of_mul_lt {k m n : Nat} (lt : k * m < k * n) : m < n :=
   | .inl less => less
   | .inr ge => absurd lt (Nat.not_lt_of_le (Nat.mul_le_mul_left k ge))
 
+theorem mul_lt_mul_iff {k m n : Nat} (positive : 0 < k) : m * k < n * k ↔ m < n :=
+  ⟨fun lt => lt_of_mul_lt (k := k)
+      (Eq.subst (motive := fun x => x < k * n) (Nat.mul_comm m k)
+        (Eq.subst (motive := fun y => m * k < y) (Nat.mul_comm n k) lt)),
+   fun lt => Eq.subst (motive := fun x => x < n * k) (Nat.mul_comm k m)
+      (Eq.subst (motive := fun y => k * m < y) (Nat.mul_comm k n) (mul_lt_mul_pos positive lt))⟩
+
+/-! ### Net weightings: items that weigh below zero -/
+
+/-- The order of a net weighting: each listed item counts `pos` for a course that admits it and
+`neg` against it, so it weighs above zero where `neg x < pos x`, at zero where they are equal and
+below zero where `pos x < neg x`. `a` is ranked above `b` where what `a` gains less what it loses
+exceeds `b`'s, compared without subtraction. A weighting is the net weighting with nothing
+against. -/
+def ranksNet (items : List X) (pos neg : X → Nat) : (X → Bool) → (X → Bool) → Prop :=
+  fun b a => weighed items pos b + weighed items neg a < weighed items pos a + weighed items neg b
+
+/-- **A net weighting ranks two courses by what each admits beyond the other**: what they share
+gains and loses the same in both. -/
+theorem ranksNet_iff_beyond (items : List X) (pos neg : X → Nat) (a b : X → Bool) :
+    ranksNet items pos neg b a ↔
+      weighed items pos (beyond b a) + weighed items neg (beyond a b) <
+        weighed items pos (beyond a b) + weighed items neg (beyond b a) := by
+  show weighed items pos b + weighed items neg a < weighed items pos a + weighed items neg b ↔ _
+  rw [weighed_split_right items pos a b, weighed_split items neg a b, weighed_split items pos a b,
+    weighed_split_right items neg a b,
+    Nat.add_add_add_comm (weighed items pos fun x => a x && b x) (weighed items pos (beyond b a)),
+    Nat.add_add_add_comm (weighed items pos fun x => a x && b x) (weighed items pos (beyond a b))]
+  exact add_lt_add_iff
+
+theorem not_of_neg : ∀ {v : Bool}, (!v) = true → v = false
+  | false, _ => rfl
+  | true, no => Bool.noConfusion no
+
+theorem beyond_lt {items : List X} {pos neg : X → Nat} {a b : X → Bool}
+    (above : ∀ x, x ∈ items → a x = true → b x = false → neg x < pos x)
+    (exceeds : ExceedsOn items a b) :
+    weighed items neg (beyond a b) < weighed items pos (beyond a b) :=
+  match exceeds with
+  | ⟨x, listed, admits, not⟩ =>
+    total_lt (fun y member => term_le_of fun held => match and_parts held with
+        | ⟨admits', not'⟩ => Nat.le_of_lt (above y member admits' (not_of_neg not')))
+      ⟨x, listed, term_lt_of (and_of_parts admits (congrArg (!·) not)) (above x listed admits not)⟩
+
+/-- **Every net weighting under which each item a widening adds weighs above zero ranks the
+widening higher.** -/
+theorem ranksNet_lt_of_widens {items : List X} {pos neg : X → Nat} {a b : X → Bool}
+    (above : ∀ x, x ∈ items → a x = true → b x = false → neg x < pos x)
+    (widens : WidensOn items a b) : ranksNet items pos neg b a := by
+  apply (ranksNet_iff_beyond items pos neg a b).mpr
+  rw [weighed_beyond_of_includes pos widens.1, weighed_beyond_of_includes neg widens.1,
+    Nat.zero_add, Nat.add_zero]
+  exact beyond_lt above widens.2
+
+theorem cond_zero : ∀ v : Bool, cond v 0 0 = 0
+  | true => rfl
+  | false => rfl
+
+theorem weighed_zero (items : List X) (a : X → Bool) : weighed items (fun _ => 0) a = 0 :=
+  (total_congr (fun x => cond_zero (a x)) items).trans (total_zero items)
+
+/-- **Every positive weighting ranks a widening higher**: the net weighting with nothing
+against. -/
+theorem weighed_lt_of_widens {items : List X} {a b : X → Bool} {w : X → Nat}
+    (positive : Positive items w) (widens : WidensOn items a b) :
+    weighed items w b < weighed items w a := by
+  have net := ranksNet_lt_of_widens (neg := fun _ => 0) (fun x listed _ _ => positive x listed) widens
+  rw [ranksNet, weighed_zero, weighed_zero] at net
+  exact net
+
+/-- **A weight of zero on what a course adds ties it with the course it includes**: where every
+item `a` admits beyond `b` weighs nothing, the weighted counts agree, so a widening that adds
+only such items is not ranked. -/
+theorem weighed_eq_of_unweighted {items : List X} {a b : X → Bool} {w : X → Nat}
+    (includes : IncludesOn items a b)
+    (unweighted : ∀ x, x ∈ items → a x = true → b x = false → w x = 0) :
+    weighed items w a = weighed items w b :=
+  total_congr_on fun x listed => match ha : a x, hb : b x with
+    | true, true => rfl
+    | true, false => unweighted x listed ha hb
+    | false, false => rfl
+    | false, true => Bool.noConfusion (ha.symm.trans (includes x listed hb))
+
+/-- On the listed items `a` widens `b` by `x` alone: it admits every item `b` admits and `x`,
+which is listed and which `b` does not admit, and nothing else beyond `b`. -/
+def WidensBy (items : List X) (x : X) (a b : X → Bool) : Prop :=
+  IncludesOn items a b ∧ x ∈ items ∧ a x = true ∧ b x = false ∧
+    ∀ y, y ∈ items → a y = true → b y = false → y = x
+
+theorem widensOn_of_widensBy {items : List X} {x : X} {a b : X → Bool}
+    (by_ : WidensBy items x a b) : WidensOn items a b :=
+  ⟨by_.1, x, by_.2.1, by_.2.2.1, by_.2.2.2.1⟩
+
+/-- Under a widening by one item, what is admitted beyond weighs that item's weight once for
+each time it is listed. -/
+theorem weighed_widensBy {items : List X} {x : X} {a b : X → Bool} (w : X → Nat)
+    (by_ : WidensBy items x a b) :
+    weighed items w (beyond a b) = w x * size items (beyond a b) :=
+  (total_congr_on fun y listed => term_eq_at fun held => match and_parts held with
+    | ⟨admits, not⟩ => congrArg w (by_.2.2.2.2 y listed admits (not_of_neg not))).trans
+    (weighed_const (w x) items (beyond a b))
+
+theorem size_widensBy_pos {items : List X} {x : X} {a b : X → Bool}
+    (by_ : WidensBy items x a b) : 0 < size items (beyond a b) :=
+  total_pos_of_mem by_.2.1 (cond_one_pos (and_of_parts by_.2.2.1 (congrArg (!·) by_.2.2.2.1)))
+
+/-- **A net weighting ranks a widening by one item as that item weighs**, whatever else either
+course keeps: the widening above exactly where the item weighs above zero, below exactly where it
+weighs below zero. -/
+theorem ranksNet_widensBy {items : List X} {pos neg : X → Nat} {x : X} {a b : X → Bool}
+    (by_ : WidensBy items x a b) :
+    (ranksNet items pos neg b a ↔ neg x < pos x) ∧ (ranksNet items pos neg a b ↔ pos x < neg x) := by
+  have m := size_widensBy_pos by_
+  have up : weighed items pos (beyond b a) + weighed items neg (beyond a b) <
+      weighed items pos (beyond a b) + weighed items neg (beyond b a) ↔ neg x < pos x := by
+    rw [weighed_beyond_of_includes pos by_.1, weighed_beyond_of_includes neg by_.1, Nat.zero_add,
+      Nat.add_zero, weighed_widensBy pos by_, weighed_widensBy neg by_]
+    exact mul_lt_mul_iff m
+  have down : weighed items pos (beyond a b) + weighed items neg (beyond b a) <
+      weighed items pos (beyond b a) + weighed items neg (beyond a b) ↔ pos x < neg x := by
+    rw [weighed_beyond_of_includes pos by_.1, weighed_beyond_of_includes neg by_.1, Nat.zero_add,
+      Nat.add_zero, weighed_widensBy pos by_, weighed_widensBy neg by_]
+    exact mul_lt_mul_iff m
+  exact ⟨(ranksNet_iff_beyond items pos neg a b).trans up,
+    (ranksNet_iff_beyond items pos neg b a).trans down⟩
+
+/-- **An item weighing zero ties.** Under a net weighting, a widening by one item weighing zero is
+ranked neither above nor below what it widens. -/
+theorem ranksNet_ties {items : List X} {pos neg : X → Nat} {x : X} {a b : X → Bool}
+    (by_ : WidensBy items x a b) (zero : pos x = neg x) :
+    ¬ ranksNet items pos neg b a ∧ ¬ ranksNet items pos neg a b :=
+  ⟨fun ranked => Nat.lt_irrefl (neg x)
+      (Eq.subst (motive := fun n => neg x < n) zero ((ranksNet_widensBy by_).1.mp ranked)),
+   fun ranked => Nat.lt_irrefl (neg x)
+      (Eq.subst (motive := fun n => n < neg x) zero ((ranksNet_widensBy by_).2.mp ranked))⟩
+
+/-- An order on courses increases at `x`: it ranks every course that `x` alone widens strictly
+above what it widens, and never below it. -/
+def IncreasingAt (items : List X) (O : (X → Bool) → (X → Bool) → Prop) (x : X) : Prop :=
+  ∀ a b, WidensBy items x a b → O b a ∧ ¬ O a b
+
+/-- A net weighting increases at every listed item that weighs above zero. -/
+theorem ranksNet_increasingAt {items : List X} {pos neg : X → Nat} {x : X}
+    (above : neg x < pos x) : IncreasingAt items (ranksNet items pos neg) x :=
+  fun _ _ by_ => ⟨(ranksNet_widensBy by_).1.mpr above,
+    fun ranked => Nat.lt_asymm above ((ranksNet_widensBy by_).2.mp ranked)⟩
+
+/-- The sign of an order's increment from `b` to `a`: `.gt` where it ranks `a` strictly above
+`b`, `.lt` where strictly below, `.eq` where neither above the other. -/
+def IncrementIs (O : (X → Bool) → (X → Bool) → Prop) (b a : X → Bool) : Ordering → Prop
+  | .gt => O b a ∧ ¬ O a b
+  | .eq => ¬ O b a ∧ ¬ O a b
+  | .lt => O a b ∧ ¬ O b a
+
+/-- Two orders that rank two pairs alike, each way, give their increments the same sign. -/
+theorem increment_transfer {O O' : (X → Bool) → (X → Bool) → Prop} {a b a' b' : X → Bool}
+    (up : O b a ↔ O' b' a') (down : O a b ↔ O' a' b') :
+    ∀ {o : Ordering}, IncrementIs O b a o → IncrementIs O' b' a' o
+  | .gt, ⟨above, not⟩ => ⟨up.mp above, fun r => not (down.mpr r)⟩
+  | .eq, ⟨not, not'⟩ => ⟨fun r => not (up.mpr r), fun r => not' (down.mpr r)⟩
+  | .lt, ⟨below, not⟩ => ⟨down.mp below, fun r => not (up.mpr r)⟩
+
+/-- **A net weighting's increment at an item is the same in every context**: whatever else two
+pairs of courses keep, where each widens by the same item alone, the sign of the increment is
+the same. -/
+theorem ranksNet_increment_alike {items : List X} {pos neg : X → Nat} {x : X}
+    {a b a' b' : X → Bool} (by_ : WidensBy items x a b) (by' : WidensBy items x a' b')
+    {o : Ordering} (increment : IncrementIs (ranksNet items pos neg) b a o) :
+    IncrementIs (ranksNet items pos neg) b' a' o :=
+  increment_transfer ((ranksNet_widensBy by_).1.trans (ranksNet_widensBy by').1.symm)
+    ((ranksNet_widensBy by_).2.trans (ranksNet_widensBy by').2.symm) increment
+
+/-! ### Rankings of presentations -/
+
+variable {P : Type}
+
+/-- A ranking of presentations reads the sets on the pair `a`, `b`: it ranks them, each way, as
+the order `O` ranks the courses they keep. A presentation is a plan with its wording and the
+order in which it is told; `kept` gives the course it keeps; `R b a` reads "`a` is ranked above
+`b`". -/
+def ReadsSetsOn (kept : P → X → Bool) (R : P → P → Prop) (O : (X → Bool) → (X → Bool) → Prop)
+    (a b : P) : Prop :=
+  (R b a ↔ O (kept b) (kept a)) ∧ (R a b ↔ O (kept a) (kept b))
+
+/-- A ranking of presentations reads the sets: on every pair it ranks as `O` ranks the courses
+kept, so it depends on the courses alone, not on how they are told. -/
+def ReadsSets (kept : P → X → Bool) (R : P → P → Prop) (O : (X → Bool) → (X → Bool) → Prop) :
+    Prop :=
+  ∀ a b, R b a ↔ O (kept b) (kept a)
+
+/-- **Read right, an order increasing at the added item never ranks the narrowing above.** Where a
+ranking of presentations reads the sets on a pair that one item alone separates, and its order on
+courses increases at that item, it ranks the wider plan above the narrower and never the narrower
+above. So a ranking that puts a narrowing above its widening by one item either ranks that pair
+otherwise than its order ranks the courses (a misread or a framing), or has an order that does not
+increase at the added item. -/
+theorem reads_increasingAt {kept : P → X → Bool} {R : P → P → Prop}
+    {O : (X → Bool) → (X → Bool) → Prop} {items : List X} {x : X} {n w : P}
+    (by_ : WidensBy items x (kept w) (kept n)) (reads : ReadsSetsOn kept R O w n)
+    (increasing : IncreasingAt items O x) : R n w ∧ ¬ R w n :=
+  match increasing _ _ by_ with
+  | ⟨above, not⟩ => ⟨reads.1.mpr above, fun r => not (reads.2.mp r)⟩
+
+/-- **A narrowing above its widening, under a net weighting.** Where a ranking of presentations
+puts the narrower of two plans that one item alone separates above the wider, it does not read
+the sets on that pair as the net weighting ranks them, or the added item weighs at zero or
+below. -/
+theorem narrower_above_net {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))
+    (violates : R w n) :
+    ¬ ReadsSetsOn kept R (ranksNet items pos neg) w n ∨ pos x ≤ neg x :=
+  match Nat.lt_or_ge (neg x) (pos x) with
+  | .inl above => .inl fun reads =>
+      (reads_increasingAt by_ reads (ranksNet_increasingAt above)).2 violates
+  | .inr below => .inr below
+
+/-- **Read right, a net weighting's verdict is the added item's sign.** Where a ranking reads the
+sets on a pair that one item alone separates as a net weighting ranks them, it puts the narrower
+plan above exactly where that item weighs below zero and the wider above exactly where it weighs
+above zero; at zero it puts neither above (`ranksNet_ties`). -/
+theorem reads_ranksNet {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))
+    (reads : ReadsSetsOn kept R (ranksNet items pos neg) w n) :
+    (R w n ↔ pos x < neg x) ∧ (R n w ↔ neg x < pos x) :=
+  ⟨reads.2.trans (ranksNet_widensBy by_).2, reads.1.trans (ranksNet_widensBy by_).1⟩
+
+/-- **A ranking that reads the sets, under a net weighting in which every listed item weighs above
+zero, never puts a narrowing above its widening**, by one item or by many. -/
+theorem reads_ranksNet_widens {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {n w : P} (reads : ReadsSets kept R (ranksNet items pos neg))
+    (above : ∀ x, x ∈ items → neg x < pos x) (widens : WidensOn items (kept w) (kept n)) :
+    R n w ∧ ¬ R w n :=
+  have ranked := ranksNet_lt_of_widens (fun x listed _ _ => above x listed) widens
+  ⟨(reads w n).mpr ranked, fun v => Nat.lt_asymm ranked ((reads n w).mp v)⟩
+
+theorem reads_increment_of {kept : P → X → Bool} {R : P → P → Prop}
+    {O : (X → Bool) → (X → Bool) → Prop} {n w : P} (reads : ReadsSetsOn kept R O w n) :
+    ∀ {o : Ordering}, IncrementIs O (kept n) (kept w) o →
+      (R w n ↔ o = .lt) ∧ (R n w ↔ o = .gt) ∧ ((¬ R w n ∧ ¬ R n w) ↔ o = .eq)
+  | .gt, ⟨above, not⟩ =>
+    ⟨⟨fun r => absurd (reads.2.mp r) not, fun e => Ordering.noConfusion e⟩,
+     ⟨fun _ => rfl, fun _ => reads.1.mpr above⟩,
+     ⟨fun ⟨_, nw⟩ => absurd (reads.1.mpr above) nw, fun e => Ordering.noConfusion e⟩⟩
+  | .eq, ⟨not, not'⟩ =>
+    ⟨⟨fun r => absurd (reads.2.mp r) not', fun e => Ordering.noConfusion e⟩,
+     ⟨fun r => absurd (reads.1.mp r) not, fun e => Ordering.noConfusion e⟩,
+     ⟨fun _ => rfl, fun _ => ⟨fun r => not' (reads.2.mp r), fun r => not (reads.1.mp r)⟩⟩⟩
+  | .lt, ⟨below, not⟩ =>
+    ⟨⟨fun _ => rfl, fun _ => reads.2.mpr below⟩,
+     ⟨fun r => absurd (reads.1.mp r) not, fun e => Ordering.noConfusion e⟩,
+     ⟨fun ⟨wn, _⟩ => absurd (reads.2.mpr below) wn, fun e => Ordering.noConfusion e⟩⟩
+
+/-- **A sign measured apart fixes the verdict exactly where it is the sign of the increment in the
+pair's context.** Let `apart x` be a valuer's sign for `x` measured with no plan shown: `.gt` where
+the ending of `x` is a loss to it, `.eq` where nothing, `.lt` where a gain. Where a ranking reads
+the sets on a pair that `x` separates, and that sign is the sign of the order's increment from the
+narrower course to the wider (the premise that links the separate evaluation to the joint one), the
+narrower plan is ranked above exactly where the sign is a gain, the wider exactly where it is a
+loss, and neither exactly where it is nothing. Under a net weighting the premise holds in every
+context once it holds in one (`ranksNet_increment_alike`); in `Interacting` it holds alone and
+fails jointly. -/
+theorem reads_increment {kept : P → X → Bool} {R : P → P → Prop}
+    {O : (X → Bool) → (X → Bool) → Prop} {apart : X → Ordering} {x : X} {n w : P}
+    (reads : ReadsSetsOn kept R O w n) (link : IncrementIs O (kept n) (kept w) (apart x)) :
+    (R w n ↔ apart x = .lt) ∧ (R n w ↔ apart x = .gt) ∧
+      ((¬ R w n ∧ ¬ R n w) ↔ apart x = .eq) :=
+  reads_increment_of reads link
+
+/-! ### Weights within a ratio: where valuers who weigh nearly alike agree -/
+
+/-- Every two listed weights stand within the ratio `n / d`: `d` times either is at most `n`
+times the other. Equal weights stand within `1 / 1`. -/
+def RatioWithin (items : List X) (n d : Nat) (w : X → Nat) : Prop :=
+  ∀ x y, x ∈ items → y ∈ items → d * w x ≤ n * w y
+
+theorem cond_scale (k : Nat) : ∀ (v : Bool) (u : Nat), cond v (k * u) 0 = k * cond v u 0
+  | true, _ => rfl
+  | false, _ => (Nat.mul_zero k).symm
+
+theorem weighed_scale (k : Nat) (items : List X) (w : X → Nat) (a : X → Bool) :
+    weighed items (fun x => k * w x) a = k * weighed items w a :=
+  (total_congr (fun x => cond_scale k (a x) (w x)) items).trans (total_mul k _ items)
+
+theorem mul_swap_right (n u q : Nat) : n * u * q = n * q * u :=
+  (mul_assoc_nat n u q).trans ((congrArg (n * ·) (Nat.mul_comm u q)).trans (mul_assoc_nat n q u).symm)
+
+/-- **Weights within a ratio bound what each side weighs beyond the other.** Where every two
+listed weights stand within `n / d`, `d` times what `b` alone admits weighs, taken once for each
+item `a` alone admits, is at most `n` times the number of items `b` alone admits, times what `a`
+alone admits weighs. -/
+theorem beyond_within {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool}
+    (within : RatioWithin items n d w) :
+    d * weighed items w (beyond b a) * size items (beyond a b) ≤
+      n * size items (beyond b a) * weighed items w (beyond a b) :=
+  have each : ∀ x, x ∈ items →
+      d * weighed items w (beyond b a) ≤ n * w x * size items (beyond b a) := fun x listed =>
+    Nat.le_trans (Nat.le_of_eq (weighed_scale d items w (beyond b a)).symm)
+      (Nat.le_trans (total_le items fun y member => term_le_of fun _ => within y x member listed)
+        (Nat.le_of_eq (weighed_const (n * w x) items (beyond b a))))
+  Nat.le_trans (Nat.le_of_eq (weighed_const _ items (beyond a b)).symm)
+    (Nat.le_trans (total_le items fun x listed => term_le_of fun _ => each x listed)
+      (Nat.le_of_eq ((total_congr (fun x => congrArg (fun m => cond (beyond a b x) m 0)
+          (mul_swap_right n (w x) (size items (beyond b a)))) items).trans
+        (weighed_scale _ items w (beyond a b)))))
+
+theorem pos_of_lt_mul {m d p : Nat} (lt : m < d * p) : 0 < p :=
+  match p, lt with
+  | _ + 1, _ => Nat.succ_pos _
+
+theorem cond_pos_of {m : Nat} (positive : 0 < m) : ∀ {v : Bool}, 0 < cond v 1 0 → 0 < cond v m 0
+  | true, _ => positive
+  | false, zero => absurd zero (Nat.lt_irrefl 0)
+
+/-- A course admitting some listed item weighs something under a positive weighting. -/
+theorem weighed_pos_of_size {items : List X} {w : X → Nat} {a : X → Bool}
+    (positive : Positive items w) (some : 0 < size items a) : 0 < weighed items w a :=
+  match total_pos items some with
+  | ⟨x, listed, one⟩ => total_pos_of_mem listed (cond_pos_of (positive x listed) one)
+
+/-- A course admitting no listed item weighs nothing. -/
+theorem weighed_zero_of_size {w : X → Nat} {a : X → Bool} :
+    ∀ {items : List X}, size items a = 0 → weighed items w a = 0
+  | [], _ => rfl
+  | x :: rest, empty => match h : a x with
+    | false =>
+      have rest_none : size rest a = 0 := (Nat.zero_add _).symm.trans
+        ((congrArg (fun v => cond v 1 0 + size rest a) h).symm.trans empty)
+      (congrArg (fun v => cond v (w x) 0 + weighed rest w a) h).trans
+        ((Nat.zero_add _).trans (weighed_zero_of_size rest_none))
+    | true => Nat.noConfusion ((Nat.succ_add 0 (size rest a)).symm.trans
+        ((congrArg (fun v => cond v 1 0 + size rest a) h).symm.trans empty))
+
+/-- **Weights within a ratio rank by number past it.** Every positive weighting whose weights
+stand within `n / d` of each other ranks `a` above `b` where `n` times the number of items `b`
+alone admits is less than `d` times the number `a` alone admits. -/
+theorem ranks_past_ratio {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool}
+    (positive : Positive items w) (within : RatioWithin items n d w)
+    (gap : n * size items (beyond b a) < d * size items (beyond a b)) :
+    weighed items w b < weighed items w a :=
+  (weighed_lt_iff_beyond items w a b).mpr
+    (match Nat.lt_or_ge (weighed items w (beyond b a)) (weighed items w (beyond a b)) with
+    | .inl lt => lt
+    | .inr ge =>
+      have weighs := weighed_pos_of_size positive (pos_of_lt_mul gap)
+      absurd (Nat.lt_of_le_of_lt
+        (Nat.le_trans (Nat.mul_le_mul_left (d * size items (beyond a b)) ge)
+          (Nat.le_trans (Nat.le_of_eq (mul_swap_right d _ _)) (beyond_within within)))
+        (mul_lt_mul_iff weighs |>.mpr gap)) (Nat.lt_irrefl _))
+
+/-- Where `n` times the number of items `b` alone admits is at most `d` times the number `a` alone
+admits, every positive weighting within `n / d` weighs `a` at least as much as `b`. -/
+theorem ranks_le_past_ratio {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool}
+    (positive_n : 0 < n) (within : RatioWithin items n d w)
+    (gap : n * size items (beyond b a) ≤ d * size items (beyond a b)) :
+    weighed items w b ≤ weighed items w a :=
+  (weighed_le_iff_beyond items w a b).mpr
+    (match Nat.lt_or_ge (weighed items w (beyond a b)) (weighed items w (beyond b a)) with
+    | .inr ge => ge
+    | .inl lt => match h : size items (beyond b a) with
+      | 0 => absurd (Eq.subst (motive := fun v => weighed items w (beyond a b) < v)
+          (weighed_zero_of_size h) lt) (Nat.not_lt_zero _)
+      | q + 1 =>
+        have dp : 0 < d * size items (beyond a b) :=
+          Nat.lt_of_lt_of_le (Nat.mul_pos positive_n (Nat.succ_pos q))
+            (Eq.subst (motive := fun v => n * v ≤ d * size items (beyond a b)) h gap)
+        absurd (Nat.lt_of_lt_of_le (mul_lt_mul_pos dp lt)
+          (Nat.le_trans (Nat.le_of_eq (mul_swap_right d _ _))
+            (Nat.le_trans (beyond_within within) (Nat.mul_le_mul_right _ gap))))
+          (Nat.lt_irrefl _))
+
+/-- The weighting tilted toward `b`: weight `n` on what `b` admits beyond `a`, `d` on every
+other item. -/
+def tilted (n d : Nat) (a b : X → Bool) : X → Nat :=
+  fun x => cond (beyond b a x) n d
+
+theorem cond_between {n d : Nat} (le : d ≤ n) : ∀ v : Bool, d ≤ cond v n d ∧ cond v n d ≤ n
+  | true => ⟨le, Nat.le_refl n⟩
+  | false => ⟨Nat.le_refl d, le⟩
+
+theorem tilted_positive {n d : Nat} (positive : 0 < d) (le : d ≤ n) (items : List X)
+    (a b : X → Bool) : Positive items (tilted n d a b) :=
+  fun x _ => Nat.lt_of_lt_of_le positive (cond_between le (beyond b a x)).1
+
+theorem tilted_within {n d : Nat} (le : d ≤ n) (items : List X) (a b : X → Bool) :
+    RatioWithin items n d (tilted n d a b) :=
+  fun x y _ _ => Nat.le_trans (Nat.mul_le_mul_left d (cond_between le (beyond b a x)).2)
+    (Nat.le_trans (Nat.le_of_eq (Nat.mul_comm d n))
+      (Nat.mul_le_mul_left n (cond_between le (beyond b a y)).1))
+
+theorem tilt_beyond (n d : Nat) : ∀ p q : Bool, cond (p && !q) (cond (q && !p) n d) 0 = cond (p && !q) d 0
+  | true, true => rfl
+  | true, false => rfl
+  | false, _ => rfl
+
+theorem tilt_toward (n d : Nat) : ∀ v : Bool, cond v (cond v n d) 0 = cond v n 0
+  | true => rfl
+  | false => rfl
+
+theorem weighed_tilted_beyond (n d : Nat) (items : List X) (a b : X → Bool) :
+    weighed items (tilted n d a b) (beyond a b) = d * size items (beyond a b) :=
+  (total_congr (fun x => tilt_beyond n d (a x) (b x)) items).trans (weighed_const d items (beyond a b))
+
+theorem weighed_tilted_toward (n d : Nat) (items : List X) (a b : X → Bool) :
+    weighed items (tilted n d a b) (beyond b a) = n * size items (beyond b a) :=
+  (total_congr (fun x => tilt_toward n d (beyond b a x)) items).trans
+    (weighed_const n items (beyond b a))
+
+/-- The tilted weighting ranks `a` above `b` exactly where `n` times what `b` alone admits is
+less than `d` times what `a` alone admits. -/
+theorem tilted_lt_iff (n d : Nat) (items : List X) (a b : X → Bool) :
+    weighed items (tilted n d a b) b < weighed items (tilted n d a b) a ↔
+      n * size items (beyond b a) < d * size items (beyond a b) :=
+  (weighed_lt_iff_beyond items _ a b).trans (by rw [weighed_tilted_beyond, weighed_tilted_toward])
+
+theorem tilted_gt_iff (n d : Nat) (items : List X) (a b : X → Bool) :
+    weighed items (tilted n d a b) a < weighed items (tilted n d a b) b ↔
+      d * size items (beyond a b) < n * size items (beyond b a) :=
+  (weighed_lt_iff_beyond items _ b a).trans (by rw [weighed_tilted_beyond, weighed_tilted_toward])
+
+/-- **At the boundary the tilted weighting ties.** Where `n` times what `b` alone admits is `d`
+times what `a` alone admits, the tilted weighting weighs the two courses alike. -/
+theorem tilted_ties {n d : Nat} {items : List X} {a b : X → Bool}
+    (boundary : n * size items (beyond b a) = d * size items (beyond a b)) :
+    weighed items (tilted n d a b) a = weighed items (tilted n d a b) b := by
+  rw [weighed_split items _ a b, weighed_split_right items _ a b, weighed_tilted_beyond,
+    weighed_tilted_toward, boundary]
+
+/-- **Where weights stand within a ratio, the side admitting more wins exactly past it.** Every
+positive weighting whose weights stand within `n / d` of each other (`0 < d ≤ n`) ranks `a` above
+`b` exactly where `n` times the number of items `b` alone admits is less than `d` times the number
+`a` alone admits; the tilted weighting decides the boundary. -/
+theorem every_within_iff {items : List X} {n d : Nat} {a b : X → Bool} (positive : 0 < d)
+    (le : d ≤ n) :
+    (∀ w, Positive items w → RatioWithin items n d w → weighed items w b < weighed items w a) ↔
+      n * size items (beyond b a) < d * size items (beyond a b) :=
+  ⟨fun every => (tilted_lt_iff n d items a b).mp
+      (every _ (tilted_positive positive le items a b) (tilted_within le items a b)),
+   fun gap _ positive' within => ranks_past_ratio positive' within gap⟩
+
+/-- **Some weighting within the ratio ranks the other side higher exactly short of it.** -/
+theorem some_within_reverses_iff {items : List X} {n d : Nat} {a b : X → Bool}
+    (positive : 0 < d) (le : d ≤ n) :
+    (∃ w, Positive items w ∧ RatioWithin items n d w ∧ weighed items w a < weighed items w b) ↔
+      d * size items (beyond a b) < n * size items (beyond b a) :=
+  ⟨fun ⟨_, _, within, lt⟩ =>
+    match Nat.lt_or_ge (d * size items (beyond a b)) (n * size items (beyond b a)) with
+    | .inl short => short
+    | .inr past => absurd lt (Nat.not_lt_of_le
+        (ranks_le_past_ratio (Nat.lt_of_lt_of_le positive le) within past)),
+   fun short => ⟨tilted n d a b, tilted_positive positive le items a b, tilted_within le items a b,
+     (tilted_gt_iff n d items a b).mpr short⟩⟩
+
+/-- **Valuers whose weights stand within a ratio rank a pair opposite ways exactly where the ratio
+exceeds what each side alone admits over what the other alone admits.** Two positive weightings
+within `n / d` rank `a` and `b` opposite ways exactly where `d` times the number of items each
+alone admits is less than `n` times the number the other alone admits. Equal weights (`n = d`)
+never do; a widening, where `b` admits nothing beyond `a`, never is. -/
+theorem opposite_within_iff {items : List X} {n d : Nat} {a b : X → Bool} (positive : 0 < d)
+    (le : d ≤ n) :
+    ((∃ w, Positive items w ∧ RatioWithin items n d w ∧ weighed items w b < weighed items w a) ∧
+      ∃ w, Positive items w ∧ RatioWithin items n d w ∧ weighed items w a < weighed items w b) ↔
+      d * size items (beyond b a) < n * size items (beyond a b) ∧
+        d * size items (beyond a b) < n * size items (beyond b a) :=
+  ⟨fun ⟨up, down⟩ => ⟨(some_within_reverses_iff (a := b) (b := a) positive le).mp up,
+      (some_within_reverses_iff positive le).mp down⟩,
+   fun ⟨up, down⟩ => ⟨(some_within_reverses_iff (a := b) (b := a) positive le).mpr up,
+      (some_within_reverses_iff positive le).mpr down⟩⟩
+
+/-- Under one positive weight for every item, a course weighs more exactly where it admits more
+beyond the other than the other admits beyond it: weights within `1 / 1`. -/
+theorem const_lt_iff_beyond {k : Nat} (positive : 0 < k) (items : List X) (a b : X → Bool) :
+    weighed items (fun _ => k) b < weighed items (fun _ => k) a ↔
+      size items (beyond b a) < size items (beyond a b) :=
+  have within : RatioWithin items 1 1 (fun _ => k) := fun _ _ _ _ => Nat.le_refl _
+  have positive' : Positive items (fun _ => k) := fun _ _ => positive
+  ⟨fun lt => match Nat.lt_or_ge (size items (beyond b a)) (size items (beyond a b)) with
+    | .inl less => less
+    | .inr ge => absurd lt (Nat.not_lt_of_le (ranks_le_past_ratio (a := b) (b := a)
+        (Nat.succ_pos 0) within (Eq.subst (motive := fun v => v ≤ 1 * size items (beyond b a))
+          (Nat.one_mul _).symm (Eq.subst (motive := fun v => size items (beyond a b) ≤ v)
+            (Nat.one_mul _).symm ge)))),
+   fun less => ranks_past_ratio positive' within
+     (Eq.subst (motive := fun v => v < 1 * size items (beyond a b)) (Nat.one_mul _).symm
+       (Eq.subst (motive := fun v => size items (beyond b a) < v) (Nat.one_mul _).symm less))⟩
+
+/-- Comparing what two courses admit item by item: either `a` admits an item `b` does not, or
+`b` admits every item `a` admits. -/
+theorem exceeds_or_includes (a b : X → Bool) :
+    ∀ items : List X, ExceedsOn items a b ∨ IncludesOn items b a
+  | [] => .inr fun _ member => nomatch member
+  | x :: rest => match exceeds_or_includes a b rest with
+    | .inl ⟨y, listed, admits, not⟩ => .inl ⟨y, .tail x listed, admits, not⟩
+    | .inr includes => match ha : a x, hb : b x with
+      | true, false => .inl ⟨x, .head rest, ha, hb⟩
+      | true, true => .inr fun y member admits => match mem_cons_cases member with
+        | .inl same => Eq.subst (motive := fun z => b z = true) same.symm hb
+        | .inr listed => includes y listed admits
+      | false, _ => .inr fun y member admits => match mem_cons_cases member with
+        | .inl same => Bool.noConfusion
+            (ha.symm.trans (Eq.subst (motive := fun z => a z = true) same admits))
+        | .inr listed => includes y listed admits
+
+theorem size_le_length (items : List X) (a : X → Bool) : size items a ≤ items.length :=
+  Nat.le_trans (total_le items fun x _ => cond_le_one (a x)) (Nat.le_of_eq (total_ones items))
+
+theorem size_pos_of_exceeds {items : List X} {a b : X → Bool} (exceeds : ExceedsOn items a b) :
+    0 < size items (beyond a b) :=
+  match exceeds with
+  | ⟨_, listed, admits, not⟩ => total_pos_of_mem listed (cond_one_pos (and_of_parts admits (congrArg (!·) not)))
+
+/-- **A course admitting an item the other does not is ranked higher by some positive
+weighting**: the weighting tilted toward it, with weight one more than the number of listed items
+on what it alone admits and one elsewhere, stands past the ratio. -/
+theorem outweighs {items : List X} {a b : X → Bool} (exceeds : ExceedsOn items b a) :
+    ∃ w, Positive items w ∧ weighed items w a < weighed items w b :=
+  match (some_within_reverses_iff (items := items) (n := items.length + 1) (d := 1) (a := a) (b := b)
+      (Nat.succ_pos 0) (Nat.succ_le_succ (Nat.zero_le _))).mpr
+      (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.one_mul _)) (Nat.lt_of_lt_of_le
+        (Nat.lt_succ_of_le (size_le_length items (beyond a b)))
+        (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm)
+          (Nat.mul_le_mul_left _ (size_pos_of_exceeds exceeds))))) with
+  | ⟨w, positive, _, lt⟩ => ⟨w, positive, lt⟩
+
+/-- **A mixed comparison is decided both ways by positive weightings**: some positive weighting
+ranks the one higher, and some the other. -/
+theorem mixed_either_way {items : List X} {a b : X → Bool} (mixed : MixedOn items a b) :
+    (∃ w, Positive items w ∧ weighed items w b < weighed items w a) ∧
+      ∃ w, Positive items w ∧ weighed items w a < weighed items w b :=
+  ⟨outweighs mixed.1, outweighs mixed.2⟩
+
+/-- **Widening is what every positive weighting ranks higher.** On the listed items, `a` widens
+`b` exactly when every weighting positive on them weighs `a` above `b`. -/
+theorem widens_iff_every_positive {items : List X} {a b : X → Bool} :
+    WidensOn items a b ↔ ∀ w, Positive items w → weighed items w b < weighed items w a :=
+  ⟨fun widens _ positive => weighed_lt_of_widens positive widens,
+   fun every =>
+    ⟨fun x listed admits => match h : a x with
+      | true => rfl
+      | false => match outweighs ⟨x, listed, admits, h⟩ with
+        | ⟨w, positive, lt⟩ => absurd (every w positive) (Nat.lt_asymm lt),
+     match exceeds_or_includes a b items with
+     | .inl exceeds => exceeds
+     | .inr includes =>
+       absurd (every (fun _ => 1) fun _ _ => Nat.succ_pos 0)
+         (Nat.not_lt_of_le (weighed_le_of_includes _ includes))⟩⟩
+
 /-- **A weighting the same for every item ranks by number.** Under one positive weight for every
-item, one course is weighed above another exactly when it admits more of the listed items. -/
+item, one course is weighed above another exactly when it admits more of the listed items: the
+case `1 / 1` of weights within a ratio. -/
 theorem neutral_ranks_by_number {k : Nat} (positive : 0 < k) (items : List X) (a b : X → Bool) :
     weighed items (fun _ => k) b < weighed items (fun _ => k) a ↔
       weighed items (fun _ => 1) b < weighed items (fun _ => 1) a :=
-  ⟨fun lt => lt_of_mul_lt
-      (Eq.subst (motive := fun x => x < k * weighed items (fun _ => 1) a) (weighed_const k items b)
-        (Eq.subst (motive := fun y => weighed items (fun _ => k) b < y) (weighed_const k items a)
-          lt)),
-   fun lt =>
-    Eq.subst (motive := fun x => x < weighed items (fun _ => k) a) (weighed_const k items b).symm
-      (Eq.subst (motive := fun y => k * weighed items (fun _ => 1) b < y)
-        (weighed_const k items a).symm (mul_lt_mul_pos positive lt))⟩
+  (const_lt_iff_beyond positive items a b).trans (weighed_lt_iff_beyond items _ a b).symm
 
 /-! ### Any order increasing in admission -/
 
@@ -384,14 +970,6 @@ theorem mixed_either_way_of_class {items : List X} {a b : X → Bool}
 /-- A course restricted to the items `p` marks. -/
 def restrict (p a : X → Bool) : X → Bool :=
   fun x => p x && a x
-
-theorem and_parts : ∀ {p q : Bool}, (p && q) = true → p = true ∧ q = true
-  | true, true, _ => ⟨rfl, rfl⟩
-  | true, false, no => Bool.noConfusion no
-  | false, _, no => Bool.noConfusion no
-
-theorem and_of_parts : ∀ {p q : Bool}, p = true → q = true → (p && q) = true
-  | _, _, rfl, rfl => rfl
 
 /-- Inclusion passes to the items `p` marks. -/
 theorem includes_restrict (p : X → Bool) {items : List X} {a b : X → Bool}
@@ -848,9 +1426,6 @@ theorem level_le_of_includes {items : List X} {a b : X → Bool} (of : X → Boo
     (includes : IncludesOn items a b) : level items of b ≤ level items of a :=
   weighed_le_of_includes _ includes
 
-theorem cond_one_pos : ∀ {v : Bool}, v = true → 0 < cond v 1 0
-  | _, rfl => Nat.succ_pos 0
-
 /-- A course including another and admitting one more item of a formation raises its level. -/
 theorem level_lt_of_includes_at {items : List X} {a b : X → Bool} {of : X → Bool}
     (includes : IncludesOn items a b) {x : X} (listed : x ∈ items) (admits : a x = true)
@@ -1034,5 +1609,87 @@ theorem decided :
   ⟨by decide, by decide, by decide⟩
 
 end LevelTransfer
+
+namespace Framed
+
+/-- One item; a presentation keeps it or not (`.1`) and is framed or not (`.2`). -/
+def kept (p : Bool × Bool) : Unit → Bool :=
+  fun _ => p.1
+
+/-- A ranking that puts a framed presentation above an unframed one, and otherwise the one that
+keeps the item above the one that does not: it depends on the wording, not only on the sets. -/
+def ranks (b a : Bool × Bool) : Prop :=
+  (a.2 = true ∧ b.2 = false) ∨ (a.2 = b.2 ∧ a.1 = true ∧ b.1 = false)
+
+/-- The item weighs one for and nothing against: the order on courses increases at it. -/
+theorem increasing :
+    Weighting.IncreasingAt [()] (Weighting.ranksNet [()] (fun _ => 1) (fun _ => 0)) () :=
+  Weighting.ranksNet_increasingAt (Nat.succ_pos 0)
+
+theorem widensBy : Weighting.WidensBy [()] () (kept (true, false)) (kept (false, true)) :=
+  ⟨fun _ _ _ => rfl, .head _, rfl, rfl, fun _ _ _ _ => rfl⟩
+
+/-- **A framing alone puts a narrowing above its widening**: the framed plan that keeps nothing is
+ranked above the unframed plan that keeps the item, though the item weighs above zero; so the
+ranking does not read the sets on that pair. -/
+theorem framing_alone :
+    ranks (true, false) (false, true) ∧
+      ¬ Weighting.ReadsSetsOn kept ranks (Weighting.ranksNet [()] (fun _ => 1) (fun _ => 0))
+        (true, false) (false, true) :=
+  ⟨.inl ⟨rfl, rfl⟩, fun reads => (Weighting.reads_increasingAt widensBy reads increasing).2 (.inl ⟨rfl, rfl⟩)⟩
+
+end Framed
+
+namespace Interacting
+
+/-- Two items, `true` and `false`. A course is scored by how it keeps them together: `true` kept
+scores one with or without `false`, `false` kept alone scores two, neither nothing. Adding
+`true` raises a course that keeps nothing and lowers one that keeps `false`. -/
+def score (c : Bool → Bool) : Nat :=
+  cond (c true) 1 (cond (c false) 2 0)
+
+/-- The order of the score. -/
+def order (b a : Bool → Bool) : Prop :=
+  score b < score a
+
+def items : List Bool := [true, false]
+
+def neither : Bool → Bool := fun _ => false
+def onlyTrue : Bool → Bool := fun z => z
+def onlyFalse : Bool → Bool := fun z => !z
+def both : Bool → Bool := fun _ => true
+
+theorem eq_true_of_not_false : ∀ {v : Bool}, (!v) = false → v = true
+  | true, _ => rfl
+  | false, no => Bool.noConfusion no
+
+theorem alone : Weighting.WidensBy items true onlyTrue neither :=
+  ⟨fun _ _ no => Bool.noConfusion no, .head _, rfl, rfl, fun _ _ admits _ => admits⟩
+
+theorem jointly : Weighting.WidensBy items true both onlyFalse :=
+  ⟨fun _ _ _ => rfl, .head _, rfl, rfl, fun _ _ _ not => eq_true_of_not_false not⟩
+
+/-- **The increment at an item can depend on what else is kept.** Adding `true` to a course that
+keeps nothing is ranked a gain of it (its ending, measured apart, a loss), and adding it to the
+course that keeps `false` is ranked below: the sign measured alone is not the sign in the joint
+context, so a ranking that reads the sets exactly puts the narrowing that keeps `false` above
+its widening by `true`. -/
+theorem increment_differs :
+    Weighting.IncrementIs order neither onlyTrue .gt ∧
+      Weighting.IncrementIs order onlyFalse both .lt :=
+  ⟨⟨(by decide : score neither < score onlyTrue), (by decide : ¬ score onlyTrue < score neither)⟩,
+   ⟨(by decide : score both < score onlyFalse), (by decide : ¬ score onlyFalse < score both)⟩⟩
+
+/-- **No net weighting gives this order**: a net weighting's increment at an item is the same in
+every context (`Weighting.ranksNet_increment_alike`). -/
+theorem not_net :
+    ¬ ∃ pos neg : Bool → Nat, ∀ b a, order b a ↔ Weighting.ranksNet items pos neg b a :=
+  fun ⟨_, _, same⟩ =>
+    match Weighting.ranksNet_increment_alike alone jointly
+      (Weighting.increment_transfer (same neither onlyTrue) (same onlyTrue neither)
+        increment_differs.1) with
+    | ⟨_, not⟩ => not ((same both onlyFalse).mp increment_differs.2.1)
+
+end Interacting
 
 end Becoming
