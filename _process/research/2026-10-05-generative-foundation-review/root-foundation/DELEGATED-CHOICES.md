@@ -101,6 +101,7 @@ On 19 October 2026 Ren answered for the register as a whole, “integrate all, t
 | D61 | the ethics' scope as the one closure (21 October) | adopted with exact scope: relational neutrality read as closedness under the formed relations' steps, so that the scope the two neutralities force is the closure of a valued living claim; the step of invariance read as the claim that the relation carrying significance connects everything living; the same law as 无明's reach through couplings; the order untouched, C alone ranking |
 | D62 | the readings of 《中华思想脉络》 on the spine and of the classical names (22 October) | adopted with exact scope: the three kinds of D47 and the four layers of D54 over every judgment of the 脉络; the 1,300 readings with the scope each states; the thesis holds at the root, needs a scope in its universal forms, fails as every system's property; the 447 names as a convention among the theory's users, each with what it does not carry; five RO and 易传 kinds decided for exact scope |
 | D63 | 文 named the course, and the epistemology of 文 (22 October) | adopted with exact scope: 文 = a run's states read through a map step by step (Parting.course, Learnable.course), 文同 = Law.SameFuture, 往 the prefix of a 文; the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 read off the 文 in one sense only) as readings of checked laws with the scope each states; 文理生生's senses of 文 as one 文 and 理; whether classical Chinese is the best expression left untested |
+| D64 | the readings of readers drawn from the selected (22 October) | adopted with exact scope: “selecting the selectors” the rule as the pool of readers drawn from those it selects, counted as it counts them, `ReadsShare` then one comparison of two readings; the loop closing in the minds it selects the loss read only by the readers the selection thins, the counts when it is read deciding for good; 明 in time a reading among readers not yet the fewer; readers as minds still a reading (D58) |
 
 <a id="1-生生与生成的空间--生生-and-the-generative-space"></a>
 ## 1. 生生 and the generative space
@@ -590,6 +591,7 @@ L1, S1 and S2 are D40-D42.
 - Ren's message of 21 October 2026, “aim elegant completion” ([words](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md)), taken up by board item EC: D61 ([study section 313](BECOMING-RENEWAL-READING.md#313-the-ethics-scope-as-the-one-closure-ec4)).
 - Ren's request of 19 October 2026 for a 中华 edition in the classical symbol system and the 脉络 joined to the theories, “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达” ([words](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)): D62 ([study section 328](BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)).
 - Ren's request of 22 October 2026 to integrate 文理生生 with the epistemology of 文 at the centre and to find the most fitting name for 文, “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” ([words](../../../../sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md)): D63 ([study section 346](BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)).
+- Ren's message of 22 October 2026 on OPENING's note on the meta-attractor, “can we push this further?” ([words](../../../../sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md)): D64 ([study section 349](BECOMING-RENEWAL-READING.md#349-readers-drawn-from-the-selected-ma2)).
 
 <a id="13-一个说明--one-account"></a>
 ## 13. One account
@@ -845,3 +847,17 @@ Where: the chapter [WENLI-AND-BECOMING](../../../../theories/becoming/chapters/W
 
 **What would change it.** A law of the course that the name misdescribes; a reading of 系辞 or of 文理生生's sources under which 文 denotes the structure read rather than the course; the reading test, if run, for the comparison with a controlled English code.
 
+<a id="d64-readers-drawn-from-the-selected"></a>
+### Readers drawn from the selected
+
+Where: OPENING's note `[^meta]`; chapter §4.5 and T7 ([THE-THEORY-OF-BECOMING](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#45-passing-shared-codes-and-capture-through-the-rule)); the record [readers-drawn-from-the-selected](../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md); study section 349 ([MA2](BECOMING-RENEWAL-READING.md#349-readers-drawn-from-the-selected-ma2)). Decided in the one account of D45; continues D58.
+
+**Decision.** Adopted with exact scope.
+1. **Selecting the selectors.** The meta-attractor corpus's passage from being selected by a rule to helping reproduce the rule that selects you is read as the rule being the pool of its readers' readings, the readers drawn from the population the rule selects and counted as it counts them (`ClosedCapture.Drawn.pool`). Within the pool, the rule is read from the share monotonically exactly where each carrier's reading favours the carriers at least as much as each other's (`Drawn.pool_reads_iff`); D58's reading of the winners writing the scorecard as the premise `ReadsShare` is kept, with the premise now stated as who reads.
+2. **The loop closing in the minds it selects.** Read as the loss read only by the readers the selection disfavours, whose number it thins (`Thinned.lossPool`): at the step they read it, the counts, with the rule then in force, decide for good whether the lock is kept or turned (`Thinned.kept_iff`, `Thinned.turned_iff`).
+3. **明 in time.** A reading of what lies beyond the share made while its readers are not yet the fewer; the same reading made once they are leaves the lock in place (`Thinned.inTime_turned`, `Thinned.late_kept`).
+4. **Kept from D58.** That readers are minds, institutions or a culture is a reading; that actual rules are pools of readers drawn from those they select, and that each kind reads at least as favourably for its own kind, is the premise.
+
+**Reasons.** The corpus's own mechanism for the scorecard is who holds recruitment, training and evaluation; a pool counted as the population states that mechanism and nothing more, and within it `ReadsShare` is equivalent to one comparison, so the reading claims no more than the comparison. The pool's two kinds, each reading alike, and its unnormalized sum (a reading's size weighs with its count) are modelling choices the record states.
+
+**What would change it.** A law of selection in which the scorecard's readers are drawn from those it selects and yet the rule read falls with the share; a reading of the corpus under which "selecting the selectors" names something other than who reads; pools whose readers of one kind read differently, under which the counts no longer decide.

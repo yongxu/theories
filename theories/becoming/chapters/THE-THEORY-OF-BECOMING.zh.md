@@ -311,11 +311,11 @@
 
 ### 4.5 传递、共享的代码与经规则的劫持
 
-**要点。** 比其承载者更久的模式只经传递而持续，传递停止后在一个跨度内终结。经听闻在形成之间形成的代码不造出形式：起点与听闻的次序固定所达的形式，没有形式被特别对待，只有中心、偏好的形式或听闻的次序打破对称的分歧。选择的规则从它所选择的份额读出之处，持住结果的是规则怎样读取，不是规则的值，每个读取步都重新设定它。规则怎样被读本身由份额形成、且回路中没有什么读份额之外者之处，回路闭合：它不读的损失不论增长多大都使它保持锁定，读法的改变如规则之值的改变一样被吸收；离开的是律的改变，例如读到份额之外者的读法。
+**要点。** 比其承载者更久的模式只经传递而持续，传递停止后在一个跨度内终结。经听闻在形成之间形成的代码不造出形式：起点与听闻的次序固定所达的形式，没有形式被特别对待，只有中心、偏好的形式或听闻的次序打破对称的分歧。选择的规则从它所选择的份额读出之处，持住结果的是规则怎样读取，不是规则的值，每个读取步都重新设定它。规则怎样被读本身由份额形成、且回路中没有什么读份额之外者之处，回路闭合：它不读的损失不论增长多大都使它保持锁定，读法的改变如规则之值的改变一样被吸收；离开的是律的改变，例如读到份额之外者的读法。规则是其读者之读法的汇合、读者如人口那样计数之处，规则从份额单调读出，恰在每个携带者的读法偏向携带者不少于每个其他者的读法之时；只有其他者读损失时，在读到损失的那一步，若当时施行的规则偏向携带者，锁定恰在携带者不少于其他者之处永远保持：迟到的证据，读者已被选择稀释，不再翻转回路。
 
-**定理。** 本节陈述 `Web.ByPassing.ends_within`、`run_agrees_every_start_iff`、`favouring_locks`、`uniform_locks`、`ClosedCapture.lock_outlives_loss`（回路不读的损失越过每一界限，锁定仍保持）、`ClosedCapture.reading_absorbed`（由份额形成的读法的改变在下一读取步被吸收）；完整陈述见[英文版 §4.5](THE-THEORY-OF-BECOMING.md#45-passing-shared-codes-and-capture-through-the-rule)。
+**定理。** 本节陈述 `Web.ByPassing.ends_within`、`run_agrees_every_start_iff`、`favouring_locks`、`uniform_locks`、`ClosedCapture.lock_outlives_loss`（回路不读的损失越过每一界限，锁定仍保持）、`ClosedCapture.reading_absorbed`（由份额形成的读法的改变在下一读取步被吸收）、`ClosedCapture.Drawn.pool_reads_iff`（读者汇合之内，单调读份额恰是两种读法的一次比较）、`ClosedCapture.Thinned.kept_iff` 与 `ClosedCapture.Thinned.turned_iff`（读到损失那一步的计数决定锁定是保持还是翻转，永远）；完整陈述见[英文版 §4.5](THE-THEORY-OF-BECOMING.md#45-passing-shared-codes-and-capture-through-the-rule)。
 
-记录：[a-pattern-lasts-through-passing](../results/records/a-pattern-lasts-through-passing.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)、[capture-through-the-rule](../results/records/capture-through-the-rule.md)、[closed-capture](../results/records/closed-capture.md)、[joint-practice-forms-continuation](../results/records/joint-practice-forms-continuation.md)、[joint-plan-composition](../results/records/joint-plan-composition.md)、[organizational-formation-from-generative-comparison](../results/records/organizational-formation-from-generative-comparison.md)。
+记录：[a-pattern-lasts-through-passing](../results/records/a-pattern-lasts-through-passing.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)、[capture-through-the-rule](../results/records/capture-through-the-rule.md)、[closed-capture](../results/records/closed-capture.md)、[readers-drawn-from-the-selected](../results/records/readers-drawn-from-the-selected.md)、[joint-practice-forms-continuation](../results/records/joint-practice-forms-continuation.md)、[joint-plan-composition](../results/records/joint-plan-composition.md)、[organizational-formation-from-generative-comparison](../results/records/organizational-formation-from-generative-comparison.md)。
 
 ### 4.6 因应转化
 
@@ -1002,8 +1002,8 @@
 
 *主张。* 选择的规则以及规则怎样被读，都由其所选的份额形成之处，这一回路是份额的一条律：它不读取的损失改变不了它所做的任何事，所以它活得比越过一切界的损失更久；对该损失的证据只有进入规则所读者才能使它转向。这样被劫持的度量只在对损失的读取改变规则之处被放弃（份额之外的读者、进入份额的损失、新的读法），从不只因证据累积。
 
-- *地位。* 在模型中已证（`ClosedCapture.unread_course`、`ClosedCapture.lock_outlives_loss`、`ClosedCapture.turned_by_loss`、`ClosedCapture.readers_uniform_locks`、`RuleCapture.uniform_locks`）。其前一半就是同一条归并之律，它也决定学习者能辨识什么、选择能达到什么：回路不读的损失不改变它所做的任何事，恰在份额与规则自身成立之时（`ClosedCapture.identifiesAlike_iff_unread`、`ClosedCapture.courses_alike_iff_unread`）；在进程之内形成的读者是对进程的一种读取，没有外在的读者。实际的度量由其所选份额形成，是猜想。近邻：Goodhart（1975）与 Campbell（1979）；监督控制中的可观测性，读者在受控对象之内时是对合并整体的读取（Wakaiki、Tabuada 与 Hespanha 2019，定理 4.1）；被污染的奖励通道，一致的污染与没有污染无法区分，而回路不形成的读取是出路（Everitt、Krakovna、Orseau 与 Legg 2017，定理 11 与 19）；闭环可辨识性（Borkar 与 Varaiya 1979）；自我确认均衡（Fudenberg 与 Levine 1993）；表现性稳定（Perdomo 等 2020）；路径依赖（Arthur 1989）（[观测检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)）。
-- *禁止。* 由其所选者设定与读取的度量，在读者与所读都未改变时，被他们因其损失的证据而放弃；只改读法而规则仍偏向同一份额的改革，持续到下一次读取之后。
+- *地位。* 在模型中已证（`ClosedCapture.unread_course`、`ClosedCapture.lock_outlives_loss`、`ClosedCapture.turned_by_loss`、`ClosedCapture.readers_uniform_locks`、`RuleCapture.uniform_locks`）。其前一半就是同一条归并之律，它也决定学习者能辨识什么、选择能达到什么：回路不读的损失不改变它所做的任何事，恰在份额与规则自身成立之时（`ClosedCapture.identifiesAlike_iff_unread`、`ClosedCapture.courses_alike_iff_unread`）；在进程之内形成的读者是对进程的一种读取，没有外在的读者。规则是从其所选者中抽出的读者之汇合、每类读者对本类的偏向不少于另一类之处，规则从份额读出是定理（`ClosedCapture.Drawn.pool_reads`）；只由不受偏向者读的损失，在当时施行的规则偏向携带者时，恰在读到时携带者不少于其他者之处使锁定永远保持（`ClosedCapture.Thinned.kept_iff`）。实际的度量如此形成，是猜想。近邻：Goodhart（1975）与 Campbell（1979）；监督控制中的可观测性，读者在受控对象之内时是对合并整体的读取（Wakaiki、Tabuada 与 Hespanha 2019，定理 4.1）；被污染的奖励通道，一致的污染与没有污染无法区分，而回路不形成的读取是出路（Everitt、Krakovna、Orseau 与 Legg 2017，定理 11 与 19）；闭环可辨识性（Borkar 与 Varaiya 1979）；自我确认均衡（Fudenberg 与 Levine 1993）；表现性稳定（Perdomo 等 2020）；路径依赖（Arthur 1989）（[观测检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)）。
+- *禁止。* 由其所选者设定与读取的度量，在读者与所读都未改变时，被他们因其损失的证据而放弃；只改读法而规则仍偏向同一份额的改革，持续到下一次读取之后；只由其所不偏向者读其损失的度量，在选择已使这些读者成为少数之后被放弃，而其余都未改变。
 - *驳倒它的观察。* 机构度量（科学评价、基准排行榜、临床目标、国民账户）的改革中，度量自己的选择者因证据累积放弃它，既无外部读者，也无损失进入其份额。
 - *至今的证据。* 尚无冻结的检验；检验需要在读案例之前固定改革事件的编码。
 

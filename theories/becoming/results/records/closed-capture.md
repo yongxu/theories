@@ -37,14 +37,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T125537.657165Z): the 43 declarations of Becoming.ClosedCapture, 28 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study sections 242 and 309; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 43 declarations of Becoming.ClosedCapture cited here, 28 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study sections 242 and 309; not independently reviewed by a person.
 
 Canonical source: [ClosedCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-Readings that read the share and part of what lies beyond, and how much of the loss a reading must read to leave; a loss read late; the reading formed by a selection among readers rather than by a map; real-valued shares; an independent review.
+Readings of the share and of part of what lies beyond with weights other than a pool counted by kind, and how much of the loss such a reading must read to leave; real-valued shares; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -71,6 +71,9 @@ The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separate
 - related, not a proved adapter: [capture-through-the-rule](capture-through-the-rule.md). The loop this record closes: what it does not read, and the reading read from the share.
 - related, not a proved adapter: [target-capture](target-capture.md). The share that rises under selection, and the state re-absorbed where the step does not read it.
 - related, not a proved adapter: [joint-difference-making](joint-difference-making.md). What lies beyond the share is drawn jointly; that the loop does not read it does not remove a drawer from the drawing.
+- related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). The reading formed by a selection among readers: the rule as the pool of readers drawn from those it selects, and the loss read late by the readers the selection thins.
+
+**Used by:** [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -86,6 +89,7 @@ The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separate
 | statement | [OPENING.md](../../OPENING.md) | — |
 | proof | [IdentificationRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110422.961776Z/verification.json) | — |
 
 Aliases: `closed capture`, `闭合的捕获`, `the loop closed in its readings`, `the metric outlives its refutation`, `the meta-attractor loop`, `元吸引子回路`, `Becoming.ClosedCapture.lock_outlives_loss`, `Becoming.ClosedCapture.reading_absorbed`, `Becoming.ClosedCapture.turned_by_loss`, `Becoming.ClosedCapture.unread_course`, `the part that makes sense alone`, `Becoming.ClosedCapture.identifiesAlike_iff_unread`
 
@@ -94,7 +98,8 @@ Aliases: `closed capture`, `闭合的捕获`, `the loop closed in its readings`,
 
 - 20 October 2026: added (MA1), the meta-attractor's loop closed on the spine: OPENING's note on the meta-attractor said the loop was not on the spine; study section 242; readings D58.
 - 21 October 2026, LU1: a law added, Unread read as the law of a part read alone (identifiesAlike_iff_unread, courses_alike_iff_unread); unread_course derived from Law.sameFuture_of_goAlike, its statement unchanged; study section 309. The other laws are unchanged.
+- 22 October 2026, MA2: the next step revised, the reading formed by a selection among readers, a reading of the share and part of what lies beyond by a pool, and a loss read late now stated in readers-drawn-from-the-selected; the module gained that record's declarations, so the evidence counts this record's own; study section 349. The laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T12:59:18+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T11:07:55+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

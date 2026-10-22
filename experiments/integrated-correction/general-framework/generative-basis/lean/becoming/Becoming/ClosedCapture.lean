@@ -51,6 +51,43 @@ module states both on `Pace.paced`, with no premise beyond the hypotheses each s
   own proportion and the rule read is that reading, and a reading reversed to favour the others is
   absorbed at the next reading step (`Proportional.reform_absorbed`).
 
+* **Readers drawn from the selected: `ReadsShare` from who reads.** Where the rule read is the pool
+  of its readers' readings (`Drawn.pool`), each carrier among the readers reading the rule as `u`
+  and each other as `v`, the readers counted as the population counts them, the rule read is a
+  monotone function of the share alone exactly where each carrier's reading favours the carriers at
+  least as much as each other's (`Drawn.pool_reads`, `Drawn.pool_reads_iff`); where it favours them
+  less, the pool reads against the share (`Drawn.pool_against`), the case in which the rise the lock
+  rests on does not form: along a course whose rules favour, its rule read does not rise
+  (`Drawn.pool_not_rising`). Where who reads is itself formed monotonically from the share, as where
+  those the selection favours hold the places from which the rule is read, the pool still reads the
+  share monotonically (`Drawn.pool_through`), and where every reader reads favourably every course
+  is locked from the step after its second reading step (`Drawn.through_locks`). So `ReadsShare`, a property of a function, becomes,
+  within the pool, one comparison of two readings; the pool itself is the premise. The proof is one
+  rearrangement of products (`Drawn.rearrange`): the larger share paired with the larger reading.
+  Against a reading mirrored (the others read for the others what the carriers read for the
+  carriers), the pool favours the carriers exactly where they are at least as many as the others
+  and the others exactly where they are at least as many as the carriers
+  (`Drawn.mirror_favours_iff`, `Drawn.mirror_disfavours_iff`).
+* **The loss read by the readers the selection thins.** Where the carriers among the readers read
+  only the share and the others read the loss once it reaches `N` (`Thinned.lossPool`), the reading
+  reads beyond the share (in the witness, `Thinned.late_reads_loss`), yet from a step at which the
+  loss has reached `N` the course is the share's own loop under the late pool
+  (`Thinned.past_course`, through `course_past`: readings alike past a bound give one course past
+  it). At a reading step at which the rule in force and the rule read favour alike, the course locks
+  in that direction for good (`agreeing_locks`, `agreeing_stays`): read late, the lock stays while
+  the loss grows by at least one a step and every other reader reads it
+  (`Thinned.read_late_kept`); read in time, the course is locked the other way, the carriers' share
+  never again above where it was (`Thinned.read_in_time_turns`). With the others' late reading the
+  mirror of the carriers', the counts at the step the loss is read decide: the rule in force
+  favouring the carriers, the lock is kept for good exactly where the carriers are at least as many
+  as the others (`Thinned.kept_iff`); the rule in force favouring the others, the course is turned
+  for good exactly where the others are at least as many as the carriers (`Thinned.turned_iff`).
+  Witnesses: one carrier to eight others under `hi`, the carriers reading `hi`, the others one to
+  one and `lo` once they read the loss; read from the start, the others still the more numerous,
+  the course is locked the other way from step 2 and the carriers' share falls from step 2 to step
+  3 (`Thinned.inTime_turned`); the same readers reading the same loss from step 3, the carriers by
+  then the more numerous, the course is locked for good from step 4 (`Thinned.late_kept`).
+
 A reader formed within the run is a reading of the run: nothing here supposes that what reads
 stands outside what it reads, and what the loop can tell apart is settled by the one law of
 lumping that settles what a learner can identify (`Learning.goAlike_iff_lumped`) and what a
@@ -61,9 +98,15 @@ the share, of the rule's value or of how the rule is read, where the share forms
 the lock for longer where the rule read favours at every share. What leaves is a change of the law
 (of `read`, `mind` or the selection), such as a level that reads beyond the share.
 
-What is not derived: that any actual rule, or how it is read, is formed from the share; that what
+What is not derived: that any actual rule is the pool of readers drawn from the population it
+selects, counted as it counts them, or that a carrier's reading favours the carriers at least as
+much as an other's (these replace `ReadsShare` as the premise where the pool is used); that what
 lies beyond is a loss to any formation (that is a significance's to say); how fast it grows beyond
-one a step; that readers are minds or institutions. The representation commits to discrete steps,
+one a step; that readers are minds or institutions. The pool has two kinds of reader, each reading
+alike; readers of one kind reading differently, weights other than counts and the readings' own sizes (the pool
+sums readings unnormalized, so a reading giving more offspring to both kinds weighs more; the
+mirrored readings have equal sizes), and readings formed by argument rather than by kind are not
+stated. `favours` and `disfavours` both hold of a rule giving each kind alike. The representation commits to discrete steps,
 a fixed schedule of reading steps and, in `Accrues` and the witnesses, natural-number amounts. No
 ethical predicate, ranking or axiom occurs.
 -/
@@ -473,6 +516,484 @@ theorem reform_absorbed {reads : Nat → Bool} {r : Nat} (at_r : reads r = true)
     (show favours twoToOne from show 1 ≤ 2 by decide) at_r
 
 end Proportional
+
+/-! ## Readers drawn from the selected
+
+The rule read at a reading step is the pool of its readers' readings: each carrier among the
+readers reads the rule as `u`, each other as `v`, and the readers are counted as the population
+counts them. -/
+
+namespace Drawn
+
+open CarrierCounts
+
+/-- **A product rearranged, exactly**: `(A + p) * (C + q) + A * C` exceeds
+`A * (C + q) + (A + p) * C` by `p * q`. -/
+theorem rearrange_eq (A p C q : Nat) :
+    (A + p) * (C + q) + A * C = A * (C + q) + (A + p) * C + p * q := by
+  rw [add_mul_split A p (C + q), Nat.mul_add p C q, add_mul_split A p C,
+    Nat.add_assoc (A * (C + q)) (A * C + p * C), Nat.add_assoc (A * (C + q)) (p * C + p * q),
+    Nat.add_right_comm (p * C) (p * q) (A * C), Nat.add_comm (p * C) (A * C)]
+
+/-- **The larger paired with the larger gives at least as much**: where `A ≤ B` and `C ≤ D`. -/
+theorem rearrange {A B C D : Nat} (ab : A ≤ B) (cd : C ≤ D) : A * D + B * C ≤ B * D + A * C :=
+  match Nat.le.dest ab, Nat.le.dest cd with
+  | ⟨p, hp⟩, ⟨q, hq⟩ => by
+    subst hp; subst hq
+    rw [rearrange_eq A p C q]
+    exact Nat.le_add_right _ _
+
+/-- **Strictly, where both are strict.** -/
+theorem rearrange_lt {A B C D : Nat} (ab : A < B) (cd : C < D) : A * D + B * C < B * D + A * C :=
+  match Nat.le.dest ab, Nat.le.dest cd with
+  | ⟨p, hp⟩, ⟨q, hq⟩ => by
+    subst hp; subst hq
+    rw [Nat.succ_add A p, Nat.succ_add C q]
+    show A * (C + (q + 1)) + (A + (p + 1)) * C < (A + (p + 1)) * (C + (q + 1)) + A * C
+    rw [rearrange_eq A (p + 1) C (q + 1)]
+    exact Nat.lt_add_of_pos_right (Nat.mul_pos (Nat.succ_pos p) (Nat.succ_pos q))
+
+theorem add_swap (a b c d : Nat) : a + b + (c + d) = a + d + (b + c) :=
+  (Nat.add_assoc a b (c + d)).trans
+    ((congrArg (a + ·) ((Nat.add_assoc b c d).symm.trans (Nat.add_comm (b + c) d))).trans
+      (Nat.add_assoc a d (b + c)).symm)
+
+/-- **The pool of readings**: each carrier among the readers reads the rule as `u`, each other as
+`v`, and the rule read is their sum, each kind counted as the population `x` counts it. -/
+def pool (u v x : CarrierCounts) : CarrierCounts :=
+  ⟨x.carrier * u.carrier + x.other * v.carrier, x.carrier * u.other + x.other * v.other,
+    Nat.lt_of_lt_of_le (Nat.mul_pos x.other_pos v.other_pos) (Nat.le_add_left _ _)⟩
+
+/-- The comparison of two pools, expanded: a part alike on both sides of the share order and a
+part in which the populations and the readings are paired crosswise. -/
+theorem cross (u v x y : CarrierCounts) :
+    (pool u v x).carrier * (pool u v y).other =
+      (x.carrier * y.carrier * (u.carrier * u.other) + x.other * y.other * (v.carrier * v.other)) +
+        (x.carrier * y.other * (u.carrier * v.other) + x.other * y.carrier * (v.carrier * u.other)) := by
+  show (x.carrier * u.carrier + x.other * v.carrier) * (y.carrier * u.other + y.other * v.other) = _
+  rw [add_mul_split, Nat.mul_add, Nat.mul_add,
+    Naturals.mul_mul_mul_comm x.carrier u.carrier y.carrier u.other,
+    Naturals.mul_mul_mul_comm x.carrier u.carrier y.other v.other,
+    Naturals.mul_mul_mul_comm x.other v.carrier y.carrier u.other,
+    Naturals.mul_mul_mul_comm x.other v.carrier y.other v.other]
+  exact add_swap _ _ _ _
+
+/-- **Read through a pool, a share not lower gives a rule not lower**, where each carrier's
+reading favours the carriers at least as much as each other's. -/
+theorem pool_mono {u v x y : CarrierCounts} (readers : order.le v u) (le : order.le x y) :
+    order.le (pool u v x) (pool u v y) := by
+  show (pool u v x).carrier * (pool u v y).other ≤ (pool u v y).carrier * (pool u v x).other
+  rw [cross u v x y, cross u v y x, Nat.mul_comm y.carrier x.carrier, Nat.mul_comm y.other x.other,
+    Nat.mul_comm y.carrier x.other, Nat.mul_comm y.other x.carrier]
+  exact Nat.add_le_add_left
+    (rearrange (Eq.subst (motive := fun n => x.carrier * y.other ≤ n) (Nat.mul_comm y.carrier x.other) le)
+      readers) _
+
+/-- **Read through a pool whose carriers favour the carriers less, a share not lower gives a rule
+not higher.** -/
+theorem pool_mono_against {u v x y : CarrierCounts} (readers : order.le u v) (le : order.le x y) :
+    order.le (pool u v y) (pool u v x) := by
+  show (pool u v y).carrier * (pool u v x).other ≤ (pool u v x).carrier * (pool u v y).other
+  rw [cross u v x y, cross u v y x, Nat.mul_comm y.carrier x.carrier, Nat.mul_comm y.other x.other,
+    Nat.mul_comm y.carrier x.other, Nat.mul_comm y.other x.carrier,
+    Nat.add_comm (x.other * y.carrier * (u.carrier * v.other)),
+    Nat.add_comm (x.carrier * y.other * (u.carrier * v.other))]
+  exact Nat.add_le_add_left
+    (rearrange (Eq.subst (motive := fun n => x.carrier * y.other ≤ n) (Nat.mul_comm y.carrier x.other) le)
+      readers) _
+
+/-- The pool read at a reading step, from the population alone. -/
+def poolRead (u v x _ : CarrierCounts) : CarrierCounts := pool u v x
+
+/-- **Where each carrier's reading favours the carriers less than each other's, the pool reads
+against the share.** -/
+theorem pool_against {u v : CarrierCounts} (readers : order.le u v) :
+    ReadsShare order (reverse order) (poolRead u v) :=
+  fun _ _ _ _ le => pool_mono_against readers le
+
+/-- **Within the pool, reading the share monotonically is exactly the one comparison of the two
+readings**: the pool reads the share monotonically where, and only where, each carrier's reading
+favours the carriers at least as much as each other's. -/
+theorem pool_reads_iff {u v : CarrierCounts} : ReadsShare order order (poolRead u v) ↔ order.le v u := by
+  constructor
+  · intro monotone
+    have m := monotone ⟨0, 1, Nat.zero_lt_succ 0⟩ ⟨1, 1, Nat.zero_lt_succ 0⟩ u u (show 0 * 1 ≤ 1 * 1 by decide)
+    have m' : (0 * u.carrier + 1 * v.carrier) * (1 * u.other + 1 * v.other) ≤
+        (1 * u.carrier + 1 * v.carrier) * (0 * u.other + 1 * v.other) := m
+    rw [Nat.zero_mul, Nat.zero_mul, Nat.one_mul, Nat.one_mul, Nat.one_mul, Nat.one_mul, Nat.zero_add,
+      Nat.zero_add, Nat.mul_add, add_mul_split] at m'
+    exact le_of_add_le_add_right (v.carrier * v.other) m'
+  · exact fun readers _ _ _ _ le => pool_mono readers le
+
+/-- **The pool reads the share: `ReadsShare` from who reads.** Where the rule read is the pool of its
+readers' readings, the readers counted as the population counts them, and each carrier's reading
+favours the carriers at least as much as each other's, the rule read is a monotone function of the
+share alone. -/
+theorem pool_reads {u v : CarrierCounts} (readers : order.le v u) : ReadsShare order order (poolRead u v) :=
+  pool_reads_iff.mpr readers
+
+/-- **Readers counted through a reading of the share**: where who reads is itself formed
+monotonically from the share (`mind`), as where those the selection favours hold the places from
+which the rule is read, the pool still reads the share monotonically. -/
+theorem pool_through {u v : CarrierCounts} {mind : CarrierCounts → CarrierCounts} (readers : order.le v u)
+    (formed : ∀ x y, order.le x y → order.le (mind x) (mind y)) :
+    ReadsShare order order (fun x (_ : CarrierCounts) => pool u v (mind x)) :=
+  fun x y _ _ le => pool_mono readers (formed x y le)
+
+/-- Where every reader reads favourably, the pool favours at every share. -/
+theorem pool_favours {u v : CarrierCounts} (fu : favours u) (fv : favours v) (x : CarrierCounts) :
+    favours (pool u v x) :=
+  Nat.add_le_add (Nat.mul_le_mul_left _ fu) (Nat.mul_le_mul_left _ fv)
+
+/-- **Readers counted through the share, every one reading favourably: every course is locked from
+the step after its second reading step**, whatever its start (`uniform_locks`). Counted as the
+population counts them (`mind` the identity), this is the pool itself. -/
+theorem through_locks {u v : CarrierCounts} {mind : CarrierCounts → CarrierCounts} {reads : Nat → Bool}
+    (readers : order.le v u) (formed : ∀ x y, order.le x y → order.le (mind x) (mind y))
+    (fu : favours u) (fv : favours v) {c : CarrierCounts × CarrierCounts} {r r' : Nat}
+    (first : reads r = true) (second : reads r' = true) (lt : r < r') :
+    Locked order favours (fun x (_ : CarrierCounts) => pool u v (mind x))
+      (paced select (fun x (_ : CarrierCounts) => pool u v (mind x)) reads c (r' + 1)) :=
+  uniform_locks raises (pool_through readers formed) (fun x _ => pool_favours fu fv (mind x)) first second lt
+
+/-- **A pool whose carriers read less favourably for the carriers does not ratchet**: along a course
+whose rules favour, the rule read at a later reading step is not above the rule read at an earlier
+one (`against_not_rising`). -/
+theorem pool_not_rising {u v : CarrierCounts} {reads : Nat → Bool} (readers : order.le u v)
+    {c : CarrierCounts × CarrierCounts} (favouring : ∀ t, favours (paced select (poolRead u v) reads c t).2)
+    {r r' : Nat} (first : reads r = true) (second : reads r' = true) (le : r ≤ r') :
+    order.le (paced select (poolRead u v) reads c (r' + 1)).2 (paced select (poolRead u v) reads c (r + 1)).2 :=
+  against_not_rising raises (pool_against readers) favouring first second le
+
+/-- A rule that favours the others is not above one that favours the carriers. -/
+theorem le_of_disfavours {w u : CarrierCounts} (dis : disfavours w) (fav : favours u) : order.le w u :=
+  calc w.carrier * u.other
+      ≤ w.other * u.other := Nat.mul_le_mul_right _ dis
+    _ ≤ w.other * u.carrier := Nat.mul_le_mul_left _ fav
+    _ = u.carrier * w.other := Nat.mul_comm _ _
+
+/-- **Against a mirrored reading the majority decides.** Where the others read the rule as the
+carriers' reading mirrored (`w` gives the others what `u` gives the carriers), and `u` favours the
+carriers strictly, the pool favours the carriers exactly where they are at least as many as the
+others. -/
+theorem mirror_favours_iff {u w x : CarrierCounts} (hc : w.carrier = u.other) (ho : w.other = u.carrier)
+    (strict : u.other < u.carrier) : favours (pool u w x) ↔ x.other ≤ x.carrier := by
+  show x.carrier * u.other + x.other * w.other ≤ x.carrier * u.carrier + x.other * w.carrier ↔ _
+  rw [hc, ho]
+  constructor
+  · intro fav
+    match Nat.lt_or_ge x.carrier x.other with
+    | .inl lt =>
+      have s := rearrange_lt lt strict
+      have f' : x.other * u.carrier + x.carrier * u.other ≤ x.carrier * u.carrier + x.other * u.other :=
+        Eq.subst (motive := fun n => n ≤ x.carrier * u.carrier + x.other * u.other)
+          (Nat.add_comm (x.carrier * u.other) (x.other * u.carrier)) fav
+      exact absurd (Nat.lt_of_lt_of_le s f') (Nat.lt_irrefl _)
+    | .inr ge => exact ge
+  · intro ge
+    exact Eq.subst (motive := fun n => n ≤ _) (Nat.add_comm (x.other * u.carrier) (x.carrier * u.other))
+      (rearrange ge (Nat.le_of_lt strict))
+
+/-- **The same, the other way**: against a mirrored reading the pool favours the others exactly
+where they are at least as many as the carriers. -/
+theorem mirror_disfavours_iff {u w x : CarrierCounts} (hc : w.carrier = u.other) (ho : w.other = u.carrier)
+    (strict : u.other < u.carrier) : disfavours (pool u w x) ↔ x.carrier ≤ x.other := by
+  show x.carrier * u.carrier + x.other * w.carrier ≤ x.carrier * u.other + x.other * w.other ↔ _
+  rw [hc, ho]
+  constructor
+  · intro dis
+    match Nat.lt_or_ge x.other x.carrier with
+    | .inl lt =>
+      have s := rearrange_lt lt strict
+      have d' : x.carrier * u.carrier + x.other * u.other ≤ x.other * u.carrier + x.carrier * u.other :=
+        Eq.subst (motive := fun n => x.carrier * u.carrier + x.other * u.other ≤ n)
+          (Nat.add_comm (x.carrier * u.other) (x.other * u.carrier)) dis
+      exact absurd (Nat.lt_of_le_of_lt d' s) (Nat.lt_irrefl _)
+    | .inr ge => exact ge
+  · intro le
+    exact Eq.subst (motive := fun n => _ ≤ n) (Nat.add_comm (x.other * u.carrier) (x.carrier * u.other))
+      (rearrange le (Nat.le_of_lt strict))
+
+/-- A mirrored reading of a reading favouring the carriers strictly favours the others, so it is
+not above it. -/
+theorem mirror_le {u w : CarrierCounts} (hc : w.carrier = u.other) (ho : w.other = u.carrier)
+    (strict : u.other < u.carrier) : order.le w u :=
+  le_of_disfavours (show w.carrier ≤ w.other from hc ▸ ho ▸ Nat.le_of_lt strict) (Nat.le_of_lt strict)
+
+end Drawn
+
+/-! ## A loss read by part of the pool -/
+
+section Part
+
+variable {A : Type u} {R : Type w}
+
+theorem turn_agree {f : A × Nat → R → A × Nat} {h h' : A × Nat → R → R} {N : Nat}
+    (agree : ∀ p g, N ≤ p.2 → h p g = h' p g) :
+    ∀ (b : Bool) (p : (A × Nat) × R), N ≤ p.1.2 → turn f h b p = turn f h' b p
+  | true, p, past => congrArg (Prod.mk (f p.1 p.2)) (agree p.1 p.2 past)
+  | false, _, _ => rfl
+
+/-- **Readings alike past a bound give one course past it.** Where every step adds at least one to
+what lies beyond and two readings agree at every configuration whose loss is at least `N`, the two
+joined courses from a start whose loss is at least `N` are one. -/
+theorem course_past {fA : A → R → A} {fB : A × Nat → R → Nat} {h h' : A × Nat → R → R}
+    {reads : Nat → Bool} (accrues : Accrues fB) {N : Nat} (agree : ∀ p g, N ≤ p.2 → h p g = h' p g)
+    {c : (A × Nat) × R} (past : N ≤ c.1.2) :
+    ∀ t, paced (join fA fB) h reads c t = paced (join fA fB) h' reads c t
+  | 0 => rfl
+  | t + 1 =>
+    (paced_succ c t).trans
+      ((turn_agree agree (reads t) _
+          (Nat.le_trans past (Nat.le_trans (Nat.le_add_right _ t) (loss_grows accrues c t)))).trans
+        ((congrArg (turn (join fA fB) h' (reads t)) (course_past accrues agree past t)).trans
+          (paced_succ c t).symm))
+
+end Part
+
+section Agrees
+
+variable {S : Type u} {R : Type w} {P : Ideals.Preorder S} {M : Ideals.Preorder R} {favours : R → Prop}
+  {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+
+/-- **A reading step at which the rule in force and the rule read both favour locks the course.** -/
+theorem agreeing_locks (raises : Raises P favours f) (monotone : ReadsShare P M h) {c : S × R} {r : Nat}
+    (at_r : reads r = true) (fav : favours (paced f h reads c r).2)
+    (fav' : favours (h (paced f h reads c r).1 (paced f h reads c r).2)) :
+    Locked M favours h (paced f h reads c (r + 1)) :=
+  Eq.subst (motive := Locked M favours h)
+    ((paced_succ c r).trans (congrArg (fun b => turn f h b _) at_r)).symm
+    ⟨fav', monotone _ _ _ _ (raises _ _ fav)⟩
+
+/-- **From there it stays locked**, neither the share nor the rule ever below where they were at the
+step after the reading. -/
+theorem agreeing_stays (raises : Raises P favours f) (monotone : ReadsShare P M h)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {c : S × R} {r : Nat}
+    (at_r : reads r = true) (fav : favours (paced f h reads c r).2)
+    (fav' : favours (h (paced f h reads c r).1 (paced f h reads c r).2)) (k : Nat) :
+    Locked M favours h (paced f h reads c (r + 1 + k)) ∧
+      P.le (paced f h reads c (r + 1)).1 (paced f h reads c (r + 1 + k)).1 ∧
+      M.le (paced f h reads c (r + 1)).2 (paced f h reads c (r + 1 + k)).2 :=
+  have locked := agreeing_locks raises monotone at_r fav fav'
+  ⟨locked_stays raises monotone upper locked k, locked_not_below raises monotone upper locked k⟩
+
+end Agrees
+
+/-! ## The loss read by the readers the selection thins -/
+
+namespace Thinned
+
+open CarrierCounts Drawn
+
+/-- **The loss read by the others alone**: the carriers among the readers read the rule as `u`
+whatever the loss; the others read it as `v` while the loss is below `N` and as `w` from then on. -/
+def lossPool (u v w : CarrierCounts) (N : Nat) (p : CarrierCounts × Nat) (_ : CarrierCounts) :
+    CarrierCounts :=
+  match Nat.blt p.2 N with
+  | true => pool u v p.1
+  | false => pool u w p.1
+
+/-- Past the bound, the pool is the carriers' reading and the others' late reading, read from the
+share alone. -/
+theorem lossPool_past {u v w : CarrierCounts} {N : Nat} :
+    ∀ (p : CarrierCounts × Nat) (g : CarrierCounts), N ≤ p.2 →
+      lossPool u v w N p g = joinRead (poolRead u w) p g := fun p _ past =>
+  show (match Nat.ble (p.2 + 1) N with | true => pool u v p.1 | false => pool u w p.1) = pool u w p.1 by
+    rw [Naturals.ble_false_of_lt (Nat.lt_succ_of_le past)]
+
+variable {fB : CarrierCounts × Nat → CarrierCounts → Nat} {u v w : CarrierCounts} {N : Nat}
+  {reads : Nat → Bool}
+
+/-- The course of the share and the rule from `((x, b), g)`, the loss read by the others alone. -/
+def course (fB : CarrierCounts × Nat → CarrierCounts → Nat) (u v w : CarrierCounts) (N : Nat)
+    (reads : Nat → Bool) (c : (CarrierCounts × Nat) × CarrierCounts) (t : Nat) :
+    (CarrierCounts × Nat) × CarrierCounts :=
+  paced (join select fB) (lossPool u v w N) reads c t
+
+/-- **Once the loss has passed its bound, the course is the share's own loop under the late pool**:
+from step `r` with the loss at least `N`, the share and the rule are those of the two-level course of
+the share alone, read through the carriers' reading and the others' late one. -/
+theorem past_course (accrues : Accrues fB) {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat}
+    (past : N ≤ (course fB u v w N reads c r).1.2) (k : Nat) :
+    ((course fB u v w N reads c (r + k)).1.1, (course fB u v w N reads c (r + k)).2) =
+      paced select (poolRead u w) (fun j => reads (r + j))
+        ((course fB u v w N reads c r).1.1, (course fB u v w N reads c r).2) k :=
+  have shifted := paced_shift (f := join select fB) (h := lossPool u v w N) (reads := reads) c r k
+  have one := course_past (fA := select) (reads := fun j => reads (r + j)) accrues lossPool_past
+    (c := course fB u v w N reads c r) past k
+  have joined := join_course select fB (poolRead u w) (fun j => reads (r + j))
+    (course fB u v w N reads c r) k
+  have whole := shifted.trans one
+  congr (congrArg Prod.mk ((congrArg (fun q => q.1.1) whole).trans joined.1))
+    ((congrArg (fun q => q.2) whole).trans joined.2)
+
+/-- **Read late, the loss leaves the lock in place for good.** At a reading step `r` at which the loss
+has reached its bound, the others' late reading not above the carriers' (`readers`), the rule in
+force and the late pool at the share there both favouring the carriers: the course is locked under
+the late pool at every step from `r + 1`, neither its share nor its rule ever below where they were
+at `r + 1`, while the loss, read by every other reader, grows by at least one a step. -/
+theorem read_late_kept (accrues : Accrues fB) (readers : order.le w u)
+    {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat} (at_r : reads r = true) (past : N ≤ (course fB u v w N reads c r).1.2)
+    (fav : favours (course fB u v w N reads c r).2)
+    (pfav : favours (pool u w (course fB u v w N reads c r).1.1)) (k : Nat) :
+    c.1.2 + (r + (1 + k)) ≤ (course fB u v w N reads c (r + (1 + k))).1.2 ∧
+      Locked order favours (poolRead u w)
+        ((course fB u v w N reads c (r + (1 + k))).1.1, (course fB u v w N reads c (r + (1 + k))).2) ∧
+      order.le (course fB u v w N reads c (r + 1)).1.1 (course fB u v w N reads c (r + (1 + k))).1.1 ∧
+      order.le (course fB u v w N reads c (r + 1)).2 (course fB u v w N reads c (r + (1 + k))).2 :=
+  have here := past_course (u := u) (v := v) (w := w) (reads := reads) accrues past
+  have z := here 0
+  have kept := agreeing_stays (c := ((course fB u v w N reads c r).1.1, (course fB u v w N reads c r).2))
+    (reads := fun j => reads (r + j)) raises (pool_reads readers) upper (r := 0) at_r
+    (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts => favours q.2) z fav)
+    (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts => favours (pool u w q.1)) z pfav) k
+  have hk := here (1 + k)
+  have h1 := here 1
+  ⟨loss_grows accrues c (r + (1 + k)),
+    Eq.subst (motive := Locked order favours (poolRead u w)) hk.symm kept.1,
+    Eq.subst (motive := fun a => order.le a _) (congrArg Prod.fst h1).symm
+      (Eq.subst (motive := fun b => order.le _ b) (congrArg Prod.fst hk).symm kept.2.1),
+    Eq.subst (motive := fun a => order.le a _) (congrArg Prod.snd h1).symm
+      (Eq.subst (motive := fun b => order.le _ b) (congrArg Prod.snd hk).symm kept.2.2)⟩
+
+/-- **Read in time, the loss turns the course for good.** At a reading step `r` at which the loss has
+reached its bound, the others' late reading not above the carriers' (`readers`), the rule in force
+and the late pool at the share there both favouring the others at least as much as the carriers
+(`disfavours`, ties included): the course is locked the other way under the late pool at every step
+from `r + 1`, neither the carriers' share nor the rule ever again above where they were at `r + 1`.
+Where both favour the others strictly, the share falls strictly at the step (`rises_strictly`, read
+the other way); the witness shows it. -/
+theorem read_in_time_turns (accrues : Accrues fB) (readers : order.le w u)
+    {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat} (at_r : reads r = true) (past : N ≤ (course fB u v w N reads c r).1.2)
+    (dis : disfavours (course fB u v w N reads c r).2)
+    (pdis : disfavours (pool u w (course fB u v w N reads c r).1.1)) (k : Nat) :
+    Locked (reverse order) disfavours (poolRead u w)
+        ((course fB u v w N reads c (r + (1 + k))).1.1, (course fB u v w N reads c (r + (1 + k))).2) ∧
+      order.le (course fB u v w N reads c (r + (1 + k))).1.1 (course fB u v w N reads c (r + 1)).1.1 ∧
+      order.le (course fB u v w N reads c (r + (1 + k))).2 (course fB u v w N reads c (r + 1)).2 :=
+  have here := past_course (u := u) (v := v) (w := w) (reads := reads) accrues past
+  have z := here 0
+  have turned := agreeing_stays (P := reverse order) (M := reverse order)
+    (c := ((course fB u v w N reads c r).1.1, (course fB u v w N reads c r).2))
+    (reads := fun j => reads (r + j)) lowers (pool_reads readers).reverse lower (r := 0) at_r
+    (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts => disfavours q.2) z dis)
+    (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts => disfavours (pool u w q.1)) z pdis) k
+  have hk := here (1 + k)
+  have h1 := here 1
+  ⟨Eq.subst (motive := Locked (reverse order) disfavours (poolRead u w)) hk.symm turned.1,
+    Eq.subst (motive := fun a => order.le _ a) (congrArg Prod.fst h1).symm
+      (Eq.subst (motive := fun b => order.le b _) (congrArg Prod.fst hk).symm turned.2.1),
+    Eq.subst (motive := fun a => order.le _ a) (congrArg Prod.snd h1).symm
+      (Eq.subst (motive := fun b => order.le b _) (congrArg Prod.snd hk).symm turned.2.2)⟩
+
+/-- At a reading step at which the loss has reached its bound, the rule read is the late pool at the
+share there. -/
+theorem rule_read (accrues : Accrues fB) {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat}
+    (at_r : reads r = true) (past : N ≤ (course fB u v w N reads c r).1.2) :
+    (course fB u v w N reads c (r + 1)).2 = pool u w (course fB u v w N reads c r).1.1 :=
+  have one := congrArg Prod.snd (past_course (u := u) (v := v) (w := w) (reads := reads) accrues past 1)
+  one.trans (congrArg Prod.snd ((paced_succ (f := select) (h := poolRead u w) (reads := fun j => reads (r + j))
+    ((course fB u v w N reads c r).1.1, (course fB u v w N reads c r).2) 0).trans
+      (congrArg (fun b => turn select (poolRead u w) b _) at_r)))
+
+/-- **The counts when the loss is read decide, where the rule in force favours the carriers.** Where
+the others, once they read the loss, read the rule as the carriers' reading mirrored, and the
+carriers' reading favours them strictly: at a reading step at which the loss has reached its bound
+and the rule in force favours the carriers, the course is locked under the pool at every later
+step exactly where the carriers are at least as many as the others at that step; where they are
+fewer, it is not locked at the next step. -/
+theorem kept_iff (accrues : Accrues fB) (hc : w.carrier = u.other) (ho : w.other = u.carrier)
+    (strict : u.other < u.carrier) {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat}
+    (at_r : reads r = true) (past : N ≤ (course fB u v w N reads c r).1.2)
+    (fav : favours (course fB u v w N reads c r).2) :
+    (∀ k, Locked order favours (poolRead u w)
+        ((course fB u v w N reads c (r + (1 + k))).1.1, (course fB u v w N reads c (r + (1 + k))).2)) ↔
+      (course fB u v w N reads c r).1.1.other ≤ (course fB u v w N reads c r).1.1.carrier :=
+  ⟨fun locked => (mirror_favours_iff hc ho strict).mp
+      (Eq.subst (motive := favours) (rule_read accrues at_r past) (locked 0).1),
+   fun more k => (read_late_kept accrues (mirror_le hc ho strict) at_r past fav
+      ((mirror_favours_iff hc ho strict).mpr more) k).2.1⟩
+
+/-- **The counts when the loss is read decide, where the rule in force favours the others.** With the
+same mirrored readings, at a reading step at which the loss has reached its bound and the rule in
+force favours the others at least as much as the carriers, the course is locked the other way at
+every later step exactly where the others are at least as many as the carriers at that step. So a
+loss read only by those the selection disfavours turns the course for good where they are not yet
+the fewer when they read it, and keeps it for good where the carriers are the more. -/
+theorem turned_iff (accrues : Accrues fB) (hc : w.carrier = u.other) (ho : w.other = u.carrier)
+    (strict : u.other < u.carrier) {c : (CarrierCounts × Nat) × CarrierCounts} {r : Nat}
+    (at_r : reads r = true) (past : N ≤ (course fB u v w N reads c r).1.2)
+    (dis : disfavours (course fB u v w N reads c r).2) :
+    (∀ k, Locked (reverse order) disfavours (poolRead u w)
+        ((course fB u v w N reads c (r + (1 + k))).1.1, (course fB u v w N reads c (r + (1 + k))).2)) ↔
+      (course fB u v w N reads c r).1.1.carrier ≤ (course fB u v w N reads c r).1.1.other :=
+  ⟨fun turned => (mirror_disfavours_iff hc ho strict).mp
+      (Eq.subst (motive := disfavours) (rule_read accrues at_r past) (turned 0).1),
+   fun more k => (read_in_time_turns accrues (mirror_le hc ho strict) at_r past dis
+      ((mirror_disfavours_iff hc ho strict).mpr more) k).1⟩
+
+/-! ### Witnesses: one loss, the same readers, read in time and read late
+
+Carriers one to eight others, under the rule `hi` in force, read at every step, each step adding one
+to the loss. The carriers among the readers read the rule as `hi` (four to one for the carriers);
+the others read it as one to one until they read the loss and as `lo` (four to one for the others)
+from then on. -/
+
+/-- One carrier to eight others. -/
+def fewCarriers : CarrierCounts := ⟨1, 8, Nat.zero_lt_succ 7⟩
+
+/-- The loss read by the others from the start. -/
+def inTime (t : Nat) : (CarrierCounts × Nat) × CarrierCounts :=
+  course Beyond.lossStep hi Second.oneToOne lo 0 (fun _ => true) ((fewCarriers, 0), hi) t
+
+/-- The same readers reading the same loss once it has reached three. -/
+def late (t : Nat) : (CarrierCounts × Nat) × CarrierCounts :=
+  course Beyond.lossStep hi Second.oneToOne lo 3 (fun _ => true) ((fewCarriers, 0), hi) t
+
+theorem lossStep_accrues : Accrues Beyond.lossStep := fun _ _ => Nat.le_refl _
+
+/-- Read in time, the others are still the more numerous at step 1, when they read the loss again,
+and the rule in force and the pool read there both favour them. -/
+theorem inTime_majority :
+    (inTime 1).1.1.carrier < (inTime 1).1.1.other ∧ disfavours (inTime 1).2 ∧
+      disfavours (pool hi lo (inTime 1).1.1) :=
+  ⟨show 4 < 8 by decide, show 12 ≤ 33 by decide, show 24 ≤ 36 by decide⟩
+
+/-- **Read in time, the course is turned for good**: at every step from step 2 it is locked the other
+way, neither the carriers' share nor the rule ever again above where they were at step 2, and the
+carriers' share falls from step 2 to step 3. -/
+theorem inTime_turned (k : Nat) :
+    Locked (reverse order) disfavours (poolRead hi lo) ((inTime (1 + (1 + k))).1.1, (inTime (1 + (1 + k))).2) ∧
+      order.le (inTime (1 + (1 + k))).1.1 (inTime 2).1.1 ∧ ¬ order.le (inTime 2).1.1 (inTime 3).1.1 :=
+  have turned := read_in_time_turns (fB := Beyond.lossStep) (u := hi) (v := Second.oneToOne) (w := lo)
+    (N := 0) (reads := fun _ => true) (c := ((fewCarriers, 0), hi)) (r := 1) lossStep_accrues lo_le_hi rfl
+    (Nat.zero_le _) inTime_majority.2.1 inTime_majority.2.2 k
+  ⟨turned.1, turned.2.1, show ¬ 48 * 9504 ≤ 1152 * 264 by decide⟩
+
+/-- Read late, the carriers are the more numerous at step 3, when the others first read the loss, and
+the rule in force and the pool read there both favour the carriers. -/
+theorem late_majority :
+    (late 3).1.1.other < (late 3).1.1.carrier ∧ favours (late 3).2 ∧ favours (pool hi lo (late 3).1.1) :=
+  ⟨show 864 < 1152 by decide, show 120 ≤ 264 by decide, show 4608 ≤ 5472 by decide⟩
+
+/-- **Read late, the loss leaves the lock in place for good**: at every step from step 4 the course is
+locked under the pool, neither the carriers' share nor the rule ever below where they were at step
+4, while the loss at step `t` is at least `t` and every other reader reads it. -/
+theorem late_kept (k : Nat) :
+    0 + (3 + (1 + k)) ≤ (late (3 + (1 + k))).1.2 ∧
+      Locked order favours (poolRead hi lo) ((late (3 + (1 + k))).1.1, (late (3 + (1 + k))).2) ∧
+      order.le (late 4).1.1 (late (3 + (1 + k))).1.1 ∧ order.le (late 4).2 (late (3 + (1 + k))).2 :=
+  read_late_kept (fB := Beyond.lossStep) (u := hi) (v := Second.oneToOne) (w := lo)
+    (N := 3) (reads := fun _ => true) (c := ((fewCarriers, 0), hi)) (r := 3) lossStep_accrues lo_le_hi rfl
+    (show 3 ≤ 3 from Nat.le_refl 3) late_majority.2.1 late_majority.2.2 k
+
+/-- **The late reading of the witness reads the loss**: from starts alike in share and rule, one loss
+zero and the other three, the rules read at step 1 differ. -/
+theorem late_reads_loss : ¬ Unread (join select Beyond.lossStep) (lossPool hi Second.oneToOne lo 3) :=
+  reads_beyond_of_apart (reads := fun _ => true) (c := ((fewCarriers, 0), hi)) (c' := ((fewCarriers, 3), hi))
+    rfl rfl (t := 1) (fun same => absurd (congrArg CarrierCounts.other same.2) (by decide))
+
+end Thinned
 
 end ClosedCapture
 

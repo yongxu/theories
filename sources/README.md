@@ -23,7 +23,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 | 10 | `10-context-runtime-ember/` | — | 71 | 2026-03-28 to 2026-08-30 |
 | 11 | `11-human-solutions-museum/` | — | 6 |  |
 | 14 | `14-claude-code-prompts/` | — | 17 |  |
-| 15a | `15-codex-theory-conversations/` | — | 303 | 2026-09-05 to 2026-10-22 |
+| 15a | `15-codex-theory-conversations/` | — | 304 | 2026-09-05 to 2026-10-22 |
 | 15b | `15-user-provided-2026-09-06/` | — | 4 |  |
 | 16 | `16-claude-code-directions/` | — | 15 | 2026-09-25 to 2026-10-04 |
 | 17 | `17-user-provided-2026-10-02/` | — | 1 |  |
