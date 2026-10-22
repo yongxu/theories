@@ -145,8 +145,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 349); not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110422.961776Z）：本记录所引 Becoming.ClosedCapture 新增的 42 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并由一位独立的只读审查者审查，其意见已采纳（研究第 349 节）；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 351); not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110422.961776Z）：本记录所引 Becoming.ClosedCapture 新增的 42 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并由一位独立的只读审查者审查，其意见已采纳（研究第 351 节）；未经人的独立审查。"
   },
   "next_delta": {
     "en": "Readers of one kind reading differently, and readers moving between kinds; weights read from the readings' own sizes; a loss read by a share of the readers that the selection does not thin; real-valued shares; an independent review by a person.",
@@ -334,8 +334,8 @@
   ],
   "history": [
     {
-      "en": "22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 349; readings D64; an independent read-only review applied.",
-      "zh": "2026年10月22日：新增（MA2），回应 Ren 关于 OPENING 元吸引子之注的提问；研究第 349 节；读法 D64；已采纳一次独立的只读审查。"
+      "en": "22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 351; readings D64; an independent read-only review applied.",
+      "zh": "2026年10月22日：新增（MA2），回应 Ren 关于 OPENING 元吸引子之注的提问；研究第 351 节；读法 D64；已采纳一次独立的只读审查。"
     }
   ]
 }

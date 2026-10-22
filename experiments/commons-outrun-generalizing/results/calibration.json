@@ -1,0 +1,106 @@
+{
+ "rmax": {
+  "1": 0.30000000000000004,
+  "8": 2.4000000000000004,
+  "16": 4.0
+ },
+ "scripted": {
+  "s1c1": {
+   "alive_at_H": 0.0,
+   "mean_emptying_time": 10.4675
+  },
+  "s1c2": {
+   "alive_at_H": 0.0,
+   "mean_emptying_time": 5.1325
+  },
+  "s1c3": {
+   "alive_at_H": 0.0,
+   "mean_emptying_time": 3.27
+  },
+  "s8c1": {
+   "alive_at_H": 0.99,
+   "mean_emptying_time": 37.25
+  },
+  "s8c2": {
+   "alive_at_H": 0.0,
+   "mean_emptying_time": 13.18
+  },
+  "s8c3": {
+   "alive_at_H": 0.0,
+   "mean_emptying_time": 5.055
+  },
+  "s16c1": {
+   "alive_at_H": 1.0,
+   "mean_emptying_time": null
+  },
+  "s16c2": {
+   "alive_at_H": 0.995,
+   "mean_emptying_time": 83.5
+  },
+  "s16c3": {
+   "alive_at_H": 0.01,
+   "mean_emptying_time": 23.944444444444443
+  }
+ },
+ "vstar_k3_s1": [
+  0.21338500976562497,
+  0.21340332031249998
+ ],
+ "gain": {
+  "k3s1": {
+   "harvest_every_step": 3.1250567713271056,
+   "best_response": 3.1250567713271056,
+   "gain": 0.0
+  },
+  "k3s1_lam32": {
+   "harvest_every_step": 3.1250567713271056,
+   "best_response": 3.1250567713271056,
+   "gain": 0.0
+  },
+  "k2s1": {
+   "harvest_every_step": 4.813801940422217,
+   "best_response": 4.813801940422217,
+   "gain": 0.0
+  },
+  "k3s8": {
+   "harvest_every_step": 4.7851412896588466,
+   "best_response": 4.7860925356635855,
+   "gain": 0.0009512460047389482
+  },
+  "k2s8": {
+   "harvest_every_step": 12.9577710547212,
+   "best_response": 66.38763689115325,
+   "gain": 53.42986583643205
+  },
+  "k3s16": {
+   "harvest_every_step": 23.38256900220367,
+   "best_response": 96.63768839657278,
+   "gain": 73.25511939436912
+  },
+  "k3s1_vlo": {
+   "harvest_every_step": 4.1884138817618375,
+   "best_response": 4.1884138817618375,
+   "gain": 0.0
+  },
+  "k3s1_vhi": {
+   "harvest_every_step": 9.485323600095592,
+   "best_response": 11.92116219809998,
+   "gain": 2.4358385980043877
+  },
+  "k3s1_share": {
+   "harvest_every_step": 3.1250567713271056,
+   "best_response": 3.2092012936148113,
+   "gain": 0.08414452228770575
+  },
+  "k3s8_share": {
+   "harvest_every_step": 4.7851412896588466,
+   "best_response": 8.638513035223212,
+   "gain": 3.853371745564366
+  },
+  "k3s1_joint": {
+   "harvest_every_step": 9.375170313981318,
+   "best_response": 70.61397237696382,
+   "gain": 61.2388020629825
+  }
+ }
+}
