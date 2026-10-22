@@ -88,6 +88,74 @@ theorem bounded_system_whole {Pos : Type} {center : Pos → F}
     Unrestricted (bounded fun p => L.WithinSystem W (center p)) :=
   fun i => connected i.1 i.2.2
 
+/-! ## Feeding from a step -/
+
+section FeedingFrom
+
+variable (L : Flow F C) (W : Web F C)
+
+/-- `g`'s continuation is fed from `h` at some step from `s` on. -/
+def FedFromAfter (s : Nat) (g h : F) : Prop :=
+  ∃ t, s ≤ t ∧ L.FedBy W (g, t) (h, t)
+
+/-- **The feeding closure from a step**: what feeds `f`'s continuation at some step from `s` on,
+or feeds what does. Unlike the feeding closure across every step (`WithinFeeding`), it shrinks as
+feeding stops. -/
+def WithinFeedingFrom (s : Nat) (f g : F) : Prop :=
+  WithinClosure (L.FedFromAfter W s) f g
+
+variable {L W}
+
+/-- From the first step it is the feeding closure. -/
+theorem withinFeedingFrom_zero {f g : F} : L.WithinFeedingFrom W 0 f g ↔ L.WithinFeeding W f g :=
+  ⟨WithinClosure.mono fun _ _ ⟨t, _, fed⟩ => ⟨t, fed⟩,
+   WithinClosure.mono fun _ _ ⟨t, fed⟩ => ⟨t, Nat.zero_le t, fed⟩⟩
+
+/-- **It shrinks with time**: what lies in the closure from a later step lies in the closure from
+an earlier one. -/
+theorem WithinFeedingFrom.earlier {s s' : Nat} (le : s ≤ s') {f g : F}
+    (within : L.WithinFeedingFrom W s' f g) : L.WithinFeedingFrom W s f g :=
+  WithinClosure.mono (fun _ _ ⟨t, late, fed⟩ => ⟨t, Nat.le_trans le late, fed⟩) within
+
+/-- **What gives to no requirement from `s` on lies outside every other formation's closure from
+`s`.** -/
+theorem not_withinFeedingFrom {s : Nat} {h : F}
+    (quits : ∀ t x c, s ≤ t → W.requires t x c → h ∈ L.present t → ¬ 0 < L.give t h c) {f : F}
+    (ne : f ≠ h) : ¬ L.WithinFeedingFrom W s f h :=
+  fun within => within (fun x => x ≠ h)
+    (fun x _ _ ⟨t, late, _, c, requires, present, gives⟩ same =>
+      quits t x c late requires (Eq.subst (motive := fun z => z ∈ L.present t) same present)
+        (Eq.subst (motive := fun z => 0 < L.give t z c) same gives))
+    ne rfl
+
+/-- **Care bounded by feeding from each step permits ending what feeds no more.** With significance
+at step `t` bounded by the center's feeding closure from `t`: where `h`, not the center, gives to
+no requirement from `T` on, and `l` admits every formation `l'` admits except `h` from `T` on, `l`
+retains from the center what has that significance against `l'`. -/
+theorem feedingFrom_permits {p h : F} (ne : p ≠ h) {T : Nat}
+    (quits : ∀ t x c, T ≤ t → W.requires t x c → h ∈ L.present t → ¬ 0 < L.give t h c)
+    {l l' : Nat → C → Nat}
+    (only : ∀ t f, W.Admits (l' t) t f → W.Admits (l t) t f ∨ (f = h ∧ T ≤ t)) :
+    W.Retains (fun q t g => L.WithinFeedingFrom W t q g) p l l' :=
+  fun t f within admits => match only t f admits with
+    | .inl kept => kept
+    | .inr ⟨same, late⟩ => absurd (Eq.subst (motive := L.WithinFeedingFrom W t p) same within)
+        (not_withinFeedingFrom (fun t' x c le => quits t' x c (Nat.le_trans late le)) ne)
+
+/-- **Under the continuation condition the same part loses.** Where `l'` admits a formation at a
+step at which `l` does not, `l` retains against `l'` from no standpoint; with `feedingFrom_permits`,
+care bounded by feeding from each step permits what the condition counts as a loss. -/
+theorem feedingFrom_parts {sig : F → Nat → F → Prop} (unrestricted : Unrestricted sig) {p h : F}
+    (ne : p ≠ h) {T : Nat}
+    (quits : ∀ t x c, T ≤ t → W.requires t x c → h ∈ L.present t → ¬ 0 < L.give t h c)
+    {l l' : Nat → C → Nat}
+    (only : ∀ t f, W.Admits (l' t) t f → W.Admits (l t) t f ∨ (f = h ∧ T ≤ t)) {t : Nat}
+    (admits : W.Admits (l' t) t h) (lost : ¬ W.Admits (l t) t h) :
+    W.Retains (fun q t g => L.WithinFeedingFrom W t q g) p l l' ∧ ¬ W.Retains sig p l l' :=
+  ⟨feedingFrom_permits ne quits only, fun retains => lost (retains t h (unrestricted (p, t, h)) admits)⟩
+
+end FeedingFrom
+
 end Flow
 
 /-! ## Witnesses -/

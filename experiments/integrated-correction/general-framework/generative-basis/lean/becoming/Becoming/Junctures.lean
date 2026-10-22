@@ -1,4 +1,5 @@
 import Becoming.Branching
+import Becoming.TimedResponse
 import Becoming.Undecided
 import Becoming.Prelude
 
@@ -571,5 +572,62 @@ theorem lpo_of_junctures_found
     (found _ _ (Hidden.process α) .origin .sink _ Hidden.returns Hidden.path Hidden.sink_lost)
 
 end Branching
+
+/-! ## A source arriving before a juncture -/
+
+namespace TimedResponse
+
+variable {F C : Type} {L L' : Flow F C} {W W' : Web F C} {obs : F → C → Prop}
+  {source : Nat → F → Prop} {D : Nat} {S : Type u} {Act : Type v} {P : Process S Act} {s x : S}
+
+/-- **A source not yet arrived leaves the reader's step at a juncture as it was.** Two courses of
+one description, alike up to `D` but for a source (the hypotheses of `answer_alike_before`); a reader
+`g` whose answer is read through its couplings up to `D`, and whose step at the configuration `x` of
+a process is chosen from that answer. Where the source has not reached `g` by `D`, `g` takes the same
+step at `x` in both courses; so where that step loses `s` in one, no configuration it leads to
+having `s` again, it loses `s` in the other. -/
+theorem same_step_unreached
+    (balanced : ∀ t, t < D → ∀ c, W.level (t+1) c + L.taken t c = W.level t c + L.given t c)
+    (balanced' : ∀ t, t < D → ∀ c, W'.level (t+1) c + L'.taken t c = W'.level t c + L'.given t c)
+    (present : ∀ t, t < D → L.present t = L'.present t)
+    (start : ∀ c, W.level 0 c = W'.level 0 c)
+    (responds : ∀ t, t < D → ∀ h, ¬ source t h → W.AlikeThroughUpTo obs h W.level W'.level t →
+      ∀ c, L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c)
+    {A : Type} {g : F} (read : (Nat → C → Nat) → A)
+    (through : ∀ l l', W.AlikeThroughUpTo obs g l l' D → read l = read l') (choose : A → Act)
+    (unreached : ¬ ReachedBy L L' W obs source g D) :
+    choose (read W.level) = choose (read W'.level) ∧
+      ((∀ y, P.step x (choose (read W.level)) y → ¬ Reach P y s) →
+        ∀ y, P.step x (choose (read W'.level)) y → ¬ Reach P y s) :=
+  have same : choose (read W.level) = choose (read W'.level) :=
+    congrArg choose (answer_alike_before balanced balanced' present start responds read through unreached)
+  ⟨same, fun loses y step => loses y (Eq.subst (motive := fun a => P.step x a y) same.symm step)⟩
+
+/-- **To turn the reader at a juncture, a source must reach it before.** Under the same hypotheses,
+where the step chosen in the first course can keep `s` and the step chosen in the second leads
+somewhere and loses `s` wherever it leads, `x` is a juncture for `s` and the source has, not not,
+reached the reader by `D`. -/
+theorem turned_at_juncture
+    (balanced : ∀ t, t < D → ∀ c, W.level (t+1) c + L.taken t c = W.level t c + L.given t c)
+    (balanced' : ∀ t, t < D → ∀ c, W'.level (t+1) c + L'.taken t c = W'.level t c + L'.given t c)
+    (present : ∀ t, t < D → L.present t = L'.present t)
+    (start : ∀ c, W.level 0 c = W'.level 0 c)
+    (responds : ∀ t, t < D → ∀ h, ¬ source t h → W.AlikeThroughUpTo obs h W.level W'.level t →
+      ∀ c, L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c)
+    {A : Type} {g : F} (read : (Nat → C → Nat) → A)
+    (through : ∀ l l', W.AlikeThroughUpTo obs g l l' D → read l = read l') (choose : A → Act)
+    (keeps : ∃ y, P.step x (choose (read W.level)) y ∧ Reach P y s)
+    (moves : ∃ z, P.step x (choose (read W'.level)) z)
+    (loses : ∀ z, P.step x (choose (read W'.level)) z → ¬ Reach P z s) :
+    Branching.Juncture P s x ∧ ¬ ¬ ReachedBy L L' W obs source g D :=
+  ⟨match keeps, moves with
+    | ⟨y, step, back⟩, ⟨z, step'⟩ => ⟨⟨_, y, step, back⟩, _, z, step', loses z step'⟩,
+   fun unreached => match keeps with
+    | ⟨y, step, back⟩ =>
+      loses y (Eq.subst (motive := fun a => P.step x a y)
+        (same_step_unreached (P := P) (s := s) (x := x) balanced balanced' present start responds read
+          through choose unreached).1 step) back⟩
+
+end TimedResponse
 
 end Becoming

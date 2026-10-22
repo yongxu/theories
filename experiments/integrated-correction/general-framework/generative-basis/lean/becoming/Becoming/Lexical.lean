@@ -322,6 +322,67 @@ theorem Above.adjoin_basic_reverses (p : H → C → Prop) (g : H → G → Prop
 
 end Adjoin
 
+/-! ## What the claims do not read -/
+
+section Agency
+
+variable {H : Type} {C G : Type} {basic : H → C → Prop} {gain : H → G → Prop}
+
+/-- Inclusion of claims read through claims held alike. -/
+theorem Included.congr {I : Type} {a a' b b' : I → Prop} (ha : ∀ i, a i ↔ a' i)
+    (hb : ∀ i, b i ↔ b' i) (inc : Included a b) : Included a' b' :=
+  fun i held => (hb i).mp (inc i ((ha i).mpr held))
+
+/-- Strict inclusion of claims read through claims held alike. -/
+theorem StrictIncluded.congr {I : Type} {a a' b b' : I → Prop} (ha : ∀ i, a i ↔ a' i)
+    (hb : ∀ i, b i ↔ b' i) (strict : StrictIncluded a b) : StrictIncluded a' b' :=
+  ⟨strict.1.congr ha hb, fun back => strict.2 (back.congr (fun i => (hb i).symm) fun i => (ha i).symm)⟩
+
+/-- `Above` reads the claims alone, on its left: an alternative realizing the same claims in both
+tiers stands above whatever the other does. -/
+theorem Above.congr_left {a a' b : H} (bs : ∀ c, basic a c ↔ basic a' c)
+    (gs : ∀ g, gain a g ↔ gain a' g) : Above basic gain a b → Above basic gain a' b
+  | .inl strict => .inl (strict.congr (fun _ => Iff.rfl) bs)
+  | .inr ⟨ba, ab, strict⟩ =>
+    .inr ⟨ba.congr (fun _ => Iff.rfl) bs, ab.congr bs fun _ => Iff.rfl, strict.congr (fun _ => Iff.rfl) gs⟩
+
+/-- `Above` reads the claims alone, on its right. -/
+theorem Above.congr_right {a b b' : H} (bs : ∀ c, basic b c ↔ basic b' c)
+    (gs : ∀ g, gain b g ↔ gain b' g) : Above basic gain a b → Above basic gain a b'
+  | .inl strict => .inl (strict.congr bs fun _ => Iff.rfl)
+  | .inr ⟨ba, ab, strict⟩ =>
+    .inr ⟨ba.congr bs fun _ => Iff.rfl, ab.congr (fun _ => Iff.rfl) bs, strict.congr gs fun _ => Iff.rfl⟩
+
+/-- **What the claims do not read, the comparison cannot weigh.** Under `BasicPriority`, two
+alternatives realizing the same basic claims and the same gains are compared alike: neither is
+better than the other, and each is better than a third, or worse, exactly where the other is. A
+loss laid on someone by another's part and the same loss borne by one's own realize the same claims
+where who caused it is not among them; so no comparison under the condition orders them. -/
+theorem BasicPriority.same_claims_alike {better : H → H → Prop}
+    (priority : BasicPriority basic gain better) {a b : H} (basics : ∀ c, basic a c ↔ basic b c)
+    (gains : ∀ g, gain a g ↔ gain b g) :
+    ¬ better a b ∧ ¬ better b a ∧ (∀ d, better a d ↔ better b d) ∧ ∀ d, better d a ↔ better d b :=
+  have back : ∀ c, basic b c ↔ basic a c := fun c => (basics c).symm
+  have gback : ∀ g, gain b g ↔ gain a g := fun g => (gains g).symm
+  ⟨fun ab => Above.irrefl b (Above.congr_left basics gains ((priority.iff a b).mp ab)),
+   fun ba => Above.irrefl a (Above.congr_left back gback ((priority.iff b a).mp ba)),
+   fun d => ⟨fun ad => (priority.iff b d).mpr (Above.congr_left basics gains ((priority.iff a d).mp ad)),
+     fun bd => (priority.iff a d).mpr (Above.congr_left back gback ((priority.iff b d).mp bd))⟩,
+   fun d => ⟨fun da => (priority.iff d b).mpr (Above.congr_right basics gains ((priority.iff d a).mp da)),
+     fun db => (priority.iff d a).mpr (Above.congr_right back gback ((priority.iff d b).mp db))⟩⟩
+
+/-- **With the agent among the basic claims, the two are ordered.** Adjoining to the basic claims a
+fresh claim (`spared`, for instance that no loss is laid on the one who loses by another's part)
+that the self-borne alternative holds and the imposed one lacks, the self-borne alternative is
+lexically above the imposed one wherever it holds every old basic claim the imposed one holds. -/
+theorem Above.agent_adjoined {N R : Type} (spared : H → N → Prop) (fg : H → R → Prop)
+    {self imposed : H} (same : Included (basic imposed) (basic self))
+    (fresh : StrictIncluded (spared imposed) (spared self)) :
+    Above (adjoin basic spared) (adjoin gain fg) self imposed :=
+  .inl (strictIncluded_adjoin_of_fresh basic spared imposed self same fresh)
+
+end Agency
+
 /-! ## Comparison under every classification of fresh contents -/
 
 section Classified

@@ -338,6 +338,42 @@ theorem transmitted_along_supported {c : X} {δ : Nat} (transmits : L.TransmitsW
     (Nat.add_le_add_right (founder c (transmits (ts 0) (xs 1) (xs 0) (descends 0 pos)
       (depends 0 pos)).1) _)
 
+/-! ## A goal along a lineage -/
+
+/-- **A goal passes down a lineage where it passes across each descent and each member keeps it
+until it gives.** `carries t x`: `x` carries the goal at step `t`. Along a lineage `xs`, `xs (i + 1)`
+descending from `xs i` across step `ts i`, the founder carrying it at its giving step, each member
+carries it from its first standing step on. -/
+theorem goal_along (carries : Nat → X → Prop) {xs : Nat → X} {ts : Nat → Nat} {n : Nat}
+    (passes : ∀ i, i < n → carries (ts i) (xs i) → carries (ts i + 1) (xs (i + 1)))
+    (keeps : ∀ i, i + 1 < n → carries (ts i + 1) (xs (i + 1)) → carries (ts (i + 1)) (xs (i + 1)))
+    (founder : carries (ts 0) (xs 0)) : ∀ i, i < n → carries (ts i + 1) (xs (i + 1))
+  | 0, lt => passes 0 lt founder
+  | i + 1, lt => passes (i + 1) lt (keeps i lt (goal_along carries passes keeps founder i
+      (Nat.lt_of_succ_lt lt)))
+
+/-- **Descendants of carriers carry a goal exactly where it passes across every descent from a
+carrier.** The goal passes down every lineage whose members keep it until they give, from a
+founder carrying it, exactly where every descendant of a carrier carries it at its first standing
+step. The condition is the passing at a single descent; nothing in descent makes it hold. -/
+theorem goal_descends_iff (carries : Nat → X → Prop) :
+    (∀ t x g, L.DescendsAt W t x g → carries t g → carries (t + 1) x) ↔
+      ∀ (xs : Nat → X) (ts : Nat → Nat) (n : Nat),
+        (∀ i, i < n → L.DescendsAt W (ts i) (xs (i + 1)) (xs i)) →
+        (∀ i, i + 1 < n → carries (ts i + 1) (xs (i + 1)) → carries (ts (i + 1)) (xs (i + 1))) →
+        carries (ts 0) (xs 0) → ∀ i, i < n → carries (ts i + 1) (xs (i + 1)) :=
+  ⟨fun passes _ _ _ descends keeps founder =>
+    goal_along carries (fun i lt => passes _ _ _ (descends i lt)) keeps founder,
+   fun lineages t x g descends carried =>
+    lineages (fun i => match i with
+        | 0 => g
+        | _ + 1 => x) (fun _ => t) 1
+      (fun i lt => match i, lt with
+        | 0, _ => descends
+        | _ + 1, lt => absurd (Nat.lt_of_succ_lt_succ lt) (Nat.not_lt_zero _))
+      (fun _ lt => absurd (Nat.lt_of_succ_lt_succ lt) (Nat.not_lt_zero _)) carried 0
+      (Nat.zero_lt_succ 0)⟩
+
 end Flow
 
 /-! ## Witnesses -/

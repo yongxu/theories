@@ -333,6 +333,47 @@ theorem favouring_locks (raises : Raises P favours f) (monotone : ReadsShare P M
 
 end Uniform
 
+/-! ## Two rules read from one share -/
+
+section Pair
+
+variable {R₁ R₂ : Type v}
+
+/-- Two orders on rules, compared together: a pair is not lower where neither rule is. -/
+def pairOrder (M₁ : Ideals.Preorder R₁) (M₂ : Ideals.Preorder R₂) : Ideals.Preorder (R₁ × R₂) where
+  le g g' := M₁.le g.1 g'.1 ∧ M₂.le g.2 g'.2
+  refl g := ⟨M₁.refl g.1, M₂.refl g.2⟩
+  trans ab bc := ⟨M₁.trans ab.1 bc.1, M₂.trans ab.2 bc.2⟩
+
+/-- Two rules, each read from the share. -/
+def pairReading (h₁ : S → R₁ → R₁) (h₂ : S → R₂ → R₂) : S → R₁ × R₂ → R₁ × R₂ :=
+  fun x g => (h₁ x g.1, h₂ x g.2)
+
+/-- Two rules each read monotonically from the share are read so together. -/
+theorem ReadsShare.pair {P : Ideals.Preorder S} {M₁ : Ideals.Preorder R₁} {M₂ : Ideals.Preorder R₂}
+    {h₁ : S → R₁ → R₁} {h₂ : S → R₂ → R₂} (first : ReadsShare P M₁ h₁) (second : ReadsShare P M₂ h₂) :
+    ReadsShare P (pairOrder M₁ M₂) (pairReading h₁ h₂) :=
+  fun x y g g' le => ⟨first x y g.1 g'.1 le, second x y g.2 g'.2 le⟩
+
+/-- **Two rules read from one share lock together at the first reading step.** Where selection
+under two rules that both favour does not lower the share, and each rule is read as a monotone
+function of the share and favours at every share, from a start whose two rules favour the share
+falls at no step and the pair is locked from the step after the first reading step:
+`favouring_locks` with the pair of rules as its rule. -/
+theorem pair_locks {P : Ideals.Preorder S} {M₁ : Ideals.Preorder R₁} {M₂ : Ideals.Preorder R₂}
+    {fav₁ : R₁ → Prop} {fav₂ : R₂ → Prop} {f : S → R₁ × R₂ → S} {h₁ : S → R₁ → R₁}
+    {h₂ : S → R₂ → R₂} {reads : Nat → Bool}
+    (raises : Raises P (fun g => fav₁ g.1 ∧ fav₂ g.2) f) (first : ReadsShare P M₁ h₁)
+    (second : ReadsShare P M₂ h₂) (uniform₁ : ∀ x g, fav₁ (h₁ x g)) (uniform₂ : ∀ x g, fav₂ (h₂ x g))
+    {c : S × (R₁ × R₂)} (start : fav₁ c.2.1 ∧ fav₂ c.2.2) :
+    (∀ t, P.le (paced f (pairReading h₁ h₂) reads c t).1
+        (paced f (pairReading h₁ h₂) reads c (t + 1)).1) ∧
+      ∀ r, reads r = true → Locked (pairOrder M₁ M₂) (fun g => fav₁ g.1 ∧ fav₂ g.2)
+        (pairReading h₁ h₂) (paced f (pairReading h₁ h₂) reads c (r + 1)) :=
+  favouring_locks raises (first.pair second) (fun x g => ⟨uniform₁ x g.1, uniform₂ x g.2⟩) start
+
+end Pair
+
 section Order
 
 variable {P : Ideals.Preorder S} {M : Ideals.Preorder R}
