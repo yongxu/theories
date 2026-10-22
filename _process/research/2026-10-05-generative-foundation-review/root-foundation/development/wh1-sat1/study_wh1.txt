@@ -1,0 +1,51 @@
+## {N}. A whole of every part, and a graded whole (WH1)
+
+```text
+Result(s): new record a-whole-of-every-part (new laws of Becoming.Wholes); reuses whole-persists-through-generation
+       (Web.Whole, Ends, Brief, the witness Generations) and the counts of Becoming.Decidedness (Counts,
+       counts_iff_decided, Counts.across_step).
+Delta: the spine's whole was the whole of some part only (Web.Whole: active exactly while some part is). Added: the
+       whole of every part (Web.AllWhole) and, between the two, the grade of listed parts (Web.Grade, a count of the
+       active ones, which exists exactly where their activity is decided), with the whole active while at least j of
+       them are (Web.AtLeastWhole). A whole of every part is inactive wherever one part is, so it ends as soon as one
+       part ends, with no listing and nothing of arising, and persists exactly while every part does; dually to
+       Whole.arises_part, a whole of some part ceases only as a part ceases; with some part the two wholes coincide
+       exactly where the parts are in step, and with none they part entirely. The grade's account across a step is
+       the census of Becoming.Decidedness read of activity (Grade.across_step), so the grade rises only as a listed
+       part arises and falls only as one ceases, and a whole of at least j listed parts arises and ceases only
+       through one. At j one it is the whole of some listed part, at the number listed the whole of every one
+       (conversely where activity is decided), so a whole of every listed part arises and ceases only through a part.
+       The whole is diminished (Web.Diminished: some parts active, not all) exactly where the whole of some is active
+       and the whole of every one is not. Witnesses: the lineage of Generations is active at every step while no
+       whole of every member is active at any; a house of three rafters, the first taken after the first step, ceases
+       with it, and from then on the whole is diminished.
+Premises / correspondence: no premise beyond each law's hypotheses; listed parts and decided activity where the grade
+       enters; discrete steps; activity a proposition at each step. Correspondence: series, parallel and k-out-of-n
+       systems of reliability theory; conjunction, disjunction and threshold of Boolean functions.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: weighted parts, wholes of wholes, the grade of infinitely many parts, and which whole a given formation is
+       read as are not covered.
+Output → input: chapter §2.2 (a paragraph on the wholes; record tables, EN and ZH); Wholes's header; record
+       whole-persists-through-generation (related); ZH map entries huayan-liu-xiang, mojing-sun-jian-ti and
+       suzhe-che-bu-ke-shu (their gap stated); record civilization-thought-on-the-spine (its gap list); chapter
+       CIVILIZATION-THOUGHT-AND-BECOMING §八; significance review, wholes check.
+```
+
+**The question.** The ZH reading ([§328](#328-中华思想脉络-on-the-spine-and-the-中华本-zh)) found two classical statements of a whole that the spine could not read. 华严六相: 「去却椽即無舍」, and asked whether a house missing one rafter is a house, 「但是破舍，無好舍也」. 墨经: 「損，偏也者，兼之體也。其體或去或存，謂其存者損」. The spine's whole (`Web.Whole`) is active while some part is, so a missing part changes nothing while another stands. In a relation-first account a whole is not a further thing beside its parts. The question is which coincidence of activity a text means, and what lies between some part and every part.
+
+**What was built** (new laws of `Becoming.Wholes`, pure core, every axiom report empty).
+
+- *The whole of every part* (`Web.AllWhole`, `Web.allWhole_self`, `Web.AllWhole.inactive_of_part`, `Web.AllWhole.ends_of_part`, `Web.AllWhole.persists_iff`, `Web.AllWhole.brief_of_part`). It is active exactly while every part is. Every formation is the whole of every part of itself, as of some part of itself, so with one part the two wholes are one. It is inactive wherever one part is; it ends as soon as one part ends, with no listing and nothing of arising, where a whole of some part ends only where every part ends and none arises (`Web.Whole.ends_without_arising`); it persists from a step exactly while every part does, where a whole of some part persists only through the arising of its parts (`Web.Whole.needs_arising`). A whole of a brief part is brief.
+- *The two wholes compared* (`Web.Whole.ceases_part`, `Web.AllWhole.active_whole`, `Web.InStep`, `Web.Whole.same_iff_inStep`, `Web.AllWhole.active_of_none`). Dually to `Web.Whole.arises_part`, a whole of some part ceases only as some part ceases. With some part, the whole of every part is active only where the whole of some part is, and the two are active at the same steps exactly where the parts are in step, one active meaning all active at each step. With no part the whole of every part is active at every step and the whole of some part at none, so the coincidence needs a part.
+- *The grade* (`Web.Grade`, `Web.Grade.pos_iff`, `Web.Grade.eq_length_iff`, `Web.Grade.lt_length_of_inactive`, `Web.Grade.across_step`, `Web.Grade.arises_of_lt`, `Web.Grade.ceases_of_lt`, `Counts.lt_length_of_fails`, `Counts.all_of_eq_length`). The grade of listed parts at a step is a count of `Becoming.Decidedness`: it sums the indicators of their activity, so it exists exactly where that activity is decided and no decision procedure is used. It is positive exactly where some listed part is active, and the number listed exactly where every one is; it falls short wherever a listed part is inactive. Across a step it gains what arises and loses what ceases: the grade after with what ceased is the grade before with what arose, the census read of activity. So it rises only as a listed part arises and falls only as one ceases.
+- *The whole of at least j parts* (`Web.AtLeastWhole`, `Web.AtLeastWhole.arises_part`, `Web.AtLeastWhole.ceases_part`, `Web.AtLeastWhole.whole`, `Web.Whole.atLeastWhole`, `Web.AtLeastWhole.allWhole`, `Web.AllWhole.atLeastWhole`, `Web.AllWhole.arises_part`, `Web.AllWhole.ceases_part`). A formation active exactly where the grade is at least `j` arises and ceases only through a listed part. At `j` one it is the whole of some listed part, at the number listed the whole of every one; conversely, where their activity is decided, each is such a whole. So the whole of every listed part arises and ceases only through a listed part, both laws read off the grade's account; the whole of some part needs no decidedness for either.
+- *The diminished whole* (`Web.Diminished`, `Web.Grade.diminished_iff`, `Web.diminished_iff`). The listed parts' whole is diminished at a step where some are active and not all. Where their activity is decided there, it is diminished exactly where the whole of some is active and the whole of every one is not.
+- *Witnesses* (`Generations.allWhole_never`, `Rafters.Formation`, `Rafters.rafters`, `Rafters.web`, `Rafters.house`, `Rafters.remains`, `Rafters.decided`, `Rafters.grade_two`, `Rafters.taken`). The members of `Generations` make a lineage active at every step, and a whole of every member is active at no step: the member arising two steps on is not yet active. A house of three rafters, the first taken after the first step: the house, the whole of every rafter, ceases across the first step as the first rafter does; from then on two of the three are active, the whole is diminished, what is left stands and the house does not.
+
+**Against the prior form** ([significance review, wholes check](BECOMING-SIGNIFICANCE-REVIEW.md#wholes-check)). Reliability theory names the three: a series system works while every component does, a parallel system while some does, a k-out-of-n system while at least k do; the life of a series system is the least of its components' lives and a parallel system's the greatest. The spine's form adds that the grade is a count existing exactly where activity is decided, and its account across a step, from which the whole of every part's arising and ceasing through a part follow.
+
+*Reading* [AI reading, D45]. 华严's house is read as the whole of every rafter: without one rafter the whole of every one is inactive (`Web.AllWhole.inactive_of_part`), 「去却椽即無舍」. What remains, 「破舍」, is the whole of some rafter, active while the whole of every one is not: the diminished whole (`Web.diminished_iff`), which is also 墨经's 「謂其存者損」. 成相 and 壞相, read at one step as the parts standing together and each standing apart, keep the earlier reading. 苏辙's 「物物可數而車不可數」 keeps its reading by `whole_not_in_pairs`; a car is the whole of every part where its parts stand together. Which whole a formation is read as, and which formations are its parts, are representational choices; none of the three is constitution.
+
+**Self-review.** The whole of every part holds of any parts; only the grade and what rests on it need listed parts. The grade's existence is exactly the decidedness of what it counts (`counts_iff_decided`), so no excluded middle enters: the whole of at least `j` parts asks a grade at every step, and its converses from the two wholes ask decided activity. The disjunctive whole's ceasing through a part needs nothing, as its arising did not; the conjunctive whole's needs decidedness, since from "not every part is active" a part that is not active is found only by deciding. Two count lemmas (`Counts.lt_length_of_fails`, `Counts.all_of_eq_length`) are general facts of counts, stated in `Becoming.Wholes` where first used; moving them below into `Becoming.Decidedness` would rebuild its 85 dependents for two lemmas. Nothing earlier is generalized: `Web.Whole` holds over any parts and needs no decidedness, so the threshold whole is beside it, joined by the equivalences at `j` one and at the number listed, not below it (rule 9). Limits: weighted parts, wholes of wholes, infinitely many parts for the grade.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Wholes, {THEOREMS} of them theorems, none removed, all with empty axiom reports. Connectivity: {APART}.

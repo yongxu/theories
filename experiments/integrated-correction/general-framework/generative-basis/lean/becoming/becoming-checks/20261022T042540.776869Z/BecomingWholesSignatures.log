@@ -1,0 +1,346 @@
+@Becoming.Web.whole_self : ∀ {F C : Type} (W : Becoming.Web F C) (f : F), W.Whole (fun x => x = f) f
+@Becoming.Web.Whole.arises_part : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.Whole parts w → ∀ {t : Nat}, W.Arises t w → ∃ p, parts p ∧ W.Arises t p
+@Becoming.Web.Whole.parts_unceasing : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.Whole parts w → (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Arises t w) → ∀ (N : Nat), ∃ t p, N ≤ t ∧ parts p ∧ W.Arises t p
+@Becoming.Web.Ends.all : ∀ {F C : Type} {W : Becoming.Web F C} {l : List F},
+  (∀ (f : F), f ∈ l → W.Ends f) → ∃ M, ∀ (f : F), f ∈ l → ∀ (t : Nat), M ≤ t → ¬W.active t f
+@Becoming.Web.active_back : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {S k : Nat},
+  (∀ (j : Nat), j < k → ∀ (p : F), parts p → ¬W.Arises (S + j) p) →
+    ∀ {p : F}, parts p → W.active (S + k) p → ¬¬W.active S p
+@Becoming.Web.Covered.arises_within : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {d T : Nat},
+  W.Covered parts T →
+    (∀ (p : F), parts p → W.Brief d p) →
+      ∀ {S : Nat}, T ≤ S → ¬∀ (j : Nat), j < d → ∀ (p : F), parts p → ¬W.Arises (S + j) p
+@Becoming.Web.Listed.end_without_arising : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {N : Nat}
+  {alive : Nat → List F},
+  W.Listed parts alive →
+    (∀ (p : F), parts p → W.Ends p) →
+      (∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬W.Arises t p) →
+        ∃ M, ∀ (t : Nat), M ≤ t → ∀ (p : F), parts p → ¬W.active t p
+@Becoming.Web.Covered.needs_arising : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {T : Nat}
+  {alive : Nat → List F},
+  W.Covered parts T →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬W.Arises t p
+@Becoming.Web.Covered.needs_new : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {T : Nat}
+  {alive : Nat → List F},
+  W.Covered parts T →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) →
+        ∀ {l : List F},
+          (∀ (p : F), p ∈ l → parts p) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬p ∈ l → ¬W.Arises t p
+@Becoming.Web.Whole.covered : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.Whole parts w → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → W.active t w) → W.Covered parts T
+@Becoming.Web.Whole.arises_within : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F} {d : Nat},
+  W.Whole parts w →
+    (∀ (p : F), parts p → W.Brief d p) →
+      ∀ {T : Nat},
+        (∀ (t : Nat), T ≤ t → W.active t w) →
+          ∀ {S : Nat}, T ≤ S → ¬∀ (j : Nat), j < d → ∀ (p : F), parts p → ¬W.Arises (S + j) p
+@Becoming.Web.Whole.needs_arising : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F}
+  {alive : Nat → List F},
+  W.Whole parts w →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → W.active t w) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬W.Arises t p
+@Becoming.Web.Whole.needs_new : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F} {alive : Nat → List F},
+  W.Whole parts w →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → W.active t w) →
+            ∀ {l : List F},
+              (∀ (p : F), p ∈ l → parts p) →
+                ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬p ∈ l → ¬W.Arises t p
+@Becoming.Web.Whole.ends_without_arising : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F} {N : Nat}
+  {alive : Nat → List F},
+  W.Whole parts w →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) → (∀ (t : Nat), N ≤ t → ∀ (p : F), parts p → ¬W.Arises t p) → W.Ends w
+@Becoming.Web.Whole.family_excess_ends : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F}
+  {L : Becoming.Flow F C} {alive : Nat → List F},
+  W.Whole parts w →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) →
+        L.Balances W →
+          L.Acting W →
+            W.Dependent →
+              ∀ {ds : List C} {m : Nat},
+                (∀ (t : Nat) (f : F),
+                    f ∈ L.present t →
+                      ∀ (d : C), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                  (∀ (t : Nat) (p : F),
+                      parts p → W.Arises t p → ∃ e, e ∈ ds ∧ W.requires (t + 1) p e ∧ m ≤ W.need (t + 1) p e) →
+                    ∀ {T n : Nat},
+                      (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                        W.stock ds T < n + m → (∀ (t : Nat), T + n ≤ t → ∀ (p : F), parts p → ¬W.Arises t p) ∧ W.Ends w
+@Becoming.Web.Whole.joint_excess_ends : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F}
+  {L : Becoming.Flow F C} {alive : Nat → List F},
+  W.Whole parts w →
+    W.Listed parts alive →
+      (∀ (p : F), parts p → W.Ends p) →
+        L.Balances W →
+          L.Acting W →
+            W.Dependent →
+              ∀ {c : C} {m : Nat},
+                (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+                  (∀ (t : Nat) (p : F), parts p → W.Arises t p → W.requires (t + 1) p c ∧ m ≤ W.need (t + 1) p c) →
+                    ∀ {T n : Nat},
+                      (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+                        W.level T c < n + m → (∀ (t : Nat), T + n ≤ t → ∀ (p : F), parts p → ¬W.Arises t p) ∧ W.Ends w
+@Becoming.Web.allWhole_self : ∀ {F C : Type} (W : Becoming.Web F C) (f : F), W.AllWhole (fun x => x = f) f
+@Becoming.Web.AllWhole.inactive_of_part : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.AllWhole parts w → ∀ {p : F}, parts p → ∀ {t : Nat}, ¬W.active t p → ¬W.active t w
+@Becoming.Web.AllWhole.ends_of_part : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.AllWhole parts w → ∀ {p : F}, parts p → W.Ends p → W.Ends w
+@Becoming.Web.AllWhole.persists_iff : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.AllWhole parts w →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → W.active t w) ↔ ∀ (p : F), parts p → ∀ (t : Nat), T ≤ t → W.active t p
+@Becoming.Web.AllWhole.brief_of_part : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.AllWhole parts w → ∀ {p : F}, parts p → ∀ {d : Nat}, W.Brief d p → W.Brief d w
+@Becoming.Web.Whole.ceases_part : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.Whole parts w → ∀ {t : Nat}, W.Ceases t w → ∃ p, parts p ∧ W.Ceases t p
+@Becoming.Web.AllWhole.active_whole : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w v : F},
+  W.AllWhole parts v → W.Whole parts w → ∀ {p₀ : F}, parts p₀ → ∀ {t : Nat}, W.active t v → W.active t w
+@Becoming.Web.Whole.same_iff_inStep : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w v : F},
+  W.Whole parts w →
+    W.AllWhole parts v → ∀ {p₀ : F}, parts p₀ → ((∀ (t : Nat), W.active t w ↔ W.active t v) ↔ W.InStep parts)
+@Becoming.Web.AllWhole.active_of_none : ∀ {F C : Type} {W : Becoming.Web F C} {parts : F → Prop} {w : F},
+  W.AllWhole parts w → (∀ (p : F), ¬parts p) → ∀ (t : Nat), W.active t w ∧ ∀ {v : F}, W.Whole parts v → ¬W.active t v
+@Becoming.Counts.lt_length_of_fails : ∀ {α : Type} {q : α → Prop} {a : α},
+  ¬q a → ∀ {as : List α} {n : Nat}, Becoming.Counts as q n → a ∈ as → n < as.length
+@Becoming.Counts.all_of_eq_length : ∀ {α : Type} {q : α → Prop} {as : List α} {n : Nat},
+  Becoming.Counts as q n → n = as.length → ∀ (a : α), a ∈ as → q a
+@Becoming.Web.Grade.pos_iff : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n : Nat},
+  W.Grade ps t n → (0 < n ↔ ∃ p, p ∈ ps ∧ W.active t p)
+@Becoming.Web.Grade.eq_length_iff : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n : Nat},
+  W.Grade ps t n → (n = ps.length ↔ ∀ (p : F), p ∈ ps → W.active t p)
+@Becoming.Web.Grade.lt_length_of_inactive : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n : Nat},
+  W.Grade ps t n → ∀ {p : F}, p ∈ ps → ¬W.active t p → n < ps.length
+@Becoming.Web.Grade.across_step : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n n' a c : Nat},
+  W.Grade ps t n →
+    W.Grade ps (t + 1) n' → Becoming.Counts ps (W.Arises t) a → Becoming.Counts ps (W.Ceases t) c → n' + c = n + a
+@Becoming.Web.Grade.arises_of_lt : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n n' : Nat},
+  W.Grade ps t n → W.Grade ps (t + 1) n' → n < n' → ∃ p, p ∈ ps ∧ W.Arises t p
+@Becoming.Web.Grade.ceases_of_lt : ∀ {F C : Type} {W : Becoming.Web F C} {ps : List F} {t n n' : Nat},
+  W.Grade ps t n → W.Grade ps (t + 1) n' → n' < n → ∃ p, p ∈ ps ∧ W.Ceases t p
+@Becoming.Web.AtLeastWhole.arises_part : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F} {j : Nat},
+  W.AtLeastWhole j ps w → ∀ {t : Nat}, W.Arises t w → ∃ p, p ∈ ps ∧ W.Arises t p
+@Becoming.Web.AtLeastWhole.ceases_part : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F} {j : Nat},
+  W.AtLeastWhole j ps w → ∀ {t : Nat}, W.Ceases t w → ∃ p, p ∈ ps ∧ W.Ceases t p
+@Becoming.Web.AtLeastWhole.whole : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.AtLeastWhole 1 ps w → W.Whole (fun x => x ∈ ps) w
+@Becoming.Web.Whole.atLeastWhole : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.Whole (fun x => x ∈ ps) w → (∀ (t : Nat) (p : F), p ∈ ps → Becoming.Decided (W.active t p)) → W.AtLeastWhole 1 ps w
+@Becoming.Web.AtLeastWhole.allWhole : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.AtLeastWhole ps.length ps w → W.AllWhole (fun x => x ∈ ps) w
+@Becoming.Web.AllWhole.atLeastWhole : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.AllWhole (fun x => x ∈ ps) w →
+    (∀ (t : Nat) (p : F), p ∈ ps → Becoming.Decided (W.active t p)) → W.AtLeastWhole ps.length ps w
+@Becoming.Web.AllWhole.arises_part : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.AllWhole (fun x => x ∈ ps) w →
+    (∀ (t : Nat) (p : F), p ∈ ps → Becoming.Decided (W.active t p)) →
+      ∀ {t : Nat}, W.Arises t w → ∃ p, p ∈ ps ∧ W.Arises t p
+@Becoming.Web.AllWhole.ceases_part : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F},
+  W.AllWhole (fun x => x ∈ ps) w →
+    (∀ (t : Nat) (p : F), p ∈ ps → Becoming.Decided (W.active t p)) →
+      ∀ {t : Nat}, W.Ceases t w → ∃ p, p ∈ ps ∧ W.Ceases t p
+@Becoming.Web.Grade.diminished_iff : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F} {v : F},
+  W.Whole (fun x => x ∈ ps) w →
+    W.AllWhole (fun x => x ∈ ps) v →
+      ∀ {t n : Nat}, W.Grade ps t n → (0 < n ∧ n < ps.length ↔ W.active t w ∧ ¬W.active t v)
+@Becoming.Web.diminished_iff : ∀ {F C : Type} {W : Becoming.Web F C} {w : F} {ps : List F} {v : F},
+  W.Whole (fun x => x ∈ ps) w →
+    W.AllWhole (fun x => x ∈ ps) v →
+      ∀ {t : Nat},
+        (∀ (p : F), p ∈ ps → Becoming.Decided (W.active t p)) → (W.Diminished ps t ↔ W.active t w ∧ ¬W.active t v)
+Becoming.Generations.whole : Becoming.Generations.web.Whole Becoming.Generations.parts
+  Becoming.Generations.Formation.lineage
+Becoming.Generations.listed : Becoming.Generations.web.Listed Becoming.Generations.parts Becoming.Generations.alive
+Becoming.Generations.ends : ∀ (p : Becoming.Generations.Formation),
+  Becoming.Generations.parts p → Becoming.Generations.web.Ends p
+Becoming.Generations.brief : ∀ (p : Becoming.Generations.Formation),
+  Becoming.Generations.parts p → Becoming.Generations.web.Brief 2 p
+Becoming.Generations.generations : Becoming.Generations.web.Whole Becoming.Generations.parts
+    Becoming.Generations.Formation.lineage ∧
+  Becoming.Generations.web.Listed Becoming.Generations.parts Becoming.Generations.alive ∧
+    (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.Generations.web.Ends p) ∧
+      (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.Generations.web.Brief 2 p) ∧
+        (∀ (t : Nat), Becoming.Generations.web.active t Becoming.Generations.Formation.lineage) ∧
+          (∀ (t : Nat), Becoming.Generations.web.Arises t (Becoming.Generations.Formation.member (t + 1))) ∧
+            ∀ (t : Nat), ¬Becoming.Generations.web.Arises t Becoming.Generations.Formation.lineage
+Becoming.Shifts.odd_two : ∀ (t : Nat), Becoming.odd (t + 2) = Becoming.odd t
+Becoming.Shifts.half_even : ∀ (t : Nat), Becoming.odd t = false → Becoming.Pulse.half (t + 1) = Becoming.Pulse.half t
+Becoming.Shifts.shifts : Becoming.Shifts.web.Whole Becoming.Generations.parts Becoming.Generations.Formation.lineage ∧
+  (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.Shifts.web.Brief 2 p) ∧
+    (∀ (t : Nat), Becoming.Shifts.web.active t Becoming.Generations.Formation.lineage) ∧
+      ∀ (t : Nat), Becoming.odd t = false → ∀ (p : Becoming.Generations.Formation), ¬Becoming.Shifts.web.Arises t p
+Becoming.Immortal.immortal : Becoming.Immortal.web.Whole (fun x => x = true) false ∧
+  (Becoming.Immortal.web.Listed (fun x => x = true) fun x => [true]) ∧
+    (∀ (t : Nat), Becoming.Immortal.web.active t false) ∧
+      (∀ (t : Nat) (p : Bool), ¬Becoming.Immortal.web.Arises t p) ∧ ¬Becoming.Immortal.web.Ends true
+Becoming.Immortal.each_other : Becoming.Immortal.web.Whole (fun x => x = true) false ∧
+  Becoming.Immortal.web.Whole (fun x => x = false) true
+Becoming.Countless.whole : Becoming.Countless.web.Whole Becoming.Countless.parts none
+Becoming.Countless.ends : ∀ (p : Option Nat), Becoming.Countless.parts p → Becoming.Countless.web.Ends p
+Becoming.Countless.never : ∀ (t : Nat) (p : Option Nat), ¬Becoming.Countless.web.Arises t p
+Becoming.Countless.countless : Becoming.Countless.web.Whole Becoming.Countless.parts none ∧
+  (∀ (p : Option Nat), Becoming.Countless.parts p → Becoming.Countless.web.Ends p) ∧
+    (∀ (t : Nat), Becoming.Countless.web.active t none) ∧
+      (∀ (t : Nat) (p : Option Nat), ¬Becoming.Countless.web.Arises t p) ∧
+        ¬∃ alive, Becoming.Countless.web.Listed Becoming.Countless.parts alive
+Becoming.Gaps.whole : Becoming.Gaps.web.Whole Becoming.Generations.parts Becoming.Generations.Formation.lineage
+@Becoming.Gaps.alive_odd : ∀ {t : Nat},
+  Becoming.odd t = true → Becoming.Gaps.alive t = [Becoming.Generations.Formation.member t]
+@Becoming.Gaps.alive_even : ∀ {t : Nat}, Becoming.odd t = false → Becoming.Gaps.alive t = []
+Becoming.Gaps.listed : Becoming.Gaps.web.Listed Becoming.Generations.parts Becoming.Gaps.alive
+Becoming.Gaps.ends : ∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.Gaps.web.Ends p
+Becoming.Gaps.gaps : Becoming.Gaps.web.Whole Becoming.Generations.parts Becoming.Generations.Formation.lineage ∧
+  Becoming.Gaps.web.Listed Becoming.Generations.parts Becoming.Gaps.alive ∧
+    (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.Gaps.web.Ends p) ∧
+      (∀ (N : Nat), ∃ t p, N ≤ t ∧ Becoming.Generations.parts p ∧ Becoming.Gaps.web.Arises t p) ∧
+        ∀ (t : Nat), Becoming.odd t = false → ¬Becoming.Gaps.web.active t Becoming.Generations.Formation.lineage
+Becoming.Layered.composed : Becoming.Layered.web.Whole (fun x => x ≠ Becoming.Layered.Level.lineage)
+  Becoming.Layered.Level.lineage
+Becoming.Layered.brief : ∀ (p : Becoming.Layered.Level),
+  p ≠ Becoming.Layered.Level.lineage → Becoming.Layered.web.Brief 1 p
+Becoming.Layered.within : ∀ (S : Nat),
+  ¬∀ (j : Nat),
+      j < 1 →
+        ∀ (p : Becoming.Layered.Level), p ≠ Becoming.Layered.Level.lineage → ¬Becoming.Layered.web.Arises (S + j) p
+Becoming.Layered.arise_again : (∀ (t : Nat) (p : Becoming.Layered.Level),
+    Becoming.Layered.web.Arises t p → p ∈ [Becoming.Layered.Level.first, Becoming.Layered.Level.second]) ∧
+  ¬Becoming.Layered.web.Ends Becoming.Layered.Level.first ∧ ¬Becoming.Layered.web.Ends Becoming.Layered.Level.second
+Becoming.WholeExceeding.balances : Becoming.WholeExceeding.flow.Balances Becoming.WholeExceeding.web
+Becoming.WholeExceeding.acting : Becoming.WholeExceeding.flow.Acting Becoming.WholeExceeding.web
+Becoming.WholeExceeding.dependent : Becoming.WholeExceeding.web.Dependent
+Becoming.WholeExceeding.gated : ∀ (t : Nat) (f : Becoming.Generations.Formation),
+  f ∈ Becoming.WholeExceeding.flow.present t →
+    ∀ (d : Unit),
+      d ∈ [()] →
+        0 < Becoming.WholeExceeding.flow.give t f d →
+          ∃ e, e ∈ [()] ∧ Becoming.WholeExceeding.web.requires t f e ∧ 1 ≤ Becoming.WholeExceeding.web.need t f e
+Becoming.WholeExceeding.arising : ∀ (t : Nat) (p : Becoming.Generations.Formation),
+  Becoming.Generations.parts p →
+    Becoming.WholeExceeding.web.Arises t p →
+      ∃ e,
+        e ∈ [()] ∧ Becoming.WholeExceeding.web.requires (t + 1) p e ∧ 1 ≤ Becoming.WholeExceeding.web.need (t + 1) p e
+Becoming.WholeExceeding.whole : Becoming.WholeExceeding.web.Whole Becoming.Generations.parts
+  Becoming.Generations.Formation.lineage
+@Becoming.WholeExceeding.member_ne : ∀ {i j : Nat},
+  (i = j → False) → Becoming.Generations.Formation.member i = Becoming.Generations.Formation.member j → False
+@Becoming.WholeExceeding.lineage_ne : ∀ {j : Nat},
+  Becoming.Generations.Formation.lineage = Becoming.Generations.Formation.member j → False
+@Becoming.WholeExceeding.not_mem_pair : ∀ {a b c : Becoming.Generations.Formation},
+  (a = b → False) → (a = c → False) → ¬a ∈ [b, c]
+Becoming.WholeExceeding.listed : Becoming.WholeExceeding.web.Listed Becoming.Generations.parts
+  Becoming.WholeExceeding.alive
+Becoming.WholeExceeding.ends : ∀ (p : Becoming.Generations.Formation),
+  Becoming.Generations.parts p → Becoming.WholeExceeding.web.Ends p
+Becoming.WholeExceeding.excess : ∀ (k : Nat),
+  k < 2 → Becoming.WholeExceeding.flow.replenishment [()] (0 + k) < Becoming.WholeExceeding.flow.uptake [()] (0 + k)
+Becoming.WholeExceeding.drawn : Becoming.WholeExceeding.web.Whole Becoming.Generations.parts
+    Becoming.Generations.Formation.lineage ∧
+  Becoming.WholeExceeding.web.Listed Becoming.Generations.parts Becoming.WholeExceeding.alive ∧
+    (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.WholeExceeding.web.Ends p) ∧
+      Becoming.WholeExceeding.flow.Balances Becoming.WholeExceeding.web ∧
+        Becoming.WholeExceeding.flow.Acting Becoming.WholeExceeding.web ∧
+          Becoming.WholeExceeding.web.Dependent ∧
+            (∀ (t : Nat), t < 3 → Becoming.WholeExceeding.web.active t Becoming.Generations.Formation.lineage) ∧
+              (∀ (t : Nat),
+                  2 ≤ t →
+                    ∀ (p : Becoming.Generations.Formation),
+                      Becoming.Generations.parts p → ¬Becoming.WholeExceeding.web.Arises t p) ∧
+                Becoming.WholeExceeding.web.Ends Becoming.Generations.Formation.lineage
+Becoming.WholeWithin.balances : Becoming.WholeWithin.flow.Balances Becoming.WholeWithin.web
+Becoming.WholeWithin.acting : Becoming.WholeWithin.flow.Acting Becoming.WholeWithin.web
+Becoming.WholeWithin.dependent : Becoming.WholeWithin.web.Dependent
+Becoming.WholeWithin.gated : ∀ (t : Nat) (f : Becoming.Generations.Formation),
+  f ∈ Becoming.WholeWithin.flow.present t →
+    ∀ (d : Unit),
+      d ∈ [()] →
+        0 < Becoming.WholeWithin.flow.give t f d →
+          ∃ e, e ∈ [()] ∧ Becoming.WholeWithin.web.requires t f e ∧ 1 ≤ Becoming.WholeWithin.web.need t f e
+Becoming.WholeWithin.arising : ∀ (t : Nat) (p : Becoming.Generations.Formation),
+  Becoming.Generations.parts p →
+    Becoming.WholeWithin.web.Arises t p →
+      ∃ e, e ∈ [()] ∧ Becoming.WholeWithin.web.requires (t + 1) p e ∧ 1 ≤ Becoming.WholeWithin.web.need (t + 1) p e
+Becoming.WholeWithin.kept : Becoming.WholeWithin.web.Whole Becoming.Generations.parts
+    Becoming.Generations.Formation.lineage ∧
+  Becoming.WholeWithin.web.Listed Becoming.Generations.parts Becoming.Generations.alive ∧
+    (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.WholeWithin.web.Ends p) ∧
+      Becoming.WholeWithin.flow.Balances Becoming.WholeWithin.web ∧
+        Becoming.WholeWithin.flow.Acting Becoming.WholeWithin.web ∧
+          Becoming.WholeWithin.web.Dependent ∧
+            (∀ (t : Nat), Becoming.WholeWithin.flow.WithinJoint t ()) ∧
+              (∀ (t : Nat), Becoming.WholeWithin.web.active t Becoming.Generations.Formation.lineage) ∧
+                ∀ (t : Nat), Becoming.WholeWithin.web.Arises t (Becoming.Generations.Formation.member (t + 1))
+Becoming.WholeUnending.balances : Becoming.WholeUnending.flow.Balances Becoming.WholeUnending.web
+Becoming.WholeUnending.persists : Becoming.WholeUnending.web.Whole (fun x => x = true) false ∧
+  (Becoming.WholeUnending.web.Listed (fun x => x = true) fun x => [true]) ∧
+    Becoming.WholeUnending.flow.Balances Becoming.WholeUnending.web ∧
+      Becoming.WholeUnending.flow.Acting Becoming.WholeUnending.web ∧
+        Becoming.WholeUnending.web.Dependent ∧
+          (∀ (t : Nat) (f : Bool),
+              f ∈ Becoming.WholeUnending.flow.present t →
+                ∀ (d : Unit),
+                  d ∈ [()] →
+                    0 < Becoming.WholeUnending.flow.give t f d →
+                      ∃ e,
+                        e ∈ [()] ∧
+                          Becoming.WholeUnending.web.requires t f e ∧ 1 ≤ Becoming.WholeUnending.web.need t f e) ∧
+            (∀ (t : Nat) (p : Bool),
+                p = true →
+                  Becoming.WholeUnending.web.Arises t p →
+                    ∃ e,
+                      e ∈ [()] ∧
+                        Becoming.WholeUnending.web.requires (t + 1) p e ∧
+                          1 ≤ Becoming.WholeUnending.web.need (t + 1) p e) ∧
+              (∀ (k : Nat),
+                  k < 1 →
+                    Becoming.WholeUnending.flow.replenishment [()] (0 + k) <
+                      Becoming.WholeUnending.flow.uptake [()] (0 + k)) ∧
+                Becoming.WholeUnending.web.stock [()] 0 < 1 + 1 ∧
+                  (∀ (t : Nat), Becoming.WholeUnending.web.active t false) ∧ ¬Becoming.WholeUnending.web.Ends true
+Becoming.WholeUngated.balances : Becoming.WholeUngated.flow.Balances Becoming.WholeUngated.web
+Becoming.WholeUngated.persists : Becoming.WholeUngated.web.Whole Becoming.Generations.parts
+    Becoming.Generations.Formation.lineage ∧
+  Becoming.WholeUngated.web.Listed Becoming.Generations.parts Becoming.Generations.alive ∧
+    (∀ (p : Becoming.Generations.Formation), Becoming.Generations.parts p → Becoming.WholeUngated.web.Ends p) ∧
+      Becoming.WholeUngated.flow.Balances Becoming.WholeUngated.web ∧
+        Becoming.WholeUngated.flow.Acting Becoming.WholeUngated.web ∧
+          Becoming.WholeUngated.web.Dependent ∧
+            (∀ (t : Nat) (f : Becoming.Generations.Formation),
+                f ∈ Becoming.WholeUngated.flow.present t →
+                  ∀ (d : Unit),
+                    d ∈ [()] →
+                      0 < Becoming.WholeUngated.flow.give t f d →
+                        ∃ e,
+                          e ∈ [()] ∧
+                            Becoming.WholeUngated.web.requires t f e ∧ 1 ≤ Becoming.WholeUngated.web.need t f e) ∧
+              (∀ (k : Nat),
+                  k < 1 →
+                    Becoming.WholeUngated.flow.replenishment [()] (0 + k) <
+                      Becoming.WholeUngated.flow.uptake [()] (0 + k)) ∧
+                Becoming.WholeUngated.web.stock [()] 0 < 1 + 1 ∧
+                  (∀ (t : Nat), Becoming.WholeUngated.web.active t Becoming.Generations.Formation.lineage) ∧
+                    ∀ (t : Nat), Becoming.WholeUngated.web.Arises t (Becoming.Generations.Formation.member (t + 1))
+@Becoming.Generations.allWhole_never : ∀ {v : Becoming.Generations.Formation},
+  Becoming.Generations.web.AllWhole Becoming.Generations.parts v → ∀ (t : Nat), ¬Becoming.Generations.web.active t v
+Becoming.Rafters.house : Becoming.Rafters.web.AllWhole (fun x => x ∈ Becoming.Rafters.rafters)
+  Becoming.Rafters.Formation.house
+Becoming.Rafters.remains : Becoming.Rafters.web.Whole (fun x => x ∈ Becoming.Rafters.rafters)
+  Becoming.Rafters.Formation.remains
+Becoming.Rafters.decided : ∀ (t : Nat) (f : Becoming.Rafters.Formation),
+  Becoming.Decided (Becoming.Rafters.web.active t f)
+@Becoming.Rafters.grade_two : ∀ {t : Nat}, 0 < t → Becoming.Rafters.web.Grade Becoming.Rafters.rafters t 2
+Becoming.Rafters.taken : Becoming.Rafters.web.Ceases 0 Becoming.Rafters.Formation.house ∧
+  Becoming.Rafters.web.Ceases 0 (Becoming.Rafters.Formation.rafter 0) ∧
+    ∀ (t : Nat),
+      0 < t →
+        Becoming.Rafters.web.Grade Becoming.Rafters.rafters t 2 ∧
+          Becoming.Rafters.web.Diminished Becoming.Rafters.rafters t ∧
+            Becoming.Rafters.web.active t Becoming.Rafters.Formation.remains ∧
+              ¬Becoming.Rafters.web.active t Becoming.Rafters.Formation.house

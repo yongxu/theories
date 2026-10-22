@@ -1,0 +1,195 @@
+{
+ "records": 29,
+ "apply": true,
+ "by_record": {
+  "a-pattern-lasts-through-passing": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
+   ],
+   "rebound": []
+  },
+  "census-balance-under-continuation": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "civilization-thought-on-the-spine": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+    "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "classes-along-a-continuation": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "comparison-where-the-rest-responds": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "counterfactual-is-the-course": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "entropy-history-and-record": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "how-a-carried-difference-grows": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "how-loops-form": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "how-much-difference-arrives": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "how-often-couplings-act": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+   ]
+  },
+  "loops-within-what-a-law-reads": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "mutual-dependence-and-its-pace": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+   ],
+   "rebound": []
+  },
+  "observation-is-a-route": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "orders-as-a-sum-over-histories": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "returning-novelty-forgetting-on-levels": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "sensitivity-is-the-least-coupling": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "sums-over-histories-by-support-horizon-and-order": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "two-act-worlds-carry-the-difference": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+   ]
+  },
+  "what-a-cut-loses": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-a-law-of-the-whole-and-no-part-takes": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-dependence-alone-carries-of-a-level": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "where-a-level-couples": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "where-a-move-is-formed": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "where-novelty-gain-comes-from": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "whether-a-loop-closes-a-difference": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "whole-drawing-beyond-renewal-ends": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
+   ]
+  },
+  "whole-persists-through-generation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
+   ]
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

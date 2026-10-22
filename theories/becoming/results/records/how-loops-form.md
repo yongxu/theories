@@ -71,7 +71,7 @@ On 16 October 2026 Ren took P118's third reading in its refined form, “which l
 - related, not a proved adapter: [orders-as-a-sum-over-histories](orders-as-a-sum-over-histories.md). The other item of the same day: P118's orders as P82's sum over histories; loops are where both multiply, and here is the moment they form.
 - related, not a proved adapter: [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md). Within one law: loops lie within what is read and form where reading grows; for a law reading a stock only below a threshold there is no loop through the stock before the break, and the loop forms at the break.
 
-**Used by:** [how-often-couplings-act](how-often-couplings-act.md) · [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md) · [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
+**Used by:** [a-coupling-saturated-by-what-it-has-carried](a-coupling-saturated-by-what-it-has-carried.md) · [how-often-couplings-act](how-often-couplings-act.md) · [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md) · [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
 
 <a id="sources--来源"></a>
 ### Sources

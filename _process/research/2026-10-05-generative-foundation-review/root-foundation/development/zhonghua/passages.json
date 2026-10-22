@@ -9390,13 +9390,16 @@
      "kind": "scope",
      "declarations": [
       "Becoming.whole_not_in_pairs",
-      "Becoming.separation_faithful_iff"
+      "Becoming.separation_faithful_iff",
+      "Becoming.Web.AllWhole",
+      "Becoming.Web.AllWhole.inactive_of_part"
      ],
      "records": [
-      "separation-loses-the-relation"
+      "separation-loses-the-relation",
+      "a-whole-of-every-part"
      ],
-     "reading": "AI读法：「輪輻蓋軫衡軛轂轊㑹而為車物物可數而車不可數」：诸件会而为车，件件可数，车却不在其中可数。车是诸件同时并存的构成，不是脊柱的析取整体（Web.Whole：某一部分活动即整体活动），所以不以 Web.Whole 读。与「物物可數而車不可數」同构的是：在一个构造的见证中，一个关系为三者之整体所持，而不为其中任两者所持，任两者可取任意值，三者不可（whole_not_in_pairs）；一般地，分开描述无所失，恰在部分彼此无关之处（separation_faithful_iff）。定域之处：苏辙由此推出「然後知無有之為車所謂無之以為用者也」，以「無」为车之所以为车，又以其中所存者为本，属本原一层，不带入。",
-     "gap": "所缺：合取的整体（诸件同时并存而成车），见 huayan-liu-xiang 的 gap。脊柱的 Web.Whole 是析取的活动之相合，不能读此结构。",
+     "reading": "AI读法：「輪輻蓋軫衡軛轂轊㑹而為車物物可數而車不可數」：诸件会而为车，件件可数，车却不在其中可数。车是诸件同时并存而成，读作每件之整体（Web.AllWhole：恰在每件都活跃时活跃），不以析取的整体（Web.Whole：某一部分活动即整体活动）读；缺一件，每件之整体即不活跃（Web.AllWhole.inactive_of_part）。与「物物可數而車不可數」同构的是：在一个构造的见证中，一个关系为三者之整体所持，而不为其中任两者所持，任两者可取任意值，三者不可（whole_not_in_pairs）；一般地，分开描述无所失，恰在部分彼此无关之处（separation_faithful_iff）。定域之处：苏辙由此推出「然後知無有之為車所謂無之以為用者也」，以「無」为车之所以为车，又以其中所存者为本，属本原一层，不带入。",
+     "gap": "已补（WH1，2026年10月22日）：诸件同时并存之整体为 Becoming.Web.AllWhole，见 huayan-liu-xiang 的 gap 与记录 a-whole-of-every-part。",
      "locator": "苏辙《老子解》昔之得一者章第39注",
      "tradition": "道（宋代三教会通）",
      "work": "《老子解》",
@@ -10172,19 +10175,25 @@
       "Becoming.whole_not_in_pairs",
       "Becoming.separation_faithful_iff",
       "Becoming.relation_persists",
-      "Becoming.partForms_and_restForms_iff"
+      "Becoming.partForms_and_restForms_iff",
+      "Becoming.Web.AllWhole",
+      "Becoming.Web.AllWhole.inactive_of_part",
+      "Becoming.Web.AllWhole.ends_of_part",
+      "Becoming.Web.diminished_iff",
+      "Becoming.Web.Whole.same_iff_inStep"
      ],
      "records": [
       "separation-loses-the-relation",
-      "where-a-move-is-formed"
+      "where-a-move-is-formed",
+      "a-whole-of-every-part"
      ],
-     "reading": "AI读法：沿 RO 的相合，限于所余部分：总为一舍，别为诸缘；同为不相违，异为各别；成为诸缘起成，坏为各住自法；「本以別成總，由無別故總不成也，」。脊柱上：在一个构造的见证中，一个关系为三者之整体所持而不为其中任两者所持（whole_not_in_pairs）；一般地，分开描述无所失，恰在部分彼此无关之处（separation_faithful_iff）；各部分各自运动、不失所有，关系便保持（relation_persists）；一个动作若既是部分所形成、又是其余所形成，则处处相同（partForms_and_restForms_iff）。剩余：华严的总相是合取的，「去却椽即無舍故」；问「無一椽時豈非舍耶？」答「但是破舍，無好舍也」，缺一部分整体即不成，或只成破损的整体。脊柱的整体（Web.Whole）是析取的活动之相合，某一部分活动整体即活动，与华严相反，所以不以 Web.Whole 释总相。成相与坏相是同一时的两读，不是跨步的开始成立与不再成立，不以 Web.change_readings 释（RO 原条在此读得松）。脊柱尚无合取或分级的整体，列入缺口（见 gap）。",
+     "reading": "AI读法：沿 RO 的相合，限于所余部分：总为一舍，别为诸缘；同为不相违，异为各别；成为诸缘起成，坏为各住自法；「本以別成總，由無別故總不成也，」。脊柱上：在一个构造的见证中，一个关系为三者之整体所持而不为其中任两者所持（whole_not_in_pairs）；一般地，分开描述无所失，恰在部分彼此无关之处（separation_faithful_iff）；各部分各自运动、不失所有，关系便保持（relation_persists）；一个动作若既是部分所形成、又是其余所形成，则处处相同（partForms_and_restForms_iff）。华严的总相是合取的，「去却椽即無舍故」：舍读作每椽之整体（Web.AllWhole，恰在每个部分都活跃时活跃），缺一椽它即不活跃（Web.AllWhole.inactive_of_part），一椽终结它即终结（Web.AllWhole.ends_of_part）。问「無一椽時豈非舍耶？」答「但是破舍，無好舍也」：破舍读作减损之整体，某椽之整体活跃而每椽之整体不活跃（Web.diminished_iff）。脊柱原有的整体（Web.Whole）是析取的，某一部分活动整体即活动，读的是破舍，不是好舍；两种整体恰在诸部分同步之处相合（Web.Whole.same_iff_inStep）。成相与坏相是同一时的两读，不是跨步的开始成立与不再成立，不以 Web.change_readings 释（RO 原条在此读得松）。",
      "ro_passage": "huayan-liu-xiang",
-     "gap": "所缺：合取的或分级的整体。华严「去却椽即無舍故」与墨经「謂其存者損」都说缺一部分时整体不成或成为减损的整体；脊柱的整体（Web.Whole parts w：∀ t, W.active t w ↔ ∃ p, parts p ∧ W.active t p）是析取的。拟证（核心，可期空公理报告）：定义合取整体 AllWhole parts w := ∀ t, (W.active t w ↔ ∀ p, parts p → W.active t p)；证 AllWhole 之止息必有某部分同步止息（与 Web.Whole.arises_part 对偶，需部分有限且活动可判定），以及部分各自终止时合取整体终止；分级者另以在场部分之数为整体之量。最近声明：Becoming.Web.Whole、Becoming.Web.whole_self、Becoming.Web.Whole.arises_part、Becoming.whole_not_in_pairs。已 grep Becoming/*.lean 中 Whole 的定义：只有析取形式。",
+     "gap": "已补（WH1，2026年10月22日）：合取的整体为 Becoming.Web.AllWhole（恰在每个部分都活跃时活跃），缺一部分即不活跃（Web.AllWhole.inactive_of_part），一部分终结即终结（Web.AllWhole.ends_of_part），所列部分之活动可判定时，其止息必有所列部分同步止息（Web.AllWhole.ceases_part）；分级者为所列部分之等级（Web.Grade，一个计数）与至少 j 个部分之整体（Web.AtLeastWhole），减损之整体为 Web.Diminished（Web.diminished_iff）。见记录 a-whole-of-every-part。",
      "locator": "卷四·六相圆融",
      "tradition": "佛（华严）",
      "work": "《华严一乘教义分齐章》",
-     "relational": "关系的：整体只依部分而成；合取之总在脊柱上尚缺",
+     "relational": "关系的：整体只依部分而成；总相是每个部分之整体",
      "names_used": [
       "兼",
       "体",
@@ -10653,17 +10662,22 @@
      "kind": "scope",
      "declarations": [
       "Becoming.Web.Whole",
-      "Becoming.Web.Whole.covered"
+      "Becoming.Web.Whole.covered",
+      "Becoming.Web.Diminished",
+      "Becoming.Web.diminished_iff",
+      "Becoming.Web.Grade",
+      "Becoming.Web.Grade.lt_length_of_inactive"
      ],
      "records": [
-      "whole-persists-through-generation"
+      "whole-persists-through-generation",
+      "a-whole-of-every-part"
      ],
-     "reading": "AI读法：《經說上》「損，偏也者，兼之體也。其體或去或存，謂其存者損。」：损是整体的部分或去或存，以余存的整体为损；《經上》作「損，偏去也。」。相合之处：部分或去，只要仍有某部分活动，析取的整体仍活动（Web.Whole）；一个整体自某步起每步活动，即自该步起每步都有其某部分活动（Web.Whole.covered）。定域之处：「謂其存者損」以余存者为减损的整体，脊柱没有减损的整体：在 Web.Whole 下，只要有一部分活动，整体就完全活动。墨经「體，分於兼也」的构成之意，理论不取。损（整体减损的程度）列入缺口，与华严破舍同（见 gap）。",
-     "gap": "所缺：合取的或分级的整体。华严「去却椽即無舍故」与墨经「謂其存者損」都说缺一部分时整体不成或成为减损的整体；脊柱的整体（Web.Whole parts w：∀ t, W.active t w ↔ ∃ p, parts p ∧ W.active t p）是析取的。拟证（核心，可期空公理报告）：定义合取整体 AllWhole parts w := ∀ t, (W.active t w ↔ ∀ p, parts p → W.active t p)；证 AllWhole 之止息必有某部分同步止息（与 Web.Whole.arises_part 对偶，需部分有限且活动可判定），以及部分各自终止时合取整体终止；分级者另以在场部分之数为整体之量。最近声明：Becoming.Web.Whole、Becoming.Web.whole_self、Becoming.Web.Whole.arises_part、Becoming.whole_not_in_pairs。已 grep Becoming/*.lean 中 Whole 的定义：只有析取形式。",
+     "reading": "AI读法：《經說上》「損，偏也者，兼之體也。其體或去或存，謂其存者損。」：损是整体的部分或去或存，以余存的整体为损；《經上》作「損，偏去也。」。相合之处：部分或去，只要仍有某部分活动，析取的整体仍活动（Web.Whole）；一个整体自某步起每步活动，即自该步起每步都有其某部分活动（Web.Whole.covered）。「謂其存者損」以余存者为减损的整体：所列部分有的活跃、不是全部（Web.Diminished），恰是某部分之整体活跃而每个部分之整体不活跃（Web.diminished_iff）；损之程度读作所列部分中活跃者之数（Web.Grade），缺一部分它即少于部分之数（Web.Grade.lt_length_of_inactive）。定域之处：墨经「體，分於兼也」的构成之意，理论不取。",
+     "gap": "已补（WH1，2026年10月22日）：见 huayan-liu-xiang 的 gap；减损之整体为 Becoming.Web.Diminished（Web.diminished_iff），损之程度为所列部分之等级 Becoming.Web.Grade。见记录 a-whole-of-every-part。",
      "locator": "經說上",
      "tradition": "墨／名辩",
      "work": "《墨子·經說上》",
-     "relational": "关系的；减损的整体在脊柱上尚缺",
+     "relational": "关系的；减损的整体是某部分之整体活跃而每个部分之整体不活跃",
      "names_used": [
       "兼",
       "体",
@@ -36996,7 +37010,16 @@
       "Becoming.Web.break_not_bounded",
       "Becoming.ReadsBefore",
       "Becoming.StopsBy",
-      "Becoming.exact_of_reading_before"
+      "Becoming.exact_of_reading_before",
+      "Becoming.Saturation.strengths",
+      "Becoming.Saturation.readsBefore",
+      "Becoming.Saturation.stops",
+      "Becoming.Saturation.not_recurs",
+      "Becoming.Saturation.passed_from",
+      "Becoming.Saturation.exact",
+      "Becoming.Saturation.stops_by",
+      "Becoming.Saturation.stops_iff",
+      "Becoming.Saturation.floored"
      ],
      "records": [
       "sensitivity-is-the-least-coupling",
@@ -37005,13 +37028,14 @@
       "runaway-distance-uncoupled",
       "how-loops-form",
       "how-often-couplings-act",
-      "what-a-cut-loses"
+      "what-a-cut-loses",
+      "a-coupling-saturated-by-what-it-has-carried"
      ],
      "relational": "民不畏惧威势之时，更大的威祸就到来。",
      "ro_passage": "",
-     "gap": "脊柱缺：强度随经由耦合已传之量而降的律（饱和、习惯化）。以读自历程的强度（ReadsBefore；ExchangeLaw.carryingRead、formedCourse_eq_carried）表述：k_t = f(A_t)，A_t 为此前各步经该耦合所传之量，f 非增。定理一：若 f 在 A₀ 以上为零，则自 A_t 达到 A₀ 之步 N 起该耦合停止（StopsBy … N），于是有限阶自此精确（exact_of_reading_before），经它的环自 N 起不再返回。定理二（对照）：f 只非增而不归零时，自然数强度终为正常数，环仍在，携带量每绕环一圈仍至少加倍（carried_doubles_around）。现有强度或给定、或读自水平，但没有依所传之量归零的律；not_onLoop_unread 要求每一步都不读入，缺〈自某步起〉的环之形式。最近：Becoming.ReadsBefore、Becoming.ExchangeLaw.carryingRead、Becoming.StopsBy、Becoming.exact_of_reading_before、Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero、Becoming.not_onLoop_unread、Becoming.carried_doubles_around。",
+     "gap": "已补（SAT1，2026年10月22日）：强度随经由耦合已传之量而降的律为 Becoming.Saturation（passed、strengths，读先前：readsBefore）。定理一：强度自 A 起为零而至第 N 步已传 A，则该耦合至 N 停止（Saturation.stops），不再复现（Saturation.not_recurs），诸耦合皆饱和则有限阶自此精确（Saturation.exact）。定理二（对照）：响应以一为下限时耦合复现，自耦合则无有限阶处处精确（Saturation.floored、Saturation.floored_inexact）；非增而不归零之响应终为常数，其在何步需 LPO，不陈述。见记录 a-coupling-saturated-by-what-it-has-carried。",
      "layer_checked": "",
-     "reading": "AI读法：威经由「畏」耦合于民。「民不畏威」读作这一耦合的强度为零：对只读已立者的律，交换在 t 之前各步对某条件不敏感，恰当它对该条件之水平在这些步的强度都为零（ExchangeLaw.insensitiveAt_iff_strength_zero；应倍为零，即察为零）。部分之外没有形成在任何一步读入的条件不在任何环上（not_onLoop_unread），其下游只有它自己（upstream_unread）：若畏自始不读入，经由畏的调节之环就不存在；畏自某步起才不读入时环断开，这一〈自某步起〉的环之形式脊柱缺，见缺口。此后断裂之前没有耦合进来的东西界定其远近（Web.break_not_bounded，未兆），「大威至」读作断裂无预示地到来。所以经文的结构可承到这一步：耦合强度为零之处没有经由它的环。但「民不畏威」是怎样来的——威用得多而畏渐失——是强度随所传之量而降，脊柱没有这样的律。脊柱已有的相近形式是：强度可以读自历程（ReadsBefore），耦合可以到某步停止（StopsBy），自某步起无耦合再读则有限阶精确（exact_of_reading_before）；缺的是把强度依所传之量归零与这些连起来的饱和律，见缺口。注层：王弼第七十二章注「任其威权，则物扰而民僻，威不能复制民」（LC2-WB-C72-R01）说的正是这一过程；河上公于本章训「威，害也」，读作「人不畏小害则大害至」，是另一读法；「刑罚酷深」是河上公第七十四章「民不畏死」之注（LC2-HS-C74-R01），不属本章。「威」作为施治者之手段，属意志层，不采纳。与原读法之别：「大威至」不读作穷（穷专指存量降到阈下），改读未兆。",
+     "reading": "AI读法：威经由「畏」耦合于民。「民不畏威」读作这一耦合的强度为零：对只读已立者的律，交换在 t 之前各步对某条件不敏感，恰当它对该条件之水平在这些步的强度都为零（ExchangeLaw.insensitiveAt_iff_strength_zero；应倍为零，即察为零）。部分之外没有形成在任何一步读入的条件不在任何环上（not_onLoop_unread），其下游只有它自己（upstream_unread）：若畏自始不读入，经由畏的调节之环就不存在；畏自某步起才不读入时，耦合自该步停止（StopsBy），不再复现，经它的环不再返回（Saturation.not_recurs）。此后断裂之前没有耦合进来的东西界定其远近（Web.break_not_bounded，未兆），「大威至」读作断裂无预示地到来。所以经文的结构可承到这一步：耦合强度为零之处没有经由它的环。「民不畏威」是怎样来的——威用得多而畏渐失——读作为已传之量所饱和的耦合：强度读自经该耦合已传之量（Saturation.strengths，读先前之水平：Saturation.readsBefore）；强度在已传 A 之后为零、且至第 N 步已传 A 时，该耦合至 N 停止（Saturation.stops），此后无所再传（Saturation.passed_from），诸耦合皆如此饱和则有限阶自此精确（Saturation.exact）；未饱和时每步作用、源之水平常在者，至第 A 步即停（Saturation.stops_by）。响应非增时，耦合恰在响应于某量归零处停止（Saturation.stops_iff）；响应只减而不归零者不停（Saturation.floored）。威之用怎样耗畏是前提（sat 或 f 给定），不是导出。注层：王弼第七十二章注「任其威权，则物扰而民僻，威不能复制民」（LC2-WB-C72-R01）说的正是这一过程；河上公于本章训「威，害也」，读作「人不畏小害则大害至」，是另一读法；「刑罚酷深」是河上公第七十四章「民不畏死」之注（LC2-HS-C74-R01），不属本章。「威」作为施治者之手段，属意志层，不采纳。与原读法之别：「大威至」不读作穷（穷专指存量降到阈下），改读未兆。",
      "names_used": [
       "应倍",
       "察",
@@ -37245,17 +37269,22 @@
      "declarations": [
       "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
       "Becoming.ExchangeLaw.sensitive_iff_strength",
-      "Becoming.ExchangeLaw.RespondsWithin"
+      "Becoming.ExchangeLaw.RespondsWithin",
+      "Becoming.Saturation.strengths",
+      "Becoming.Saturation.stops_iff",
+      "Becoming.Saturation.stops_by",
+      "Becoming.Saturation.floored"
      ],
      "records": [
       "sensitivity-is-the-least-coupling",
-      "how-much-difference-arrives"
+      "how-much-difference-arrives",
+      "a-coupling-saturated-by-what-it-has-carried"
      ],
      "relational": "视、听、思虑用之过强过甚，则目不明、耳不聪、智识乱。",
      "ro_passage": "",
-     "gap": "同 lao-72-min-bu-wei-wei 之缺口：强度随经由耦合已传之量而降的饱和律（以 ReadsBefore 表述，归零则 StopsBy，自此 exact_of_reading_before）。最近：Becoming.ReadsBefore、Becoming.StopsBy、Becoming.exact_of_reading_before、Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero、Becoming.ExchangeLaw.sensitive_iff_strength。",
+     "gap": "已补（SAT1，2026年10月22日）：同 lao-72-min-bu-wei-wei 之 gap，见 Becoming.Saturation.stops_iff 与记录 a-coupling-saturated-by-what-it-has-carried。",
      "layer_checked": "",
-     "reading": "AI读法：《解老》说视过强则「目不明」、听过甚则「耳不聰」、思虑过度则「智識亂」。脊柱给出「不明」的确切形式：对只读已立者的律，交换在 t 之前各步对某条件不敏感，恰当这些步它对该条件之水平的强度都为零（ExchangeLaw.insensitiveAt_iff_strength_zero，应倍为零）；敏感恰当某步之强度不全为零（sensitive_iff_strength，察）；强度以回应之倍数界定（RespondsWithin）。所以「目不明」「耳不聰」读作读入之耦合强度降为零。「智識亂」不是强度为零，脊柱于此无对应之律，本条不读。经文的因果——用得过强，强度因此而降——脊柱没有：强度或给定、或读自水平，没有依所传之量归零的律，见缺口（与 lao-72-min-bu-wei-wei 同一缺口）。定域：脊柱给出「不明」是什么，不给出〈强则不明〉。第十二章「五色令人目盲」诸条作并行。",
+     "reading": "AI读法：《解老》说视过强则「目不明」、听过甚则「耳不聰」、思虑过度则「智識亂」。脊柱给出「不明」的确切形式：对只读已立者的律，交换在 t 之前各步对某条件不敏感，恰当这些步它对该条件之水平的强度都为零（ExchangeLaw.insensitiveAt_iff_strength_zero，应倍为零）；敏感恰当某步之强度不全为零（sensitive_iff_strength，察）；强度以回应之倍数界定（RespondsWithin）。所以「目不明」「耳不聰」读作读入之耦合强度降为零。「智識亂」不是强度为零，脊柱于此无对应之律，本条不读。经文的因果——用得过强，强度因此而降——读作为已传之量所饱和的耦合：耦合恰在其响应于某已传之量归零处停止（Saturation.stops_iff），未饱和时每步读入者至阈值之步即停（Saturation.stops_by）；响应只减而不归零者不停（Saturation.floored）。定域：脊柱给出「不明」是什么，并在用耗强度的前提下给出〈强则不明〉；用是否这样耗目、耳之强度，是经验问题。第十二章「五色令人目盲」诸条作并行。",
      "names_used": [
       "应倍",
       "察"

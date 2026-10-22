@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "id": "a-coupling-saturated-by-what-it-has-carried",
+  "title": {
+    "en": "A coupling saturated by what it has carried",
+    "zh": "为所传之量所饱和的耦合"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T04:28:57+00:00",
+  "statement": {
+    "en": "Strengths read off what has passed through a coupling read the levels before; where they are zero once A has passed, the coupling stops by the step A has passed and a finite order is exact; it stops exactly where its response reaches zero, and floored at one it recurs.",
+    "zh": "读自经耦合已传之量的强度读先前之水平；强度在已传 A 后为零时，耦合至已传 A 之步停止，有限阶精确；耦合恰在其响应归零处停止，以一为下限则复现。"
+  },
+  "laws": [
+    {
+      "en": "What has passed from d into c before a step is defined by recursion, each step's strengths read off what had passed before it; strengths read off it read the levels before, so the carrying law with them generates a course, and what has passed never falls.",
+      "zh": "自 d 入 c 在一步之前已传之量以递归定义，每步之强度读自其前已传之量；读自它的强度读先前之水平，故以之为强度的携带之律生成一个进程；已传之量不降。",
+      "declarations": [
+        "Becoming.Saturation.passingAt",
+        "Becoming.Saturation.passed",
+        "Becoming.Saturation.strengths",
+        "Becoming.Saturation.Antitone",
+        "Becoming.Saturation.ZeroFrom",
+        "Becoming.Saturation.scaled",
+        "Becoming.Saturation.Antitone.zeroFrom",
+        "Becoming.Saturation.passingAt_congr",
+        "Becoming.Saturation.passed_congr",
+        "Becoming.Saturation.readsBefore",
+        "Becoming.Saturation.passed_le_succ",
+        "Becoming.Saturation.passed_le_add",
+        "Becoming.Saturation.passed_mono"
+      ]
+    },
+    {
+      "en": "Where the strengths are zero once A has passed and A has passed by step N, the coupling stops by N: it does not recur, nothing more passes, and where every coupling has so saturated a finite order is exact. Where no step passes more than m, what passes in all is below A + m.",
+      "zh": "强度在已传 A 之后为零、且至第 N 步已传 A 时，耦合至 N 停止：不复现，无所再传；诸耦合皆如此饱和则有限阶精确。每步所传不过 m 时，所传总量少于 A + m。",
+      "declarations": [
+        "Becoming.Saturation.passingAt_zero",
+        "Becoming.Saturation.stops",
+        "Becoming.Saturation.not_recurs",
+        "Becoming.Saturation.exact",
+        "Becoming.Saturation.passed_from",
+        "Becoming.Saturation.passed_lt"
+      ]
+    },
+    {
+      "en": "A coupling acting at each step until saturated, from a level that stands, passes one more at each step, so it has passed A by step A and stops by step A. With strengths f a times a coupling acting at each step, f not rising, it stops by step A where f is zero at A, and exactly where f reaches zero; floored at one it recurs, and coupled into itself leaves every finite order inexact.",
+      "zh": "未饱和时每步作用、源之水平常在的耦合，每步至少多传一，故至第 A 步已传 A 并至第 A 步停止。强度为 f a 乘以每步作用之耦合、f 不升时，它恰在 f 归零处停止；以一为下限则复现，自耦合时无有限阶处处精确。",
+      "declarations": [
+        "Becoming.Saturation.one_le_passingAt",
+        "Becoming.Saturation.climbs",
+        "Becoming.Saturation.stops_by",
+        "Becoming.Saturation.stops_by_zero",
+        "Becoming.Saturation.stops_iff",
+        "Becoming.Saturation.floored",
+        "Becoming.Saturation.floored_inexact"
+      ]
+    },
+    {
+      "en": "In the formed course, what the formations give splits into the part's gaps and what passes through each coupling, so what has passed is what the course carries through the coupling; a level standing at the start stands throughout; the coupling stops by its threshold as a step and does not recur, stops exactly where its response reaches zero, and with the response A - a stops by step A.",
+      "zh": "在所成进程中，诸形成所给分为部分之差与经每一耦合所传，故已传之量即进程经该耦合所携；起始常在之水平始终常在，耦合至阈值之步停止而不复现，恰在响应归零处停止，响应为 A - a 时至第 A 步停止。",
+      "declarations": [
+        "Becoming.Saturation.carriedGive_split",
+        "Becoming.Saturation.total_carriedGive",
+        "Becoming.Saturation.course_succ",
+        "Becoming.Saturation.course_stands",
+        "Becoming.Saturation.course_stops_by",
+        "Becoming.Saturation.course_stops_iff",
+        "Becoming.Saturation.wearing_stops"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole-number amounts and strengths; strengths read off what has passed, per coupling, the response given (sat, or f times k); for stopping by the threshold as a step, a coupling acting at each step until saturated and a level that stands; for the exact line, f not rising; discrete steps.",
+      "zh": "不加公理。整数之量与强度；强度按耦合读自已传之量，响应给定（sat，或 f 乘以 k）；至阈值之步停止，须未饱和时每步作用、源之水平常在；恰在归零处停止，须 f 不升；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a non-rising response never reaching zero settles at a known step: that needs the limited principle of omniscience, and is not stated.",
+      "zh": "不升而不归零之响应在已知之步定住：这需要有限全知原则，不陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Recovery after rest; strengths read off what passed through other couplings; amounts beyond whole numbers.",
+      "zh": "休止后之恢复；读自经其他耦合所传之量的强度；整数之外的量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That use wears any actual coupling this way, or how fast.",
+      "zh": "实际的任何耦合因使用而如此耗损，或耗损多快。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T042540.776869Z): the 33 declarations Becoming.Frequency gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 334; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T042540.776869Z）：Becoming.Frequency 新增的 33 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 334 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Recovery after rest; responses to what passed through other couplings; an independent review.",
+    "zh": "休止后之恢复；对经其他耦合所传之量的响应；独立审查。"
+  },
+  "correspondence": {
+    "en": "Habituation, a response decrement with repeated stimulation (Thompson and Spencer 1966); short-term synaptic depression, efficacy spent by transmission (Tsodyks and Markram 1997); a budget spent by use.",
+    "zh": "习惯化，重复刺激下之反应递减（Thompson 与 Spencer 1966）；突触短时抑制，效能为传递所耗（Tsodyks 与 Markram 1997）；为使用所耗之预算。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+  "aliases": [
+    "a coupling saturated by what it has carried",
+    "saturation of a coupling",
+    "habituation of a coupling",
+    "为所传之量所饱和的耦合",
+    "耦合之饱和",
+    "Becoming.Saturation.stops",
+    "Becoming.Saturation.stops_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "how-often-couplings-act",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "A saturated coupling stops by its threshold (StopsBy) and so does not recur.",
+        "zh": "饱和的耦合至其阈值停止（StopsBy），故不复现。"
+      },
+      "interface": {
+        "output": {
+          "en": "StopsBy, StopsBy.not_recurs.",
+          "zh": "StopsBy、StopsBy.not_recurs。"
+        },
+        "input": {
+          "en": "Strengths read off what has passed.",
+          "zh": "读自已传之量的强度。"
+        },
+        "conditions": {
+          "en": "The strengths zero from an amount on, that amount passed.",
+          "zh": "强度自某量起为零，且该量已传。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+      }
+    },
+    {
+      "id": "what-a-cut-loses",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Where every coupling has saturated, a finite order is exact (exact_of_reading_before); a floored self-coupling leaves every one inexact (unbounded_of_recurring_loop).",
+        "zh": "诸耦合皆饱和时有限阶精确（exact_of_reading_before）；以一为下限的自耦合使每一有限阶都不精确（unbounded_of_recurring_loop）。"
+      },
+      "interface": {
+        "output": {
+          "en": "exact_of_reading_before, unbounded_of_recurring_loop.",
+          "zh": "exact_of_reading_before、unbounded_of_recurring_loop。"
+        },
+        "input": {
+          "en": "Couplings stopping by a step, or recurring.",
+          "zh": "至某步停止或复现的耦合。"
+        },
+        "conditions": {
+          "en": "As each law states.",
+          "zh": "如各律所述。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+      }
+    },
+    {
+      "id": "how-loops-form",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The saturated strengths read before, so the carrying law with them generates a course (formedCourse_succ).",
+        "zh": "饱和之强度读先前，故以之为强度的携带之律生成一个进程（formedCourse_succ）。"
+      },
+      "interface": {
+        "output": {
+          "en": "ReadsBefore, formedCourse, formedCourse_succ.",
+          "zh": "ReadsBefore、formedCourse、formedCourse_succ。"
+        },
+        "input": {
+          "en": "Strengths read off what has passed.",
+          "zh": "读自已传之量的强度。"
+        },
+        "conditions": {
+          "en": "Reading before.",
+          "zh": "读先前。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States the gap its map found in 老子七十二章 and 韩非解老 (entries lao-72-min-bu-wei-wei, jielao-shi-qiang-mu-buming).",
+        "zh": "陈述其对应在老子七十二章与韩非解老中发现的缺口（条目 lao-72-min-bu-wei-wei、jielao-shi-qiang-mu-buming）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Saturation.Antitone",
+        "Becoming.Saturation.Antitone.zeroFrom",
+        "Becoming.Saturation.ZeroFrom",
+        "Becoming.Saturation.carriedGive_split",
+        "Becoming.Saturation.climbs",
+        "Becoming.Saturation.course_stands",
+        "Becoming.Saturation.course_stops_by",
+        "Becoming.Saturation.course_stops_iff",
+        "Becoming.Saturation.course_succ",
+        "Becoming.Saturation.exact",
+        "Becoming.Saturation.floored",
+        "Becoming.Saturation.floored_inexact",
+        "Becoming.Saturation.not_recurs",
+        "Becoming.Saturation.one_le_passingAt",
+        "Becoming.Saturation.passed",
+        "Becoming.Saturation.passed_congr",
+        "Becoming.Saturation.passed_from",
+        "Becoming.Saturation.passed_le_add",
+        "Becoming.Saturation.passed_le_succ",
+        "Becoming.Saturation.passed_lt",
+        "Becoming.Saturation.passed_mono",
+        "Becoming.Saturation.passingAt",
+        "Becoming.Saturation.passingAt_congr",
+        "Becoming.Saturation.passingAt_zero",
+        "Becoming.Saturation.readsBefore",
+        "Becoming.Saturation.scaled",
+        "Becoming.Saturation.stops",
+        "Becoming.Saturation.stops_by",
+        "Becoming.Saturation.stops_by_zero",
+        "Becoming.Saturation.stops_iff",
+        "Becoming.Saturation.strengths",
+        "Becoming.Saturation.total_carriedGive",
+        "Becoming.Saturation.wearing_stops",
+        "Becoming.StopsBy",
+        "Becoming.StopsBy.not_recurs"
+      ],
+      "sha256": "1acdba626af7fa0266679d5c158e5129c4662be832bf47e660abea3e04310a2e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "role": "receipt",
+      "sha256": "6276e35d34eb8d014bfd7227d549bacf967a072420c3de86f1de6903a551e0a8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "73c09fb8f511618a8b036ec5c641a6c7250782f582c46e259cd4d644b7911317"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "1bde506b19b826bd9000cfcb2fa9cf78100c3efa0c8eb8db04762667e78044ff"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "26c706a8730956de99d09bb56f331c3721e737f7981b7da3f402e748b9fb267d"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "faae80a364ffc654a661b0c390bc8ce39e8ec6f4e94cd14069d8b54625c44090"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "f93187196f4571793df3efa9bc718bfefb230e9b8354b3ab2849e16aeff005a9"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frequency",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SAT1), strengths read off what has passed through each coupling, and when the coupling stops, for the gap the ZH reading raised; study section 334.",
+      "zh": "2026年10月22日：新增（SAT1），读自经每一耦合已传之量的强度，及耦合何时停止，补中华思想脉络之读所提出的缺口；研究第 334 节。"
+    }
+  ]
+}

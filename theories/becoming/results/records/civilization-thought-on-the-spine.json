@@ -54,8 +54,8 @@
     "zh": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改。读者都是 AI；未与刻本对校。"
   },
   "next_delta": {
-    "en": "The gaps the texts raise, each to be claimed before it is written: a conjunctive or graded whole; saturation of a coupling by what it has carried; one-sided and local regulation; equal division; copying growth; witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
-    "zh": "古典文字提出的缺口，各先认领再写：合取或分级的整体；耦合随已传之量而饱和；单侧与局部的调节；均分；抄录之增；互为函数的见证；机之度量；按份额加权的池。然后把本章判定的 RO 与易传三处类别写入那两份对应。"
+    "en": "The gaps the texts raise, each to be claimed before it is written: one-sided and local regulation; equal division; copying growth; witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
+    "zh": "古典文字提出的缺口，各先认领再写：单侧与局部的调节；均分；抄录之增；互为函数的见证；机之度量；按份额加权的池。然后把本章判定的 RO 与易传三处类别写入那两份对应。"
   },
   "correspondence": {
     "en": "Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories” (provenance, not warrant). The chapter places the 脉络 in the theory and tests the thesis judgment by judgment; the 中华本 states the theory in the classical names, with 經, 說 and 證 for each law and the classical passages set beside it. Reading (the AI's, D62): the thesis holds at the root and in most mapped judgments, needs a scope in its universal forms, and fails as a property of every system.",
@@ -103,13 +103,27 @@
         "en": "Its 易传 entries keep these maps' correspondences.",
         "zh": "其易传条目沿用这些对应。"
       }
+    },
+    {
+      "id": "a-whole-of-every-part",
+      "detail": {
+        "en": "States the conjunctive and the graded whole its map found missing (WH1).",
+        "zh": "陈述其对应所缺的合取与分级之整体（WH1）。"
+      }
+    },
+    {
+      "id": "a-coupling-saturated-by-what-it-has-carried",
+      "detail": {
+        "en": "States the saturation of a coupling its map found missing (SAT1).",
+        "zh": "陈述其对应所缺的耦合之饱和（SAT1）。"
+      }
     }
   ],
   "references": [
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "ba134aef8360adcf4c76a6e9ea69207b30cc3cbe749aa8ac18334a6f0d435928"
+      "sha256": "faae80a364ffc654a661b0c390bc8ce39e8ec6f4e94cd14069d8b54625c44090"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -119,7 +133,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "f4b91c9e885d698e85e2f0371c3ad2470bcadda5e03f6c9d288856338ca71cff"
+      "sha256": "26c706a8730956de99d09bb56f331c3721e737f7981b7da3f402e748b9fb267d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -174,6 +188,10 @@
     {
       "en": "21 October 2026: added (ZH), on Ren's request for a 中华 edition and for the 脉络 to be joined to the theories; study section 328; readings D62.",
       "zh": "2026年10月21日：新增（ZH），按 Ren 关于中华本、并把脉络整合进理论的要求；研究第 328 节；读法 D62。"
+    },
+    {
+      "en": "22 October 2026, WH1 and SAT1: the first two gaps, a conjunctive or graded whole and saturation of a coupling, are stated (records a-whole-of-every-part, a-coupling-saturated-by-what-it-has-carried; study sections 333 and 334); the five entries naming them read the new laws and their gap notes point to them. The map's kinds and counts are unchanged.",
+      "zh": "2026年10月22日，WH1 与 SAT1：前两个缺口，合取或分级之整体与耦合之饱和，已陈述（记录 a-whole-of-every-part、a-coupling-saturated-by-what-it-has-carried；研究第 333、334 节）；述及它们的五个条目读新律，其 gap 注指向新律。对应之类别与计数不变。"
     }
   ]
 }

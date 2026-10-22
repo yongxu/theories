@@ -604,7 +604,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   they depend on a family of conditions, the family's renewal gated on it, ends after the
   family's uptake exceeds its replenishment for more consecutive steps than its stock stands
   above the need: no part arises from then on. The uptake is the joint draw, the whole's with
-  whatever else takes.
+  whatever else takes. A whole may instead be active while every part is: it ends as soon as
+  one part ends, persists exactly while every part does, and coincides with the whole of some
+  part exactly where the parts are in step. Counted where their activity is decided, the grade
+  of listed parts, how many are active, gains what arises and loses what ceases across each
+  step, so a whole active while at least `j` of them are arises and ceases only through a part;
+  at `j` one it is the whole of some part, at the number listed the whole of every one, and
+  where some parts are active and not all the whole is diminished.
 * `Becoming.Dissipation` (L1): when every formation gives a closed family less than it
   takes from it, the family runs down and taking from it stops. A finite family from
   which taking recurs, whether of more, of generation or of maintenance, is open at
@@ -2743,7 +2749,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   count is, and a loop coupling at the steps one less than a power of two recurs yet stays
   polynomial. A coupling that stops does not recur, and settling is local; that every schedule
   settles is exactly a dichotomy on decided two-place families, which gives the limited principle
-  of omniscience, even for schedules coupling at most once.
+  of omniscience, even for schedules coupling at most once. Strengths read off what has passed
+  through a coupling read the levels before; where they are zero once an amount has passed, the
+  coupling stops by the step that amount has passed, nothing more passes and, every coupling so
+  saturated, a finite order is exact; acting at each step until saturated from a standing level,
+  it stops by the threshold as a step. With a response not rising, it stops exactly where the
+  response reaches zero; floored at one, it recurs and, coupled into itself, leaves every finite
+  order inexact.
 * `Becoming.MutualDependence` (L2): formations whose continuations depend on one another, and the
   pace it gives, with no premise beyond the hypotheses each statement names. Three readings, each
   strictly stronger: every system the whole (sharing conditions throughout), every influence closure

@@ -1,14 +1,17 @@
 import Becoming.Identity
 import Becoming.Continuation
+import Becoming.Decidedness
 
 /-!
-# Wholes: a persisting whole of brief parts, or of ending listed parts, needs their generation
+# Wholes: a persisting whole of brief parts, or of ending listed parts, needs their generation;
+a whole of every part ends with any part
 
 `Becoming.Identity` names a lineage either as one formation or as its members (`Lineage`).
 `Layered` names both, with no relation saying that the lineage is constituted by its
-members. This module states one part–whole relation, coincidence of activity, and proves
-what it carries, and, with `Becoming.Continuation`, what a draw on the conditions its parts
-arise through does to a whole.
+members. This module states part–whole relations as coincidences of activity, a whole active
+while some part is, while every part is, or while at least a number of listed parts are, and
+proves what they carry, and, with `Becoming.Continuation`, what a draw on the conditions its
+parts arise through does to a whole.
 
 * A formation is the *whole* of some parts when it is active exactly while some part is
   (`Web.Whole`). This is coincidence of activity, not constitution: every formation is the
@@ -70,9 +73,36 @@ arise through does to a whole.
   (`WholeUngated.persists`). So the excess, ending parts and the arising's dependence are
   each needed; that the gate on renewal and the finite listing are needed for this law is not
   shown here.
+* **A whole of every part, and a graded whole.** A formation is the *whole of every part* when it
+  is active exactly while every part is (`Web.AllWhole`); every formation is that of itself as
+  well (`Web.allWhole_self`). Such a whole is inactive wherever one part is
+  (`AllWhole.inactive_of_part`), so it ends as soon as one part ends, with no listing and nothing
+  of arising (`AllWhole.ends_of_part`), and persists exactly while every part does
+  (`AllWhole.persists_iff`); a whole of some part ends only where every part ends and none arises.
+  Dually to `Whole.arises_part`, a whole of some part ceases only as some part ceases
+  (`Whole.ceases_part`). With some part, the two wholes of the same parts are active at the same
+  steps exactly where the parts are in step, all active or none at each step
+  (`Whole.same_iff_inStep`); with no part they part entirely (`AllWhole.active_of_none`). The
+  *grade* of listed parts at a step is how many of them are active (`Web.Grade`), a count of
+  `Becoming.Decidedness`, which exists exactly where their activity is decided. Its account across
+  a step is the census, what arises less what ceases (`Grade.across_step`), so it rises only as a
+  listed part arises and falls only as one ceases (`Grade.arises_of_lt`, `Grade.ceases_of_lt`). A
+  formation active exactly where the grade is at least `j` (`Web.AtLeastWhole`) therefore arises
+  and ceases only through a listed part (`AtLeastWhole.arises_part`, `AtLeastWhole.ceases_part`).
+  At `j` one it is the whole of some listed part, at `j` the number listed the whole of every one
+  (`AtLeastWhole.whole`, `AtLeastWhole.allWhole`; conversely where their activity is decided,
+  `Whole.atLeastWhole`, `AllWhole.atLeastWhole`), so a whole of every listed part arises and
+  ceases only through a listed part (`AllWhole.arises_part`, `AllWhole.ceases_part`). The grade
+  falls short wherever a listed part is inactive (`Grade.lt_length_of_inactive`), and the whole is
+  *diminished*, some parts active and not all (`Web.Diminished`), exactly where the whole of some
+  is active and the whole of every one is not (`Grade.diminished_iff`, `diminished_iff`).
+  Witnesses: the members of `Generations` make a lineage active at every step, while a whole of
+  every member is active at none (`Generations.allWhole_never`); a house of three rafters, the
+  first taken after the first step, ceases with it, and from then on two of the three are active,
+  the whole diminished, what is left standing and the house not (`Rafters.taken`).
 
-Which formations are parts of which, and whether a lineage is read as the whole of its
-members, are representational choices. On Ren's delegation of 15 October 2026 生生不息 is read at
+Which formations are parts of which, whether a lineage is read as the whole of its
+members, and which of the wholes a whole is read as, are representational choices. On Ren's delegation of 15 October 2026 生生不息 is read at
 the level of the whole, as arising that recurs through renewal, lineages and members being levels
 within it (DELEGATED-CHOICES D5). That a collective is the whole of its lives, that what it
 draws on is what its lives arise through, and that the joint draw is its consuming are readings
@@ -294,6 +324,274 @@ theorem Whole.joint_excess_ends {alive : Nat → List F} (whole : W.Whole parts 
     (fun t p part arises => ⟨c, .head [], arising t p part arises⟩) excess start
 
 end Drawn
+
+/-! ## A whole of every part, and a graded whole -/
+
+section Every
+
+variable (W)
+
+/-- `w` is the whole of *every* part satisfying `parts`: it is active exactly while every part
+is. `Whole` is active while some part is. -/
+def AllWhole (parts : F → Prop) (w : F) : Prop :=
+  ∀ t, W.active t w ↔ ∀ p, parts p → W.active t p
+
+/-- The parts are *in step*: at each step, where one part is active every part is. -/
+def InStep (parts : F → Prop) : Prop :=
+  ∀ t p q, parts p → parts q → W.active t p → W.active t q
+
+/-- Every formation is the whole of every part of itself, as it is the whole of some part of
+itself (`whole_self`): with one part the two wholes are one. -/
+theorem allWhole_self (f : F) : W.AllWhole (· = f) f :=
+  fun _ => ⟨fun active _ same => Eq.subst (motive := fun g => W.active _ g) same.symm active,
+    fun every => every f rfl⟩
+
+variable {W}
+
+/-- **Without a part, no whole of every part.** A whole of every part is inactive wherever one
+of its parts is. -/
+theorem AllWhole.inactive_of_part (whole : W.AllWhole parts w) {p : F} (part : parts p)
+    {t : Nat} (inactive : ¬ W.active t p) : ¬ W.active t w :=
+  fun active => inactive ((whole t).mp active p part)
+
+/-- **A whole of every part ends as soon as one part ends**: it lasts no longer than its least
+lasting part. No listing, and nothing of arising, is needed. A whole of some part ends only
+where every part ends and none arises (`Whole.ends_without_arising`). -/
+theorem AllWhole.ends_of_part (whole : W.AllWhole parts w) {p : F} (part : parts p)
+    (ends : W.Ends p) : W.Ends w :=
+  match ends with
+  | ⟨T, gone⟩ => ⟨T, fun t later => whole.inactive_of_part part (gone t later)⟩
+
+/-- A whole of every part is active at every step from `T` on exactly where every part is: it
+persists with no arising, but only while no part ceases. A whole of some part persists only
+through the arising of its parts (`Whole.needs_arising`). -/
+theorem AllWhole.persists_iff (whole : W.AllWhole parts w) {T : Nat} :
+    (∀ t, T ≤ t → W.active t w) ↔ ∀ p, parts p → ∀ t, T ≤ t → W.active t p :=
+  ⟨fun persists p part t later => (whole t).mp (persists t later) p part,
+   fun every t later => (whole t).mpr fun p part => every p part t later⟩
+
+/-- A whole of every part, one of which is brief for `d`, is brief for `d`. -/
+theorem AllWhole.brief_of_part (whole : W.AllWhole parts w) {p : F} (part : parts p)
+    {d : Nat} (brief : W.Brief d p) : W.Brief d w :=
+  fun t active => whole.inactive_of_part part (brief t ((whole t).mp active p part))
+
+/-- A whole of some part ceases only as some part ceases: the dual of `Whole.arises_part`. -/
+theorem Whole.ceases_part (whole : W.Whole parts w) {t : Nat} (ceases : W.Ceases t w) :
+    ∃ p, parts p ∧ W.Ceases t p :=
+  match (whole t).mp ceases.1 with
+  | ⟨p, part, active⟩ =>
+    ⟨p, part, active, fun after => ceases.2 ((whole (t + 1)).mpr ⟨p, part, after⟩)⟩
+
+/-- With some part, the whole of every part is active only where the whole of some part is. -/
+theorem AllWhole.active_whole {v : F} (all : W.AllWhole parts v) (whole : W.Whole parts w)
+    {p₀ : F} (part₀ : parts p₀) {t : Nat} (active : W.active t v) : W.active t w :=
+  (whole t).mpr ⟨p₀, part₀, (all t).mp active p₀ part₀⟩
+
+/-- **The two wholes coincide exactly where the parts are in step.** With some part, the whole of
+some part and the whole of every part of the same parts are active at the same steps exactly
+where, at each step, one part active means every part active. -/
+theorem Whole.same_iff_inStep {v : F} (whole : W.Whole parts w) (all : W.AllWhole parts v)
+    {p₀ : F} (part₀ : parts p₀) :
+    (∀ t, W.active t w ↔ W.active t v) ↔ W.InStep parts :=
+  ⟨fun same t p q part partq active =>
+      (all t).mp ((same t).mp ((whole t).mpr ⟨p, part, active⟩)) q partq,
+   fun inStep t => ⟨fun active => match (whole t).mp active with
+      | ⟨p, part, activep⟩ => (all t).mpr fun q partq => inStep t p q part partq activep,
+    all.active_whole whole part₀⟩⟩
+
+/-- Without parts the two wholes part entirely: the whole of every part of none is active at
+every step, the whole of some part of none at no step. So the coincidence needs some part. -/
+theorem AllWhole.active_of_none (all : W.AllWhole parts w) (absent : ∀ p, ¬ parts p) (t : Nat) :
+    W.active t w ∧ ∀ {v : F}, W.Whole parts v → ¬ W.active t v :=
+  ⟨(all t).mpr fun p part => absurd part (absent p),
+   fun whole active => match (whole t).mp active with
+    | ⟨p, part, _⟩ => absent p part⟩
+
+end Every
+
+section Grade
+
+/-- A count is below the members wherever what it counts fails of one of them. -/
+theorem _root_.Becoming.Counts.lt_length_of_fails {α : Type} {q : α → Prop} {a : α} (fails : ¬ q a) :
+    ∀ {as : List α} {n : Nat}, Counts as q n → a ∈ as → n < as.length
+  | [], _, _, mem => nomatch mem
+  | _ :: _, _, ⟨_, m, indicates, rest, sum⟩, mem => match mem_cons_cases mem with
+    | .inl same =>
+      Nat.lt_of_le_of_lt (Nat.le_of_eq (sum.trans ((congrArg (· + m)
+          (indicates.eq_zero (Eq.subst (motive := fun x => ¬ q x) same fails))).trans
+          (Nat.zero_add m))))
+        (Nat.lt_succ_of_le rest.le_length)
+    | .inr mem =>
+      Nat.lt_of_le_of_lt (Nat.le_of_eq sum)
+        (Nat.lt_of_lt_of_le (Nat.add_lt_add_of_le_of_lt indicates.le_one
+            (Counts.lt_length_of_fails fails rest mem))
+          (Nat.le_of_eq (Nat.add_comm 1 _)))
+
+/-- A count equal to the members holds of every member. -/
+theorem _root_.Becoming.Counts.all_of_eq_length {α : Type} {q : α → Prop} {as : List α} {n : Nat}
+    (counts : Counts as q n) (all : n = as.length) : ∀ a, a ∈ as → q a :=
+  fun a mem => match (counts_iff_decided (q := q)).mp ⟨n, counts⟩ a mem with
+  | .inl holds => holds
+  | .inr fails =>
+    absurd (Counts.lt_length_of_fails fails counts mem) (Nat.not_lt_of_le (Nat.le_of_eq all.symm))
+
+variable (W)
+
+/-- `n` is the *grade* of the listed parts at `t`: how many of them are active, each listing
+counted. A grade exists exactly where each listed part's activity at `t` is decided
+(`counts_iff_decided`); no decision procedure is used. -/
+def Grade (ps : List F) (t n : Nat) : Prop :=
+  Counts ps (W.active t) n
+
+/-- `w` is the whole of at least `j` of the listed parts: at each step the parts have a grade,
+and `w` is active exactly where it is at least `j`. -/
+def AtLeastWhole (j : Nat) (ps : List F) (w : F) : Prop :=
+  ∀ t, ∃ n, W.Grade ps t n ∧ (W.active t w ↔ j ≤ n)
+
+/-- The listed parts' whole is *diminished* at `t`: some of them are active, not all. -/
+def Diminished (ps : List F) (t : Nat) : Prop :=
+  ∃ n, W.Grade ps t n ∧ 0 < n ∧ n < ps.length
+
+variable {W} {ps : List F}
+
+/-- A grade is positive exactly where some listed part is active. -/
+theorem Grade.pos_iff {t n : Nat} (grade : W.Grade ps t n) :
+    0 < n ↔ ∃ p, p ∈ ps ∧ W.active t p :=
+  ⟨Counts.exists_of_pos grade, fun ⟨_, mem, active⟩ => Counts.pos_of_mem grade mem active⟩
+
+/-- A grade is the number of listed parts exactly where every listed part is active. -/
+theorem Grade.eq_length_iff {t n : Nat} (grade : W.Grade ps t n) :
+    n = ps.length ↔ ∀ p, p ∈ ps → W.active t p :=
+  ⟨Counts.all_of_eq_length grade, fun all => Counts.unique grade (Counts.of_all all)⟩
+
+/-- **Without a part, the grade falls short.** Where a listed part is inactive, the grade is
+below the number of listed parts. -/
+theorem Grade.lt_length_of_inactive {t n : Nat} (grade : W.Grade ps t n) {p : F} (mem : p ∈ ps)
+    (inactive : ¬ W.active t p) : n < ps.length :=
+  Counts.lt_length_of_fails inactive grade mem
+
+/-- **The grade's account across a step.** Wherever the parts arising and ceasing across the step
+are counted, the grade after it with what ceased is the grade before it with what arose. This is
+the census of `Becoming.Decidedness` (`Counts.across_step`) read of activity. -/
+theorem Grade.across_step {t n n' a c : Nat} (now : W.Grade ps t n) (next : W.Grade ps (t + 1) n')
+    (arose : Counts ps (W.Arises t) a) (ceased : Counts ps (W.Ceases t) c) : n' + c = n + a :=
+  Counts.across_step (p := fun f s => W.active s f) now next arose ceased
+
+/-- Where the grade rises across a step, a listed part arises there. -/
+theorem Grade.arises_of_lt {t n n' : Nat} (now : W.Grade ps t n) (next : W.Grade ps (t + 1) n')
+    (rises : n < n') : ∃ p, p ∈ ps ∧ W.Arises t p :=
+  match (counts_iff_decided (q := W.Arises t)).mpr (fun p mem =>
+      Decided.and ((counts_iff_decided.mp ⟨n, now⟩ p mem).not)
+        (counts_iff_decided.mp ⟨n', next⟩ p mem)),
+    (counts_iff_decided (q := W.Ceases t)).mpr (fun p mem =>
+      Decided.and (counts_iff_decided.mp ⟨n, now⟩ p mem)
+        ((counts_iff_decided.mp ⟨n', next⟩ p mem).not)) with
+  | ⟨a, arose⟩, ⟨c, ceased⟩ =>
+    have account : n' + c = n + a := Grade.across_step now next arose ceased
+    match Nat.eq_zero_or_pos a with
+    | .inr pos => arose.exists_of_pos pos
+    | .inl zero => absurd (Nat.lt_of_lt_of_le rises (Nat.le_trans (Nat.le_add_right n' c)
+        (Nat.le_of_eq (account.trans ((congrArg (n + ·) zero).trans (Nat.add_zero n))))))
+        (Nat.lt_irrefl n)
+
+/-- Where the grade falls across a step, a listed part ceases there. -/
+theorem Grade.ceases_of_lt {t n n' : Nat} (now : W.Grade ps t n) (next : W.Grade ps (t + 1) n')
+    (falls : n' < n) : ∃ p, p ∈ ps ∧ W.Ceases t p :=
+  match (counts_iff_decided (q := W.Arises t)).mpr (fun p mem =>
+      Decided.and ((counts_iff_decided.mp ⟨n, now⟩ p mem).not)
+        (counts_iff_decided.mp ⟨n', next⟩ p mem)),
+    (counts_iff_decided (q := W.Ceases t)).mpr (fun p mem =>
+      Decided.and (counts_iff_decided.mp ⟨n, now⟩ p mem)
+        ((counts_iff_decided.mp ⟨n', next⟩ p mem).not)) with
+  | ⟨a, arose⟩, ⟨c, ceased⟩ =>
+    have account : n' + c = n + a := Grade.across_step now next arose ceased
+    match Nat.eq_zero_or_pos c with
+    | .inr pos => ceased.exists_of_pos pos
+    | .inl zero => absurd (Nat.lt_of_lt_of_le falls (Nat.le_trans (Nat.le_add_right n a)
+        (Nat.le_of_eq (account.symm.trans ((congrArg (n' + ·) zero).trans (Nat.add_zero n'))))))
+        (Nat.lt_irrefl n')
+
+/-- **A whole of at least `j` listed parts arises only as some listed part arises.** -/
+theorem AtLeastWhole.arises_part {j : Nat} (whole : W.AtLeastWhole j ps w) {t : Nat}
+    (arises : W.Arises t w) : ∃ p, p ∈ ps ∧ W.Arises t p :=
+  match whole t, whole (t + 1) with
+  | ⟨_, now, before⟩, ⟨_, next, after⟩ =>
+    Grade.arises_of_lt now next (Nat.lt_of_lt_of_le
+      (Nat.gt_of_not_le fun reached => arises.1 (before.mpr reached)) (after.mp arises.2))
+
+/-- **A whole of at least `j` listed parts ceases only as some listed part ceases.** -/
+theorem AtLeastWhole.ceases_part {j : Nat} (whole : W.AtLeastWhole j ps w) {t : Nat}
+    (ceases : W.Ceases t w) : ∃ p, p ∈ ps ∧ W.Ceases t p :=
+  match whole t, whole (t + 1) with
+  | ⟨_, now, before⟩, ⟨_, next, after⟩ =>
+    Grade.ceases_of_lt now next (Nat.lt_of_lt_of_le
+      (Nat.gt_of_not_le fun reached => ceases.2 (after.mpr reached)) (before.mp ceases.1))
+
+/-- The whole of at least one listed part is the whole of some listed part. -/
+theorem AtLeastWhole.whole (whole : W.AtLeastWhole 1 ps w) : W.Whole (· ∈ ps) w :=
+  fun t => match whole t with
+  | ⟨_, grade, iff⟩ => iff.trans (Grade.pos_iff grade)
+
+/-- Where the listed parts' activity is decided at every step, the whole of some listed part is
+the whole of at least one. -/
+theorem Whole.atLeastWhole (whole : W.Whole (· ∈ ps) w)
+    (decided : ∀ t p, p ∈ ps → Decided (W.active t p)) : W.AtLeastWhole 1 ps w :=
+  fun t => match (counts_iff_decided (q := W.active t)).mpr (decided t) with
+  | ⟨n, grade⟩ => ⟨n, grade, (whole t).trans (Grade.pos_iff grade).symm⟩
+
+/-- The whole of at least as many listed parts as are listed is the whole of every listed part.
+-/
+theorem AtLeastWhole.allWhole (whole : W.AtLeastWhole ps.length ps w) : W.AllWhole (· ∈ ps) w :=
+  fun t => match whole t with
+  | ⟨_, grade, iff⟩ => iff.trans
+    ⟨fun le => (Grade.eq_length_iff grade).mp (Nat.le_antisymm (Counts.le_length grade) le),
+     fun all => Nat.le_of_eq ((Grade.eq_length_iff grade).mpr all).symm⟩
+
+/-- Where the listed parts' activity is decided at every step, the whole of every listed part is
+the whole of at least as many as are listed. -/
+theorem AllWhole.atLeastWhole (all : W.AllWhole (· ∈ ps) w)
+    (decided : ∀ t p, p ∈ ps → Decided (W.active t p)) : W.AtLeastWhole ps.length ps w :=
+  fun t => match (counts_iff_decided (q := W.active t)).mpr (decided t) with
+  | ⟨n, grade⟩ => ⟨n, grade, (all t).trans
+      ⟨fun every => Nat.le_of_eq ((Grade.eq_length_iff grade).mpr every).symm,
+       fun le => (Grade.eq_length_iff grade).mp (Nat.le_antisymm (Counts.le_length grade) le)⟩⟩
+
+/-- **A whole of every listed part arises only as some listed part arises**, where their activity
+is decided: the account of the grade (`AtLeastWhole.arises_part`). -/
+theorem AllWhole.arises_part (all : W.AllWhole (· ∈ ps) w)
+    (decided : ∀ t p, p ∈ ps → Decided (W.active t p)) {t : Nat} (arises : W.Arises t w) :
+    ∃ p, p ∈ ps ∧ W.Arises t p :=
+  (all.atLeastWhole decided).arises_part arises
+
+/-- **A whole of every listed part ceases only as some listed part ceases**, where their activity
+is decided: the account of the grade (`AtLeastWhole.ceases_part`). -/
+theorem AllWhole.ceases_part (all : W.AllWhole (· ∈ ps) w)
+    (decided : ∀ t p, p ∈ ps → Decided (W.active t p)) {t : Nat} (ceases : W.Ceases t w) :
+    ∃ p, p ∈ ps ∧ W.Ceases t p :=
+  (all.atLeastWhole decided).ceases_part ceases
+
+/-- **The diminished whole.** Where the listed parts have a grade, the whole they make is
+diminished, some parts active and not all, exactly where the whole of some of them is active and
+the whole of every one is not. -/
+theorem Grade.diminished_iff {v : F} (whole : W.Whole (· ∈ ps) w) (all : W.AllWhole (· ∈ ps) v)
+    {t n : Nat} (grade : W.Grade ps t n) :
+    (0 < n ∧ n < ps.length) ↔ (W.active t w ∧ ¬ W.active t v) :=
+  ⟨fun ⟨pos, short⟩ => ⟨(whole t).mpr ((Grade.pos_iff grade).mp pos),
+     fun active => Nat.ne_of_lt short ((Grade.eq_length_iff grade).mpr ((all t).mp active))⟩,
+   fun ⟨active, notAll⟩ => ⟨(Grade.pos_iff grade).mpr ((whole t).mp active),
+     Nat.lt_of_le_of_ne (Counts.le_length grade) fun full => notAll ((all t).mpr
+       ((Grade.eq_length_iff grade).mp full))⟩⟩
+
+/-- So the whole is diminished at `t` exactly where, its parts' activity decided there, the whole
+of some is active and the whole of every one is not. -/
+theorem diminished_iff {v : F} (whole : W.Whole (· ∈ ps) w) (all : W.AllWhole (· ∈ ps) v)
+    {t : Nat} (decided : ∀ p, p ∈ ps → Decided (W.active t p)) :
+    W.Diminished ps t ↔ (W.active t w ∧ ¬ W.active t v) :=
+  ⟨fun ⟨_, grade, within⟩ => (Grade.diminished_iff whole all grade).mp within,
+   fun both => match (counts_iff_decided (q := W.active t)).mpr decided with
+    | ⟨n, grade⟩ => ⟨n, grade, (Grade.diminished_iff whole all grade).mpr both⟩⟩
+
+end Grade
 
 end Web
 
@@ -925,5 +1223,97 @@ theorem persists : web.Whole parts .lineage ∧ web.Listed parts Generations.ali
    Nat.lt_succ_self 1, fun _ => trivial, Generations.generations.2.2.2.2.2.1⟩
 
 end WholeUngated
+
+namespace Generations
+
+/-- **The same parts, the two wholes.** A formation that is the whole of every member is active
+at no step, while the lineage, the whole of some member, is active at every step (`generations`):
+the member arising two steps on is not yet active. -/
+theorem allWhole_never {v : Formation} (all : web.AllWhole parts v) (t : Nat) :
+    ¬ web.active t v :=
+  all.inactive_of_part (p := .member (t + 2)) trivial fun active => match active with
+    | .inl same => Nat.ne_of_lt (Nat.lt_add_of_pos_right (Nat.succ_pos 1)) same
+    | .inr same => Nat.ne_of_lt (Nat.lt_succ_of_lt (Nat.lt_add_of_pos_right (Nat.succ_pos 1))) same
+
+end Generations
+
+namespace Rafters
+
+/-- Rafters, a house and what is left of it. -/
+inductive Formation where
+  | rafter (i : Nat)
+  | house
+  | remains
+
+/-- Three rafters. -/
+def rafters : List Formation := [.rafter 0, .rafter 1, .rafter 2]
+
+/-- The first rafter is taken after the first step, the others stay; the house stands at the
+first step only, what is left of it at every step. -/
+def web : Web Formation Unit where
+  level _ _ := 0
+  active t f := match f with
+    | .rafter i => t = 0 ∨ 0 < i
+    | .house => t = 0
+    | .remains => True
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+/-- The house is the whole of every rafter. -/
+theorem house : web.AllWhole (· ∈ rafters) .house :=
+  fun _ => ⟨fun first p mem => match p, mem with
+      | _, .head _ => .inl first
+      | _, .tail _ (.head _) => .inl first
+      | _, .tail _ (.tail _ (.head _)) => .inl first
+      | _, .tail _ (.tail _ (.tail _ no)) => (nomatch no),
+    fun every => match every (.rafter 0) (.head _) with
+      | .inl first => first
+      | .inr stays => absurd stays (Nat.lt_irrefl 0)⟩
+
+/-- What is left is the whole of some rafter. -/
+theorem remains : web.Whole (· ∈ rafters) .remains :=
+  fun _ => ⟨fun _ => ⟨.rafter 1, .tail _ (.head _), .inr (Nat.succ_pos 0)⟩, fun _ => trivial⟩
+
+/-- Each formation's activity is decided at every step. -/
+theorem decided : ∀ t f, Decided (web.active t f)
+  | t, .rafter i => match Nat.decEq t 0 with
+    | isTrue first => .inl (.inl first)
+    | isFalse later => match Nat.decLt 0 i with
+      | isTrue kept => .inl (.inr kept)
+      | isFalse taken => .inr fun active => match active with
+        | .inl first => later first
+        | .inr kept => taken kept
+  | t, .house => match Nat.decEq t 0 with
+    | isTrue first => .inl first
+    | isFalse later => .inr later
+  | _, .remains => .inl trivial
+
+/-- From the second step on, two of the three rafters are active. -/
+theorem grade_two {t : Nat} (later : 0 < t) : web.Grade rafters t 2 :=
+  ⟨0, 2, .inr ⟨fun active => match active with
+      | .inl first => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) first later)
+      | .inr stays => Nat.lt_irrefl 0 stays, rfl⟩,
+    ⟨1, 1, .inl ⟨.inr (Nat.succ_pos 0), rfl⟩, ⟨1, 0, .inl ⟨.inr (Nat.succ_pos 1), rfl⟩, rfl, rfl⟩,
+      rfl⟩, rfl⟩
+
+/-- **A rafter taken, no house.** The house of three rafters ceases across the first step, as the
+first rafter does; from then on two of the three are active, the whole is diminished, what is
+left stands and the house does not. -/
+theorem taken :
+    web.Ceases 0 .house ∧ web.Ceases 0 (.rafter 0) ∧
+    ∀ t, 0 < t → web.Grade rafters t 2 ∧ web.Diminished rafters t ∧
+      web.active t .remains ∧ ¬ web.active t .house :=
+  ⟨⟨rfl, fun after => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) after (Nat.succ_pos 0))⟩,
+   ⟨.inl rfl, fun active => match active with
+      | .inl first => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) first (Nat.succ_pos 0))
+      | .inr stays => Nat.lt_irrefl 0 stays⟩,
+   fun t later =>
+    have notHouse : ¬ web.active t .house :=
+      fun first => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) first later)
+    ⟨grade_two later, (Web.diminished_iff remains house fun p _ => decided t p).mpr ⟨trivial, notHouse⟩,
+     trivial, notHouse⟩⟩
+
+end Rafters
 
 end Becoming

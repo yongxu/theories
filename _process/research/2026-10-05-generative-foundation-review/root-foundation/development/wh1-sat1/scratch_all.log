@@ -1,0 +1,31 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wh1-sat1/tree",
+  "modules": 301,
+  "ran": [
+    "Becoming.Frequency",
+    "Becoming.LoopReturn",
+    "Becoming.MutualDependence",
+    "Becoming.CourseWorlds",
+    "Becoming.FormedLoops",
+    "Becoming.CouplingTraces",
+    "Becoming.RouteTraces",
+    "Becoming.StrengthFlows",
+    "Becoming",
+    "BecomingAxiomAudit",
+    "BecomingFrequencyAxiomAudit"
+  ],
+  "reused": 292,
+  "unclean": [],
+  "audits": {
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    },
+    "Becoming.Frequency": {
+      "theorems": 105,
+      "declarations": 126,
+      "with_axioms": {}
+    }
+  }
+}
