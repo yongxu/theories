@@ -508,12 +508,12 @@
     {
       "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "provenance",
-      "sha256": "0ace1fb57dbda20df167265f5e70c0c2fe2b8c4ab2ce8fbfe313230bb0028859"
+      "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
-      "sha256": "e26b76a1167df9f5653afd77d5a165fce3bb59c13d6a8aa840bf54ed0451751c"
+      "sha256": "db2bda38897f5ee972a44f786f4c5ed119b1e288587faff0d605aa7dcac49947"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/rg-regulation/simulate.py",

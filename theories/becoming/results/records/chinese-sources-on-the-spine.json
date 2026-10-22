@@ -50,8 +50,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_ro.py passes: 248 passages (95 agreements, 94 exact scopes, 59 divergences), every fragment verbatim in its preserved text (93 files bound by SHA-256), 601 declarations in the current receipt, 121 records, the atlas ids in an excerpt rebuilt from the two archives, and the chapter's tables. Five mappers drafted; the integrator checked every quotation, declaration and record and read every reading, correcting six (study section 207). Not independently reviewed; no collation with a printed edition.",
-    "zh": "verify_ro.py 通过：248 段（相合 95、定域 94、相分 59），每段原文逐字见于所存文本（93 个文件以 SHA-256 绑定），601 个声明在现行回执中，121 份记录，图谱编号在由两个存档重建的摘录中，以及章节之表。五个映射者起草；整合者核对每条引文、声明与记录，通读每条读法，改正六处（研究第 207 节）。未经独立审查；未与刻本对校。"
+    "en": "verify_ro.py passes: 248 passages (91 agreements, 98 exact scopes, 59 divergences), every fragment verbatim in its preserved text (93 files bound by SHA-256), 604 declarations in the current receipt, 122 records, the atlas ids in an excerpt rebuilt from the two archives, and the chapter's tables. Five mappers drafted; the integrator checked every quotation, declaration and record and read every reading, correcting six (study section 207). Not independently reviewed; no collation with a printed edition. Four agreements became exact scopes under D62 (board item ZHK).",
+    "zh": "verify_ro.py 通过：248 段（相合 91、定域 98、相分 59），每段原文逐字见于所存文本（93 个文件以 SHA-256 绑定），604 个声明在现行回执中，122 份记录，图谱编号在由两个存档重建的摘录中，以及章节之表。五个映射者起草；整合者核对每条引文、声明与记录，通读每条读法，改正六处（研究第 207 节）。未经独立审查；未与刻本对校。四段相合依 D62 改为定域（看板项 ZHK）。"
   },
   "next_delta": {
     "en": "Three gaps, each to be claimed before it is written: a graded order by closure level; division across several conditions; tolerance compared across laws.",
@@ -136,12 +136,12 @@
     {
       "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "0ace1fb57dbda20df167265f5e70c0c2fe2b8c4ab2ce8fbfe313230bb0028859"
+      "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
-      "sha256": "e26b76a1167df9f5653afd77d5a165fce3bb59c13d6a8aa840bf54ed0451751c"
+      "sha256": "db2bda38897f5ee972a44f786f4c5ed119b1e288587faff0d605aa7dcac49947"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
@@ -207,6 +207,10 @@
     {
       "en": "2026-10-20: 11 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4b9e3001d3c120a9/chinese-sources-on-the-spine.json and in git.",
       "zh": "2026-10-20：11 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4b9e3001d3c120a9/chinese-sources-on-the-spine.json 和 git 中。"
+    },
+    {
+      "en": "22 October 2026, ZHK (the five kinds the 脉络 map decided, decision D62): four passages read again by the 脉络 map as the same structure, and judged exact scope there, changed from agreement to exact scope through build_passages.py FIXES, each reading rewritten from the 脉络 entries to say where the claim holds: 荀子「有化而无别，谓之一实」 (identity across a step is fixed by conservation exactly where nothing else stands at the relatum's level after it; elsewhere a continuation must be chosen, World.balanced_reidentify_iff_alike added), 孙子 吴越同舟 (the common dependence agrees; the general who makes them act as one is a single centre; Flow.mutuallyDependent_of_common and mutual-dependence-and-its-pace added), 杂阿含「此有故彼有」 (the sufficient direction the spine does not give) and 老子「柔弱者生之徒」 (from total withholding, giving needs a formation sparing all it waits on; Tolerance.gives_needs_sparing and Tolerance.total_stays added). Counts 95/94/59 become 91/98/59; passages.json rebuilt, CHINESE-SOURCES-AND-BECOMING.md tables spliced and its counts, the 兵家 and 佛教 paragraphs and section 10 follow; validation scope updated. The claim is unchanged; four readings narrow to their scope.",
+      "zh": "2026年10月22日，ZHK（《中华思想脉络》之图所判定的五处类别，决定 D62）：脉络之图读同一结构而判为定域的四段，经 build_passages.py 的 FIXES 由相合改为定域，各段读法依脉络条目改写为说出此句在何处成立：荀子「有化而无别，谓之一实」（跨步之同一，守恒恰在步后没有别的关系项与它水平相同之处定下，别处要选一个延续；加 World.balanced_reidentify_iff_alike）、孙子吴越同舟（共同依存相合；使之如一的将帅是单一中心；加 Flow.mutuallyDependent_of_common 与 mutual-dependence-and-its-pace）、杂阿含「此有故彼有」（充分方向脊柱不给）、老子「柔弱者生之徒」（自全面扣留起，给予须有一形成全容；加 Tolerance.gives_needs_sparing 与 Tolerance.total_stays）。计数由 95/94/59 变为 91/98/59；passages.json 重建，CHINESE-SOURCES-AND-BECOMING.md 之表重新拼入，其计数、兵家与佛教两段及第 10 节随之；验证范围更新。论断不变；四条读法收窄至其范围。"
     }
   ],
   "text_versions": [
