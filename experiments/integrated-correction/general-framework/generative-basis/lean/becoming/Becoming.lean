@@ -1,3 +1,4 @@
+import Becoming.Grammar
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -2222,6 +2223,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   horizon. Two parts' plans run together keep both guards where joint steps project onto the
   parts and the joint moves are usable throughout, and every joint plan that keeps a guard has
   them usable.
+* `Becoming.Grammar` (L0): the grammar, a relational calculus with continuation relative to a
+  class at its centre, stated for every carrier and every relation and named in Chinese with a
+  binding table. Continuation (`«续»`) is 缘 met with a class; lines, families and the positions
+  of beginning, abiding and ending are read from it, and no position stands by itself: the same
+  occurrence abides under the one and begins and ends under identity (`«四相无自立»`). A class
+  constant under 缘 never lets a continuation end (`«有常则续不尽»`), so a line's own regularity
+  is its class's core (`«根»`), and taking the core as the class leaves a flame with no
+  continuation (`«以核为判据则火无续»`). For a class, constancy is exactly closure of the coarse
+  net (`«闭合当且仅当有常»`); that every occurrence either begins or has a predecessor is exactly
+  excluded middle (`«四相之定当且仅当排中»`). A leaf until the continuation family is lifted
+  onto it (board item OU3).
 * `Becoming.Prelude` (L0): the lemmas on numbers, truth values, lists and options that the layers
   use, each stated once (no premise; it imports only Init): cancellation, subtraction and products
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,

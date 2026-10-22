@@ -85,24 +85,24 @@ structure «类» (E : «际» α) : Prop where
   symm : ∀ {x y}, E x y → E y x
   trans : ∀ {x y z}, E x y → E y z → E x z
 
-theorem «则».refl (R : «际» α) : «则» R R := fun _ _ h => h
+theorem «则之自反» (R : «际» α) : «则» R R := fun _ _ h => h
 
-theorem «则».trans {R S T : «际» α} (h₁ : «则» R S) (h₂ : «则» S T) : «则» R T :=
+theorem «则之传递» {R S T : «际» α} (h₁ : «则» R S) (h₂ : «则» S T) : «则» R T :=
   fun x y h => h₂ x y (h₁ x y h)
 
-theorem «及».trans {R : «际» α} {x y z : α} (h₁ : «及» R x y) (h₂ : «及» R y z) :
+theorem «及之传递» {R : «际» α} {x y z : α} (h₁ : «及» R x y) (h₂ : «及» R y z) :
     «及» R x z := by
   induction h₁ with
   | one h => exact .more h h₂
   | more h _ ih => exact .more h (ih h₂)
 
-theorem «及».mono {R S : «际» α} (h : «则» R S) : «则» («及» R) («及» S) := by
+theorem «及之单调» {R S : «际» α} (h : «则» R S) : «则» («及» R) («及» S) := by
   intro x y hr
   induction hr with
   | one h' => exact .one (h _ _ h')
   | more h' _ ih => exact .more (h _ _ h') ih
 
-theorem «一».«类» : «类» («一» : «际» α) :=
+theorem «一为类» : «类» («一» : «际» α) :=
   ⟨fun _ => trivial, fun _ => trivial, fun _ _ => trivial⟩
 
 end Operations
@@ -149,7 +149,7 @@ theorem «续含于缘» (R E : «际» α) : «则» («续» R E) R := fun _ _
 
 /-- A line runs along 缘: it is contained in the reach of `R`. -/
 theorem «相续含于及» (R E : «际» α) : «则» («相续» R E) («及» R) :=
-  «及».mono («续含于缘» R E)
+  «及之单调» («续含于缘» R E)
 
 /-- Continuation under the one (`«一»`) is 缘 itself: the whole net continues as one. -/
 theorem «一之续» (R : «际» α) : «谓» («续» R «一») R :=
@@ -216,7 +216,7 @@ def «无环» (R : «际» α) : Prop := ∀ x, ¬ «及» R x x
 theorem «无环则及为序» {R : «际» α} (h : «无环» R) :
     (∀ x, ¬ «及» R x x) ∧ (∀ {x y z}, «及» R x y → «及» R y z → «及» R x z) ∧
       (∀ {x y}, «及» R x y → ¬ «及» R y x) :=
-  ⟨h, «及».trans, fun hxy hyx => h _ (hxy.trans hyx)⟩
+  ⟨h, «及之传递», fun hxy hyx => h _ («及之传递» hxy hyx)⟩
 
 /-- One family of continuation (同族): the equivalence closure of continuation under `E`. A line
 may split and merge; its family gathers every occurrence joined to it by continuation read either
@@ -227,7 +227,7 @@ inductive «同族» (R E : «际» α) : «际» α
   | symm {x y : α} : «同族» R E x y → «同族» R E y x
   | trans {x y z : α} : «同族» R E x y → «同族» R E y z → «同族» R E x z
 
-theorem «同族».«类» (R E : «际» α) : «类» («同族» R E) :=
+theorem «同族为类» (R E : «际» α) : «类» («同族» R E) :=
   ⟨«同族».refl, «同族».symm, «同族».trans⟩
 
 /-- The line from `x` never ends (不穷): every occurrence it reaches has a successor. That some
@@ -253,7 +253,7 @@ def «生生» (R E : «际» α) (x : α) : Prop :=
     (∀ z, S z → ∃ y w, R z y ∧ «生» R E y ∧ «相续» R E y w ∧ S w) ∧ S x
 
 /-- Renewal without end renews: it conditions a beginning whose line goes on to renewal again. -/
-theorem «生生».unfold {R E : «际» α} {x : α} (h : «生生» R E x) :
+theorem «生生之展» {R E : «际» α} {x : α} (h : «生生» R E x) :
     ∃ y w, R x y ∧ «生» R E y ∧ «相续» R E y w ∧ «生生» R E w :=
   match h with
   | ⟨S, hS, hx⟩ =>
@@ -261,14 +261,14 @@ theorem «生生».unfold {R E : «际» α} {x : α} (h : «生生» R E x) :
     | ⟨y, w, hr, hb, hl, hw⟩ => ⟨y, w, hr, hb, hl, S, hS, hw⟩
 
 /-- Every family that keeps renewing lies inside renewal without end. -/
-theorem «生生».greatest {R E : «际» α} {S : α → Prop}
+theorem «生生最大» {R E : «际» α} {S : α → Prop}
     (hS : ∀ z, S z → ∃ y w, R z y ∧ «生» R E y ∧ «相续» R E y w ∧ S w)
     {x : α} (hx : S x) : «生生» R E x :=
   ⟨S, hS, hx⟩
 
 /-- Renewal without end is renewal. -/
 theorem «生生则复生» {R E : «际» α} {x : α} (h : «生生» R E x) : «复生» R E x :=
-  match h.unfold with
+  match «生生之展» h with
   | ⟨y, _, hr, hb, hl, _⟩ =>
     ⟨y, hr, hb, match hl with
       | .one c => ⟨_, c⟩
@@ -276,7 +276,7 @@ theorem «生生则复生» {R E : «际» α} {x : α} (h : «生生» R E x) :
 
 /-- Under the one there is no renewal without end. -/
 theorem «一之下无生生» (R : «际» α) (x : α) : ¬ «生生» R «一» x :=
-  fun h => match h.unfold with
+  fun h => match «生生之展» h with
     | ⟨_, _, hr, hb, _, _⟩ => hb ⟨x, hr, trivial⟩
 
 /-- Beginning and abiding exclude each other. -/
@@ -323,7 +323,7 @@ becomes something `E`-alike to it. -/
 def «有常» (R E : «际» α) : Prop := «则» («而» («逆» E) R) («而» R («逆» E))
 
 /-- The pointwise form of constancy. -/
-theorem «有常».iff (R E : «际» α) :
+theorem «有常之逐点» (R E : «际» α) :
     «有常» R E ↔ ∀ u u', E u u' → ∀ v, R u v → ∃ v', R u' v' ∧ E v v' := by
   constructor
   · intro h u u' he v hr
@@ -371,24 +371,24 @@ theorem «根» (R E : «际» α) :
     exact ⟨S, hSE, hsym, hc, hsym x y h⟩
 
 /-- Constant relations compose. -/
-theorem «有常».comp {R S₁ S₂ : «际» α} (h₁ : «有常» R S₁) (h₂ : «有常» R S₂) :
+theorem «有常可复合» {R S₁ S₂ : «际» α} (h₁ : «有常» R S₁) (h₂ : «有常» R S₂) :
     «有常» R («而» S₁ S₂) := by
-  apply («有常».iff R _).mpr
+  apply («有常之逐点» R _).mpr
   intro u u' ⟨m, hum, hmu'⟩ v hr
-  match («有常».iff R S₁).mp h₁ u m hum v hr with
+  match («有常之逐点» R S₁).mp h₁ u m hum v hr with
   | ⟨v₁, hr₁, hv₁⟩ =>
-    match («有常».iff R S₂).mp h₂ m u' hmu' v₁ hr₁ with
+    match («有常之逐点» R S₂).mp h₂ m u' hmu' v₁ hr₁ with
     | ⟨v', hr', hv'⟩ => exact ⟨v', hr', v₁, hv₁, hv'⟩
 
 /-- Identity is constant under every relation. -/
-theorem «有常».«静» (R : «际» α) : «有常» R «静» := by
+theorem «静有常» (R : «际» α) : «有常» R «静» := by
   intro a c ⟨b, hba, hbc⟩
   exact ⟨c, by cases hba; exact hbc, rfl⟩
 
 /-- Where `E` is a class, so is its core. -/
-theorem «核».«类» (R : «际» α) {E : «际» α} (hE : «类» E) : «类» («核» R E) := by
+theorem «核为类» (R : «际» α) {E : «际» α} (hE : «类» E) : «类» («核» R E) := by
   refine ⟨fun x => ⟨«静», fun a b h => by cases h; exact hE.refl a, fun a b h => h.symm,
-    «有常».«静» R, rfl⟩, ?_, ?_⟩
+    «静有常» R, rfl⟩, ?_, ?_⟩
   · intro x y ⟨S, hSE, hsym, hc, h⟩
     exact ⟨S, hSE, hsym, hc, hsym x y h⟩
   · intro x y z ⟨S₁, h₁E, h₁s, h₁c, h₁⟩ ⟨S₂, h₂E, h₂s, h₂c, h₂⟩
@@ -401,14 +401,14 @@ theorem «核».«类» (R : «际» α) {E : «际» α} (hE : «类» E) : «�
       match h with
       | .inl ⟨b, hab, hbc⟩ => exact .inr ⟨b, h₂s b c hbc, h₁s a b hab⟩
       | .inr ⟨b, hab, hbc⟩ => exact .inl ⟨b, h₁s b c hbc, h₂s a b hab⟩
-    · apply («有常».iff R _).mpr
+    · apply («有常之逐点» R _).mpr
       intro u u' h v hr
       match h with
       | .inl hm =>
-        match («有常».iff R _).mp («有常».comp h₁c h₂c) u u' hm v hr with
+        match («有常之逐点» R _).mp («有常可复合» h₁c h₂c) u u' hm v hr with
         | ⟨v', hr', hv'⟩ => exact ⟨v', hr', .inl hv'⟩
       | .inr hm =>
-        match («有常».iff R _).mp («有常».comp h₂c h₁c) u u' hm v hr with
+        match («有常之逐点» R _).mp («有常可复合» h₂c h₁c) u u' hm v hr with
         | ⟨v', hr', hv'⟩ => exact ⟨v', hr', .inr hv'⟩
 
 /-- **Closure.** For a class `E`, constancy is exactly closure of the coarse net: what an
@@ -420,10 +420,10 @@ theorem «闭合当且仅当有常» (R : «际» α) {E : «际» α} (hE : «�
     «有常» R E ↔ «则» («而» («而» E R) E) («而» R E) := by
   constructor
   · intro h x z ⟨b, ⟨a, hxa, hab⟩, hbz⟩
-    match («有常».iff R E).mp h a x (hE.symm hxa) b hab with
+    match («有常之逐点» R E).mp h a x (hE.symm hxa) b hab with
     | ⟨w, hxw, hbw⟩ => exact ⟨w, hxw, hE.trans (hE.symm hbw) hbz⟩
   · intro h
-    apply («有常».iff R E).mpr
+    apply («有常之逐点» R E).mpr
     intro u u' he v hr
     match h u' v ⟨v, ⟨u, hE.symm he, hr⟩, hE.refl v⟩ with
     | ⟨w, hw, hwv⟩ => exact ⟨w, hw, hE.symm hwv⟩
@@ -502,7 +502,7 @@ theorem «亡于核下不变» {R E : «际» α} (hE : «类» E) {y y' : α} (
     (hy : «亡» R E y) : «亡» R E y' :=
   fun ⟨z', hr, he⟩ => match hk with
     | ⟨S, hSE, hs, hc, hyy⟩ =>
-      match («有常».iff R S).mp hc y' y (hs y y' hyy) z' hr with
+      match («有常之逐点» R S).mp hc y' y (hs y y' hyy) z' hr with
       | ⟨z, hrz, hzz⟩ =>
         hy ⟨z, hrz, hE.trans (hE.trans (hSE y y' hyy) he) (hSE z' z hzz)⟩
 
@@ -511,7 +511,7 @@ theorem «生于位核下不变» {R E : «际» α} (hE : «类» E) {y y' : α
     (hy : «生» R E y) : «生» R E y' :=
   fun ⟨w', hr, he⟩ => match hk with
     | ⟨S, hSE, hs, _, hc', hyy⟩ =>
-      match («有常».iff («逆» R) S).mp hc' y' y (hs y y' hyy) w' hr with
+      match («有常之逐点» («逆» R) S).mp hc' y' y (hs y y' hyy) w' hr with
       | ⟨w, hrw, hww⟩ =>
         hy ⟨w, hrw, hE.trans (hE.trans (hE.symm (hSE w' w hww)) he) (hE.symm (hSE y y' hyy))⟩
 
@@ -552,7 +552,7 @@ theorem alike_class : «类» alike := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
 /-- No symmetric constant relation inside `alike` relates `f₁` to `f₂`. -/
 theorem not_core_f₁ {S : «际» Flame} (hSE : «则» S alike) (hs : «则» S («逆» S))
     (hc : «有常» step S) (h : S f₁ f₂) : False := by
-  match («有常».iff step S).mp hc f₂ f₁ (hs _ _ h) ash trivial with
+  match («有常之逐点» step S).mp hc f₂ f₁ (hs _ _ h) ash trivial with
   | ⟨v, hr, hv⟩ =>
     cases v with
     | f₂ => exact Bool.noConfusion (hSE _ _ hv)
@@ -563,7 +563,7 @@ theorem not_core_f₁ {S : «际» Flame} (hSE : «则» S alike) (hs : «则» 
 /-- Nor `f₀` to `f₁`. -/
 theorem not_core_f₀ {S : «际» Flame} (hSE : «则» S alike) (hs : «则» S («逆» S))
     (hc : «有常» step S) (h : S f₀ f₁) : False := by
-  match («有常».iff step S).mp hc f₀ f₁ h f₁ trivial with
+  match («有常之逐点» step S).mp hc f₀ f₁ h f₁ trivial with
   | ⟨v, hr, hv⟩ =>
     cases v with
     | f₂ => exact not_core_f₁ hSE hs hc hv

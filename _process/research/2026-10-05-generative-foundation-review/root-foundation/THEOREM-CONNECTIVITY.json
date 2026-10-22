@@ -1,11 +1,11 @@
 {
- "commit": "6c07c37e91bea38e70ad06300b6e58ba15af8fc7",
- "sources_match_commit": true,
+ "commit": "aa2939257ee51d428ec03e70ac0f4ddaaa74c469",
+ "sources_match_commit": false,
  "core_receipt_at_commit": "20261022T151214.034215Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 309,
- "constants": 41550,
- "spine_theorems": 13828,
+ "tracked_modules": 310,
+ "constants": 41745,
+ "spine_theorems": 13876,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 166,
   "used by a theorem on the base": 5083,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 832,
+  "apart: own vocabulary": 880,
   "apart: prelude-only statement": 84
  },
- "apart": 916,
- "apart_general_structure_by_design": 322,
- "apart_otherwise": 594,
+ "apart": 964,
+ "apart_general_structure_by_design": 358,
+ "apart_otherwise": 606,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 85,
   "of them on the base": 68,
@@ -73,15 +73,15 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 544,
- "apart_roots": 544,
+ "apart_used_by_nothing": 578,
+ "apart_roots": 578,
  "apart_roots_by_category": {
-  "model-witness": 282,
-  "support": 97,
-  "general-structure": 142,
+  "model-witness": 286,
+  "support": 101,
+  "general-structure": 167,
   "logical-strength": 12,
   "restates": 9,
-  "calibration": 2
+  "calibration": 3
  },
  "apart_roots_unclassified": [],
  "register_entries_not_apart_roots": [],
@@ -169,6 +169,10 @@
   "Becoming.Drift": [
    70,
    82
+  ],
+  "Becoming.Grammar": [
+   48,
+   48
   ],
   "Becoming.SelectionLevels": [
    47,
@@ -625,9 +629,9 @@
  },
  "rings": {
   "core": {
-   "modules": 293,
-   "theorems": 13068,
-   "apart": 822,
+   "modules": 294,
+   "theorems": 13116,
+   "apart": 870,
    "classes": {
     "statement on both families": 1038,
     "statement on Process/Frame/Run/Trace": 2738,
@@ -636,7 +640,7 @@
     "proof through a base family": 155,
     "used by a theorem on the base": 4724,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 739,
+    "apart: own vocabulary": 787,
     "apart: prelude-only statement": 83
    }
   },
@@ -674,10 +678,13 @@
   }
  },
  "components": {
-  "count": 86,
+  "count": 87,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
+   "Becoming.Flame.alike_class",
+   "Becoming.Flame.not_core_f₀",
+   "Becoming.Flame.not_core_f₁",
    "Becoming.GuardHorizon.coverage_transports",
    "Becoming.GuardHorizon.empty_requirement_hides_loss",
    "Becoming.GuardHorizon.endpoint_access_hides_gap",
@@ -704,7 +711,52 @@
    "Becoming.SharedCodes.synonyms_read_iff",
    "Becoming.WitnessRefinementRuns.and_self'",
    "Becoming.WitnessRefinementRuns.any_congr",
-   "Becoming.ceases_at_a_step"
+   "Becoming.ceases_at_a_step",
+   "Becoming.«一为类»",
+   "Becoming.«一之下无复生»",
+   "Becoming.«一之下无生生»",
+   "Becoming.«一之生»",
+   "Becoming.«一之续»",
+   "Becoming.«亡于核下不变»",
+   "Becoming.«亡于粗则亡于细»",
+   "Becoming.«亡于细者不必亡于粗»",
+   "Becoming.«以核为判据则火无续»",
+   "Becoming.«任一缘可为续»",
+   "Becoming.«位同则四相同»",
+   "Becoming.«位核含于核»",
+   "Becoming.«位根»",
+   "Becoming.«住于细则住于粗»",
+   "Becoming.«住亡不并»",
+   "Becoming.«分叉»",
+   "Becoming.«则之传递»",
+   "Becoming.«则之自反»",
+   "Becoming.«及之传递»",
+   "Becoming.«及之单调»",
+   "Becoming.«同族为类»",
+   "Becoming.«四相之定当且仅当排中»",
+   "Becoming.«四相无自立»",
+   "Becoming.«复生则粗复生»",
+   "Becoming.«无环则及为序»",
+   "Becoming.«有亡之续则不有常»",
+   "Becoming.«有常之逐点»",
+   "Becoming.«有常则相续不尽»",
+   "Becoming.«有常则续不尽»",
+   "Becoming.«有常可复合»",
+   "Becoming.«核为类»",
+   "Becoming.«根»",
+   "Becoming.«生于位核下不变»",
+   "Becoming.«生住不并»",
+   "Becoming.«生生之展»",
+   "Becoming.«生生则复生»",
+   "Becoming.«生生最大»",
+   "Becoming.«相续含于及»",
+   "Becoming.«类内之缘成环»",
+   "Becoming.«粗化»",
+   "Becoming.«粗只连异类»",
+   "Becoming.«续含于缘»",
+   "Becoming.«蜡烛之合»",
+   "Becoming.«闭合当且仅当有常»",
+   "Becoming.«静有常»"
   ]
  },
  "periphery": {
@@ -742,7 +794,7 @@
   "proof through a base family": 4,
   "used by a theorem on the base": 10,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 21
+  "apart: own vocabulary": 22
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -761,6 +813,12 @@
    "id": "censuses-of-the-xiang-and-tuan",
    "modules": [
     "Becoming.HexagramPlaces"
+   ]
+  },
+  {
+   "id": "continuation-relative-to-a-class",
+   "modules": [
+    "Becoming.Grammar"
    ]
   },
   {
@@ -1622,6 +1680,54 @@
   ]
  },
  "theorems": {
+  "Becoming.«则之自反»": "apart: own vocabulary",
+  "Becoming.«则之传递»": "apart: own vocabulary",
+  "Becoming.«及之传递»": "apart: own vocabulary",
+  "Becoming.«及之单调»": "apart: own vocabulary",
+  "Becoming.«一为类»": "apart: own vocabulary",
+  "Becoming.«续含于缘»": "apart: own vocabulary",
+  "Becoming.«相续含于及»": "apart: own vocabulary",
+  "Becoming.«一之续»": "apart: own vocabulary",
+  "Becoming.«粗化»": "apart: own vocabulary",
+  "Becoming.«亡于粗则亡于细»": "apart: own vocabulary",
+  "Becoming.«住于细则住于粗»": "apart: own vocabulary",
+  "Becoming.«亡于细者不必亡于粗»": "apart: own vocabulary",
+  "Becoming.«四相之定当且仅当排中»": "apart: own vocabulary",
+  "Becoming.«分叉»": "apart: own vocabulary",
+  "Becoming.«无环则及为序»": "apart: own vocabulary",
+  "Becoming.«同族为类»": "apart: own vocabulary",
+  "Becoming.«一之生»": "apart: own vocabulary",
+  "Becoming.«一之下无复生»": "apart: own vocabulary",
+  "Becoming.«生生之展»": "apart: own vocabulary",
+  "Becoming.«生生最大»": "apart: own vocabulary",
+  "Becoming.«生生则复生»": "apart: own vocabulary",
+  "Becoming.«一之下无生生»": "apart: own vocabulary",
+  "Becoming.«生住不并»": "apart: own vocabulary",
+  "Becoming.«住亡不并»": "apart: own vocabulary",
+  "Becoming.«四相无自立»": "apart: own vocabulary",
+  "Becoming.«任一缘可为续»": "apart: own vocabulary",
+  "Becoming.«蜡烛之合»": "apart: own vocabulary",
+  "Becoming.«有常之逐点»": "apart: own vocabulary",
+  "Becoming.«有常则续不尽»": "apart: own vocabulary",
+  "Becoming.«有常则相续不尽»": "apart: own vocabulary",
+  "Becoming.«有亡之续则不有常»": "apart: own vocabulary",
+  "Becoming.«根»": "apart: own vocabulary",
+  "Becoming.«有常可复合»": "apart: own vocabulary",
+  "Becoming.«静有常»": "apart: own vocabulary",
+  "Becoming.«核为类»": "apart: own vocabulary",
+  "Becoming.«闭合当且仅当有常»": "apart: own vocabulary",
+  "Becoming.«类内之缘成环»": "apart: own vocabulary",
+  "Becoming.«粗只连异类»": "apart: own vocabulary",
+  "Becoming.«复生则粗复生»": "apart: own vocabulary",
+  "Becoming.«位根»": "apart: own vocabulary",
+  "Becoming.«位核含于核»": "apart: own vocabulary",
+  "Becoming.«亡于核下不变»": "apart: own vocabulary",
+  "Becoming.«生于位核下不变»": "apart: own vocabulary",
+  "Becoming.«位同则四相同»": "apart: own vocabulary",
+  "Becoming.Flame.alike_class": "apart: own vocabulary",
+  "Becoming.Flame.not_core_f₁": "apart: own vocabulary",
+  "Becoming.Flame.not_core_f₀": "apart: own vocabulary",
+  "Becoming.«以核为判据则火无续»": "apart: own vocabulary",
   "Becoming.le_dest": "used by a theorem on the base",
   "Becoming.le_of_add_le_add_right": "used by a theorem on the base",
   "Becoming.add_right_cancel": "used by a theorem on the base",

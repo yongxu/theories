@@ -16487,3 +16487,38 @@ The design ([FIDELITY.md](../../../../experiments/wenli-reading-transfer/FIDELIT
 
 **Not done.** The naive pass (F4), the genre-matched comparison (F3), the second coder on the main-set 經, a human audit, and the reading test (DESIGN-H2).
 
+## 371. The grammar of continuation relative to a class (OU1)
+
+```text
+Result(s): new record continuation-relative-to-a-class; related to classes-along-a-continuation,
+       a-pattern-lasts-through-passing and branching-tests-bisimulation (claims unchanged).
+Delta: the root of the one-unfolding plan (version 10, development/one-unfolding-root/PLAN.md), stated for every
+       carrier and every relation and named in Chinese. Continuation is 缘 met with a class; lines, families,
+       beginning, abiding, ending and alteration are read from it, and no position stands by itself: the same
+       occurrence abides under the one and begins and ends under identity («四相无自立»). New: a class constant
+       under 缘 never lets a continuation end («有常则续不尽»), so a line that ends has its regularity in its
+       class's core, not in the class; taking the core as the class leaves a flame with no continuation
+       («以核为判据则火无续»). For a class, constancy is exactly closure of the coarse net («闭合当且仅当有常»);
+       the coarse net takes 缘 between classes, since inner 缘 become loops («类内之缘成环», «粗只连异类»); the
+       two-way core fixes positions («位同则四相同»).
+Premises / correspondence: none beyond the grammar; equality on the carrier is a model commitment where identity is
+       the class. Constancy for a class is bisimulation equivalence (Park, Milner); lumpability and computational
+       closure are analogues, not proved to correspond.
+Evidence: core receipt 20261022T204050.535314Z (Becoming.Grammar, 48 theorems in 81 declarations, empty axiom reports);
+       the plan's ninth version reviewed by GPT astra and two Opus reviewers (reviews in the plan's folder), the formal
+       reviewer checking the same statements in its own scratch file (review-checks/V9.lean).
+Boundary: constancy is agreement with 缘, not warrant (under the full relation every class is constant);
+       containment in 缘 is necessary, not sufficient, for continuation («任一缘可为续», «蜡烛之合»); renewal
+       without end does not tell renewal that sustains life from turnover that destroys it; that every occurrence
+       begins or has a predecessor, in every model, is exactly excluded middle («四相之定当且仅当排中»).
+Output → input: a leaf; OU3 lifts the old continuation family (PatternPassing, Identity, Change, Arising,
+       Persistence, ContinuedClasses) onto it, so that those laws are derived as instances (board rule 9).
+```
+
+**What was built.** `Becoming.Grammar` (L0, imports nothing): the relation `«际»` and its operations (`«而»`, `«逆»`, `«合»`, `«非»`, `«则»`, `«谓»`, `«一»`, `«静»`), reach `«及»` and `«无环»`, classes `«类»`; continuation `«续»`, lines `«相续»`, families `«同族»`, the positions `«有前»`, `«有后»`, `«生»`, `«住»`, `«亡»`, `«异»`, `«不穷»`; renewal `«复生»`, `«粗复生»` and renewal without end `«生生»`; constancy `«有常»`, the core `«核»` and the two-way core `«位核»`; the coarse net `«粗»`; the flame witness `Flame`. The module's header gives the binding table of names and glosses.
+
+**Why continuation is relative to a class.** Plan version 9 took continuation as its centre (the four phenomena of arising, persisting, changing and passing away read as positions in one continuation) and said a line has its own regularity where its class is constant under 缘. The formal review of version 9 found that this excludes every line that ends: under a constant class whatever continues is continued (`«有常则续不尽»`, here with its corollaries `«有常则相续不尽»` and `«有亡之续则不有常»`). The regularity of a line that ends is therefore its class's core, which always exists and is always constant (`«根»`); the class's own constancy is the core's depth-zero case, a line that never ends. The same review and the classical review found that the positions are not self-standing (the 《大乘起信论》 reads the four marks as held at once, 「皆無自立」; the plan keeps only that structural point, with the loss of its sense of mind and non-awakening recorded), so the module states that positions depend on the class (`«四相无自立»`) and are fixed by the two-way core (`«位同则四相同»`).
+
+**The coarse net.** Reading `R` at a class `L` as `L;R;L` puts every 缘 inside a class on a loop at both its ends (`«类内之缘成环»`), so that class could neither begin nor end at the coarse grain; the coarse net is `L ; (R ⊓ ¬L) ; L` (`«粗»`), which joins only different classes (`«粗只连异类»`). Renewal at the grain of a class (`«粗复生»`) reads the same relation at that grain; every renewal is one at every grain (`«复生则粗复生»`), and nothing at the coarse grain is said to set the fine.
+
+**Classical readings and their status.** The plan's tenth version registers the 《中论》's refutation of 相續 (chapters 7, 17, 21) as a counter-reading with the plan's answer (continuation relative to a class: the same under one class, different under a finer one), corrects the attribution of several 《金师子章》 lines to 承遷's commentary, reads 成/壞 as a synchronic reading at two grains, and drops the gloss of 等无间缘. The frozen first-batch corpus (2,997 units of eight texts) and the dependency audit of the spine (9,370 of 13,828 theorems read no field of the old base) are in the plan's folder; the classification of the corpus is in progress (board item OU0).
