@@ -1,0 +1,429 @@
+[
+ {
+  "key": "wenli-claims",
+  "findings": [
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "四条规范接口（edge_05、06、09、13）：可行与合宜分算，可行不推出合宜，合宜不保证可行。",
+    "problem": "The sentence gives all four normative interfaces one content, that feasibility and propriety are computed apart. That fits edge_05, edge_09 and edge_13, but not edge_06. edge_06 (中—和) says nothing about feasibility. It separates the fact 未发 from the evaluation 和 and rejects 未发⇒此后必和.",
+    "evidence": "sources/wenli-shengsheng-v0.4/research/graph/八字有类型规则图.md §三: edge_06「已发且符合指定表达标准时称和；未发不保证后续和。」 Its counterexamples are 「未发之中 ⇒ 此后必和不成立」 and 「当前未发 ⇒ 已获得发而中节的和评价不成立」. §五 sets edge_06's N_expression apart from N_timely: 「时机合宜也不等于情感中节」. By contrast edge_05 is 「合并可行性与时宜规范分别计算」, edge_09 is 「规范要求不生成物理路径」 and edge_13 is 「许可不能替代共同终点」.",
+    "new": "四条规范接口（edge_05、06、09、13）：事实与规范分算。edge_05、09、13 中可行不推出合宜，合宜不保证可行；edge_06 中未发不推出其后之表达皆和，已发而合所给之标准方称和。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 在基础层，它们也只导入 `Init`，公理报告也是空的。",
+    "problem": "Round three added a citation of `Generative.InquirySufficiency.completes_append_iff` (§七, 转合 bullet). That law is outside `Becoming`, like trace_append_iff. The opening statement on where the cited laws lie still names trace_append_iff as the only base-layer law, so it no longer covers every law the chapter cites.",
+    "evidence": "check_becoming.py: FOUNDATION = [\"GenerativeCore\", \"InquirySufficiency\", \"RelationalRenewal\"], the foundation compiled from the prelude alone. Core receipt 20261022T040548.209667Z lists Generative.InquirySufficiency.completes_append_iff. inquiry-root/sufficiency/verification.json gives it an empty axiom report. The 转合 bullet itself says it is 「与 `Generative.trace_append_iff` 同在基础层」.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff` 在基础层，它们也只导入 `Init`，公理报告也是空的。",
+    "severity": "missing"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "由 C(P, π, Q) 与 C(Q, ρ, R) 得 C(P, π;ρ, R)，并要求非空",
+    "problem": "文理生生's composition rule is drops its hypothesis. C(P, π, Q) is an implication P ⇒ (〈π〉真 ∧ [π]Q). 16 号 derives C(P, π;ρ, R) only when both C formulas hold at every state of the same model. Holding at the starting state is not enough, because the successors after π are other states.",
+    "evidence": "16_文的组合规则与系统推演_v0.1.md §四: 「若同一模型的所有状态都满足：C(P, π, Q) C(Q, ρ, R) 就能得到：C(P, π ; ρ, R)」. Its proof goes through the successors: 「每个后继都满足Q，因而ρ在这些状态也能执行」.",
+    "new": "同一模型之每一状皆满足 C(P, π, Q) 与 C(Q, ρ, R)，则得 C(P, π;ρ, R)，并要求非空",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "| 分合 | 合是分之逆；成员守恒⇒组织身份恒定 |",
+    "problem": "The card rejects merge as the global inverse of split (合是分的全局逆), not any inverse relation between them. Dropping 全局 makes the card reject a broader claim than it does. Its counterexample is one merge-then-split run that loses the old pairing.",
+    "evidence": "构式与微型模型.md CX05 分合, 失败例: {\"case\":\"b合成a后分成c，成员完全相同而旧配对丢失。\",\"rejected_inference\":\"合是分的全局逆；成员守恒⇒组织身份恒定；分合操作自带好坏评价。\"}",
+    "new": "| 分合 | 合是分之全局逆；成员守恒⇒组织身份恒定 |",
+    "severity": "imprecise"
+   },
+   {
+    "file": "/Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "，[基础全图 §三](",
+    "problem": "Wrong section reference. The sentence says the five operations 并列使用 and cites 基础全图 §三 for it. In 03 that statement is the last paragraph of §二 (全模型地图). §三 (五元各自是什么操作) only gives each operation's table.",
+    "evidence": "03_文理生生_基础全图与动态文法_v0.2.md: line 41 「## 二 全模型地图」; line 74 「五元并列使用。我们常先辨后系，是建模的工作顺序…」; line 76 「## 三 五元各自是什么操作」.",
+    "new": "，[基础全图 §二、§三](",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "The old text appears verbatim, once, at chapter-rest.fragment line 108. In 八字有类型规则图.md, edge_06 (中—和) binds 中 to core.082.01, a Formula meaning 情感未发的状态, and 和 to an evaluation, a NormJudgement. Its conclusion is 「已发且满足N_expression全部标准时…称和；…未发本身不推出任一后续表达皆和」. No feasibility appears anywhere in it, and §五 separates N_expression from N_timely. edge_05, 09 and 13 do fit the feasible/proper split: their counterexamples are 合并可行⇒时中 and 应当合并⇒可执行 (edge_05), 可达更多⇒更合宜 and 规范要求不生成物理路径 (edge_09), and 规范许可且原动作可行⇒受约束方案可执行 (edge_13). So the sentence misdescribes edge_06. The proposed replacement is correct except for 「合所给之标准」. The source requires 「N_expression全部标准」, so I changed that phrase to 「合所列之全部标准」. The following clause, which says it agrees in direction with significance_undetermined, still holds. Severity: minor.",
+    "new": "四条规范接口（edge_05、06、09、13）：事实与规范分算。edge_05、09、13 中可行不推出合宜，合宜不保证可行；edge_06 中未发不推出其后之表达皆和，已发而合所列之全部标准方称和。"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The old text appears verbatim, once, at centre.fragment line 17. The 转合 bullet at line 424 cites `Generative.InquirySufficiency.completes_append_iff` and itself says it lies in the base layer (基础层). InquirySufficiency.lean is in namespace Generative.InquirySufficiency and imports only GenerativeCore, and check_becoming.py has FOUNDATION = [\"GenerativeCore\", \"InquirySufficiency\", \"RelationalRenewal\"]. Receipts 20261022T040548.209667Z and 070506 both list the theorem, and inquiry-root/sufficiency/verification.json gives it an empty axiom list ([]). The opening statement about where the cited laws lie still names trace_append_iff as the only base-layer law, so it no longer covers every law the chapter cites. Adding the new name keeps the count of two exception places (the instance layer and the base layer) correct. Severity: minor.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff` 在基础层，它们也只导入 `Init`，公理报告也是空的。"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "The old text appears verbatim, once, at centre.fragment line 424. 16 号 §四 defines C(P, π, Q) := P ⇒ (〈π〉真 ∧ [π]Q), which is a formula evaluated at a state. It states the composition only under 「若同一模型的所有状态都满足：C(P, π, Q) C(Q, ρ, R)」, and its proof runs through the successors (「每个后继都满足Q，因而ρ在这些状态也能执行」). Read pointwise at one state, the chapter's 由…得… is false, so the hypothesis matters. It matters all the more because the next sentences contrast the rule with completes_append_iff, which is a pointwise iff at a single state s. The proposed wording lacks 若 before the condition, which reads awkwardly before 则. I added it.",
+    "new": "若同一模型之每一状皆满足 C(P, π, Q) 与 C(Q, ρ, R)，则得 C(P, π;ρ, R)，并要求非空"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "The old text appears verbatim, once, at chapter-rest.fragment line 41. The CX05 failure case in 构式与微型模型.md, line 523, and in constructions.json rejects 「合是分的全局逆；成员守恒⇒组织身份恒定；…」. The qualifier 全局 carries meaning. The counterexample is one merge-then-split run that loses the old pairing, and CX05.R2 limits the loss to a merge that maps two different old partitions to one. Split followed by merge can still restore a partition, so merge can be a local inverse. The other rows in this column compress their cards only in ways that keep meaning (稳定→稳, 已识别因果→已识别之因果). Dropping 全局 makes the card reject a broader claim than it does. Severity: minor.",
+    "new": "| 分合 | 合是分之全局逆；成员守恒⇒组织身份恒定 |"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "The old text ，[基础全图 §三]( appears once, at chapter-rest.fragment line 65. In 03_文理生生_基础全图与动态文法_v0.2.md, §三 (line 76, 五元各自是什么操作) only gives each operation's table. The words 并列使用 come verbatim from the last paragraph of §二 (line 74: 「五元并列使用。…」), and that section's diagram is labelled 「模型的五类操作 同时使用」. 01 §三 does not say 并列 about the five operations either. So the sentence's claim that the five are 并列使用 has no supporting citation. §三 is still a correct source for the five operations themselves, so citing §二、§三 is the right fix. The chapter already uses a similar label style elsewhere ([16 号 §二至§四]). Severity: minor or cosmetic.",
+    "new": "，[基础全图 §二、§三]("
+   }
+  ]
+ },
+ {
+  "key": "spine-claims",
+  "findings": [
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "择只缘所感（`Becoming.Web.SelectsThrough`）",
+    "problem": "This states as the book's own claim that every selection goes only through what the selector senses. In the book that is a premise, not a law. `Becoming.Web.SelectsThrough` is a definition: a selection is through f's couplings up to t when histories alike through those couplings are selected alike. No theorem says every 择 has this property.",
+    "evidence": "Selection.lean:137: `def SelectsThrough (W) (obs) (f) (t) (select) : Prop := ∀ l l', W.AlikeThroughUpTo obs f l l' t → (select l ↔ select l')` is a predicate, not a law. The book's 九·二 說 says of it: 「择…只是一个分开积之历之辞…一个择实际只缘某些感，是所给之前提」. In the name table, 择 has no anchor and its 所名 is 「关于水平历史的任何主张」.",
+    "new": "缘感而择（`Becoming.Web.SelectsThrough`；一择实际只缘某些感，是所给之前提）",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 在基础层",
+    "problem": "Round three added `Generative.InquirySufficiency.completes_append_iff` to §七. That theorem is also in the foundation layer, not the pure core. The section's conventions paragraph still says every cited law outside the two listed exceptions is in the pure core, so it now places completes_append_iff in the core by omission.",
+    "evidence": "Receipt 20261022T070506.681048Z (and the cited 20261022T040548.209667Z): foundation_modules = [GenerativeCore, InquirySufficiency, RelationalRenewal]. The module record for InquirySufficiency has layer 'foundation', and Generative.InquirySufficiency.completes_append_iff has an empty axiom report. §七 itself says 「与 `Generative.trace_append_iff` 同在基础层」.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff` 在基础层",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "它要求每一所至之处皆可行，比「至少有一次允许执行」更强。",
+    "problem": "The sentence says Completes is stronger than 16号's C(P, π, Q) but cites no Lean, and it calls the relation only partly isomorphic. The pure core already has the exact laws, under the book's name 必至 (十六·十七). Every process: Completes implies a run and every endpoint meets the goal. Every determined process with no safety condition: Completes holds exactly when 16号's 〈π〉真 ∧ [π]Q form holds. A branching example shows strictness. The section also misses the book's name 必至.",
+    "evidence": "Becoming/Assurance.lean (core, spine, empty reports): `runs_of_completes : Completes P safe goal s plan → (∃ t, Trace P s plan t) ∧ ∀ t, Trace P s plan t → SafeTrace … ∧ goal t`; `completes_iff_runs (determined : Determined P) : Completes P free goal s plan ↔ (∃ t, Trace P s plan t) ∧ ∀ t, Trace P s plan t → goal t`; `Branch.runs_not_completes`: the plan runs and every endpoint is 3, yet it does not complete. The book's 十六·十七「不行不至」 cites all three, and the name-table row 必至 is anchored at `Generative.InquirySufficiency.Completes`.",
+    "new": "此即中华本之必至（十六·十七）。凡变，必至则可行至一终状、每一终状皆合所求（`Becoming.Assurance.runs_of_completes`）；凡法（一动至多一果），无安之条件，反之亦然，必至恰是 C(P, π, Q) 后件之形（`Becoming.Assurance.completes_iff_runs`）；一动二果之变，一族动可行、每一终状皆合所求，犹不必至（`Becoming.Assurance.Branch.runs_not_completes`，构造之例），所以一般而言它比「至少有一次允许执行」更强。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "生生名整体中的生及其继续生成（`Becoming.Web.Widens`）",
+    "problem": "The cell attaches `Becoming.Web.Widens` to what 生生 names, as if widening formalized 生生. Widens is only the order 生生's direction is compared by. The book says 生生 is a conventional name, not a predicate, and that widening does not record all of 生生. The name table's 所名 keeps 「方向以扩大比较」, which this cell drops.",
+    "evidence": "Regions.lean:154: `def Widens (l l' : Nat → C → Nat) : Prop := W.Includes l l' ∧ W.Exceeds l l'` compares only what level paths admit. 六·十六 經/說: 「其向以广较之，而广之所记不尽生生」; 「生生…是约定之名，不是一个谓词…其向以广较（`Becoming.Web.Widens`）：广只比较所容这一面」. Name-table row 生生: 「整体中的生及其继续生成（D1）；方向以扩大比较」, note 「不是谓词 living」.",
+    "new": "生生名整体中的生及其继续生成，是约定之名，不是谓词，其向以广较（`Becoming.Web.Widens`）",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/chapter-rest.fragment",
+    "old": "四条规范接口（edge_05、06、09、13）：可行与合宜分算，可行不推出合宜，合宜不保证可行。",
+    "problem": "The summary does not fit edge_06. That edge is about 未发 (a stated condition) not implying 和 (an evaluation). It is not about feasibility. What all four edges share is that facts and norms are computed apart and neither yields the other.",
+    "evidence": "research/graph/八字有类型规则图.md, edge_06 中—和: 「未发之中 ⇒ 此后必和不成立」 and 「当前未发 ⇒ 已获得发而中节的和评价不成立」, with no feasibility clause. edge_05: 「合并可行 ⇒ 时中不成立」 and 「应当合并 ⇒ 可执行不成立」. edge_09: 「可达更多 ⇒ 更合宜不成立」. edge_13: 「规范许可且原动作可行 ⇒ 受约束方案可执行不成立」.",
+    "new": "四条规范接口（edge_05、06、09、13）：事实与规范分算，互不推出：可行不推出合宜（edge_05、09），未发不推出和（edge_06），合宜不保证可行（edge_05、13）。",
+    "severity": "imprecise"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "The text is verbatim and unique at chapter-rest.fragment:40, and it was new in round three. As written, 「择只缘所感」 is a flat universal claim with a definition attached. In the book, 择 is 「关于水平历史的任何主张」 (name-table row 3937, no anchor), so not every 择 goes only through couplings. 九·二 說 says 「一个择实际只缘某些感，是所给之前提」 and 九·十三 says 「实质之前提是某一择者之择只缘这些感，是所给的」. Selection.lean:137 defines SelectsThrough as a predicate, and its name is 缘感而择, which centre.fragment:384 uses. So the cell states a premise as a law. The proposed replacement uses the book's name and states the premise, in the same style as the 感应 row's bare names with anchors. Severity: minor.",
+    "new": "缘感而择（`Becoming.Web.SelectsThrough`；一择实际只缘某些感，是所给之前提）"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The text is verbatim and unique at centre.fragment:17. This conventions paragraph covers the whole centre section, §七 included. §七 (line 424, added in round three) cites `Generative.InquirySufficiency.completes_append_iff`. Receipts 20261022T070506.681048Z and 20261022T040548.209667Z list InquirySufficiency under foundation_modules with layer 'foundation', not core, and the law's axiom report is empty. It imports only GenerativeCore. So the list of exceptions now leaves it out. With the replacement, 「两处」 still reads correctly as two layers (实例层, 基础层). Severity: minor.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff` 在基础层"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "The text is verbatim and unique at centre.fragment:424, new in round three. The comparison is true but has no Lean behind it, and it misses that the pure core already proves the exact relation. Assurance.lean is core and spine, with empty reports in the receipt. `runs_of_completes` holds for every process. `completes_iff_runs` needs Determined P and the safety condition `free`, and then Completes ↔ (∃ trace) ∧ ∀ trace → goal, which is the form of C(P, π, Q)'s consequent. `Branch.runs_not_completes` is a constructed counterexample: the plan runs and every endpoint is 3, yet it does not complete. The book names Completes 必至 at 十六·十七 「不行不至」 (name-table row 4102), but the chapter uses the ad hoc 「成其所求」. One flaw in the proposed replacement: it gives the Branch example and then still compares only with the existence clause 「至少有一次允许执行」. Branch shows something stronger, that 必至 is strictly stronger than C's whole consequent. The corrected replacement states that and keeps the reason (every reached place must be possible). Severity: minor.",
+    "new": "此即中华本之必至（十六·十七），它要求每一所至之处皆可行。凡变，必至则可行至一终状，每一终状皆合所求（`Becoming.Assurance.runs_of_completes`）；凡法（一动至多一果），无安之条件，反之亦然，必至恰是 C(P, π, Q) 后件之形（`Becoming.Assurance.completes_iff_runs`）；一动二果之变，一族动可行，每一终状皆合所求，犹不必至（`Becoming.Assurance.Branch.runs_not_completes`，构造之例）。所以一般而言必至比 C(P, π, Q) 之后件更强。"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "The text is verbatim and unique at chapter-rest.fragment:37, new in round three. In this table, an anchor in parentheses gives the formal content of the phrase it follows (for example 一步之持存名存（`Becoming.Web.Holds`）). Here `Becoming.Web.Widens` sits on 「整体中的生及其继续生成」. But Regions.lean defines Widens as Includes ∧ Exceeds, a comparison of what level paths admit. 六·十六 經 says 「其向以广较之，而广之所记不尽生生」 and 說 says 「生生…是约定之名，不是一个谓词」. The name-table row ties Widens to 「方向以扩大比较」, which this cell drops. The replacement attaches Widens to the direction, in the wording of 六·十六. Severity: minor.",
+    "new": "生生名整体中的生及其继续生成，是约定之名，不是谓词，其向以广较（`Becoming.Web.Widens`）"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "The text is verbatim and unique at chapter-rest.fragment:108, new in round three. In research/graph/八字有类型规则图.md, edge_06 中—和 takes 中 as 未发 (a Formula) and 和 as 发而中节的评价 (a NormJudgement). Its counterexamples are 「未发之中 ⇒ 此后必和不成立」 and 「当前未发 ⇒ 已获得发而中节的和评价不成立」. Feasibility does not enter, so 「可行与合宜分算」 misdescribes it. edge_05 rejects 合并可行 ⇒ 时中 and 应当合并 ⇒ 可执行. edge_09 rejects 可达更多 ⇒ 更合宜. edge_13 rejects 规范许可且原动作可行 ⇒ 受约束方案可执行. The proposed replacement adds 「互不推出」, which goes beyond the source. In edge_06, 和 is given exactly when the facts of an expression meet the declared standard, and the spine counterpart (significance_undetermined) points one way only. The corrected replacement drops that phrase and keeps the per-edge attributions, each of which the source supports. Severity: moderate (misdescribes a source).",
+    "new": "四条规范接口（edge_05、06、09、13）：事实与规范分算，可行不推出合宜（edge_05、09），未发不推出和（edge_06），合宜不保证可行（edge_05、13）。"
+   }
+  ]
+ },
+ {
+  "key": "landing-final",
+  "findings": [
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "these texts reviewed twice",
+    "problem": "Study §346's Evidence says the chapter, the changed 條 and the landing texts were \"reviewed twice\". Three review rounds have run, and every finding in each has a skeptic's verdict. Round three's lenses (the landing outputs, philology, completeness) are the ones that added the cards, the rule graph, 15/16 and the atlas. The figure is stale.",
+    "evidence": "agents/wl/final-review.json has lenses lean, text and account (63 findings, 63 verdicts). second-review.json has fixes, centre, landing and book (63 findings, 63 verdicts). third-review.json has outputs, philology and complete (38 findings, 38 verdicts). The generated BECOMING-RENEWAL-READING.md §346 reads \"the chapter, the changed 條 and these texts reviewed twice\". If this fourth round is recorded, the count becomes four.",
+    "new": "these texts reviewed in three rounds",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "were reviewed twice by independent lenses with a skeptic for each",
+    "problem": "The study §346 Self-review repeats the stale count \"reviewed twice\". Three rounds ran, each finding with a skeptic's verdict.",
+    "evidence": "Same counts as above: final-review.json (3 lenses), second-review.json (4 lenses), third-review.json (3 lenses), with verdicts equal to findings in every lens. Generated §346: \"the chapter and the changed 條 were reviewed twice by independent lenses with a skeptic for each\".",
+    "new": "were reviewed in three rounds by independent lenses with a skeptic for each finding",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "were reviewed twice by independent lenses, a skeptic checking each finding",
+    "problem": "The record wenli-on-the-spine's validation_scope.en says the chapter, the changed 條 and the landing texts \"were reviewed twice\". Three rounds ran.",
+    "evidence": "wenli-on-the-spine.json validation_scope.en: \"...the landing texts were reviewed twice by independent lenses, a skeptic checking each finding.\" agents/wl/ holds final-review.json, second-review.json and third-review.json, each with a verdict for every finding.",
+    "new": "were reviewed in three rounds by independent lenses, a skeptic checking each finding",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "经两轮独立视角审读",
+    "problem": "The Chinese register of the record's validation_scope has the same stale count (两轮), so it must change with the English.",
+    "evidence": "wenli-on-the-spine.json validation_scope.zh: 「本章、所改之條与落地之文经两轮独立视角审读」. Three review files exist under agents/wl/.",
+    "new": "经三轮独立视角审读",
+    "severity": "error"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/head.fragment",
+    "old": "- 文理生生的形式部分、十二构式与十三个微型模型、八字有类型规则图与八卦，逐项对照；图谱存关系之法见「同读之处」。",
+    "problem": "「逐项对照」 overclaims for the rule graph and the 八卦. The chapter places only 6 of the graph's 13 edges (edge_03, edge_04 and the four normative interfaces) and says of the rest 「其余诸边依所选之义与模型而立，本章不对应」. In the 八卦 it says 「11 号与 14 号另有同步之共同终点之反例……本章不对应」. Round three's verdict corrected the same overclaim for the atlas only.",
+    "evidence": "WENLI-AND-BECOMING.md lines 664-669 (rule graph: edge_03, edge_04, edge_05/06/09/13, then 「其余诸边……本章不对应」) and line 682 (八卦: 「本章不对应」). typed_graph.json has 13 edges: 01, 02, 07, 08, 10, 11 and 12 are bounded rules that are not placed.",
+    "new": "- 文理生生的形式部分、十二构式与十三个微型模型、八卦，逐项对照（八卦中同步之共同终点之反例不对应）；八字有类型规则图之十三边，对照其六；图谱存关系之法见「同读之处」。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/centre.fragment",
+    "old": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 在基础层，它们也只导入 `Init`",
+    "problem": "The 体例 lists the laws of this section that lie outside the pure core. Round three added a second law in §七 from outside the core, `Generative.InquirySufficiency.completes_append_iff` (the 转合 bullet), and the list still names only trace_append_iff for the foundation layer.",
+    "evidence": "Receipt 20261022T070506.681048Z: foundation_modules = [GenerativeCore, InquirySufficiency, RelationalRenewal]. completes_append_iff is at inquiry-root/sufficiency/InquirySufficiency.lean:78. The chapter's §七 says 「与 `Generative.trace_append_iff` 同在基础层，公理报告空」.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff`（§七）在基础层，它们也只导入 `Init`",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/moves-after-rounds.json",
+    "old": "即文只沿一行而成（相合；讀，AI，D63）。",
+    "problem": "Round three corrected the chapter (third review, philology finding 11): the whole sentence 「参伍以变……通其变，遂成天下之文……」 describes the yarrow procedure, and the 相合 takes only its structure. The book's 一·二十一 still gives the name's source without this and then says that only the flanking clauses 「讲揲蓍之数」. That implies the name's own clause is not about the yarrow procedure. This copy of the confirmed defect survived.",
+    "evidence": "Centre (after round three): 「全句讲揲蓍：「通其变，遂成天下之文」原指通筮之诸变而成所画之爻（朱熹本义……不在冻结语料中）；上条之相合只取其结构，值沿变之行而成，不带揲蓍」. Book 一·二十一 (ZHONGHUA line 497) has no such sentence. passages.json xici-can-wu-cuo-zong: 「此段讲揲蓍」.",
+    "new": "即文只沿一行而成（相合；讀，AI，D63）。全句讲揲蓍：所成之文原是通筮之诸变而画之爻（朱熹本义；不在冻结语料中），此相合只取其结构，值沿变之行而成，不带揲蓍。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "when it is eventually a reading of the course, in a world a list holds; given that reading it shows itself)",
+    "problem": "The catalogue entry's argument_en states the reading form of 其义 with only \"in a world a list holds\". It drops two hypotheses: values through the map decidably equal or not, and an element v₀ of the state values' type. The third review fixed this in the study but not here.",
+    "evidence": "Unrolling.lean: `variable ... [DecidableEq R]` precedes `theorem learnable_iff_reading ... (world : ∀ s, s ∈ l) (v₀ : V)`. Study §346 now states both (\"with values through the map decidably equal or not (and, for the reading form, a value v₀ ...)\").",
+    "new": "when it is eventually a reading of the course, in a world a list holds, with values through the map decidably equal or not and a value v₀ of the state values' type; given that reading it shows itself)",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "一族尽其状时状值可知恰当它自某步起是文之一读",
+    "problem": "The catalogue entry's argument_zh drops the same two hypotheses of learnable_iff_reading (DecidableEq R and v₀). The two registers should state the law alike.",
+    "evidence": "Unrolling.lean: learnable_iff_reading takes [DecidableEq R] (section variable) and (v₀ : V). The record's dependency detail says 「像之同异定然否时」, and the catalogue does not.",
+    "new": "一族尽其状且像之同异定然否（读之形另需状值之类有一值）时状值可知恰当它自某步起是文之一读",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "; Learnable.learnable_iff_reading restates it as the value being eventually a reading of the course.",
+    "problem": "The record's dependency on learnable-through-a-map names learnable_iff_reading, but that record does not hold it. The third review added the related link to the record that does hold it, what-an-extrapolation-given-nothing-fixes, but left the misattribution in this detail.",
+    "evidence": "grep: learnable_iff_reading occurs 0 times in learnable-through-a-map.json and 4 times in what-an-extrapolation-given-nothing-fixes.json. Third review, outputs verdict 7: \"The wenli record's dependency detail nevertheless names learnable_iff_reading under learnable-through-a-map\".",
+    "new": "; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related).",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "；Learnable.learnable_iff_reading 改述为状值自某步起是文之一读。",
+    "problem": "The Chinese register of the same dependency detail attributes learnable_iff_reading to learnable-through-a-map, which does not hold it.",
+    "evidence": "learnable-through-a-map.json has no learnable_iff_reading. The related entry what-an-extrapolation-given-nothing-fixes holds it.",
+    "new": "；其读之形 Learnable.learnable_iff_reading 在 what-an-extrapolation-given-nothing-fixes（见相关）。",
+    "severity": "imprecise"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "agree); {len(rev)} divergent readings rechecked against its",
+    "problem": "Study §346's Delta lists what WL delivered but omits everything round three added to the chapter: the twelve construction cards and thirteen micro-models, the eight-character rule graph, coarsening's spurious cycles in the 八卦, the atlas's relation nodes, and references 15 and 16. The chapter's own head now lists these as built. The Delta therefore understates the landed scope.",
+    "evidence": "WENLI-AND-BECOMING.md lines 548 (atlas), 554-571 (cards table), 664-671 (rule graph), 682 (spurious cycles, image_exact_iff); centre §一 (15 号), §四 律5 (16 号 water tank), §七 (16 号 转合). Head 「建成了什么」 names the cards and the rule graph. §346 Delta mentions none of them.",
+    "new": "agree); its twelve construction cards and thirteen micro-models, its eight-character rule graph (6 of its 13 edges placed), its 八卦 (coarsening's spurious cycles: Becoming.image_exact_iff), its atlas's storage of relations and its references 15 and 16 placed by structure, none carried as a law of the spine; {len(rev)} divergent readings rechecked against its",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "the core places knowing within the unfolding (識).",
+    "problem": "'What was found' reports nothing of round three's structural results with 文理生生's own models, though each is a finding stated with a checked law in the chapter. Note: the old text uses 识 (simplified); copy it from the file as 「the core places knowing within the unfolding (识).」",
+    "evidence": "Chapter line 682: the spurious cycle a→b, c→d under 乾/坤, 「以类代状之变如实给出诸路，恰在此条件成立之处（`Becoming.image_exact_iff`）」 with MatchesThrough. §四 律5: the water tank's level is not a 理, and the level's 文 reads off the four states. §七: completes_append_iff is a partial counterpart, stronger than 「至少有一次允许执行」. Rule graph: edge_03 = Branching.SubProcess.reach.",
+    "new": "the core places knowing within the unfolding (识). Placed by structure (AI reading, D63; none carried as a law of the spine): coarsening onto trigrams can make cycles the concrete change lacks, the image's paths matching the change's exactly where `Becoming.MatchesThrough` holds (`Becoming.image_exact_iff`); its water tank's level is not a 理, as the count of yang lines is not, and the level's 文 reads off the pump mode the class drops; its 转合 has on the foundation a partial counterpart that asks more, every act enabled wherever it is reached (`Generative.InquirySufficiency.completes_append_iff`); its rule graph's edge_03 is `Becoming.Branching.SubProcess.reach`.",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "each to be claimed on the board; G1 embedded as a query layer.",
+    "problem": "'Not done' does not name the items the round-three material leaves unmapped, though the chapter states each one: the synchronous common-endpoint counterexample of references 11 and 14, seven of the rule graph's thirteen edges, the atlas's 49 model records, and the rows of the 32 groups not made cards.",
+    "evidence": "Chapter line 682: 「11 号与 14 号另有同步之共同终点之反例……本章不对应」. Line 669: 「其余诸边……本章不对应」 (edges 01, 02, 07, 08, 10, 11, 12 per typed_graph.json). Line 548: 49 model records 「不另对照」. Line 571: 「原 32 组中其余登记层之行未展开为卡，不另对照」.",
+    "new": "each to be claimed on the board; G1 embedded as a query layer. Not mapped, as the chapter states: the synchronous common-endpoint counterexample of 文理生生's references 11 and 14, seven of its rule graph's thirteen edges (edge_01, 02, 07, 08, 10, 11, 12), its atlas's 49 model records and the rows of its 32 groups not made cards.",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "'zh': '守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。', 'kind': 'scope'}],",
+    "problem": "The record's does_not_show does not cover the scope limits the chapter now sets on 文理生生's models: the micro-models are its construction examples and not in the spine; the rule graph's rules are not carried as laws; its formal results have no Lean proof; and several items are not mapped.",
+    "evidence": "Chapter: 「微型模型是文理生生之构造之例，不入脊柱」 (line 554); 「十三条规则不移作脊柱之律，只按结构对照」 (664); 「其余诸边……本章不对应」 (669); 「文理生生的形式结果没有 Lean 证明」 (704); the synchronous common-endpoint counterexample 「本章不对应」 (682); 49 model records 「不另对照」 (548).",
+    "new": "'zh': '守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。', 'kind': 'scope'},\n        {'en': \"That 文理生生's construction cards, micro-models, rule graph or formal results hold as laws of the spine: they are placed by structure only (the micro-models are its construction examples, the graph's rules rest on its chosen senses and models, the formal results have no Lean proof); seven of the graph's thirteen edges, the synchronous common-endpoint counterexample of its references 11 and 14 and the atlas's 49 model records are not mapped.\",\n         'zh': '文理生生之构式卡、微型模型、规则图或形式结果是脊柱之律：只按结构对照（微型模型是其构造之例，图之规则依其所选之义与模型而立，形式结果无 Lean 证明）；图之十三边中七边、11 号与 14 号同步之共同终点之反例、图谱之 49 个模型记录，皆未对应。', 'kind': 'scope'}],",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "the twenty-nine divergent readings are decided as the chapter records.",
+    "problem": "Round three added many readings labelled 讀（AI，D63）, and D63 (English) does not mention them: the cards table, the rule-graph placements, coarsening's cycles (同构), the atlas (同向), the water tank, and 16 号's 转合. A reader who follows the D63 label finds no decision covering them.",
+    "evidence": "Chapter: 「**十二构式与十三个微型模型**（讀，AI，D63）」 (554); 「只按结构对照（讀，AI，D63）」 (664); 「同构（讀，AI，D63）」 (682); 「同向（讀，AI，D63）」 (548); §四 律5 water tank 「讀，AI，D63」; §七 「部分同构之律（讀，AI，D63）」. D63 item 5 covers only the three senses, 观/证 and the 29 readings.",
+    "new": "the twenty-nine divergent readings are decided as the chapter records; its construction cards and micro-models, its eight-character rule graph, its atlas's storage of relations, its 八卦 results and its references 15 and 16 are placed by structure as the chapter records, none carried as a law of the spine (the micro-models are its construction examples).",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "二十九处异读依本章所记而决。",
+    "problem": "The Chinese D63 item 五 has the same omission, and both registers must stay equal in content.",
+    "evidence": "DELEGATED-CHOICES.zh.md D63 五: 「其文之三义……二十九处异读依本章所记而决。」, with nothing on the cards, the rule graph, the atlas, the 八卦 results or references 15 and 16, all labelled D63 in the chapter.",
+    "new": "二十九处异读依本章所记而决；其构式卡与微型模型、八字有类型规则图、图谱存关系之法、八卦之结果与 15 号、16 号，依本章所记按结构对照，无一移作脊柱之律（微型模型是其构造之例）。",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "civilization-thought-on-the-spine (history note: the name table's seventh pass)",
+    "problem": "Study §346's Result(s) line describes the history note on civilization-thought-on-the-spine as covering only the seventh pass. Round three's landing also changed that record's map (passages.json, entry xici-ji-qi-shu), re-hashed it, and wrote the change into the same history note.",
+    "evidence": "land_wl.py now adds passages.json to `changed` and writes the note 「the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do」. git diff c8991ba3d 2cceb9cfc shows the passages.json change.",
+    "new": "civilization-thought-on-the-spine (history note: the name table's seventh pass; the map entry xici-ji-qi-shu aligned with xici-can-wu-cuo-zong)",
+    "severity": "missing"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/land_wl.py",
+    "old": "for s in (SRC, CH):",
+    "problem": "The landing extends the goal's scope to 文理生生 and adds wenli-on-the-spine to result_ids, but the goal's overview.summary (rendered in README.md and GOALS.md) says nothing of it. Its only update is two figures. The third review noted the omission and its fix covered only the counts. Earlier extensions of this goal (the 脉络 map, the 中华本) each added a sentence to the summary.",
+    "evidence": "_process/goals/chinese-sources-and-becoming.json overview.summary.en ends \"...with 經, 說 and 證 for each law.\", and README.md line 231 has no 文理生生 or 文. Third review outputs finding 1: \"The summary also does not mention 文理生生.\"",
+    "new": "wl = {'en': (f' 文理生生, a classical-Chinese concept grammar built apart from the 中华本, was then compared with it: {agree} of the '\n             f'{meaningful} characters both judge agree (independence partial: the same corpus, both AI-written). 文 was named the '\n             f'course, a run\\'s states read through a map step by step (`Becoming.Parting.course`), and the epistemology of 文 was '\n             f'tied link by link to checked laws, each with its scope (a correspondence, not a confirmation; whether classical '\n             f'Chinese is the best expression is untested).'),\n      'zh': (f'其后与文理生生（与中华本分开所建之古汉语概念文法）对照：两边皆判之 {meaningful} 字中 {agree} 字相合（独立只是部分的：同一语料，'\n             f'都由 AI 写成）。以文名一历之状经一象逐步之值（`Becoming.Parting.course`），文之认识论逐环对到已检之律，各写其域（对应不是印证；'\n             f'古汉语是否最好之表达未经检验）。')}\nfor k, start in (('en', ' 文理生生, a classical-Chinese'), ('zh', '其后与文理生生')):\n    t = g['overview']['summary'][k]\n    g['overview']['summary'][k] = (t[:t.index(start)] if start in t else t.rstrip()) + wl[k]\nfor s in (SRC, CH):",
+    "severity": "missing"
+   }
+  ],
+  "verdicts": [
+   {
+    "index": 0,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:118. The count is stale, but the proposed replacement overclaims. The chapter and the changed 條 were reviewed in three rounds: final-review.json (lean, text, account) has findings on WENLI-AND-BECOMING.md, the fragments and the 中华本; second-review.json has fixes, centre, landing and book; third-review.json has outputs, philology and complete. The landing texts were reviewed in only two of those rounds. land_wl.py was created in the round-one fix commit 96a7fb721, and no round-one finding names it; it was reviewed by second-review fixes/landing and third-review outputs. So 'these texts reviewed in three rounds' is false for the landing texts. Two further notes. The lens list that follows ('Lean fidelity; ...; the landing texts') still omits round three's lenses (the landing outputs, philology, completeness against 文理生生) and round two's centre lens; that needs a separate edit. If this fourth round is recorded in agents/wl/, the figures become four and three.",
+    "new": "these texts reviewed in three rounds (these texts in the last two)"
+   },
+   {
+    "index": 1,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:143. Its subject is 'the chapter and the changed 條', which were reviewed in all three rounds: round one's lean/text/account lenses cite WENLI-AND-BECOMING.md and THE-THEORY-OF-BECOMING-ZHONGHUA.md, round two's centre/book lenses and round three's philology/complete lenses cite the fragments and moves-after-rounds.json. Every lens has as many verdicts as findings. 'twice' is therefore stale and the replacement is correct. If this fourth round is recorded, write four.",
+    "new": "were reviewed in three rounds by independent lenses with a skeptic for each finding"
+   },
+   {
+    "index": 2,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:234. Its subject includes the landing texts, which did not exist in round one (land_wl.py first appears in 96a7fb721, the round-one fix commit, and no final-review.json finding names it). So 'three rounds' alone would overclaim for them. The corrected text keeps the field under its hard cap: validation_scope.en is now 506 of 600 characters and becomes about 545. If this fourth round is recorded, the figures become four and three.",
+    "new": "were reviewed in three rounds (the landing texts in the last two) by independent lenses, a skeptic checking each finding"
+   },
+   {
+    "index": 3,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:236. The zh register must follow the corrected en, so the landing texts get the same qualification (two rounds, not three). validation_scope.zh is 214 of 260 characters and stays under the cap.",
+    "new": "经三轮独立视角审读（落地之文在后两轮）"
+   },
+   {
+    "index": 4,
+    "real": true,
+    "reason": "The old text is verbatim at head.fragment:23. 「逐项对照」 is false for the rule graph. typed_graph.json has 13 edges (edge_01 to edge_13), and the chapter places only edge_03, edge_04, edge_05, 06, 09 and 13, then says 「其余诸边依所选之义与模型而立，本章不对应」. The proposed replacement still claims 「八卦，逐项对照」 with a single exception, and that is also too strong. The chapter's 八卦 section compares a selection: the 同读 list and 各有所长. 11 号 has sections it does not treat (bifurcation, feedback with gain and delay, 转合同步循环 constructions), and 12 号's 113-character 八卦 mapping and 13 号 are never cited. The formal part (G1 and its two formal results) and the twelve cards with thirteen micro-models (the 相生 row carries two readings) are covered in full, so 逐项 stays for those.",
+    "new": "- 文理生生的形式部分、十二构式与十三个微型模型，逐项对照；八字有类型规则图十三边中对照六边；八卦对照两边同读与各有所长之处（11 号与 14 号同步之共同终点之反例不对应）；图谱存关系之法见「同读之处」。"
+   },
+   {
+    "index": 5,
+    "real": true,
+    "reason": "The old text is verbatim and unique at centre.fragment:17. §七's 转合 bullet now cites `Generative.InquirySufficiency.completes_append_iff` and calls it 「与 `Generative.trace_append_iff` 同在基础层，公理报告空」, but the 体例's list of exceptions names only trace_append_iff for the foundation layer. Receipt 20261022T070506.681048Z lists foundation_modules [GenerativeCore, InquirySufficiency, RelationalRenewal] and gives an empty axiom list for Generative.InquirySufficiency.completes_append_iff. InquirySufficiency.lean imports only GenerativeCore, which is the same sense of 只导入 Init used for core modules. 两处 still counts right, because there are still two layers.",
+    "new": "两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 与 `Generative.InquirySufficiency.completes_append_iff`（§七）在基础层，它们也只导入 `Init`"
+   },
+   {
+    "index": 6,
+    "real": true,
+    "reason": "The old text is verbatim and unique in moves-after-rounds.json (the WEN-1 body). The book's 一·二十一 says the flanking clauses 「讲揲蓍之数」, which implies the name's own clause is not about divination. The centre was fixed in round three (third-review philology 11, confirmed): 「全句讲揲蓍……上条之相合只取其结构」. passages.json xici-can-wu-cuo-zong, whose fragment includes 通其变, says 「此段讲揲蓍」. So the book still holds a copy of the confirmed defect (severity low). The replacement is refined in two ways. 「原句」 replaces 「全句」, because the book has quoted only the clause at that point. The commentator is cited in the book's own form, 朱熹（宋明·注）, as at its 頻復 條.",
+    "new": "即文只沿一行而成（相合；讀，AI，D63）。原句讲揲蓍：所成之文原是通筮之诸变所画之爻（朱熹本义，宋明·注；不在冻结语料中）；此相合只取其结构，值沿变之行而成，不带揲蓍。"
+   },
+   {
+    "index": 7,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:318. Unrolling.lean section ExactlyReading declares `variable {S : Type} {R : Type v} {V : Type w} [DecidableEq R]`, and `learnable_iff_reading` also takes `(world : ∀ s, s ∈ l) (v₀ : V)`. The catalogue's sentence is exactly the reading form, so both hypotheses apply without qualification. The third-review verdict on outputs 2 requires v₀: with no states and an empty V, no G exists. The study (§346), the chapter (「若同上，且状值之值域中有一值 v₀」) and the preface (「一族尽其状、像之同异定然否、状值之值域有一值时」) all state them; the catalogue does not. The proposed replacement is correct.",
+    "new": "when it is eventually a reading of the course, in a world a list holds, with values through the map decidably equal or not and a value v₀ of the state values' type; given that reading it shows itself)"
+   },
+   {
+    "index": 8,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:313, and it has the same omission as [7]. The proposed parenthesis 「读之形另需…」 is wrong here: this clause is itself the reading form, so v₀ is a plain hypothesis, as in the en (fix 7). The corrected text uses the 中华本 preface's own wording (xu.fragment:29: 「一族尽其状、像之同异定然否、状值之值域有一值时」).",
+    "new": "一族尽其状、像之同异定然否、状值之值域有一值时状值可知恰当它自某步起是文之一读"
+   },
+   {
+    "index": 9,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:256, inside the dependency detail for learnable-through-a-map. grep finds learnable_iff_reading 0 times in learnable-through-a-map.json (whose proof bindings are Learnable.lean, Learning.lean, Identification.lean and Seeking.lean) and 4 times in what-an-extrapolation-given-nothing-fixes.json. That record is now in 'related'. 'restates it' is also loose: the reading form needs v₀ besides the hypotheses of learnable_iff. Severity low; the replacement is correct.",
+    "new": "; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related)."
+   },
+   {
+    "index": 10,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:257. It is the zh register of [9], with the same misattribution: learnable-through-a-map.json does not contain learnable_iff_reading. The replacement matches the corrected en.",
+    "new": "；其读之形 Learnable.learnable_iff_reading 在 what-an-extrapolation-given-nothing-fixes（见相关）。"
+   },
+   {
+    "index": 11,
+    "real": false,
+    "reason": "Not a defect. The Delta records what WL adds to the theory: the name and 文同, the 條 and changed 經/說, the epistemology tied to checked laws, the character comparison and revisions, the seventh pass and the import. It never listed the chapter's other comparison sections. The formal part and the 八卦 comparison were in the chapter before round three, were absent from the Delta, and two landing reviews left them so. The round-three placements of 文理生生's cards, micro-models, rule graph, atlas and references add no law, name or 條 to the spine. They live in the chapter, which the record links as its canonical source. Their status as readings is a gap in D63 (findings 15 and 16), not in the Delta. Leaving them out understates nothing the Delta claims, and nothing in it is false.",
+    "new": "agree); {len(rev)} divergent readings rechecked against its"
+   },
+   {
+    "index": 12,
+    "real": false,
+    "reason": "Not a defect. 'What was found' summarises the WL findings on the theory: the name, the epistemology and the comparison of the two projects. The structural placements of 文理生生's models are the chapter's readings, not new results, and need not be repeated in the study. The proposed text is also inexact. It says edge_03 'is `Becoming.Branching.SubProcess.reach`', but the chapter says only 同构 under 讀（AI，D63）, and edge_03 rests on 文理生生's chosen senses (势 as a reachability profile, 理 as constraints on paths). It also cites only 16 号 for the water tank, while the chapter cites 16 号 and 17 号.",
+    "new": "the core places knowing within the unfolding (识)."
+   },
+   {
+    "index": 13,
+    "real": false,
+    "reason": "Not a defect. 'Not done' lists deferred work (the H2 test, the fidelity count, the Lean items to claim, G1 as a query layer). The items the proposal would add are scope decisions the chapter states, not pending tasks. The seven edges rest on 文理生生's chosen senses and models (「依所选之义与模型而立」). The 49 atlas records are 'records and counterexamples, not 49 independent theories' (「不另对照」). The unexpanded registration rows are 文理生生's own choice not to make them cards. The synchronous common-endpoint counterexample is 本章不对应, with no planned item. Listing them under 'Not done' would misstate them as WL's open work.",
+    "new": "each to be claimed on the board; G1 embedded as a query layer."
+   },
+   {
+    "index": 14,
+    "real": false,
+    "reason": "Not a defect, and the replacement breaks the field's rules. The record claims nothing about 文理生生's cards, micro-models, rule graph or formal results. Its statement says only that 文理生生 is compared character by character, and its hypotheses add no premise. So there is no non-implication a reader would draw that needs blocking; the chapter states each scope where the placement is made. RESULT-WORKFLOW also caps does_not_show at 240 en / 110 zh characters per item, one sentence each. The proposed en item is about 430 characters in two clauses, and the zh about 130.",
+    "new": "'zh': '守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。', 'kind': 'scope'}],"
+   },
+   {
+    "index": 15,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:163. Round three added readings labelled 讀（AI，D63） that no item of D63 covers. In chapter-rest these are the atlas 同向 (line 27), the cards table (33), the rule-graph placements (104) and the 八卦 spurious cycles 同构 (122); none of them carried a D63 label before round three. In the centre they are 文理生生's working definition of 文 (y_t = H_c, 部分同构), the water tank of 16 号 and 17 号, and 16 号's 转合. Item 4 covers the epistemology topics and item 5 covers the three senses, 观/证 and the 29 readings. The replacement needs two corrections. The water tank cites 17 号 as well as 16 号. 15 号's chain (部分同构) and the working definition of 文 are also structural placements, so the list now covers references 15 to 17 and the working definition.",
+    "new": "the twenty-nine divergent readings are decided as the chapter records; its working definition of 文, its construction cards and micro-models, its eight-character rule graph, its atlas's storage of relations, its 八卦 results and its references 15 to 17 are placed by structure as the chapter records, none carried as a law of the spine (the micro-models are its construction examples)."
+   },
+   {
+    "index": 16,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:180, in the zh D63 item 五. It has the same gap as [15], and the two registers must agree, so it takes the same corrections: 15 号至 17 号, and 文之工作定义.",
+    "new": "二十九处异读依本章所记而决；其文之工作定义、构式卡与微型模型、八字有类型规则图、图谱存关系之法、八卦之结果与 15 号至 17 号，依本章所记按结构对照，无一移作脊柱之律（微型模型是其构造之例）。"
+   },
+   {
+    "index": 17,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:101. Round three changed the checked map entry xici-ji-qi-shu in passages.json. git diff c8991ba3d 2cceb9cfc shows the reading now refuses the bound sense and keeps the bound laws only as a contrast. land_wl.py now re-hashes passages.json in that record and writes the change into its history note, which points to 'study section 346'. Yet §346 nowhere mentions the correction, so the Result(s) line misdescribes what changed in that record. Severity low; the replacement is accurate.",
+    "new": "civilization-thought-on-the-spine (history note: the name table's seventh pass; the map entry xici-ji-qi-shu aligned with xici-can-wu-cuo-zong)"
+   },
+   {
+    "index": 18,
+    "real": true,
+    "reason": "The old text is verbatim and unique at land_wl.py:358. The goal's overview.summary is rendered in README.md and GOALS.md. Each earlier extension has a sentence there (the full 脉络 map; the 中华本 with its 449 names), but the 22 October extension to 文理生生 and the new result wenli-on-the-spine have none. Third-review outputs 1 noted this, and its fix covered only the counts. The proposed code is sound. agree and meaningful are defined at the top. The literal parts of the f-strings contain backticks and an escaped apostrophe, which Python allows in literals. The truncate-at-start step makes reruns idempotent: the en start ' 文理生生, a classical-Chinese' is wl['en']'s own prefix. It runs after the count substitutions. The text names no person and states partial independence, 'a correspondence, not a confirmation' and 'best expression … untested', consistent with the chapter.",
+    "new": "wl = {'en': (f' 文理生生, a classical-Chinese concept grammar built apart from the 中华本, was then compared with it: {agree} of the '\n             f'{meaningful} characters both judge agree (independence partial: the same corpus, both AI-written). 文 was named the '\n             f'course, a run\\'s states read through a map step by step (`Becoming.Parting.course`), and the epistemology of 文 was '\n             f'tied link by link to checked laws, each with its scope (a correspondence, not a confirmation; whether classical '\n             f'Chinese is the best expression is untested).'),\n      'zh': (f'其后与文理生生（与中华本分开所建之古汉语概念文法）对照：两边皆判之 {meaningful} 字中 {agree} 字相合（独立只是部分的：同一语料，'\n             f'都由 AI 写成）。以文名一历之状经一象逐步之值（`Becoming.Parting.course`），文之认识论逐环对到已检之律，各写其域（对应不是印证；'\n             f'古汉语是否最好之表达未经检验）。')}\nfor k, start in (('en', ' 文理生生, a classical-Chinese'), ('zh', '其后与文理生生')):\n    t = g['overview']['summary'][k]\n    g['overview']['summary'][k] = (t[:t.index(start)] if start in t else t.rstrip()) + wl[k]\nfor s in (SRC, CH):"
+   }
+  ]
+ }
+]

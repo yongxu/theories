@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "438e0c7d3c1fc7b8bcbddf47184d2757fafd01ca43092864556064f489f91598",
+    "README.md": "08e4f4b50142f5bb86e41c5d3fefd6eada9990e79fa86ff65d6152cba9991d22",
     "RESEARCH.md": "58769f37ec9d2d57dcb31f8cab019a49963ec04a46c283fe5998ad6c25818a74",
     "RESULTS.md": "19a1abe6c4656ed85049fef216ac3bb03dcb3a4a11bfecab3e2fe44a05a1efe9",
-    "GOALS.md": "b8321f49d683368be50d3f2d10809355786e97c7d49fe84766592b1e897c7047",
+    "GOALS.md": "0fe4af710d1d8a1d60b3503f57347df0be1730e1d8a969ee6aa557ff8d9462e2",
     "DEPENDENCIES.md": "6212817807f2c0f2c70b9f5b4808b74dab50c2b46b941351eb6a5259c315b210",
     "_process/BRIEF.md": "746932ccf78a6acecfdf42f51fae45c5989a474060ec89ebebac2ae6bd81cd38",
     "theories/becoming/README.md": "1b0956e329e311025518754beb399f5ef36711f6bbcbb8cea216d0070324dda3",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "3174f73eb6b6216b31051bfb6df91d1a2a48c23e0f1b1ac23d91c95e1c01d118",
     "theories/becoming/results/records/worlds-are-runs.md": "15fa530d777f8ff3a254ab3f65675564ec17afacc1be394c5892d7bd0a468354",
     "theories/becoming/chapters/README.md": "e541bc02f10cb1071fda51ba141d8b99d91a168ae20a793b9e987104b09b1acd",
-    "_process/research/README.md": "16022392671c9c54364d6aa951eaf6d8739d9528d4cff13befd37d4bc0ba0bdc",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "8759f5114a2c7397c62dd6e7fea883c65c382886e5cbf6ef5d01321712b8a439",
+    "_process/research/README.md": "5c22200e183e3c70a59fbc1394016e2d7807db22dd511bf15ec44b157055234d",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "c55aa7941d03cb3abdd437e29b390ddf6c4ee413f86c0b0d0ef53b34ad5bd105",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0bb673488ebb025ba6f081c5c1944c234c5198aeedcedefc52603a2cfce22b60",
     "sources/README.md": "75b8681cbcef76f646df77d49990f0188140b7691a69d5d3e2793ad1ea66548a",
     "_process/DIRECTIVE-INDEX.md": "70de69dd077a5ff86f3b654ac1c1c4960cced41188ef64a6e10dcf80df625962",
@@ -438,6 +438,6 @@
     "theories/becoming/results/records/two-rules-lock-together.md": "75e9d2284bb381242bc97e8796749394c4cbfbdf6a0d9d7bc29c1fc22f64621f",
     "theories/becoming/results/records/what-the-claims-do-not-read.md": "332089143fd9680299397fcba0920efb586830dc1d1ffb8b5c4963abe399f533",
     "theories/becoming/results/records/forming-anew-necessary-and-sufficient.md": "ad3e3b4d07cacf3b72607fbcfc5e9f34b677c704d21e687c5e8599f461e50415",
-    "theories/becoming/results/records/wenli-on-the-spine.md": "459d95fd6ed8e83a1e1ce0bda50aa175c40550c91b1adfd3178dabbbf11ce7a8"
+    "theories/becoming/results/records/wenli-on-the-spine.md": "333c4db6c58742d348195183c804f1e9ab50dbf520766b1281088a1a77c9709a"
   }
 }

@@ -380,7 +380,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
-      "sha256": "6f1f56609e41394082939b85c3a8930a989b5cc48d6ed2e5469421b12c566a51"
+      "sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
@@ -410,7 +410,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "review",
-      "sha256": "3a53265df4060a584e7ebeca0d8bf0a1606138cf1f4e27128676a092f3e3b787"
+      "sha256": "cb8997aa4420934a8a1e92057d0fc26a07243b2bb8f45f0f9b24749afaf83df2"
     },
     {
       "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",

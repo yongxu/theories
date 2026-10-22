@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T09:47:37+00:00",
+  "reviewed_at_utc": "2026-10-22T10:16:55+00:00",
   "statement": {
     "en": "文 names a run's states read through a map step by step (Parting.course), 文同 two states whose courses agree (Law.SameFuture); the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 and the 文) is tied to checked laws, each with its scope; 文理生生 is compared character by character.",
     "zh": "以文名一历之状经一象逐步之值，文同即二状之文逐步皆同（Law.SameFuture）；文之认识论（律读自展开、读书百遍其义自见、理与文）逐环对到已检之律，各写其域；文理生生逐字对照名表。"
@@ -45,8 +45,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes: 1342 quotations in their frozen texts, 5476 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed twice by independent lenses, a skeptic checking each finding. All readers AI.",
-    "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5476 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经两轮独立视角审读，每一发现各有一个质疑者。读者都是 AI。"
+    "en": "verify_zh.py passes: 1342 quotations in their frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.",
+    "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
   },
   "next_delta": {
     "en": "The H2 reading test and the fidelity count (experiments/wenli-reading-transfer); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
@@ -78,8 +78,8 @@
       "id": "learnable-through-a-map",
       "relation": "interpretive",
       "detail": {
-        "en": "Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; Learnable.learnable_iff_reading restates it as the value being eventually a reading of the course.",
-        "zh": "Learnable.learnable_iff 给出「其义」：一族尽其状、像之同异定然否时，状值可知，恰当凡文同之二状，沿二者之轨，其状值自某步起逐步相同；Learnable.learnable_iff_reading 改述为状值自某步起是文之一读。"
+        "en": "Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related).",
+        "zh": "Learnable.learnable_iff 给出「其义」：一族尽其状、像之同异定然否时，状值可知，恰当凡文同之二状，沿二者之轨，其状值自某步起逐步相同；其读之形 Learnable.learnable_iff_reading 在 what-an-extrapolation-given-nothing-fixes（见相关）。"
       }
     },
     {
@@ -139,12 +139,12 @@
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "87bd55204cbc897386ec431b7abc3aa88ea88cd0d8c80eec9981f24a530a73b4"
+      "sha256": "a37e7781ba0d7c27f565cac5fd45f1c103ca220e456f060c2dcc837f50d775bd"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
-      "sha256": "6f1f56609e41394082939b85c3a8930a989b5cc48d6ed2e5469421b12c566a51"
+      "sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
@@ -174,7 +174,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "review",
-      "sha256": "3a53265df4060a584e7ebeca0d8bf0a1606138cf1f4e27128676a092f3e3b787"
+      "sha256": "cb8997aa4420934a8a1e92057d0fc26a07243b2bb8f45f0f9b24749afaf83df2"
     },
     {
       "path": "sources/wenli-shengsheng-v0.4/PROVENANCE.json",

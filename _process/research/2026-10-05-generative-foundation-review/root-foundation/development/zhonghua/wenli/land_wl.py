@@ -98,7 +98,7 @@ ntiao = len(new_b)
 study = f'''## {S}. {HEAD}
 
 ```text
-Result(s): {ID} (new); civilization-thought-on-the-spine (history note: the name table's seventh pass)
+Result(s): {ID} (new); civilization-thought-on-the-spine (history note: the name table's seventh pass; the map entry xici-ji-qi-shu aligned with xici-can-wu-cuo-zong)
 Delta: 文 named the course, a run's states read through a map step by step (Becoming.Parting.course,
        Becoming.Learnable.course), and 文同 the sameness of two states' courses under a law (Becoming.Law.SameFuture);
        the 中华本 gains 一·二十一「文与文同」 ({ntiao} 條) and states 篇九's line of knowing on 文 ({jing_changed} 經
@@ -115,7 +115,7 @@ Delta: 文 named the course, a run's states read through a map step by step (Bec
 Supplied premises / correspondence: none, and no Lean; the naming and the readings are the AI's (D{D})
 Evidence: verify_zh.py passes on the three chapters ({nq} quotations, {nd} citations of Lean names, each in receipt `{rcpt}` or a listed periphery declaration,
           {nl} record links, the name table, the generated tables); import_wenli.py --check; the central section
-          checked name by name against the Lean statements; the chapter, the changed 條 and these texts reviewed twice
+          checked name by name against the Lean statements; the chapter, the changed 條 and these texts reviewed in four rounds (these texts in the last three)
           by independent lenses (Lean fidelity; numbers, references and quotations; the whole account; the fixes; the
           book as one text; the landing texts), each finding checked by a skeptic
 Boundary: whether classical Chinese is the best expression of the core (untested); 文理生生's H2 (designed, not run); the
@@ -140,7 +140,7 @@ Ren, 22 October 2026, after the AI's comparison of 文理生生 with the theory:
 
 **Not done.** The H2 reading test and the fidelity count (`experiments/wenli-reading-transfer/`); the Lean items the chapter lists (the coarsest value-keeping 理 merging exactly the states with the same 文, as one theorem; the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational), each to be claimed on the board; G1 embedded as a query layer.
 
-**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed twice by independent lenses with a skeptic for each; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
+**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed in four rounds by independent lenses with a skeptic for each finding; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
 '''
 
 row = (f'| D{D} | 文 named the course, and the epistemology of 文 (22 October) | adopted with exact scope: 文 = a run\'s states '
@@ -160,7 +160,7 @@ Where: the chapter [WENLI-AND-BECOMING](../../../../{CH}); the 中华本's 一·
 2. **文 and 历.** One sequence along the steps is a 历 as given states and moves (its law is its natural law) and a 文 as values read, whose states and law are read off it. A run's 往 is the prefix of the 文 its moves (state, act, next state) give; two runs agree up to a 涯 when the 文 of their states agrees up to it, inclusive, and that of their acts before it.
 3. **理.** 理 is not the 文, and is read off it in one sense only: a class that keeps the values and carries the law merges only states with the same 文; one that also merges every such pair is the name that identifies alike (`Becoming.Law.identifiesAlike_of_law`), so the coarsest value-keeping 理 merges exactly the states with the same 文 (four checked laws together, not one theorem).
 4. **The epistemology.** Internally generative explanation, 读书百遍其义自见 and its failures, compression and generalization by one class, the least reading and knowing within the unfolding are readings of the checked laws the chapter cites, each with the scope it states; they do not say that any actual book or reader meets the conditions.
-5. **文理生生.** Its three senses of 文 are read as one 文 (the visible pattern, writing) and 理 (the structure read); its 观/证 is read as a reading within the unfolding (识), not a level above it; the twenty-nine divergent readings are decided as the chapter records.
+5. **文理生生.** Its three senses of 文 are read as one 文 (the visible pattern, writing) and 理 (the structure read); its 观/证 is read as a reading within the unfolding (识), not a level above it; the twenty-nine divergent readings are decided as the chapter records; its working definition of 文, its construction cards and micro-models, its eight-character rule graph, its atlas's storage of relations, its 八卦 results and its references 15 to 17 are placed by structure as the chapter records, none carried as a law of the spine (the micro-models are its construction examples).
 6. **Open.** Whether 文理生生 or classical Chinese is the best expression of the core is untested, and the designed tests compare only the codes they run. 文理生生's H2 (understanding these compositions improves structural reconstruction, explanation and transfer to unseen cases) is a narrower hypothesis about readers, designed here as a test and not run.
 
 **Reasons.** The course is the one object the line of knowing is stated on, and the name table lacked it; 历程 would mix it with 历, which gives states and moves; of the character's senses in 系辞, 「通其变，遂成天下之文」 agrees (文 formed along a change) and 「物相杂，故曰文」 holds only within a scope (its intermixing is a hexagram's six lines at once, a state, not a 文), and its other senses are stated as not carried.
@@ -177,7 +177,7 @@ zsec = f'''<a id="d{D}-以文名一历之状经一象逐步之值与文之认识
 
 所在：[《文理生生与变化论》](../../../../{CH})；中华本一·二十一（[《变化论》](../../../../{ED})）；名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)（第七次之改，[seventh-pass.json](development/zhonghua/work/seventh-pass.json)）；记录 [{ID}](../../../../theories/becoming/results/records/{ID}.md)；研究第 {S} 节。在 D45 的一个说明中决定；接续 D62。
 
-**决定。** 依所述范围采用。一、**名。** 文名一历之状经一象逐步之值（`Becoming.Parting.course`、`Becoming.Learnable.course`）；凡逐步之值皆文；二状于一法经一象逐步之值皆同，谓之文同（`Becoming.Law.SameFuture`）。名取「通其变，遂成天下之文」。二、**文与历。** 同一沿步之序列，作所给之状与动为历（其律为自然之法），作所读之值而自读其状与法为文。一行之往，是其诸移（状、动、次状）逐步所成之文之前段；二行至涯而同，是其状之文至涯（含）、其动之文于涯前皆同。三、**理。** 理不是文，只在一义自文读出：守值而载法之类只并文同之状；又并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`），所以守值之理中最粗者恰并文同之状（四条已检之律之合，非一条定理）。四、**认识论。** 内在生成之解释、读书百遍其义自见及其失效、压缩与推广同一类、最小之读、知在展开之中，皆本章所引已检之律之读法，各以其所述范围采用；不说任何实际之书或读者满足其条件。五、**文理生生。** 其文之三义读为一文（可读之纹、书写）与一理（所读之构）；其观／证读为展开之中之读（识），不是在上之一层；二十九处异读依本章所记而决。六、**不决。** 文理生生或古汉语是否为核心最好之表达，未经检验；所设计之检验只比较所运行之码。文理生生之 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移）是关于读者之较窄假说，本章设计其检验而未运行。
+**决定。** 依所述范围采用。一、**名。** 文名一历之状经一象逐步之值（`Becoming.Parting.course`、`Becoming.Learnable.course`）；凡逐步之值皆文；二状于一法经一象逐步之值皆同，谓之文同（`Becoming.Law.SameFuture`）。名取「通其变，遂成天下之文」。二、**文与历。** 同一沿步之序列，作所给之状与动为历（其律为自然之法），作所读之值而自读其状与法为文。一行之往，是其诸移（状、动、次状）逐步所成之文之前段；二行至涯而同，是其状之文至涯（含）、其动之文于涯前皆同。三、**理。** 理不是文，只在一义自文读出：守值而载法之类只并文同之状；又并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`），所以守值之理中最粗者恰并文同之状（四条已检之律之合，非一条定理）。四、**认识论。** 内在生成之解释、读书百遍其义自见及其失效、压缩与推广同一类、最小之读、知在展开之中，皆本章所引已检之律之读法，各以其所述范围采用；不说任何实际之书或读者满足其条件。五、**文理生生。** 其文之三义读为一文（可读之纹、书写）与一理（所读之构）；其观／证读为展开之中之读（识），不是在上之一层；二十九处异读依本章所记而决；其文之工作定义、构式卡与微型模型、八字有类型规则图、图谱存关系之法、八卦之结果与 15 号至 17 号，依本章所记按结构对照，无一移作脊柱之律（微型模型是其构造之例）。六、**不决。** 文理生生或古汉语是否为核心最好之表达，未经检验；所设计之检验只比较所运行之码。文理生生之 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移）是关于读者之较窄假说，本章设计其检验而未运行。
 
 **理由。** 篇九之知来之线所陈述之对象只有一个，名表原无其名；称历程则与历相混，历给状与动；系辞中字之二义，「通其变，遂成天下之文」相合（文成于变之通），「物相杂，故曰文」定域（原句之杂是一卦六爻同时之杂，是一状，不是文），其他字义写明不带。
 
@@ -231,9 +231,9 @@ record = {
         'en': (f'verify_zh.py passes: {nq} quotations in their frozen texts, {nd} citations of Lean names (each in receipt {rcpt} or a listed periphery declaration), '
                f'{nl} record links, the name table ({names} names) and the generated tables of the three chapters; '
                f'import_wenli.py --check binds {files} files. The central section was checked against each cited Lean '
-               f'statement; the chapter, the changed 條 and the landing texts were reviewed twice by independent lenses, a skeptic checking each finding. All readers AI.'),
+               f'statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.'),
         'zh': (f'verify_zh.py 通过：{nq} 句引文在其冻结原文中，{nd} 处所引之 Lean 名皆为回执 {rcpt} 中之名或所列外围之声明，{nl} 个记录链接，名表（{names} 个名）与三章之生成表；'
-               f'import_wenli.py --check 绑定 {files} 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经两轮独立视角审读，每一发现各有一个质疑者。读者都是 AI。')},
+               f'import_wenli.py --check 绑定 {files} 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。')},
     'next_delta': {
         'en': ('The H2 reading test and the fidelity count (experiments/wenli-reading-transfer); in Lean, the coarsest '
                'value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, '
@@ -253,8 +253,8 @@ record = {
          'detail': {'en': 'The 中华本 and its name table, to which 文 and 文同 are added.',
                     'zh': '中华本与其名表，文与文同加入其中。'}},
         {'id': 'learnable-through-a-map', 'relation': 'interpretive',
-         'detail': {'en': 'Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; Learnable.learnable_iff_reading restates it as the value being eventually a reading of the course.',
-                    'zh': 'Learnable.learnable_iff 给出「其义」：一族尽其状、像之同异定然否时，状值可知，恰当凡文同之二状，沿二者之轨，其状值自某步起逐步相同；Learnable.learnable_iff_reading 改述为状值自某步起是文之一读。'}},
+         'detail': {'en': 'Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related).',
+                    'zh': 'Learnable.learnable_iff 给出「其义」：一族尽其状、像之同异定然否时，状值可知，恰当凡文同之二状，沿二者之轨，其状值自某步起逐步相同；其读之形 Learnable.learnable_iff_reading 在 what-an-extrapolation-given-nothing-fixes（见相关）。'}},
         {'id': 'identification-where-bounded', 'relation': 'interpretive',
          'detail': {'en': 'A bound makes a finite prefix fix the course, with the exact length.',
                     'zh': '有界则有穷之往定文，其长确切。'}}],
@@ -310,12 +310,12 @@ e = {"id": "wenli-and-becoming", "source": CH,
      "category": "classical-comparison",
      "status": "文已立名，认识论对到已检之律；无新 Lean / 文 named, the epistemology tied to checked laws; no new Lean",
      "argument_zh": ("以文名一历之状经一象逐步之值（文同即二状之文逐步皆同），名取「通其变，遂成天下之文」。文之状与法自文读出；律读自展开；"
-                     "读书百遍其义自见是三条律（有界则往定文、一族尽其状时状值可知恰当它自某步起是文之一读、给其读则自见），各有其失效；理不是文，只在一义自文读出。"
+                     "读书百遍其义自见是三条律（有界则往定文、一族尽其状、像之同异定然否、状值之值域有一值时状值可知恰当它自某步起是文之一读、给其读则自见），各有其失效；理不是文，只在一义自文读出。"
                      f"文理生生之 {len(cw)} 字逐字对照名表，{agree} / {meaningful} 相合。"),
      "argument_en": ("文 names a run's states read through a map step by step (文同: two states whose courses agree), from "
                      "「通其变，遂成天下之文」. A 文's states and law are read off it; laws are read off the unfolding; "
                      "读书百遍其义自见 is three laws (a bound makes a prefix fix the course; a state value is learnable exactly "
-                     "when it is eventually a reading of the course, in a world a list holds; given that reading it shows itself), each with its failure; 理 is "
+                     "when it is eventually a reading of the course, in a world a list holds, with values through the map decidably equal or not and a value v₀ of the state values' type; given that reading it shows itself), each with its failure; 理 is "
                      f"not the 文 and is read off it in one sense only. 文理生生's {len(cw)} characters are compared with the name table: {agree} of {meaningful} agree."),
      "significance_zh": "理论之认识论有一古典之对应，每一环有已检之律相对，各写其域（对应不是印证）；中华本为知之对象立名。",
      "significance_en": "The theory's epistemology has a classical counterpart whose every link has a corresponding checked law with its scope (a correspondence, not a confirmation); the 中华本 names the object of knowing.",
@@ -355,6 +355,17 @@ for k in ('en', 'zh'):
 w = re.search(r'录有出处的 (\d+) 个名中，(\d+) 个', (ROOT / ED).read_text(encoding='utf-8')).groups()
 g['overview']['summary']['en'] = re.sub(r'\d+ classical names were fixed, one per concept, \d+ of the \d+ quoted', f'{names} classical names were fixed, one per concept, {w[1]} of the {w[0]} quoted', g['overview']['summary']['en'])
 g['overview']['summary']['zh'] = re.sub(r'定出 \d+ 个古典之名，每个概念一个，录有引文的 \d+ 个中 \d+ 个', f'定出 {names} 个古典之名，每个概念一个，录有引文的 {w[0]} 个中 {w[1]} 个', g['overview']['summary']['zh'])
+wl = {'en': (f' 文理生生, a classical-Chinese concept grammar built apart from the 中华本, was then compared with it: {agree} of the '
+             f'{meaningful} characters both judge agree (independence partial: the same corpus, both AI-written). 文 was named the '
+             f'course, a run\'s states read through a map step by step (`Becoming.Parting.course`), and the epistemology of 文 was '
+             f'tied link by link to checked laws, each with its scope (a correspondence, not a confirmation; whether classical '
+             f'Chinese is the best expression is untested).'),
+      'zh': (f'其后与文理生生（与中华本分开所建之古汉语概念文法）对照：两边皆判之 {meaningful} 字中 {agree} 字相合（独立只是部分的：同一语料，'
+             f'都由 AI 写成）。以文名一历之状经一象逐步之值（`Becoming.Parting.course`），文之认识论逐环对到已检之律，各写其域（对应不是印证；'
+             f'古汉语是否最好之表达未经检验）。')}
+for k, start in (('en', ' 文理生生, a classical-Chinese'), ('zh', '其后与文理生生')):
+    t = g['overview']['summary'][k]
+    g['overview']['summary'][k] = (t[:t.index(start)] if start in t else t.rstrip()) + wl[k]
 for s in (SRC, CH):
     if s not in g['sources']:
         g['sources'].append(s)

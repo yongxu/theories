@@ -1713,7 +1713,7 @@
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/finish.py",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py"
     ],
-    "source_sha256": "6f1f56609e41394082939b85c3a8930a989b5cc48d6ed2e5469421b12c566a51"
+    "source_sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254"
   },
   {
     "id": "the-theory-of-evolution",
@@ -2034,8 +2034,8 @@
     "title_en": "文理生生 and the theory of becoming: 文, 理 and reading",
     "category": "classical-comparison",
     "status": "文已立名，认识论对到已检之律；无新 Lean / 文 named, the epistemology tied to checked laws; no new Lean",
-    "argument_zh": "以文名一历之状经一象逐步之值（文同即二状之文逐步皆同），名取「通其变，遂成天下之文」。文之状与法自文读出；律读自展开；读书百遍其义自见是三条律（有界则往定文、一族尽其状时状值可知恰当它自某步起是文之一读、给其读则自见），各有其失效；理不是文，只在一义自文读出。文理生生之 144 字逐字对照名表，88 / 117 相合。",
-    "argument_en": "文 names a run's states read through a map step by step (文同: two states whose courses agree), from 「通其变，遂成天下之文」. A 文's states and law are read off it; laws are read off the unfolding; 读书百遍其义自见 is three laws (a bound makes a prefix fix the course; a state value is learnable exactly when it is eventually a reading of the course, in a world a list holds; given that reading it shows itself), each with its failure; 理 is not the 文 and is read off it in one sense only. 文理生生's 144 characters are compared with the name table: 88 of 117 agree.",
+    "argument_zh": "以文名一历之状经一象逐步之值（文同即二状之文逐步皆同），名取「通其变，遂成天下之文」。文之状与法自文读出；律读自展开；读书百遍其义自见是三条律（有界则往定文、一族尽其状、像之同异定然否、状值之值域有一值时状值可知恰当它自某步起是文之一读、给其读则自见），各有其失效；理不是文，只在一义自文读出。文理生生之 144 字逐字对照名表，88 / 117 相合。",
+    "argument_en": "文 names a run's states read through a map step by step (文同: two states whose courses agree), from 「通其变，遂成天下之文」. A 文's states and law are read off it; laws are read off the unfolding; 读书百遍其义自见 is three laws (a bound makes a prefix fix the course; a state value is learnable exactly when it is eventually a reading of the course, in a world a list holds, with values through the map decidably equal or not and a value v₀ of the state values' type; given that reading it shows itself), each with its failure; 理 is not the 文 and is read off it in one sense only. 文理生生's 144 characters are compared with the name table: 88 of 117 agree.",
     "significance_zh": "理论之认识论有一古典之对应，每一环有已检之律相对，各写其域（对应不是印证）；中华本为知之对象立名。",
     "significance_en": "The theory's epistemology has a classical counterpart whose every link has a corresponding checked law with its scope (a correspondence, not a confirmation); the 中华本 names the object of knowing.",
     "scope_zh": "名与读法为 AI 之约定与读（D63）；不新增 Lean；不说任何实际之书满足诸律之条件；古汉语是否最好之表达未经检验。",
@@ -2050,7 +2050,7 @@
       "sources/wenli-shengsheng-v0.4/PROVENANCE.json",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
     ],
-    "source_sha256": "87bd55204cbc897386ec431b7abc3aa88ea88cd0d8c80eec9981f24a530a73b4"
+    "source_sha256": "a37e7781ba0d7c27f565cac5fd45f1c103ca220e456f060c2dcc837f50d775bd"
   },
   {
     "id": "wisdom-and-context",

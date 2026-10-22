@@ -29,7 +29,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-verify_zh.py passes: 1342 quotations in their frozen texts, 5476 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed twice by independent lenses, a skeptic checking each finding. All readers AI.
+verify_zh.py passes: 1342 quotations in their frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.
 
 Canonical source: [WENLI-AND-BECOMING.md](../../chapters/WENLI-AND-BECOMING.md)
 
@@ -49,7 +49,7 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 ### Dependencies
 
 - **interpretive**: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). The 中华本 and its name table, to which 文 and 文同 are added.
-- **interpretive**: [learnable-through-a-map](learnable-through-a-map.md). Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; Learnable.learnable_iff_reading restates it as the value being eventually a reading of the course.
+- **interpretive**: [learnable-through-a-map](learnable-through-a-map.md). Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related).
 - **interpretive**: [identification-where-bounded](identification-where-bounded.md). A bound makes a finite prefix fix the course, with the exact length.
 - related, not a proved adapter: [identification-where-runs-part](identification-where-runs-part.md). Parting.course, the course of a run.
 - related, not a proved adapter: [the-split-that-makes-sense](the-split-that-makes-sense.md). alike_moments_iff and identifiesAlike_of_law: states read off a course, the class that names the alike.
@@ -83,4 +83,4 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 
 </details>
 
-Documentary review UTC: `2026-10-22T09:47:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T10:16:55+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

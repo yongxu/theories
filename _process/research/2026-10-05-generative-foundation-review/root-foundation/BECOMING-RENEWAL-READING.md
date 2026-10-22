@@ -15431,7 +15431,7 @@ Output → input: the ZH map's 唯识「無因」 entry, its last open gap note;
 ## 346. 文理生生 joined, with the epistemology of 文 at the centre (WL)
 
 ```text
-Result(s): wenli-on-the-spine (new); civilization-thought-on-the-spine (history note: the name table's seventh pass)
+Result(s): wenli-on-the-spine (new); civilization-thought-on-the-spine (history note: the name table's seventh pass; the map entry xici-ji-qi-shu aligned with xici-can-wu-cuo-zong)
 Delta: 文 named the course, a run's states read through a map step by step (Becoming.Parting.course,
        Becoming.Learnable.course), and 文同 the sameness of two states' courses under a law (Becoming.Law.SameFuture);
        the 中华本 gains 一·二十一「文与文同」 (394 條) and states 篇九's line of knowing on 文 (18 經
@@ -15446,9 +15446,9 @@ Delta: 文 named the course, a run's states read through a map step by step (Bec
        name table (48 changes over 37 rows, 449 names); 文理生生 v0.4 imported byte for byte (98
        files)
 Supplied premises / correspondence: none, and no Lean; the naming and the readings are the AI's (D63)
-Evidence: verify_zh.py passes on the three chapters (1342 quotations, 5476 citations of Lean names, each in receipt `20261022T070506.681048Z` or a listed periphery declaration,
+Evidence: verify_zh.py passes on the three chapters (1342 quotations, 5479 citations of Lean names, each in receipt `20261022T070506.681048Z` or a listed periphery declaration,
           709 record links, the name table, the generated tables); import_wenli.py --check; the central section
-          checked name by name against the Lean statements; the chapter, the changed 條 and these texts reviewed twice
+          checked name by name against the Lean statements; the chapter, the changed 條 and these texts reviewed in four rounds (these texts in the last three)
           by independent lenses (Lean fidelity; numbers, references and quotations; the whole account; the fixes; the
           book as one text; the landing texts), each finding checked by a skeptic
 Boundary: whether classical Chinese is the best expression of the core (untested); 文理生生's H2 (designed, not run); the
@@ -15473,5 +15473,5 @@ Ren, 22 October 2026, after the AI's comparison of 文理生生 with the theory:
 
 **Not done.** The H2 reading test and the fidelity count (`experiments/wenli-reading-transfer/`); the Lean items the chapter lists (the coarsest value-keeping 理 merging exactly the states with the same 文, as one theorem; the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational), each to be claimed on the board; G1 embedded as a query layer.
 
-**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed twice by independent lenses with a skeptic for each; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
+**Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed in four rounds by independent lenses with a skeptic for each finding; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
 
