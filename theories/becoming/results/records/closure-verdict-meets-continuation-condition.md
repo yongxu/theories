@@ -123,6 +123,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
 
 Aliases: `Becoming.bounded_whole`, `Becoming.Web.retains_bounded_iff_includes`, `Becoming.Web.retains_bounded_iff_retains`, `Becoming.Flow.within_closure_iff_retains`, `Becoming.Overshoot.within_closure_iff_retains`, `Becoming.Clearing.within_closure_yet_loses`
 

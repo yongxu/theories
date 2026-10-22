@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-382 registered results: 356 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 896 curated edges join 334 results to the results they draw on.
+383 registered results: 357 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 897 curated edges join 335 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -327,6 +327,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
+- [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
 - [where-a-level-couples][] ← <a id="where-a-level-couples--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="where-a-level-couples--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="where-a-level-couples--observation-is-a-route"></a>[observation-is-a-route][] · <a id="where-a-level-couples--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="where-a-level-couples--testing-within-couplings"></a>[testing-within-couplings][] · <a id="where-a-level-couples--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [where-a-move-is-formed][] ← <a id="where-a-move-is-formed--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="where-a-move-is-formed--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="where-a-move-is-formed--causal-models-as-processes"></a>[causal-models-as-processes][] · <a id="where-a-move-is-formed--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="where-a-move-is-formed--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="where-a-move-is-formed--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="where-a-move-is-formed--learning-by-refutation"></a>[learning-by-refutation][] · <a id="where-a-move-is-formed--control-coherence-loss"></a>[control-coherence-loss][] · <a id="where-a-move-is-formed--experiment-needs-return"></a>[experiment-needs-return][]
@@ -693,6 +694,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
+[what-the-dynamics-leave-open]: theories/becoming/results/records/what-the-dynamics-leave-open.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md
 [where-a-level-couples]: theories/becoming/results/records/where-a-level-couples.md

@@ -5630,3 +5630,52 @@ Definitions and types:
 
 </details>
 
+<a id="module-c24e6fba1313"></a>
+
+<details>
+<summary>SlowingDown.lean — 30 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean`
+
+Imports: `Mathlib.Probability.Moments.Variance`, `Mathlib.Probability.Independence.Basic`, `Mathlib.Analysis.SpecialFunctions.Sqrt`, `Mathlib.Analysis.Calculus.Deriv.Pow`, `Mathlib.Analysis.Calculus.Deriv.Mul`, `Mathlib.Analysis.Calculus.Deriv.Add`, `Mathlib.Topology.Algebra.Order.Field`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.SlowingDown.memLp_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L67) | 67 |
+| [Becoming.SlowingDown.variance_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L72) | 72 |
+| [Becoming.SlowingDown.covariance_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L80) | 80 |
+| [Becoming.SlowingDown.stationary_variance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L91) | 91 |
+| [Becoming.SlowingDown.stationary_lag1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L106) | 106 |
+| [Becoming.SlowingDown.stationaryVariance_tendsto](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L118) | 118 |
+| [Becoming.SlowingDown.stationaryVariance_strictMonoOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L135) | 135 |
+| [Becoming.SlowingDown.foldStep_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L149) | 149 |
+| [Becoming.SlowingDown.foldStep_hasDerivAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L156) | 156 |
+| [Becoming.SlowingDown.foldMultiplier_tendsto](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L166) | 166 |
+| [Becoming.SlowingDown.fold_variance_tendsto](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L178) | 178 |
+| [Becoming.SlowingDown.fold_variance_strictAntiOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L184) | 184 |
+| [Becoming.SlowingDown.fold_margin_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L204) | 204 |
+| [Becoming.SlowingDown.drawnStep_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L221) | 221 |
+| [Becoming.SlowingDown.drawnStep_hasDerivAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L231) | 231 |
+| [Becoming.SlowingDown.drawn_multiplier_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L248) | 248 |
+| [Becoming.SlowingDown.drawn_level_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L254) | 254 |
+| [Becoming.SlowingDown.drawnMultiplier_tendsto](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L261) | 261 |
+| [Becoming.SlowingDown.drawn_variance_tendsto](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L272) | 272 |
+| [Becoming.SlowingDown.drawn_variance_strictMonoOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L278) | 278 |
+| [Becoming.SlowingDown.need_not_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L297) | 297 |
+| [Becoming.SlowingDown.need_margin_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L302) | 302 |
+
+Definitions and types:
+
+- `def` [Becoming.SlowingDown.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L65) (L65)
+- `def` [Becoming.SlowingDown.stationaryVariance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L87) (L87)
+- `def` [Becoming.SlowingDown.lag1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L101) (L101)
+- `def` [Becoming.SlowingDown.foldStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L146) (L146)
+- `def` [Becoming.SlowingDown.foldMultiplier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L153) (L153)
+- `def` [Becoming.SlowingDown.drawnStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L216) (L216)
+- `def` [Becoming.SlowingDown.drawnRest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L219) (L219)
+- `def` [Becoming.SlowingDown.drawnMultiplier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean#L228) (L228)
+
+</details>
+
