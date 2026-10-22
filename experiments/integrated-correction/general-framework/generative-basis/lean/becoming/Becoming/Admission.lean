@@ -287,6 +287,20 @@ theorem FitsBand.admits {cap : Nat → F → C → Nat} {l : C → Nat} {t : Nat
     (fits : W.FitsBand cap l t f) : W.Admits l t f :=
   fun c requires => (fits c requires).1
 
+/-- **What does not change gives no arising.** A formation active exactly where it is supported,
+at a step and the next, whose requirements do not grow, whose needs stay and the levels of every
+condition stay across the step, does not arise across it: arising needs a change in what is
+read. -/
+theorem not_arises_of_unchanged {t : Nat} {g : F}
+    (reads : ∀ s, (s = t ∨ s = t + 1) → (W.active s g ↔ W.Supported s g))
+    (requires : ∀ c, W.requires t g c → W.requires (t + 1) g c)
+    (needs : ∀ c, W.need t g c = W.need (t + 1) g c)
+    (levels : ∀ c, W.level (t + 1) c = W.level t c) : ¬ W.Arises t g :=
+  fun ⟨before, after⟩ => before ((reads t (.inl rfl)).mpr fun c depends =>
+    Nat.le_trans (Nat.le_of_eq (needs c))
+      (Nat.le_trans ((reads (t + 1) (.inr rfl)).mp after c (requires c depends))
+        (Nat.le_of_eq (levels c))))
+
 /-- Support is admission by the levels that stand. -/
 theorem supported_iff_admits {t : Nat} {f : F} : W.Supported t f ↔ W.Admits (W.level t) t f :=
   Iff.rfl

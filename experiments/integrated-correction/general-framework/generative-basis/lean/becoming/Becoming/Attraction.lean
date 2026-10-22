@@ -311,6 +311,54 @@ theorem drawnInto_returning {next : S → S} {all : List S} (every : ∀ x, x �
     (never : ¬ Returns next s) : DrawnInto next (Returns next) s :=
   ⟨never, enters_returning every s⟩
 
+/-! ## Where courses meet: basins -/
+
+/-- The courses of `x` and `y` *meet*: at some steps they are at one configuration. -/
+def Meet (next : S → S) (x y : S) : Prop :=
+  ∃ n m, orbit next x n = orbit next y m
+
+theorem Meet.refl (next : S → S) (x : S) : Meet next x x := ⟨0, 0, rfl⟩
+
+theorem Meet.symm {next : S → S} {x y : S} : Meet next x y → Meet next y x
+  | ⟨n, m, same⟩ => ⟨m, n, same.symm⟩
+
+/-- After meeting, two courses run together. -/
+theorem Meet.later {next : S → S} {x y : S} {n m : Nat} (meet : orbit next x n = orbit next y m) :
+    ∀ j, orbit next x (n + j) = orbit next y (m + j) :=
+  fun j => (orbit_add next x n j).trans
+    ((congrArg (fun z => orbit next z j) meet).trans (orbit_add next y m j).symm)
+
+/-- **Meeting is an equivalence**, under any determined law and with no finiteness: the basins
+where courses come together partition the configurations. -/
+theorem Meet.trans {next : S → S} {x y z : S} : Meet next x y → Meet next y z → Meet next x z
+  | ⟨n, m, first⟩, ⟨m', k, second⟩ => match Nat.le_total m m' with
+    | .inl le => match le_dest le with
+      | ⟨j, same⟩ => ⟨n + j, k, (Meet.later first j).trans
+          ((congrArg (orbit next y) same.symm).trans second)⟩
+    | .inr le => match le_dest le with
+      | ⟨j, same⟩ => ⟨n, k + j, first.trans ((congrArg (orbit next y) same).trans
+          (Meet.later second j))⟩
+
+/-- **A course reaches every returning configuration of its basin.** Where the courses of `x` and
+`b` meet and `b` returns, the course of `x` is at `b` at some step. -/
+theorem Meet.reaches_returning {next : S → S} {x b : S} (meet : Meet next x b)
+    (returns : Returns next b) : ∃ j, orbit next x j = b :=
+  match meet, returns_iff.mp returns with
+  | _, ⟨0, pos, _⟩ => absurd pos (Nat.lt_irrefl 0)
+  | ⟨n, m, same⟩, ⟨q + 1, _, back⟩ => ⟨n + q * m, (Meet.later same (q * m)).trans
+      ((congrArg (orbit next b) ((Nat.add_comm m (q * m)).trans (Nat.succ_mul q m).symm)).trans
+        (orbit_mul back m))⟩
+
+/-- **Within finitely many configurations, every basin holds one cycle.** Every course enters a
+returning configuration, and every two returning configurations of one basin reach each other:
+all ways come to one return. -/
+theorem basin_one_cycle {next : S → S} {all : List S} (every : ∀ x, x ∈ all) (x : S) :
+    (∃ n, Returns next (orbit next x n)) ∧
+      ∀ a b, Meet next x a → Meet next x b → Returns next a → Returns next b →
+        ∃ j, orbit next a j = b :=
+  ⟨enters_returning every x,
+   fun _ _ ma mb _ rb => (ma.symm.trans mb).reaches_returning rb⟩
+
 /-! ## An open world draws without merging -/
 
 /-- **Counting on draws without merging.** Under `Nat.succ` zero is drawn and nothing

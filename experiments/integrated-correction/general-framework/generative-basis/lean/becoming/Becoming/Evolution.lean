@@ -298,6 +298,42 @@ theorem transmitted_within (balances : L.Balances W) (acting : L.Acting W)
   transmitted_within_at (fun s _ _ => balances s c) (transmits (S + n) x g descends)
     (descends.supported acting dependent) depends
 
+/-- **Along a lineage, need drifts at most `δ` a generation.** Let `xs 0, xs 1, …` be a lineage,
+`xs (i + 1)` descending from `xs i` across step `ts i`, each member depending on `c` from its first
+standing step with its need not rising until it gives in turn. With the dependence transmitted
+within `δ`, the need of the member after `i + 1` descents is at most the founder's need plus
+`(i + 1) * δ`. -/
+theorem transmitted_along {c : X} {δ : Nat} (transmits : L.TransmitsWithin W c δ)
+    {xs : Nat → X} {ts : Nat → Nat} {n : Nat}
+    (descends : ∀ i, i < n → L.DescendsAt W (ts i) (xs (i + 1)) (xs i))
+    (depends : ∀ i, i < n → W.requires (ts i + 1) (xs (i + 1)) c)
+    (steady : ∀ i, i + 1 < n → W.need (ts (i + 1)) (xs (i + 1)) c ≤ W.need (ts i + 1) (xs (i + 1)) c) :
+    ∀ i, i < n → W.need (ts i + 1) (xs (i + 1)) c ≤ W.need (ts 0) (xs 0) c + (i + 1) * δ
+  | 0, lt => Nat.le_trans (transmits (ts 0) (xs 1) (xs 0) (descends 0 lt) (depends 0 lt)).2
+      (Nat.le_of_eq (congrArg (_ + ·) (Nat.one_mul δ).symm))
+  | i + 1, lt =>
+    have earlier := transmitted_along transmits descends depends steady i
+      (Nat.lt_of_succ_lt lt)
+    Nat.le_trans (transmits (ts (i + 1)) (xs (i + 2)) (xs (i + 1)) (descends (i + 1) lt)
+        (depends (i + 1) lt)).2
+      (Nat.le_trans (Nat.add_le_add_right (Nat.le_trans (steady i lt) earlier) δ)
+        (Nat.le_of_eq ((Nat.add_assoc _ _ _).trans
+          (congrArg (_ + ·) (Nat.succ_mul (i + 1) δ).symm))))
+
+/-- With the founder supported where it gives, the need after `i + 1` descents is at most the
+condition's level then, plus `(i + 1) * δ`: what each generation inherits was selected once, and
+drifts by at most `δ` each time. -/
+theorem transmitted_along_supported {c : X} {δ : Nat} (transmits : L.TransmitsWithin W c δ)
+    {xs : Nat → X} {ts : Nat → Nat} {n : Nat}
+    (descends : ∀ i, i < n → L.DescendsAt W (ts i) (xs (i + 1)) (xs i))
+    (depends : ∀ i, i < n → W.requires (ts i + 1) (xs (i + 1)) c)
+    (steady : ∀ i, i + 1 < n → W.need (ts (i + 1)) (xs (i + 1)) c ≤ W.need (ts i + 1) (xs (i + 1)) c)
+    (founder : W.Supported (ts 0) (xs 0)) (pos : 0 < n) :
+    ∀ i, i < n → W.need (ts i + 1) (xs (i + 1)) c ≤ W.level (ts 0) c + (i + 1) * δ :=
+  fun i lt => Nat.le_trans (transmitted_along transmits descends depends steady i lt)
+    (Nat.add_le_add_right (founder c (transmits (ts 0) (xs 1) (xs 0) (descends 0 pos)
+      (depends 0 pos)).1) _)
+
 end Flow
 
 /-! ## Witnesses -/

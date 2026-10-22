@@ -245,6 +245,33 @@ theorem Whole.arises_within {d : Nat} (whole : W.Whole parts w)
     {S : Nat} (after : T ≤ S) : ¬ ∀ j, j < d → ∀ p, parts p → ¬ W.Arises (S + j) p :=
   (whole.covered persists).arises_within brief after
 
+/-- **A whole persists where parts keep arising and each lasts**: the converse of
+`Whole.arises_within`, which needs the parts to last. Where, from `T` on, a part arises within
+every `d` consecutive steps, and a part arising stays active for the `d` steps after, the whole is
+active at the step `d` after every step from `T` on. Without lasting it fails (`Gaps`). -/
+theorem Whole.persists_of_arising {d T : Nat} (whole : W.Whole parts w)
+    (arising : ∀ S, T ≤ S → ∃ j p, j < d ∧ parts p ∧ W.Arises (S + j) p)
+    (lasts : ∀ t p, parts p → W.Arises t p → ∀ i, i < d → W.active (t + 1 + i) p) :
+    ∀ S, T ≤ S → W.active (S + d) w :=
+  fun S after => match arising S after with
+  | ⟨j, p, below, part, arises⟩ => match le_dest (Nat.succ_le_of_lt below) with
+    | ⟨i, split⟩ => (whole (S + d)).mpr ⟨p, part,
+        Eq.subst (motive := fun x => W.active x p)
+          ((Nat.add_assoc S (j + 1) i).trans (congrArg (S + ·) split.symm))
+          (lasts (S + j) p part arises i (Nat.lt_of_lt_of_le (Nat.lt_succ_self i)
+            (Nat.le_trans (Nat.le_add_left (i + 1) j)
+              (Nat.le_of_eq ((Nat.add_right_comm j 1 i).symm.trans split.symm)))))⟩
+
+/-- So such a whole is active at every step from `T + d` on. -/
+theorem Whole.persists_from {d T : Nat} (whole : W.Whole parts w)
+    (arising : ∀ S, T ≤ S → ∃ j p, j < d ∧ parts p ∧ W.Arises (S + j) p)
+    (lasts : ∀ t p, parts p → W.Arises t p → ∀ i, i < d → W.active (t + 1 + i) p) :
+    ∀ t, T + d ≤ t → W.active t w :=
+  fun _ late => match le_dest late with
+  | ⟨r, same⟩ => Eq.subst (motive := fun x => W.active x w)
+      ((Nat.add_right_comm T r d).trans same.symm)
+      (whole.persists_of_arising arising lasts (T + r) (Nat.le_add_right T r))
+
 /-- A whole active at every step from some step on, made of parts each of whose activity
 ends, with its active parts listed, has parts arising at arbitrarily late steps: it
 persists only through the unceasing generation of its parts. -/
