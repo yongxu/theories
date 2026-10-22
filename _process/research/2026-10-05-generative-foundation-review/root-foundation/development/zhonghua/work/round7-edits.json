@@ -10,5 +10,11 @@
   "find": "慧远同文以神为",
   "replace": "慧远同篇以神为",
   "why": "final review account-26: 一·二十一 does not write 同文 (书同文 is a code, 文同 a name); the book writes 同篇 for the same piece"
+ },
+ {
+  "id": "九·十五",
+  "find": "皆有一历程于此既改、一历程于此未改",
+  "replace": "皆有一文于此既改、一文于此未改",
+  "why": "second review book-1: Retrodiction.change_unlocated is about stepAt r r' k : Nat → R, a relation's value at each date (a course of values); no state or move is given, so by 一·二十一 it is a 文, not a 历之程"
  }
 ]

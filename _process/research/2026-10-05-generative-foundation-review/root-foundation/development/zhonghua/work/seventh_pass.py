@@ -70,7 +70,12 @@ SPLIT = [('「凡物之有形者易裁也……有形則有短長」〔CV1-S-JL�
          ('察（敏感性）', '察（敏感）'), ('一书是名经码之文；', '一书是以名为值之文，其名经码配义项；'),
          ('类、理自文读出而非文（见理）', '类、理不是文；理自文读出只在一义：法经一象示之，守象之值之最粗之理所并恰为文同之状（见理）'),
          ('读作定域：理是自文读出之类，不是文。', '读作定域：理不是文，自文读出只在一义。'),
-         ('恰当其文经类于族之员数减一步之前皆同', '恰当其文于族之员数减一步之前皆同')]
+         ('恰当其文经类于族之员数减一步之前皆同', '恰当其文于族之员数减一步之前皆同'),
+         # the second review (agents/wl/second-review.json): 九·二十二's courses of a relation's values are 文; a run's
+         # 往 through a class is the prefix of the 文 of its moves read through the class
+         ('九·十、九·十九、九·二十二、十一·十', '九·十、九·十九、十一·十'),
+         ('（凡十七处）改「文」；', '（凡十七处）改「文」；九·二十二经中关系逐日之值之「历程」（二处）改「文」；'),
+         ('经 π 读之者（Run.FixesThrough）是其经类之文之前段', '经 π 读之者（Run.FixesThrough）是其诸移经类（状经类，动如故）逐步所成之文之前段')]
 def corrected(t):
     for a, b in SPLIT:
         t = t.replace(a, b)
@@ -86,7 +91,11 @@ ops += [{'row': '今', 'op': 'note-replace', 'old': '（名表往：历程之前
          'why': 'WL: 往 is the prefix of a 文'},
         {'row': '錄', 'op': 'note-replace', 'old': '建议：名表往之释「记录、历程之前段」去「记录」二字，免与此名相混。',
          'new': '名表往之释原为「记录、历程之前段」，今去「记录」二字，免与此名相混，并改名文之前段（WL）。',
-         'why': 'WL: the suggestion was taken and 往 now names the prefix of a 文'}]
+         'why': 'WL: the suggestion was taken and 往 now names the prefix of a 文'},
+        {'row': '錄', 'op': 'note-replace', 'old': '往（Learning.prefixOf，一程之前段）是全段', 'new': '往（Learning.prefixOf，文之前段）是全段',
+         'why': 'WL: 往 is the prefix of a 文'},
+        {'row': '得', 'op': 'note-replace', 'old': '不测之程上无一步起每步皆得', 'new': '不测之文上无一步起每步皆得',
+         'why': 'WL: 不测 is the diagonal 文 (九·三十), not a 程'}]
 json.dump(ops, open(H + '/seventh-pass.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 import collections
 print(len(ops), collections.Counter(o['op'] for o in ops))
