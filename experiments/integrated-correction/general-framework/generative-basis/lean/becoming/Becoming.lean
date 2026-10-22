@@ -1988,8 +1988,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   closures, and the two agree exactly where the closures do (`selfAscribed_iff_withinSome`). Invariant
   grades give invariant standing, not conversely (`Partial`); a strictly increasing transform of
   levels of continuation ranks every widening higher, one strictly concave up to a bound decides
-  transfers C leaves mixed, and a threshold of sufficiency ties above it. The readings are the AI's
-  (D59, D60).
+  transfers C leaves mixed, and a threshold of sufficiency ties above it. Under a net weighting, which
+  may count an item against a course, a ranking of presentations puts a narrowing above its widening by
+  one item only where it does not read the pair as the sets or the item weighs at zero or below, and,
+  read right, exactly where it weighs below zero; a sign measured apart predicts it exactly where it is
+  the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).
+  Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
+  each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
+  exceeds both `p / q` and `q / p`. The readings are the AI's (D59, D60).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

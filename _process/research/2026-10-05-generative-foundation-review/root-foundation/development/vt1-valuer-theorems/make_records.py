@@ -162,8 +162,8 @@ narrowing = {
         {**t('That a ranking not reading the sets violates: a misread or a framing may favour the wider plan as well.',
              '不按集合读的排序就会违反：误读或框定同样可能偏向较宽方案。'), 'kind': 'converse'},
         {**t('That a valuer reads the sets of a case, or that its sign measured apart is the sign of its joint increment: '
-             'both are measured, not derived; for an interacting order the second fails.',
-             '评价者按集合读一个情形，或其分开测得的正负号是其联合增量的正负号：两者都是测得的，不是推出的；对相互作用的次序，后者不成立。'),
+             'both are premises to measure, and for an interacting order the second fails.',
+             '评价者按集合读一个情形，或其分开测得的正负号是其联合增量的正负号：两者都是要测量的前提；对相互作用的次序，后者不成立。'),
          'kind': 'scope', 'witness': IN + 'not_net'},
         {**t('That an order increasing at each item ranks a widening by several items higher where it is neither additive '
              'nor transitive.', '在每项处递增、但既不可加也不传递的次序，把多项的扩大排得更高。'), 'kind': 'scope'},
@@ -270,8 +270,8 @@ ratio = {
         '不加公理。项的有限列举；二值接纳；在每个所列项上为正的自然数权重；精确形式需比值 n/d 满足 0 < d ≤ n（弱形式需 0 < n）；p 与 q '
         '按列举中的重复计数。')],
     'does_not_show': [
-        {**t('How dispersed actual valuers\' weights are, or that their valuations are additive: dispersion is measured, not '
-             'derived.', '实际评价者的权重分散到什么程度，或其评价可加：分散是测得的，不是推出的。'), 'kind': 'scope'},
+        {**t('How dispersed actual valuers\' weights are, or that their valuations are additive: dispersion is a premise to '
+             'measure.', '实际评价者的权重分散到什么程度，或其评价可加：分散是要测量的前提。'), 'kind': 'scope'},
         {**t('How many valuers disagree: the laws say which weightings can rank a pair opposite ways, not their share; no '
              'probability over weights is stated.', '有多少评价者有分歧：这些规律说明哪些加权能把一对排成相反方向，不说其比例；没有陈述'
              '权重上的概率。'), 'kind': 'scope'},

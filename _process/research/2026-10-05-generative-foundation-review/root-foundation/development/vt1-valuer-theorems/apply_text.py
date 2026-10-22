@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """VT1: the valuer tests as theorems. Chapter T5 (EN, ZH), the relation to known results and the record
 table; THE-STEP-OF-INVARIANCE §5; OPENING [^good-evil]; the significance review's new section and its list of
-later outcomes; the study section; the valuer-agreement README; the package README row (EN, ZH) and the root
-module's doc.
+later outcomes; the study section; the valuer-agreement README; the package README row (EN, ZH). The root module's
+doc changes with the Lean, before the checker runs.
 usage (from the checkout root): python3 -B apply_text.py STUDY_SECTION RECEIPT"""
 import sys
 from pathlib import Path
@@ -272,7 +272,7 @@ edit(REVIEW, [(review[start:end] + '\n',
                '*Later on 22 October:* VT1 proved what VD1 and VD2 tested, leaving three premises to measure: presentation '
                'invariance, the link of a sign measured apart to the joint increment, and how dispersed the weights are '
                f'([valuer-theorems check](#valuer-theorems-check), [study §{N}](BECOMING-RENEWAL-READING.md{ANCHOR})).\n')])
-PENDING[REVIEW] = PENDING[REVIEW].rstrip('\n') + '\n' + (HERE / 'review_vt1.md').read_text().replace('{N}', str(N))
+PENDING[REVIEW] = PENDING[REVIEW].rstrip('\n') + '\n' + (HERE / 'review_vt1.txt').read_text().replace('{N}', str(N))
 
 # ---- study section ----------------------------------------------------------------------------------------
 study = STUDY.read_text()
@@ -317,17 +317,6 @@ edit(PKG / 'README.zh.md', [
      "（`Weighting.narrower_above_net`、`Weighting.reads_ranksNet`；分开测得的正负号在其联系之下预测之，`Weighting.reads_increment`；"
      "见证 `Framed`、`Interacting`）；比值 `n / d` 之内的加权恰在 `n q < d p` 时把 `a` 排在 `b` 之上，偏向的加权在边界上持平"
      "（`Weighting.every_within_iff`、`Weighting.opposite_within_iff`、`Weighting.tilted_ties`）；读法是 AI 的（D59、D60） |"),
-])
-edit(PKG / 'Becoming.lean', [
-    ("  transfers C leaves mixed, and a threshold of sufficiency ties above it. The readings are the AI's\n  (D59, D60).",
-     "  transfers C leaves mixed, and a threshold of sufficiency ties above it. Under a net weighting, which\n"
-     "  may count an item against a course, a ranking of presentations puts a narrowing above its widening by\n"
-     "  one item only where it does not read the pair as the sets or the item weighs at zero or below, and,\n"
-     "  read right, exactly where it weighs below zero; a sign measured apart predicts it exactly where it is\n"
-     "  the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).\n"
-     "  Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items\n"
-     "  each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio\n"
-     "  exceeds both `p / q` and `q / p`. The readings are the AI's (D59, D60)."),
 ])
 
 for path, text in PENDING.items():
