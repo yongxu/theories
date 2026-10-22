@@ -1,0 +1,20 @@
+<a id="gaps-check-3"></a>
+## A check: the last gaps the classical texts ask for (22 October 2026, ZG7)
+
+An AI check (one session, 22 October) of the twelve gap notes left open after ZG6. **Verdict: nine are answered by new laws, one by laws already on the spine, one is a scope remark and one stays open as the chapter's own open problem; each new law is known in its kind.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Complementary institutions locking in together | institutional economics (from memory) | `RuleCapture.pair_locks` |
+| Majority aggregation outvotes minority information | social choice (from memory) | `Web.majority_outvoted` |
+| Doing versus allowing; agent-relative reasons | moral philosophy (from memory) | `Lexical.BasicPriority.same_claims_alike` |
+| Early warning must precede the tipping point | resilience science (from memory) | `TimedResponse.turned_at_juncture` |
+
+```text
+Result(s): seven new records (ZG7)
+Delta: the last gap notes' laws; 老子七十九章 by existing laws; one scope remark; one open
+Supplied premises / correspondence: as each record names
+Evidence: the prior forms from memory, not reread; Lean in the records' receipt
+Boundary: AI check, one session; 唯识「無因」 open (the chapter's §8.1 item 9)
+Integration: the ZH map's entries and chapter §八; the chapter's record tables
+```

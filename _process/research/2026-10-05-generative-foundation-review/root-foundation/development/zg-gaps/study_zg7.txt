@@ -1,0 +1,37 @@
+## {N}. The last gaps: rules read from one share, a pool by its majority, what the claims do not read, feeding from a step, goals along a lineage, a source before a juncture (ZG7)
+
+```text
+Result(s): new records two-rules-lock-together, a-reading-against-the-share-does-not-ratchet,
+       a-pool-read-by-its-majority, what-the-claims-do-not-read, feeding-from-a-step, a-goal-along-a-lineage,
+       a-source-before-a-juncture.
+Delta: two rules each read monotonically from one share lock together after the first reading step
+       (RuleCapture.pair_locks); read against the share, the rule read later is not above the rule read earlier
+       (against_not_rising). Taking what more than half the members read selects through the pooled coupling and goes
+       alike where more than half read alike, however many tell the histories apart (Web.majority_through_all,
+       majority_outvoted): shares decide what a majority pool separates. Under BasicPriority alternatives realizing
+       the same claims are compared alike (Lexical.BasicPriority.same_claims_alike): an imposed and a self-borne loss
+       are not ordered unless the agent is among the claims (Above.agent_adjoined). The feeding closure from a step
+       shrinks as feeding stops, so care bounded by it permits ending what feeds no more, which the condition counts
+       as a loss (Flow.WithinFeedingFrom, feedingFrom_permits, feedingFrom_parts). A goal descends exactly where it
+       passes across each descent from a carrier (Flow.goal_descends_iff). A source not yet arrived leaves a reader's
+       step at a juncture as it was; to turn it, the source must reach the reader before
+       (TimedResponse.same_step_unreached, turned_at_juncture).
+Premises / correspondence: as each record names; BasicPriority and the continuation condition are hypotheses only of
+       the theorems that use them. Correspondence: institutional lock-in; negative feedback; majority aggregation;
+       doing and allowing; instrumental concern; vertical transmission; early warning.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: 老子七十九章 is answered by laws already on the spine (Rejoining), its signed form outside the whole-number
+       carrying of Remainder; the graded order of 孟子 is a scope remark (once walks are abstracted to what they lose,
+       agreement of two gradings is their definition); 唯识「無因」 stays open, the chapter's §8.1 item 9.
+Output → input: the ZH map's last entries; records capture-through-the-rule, what-pooled-coupling-reaches,
+       basic-priority-step-by-step, closure-verdict-meets-continuation-condition, need-drift-along-a-lineage,
+       every-loss-passes-a-juncture, timely-response-necessity; chapter §八 items 8 and 10.
+```
+
+**What was built.** In `Becoming.RuleCapture`: `pairOrder`, `pairReading`, `ReadsShare.pair`, `pair_locks`, `share_kept_along`, `against_not_rising`. In `Becoming.SelectionPool`: `Web.holdsCount` with its counting lemmas, `Web.MajorityHolds`, `Web.majority_through_all`, `Web.majority_outvoted`. In `Becoming.Lexical`: `Included.congr`, `StrictIncluded.congr`, `Above.congr_left`, `Above.congr_right`, `BasicPriority.same_claims_alike`, `Above.agent_adjoined`. In `Becoming.BoundedSignificance`: `Flow.FedFromAfter`, `Flow.WithinFeedingFrom`, `Flow.withinFeedingFrom_zero`, `Flow.WithinFeedingFrom.earlier`, `Flow.not_withinFeedingFrom`, `Flow.feedingFrom_permits`, `Flow.feedingFrom_parts`. In `Becoming.Evolution`: `Flow.goal_along`, `Flow.goal_descends_iff`. In `Becoming.Junctures`, which now imports `Becoming.TimedResponse`: `TimedResponse.same_step_unreached`, `TimedResponse.turned_at_juncture`.
+
+*Reading* [AI reading, D45]. 庄子「并與斗斛而竊之」: the measures added are read from the same share and lock with the rule. 韩非「二柄」: a rule read by those it presses down, against the share, does not ratchet. 吴子「群臣莫及」 and 韩非「三守」: in a pool read by its majority a distinction held by few is outvoted. 墨经大取「殺己以存天下」: the core comparison cannot tell an imposed loss from a self-borne one; with the agent among the claims it can. 经说「愛民者非為用民」: care bounded by feeding withdraws as feeding stops. 中庸「善繼人之志」: a goal passes only where each descendant takes it up. 老子「為之於未有」: to change the step at the juncture the arrival must come before.
+
+**Self-review.** Each law is stated for any flow, web, rule or process, with no witness needed: the per-step feeding law and the timed juncture law were asked for with witnesses and hold generally. `pair_locks` is `favouring_locks` at a pair of rules, its content the monotone pair reading. `goal_descends_iff` is a conditional law whose condition is single-descent passing, as the note asked; it adds no direction to descent. The majority counts are written with `Bool.toNat` and term-mode proofs, so the reports stay empty.
+
+**The run.** {CORE_LINE}. Connectivity: {APART}.
