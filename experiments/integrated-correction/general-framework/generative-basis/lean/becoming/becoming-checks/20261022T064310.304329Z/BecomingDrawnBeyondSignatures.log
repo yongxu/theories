@@ -1,0 +1,207 @@
+@Becoming.Web.MetOn.stock_eq : ∀ {F C : Type} {W : Becoming.Web F C} {dep : C → F} {rest : List C} {t : Nat},
+  W.MetOn dep rest t → W.stock rest t = (Becoming.total rest fun c => W.need t (dep c) c) + W.slack dep rest t
+@Becoming.Web.MetOn.breaks_of_falls : ∀ {F C : Type} {W : Becoming.Web F C} {dep : C → F} {ds rest : List C} {t : Nat},
+  W.MetOn dep rest t →
+    ∀ {k m : Nat},
+      W.stock ds (t + 1) + W.stock rest (t + 1) + k ≤ W.stock ds t + W.stock rest t + m →
+        W.stock ds t + W.slack dep rest t + m < W.stock ds (t + 1) + k → ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Flow.Balances.beyond_falls_exactly : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.stock ds (t + 1) + W.stock rest (t + 1) + L.lost (ds ++ rest) t = W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.rise_lowers_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat},
+  L.Balances W → L.GainlessOn (ds ++ rest) t → W.stock ds (t + 1) + W.stock rest (t + 1) ≤ W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.rise_lowers_beyond_dissipating : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat},
+  L.Balances W →
+    L.DissipatesOn (ds ++ rest) t →
+      W.stock ds (t + 1) + W.stock rest (t + 1) + L.takers (ds ++ rest) t ≤ W.stock ds t + W.stock rest t
+@Becoming.Flow.Balances.breaks_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds rest : List C}
+  {t : Nat} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t →
+          ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Flow.Balances.breaks_beyond_past_free : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F} {free : List C},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest ++ free) t →
+      W.MetOn dep rest t →
+        W.stock ds t + W.slack dep rest t + W.stock free t < W.stock ds (t + 1) + L.lost (ds ++ rest ++ free) t →
+          ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Flow.Balances.rise_breaks_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t → W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) → ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.Flow.Balances.breaks_beyond_unsettles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F},
+  L.Balances W →
+    W.Dependent →
+      L.GainlessOn (ds ++ rest) t →
+        W.MetOn dep rest t →
+          W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t →
+            ∃ c,
+              c ∈ rest ∧
+                W.Broken t (dep c) c ∧
+                  ¬(W.active (t + 1) (dep c) ∧
+                      W.requires (t + 1) (dep c) c ∧ W.need t (dep c) c ≤ W.need (t + 1) (dep c) c)
+@Becoming.Flow.Balances.breaks_beyond_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F},
+  L.Balances W →
+    W.Dependent →
+      L.GainlessOn (ds ++ rest) t →
+        W.MetOn dep rest t →
+          (∀ (c : C), c ∈ rest → W.requires (t + 1) (dep c) c ∧ W.need t (dep c) c ≤ W.need (t + 1) (dep c) c) →
+            W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t →
+              ∃ c, c ∈ rest ∧ W.Broken t (dep c) c ∧ ¬W.active (t + 1) (dep c)
+@Becoming.Flow.favours_breaking_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F} {obs : F → C → Prop} {members : F → Prop}
+  {select : (Nat → C → Nat) → Prop},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+          (∀ (h : F) (c : C), members h → W.CoupledInto obs h c → c ∈ ds) →
+            (select W.level → W.stock ds t + W.slack dep rest t < W.stock ds (t + 1)) →
+              select W.level →
+                ∃ c, c ∈ rest ∧ W.Broken t (dep c) c ∧ ¬members (dep c) ∧ ∀ (h : F), members h → ¬W.CoupledInto obs h c
+@Becoming.Flow.Balances.stock_not_rises_over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {cs : List C} {S : Nat} (N : Nat),
+      (∀ (t : Nat), S ≤ t → t < S + N → L.GainlessOn cs t) → W.stock cs (S + N) ≤ W.stock cs S
+@Becoming.Flow.Balances.rise_bounded_by_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C},
+  L.Balances W →
+    ∀ {S N : Nat},
+      (∀ (t : Nat), S ≤ t → t < S + N → L.GainlessOn (ds ++ rest) t) →
+        W.stock ds (S + N) + W.stock rest (S + N) ≤ W.stock ds S + W.stock rest S
+@Becoming.Flow.Balances.open_of_rise_above : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C},
+  L.Balances W →
+    ∀ {S N : Nat},
+      W.stock ds S + W.stock rest S < W.stock ds (S + N) → ¬∀ (t : Nat), S ≤ t → t < S + N → L.GainlessOn (ds ++ rest) t
+@Becoming.Flow.sign_of_pos : ∀ {x : Nat}, 0 < x → Becoming.sign x = 1
+@Becoming.Flow.reach_of_pos : ∀ {F C : Type} {L : Becoming.Flow F C} {rest : List C} {t : Nat} {f : F},
+  0 < Becoming.total rest (L.take t f) → L.reach rest t f = 1
+@Becoming.Flow.RaisesOn.reaches : ∀ {F C : Type} {L : Becoming.Flow F C} {ds rest : List C} {t : Nat},
+  L.GainlessOn (ds ++ rest) t → ∀ {f : F}, f ∈ L.present t → L.RaisesOn ds t f → 0 < Becoming.total rest (L.take t f)
+@Becoming.Flow.sign_le_of_pos : ∀ {x y : Nat}, (0 < x → 0 < y) → Becoming.sign x ≤ Becoming.sign y
+@Becoming.Flow.share_not_against : ∀ {F C : Type} {L : Becoming.Flow F C} {ds rest : List C} {t : Nat}
+  {G : Becoming.SelectionTerm.Generations F},
+  L.GainlessOn (ds ++ rest) t →
+    (∀ (p : F), p ∈ G.family t → p ∈ L.present t) →
+      (∀ (p : F), G.amount t p = L.reach rest t p) →
+        (∀ (p q : F),
+            p ∈ G.family t → q ∈ G.family t → G.offspringNumber t p < G.offspringNumber t q → L.RaisesOn ds t q) →
+          G.discordAt t = 0
+@Becoming.Flow.lowered_none : ∀ {F C : Type} {L : Becoming.Flow F C} {rest : List C} {t : Nat}
+  {G : Becoming.SelectionTerm.Generations F},
+  (∀ (t : Nat) (p : F), G.amount t p = L.reach rest t p) →
+    (∀ (p : F),
+        p ∈ G.family t →
+          0 < Becoming.total rest (L.take t p) →
+            ∀ (k : F), k ∈ G.kids t p → 0 < Becoming.total rest (L.take (t + 1) k)) →
+      G.loweredAt t = 0
+@Becoming.Flow.share_not_lower : ∀ {F C : Type} {L : Becoming.Flow F C} {ds rest : List C}
+  {G : Becoming.SelectionTerm.Generations F} {T : Nat},
+  (∀ (t : Nat) (p : F), G.amount t p = L.reach rest t p) →
+    (∀ (t : Nat), t < T → L.GainlessOn (ds ++ rest) t) →
+      (∀ (t : Nat), t < T → ∀ (p : F), p ∈ G.family t → p ∈ L.present t) →
+        (∀ (t : Nat),
+            t < T →
+              ∀ (p q : F),
+                p ∈ G.family t → q ∈ G.family t → G.offspringNumber t p < G.offspringNumber t q → L.RaisesOn ds t q) →
+          (∀ (t : Nat),
+              t < T →
+                ∀ (p : F),
+                  p ∈ G.family t →
+                    0 < Becoming.total rest (L.take t p) →
+                      ∀ (k : F), k ∈ G.kids t p → 0 < Becoming.total rest (L.take (t + 1) k)) →
+            G.size T * G.sum 0 ≤ G.size 0 * G.sum T
+@Becoming.Flow.share_moved_rises : ∀ {F C : Type} {L : Becoming.Flow F C} {ds rest : List C}
+  {G : Becoming.SelectionTerm.Generations F} {T : Nat},
+  (∀ (t : Nat) (p : F), G.amount t p = L.reach rest t p) →
+    (∀ (t : Nat), t < T → L.GainlessOn (ds ++ rest) t) →
+      (∀ (t : Nat), t < T → ∀ (p : F), p ∈ G.family t → p ∈ L.present t) →
+        (∀ (t : Nat),
+            t < T →
+              ∀ (p q : F),
+                p ∈ G.family t → q ∈ G.family t → G.offspringNumber t p < G.offspringNumber t q → L.RaisesOn ds t q) →
+          (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+            G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+              G.size T * G.sum 0 < G.size 0 * G.sum T ∧ ∃ t, t < T ∧ G.discordAt t < G.concordAt t
+Becoming.DrawnBeyond.source_apart : ∀ (c : Becoming.Diversion.Place),
+  c ∈ [Becoming.Diversion.Place.source] → ¬c ∈ [Becoming.Diversion.Place.store]
+Becoming.DrawnBeyond.whole_gainless : ∀ (L : Becoming.Flow Becoming.Diversion.Formation Becoming.Diversion.Place)
+  (t : Nat),
+  Becoming.total [Becoming.Diversion.Place.store, Becoming.Diversion.Place.source]
+        (L.give t Becoming.Diversion.Formation.taker) ≤
+      Becoming.total [Becoming.Diversion.Place.store, Becoming.Diversion.Place.source]
+        (L.take t Becoming.Diversion.Formation.taker) →
+    Becoming.total [Becoming.Diversion.Place.store, Becoming.Diversion.Place.source]
+          (L.give t Becoming.Diversion.Formation.dweller) ≤
+        Becoming.total [Becoming.Diversion.Place.store, Becoming.Diversion.Place.source]
+          (L.take t Becoming.Diversion.Formation.dweller) →
+      L.GainlessOn ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t
+Becoming.DrawnBeyond.met_source : ∀ (level : Nat → Becoming.Diversion.Place → Nat) (t : Nat),
+  2 ≤ level t Becoming.Diversion.Place.source →
+    (Becoming.Diversion.web level).MetOn Becoming.DrawnBeyond.dwellerOn [Becoming.Diversion.Place.source] t
+Becoming.DrawnBeyond.fixed_source : ∀ (level : Nat → Becoming.Diversion.Place → Nat) (t : Nat)
+  (c : Becoming.Diversion.Place),
+  c ∈ [Becoming.Diversion.Place.source] →
+    (Becoming.Diversion.web level).requires (t + 1) (Becoming.DrawnBeyond.dwellerOn c) c ∧
+      (Becoming.Diversion.web level).need t (Becoming.DrawnBeyond.dwellerOn c) c ≤
+        (Becoming.Diversion.web level).need (t + 1) (Becoming.DrawnBeyond.dwellerOn c) c
+Becoming.DrawnBeyond.Dweller.rise_ends_dweller : ∃ c,
+  c ∈ [Becoming.Diversion.Place.source] ∧
+    (Becoming.Diversion.web Becoming.Diversion.divertedLevel).Broken 0 Becoming.Diversion.Formation.dweller c ∧
+      ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).active 1 Becoming.Diversion.Formation.dweller
+Becoming.DrawnBeyond.Dweller.selected_breaks : ((Becoming.Diversion.web Becoming.Diversion.divertedLevel).SelectsThrough
+    Becoming.Diversion.gauge Becoming.Diversion.Formation.taker 1 fun l =>
+    Becoming.total [Becoming.Diversion.Place.store] (l 0) < Becoming.total [Becoming.Diversion.Place.store] (l 1)) ∧
+  ∃ c,
+    c ∈ [Becoming.Diversion.Place.source] ∧
+      (Becoming.Diversion.web Becoming.Diversion.divertedLevel).Broken 0 Becoming.Diversion.Formation.dweller c ∧
+        ¬Becoming.DrawnBeyond.dwellerOn c = Becoming.Diversion.Formation.taker ∧
+          ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).CoupledInto Becoming.Diversion.gauge
+              Becoming.Diversion.Formation.taker c
+Becoming.DrawnBeyond.WithinSlack.balances : Becoming.Diversion.diverting.Balances
+  (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level)
+Becoming.DrawnBeyond.WithinSlack.within_slack : (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).MetOn
+    Becoming.DrawnBeyond.dwellerOn [Becoming.Diversion.Place.source] 0 ∧
+  Becoming.Diversion.diverting.GainlessOn ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0 ∧
+    (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).stock [Becoming.Diversion.Place.store] 0 +
+          (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).slack Becoming.DrawnBeyond.dwellerOn
+            [Becoming.Diversion.Place.source] 0 =
+        (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).stock [Becoming.Diversion.Place.store] 1 ∧
+      (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).Kept 0 Becoming.Diversion.Formation.dweller
+        Becoming.Diversion.Place.source
+Becoming.DrawnBeyond.Spreading.balances : Becoming.DrawnBeyond.Spreading.spreading.Balances
+  (Becoming.Diversion.web Becoming.DrawnBeyond.Spreading.level)
+Becoming.DrawnBeyond.Spreading.gainless : ∀ (t : Nat),
+  Becoming.DrawnBeyond.Spreading.spreading.GainlessOn
+    ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t
+Becoming.DrawnBeyond.Spreading.rewarded : ∀ (p q : Becoming.Diversion.Formation),
+  p ∈ Becoming.DrawnBeyond.Spreading.generations.family 0 →
+    q ∈ Becoming.DrawnBeyond.Spreading.generations.family 0 →
+      Becoming.DrawnBeyond.Spreading.generations.offspringNumber 0 p <
+          Becoming.DrawnBeyond.Spreading.generations.offspringNumber 0 q →
+        Becoming.DrawnBeyond.Spreading.spreading.RaisesOn [Becoming.Diversion.Place.store] 0 q
+Becoming.DrawnBeyond.Spreading.exact : Becoming.SelectionTerm.Exact
+  (Becoming.DrawnBeyond.Spreading.generations.family 0) (Becoming.DrawnBeyond.Spreading.generations.kids 0)
+  (Becoming.DrawnBeyond.Spreading.generations.amount 0) (Becoming.DrawnBeyond.Spreading.generations.amount 1)
+Becoming.DrawnBeyond.Spreading.share_rises : Becoming.DrawnBeyond.Spreading.generations.size 1 *
+      Becoming.DrawnBeyond.Spreading.generations.sum 0 <
+    Becoming.DrawnBeyond.Spreading.generations.size 0 * Becoming.DrawnBeyond.Spreading.generations.sum 1 ∧
+  ∃ t,
+    t < 1 ∧
+      Becoming.DrawnBeyond.Spreading.generations.discordAt t < Becoming.DrawnBeyond.Spreading.generations.concordAt t
+Becoming.DrawnBeyond.Spreading.store_bounded : ∀ (N : Nat),
+  (Becoming.Diversion.web Becoming.DrawnBeyond.Spreading.level).stock [Becoming.Diversion.Place.store] N ≤ 2
+Becoming.DrawnBeyond.Lapsing.share_falls : Becoming.DrawnBeyond.Lapsing.generations.discordAt 0 = 0 ∧
+  Becoming.DrawnBeyond.Lapsing.generations.size 0 * Becoming.DrawnBeyond.Lapsing.generations.sum 1 <
+    Becoming.DrawnBeyond.Lapsing.generations.size 1 * Becoming.DrawnBeyond.Lapsing.generations.sum 0

@@ -1,0 +1,379 @@
+@Becoming.ownStanding_other : ∀ {X : Type} {g c : X}, c ≠ g → ¬Becoming.ownStanding g c
+@Becoming.le_of_add_eq_of_le : ∀ {a b x y : Nat}, a + x = b + y → x ≤ y → b ≤ a
+@Becoming.eq_of_add_eq_of_eq : ∀ {a b x y : Nat}, a + x = b + y → x = y → b = a
+@Becoming.Web.AlikeThrough.refl : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  (t : Nat), W.AlikeThrough obs g l l t
+@Becoming.Web.AlikeThrough.symm : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat}, W.AlikeThrough obs g l l' t → W.AlikeThrough obs g l' l t
+@Becoming.Web.AlikeThroughUpTo.symm : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat}, W.AlikeThroughUpTo obs g l l' t → W.AlikeThroughUpTo obs g l' l t
+@Becoming.Web.AlikeThroughUpTo.earlier : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {s t : Nat}, W.AlikeThroughUpTo obs g l l' t → s ≤ t → W.AlikeThroughUpTo obs g l l' s
+@Becoming.Web.AlikeThroughUpTo.of_obs : ∀ {F C : Type} {W : Becoming.Web F C} {obs obs' : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat},
+  (∀ (g : F) (c : C), obs g c → obs' g c) →
+    ∀ {t : Nat}, W.AlikeThroughUpTo obs' g l l' t → W.AlikeThroughUpTo obs g l l' t
+@Becoming.Web.alikeThroughUpTo_of_agree : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat}, (∀ (s : Nat), s ≤ t → ∀ (e : C), l' s e = l s e) → W.AlikeThroughUpTo obs g l l' t
+@Becoming.Web.alike_of_threshold : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} [DecidableEq C] {c : C} {s : Nat},
+  ¬obs g c →
+    (∀ (e : C), W.CoupledInto obs g e → e ≠ c → l s e = l' s e) →
+      (W.requires s g c → (W.need s g c ≤ l s c ↔ W.need s g c ≤ l' s c)) → W.AlikeThrough obs g l l' s
+@Becoming.Web.observed_level_couples : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {c : C} {s : Nat}, obs g c → l s c ≠ l' s c → ¬W.AlikeThrough obs g l l' s
+@Becoming.Web.Excludes.not_of_alike : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {t : Nat},
+  claim l' → W.AlikeThroughUpTo obs g l l' t → ¬W.Excludes obs claim g l t
+@Becoming.Web.Excludes.not_meets : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {t : Nat}, W.Excludes obs claim g l t → ¬claim l
+@Becoming.Web.Excludes.later : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  {claim : (Nat → C → Nat) → Prop} {s t : Nat}, W.Excludes obs claim g l s → s ≤ t → W.Excludes obs claim g l t
+@Becoming.Web.Excludes.widen : ∀ {F C : Type} {W : Becoming.Web F C} {obs obs' : F → C → Prop} {g : F}
+  {l : Nat → C → Nat},
+  (∀ (g : F) (c : C), obs g c → obs' g c) →
+    ∀ {claim : (Nat → C → Nat) → Prop} {t : Nat}, W.Excludes obs claim g l t → W.Excludes obs' claim g l t
+@Becoming.Web.Excludes.not_of_extension : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {t : Nat},
+  (∃ m, claim m ∧ ∀ (s : Nat), s ≤ t → ∀ (e : C), m s e = l s e) → ¬W.Excludes obs claim g l t
+@Becoming.Web.tail_unexcluded : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  [DecidableEq C] {t : Nat} (c : C),
+  ¬W.Excludes obs (fun m => ∃ T, m T c = 0) g l t ∧ ¬W.Excludes obs (fun m => ∀ (T : Nat), t < T → 0 < m T c) g l t
+@Becoming.Web.excludes_iff_excludesWithin_all : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {t : Nat},
+  W.Excludes obs claim g l t ↔ W.ExcludesWithin (fun x => True) obs claim g l t
+@Becoming.Web.excludesWithin_iff_conjunction : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {admitted claim : (Nat → C → Nat) → Prop} {t : Nat},
+  W.ExcludesWithin admitted obs claim g l t ↔ W.Excludes obs (fun l' => admitted l' ∧ claim l') g l t
+@Becoming.Web.ExcludesWithin.narrow : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {admitted admitted' : (Nat → C → Nat) → Prop},
+  (∀ (l : Nat → C → Nat), admitted' l → admitted l) →
+    ∀ {claim : (Nat → C → Nat) → Prop} {t : Nat},
+      W.ExcludesWithin admitted obs claim g l t → W.ExcludesWithin admitted' obs claim g l t
+@Becoming.Web.ExcludesWithin.not_meets : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {admitted claim : (Nat → C → Nat) → Prop} {t : Nat},
+  admitted l → W.ExcludesWithin admitted obs claim g l t → ¬claim l
+@Becoming.Web.ExcludesBy.of_member : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {group : F → Prop} {t : Nat},
+  group g → W.Excludes obs claim g l t → W.ExcludesBy obs claim group l t
+@Becoming.Web.class_excludes_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {claim : (Nat → C → Nat) → Prop} {t : Nat},
+  W.Excludes obs claim g l t ↔ ∀ (l' : Nat → C → Nat), W.ClassThrough obs g l t l' → ¬claim l'
+@Becoming.Web.admits_iff_supported_of_agree : ∀ {F C : Type} {W : Becoming.Web F C} {g : F} {W' : Becoming.Web F C},
+  (∀ (t : Nat) (c : C), W.requires t g c ↔ W'.requires t g c) →
+    (∀ (t : Nat) (c : C), W.need t g c = W'.need t g c) → ∀ (t : Nat), W.Admits (W'.level t) t g ↔ W'.Supported t g
+@Becoming.Web.alikeThrough_iff_of_levelsAtLeast : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {W' : Becoming.Web F C} {t : Nat},
+  W.LevelsAtLeast W' obs g t → (W.AlikeThrough obs g W.level W'.level t ↔ W.Admits (W'.level t) t g → W.Supported t g)
+@Becoming.Flow.balancedHistory_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.BalancedHistory W.level ↔ L.Balances W
+@Becoming.Flow.BalancedHistory.agree : ∀ {F C : Type} {L : Becoming.Flow F C} {l l' : Nat → C → Nat} {c : C},
+  L.BalancedHistory l → L.BalancedHistory l' → l 0 c = l' 0 c → ∀ (s : Nat), l s c = l' s c
+@Becoming.Flow.excludes_tail_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g : F} {l : Nat → C → Nat} {c : C},
+  obs g c →
+    L.BalancedHistory l →
+      (∀ (T : Nat), ¬l T c = 0) → W.ExcludesWithin L.BalancedHistory obs (fun l' => ∃ T, l' T c = 0) g l 0
+@Becoming.Flow.withinCoupling_of_withinInfluence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f g : F}, L.WithinInfluence W f g → L.WithinCoupling W obs f g
+@Becoming.Flow.withinCoupling_thresholdOnly : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.WithinCoupling W Becoming.thresholdOnly f g ↔ L.WithinInfluence W f g
+@Becoming.Flow.withinCoupling_mono_obs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs obs' : F → C → Prop},
+  (∀ (g : F) (c : C), obs g c → obs' g c) → ∀ {f g : F}, L.WithinCoupling W obs f g → L.WithinCoupling W obs' f g
+@Becoming.Flow.withinCoupling_mono_flow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {obs : F → C → Prop},
+  (∀ (h : F) (c : C), L.Exchanges h c → L'.Exchanges h c) →
+    ∀ {f g : F}, L.WithinCoupling W obs f g → L'.WithinCoupling W obs f g
+@Becoming.Flow.beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {f g h : F},
+  L.WithinCoupling W obs f g → ¬L.WithinCoupling W obs f h → ∀ {c : C}, W.CoupledInto obs g c → ¬L.Exchanges h c
+@Becoming.Flow.exchange_agrees_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {obs : F → C → Prop} {g : F} {region : F → Prop} {h : F} {c : C} {t : Nat},
+  Becoming.ClosedUnder (L.CoupledFrom W obs) region →
+    Becoming.ClosedUnder (L'.CoupledFrom W obs) region →
+      L.present t = L'.present t →
+        region g →
+          W.CoupledInto obs g c →
+            h ∈ L.present t →
+              (region h → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+                L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.Flow.alike_within_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {region : F → Prop},
+  (∀ (t : Nat) (g : F) (c : C), region g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), region g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      Becoming.ClosedUnder (L.CoupledFrom W obs) region →
+        Becoming.ClosedUnder (L'.CoupledFrom W obs) region →
+          (∀ (t : Nat), L.present t = L'.present t) →
+            (∀ (g : F), region g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+              (∀ (h : F),
+                  region h →
+                    ∀ (t : Nat),
+                      W.AlikeThroughUpTo obs h W.level W'.level t →
+                        ∀ (g : F) (c : C),
+                          region g →
+                            W.CoupledInto obs g c → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+                ∀ (t : Nat) (g : F), region g → W.AlikeThrough obs g W.level W'.level t
+@Becoming.Flow.alike_within_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {f : F},
+  (∀ (t : Nat) (g : F) (c : C),
+      Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C),
+        Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F),
+            Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+              ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          (∀ (h : F),
+              Becoming.WithinClosure (L.CoupledFromEither W L' obs) f h →
+                ∀ (t : Nat),
+                  W.AlikeThroughUpTo obs h W.level W'.level t →
+                    ∀ (g : F) (c : C),
+                      Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                        W.CoupledInto obs g c → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ (t : Nat) (g : F),
+              Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g → W.AlikeThrough obs g W.level W'.level t
+@Becoming.Flow.pos_of_withheld_pos : ∀ {b : Bool} {q : Nat}, (0 < if b = true then 0 else q) → 0 < q
+@Becoming.Flow.withheld_eq_of_false : ∀ {b : Bool}, b = false → ∀ (q : Nat), (if b = true then 0 else q) = q
+@Becoming.Flow.withhold_exchanges : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {h : F} {c : C},
+  (L.withhold part).Exchanges h c → L.Exchanges h c
+@Becoming.Flow.uncoupled_beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          ∀ (t : Nat) (g : F), L.WithinCoupling W obs f g → W.AlikeThrough obs g W.level l t
+@Becoming.Flow.unexcluded_beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          ∀ {claim : (Nat → C → Nat) → Prop},
+            claim l → ∀ (t : Nat) (g : F), L.WithinCoupling W obs f g → ¬W.Excludes obs claim g W.level t
+@Becoming.Flow.beyond_needs_model : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {part : F → Bool} {g : F} {l₀ : Nat → C → Nat},
+  L.WithheldLevels part W l₀ →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          L.WithinCoupling W obs f g →
+            ∀ {admitted claim : (Nat → C → Nat) → Prop} {t : Nat},
+              W.ExcludesWithin admitted obs claim g W.level t → ¬(admitted l₀ ∧ claim l₀)
+@Becoming.Flow.difference_kept : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {L' : Becoming.Flow F C}
+  {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      L.ExchangeFollows W L' W' obs g →
+        ∀ (t : Nat),
+          (∀ (s : Nat), s < t → W.AlikeThrough obs g W.level W'.level s) →
+            ∀ (e : C), W.CoupledInto obs g e → W'.level t e + W.level 0 e = W.level t e + W'.level 0 e
+@Becoming.Flow.levelsAtLeast_while_alike : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      (∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e) →
+        (∀ (e : C), obs g e → W.level 0 e = W'.level 0 e) →
+          L.ExchangeFollows W L' W' obs g →
+            ∀ {t : Nat}, (∀ (s : Nat), s < t → W.AlikeThrough obs g W.level W'.level s) → W.LevelsAtLeast W' obs g t
+@Becoming.Flow.alike_while_supported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      (∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e) →
+        (∀ (e : C), obs g e → W.level 0 e = W'.level 0 e) →
+          L.ExchangeFollows W L' W' obs g →
+            ∀ (t : Nat),
+              (∀ (s : Nat), s < t → W.Supported s g) → ∀ (s : Nat), s < t → W.AlikeThrough obs g W.level W'.level s
+@Becoming.Flow.difference_changes_after_divergence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      (∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e) →
+        (∀ (e : C), obs g e → W.level 0 e = W'.level 0 e) →
+          L.ExchangeFollows W L' W' obs g →
+            ∀ {t : Nat} {e : C},
+              W.CoupledInto obs g e →
+                W'.level t e + W.level 0 e ≠ W.level t e + W'.level 0 e →
+                  (¬∀ (s : Nat), s < t → W.Admits (W'.level s) s g → W.Supported s g) ∧
+                    (W.Dependent → ¬∀ (s : Nat), s < t → W.active s g)
+@Becoming.Flow.subthreshold_alike : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F} [DecidableEq C] {c : C} {d : Nat},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      W.DependsOn g c →
+        ¬obs g c →
+          W'.level 0 c = W.level 0 c + d →
+            (∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level 0 e = W'.level 0 e) →
+              L.ExchangeFollows W L' W' obs g →
+                ∀ (t : Nat),
+                  (∀ (s : Nat), s < t → W.Supported s g) →
+                    W'.level t c = W.level t c + d ∧
+                      (∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level t e = W'.level t e) ∧
+                        ∀ (s : Nat), s < t → W.AlikeThrough obs g W.level W'.level s
+@Becoming.Flow.subthreshold_alike_always : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop} {g : F} [DecidableEq C] {c : C} {d : Nat},
+  (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t) →
+    (∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t) →
+      W.DependsOn g c →
+        ¬obs g c →
+          W'.level 0 c = W.level 0 c + d →
+            (∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level 0 e = W'.level 0 e) →
+              L.ExchangeFollows W L' W' obs g →
+                (∀ (t : Nat), W.Supported t g) →
+                  ∀ (t : Nat), W'.level t c = W.level t c + d ∧ W.AlikeThrough obs g W.level W'.level t
+Becoming.Gauged.balances : ∀ (above : Nat), (Becoming.Gauged.flow above).Balances (Becoming.Gauged.web above)
+Becoming.Gauged.supported : ∀ (above t : Nat), (Becoming.Gauged.web above).Supported t ()
+Becoming.Gauged.dependent : ∀ (above : Nat), (Becoming.Gauged.web above).Dependent
+Becoming.Gauged.gauge_changes_difference : (Becoming.Gauged.flow 1).Balances (Becoming.Gauged.web 1) ∧
+  (Becoming.Gauged.flow 2).Balances (Becoming.Gauged.web 2) ∧
+    (Becoming.Gauged.web 1).Dependent ∧
+      (Becoming.Gauged.web 2).Dependent ∧
+        (∀ (t : Nat), (Becoming.Gauged.web 1).Supported t () ∧ (Becoming.Gauged.web 2).Supported t ()) ∧
+          (Becoming.Gauged.web 2).level 0 () = (Becoming.Gauged.web 1).level 0 () + 1 ∧
+            (Becoming.Gauged.web 2).level 1 () ≠ (Becoming.Gauged.web 1).level 1 () + 1 ∧
+              ¬(Becoming.Gauged.web 1).AlikeThrough Becoming.Gauged.stock () (Becoming.Gauged.web 1).level
+                    (Becoming.Gauged.web 2).level 0 ∧
+                (Becoming.Gauged.flow 1).ExchangeFollows (Becoming.Gauged.web 1) (Becoming.Gauged.flow 2)
+                    (Becoming.Gauged.web 2) Becoming.Gauged.stock () ∧
+                  ¬(Becoming.Gauged.flow 1).ExchangeFollows (Becoming.Gauged.web 1) (Becoming.Gauged.flow 2)
+                      (Becoming.Gauged.web 2) Becoming.thresholdOnly ()
+Becoming.Gauged.own_is_stock : (∀ (g c : Unit), Becoming.Gauged.stock g c ↔ Becoming.ownStanding g c) ∧
+  ¬(Becoming.Gauged.web 1).AlikeThrough Becoming.ownStanding () (Becoming.Gauged.web 1).level
+      (Becoming.Gauged.web 2).level 0
+Becoming.SupportDrawn.lower_balances : (Becoming.SupportDrawn.flow Becoming.SupportDrawn.lowerDraw).Balances
+  (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel)
+Becoming.SupportDrawn.higher_balances : (Becoming.SupportDrawn.flow Becoming.SupportDrawn.higherDraw).Balances
+  (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel)
+Becoming.SupportDrawn.dependent : ∀ (level : Nat → Nat), (Becoming.SupportDrawn.web level).Dependent
+Becoming.SupportDrawn.follows : (Becoming.SupportDrawn.flow Becoming.SupportDrawn.lowerDraw).ExchangeFollows
+  (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel)
+  (Becoming.SupportDrawn.flow Becoming.SupportDrawn.higherDraw)
+  (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel) Becoming.thresholdOnly ()
+Becoming.SupportDrawn.difference_waits : (Becoming.SupportDrawn.flow Becoming.SupportDrawn.lowerDraw).Balances
+    (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel) ∧
+  (Becoming.SupportDrawn.flow Becoming.SupportDrawn.higherDraw).Balances
+      (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel) ∧
+    (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).Dependent ∧
+      (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel).Dependent ∧
+        (Becoming.SupportDrawn.flow Becoming.SupportDrawn.lowerDraw).ExchangeFollows
+            (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel)
+            (Becoming.SupportDrawn.flow Becoming.SupportDrawn.higherDraw)
+            (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel) Becoming.thresholdOnly () ∧
+          (∀ (t : Nat),
+              t ≤ 2 →
+                (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel).level t () =
+                  (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).level t () + 1) ∧
+            ¬(Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).Supported 2 () ∧
+              (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel).Supported 2 () ∧
+                (Becoming.SupportDrawn.web Becoming.SupportDrawn.higherLevel).level 3 () ≠
+                  (Becoming.SupportDrawn.web Becoming.SupportDrawn.lowerLevel).level 3 () + 1
+Becoming.JointFailure.balances_two : (Becoming.JointFailure.flow Becoming.JointFailure.draw).Balances
+  (Becoming.JointFailure.web 2)
+Becoming.JointFailure.balances_three : (Becoming.JointFailure.flow Becoming.JointFailure.draw).Balances
+  (Becoming.JointFailure.web 3)
+Becoming.JointFailure.difference_kept : (Becoming.JointFailure.flow Becoming.JointFailure.draw).Balances
+    (Becoming.JointFailure.web 2) ∧
+  (Becoming.JointFailure.flow Becoming.JointFailure.draw).Balances (Becoming.JointFailure.web 3) ∧
+    (Becoming.JointFailure.flow Becoming.JointFailure.draw).ExchangeFollows (Becoming.JointFailure.web 2)
+        (Becoming.JointFailure.flow Becoming.JointFailure.draw) (Becoming.JointFailure.web 3) Becoming.thresholdOnly
+        () ∧
+      ¬(Becoming.JointFailure.web 2).Supported 1 () ∧
+        ¬(Becoming.JointFailure.web 3).Supported 1 () ∧
+          ∀ (t : Nat), (Becoming.JointFailure.web 3).level t true = (Becoming.JointFailure.web 2).level t true + 1
+Becoming.Attracting.lower_balances : Becoming.Attracting.lowerFlow.Balances
+  (Becoming.Attracting.web Becoming.Attracting.lowerLevel)
+Becoming.Attracting.higher_balances : Becoming.Attracting.higherFlow.Balances
+  (Becoming.Attracting.web Becoming.Attracting.higherLevel)
+Becoming.Attracting.dependent_web : ∀ (level : Nat → Nat), (Becoming.Attracting.web level).Dependent
+Becoming.Attracting.higher_breaks_first : Becoming.Attracting.lowerFlow.Balances
+    (Becoming.Attracting.web Becoming.Attracting.lowerLevel) ∧
+  Becoming.Attracting.higherFlow.Balances (Becoming.Attracting.web Becoming.Attracting.higherLevel) ∧
+    (Becoming.Attracting.web Becoming.Attracting.lowerLevel).Dependent ∧
+      (Becoming.Attracting.web Becoming.Attracting.higherLevel).Dependent ∧
+        (Becoming.Attracting.web Becoming.Attracting.higherLevel).level 0 () =
+            (Becoming.Attracting.web Becoming.Attracting.lowerLevel).level 0 () + 1 ∧
+          (Becoming.Attracting.web Becoming.Attracting.lowerLevel).AlikeThrough Becoming.thresholdOnly
+              Becoming.Attracting.Formation.dependent (Becoming.Attracting.web Becoming.Attracting.lowerLevel).level
+              (Becoming.Attracting.web Becoming.Attracting.higherLevel).level 0 ∧
+            (Becoming.Attracting.web Becoming.Attracting.lowerLevel).Supported 1
+                Becoming.Attracting.Formation.dependent ∧
+              ¬(Becoming.Attracting.web Becoming.Attracting.higherLevel).Supported 1
+                    Becoming.Attracting.Formation.dependent ∧
+                ¬(Becoming.Attracting.web Becoming.Attracting.lowerLevel).AlikeThrough Becoming.thresholdOnly
+                      Becoming.Attracting.Formation.dependent
+                      (Becoming.Attracting.web Becoming.Attracting.lowerLevel).level
+                      (Becoming.Attracting.web Becoming.Attracting.higherLevel).level 1 ∧
+                  ¬Becoming.Attracting.lowerFlow.ExchangeFollows
+                      (Becoming.Attracting.web Becoming.Attracting.lowerLevel) Becoming.Attracting.higherFlow
+                      (Becoming.Attracting.web Becoming.Attracting.higherLevel) Becoming.thresholdOnly
+                      Becoming.Attracting.Formation.dependent
+Becoming.Prey.balances : Becoming.Prey.flow.Balances Becoming.Prey.web
+Becoming.Prey.dependent : Becoming.Prey.web.Dependent
+Becoming.Prey.withheld : Becoming.Prey.flow.WithheldLevels Becoming.Prey.predatorPart Becoming.Prey.web
+  Becoming.Prey.spared
+Becoming.Prey.preyAlone_closed : Becoming.ClosedUnder (Becoming.Prey.flow.AffectedBy Becoming.Prey.web) fun x =>
+  x = Becoming.Prey.Relatum.prey
+Becoming.Prey.couples_taking : ¬Becoming.Prey.flow.WithinInfluence Becoming.Prey.web Becoming.Prey.Relatum.prey
+      Becoming.Prey.Relatum.predator ∧
+  Becoming.Prey.flow.WithinCoupling Becoming.Prey.web Becoming.ownStanding Becoming.Prey.Relatum.prey
+      Becoming.Prey.Relatum.predator ∧
+    (∀ (t : Nat),
+        Becoming.Prey.web.AlikeThrough Becoming.thresholdOnly Becoming.Prey.Relatum.prey Becoming.Prey.web.level
+          Becoming.Prey.spared t) ∧
+      ¬Becoming.Prey.web.AlikeThrough Becoming.ownStanding Becoming.Prey.Relatum.prey Becoming.Prey.web.level
+          Becoming.Prey.spared 1
+Becoming.Prey.omits : (∀ (t : Nat),
+    Becoming.Prey.web.Supported t Becoming.Prey.Relatum.prey ∧
+      Becoming.Prey.web.active t Becoming.Prey.Relatum.prey ∧
+        Becoming.Prey.web.Admits (Becoming.Prey.spared t) t Becoming.Prey.Relatum.prey) ∧
+  ¬Becoming.Prey.web.SelfBearing Becoming.Prey.Relatum.prey ∧ ¬Becoming.Prey.web.Embodied Becoming.Prey.Relatum.predator
+Becoming.SelfPrey.balances_one : (Becoming.SelfPrey.flow 1).Balances (Becoming.SelfPrey.web 1)
+Becoming.SelfPrey.balances_two : (Becoming.SelfPrey.flow 2).Balances (Becoming.SelfPrey.web 2)
+Becoming.SelfPrey.selfBearing : ∀ (b : Nat), (Becoming.SelfPrey.web b).SelfBearing Becoming.Prey.Relatum.prey
+Becoming.SelfPrey.within_influence : ∀ (b : Nat),
+  0 < b →
+    (Becoming.SelfPrey.flow b).WithinInfluence (Becoming.SelfPrey.web b) Becoming.Prey.Relatum.prey
+      Becoming.Prey.Relatum.predator
+Becoming.SelfPrey.admits_spared : ∀ (b t : Nat),
+  (Becoming.SelfPrey.web b).Admits (Becoming.Prey.spared t) t Becoming.Prey.Relatum.prey
+Becoming.SelfPrey.threshold_on_oneself : (∀ (t : Nat),
+    (Becoming.SelfPrey.web 1).AlikeThrough Becoming.thresholdOnly Becoming.Prey.Relatum.prey
+      (Becoming.SelfPrey.web 1).level Becoming.Prey.spared t) ∧
+  ¬(Becoming.SelfPrey.web 1).AlikeThrough Becoming.ownStanding Becoming.Prey.Relatum.prey
+        (Becoming.SelfPrey.web 1).level Becoming.Prey.spared 1 ∧
+    ¬(Becoming.SelfPrey.web 2).AlikeThrough Becoming.thresholdOnly Becoming.Prey.Relatum.prey
+        (Becoming.SelfPrey.web 2).level Becoming.Prey.spared 1
+Becoming.Stationary.model_error : (∃ T, Becoming.Stationary.actual T () = 0) ∧
+  ¬Becoming.Stationary.still.BalancedHistory Becoming.Stationary.actual ∧
+    Becoming.Stationary.web.ExcludesWithin Becoming.Stationary.still.BalancedHistory Becoming.Stationary.gauge
+      (fun l' => ∃ T, l' T () = 0) () Becoming.Stationary.actual 0
+Becoming.Stationary.model_excluded : Becoming.Stationary.web.ExcludesWithin Becoming.Stationary.still.BalancedHistory
+  Becoming.Stationary.gauge (fun x => True) () Becoming.Stationary.actual 1
+@Becoming.Clearing.couples_resource : ∀ {g : Becoming.Clearing.Formation} {c : Becoming.Clearing.Place},
+  Becoming.Clearing.clearerSide g →
+    Becoming.Clearing.web.CoupledInto Becoming.thresholdOnly g c → c = Becoming.Clearing.Place.resource
+Becoming.Clearing.clearerSide_closed : ∀ (L : Becoming.Flow Becoming.Clearing.Formation Becoming.Clearing.Place),
+  (∀ (t : Nat),
+      L.take t Becoming.Clearing.Formation.dweller Becoming.Clearing.Place.resource = 0 ∧
+        L.give t Becoming.Clearing.Formation.dweller Becoming.Clearing.Place.resource = 0) →
+    Becoming.ClosedUnder (L.CoupledFrom Becoming.Clearing.web Becoming.thresholdOnly) Becoming.Clearing.clearerSide
+Becoming.Clearing.alike_for_clearer : ∀ (t : Nat),
+  Becoming.Clearing.web.AlikeThroughUpTo Becoming.thresholdOnly Becoming.Clearing.Formation.clearer
+    Becoming.Clearing.web.level Becoming.Clearing.sparedWeb.level t
+Becoming.Clearing.tested_by_dweller : Becoming.Clearing.DwellerEnded Becoming.Clearing.web.level ∧
+  (∀ (t : Nat),
+      ¬Becoming.Clearing.web.Excludes Becoming.thresholdOnly Becoming.Clearing.DwellerEnded
+          Becoming.Clearing.Formation.clearer Becoming.Clearing.sparedWeb.level t) ∧
+    Becoming.Clearing.web.Excludes Becoming.thresholdOnly Becoming.Clearing.DwellerEnded
+      Becoming.Clearing.Formation.dweller Becoming.Clearing.sparedWeb.level 2
+Becoming.Clearing.pooled : ¬Becoming.Clearing.web.Excludes Becoming.thresholdOnly Becoming.Clearing.EitherEnded
+      Becoming.Clearing.Formation.clearer Becoming.Clearing.sparedWeb.level 2 ∧
+  ¬Becoming.Clearing.web.Excludes Becoming.thresholdOnly Becoming.Clearing.EitherEnded
+        Becoming.Clearing.Formation.dweller Becoming.Clearing.sparedWeb.level 2 ∧
+    Becoming.Clearing.web.ExcludesBy Becoming.thresholdOnly Becoming.Clearing.EitherEnded
+      Becoming.Clearing.clearerAndDweller Becoming.Clearing.sparedWeb.level 2
+Becoming.Clearing.model_idles_coupling : Becoming.Clearing.web.ExcludesWithin Becoming.Clearing.FixedStartAndExchange
+  Becoming.thresholdOnly (fun l' => Becoming.Clearing.web.Admits (l' 2) 2 Becoming.Clearing.Formation.dweller)
+  Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level 0

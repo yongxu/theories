@@ -1,0 +1,23 @@
+import Becoming.CensusBinding
+#print axioms Becoming.World.binds_adds_counted
+#print axioms Becoming.World.binding_counting_counted
+#print axioms Becoming.World.binding_counting_under_counted
+#print axioms Becoming.World.binding_activity_iff_counted
+#print axioms Becoming.World.binding_arising_iff_counted
+#print axioms Becoming.World.binding_joint_iff_counted
+#print axioms Becoming.World.finite_binding_counting_counted
+#print axioms Becoming.World.enclosed_binding_counting_counted
+#print axioms Becoming.World.finite_binding_census_counted
+#print axioms Becoming.World.finite_binding_counting_under_counted
+#print axioms Becoming.World.finite_binding_activity_iff_counted
+#print axioms Becoming.World.finite_binding_arising_iff_counted
+#print axioms Becoming.World.finite_binding_joint_iff_counted
+#print axioms Becoming.World.enclosed_binding_counting_under_counted
+#print axioms Becoming.World.enclosed_binding_activity_iff_counted
+#print axioms Becoming.World.enclosed_binding_arising_iff_counted
+#print axioms Becoming.World.enclosed_binding_joint_iff_counted
+#print axioms Becoming.World.counting_free_parts_counted
+#print axioms Becoming.World.counting_binds_jointly_counted
+#print axioms Becoming.World.enclosed_iff_finite_counting_counted
+#print axioms Becoming.World.enclosed_iff_finite_counting_under_counted
+#print axioms Becoming.World.standing_iff_counting_counted

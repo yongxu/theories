@@ -1,0 +1,91 @@
+@Becoming.ProjectedLaws.trace_iff : ∀ {S : Type u_1} {A : Type u_2} {next : S → A → S} {s t : S} {word : List A},
+  Generative.Trace (Becoming.Assurance.ofMap next) s word t ↔ t = List.foldl next s word
+@Becoming.ProjectedLaws.commuting_iff_factors : ∀ {S : Type u_1} {Q : Type u_2} {A : Type u_3} {next : S → A → S}
+  {reduced : Q → A → Q} {p : S → Q},
+  Becoming.ProjectedLaws.Commuting next reduced p ↔
+    Becoming.FactorsThrough (Becoming.Assurance.ofMap next) p (Becoming.Assurance.ofMap reduced)
+@Becoming.ProjectedLaws.fibre_iff_goAlike : ∀ {S : Type u_1} {Q : Type u_2} {A : Type u_3} {next : S → A → S}
+  {p : S → Q}, Becoming.ProjectedLaws.FibreConsistent next p ↔ Becoming.GoAlike (Becoming.Assurance.ofMap next) p
+@Becoming.ProjectedLaws.reduced_law_exists_iff : ∀ {S : Type u_1} {Q : Type u_2} {A : Type u_3} (next : S → A → S)
+  (p : S → Q) (sectionMap : Q → S),
+  (∀ (q : Q), p (sectionMap q) = q) →
+    ((∃ reduced, Becoming.ProjectedLaws.Commuting next reduced p) ↔ Becoming.ProjectedLaws.FibreConsistent next p)
+@Becoming.ProjectedLaws.commuting_composes : ∀ {S : Type u_1} {Q : Type u_2} {R : Type u_3} {A : Type u_4}
+  {next : S → A → S} {middle : Q → A → Q} {last : R → A → R} {p : S → Q} {q : Q → R},
+  Becoming.ProjectedLaws.Commuting next middle p →
+    Becoming.ProjectedLaws.Commuting middle last q → Becoming.ProjectedLaws.Commuting next last fun s => q (p s)
+@Becoming.ProjectedLaws.commuting_iff_traces : ∀ {S : Type u_1} {Q : Type u_2} {A : Type u_3} {next : S → A → S}
+  {reduced : Q → A → Q} {p : S → Q},
+  Becoming.ProjectedLaws.Commuting next reduced p ↔
+    ∀ (s : S) (word : List A) (t : S),
+      Generative.Trace (Becoming.Assurance.ofMap next) s word t →
+        Generative.Trace (Becoming.Assurance.ofMap reduced) (p s) word (p t)
+@Becoming.ProjectedLaws.traces_compose : ∀ {S : Type u_1} {Q : Type u_2} {R : Type u_3} {A : Type u_4}
+  {next : S → A → S} {middle : Q → A → Q} {last : R → A → R} {p : S → Q} {q : Q → R},
+  (∀ (s : S) (word : List A) (t : S),
+      Generative.Trace (Becoming.Assurance.ofMap next) s word t →
+        Generative.Trace (Becoming.Assurance.ofMap middle) (p s) word (p t)) →
+    (∀ (s : Q) (word : List A) (t : Q),
+        Generative.Trace (Becoming.Assurance.ofMap middle) s word t →
+          Generative.Trace (Becoming.Assurance.ofMap last) (q s) word (q t)) →
+      ∀ (s : S) (word : List A) (t : S),
+        Generative.Trace (Becoming.Assurance.ofMap next) s word t →
+          Generative.Trace (Becoming.Assurance.ofMap last) (q (p s)) word (q (p t))
+@Becoming.ProjectedLaws.coupled_trace : ∀ {S : Type u_1} {Q : Type u_2} {R : Type u_3} {A : Type u_4} {next : S → A → S}
+  (p : S → Q) (q : S → R) (left : Q → R → A → Q) (right : Q → R → A → R),
+  (∀ (s : S) (a : A), p (next s a) = left (p s) (q s) a) →
+    (∀ (s : S) (a : A), q (next s a) = right (p s) (q s) a) →
+      ∀ {s t : S} {word : List A},
+        Generative.Trace (Becoming.Assurance.ofMap next) s word t →
+          Generative.Trace (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.coupledNext left right)) (p s, q s) word
+            (p t, q t)
+Becoming.ProjectedLaws.self_routing_fixed : ∀ (s : Bool × Bool), Becoming.ProjectedLaws.routed false s () = s
+Becoming.ProjectedLaws.cross_routing_two_steps : ∀ (s : Bool × Bool),
+  List.foldl (Becoming.ProjectedLaws.routed true) s [(), ()] = s
+Becoming.ProjectedLaws.cross_routing_not_fixed : Becoming.ProjectedLaws.routed true (true, false) () ≠ (true, false)
+Becoming.ProjectedLaws.wiring_recurrence : Generative.Trace
+    (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.routed false)) (true, false) [()] (true, false) ∧
+  ¬Generative.Trace (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.routed true)) (true, false) [()] (true, false) ∧
+    Generative.Trace (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.routed true)) (true, false) [(), ()]
+      (true, false)
+Becoming.ProjectedLaws.crossed_left_not_fibre_consistent : ¬Becoming.ProjectedLaws.FibreConsistent
+    (Becoming.ProjectedLaws.routed true) fun s => s.fst
+Becoming.ProjectedLaws.no_autonomous_left_law : ¬∃ reduced,
+    Becoming.ProjectedLaws.Commuting (Becoming.ProjectedLaws.routed true) reduced fun s => s.fst
+Becoming.ProjectedLaws.left_not_goAlike : ¬Becoming.GoAlike
+    (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.routed true)) fun s => s.fst
+Becoming.ProjectedLaws.left_carries_no_law : ¬∃ P,
+    Becoming.Determined P ∧
+      Becoming.FactorsThrough (Becoming.Assurance.ofMap (Becoming.ProjectedLaws.routed true)) (fun s => s.fst) P
+@Becoming.ProjectedLaws.link_inventory_preserved : ∀ {s t : Becoming.ProjectedLaws.Device}
+  {a : Becoming.ProjectedLaws.Event},
+  Becoming.ProjectedLaws.organization.step s a t →
+    Becoming.ProjectedLaws.linkInventory t = Becoming.ProjectedLaws.linkInventory s
+@Becoming.ProjectedLaws.fuel_does_not_increase : ∀ {s t : Becoming.ProjectedLaws.Device}
+  {a : Becoming.ProjectedLaws.Event}, Becoming.ProjectedLaws.organization.step s a t → t.fuel ≤ s.fuel
+Becoming.ProjectedLaws.formation_step : Becoming.ProjectedLaws.organization.step Becoming.ProjectedLaws.raw
+  Becoming.ProjectedLaws.Event.assemble Becoming.ProjectedLaws.formed
+Becoming.ProjectedLaws.formation_preserves_cell_values : Becoming.ProjectedLaws.parts Becoming.ProjectedLaws.raw =
+  Becoming.ProjectedLaws.parts Becoming.ProjectedLaws.formed
+Becoming.ProjectedLaws.formation_consumes_spare_and_fuel : Becoming.ProjectedLaws.raw.spare = true ∧
+  Becoming.ProjectedLaws.formed.spare = false ∧
+    Becoming.ProjectedLaws.raw.fuel = 1 ∧ Becoming.ProjectedLaws.formed.fuel = 0
+@Becoming.ProjectedLaws.assembly_draws : ∀ {t : Becoming.ProjectedLaws.Device},
+  Becoming.ProjectedLaws.organization.step Becoming.ProjectedLaws.raw Becoming.ProjectedLaws.Event.assemble t →
+    Becoming.ProjectedLaws.raw.spare = true ∧ t.spare = false ∧ Becoming.ProjectedLaws.raw.fuel = 1 ∧ t.fuel = 0
+Becoming.ProjectedLaws.exchange_unavailable_before_formation : ¬Generative.Enabled Becoming.ProjectedLaws.organization
+    Becoming.ProjectedLaws.raw Becoming.ProjectedLaws.Event.exchange
+Becoming.ProjectedLaws.exchange_available_after_formation : Generative.Enabled Becoming.ProjectedLaws.organization
+  Becoming.ProjectedLaws.formed Becoming.ProjectedLaws.Event.exchange
+Becoming.ProjectedLaws.formation_and_recurrence_same_history : Generative.Trace Becoming.ProjectedLaws.organization
+  Becoming.ProjectedLaws.raw
+  [Becoming.ProjectedLaws.Event.assemble, Becoming.ProjectedLaws.Event.exchange, Becoming.ProjectedLaws.Event.exchange]
+  Becoming.ProjectedLaws.formed
+Becoming.ProjectedLaws.parts_only_cannot_preserve_futures : ¬∃ summary,
+    ∀ (s : Becoming.ProjectedLaws.Device) (word : List Becoming.ProjectedLaws.Event),
+      Generative.Feasible Becoming.ProjectedLaws.organization s word ↔
+        Generative.Feasible summary (Becoming.ProjectedLaws.parts s) word
+Becoming.ProjectedLaws.no_fuel_blocks_formation : ∀ (s : Becoming.ProjectedLaws.Device),
+  s.fuel = 0 → ¬Generative.Enabled Becoming.ProjectedLaws.organization s Becoming.ProjectedLaws.Event.assemble
+Becoming.ProjectedLaws.no_spare_blocks_formation : ∀ (s : Becoming.ProjectedLaws.Device),
+  s.spare = false → ¬Generative.Enabled Becoming.ProjectedLaws.organization s Becoming.ProjectedLaws.Event.assemble

@@ -1,0 +1,22 @@
+import Becoming.ContextualRuns
+#print axioms Becoming.ContextualRuns.readings
+#print axioms Becoming.ContextualRuns.along_le
+#print axioms Becoming.ContextualRuns.chsh_run_le
+#print axioms Becoming.ContextualRuns.specker_run_le
+#print axioms Becoming.ContextualRuns.square_run_le
+#print axioms Becoming.ContextualRuns.cycle_run_le
+#print axioms Becoming.ContextualRuns.cycle_run_iff
+#print axioms Becoming.ContextualRuns.chshInContext
+#print axioms Becoming.ContextualRuns.chsh_in_context_not_free
+#print axioms Becoming.ContextualRuns.squareInContext
+#print axioms Becoming.ContextualRuns.square_in_context_not_free
+#print axioms Becoming.ContextualRuns.speckerAt
+#print axioms Becoming.ContextualRuns.specker_not_free
+#print axioms Becoming.ContextualRuns.specker_respecting_not_free
+#print axioms Becoming.ContextualRuns.square_respecting_not_free
+#print axioms Becoming.ContextualRuns.noGlobal_run_iff
+#print axioms Becoming.ContextualRuns.passes
+#print axioms Becoming.ContextualRuns.passes_glued
+#print axioms Becoming.ContextualRuns.passes_local
+#print axioms Becoming.ContextualRuns.specker_not_passes
+#print axioms Becoming.ContextualRuns.square_not_passes

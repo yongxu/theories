@@ -1,0 +1,95 @@
+Becoming.JointPhase.formation_from_blank : Becoming.Dephasing.recordBranch
+    (Becoming.Dephasing.hControl (Becoming.Dephasing.blankControl Becoming.Dephasing.basisZero)) =
+  Becoming.JointPhase.joined
+Becoming.JointPhase.actual_phase_preserves_both_local_states : Becoming.JointPhase.localStates
+      Becoming.JointPhase.joined =
+    ({ zz := 1, zo := 0, oz := 0, oo := 1 }, { zz := 1, zo := 0, oz := 0, oo := 1 }) ∧
+  Becoming.JointPhase.localStates Becoming.JointPhase.changed =
+    Becoming.JointPhase.localStates Becoming.JointPhase.joined
+Becoming.JointPhase.actual_phase_preserves_basis_masses : Becoming.JointPhase.basisMasses Becoming.JointPhase.joined =
+    (1, 0, 0, 1) ∧
+  Becoming.JointPhase.basisMasses Becoming.JointPhase.changed =
+    Becoming.JointPhase.basisMasses Becoming.JointPhase.joined
+Becoming.JointPhase.same_interaction_distinguishes_relation : Becoming.Dephasing.response
+      (Becoming.Dephasing.controlDensity (Becoming.Dephasing.recordBranch Becoming.JointPhase.joined)) =
+    (4, 0, 4) ∧
+  Becoming.Dephasing.response
+      (Becoming.Dephasing.controlDensity (Becoming.Dephasing.recordBranch Becoming.JointPhase.changed)) =
+    (0, 4, 4)
+Becoming.JointPhase.no_local_pair_update : ¬∃ update,
+    update (Becoming.JointPhase.localStates Becoming.JointPhase.joined) =
+        Becoming.Dephasing.controlDensity (Becoming.Dephasing.recordBranch Becoming.JointPhase.joined) ∧
+      update (Becoming.JointPhase.localStates Becoming.JointPhase.changed) =
+        Becoming.Dephasing.controlDensity (Becoming.Dephasing.recordBranch Becoming.JointPhase.changed)
+Becoming.JointPhase.local_pair_carries_no_law : ¬∃ Q,
+    Becoming.Determined Q ∧
+      Becoming.FactorsThrough (Becoming.Assurance.ofMap Becoming.JointPhase.next) Becoming.JointPhase.localStates Q
+Becoming.JointPhase.retained_cross_distinguishes_change : Becoming.JointPhase.summarize Becoming.JointPhase.joined =
+    { zeroMass := 1, oneMass := 1, localCross := 0, jointCross := 1 } ∧
+  Becoming.JointPhase.summarize Becoming.JointPhase.changed =
+    { zeroMass := 1, oneMass := 1, localCross := 0, jointCross := -1 }
+Becoming.JointPhase.summary_omits_other_relations : Becoming.JointPhase.summarize
+      { zero := { zero := 1, one := 0 }, one := { zero := 0, one := 0 } } =
+    Becoming.JointPhase.summarize { zero := { zero := 0, one := 1 }, one := { zero := 0, one := 0 } } ∧
+  Becoming.JointPhase.registerDensity { zero := { zero := 1, one := 0 }, one := { zero := 0, one := 0 } } ≠
+    Becoming.JointPhase.registerDensity { zero := { zero := 0, one := 1 }, one := { zero := 0, one := 0 } }
+Becoming.JointPhase.summary_recovers_control : ∀ (v : Becoming.Dephasing.Joint),
+  Becoming.JointPhase.decodeControl (Becoming.JointPhase.summarize v) = Becoming.Dephasing.controlDensity v
+Becoming.JointPhase.summary_update_exact : Becoming.ProjectedLaws.Commuting Becoming.JointPhase.next
+  Becoming.JointPhase.reducedNext Becoming.JointPhase.summarize
+Becoming.JointPhase.every_finite_word_exact : ∀ (v : Becoming.Dephasing.Joint) (word : List Becoming.JointPhase.Event),
+  Becoming.JointPhase.summarize (List.foldl Becoming.JointPhase.next v word) =
+    List.foldl Becoming.JointPhase.reducedNext (Becoming.JointPhase.summarize v) word
+Becoming.JointPhase.every_finite_control_response_exact : ∀ (v : Becoming.Dephasing.Joint)
+  (word : List Becoming.JointPhase.Event),
+  Becoming.Dephasing.response
+      (Becoming.JointPhase.decodeControl
+        (List.foldl Becoming.JointPhase.reducedNext (Becoming.JointPhase.summarize v) word)) =
+    Becoming.Dephasing.response (Becoming.Dephasing.controlDensity (List.foldl Becoming.JointPhase.next v word))
+@Becoming.JointPhase.step_iff : ∀ {s t : Becoming.Dephasing.Joint} {a : Becoming.JointPhase.Event},
+  Becoming.JointPhase.process.step s a t ↔ t = Becoming.JointPhase.next s a
+@Becoming.JointPhase.trace_end : ∀ {v t : Becoming.Dephasing.Joint} {word : List Becoming.JointPhase.Event},
+  Generative.Trace Becoming.JointPhase.process v word t → t = List.foldl Becoming.JointPhase.next v word
+Becoming.JointPhase.evolve_trace : ∀ (v : Becoming.Dephasing.Joint) (word : List Becoming.JointPhase.Event),
+  Generative.Trace Becoming.JointPhase.process v word (List.foldl Becoming.JointPhase.next v word)
+Becoming.JointPhase.interaction_forms_joined : Becoming.JointPhase.process.step
+  (Becoming.Dephasing.hControl (Becoming.Dephasing.blankControl Becoming.Dephasing.basisZero))
+  Becoming.JointPhase.Event.interact Becoming.JointPhase.joined
+Becoming.JointPhase.phase_keeps_local_states : ∀ (t : Becoming.Dephasing.Joint),
+  Becoming.JointPhase.process.step Becoming.JointPhase.joined Becoming.JointPhase.Event.shiftPhase t →
+    Becoming.JointPhase.localStates t = Becoming.JointPhase.localStates Becoming.JointPhase.joined
+Becoming.JointPhase.phase_keeps_masses : ∀ (t : Becoming.Dephasing.Joint),
+  Becoming.JointPhase.process.step Becoming.JointPhase.joined Becoming.JointPhase.Event.shiftPhase t →
+    Becoming.JointPhase.basisMasses t = Becoming.JointPhase.basisMasses Becoming.JointPhase.joined ∧
+      Becoming.JointPhase.basisMasses Becoming.JointPhase.joined = (1, 0, 0, 1)
+Becoming.JointPhase.phase_changes_cross : ∀ (t : Becoming.Dephasing.Joint),
+  Becoming.JointPhase.process.step Becoming.JointPhase.joined Becoming.JointPhase.Event.shiftPhase t →
+    Becoming.JointPhase.summarize Becoming.JointPhase.joined =
+        { zeroMass := 1, oneMass := 1, localCross := 0, jointCross := 1 } ∧
+      Becoming.JointPhase.summarize t = { zeroMass := 1, oneMass := 1, localCross := 0, jointCross := -1 }
+Becoming.JointPhase.interaction_tells_apart : (∀ (t : Becoming.Dephasing.Joint),
+    Generative.Trace Becoming.JointPhase.process Becoming.JointPhase.joined [Becoming.JointPhase.Event.interact] t →
+      Becoming.Dephasing.response (Becoming.Dephasing.controlDensity t) = (4, 0, 4)) ∧
+  ∀ (t : Becoming.Dephasing.Joint),
+    Generative.Trace Becoming.JointPhase.process Becoming.JointPhase.joined
+        [Becoming.JointPhase.Event.shiftPhase, Becoming.JointPhase.Event.interact] t →
+      Becoming.Dephasing.response (Becoming.Dephasing.controlDensity t) = (0, 4, 4)
+Becoming.JointPhase.no_local_update : ¬∃ update,
+    ∀ (v t : Becoming.Dephasing.Joint),
+      Becoming.JointPhase.process.step v Becoming.JointPhase.Event.interact t →
+        update (Becoming.JointPhase.localStates v) = Becoming.Dephasing.controlDensity t
+@Becoming.JointPhase.summary_response : ∀ {v t : Becoming.Dephasing.Joint} {word : List Becoming.JointPhase.Event},
+  Generative.Trace Becoming.JointPhase.process v word t →
+    Becoming.Dephasing.response
+        (Becoming.JointPhase.decodeControl
+          (List.foldl Becoming.JointPhase.reducedNext (Becoming.JointPhase.summarize v) word)) =
+      Becoming.Dephasing.response (Becoming.Dephasing.controlDensity t)
+Becoming.JointPhase.summary_omits_register : Becoming.JointPhase.registerDensity
+      { zero := { zero := 1, one := 0 }, one := { zero := 0, one := 0 } } ≠
+    Becoming.JointPhase.registerDensity { zero := { zero := 0, one := 1 }, one := { zero := 0, one := 0 } } ∧
+  ∀ (word : List Becoming.JointPhase.Event) (t t' : Becoming.Dephasing.Joint),
+    Generative.Trace Becoming.JointPhase.process { zero := { zero := 1, one := 0 }, one := { zero := 0, one := 0 } }
+        word t →
+      Generative.Trace Becoming.JointPhase.process { zero := { zero := 0, one := 1 }, one := { zero := 0, one := 0 } }
+          word t' →
+        Becoming.JointPhase.summarize t = Becoming.JointPhase.summarize t'

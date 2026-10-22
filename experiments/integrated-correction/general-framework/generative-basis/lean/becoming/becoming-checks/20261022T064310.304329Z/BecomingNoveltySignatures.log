@@ -1,0 +1,65 @@
+Becoming.upto_or_fails : ∀ (p : Nat → Prop) [(n : Nat) → Decidable (p n)] (N : Nat),
+  (∀ (n : Nat), n ≤ N → p n) ∨ ∃ n, n ≤ N ∧ ¬p n
+@Becoming.Web.revisits_of_bounded : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T K : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs t ≤ K) →
+    ∀ (M : Nat), ∃ i j, M ≤ i ∧ i < j ∧ W.config cs (T + i) = W.config cs (T + j)
+@Becoming.Web.revisits_of_nonrising : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs (t + 1) ≤ W.stock cs t) →
+    ∀ (M : Nat), ∃ i j, M ≤ i ∧ i < j ∧ W.config cs (T + i) = W.config cs (T + j)
+@Becoming.Web.returns_of_bounded : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T K : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs t ≤ K) → (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t) → ¬¬W.Revisits cs T
+@Becoming.Web.exceeds_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T K : Nat},
+  (∀ (i j : Nat),
+      i < j → j ≤ (Becoming.configurationsWithin cs.length K).length → W.config cs (T + i) ≠ W.config cs (T + j)) →
+    ∃ n, n ≤ (Becoming.configurationsWithin cs.length K).length ∧ K < W.stock cs (T + n)
+@Becoming.Web.unbounded_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (i j : Nat), i < j → W.config cs (T + i) ≠ W.config cs (T + j)) → ∀ (K M : Nat), ∃ t, M ≤ t ∧ K < W.stock cs t
+@Becoming.Web.unbounded_of_never_revisits : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  ¬W.Revisits cs T → (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t) → ∀ (K : Nat), ¬∀ (t : Nat), T ≤ t → W.stock cs t ≤ K
+@Becoming.Web.unread_of_new_record : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {H : Type} {T K : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs t ≤ K) →
+    ∀ {record : Nat → H},
+      (∀ (i j : Nat), i < j → record i ≠ record j) →
+        ∀ (read : List Nat → H), ¬∀ (n : Nat), read (W.config cs (T + n)) = record n
+@Becoming.Web.unread_of_unbounded : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T K : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs t ≤ K) →
+    ∀ {count : Nat → Nat},
+      (∀ (m : Nat), ∃ n, m ≤ count n) → ∀ (read : List Nat → Nat), ¬∀ (n : Nat), read (W.config cs (T + n)) = count n
+@Becoming.Web.never_revisits_of_loses : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs (t + 1) ≤ W.stock cs t) →
+    (∀ (t : Nat), T ≤ t → W.Changes cs t → W.stock cs (t + 1) < W.stock cs t) → ¬W.Revisits cs T
+@Becoming.Web.changes_le_stock : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs (t + 1) ≤ W.stock cs t) →
+    (∀ (t : Nat), T ≤ t → W.Changes cs t → W.stock cs (t + 1) < W.stock cs t) →
+      ∀ (N : Nat),
+        (W.stock cs (T + N) + Becoming.total (Becoming.steps T N) fun t => Becoming.mark (W.Changes cs t)) ≤
+          W.stock cs T
+@Becoming.Web.rests_of_loses : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs (t + 1) ≤ W.stock cs t) →
+    (∀ (t : Nat), T ≤ t → W.Changes cs t → W.stock cs (t + 1) < W.stock cs t) →
+      ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t
+Becoming.Web.counting_new : ∀ (i j : Nat),
+  i < j → Becoming.Web.counting.config [()] (0 + i) ≠ Becoming.Web.counting.config [()] (0 + j)
+Becoming.Web.counting_gains : ∀ (K M : Nat), ∃ t, M ≤ t ∧ K < Becoming.Web.counting.stock [()] t
+@Becoming.Flow.Balances.bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → ∀ (t : Nat), T ≤ t → W.stock cs t ≤ W.stock cs T
+@Becoming.Flow.bounded_counting_rest : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → (L.withImbalance W).GainlessOn cs t) → ∀ (t : Nat), T ≤ t → W.stock cs t ≤ W.stock cs T
+@Becoming.Flow.uncarried_of_bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T K : Nat},
+  (∀ (t : Nat), T ≤ t → W.stock cs t ≤ K) → (∀ (M : Nat), ∃ t, M ≤ t ∧ 0 < L.exchanges cs t) → ¬L.CarriesHistory W cs T
+@Becoming.World.forgets_of_bounded : ∀ {w : Becoming.World} {all : List w.Relatum},
+  (∀ (x : w.Relatum), x ∈ all) →
+    ∀ {T K : Nat},
+      (∀ (t : Nat), T ≤ t → w.web.stock all t ≤ K) → w.flow.ExchangeRecurs → ¬w.flow.CarriesHistory w.web all T
+Becoming.first_law_cases : (∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+    L.Balances W →
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        (∀ (M : Nat), ∃ i j, M ≤ i ∧ i < j ∧ W.config cs (T + i) = W.config cs (T + j)) ∧
+          (¬W.Revisits cs T → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t)) ∧
+  ∀ (w : Becoming.World) {all : List w.Relatum},
+    Becoming.Distinct all →
+      (∀ (x : w.Relatum), x ∈ all) →
+        w.Balanced → w.flow.Gainless → w.flow.ExchangeRecurs → ∀ (T : Nat), ¬w.flow.CarriesHistory w.web all T

@@ -1,0 +1,207 @@
+Becoming.SelectionTerm.excess_add_left : ∀ (x d : Nat), Becoming.excess (x + d) x = d
+Becoming.SelectionTerm.excess_self_add : ∀ (x d : Nat), Becoming.excess x (x + d) = 0
+Becoming.SelectionTerm.excess_same : ∀ (x : Nat), Becoming.excess x x = 0
+@Becoming.SelectionTerm.half : ∀ {a b : Nat}, a + a = b + b → a = b
+@Becoming.SelectionTerm.lt_iff_of_balance : ∀ {x p y q : Nat}, x + p = y + q → (y < x ↔ p < q)
+@Becoming.SelectionTerm.eq_iff_of_balance : ∀ {x p y q : Nat}, x + p = y + q → (y = x ↔ p = q)
+@Becoming.SelectionTerm.lt_of_mul_lt_mul : ∀ {m a b : Nat}, m * a < m * b → a < b
+@Becoming.SelectionTerm.le_of_mul_le_mul : ∀ {m a b : Nat}, 0 < m → m * a ≤ m * b → a ≤ b
+@Becoming.SelectionTerm.pos_of_mul_pos : ∀ {m a : Nat}, 0 < m * a → 0 < m
+Becoming.SelectionTerm.swap_both : ∀ (a b c d : Nat), a + b + (c + d) = b + a + (d + c)
+Becoming.SelectionTerm.pair_ordered : ∀ (x d u f : Nat),
+  x * u + (x + d) * (u + f) + Becoming.SelectionTerm.discordPair x (x + d) u (u + f) =
+    x * (u + f) + (x + d) * u + Becoming.SelectionTerm.concordPair x (x + d) u (u + f)
+Becoming.SelectionTerm.pair_balance : ∀ (x y u v : Nat),
+  x * u + y * v + Becoming.SelectionTerm.discordPair x y u v =
+    x * v + y * u + Becoming.SelectionTerm.concordPair x y u v
+@Becoming.SelectionTerm.pairs_add : ∀ {α : Type} (ps : List α) (F G : α → α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun q => F p q + G p q) =
+    (Becoming.total ps fun p => Becoming.total ps (F p)) + Becoming.total ps fun p => Becoming.total ps (G p)
+@Becoming.SelectionTerm.pairs_own : ∀ {α : Type} (ps : List α) (c : α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun x => c p) = ps.length * Becoming.total ps c
+@Becoming.SelectionTerm.pairs_other : ∀ {α : Type} (ps : List α) (c : α → Nat),
+  (Becoming.total ps fun x => Becoming.total ps c) = ps.length * Becoming.total ps c
+@Becoming.SelectionTerm.pairs_cross : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun q => w p * a q) = Becoming.total ps w * Becoming.total ps a
+@Becoming.SelectionTerm.pairs_cross' : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun q => w q * a p) = Becoming.total ps w * Becoming.total ps a
+@Becoming.SelectionTerm.discord_swap : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun q => Becoming.excess (w q) (w p) * Becoming.excess (a p) (a q)) =
+    Becoming.SelectionTerm.discord ps w a
+@Becoming.SelectionTerm.concord_swap : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  (Becoming.total ps fun p => Becoming.total ps fun q => Becoming.excess (w q) (w p) * Becoming.excess (a q) (a p)) =
+    Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionTerm.covariation : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  ps.length * Becoming.SelectionTerm.weighted ps w a + Becoming.SelectionTerm.discord ps w a =
+    Becoming.total ps w * Becoming.total ps a + Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionTerm.exceeds_iff : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  Becoming.total ps w * Becoming.total ps a < ps.length * Becoming.SelectionTerm.weighted ps w a ↔
+    Becoming.SelectionTerm.discord ps w a < Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionTerm.none_iff : ∀ {α : Type} (ps : List α) (w a : α → Nat),
+  Becoming.total ps w * Becoming.total ps a = ps.length * Becoming.SelectionTerm.weighted ps w a ↔
+    Becoming.SelectionTerm.discord ps w a = Becoming.SelectionTerm.concord ps w a
+@Becoming.SelectionTerm.total_zero_of : ∀ {α : Type} {q : α → Nat} {ps : List α},
+  (∀ (p : α), p ∈ ps → q p = 0) → Becoming.total ps q = 0
+@Becoming.SelectionTerm.pairs_zero : ∀ {α : Type} {ps : List α} {F : α → α → Nat},
+  (∀ (p q : α), p ∈ ps → q ∈ ps → F p q = 0) → (Becoming.total ps fun p => Becoming.total ps (F p)) = 0
+@Becoming.SelectionTerm.concord_uniform : ∀ {α : Type} {ps : List α} {w : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w p = k) → ∀ (a : α → Nat), Becoming.SelectionTerm.concord ps w a = 0
+@Becoming.SelectionTerm.discord_uniform : ∀ {α : Type} {ps : List α} {w : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → w p = k) → ∀ (a : α → Nat), Becoming.SelectionTerm.discord ps w a = 0
+@Becoming.SelectionTerm.concord_alike : ∀ {α : Type} {ps : List α} {a : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → a p = k) → ∀ (w : α → Nat), Becoming.SelectionTerm.concord ps w a = 0
+@Becoming.SelectionTerm.discord_alike : ∀ {α : Type} {ps : List α} {a : α → Nat} {k : Nat},
+  (∀ (p : α), p ∈ ps → a p = k) → ∀ (w : α → Nat), Becoming.SelectionTerm.discord ps w a = 0
+@Becoming.SelectionTerm.selection_covariation : ∀ {α : Type} (ps : List α) (kids : α → List α) (a : α → Nat),
+  ps.length * Becoming.selected ps kids a + Becoming.SelectionTerm.discord ps (fun p => (kids p).length) a =
+    Becoming.SelectionTerm.born ps kids * Becoming.total ps a +
+      Becoming.SelectionTerm.concord ps (fun p => (kids p).length) a
+@Becoming.SelectionTerm.selection_exceeds_iff : ∀ {α : Type} (ps : List α) (kids : α → List α) (a : α → Nat),
+  Becoming.SelectionTerm.born ps kids * Becoming.total ps a < ps.length * Becoming.selected ps kids a ↔
+    Becoming.SelectionTerm.discord ps (fun p => (kids p).length) a <
+      Becoming.SelectionTerm.concord ps (fun p => (kids p).length) a
+@Becoming.SelectionTerm.selection_none_iff : ∀ {α : Type} (ps : List α) (kids : α → List α) (a : α → Nat),
+  Becoming.SelectionTerm.born ps kids * Becoming.total ps a = ps.length * Becoming.selected ps kids a ↔
+    Becoming.SelectionTerm.discord ps (fun p => (kids p).length) a =
+      Becoming.SelectionTerm.concord ps (fun p => (kids p).length) a
+@Becoming.SelectionTerm.offspring_covariation : ∀ {α : Type} (ps : List α) (kids : α → List α) (a b : α → Nat),
+  ps.length * Becoming.offspring ps kids b +
+      (ps.length * Becoming.lowered ps kids a b + Becoming.SelectionTerm.discord ps (fun p => (kids p).length) a) =
+    Becoming.SelectionTerm.born ps kids * Becoming.total ps a +
+      (Becoming.SelectionTerm.concord ps (fun p => (kids p).length) a + ps.length * Becoming.raised ps kids a b)
+@Becoming.SelectionTerm.raised_exact : ∀ {α : Type} {ps : List α} {kids : α → List α} {a b : α → Nat},
+  Becoming.SelectionTerm.Exact ps kids a b → Becoming.raised ps kids a b = 0
+@Becoming.SelectionTerm.lowered_exact : ∀ {α : Type} {ps : List α} {kids : α → List α} {a b : α → Nat},
+  Becoming.SelectionTerm.Exact ps kids a b → Becoming.lowered ps kids a b = 0
+@Becoming.SelectionTerm.excess_of_le : ∀ {x y : Nat}, x ≤ y → Becoming.excess x y = 0
+@Becoming.SelectionTerm.discord_zero_of_below : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  (∀ (p q : α), p ∈ ps → q ∈ ps → a p < a q → w p ≤ w q) → Becoming.SelectionTerm.discord ps w a = 0
+@Becoming.SelectionTerm.share_le_of_below : ∀ {α : Type} {ps : List α} {w a : α → Nat},
+  (∀ (p q : α), p ∈ ps → q ∈ ps → a p < a q → w p ≤ w q) →
+    Becoming.total ps w * Becoming.total ps a ≤ ps.length * Becoming.SelectionTerm.weighted ps w a
+@Becoming.SelectionTerm.Flow.support_not_against : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          ∀ {s : X → Nat},
+            (∀ (p : X), p ∈ ps → W.Supported t p → ∀ (q : X), q ∈ ps → s q ≤ s p) →
+              Becoming.SelectionTerm.discord ps (fun p => (kids p).length) s = 0 ∧
+                Becoming.SelectionTerm.born ps kids * Becoming.total ps s ≤ ps.length * Becoming.selected ps kids s
+@Becoming.SelectionTerm.Generations.total_flatMap : ∀ {α : Type} (f : α → List α) (q : α → Nat) (ps : List α),
+  Becoming.total (List.flatMap f ps) q = Becoming.total ps fun p => Becoming.total (f p) q
+@Becoming.SelectionTerm.Generations.born_eq : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  Becoming.SelectionTerm.born (G.family t) (G.kids t) = G.size (t + 1)
+@Becoming.SelectionTerm.Generations.offspring_eq : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  Becoming.offspring (G.family t) (G.kids t) (G.amount (t + 1)) = G.sum (t + 1)
+@Becoming.SelectionTerm.Generations.mean_step : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  G.size t * G.sum (t + 1) + (G.size t * G.loweredAt t + G.discordAt t) =
+    G.size (t + 1) * G.sum t + (G.concordAt t + G.size t * G.raisedAt t)
+@Becoming.SelectionTerm.Generations.kept_step_iff : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  G.size (t + 1) * G.sum t = G.size t * G.sum (t + 1) ↔ G.Balanced t
+@Becoming.SelectionTerm.Generations.rises_step_iff : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (t : Nat),
+  G.size (t + 1) * G.sum t < G.size t * G.sum (t + 1) ↔ G.Raises t
+@Becoming.SelectionTerm.Generations.nil_of_length_zero : ∀ {α : Type} {ps : List α}, ps.length = 0 → ps = []
+@Becoming.SelectionTerm.Generations.empty_after : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t : Nat},
+  G.size t = 0 → G.size (t + 1) = 0 ∧ G.sum (t + 1) = 0
+@Becoming.SelectionTerm.Generations.empty_sum : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t : Nat},
+  G.size t = 0 → G.sum t = 0
+@Becoming.SelectionTerm.Generations.kept_extend : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {T : Nat},
+  G.size 0 * G.sum T = G.size T * G.sum 0 → G.Balanced T → G.size 0 * G.sum (T + 1) = G.size (T + 1) * G.sum 0
+@Becoming.SelectionTerm.Generations.kept : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (T : Nat),
+  (∀ (t : Nat), t < T → G.Balanced t) → G.size 0 * G.sum T = G.size T * G.sum 0
+@Becoming.SelectionTerm.Generations.rises : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (T : Nat),
+  (∀ (t : Nat), t < T + 1 → G.Raises t) → G.size (T + 1) * G.sum 0 < G.size 0 * G.sum (T + 1)
+@Becoming.SelectionTerm.Generations.not_lower_step : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t : Nat},
+  G.discordAt t = 0 → G.loweredAt t = 0 → G.size (t + 1) * G.sum t ≤ G.size t * G.sum (t + 1)
+@Becoming.SelectionTerm.Generations.not_lower : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (T : Nat),
+  (∀ (t : Nat), t < T → G.size (t + 1) * G.sum t ≤ G.size t * G.sum (t + 1)) → G.size T * G.sum 0 ≤ G.size 0 * G.sum T
+@Becoming.SelectionTerm.Generations.moved_unbalanced : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {T : Nat}, G.size 0 * G.sum T ≠ G.size T * G.sum 0 → ∃ t, t < T ∧ ¬G.Balanced t
+@Becoming.SelectionTerm.Generations.balanced_exact_iff : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {t : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    (G.Balanced t ↔ G.discordAt t = G.concordAt t)
+@Becoming.SelectionTerm.Generations.raises_exact_iff : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {t : Nat},
+  Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+    (G.Raises t ↔ G.discordAt t < G.concordAt t)
+@Becoming.SelectionTerm.Generations.moved_by_selection : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {T : Nat},
+  (∀ (t : Nat), t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+    G.size 0 * G.sum T ≠ G.size T * G.sum 0 → ∃ t, t < T ∧ G.discordAt t ≠ G.concordAt t
+@Becoming.SelectionTerm.Generations.balanced_uniform_iff : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {t k : Nat},
+  (∀ (p : α), p ∈ G.family t → G.offspringNumber t p = k) →
+    (G.Balanced t ↔ G.size t * G.loweredAt t = G.size t * G.raisedAt t)
+@Becoming.SelectionTerm.Generations.moved_by_transmission : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {T : Nat},
+  (∀ (t : Nat), t < T → ∃ k, ∀ (p : α), p ∈ G.family t → G.offspringNumber t p = k) →
+    G.size 0 * G.sum T ≠ G.size T * G.sum 0 → ∃ t, t < T ∧ G.loweredAt t ≠ G.raisedAt t
+@Becoming.SelectionTerm.Flow.support_not_lower : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          (∀ (t : Nat) (p : X),
+              p ∈ G.family t → W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+            ∀ {T : Nat}, (∀ (t : Nat), t < T → G.loweredAt t = 0) → G.size T * G.sum 0 ≤ G.size 0 * G.sum T
+@Becoming.SelectionTerm.Flow.support_moved_rises : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          (∀ (t : Nat) (p : X),
+              p ∈ G.family t → W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+            ∀ {T : Nat},
+              (∀ (t : Nat),
+                  t < T → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                  G.size T * G.sum 0 < G.size 0 * G.sum T ∧ ∃ t, t < T ∧ G.discordAt t < G.concordAt t
+Becoming.SelectionTerm.Rising.exact : Becoming.SelectionTerm.Exact (Becoming.SelectionTerm.Rising.generations.family 0)
+  (Becoming.SelectionTerm.Rising.generations.kids 0) (Becoming.SelectionTerm.Rising.generations.amount 0)
+  (Becoming.SelectionTerm.Rising.generations.amount 1)
+Becoming.SelectionTerm.Rising.rising : Becoming.SelectionTerm.Rising.generations.concordAt 0 = 2 ∧
+  Becoming.SelectionTerm.Rising.generations.discordAt 0 = 0 ∧
+    Becoming.SelectionTerm.Rising.generations.raisedAt 0 = 0 ∧
+      Becoming.SelectionTerm.Rising.generations.loweredAt 0 = 0 ∧
+        Becoming.SelectionTerm.Rising.generations.size 0 = 2 ∧
+          Becoming.SelectionTerm.Rising.generations.sum 0 = 1 ∧
+            Becoming.SelectionTerm.Rising.generations.size 1 = 2 ∧
+              Becoming.SelectionTerm.Rising.generations.sum 1 = 2 ∧
+                Becoming.SelectionTerm.Rising.generations.size 1 * Becoming.SelectionTerm.Rising.generations.sum 0 <
+                    Becoming.SelectionTerm.Rising.generations.size 0 * Becoming.SelectionTerm.Rising.generations.sum 1 ∧
+                  Becoming.SelectionTerm.Rising.generations.Raises 0
+Becoming.SelectionTerm.Doubling.doubling : Becoming.selected (Becoming.SelectionTerm.Doubling.generations.family 0)
+      (Becoming.SelectionTerm.Doubling.generations.kids 0) (Becoming.SelectionTerm.Doubling.generations.amount 0) =
+    2 ∧
+  Becoming.SelectionTerm.Doubling.generations.sum 0 = 1 ∧
+    Becoming.SelectionTerm.Doubling.generations.concordAt 0 = 0 ∧
+      Becoming.SelectionTerm.Doubling.generations.discordAt 0 = 0 ∧
+        Becoming.SelectionTerm.Doubling.generations.size 1 * Becoming.SelectionTerm.Doubling.generations.sum 0 =
+            Becoming.SelectionTerm.Doubling.generations.size 0 * Becoming.SelectionTerm.Doubling.generations.sum 1 ∧
+          Becoming.SelectionTerm.Doubling.generations.Balanced 0
+Becoming.SelectionTerm.SupportedDescent.family_late : ∀ (n : Nat),
+  Becoming.SelectionTerm.SupportedDescent.generations.family (n + 2) = []
+Becoming.SelectionTerm.SupportedDescent.descended : Becoming.SelectionTerm.Flow.Descended Becoming.Drawdown.flow
+  Becoming.Drawdown.web Becoming.SelectionTerm.SupportedDescent.generations
+Becoming.SelectionTerm.SupportedDescent.top : ∀ (t : Nat) (p : Becoming.Drawdown.Relatum),
+  p ∈ Becoming.SelectionTerm.SupportedDescent.generations.family t →
+    Becoming.Drawdown.web.Supported t p →
+      ∀ (q : Becoming.Drawdown.Relatum),
+        q ∈ Becoming.SelectionTerm.SupportedDescent.generations.family t →
+          Becoming.SelectionTerm.SupportedDescent.generations.amount t q ≤
+            Becoming.SelectionTerm.SupportedDescent.generations.amount t p
+Becoming.SelectionTerm.SupportedDescent.supported_descent : Becoming.SelectionTerm.Flow.Descended Becoming.Drawdown.flow
+    Becoming.Drawdown.web Becoming.SelectionTerm.SupportedDescent.generations ∧
+  Becoming.SelectionTerm.SupportedDescent.generations.loweredAt 0 = 0 ∧
+    Becoming.SelectionTerm.SupportedDescent.generations.size 1 *
+          Becoming.SelectionTerm.SupportedDescent.generations.sum 0 ≤
+        Becoming.SelectionTerm.SupportedDescent.generations.size 0 *
+          Becoming.SelectionTerm.SupportedDescent.generations.sum 1 ∧
+      Becoming.SelectionTerm.SupportedDescent.generations.size 1 *
+            Becoming.SelectionTerm.SupportedDescent.generations.sum 0 <
+          Becoming.SelectionTerm.SupportedDescent.generations.size 0 *
+            Becoming.SelectionTerm.SupportedDescent.generations.sum 1 ∧
+        Becoming.SelectionTerm.SupportedDescent.generations.raisedAt 0 = 1 ∧
+          Becoming.SelectionTerm.SupportedDescent.generations.concordAt 0 = 0

@@ -1,0 +1,77 @@
+@Becoming.Frame.respectsAt_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s : S},
+  F.RespectsAt q s ↔ ∀ (c : C), (F.regroup q).realized s (q c) ↔ F.realized s c
+@Becoming.Frame.regroup_retains : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  (∀ (c : C), F.realized s c → F.realized t c) → ∀ (d : D), (F.regroup q).realized s d → (F.regroup q).realized t d
+@Becoming.Frame.regroup_retains_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  F.RespectsAt q t →
+    ((∀ (d : D), (F.regroup q).realized s d → (F.regroup q).realized t d) ↔ ∀ (c : C), F.realized s c → F.realized t c)
+@Becoming.Frame.regroup_gain_reflects : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  (∃ d, (F.regroup q).realized t d ∧ ¬(F.regroup q).realized s d) → ∃ c, F.realized t c ∧ ¬F.realized s c
+@Becoming.Frame.regroup_gain_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  F.RespectsAt q s →
+    ((∃ d, (F.regroup q).realized t d ∧ ¬(F.regroup q).realized s d) ↔ ∃ c, F.realized t c ∧ ¬F.realized s c)
+@Becoming.Frame.regroup_extension_iff : ∀ {S A C D : Type} {F : Becoming.Frame S A C} {q : C → D} {s t : S},
+  F.RespectsAt q s →
+    F.RespectsAt q t → (Becoming.Extension (F.regroup q) (fun x => True) s t ↔ Becoming.Extension F (fun x => True) s t)
+@Becoming.Web.admits_iff_requiredLevel : ∀ {F C : Type} {W : Becoming.Web F C}
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)) (t : Nat) (f : F) (l : C → Nat),
+  W.Admits l t f ↔ ∀ (c : C), W.requiredLevel decides t f c ≤ l c
+@Becoming.Web.admits_requiredLevel : ∀ {F C : Type} {W : Becoming.Web F C}
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)) (t : Nat) (f : F),
+  W.Admits (W.requiredLevel decides t f) t f
+@Becoming.Web.same_admission_iff_requiredLevel : ∀ {F C : Type} {W : Becoming.Web F C}
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)) (t : Nat) (f g : F),
+  (∀ (l : C → Nat), W.Admits l t f ↔ W.Admits l t g) ↔
+    ∀ (c : C), W.requiredLevel decides t f c = W.requiredLevel decides t g c
+@Becoming.Web.regroup_faithful_iff_requiredLevel : ∀ {F C D : Type} {W : Becoming.Web F C} (q : F → D)
+  (decides : (t : Nat) → (f : F) → (c : C) → Decidable (W.requires t f c)),
+  (∀ (l : Nat → C → Nat), W.paths.RespectsAt (Becoming.Web.groupEvent q) l) ↔
+    ∀ (f g : F), q f = q g → ∀ (t : Nat) (c : C), W.requiredLevel decides t f c = W.requiredLevel decides t g c
+@Becoming.Web.SameRequirements.admits : ∀ {F C D : Type} {W : Becoming.Web F C} {q : F → D},
+  W.SameRequirements q → ∀ {f g : F}, q f = q g → ∀ (t : Nat) (l : C → Nat), W.Admits l t f ↔ W.Admits l t g
+@Becoming.Web.SameRequirements.respects : ∀ {F C D : Type} {W : Becoming.Web F C} {q : F → D},
+  W.SameRequirements q → ∀ (l : Nat → C → Nat), W.paths.RespectsAt (Becoming.Web.groupEvent q) l
+@Becoming.Web.regroup_extension_iff_widens : ∀ {F C D : Type} {W : Becoming.Web F C} {q : F → D} {l l' : Nat → C → Nat},
+  W.paths.RespectsAt (Becoming.Web.groupEvent q) l →
+    W.paths.RespectsAt (Becoming.Web.groupEvent q) l' →
+      (Becoming.Extension (W.paths.regroup (Becoming.Web.groupEvent q)) (fun x => True) l' l ↔ W.Widens l l')
+@Becoming.Web.SameRequirements.extension_iff_widens : ∀ {F C D : Type} {W : Becoming.Web F C} {q : F → D},
+  W.SameRequirements q →
+    ∀ {l l' : Nat → C → Nat},
+      Becoming.Extension (W.paths.regroup (Becoming.Web.groupEvent q)) (fun x => True) l' l ↔ W.Widens l l'
+Becoming.Transfer.courseLaw_nonanticipating : ∀ (move : Bool), (Becoming.Transfer.courseLaw move).Nonanticipating
+Becoming.Transfer.move_levels : ∀ (t : Nat) (c : Bool),
+  (Becoming.Transfer.courseLaw true).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0) t c =
+    Becoming.Transfer.web.level t c
+Becoming.Transfer.wait_levels : ∀ (t : Nat) (c : Bool),
+  (Becoming.Transfer.courseLaw false).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0) t c =
+    Becoming.Transfer.withheldLevel t c
+Becoming.Transfer.courses_feasible : ∀ (move : Bool),
+  (Becoming.Transfer.courseLaw move).Feasible Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0)
+Becoming.Transfer.courses_balanced : ∀ (move : Bool),
+  ((Becoming.Transfer.courseLaw move).course Becoming.Transfer.flow.present
+        (Becoming.Transfer.withheldLevel 0)).Balances
+    (Becoming.Transfer.web.withLevel
+      ((Becoming.Transfer.courseLaw move).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0)))
+Becoming.Transfer.courses_follow_same_rest : ∀ (move : Bool),
+  ((Becoming.Transfer.courseLaw move).course Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0)).Follows
+    Becoming.Transfer.quietLaw Becoming.Transfer.conveyorPart
+    ((Becoming.Transfer.courseLaw move).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0))
+Becoming.Transfer.move_group_realized : ∀ (d : Bool × Nat),
+  (Becoming.Transfer.web.paths.regroup (Becoming.Web.groupEvent Becoming.Transfer.merged)).realized
+    Becoming.Transfer.web.level d
+Becoming.Transfer.wait_group_realized : ∀ (d : Bool × Nat),
+  (Becoming.Transfer.web.paths.regroup (Becoming.Web.groupEvent Becoming.Transfer.merged)).realized
+    Becoming.Transfer.withheldLevel d
+Becoming.Transfer.merged_not_respects : ¬Becoming.Transfer.web.paths.RespectsAt
+    (Becoming.Web.groupEvent Becoming.Transfer.merged) Becoming.Transfer.web.level
+Becoming.Transfer.generated_mixed_hidden : Becoming.Transfer.web.Mixed
+    ((Becoming.Transfer.courseLaw true).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0))
+    ((Becoming.Transfer.courseLaw false).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0)) ∧
+  ∀ (d : Bool × Nat),
+    (Becoming.Transfer.web.paths.regroup (Becoming.Web.groupEvent Becoming.Transfer.merged)).realized
+        ((Becoming.Transfer.courseLaw true).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0))
+        d ↔
+      (Becoming.Transfer.web.paths.regroup (Becoming.Web.groupEvent Becoming.Transfer.merged)).realized
+        ((Becoming.Transfer.courseLaw false).levels Becoming.Transfer.flow.present (Becoming.Transfer.withheldLevel 0))
+        d

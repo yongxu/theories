@@ -1,0 +1,10 @@
+'Becoming.World.roles_level' does not depend on any axioms
+'Becoming.World.roles_take' does not depend on any axioms
+'Becoming.World.roles_give' does not depend on any axioms
+'Becoming.CourseRoles.world_eq' does not depend on any axioms
+'Becoming.CourseRoles.courseWorld_eq' does not depend on any axioms
+'Becoming.CourseRoles.level_eq' does not depend on any axioms
+'Becoming.CourseRoles.take_eq' does not depend on any axioms
+'Becoming.CourseRoles.give_eq' does not depend on any axioms
+'Becoming.CourseRoles.balanced_iff' does not depend on any axioms
+'Becoming.CourseRoles.runs_agree' does not depend on any axioms

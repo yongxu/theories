@@ -1,0 +1,39 @@
+@Becoming.Contextual.glues_iff_freeAt : ∀ {S K C V A : Type} (X : Becoming.Contextual S K C V)
+  (P : Generative.Process S A) (r : Becoming.Run P) (t : Nat), X.Glues (r.state t) ↔ X.FreeAt P r t
+@Becoming.ParitySystem.met_congr : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {k : K} {u u' : C → Bool},
+  (∀ (c : C), S.within k c → u c = u' c) → S.met k u = S.met k u'
+@Becoming.ParitySystem.world_free_iff : ∀ {K C σ A : Type} [DecidableEq C] (S : Becoming.ParitySystem K C),
+  Becoming.Distinct S.claims →
+    ∀ {all : List K},
+      (∀ (k : K), k ∈ all) →
+        ∀ (P : Generative.Process σ A) (r : Becoming.Run P) (t : Nat),
+          (∃ X, X.within = S.within ∧ X.Respects S.support (r.state t) ∧ X.FreeAt P r t) ↔ ¬∃ ks, S.Contradicts ks
+@Becoming.ParitySystem.world_met_le : ∀ {K C σ A : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks →
+    ∀ {X : Becoming.Contextual σ K C Bool},
+      X.within = S.within →
+        ∀ {P : Generative.Process σ A} {r : Becoming.Run P} {t : Nat},
+          X.FreeAt P r t →
+            (Becoming.total ks fun k => bif S.met k (X.shows (r.state t) k) then 1 else 0) + 1 ≤ ks.length
+@Becoming.ParitySystem.freeFrame_iff : ∀ {K C σ A : Type} [DecidableEq C] (S : Becoming.ParitySystem K C),
+  Becoming.Distinct S.claims →
+    ∀ {all : List K},
+      (∀ (k : K), k ∈ all) →
+        ∀ (home : C → K),
+          (∀ (c : C), S.within (home c) c) →
+            ∀ (P : Generative.Process σ A) (s₀ : σ),
+              (∃ X, X.within = S.within ∧ X.Respects S.support s₀ ∧ ∃ F, F.P = P ∧ X.FitsFree F) ↔
+                ¬∃ ks, S.Contradicts ks
+@Becoming.Square.QuantumAt.not_glues : ∀ {σ : Type}
+  {X : Becoming.Contextual σ Becoming.Square.Line Becoming.Square.Cell Bool} {s : σ},
+  Becoming.Square.QuantumAt X s → ¬X.Glues s
+@Becoming.Square.QuantumAt.not_freeAt : ∀ {σ A : Type}
+  {X : Becoming.Contextual σ Becoming.Square.Line Becoming.Square.Cell Bool} {P : Generative.Process σ A}
+  {r : Becoming.Run P} {t : Nat}, Becoming.Square.QuantumAt X (r.state t) → ¬X.FreeAt P r t
+@Becoming.Square.QuantumAt.no_free_frame : ∀ {σ A : Type}
+  {X : Becoming.Contextual σ Becoming.Square.Line Becoming.Square.Cell Bool} {s₀ : σ},
+  Becoming.Square.QuantumAt X s₀ → ∀ (P : Generative.Process σ A), ¬∃ F, F.P = P ∧ X.FitsFree F
+@Becoming.Square.quantum_at : ∀ {σ : Type} (s : σ), Becoming.Square.QuantumAt Becoming.Square.quantum s
+@Becoming.Square.quantum_readings : ∀ {σ A : Type} (P : Generative.Process σ A) (s₀ : σ),
+  (¬∃ F, F.P = P ∧ Becoming.Square.quantum.FitsFree F) ∧
+    ∀ (r : Becoming.Run P) (t : Nat), ¬Becoming.Square.quantum.FreeAt P r t

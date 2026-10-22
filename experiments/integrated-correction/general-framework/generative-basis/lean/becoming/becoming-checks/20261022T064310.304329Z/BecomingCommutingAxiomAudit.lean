@@ -1,0 +1,21 @@
+import Becoming.Commuting
+#print axioms Becoming.Law.Commutes
+#print axioms Becoming.Law.Commutes.iterate
+#print axioms Becoming.Law.Commutes.apart
+#print axioms Becoming.Law.Commutes.breaks
+#print axioms Becoming.Law.Commutes.not_drawn_to_one
+#print axioms Becoming.Law.Commutes.keeps_fixed
+#print axioms Becoming.Law.Commutes.rest_paired
+#print axioms Becoming.Law.Commutes.paired_halfway
+#print axioms Becoming.Law.Commutes.pairs_lumped
+#print axioms Becoming.Law.Commutes.pairs_goAlike
+#print axioms Becoming.Law.Commutes.self_apart
+#print axioms Becoming.Branching.Symmetric
+#print axioms Becoming.Branching.Symmetric.reach
+#print axioms Becoming.Branching.Symmetric.returns
+#print axioms Becoming.Branching.Symmetric.juncture
+#print axioms Becoming.Branching.mirror
+#print axioms Becoming.Branching.mirror_apart
+#print axioms Becoming.Branching.law_symmetric
+#print axioms Becoming.Law.Commutes.returns_paired
+#print axioms Becoming.Law.Commutes.halfway_returns

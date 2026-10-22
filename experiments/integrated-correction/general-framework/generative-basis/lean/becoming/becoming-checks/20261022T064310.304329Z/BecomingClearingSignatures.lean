@@ -1,0 +1,15 @@
+import Becoming.Clearing
+#check @Becoming.Clearing.balances
+#check @Becoming.Clearing.dependent
+#check @Becoming.Clearing.dissipative
+#check @Becoming.Clearing.fed
+#check @Becoming.Clearing.undermines_within_renewal
+#check @Becoming.Clearing.fedBy_source
+#check @Becoming.Clearing.withheld
+#check @Becoming.Clearing.admitted_without
+#check @Becoming.Clearing.unsupported_with
+#check @Becoming.Clearing.narrows
+#check @Becoming.Clearing.loses_beyond
+#check @Becoming.Clearing.renewing_over_resource
+#check @Becoming.Clearing.admitted_all_without
+#check @Becoming.Clearing.centers_disagree

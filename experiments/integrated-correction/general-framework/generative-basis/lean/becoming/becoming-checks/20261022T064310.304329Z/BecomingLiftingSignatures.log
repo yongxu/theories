@@ -1,0 +1,30 @@
+@Becoming.comparison_lifts : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {Better : S → S → Prop},
+  Becoming.Comparison F living Better →
+    ∀ {s : S} {a b : A}, Becoming.LiftExtension F living s a b → Becoming.LiftBetter F (fun x y => Better y x) s b a
+@Becoming.lifted_comparison_supplies_reason : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {Better : S → S → Prop} {s : S} {Reason : A → A → Prop},
+  Becoming.Comparison F living Better →
+    Becoming.LiftedArticulation F Better s Reason →
+      ∀ {a b : A},
+        Generative.Enabled F.P s a → Generative.Enabled F.P s b → Becoming.LiftExtension F living s a b → Reason a b
+@Becoming.lift_coherent_selection_survives : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {Better : S → S → Prop} {s : S} {Selected : A → Prop},
+  Becoming.Comparison F living Better →
+    Becoming.LiftCoherence F Better s Selected → ∀ {a : A}, Selected a → Becoming.LiftSurvives F living s a
+@Becoming.lift_continual_improvement_has_no_survivor : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {s : S},
+  (∀ (a : A), Generative.Enabled F.P s a → ∃ b, Generative.Enabled F.P s b ∧ Becoming.LiftExtension F living s a b) →
+    ∀ (a : A), ¬Becoming.LiftSurvives F living s a
+Becoming.LiftModel.some_outcome_does_not_lift : (∃ t t',
+    Becoming.LiftModel.frame.P.step 0 Becoming.LiftModel.Act.mixed t ∧
+      Becoming.LiftModel.frame.P.step 0 Becoming.LiftModel.Act.high t' ∧ Becoming.LiftModel.larger t t') ∧
+  ¬Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0 Becoming.LiftModel.Act.mixed
+        Becoming.LiftModel.Act.high ∧
+    ¬Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0 Becoming.LiftModel.Act.high
+        Becoming.LiftModel.Act.mixed
+Becoming.LiftModel.lift_needs_live_middle : Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0
+    Becoming.LiftModel.Act.low Becoming.LiftModel.Act.dead ∧
+  Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0 Becoming.LiftModel.Act.dead
+      Becoming.LiftModel.Act.high ∧
+    ¬Becoming.LiftBetter Becoming.LiftModel.frame Becoming.LiftModel.larger 0 Becoming.LiftModel.Act.low
+        Becoming.LiftModel.Act.high

@@ -1,0 +1,17 @@
+'Becoming.Stutter.moving_unique' does not depend on any axioms
+'Becoming.Stutter.Moves' does not depend on any axioms
+'Becoming.Stutter.le_moving' does not depend on any axioms
+'Becoming.Stutter.idle_before_moving' does not depend on any axioms
+'Becoming.Stutter.moving_eq' does not depend on any axioms
+'Becoming.Stutter.every_step' does not depend on any axioms
+'Becoming.Web.sameAt_of_unmoved' does not depend on any axioms
+'Becoming.Flow.readAt' does not depend on any axioms
+'Becoming.World.IdleAt' does not depend on any axioms
+'Becoming.World.withoutIdle' does not depend on any axioms
+'Becoming.World.withoutIdle_sameAt' does not depend on any axioms
+'Becoming.World.withoutIdle_after' does not depend on any axioms
+'Becoming.World.withoutIdle_premises' does not depend on any axioms
+'Becoming.World.withoutIdle_transmits' does not depend on any axioms
+'Becoming.World.withoutIdle_counted' does not depend on any axioms
+'Becoming.World.withoutIdle_totals' does not depend on any axioms
+'Becoming.World.withoutIdle_counts' does not depend on any axioms

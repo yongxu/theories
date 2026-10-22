@@ -1,0 +1,31 @@
+@Becoming.ListedWebs.ceasing_not_recurring : ∀ {F C : Type} {W : Becoming.Web F C} {l : List F} {N : Nat},
+  (∀ (f : F), W.active N f → f ∈ l) →
+    (∀ (s : Nat) (f : F), N ≤ s → ¬W.Arises s f) → ¬∀ (M : Nat), ∃ t f, M ≤ t ∧ W.Ceases t f
+@Becoming.ListedWebs.forced_iff_more : ∀ {F C : Type} {W : Becoming.Web F C} {alive : Nat → List F} {t : Nat},
+  (Becoming.Distinct (alive t) ∧ ∀ (f : F), W.active t f ↔ f ∈ alive t) →
+    (Becoming.Distinct (alive (t + 1)) ∧ ∀ (f : F), W.active (t + 1) f ↔ f ∈ alive (t + 1)) →
+      ((∀ (S : F → F → Prop),
+          (∀ (g f f' : F), S g f → S g f' → f = f') → ¬∀ (f : F), W.active (t + 1) f → W.Continues (fun x => S) t f) ↔
+        (alive t).length < (alive (t + 1)).length)
+@Becoming.ListedWebs.forces_iff_noSplit : ∀ {F C : Type} [DecidableEq F] {S : F → F → Prop},
+  (∀ (W : Becoming.Web F C) (t : Nat) (before after : List F),
+      (∀ (f : F), W.active t f → f ∈ before) →
+        Becoming.Distinct after →
+          (∀ (f : F), f ∈ after → W.active (t + 1) f) →
+            before.length < after.length → ¬∀ (f : F), W.active (t + 1) f → W.Continues (fun x => S) t f) ↔
+    ∀ (g f f' : F), S g f → S g f' → f = f'
+@Becoming.ListedWebs.forcedAlong_of_eventually_noSplit : ∀ {F C : Type} {W : Becoming.Web F C} {alive : Nat → List F},
+  (∀ (t : Nat), Becoming.Distinct (alive t) ∧ ∀ (f : F), W.active t f ↔ f ∈ alive t) →
+    ∀ {S : Nat → F → F → Prop} {N : Nat},
+      (∀ (t : Nat),
+          N ≤ t →
+            ∀ (g f f' : F), W.active t g → S t g f → S t g f' → W.active (t + 1) f → W.active (t + 1) f' → f = f') →
+        (∀ (T : Nat), ∃ t, T ≤ t ∧ (alive t).length < (alive (t + 1)).length) →
+          ∀ (T : Nat), ∃ t, T ≤ t ∧ ¬∀ (f : F), W.active (t + 1) f → W.Continues S t f
+@Becoming.ListedWebs.forcedAlong_iff_more : ∀ {F C : Type} {W : Becoming.Web F C} {alive : Nat → List F},
+  (∀ (t : Nat), Becoming.Distinct (alive t) ∧ ∀ (f : F), W.active t f ↔ f ∈ alive t) →
+    ((∀ (S : Nat → F → F → Prop),
+        W.NoSplit S → ∀ (T : Nat), ∃ t, T ≤ t ∧ ¬∀ (f : F), W.active (t + 1) f → W.Continues S t f) ↔
+      ∀ (T : Nat), ∃ t, T ≤ t ∧ (alive t).length < (alive (t + 1)).length)
+Becoming.ListedWebs.rests_unrefuted_iff : ∀ (w : Becoming.World) {T : Nat},
+  (¬∀ (M : Nat), T ≤ M → ¬¬∃ t, M ≤ t ∧ ∃ x, w.web.Arises t x ∨ w.web.Ceases t x) ↔ ¬¬∃ M, T ≤ M ∧ w.RestsFrom M

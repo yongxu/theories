@@ -1,0 +1,106 @@
+@Becoming.HistoryLanguages.trace_iff : ∀ {A : Type u_1} {L : List A → Prop},
+  Becoming.HistoryLanguages.PrefixClosed L →
+    ∀ {before word after : List A},
+      L before →
+        (Generative.Trace (Becoming.HistoryLanguages.law L) before word after ↔ after = before ++ word ∧ L after)
+@Becoming.HistoryLanguages.trace_from_empty_iff : ∀ {A : Type u_1} {L : List A → Prop},
+  Becoming.HistoryLanguages.PrefixClosed L →
+    L [] →
+      ∀ (word after : List A), Generative.Trace (Becoming.HistoryLanguages.law L) [] word after ↔ after = word ∧ L word
+@Becoming.HistoryLanguages.feasible_iff : ∀ {A : Type u_1} {L : List A → Prop},
+  Becoming.HistoryLanguages.PrefixClosed L →
+    L [] → ∀ (word : List A), Generative.Feasible (Becoming.HistoryLanguages.law L) [] word ↔ L word
+@Becoming.HistoryLanguages.feasible_prefixClosed : ∀ {A : Type u_2} {S : Type u_1} (P : Generative.Process S A) (s : S),
+  Becoming.HistoryLanguages.PrefixClosed (Generative.Feasible P s)
+@Becoming.HistoryLanguages.feasible_nil : ∀ {A : Type u_2} {S : Type u_1} (P : Generative.Process S A) (s : S),
+  Generative.Feasible P s []
+@Becoming.HistoryLanguages.realizes_feasible : ∀ {A : Type u_2} {S : Type u_1} (P : Generative.Process S A) (s : S)
+  (word : List A),
+  Generative.Feasible (Becoming.HistoryLanguages.law (Generative.Feasible P s)) [] word ↔ Generative.Feasible P s word
+Becoming.HistoryLanguages.Bounded.empty : Becoming.HistoryLanguages.Bounded.lang []
+Becoming.HistoryLanguages.Bounded.single : ∀ (a : Unit), Becoming.HistoryLanguages.Bounded.lang [a]
+Becoming.HistoryLanguages.Bounded.not_double : ¬Becoming.HistoryLanguages.Bounded.lang [(), ()]
+Becoming.HistoryLanguages.Bounded.prefixClosed : Becoming.HistoryLanguages.PrefixClosed
+  Becoming.HistoryLanguages.Bounded.lang
+Becoming.HistoryLanguages.Bounded.no_one_point_law : ¬∃ P,
+    ∀ (word : List Unit), Generative.Feasible P () word ↔ Becoming.HistoryLanguages.Bounded.lang word
+Becoming.HistoryLanguages.Bounded.history_realizes : ∀ (word : List Unit),
+  Generative.Feasible (Becoming.HistoryLanguages.law Becoming.HistoryLanguages.Bounded.lang) [] word ↔
+    Becoming.HistoryLanguages.Bounded.lang word
+@Becoming.HistoryLanguages.future_update : ∀ {A : Type u_1} (L : List A → Prop) (h extension suffix : List A),
+  Becoming.HistoryLanguages.Future L (h ++ extension) suffix ↔
+    Becoming.HistoryLanguages.Future L h (extension ++ suffix)
+@Becoming.HistoryLanguages.same_future_extends : ∀ {A : Type u_1} (L : List A → Prop) {h k : List A},
+  Becoming.HistoryLanguages.SameFuture L h k →
+    ∀ (extension : List A), Becoming.HistoryLanguages.SameFuture L (h ++ extension) (k ++ extension)
+@Becoming.HistoryLanguages.letterwise_append : ∀ {A : Type u_1} (L : List A → Prop) (h k : List A),
+  Becoming.HistoryLanguages.Letterwise L (h ++ k) ↔
+    Becoming.HistoryLanguages.Letterwise L h ∧ Becoming.HistoryLanguages.Letterwise L k
+@Becoming.HistoryLanguages.stable_implies_letterwise : ∀ {A : Type u_1} (L : List A → Prop),
+  Becoming.HistoryLanguages.PrefixClosed L →
+    L [] → Becoming.HistoryLanguages.Stable L → ∀ (word : List A), L word ↔ Becoming.HistoryLanguages.Letterwise L word
+@Becoming.HistoryLanguages.letterwise_implies_stable : ∀ {A : Type u_1} (L : List A → Prop),
+  (∀ (word : List A), L word ↔ Becoming.HistoryLanguages.Letterwise L word) → Becoming.HistoryLanguages.Stable L
+@Becoming.HistoryLanguages.stable_iff_letterwise : ∀ {A : Type u_1} (L : List A → Prop),
+  Becoming.HistoryLanguages.PrefixClosed L →
+    L [] →
+      (Becoming.HistoryLanguages.Stable L ↔ ∀ (word : List A), L word ↔ Becoming.HistoryLanguages.Letterwise L word)
+@Becoming.HistoryLanguages.joint_obstruction_refutes_stability : ∀ {A : Type u_1} (L : List A → Prop),
+  Becoming.HistoryLanguages.PrefixClosed L →
+    L [] →
+      ∀ (word : List A), Becoming.HistoryLanguages.Letterwise L word → ¬L word → ¬Becoming.HistoryLanguages.Stable L
+@Becoming.HistoryLanguages.blocked_extension_separates : ∀ {A : Type u_1} (L : List A → Prop) (past suffix : List A),
+  L suffix → ¬L (past ++ suffix) → ¬Becoming.HistoryLanguages.SameFuture L past []
+@Becoming.HistoryLanguages.enabled_extension_separates : ∀ {A : Type u_1} (L : List A → Prop) (past suffix : List A),
+  L (past ++ suffix) → ¬L suffix → ¬Becoming.HistoryLanguages.SameFuture L past []
+@Becoming.HistoryLanguages.locate_first_obstruction : ∀ {A : Type u_1} (L : List A → Prop) [DecidablePred L]
+  (start word : List A),
+  L start →
+    Becoming.HistoryLanguages.Letterwise L word →
+      ¬L (start ++ word) →
+        ∃ pre a suffix, word = pre ++ a :: suffix ∧ L (start ++ pre) ∧ L [a] ∧ ¬L (start ++ pre ++ [a])
+@Becoming.HistoryLanguages.obstruction_locates_changed_profile : ∀ {A : Type u_1} (L : List A → Prop) [DecidablePred L],
+  L [] →
+    ∀ (word : List A),
+      Becoming.HistoryLanguages.Letterwise L word →
+        ¬L word →
+          ∃ pre a suffix,
+            word = pre ++ a :: suffix ∧ L pre ∧ L [a] ∧ ¬L (pre ++ [a]) ∧ ¬Becoming.HistoryLanguages.SameFuture L pre []
+@Becoming.HistoryLanguages.Feasible.stable_of_same : ∀ {A : Type u_1} {L L' : List A → Prop},
+  (∀ (w : List A), L w ↔ L' w) → Becoming.HistoryLanguages.Stable L → Becoming.HistoryLanguages.Stable L'
+@Becoming.HistoryLanguages.Feasible.stable_iff_letterwise : ∀ {A : Type u_2} {S : Type u_1} (P : Generative.Process S A)
+  (s : S),
+  Becoming.HistoryLanguages.Stable (Generative.Feasible P s) ↔
+    ∀ (word : List A),
+      Generative.Feasible P s word ↔ Becoming.HistoryLanguages.Letterwise (Generative.Feasible P s) word
+@Becoming.HistoryLanguages.Feasible.joint_obstruction_refutes_stability : ∀ {A : Type u_2} {S : Type u_1}
+  (P : Generative.Process S A) (s : S) {word : List A},
+  Becoming.HistoryLanguages.Letterwise (Generative.Feasible P s) word →
+    ¬Generative.Feasible P s word → ¬Becoming.HistoryLanguages.Stable (Generative.Feasible P s)
+@Becoming.HistoryLanguages.Feasible.obstruction_locates_changed_profile : ∀ {A : Type u_2} {S : Type u_1}
+  (P : Generative.Process S A) (s : S) [DecidablePred (Generative.Feasible P s)] {word : List A},
+  Becoming.HistoryLanguages.Letterwise (Generative.Feasible P s) word →
+    ¬Generative.Feasible P s word →
+      ∃ pre a suffix,
+        word = pre ++ a :: suffix ∧
+          Generative.Feasible P s pre ∧
+            Generative.Feasible P s [a] ∧
+              ¬Generative.Feasible P s (pre ++ [a]) ∧
+                ¬Becoming.HistoryLanguages.SameFuture (Generative.Feasible P s) pre []
+Becoming.HistoryLanguages.unrestricted_stable : Becoming.HistoryLanguages.Stable Becoming.HistoryLanguages.unrestricted
+Becoming.HistoryLanguages.unrestricted_realized : ∀ (word : List Bool),
+  Generative.Feasible (Becoming.HistoryLanguages.law Becoming.HistoryLanguages.unrestricted) [] word
+Becoming.HistoryLanguages.unrestricted_histories_stable : Becoming.HistoryLanguages.Stable
+  (Generative.Feasible (Becoming.HistoryLanguages.law Becoming.HistoryLanguages.unrestricted) [])
+Becoming.HistoryLanguages.latch_obstruction : Generative.Feasible Becoming.HistoryLanguages.latch false [true] ∧
+  Generative.Feasible Becoming.HistoryLanguages.latch false [false] ∧
+    ¬Generative.Feasible Becoming.HistoryLanguages.latch false [true, false] ∧
+      Generative.Feasible Becoming.HistoryLanguages.latch false [true, true]
+Becoming.HistoryLanguages.latch_changes_profile_and_continues : ¬Becoming.HistoryLanguages.SameFuture
+      (Generative.Feasible Becoming.HistoryLanguages.latch false) [true] [] ∧
+  Generative.Feasible Becoming.HistoryLanguages.latch false [true, true]
+Becoming.HistoryLanguages.gate_formation : Generative.Feasible Becoming.HistoryLanguages.gate false [true] ∧
+  ¬Generative.Feasible Becoming.HistoryLanguages.gate false [false] ∧
+    Generative.Feasible Becoming.HistoryLanguages.gate false [true, false]
+Becoming.HistoryLanguages.gate_gains_profile : ¬Becoming.HistoryLanguages.SameFuture
+    (Generative.Feasible Becoming.HistoryLanguages.gate false) [true] []

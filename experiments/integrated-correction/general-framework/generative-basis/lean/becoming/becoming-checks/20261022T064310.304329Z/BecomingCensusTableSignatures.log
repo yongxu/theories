@@ -1,0 +1,131 @@
+@Becoming.tally_step : ∀ {n n' c a : Nat}, c ≤ n → n' + c = n + a → ∃ k, n = k + c ∧ n' = k + a
+@Becoming.FamilyCounts.tally : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α} {n c a : Nat → Nat},
+  Becoming.Listed p l → Becoming.FamilyCounts p l n c a → Becoming.Tally n c a
+@Becoming.familyCounts_decided : ∀ {α : Type} {p : α → Nat → Prop} [inst : (x : α) → (t : Nat) → Decidable (p x t)]
+  (l : Nat → List α),
+  Becoming.FamilyCounts p l (fun t => (l t).length) (fun t => Becoming.ceasings (l t) p t) fun t =>
+    Becoming.comings (l (t + 1)) p t
+@Becoming.FamilyCounts.of_eq : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α} {n c a n' c' a' : Nat → Nat},
+  Becoming.FamilyCounts p l n c a →
+    (∀ (t : Nat), n t = n' t ∧ c t = c' t ∧ a t = a' t) → Becoming.FamilyCounts p l n' c' a'
+@Becoming.comesToBe_congr : ∀ {p q : Nat → Prop} {t : Nat},
+  (p t ↔ q t) → (p (t + 1) ↔ q (t + 1)) → (Becoming.ComesToBe p t ↔ Becoming.ComesToBe q t)
+@Becoming.ceasesToBe_congr : ∀ {p q : Nat → Prop} {t : Nat},
+  (p t ↔ q t) → (p (t + 1) ↔ q (t + 1)) → (Becoming.CeasesToBe p t ↔ Becoming.CeasesToBe q t)
+@Becoming.ceasings_congr : ∀ {α : Type} {p q : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)]
+  [inst_1 : (a : α) → (t : Nat) → Decidable (q a t)] (as : List α) {t : Nat},
+  (∀ (a : α), (p a t ↔ q a t) ∧ (p a (t + 1) ↔ q a (t + 1))) → Becoming.ceasings as p t = Becoming.ceasings as q t
+@Becoming.comings_congr : ∀ {α : Type} {p q : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)]
+  [inst_1 : (a : α) → (t : Nat) → Decidable (q a t)] (as : List α) {t : Nat},
+  (∀ (a : α), (p a t ↔ q a t) ∧ (p a (t + 1) ↔ q a (t + 1))) → Becoming.comings as p t = Becoming.comings as q t
+@Becoming.Indicates.congr : ∀ {p q : Prop} {k : Nat}, (p ↔ q) → Becoming.Indicates p k → Becoming.Indicates q k
+@Becoming.Counts.congr : ∀ {α : Type} {q q' : α → Prop},
+  (∀ (a : α), q a ↔ q' a) → ∀ {as : List α} {n : Nat}, Becoming.Counts as q n → Becoming.Counts as q' n
+@Becoming.Listed.congr : ∀ {α : Type} {p q : α → Nat → Prop} {l : Nat → List α},
+  (∀ (x : α) (t : Nat), p x t ↔ q x t) → Becoming.Listed p l → Becoming.Listed q l
+@Becoming.FamilyCounts.congr : ∀ {α : Type} {p q : α → Nat → Prop} {l : Nat → List α} {n c a : Nat → Nat},
+  (∀ (x : α) (t : Nat), p x t ↔ q x t) → Becoming.FamilyCounts p l n c a → Becoming.FamilyCounts q l n c a
+@Becoming.FamilyCounts.company : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α} {n c a : Nat → Nat},
+  Becoming.FamilyCounts p l n c a →
+    ∀ {t : Nat}, (∀ (x : α), x ∈ l (t + 1) → Becoming.ComesToBe (p x) t → 0 < (l t).length) → 0 < a t → 0 < n t
+@Becoming.World.witnessedAt_of : ∀ {X : Becoming.World → Type} {L L' : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {n c a : Nat → Nat} (w : Becoming.World)
+  [decided : (x : X w) → (t : Nat) → Decidable (L w x t)] (l : Nat → List (X w)),
+  Class w →
+    (∀ (x : X w) (t : Nat), L w x t ↔ L' w x t) →
+      Becoming.Listed (L w) l →
+        (∀ (t : Nat),
+            (l t).length = n t ∧ Becoming.ceasings (l t) (L w) t = c t ∧ Becoming.comings (l (t + 1)) (L w) t = a t) →
+          Becoming.World.WitnessedAt L' Class n c a
+@Becoming.World.WitnessedAt.congr : ∀ {X : Becoming.World → Type} {L L' : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {n c a : Nat → Nat},
+  (∀ (w : Becoming.World), Class w → ∀ (x : X w) (t : Nat), L w x t ↔ L' w x t) →
+    Becoming.World.WitnessedAt L Class n c a → Becoming.World.WitnessedAt L' Class n c a
+@Becoming.World.listingObeys_of_obeys : ∀ {X : Becoming.World → Type} {L : (w : Becoming.World) → X w → Nat → Prop}
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    ∀ {w : Becoming.World} {decided decided' : (x : X w) → (t : Nat) → Decidable (L w x t)},
+      Becoming.World.ListingObeys L w Q → Becoming.World.ListingObeys L w Q
+@Becoming.World.table_holds : ∀ {X : Becoming.World → Type} {L : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {C Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (w : Becoming.World), Class w → Becoming.World.ListingHolds L w C) →
+    Becoming.World.Witnessed L Class C →
+      ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → Q n c a) ↔
+        ∀ (w : Becoming.World), Class w → Becoming.World.ListingHolds L w Q)
+@Becoming.World.table_obeys : ∀ {X : Becoming.World → Type} {L : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {C Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (∀ (w : Becoming.World), Class w → Becoming.World.ListingHolds L w C) →
+      Becoming.World.Witnessed L Class C →
+        ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → Q n c a) ↔
+          ∀ (w : Becoming.World) [inst : (x : X w) → (t : Nat) → Decidable (L w x t)],
+            Class w → Becoming.World.ListingObeys L w Q)
+@Becoming.World.table_holds_free : ∀ {X : Becoming.World → Type} {L : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (Becoming.World.Witnessed L Class fun x x_1 x_2 => True) →
+    ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → Q n c a) ↔
+      ∀ (w : Becoming.World), Class w → Becoming.World.ListingHolds L w Q)
+@Becoming.World.table_obeys_free : ∀ {X : Becoming.World → Type} {L : (w : Becoming.World) → X w → Nat → Prop}
+  {Class : Becoming.World → Prop} {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (Becoming.World.Witnessed L Class fun x x_1 x_2 => True) →
+      ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → Q n c a) ↔
+        ∀ (w : Becoming.World) [inst : (x : X w) → (t : Nat) → Decidable (L w x t)],
+          Class w → Becoming.World.ListingObeys L w Q)
+@Becoming.World.CountsOf.tally : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum} {n c a : Nat → Nat},
+  w.web.Census alive → w.CountsOf alive n c a → Becoming.Tally n c a
+@Becoming.World.countsOf_decided : ∀ {w : Becoming.World}
+  [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)] (alive : Nat → List w.Relatum),
+  w.CountsOf alive (fun t => (alive t).length) (fun t => Becoming.ceasings (alive t) (fun x s => w.web.active s x) t)
+    fun t => Becoming.comings (alive (t + 1)) (fun x s => w.web.active s x) t
+@Becoming.World.CountsHold.obey : ∀ {w : Becoming.World}
+  [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)]
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop}, w.CountsHold Q → w.CountsObey Q
+@Becoming.World.countsHold_of_obey : ∀ {w : Becoming.World}
+  [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)]
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop}, Becoming.Pointwise Q → w.CountsObey Q → w.CountsHold Q
+@Becoming.World.census_table_obeys : ∀ {Class : Becoming.World → Prop}
+  {C Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (∀ (w : Becoming.World), Class w → w.CountsHold C) →
+      Becoming.World.Witnessed (fun w x t => w.web.active t x) Class C →
+        ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → Q n c a) ↔
+          ∀ (w : Becoming.World) [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)],
+            Class w → w.CountsObey Q)
+@Becoming.World.census_table_obeys_free : ∀ {Class : Becoming.World → Prop}
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (Becoming.World.Witnessed (fun w x t => w.web.active t x) Class fun x x_1 x_2 => True) →
+      ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → Q n c a) ↔
+        ∀ (w : Becoming.World) [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)],
+          Class w → w.CountsObey Q)
+@Becoming.World.census_table_holds₂ : ∀ {A B : Becoming.World → Prop}
+  {C D Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (w : Becoming.World), A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a) →
+    (Becoming.World.Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w) fun n c a => C n c a ∧ D n c a) →
+      ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → D n c a → Q n c a) ↔
+        ∀ (w : Becoming.World), A w → B w → w.CountsHold Q)
+@Becoming.World.census_table_obeys₂ : ∀ {A B : Becoming.World → Prop}
+  {C D Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (∀ (w : Becoming.World), A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a) →
+      (Becoming.World.Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w) fun n c a => C n c a ∧ D n c a) →
+        ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → D n c a → Q n c a) ↔
+          ∀ (w : Becoming.World) [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)],
+            A w → B w → w.CountsObey Q)
+@Becoming.World.census_table_holds₃ : ∀ {A B : Becoming.World → Prop}
+  {C D E Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (w : Becoming.World), A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a ∧ E n c a) →
+    (Becoming.World.Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w) fun n c a =>
+        C n c a ∧ D n c a ∧ E n c a) →
+      ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → D n c a → E n c a → Q n c a) ↔
+        ∀ (w : Becoming.World), A w → B w → w.CountsHold Q)
+@Becoming.World.census_table_obeys₃ : ∀ {A B : Becoming.World → Prop}
+  {C D E Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    (∀ (w : Becoming.World), A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a ∧ E n c a) →
+      (Becoming.World.Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w) fun n c a =>
+          C n c a ∧ D n c a ∧ E n c a) →
+        ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → C n c a → D n c a → E n c a → Q n c a) ↔
+          ∀ (w : Becoming.World) [inst : (t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)],
+            A w → B w → w.CountsObey Q)
