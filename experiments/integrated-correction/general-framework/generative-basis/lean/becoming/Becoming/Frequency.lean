@@ -223,31 +223,95 @@ theorem inflow_congr_strength {k' : Nat → F → C → Nat → C → Nat} {t : 
   total_congr (fun h => congrArg (fun x => bif part h then 0 else x)
     (total_congr (fun s => total_congr (fun d => same h s d) cs) _)) _
 
-/-- **The rate.** With the part giving no gap after the start, starting gaps at most `D`, the
-strengths into each condition summing to at most `M` at each step and to nothing at the steps a
-schedule `on` leaves unmarked, the carried amount at step `t` is at most `D * (1 + M) ^ a`, `a` the
-number of steps before `t` that `on` marks. -/
-theorem carried_le_count {M D : Nat} {on : Nat → Bool} (start : ∀ c, δ c ≤ D)
-    (into : ∀ t c, inflow cs part k present t c ≤ M)
-    (quiet : ∀ t c, on t = false → inflow cs part k present t c = 0) :
-    ∀ t c, carried cs part (fun _ _ _ => 0) k present δ t c ≤
-      D * (1 + M) ^ Frequency.count on t := by
+/-- A formation's gift with the part's gaps is its gift with the part giving none, and the part's
+gap. -/
+theorem carriedGive_with_gaps {σ : Nat → F → C → Nat} (t : Nat) (h : F) (c : C)
+    (l : Nat → C → Nat) :
+    carriedGive cs part σ k t h c l =
+      (bif part h then σ t h c else 0) + carriedGive cs part (fun _ _ _ => 0) k t h c l := by
+  cases hp : part h with
+  | true =>
+    exact (carriedGive_of_part hp).trans ((Nat.add_zero _).symm.trans
+      (congrArg (σ t h c + ·) (carriedGive_of_part (σ := fun _ _ _ => 0) hp).symm))
+  | false =>
+    exact (carriedGive_of_rest hp).trans ((Nat.zero_add _).symm.trans
+      (congrArg (0 + ·) (carriedGive_of_rest (σ := fun _ _ _ => 0) hp).symm))
+
+/-- One plus a number to any power is at least one. -/
+theorem one_le_pow_add (M : Nat) : ∀ n, 1 ≤ (1 + M) ^ n
+  | 0 => Nat.le_refl 1
+  | n + 1 => Nat.le_trans (one_le_pow_add M n)
+      (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm) (Nat.mul_le_mul_left _ (Nat.le_add_right 1 M)))
+
+/-- A disturbance of `E` at a step the schedule `dis` marks adds `E` to `E` times the count. -/
+theorem count_step (dis : Nat → Bool) (D E t : Nat) :
+    D + E * Frequency.count dis t + (bif dis t then E else 0) = D + E * Frequency.count dis (t + 1) := by
+  cases hd : dis t with
+  | true =>
+    exact (Nat.add_assoc _ _ _).trans (congrArg (D + ·)
+      (congrArg (E * ·) (Frequency.count_succ_on hd).symm))
+  | false =>
+    exact (Nat.add_zero _).trans (congrArg (fun n => D + E * n) (Frequency.count_succ_off hd).symm)
+
+/-- **Repeated disturbance.** With the part giving gaps at most `E` at the steps a schedule `dis`
+marks and none at the others, starting gaps at most `D`, the strengths into each condition summing
+to at most `M` at each step and to nothing at the steps `on` leaves unmarked, the carried amount at
+step `t` is at most `(D + E * d) * (1 + M) ^ a`, `d` the number of disturbed steps before `t` and
+`a` the number of coupling steps: each disturbance adds what the couplings after it multiply. -/
+theorem carried_le_disturbed {σ : Nat → F → C → Nat} {M D E : Nat} {on dis : Nat → Bool}
+    (start : ∀ c, δ c ≤ D) (into : ∀ t c, inflow cs part k present t c ≤ M)
+    (quiet : ∀ t c, on t = false → inflow cs part k present t c = 0)
+    (gaps : ∀ t c, total (present t) (fun h => bif part h then σ t h c else 0) ≤
+      bif dis t then E else 0) :
+    ∀ t c, carried cs part σ k present δ t c ≤
+      (D + E * Frequency.count dis t) * (1 + M) ^ Frequency.count on t := by
   intro t
   induction t with
   | zero => intro c; exact Nat.le_trans (start c) (Nat.le_of_eq (Nat.mul_one D).symm)
   | succ t ih =>
     intro c
     have gives := total_give_le_inflow (cs := cs) (part := part) (k := k) (present := present)
-      (t := t) (c := c) (l := carried cs part (fun _ _ _ => 0) k present δ)
-      (X := D * (1 + M) ^ Frequency.count on t)
+      (t := t) (c := c) (l := carried cs part σ k present δ)
+      (X := (D + E * Frequency.count dis t) * (1 + M) ^ Frequency.count on t)
       (fun s d le _ => Nat.le_trans (carried_mono_steps le d) (ih d))
     have rate : inflow cs part k present t c ≤ bif on t then M else 0 := by
       cases hon : on t with
       | true => exact into t c
       | false => exact Nat.le_of_eq (quiet t c hon)
+    have split :
+        (total (present t) fun h => carriedGive cs part σ k t h c (carried cs part σ k present δ)) =
+          total (present t) (fun h => bif part h then σ t h c else 0) +
+            total (present t) (fun h =>
+              carriedGive cs part (fun _ _ _ => 0) k t h c (carried cs part σ k present δ)) :=
+      (total_congr (fun h => carriedGive_with_gaps t h c _) _).trans (total_add _ _ _)
+    have one := one_le_pow_add M (Frequency.count on (t + 1))
+    have fin : ∀ Y e P : Nat, Y * P + e * P = (Y + e) * P := fun Y e P =>
+      ((congrArg (· + e * P) (Nat.mul_comm Y P)).trans ((congrArg (P * Y + ·) (Nat.mul_comm e P)).trans
+        (Nat.left_distrib P Y e).symm)).trans (Nat.mul_comm P (Y + e))
     exact Nat.le_trans (Nat.le_of_eq (carried_succ t c))
-      (Nat.le_trans (Nat.add_le_add (ih c) (Nat.le_trans gives (Nat.mul_le_mul_right _ rate)))
-        (Nat.le_of_eq (Frequency.step_eq on M D t)))
+      (Nat.le_trans (Nat.add_le_add (ih c) (Nat.le_trans (Nat.le_of_eq split)
+        (Nat.add_le_add (gaps t c) (Nat.le_trans gives (Nat.mul_le_mul_right _ rate)))))
+      (Nat.le_trans (Nat.le_of_eq ((congrArg (_ + ·) (Nat.add_comm _ _)).trans
+          (Nat.add_assoc _ _ _).symm))
+        (Nat.le_trans (Nat.le_of_eq (congrArg (· + _) (Frequency.step_eq on M _ t)))
+          (Nat.le_trans (Nat.add_le_add_left (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm)
+              (Nat.mul_le_mul_left _ one)) _)
+            (Nat.le_of_eq ((fin _ _ _).trans (congrArg (· * _) (count_step dis D E t))))))))
+
+/-- **The rate.** With the part giving no gap after the start, starting gaps at most `D`, the
+strengths into each condition summing to at most `M` at each step and to nothing at the steps a
+schedule `on` leaves unmarked, the carried amount at step `t` is at most `D * (1 + M) ^ a`, `a` the
+number of steps before `t` that `on` marks: the case of `carried_le_disturbed` with no
+disturbance. -/
+theorem carried_le_count {M D : Nat} {on : Nat → Bool} (start : ∀ c, δ c ≤ D)
+    (into : ∀ t c, inflow cs part k present t c ≤ M)
+    (quiet : ∀ t c, on t = false → inflow cs part k present t c = 0) :
+    ∀ t c, carried cs part (fun _ _ _ => 0) k present δ t c ≤
+      D * (1 + M) ^ Frequency.count on t :=
+  fun t c => Nat.le_trans
+    (carried_le_disturbed (σ := fun _ _ _ => 0) (E := 0) (dis := fun _ => false) start into quiet
+      (fun t c => Nat.le_of_eq (total_eq_zero fun h _ => by cases part h <;> rfl)) t c)
+    (Nat.le_of_eq (congrArg (· * _) (congrArg (D + ·) (Nat.zero_mul _))))
 
 /-- **Where couplings are rare, nothing runs away.** Where, besides, two to the number of marked
 steps is at most `A * (t + 1) ^ n`, the carried amount is at most a polynomial in the steps,

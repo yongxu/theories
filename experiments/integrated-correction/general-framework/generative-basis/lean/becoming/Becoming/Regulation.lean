@@ -423,6 +423,55 @@ theorem crosses_of_below {m t : Nat} {c : C} (balances : L.BalancesOn W [c] t)
     m < W.level (t + 1) c :=
   Nat.lt_of_not_le fun ym => beyond ((withinGap_iff_of_below balances opposes below).mpr ym)
 
+/-! ### One side, and local regulation -/
+
+/-- One member strictly below and none above make the total strictly below. -/
+theorem total_lt_of_le_of_mem {α : Type} {f g : α → Nat} {a : α} :
+    ∀ {as : List α}, a ∈ as → f a < g a → (∀ b, b ∈ as → f b ≤ g b) → total as f < total as g
+  | _ :: bs, .head _, lt, le => Nat.lt_of_lt_of_le (Nat.add_lt_add_right lt _)
+      (Nat.add_le_add_left (total_le bs fun b mem => le b (.tail _ mem)) _)
+  | b :: _, .tail _ mem, lt, le => Nat.lt_of_le_of_lt (Nat.add_le_add_right (le b (.head _)) _)
+      (Nat.add_lt_add_left (total_lt_of_le_of_mem mem lt fun c mem' => le c (.tail b mem')) _)
+
+/-- **Each formation opposing makes the joint exchange oppose.** Where every formation taking part
+gives no more than it takes from the condition above `m` and takes no more than it gives below,
+and on each side some formation does so strictly, the joint exchange opposes the level's departure
+from `m`. Each formation reads only the level of the condition it exchanges with. -/
+theorem opposes_of_each {m t : Nat} {c : C}
+    (each : ∀ f, f ∈ L.present t → (m < W.level t c → L.give t f c ≤ L.take t f c) ∧
+      (W.level t c < m → L.take t f c ≤ L.give t f c))
+    (strictly : (m < W.level t c → ∃ f, f ∈ L.present t ∧ L.give t f c < L.take t f c) ∧
+      (W.level t c < m → ∃ f, f ∈ L.present t ∧ L.take t f c < L.give t f c)) :
+    L.Opposes W m t c :=
+  ⟨fun above => match strictly.1 above with
+    | ⟨_, mem, lt⟩ => total_lt_of_le_of_mem mem lt fun f inside => (each f inside).1 above,
+   fun below => match strictly.2 below with
+    | ⟨_, mem, lt⟩ => total_lt_of_le_of_mem mem lt fun f inside => (each f inside).2 below⟩
+
+/-- **Shares of the gap make the joint exchange within it.** Where each formation taking part
+departs from evenness by at most its shares of the gap above and below `m`, and the shares total
+at most the gap on each side, the joint exchange is within the gap to `m`. -/
+theorem withinGap_of_shares {m t : Nat} {c : C} {up down : F → Nat}
+    (each : ∀ f, f ∈ L.present t → L.take t f c ≤ L.give t f c + up f ∧
+      L.give t f c ≤ L.take t f c + down f)
+    (upTotal : total (L.present t) up ≤ W.level t c - m)
+    (downTotal : total (L.present t) down ≤ m - W.level t c) : L.WithinGap W m t c :=
+  ⟨Nat.le_trans (total_le _ fun f mem => (each f mem).1)
+     (Nat.le_trans (Nat.le_of_eq (total_add _ _ _)) (Nat.add_le_add_left upTotal _)),
+   Nat.le_trans (total_le _ fun f mem => (each f mem).2)
+     (Nat.le_trans (Nat.le_of_eq (total_add _ _ _)) (Nat.add_le_add_left downTotal _))⟩
+
+/-- **The whole settles where each part is regulated locally.** Under balance, where at each
+condition of a family the joint exchange is within the gap to its own level `m c` and opposes
+departure from it at every step from `T`, the family's stock is the total of those levels from the
+step by which every condition has settled on. No formation need read the stock: each premise is
+about one condition. -/
+theorem stock_settles (balances : L.Balances W) {ds : List C} {m : C → Nat} {T : Nat}
+    (within : ∀ c, c ∈ ds → ∀ k, L.WithinGap W (m c) (T + k) c)
+    (opposes : ∀ c, c ∈ ds → ∀ k, L.Opposes W (m c) (T + k) c) {t : Nat}
+    (late : ∀ c, c ∈ ds → T + gap (W.level T c) (m c) ≤ t) : W.stock ds t = total ds m :=
+  total_congr_on fun c mem => settles balances (within c mem) (opposes c mem) (late c mem)
+
 end Flow
 
 namespace Regulation

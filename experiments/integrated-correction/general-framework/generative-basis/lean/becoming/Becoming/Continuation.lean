@@ -412,17 +412,51 @@ theorem stays_below_at {c : C} {m T : Nat} (below : W.level T c < m) (n : Nat)
     (fun k f lt present => gate_single (gated k f lt present))
     fun k lt => of_single (givers k lt)
 
+/-- **One side does not restore.** With balance at the condition at each step from `T`, and the
+joint exchange giving no more than it takes wherever the level is below `m`, a level below `m` at
+`T` is at most that level at every later step. -/
+theorem held_below {m T : Nat} {c : C} (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (noRaise : ∀ t, T ≤ t → W.level t c < m → L.given t c ≤ L.taken t c)
+    (below : W.level T c < m) : ∀ n, W.level (T + n) c ≤ W.level T c
+  | 0 => Nat.le_refl _
+  | n + 1 =>
+    have before := held_below balances noRaise below n
+    Nat.le_trans
+      (le_of_add_le_add_right (L.taken (T + n) c)
+        (Nat.le_trans (Nat.le_of_eq ((balances (T + n) (Nat.le_add_right T n)) c (.head [])))
+          (Nat.add_le_add_left (noRaise (T + n) (Nat.le_add_right T n)
+            (Nat.lt_of_le_of_lt before below)) _)))
+      before
+
+/-- **So regulation from one side holds a level from that side only.** Under the same premises a
+level below `m` never comes back to `m`, whatever the exchange does at or above `m`. -/
+theorem never_returns_below {m T : Nat} {c : C} (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (noRaise : ∀ t, T ≤ t → W.level t c < m → L.given t c ≤ L.taken t c)
+    (below : W.level T c < m) (n : Nat) : W.level (T + n) c < m :=
+  Nat.lt_of_le_of_lt (held_below balances noRaise below n) below
+
+/-- Where whatever gives to the condition depends on it at a need of at least `m` and gives only
+while supported, nothing is given to it while its level is below `m`. -/
+theorem given_zero_below {m t : Nat} {c : C} (givers : L.GiversSupported W t c)
+    (gated : ∀ f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c)
+    (below : W.level t c < m) : L.given t c = 0 :=
+  total_eq_zero fun f mem => eq_zero_of_not_pos fun pos => match gated f mem pos with
+    | ⟨requires, high⟩ => Nat.lt_irrefl m
+        (Nat.lt_of_le_of_lt (Nat.le_trans high (givers f mem pos c requires)) below)
+
 /-- Once below `m`, always below `m`: where every formation giving to the condition
 depends on it at a need of at least `m`, only active formations give and activity needs
 support, nothing gives to the condition while its level is below `m`, so the level stays
-below `m`. -/
+below `m`: the gated case of `never_returns_below`. -/
 theorem stays_below (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) {c : C} {m : Nat}
     (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
       W.requires t f c ∧ m ≤ W.need t f c)
     {T : Nat} (below : W.level T c < m) : ∀ n, W.level (T + n) c < m :=
-  fun n => stays_below_at below n (fun k _ => balances.on [c] (T + k))
-    (fun k f _ => gated (T + k) f) fun k _ => acting.giversSupported dependent (T + k) c
+  never_returns_below (fun t _ => balances.on [c] t)
+    (fun t _ low => Nat.le_trans (Nat.le_of_eq
+      (given_zero_below (acting.giversSupported dependent t c) (gated t) low)) (Nat.zero_le _))
+    below
 
 /-- At one step, a formation depending, at a need of at least `m`, on a member of a family whose
 stock is below `m` is not active there, where it is active only while supported. -/
