@@ -1,0 +1,292 @@
+{
+ "BEN": {
+  "scope": "primary",
+  "prey_years": [
+   1984,
+   2022
+  ],
+  "prey_missing": [
+   2021
+  ],
+  "catch_years": [
+   1984,
+   2023
+  ],
+  "deps_missing": {
+   "bs:Malgas:Cape gannet": [
+    2016,
+    2019
+   ],
+   "bs:Lamberts:Cape gannet": [
+    2000,
+    2005
+   ],
+   "bs:Robben:African penguin": [
+    2000
+   ]
+  },
+  "deps_years": {
+   "bs:Malgas:Cape gannet": [
+    1987,
+    2020
+   ],
+   "bs:Lamberts:Cape gannet": [
+    1990,
+    2020
+   ],
+   "bs:Robben:African penguin": [
+    1989,
+    2019
+   ]
+  },
+  "usable": 29,
+  "usable_years": [
+   1992,
+   1993,
+   1994,
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ],
+  "failures": 10,
+  "usable_not_in_ew2": 15
+ },
+ "ROST": {
+  "scope": "primary",
+  "prey_years": [
+   1986,
+   2023
+  ],
+  "prey_missing": [],
+  "catch_years": [
+   1988,
+   2024
+  ],
+  "deps_missing": {
+   "bs:Rost:Atlantic puffin": []
+  },
+  "deps_years": {
+   "bs:Rost:Atlantic puffin": [
+    1964,
+    2021
+   ]
+  },
+  "usable": 28,
+  "usable_years": [
+   1994,
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ],
+  "failures": 9,
+  "usable_not_in_ew2": 21
+ },
+ "BEN4": {
+  "scope": "secondary: Dassen penguins added",
+  "prey_years": [
+   1984,
+   2022
+  ],
+  "prey_missing": [
+   2021
+  ],
+  "catch_years": [
+   1984,
+   2023
+  ],
+  "deps_missing": {
+   "bs:Malgas:Cape gannet": [
+    2016,
+    2019
+   ],
+   "bs:Lamberts:Cape gannet": [
+    2000,
+    2005
+   ],
+   "bs:Robben:African penguin": [
+    2000
+   ],
+   "bs:Dassen:African penguin": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ]
+  },
+  "deps_years": {
+   "bs:Malgas:Cape gannet": [
+    1987,
+    2020
+   ],
+   "bs:Lamberts:Cape gannet": [
+    1990,
+    2020
+   ],
+   "bs:Robben:African penguin": [
+    1989,
+    2019
+   ],
+   "bs:Dassen:African penguin": [
+    1995,
+    2019
+   ]
+  },
+  "usable": 29,
+  "usable_years": [
+   1992,
+   1993,
+   1994,
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ],
+  "failures": 10,
+  "usable_not_in_ew2": 15
+ },
+ "ROST2": {
+  "scope": "secondary: Rost kittiwakes added",
+  "prey_years": [
+   1986,
+   2023
+  ],
+  "prey_missing": [],
+  "catch_years": [
+   1988,
+   2024
+  ],
+  "deps_missing": {
+   "bs:Rost:Atlantic puffin": [],
+   "bs:Rost:black-legged kittiwake, cliff colony": [
+    1986,
+    1987
+   ],
+   "bs:Rost:black-legged kittiwake, harbour colony": [
+    1984,
+    1985,
+    1986,
+    1987
+   ]
+  },
+  "deps_years": {
+   "bs:Rost:Atlantic puffin": [
+    1964,
+    2021
+   ],
+   "bs:Rost:black-legged kittiwake, cliff colony": [
+    1980,
+    2021
+   ],
+   "bs:Rost:black-legged kittiwake, harbour colony": [
+    1981,
+    2021
+   ]
+  },
+  "usable": 28,
+  "usable_years": [
+   1994,
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ],
+  "failures": 9,
+  "usable_not_in_ew2": 21
+ }
+}

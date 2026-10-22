@@ -115,9 +115,21 @@ this module states what holds under the condition.
 * **The dynamics do not decide significance.** Where nothing has significance, every level path retains every
   other and none adds, and living significance fails at any event that lives; where everything
   has significance it holds (`Web.significance_undetermined`, which evaluates these two constant
-  significances). That no law of the dynamics constrains significance holds because significance
-  is not a field of `World`, `Web` or `Flow`, a fact about the representation, not a theorem here.
-  This does not show that the continuation condition is needed.
+  significances). A statement reading only the dynamics (`ReadsOnlyDynamics`: its truth does not
+  change with the significance) holds of a dynamics with every significance alike, so it excludes
+  no rival (`ReadsOnlyDynamics.admits_rival`), and where there is a standpoint and a formation none
+  entails the continuation condition (`ReadsOnlyDynamics.not_entails`). That every law stated on
+  `World`, `Web` or `Flow` reads only the dynamics is a fact about the representation, since
+  significance is not a field of them (`readsOnlyDynamics_of` states what that gives), not a
+  theorem here. This does not show that the continuation condition is needed.
+* **Only the condition closes it.** A rival, a significance holding exactly within a region with a
+  point outside, is exactly a point lacking significance (`rival_iff_lacks`). The continuation
+  condition excludes every rival (`Unrestricted.not_rival`); a premise excludes every rival exactly
+  where it implies that no point lacks significance (`excludes_rivals_iff`), which is the condition
+  exactly where significance at each point is decided (`unrestricted_iff_not_rival`). Over every
+  significance, that excluding every rival gives the condition is exactly double-negation
+  elimination (`not_rival_unrestricted_iff_stable`): the step left is from a continuation not
+  denied significance to one that has it.
 
 Significance here is not graded, and, as Ren wrote, it need not be positive. A part does no
 harm when the levels with it retain what has significance without it, and it is generative when
@@ -178,9 +190,8 @@ theorem rival_of_outside (region : Pos × Nat × F → Prop) :
   ⟨fun _ inside => inside, fun ⟨i, outside⟩ all => outside (all i)⟩
 
 /-- A bounded significance is the continuation condition's rule accepted inside a formed boundary. Where some
-formation lies outside some standpoint's region, it is not the continuation condition. This is all
-the theorem proves; that such a rival is consistent with every law of the dynamics holds only
-because significance is not a field of the representation. -/
+formation lies outside some standpoint's region, it is not the continuation condition. That every
+statement reading only the dynamics admits such a rival is `ReadsOnlyDynamics.admits_rival`. -/
 theorem bounded_rival {region : Pos → F → Prop} :
     Within (fun i : Pos × Nat × F => region i.1 i.2.2) (fun i => bounded region i.1 i.2.1 i.2.2) ∧
       ((∃ p f, ¬ region p f) → ¬ Unrestricted (bounded region)) :=
@@ -201,6 +212,91 @@ theorem bounded_in_time_rival (T : Nat) :
   ⟨(rival_of_outside (fun i : Pos × Nat × F => i.2.1 ≤ T)).1,
    fun p f => (rival_of_outside (fun i : Pos × Nat × F => i.2.1 ≤ T)).2
      ⟨(p, T + 1, f), Nat.not_succ_le_self T⟩⟩
+
+/-! ## What the dynamics leave open, and what closes it -/
+
+/-- A rival of the continuation condition: a significance holding exactly within a region of
+standpoints, steps and formations, with some point outside the region. -/
+def Rival (sig : Pos → Nat → F → Prop) : Prop :=
+  ∃ region : Pos × Nat × F → Prop,
+    (∀ i : Pos × Nat × F, sig i.1 i.2.1 i.2.2 ↔ region i) ∧ ∃ i, ¬ region i
+
+/-- **A rival is exactly a point lacking significance.** A significance that leaves some
+continuation without significance holds exactly within a region with a point outside, the region
+of what it gives significance; `rival_of_outside` and `bounded_rival` are its cases. -/
+theorem rival_iff_lacks {sig : Pos → Nat → F → Prop} : Rival sig ↔ ∃ p t f, ¬ sig p t f :=
+  ⟨fun ⟨_, exact, i, outside⟩ => ⟨i.1, i.2.1, i.2.2, fun holds => outside ((exact i).mp holds)⟩,
+   fun ⟨p, t, f, lacks⟩ => ⟨fun i => sig i.1 i.2.1 i.2.2, fun _ => Iff.rfl, (p, t, f), lacks⟩⟩
+
+/-- A significance bounded by a region with a formation outside some standpoint's region is a
+rival. -/
+theorem bounded_is_rival {region : Pos → F → Prop} (outside : ∃ p f, ¬ region p f) :
+    Rival (bounded region) :=
+  match outside with
+  | ⟨p, f, lacks⟩ => rival_iff_lacks.mpr ⟨p, 0, f, lacks⟩
+
+/-- The continuation condition excludes every rival. -/
+theorem Unrestricted.not_rival {sig : Pos → Nat → F → Prop} (unrestricted : Unrestricted sig) :
+    ¬ Rival sig :=
+  fun rival => match rival_iff_lacks.mp rival with
+    | ⟨p, t, f, lacks⟩ => lacks (unrestricted (p, t, f))
+
+/-- **Excluding every rival is that no point lacks significance.** -/
+theorem not_rival_iff {sig : Pos → Nat → F → Prop} : ¬ Rival sig ↔ ∀ p t f, ¬ ¬ sig p t f :=
+  ⟨fun none p t f lacks => none (rival_iff_lacks.mpr ⟨p, t, f, lacks⟩),
+   fun never rival => match rival_iff_lacks.mp rival with
+    | ⟨p, t, f, lacks⟩ => never p t f lacks⟩
+
+/-- **The premises that exclude every rival.** A premise on significance excludes every rival
+exactly where it implies that no point lacks significance. -/
+theorem excludes_rivals_iff {P : (Pos → Nat → F → Prop) → Prop} :
+    (∀ sig, P sig → ¬ Rival sig) ↔ ∀ sig, P sig → ∀ p t f, ¬ ¬ sig p t f :=
+  ⟨fun excludes sig holds => not_rival_iff.mp (excludes sig holds),
+   fun implies sig holds => not_rival_iff.mpr (implies sig holds)⟩
+
+/-- **Where significance at each point is decided, excluding every rival is the continuation
+condition.** -/
+theorem unrestricted_iff_not_rival {sig : Pos → Nat → F → Prop}
+    (decided : ∀ p t f, sig p t f ∨ ¬ sig p t f) : Unrestricted sig ↔ ¬ Rival sig :=
+  ⟨Unrestricted.not_rival, fun none i => match decided i.1 i.2.1 i.2.2 with
+    | .inl holds => holds
+    | .inr lacks => absurd lacks (not_rival_iff.mp none i.1 i.2.1 i.2.2)⟩
+
+/-- **What excluding every rival leaves open.** With a standpoint and a formation, that every
+significance excluding every rival is the continuation condition is exactly that whatever is not
+denied holds: the remaining step is whether a continuation that does not lack significance has
+it. -/
+theorem not_rival_unrestricted_iff_stable (p : Pos) (f : F) :
+    (∀ sig : Pos → Nat → F → Prop, ¬ Rival sig → Unrestricted sig) ↔ ∀ q : Prop, ¬ ¬ q → q :=
+  ⟨fun closes q denied => closes (fun _ _ _ => q) (not_rival_iff.mpr fun _ _ _ => denied) (p, 0, f),
+   fun stable _ none i => stable _ (not_rival_iff.mp none i.1 i.2.1 i.2.2)⟩
+
+/-- A statement about a dynamics (a world, a web, a flow or any other) and a significance reads
+only the dynamics when its truth does not change with the significance. -/
+def ReadsOnlyDynamics {D : Type} (law : D → (Pos → Nat → F → Prop) → Prop) : Prop :=
+  ∀ d sig sig', law d sig → law d sig'
+
+/-- A statement about the dynamics alone reads only the dynamics. -/
+theorem readsOnlyDynamics_of {D : Type} (law : D → Prop) :
+    ReadsOnlyDynamics (fun d (_ : Pos → Nat → F → Prop) => law d) :=
+  fun _ _ _ holds => holds
+
+/-- **No law of the dynamics excludes a rival.** A statement reading only the dynamics that holds
+of a dynamics with some significance holds of it with every significance, and so with a
+significance bounded by any region with a formation outside it, a rival. -/
+theorem ReadsOnlyDynamics.admits_rival {D : Type} {law : D → (Pos → Nat → F → Prop) → Prop}
+    (reads : ReadsOnlyDynamics law) {d : D} {sig : Pos → Nat → F → Prop} (holds : law d sig)
+    {region : Pos → F → Prop} (outside : ∃ p f, ¬ region p f) :
+    law d (bounded region) ∧ Rival (bounded region) ∧ ¬ Unrestricted (bounded region) :=
+  ⟨reads d sig _ holds, bounded_is_rival outside, bounded_rival.2 outside⟩
+
+/-- **No law of the dynamics entails the continuation condition.** Where there is a standpoint and
+a formation, a statement reading only the dynamics that entails the continuation condition holds of
+no dynamics with any significance. -/
+theorem ReadsOnlyDynamics.not_entails {D : Type} {law : D → (Pos → Nat → F → Prop) → Prop}
+    (reads : ReadsOnlyDynamics law) (entails : ∀ d sig, law d sig → Unrestricted sig)
+    (p : Pos) (f : F) {d : D} {sig : Pos → Nat → F → Prop} : ¬ law d sig :=
+  fun holds => entails d _ (reads d sig (fun _ _ _ => False) holds) (p, 0, f)
 
 /-! ## Retaining under the continuation condition -/
 

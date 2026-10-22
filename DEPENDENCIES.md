@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-383 registered results: 357 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 898 curated edges join 335 results to the results they draw on.
+384 registered results: 358 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 898 curated edges join 336 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -35,6 +35,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [any-number-of-drawers-in-turn][] ← <a id="any-number-of-drawers-in-turn--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [arising-needs-change][] ← <a id="arising-needs-change--support-from-the-supported"></a>[support-from-the-supported][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [balance-from-the-first-law][] ← <a id="balance-from-the-first-law--least-loss-from-entropy-production"></a>[least-loss-from-entropy-production][]
 - [bands-of-the-three-powers][] ← <a id="bands-of-the-three-powers--place-relations-in-context"></a>[place-relations-in-context][]
 - [basic-priority-step-by-step][] ← <a id="basic-priority-step-by-step--ranking-under-readings"></a>[ranking-under-readings][] · <a id="basic-priority-step-by-step--relation-level-law-of-easing"></a>[relation-level-law-of-easing][]
 - [basins-of-a-determined-law][] ← <a id="basins-of-a-determined-law--attraction-is-not-returning"></a>[attraction-is-not-returning][]
@@ -221,7 +222,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [ranking-under-readings][] ← <a id="ranking-under-readings--relational-reading-comparison"></a>[relational-reading-comparison][] · <a id="ranking-under-readings--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="ranking-under-readings--relational-renewal-classification"></a>[relational-renewal-classification][] · <a id="ranking-under-readings--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="ranking-under-readings--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="ranking-under-readings--closing-needs-net-draw"></a>[closing-needs-net-draw][]
 - [re-optimizing-above-a-renewal-ends-it][] ← <a id="re-optimizing-above-a-renewal-ends-it--room-read-off-the-exchange"></a>[room-read-off-the-exchange][] · <a id="re-optimizing-above-a-renewal-ends-it--several-optimizers-drain-by-their-joint-capacity"></a>[several-optimizers-drain-by-their-joint-capacity][] · <a id="re-optimizing-above-a-renewal-ends-it--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [reaching-before-and-after-a-juncture][] ← <a id="reaching-before-and-after-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="reaching-before-and-after-a-juncture--basins-of-a-determined-law"></a>[basins-of-a-determined-law][]
-- [readers-drawn-from-the-selected][] ← <a id="readers-drawn-from-the-selected--capture-through-the-rule"></a>[capture-through-the-rule][] · <a id="readers-drawn-from-the-selected--closed-capture"></a>[closed-capture][]
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [reading-through-a-pool][] ← <a id="reading-through-a-pool--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][]
 - [readings-within-what-they-read][] ← <a id="readings-within-what-they-read--recurrence-without-premise"></a>[recurrence-without-premise][]
@@ -328,6 +328,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
+- [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
 - [where-a-level-couples][] ← <a id="where-a-level-couples--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="where-a-level-couples--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="where-a-level-couples--observation-is-a-route"></a>[observation-is-a-route][] · <a id="where-a-level-couples--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="where-a-level-couples--testing-within-couplings"></a>[testing-within-couplings][] · <a id="where-a-level-couples--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [where-a-move-is-formed][] ← <a id="where-a-move-is-formed--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="where-a-move-is-formed--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="where-a-move-is-formed--causal-models-as-processes"></a>[causal-models-as-processes][] · <a id="where-a-move-is-formed--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="where-a-move-is-formed--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="where-a-move-is-formed--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="where-a-move-is-formed--learning-by-refutation"></a>[learning-by-refutation][] · <a id="where-a-move-is-formed--control-coherence-loss"></a>[control-coherence-loss][] · <a id="where-a-move-is-formed--experiment-needs-return"></a>[experiment-needs-return][]
@@ -372,6 +373,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [arising-needs-change]: theories/becoming/results/records/arising-needs-change.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
 [attraction-is-not-returning]: theories/becoming/results/records/attraction-is-not-returning.md
+[balance-from-the-first-law]: theories/becoming/results/records/balance-from-the-first-law.md
 [bands-of-the-three-powers]: theories/becoming/results/records/bands-of-the-three-powers.md
 [basic-priority-step-by-step]: theories/becoming/results/records/basic-priority-step-by-step.md
 [basins-of-a-determined-law]: theories/becoming/results/records/basins-of-a-determined-law.md
@@ -577,7 +579,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [ranking-under-readings]: theories/becoming/results/records/ranking-under-readings.md
 [re-optimizing-above-a-renewal-ends-it]: theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md
 [reaching-before-and-after-a-juncture]: theories/becoming/results/records/reaching-before-and-after-a-juncture.md
-[readers-drawn-from-the-selected]: theories/becoming/results/records/readers-drawn-from-the-selected.md
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [reading-through-a-pool]: theories/becoming/results/records/reading-through-a-pool.md
 [readings-within-what-they-read]: theories/becoming/results/records/readings-within-what-they-read.md
@@ -695,6 +696,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
+[what-the-dynamics-leave-open]: theories/becoming/results/records/what-the-dynamics-leave-open.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md
 [where-a-level-couples]: theories/becoming/results/records/where-a-level-couples.md

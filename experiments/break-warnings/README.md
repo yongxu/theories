@@ -62,3 +62,15 @@ Three points. Adjusting for the level raised Røst's association (unadjusted r 0
 **Limits.** Two short series (14 and 29 usable years) and power about 0.7 only against an association explaining a quarter to a half of breeding success beyond the level. The draw is not adjusted for. The data are z-scores, and Røst's prey is an assessment output. Feedback cannot be seen by this design; that the birds take little was measured apart (Saraux et al. 2021). The frozen limits are in section 8 of the predictions.
 
 **Next.** The same frozen test on longer and unread series: Sydeman et al.'s breeding success to 2023 (BCO-DMO 985565) with the Benguela surveys, the Norwegian herring assessments and the Farallon juvenile rockfish index brought forward, with the catch as the draw. The design is fixed already; only the series and the dry runs' layout change.
+
+## EW3: the same test on longer series, with the catch as the draw
+
+Board item EW3, 22 October 2026. EW2's frozen test, unchanged, on series to 2020-2021 that EW2 did not read: Sydeman et al.'s breeding success (BCO-DMO 985565), the 2024 South African sardine and anchovy assessment data records, and ICES's 2025 assessment of Norwegian spring-spawning herring. The catch in the year and the year before enter as the draw, beside EW2's four level covariates.
+
+| File | What it is |
+|---|---|
+| [PREDICTIONS-2026-10-22-EW3.md](PREDICTIONS-2026-10-22-EW3.md) | Sources and hashes, what was seen before the freeze, how the new series match EW2's, the layout, what differs in the test, verdicts V1-V2 and reading rules, dry runs, limits. Frozen before any statistic relating a prey series to a breeding series was computed (`results/ew3/FROZEN-AT`) |
+| [ew3_data.py](ew3_data.py) | Reads the four sources into one CSV of series (pypdf for the two PDFs) |
+| [ew3.py](ew3.py) | The layout, the generators and dry runs, and the frozen test, on EW2's statistics (`ew2.py`) |
+| [posthoc_ew3.py](posthoc_ew3.py) | After the run, not a verdict: the combined partial correlation and its 95% interval |
+| [results/ew3/](results/ew3/) | `layout.json`, `dry.json`, `FROZEN-AT`; after the run, `test.json` and `posthoc.json` |

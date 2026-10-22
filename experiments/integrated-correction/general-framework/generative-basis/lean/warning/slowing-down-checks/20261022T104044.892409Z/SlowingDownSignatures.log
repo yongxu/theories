@@ -1,0 +1,90 @@
+@Becoming.SlowingDown.memLp_step : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω} (a : ℝ)
+  {Y E : Ω → ℝ},
+  MeasureTheory.MemLp Y 2 μ → MeasureTheory.MemLp E 2 μ → MeasureTheory.MemLp (Becoming.SlowingDown.step a Y E) 2 μ
+@Becoming.SlowingDown.variance_step : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω} (a : ℝ)
+  {Y E : Ω → ℝ},
+  MeasureTheory.MemLp Y 2 μ →
+    MeasureTheory.MemLp E 2 μ →
+      ProbabilityTheory.IndepFun Y E μ →
+        ProbabilityTheory.variance (Becoming.SlowingDown.step a Y E) μ =
+          a ^ 2 * ProbabilityTheory.variance Y μ + ProbabilityTheory.variance E μ
+@Becoming.SlowingDown.covariance_step : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω}
+  [MeasureTheory.IsFiniteMeasure μ] (a : ℝ) {Y E : Ω → ℝ},
+  MeasureTheory.MemLp Y 2 μ →
+    MeasureTheory.MemLp E 2 μ →
+      ProbabilityTheory.IndepFun Y E μ →
+        ProbabilityTheory.covariance Y (Becoming.SlowingDown.step a Y E) μ = a * ProbabilityTheory.variance Y μ
+@Becoming.SlowingDown.stationary_variance : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω}
+  (a : ℝ) {Y E : Ω → ℝ},
+  MeasureTheory.MemLp Y 2 μ →
+    MeasureTheory.MemLp E 2 μ →
+      ProbabilityTheory.IndepFun Y E μ →
+        a ^ 2 < 1 →
+          ProbabilityTheory.variance (Becoming.SlowingDown.step a Y E) μ = ProbabilityTheory.variance Y μ →
+            ProbabilityTheory.variance Y μ = Becoming.SlowingDown.stationaryVariance a (ProbabilityTheory.variance E μ)
+@Becoming.SlowingDown.stationary_lag1 : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω}
+  [MeasureTheory.IsFiniteMeasure μ] (a : ℝ) {Y E : Ω → ℝ},
+  MeasureTheory.MemLp Y 2 μ →
+    MeasureTheory.MemLp E 2 μ →
+      ProbabilityTheory.IndepFun Y E μ →
+        ProbabilityTheory.variance (Becoming.SlowingDown.step a Y E) μ = ProbabilityTheory.variance Y μ →
+          0 < ProbabilityTheory.variance Y μ → Becoming.SlowingDown.lag1 Y (Becoming.SlowingDown.step a Y E) μ = a
+@Becoming.SlowingDown.stationaryVariance_tendsto : ∀ {s : ℝ},
+  0 < s → Filter.Tendsto (fun a => Becoming.SlowingDown.stationaryVariance a s) (nhdsWithin 1 (Set.Iio 1)) Filter.atTop
+@Becoming.SlowingDown.stationaryVariance_strictMonoOn : ∀ {s : ℝ},
+  0 < s → StrictMonoOn (fun a => Becoming.SlowingDown.stationaryVariance a s) (Set.Ico 0 1)
+Becoming.SlowingDown.foldStep_rest : ∀ (h : ℝ) {m : ℝ}, 0 ≤ m → Becoming.SlowingDown.foldStep h m √m = √m
+Becoming.SlowingDown.foldStep_hasDerivAt : ∀ (h m : ℝ),
+  HasDerivAt (Becoming.SlowingDown.foldStep h m) (Becoming.SlowingDown.foldMultiplier h m) √m
+@Becoming.SlowingDown.foldMultiplier_tendsto : ∀ {h : ℝ},
+  0 < h → Filter.Tendsto (Becoming.SlowingDown.foldMultiplier h) (nhdsWithin 0 (Set.Ioi 0)) (nhdsWithin 1 (Set.Iio 1))
+@Becoming.SlowingDown.fold_variance_tendsto : ∀ {h s : ℝ},
+  0 < h →
+    0 < s →
+      Filter.Tendsto (fun m => Becoming.SlowingDown.stationaryVariance (Becoming.SlowingDown.foldMultiplier h m) s)
+        (nhdsWithin 0 (Set.Ioi 0)) Filter.atTop
+@Becoming.SlowingDown.fold_variance_strictAntiOn : ∀ {h s : ℝ},
+  0 < h →
+    0 < s →
+      StrictAntiOn (fun m => Becoming.SlowingDown.stationaryVariance (Becoming.SlowingDown.foldMultiplier h m) s)
+        (Set.Ioc 0 ((2 * h)⁻¹ ^ 2))
+@Becoming.SlowingDown.fold_margin_read : ∀ {h m : ℝ},
+  0 < h → 0 ≤ m → m = ((1 - Becoming.SlowingDown.foldMultiplier h m) / (2 * h)) ^ 2
+Becoming.SlowingDown.drawnStep_rest : ∀ (h : ℝ) {r K : ℝ} (q : ℝ),
+  r ≠ 0 →
+    K ≠ 0 →
+      Becoming.SlowingDown.drawnStep h r K q (Becoming.SlowingDown.drawnRest r K q) =
+        Becoming.SlowingDown.drawnRest r K q
+Becoming.SlowingDown.drawnStep_hasDerivAt : ∀ (h : ℝ) {r K : ℝ} (q : ℝ),
+  r ≠ 0 →
+    K ≠ 0 →
+      HasDerivAt (Becoming.SlowingDown.drawnStep h r K q) (Becoming.SlowingDown.drawnMultiplier h r q)
+        (Becoming.SlowingDown.drawnRest r K q)
+Becoming.SlowingDown.drawn_multiplier_level : ∀ (h : ℝ) {r K : ℝ} (q : ℝ),
+  r ≠ 0 → K ≠ 0 → Becoming.SlowingDown.drawnMultiplier h r q = 1 - h * r * Becoming.SlowingDown.drawnRest r K q / K
+@Becoming.SlowingDown.drawn_level_read : ∀ {h r K : ℝ} (q : ℝ),
+  h ≠ 0 →
+    r ≠ 0 →
+      K ≠ 0 → Becoming.SlowingDown.drawnRest r K q = K * (1 - Becoming.SlowingDown.drawnMultiplier h r q) / (h * r)
+@Becoming.SlowingDown.drawnMultiplier_tendsto : ∀ {h : ℝ},
+  0 < h →
+    ∀ (r : ℝ),
+      Filter.Tendsto (Becoming.SlowingDown.drawnMultiplier h r) (nhdsWithin r (Set.Iio r)) (nhdsWithin 1 (Set.Iio 1))
+@Becoming.SlowingDown.drawn_variance_tendsto : ∀ {h s : ℝ},
+  0 < h →
+    0 < s →
+      ∀ (r : ℝ),
+        Filter.Tendsto (fun q => Becoming.SlowingDown.stationaryVariance (Becoming.SlowingDown.drawnMultiplier h r q) s)
+          (nhdsWithin r (Set.Iio r)) Filter.atTop
+@Becoming.SlowingDown.drawn_variance_strictMonoOn : ∀ {h s : ℝ},
+  0 < h →
+    0 < s →
+      ∀ (r : ℝ),
+        StrictMonoOn (fun q => Becoming.SlowingDown.stationaryVariance (Becoming.SlowingDown.drawnMultiplier h r q) s)
+          (Set.Ico (r - h⁻¹) r)
+Becoming.SlowingDown.need_not_read : ∀ (x a : ℝ) (R : ℝ → ℝ), ∃ n, R a ≠ x - n
+@Becoming.SlowingDown.need_margin_read : ∀ {h r K : ℝ} (q n : ℝ),
+  h ≠ 0 →
+    r ≠ 0 →
+      K ≠ 0 →
+        Becoming.SlowingDown.drawnRest r K q - n = K * (1 - Becoming.SlowingDown.drawnMultiplier h r q) / (h * r) - n

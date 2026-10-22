@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T05:43:13+00:00",
+  "reviewed_at_utc": "2026-10-22T10:39:38+00:00",
   "statement": {
     "en": "A rule holding exactly within a region accepts the continuation condition's rule there and is not it where something lies outside; a rule bounded in time is such a rival, and in the clearer's witness it permits what the condition counts as a loss.",
     "zh": "恰在一域内成立之规则在其中接受条件之规则，域外有物则非之；以时为界之规则即此对手，在清除者之见证中它许可条件所计之失。"
@@ -46,8 +46,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Which significance holds: rivals are consistent with every law of the dynamics.",
-      "zh": "何种意义成立：对手与动力之一切律相容。",
+      "en": "Which significance holds: every statement reading only the dynamics admits a rival, and none entails the condition where there is a standpoint and a formation (what-the-dynamics-leave-open).",
+      "zh": "何种意义成立：一切只读动力之陈述皆容对手，有立场与形成处无一推出条件（what-the-dynamics-leave-open）。",
       "kind": "non-implication"
     }
   ],
@@ -108,7 +108,7 @@
         "Becoming.bounded_in_time_rival",
         "Becoming.rival_of_outside"
       ],
-      "sha256": "76ddaf3b84995431587da1a77e643cdc1c1863b24f8609c7872f01cd421bb1c3"
+      "sha256": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
@@ -139,12 +139,18 @@
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b95161950a33c0786cd1b0deb2afc0d821998ca4a4420c3a594d048252c57fb",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Significance",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -154,6 +160,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 338 节。"
+    },
+    {
+      "en": "22 October 2026: the non-implication restated, rivals' consistency with the dynamics now a theorem for every statement reading only the dynamics (SD1, record what-the-dynamics-leave-open); study section 347.",
+      "zh": "2026年10月22日：重述其不推出项，对手与动力之相容今为一切只读动力之陈述之定理（SD1，记录 what-the-dynamics-leave-open）；研究第 347 节。"
     }
   ]
 }

@@ -1,0 +1,135 @@
+{
+ "window": 8,
+ "alpha_each": 0.025,
+ "generators": {
+  "G0": {
+   "reps": 2000,
+   "reject_ar1": 0.0145,
+   "reject_var": 0.0135,
+   "reject_either": 0.028,
+   "level_only_reject_ar1": 0.0175,
+   "level_only_reject_var": 0.016,
+   "unadjusted_reject_ar1": 0.021,
+   "unadjusted_reject_var": 0.004
+  },
+  "G0s": {
+   "reps": 2000,
+   "reject_ar1": 0.023,
+   "reject_var": 0.0155,
+   "reject_either": 0.038,
+   "level_only_reject_ar1": 0.0215,
+   "level_only_reject_var": 0.016,
+   "unadjusted_reject_ar1": 0.0335,
+   "unadjusted_reject_var": 0.0045
+  },
+  "G0n": {
+   "reps": 2000,
+   "reject_ar1": 0.018,
+   "reject_var": 0.013,
+   "reject_either": 0.031,
+   "level_only_reject_ar1": 0.0215,
+   "level_only_reject_var": 0.0125,
+   "unadjusted_reject_ar1": 0.0225,
+   "unadjusted_reject_var": 0.0065
+  },
+  "G5": {
+   "reps": 2000,
+   "reject_ar1": 0.022,
+   "reject_var": 0.009,
+   "reject_either": 0.0305,
+   "level_only_reject_ar1": 0.024,
+   "level_only_reject_var": 0.0145,
+   "unadjusted_reject_ar1": 0.0275,
+   "unadjusted_reject_var": 0.005
+  },
+  "G0r": {
+   "reps": 2000,
+   "reject_ar1": 0.024,
+   "reject_var": 0.0305,
+   "reject_either": 0.0545,
+   "level_only_reject_ar1": 0.0235,
+   "level_only_reject_var": 0.0235,
+   "unadjusted_reject_ar1": 0.027,
+   "unadjusted_reject_var": 0.0155
+  },
+  "G1": {
+   "reps": 2000,
+   "reject_ar1": 0.0265,
+   "reject_var": 0.015,
+   "reject_either": 0.0415,
+   "level_only_reject_ar1": 0.0275,
+   "level_only_reject_var": 0.0165,
+   "unadjusted_reject_ar1": 0.0225,
+   "unadjusted_reject_var": 0.002
+  },
+  "G2": {
+   "reps": 2000,
+   "reject_ar1": 0.022,
+   "reject_var": 0.0115,
+   "reject_either": 0.032,
+   "level_only_reject_ar1": 0.021,
+   "level_only_reject_var": 0.0135,
+   "unadjusted_reject_ar1": 0.0055,
+   "unadjusted_reject_var": 0.001
+  },
+  "G3a": {
+   "reps": 2000,
+   "reject_ar1": 0.914,
+   "reject_var": 0.031,
+   "reject_either": 0.915,
+   "level_only_reject_ar1": 0.842,
+   "level_only_reject_var": 0.0315,
+   "unadjusted_reject_ar1": 0.661,
+   "unadjusted_reject_var": 0.0105
+  },
+  "G3b": {
+   "reps": 2000,
+   "reject_ar1": 0.041,
+   "reject_var": 0.8765,
+   "reject_either": 0.879,
+   "level_only_reject_ar1": 0.0355,
+   "level_only_reject_var": 0.7675,
+   "unadjusted_reject_ar1": 0.0255,
+   "unadjusted_reject_var": 0.3285
+  },
+  "G4": {
+   "reps": 2000,
+   "reject_ar1": 0.0215,
+   "reject_var": 0.027,
+   "reject_either": 0.048,
+   "level_only_reject_ar1": 0.018,
+   "level_only_reject_var": 0.028,
+   "unadjusted_reject_ar1": 0.0225,
+   "unadjusted_reject_var": 0.0195
+  },
+  "G4s": {
+   "reps": 2000,
+   "reject_ar1": 0.027,
+   "reject_var": 0.054,
+   "reject_either": 0.078,
+   "level_only_reject_ar1": 0.0285,
+   "level_only_reject_var": 0.0605,
+   "unadjusted_reject_ar1": 0.0225,
+   "unadjusted_reject_var": 0.0545
+  },
+  "G6": {
+   "reps": 2000,
+   "reject_ar1": 0.0205,
+   "reject_var": 0.014,
+   "reject_either": 0.034,
+   "level_only_reject_ar1": 0.0235,
+   "level_only_reject_var": 0.0115,
+   "unadjusted_reject_ar1": 0.019,
+   "unadjusted_reject_var": 0.005
+  }
+ },
+ "nulls": [
+  "G0",
+  "G0s",
+  "G0n",
+  "G5",
+  "G0r",
+  "G6"
+ ],
+ "acceptance_nulls_at_most_0_045": true
+}

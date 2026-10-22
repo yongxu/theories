@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261022T110422.961776Z",
+  "utc": "20261022T103619.721318Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261022T110422.961776Z",
+  "retained_run": "becoming-checks/20261022T103619.721318Z",
   "spine_modules": [
     "Becoming.Prelude",
     "Becoming.World",
@@ -1634,7 +1634,7 @@
     "Becoming.LossMatching": "78500ebbcb1796ede7fe03dd25341010cb810f3fc55ee2eadc208e4d4f3eeb66",
     "Becoming.StrictTransport": "f5d945b3e51c291482631f00c1d712746027b5c5f482d3416bbf2d6d70acb50e",
     "Becoming.MatchedCourses": "0b7433345d7bd4e09685525bd0dd524bdf12ef4096ff6e3fe32e5f6f75a11171",
-    "Becoming.Significance": "76ddaf3b84995431587da1a77e643cdc1c1863b24f8609c7872f01cd421bb1c3",
+    "Becoming.Significance": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b",
     "Becoming.ValuationFrames": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
     "Becoming.Correspondence": "9ccd67d5006b1b4f5fee9914b6fdad62bfee17fb61cb2c95c41ed8e5436f34de",
     "Becoming.Descent": "cbfc20d98db0a3212176293a6f29e4d0b6804041d654e20953effbdc1f8dbec3",
@@ -1692,7 +1692,7 @@
     "Becoming.IdentificationRuns": "9564da982531bc1652257f0be08e69f99a2702ae957e61854af80099cb029867",
     "Becoming.Pace": "6e3ff605c2dc083a3b7a745ce8832dbeea4b4bade11cdfb16d5acfc83c8838b5",
     "Becoming.RuleCapture": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272",
-    "Becoming.ClosedCapture": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130",
+    "Becoming.ClosedCapture": "bc2ac2354c33c14ad49d362553804f2fe6de6079178a100160bd2868ebf9722d",
     "Becoming.PatternPassing": "bd88bcfa58b2ec4c36ef0b5712b36eebb0b906719fa7a8281ca48af39604311b",
     "Becoming.Keeping": "8911dc0d19d975ee30a0b1a2dbc4d013fe9fe5db846abc88e4d49219f12983b4",
     "Becoming.Onward": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21",
@@ -1831,9 +1831,8 @@
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "source_commit": {
-    "main": "ac2b1cba7e925c829350bdf1c90df9784214588b",
+    "main": "a0ddfbf4831d463d7196b32a2a286003cd7b3725",
     "copied": [
-      "Becoming.ClosedCapture.lean",
       "Becoming.Significance.lean"
     ]
   },
@@ -1843,15 +1842,77 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "Becoming.ClosedCapture.log",
-      "BecomingClosedCaptureAxiomAudit.log",
-      "BecomingClosedCaptureSignatures.log",
+      "BecomingSignificanceSignatures.log",
+      "Becoming.ValuationFrames.log",
+      "BecomingValuationFramesAxiomAudit.log",
+      "BecomingValuationFramesSignatures.log",
+      "Becoming.Correspondence.log",
+      "BecomingCorrespondenceAxiomAudit.log",
+      "BecomingCorrespondenceSignatures.log",
+      "Becoming.Descent.log",
+      "BecomingDescentAxiomAudit.log",
+      "BecomingDescentSignatures.log",
+      "Becoming.Standpoints.log",
+      "BecomingStandpointsAxiomAudit.log",
+      "BecomingStandpointsSignatures.log",
+      "Becoming.ListingRefutations.log",
+      "BecomingListingRefutationsAxiomAudit.log",
+      "BecomingListingRefutationsSignatures.log",
+      "Becoming.RelativePosition.log",
+      "BecomingRelativePositionAxiomAudit.log",
+      "BecomingRelativePositionSignatures.log",
+      "Becoming.BoundedSignificance.log",
+      "BecomingBoundedSignificanceAxiomAudit.log",
+      "BecomingBoundedSignificanceSignatures.log",
+      "Becoming.Boundaries.log",
+      "BecomingBoundariesAxiomAudit.log",
+      "BecomingBoundariesSignatures.log",
+      "Becoming.Weightings.log",
+      "BecomingWeightingsAxiomAudit.log",
+      "BecomingWeightingsSignatures.log",
+      "Becoming.MutualDependence.log",
+      "BecomingMutualDependenceAxiomAudit.log",
+      "BecomingMutualDependenceSignatures.log",
+      "Becoming.Relevance.log",
+      "BecomingRelevanceAxiomAudit.log",
+      "BecomingRelevanceSignatures.log",
+      "Becoming.Direction.log",
+      "BecomingDirectionAxiomAudit.log",
+      "BecomingDirectionSignatures.log",
+      "Becoming.Alternatives.log",
+      "BecomingAlternativesAxiomAudit.log",
+      "BecomingAlternativesSignatures.log",
+      "Becoming.SecuredContent.log",
+      "BecomingSecuredContentAxiomAudit.log",
+      "BecomingSecuredContentSignatures.log",
+      "Becoming.ProfileReach.log",
+      "BecomingProfileReachAxiomAudit.log",
+      "BecomingProfileReachSignatures.log",
+      "Becoming.Handoff.log",
+      "BecomingHandoffAxiomAudit.log",
+      "BecomingHandoffSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.ClosedCapture.PreludeOnly.log",
+      "Becoming.Significance.PreludeOnly.log",
+      "Becoming.ValuationFrames.PreludeOnly.log",
+      "Becoming.Correspondence.PreludeOnly.log",
+      "Becoming.Descent.PreludeOnly.log",
+      "Becoming.Standpoints.PreludeOnly.log",
+      "Becoming.ListingRefutations.PreludeOnly.log",
+      "Becoming.RelativePosition.PreludeOnly.log",
+      "Becoming.BoundedSignificance.PreludeOnly.log",
+      "Becoming.Boundaries.PreludeOnly.log",
+      "Becoming.Weightings.PreludeOnly.log",
+      "Becoming.MutualDependence.PreludeOnly.log",
+      "Becoming.Relevance.PreludeOnly.log",
+      "Becoming.Direction.PreludeOnly.log",
+      "Becoming.Alternatives.PreludeOnly.log",
+      "Becoming.SecuredContent.PreludeOnly.log",
+      "Becoming.ProfileReach.PreludeOnly.log",
+      "Becoming.Handoff.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -3164,88 +3225,12 @@
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "Becoming.Significance.log": {
-        "utc": "20261022T064213.289817Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-trusting-archimedes-98bbcb/b8f7f61e-6f18-4d16-a3c4-82b44113252c/scratchpad/zg1-tree"
+        "utc": "20261022T103611.385665Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/a16beb4d-aad6-4f8c-9edf-fd970ca86df4/scratchpad/sd1tree"
       },
       "BecomingSignificanceAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingSignificanceSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ValuationFrames.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingValuationFramesAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingValuationFramesSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Correspondence.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingCorrespondenceAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingCorrespondenceSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Descent.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingDescentAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingDescentSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Standpoints.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingStandpointsAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingStandpointsSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ListingRefutations.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingListingRefutationsAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingListingRefutationsSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.RelativePosition.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingRelativePositionAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingRelativePositionSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
+        "utc": "20261022T103611.385665Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/a16beb4d-aad6-4f8c-9edf-fd970ca86df4/scratchpad/sd1tree"
       },
       "Becoming.Feeding.log": {
         "utc": "20261022T064310.304329Z",
@@ -3256,18 +3241,6 @@
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "BecomingFeedingSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.BoundedSignificance.log": {
-        "utc": "20261022T064213.289817Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-trusting-archimedes-98bbcb/b8f7f61e-6f18-4d16-a3c4-82b44113252c/scratchpad/zg1-tree"
-      },
-      "BecomingBoundedSignificanceAxiomAudit.log": {
-        "utc": "20261022T064213.289817Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-trusting-archimedes-98bbcb/b8f7f61e-6f18-4d16-a3c4-82b44113252c/scratchpad/zg1-tree"
-      },
-      "BecomingBoundedSignificanceSignatures.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
@@ -3859,6 +3832,18 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
+      "Becoming.ClosedCapture.log": {
+        "utc": "20261022T064310.304329Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
+      },
+      "BecomingClosedCaptureAxiomAudit.log": {
+        "utc": "20261022T064310.304329Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
+      },
+      "BecomingClosedCaptureSignatures.log": {
+        "utc": "20261022T064310.304329Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
+      },
       "Becoming.PatternPassing.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -4423,30 +4408,6 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.Boundaries.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingBoundariesAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingBoundariesSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Weightings.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingWeightingsAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingWeightingsSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.Novelty.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -4687,18 +4648,6 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.MutualDependence.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingMutualDependenceAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingMutualDependenceSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.Gain.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -4722,18 +4671,6 @@
       "BecomingGluingSignatures.log": {
         "utc": "20261022T052134.422752Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052134.422752Z"
-      },
-      "Becoming.Relevance.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingRelevanceAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingRelevanceSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "Becoming.FrontierFrames.log": {
         "utc": "20261022T064310.304329Z",
@@ -4759,18 +4696,6 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.Direction.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingDirectionAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingDirectionSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.ScoreRepresentation.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -4780,18 +4705,6 @@
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "BecomingScoreRepresentationSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Alternatives.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingAlternativesAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingAlternativesSignatures.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
@@ -4843,30 +4756,6 @@
         "utc": "20261021T124912.359801Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories--claude-worktrees-blissful-borg-449b4b/1f2115e2-3c00-433a-a189-749903b12388/scratchpad/ec/out2/becoming-checks/20261021T124912.359801Z"
       },
-      "Becoming.SecuredContent.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingSecuredContentAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingSecuredContentSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ProfileReach.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingProfileReachAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingProfileReachSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.RenewalBound.log": {
         "utc": "20261021T124912.359801Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories--claude-worktrees-blissful-borg-449b4b/1f2115e2-3c00-433a-a189-749903b12388/scratchpad/ec/out2/becoming-checks/20261021T124912.359801Z"
@@ -4878,18 +4767,6 @@
       "BecomingRenewalBoundSignatures.log": {
         "utc": "20261021T124912.359801Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories--claude-worktrees-blissful-borg-449b4b/1f2115e2-3c00-433a-a189-749903b12388/scratchpad/ec/out2/becoming-checks/20261021T124912.359801Z"
-      },
-      "Becoming.Handoff.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingHandoffAxiomAudit.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "BecomingHandoffSignatures.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "Becoming.RuleHandoff.log": {
         "utc": "20261021T124912.359801Z",
@@ -5871,39 +5748,7 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.Significance.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ValuationFrames.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Correspondence.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Descent.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Standpoints.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ListingRefutations.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.RelativePosition.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.Feeding.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.BoundedSignificance.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
@@ -6103,6 +5948,10 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
+      "Becoming.ClosedCapture.PreludeOnly.log": {
+        "utc": "20261022T064310.304329Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
+      },
       "Becoming.PatternPassing.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -6291,14 +6140,6 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.Boundaries.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Weightings.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.Novelty.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -6379,10 +6220,6 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.MutualDependence.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.Gain.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
@@ -6390,10 +6227,6 @@
       "Becoming.Gluing.PreludeOnly.log": {
         "utc": "20261022T052134.422752Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052134.422752Z"
-      },
-      "Becoming.Relevance.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "Becoming.FrontierFrames.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
@@ -6403,15 +6236,7 @@
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
-      "Becoming.Direction.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.ScoreRepresentation.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.Alternatives.PreludeOnly.log": {
         "utc": "20261022T064310.304329Z",
         "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
@@ -6431,21 +6256,9 @@
         "utc": "20261021T124912.359801Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories--claude-worktrees-blissful-borg-449b4b/1f2115e2-3c00-433a-a189-749903b12388/scratchpad/ec/out2/becoming-checks/20261021T124912.359801Z"
       },
-      "Becoming.SecuredContent.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
-      "Becoming.ProfileReach.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
-      },
       "Becoming.RenewalBound.PreludeOnly.log": {
         "utc": "20261021T124912.359801Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories--claude-worktrees-blissful-borg-449b4b/1f2115e2-3c00-433a-a189-749903b12388/scratchpad/ec/out2/becoming-checks/20261021T124912.359801Z"
-      },
-      "Becoming.Handoff.PreludeOnly.log": {
-        "utc": "20261022T064310.304329Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/trusting-archimedes-98bbcb/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z"
       },
       "Becoming.RuleHandoff.PreludeOnly.log": {
         "utc": "20261021T124912.359801Z",
@@ -6956,33 +6769,33 @@
       "Becoming.MatchedCourses.log": "2f10e82cf7f276f2f03aff1337e4571899059db5032fb3539d1502a3f1983bfe",
       "BecomingMatchedCoursesAxiomAudit.log": "e66d217f78407c3b780eb45ba50a8e4472e906e13cd96c88491080881a7c971e",
       "BecomingMatchedCoursesSignatures.log": "507667fcaa85a871a9fe2ffb89da878593ae944a63d6c3b62270041c0fd959a1",
-      "Becoming.Significance.log": "431d153db18e2db0b7a1f572acfc12adf818b9bf520163b17477065e02632206",
-      "BecomingSignificanceAxiomAudit.log": "ee873d597b206578844cc801e47c27b900644968b5f0d4745e9d5215be1d8c6a",
-      "BecomingSignificanceSignatures.log": "a80b149fcded528fb2d1e09d0d01910164fa29b8e2ef84982a625daf462c63cd",
-      "Becoming.ValuationFrames.log": "07efe47d8809a6a0a24c0da3a7da3e8d77b7c5f94fbf9827a970000238134871",
-      "BecomingValuationFramesAxiomAudit.log": "11dad005ec49bb717556836fc6b6b815258f6b2fdbd64460a7b555f37d2c9bad",
-      "BecomingValuationFramesSignatures.log": "a01142ad75a8ae6df005b704b780cd23bbce261ea992d2e0ac377fb91336bd5d",
-      "Becoming.Correspondence.log": "6093d271909012563a4fa53ffa4ab707ae72e3cd02f894e7a3ea876dc146f398",
-      "BecomingCorrespondenceAxiomAudit.log": "0d56336f46a2ac054a8a6e22eddbaac2d94cbe1a86c9f2a820c0fe0def494ca9",
-      "BecomingCorrespondenceSignatures.log": "dbb20f51854622d51edb5d52f2f2f1e2293c08690a980f36506de4a8baf3f30b",
-      "Becoming.Descent.log": "5558b407798f0f860873d5c1d0e826a2b21d0c8dfea1fed320c4c64b7d89f77a",
-      "BecomingDescentAxiomAudit.log": "5634273e2c677548aaecba61915e3505afb3f48ba2ebc3ac085ccd4b660e81e1",
-      "BecomingDescentSignatures.log": "ab8894ebce8c038fccb4fc054fed21b67527ac6648c4676d62a3d69b595ceafa",
-      "Becoming.Standpoints.log": "514a521974cb101550bb10b88b748beb22c605f43c5d3db2b44cbbd5e4a0b647",
-      "BecomingStandpointsAxiomAudit.log": "c3b660425b7bb666de1a486e643c9d9d21dc5fcb8d44d53754e34682199c52ea",
-      "BecomingStandpointsSignatures.log": "584366a6240b9f1c30f8f756684e38549234a8520a69a77dec7203d040dd0f81",
-      "Becoming.ListingRefutations.log": "ee8202bb69401d2ecf0df102bec2882e60473a69998da9b616e0848f49670c04",
-      "BecomingListingRefutationsAxiomAudit.log": "f9ebc9b1790af4aadb8a5b937a0b6dcf6ee6981490aa16897d57ea44d7e0746b",
-      "BecomingListingRefutationsSignatures.log": "3b1b93a7937d6ca80f682bb656eddccab92e50b2866fc619dc3349fee961d4e7",
-      "Becoming.RelativePosition.log": "5afadf05163c05f359a07a5d22f4511cf70d03107e34638e1a5690eec6737e12",
-      "BecomingRelativePositionAxiomAudit.log": "3372cda1532e0cf4cf9165b69e3ebeacd0a3d4cba915d2e4f4154abc42667d75",
-      "BecomingRelativePositionSignatures.log": "1103ffb54fa1d262ae8b5ef0a812e2dd05259e0cb791fd67bc65b58248960d6a",
+      "Becoming.Significance.log": "90bf02c48857cad09fc4a30ac0e93a90c729fd117a582574a66998e0503b882e",
+      "BecomingSignificanceAxiomAudit.log": "0bb373c57df1d3ad91801f2cf6ff3ece531b1e3628b31241ba8b8651c37bfdde",
+      "BecomingSignificanceSignatures.log": "974b43c1a7076f40bd8da8980f5a9515070f35eb60af718ce41591d75ede2300",
+      "Becoming.ValuationFrames.log": "f7e985858c57b04b2479aa1f1c0cedf59b085d30160f1700fe03bbbfd753fc19",
+      "BecomingValuationFramesAxiomAudit.log": "21a3109ef432213672a164bb87d0beabc0f041a1fbd2635630afa1edc287b3e5",
+      "BecomingValuationFramesSignatures.log": "98f21162b82693a5a4ecaa520e22c77f36de95207d06b3bd617d4b36c690954a",
+      "Becoming.Correspondence.log": "29b513ce46b470648ad7a82e8b262fb84dda02afafa04493b44a8397d3550a11",
+      "BecomingCorrespondenceAxiomAudit.log": "5140d454b3835e297b9add42a0efb7509adcae7257c9cb60a18914a2638a88cc",
+      "BecomingCorrespondenceSignatures.log": "d28549b6c8e68232fd70f511882a02b72327de31e7d6b08b99bc61b786596f8a",
+      "Becoming.Descent.log": "4223b73f0996dc6d17f0d1c92a37a0c6cd6304d61eb60f8ce8dd372cc497f8ab",
+      "BecomingDescentAxiomAudit.log": "b834abf6bf7789d82e9fea6762724832823614dd6a4d136dcfd10cc4d3678eef",
+      "BecomingDescentSignatures.log": "4f4d3a54e680adf4aa8f66a4b72d17230094c074c7b3e5ad15602f609d33bb15",
+      "Becoming.Standpoints.log": "15e1d3e27ffefaee297520ac29d62c0a18620f8fbdc5fbb3b4a4aa687eef96e3",
+      "BecomingStandpointsAxiomAudit.log": "a3b337ee3e10f452fd25b6e60f26190892296b26aeb4f6861a15aa23ea6eb4ea",
+      "BecomingStandpointsSignatures.log": "3056bec624cd86395632a904467397d60ca032b3c36f85d0526d667f7055a5ee",
+      "Becoming.ListingRefutations.log": "b6fd3d7c6245db8b457583e626a46de556e8aa83bca20d2a248892390063619a",
+      "BecomingListingRefutationsAxiomAudit.log": "eb2840a6784d77f19cd624d3a78f29b1fa1e1f13056058d2690e2e5728da0f92",
+      "BecomingListingRefutationsSignatures.log": "5f070cc74a9aac953851ab136a4f0b7354d7c7e4374d4713fb3945d948cfaa36",
+      "Becoming.RelativePosition.log": "fd697ae30700794e81ef5dba4abb5d2e7173e323883c58136ebae87e7cba5e6a",
+      "BecomingRelativePositionAxiomAudit.log": "98eed3bf93ca2ba17399f0c0b7b0972133e1f7d1764def0a64e414370f52934b",
+      "BecomingRelativePositionSignatures.log": "ac1fc3404bc7c761e244711d89e8bf698d0dfca50c951f63c774b71dcaf29b38",
       "Becoming.Feeding.log": "fb02dfe2cffc390bd620da665c92af4333028459687c3c05cae08fd2707e7401",
       "BecomingFeedingAxiomAudit.log": "f5cc2a1ff41a52b3deccb689b1aef99fba8f1dd95ce8ed7701fe84c9f1d0725b",
       "BecomingFeedingSignatures.log": "3ab3109f4931e9f77b1eab9155d5ee7e648f2a29da6875d0f729d0b0032165c5",
-      "Becoming.BoundedSignificance.log": "fe62dd584cfa7a4b8ca2ed7ad11b6d146073f8b030940fba69c5524e07d4b01b",
-      "BecomingBoundedSignificanceAxiomAudit.log": "54bcf0f9b20f5d1a172e030ee82e2cd68fc05993a6097785778401d2cd6fe212",
-      "BecomingBoundedSignificanceSignatures.log": "4fb9a49761bc53590fb6a3da768f15b375fc1cc17ea250cef52eb79ba63a419c",
+      "Becoming.BoundedSignificance.log": "3b8e1cc1d27d42d877f4660747ef325101438a2384edcd786e58c39139815a79",
+      "BecomingBoundedSignificanceAxiomAudit.log": "48f69e1514de556a03afc17a8f9cd81e40102486f2d41d877682452f5771f1a3",
+      "BecomingBoundedSignificanceSignatures.log": "1716d4ec525d2929b3aa4f5bcb2d645b2d84e25763b4ff053801d11dfe2b572f",
       "Becoming.Cuts.log": "32599ffad03164d91523a28f30cd634e798fd0e0da84f8b99c1ef1f5b4323fcd",
       "BecomingCutsAxiomAudit.log": "3ea30fa84925d8bfa0381a0189022d1fdf4b0e4af4d8364d60d2f450950a232a",
       "BecomingCutsSignatures.log": "4721a36b329dbcf51f6f124f18a673be42b58be7c52af1638fc4c67f0c100c73",
@@ -7130,9 +6943,9 @@
       "Becoming.RuleCapture.log": "61f36248522bf5e41370f8aa86e5b7f8c2a8b21f0bb7a255bc14eb1dbc71cc82",
       "BecomingRuleCaptureAxiomAudit.log": "1086d3adfa8868de351c58ac6a68752b059e69d3ddf87e610c4e84ea3560e449",
       "BecomingRuleCaptureSignatures.log": "1e5655920d778f75a5d21d6d2d6e014f4e2bbc6c10b3b6340bd3fc1780df95c5",
-      "Becoming.ClosedCapture.log": "04f2edebfea7c4100e3523c55255e29ce70536383356ef4607d95966df7578ed",
-      "BecomingClosedCaptureAxiomAudit.log": "7f1c16b7acc28fff417ed914dfee12f8f0ad9b09f0b58c4fda062b775281af50",
-      "BecomingClosedCaptureSignatures.log": "d6ba43adbcc88cccefaf3e9cc8a393b68a5895b7be5a869e3a79dde69ead3eb3",
+      "Becoming.ClosedCapture.log": "a325e47a0ee1f9b570ba198e8c35c26863daf499b74e7ffe1933584f8058cf9d",
+      "BecomingClosedCaptureAxiomAudit.log": "0a3365b53e80f3cef6e589a046b7ad1dbd50e00ffbf1281897cccdebb68a8e30",
+      "BecomingClosedCaptureSignatures.log": "a91ff1eff018c15ba20b9197f2bf7455480a5150743a24142eb2064d65fa6647",
       "Becoming.PatternPassing.log": "5984a4fe025486993a2275a71faab909fbd45e83468190d896a8f5a05138a95a",
       "BecomingPatternPassingAxiomAudit.log": "e760922ff059b329ad8907521605e5f9a2448d95b4883ece4f3a2526f56d2479",
       "BecomingPatternPassingSignatures.log": "6f7648b21a940f8d9568e95bf046f9c5ed40b235b5d2d1947de7b8695d655b18",
@@ -7274,12 +7087,12 @@
       "Becoming.Postponement.log": "e9e0f30f2324f0a7040d5a3d9b95b333855cb00b5078ffcc6aeb0642d4734b62",
       "BecomingPostponementAxiomAudit.log": "ed257af9b02c8a5c6e94f926d6a55f81c09d06891794c1a2760f7ed73be0b956",
       "BecomingPostponementSignatures.log": "7dd084a7e2c35bdd8853be0bc7b655bc658858efdab33ec454e93da25f824826",
-      "Becoming.Boundaries.log": "35fe02f9f3164f7bc89f693ef2c1dcf583b4a842ced58d4ca13e0aa960b0bfb5",
-      "BecomingBoundariesAxiomAudit.log": "64998df9d662a649eb78bd879151831fb0f37ef7e31fcf319d4366a3e8f0152d",
-      "BecomingBoundariesSignatures.log": "ee5f9231bedb2bfa262203002e6f73c7d0b832f370e3ed34beeda18193d3ed18",
-      "Becoming.Weightings.log": "ff6df0ee8620d71f17a4b735632e444420fd9fd79dd5acbaa7fed69d3510c97b",
-      "BecomingWeightingsAxiomAudit.log": "ddff8e0c453d62c955995b37b49f0dffb2e2d766aeca0e4770c5cee9389a765c",
-      "BecomingWeightingsSignatures.log": "09fb85c0d3e30228a688e3694ab8aa01539f278f63a46a5350dac05aa3ebf1e0",
+      "Becoming.Boundaries.log": "2f36b0285c9cde758ec4254990cf7218f84726c2fb37ed4dc3f808d889fc3784",
+      "BecomingBoundariesAxiomAudit.log": "a1a3685fa5b6fdec8f15431e29baa160076a44232f8c890c591e25728cb6a07e",
+      "BecomingBoundariesSignatures.log": "4cc205ea67c861c8175b200ea246a1ea71db2d41bcf184f155d12e2a66633a1e",
+      "Becoming.Weightings.log": "5ecbf30acbbacd921dfb856cf42bea4941b9f528a3c11ae5a8f6e8d699c9fea9",
+      "BecomingWeightingsAxiomAudit.log": "05f89ea76af3cd9c8a6ab59efcf3b9491ee4a0fd73b0ffe188cd4f60786370ab",
+      "BecomingWeightingsSignatures.log": "1561e46c288b076d54f9c6efbcafc0a79dac51dd9d46c97f52cee2055c2e6575",
       "Becoming.Novelty.log": "1057107aebafbb56f57848de56626cec2ce6887e4b39ead451d57d3b4a3f931d",
       "BecomingNoveltyAxiomAudit.log": "d69e12e7b41503f585d1c91bef9e6e47341899d24f9d387e188c0c8a8c46c368",
       "BecomingNoveltySignatures.log": "0d0fbeec4e9dfd3efad1879396ee247797ac49d5e7385702ccaec5c5afeeb454",
@@ -7340,33 +7153,33 @@
       "Becoming.CensusBinding.log": "70ecfaaa1043b2150ea8b6dbe551d7f13ffbfefa35cf6308f4e23628f71f7901",
       "BecomingCensusBindingAxiomAudit.log": "93dba265a9a95afb9364bbf77a1a5973f01090cb4c7e3aedbf4b740540663d90",
       "BecomingCensusBindingSignatures.log": "666a57b1a1d8107892d1a80d2f3a7dd8fdf8b86f4d1dd1e171bb090dbf516646",
-      "Becoming.MutualDependence.log": "767622f5298a4ffa76087510a7d6631160a58e06cc7f065a05041e0883ad9f5f",
-      "BecomingMutualDependenceAxiomAudit.log": "8dcdbfbfd524de5b0591842e17441083f232d218e82b912e31a603cd865ea2bd",
-      "BecomingMutualDependenceSignatures.log": "afd9616a1718936fead31844f2c183efb7c71de698be4524a0ea504f6ba88090",
+      "Becoming.MutualDependence.log": "5d9feb9a75376f7c6488f0172f8c9a3d7695eb050930060097d099671f56e602",
+      "BecomingMutualDependenceAxiomAudit.log": "e31afdfcaf7505f8a737ee8171580f571e0c704b7a1db6ba1a84b1d0b7b4a8b2",
+      "BecomingMutualDependenceSignatures.log": "03d3e243806b152adcfca45c920b1507707bd6d8d3ae64889b7ea0fa1ae7e91d",
       "Becoming.Gain.log": "d87eebc311fd03e698b0d3bb80866b743db2e686585f720b862abbefd5d4babb",
       "BecomingGainAxiomAudit.log": "dbb51d22e2e0f8973fbb88155505023afa2d9ffe260e42073fa05246568781f9",
       "BecomingGainSignatures.log": "4fe219f5d2feb9a39498bf0e471791a9c29177d04a440541826dcd86b3a3ba4d",
       "Becoming.Gluing.log": "ba1dc68500172a6855ffe05412778939de71276d0bde52c6ce9b056f4d7bf28f",
       "BecomingGluingAxiomAudit.log": "1f2bacc12692caeb6fa64a019a93111e642850c03ace1a4b93f01c7ea2ce04d6",
       "BecomingGluingSignatures.log": "01363fa7d9b60db4cf84c15c7ce80893cde34b322f1fe1d97f099e87c96232b7",
-      "Becoming.Relevance.log": "877a367b320cd9bb849f828c4396ff3b0bc3cf42adab77c63b81eae8c888cc91",
-      "BecomingRelevanceAxiomAudit.log": "b1c017020a85fe4fafaf6302f2401ae2d036de99ce9ec0491027a13d5a3c1a5f",
-      "BecomingRelevanceSignatures.log": "4714a4e24d3d34f94aac0e2bf31c7fbab30b2aa89739a7205b0680e93949565f",
+      "Becoming.Relevance.log": "577330ecfa974e4aaccd8dde67f54809114a5adc7257326601fd905e79ca2c7d",
+      "BecomingRelevanceAxiomAudit.log": "6bd6621b2d5f396f6008ab9b586407bb0409203db00cffda03524546ec21e5ac",
+      "BecomingRelevanceSignatures.log": "56bbbe40d0fff1dee8b7ee382837d6df8b0444dc7301036e237d8b5bb39b9f30",
       "Becoming.FrontierFrames.log": "9dde74af61aec7c21e448396a14adeafca852c026b161246064181bd330602d0",
       "BecomingFrontierFramesAxiomAudit.log": "8489f46dbf30e0065ec91f4ebbb8b6a36d31efb525532b5906eae06935b53691",
       "BecomingFrontierFramesSignatures.log": "2b5c4386dc3c4746b6a175d9728bf051d4fc3a57cc6ee4a6b5dea71c481413a5",
       "Becoming.FrontierWorlds.log": "a1a1e5c0320e9486fa50050b952201f16f4e103c3fc8a52503bc186924c2876a",
       "BecomingFrontierWorldsAxiomAudit.log": "b5178d9093abcee1ac90b1df213aa7de18ba945bcb0da29f98bc9eff118106a9",
       "BecomingFrontierWorldsSignatures.log": "db31552967f73a6ed3c9d834c9822d33f57c0e574f10c60f6c4b60987cdcdf6f",
-      "Becoming.Direction.log": "0b24a367e2128b69d5a99ede0721cb642e529ab375e7d058231c3f2eac57bd79",
-      "BecomingDirectionAxiomAudit.log": "714721f9c2af1fec9ba11fcdbf53d88ee220d89f8059934f4de36c3e97feb8e6",
-      "BecomingDirectionSignatures.log": "05248e7e6728bb70178302de8158b2d9044f90b314525ed00fa85ee98af606b6",
+      "Becoming.Direction.log": "5f3bf4463d372ee0c87e043d7ab610535752f474417abe236883128e631ce171",
+      "BecomingDirectionAxiomAudit.log": "82e7910f8a697fddd2c318b57648505af9b969b346d4ab41b404e8d6bef8e0ae",
+      "BecomingDirectionSignatures.log": "a407d4a4b4d7d945a9a448da78a3a6f46872ec1303813140d983c0254f9549a3",
       "Becoming.ScoreRepresentation.log": "02592c53893f3d863c4531fe814fbef7569bb510049996a1c2127334c4e8ebe6",
       "BecomingScoreRepresentationAxiomAudit.log": "89d8e9f97a141cf3b7ecae937b1ac88177535f9704cf9f0ed6e736e2bffb90cc",
       "BecomingScoreRepresentationSignatures.log": "e49048a1a74917ac56f006fbfe72bff0aa2ed2a1ae88d36ae10fa9c4b10544c4",
-      "Becoming.Alternatives.log": "02e2ff51bda5a15e774c11a9b5dcebe519172885dc04e2714a7ff48dffdb9764",
-      "BecomingAlternativesAxiomAudit.log": "2246b81939255a1b2da725df33b157972695bb3a224d353965e1e8a1aebd5eac",
-      "BecomingAlternativesSignatures.log": "8587cb03b4b7f03be70dae10c48abd52ab45a9f285de304a5c944c816d5fbf3b",
+      "Becoming.Alternatives.log": "b9c89ccc5837ccc95af49d37bd1aa2474cb646c6e0e676dc8a961e143587e788",
+      "BecomingAlternativesAxiomAudit.log": "e72228ce40a21c44bc365b58da9862ddcaabd7860567f16c2130e8fd3d7d83c0",
+      "BecomingAlternativesSignatures.log": "4a25e5bd52b841fc5585e6b86d3749c89d96846325ac728f43e78654fd013126",
       "Becoming.Bundles.log": "1faaf575eb2275e20ed2409e8ea67243b6309c461eed43d11552cf402afda157",
       "BecomingBundlesAxiomAudit.log": "31a0dfb565f4ffcca418d7492b116c1eecb53290d4d6a0e98a32a320549babe2",
       "BecomingBundlesSignatures.log": "c9d321e6ae0a52e519c335a6ce3c3aa944ac6bc35617f4496ad66d01a251ebf0",
@@ -7379,18 +7192,18 @@
       "Becoming.NarrowingRuns.log": "fff4ce8c0988d3cbe56de121007f8adf00c6c2e238e70fc1f025be4ccb05cec5",
       "BecomingNarrowingRunsAxiomAudit.log": "7f559c9497a1e63b746026f0d2017f161867fa455fb4cb26f6d0308221819869",
       "BecomingNarrowingRunsSignatures.log": "959d753a899d059d20cda2bfea1547ea371939ffc785abc0822bde5423ed9009",
-      "Becoming.SecuredContent.log": "1ef3c200651746ab8880e2e1d0935f6c91f5f95057a80b75a302a32ca2c8050e",
-      "BecomingSecuredContentAxiomAudit.log": "aef4bc8807e1ae411867b7fdd25439286ce15cca2a407f8f1c48294229d983df",
-      "BecomingSecuredContentSignatures.log": "6b54d6852061f767c67427ec6b86174bb1ec54f54dd74579fd00620800038074",
-      "Becoming.ProfileReach.log": "43a99467bb794b9922ab26d56094c1491f2cac36a62d5af9db14517b5c9823f6",
-      "BecomingProfileReachAxiomAudit.log": "6812c2c5ae7ec06078336adefa860edd6109856a6ae6e80524cf153f4e87ba47",
-      "BecomingProfileReachSignatures.log": "1463e79146c78c12a173803a84d3cc696fcff3487d7c3bc34b39c541173d2465",
+      "Becoming.SecuredContent.log": "ab7328a069284ac75e900a2ecacffa6ffcf5132144cd9bbb0da929a068957c22",
+      "BecomingSecuredContentAxiomAudit.log": "08c27a32b259fbcd830e1227bf1eb4a583db60e364727f1e39ffb98c2ca513ee",
+      "BecomingSecuredContentSignatures.log": "711ef3e54c0a7df90c8cb9e7a42f9f0e2860b3015d384d3e89df3c058908a16f",
+      "Becoming.ProfileReach.log": "fe9d2e178ec602079047575e38e5a9945f4116f1701d8435df122284d73cffcc",
+      "BecomingProfileReachAxiomAudit.log": "5a29a28a1a3a881557d604bc139079e786f3ab6cd7e555641f6b83ae808d4a19",
+      "BecomingProfileReachSignatures.log": "2980cd870d927463502332238a9f15b9cea46386b0e74d0d56df22359ddd75f2",
       "Becoming.RenewalBound.log": "41e930dedbf860170e5769b0870a62c0275504bd6c8881bbc15f33e9a0d9f8a5",
       "BecomingRenewalBoundAxiomAudit.log": "bedb6f42b3c3780eeb79848cb14eeb7cf4ed133207b59fd101a30fdbb9f3d5e1",
       "BecomingRenewalBoundSignatures.log": "887a16aa7b465f9dbb72798eb8d69277db8284974521476635de4f8405809ddc",
-      "Becoming.Handoff.log": "549e5d642bee892e7d62347d75faf055b355adfd0335e0052246063deaccf613",
-      "BecomingHandoffAxiomAudit.log": "84238880e2837a236d8909b09e80ea577d042d7e4a74bcf9728eb4ab0ad241a4",
-      "BecomingHandoffSignatures.log": "ed7d5d5900a9feb648a82948bbc577128bebc2d5443a20b2937dec565add7a20",
+      "Becoming.Handoff.log": "e7652ee3365f5a54fb3f23ad0f83ae24f802c08ace4f024d7cf07cc1306954d2",
+      "BecomingHandoffAxiomAudit.log": "2dbe3a3f1286b855e37e0362f17b967d185a4f839c3b74c6403d5c518d8a9d65",
+      "BecomingHandoffSignatures.log": "52b79034e4a4a7a5a79ca1d15566e9627912a7d53e097a1b830f3ca9db6a4310",
       "Becoming.RuleHandoff.log": "eaa4bd6f8ad204c5a475db407ecea9396321dcbeadd075d4937a89abb89fa544",
       "BecomingRuleHandoffAxiomAudit.log": "49555da83e610816d5fa16541d5e1909badca31b8765bc71d889cfcbbdf0fe4e",
       "BecomingRuleHandoffSignatures.log": "f1be91181279b7aa2bbae48ef35add46f3055a87f39f1180fd2d37c1384ed931",
@@ -7526,11 +7339,11 @@
       "Becoming.ResponseLearning.log": "e7d525751de2c6f202e05e94f7e9bdb7cf8ce9bc9417b52896e91c9a7cab3503",
       "BecomingResponseLearningAxiomAudit.log": "9f43a688a4fbbbc31861dc36a46679f226915f9ea3bd6ead85ad329d8006df1f",
       "BecomingResponseLearningSignatures.log": "3df779711697b94c3134eade89518d2c2eab941e0dab11fa0b28bb3e2f7319e8",
-      "Becoming.log": "68c4efbe787d2069e5077eec8dfa24afe292737bf7aa41093c9ea796b7d7801f",
-      "BecomingAxiomAudit.log": "3f46cb622274877a099e189bae83b813df0c883717cfadc497c909fe0d3cc842",
-      "BecomingSignatures.log": "1deb8d952589287c958d432e681c5349462e0a7894f5425ad53ad70f2a76f533",
-      "EnvironmentAudit.log": "20bfa9f10e28214a236bdd3c7b3d15c9f24292a193c11e40cb04fdbeaa79120c",
-      "Controls.log": "616f5e9dcdaac6f8ef927173547041a745b63db70e39bc6c9f5045c1c3017bd3",
+      "Becoming.log": "60217b51d4063fae088e312964332684fdc6b7cc650ad302453eb4e7c9189f16",
+      "BecomingAxiomAudit.log": "36982ece8aabe14be2a9d5cd09b7af57cde2dff32e934b81655ce83a6a027720",
+      "BecomingSignatures.log": "10f60cd0263d5f49ae594a0d522a2676b9cbaddcf36ca10fe22d01ae370848aa",
+      "EnvironmentAudit.log": "772247bd2fd966bc5f4c2afcbcb5191ce04b69faaf1485fec2e1a932f8a86f62",
+      "Controls.log": "3c7a054ab617637c7728b687f4ada7f1389619781b4f80630e82a3f5f86feb12",
       "Becoming.Prelude.PreludeOnly.log": "659c8605a0000278acfa26b61dc9eb6eb74dc78cda992e85d69bc57b86468b87",
       "GenerativeCore.PreludeOnly.log": "8b89f7b1018f5a43ae9994a797db0fc12d2d5fa076f5da8d895ce648ccee4367",
       "Becoming.Frame.PreludeOnly.log": "d076d7f640429976a4fabab293f670aba8da23602634e7475fbd40658daaebef",
@@ -7641,15 +7454,15 @@
       "Becoming.LossMatching.PreludeOnly.log": "5d28a0546f2139bec68c710a280447933eea5c7d2f8da9abf06228d644d17a18",
       "Becoming.StrictTransport.PreludeOnly.log": "890042d5e263b8ebfcfd603cf8727fef315d75a9a9e1c0474747110adba01048",
       "Becoming.MatchedCourses.PreludeOnly.log": "ddd3559977eb87be4780e349f1b81bdf5d9d1af94d5d715857cab79956d1e48e",
-      "Becoming.Significance.PreludeOnly.log": "e92ef277d6125cf4aa6f10872292ea183eb22b628fbee97ca2761973192bb2a9",
-      "Becoming.ValuationFrames.PreludeOnly.log": "9b8e03ec6ce3bdcac84b1fcb170e711f8eabc12e5672fc1f8dabe422e9e46094",
-      "Becoming.Correspondence.PreludeOnly.log": "544578835f212fdcbedf18a7897584c63ce253b7216ead6efa73ecbca61386ba",
-      "Becoming.Descent.PreludeOnly.log": "286767b491cab8d47323d570699eef353e547415798907fcddf590478c5e7c27",
-      "Becoming.Standpoints.PreludeOnly.log": "e1d3881d2150e676c419c61e4d8ed8a4891478a0c6d5fa7bed5a89c371bfccea",
-      "Becoming.ListingRefutations.PreludeOnly.log": "66aab17178b6947cec5b0eff8084e29e3532988aab9891b533d4506510cd54f4",
-      "Becoming.RelativePosition.PreludeOnly.log": "6b6591f82f0d7e4bc67b04982bd4dd26672cf86146765a861904b487f1a3113a",
+      "Becoming.Significance.PreludeOnly.log": "2d901a40fca74dc9ec7a3b2d1f35cda3d3f206463c00da60bbb7100de0199b80",
+      "Becoming.ValuationFrames.PreludeOnly.log": "a8b3b3235e63e22357da7c4ace13b66bffbe61b6b14634dd6f4a74e386515c4e",
+      "Becoming.Correspondence.PreludeOnly.log": "205d403eda1652d086def21de6111c5f75f72a4188a0d9d8bb6e8fecbfcbb257",
+      "Becoming.Descent.PreludeOnly.log": "bea6ac3ae72469cb559fe314c11710874a00488ef2324d38c19699e0a82b8324",
+      "Becoming.Standpoints.PreludeOnly.log": "f6777b41d2d3cda99eef60b6df966cbe18cd9c6cd7c8cc841e25531ae123d49a",
+      "Becoming.ListingRefutations.PreludeOnly.log": "d08e9e894e081c82f5e0ced915d12d9826a13c4c17ebeadfeb6afaaf979858c9",
+      "Becoming.RelativePosition.PreludeOnly.log": "57c2be34520db0aff015597d548298132b70a4197abfd84d02aae2e37043d692",
       "Becoming.Feeding.PreludeOnly.log": "a8107ac98be28300e9ca9675328c7626cec4ecdfef2256b615843bcffb63b21e",
-      "Becoming.BoundedSignificance.PreludeOnly.log": "4521d51ba9ad0eb881b9ebe4213e1648cf96ff958ff86783b33034dbbba1d1bc",
+      "Becoming.BoundedSignificance.PreludeOnly.log": "aebd8662c96e19959801f1a724170ede622d93d8865861115232d6736bf5b8c7",
       "Becoming.Cuts.PreludeOnly.log": "e5022558b4b4c6f9b4c0a7a0917b3ee6ddd782f14f345e3718c30f9ec43fdc5b",
       "Becoming.EdgeClosure.PreludeOnly.log": "4388f460734adadb80add09ae28f98389c98632d489fe9d549b15171ab3b74dd",
       "Becoming.Runaway.PreludeOnly.log": "8513443a8042be4e31d27eecaaa9359649bc2d9b46390d3980aad9dadbd09df1",
@@ -7699,7 +7512,7 @@
       "Becoming.IdentificationRuns.PreludeOnly.log": "5f1a2a9e1f43a6d924906d913704db4709c217cc54e2648404e81c3355f7800d",
       "Becoming.Pace.PreludeOnly.log": "1decd670bce454920755bcfcc13625d704e17f9115ead6db06322aa30a3b83c2",
       "Becoming.RuleCapture.PreludeOnly.log": "6c39de1cc54e49ec0f4969ffee11ffe893051d208d166f5a9e4ed3c78182ad4a",
-      "Becoming.ClosedCapture.PreludeOnly.log": "aeeae03ce175c9e8ae12627dbb0024892a6ca2aaab5e4d87b4d252b0d4a6450a",
+      "Becoming.ClosedCapture.PreludeOnly.log": "9243c708625dd98fdb3bbc14aa7030b0c32c9b566a45fbf6ab75fe45e0bf3c03",
       "Becoming.PatternPassing.PreludeOnly.log": "cb9bd5741361c4fe88c6fd68ed5b8c3446dbdcbc04c62c33d277b4701d29d272",
       "Becoming.Keeping.PreludeOnly.log": "519c0903fd1c5d8683c4ec2d66282614044a5f135337587c086cae5421d9f169",
       "Becoming.Onward.PreludeOnly.log": "b8cf9262267582bec79cb5514453d2eb12dbed1395cea470c7a86011d569ba74",
@@ -7747,8 +7560,8 @@
       "Becoming.JoiningCodes.PreludeOnly.log": "afb979ae546ff7cdb03fbdfc540342301320b90ce06a9e5a2991ff659e842809",
       "Becoming.JoiningRoles.PreludeOnly.log": "d82e227d3d820069ac19db63f89f65f1919315437b6e615fd489a61945b2c601",
       "Becoming.Postponement.PreludeOnly.log": "a03651ea7a27919f11cf144dd1dcf6fd38db2195ab7be5c2cdb7c2763235ca74",
-      "Becoming.Boundaries.PreludeOnly.log": "c8bbde162eaf6773f8587a50ac455b872b391ceffa890db5248bdcac8c9bcf03",
-      "Becoming.Weightings.PreludeOnly.log": "485de090e368f84b2a3b4aca1181b17d946946011c27881a053cd100374cb368",
+      "Becoming.Boundaries.PreludeOnly.log": "7f5243c43122375c76f498b251925619c547b6471f1cbd2a2e306b3d12e45322",
+      "Becoming.Weightings.PreludeOnly.log": "f6a7051e3092f83829a588f481d4dcf7d3c0bcf14faee1f34f1225b286157bcd",
       "Becoming.Novelty.PreludeOnly.log": "cb353d108799cd1e6cf9009f3e7ea916261ad98c9bf9d2e5e141f568fdf7c312",
       "Becoming.Reading.PreludeOnly.log": "34d9fdc00477a9f997a2a76d615c1e7cbdb4f91271290177602411bff1dea5a3",
       "Becoming.ExchangePremises.PreludeOnly.log": "93ef990a92440b74cd2ed0c4b36fea9a353c84d27e843051d7d197e1af5b14af",
@@ -7769,23 +7582,23 @@
       "Becoming.Interleavings.PreludeOnly.log": "eb940b0b01e3194897d43c2bfa9b03dfb7d651756f62e7aaedc975a2a63d59c4",
       "Becoming.CensusCounts.PreludeOnly.log": "42de4c977b694715dbe2feb320584cf7893a859dbaec69e03254ec0a27c85189",
       "Becoming.CensusBinding.PreludeOnly.log": "2b3fa29702f8164be7184d827587cf0ab558e4ff16aadf574e692fa3e5a4ed0e",
-      "Becoming.MutualDependence.PreludeOnly.log": "2eded47bd20d8c5162bdd1db298617a474b0de8835d0e78e8be417d3661b51af",
+      "Becoming.MutualDependence.PreludeOnly.log": "77cac164c6ddd9376a8a54e8dd778d84c7e7eacf5d450f9c27b95409d597dfca",
       "Becoming.Gain.PreludeOnly.log": "06f9b6ab5811307ddf2af8a10065007ebd54663d2abe97a1e0a5d1a287d925d0",
       "Becoming.Gluing.PreludeOnly.log": "512cd553feb7f8ffce4829749cfdc88d3a3bb73c66ade31ca0e02e77cae14280",
-      "Becoming.Relevance.PreludeOnly.log": "47b921be33768a80bdebf573ccc557026fbf9e18d09b5c64a26ded6389248f2a",
+      "Becoming.Relevance.PreludeOnly.log": "4a6b49f882fa76587f0dcb2c54cf9c9596293df3932dd6af47540f9002815fa1",
       "Becoming.FrontierFrames.PreludeOnly.log": "c2418b2ab04b6efa09b5bac48ef647ec905442cdc4521eae0fb0adcfd061c2f8",
       "Becoming.FrontierWorlds.PreludeOnly.log": "7d0480ede6bfe7757b2c07372ffef2466bad9fa5d5750487d841ac7c7a591153",
-      "Becoming.Direction.PreludeOnly.log": "d74a2b4959cd1af9d2a19c48ef871e245c5a8a04854b97412cb6507259650225",
+      "Becoming.Direction.PreludeOnly.log": "b1b17f1f6094dd88254f538bdf8abc7bd671ace809da1c2d867ad0860b61ff67",
       "Becoming.ScoreRepresentation.PreludeOnly.log": "f9b222f1fd3d07b45fcfb256bbb060ac1f0ede3008257e49360355ce05b1358b",
-      "Becoming.Alternatives.PreludeOnly.log": "7222a452746239137bc6d2460a6ee07ed5ebf6b34f83219e7e25a68007b3b1f8",
+      "Becoming.Alternatives.PreludeOnly.log": "b0cedc77be2334b3bde2a64eec630d1d95ebc615284650f7dfb14e3ecd278d47",
       "Becoming.Bundles.PreludeOnly.log": "6549a2e774757a8be92ad18ce0092ca6d0f14b0f50e3691aedbf90dad775cda3",
       "Becoming.ActivationCapacity.PreludeOnly.log": "b1bc790348c2235c4f49456fd8eeb0cd29e3c39901f747e45ecf4e3ef8af254e",
       "Becoming.Narrowing.PreludeOnly.log": "27ed95c2bb6d6db9d320d144b11c93ee79c4017a041c335c7511bf6fabdda51c",
       "Becoming.NarrowingRuns.PreludeOnly.log": "7f24aa820a99f276878238d6b0f744c13c531451ab8d7dd581f2a18c1783dc63",
-      "Becoming.SecuredContent.PreludeOnly.log": "afc9a51706572f6870f8c6a369c7e425f6815b0727c6aa0a5186d72205226bbc",
-      "Becoming.ProfileReach.PreludeOnly.log": "55fdd9a96a284a2bcc7a978a9e4d6bdc8efe1cbe402cbac1755d9e34731ae13a",
+      "Becoming.SecuredContent.PreludeOnly.log": "487405c2945046a00d809d3c811c5b0f9b7a7905631b47fde30a18fc5927a321",
+      "Becoming.ProfileReach.PreludeOnly.log": "c41480de7e4c02ae910cbcd2dca243b2a59730bb0958916be6ed471887acac9e",
       "Becoming.RenewalBound.PreludeOnly.log": "88c59b3fbcaa280a00a46e7a689ffc2477ebe49aee1c1539ac740bf12ab44680",
-      "Becoming.Handoff.PreludeOnly.log": "f2cce2345bd08ec584dbe5e6e1ecfbb37161dc989e6d00e24af35e3c4524936d",
+      "Becoming.Handoff.PreludeOnly.log": "76cf9e99aad9c21f9fbdc3331e6a541602020c5aec65e4d1ec3fb4c9cdf53255",
       "Becoming.RuleHandoff.PreludeOnly.log": "34cd141a0eafb49c49541b57ca5bcf43cdc7025dce35d15eb9b5e8edc47875b3",
       "Becoming.Runs.PreludeOnly.log": "52d42c6ef9a5e110bf02607d54e5d335de242f377d9a563294cf8dbc144a3d0d",
       "Becoming.CourseWorlds.PreludeOnly.log": "deee875d74047edf7cb8f2161e7f793e1cf79a00229653369ac0cdee910bd99f",
@@ -7831,7 +7644,7 @@
       "Becoming.Coverage.PreludeOnly.log": "e0cd4c632a08aedcc59b9a386652e6c087a3cfb3ba3b6f461c4517fd54caafb8",
       "Becoming.PlaceTransitionNets.PreludeOnly.log": "a398d02c7cb55efd7eeac607218fee3d3c3b79003c60c8c211a9d4c50bf957b6",
       "Becoming.ResponseLearning.PreludeOnly.log": "4dc27faee4675fe59300aaf087c5c8e7f4fac25e5e8b7578db37e071e4bfafdc",
-      "Becoming.PreludeOnly.log": "120d5950f82938e5414b00203ed242f1ce1559a79d4a5481dae6027c0655cff0"
+      "Becoming.PreludeOnly.log": "1fb742c071f4a71cf4590d472f3f38382c4b5a1f046e2bfa784eb1fe67b02ad8"
     }
   },
   "superseded_modules": {
@@ -9394,7 +9207,7 @@
     "Becoming.LossMatching": 84,
     "Becoming.StrictTransport": 58,
     "Becoming.MatchedCourses": 188,
-    "Becoming.Significance": 52,
+    "Becoming.Significance": 70,
     "Becoming.ValuationFrames": 69,
     "Becoming.Correspondence": 159,
     "Becoming.Descent": 115,
@@ -9452,7 +9265,7 @@
     "Becoming.IdentificationRuns": 67,
     "Becoming.Pace": 64,
     "Becoming.RuleCapture": 120,
-    "Becoming.ClosedCapture": 101,
+    "Becoming.ClosedCapture": 51,
     "Becoming.PatternPassing": 52,
     "Becoming.Keeping": 158,
     "Becoming.Onward": 90,
@@ -52675,7 +52488,7 @@
       "module": "Becoming.Significance",
       "spine": true,
       "layer": "core",
-      "theorems": 20,
+      "theorems": 30,
       "declarations": [
         {
           "kind": "def",
@@ -52696,6 +52509,54 @@
         {
           "kind": "theorem",
           "name": "Becoming.bounded_in_time_rival"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.rival_iff_lacks"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.bounded_is_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Unrestricted.not_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.not_rival_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.excludes_rivals_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.unrestricted_iff_not_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.not_rival_unrestricted_iff_stable"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ReadsOnlyDynamics"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.readsOnlyDynamics_of"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ReadsOnlyDynamics.admits_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ReadsOnlyDynamics.not_entails"
         },
         {
           "kind": "theorem",
@@ -52772,6 +52633,18 @@
         "Becoming.bounded_rival": [],
         "Becoming.boundedInTime": [],
         "Becoming.bounded_in_time_rival": [],
+        "Becoming.Rival": [],
+        "Becoming.rival_iff_lacks": [],
+        "Becoming.bounded_is_rival": [],
+        "Becoming.Unrestricted.not_rival": [],
+        "Becoming.not_rival_iff": [],
+        "Becoming.excludes_rivals_iff": [],
+        "Becoming.unrestricted_iff_not_rival": [],
+        "Becoming.not_rival_unrestricted_iff_stable": [],
+        "Becoming.ReadsOnlyDynamics": [],
+        "Becoming.readsOnlyDynamics_of": [],
+        "Becoming.ReadsOnlyDynamics.admits_rival": [],
+        "Becoming.ReadsOnlyDynamics.not_entails": [],
         "Becoming.Web.retains_iff_includes": [],
         "Becoming.Web.adds_iff_exceeds": [],
         "Becoming.Web.retains_agree": [],
@@ -70218,7 +70091,7 @@
       "module": "Becoming.ClosedCapture",
       "spine": true,
       "layer": "core",
-      "theorems": 63,
+      "theorems": 28,
       "declarations": [
         {
           "kind": "def",
@@ -70391,174 +70264,6 @@
         {
           "kind": "theorem",
           "name": "Becoming.ClosedCapture.Proportional.reform_absorbed"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.rearrange_eq"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.rearrange"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.rearrange_lt"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.add_swap"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Drawn.pool"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.cross"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_mono"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_mono_against"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Drawn.poolRead"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_against"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_reads_iff"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_reads"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_through"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_favours"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.through_locks"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.pool_not_rising"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.le_of_disfavours"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.mirror_favours_iff"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Drawn.mirror_le"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.turn_agree"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.course_past"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.agreeing_locks"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.agreeing_stays"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Thinned.lossPool"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.lossPool_past"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Thinned.course"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.past_course"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.read_late_kept"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.read_in_time_turns"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.rule_read"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.kept_iff"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.turned_iff"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Thinned.fewCarriers"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Thinned.inTime"
-        },
-        {
-          "kind": "def",
-          "name": "Becoming.ClosedCapture.Thinned.late"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.lossStep_accrues"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.inTime_majority"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.inTime_turned"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.late_majority"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.late_kept"
-        },
-        {
-          "kind": "theorem",
-          "name": "Becoming.ClosedCapture.Thinned.late_reads_loss"
         }
       ],
       "axiom_dependencies": {
@@ -70604,49 +70309,7 @@
         "Becoming.ClosedCapture.Proportional.readMono": [],
         "Becoming.ClosedCapture.Proportional.formed": [],
         "Becoming.ClosedCapture.Proportional.start_locked": [],
-        "Becoming.ClosedCapture.Proportional.reform_absorbed": [],
-        "Becoming.ClosedCapture.Drawn.rearrange_eq": [],
-        "Becoming.ClosedCapture.Drawn.rearrange": [],
-        "Becoming.ClosedCapture.Drawn.rearrange_lt": [],
-        "Becoming.ClosedCapture.Drawn.add_swap": [],
-        "Becoming.ClosedCapture.Drawn.pool": [],
-        "Becoming.ClosedCapture.Drawn.cross": [],
-        "Becoming.ClosedCapture.Drawn.pool_mono": [],
-        "Becoming.ClosedCapture.Drawn.pool_mono_against": [],
-        "Becoming.ClosedCapture.Drawn.poolRead": [],
-        "Becoming.ClosedCapture.Drawn.pool_against": [],
-        "Becoming.ClosedCapture.Drawn.pool_reads_iff": [],
-        "Becoming.ClosedCapture.Drawn.pool_reads": [],
-        "Becoming.ClosedCapture.Drawn.pool_through": [],
-        "Becoming.ClosedCapture.Drawn.pool_favours": [],
-        "Becoming.ClosedCapture.Drawn.through_locks": [],
-        "Becoming.ClosedCapture.Drawn.pool_not_rising": [],
-        "Becoming.ClosedCapture.Drawn.le_of_disfavours": [],
-        "Becoming.ClosedCapture.Drawn.mirror_favours_iff": [],
-        "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff": [],
-        "Becoming.ClosedCapture.Drawn.mirror_le": [],
-        "Becoming.ClosedCapture.turn_agree": [],
-        "Becoming.ClosedCapture.course_past": [],
-        "Becoming.ClosedCapture.agreeing_locks": [],
-        "Becoming.ClosedCapture.agreeing_stays": [],
-        "Becoming.ClosedCapture.Thinned.lossPool": [],
-        "Becoming.ClosedCapture.Thinned.lossPool_past": [],
-        "Becoming.ClosedCapture.Thinned.course": [],
-        "Becoming.ClosedCapture.Thinned.past_course": [],
-        "Becoming.ClosedCapture.Thinned.read_late_kept": [],
-        "Becoming.ClosedCapture.Thinned.read_in_time_turns": [],
-        "Becoming.ClosedCapture.Thinned.rule_read": [],
-        "Becoming.ClosedCapture.Thinned.kept_iff": [],
-        "Becoming.ClosedCapture.Thinned.turned_iff": [],
-        "Becoming.ClosedCapture.Thinned.fewCarriers": [],
-        "Becoming.ClosedCapture.Thinned.inTime": [],
-        "Becoming.ClosedCapture.Thinned.late": [],
-        "Becoming.ClosedCapture.Thinned.lossStep_accrues": [],
-        "Becoming.ClosedCapture.Thinned.inTime_majority": [],
-        "Becoming.ClosedCapture.Thinned.inTime_turned": [],
-        "Becoming.ClosedCapture.Thinned.late_majority": [],
-        "Becoming.ClosedCapture.Thinned.late_kept": [],
-        "Becoming.ClosedCapture.Thinned.late_reads_loss": []
+        "Becoming.ClosedCapture.Proportional.reform_absorbed": []
       },
       "kernel_checked": true
     },
@@ -105262,24 +104925,116 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.ClosedCapture.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.ClosedCapture.lean": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130",
-    "Becoming.ClosedCapture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Alternatives.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Alternatives.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Boundaries.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Boundaries.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.BoundedSignificance.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.BoundedSignificance.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Correspondence.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Correspondence.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Descent.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Descent.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Direction.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Direction.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Handoff.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Handoff.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ListingRefutations.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ListingRefutations.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.MutualDependence.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.MutualDependence.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.Significance.lean": "76ddaf3b84995431587da1a77e643cdc1c1863b24f8609c7872f01cd421bb1c3",
+    "Becoming.ProfileReach.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ProfileReach.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.RelativePosition.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.RelativePosition.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Relevance.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Relevance.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.SecuredContent.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.SecuredContent.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Significance.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Significance.lean": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b",
+    "Becoming.Standpoints.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Standpoints.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ValuationFrames.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.ValuationFrames.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Weightings.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.Weightings.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingAlternativesAxiomAudit.lean": "37c9bf0636cf7756a79da7a9c9d3afe41172619dc2d0f6f1b7ecd6f95626772d",
+    "BecomingAlternativesAxiomAudit.log": "4926d47c6fdddb8603dd85199bfcc95ed3c7284fbd80d81eab3d61647959ec86",
+    "BecomingAlternativesSignatures.lean": "c61cad0cd9fc0a9c49c97fe2b6970beb68fbe5d74618ea38e56b15e65a70e870",
+    "BecomingAlternativesSignatures.log": "cd0d5f4b8102f91bb3dd1dd1c302d43d5f927687ecd69ccd8d7ebd26d4801c2a",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingClosedCaptureAxiomAudit.lean": "12c2876c37244f35a0b1228ace46cd130adf13bfa7393d61db8273776b50ab05",
-    "BecomingClosedCaptureAxiomAudit.log": "03197f1c76c36653583d8393575aa62a7fc3f8e9a48c170b4e8e463f28166fc3",
-    "BecomingClosedCaptureSignatures.lean": "f0eb047cd764323b994faa13fa33fcb5956209953a87bc7a6db47244a3d42d36",
-    "BecomingClosedCaptureSignatures.log": "928b5a730295ac2f4228c3426c17add9e6dbd343085767854bd4be962b0509be",
+    "BecomingBoundariesAxiomAudit.lean": "4e8a1a1beefc012e1bb4a62ec303ddf58c218be0f868779933c8443fd2c0f883",
+    "BecomingBoundariesAxiomAudit.log": "312b4ad0f9ae1474ff0c880043438bd6ea14f1fd2c7b4ff67f6097d76c1868d1",
+    "BecomingBoundariesSignatures.lean": "2414dd927e3c3ff2db79a14e8495500d2ec626abe5662046df46f46f4a42c11d",
+    "BecomingBoundariesSignatures.log": "d75b3f993aaf372d127fd8f8d3259cd8d479229b50347f57a6e0260dba34e741",
+    "BecomingBoundedSignificanceAxiomAudit.lean": "0bf92c3a80d3b5f931defffe6d3ebfc030e215748ced8699e21017a0d6180a1e",
+    "BecomingBoundedSignificanceAxiomAudit.log": "bb2e953e638a0ffd13b9b43797e4ae884ab6d635826353ae3bf18c28bf71bdbf",
+    "BecomingBoundedSignificanceSignatures.lean": "32cbb7d9807dbaff0d91cf23fa4fab5cb5cc9b56f3583af143f66f1023782633",
+    "BecomingBoundedSignificanceSignatures.log": "2912ff4a87a54e1dc7e76eb162f2ac60d6001f2399053e2257810d450948b158",
+    "BecomingCorrespondenceAxiomAudit.lean": "c719a8ca85a966f6063ee316057d4c52433bfee789d14064facfbdd29eddb575",
+    "BecomingCorrespondenceAxiomAudit.log": "ec804a3ed7fa25f3cea8eb2ae90fba9fcc4fe3f7dc4993959de7bdb56cfaeabb",
+    "BecomingCorrespondenceSignatures.lean": "6979b78efc511156bfe7bd518566b27b9731acc05bbc86237e709c48722c0128",
+    "BecomingCorrespondenceSignatures.log": "b041d84b625f98435131959bbf1040f36a454ff3cde003c0fc2f295ff23fb68f",
+    "BecomingDescentAxiomAudit.lean": "40e0aa5761ee3fd83cb3c19be3361c3969a8b9ae1998bd64c90e8101939f0875",
+    "BecomingDescentAxiomAudit.log": "6aca7ce4de335b3145529a1b2abd4124ffc5b450ab119dad82609b7c2000231e",
+    "BecomingDescentSignatures.lean": "eaf4e2bc7e71ce50ec40b9fbd10c0f56050d1db755ff7ea3b23db87592ce681a",
+    "BecomingDescentSignatures.log": "091788cbbfd08aa720689331928668500dfdcb275e617496380a5d040e5901a9",
+    "BecomingDirectionAxiomAudit.lean": "d32caba7eab40358a282490d97e03b754bccea164555ac6a80558c42866614ee",
+    "BecomingDirectionAxiomAudit.log": "f8cc2f0b9b4822eab8904f4ea8685dfb7403317430a11fe6d068a9b1da1f9bef",
+    "BecomingDirectionSignatures.lean": "c0c42b973859563bf4973429c4602844573eed2364f625b44268a51443ca3a80",
+    "BecomingDirectionSignatures.log": "0787ba5a2b04b9e0f7bb01e2487618e46e835416f92b101289c8e3f8a939a0f5",
+    "BecomingHandoffAxiomAudit.lean": "9d255d3242df8e26ce0916cdf673ae31f871c5e192e27d93c0d264d103832e32",
+    "BecomingHandoffAxiomAudit.log": "45213b2380058e04674353192d884d9f06f4e8ba92a1c40450564e64391717a5",
+    "BecomingHandoffSignatures.lean": "ad9acabb628395b8cdcf1bf74c7b0ee3cfad1e593d3cefa9eeb7b5dd9fb61f48",
+    "BecomingHandoffSignatures.log": "263880733cb27fab513be11375347d40edbee7ba7563766b89f401d899badbbd",
+    "BecomingListingRefutationsAxiomAudit.lean": "fd43954397513f391aed03e81ef2ce5536ef5c3ae81934eb12d178c13cda985a",
+    "BecomingListingRefutationsAxiomAudit.log": "14f858a4ec44413aefbaa971e08e491e0e691a6a7eb74696f9cd71b0450ed3fa",
+    "BecomingListingRefutationsSignatures.lean": "0abcd46c9bcf068f272e87ed88494c992447542e21169eecc0b940d13f4a44f3",
+    "BecomingListingRefutationsSignatures.log": "ead73bea1bd0b6f32960c15b653d5aa067904981d76ad63ec249b108937dda0c",
+    "BecomingMutualDependenceAxiomAudit.lean": "b371035ddf5d3c6964c487462c102a76817d45298b2bf354cc9a7db7bacc5218",
+    "BecomingMutualDependenceAxiomAudit.log": "0fd570722ff84f441fe69b3e5070aed54bc52ee9806fd7341389a3444d2b7a26",
+    "BecomingMutualDependenceSignatures.lean": "456919f949e9239c4ddf67e4b67d15c0304265b6605cc80b86dcd6bec7f34f0f",
+    "BecomingMutualDependenceSignatures.log": "93f08449eb29ff3113954af046b30f55f80bb698e0fe6cd74276512a098639ef",
+    "BecomingProfileReachAxiomAudit.lean": "5776b4477dc9e41ea851037cc08567b8e40b3c4d120d54350e1b10d8c57f2dff",
+    "BecomingProfileReachAxiomAudit.log": "8993fcd84a2e978d4b95e4dfe62b32a5d8479c8b04e7ad6eb823ea5855064bcb",
+    "BecomingProfileReachSignatures.lean": "a9884b45bb797ba2a5ab50dee62b32484ca3a0a74837d08b43aaca0ea5e1a1de",
+    "BecomingProfileReachSignatures.log": "df2e5526d8dc495806bcf073f6c2814c7c95305a255b1c27dfd86ccc59f6cf8c",
+    "BecomingRelativePositionAxiomAudit.lean": "fdb6db6fdffa27373d2ca17718fd0eb6b034b3cefced995882353ca79c66fb0a",
+    "BecomingRelativePositionAxiomAudit.log": "15f081c5081315ee720a931a2fa094e144a8cd34ece2fa62d42ef3675049e0f4",
+    "BecomingRelativePositionSignatures.lean": "4db7e8106c453419a63e29574d67a3a304df92ef88efc1578f2f963299d55e89",
+    "BecomingRelativePositionSignatures.log": "601c3f19bb397274992aed95ee15856fb14601b814f4bca3bfa1504432884794",
+    "BecomingRelevanceAxiomAudit.lean": "ced1b39238bfabe74090e625eb3219fabe285b8850cc2c96e97bafc17e7b782f",
+    "BecomingRelevanceAxiomAudit.log": "82f10fff050e2a82636e51c9c196ebf99ba2848536c841126aabcb3a982af915",
+    "BecomingRelevanceSignatures.lean": "c0bff5dc987c27b50a51390cfea6ad7c251e3b9119d8399a0c614d94e671927a",
+    "BecomingRelevanceSignatures.log": "428db32e361aa8daa0a2679560c5f47c3b14887630dd65e757a3bf627e0bd243",
+    "BecomingSecuredContentAxiomAudit.lean": "ed1a31a881a5567887b9004c714bbf0b6cad4150099f80ad2e97ce4041502f05",
+    "BecomingSecuredContentAxiomAudit.log": "72baffc77f5052a8eaac15ddddef9a23f1043641defaf6f6eaf1bafac68637fe",
+    "BecomingSecuredContentSignatures.lean": "10fa1ecdb307ab2916d66c07010e9bc912c51ed723ba32979d8acc0b8ea4a35b",
+    "BecomingSecuredContentSignatures.log": "3ec21148519c46871a38ad86c025e1b84bd29cccb2ed05fd6bdea37b3b0c4f8c",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BecomingSignificanceSignatures.lean": "92deaf97e7c7fc8c76fcffcfb9ed5b883af7b6ad0d282a968f7be09f32dca5af",
+    "BecomingSignificanceSignatures.log": "6ca5ac8df0a2241c0dc0b0a82bd20ea2d7f8e48df13ee2141d3eacbd282fae44",
+    "BecomingStandpointsAxiomAudit.lean": "d2a725aa057bd275af2d0012944c3c13efb15bafa65a8a87a13e4e1bbd0140c7",
+    "BecomingStandpointsAxiomAudit.log": "0fc054c6095ce1af83e9fc10ef31b62254fd9e5f8a786a1de048b2ad58432944",
+    "BecomingStandpointsSignatures.lean": "b1f9edbddef14496f97b52995f73ad67fe6df16fe37704d4330f37427221fb5c",
+    "BecomingStandpointsSignatures.log": "1e10f2bff5714f9848a2049147a4606ea25163292e397f3172e2acf9033dbe89",
+    "BecomingValuationFramesAxiomAudit.lean": "44b0e8e3882448005b82976f1083d191983793a8cb2563afa24b1f3f98aab566",
+    "BecomingValuationFramesAxiomAudit.log": "41a5942d118b352397664f86c1eea73531e09c16ae055213c939c4b67798de41",
+    "BecomingValuationFramesSignatures.lean": "7a2c2346b51e2b803489df4e27150699e4c810561cdb0cfcc5014e91491fd29b",
+    "BecomingValuationFramesSignatures.log": "44b8676b5ebe7f2c46314df109be9ccfada92c419c585c4b9c65cfaa794d62d4",
+    "BecomingWeightingsAxiomAudit.lean": "5a699d82a958813d5fbf251bff210e830fd2e5998d74a465a751f6869455f406",
+    "BecomingWeightingsAxiomAudit.log": "85c79a423bf27bb83e35c9a783251e238b40ec393768438987e6957fba2ba23a",
+    "BecomingWeightingsSignatures.lean": "dfcd2668be8145ba58f7c16d0d439700624e19f33674a299c4cfc65daed78a2e",
+    "BecomingWeightingsSignatures.log": "18aad0ec7a52809a25aa131c2746951628d4d2945c115ed8ce6b682bcc3af275",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "EnvironmentAudit.lean": "4f0fba2beac25ceb24b9257c10ee497c9cfe6266ca9418747a773bd9a248e3aa",
-    "EnvironmentAudit.log": "716dce2c3b4fffd987622ea2980cff0393bd1c180d32aae468ac1ad9643b5a1a",
+    "EnvironmentAudit.log": "485556a23021aeed963c11f48d13145fd87805f82b1e937dc5291f5f990660a7",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

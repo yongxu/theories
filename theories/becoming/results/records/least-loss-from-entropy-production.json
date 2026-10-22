@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
   "statement": {
     "zh": "读作可用功，第二定律是脊柱的第一律，被毁的㶲是记录；单靠它不给出耗散。每次取用都不可逆且量为整单位，或被毁㶲有不小于单位的下限（Landauer），就给出耗散；只在期望中的耗散几乎必然给出取用不复现。",
     "en": "Read in available work, the second law is the spine's first law and destroyed exergy is the record; alone it gives no dissipation. Irreversible taking with whole units, or a floor of destruction at least the unit (Landauer), gives it; dissipation in expectation gives rest almost surely."
@@ -150,7 +150,7 @@
     "no-evaluation"
   ],
   "validation_scope": {
-    "en": "Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: 24 theorems and 33 declarations of EntropyProduction, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures; the core modules it imports match passed receipts. The core does not import it. No independent review."
+    "en": "Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: the 33 declarations it cites, of EntropyProduction's 74, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures; the core modules it imports match passed receipts. The core does not import it. No independent review."
   },
   "next_delta": {
     "en": "A core form with rational amounts and no Mathlib for the deterministic laws; the exchange-level Landauer bound from the count now in the core (record merge-of-a-part-kept-by-the-rest) with a reading of count as energy. Finite-time floors and the uncertainty relation as instances of DestroysAtLeast would restate known physics (the significance review's least-loss check) and are not planned.",
@@ -237,13 +237,20 @@
         "en": "Landauer's floor, here a physical premise, has its count as a core law there.",
         "zh": "这里作为物理前提的 Landauer 下限，其计数在那里是核心规律。"
       }
+    },
+    {
+      "id": "balance-from-the-first-law",
+      "detail": {
+        "en": "The exergy balance, a premise here, is derived there from the first law and the entropy balance at each exchange, in the same reading that gives the levels' balance.",
+        "zh": "这里作为前提的㶲平衡，在那里由每个交换处的第一定律与熵平衡推出，与给出水平平衡的是同一读法。"
+      }
     }
   ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
       "role": "proof",
-      "sha256": "5350e798bbe102ff086beb97dc13040366bb43c5156175e9b93ea2392cc21e4a",
+      "sha256": "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3",
       "declarations": [
         "Becoming.EntropyProduction.ExergyBalance",
         "Becoming.EntropyProduction.SecondLaw",
@@ -288,7 +295,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/check_entropy_production.py",
       "role": "integration",
-      "sha256": "abc521419d95c06dd759112d31bd9738ea2764aee37ed153be6e69f33ec6e54f"
+      "sha256": "e2ab6913181423c16b4da1a496e5048dbb2d028cefbda0a273b673fac38c5cce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
@@ -326,12 +333,18 @@
       "role": "receipt",
       "sha256": "28beaf54de0970f4527bbee254b64bbb683899dd9727fabfe0036934d43a5863",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd780afc4bf1144cc3ebc96855836de1d12bd3920771d6ef6c5a6d980bff5d83",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261020T162027.465211Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
       "sha256_pointer": "/source_sha256/EntropyProduction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -356,6 +369,10 @@
     {
       "en": "20 October 2026, LC1: the next step restated after the least-loss check (study section 255): the count of Landauer's floor is in the core (record merge-of-a-part-kept-by-the-rest); the finite-time and precision floors are known physics and left unbuilt. The claim is unchanged.",
       "zh": "2026年10月20日，LC1：最小损失检查之后重述下一步（研究第 255 节）：Landauer 下限的计数已在核心中（记录 merge-of-a-part-kept-by-the-rest）；有限时间与精度的下限是已知物理，不予构建。论断不变。"
+    },
+    {
+      "en": "22 October 2026, FL1: the module now also derives balance and this record's exergy balance from the first law and the entropy balance (record balance-from-the-first-law); the validation scope counts the declarations this record cites, and the new record is related. The claim is unchanged.",
+      "zh": "2026年10月22日，FL1：该模块现在也由第一定律与熵平衡推出平衡与本记录的㶲平衡（记录 balance-from-the-first-law）；验证范围计本记录所引的声明，并关联新记录。论断不变。"
     }
   ],
   "text_versions": [

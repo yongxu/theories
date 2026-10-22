@@ -22,7 +22,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Which significance holds: rivals are consistent with every law of the dynamics.
+- Which significance holds: every statement reading only the dynamics admits a rival, and none entails the condition where there is a standpoint and a formation (what-the-dynamics-leave-open).
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -51,6 +51,8 @@ Discounting and time-bounded horizons in welfare evaluation.
 - **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Its bounded_rival is the case of a region of standpoints and formations.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries daqu-ai-shang-shi-hou-shi).
 
+**Used by:** [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -63,6 +65,7 @@ Discounting and time-bounded horizons in welfare evaluation.
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
 
 Aliases: `Rivals bounded in time`, `以时为界之对手`, `Becoming.rival_of_outside`
 
@@ -70,7 +73,8 @@ Aliases: `Rivals bounded in time`, `以时为界之对手`, `Becoming.rival_of_o
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 338.
+- 22 October 2026: the non-implication restated, rivals' consistency with the dynamics now a theorem for every statement reading only the dynamics (SD1, record what-the-dynamics-leave-open); study section 347.
 
 </details>
 
-Documentary review UTC: `2026-10-22T05:43:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T10:39:38+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

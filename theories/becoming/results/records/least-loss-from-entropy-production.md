@@ -44,7 +44,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: 24 theorems and 33 declarations of EntropyProduction, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures; the core modules it imports match passed receipts. The core does not import it. No independent review.
+Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: the 33 declarations it cites, of EntropyProduction's 74, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures; the core modules it imports match passed receipts. The core does not import it. No independent review.
 
 Canonical source: [EntropyProduction.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean)
 
@@ -69,6 +69,9 @@ Physics read onto the spine. Gouy–Stodola: exergy destroyed is T0 times the en
 - related, not a proved adapter: [rest-with-refinement-counted](rest-with-refinement-counted.md). There the refinement counted brings rest at every resolution; here a floor in energy counts r units at an r-fold finer unit.
 - related, not a proved adapter: [premises-read-off-the-exchange](premises-read-off-the-exchange.md). There dissipation is a state of the law of exchange, not read off every exchange; here the physical premises under which it holds.
 - related, not a proved adapter: [merge-of-a-part-kept-by-the-rest](merge-of-a-part-kept-by-the-rest.md). Landauer's floor, here a physical premise, has its count as a core law there.
+- related, not a proved adapter: [balance-from-the-first-law](balance-from-the-first-law.md). The exergy balance, a premise here, is derived there from the first law and the entropy balance at each exchange, in the same reading that gives the levels' balance.
+
+**Used by:** [balance-from-the-first-law](balance-from-the-first-law.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +85,7 @@ Physics read onto the spine. Gouy–Stodola: exergy destroyed is T0 times the en
 | statement | [Dissipation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean) | `Becoming.Flow.Dissipative`, `Becoming.Flow.ClosedAt`, `Becoming.Flow.Balances.taking_not_recurring` |
 | statement | [Resolution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean) | `Becoming.Flow.DissipativeBy`, `Becoming.Flow.DissipatesBy.of_each` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261020T162027.465211Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json) | — |
 
 Aliases: `Becoming.EntropyProduction.ExergyBalance`, `Becoming.EntropyProduction.SecondLaw`, `Becoming.EntropyProduction.ExergyBalance.give_le`, `Becoming.EntropyProduction.gainless_of_secondLaw`, `Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue`, `Becoming.EntropyProduction.passing_balance`, `Becoming.EntropyProduction.secondLaw_not_dissipative`, `Becoming.EntropyProduction.Irreversible`, `Becoming.EntropyProduction.dissipative_of_irreversible`, `Becoming.EntropyProduction.DestroysAtLeast`, `Becoming.EntropyProduction.loss_of_floor`, `Becoming.EntropyProduction.dissipative_of_floor`, `Becoming.EntropyProduction.loss_at_finer_unit`, `Becoming.EntropyProduction.dissipativeBy_of_efficiency`, `Becoming.EntropyProduction.ExpectedDissipatesOn`, `Becoming.EntropyProduction.HasExpectations`, `Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise`, `Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy`, `Becoming.EntropyProduction.expected_runs_down`, `Becoming.EntropyProduction.expected_takers_within`, `Becoming.EntropyProduction.expected_stock_nonneg`, `Becoming.EntropyProduction.taking_probability_le`, `Becoming.EntropyProduction.taking_probability_within`, `Becoming.EntropyProduction.taking_not_recurring_ae`, `Becoming.EntropyProduction.Fluctuation.flow`, `Becoming.EntropyProduction.Fluctuation.web`, `Becoming.EntropyProduction.Fluctuation.coin`, `Becoming.EntropyProduction.Fluctuation.integral_coin`, `Becoming.EntropyProduction.Fluctuation.balances`, `Becoming.EntropyProduction.Fluctuation.closed`, `Becoming.EntropyProduction.Fluctuation.gains_in_one_run`, `Becoming.EntropyProduction.expected_production_nonneg`, `Becoming.EntropyProduction.gain_probability_le`
 
@@ -92,6 +96,7 @@ Aliases: `Becoming.EntropyProduction.ExergyBalance`, `Becoming.EntropyProduction
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Passing.lossless (now Passing.conserving). Re-pointed after reading the change: Dissipation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Entropy.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Re-pointed after reading the change: Entropy.lean, takes as its final section LevelWebs, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Resolution.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, LC1: the next step restated after the least-loss check (study section 255): the count of Landauer's floor is in the core (record merge-of-a-part-kept-by-the-rest); the finite-time and precision floors are known physics and left unbuilt. The claim is unchanged.
+- 22 October 2026, FL1: the module now also derives balance and this record's exergy balance from the first law and the entropy balance (record balance-from-the-first-law); the validation scope counts the declarations this record cites, and the new record is related. The claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](least-loss-from-entropy-production.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -101,4 +106,4 @@ Aliases: `Becoming.EntropyProduction.ExergyBalance`, `Becoming.EntropyProduction
 
 </details>
 
-Documentary review UTC: `2026-10-19T09:00:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T11:00:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
