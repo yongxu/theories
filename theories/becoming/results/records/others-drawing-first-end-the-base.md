@@ -107,6 +107,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `others drawing first end the base`, `over every law of what stands`, `the dynamic commons`, `open-access dissipation`, `他者先抽取则终结基础`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Web.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.frontier_exhausts`
 

@@ -59,6 +59,8 @@ The optimality condition of dynamic programming (Bellman 1957); the dynamic comm
 - related, not a proved adapter: [drawers-in-turn-within-capacities](drawers-in-turn-within-capacities.md). Superseded by this record, its laws now cases of the one model.
 - related, not a proved adapter: [any-number-of-drawers-in-turn](any-number-of-drawers-in-turn.md). Superseded by this record, its laws now cases of the one model.
 
+**Used by:** [a-race-for-position-draws-everything](a-race-for-position-draws-everything.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -71,6 +73,7 @@ The optimality condition of dynamic programming (Bellman 1957); the dynamic comm
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `drawers in turn`, `one model of drawers in turn`, `轮流的抽取者`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.revisions_reach_floors`
 

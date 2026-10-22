@@ -17,12 +17,15 @@ ANCHOR = f'#{N}-a-rise-past-the-inflow-and-a-race-for-position-if1-rp1'
 SLINK = f'../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md{ANCHOR}'
 
 
+PENDING = {}
+
+
 def edit(path, pairs):
-    s = path.read_text()
+    s = PENDING.get(path, path.read_text())
     for old, new in pairs:
         assert s.count(old) == 1, (path.name, old[:80], s.count(old))
         s = s.replace(old, new)
-    path.write_text(s)
+    PENDING[path] = s
 
 
 edit(EN, [
@@ -65,9 +68,9 @@ edit(EN, [
 ])
 
 edit(ZH, [
-    ("`Web.selects_alike_iff`、`Flow.favours_reaching_beyond`、",
-     "`Web.selects_alike_iff`、`Flow.favours_reaching_beyond`（不加无所增益的前提时按包含族的流入分级：超过流入的上升有从其外汲取的构成，"
-     "超过的部分全数取自其外，奖励它的选择偏向这一汲取，`Flow.favours_reaching_beyond_inflow`；无流入是其情形）、"),
+    ("`Flow.favours_reaching_beyond`、`Flow.Balances.breaks_beyond`（",
+     "`Flow.favours_reaching_beyond`（不加无所增益的前提时按包含族的流入分级：超过流入的上升有从其外汲取的构成，"
+     "超过的部分全数取自其外，奖励它的选择偏向这一汲取，`Flow.favours_reaching_beyond_inflow`；无流入是其情形）、`Flow.Balances.breaks_beyond`（"),
     ("| [抬高所耦合者取自其外](../results/records/raising-what-couples-in-draws-from-beyond.md) | 不加前提的定理 | — | §3.4 |",
      "| [抬高所耦合者取自其外](../results/records/raising-what-couples-in-draws-from-beyond.md) | 不加前提的定理 | — | §3.4 |\n"
      f"| [超过流入的上升取自其外]({REC}{A}.md) | 不加前提的定理 | — | §3.4 |"),
@@ -99,10 +102,12 @@ old_race[idx[0]] = line[:line.index(KEEP)] + (
     "every profile in which each drawer, at every step, leaves what places it highest draws everything at every step "
     f"(`Optimum.InTurn.position_perfect_ends`, [record](results/records/{P}.md)); where something left would stop what stands "
     "next, a drawer may keep it to stop it.")
-OPENING.write_text('\n'.join(old_race))
+PENDING[OPENING] = '\n'.join(old_race)
 
 text = (HERE / 'study_if1_rp1.txt').read_text().replace('{N}', str(N)).replace('{RECEIPT}', RECEIPT)
 s = STUDY.read_text()
 assert f'\n## {N}. ' not in s and f'\n## {N - 1}. ' in s, N
-STUDY.write_text(s.rstrip('\n') + '\n\n' + text.rstrip('\n') + '\n')
+PENDING[STUDY] = s.rstrip('\n') + '\n\n' + text.rstrip('\n') + '\n'
+for path, content in PENDING.items():
+    path.write_text(content)
 print('applied', N)

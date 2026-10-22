@@ -78,8 +78,9 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.
 - related, not a proved adapter: [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md). What an optimum, not a rise, does beyond what couples in.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). How much each formation takes when several draw, derived for optimizers at a mutual best response.
+- related, not a proved adapter: [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md). Graded by the whole's inflow, the fall of the beyond, the break past the slack, reaching beyond and the bound over a stretch hold past the inflow; the gainless laws here are their case of no inflow and are derived from them.
 
-**Used by:** [room-read-off-the-exchange](room-read-off-the-exchange.md) · [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
+**Used by:** [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md) · [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +99,7 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise above the slack breaks a dependence beyond`, `the share that reaches beyond`, `Becoming.Flow.Balances.breaks_beyond`, `Becoming.Flow.favours_breaking_beyond`, `Becoming.Flow.share_not_against`
 
@@ -108,7 +110,8 @@ Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise
 - 20 October 2026: R52 added the joint draw, which dependence breaks when several formations take at once (Becoming.JointDraw), section 8.1 item 10.
 - 21 October 2026, SG1: what an optimum does beyond what couples in (record what-an-optimum-does-beyond-what-couples-in, study section 283); this record's laws and their statements are unchanged.
 - 21 October 2026, SG3: how much each formation takes when several draw, which the joint-draw laws take as supplied, derived for optimizers at a mutual best response (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.
+- 22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).
 
 </details>
 
-Documentary review UTC: `2026-10-20T08:38:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T13:10:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T09:24:32+00:00",
+  "reviewed_at_utc": "2026-10-22T13:10:31+00:00",
   "statement": {
     "en": "Where a family containing what couples in gains nothing across a step, a rise of what couples in has a formation that gives it more than it takes from it and takes from beyond it; so every selection holding only where what couples in rises holds only on flows reaching beyond the coupling.",
     "zh": "包含所耦合者的族在一步中不增益时，所耦合者的上升有一个形成给予它多于从它所取，并取自其外；所以每个只在所耦合者上升处成立的选择，只在伸出耦合之外的流上成立。"
@@ -179,6 +179,13 @@
         "en": "Whose dependence the draw breaks past the slack, how much is drawn, and the share that reaches beyond.",
         "zh": "超出余量时汲取打断谁的依存、汲取多少，以及伸向之外者的份额。"
       }
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "detail": {
+        "en": "Graded by the containing family's inflow, the laws hold without the gainless premise for a rise past the inflow; the gainless laws here are its case of no inflow and are derived from it.",
+        "zh": "按包含族的流入分级，这些规律对超过流入的上升不需无所增益的前提；此处无所增益的规律是其无流入的情形，由它导出。"
+      }
     }
   ],
   "references": [
@@ -200,7 +207,7 @@
         "Becoming.Web.raises_selectsThrough",
         "Becoming.exists_outside_of_total_lt"
       ],
-      "sha256": "41675fb36d500d258685c70186a6323373b108420d26633eae5e830ca18ce005"
+      "sha256": "72727ec8c69c9a9243352da8895cd39e9d48d2c56b5453bf19a7dac5bddac80b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
@@ -221,7 +228,7 @@
         "Becoming.Flow.GainlessOn",
         "Becoming.Flow.Gainless"
       ],
-      "sha256": "d6c950deed4a243e979261f6fd6ec0273b50e415eaf6baa9758ca6f16e1e4b57"
+      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T091757.535800Z/verification.json",
@@ -296,12 +303,18 @@
       "role": "receipt",
       "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "role": "receipt",
+      "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T091757.535800Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionReach",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -315,7 +328,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Entropy",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -352,6 +365,10 @@
     {
       "en": "20 October 2026, RB1: whether what is drawn is depended on, how much more than the rise is drawn and the rising share of what reaches beyond are stated in Becoming.DrawnBeyond (record what-a-rise-draws-from-beyond, study section 241); the scope items now point there and those parts leave the next step. The claim is unchanged.",
       "zh": "2026年10月20日，RB1：所取者是否被依存、比上升多取多少、伸向之外者份额的上升，陈述于 Becoming.DrawnBeyond（记录 what-a-rise-draws-from-beyond，研究第 241 节）；范围项现指向那里，这些部分移出下一步。论断不变。"
+    },
+    {
+      "en": "22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).",
+      "zh": "2026年10月22日，IF1：在记录 a-rise-past-the-inflow-is-drawn-from-beyond 中按流入分级；本记录无所增益的规律现作为其无流入的情形导出，陈述不变（研究第 355 节）。"
     }
   ],
   "text_versions": [

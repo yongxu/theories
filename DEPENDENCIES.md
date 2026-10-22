@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-388 registered results: 362 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 905 curated edges join 339 results to the results they draw on.
+390 registered results: 364 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 909 curated edges join 341 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -22,7 +22,9 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-need-with-a-cap][] ← <a id="a-need-with-a-cap--closing-needs-net-draw"></a>[closing-needs-net-draw][]
 - [a-pattern-lasts-through-passing][] ← <a id="a-pattern-lasts-through-passing--whole-persists-through-generation"></a>[whole-persists-through-generation][]
 - [a-pool-read-by-its-majority][] ← <a id="a-pool-read-by-its-majority--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][]
+- [a-race-for-position-draws-everything][] ← <a id="a-race-for-position-draws-everything--drawers-in-turn"></a>[drawers-in-turn][]
 - [a-reading-against-the-share-does-not-ratchet][] ← <a id="a-reading-against-the-share-does-not-ratchet--capture-through-the-rule"></a>[capture-through-the-rule][]
+- [a-rise-past-the-inflow-is-drawn-from-beyond][] ← <a id="a-rise-past-the-inflow-is-drawn-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--selection-through-couplings"></a>[selection-through-couplings][]
 - [a-source-before-a-juncture][] ← <a id="a-source-before-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="a-source-before-a-juncture--timely-response-necessity"></a>[timely-response-necessity][]
 - [a-step-coupling-keeps-at-every-horizon][] ← <a id="a-step-coupling-keeps-at-every-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][] · <a id="a-step-coupling-keeps-at-every-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-step-coupling-keeps-at-every-horizon--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [a-weighting-faster-than-renewal-ends-the-base][] ← <a id="a-weighting-faster-than-renewal-ends-the-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-weighting-faster-than-renewal-ends-the-base--a-step-coupling-keeps-at-every-horizon"></a>[a-step-coupling-keeps-at-every-horizon][] · <a id="a-weighting-faster-than-renewal-ends-the-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
@@ -362,7 +364,9 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-need-with-a-cap]: theories/becoming/results/records/a-need-with-a-cap.md
 [a-pattern-lasts-through-passing]: theories/becoming/results/records/a-pattern-lasts-through-passing.md
 [a-pool-read-by-its-majority]: theories/becoming/results/records/a-pool-read-by-its-majority.md
+[a-race-for-position-draws-everything]: theories/becoming/results/records/a-race-for-position-draws-everything.md
 [a-reading-against-the-share-does-not-ratchet]: theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md
+[a-rise-past-the-inflow-is-drawn-from-beyond]: theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md
 [a-source-before-a-juncture]: theories/becoming/results/records/a-source-before-a-juncture.md
 [a-step-coupling-keeps-at-every-horizon]: theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md
 [a-weighting-faster-than-renewal-ends-the-base]: theories/becoming/results/records/a-weighting-faster-than-renewal-ends-the-base.md
@@ -442,6 +446,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [differences-below-threshold]: theories/becoming/results/records/differences-below-threshold.md
 [division-by-exclusive-footprints]: theories/becoming/results/records/division-by-exclusive-footprints.md
 [dormancy-over-a-stretch]: theories/becoming/results/records/dormancy-over-a-stretch.md
+[drawers-in-turn]: theories/becoming/results/records/drawers-in-turn.md
 [drawers-in-turn-draw-everything]: theories/becoming/results/records/drawers-in-turn-draw-everything.md
 [drawers-in-turn-within-capacities]: theories/becoming/results/records/drawers-in-turn-within-capacities.md
 [drift-offspring-sampled]: theories/becoming/results/records/drift-offspring-sampled.md

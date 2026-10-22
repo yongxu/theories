@@ -445,7 +445,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
       "role": "proof",
-      "sha256": "d6c950deed4a243e979261f6fd6ec0273b50e415eaf6baa9758ca6f16e1e4b57",
+      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f",
       "declarations": [
         "Becoming.Web.config",
         "Becoming.Web.config_within",
@@ -616,6 +616,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "role": "receipt",
+      "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -642,7 +648,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Entropy",
       "success_pointer": "/status",
       "success_value": "passed"

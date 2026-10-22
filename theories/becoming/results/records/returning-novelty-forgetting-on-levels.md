@@ -98,6 +98,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `laws of returning on the levels alone`, `只用水平的回返`, `novelty needs gain`, `新需要增益`, `a bounded present forgets`, `有界的当下遗忘`
 

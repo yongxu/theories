@@ -79,6 +79,7 @@ A reward for each step a constraint holds, with no memory of a breach, as in con
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `steps met again after a fall`, `a coupling for every step met`, `跌落后再被满足的步`, `Becoming.Optimum.frontier_keeps_met`, `Becoming.Optimum.shortfall_count_ge`
 

@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "id": "a-race-for-position-draws-everything",
+  "title": {
+    "en": "A race for position draws everything",
+    "zh": "争位次的轮流抽取者全部抽取"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T13:10:31+00:00",
+  "statement": {
+    "en": "Drawers in turn, each ranking its position against what all draw, draw everything at every step wherever what stands from nothing is least and there are at least two; where something left would stop what stands next, a drawer keeps it to stop it.",
+    "zh": "轮流的抽取者各按其相对全体所抽的位次排序，凡无中所立者最少且至少有两个抽取者处，每一步都全部抽取；所留会止住下一步所立时，抽取者留下它以止住它。"
+  },
+  "laws": [
+    {
+      "en": "Drawers in turn with no floor, each leaving at most what it is given, rank what they leave by position over the steps that remain: k times their own draw against what all draw from them on. A profile revises another for position, and is perfect for position where it revises itself.",
+      "zh": "无下限的轮流抽取者，各留至多所给，按其余各步上的位次排序所留：k 倍自身所抽对自其起全体所抽。一个组合为位次修订另一个，修订自身即为位次完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.drawnAll",
+        "Becoming.Optimum.InTurn.whole",
+        "Becoming.Optimum.InTurn.RevisesPosition",
+        "Becoming.Optimum.InTurn.PerfectPosition"
+      ]
+    },
+    {
+      "en": "What a drawer keeps for position it keeps for nothing: where its own later draw is the same, what passes on of it is at most it and all draw no less later, keeping lowers k times its own draw by k times what it keeps and what all draw by at most once that, so among two drawers or more a best response keeps nothing; drawing everything then places it no lower.",
+      "zh": "为位次所留即一无所得：自身此后所抽相同、所传至多所留、全体此后所抽不少时，所留使 k 倍自身所抽降低 k 倍所留，而全体所抽至多降低一倍，故两个以上抽取者时最优回应一无所留；全部抽取则位次不低。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.position_keeps_nothing",
+        "Becoming.Optimum.InTurn.position_nothing_best",
+        "Becoming.Optimum.InTurn.pass_le"
+      ]
+    },
+    {
+      "en": "At the last step every best response for position draws everything, whatever stands next; at a step after which every drawer draws everything, a drawer after the first draws everything where what stands from nothing is least.",
+      "zh": "最后一步每个为位次的最优回应都全部抽取，不论下一步所立；此后每个抽取者都全部抽取的一步，无中所立者最少时首个之后的抽取者全部抽取。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.drawn_first_none",
+        "Becoming.Optimum.InTurn.drawn_other_none",
+        "Becoming.Optimum.InTurn.drawnAll_none",
+        "Becoming.Optimum.InTurn.later_same",
+        "Becoming.Optimum.InTurn.drawnAll_grows",
+        "Becoming.Optimum.InTurn.position_step",
+        "Becoming.Optimum.InTurn.position_last"
+      ]
+    },
+    {
+      "en": "Where what stands from nothing is at most what stands from anything left and there are at least two drawers, every profile perfect for position draws everything at every step before the horizon, the base stands at what stands from nothing, a dependence above it met at the start breaking at the first step, and drawing everything is perfect.",
+      "zh": "无中所立至多是任何所留所立、至少两个抽取者时，每个为位次完美的组合在视野前每一步都全部抽取，基础立于无中所立，全部抽取即完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.position_perfect_ends",
+        "Becoming.Optimum.InTurn.position_perfect_draws",
+        "Becoming.Optimum.InTurn.position_levels",
+        "Becoming.Optimum.InTurn.zero_position_perfect",
+        "Becoming.Web.position_broken",
+        "Becoming.Web.drain_position_broken"
+      ]
+    },
+    {
+      "en": "Each premise binds: with one drawer every profile is perfect; in Stopping, where anything left stops what stands next, drawing everything is not perfect and every perfect profile has the second drawer keep the unit it is given at the first step.",
+      "zh": "每个前提都起作用：一个抽取者时每个组合都完美；在 Stopping 中，任何所留都止住下一步所立，全部抽取不完美，每个完美组合中第二个抽取者在第一步留下所给的一个单位。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.position_one",
+        "Becoming.Optimum.InTurn.stopping",
+        "Becoming.Optimum.InTurn.Stopping.not_least",
+        "Becoming.Optimum.InTurn.Stopping.zero_not_perfect",
+        "Becoming.Optimum.InTurn.Stopping.perfect_keeps"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. k drawers in turn with no floor, each leaving at most what it is given; position over the steps that remain, k times the drawer's draw against what all draw; any law G of what stands next; for the drain, G t 0 ≤ G t x at every step and at least two drawers.",
+      "zh": "不加公理。k 个无下限的轮流抽取者，各留至多所给；其余各步上的位次，k 倍自身所抽对全体所抽；任意下一步所立之律 G；抽干需每步 G t 0 ≤ G t x 且至少两个抽取者。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every race for position draws everything: where something left stops what stands next, drawing everything is not perfect.",
+      "zh": "每个争位次者都全部抽取：所留会止住下一步所立时，全部抽取不完美。",
+      "kind": "converse",
+      "witness": "Becoming.Optimum.InTurn.Stopping.zero_not_perfect"
+    },
+    {
+      "en": "Drawing at once ranking position, floors under a race for position, or a horizon the drawers do not know.",
+      "zh": "为位次同时抽取、争位次下的下限，或抽取者不知的视野。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual races are played in turn by drawers ranking position alone.",
+      "zh": "实际的竞争由只按位次排序的抽取者轮流进行。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That drawing everything is wrong.",
+      "zh": "全部抽取是错的。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "detail": {
+        "en": "Stopping: from nothing two stand, from anything left nothing; with two drawers over two steps the second, given one unit at the first step, places itself higher by keeping it, so drawing everything is not perfect (Stopping.zero_not_perfect, Stopping.perfect_keeps). With one drawer every profile is perfect (position_one).",
+        "zh": "Stopping：无中立二，有所留则无所立；两个抽取者两步，第二个在第一步得一个单位，留下它位次更高，故全部抽取不完美（Stopping.zero_not_perfect、Stopping.perfect_keeps）。一个抽取者时每个组合都完美（position_one）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T130149.371173Z): the declarations named here in Becoming.Optimum's InTurn have empty axiom reports; the checker verifies core purity. Author review in study section 355; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T130149.371173Z）：此处所列 Becoming.Optimum 中 InTurn 的声明公理报告为空；检查器并核对核心纯净。作者审查见研究第 355 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Drawing at once ranking position; floors under a race for position; drawers mixing a race for position with their own draw.",
+    "zh": "为位次同时抽取；争位次下的下限；位次与自身所抽混合排序的抽取者。"
+  },
+  "correspondence": {
+    "en": "The ranking is the count of RelativePosition read on the draws: a game zero-sum in positions, as relative-payoff maximizers in evolutionary game theory (Schaffer 1988) and spite (Hamilton 1970), here over a stock renewed by any law; with own draws ranked the drain is the open-access outcome of drawers in turn. Reading (the AI's): where position is what counts, keeping a stock for later pays no drawer, and what one leaves is kept only to deny it to another.",
+    "zh": "排序是 RelativePosition 的计数读在所抽之上：位次上零和的博弈，如演化博弈论中的相对收益最大化者（Schaffer 1988）与恶意（Hamilton 1970），此处在按任意律更新的存量之上；按自身所抽排序时抽干是轮流抽取者的公地结局。解读（AI 的）：位次为准处，为以后保留存量对任何抽取者都无所得，所留只为不让给他者。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "a race for position draws everything",
+    "争位次的轮流抽取者全部抽取",
+    "Becoming.Optimum.InTurn.PerfectPosition",
+    "Becoming.Optimum.InTurn.position_perfect_ends",
+    "Becoming.Optimum.InTurn.position_keeps_nothing"
+  ],
+  "dependencies": [
+    {
+      "id": "drawers-in-turn",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses InTurn's model and its laws of passing: pass, drawn, later, levels, pass_zero, pass_through, levels_through.",
+        "zh": "复用 InTurn 的模型及其传递之律：pass、drawn、later、levels、pass_zero、pass_through、levels_through。"
+      },
+      "interface": {
+        "output": {
+          "en": "What drawers in turn leave, draw and let stand; nothing passes a drawer leaving nothing.",
+          "zh": "轮流抽取者所留、所抽与所立；一无所留的抽取者不让任何东西通过。"
+        },
+        "input": {
+          "en": "The race for position on the same model.",
+          "zh": "同一模型上的位次竞争。"
+        },
+        "conditions": {
+          "en": "Drawers leaving at most what they are given.",
+          "zh": "抽取者至多留下所给。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "relative-position-is-zero-sum",
+      "detail": {
+        "en": "The count ranked here; a race of position cannot raise everyone, and this law says what drawers racing for it do to what they draw on.",
+        "zh": "此处排序所用的计数；位次之争不能使人人上升，此律说明争位次的抽取者对所依者做什么。"
+      }
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "detail": {
+        "en": "Where a rise is rewarded, what passes the inflow is drawn from beyond; where position is rewarded, drawers draw everything.",
+        "zh": "奖励上升处，超过流入者取自其外；奖励位次处，抽取者全部抽取。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.InTurn.PerfectPosition",
+        "Becoming.Optimum.InTurn.RevisesPosition",
+        "Becoming.Optimum.InTurn.Stopping.not_least",
+        "Becoming.Optimum.InTurn.Stopping.perfect_keeps",
+        "Becoming.Optimum.InTurn.Stopping.zero_not_perfect",
+        "Becoming.Optimum.InTurn.drawnAll",
+        "Becoming.Optimum.InTurn.drawnAll_grows",
+        "Becoming.Optimum.InTurn.drawnAll_none",
+        "Becoming.Optimum.InTurn.drawn_first_none",
+        "Becoming.Optimum.InTurn.drawn_other_none",
+        "Becoming.Optimum.InTurn.later_same",
+        "Becoming.Optimum.InTurn.pass_le",
+        "Becoming.Optimum.InTurn.position_keeps_nothing",
+        "Becoming.Optimum.InTurn.position_last",
+        "Becoming.Optimum.InTurn.position_levels",
+        "Becoming.Optimum.InTurn.position_nothing_best",
+        "Becoming.Optimum.InTurn.position_one",
+        "Becoming.Optimum.InTurn.position_perfect_draws",
+        "Becoming.Optimum.InTurn.position_perfect_ends",
+        "Becoming.Optimum.InTurn.position_step",
+        "Becoming.Optimum.InTurn.stopping",
+        "Becoming.Optimum.InTurn.whole",
+        "Becoming.Optimum.InTurn.zero_position_perfect",
+        "Becoming.Web.drain_position_broken",
+        "Becoming.Web.position_broken"
+      ],
+      "sha256": "16bff968de36bad0c8c03ef9488983fa08758c22d8c12ce262470c42452d0f05"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "role": "receipt",
+      "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d704006ba0d13ea3ba514a67cbc3dd399475078f3e01e64b2b2ee70589bd439e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "eff6172f45464f2b80fbd2e0f8d5eb3c0869e2af74c68212655a9246f18e805c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (RP1): drawers in turn ranking position, the race of RelativePosition read on the draws; study section 355.",
+      "zh": "2026年10月22日：新增（RP1）：按位次排序的轮流抽取者，RelativePosition 的竞争读在所抽之上；研究第 355 节。"
+    }
+  ]
+}

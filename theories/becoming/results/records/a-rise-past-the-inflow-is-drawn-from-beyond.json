@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+  "title": {
+    "en": "A rise past the inflow is drawn from beyond",
+    "zh": "超过流入的上升取自其外"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-22T13:10:31+00:00",
+  "statement": {
+    "en": "Across every step of a balanced flow, a family rises by at most what flows into a family containing it and what is drawn from beyond; a rise past that inflow has a formation drawing from beyond, and a selection rewarding it favours that draw.",
+    "zh": "平衡的流中每一步，一个族至多升高包含它的族的流入加上取自其外者；超过流入的上升有一个从其外汲取的构成，奖励它的选择偏向这一汲取。"
+  },
+  "laws": [
+    {
+      "en": "A family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; it is zero exactly where the family gains nothing. In a balanced flow the stock after a step with what the family loses is the stock before with what it gains, which is at most the inflow; over a stretch the stock rises by at most the stretch's inflow.",
+      "zh": "族在一步中的流入是参与的每个构成给它的超出从它所取者之和；恰在族无所增益时为零。平衡的流中，一步之后的存量加所失等于之前的存量加所得，所得至多是流入；一段之上存量至多升高该段的流入。",
+      "declarations": [
+        "Becoming.Flow.inflow",
+        "Becoming.Flow.le_add_excess",
+        "Becoming.Flow.excess_le_of_le_add",
+        "Becoming.Flow.gainlessOn_iff_inflow",
+        "Becoming.Flow.replenishment_le_inflow",
+        "Becoming.Flow.gained_le_inflow",
+        "Becoming.Flow.Balances.stock_gained",
+        "Becoming.Flow.Balances.stock_inflow",
+        "Becoming.Flow.Balances.stock_over_inflow"
+      ]
+    },
+    {
+      "en": "Where a family without repetition rises across a step by more than the inflow of a family containing it, some formation taking part gives it more than it takes from it, by more than its own part of that inflow, and takes from the containing family more than from the risen one, with equality decided from a condition outside it; the stock after the step is at most the stock before, the inflow and what is taken beyond. Every selection holding only where the family rises past the inflow holds only where a formation raising it takes from a condition no member of the group couples into.",
+      "zh": "无重复的族在一步中升高超过包含它的族的流入时，某个参与的构成给它的多于从它所取，超出其自身在该流入中的份，并从包含族所取多于从该族所取，判定相等时取自其外的某个条件；一步之后的存量至多是之前的存量加流入加其外所取。只在族超过流入升高处成立的每个选择，只在升高它的构成取自无一成员耦合入的条件处成立。",
+      "declarations": [
+        "Becoming.Flow.Balances.rise_draws_beyond_inflow",
+        "Becoming.Flow.Balances.rise_le_inflow_beyond",
+        "Becoming.Flow.Balances.rise_takes_beyond_inflow",
+        "Becoming.Flow.favours_reaching_beyond_inflow"
+      ]
+    },
+    {
+      "en": "With the conditions beyond listed apart, the beyond falls by at least the rise less the whole's inflow; a rise above the slack of the dependences beyond and the inflow breaks one of them, and a selection rewarding it favours the break; a formation raising the family by more than it adds to the whole takes from beyond; over a stretch the family rises by at most what the beyond lost and the stretch's inflow.",
+      "zh": "其外的条件分列时，其外至少降低升高减去整体的流入；超出其外依存的余量与流入的升高打断其中一个，奖励它的选择偏向这一打断；给族的超出它给整体之增量的构成从其外汲取；一段之上族至多升高其外所失加该段的流入。",
+      "declarations": [
+        "Becoming.Flow.Balances.beyond_falls_inflow",
+        "Becoming.Flow.Balances.rise_lowers_beyond_inflow",
+        "Becoming.Flow.Balances.breaks_beyond_inflow",
+        "Becoming.Flow.Balances.rise_breaks_beyond_inflow",
+        "Becoming.Flow.favours_breaking_beyond_inflow",
+        "Becoming.Flow.reaches_inflow",
+        "Becoming.Flow.Balances.rise_bounded_by_beyond_inflow"
+      ]
+    },
+    {
+      "en": "The bound is exact: Diversion's supplying flow raises the store by exactly its inflow, taking nothing.",
+      "zh": "界限是精确的：Diversion 的供给之流恰以其流入抬高储，不取任何东西。",
+      "declarations": [
+        "Becoming.Diversion.supplying_rises_by_inflow"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Balance; the risen family without repetition inside the containing family; for the condition named, equality of conditions decided and the containing family without repetition; for the selection forms, the family listing every condition the group couples into; for the breaks, a dependence named on each condition beyond, met at the step, and the beyond listed apart from the family.",
+      "zh": "不加公理。平衡；上升之族无重复且在包含族内；指名条件时，条件相等可判定且包含族无重复；选择的形式需族列出群体耦合入的每个条件；打断需在其外每个条件上指名一个依存，在该步被满足，其外与族分列。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the formation found is the one a selection rewards: a selection reading only the rise cannot tell who drew it.",
+      "zh": "所找到的构成是被选择奖励的那一个：只读上升的选择分不出是谁汲取的。",
+      "kind": "scope"
+    },
+    {
+      "en": "What an actual whole's inflow is: reading sunlight, imports or renewal as the inflow is a correspondence.",
+      "zh": "实际整体的流入是多少：把日照、输入或更新读作流入是对应，不是规律。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That drawing from beyond is wrong, or harms what is drawn on past the slack.",
+      "zh": "从其外汲取是错的，或在余量之外伤害了所依者。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+      "detail": {
+        "en": "A rise up to the inflow need not reach beyond: Diversion's supplying flow raises the store by exactly its one unit of inflow with nothing taken (Diversion.supplying_rises_by_inflow).",
+        "zh": "不超过流入的上升不必伸向其外：Diversion 的供给之流恰以一个单位的流入抬高储，不取任何东西（Diversion.supplying_rises_by_inflow）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T130149.371173Z): the declarations named here in Becoming.Entropy, Becoming.SelectionReach and Becoming.DrawnBeyond have empty axiom reports, and the gainless laws of those modules are derived from them as the case of no inflow; the checker verifies core purity. Author review in study section 355; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T130149.371173Z）：此处所列 Becoming.Entropy、Becoming.SelectionReach 与 Becoming.DrawnBeyond 的声明公理报告为空，这些模块中无所增益的规律作为无流入的情形由它们导出；检查器并核对核心纯净。作者审查见研究第 355 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The inflow read off a law of exchange rather than supplied with the flow; which formation draws, tied to what a selection rewards; an independent review.",
+    "zh": "流入由交换之律读出，而非随流给定；哪个构成汲取，与选择所奖励者相连；独立审查。"
+  },
+  "correspondence": {
+    "en": "Stock accounting over an open system: a stock rises by at most what flows in and what is drawn from its surroundings, as in material-flow and energy budgets. Reading (the AI's): an open whole is not exempt from drawing on what lies beyond what couples in; only the part of a rise that its inflow covers need not come from beyond.",
+    "zh": "开放系统上的存量记账：存量至多升高流入加上取自周围者，如物质流与能量收支。解读（AI 的）：开放的整体并不免于汲取耦合之外者；只有流入所覆盖的那部分上升不必来自其外。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+  "aliases": [
+    "a rise past the inflow is drawn from beyond",
+    "超过流入的上升取自其外",
+    "Becoming.Flow.inflow",
+    "Becoming.Flow.favours_reaching_beyond_inflow",
+    "Becoming.Flow.Balances.rise_draws_beyond_inflow"
+  ],
+  "dependencies": [
+    {
+      "id": "entropy-history-and-record",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Flow.lost, Flow.GainlessOn and the balance over a family (Flow.Balances.over).",
+        "zh": "复用 Flow.lost、Flow.GainlessOn 与族上的平衡（Flow.Balances.over）。"
+      },
+      "interface": {
+        "output": {
+          "en": "What a family loses across a step; the family's balance.",
+          "zh": "族在一步中所失；族的平衡。"
+        },
+        "input": {
+          "en": "The exact law of what a family gains and loses.",
+          "zh": "族所得所失的精确之律。"
+        },
+        "conditions": {
+          "en": "Balance.",
+          "zh": "平衡。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Web.MetOn, Web.slack and Web.MetOn.breaks_of_falls.",
+        "zh": "复用 Web.MetOn、Web.slack 与 Web.MetOn.breaks_of_falls。"
+      },
+      "interface": {
+        "output": {
+          "en": "A fall of the beyond past the slack breaks a dependence there.",
+          "zh": "其外的降低超出余量即打断那里的一个依存。"
+        },
+        "input": {
+          "en": "The break past the slack and the inflow.",
+          "zh": "超出余量与流入的打断。"
+        },
+        "conditions": {
+          "en": "A dependence named on each condition beyond, met at the step.",
+          "zh": "其外每个条件上指名一个依存，在该步被满足。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
+      }
+    },
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Web.CoupledInto and Diversion's supplying flow and web.",
+        "zh": "复用 Web.CoupledInto 与 Diversion 的供给之流和网。"
+      },
+      "interface": {
+        "output": {
+          "en": "Coupling into a condition; the Diversion witness.",
+          "zh": "耦合入一个条件；Diversion 见证。"
+        },
+        "input": {
+          "en": "The selection forms and the exact bound.",
+          "zh": "选择的形式与精确的界限。"
+        },
+        "conditions": {
+          "en": "None beyond the flow.",
+          "zh": "流之外无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "raising-what-couples-in-draws-from-beyond",
+      "detail": {
+        "en": "Its gainless laws are the case of no inflow here, and are now derived from these.",
+        "zh": "其无所增益的规律是此处无流入的情形，现由此导出。"
+      }
+    },
+    {
+      "id": "least-loss-from-entropy-production",
+      "detail": {
+        "en": "There a physical reading of balance and dissipation; here the accounting where the whole gains from outside.",
+        "zh": "那里是平衡与耗散的物理读法；这里是整体从外有所得时的记账。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.stock_gained",
+        "Becoming.Flow.Balances.stock_inflow",
+        "Becoming.Flow.Balances.stock_over_inflow",
+        "Becoming.Flow.excess_le_of_le_add",
+        "Becoming.Flow.gained_le_inflow",
+        "Becoming.Flow.gainlessOn_iff_inflow",
+        "Becoming.Flow.inflow",
+        "Becoming.Flow.le_add_excess",
+        "Becoming.Flow.replenishment_le_inflow"
+      ],
+      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Diversion.supplying_rises_by_inflow",
+        "Becoming.Flow.Balances.rise_draws_beyond_inflow",
+        "Becoming.Flow.Balances.rise_le_inflow_beyond",
+        "Becoming.Flow.Balances.rise_takes_beyond_inflow",
+        "Becoming.Flow.favours_reaching_beyond_inflow"
+      ],
+      "sha256": "72727ec8c69c9a9243352da8895cd39e9d48d2c56b5453bf19a7dac5bddac80b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.beyond_falls_inflow",
+        "Becoming.Flow.Balances.breaks_beyond_inflow",
+        "Becoming.Flow.Balances.rise_bounded_by_beyond_inflow",
+        "Becoming.Flow.Balances.rise_breaks_beyond_inflow",
+        "Becoming.Flow.Balances.rise_lowers_beyond_inflow",
+        "Becoming.Flow.favours_breaking_beyond_inflow",
+        "Becoming.Flow.reaches_inflow"
+      ],
+      "sha256": "10e2a94d61f5a521e59d0c724b900bfa22984984cbb8a61c8388ab006804b352"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "role": "receipt",
+      "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d704006ba0d13ea3ba514a67cbc3dd399475078f3e01e64b2b2ee70589bd439e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "eff6172f45464f2b80fbd2e0f8d5eb3c0869e2af74c68212655a9246f18e805c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Entropy",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionReach",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (IF1): the gainless laws of SelectionReach and DrawnBeyond graded by the containing family's inflow, the gainless laws derived as the case of no inflow; study section 355.",
+      "zh": "2026年10月22日：新增（IF1）：SelectionReach 与 DrawnBeyond 中无所增益的规律按包含族的流入分级，无所增益的规律作为无流入的情形导出；研究第 355 节。"
+    }
+  ]
+}
