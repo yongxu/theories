@@ -19,8 +19,8 @@
   },
   "statistics": {
     "lean_paths": 1852,
-    "distinct_byte_contents": 1469,
-    "byte_identical_duplicate_groups": 124,
+    "distinct_byte_contents": 1470,
+    "byte_identical_duplicate_groups": 123,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 939,
@@ -28,8 +28,8 @@
       "imported-archive": 23,
       "working-source": 874
     },
-    "working_named_theorem_lemma_occurrences": 24701,
-    "working_explicit_named_declaration_occurrences": 36739,
+    "working_named_theorem_lemma_occurrences": 24736,
+    "working_explicit_named_declaration_occurrences": 36781,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 288,
@@ -5962,11 +5962,11 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
-      "sha256": "bc2ac2354c33c14ad49d362553804f2fe6de6079178a100160bd2868ebf9722d",
+      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
-      "receipt_bytes_match": true,
+      "receipt_bytes_match": false,
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
@@ -296943,6 +296943,537 @@
       },
       "print_axioms_commands": 33
     },
+    "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130": {
+      "byte_size": 63370,
+      "line_count": 1000,
+      "imports": [
+        "Becoming.RuleCapture"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.Unread",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.turn_unread",
+          "line": 135
+        },
+        {
+          "kind": "def",
+          "name": "loopPart",
+          "qualified_name_hint": "Becoming.ClosedCapture.loopPart",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "goAlike_of_unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.goAlike_of_unread",
+          "line": 147
+        },
+        {
+          "kind": "theorem",
+          "name": "identifiesAlike_iff_unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.identifiesAlike_iff_unread",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "unread_course",
+          "qualified_name_hint": "Becoming.ClosedCapture.unread_course",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "courses_alike_iff_unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.courses_alike_iff_unread",
+          "line": 202
+        },
+        {
+          "kind": "theorem",
+          "name": "reads_beyond_of_apart",
+          "qualified_name_hint": "Becoming.ClosedCapture.reads_beyond_of_apart",
+          "line": 212
+        },
+        {
+          "kind": "def",
+          "name": "join",
+          "qualified_name_hint": "Becoming.ClosedCapture.join",
+          "line": 220
+        },
+        {
+          "kind": "def",
+          "name": "joinRead",
+          "qualified_name_hint": "Becoming.ClosedCapture.joinRead",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "join_unread",
+          "qualified_name_hint": "Becoming.ClosedCapture.join_unread",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "join_alike",
+          "qualified_name_hint": "Becoming.ClosedCapture.join_alike",
+          "line": 231
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_join",
+          "qualified_name_hint": "Becoming.ClosedCapture.turn_join",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "join_course",
+          "qualified_name_hint": "Becoming.ClosedCapture.join_course",
+          "line": 248
+        },
+        {
+          "kind": "def",
+          "name": "Accrues",
+          "qualified_name_hint": "Becoming.ClosedCapture.Accrues",
+          "line": 273
+        },
+        {
+          "kind": "theorem",
+          "name": "loss_grows",
+          "qualified_name_hint": "Becoming.ClosedCapture.loss_grows",
+          "line": 277
+        },
+        {
+          "kind": "theorem",
+          "name": "turned_by_loss",
+          "qualified_name_hint": "Becoming.ClosedCapture.turned_by_loss",
+          "line": 291
+        },
+        {
+          "kind": "theorem",
+          "name": "lock_outlives_loss",
+          "qualified_name_hint": "Becoming.ClosedCapture.lock_outlives_loss",
+          "line": 307
+        },
+        {
+          "kind": "def",
+          "name": "lossStep",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.lossStep",
+          "line": 344
+        },
+        {
+          "kind": "def",
+          "name": "closedRead",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.closedRead",
+          "line": 347
+        },
+        {
+          "kind": "def",
+          "name": "lossRead",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.lossRead",
+          "line": 350
+        },
+        {
+          "kind": "def",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.closed",
+          "line": 356
+        },
+        {
+          "kind": "def",
+          "name": "opened",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.opened",
+          "line": 360
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_locked",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.closed_locked",
+          "line": 365
+        },
+        {
+          "kind": "theorem",
+          "name": "open_falls",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.open_falls",
+          "line": 375
+        },
+        {
+          "kind": "theorem",
+          "name": "lossRead_turns",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.lossRead_turns",
+          "line": 379
+        },
+        {
+          "kind": "theorem",
+          "name": "open_turned",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.open_turned",
+          "line": 385
+        },
+        {
+          "kind": "theorem",
+          "name": "open_reads",
+          "qualified_name_hint": "Becoming.ClosedCapture.Beyond.open_reads",
+          "line": 391
+        },
+        {
+          "kind": "def",
+          "name": "both",
+          "qualified_name_hint": "Becoming.ClosedCapture.both",
+          "line": 405
+        },
+        {
+          "kind": "def",
+          "name": "readers",
+          "qualified_name_hint": "Becoming.ClosedCapture.readers",
+          "line": 412
+        },
+        {
+          "kind": "def",
+          "name": "byRule",
+          "qualified_name_hint": "Becoming.ClosedCapture.byRule",
+          "line": 416
+        },
+        {
+          "kind": "theorem",
+          "name": "both_reads",
+          "qualified_name_hint": "Becoming.ClosedCapture.both_reads",
+          "line": 425
+        },
+        {
+          "kind": "theorem",
+          "name": "byRule_raises",
+          "qualified_name_hint": "Becoming.ClosedCapture.byRule_raises",
+          "line": 429
+        },
+        {
+          "kind": "theorem",
+          "name": "both_upper",
+          "qualified_name_hint": "Becoming.ClosedCapture.both_upper",
+          "line": 433
+        },
+        {
+          "kind": "theorem",
+          "name": "readers_not_below",
+          "qualified_name_hint": "Becoming.ClosedCapture.readers_not_below",
+          "line": 438
+        },
+        {
+          "kind": "theorem",
+          "name": "reading_absorbed",
+          "qualified_name_hint": "Becoming.ClosedCapture.reading_absorbed",
+          "line": 455
+        },
+        {
+          "kind": "theorem",
+          "name": "readers_uniform_locks",
+          "qualified_name_hint": "Becoming.ClosedCapture.readers_uniform_locks",
+          "line": 470
+        },
+        {
+          "kind": "def",
+          "name": "mind",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.mind",
+          "line": 491
+        },
+        {
+          "kind": "def",
+          "name": "read",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.read",
+          "line": 494
+        },
+        {
+          "kind": "theorem",
+          "name": "readMono",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.readMono",
+          "line": 496
+        },
+        {
+          "kind": "theorem",
+          "name": "formed",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.formed",
+          "line": 500
+        },
+        {
+          "kind": "theorem",
+          "name": "start_locked",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.start_locked",
+          "line": 503
+        },
+        {
+          "kind": "theorem",
+          "name": "reform_absorbed",
+          "qualified_name_hint": "Becoming.ClosedCapture.Proportional.reform_absorbed",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "rearrange_eq",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.rearrange_eq",
+          "line": 532
+        },
+        {
+          "kind": "theorem",
+          "name": "rearrange",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.rearrange",
+          "line": 539
+        },
+        {
+          "kind": "theorem",
+          "name": "rearrange_lt",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.rearrange_lt",
+          "line": 547
+        },
+        {
+          "kind": "theorem",
+          "name": "add_swap",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.add_swap",
+          "line": 556
+        },
+        {
+          "kind": "def",
+          "name": "pool",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool",
+          "line": 563
+        },
+        {
+          "kind": "theorem",
+          "name": "cross",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.cross",
+          "line": 569
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_mono",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_mono",
+          "line": 583
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_mono_against",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_mono_against",
+          "line": 594
+        },
+        {
+          "kind": "def",
+          "name": "poolRead",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.poolRead",
+          "line": 606
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_against",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_against",
+          "line": 610
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_reads_iff",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+          "line": 617
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_reads",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_reads",
+          "line": 632
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_through",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_through",
+          "line": 638
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_favours",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_favours",
+          "line": 644
+        },
+        {
+          "kind": "theorem",
+          "name": "through_locks",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.through_locks",
+          "line": 651
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_not_rising",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.pool_not_rising",
+          "line": 662
+        },
+        {
+          "kind": "theorem",
+          "name": "le_of_disfavours",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.le_of_disfavours",
+          "line": 669
+        },
+        {
+          "kind": "theorem",
+          "name": "mirror_favours_iff",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+          "line": 679
+        },
+        {
+          "kind": "theorem",
+          "name": "mirror_disfavours_iff",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+          "line": 699
+        },
+        {
+          "kind": "theorem",
+          "name": "mirror_le",
+          "qualified_name_hint": "Becoming.ClosedCapture.Drawn.mirror_le",
+          "line": 719
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_agree",
+          "qualified_name_hint": "Becoming.ClosedCapture.turn_agree",
+          "line": 731
+        },
+        {
+          "kind": "theorem",
+          "name": "course_past",
+          "qualified_name_hint": "Becoming.ClosedCapture.course_past",
+          "line": 740
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeing_locks",
+          "qualified_name_hint": "Becoming.ClosedCapture.agreeing_locks",
+          "line": 760
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeing_stays",
+          "qualified_name_hint": "Becoming.ClosedCapture.agreeing_stays",
+          "line": 770
+        },
+        {
+          "kind": "def",
+          "name": "lossPool",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.lossPool",
+          "line": 790
+        },
+        {
+          "kind": "theorem",
+          "name": "lossPool_past",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.lossPool_past",
+          "line": 798
+        },
+        {
+          "kind": "def",
+          "name": "course",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.course",
+          "line": 808
+        },
+        {
+          "kind": "theorem",
+          "name": "past_course",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.past_course",
+          "line": 816
+        },
+        {
+          "kind": "theorem",
+          "name": "read_late_kept",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.read_late_kept",
+          "line": 835
+        },
+        {
+          "kind": "theorem",
+          "name": "read_in_time_turns",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.read_in_time_turns",
+          "line": 866
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_read",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.rule_read",
+          "line": 891
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_iff",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.kept_iff",
+          "line": 905
+        },
+        {
+          "kind": "theorem",
+          "name": "turned_iff",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.turned_iff",
+          "line": 923
+        },
+        {
+          "kind": "def",
+          "name": "fewCarriers",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.fewCarriers",
+          "line": 943
+        },
+        {
+          "kind": "def",
+          "name": "inTime",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.inTime",
+          "line": 946
+        },
+        {
+          "kind": "def",
+          "name": "late",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.late",
+          "line": 950
+        },
+        {
+          "kind": "theorem",
+          "name": "lossStep_accrues",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.lossStep_accrues",
+          "line": 953
+        },
+        {
+          "kind": "theorem",
+          "name": "inTime_majority",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.inTime_majority",
+          "line": 957
+        },
+        {
+          "kind": "theorem",
+          "name": "inTime_turned",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.inTime_turned",
+          "line": 965
+        },
+        {
+          "kind": "theorem",
+          "name": "late_majority",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.late_majority",
+          "line": 975
+        },
+        {
+          "kind": "theorem",
+          "name": "late_kept",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.late_kept",
+          "line": 982
+        },
+        {
+          "kind": "theorem",
+          "name": "late_reads_loss",
+          "qualified_name_hint": "Becoming.ClosedCapture.Thinned.late_reads_loss",
+          "line": 992
+        }
+      ],
+      "declaration_counts": {
+        "def": 22,
+        "theorem": 63
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "b8b96cdcd725b5657dbc1c8df04e2dddd23fd69f3a69b4942d7e73d44b4a51d1": {
       "byte_size": 25914,
       "line_count": 580,
@@ -414435,10 +414966,6 @@
     "bb00f7eb64a4303964415450dc10611359416c2fb14baceab89f8f73d1bed604": [
       "_process/history/worktree-salvage-2026-10-18/jolly-pike-140c94/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261011T170859.998618Z/Becoming.Inquiry.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean"
-    ],
-    "bc2ac2354c33c14ad49d362553804f2fe6de6079178a100160bd2868ebf9722d": [
-      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lu1-one-lumping/tree/Becoming/ClosedCapture.lean",
-      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean"
     ],
     "bf401ff23a845430288089d9d43e57420a6afc7d50751bbc27b79a073bdca7ed": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/formal/development/history/1791250934371742000/EvaluativeSuccession.lean",
