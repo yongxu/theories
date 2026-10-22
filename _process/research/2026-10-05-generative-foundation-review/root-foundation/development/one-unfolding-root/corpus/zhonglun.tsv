@@ -1,0 +1,855 @@
+id	text_id	section	unit_type	text	source	offsets	note
+ZL-01-H1	ZL	觀因緣品第一	题	中論觀因緣品第一	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	585-593	
+ZL-01-H2	ZL	觀因緣品第一	题	龍樹菩薩造梵志青目釋姚秦三藏鳩摩羅什譯	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	593-612	
+ZL-01-001	ZL	觀因緣品第一	偈	不生亦不滅，不常亦不斷，不一亦不異，不來亦不出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	612-636	opening verse, unquoted in file; typed 偈 by position and five-character metre
+ZL-01-002	ZL	觀因緣品第一	偈	能說是因緣，善滅諸戲論，我稽首禮佛，諸說中第一。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	636-660	opening verse, unquoted in file; typed 偈 by position and five-character metre
+ZL-01-003	ZL	觀因緣品第一	释	問曰：何故造此論？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	660-669	
+ZL-01-004	ZL	觀因緣品第一	释	答曰：有人言萬物從大自在天生、有言從韋紐天生、有言從和合生、有言從時生、有言從世性生、有言從變生、有言從自然生、有言從微塵生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	669-732	
+ZL-01-005	ZL	觀因緣品第一	释	有如是等謬故，墮於無因、邪因、斷常等邪見，種種說我我所，不知正法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	732-765	
+ZL-01-006	ZL	觀因緣品第一	释	佛欲斷如是等諸邪見令知佛法故，先於聲聞法中說十二因緣，又為已習行有大心堪受深法者以大乘法說因緣相，所謂一切法不生不滅、不一不異等，畢竟空、無所有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	765-838	
+ZL-01-007	ZL	觀因緣品第一	释	如《般若波羅蜜》中說：佛告須菩提：「菩薩坐道場時，觀十二因緣，如虛空不可盡。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	838-877	contains a quotation not typed as verse (metre test failed)
+ZL-01-008	ZL	觀因緣品第一	释	佛滅度後，後五百歲像法中，人根轉鈍、深著諸法，求十二因緣、五陰、十二入、十八界等決定相，不知佛意，但著文字，聞大乘法中說畢竟空，不知何因緣故空，即生疑見：若都畢竟空，云何分別有罪福報應等？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	877-971	
+ZL-01-009	ZL	觀因緣品第一	释	如是則無世諦、第一義諦。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	971-983	
+ZL-01-010	ZL	觀因緣品第一	释	取是空相而起貪著，於畢竟空中生種種過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	983-1002	
+ZL-01-011	ZL	觀因緣品第一	释	龍樹菩薩為是等故，造此中論。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1002-1016	
+ZL-01-012	ZL	觀因緣品第一	偈	「不生亦不滅，不常亦不斷，不一亦不異，不來亦不出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1016-1041	quoted verse: 「」 with five-character lines
+ZL-01-013	ZL	觀因緣品第一	偈	能說是因緣，善滅諸戲論，我稽首禮佛，諸說中第一。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1041-1066	quoted verse: 「」 with five-character lines
+ZL-01-014	ZL	觀因緣品第一	释	以此二偈讚佛，則已略說第一義。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1066-1081	
+ZL-01-015	ZL	觀因緣品第一	释	問曰：諸法無量，何故但以此八事破？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1081-1098	
+ZL-01-016	ZL	觀因緣品第一	释	答曰：法雖無量，略說八事則為總破一切法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1098-1118	
+ZL-01-017	ZL	觀因緣品第一	释	不生者，諸論師種種說生相，或謂因果一、或謂因果異、或謂因中先有果、或謂因中先無果、或謂自體生、或謂從他生、或謂共生、或謂有生、或謂無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1118-1186	
+ZL-01-018	ZL	觀因緣品第一	释	如是等說生相皆不然，此事後當廣說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1186-1203	
+ZL-01-019	ZL	觀因緣品第一	释	生相決定不可得，故不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1203-1215	
+ZL-01-020	ZL	觀因緣品第一	释	不滅者，若無生何得有滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1215-1227	
+ZL-01-021	ZL	觀因緣品第一	释	以無生、無滅故，餘六事亦無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1227-1241	
+ZL-01-022	ZL	觀因緣品第一	释	問曰：不生、不滅已總破一切法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1241-1256	
+ZL-01-023	ZL	觀因緣品第一	释	何故復說六事？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1256-1263	
+ZL-01-024	ZL	觀因緣品第一	释	答曰：為成不生不滅義故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1263-1275	
+ZL-01-025	ZL	觀因緣品第一	释	有人不受不生不滅，而信不常不斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1275-1291	
+ZL-01-026	ZL	觀因緣品第一	释	若深求不常不斷，即是不生不滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1291-1306	
+ZL-01-027	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1306-1310	
+ZL-01-028	ZL	觀因緣品第一	释	法若實有則不應無，先有今無是即為斷，若先有性是則為常，是故說不常不斷，即入不生不滅義。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1310-1353	
+ZL-01-029	ZL	觀因緣品第一	释	有人雖聞四種破諸法，猶以四門成諸法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1353-1371	
+ZL-01-030	ZL	觀因緣品第一	释	是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1371-1376	
+ZL-01-031	ZL	觀因緣品第一	释	若一則無緣，若異則無相續，後當種種破，是故復說不一不異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1376-1404	
+ZL-01-032	ZL	觀因緣品第一	释	有人雖聞六種破諸法，猶以來出成諸法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1404-1422	
+ZL-01-033	ZL	觀因緣品第一	释	來者言諸法從自在天、世性、微塵等來，出者還去至本處。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1422-1448	
+ZL-01-034	ZL	觀因緣品第一	释	復次萬物無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1448-1455	
+ZL-01-035	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1455-1459	
+ZL-01-036	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1459-1465	
+ZL-01-037	ZL	觀因緣品第一	释	世間眼見劫初穀不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1465-1475	
+ZL-01-038	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1475-1479	
+ZL-01-039	ZL	觀因緣品第一	释	離劫初穀，今穀不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1479-1490	
+ZL-01-040	ZL	觀因緣品第一	释	若離劫初穀有今穀者則應有生；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1490-1504	
+ZL-01-041	ZL	觀因緣品第一	释	而實不爾，是故不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1504-1514	
+ZL-01-042	ZL	觀因緣品第一	释	問曰：若不生則應滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1514-1524	
+ZL-01-043	ZL	觀因緣品第一	释	答曰：不滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1524-1530	
+ZL-01-044	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1530-1534	
+ZL-01-045	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1534-1540	
+ZL-01-046	ZL	觀因緣品第一	释	世間眼見劫初穀不滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1540-1550	
+ZL-01-047	ZL	觀因緣品第一	释	若滅，今不應有穀；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1550-1559	
+ZL-01-048	ZL	觀因緣品第一	释	而實有穀，是故不滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1559-1569	
+ZL-01-049	ZL	觀因緣品第一	释	問曰：若不滅則應常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1569-1579	
+ZL-01-050	ZL	觀因緣品第一	释	答曰：不常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1579-1585	
+ZL-01-051	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1585-1589	
+ZL-01-052	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1589-1595	
+ZL-01-053	ZL	觀因緣品第一	释	世間眼見萬物不常，如穀芽時種則變壞，是故不常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1595-1618	
+ZL-01-054	ZL	觀因緣品第一	释	問曰：若不常則應斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1618-1628	
+ZL-01-055	ZL	觀因緣品第一	释	答曰：不斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1628-1634	
+ZL-01-056	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1634-1638	
+ZL-01-057	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1638-1644	
+ZL-01-058	ZL	觀因緣品第一	释	世間眼見萬物不斷，如從穀有芽，是故不斷；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1644-1664	
+ZL-01-059	ZL	觀因緣品第一	释	若斷，不應相續。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1664-1672	
+ZL-01-060	ZL	觀因緣品第一	释	問曰：若爾者，萬物是一。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1672-1684	
+ZL-01-061	ZL	觀因緣品第一	释	答曰：不一。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1684-1690	
+ZL-01-062	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1690-1694	
+ZL-01-063	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1694-1700	
+ZL-01-064	ZL	觀因緣品第一	释	世間眼見萬物不一，如穀不作芽、芽不作穀。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1700-1720	
+ZL-01-065	ZL	觀因緣品第一	释	若穀作芽、芽作穀者應是一；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1720-1733	
+ZL-01-066	ZL	觀因緣品第一	释	而實不爾，是故不一。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1733-1743	
+ZL-01-067	ZL	觀因緣品第一	释	問曰：若不一則應異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1743-1753	
+ZL-01-068	ZL	觀因緣品第一	释	答曰：不異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1753-1759	
+ZL-01-069	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1759-1763	
+ZL-01-070	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1763-1769	
+ZL-01-071	ZL	觀因緣品第一	释	世間眼見萬物不異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1769-1778	
+ZL-01-072	ZL	觀因緣品第一	释	若異者，何故分別穀芽、穀莖、穀葉？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1778-1795	
+ZL-01-073	ZL	觀因緣品第一	释	不說樹芽、樹莖、樹葉，是故不異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1795-1811	
+ZL-01-074	ZL	觀因緣品第一	释	問曰：若不異，應有來。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1811-1822	
+ZL-01-075	ZL	觀因緣品第一	释	答曰：無來。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1822-1828	
+ZL-01-076	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1828-1832	
+ZL-01-077	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1832-1838	
+ZL-01-078	ZL	觀因緣品第一	释	世間眼見萬物不來，如穀子中芽無所從來。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1838-1857	
+ZL-01-079	ZL	觀因緣品第一	释	若來者，芽應從餘處來，如鳥來栖樹；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1857-1874	
+ZL-01-080	ZL	觀因緣品第一	释	而實不爾，是故不來。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1874-1884	
+ZL-01-081	ZL	觀因緣品第一	释	問曰：若不來，應有出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1884-1895	
+ZL-01-082	ZL	觀因緣品第一	释	答曰：不出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1895-1901	
+ZL-01-083	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1901-1905	
+ZL-01-084	ZL	觀因緣品第一	释	世間現見故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1905-1911	
+ZL-01-085	ZL	觀因緣品第一	释	世間眼見萬物不出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1911-1920	
+ZL-01-086	ZL	觀因緣品第一	释	若有出，應見芽從穀出，如蛇從穴出；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1920-1937	
+ZL-01-087	ZL	觀因緣品第一	释	而實不爾，是故不出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1937-1947	
+ZL-01-088	ZL	觀因緣品第一	释	問曰：汝雖釋不生不滅義，我欲聞造論者所說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1947-1968	
+ZL-01-089	ZL	觀因緣品第一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1968-1971	no terminal punctuation at unit end
+ZL-01-090	ZL	觀因緣品第一	偈	「諸法不自生，亦不從他生，不共不無因，是故知無生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1971-1997	quoted verse: 「」 with five-character lines
+ZL-01-091	ZL	觀因緣品第一	释	不自生者，萬物無有從自體生，必待眾因。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	1997-2016	
+ZL-01-092	ZL	觀因緣品第一	释	復次若從自體生，則一法有二體：一謂生、二謂生者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2016-2040	
+ZL-01-093	ZL	觀因緣品第一	释	若離餘因從自體生者，則無因無緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2040-2056	
+ZL-01-094	ZL	觀因緣品第一	释	又生更有生，生則無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2056-2067	
+ZL-01-095	ZL	觀因緣品第一	释	自無故，他亦無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2067-2075	
+ZL-01-096	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2075-2079	
+ZL-01-097	ZL	觀因緣品第一	释	有自故有他。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2079-2085	
+ZL-01-098	ZL	觀因緣品第一	释	若不從自生，亦不從他生，共生則有二過：自生、他生故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2085-2111	
+ZL-01-099	ZL	觀因緣品第一	释	若無因而有萬物者，是則為常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2111-2125	
+ZL-01-100	ZL	觀因緣品第一	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2125-2130	
+ZL-01-101	ZL	觀因緣品第一	释	無因則無果，若無因有果者，布施持戒等應墮地獄、十惡五逆應當生天，以無因故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2130-2167	
+ZL-01-102	ZL	觀因緣品第一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2167-2170	no terminal punctuation at unit end
+ZL-01-103	ZL	觀因緣品第一	偈	「如諸法自性，不在於緣中，以無自性故，他性亦復無。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2170-2196	quoted verse: 「」 with five-character lines
+ZL-01-104	ZL	觀因緣品第一	释	諸法自性不在眾緣中，但眾緣和合故得名字。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2196-2216	
+ZL-01-105	ZL	觀因緣品第一	释	自性即是自體，眾緣中無自性。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2216-2230	
+ZL-01-106	ZL	觀因緣品第一	释	自性無故不自生，自性無故他性亦無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2230-2247	
+ZL-01-107	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2247-2251	
+ZL-01-108	ZL	觀因緣品第一	释	因自性有他性，他性於他亦是自性。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2251-2267	
+ZL-01-109	ZL	觀因緣品第一	释	若破自性即破他性，是故不應從他性生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2267-2285	
+ZL-01-110	ZL	觀因緣品第一	释	若破自性、他性，即破共義。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2285-2298	
+ZL-01-111	ZL	觀因緣品第一	释	無因則有大過，有因尚可破，何況無因！	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2298-2316	
+ZL-01-112	ZL	觀因緣品第一	释	於四句中生不可得，是故不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2316-2330	
+ZL-01-113	ZL	觀因緣品第一	释	問曰：阿毘曇人言「諸法從四緣生」，云何言不生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2330-2353	contains a quotation not typed as verse (metre test failed)
+ZL-01-114	ZL	觀因緣品第一	释	何謂四緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2353-2358	
+ZL-01-115	ZL	觀因緣品第一	偈	「因緣次第緣，緣緣增上緣，四緣生諸法，更無第五緣。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2358-2384	quoted verse: 「」 with five-character lines
+ZL-01-116	ZL	觀因緣品第一	释	一切所有緣，皆攝在四緣，以是四緣萬物得生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2384-2405	
+ZL-01-117	ZL	觀因緣品第一	释	因緣名一切有為法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2405-2414	
+ZL-01-118	ZL	觀因緣品第一	释	次第緣除過去現在阿羅漢最後心心數法，餘過去現在心心數法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2414-2442	
+ZL-01-119	ZL	觀因緣品第一	释	緣緣、增上緣一切法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2442-2452	
+ZL-01-120	ZL	觀因緣品第一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2452-2455	no terminal punctuation at unit end
+ZL-01-121	ZL	觀因緣品第一	偈	「果為從緣生，為從非緣生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2455-2468	quoted verse: 「」 with five-character lines
+ZL-01-122	ZL	觀因緣品第一	偈	是緣為有果，是緣為無果？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2468-2481	quoted verse: 「」 with five-character lines
+ZL-01-123	ZL	觀因緣品第一	释	若謂有果，是果為從緣生、為從非緣生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2481-2499	
+ZL-01-124	ZL	觀因緣品第一	释	若謂有緣，是緣為有果、為無果？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2499-2514	
+ZL-01-125	ZL	觀因緣品第一	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2514-2519	
+ZL-01-126	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2519-2523	
+ZL-01-127	ZL	觀因緣品第一	偈	「因是法生果，是法名為緣；若是果未生，何不名非緣？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2523-2549	quoted verse: 「」 with five-character lines
+ZL-01-128	ZL	觀因緣品第一	释	諸緣無決定。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2549-2555	
+ZL-01-129	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2555-2559	
+ZL-01-130	ZL	觀因緣品第一	释	若果未生，是時不名為緣；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2559-2571	
+ZL-01-131	ZL	觀因緣品第一	释	但眼見從緣生果，故名之為緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2571-2585	
+ZL-01-132	ZL	觀因緣品第一	释	緣成由於果，以果後、緣先故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2585-2599	
+ZL-01-133	ZL	觀因緣品第一	释	若未有果，何得名為緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2599-2610	
+ZL-01-134	ZL	觀因緣品第一	释	如瓶以水土和合故有瓶生，見瓶故知水土等是瓶緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2610-2633	
+ZL-01-135	ZL	觀因緣品第一	释	若瓶未生時，何以不名水土等為非緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2633-2650	
+ZL-01-136	ZL	觀因緣品第一	释	是故果不從緣生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2650-2658	
+ZL-01-137	ZL	觀因緣品第一	释	緣尚不生，何況非緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2658-2668	
+ZL-01-138	ZL	觀因緣品第一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2668-2671	no terminal punctuation at unit end
+ZL-01-139	ZL	觀因緣品第一	偈	「果先於緣中，有無俱不可。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2671-2684	quoted verse: 「」 with five-character lines
+ZL-01-140	ZL	觀因緣品第一	偈	先無為誰緣，先有何用緣。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2684-2697	quoted verse: 「」 with five-character lines
+ZL-01-141	ZL	觀因緣品第一	释	緣中先非有果、非無果。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2697-2708	
+ZL-01-142	ZL	觀因緣品第一	释	若先有果，不名為緣，果先有故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2708-2723	
+ZL-01-143	ZL	觀因緣品第一	释	若先無果，亦不名為緣，不生餘物故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2723-2740	
+ZL-01-144	ZL	觀因緣品第一	释	問曰：已總破一切因緣，今欲聞一一破諸緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2740-2760	
+ZL-01-145	ZL	觀因緣品第一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2760-2763	no terminal punctuation at unit end
+ZL-01-146	ZL	觀因緣品第一	偈	「若果非有生，亦復非無生，亦非有無生，何得言有緣？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2763-2789	quoted verse: 「」 with five-character lines
+ZL-01-147	ZL	觀因緣品第一	释	若緣能生果，應有三種：若有、若無、若有無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2789-2810	
+ZL-01-148	ZL	觀因緣品第一	释	如先偈中說，緣中若先有果，不應言生，以先有故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2810-2833	
+ZL-01-149	ZL	觀因緣品第一	释	若先無果，不應言生，以先無故，亦應與非緣同故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2833-2856	
+ZL-01-150	ZL	觀因緣品第一	释	有無亦不生者，有無名為半有半無，二俱有過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2856-2877	
+ZL-01-151	ZL	觀因緣品第一	释	又有與無相違，無與有相違，何得一法有二相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2877-2898	
+ZL-01-152	ZL	觀因緣品第一	释	如是三種求果生相不可得故，云何言有因緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2898-2918	
+ZL-01-153	ZL	觀因緣品第一	释	次第緣者：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2918-2923	no terminal punctuation at unit end
+ZL-01-154	ZL	觀因緣品第一	偈	「果若未生時，則不應有滅，滅法何能緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2923-2942	quoted verse: 「」 with five-character lines
+ZL-01-155	ZL	觀因緣品第一	偈	故無次第緣。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2942-2949	quoted verse: 「」 with five-character lines
+ZL-01-156	ZL	觀因緣品第一	释	諸心心數法於三世中次第生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2949-2962	
+ZL-01-157	ZL	觀因緣品第一	释	現在心心數法滅，與未來心作次第緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2962-2979	
+ZL-01-158	ZL	觀因緣品第一	释	未來法未生，與誰作次第緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2979-2992	
+ZL-01-159	ZL	觀因緣品第一	释	若未來法已有，即是生，何用次第緣？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	2992-3009	
+ZL-01-160	ZL	觀因緣品第一	释	現在心心數法無有住時，若不住，何能為次第緣，若有住，則非有為法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3009-3041	
+ZL-01-161	ZL	觀因緣品第一	释	何以故，一切有為法常有滅相故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3041-3056	
+ZL-01-162	ZL	觀因緣品第一	释	若滅已，則不能與作次第緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3056-3069	
+ZL-01-163	ZL	觀因緣品第一	释	若言滅法猶有則是常，若常則無罪福等。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3069-3087	
+ZL-01-164	ZL	觀因緣品第一	释	若謂滅時能與作次第緣，滅時半滅半未滅，更無第三法名為滅時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3087-3116	
+ZL-01-165	ZL	觀因緣品第一	释	又佛說：一切有為法念念滅，無一念時住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3116-3135	
+ZL-01-166	ZL	觀因緣品第一	释	云何言現在法有欲滅未欲滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3135-3148	
+ZL-01-167	ZL	觀因緣品第一	释	汝謂一念中無是欲滅未欲滅，則破自法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3148-3166	
+ZL-01-168	ZL	觀因緣品第一	释	汝阿毘曇說：有滅法、有不滅法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3166-3181	
+ZL-01-169	ZL	觀因緣品第一	释	有欲滅法、有不欲滅法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3181-3192	
+ZL-01-170	ZL	觀因緣品第一	释	欲滅法者，現在法將欲滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3192-3204	
+ZL-01-171	ZL	觀因緣品第一	释	未欲滅法者，除現在將欲滅法，餘現在法及過去未來無為法，是名不欲滅法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3204-3238	
+ZL-01-172	ZL	觀因緣品第一	释	是故無次第緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3238-3245	
+ZL-01-173	ZL	觀因緣品第一	释	緣緣者：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3245-3249	no terminal punctuation at unit end
+ZL-01-174	ZL	觀因緣品第一	偈	「如諸佛所說，真實微妙法，於此無緣法，云何有緣緣？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3249-3275	quoted verse: 「」 with five-character lines
+ZL-01-175	ZL	觀因緣品第一	释	佛說大乘諸法，若有色無色、有形無形、有漏無漏、有為無為等諸法相入於法性，一切皆空無相無緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3275-3320	
+ZL-01-176	ZL	觀因緣品第一	释	譬如眾流入海同為一味。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3320-3331	
+ZL-01-177	ZL	觀因緣品第一	释	實法可信，隨宜所說不可為實，是故無緣緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3331-3351	
+ZL-01-178	ZL	觀因緣品第一	释	增上緣者：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3351-3356	no terminal punctuation at unit end
+ZL-01-179	ZL	觀因緣品第一	偈	「諸法無自性，故無有有相；說有是事故，是事有不然。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3356-3382	quoted verse: 「」 with five-character lines
+ZL-01-180	ZL	觀因緣品第一	释	經說十二因緣，是事有故是事有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3382-3397	
+ZL-01-181	ZL	觀因緣品第一	释	此則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3397-3402	
+ZL-01-182	ZL	觀因緣品第一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3402-3406	
+ZL-01-183	ZL	觀因緣品第一	释	諸法從眾緣生故自無定性，自無定性故無有有相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3406-3428	
+ZL-01-184	ZL	觀因緣品第一	释	有相無故，何得言是事有故是事有？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3428-3444	
+ZL-01-185	ZL	觀因緣品第一	释	是故無增上緣，佛隨凡夫分別有無故說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3444-3462	
+ZL-01-186	ZL	觀因緣品第一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3462-3465	no terminal punctuation at unit end
+ZL-01-187	ZL	觀因緣品第一	偈	「略廣因緣中，求果不可得；因緣中若無，云何從緣出？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3465-3491	quoted verse: 「」 with five-character lines
+ZL-01-188	ZL	觀因緣品第一	释	略者，於和合因緣中無果。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3491-3503	
+ZL-01-189	ZL	觀因緣品第一	释	廣者，於一一緣中亦無果。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3503-3515	
+ZL-01-190	ZL	觀因緣品第一	释	若略廣因緣中無果，云何言果從因緣出？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3515-3533	
+ZL-01-191	ZL	觀因緣品第一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3533-3536	no terminal punctuation at unit end
+ZL-01-192	ZL	觀因緣品第一	偈	「若謂緣無果，而從緣中出；是果何不從，非緣中而出？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3536-3562	quoted verse: 「」 with five-character lines
+ZL-01-193	ZL	觀因緣品第一	释	若因緣中求果不可得，何故不從非緣出？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3562-3580	
+ZL-01-194	ZL	觀因緣品第一	释	如泥中無瓶，何故不從乳中出？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3580-3594	
+ZL-01-195	ZL	觀因緣品第一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3594-3597	no terminal punctuation at unit end
+ZL-01-196	ZL	觀因緣品第一	偈	「若果從緣生，是緣無自性，從無自性生，何得從緣生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3597-3622	quoted verse: 「」 with five-character lines
+ZL-01-197	ZL	觀因緣品第一	偈	果不從緣生，不從非緣生，以果無有故，緣非緣亦無。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3622-3647	quoted verse: 「」 with five-character lines
+ZL-01-198	ZL	觀因緣品第一	释	果從眾緣生，是緣無自性。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3647-3659	
+ZL-01-199	ZL	觀因緣品第一	释	若無自性則無法，無法何能生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3659-3673	
+ZL-01-200	ZL	觀因緣品第一	释	是故果不從緣生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3673-3681	
+ZL-01-201	ZL	觀因緣品第一	释	不從非緣生者，破緣故說非緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3681-3695	
+ZL-01-202	ZL	觀因緣品第一	释	實無非緣法，是故不從非緣生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3695-3709	
+ZL-01-203	ZL	觀因緣品第一	释	若不從二生，是則無果。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3709-3720	
+ZL-01-204	ZL	觀因緣品第一	释	無果故，緣非緣亦無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3720-3730	
+ZL-02-H1	ZL	觀去來品第二	题	中論觀去來品第二	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3730-3738	
+ZL-02-001	ZL	觀去來品第二	释	問曰：世間眼見三時有作：已去、未去、去時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3738-3759	
+ZL-02-002	ZL	觀去來品第二	释	以有作故，當知有諸法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3759-3770	
+ZL-02-003	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3770-3773	no terminal punctuation at unit end
+ZL-02-004	ZL	觀去來品第二	偈	「已去無有去，未去亦無去，離已去未去，去時亦無去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3773-3799	quoted verse: 「」 with five-character lines
+ZL-02-005	ZL	觀去來品第二	释	已去無有去，已去故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3799-3809	
+ZL-02-006	ZL	觀去來品第二	释	若離去有去業，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3809-3821	
+ZL-02-007	ZL	觀去來品第二	释	未去亦無去，未有去法故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3821-3833	
+ZL-02-008	ZL	觀去來品第二	释	去時名半去半未去，不離已去、未去故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3833-3851	
+ZL-02-009	ZL	觀去來品第二	释	問曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3851-3854	no terminal punctuation at unit end
+ZL-02-010	ZL	觀去來品第二	偈	「動處則有去，此中有去時，非已去未去，是故去時去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3854-3880	quoted verse: 「」 with five-character lines
+ZL-02-011	ZL	觀去來品第二	释	隨有作業處，是中應有去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3880-3892	
+ZL-02-012	ZL	觀去來品第二	释	眼見去時中有作業、已去中作業已滅、未去中未有作業，是故當知去時有去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3892-3926	
+ZL-02-013	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3926-3929	no terminal punctuation at unit end
+ZL-02-014	ZL	觀去來品第二	偈	「云何於去時，而當有去法？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3929-3942	quoted verse: 「」 with five-character lines
+ZL-02-015	ZL	觀去來品第二	偈	若離於去法，去時不可得。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3942-3955	quoted verse: 「」 with five-character lines
+ZL-02-016	ZL	觀去來品第二	释	去時有去法，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3955-3966	
+ZL-02-017	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3966-3970	
+ZL-02-018	ZL	觀去來品第二	释	離去法去時不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3970-3979	
+ZL-02-019	ZL	觀去來品第二	释	若離去法有去時者，應去時中有去，如器中有果。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	3979-4001	
+ZL-02-020	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4001-4004	no terminal punctuation at unit end
+ZL-02-021	ZL	觀去來品第二	偈	「若言去時去，是人則有咎；離去有去時，去時獨去故。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4004-4030	quoted verse: 「」 with five-character lines
+ZL-02-022	ZL	觀去來品第二	释	若謂已去未去中無去、去時實有去者，是人則有咎。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4030-4053	
+ZL-02-023	ZL	觀去來品第二	释	若離去法有去時，則不相因待。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4053-4067	
+ZL-02-024	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4067-4071	
+ZL-02-025	ZL	觀去來品第二	释	若說去時有去，是則為二；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4071-4083	
+ZL-02-026	ZL	觀去來品第二	释	而實不爾，是故不得言離去有去時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4083-4099	
+ZL-02-027	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4099-4102	no terminal punctuation at unit end
+ZL-02-028	ZL	觀去來品第二	偈	「若去時有去，則有二種去：一謂為去時，二謂去時去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4102-4128	quoted verse: 「」 with five-character lines
+ZL-02-029	ZL	觀去來品第二	释	若謂去時有去，是則有過，所謂有二去：一者因去有去時；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4128-4154	
+ZL-02-030	ZL	觀去來品第二	释	二者去時中有去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4154-4162	
+ZL-02-031	ZL	觀去來品第二	释	問曰：若有二去，有何咎？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4162-4174	
+ZL-02-032	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4174-4177	no terminal punctuation at unit end
+ZL-02-033	ZL	觀去來品第二	偈	「若有二去法，則有二去者；以離於去者，去法不可得。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4177-4203	quoted verse: 「」 with five-character lines
+ZL-02-034	ZL	觀去來品第二	释	若有二去法，則有二去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4203-4215	
+ZL-02-035	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4215-4219	
+ZL-02-036	ZL	觀去來品第二	释	因去法有去者故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4219-4227	
+ZL-02-037	ZL	觀去來品第二	释	一人有二去二去者，此則不然，是故去時亦無去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4227-4249	
+ZL-02-038	ZL	觀去來品第二	释	問曰：離去者無去法，可爾。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4249-4262	
+ZL-02-039	ZL	觀去來品第二	释	今三時中定有去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4262-4271	
+ZL-02-040	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4271-4274	no terminal punctuation at unit end
+ZL-02-041	ZL	觀去來品第二	偈	「若離於去者，去法不可得；以無去法故，何得有去者？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4274-4300	quoted verse: 「」 with five-character lines
+ZL-02-042	ZL	觀去來品第二	释	若離於去者，則去法不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4300-4313	
+ZL-02-043	ZL	觀去來品第二	释	今云何於無去法中言三時定有去者？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4313-4329	
+ZL-02-044	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4329-4332	no terminal punctuation at unit end
+ZL-02-045	ZL	觀去來品第二	偈	「去者則不去，不去者不去；離去不去者，無第三去者。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4332-4358	quoted verse: 「」 with five-character lines
+ZL-02-046	ZL	觀去來品第二	释	無有去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4358-4363	
+ZL-02-047	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4363-4367	
+ZL-02-048	ZL	觀去來品第二	释	若有去者，則有二種：若去者、若不去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4367-4386	
+ZL-02-049	ZL	觀去來品第二	释	若離是二，無第三去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4386-4397	
+ZL-02-050	ZL	觀去來品第二	释	問曰：若去者去，有何咎？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4397-4409	
+ZL-02-051	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4409-4412	no terminal punctuation at unit end
+ZL-02-052	ZL	觀去來品第二	偈	「若言去者去，云何有此義？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4412-4425	quoted verse: 「」 with five-character lines
+ZL-02-053	ZL	觀去來品第二	偈	若離於去法，去者不可得。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4425-4438	quoted verse: 「」 with five-character lines
+ZL-02-054	ZL	觀去來品第二	释	若謂定有去者用去法，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4438-4453	
+ZL-02-055	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4453-4457	
+ZL-02-056	ZL	觀去來品第二	释	離去法，去者不可得故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4457-4468	
+ZL-02-057	ZL	觀去來品第二	释	若離去者定有去法，則去者能用去法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4468-4485	
+ZL-02-058	ZL	觀去來品第二	释	而實不爾。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4485-4490	
+ZL-02-059	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4490-4493	no terminal punctuation at unit end
+ZL-02-060	ZL	觀去來品第二	偈	「若去者有去，則有二種去：一謂去者去，二謂去法去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4493-4519	quoted verse: 「」 with five-character lines
+ZL-02-061	ZL	觀去來品第二	释	若言去者用去法，則有二過，於一去者中而有二去：一以去法成去者、二以去者成去法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4519-4558	
+ZL-02-062	ZL	觀去來品第二	释	去者成已然後用去法，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4558-4573	
+ZL-02-063	ZL	觀去來品第二	释	是故先三時中謂定有去者用去法，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4573-4593	
+ZL-02-064	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4593-4596	no terminal punctuation at unit end
+ZL-02-065	ZL	觀去來品第二	偈	「若謂去者去，是人則有咎，離去有去者，說去者有去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4596-4622	quoted verse: 「」 with five-character lines
+ZL-02-066	ZL	觀去來品第二	释	若人說去者能用去法，是人則有咎，離去法有去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4622-4645	
+ZL-02-067	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4645-4649	
+ZL-02-068	ZL	觀去來品第二	释	說去者用去法，是為先有去者後有去法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4649-4667	
+ZL-02-069	ZL	觀去來品第二	释	是事不然，是故三時中無有去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4667-4682	
+ZL-02-070	ZL	觀去來品第二	释	復次，若決定有去、有去者，應有初發。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4682-4700	
+ZL-02-071	ZL	觀去來品第二	释	而於三時中求發不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4700-4711	
+ZL-02-072	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4711-4715	
+ZL-02-073	ZL	觀去來品第二	偈	「已去中無發，未去中無發，去時中無發，何處當有發？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4715-4741	quoted verse: 「」 with five-character lines
+ZL-02-074	ZL	觀去來品第二	释	何以故三時中無發？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4741-4750	
+ZL-02-075	ZL	觀去來品第二	偈	「未發無去時，亦無有已去，是二應有發，未去何有發？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4750-4775	quoted verse: 「」 with five-character lines
+ZL-02-076	ZL	觀去來品第二	偈	無去無未去，亦復無去時，一切無有發，何故而分別？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4775-4800	quoted verse: 「」 with five-character lines
+ZL-02-077	ZL	觀去來品第二	释	若人未發則無去時亦無已去；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4800-4813	
+ZL-02-078	ZL	觀去來品第二	释	若有發當在二處：去時、已去中。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4813-4828	
+ZL-02-079	ZL	觀去來品第二	释	二俱不然，未去時未有發故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4828-4841	
+ZL-02-080	ZL	觀去來品第二	释	未去中何有發？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4841-4848	
+ZL-02-081	ZL	觀去來品第二	释	發無故無去，無去故無去者，何得有已去、未去、去時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4848-4873	
+ZL-02-082	ZL	觀去來品第二	释	問曰：若無去、無去者，應有住、住者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4873-4891	
+ZL-02-083	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4891-4894	no terminal punctuation at unit end
+ZL-02-084	ZL	觀去來品第二	偈	「去者則不住，不去者不住，離去不去者，何有第三住？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4894-4920	quoted verse: 「」 with five-character lines
+ZL-02-085	ZL	觀去來品第二	释	若有住、有住者，應去者住、若不去者住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4920-4939	
+ZL-02-086	ZL	觀去來品第二	释	若離此二，應有第三住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4939-4950	
+ZL-02-087	ZL	觀去來品第二	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4950-4955	
+ZL-02-088	ZL	觀去來品第二	释	去者不住，去未息故，與去相違名為住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4955-4973	
+ZL-02-089	ZL	觀去來品第二	释	不去者亦不住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4973-4980	
+ZL-02-090	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4980-4984	
+ZL-02-091	ZL	觀去來品第二	释	因去法滅故有住，無去則無住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4984-4998	
+ZL-02-092	ZL	觀去來品第二	释	離去者不去者，更無第三住者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	4998-5012	
+ZL-02-093	ZL	觀去來品第二	释	若有第三住者，即在去者、不去者中。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5012-5029	
+ZL-02-094	ZL	觀去來品第二	释	以是故，不得言去者住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5029-5040	
+ZL-02-095	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5040-5043	no terminal punctuation at unit end
+ZL-02-096	ZL	觀去來品第二	偈	「去者若當住，云何有此義？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5043-5056	quoted verse: 「」 with five-character lines
+ZL-02-097	ZL	觀去來品第二	偈	若當離於去，去者不可得。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5056-5069	quoted verse: 「」 with five-character lines
+ZL-02-098	ZL	觀去來品第二	释	汝謂去者住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5069-5075	
+ZL-02-099	ZL	觀去來品第二	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5075-5080	
+ZL-02-100	ZL	觀去來品第二	释	何以故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5080-5084	
+ZL-02-101	ZL	觀去來品第二	释	離去法，去者不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5084-5094	
+ZL-02-102	ZL	觀去來品第二	释	若去者在去相，云何當有住？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5094-5107	
+ZL-02-103	ZL	觀去來品第二	释	去住相違故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5107-5113	
+ZL-02-104	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5113-5116	no terminal punctuation at unit end
+ZL-02-105	ZL	觀去來品第二	偈	「去未去無住，去時亦無住，所有行止法，皆同於去義。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5116-5142	quoted verse: 「」 with five-character lines
+ZL-02-106	ZL	觀去來品第二	释	若謂去者住，是人應在去時、已去、未去中住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5142-5163	
+ZL-02-107	ZL	觀去來品第二	释	三處皆無住，是故汝言去者有住，是則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5163-5183	
+ZL-02-108	ZL	觀去來品第二	释	如破去法、住法，行、止亦如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5183-5198	
+ZL-02-109	ZL	觀去來品第二	释	行者，如從穀子相續至芽莖葉等。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5198-5213	
+ZL-02-110	ZL	觀去來品第二	释	止者，穀子滅故芽莖葉滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5213-5225	
+ZL-02-111	ZL	觀去來品第二	释	相續故名行，斷故名止。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5225-5236	
+ZL-02-112	ZL	觀去來品第二	释	又如無明緣諸行乃至老死是名行，無明滅故諸行等滅是名止。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5236-5263	
+ZL-02-113	ZL	觀去來品第二	释	問曰：汝雖種種門破去去者、住住者，而眼見有去住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5263-5287	
+ZL-02-114	ZL	觀去來品第二	释	答曰：肉眼所見不可信。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5287-5298	
+ZL-02-115	ZL	觀去來品第二	释	若實有去去者，為以一法成？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5298-5311	
+ZL-02-116	ZL	觀去來品第二	释	為以二法成？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5311-5317	
+ZL-02-117	ZL	觀去來品第二	释	二俱有過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5317-5322	
+ZL-02-118	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5322-5326	
+ZL-02-119	ZL	觀去來品第二	偈	「去法即去者，是事則不然；去法異去者，是事亦不然。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5326-5352	quoted verse: 「」 with five-character lines
+ZL-02-120	ZL	觀去來品第二	释	若去法、去者一，是則不然，異亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5352-5370	
+ZL-02-121	ZL	觀去來品第二	释	問曰：一、異有何過？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5370-5380	
+ZL-02-122	ZL	觀去來品第二	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5380-5383	no terminal punctuation at unit end
+ZL-02-123	ZL	觀去來品第二	偈	「若謂於去法，即為是去者；作者及作業，是事則為一。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5383-5408	quoted verse: 「」 with five-character lines
+ZL-02-124	ZL	觀去來品第二	偈	若謂於去法，有異於去者；離去者有去，離去有去者。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5408-5433	quoted verse: 「」 with five-character lines
+ZL-02-125	ZL	觀去來品第二	释	如是二俱有過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5433-5440	
+ZL-02-126	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5440-5444	
+ZL-02-127	ZL	觀去來品第二	释	若去法即是去者，是則錯亂，破於因緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5444-5462	
+ZL-02-128	ZL	觀去來品第二	释	因去有去者，因去者有去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5462-5474	
+ZL-02-129	ZL	觀去來品第二	释	又去名為法，去者名為人，人常法無常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5474-5492	
+ZL-02-130	ZL	觀去來品第二	释	若一者，則二俱應常、二俱無常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5492-5507	
+ZL-02-131	ZL	觀去來品第二	释	一中有如是等過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5507-5515	
+ZL-02-132	ZL	觀去來品第二	释	若異者則相違。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5515-5522	
+ZL-02-133	ZL	觀去來品第二	释	未有去法應有去者，未有去者應有去法，不相因待，一法滅應一法在。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5522-5553	
+ZL-02-134	ZL	觀去來品第二	释	異中有如是等過。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5553-5561	
+ZL-02-135	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5561-5564	no terminal punctuation at unit end
+ZL-02-136	ZL	觀去來品第二	偈	「去去者是二，若一異法成，二門俱不成，云何當有成？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5564-5590	quoted verse: 「」 with five-character lines
+ZL-02-137	ZL	觀去來品第二	释	若去者、去法有，若以一法成、若以異法成，二俱不可得；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5590-5616	
+ZL-02-138	ZL	觀去來品第二	释	先已說無第三法成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5616-5625	
+ZL-02-139	ZL	觀去來品第二	释	若謂有成，應說因緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5625-5635	
+ZL-02-140	ZL	觀去來品第二	释	無去無去者，今當更說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5635-5646	
+ZL-02-141	ZL	觀去來品第二	偈	「因去知去者，不能用是去；先無有去法，故無去者去。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5646-5672	quoted verse: 「」 with five-character lines
+ZL-02-142	ZL	觀去來品第二	释	隨以何去法知去者？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5672-5681	
+ZL-02-143	ZL	觀去來品第二	释	是去者不能用是去法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5681-5691	
+ZL-02-144	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5691-5695	
+ZL-02-145	ZL	觀去來品第二	释	是去法未有時無有去者，亦無去時、已去、未去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5695-5717	
+ZL-02-146	ZL	觀去來品第二	释	如先有人、有城邑，得有所起。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5717-5731	
+ZL-02-147	ZL	觀去來品第二	释	去法、去者則不然，去者因去法成，去法因去者成故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5731-5755	
+ZL-02-148	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5755-5758	no terminal punctuation at unit end
+ZL-02-149	ZL	觀去來品第二	偈	「因去知去者，不能用異去，於一去者中，不得二去故。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5758-5784	quoted verse: 「」 with five-character lines
+ZL-02-150	ZL	觀去來品第二	释	隨以何去法知去者，是去者不能用異去法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5784-5803	
+ZL-02-151	ZL	觀去來品第二	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5803-5807	
+ZL-02-152	ZL	觀去來品第二	释	一去者中二去法不可得故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5807-5819	
+ZL-02-153	ZL	觀去來品第二	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5819-5822	no terminal punctuation at unit end
+ZL-02-154	ZL	觀去來品第二	偈	「決定有去者，不能用三去；不決定去者，亦不用三去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5822-5847	quoted verse: 「」 with five-character lines
+ZL-02-155	ZL	觀去來品第二	偈	去法定不定，去者不用三，是故去去者，所去處皆無。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5847-5872	quoted verse: 「」 with five-character lines
+ZL-02-156	ZL	觀去來品第二	释	決定者，名本實有，不因去法生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5872-5887	
+ZL-02-157	ZL	觀去來品第二	释	去法名身動。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5887-5893	
+ZL-02-158	ZL	觀去來品第二	释	三種名未去、已去、去時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5893-5905	
+ZL-02-159	ZL	觀去來品第二	释	若決定有去者，離去法應有去者，不應有住，是故說決定有去者不能用三去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5905-5939	
+ZL-02-160	ZL	觀去來品第二	释	若去者不決定，不決定名本實無，以因去法得名去者，以無去法故不能用三去。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5939-5974	
+ZL-02-161	ZL	觀去來品第二	释	因去法故有去者，若先無去法則無去者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5974-5992	
+ZL-02-162	ZL	觀去來品第二	释	云何言不決定去者用三去？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	5992-6004	
+ZL-02-163	ZL	觀去來品第二	释	如去者，去法亦如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	6004-6014	
+ZL-02-164	ZL	觀去來品第二	释	若先離去者決定有去法，則不因去者有去法，是故去者不能用三去法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	6014-6045	
+ZL-02-165	ZL	觀去來品第二	释	若決定無去法，去者何所用？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	6045-6058	
+ZL-02-166	ZL	觀去來品第二	释	如是思惟觀察，去法、去者、所去處，是法皆相因待。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	6058-6082	
+ZL-02-167	ZL	觀去來品第二	释	因去法有去者，因去者有去法，因是二法則有可去處，不得言定有、不得言定無，是故決定知，三法虛妄，空無所有，但有假名，如幻如化。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	6082-6144	
+ZL-07-H1	ZL	觀三相品第七	题	觀三相品第七	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10273-10279	
+ZL-07-001	ZL	觀三相品第七	释	問曰：經說有為法有三相：生、住、滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10279-10297	
+ZL-07-002	ZL	觀三相品第七	释	萬物以生法生、以住法住、以滅法滅，是故有諸法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10297-10320	
+ZL-07-003	ZL	觀三相品第七	释	答曰：不爾。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10320-10326	
+ZL-07-004	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10326-10330	
+ZL-07-005	ZL	觀三相品第七	释	三相無決定故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10330-10337	
+ZL-07-006	ZL	觀三相品第七	释	是三相為是有為能作有為相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10337-10350	
+ZL-07-007	ZL	觀三相品第七	释	為是無為能作有為相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10350-10360	
+ZL-07-008	ZL	觀三相品第七	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10360-10365	
+ZL-07-009	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10365-10369	
+ZL-07-010	ZL	觀三相品第七	偈	「若生是有為，則應有三相；若生是無為，何名有為相？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10369-10395	quoted verse: 「」 with five-character lines
+ZL-07-011	ZL	觀三相品第七	释	若生是有為，應有三相生住滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10395-10409	
+ZL-07-012	ZL	觀三相品第七	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10409-10414	
+ZL-07-013	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10414-10418	
+ZL-07-014	ZL	觀三相品第七	释	共相違故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10418-10423	
+ZL-07-015	ZL	觀三相品第七	释	相違者，生相應生法、住相應住法、滅相應滅法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10423-10445	
+ZL-07-016	ZL	觀三相品第七	释	若法生時，不應有住、滅相違法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10445-10460	
+ZL-07-017	ZL	觀三相品第七	释	一時則不然，如明闇不俱。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10460-10472	
+ZL-07-018	ZL	觀三相品第七	释	以是故，生不應是有為法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10472-10484	
+ZL-07-019	ZL	觀三相品第七	释	住、滅相亦應如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10484-10493	
+ZL-07-020	ZL	觀三相品第七	释	問曰：若生非有為，若是無為，有何咎？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10493-10511	
+ZL-07-021	ZL	觀三相品第七	释	答曰：若生是無為，云何能為有為法作相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10511-10530	
+ZL-07-022	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10530-10534	
+ZL-07-023	ZL	觀三相品第七	释	無為法無性故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10534-10541	
+ZL-07-024	ZL	觀三相品第七	释	因滅有為名無為，是故說不生不滅名無為相，更無自相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10541-10566	
+ZL-07-025	ZL	觀三相品第七	释	是故無法，不能為法作相，如兔角龜毛等不能為法作相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10566-10591	
+ZL-07-026	ZL	觀三相品第七	释	是故生非無為；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10591-10598	
+ZL-07-027	ZL	觀三相品第七	释	住、滅亦如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10598-10605	
+ZL-07-028	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10605-10608	no terminal punctuation at unit end
+ZL-07-029	ZL	觀三相品第七	偈	「三相若聚散，不能有所相；云何於一處，一時有三相？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10608-10634	quoted verse: 「」 with five-character lines
+ZL-07-030	ZL	觀三相品第七	释	是生、住、滅相，若一一能為有為法作相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10634-10653	
+ZL-07-031	ZL	觀三相品第七	释	若和合能與有為法作相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10653-10664	
+ZL-07-032	ZL	觀三相品第七	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10664-10669	
+ZL-07-033	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10669-10673	
+ZL-07-034	ZL	觀三相品第七	释	若謂一一者，於一處中或有有相、或有無相，生時無住、滅，住時無生、滅，滅時無生、住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10673-10714	
+ZL-07-035	ZL	觀三相品第七	释	若和合者，共相違法，云何一時俱？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10714-10730	
+ZL-07-036	ZL	觀三相品第七	释	若謂三相更有三相者，是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10730-10745	
+ZL-07-037	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10745-10749	
+ZL-07-038	ZL	觀三相品第七	偈	「若謂生住滅，更有有為相，是即為無窮，無即非有為。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10749-10775	quoted verse: 「」 with five-character lines
+ZL-07-039	ZL	觀三相品第七	释	若謂生、住、滅更有有為相，生更有生、有住、有滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10775-10799	
+ZL-07-040	ZL	觀三相品第七	释	如是三相，復應更有相，若爾則無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10799-10816	
+ZL-07-041	ZL	觀三相品第七	释	若更無相，是三相則不名有為法，亦不能為有為法作相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10816-10841	
+ZL-07-042	ZL	觀三相品第七	释	問曰：汝說三相為無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10841-10852	
+ZL-07-043	ZL	觀三相品第七	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10852-10857	
+ZL-07-044	ZL	觀三相品第七	释	生、住、滅雖是有為，而非無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10857-10872	
+ZL-07-045	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10872-10876	
+ZL-07-046	ZL	觀三相品第七	偈	「生生之所生，生於彼本生，本生之所生，還生於生生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10876-10902	quoted verse: 「」 with five-character lines
+ZL-07-047	ZL	觀三相品第七	释	法生時通自體七法共生：一法、二生、三住、四滅、五生生、六住住、七滅滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10902-10937	
+ZL-07-048	ZL	觀三相品第七	释	是七法中，本生除自體，能生六法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10937-10953	
+ZL-07-049	ZL	觀三相品第七	释	生生能生本生，本生能生生生，是故三相雖是有為，而非無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10953-10981	
+ZL-07-050	ZL	觀三相品第七	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10981-10984	no terminal punctuation at unit end
+ZL-07-051	ZL	觀三相品第七	偈	「若謂是生生，能生於本生；生生從本生，何能生本生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	10984-11010	quoted verse: 「」 with five-character lines
+ZL-07-052	ZL	觀三相品第七	释	若是生生能生本生者，是生生則不名從本生生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11010-11031	
+ZL-07-053	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11031-11035	
+ZL-07-054	ZL	觀三相品第七	释	是生生從本生生，云何能生本生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11035-11050	
+ZL-07-055	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11050-11053	no terminal punctuation at unit end
+ZL-07-056	ZL	觀三相品第七	偈	「若謂是本生，能生於生生；本生從彼生，何能生生生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11053-11079	quoted verse: 「」 with five-character lines
+ZL-07-057	ZL	觀三相品第七	释	若謂本生能生生生者，是本生不名從生生生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11079-11099	
+ZL-07-058	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11099-11103	
+ZL-07-059	ZL	觀三相品第七	释	是本生從生生生，云何能生生生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11103-11118	
+ZL-07-060	ZL	觀三相品第七	释	生生法應生本生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11118-11126	
+ZL-07-061	ZL	觀三相品第七	释	而今生生不能生本生，生生未有自體，何能生本生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11126-11149	
+ZL-07-062	ZL	觀三相品第七	释	是故本生不能生生生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11149-11159	
+ZL-07-063	ZL	觀三相品第七	释	問曰：是生生生時，非先非後能生本生，但生生生時能生本生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11159-11187	
+ZL-07-064	ZL	觀三相品第七	释	答曰：不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11187-11193	
+ZL-07-065	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11193-11197	
+ZL-07-066	ZL	觀三相品第七	偈	「若生生生時，能生於本生；生生尚未有，何能生本生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11197-11223	quoted verse: 「」 with five-character lines
+ZL-07-067	ZL	觀三相品第七	释	若謂生生生時能生本生可爾，而實未有，是故生生生時不能生本生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11223-11253	
+ZL-07-068	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11253-11256	no terminal punctuation at unit end
+ZL-07-069	ZL	觀三相品第七	偈	「若本生生時，能生於生生；本生尚未有，何能生生生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11256-11282	quoted verse: 「」 with five-character lines
+ZL-07-070	ZL	觀三相品第七	释	若謂是本生生時能生生生可爾，而實未有，是故本生生時不能生生生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11282-11313	
+ZL-07-071	ZL	觀三相品第七	释	問曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11313-11316	no terminal punctuation at unit end
+ZL-07-072	ZL	觀三相品第七	偈	「如燈能自照，亦能照於彼；生法亦如是，自生亦生彼。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11316-11342	quoted verse: 「」 with five-character lines
+ZL-07-073	ZL	觀三相品第七	释	如燈入於闇室，照了諸物亦能自照。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11342-11358	
+ZL-07-074	ZL	觀三相品第七	释	生亦如是，能生於彼亦能自生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11358-11372	
+ZL-07-075	ZL	觀三相品第七	释	答曰：不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11372-11378	
+ZL-07-076	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11378-11382	
+ZL-07-077	ZL	觀三相品第七	偈	「燈中自無闇，住處亦無闇，破闇乃名照，無闇則無照。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11382-11408	quoted verse: 「」 with five-character lines
+ZL-07-078	ZL	觀三相品第七	释	燈體自無闇，明所及處亦無闇，明闇相違故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11408-11428	
+ZL-07-079	ZL	觀三相品第七	释	破闇故名照，無闇則無照，何得言燈自照亦照彼？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11428-11450	
+ZL-07-080	ZL	觀三相品第七	释	問曰：是燈非未生有照，亦非生已有照，但燈生時能自照亦照彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11450-11479	
+ZL-07-081	ZL	觀三相品第七	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11479-11482	no terminal punctuation at unit end
+ZL-07-082	ZL	觀三相品第七	偈	「云何燈生時，而能破於闇？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11482-11495	quoted verse: 「」 with five-character lines
+ZL-07-083	ZL	觀三相品第七	偈	此燈初生時，不能及於闇。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11495-11508	quoted verse: 「」 with five-character lines
+ZL-07-084	ZL	觀三相品第七	释	燈生時名半生半未生，燈體未成就，云何能破闇？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11508-11530	
+ZL-07-085	ZL	觀三相品第七	释	又燈不能及闇，如人得賊乃名為破。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11530-11546	
+ZL-07-086	ZL	觀三相品第七	释	若謂燈雖不到闇而能破闇者，是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11546-11564	
+ZL-07-087	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11564-11568	
+ZL-07-088	ZL	觀三相品第七	偈	「燈若未及闇，而能破闇者，燈在於此間，則破一切闇。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11568-11594	quoted verse: 「」 with five-character lines
+ZL-07-089	ZL	觀三相品第七	释	若燈有力，不到闇而能破者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11594-11607	
+ZL-07-090	ZL	觀三相品第七	释	此處燃燈，應破一切處闇，俱不及故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11607-11624	
+ZL-07-091	ZL	觀三相品第七	释	復次燈不應自照、照彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11624-11635	
+ZL-07-092	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11635-11639	
+ZL-07-093	ZL	觀三相品第七	偈	「若燈能自照，亦能照於彼；闇亦應自闇，亦能闇於彼。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11639-11665	quoted verse: 「」 with five-character lines
+ZL-07-094	ZL	觀三相品第七	释	若燈與闇相違故，能自照亦照於彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11665-11681	
+ZL-07-095	ZL	觀三相品第七	释	闇與燈相違故，亦應自蔽蔽彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11681-11695	
+ZL-07-096	ZL	觀三相品第七	释	若闇與燈相違，不能自蔽蔽彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11695-11709	
+ZL-07-097	ZL	觀三相品第七	释	燈與闇相違，亦不應自照亦照彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11709-11724	
+ZL-07-098	ZL	觀三相品第七	释	是故燈喻非也。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11724-11731	
+ZL-07-099	ZL	觀三相品第七	释	破生因緣未盡故，今當更說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11731-11744	
+ZL-07-100	ZL	觀三相品第七	偈	「此生若未生，云何能自生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11744-11757	quoted verse: 「」 with five-character lines
+ZL-07-101	ZL	觀三相品第七	偈	若生已自生，生已何用生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11757-11770	quoted verse: 「」 with five-character lines
+ZL-07-102	ZL	觀三相品第七	释	是生自生時，為生已生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11770-11781	
+ZL-07-103	ZL	觀三相品第七	释	為未生生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11781-11786	
+ZL-07-104	ZL	觀三相品第七	释	若未生生，則是無法，無法何能自生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11786-11803	
+ZL-07-105	ZL	觀三相品第七	释	若謂生已生，則為已成，不須復生，如已作不應更作。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11803-11827	
+ZL-07-106	ZL	觀三相品第七	释	若已生、若未生，是二俱不生，故無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11827-11845	
+ZL-07-107	ZL	觀三相品第七	释	汝先說生如燈，能自生亦生彼，是事不然；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11845-11864	
+ZL-07-108	ZL	觀三相品第七	释	住、滅亦如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11864-11871	
+ZL-07-109	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11871-11874	no terminal punctuation at unit end
+ZL-07-110	ZL	觀三相品第七	偈	「生非生已生，亦非未生生，生時亦不生，去來中已答。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11874-11900	quoted verse: 「」 with five-character lines
+ZL-07-111	ZL	觀三相品第七	释	生名眾緣和合有生，已生中無作故無生，未生中無作故無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11900-11927	
+ZL-07-112	ZL	觀三相品第七	释	生時亦不然，離生法生時不可得、離生時生法亦不可得、云何生時生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11927-11958	
+ZL-07-113	ZL	觀三相品第七	释	是事〈去來〉中已答。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11958-11968	
+ZL-07-114	ZL	觀三相品第七	释	已生法不可生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11968-11975	
+ZL-07-115	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11975-11979	
+ZL-07-116	ZL	觀三相品第七	释	生已復生，如是展轉則為無窮，如作已復作。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11979-11999	
+ZL-07-117	ZL	觀三相品第七	释	復次若生已更生者，以何生法生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	11999-12014	
+ZL-07-118	ZL	觀三相品第七	释	是生相未生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12014-12020	
+ZL-07-119	ZL	觀三相品第七	释	而言生已生者，則自違所說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12020-12033	
+ZL-07-120	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12033-12037	
+ZL-07-121	ZL	觀三相品第七	释	生相未生而汝謂生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12037-12046	
+ZL-07-122	ZL	觀三相品第七	释	若未生謂生者，法或可生已而生、或可未生而生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12046-12068	
+ZL-07-123	ZL	觀三相品第七	释	汝先說生已生，是則不定。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12068-12080	
+ZL-07-124	ZL	觀三相品第七	释	復次如燒已不應復燒、去已不應復去，如是等因緣故，生已不應生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12080-12110	
+ZL-07-125	ZL	觀三相品第七	释	未生法亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12110-12117	
+ZL-07-126	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12117-12121	
+ZL-07-127	ZL	觀三相品第七	释	法若未生則不應與生緣和合，若不與生緣和合則無法生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12121-12146	
+ZL-07-128	ZL	觀三相品第七	释	若法未與生緣和合而生者，應無作法而作、無去法而去、無染法而染、無恚法而恚、無癡法而癡。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12146-12189	
+ZL-07-129	ZL	觀三相品第七	释	如是則皆破世間法，是故未生法不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12189-12206	
+ZL-07-130	ZL	觀三相品第七	释	復次若未生法生者，世間未生法皆應生，一切凡夫未生菩提今應生菩提，不壞法阿羅漢無有煩惱今應生煩惱，兔等無角今皆應生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12206-12263	
+ZL-07-131	ZL	觀三相品第七	释	但是事不然，是故未生法亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12263-12278	
+ZL-07-132	ZL	觀三相品第七	释	問曰：未生法不生者，以未有緣、無作、無作者、無時、無方等故不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12278-12310	
+ZL-07-133	ZL	觀三相品第七	释	若有緣、有作、有作者、有時、有方等和合故，未生法生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12310-12336	
+ZL-07-134	ZL	觀三相品第七	释	是故若說一切未生法皆不生，是事不爾。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12336-12354	
+ZL-07-135	ZL	觀三相品第七	释	答曰：若法有緣、有時、有方等和合則生者，先有亦不生、先無亦不生、有無亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12354-12392	
+ZL-07-136	ZL	觀三相品第七	释	三種先已破，是故生已不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12392-12405	
+ZL-07-137	ZL	觀三相品第七	释	未生亦不生、生時亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12405-12417	
+ZL-07-138	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12417-12421	
+ZL-07-139	ZL	觀三相品第七	释	已生分不生，未生分亦不生，如先答。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12421-12438	
+ZL-07-140	ZL	觀三相品第七	释	復次若離生有生時者，應生時生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12438-12453	
+ZL-07-141	ZL	觀三相品第七	释	但離生無生時，是故生時亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12453-12468	
+ZL-07-142	ZL	觀三相品第七	释	復次若言生時生者，則有二生過：一以生故名生時；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12468-12491	
+ZL-07-143	ZL	觀三相品第七	释	二以生時中生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12491-12498	
+ZL-07-144	ZL	觀三相品第七	释	二皆不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12498-12503	
+ZL-07-145	ZL	觀三相品第七	释	無有二法，云何有二生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12503-12514	
+ZL-07-146	ZL	觀三相品第七	释	是故生時亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12514-12522	
+ZL-07-147	ZL	觀三相品第七	释	復次生法未發則無生時，生時無故生何所依？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12522-12542	
+ZL-07-148	ZL	觀三相品第七	释	是故不得言生時生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12542-12551	
+ZL-07-149	ZL	觀三相品第七	释	如是推求，生已無生、未生無生、生時無生，無生故生不成，生不成故住、滅亦不成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12551-12589	
+ZL-07-150	ZL	觀三相品第七	释	生、住、滅不成，故有為法不成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12589-12604	
+ZL-07-151	ZL	觀三相品第七	释	是故偈中說去未去去時中已答。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12604-12618	
+ZL-07-152	ZL	觀三相品第七	释	問曰：我不定言生已生、未生生、生時生，但眾緣和合故有生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12618-12646	
+ZL-07-153	ZL	觀三相品第七	释	答曰：汝雖有是說，此則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12646-12660	
+ZL-07-154	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12660-12664	
+ZL-07-155	ZL	觀三相品第七	偈	「若謂生時生，是事已不成；云何眾緣合，爾時而得生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12664-12690	quoted verse: 「」 with five-character lines
+ZL-07-156	ZL	觀三相品第七	释	生時生已種種因緣破，汝今何以更說眾緣和合故有生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12690-12714	
+ZL-07-157	ZL	觀三相品第七	释	若眾緣具足、不具足，皆與生同破。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12714-12730	
+ZL-07-158	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12730-12733	no terminal punctuation at unit end
+ZL-07-159	ZL	觀三相品第七	偈	「若法眾緣生，即是寂滅性；是故生生時，是二俱寂滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12733-12759	quoted verse: 「」 with five-character lines
+ZL-07-160	ZL	觀三相品第七	释	眾緣所生法，無自性故寂滅，寂滅名為無此無彼無相，斷言語道、滅諸戲論。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12759-12793	
+ZL-07-161	ZL	觀三相品第七	释	眾緣名，如因縷有布、因蒲有席。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12793-12808	
+ZL-07-162	ZL	觀三相品第七	释	若縷自有定相，不應從麻出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12808-12821	
+ZL-07-163	ZL	觀三相品第七	释	若布自有定相，不應從縷出。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12821-12834	
+ZL-07-164	ZL	觀三相品第七	释	而實從縷有布、從麻有縷，是故縷亦無定性、布亦無定性。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12834-12860	
+ZL-07-165	ZL	觀三相品第七	释	如燃、可燃因緣和合成，無有自性，可燃無故燃亦無、燃無故可燃亦無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12860-12892	
+ZL-07-166	ZL	觀三相品第七	释	一切法亦如是，是故從眾緣生法無自性，無自性故空，如野馬無實。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12892-12922	
+ZL-07-167	ZL	觀三相品第七	释	是故偈中說生與生時二俱寂滅，不應說生時生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12922-12943	
+ZL-07-168	ZL	觀三相品第七	释	汝雖種種因緣欲成生相，皆是戲論，非寂滅相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12943-12964	
+ZL-07-169	ZL	觀三相品第七	释	問曰：定有三世別異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12964-12974	
+ZL-07-170	ZL	觀三相品第七	释	未來世法得生，因緣即生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12974-12986	
+ZL-07-171	ZL	觀三相品第七	释	何故言無生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12986-12992	
+ZL-07-172	ZL	觀三相品第七	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12992-12995	no terminal punctuation at unit end
+ZL-07-173	ZL	觀三相品第七	偈	「若有未生法，說言有生者，此法先已有，更復何用生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	12995-13021	quoted verse: 「」 with five-character lines
+ZL-07-174	ZL	觀三相品第七	释	若未來世中有未生法而生，是法先已有，何用更生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13021-13044	
+ZL-07-175	ZL	觀三相品第七	释	有法不應更生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13044-13051	
+ZL-07-176	ZL	觀三相品第七	释	問曰：未來雖有，非如現在相，以現在相故說生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13051-13073	
+ZL-07-177	ZL	觀三相品第七	释	答曰：現在相未來中無，若無，云何言未來生法生；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13073-13096	
+ZL-07-178	ZL	觀三相品第七	释	若有，不名未來，應名現在，現在不應更生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13096-13116	
+ZL-07-179	ZL	觀三相品第七	释	二俱無生，故不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13116-13125	
+ZL-07-180	ZL	觀三相品第七	释	復次汝謂生時生亦能生彼。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13125-13137	
+ZL-07-181	ZL	觀三相品第七	释	今當更說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13137-13142	
+ZL-07-182	ZL	觀三相品第七	偈	「若言生時生，是能有所生；何得更有生，而能生是生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13142-13168	quoted verse: 「」 with five-character lines
+ZL-07-183	ZL	觀三相品第七	释	若生生時能生彼，是生誰復能生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13168-13183	
+ZL-07-184	ZL	觀三相品第七	偈	「若謂更有生，生生則無窮，離生生有生，法皆能自生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13183-13209	quoted verse: 「」 with five-character lines
+ZL-07-185	ZL	觀三相品第七	释	若生更有生，生則無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13209-13220	
+ZL-07-186	ZL	觀三相品第七	释	若是生更無生而自生者，一切法亦皆能自生，而實不爾。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13220-13245	
+ZL-07-187	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13245-13248	no terminal punctuation at unit end
+ZL-07-188	ZL	觀三相品第七	偈	「有法不應生，無亦不應生，有無亦不生，此義先已說。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13248-13274	quoted verse: 「」 with five-character lines
+ZL-07-189	ZL	觀三相品第七	释	凡所有生，為有法有生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13274-13285	
+ZL-07-190	ZL	觀三相品第七	释	為無法有生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13285-13291	
+ZL-07-191	ZL	觀三相品第七	释	為有無法有生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13291-13298	
+ZL-07-192	ZL	觀三相品第七	释	是皆不然，是事先已說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13298-13309	
+ZL-07-193	ZL	觀三相品第七	释	離此三事更無有生，是故無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13309-13323	
+ZL-07-194	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13323-13326	no terminal punctuation at unit end
+ZL-07-195	ZL	觀三相品第七	偈	「若諸法滅時，是時不應生；法若不滅者，終無有是事。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13326-13352	quoted verse: 「」 with five-character lines
+ZL-07-196	ZL	觀三相品第七	释	若法滅相，是法不應生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13352-13363	
+ZL-07-197	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13363-13367	
+ZL-07-198	ZL	觀三相品第七	释	二相相違故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13367-13373	
+ZL-07-199	ZL	觀三相品第七	释	一是滅相，知法是滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13373-13383	
+ZL-07-200	ZL	觀三相品第七	释	一是生相，知法是生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13383-13393	
+ZL-07-201	ZL	觀三相品第七	释	二相相違法，一時則不然，是故滅相法不應生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13393-13414	
+ZL-07-202	ZL	觀三相品第七	释	問曰：若滅相法不應生，不滅相法應生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13414-13432	
+ZL-07-203	ZL	觀三相品第七	释	答曰：一切有為法念念滅故，無不滅法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13432-13450	
+ZL-07-204	ZL	觀三相品第七	释	離有為，無有決定無為法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13450-13462	
+ZL-07-205	ZL	觀三相品第七	释	無為法但有名字，是故說不滅法，終無有是事。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13462-13483	
+ZL-07-206	ZL	觀三相品第七	释	問曰：若法無生，應有住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13483-13495	
+ZL-07-207	ZL	觀三相品第七	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13495-13498	no terminal punctuation at unit end
+ZL-07-208	ZL	觀三相品第七	偈	「不住法不住，住法亦不住，住時亦不住，無生云何住？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13498-13524	quoted verse: 「」 with five-character lines
+ZL-07-209	ZL	觀三相品第七	释	不住法不住，無住相故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13524-13535	
+ZL-07-210	ZL	觀三相品第七	释	住法亦不住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13535-13541	
+ZL-07-211	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13541-13545	
+ZL-07-212	ZL	觀三相品第七	释	已有住故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13545-13550	
+ZL-07-213	ZL	觀三相品第七	释	因去故有住，若住法先有，不應更住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13550-13567	
+ZL-07-214	ZL	觀三相品第七	释	住時亦不住，離住、不住更無住時，是故亦不住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13567-13589	
+ZL-07-215	ZL	觀三相品第七	释	如是一切處求住不可得故，即是無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13589-13606	
+ZL-07-216	ZL	觀三相品第七	释	若無生，云何有住？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13606-13615	
+ZL-07-217	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13615-13618	no terminal punctuation at unit end
+ZL-07-218	ZL	觀三相品第七	偈	「若諸法滅時，是則不應住；法若不滅者，終無有是事。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13618-13644	quoted verse: 「」 with five-character lines
+ZL-07-219	ZL	觀三相品第七	释	若法滅相，是法無有住相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13644-13656	
+ZL-07-220	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13656-13660	
+ZL-07-221	ZL	觀三相品第七	释	一法中有二相相違故，一是滅相、二是住相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13660-13680	
+ZL-07-222	ZL	觀三相品第七	释	一時一處有住滅相，是事不然，是故不得言滅相法有住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13680-13705	
+ZL-07-223	ZL	觀三相品第七	释	問曰：若法不滅，應有住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13705-13717	
+ZL-07-224	ZL	觀三相品第七	释	答曰：無有不滅法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13717-13726	
+ZL-07-225	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13726-13730	
+ZL-07-226	ZL	觀三相品第七	偈	「所有一切法，皆是老死相，終不見有法，離老死有住。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13730-13756	quoted verse: 「」 with five-character lines
+ZL-07-227	ZL	觀三相品第七	释	一切法生時，無常常隨逐。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13756-13768	
+ZL-07-228	ZL	觀三相品第七	释	無常有二，名老及死。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13768-13778	
+ZL-07-229	ZL	觀三相品第七	释	如是一切法常有老死，故無住時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13778-13793	
+ZL-07-230	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13793-13796	no terminal punctuation at unit end
+ZL-07-231	ZL	觀三相品第七	偈	「住不自相住，亦不異相住；如生不自生，亦不異相生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13796-13822	quoted verse: 「」 with five-character lines
+ZL-07-232	ZL	觀三相品第七	释	若有住法，為自相住？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13822-13832	
+ZL-07-233	ZL	觀三相品第七	释	為他相住？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13832-13837	
+ZL-07-234	ZL	觀三相品第七	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13837-13842	
+ZL-07-235	ZL	觀三相品第七	释	若自相住，則為是常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13842-13852	
+ZL-07-236	ZL	觀三相品第七	释	一切有為法從眾緣生，若住法自住，則不名有為。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13852-13874	
+ZL-07-237	ZL	觀三相品第七	释	住若自相住，法亦應自相住。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13874-13887	
+ZL-07-238	ZL	觀三相品第七	释	如眼不能自見，住亦如是。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13887-13899	
+ZL-07-239	ZL	觀三相品第七	释	若異相住，則住更有住，是則無窮。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13899-13915	
+ZL-07-240	ZL	觀三相品第七	释	復次見異法生異相，不得不因異法而有異相，異相不定故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13915-13941	
+ZL-07-241	ZL	觀三相品第七	释	因異相而住者，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13941-13953	
+ZL-07-242	ZL	觀三相品第七	释	問曰：若無住，應有滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13953-13964	
+ZL-07-243	ZL	觀三相品第七	释	答曰：無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13964-13969	
+ZL-07-244	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13969-13973	
+ZL-07-245	ZL	觀三相品第七	偈	「法已滅不滅，未滅亦不滅，滅時亦不滅，無生何有滅？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13973-13999	quoted verse: 「」 with five-character lines
+ZL-07-246	ZL	觀三相品第七	释	若法已滅則不滅，以先滅故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	13999-14012	
+ZL-07-247	ZL	觀三相品第七	释	未滅亦不滅，離滅相故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14012-14023	
+ZL-07-248	ZL	觀三相品第七	释	滅時亦不滅，離二更無滅時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14023-14036	
+ZL-07-249	ZL	觀三相品第七	释	如是推求，滅法即是無生，無生何有滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14036-14054	
+ZL-07-250	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14054-14057	no terminal punctuation at unit end
+ZL-07-251	ZL	觀三相品第七	偈	「法若有住者，是則不應滅；法若不住者，是亦不應滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14057-14083	quoted verse: 「」 with five-character lines
+ZL-07-252	ZL	觀三相品第七	释	若法定住則無有滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14083-14092	
+ZL-07-253	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14092-14096	
+ZL-07-254	ZL	觀三相品第七	释	由有住相故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14096-14102	
+ZL-07-255	ZL	觀三相品第七	释	若住法滅，則有二相：住相、滅相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14102-14118	
+ZL-07-256	ZL	觀三相品第七	释	是故不得言住中有滅，如生死不得一時有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14118-14137	
+ZL-07-257	ZL	觀三相品第七	释	若法不住，亦無有滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14137-14147	
+ZL-07-258	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14147-14151	
+ZL-07-259	ZL	觀三相品第七	释	離住相故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14151-14156	
+ZL-07-260	ZL	觀三相品第七	释	若離住相則無法，無法云何滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14156-14170	
+ZL-07-261	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14170-14173	no terminal punctuation at unit end
+ZL-07-262	ZL	觀三相品第七	偈	「是法於是時，不於是時滅；是法於異時，不於異時滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14173-14199	quoted verse: 「」 with five-character lines
+ZL-07-263	ZL	觀三相品第七	释	若法有滅相，是法為自相滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14199-14212	
+ZL-07-264	ZL	觀三相品第七	释	為異相滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14212-14217	
+ZL-07-265	ZL	觀三相品第七	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14217-14222	
+ZL-07-266	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14222-14226	
+ZL-07-267	ZL	觀三相品第七	释	如乳不於乳時滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14226-14234	
+ZL-07-268	ZL	觀三相品第七	释	隨有乳時，乳相定住故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14234-14245	
+ZL-07-269	ZL	觀三相品第七	释	非乳時亦不滅，若非乳不得言乳滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14245-14261	
+ZL-07-270	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14261-14264	no terminal punctuation at unit end
+ZL-07-271	ZL	觀三相品第七	偈	「如一切諸法，生相不可得；以無生相故，即亦無滅相。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14264-14290	quoted verse: 「」 with five-character lines
+ZL-07-272	ZL	觀三相品第七	释	如先推求，一切法生相不可得，爾時即無滅相，破生故無生，無生云何有滅？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14290-14324	
+ZL-07-273	ZL	觀三相品第七	释	若汝意猶未已，今當更說破滅因緣。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14324-14340	
+ZL-07-274	ZL	觀三相品第七	偈	「若法是有者，是即無有滅；不應於一法，而有有無相。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14340-14366	quoted verse: 「」 with five-character lines
+ZL-07-275	ZL	觀三相品第七	释	諸法有時，推求滅相不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14366-14379	
+ZL-07-276	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14379-14383	
+ZL-07-277	ZL	觀三相品第七	释	云何一法中亦有亦無相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14383-14394	
+ZL-07-278	ZL	觀三相品第七	释	如光影不同處。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14394-14401	
+ZL-07-279	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14401-14404	no terminal punctuation at unit end
+ZL-07-280	ZL	觀三相品第七	偈	「若法是無者，是即無有滅；譬如第二頭，無故不可斷。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14404-14430	quoted verse: 「」 with five-character lines
+ZL-07-281	ZL	觀三相品第七	释	法若無者則無滅相，如第二頭、第三手，無故不可斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14430-14454	
+ZL-07-282	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14454-14457	no terminal punctuation at unit end
+ZL-07-283	ZL	觀三相品第七	偈	「法不自相滅，他相亦不滅；如自相不生，他相亦不生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14457-14483	quoted verse: 「」 with five-character lines
+ZL-07-284	ZL	觀三相品第七	释	如先說生相，生不自生亦不從他生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14483-14499	
+ZL-07-285	ZL	觀三相品第七	释	若以自體生，是則不然，一切物皆從眾緣生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14499-14519	
+ZL-07-286	ZL	觀三相品第七	释	如指端不能自觸，如是生不能自生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14519-14535	
+ZL-07-287	ZL	觀三相品第七	释	從他生亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14535-14542	
+ZL-07-288	ZL	觀三相品第七	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14542-14546	
+ZL-07-289	ZL	觀三相品第七	释	生未有故，不應從他生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14546-14557	
+ZL-07-290	ZL	觀三相品第七	释	是生無故無自體，自體無故他亦無，是故從他生亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14557-14582	
+ZL-07-291	ZL	觀三相品第七	释	滅法亦如是，不自相滅、不他相滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14582-14598	
+ZL-07-292	ZL	觀三相品第七	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14598-14601	no terminal punctuation at unit end
+ZL-07-293	ZL	觀三相品第七	偈	「生住滅不成，故無有有為；有為法無故，何得有無為？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14601-14627	quoted verse: 「」 with five-character lines
+ZL-07-294	ZL	觀三相品第七	释	汝先說有生、住、滅相故有有為，以有有為故有無為。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14627-14651	
+ZL-07-295	ZL	觀三相品第七	释	今以理推求，三相不可得，云何得有有為？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14651-14670	
+ZL-07-296	ZL	觀三相品第七	释	如先說，無有無相法，有為法無故，何得有無為？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14670-14692	
+ZL-07-297	ZL	觀三相品第七	释	無為相名不生不住不滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14692-14703	
+ZL-07-298	ZL	觀三相品第七	释	止有為相故名無為相，無為自無別相，因是三相有無為相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14703-14729	
+ZL-07-299	ZL	觀三相品第七	释	如火為熱相、地為堅相、水為冷相，無為則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14729-14751	
+ZL-07-300	ZL	觀三相品第七	释	問曰：若是生、住、滅畢竟無者，云何論中得說名字？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14751-14775	
+ZL-07-301	ZL	觀三相品第七	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14775-14778	no terminal punctuation at unit end
+ZL-07-302	ZL	觀三相品第七	偈	「如幻亦如夢，如乾闥婆城，所說生住滅，其相亦如是。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14778-14804	quoted verse: 「」 with five-character lines
+ZL-07-303	ZL	觀三相品第七	释	生、住、滅相無有決定，凡人貪著謂有決定。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14804-14824	
+ZL-07-304	ZL	觀三相品第七	释	諸賢聖憐愍欲止其顛倒，還以其所著名字為說，語言雖同其心則異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14824-14854	
+ZL-07-305	ZL	觀三相品第七	释	如是說生、住、滅相，不應有難。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14854-14869	
+ZL-07-306	ZL	觀三相品第七	释	如幻化所作，不應責其所由，不應於中有憂喜想，但應眼見而已。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14869-14898	
+ZL-07-307	ZL	觀三相品第七	释	如夢中所見不應求實，如乾闥婆城日出時現而無有實，但假為名字不久則滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14898-14932	
+ZL-07-308	ZL	觀三相品第七	释	生、住、滅亦如是，凡夫分別為有，智者推求則不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	14932-14957	
+ZL-21-H1	ZL	觀成壞品第二十一	题	中論觀成壞品第二十一	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36497-36507	
+ZL-21-001	ZL	觀成壞品第二十一	释	問曰：一切世間事現是壞敗相，是故有壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36507-36526	
+ZL-21-002	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36526-36529	no terminal punctuation at unit end
+ZL-21-003	ZL	觀成壞品第二十一	偈	「離成及共成，是中無有壞；離壞及共壞，是中亦無成。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36529-36555	quoted verse: 「」 with five-character lines
+ZL-21-004	ZL	觀成壞品第二十一	释	若有成、若無成，俱無壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36555-36567	
+ZL-21-005	ZL	觀成壞品第二十一	释	若有壞、若無壞，俱無成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36567-36579	
+ZL-21-006	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36579-36583	
+ZL-21-007	ZL	觀成壞品第二十一	偈	「若離於成者，云何而有壞？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36583-36596	quoted verse: 「」 with five-character lines
+ZL-21-008	ZL	觀成壞品第二十一	偈	如離生有死，是事則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36596-36608	quoted verse: 「」 with five-character lines
+ZL-21-009	ZL	觀成壞品第二十一	偈	成壞共有者，云何有成壞？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36608-36620	quoted verse: 「」 with five-character lines
+ZL-21-010	ZL	觀成壞品第二十一	偈	如世間生死，一時俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36620-36632	quoted verse: 「」 with five-character lines
+ZL-21-011	ZL	觀成壞品第二十一	偈	若離於壞者，云何當有成？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36632-36644	quoted verse: 「」 with five-character lines
+ZL-21-012	ZL	觀成壞品第二十一	偈	無常未曾有，不在諸法時。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36644-36657	quoted verse: 「」 with five-character lines
+ZL-21-013	ZL	觀成壞品第二十一	释	若離成，壞不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36657-36666	
+ZL-21-014	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36666-36670	
+ZL-21-015	ZL	觀成壞品第二十一	释	若離成有壞者，則不因成有壞，壞則無因，又無成法而可壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36670-36697	
+ZL-21-016	ZL	觀成壞品第二十一	释	成名眾緣合，壞名眾緣散，若離成有壞者，無成誰當壞？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36697-36722	
+ZL-21-017	ZL	觀成壞品第二十一	释	如無瓶，不得言瓶壞，是故離成無壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36722-36739	
+ZL-21-018	ZL	觀成壞品第二十一	释	若謂共成有壞者，是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36739-36752	
+ZL-21-019	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36752-36756	
+ZL-21-020	ZL	觀成壞品第二十一	释	法先別成而後有合，合法不離異。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36756-36771	
+ZL-21-021	ZL	觀成壞品第二十一	释	若壞離異，壞則無因，是故共成亦無壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36771-36789	
+ZL-21-022	ZL	觀成壞品第二十一	释	若離壞共壞無有成者，若離壞有成，成則為常，常是不壞相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36789-36816	
+ZL-21-023	ZL	觀成壞品第二十一	释	而實不見有法常不壞相，是故離壞無成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36816-36834	
+ZL-21-024	ZL	觀成壞品第二十一	释	若謂共壞有成者，是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36834-36847	
+ZL-21-025	ZL	觀成壞品第二十一	释	成壞相違，云何一時有？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36847-36858	
+ZL-21-026	ZL	觀成壞品第二十一	释	如人有髮無髮不得一時俱，成壞亦爾，是故共壞有成是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36858-36886	
+ZL-21-027	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36886-36890	
+ZL-21-028	ZL	觀成壞品第二十一	释	若謂分別法者，說成中常有壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36890-36904	
+ZL-21-029	ZL	觀成壞品第二十一	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36904-36909	
+ZL-21-030	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36909-36913	
+ZL-21-031	ZL	觀成壞品第二十一	释	若成中常有壞，則不應有住法；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36913-36927	
+ZL-21-032	ZL	觀成壞品第二十一	释	而實有住，是故若離壞共壞不應有成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36927-36944	
+ZL-21-033	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36944-36947	no terminal punctuation at unit end
+ZL-21-034	ZL	觀成壞品第二十一	偈	「成壞共無成，離亦無有成，是二俱不可，云何當有成？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36947-36973	quoted verse: 「」 with five-character lines
+ZL-21-035	ZL	觀成壞品第二十一	释	若成壞共亦無成、離亦無成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36973-36986	
+ZL-21-036	ZL	觀成壞品第二十一	释	若共成則二法相違，云何一時？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	36986-37000	
+ZL-21-037	ZL	觀成壞品第二十一	释	若離則無因。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37000-37006	
+ZL-21-038	ZL	觀成壞品第二十一	释	二門俱不成，云何當有成？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37006-37018	
+ZL-21-039	ZL	觀成壞品第二十一	释	若有應說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37018-37023	
+ZL-21-040	ZL	觀成壞品第二十一	释	問曰：現有盡滅相法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37023-37033	
+ZL-21-041	ZL	觀成壞品第二十一	释	是盡滅相法，亦說盡亦說不盡，如是則應有成壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37033-37055	
+ZL-21-042	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37055-37058	no terminal punctuation at unit end
+ZL-21-043	ZL	觀成壞品第二十一	偈	「盡則無有成，不盡亦無成；盡則無有壞，不盡亦不壞。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37058-37084	quoted verse: 「」 with five-character lines
+ZL-21-044	ZL	觀成壞品第二十一	释	諸法日夜中念念常滅盡，過去如水流不住，是則名盡。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37084-37108	
+ZL-21-045	ZL	觀成壞品第二十一	释	是事不可取、不可說，如野馬無決定性可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37108-37128	
+ZL-21-046	ZL	觀成壞品第二十一	释	如是盡無決定性可得，云何可得分別說有成？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37128-37148	
+ZL-21-047	ZL	觀成壞品第二十一	释	是故言盡亦不成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37148-37156	
+ZL-21-048	ZL	觀成壞品第二十一	释	成無故，亦不應有壞，是故說盡亦無有壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37156-37175	
+ZL-21-049	ZL	觀成壞品第二十一	释	又念念生滅常相續不斷故名不盡，如是法決定常住不斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37175-37200	
+ZL-21-050	ZL	觀成壞品第二十一	释	云何可得分別說言今是成時？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37200-37213	
+ZL-21-051	ZL	觀成壞品第二十一	释	是故說無盡亦無成。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37213-37222	
+ZL-21-052	ZL	觀成壞品第二十一	释	成無故無壞，是故說不盡亦無壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37222-37237	
+ZL-21-053	ZL	觀成壞品第二十一	释	如是推求，實事不可得，故無成無壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37237-37254	
+ZL-21-054	ZL	觀成壞品第二十一	释	問曰：且置成壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37254-37262	
+ZL-21-055	ZL	觀成壞品第二十一	释	但令有法，有何咎？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37262-37271	
+ZL-21-056	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37271-37274	no terminal punctuation at unit end
+ZL-21-057	ZL	觀成壞品第二十一	偈	「若離於成壞，是亦無有法；若當離於法，亦無有成壞。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37274-37300	quoted verse: 「」 with five-character lines
+ZL-21-058	ZL	觀成壞品第二十一	释	離成壞無法者，若法無成無壞，是法應或無或常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37300-37322	
+ZL-21-059	ZL	觀成壞品第二十一	释	而世間無有常法，汝說離成壞有法，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37322-37343	
+ZL-21-060	ZL	觀成壞品第二十一	释	問曰：若離法但有成壞，有何咎？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37343-37358	
+ZL-21-061	ZL	觀成壞品第二十一	释	答曰：離法有成壞，是亦不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37358-37372	
+ZL-21-062	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37372-37376	
+ZL-21-063	ZL	觀成壞品第二十一	释	若離法，誰成誰壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37376-37385	
+ZL-21-064	ZL	觀成壞品第二十一	释	是故離法有成壞，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37385-37398	
+ZL-21-065	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37398-37401	no terminal punctuation at unit end
+ZL-21-066	ZL	觀成壞品第二十一	偈	「若法性空者，誰當有成壞？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37401-37414	quoted verse: 「」 with five-character lines
+ZL-21-067	ZL	觀成壞品第二十一	偈	若性不空者，亦無有成壞。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37414-37427	quoted verse: 「」 with five-character lines
+ZL-21-068	ZL	觀成壞品第二十一	释	若諸法性空，空何有成壞？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37427-37439	
+ZL-21-069	ZL	觀成壞品第二十一	释	若諸法性不空，不空則決定有，亦不應有成壞。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37439-37460	
+ZL-21-070	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37460-37463	no terminal punctuation at unit end
+ZL-21-071	ZL	觀成壞品第二十一	偈	「成壞若一者，是事則不然；成壞若異者，是事亦不然。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37463-37489	quoted verse: 「」 with five-character lines
+ZL-21-072	ZL	觀成壞品第二十一	释	推求成壞一則不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37489-37499	
+ZL-21-073	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37499-37503	
+ZL-21-074	ZL	觀成壞品第二十一	释	異相故、種種分別故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37503-37513	
+ZL-21-075	ZL	觀成壞品第二十一	释	又成壞異亦不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37513-37522	
+ZL-21-076	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37522-37526	
+ZL-21-077	ZL	觀成壞品第二十一	释	無有別故、亦無因故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37526-37536	
+ZL-21-078	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37536-37539	no terminal punctuation at unit end
+ZL-21-079	ZL	觀成壞品第二十一	偈	「若謂以眼見，而有生滅者，則為是癡妄，而見有生滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37539-37565	quoted verse: 「」 with five-character lines
+ZL-21-080	ZL	觀成壞品第二十一	释	若謂以眼見有生滅者，云何以言說破？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37565-37582	
+ZL-21-081	ZL	觀成壞品第二十一	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37582-37587	
+ZL-21-082	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37587-37591	
+ZL-21-083	ZL	觀成壞品第二十一	释	眼見生滅者，則是愚癡顛倒故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37591-37605	
+ZL-21-084	ZL	觀成壞品第二十一	释	見諸法性空、無決定、如幻如夢，但凡夫先世顛倒因緣得此眼，今世憶想分別因緣故，言眼見生滅。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37605-37649	
+ZL-21-085	ZL	觀成壞品第二十一	释	第一義中實無生滅，是事已於〈破相品〉中廣說。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37649-37671	
+ZL-21-086	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37671-37674	no terminal punctuation at unit end
+ZL-21-087	ZL	觀成壞品第二十一	偈	「從法不生法，亦不生非法；從非法不生，法及於非法。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37674-37700	quoted verse: 「」 with five-character lines
+ZL-21-088	ZL	觀成壞品第二十一	释	從法不生法者，若失若至，二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37700-37717	
+ZL-21-089	ZL	觀成壞品第二十一	释	從法生法，若至若失，是則無因，無因則墮斷常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37717-37739	
+ZL-21-090	ZL	觀成壞品第二十一	释	若已至從法生法，是法至已而名為生，則為是常，又生已更生，又亦無因生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37739-37773	
+ZL-21-091	ZL	觀成壞品第二十一	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37773-37778	
+ZL-21-092	ZL	觀成壞品第二十一	释	若已失從法生法者，是則失因，生者無因，是故從失亦不生法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37778-37806	
+ZL-21-093	ZL	觀成壞品第二十一	释	從法不生非法者，非法名無所有、法名有，云何從有相生無相？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37806-37834	
+ZL-21-094	ZL	觀成壞品第二十一	释	是故從法不生非法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37834-37843	
+ZL-21-095	ZL	觀成壞品第二十一	释	從非法不生法者，非法名為無，無云何生有？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37843-37863	
+ZL-21-096	ZL	觀成壞品第二十一	释	若從無生有者，是則無因，無因則有大過，是故不從非法生法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37863-37891	
+ZL-21-097	ZL	觀成壞品第二十一	释	不從非法生非法者，非法名無所有，云何從無所有生無所有？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37891-37918	
+ZL-21-098	ZL	觀成壞品第二十一	释	如兔角不生龜毛，是故不從非法生非法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37918-37936	
+ZL-21-099	ZL	觀成壞品第二十一	释	問曰：法非法雖種種分別故無生，但法應生法。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37936-37957	
+ZL-21-100	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37957-37960	no terminal punctuation at unit end
+ZL-21-101	ZL	觀成壞品第二十一	偈	「法不從自生，亦不從他生，不從自他生，云何而有生？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37960-37986	quoted verse: 「」 with five-character lines
+ZL-21-102	ZL	觀成壞品第二十一	释	法未生時無所有故，又即自不生故，是故法不自生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	37986-38009	
+ZL-21-103	ZL	觀成壞品第二十一	释	若法未生則亦無他，無他故不得言從他生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38009-38028	
+ZL-21-104	ZL	觀成壞品第二十一	释	又未生則無自，無自亦無他，共亦不生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38028-38046	
+ZL-21-105	ZL	觀成壞品第二十一	释	若三種不生，云何從法有法生？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38046-38060	
+ZL-21-106	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38060-38063	no terminal punctuation at unit end
+ZL-21-107	ZL	觀成壞品第二十一	偈	「若有所受法，即墮於斷常，當知所受法，為常為無常。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38063-38089	quoted verse: 「」 with five-character lines
+ZL-21-108	ZL	觀成壞品第二十一	释	受法者，分別是善是不善、常無常等，是人必墮若常見若斷見。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38089-38117	
+ZL-21-109	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38117-38121	
+ZL-21-110	ZL	觀成壞品第二十一	释	所受法應有二種：若常、若無常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38121-38136	
+ZL-21-111	ZL	觀成壞品第二十一	释	二俱不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38136-38141	
+ZL-21-112	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38141-38145	
+ZL-21-113	ZL	觀成壞品第二十一	释	若常即墮常邊，若無常即墮斷邊。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38145-38160	
+ZL-21-114	ZL	觀成壞品第二十一	释	問曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38160-38163	no terminal punctuation at unit end
+ZL-21-115	ZL	觀成壞品第二十一	偈	「所有受法者，不墮於斷常，因果相續故，不斷亦不常。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38163-38189	quoted verse: 「」 with five-character lines
+ZL-21-116	ZL	觀成壞品第二十一	释	有人雖信受分別說諸法，而不墮斷常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38189-38206	
+ZL-21-117	ZL	觀成壞品第二十一	释	如經說五陰無常苦空無我，而不斷滅；	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38206-38223	
+ZL-21-118	ZL	觀成壞品第二十一	释	雖說罪福無量劫數不失，而不是常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38223-38239	
+ZL-21-119	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38239-38243	
+ZL-21-120	ZL	觀成壞品第二十一	释	是法因果常生滅相續故往來不絕，生滅故不常，相續故不斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38243-38270	
+ZL-21-121	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38270-38273	no terminal punctuation at unit end
+ZL-21-122	ZL	觀成壞品第二十一	偈	「若因果生滅，相續而不斷；滅更不生故，因即為斷滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38273-38299	quoted verse: 「」 with five-character lines
+ZL-21-123	ZL	觀成壞品第二十一	释	若汝說諸法因果相續故不斷不常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38299-38314	
+ZL-21-124	ZL	觀成壞品第二十一	释	若滅法已滅更不復生，是則因斷。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38314-38329	
+ZL-21-125	ZL	觀成壞品第二十一	释	若因斷，云何有相續？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38329-38339	
+ZL-21-126	ZL	觀成壞品第二十一	释	已滅不生故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38339-38345	
+ZL-21-127	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38345-38348	no terminal punctuation at unit end
+ZL-21-128	ZL	觀成壞品第二十一	偈	「法住於自性，不應有有無；涅槃滅相續，則墮於斷滅。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38348-38374	quoted verse: 「」 with five-character lines
+ZL-21-129	ZL	觀成壞品第二十一	释	法決定在有相中，爾時無無相，如瓶定在瓶相，爾時無失壞相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38374-38402	
+ZL-21-130	ZL	觀成壞品第二十一	释	隨有瓶時無失壞相，無瓶時亦無失壞相。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38402-38420	
+ZL-21-131	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38420-38424	
+ZL-21-132	ZL	觀成壞品第二十一	释	若無瓶則無所破，以是義故滅不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38424-38441	
+ZL-21-133	ZL	觀成壞品第二十一	释	離滅故亦無生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38441-38448	
+ZL-21-134	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38448-38452	
+ZL-21-135	ZL	觀成壞品第二十一	释	生滅相因待故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38452-38459	
+ZL-21-136	ZL	觀成壞品第二十一	释	又有常等過故，是故不應於一法而有有無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38459-38478	
+ZL-21-137	ZL	觀成壞品第二十一	释	又汝先說因果生滅相續故，雖受諸法不墮斷常。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38478-38499	
+ZL-21-138	ZL	觀成壞品第二十一	释	是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38499-38504	
+ZL-21-139	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38504-38508	
+ZL-21-140	ZL	觀成壞品第二十一	释	汝說因果相續故有三有相續，滅相續名涅槃。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38508-38528	
+ZL-21-141	ZL	觀成壞品第二十一	释	若爾者，涅槃時應墮斷滅，以滅三有相續故。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38528-38548	
+ZL-21-142	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38548-38551	no terminal punctuation at unit end
+ZL-21-143	ZL	觀成壞品第二十一	偈	「若初有滅者，則無有後有；初有若不滅，亦無有後有。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38551-38577	quoted verse: 「」 with five-character lines
+ZL-21-144	ZL	觀成壞品第二十一	释	初有名今世有，後有名來世有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38577-38591	
+ZL-21-145	ZL	觀成壞品第二十一	释	若初有滅次有後有，是即無因。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38591-38605	
+ZL-21-146	ZL	觀成壞品第二十一	释	是事不然，是故不得言初有滅有後有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38605-38622	
+ZL-21-147	ZL	觀成壞品第二十一	释	若初有不滅，亦不應有後有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38622-38635	
+ZL-21-148	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38635-38639	
+ZL-21-149	ZL	觀成壞品第二十一	释	若初有未滅而有後有者，是則一時有二有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38639-38658	
+ZL-21-150	ZL	觀成壞品第二十一	释	是事不然，是故初有不滅無有後有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38658-38674	
+ZL-21-151	ZL	觀成壞品第二十一	释	問曰：後有不以初有滅生、不以不滅生，但滅時生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38674-38697	
+ZL-21-152	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38697-38700	no terminal punctuation at unit end
+ZL-21-153	ZL	觀成壞品第二十一	偈	「若初有滅時，而後有生者，滅時是一有，生時是一有。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38700-38726	quoted verse: 「」 with five-character lines
+ZL-21-154	ZL	觀成壞品第二十一	释	若初有滅時後有生者，即二有一時俱：一有是滅時，一有是生時。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38726-38755	
+ZL-21-155	ZL	觀成壞品第二十一	释	問曰：滅時生時二有俱者則不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38755-38770	
+ZL-21-156	ZL	觀成壞品第二十一	释	但現見初有滅時後有生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38770-38781	
+ZL-21-157	ZL	觀成壞品第二十一	释	答曰：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38781-38784	no terminal punctuation at unit end
+ZL-21-158	ZL	觀成壞品第二十一	偈	「若言於生滅，而謂一時者，則於此陰死，即於此陰生。」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38784-38810	quoted verse: 「」 with five-character lines
+ZL-21-159	ZL	觀成壞品第二十一	释	若生時滅時一時無二有，而謂初有滅時後有生者，今應隨在何陰中死，即於此陰生，不應餘陰中生。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38810-38854	
+ZL-21-160	ZL	觀成壞品第二十一	释	何以故？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38854-38858	
+ZL-21-161	ZL	觀成壞品第二十一	释	死者即是生者。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38858-38865	
+ZL-21-162	ZL	觀成壞品第二十一	释	如是死生相違法，不應一時一處。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38865-38880	
+ZL-21-163	ZL	觀成壞品第二十一	释	是故汝先說滅時生時一時無二有，但現見初有滅時後有生者，是事不然。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38880-38912	
+ZL-21-164	ZL	觀成壞品第二十一	释	復次：	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38912-38915	no terminal punctuation at unit end
+ZL-21-165	ZL	觀成壞品第二十一	偈	「三世中求有，相續不可得，若三世中無，何有有相續？」	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38915-38941	quoted verse: 「」 with five-character lines
+ZL-21-166	ZL	觀成壞品第二十一	释	三有名欲有、色有、無色有。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38941-38954	
+ZL-21-167	ZL	觀成壞品第二十一	释	無始生死中不得實智故，常有三有相續。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38954-38972	
+ZL-21-168	ZL	觀成壞品第二十一	释	今於三世中諦求不可得。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38972-38983	
+ZL-21-169	ZL	觀成壞品第二十一	释	若三世中無有，當於何處有有相續？	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38983-38999	
+ZL-21-170	ZL	觀成壞品第二十一	释	當知有有相續，皆從愚癡顛倒故有，實中則無。	sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt	38999-39020	
