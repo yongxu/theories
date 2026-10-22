@@ -196,6 +196,50 @@ theorem gains_from_supported (balances : L.Balances W) (acting : L.Acting W)
   gains_from_supported_at (fun c _ => balances.on [c] t)
     (fun c _ => acting.giversSupported dependent t c) gains unloosened
 
+/-- What holds at the end of a stretch and not at every step of it came to hold across one of its
+steps: this cannot be refuted, with nothing decided. -/
+theorem comes_within_not_not {p : Nat → Prop} {S : Nat} : ∀ {K : Nat}, p (S + K) →
+    ¬ (∀ i, i ≤ K → p (S + i)) → ¬ ¬ ∃ u, S ≤ u ∧ u < S + K ∧ ¬ p u ∧ p (u + 1)
+  | 0, holds, notAll => absurd (fun _ le => Eq.subst (motive := fun j => p (S + j))
+      (Nat.eq_zero_of_le_zero le).symm holds) notAll
+  | K + 1, holds, notAll => fun none =>
+    (fun em : ¬ ¬ (p (S + K) ∨ ¬ p (S + K)) => em fun decided => match decided with
+      | .inr fails => none ⟨S + K, Nat.le_add_right S K, Nat.lt_succ_self _, fails, holds⟩
+      | .inl prev => comes_within_not_not prev
+          (fun all => notAll fun i le => match Nat.lt_or_ge i (K + 1) with
+            | .inl lt => all i (Nat.le_of_lt_succ lt)
+            | .inr ge => Eq.subst (motive := fun j => p (S + j)) (Nat.le_antisymm ge le) holds)
+          fun ⟨u, from_, below, fails, after⟩ =>
+            none ⟨u, from_, Nat.lt_succ_of_lt below, fails, after⟩)
+      (fun k => k (.inr fun h => k (.inl h)))
+
+/-- **Support is passed on by formations that gained it later.** In a balanced flow where only
+active formations give and activity needs support, with requirements never loosening and no
+formation supported for more than `K + 1` steps in a row: where some formation gains support at
+arbitrarily late steps, then for every `T` and `N` it cannot be refuted that, at some step from
+`N` on, a formation gains support through the giving of a supported formation that itself gained
+support after `T`. Support runs as a chain of gains, each giver a newer gainer; a chain of support
+is not yet 生生, which asks a direction as well (chapter §6.1). -/
+theorem support_passes_on (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    (unloosened : ∀ t f, W.Unloosened t f) {K : Nat}
+    (brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g)
+    (recurs : ∀ N, ∃ t f, N ≤ t ∧ W.GainsSupport t f) (T N : Nat) :
+    ¬ ¬ ∃ t f c g u, N ≤ t ∧ W.GainsSupport t f ∧ W.requires t f c ∧ g ∈ L.present t ∧
+      0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g :=
+  match recurs (N + (K + (T + 1))) with
+  | ⟨t, f, late, gains⟩ => fun none =>
+    have span : K + (T + 1) ≤ t := Naturals.le_of_add_le_left late
+    have back : t - K + K = t := Naturals.sub_add_cancel (Naturals.le_of_add_le_right span)
+    have after : T + 1 ≤ t - K := Naturals.le_sub_of_add_le span
+    gains_from_supported balances acting dependent gains (unloosened t f)
+      fun c requires g mem gives supported =>
+        comes_within_not_not (p := fun j => W.Supported j g) (S := t - K)
+          (Eq.subst (motive := fun j => W.Supported j g) back.symm supported) (brief (t - K) g)
+          fun ⟨u, from_, below, fails, holds⟩ =>
+            none ⟨t, f, c, g, u, Nat.le_trans (Nat.le_add_right N _) late, gains, requires, mem, gives,
+              supported, Nat.le_trans (Nat.le_succ T) (Nat.le_trans after from_),
+              Nat.lt_of_lt_of_le below (Nat.le_of_eq back), fails, holds⟩
+
 /-- Where nothing beyond gives, the end absorbs, over the steps it is used at: with balance
 at each condition a member requires and whatever gives to such a condition supported, across
 each of the `n` steps from `T`, no member is supported at `T + n`. -/
