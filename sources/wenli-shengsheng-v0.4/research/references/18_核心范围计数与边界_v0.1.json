@@ -1,0 +1,1261 @@
+{
+  "audit_scope": "08 JSON/MD,04,09,01;辅查02原主张及12八卦候选。只计结构化记录及明确混合表，不以文中出现字数估计词汇覆盖。",
+  "input_files": {
+    "plan": {
+      "path": "outputs/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md",
+      "sha256": "b7b10747574125b42e2b36dab9904ce469cce9d026303e39ec6059906765b6e8"
+    },
+    "archive": {
+      "path": "outputs/02_对话全记录_中文概念组合_文与系统生成_2026-10-21.md",
+      "sha256": "a0d8fb7b10e25a8f3576360cf75c7cd4d1509b188ce8833b6962bb9f901e301a"
+    },
+    "mapping": {
+      "path": "outputs/04_逐字动态映射与古文出处_v0.2.md",
+      "sha256": "0de74582d047858420a5881d9a23b8a07207cc34056a7bf20a89ea9f33bfaead"
+    },
+    "lexicon_json": {
+      "path": "outputs/08_组合文法逐字类型词典_v0.3.json",
+      "sha256": "b1a9cc5e8bbfa6c91a1999c1b989fa341a75d6d1ba5968a381f90eeec0c5049a"
+    },
+    "lexicon_md": {
+      "path": "outputs/08_组合文法逐字类型词典_v0.3.md",
+      "sha256": "f4ac371af281fc5554eabc976bf40d511ddcc51d953916fadb2d9b540a26d9c4"
+    },
+    "casebook": {
+      "path": "outputs/09_组合文法完整推导与反例_v0.3.md",
+      "sha256": "d786379abd5b219f3fcb39a4da38194e1f1bb84c2c89ae5735c9c77bcae6ac70"
+    },
+    "bagua_json": {
+      "path": "outputs/12_八卦与113字逐项映射_v0.1.json",
+      "sha256": "13d82ccd6a069dab51d511697058b73613c43abf2f3f8de702fb0b833ad15190"
+    },
+    "bagua_md": {
+      "path": "outputs/12_八卦与113字逐项映射_v0.1.md",
+      "sha256": "181cf0c283ae2a763241f0f96b76f3f152c892bc2d7038fb5020ae38487a87c1"
+    }
+  },
+  "lexicon08": {
+    "declared_counts": {
+      "core_characters": 113,
+      "core_senses": 211,
+      "syntax_senses": 12,
+      "extension_characters": 20,
+      "extension_senses": 22
+    },
+    "core": {
+      "interface_records": 211,
+      "unique_characters": 113,
+      "character_order": [
+        "文",
+        "理",
+        "道",
+        "易",
+        "德",
+        "辨",
+        "系",
+        "序",
+        "化",
+        "限",
+        "有",
+        "无",
+        "物",
+        "象",
+        "形",
+        "气",
+        "质",
+        "名",
+        "实",
+        "同",
+        "异",
+        "相",
+        "互",
+        "共",
+        "自",
+        "因",
+        "应",
+        "承",
+        "感",
+        "交",
+        "克",
+        "分",
+        "合",
+        "本",
+        "末",
+        "体",
+        "用",
+        "位",
+        "层",
+        "界",
+        "内",
+        "外",
+        "爻",
+        "生",
+        "变",
+        "成",
+        "兴",
+        "衰",
+        "盛",
+        "消",
+        "长",
+        "开",
+        "闭",
+        "反",
+        "复",
+        "聚",
+        "散",
+        "动",
+        "静",
+        "时",
+        "势",
+        "几",
+        "机",
+        "度",
+        "量",
+        "穷",
+        "通",
+        "久",
+        "终",
+        "始",
+        "往",
+        "存",
+        "续",
+        "养",
+        "守",
+        "亡",
+        "坏",
+        "绝",
+        "熄",
+        "死",
+        "息",
+        "中",
+        "和",
+        "衡",
+        "节",
+        "制",
+        "正",
+        "常",
+        "治",
+        "乱",
+        "观",
+        "证",
+        "知",
+        "觉",
+        "察",
+        "明",
+        "信",
+        "故",
+        "类",
+        "法",
+        "宜",
+        "仁",
+        "义",
+        "礼",
+        "善",
+        "性",
+        "权",
+        "阴",
+        "阳",
+        "虚",
+        "刚",
+        "柔",
+        "弱"
+      ],
+      "unique_sense_ids": 211,
+      "direct_engine_binding_true": 0,
+      "direct_engine_binding_false": 211,
+      "records_with_nonempty_source_ids": 207,
+      "records_without_source_ids": [
+        {
+          "sense_id": "core.023.01",
+          "char": "互",
+          "label": "明确双向关系"
+        },
+        {
+          "sense_id": "core.039.01",
+          "char": "层",
+          "label": "描述层级"
+        },
+        {
+          "sense_id": "core.039.02",
+          "char": "层",
+          "label": "跨层解释"
+        },
+        {
+          "sense_id": "core.077.01",
+          "char": "坏",
+          "label": "功能或结构受损"
+        }
+      ]
+    },
+    "syntax": {
+      "interface_records": 12,
+      "unique_characters": 11,
+      "character_order": [
+        "不",
+        "未",
+        "则",
+        "而",
+        "以",
+        "于",
+        "为",
+        "之",
+        "其",
+        "先",
+        "后"
+      ],
+      "unique_sense_ids": 12,
+      "direct_engine_binding_true": 0,
+      "direct_engine_binding_false": 12,
+      "records_with_nonempty_source_ids": 9,
+      "records_without_source_ids": [
+        {
+          "sense_id": "syntax.02",
+          "char": "未",
+          "label": "截至某时尚未"
+        },
+        {
+          "sense_id": "syntax.05",
+          "char": "而",
+          "label": "过程承接"
+        },
+        {
+          "sense_id": "syntax.06",
+          "char": "以",
+          "label": "工具或依据"
+        }
+      ]
+    },
+    "extension": {
+      "interface_records": 22,
+      "unique_characters": 20,
+      "character_order": [
+        "欲",
+        "求",
+        "争",
+        "学",
+        "习",
+        "积",
+        "毁",
+        "止",
+        "力",
+        "宇",
+        "游",
+        "天",
+        "人",
+        "改",
+        "木",
+        "火",
+        "土",
+        "金",
+        "水",
+        "胜"
+      ],
+      "unique_sense_ids": 22,
+      "direct_engine_binding_true": 0,
+      "direct_engine_binding_false": 22,
+      "records_with_nonempty_source_ids": 20,
+      "records_without_source_ids": [
+        {
+          "sense_id": "extension.15",
+          "char": "改",
+          "label": "修订模型"
+        },
+        {
+          "sense_id": "extension.16",
+          "char": "改",
+          "label": "改变行动"
+        }
+      ]
+    },
+    "all": {
+      "interface_records": 245,
+      "unique_characters": 144,
+      "character_order": [
+        "文",
+        "理",
+        "道",
+        "易",
+        "德",
+        "辨",
+        "系",
+        "序",
+        "化",
+        "限",
+        "有",
+        "无",
+        "物",
+        "象",
+        "形",
+        "气",
+        "质",
+        "名",
+        "实",
+        "同",
+        "异",
+        "相",
+        "互",
+        "共",
+        "自",
+        "因",
+        "应",
+        "承",
+        "感",
+        "交",
+        "克",
+        "分",
+        "合",
+        "本",
+        "末",
+        "体",
+        "用",
+        "位",
+        "层",
+        "界",
+        "内",
+        "外",
+        "爻",
+        "生",
+        "变",
+        "成",
+        "兴",
+        "衰",
+        "盛",
+        "消",
+        "长",
+        "开",
+        "闭",
+        "反",
+        "复",
+        "聚",
+        "散",
+        "动",
+        "静",
+        "时",
+        "势",
+        "几",
+        "机",
+        "度",
+        "量",
+        "穷",
+        "通",
+        "久",
+        "终",
+        "始",
+        "往",
+        "存",
+        "续",
+        "养",
+        "守",
+        "亡",
+        "坏",
+        "绝",
+        "熄",
+        "死",
+        "息",
+        "中",
+        "和",
+        "衡",
+        "节",
+        "制",
+        "正",
+        "常",
+        "治",
+        "乱",
+        "观",
+        "证",
+        "知",
+        "觉",
+        "察",
+        "明",
+        "信",
+        "故",
+        "类",
+        "法",
+        "宜",
+        "仁",
+        "义",
+        "礼",
+        "善",
+        "性",
+        "权",
+        "阴",
+        "阳",
+        "虚",
+        "刚",
+        "柔",
+        "弱",
+        "不",
+        "未",
+        "则",
+        "而",
+        "以",
+        "于",
+        "为",
+        "之",
+        "其",
+        "先",
+        "后",
+        "欲",
+        "求",
+        "争",
+        "学",
+        "习",
+        "积",
+        "毁",
+        "止",
+        "力",
+        "宇",
+        "游",
+        "天",
+        "人",
+        "改",
+        "木",
+        "火",
+        "土",
+        "金",
+        "水",
+        "胜"
+      ],
+      "unique_sense_ids": 245,
+      "direct_engine_binding_true": 0,
+      "direct_engine_binding_false": 245,
+      "records_with_nonempty_source_ids": 236,
+      "records_without_source_ids": [
+        {
+          "sense_id": "core.023.01",
+          "char": "互",
+          "label": "明确双向关系"
+        },
+        {
+          "sense_id": "core.039.01",
+          "char": "层",
+          "label": "描述层级"
+        },
+        {
+          "sense_id": "core.039.02",
+          "char": "层",
+          "label": "跨层解释"
+        },
+        {
+          "sense_id": "core.077.01",
+          "char": "坏",
+          "label": "功能或结构受损"
+        },
+        {
+          "sense_id": "syntax.02",
+          "char": "未",
+          "label": "截至某时尚未"
+        },
+        {
+          "sense_id": "syntax.05",
+          "char": "而",
+          "label": "过程承接"
+        },
+        {
+          "sense_id": "syntax.06",
+          "char": "以",
+          "label": "工具或依据"
+        },
+        {
+          "sense_id": "extension.15",
+          "char": "改",
+          "label": "修订模型"
+        },
+        {
+          "sense_id": "extension.16",
+          "char": "改",
+          "label": "改变行动"
+        }
+      ]
+    },
+    "core_lexeme_records": 113,
+    "core_indices_are_1_through_113": true,
+    "core_characters_are_unique_single_characters": true,
+    "04_core_md_rows": 113,
+    "04_core_groups": [
+      {
+        "heading": "一 总纲与解释入口",
+        "characters": [
+          "文",
+          "理",
+          "道",
+          "易",
+          "德"
+        ],
+        "count": 5
+      },
+      {
+        "heading": "二 五元",
+        "characters": [
+          "辨",
+          "系",
+          "序",
+          "化",
+          "限"
+        ],
+        "count": 5
+      },
+      {
+        "heading": "三 对象存在与呈现",
+        "characters": [
+          "有",
+          "无",
+          "物",
+          "象",
+          "形",
+          "气",
+          "质",
+          "名",
+          "实"
+        ],
+        "count": 9
+      },
+      {
+        "heading": "四 差异与相互关系",
+        "characters": [
+          "同",
+          "异",
+          "相",
+          "互",
+          "共",
+          "自",
+          "因",
+          "应",
+          "承",
+          "感",
+          "交",
+          "克"
+        ],
+        "count": 12
+      },
+      {
+        "heading": "五 结构与组织",
+        "characters": [
+          "分",
+          "合",
+          "本",
+          "末",
+          "体",
+          "用",
+          "位",
+          "层",
+          "界",
+          "内",
+          "外",
+          "爻"
+        ],
+        "count": 12
+      },
+      {
+        "heading": "六 发生与变化",
+        "characters": [
+          "生",
+          "变",
+          "成",
+          "兴",
+          "衰",
+          "盛",
+          "消",
+          "长",
+          "开",
+          "闭",
+          "反",
+          "复",
+          "聚",
+          "散",
+          "动",
+          "静"
+        ],
+        "count": 16
+      },
+      {
+        "heading": "七 时序 条件与限度",
+        "characters": [
+          "时",
+          "势",
+          "几",
+          "机",
+          "度",
+          "量",
+          "穷",
+          "通",
+          "久",
+          "终",
+          "始",
+          "往"
+        ],
+        "count": 12
+      },
+      {
+        "heading": "八 持续与终止",
+        "characters": [
+          "存",
+          "续",
+          "养",
+          "守",
+          "亡",
+          "坏",
+          "绝",
+          "熄",
+          "死",
+          "息"
+        ],
+        "count": 10
+      },
+      {
+        "heading": "九 调节与秩序",
+        "characters": [
+          "中",
+          "和",
+          "衡",
+          "节",
+          "制",
+          "正",
+          "常",
+          "治",
+          "乱"
+        ],
+        "count": 9
+      },
+      {
+        "heading": "十 认识与验证",
+        "characters": [
+          "观",
+          "证",
+          "知",
+          "觉",
+          "察",
+          "明",
+          "信",
+          "故",
+          "类",
+          "法"
+        ],
+        "count": 10
+      },
+      {
+        "heading": "十一 规范与判断",
+        "characters": [
+          "宜",
+          "仁",
+          "义",
+          "礼",
+          "善",
+          "性",
+          "权"
+        ],
+        "count": 7
+      },
+      {
+        "heading": "十二 对待与性质",
+        "characters": [
+          "阴",
+          "阳",
+          "虚",
+          "刚",
+          "柔",
+          "弱"
+        ],
+        "count": 6
+      }
+    ],
+    "04_core_order_matches08_json": true,
+    "08_core_md_rows": 113,
+    "08_core_md_order_matches_json": true,
+    "core_output_schemes": {
+      "InterpretationRecord": 14,
+      "Text": 1,
+      "Formula": 96,
+      "Program": 47,
+      "NormJudgement": 20,
+      "ModelDeclaration": 21,
+      "CausalClaim": 2,
+      "Evidence": 2,
+      "AssessmentRecord": 5,
+      "EpistemicRecord": 2,
+      "CandidateClaim": 1
+    },
+    "core_roles": {
+      "interpretation": 20,
+      "declaration": 22,
+      "binding_formula": 82,
+      "macro_program": 16,
+      "binding_program": 31,
+      "normative": 20,
+      "macro_formula": 13,
+      "syntax": 1,
+      "causal": 2,
+      "evidence": 4
+    },
+    "core_interface_categories": {
+      "not_a_formula": 46,
+      "declaration": 22,
+      "atom_after_registration": 82,
+      "instantiate_then_expand": 29,
+      "atomic_program_after_registration": 31,
+      "resolve_reading_then_instantiate": 1
+    },
+    "source_registry_entries": 69,
+    "used_source_ids": 67,
+    "unresolved_source_ids": [],
+    "compounds_have_standalone_lexeme_records": false,
+    "warning": "接口数量不是独立原语、历史全部词义、完整古文用例或直接可运行函数的数量。"
+  },
+  "mixed_table04": {
+    "method": "限第十五节Markdown表；每数据行算一个混合句族；第一列仅按顿号拆表面标签。不做自动分词。",
+    "row_count": 32,
+    "split_label_count": 67,
+    "unique_split_labels": 67,
+    "label_length_distribution": {
+      "1": 1,
+      "2": 41,
+      "3": 2,
+      "4": 13,
+      "5": 3,
+      "6": 3,
+      "8": 3,
+      "10": 1
+    },
+    "two_character_labels": [
+      "求文",
+      "求理",
+      "生生",
+      "相生",
+      "有无",
+      "相克",
+      "共生",
+      "自生",
+      "养生",
+      "本末",
+      "终始",
+      "体用",
+      "阴阳",
+      "刚柔",
+      "动静",
+      "柔弱",
+      "虚实",
+      "消长",
+      "兴衰",
+      "分界",
+      "度量",
+      "感应",
+      "制衡",
+      "和同",
+      "中和",
+      "时中",
+      "名实",
+      "同异",
+      "穷变",
+      "变通",
+      "聚散",
+      "往复",
+      "反复",
+      "天文",
+      "人文",
+      "自然",
+      "无为",
+      "齐物",
+      "三表",
+      "失稳",
+      "续存"
+    ],
+    "compound_word_count": null,
+    "why_not_compound_word_count": "没有固定词判据、时代语料和逐项词/短语/句子标注；两字长度也不证明词汇化。",
+    "rows": [
+      {
+        "line": 240,
+        "row_label": "文理生生、求文、求理",
+        "split_labels": [
+          "文理生生",
+          "求文",
+          "求理"
+        ],
+        "description": "连接可辨样态、机制解释与生成延续",
+        "source_and_status": "项目名称和分析用语，不标作古代现成理论",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 241,
+        "row_label": "生生、生生之谓易",
+        "split_labels": [
+          "生生",
+          "生生之谓易"
+        ],
+        "description": "生成的接续与易之关系",
+        "source_and_status": "[Y03][Y03]；生命个体可死而生成接续",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 242,
+        "row_label": "生生不息",
+        "split_labels": [
+          "生生不息"
+        ],
+        "description": "现代稿用来表达生成未停止",
+        "source_and_status": "生生见 Y03；不息见 JC6b；本次不以两句拼接证明整语源流",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 243,
+        "row_label": "相生、有无、有无相生",
+        "split_labels": [
+          "相生",
+          "有无",
+          "有无相生"
+        ],
+        "description": "对待生成或依存，具体读法须论证",
+        "source_and_status": "[L01][L01]；不能直接转成互因网络",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 244,
+        "row_label": "相克、相生相克",
+        "split_labels": [
+          "相克",
+          "相生相克"
+        ],
+        "description": "生环与胜环两种有向关系；具体字义须区分",
+        "source_and_status": "[F01][F01] [F02][F02] [F03][F03]；已核《春秋繁露》的相生相胜，相克作现代通称，不主张已找到该固定术语最早出处",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 245,
+        "row_label": "共生、自生",
+        "split_labels": [
+          "共生",
+          "自生"
+        ],
+        "description": "共同生成生活、或自发生成的现代组合候选",
+        "source_and_status": "共与自的义例分别 M3、L07；本次未核定这两个复合词的最早用例及技术史",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 246,
+        "row_label": "养生",
+        "split_labels": [
+          "养生"
+        ],
+        "description": "维持生活、顺结构行动、保存能力",
+        "source_and_status": "[Z03][Z03]；原篇实践意义保留",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 247,
+        "row_label": "本末、终始",
+        "split_labels": [
+          "本末",
+          "终始"
+        ],
+        "description": "根本与末端、开端与完成的排序",
+        "source_and_status": "[C07][C07]；价值排序与因果排序分开",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 248,
+        "row_label": "体用",
+        "split_labels": [
+          "体用"
+        ],
+        "description": "构成与功能的候选区分",
+        "source_and_status": "本轮分别核体的部分义与用的功能义，未证明先秦已有成熟统一体用论",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 249,
+        "row_label": "阴阳、刚柔、动静、柔弱",
+        "split_labels": [
+          "阴阳",
+          "刚柔",
+          "动静",
+          "柔弱"
+        ],
+        "description": "对举性质、状态与作用倾向",
+        "source_and_status": "[Y03][Y03] [Y06][Y06] [L05][L05]；不赋统一现代物理量",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 250,
+        "row_label": "虚实",
+        "split_labels": [
+          "虚实"
+        ],
+        "description": "资源或防备配置的对比",
+        "source_and_status": "[S4][S4]；不是有无的简单同义词",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 251,
+        "row_label": "消长、兴衰",
+        "split_labels": [
+          "消长",
+          "兴衰"
+        ],
+        "description": "量、作用或活动的增减与阶段变化",
+        "source_and_status": "[Y07][Y07] [H1][H1]；不默认守恒或固定周期",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 252,
+        "row_label": "分界、度量",
+        "split_labels": [
+          "分界",
+          "度量"
+        ],
+        "description": "分配边界与尺度",
+        "source_and_status": "[C02][C02]；不是已经完成定量建模",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 253,
+        "row_label": "感应",
+        "split_labels": [
+          "感应"
+        ],
+        "description": "作用与响应",
+        "source_and_status": "[JY1][JY1] [S4][S4]；机制和中介需补证",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 254,
+        "row_label": "制衡",
+        "split_labels": [
+          "制衡"
+        ],
+        "description": "约束与反向调节的现代组合标签",
+        "source_and_status": "相关单字有义例，复合机制仍需方向、强度、延迟与标准",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 255,
+        "row_label": "和同、和而不同、和实生物同则不继",
+        "split_labels": [
+          "和同",
+          "和而不同",
+          "和实生物同则不继"
+        ],
+        "description": "差异配合与同声附和之辨",
+        "source_and_status": "[C05][C05] [C08][C08]；不能推出同必亡、异必善",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 256,
+        "row_label": "中和、时中",
+        "split_labels": [
+          "中和",
+          "时中"
+        ],
+        "description": "情感表达、适节与合时判断",
+        "source_and_status": "[C06][C06]；保留规范层",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 257,
+        "row_label": "名实、同异、约定俗成",
+        "split_labels": [
+          "名实",
+          "同异",
+          "约定俗成"
+        ],
+        "description": "对象识别与命名、约定与所指",
+        "source_and_status": "[C01][C01]；不由名称推出自然本质",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 258,
+        "row_label": "穷变、变通、穷变通久及其完整格言",
+        "split_labels": [
+          "穷变",
+          "变通",
+          "穷变通久及其完整格言"
+        ],
+        "description": "受限后改组并寻找可持续路径",
+        "source_and_status": "[Y04][Y04]；现代重构保留失败支路",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 259,
+        "row_label": "聚散、聚则为生散则为死",
+        "split_labels": [
+          "聚散",
+          "聚则为生散则为死"
+        ],
+        "description": "气聚散与生死的原典解释",
+        "source_and_status": "[Z01][Z01]；现代只抽取组织与解组区别",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 260,
+        "row_label": "往复、反复",
+        "split_labels": [
+          "往复",
+          "反复"
+        ],
+        "description": "来往、回归或反转的历程",
+        "source_and_status": "[Y09][Y09] [JY8][JY8]；周期和身份须另定",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 261,
+        "row_label": "天文、人文、道之文",
+        "split_labels": [
+          "天文",
+          "人文",
+          "道之文"
+        ],
+        "description": "自然样态、人事之文、文学本源论",
+        "source_and_status": "[Y01][Y01] [W02][W02]；不同文本的文分层",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 262,
+        "row_label": "自然、道法自然、无为",
+        "split_labels": [
+          "自然",
+          "道法自然",
+          "无为"
+        ],
+        "description": "自己如此、非外命与无为治理",
+        "source_and_status": "[L04][L04] [L07][L07]；不能径译为自然环境或完全不行动",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 263,
+        "row_label": "齐物、方生方死",
+        "split_labels": [
+          "齐物",
+          "方生方死"
+        ],
+        "description": "对待、是非与成毁视角的论说",
+        "source_and_status": "[Z02][Z02]；齐物不是把所有对象判成相同",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 264,
+        "row_label": "天人之分、天行有常",
+        "split_labels": [
+          "天人之分",
+          "天行有常"
+        ],
+        "description": "自然运行与人事职分区别",
+        "source_and_status": "[C03][C03]；反对自动道德报应式映射",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 265,
+        "row_label": "仁义礼、性",
+        "split_labels": [
+          "仁义礼",
+          "性"
+        ],
+        "description": "行动规范、制度实践、禀赋与教化之争",
+        "source_and_status": "[C02][C02] [C08][C08] [C09][C09] [C10][C10]；不消去各家分歧",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 266,
+        "row_label": "三表",
+        "split_labels": [
+          "三表"
+        ],
+        "description": "言论的历史、耳目与施政效果依据",
+        "source_and_status": "[M4][M4]；不是现代实验法的完整等价物",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 267,
+        "row_label": "状变而实无别、有化而无别、存中之变",
+        "split_labels": [
+          "状变而实无别",
+          "有化而无别",
+          "存中之变"
+        ],
+        "description": "状态改变与对象同一可分",
+        "source_and_status": "古文部分 [C01][C01]；存中之变是现代总结",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 268,
+        "row_label": "生存变亡、身份延续、失稳、续存",
+        "split_labels": [
+          "生存变亡",
+          "身份延续",
+          "失稳",
+          "续存"
+        ],
+        "description": "在尺度、身份与持续域下判别历程",
+        "source_and_status": "主稿中的现代定义，古文提供问题资源",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 269,
+        "row_label": "物相杂故曰文、文者物象之本",
+        "split_labels": [
+          "物相杂故曰文",
+          "文者物象之本"
+        ],
+        "description": "爻位错杂之文与文字发生之文",
+        "source_and_status": "[Y02][Y02] [W01][W01]；不能跨语境无缝合成公理",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 270,
+        "row_label": "反者道之动",
+        "split_labels": [
+          "反者道之动"
+        ],
+        "description": "道之动与反的关系",
+        "source_and_status": "[L05][L05]；不是直接的反馈方程",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      },
+      {
+        "line": 271,
+        "row_label": "读书百遍其义自见",
+        "split_labels": [
+          "读书百遍其义自见"
+        ],
+        "description": "反复阅读可见义的历史说法",
+        "source_and_status": "[D1][D1] [D2][D2]；通行转述与原句字形有别，认知因果另验",
+        "unit_warning": "混合词候选、短语、命题、句族与项目术语；不视为统一词表"
+      }
+    ]
+  },
+  "casebook09": {
+    "case_group_count": 7,
+    "groups": [
+      {
+        "line": 32,
+        "heading": "二 不 未 无怎样组合"
+      },
+      {
+        "line": 64,
+        "heading": "三 穷 变 通 久怎样成为有条件的机制"
+      },
+      {
+        "line": 115,
+        "heading": "四 有无相生怎样避免变成无条件互因"
+      },
+      {
+        "line": 150,
+        "heading": "五 和而不同怎样保留合取与规范"
+      },
+      {
+        "line": 179,
+        "heading": "六 分合与方生方死怎样处理实例身份"
+      },
+      {
+        "line": 219,
+        "heading": "七 因其固然怎样约束动作与角色"
+      },
+      {
+        "line": 250,
+        "heading": "八 从可持续到应该选择还需要什么"
+      }
+    ],
+    "compound_word_count": null,
+    "warning": "七组是完整选义与有限模型案例组；多数为否定构式、条件链、固定表达或完整论证，并非七个复合词。"
+  },
+  "bagua12": {
+    "core_map_records": 113,
+    "all_existing_sense_ids_count": 211,
+    "core_map_order_matches08": true,
+    "copied08_sha256_matches_current": true,
+    "mapping_level_counts": {
+      "direct_bagua_text": 11,
+      "yi_system_structure": 32,
+      "modern_bridge": 30,
+      "no_exclusive_binding": 40
+    },
+    "new_primary_term_records": 16,
+    "natural_image_term_records": 8,
+    "candidate_term_records_total": 24,
+    "candidate_unique_characters": 24,
+    "new_characters_relative_to08_count": 19,
+    "new_characters_relative_to08": [
+      "丽",
+      "乾",
+      "健",
+      "兑",
+      "入",
+      "地",
+      "坎",
+      "坤",
+      "山",
+      "巽",
+      "泽",
+      "离",
+      "艮",
+      "说",
+      "陷",
+      "雷",
+      "震",
+      "顺",
+      "风"
+    ],
+    "existing_characters_with_explicit_new_bagua_context_count": 5,
+    "existing_characters_with_explicit_new_bagua_context": [
+      {
+        "char": "动",
+        "group": "八训",
+        "status": "existing_core_character_new_bagua_sense",
+        "existing_ids": [
+          "core.058.01",
+          "core.058.02"
+        ],
+        "source_ref": "B06",
+        "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+      },
+      {
+        "char": "止",
+        "group": "八训",
+        "status": "existing_extension_character_new_bagua_sense",
+        "existing_ids": [
+          "extension.08"
+        ],
+        "source_ref": "B06",
+        "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+      },
+      {
+        "char": "天",
+        "group": "八自然象",
+        "status": "existing_extension_character_new_bagua_sense",
+        "existing_ids": [
+          "extension.13"
+        ],
+        "source_ref": "B07",
+        "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+      },
+      {
+        "char": "火",
+        "group": "八自然象",
+        "status": "existing_extension_character_new_bagua_sense",
+        "existing_ids": [
+          "extension.18"
+        ],
+        "source_ref": "B07",
+        "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+      },
+      {
+        "char": "水",
+        "group": "八自然象",
+        "status": "existing_extension_character_new_bagua_sense",
+        "existing_ids": [
+          "extension.21"
+        ],
+        "source_ref": "B07",
+        "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+      }
+    ],
+    "union_of08_and_candidate_character_labels": 163,
+    "optional_yue_adds_one_display_character": 1,
+    "candidate_rows_are_registered08_interfaces": false,
+    "warning": "163仅为08已登记144字与12候选24字按字形去重的并集；不是一个合并词典，更不是163个原语或所有新增义项数。悦是可选释读显示字。"
+  },
+  "coverage_denominator": {
+    "frozen_selected_core_character_list": 113,
+    "classical_conceptual_vocabulary_population_size": null,
+    "classical_compound_word_population_size": null,
+    "representative_sampling_design_supplied": false,
+    "large_part_fraction_estimable": false,
+    "judgement": "可证已约定词表的枚举完整；不能据此估计古典中文概念词汇的大部分覆盖。"
+  }
+}

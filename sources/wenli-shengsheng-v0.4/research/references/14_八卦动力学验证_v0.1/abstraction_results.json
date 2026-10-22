@@ -1,0 +1,164 @@
+{
+  "all_pass": true,
+  "assertions": 49,
+  "g1_formula_evaluations": 36,
+  "time_assumption": "each atomic step takes the same fixed duration delta_t=1",
+  "scope": "two finite counterexamples; neither proves that every abstraction is unsound",
+  "path_counterexample": {
+    "beta": {
+      "a": "111",
+      "b": "000",
+      "c": "000",
+      "d": "111"
+    },
+    "concrete_step": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "c",
+        "d"
+      ]
+    ],
+    "abstract_step": [
+      [
+        "000",
+        "111"
+      ],
+      [
+        "111",
+        "000"
+      ]
+    ],
+    "atomic_lifting": {
+      "forward_holds": true,
+      "backward_holds": false,
+      "forward_failures": [],
+      "backward_failures": [
+        {
+          "program": "step",
+          "concrete_source": "b",
+          "abstract_edge": [
+            "000",
+            "111"
+          ]
+        },
+        {
+          "program": "step",
+          "concrete_source": "d",
+          "abstract_edge": [
+            "111",
+            "000"
+          ]
+        }
+      ]
+    },
+    "concrete_states": [
+      {
+        "state": "a",
+        "beta": "111",
+        "enabled": true,
+        "may_two_steps": false,
+        "all_last_infinite_K_true": false
+      },
+      {
+        "state": "b",
+        "beta": "000",
+        "enabled": false,
+        "may_two_steps": false,
+        "all_last_infinite_K_true": false
+      },
+      {
+        "state": "c",
+        "beta": "000",
+        "enabled": true,
+        "may_two_steps": false,
+        "all_last_infinite_K_true": false
+      },
+      {
+        "state": "d",
+        "beta": "111",
+        "enabled": false,
+        "may_two_steps": false,
+        "all_last_infinite_K_true": false
+      }
+    ],
+    "abstract_states": [
+      {
+        "state": "111",
+        "all_last_infinite_K_true": true,
+        "may_steps_1_to_6": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true
+        }
+      },
+      {
+        "state": "000",
+        "all_last_infinite_K_true": true,
+        "may_steps_1_to_6": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true
+        }
+      }
+    ],
+    "conclusion": "existentially aggregated edges may concatenate different representatives and create spurious indefinite paths"
+  },
+  "sync_counterexample": {
+    "beta": {
+      "s": "A",
+      "t": "B",
+      "u": "B"
+    },
+    "concrete_a": [
+      [
+        "s",
+        "t"
+      ]
+    ],
+    "concrete_b": [
+      [
+        "s",
+        "u"
+      ]
+    ],
+    "abstract_a": [
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "abstract_b": [
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "atomic_lifting": {
+      "forward_holds": true,
+      "backward_holds": true,
+      "forward_failures": [],
+      "backward_failures": []
+    },
+    "labels_preserved": true,
+    "concrete_sync": [],
+    "abstract_sync": [
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "image_of_concrete_sync": [],
+    "concrete_sync_feasible_at_s": false,
+    "abstract_sync_feasible_at_A": true,
+    "conclusion": "per-atom successor lifting does not preserve same-endpoint intersection; a joint lifting condition is additional"
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "version": "v0.4-relative-basis",
+  "all_pass": true,
+  "claim": "G0 and G1 have the same Formula/Program expressive power over the unchanged interpreted signature; irreducible minimum is not proved.",
+  "engine_sha256": "0377b9fc8477f2edbbf93bd3abcfff3f71218628cab3e0c8754b0e029022bbbc",
+  "basis": {
+    "formula": [
+      "and",
+      "atom",
+      "diamond",
+      "eq",
+      "exists",
+      "not",
+      "true"
+    ],
+    "program": [
+      "atomic",
+      "choice",
+      "seq",
+      "star",
+      "sync",
+      "test"
+    ],
+    "binary": [
+      "and",
+      "seq",
+      "choice",
+      "sync"
+    ],
+    "term_forms": [
+      "const",
+      "var"
+    ],
+    "constructor_count": 13,
+    "source_constructor_count": 22
+  },
+  "statistics": {
+    "models": 25,
+    "formula_inputs": 2750,
+    "state_truth_comparisons": 13750,
+    "program_inputs": 1900,
+    "full_relation_comparisons": 1900,
+    "true_results": 7433,
+    "false_results": 6317,
+    "nonempty_nonidentity_relations": 708
+  },
+  "boundary_checks": [
+    {
+      "case": "false",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": false,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "empty_and",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "empty_or",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": false,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "unary_and",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": false,
+        "s2": true,
+        "s3": false,
+        "s4": true
+      }
+    },
+    {
+      "case": "unary_or",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": false,
+        "s2": true,
+        "s3": false,
+        "s4": true
+      }
+    },
+    {
+      "case": "or_three",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "implies",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": true,
+        "s2": false,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "forall_empty",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "exists_empty",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": false,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "box_deadlock",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "diamond_deadlock",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": false,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "named_cross_kind",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": true,
+        "s2": false,
+        "s3": false,
+        "s4": true
+      }
+    },
+    {
+      "case": "closed_definition_same_binder",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": true,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "closed_program_same_binder",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": false,
+        "s1": false,
+        "s2": true,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "object_binding_across_test",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": false,
+        "s2": true,
+        "s3": false,
+        "s4": false
+      }
+    },
+    {
+      "case": "empty_domain_survives_modal",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "typed_equality",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "quantified_equality",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "forall_program_test_scope",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": true
+      }
+    },
+    {
+      "case": "binder_reserved_prefix",
+      "kind": "formula",
+      "pass": true,
+      "truth_by_state": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": false,
+        "s4": true
+      }
+    },
+    {
+      "case": "skip",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "empty_seq",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "empty_choice",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 0
+    },
+    {
+      "case": "unary_seq",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "unary_choice",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "repeat_zero",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "repeat_one",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "repeat_four",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 19
+    },
+    {
+      "case": "sync_disjoint",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 0
+    },
+    {
+      "case": "sync_common_end",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 1
+    },
+    {
+      "case": "sync_three",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "star_empty",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 5
+    },
+    {
+      "case": "test_false",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 0
+    },
+    {
+      "case": "star_test_and_choice",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 9
+    },
+    {
+      "case": "named_program",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 9
+    },
+    {
+      "case": "named_formula_in_test",
+      "kind": "program",
+      "pass": true,
+      "edge_count": 1
+    },
+    {
+      "case": "empty_sync",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "unary_sync",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "zero_repeat_bad_body",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "bool_repeat",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "negative_repeat",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "shadowing",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "free_variable",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "extra_key",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "cross_sort_equality",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "cyclic_definitions",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "definition_capture",
+      "kind": "rejection",
+      "pass": true
+    },
+    {
+      "case": "explicit_expansion_limit",
+      "kind": "resource_limit",
+      "pass": true
+    },
+    {
+      "case": "explicit_stack_depth_limit",
+      "kind": "resource_limit",
+      "pass": true
+    },
+    {
+      "case": "balanced_expansion_repeat_600",
+      "kind": "program",
+      "pass": true,
+      "target_nodes": 1199
+    },
+    {
+      "case": "balanced_expansion_repeat_1000",
+      "kind": "program",
+      "pass": true,
+      "target_nodes": 1999
+    }
+  ],
+  "reviewable_expansions": [
+    {
+      "name": "empty_or",
+      "original": {
+        "op": "or",
+        "args": []
+      },
+      "normalized": {
+        "op": "not",
+        "arg": {
+          "op": "true"
+        }
+      },
+      "source_nodes": 1,
+      "target_nodes": 2,
+      "source_term_occurrences": 0,
+      "target_term_occurrences": 0,
+      "source_binding_slots": 0,
+      "target_binding_slots": 0
+    },
+    {
+      "name": "forall_empty",
+      "original": {
+        "op": "forall",
+        "var": "e",
+        "sort": "Empty",
+        "body": {
+          "op": "false"
+        }
+      },
+      "normalized": {
+        "op": "not",
+        "arg": {
+          "op": "exists",
+          "var": "__g0v0",
+          "sort": "Empty",
+          "body": {
+            "op": "not",
+            "arg": {
+              "op": "not",
+              "arg": {
+                "op": "true"
+              }
+            }
+          }
+        }
+      },
+      "source_nodes": 2,
+      "target_nodes": 5,
+      "source_term_occurrences": 0,
+      "target_term_occurrences": 0,
+      "source_binding_slots": 1,
+      "target_binding_slots": 1
+    },
+    {
+      "name": "box_deadlock",
+      "original": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "none"
+        },
+        "body": {
+          "op": "false"
+        }
+      },
+      "normalized": {
+        "op": "not",
+        "arg": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "none"
+          },
+          "body": {
+            "op": "not",
+            "arg": {
+              "op": "not",
+              "arg": {
+                "op": "true"
+              }
+            }
+          }
+        }
+      },
+      "source_nodes": 3,
+      "target_nodes": 6,
+      "source_term_occurrences": 0,
+      "target_term_occurrences": 0,
+      "source_binding_slots": 0,
+      "target_binding_slots": 0
+    },
+    {
+      "name": "closed_definition_same_binder",
+      "original": {
+        "op": "exists",
+        "var": "x",
+        "sort": "Item",
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "Live",
+              "args": [
+                {
+                  "var": "x"
+                }
+              ]
+            },
+            {
+              "op": "fref",
+              "name": "AllLive"
+            }
+          ]
+        }
+      },
+      "normalized": {
+        "op": "exists",
+        "var": "__g0v0",
+        "sort": "Item",
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "Live",
+              "args": [
+                {
+                  "var": "__g0v0"
+                }
+              ]
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "exists",
+                "var": "__g0v1",
+                "sort": "Item",
+                "body": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "Live",
+                    "args": [
+                      {
+                        "var": "__g0v1"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "source_nodes": 4,
+      "target_nodes": 7,
+      "source_term_occurrences": 1,
+      "target_term_occurrences": 2,
+      "source_binding_slots": 1,
+      "target_binding_slots": 2
+    }
+  ],
+  "all_source_constructors_exercised": [
+    "and",
+    "atom",
+    "atomic",
+    "box",
+    "choice",
+    "diamond",
+    "eq",
+    "exists",
+    "false",
+    "forall",
+    "fref",
+    "implies",
+    "not",
+    "or",
+    "pref",
+    "repeat",
+    "seq",
+    "skip",
+    "star",
+    "sync",
+    "test",
+    "true"
+  ],
+  "all_target_constructors_exercised": [
+    "and",
+    "atom",
+    "atomic",
+    "choice",
+    "diamond",
+    "eq",
+    "exists",
+    "not",
+    "seq",
+    "star",
+    "sync",
+    "test",
+    "true"
+  ],
+  "domain_cost_not_erased": {
+    "state_symbols": 5,
+    "context_id_utf8_bytes": 40,
+    "sort_symbols": 3,
+    "domain_elements_typed": 3,
+    "constant_symbols": 3,
+    "predicate_symbols": 4,
+    "predicate_signature_slots": 3,
+    "predicate_state_tables": 20,
+    "positive_tuples": 22,
+    "atomic_program_symbols": 3,
+    "atomic_program_edges": 8,
+    "norm_judgments": 5,
+    "definition_nodes": 24,
+    "definition_term_occurrences": 3,
+    "definition_binding_slots": 4,
+    "interpretation_canonical_json_bytes_excluding_definitions": 1153
+  },
+  "repeat_expansion_costs": [
+    {
+      "repeat_literal": 0,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 2,
+      "original_canonical_json_bytes": 59,
+      "normalized_canonical_json_bytes": 39
+    },
+    {
+      "repeat_literal": 1,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 1,
+      "original_canonical_json_bytes": 59,
+      "normalized_canonical_json_bytes": 26
+    },
+    {
+      "repeat_literal": 2,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 3,
+      "original_canonical_json_bytes": 59,
+      "normalized_canonical_json_bytes": 75
+    },
+    {
+      "repeat_literal": 8,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 15,
+      "original_canonical_json_bytes": 59,
+      "normalized_canonical_json_bytes": 369
+    },
+    {
+      "repeat_literal": 32,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 63,
+      "original_canonical_json_bytes": 60,
+      "normalized_canonical_json_bytes": 1545
+    },
+    {
+      "repeat_literal": 128,
+      "original_constructor_nodes": 2,
+      "normalized_constructor_nodes": 255,
+      "original_canonical_json_bytes": 61,
+      "normalized_canonical_json_bytes": 6249
+    }
+  ],
+  "lower_bound_witness_checks": [
+    {
+      "case": "one_step",
+      "radius": 1,
+      "chain_edges": 2,
+      "chain_states": 3,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "zero_displacement_deep_test",
+      "radius": 3,
+      "chain_edges": 4,
+      "chain_states": 5,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "box_vacuity_after_test",
+      "radius": 2,
+      "chain_edges": 3,
+      "chain_states": 4,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "sync_far_test",
+      "radius": 3,
+      "chain_edges": 4,
+      "chain_states": 5,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "empty_and",
+      "radius": 0,
+      "chain_edges": 1,
+      "chain_states": 2,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "empty_or",
+      "radius": 0,
+      "chain_edges": 1,
+      "chain_states": 2,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "empty_seq",
+      "radius": 0,
+      "chain_edges": 1,
+      "chain_states": 2,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "empty_choice",
+      "radius": 0,
+      "chain_edges": 1,
+      "chain_states": 2,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "repeat_zero",
+      "radius": 0,
+      "chain_edges": 1,
+      "chain_states": 2,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    },
+    {
+      "case": "fixed_repeat_seven",
+      "radius": 7,
+      "chain_edges": 8,
+      "chain_states": 9,
+      "candidate_agrees": true,
+      "reach_positive": true,
+      "reach_negative": false,
+      "pass": true
+    }
+  ],
+  "verification_limits": [
+    "Finite differential checking supports the implementation; the general result relies on the written mutual structural induction.",
+    "The normalizer preserves typed atoms, equality and atomic program interpretations, not their empirical truth.",
+    "The default 100000-constructor construction budget and Python stack depth are explicit operational limits, not failures of expressive sufficiency."
+  ]
+}

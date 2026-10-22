@@ -1,0 +1,5128 @@
+{
+  "title": "八卦与113字逐项映射",
+  "version": "0.1",
+  "date": "2026-10-21",
+  "source_lexicon": {
+    "path": "/Users/ren/Documents/Codex/2026-10-21/thi/outputs/08_组合文法逐字类型词典_v0.3.json",
+    "sha256": "b1a9cc5e8bbfa6c91a1999c1b989fa341a75d6d1ba5968a381f90eeec0c5049a"
+  },
+  "scope": "完整保留113核心字及211既有义项ID；只建立有分层说明的多对多关系，未直接注册到G1",
+  "levels": {
+    "direct_bagua_text": "文本直接将该字或作用与某卦/对应自然象相联系；不表示旧signature与古义等价",
+    "yi_system_structure": "该概念参与易传的构卦、变化、认识或规范结构，通常没有专属卦",
+    "modern_bridge": "本项目提出的可选操作解释；必须给模型与检验，不称古人已有该操作",
+    "no_exclusive_binding": "本轮明确证据范围内没有建立专属绑定；不是断言全部易学史都无关联"
+  },
+  "bit_convention": {
+    "order": "下爻、中爻、上爻",
+    "yang": 1,
+    "yin": 0,
+    "warning": "现代编码约定，不是古代二进制算术或物理量；111/000不表示存在/不存在"
+  },
+  "trigram_catalog": [
+    {
+      "trigram": "乾",
+      "glyph": "☰",
+      "bits_bottom_middle_top": "111",
+      "primary_gloss_original": "健",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "君、战、大始",
+      "existing_lexeme_candidates": [
+        {
+          "char": "动",
+          "sense_ids": [
+            "core.058.01",
+            "core.058.02"
+          ]
+        },
+        {
+          "char": "始",
+          "sense_ids": [
+            "core.070.01",
+            "core.070.02"
+          ]
+        },
+        {
+          "char": "久",
+          "sense_ids": [
+            "core.068.01",
+            "core.068.02"
+          ]
+        },
+        {
+          "char": "守",
+          "sense_ids": [
+            "core.075.01"
+          ]
+        },
+        {
+          "char": "刚",
+          "sense_ids": [
+            "core.111.01",
+            "core.111.02"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "modern_bridge": "健可启发持续行动模型；Enabled、MayLast等仍须动作、K与固定正时长tick（或步长有统一正下界），不直接等于健。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "坤",
+      "glyph": "☷",
+      "bits_bottom_middle_top": "000",
+      "primary_gloss_original": "顺",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "藏、养、成物",
+      "existing_lexeme_candidates": [
+        {
+          "char": "承",
+          "sense_ids": [
+            "core.028.01",
+            "core.028.02"
+          ]
+        },
+        {
+          "char": "养",
+          "sense_ids": [
+            "core.074.01"
+          ]
+        },
+        {
+          "char": "成",
+          "sense_ids": [
+            "core.046.01",
+            "core.046.02"
+          ]
+        },
+        {
+          "char": "柔",
+          "sense_ids": [
+            "core.112.01",
+            "core.112.02"
+          ]
+        },
+        {
+          "char": "文",
+          "sense_ids": [
+            "core.001.01",
+            "core.001.02",
+            "core.001.03"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B03",
+        "B04",
+        "B07",
+        "B08",
+        "B11"
+      ],
+      "modern_bridge": "承受与养护可声明输入和支持程序；顺不是无限顺从，更不证明资源充足。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "震",
+      "glyph": "☳",
+      "bits_bottom_middle_top": "100",
+      "primary_gloss_original": "动",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "出、动万物",
+      "existing_lexeme_candidates": [
+        {
+          "char": "动",
+          "sense_ids": [
+            "core.058.01",
+            "core.058.02"
+          ]
+        },
+        {
+          "char": "生",
+          "sense_ids": [
+            "core.044.01",
+            "core.044.02",
+            "core.044.03",
+            "core.044.04"
+          ]
+        },
+        {
+          "char": "兴",
+          "sense_ids": [
+            "core.047.01"
+          ]
+        },
+        {
+          "char": "机",
+          "sense_ids": [
+            "core.063.01"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B04",
+        "B05"
+      ],
+      "modern_bridge": "可声明启动或触发程序；只有明确存在判据才能把某次动解释成生起。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "巽",
+      "glyph": "☴",
+      "bits_bottom_middle_top": "011",
+      "primary_gloss_original": "入",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "齐、风散",
+      "existing_lexeme_candidates": [
+        {
+          "char": "散",
+          "sense_ids": [
+            "core.057.01",
+            "core.057.02"
+          ]
+        },
+        {
+          "char": "因",
+          "sense_ids": [
+            "core.026.01",
+            "core.026.02"
+          ]
+        },
+        {
+          "char": "交",
+          "sense_ids": [
+            "core.030.01",
+            "core.030.02"
+          ]
+        },
+        {
+          "char": "开",
+          "sense_ids": [
+            "core.052.01"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B03",
+        "B04",
+        "B07"
+      ],
+      "modern_bridge": "进入可用Guard(外部,a,内部)实例化，风散另是作用语境；开通道不等于已经进入。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "坎",
+      "glyph": "☵",
+      "bits_bottom_middle_top": "010",
+      "primary_gloss_original": "陷",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "劳、归；水润",
+      "existing_lexeme_candidates": [
+        {
+          "char": "穷",
+          "sense_ids": [
+            "core.066.01",
+            "core.066.02"
+          ]
+        },
+        {
+          "char": "限",
+          "sense_ids": [
+            "core.010.01",
+            "core.010.02"
+          ]
+        },
+        {
+          "char": "守",
+          "sense_ids": [
+            "core.075.01"
+          ]
+        },
+        {
+          "char": "复",
+          "sense_ids": [
+            "core.055.01",
+            "core.055.02"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B04",
+        "B05",
+        "B07"
+      ],
+      "modern_bridge": "可另声明危险域、陷入事件及退出路径；陷不必死，也不必无可恢复路径。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "离",
+      "glyph": "☲",
+      "bits_bottom_middle_top": "101",
+      "primary_gloss_original": "丽",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "明、相见",
+      "existing_lexeme_candidates": [
+        {
+          "char": "明",
+          "sense_ids": [
+            "core.096.01"
+          ]
+        },
+        {
+          "char": "象",
+          "sense_ids": [
+            "core.014.01",
+            "core.014.02"
+          ]
+        },
+        {
+          "char": "观",
+          "sense_ids": [
+            "core.091.01"
+          ]
+        },
+        {
+          "char": "系",
+          "sense_ids": [
+            "core.007.01"
+          ]
+        },
+        {
+          "char": "察",
+          "sense_ids": [
+            "core.095.01"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B04",
+        "B15"
+      ],
+      "modern_bridge": "附丽可登记关系，明可启发可观察性条件；两者均不能自动变成真实的观察或因果证据。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "艮",
+      "glyph": "☶",
+      "bits_bottom_middle_top": "001",
+      "primary_gloss_original": "止",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "成、终、始",
+      "existing_lexeme_candidates": [
+        {
+          "char": "终",
+          "sense_ids": [
+            "core.069.01",
+            "core.069.02"
+          ]
+        },
+        {
+          "char": "始",
+          "sense_ids": [
+            "core.070.01",
+            "core.070.02"
+          ]
+        },
+        {
+          "char": "成",
+          "sense_ids": [
+            "core.046.01",
+            "core.046.02"
+          ]
+        },
+        {
+          "char": "静",
+          "sense_ids": [
+            "core.059.01",
+            "core.059.02"
+          ]
+        },
+        {
+          "char": "限",
+          "sense_ids": [
+            "core.010.01",
+            "core.010.02"
+          ]
+        },
+        {
+          "char": "息",
+          "sense_ids": [
+            "core.081.01",
+            "core.081.02"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B04",
+        "B05"
+      ],
+      "modern_bridge": "停止某活动可用状态或事件谓词；不等于全系统亡、不等于没有真实时间继续。",
+      "exclusive_classification": false
+    },
+    {
+      "trigram": "兑",
+      "glyph": "☱",
+      "bits_bottom_middle_top": "110",
+      "primary_gloss_original": "说",
+      "primary_gloss_reference": "B06",
+      "other_textual_functions": "说万物；口舌等物象",
+      "existing_lexeme_candidates": [
+        {
+          "char": "和",
+          "sense_ids": [
+            "core.083.01",
+            "core.083.02"
+          ]
+        },
+        {
+          "char": "交",
+          "sense_ids": [
+            "core.030.01",
+            "core.030.02"
+          ]
+        }
+      ],
+      "source_refs": [
+        "B06",
+        "B04",
+        "B05",
+        "B07"
+      ],
+      "modern_bridge": "说读为悦，可作为情感或行动评价；沟通、协调只是另加的模型桥梁，不能推出信任或真理。",
+      "exclusive_classification": false
+    }
+  ],
+  "core_character_map": [
+    {
+      "index": 1,
+      "char": "文",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.001.01",
+          "label": "可辨样态",
+          "role": "interpretation",
+          "source_ids": [
+            "Y01",
+            "Y02"
+          ]
+        },
+        {
+          "sense_id": "core.001.02",
+          "label": "文字表达",
+          "role": "declaration",
+          "source_ids": [
+            "W01",
+            "W02"
+          ]
+        },
+        {
+          "sense_id": "core.001.03",
+          "label": "模型表达",
+          "role": "interpretation",
+          "source_ids": [
+            "Y01",
+            "Y02",
+            "W01",
+            "W02"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.001.01"
+      ],
+      "trigrams": [
+        "坤"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》十一章在坤的物象表列“为文”。这是该卦的文本赋象，不是文概念的唯一归属。",
+      "modern_bridge_and_limit": "须新增坤之文的义例；08的样态、文字、模型三义不能直接合并为坤，更不能说所有文本属坤。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 2,
+      "char": "理",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.002.01",
+          "label": "结构条理",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1",
+            "Z03"
+          ]
+        },
+        {
+          "sense_id": "core.002.02",
+          "label": "可行路径的限制",
+          "role": "macro_program",
+          "source_ids": [
+            "Z03",
+            "H1"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.002.01",
+        "core.002.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》一、二章以穷理、性命之理组织作易问题，未把理专配一卦。",
+      "modern_bridge_and_limit": "08结构与可行约束可用于全图；模型约束需另给，理不等于某一卦的bit或动作。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 3,
+      "char": "道",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.003.01",
+          "label": "总体解释",
+          "role": "interpretation",
+          "source_ids": [
+            "L04",
+            "L05",
+            "H1"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.003.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》二章分别说天、地、人之道，属体系解释层。",
+      "modern_bridge_and_limit": "保留不同解释层次；没有一个“道卦”或万能转移。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 4,
+      "char": "易",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.004.01",
+          "label": "持续生成变化",
+          "role": "binding_program",
+          "source_ids": [
+            "Y03"
+          ]
+        },
+        {
+          "sense_id": "core.004.02",
+          "label": "难易之易",
+          "role": "binding_formula",
+          "source_ids": [
+            "L01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.004.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "八卦是作易的符号组织之一，变化可在全体系讨论。",
+      "modern_bridge_and_limit": "08难易之易不直接加入这一映射；体系之易不等于每一步必改变。",
+      "bagua_source_refs": [
+        "B01",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 5,
+      "char": "德",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.005.01",
+          "label": "养护成全的作用",
+          "role": "binding_program",
+          "source_ids": [
+            "L06"
+          ]
+        },
+        {
+          "sense_id": "core.005.02",
+          "label": "成全而不宰的规范",
+          "role": "normative",
+          "source_ids": [
+            "L06"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.005.01",
+        "core.005.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》一章将道德与义置于作易的解释语境，未专属一卦。",
+      "modern_bridge_and_limit": "08老子养成和不宰之德与此不是自动同义；若接到规范层须另立解释桥梁。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 6,
+      "char": "辨",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.006.01",
+          "label": "分类",
+          "role": "declaration",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.006.02",
+          "label": "辨别差异",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.006.01",
+        "core.006.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可按三个爻位辨别八个图式，并区分同图式和同一实例。",
+      "modern_bridge_and_limit": "这是G1分类与类型检查操作，不是《说卦》把辨分给某卦。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 7,
+      "char": "系",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.007.01",
+          "label": "带类型的关系",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY7"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.007.01"
+      ],
+      "trigrams": [
+        "离"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "若选离之丽为依附关系的解释入口，可登记Attached等关系。",
+      "modern_bridge_and_limit": "古文附丽语境是解释资源；关系名、方向、端点和状态解释由模型给定。系也可用于任意卦间关系。",
+      "bagua_source_refs": [
+        "B06",
+        "B15"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 8,
+      "char": "序",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.008.01",
+          "label": "事件次序",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY6"
+          ]
+        },
+        {
+          "sense_id": "core.008.02",
+          "label": "组织层级",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY6"
+          ]
+        },
+        {
+          "sense_id": "core.008.03",
+          "label": "优先次序",
+          "role": "normative",
+          "source_ids": [
+            "JY6"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.008.01",
+        "core.008.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》三章讨论往来之数，五章有八种方位与作用叙述。",
+      "modern_bridge_and_limit": "文本次序、方位、后天次序与实际时间转移须分开，不能见排列即断因果循环。",
+      "bagua_source_refs": [
+        "B02",
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 9,
+      "char": "化",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.009.01",
+          "label": "状态变化的判据",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01",
+            "Z01"
+          ]
+        },
+        {
+          "sense_id": "core.009.02",
+          "label": "转化过程",
+          "role": "binding_program",
+          "source_ids": [
+            "L07",
+            "Z01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.009.01",
+        "core.009.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》六章从水火、雷风、山泽关系论变化成物；《系辞》讨论刚柔相推。",
+      "modern_bridge_and_limit": "这是变化问题的文本结构；具体可行边、时长与环境条件仍由G1模型声明。",
+      "bagua_source_refs": [
+        "B05",
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 10,
+      "char": "限",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.010.01",
+          "label": "过滤允许转移",
+          "role": "macro_program",
+          "source_ids": [
+            "C02",
+            "Y10"
+          ]
+        },
+        {
+          "sense_id": "core.010.02",
+          "label": "持续状态域",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02",
+            "Y10"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.010.01",
+        "core.010.02"
+      ],
+      "trigrams": [
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可用艮之止作为停止或边界条件的解释入口。",
+      "modern_bridge_and_limit": "只有显式给定停止判据才可编成test、Guard或允许边；艮不天然等于所有约束。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 11,
+      "char": "有",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.011.01",
+          "label": "某类实例存在",
+          "role": "macro_formula",
+          "source_ids": [
+            "L01",
+            "L02"
+          ]
+        },
+        {
+          "sense_id": "core.011.02",
+          "label": "对象具有条件",
+          "role": "binding_formula",
+          "source_ids": [
+            "L01",
+            "L02"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "八个图式都可作为被登记的对象；有不是乾的专名。",
+      "modern_bridge_and_limit": "对象在总域中与某时点存在须分开，阳爻不能直接译成存在真值。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 12,
+      "char": "无",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.012.01",
+          "label": "缺席或无某物",
+          "role": "macro_formula",
+          "source_ids": [
+            "L01",
+            "L02"
+          ]
+        },
+        {
+          "sense_id": "core.012.02",
+          "label": "可用空处",
+          "role": "binding_formula",
+          "source_ids": [
+            "L02"
+          ]
+        },
+        {
+          "sense_id": "core.012.03",
+          "label": "无为中的无",
+          "role": "interpretation",
+          "source_ids": [
+            "L07"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "未建立无与某一卦的专属对应。",
+      "modern_bridge_and_limit": "坤的000是编码约定，不等于无、空集或全部动作停止。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 13,
+      "char": "物",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.013.01",
+          "label": "具体对象",
+          "role": "declaration",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.013.02",
+          "label": "模式种类",
+          "role": "declaration",
+          "source_ids": [
+            "Y02",
+            "C01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.013.01",
+        "core.013.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》与《系辞》用八卦说明或分类万物，而非将物专配一卦。",
+      "modern_bridge_and_limit": "模式种类与具体实例须分开；八个符号不能证明世界只有八类实体。",
+      "bagua_source_refs": [
+        "B04",
+        "B05",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 14,
+      "char": "象",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.014.01",
+          "label": "状态表征",
+          "role": "interpretation",
+          "source_ids": [
+            "Y06",
+            "W01"
+          ]
+        },
+        {
+          "sense_id": "core.014.02",
+          "label": "由象读出候选状态",
+          "role": "binding_formula",
+          "source_ids": [
+            "W01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.014.01",
+        "core.014.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞下》明说八卦成列而象在其中；《说卦》另列多组物象。",
+      "modern_bridge_and_limit": "八卦自然象、身体象与现代状态编码是不同解释层，须显式选择映射。",
+      "bagua_source_refs": [
+        "B07",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 15,
+      "char": "形",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.015.01",
+          "label": "结构形态",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y06",
+            "L06",
+            "S4"
+          ]
+        },
+        {
+          "sense_id": "core.015.02",
+          "label": "对观察者显露",
+          "role": "binding_formula",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.015.01",
+        "core.015.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞上》在成象、成形与变化中讨论天地及八卦。",
+      "modern_bridge_and_limit": "08形态谓词可描述图形或对象，但图形相同不证明现实机制相同。",
+      "bagua_source_refs": [
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 16,
+      "char": "气",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.016.01",
+          "label": "历史变化承载概念",
+          "role": "interpretation",
+          "source_ids": [
+            "Z01",
+            "L08"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.016.01"
+      ],
+      "trigrams": [
+        "艮",
+        "兑"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》三、六章有山泽通气，依同篇山/泽物象可联系艮兑。",
+      "modern_bridge_and_limit": "此处气义须新增语境，不等同08庄子气论，更不自动成为能量流或信息通道。",
+      "bagua_source_refs": [
+        "B02",
+        "B05",
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 17,
+      "char": "质",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.017.01",
+          "label": "内在品质",
+          "role": "binding_formula",
+          "source_ids": [
+            "JC1"
+          ]
+        },
+        {
+          "sense_id": "core.017.02",
+          "label": "文质配合的评价",
+          "role": "normative",
+          "source_ids": [
+            "JC1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08质是文质对举的内在品质，没有本轮可据的专属八卦训释。",
+      "modern_bridge_and_limit": "不可由乾为金或坤为地就把质配成金属或土地物质。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 18,
+      "char": "名",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.018.01",
+          "label": "命名关系",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.018.02",
+          "label": "更改名称",
+          "role": "declaration",
+          "source_ids": [
+            "C01"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.018.01",
+        "core.018.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "乾坤等名称可登记为Trigram域的不同常量，并映射到三爻图式。",
+      "modern_bridge_and_limit": "命名表改变不改变图式，图式重编码也不自动改变所解释的现实对象。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 19,
+      "char": "实",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.019.01",
+          "label": "可追踪的实例",
+          "role": "declaration",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.019.02",
+          "label": "充实或防备容量",
+          "role": "binding_formula",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08实包含实例身份与防备容量，未建立专属卦。",
+      "modern_bridge_and_limit": "实线的画法不等于名实之实；阴爻不是不真实或不存在。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 20,
+      "char": "同",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.020.01",
+          "label": "同类或同特征",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.020.02",
+          "label": "同一实例",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.020.03",
+          "label": "同声附和",
+          "role": "binding_formula",
+          "source_ids": [
+            "C05"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.020.01",
+        "core.020.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可比较两个图式是否逐位相同，或两个对象是否共享卦类标签。",
+      "modern_bridge_and_limit": "同图式、同类与同一实例必须分开；不把全部标乾的对象判为一个对象。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 21,
+      "char": "异",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.021.01",
+          "label": "可辨差异",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.021.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可比较图式的不同爻位或不同卦标签。",
+      "modern_bridge_and_limit": "图式差异不自动给出价值高低、因果方向或转换可行性。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 22,
+      "char": "相",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.022.01",
+          "label": "两项互涉",
+          "role": "syntax",
+          "source_ids": [
+            "L01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.022.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》三章有八卦相错及不同配对关系。",
+      "modern_bridge_and_limit": "“相”在相薄、不相射、相错中各有读法；不能自动生成对称因果边。",
+      "bagua_source_refs": [
+        "B02"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 23,
+      "char": "互",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.023.01",
+          "label": "明确双向关系",
+          "role": "macro_formula",
+          "source_ids": []
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.023.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "若领域关系确实双向，可用08的双向关系宏分别登记两边。",
+      "modern_bridge_and_limit": "08互不是易学专门的互卦；互卦涉及六画卦取中间爻，须另加定义，不能偷换。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 24,
+      "char": "共",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.024.01",
+          "label": "共同条件或认可",
+          "role": "macro_formula",
+          "source_ids": [
+            "M3"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "共同条件或共同认可是全图可用的量词操作，未专属兑或其他卦。",
+      "modern_bridge_and_limit": "众人说悦或共同赞同不证明所说为真。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 25,
+      "char": "自",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.025.01",
+          "label": "自身施事或内在组织",
+          "role": "interpretation",
+          "source_ids": [
+            "L04",
+            "L07"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08自身施事、内在组织没有专属卦。",
+      "modern_bridge_and_limit": "不能从乾健或任何卦象推出自足、无外界条件。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 26,
+      "char": "因",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.026.01",
+          "label": "依条件行事",
+          "role": "macro_program",
+          "source_ids": [
+            "S4",
+            "Z03"
+          ]
+        },
+        {
+          "sense_id": "core.026.02",
+          "label": "根据观测选择动作",
+          "role": "binding_program",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.026.01",
+        "core.026.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "卦类或环境谓词可作为Guard前提，控制某程序是否允许执行。",
+      "modern_bridge_and_limit": "条件依赖是G1操作，不表示“因”原本属于某卦，也不把条件当因果证明。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 27,
+      "char": "应",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.027.01",
+          "label": "响应动作",
+          "role": "binding_program",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.027.01"
+      ],
+      "trigrams": [
+        "坤",
+        "巽"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "若选顺应或进入过程为研究问题，可把响应规则接到坤/巽的解释模型。",
+      "modern_bridge_and_limit": "顺、入不直接等于军事响应；必须给出输入、规则和时滞，其他卦模型也可有响应。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 28,
+      "char": "承",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.028.01",
+          "label": "承受或承载作用",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY2"
+          ]
+        },
+        {
+          "sense_id": "core.028.02",
+          "label": "谱系承接",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY2"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.028.01"
+      ],
+      "trigrams": [
+        "坤"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "六画坤卦《彖》有顺承天，与坤的顺义可参照。",
+      "modern_bridge_and_limit": "这是重卦文本扩展；承载作用可接08承义，谱系L及身份I不由承字自动得到。",
+      "bagua_source_refs": [
+        "B11"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 29,
+      "char": "感",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.029.01",
+          "label": "作用引出响应的主张",
+          "role": "causal",
+          "source_ids": [
+            "JY1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08感主要锚于咸卦及响应问题；咸是六画卦，不是八卦中的一项。",
+      "modern_bridge_and_limit": "不得把感强配震或兑并据此证明因果作用。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 30,
+      "char": "交",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.030.01",
+          "label": "接通联系",
+          "role": "binding_program",
+          "source_ids": [
+            "Y07",
+            "Y08"
+          ]
+        },
+        {
+          "sense_id": "core.030.02",
+          "label": "发生交换",
+          "role": "binding_program",
+          "source_ids": [
+            "Y07"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.030.01",
+        "core.030.02"
+      ],
+      "trigrams": [
+        "巽",
+        "兑"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "在明确的进入/交流模型中，可用接通联系和交换过程解释部分现象。",
+      "modern_bridge_and_limit": "入或说悦本身不等于通信、交易或互利；这是可选领域桥梁，不是原典八训。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 31,
+      "char": "克",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.031.01",
+          "label": "克己约束",
+          "role": "normative",
+          "source_ids": [
+            "JY3"
+          ]
+        },
+        {
+          "sense_id": "core.031.02",
+          "label": "将自制落实为动作限制",
+          "role": "macro_program",
+          "source_ids": [
+            "JY3"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "克己及动作限制没有本轮专属八卦绑定。",
+      "modern_bridge_and_limit": "五行相胜环不自动成为八卦相克环；二者的节点、关系和来源须分开。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 32,
+      "char": "分",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.032.01",
+          "label": "认识分类",
+          "role": "declaration",
+          "source_ids": [
+            "Z02"
+          ]
+        },
+        {
+          "sense_id": "core.032.02",
+          "label": "结构拆分",
+          "role": "binding_program",
+          "source_ids": [
+            "Z02",
+            "S5"
+          ]
+        },
+        {
+          "sense_id": "core.032.03",
+          "label": "分配份额",
+          "role": "binding_program",
+          "source_ids": [
+            "C02"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.032.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》二章有分阴分阳、迭用柔刚，属于符号构成和分类语境。",
+      "modern_bridge_and_limit": "可联系分类义；不因此推出实物必须拆分或资源如何分配。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 33,
+      "char": "合",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.033.01",
+          "label": "形成组合结构",
+          "role": "binding_formula",
+          "source_ids": [
+            "S5"
+          ]
+        },
+        {
+          "sense_id": "core.033.02",
+          "label": "合并过程",
+          "role": "binding_program",
+          "source_ids": [
+            "S5"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.033.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可将三条爻组成一个图式，也可将两个三画卦组合为六画卦。",
+      "modern_bridge_and_limit": "这是明确构造规则；符号合成不等于现实对象融合，实例身份仍另判。",
+      "bagua_source_refs": [
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 34,
+      "char": "本",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.034.01",
+          "label": "依赖基础",
+          "role": "binding_formula",
+          "source_ids": [
+            "C07"
+          ]
+        },
+        {
+          "sense_id": "core.034.02",
+          "label": "价值优先",
+          "role": "normative",
+          "source_ids": [
+            "C07"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.034.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞下》首章将刚柔说作立本的要素。",
+      "modern_bridge_and_limit": "本是该符号解释的基础角色，不是把乾或坤宣布为所有经验因果的唯一根。",
+      "bagua_source_refs": [
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 35,
+      "char": "末",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.035.01",
+          "label": "依赖末端",
+          "role": "binding_formula",
+          "source_ids": [
+            "C07"
+          ]
+        },
+        {
+          "sense_id": "core.035.02",
+          "label": "价值次项",
+          "role": "normative",
+          "source_ids": [
+            "C07"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "未建立末与某一卦的专属对应。",
+      "modern_bridge_and_limit": "不能因为艮涉及终始就将所有末端、低优先级对象归艮。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 36,
+      "char": "体",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.036.01",
+          "label": "整体中的部分",
+          "role": "binding_formula",
+          "source_ids": [
+            "M1",
+            "M2"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.036.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可登记爻位属于卦图、下卦/上卦属于六画卦的组成关系。",
+      "modern_bridge_and_limit": "这是明确的part_of模型；不能以此证明后世体用理论或世界实体结构。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 37,
+      "char": "用",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.037.01",
+          "label": "实现功能",
+          "role": "binding_formula",
+          "source_ids": [
+            "L02"
+          ]
+        },
+        {
+          "sense_id": "core.037.02",
+          "label": "施用于行动",
+          "role": "binding_program",
+          "source_ids": [
+            "M4"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.037.01",
+        "core.037.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》说迭用柔刚，《系辞下》讨论取象制器。",
+      "modern_bridge_and_limit": "符号使用、器物功能和行动施用要分型；不存在唯一“用卦”。",
+      "bagua_source_refs": [
+        "B01",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 38,
+      "char": "位",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.038.01",
+          "label": "空间位置",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y06"
+          ]
+        },
+        {
+          "sense_id": "core.038.02",
+          "label": "卦爻位置",
+          "role": "declaration",
+          "source_ids": [
+            "Y06",
+            "JY6"
+          ]
+        },
+        {
+          "sense_id": "core.038.03",
+          "label": "制度角色",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y06"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.038.01",
+        "core.038.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》有天地定位、六位成章，卦图也必须区分爻位。",
+      "modern_bridge_and_limit": "三画下中上与六画初至上是不同位置域；方位也不是爻位。",
+      "bagua_source_refs": [
+        "B01",
+        "B02"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 39,
+      "char": "层",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.039.01",
+          "label": "描述层级",
+          "role": "declaration",
+          "source_ids": []
+        },
+        {
+          "sense_id": "core.039.02",
+          "label": "跨层解释",
+          "role": "interpretation",
+          "source_ids": []
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.039.01",
+        "core.039.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可区分爻、三画卦、六画卦、领域对象及观察模型。",
+      "modern_bridge_and_limit": "层间须声明投影或组合，不能把三位编码直接当全部现实状态。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 40,
+      "char": "界",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.040.01",
+          "label": "成员边界",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        },
+        {
+          "sense_id": "core.040.02",
+          "label": "分配及行为界限",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.040.01",
+        "core.040.02"
+      ],
+      "trigrams": [
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "艮止可作为边界到达后不再执行某动作的解释入口。",
+      "modern_bridge_and_limit": "边界谓词、可行边与规范界限须分别声明；山象不是所有系统物理膜。",
+      "bagua_source_refs": [
+        "B06",
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 41,
+      "char": "内",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.041.01",
+          "label": "空间或系统内部",
+          "role": "binding_formula",
+          "source_ids": [
+            "C09"
+          ]
+        },
+        {
+          "sense_id": "core.041.02",
+          "label": "内在根据",
+          "role": "interpretation",
+          "source_ids": [
+            "C09"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.041.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞下》有爻象动乎内、吉凶见乎外的表述。",
+      "modern_bridge_and_limit": "这是新的文本内外语境；不自动等于08孟子伦理内外，也不直接定义六画卦的内外卦。",
+      "bagua_source_refs": [
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 42,
+      "char": "外",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.042.01",
+          "label": "空间或系统外部",
+          "role": "binding_formula",
+          "source_ids": [
+            "C09"
+          ]
+        },
+        {
+          "sense_id": "core.042.02",
+          "label": "外在根据",
+          "role": "interpretation",
+          "source_ids": [
+            "C09"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.042.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "与爻象动乎内相对的外，属于该段表现与结果语境。",
+      "modern_bridge_and_limit": "须选定解释后才登记边界；外部环境、外在根据、上卦不应混成一个类型。",
+      "bagua_source_refs": [
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 43,
+      "char": "爻",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.043.01",
+          "label": "卦中的位置单位",
+          "role": "declaration",
+          "source_ids": [
+            "JY5",
+            "Y02"
+          ]
+        },
+        {
+          "sense_id": "core.043.02",
+          "label": "符号变动",
+          "role": "binding_program",
+          "source_ids": [
+            "JY5"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.043.01",
+        "core.043.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》论生爻、六画与刚柔，《系辞下》将重卦和爻联系。",
+      "modern_bridge_and_limit": "八卦模型可声明三个位置；若讨论六画变爻须扩展域，不能混算。",
+      "bagua_source_refs": [
+        "B01",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 44,
+      "char": "生",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.044.01",
+          "label": "模式出现事件",
+          "role": "macro_program",
+          "source_ids": [
+            "Y03",
+            "Z01"
+          ]
+        },
+        {
+          "sense_id": "core.044.02",
+          "label": "实例进入模式",
+          "role": "macro_program",
+          "source_ids": [
+            "L06",
+            "Z01"
+          ]
+        },
+        {
+          "sense_id": "core.044.03",
+          "label": "产生后续实例",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y03",
+            "L06"
+          ]
+        },
+        {
+          "sense_id": "core.044.04",
+          "label": "活着",
+          "role": "binding_formula",
+          "source_ids": [
+            "Z01"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.044.01",
+        "core.044.02",
+        "core.044.03"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《系辞》以乾坤论始与成物，《说卦》说万物出乎震，构成生成问题的不同入口。",
+      "modern_bridge_and_limit": "出、始、生、成不是同一运算；用08生事件须明定模式、实例、时步与历史，不能见震便断出生。",
+      "bagua_source_refs": [
+        "B04",
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 45,
+      "char": "变",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.045.01",
+          "label": "前后差异",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y04"
+          ]
+        },
+        {
+          "sense_id": "core.045.02",
+          "label": "改变过程",
+          "role": "binding_program",
+          "source_ids": [
+            "Y04"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.045.01",
+        "core.045.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞》说刚柔相推而生变化，八卦结构可作为变化的符号资源。",
+      "modern_bridge_and_limit": "实际换哪一爻、是否允许、耗时与条件均须另外声明。",
+      "bagua_source_refs": [
+        "B08",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 46,
+      "char": "成",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.046.01",
+          "label": "达到完成标准的事件",
+          "role": "macro_program",
+          "source_ids": [
+            "L06",
+            "Z02"
+          ]
+        },
+        {
+          "sense_id": "core.046.02",
+          "label": "结果已完成",
+          "role": "binding_formula",
+          "source_ids": [
+            "L06"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.046.01",
+        "core.046.02"
+      ],
+      "trigrams": [
+        "艮",
+        "坤"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》五章把成言乎艮及万物所成相连；《系辞上》另有坤作成物。",
+      "modern_bridge_and_limit": "艮与坤提供不同语境，不强制一字一卦。08达标事件仍须目标公式与转移，不由卦名保证完成。",
+      "bagua_source_refs": [
+        "B04",
+        "B05",
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 47,
+      "char": "兴",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.047.01",
+          "label": "组织或活动建立",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.047.01"
+      ],
+      "trigrams": [
+        "震"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可借万物出乎震的出现语境，为活动启动建立候选解释。",
+      "modern_bridge_and_limit": "兴起是否发生须建立活动判据；不是原文“震，兴也”。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 48,
+      "char": "衰",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.048.01",
+          "label": "数量下降",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1"
+          ]
+        },
+        {
+          "sense_id": "core.048.02",
+          "label": "维持能力减弱",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "未从本轮八卦训释得到衰的专属卦。",
+      "modern_bridge_and_limit": "坎陷不等于所有衰退；艮止也不等于衰亡。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 49,
+      "char": "盛",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.049.01",
+          "label": "高水平阶段",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "《说卦》六章“莫盛乎艮”的盛用于突出终始之作用，并非08高水平阶段的直接定义。",
+      "modern_bridge_and_limit": "同字不能据此把一切旺盛阶段归艮；需要另立该句义例。",
+      "bagua_source_refs": [
+        "B05"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 50,
+      "char": "消",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.050.01",
+          "label": "指定量或范围减少",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y07"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "未给出消的专属八卦对应。",
+      "modern_bridge_and_limit": "阴阳消长涉及额外历时解释，不能仅由三个0/1读出资源守恒或数量减少。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 51,
+      "char": "长",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.051.01",
+          "label": "增长",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y07"
+          ]
+        },
+        {
+          "sense_id": "core.051.02",
+          "label": "长短之长",
+          "role": "binding_formula",
+          "source_ids": [
+            "L01"
+          ]
+        },
+        {
+          "sense_id": "core.051.03",
+          "label": "长养",
+          "role": "binding_program",
+          "source_ids": [
+            "L06"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "《说卦》十一章巽物象表有长，但不足以同08增长、长度、长养三义直接相等。",
+      "modern_bridge_and_limit": "若研究该句，应新建巽物象的长义；不把巽视为普遍增长算子。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 52,
+      "char": "开",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.052.01",
+          "label": "使通道可用",
+          "role": "binding_program",
+          "source_ids": [
+            "JY4"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.052.01"
+      ],
+      "trigrams": [
+        "巽"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "若以入为问题，可先用开通道程序建立进入的允许条件。",
+      "modern_bridge_and_limit": "开门与入门是两个程序；开不等于巽的词义，巽也不保证通道已打开。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 53,
+      "char": "闭",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.053.01",
+          "label": "使通道关闭",
+          "role": "binding_program",
+          "source_ids": [
+            "JY4"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.053.01"
+      ],
+      "trigrams": [
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可选定闭通道作为实现某种停止的一项具体动作。",
+      "modern_bridge_and_limit": "闭与止不同：停止一活动不必关闭全部接口，艮不必执行闭。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 54,
+      "char": "反",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.054.01",
+          "label": "方向相反",
+          "role": "binding_formula",
+          "source_ids": [
+            "L05",
+            "Y09"
+          ]
+        },
+        {
+          "sense_id": "core.054.02",
+          "label": "可返归",
+          "role": "macro_formula",
+          "source_ids": [
+            "L05",
+            "Y09"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.054.01",
+        "core.054.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可在八卦图式域明定逐爻反转、上下倒序或方向反转，但必须分别命名。",
+      "modern_bridge_and_limit": "这些是不同映射；08老子反、返归与算符反转不能只凭同字合并。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 55,
+      "char": "复",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.055.01",
+          "label": "模式复现",
+          "role": "binding_formula",
+          "source_ids": [
+            "L03",
+            "Y09"
+          ]
+        },
+        {
+          "sense_id": "core.055.02",
+          "label": "可恢复某目标",
+          "role": "macro_formula",
+          "source_ids": [
+            "L03",
+            "Y09"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.055.01",
+        "core.055.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "在已声明转移图上询问是否回到某图式或某目标集合。",
+      "modern_bridge_and_limit": "复现符号不等于同一现实实例复活；也不要把六画复卦混成八卦之一。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 56,
+      "char": "聚",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.056.01",
+          "label": "集中或聚合过程",
+          "role": "binding_program",
+          "source_ids": [
+            "Z01"
+          ]
+        },
+        {
+          "sense_id": "core.056.02",
+          "label": "已形成聚合",
+          "role": "binding_formula",
+          "source_ids": [
+            "Z01"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "原词表的聚合与庄子气聚没有本轮专属八卦。",
+      "modern_bridge_and_limit": "不能因坤众、兑泽等物象就自动推出组织聚合规律。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 57,
+      "char": "散",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.057.01",
+          "label": "解组过程",
+          "role": "binding_program",
+          "source_ids": [
+            "Z01"
+          ]
+        },
+        {
+          "sense_id": "core.057.02",
+          "label": "组织关系已解",
+          "role": "binding_formula",
+          "source_ids": [
+            "Z01"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.057.01",
+        "core.057.02"
+      ],
+      "trigrams": [
+        "巽"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》四章说风以散之，同篇以巽为风，可建立文本内的风散关联。",
+      "modern_bridge_and_limit": "它不是巽的唯一八训；散什么、怎样解组及后果仍须领域模型，不能断巽必使一切解体。",
+      "bagua_source_refs": [
+        "B03",
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 58,
+      "char": "动",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.058.01",
+          "label": "位置移动",
+          "role": "binding_formula",
+          "source_ids": [
+            "M1"
+          ]
+        },
+        {
+          "sense_id": "core.058.02",
+          "label": "活动变化",
+          "role": "binding_program",
+          "source_ids": [
+            "Y06"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.058.02"
+      ],
+      "trigrams": [
+        "震"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》七章直接说震为动，四、六章也以雷论动。",
+      "modern_bridge_and_limit": "震动之象与08具体活动转移之间须绑定；不是所有动都只能属震，其他卦同样可参与变动。",
+      "bagua_source_refs": [
+        "B03",
+        "B05",
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 59,
+      "char": "静",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.059.01",
+          "label": "在所选变量上不变",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y06"
+          ]
+        },
+        {
+          "sense_id": "core.059.02",
+          "label": "守静的实践",
+          "role": "normative",
+          "source_ids": [
+            "L03"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.059.01"
+      ],
+      "trigrams": [
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "若把止解释为某变量在时窗内停止变化，可接08静的局部不变判据。",
+      "modern_bridge_and_limit": "止一活动不等于全部变量不变；静也不是艮的原文八训，更不意味着没有真实tick。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 60,
+      "char": "时",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.060.01",
+          "label": "时点",
+          "role": "declaration",
+          "source_ids": [
+            "Y01"
+          ]
+        },
+        {
+          "sense_id": "core.060.02",
+          "label": "时长",
+          "role": "declaration",
+          "source_ids": [
+            "Y01"
+          ]
+        },
+        {
+          "sense_id": "core.060.03",
+          "label": "合宜窗口",
+          "role": "binding_formula",
+          "source_ids": [
+            "C06"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.060.01",
+        "core.060.02",
+        "core.060.03"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》五章的方位、季节与作用次第可提供时序问题资源。",
+      "modern_bridge_and_limit": "季节解释、后天次序与模型时步须区分，不能据圆图就证明固定物理周期。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 61,
+      "char": "势",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.061.01",
+          "label": "配置决定的可达画像",
+          "role": "interpretation",
+          "source_ids": [
+            "S1",
+            "S3",
+            "L06"
+          ]
+        },
+        {
+          "sense_id": "core.061.02",
+          "label": "政治位置及作用条件",
+          "role": "binding_formula",
+          "source_ids": [
+            "H2"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.061.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "在卦态转移图上计算可达目标或分支，可以作为配置势的一个现代模型。",
+      "modern_bridge_and_limit": "可达图来自声明的边，不从卦名自动生出概率、势能或政治权力。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 62,
+      "char": "几",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.062.01",
+          "label": "可观测早期征候",
+          "role": "evidence",
+          "source_ids": [
+            "Y05"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08几是早期征候，八卦本身没有将几专配一卦。",
+      "modern_bridge_and_limit": "触发震动之前的信号可以研究，但几不是震、坎或变爻阈值的同义字。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 63,
+      "char": "机",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.063.01",
+          "label": "触发与释放",
+          "role": "macro_program",
+          "source_ids": [
+            "S3"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.063.01"
+      ],
+      "trigrams": [
+        "震"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "震动的解释场景可用条件触发与释放程序作一个现代实例。",
+      "modern_bridge_and_limit": "须给触发公式和释放程序；原典震动不证明弩机或现代事件触发器。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 64,
+      "char": "度",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.064.01",
+          "label": "测量尺度",
+          "role": "declaration",
+          "source_ids": [
+            "S2"
+          ]
+        },
+        {
+          "sense_id": "core.064.02",
+          "label": "允许范围",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02",
+            "S2"
+          ]
+        },
+        {
+          "sense_id": "core.064.03",
+          "label": "合宜分寸",
+          "role": "normative",
+          "source_ids": [
+            "C02"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "测度、阈值及合宜分寸可以用于任一卦态模型，未专属某卦。",
+      "modern_bridge_and_limit": "三位编码不是自带单位的物理量，更不是伦理分寸。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 65,
+      "char": "量",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.065.01",
+          "label": "衡量所得",
+          "role": "binding_formula",
+          "source_ids": [
+            "S2"
+          ]
+        },
+        {
+          "sense_id": "core.065.02",
+          "label": "资源份额或容量",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "测量与容量需领域模型另定，不从八卦名得到。",
+      "modern_bridge_and_limit": "卦序编号不自动等于强度、数量或概率。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 66,
+      "char": "穷",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.066.01",
+          "label": "旧方式无安全后继",
+          "role": "macro_formula",
+          "source_ids": [
+            "Y04"
+          ]
+        },
+        {
+          "sense_id": "core.066.02",
+          "label": "资源或制度到限",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y04",
+            "Y10"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.066.01",
+        "core.066.02"
+      ],
+      "trigrams": [
+        "坎",
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可在明确的陷入困境或到界停止场景，分别研究无安全后继或到限。",
+      "modern_bridge_and_limit": "坎陷未必无路，艮止可能恰当；穷也不必属于坎艮，须查询具体模型。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 67,
+      "char": "通",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.067.01",
+          "label": "存在可达路径",
+          "role": "macro_formula",
+          "source_ids": [
+            "Y04",
+            "Y07"
+          ]
+        },
+        {
+          "sense_id": "core.067.02",
+          "label": "通道可用",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y07"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.067.02"
+      ],
+      "trigrams": [
+        "艮",
+        "兑"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》三、六章以山泽通气说明一对关系，可由山/泽物象联系艮兑。",
+      "modern_bridge_and_limit": "这不是所有通达都归艮兑；08路径可达还须Program与目标，不能从通气直接得长期可持续。",
+      "bagua_source_refs": [
+        "B02",
+        "B05",
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 68,
+      "char": "久",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.068.01",
+          "label": "有限窗内保持",
+          "role": "macro_formula",
+          "source_ids": [
+            "Y04",
+            "M1"
+          ]
+        },
+        {
+          "sense_id": "core.068.02",
+          "label": "有限模型中的无界持续",
+          "role": "macro_formula",
+          "source_ids": [
+            "Y04",
+            "M1"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.068.01",
+        "core.068.02"
+      ],
+      "trigrams": [
+        "乾"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可借乾健作持续行动的解释入口，再用G1有限或无界持续查询。",
+      "modern_bridge_and_limit": "健不证明每步有后继、安全或无限时间；其他卦模型亦能持续，必须固定正时长tick与K。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 69,
+      "char": "终",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.069.01",
+          "label": "历程区间末端",
+          "role": "declaration",
+          "source_ids": [
+            "C07"
+          ]
+        },
+        {
+          "sense_id": "core.069.02",
+          "label": "任务完成",
+          "role": "binding_formula",
+          "source_ids": [
+            "C07"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.069.01",
+        "core.069.02"
+      ],
+      "trigrams": [
+        "艮"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》五、六章明确把终始、所成与艮联系。",
+      "modern_bridge_and_limit": "终可能是历程端点或完成，不能直接等同死亡；08终的不同义项须分开。",
+      "bagua_source_refs": [
+        "B04",
+        "B05"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 70,
+      "char": "始",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.070.01",
+          "label": "历程区间起点",
+          "role": "declaration",
+          "source_ids": [
+            "C07"
+          ]
+        },
+        {
+          "sense_id": "core.070.02",
+          "label": "活动开始",
+          "role": "binding_formula",
+          "source_ids": [
+            "C07"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.070.01",
+        "core.070.02"
+      ],
+      "trigrams": [
+        "艮",
+        "乾"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》以艮论终始，《系辞上》另以乾论大始。",
+      "modern_bridge_and_limit": "一个字可有不同生成层次；起点、活动开始和绝对起源不能混同。",
+      "bagua_source_refs": [
+        "B04",
+        "B05",
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 71,
+      "char": "往",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.071.01",
+          "label": "离开参照范围",
+          "role": "binding_formula",
+          "source_ids": [
+            "JY8"
+          ]
+        },
+        {
+          "sense_id": "core.071.02",
+          "label": "向后续事件推进",
+          "role": "binding_program",
+          "source_ids": [
+            "JY8"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.071.01",
+        "core.071.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》三章谈数往知来，属整个卦象认识的时序语境。",
+      "modern_bridge_and_limit": "不能从往字获得任一具体变卦边或必然周期。",
+      "bagua_source_refs": [
+        "B02"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 72,
+      "char": "存",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.072.01",
+          "label": "当前存在",
+          "role": "binding_formula",
+          "source_ids": [
+            "C03"
+          ]
+        },
+        {
+          "sense_id": "core.072.02",
+          "label": "相邻事件的承续",
+          "role": "macro_program",
+          "source_ids": [
+            "JC5"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "任何卦类标记下的实例都可能存续或终止，没有本轮专属卦。",
+      "modern_bridge_and_limit": "艮止、坤藏或乾健都不能替代E/I及真实时间步条件。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 73,
+      "char": "续",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.073.01",
+          "label": "实例承续事件",
+          "role": "macro_program",
+          "source_ids": [
+            "D1"
+          ]
+        },
+        {
+          "sense_id": "core.073.02",
+          "label": "过程接续",
+          "role": "macro_program",
+          "source_ids": [
+            "D1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "过程接续和实例承续属于G1通用操作，不专属乾或坤。",
+      "modern_bridge_and_limit": "转移图路径连接不自动等于同一实例延续。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 74,
+      "char": "养",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.074.01",
+          "label": "供给或保护",
+          "role": "binding_program",
+          "source_ids": [
+            "C02",
+            "C09",
+            "Z03"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.074.01"
+      ],
+      "trigrams": [
+        "坤"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》五章将万物致养与坤相连。",
+      "modern_bridge_and_limit": "要把致养变成08供给程序，仍须资源、输入、消耗及持续域；坤名不保证足够供给。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 75,
+      "char": "守",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.075.01",
+          "label": "按目标维持的行动",
+          "role": "binding_program",
+          "source_ids": [
+            "L03",
+            "S2"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.075.01"
+      ],
+      "trigrams": [
+        "艮",
+        "乾"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可选择守边界或保持行动作为不同领域实例，分别借止与健作解释入口。",
+      "modern_bridge_and_limit": "守是策略或动作标签，不等于已经守住；是否持续安全仍由G1验证。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 76,
+      "char": "亡",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.076.01",
+          "label": "实例退出模式",
+          "role": "macro_program",
+          "source_ids": [
+            "S5",
+            "C03"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "没有依据把亡专配坎、艮或任何一卦。",
+      "modern_bridge_and_limit": "陷可能可出，止可能保全，兑说也可能有风险；实例退出由EndAs及身份判据确定。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 77,
+      "char": "坏",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.077.01",
+          "label": "功能或结构受损",
+          "role": "binding_formula",
+          "source_ids": []
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "《说卦》兑物象中有毁折，但它不使08全部损坏机制专属兑。",
+      "modern_bridge_and_limit": "若要接此语例应新增具体义项；不从兑喜悦或毁折推出普遍坏作用。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 78,
+      "char": "绝",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.078.01",
+          "label": "流或联系中断",
+          "role": "binding_formula",
+          "source_ids": [
+            "H1",
+            "D1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "流或联系中断未专配某卦。",
+      "modern_bridge_and_limit": "止、闭、陷都不等于不可逆断绝；恢复路径须另检。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 79,
+      "char": "熄",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.079.01",
+          "label": "火焰模式终止事件",
+          "role": "macro_program",
+          "source_ids": [
+            "JC8"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "离为火是物象关联，不代表离本身就是火熄灭或不熄灭。",
+      "modern_bridge_and_limit": "现实火焰模式及EndAs需另定，不把变出离图式当熄火证据。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 80,
+      "char": "死",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.080.01",
+          "label": "生命实例终止事件",
+          "role": "macro_program",
+          "source_ids": [
+            "Z01"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "未建立生命终止与某卦的专属映射。",
+      "modern_bridge_and_limit": "阴爻、坎险、艮止都不是死亡判据。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 81,
+      "char": "息",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.081.01",
+          "label": "滋长再生",
+          "role": "binding_formula",
+          "source_ids": [
+            "JC6"
+          ]
+        },
+        {
+          "sense_id": "core.081.02",
+          "label": "停止活动",
+          "role": "binding_formula",
+          "source_ids": [
+            "JC6b"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.081.01",
+        "core.081.02"
+      ],
+      "trigrams": [
+        "艮",
+        "坤"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "停止活动可借艮止作解释入口；滋长义可与坤致养建立另一个候选模型。",
+      "modern_bridge_and_limit": "必须选择息的具体sense_id；原典八卦没有把两义合成一个息算子。",
+      "bagua_source_refs": [
+        "B04",
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 82,
+      "char": "中",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.082.01",
+          "label": "情感未发的状态",
+          "role": "binding_formula",
+          "source_ids": [
+            "C06"
+          ]
+        },
+        {
+          "sense_id": "core.082.02",
+          "label": "时中的合宜判断",
+          "role": "normative",
+          "source_ids": [
+            "C06"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "三画卦的中爻是位置概念，08中是中庸未发或时中之义。",
+      "modern_bridge_and_limit": "不能把中位自动转换为伦理合宜、均值或稳定点。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 83,
+      "char": "和",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.083.01",
+          "label": "差异项协调",
+          "role": "binding_formula",
+          "source_ids": [
+            "C05",
+            "C08"
+          ]
+        },
+        {
+          "sense_id": "core.083.02",
+          "label": "发而中节的评价",
+          "role": "normative",
+          "source_ids": [
+            "C06"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.083.01"
+      ],
+      "trigrams": [
+        "兑"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "若研究使参与者悦与协调的关系，可建立兑说到和的候选行动模型。",
+      "modern_bridge_and_limit": "悦不等于和，和不保证悦，利益与规范需另给；不能声称原训“兑，和也”。",
+      "bagua_source_refs": [
+        "B06"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 84,
+      "char": "衡",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.084.01",
+          "label": "判断准绳",
+          "role": "interpretation",
+          "source_ids": [
+            "JC2"
+          ]
+        },
+        {
+          "sense_id": "core.084.02",
+          "label": "现代调节扩展",
+          "role": "binding_program",
+          "source_ids": [
+            "JC2"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "评判准绳与现代反馈调节可用于任意模型，未专属一卦。",
+      "modern_bridge_and_limit": "八卦图的几何对称不证明动态平衡或稳定。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 85,
+      "char": "节",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.085.01",
+          "label": "节用约束",
+          "role": "macro_program",
+          "source_ids": [
+            "C03",
+            "Y10"
+          ]
+        },
+        {
+          "sense_id": "core.085.02",
+          "label": "行动节拍时点",
+          "role": "binding_formula",
+          "source_ids": [
+            "S3"
+          ]
+        },
+        {
+          "sense_id": "core.085.03",
+          "label": "制度节度",
+          "role": "normative",
+          "source_ids": [
+            "Y10"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "节用、节拍和制度节度未专属艮或坎；节卦是六画卦。",
+      "modern_bridge_and_limit": "《说卦》艮木坚多节的节也不是08节用/节度的直接同义项。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 86,
+      "char": "制",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.086.01",
+          "label": "制定规则",
+          "role": "declaration",
+          "source_ids": [
+            "C02",
+            "Y10"
+          ]
+        },
+        {
+          "sense_id": "core.086.02",
+          "label": "限制动作",
+          "role": "macro_program",
+          "source_ids": [
+            "Y10"
+          ]
+        },
+        {
+          "sense_id": "core.086.03",
+          "label": "因地制行",
+          "role": "binding_program",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.086.01",
+        "core.086.02",
+        "core.086.03"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可用允许边与Guard在任一卦态模型中限定转换。",
+      "modern_bridge_and_limit": "这是G1模型设计；不能把原典任一卦象当成自动执行的控制器。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 87,
+      "char": "正",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.087.01",
+          "label": "正当或合规范",
+          "role": "normative",
+          "source_ids": [
+            "C08",
+            "C07"
+          ]
+        },
+        {
+          "sense_id": "core.087.02",
+          "label": "纠正行为",
+          "role": "binding_program",
+          "source_ids": [
+            "C08"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "兑的正秋、坎的正北方中的正，不是08伦理校正义。",
+      "modern_bridge_and_limit": "同字不能把正当性配给某方位或某一卦。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 88,
+      "char": "常",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.088.01",
+          "label": "状态性质不变",
+          "role": "macro_formula",
+          "source_ids": [
+            "C03",
+            "Y06"
+          ]
+        },
+        {
+          "sense_id": "core.088.02",
+          "label": "规则持续适用",
+          "role": "binding_formula",
+          "source_ids": [
+            "L03",
+            "C03"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.088.01",
+        "core.088.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "可查询某性质在声明的变卦程序上是否不变，或规则是否保持适用。",
+      "modern_bridge_and_limit": "符号变化的规律由模型声明；不从卦图恒定推出所有状态恒定。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 89,
+      "char": "治",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.089.01",
+          "label": "治理作用",
+          "role": "binding_program",
+          "source_ids": [
+            "C02",
+            "C03"
+          ]
+        },
+        {
+          "sense_id": "core.089.02",
+          "label": "秩序状态",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        },
+        {
+          "sense_id": "core.089.03",
+          "label": "治理的正当性",
+          "role": "normative",
+          "source_ids": [
+            "C03"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.089.01"
+      ],
+      "trigrams": [
+        "离"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》五章在离明语境谈向明而治，存在明确文本关联。",
+      "modern_bridge_and_limit": "这是治理取象的叙述，不证明明亮造成善治；08治理程序、秩序与正当性仍分型。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 90,
+      "char": "乱",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.090.01",
+          "label": "失序状态",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        },
+        {
+          "sense_id": "core.090.02",
+          "label": "动态失稳",
+          "role": "binding_formula",
+          "source_ids": [
+            "C02"
+          ]
+        },
+        {
+          "sense_id": "core.090.03",
+          "label": "负面规范评价",
+          "role": "normative",
+          "source_ids": [
+            "C02"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "政治失序、动态失稳和伦理坏未在本轮专配某卦。",
+      "modern_bridge_and_limit": "坎陷不自动等于乱，兑悦也不自动排除乱。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 91,
+      "char": "观",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.091.01",
+          "label": "观测记录",
+          "role": "evidence",
+          "source_ids": [
+            "Y01",
+            "M4"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.091.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞》以设卦观象、观天地及鸟兽之文说明认识与取象。",
+      "modern_bridge_and_limit": "观察是全体系方法；离明可作隐喻，但不能把观测只配离或当无误读取。",
+      "bagua_source_refs": [
+        "B08",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 92,
+      "char": "证",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.092.01",
+          "label": "对主张作检验",
+          "role": "evidence",
+          "source_ids": [
+            "M4"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "证据核查是G1外部接口，没有卦象能替代验证。",
+      "modern_bridge_and_limit": "卦名、排列或古典出处都不直接证明现代机制。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 93,
+      "char": "知",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.093.01",
+          "label": "认识主张",
+          "role": "interpretation",
+          "source_ids": [
+            "C01",
+            "C08"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.093.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》三章知来、《系辞》易知等属于卦象认识语境。",
+      "modern_bridge_and_limit": "有认识论叙述不等于预测准确；08证成和观察条件仍需独立。",
+      "bagua_source_refs": [
+        "B02",
+        "B08"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 94,
+      "char": "觉",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.094.01",
+          "label": "自己领悟",
+          "role": "interpretation",
+          "source_ids": [
+            "JC3"
+          ]
+        },
+        {
+          "sense_id": "core.094.02",
+          "label": "使他人觉悟",
+          "role": "binding_program",
+          "source_ids": [
+            "JC3"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08领悟与教化没有本轮专属八卦。",
+      "modern_bridge_and_limit": "不把离明或震动自动视为人的觉醒、知识正确或教化成功。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 95,
+      "char": "察",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.095.01",
+          "label": "检视多条线索",
+          "role": "evidence",
+          "source_ids": [
+            "Y01",
+            "C08"
+          ]
+        }
+      ],
+      "mapping_level": "modern_bridge",
+      "candidate_existing_sense_ids": [
+        "core.095.01"
+      ],
+      "trigrams": [
+        "离"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "可选离明、相见作为提高可观察性的解释入口，再登记观测条件。",
+      "modern_bridge_and_limit": "可见性不等于察得因果；察也可用于所有卦态模型，离不是仪器定律。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 96,
+      "char": "明",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.096.01",
+          "label": "清楚区分与判断",
+          "role": "interpretation",
+          "source_ids": [
+            "L03",
+            "JC4"
+          ]
+        }
+      ],
+      "mapping_level": "direct_bagua_text",
+      "candidate_existing_sense_ids": [
+        "core.096.01"
+      ],
+      "trigrams": [
+        "离"
+      ],
+      "scope": "selected_text_or_model_context",
+      "text_or_mapping_basis": "《说卦》五章直接说离为明，并接万物相见。",
+      "modern_bridge_and_limit": "须新增此八卦明义例；08清楚区分和判断不能直接等同发光、可见或知识真实。",
+      "bagua_source_refs": [
+        "B04"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 97,
+      "char": "信",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.097.01",
+          "label": "诚信或履约可靠",
+          "role": "binding_formula",
+          "source_ids": [
+            "C08"
+          ]
+        },
+        {
+          "sense_id": "core.097.02",
+          "label": "信任或相信",
+          "role": "binding_formula",
+          "source_ids": [
+            "C08"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08诚信与信任未专属兑。",
+      "modern_bridge_and_limit": "悦、口舌、交流都不足以推出可信，更不推出命题真实。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 98,
+      "char": "故",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.098.01",
+          "label": "必要条件",
+          "role": "macro_formula",
+          "source_ids": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "sense_id": "core.098.02",
+          "label": "充分条件",
+          "role": "macro_formula",
+          "source_ids": [
+            "M2"
+          ]
+        },
+        {
+          "sense_id": "core.098.03",
+          "label": "因果解释",
+          "role": "causal",
+          "source_ids": [
+            "M1",
+            "M2"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "必要条件、充分条件及因果解释是一般推理接口，不专属某卦。",
+      "modern_bridge_and_limit": "卦态相邻、同位或互补不能自动成为所以然。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 99,
+      "char": "类",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.099.01",
+          "label": "分类相似",
+          "role": "binding_formula",
+          "source_ids": [
+            "M3"
+          ]
+        },
+        {
+          "sense_id": "core.099.02",
+          "label": "类推候选",
+          "role": "interpretation",
+          "source_ids": [
+            "M3"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.099.01",
+        "core.099.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《系辞下》作八卦以类万物之情，为分类关联提供文本资源。",
+      "modern_bridge_and_limit": "分类相似不证明共同机制，也不证明八类互斥且穷尽现实。",
+      "bagua_source_refs": [
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 100,
+      "char": "法",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.100.01",
+          "label": "判断标准",
+          "role": "interpretation",
+          "source_ids": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "sense_id": "core.100.02",
+          "label": "制度规则",
+          "role": "declaration",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "sense_id": "core.100.03",
+          "label": "按规则执行",
+          "role": "binding_program",
+          "source_ids": [
+            "S1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "标准、制度与执行规则可以用来建立卦态模型，但没有专属卦。",
+      "modern_bridge_and_limit": "法不因离丽、艮止等训释而变成自然律或强制执行。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 101,
+      "char": "宜",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.101.01",
+          "label": "命名合约定",
+          "role": "binding_formula",
+          "source_ids": [
+            "C01"
+          ]
+        },
+        {
+          "sense_id": "core.101.02",
+          "label": "行动适当",
+          "role": "normative",
+          "source_ids": [
+            "C06"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "合约定与伦理合宜未专属任何一卦。",
+      "modern_bridge_and_limit": "方位或卦态不能自动决定何行动合宜。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 102,
+      "char": "仁",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.102.01",
+          "label": "关怀他人的要求",
+          "role": "normative",
+          "source_ids": [
+            "C08",
+            "C11"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.102.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》二章把仁义列为人之道，属三才体系的规范层。",
+      "modern_bridge_and_limit": "这不是给仁分配一个卦，更不能用三位数值计算关怀要求。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 103,
+      "char": "义",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.103.01",
+          "label": "正当性与取舍",
+          "role": "normative",
+          "source_ids": [
+            "C08",
+            "C09"
+          ]
+        },
+        {
+          "sense_id": "core.103.02",
+          "label": "文义",
+          "role": "interpretation",
+          "source_ids": [
+            "D1"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.103.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》一、二章在道德、三才语境谈义。",
+      "modern_bridge_and_limit": "08伦理义可成为另立解释的入口，文义sense_id不并入；无专属义卦。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 104,
+      "char": "礼",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.104.01",
+          "label": "规则与角色制度",
+          "role": "declaration",
+          "source_ids": [
+            "C02",
+            "C08"
+          ]
+        },
+        {
+          "sense_id": "core.104.02",
+          "label": "践行礼制",
+          "role": "binding_program",
+          "source_ids": [
+            "C02",
+            "C08"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08礼制、角色与实践没有本轮专属八卦。",
+      "modern_bridge_and_limit": "历史礼制可以取象，但须具体文本与制度桥梁，不能把八卦当通用礼法。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 105,
+      "char": "善",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.105.01",
+          "label": "规范评价",
+          "role": "normative",
+          "source_ids": [
+            "C09",
+            "C10"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "善是规范评价；未由本轮八卦训释得到专属卦。",
+      "modern_bridge_and_limit": "健、顺、动、陷、止等都不直接等于伦理善恶。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 106,
+      "char": "性",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.106.01",
+          "label": "孟子语境的性",
+          "role": "interpretation",
+          "source_ids": [
+            "C09"
+          ]
+        },
+        {
+          "sense_id": "core.106.02",
+          "label": "荀子语境的性",
+          "role": "interpretation",
+          "source_ids": [
+            "C10"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.106.01",
+        "core.106.02"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》谈穷理尽性、顺性命之理，属于整体解释语境。",
+      "modern_bridge_and_limit": "这是新增易传性义；08孟子和荀子的竞争义项不得自动统一，也不专属乾坤。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 107,
+      "char": "权",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.107.01",
+          "label": "因情境权变",
+          "role": "binding_program",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "sense_id": "core.107.02",
+          "label": "政治权位",
+          "role": "binding_formula",
+          "source_ids": [
+            "H2"
+          ]
+        },
+        {
+          "sense_id": "core.107.03",
+          "label": "权衡取舍",
+          "role": "normative",
+          "source_ids": [
+            "S1"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "权变、权位、权衡未在本轮分配给某一卦。",
+      "modern_bridge_and_limit": "乾为君是物象关联，不足以把所有权力与权衡归乾。",
+      "bagua_source_refs": [
+        "B07"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 108,
+      "char": "阴",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.108.01",
+          "label": "阴阳关系的一端",
+          "role": "declaration",
+          "source_ids": [
+            "Y03",
+            "L08"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.108.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》以阴阳、刚柔和爻位说明卦的构成。",
+      "modern_bridge_and_limit": "各混合卦可含阴爻；坤为全阴图式不意味着阴只能属于坤，更不等于无或死。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 109,
+      "char": "阳",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.109.01",
+          "label": "阴阳关系的另一端",
+          "role": "declaration",
+          "source_ids": [
+            "Y03",
+            "L08"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.109.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "与阴共同构成卦的符号区分，乾是全阳图式而非全部阳义。",
+      "modern_bridge_and_limit": "各混合卦可含阳爻；阳不直接等于能量、善或生命。",
+      "bagua_source_refs": [
+        "B01"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 110,
+      "char": "虚",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.110.01",
+          "label": "致虚的实践",
+          "role": "normative",
+          "source_ids": [
+            "L03"
+          ]
+        },
+        {
+          "sense_id": "core.110.02",
+          "label": "防备薄弱",
+          "role": "binding_formula",
+          "source_ids": [
+            "S4"
+          ]
+        },
+        {
+          "sense_id": "core.110.03",
+          "label": "可容纳空间的现代延展",
+          "role": "binding_formula",
+          "source_ids": [
+            "L03"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08致虚、防备薄弱和容纳空间没有本轮专属卦。",
+      "modern_bridge_and_limit": "阴爻画成断线不证明空无，坤000不等于虚，坎陷也不等于所有弱防备。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 111,
+      "char": "刚",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.111.01",
+          "label": "卦爻的刚类",
+          "role": "declaration",
+          "source_ids": [
+            "Y01",
+            "Y06"
+          ]
+        },
+        {
+          "sense_id": "core.111.02",
+          "label": "现代难屈响应",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y01",
+            "Y06"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.111.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "《说卦》及《系辞》以刚柔、爻位讨论整个卦象结构。",
+      "modern_bridge_and_limit": "08卦爻刚类可对接；现代难屈响应须另给材料或行为桥梁，不能只给乾。",
+      "bagua_source_refs": [
+        "B01",
+        "B08",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 112,
+      "char": "柔",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.112.01",
+          "label": "卦爻的柔类",
+          "role": "declaration",
+          "source_ids": [
+            "Y01",
+            "Y06"
+          ]
+        },
+        {
+          "sense_id": "core.112.02",
+          "label": "现代顺应响应",
+          "role": "binding_formula",
+          "source_ids": [
+            "Y01",
+            "Y06"
+          ]
+        }
+      ],
+      "mapping_level": "yi_system_structure",
+      "candidate_existing_sense_ids": [
+        "core.112.01"
+      ],
+      "trigrams": [
+        "乾",
+        "坤",
+        "震",
+        "巽",
+        "坎",
+        "离",
+        "艮",
+        "兑"
+      ],
+      "scope": "whole_system_not_exclusive_assignment",
+      "text_or_mapping_basis": "柔与刚共同进入构卦和变化，混合卦中也有柔位。",
+      "modern_bridge_and_limit": "08卦爻柔类可对接；现代顺应不自动等于坤顺，不能把柔全归坤。",
+      "bagua_source_refs": [
+        "B01",
+        "B08",
+        "B09"
+      ],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    },
+    {
+      "index": 113,
+      "char": "弱",
+      "all_existing_senses": [
+        {
+          "sense_id": "core.113.01",
+          "label": "较弱作用方式",
+          "role": "binding_formula",
+          "source_ids": [
+            "L05"
+          ]
+        },
+        {
+          "sense_id": "core.113.02",
+          "label": "不强制的策略解释",
+          "role": "binding_program",
+          "source_ids": [
+            "L05"
+          ]
+        }
+      ],
+      "mapping_level": "no_exclusive_binding",
+      "candidate_existing_sense_ids": [],
+      "trigrams": [],
+      "scope": "no_exclusive_binding",
+      "text_or_mapping_basis": "08老子弱用没有本轮专属八卦。",
+      "modern_bridge_and_limit": "柔爻、阴爻、坤顺或坎陷都不能直接变成普遍的弱作用策略。",
+      "bagua_source_refs": [],
+      "text_to_existing_signature_identity": false,
+      "all_unselected_senses_remain_unassigned": true,
+      "binding_status": "解释与模型候选，未向G1自动注册新谓词或过程"
+    }
+  ],
+  "new_primary_terms": [
+    {
+      "char": "乾",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "坤",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "震",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "巽",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "坎",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "离",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "艮",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "兑",
+      "group": "八卦名",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "Term[Trigram]"
+    },
+    {
+      "char": "健",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "顺",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "动",
+      "group": "八训",
+      "status": "existing_core_character_new_bagua_sense",
+      "existing_ids": [
+        "core.058.01",
+        "core.058.02"
+      ],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "入",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "陷",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "丽",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "止",
+      "group": "八训",
+      "status": "existing_extension_character_new_bagua_sense",
+      "existing_ids": [
+        "extension.08"
+      ],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    },
+    {
+      "char": "说",
+      "group": "八训",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B06",
+      "proposed_type": "TextClaim中的训释词；进入模型须另选Formula/Program/NormJudgement接口"
+    }
+  ],
+  "natural_image_terms": [
+    {
+      "char": "天",
+      "group": "八自然象",
+      "status": "existing_extension_character_new_bagua_sense",
+      "existing_ids": [
+        "extension.13"
+      ],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "泽",
+      "group": "八自然象",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "火",
+      "group": "八自然象",
+      "status": "existing_extension_character_new_bagua_sense",
+      "existing_ids": [
+        "extension.18"
+      ],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "雷",
+      "group": "八自然象",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "风",
+      "group": "八自然象",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "水",
+      "group": "八自然象",
+      "status": "existing_extension_character_new_bagua_sense",
+      "existing_ids": [
+        "extension.21"
+      ],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "山",
+      "group": "八自然象",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    },
+    {
+      "char": "地",
+      "group": "八自然象",
+      "status": "new_character_and_sense",
+      "existing_ids": [],
+      "source_ref": "B07",
+      "note": "已有同字不表示08五行或荀子义项已等于本八卦物象"
+    }
+  ],
+  "new_character_counts": {
+    "eight_names_plus_eight_glosses": 14,
+    "optional_yue_display_character": 1,
+    "additional_natural_images": 5
+  },
+  "yue_note": "《说卦》原字说（說），此处读悦；若将悦单独登记为显示/释读名，可另加1个新字，但不假装原文多一个独立八训。",
+  "sources": {
+    "B01": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第一章",
+      "location": "《说卦》第一、二章：阴阳、刚柔、三才与六画",
+      "role": "古代文本"
+    },
+    "B02": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第三章",
+      "location": "《说卦》第三章：四对关系与八卦相错",
+      "role": "古代文本"
+    },
+    "B03": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第四章",
+      "location": "《说卦》第四章：雷动、风散、艮止等作用词",
+      "role": "古代文本"
+    },
+    "B04": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第五章",
+      "location": "《说卦》第五章：出、齐、见、养、说、战、劳、成",
+      "role": "古代文本"
+    },
+    "B05": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第六章",
+      "location": "《说卦》第六章：水火相逮、雷风不悖、山泽通气与变化",
+      "role": "古代文本"
+    },
+    "B06": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第七章",
+      "location": "《说卦》第七章：健顺动入陷丽止说",
+      "role": "古代文本"
+    },
+    "B07": {
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦#第八章",
+      "location": "《说卦》第八至十一章：自然、身体、家族及物象；细项按行内定位",
+      "role": "古代文本"
+    },
+    "B08": {
+      "url": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+      "location": "《系辞上》第一、二章为本表主要锚点",
+      "role": "古代文本"
+    },
+    "B09": {
+      "url": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+      "location": "《系辞下》第一、二章：八卦成列、观象制器",
+      "role": "古代文本"
+    },
+    "B11": {
+      "url": "https://zh.wikisource.org/wiki/周易/坤",
+      "location": "六画坤卦《彖》及《文言》；不是三画八卦单独训释",
+      "role": "重卦语境扩展"
+    },
+    "B15": {
+      "url": "https://zh.wikisource.org/wiki/周易/離",
+      "location": "六画离卦《彖》：丽乎天、丽乎土；不是现代attach定义",
+      "role": "重卦语境扩展"
+    }
+  },
+  "legacy_sources": {
+    "Y01": "https://zh.wikisource.org/wiki/周易/賁",
+    "Y02": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+    "Y03": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+    "Y04": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+    "Y05": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+    "Y06": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+    "Y07": "https://zh.wikisource.org/wiki/周易/泰",
+    "Y08": "https://zh.wikisource.org/wiki/周易/否",
+    "Y09": "https://zh.wikisource.org/wiki/周易/復",
+    "Y10": "https://zh.wikisource.org/wiki/周易/節",
+    "L01": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二章",
+    "L02": "https://zh.wikisource.org/wiki/道德經_(王弼本)#十一章",
+    "L03": "https://zh.wikisource.org/wiki/道德經_(王弼本)#十六章",
+    "L04": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二十五章",
+    "L05": "https://zh.wikisource.org/wiki/道德經_(王弼本)#四十章",
+    "L06": "https://zh.wikisource.org/wiki/道德經_(王弼本)#五十一章",
+    "L07": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章",
+    "L08": "https://zh.wikisource.org/wiki/道德經_(王弼本)#四十二章",
+    "Z01": "https://zh.wikisource.org/wiki/莊子/知北遊",
+    "Z02": "https://zh.wikisource.org/wiki/莊子/齊物論",
+    "Z03": "https://zh.wikisource.org/wiki/莊子/養生主",
+    "Z04": "https://zh.wikisource.org/wiki/莊子/逍遙遊",
+    "W01": "https://zh.wikisource.org/wiki/說文解字/15",
+    "W02": "https://zh.wikisource.org/wiki/文心雕龍/原道",
+    "C01": "https://zh.wikisource.org/zh/荀子/正名篇",
+    "C02": "https://zh.wikisource.org/zh-hans/荀子/禮論篇",
+    "C03": "https://zh.wikisource.org/zh-hans/荀子/天論篇",
+    "C04": "https://zh.wikisource.org/zh-hans/荀子/勸學篇",
+    "C05": "https://zh.wikisource.org/zh-hans/國語_(四庫全書本)/卷16",
+    "C06": "https://zh.wikisource.org/zh-hans/禮記/中庸",
+    "C07": "https://zh.wikisource.org/zh-hans/禮記/大學",
+    "C08": "https://zh.wikisource.org/zh-hans/論語/全覽",
+    "C09": "https://zh.wikisource.org/zh-hans/孟子/告子上",
+    "C10": "https://zh.wikisource.org/zh-hans/荀子/性惡篇",
+    "C11": "https://zh.wikisource.org/zh-hans/孟子/公孫丑上",
+    "M1": "https://zh.wikisource.org/wiki/墨子/經上",
+    "M2": "https://zh.wikisource.org/wiki/墨子/經說上",
+    "M3": "https://zh.wikisource.org/wiki/墨子/小取",
+    "M4": "https://zh.wikisource.org/wiki/墨子/非命上",
+    "S1": "https://zh.wikisource.org/wiki/孫子兵法#始計第一",
+    "S2": "https://zh.wikisource.org/wiki/孫子兵法#軍形第四",
+    "S3": "https://zh.wikisource.org/wiki/孫子兵法#兵勢第五",
+    "S4": "https://zh.wikisource.org/wiki/孫子兵法#虛實第六",
+    "S5": "https://zh.wikisource.org/wiki/孫子兵法#軍爭第七",
+    "H1": "https://zh.wikisource.org/wiki/韓非子/解老",
+    "H2": "https://zh.wikisource.org/wiki/韓非子/難勢",
+    "D1": "https://zh.wikisource.org/wiki/三國志/卷13",
+    "D2": "https://zh.wikisource.org/wiki/太平御覽/0616#讀誦",
+    "JY1": "https://zh.wikisource.org/wiki/周易/咸",
+    "JY2": "https://zh.wikisource.org/wiki/周易/坤",
+    "JY3": "https://zh.wikisource.org/wiki/論語註疏/卷12",
+    "JY4": "https://zh.wikisource.org/wiki/道德經_(王弼本)#五十二章",
+    "JY5": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+    "JY6": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+    "JY7": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+    "JY8": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+    "JC1": "https://zh.wikisource.org/zh-hans/論語註疏/卷06",
+    "JC2": "https://zh.wikisource.org/zh-hans/荀子/解蔽篇",
+    "JC3": "https://zh.wikisource.org/zh-hans/孟子/萬章上",
+    "JC4": "https://zh.wikisource.org/zh-hans/荀子/解蔽篇",
+    "JC5": "https://zh.wikisource.org/zh-hans/孟子/告子上",
+    "JC6": "https://zh.wikisource.org/zh-hans/孟子/告子上",
+    "JC6b": "https://zh.wikisource.org/zh-hans/禮記/中庸",
+    "JC7": "https://zh.wikisource.org/zh-hans/論語/全覽#述而第七",
+    "JC8": "https://zh.wikisource.org/zh-hans/孟子/告子上",
+    "F01": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷11",
+    "F02": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13",
+    "F03": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13",
+    "F04": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)"
+  },
+  "source_namespace_policy": {
+    "bagua_source_refs": "B编号见13；本文件sources给出精确URL和定位",
+    "all_existing_senses.source_ids": "08沿用的05编号；本文件legacy_sources保留其原典URL"
+  }
+}

@@ -1,0 +1,5505 @@
+{
+  "reference_project": "/Users/ren/Documents/Codex/2026-10-13/referenced-chatgpt-conversation-this-is-an/outputs/civilization-thought-v1.0",
+  "canonical_file": "data/model.json",
+  "canonical_sha256": "0a8ab02d0b15f9dcfd143f11ad636a0d7b65a89ed296154fc3a0410368f06b36",
+  "extraction_date": "2026-10-21",
+  "purpose": "为八卦与组合文法的证据分层提供只读定位；保留原项目ID、来源URL、完整限定。选摘不声称覆盖参考项目全部思想。",
+  "reading_scope_this_pass": "阅读AGENTS.md、docs/本轮覆盖.md、docs/数据与关系.md；定位并核读下列精选记录与引文；对这些引文作冻结正文的空白归一定位检查。未重新全文核读全库、未重做所有来源网页与版本校勘。",
+  "project_reported_scope": {
+    "classic_units": {
+      "read_mapped": 421,
+      "read_no_new_relation": 29
+    },
+    "wing_units": {
+      "read_mapped": 338
+    },
+    "transmission_units": {
+      "read_mapped": 516
+    },
+    "caution": "这些是原项目登记的阅读状态，不能改写为本轮全部重新核读。docs/本轮覆盖只列新增包；八卦与易传主要是继承记录。"
+  },
+  "classification": {
+    "textual": "原典内部所述关系；证明该文本如此表述，不自动证明历史事实或现实因果。",
+    "commentarial": "具名后代注家的解释；commentary_links证明被释对象的文献连接，不构成原典蕴涵。",
+    "modern_comparison": "现代分析与对读，不证明历史传播、同源、同一教义。",
+    "feedback": "若为type标签或cognitive措辞，是项目现代结构标记；须保留所引用的具体双向作用，不能因有环就当作控制论反馈。"
+  },
+  "selection_counts": {
+    "relations": 37,
+    "wing_units": 8,
+    "trigram_correspondences": 8,
+    "commentary_links": 3,
+    "comparisons": 3,
+    "coverage": 38,
+    "frozen_source_hits": 4,
+    "nodes": 61,
+    "sources": 15
+  },
+  "quote_locator_check": {
+    "method": "whitespace-only substring against frozen source text; does not certify edition or truth",
+    "mismatches": []
+  },
+  "relations": [
+    {
+      "id": "XC-R005",
+      "title": "一阴一阳谓道",
+      "from": [
+        "XC-N007",
+        "XC-N008"
+      ],
+      "to": [
+        "XC-N009"
+      ],
+      "premise_mode": "all",
+      "type": "definition",
+      "verb": "谓之",
+      "claim": "一阴一阳的合举被称为道。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "一阴一阳之谓道：",
+          "locator": "系辞上·冻结第五章；段落／句起“一阴一阳之谓道：”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：以关系性运行而非单项物体记录界说。",
+      "limits": "任何一项单独不足以代替完整主语；不据此合并老子道。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R007",
+      "title": "阴阳不测谓神",
+      "from": [
+        "XC-N007",
+        "XC-N008"
+      ],
+      "to": [
+        "XC-N012"
+      ],
+      "premise_mode": "all",
+      "type": "definition",
+      "verb": "不测谓之",
+      "claim": "阴阳不测被命名为神。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "阴阳不测之谓神。",
+          "locator": "系辞上·冻结第五章；段落／句起“阴阳不测之谓神。”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：把神作为此处难测作用的称谓。",
+      "limits": "阴阳共同出现仍须保留“不测”限定；不是任何阴或阳皆神。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R008",
+      "title": "太极生两仪",
+      "from": [
+        "XC-N013"
+      ],
+      "to": [
+        "XC-N014"
+      ],
+      "premise_mode": "all",
+      "type": "generation",
+      "verb": "生",
+      "claim": "易有太极，太极生两仪。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "易有太极，是生两仪，",
+          "locator": "系辞上·冻结第十一章；段落／句起“易有太极，是生两仪，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：记录文本生成序列第一步。",
+      "limits": "“生”保留原语，不唯一裁定为时间宇宙起源。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R009",
+      "title": "两仪生四象",
+      "from": [
+        "XC-N014"
+      ],
+      "to": [
+        "XC-N015"
+      ],
+      "premise_mode": "all",
+      "type": "generation",
+      "verb": "生",
+      "claim": "两仪生四象。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "两仪生四象，",
+          "locator": "系辞上·冻结第十一章；段落／句起“两仪生四象，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：记录二到四的分化层级。",
+      "limits": "不补入本句未列出的具体四象名称。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R010",
+      "title": "四象生八卦",
+      "from": [
+        "XC-N015"
+      ],
+      "to": [
+        "XC-N016"
+      ],
+      "premise_mode": "all",
+      "type": "generation",
+      "verb": "生",
+      "claim": "四象生八卦。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "四象生八卦，",
+          "locator": "系辞上·冻结第十一章；段落／句起“四象生八卦，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：记录四到八的分化层级。",
+      "limits": "此处不能凭图形推演替代文献异说。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R011",
+      "title": "八卦定吉凶",
+      "from": [
+        "XC-N016"
+      ],
+      "to": [
+        "XC-N030"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "定",
+      "claim": "八卦被赋予定吉凶的判断作用。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "时位与判断",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "八卦定吉凶，",
+          "locator": "系辞上·冻结第十一章；段落／句起“八卦定吉凶，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：标记符号系统与判断的功能接口。",
+      "limits": "定吉凶是文本功能主张，不是经验预测效力结论。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R013",
+      "title": "八卦成列而象在其中",
+      "from": [
+        "XC-N016"
+      ],
+      "to": [
+        "XC-N018"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "成列而其中有",
+      "claim": "八卦成列，其象在其中。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "八卦成列，象在其中矣；",
+          "locator": "系辞下·冻结第一章；段落／句起“八卦成列，象在其中矣；”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：呈示符号配置与象的内在关系。",
+      "limits": "不等于任何抽象图形都自有唯一解释。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R014",
+      "title": "八卦重之而爻在其中",
+      "from": [
+        "XC-N016"
+      ],
+      "to": [
+        "XC-N019"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "因而重之",
+      "claim": "在八卦成列基础上重之，爻在其中。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "八卦成列，象在其中矣；因而重之，爻在其中矣；",
+          "locator": "系辞下·冻结第一章；段落／句起“八卦成列，象在其中矣；因而重之，”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：从卦体组合连接到爻的分层结构。",
+      "limits": "原文未在本句列重卦算法；不把六爻和三爻混作一个层级。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R015",
+      "title": "刚柔相推生变化",
+      "from": [
+        "XC-N049"
+      ],
+      "to": [
+        "XC-N023"
+      ],
+      "premise_mode": "all",
+      "type": "generation",
+      "verb": "相推而生",
+      "claim": "刚柔在相推这一互动条件下生变化。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "变化与复归",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "刚柔相推而生变化。",
+          "locator": "系辞上·冻结第二章；段落／句起“刚柔相推而生变化。”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：保留互动条件，不把刚或柔单独当原因。",
+      "limits": "不从阴阳刚柔对应惯例再增设没有原文的单边因果。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R016",
+      "title": "系辞命之而动在其中",
+      "from": [
+        "XC-N020"
+      ],
+      "to": [
+        "XC-N035"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "系而命之",
+      "claim": "系辞命之，使动的意义在卦爻表述中呈现。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "系辞焉而命之，动在其中矣。",
+          "locator": "系辞下·冻结第一章；段落／句起“系辞焉而命之，动在其中矣。”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：把辞对动的命名、指示作用显式化。",
+      "limits": "不是说写字能直接造成物理运动。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R017",
+      "title": "吉凶悔吝生乎动",
+      "from": [
+        "XC-N035"
+      ],
+      "to": [
+        "XC-N030",
+        "XC-N032"
+      ],
+      "premise_mode": "all",
+      "type": "generation",
+      "verb": "生发吉凶悔吝判断",
+      "claim": "吉凶悔吝被说成生乎动者。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "时位与判断",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "吉凶悔吝者，生乎动者也。",
+          "locator": "系辞下·冻结第一章；段落／句起“吉凶悔吝者，生乎动者也。”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：把评价联系到实际变动或行动。",
+      "limits": "不意味着所有行动必凶或判断仅受动一个因素决定。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R024",
+      "title": "观天察地取身物而作八卦",
+      "from": [
+        "XC-N039"
+      ],
+      "to": [
+        "XC-N016"
+      ],
+      "premise_mode": "all",
+      "type": "sequence",
+      "verb": "于是始作",
+      "claim": "包牺作八卦的叙述先列观天察地、鸟兽地宜、近身远物，后言于是始作八卦。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "古者包牺氏之王天下也，仰则观象于天，俯则观法于地，观鸟兽之文，与地之宜，近取诸身，远取诸物；于是始作八卦，以通神明之德，以类万物之情。",
+          "locator": "系辞下·冻结第二章；段落／句起“古者包牺氏之王天下也，仰则观象于”",
+          "unit": "系辞下·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：保留多来源观察到表征构造的过程。",
+      "limits": "此为文本中的圣人创制叙述，不声称现代史学已证实。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R040",
+      "title": "道有变动故曰爻",
+      "from": [
+        "XC-N023"
+      ],
+      "to": [
+        "XC-N019"
+      ],
+      "premise_mode": "all",
+      "type": "interpretation",
+      "verb": "故曰",
+      "claim": "道有变动，所以曰爻。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "道有变动，故曰爻；",
+          "locator": "系辞下·冻结第八章；段落／句起“道有变动，故曰爻；”",
+          "unit": "系辞下·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：把爻的命名与变动所表述的对象连在一起。",
+      "limits": "这里“道”承三材之道，不与形上道或阴阳道节点强制等同。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R041",
+      "title": "爻有等、物相杂而文成",
+      "from": [
+        "XC-N019"
+      ],
+      "to": [
+        "XC-N051"
+      ],
+      "premise_mode": "all",
+      "type": "sequence",
+      "verb": "有等／相杂",
+      "claim": "爻有等故曰物，物相杂故曰文。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "爻有等，故曰物；物相杂，故曰文；",
+          "locator": "系辞下·冻结第八章；段落／句起“爻有等，故曰物；物相杂，故曰文；”",
+          "unit": "系辞下·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：保留爻层等差经物之相杂形成配置的中间环节。",
+      "limits": "没有物节点也不省略中介；不是一爻单独等于文。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R042",
+      "title": "文不当而吉凶生",
+      "from": [
+        "XC-N051",
+        "XC-N052"
+      ],
+      "to": [
+        "XC-N030"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "故生",
+      "claim": "文在不当的条件下，吉凶生焉。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "时位与判断",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "文不当，故吉凶生焉。",
+          "locator": "系辞下·冻结第八章；段落／句起“文不当，故吉凶生焉。”",
+          "unit": "系辞下·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：以配置及其适当性共同说明评价发生。",
+      "limits": "不当不只推出凶；原文为吉凶生，不等于吉凶只由此决定。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R049",
+      "title": "筮法四营十八变成卦",
+      "from": [
+        "XC-N028"
+      ],
+      "to": [
+        "XC-N017"
+      ],
+      "premise_mode": "all",
+      "type": "sequence",
+      "verb": "经十八变而成",
+      "claim": "筮法论述以四营成易、十八变成卦，继而谈引伸触类。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "是故四营而成易，十有八变而成卦，八卦而小成；引而伸之，触类而长之，天下之能事毕矣。",
+          "locator": "系辞上·冻结第九章；段落／句起“是故四营而成易，十有八变而成卦，”",
+          "unit": "系辞上·冻结第九章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：保留不同操作层级及成卦步骤。",
+      "limits": "不把四营、十八变当作宇宙演化的经验计数；详细算法未穷尽映射。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-R053",
+      "title": "阴阳合德而刚柔有体",
+      "from": [
+        "XC-N007",
+        "XC-N008"
+      ],
+      "to": [
+        "XC-N049"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "合德而有体",
+      "claim": "阴阳合德，而刚柔有体，以体天地之撰、通神明之德。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "阴阳合德，而刚柔有体，以体天地之撰，以通神明之德。",
+          "locator": "系辞下·冻结第五章；段落／句起“阴阳合德，而刚柔有体，以体天地之”",
+          "unit": "系辞下·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：记录阴阳与刚柔两套语汇的文本连接。",
+      "limits": "合德是共同限定，不把阴等于柔、阳等于刚或人体性别作自动替换。",
+      "strength": "textual_assertion",
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R003",
+      "title": "观变阴阳而立卦",
+      "from": [
+        "OW-N008",
+        "OW-N009"
+      ],
+      "to": [
+        "OW-N005"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "观变而立",
+      "claim": "立卦在此以观阴阳之变为根据。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "觀變於陰陽而立卦；",
+          "locator": "说卦·第一章",
+          "unit": "说卦·第一章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：配对变量在变化中进入符号结构。",
+      "limits": "不是阴或阳单项能形成完整卦。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R005",
+      "title": "天道曰阴阳",
+      "from": [
+        "OW-N008",
+        "OW-N009"
+      ],
+      "to": [
+        "OW-N014"
+      ],
+      "premise_mode": "all",
+      "type": "definition",
+      "verb": "曰",
+      "claim": "说卦以阴与阳说明所立天之道。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立天之道，曰陰與陽；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：为道增加明确的天领域限定。",
+      "limits": "不把任何道字都归并此定义。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R006",
+      "title": "地道曰柔刚",
+      "from": [
+        "OW-N010",
+        "OW-N011"
+      ],
+      "to": [
+        "OW-N015"
+      ],
+      "premise_mode": "all",
+      "type": "definition",
+      "verb": "曰",
+      "claim": "说卦以柔与刚说明所立地之道。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立地之道，曰柔與剛；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：为道保留与天道人道并列的领域差别。",
+      "limits": "不将刚柔简化为阴阳的无条件同义词。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R008",
+      "title": "三道构成三才的展开",
+      "from": [
+        "OW-N014",
+        "OW-N015",
+        "OW-N016"
+      ],
+      "to": [
+        "OW-N007"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "兼",
+      "claim": "天道、地道、人道的三组说明紧接兼三才而两之。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "昔者，聖人之作《易》也，將以順性命之理。是以立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義。兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：用合取结构重建该段三才的具体所指。",
+      "limits": "三才之所指由该段并列结构理解；不是独立数学证明。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R009",
+      "title": "三才两之成六画卦",
+      "from": [
+        "OW-N007"
+      ],
+      "to": [
+        "OW-N005"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "两之而成",
+      "claim": "兼三才而各两之，原文据此说明六画成卦。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "兼三才而兩之，故易六畫而成卦。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：将三层各二与六画结构连接。",
+      "limits": "此为传文结构解释，不据此断定卦的历史起源。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R010",
+      "title": "阴阳分判柔刚迭用成章",
+      "from": [
+        "OW-N008",
+        "OW-N009",
+        "OW-N010",
+        "OW-N011"
+      ],
+      "to": [
+        "OW-N005"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "分、迭用而成",
+      "claim": "分阴分阳并迭用柔刚，原文以此说明易六位而成章。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "分陰分陽，迭用柔剛，故易六位而成章。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：位置与取值需共同组织。",
+      "limits": "不能抹去六位条件，也不以此证明现代二进制历史。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R011",
+      "title": "八卦取象的八类",
+      "from": [
+        "OW-N019",
+        "OW-N020",
+        "OW-N021",
+        "OW-N022",
+        "OW-N023",
+        "OW-N024",
+        "OW-N025",
+        "OW-N026"
+      ],
+      "to": [
+        "OW-N057"
+      ],
+      "premise_mode": "all",
+      "type": "composition",
+      "verb": "列为",
+      "claim": "说卦在八卦相错的框架下逐一列乾坤震巽坎离艮兑及其性质。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "八卦相錯，",
+          "locator": "说卦·第三章",
+          "unit": "说卦·第三章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "乾，健也。坤，順也。震，動也。巽，入也。坎，陷也。離，麗也。艮，止也。兌，說也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：八个类目作为有证据的集合。",
+      "limits": "集合重建是段际解释；不认为八种性质足以穷尽事物。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R012",
+      "title": "八卦相错关联顺往逆来之数",
+      "from": [
+        "OW-N057"
+      ],
+      "to": [
+        "OW-N004"
+      ],
+      "premise_mode": "all",
+      "type": "interpretation",
+      "verb": "相错、数往知来",
+      "claim": "八卦相错之后，原文区分数往者顺与知来者逆，称易为逆数。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "八卦相錯，數往者順，知來者逆。是故易逆數也。",
+          "locator": "说卦·第三章",
+          "unit": "说卦·第三章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：过去描述与未来推求是不同方向的任务。",
+      "limits": "不补入先天后天图式来源，不证明占筮预测准确。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-R045",
+      "title": "八卦以阶段描写万物",
+      "from": [
+        "OW-N057"
+      ],
+      "to": [
+        "OW-N056"
+      ],
+      "premise_mode": "all",
+      "type": "interpretation",
+      "verb": "出、齐、相见、养、归、成",
+      "claim": "说卦第五章以八卦序列描述万物从出到成、成终成始，并配以方位时令。",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "变化与复归",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "帝出乎震，齊乎巽，相見乎離，致役乎坤，說言乎兌，戰乎乾，勞乎坎，成言乎艮。",
+          "locator": "说卦·第五章",
+          "unit": "说卦·第五章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "萬物出乎震，震，東方也。",
+          "locator": "说卦·第五章",
+          "unit": "说卦·第五章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "艮，東北之卦也，萬物之所成，終而所成始也，故曰成言乎艮。",
+          "locator": "说卦·第五章",
+          "unit": "说卦·第五章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代重构：为整体过程增加阶段而不把每一取象都实体化。",
+      "limits": "该段方位时令不与第三章自动等同于后世先天后天图谱。",
+      "strength": "textual_assertion",
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-R002",
+      "title": "王弼：寻象可以观意",
+      "from": [
+        "WH-N002"
+      ],
+      "to": [
+        "WH-N003"
+      ],
+      "premise_mode": "all",
+      "type": "method",
+      "verb": "可寻以观",
+      "claim": "王弼以象生于意，说明可循象求意。",
+      "level": "commentarial",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "象生於意，故可尋象以觀意。",
+          "locator": "周易略例·明象·王弼层；句起“象生於意，故可尋象以觀意。”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：显式保存解释所增添的规定、适用条件与层次；不把诠释关系冒充原典因果。",
+      "limits": "仅限所引注家与段落；不由本断言推出逆命题、跨语境同义或历史影响。",
+      "strength": "commentarial_interpretation",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-R004",
+      "title": "王弼：得意而忘象",
+      "from": [
+        "WH-N006"
+      ],
+      "to": [
+        "WH-N007"
+      ],
+      "premise_mode": "all",
+      "type": "sequence",
+      "verb": "得而忘",
+      "claim": "得意后可不执所用之象，理解目的与表象工具有别。",
+      "level": "commentarial",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "象者所以存意，得意而忘象。",
+          "locator": "周易略例·明象·王弼层；句起“象者所以存意，得意而忘象。”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：显式保存解释所增添的规定、适用条件与层次；不把诠释关系冒充原典因果。",
+      "limits": "保留“得意”条件；不把忘象说当作无需卦象、无需证据。",
+      "strength": "commentarial_interpretation",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "ZX-R013",
+      "title": "朱熹：两仪四象八卦也指逐层加画",
+      "from": [
+        "ZX-N025"
+      ],
+      "to": [
+        "ZX-N026"
+      ],
+      "premise_mode": "all",
+      "type": "sequence",
+      "verb": "次为",
+      "claim": "朱熹把两仪、四象、八卦分别对应一画、二画、三画，强调作易次第。",
+      "level": "commentarial",
+      "strength": "commentarial_assertion",
+      "domain": "yi",
+      "layer": "朱熹《周易本义》",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "YD-ZX7",
+          "quote": "兩儀者始為一畵以分隂陽四象者次為二畫以分太少八卦者次為三畫而三才之象始備此數言者實聖人作易自然之次第有不假絲毫知力而成者畫卦揲蓍其序皆然詳見序例啟蒙",
+          "locator": "周易本义·卷七·系辞上第十一章注",
+          "unit": "卷七·系辞上第十一章注",
+          "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：在符号构成层解释生成，区别于把各层直接画成宇宙实体谱系。",
+      "limits": "朱熹称自然之理是其主张；并非现代数学或考古已证明卦画历史起源。",
+      "author": "朱熹",
+      "commentator": "朱熹",
+      "work": "周易本义",
+      "era": "南宋",
+      "partition": "cheng_zhu",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WP-XCS-C10-S03-R01",
+      "title": "通其变联系于成文",
+      "from": [
+        "WP-XCS-C10-S03-N01"
+      ],
+      "to": [
+        "WP-XCS-C10-S03-N02"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "联系于",
+      "claim": "通其变联系于成文",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "strength": "本段系辞论述；非现代经验因果或历史考证结论",
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WP-XCS-C10-S03-R02",
+      "title": "极其数联系于定象",
+      "from": [
+        "WP-XCS-C10-S03-N03"
+      ],
+      "to": [
+        "WP-XCS-C10-S03-N04"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "联系于",
+      "claim": "极其数联系于定象",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "strength": "本段系辞论述；非现代经验因果或历史考证结论",
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WP-XCX-C07-S05-R01",
+      "title": "辨物德是非须中爻而备",
+      "from": [
+        "WP-XCX-C07-S05-N01"
+      ],
+      "to": [
+        "WP-XCX-C07-S05-N02"
+      ],
+      "premise_mode": "all",
+      "type": "constraint",
+      "verb": "受此限定",
+      "claim": "辨物德是非须中爻而备",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "若夫杂物撰德，辨是与非，则非其中爻不备。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "strength": "本段系辞论述；非现代经验因果或历史考证结论",
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WP-XCX-C07-S05-R02",
+      "title": "观彖辞被评价为思过半",
+      "from": [
+        "WP-XCX-C07-S05-N03"
+      ],
+      "to": [
+        "WP-XCX-C07-S05-N04"
+      ],
+      "premise_mode": "all",
+      "type": "interpretation",
+      "verb": "被评价为",
+      "claim": "观彖辞被评价为思过半",
+      "level": "textual",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "知者观其彖辞，则思过半矣。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "strength": "本段系辞论述；非现代经验因果或历史考证结论",
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "LC2-WB-C18-R01",
+      "title": "王弼第18章：以术明察奸伪并趋于可见形迹与物避察而大伪生",
+      "from": [
+        "LC2-WB-C18-N01"
+      ],
+      "to": [
+        "LC2-WB-C18-N02"
+      ],
+      "premise_mode": "all",
+      "type": "enabling",
+      "verb": "在本注引发",
+      "claim": "王弼用被察者知避的反馈机制解释智慧出而大伪生。",
+      "strength": "commentarial_assertion",
+      "domain": "lao",
+      "level": "commentarial",
+      "layer": "王弼《老子道德经注》第18章注",
+      "theme": "秩序与治理",
+      "evidence": [
+        {
+          "source_id": "DS01",
+          "quote": "行术用明，以察奸伪；趣睹形见，物知避之。故智慧出则大伪生也。",
+          "locator": "王弼《老子道德经注》第18章第2注；句起“行术用明，以察奸伪；趣睹形见，物”",
+          "unit": "LC-WB-C18",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：分析察伪方式显露后，对象如何适应并规避。",
+      "limits": "这针对王弼所说行术用明，不等于一切监督都必然加剧欺骗。",
+      "partition": "lao_wb_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "老子道德经注",
+      "era": "曹魏，3世纪",
+      "base_chapter": 18,
+      "original_domain": "lao"
+    },
+    {
+      "id": "YCM130-LX-W-02-R01",
+      "title": "王弼批评由固定符号配对产生的解释补缀和偶中无义。",
+      "from": [
+        "YCM130-LX-W-02-N01"
+      ],
+      "to": [
+        "YCM130-LX-W-02-N02"
+      ],
+      "premise_mode": "all",
+      "type": "consequence",
+      "verb": "在注家解释中引出",
+      "claim": "王弼批评由固定符号配对产生的解释补缀和偶中无义。",
+      "strength": "commentarial_assertion",
+      "domain": "yi",
+      "level": "commentarial",
+      "layer": "王弼《周易略例》·明象",
+      "theme": "解释、时位与变化",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "而或者定馬於乾，案文責卦，有馬無乾，則偽說滋漫，難可紀矣。互體不足，遂及卦變，變又不足，推致五行。一失其原，巧愈彌甚。縱復或值，而義無所取。",
+          "locator": "周易略例/明象·王弼层·02；句起“而或者定馬於乾，案文責卦，有馬無乾，”",
+          "unit": "YC-YWH-LX-W",
+          "author_block_ids": [
+            "YCB-YWH-LX-W-03"
+          ],
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：检验辅助解释是否只是为保全预设对应而不断增设。",
+      "limits": "本条为该注家释义，不替代经传原义。记录其针对特定释易方式的批评，不把一切互体、卦变或五行研究判为无效。",
+      "partition": "yi_commentary_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "original_domain": "yi"
+    },
+    {
+      "id": "FO2-QX-R024",
+      "title": "无明熏起妄心，妄心又返熏无明",
+      "from": [
+        "FO2-QX-N032"
+      ],
+      "to": [
+        "FO2-QX-N033"
+      ],
+      "premise_mode": "all",
+      "type": "feedback",
+      "verb": "经熏习真如而生起",
+      "claim": "无明熏起妄心，妄心又返熏无明",
+      "level": "textual",
+      "domain": "佛",
+      "school": "起信论传统／传统题署马鸣造、真谛译（成书与译署有争议）",
+      "era": "传统题署梁真谛译；作者、译者与成书地问题有争议，本轮不裁断",
+      "layer": "论本文（传统题署）",
+      "theme": "《大乘起信论》正文全篇；序不混入作者陈述",
+      "evidence": [
+        {
+          "source_id": "FO2-QX",
+          "quote": "以有無明染法因故即熏習真如；以熏習故則有妄心，以有妄心即熏習無明。",
+          "locator": "FO2-QX／0578a22／解释分",
+          "unit": "FO2-QX-U025",
+          "sourceURL": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "追踪作用怎样返回并改变其出发条件，保留过程中的反馈。",
+      "limits": "原文教义或修行主张；不作为外部经验验证或跨宗等同结论。",
+      "strength": "explicit",
+      "partition": "fo2",
+      "original_domain": "佛"
+    },
+    {
+      "id": "FO2-QX-R025",
+      "title": "妄心反馈熏习无明",
+      "from": [
+        "FO2-QX-N033"
+      ],
+      "to": [
+        "FO2-QX-N032"
+      ],
+      "premise_mode": "all",
+      "type": "feedback",
+      "verb": "反过来熏习",
+      "claim": "妄心反馈熏习无明",
+      "level": "textual",
+      "domain": "佛",
+      "school": "起信论传统／传统题署马鸣造、真谛译（成书与译署有争议）",
+      "era": "传统题署梁真谛译；作者、译者与成书地问题有争议，本轮不裁断",
+      "layer": "论本文（传统题署）",
+      "theme": "《大乘起信论》正文全篇；序不混入作者陈述",
+      "evidence": [
+        {
+          "source_id": "FO2-QX",
+          "quote": "以有妄心即熏習無明。",
+          "locator": "FO2-QX／0578a24／解释分",
+          "unit": "FO2-QX-U025",
+          "sourceURL": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "追踪作用怎样返回并改变其出发条件，保留过程中的反馈。",
+      "limits": "原文教义或修行主张；不作为外部经验验证或跨宗等同结论。",
+      "strength": "explicit",
+      "partition": "fo2",
+      "original_domain": "佛"
+    }
+  ],
+  "wing_units": [
+    {
+      "id": "JW-XCS-C03-S01",
+      "work": "系辞上",
+      "chapter": 3,
+      "section": 1,
+      "label": "彖爻断辞的分工",
+      "layer": "系辞上",
+      "text": "彖者，言乎象者也。爻者，言乎变者也。吉凶者，言乎其失得也。悔吝者，言乎其小疵也。无咎者，善补过也。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "彖者，言乎象者也。爻者，言乎变者也。吉凶者，言乎其失得也。悔吝者，言乎其小疵也。无咎者，善补过也。",
+          "locator": "系辞上·冻结第3章·编者论证段1（原文起“彖者，言乎象者也。爻者，”）",
+          "unit": "JW-XCS-C03-S01",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 428,
+      "source_char_end": 477,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "XC-N019",
+        "XC-N023",
+        "XC-N030",
+        "XC-N031",
+        "XC-N034",
+        "XC-N033",
+        "WP-XCS-C03-S01-N01",
+        "XC-N018",
+        "XC-N032",
+        "WP-XCS-C03-S01-N02"
+      ],
+      "relation_ids": [
+        "XC-R022",
+        "XC-R043",
+        "XC-R044",
+        "WP-XCS-C03-S01-R01",
+        "WP-XCS-C03-S01-R02"
+      ],
+      "gloss": "彖言象、爻言变；吉凶说失得，悔吝说小疵，无咎说善补过。",
+      "cognitive": "现代分析：区分判断词的表述职能与其所评对象，尤其无咎并非从未犯错。",
+      "limits": "同一词在别篇的用法仍需另核；已有无咎关系同时引用下一段“存乎悔”，跨段证据完整保留。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。",
+      "chapter_label": "系辞上·冻结第3章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCS-C09-S02",
+      "work": "系辞上",
+      "chapter": 9,
+      "section": 2,
+      "label": "大衍操作与所象",
+      "layer": "系辞上",
+      "text": "大衍之数五十，其用四十有九，分而为二以象两，挂一以象三，揲之以四以象四时，归奇于扐以象闰，五岁再闰，故再扐而后挂。\n",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "大衍之数五十，其用四十有九，分而为二以象两，挂一以象三，揲之以四以象四时，归奇于扐以象闰，五岁再闰，故再扐而后挂。\n",
+          "locator": "系辞上·冻结第9章·编者论证段2（原文起“大衍之数五十，其用四十有”）",
+          "unit": "JW-XCS-C09-S02",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 1759,
+      "source_char_end": 1817,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "XC-N028",
+        "WP-XCS-C09-S02-N01",
+        "WP-XCS-C09-S02-N02",
+        "WP-XCS-C09-S02-N03",
+        "WP-XCS-C09-S02-N04",
+        "WP-XCS-C09-S02-N05",
+        "WP-XCS-C09-S02-N06",
+        "WP-XCS-C09-S02-N07",
+        "WP-XCS-C09-S02-N08",
+        "WP-XCS-C09-S02-N09",
+        "WP-XCS-C09-S02-N10",
+        "WP-XCS-C09-S02-N11",
+        "WP-XCS-C09-S02-N12"
+      ],
+      "relation_ids": [
+        "WP-XCS-C09-S02-R01",
+        "WP-XCS-C09-S02-R02",
+        "WP-XCS-C09-S02-R03",
+        "WP-XCS-C09-S02-R04",
+        "WP-XCS-C09-S02-R05",
+        "WP-XCS-C09-S02-R06"
+      ],
+      "gloss": "大衍五十而用四十九；分二象两，挂一象三，揲四象四时，归奇于扐象闰。",
+      "cognitive": "现代分析：逐项保存操作和象征对象，勿将并列步骤压为一条数值因果。",
+      "limits": "本文只收所述步骤，不补未载蓍法细则；五岁再闰是取象说明而非现代历法精度证明。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。",
+      "chapter_label": "系辞上·冻结第9章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCS-C10-S03",
+      "work": "系辞上",
+      "chapter": 10,
+      "section": 3,
+      "label": "错综数与成文定象",
+      "layer": "系辞上",
+      "text": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 2054,
+      "source_char_end": 2101,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "WP-XCS-C10-S03-N01",
+        "WP-XCS-C10-S03-N02",
+        "WP-XCS-C10-S03-N03",
+        "WP-XCS-C10-S03-N04",
+        "WP-XCS-C10-S03-N05",
+        "WP-XCS-C10-S03-N06"
+      ],
+      "relation_ids": [
+        "WP-XCS-C10-S03-R01",
+        "WP-XCS-C10-S03-R02",
+        "WP-XCS-C10-S03-R03"
+      ],
+      "gloss": "参伍变动、错综其数，通变成文，极数定象，文本称此至变。",
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。",
+      "chapter_label": "系辞上·冻结第10章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCX-C01-S01",
+      "work": "系辞下",
+      "chapter": 1,
+      "section": 1,
+      "label": "卦爻变动的层次",
+      "layer": "系辞下",
+      "text": "八卦成列，象在其中矣；因而重之，爻在其中矣；刚柔相推，变在其中矣；系辞焉而命之，动在其中矣。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "八卦成列，象在其中矣；因而重之，爻在其中矣；刚柔相推，变在其中矣；系辞焉而命之，动在其中矣。",
+          "locator": "系辞下·冻结第1章·编者论证段1（原文起“八卦成列，象在其中矣；因”）",
+          "unit": "JW-XCX-C01-S01",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 68,
+      "source_char_end": 114,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "XC-N016",
+        "XC-N018",
+        "XC-N019",
+        "XC-N020",
+        "XC-N035",
+        "WP-XCX-C01-S01-N01",
+        "XC-N023"
+      ],
+      "relation_ids": [
+        "XC-R013",
+        "XC-R014",
+        "XC-R016",
+        "WP-XCX-C01-S01-R01"
+      ],
+      "gloss": "八卦成列有象，重之有爻，刚柔相推有变，系辞命之有动。",
+      "cognitive": "现代分析：把重卦、结构互动与文字命名分别理解，不把表征层次压成一种实体。",
+      "limits": "在其中是呈现结构的说法，不由此证明卦爻创造所有现实变化。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。 下篇沿用本转录九章分法，不代表通行本统一章数。",
+      "chapter_label": "系辞下·冻结第1章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCX-C01-S04",
+      "work": "系辞下",
+      "chapter": 1,
+      "section": 4,
+      "label": "乾坤示易简与爻象",
+      "layer": "系辞下",
+      "text": "夫干，确然示人易矣；夫坤，𬯎然示人简矣。爻也者，效此者也；象也者，像此者也。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "夫干，确然示人易矣；夫坤，𬯎然示人简矣。爻也者，效此者也；象也者，像此者也。",
+          "locator": "系辞下·冻结第1章·编者论证段4（原文起“夫干，确然示人易矣；夫坤”）",
+          "unit": "JW-XCX-C01-S04",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 184,
+      "source_char_end": 222,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "XC-N003",
+        "XC-N004",
+        "XC-N005",
+        "XC-N006",
+        "WP-XCX-C01-S04-N01",
+        "WP-XCX-C01-S04-N02"
+      ],
+      "relation_ids": [
+        "WP-XCX-C01-S04-R01",
+        "WP-XCX-C01-S04-R02",
+        "WP-XCX-C01-S04-R03"
+      ],
+      "gloss": "乾确然示易，坤𬯎然示简；爻效此，象像此。",
+      "cognitive": "现代分析：把所示性质与效法、表象两种呈现方式区分。",
+      "limits": "𬯎为冻结字形，未校改；爻象所效所像的指代沿本段乾坤承接，不扩为任意相似。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。 下篇沿用本转录九章分法，不代表通行本统一章数。",
+      "chapter_label": "系辞下·冻结第1章",
+      "mapping_evidence": [
+        {
+          "target_id": "XC-N003",
+          "source_id": "DS03",
+          "quote": "夫干，确然示人易矣；",
+          "locator": "系辞下·冻结第1章·编者论证段4（原文起“夫干，确然示人易矣；夫坤”）",
+          "unit": "JW-XCX-C01-S04",
+          "note": "本段乾示易与原节点乾德易知语境对应，不含其他乾卦爻义。",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "target_id": "XC-N005",
+          "source_id": "DS03",
+          "quote": "夫干，确然示人易矣；",
+          "locator": "系辞下·冻结第1章·编者论证段4（原文起“夫干，确然示人易矣；夫坤”）",
+          "unit": "JW-XCX-C01-S04",
+          "note": "本段乾所示之易与简对举，取平易义而非易书或安易倾覆义。",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "target_id": "XC-N004",
+          "source_id": "DS03",
+          "quote": "夫坤，𬯎然示人简矣。",
+          "locator": "系辞下·冻结第1章·编者论证段4（原文起“夫干，确然示人易矣；夫坤”）",
+          "unit": "JW-XCX-C01-S04",
+          "note": "本段坤示简与原节点坤德简能语境对应。",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "target_id": "XC-N006",
+          "source_id": "DS03",
+          "quote": "夫坤，𬯎然示人简矣。",
+          "locator": "系辞下·冻结第1章·编者论证段4（原文起“夫干，确然示人易矣；夫坤”）",
+          "unit": "JW-XCX-C01-S04",
+          "note": "本段简为坤所示且与乾易配列，复用简约易从义，不传递所有简字义。",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCX-C03-S01",
+      "work": "系辞下",
+      "chapter": 3,
+      "section": 1,
+      "label": "易象彖爻的再界说",
+      "layer": "系辞下",
+      "text": "是故易者，象也。象也者，像也。彖者，材也。爻也者，效天下之动者也。是故吉凶生而悔吝著也。\n",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "是故易者，象也。象也者，像也。彖者，材也。爻也者，效天下之动者也。是故吉凶生而悔吝著也。\n",
+          "locator": "系辞下·冻结第3章·编者论证段1（原文起“是故易者，象也。象也者，”）",
+          "unit": "JW-XCX-C03-S01",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 776,
+      "source_char_end": 821,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "XC-N018",
+        "XC-N019",
+        "XC-N001",
+        "WP-XCX-C03-S01-N01",
+        "WP-XCX-C03-S01-N02",
+        "WP-XCX-C03-S01-N03",
+        "XC-N035"
+      ],
+      "relation_ids": [
+        "WP-XCX-C03-S01-R01",
+        "WP-XCX-C03-S01-R02",
+        "WP-XCX-C03-S01-R03",
+        "WP-XCX-C03-S01-R04"
+      ],
+      "gloss": "易为象、象为像、彖为材，爻效天下之动，由此吉凶生、悔吝显。",
+      "cognitive": "现代分析：区分表象、结构素材及模拟变化的职能。",
+      "limits": "材与像的训读不唯一；本段易象定义不取消其他章节易的义项。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。 下篇沿用本转录九章分法，不代表通行本统一章数。",
+      "chapter_label": "系辞下·冻结第3章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCX-C07-S05",
+      "work": "系辞下",
+      "chapter": 7,
+      "section": 5,
+      "label": "中爻与彖辞的阅读任务",
+      "layer": "系辞下",
+      "text": "若夫杂物撰德，辨是与非，则非其中爻不备。噫，亦要存亡吉凶，则居可知矣。知者观其彖辞，则思过半矣。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "若夫杂物撰德，辨是与非，则非其中爻不备。噫，亦要存亡吉凶，则居可知矣。知者观其彖辞，则思过半矣。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 2322,
+      "source_char_end": 2370,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "WP-XCX-C07-S05-N01",
+        "WP-XCX-C07-S05-N02",
+        "WP-XCX-C07-S05-N03",
+        "WP-XCX-C07-S05-N04"
+      ],
+      "relation_ids": [
+        "WP-XCX-C07-S05-R01",
+        "WP-XCX-C07-S05-R02"
+      ],
+      "gloss": "杂物撰德、辨是非须中爻才具备；存亡吉凶可居而知，智者观彖辞能思过半。",
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。 下篇沿用本转录九章分法，不代表通行本统一章数。",
+      "chapter_label": "系辞下·冻结第7章",
+      "original_domain": "yi"
+    },
+    {
+      "id": "JW-XCX-C09-S03",
+      "work": "系辞下",
+      "chapter": 9,
+      "section": 3,
+      "label": "成能、谋与象辞告言",
+      "layer": "系辞下",
+      "text": "天地设位，圣人成能；人谋鬼谋，百姓与能。八卦以象告，爻彖以情言，刚柔杂居，而吉凶可见矣。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "天地设位，圣人成能；人谋鬼谋，百姓与能。八卦以象告，爻彖以情言，刚柔杂居，而吉凶可见矣。",
+          "locator": "系辞下·冻结第9章·编者论证段3（原文起“天地设位，圣人成能；人谋”）",
+          "unit": "JW-XCX-C09-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "non_hexagram": true,
+      "domain": "yi",
+      "source_char_start": 2720,
+      "source_char_end": 2764,
+      "editorial_segmentation": true,
+      "node_ids": [
+        "WP-XCX-C09-S03-N01",
+        "WP-XCX-C09-S03-N02",
+        "WP-XCX-C09-S03-N03",
+        "WP-XCX-C09-S03-N04",
+        "XC-N016",
+        "WP-XCX-C09-S03-N05",
+        "WP-XCX-C09-S03-N06",
+        "WP-XCX-C09-S03-N07",
+        "WP-XCX-C09-S03-N08",
+        "WP-XCX-C09-S03-N09"
+      ],
+      "relation_ids": [
+        "WP-XCX-C09-S03-R01",
+        "WP-XCX-C09-S03-R02",
+        "WP-XCX-C09-S03-R03",
+        "WP-XCX-C09-S03-R04",
+        "WP-XCX-C09-S03-R05"
+      ],
+      "gloss": "天地设位而圣人成能，人谋鬼谋而百姓参与；八卦以象告，爻彖以情言，刚柔杂居可见吉凶。",
+      "cognitive": "现代分析：保留参与者、谋议类型与表达媒介的差别。",
+      "limits": "鬼谋不等同现代证据推断；情言不只是表达情绪。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "review_status": "read_mapped",
+      "review_note": "已全文逐段阅读；分段、义项及完整断言手工核对。既有关系跨段时保留全部证据及端点，不据同字匹配。 下篇沿用本转录九章分法，不代表通行本统一章数。",
+      "chapter_label": "系辞下·冻结第9章",
+      "original_domain": "yi"
+    }
+  ],
+  "trigram_correspondences": [
+    {
+      "node_id": "OW-N019",
+      "trigram": "乾",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "健",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，健也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "天",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為天、為圜、為君、為父、為玉、為金、為寒、為冰、為大赤、為良馬、為老馬、為瘠馬、為駁馬、為木果。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "馬",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "首",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "父",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "战；西北；阴阳相薄",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "戰乎乾，乾，西北之卦也。言陰陽相薄也。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N020",
+      "trigram": "坤",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "順",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坤，順也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "地",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坤為地、為母、為布、為釜、為吝嗇、為均、為子母牛、為大輿、為文、為眾、為柄。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "牛",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "腹",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "母",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "致养；地；本段未明说西南",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坤也者，地也，萬物皆致養焉，故曰致役乎坤。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N021",
+      "trigram": "震",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "動",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "震，動也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "雷",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "震為雷、為龍、為玄黃、為敷、為大涂、為長子、為決躁、為蒼筤竹、為萑葦。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "龍",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "足",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "長男",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "出；东方",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "萬物出乎震，震，東方也。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N022",
+      "trigram": "巽",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "入",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "巽，入也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "風",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "巽為木、為風、為長女、為繩直、為工、為白、為長、為高、為進退、為不果、為臭。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "雞",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "股",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "長女",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "齐；东南",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "齊乎巽，巽，東南也，齊也者，言萬物之潔齊也。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N023",
+      "trigram": "坎",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "陷",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坎，陷也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "水",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坎為水、為溝瀆、為隱伏、為矯輮、為弓輪。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "豕",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "耳",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "中男",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "劳、归；正北",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "坎者，水也，正北方之卦也，勞卦也，萬物之所歸也，故曰勞乎坎。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N024",
+      "trigram": "離",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "麗",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "離，麗也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "火",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "離為火、為日、為電、為中女、為甲冑、為戈兵。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "雉",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "目",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "中女",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "明、相见；南方",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "離也者，明也，萬物皆相見，南方之卦也。聖人南面而聽天下，嚮明而治，蓋取諸此也。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N025",
+      "trigram": "艮",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "止",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "艮，止也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "山",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "艮為山、為徑路、為小石、為門闕、為果蓏、為閽寺、為指、為狗、為鼠、為黔喙之屬。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "狗",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "手",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "少男",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "成终成始；东北",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "艮，東北之卦也，萬物之所成，終而所成始也，故曰成言乎艮。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    },
+    {
+      "node_id": "OW-N026",
+      "trigram": "兌",
+      "attributes": [
+        {
+          "dimension": "性质",
+          "value": "說",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "兌，說也。",
+              "locator": "说卦·第七章",
+              "unit": "说卦·第七章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "自然取象（择一；并非全部）",
+          "value": "澤",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "兌為澤、為少女、為巫、為口舌、為毀折、為附決。",
+              "locator": "说卦·第十一章",
+              "unit": "说卦·第十一章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "动物",
+          "value": "羊",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+              "locator": "说卦·第八章",
+              "unit": "说卦·第八章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "身体",
+          "value": "口",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+              "locator": "说卦·第九章",
+              "unit": "说卦·第九章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "家庭称谓",
+          "value": "少女",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+              "locator": "说卦·第十章",
+              "unit": "说卦·第十章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        },
+        {
+          "dimension": "万物阶段与方位时令",
+          "value": "说；正秋；本段未明说西方",
+          "evidence": [
+            {
+              "source_id": "YD-OW-SG",
+              "quote": "兌，正秋也。萬物之所說也。故曰說；言乎兌。",
+              "locator": "说卦·第五章",
+              "unit": "说卦·第五章",
+              "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+              "quote_matches_frozen_text_whitespace_only": true
+            }
+          ]
+        }
+      ],
+      "limits": "取象、释名、类比及时序语境分栏保存；无一栏推出另一栏的因果；第十一章其余细目已读未全部节点化。"
+    }
+  ],
+  "commentary_links": [
+    {
+      "id": "WH-CL004",
+      "commentator": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "base_unit_ids": [],
+      "base_node_ids": [
+        "XC-N018",
+        "XC-N021",
+        "XC-N022"
+      ],
+      "base_relation_ids": [
+        "XC-R018",
+        "XC-R019"
+      ],
+      "node_ids": [
+        "WH-N006",
+        "WH-N007"
+      ],
+      "relation_ids": [
+        "WH-R004"
+      ],
+      "interpretation": "得意后可不执所用之象，理解目的与表象工具有别。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "象者所以存意，得意而忘象。",
+          "locator": "周易略例·明象·王弼层；句起“象者所以存意，得意而忘象。”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "limits": "保留“得意”条件；不把忘象说当作无需卦象、无需证据。此链接仅记注释来源与被释对象，不构成逻辑蕴涵。"
+    },
+    {
+      "id": "CL-ZX-013",
+      "base_text_layer": "系辞传",
+      "anchor_note": "基文锚标记所解释语段或篇序结构；注家节点与原典节点不合并。",
+      "commentator": "朱熹",
+      "work": "周易本义",
+      "era": "南宋",
+      "base_unit_ids": [],
+      "base_node_ids": [
+        "XC-N014",
+        "XC-N015",
+        "XC-N016"
+      ],
+      "base_relation_ids": [],
+      "node_ids": [
+        "ZX-N025",
+        "ZX-N026"
+      ],
+      "relation_ids": [
+        "ZX-R013"
+      ],
+      "interpretation": "朱熹把两仪、四象、八卦分别对应一画、二画、三画，强调作易次第。",
+      "evidence": [
+        {
+          "source_id": "YD-ZX7",
+          "quote": "兩儀者始為一畵以分隂陽四象者次為二畫以分太少八卦者次為三畫而三才之象始備此數言者實聖人作易自然之次第有不假絲毫知力而成者畫卦揲蓍其序皆然詳見序例啟蒙",
+          "locator": "周易本义·卷七·系辞上第十一章注",
+          "unit": "卷七·系辞上第十一章注",
+          "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "limits": "朱熹称自然之理是其主张；并非现代数学或考古已证明卦画历史起源。",
+      "link_type": "interpretation_of",
+      "domain": "yi",
+      "original_domain": "yi"
+    },
+    {
+      "id": "YCM130-LX-W-02-CL01",
+      "domain": "yi",
+      "level": "commentarial",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "base_unit_ids": [],
+      "base_transmission_ids": [],
+      "base_wing_ids": [],
+      "base_node_ids": [],
+      "base_relation_ids": [],
+      "base_text_layer": "论易专篇",
+      "base_work_locator": "周易略例/明象",
+      "anchor_note": "章篇定位；未凭同字建立经传义项同一。",
+      "node_ids": [
+        "YCM130-LX-W-02-N01",
+        "YCM130-LX-W-02-N02"
+      ],
+      "relation_ids": [
+        "YCM130-LX-W-02-R01"
+      ],
+      "interpretation": "王弼批评由固定符号配对产生的解释补缀和偶中无义。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "而或者定馬於乾，案文責卦，有馬無乾，則偽說滋漫，難可紀矣。互體不足，遂及卦變，變又不足，推致五行。一失其原，巧愈彌甚。縱復或值，而義無所取。",
+          "locator": "周易略例/明象·王弼层·02；句起“而或者定馬於乾，案文責卦，有馬無乾，”",
+          "unit": "YC-YWH-LX-W",
+          "author_block_ids": [
+            "YCB-YWH-LX-W-03"
+          ],
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "limits": "只记录解释来源与对象；不产生跨层蕴涵或自动继承。记录其针对特定释易方式的批评，不把一切互体、卦变或五行研究判为无效。",
+      "literary_scope": "standalone_methodological_discussion",
+      "base_anchor_status": "not_applicable",
+      "provenance_note": "本条为王弼《周易略例》独立方法论论述，依据该篇王弼正文；未断言逐条注解某经传单元，未将邢璹夹注计入王弼正文。",
+      "original_domain": "yi"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "YD-C02",
+      "title": "生成序列：太极两仪与道一二三",
+      "question": "这些序列生成了什么？最后落到何种判断？",
+      "themes": [
+        "生成与存在"
+      ],
+      "level": "modern_comparison",
+      "historical_influence_claim": false,
+      "yi_node_ids": [
+        "XC-N013",
+        "XC-N014",
+        "XC-N015",
+        "XC-N016",
+        "XC-N030"
+      ],
+      "lao_node_ids": [
+        "LL-N001",
+        "LL-N002",
+        "LL-N003",
+        "LL-N004",
+        "LL-N005"
+      ],
+      "yi_relation_ids": [
+        "XC-R008",
+        "XC-R009",
+        "XC-R010",
+        "XC-R011",
+        "XC-R012"
+      ],
+      "lao_relation_ids": [
+        "LL-R001",
+        "LL-R002",
+        "LL-R003",
+        "LL-R004"
+      ],
+      "yi_summary": "太极、两仪、四象、八卦的序列接到定吉凶及大业。",
+      "lao_summary": "道、一、二、三的序列接到万物。",
+      "non_equivalence": "两边可比较层次展开，但不能写成太极＝道、两仪＝二、四象＝三；《老子》这里也未直接定义二为阴阳、三为和气。",
+      "evidence_reference_rule": "Evidence is retained in full on the referenced assertions; comparison is editorial, not a new textual identity edge."
+    },
+    {
+      "id": "YD-C03",
+      "title": "阴阳、刚柔与和：关系如何成立？",
+      "question": "成对要素如何参与变化，是否有相同的结构？",
+      "themes": [
+        "生成与存在",
+        "变化与复归"
+      ],
+      "level": "modern_comparison",
+      "historical_influence_claim": false,
+      "yi_node_ids": [
+        "XC-N007",
+        "XC-N008",
+        "XC-N009",
+        "XC-N012",
+        "XC-N049"
+      ],
+      "lao_node_ids": [
+        "LL-N005",
+        "LL-N006",
+        "LL-N007",
+        "LL-N008",
+        "LL-N009"
+      ],
+      "yi_relation_ids": [
+        "XC-R005",
+        "XC-R007",
+        "XC-R015",
+        "XC-R053"
+      ],
+      "lao_relation_ids": [
+        "LL-R005",
+        "LL-R006",
+        "LL-R007"
+      ],
+      "yi_summary": "一阴一阳、阴阳不测、刚柔相推和阴阳合德的谓词各不相同。",
+      "lao_summary": "万物负阴抱阳、冲气以为和，完整保留万物与其关系动作。",
+      "non_equivalence": "阴阳不测不等于阴阳本身就是神；负抱、冲气也不能压扁成阴＋阳必然产和的通用公式。",
+      "evidence_reference_rule": "Evidence is retained in full on the referenced assertions; comparison is editorial, not a new textual identity edge."
+    },
+    {
+      "id": "RT1-C012",
+      "title": "变通、反与无常：变化在各段论证中起什么作用",
+      "dimension": "变化相关概念的对象、论证角色与实践导向",
+      "sides": [
+        {
+          "label": "《系辞下》穷变通久",
+          "relation_ids": [
+            "XC-R032",
+            "XC-R033",
+            "XC-R034"
+          ],
+          "node_ids": [
+            "XC-N047",
+            "XC-N023",
+            "XC-N024",
+            "XC-N048"
+          ],
+          "unit_ids": [
+            "JW-XCX-C02-S05"
+          ],
+          "reading": "在器物制度通变使民宜之的语境中，穷则变、变则通、通则久。"
+        },
+        {
+          "label": "《老子》反者道之动",
+          "relation_ids": [
+            "LE-R059"
+          ],
+          "node_ids": [
+            "LE-N067",
+            "LE-N120"
+          ],
+          "unit_ids": [
+            "LAO-40"
+          ],
+          "reading": "反用来表述道之动，返回或逆转仍有解释空间。"
+        },
+        {
+          "label": "《杂阿含》正观无常",
+          "relation_ids": [
+            "FO1-R-SA001"
+          ],
+          "node_ids": [
+            "FO1-N-sa-observe",
+            "FO1-N-sa-disgust"
+          ],
+          "unit_ids": [
+            "FO1-U-SA1"
+          ],
+          "reading": "观五蕴无常导向厌离、喜贪尽的解脱论述；不是对所有新变化的赞颂。"
+        }
+      ],
+      "similarities": [
+        "变化相关概念在这些段落中承担具体论证作用，分别参与通变、道之动的表述或观照工夫。"
+      ],
+      "differences": [
+        "制度变通、道之反动与五蕴无常观的对象和导向不同。",
+        "无常不意味着改进必然，变通不保证所有任意变化有效。",
+        "《系辞》所选段和《杂阿含》有明确实践展开；《老子》所选单句表述道之动，不能仅由此句推出一条行动规则。"
+      ],
+      "non_equivalence": "不把三者拼成一个自动进化理论，也不把现代反馈或适应性当作原典术语。",
+      "level": "modern_comparison",
+      "historical_inference": false,
+      "evidence": [],
+      "partition": "root",
+      "limits": "本项为现代问题导向对读；各方出处见完整关系与阅读单位。共同问题和形式相似不证明同义、同一教义、传承或影响；不加入原典蕴涵网络。"
+    }
+  ],
+  "coverage": [
+    {
+      "unit": "系辞上·冻结第一章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R001",
+        "XC-R002",
+        "XC-R061"
+      ],
+      "node_ids": [
+        "XC-N002",
+        "XC-N003",
+        "XC-N004",
+        "XC-N005",
+        "XC-N006"
+      ],
+      "note": "本冻结转录分章；完整读至“成位乎其中”；映射天地乾坤、易简，易知亲久与简从功大链保留在阅读记录而未逐边穷尽。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-001",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第二章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R015",
+        "XC-R021",
+        "XC-R043"
+      ],
+      "node_ids": [
+        "XC-N017",
+        "XC-N023",
+        "XC-N030",
+        "XC-N031",
+        "XC-N032",
+        "XC-N049"
+      ],
+      "note": "本冻结转录分章；完整读取设卦观象、刚柔变化、判断类与居动之观玩；主图映射表征、变化及吉凶失得。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-002",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第三章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R022",
+        "XC-R023",
+        "XC-R043",
+        "XC-R044"
+      ],
+      "node_ids": [
+        "XC-N019",
+        "XC-N020",
+        "XC-N031",
+        "XC-N032",
+        "XC-N033",
+        "XC-N034"
+      ],
+      "note": "本冻结转录分章；完整读取彖爻、吉凶悔吝无咎、位卦辞介悔；未把政治位与爻位合并，彖与介暂不另立节点。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-003",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第四章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R058"
+      ],
+      "node_ids": [
+        "XC-N002"
+      ],
+      "note": "本冻结转录分章；完整读取天地准、仰观俯察、原始反终、精气游魂、乐天知命等；只映射易与天地准，死生鬼神仁爱等未逐句建图。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-004",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第五章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R005",
+        "XC-R006",
+        "XC-R007",
+        "XC-R030",
+        "XC-R048",
+        "XC-R057",
+        "XC-R065"
+      ],
+      "node_ids": [
+        "XC-N007",
+        "XC-N008",
+        "XC-N009",
+        "XC-N010",
+        "XC-N011",
+        "XC-N012",
+        "XC-N025",
+        "XC-N028",
+        "XC-N029",
+        "XC-N042",
+        "XC-N043",
+        "XC-N056"
+      ],
+      "note": "本冻结转录分章；完整读取一阴一阳至阴阳不测；映射道善性、神、生生、事占与大业；仁者知者之见、日新盛德暂未另立节点。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-005",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第六章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R003",
+        "XC-R056",
+        "XC-R063"
+      ],
+      "node_ids": [
+        "XC-N042",
+        "XC-N057"
+      ],
+      "note": "本冻结转录分章；完整读取远迩天地、乾坤静动、大生广生与四项配；映射生发及易简配至德，配四时日月等未逐边展开。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-006",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第七章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "node_ids": [
+        "XC-N041"
+      ],
+      "note": "本冻结转录分章；完整读取崇德广业、知崇礼卑、天地设位、成性存存；主图映射用途，不将成性直接并入上五性义。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-007",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第八章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R025"
+      ],
+      "node_ids": [
+        "XC-N018",
+        "XC-N022",
+        "XC-N040"
+      ],
+      "note": "本冻结转录分章；完整读取象爻定义、拟议及所引鸣鹤、同人、白茅、劳谦、亢龙、户庭、负乘诸例；主图映射表征与拟议，其余言行谦慎密等实例未逐例展开。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-008",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第九章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R049"
+      ],
+      "node_ids": [
+        "XC-N017",
+        "XC-N028"
+      ],
+      "note": "本冻结转录分章；完整读取天地区数、大衍筮法、乾坤策数、四营十八变与引伸；映射数、成卦。数值计算与历法对应未全面复原。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-009",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第十章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R026",
+        "XC-R027",
+        "XC-R047"
+      ],
+      "node_ids": [
+        "XC-N001",
+        "XC-N029"
+      ],
+      "note": "本冻结转录分章；完整读取四道、受命如响、参伍错综、无思无为感通、极深研几；映射四用途与研几，不把易无为转成人的无为戒律。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-010",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第十一章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R008",
+        "XC-R009",
+        "XC-R010",
+        "XC-R011",
+        "XC-R012",
+        "XC-R028",
+        "XC-R031"
+      ],
+      "node_ids": [
+        "XC-N013",
+        "XC-N014",
+        "XC-N015",
+        "XC-N016",
+        "XC-N023",
+        "XC-N024",
+        "XC-N026",
+        "XC-N043",
+        "XC-N054"
+      ],
+      "note": "本冻结转录分章；完整读取开物成务、蓍卦爻德、神物、开阖变通象器法、太极序列、天地圣人蓍龟、河洛、示告断；主图映射生成、判断及象器法，神物鬼神等不与不测神合并。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-011",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞上·冻结第十二章",
+      "source_ids": [
+        "DS02"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R004",
+        "XC-R018",
+        "XC-R019",
+        "XC-R020",
+        "XC-R029",
+        "XC-R031",
+        "XC-R052"
+      ],
+      "node_ids": [
+        "XC-N018",
+        "XC-N020",
+        "XC-N021",
+        "XC-N022",
+        "XC-N023",
+        "XC-N024",
+        "XC-N027",
+        "XC-N041"
+      ],
+      "note": "本冻结转录分章；完整读取履信思顺尚贤、书言意、乾坤易立、形上形下、象爻与人德行；映射表达、道器、德行。不拆信顺贤合取为独立充分前提。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-012",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第一章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R013",
+        "XC-R014",
+        "XC-R016",
+        "XC-R017",
+        "XC-R035"
+      ],
+      "node_ids": [
+        "XC-N016",
+        "XC-N035",
+        "XC-N037"
+      ],
+      "note": "本冻结转录分章；完整读取八卦成列、重爻、刚柔变、辞命动、判断、趣时与贞、易简、位仁财义；主图映射符号与变化、时；政治守位未混入爻位。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-013",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第二章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R024",
+        "XC-R027",
+        "XC-R032",
+        "XC-R033",
+        "XC-R034"
+      ],
+      "node_ids": [
+        "XC-N039",
+        "XC-N047",
+        "XC-N048"
+      ],
+      "note": "本冻结转录分章；完整读取包牺至书契所有制器段落；主图映射取象作卦、制器尚象、穷变通久；各器物“盖取诸”未假作实证发明史，冻结“周易/夬”显示痕迹保留。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-014",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第三章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "node_ids": [
+        "XC-N019",
+        "XC-N035"
+      ],
+      "note": "本冻结转录分章；完整读取易象、象像、彖材、爻效动与阳卦多阴阴卦多阳的君民比附；爻定义入节点，其余君子小人配属不作普遍伦理事实。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-015",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第四章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R036",
+        "XC-R045",
+        "XC-R046",
+        "XC-R055"
+      ],
+      "node_ids": [
+        "XC-N037",
+        "XC-N038",
+        "XC-N045",
+        "XC-N046",
+        "XC-N061"
+      ],
+      "note": "本冻结转录分章；完整读取憧憧往来、困石、射隼、积善恶、安危存亡治乱、德位知谋力任、知几、颜子复、絪缊化生、安身易心定交；映射藏器待时、知几、利用崇德；其余实例不拆联合条件或误并同字义。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-016",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第五章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R053",
+        "XC-R060",
+        "XC-R064"
+      ],
+      "node_ids": [
+        "XC-N003",
+        "XC-N004",
+        "XC-N007",
+        "XC-N008",
+        "XC-N049"
+      ],
+      "note": "本冻结转录分章；完整读取乾坤门、阴阳刚柔、称名取类及彰往察来；映射阴阳合德刚柔有体；称名辨物之方法尚未穷尽提取。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-017",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第六章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R050",
+        "XC-R051"
+      ],
+      "node_ids": [
+        "XC-N044",
+        "XC-N053"
+      ],
+      "note": "本冻结转录分章；完整读取忧患设问及九卦三陈，九卦所有三列原文均存于关系证据；不主张历史作者已考定。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-018",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第七章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R038"
+      ],
+      "node_ids": [
+        "XC-N001",
+        "XC-N037",
+        "XC-N058"
+      ],
+      "note": "本冻结转录分章；完整读取唯变所适、出入以度、忧患、典常、其人及原始要终、时物、初上中爻、彖辞；映射时物，强调变与典常共存，未穷尽初上中爻机制。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-019",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第八章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R037",
+        "XC-R039",
+        "XC-R040",
+        "XC-R041",
+        "XC-R042",
+        "XC-R059"
+      ],
+      "node_ids": [
+        "XC-N033",
+        "XC-N036",
+        "XC-N050",
+        "XC-N051",
+        "XC-N052",
+        "XC-N060"
+      ],
+      "note": "本冻结转录分章；完整读取二四三五爻位、三材六爻、爻物文、文不当、殷末周盛设问、危辞与惧无咎；该冻结章合并多段，引用均按段落起语。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-020",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "系辞下·冻结第九章",
+      "source_ids": [
+        "DS03"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "XC-R054",
+        "XC-R062"
+      ],
+      "node_ids": [
+        "XC-N005",
+        "XC-N006",
+        "XC-N030",
+        "XC-N055",
+        "XC-N059"
+      ],
+      "note": "本冻结转录分章；完整读取乾坤易简知险阻、象事占事、天地人谋鬼谋、辞象吉凶、爱恶远近情伪、近不相得、末尾辞语诊断；映射知险阻，未将近单独当凶因，日常辞语诊断未并入卦爻辞节点。",
+      "partition": "xici",
+      "domain": "yi",
+      "id": "COV-xici-021",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第一章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R001",
+        "OW-R002",
+        "OW-R003",
+        "OW-R004"
+      ],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-001",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第二章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R005",
+        "OW-R006",
+        "OW-R007",
+        "OW-R008",
+        "OW-R009",
+        "OW-R010"
+      ],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-002",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第三章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R011",
+        "OW-R012"
+      ],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-003",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第四章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_no_new_relation",
+      "relation_ids": [],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-004",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第五章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R016",
+        "OW-R045"
+      ],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-005",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第六章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R013",
+        "OW-R014",
+        "OW-R015",
+        "OW-R016"
+      ],
+      "note": "全章已读；核心关系已映射，未宣称抽取穷尽。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-006",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第七章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R011"
+      ],
+      "note": "全章已读；八卦对应表有逐项引文。第十一章仅择核心自然取象入表，全部细目未穷尽节点化。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-007",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第八章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "note": "全章已读；八卦对应表有逐项引文。第十一章仅择核心自然取象入表，全部细目未穷尽节点化。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-008",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第九章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "note": "全章已读；八卦对应表有逐项引文。第十一章仅择核心自然取象入表，全部细目未穷尽节点化。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-009",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第十章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "note": "全章已读；八卦对应表有逐项引文。第十一章仅择核心自然取象入表，全部细目未穷尽节点化。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-010",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "说卦·第十一章",
+      "source_ids": [
+        "YD-OW-SG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [],
+      "note": "全章已读；八卦对应表有逐项引文。第十一章仅择核心自然取象入表，全部细目未穷尽节点化。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-011",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "序卦·上篇",
+      "source_ids": [
+        "YD-OW-XG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R034",
+        "OW-R035",
+        "OW-R036"
+      ],
+      "note": "全文已读；只映射核心概念与有代表性的关系，不宣称全部卦序边、全部对举或全部训诂已抽取。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-012",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "序卦·下篇",
+      "source_ids": [
+        "YD-OW-XG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R037",
+        "OW-R038",
+        "OW-R039",
+        "OW-R040"
+      ],
+      "note": "全文已读；只映射核心概念与有代表性的关系，不宣称全部卦序边、全部对举或全部训诂已抽取。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-013",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "杂卦·一篇",
+      "source_ids": [
+        "YD-OW-ZG"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R041",
+        "OW-R042",
+        "OW-R043",
+        "OW-R044"
+      ],
+      "note": "全文已读；只映射核心概念与有代表性的关系，不宣称全部卦序边、全部对举或全部训诂已抽取。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-014",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "文言·乾",
+      "source_ids": [
+        "DS10",
+        "YD-OW-WY"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R017",
+        "OW-R018",
+        "OW-R019",
+        "OW-R020",
+        "OW-R021",
+        "OW-R022",
+        "OW-R023",
+        "OW-R024",
+        "OW-R025",
+        "OW-R026",
+        "OW-R029",
+        "OW-R030",
+        "OW-R031",
+        "OW-R033",
+        "OW-R046"
+      ],
+      "note": "全文已读；只映射核心概念与有代表性的关系，不宣称全部卦序边、全部对举或全部训诂已抽取。已逐段与独立文言页核对；引文以冻结 DS10/DS11 文言层为准，不包含卦辞、彖、象。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-015",
+      "original_domain": "yi"
+    },
+    {
+      "unit": "文言·坤",
+      "source_ids": [
+        "DS11",
+        "YD-OW-WY"
+      ],
+      "status": "read_mapped",
+      "relation_ids": [
+        "OW-R027",
+        "OW-R028"
+      ],
+      "note": "全文已读；只映射核心概念与有代表性的关系，不宣称全部卦序边、全部对举或全部训诂已抽取。已逐段与独立文言页核对；引文以冻结 DS10/DS11 文言层为准，不包含卦辞、彖、象。",
+      "partition": "other_wings",
+      "domain": "yi",
+      "id": "COV-other_wings-016",
+      "original_domain": "yi"
+    },
+    {
+      "id": "COV-ZX-013",
+      "unit": "朱熹《周易本义》卷七·系辞上第十一章注·朱熹：两仪四象八卦也指逐层加画",
+      "source_ids": [
+        "YD-ZX7"
+      ],
+      "status": "read_mapped",
+      "node_ids": [
+        "ZX-N025",
+        "ZX-N026"
+      ],
+      "relation_ids": [
+        "ZX-R013"
+      ],
+      "domain": "yi",
+      "partition": "cheng_zhu",
+      "note": "已读所列注段及相邻经传语境；此项是局部注段提取，不等于整卦、整卷或全书注释穷尽。",
+      "original_domain": "yi"
+    }
+  ],
+  "frozen_source_hits": [
+    {
+      "source_id": "YD-CY",
+      "file": "evidence/texts/YD-CY.txt",
+      "line": 240,
+      "locator": "程颐《伊川易传》随卦总论",
+      "quote": "又以卦變言之，乾之上來居坤之下，坤之初往居乾之上，陽來下於陰也。",
+      "level": "commentarial",
+      "status": "frozen_text_hit_not_mapped_record",
+      "note": "有具体移爻方案；本次未在结构关系中检出对应引文，不能冒充已经映射审核的关系。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3",
+      "quote_matches_frozen_text_whitespace_only": true
+    },
+    {
+      "source_id": "YD-CY",
+      "file": "evidence/texts/YD-CY.txt",
+      "line": 281,
+      "locator": "程颐《伊川易传》蛊卦彖释",
+      "quote": "剛上而柔下，謂乾之初九上而為上九，坤之上六下而為初六也。",
+      "level": "commentarial",
+      "status": "frozen_text_hit_not_mapped_record",
+      "note": "有具体移爻方案；不据此规定所有卦通用的变换。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3",
+      "quote_matches_frozen_text_whitespace_only": true
+    },
+    {
+      "source_id": "YD-ZX1",
+      "file": "evidence/texts/YD-ZX1.txt",
+      "line": 25,
+      "locator": "朱熹《周易本义》卷一随卦首注",
+      "quote": "隨從也以卦變言之本自困卦九來居初又自噬嗑九來居五而自未濟來者兼此二變皆剛來隨柔之義",
+      "level": "commentarial",
+      "status": "frozen_text_hit_not_mapped_record",
+      "note": "保留所冻结转录的“九来居初／九来居五”，不擅补被移爻的编号；部分转录有图像字与讹字限制。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B701",
+      "quote_matches_frozen_text_whitespace_only": true
+    },
+    {
+      "source_id": "YD-ZX2",
+      "file": "evidence/texts/YD-ZX2.txt",
+      "line": 18,
+      "locator": "朱熹《周易本义》卷二睽卦首注",
+      "quote": "以卦變言之則自離來者柔進居三自中孚來者柔進居五自家人來者兼之",
+      "level": "commentarial",
+      "status": "frozen_text_hit_not_mapped_record",
+      "note": "特定注家的多个卦变来源说明，不能自动认证现代通用错综互反函数。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B702",
+      "quote_matches_frozen_text_whitespace_only": true
+    }
+  ],
+  "nodes": [
+    {
+      "id": "XC-N007",
+      "label": "阴",
+      "sense": "与阳交替、合德的阴",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "生成与存在",
+      "definition": "在一阴一阳及阴阳合德中出现的相对一项。",
+      "cognitive": "现代分析：保留成对运行，避免把单一一项设为独立原因。",
+      "limits": "不把阴爻、阴卦、坤、女性、小人自动视为同一概念。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "一阴一阳之谓道：",
+          "locator": "系辞上·冻结第五章；段落／句起“一阴一阳之谓道：”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "阴阳合德，而刚柔有体，以体天地之撰，以通神明之德。",
+          "locator": "系辞下·冻结第五章；段落／句起“阴阳合德，而刚柔有体，以体天地之”",
+          "unit": "系辞下·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N008",
+      "label": "阳",
+      "sense": "与阴交替、合德的阳",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "生成与存在",
+      "definition": "在一阴一阳及阴阳合德中出现的相对一项。",
+      "cognitive": "现代分析：保留成对运行，避免以静态标签取代关系。",
+      "limits": "不把阳爻、阳卦、乾、男性、君子自动视为同一概念。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "一阴一阳之谓道：",
+          "locator": "系辞上·冻结第五章；段落／句起“一阴一阳之谓道：”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "阴阳合德，而刚柔有体，以体天地之撰，以通神明之德。",
+          "locator": "系辞下·冻结第五章；段落／句起“阴阳合德，而刚柔有体，以体天地之”",
+          "unit": "系辞下·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N009",
+      "label": "道",
+      "sense": "一阴一阳所谓之道",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "definition": "在本段以一阴一阳界说，并接续论善与性。",
+      "cognitive": "现代分析：把运行方式与价值、成就的叙述分层阅读。",
+      "limits": "不直接等同形而上之道、君子之道或《老子》之道。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "一阴一阳之谓道：继之者善也，成之者性也；",
+          "locator": "系辞上·冻结第五章；段落／句起“一阴一阳之谓道：继之者善也，成之”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N012",
+      "label": "神",
+      "sense": "阴阳不测义之神",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "definition": "以阴阳不测命名的神妙、难测。",
+      "cognitive": "现代分析：将不可穷尽测定的作用作为文本谓词。",
+      "limits": "不自动等同人格神、鬼神、蓍之神或民用之神；非现代随机性概念。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "阴阳不测之谓神。",
+          "locator": "系辞上·冻结第五章；段落／句起“阴阳不测之谓神。”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N013",
+      "label": "太极",
+      "sense": "两仪生成序列中的太极",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "definition": "易有太极、是生两仪这一序列的起项。",
+      "cognitive": "现代分析：保留由一到二再分化的文本结构。",
+      "limits": "不以本句唯一裁定太极是宇宙实体、筮法单元或后世哲学之理。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "易有太极，是生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业。",
+          "locator": "系辞上·冻结第十一章；段落／句起“易有太极，是生两仪，两仪生四象，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N014",
+      "label": "两仪",
+      "sense": "太极至八卦序列中的两仪",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "definition": "由太极所生、又生四象的二分项。",
+      "cognitive": "现代分析：记录生成序列中的二分层级。",
+      "limits": "本句未自行列明两仪具体所指，不强制转换为阴阳两爻或天地。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "易有太极，是生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业。",
+          "locator": "系辞上·冻结第十一章；段落／句起“易有太极，是生两仪，两仪生四象，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N015",
+      "label": "四象",
+      "sense": "两仪至八卦序列中的四象",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "生成与存在",
+      "definition": "由两仪所生、又生八卦的四分项。",
+      "cognitive": "现代分析：保留分化层级与后续判断系统的接口。",
+      "limits": "不与四时、老少阴阳或本章“易有四象，所以示也”无条件合一。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "两仪生四象，四象生八卦，",
+          "locator": "系辞上·冻结第十一章；段落／句起“两仪生四象，四象生八卦，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N016",
+      "label": "八卦",
+      "sense": "成列并作为重卦基础的八卦",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "认识与表述",
+      "definition": "在分化序列中由四象生，并以成列、重之呈象与爻。",
+      "cognitive": "现代分析：用有限符号组合追踪表征结构。",
+      "limits": "与泛称卦及六十四卦区分；不假称其历史发明已获证实。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "四象生八卦，八卦定吉凶，",
+          "locator": "系辞上·冻结第十一章；段落／句起“四象生八卦，八卦定吉凶，”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "八卦成列，象在其中矣；因而重之，爻在其中矣；",
+          "locator": "系辞下·冻结第一章；段落／句起“八卦成列，象在其中矣；因而重之，”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N017",
+      "label": "卦",
+      "sense": "设卦、成卦与统摄象的卦体",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "definition": "通过设立或筮法形成、供观象与判断的卦。",
+      "cognitive": "现代分析：保留整体配置对单爻解读的约束。",
+      "limits": "不把所有卦都解释为八卦三爻体；本节点为泛称，具体制式依引文。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "圣人设卦观象，系辞焉而明吉凶；",
+          "locator": "系辞上·冻结第二章；段落／句起“圣人设卦观象，系辞焉而明吉凶；”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "是故四营而成易，十有八变而成卦，八卦而小成；",
+          "locator": "系辞上·冻结第九章；段落／句起“是故四营而成易，十有八变而成卦，”",
+          "unit": "系辞上·冻结第九章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N018",
+      "label": "象",
+      "sense": "拟物宜并可尽意、供制器取法的象",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "definition": "由拟形容、象物宜而成的表征；在卦象与制器等语境中发挥呈示作用。",
+      "cognitive": "现代分析：把表征与被表征对象、读象活动分开。",
+      "limits": "天象、卦象、取象不可无条件互换；这里只连有原文支持的功能。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "圣人有以见天下之赜，而拟诸其形容，象其物宜，是故谓之象。",
+          "locator": "系辞上·冻结第八章；段落／句起“圣人有以见天下之赜，而拟诸其形容”",
+          "unit": "系辞上·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "圣人立象以尽意，",
+          "locator": "系辞上·冻结第十二章；段落／句起“圣人立象以尽意，”",
+          "unit": "系辞上·冻结第十二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N019",
+      "label": "爻",
+      "sense": "表述并效法变化的爻",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "认识与表述",
+      "definition": "重卦中的分层单位，言乎变、效天下之动，并受时位关系制约。",
+      "cognitive": "现代分析：为局部位置、变动与判断建立可检索单位。",
+      "limits": "不把爻等同个体人物；爻辞、爻位与爻画仍依语境区分。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "爻者，言乎变者也。",
+          "locator": "系辞上·冻结第三章；段落／句起“爻者，言乎变者也。”",
+          "unit": "系辞上·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "爻也者，效天下之动者也。",
+          "locator": "系辞下·冻结第三章；段落／句起“爻也者，效天下之动者也。”",
+          "unit": "系辞下·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N020",
+      "label": "辞",
+      "sense": "系于卦爻以告示和判断的辞",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "definition": "附系于卦爻、指其所之并辨吉凶的言辞。",
+      "cognitive": "现代分析：作为解释、判断的文本媒介。",
+      "limits": "不等于意的无损复制，也不把下篇末尾一切日常言辞皆并入卦爻辞。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "辩吉凶者存乎辞，",
+          "locator": "系辞上·冻结第三章；段落／句起“辩吉凶者存乎辞，”",
+          "unit": "系辞上·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "辞也者，各指其所之。",
+          "locator": "系辞上·冻结第三章；段落／句起“辞也者，各指其所之。”",
+          "unit": "系辞上·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "系辞以尽其言，",
+          "locator": "系辞上·冻结第十二章；段落／句起“系辞以尽其言，”",
+          "unit": "系辞上·冻结第十二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N023",
+      "label": "变",
+      "sense": "刚柔相推、开阖或化裁之变",
+      "kind": "operation",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "变化与复归",
+      "definition": "在不同段落被描述为刚柔相推、一阖一辟、化而裁之的改变过程。",
+      "cognitive": "现代分析：联查变化的生成、划分和施行，不设无条件因果。",
+      "limits": "开阖、筮变、事变的对象各异；不把“变”本身视为成功保证。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "刚柔相推而生变化。",
+          "locator": "系辞上·冻结第二章；段落／句起“刚柔相推而生变化。”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "一阖一辟谓之变；",
+          "locator": "系辞上·冻结第十一章；段落／句起“一阖一辟谓之变；”",
+          "unit": "系辞上·冻结第十一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "化而裁之谓之变，",
+          "locator": "系辞上·冻结第十二章；段落／句起“化而裁之谓之变，”",
+          "unit": "系辞上·冻结第十二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N028",
+      "label": "数",
+      "sense": "蓍筮操作及极数知来的数",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "definition": "由分、挂、揲、归奇及反复变动组织的筮数。",
+      "cognitive": "现代分析：把操作步骤、数值层级与占断用途区分。",
+      "limits": "五十五、五十、四十九、十八变各有语境，不合并为同一个神秘数。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "大衍之数五十，其用四十有九，分而为二以象两，挂一以象三，揲之以四以象四时，归奇于扐以象闰，五岁再闰，故再扐而后挂。",
+          "locator": "系辞上·冻结第九章；段落／句起“大衍之数五十，其用四十有九，分而”",
+          "unit": "系辞上·冻结第九章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "极数知来之谓占，",
+          "locator": "系辞上·冻结第五章；段落／句起“极数知来之谓占，”",
+          "unit": "系辞上·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N030",
+      "label": "吉凶",
+      "sense": "卦爻辞呈示的得失判断",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "时位与判断",
+      "definition": "关联失得、变动、配置与情势的正负判断。",
+      "cognitive": "现代分析：作为带语境的评价结果，避免固定命运编码。",
+      "limits": "“吉之先见”只说吉；二多誉三多凶等“多”不改成必然。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "吉凶者，失得之象也。",
+          "locator": "系辞上·冻结第二章；段落／句起“吉凶者，失得之象也。”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "变动以利言，吉凶以情迁。",
+          "locator": "系辞下·冻结第九章；段落／句起“变动以利言，吉凶以情迁。”",
+          "unit": "系辞下·冻结第九章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N032",
+      "label": "悔吝",
+      "sense": "忧虞之象与小疵判断",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "时位与判断",
+      "definition": "以忧虞之象、小疵说明，并随行动显现的判断类。",
+      "cognitive": "现代分析：保留与吉凶、无咎不同的评价颗粒。",
+      "limits": "不把悔吝合词中的悔直接等同能改过的悔心。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "悔吝者，忧虞之象也。",
+          "locator": "系辞上·冻结第二章；段落／句起“悔吝者，忧虞之象也。”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS02",
+          "quote": "悔吝者，言乎其小疵也。",
+          "locator": "系辞上·冻结第三章；段落／句起“悔吝者，言乎其小疵也。”",
+          "unit": "系辞上·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N035",
+      "label": "动",
+      "sense": "爻象呈示且生发判断的动",
+      "kind": "operation",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "变化与复归",
+      "definition": "被爻效法、经辞指示并与吉凶悔吝相联的行动或变动。",
+      "cognitive": "现代分析：追踪从潜在配置到实际变化的关节点。",
+      "limits": "宇宙运动、爻动和人之行动不是完全相同的机制。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "系辞焉而命之，动在其中矣。吉凶悔吝者，生乎动者也。",
+          "locator": "系辞下·冻结第一章；段落／句起“系辞焉而命之，动在其中矣。吉凶悔”",
+          "unit": "系辞下·冻结第一章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "爻也者，效天下之动者也。",
+          "locator": "系辞下·冻结第三章；段落／句起“爻也者，效天下之动者也。”",
+          "unit": "系辞下·冻结第三章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N039",
+      "label": "观",
+      "sense": "仰观俯察与取诸身物的观察",
+      "kind": "operation",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "definition": "观察天、地、鸟兽与自身、外物以取象、作卦。",
+      "cognitive": "现代分析：将表征构造的经验取材步骤显式化。",
+      "limits": "这是文本对圣人取象的描述，不是现代实验科学方法的直接同一物。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "仰则观象于天，俯则观法于地，观鸟兽之文，与地之宜，近取诸身，远取诸物；于是始作八卦，",
+          "locator": "系辞下·冻结第二章；段落／句起“仰则观象于天，俯则观法于地，观鸟”",
+          "unit": "系辞下·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N049",
+      "label": "刚柔",
+      "sense": "相推而成变化的刚柔",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "系辞上、系辞下",
+      "theme": "变化与复归",
+      "definition": "在卦爻结构中相摩、相推、相易的成对因素。",
+      "cognitive": "现代分析：保留对偶互动而非单项支配。",
+      "limits": "不自动等同阴阳、性别或刚强柔弱的心理性格。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "刚柔相推而生变化。",
+          "locator": "系辞上·冻结第二章；段落／句起“刚柔相推而生变化。”",
+          "unit": "系辞上·冻结第二章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "DS03",
+          "quote": "阴阳合德，而刚柔有体，",
+          "locator": "系辞下·冻结第五章；段落／句起“阴阳合德，而刚柔有体，”",
+          "unit": "系辞下·冻结第五章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N051",
+      "label": "文",
+      "sense": "爻等之物相杂形成的文",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "definition": "在爻有等、物相杂之序列中形成的配置纹理。",
+      "cognitive": "现代分析：把组合结构与其是否适当的评价分离。",
+      "limits": "不等同书面文字、修辞文采或鸟兽之文的全部意义。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "爻有等，故曰物；物相杂，故曰文；",
+          "locator": "系辞下·冻结第八章；段落／句起“爻有等，故曰物；物相杂，故曰文；”",
+          "unit": "系辞下·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "XC-N052",
+      "label": "不当",
+      "sense": "爻物所成之文不当",
+      "kind": "state",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "时位与判断",
+      "definition": "下篇以文不当说明吉凶发生的配置判断。",
+      "cognitive": "现代分析：把不相宜作为评价前提，保留其具体配置语境。",
+      "limits": "非任何异常均必凶；原文说吉凶生，并未只说凶。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "文不当，故吉凶生焉。",
+          "locator": "系辞下·冻结第八章；段落／句起“文不当，故吉凶生焉。”",
+          "unit": "系辞下·冻结第八章",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N004",
+      "label": "数",
+      "sense": "倚数及逆数所用之数",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "联系参天两地的计数与知来之逆数的形式操作。",
+      "cognitive": "现代重构：把分类、推算和预测方向放在可检查的程序层。",
+      "limits": "参天两地算法及逆数历代解说不在本条裁定；不宣称预测有效。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "參天兩地而倚數，觀變於陰陽而立卦；",
+          "locator": "说卦·第一章",
+          "unit": "说卦·第一章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "天地定位，山澤通氣，雷風相薄，水火不相射。八卦相錯，數往者順，知來者逆。是故易逆數也。",
+          "locator": "说卦·第三章",
+          "unit": "说卦·第三章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N005",
+      "label": "卦",
+      "sense": "阴阳观变所立、六画所成之卦",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "把阴阳变化与三才两之组织成六画六位的符号结构。",
+      "cognitive": "现代重构：区分卦的结构规则与其对应的现实对象。",
+      "limits": "本节点指说卦六画卦，不把八卦经卦与六十四卦不加区分。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "觀變於陰陽而立卦；",
+          "locator": "说卦·第一章",
+          "unit": "说卦·第一章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N007",
+      "label": "三才",
+      "sense": "天、地、人三种道的并列框架",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "definition": "以天道阴阳、地道柔刚、人道仁义兼而两之。",
+      "cognitive": "现代重构：建立自然、承载、伦理三方面的分层框架。",
+      "limits": "三才不是三种实体元素；原文三才，后世亦写三材。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "昔者，聖人之作《易》也，將以順性命之理。是以立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義。兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N008",
+      "label": "阴",
+      "sense": "天道及观变立卦中的阴",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "变化与复归",
+      "definition": "与阳成对说明天道及卦象分判的一端。",
+      "cognitive": "现代重构：用成对变量识别变化而不预设单一褒贬。",
+      "limits": "不得自动等同女性、恶或被动，具体取象另列。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立天之道，曰陰與陽；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N009",
+      "label": "阳",
+      "sense": "天道及观变立卦中的阳",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "变化与复归",
+      "definition": "与阴成对说明天道及卦象分判的一端。",
+      "cognitive": "现代重构：以相对项而非独立固定物理解。",
+      "limits": "不能自动把阳置于一切领域的价值优位。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立天之道，曰陰與陽；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N010",
+      "label": "柔",
+      "sense": "地道及爻用中的柔",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "变化与复归",
+      "definition": "与刚相对的地道和爻用语汇。",
+      "cognitive": "现代重构：保持承受、适应等解释与原文层分开。",
+      "limits": "不推成弱者必胜或软性人格。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立地之道，曰柔與剛；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N011",
+      "label": "刚",
+      "sense": "地道及爻用中的刚",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "变化与复归",
+      "definition": "与柔相对，亦为爻之发挥所本。",
+      "cognitive": "现代重构：可作为不同作用方式的对比。",
+      "limits": "不等于恶、暴力或固定男性本质。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "發揮於剛柔而生爻；",
+          "locator": "说卦·第一章",
+          "unit": "说卦·第一章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立地之道，曰柔與剛；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N014",
+      "label": "天道",
+      "sense": "以阴阳说明之天道",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "definition": "说卦直接以阴阳命名的天之道。",
+      "cognitive": "现代重构：保留领域限定的道义。",
+      "limits": "不同于老子无名之道的自动同一。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立天之道，曰陰與陽；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N015",
+      "label": "地道",
+      "sense": "以柔刚说明之地道",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "definition": "说卦直接以柔刚命名的地之道。",
+      "cognitive": "现代重构：区分同一道字在不同层面的职能。",
+      "limits": "不与坤文言臣道妻道无条件合并。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立地之道，曰柔與剛；",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N016",
+      "label": "人道",
+      "sense": "以仁义说明之人道",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "修养与行动",
+      "definition": "说卦直接以仁义命名的人之道。",
+      "cognitive": "现代重构：将人的行动标准纳入结构图。",
+      "limits": "并非由自然事实直接演绎伦理正当性。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "立人之道，曰仁與義。",
+          "locator": "说卦·第二章",
+          "unit": "说卦·第二章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N019",
+      "label": "乾",
+      "sense": "说卦八卦中的乾",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以健释乾，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "乾，健也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N020",
+      "label": "坤",
+      "sense": "说卦八卦中的坤",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以順释坤，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "坤，順也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N021",
+      "label": "震",
+      "sense": "说卦八卦中的震",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以動释震，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "震，動也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N022",
+      "label": "巽",
+      "sense": "说卦八卦中的巽",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以入释巽，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "巽，入也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N023",
+      "label": "坎",
+      "sense": "说卦八卦中的坎",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以陷释坎，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "坎，陷也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N024",
+      "label": "離",
+      "sense": "说卦八卦中的離",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以麗释離，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "離，麗也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N025",
+      "label": "艮",
+      "sense": "说卦八卦中的艮",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以止释艮，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "艮，止也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N026",
+      "label": "兌",
+      "sense": "说卦八卦中的兌",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "《说卦》以說释兌，并赋予多组自然、人身、家庭取象。",
+      "cognitive": "现代重构：把同一卦下的多种类比列为可审查的对应表。",
+      "limits": "本节点仅指三画经卦；不与同名六画卦自动合并；取象不构成对象之间的因果。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "兌，說也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N056",
+      "label": "万物",
+      "sense": "说卦宇宙论及八卦时序中的万物",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "生成与存在",
+      "definition": "说卦以八卦描述出、齐、相见、养、悦、劳及成始成终的万物。",
+      "cognitive": "现代重构：以阶段和相互作用描写整体过程。",
+      "limits": "万物不因此构成现代可观测闭合系统。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "萬物出乎震，震，東方也。",
+          "locator": "说卦·第五章",
+          "unit": "说卦·第五章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "故水火相逮，雷風不相悖，山澤通氣，然後能變化，既成萬物也。",
+          "locator": "说卦·第六章",
+          "unit": "说卦·第六章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "OW-N057",
+      "label": "八卦",
+      "sense": "相错及分类取象的八种三画卦",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "说卦",
+      "theme": "认识与表述",
+      "definition": "乾坤震巽坎离艮兑八类经卦，交错并以多组对应描述事物。",
+      "cognitive": "现代重构：显式区分类别、属性、类比与预测操作。",
+      "limits": "八卦集合不同于六十四卦；同一对应表不等于唯一实体分类。",
+      "evidence": [
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "八卦相錯，數往者順，知來者逆。是故易逆數也。",
+          "locator": "说卦·第三章",
+          "unit": "说卦·第三章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        },
+        {
+          "source_id": "YD-OW-SG",
+          "quote": "乾，健也。坤，順也。震，動也。巽，入也。坎，陷也。離，麗也。艮，止也。兌，說也。",
+          "locator": "说卦·第七章",
+          "unit": "说卦·第七章",
+          "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "other_wings",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-N002",
+      "label": "象",
+      "sense": "王弼释易中用以尽意的象",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "definition": "可以循言而观、循之而达意的表象。",
+      "cognitive": "现代分析：将注家的语境限定义项与经传原文分开，供解释路径比较。",
+      "limits": "仅为本注家在所引段落的释义；不回填为经传唯一原义，不与其他同字义项自动合并。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "言生於象，故可尋言以觀象。象生於意，故可尋象以觀意。",
+          "locator": "周易略例·明象·王弼层；句起“言生於象，故可尋言以觀象。象生於意，”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-N003",
+      "label": "意",
+      "sense": "王弼释易中象所出的意",
+      "kind": "single",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "definition": "象所由出并作为理解目的的意。",
+      "cognitive": "现代分析：将注家的语境限定义项与经传原文分开，供解释路径比较。",
+      "limits": "仅为本注家在所引段落的释义；不回填为经传唯一原义，不与其他同字义项自动合并。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "言生於象，故可尋言以觀象。象生於意，故可尋象以觀意。",
+          "locator": "周易略例·明象·王弼层；句起“言生於象，故可尋言以觀象。象生於意，”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-N006",
+      "label": "得意",
+      "sense": "已把握象中之意的理解状态",
+      "kind": "condition",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "definition": "忘象论的先行条件。",
+      "cognitive": "现代分析：将注家的语境限定义项与经传原文分开，供解释路径比较。",
+      "limits": "仅为本注家在所引段落的释义；不回填为经传唯一原义，不与其他同字义项自动合并。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "故言者所以明象，得象而忘言。象者所以存意，得意而忘象。",
+          "locator": "周易略例·明象·王弼层；句起“故言者所以明象，得象而忘言。象者所以”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "WH-N007",
+      "label": "忘象",
+      "sense": "得意后不固执特定表象",
+      "kind": "operation",
+      "domain": "yi",
+      "layer": "王弼《周易略例》",
+      "theme": "认识与表述",
+      "definition": "在得意条件下不固守表象工具。",
+      "cognitive": "现代分析：将注家的语境限定义项与经传原文分开，供解释路径比较。",
+      "limits": "仅为本注家在所引段落的释义；不回填为经传唯一原义，不与其他同字义项自动合并。",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "故言者所以明象，得象而忘言。象者所以存意，得意而忘象。",
+          "locator": "周易略例·明象·王弼层；句起“故言者所以明象，得象而忘言。象者所以”",
+          "unit": "明象",
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "partition": "wanghan_kong",
+      "original_domain": "yi"
+    },
+    {
+      "id": "ZX-N025",
+      "label": "一画两仪、二画四象、三画八卦",
+      "sense": "朱熹《周易本义》卷七·系辞上第十一章注：朱熹以画数递增解释两仪、四象、八卦的层次。",
+      "definition": "朱熹以画数递增解释两仪、四象、八卦的层次。",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "朱熹《周易本义》",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：在符号构成层解释生成，区别于把各层直接画成宇宙实体谱系。",
+      "limits": "朱熹称自然之理是其主张；并非现代数学或考古已证明卦画历史起源。",
+      "evidence": [
+        {
+          "source_id": "YD-ZX7",
+          "quote": "兩儀者始為一畵以分隂陽四象者次為二畫以分太少八卦者次為三畫而三才之象始備此數言者實聖人作易自然之次第有不假絲毫知力而成者畫卦揲蓍其序皆然詳見序例啟蒙",
+          "locator": "周易本义·卷七·系辞上第十一章注",
+          "unit": "卷七·系辞上第十一章注",
+          "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "朱熹",
+      "commentator": "朱熹",
+      "work": "周易本义",
+      "era": "南宋",
+      "partition": "cheng_zhu",
+      "level": "commentarial",
+      "original_domain": "yi"
+    },
+    {
+      "id": "ZX-N026",
+      "label": "作易自然次第",
+      "sense": "朱熹《周易本义》卷七·系辞上第十一章注：以画卦与揲蓍的生成次第解释“生”的语境。",
+      "definition": "以画卦与揲蓍的生成次第解释“生”的语境。",
+      "kind": "compound",
+      "domain": "yi",
+      "layer": "朱熹《周易本义》",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：在符号构成层解释生成，区别于把各层直接画成宇宙实体谱系。",
+      "limits": "朱熹称自然之理是其主张；并非现代数学或考古已证明卦画历史起源。",
+      "evidence": [
+        {
+          "source_id": "YD-ZX7",
+          "quote": "兩儀者始為一畵以分隂陽四象者次為二畫以分太少八卦者次為三畫而三才之象始備此數言者實聖人作易自然之次第有不假絲毫知力而成者畫卦揲蓍其序皆然詳見序例啟蒙",
+          "locator": "周易本义·卷七·系辞上第十一章注",
+          "unit": "卷七·系辞上第十一章注",
+          "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "author": "朱熹",
+      "commentator": "朱熹",
+      "work": "周易本义",
+      "era": "南宋",
+      "partition": "cheng_zhu",
+      "level": "commentarial",
+      "original_domain": "yi"
+    },
+    {
+      "label": "通其变",
+      "definition": "在参伍以变、错综其数背景中通其变的操作。",
+      "kind": "operation",
+      "id": "WP-XCS-C10-S03-N01",
+      "sense": "系辞上冻结第10章第3段：在参伍以变、错综其数背景中通其变的操作。",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "成天下之文",
+      "definition": "形成天下之文理",
+      "kind": "state",
+      "id": "WP-XCS-C10-S03-N02",
+      "sense": "系辞上冻结第10章第3段：形成天下之文理",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "通其变，遂成天下之文，",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "极其数",
+      "definition": "在参伍以变、错综其数背景中极其数的操作。",
+      "kind": "operation",
+      "id": "WP-XCS-C10-S03-N03",
+      "sense": "系辞上冻结第10章第3段：在参伍以变、错综其数背景中极其数的操作。",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象；非天下之至变，其孰能与于此！\n",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "定天下之象",
+      "definition": "确定天下之象",
+      "kind": "state",
+      "id": "WP-XCS-C10-S03-N04",
+      "sense": "系辞上冻结第10章第3段：确定天下之象",
+      "domain": "yi",
+      "layer": "系辞上",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分操作组合、纹理成形和象的确定三个层次。",
+      "limits": "参伍具体算法不由本句补出；至变是文本评价。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS02",
+          "quote": "极其数，遂定天下之象；",
+          "locator": "系辞上·冻结第10章·编者论证段3（原文起“参伍以变，错综其数，通其”）",
+          "unit": "JW-XCS-C10-S03",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "杂物撰德辨是非",
+      "definition": "整理事物德性并分辨是非的任务",
+      "kind": "state",
+      "id": "WP-XCX-C07-S05-N01",
+      "sense": "系辞下冻结第7章第5段：整理事物德性并分辨是非的任务",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "若夫杂物撰德，辨是与非，则非其中爻不备。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "非中爻不备",
+      "definition": "缺少中爻分析则不完备的限定",
+      "kind": "state",
+      "id": "WP-XCX-C07-S05-N02",
+      "sense": "系辞下冻结第7章第5段：缺少中爻分析则不完备的限定",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "若夫杂物撰德，辨是与非，则非其中爻不备。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "知者观彖辞",
+      "definition": "智者观读彖辞的动作",
+      "kind": "state",
+      "id": "WP-XCX-C07-S05-N03",
+      "sense": "系辞下冻结第7章第5段：智者观读彖辞的动作",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "知者观其彖辞，则思过半矣。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "label": "思过半",
+      "definition": "理解已过半的文本评价",
+      "kind": "state",
+      "id": "WP-XCX-C07-S05-N04",
+      "sense": "系辞下冻结第7章第5段：理解已过半的文本评价",
+      "domain": "yi",
+      "layer": "系辞下",
+      "theme": "认识与表述",
+      "cognitive": "现代分析：区分中爻细部分析与彖辞总体判断，保留不同材料的任务分工。",
+      "limits": "思过半是文本对总体理解的赞许，不是可量化准确率；“中爻”不默等特定互卦算法。 本分段为编者连续论证单元，沿用冻结转录字形标点，未作异本校勘。",
+      "evidence": [
+        {
+          "source_id": "DS03",
+          "quote": "知者观其彖辞，则思过半矣。",
+          "locator": "系辞下·冻结第7章·编者论证段5（原文起“若夫杂物撰德，辨是与非，”）",
+          "unit": "JW-XCX-C07-S05",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "wing_v130_xici",
+      "original_domain": "yi"
+    },
+    {
+      "id": "LC2-WB-C18-N01",
+      "label": "以术明察奸伪并趋于可见形迹",
+      "sense": "王弼第18章注：施治者以术与明辨检察奸伪、拘于可见之形的做法。",
+      "kind": "compound",
+      "definition": "施治者以术与明辨检察奸伪、拘于可见之形的做法。",
+      "domain": "lao",
+      "level": "commentarial",
+      "layer": "王弼《老子道德经注》第18章注",
+      "theme": "秩序与治理",
+      "evidence": [
+        {
+          "source_id": "DS01",
+          "quote": "行术用明，以察奸伪；趣睹形见，物知避之。故智慧出则大伪生也。",
+          "locator": "王弼《老子道德经注》第18章第2注；句起“行术用明，以察奸伪；趣睹形见，物”",
+          "unit": "LC-WB-C18",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：分析察伪方式显露后，对象如何适应并规避。",
+      "limits": "这针对王弼所说行术用明，不等于一切监督都必然加剧欺骗。",
+      "partition": "lao_wb_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "老子道德经注",
+      "era": "曹魏，3世纪",
+      "base_chapter": 18,
+      "original_domain": "lao"
+    },
+    {
+      "id": "LC2-WB-C18-N02",
+      "label": "物避察而大伪生",
+      "sense": "王弼第18章注：被察者识别并规避检察，产生进一步伪饰。",
+      "kind": "compound",
+      "definition": "被察者识别并规避检察，产生进一步伪饰。",
+      "domain": "lao",
+      "level": "commentarial",
+      "layer": "王弼《老子道德经注》第18章注",
+      "theme": "秩序与治理",
+      "evidence": [
+        {
+          "source_id": "DS01",
+          "quote": "行术用明，以察奸伪；趣睹形见，物知避之。故智慧出则大伪生也。",
+          "locator": "王弼《老子道德经注》第18章第2注；句起“行术用明，以察奸伪；趣睹形见，物”",
+          "unit": "LC-WB-C18",
+          "sourceURL": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：分析察伪方式显露后，对象如何适应并规避。",
+      "limits": "这针对王弼所说行术用明，不等于一切监督都必然加剧欺骗。",
+      "partition": "lao_wb_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "老子道德经注",
+      "era": "曹魏，3世纪",
+      "base_chapter": 18,
+      "original_domain": "lao"
+    },
+    {
+      "id": "YCM130-LX-W-02-N01",
+      "label": "固定马乾对应",
+      "sense": "不顾卦义，把马固定附属于乾并以字面反责卦象。",
+      "definition": "不顾卦义，把马固定附属于乾并以字面反责卦象。",
+      "kind": "state",
+      "domain": "yi",
+      "level": "commentarial",
+      "layer": "王弼《周易略例》·明象",
+      "theme": "解释、时位与变化",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "而或者定馬於乾，案文責卦，有馬無乾，則偽說滋漫，難可紀矣。互體不足，遂及卦變，變又不足，推致五行。一失其原，巧愈彌甚。縱復或值，而義無所取。",
+          "locator": "周易略例/明象·王弼层·02；句起“而或者定馬於乾，案文責卦，有馬無乾，”",
+          "unit": "YC-YWH-LX-W",
+          "author_block_ids": [
+            "YCB-YWH-LX-W-03"
+          ],
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：检验辅助解释是否只是为保全预设对应而不断增设。",
+      "limits": "本条为该注家释义，不替代经传原义。记录其针对特定释易方式的批评，不把一切互体、卦变或五行研究判为无效。",
+      "partition": "yi_commentary_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "original_domain": "yi"
+    },
+    {
+      "id": "YCM130-LX-W-02-N02",
+      "label": "附会递增而失义",
+      "sense": "互体、卦变、五行被连续追加以挽救固定对应，偶中仍可能无义可取。",
+      "definition": "互体、卦变、五行被连续追加以挽救固定对应，偶中仍可能无义可取。",
+      "kind": "state",
+      "domain": "yi",
+      "level": "commentarial",
+      "layer": "王弼《周易略例》·明象",
+      "theme": "解释、时位与变化",
+      "evidence": [
+        {
+          "source_id": "YWH-LX",
+          "quote": "而或者定馬於乾，案文責卦，有馬無乾，則偽說滋漫，難可紀矣。互體不足，遂及卦變，變又不足，推致五行。一失其原，巧愈彌甚。縱復或值，而義無所取。",
+          "locator": "周易略例/明象·王弼层·02；句起“而或者定馬於乾，案文責卦，有馬無乾，”",
+          "unit": "YC-YWH-LX-W",
+          "author_block_ids": [
+            "YCB-YWH-LX-W-03"
+          ],
+          "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "cognitive": "现代分析：检验辅助解释是否只是为保全预设对应而不断增设。",
+      "limits": "本条为该注家释义，不替代经传原义。记录其针对特定释易方式的批评，不把一切互体、卦变或五行研究判为无效。",
+      "partition": "yi_commentary_v130",
+      "commentator": "王弼",
+      "author": "王弼",
+      "work": "周易略例",
+      "era": "曹魏",
+      "original_domain": "yi"
+    },
+    {
+      "id": "FO2-QX-N032",
+      "label": "无明",
+      "sense": "染法之因，熏真如而起妄心",
+      "kind": "compound",
+      "domain": "佛",
+      "school": "起信论传统／传统题署马鸣造、真谛译（成书与译署有争议）",
+      "era": "传统题署梁真谛译；作者、译者与成书地问题有争议，本轮不裁断",
+      "layer": "论本文（传统题署）",
+      "theme": "《大乘起信论》正文全篇；序不混入作者陈述",
+      "definition": "染法之因，熏真如而起妄心",
+      "cognitive": "追踪作用怎样返回并改变其出发条件，保留过程中的反馈。",
+      "limits": "本条义项限于本作此论述；同词不自动等同于他宗用法。",
+      "evidence": [
+        {
+          "source_id": "FO2-QX",
+          "quote": "以有無明染法因故即熏習真如；以熏習故則有妄心，以有妄心即熏習無明。",
+          "locator": "FO2-QX／0578a22／解释分",
+          "unit": "FO2-QX-U025",
+          "sourceURL": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "fo2",
+      "original_domain": "佛"
+    },
+    {
+      "id": "FO2-QX-N033",
+      "label": "妄心",
+      "sense": "由无明熏习而起、又返熏无明之心",
+      "kind": "compound",
+      "domain": "佛",
+      "school": "起信论传统／传统题署马鸣造、真谛译（成书与译署有争议）",
+      "era": "传统题署梁真谛译；作者、译者与成书地问题有争议，本轮不裁断",
+      "layer": "论本文（传统题署）",
+      "theme": "《大乘起信论》正文全篇；序不混入作者陈述",
+      "definition": "由无明熏习而起、又返熏无明之心",
+      "cognitive": "追踪作用怎样返回并改变其出发条件，保留过程中的反馈。",
+      "limits": "本条义项限于本作此论述；同词不自动等同于他宗用法。",
+      "evidence": [
+        {
+          "source_id": "FO2-QX",
+          "quote": "以有無明染法因故即熏習真如；以熏習故則有妄心，以有妄心即熏習無明。",
+          "locator": "FO2-QX／0578a22／解释分",
+          "unit": "FO2-QX-U025",
+          "sourceURL": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001",
+          "quote_matches_frozen_text_whitespace_only": true
+        }
+      ],
+      "partition": "fo2",
+      "original_domain": "佛"
+    }
+  ],
+  "sources": [
+    {
+      "id": "DS01",
+      "title": "道德經 (王弼本)",
+      "url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "text_path": "evidence/texts/DS01.txt",
+      "sha256": "406c0334574ee1e704fe9c0f91467794a70b465691a2cf676ba587c921de1e33",
+      "edition_note": "维基文库公开转录本，简体转换页；提供可访问原文，不冒称权威校勘定本。原页面繁简、标点及异文提示按引文保留。王弼注文与经文分列，本组除明确标明者均引经文。引文以主文为准，删除夹注；节引句末标点可调整，异文另注。",
+      "inherited_from": "chinese-thought-atlas-v9.1",
+      "acquisition": "Inherited frozen transcription; scope reviewed separately in this module.",
+      "sourceURL": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29"
+    },
+    {
+      "id": "DS02",
+      "title": "周易/繫辭上",
+      "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A",
+      "text_path": "evidence/texts/DS02.txt",
+      "sha256": "8d83498593d03daabb65d6c15ab6f61ea3c6546726e0e4082ded3cc051ed946e",
+      "edition_note": "维基文库公开转录本，简体转换页；提供可访问原文，不冒称权威校勘定本。原页面繁简、标点及异文提示按引文保留。页面传统作者题署不当作成书史结论。引文以主文为准，删除夹注；节引句末标点可调整，异文另注。",
+      "inherited_from": "chinese-thought-atlas-v9.1",
+      "acquisition": "Inherited frozen transcription; scope reviewed separately in this module.",
+      "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A"
+    },
+    {
+      "id": "DS03",
+      "title": "周易/繫辭下",
+      "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B",
+      "text_path": "evidence/texts/DS03.txt",
+      "sha256": "79dbf2c744908b60fa55b58fbe5025c6be0993095da69e68b7570780a29bcdb5",
+      "edition_note": "维基文库公开转录本，简体转换页；提供可访问原文，不冒称权威校勘定本。原页面繁简、标点及异文提示按引文保留。页面传统作者题署不当作成书史结论。当前网页为九章分法，不将网页章序视为跨版本通用章序。引文以主文为准，删除夹注；节引句末标点可调整，异文另注。",
+      "inherited_from": "chinese-thought-atlas-v9.1",
+      "acquisition": "Inherited frozen transcription; scope reviewed separately in this module.",
+      "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B"
+    },
+    {
+      "id": "DS10",
+      "title": "周易/乾",
+      "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E4%B9%BE",
+      "text_path": "evidence/texts/DS10.txt",
+      "sha256": "0b5683959739c89fde1e0df012dcdf7e98d8b9dcf0c24623e76b840421725f30",
+      "edition_note": "维基文库公开转录本，简体转换页；提供可访问原文，不冒称权威校勘定本。原页面繁简、标点及异文提示按引文保留。页面传统作者题署不当作成书史结论。引文以主文为准，删除夹注；节引句末标点可调整，异文另注。",
+      "inherited_from": "chinese-thought-atlas-v9.1",
+      "acquisition": "Inherited frozen transcription; scope reviewed separately in this module.",
+      "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E4%B9%BE"
+    },
+    {
+      "id": "DS11",
+      "title": "周易/坤",
+      "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E5%9D%A4",
+      "text_path": "evidence/texts/DS11.txt",
+      "sha256": "31f2c07b67352eecab97390bbaf89e2466d20c0bae9897386a696f02cbc2b59e",
+      "edition_note": "维基文库公开转录本，简体转换页；提供可访问原文，不冒称权威校勘定本。原页面繁简、标点及异文提示按引文保留。页面传统作者题署不当作成书史结论。引文以主文为准，删除夹注；节引句末标点可调整，异文另注。",
+      "inherited_from": "chinese-thought-atlas-v9.1",
+      "acquisition": "Inherited frozen transcription; scope reviewed separately in this module.",
+      "sourceURL": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E5%9D%A4"
+    },
+    {
+      "id": "YD-OW-SG",
+      "title": "易傳/說卦",
+      "url": "https://zh.wikisource.org/wiki/易傳/說卦",
+      "text_path": "evidence/texts/YD-OW-SG.txt",
+      "sha256": "29e59af36a37b77e9e738621c91e533658819ec2316ccac9466926b7c9b3bf2e",
+      "edition_note": "维基文库不转换页面正文；网页标点及异文照录，非校勘定本。",
+      "acquisition": "2026-10-19，web.open 已实际打开并读取；保存正文对应行，去除网页行号、链接标记并归一空白，未繁简转换。",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=易傳/說卦&oldid=2614055",
+      "rights_note": "古典文本公版；维基文库转录保留来源归属及网站许可说明；项目释读与原典分开。",
+      "sourceURL": "https://zh.wikisource.org/wiki/易傳/說卦"
+    },
+    {
+      "id": "YD-OW-XG",
+      "title": "易傳/序卦",
+      "url": "https://zh.wikisource.org/wiki/易傳/序卦",
+      "text_path": "evidence/texts/YD-OW-XG.txt",
+      "sha256": "0dd9c453819d07f7df6d3924e0d8089a196fb644d0d4c1c142162f941c36b304",
+      "edition_note": "维基文库不转换页面正文；网页标点及异文照录，非校勘定本。",
+      "acquisition": "2026-10-19，web.open 已实际打开并读取；保存正文对应行，去除网页行号、链接标记并归一空白，未繁简转换。",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=易傳/序卦&oldid=2611127",
+      "rights_note": "古典文本公版；维基文库转录保留来源归属及网站许可说明；项目释读与原典分开。",
+      "sourceURL": "https://zh.wikisource.org/wiki/易傳/序卦"
+    },
+    {
+      "id": "YD-OW-ZG",
+      "title": "易傳/雜卦",
+      "url": "https://zh.wikisource.org/wiki/易傳/雜卦",
+      "text_path": "evidence/texts/YD-OW-ZG.txt",
+      "sha256": "8c5de10b5ffebedb9f6a4e32c25e370ffb9d70c585ac77b133a0815411d8a0de",
+      "edition_note": "维基文库不转换页面正文；网页标点及异文照录，非校勘定本。含主段与标为校詁版的重复文本；本贡献不以该标签推定学术权威。",
+      "acquisition": "2026-10-19，web.open 已实际打开并读取；保存正文对应行，去除网页行号、链接标记并归一空白，未繁简转换。",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=易傳/雜卦&oldid=2611129",
+      "rights_note": "古典文本公版；维基文库转录保留来源归属及网站许可说明；项目释读与原典分开。",
+      "sourceURL": "https://zh.wikisource.org/wiki/易傳/雜卦"
+    },
+    {
+      "id": "YD-OW-WY",
+      "title": "周易/文言",
+      "url": "https://zh.wikisource.org/wiki/周易/文言",
+      "text_path": "evidence/texts/YD-OW-WY.txt",
+      "sha256": "bf8c92fc38a4165af88a3bb0e5633b6cdc9513fa9fcfb0c6a2e9f32d934a450d",
+      "edition_note": "维基文库不转换页面正文；网页标点及异文照录，非校勘定本。含主段与标为校詁版的重复文本；本贡献不以该标签推定学术权威。",
+      "acquisition": "2026-10-19，web.open 已实际打开并读取；保存正文对应行，去除网页行号、链接标记并归一空白，未繁简转换。",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=周易/文言&oldid=2615215",
+      "rights_note": "古典文本公版；维基文库转录保留来源归属及网站许可说明；项目释读与原典分开。",
+      "sourceURL": "https://zh.wikisource.org/wiki/周易/文言"
+    },
+    {
+      "id": "YWH-LX",
+      "title": "周易略例/明象",
+      "url": "https://zh.wikisource.org/wiki/周易略例/明象",
+      "text_path": "evidence/texts/YWH-LX.txt",
+      "sha256": "3a5fc5a9a008f304484863d5d233b0ab2a77d70816b1e8ce5ec62787c25a9721",
+      "edition_note": "维基文库公开转录；保存整页正文与原 HTML，不冒称校勘定本。略例页含王弼正文及邢璹夹注；正义页含经传、王弼或韩康伯注、孔颖达疏，各引用按层标明。字形与疑误照录。",
+      "acquisition": "2026-10-19 fetched full original HTML and extracted mw-parser-output text, excluding style/script data; no character conversion.",
+      "revision_id": "389845",
+      "raw_path": "evidence/raw/YWH-LX.html",
+      "raw_sha256": "8b0e768401244b269c0497ef8e6d2022f484952e537086d5f4eac7b2e1a22497",
+      "rights_note": "古典正文公版；电子转录来源及其许可保留，不以网页转录冒称校勘定本。",
+      "sourceURL": "https://zh.wikisource.org/wiki/周易略例/明象"
+    },
+    {
+      "id": "YD-CY",
+      "title": "伊川易傳",
+      "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3",
+      "text_path": "evidence/texts/YD-CY.txt",
+      "sha256": "4be026c822250aff3bafc6d62983bac396638cfe3f0487aeefedbb09c62af323",
+      "oldid": "1313743",
+      "layer": "注疏",
+      "source_role": "注家原文转录",
+      "raw_path": "evidence/raw/YD-CY.html",
+      "raw_sha256": "986be6ac2d574eb8d8392eebd24462c19d94d3180a376e4df6e50c53d7bf93e0",
+      "author": "程颐",
+      "era": "北宋",
+      "edition_note": "维基文库公开转录，不是本项目校勘定本；保留原字与标点。四库本页面有图像字及转录讹字，纯文本抽取不含图像中文字，故只选用已读且不依赖该缺字处的注段。页题全覽不代表实际载齐全书。 普通《伊川易傳》页实际为节录并有跳卦，不能按四卷标题推称全量。",
+      "witness_family": "维基文库程颐转录系列",
+      "immutable_url": "https://zh.wikisource.org/w/index.php?oldid=1313743",
+      "acquisition": {
+        "date": "2026-10-19",
+        "method": "读取公开原典转录 HTML 并冻结正文；维基页取 mw-parser-output，虚阁页显式 GB18030 解码；源快照全文不等于全部已研究。",
+        "quote_normalization": "whitespace_only",
+        "read_scope": "见 coverage 逐段记录",
+        "critical_edition_verified": false
+      },
+      "rights_note": "古典正文公版；电子转录来源及其许可保留，不以网页转录冒称校勘定本。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3"
+    },
+    {
+      "id": "YD-ZX1",
+      "title": "原本周易本義 (四庫全書本)/卷01",
+      "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B701",
+      "text_path": "evidence/texts/YD-ZX1.txt",
+      "sha256": "6f53076bf20eccbe07e53eadfb6e0d01feb38a56e3afe7b811ba323371d91b76",
+      "oldid": "736571",
+      "layer": "注疏",
+      "source_role": "注家原文转录",
+      "raw_path": "evidence/raw/YD-ZX1.html",
+      "raw_sha256": "8fd8e24eeb3a97f3be6d1db2e3f96ba2f9cec82bf17b349f372b19239d461d00",
+      "author": "朱熹",
+      "era": "南宋",
+      "edition_note": "维基文库公开转录，不是本项目校勘定本；保留原字与标点。四库本页面有图像字及转录讹字，纯文本抽取不含图像中文字，故只选用已读且不依赖该缺字处的注段。页题全覽不代表实际载齐全书。",
+      "witness_family": "维基文库朱熹转录系列",
+      "immutable_url": "https://zh.wikisource.org/w/index.php?oldid=736571",
+      "acquisition": {
+        "date": "2026-10-19",
+        "method": "读取公开原典转录 HTML 并冻结正文；维基页取 mw-parser-output，虚阁页显式 GB18030 解码；源快照全文不等于全部已研究。",
+        "quote_normalization": "whitespace_only",
+        "read_scope": "见 coverage 逐段记录",
+        "critical_edition_verified": false
+      },
+      "rights_note": "古典正文公版；电子转录来源及其许可保留，不以网页转录冒称校勘定本。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B701"
+    },
+    {
+      "id": "YD-ZX2",
+      "title": "原本周易本義 (四庫全書本)/卷02",
+      "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B702",
+      "text_path": "evidence/texts/YD-ZX2.txt",
+      "sha256": "91b20c0b65ca0a4cd8957ba47f14bd96bdcfc2bf42a5f4f01b649dcec6db6047",
+      "oldid": "736575",
+      "layer": "注疏",
+      "source_role": "注家原文转录",
+      "raw_path": "evidence/raw/YD-ZX2.html",
+      "raw_sha256": "e283d65a9137a29b06fb7389c69d3ae2a07f84af25a4f2d4ab24210f9493ac1d",
+      "author": "朱熹",
+      "era": "南宋",
+      "edition_note": "维基文库公开转录，不是本项目校勘定本；保留原字与标点。四库本页面有图像字及转录讹字，纯文本抽取不含图像中文字，故只选用已读且不依赖该缺字处的注段。页题全覽不代表实际载齐全书。",
+      "witness_family": "维基文库朱熹转录系列",
+      "immutable_url": "https://zh.wikisource.org/w/index.php?oldid=736575",
+      "acquisition": {
+        "date": "2026-10-19",
+        "method": "读取公开原典转录 HTML 并冻结正文；维基页取 mw-parser-output，虚阁页显式 GB18030 解码；源快照全文不等于全部已研究。",
+        "quote_normalization": "whitespace_only",
+        "read_scope": "见 coverage 逐段记录",
+        "critical_edition_verified": false
+      },
+      "rights_note": "古典正文公版；电子转录来源及其许可保留，不以网页转录冒称校勘定本。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B702"
+    },
+    {
+      "id": "YD-ZX7",
+      "title": "原本周易本義 (四庫全書本)/卷07",
+      "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707",
+      "text_path": "evidence/texts/YD-ZX7.txt",
+      "sha256": "b064a23844b0d45f0ed7162603099a48693882a930303ce7335f5622fbea68d2",
+      "oldid": "527369",
+      "layer": "注疏",
+      "source_role": "注家原文转录",
+      "raw_path": "evidence/raw/YD-ZX7.html",
+      "raw_sha256": "693dbf0d75afb43a4bc1c26a76463bdf4556628e2bdd81493f0da9b67cd4a08e",
+      "author": "朱熹",
+      "era": "南宋",
+      "edition_note": "维基文库公开转录，不是本项目校勘定本；保留原字与标点。四库本页面有图像字及转录讹字，纯文本抽取不含图像中文字，故只选用已读且不依赖该缺字处的注段。页题全覽不代表实际载齐全书。",
+      "witness_family": "维基文库朱熹转录系列",
+      "immutable_url": "https://zh.wikisource.org/w/index.php?oldid=527369",
+      "acquisition": {
+        "date": "2026-10-19",
+        "method": "读取公开原典转录 HTML 并冻结正文；维基页取 mw-parser-output，虚阁页显式 GB18030 解码；源快照全文不等于全部已研究。",
+        "quote_normalization": "whitespace_only",
+        "read_scope": "见 coverage 逐段记录",
+        "critical_edition_verified": false
+      },
+      "rights_note": "古典正文公版；电子转录来源及其许可保留，不以网页转录冒称校勘定本。",
+      "sourceURL": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707"
+    },
+    {
+      "id": "FO2-QX",
+      "title": "大乘起信论（传统题署马鸣造、真谛译）",
+      "url": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001",
+      "era": "传统题署梁真谛译；作者、译者与成书地问题有争议，本轮不裁断",
+      "school": "如来藏／起信论传统",
+      "edition_note": "CBETA官方xml-p5固定提交；保留lem正文，去note/rdg/back、目录mulu与排版空白；未作底本影像或梵藏对勘。",
+      "text_path": "evidence/additions/fo2/FO2-QX.txt",
+      "sha256": "34cf1a1a13441279799dad7acc891d7009e9a2a60c0c461c64e2060132be811b",
+      "raw_path": "evidence/additions/fo2/FO2-QX.raw",
+      "raw_sha256": "1e558e83154d0b7002c08a716c3c9527777d07baf192c6c336515421aee6319d",
+      "header_path": "/Users/ren/Documents/Codex/2026-10-13/referenced-chatgpt-conversation-this-is-an/work/three-teachings-v1/fo2/evidence/headers/FO2-QX-teiHeader.xml",
+      "rights_note": "CBETA非商业传播许可要求完整头随附；本目录保留原始XML与teiHeader。",
+      "immutable_url": "https://raw.githubusercontent.com/cbeta-org/xml-p5/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T32/T32n1666.xml",
+      "acquisition": "2026-10-19实际取得固定提交XML；取得不等于全文已读。",
+      "original_text_path": "/Users/ren/Documents/Codex/2026-10-13/referenced-chatgpt-conversation-this-is-an/work/three-teachings-v1/fo2/evidence/texts/FO2-QX.txt",
+      "original_raw_path": "/Users/ren/Documents/Codex/2026-10-13/referenced-chatgpt-conversation-this-is-an/work/three-teachings-v1/fo2/evidence/raw/FO2-QX.xml",
+      "sourceURL": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001"
+    }
+  ]
+}

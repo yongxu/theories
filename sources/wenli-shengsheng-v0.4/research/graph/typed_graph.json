@@ -1,0 +1,1967 @@
+{
+  "title": "八字十三邻接的有类型规则登记",
+  "version": "0.4",
+  "date": "2026-10-21",
+  "registry_role": "规则索引及其证据边界；不是从汉字自动编译世界动力学的执行器。",
+  "scope": {
+    "nodes": 8,
+    "undirected_adjacencies": 13,
+    "preexisting_senses": 19,
+    "bounded_modern_rules": 9,
+    "normative_interfaces": 4,
+    "new_modern_extensions": 0
+  },
+  "graph_semantics": {
+    "input_adjacencies_are_undirected": true,
+    "edge_rules_do_not_assert_unconditional_causation": true,
+    "no_automatic_reverse_rule": true,
+    "no_transitivity_of_plain_adjacency": true,
+    "scope_of_complete": "13条输入邻接均有最终、限定的语义处置；不声称涵盖各字所有义项、全部历史关系或现实普遍规律。",
+    "zhong_policy": "只使用08的未发/时中；没有把中改成目标域、平均数、几何中心或稳定点。",
+    "identity_policy": "A/B/C/D稳定且不同；重组产生D，谱系承接和部件重聚不恢复A的严格身份。",
+    "norm_policy": "NormJudgement不作为Formula；任意permitted不等于时中，更不等于和，必须指定N及评价对象。",
+    "world_vs_syntax": "Join/and/seq是表达组合；本图合的世界过程义另有真实模型转移。",
+    "temporal_policy": "只在声明的固定正步长与完整有限状态内判定；零时测试不产生持续时间。"
+  },
+  "type_environment": {
+    "Entity": {
+      "layer": "G1 object",
+      "meaning": "模型已声明的有限Entity对象类；可作为同型Term。"
+    },
+    "Kind": {
+      "layer": "G1 object",
+      "meaning": "模型已声明的有限Kind对象类；Org/Unit为其中常量。"
+    },
+    "Formula": {
+      "layer": "G1 expression",
+      "meaning": "状态命题；具体AST见绑定查询。"
+    },
+    "Program": {
+      "layer": "G1 expression",
+      "meaning": "同一模型状态集上的关系；具体AST见绑定查询。"
+    },
+    "PredicateSymbol": {
+      "layer": "G1 signature",
+      "meaning": "L:Entity×Entity→Formula；Coord:Entity→Formula；符号本身不作为Term代入。"
+    },
+    "State": {
+      "layer": "semantic parameter",
+      "meaning": "求值所处状态；不是未声明的G1对象项。"
+    },
+    "StateSet": {
+      "layer": "semantic parameter",
+      "meaning": "固定有限状态集；不在核心中作为Term传递。"
+    },
+    "RawPart": {
+      "layer": "raw model data",
+      "meaning": "u/v等部件标识用于组织和信息算法；当前engine未声明Part对象域，不直接代入G1原子。"
+    },
+    "RawPartSet": {
+      "layer": "raw model data",
+      "meaning": "有限部件标识集合；由原始记录使用。"
+    },
+    "ContextSubject": {
+      "layer": "interpretation binding",
+      "meaning": "表达模型固定的一个参与者；不假装当前零元表达谓词已有Agent量词。"
+    },
+    "ProjectionDescriptor": {
+      "layer": "interpretation binding",
+      "meaning": "指定比较哪组存在、成员或信息记录；不直接作为G1 Term。"
+    },
+    "ReachabilityRecord": {
+      "layer": "InterpretationRecord",
+      "meaning": "由特定模型和过程查询汇总的可达画像，保留模型/过程/目标索引。"
+    },
+    "NormRegistry": {
+      "layer": "normative interface",
+      "meaning": "命名规范判断表；不进入Formula。"
+    },
+    "NormActionKey": {
+      "layer": "normative interface",
+      "meaning": "规范表中动作键；须另外绑定一个实际或候选Program。"
+    },
+    "FiniteNormActionSet": {
+      "layer": "normative interface",
+      "meaning": "已明确登记的有限动作键集合。"
+    }
+  },
+  "sources": {
+    "Y03": {
+      "title": "《易传·系辞上》生生之谓易",
+      "url": "https://zh.wikisource.org/wiki/易傳/繫辭上",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "Y04": {
+      "title": "《易传·系辞下》穷变通久",
+      "url": "https://zh.wikisource.org/wiki/易傳/繫辭下",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "L06": {
+      "title": "《老子》王弼本五十一章",
+      "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#五十一章",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "Z01": {
+      "title": "《庄子·知北游》气聚散生死",
+      "url": "https://zh.wikisource.org/wiki/莊子/知北遊",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "Z02": {
+      "title": "《庄子·齐物论》其分也成也",
+      "url": "https://zh.wikisource.org/wiki/莊子/齊物論",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "Z03": {
+      "title": "《庄子·养生主》依乎天理、因其固然",
+      "url": "https://zh.wikisource.org/wiki/莊子/養生主",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "S1": {
+      "title": "《孙子·始计》因利制权",
+      "url": "https://zh.wikisource.org/wiki/孫子兵法#始計第一",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "S3": {
+      "title": "《孙子·兵势》势如彍弩",
+      "url": "https://zh.wikisource.org/wiki/孫子兵法#兵勢第五",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "S5": {
+      "title": "《孙子·军争》以分合为变",
+      "url": "https://zh.wikisource.org/wiki/孫子兵法#軍爭第七",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "H1": {
+      "title": "《韩非子·解老》理者成物之文也",
+      "url": "https://zh.wikisource.org/wiki/韓非子/解老",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "H2": {
+      "title": "《韩非子·难势》势位及助治助乱的论辩",
+      "url": "https://zh.wikisource.org/wiki/韓非子/難勢",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "C02": {
+      "title": "《荀子·礼论》度量分界与分配",
+      "url": "https://zh.wikisource.org/zh-hans/荀子/禮論篇",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "C05": {
+      "title": "《国语·郑语》和实生物",
+      "url": "https://zh.wikisource.org/zh-hans/國語_(四庫全書本)/卷16",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "C06": {
+      "title": "《礼记·中庸》未发、中节、时中",
+      "url": "https://zh.wikisource.org/zh-hans/禮記/中庸",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    },
+    "C08": {
+      "title": "《论语》和而不同",
+      "url": "https://zh.wikisource.org/zh-hans/論語/全覽",
+      "source_index": "05_原典证据索引与校勘说明_v0.2.md",
+      "supports": "语例、语境与解释入口；不直接证明现代公式或模型参数。"
+    }
+  },
+  "nodes": [
+    {
+      "char": "生",
+      "existing_senses": [
+        {
+          "sense_id": "core.044.01",
+          "label": "模式出现事件",
+          "output_type": "Program",
+          "source_ids": [
+            "Y03",
+            "Z01"
+          ],
+          "used_by_v04_rules": false
+        },
+        {
+          "sense_id": "core.044.02",
+          "label": "实例进入模式",
+          "output_type": "Program",
+          "source_ids": [
+            "L06",
+            "Z01"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.044.03",
+          "label": "产生后续实例",
+          "output_type": "Formula",
+          "source_ids": [
+            "Y03",
+            "L06"
+          ],
+          "used_by_v04_rules": false
+        },
+        {
+          "sense_id": "core.044.04",
+          "label": "活着",
+          "output_type": "Formula",
+          "source_ids": [
+            "Z01"
+          ],
+          "used_by_v04_rules": false
+        }
+      ]
+    },
+    {
+      "char": "变",
+      "existing_senses": [
+        {
+          "sense_id": "core.045.01",
+          "label": "前后差异",
+          "output_type": "Formula",
+          "source_ids": [
+            "Y04"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.045.02",
+          "label": "改变过程",
+          "output_type": "Program",
+          "source_ids": [
+            "Y04"
+          ],
+          "used_by_v04_rules": true
+        }
+      ]
+    },
+    {
+      "char": "势",
+      "existing_senses": [
+        {
+          "sense_id": "core.061.01",
+          "label": "配置决定的可达画像",
+          "output_type": "InterpretationRecord",
+          "source_ids": [
+            "S1",
+            "S3",
+            "L06"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.061.02",
+          "label": "政治位置及作用条件",
+          "output_type": "Formula",
+          "source_ids": [
+            "H2"
+          ],
+          "used_by_v04_rules": false
+        }
+      ]
+    },
+    {
+      "char": "理",
+      "existing_senses": [
+        {
+          "sense_id": "core.002.01",
+          "label": "结构条理",
+          "output_type": "Formula",
+          "source_ids": [
+            "H1",
+            "Z03"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.002.02",
+          "label": "可行路径的限制",
+          "output_type": "Program",
+          "source_ids": [
+            "Z03",
+            "H1"
+          ],
+          "used_by_v04_rules": true
+        }
+      ]
+    },
+    {
+      "char": "分",
+      "existing_senses": [
+        {
+          "sense_id": "core.032.01",
+          "label": "认识分类",
+          "output_type": "ModelDeclaration",
+          "source_ids": [
+            "Z02"
+          ],
+          "used_by_v04_rules": false
+        },
+        {
+          "sense_id": "core.032.02",
+          "label": "结构拆分",
+          "output_type": "Program",
+          "source_ids": [
+            "Z02",
+            "S5"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.032.03",
+          "label": "分配份额",
+          "output_type": "Program",
+          "source_ids": [
+            "C02"
+          ],
+          "used_by_v04_rules": false
+        }
+      ]
+    },
+    {
+      "char": "合",
+      "existing_senses": [
+        {
+          "sense_id": "core.033.01",
+          "label": "形成组合结构",
+          "output_type": "Formula",
+          "source_ids": [
+            "S5"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.033.02",
+          "label": "合并过程",
+          "output_type": "Program",
+          "source_ids": [
+            "S5"
+          ],
+          "used_by_v04_rules": true
+        }
+      ]
+    },
+    {
+      "char": "中",
+      "existing_senses": [
+        {
+          "sense_id": "core.082.01",
+          "label": "情感未发的状态",
+          "output_type": "Formula",
+          "source_ids": [
+            "C06"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.082.02",
+          "label": "时中的合宜判断",
+          "output_type": "NormJudgement",
+          "source_ids": [
+            "C06"
+          ],
+          "used_by_v04_rules": true
+        }
+      ]
+    },
+    {
+      "char": "和",
+      "existing_senses": [
+        {
+          "sense_id": "core.083.01",
+          "label": "差异项协调",
+          "output_type": "Formula",
+          "source_ids": [
+            "C05",
+            "C08"
+          ],
+          "used_by_v04_rules": true
+        },
+        {
+          "sense_id": "core.083.02",
+          "label": "发而中节的评价",
+          "output_type": "NormJudgement",
+          "source_ids": [
+            "C06"
+          ],
+          "used_by_v04_rules": true
+        }
+      ]
+    }
+  ],
+  "model_contracts": {
+    "reorganization": {
+      "entities": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "parts": [
+        "u",
+        "v"
+      ],
+      "normal_path": "s0 --split--> s1 --merge--> s2 --operate--> s_done",
+      "loss_path": "s1 --merge_lossy--> s3 (D exists, information incomplete, no operate)",
+      "failure_paths": [
+        "s1 --drain--> s1_empty",
+        "s1 --spoil--> s1_bad",
+        "s1_empty --attempt_merge--> s_empty_fail",
+        "s1_bad --attempt_merge--> s_bad_fail"
+      ],
+      "norm_variation": "s1 --delay--> s1_late；merge physically possible late, N_timely forbids it.",
+      "derive_not_preassert": [
+        "E",
+        "L",
+        "InfoComplete",
+        "Compatible",
+        "ResourceEnough",
+        "Coord",
+        "Done"
+      ]
+    },
+    "constraints": {
+      "contract": "比较完整关系、限制后的交集及其闭包；含必要边与冗余边反例。"
+    },
+    "expression_norms": {
+      "contract": "未发与表达结果分态；公开N_expression的逐项标准；和的评价不强制成为Formula。"
+    }
+  },
+  "common_definitions": {
+    "BornAs": "?¬E(P,i);a;?E(P,i)",
+    "EndAs": "?E(P,i);a;?¬E(P,i)",
+    "Enabled": "〈a〉⊤",
+    "C": "P⇒(〈a〉⊤∧[a]Q)",
+    "Reach": "{t | (s,t)∈R*}",
+    "sync": "同一初态和同一终态的关系交集",
+    "decision": "物理可行性与指定规范的独立会合；undetermined不自动准许。"
+  },
+  "edges": [
+    {
+      "edge_id": "edge_01",
+      "original_adjacency": {
+        "nodes": [
+          "生",
+          "变"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "event_inclusion",
+      "sense_bindings": [
+        {
+          "sense_id": "core.044.02",
+          "char": "生",
+          "label": "实例进入模式",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.045.01",
+          "char": "变",
+          "label": "前后差异",
+          "output_type": "Formula"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "P": "Kind",
+        "i": "Entity with stable identity",
+        "a": "Program"
+      },
+      "conditions": [
+        "同一模型、模式和实例；存在条件E在前后态均有完整解释。",
+        "生选择进入模式义；变选择E投影的前后差异。"
+      ],
+      "premises": [
+        "BornAs(P,i,a)=?¬E(P,i);a;?E(P,i)",
+        "ChangeE(P,i,a)=(?¬E(P,i);a;?E(P,i)) ∪ (?E(P,i);a;?¬E(P,i))"
+      ],
+      "conclusion": {
+        "kind": "relation_inclusion",
+        "statement": "⟦BornAs(P,i,a)⟧ ⊆ ⟦ChangeE(P,i,a)⟧；同一生起事件是E投影的一种变化。"
+      },
+      "proof_sketch": [
+        "BornAs恰是ChangeE的一个并集项，故关系包含成立。",
+        "主正例是split中Unit B生起；split中Org A终止检验逆命题反例。merge中D生起另由edge_11检验。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "ChangeE ⇒ BornAs",
+          "witness": "split使A的E(Org,A)由真变假：是变化，不是A生起。"
+        },
+        {
+          "rejected": "任意变量变化 ⇒ 出生",
+          "witness": "drain只改变资源，未使一个新实例满足E。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "Y03",
+          "Y04",
+          "L06",
+          "Z01"
+        ],
+        "source_text_support": "来源分别支持生生、变化、生成与气聚散的讨论；未给出本关系包含定理。",
+        "added_modern_assumptions": [
+          "有限E解释、稳定ID、比较投影和Program宏均为现代定义。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_01.success",
+          "edge_01.counterexample"
+        ],
+        "support_query_ids": [
+          "support_birth_nonempty"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_01.success",
+            "kind": "relation_subset",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_01.counterexample",
+            "kind": "relation_subset",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "P": "Kind",
+        "i": "Entity",
+        "a": "Program"
+      }
+    },
+    {
+      "edge_id": "edge_02",
+      "original_adjacency": {
+        "nodes": [
+          "变",
+          "势"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "transition_changes_declared_reachability_profile",
+      "sense_bindings": [
+        {
+          "sense_id": "core.045.02",
+          "char": "变",
+          "label": "改变过程",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.061.01",
+          "char": "势",
+          "label": "配置决定的可达画像",
+          "output_type": "InterpretationRecord"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "constraints",
+      "roles": {
+        "s,t": "States identifying positions in the finite graph",
+        "move": "Program",
+        "profile": "Reach_move(s)"
+      },
+      "conditions": [
+        "势固定为move的有限可达画像，不是概率、能量或价值总分。",
+        "本模型将节点位置作为区分状态的投影；检查的两次移动均连接不同节点。"
+      ],
+      "premises": [
+        "完整边表包含start→p及p→q。",
+        "Reach(start)={start,p,q,goal,harm}；Reach(p)=Reach(q)={p,q,goal}。"
+      ],
+      "conclusion": {
+        "kind": "model_comparison",
+        "statement": "start→p改变这项可达画像；p→q虽然位置改变，画像不变。变与势的关系由完整规则计算，不是一条无条件蕴含。"
+      },
+      "proof_sketch": [
+        "对固定move从各起点计算自反传递闭包，比较其行集合。",
+        "success的compare_reach返回false，表示两画像不相等；counterexample返回true，反驳凡变必改势。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "凡变必改变给定势画像",
+          "witness": "p→q改变位置，但p、q处于相同可达区域，Reach相等。"
+        },
+        {
+          "rejected": "变化必改善势",
+          "witness": "本画像没有优劣顺序；少一个harm后继与少一个目标后继的评价不同。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "Y04",
+          "S1",
+          "S3",
+          "L06"
+        ],
+        "source_text_support": "穷变通久与因利制权提供受限、变通及配置条件的语例，不规定此资源方程。",
+        "added_modern_assumptions": [
+          "有限位置图、完整move关系、Reach定义及两个起点的集合比较。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_02.success",
+          "edge_02.counterexample"
+        ],
+        "support_query_ids": [],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_02.success",
+            "kind": "compare_reach",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          },
+          {
+            "query_id": "edge_02.counterexample",
+            "kind": "compare_reach",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "s,t": "State",
+        "move": "Program",
+        "profile": "ReachabilityRecord"
+      }
+    },
+    {
+      "edge_id": "edge_03",
+      "original_adjacency": {
+        "nodes": [
+          "势",
+          "理"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "constraint_reachability_monotonicity",
+      "sense_bindings": [
+        {
+          "sense_id": "core.061.01",
+          "char": "势",
+          "label": "配置决定的可达画像",
+          "output_type": "InterpretationRecord"
+        },
+        {
+          "sense_id": "core.002.02",
+          "char": "理",
+          "label": "可行路径的限制",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "constraints",
+      "roles": {
+        "S": "fixed finite state set",
+        "s": "initial state",
+        "a": "Program",
+        "allowed": "Program encoding physical/structural admissibility"
+      },
+      "conditions": [
+        "比较时保持状态域、对象解释、初态与目标不变。",
+        "allowed仅作为明示转移约束，不与规范判断混型。"
+      ],
+      "premises": [
+        "R=⟦a⟧，R′=⟦sync(a,allowed)⟧，因此R′⊆R。",
+        "Reach_R(s)={t | (s,t)∈R*}。"
+      ],
+      "conclusion": {
+        "kind": "relation_inclusion",
+        "statement": "Reach_R′(s) ⊆ Reach_R(s)。收紧边约束不增加可达状态；包含不保证严格。"
+      },
+      "proof_sketch": [
+        "长度0的路径相同；每条R′边也是R边；对有限路径长度归纳。",
+        "以删去必要通道与删去冗余边分别展示严格缩小和不变。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "限制越多势一定严格变小",
+          "witness": "删除goal自环后，可达闭包仍含goal到自身的零步路径，所有Reach保持不变；这不证明goal仍有真实下一步。"
+        },
+        {
+          "rejected": "受约束动作合法 ⇒ 目标必可达",
+          "witness": "入口到中间节点合法，但最后出口边被排除。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "H1",
+          "Z03",
+          "S1",
+          "S3"
+        ],
+        "source_text_support": "结构条理、循间隙及配置条件是解释入口；路径闭包单调性是现代证明。",
+        "added_modern_assumptions": [
+          "将理绑定为允许边，势绑定为Reach；固定比较范围。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_03.success",
+          "edge_03.counterexample"
+        ],
+        "support_query_ids": [
+          "support_original_graph_reaches_goal",
+          "support_restricted_goal_retained",
+          "support_original_graph_all_safe",
+          "support_restricted_graph_all_safe",
+          "support_redundant_constraint_same_reach"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_03.success",
+            "kind": "relation_subset",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_03.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "S": "StateSet",
+        "s": "State",
+        "a": "Program",
+        "allowed": "Program"
+      }
+    },
+    {
+      "edge_id": "edge_04",
+      "original_adjacency": {
+        "nodes": [
+          "分",
+          "合"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "reorganization_composition_with_identity_and_loss",
+      "sense_bindings": [
+        {
+          "sense_id": "core.032.02",
+          "char": "分",
+          "label": "结构拆分",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.033.02",
+          "char": "合",
+          "label": "合并过程",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "A,D": "distinct Entity instances satisfying Org at different stages",
+        "B,C": "distinct Unit instances",
+        "u,v": "Part",
+        "split,merge,merge_lossy": "Program"
+      },
+      "conditions": [
+        "身份采用永久ID；A、B、C、D互不相等。",
+        "组成部件、信息记录、资源及谱系分别保存。"
+      ],
+      "premises": [
+        "s0中A为整体，split:s0→s1产生B/C且A退出Org。",
+        "s1的资源与兼容条件满足时，merge:s1→s2形成D；merge_lossy:s1→s3也形成D但丢失v的信息记录。"
+      ],
+      "conclusion": {
+        "kind": "model_contract",
+        "statement": "split;merge可恢复{u,v}的整体组成，但终态整体是D≠A且资源已耗；split;merge_lossy连完整信息也不恢复。故可顺接不等于互逆。"
+      },
+      "proof_sketch": [
+        "用共同s1复合两条真实关系边。",
+        "分别比较部件集合、InfoComplete、资源原始值与eq(A,D)，不以一种相等代替其他种。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "merge是split的默认逆",
+          "witness": "s0→s1→s2后实体由A变D且资源下降；状态没有回到s0。"
+        },
+        {
+          "rejected": "部件重聚即信息无损",
+          "witness": "s3仍有组织D及部件u/v，但v的信息记录丢失。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "S5",
+          "Z02"
+        ],
+        "source_text_support": "以分合为变、分成毁提供重组与层次区别的入口，不证明所有分合可逆。",
+        "added_modern_assumptions": [
+          "四个实例的身份、部件与信息分离、资源成本和两种合并算法。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_04.success",
+          "edge_04.counterexample"
+        ],
+        "support_query_ids": [
+          "support_original_identity_not_restored",
+          "support_lossy_still_forms_new_org",
+          "support_lineage_is_not_identity"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_04.success",
+            "kind": "formula",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_04.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "A,D": "Entity",
+        "B,C": "Entity",
+        "u,v": "RawPart",
+        "split,merge,merge_lossy": "Program"
+      }
+    },
+    {
+      "edge_id": "edge_05",
+      "original_adjacency": {
+        "nodes": [
+          "合",
+          "中"
+        ],
+        "directed": false
+      },
+      "resolution_status": "normative_interface",
+      "relation_type": "feasible_merge_meets_explicit_timeliness_policy",
+      "sense_bindings": [
+        {
+          "sense_id": "core.033.02",
+          "char": "合",
+          "label": "合并过程",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.082.02",
+          "char": "中",
+          "label": "时中的合宜判断",
+          "output_type": "NormJudgement"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "merge": "Program",
+        "action_merge": "Action bound explicitly to merge",
+        "N_timely": "named normative registry",
+        "s": "State"
+      },
+      "conditions": [
+        "中固定为所声明时宜规范下的合宜判断，不作中心或稳定点。",
+        "可行性与规范表独立求值；Norm不变成Formula。"
+      ],
+      "premises": [
+        "Feasible(s,merge)=〈merge〉⊤。",
+        "judge(N_timely,s,action_merge)取required/permitted/forbidden/undetermined之一。"
+      ],
+      "conclusion": {
+        "kind": "decision_interface",
+        "statement": "按G1 decision：可行且required/permitted则eligible=true；不可行或forbidden则false；可行且undetermined则null。仅是该规范下准入。"
+      },
+      "proof_sketch": [
+        "直接应用公开的decision定义，并显式记录Action与Program绑定。",
+        "s1、s1_late、s1_empty分别检验可行且合宜、可行但禁止、要求却不可行。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "合并可行 ⇒ 时中",
+          "witness": "s1_late的merge物理可行，但N_timely禁止。"
+        },
+        {
+          "rejected": "应当合并 ⇒ 可执行",
+          "witness": "s1_empty的规范仍要求merge，资源不足使其无后继。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "S5",
+          "C06"
+        ],
+        "source_text_support": "分合与时中各有文本入口；来源没有给出本项目的合并截止条件或准入函数。",
+        "added_modern_assumptions": [
+          "专门时宜规范N_timely、期限与资源原始记录、动作绑定及decision规则。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_05.success",
+          "edge_05.counterexample"
+        ],
+        "support_query_ids": [],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_05.success",
+            "kind": "decision",
+            "expected": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "actual": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "passed": true
+          },
+          {
+            "query_id": "edge_05.counterexample",
+            "kind": "decision",
+            "expected": {
+              "judgment": "forbidden",
+              "feasible": true,
+              "eligible": false
+            },
+            "actual": {
+              "judgment": "forbidden",
+              "feasible": true,
+              "eligible": false
+            },
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "merge": "Program",
+        "action_merge": "NormActionKey",
+        "N_timely": "NormRegistry",
+        "s": "State"
+      }
+    },
+    {
+      "edge_id": "edge_06",
+      "original_adjacency": {
+        "nodes": [
+          "中",
+          "和"
+        ],
+        "directed": false
+      },
+      "resolution_status": "normative_interface",
+      "relation_type": "conditional_classification_after_expression",
+      "sense_bindings": [
+        {
+          "sense_id": "core.082.01",
+          "char": "中",
+          "label": "情感未发的状态",
+          "output_type": "Formula"
+        },
+        {
+          "sense_id": "core.083.02",
+          "char": "和",
+          "label": "发而中节的评价",
+          "output_type": "NormJudgement"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "expression_norms",
+      "roles": {
+        "subject": "ContextSubject: the single stipulated participant of expression_norms, not a declared G1 Term",
+        "expression": "Program express / express_fit / express_excess; observed manifestations stored separately as raw records",
+        "N_expression": "explicit standard for all listed expression criteria"
+      },
+      "conditions": [
+        "中取未发状态；和取发而中节的评价。中节不是未发谓词的另一个名称。",
+        "表达结果与规范检验分别记录；此为有限示范规范，不宣称经验情感动力学。"
+      ],
+      "premises": [
+        "未发起点允许产生合节或失节的不同表达结果。",
+        "仅对已发生/明确模拟的表达，依据N_expression逐项检查全部已列标准。"
+      ],
+      "conclusion": {
+        "kind": "normative_classification",
+        "statement": "已发且满足N_expression全部标准时，给HarmonyJudgement_N=和；出现失节项则不称和。未发本身不推出任一后续表达皆和。"
+      },
+      "proof_sketch": [
+        "结论由公开的条件性称和规则取得，并保持为NormJudgement。",
+        "分别核验未发、合节表达、失节表达三类记录；不得将一般permitted直接改名为和。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "未发之中 ⇒ 此后必和",
+          "witness": "同一未发起点有失节表达的允许后继。"
+        },
+        {
+          "rejected": "当前未发 ⇒ 已获得发而中节的和评价",
+          "witness": "尚无表达，称和前提尚未满足。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "C06"
+        ],
+        "source_text_support": "中庸区分未发与发而中节，并称后者为和。原文不是本项目枚举表达转移的经验规律。",
+        "added_modern_assumptions": [
+          "表达原始记录、有限候选后继、N_expression的明确判据及评价接口。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_06.success",
+          "edge_06.counterexample"
+        ],
+        "support_query_ids": [
+          "support_unexpressed_start",
+          "support_actual_expression",
+          "support_unexpressed_is_not_normative_harmony"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_06.success",
+            "kind": "judgment",
+            "expected": "permitted",
+            "actual": "permitted",
+            "passed": true
+          },
+          {
+            "query_id": "edge_06.counterexample",
+            "kind": "normative_successors",
+            "expected": {
+              "n_excess": "forbidden",
+              "n_fit": "permitted"
+            },
+            "actual": {
+              "n_excess": "forbidden",
+              "n_fit": "permitted"
+            },
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "subject": "ContextSubject",
+        "expression": "Program",
+        "N_expression": "NormRegistry"
+      }
+    },
+    {
+      "edge_id": "edge_07",
+      "original_adjacency": {
+        "nodes": [
+          "生",
+          "分"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "same_transition_joint_event_classification",
+      "sense_bindings": [
+        {
+          "sense_id": "core.044.02",
+          "char": "生",
+          "label": "实例进入模式",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.032.02",
+          "char": "分",
+          "label": "结构拆分",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "A": "old Org Entity",
+        "B,C": "distinct new Unit Entity",
+        "split": "Program",
+        "L": "lineage predicate"
+      },
+      "conditions": [
+        "同一split、同一前态和后态；E和L由事件与成员记录派生。",
+        "L不当作严格eq；出生均相对于指定模式。"
+      ],
+      "premises": [
+        "s0中E(Org,A)且¬E(Unit,B)且¬E(Unit,C)。",
+        "s1中¬E(Org,A)且E(Unit,B)且E(Unit,C)，谱系含A→B、A→C。"
+      ],
+      "conclusion": {
+        "kind": "joint_program_feasibility",
+        "statement": "Enabled(sync(EndAs(Org,A,split),BornAs(Unit,B,split),BornAs(Unit,C,split)))在s0为真。"
+      },
+      "proof_sketch": [
+        "三个事件宏都保留同一split边(s0,s1)，交集非空。",
+        "eq区分三个实体；L记录承接，不导出同一。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "任何拆连接都生成新B/C",
+          "witness": "cut_in_place只删去A内部连接，没有建立B/C实例，BornAs(Unit,B,cut_in_place)不可行。"
+        },
+        {
+          "rejected": "后继承接 ⇒ 后继与前身严格相同",
+          "witness": "L(A,B)、L(A,C)成立而A≠B、A≠C、B≠C。"
+        },
+        {
+          "rejected": "不同后继各见证一次出生 ⇒ 同一分裂中共同出生",
+          "witness": "需sync共同前后态；分叉成两条各生一人的边不能满足共同出生查询。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "Z02",
+          "Z01",
+          "Y03"
+        ],
+        "source_text_support": "分成毁、气聚散与生生为不同文本入口；本例不把它们合成普遍生物分裂规律。",
+        "added_modern_assumptions": [
+          "实例域、模式、稳定ID、split算法及谱系记录。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_07.success",
+          "edge_07.counterexample"
+        ],
+        "support_query_ids": [
+          "support_birth_nonempty",
+          "support_lineage_is_not_identity"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_07.success",
+            "kind": "formula",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_07.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "A": "Entity",
+        "B,C": "Entity",
+        "split": "Program",
+        "L": "PredicateSymbol"
+      }
+    },
+    {
+      "edge_id": "edge_08",
+      "original_adjacency": {
+        "nodes": [
+          "变",
+          "合"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "merge_changes_explicit_membership_projection",
+      "sense_bindings": [
+        {
+          "sense_id": "core.045.01",
+          "char": "变",
+          "label": "前后差异",
+          "output_type": "Formula"
+        },
+        {
+          "sense_id": "core.033.02",
+          "char": "合",
+          "label": "合并过程",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "B,C,D": "Entity",
+        "merge": "Program",
+        "projection": "Org/Unit membership and composition"
+      },
+      "conditions": [
+        "合指真实模型重组程序，不指逻辑and、Join或seq。",
+        "比较同一对象域与同一存在/组成判据。"
+      ],
+      "premises": [
+        "merge从B/C为分立Unit、D不为Org的s1出发。",
+        "终态s2中D为Org且B/C退出本例Unit模式。"
+      ],
+      "conclusion": {
+        "kind": "event_projection_change",
+        "statement": "此merge在E(Org,D)及指定成员组织投影上非恒等，因此属于相应变化；不据此断言所有合都改善系统。"
+      },
+      "proof_sketch": [
+        "主正例逐边比较前后holdings，确认每条merge都改变成员/部件归属；D的E由假变真另由edge_11检验。",
+        "使用原merge边作见证，避免把单纯表达式组合误当世界变化。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "形成合表达式 ⇒ 现实已改变",
+          "witness": "构造W1∧W2或Join只形成Formula，状态不因此转移。"
+        },
+        {
+          "rejected": "合并变化 ⇒ 功能改善",
+          "witness": "merge_lossy形成D却丢信息，不能执行operate。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "S5",
+          "Y04"
+        ],
+        "source_text_support": "孙子明确以分合为变；本例将成员和模式变化操作化，未把军队分合推广成所有系统的规律。",
+        "added_modern_assumptions": [
+          "重组算法、成员和信息记录、比较投影及固定ID。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_08.success",
+          "edge_08.counterexample"
+        ],
+        "support_query_ids": [
+          "support_drain_is_resource_change",
+          "support_drain_is_not_merge",
+          "support_lossy_not_coordinated"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_08.success",
+            "kind": "relation_subset",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_08.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "B,C,D": "Entity",
+        "merge": "Program",
+        "projection": "ProjectionDescriptor"
+      }
+    },
+    {
+      "edge_id": "edge_09",
+      "original_adjacency": {
+        "nodes": [
+          "势",
+          "中"
+        ],
+        "directed": false
+      },
+      "resolution_status": "normative_interface",
+      "relation_type": "reachable_options_filtered_by_independent_timeliness_policy",
+      "sense_bindings": [
+        {
+          "sense_id": "core.061.01",
+          "char": "势",
+          "label": "配置决定的可达画像",
+          "output_type": "InterpretationRecord"
+        },
+        {
+          "sense_id": "core.082.02",
+          "char": "中",
+          "label": "时中的合宜判断",
+          "output_type": "NormJudgement"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "A_set": "finite named action set; the present primary example uses {merge}",
+        "ReachProfile": "derived action/goal feasibility record",
+        "N_timely": "normative registry"
+      },
+      "conditions": [
+        "势为指定选项的可达画像，画像按实际转移求得。",
+        "中为N_timely的合宜判断；两者保持独立。"
+      ],
+      "premises": [
+        "对每个a∈A_set计算Feasible(s,a)=Enabled(bound_program(a))。",
+        "对同一a读取N_timely的判断。"
+      ],
+      "conclusion": {
+        "kind": "decision_set",
+        "statement": "Eligible_N(s)由逐行动decision结果为true的行动组成；单独的可达画像不决定这一个集合。undetermined单列，不当作准许。"
+      },
+      "proof_sketch": [
+        "规则可用于任一明确的有限动作集；当前主实例A_set={merge}，逐项计算后继非空与规范判断，再应用decision。",
+        "不声称这两条主查询已经枚举N_timely的所有动作；规范要求也不生成物理边。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "可达更多 ⇒ 更合宜",
+          "witness": "迟到状态保留merge边，但N_timely禁止该行动。"
+        },
+        {
+          "rejected": "合宜或required ⇒ 已发生",
+          "witness": "规范及eligible仅是判断，没有执行记录。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "S1",
+          "S3",
+          "L06",
+          "C06"
+        ],
+        "source_text_support": "因情选择、配置条件及时中提供问题入口；未给出自然可达性到规范的蕴含。",
+        "added_modern_assumptions": [
+          "有限动作集、目标绑定、N_timely标准和decision集合定义。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_09.success",
+          "edge_09.counterexample"
+        ],
+        "support_query_ids": [],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_09.success",
+            "kind": "decision",
+            "expected": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "actual": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "passed": true
+          },
+          {
+            "query_id": "edge_09.counterexample",
+            "kind": "decision",
+            "expected": {
+              "judgment": "required",
+              "feasible": false,
+              "eligible": false
+            },
+            "actual": {
+              "judgment": "required",
+              "feasible": false,
+              "eligible": false
+            },
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "A_set": "FiniteNormActionSet",
+        "ReachProfile": "ReachabilityRecord",
+        "N_timely": "NormRegistry"
+      }
+    },
+    {
+      "edge_id": "edge_10",
+      "original_adjacency": {
+        "nodes": [
+          "理",
+          "和"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "declared_structural_coordination_criterion",
+      "sense_bindings": [
+        {
+          "sense_id": "core.002.01",
+          "char": "理",
+          "label": "结构条理",
+          "output_type": "Formula"
+        },
+        {
+          "sense_id": "core.083.01",
+          "char": "和",
+          "label": "差异项协调",
+          "output_type": "Formula"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "D": "Entity",
+        "RequiredParts": "finite Part set",
+        "attempt_merge": "Program",
+        "structural_allowed": "Program derived from bond compatibility",
+        "Coord": "descriptive predicate derived from raw organization records"
+      },
+      "conditions": [
+        "和仅取本例可检查的结构协调，不取情绪中节或伦理正当。",
+        "完整记录角色/部件、连接、兼容性和信息；Coord不得先置真再当证明。"
+      ],
+      "premises": [
+        "s1提供相容部件、完整信息和足够资源；尝试合并按明确算法生成后态。",
+        "在后态，Coord(D)由组织、各对部件兼容、信息覆盖全部部件的条件计算。"
+      ],
+      "conclusion": {
+        "kind": "conditional_coordination_instance",
+        "statement": "s1满足〈sync(attempt_merge,structural_allowed)〉Coord(D)；缺资源的s1_empty不满足。结构允许并不独自保证协调结果。"
+      },
+      "proof_sketch": [
+        "先执行有资源与部件条件的重组算法，再从后态raw记录计算Coord。",
+        "低资源失败尝试仍实际可执行，也可符合连接兼容约束，但没有产生D或Coord(D)。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "结构上允许的尝试 ⇒ 协调结果",
+          "witness": "s1_empty保持兼容且attempt可执行，但资源不足，D与Coord(D)不成立。"
+        },
+        {
+          "rejected": "有结构或有规则 ⇒ 和",
+          "witness": "s3的D仍是一个组织，但信息不完整，Coord(D)为假。"
+        },
+        {
+          "rejected": "Coord ⇒ 一定永续或正当",
+          "witness": "Coord没有资源无限供给或规范认可的前提。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "H1",
+          "Z03",
+          "C05",
+          "C08"
+        ],
+        "source_text_support": "理的结构条理与和的差异协调来自不同文本；此Coord判据是现代局部定义。",
+        "added_modern_assumptions": [
+          "RequiredParts、连接与兼容规则、信息完整性、由raw派生Coord的具体算法。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_10.success",
+          "edge_10.counterexample"
+        ],
+        "support_query_ids": [
+          "support_failed_attempt_is_executable",
+          "support_low_resource_compatible",
+          "support_lossy_not_coordinated"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_10.success",
+            "kind": "formula",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_10.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "D": "Entity",
+        "RequiredParts": "RawPartSet",
+        "attempt_merge": "Program",
+        "structural_allowed": "Program",
+        "Coord": "PredicateSymbol"
+      }
+    },
+    {
+      "edge_id": "edge_11",
+      "original_adjacency": {
+        "nodes": [
+          "生",
+          "合"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "conditional_merge_birth_of_new_identity",
+      "sense_bindings": [
+        {
+          "sense_id": "core.044.02",
+          "char": "生",
+          "label": "实例进入模式",
+          "output_type": "Program"
+        },
+        {
+          "sense_id": "core.033.02",
+          "char": "合",
+          "label": "合并过程",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "B,C": "Unit Entity",
+        "D": "fresh Org Entity",
+        "merge": "Program"
+      },
+      "conditions": [
+        "B/C不同于D；D此前未满足Org。",
+        "指定合并算法要求相容部件和足够资源；出生不自动等于功能完整。"
+      ],
+      "premises": [
+        "s1满足该算法的部件、兼容与资源条件。",
+        "merge将其组成D，并登记B→D、C→D的谱系。"
+      ],
+      "conclusion": {
+        "kind": "conditional_birth_event",
+        "statement": "Enabled(BornAs(Org,D,merge))在s1为真；新身份是D而非A复活。信息损失支路可仍出生但未协调。"
+      },
+      "proof_sketch": [
+        "从raw记录与merge生成事件计算E(Org,D)的前假后真。",
+        "结合谱系与eq分别说明由来和严格同一，不从L偷推eq。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "任何聚合尝试都会出生",
+          "witness": "资源不足或部件不兼容时attempt_merge进入失败态，D不生。"
+        },
+        {
+          "rejected": "新整体出生 ⇒ 原A恢复／功能完备",
+          "witness": "D≠A；lossy合并产生D但InfoComplete和Coord为假。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "Z01",
+          "L06",
+          "S5"
+        ],
+        "source_text_support": "知北游聚则为生是气论语例；把聚类比为本例合并属于明确新增桥梁，不等同军队会合或生物出生。",
+        "added_modern_assumptions": [
+          "组织存在判据、fresh ID、资源与兼容条件、失败和丢信息分支。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_11.success",
+          "edge_11.counterexample"
+        ],
+        "support_query_ids": [
+          "support_incompatible_attempt_is_executable",
+          "support_incompatible_before_attempt",
+          "support_insufficient_resource_no_birth"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_11.success",
+            "kind": "formula",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_11.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "B,C": "Entity",
+        "D": "Entity",
+        "merge": "Program"
+      }
+    },
+    {
+      "edge_id": "edge_12",
+      "original_adjacency": {
+        "nodes": [
+          "合",
+          "势"
+        ],
+        "directed": false
+      },
+      "resolution_status": "bounded_modern_rule",
+      "relation_type": "assembled_structure_enables_specific_goal",
+      "sense_bindings": [
+        {
+          "sense_id": "core.033.01",
+          "char": "合",
+          "label": "形成组合结构",
+          "output_type": "Formula"
+        },
+        {
+          "sense_id": "core.061.01",
+          "char": "势",
+          "label": "配置决定的可达画像",
+          "output_type": "InterpretationRecord"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "D": "Org Entity",
+        "operate": "Program",
+        "Done": "task-completion Formula"
+      },
+      "conditions": [
+        "合指满足明确关系判据的整体配置；势只问operate到Done这一可达项。",
+        "operate边由Coord(D)及resource≥1生成。"
+      ],
+      "premises": [
+        "s2由正常merge产生，Coord(D)为真且资源足够。",
+        "s3由lossy merge产生，D虽存在但InfoComplete及Coord为假。"
+      ],
+      "conclusion": {
+        "kind": "model_reachability_discrimination",
+        "statement": "s2满足〈operate〉Done，s3不满足；有效配置及其条件共同决定该可达项，单独组织标签不够。"
+      },
+      "proof_sketch": [
+        "由raw计算Coord与资源条件，再生成operate边，最后求值模态目标。",
+        "用同为D整体的s2/s3比较，隔离信息完整这一作用条件。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "合成整体 ⇒ 所有目标可达",
+          "witness": "s3已有D但无operate后继。"
+        },
+        {
+          "rejected": "联结越多则一切势指标越好",
+          "witness": "本规则只判断一个指定目标；未定义总优势、概率、稳定性或伦理价值。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "S5",
+          "S1",
+          "S3",
+          "L06"
+        ],
+        "source_text_support": "组织分合、配置蓄势和势成之提供语例；operate开放条件是现代任务机制。",
+        "added_modern_assumptions": [
+          "任务Done、信息与资源阈值、operate算法，以及正常/有损结构的比较。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_12.success",
+          "edge_12.counterexample"
+        ],
+        "support_query_ids": [
+          "support_before_merge_no_operate",
+          "support_composed_merge_operate"
+        ],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_12.success",
+            "kind": "formula",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "query_id": "edge_12.counterexample",
+            "kind": "formula",
+            "expected": false,
+            "actual": false,
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "D": "Entity",
+        "operate": "Program",
+        "Done": "Formula"
+      }
+    },
+    {
+      "edge_id": "edge_13",
+      "original_adjacency": {
+        "nodes": [
+          "中",
+          "理"
+        ],
+        "directed": false
+      },
+      "resolution_status": "normative_interface",
+      "relation_type": "constraint_checked_feasibility_then_normative_decision",
+      "sense_bindings": [
+        {
+          "sense_id": "core.082.02",
+          "char": "中",
+          "label": "时中的合宜判断",
+          "output_type": "NormJudgement"
+        },
+        {
+          "sense_id": "core.002.02",
+          "char": "理",
+          "label": "可行路径的限制",
+          "output_type": "Program"
+        }
+      ],
+      "modern_extension_ids": [],
+      "model_scope": "reorganization",
+      "roles": {
+        "a": "Program",
+        "preserve_information": "Program encoding transition admissibility",
+        "N_timely": "normative registry",
+        "action_a": "Action"
+      },
+      "conditions": [
+        "约束表达一组允许候选边；筛选本身不改变原过程的实际物理结果。",
+        "中取时宜规范，理取明确前后态约束，二者不互相充当依据。"
+      ],
+      "premises": [
+        "a_eff=sync(a,preserve_information)。",
+        "重新计算Enabled(a_eff)，同时读取judge(N_timely,s,action_a)。"
+      ],
+      "conclusion": {
+        "kind": "decision_interface",
+        "statement": "以明确绑定的a_eff调用decision；只有共同终点约束非空且规范required/permitted才准入。原a可行与规范许可两项仍可能不足。"
+      },
+      "proof_sketch": [
+        "先计算关系交集，确认存在同一前后态见证，再进行规范准入。",
+        "merge正常边保信息，merge_lossy不保信息；后者即使时间规范许可也不能通过此受约束方案。"
+      ],
+      "counterexamples": [
+        {
+          "rejected": "a与限制各自可行 ⇒ sync(a,限制)可行",
+          "witness": "两者可能只有不同终点；必须求真正交集。"
+        },
+        {
+          "rejected": "规范许可且原动作可行 ⇒ 受约束方案可执行",
+          "witness": "s1的merge_lossy获时间许可，但与preserve_information无共同边。"
+        },
+        {
+          "rejected": "过滤危险边 ⇒ 现实动作已被控制",
+          "witness": "筛选仅得到候选方案；实现该约束仍需控制与执行依据。"
+        }
+      ],
+      "evidence_boundary": {
+        "source_ids": [
+          "C06",
+          "H1",
+          "Z03"
+        ],
+        "source_text_support": "时中与循结构各自有来源；不存在无条件由结构推出合宜的原典定理。",
+        "added_modern_assumptions": [
+          "信息保持约束、共同终点交集、动作到受约束程序的绑定及N_timely。"
+        ],
+        "historical_claim": "语例与解释入口；不主张这些文献构成统一历史体系。",
+        "empirical_claim": "只对显式有限演示模型作语义判定；未宣称真实系统机制已获经验验证。"
+      },
+      "verification_contract": {
+        "result_file": "../engine/rule_results.json",
+        "query_ids": [
+          "edge_13.success",
+          "edge_13.counterexample"
+        ],
+        "support_query_ids": [],
+        "status": "bound_to_executable_queries",
+        "verified_at_generation": true,
+        "expectation_note": "success/counterexample是案例角色；反例查询的expected可以是false或拒绝结果，passed才表示与预期一致。",
+        "primary_results": [
+          {
+            "query_id": "edge_13.success",
+            "kind": "decision",
+            "expected": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "actual": {
+              "judgment": "required",
+              "feasible": true,
+              "eligible": true
+            },
+            "passed": true
+          },
+          {
+            "query_id": "edge_13.counterexample",
+            "kind": "decision",
+            "expected": {
+              "judgment": "required",
+              "feasible": false,
+              "eligible": false
+            },
+            "actual": {
+              "judgment": "required",
+              "feasible": false,
+              "eligible": false
+            },
+            "passed": true
+          }
+        ]
+      },
+      "role_type_bindings": {
+        "a": "Program",
+        "preserve_information": "Program",
+        "N_timely": "NormRegistry",
+        "action_a": "NormActionKey"
+      }
+    }
+  ],
+  "validation_requirements": {
+    "exact_coverage": "每一条输入邻接恰有一个edge_id；多义项不被静默替换。",
+    "source_integrity": "引用05与08已登记ID，现代假设逐边列出。",
+    "model_integrity": "原始数据先于派生E/Coord等谓词，所有动作由公开条件生成。",
+    "verification": "逐边至少一个正例或明确规范判定、一个失败/反例；引用可重跑查询。",
+    "theorem_vs_case": "一般关系包含由证明支持；有限模型结论仅限该模型；规范结论仅限该N。"
+  },
+  "verification_snapshot": {
+    "source_file": "../engine/rule_results.json",
+    "checked_edge_ids": [
+      "edge_01",
+      "edge_02",
+      "edge_03",
+      "edge_04",
+      "edge_05",
+      "edge_06",
+      "edge_07",
+      "edge_08",
+      "edge_09",
+      "edge_10",
+      "edge_11",
+      "edge_12",
+      "edge_13"
+    ],
+    "primary_query_count": 26,
+    "all_primary_and_linked_support_queries_passed": true,
+    "engine_report": {
+      "rule_count": 13,
+      "query_count": 48,
+      "cross_checked_query_count": 48,
+      "raw_fact_checks": 432,
+      "action_domain_completeness_checks": 2,
+      "rejection_count": 2,
+      "passed": true
+    },
+    "limits": "relational oracle uses different composition/closure code and raw fact lookups; both share the declared event mechanism, so this is not independent empirical validation"
+  },
+  "normative_label_binding": {
+    "N_expression": {
+      "action": "assess_expression",
+      "permitted": "在该明确表达规范下称和",
+      "forbidden": "不满足该表达规范的和判据",
+      "undetermined": "未发表达，尚无该项称和判定",
+      "scope": "仅此命名规范与行动的显式标签；不得推广为任意许可即和。"
+    },
+    "N_timely": {
+      "scope": "只评时机；与信息完整、严格身份、Coord及总体伦理最优分别判断。"
+    }
+  }
+}

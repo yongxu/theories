@@ -1,0 +1,556 @@
+{
+  "protocol_sha256": "fdee013d63f01e673cf24d39cad2b0f1caff164879cdf8d8d90db9d227894ddd",
+  "sources": [
+    {
+      "source_id": "L",
+      "title": "老子王弼本经文",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "revision_id": "2354026",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29&oldid=2354026",
+      "retrieved_at": "2026-10-21T13:43:50.951897+00:00",
+      "raw_sha256": "1215fe781fb379a0a529659aaa736936618985cb596c6cce09569f7ef15dd45f",
+      "raw_file": "sources/L.html",
+      "copyright": "Ancient original text is public domain; web transcription and apparatus credited to Wikisource."
+    },
+    {
+      "source_id": "A",
+      "title": "论语学而",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80",
+      "revision_id": "11118093",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80&oldid=11118093",
+      "retrieved_at": "2026-10-21T13:43:50.814076+00:00",
+      "raw_sha256": "dda6b9449a7eae332eb0d8f516852584632be4055008816187e583cdc9914389",
+      "raw_file": "sources/A.html",
+      "copyright": "Ancient original text is public domain; web transcription and apparatus credited to Wikisource."
+    },
+    {
+      "source_id": "Y",
+      "title": "易传说卦",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6",
+      "revision_id": "2614055",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6&oldid=2614055",
+      "retrieved_at": "2026-10-21T13:43:51.375043+00:00",
+      "raw_sha256": "8e1627f1f516d78d8f3392fceb0c52af4f25fd4f025b06dbef7dfc46c71be97f",
+      "raw_file": "sources/Y.html",
+      "copyright": "Ancient original text is public domain; web transcription and apparatus credited to Wikisource."
+    },
+    {
+      "source_id": "M",
+      "title": "墨子经上",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A",
+      "revision_id": "2637042",
+      "permalink": "https://zh.wikisource.org/w/index.php?title=%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A&oldid=2637042",
+      "retrieved_at": "2026-10-21T13:43:51.036750+00:00",
+      "raw_sha256": "7f2b3d2b28594cf76363bd83d9ce26c57a9b52a1decc47008a3c8a2976773022",
+      "raw_file": "sources/M.html",
+      "copyright": "Ancient original text is public domain; web transcription and apparatus credited to Wikisource."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "L01",
+      "source_id": "L",
+      "position": 1,
+      "locator": "一章",
+      "text": "道可道，非常道，名可名，非常名；無名，天地之始，有名，萬物之母。故常無欲，以觀其妙，常有欲，以觀其徼；此兩者，同出而異名，同謂之玄。玄之又玄，眾妙之門。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E4%B8%80%E7%AB%A0",
+      "text_sha256": "7c529fc1b1c1eb7bbb384e451ecdf46cf2da07cd94fb9c79f9377d59f5df7db9"
+    },
+    {
+      "unit_id": "L02",
+      "source_id": "L",
+      "position": 2,
+      "locator": "二章",
+      "text": "天下皆知美之為美，斯惡已。皆知善之為善，斯不善已。故有無相生，難易相成，長短相較，高下相傾，音聲相和，前後相隨。是以聖人處無為之事，行不言之教；萬物作焉而不辭，生而不有，為而不恃，功成而弗居。夫唯弗居，是以不去。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E4%BA%8C%E7%AB%A0",
+      "text_sha256": "a06c30217018c76c939ccfa9053bae906e0275741fd17e2688f852d0632a4aff"
+    },
+    {
+      "unit_id": "L03",
+      "source_id": "L",
+      "position": 3,
+      "locator": "三章",
+      "text": "不尚賢，使民不爭；不貴難得之貨，使民不為盜；不見可欲，使民心不亂。是以聖人之治，虛其心，實其腹，弱其志，強其骨。常使民無知無欲。使夫智者不敢為也。為無為，則無不治。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E4%B8%89%E7%AB%A0",
+      "text_sha256": "09f801220a75c7958b463a8e2ad1bfd510ed6adf6153b6f643227c8d1958c594"
+    },
+    {
+      "unit_id": "L04",
+      "source_id": "L",
+      "position": 4,
+      "locator": "四章",
+      "text": "道沖而用之或不盈，淵兮似萬物之宗；挫其銳，解其紛，和其光，同其塵，湛兮似或存。吾不知誰之子，象帝之先。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E5%9B%9B%E7%AB%A0",
+      "text_sha256": "3087768a581733013ba07a3fb986e042c2b3ace946d6afdc70167032a30340db"
+    },
+    {
+      "unit_id": "L05",
+      "source_id": "L",
+      "position": 5,
+      "locator": "五章",
+      "text": "天地不仁，以萬物為芻狗；聖人不仁，以百姓為芻狗。天地之間，其猶橐籥乎？虛而不屈，動而愈出。多言數窮，不如守中。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E4%BA%94%E7%AB%A0",
+      "text_sha256": "aed4e563defdc18142d19f2139600847ca835e54177e75a4a712867fcf7eef60"
+    },
+    {
+      "unit_id": "L06",
+      "source_id": "L",
+      "position": 6,
+      "locator": "六章",
+      "text": "谷神不死，是謂玄牝。玄牝之門，是謂天地根。緜緜若存，用之不勤。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E5%85%AD%E7%AB%A0",
+      "text_sha256": "acd9dee0ab39dcd0727015774ee13bb64ec8d081fef071be8981ddc5d5e789cd"
+    },
+    {
+      "unit_id": "L07",
+      "source_id": "L",
+      "position": 7,
+      "locator": "七章",
+      "text": "天長地久。天地所以能長且久者，以其不自生，故能長生。是以聖人後其身而身先；外其身而身存。非以其無私邪，故能成其私。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E4%B8%83%E7%AB%A0",
+      "text_sha256": "3ff8cdf850b7dc61f15af7246ffc6368dc9ddae05ae1721ab61027b1615ca7af"
+    },
+    {
+      "unit_id": "L08",
+      "source_id": "L",
+      "position": 8,
+      "locator": "八章",
+      "text": "上善若水。水善利萬物而不爭，處眾人之所惡，故幾於道。居善地，心善淵，與善仁，言善信，正善治，事善能，動善時。夫唯不爭，故無尤。",
+      "url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29#%E5%85%AB%E7%AB%A0",
+      "text_sha256": "0d68d5bf5caccc3af51a69aed781c608e4c215b5e8bb860320329137b953136c"
+    },
+    {
+      "unit_id": "A01",
+      "source_id": "A",
+      "position": 1,
+      "locator": "一之一",
+      "text": "子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%B8%80",
+      "text_sha256": "9b4c1e33fe7fdd2667c828c3e8d09d02a2a951c0805e641f7773c5c1b743f27f"
+    },
+    {
+      "unit_id": "A02",
+      "source_id": "A",
+      "position": 2,
+      "locator": "一之二",
+      "text": "有子曰：「其爲人也孝弟，而好犯上者，鮮矣；不好犯上，而好作亂者，未之有也。君子務本，本立而道生；孝弟也者，其爲仁之本與？」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%BA%8C",
+      "text_sha256": "eadc68b4760ba75a44b861e186c4ab0788f155e0347994cd291f256e162ad2ee"
+    },
+    {
+      "unit_id": "A03",
+      "source_id": "A",
+      "position": 3,
+      "locator": "一之三",
+      "text": "子曰：「巧言令色，鮮矣仁。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%B8%89",
+      "text_sha256": "96e1f5ac4155c12412d9d128d17b3c4f7a1e94337a221444cc6014bded88e89e"
+    },
+    {
+      "unit_id": "A04",
+      "source_id": "A",
+      "position": 4,
+      "locator": "一之四",
+      "text": "曾子曰：「吾日三省吾身：爲人謀而不忠乎？與朋友交而不信乎？傳不習乎？」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%9B%9B",
+      "text_sha256": "094e8d3f59c82cd0fce942d208a43b236681665e9d3f411c22c175ac21262396"
+    },
+    {
+      "unit_id": "A05",
+      "source_id": "A",
+      "position": 5,
+      "locator": "一之五",
+      "text": "子曰：「道千乘之國，敬事而信，節用而愛人，使民以時。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%BA%94",
+      "text_sha256": "047f3ec2ab58133919c493ad10646a6d2a4c18b764d50e8e13de41419c1195b3"
+    },
+    {
+      "unit_id": "A06",
+      "source_id": "A",
+      "position": 6,
+      "locator": "一之六",
+      "text": "子曰：「弟子入則孝，出則弟，謹而信，汎愛眾，而親仁。行有餘力，則以學文。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%85%AD",
+      "text_sha256": "165c6225ab9bd343a3c9da38386015b4d29291983daf0162609156bed75d7ca6"
+    },
+    {
+      "unit_id": "A07",
+      "source_id": "A",
+      "position": 7,
+      "locator": "一之七",
+      "text": "子夏曰：「賢賢易色；事父母，能竭其力；事君，能致其身；與朋友交，言而有信；雖曰未學，吾必謂之學已矣。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%B8%83",
+      "text_sha256": "c177b103be6b75f29138ecc9b904f2ead6c51173ba98c3a9d4859b6f8eb7b409"
+    },
+    {
+      "unit_id": "A08",
+      "source_id": "A",
+      "position": 8,
+      "locator": "一之八",
+      "text": "子曰：「君子不重則不威，學則不固。主忠信，無友不如己者，過則勿憚改。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%85%AB",
+      "text_sha256": "26924806ecb22051fd516f959500faad4d119afd51214980e5fc6d4f9ba143e3"
+    },
+    {
+      "unit_id": "A09",
+      "source_id": "A",
+      "position": 9,
+      "locator": "一之九",
+      "text": "曾子曰：「愼終追遠，民德歸厚矣。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E4%B9%9D",
+      "text_sha256": "58f2604278e114bb6d649cef2fd2c1dd42672d35a34ae29e26783cb466acbfa9"
+    },
+    {
+      "unit_id": "A10",
+      "source_id": "A",
+      "position": 10,
+      "locator": "一之十",
+      "text": "子禽問於子貢曰：「夫子至於是邦也，必聞其政，求之與？抑與之與？」子貢曰：「夫子溫、良、恭、儉、讓以得之。夫子之求之也，其諸異乎人之求之與？」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81",
+      "text_sha256": "07b92d1d84d2d9d411a5e2ac91264e1b5fab58bc2b9549f526070bea0c16457e"
+    },
+    {
+      "unit_id": "A11",
+      "source_id": "A",
+      "position": 11,
+      "locator": "一之十一",
+      "text": "子曰：「父在觀其志，父沒觀其行。三年無改於父之道，可謂孝矣。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E4%B8%80",
+      "text_sha256": "6f57f121610fc3878a857d2aa0cc55cedeb19c664026256b150fd9322f8e6ae8"
+    },
+    {
+      "unit_id": "A12",
+      "source_id": "A",
+      "position": 12,
+      "locator": "一之十二",
+      "text": "有子曰：「禮之用，和爲貴；先王之道，斯爲美；小大由之。有所不行，知和而和，不以禮節之，亦不可行也。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E4%BA%8C",
+      "text_sha256": "1f5437815674d03fcfbb97ed3c52ff563b29f3ed1a91fd04b75eb4a12837ec2a"
+    },
+    {
+      "unit_id": "A13",
+      "source_id": "A",
+      "position": 13,
+      "locator": "一之十三",
+      "text": "有子曰：「信近於義，言可復也；恭近於禮，遠恥辱也。因不失其親，亦可宗也。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E4%B8%89",
+      "text_sha256": "892da9928bdc1f47787b306e84b609ecde20c161fe333359644af83a56e04417"
+    },
+    {
+      "unit_id": "A14",
+      "source_id": "A",
+      "position": 14,
+      "locator": "一之十四",
+      "text": "子曰：「君子食無求飽，居無求安，敏於事而愼於言，就有道而正焉：可謂好學也已。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E5%9B%9B",
+      "text_sha256": "e5cd0600c803f6a1244818d7898c55a36676c52edaa12de699faeee88a8eba25"
+    },
+    {
+      "unit_id": "A15",
+      "source_id": "A",
+      "position": 15,
+      "locator": "一之十五",
+      "text": "子貢曰：「貧而無諂，富而無驕，何如？」子曰：「可也。未若貧而樂，富而好禮者也」。子貢曰：「《詩》云：『如切如磋，如琢如磨。』其斯之謂與？」子曰：「賜也，始可與言《詩》已矣！吿諸往而知來者。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E4%BA%94",
+      "text_sha256": "61a67527a5f7e6da4db57b93fc79dc629de401e2a39a12fdfc119bcc80bfcc2a"
+    },
+    {
+      "unit_id": "A16",
+      "source_id": "A",
+      "position": 16,
+      "locator": "一之十六",
+      "text": "子曰：「不患人之不己知，患不知人也。」",
+      "url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80#%E4%B8%80%E4%B9%8B%E5%8D%81%E5%85%AD",
+      "text_sha256": "44dab3cc312c4bbc16f50441545ab1927be5c288b66b326681bb97dd8b0c9978"
+    },
+    {
+      "unit_id": "Y01",
+      "source_id": "Y",
+      "position": 1,
+      "locator": "第一章",
+      "text": "昔者，聖人之作《易》也，幽贊於神明而生蓍。參天兩地而倚數，觀變於陰陽而立卦；發揮於剛柔而生爻；和順於道德而理於義；窮理盡性以至於命。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%B8%80%E7%AB%A0",
+      "text_sha256": "59a49f0fcfbac90e20ddf385714c71cb0a213b60d31b5e77b3267f79faf03cae"
+    },
+    {
+      "unit_id": "Y02",
+      "source_id": "Y",
+      "position": 2,
+      "locator": "第二章",
+      "text": "昔者，聖人之作《易》也，將以順性命之理。是以立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義。兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%BA%8C%E7%AB%A0",
+      "text_sha256": "bf64f762e6de5758fb250990f66b283c9e44db4f405e904a48660c018e1aa50a"
+    },
+    {
+      "unit_id": "Y03",
+      "source_id": "Y",
+      "position": 3,
+      "locator": "第三章",
+      "text": "天地定位，山澤通氣，雷風相薄，水火不相射。八卦相錯，數往者順，知來者逆。是故易逆數也。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%B8%89%E7%AB%A0",
+      "text_sha256": "46b2e5e52470148efb3a614b45ab0b095b31e8d0b75f9899fde766245eabe826"
+    },
+    {
+      "unit_id": "Y04",
+      "source_id": "Y",
+      "position": 4,
+      "locator": "第四章",
+      "text": "雷以動之，風以散之，雨以潤之，日以烜之，艮以止之，兌以說之，乾以君之，坤以藏之。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E5%9B%9B%E7%AB%A0",
+      "text_sha256": "139c25724551cb56107d7d55bc49b65c842b57ac4b6c5a30cb4a860d387dd7f0"
+    },
+    {
+      "unit_id": "Y05",
+      "source_id": "Y",
+      "position": 5,
+      "locator": "第五章",
+      "text": "帝出乎震，齊乎巽，相見乎離，致役乎坤，說言乎兌，戰乎乾，勞乎坎，成言乎艮。萬物出乎震，震，東方也。齊乎巽，巽，東南也，齊也者，言萬物之潔齊也。離也者，明也，萬物皆相見，南方之卦也。聖人南面而聽天下，嚮明而治，蓋取諸此也。坤也者，地也，萬物皆致養焉，故曰致役乎坤。兌，正秋也。萬物之所說也。故曰說；言乎兌。戰乎乾，乾，西北之卦也。言陰陽相薄也。坎者，水也，正北方之卦也，勞卦也，萬物之所歸也，故曰勞乎坎。艮，東北之卦也，萬物之所成，終而所成始也，故曰成言乎艮。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%BA%94%E7%AB%A0",
+      "text_sha256": "afc8903069e0d7ad61f2d6bbe6711c0f2f9b7465821020c038d632423f438665"
+    },
+    {
+      "unit_id": "Y06",
+      "source_id": "Y",
+      "position": 6,
+      "locator": "第六章",
+      "text": "神也者。妙萬物而為言者也。動萬物者，莫疾乎雷。橈萬物者，莫疾乎風。燥萬物者，莫熯乎火。說萬物者，莫說乎澤。潤萬物者，莫潤乎水。終萬物、始萬物者，莫盛乎艮。故水火相逮，雷風不相悖，山澤通氣，然後能變化，既成萬物也。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E5%85%AD%E7%AB%A0",
+      "text_sha256": "c4e7d552cf99254084a144b82092fa6abe92e44e28006966ea9b263cedc1b744"
+    },
+    {
+      "unit_id": "Y07",
+      "source_id": "Y",
+      "position": 7,
+      "locator": "第七章",
+      "text": "乾，健也。坤，順也。震，動也。巽，入也。坎，陷也。離，麗也。艮，止也。兌，說也。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%B8%83%E7%AB%A0",
+      "text_sha256": "75f8e7d27bf9d6ab47057979ed0f966a5d9958e6599c298f0a72d03262c64b9c"
+    },
+    {
+      "unit_id": "Y08",
+      "source_id": "Y",
+      "position": 8,
+      "locator": "第八章",
+      "text": "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E5%85%AB%E7%AB%A0",
+      "text_sha256": "74cd1e2ff3ac25520f8661eb490fa5e9c83f3b9e57b5287925efce20757519b5"
+    },
+    {
+      "unit_id": "Y09",
+      "source_id": "Y",
+      "position": 9,
+      "locator": "第九章",
+      "text": "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E4%B9%9D%E7%AB%A0",
+      "text_sha256": "4d07c7a5ca810557f9a5c52e32a34bbbc6916b50b0c07819e7b6f12d41629dd1"
+    },
+    {
+      "unit_id": "Y10",
+      "source_id": "Y",
+      "position": 10,
+      "locator": "第十章",
+      "text": "乾，天也，故稱乎父；坤，地也，故稱乎母；震一索而得男，故謂之長男；巽一索而得女，故謂之長女；坎再索而得男，故謂之中男；離再索而得女，故謂之中女；艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E5%8D%81%E7%AB%A0",
+      "text_sha256": "9be28e694bc18aff0302e6c2ddf2e9cad6a5d47d2da2a4040bfaaf1824e382f6"
+    },
+    {
+      "unit_id": "Y11",
+      "source_id": "Y",
+      "position": 11,
+      "locator": "第十一章",
+      "text": "乾為天、為圜、為君、為父、為玉、為金、為寒、為冰、為大赤、為良馬、為老馬、為瘠馬、為駁馬、為木果。坤為地、為母、為布、為釜、為吝嗇、為均、為子母牛、為大輿、為文、為眾、為柄。其於地也為黑。震為雷、為龍、為玄黃、為敷、為大涂、為長子、為決躁、為蒼筤竹、為萑葦。其於馬也，為善鳴、為馵足，為的顙。其於稼也，為反生。其究為健，為蕃鮮。巽為木、為風、為長女、為繩直、為工、為白、為長、為高、為進退、為不果、為臭。其於人也，為寡髮、為廣顙、為多白眼、為近利市三倍。其究為躁卦。坎為水、為溝瀆、為隱伏、為矯輮、為弓輪。其於人也，為加憂、為心病、為耳痛、為血卦、為赤。其於馬也，為美脊、為亟心、為下首、為薄蹄、為曳。其於輿也，為多眚、為通、為月、為盜。其於木也，為堅多心。離為火、為日、為電、為中女、為甲冑、為戈兵。其於人也，為大腹、為乾卦、為鱉、為蟹、為蠃、為蚌、為龜。其於木也，為科上槁。艮為山、為徑路、為小石、為門闕、為果蓏、為閽寺、為指、為狗、為鼠、為黔喙之屬。其於木也，為堅多節。兌為澤、為少女、為巫、為口舌、為毀折、為附決。其於地也，為剛鹵，為妾、為羊。",
+      "url": "https://zh.wikisource.org/wiki/%E6%98%93%E5%82%B3/%E8%AA%AA%E5%8D%A6#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0",
+      "text_sha256": "d916349af6e2e893e38e11e40f1589ae99bd17f3f77c8af7ea30f30df8b4c774"
+    },
+    {
+      "unit_id": "M01",
+      "source_id": "M",
+      "position": 1,
+      "locator": "第1条",
+      "text": "故，所得而後成也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC1%E6%9D%A1",
+      "text_sha256": "28fc460e500dafc0447dea09354cad061484cec8d6434a93c67fee179bf3c5ec"
+    },
+    {
+      "unit_id": "M02",
+      "source_id": "M",
+      "position": 2,
+      "locator": "第2条",
+      "text": "體，分於兼也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC2%E6%9D%A1",
+      "text_sha256": "59346b66a18b498ed1ee47c7bf0530455c8f427d3d7aba31969be77abd0096e5"
+    },
+    {
+      "unit_id": "M03",
+      "source_id": "M",
+      "position": 3,
+      "locator": "第3条",
+      "text": "知，材也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC3%E6%9D%A1",
+      "text_sha256": "c1cd336773569126dc3323683823dc48286712171483aa9249c33d071c51bdfd"
+    },
+    {
+      "unit_id": "M04",
+      "source_id": "M",
+      "position": 4,
+      "locator": "第4条",
+      "text": "慮，求也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC4%E6%9D%A1",
+      "text_sha256": "dc6e6b88bf2c0e22954f8b00a635409a1a68e82cdd7f007666b7b429670ee04b"
+    },
+    {
+      "unit_id": "M05",
+      "source_id": "M",
+      "position": 5,
+      "locator": "第5条",
+      "text": "知，接也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC5%E6%9D%A1",
+      "text_sha256": "39b872e43b1c1b39fc4c10ab3265e1a2402506893e8d863474e2042022976da9"
+    },
+    {
+      "unit_id": "M06",
+      "source_id": "M",
+      "position": 6,
+      "locator": "第6条",
+      "text": "智，明也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC6%E6%9D%A1",
+      "text_sha256": "5dd1a0ffc98e3f35c6c7f9a882de215ed14ec24c65548ac9f4e48cf832e577cb"
+    },
+    {
+      "unit_id": "M07",
+      "source_id": "M",
+      "position": 7,
+      "locator": "第7条",
+      "text": "仁，體愛也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC7%E6%9D%A1",
+      "text_sha256": "217008570bbc62e54b8755a89eb36f9661821cb14ff73efd39bccb17542de9e9"
+    },
+    {
+      "unit_id": "M08",
+      "source_id": "M",
+      "position": 8,
+      "locator": "第8条",
+      "text": "義，利也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC8%E6%9D%A1",
+      "text_sha256": "dc03d1af5c64306f505bd3b2c207963e7ee6dd922de5d5b04799fcc82751ef44"
+    },
+    {
+      "unit_id": "M09",
+      "source_id": "M",
+      "position": 9,
+      "locator": "第9条",
+      "text": "禮，敬也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC9%E6%9D%A1",
+      "text_sha256": "60c54be0a1d51b517e031dae0d8a92b34b1ec3f2eb61c6d6cd46d9586984f2a7"
+    },
+    {
+      "unit_id": "M10",
+      "source_id": "M",
+      "position": 10,
+      "locator": "第10条",
+      "text": "行，爲也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC10%E6%9D%A1",
+      "text_sha256": "5f38f27a3c98fb9bfbd3c4a0698d86c8fc13ff257383831c097a7019305d1f60"
+    },
+    {
+      "unit_id": "M11",
+      "source_id": "M",
+      "position": 11,
+      "locator": "第11条",
+      "text": "實，榮也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC11%E6%9D%A1",
+      "text_sha256": "637cb07701102c91ca616cd5523b24f75f46cfe6ad8415e2b89c079f9f4501bd"
+    },
+    {
+      "unit_id": "M12",
+      "source_id": "M",
+      "position": 12,
+      "locator": "第12条",
+      "text": "忠，以爲利而强低也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC12%E6%9D%A1",
+      "text_sha256": "abbd6cca418a5bc7450d54c89948dcdf29bedb199661315cac830a599b9f816b"
+    },
+    {
+      "unit_id": "M13",
+      "source_id": "M",
+      "position": 13,
+      "locator": "第13条",
+      "text": "孝，利親也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC13%E6%9D%A1",
+      "text_sha256": "6f46eb785d0d10535f638e3c9856619b4d539c0637a6684b9f204dfb35e3e344"
+    },
+    {
+      "unit_id": "M14",
+      "source_id": "M",
+      "position": 14,
+      "locator": "第14条",
+      "text": "信，言合於意也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC14%E6%9D%A1",
+      "text_sha256": "ee5af2d725c794e9a52306077d576acd45c6103d6837a2f0936876fa15cdd08d"
+    },
+    {
+      "unit_id": "M15",
+      "source_id": "M",
+      "position": 15,
+      "locator": "第15条",
+      "text": "佴，自作也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC15%E6%9D%A1",
+      "text_sha256": "e94dd4d1a78cce3e85ca5e945d1a91efb4882efb0ac809fb0a8503046b0207a1"
+    },
+    {
+      "unit_id": "M16",
+      "source_id": "M",
+      "position": 16,
+      "locator": "第16条",
+      "text": "誚，非嗛也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC16%E6%9D%A1",
+      "text_sha256": "e82b09dea6f7629c4d34313f27fcb47110da0cabc0051b57e42609ab48b3ec42"
+    },
+    {
+      "unit_id": "M17",
+      "source_id": "M",
+      "position": 17,
+      "locator": "第17条",
+      "text": "廉，非作也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC17%E6%9D%A1",
+      "text_sha256": "4443b05801c4507617763719599f2923468f99d30e92a15e370f653ddaaad30e"
+    },
+    {
+      "unit_id": "M18",
+      "source_id": "M",
+      "position": 18,
+      "locator": "第18条",
+      "text": "令，不爲所非也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC18%E6%9D%A1",
+      "text_sha256": "4babd5a35c9b9d5ff58671b1fe897b59a7a669eb23f7b3fbb922aa7324eab380"
+    },
+    {
+      "unit_id": "M19",
+      "source_id": "M",
+      "position": 19,
+      "locator": "第19条",
+      "text": "任，士損己而益所爲也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC19%E6%9D%A1",
+      "text_sha256": "c45abe92530abb04f27869dd684e3a1a684b319151fc36162d2b0955e92ae913"
+    },
+    {
+      "unit_id": "M20",
+      "source_id": "M",
+      "position": 20,
+      "locator": "第20条",
+      "text": "勇，志之所以敢也。",
+      "url": "https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E7%B6%93%E4%B8%8A#%E7%AC%AC20%E6%9D%A1",
+      "text_sha256": "652d47491dbbb98e5fe0028cc05c18f8c37acf12cbeb2487525ce673e779d617"
+    }
+  ],
+  "counts": {
+    "L": 8,
+    "A": 16,
+    "Y": 11,
+    "M": 20
+  },
+  "notes": [
+    "L经文与注疏分离须人工复核；A已去掉悬浮异文和脚注，不合并异文成正文。",
+    "页面传统作者栏不作为本项目的作者或成书年代证据。"
+  ]
+}

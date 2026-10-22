@@ -1,0 +1,375 @@
+{
+  "title": "09第八节 后果与规范分别输入",
+  "notes": [
+    "Bridge: a导致h且Harm为真，b导致n且Harm为假；二者后态都可持续。",
+    "V的明示理由：本决策任务仅接受可行且所有后果都不伤害指定人的行动。",
+    "norms.V是依据V给定的独立判断表，不是解释器从K或Harm自动证明的伦理结论。",
+    "s以外不承担本轮选择任务，规范表显式给undetermined；无须臆造这些状态的伦理判断。",
+    "来源线索Y10、C09。decision另在validate_casebook.py中核规范准入与过程可行性。"
+  ],
+  "model": {
+    "context_id": "G1-09-normative-choice",
+    "closed_world": true,
+    "states": [
+      "s",
+      "h",
+      "n"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "K": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "s": [
+            []
+          ],
+          "h": [
+            []
+          ],
+          "n": [
+            []
+          ]
+        }
+      },
+      "Harm": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "s": [],
+          "h": [
+            []
+          ],
+          "n": []
+        }
+      }
+    },
+    "programs": {
+      "a": [
+        [
+          "s",
+          "h"
+        ]
+      ],
+      "b": [
+        [
+          "s",
+          "n"
+        ]
+      ],
+      "tick": [
+        [
+          "h",
+          "h"
+        ],
+        [
+          "n",
+          "n"
+        ]
+      ]
+    },
+    "norms": {
+      "V": {
+        "actions": [
+          "a",
+          "b"
+        ],
+        "judgments": {
+          "s": {
+            "a": "forbidden",
+            "b": "permitted"
+          },
+          "h": {
+            "a": "undetermined",
+            "b": "undetermined"
+          },
+          "n": {
+            "a": "undetermined",
+            "b": "undetermined"
+          }
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "a可以导致可持续后态",
+      "state": "s",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "a"
+        },
+        "body": {
+          "op": "box",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "tick"
+            }
+          },
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "K",
+                "args": []
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "true"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "b也可以导致可持续后态",
+      "state": "s",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "b"
+        },
+        "body": {
+          "op": "box",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "tick"
+            }
+          },
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "K",
+                "args": []
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "true"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "a不能通过不伤害后果检查",
+      "state": "s",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "a"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "box",
+            "program": {
+              "op": "atomic",
+              "name": "a"
+            },
+            "body": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "Harm",
+                "args": []
+              }
+            }
+          }
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "b通过不伤害后果检查",
+      "state": "s",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "b"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "box",
+            "program": {
+              "op": "atomic",
+              "name": "b"
+            },
+            "body": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "Harm",
+                "args": []
+              }
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "h可持续仍有伤害",
+      "state": "h",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "tick"
+              }
+            },
+            "body": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "atom",
+                  "name": "K",
+                  "args": []
+                },
+                {
+                  "op": "diamond",
+                  "program": {
+                    "op": "atomic",
+                    "name": "tick"
+                  },
+                  "body": {
+                    "op": "true"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "op": "atom",
+            "name": "Harm",
+            "args": []
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "终态没有b动作但box可以空真",
+      "state": "n",
+      "formula": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "b"
+        },
+        "body": {
+          "op": "not",
+          "arg": {
+            "op": "atom",
+            "name": "Harm",
+            "args": []
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "实际后果检查拒绝无动作的空真",
+      "state": "n",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "b"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "box",
+            "program": {
+              "op": "atomic",
+              "name": "b"
+            },
+            "body": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "Harm",
+                "args": []
+              }
+            }
+          }
+        ]
+      },
+      "expected": false
+    }
+  ],
+  "relations": [],
+  "norm_queries": [
+    {
+      "name": "V在s禁止a",
+      "norm": "V",
+      "state": "s",
+      "action": "a",
+      "expected": "forbidden"
+    },
+    {
+      "name": "V在s许可b",
+      "norm": "V",
+      "state": "s",
+      "action": "b",
+      "expected": "permitted"
+    },
+    {
+      "name": "V在h尚未评定b",
+      "norm": "V",
+      "state": "h",
+      "action": "b",
+      "expected": "undetermined"
+    }
+  ]
+}

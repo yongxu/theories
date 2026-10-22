@@ -1,0 +1,221 @@
+{
+  "title": "09第七节 反模型 第二通道堵塞",
+  "notes": [
+    "Bridge: 完整允许边只含A到B、B到C；工具/施事/对象/路径各有不同角色类型。",
+    "边的零损伤成本是案例的附加输入；核心关系程序不自动进行加法成本计算。",
+    "来源Z03 https://zh.wikisource.org/wiki/莊子/養生主",
+    "context_id与原模型相同；仅删除cut_BC边以检验桥梁条件失效。"
+  ],
+  "model": {
+    "context_id": "G1-09-follow-structure",
+    "closed_world": true,
+    "states": [
+      "at_A",
+      "at_B",
+      "at_C"
+    ],
+    "sorts": {
+      "Agent": [
+        "cook"
+      ],
+      "Body": [
+        "body"
+      ],
+      "Tool": [
+        "knife"
+      ],
+      "Path": [
+        "route_AB",
+        "route_BC"
+      ]
+    },
+    "constants": {
+      "cook": {
+        "sort": "Agent",
+        "value": "cook"
+      },
+      "body": {
+        "sort": "Body",
+        "value": "body"
+      },
+      "knife": {
+        "sort": "Tool",
+        "value": "knife"
+      },
+      "route_AB": {
+        "sort": "Path",
+        "value": "route_AB"
+      },
+      "route_BC": {
+        "sort": "Path",
+        "value": "route_BC"
+      }
+    },
+    "predicates": {
+      "AtB": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "at_A": [],
+          "at_B": [
+            []
+          ],
+          "at_C": []
+        }
+      },
+      "AtC": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "at_A": [],
+          "at_B": [],
+          "at_C": [
+            []
+          ]
+        }
+      },
+      "CutRole": {
+        "sorts": [
+          "Agent",
+          "Body",
+          "Tool",
+          "Path"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "at_A": [
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_AB"
+            ],
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_BC"
+            ]
+          ],
+          "at_B": [
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_AB"
+            ],
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_BC"
+            ]
+          ],
+          "at_C": [
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_AB"
+            ],
+            [
+              "cook",
+              "body",
+              "knife",
+              "route_BC"
+            ]
+          ]
+        }
+      }
+    },
+    "programs": {
+      "cut_AB": [
+        [
+          "at_A",
+          "at_B"
+        ]
+      ],
+      "cut_BC": []
+    }
+  },
+  "queries": [
+    {
+      "name": "第一步仍可行",
+      "state": "at_A",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "cut_AB"
+        },
+        "body": {
+          "op": "atom",
+          "name": "AtB",
+          "args": []
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "第二步已不可行",
+      "state": "at_B",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "cut_BC"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "顺结构不保证目标可达",
+      "state": "at_A",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "seq",
+          "args": [
+            {
+              "op": "atomic",
+              "name": "cut_AB"
+            },
+            {
+              "op": "atomic",
+              "name": "cut_BC"
+            }
+          ]
+        },
+        "body": {
+          "op": "atom",
+          "name": "AtC",
+          "args": []
+        }
+      },
+      "expected": false
+    }
+  ],
+  "relations": [
+    {
+      "name": "堵塞后的复合关系为空",
+      "program": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "atomic",
+            "name": "cut_AB"
+          },
+          {
+            "op": "atomic",
+            "name": "cut_BC"
+          }
+        ]
+      },
+      "expected": []
+    }
+  ],
+  "norm_queries": []
+}

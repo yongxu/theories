@@ -1,0 +1,1068 @@
+{
+  "title": "文理生生组合文法 可执行验证例",
+  "notes": [
+    "这是人为给定的有限演示模型。资源、身份、相似与规范表都是明示假设，不是从古文自动导出的经验事实。",
+    "r3/r2/r1/r0对应旧模式储备3/2/1/0，dead对应越出持续域；reform支付2单位后进入同输入同消耗的stable1或stable0。",
+    "tick代表一个正时长步骤；star含零步，单独可达不证明无限实际运行。",
+    "SameInstance为预先给定关系，名称不使解释器自动验证现实身份。"
+  ],
+  "model": {
+    "context_id": "resource-discrete-reserve-identity-v0.3",
+    "closed_world": true,
+    "states": [
+      "r3",
+      "r2",
+      "r1",
+      "r0",
+      "dead",
+      "stable1",
+      "stable0"
+    ],
+    "sorts": {
+      "Entity": [
+        "a",
+        "b"
+      ],
+      "Action": [
+        "wait",
+        "reform"
+      ],
+      "Empty": []
+    },
+    "constants": {
+      "a": {
+        "sort": "Entity",
+        "value": "a"
+      },
+      "b": {
+        "sort": "Entity",
+        "value": "b"
+      },
+      "wait": {
+        "sort": "Action",
+        "value": "wait"
+      }
+    },
+    "predicates": {
+      "Viable": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [
+            []
+          ],
+          "r2": [
+            []
+          ],
+          "r1": [
+            []
+          ],
+          "r0": [
+            []
+          ],
+          "dead": [],
+          "stable1": [
+            []
+          ],
+          "stable0": [
+            []
+          ]
+        }
+      },
+      "Affordable": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [
+            []
+          ],
+          "r2": [
+            []
+          ],
+          "r1": [],
+          "r0": [],
+          "dead": [],
+          "stable1": [],
+          "stable0": []
+        }
+      },
+      "Changed": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [],
+          "r2": [],
+          "r1": [],
+          "r0": [],
+          "dead": [],
+          "stable1": [
+            []
+          ],
+          "stable0": [
+            []
+          ]
+        }
+      },
+      "Active": {
+        "sorts": [
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [
+            [
+              "a"
+            ]
+          ],
+          "r2": [
+            [
+              "a"
+            ]
+          ],
+          "r1": [
+            [
+              "a"
+            ]
+          ],
+          "r0": [
+            [
+              "a"
+            ]
+          ],
+          "dead": [],
+          "stable1": [
+            [
+              "a"
+            ]
+          ],
+          "stable0": [
+            [
+              "a"
+            ]
+          ]
+        }
+      },
+      "Similar": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r2": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r1": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r0": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "dead": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "stable1": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "stable0": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ],
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ]
+        }
+      },
+      "SameInstance": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "r3": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r2": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r1": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "r0": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "dead": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "stable1": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ],
+          "stable0": [
+            [
+              "a",
+              "a"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ]
+        }
+      }
+    },
+    "programs": {
+      "tick": [
+        [
+          "r3",
+          "r2"
+        ],
+        [
+          "r2",
+          "r1"
+        ],
+        [
+          "r1",
+          "r0"
+        ],
+        [
+          "r0",
+          "dead"
+        ],
+        [
+          "stable1",
+          "stable1"
+        ],
+        [
+          "stable0",
+          "stable0"
+        ]
+      ],
+      "reform": [
+        [
+          "r3",
+          "stable1"
+        ],
+        [
+          "r2",
+          "stable0"
+        ]
+      ],
+      "risky_change": [
+        [
+          "r3",
+          "stable1"
+        ],
+        [
+          "r3",
+          "dead"
+        ]
+      ],
+      "nothing": []
+    },
+    "formula_defs": {
+      "K": {
+        "op": "atom",
+        "name": "Viable",
+        "args": []
+      },
+      "LiveNext": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "box",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "fref",
+              "name": "K"
+            }
+          }
+        ]
+      },
+      "AllRunSafe": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "fref",
+              "name": "K"
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "tick"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "program_defs": {
+      "safe_tick": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "fref",
+              "name": "K"
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "tick"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "fref",
+              "name": "K"
+            }
+          }
+        ]
+      },
+      "reform_then_three_ticks": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "atomic",
+            "name": "reform"
+          },
+          {
+            "op": "repeat",
+            "count": 3,
+            "body": {
+              "op": "atomic",
+              "name": "tick"
+            }
+          }
+        ]
+      }
+    },
+    "norms": {
+      "cooperation": {
+        "actions": [
+          "wait",
+          "reform"
+        ],
+        "judgments": {
+          "r3": {
+            "wait": "permitted",
+            "reform": "permitted"
+          },
+          "r2": {
+            "wait": "permitted",
+            "reform": "permitted"
+          },
+          "r1": {
+            "wait": "permitted",
+            "reform": "required"
+          },
+          "r0": {
+            "wait": "permitted",
+            "reform": "forbidden"
+          },
+          "dead": {
+            "wait": "undetermined",
+            "reform": "forbidden"
+          },
+          "stable1": {
+            "wait": "permitted",
+            "reform": "undetermined"
+          },
+          "stable0": {
+            "wait": "permitted",
+            "reform": "undetermined"
+          }
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "初始储备允许继续三步",
+      "state": "r3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "repeat",
+          "count": 3,
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "初始储备不允许继续四步",
+      "state": "r3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "repeat",
+          "count": 4,
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "早改组后继续三步仍可存",
+      "state": "r3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "pref",
+          "name": "reform_then_three_ticks"
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "储备一单位时改组已不可行",
+      "state": "r1",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "改组后所有有限tick路径安全且无死端",
+      "state": "stable1",
+      "formula": {
+        "op": "fref",
+        "name": "AllRunSafe"
+      },
+      "expected": true
+    },
+    {
+      "name": "初始可存不推出所有后续安全",
+      "state": "r3",
+      "formula": {
+        "op": "fref",
+        "name": "AllRunSafe"
+      },
+      "expected": false
+    },
+    {
+      "name": "风险变化有安全后继",
+      "state": "r3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "risky_change"
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "风险变化不保证所有后继安全",
+      "state": "r3",
+      "formula": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "risky_change"
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "死端box为空真",
+      "state": "dead",
+      "formula": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "tick"
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "死端没有实际后继",
+      "state": "dead",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "tick"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "非空与安全合取拒绝死端",
+      "state": "dead",
+      "formula": {
+        "op": "fref",
+        "name": "LiveNext"
+      },
+      "expected": false
+    },
+    {
+      "name": "star含零步不证明实际前进",
+      "state": "dead",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "nothing"
+          }
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "概念相似不推出实例同一",
+      "state": "r3",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "Similar",
+          "args": [
+            {
+              "const": "a"
+            },
+            {
+              "const": "b"
+            }
+          ]
+        },
+        "right": {
+          "op": "atom",
+          "name": "SameInstance",
+          "args": [
+            {
+              "const": "a"
+            },
+            {
+              "const": "b"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "量词绑定通过test传入程序",
+      "state": "r3",
+      "formula": {
+        "op": "exists",
+        "var": "x",
+        "sort": "Entity",
+        "body": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "Active",
+                  "args": [
+                    {
+                      "var": "x"
+                    }
+                  ]
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "tick"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "Active",
+            "args": [
+              {
+                "var": "x"
+              }
+            ]
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "不是所有对象都活跃",
+      "state": "r3",
+      "formula": {
+        "op": "forall",
+        "var": "x",
+        "sort": "Entity",
+        "body": {
+          "op": "atom",
+          "name": "Active",
+          "args": [
+            {
+              "var": "x"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "空域存在量词为假",
+      "state": "r3",
+      "formula": {
+        "op": "exists",
+        "var": "x",
+        "sort": "Empty",
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "空域全称量词为空真",
+      "state": "r3",
+      "formula": {
+        "op": "forall",
+        "var": "x",
+        "sort": "Empty",
+        "body": {
+          "op": "false"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "可行性与可持续性不同",
+      "state": "r0",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "tick"
+              },
+              "body": {
+                "op": "fref",
+                "name": "K"
+              }
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "条件命题不会自动生成转移",
+      "state": "dead",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "Affordable",
+          "args": []
+        },
+        "right": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "reform"
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "择一允许取到一条可持续路径",
+      "state": "r3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "choice",
+          "args": [
+            {
+              "op": "atomic",
+              "name": "reform"
+            },
+            {
+              "op": "atomic",
+              "name": "risky_change"
+            }
+          ]
+        },
+        "body": {
+          "op": "fref",
+          "name": "K"
+        }
+      },
+      "expected": true
+    }
+  ],
+  "relations": [
+    {
+      "name": "安全步过滤掉进入dead的边",
+      "program": {
+        "op": "pref",
+        "name": "safe_tick"
+      },
+      "expected": [
+        [
+          "r3",
+          "r2"
+        ],
+        [
+          "r2",
+          "r1"
+        ],
+        [
+          "r1",
+          "r0"
+        ],
+        [
+          "stable1",
+          "stable1"
+        ],
+        [
+          "stable0",
+          "stable0"
+        ]
+      ]
+    },
+    {
+      "name": "sync是相同前后态关系交集",
+      "program": {
+        "op": "sync",
+        "args": [
+          {
+            "op": "atomic",
+            "name": "tick"
+          },
+          {
+            "op": "pref",
+            "name": "safe_tick"
+          }
+        ]
+      },
+      "expected": [
+        [
+          "r3",
+          "r2"
+        ],
+        [
+          "r2",
+          "r1"
+        ],
+        [
+          "r1",
+          "r0"
+        ],
+        [
+          "stable1",
+          "stable1"
+        ],
+        [
+          "stable0",
+          "stable0"
+        ]
+      ]
+    },
+    {
+      "name": "零次重复是所有状态上的恒等关系",
+      "program": {
+        "op": "repeat",
+        "count": 0,
+        "body": {
+          "op": "atomic",
+          "name": "tick"
+        }
+      },
+      "expected": [
+        [
+          "r3",
+          "r3"
+        ],
+        [
+          "r2",
+          "r2"
+        ],
+        [
+          "r1",
+          "r1"
+        ],
+        [
+          "r0",
+          "r0"
+        ],
+        [
+          "dead",
+          "dead"
+        ],
+        [
+          "stable1",
+          "stable1"
+        ],
+        [
+          "stable0",
+          "stable0"
+        ]
+      ]
+    }
+  ],
+  "norm_queries": [
+    {
+      "name": "r3改组规范允许",
+      "norm": "cooperation",
+      "state": "r3",
+      "action": "reform",
+      "expected": "permitted"
+    },
+    {
+      "name": "r1规范要求与实际不可行可以并存",
+      "norm": "cooperation",
+      "state": "r1",
+      "action": "reform",
+      "expected": "required"
+    },
+    {
+      "name": "stable1的改组规范尚未决",
+      "norm": "cooperation",
+      "state": "stable1",
+      "action": "reform",
+      "expected": "undetermined"
+    }
+  ]
+}

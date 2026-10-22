@@ -1,0 +1,1497 @@
+{
+  "checker": "independent finite-table assertions; not G1 engine",
+  "input_sha256": "eb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac",
+  "checks": 194,
+  "passed": 194,
+  "structure_checks": 139,
+  "finite_calculations": 55,
+  "scope": "核对显式表、引用与若干核心推论；不执行自然语言解析，不证明原典解释或经验因果。",
+  "results": [
+    {
+      "group": "structure",
+      "check": "32 frozen row IDs",
+      "passed": true,
+      "actual": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "expected": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ]
+    },
+    {
+      "group": "structure",
+      "check": "67 surface labels",
+      "passed": true,
+      "actual": 67,
+      "expected": 67
+    },
+    {
+      "group": "structure",
+      "check": "12 requested focused cards",
+      "passed": true,
+      "actual": [
+        "生生",
+        "感应",
+        "中和",
+        "变通",
+        "分合",
+        "名实",
+        "本末",
+        "虚实",
+        "阴阳",
+        "自然",
+        "无为",
+        "相生"
+      ],
+      "expected": [
+        "生生",
+        "感应",
+        "中和",
+        "变通",
+        "分合",
+        "名实",
+        "本末",
+        "虚实",
+        "阴阳",
+        "自然",
+        "无为",
+        "相生"
+      ]
+    },
+    {
+      "group": "structure",
+      "check": "13 finite specifications",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "group": "structure",
+      "check": "one supplement",
+      "passed": true,
+      "actual": "分合",
+      "expected": "分合"
+    },
+    {
+      "group": "structure",
+      "check": "分合 does not claim inherited row",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "group": "structure",
+      "check": "然 unregistered explicitly",
+      "passed": true,
+      "actual": [
+        "然"
+      ],
+      "expected": [
+        "然"
+      ]
+    },
+    {
+      "group": "structure",
+      "check": "生生 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "生生 existing sense core.044.03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "生生 source Y03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx01-generation context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx01-generation/tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx01-generation/gen edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "感应 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "感应 existing sense core.029.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "感应 existing sense core.027.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "感应 source JY1",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx02-response context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx02-response/stimulus edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx02-response/respond edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx02-response/feedback edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx02-response/reset edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "中和 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "中和 existing sense core.082.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "中和 existing sense core.083.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "中和 source C06",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-expression-and-norm-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-expression-and-norm-demo/respond_soft edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-expression-and-norm-demo/respond_harsh edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-expression-and-norm-demo/settle edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 existing sense core.045.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 existing sense core.067.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 source Y04",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 source Y04",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "变通 source Y03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx04-adaptation context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx04-adaptation/reconfigure edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx04-adaptation/execute edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx04-adaptation/tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "分合 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "分合 existing sense core.032.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "分合 existing sense core.033.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "分合 source S5",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx05-partition context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx05-partition/split edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-cx05-partition/merge edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "名实 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "名实 existing sense core.018.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "名实 existing sense core.018.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "名实 existing sense core.019.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "名实 source C01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-naming-convention-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-naming-convention-demo/mislabel edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-naming-convention-demo/repair edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 existing sense core.034.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 existing sense core.034.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 existing sense core.035.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 existing sense core.035.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "本末 source C07",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-foundation-dependency-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-foundation-dependency-demo/repair edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-foundation-dependency-demo/activate edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-foundation-dependency-demo/lose_base edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-foundation-dependency-demo/decorate edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "虚实 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "虚实 existing sense core.110.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "虚实 existing sense core.019.02",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "虚实 source S4",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-relative-capacity-board-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-relative-capacity-board-demo/try_A edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-relative-capacity-board-demo/try_B edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04-relative-capacity-board-demo/reallocate edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "阴阳 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "阴阳 existing sense core.108.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "阴阳 existing sense core.109.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "阴阳 source Y03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "阴阳 source Y03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.yinyang.phase-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.yinyang.phase-demo/tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "自然 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "自然 existing sense core.025.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "自然 source L04",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "自然 source L04",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "自然 source L07",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.ziran.boundary-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.ziran.boundary-demo/local_tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.ziran.boundary-demo/dry_tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 existing sense core.012.03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 existing sense syntax.08",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 source L07",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 source L07",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "无为 source L07",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.wuwei.conditional-policy-demo context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.wuwei.conditional-policy-demo/let edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.wuwei.conditional-policy-demo/restore edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.wuwei.conditional-policy-demo/force edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "相生 complete fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "相生 existing sense core.022.01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "相生 source L01",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "相生 source F03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "相生 source F03",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.xiangsheng.conceptual context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.xiangsheng.support-token context/states",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "v04.xiangsheng.support-token/tick edge endpoints",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R01 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R02 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R03 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R04 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R05 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R06 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R07 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R08 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R09 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R10 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R11 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R12 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R13 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R14 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R15 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R16 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R17 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R18 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R19 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R20 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R21 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R22 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R23 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R24 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R25 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R26 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R27 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R28 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R29 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R30 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R31 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "structure",
+      "check": "R32 inherited source IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 Alive agrees with nonempty extant table",
+      "passed": true,
+      "actual": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "expected": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 gen is subset of positive tick",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 two real generation steps",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 third generation fails",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 zero steps require initial Alive and can hold",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 zero steps fail at dead initial state",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 each gen edge introduces an identity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 two births never reuse identities",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 finite fresh identity budget exactly two",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 a dies while c appears",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 safe tick horizon 3",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "生生 safe tick horizon 4 fails",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "感应 response completes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "感应 feedback returns",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "感应 removing feedback breaks loop",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "中和 unexpressed is not vacuous He",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "中和 soft fits explicit V",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "中和 harsh fails explicit V",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "中和 some approved path",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "中和 not every allowed fact edge approved",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "变通 exact CanReach set",
+      "passed": true,
+      "actual": [
+        "done",
+        "routeA"
+      ],
+      "expected": [
+        "done",
+        "routeA"
+      ]
+    },
+    {
+      "group": "finite_calculation",
+      "check": "变通 a successful candidate",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "变通 not all candidates successful",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "变通 done need not have tick",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "分合 split then merge",
+      "passed": true,
+      "actual": [
+        [
+          "a",
+          "a"
+        ]
+      ],
+      "expected": [
+        [
+          "a",
+          "a"
+        ]
+      ]
+    },
+    {
+      "group": "finite_calculation",
+      "check": "分合 merge then split not identity",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "group": "finite_calculation",
+      "check": "分合 can restore b",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "分合 not guaranteed to restore b",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "分合 each partition disjoint cover",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "名实 exact consistency states",
+      "passed": true,
+      "actual": [
+        "correct",
+        "repaired"
+      ],
+      "expected": [
+        "correct",
+        "repaired"
+      ]
+    },
+    {
+      "group": "finite_calculation",
+      "check": "名实 repair restores consistency",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "名实 repair does not recolor B",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "本末 dependency invariant",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "本末 repair not sufficient",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "本末 repair plus activate works",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "虚实 explicit threshold agrees with tables",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "虚实 A currently passable",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "虚实 stale A choice fails after reallocation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "虚实 no weak route is possible",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "group": "finite_calculation",
+      "check": "阴阳 one specified step reaches yang",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "阴阳 two specified steps return yin",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "阴阳 same classification can be stationary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "自然 wet local process reaches mature",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "自然 dry no-command not sufficient",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "自然 no-command compatible with failure",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "无为 conditional policy reaches stable",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "无为 blanket let fails",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "无为 explicit permission is separate input",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "无为 same permission cannot fix broken effect",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 conceptual relation is reciprocal",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 conceptual relation does not fill Causes",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 direct reverse absent",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 two-step path not direct edge",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 five token steps return",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "finite_calculation",
+      "check": "相生 missing resource edge stops cycle",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    }
+  ]
+}

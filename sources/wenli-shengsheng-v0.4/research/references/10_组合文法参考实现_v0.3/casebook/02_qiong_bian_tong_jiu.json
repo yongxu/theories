@@ -1,0 +1,568 @@
+{
+  "title": "09第三节 七状态穷变通久",
+  "notes": [
+    "Bridge: 旧模式每个固定正时间步净消耗1；改革支付2；新模式在固定供给下收支相抵。",
+    "所有未列边不存在，dead是显式失败状态。改革可执行与已执行是分别登记的判断。",
+    "穷相对旧方式与未来4步；久结论相对new_tick及固定供给，不自动得到现实策略。",
+    "来源Y04 https://zh.wikisource.org/wiki/易傳/繫辭下 仅为问题线索。"
+  ],
+  "model": {
+    "context_id": "G1-09-resource",
+    "closed_world": true,
+    "states": [
+      "o3",
+      "o2",
+      "o1",
+      "o0",
+      "n1",
+      "n0",
+      "dead"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "K": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "o3": [
+            []
+          ],
+          "o2": [
+            []
+          ],
+          "o1": [
+            []
+          ],
+          "o0": [
+            []
+          ],
+          "n1": [
+            []
+          ],
+          "n0": [
+            []
+          ],
+          "dead": []
+        }
+      },
+      "DoneReform": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "o3": [],
+          "o2": [],
+          "o1": [],
+          "o0": [],
+          "n1": [
+            []
+          ],
+          "n0": [
+            []
+          ],
+          "dead": []
+        }
+      }
+    },
+    "programs": {
+      "old_tick": [
+        [
+          "o3",
+          "o2"
+        ],
+        [
+          "o2",
+          "o1"
+        ],
+        [
+          "o1",
+          "o0"
+        ],
+        [
+          "o0",
+          "dead"
+        ],
+        [
+          "dead",
+          "dead"
+        ]
+      ],
+      "reform": [
+        [
+          "o3",
+          "n1"
+        ],
+        [
+          "o2",
+          "n0"
+        ]
+      ],
+      "new_tick": [
+        [
+          "n1",
+          "n1"
+        ],
+        [
+          "n0",
+          "n0"
+        ],
+        [
+          "dead",
+          "dead"
+        ]
+      ]
+    },
+    "formula_defs": {
+      "NewForever": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "new_tick"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "new_tick"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "program_defs": {
+      "SafeOld": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "old_tick"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          }
+        ]
+      },
+      "SafeNew": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "new_tick"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "旧方式有三步安全路径",
+      "state": "o3",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 3,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "old_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "旧方式没有四步安全路径",
+      "state": "o3",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 4,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "old_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "四步穷判断成立",
+      "state": "o3",
+      "formula": {
+        "op": "not",
+        "arg": {
+          "op": "diamond",
+          "program": {
+            "op": "repeat",
+            "count": 4,
+            "body": {
+              "op": "pref",
+              "name": "SafeOld"
+            }
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "改革在o3可行且后态安全",
+      "state": "o3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "atom",
+          "name": "K",
+          "args": []
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "改革后可获得所有路径永续安全",
+      "state": "o3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "fref",
+          "name": "NewForever"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "n1所有新路径永续安全",
+      "state": "n1",
+      "formula": {
+        "op": "fref",
+        "name": "NewForever"
+      },
+      "expected": true
+    },
+    {
+      "name": "n0所有新路径永续安全",
+      "state": "n0",
+      "formula": {
+        "op": "fref",
+        "name": "NewForever"
+      },
+      "expected": true
+    },
+    {
+      "name": "o1改革成本不可付",
+      "state": "o1",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "可改革不意味着当前已改革",
+      "state": "o3",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "reform"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "atom",
+              "name": "DoneReform",
+              "args": []
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "dead虽有真实循环但不安全",
+      "state": "dead",
+      "formula": {
+        "op": "fref",
+        "name": "NewForever"
+      },
+      "expected": false
+    },
+    {
+      "name": "有限状态N步安全见证存在无限安全环",
+      "state": "n1",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 7,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "T零不能掩盖dead不安全",
+      "state": "dead",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 0,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": false
+    }
+  ],
+  "relations": [
+    {
+      "name": "安全旧边过滤失败边",
+      "program": {
+        "op": "pref",
+        "name": "SafeOld"
+      },
+      "expected": [
+        [
+          "o3",
+          "o2"
+        ],
+        [
+          "o2",
+          "o1"
+        ],
+        [
+          "o1",
+          "o0"
+        ]
+      ]
+    },
+    {
+      "name": "安全新边只保留安全自环",
+      "program": {
+        "op": "pref",
+        "name": "SafeNew"
+      },
+      "expected": [
+        [
+          "n1",
+          "n1"
+        ],
+        [
+          "n0",
+          "n0"
+        ]
+      ]
+    }
+  ],
+  "norm_queries": []
+}

@@ -1,0 +1,890 @@
+{
+  "annotator": "root-A",
+  "method": "Independent AI annotation before opening B; not a human study.",
+  "locked_at": "2026-10-21T13:48:03.289762+00:00",
+  "corpus_sha256": "39cbda7713cf367e5390772c897efec7bca7efd2ff99184608b1a3af24d4086b",
+  "protocol_sha256": "fdee013d63f01e673cf24d39cad2b0f1caff164879cdf8d8d90db9d227894ddd",
+  "annotations": [
+    {
+      "unit_id": "L01",
+      "label": "E",
+      "evidence_span": "此兩者，同出而異名",
+      "roles": [
+        "兩者之一",
+        "兩者之二",
+        "名稱"
+      ],
+      "relation": "共同出处与命名差异并存",
+      "tags": [
+        "epistemic",
+        "descriptive"
+      ],
+      "reason": "同出和异名明确约束同一对项，不能把同一出处等同同一名称。",
+      "added_assumptions": "兩者的确切前指有争议；本判断只识别关系，不据此确定本体。"
+    },
+    {
+      "unit_id": "L02",
+      "label": "E",
+      "evidence_span": "有無相生，難易相成",
+      "roles": [
+        "有与无",
+        "难与易"
+      ],
+      "relation": "相待或生成、相成的成对结构",
+      "tags": [
+        "descriptive"
+      ],
+      "reason": "原文明示两项及相生/相成；存在不同解释并不抹去关系结构。",
+      "added_assumptions": "相待还是因果生成须另选义；双向物理机制不在此确定。"
+    },
+    {
+      "unit_id": "L03",
+      "label": "E",
+      "evidence_span": "不尚賢，使民不爭",
+      "roles": [
+        "治理者的尚贤行为",
+        "民的争"
+      ],
+      "relation": "政策条件与行为结果",
+      "tags": [
+        "normative",
+        "descriptive"
+      ],
+      "reason": "使字将两类行为联系；可记录古文提出的效果断言。",
+      "added_assumptions": "实际因果效应、群体异质性及副作用未验证。"
+    },
+    {
+      "unit_id": "L04",
+      "label": "E",
+      "evidence_span": "挫其銳，解其紛",
+      "roles": [
+        "隐含行为者",
+        "其锐与其纷"
+      ],
+      "relation": "作用于对象性质的消解过程",
+      "tags": [
+        "descriptive"
+      ],
+      "reason": "挫与解分别给出操作和受作用项；不只训释一个字。",
+      "added_assumptions": "施事与比喻对象解释未唯一确定，不能据此写普遍更新方程。"
+    },
+    {
+      "unit_id": "L05",
+      "label": "E",
+      "evidence_span": "虛而不屈，動而愈出",
+      "roles": [
+        "橐籥的动",
+        "出之增加"
+      ],
+      "relation": "运动与产出的变化关系",
+      "tags": [
+        "descriptive"
+      ],
+      "reason": "邻近橐籥比喻明确了作用载体，动与愈出是两个状态/过程角色。",
+      "added_assumptions": "喻体的实际机制、量纲及对应天地方式须另论。"
+    },
+    {
+      "unit_id": "L06",
+      "label": "C",
+      "evidence_span": "緜緜若存，用之不勤",
+      "roles": [
+        "谷神/玄牝",
+        "使用",
+        "不勤"
+      ],
+      "relation": "可能的使用而不竭图式",
+      "tags": [
+        "symbolic",
+        "descriptive"
+      ],
+      "reason": "比喻和不勤读法决定过程含义；未给出可稳定选定的角色关系。",
+      "added_assumptions": "需训释勤及玄牝之门，不能直接判为无耗散系统。"
+    },
+    {
+      "unit_id": "L07",
+      "label": "E",
+      "evidence_span": "以其不自生，故能長生",
+      "roles": [
+        "天地不自生",
+        "长生"
+      ],
+      "relation": "原因说明与持续结果",
+      "tags": [
+        "descriptive",
+        "normative"
+      ],
+      "reason": "以与故明示解释链；圣人比附另保留规范层。",
+      "added_assumptions": "不自生与长生的具体所指和经验因果需另外解释。"
+    },
+    {
+      "unit_id": "L08",
+      "label": "E",
+      "evidence_span": "夫唯不爭，故無尤",
+      "roles": [
+        "不争行为",
+        "无尤结果"
+      ],
+      "relation": "行为条件及后果",
+      "tags": [
+        "normative",
+        "descriptive"
+      ],
+      "reason": "唯与故明示条件性的解释，不能只看作水的属性表。",
+      "added_assumptions": "无尤的评价主体与适用条件未给定量规则。"
+    },
+    {
+      "unit_id": "A01",
+      "label": "E",
+      "evidence_span": "人不知而不慍",
+      "roles": [
+        "他人不知己",
+        "己不愠"
+      ],
+      "relation": "外部认识状态与自身情绪反应的区分",
+      "tags": [
+        "normative",
+        "epistemic"
+      ],
+      "reason": "他人与自身两个角色及不同状态直接可见。",
+      "added_assumptions": "不把而读作必然因果；君子评价保留规范背景。"
+    },
+    {
+      "unit_id": "A02",
+      "label": "E",
+      "evidence_span": "本立而道生",
+      "roles": [
+        "本的建立",
+        "道的发生"
+      ],
+      "relation": "建立条件与生成后果",
+      "tags": [
+        "normative",
+        "descriptive"
+      ],
+      "reason": "立和生形成两个阶段的联系，同章还限定孝弟与犯上判断。",
+      "added_assumptions": "本和道须依儒家语境解释，不能普遍代入任何基础与结果。"
+    },
+    {
+      "unit_id": "A03",
+      "label": "E",
+      "evidence_span": "巧言令色，鮮矣仁",
+      "roles": [
+        "巧言令色者",
+        "仁的归属"
+      ],
+      "relation": "两类性质的稀少共现",
+      "tags": [
+        "normative",
+        "descriptive"
+      ],
+      "reason": "鲜提供共现频度判断，超过单项德目列举。",
+      "added_assumptions": "不是已测得统计相关，更不直接表示因果。"
+    },
+    {
+      "unit_id": "A04",
+      "label": "E",
+      "evidence_span": "與朋友交而不信乎",
+      "roles": [
+        "省察者",
+        "朋友",
+        "信"
+      ],
+      "relation": "交往关系及对其中行为的评估",
+      "tags": [
+        "normative",
+        "epistemic"
+      ],
+      "reason": "与朋友交给出双方，是否信是自省的评价对象。",
+      "added_assumptions": "这是提问与自省准则，不断言现实中确实失信。"
+    },
+    {
+      "unit_id": "A05",
+      "label": "E",
+      "evidence_span": "使民以時",
+      "roles": [
+        "治国者",
+        "民",
+        "时"
+      ],
+      "relation": "行动对参与者和时机的约束",
+      "tags": [
+        "normative"
+      ],
+      "reason": "使与以明确参与者和条件角色。",
+      "added_assumptions": "何时适宜、政策成效及权力正当性需另议。"
+    },
+    {
+      "unit_id": "A06",
+      "label": "E",
+      "evidence_span": "行有餘力，則以學文",
+      "roles": [
+        "先行实践",
+        "余力",
+        "学文"
+      ],
+      "relation": "条件满足后的活动安排",
+      "tags": [
+        "normative"
+      ],
+      "reason": "则明确余力条件与后续学习。",
+      "added_assumptions": "余力标准和学习内容需在具体情境确定。"
+    },
+    {
+      "unit_id": "A07",
+      "label": "E",
+      "evidence_span": "與朋友交，言而有信",
+      "roles": [
+        "说话者",
+        "朋友",
+        "言与信"
+      ],
+      "relation": "交往行动和言行评价",
+      "tags": [
+        "normative"
+      ],
+      "reason": "社会角色和评价对象明确；整章不只是并列词义。",
+      "added_assumptions": "有信的判据尚需语境，学的总体评价不等于认知测量。"
+    },
+    {
+      "unit_id": "A08",
+      "label": "E",
+      "evidence_span": "過則勿憚改",
+      "roles": [
+        "过失",
+        "改正行为"
+      ],
+      "relation": "条件触发的行动规范",
+      "tags": [
+        "normative"
+      ],
+      "reason": "则标记过失条件，勿憚改为规范后件。",
+      "added_assumptions": "有过并不保证实际上必改。"
+    },
+    {
+      "unit_id": "A09",
+      "label": "C",
+      "evidence_span": "愼終追遠，民德歸厚矣",
+      "roles": [
+        "慎终追远实践",
+        "民德归厚"
+      ],
+      "relation": "实践与德性变化的解释候选",
+      "tags": [
+        "normative",
+        "descriptive"
+      ],
+      "reason": "两项并置支持联系读法，具体作用关系及实践主体仍靠语境补足。",
+      "added_assumptions": "需要说明示范/教化机制及施事，不把并置自动认定因果定律。"
+    },
+    {
+      "unit_id": "A10",
+      "label": "E",
+      "evidence_span": "夫子溫、良、恭、儉、讓以得之",
+      "roles": [
+        "夫子的行为品质",
+        "得到政情"
+      ],
+      "relation": "方式与获得结果",
+      "tags": [
+        "descriptive",
+        "epistemic"
+      ],
+      "reason": "以得之明示取得结果的途径，之在问答内指政情。",
+      "added_assumptions": "这是人物行为解释而非受控因果证据。"
+    },
+    {
+      "unit_id": "A11",
+      "label": "E",
+      "evidence_span": "父在觀其志，父沒觀其行",
+      "roles": [
+        "父在/父没情境",
+        "被观察者",
+        "志/行"
+      ],
+      "relation": "随情境改变观察标准",
+      "tags": [
+        "normative",
+        "epistemic"
+      ],
+      "reason": "在与没构成对比条件，志与行是对应观察项。",
+      "added_assumptions": "其指称及孝的充分标准需注释，不把三年量化为普遍规律。"
+    },
+    {
+      "unit_id": "A12",
+      "label": "E",
+      "evidence_span": "知和而和，不以禮節之，亦不可行也",
+      "roles": [
+        "求和行为",
+        "礼的节制",
+        "可行性"
+      ],
+      "relation": "求和受到规范条件限制",
+      "tags": [
+        "normative"
+      ],
+      "reason": "原文直接拒绝缺少礼节的无条件求和。",
+      "added_assumptions": "礼节的制度内容和可行具体意义须另外确定。"
+    },
+    {
+      "unit_id": "A13",
+      "label": "E",
+      "evidence_span": "信近於義，言可復也",
+      "roles": [
+        "信与义的关系",
+        "言的履行"
+      ],
+      "relation": "规范相近条件与实践可能性",
+      "tags": [
+        "normative"
+      ],
+      "reason": "近于与可提供明确结构，不等于两个词同义。",
+      "added_assumptions": "复与亲/宗等存在训诂问题，本判断限首分句。"
+    },
+    {
+      "unit_id": "A14",
+      "label": "E",
+      "evidence_span": "就有道而正焉",
+      "roles": [
+        "君子",
+        "有道者",
+        "正己"
+      ],
+      "relation": "接近他人并修正自身的实践",
+      "tags": [
+        "normative",
+        "epistemic"
+      ],
+      "reason": "就有道给出参与者，正焉提供行动目的/结果线索。",
+      "added_assumptions": "正的标准及过程机制并未充分规定。"
+    },
+    {
+      "unit_id": "A15",
+      "label": "E",
+      "evidence_span": "吿諸往而知來者",
+      "roles": [
+        "已告知的内容",
+        "推知的内容",
+        "学习者"
+      ],
+      "relation": "由已有提示推及未告内容",
+      "tags": [
+        "epistemic"
+      ],
+      "reason": "往与来形成推知关系，是原文明示的认识结构。",
+      "added_assumptions": "原句不能代替本项目的认知迁移效果试验。"
+    },
+    {
+      "unit_id": "A16",
+      "label": "E",
+      "evidence_span": "不患人之不己知，患不知人也",
+      "roles": [
+        "己",
+        "人",
+        "知的方向"
+      ],
+      "relation": "认识关系换向及关切对象调整",
+      "tags": [
+        "epistemic",
+        "normative"
+      ],
+      "reason": "人不知己与己不知人方向不同，规范要求也不同。",
+      "added_assumptions": "无需假定认识关系对称或互相反馈。"
+    },
+    {
+      "unit_id": "Y01",
+      "label": "E",
+      "evidence_span": "觀變於陰陽而立卦",
+      "roles": [
+        "阴阳之变",
+        "观察者",
+        "卦"
+      ],
+      "relation": "从观察变化到建立表征",
+      "tags": [
+        "epistemic",
+        "symbolic"
+      ],
+      "reason": "观与立形成步骤，目标表征在原文明确。",
+      "added_assumptions": "具体取样和编码不由此句唯一决定。"
+    },
+    {
+      "unit_id": "Y02",
+      "label": "E",
+      "evidence_span": "兼三才而兩之，故易六畫而成卦",
+      "roles": [
+        "三才",
+        "两分操作",
+        "六画卦"
+      ],
+      "relation": "分组及构成的说明",
+      "tags": [
+        "symbolic",
+        "definitional"
+      ],
+      "reason": "操作、数目及组合结果明示，超过孤立名物对应。",
+      "added_assumptions": "此为易学符号结构解释，不推出任意现实系统六变量。"
+    },
+    {
+      "unit_id": "Y03",
+      "label": "E",
+      "evidence_span": "山澤通氣，雷風相薄",
+      "roles": [
+        "山与泽",
+        "雷与风"
+      ],
+      "relation": "通气与相薄的成对关系",
+      "tags": [
+        "symbolic",
+        "descriptive"
+      ],
+      "reason": "参与项和关系直接出现。",
+      "added_assumptions": "通气/相薄不能自动变为现代物理交换量。"
+    },
+    {
+      "unit_id": "Y04",
+      "label": "E",
+      "evidence_span": "雷以動之，風以散之",
+      "roles": [
+        "雷/风",
+        "之所指对象",
+        "动/散"
+      ],
+      "relation": "不同作用者与作用方式",
+      "tags": [
+        "symbolic",
+        "descriptive"
+      ],
+      "reason": "以和之保留施作用于对象的角色结构。",
+      "added_assumptions": "之的具体所指需篇章语境；不因如此补入定量力学。"
+    },
+    {
+      "unit_id": "Y05",
+      "label": "E",
+      "evidence_span": "言陰陽相薄也",
+      "roles": [
+        "阴",
+        "阳"
+      ],
+      "relation": "两项相薄及卦序语境",
+      "tags": [
+        "symbolic",
+        "descriptive"
+      ],
+      "reason": "两项和关系明示；该章还有万物出现/成始的多阶段叙述。",
+      "added_assumptions": "同一章出现次序不自动提供每时步唯一更新律。"
+    },
+    {
+      "unit_id": "Y06",
+      "label": "E",
+      "evidence_span": "故水火相逮，雷風不相悖，山澤通氣，然後能變化",
+      "roles": [
+        "水火等配对关系",
+        "变化成物"
+      ],
+      "relation": "多关系条件与变化结果",
+      "tags": [
+        "symbolic",
+        "descriptive"
+      ],
+      "reason": "然后明确条件到结果的陈述结构。",
+      "added_assumptions": "实际机制、必要充分性和经验普遍性不能由结构标注判定。"
+    },
+    {
+      "unit_id": "Y07",
+      "label": "N",
+      "evidence_span": "乾，健也。坤，順也。",
+      "roles": [
+        "卦名",
+        "训词"
+      ],
+      "relation": "训释对应",
+      "tags": [
+        "definitional",
+        "symbolic"
+      ],
+      "reason": "虽有动止等过程词，此段只给名词训释，不陈述条件、阶段或实际参与者关系。",
+      "added_assumptions": "要转成动态规则须另给语境与机制。"
+    },
+    {
+      "unit_id": "Y08",
+      "label": "N",
+      "evidence_span": "乾為馬，坤為牛",
+      "roles": [
+        "卦名",
+        "动物象"
+      ],
+      "relation": "象征对应",
+      "tags": [
+        "symbolic"
+      ],
+      "reason": "为在此登记物象对应，未独立说明动物或卦如何相互转化。",
+      "added_assumptions": "需要额外规则才能成为动力模型。"
+    },
+    {
+      "unit_id": "Y09",
+      "label": "N",
+      "evidence_span": "乾為首，坤為腹",
+      "roles": [
+        "卦名",
+        "身体部位"
+      ],
+      "relation": "象征对应",
+      "tags": [
+        "symbolic"
+      ],
+      "reason": "身体对配本身不说明功能耦合或转化规律。",
+      "added_assumptions": "功能联系须另据文本或现代模型论证。"
+    },
+    {
+      "unit_id": "Y10",
+      "label": "E",
+      "evidence_span": "震一索而得男，故謂之長男",
+      "roles": [
+        "索的序次",
+        "所得男",
+        "长男命名"
+      ],
+      "relation": "次序、所得与称谓的解释",
+      "tags": [
+        "symbolic",
+        "definitional"
+      ],
+      "reason": "一/再/三索与所得、命名形成连续结构，超过单项父母对应。",
+      "added_assumptions": "索的具体操作解释未唯一确定，不能把现代位翻转追认作原文算法。"
+    },
+    {
+      "unit_id": "Y11",
+      "label": "C",
+      "evidence_span": "其究為健，為蕃鮮",
+      "roles": [
+        "震的所象",
+        "究后的性质"
+      ],
+      "relation": "可能的终极趋向图式",
+      "tags": [
+        "symbolic"
+      ],
+      "reason": "主体材料主要是象征表，究可能提示发展/极端状态，但不足独立选定动态解释。",
+      "added_assumptions": "需训释究和各取象传统；不能将整个取象清单计为系统动力规律。"
+    },
+    {
+      "unit_id": "M01",
+      "label": "E",
+      "evidence_span": "所得而後成",
+      "roles": [
+        "所得之故",
+        "后成的结果"
+      ],
+      "relation": "取得条件在成之前",
+      "tags": [
+        "definitional",
+        "descriptive"
+      ],
+      "reason": "而后给出条件与结果阶段，区别于单纯同义训释。",
+      "added_assumptions": "必要条件还是充分原因的区分须借经说进一步论证。"
+    },
+    {
+      "unit_id": "M02",
+      "label": "E",
+      "evidence_span": "分於兼",
+      "roles": [
+        "部分",
+        "兼体整体"
+      ],
+      "relation": "部分与整体的结构关系",
+      "tags": [
+        "definitional",
+        "descriptive"
+      ],
+      "reason": "分于兼直接定义相对整体的部分关系。",
+      "added_assumptions": "分不自动为时间中的拆分操作。"
+    },
+    {
+      "unit_id": "M03",
+      "label": "N",
+      "evidence_span": "知，材也",
+      "roles": [
+        "知",
+        "材"
+      ],
+      "relation": "简短训释",
+      "tags": [
+        "definitional",
+        "epistemic"
+      ],
+      "reason": "两词释义没有给出可稳定复用的两角色关系或过程条件。",
+      "added_assumptions": "材的能力义可扩展，不能把扩展算本句已编码。"
+    },
+    {
+      "unit_id": "M04",
+      "label": "N",
+      "evidence_span": "慮，求也",
+      "roles": [
+        "虑",
+        "求"
+      ],
+      "relation": "简短训释",
+      "tags": [
+        "definitional",
+        "epistemic"
+      ],
+      "reason": "求是过程词，但没有指出求者、对象或条件结构。",
+      "added_assumptions": "现代搜索模型所需角色与更新规则均需另补。"
+    },
+    {
+      "unit_id": "M05",
+      "label": "C",
+      "evidence_span": "知，接也",
+      "roles": [
+        "知者",
+        "所接对象"
+      ],
+      "relation": "认识接合的候选结构",
+      "tags": [
+        "definitional",
+        "epistemic"
+      ],
+      "reason": "接提示关系，参与项和具体接法未在本条给出。",
+      "added_assumptions": "需要经说或语境说明如何理解接。"
+    },
+    {
+      "unit_id": "M06",
+      "label": "N",
+      "evidence_span": "智，明也",
+      "roles": [
+        "智",
+        "明"
+      ],
+      "relation": "简短训释",
+      "tags": [
+        "definitional",
+        "epistemic"
+      ],
+      "reason": "本条未明示阶段或关系，不能从明字直接推出推理模型。",
+      "added_assumptions": "智/知校读与明的解释另存。"
+    },
+    {
+      "unit_id": "M07",
+      "label": "C",
+      "evidence_span": "仁，體愛也",
+      "roles": [
+        "体/部分",
+        "爱者与被爱者"
+      ],
+      "relation": "体与爱关系的解释候选",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "体爱组合意义需要训释；不能稳定按现代体与爱相加。",
+      "added_assumptions": "需经说、兼爱语境及体字读法。"
+    },
+    {
+      "unit_id": "M08",
+      "label": "N",
+      "evidence_span": "義，利也",
+      "roles": [
+        "义",
+        "利"
+      ],
+      "relation": "规范词训释",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "只有价值词的界说，未给受益者、行动或比较条件。",
+      "added_assumptions": "不能从此独自构造完整功利主义决策函数。"
+    },
+    {
+      "unit_id": "M09",
+      "label": "N",
+      "evidence_span": "禮，敬也",
+      "roles": [
+        "礼",
+        "敬"
+      ],
+      "relation": "规范词训释",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "没有明确交互角色或调节过程。",
+      "added_assumptions": "仪式、敬的对象与实践标准需外补。"
+    },
+    {
+      "unit_id": "M10",
+      "label": "N",
+      "evidence_span": "行，爲也",
+      "roles": [
+        "行",
+        "为"
+      ],
+      "relation": "动作词训释",
+      "tags": [
+        "definitional"
+      ],
+      "reason": "只出现动作词并不构成两阶段或参与关系。",
+      "added_assumptions": "施事、对象、条件均未明示。"
+    },
+    {
+      "unit_id": "M11",
+      "label": "N",
+      "evidence_span": "實，榮也",
+      "roles": [
+        "实",
+        "荣"
+      ],
+      "relation": "训释及疑义",
+      "tags": [
+        "definitional"
+      ],
+      "reason": "榮读法不宜擅自改字；当前无法稳健确定关系结构。",
+      "added_assumptions": "须校勘或经说，保留未解决状态。"
+    },
+    {
+      "unit_id": "M12",
+      "label": "C",
+      "evidence_span": "忠，以爲利而强低也",
+      "roles": [
+        "行为者",
+        "为利",
+        "强低"
+      ],
+      "relation": "用力为利的候选实践关系",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "以为利提供线索，但强低字义影响解释稳定性。",
+      "added_assumptions": "保留传本文字，需校勘与经说，不径改为勉力利人。"
+    },
+    {
+      "unit_id": "M13",
+      "label": "E",
+      "evidence_span": "孝，利親也",
+      "roles": [
+        "孝行者",
+        "亲"
+      ],
+      "relation": "对亲属施益的关系",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "利亲有明确对象，通用行为者由孝行语法角色给出。",
+      "added_assumptions": "利益与亲属范围需另定，不能据词义证明行为结果。"
+    },
+    {
+      "unit_id": "M14",
+      "label": "E",
+      "evidence_span": "言合於意",
+      "roles": [
+        "言",
+        "意"
+      ],
+      "relation": "言与意的一致关系",
+      "tags": [
+        "definitional",
+        "epistemic",
+        "normative"
+      ],
+      "reason": "合于明确两项和比较关系，超过两个同义词的对照。",
+      "added_assumptions": "如何判断言意一致须另定，非观察到言即可知心意。"
+    },
+    {
+      "unit_id": "M15",
+      "label": "C",
+      "evidence_span": "佴，自作也",
+      "roles": [
+        "自身",
+        "作为"
+      ],
+      "relation": "自发/自身施事的候选图式",
+      "tags": [
+        "definitional"
+      ],
+      "reason": "自作提示施事来源，但佴及整体解释不稳定。",
+      "added_assumptions": "需训诂，不能自动对应自组织。"
+    },
+    {
+      "unit_id": "M16",
+      "label": "N",
+      "evidence_span": "誚，非嗛也",
+      "roles": [
+        "诮",
+        "非嗛"
+      ],
+      "relation": "疑难训释",
+      "tags": [
+        "definitional"
+      ],
+      "reason": "字义不足以判定稳定结构；否定一个词并不自动满足关系判据。",
+      "added_assumptions": "需校勘与经说。"
+    },
+    {
+      "unit_id": "M17",
+      "label": "N",
+      "evidence_span": "廉，非作也",
+      "roles": [
+        "廉",
+        "非作"
+      ],
+      "relation": "否定式训释",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "单项否定未给出参与者、条件或两个阶段。",
+      "added_assumptions": "不能单凭非作归入现代无为控制。"
+    },
+    {
+      "unit_id": "M18",
+      "label": "E",
+      "evidence_span": "不爲所非",
+      "roles": [
+        "被否定/反对的行为",
+        "不做该行为"
+      ],
+      "relation": "评价与行为选择的一致约束",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "所非的名词化对象和不为共享行动内容，形成规范约束。",
+      "added_assumptions": "所非之正当性和行为可行性未由定义证明。"
+    },
+    {
+      "unit_id": "M19",
+      "label": "E",
+      "evidence_span": "士損己而益所爲",
+      "roles": [
+        "士自身",
+        "所为对象",
+        "损与益"
+      ],
+      "relation": "自身付出与对象受益",
+      "tags": [
+        "definitional",
+        "normative"
+      ],
+      "reason": "损己和益所为方向不同，原文把两项明确连接。",
+      "added_assumptions": "益的对象和代价尺度需具体化，不预设总量守恒。"
+    },
+    {
+      "unit_id": "M20",
+      "label": "E",
+      "evidence_span": "志之所以敢",
+      "roles": [
+        "志",
+        "敢的行动能力"
+      ],
+      "relation": "志作为敢的根据",
+      "tags": [
+        "definitional",
+        "epistemic"
+      ],
+      "reason": "所以明示根据或条件，不只是勇与敢同义替换。",
+      "added_assumptions": "心理机制、充分必要性和经验效应仍需额外证据。"
+    }
+  ]
+}

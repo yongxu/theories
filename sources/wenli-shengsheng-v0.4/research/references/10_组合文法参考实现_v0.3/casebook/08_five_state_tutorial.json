@@ -1,0 +1,401 @@
+{
+  "title": "07第十节 五状态完整推导",
+  "notes": [
+    "Bridge: 本模型独立于09七状态例；状态的语义按07第十节给定。",
+    "a和d当前安全但旧制没有安全下一步；d没有可行改革；new推进固定正时间步。",
+    "所有未列边不存在。来源Y04只提供问题，不提供这些边的现实根据。"
+  ],
+  "model": {
+    "context_id": "G1-07-five-state-tutorial",
+    "closed_world": true,
+    "states": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "K": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "a": [
+            []
+          ],
+          "b": [
+            []
+          ],
+          "c": [
+            []
+          ],
+          "d": [
+            []
+          ],
+          "e": []
+        }
+      }
+    },
+    "programs": {
+      "old": [
+        [
+          "a",
+          "e"
+        ],
+        [
+          "d",
+          "e"
+        ]
+      ],
+      "reform": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "new": [
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "c"
+        ]
+      ]
+    },
+    "formula_defs": {
+      "Qiong": {
+        "op": "not",
+        "arg": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "old"
+          },
+          "body": {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          }
+        }
+      },
+      "MayNewTwo": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 2,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "ReformThenTwo": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "seq",
+                  "args": [
+                    {
+                      "op": "test",
+                      "condition": {
+                        "op": "atom",
+                        "name": "K",
+                        "args": []
+                      }
+                    },
+                    {
+                      "op": "atomic",
+                      "name": "new"
+                    },
+                    {
+                      "op": "test",
+                      "condition": {
+                        "op": "atom",
+                        "name": "K",
+                        "args": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "a穷而未死",
+      "state": "a",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "fref",
+            "name": "Qiong"
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "d也穷而未死",
+      "state": "d",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "fref",
+            "name": "Qiong"
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "a改革可行",
+      "state": "a",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "b有两步安全新路径",
+      "state": "b",
+      "formula": {
+        "op": "fref",
+        "name": "MayNewTwo"
+      },
+      "expected": true
+    },
+    {
+      "name": "a改革后续存两步",
+      "state": "a",
+      "formula": {
+        "op": "fref",
+        "name": "ReformThenTwo"
+      },
+      "expected": true
+    },
+    {
+      "name": "d相同条件链失败",
+      "state": "d",
+      "formula": {
+        "op": "fref",
+        "name": "ReformThenTwo"
+      },
+      "expected": false
+    },
+    {
+      "name": "b在此完整模型所有新路径永续",
+      "state": "b",
+      "formula": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "new"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "new"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "e零步亦不算可存",
+      "state": "e",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 0,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": false
+    }
+  ],
+  "relations": [
+    {
+      "name": "改革后两步终点为c",
+      "program": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "atomic",
+            "name": "reform"
+          },
+          {
+            "op": "repeat",
+            "count": 2,
+            "body": {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "atom",
+                    "name": "K",
+                    "args": []
+                  }
+                },
+                {
+                  "op": "atomic",
+                  "name": "new"
+                },
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "atom",
+                    "name": "K",
+                    "args": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "expected": [
+        [
+          "a",
+          "c"
+        ]
+      ]
+    }
+  ],
+  "norm_queries": []
+}

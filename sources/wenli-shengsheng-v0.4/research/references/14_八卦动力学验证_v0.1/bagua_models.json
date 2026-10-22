@@ -1,0 +1,2731 @@
+{
+  "title": "八卦离散动力学的三个G1模型",
+  "encoding": {
+    "order": [
+      "bottom",
+      "middle",
+      "top"
+    ],
+    "zero": "阴",
+    "one": "阳",
+    "trigrams": [
+      {
+        "name": "乾",
+        "code": "111"
+      },
+      {
+        "name": "兑",
+        "code": "110"
+      },
+      {
+        "name": "离",
+        "code": "101"
+      },
+      {
+        "name": "震",
+        "code": "100"
+      },
+      {
+        "name": "巽",
+        "code": "011"
+      },
+      {
+        "name": "坎",
+        "code": "010"
+      },
+      {
+        "name": "艮",
+        "code": "001"
+      },
+      {
+        "name": "坤",
+        "code": "000"
+      }
+    ],
+    "context_id": "bagua-bottom-middle-top-fixed-domain-v0.1"
+  },
+  "interpretation": {
+    "status": "modern_stipulated_models",
+    "tick": "each fixed-rule update takes the same stipulated duration delta_t=1 in an arbitrary fixed time unit",
+    "tick_duration": {
+      "value": 1,
+      "unit": "arbitrary_fixed_time_unit"
+    },
+    "one_line": "exactly one of the three positions flips",
+    "potential": "one_line reflexive-transitive closure, allowing zero or several flips",
+    "DemoK": "all states except 000, an arbitrary test constraint, not an evaluation of 坤",
+    "shared_context": "same encoding, objects, scale, and symbols; only tick interpretation varies"
+  },
+  "rules": {
+    "identity": {
+      "formula": "F(b1,b2,b3)=(b1,b2,b3)",
+      "model": {
+        "context_id": "bagua-bottom-middle-top-fixed-domain-v0.1",
+        "closed_world": true,
+        "states": [
+          "111",
+          "110",
+          "101",
+          "100",
+          "011",
+          "010",
+          "001",
+          "000"
+        ],
+        "sorts": {
+          "Trigram": [
+            "111",
+            "110",
+            "101",
+            "100",
+            "011",
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        "constants": {
+          "gua_111": {
+            "sort": "Trigram",
+            "value": "111"
+          },
+          "gua_110": {
+            "sort": "Trigram",
+            "value": "110"
+          },
+          "gua_101": {
+            "sort": "Trigram",
+            "value": "101"
+          },
+          "gua_100": {
+            "sort": "Trigram",
+            "value": "100"
+          },
+          "gua_011": {
+            "sort": "Trigram",
+            "value": "011"
+          },
+          "gua_010": {
+            "sort": "Trigram",
+            "value": "010"
+          },
+          "gua_001": {
+            "sort": "Trigram",
+            "value": "001"
+          },
+          "gua_000": {
+            "sort": "Trigram",
+            "value": "000"
+          }
+        },
+        "predicates": {
+          "DemoK": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [
+                []
+              ],
+              "101": [
+                []
+              ],
+              "100": [
+                []
+              ],
+              "011": [
+                []
+              ],
+              "010": [
+                []
+              ],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_111": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_110": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [
+                []
+              ],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_101": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [
+                []
+              ],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_100": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [
+                []
+              ],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_011": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [
+                []
+              ],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_010": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [
+                []
+              ],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_001": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_000": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": [
+                []
+              ]
+            }
+          }
+        },
+        "programs": {
+          "one_line": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "111",
+              "101"
+            ],
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "100"
+            ],
+            [
+              "000",
+              "010"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "flip_bottom": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "000",
+              "100"
+            ]
+          ],
+          "flip_middle": [
+            [
+              "111",
+              "101"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "000",
+              "010"
+            ]
+          ],
+          "flip_top": [
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "tick": [
+            [
+              "111",
+              "111"
+            ],
+            [
+              "110",
+              "110"
+            ],
+            [
+              "101",
+              "101"
+            ],
+            [
+              "100",
+              "100"
+            ],
+            [
+              "011",
+              "011"
+            ],
+            [
+              "010",
+              "010"
+            ],
+            [
+              "001",
+              "001"
+            ],
+            [
+              "000",
+              "000"
+            ]
+          ]
+        },
+        "formula_defs": {
+          "K": {
+            "op": "atom",
+            "name": "DemoK",
+            "args": []
+          },
+          "Enabled": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          "MayLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "AllLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "MayLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_0"
+                }
+              }
+            ]
+          },
+          "AllLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_0"
+                }
+              }
+            ]
+          },
+          "MayLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_1"
+                }
+              }
+            ]
+          },
+          "AllLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_1"
+                }
+              }
+            ]
+          },
+          "MayLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_2"
+                }
+              }
+            ]
+          },
+          "AllLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_2"
+                }
+              }
+            ]
+          },
+          "MayLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_3"
+                }
+              }
+            ]
+          },
+          "AllLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_3"
+                }
+              }
+            ]
+          },
+          "MayLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_4"
+                }
+              }
+            ]
+          },
+          "AllLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_4"
+                }
+              }
+            ]
+          },
+          "MayLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_5"
+                }
+              }
+            ]
+          },
+          "AllLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_5"
+                }
+              }
+            ]
+          },
+          "MayLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_6"
+                }
+              }
+            ]
+          },
+          "AllLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_6"
+                }
+              }
+            ]
+          },
+          "MayLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_infinite": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "tick"
+              }
+            },
+            "body": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "fref",
+                  "name": "K"
+                },
+                {
+                  "op": "fref",
+                  "name": "Enabled"
+                }
+              ]
+            }
+          }
+        },
+        "program_defs": {
+          "potential": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "one_line"
+            }
+          },
+          "safe_tick": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "tick"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              }
+            ]
+          }
+        },
+        "norms": {}
+      }
+    },
+    "zero": {
+      "formula": "F(b1,b2,b3)=(0,b1,b2)",
+      "model": {
+        "context_id": "bagua-bottom-middle-top-fixed-domain-v0.1",
+        "closed_world": true,
+        "states": [
+          "111",
+          "110",
+          "101",
+          "100",
+          "011",
+          "010",
+          "001",
+          "000"
+        ],
+        "sorts": {
+          "Trigram": [
+            "111",
+            "110",
+            "101",
+            "100",
+            "011",
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        "constants": {
+          "gua_111": {
+            "sort": "Trigram",
+            "value": "111"
+          },
+          "gua_110": {
+            "sort": "Trigram",
+            "value": "110"
+          },
+          "gua_101": {
+            "sort": "Trigram",
+            "value": "101"
+          },
+          "gua_100": {
+            "sort": "Trigram",
+            "value": "100"
+          },
+          "gua_011": {
+            "sort": "Trigram",
+            "value": "011"
+          },
+          "gua_010": {
+            "sort": "Trigram",
+            "value": "010"
+          },
+          "gua_001": {
+            "sort": "Trigram",
+            "value": "001"
+          },
+          "gua_000": {
+            "sort": "Trigram",
+            "value": "000"
+          }
+        },
+        "predicates": {
+          "DemoK": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [
+                []
+              ],
+              "101": [
+                []
+              ],
+              "100": [
+                []
+              ],
+              "011": [
+                []
+              ],
+              "010": [
+                []
+              ],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_111": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_110": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [
+                []
+              ],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_101": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [
+                []
+              ],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_100": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [
+                []
+              ],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_011": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [
+                []
+              ],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_010": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [
+                []
+              ],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_001": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_000": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": [
+                []
+              ]
+            }
+          }
+        },
+        "programs": {
+          "one_line": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "111",
+              "101"
+            ],
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "100"
+            ],
+            [
+              "000",
+              "010"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "flip_bottom": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "000",
+              "100"
+            ]
+          ],
+          "flip_middle": [
+            [
+              "111",
+              "101"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "000",
+              "010"
+            ]
+          ],
+          "flip_top": [
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "tick": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "110",
+              "011"
+            ],
+            [
+              "101",
+              "010"
+            ],
+            [
+              "100",
+              "010"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "010",
+              "001"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "000"
+            ]
+          ]
+        },
+        "formula_defs": {
+          "K": {
+            "op": "atom",
+            "name": "DemoK",
+            "args": []
+          },
+          "Enabled": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          "MayLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "AllLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "MayLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_0"
+                }
+              }
+            ]
+          },
+          "AllLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_0"
+                }
+              }
+            ]
+          },
+          "MayLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_1"
+                }
+              }
+            ]
+          },
+          "AllLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_1"
+                }
+              }
+            ]
+          },
+          "MayLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_2"
+                }
+              }
+            ]
+          },
+          "AllLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_2"
+                }
+              }
+            ]
+          },
+          "MayLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_3"
+                }
+              }
+            ]
+          },
+          "AllLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_3"
+                }
+              }
+            ]
+          },
+          "MayLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_4"
+                }
+              }
+            ]
+          },
+          "AllLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_4"
+                }
+              }
+            ]
+          },
+          "MayLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_5"
+                }
+              }
+            ]
+          },
+          "AllLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_5"
+                }
+              }
+            ]
+          },
+          "MayLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_6"
+                }
+              }
+            ]
+          },
+          "AllLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_6"
+                }
+              }
+            ]
+          },
+          "MayLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_infinite": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "tick"
+              }
+            },
+            "body": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "fref",
+                  "name": "K"
+                },
+                {
+                  "op": "fref",
+                  "name": "Enabled"
+                }
+              ]
+            }
+          }
+        },
+        "program_defs": {
+          "potential": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "one_line"
+            }
+          },
+          "safe_tick": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "tick"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              }
+            ]
+          }
+        },
+        "norms": {}
+      }
+    },
+    "negrotate": {
+      "formula": "F(b1,b2,b3)=(1-b3,b1,b2)",
+      "model": {
+        "context_id": "bagua-bottom-middle-top-fixed-domain-v0.1",
+        "closed_world": true,
+        "states": [
+          "111",
+          "110",
+          "101",
+          "100",
+          "011",
+          "010",
+          "001",
+          "000"
+        ],
+        "sorts": {
+          "Trigram": [
+            "111",
+            "110",
+            "101",
+            "100",
+            "011",
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        "constants": {
+          "gua_111": {
+            "sort": "Trigram",
+            "value": "111"
+          },
+          "gua_110": {
+            "sort": "Trigram",
+            "value": "110"
+          },
+          "gua_101": {
+            "sort": "Trigram",
+            "value": "101"
+          },
+          "gua_100": {
+            "sort": "Trigram",
+            "value": "100"
+          },
+          "gua_011": {
+            "sort": "Trigram",
+            "value": "011"
+          },
+          "gua_010": {
+            "sort": "Trigram",
+            "value": "010"
+          },
+          "gua_001": {
+            "sort": "Trigram",
+            "value": "001"
+          },
+          "gua_000": {
+            "sort": "Trigram",
+            "value": "000"
+          }
+        },
+        "predicates": {
+          "DemoK": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [
+                []
+              ],
+              "101": [
+                []
+              ],
+              "100": [
+                []
+              ],
+              "011": [
+                []
+              ],
+              "010": [
+                []
+              ],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_111": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [
+                []
+              ],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_110": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [
+                []
+              ],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_101": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [
+                []
+              ],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_100": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [
+                []
+              ],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_011": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [
+                []
+              ],
+              "010": [],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_010": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [
+                []
+              ],
+              "001": [],
+              "000": []
+            }
+          },
+          "Is_001": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [
+                []
+              ],
+              "000": []
+            }
+          },
+          "Is_000": {
+            "sorts": [],
+            "kind": "descriptive",
+            "true_at": {
+              "111": [],
+              "110": [],
+              "101": [],
+              "100": [],
+              "011": [],
+              "010": [],
+              "001": [],
+              "000": [
+                []
+              ]
+            }
+          }
+        },
+        "programs": {
+          "one_line": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "111",
+              "101"
+            ],
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "100"
+            ],
+            [
+              "000",
+              "010"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "flip_bottom": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "110",
+              "010"
+            ],
+            [
+              "101",
+              "001"
+            ],
+            [
+              "100",
+              "000"
+            ],
+            [
+              "011",
+              "111"
+            ],
+            [
+              "010",
+              "110"
+            ],
+            [
+              "001",
+              "101"
+            ],
+            [
+              "000",
+              "100"
+            ]
+          ],
+          "flip_middle": [
+            [
+              "111",
+              "101"
+            ],
+            [
+              "110",
+              "100"
+            ],
+            [
+              "101",
+              "111"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "010",
+              "000"
+            ],
+            [
+              "001",
+              "011"
+            ],
+            [
+              "000",
+              "010"
+            ]
+          ],
+          "flip_top": [
+            [
+              "111",
+              "110"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "100"
+            ],
+            [
+              "100",
+              "101"
+            ],
+            [
+              "011",
+              "010"
+            ],
+            [
+              "010",
+              "011"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "001"
+            ]
+          ],
+          "tick": [
+            [
+              "111",
+              "011"
+            ],
+            [
+              "110",
+              "111"
+            ],
+            [
+              "101",
+              "010"
+            ],
+            [
+              "100",
+              "110"
+            ],
+            [
+              "011",
+              "001"
+            ],
+            [
+              "010",
+              "101"
+            ],
+            [
+              "001",
+              "000"
+            ],
+            [
+              "000",
+              "100"
+            ]
+          ]
+        },
+        "formula_defs": {
+          "K": {
+            "op": "atom",
+            "name": "DemoK",
+            "args": []
+          },
+          "Enabled": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "tick"
+            },
+            "body": {
+              "op": "true"
+            }
+          },
+          "MayLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "AllLast_0": {
+            "op": "fref",
+            "name": "K"
+          },
+          "MayLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_0"
+                }
+              }
+            ]
+          },
+          "AllLast_1": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_0"
+                }
+              }
+            ]
+          },
+          "MayLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_1"
+                }
+              }
+            ]
+          },
+          "AllLast_2": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_1"
+                }
+              }
+            ]
+          },
+          "MayLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_2"
+                }
+              }
+            ]
+          },
+          "AllLast_3": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_2"
+                }
+              }
+            ]
+          },
+          "MayLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_3"
+                }
+              }
+            ]
+          },
+          "AllLast_4": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_3"
+                }
+              }
+            ]
+          },
+          "MayLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_4"
+                }
+              }
+            ]
+          },
+          "AllLast_5": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_4"
+                }
+              }
+            ]
+          },
+          "MayLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_5"
+                }
+              }
+            ]
+          },
+          "AllLast_6": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_5"
+                }
+              }
+            ]
+          },
+          "MayLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_6"
+                }
+              }
+            ]
+          },
+          "AllLast_7": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_6"
+                }
+              }
+            ]
+          },
+          "MayLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "diamond",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "MayLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_8": {
+            "op": "and",
+            "args": [
+              {
+                "op": "fref",
+                "name": "K"
+              },
+              {
+                "op": "fref",
+                "name": "Enabled"
+              },
+              {
+                "op": "box",
+                "program": {
+                  "op": "atomic",
+                  "name": "tick"
+                },
+                "body": {
+                  "op": "fref",
+                  "name": "AllLast_7"
+                }
+              }
+            ]
+          },
+          "AllLast_infinite": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "tick"
+              }
+            },
+            "body": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "fref",
+                  "name": "K"
+                },
+                {
+                  "op": "fref",
+                  "name": "Enabled"
+                }
+              ]
+            }
+          }
+        },
+        "program_defs": {
+          "potential": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "one_line"
+            }
+          },
+          "safe_tick": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "tick"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "fref",
+                  "name": "K"
+                }
+              }
+            ]
+          }
+        },
+        "norms": {}
+      }
+    }
+  }
+}

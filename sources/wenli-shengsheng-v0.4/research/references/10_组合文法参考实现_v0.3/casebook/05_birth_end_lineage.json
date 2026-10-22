@@ -1,0 +1,607 @@
+{
+  "title": "09第六节 生灭过程 共同转移与谱系",
+  "notes": [
+    "Bridge: A/B/C稳定标识分别代表不同实例；E和L由模型完整解释给出。",
+    "EndAs/BornAs返回Program；sync筛选同一条前后态边，不用Formula合取连接过程。",
+    "这是成毁的一种现代重构，不声称解决方生方死的唯一历史解释。来源Z02。"
+  ],
+  "model": {
+    "context_id": "G1-09-lineage",
+    "closed_world": true,
+    "states": [
+      "s0",
+      "s1"
+    ],
+    "sorts": {
+      "Entity": [
+        "A",
+        "B",
+        "C"
+      ],
+      "Pattern": [
+        "P",
+        "Q"
+      ]
+    },
+    "constants": {
+      "A": {
+        "sort": "Entity",
+        "value": "A"
+      },
+      "B": {
+        "sort": "Entity",
+        "value": "B"
+      },
+      "C": {
+        "sort": "Entity",
+        "value": "C"
+      },
+      "P": {
+        "sort": "Pattern",
+        "value": "P"
+      },
+      "Q": {
+        "sort": "Pattern",
+        "value": "Q"
+      }
+    },
+    "predicates": {
+      "E": {
+        "sorts": [
+          "Pattern",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "s0": [
+            [
+              "P",
+              "A"
+            ]
+          ],
+          "s1": [
+            [
+              "Q",
+              "B"
+            ],
+            [
+              "Q",
+              "C"
+            ]
+          ]
+        }
+      },
+      "L": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "s0": [],
+          "s1": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        }
+      },
+      "I": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "s0": [
+            [
+              "A",
+              "A"
+            ],
+            [
+              "B",
+              "B"
+            ],
+            [
+              "C",
+              "C"
+            ]
+          ],
+          "s1": [
+            [
+              "A",
+              "A"
+            ],
+            [
+              "B",
+              "B"
+            ],
+            [
+              "C",
+              "C"
+            ]
+          ]
+        }
+      }
+    },
+    "programs": {
+      "split": [
+        [
+          "s0",
+          "s1"
+        ]
+      ]
+    },
+    "program_defs": {
+      "EndA": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "E",
+              "args": [
+                {
+                  "const": "P"
+                },
+                {
+                  "const": "A"
+                }
+              ]
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "split"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "P"
+                  },
+                  {
+                    "const": "A"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "BornB": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Q"
+                  },
+                  {
+                    "const": "B"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "split"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "E",
+              "args": [
+                {
+                  "const": "Q"
+                },
+                {
+                  "const": "B"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "BornC": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Q"
+                  },
+                  {
+                    "const": "C"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "split"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "E",
+              "args": [
+                {
+                  "const": "Q"
+                },
+                {
+                  "const": "C"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Combined": {
+        "op": "sync",
+        "args": [
+          {
+            "op": "pref",
+            "name": "EndA"
+          },
+          {
+            "op": "pref",
+            "name": "BornB"
+          },
+          {
+            "op": "pref",
+            "name": "BornC"
+          }
+        ]
+      },
+      "Conflicting": {
+        "op": "sync",
+        "args": [
+          {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "P"
+                      },
+                      {
+                        "const": "A"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "P"
+                    },
+                    {
+                      "const": "A"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "P"
+                    },
+                    {
+                      "const": "A"
+                    }
+                  ]
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "P"
+                      },
+                      {
+                        "const": "A"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "一条共同转移兼具A终止与BC生起",
+      "state": "s0",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "pref",
+          "name": "Combined"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "同一实例同一模式生灭的交集不可行",
+      "state": "s0",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "pref",
+          "name": "Conflicting"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "转移后有双支谱系",
+      "state": "s0",
+      "formula": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "split"
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "L",
+              "args": [
+                {
+                  "const": "A"
+                },
+                {
+                  "const": "B"
+                }
+              ]
+            },
+            {
+              "op": "atom",
+              "name": "L",
+              "args": [
+                {
+                  "const": "A"
+                },
+                {
+                  "const": "C"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "谱系不把A等同B",
+      "state": "s1",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "L",
+          "args": [
+            {
+              "const": "A"
+            },
+            {
+              "const": "B"
+            }
+          ]
+        },
+        "right": {
+          "op": "atom",
+          "name": "I",
+          "args": [
+            {
+              "const": "A"
+            },
+            {
+              "const": "B"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "B和C保持不同实例",
+      "state": "s1",
+      "formula": {
+        "op": "not",
+        "arg": {
+          "op": "atom",
+          "name": "I",
+          "args": [
+            {
+              "const": "B"
+            },
+            {
+              "const": "C"
+            }
+          ]
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "分裂前无Q实例",
+      "state": "s0",
+      "formula": {
+        "op": "exists",
+        "var": "i",
+        "sort": "Entity",
+        "body": {
+          "op": "atom",
+          "name": "E",
+          "args": [
+            {
+              "const": "Q"
+            },
+            {
+              "var": "i"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "分裂后有Q实例",
+      "state": "s1",
+      "formula": {
+        "op": "exists",
+        "var": "i",
+        "sort": "Entity",
+        "body": {
+          "op": "atom",
+          "name": "E",
+          "args": [
+            {
+              "const": "Q"
+            },
+            {
+              "var": "i"
+            }
+          ]
+        }
+      },
+      "expected": true
+    }
+  ],
+  "relations": [
+    {
+      "name": "EndA的边",
+      "program": {
+        "op": "pref",
+        "name": "EndA"
+      },
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ]
+    },
+    {
+      "name": "BornB的边",
+      "program": {
+        "op": "pref",
+        "name": "BornB"
+      },
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ]
+    },
+    {
+      "name": "BornC的边",
+      "program": {
+        "op": "pref",
+        "name": "BornC"
+      },
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ]
+    },
+    {
+      "name": "Combined的边",
+      "program": {
+        "op": "pref",
+        "name": "Combined"
+      },
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ]
+    },
+    {
+      "name": "互斥生灭过程交集为空",
+      "program": {
+        "op": "pref",
+        "name": "Conflicting"
+      },
+      "expected": []
+    }
+  ],
+  "norm_queries": []
+}

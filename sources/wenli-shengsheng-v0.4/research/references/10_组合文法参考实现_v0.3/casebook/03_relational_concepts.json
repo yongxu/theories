@@ -1,0 +1,494 @@
+{
+  "title": "09第四节 有无相待与有向相生",
+  "notes": [
+    "Bridge: CoDefine仅解释概念依赖，Cause是另声明的Entity关系，不存在自动提升规则。",
+    "Slot域非空，Has/Lacks是状态隐式求值的互补宏。",
+    "Produces表整理五行历史关系方向，不作为已验证物理生成机制。",
+    "来源L01、F01—F03 https://zh.wikisource.org/wiki/道德經_(王弼本)#二章"
+  ],
+  "model": {
+    "context_id": "G1-09-codefinition",
+    "closed_world": true,
+    "states": [
+      "full",
+      "empty"
+    ],
+    "sorts": {
+      "Concept": [
+        "you",
+        "wu"
+      ],
+      "Entity": [
+        "lamp",
+        "shadow"
+      ],
+      "Slot": [
+        "slot"
+      ],
+      "Element": [
+        "wood",
+        "fire",
+        "earth",
+        "metal",
+        "water"
+      ]
+    },
+    "constants": {
+      "you": {
+        "sort": "Concept",
+        "value": "you"
+      },
+      "wu": {
+        "sort": "Concept",
+        "value": "wu"
+      },
+      "lamp": {
+        "sort": "Entity",
+        "value": "lamp"
+      },
+      "shadow": {
+        "sort": "Entity",
+        "value": "shadow"
+      },
+      "slot": {
+        "sort": "Slot",
+        "value": "slot"
+      },
+      "wood": {
+        "sort": "Element",
+        "value": "wood"
+      },
+      "fire": {
+        "sort": "Element",
+        "value": "fire"
+      },
+      "earth": {
+        "sort": "Element",
+        "value": "earth"
+      },
+      "metal": {
+        "sort": "Element",
+        "value": "metal"
+      },
+      "water": {
+        "sort": "Element",
+        "value": "water"
+      }
+    },
+    "predicates": {
+      "CoDefine": {
+        "sorts": [
+          "Concept",
+          "Concept"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "full": [
+            [
+              "you",
+              "wu"
+            ],
+            [
+              "wu",
+              "you"
+            ]
+          ],
+          "empty": [
+            [
+              "you",
+              "wu"
+            ],
+            [
+              "wu",
+              "you"
+            ]
+          ]
+        }
+      },
+      "Occupied": {
+        "sorts": [
+          "Slot"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "full": [
+            [
+              "slot"
+            ]
+          ],
+          "empty": []
+        }
+      },
+      "Cause": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "full": [],
+          "empty": []
+        }
+      },
+      "Similar": {
+        "sorts": [
+          "Entity",
+          "Entity"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "full": [
+            [
+              "lamp",
+              "shadow"
+            ]
+          ],
+          "empty": [
+            [
+              "lamp",
+              "shadow"
+            ]
+          ]
+        }
+      },
+      "Produces": {
+        "sorts": [
+          "Element",
+          "Element"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "full": [
+            [
+              "wood",
+              "fire"
+            ],
+            [
+              "fire",
+              "earth"
+            ],
+            [
+              "earth",
+              "metal"
+            ],
+            [
+              "metal",
+              "water"
+            ],
+            [
+              "water",
+              "wood"
+            ]
+          ],
+          "empty": [
+            [
+              "wood",
+              "fire"
+            ],
+            [
+              "fire",
+              "earth"
+            ],
+            [
+              "earth",
+              "metal"
+            ],
+            [
+              "metal",
+              "water"
+            ],
+            [
+              "water",
+              "wood"
+            ]
+          ]
+        }
+      }
+    },
+    "programs": {},
+    "formula_defs": {
+      "Has": {
+        "op": "exists",
+        "var": "x",
+        "sort": "Slot",
+        "body": {
+          "op": "atom",
+          "name": "Occupied",
+          "args": [
+            {
+              "var": "x"
+            }
+          ]
+        }
+      },
+      "Lacks": {
+        "op": "not",
+        "arg": {
+          "op": "exists",
+          "var": "x",
+          "sort": "Slot",
+          "body": {
+            "op": "atom",
+            "name": "Occupied",
+            "args": [
+              {
+                "var": "x"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "相待互向是显式输入",
+      "state": "full",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "CoDefine",
+            "args": [
+              {
+                "const": "you"
+              },
+              {
+                "const": "wu"
+              }
+            ]
+          },
+          {
+            "op": "atom",
+            "name": "CoDefine",
+            "args": [
+              {
+                "const": "wu"
+              },
+              {
+                "const": "you"
+              }
+            ]
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "非空域全部占据所以有",
+      "state": "full",
+      "formula": {
+        "op": "fref",
+        "name": "Has"
+      },
+      "expected": true
+    },
+    {
+      "name": "占据状态的无为假",
+      "state": "full",
+      "formula": {
+        "op": "fref",
+        "name": "Lacks"
+      },
+      "expected": false
+    },
+    {
+      "name": "空置状态的无为真",
+      "state": "empty",
+      "formula": {
+        "op": "fref",
+        "name": "Lacks"
+      },
+      "expected": true
+    },
+    {
+      "name": "有无在同态同域不共真",
+      "state": "full",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "fref",
+            "name": "Has"
+          },
+          {
+            "op": "fref",
+            "name": "Lacks"
+          }
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "相待关系不要求当前有无均实例化",
+      "state": "full",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "CoDefine",
+            "args": [
+              {
+                "const": "you"
+              },
+              {
+                "const": "wu"
+              }
+            ]
+          },
+          {
+            "op": "fref",
+            "name": "Has"
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "fref",
+              "name": "Lacks"
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "相似不蕴含因果",
+      "state": "full",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "Similar",
+          "args": [
+            {
+              "const": "lamp"
+            },
+            {
+              "const": "shadow"
+            }
+          ]
+        },
+        "right": {
+          "op": "atom",
+          "name": "Cause",
+          "args": [
+            {
+              "const": "lamp"
+            },
+            {
+              "const": "shadow"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "木生火边已登记",
+      "state": "full",
+      "formula": {
+        "op": "atom",
+        "name": "Produces",
+        "args": [
+          {
+            "const": "wood"
+          },
+          {
+            "const": "fire"
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "不能自动补火生木",
+      "state": "full",
+      "formula": {
+        "op": "atom",
+        "name": "Produces",
+        "args": [
+          {
+            "const": "fire"
+          },
+          {
+            "const": "wood"
+          }
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "全环每个节点有下一项",
+      "state": "full",
+      "formula": {
+        "op": "forall",
+        "var": "x",
+        "sort": "Element",
+        "body": {
+          "op": "exists",
+          "var": "y",
+          "sort": "Element",
+          "body": {
+            "op": "atom",
+            "name": "Produces",
+            "args": [
+              {
+                "var": "x"
+              },
+              {
+                "var": "y"
+              }
+            ]
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "环不是对称关系",
+      "state": "full",
+      "formula": {
+        "op": "forall",
+        "var": "x",
+        "sort": "Element",
+        "body": {
+          "op": "forall",
+          "var": "y",
+          "sort": "Element",
+          "body": {
+            "op": "implies",
+            "left": {
+              "op": "atom",
+              "name": "Produces",
+              "args": [
+                {
+                  "var": "x"
+                },
+                {
+                  "var": "y"
+                }
+              ]
+            },
+            "right": {
+              "op": "atom",
+              "name": "Produces",
+              "args": [
+                {
+                  "var": "y"
+                },
+                {
+                  "var": "x"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected": false
+    }
+  ],
+  "relations": [],
+  "norm_queries": []
+}

@@ -1,0 +1,203 @@
+{
+  "title": "卦类抽象不自动保留路径和共同终点",
+  "status": "two_counterexamples_under_explicit_modern_models",
+  "step_duration": {
+    "value": 1,
+    "unit": "arbitrary_fixed_time_unit"
+  },
+  "path_counterexample": {
+    "beta": {
+      "a": "111",
+      "b": "000",
+      "c": "000",
+      "d": "111"
+    },
+    "abstract_names": {
+      "111": "乾",
+      "000": "坤"
+    },
+    "concrete": {
+      "context_id": "abstraction-path-concrete-v0.1",
+      "closed_world": true,
+      "states": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "K": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "a": [
+              []
+            ],
+            "b": [
+              []
+            ],
+            "c": [
+              []
+            ],
+            "d": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "step": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "abstract": {
+      "context_id": "abstraction-path-two-gua-v0.1",
+      "closed_world": true,
+      "states": [
+        "111",
+        "000"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "K": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "111": [
+              []
+            ],
+            "000": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "step": [
+          [
+            "111",
+            "000"
+          ],
+          [
+            "000",
+            "111"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    }
+  },
+  "sync_counterexample": {
+    "beta": {
+      "s": "A",
+      "t": "B",
+      "u": "B"
+    },
+    "abstract_names": {
+      "A": "乾111",
+      "B": "坤000"
+    },
+    "concrete": {
+      "context_id": "abstraction-sync-concrete-v0.1",
+      "closed_world": true,
+      "states": [
+        "s",
+        "t",
+        "u"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "K": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "s": [
+              []
+            ],
+            "t": [
+              []
+            ],
+            "u": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "a": [
+          [
+            "s",
+            "t"
+          ]
+        ],
+        "b": [
+          [
+            "s",
+            "u"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "abstract": {
+      "context_id": "abstraction-sync-two-gua-v0.1",
+      "closed_world": true,
+      "states": [
+        "A",
+        "B"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "K": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [
+              []
+            ],
+            "B": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "a": [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "b": [
+          [
+            "A",
+            "B"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    }
+  }
+}

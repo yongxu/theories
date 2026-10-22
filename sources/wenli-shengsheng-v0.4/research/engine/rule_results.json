@@ -1,0 +1,2097 @@
+{
+  "schema_version": "v0.4.0",
+  "rules": [
+    {
+      "edge_id": "edge_01",
+      "adjacency": "生—变",
+      "status": "verified_conditional_instance",
+      "rule_type": "definition_inclusion",
+      "verification": [
+        "edge_01.success",
+        "edge_01.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "any change is birth",
+        "counterexample_query": "edge_01.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_02",
+      "adjacency": "变—势",
+      "status": "verified_conditional_instance",
+      "rule_type": "conditional_reachability",
+      "verification": [
+        "edge_02.success",
+        "edge_02.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "every change alters the reachable profile",
+        "counterexample_query": "edge_02.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_03",
+      "adjacency": "势—理",
+      "status": "verified_conditional_instance",
+      "rule_type": "constraint_monotonicity",
+      "verification": [
+        "edge_03.success",
+        "edge_03.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "more constraint or reach means better",
+        "counterexample_query": "edge_03.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_04",
+      "adjacency": "分—合",
+      "status": "verified_conditional_instance",
+      "rule_type": "conditional_composition",
+      "verification": [
+        "edge_04.success",
+        "edge_04.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "merge is split's identity/information inverse",
+        "counterexample_query": "edge_04.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_05",
+      "adjacency": "合—中",
+      "status": "verified_conditional_instance",
+      "rule_type": "normative_interface",
+      "verification": [
+        "edge_05.success",
+        "edge_05.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "merging implies timely appropriateness",
+        "counterexample_query": "edge_05.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_06",
+      "adjacency": "中—和",
+      "status": "verified_conditional_instance",
+      "rule_type": "expression_normative_interface",
+      "verification": [
+        "edge_06.success",
+        "edge_06.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "unexpressed guarantees all later expressions satisfy the expression norm",
+        "counterexample_query": "edge_06.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_07",
+      "adjacency": "生—分",
+      "status": "verified_conditional_instance",
+      "rule_type": "joint_transition",
+      "verification": [
+        "edge_07.success",
+        "edge_07.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "every structural division creates new instances",
+        "counterexample_query": "edge_07.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_08",
+      "adjacency": "变—合",
+      "status": "verified_conditional_instance",
+      "rule_type": "projection_change",
+      "verification": [
+        "edge_08.success",
+        "edge_08.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "merger guarantees coordination or improvement",
+        "counterexample_query": "edge_08.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_09",
+      "adjacency": "势—中",
+      "status": "verified_conditional_instance",
+      "rule_type": "normative_interface",
+      "verification": [
+        "edge_09.success",
+        "edge_09.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "normatively required implies feasible",
+        "counterexample_query": "edge_09.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_10",
+      "adjacency": "理—和",
+      "status": "verified_conditional_instance",
+      "rule_type": "conditional_coordination",
+      "verification": [
+        "edge_10.success",
+        "edge_10.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "structural admissibility alone ensures coordination",
+        "counterexample_query": "edge_10.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_11",
+      "adjacency": "生—合",
+      "status": "verified_conditional_instance",
+      "rule_type": "conditional_generation",
+      "verification": [
+        "edge_11.success",
+        "edge_11.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "attempting merger creates an organization regardless of compatibility",
+        "counterexample_query": "edge_11.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_12",
+      "adjacency": "合—势",
+      "status": "verified_conditional_instance",
+      "rule_type": "conditional_reachability",
+      "verification": [
+        "edge_12.success",
+        "edge_12.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "all formed organizations enable the same tasks",
+        "counterexample_query": "edge_12.counterexample"
+      }
+    },
+    {
+      "edge_id": "edge_13",
+      "adjacency": "中—理",
+      "status": "verified_conditional_instance",
+      "rule_type": "normative_interface",
+      "verification": [
+        "edge_13.success",
+        "edge_13.counterexample"
+      ],
+      "unconditional_claim": {
+        "status": "not_inference",
+        "claim": "normative permission supplies an execution satisfying every structural restriction",
+        "counterexample_query": "edge_13.counterexample"
+      }
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "edge_01.success",
+      "model": "reorganization",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "seq",
+          "args": [
+            {
+              "op": "test",
+              "condition": {
+                "op": "not",
+                "arg": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Unit"
+                    },
+                    {
+                      "const": "B"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "op": "atomic",
+              "name": "split"
+            },
+            {
+              "op": "test",
+              "condition": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Unit"
+                  },
+                  {
+                    "const": "B"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "right": {
+          "op": "choice",
+          "args": [
+            {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "not",
+                    "arg": {
+                      "op": "atom",
+                      "name": "E",
+                      "args": [
+                        {
+                          "const": "Unit"
+                        },
+                        {
+                          "const": "B"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "op": "atomic",
+                  "name": "split"
+                },
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Unit"
+                      },
+                      {
+                        "const": "B"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Unit"
+                      },
+                      {
+                        "const": "B"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "op": "atomic",
+                  "name": "split"
+                },
+                {
+                  "op": "test",
+                  "condition": {
+                    "op": "not",
+                    "arg": {
+                      "op": "atom",
+                      "name": "E",
+                      "args": [
+                        {
+                          "const": "Unit"
+                        },
+                        {
+                          "const": "B"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_01.counterexample",
+      "model": "reorganization",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "seq",
+          "args": [
+            {
+              "op": "test",
+              "condition": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Org"
+                  },
+                  {
+                    "const": "A"
+                  }
+                ]
+              }
+            },
+            {
+              "op": "atomic",
+              "name": "split"
+            },
+            {
+              "op": "test",
+              "condition": {
+                "op": "not",
+                "arg": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Org"
+                    },
+                    {
+                      "const": "A"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "right": {
+          "op": "seq",
+          "args": [
+            {
+              "op": "test",
+              "condition": {
+                "op": "not",
+                "arg": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Org"
+                    },
+                    {
+                      "const": "A"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "op": "atomic",
+              "name": "split"
+            },
+            {
+              "op": "test",
+              "condition": {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Org"
+                  },
+                  {
+                    "const": "A"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_02.success",
+      "model": "constraints",
+      "kind": "compare_reach",
+      "request": {
+        "program": {
+          "op": "atomic",
+          "name": "move"
+        },
+        "left_state": "start",
+        "right_state": "p"
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_02.counterexample",
+      "model": "constraints",
+      "kind": "compare_reach",
+      "request": {
+        "program": {
+          "op": "atomic",
+          "name": "move"
+        },
+        "left_state": "p",
+        "right_state": "q"
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_03.success",
+      "model": "constraints",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "star",
+          "body": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "move"
+              },
+              {
+                "op": "atomic",
+                "name": "allow_safe"
+              }
+            ]
+          }
+        },
+        "right": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "move"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_03.counterexample",
+      "model": "constraints",
+      "kind": "formula",
+      "request": {
+        "state": "start",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "sync",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "move"
+                },
+                {
+                  "op": "atomic",
+                  "name": "allow_overrestrict"
+                }
+              ]
+            }
+          },
+          "body": {
+            "op": "atom",
+            "name": "Goal",
+            "args": []
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_04.success",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "atomic",
+                "name": "merge"
+              }
+            ]
+          },
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "E",
+                "args": [
+                  {
+                    "const": "Org"
+                  },
+                  {
+                    "const": "D"
+                  }
+                ]
+              },
+              {
+                "op": "atom",
+                "name": "L",
+                "args": [
+                  {
+                    "const": "B"
+                  },
+                  {
+                    "const": "D"
+                  }
+                ]
+              },
+              {
+                "op": "atom",
+                "name": "L",
+                "args": [
+                  {
+                    "const": "C"
+                  },
+                  {
+                    "const": "D"
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "eq",
+                  "left": {
+                    "const": "D"
+                  },
+                  "right": {
+                    "const": "A"
+                  }
+                }
+              },
+              {
+                "op": "atom",
+                "name": "InfoComplete",
+                "args": []
+              }
+            ]
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_04.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "atomic",
+                "name": "merge_lossy"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "InfoComplete",
+            "args": []
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_05.success",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1",
+        "norm": "N_timely",
+        "action": "merge",
+        "program": {
+          "op": "atomic",
+          "name": "merge"
+        }
+      },
+      "expected": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "actual": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "independent_raw_oracle": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_05.counterexample",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1_late",
+        "norm": "N_timely",
+        "action": "merge",
+        "program": {
+          "op": "atomic",
+          "name": "merge"
+        }
+      },
+      "expected": {
+        "judgment": "forbidden",
+        "feasible": true,
+        "eligible": false
+      },
+      "actual": {
+        "judgment": "forbidden",
+        "feasible": true,
+        "eligible": false
+      },
+      "independent_raw_oracle": {
+        "judgment": "forbidden",
+        "feasible": true,
+        "eligible": false
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_06.success",
+      "model": "expression_norms",
+      "kind": "judgment",
+      "request": {
+        "state": "n_fit",
+        "norm": "N_expression",
+        "action": "assess_expression"
+      },
+      "expected": "permitted",
+      "actual": "permitted",
+      "independent_raw_oracle": "permitted",
+      "passed": true
+    },
+    {
+      "query_id": "edge_06.counterexample",
+      "model": "expression_norms",
+      "kind": "normative_successors",
+      "request": {
+        "state": "n0",
+        "program": {
+          "op": "atomic",
+          "name": "express"
+        },
+        "norm": "N_expression",
+        "action": "assess_expression"
+      },
+      "expected": {
+        "n_excess": "forbidden",
+        "n_fit": "permitted"
+      },
+      "actual": {
+        "n_excess": "forbidden",
+        "n_fit": "permitted"
+      },
+      "independent_raw_oracle": {
+        "n_excess": "forbidden",
+        "n_fit": "permitted"
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_07.success",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "E",
+                      "args": [
+                        {
+                          "const": "Org"
+                        },
+                        {
+                          "const": "A"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "split"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "not",
+                      "arg": {
+                        "op": "atom",
+                        "name": "E",
+                        "args": [
+                          {
+                            "const": "Org"
+                          },
+                          {
+                            "const": "A"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "not",
+                      "arg": {
+                        "op": "atom",
+                        "name": "E",
+                        "args": [
+                          {
+                            "const": "Unit"
+                          },
+                          {
+                            "const": "B"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "split"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "E",
+                      "args": [
+                        {
+                          "const": "Unit"
+                        },
+                        {
+                          "const": "B"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "not",
+                      "arg": {
+                        "op": "atom",
+                        "name": "E",
+                        "args": [
+                          {
+                            "const": "Unit"
+                          },
+                          {
+                            "const": "C"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "split"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "E",
+                      "args": [
+                        {
+                          "const": "Unit"
+                        },
+                        {
+                          "const": "C"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "L",
+                "args": [
+                  {
+                    "const": "A"
+                  },
+                  {
+                    "const": "B"
+                  }
+                ]
+              },
+              {
+                "op": "atom",
+                "name": "L",
+                "args": [
+                  {
+                    "const": "A"
+                  },
+                  {
+                    "const": "C"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_07.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Unit"
+                      },
+                      {
+                        "const": "B"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "cut_in_place"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Unit"
+                    },
+                    {
+                      "const": "B"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_08.success",
+      "model": "reorganization",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "atomic",
+          "name": "merge"
+        },
+        "right": {
+          "op": "atomic",
+          "name": "change_membership"
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_08.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "merge_lossy"
+          },
+          "body": {
+            "op": "atom",
+            "name": "Coord",
+            "args": [
+              {
+                "const": "D"
+              }
+            ]
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_09.success",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1",
+        "norm": "N_timely",
+        "action": "merge",
+        "program": {
+          "op": "atomic",
+          "name": "merge"
+        }
+      },
+      "expected": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "actual": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "independent_raw_oracle": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_09.counterexample",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1_empty",
+        "norm": "N_timely",
+        "action": "merge",
+        "program": {
+          "op": "atomic",
+          "name": "merge"
+        }
+      },
+      "expected": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "actual": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "independent_raw_oracle": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_10.success",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "attempt_merge"
+              },
+              {
+                "op": "atomic",
+                "name": "structural_allowed"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "Coord",
+            "args": [
+              {
+                "const": "D"
+              }
+            ]
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_10.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_empty",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "attempt_merge"
+              },
+              {
+                "op": "atomic",
+                "name": "structural_allowed"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "Coord",
+            "args": [
+              {
+                "const": "D"
+              }
+            ]
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_11.success",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Org"
+                      },
+                      {
+                        "const": "D"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "merge"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Org"
+                    },
+                    {
+                      "const": "D"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_11.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_bad",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Org"
+                      },
+                      {
+                        "const": "D"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "attempt_merge"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Org"
+                    },
+                    {
+                      "const": "D"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_12.success",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s2",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "operate"
+          },
+          "body": {
+            "op": "atom",
+            "name": "Done",
+            "args": []
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "edge_12.counterexample",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s3",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "operate"
+          },
+          "body": {
+            "op": "atom",
+            "name": "Done",
+            "args": []
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "edge_13.success",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1",
+        "norm": "N_timely",
+        "action": "merge",
+        "program": {
+          "op": "sync",
+          "args": [
+            {
+              "op": "atomic",
+              "name": "merge"
+            },
+            {
+              "op": "atomic",
+              "name": "preserve_information"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "actual": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "independent_raw_oracle": {
+        "judgment": "required",
+        "feasible": true,
+        "eligible": true
+      },
+      "passed": true
+    },
+    {
+      "query_id": "edge_13.counterexample",
+      "model": "reorganization",
+      "kind": "decision",
+      "request": {
+        "state": "s1",
+        "norm": "N_timely",
+        "action": "merge_lossy",
+        "program": {
+          "op": "sync",
+          "args": [
+            {
+              "op": "atomic",
+              "name": "merge_lossy"
+            },
+            {
+              "op": "atomic",
+              "name": "preserve_information"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "actual": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "independent_raw_oracle": {
+        "judgment": "required",
+        "feasible": false,
+        "eligible": false
+      },
+      "passed": true
+    },
+    {
+      "query_id": "support_birth_nonempty",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Unit"
+                      },
+                      {
+                        "const": "B"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Unit"
+                    },
+                    {
+                      "const": "B"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_original_identity_not_restored",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s0",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "split"
+              },
+              {
+                "op": "atomic",
+                "name": "merge"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "E",
+            "args": [
+              {
+                "const": "Org"
+              },
+              {
+                "const": "A"
+              }
+            ]
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_lossy_still_forms_new_org",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s3",
+        "formula": {
+          "op": "atom",
+          "name": "E",
+          "args": [
+            {
+              "const": "Org"
+            },
+            {
+              "const": "D"
+            }
+          ]
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_lossy_not_coordinated",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s3",
+        "formula": {
+          "op": "atom",
+          "name": "Coord",
+          "args": [
+            {
+              "const": "D"
+            }
+          ]
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_insufficient_resource_no_birth",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_empty",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "test",
+                "condition": {
+                  "op": "not",
+                  "arg": {
+                    "op": "atom",
+                    "name": "E",
+                    "args": [
+                      {
+                        "const": "Org"
+                      },
+                      {
+                        "const": "D"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "op": "atomic",
+                "name": "attempt_merge"
+              },
+              {
+                "op": "test",
+                "condition": {
+                  "op": "atom",
+                  "name": "E",
+                  "args": [
+                    {
+                      "const": "Org"
+                    },
+                    {
+                      "const": "D"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_failed_attempt_is_executable",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_empty",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "attempt_merge"
+              },
+              {
+                "op": "atomic",
+                "name": "structural_allowed"
+              }
+            ]
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_incompatible_attempt_is_executable",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_bad",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "attempt_merge"
+          },
+          "body": {
+            "op": "true"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_low_resource_compatible",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_empty",
+        "formula": {
+          "op": "atom",
+          "name": "Compatible",
+          "args": []
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_incompatible_before_attempt",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1_bad",
+        "formula": {
+          "op": "atom",
+          "name": "Compatible",
+          "args": []
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_before_merge_no_operate",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "atomic",
+            "name": "operate"
+          },
+          "body": {
+            "op": "atom",
+            "name": "Done",
+            "args": []
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_composed_merge_operate",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "merge"
+              },
+              {
+                "op": "atomic",
+                "name": "operate"
+              }
+            ]
+          },
+          "body": {
+            "op": "atom",
+            "name": "Done",
+            "args": []
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_drain_is_resource_change",
+      "model": "reorganization",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "atomic",
+          "name": "drain"
+        },
+        "right": {
+          "op": "atomic",
+          "name": "change_resource"
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_drain_is_not_merge",
+      "model": "reorganization",
+      "kind": "relation_subset",
+      "request": {
+        "left": {
+          "op": "atomic",
+          "name": "drain"
+        },
+        "right": {
+          "op": "atomic",
+          "name": "merge"
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_lineage_is_not_identity",
+      "model": "reorganization",
+      "kind": "formula",
+      "request": {
+        "state": "s1",
+        "formula": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "L",
+              "args": [
+                {
+                  "const": "A"
+                },
+                {
+                  "const": "B"
+                }
+              ]
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "eq",
+                "left": {
+                  "const": "A"
+                },
+                "right": {
+                  "const": "B"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_redundant_constraint_same_reach",
+      "model": "constraints",
+      "kind": "relation_equal",
+      "request": {
+        "left": {
+          "op": "star",
+          "body": {
+            "op": "sync",
+            "args": [
+              {
+                "op": "atomic",
+                "name": "move"
+              },
+              {
+                "op": "atomic",
+                "name": "allow_without_goal_loop"
+              }
+            ]
+          }
+        },
+        "right": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "move"
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_original_graph_reaches_goal",
+      "model": "constraints",
+      "kind": "formula",
+      "request": {
+        "state": "start",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "move"
+            }
+          },
+          "body": {
+            "op": "atom",
+            "name": "Goal",
+            "args": []
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_original_graph_all_safe",
+      "model": "constraints",
+      "kind": "formula",
+      "request": {
+        "state": "start",
+        "formula": {
+          "op": "box",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "atomic",
+              "name": "move"
+            }
+          },
+          "body": {
+            "op": "not",
+            "arg": {
+              "op": "atom",
+              "name": "Harm",
+              "args": []
+            }
+          }
+        }
+      },
+      "expected": false,
+      "actual": false,
+      "independent_raw_oracle": false,
+      "passed": true
+    },
+    {
+      "query_id": "support_restricted_graph_all_safe",
+      "model": "constraints",
+      "kind": "formula",
+      "request": {
+        "state": "start",
+        "formula": {
+          "op": "box",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "sync",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "move"
+                },
+                {
+                  "op": "atomic",
+                  "name": "allow_safe"
+                }
+              ]
+            }
+          },
+          "body": {
+            "op": "not",
+            "arg": {
+              "op": "atom",
+              "name": "Harm",
+              "args": []
+            }
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_restricted_goal_retained",
+      "model": "constraints",
+      "kind": "formula",
+      "request": {
+        "state": "start",
+        "formula": {
+          "op": "diamond",
+          "program": {
+            "op": "star",
+            "body": {
+              "op": "sync",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "move"
+                },
+                {
+                  "op": "atomic",
+                  "name": "allow_safe"
+                }
+              ]
+            }
+          },
+          "body": {
+            "op": "atom",
+            "name": "Goal",
+            "args": []
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_unexpressed_start",
+      "model": "expression_norms",
+      "kind": "formula",
+      "request": {
+        "state": "n0",
+        "formula": {
+          "op": "atom",
+          "name": "Unexpressed",
+          "args": []
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_actual_expression",
+      "model": "expression_norms",
+      "kind": "formula",
+      "request": {
+        "state": "n0",
+        "formula": {
+          "op": "box",
+          "program": {
+            "op": "atomic",
+            "name": "express"
+          },
+          "body": {
+            "op": "atom",
+            "name": "Expressed",
+            "args": []
+          }
+        }
+      },
+      "expected": true,
+      "actual": true,
+      "independent_raw_oracle": true,
+      "passed": true
+    },
+    {
+      "query_id": "support_unexpressed_is_not_normative_harmony",
+      "model": "expression_norms",
+      "kind": "judgment",
+      "request": {
+        "state": "n0",
+        "norm": "N_expression",
+        "action": "assess_expression"
+      },
+      "expected": "undetermined",
+      "actual": "undetermined",
+      "independent_raw_oracle": "undetermined",
+      "passed": true
+    }
+  ],
+  "rejections": [
+    {
+      "id": "norm_is_not_formula",
+      "rejected": true,
+      "reason": "formula: undeclared descriptive predicate 'N_expression'"
+    },
+    {
+      "id": "program_is_not_formula",
+      "rejected": true,
+      "reason": "formula: unknown Formula operator 'atomic'; Program and Norm are not Formula"
+    }
+  ],
+  "verification": {
+    "rule_count": 13,
+    "query_count": 48,
+    "cross_checked_query_count": 48,
+    "raw_fact_checks": 432,
+    "action_domain_completeness_checks": 2,
+    "rejection_count": 2,
+    "passed": true
+  },
+  "scope": "conditional derivation and boundary counterexamples in declared modern models; no minimum/universal/empirical claim",
+  "independence_limit": "relational oracle uses different composition/closure code and raw fact lookups; both share the declared event mechanism, so this is not independent empirical validation"
+}

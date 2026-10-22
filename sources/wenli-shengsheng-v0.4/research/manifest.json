@@ -1,0 +1,372 @@
+{
+  "version": "0.4",
+  "date": "2026-10-21",
+  "algorithm": "sha256",
+  "note": "Excludes this manifest and disposable Python/OS caches. Checks establish file consistency, not external authenticity.",
+  "files": {
+    "README.md": {
+      "sha256": "a52d81adb3e16cc9ec378d980d162e91b9c7e4a2eec3470f42d54194619993cf",
+      "bytes": 11136
+    },
+    "basis/README.md": {
+      "sha256": "029a08b71e7f15f367e21b844f29aab646e383602a8fbba4290320a9a1a2cfa8",
+      "bytes": 1002
+    },
+    "basis/lower_bound_review.md": {
+      "sha256": "1ceb56f784fb03ebbc9fb2ea00f4e1db7ece42e5a0db05a689e35116c2c48f6a",
+      "bytes": 11498
+    },
+    "basis/normalizer.py": {
+      "sha256": "8be8af4d909bbc2e0dfec55416f36e4f82e34c3b55679ee2911644d1562dddef",
+      "bytes": 32024
+    },
+    "basis/results.json": {
+      "sha256": "2877b54bd56b87103ec1912ba45b5ff7be2187b9493346893422941f121fb741",
+      "bytes": 17464
+    },
+    "basis/最小文法相对结果.md": {
+      "sha256": "050959be0130f0f966f6e34e2532156ea8c722e0124b2299e49f88a34bb6442c",
+      "bytes": 18925
+    },
+    "constructions/constructions.json": {
+      "sha256": "eb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac",
+      "bytes": 153271
+    },
+    "constructions/independent_model_review.json": {
+      "sha256": "aa191c409d7680b53142bc01b8dd731c75ca8efe86ae36a3c1ad110ba4cd69ce",
+      "bytes": 15358
+    },
+    "constructions/independent_model_review.md": {
+      "sha256": "9ddd180c5324c0b95b49c66f46dbcbe298973da5711fc205f26f4c4c27512bbd",
+      "bytes": 7056
+    },
+    "constructions/independent_model_review.py": {
+      "sha256": "53ae7542c2f160cce8105ea50f9b6032322cdb04aa5441e87d480bf0d7c24bc0",
+      "bytes": 22162
+    },
+    "constructions/validate_constructions.py": {
+      "sha256": "5743b49483f4165983a00ce018a5520eb8797e45a44a86f84d6edb164d0a5c92",
+      "bytes": 12232
+    },
+    "constructions/validation_results.json": {
+      "sha256": "9f3106bc6446033e3f6c633a4ddfa31c018850cd1bc0b1e421c4cc209b21363c",
+      "bytes": 33575
+    },
+    "constructions/构式与微型模型.md": {
+      "sha256": "83e35b691f27e6c699a9f9667155524c2a37407da4c1a206dbda116cc636110f",
+      "bytes": 71343
+    },
+    "core/wenli.py": {
+      "sha256": "0377b9fc8477f2edbbf93bd3abcfff3f71218628cab3e0c8754b0e029022bbbc",
+      "bytes": 24600
+    },
+    "corpus/annotation_a.json": {
+      "sha256": "f281d022cc39a18378c5e8ab8fd987dce3ec2b1ec7a8452d7b5c5ddc8f4ef731",
+      "bytes": 25996
+    },
+    "corpus/annotation_a.sha256": {
+      "sha256": "18cf650ab42d6fe3d17359b1b2470f93f43ccf151aeef27af6773c9a8b31da37",
+      "bytes": 84
+    },
+    "corpus/annotation_b.json": {
+      "sha256": "01c0717510b2207120f82de708963587fedb8cfcaf0bf830e6c7edcaac56bafd",
+      "bytes": 31586
+    },
+    "corpus/corpus.json": {
+      "sha256": "39cbda7713cf367e5390772c897efec7bca7efd2ff99184608b1a3af24d4086b",
+      "bytes": 29098
+    },
+    "corpus/corpus_reading.txt": {
+      "sha256": "c8ed6214b7b3a8587874d4283e53bece47bcfe6483361b7d2952b2ab726b73b0",
+      "bytes": 8524
+    },
+    "corpus/independent_review.md": {
+      "sha256": "45961a1ec9075a34315bad209a54dce223c839f12710f8ea7071b4996746423e",
+      "bytes": 5376
+    },
+    "corpus/pilot_results.json": {
+      "sha256": "eaace12c6bcadee8ba907a22ea7e40f71f9385ea2f9debae740bd699a7376bef",
+      "bytes": 4834
+    },
+    "corpus/protocol.json": {
+      "sha256": "fdee013d63f01e673cf24d39cad2b0f1caff164879cdf8d8d90db9d227894ddd",
+      "bytes": 3041
+    },
+    "corpus/report_corpus.py": {
+      "sha256": "458249c1cc6d49a7409a64d72f2c04f7755ebec9fcfddb5ccb4e92cf514bc23c",
+      "bytes": 10574
+    },
+    "corpus/sources/A.html": {
+      "sha256": "dda6b9449a7eae332eb0d8f516852584632be4055008816187e583cdc9914389",
+      "bytes": 75083
+    },
+    "corpus/sources/L.html": {
+      "sha256": "1215fe781fb379a0a529659aaa736936618985cb596c6cce09569f7ef15dd45f",
+      "bytes": 423048
+    },
+    "corpus/sources/M.html": {
+      "sha256": "7f2b3d2b28594cf76363bd83d9ce26c57a9b52a1decc47008a3c8a2976773022",
+      "bytes": 60549
+    },
+    "corpus/sources/Y.html": {
+      "sha256": "8e1627f1f516d78d8f3392fceb0c52af4f25fd4f025b06dbef7dfc46c71be97f",
+      "bytes": 67074
+    },
+    "corpus/固定语料覆盖试点.md": {
+      "sha256": "885f585269a5d1599d108c91e67951ed4b74dd64b9d929ab827aee240f49035f",
+      "bytes": 10765
+    },
+    "engine/README.md": {
+      "sha256": "fda4e7bf0e66162e7fbe0aa1002ae1ea92916ebdb1a0bf73899c30f29997b270",
+      "bytes": 9821
+    },
+    "engine/models.json": {
+      "sha256": "63b5f26918487e4a900df85d4b5c7a5bd63667c8edeb810f03405acfe34a47be",
+      "bytes": 28654
+    },
+    "engine/raw_inputs.json": {
+      "sha256": "cc3e22a4273b6ea11f5396ec22aa842c0460ebc9b5ff1334e9b65b46b901321d",
+      "bytes": 3832
+    },
+    "engine/rule_results.json": {
+      "sha256": "19e0e0e3230f1408b31138c8da29451d002c2af978c278ff845de0be1ddcea15",
+      "bytes": 50979
+    },
+    "engine/transition_trace.json": {
+      "sha256": "540cb977d830f1982da43942d61c4ed28d1445acf10787ab10f7977715120af0",
+      "bytes": 22970
+    },
+    "engine/verify_rules.py": {
+      "sha256": "8efb8e41f0b2161f3c20dce7430d24a86f48ce1d776fdb67e987c066fba6e78f",
+      "bytes": 36243
+    },
+    "graph/typed_graph.json": {
+      "sha256": "0764ac04f6fd90c8c3c1984f7a553917854166977c78a478a46b96f96973659e",
+      "bytes": 69519
+    },
+    "graph/八字有类型规则图.md": {
+      "sha256": "75a478e151ff0b6f415a58ad8cc90a066b8949d1111b2da3d43d08a948e06aaa",
+      "bytes": 32709
+    },
+    "references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md": {
+      "sha256": "b7b10747574125b42e2b36dab9904ce469cce9d026303e39ec6059906765b6e8",
+      "bytes": 37299
+    },
+    "references/02_对话全记录_中文概念组合_文与系统生成_2026-10-21.md": {
+      "sha256": "a0d8fb7b10e25a8f3576360cf75c7cd4d1509b188ce8833b6962bb9f901e301a",
+      "bytes": 25804
+    },
+    "references/03_文理生生_基础全图与动态文法_v0.2.md": {
+      "sha256": "a9a31dfe40bcdcff6fc07ae6cb99ee96ad8f0cf5ee517b91e2d093a5d59c94b2",
+      "bytes": 28294
+    },
+    "references/04_逐字动态映射与古文出处_v0.2.md": {
+      "sha256": "0de74582d047858420a5881d9a23b8a07207cc34056a7bf20a89ea9f33bfaead",
+      "bytes": 41571
+    },
+    "references/05_原典证据索引与校勘说明_v0.2.md": {
+      "sha256": "7e79c03854f1e7af64b75fc7c915613c30ed8f9b9e83d82bc600d46ef742535c",
+      "bytes": 30581
+    },
+    "references/06_文理生生_全面复核报告_v0.2.md": {
+      "sha256": "e2ec5db6e900334b52ff12856e7552b5cfe128f8d2aa5492e1511a50df08a0ae",
+      "bytes": 14011
+    },
+    "references/07_文理生生_完整组合文法_v0.3.md": {
+      "sha256": "76ff4f41e3df34cd67b22bbb369103485b64ff09e08740637ae8fe0b77e7dc5c",
+      "bytes": 31759
+    },
+    "references/08_组合文法逐字类型词典_v0.3.json": {
+      "sha256": "b1a9cc5e8bbfa6c91a1999c1b989fa341a75d6d1ba5968a381f90eeec0c5049a",
+      "bytes": 319300
+    },
+    "references/08_组合文法逐字类型词典_v0.3.md": {
+      "sha256": "f4ac371af281fc5554eabc976bf40d511ddcc51d953916fadb2d9b540a26d9c4",
+      "bytes": 56432
+    },
+    "references/09_组合文法完整推导与反例_v0.3.md": {
+      "sha256": "d786379abd5b219f3fcb39a4da38194e1f1bb84c2c89ae5735c9c77bcae6ac70",
+      "bytes": 21344
+    },
+    "references/10_组合文法参考实现_v0.3/README.md": {
+      "sha256": "8689c2cda9d8c681d64d1ffd13723fb6446c96dbc964bc928cadfc8324d4d265",
+      "bytes": 11461
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/01_negation_observation.json": {
+      "sha256": "d7291557496cceca9f7d0a99c1c5edfb4784317edccc4543b69034bdbf498d17",
+      "bytes": 11096
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/01_negation_possible_unseen.json": {
+      "sha256": "ddd504b11c0fcf7132414c509a6bb27ebe3604a3c4da39966dddcc906fdde637",
+      "bytes": 6417
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/02_qiong_bian_tong_jiu.json": {
+      "sha256": "b1e758924c3778068366ceec5439e8ccca0cf16d5613a54e7eed0b951929adb1",
+      "bytes": 11785
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/02_supply_failure.json": {
+      "sha256": "21bf46e16b6398332da8afe83daa1815f52ae748e558fa4ee5e4b53fdb8a1a22",
+      "bytes": 7357
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/03_relational_concepts.json": {
+      "sha256": "2b05be5f680691ce37b9a189b2e589695dea9e818a23515ff792ccb5d96ac25c",
+      "bytes": 9543
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/04_harmony_difference.json": {
+      "sha256": "98cf28fcae398dce9dcd13044d5461e1726a3822468e26f9d174e8fd2bd5b224",
+      "bytes": 5578
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/05_birth_end_lineage.json": {
+      "sha256": "0cadfff6a1fdd8f1256f8477533b5d2112985cd2a1632876620064029cce06e9",
+      "bytes": 11897
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/06_blocked_structure.json": {
+      "sha256": "f596fb6d6300d0b02d7c25cc8ddca9039bf4db746af687575f6f7031397fd5c0",
+      "bytes": 4300
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/06_follow_structure.json": {
+      "sha256": "51e2be599e581493837dfb5fb6b26dbff265e4478e5b0751fcf7e81c416cf8dd",
+      "bytes": 5319
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/07_norms_and_feasibility.json": {
+      "sha256": "d4f56d33165f445f3156b29563e7c964d982cf90a075c8734348bae65eca229b",
+      "bytes": 7843
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/08_five_state_failure.json": {
+      "sha256": "4ff6decf83060e517080c2be62612eecce2e270a725bfd278399b27f30120778",
+      "bytes": 7599
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/08_five_state_tutorial.json": {
+      "sha256": "7afe55df4f8c66ca7ef26eba8ef2a095836c832e67ca2ac5fcc53591f273e821",
+      "bytes": 8449
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/README.md": {
+      "sha256": "872e0a55fe6179772284cf217f6ce2cd92ae30306679894df95f6bb129c6891b",
+      "bytes": 3287
+    },
+    "references/10_组合文法参考实现_v0.3/casebook/validation_results.json": {
+      "sha256": "70e8ecfc43472db5fcb872bb842f6a36821b92d41a50080451c21824b7a3b7f0",
+      "bytes": 29030
+    },
+    "references/10_组合文法参考实现_v0.3/examples.json": {
+      "sha256": "7acdbe5937383bb47bf36b44d562f80f673b845db153274515cf5ee4746f120e",
+      "bytes": 20083
+    },
+    "references/10_组合文法参考实现_v0.3/tests.py": {
+      "sha256": "06eb5e2fcc35ac5fb59cde4b494801cde61f9e281c6a1d08108aa649674e680c",
+      "bytes": 22745
+    },
+    "references/10_组合文法参考实现_v0.3/validate_casebook.py": {
+      "sha256": "9b3a3c057409cce290893465bde675fdb606899400ba4dc359e9e176744593fd",
+      "bytes": 7277
+    },
+    "references/10_组合文法参考实现_v0.3/verify_lifecycle.py": {
+      "sha256": "435ef910d1510548f018496fc77996088785692b53195663fcc763087a962637",
+      "bytes": 4012
+    },
+    "references/10_组合文法参考实现_v0.3/wenli.py": {
+      "sha256": "0377b9fc8477f2edbbf93bd3abcfff3f71218628cab3e0c8754b0e029022bbbc",
+      "bytes": 24600
+    },
+    "references/11_八卦系统与组合文法_动力结构与转化_v0.1.md": {
+      "sha256": "917914f869d5a07c5e7898dd5e7230cd3754786177050ce8127c9118dee87903",
+      "bytes": 32042
+    },
+    "references/12_八卦与113字逐项映射_v0.1.json": {
+      "sha256": "13d82ccd6a069dab51d511697058b73613c43abf2f3f8de702fb0b833ad15190",
+      "bytes": 155554
+    },
+    "references/12_八卦与113字逐项映射_v0.1.md": {
+      "sha256": "181cf0c283ae2a763241f0f96b76f3f152c892bc2d7038fb5020ae38487a87c1",
+      "bytes": 43624
+    },
+    "references/13_八卦原典与参照项目证据_v0.1.md": {
+      "sha256": "048873835a64a3652cb15468a1f57a0fa230dc8447feb1db959e31d17a8680ce",
+      "bytes": 26883
+    },
+    "references/13_参照项目证据摘录_v0.1.json": {
+      "sha256": "2fcce6393cc88efee60be81adf084396d9d798d1a81521a52a33260bae98c784",
+      "bytes": 225035
+    },
+    "references/14_八卦动力学验证_v0.1/README.md": {
+      "sha256": "2e1a5ed2306f1ec7f1891210eca2895a7b8244a2dd70900b18dbf7268b6014a0",
+      "bytes": 10593
+    },
+    "references/14_八卦动力学验证_v0.1/abstraction_examples.json": {
+      "sha256": "088bd270635793d5a06f62c7af73ba5f70bf7aa0feabcc5f12e4239c5f906638",
+      "bytes": 3590
+    },
+    "references/14_八卦动力学验证_v0.1/abstraction_examples.py": {
+      "sha256": "b234031623157673be2ee4b5aa04fc38f8a8b99ada28151dc33b23bd470c63f0",
+      "bytes": 11638
+    },
+    "references/14_八卦动力学验证_v0.1/abstraction_results.json": {
+      "sha256": "5f25f540dd942208b834021607c76ed816c7449718a22c858b86dc75a8022a53",
+      "bytes": 3318
+    },
+    "references/14_八卦动力学验证_v0.1/bagua_models.json": {
+      "sha256": "e47e1b1d6b6e50a84b67ed223f0dc285e6d0646f2a70462120e2b88986307ad0",
+      "bytes": 59517
+    },
+    "references/14_八卦动力学验证_v0.1/results.json": {
+      "sha256": "d504839eb6315d3b77013e6b7c1eb2114b8783783ec5dcdd1a8a6a2df8085992",
+      "bytes": 61936
+    },
+    "references/14_八卦动力学验证_v0.1/verify_bagua.py": {
+      "sha256": "230bba368e771f795bf55febbbdbc898aa58408e4829dba29d80cb1f2ea8ce9d",
+      "bytes": 22214
+    },
+    "references/15_易传通过文连接卦象语词与系统_v0.1.md": {
+      "sha256": "dc08ced654a7bc99191f0a13de32d8bab53d1d9b8f5acd837af1553fad79bb3e",
+      "bytes": 15971
+    },
+    "references/16_文的组合规则与系统推演_v0.1.md": {
+      "sha256": "8e069de0732f2ef982737e4f2ee5490ee81419ee1e728698971ee93cb368c23c",
+      "bytes": 12818
+    },
+    "references/17_文卦系统映射验证_v0.1/README.md": {
+      "sha256": "81536de29a546e6cfdff1fba2a5ae0798f4a62f52af6b5115aaf194c38c95ec7",
+      "bytes": 3669
+    },
+    "references/17_文卦系统映射验证_v0.1/a_data.json": {
+      "sha256": "189910db3c247d050f35bd06f353f1d72be3be9222950454a4cd39e19994cb19",
+      "bytes": 12476
+    },
+    "references/17_文卦系统映射验证_v0.1/models.json": {
+      "sha256": "b4ece5fbae093297aefa0cdec5fa08bc140c263349b78e0c1e53fb0386d9941a",
+      "bytes": 22785
+    },
+    "references/17_文卦系统映射验证_v0.1/results.json": {
+      "sha256": "47c896830b25c51be89f7baa4c23c679d41c57a7204e1617448b5b5fdb0faf26",
+      "bytes": 29438
+    },
+    "references/17_文卦系统映射验证_v0.1/verify_models.py": {
+      "sha256": "ead82f6fd22fe7294a18cd4d45ea89a2962d09e49fa40ca3ca74b7a48acffe21",
+      "bytes": 17719
+    },
+    "references/18_核心研究主张与完成边界审计_v0.1.md": {
+      "sha256": "5874792fc8f91f674f1e7cc5832240bcee648b6a3b1d525b1558fa00170d3190",
+      "bytes": 27215
+    },
+    "references/18_核心范围计数与边界_v0.1.json": {
+      "sha256": "0a286d055a775252665acd1b04a49bf7450c7d6489674a542376cac1ef0fa0b3",
+      "bytes": 33874
+    },
+    "references/README.md": {
+      "sha256": "42ab3776f10a2fc23001e53debd9a190423c82196d2acc59a56bc835375078bc",
+      "bytes": 2119
+    },
+    "validate_release.py": {
+      "sha256": "87061ef85c40dfe08aa5b4f9f7132c50b1dc08f523b9ecd10efbb52d8efa84ed",
+      "bytes": 6982
+    },
+    "verification_results.json": {
+      "sha256": "25a4be57fd5c4580a2161809569396b16587ed1f3319d61a59537732218de3ee",
+      "bytes": 2272
+    },
+    "版本复核与完成边界.md": {
+      "sha256": "e9d705032ea9ec8d75e8dfcfd44812ae1d8413edac39daafe6cf0692e0fb1e34",
+      "bytes": 4418
+    }
+  }
+}

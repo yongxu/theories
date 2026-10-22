@@ -1,0 +1,200 @@
+{
+  "schema_version": "v0.4.0",
+  "scope": "modern stipulated models; no empirical mechanism or historical universal law is claimed",
+  "time": "each world event is one fixed positive step; reasoning tests do not advance time",
+  "reorganization": {
+    "entities": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "parts": [
+      "u",
+      "v"
+    ],
+    "initial": {
+      "active": [
+        "A"
+      ],
+      "holdings": {
+        "A": [
+          "u",
+          "v"
+        ]
+      },
+      "bonds": [
+        [
+          "u",
+          "v"
+        ]
+      ],
+      "information": [
+        "u",
+        "v"
+      ],
+      "resource": 2,
+      "compatible_pairs": [
+        [
+          "u",
+          "v"
+        ]
+      ],
+      "lineage": [],
+      "window_open": true,
+      "task_required": true,
+      "completed_tasks": []
+    },
+    "events": [
+      [
+        "s0",
+        "split",
+        "s1"
+      ],
+      [
+        "s0",
+        "cut_in_place",
+        "s_cut"
+      ],
+      [
+        "s1",
+        "merge",
+        "s2"
+      ],
+      [
+        "s1",
+        "merge_lossy",
+        "s3"
+      ],
+      [
+        "s1",
+        "drain",
+        "s1_empty"
+      ],
+      [
+        "s1",
+        "spoil",
+        "s1_bad"
+      ],
+      [
+        "s1",
+        "delay",
+        "s1_late"
+      ],
+      [
+        "s1_empty",
+        "attempt_merge",
+        "s_empty_fail"
+      ],
+      [
+        "s1_bad",
+        "attempt_merge",
+        "s_bad_fail"
+      ],
+      [
+        "s1_late",
+        "merge",
+        "s2_late"
+      ]
+    ],
+    "merge_cost": 1,
+    "operate_cost": 1,
+    "operate_rule": "for every generated state, generate an operate edge iff Coord(D) and resource>=operate_cost; its output records task completion",
+    "norm_N_timely": {
+      "actions": [
+        "merge",
+        "merge_lossy"
+      ],
+      "rule": "closed window => forbidden; open window with task_required => required; else permitted",
+      "scope": "timing-only illustrative norm; does not assess identity, information, coordination or moral optimality"
+    }
+  },
+  "constraints": {
+    "states": [
+      "start",
+      "p",
+      "q",
+      "goal",
+      "harm"
+    ],
+    "candidate_edges": [
+      [
+        "start",
+        "p"
+      ],
+      [
+        "start",
+        "harm"
+      ],
+      [
+        "p",
+        "q"
+      ],
+      [
+        "q",
+        "p"
+      ],
+      [
+        "q",
+        "goal"
+      ],
+      [
+        "goal",
+        "goal"
+      ],
+      [
+        "harm",
+        "harm"
+      ]
+    ],
+    "safe_allow": "exclude edges whose target is harm",
+    "overrestrict_allow": "exclude edges whose target is goal",
+    "goal_states": [
+      "goal"
+    ],
+    "harm_states": [
+      "harm"
+    ]
+  },
+  "expression_norms": {
+    "context": "one explicit illustrative meeting-expression standard, not a reconstruction of all Zhongyong ethics",
+    "initial": {
+      "manifestations": []
+    },
+    "express_fit": [
+      {
+        "affect": "anger",
+        "form": "reasoned_objection"
+      },
+      {
+        "affect": "joy",
+        "form": "quiet_acknowledgment"
+      }
+    ],
+    "express_excess": [
+      {
+        "affect": "anger",
+        "form": "insult"
+      }
+    ],
+    "N_expression": {
+      "action": "assess_expression",
+      "allowed_forms": {
+        "anger": [
+          "reasoned_objection"
+        ],
+        "joy": [
+          "quiet_acknowledgment"
+        ],
+        "sorrow": [
+          "solemn_statement"
+        ],
+        "pleasure": [
+          "moderate_praise"
+        ]
+      },
+      "rule": "unexpressed => undetermined; expressed and every manifestation allowed => permitted; else forbidden",
+      "reading": "permitted/forbidden are this declared expression norm's harmony/non-harmony judgments; never inherited from N_timely"
+    }
+  }
+}

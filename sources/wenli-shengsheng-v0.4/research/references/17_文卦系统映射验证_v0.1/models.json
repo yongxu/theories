@@ -1,0 +1,1158 @@
+{
+  "A_topology": {
+    "decay": {
+      "context_id": "bridge-A-influence-location-v0.1",
+      "closed_world": true,
+      "states": [
+        "A",
+        "B"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "AtA": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [
+              []
+            ],
+            "B": []
+          }
+        },
+        "AtB": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [],
+            "B": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "AB": [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "BA": [
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "hop": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "hold": {
+      "context_id": "bridge-A-influence-location-v0.1",
+      "closed_world": true,
+      "states": [
+        "A",
+        "B"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "AtA": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [
+              []
+            ],
+            "B": []
+          }
+        },
+        "AtB": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [],
+            "B": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "AB": [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "BA": [
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "hop": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "grow": {
+      "context_id": "bridge-A-influence-location-v0.1",
+      "closed_world": true,
+      "states": [
+        "A",
+        "B"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "AtA": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [
+              []
+            ],
+            "B": []
+          }
+        },
+        "AtB": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [],
+            "B": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "AB": [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "BA": [
+          [
+            "B",
+            "A"
+          ]
+        ],
+        "hop": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "one_way": {
+      "context_id": "bridge-A-influence-location-v0.1",
+      "closed_world": true,
+      "states": [
+        "A",
+        "B"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "AtA": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [
+              []
+            ],
+            "B": []
+          }
+        },
+        "AtB": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "A": [],
+            "B": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "AB": [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "BA": [],
+        "hop": [
+          [
+            "A",
+            "B"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    }
+  },
+  "B_hysteresis": {
+    "context_id": "bridge-B-hysteretic-tank-v0.1",
+    "closed_world": true,
+    "states": [
+      "0ON",
+      "1ON",
+      "2ON",
+      "3ON",
+      "3OFF",
+      "4OFF",
+      "5OFF",
+      "6OFF"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "On": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [
+            []
+          ],
+          "1ON": [
+            []
+          ],
+          "2ON": [
+            []
+          ],
+          "3ON": [
+            []
+          ],
+          "3OFF": [],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Off": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [],
+          "3OFF": [
+            []
+          ],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [
+            []
+          ],
+          "6OFF": [
+            []
+          ]
+        }
+      },
+      "Band": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [
+            []
+          ],
+          "3ON": [
+            []
+          ],
+          "3OFF": [
+            []
+          ],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "High": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [],
+          "3OFF": [],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Low": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [
+            []
+          ],
+          "3ON": [],
+          "3OFF": [],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Level3": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [
+            []
+          ],
+          "3OFF": [
+            []
+          ],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      }
+    },
+    "programs": {
+      "tick": [
+        [
+          "0ON",
+          "1ON"
+        ],
+        [
+          "1ON",
+          "2ON"
+        ],
+        [
+          "2ON",
+          "3ON"
+        ],
+        [
+          "3ON",
+          "4OFF"
+        ],
+        [
+          "3OFF",
+          "2ON"
+        ],
+        [
+          "4OFF",
+          "3OFF"
+        ],
+        [
+          "5OFF",
+          "4OFF"
+        ],
+        [
+          "6OFF",
+          "5OFF"
+        ]
+      ],
+      "dead": []
+    },
+    "formula_defs": {
+      "Enabled": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "tick"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "CanResume": {
+        "op": "diamond",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "On",
+          "args": []
+        }
+      },
+      "AlwaysOff": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "Off",
+          "args": []
+        }
+      },
+      "ReachesBand": {
+        "op": "diamond",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "Band",
+          "args": []
+        }
+      },
+      "BandForever": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "Band",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "tick"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      },
+      "HighToLow": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "atom",
+                "name": "Low",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "LowToHigh": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "Low",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "atom",
+                "name": "High",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "HighRoundTrip": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  },
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  }
+                ]
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  },
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  }
+                ]
+              },
+              "body": {
+                "op": "atom",
+                "name": "High",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "DeadBoxLow": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "dead"
+        },
+        "body": {
+          "op": "atom",
+          "name": "Low",
+          "args": []
+        }
+      },
+      "DeadEnabled": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "dead"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "DeadGuarantee": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "dead"
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "atomic",
+                "name": "dead"
+              },
+              "body": {
+                "op": "atom",
+                "name": "Low",
+                "args": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    "program_defs": {},
+    "norms": {}
+  },
+  "B_memoryless": {
+    "context_id": "bridge-B-memoryless-tank-v0.1",
+    "closed_world": true,
+    "states": [
+      "0ON",
+      "1ON",
+      "2ON",
+      "3ON",
+      "4OFF",
+      "5OFF",
+      "6OFF"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "On": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [
+            []
+          ],
+          "1ON": [
+            []
+          ],
+          "2ON": [
+            []
+          ],
+          "3ON": [
+            []
+          ],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Off": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [
+            []
+          ],
+          "6OFF": [
+            []
+          ]
+        }
+      },
+      "Band": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [
+            []
+          ],
+          "3ON": [
+            []
+          ],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "High": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [],
+          "4OFF": [
+            []
+          ],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Low": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [
+            []
+          ],
+          "3ON": [],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      },
+      "Level3": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "0ON": [],
+          "1ON": [],
+          "2ON": [],
+          "3ON": [
+            []
+          ],
+          "4OFF": [],
+          "5OFF": [],
+          "6OFF": []
+        }
+      }
+    },
+    "programs": {
+      "tick": [
+        [
+          "0ON",
+          "1ON"
+        ],
+        [
+          "1ON",
+          "2ON"
+        ],
+        [
+          "2ON",
+          "3ON"
+        ],
+        [
+          "3ON",
+          "4OFF"
+        ],
+        [
+          "4OFF",
+          "3ON"
+        ],
+        [
+          "5OFF",
+          "4OFF"
+        ],
+        [
+          "6OFF",
+          "5OFF"
+        ]
+      ],
+      "dead": []
+    },
+    "formula_defs": {
+      "Enabled": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "tick"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "CanResume": {
+        "op": "diamond",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "On",
+          "args": []
+        }
+      },
+      "AlwaysOff": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "Off",
+          "args": []
+        }
+      },
+      "ReachesBand": {
+        "op": "diamond",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "atom",
+          "name": "Band",
+          "args": []
+        }
+      },
+      "BandForever": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "tick"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "Band",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "tick"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      },
+      "HighToLow": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "atom",
+                "name": "Low",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "LowToHigh": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "Low",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              "body": {
+                "op": "atom",
+                "name": "High",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "HighRoundTrip": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  },
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  }
+                ]
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  },
+                  {
+                    "op": "repeat",
+                    "count": 2,
+                    "body": {
+                      "op": "atomic",
+                      "name": "tick"
+                    }
+                  }
+                ]
+              },
+              "body": {
+                "op": "atom",
+                "name": "High",
+                "args": []
+              }
+            }
+          ]
+        }
+      },
+      "DeadBoxLow": {
+        "op": "box",
+        "program": {
+          "op": "atomic",
+          "name": "dead"
+        },
+        "body": {
+          "op": "atom",
+          "name": "Low",
+          "args": []
+        }
+      },
+      "DeadEnabled": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "dead"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "DeadGuarantee": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "High",
+          "args": []
+        },
+        "right": {
+          "op": "and",
+          "args": [
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "dead"
+              },
+              "body": {
+                "op": "true"
+              }
+            },
+            {
+              "op": "box",
+              "program": {
+                "op": "atomic",
+                "name": "dead"
+              },
+              "body": {
+                "op": "atom",
+                "name": "Low",
+                "args": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    "program_defs": {},
+    "norms": {}
+  }
+}

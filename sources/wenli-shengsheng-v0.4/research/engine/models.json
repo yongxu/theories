@@ -1,0 +1,1583 @@
+{
+  "schema_version": "v0.4.0",
+  "models": {
+    "reorganization": {
+      "context_id": "G1-v04-reorganization-fixed-identity",
+      "closed_world": true,
+      "states": [
+        "s0",
+        "s1",
+        "s_cut",
+        "s2",
+        "s3",
+        "s1_empty",
+        "s1_bad",
+        "s1_late",
+        "s_empty_fail",
+        "s_bad_fail",
+        "s2_late",
+        "s_done",
+        "s_done_late"
+      ],
+      "sorts": {
+        "Entity": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "Kind": [
+          "Org",
+          "Unit"
+        ]
+      },
+      "constants": {
+        "A": {
+          "sort": "Entity",
+          "value": "A"
+        },
+        "B": {
+          "sort": "Entity",
+          "value": "B"
+        },
+        "C": {
+          "sort": "Entity",
+          "value": "C"
+        },
+        "D": {
+          "sort": "Entity",
+          "value": "D"
+        },
+        "Org": {
+          "sort": "Kind",
+          "value": "Org"
+        },
+        "Unit": {
+          "sort": "Kind",
+          "value": "Unit"
+        }
+      },
+      "predicates": {
+        "E": {
+          "sorts": [
+            "Kind",
+            "Entity"
+          ],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [
+              [
+                "Org",
+                "A"
+              ]
+            ],
+            "s1": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s_cut": [],
+            "s2": [
+              [
+                "Org",
+                "D"
+              ]
+            ],
+            "s3": [
+              [
+                "Org",
+                "D"
+              ]
+            ],
+            "s1_empty": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s1_bad": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s1_late": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s_empty_fail": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s_bad_fail": [
+              [
+                "Unit",
+                "B"
+              ],
+              [
+                "Unit",
+                "C"
+              ]
+            ],
+            "s2_late": [
+              [
+                "Org",
+                "D"
+              ]
+            ],
+            "s_done": [
+              [
+                "Org",
+                "D"
+              ]
+            ],
+            "s_done_late": [
+              [
+                "Org",
+                "D"
+              ]
+            ]
+          }
+        },
+        "L": {
+          "sorts": [
+            "Entity",
+            "Entity"
+          ],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [],
+            "s1": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s_cut": [],
+            "s2": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ]
+            ],
+            "s3": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ]
+            ],
+            "s1_empty": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s1_bad": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s1_late": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s_empty_fail": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s_bad_fail": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "s2_late": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ]
+            ],
+            "s_done": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ]
+            ],
+            "s_done_late": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ]
+            ]
+          }
+        },
+        "Coord": {
+          "sorts": [
+            "Entity"
+          ],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [
+              [
+                "A"
+              ]
+            ],
+            "s1": [],
+            "s_cut": [],
+            "s2": [
+              [
+                "D"
+              ]
+            ],
+            "s3": [],
+            "s1_empty": [],
+            "s1_bad": [],
+            "s1_late": [],
+            "s_empty_fail": [],
+            "s_bad_fail": [],
+            "s2_late": [
+              [
+                "D"
+              ]
+            ],
+            "s_done": [
+              [
+                "D"
+              ]
+            ],
+            "s_done_late": [
+              [
+                "D"
+              ]
+            ]
+          }
+        },
+        "InfoComplete": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [
+              []
+            ],
+            "s1": [
+              []
+            ],
+            "s_cut": [
+              []
+            ],
+            "s2": [
+              []
+            ],
+            "s3": [],
+            "s1_empty": [
+              []
+            ],
+            "s1_bad": [
+              []
+            ],
+            "s1_late": [
+              []
+            ],
+            "s_empty_fail": [
+              []
+            ],
+            "s_bad_fail": [
+              []
+            ],
+            "s2_late": [
+              []
+            ],
+            "s_done": [
+              []
+            ],
+            "s_done_late": [
+              []
+            ]
+          }
+        },
+        "Done": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [],
+            "s1": [],
+            "s_cut": [],
+            "s2": [],
+            "s3": [],
+            "s1_empty": [],
+            "s1_bad": [],
+            "s1_late": [],
+            "s_empty_fail": [],
+            "s_bad_fail": [],
+            "s2_late": [],
+            "s_done": [
+              []
+            ],
+            "s_done_late": [
+              []
+            ]
+          }
+        },
+        "ResourceEnough": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [
+              []
+            ],
+            "s1": [
+              []
+            ],
+            "s_cut": [
+              []
+            ],
+            "s2": [
+              []
+            ],
+            "s3": [
+              []
+            ],
+            "s1_empty": [],
+            "s1_bad": [
+              []
+            ],
+            "s1_late": [
+              []
+            ],
+            "s_empty_fail": [],
+            "s_bad_fail": [
+              []
+            ],
+            "s2_late": [
+              []
+            ],
+            "s_done": [],
+            "s_done_late": []
+          }
+        },
+        "Compatible": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "s0": [
+              []
+            ],
+            "s1": [
+              []
+            ],
+            "s_cut": [
+              []
+            ],
+            "s2": [
+              []
+            ],
+            "s3": [
+              []
+            ],
+            "s1_empty": [
+              []
+            ],
+            "s1_bad": [],
+            "s1_late": [
+              []
+            ],
+            "s_empty_fail": [
+              []
+            ],
+            "s_bad_fail": [],
+            "s2_late": [
+              []
+            ],
+            "s_done": [
+              []
+            ],
+            "s_done_late": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "attempt_merge": [
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1_bad",
+            "s_bad_fail"
+          ],
+          [
+            "s1_empty",
+            "s_empty_fail"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ]
+        ],
+        "change_membership": [
+          [
+            "s0",
+            "s1"
+          ],
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1",
+            "s3"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ]
+        ],
+        "change_resource": [
+          [
+            "s1",
+            "s1_empty"
+          ],
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1",
+            "s3"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ],
+          [
+            "s2",
+            "s_done"
+          ],
+          [
+            "s2_late",
+            "s_done_late"
+          ]
+        ],
+        "cut_in_place": [
+          [
+            "s0",
+            "s_cut"
+          ]
+        ],
+        "delay": [
+          [
+            "s1",
+            "s1_late"
+          ]
+        ],
+        "drain": [
+          [
+            "s1",
+            "s1_empty"
+          ]
+        ],
+        "merge": [
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ]
+        ],
+        "merge_lossy": [
+          [
+            "s1",
+            "s3"
+          ]
+        ],
+        "operate": [
+          [
+            "s2",
+            "s_done"
+          ],
+          [
+            "s2_late",
+            "s_done_late"
+          ]
+        ],
+        "preserve_information": [
+          [
+            "s0",
+            "s1"
+          ],
+          [
+            "s0",
+            "s_cut"
+          ],
+          [
+            "s1",
+            "s1_bad"
+          ],
+          [
+            "s1",
+            "s1_empty"
+          ],
+          [
+            "s1",
+            "s1_late"
+          ],
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1_bad",
+            "s_bad_fail"
+          ],
+          [
+            "s1_empty",
+            "s_empty_fail"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ],
+          [
+            "s2",
+            "s_done"
+          ],
+          [
+            "s2_late",
+            "s_done_late"
+          ]
+        ],
+        "split": [
+          [
+            "s0",
+            "s1"
+          ]
+        ],
+        "spoil": [
+          [
+            "s1",
+            "s1_bad"
+          ]
+        ],
+        "structural_allowed": [
+          [
+            "s0",
+            "s1"
+          ],
+          [
+            "s0",
+            "s_cut"
+          ],
+          [
+            "s1",
+            "s1_bad"
+          ],
+          [
+            "s1",
+            "s1_empty"
+          ],
+          [
+            "s1",
+            "s1_late"
+          ],
+          [
+            "s1",
+            "s2"
+          ],
+          [
+            "s1",
+            "s3"
+          ],
+          [
+            "s1_bad",
+            "s_bad_fail"
+          ],
+          [
+            "s1_empty",
+            "s_empty_fail"
+          ],
+          [
+            "s1_late",
+            "s2_late"
+          ],
+          [
+            "s2",
+            "s_done"
+          ],
+          [
+            "s2_late",
+            "s_done_late"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {
+        "N_timely": {
+          "actions": [
+            "merge",
+            "merge_lossy"
+          ],
+          "judgments": {
+            "s0": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s1": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s_cut": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s2": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s3": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s1_empty": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s1_bad": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s1_late": {
+              "merge": "forbidden",
+              "merge_lossy": "forbidden"
+            },
+            "s_empty_fail": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s_bad_fail": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s2_late": {
+              "merge": "forbidden",
+              "merge_lossy": "forbidden"
+            },
+            "s_done": {
+              "merge": "required",
+              "merge_lossy": "required"
+            },
+            "s_done_late": {
+              "merge": "forbidden",
+              "merge_lossy": "forbidden"
+            }
+          }
+        }
+      }
+    },
+    "constraints": {
+      "context_id": "G1-v04-constraint-reachability",
+      "closed_world": true,
+      "states": [
+        "start",
+        "p",
+        "q",
+        "goal",
+        "harm"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "Goal": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "start": [],
+            "p": [],
+            "q": [],
+            "goal": [
+              []
+            ],
+            "harm": []
+          }
+        },
+        "Harm": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "start": [],
+            "p": [],
+            "q": [],
+            "goal": [],
+            "harm": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "move": [
+          [
+            "start",
+            "p"
+          ],
+          [
+            "start",
+            "harm"
+          ],
+          [
+            "p",
+            "q"
+          ],
+          [
+            "q",
+            "p"
+          ],
+          [
+            "q",
+            "goal"
+          ],
+          [
+            "goal",
+            "goal"
+          ],
+          [
+            "harm",
+            "harm"
+          ]
+        ],
+        "allow_safe": [
+          [
+            "start",
+            "p"
+          ],
+          [
+            "p",
+            "q"
+          ],
+          [
+            "q",
+            "p"
+          ],
+          [
+            "q",
+            "goal"
+          ],
+          [
+            "goal",
+            "goal"
+          ]
+        ],
+        "allow_overrestrict": [
+          [
+            "start",
+            "p"
+          ],
+          [
+            "start",
+            "harm"
+          ],
+          [
+            "p",
+            "q"
+          ],
+          [
+            "q",
+            "p"
+          ],
+          [
+            "harm",
+            "harm"
+          ]
+        ],
+        "allow_without_goal_loop": [
+          [
+            "start",
+            "p"
+          ],
+          [
+            "start",
+            "harm"
+          ],
+          [
+            "p",
+            "q"
+          ],
+          [
+            "q",
+            "p"
+          ],
+          [
+            "q",
+            "goal"
+          ],
+          [
+            "harm",
+            "harm"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {}
+    },
+    "expression_norms": {
+      "context_id": "G1-v04-expression-specific-norm",
+      "closed_world": true,
+      "states": [
+        "n0",
+        "n_fit",
+        "n_excess"
+      ],
+      "sorts": {},
+      "constants": {},
+      "predicates": {
+        "Unexpressed": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "n0": [
+              []
+            ],
+            "n_fit": [],
+            "n_excess": []
+          }
+        },
+        "Expressed": {
+          "sorts": [],
+          "kind": "descriptive",
+          "true_at": {
+            "n0": [],
+            "n_fit": [
+              []
+            ],
+            "n_excess": [
+              []
+            ]
+          }
+        }
+      },
+      "programs": {
+        "express_fit": [
+          [
+            "n0",
+            "n_fit"
+          ]
+        ],
+        "express_excess": [
+          [
+            "n0",
+            "n_excess"
+          ]
+        ],
+        "express": [
+          [
+            "n0",
+            "n_fit"
+          ],
+          [
+            "n0",
+            "n_excess"
+          ]
+        ]
+      },
+      "formula_defs": {},
+      "program_defs": {},
+      "norms": {
+        "N_expression": {
+          "actions": [
+            "assess_expression"
+          ],
+          "judgments": {
+            "n0": {
+              "assess_expression": "undetermined"
+            },
+            "n_fit": {
+              "assess_expression": "permitted"
+            },
+            "n_excess": {
+              "assess_expression": "forbidden"
+            }
+          }
+        }
+      }
+    }
+  },
+  "derived_snapshots": {
+    "reorganization": {
+      "s0": {
+        "active": [
+          "A"
+        ],
+        "holdings": {
+          "A": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s1": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s_cut": {
+        "active": [
+          "A"
+        ],
+        "holdings": {
+          "A": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s2": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s3": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s1_empty": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s1_bad": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s1_late": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s_empty_fail": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s_bad_fail": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s2_late": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "s_done": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": [
+          "task"
+        ]
+      },
+      "s_done_late": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": [
+          "task"
+        ]
+      }
+    },
+    "expression_norms": {
+      "n0": {
+        "manifestations": []
+      },
+      "n_fit": {
+        "manifestations": [
+          {
+            "affect": "anger",
+            "form": "reasoned_objection"
+          },
+          {
+            "affect": "joy",
+            "form": "quiet_acknowledgment"
+          }
+        ]
+      },
+      "n_excess": {
+        "manifestations": [
+          {
+            "affect": "anger",
+            "form": "insult"
+          }
+        ]
+      }
+    }
+  }
+}

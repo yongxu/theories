@@ -1,0 +1,178 @@
+{
+  "version": "v0.4-pilot-1",
+  "protocol_sha256": "fdee013d63f01e673cf24d39cad2b0f1caff164879cdf8d8d90db9d227894ddd",
+  "corpus_sha256": "39cbda7713cf367e5390772c897efec7bca7efd2ff99184608b1a3af24d4086b",
+  "annotation_sha256": {
+    "a": "f281d022cc39a18378c5e8ab8fd987dce3ec2b1ec7a8452d7b5c5ddc8f4ef731",
+    "b": "01c0717510b2207120f82de708963587fedb8cfcaf0bf830e6c7edcaac56bafd"
+  },
+  "total": {
+    "units": 55,
+    "a": {
+      "E": 36,
+      "C": 7,
+      "N": 12
+    },
+    "b": {
+      "E": 31,
+      "C": 9,
+      "N": 15
+    },
+    "exact_agreement": 46,
+    "disagreements": 9,
+    "joint_labels": {
+      "E": 30,
+      "C": 4,
+      "N": 12
+    }
+  },
+  "by_source": {
+    "L": {
+      "units": 8,
+      "a": {
+        "E": 7,
+        "C": 1,
+        "N": 0
+      },
+      "b": {
+        "E": 6,
+        "C": 2,
+        "N": 0
+      },
+      "exact_agreement": 7,
+      "disagreements": 1,
+      "joint_labels": {
+        "E": 6,
+        "C": 1,
+        "N": 0
+      }
+    },
+    "A": {
+      "units": 16,
+      "a": {
+        "E": 15,
+        "C": 1,
+        "N": 0
+      },
+      "b": {
+        "E": 16,
+        "C": 0,
+        "N": 0
+      },
+      "exact_agreement": 15,
+      "disagreements": 1,
+      "joint_labels": {
+        "E": 15,
+        "C": 0,
+        "N": 0
+      }
+    },
+    "Y": {
+      "units": 11,
+      "a": {
+        "E": 7,
+        "C": 1,
+        "N": 3
+      },
+      "b": {
+        "E": 5,
+        "C": 3,
+        "N": 3
+      },
+      "exact_agreement": 9,
+      "disagreements": 2,
+      "joint_labels": {
+        "E": 5,
+        "C": 1,
+        "N": 3
+      }
+    },
+    "M": {
+      "units": 20,
+      "a": {
+        "E": 7,
+        "C": 4,
+        "N": 9
+      },
+      "b": {
+        "E": 4,
+        "C": 4,
+        "N": 12
+      },
+      "exact_agreement": 15,
+      "disagreements": 5,
+      "joint_labels": {
+        "E": 4,
+        "C": 2,
+        "N": 9
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "unit_id": "L04",
+      "a": "E",
+      "b": "C",
+      "a_reason": "挫与解分别给出操作和受作用项；不只训释一个字。",
+      "b_reason": "有过程和结果线索；仅凭本单元不能稳定决定不盈是何种状态及其与沖的逻辑联系。"
+    },
+    {
+      "unit_id": "A09",
+      "a": "C",
+      "b": "E",
+      "a_reason": "两项并置支持联系读法，具体作用关系及实践主体仍靠语境补足。",
+      "b_reason": "前项实践、后项结果和归的趋向清楚；登记论说的联系而不宣称礼仪必有经验效应。"
+    },
+    {
+      "unit_id": "Y04",
+      "a": "E",
+      "b": "C",
+      "a_reason": "以和之保留施作用于对象的角色结构。",
+      "b_reason": "超过纯名词象征，但所有受作用者为无本单元先行词的之；补万物须跨单元，因此角色尚待解释。"
+    },
+    {
+      "unit_id": "Y10",
+      "a": "E",
+      "b": "C",
+      "a_reason": "一/再/三索与所得、命名形成连续结构，超过单项父母对应。",
+      "b_reason": "不仅有父母等对配，亦有索得线索；但索的对象与具体关系本单元未明，是否指可展开构造尚待解。"
+    },
+    {
+      "unit_id": "M05",
+      "a": "C",
+      "b": "N",
+      "a_reason": "接提示关系，参与项和具体接法未在本条给出。",
+      "b_reason": "接提示某种联系，但谁与谁接未在单元给出；不凭现代认识论补两端。"
+    },
+    {
+      "unit_id": "M13",
+      "a": "E",
+      "b": "N",
+      "a_reason": "利亲有明确对象，通用行为者由孝行语法角色给出。",
+      "b_reason": "含一个动作及宾语，但没有展开条件、两阶段或独立关系图式；不自动把任何及物动作视为E。"
+    },
+    {
+      "unit_id": "M15",
+      "a": "C",
+      "b": "N",
+      "a_reason": "自作提示施事来源，但佴及整体解释不稳定。",
+      "b_reason": "没有独立受事或结果；不从自字推出自组织。"
+    },
+    {
+      "unit_id": "M18",
+      "a": "E",
+      "b": "C",
+      "a_reason": "所非的名词化对象和不为共享行动内容，形成规范约束。",
+      "b_reason": "所非带有评价对象线索，但评价者及非的含义未定，需解释才能形成稳定规范图式。"
+    },
+    {
+      "unit_id": "M20",
+      "a": "E",
+      "b": "C",
+      "a_reason": "所以明示根据或条件，不只是勇与敢同义替换。",
+      "b_reason": "有所依待线索，但本句既可为勇的属性释义，也可为志使敢的结构；缺少所敢对象和断言范围。"
+    }
+  ],
+  "integrity_checks": 302,
+  "interpretation": "Unit-level presence of at least one schema, not lexical coverage or proportion of fully explained content. AI annotations, purpose-selected contiguous excerpts; no population estimate or human-learning claim."
+}

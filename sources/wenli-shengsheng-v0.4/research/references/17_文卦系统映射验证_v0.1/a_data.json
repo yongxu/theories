@@ -1,0 +1,544 @@
+{
+  "rule": "x_next=p*y; y_next=q*x",
+  "orientation": "q:A->B, p:B->A",
+  "A": {
+    "cases": [
+      {
+        "id": "decay",
+        "label": "消退",
+        "p": 0.5,
+        "q": 0.5,
+        "p_exact": "1/2",
+        "q_exact": "1/2",
+        "loop_gain": 0.25,
+        "loop_gain_exact": "1/4",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 0.5,
+            "norm_inf": 0.5,
+            "x_exact": "0",
+            "y_exact": "1/2",
+            "norm_inf_exact": "1/2"
+          },
+          {
+            "t": 2,
+            "x": 0.25,
+            "y": 0.0,
+            "norm_inf": 0.25,
+            "x_exact": "1/4",
+            "y_exact": "0",
+            "norm_inf_exact": "1/4"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 0.125,
+            "norm_inf": 0.125,
+            "x_exact": "0",
+            "y_exact": "1/8",
+            "norm_inf_exact": "1/8"
+          },
+          {
+            "t": 4,
+            "x": 0.0625,
+            "y": 0.0,
+            "norm_inf": 0.0625,
+            "x_exact": "1/16",
+            "y_exact": "0",
+            "norm_inf_exact": "1/16"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 0.03125,
+            "norm_inf": 0.03125,
+            "x_exact": "0",
+            "y_exact": "1/32",
+            "norm_inf_exact": "1/32"
+          },
+          {
+            "t": 6,
+            "x": 0.015625,
+            "y": 0.0,
+            "norm_inf": 0.015625,
+            "x_exact": "1/64",
+            "y_exact": "0",
+            "norm_inf_exact": "1/64"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 0.0078125,
+            "norm_inf": 0.0078125,
+            "x_exact": "0",
+            "y_exact": "1/128",
+            "norm_inf_exact": "1/128"
+          },
+          {
+            "t": 8,
+            "x": 0.00390625,
+            "y": 0.0,
+            "norm_inf": 0.00390625,
+            "x_exact": "1/256",
+            "y_exact": "0",
+            "norm_inf_exact": "1/256"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 0.001953125,
+            "norm_inf": 0.001953125,
+            "x_exact": "0",
+            "y_exact": "1/512",
+            "norm_inf_exact": "1/512"
+          },
+          {
+            "t": 10,
+            "x": 0.0009765625,
+            "y": 0.0,
+            "norm_inf": 0.0009765625,
+            "x_exact": "1/1024",
+            "y_exact": "0",
+            "norm_inf_exact": "1/1024"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 0.00048828125,
+            "norm_inf": 0.00048828125,
+            "x_exact": "0",
+            "y_exact": "1/2048",
+            "norm_inf_exact": "1/2048"
+          },
+          {
+            "t": 12,
+            "x": 0.000244140625,
+            "y": 0.0,
+            "norm_inf": 0.000244140625,
+            "x_exact": "1/4096",
+            "y_exact": "0",
+            "norm_inf_exact": "1/4096"
+          }
+        ]
+      },
+      {
+        "id": "hold",
+        "label": "幅度保持",
+        "p": 1.0,
+        "q": 1.0,
+        "p_exact": "1",
+        "q_exact": "1",
+        "loop_gain": 1.0,
+        "loop_gain_exact": "1",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 4,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 6,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 8,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 10,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 12,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          }
+        ]
+      },
+      {
+        "id": "grow",
+        "label": "放大失稳",
+        "p": 2.0,
+        "q": 1.0,
+        "p_exact": "2",
+        "q_exact": "1",
+        "loop_gain": 2.0,
+        "loop_gain_exact": "2",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 2.0,
+            "y": 0.0,
+            "norm_inf": 2.0,
+            "x_exact": "2",
+            "y_exact": "0",
+            "norm_inf_exact": "2"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 2.0,
+            "norm_inf": 2.0,
+            "x_exact": "0",
+            "y_exact": "2",
+            "norm_inf_exact": "2"
+          },
+          {
+            "t": 4,
+            "x": 4.0,
+            "y": 0.0,
+            "norm_inf": 4.0,
+            "x_exact": "4",
+            "y_exact": "0",
+            "norm_inf_exact": "4"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 4.0,
+            "norm_inf": 4.0,
+            "x_exact": "0",
+            "y_exact": "4",
+            "norm_inf_exact": "4"
+          },
+          {
+            "t": 6,
+            "x": 8.0,
+            "y": 0.0,
+            "norm_inf": 8.0,
+            "x_exact": "8",
+            "y_exact": "0",
+            "norm_inf_exact": "8"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 8.0,
+            "norm_inf": 8.0,
+            "x_exact": "0",
+            "y_exact": "8",
+            "norm_inf_exact": "8"
+          },
+          {
+            "t": 8,
+            "x": 16.0,
+            "y": 0.0,
+            "norm_inf": 16.0,
+            "x_exact": "16",
+            "y_exact": "0",
+            "norm_inf_exact": "16"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 16.0,
+            "norm_inf": 16.0,
+            "x_exact": "0",
+            "y_exact": "16",
+            "norm_inf_exact": "16"
+          },
+          {
+            "t": 10,
+            "x": 32.0,
+            "y": 0.0,
+            "norm_inf": 32.0,
+            "x_exact": "32",
+            "y_exact": "0",
+            "norm_inf_exact": "32"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 32.0,
+            "norm_inf": 32.0,
+            "x_exact": "0",
+            "y_exact": "32",
+            "norm_inf_exact": "32"
+          },
+          {
+            "t": 12,
+            "x": 64.0,
+            "y": 0.0,
+            "norm_inf": 64.0,
+            "x_exact": "64",
+            "y_exact": "0",
+            "norm_inf_exact": "64"
+          }
+        ]
+      },
+      {
+        "id": "one_way",
+        "label": "单向无返程",
+        "p": 0.0,
+        "q": 1.0,
+        "p_exact": "0",
+        "q_exact": "1",
+        "loop_gain": 0.0,
+        "loop_gain_exact": "0",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 4,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 6,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 8,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 10,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 12,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

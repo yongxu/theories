@@ -1,0 +1,3198 @@
+{
+  "all_pass": true,
+  "checks": 1488,
+  "g1_formula_evaluations": 888,
+  "encoding": {
+    "order": [
+      "bottom",
+      "middle",
+      "top"
+    ],
+    "zero": "阴",
+    "one": "阳",
+    "trigrams": [
+      {
+        "name": "乾",
+        "code": "111"
+      },
+      {
+        "name": "兑",
+        "code": "110"
+      },
+      {
+        "name": "离",
+        "code": "101"
+      },
+      {
+        "name": "震",
+        "code": "100"
+      },
+      {
+        "name": "巽",
+        "code": "011"
+      },
+      {
+        "name": "坎",
+        "code": "010"
+      },
+      {
+        "name": "艮",
+        "code": "001"
+      },
+      {
+        "name": "坤",
+        "code": "000"
+      }
+    ],
+    "context_id": "bagua-bottom-middle-top-fixed-domain-v0.1"
+  },
+  "model_status": "modern_stipulated_finite_models_not_empirical_or_historical_laws",
+  "trigram_transformations": {
+    "directed_single_line_edges": 24,
+    "undirected_single_line_edges": 12,
+    "one_line_edges": [
+      [
+        "000",
+        "001"
+      ],
+      [
+        "000",
+        "010"
+      ],
+      [
+        "000",
+        "100"
+      ],
+      [
+        "001",
+        "000"
+      ],
+      [
+        "001",
+        "011"
+      ],
+      [
+        "001",
+        "101"
+      ],
+      [
+        "010",
+        "000"
+      ],
+      [
+        "010",
+        "011"
+      ],
+      [
+        "010",
+        "110"
+      ],
+      [
+        "011",
+        "001"
+      ],
+      [
+        "011",
+        "010"
+      ],
+      [
+        "011",
+        "111"
+      ],
+      [
+        "100",
+        "000"
+      ],
+      [
+        "100",
+        "101"
+      ],
+      [
+        "100",
+        "110"
+      ],
+      [
+        "101",
+        "001"
+      ],
+      [
+        "101",
+        "100"
+      ],
+      [
+        "101",
+        "111"
+      ],
+      [
+        "110",
+        "010"
+      ],
+      [
+        "110",
+        "100"
+      ],
+      [
+        "110",
+        "111"
+      ],
+      [
+        "111",
+        "011"
+      ],
+      [
+        "111",
+        "101"
+      ],
+      [
+        "111",
+        "110"
+      ]
+    ],
+    "potential_closure_pairs": 64,
+    "C_involution": true,
+    "R_involution": true,
+    "C_R_commute": true,
+    "R_fixed": [
+      "111",
+      "101",
+      "010",
+      "000"
+    ],
+    "R_fixed_names": [
+      "乾",
+      "离",
+      "坎",
+      "坤"
+    ],
+    "C_fixed": [],
+    "mapping": [
+      {
+        "state": "111",
+        "name": "乾",
+        "C": "000",
+        "R": "111"
+      },
+      {
+        "state": "110",
+        "name": "兑",
+        "C": "001",
+        "R": "011"
+      },
+      {
+        "state": "101",
+        "name": "离",
+        "C": "010",
+        "R": "101"
+      },
+      {
+        "state": "100",
+        "name": "震",
+        "C": "011",
+        "R": "001"
+      },
+      {
+        "state": "011",
+        "name": "巽",
+        "C": "100",
+        "R": "110"
+      },
+      {
+        "state": "010",
+        "name": "坎",
+        "C": "101",
+        "R": "010"
+      },
+      {
+        "state": "001",
+        "name": "艮",
+        "C": "110",
+        "R": "100"
+      },
+      {
+        "state": "000",
+        "name": "坤",
+        "C": "111",
+        "R": "000"
+      }
+    ]
+  },
+  "hexagram_transformations": {
+    "stack_count": 64,
+    "encoding": "bottom_to_top = lower_triple + upper_triple",
+    "swap_involution": true,
+    "reverse6_involution": true,
+    "complement6_involution": true,
+    "C6_R6_commute": true,
+    "C6_swap_commute": true,
+    "swap_fixed_count": 8,
+    "swap_fixed": [
+      "000000",
+      "001001",
+      "010010",
+      "011011",
+      "100100",
+      "101101",
+      "110110",
+      "111111"
+    ],
+    "reverse6_fixed_count": 8,
+    "reverse6_fixed": [
+      "000000",
+      "001100",
+      "010010",
+      "011110",
+      "100001",
+      "101101",
+      "110011",
+      "111111"
+    ],
+    "complement6_fixed_count": 0,
+    "hu": {
+      "formula": "(b2,b3,b4,b3,b4,b5)",
+      "image_count": 16,
+      "preimages_per_image": 4,
+      "invertible": false,
+      "idempotent": false,
+      "collision": {
+        "inputs": [
+          "000000",
+          "100001"
+        ],
+        "output": "000000"
+      },
+      "non_idempotent_example": {
+        "input": "000010",
+        "hu": "000001",
+        "hu_twice": "000000"
+      },
+      "fibers": {
+        "000000": [
+          "000000",
+          "000001",
+          "100000",
+          "100001"
+        ],
+        "000001": [
+          "000010",
+          "000011",
+          "100010",
+          "100011"
+        ],
+        "001010": [
+          "000100",
+          "000101",
+          "100100",
+          "100101"
+        ],
+        "001011": [
+          "000110",
+          "000111",
+          "100110",
+          "100111"
+        ],
+        "010100": [
+          "001000",
+          "001001",
+          "101000",
+          "101001"
+        ],
+        "010101": [
+          "001010",
+          "001011",
+          "101010",
+          "101011"
+        ],
+        "011110": [
+          "001100",
+          "001101",
+          "101100",
+          "101101"
+        ],
+        "011111": [
+          "001110",
+          "001111",
+          "101110",
+          "101111"
+        ],
+        "100000": [
+          "010000",
+          "010001",
+          "110000",
+          "110001"
+        ],
+        "100001": [
+          "010010",
+          "010011",
+          "110010",
+          "110011"
+        ],
+        "101010": [
+          "010100",
+          "010101",
+          "110100",
+          "110101"
+        ],
+        "101011": [
+          "010110",
+          "010111",
+          "110110",
+          "110111"
+        ],
+        "110100": [
+          "011000",
+          "011001",
+          "111000",
+          "111001"
+        ],
+        "110101": [
+          "011010",
+          "011011",
+          "111010",
+          "111011"
+        ],
+        "111110": [
+          "011100",
+          "011101",
+          "111100",
+          "111101"
+        ],
+        "111111": [
+          "011110",
+          "011111",
+          "111110",
+          "111111"
+        ]
+      }
+    },
+    "mapping": [
+      {
+        "code": "000000",
+        "lower": "000",
+        "upper": "000",
+        "swap": "000000",
+        "reverse6": "000000",
+        "complement6": "111111",
+        "hu": "000000"
+      },
+      {
+        "code": "000001",
+        "lower": "000",
+        "upper": "001",
+        "swap": "001000",
+        "reverse6": "100000",
+        "complement6": "111110",
+        "hu": "000000"
+      },
+      {
+        "code": "000010",
+        "lower": "000",
+        "upper": "010",
+        "swap": "010000",
+        "reverse6": "010000",
+        "complement6": "111101",
+        "hu": "000001"
+      },
+      {
+        "code": "000011",
+        "lower": "000",
+        "upper": "011",
+        "swap": "011000",
+        "reverse6": "110000",
+        "complement6": "111100",
+        "hu": "000001"
+      },
+      {
+        "code": "000100",
+        "lower": "000",
+        "upper": "100",
+        "swap": "100000",
+        "reverse6": "001000",
+        "complement6": "111011",
+        "hu": "001010"
+      },
+      {
+        "code": "000101",
+        "lower": "000",
+        "upper": "101",
+        "swap": "101000",
+        "reverse6": "101000",
+        "complement6": "111010",
+        "hu": "001010"
+      },
+      {
+        "code": "000110",
+        "lower": "000",
+        "upper": "110",
+        "swap": "110000",
+        "reverse6": "011000",
+        "complement6": "111001",
+        "hu": "001011"
+      },
+      {
+        "code": "000111",
+        "lower": "000",
+        "upper": "111",
+        "swap": "111000",
+        "reverse6": "111000",
+        "complement6": "111000",
+        "hu": "001011"
+      },
+      {
+        "code": "001000",
+        "lower": "001",
+        "upper": "000",
+        "swap": "000001",
+        "reverse6": "000100",
+        "complement6": "110111",
+        "hu": "010100"
+      },
+      {
+        "code": "001001",
+        "lower": "001",
+        "upper": "001",
+        "swap": "001001",
+        "reverse6": "100100",
+        "complement6": "110110",
+        "hu": "010100"
+      },
+      {
+        "code": "001010",
+        "lower": "001",
+        "upper": "010",
+        "swap": "010001",
+        "reverse6": "010100",
+        "complement6": "110101",
+        "hu": "010101"
+      },
+      {
+        "code": "001011",
+        "lower": "001",
+        "upper": "011",
+        "swap": "011001",
+        "reverse6": "110100",
+        "complement6": "110100",
+        "hu": "010101"
+      },
+      {
+        "code": "001100",
+        "lower": "001",
+        "upper": "100",
+        "swap": "100001",
+        "reverse6": "001100",
+        "complement6": "110011",
+        "hu": "011110"
+      },
+      {
+        "code": "001101",
+        "lower": "001",
+        "upper": "101",
+        "swap": "101001",
+        "reverse6": "101100",
+        "complement6": "110010",
+        "hu": "011110"
+      },
+      {
+        "code": "001110",
+        "lower": "001",
+        "upper": "110",
+        "swap": "110001",
+        "reverse6": "011100",
+        "complement6": "110001",
+        "hu": "011111"
+      },
+      {
+        "code": "001111",
+        "lower": "001",
+        "upper": "111",
+        "swap": "111001",
+        "reverse6": "111100",
+        "complement6": "110000",
+        "hu": "011111"
+      },
+      {
+        "code": "010000",
+        "lower": "010",
+        "upper": "000",
+        "swap": "000010",
+        "reverse6": "000010",
+        "complement6": "101111",
+        "hu": "100000"
+      },
+      {
+        "code": "010001",
+        "lower": "010",
+        "upper": "001",
+        "swap": "001010",
+        "reverse6": "100010",
+        "complement6": "101110",
+        "hu": "100000"
+      },
+      {
+        "code": "010010",
+        "lower": "010",
+        "upper": "010",
+        "swap": "010010",
+        "reverse6": "010010",
+        "complement6": "101101",
+        "hu": "100001"
+      },
+      {
+        "code": "010011",
+        "lower": "010",
+        "upper": "011",
+        "swap": "011010",
+        "reverse6": "110010",
+        "complement6": "101100",
+        "hu": "100001"
+      },
+      {
+        "code": "010100",
+        "lower": "010",
+        "upper": "100",
+        "swap": "100010",
+        "reverse6": "001010",
+        "complement6": "101011",
+        "hu": "101010"
+      },
+      {
+        "code": "010101",
+        "lower": "010",
+        "upper": "101",
+        "swap": "101010",
+        "reverse6": "101010",
+        "complement6": "101010",
+        "hu": "101010"
+      },
+      {
+        "code": "010110",
+        "lower": "010",
+        "upper": "110",
+        "swap": "110010",
+        "reverse6": "011010",
+        "complement6": "101001",
+        "hu": "101011"
+      },
+      {
+        "code": "010111",
+        "lower": "010",
+        "upper": "111",
+        "swap": "111010",
+        "reverse6": "111010",
+        "complement6": "101000",
+        "hu": "101011"
+      },
+      {
+        "code": "011000",
+        "lower": "011",
+        "upper": "000",
+        "swap": "000011",
+        "reverse6": "000110",
+        "complement6": "100111",
+        "hu": "110100"
+      },
+      {
+        "code": "011001",
+        "lower": "011",
+        "upper": "001",
+        "swap": "001011",
+        "reverse6": "100110",
+        "complement6": "100110",
+        "hu": "110100"
+      },
+      {
+        "code": "011010",
+        "lower": "011",
+        "upper": "010",
+        "swap": "010011",
+        "reverse6": "010110",
+        "complement6": "100101",
+        "hu": "110101"
+      },
+      {
+        "code": "011011",
+        "lower": "011",
+        "upper": "011",
+        "swap": "011011",
+        "reverse6": "110110",
+        "complement6": "100100",
+        "hu": "110101"
+      },
+      {
+        "code": "011100",
+        "lower": "011",
+        "upper": "100",
+        "swap": "100011",
+        "reverse6": "001110",
+        "complement6": "100011",
+        "hu": "111110"
+      },
+      {
+        "code": "011101",
+        "lower": "011",
+        "upper": "101",
+        "swap": "101011",
+        "reverse6": "101110",
+        "complement6": "100010",
+        "hu": "111110"
+      },
+      {
+        "code": "011110",
+        "lower": "011",
+        "upper": "110",
+        "swap": "110011",
+        "reverse6": "011110",
+        "complement6": "100001",
+        "hu": "111111"
+      },
+      {
+        "code": "011111",
+        "lower": "011",
+        "upper": "111",
+        "swap": "111011",
+        "reverse6": "111110",
+        "complement6": "100000",
+        "hu": "111111"
+      },
+      {
+        "code": "100000",
+        "lower": "100",
+        "upper": "000",
+        "swap": "000100",
+        "reverse6": "000001",
+        "complement6": "011111",
+        "hu": "000000"
+      },
+      {
+        "code": "100001",
+        "lower": "100",
+        "upper": "001",
+        "swap": "001100",
+        "reverse6": "100001",
+        "complement6": "011110",
+        "hu": "000000"
+      },
+      {
+        "code": "100010",
+        "lower": "100",
+        "upper": "010",
+        "swap": "010100",
+        "reverse6": "010001",
+        "complement6": "011101",
+        "hu": "000001"
+      },
+      {
+        "code": "100011",
+        "lower": "100",
+        "upper": "011",
+        "swap": "011100",
+        "reverse6": "110001",
+        "complement6": "011100",
+        "hu": "000001"
+      },
+      {
+        "code": "100100",
+        "lower": "100",
+        "upper": "100",
+        "swap": "100100",
+        "reverse6": "001001",
+        "complement6": "011011",
+        "hu": "001010"
+      },
+      {
+        "code": "100101",
+        "lower": "100",
+        "upper": "101",
+        "swap": "101100",
+        "reverse6": "101001",
+        "complement6": "011010",
+        "hu": "001010"
+      },
+      {
+        "code": "100110",
+        "lower": "100",
+        "upper": "110",
+        "swap": "110100",
+        "reverse6": "011001",
+        "complement6": "011001",
+        "hu": "001011"
+      },
+      {
+        "code": "100111",
+        "lower": "100",
+        "upper": "111",
+        "swap": "111100",
+        "reverse6": "111001",
+        "complement6": "011000",
+        "hu": "001011"
+      },
+      {
+        "code": "101000",
+        "lower": "101",
+        "upper": "000",
+        "swap": "000101",
+        "reverse6": "000101",
+        "complement6": "010111",
+        "hu": "010100"
+      },
+      {
+        "code": "101001",
+        "lower": "101",
+        "upper": "001",
+        "swap": "001101",
+        "reverse6": "100101",
+        "complement6": "010110",
+        "hu": "010100"
+      },
+      {
+        "code": "101010",
+        "lower": "101",
+        "upper": "010",
+        "swap": "010101",
+        "reverse6": "010101",
+        "complement6": "010101",
+        "hu": "010101"
+      },
+      {
+        "code": "101011",
+        "lower": "101",
+        "upper": "011",
+        "swap": "011101",
+        "reverse6": "110101",
+        "complement6": "010100",
+        "hu": "010101"
+      },
+      {
+        "code": "101100",
+        "lower": "101",
+        "upper": "100",
+        "swap": "100101",
+        "reverse6": "001101",
+        "complement6": "010011",
+        "hu": "011110"
+      },
+      {
+        "code": "101101",
+        "lower": "101",
+        "upper": "101",
+        "swap": "101101",
+        "reverse6": "101101",
+        "complement6": "010010",
+        "hu": "011110"
+      },
+      {
+        "code": "101110",
+        "lower": "101",
+        "upper": "110",
+        "swap": "110101",
+        "reverse6": "011101",
+        "complement6": "010001",
+        "hu": "011111"
+      },
+      {
+        "code": "101111",
+        "lower": "101",
+        "upper": "111",
+        "swap": "111101",
+        "reverse6": "111101",
+        "complement6": "010000",
+        "hu": "011111"
+      },
+      {
+        "code": "110000",
+        "lower": "110",
+        "upper": "000",
+        "swap": "000110",
+        "reverse6": "000011",
+        "complement6": "001111",
+        "hu": "100000"
+      },
+      {
+        "code": "110001",
+        "lower": "110",
+        "upper": "001",
+        "swap": "001110",
+        "reverse6": "100011",
+        "complement6": "001110",
+        "hu": "100000"
+      },
+      {
+        "code": "110010",
+        "lower": "110",
+        "upper": "010",
+        "swap": "010110",
+        "reverse6": "010011",
+        "complement6": "001101",
+        "hu": "100001"
+      },
+      {
+        "code": "110011",
+        "lower": "110",
+        "upper": "011",
+        "swap": "011110",
+        "reverse6": "110011",
+        "complement6": "001100",
+        "hu": "100001"
+      },
+      {
+        "code": "110100",
+        "lower": "110",
+        "upper": "100",
+        "swap": "100110",
+        "reverse6": "001011",
+        "complement6": "001011",
+        "hu": "101010"
+      },
+      {
+        "code": "110101",
+        "lower": "110",
+        "upper": "101",
+        "swap": "101110",
+        "reverse6": "101011",
+        "complement6": "001010",
+        "hu": "101010"
+      },
+      {
+        "code": "110110",
+        "lower": "110",
+        "upper": "110",
+        "swap": "110110",
+        "reverse6": "011011",
+        "complement6": "001001",
+        "hu": "101011"
+      },
+      {
+        "code": "110111",
+        "lower": "110",
+        "upper": "111",
+        "swap": "111110",
+        "reverse6": "111011",
+        "complement6": "001000",
+        "hu": "101011"
+      },
+      {
+        "code": "111000",
+        "lower": "111",
+        "upper": "000",
+        "swap": "000111",
+        "reverse6": "000111",
+        "complement6": "000111",
+        "hu": "110100"
+      },
+      {
+        "code": "111001",
+        "lower": "111",
+        "upper": "001",
+        "swap": "001111",
+        "reverse6": "100111",
+        "complement6": "000110",
+        "hu": "110100"
+      },
+      {
+        "code": "111010",
+        "lower": "111",
+        "upper": "010",
+        "swap": "010111",
+        "reverse6": "010111",
+        "complement6": "000101",
+        "hu": "110101"
+      },
+      {
+        "code": "111011",
+        "lower": "111",
+        "upper": "011",
+        "swap": "011111",
+        "reverse6": "110111",
+        "complement6": "000100",
+        "hu": "110101"
+      },
+      {
+        "code": "111100",
+        "lower": "111",
+        "upper": "100",
+        "swap": "100111",
+        "reverse6": "001111",
+        "complement6": "000011",
+        "hu": "111110"
+      },
+      {
+        "code": "111101",
+        "lower": "111",
+        "upper": "101",
+        "swap": "101111",
+        "reverse6": "101111",
+        "complement6": "000010",
+        "hu": "111110"
+      },
+      {
+        "code": "111110",
+        "lower": "111",
+        "upper": "110",
+        "swap": "110111",
+        "reverse6": "011111",
+        "complement6": "000001",
+        "hu": "111111"
+      },
+      {
+        "code": "111111",
+        "lower": "111",
+        "upper": "111",
+        "swap": "111111",
+        "reverse6": "111111",
+        "complement6": "000000",
+        "hu": "111111"
+      }
+    ]
+  },
+  "rules": {
+    "identity": {
+      "formula": "F(b1,b2,b3)=(b1,b2,b3)",
+      "tick_edges": [
+        [
+          "111",
+          "111"
+        ],
+        [
+          "110",
+          "110"
+        ],
+        [
+          "101",
+          "101"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "011",
+          "011"
+        ],
+        [
+          "010",
+          "010"
+        ],
+        [
+          "001",
+          "001"
+        ],
+        [
+          "000",
+          "000"
+        ]
+      ],
+      "single_line_tick_edges": [],
+      "multiline_tick_edges": [],
+      "self_loop_tick_edges": [
+        [
+          "000",
+          "000"
+        ],
+        [
+          "001",
+          "001"
+        ],
+        [
+          "010",
+          "010"
+        ],
+        [
+          "011",
+          "011"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "101",
+          "101"
+        ],
+        [
+          "110",
+          "110"
+        ],
+        [
+          "111",
+          "111"
+        ]
+      ],
+      "fixed_points": [
+        "111",
+        "110",
+        "101",
+        "100",
+        "011",
+        "010",
+        "001",
+        "000"
+      ],
+      "periods": [
+        1
+      ],
+      "cycles": [
+        {
+          "states_in_tick_order": [
+            "111"
+          ],
+          "names_in_tick_order": [
+            "乾"
+          ],
+          "period": 1,
+          "basin": [
+            "111"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "110"
+          ],
+          "names_in_tick_order": [
+            "兑"
+          ],
+          "period": 1,
+          "basin": [
+            "110"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "101"
+          ],
+          "names_in_tick_order": [
+            "离"
+          ],
+          "period": 1,
+          "basin": [
+            "101"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "100"
+          ],
+          "names_in_tick_order": [
+            "震"
+          ],
+          "period": 1,
+          "basin": [
+            "100"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "011"
+          ],
+          "names_in_tick_order": [
+            "巽"
+          ],
+          "period": 1,
+          "basin": [
+            "011"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "010"
+          ],
+          "names_in_tick_order": [
+            "坎"
+          ],
+          "period": 1,
+          "basin": [
+            "010"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "001"
+          ],
+          "names_in_tick_order": [
+            "艮"
+          ],
+          "period": 1,
+          "basin": [
+            "001"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "000"
+          ],
+          "names_in_tick_order": [
+            "坤"
+          ],
+          "period": 1,
+          "basin": [
+            "000"
+          ]
+        }
+      ],
+      "max_transient_steps": 0,
+      "strongly_connected_components": [
+        [
+          "111"
+        ],
+        [
+          "110"
+        ],
+        [
+          "101"
+        ],
+        [
+          "100"
+        ],
+        [
+          "011"
+        ],
+        [
+          "010"
+        ],
+        [
+          "001"
+        ],
+        [
+          "000"
+        ]
+      ],
+      "closed_terminal_components": [
+        {
+          "states": [
+            "111"
+          ],
+          "names": [
+            "乾"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "111"
+          ]
+        },
+        {
+          "states": [
+            "110"
+          ],
+          "names": [
+            "兑"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "110"
+          ]
+        },
+        {
+          "states": [
+            "101"
+          ],
+          "names": [
+            "离"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "101"
+          ]
+        },
+        {
+          "states": [
+            "100"
+          ],
+          "names": [
+            "震"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "100"
+          ]
+        },
+        {
+          "states": [
+            "011"
+          ],
+          "names": [
+            "巽"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "011"
+          ]
+        },
+        {
+          "states": [
+            "010"
+          ],
+          "names": [
+            "坎"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "010"
+          ]
+        },
+        {
+          "states": [
+            "001"
+          ],
+          "names": [
+            "艮"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "001"
+          ]
+        },
+        {
+          "states": [
+            "000"
+          ],
+          "names": [
+            "坤"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "000"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "state": "111",
+          "name": "乾",
+          "enabled": true,
+          "trace_0_to_8": [
+            "111",
+            "111",
+            "111",
+            "111",
+            "111",
+            "111",
+            "111",
+            "111",
+            "111"
+          ],
+          "trace_names": [
+            "乾",
+            "乾",
+            "乾",
+            "乾",
+            "乾",
+            "乾",
+            "乾",
+            "乾",
+            "乾"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "111"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "111"
+          ]
+        },
+        {
+          "state": "110",
+          "name": "兑",
+          "enabled": true,
+          "trace_0_to_8": [
+            "110",
+            "110",
+            "110",
+            "110",
+            "110",
+            "110",
+            "110",
+            "110",
+            "110"
+          ],
+          "trace_names": [
+            "兑",
+            "兑",
+            "兑",
+            "兑",
+            "兑",
+            "兑",
+            "兑",
+            "兑",
+            "兑"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "110"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "110"
+          ]
+        },
+        {
+          "state": "101",
+          "name": "离",
+          "enabled": true,
+          "trace_0_to_8": [
+            "101",
+            "101",
+            "101",
+            "101",
+            "101",
+            "101",
+            "101",
+            "101",
+            "101"
+          ],
+          "trace_names": [
+            "离",
+            "离",
+            "离",
+            "离",
+            "离",
+            "离",
+            "离",
+            "离",
+            "离"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "101"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "101"
+          ]
+        },
+        {
+          "state": "100",
+          "name": "震",
+          "enabled": true,
+          "trace_0_to_8": [
+            "100",
+            "100",
+            "100",
+            "100",
+            "100",
+            "100",
+            "100",
+            "100",
+            "100"
+          ],
+          "trace_names": [
+            "震",
+            "震",
+            "震",
+            "震",
+            "震",
+            "震",
+            "震",
+            "震",
+            "震"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "100"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "100"
+          ]
+        },
+        {
+          "state": "011",
+          "name": "巽",
+          "enabled": true,
+          "trace_0_to_8": [
+            "011",
+            "011",
+            "011",
+            "011",
+            "011",
+            "011",
+            "011",
+            "011",
+            "011"
+          ],
+          "trace_names": [
+            "巽",
+            "巽",
+            "巽",
+            "巽",
+            "巽",
+            "巽",
+            "巽",
+            "巽",
+            "巽"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "011"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "011"
+          ]
+        },
+        {
+          "state": "010",
+          "name": "坎",
+          "enabled": true,
+          "trace_0_to_8": [
+            "010",
+            "010",
+            "010",
+            "010",
+            "010",
+            "010",
+            "010",
+            "010",
+            "010"
+          ],
+          "trace_names": [
+            "坎",
+            "坎",
+            "坎",
+            "坎",
+            "坎",
+            "坎",
+            "坎",
+            "坎",
+            "坎"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "010"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "010"
+          ]
+        },
+        {
+          "state": "001",
+          "name": "艮",
+          "enabled": true,
+          "trace_0_to_8": [
+            "001",
+            "001",
+            "001",
+            "001",
+            "001",
+            "001",
+            "001",
+            "001",
+            "001"
+          ],
+          "trace_names": [
+            "艮",
+            "艮",
+            "艮",
+            "艮",
+            "艮",
+            "艮",
+            "艮",
+            "艮",
+            "艮"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "001"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "001"
+          ]
+        },
+        {
+          "state": "000",
+          "name": "坤",
+          "enabled": true,
+          "trace_0_to_8": [
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "000"
+          ]
+        }
+      ],
+      "infinite_demo_K_states": [
+        "111",
+        "110",
+        "101",
+        "100",
+        "011",
+        "010",
+        "001"
+      ]
+    },
+    "zero": {
+      "formula": "F(b1,b2,b3)=(0,b1,b2)",
+      "tick_edges": [
+        [
+          "111",
+          "011"
+        ],
+        [
+          "110",
+          "011"
+        ],
+        [
+          "101",
+          "010"
+        ],
+        [
+          "100",
+          "010"
+        ],
+        [
+          "011",
+          "001"
+        ],
+        [
+          "010",
+          "001"
+        ],
+        [
+          "001",
+          "000"
+        ],
+        [
+          "000",
+          "000"
+        ]
+      ],
+      "single_line_tick_edges": [
+        [
+          "001",
+          "000"
+        ],
+        [
+          "011",
+          "001"
+        ],
+        [
+          "111",
+          "011"
+        ]
+      ],
+      "multiline_tick_edges": [
+        [
+          "010",
+          "001"
+        ],
+        [
+          "100",
+          "010"
+        ],
+        [
+          "101",
+          "010"
+        ],
+        [
+          "110",
+          "011"
+        ]
+      ],
+      "self_loop_tick_edges": [
+        [
+          "000",
+          "000"
+        ]
+      ],
+      "fixed_points": [
+        "000"
+      ],
+      "periods": [
+        1
+      ],
+      "cycles": [
+        {
+          "states_in_tick_order": [
+            "000"
+          ],
+          "names_in_tick_order": [
+            "坤"
+          ],
+          "period": 1,
+          "basin": [
+            "111",
+            "110",
+            "101",
+            "100",
+            "011",
+            "010",
+            "001",
+            "000"
+          ]
+        }
+      ],
+      "max_transient_steps": 3,
+      "strongly_connected_components": [
+        [
+          "111"
+        ],
+        [
+          "110"
+        ],
+        [
+          "101"
+        ],
+        [
+          "100"
+        ],
+        [
+          "011"
+        ],
+        [
+          "010"
+        ],
+        [
+          "001"
+        ],
+        [
+          "000"
+        ]
+      ],
+      "closed_terminal_components": [
+        {
+          "states": [
+            "000"
+          ],
+          "names": [
+            "坤"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "111",
+            "110",
+            "101",
+            "100",
+            "011",
+            "010",
+            "001",
+            "000"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "state": "111",
+          "name": "乾",
+          "enabled": true,
+          "trace_0_to_8": [
+            "111",
+            "011",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "111",
+              "011",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 3,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "110",
+          "name": "兑",
+          "enabled": true,
+          "trace_0_to_8": [
+            "110",
+            "011",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "兑",
+            "巽",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "110",
+              "011",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 3,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "110",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "101",
+          "name": "离",
+          "enabled": true,
+          "trace_0_to_8": [
+            "101",
+            "010",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "离",
+            "坎",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "101",
+              "010",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 3,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "101",
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "100",
+          "name": "震",
+          "enabled": true,
+          "trace_0_to_8": [
+            "100",
+            "010",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "震",
+            "坎",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "100",
+              "010",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 3,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "100",
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "011",
+          "name": "巽",
+          "enabled": true,
+          "trace_0_to_8": [
+            "011",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "巽",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "011",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 2,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "010",
+          "name": "坎",
+          "enabled": true,
+          "trace_0_to_8": [
+            "010",
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "坎",
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "010",
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 2,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "010",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "001",
+          "name": "艮",
+          "enabled": true,
+          "trace_0_to_8": [
+            "001",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "艮",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [
+              "001"
+            ],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 1,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "000",
+          "name": "坤",
+          "enabled": true,
+          "trace_0_to_8": [
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000",
+            "000"
+          ],
+          "trace_names": [
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "000"
+            ],
+            "entry_step": 0,
+            "period": 1
+          },
+          "may_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "000"
+          ]
+        }
+      ],
+      "infinite_demo_K_states": []
+    },
+    "negrotate": {
+      "formula": "F(b1,b2,b3)=(1-b3,b1,b2)",
+      "tick_edges": [
+        [
+          "111",
+          "011"
+        ],
+        [
+          "110",
+          "111"
+        ],
+        [
+          "101",
+          "010"
+        ],
+        [
+          "100",
+          "110"
+        ],
+        [
+          "011",
+          "001"
+        ],
+        [
+          "010",
+          "101"
+        ],
+        [
+          "001",
+          "000"
+        ],
+        [
+          "000",
+          "100"
+        ]
+      ],
+      "single_line_tick_edges": [
+        [
+          "000",
+          "100"
+        ],
+        [
+          "001",
+          "000"
+        ],
+        [
+          "011",
+          "001"
+        ],
+        [
+          "100",
+          "110"
+        ],
+        [
+          "110",
+          "111"
+        ],
+        [
+          "111",
+          "011"
+        ]
+      ],
+      "multiline_tick_edges": [
+        [
+          "010",
+          "101"
+        ],
+        [
+          "101",
+          "010"
+        ]
+      ],
+      "self_loop_tick_edges": [],
+      "fixed_points": [],
+      "periods": [
+        2,
+        6
+      ],
+      "cycles": [
+        {
+          "states_in_tick_order": [
+            "111",
+            "011",
+            "001",
+            "000",
+            "100",
+            "110"
+          ],
+          "names_in_tick_order": [
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑"
+          ],
+          "period": 6,
+          "basin": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "states_in_tick_order": [
+            "101",
+            "010"
+          ],
+          "names_in_tick_order": [
+            "离",
+            "坎"
+          ],
+          "period": 2,
+          "basin": [
+            "101",
+            "010"
+          ]
+        }
+      ],
+      "max_transient_steps": 0,
+      "strongly_connected_components": [
+        [
+          "111",
+          "110",
+          "100",
+          "011",
+          "001",
+          "000"
+        ],
+        [
+          "101",
+          "010"
+        ]
+      ],
+      "closed_terminal_components": [
+        {
+          "states": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ],
+          "names": [
+            "乾",
+            "兑",
+            "震",
+            "巽",
+            "艮",
+            "坤"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "states": [
+            "101",
+            "010"
+          ],
+          "names": [
+            "离",
+            "坎"
+          ],
+          "has_cycle": true,
+          "basin": [
+            "101",
+            "010"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "state": "111",
+          "name": "乾",
+          "enabled": true,
+          "trace_0_to_8": [
+            "111",
+            "011",
+            "001",
+            "000",
+            "100",
+            "110",
+            "111",
+            "011",
+            "001"
+          ],
+          "trace_names": [
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑",
+            "乾",
+            "巽",
+            "艮"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "111",
+              "011",
+              "001",
+              "000",
+              "100",
+              "110"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "110",
+          "name": "兑",
+          "enabled": true,
+          "trace_0_to_8": [
+            "110",
+            "111",
+            "011",
+            "001",
+            "000",
+            "100",
+            "110",
+            "111",
+            "011"
+          ],
+          "trace_names": [
+            "兑",
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑",
+            "乾",
+            "巽"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "110",
+              "111",
+              "011",
+              "001",
+              "000",
+              "100"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "101",
+          "name": "离",
+          "enabled": true,
+          "trace_0_to_8": [
+            "101",
+            "010",
+            "101",
+            "010",
+            "101",
+            "010",
+            "101",
+            "010",
+            "101"
+          ],
+          "trace_names": [
+            "离",
+            "坎",
+            "离",
+            "坎",
+            "离",
+            "坎",
+            "离",
+            "坎",
+            "离"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "101",
+              "010"
+            ],
+            "entry_step": 0,
+            "period": 2
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "101",
+            "010"
+          ]
+        },
+        {
+          "state": "100",
+          "name": "震",
+          "enabled": true,
+          "trace_0_to_8": [
+            "100",
+            "110",
+            "111",
+            "011",
+            "001",
+            "000",
+            "100",
+            "110",
+            "111"
+          ],
+          "trace_names": [
+            "震",
+            "兑",
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑",
+            "乾"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "100",
+              "110",
+              "111",
+              "011",
+              "001",
+              "000"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "011",
+          "name": "巽",
+          "enabled": true,
+          "trace_0_to_8": [
+            "011",
+            "001",
+            "000",
+            "100",
+            "110",
+            "111",
+            "011",
+            "001",
+            "000"
+          ],
+          "trace_names": [
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑",
+            "乾",
+            "巽",
+            "艮",
+            "坤"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "011",
+              "001",
+              "000",
+              "100",
+              "110",
+              "111"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "010",
+          "name": "坎",
+          "enabled": true,
+          "trace_0_to_8": [
+            "010",
+            "101",
+            "010",
+            "101",
+            "010",
+            "101",
+            "010",
+            "101",
+            "010"
+          ],
+          "trace_names": [
+            "坎",
+            "离",
+            "坎",
+            "离",
+            "坎",
+            "离",
+            "坎",
+            "离",
+            "坎"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "010",
+              "101"
+            ],
+            "entry_step": 0,
+            "period": 2
+          },
+          "may_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_0_to_8": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_last_infinite": true,
+          "lawful_reachable": [
+            "101",
+            "010"
+          ]
+        },
+        {
+          "state": "001",
+          "name": "艮",
+          "enabled": true,
+          "trace_0_to_8": [
+            "001",
+            "000",
+            "100",
+            "110",
+            "111",
+            "011",
+            "001",
+            "000",
+            "100"
+          ],
+          "trace_names": [
+            "艮",
+            "坤",
+            "震",
+            "兑",
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "001",
+              "000",
+              "100",
+              "110",
+              "111",
+              "011"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        },
+        {
+          "state": "000",
+          "name": "坤",
+          "enabled": true,
+          "trace_0_to_8": [
+            "000",
+            "100",
+            "110",
+            "111",
+            "011",
+            "001",
+            "000",
+            "100",
+            "110"
+          ],
+          "trace_names": [
+            "坤",
+            "震",
+            "兑",
+            "乾",
+            "巽",
+            "艮",
+            "坤",
+            "震",
+            "兑"
+          ],
+          "orbit": {
+            "prefix": [],
+            "cycle": [
+              "000",
+              "100",
+              "110",
+              "111",
+              "011",
+              "001"
+            ],
+            "entry_step": 0,
+            "period": 6
+          },
+          "may_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_0_to_8": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_last_infinite": false,
+          "lawful_reachable": [
+            "111",
+            "110",
+            "100",
+            "011",
+            "001",
+            "000"
+          ]
+        }
+      ],
+      "infinite_demo_K_states": [
+        "101",
+        "010"
+      ]
+    }
+  },
+  "assess_across_three_rules": {
+    "formula": "AllLast_infinite",
+    "results": {
+      "111": "unknown",
+      "110": "unknown",
+      "101": "unknown",
+      "100": "unknown",
+      "011": "unknown",
+      "010": "unknown",
+      "001": "unknown",
+      "000": "false"
+    }
+  },
+  "scope": {
+    "DemoK": "000 excluded only for an arbitrary constraint demonstration; 坤 is not bad or dead",
+    "SCC": "closed terminal SCCs of these total finite maps are recurrent classes; no continuous-space attractor claim",
+    "tick_vs_one_line": "fixed-rule ticks may change zero, one, two, or three lines; not all are cube edges",
+    "time": "each tick takes the same fixed duration delta_t=1; tests, skips, and zero-step closure do not advance time",
+    "hu": "coordinate selection and recombination, not an idempotent linear projection"
+  }
+}

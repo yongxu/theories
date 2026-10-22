@@ -1,0 +1,596 @@
+{
+ "about": "文理生生: frozen research v0.4 and the relational atlas v2.2 data, built by Ren with Codex (21-22 October 2026), imported for board item WL byte for byte from the release archive, which stays outside the repository with the website code, screenshots and generated indexes.",
+ "archive": "26_文理生生关系图谱_v2.2.zip",
+ "archive_sha256": "e98c76582fe23f6e0e4b421b6aa4194b82cec477ad8560f27a5232e6fd9df919",
+ "release_commit": "4e517c13803237095f21a6685bd8166dc2b5d527",
+ "files": [
+  {
+   "file": "RELEASE-README.md",
+   "member": "26_文理生生关系图谱_v2.2/README.md",
+   "bytes": 6560,
+   "sha256": "e6beb19ca50e925acce0bc98e0d92a64bb7eeeb88955ef807a95e5b8fb4adb6c"
+  },
+  {
+   "file": "atlas/integrity.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/data/integrity.json",
+   "bytes": 4541,
+   "sha256": "b4ed5b084437052a0fe9dfd825c255145e3279a2388f6cbb359145ff36af6783"
+  },
+  {
+   "file": "atlas/models.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/data/models.json",
+   "bytes": 178815,
+   "sha256": "ce616ace3237e3f3bbab8f1e1b11d68cbafbffd3f45d4ff5f6f885f0a64963fc"
+  },
+  {
+   "file": "atlas/word-network.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/data/word-network.json",
+   "bytes": 255126,
+   "sha256": "62d9632c33bab31d7a148ef9c95098f35f93a91c543ac6f0aa7af0114f0c9d1a"
+  },
+  {
+   "file": "release-review.txt",
+   "member": "26_文理生生关系图谱_v2.2/复核记录.txt",
+   "bytes": 1181,
+   "sha256": "4ab7b6d01ce6e5f83d2140d3f65b2cda55729cbc906e4f08f73adb03aa67a9ac"
+  },
+  {
+   "file": "release.json",
+   "member": "26_文理生生关系图谱_v2.2/release.json",
+   "bytes": 505,
+   "sha256": "c058a2e4d03653b48819e18a3ee2a3e2a423d80b59025919c64acd164e5355df"
+  },
+  {
+   "file": "research/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/README.md",
+   "bytes": 11136,
+   "sha256": "a52d81adb3e16cc9ec378d980d162e91b9c7e4a2eec3470f42d54194619993cf"
+  },
+  {
+   "file": "research/basis/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/basis/README.md",
+   "bytes": 1002,
+   "sha256": "029a08b71e7f15f367e21b844f29aab646e383602a8fbba4290320a9a1a2cfa8"
+  },
+  {
+   "file": "research/basis/lower_bound_review.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/basis/lower_bound_review.md",
+   "bytes": 11498,
+   "sha256": "1ceb56f784fb03ebbc9fb2ea00f4e1db7ece42e5a0db05a689e35116c2c48f6a"
+  },
+  {
+   "file": "research/basis/normalizer.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/basis/normalizer.py",
+   "bytes": 32024,
+   "sha256": "8be8af4d909bbc2e0dfec55416f36e4f82e34c3b55679ee2911644d1562dddef"
+  },
+  {
+   "file": "research/basis/results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/basis/results.json",
+   "bytes": 17464,
+   "sha256": "2877b54bd56b87103ec1912ba45b5ff7be2187b9493346893422941f121fb741"
+  },
+  {
+   "file": "research/basis/最小文法相对结果.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/basis/最小文法相对结果.md",
+   "bytes": 18925,
+   "sha256": "050959be0130f0f966f6e34e2532156ea8c722e0124b2299e49f88a34bb6442c"
+  },
+  {
+   "file": "research/constructions/constructions.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/constructions.json",
+   "bytes": 153271,
+   "sha256": "eb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac"
+  },
+  {
+   "file": "research/constructions/independent_model_review.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/independent_model_review.json",
+   "bytes": 15358,
+   "sha256": "aa191c409d7680b53142bc01b8dd731c75ca8efe86ae36a3c1ad110ba4cd69ce"
+  },
+  {
+   "file": "research/constructions/independent_model_review.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/independent_model_review.md",
+   "bytes": 7056,
+   "sha256": "9ddd180c5324c0b95b49c66f46dbcbe298973da5711fc205f26f4c4c27512bbd"
+  },
+  {
+   "file": "research/constructions/independent_model_review.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/independent_model_review.py",
+   "bytes": 22162,
+   "sha256": "53ae7542c2f160cce8105ea50f9b6032322cdb04aa5441e87d480bf0d7c24bc0"
+  },
+  {
+   "file": "research/constructions/validate_constructions.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/validate_constructions.py",
+   "bytes": 12232,
+   "sha256": "5743b49483f4165983a00ce018a5520eb8797e45a44a86f84d6edb164d0a5c92"
+  },
+  {
+   "file": "research/constructions/validation_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/validation_results.json",
+   "bytes": 33575,
+   "sha256": "9f3106bc6446033e3f6c633a4ddfa31c018850cd1bc0b1e421c4cc209b21363c"
+  },
+  {
+   "file": "research/constructions/构式与微型模型.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/constructions/构式与微型模型.md",
+   "bytes": 71343,
+   "sha256": "83e35b691f27e6c699a9f9667155524c2a37407da4c1a206dbda116cc636110f"
+  },
+  {
+   "file": "research/core/wenli.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/core/wenli.py",
+   "bytes": 24600,
+   "sha256": "0377b9fc8477f2edbbf93bd3abcfff3f71218628cab3e0c8754b0e029022bbbc"
+  },
+  {
+   "file": "research/corpus/annotation_a.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/annotation_a.json",
+   "bytes": 25996,
+   "sha256": "f281d022cc39a18378c5e8ab8fd987dce3ec2b1ec7a8452d7b5c5ddc8f4ef731"
+  },
+  {
+   "file": "research/corpus/annotation_a.sha256",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/annotation_a.sha256",
+   "bytes": 84,
+   "sha256": "18cf650ab42d6fe3d17359b1b2470f93f43ccf151aeef27af6773c9a8b31da37"
+  },
+  {
+   "file": "research/corpus/annotation_b.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/annotation_b.json",
+   "bytes": 31586,
+   "sha256": "01c0717510b2207120f82de708963587fedb8cfcaf0bf830e6c7edcaac56bafd"
+  },
+  {
+   "file": "research/corpus/corpus.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/corpus.json",
+   "bytes": 29098,
+   "sha256": "39cbda7713cf367e5390772c897efec7bca7efd2ff99184608b1a3af24d4086b"
+  },
+  {
+   "file": "research/corpus/corpus_reading.txt",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/corpus_reading.txt",
+   "bytes": 8524,
+   "sha256": "c8ed6214b7b3a8587874d4283e53bece47bcfe6483361b7d2952b2ab726b73b0"
+  },
+  {
+   "file": "research/corpus/independent_review.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/independent_review.md",
+   "bytes": 5376,
+   "sha256": "45961a1ec9075a34315bad209a54dce223c839f12710f8ea7071b4996746423e"
+  },
+  {
+   "file": "research/corpus/pilot_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/pilot_results.json",
+   "bytes": 4834,
+   "sha256": "eaace12c6bcadee8ba907a22ea7e40f71f9385ea2f9debae740bd699a7376bef"
+  },
+  {
+   "file": "research/corpus/protocol.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/protocol.json",
+   "bytes": 3041,
+   "sha256": "fdee013d63f01e673cf24d39cad2b0f1caff164879cdf8d8d90db9d227894ddd"
+  },
+  {
+   "file": "research/corpus/report_corpus.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/report_corpus.py",
+   "bytes": 10574,
+   "sha256": "458249c1cc6d49a7409a64d72f2c04f7755ebec9fcfddb5ccb4e92cf514bc23c"
+  },
+  {
+   "file": "research/corpus/sources/A.html",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/sources/A.html",
+   "bytes": 75083,
+   "sha256": "dda6b9449a7eae332eb0d8f516852584632be4055008816187e583cdc9914389"
+  },
+  {
+   "file": "research/corpus/sources/L.html",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/sources/L.html",
+   "bytes": 423048,
+   "sha256": "1215fe781fb379a0a529659aaa736936618985cb596c6cce09569f7ef15dd45f"
+  },
+  {
+   "file": "research/corpus/sources/M.html",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/sources/M.html",
+   "bytes": 60549,
+   "sha256": "7f2b3d2b28594cf76363bd83d9ce26c57a9b52a1decc47008a3c8a2976773022"
+  },
+  {
+   "file": "research/corpus/sources/Y.html",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/sources/Y.html",
+   "bytes": 67074,
+   "sha256": "8e1627f1f516d78d8f3392fceb0c52af4f25fd4f025b06dbef7dfc46c71be97f"
+  },
+  {
+   "file": "research/corpus/固定语料覆盖试点.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/corpus/固定语料覆盖试点.md",
+   "bytes": 10765,
+   "sha256": "885f585269a5d1599d108c91e67951ed4b74dd64b9d929ab827aee240f49035f"
+  },
+  {
+   "file": "research/engine/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/README.md",
+   "bytes": 9821,
+   "sha256": "fda4e7bf0e66162e7fbe0aa1002ae1ea92916ebdb1a0bf73899c30f29997b270"
+  },
+  {
+   "file": "research/engine/models.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/models.json",
+   "bytes": 28654,
+   "sha256": "63b5f26918487e4a900df85d4b5c7a5bd63667c8edeb810f03405acfe34a47be"
+  },
+  {
+   "file": "research/engine/raw_inputs.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/raw_inputs.json",
+   "bytes": 3832,
+   "sha256": "cc3e22a4273b6ea11f5396ec22aa842c0460ebc9b5ff1334e9b65b46b901321d"
+  },
+  {
+   "file": "research/engine/rule_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/rule_results.json",
+   "bytes": 50979,
+   "sha256": "19e0e0e3230f1408b31138c8da29451d002c2af978c278ff845de0be1ddcea15"
+  },
+  {
+   "file": "research/engine/transition_trace.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/transition_trace.json",
+   "bytes": 22970,
+   "sha256": "540cb977d830f1982da43942d61c4ed28d1445acf10787ab10f7977715120af0"
+  },
+  {
+   "file": "research/engine/verify_rules.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/engine/verify_rules.py",
+   "bytes": 36243,
+   "sha256": "8efb8e41f0b2161f3c20dce7430d24a86f48ce1d776fdb67e987c066fba6e78f"
+  },
+  {
+   "file": "research/graph/typed_graph.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/graph/typed_graph.json",
+   "bytes": 69519,
+   "sha256": "0764ac04f6fd90c8c3c1984f7a553917854166977c78a478a46b96f96973659e"
+  },
+  {
+   "file": "research/graph/八字有类型规则图.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/graph/八字有类型规则图.md",
+   "bytes": 32709,
+   "sha256": "75a478e151ff0b6f415a58ad8cc90a066b8949d1111b2da3d43d08a948e06aaa"
+  },
+  {
+   "file": "research/manifest.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/manifest.json",
+   "bytes": 15548,
+   "sha256": "fe5e1a04c8b49be741973685a3bc4df54355b1c792a14c06e704a6fc733a3723"
+  },
+  {
+   "file": "research/references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md",
+   "bytes": 37299,
+   "sha256": "b7b10747574125b42e2b36dab9904ce469cce9d026303e39ec6059906765b6e8"
+  },
+  {
+   "file": "research/references/02_对话全记录_中文概念组合_文与系统生成_2026-10-21.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/02_对话全记录_中文概念组合_文与系统生成_2026-10-21.md",
+   "bytes": 25804,
+   "sha256": "a0d8fb7b10e25a8f3576360cf75c7cd4d1509b188ce8833b6962bb9f901e301a"
+  },
+  {
+   "file": "research/references/03_文理生生_基础全图与动态文法_v0.2.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/03_文理生生_基础全图与动态文法_v0.2.md",
+   "bytes": 28294,
+   "sha256": "a9a31dfe40bcdcff6fc07ae6cb99ee96ad8f0cf5ee517b91e2d093a5d59c94b2"
+  },
+  {
+   "file": "research/references/04_逐字动态映射与古文出处_v0.2.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/04_逐字动态映射与古文出处_v0.2.md",
+   "bytes": 41571,
+   "sha256": "0de74582d047858420a5881d9a23b8a07207cc34056a7bf20a89ea9f33bfaead"
+  },
+  {
+   "file": "research/references/05_原典证据索引与校勘说明_v0.2.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/05_原典证据索引与校勘说明_v0.2.md",
+   "bytes": 30581,
+   "sha256": "7e79c03854f1e7af64b75fc7c915613c30ed8f9b9e83d82bc600d46ef742535c"
+  },
+  {
+   "file": "research/references/06_文理生生_全面复核报告_v0.2.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/06_文理生生_全面复核报告_v0.2.md",
+   "bytes": 14011,
+   "sha256": "e2ec5db6e900334b52ff12856e7552b5cfe128f8d2aa5492e1511a50df08a0ae"
+  },
+  {
+   "file": "research/references/07_文理生生_完整组合文法_v0.3.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/07_文理生生_完整组合文法_v0.3.md",
+   "bytes": 31759,
+   "sha256": "76ff4f41e3df34cd67b22bbb369103485b64ff09e08740637ae8fe0b77e7dc5c"
+  },
+  {
+   "file": "research/references/08_组合文法逐字类型词典_v0.3.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/08_组合文法逐字类型词典_v0.3.json",
+   "bytes": 319300,
+   "sha256": "b1a9cc5e8bbfa6c91a1999c1b989fa341a75d6d1ba5968a381f90eeec0c5049a"
+  },
+  {
+   "file": "research/references/08_组合文法逐字类型词典_v0.3.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/08_组合文法逐字类型词典_v0.3.md",
+   "bytes": 56432,
+   "sha256": "f4ac371af281fc5554eabc976bf40d511ddcc51d953916fadb2d9b540a26d9c4"
+  },
+  {
+   "file": "research/references/09_组合文法完整推导与反例_v0.3.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/09_组合文法完整推导与反例_v0.3.md",
+   "bytes": 21344,
+   "sha256": "d786379abd5b219f3fcb39a4da38194e1f1bb84c2c89ae5735c9c77bcae6ac70"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/README.md",
+   "bytes": 11461,
+   "sha256": "8689c2cda9d8c681d64d1ffd13723fb6446c96dbc964bc928cadfc8324d4d265"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/01_negation_observation.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/01_negation_observation.json",
+   "bytes": 11096,
+   "sha256": "d7291557496cceca9f7d0a99c1c5edfb4784317edccc4543b69034bdbf498d17"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/01_negation_possible_unseen.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/01_negation_possible_unseen.json",
+   "bytes": 6417,
+   "sha256": "ddd504b11c0fcf7132414c509a6bb27ebe3604a3c4da39966dddcc906fdde637"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/02_qiong_bian_tong_jiu.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/02_qiong_bian_tong_jiu.json",
+   "bytes": 11785,
+   "sha256": "b1e758924c3778068366ceec5439e8ccca0cf16d5613a54e7eed0b951929adb1"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/02_supply_failure.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/02_supply_failure.json",
+   "bytes": 7357,
+   "sha256": "21bf46e16b6398332da8afe83daa1815f52ae748e558fa4ee5e4b53fdb8a1a22"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/03_relational_concepts.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/03_relational_concepts.json",
+   "bytes": 9543,
+   "sha256": "2b05be5f680691ce37b9a189b2e589695dea9e818a23515ff792ccb5d96ac25c"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/04_harmony_difference.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/04_harmony_difference.json",
+   "bytes": 5578,
+   "sha256": "98cf28fcae398dce9dcd13044d5461e1726a3822468e26f9d174e8fd2bd5b224"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/05_birth_end_lineage.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/05_birth_end_lineage.json",
+   "bytes": 11897,
+   "sha256": "0cadfff6a1fdd8f1256f8477533b5d2112985cd2a1632876620064029cce06e9"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/06_blocked_structure.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/06_blocked_structure.json",
+   "bytes": 4300,
+   "sha256": "f596fb6d6300d0b02d7c25cc8ddca9039bf4db746af687575f6f7031397fd5c0"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/06_follow_structure.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/06_follow_structure.json",
+   "bytes": 5319,
+   "sha256": "51e2be599e581493837dfb5fb6b26dbff265e4478e5b0751fcf7e81c416cf8dd"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/07_norms_and_feasibility.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/07_norms_and_feasibility.json",
+   "bytes": 7843,
+   "sha256": "d4f56d33165f445f3156b29563e7c964d982cf90a075c8734348bae65eca229b"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/08_five_state_failure.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/08_five_state_failure.json",
+   "bytes": 7599,
+   "sha256": "4ff6decf83060e517080c2be62612eecce2e270a725bfd278399b27f30120778"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/08_five_state_tutorial.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/08_five_state_tutorial.json",
+   "bytes": 8449,
+   "sha256": "7afe55df4f8c66ca7ef26eba8ef2a095836c832e67ca2ac5fcc53591f273e821"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/README.md",
+   "bytes": 3287,
+   "sha256": "872e0a55fe6179772284cf217f6ce2cd92ae30306679894df95f6bb129c6891b"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/casebook/validation_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/casebook/validation_results.json",
+   "bytes": 29030,
+   "sha256": "70e8ecfc43472db5fcb872bb842f6a36821b92d41a50080451c21824b7a3b7f0"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/examples.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/examples.json",
+   "bytes": 20083,
+   "sha256": "7acdbe5937383bb47bf36b44d562f80f673b845db153274515cf5ee4746f120e"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/tests.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/tests.py",
+   "bytes": 22745,
+   "sha256": "06eb5e2fcc35ac5fb59cde4b494801cde61f9e281c6a1d08108aa649674e680c"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/validate_casebook.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/validate_casebook.py",
+   "bytes": 7277,
+   "sha256": "9b3a3c057409cce290893465bde675fdb606899400ba4dc359e9e176744593fd"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/verify_lifecycle.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/verify_lifecycle.py",
+   "bytes": 4012,
+   "sha256": "435ef910d1510548f018496fc77996088785692b53195663fcc763087a962637"
+  },
+  {
+   "file": "research/references/10_组合文法参考实现_v0.3/wenli.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/10_组合文法参考实现_v0.3/wenli.py",
+   "bytes": 24600,
+   "sha256": "0377b9fc8477f2edbbf93bd3abcfff3f71218628cab3e0c8754b0e029022bbbc"
+  },
+  {
+   "file": "research/references/11_八卦系统与组合文法_动力结构与转化_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/11_八卦系统与组合文法_动力结构与转化_v0.1.md",
+   "bytes": 32042,
+   "sha256": "917914f869d5a07c5e7898dd5e7230cd3754786177050ce8127c9118dee87903"
+  },
+  {
+   "file": "research/references/12_八卦与113字逐项映射_v0.1.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/12_八卦与113字逐项映射_v0.1.json",
+   "bytes": 155554,
+   "sha256": "13d82ccd6a069dab51d511697058b73613c43abf2f3f8de702fb0b833ad15190"
+  },
+  {
+   "file": "research/references/12_八卦与113字逐项映射_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/12_八卦与113字逐项映射_v0.1.md",
+   "bytes": 43624,
+   "sha256": "181cf0c283ae2a763241f0f96b76f3f152c892bc2d7038fb5020ae38487a87c1"
+  },
+  {
+   "file": "research/references/13_八卦原典与参照项目证据_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/13_八卦原典与参照项目证据_v0.1.md",
+   "bytes": 26883,
+   "sha256": "048873835a64a3652cb15468a1f57a0fa230dc8447feb1db959e31d17a8680ce"
+  },
+  {
+   "file": "research/references/13_参照项目证据摘录_v0.1.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/13_参照项目证据摘录_v0.1.json",
+   "bytes": 225035,
+   "sha256": "2fcce6393cc88efee60be81adf084396d9d798d1a81521a52a33260bae98c784"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/README.md",
+   "bytes": 10593,
+   "sha256": "2e1a5ed2306f1ec7f1891210eca2895a7b8244a2dd70900b18dbf7268b6014a0"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/abstraction_examples.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/abstraction_examples.json",
+   "bytes": 3590,
+   "sha256": "088bd270635793d5a06f62c7af73ba5f70bf7aa0feabcc5f12e4239c5f906638"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/abstraction_examples.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/abstraction_examples.py",
+   "bytes": 11638,
+   "sha256": "b234031623157673be2ee4b5aa04fc38f8a8b99ada28151dc33b23bd470c63f0"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/abstraction_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/abstraction_results.json",
+   "bytes": 3318,
+   "sha256": "5f25f540dd942208b834021607c76ed816c7449718a22c858b86dc75a8022a53"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/bagua_models.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/bagua_models.json",
+   "bytes": 59517,
+   "sha256": "e47e1b1d6b6e50a84b67ed223f0dc285e6d0646f2a70462120e2b88986307ad0"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/results.json",
+   "bytes": 61936,
+   "sha256": "d504839eb6315d3b77013e6b7c1eb2114b8783783ec5dcdd1a8a6a2df8085992"
+  },
+  {
+   "file": "research/references/14_八卦动力学验证_v0.1/verify_bagua.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/14_八卦动力学验证_v0.1/verify_bagua.py",
+   "bytes": 22214,
+   "sha256": "230bba368e771f795bf55febbbdbc898aa58408e4829dba29d80cb1f2ea8ce9d"
+  },
+  {
+   "file": "research/references/15_易传通过文连接卦象语词与系统_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/15_易传通过文连接卦象语词与系统_v0.1.md",
+   "bytes": 15971,
+   "sha256": "dc08ced654a7bc99191f0a13de32d8bab53d1d9b8f5acd837af1553fad79bb3e"
+  },
+  {
+   "file": "research/references/16_文的组合规则与系统推演_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/16_文的组合规则与系统推演_v0.1.md",
+   "bytes": 12818,
+   "sha256": "8e069de0732f2ef982737e4f2ee5490ee81419ee1e728698971ee93cb368c23c"
+  },
+  {
+   "file": "research/references/17_文卦系统映射验证_v0.1/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/17_文卦系统映射验证_v0.1/README.md",
+   "bytes": 3669,
+   "sha256": "81536de29a546e6cfdff1fba2a5ae0798f4a62f52af6b5115aaf194c38c95ec7"
+  },
+  {
+   "file": "research/references/17_文卦系统映射验证_v0.1/a_data.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/17_文卦系统映射验证_v0.1/a_data.json",
+   "bytes": 12476,
+   "sha256": "189910db3c247d050f35bd06f353f1d72be3be9222950454a4cd39e19994cb19"
+  },
+  {
+   "file": "research/references/17_文卦系统映射验证_v0.1/models.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/17_文卦系统映射验证_v0.1/models.json",
+   "bytes": 22785,
+   "sha256": "b4ece5fbae093297aefa0cdec5fa08bc140c263349b78e0c1e53fb0386d9941a"
+  },
+  {
+   "file": "research/references/17_文卦系统映射验证_v0.1/results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/17_文卦系统映射验证_v0.1/results.json",
+   "bytes": 29438,
+   "sha256": "47c896830b25c51be89f7baa4c23c679d41c57a7204e1617448b5b5fdb0faf26"
+  },
+  {
+   "file": "research/references/17_文卦系统映射验证_v0.1/verify_models.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/17_文卦系统映射验证_v0.1/verify_models.py",
+   "bytes": 17719,
+   "sha256": "ead82f6fd22fe7294a18cd4d45ea89a2962d09e49fa40ca3ca74b7a48acffe21"
+  },
+  {
+   "file": "research/references/18_核心研究主张与完成边界审计_v0.1.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/18_核心研究主张与完成边界审计_v0.1.md",
+   "bytes": 27215,
+   "sha256": "5874792fc8f91f674f1e7cc5832240bcee648b6a3b1d525b1558fa00170d3190"
+  },
+  {
+   "file": "research/references/18_核心范围计数与边界_v0.1.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/18_核心范围计数与边界_v0.1.json",
+   "bytes": 33874,
+   "sha256": "0a286d055a775252665acd1b04a49bf7450c7d6489674a542376cac1ef0fa0b3"
+  },
+  {
+   "file": "research/references/README.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/references/README.md",
+   "bytes": 2119,
+   "sha256": "42ab3776f10a2fc23001e53debd9a190423c82196d2acc59a56bc835375078bc"
+  },
+  {
+   "file": "research/validate_release.py",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/validate_release.py",
+   "bytes": 6982,
+   "sha256": "87061ef85c40dfe08aa5b4f9f7132c50b1dc08f523b9ecd10efbb52d8efa84ed"
+  },
+  {
+   "file": "research/verification_results.json",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/verification_results.json",
+   "bytes": 2272,
+   "sha256": "25a4be57fd5c4580a2161809569396b16587ed1f3319d61a59537732218de3ee"
+  },
+  {
+   "file": "research/版本复核与完成边界.md",
+   "member": "26_文理生生关系图谱_v2.2/dist/research/版本复核与完成边界.md",
+   "bytes": 4418,
+   "sha256": "e9d705032ea9ec8d75e8dfcfd44812ae1d8413edac39daafe6cf0692e0fb1e34"
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "title": "09第三节 反模型 供给下降",
+  "notes": [
+    "Bridge: 旧模式每个固定正时间步净消耗1；改革支付2；新模式在固定供给下收支相抵。",
+    "所有未列边不存在，dead是显式失败状态。改革可执行与已执行是分别登记的判断。",
+    "穷相对旧方式与未来4步；久结论相对new_tick及固定供给，不自动得到现实策略。",
+    "来源Y04 https://zh.wikisource.org/wiki/易傳/繫辭下 仅为问题线索。",
+    "供给解释改为新模式净消耗1：n1→n0→dead；context_id不变，因为尺度、身份和问题仍相同。"
+  ],
+  "model": {
+    "context_id": "G1-09-resource",
+    "closed_world": true,
+    "states": [
+      "o3",
+      "o2",
+      "o1",
+      "o0",
+      "n1",
+      "n0",
+      "dead"
+    ],
+    "sorts": {},
+    "constants": {},
+    "predicates": {
+      "K": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "o3": [
+            []
+          ],
+          "o2": [
+            []
+          ],
+          "o1": [
+            []
+          ],
+          "o0": [
+            []
+          ],
+          "n1": [
+            []
+          ],
+          "n0": [
+            []
+          ],
+          "dead": []
+        }
+      },
+      "DoneReform": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "o3": [],
+          "o2": [],
+          "o1": [],
+          "o0": [],
+          "n1": [
+            []
+          ],
+          "n0": [
+            []
+          ],
+          "dead": []
+        }
+      }
+    },
+    "programs": {
+      "old_tick": [
+        [
+          "o3",
+          "o2"
+        ],
+        [
+          "o2",
+          "o1"
+        ],
+        [
+          "o1",
+          "o0"
+        ],
+        [
+          "o0",
+          "dead"
+        ],
+        [
+          "dead",
+          "dead"
+        ]
+      ],
+      "reform": [
+        [
+          "o3",
+          "n1"
+        ],
+        [
+          "o2",
+          "n0"
+        ]
+      ],
+      "new_tick": [
+        [
+          "n1",
+          "n0"
+        ],
+        [
+          "n0",
+          "dead"
+        ],
+        [
+          "dead",
+          "dead"
+        ]
+      ]
+    },
+    "formula_defs": {
+      "NewForever": {
+        "op": "box",
+        "program": {
+          "op": "star",
+          "body": {
+            "op": "atomic",
+            "name": "new_tick"
+          }
+        },
+        "body": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            },
+            {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "new_tick"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "program_defs": {
+      "SafeOld": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "old_tick"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          }
+        ]
+      },
+      "SafeNew": {
+        "op": "seq",
+        "args": [
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          },
+          {
+            "op": "atomic",
+            "name": "new_tick"
+          },
+          {
+            "op": "test",
+            "condition": {
+              "op": "atom",
+              "name": "K",
+              "args": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "改革仍可行",
+      "state": "o3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "true"
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "改革不再产生永续安全",
+      "state": "o3",
+      "formula": {
+        "op": "diamond",
+        "program": {
+          "op": "atomic",
+          "name": "reform"
+        },
+        "body": {
+          "op": "fref",
+          "name": "NewForever"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "n1仍能安全一步",
+      "state": "n1",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 1,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "n1已不能安全两步",
+      "state": "n1",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "K",
+            "args": []
+          },
+          {
+            "op": "diamond",
+            "program": {
+              "op": "repeat",
+              "count": 2,
+              "body": {
+                "op": "seq",
+                "args": [
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  },
+                  {
+                    "op": "atomic",
+                    "name": "new_tick"
+                  },
+                  {
+                    "op": "test",
+                    "condition": {
+                      "op": "atom",
+                      "name": "K",
+                      "args": []
+                    }
+                  }
+                ]
+              }
+            },
+            "body": {
+              "op": "true"
+            }
+          }
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "原来的久结论失效",
+      "state": "n1",
+      "formula": {
+        "op": "fref",
+        "name": "NewForever"
+      },
+      "expected": false
+    }
+  ],
+  "relations": [
+    {
+      "name": "失败供给下的安全新边",
+      "program": {
+        "op": "pref",
+        "name": "SafeNew"
+      },
+      "expected": [
+        [
+          "n1",
+          "n0"
+        ]
+      ]
+    }
+  ],
+  "norm_queries": []
+}

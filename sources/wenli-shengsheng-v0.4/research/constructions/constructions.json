@@ -1,0 +1,3727 @@
+{
+  "schema_version": "v0.4.constructions/1",
+  "scope": {
+    "base": "04第十五节原32行；67表面标签保持原顺序，不拆计为67词",
+    "focused_cards": [
+      "生生",
+      "感应",
+      "中和",
+      "变通",
+      "分合",
+      "名实",
+      "本末",
+      "虚实",
+      "阴阳",
+      "自然",
+      "无为",
+      "相生"
+    ],
+    "additional_entry": "分合来自05 S5及04逐字层，不在原32行表中；另列一个补充入口",
+    "not_claimed": [
+      "历史词界已定",
+      "最早出处已定",
+      "古典概念词汇代表性比例",
+      "无需解释桥梁的自动编译",
+      "原典已含同一形式系统",
+      "真实因果或规范由字形推出"
+    ]
+  },
+  "input_fingerprints": {
+    "04_逐字动态映射与古文出处_v0.2.md": "0de74582d047858420a5881d9a23b8a07207cc34056a7bf20a89ea9f33bfaead",
+    "08_组合文法逐字类型词典_v0.3.json": "b1a9cc5e8bbfa6c91a1999c1b989fa341a75d6d1ba5968a381f90eeec0c5049a"
+  },
+  "counts": {
+    "inherited_rows": 32,
+    "inherited_surface_labels": 67,
+    "focused_cards": 12,
+    "supplementary_entries": 1,
+    "micro_model_specs": 13,
+    "cross_card_links": 12,
+    "certified_compound_word_count": null,
+    "rows_with_focused_card": 11
+  },
+  "common_contract": [
+    "记录TextClaim→选义→成分关系→整体约束→现代桥梁→类型化模型→推论/反例的链条；每一跳保留来源。",
+    "对象、尺度、时间、身份、作用域与评价标准必须显式固定；context_id只是登记承诺而非诚实或真实性证明。",
+    "Formula表达在给定状态的事实；Program是给定状态关系；Judgement属于独立V。字形、文本与世界实体不相互强转。",
+    "程序复合须共享同一中间状态或明确转换；同一目标分别可达不保证有同一条合并见证。",
+    "tick只用于声明为正时间的动作；skip/test/star零步不证明持续。存在路径不等于可在线实现的策略。",
+    "原文提供关系入口和解释约束；现代模型条件下的推论不反向认证整部原典，更不自动成为经验因果律。"
+  ],
+  "registry": [
+    {
+      "id": "R01",
+      "original_row_number": 1,
+      "original_label": "文理生生、求文、求理",
+      "surface_labels": [
+        "文理生生",
+        "求文",
+        "求理"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "项目名称与动作短语",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "表征—解释—生成的项目工作流",
+      "whole_function_from04": "连接可辨样态、机制解释与生成延续",
+      "textual_evidence_from04": "项目名称和分析用语，不标作古代现成理论",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "说明文/理所指及求的行动者；名称不算原典公理",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R02",
+      "original_row_number": 2,
+      "original_label": "生生、生生之谓易",
+      "surface_labels": [
+        "生生",
+        "生生之谓易"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "重叠构式＋定义命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "生成事件的接续及概念归属",
+      "whole_function_from04": "生成的接续与易之关系",
+      "textual_evidence_from04": "[Y03][Y03]；生命个体可死而生成接续",
+      "source_ids": [
+        "Y03"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y03",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上"
+        }
+      ],
+      "modern_modelling_obligation": "区分生成、存活、谱系和真实时间；生生卡不证明生生之谓易的全部宇宙论",
+      "focused_card_ids": [
+        "CX01"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R03",
+      "original_row_number": 3,
+      "original_label": "生生不息",
+      "surface_labels": [
+        "生生不息"
+      ],
+      "unit_type": "固定表达候选",
+      "working_unit_description": "修饰生成的否定构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "否定停止与延续作用域",
+      "whole_function_from04": "现代稿用来表达生成未停止",
+      "textual_evidence_from04": "生生见 Y03；不息见 JC6b；本次不以两句拼接证明整语源流",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "为不息指定时间窗、生成事件及反例；不拼接引文认证整语源流",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R04",
+      "original_row_number": 4,
+      "original_label": "相生、有无、有无相生",
+      "surface_labels": [
+        "相生",
+        "有无",
+        "有无相生"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "关系构式＋对举＋命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "概念相待或有向支持",
+      "whole_function_from04": "对待生成或依存，具体读法须论证",
+      "textual_evidence_from04": "[L01][L01]；不能直接转成互因网络",
+      "source_ids": [
+        "L01"
+      ],
+      "source_links": [
+        {
+          "source_id": "L01",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二章"
+        }
+      ],
+      "modern_modelling_obligation": "分别选有无/相生的关系类型；对称性、因果与时间不得自动补入",
+      "focused_card_ids": [
+        "CX12"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R05",
+      "original_row_number": 5,
+      "original_label": "相克、相生相克",
+      "surface_labels": [
+        "相克",
+        "相生相克"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "现代通称＋关系组合",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "生成环与制约环叠置",
+      "whole_function_from04": "生环与胜环两种有向关系；具体字义须区分",
+      "textual_evidence_from04": "[F01][F01] [F02][F02] [F03][F03]；已核《春秋繁露》的相生相胜，相克作现代通称，不主张已找到该固定术语最早出处",
+      "source_ids": [
+        "F01",
+        "F02",
+        "F03"
+      ],
+      "source_links": [
+        {
+          "source_id": "F01",
+          "url": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷11"
+        },
+        {
+          "source_id": "F02",
+          "url": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13"
+        },
+        {
+          "source_id": "F03",
+          "url": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13"
+        }
+      ],
+      "modern_modelling_obligation": "相克不是已核最早术语；制约边须方向、机制、强度，环不推出稳定",
+      "focused_card_ids": [
+        "CX12"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R06",
+      "original_row_number": 6,
+      "original_label": "共生、自生",
+      "surface_labels": [
+        "共生",
+        "自生"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "现代技术组合候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "共同参与或过程来源",
+      "whole_function_from04": "共同生成生活、或自发生成的现代组合候选",
+      "textual_evidence_from04": "共与自的义例分别 M3、L07；本次未核定这两个复合词的最早用例及技术史",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "共同生活、互利、共起不能混同；术语史和整词文本证据待补",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R07",
+      "original_row_number": 7,
+      "original_label": "养生",
+      "surface_labels": [
+        "养生"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "实践概念候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "持续域内的维护与条件适应",
+      "whole_function_from04": "维持生活、顺结构行动、保存能力",
+      "textual_evidence_from04": "[Z03][Z03]；原篇实践意义保留",
+      "source_ids": [
+        "Z03"
+      ],
+      "source_links": [
+        {
+          "source_id": "Z03",
+          "url": "https://zh.wikisource.org/wiki/莊子/養生主"
+        }
+      ],
+      "modern_modelling_obligation": "对象、损耗、可行路径及养护尺度另定；不是所有持续都好",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R08",
+      "original_row_number": 8,
+      "original_label": "本末、终始",
+      "surface_labels": [
+        "本末",
+        "终始"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "两组对举构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "基础/派生与开端/完成",
+      "whole_function_from04": "根本与末端、开端与完成的排序",
+      "textual_evidence_from04": "[C07][C07]；价值排序与因果排序分开",
+      "source_ids": [
+        "C07"
+      ],
+      "source_links": [
+        {
+          "source_id": "C07",
+          "url": "https://zh.wikisource.org/zh-hans/禮記/大學"
+        }
+      ],
+      "modern_modelling_obligation": "将依赖、规范优先、时间先后分开；本末卡不代表终始已全析",
+      "focused_card_ids": [
+        "CX07"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R09",
+      "original_row_number": 9,
+      "original_label": "体用",
+      "surface_labels": [
+        "体用"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "对举概念候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "构成或根据与功能",
+      "whole_function_from04": "构成与功能的候选区分",
+      "textual_evidence_from04": "本轮分别核体的部分义与用的功能义，未证明先秦已有成熟统一体用论",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "单字出处不认证先秦成熟统一体用论；整体义需另证",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R10",
+      "original_row_number": 10,
+      "original_label": "阴阳、刚柔、动静、柔弱",
+      "surface_labels": [
+        "阴阳",
+        "刚柔",
+        "动静",
+        "柔弱"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "四组对举构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "共用尺度下的分类、性质和变化",
+      "whole_function_from04": "对举性质、状态与作用倾向",
+      "textual_evidence_from04": "[Y03][Y03] [Y06][Y06] [L05][L05]；不赋统一现代物理量",
+      "source_ids": [
+        "Y03",
+        "Y06",
+        "L05"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y03",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上"
+        },
+        {
+          "source_id": "Y06",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上"
+        },
+        {
+          "source_id": "L05",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#四十章"
+        }
+      ],
+      "modern_modelling_obligation": "分别注明阴阳、刚柔、动静、柔弱义例；阴阳卡不穷尽其余三组",
+      "focused_card_ids": [
+        "CX09"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R11",
+      "original_row_number": 11,
+      "original_label": "虚实",
+      "surface_labels": [
+        "虚实"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "相对配置构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "容量、位置、对手/任务与观测",
+      "whole_function_from04": "资源或防备配置的对比",
+      "textual_evidence_from04": "[S4][S4]；不是有无的简单同义词",
+      "source_ids": [
+        "S4"
+      ],
+      "source_links": [
+        {
+          "source_id": "S4",
+          "url": "https://zh.wikisource.org/wiki/孫子兵法#虛實第六"
+        }
+      ],
+      "modern_modelling_obligation": "同一时刻同一能力尺度；观测标签和实际配置分层",
+      "focused_card_ids": [
+        "CX08"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R12",
+      "original_row_number": 12,
+      "original_label": "消长、兴衰",
+      "surface_labels": [
+        "消长",
+        "兴衰"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "趋势与阶段对举",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "量或功能的升降与兴衰",
+      "whole_function_from04": "量、作用或活动的增减与阶段变化",
+      "textual_evidence_from04": "[Y07][Y07] [H1][H1]；不默认守恒或固定周期",
+      "source_ids": [
+        "Y07",
+        "H1"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y07",
+          "url": "https://zh.wikisource.org/wiki/周易/泰"
+        },
+        {
+          "source_id": "H1",
+          "url": "https://zh.wikisource.org/wiki/韓非子/解老"
+        }
+      ],
+      "modern_modelling_obligation": "指定被测量及阈值；不推总量守恒或固定周期",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R13",
+      "original_row_number": 13,
+      "original_label": "分界、度量",
+      "surface_labels": [
+        "分界",
+        "度量"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "边界与尺度构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "分配边界和量度",
+      "whole_function_from04": "分配边界与尺度",
+      "textual_evidence_from04": "[C02][C02]；不是已经完成定量建模",
+      "source_ids": [
+        "C02"
+      ],
+      "source_links": [
+        {
+          "source_id": "C02",
+          "url": "https://zh.wikisource.org/zh-hans/荀子/禮論篇"
+        }
+      ],
+      "modern_modelling_obligation": "分界/度量具体句法和词界待证；给资源、对象域及测度",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R14",
+      "original_row_number": 14,
+      "original_label": "感应",
+      "surface_labels": [
+        "感应"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "响应关系构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "感发、通道与响应",
+      "whole_function_from04": "作用与响应",
+      "textual_evidence_from04": "[JY1][JY1] [S4][S4]；机制和中介需补证",
+      "source_ids": [
+        "JY1",
+        "S4"
+      ],
+      "source_links": [
+        {
+          "source_id": "JY1",
+          "url": "https://zh.wikisource.org/wiki/周易/咸"
+        },
+        {
+          "source_id": "S4",
+          "url": "https://zh.wikisource.org/wiki/孫子兵法#虛實第六"
+        }
+      ],
+      "modern_modelling_obligation": "补参与者、通道、时滞和返作用边；无返边不称闭环",
+      "focused_card_ids": [
+        "CX02"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R15",
+      "original_row_number": 15,
+      "original_label": "制衡",
+      "surface_labels": [
+        "制衡"
+      ],
+      "unit_type": "现代技术标签",
+      "working_unit_description": "约束与平衡候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "有向制约网络",
+      "whole_function_from04": "约束与反向调节的现代组合标签",
+      "textual_evidence_from04": "相关单字有义例，复合机制仍需方向、强度、延迟与标准",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "制衡机制须增益/时滞/条件；不由二字保证均衡",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R16",
+      "original_row_number": 16,
+      "original_label": "和同、和而不同、和实生物同则不继",
+      "surface_labels": [
+        "和同",
+        "和而不同",
+        "和实生物同则不继"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "对举标签＋固定表达＋命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "差异保持与协调评价",
+      "whole_function_from04": "差异配合与同声附和之辨",
+      "textual_evidence_from04": "[C05][C05] [C08][C08]；不能推出同必亡、异必善",
+      "source_ids": [
+        "C05",
+        "C08"
+      ],
+      "source_links": [
+        {
+          "source_id": "C05",
+          "url": "https://zh.wikisource.org/zh-hans/國語_(四庫全書本)/卷16"
+        },
+        {
+          "source_id": "C08",
+          "url": "https://zh.wikisource.org/zh-hans/論語/全覽"
+        }
+      ],
+      "modern_modelling_obligation": "和、同分义，给协调目标与V；异不必善，同不必亡",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R17",
+      "original_row_number": 17,
+      "original_label": "中和、时中",
+      "surface_labels": [
+        "中和",
+        "时中"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "两种规范构式候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "未发/已发评价或合时判断",
+      "whole_function_from04": "情感表达、适节与合时判断",
+      "textual_evidence_from04": "[C06][C06]；保留规范层",
+      "source_ids": [
+        "C06"
+      ],
+      "source_links": [
+        {
+          "source_id": "C06",
+          "url": "https://zh.wikisource.org/zh-hans/禮記/中庸"
+        }
+      ],
+      "modern_modelling_obligation": "中和与时中分开；节与时之标准须给V，不取算术平均",
+      "focused_card_ids": [
+        "CX03"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R18",
+      "original_row_number": 18,
+      "original_label": "名实、同异、约定俗成",
+      "surface_labels": [
+        "名实",
+        "同异",
+        "约定俗成"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "两组对举＋固定表达",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "命名、分类与约定",
+      "whole_function_from04": "对象识别与命名、约定与所指",
+      "textual_evidence_from04": "[C01][C01]；不由名称推出自然本质",
+      "source_ids": [
+        "C01"
+      ],
+      "source_links": [
+        {
+          "source_id": "C01",
+          "url": "https://zh.wikisource.org/zh/荀子/正名篇"
+        }
+      ],
+      "modern_modelling_obligation": "名实卡只验证所指约定；同类/同名不推出同一对象",
+      "focused_card_ids": [
+        "CX06"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R19",
+      "original_row_number": 19,
+      "original_label": "穷变、变通、穷变通久及其完整格言",
+      "surface_labels": [
+        "穷变",
+        "变通",
+        "穷变通久及其完整格言"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "关系短语＋条件链标签",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "受限、重配置、可行及延续",
+      "whole_function_from04": "受限后改组并寻找可持续路径",
+      "textual_evidence_from04": "[Y04][Y04]；现代重构保留失败支路",
+      "source_ids": [
+        "Y04"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y04",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭下"
+        }
+      ],
+      "modern_modelling_obligation": "变通卡区分候选与成功；通与久需额外保持机制",
+      "focused_card_ids": [
+        "CX04"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R20",
+      "original_row_number": 20,
+      "original_label": "聚散、聚则为生散则为死",
+      "surface_labels": [
+        "聚散",
+        "聚则为生散则为死"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "对举概念＋条件命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "组织/解组与生死解释",
+      "whole_function_from04": "气聚散与生死的原典解释",
+      "textual_evidence_from04": "[Z01][Z01]；现代只抽取组织与解组区别",
+      "source_ids": [
+        "Z01"
+      ],
+      "source_links": [
+        {
+          "source_id": "Z01",
+          "url": "https://zh.wikisource.org/wiki/莊子/知北遊"
+        }
+      ],
+      "modern_modelling_obligation": "原气论保留为TextClaim；尺度身份与材料另定",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R21",
+      "original_row_number": 21,
+      "original_label": "往复、反复",
+      "surface_labels": [
+        "往复",
+        "反复"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "返回/再现构式候选",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "路径返回或方向反转",
+      "whole_function_from04": "来往、回归或反转的历程",
+      "textual_evidence_from04": "[Y09][Y09] [JY8][JY8]；周期和身份须另定",
+      "source_ids": [
+        "Y09",
+        "JY8"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y09",
+          "url": "https://zh.wikisource.org/wiki/周易/復"
+        },
+        {
+          "source_id": "JY8",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭下"
+        }
+      ],
+      "modern_modelling_obligation": "返回值、周期、身份各自检查；反复不必复活原个体",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R22",
+      "original_row_number": 22,
+      "original_label": "天文、人文、道之文",
+      "surface_labels": [
+        "天文",
+        "人文",
+        "道之文"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "三种跨文献之文表达",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "自然/人事样态与文学本源",
+      "whole_function_from04": "自然样态、人事之文、文学本源论",
+      "textual_evidence_from04": "[Y01][Y01] [W02][W02]；不同文本的文分层",
+      "source_ids": [
+        "Y01",
+        "W02"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y01",
+          "url": "https://zh.wikisource.org/wiki/周易/賁"
+        },
+        {
+          "source_id": "W02",
+          "url": "https://zh.wikisource.org/wiki/文心雕龍/原道"
+        }
+      ],
+      "modern_modelling_obligation": "文的纹理、制度、文辞与文学论不可混成一义",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R23",
+      "original_row_number": 23,
+      "original_label": "自然、道法自然、无为",
+      "surface_labels": [
+        "自然",
+        "道法自然",
+        "无为"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "概念构式＋哲学命题＋否定构式",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "自身所由、所法与干预范围",
+      "whole_function_from04": "自己如此、非外命与无为治理",
+      "textual_evidence_from04": "[L04][L04] [L07][L07]；不能径译为自然环境或完全不行动",
+      "source_ids": [
+        "L04",
+        "L07"
+      ],
+      "source_links": [
+        {
+          "source_id": "L04",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二十五章"
+        },
+        {
+          "source_id": "L07",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章"
+        }
+      ],
+      "modern_modelling_obligation": "自然和无为分别卡；不把道法自然完全化约为局部自治模型",
+      "focused_card_ids": [
+        "CX10",
+        "CX11"
+      ],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R24",
+      "original_row_number": 24,
+      "original_label": "齐物、方生方死",
+      "surface_labels": [
+        "齐物",
+        "方生方死"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "篇名/概念候选＋平行命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "观照、是非与生成消亡视角",
+      "whole_function_from04": "对待、是非与成毁视角的论说",
+      "textual_evidence_from04": "[Z02][Z02]；齐物不是把所有对象判成相同",
+      "source_ids": [
+        "Z02"
+      ],
+      "source_links": [
+        {
+          "source_id": "Z02",
+          "url": "https://zh.wikisource.org/wiki/莊子/齊物論"
+        }
+      ],
+      "modern_modelling_obligation": "齐物不能直接等价全部对象同一；方生方死须尺度和身份",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R25",
+      "original_row_number": 25,
+      "original_label": "天人之分、天行有常",
+      "surface_labels": [
+        "天人之分",
+        "天行有常"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "论域区分短语＋命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "自然运行与人间职责分层",
+      "whole_function_from04": "自然运行与人事职分区别",
+      "textual_evidence_from04": "[C03][C03]；反对自动道德报应式映射",
+      "source_ids": [
+        "C03"
+      ],
+      "source_links": [
+        {
+          "source_id": "C03",
+          "url": "https://zh.wikisource.org/zh-hans/荀子/天論篇"
+        }
+      ],
+      "modern_modelling_obligation": "天行有常是文本主张；现实规律仍需验证",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R26",
+      "original_row_number": 26,
+      "original_label": "仁义礼、性",
+      "surface_labels": [
+        "仁义礼",
+        "性"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "并列伦理概念串＋单字",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "伦理、制度与禀赋论争",
+      "whole_function_from04": "行动规范、制度实践、禀赋与教化之争",
+      "textual_evidence_from04": "[C02][C02] [C08][C08] [C09][C09] [C10][C10]；不消去各家分歧",
+      "source_ids": [
+        "C02",
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "source_links": [
+        {
+          "source_id": "C02",
+          "url": "https://zh.wikisource.org/zh-hans/荀子/禮論篇"
+        },
+        {
+          "source_id": "C08",
+          "url": "https://zh.wikisource.org/zh-hans/論語/全覽"
+        },
+        {
+          "source_id": "C09",
+          "url": "https://zh.wikisource.org/zh-hans/孟子/告子上"
+        },
+        {
+          "source_id": "C10",
+          "url": "https://zh.wikisource.org/zh-hans/荀子/性惡篇"
+        }
+      ],
+      "modern_modelling_obligation": "各家评价和性论不可融成物理生存率",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R27",
+      "original_row_number": 27,
+      "original_label": "三表",
+      "surface_labels": [
+        "三表"
+      ],
+      "unit_type": "词候选",
+      "working_unit_description": "计数命名的论证标准",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "历史、观测与施政后果的依据",
+      "whole_function_from04": "言论的历史、耳目与施政效果依据",
+      "textual_evidence_from04": "[M4][M4]；不是现代实验法的完整等价物",
+      "source_ids": [
+        "M4"
+      ],
+      "source_links": [
+        {
+          "source_id": "M4",
+          "url": "https://zh.wikisource.org/wiki/墨子/非命上"
+        }
+      ],
+      "modern_modelling_obligation": "三表不同现代实验法；证据独立性与适用目标另审",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R28",
+      "original_row_number": 28,
+      "original_label": "状变而实无别、有化而无别、存中之变",
+      "surface_labels": [
+        "状变而实无别",
+        "有化而无别",
+        "存中之变"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "两条命题＋现代总结",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "状态变化与对象身份",
+      "whole_function_from04": "状态改变与对象同一可分",
+      "textual_evidence_from04": "古文部分 [C01][C01]；存中之变是现代总结",
+      "source_ids": [
+        "C01"
+      ],
+      "source_links": [
+        {
+          "source_id": "C01",
+          "url": "https://zh.wikisource.org/zh/荀子/正名篇"
+        }
+      ],
+      "modern_modelling_obligation": "选身份准则；外观同异不直接定义对象同一",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R29",
+      "original_row_number": 29,
+      "original_label": "生存变亡、身份延续、失稳、续存",
+      "surface_labels": [
+        "生存变亡",
+        "身份延续",
+        "失稳",
+        "续存"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "现代分析标签",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "生命周期分类与组织安全",
+      "whole_function_from04": "在尺度、身份与持续域下判别历程",
+      "textual_evidence_from04": "主稿中的现代定义，古文提供问题资源",
+      "source_ids": [],
+      "source_links": [],
+      "modern_modelling_obligation": "固定context_id、身份、边界、真实tick及持续域",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R30",
+      "original_row_number": 30,
+      "original_label": "物相杂故曰文、文者物象之本",
+      "surface_labels": [
+        "物相杂故曰文",
+        "文者物象之本"
+      ],
+      "unit_type": "mixed",
+      "working_unit_description": "两条跨文献命题",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "爻物交错与文字本源",
+      "whole_function_from04": "爻位错杂之文与文字发生之文",
+      "textual_evidence_from04": "[Y02][Y02] [W01][W01]；不能跨语境无缝合成公理",
+      "source_ids": [
+        "Y02",
+        "W01"
+      ],
+      "source_links": [
+        {
+          "source_id": "Y02",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭下"
+        },
+        {
+          "source_id": "W01",
+          "url": "https://zh.wikisource.org/wiki/說文解字/15"
+        }
+      ],
+      "modern_modelling_obligation": "从物相杂到造字须另立桥梁；不合成无语境公理",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R31",
+      "original_row_number": 31,
+      "original_label": "反者道之动",
+      "surface_labels": [
+        "反者道之动"
+      ],
+      "unit_type": "命题",
+      "working_unit_description": "道与反的判断",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "方向反转或返归解释",
+      "whole_function_from04": "道之动与反的关系",
+      "textual_evidence_from04": "[L05][L05]；不是直接的反馈方程",
+      "source_ids": [
+        "L05"
+      ],
+      "source_links": [
+        {
+          "source_id": "L05",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#四十章"
+        }
+      ],
+      "modern_modelling_obligation": "解释选择需上下文；不自动等于现代负反馈",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    },
+    {
+      "id": "R32",
+      "original_row_number": 32,
+      "original_label": "读书百遍其义自见",
+      "surface_labels": [
+        "读书百遍其义自见"
+      ],
+      "unit_type": "命题/固定转述",
+      "working_unit_description": "反复阅读的认知主张",
+      "word_boundary_status": "待证；当前是登记单位，不认证各子项均为词",
+      "composition_family": "实践量与理解的候选联系",
+      "whole_function_from04": "反复阅读可见义的历史说法",
+      "textual_evidence_from04": "[D1][D1] [D2][D2]；通行转述与原句字形有别，认知因果另验",
+      "source_ids": [
+        "D1",
+        "D2"
+      ],
+      "source_links": [
+        {
+          "source_id": "D1",
+          "url": "https://zh.wikisource.org/wiki/三國志/卷13"
+        },
+        {
+          "source_id": "D2",
+          "url": "https://zh.wikisource.org/wiki/太平御覽/0616#讀誦"
+        }
+      ],
+      "modern_modelling_obligation": "通行转述不冒充逐字引文；重复到迁移的因果未验",
+      "focused_card_ids": [],
+      "evidence_status": {
+        "registration": "原32行统一登记完成",
+        "source": "继承05已核证据；仅12重点卡的使用短引在本轮重新核读",
+        "whole_row_depth": "不可由存在一张关联卡视为该行所有标签均已深析",
+        "word_count": "不计作复合词总数"
+      }
+    }
+  ],
+  "supplementary_registry": [
+    {
+      "id": "SUP01",
+      "label": "分合",
+      "unit_type": "对举动作构式候选",
+      "source_ids": [
+        "S5"
+      ],
+      "card_id": "CX05",
+      "reason": "本轮明确选择，但原32行没有此标签；单列以避免篡改冻结分母。"
+    }
+  ],
+  "focused_cards": [
+    {
+      "id": "CX01",
+      "name": "生生",
+      "source_row_ids": [
+        "R02"
+      ],
+      "unit": {
+        "working_type": "重叠构式候选",
+        "word_boundary_status": "词界待证；连文已核，不据二字连用判定单一复合词",
+        "not_claimed": "不宣称重叠必为同一个通用迭代运算，也不宣称最早出处"
+      },
+      "sources": [
+        {
+          "source_id": "Y03",
+          "source_relation": "Y03",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上#第五章",
+          "location": "第五章‘一陰一陽之謂道’段，网页第162行",
+          "short_quotes": [
+            "生生之謂易"
+          ],
+          "layer": "易传正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        }
+      ],
+      "selected_reading": "本卡选生成活动的接续：一次生成与后续生成相接。它区别于同一既有个体一直存活，也不把生统一读作数值增加。",
+      "components": [
+        {
+          "form": "生₁",
+          "reading": "一次使某身份对象出现的生成事件",
+          "role": "Program 的候选事件边"
+        },
+        {
+          "form": "生₂",
+          "reading": "接续的生成，不等于第一个对象永远活着",
+          "role": "第二次事件及其与前次的关联"
+        }
+      ],
+      "component_relation": {
+        "kind": "reduplication_with_contextual_iteration",
+        "description": "重叠提示接续性，但接续多少次、是否产生新个体、何者承接何者，都由语境和模型另外约定。"
+      },
+      "whole_meaning": "将生成事件、前后承接及某种持续尺度压缩在一个表达中；不是两个孤立的‘存在’谓词。",
+      "non_compositional_residue": [
+        "‘之谓易’的概念归属关系和整段宇宙论语境不能由两个生的字典义相加推出。",
+        "不断产生全新身份、永远成功、生成就是善，均不在本卡字面规则中。"
+      ],
+      "textual_constraints": [
+        "原句把生生与易相联；同段还有日新、成象、阴阳等叙述。",
+        "原句没有实体清单、事件计数、无穷量词、消耗率或现代身份函数。"
+      ],
+      "modern_additions": [
+        "固定有限对象域 {a,b,c}；对象身份由标签追踪，死亡后不复用标签冒充全新身份。",
+        "模型每条 tick 边耗时1；gen是tick中发生至少一次新对象出现的子关系。",
+        "谱系 a→b、b→c为本模型给定的生成归属，不能只由共现事实反推。"
+      ],
+      "facts_vs_norms": {
+        "facts": "Alive、对象出现/消失、生成边与有限步数的可达性。",
+        "norms": "本卡不设规范评价；若要称良性生成，必须另外给V及资源、伤害等标准。",
+        "forbidden_bridge": "Alive或gen为真不推出善、宜或应当继续。"
+      },
+      "g1_interface": {
+        "status": "现代参数化配方；不是现成AST或自动字词编译器",
+        "types": {
+          "Alive": "Formula",
+          "gen": "Program，gen⊆tick",
+          "T": "外部自然数参数，repeat次数"
+        },
+        "definition": "GenT(T) := Alive ∧ ⟨(gen;?Alive)^T⟩⊤；T=0仍检查起点Alive。",
+        "identity": "存在/出生的对象由固定有限Entity域和各状态Extant表给定。"
+      },
+      "rules": [
+        {
+          "id": "CX01.R1",
+          "if": "起点s满足Alive，给定s→s'属于gen，并在s'满足Alive",
+          "then": "一次有效生成延续GenT(1)成立；若起点不Alive，则只能另判断出生事件，不能套用本延续式",
+          "status": "模型定义；原文未给出此判定式"
+        },
+        {
+          "id": "CX01.R2",
+          "if": "GenT(T+1)成立",
+          "then": "GenT(T)成立，但相反方向不成立",
+          "status": "在同一模型与同一生成关系下的逻辑后果"
+        }
+      ],
+      "consequences": [
+        "可分别问‘还有对象活着’和‘还会发生生成’，避免把生生化约为存续。",
+        "有限域和有限例不能证明无限新身份生成；尤其不能用test(Alive)*假装有时间流逝。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-cx01-generation",
+          "states": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "initial": "s0",
+          "entity_domain": [
+            "a",
+            "b",
+            "c"
+          ],
+          "extant": {
+            "s0": [
+              "a"
+            ],
+            "s1": [
+              "a",
+              "b"
+            ],
+            "s2": [
+              "b",
+              "c"
+            ],
+            "s3": [
+              "c"
+            ],
+            "s4": []
+          },
+          "predicates": {
+            "Alive": [
+              "s0",
+              "s1",
+              "s2",
+              "s3"
+            ]
+          },
+          "programs": {
+            "tick": [
+              [
+                "s0",
+                "s1"
+              ],
+              [
+                "s1",
+                "s2"
+              ],
+              [
+                "s2",
+                "s3"
+              ],
+              [
+                "s3",
+                "s4"
+              ]
+            ],
+            "gen": [
+              [
+                "s0",
+                "s1"
+              ],
+              [
+                "s1",
+                "s2"
+              ]
+            ]
+          },
+          "lineage": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ]
+          ],
+          "time": "每条tick正时间1；test、skip和零次重复不推进时间。",
+          "hand_checks": [
+            "s0满足GenT(2)：s0→s1→s2。",
+            "s0不满足GenT(3)：s2没有gen后继。",
+            "s1→s2仍是生成边，虽然a在该步消失；个体死亡不否定这一次接续生成。",
+            "s2仍Alive，但没有下一次gen；存在不等于生成。",
+            "从s0可沿tick保持Alive三步，到第四步s4则失败。"
+          ]
+        }
+      ],
+      "failure_example": {
+        "case": "从s0两次生成成功后停止；或只有s0的静止自检。",
+        "rejected_inference": "一次/有限次生成⇒永远生生；静态不死⇒正在生成。"
+      },
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "text": "网页原句已核",
+          "historical_wordhood": "未证",
+          "earliest_attestation": "未证",
+          "interpretation": "生成接续是本卡选择；不排除其他训释",
+          "formalization": "现代明确构造",
+          "empirical_validation": "无；教学模型，不是生物实验证据",
+          "execution": "只列精确手算；未称现有G1执行器已运行"
+        }
+      },
+      "existing_sense_ids": [
+        "core.044.03"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "生"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX02",
+      "name": "感应",
+      "source_row_ids": [
+        "R14"
+      ],
+      "unit": {
+        "working_type": "相感相应关系构式候选",
+        "word_boundary_status": "词界待证；原句连续出现感應，不由此确定历时词汇化边界",
+        "not_claimed": "不把所有感/应义例合成同一个因果函数"
+      },
+      "sources": [
+        {
+          "source_id": "JY1",
+          "source_relation": "JY1",
+          "url": "https://zh.wikisource.org/wiki/周易/咸",
+          "location": "彖曰段，网页第129行",
+          "short_quotes": [
+            "二氣感應以相與"
+          ],
+          "layer": "彖传，不是咸卦卦爻经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        }
+      ],
+      "selected_reading": "相互涉及的感发与响应。为做可检验的机制实例，本卡另构造一个方向、一个可识别输入和一个响应；该顺序分解不冒充原文唯一语法。",
+      "components": [
+        {
+          "form": "感",
+          "reading": "使受作用者发生变化的感发",
+          "role": "待绑定的交互事件"
+        },
+        {
+          "form": "应",
+          "reading": "对所受作用的响应",
+          "role": "与输入相联系的后继事件"
+        }
+      ],
+      "component_relation": {
+        "kind": "coupled_action_response",
+        "description": "以参与者、作用通道、条件及响应联系起两端；单有先后共现不够成立现代因果机制。"
+      },
+      "whole_meaning": "压缩了相与的关系和感发—响应的配合。它可以展开为开环响应；只有另加返回作用边才成为反馈回路。",
+      "non_compositional_residue": [
+        "《咸·彖》的刚柔位置、止而说、天地化生与圣人感人心层次不能化成一个无语境响应器。",
+        "感应连文不自动包含信息测量、因果识别、延迟、反馈符号或稳定性。"
+      ],
+      "textual_constraints": [
+        "正文以二气相与说明咸，并扩及天地与人心；有关系性描述。",
+        "没有给出可观测变量、受控对照或闭环方程。"
+      ],
+      "modern_additions": [
+        "固定输入高低和响应有无两个布尔量；每条边耗时1。",
+        "stimulus、respond、feedback、reset被分别声明；这些通道不是由感应二字自动生成。",
+        "本模型只是四状态逻辑设计；若用于实证，还需排除共同原因、迟延和观测偏差。"
+      ],
+      "facts_vs_norms": {
+        "facts": "给定输入及响应状态、事件关系、能否完成返回路径。",
+        "norms": "原文的天下和平属于文本的政治评价与期望；本模型不把响应发生判为善。",
+        "forbidden_bridge": "强响应、双向响应或有环均不推出和谐、正当或稳定。"
+      },
+      "g1_interface": {
+        "status": "现代配方",
+        "types": {
+          "InputHigh": "Formula",
+          "ResponseOn": "Formula",
+          "stimulus/respond/feedback/reset": "Program"
+        },
+        "definition": "ResponseEpisode := stimulus;respond。FeedbackEpisode := stimulus;respond;feedback;reset。",
+        "warning": "程序名有因果含义时需另提供机制证据；关系可达性本身不是因果识别。"
+      },
+      "rules": [
+        {
+          "id": "CX02.R1",
+          "if": "s满足⟨stimulus;respond⟩⊤",
+          "then": "此模型存在一个输入后响应的事件序列",
+          "status": "模型内关系复合；不单凭该式认定真实因果"
+        },
+        {
+          "id": "CX02.R2",
+          "if": "另有响应返回输入端的feedback边并可reset",
+          "then": "可检查一条闭合的反馈事件序列",
+          "status": "新增通道下的后果；不是‘感应’同义展开"
+        }
+      ],
+      "consequences": [
+        "感应候选机制需先定位谁感谁应、什么通道，再判断有没有返回边。",
+        "同一四状态表可以有开环与闭环两种边集，故状态共现不能唯一决定系统结构。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-cx02-response",
+          "states": [
+            "s0",
+            "s1",
+            "s2",
+            "s3"
+          ],
+          "initial": "s0",
+          "state_values": {
+            "s0": {
+              "input": 0,
+              "response": 0
+            },
+            "s1": {
+              "input": 1,
+              "response": 0
+            },
+            "s2": {
+              "input": 1,
+              "response": 1
+            },
+            "s3": {
+              "input": 0,
+              "response": 1
+            }
+          },
+          "programs": {
+            "stimulus": [
+              [
+                "s0",
+                "s1"
+              ]
+            ],
+            "respond": [
+              [
+                "s1",
+                "s2"
+              ]
+            ],
+            "feedback": [
+              [
+                "s2",
+                "s3"
+              ]
+            ],
+            "reset": [
+              [
+                "s3",
+                "s0"
+              ]
+            ]
+          },
+          "countermodel_change": "开环模型只把feedback删为空关系，其余输入、状态、程序保持。",
+          "time": "四类原子边均为正时间1；闭环是四步，不是零时间test循环。",
+          "hand_checks": [
+            "完整模型从s0可执行stimulus;respond，终点s2。",
+            "完整模型从s0可执行FeedbackEpisode并返回s0。",
+            "开环模型仍能完成ResponseEpisode，但不能完成FeedbackEpisode。",
+            "闭环存在不等于稳定平衡；此模型只是被给定的循环，无扰动模型、增益或收敛证据。"
+          ]
+        }
+      ],
+      "failure_example": {
+        "case": "删去feedback后，输入仍引出响应；或另一个现实系统中输入与响应由共同外因同时造成。",
+        "rejected_inference": "感应⇒反馈；先后相随⇒已识别因果；反馈⇒稳定。"
+      },
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "text": "网页原句已核",
+          "historical_wordhood": "未证",
+          "earliest_attestation": "未证",
+          "interpretation": "选择相感响应关系，保留咸的具体语境",
+          "formalization": "现代通道设计",
+          "empirical_validation": "无",
+          "execution": "手算，未声称执行器运行"
+        }
+      },
+      "existing_sense_ids": [
+        "core.029.01",
+        "core.027.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "感",
+          "应"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX03",
+      "name": "中和",
+      "source_row_ids": [
+        "R17"
+      ],
+      "unit": {
+        "working_type": "正文连文的修养与规范构式；复合概念候选",
+        "word_boundary_status": "“致中和”有直接连文；本卡不以此宣称其词界、词汇化历程或最早用例已经证定。"
+      },
+      "sources": [
+        {
+          "source_id": "C06",
+          "source_relation": "C06",
+          "url": "https://zh.wikisource.org/zh-hans/禮記/中庸",
+          "location": "开篇天命之谓性段，喜怒哀乐定义之后；本次网页第122行",
+          "short_quotes": [
+            "喜怒哀乐之未发，谓之中",
+            "发而皆中节，谓之和",
+            "致中和"
+          ],
+          "layer": "《礼记》所收《中庸》正文；不将朱熹章句或后世心理模型冒充正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "《礼记·中庸》"
+        }
+      ],
+      "selected_reading": "中取情感未发的原句定义，和取发而合节的规范判断。两者并置表达未发与已发的修养问题，不取算术平均、同质化或物理平衡。",
+      "components": [
+        {
+          "form": "中",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "和",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "phase_and_norm_evaluation",
+        "description": "同一行动者的未发状态与情境中的表达评价关联；不是同一时点上的两个布尔事实简单相加，更不是中自动导致和。"
+      },
+      "whole_meaning": "压缩了行动者、发/未发阶段、实际表达、尺度节以及修养目标的关系。",
+      "non_compositional_residue": "什么表达在何时对何人合节、怎样养成、何种情感应表达，必须由规范语境和实践补足。原文后接天地位/万物育的宏大主张，不由本微型模型证明。",
+      "textual_constraints": [
+        "和的定义含皆与中节，因此不能只挑一个合宜表达就宣称整体已和。",
+        "未发不等于压抑全部情感或永不表达；原句明确另论发而合节。",
+        "中在其他语境可为时中等义，本卡不合并这些义项。"
+      ],
+      "modern_additions": [
+        "用有限状态表记录某行动者当前未发或已发；不把该观测表当作对内心的完备测量。",
+        "规范V_c明确标记两种表达soft/harsh的合宜性；评价表由研究者给定，不从事实关系自动推得。",
+        "通过分支模型说明未发状态可以到合节或不合节表达，修养能力另需证据。"
+      ],
+      "facts_vs_norms": {
+        "facts": "是否有表达、表达类型、过程边和所处情境c。未发在此是选定义项的事实代理。",
+        "norms": "Judgement_V_c(soft)=admissible，Judgement_V_c(harsh)=inadmissible；V_c由公开的交往规范给定。和为这些事实在V_c下的评价，不偷装成自然属性。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "先选未发义与合节义；不把不同中义或和义按字形相同合并。",
+        "按阶段解释：未发事实与已发评价有不同适用域，不能要求两者同一时点同时成立。",
+        "判断皆合节必须说明评价域、时间窗及记录完整性；局部观察不足以证明一生皆合节。",
+        "规范表与世界过程分别给定；是否存在合宜可行路径，需要两层相接后检查。"
+      ],
+      "consequences": [
+        "系统map可以同时表示阶段变化与规范筛选，使事实过程和价值判断互相有关而保持类型区分。",
+        "可识别三种不同失败：不合节的实际表达、虽合宜却不可实行、证据不完整而过早评为整体和。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-expression-and-norm-demo",
+          "sorts": {
+            "Expression": [
+              "soft",
+              "harsh"
+            ]
+          },
+          "states": [
+            "unexpressed",
+            "soft_done",
+            "harsh_done"
+          ],
+          "state_predicates": {
+            "Unexpressed()": [
+              "unexpressed"
+            ],
+            "Expressed(Expression)": {
+              "unexpressed": [],
+              "soft_done": [
+                [
+                  "soft"
+                ]
+              ],
+              "harsh_done": [
+                [
+                  "harsh"
+                ]
+              ]
+            }
+          },
+          "program_relations": {
+            "respond_soft": [
+              [
+                "unexpressed",
+                "soft_done"
+              ]
+            ],
+            "respond_harsh": [
+              [
+                "unexpressed",
+                "harsh_done"
+              ]
+            ],
+            "settle": [
+              [
+                "soft_done",
+                "unexpressed"
+              ],
+              [
+                "harsh_done",
+                "unexpressed"
+              ]
+            ]
+          },
+          "norm_table": {
+            "V": "V_c：给定具体交往场合，soft合节，harsh不合节；表由研究者声明",
+            "judgements": {
+              "soft": "admissible",
+              "harsh": "inadmissible"
+            }
+          },
+          "evaluation_rule": "He_V(s)作为规范层缩写：s有至少一条已发记录，且此完整有限记录集中的每一表达都被V判为合节；不把空集上的全称真误判成已发之和。此为评估算法说明，不向G1 Formula悄悄混入NormJudgement。",
+          "calculations": [
+            "unexpressed满足未发代理Unexpressed，但不满足He_V的已发前提。",
+            "soft_done记录集仅含soft，故规范评估He_V=true；harsh_done含harsh，故He_V=false。",
+            "unexpressed有respond_soft后继，因此存在一条可达合节表达路径；也有respond_harsh后继，因此并非所有后继皆合节。",
+            "若删去respond_soft边而保持规范表不变，soft依然被规范允许，但当前并不能做出它：应当/合宜不推出实际可行。"
+          ],
+          "time_note": "未主张settle或任何循环代表永久中和；没有真实tick与持续目标，不能据循环或star推出久。"
+        }
+      ],
+      "failure_example": "unexpressed→harsh_done是合法事实边但规范不合节，反驳未发必然带来和。仅保留规范允许soft却删除其过程边，则合宜也不保证可行。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "exact_text": "已核",
+          "selected_reading": "直接依开篇定义；模型仅取局部结构，不证明宏大宇宙政治结果",
+          "word_boundary": "待证",
+          "earliest_attestation": "未考证",
+          "micro_model": "现代定义和手算；未运行执行器",
+          "empirical_causality": "未提出情感调节疗效或心理机制实证主张"
+        }
+      },
+      "existing_sense_ids": [
+        "core.082.01",
+        "core.083.02"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "中",
+          "和"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX04",
+      "name": "变通",
+      "source_row_ids": [
+        "R19"
+      ],
+      "unit": {
+        "working_type": "联结变化与通行/推行的构式候选",
+        "word_boundary_status": "连文和相关分说已核，词界待证",
+        "not_claimed": "不宣称现行词义均直接出于同一古义"
+      },
+      "sources": [
+        {
+          "source_id": "Y04",
+          "source_relation": "Y04",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭下#第二章",
+          "location": "第二章神農氏沒段，网页第143行",
+          "short_quotes": [
+            "易窮則變，變則通，通則久"
+          ],
+          "layer": "易传正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        },
+        {
+          "source_id": "Y04",
+          "source_relation": "Y04-context",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭下#第一章",
+          "location": "首段，网页第134行",
+          "short_quotes": [
+            "變通者，趣時者也"
+          ],
+          "layer": "易传正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        },
+        {
+          "source_id": "Y03",
+          "source_relation": "Y03-context",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上#第十二章",
+          "location": "乾坤其易之縕邪段，网页第223行",
+          "short_quotes": [
+            "化而裁之謂之變，推而行之謂之通"
+          ],
+          "layer": "易传正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        }
+      ],
+      "selected_reading": "依时与条件改变既有安排，使某活动得以通行或推行。恢复可行路径是现代机制读法，不取‘所有变化都成功’。",
+      "components": [
+        {
+          "form": "变",
+          "reading": "改变形式、配置或安排",
+          "role": "重配置Program"
+        },
+        {
+          "form": "通",
+          "reading": "在指定对象、目的及条件下可以推进",
+          "role": "可行性Formula；也可另选推行Program，二义不得混用"
+        }
+      ],
+      "component_relation": {
+        "kind": "change_with_contextual_feasibility_goal",
+        "description": "本卡把重配置和可行性检验复合为‘成功改变’，而不是把任意变换都加上通的保证。"
+      },
+      "whole_meaning": "压缩变化的针对性、合时条件与后续可推行性；‘通’要求说明通向什么、通过何边、对谁可行。",
+      "non_compositional_residue": [
+        "适时、民宜及制器叙事中的评价和目的不是变与通两个字本身给出的通用效用函数。",
+        "到达一次目标不等于可持续、全体受益或在另一环境仍可达。"
+      ],
+      "textual_constraints": [
+        "《系辞下》确有穷变通久的论述，并处于改制器用叙事。",
+        "‘趣时’限制无条件套用；《系辞上》又从裁制、推行分说两者。"
+      ],
+      "modern_additions": [
+        "Goal与execute边由给定任务定义；不能把通任意定义成模型里喜欢的结局。",
+        "改制候选集包括失败支路，模型检查存在性与全称性分别进行。",
+        "各原子动作耗时1；终点可达与后续tick可继续分别登记。"
+      ],
+      "facts_vs_norms": {
+        "facts": "路径是否存在、哪次改动成功、是否还有后继。",
+        "norms": "成功指给定Goal达成；合时、可接受、利民须在另设V下评价。",
+        "forbidden_bridge": "CanReachGoal不推出宜或公正；存在成功候选不推出行动者掌握可实现策略。"
+      },
+      "g1_interface": {
+        "status": "现代配方",
+        "types": {
+          "Done": "Formula",
+          "CanReach": "Formula = ⟨execute*⟩Done",
+          "reconfigure/execute": "Program"
+        },
+        "definition": "AdaptSuccess := reconfigure;?CanReach。若要求至少一次推进，另用⟨execute;execute*⟩Done。",
+        "zero_step_note": "Done状态满足零步CanReach是刻意允许的；本模型重配置目标均不是Done，不靠此零步取得成功。"
+      },
+      "rules": [
+        {
+          "id": "CX04.R1",
+          "if": "⟨reconfigure⟩CanReach",
+          "then": "至少存在一种重配置可使目标可达",
+          "status": "关系文法内存在命题"
+        },
+        {
+          "id": "CX04.R2",
+          "if": "[reconfigure]CanReach 且 ⟨reconfigure⟩⊤",
+          "then": "每种被列为允许的重配置均可达到目标，且不是无边空真",
+          "status": "比R1更强的充分条件，本例不满足"
+        }
+      ],
+      "consequences": [
+        "把‘有所改变’与‘改后能继续做什么’分成可单独失败的检查。",
+        "系统图需要重配置边和执行边两层；仅画状态更名不能认证变通成功。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-cx04-adaptation",
+          "states": [
+            "blocked",
+            "routeA",
+            "routeB",
+            "done",
+            "failed"
+          ],
+          "initial": "blocked",
+          "predicates": {
+            "Open": [
+              "routeA",
+              "routeB",
+              "done"
+            ],
+            "Done": [
+              "done"
+            ]
+          },
+          "programs": {
+            "reconfigure": [
+              [
+                "blocked",
+                "routeA"
+              ],
+              [
+                "blocked",
+                "routeB"
+              ],
+              [
+                "blocked",
+                "failed"
+              ]
+            ],
+            "execute": [
+              [
+                "routeA",
+                "done"
+              ]
+            ],
+            "tick": [
+              [
+                "blocked",
+                "routeA"
+              ],
+              [
+                "blocked",
+                "routeB"
+              ],
+              [
+                "blocked",
+                "failed"
+              ],
+              [
+                "routeA",
+                "done"
+              ]
+            ]
+          },
+          "hand_checks": [
+            "CanReach真值集={routeA,done}；routeB虽Open却无到Goal的边。",
+            "AdaptSuccess只有blocked→routeA。",
+            "blocked满足⟨reconfigure⟩CanReach，但不满足[reconfigure]CanReach。",
+            "done没有tick后继；一次通到目标不证明久。"
+          ]
+        }
+      ],
+      "failure_example": {
+        "case": "blocked→routeB确实改变且表面Open，却无法到达Goal；blocked→failed更直接失败。",
+        "rejected_inference": "变⇒通；通⇒久；有好路径⇒行动者知道并能控制选择它。"
+      },
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "text": "三处网页定位已核",
+          "historical_wordhood": "未证",
+          "earliest_attestation": "未证",
+          "interpretation": "恢复可行性是有文本入口的现代选择",
+          "formalization": "现代有限关系模型",
+          "empirical_validation": "无",
+          "execution": "手算，未声称执行器运行"
+        }
+      },
+      "existing_sense_ids": [
+        "core.045.02",
+        "core.067.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "变",
+          "通"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX05",
+      "name": "分合",
+      "source_row_ids": [],
+      "unit": {
+        "working_type": "对举动作构式候选",
+        "word_boundary_status": "连续分合已核；词界和历时词汇化待证",
+        "not_claimed": "不宣称分后必合、分合必可逆，或最早出处已证"
+      },
+      "sources": [
+        {
+          "source_id": "S5",
+          "source_relation": "S5",
+          "url": "https://zh.wikisource.org/wiki/孫子兵法#軍爭第七",
+          "location": "軍爭第七‘故兵以詐立’段，网页第247行",
+          "short_quotes": [
+            "以分合為變者也"
+          ],
+          "layer": "孙子正文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "见原典链接及篇段定位"
+        }
+      ],
+      "selected_reading": "对同一有身份的成员集合进行组织分配与汇合；此例是队伍配置变换，不是物质从无到有。",
+      "components": [
+        {
+          "form": "分",
+          "reading": "一个编组拆成多个编组",
+          "role": "细分Program"
+        },
+        {
+          "form": "合",
+          "reading": "若干编组汇成一组",
+          "role": "合并Program"
+        }
+      ],
+      "component_relation": {
+        "kind": "coordinated_alternative_operations",
+        "description": "原句把分与合作为变化方式。本卡用split∪merge表示两类候选操作，不把词序强制译成先分后合。"
+      },
+      "whole_meaning": "压缩了共同成员、编组边界、操作选择和配置改变。完整意思依赖‘分的是什么、按什么边界、又为了何事重合’。",
+      "non_compositional_residue": [
+        "军争中的利害、组织协同和条件选择不会由两个反向动词自动给出。",
+        "同一成员集合不等于同一组织；能回到一个大组不等于可唯一恢复旧的小组。"
+      ],
+      "textual_constraints": [
+        "原句位于行军利害、给养与号令协同的军事语境，把分合作为用兵变化方式。",
+        "没有宣称成员守恒、全局可逆或任意拆分都合理。"
+      ],
+      "modern_additions": [
+        "固定成员U={u1,u2,u3,u4}；三种分区都覆盖同一U且各块互不重叠。",
+        "split与merge边由教学模型列明，成员守恒是本例输入公理。",
+        "一个操作正时间1；具体军事耗时、代价、通信与风险未由本例估计。"
+      ],
+      "facts_vs_norms": {
+        "facts": "成员集合、分区、分与合的边及关系复合结果。",
+        "norms": "何种编组更好要给任务、资源与V；本例只检查配置性质。",
+        "forbidden_bridge": "分组数增加不推出创造性或善；合并不推出协调成功。"
+      },
+      "g1_interface": {
+        "status": "现代配方",
+        "types": {
+          "AtB": "Formula",
+          "split/merge": "Program",
+          "reorganize": "Program=split∪merge"
+        },
+        "definition": "先选择同一Entity域和Partition编码，再定义操作边；split;merge与merge;split分别复合。",
+        "identity": "成员身份与组织身份分开；本例只保证前者不变。"
+      },
+      "rules": [
+        {
+          "id": "CX05.R1",
+          "if": "s→s'是一条本例split或merge边",
+          "then": "成员U保持，分区改变",
+          "status": "依据列出的三种分区与边可枚举证明；不是分合通律"
+        },
+        {
+          "id": "CX05.R2",
+          "if": "一次merge把两个不同旧分区都映到同一大组",
+          "then": "仅凭合并后的分区无法唯一恢复旧分区",
+          "status": "信息丢失的模型内后果"
+        }
+      ],
+      "consequences": [
+        "系统图应为组织状态配上成员层与分区层，不把成员未变说成系统未变。",
+        "分合往返可能丢失编组记忆；若要恢复原分区，需保存额外记录并限制split选择。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-cx05-partition",
+          "states": [
+            "a",
+            "b",
+            "c"
+          ],
+          "initial": "b",
+          "member_domain": [
+            "u1",
+            "u2",
+            "u3",
+            "u4"
+          ],
+          "partitions": {
+            "a": [
+              [
+                "u1",
+                "u2",
+                "u3",
+                "u4"
+              ]
+            ],
+            "b": [
+              [
+                "u1",
+                "u2"
+              ],
+              [
+                "u3",
+                "u4"
+              ]
+            ],
+            "c": [
+              [
+                "u1",
+                "u3"
+              ],
+              [
+                "u2",
+                "u4"
+              ]
+            ]
+          },
+          "predicates": {
+            "AtB": [
+              "b"
+            ]
+          },
+          "programs": {
+            "split": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ]
+            ],
+            "merge": [
+              [
+                "b",
+                "a"
+              ],
+              [
+                "c",
+                "a"
+              ]
+            ]
+          },
+          "hand_checks": [
+            "split;merge={(a,a)}，在本例从大组分后再合可回到a。",
+            "merge;split={(b,b),(b,c),(c,b),(c,c)}，合后再分有两个结果。",
+            "b满足⟨merge;split⟩AtB，却不满足[merge;split]AtB。",
+            "三种配置均覆盖U，故成员未消失；组织的相同不能由成员守恒替代。"
+          ]
+        }
+      ],
+      "failure_example": {
+        "case": "b合成a后分成c，成员完全相同而旧配对丢失。",
+        "rejected_inference": "合是分的全局逆；成员守恒⇒组织身份恒定；分合操作自带好坏评价。"
+      },
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "text": "网页原句已核",
+          "historical_wordhood": "未证",
+          "earliest_attestation": "未证",
+          "interpretation": "队伍分合是原语境，形式分区是本项目选择",
+          "formalization": "现代有限分区模型",
+          "empirical_validation": "无",
+          "execution": "手算，未声称执行器运行"
+        }
+      },
+      "existing_sense_ids": [
+        "core.032.02",
+        "core.033.02"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "分",
+          "合"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      },
+      "registration_note": "04第十五节32行没有分合标签；本卡来自04第五组分/合及05 S5，作为第33个补充构式入口登记，不冒称是原32行之一。"
+    },
+    {
+      "id": "CX06",
+      "name": "名实",
+      "source_row_ids": [
+        "R18"
+      ],
+      "unit": {
+        "working_type": "对举关系表达；可作为复合概念候选；本轮不裁定历史词界",
+        "word_boundary_status": "原文有“名實亂”连文，但连文不充分证明现代意义上的单词；最早出处未考证。"
+      },
+      "sources": [
+        {
+          "source_id": "C01",
+          "source_relation": "C01",
+          "url": "https://zh.wikisource.org/zh/荀子/正名篇",
+          "location": "制名以指实段、同异命名段、名无固宜段；本次网页第115—125行",
+          "short_quotes": [
+            "分別制名以指實",
+            "名無固實，約之以命實",
+            "名實亂"
+          ],
+          "layer": "传世子书正文；本卡未作出土异文或版本谱系考证",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "《荀子·正名》第二十二"
+        }
+      ],
+      "selected_reading": "名称在共同命名约定下指向被区分的对象或类别；此处实取对象/所指，不能借用虚实的防备容量义。",
+      "components": [
+        {
+          "form": "名",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "实",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "sign_reference_alignment",
+        "description": "名:Symbol 经 NamingContext 中的指称约定指向 实:Entity 或指定分类；关系不是把名和实放在同一类型上作相等。"
+      },
+      "whole_meaning": "把区分对象、制定名称、按约使用名称、检查名实是否相副压缩为一个可回查的关系问题。",
+      "non_compositional_residue": "哪些特征足以同类、指的是个体还是类、约定由谁承认、名称能否兼举，均不能从名和实两个字直接推出；原篇的王者制名及政治秩序主张也不能化约成普通数据库一致性。",
+      "textual_constraints": [
+        "所指不是被字形天然决定：原篇明确名无固实、约之以命实。",
+        "原篇同时要求辨同异与沟通用途，不能把任意指称映射都视作同样合用。",
+        "原篇区分同状异所的二实与有化无别的一实，因此同名不等于同一对象。"
+      ],
+      "modern_additions": [
+        "有限对象域、符号域、固定颜色特征和一张完全给定的约定表。",
+        "将检查一致性写为全称公式；这是本项目登记校验，不是声称荀子已写出现代逻辑。",
+        "把修正错误标签建成只改命名记录的状态转移，明确冻结对象特征。"
+      ],
+      "facts_vs_norms": {
+        "facts": "约定表、当前标签、对象特征、修正前后哪些关系改变。",
+        "norms": "是否应统一名称、谁有权制名、何种名称善，另需说明政治/语用规范V。本模型只验证给定约定的一致性，不从它推出正当权威。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "先固定对象/类层级和命名约定，再检查每一使用是否落在允许指称关系中。",
+        "若需更新约定，必须版本化NamingContext并重新评估；不能悄悄改解释后把旧判断当作同一命题。",
+        "仅有same_name(x,y)不足以推出x=y；分类名可合法对应多个个体。"
+      ],
+      "consequences": [
+        "名实构式可用于检验数据标签、概念界定和引用所指。",
+        "系统map增加一层表征关系；这层变化与对象变化可独立追踪。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-naming-convention-demo",
+          "sorts": {
+            "Entity": [
+              "A",
+              "B"
+            ],
+            "Symbol": [
+              "红类",
+              "蓝类"
+            ]
+          },
+          "states": [
+            "correct",
+            "confused",
+            "repaired"
+          ],
+          "fixed_predicates": {
+            "Red(Entity)": [
+              [
+                "A"
+              ]
+            ],
+            "Blue(Entity)": [
+              [
+                "B"
+              ]
+            ],
+            "Denotes(Symbol,Entity)": [
+              [
+                "红类",
+                "A"
+              ],
+              [
+                "蓝类",
+                "B"
+              ]
+            ]
+          },
+          "state_predicates": {
+            "UsedName(Symbol,Entity)": {
+              "correct": [
+                [
+                  "红类",
+                  "A"
+                ],
+                [
+                  "蓝类",
+                  "B"
+                ]
+              ],
+              "confused": [
+                [
+                  "红类",
+                  "A"
+                ],
+                [
+                  "红类",
+                  "B"
+                ]
+              ],
+              "repaired": [
+                [
+                  "红类",
+                  "A"
+                ],
+                [
+                  "蓝类",
+                  "B"
+                ]
+              ]
+            }
+          },
+          "program_relations": {
+            "mislabel": [
+              [
+                "correct",
+                "confused"
+              ]
+            ],
+            "repair": [
+              [
+                "confused",
+                "repaired"
+              ]
+            ]
+          },
+          "formula": "Consistent := ∀n:Symbol.∀x:Entity.(UsedName(n,x) → Denotes(n,x))",
+          "calculations": [
+            "correct的两条UsedName均在Denotes中，因此Consistent为真。",
+            "confused的UsedName(红类,B)不在Denotes中，因此Consistent为假；见证是(红类,B)。",
+            "repair唯一后继repaired满足Consistent，故confused ⊨ 〈repair〉Consistent。",
+            "B在三个状态均为Blue且非Red，故confused ⊭ 〈repair〉Red(B)：改正名称没有改变对象颜色。"
+          ],
+          "norm_table": "未给；不执行规范结论。"
+        }
+      ],
+      "failure_example": "把B误标成红类后由标签推断Red(B)，在confused状态立即失败。另一个反例是A1、A2都属红类但为两个不同个体；同类名不能推出A1=A2。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "exact_text": "已核",
+          "selected_reading": "有篇章直接支持；现代命名数据库只是选定投影",
+          "word_boundary": "待证",
+          "earliest_attestation": "未考证",
+          "micro_model": "现代定义、可逐边手算；未运行执行器",
+          "empirical_causality": "未主张"
+        }
+      },
+      "existing_sense_ids": [
+        "core.018.01",
+        "core.018.02",
+        "core.019.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "名",
+          "实"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX07",
+      "name": "本末",
+      "source_row_ids": [
+        "R08"
+      ],
+      "unit": {
+        "working_type": "对举排序表达；复合概念候选；正文命题与词界分开登记",
+        "word_boundary_status": "“物有本末”有直接连文；是否按特定时期词法认定为词，以及最早出处，本轮均未证明。"
+      },
+      "sources": [
+        {
+          "source_id": "C07",
+          "source_relation": "C07",
+          "url": "https://zh.wikisource.org/zh-hans/禮記/大學",
+          "location": "开篇“大学之道”大段及后文“有德此有人”段；本次网页第124—125行",
+          "short_quotes": [
+            "物有本末，事有终始",
+            "德者本也，财者末也",
+            "其本乱而末治者否矣"
+          ],
+          "layer": "《礼记》所收《大学》正文；未把朱熹重编章句当作此页本文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "《礼记·大学》"
+        }
+      ],
+      "selected_reading": "本与末指定同一论域内的基础/派生、优先/次后关系；原篇修身与德财尤其含价值排序。现代依赖图只取其中一种结构投影。",
+      "components": [
+        {
+          "form": "本",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "末",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "typed_dependency_and_priority",
+        "description": "本和末不是两个永恒实体标签，而是相对于任务、层级和评价标准的有向关系。技术依赖DependsOn(末,本)与规范优先Priority_V(本,末)必须分别登记。"
+      },
+      "whole_meaning": "把应先稳固何项、后续何项依赖它、当前是否倒置这个结构压缩成一个排序问题。",
+      "non_compositional_residue": "哪一项是本、依赖是否必要或充分、何时应优先、资源冲突如何裁决，都不由两个字决定。德为本财为末是本篇价值论说，不能直接证明任何现实经济因果定律。",
+      "textual_constraints": [
+        "原篇将本末与终始并列而非等同；逻辑依赖、价值先后、时间先后不可自动互换。",
+        "原篇给出修身、德财的具体序列，不支持所有系统存在唯一第一本。",
+        "本的重要性不推出末无价值；原篇仍论生财、用财及政治效果。"
+      ],
+      "modern_additions": [
+        "选择一个极小技术域：末端当步工作必须由基础当步供能，无储能和备用源。",
+        "状态枚举和动作边人为给定；DependsOn只是本例约束，不是从引文推导的物理法则。",
+        "规范表V_service另行优先恢复服务，用于演示事实和价值的连接需显式输入。"
+      ],
+      "facts_vs_norms": {
+        "facts": "在选定供能模型中是否有基础供能、末端工作，以及动作的实际后继。",
+        "norms": "V_service规定服务中断且资源只够一个动作时优先repair，而非decorate。此排序来自公开的目标及规范表，不能从本字直接生成。原典德财排序保留为TextClaim。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "每次标本末都声明关系类型和相对目标；禁止用价值本偷换为唯一物理原因。",
+        "由末工作→本就绪只能得到必要条件；本就绪→末工作需另有充分机制。",
+        "多重基础可用合取、替代基础可用析取；不能默认所有依赖都是单根线性链。"
+      ],
+      "consequences": [
+        "可构建带必要条件的依赖图并据此定位应修复的上游条件。",
+        "可比较同一事实图在不同规范V下的优先序，避免把顺序判断伪装成自然律。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-foundation-dependency-demo",
+          "states": [
+            "off",
+            "ready",
+            "run"
+          ],
+          "state_predicates": {
+            "BaseReady()": [
+              "ready",
+              "run"
+            ],
+            "EndWorking()": [
+              "run"
+            ]
+          },
+          "program_relations": {
+            "repair": [
+              [
+                "off",
+                "ready"
+              ]
+            ],
+            "activate": [
+              [
+                "ready",
+                "run"
+              ]
+            ],
+            "lose_base": [
+              [
+                "run",
+                "off"
+              ]
+            ],
+            "decorate": [
+              [
+                "off",
+                "off"
+              ]
+            ]
+          },
+          "formula": "DependencyInvariant := EndWorking → BaseReady",
+          "calculations": [
+            "off两谓词皆假、ready仅BaseReady真、run两者真，因此三个状态均满足DependencyInvariant。",
+            "off ⊨ 〈repair;activate〉EndWorking；逐边为off→ready→run。",
+            "off ⊭ 〈repair〉EndWorking，说明必要基础恢复还不充分保证末端已运行。",
+            "off ⊭ 〈decorate〉EndWorking；run ⊨ [lose_base]¬EndWorking。"
+          ],
+          "norm_table": {
+            "V": "V_service：目标是下一条两步路径恢复服务；当前只选一个首动作",
+            "judgements_at_off": {
+              "repair": "preferred",
+              "decorate": "not_preferred"
+            },
+            "basis": "本模型公开可达性和指定目标；不宣称是《大学》的伦理尺度"
+          },
+          "countermodel": "加入有储能状态battery_run，使EndWorking真而BaseReady假，就不再满足此瞬时依赖。此时必须改技术假设或改本的范围，不能靠本末二字抹掉反例。"
+        }
+      ],
+      "failure_example": "ready满足BaseReady却不满足EndWorking，直接反驳“本治必然末治”的无条件充分化；储能反模型反驳本例技术依赖的跨领域普遍化。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "exact_text": "已核",
+          "selected_reading": "篇章明确有结构/价值排序；技术依赖是限域投影",
+          "word_boundary": "待证",
+          "earliest_attestation": "未考证",
+          "micro_model": "现代定义和手算；未运行执行器",
+          "empirical_causality": "本例机制为输入，未经现实实验认证"
+        }
+      },
+      "existing_sense_ids": [
+        "core.034.01",
+        "core.034.02",
+        "core.035.01",
+        "core.035.02"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "本",
+          "末"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX08",
+      "name": "虚实",
+      "source_row_ids": [
+        "R11"
+      ],
+      "unit": {
+        "working_type": "相对能力配置的对举表达；复合概念候选",
+        "word_boundary_status": "该传本篇题有虚实，正文其他篇亦有连文；篇题/连文都不代替历史词界或最早用例证明。"
+      },
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_relation": "S4",
+          "url": "https://zh.wikisource.org/wiki/孫子兵法#虛實第六",
+          "location": "末段“夫兵形象水”；另参“形人而我无形”段；本次网页第233、236、238行",
+          "short_quotes": [
+            "避實而擊虛",
+            "兵因敵而制勝",
+            "故兵無成勢，無恒形"
+          ],
+          "layer": "所链《孙子》正文；引文使用本页成势/恒形字样，不换成常见异文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "《孙子兵法·虚实》第六"
+        }
+      ],
+      "selected_reading": "虚/实取指定地点、时刻、行动能力下防备或资源配置的薄弱/充足，不能混为绝对存在/不存在，也不同于名实之实。",
+      "components": [
+        {
+          "form": "虚",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "实",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "relative_capacity_classification",
+        "description": "同一配置在比较尺度θ和测试能力A下被分成相对弱与强；对象、位置、时刻、对手/任务和信息条件缺一不可。"
+      },
+      "whole_meaning": "将分布不均、集中与分散、信息显露以及因势选择压缩成相对配置关系。",
+      "non_compositional_residue": "多弱算虚、信息是否可靠、对方能否重新配置、何种行动可利用此差别，都不是逐字可得；从虚实二元标签不能推出胜利概率。",
+      "textual_constraints": [
+        "原篇反复说明集中、分散、应形与因敌；虚实不是永恒身份。",
+        "无形在此可指对方难以窥见部署；不能推出无结构或不存在。",
+        "本文有制胜论说，但由当代观测给对象贴虚标签后，不能据古文越过具体机制直接预测成功。"
+      ],
+      "modern_additions": [
+        "用非军事的抽象棋盘通道测试说明关系：测试预算固定为3；通道阻力r<3才可通过。",
+        "枚举两处阻力配置(1,5)、(5,1)、(3,3)并人为指定通过/失败边。",
+        "把实际阻力与缓存观测分开，以显示陈旧信息的失败；该阈值和转移都不是原典参数。"
+      ],
+      "facts_vs_norms": {
+        "facts": "通道阻力、测试预算、当前配置及可达结果。",
+        "norms": "是否应选择某通道须指定任务目标、成本和限制；本卡没有把技术可达性当作伦理许可。原典战略偏好另留在其文本语境。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "虚和实必须共享同一资源/能力比较尺度，禁止把心理虚静义与防备虚弱义在一次推论中替换。",
+        "行动前核查信息时效；观察为虚与实际为虚分作不同谓词。",
+        "将弱处可利用的转移机制作为额外前提；虚标签本身不是因果箭头。"
+      ],
+      "consequences": [
+        "系统map获得位置、容量与观测层，可表达配置变化和知识滞后。",
+        "阈值改变时同一配置的分类可能改变，因此可做敏感性比较，不能把分类说成对象本质。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04-relative-capacity-board-demo",
+          "sorts": {
+            "Route": [
+              "A",
+              "B"
+            ]
+          },
+          "states": [
+            "r15",
+            "r51",
+            "r33",
+            "pass",
+            "fail"
+          ],
+          "configuration": {
+            "r15": {
+              "A": 1,
+              "B": 5
+            },
+            "r51": {
+              "A": 5,
+              "B": 1
+            },
+            "r33": {
+              "A": 3,
+              "B": 3
+            }
+          },
+          "definition": "在Config为真的三个配置状态上，Weak(x) ⇔ resistance(x)<3，Strong(x) ⇔ resistance(x)≥3。pass/fail不是资源配置，两个谓词均给空外延以使有限赋值总定义；分类、阈值及强弱穷尽命题必须带Config守卫，不能由终局的¬Strong推成Weak。",
+          "state_predicates": {
+            "Config()": [
+              "r15",
+              "r51",
+              "r33"
+            ],
+            "Success()": [
+              "pass"
+            ],
+            "Failure()": [
+              "fail"
+            ],
+            "Weak(Route)": {
+              "r15": [
+                [
+                  "A"
+                ]
+              ],
+              "r51": [
+                [
+                  "B"
+                ]
+              ],
+              "r33": [],
+              "pass": [],
+              "fail": []
+            },
+            "Strong(Route)": {
+              "r15": [
+                [
+                  "B"
+                ]
+              ],
+              "r51": [
+                [
+                  "A"
+                ]
+              ],
+              "r33": [
+                [
+                  "A"
+                ],
+                [
+                  "B"
+                ]
+              ],
+              "pass": [],
+              "fail": []
+            }
+          },
+          "program_relations": {
+            "try_A": [
+              [
+                "r15",
+                "pass"
+              ],
+              [
+                "r51",
+                "fail"
+              ],
+              [
+                "r33",
+                "fail"
+              ]
+            ],
+            "try_B": [
+              [
+                "r15",
+                "fail"
+              ],
+              [
+                "r51",
+                "pass"
+              ],
+              [
+                "r33",
+                "fail"
+              ]
+            ],
+            "reallocate": [
+              [
+                "r15",
+                "r51"
+              ]
+            ]
+          },
+          "calculations": [
+            "r15 ⊨ Weak(A)∧Strong(B)，且〈try_A〉Success为真，〈try_B〉Success为假。",
+            "r51的强弱恰好反向，故同一A不能永远被登记为虚。",
+            "r33无Weak通道；二元表述并不保证总有可利用的虚处。",
+            "r15 ⊭ [reallocate]Weak(A)；若缓存仍报Weak(A)而真实状态已到r51，则try_A到fail，反驳用旧标签直接保证成功。"
+          ],
+          "norm_table": "未给伦理表；只报告可达性。"
+        }
+      ],
+      "failure_example": "r15观测A弱后发生reallocate，到r51仍据旧观测选择A，结果为fail；即使字义判断曾经正确，跨时失效仍会使行动失败。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "exact_text": "已核，保留本页异文字样",
+          "selected_reading": "有军事篇章直接支持；非军事棋盘仅演示抽象关系",
+          "word_boundary": "待证",
+          "earliest_attestation": "未考证",
+          "micro_model": "现代定义和手算；未运行执行器",
+          "empirical_causality": "未据此提出真实竞争结果预测"
+        }
+      },
+      "existing_sense_ids": [
+        "core.110.02",
+        "core.019.02"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "虚",
+          "实"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX09",
+      "name": "阴阳",
+      "source_row_ids": [
+        "R10"
+      ],
+      "unit": {
+        "working_type": "对举概念组合；本卡登记为构式，是否作为单一复合词及其历史词界待证",
+        "word_boundary_status": "词界待证；本卡不认证历史单词地位。"
+      },
+      "sources": [
+        {
+          "source_id": "Y03",
+          "source_relation": "Y03",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上#第五章",
+          "location": "第五章，网页正文第162行",
+          "short_quotes": [
+            "一陰一陽之謂道"
+          ],
+          "layer": "传",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "易传·系辞上"
+        },
+        {
+          "source_id": "Y03",
+          "source_relation": "Y03（同页补定位）",
+          "url": "https://zh.wikisource.org/wiki/易傳/繫辭上#第六章",
+          "location": "第六章，网页正文第167行",
+          "short_quotes": [
+            "陰陽之義配日月"
+          ],
+          "layer": "传",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "易传·系辞上"
+        }
+      ],
+      "selected_reading": "把阴、阳作为指定观察面向下相互对待的两种配置角色，并允许考察其时序替换；这只是从所引易传句群选择的分析入口，不覆盖阴阳所有历史解释。",
+      "components": [
+        {
+          "form": "阴",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "阳",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "paired_role_classification",
+        "description": "并列对举＋共享比较维度。‘一阴一阳’还提出两者在整体论述中的关联；相互排他、穷尽分类、固定交替周期均须逐项另立条件。"
+      },
+      "whole_meaning": "整体压缩了‘按同一尺度区分两种配置，并研究二者如何共同组织变化’这一关系问题，不能只得到两个互不相干的标签。",
+      "non_compositional_residue": "哪些事物、哪一面向、何时归阴或阳，以及何谓道，均不由两个字单独决定；日月类比也不把阴阳等同为天体、正负电荷或二进制位。",
+      "textual_constraints": [
+        "两字出现在有关道、生生、成象、通变的论述中，不能孤立为现代正负号。",
+        "第六章以‘配’把阴阳之义与日月联系，可作对举解释入口；原句没有给出每步必翻转的函数或周期数。",
+        "本卡不将阴阳关系整体改名为反馈，也不从阴阳两名推出互利或善。"
+      ],
+      "modern_additions": [
+        "先声明对象尺度为单个教学装置的工作相位，只用两个分类标签YinPhase与YangPhase。",
+        "额外规定本例两标签互斥且穷尽；这是分类契约，不是原典普遍公理。",
+        "再独立给定真实正时间过程tick；没有tick表时，分类本身没有动态后果。"
+      ],
+      "facts_vs_norms": {
+        "facts": "本例仅有相位、后继和可达事实。",
+        "norms": "未给任何好坏表；阳不因其名而优于阴，交替不因其可执行而正当。若要选动作须另交V。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [
+          "YinPhase:Formula，YangPhase:Formula；tick:Program。二者是已绑定教学相位谓词，不是直接执行古字。",
+          "分类契约 C := (YinPhase ∨ YangPhase) ∧ ¬(YinPhase ∧ YangPhase)。",
+          "本例另给转移约束：YinPhase→[tick]YangPhase；YangPhase→[tick]YinPhase，并要求每状态Enabled(tick)。"
+        ],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "分类层先产生可比较的两种角色；转移层只使用另行规定的tick边。",
+        "在本例两周期是边表加分类的推论；删去翻转边，周期结论立即失效。"
+      ],
+      "consequences": [
+        "分类层先产生可比较的两种角色；转移层只使用另行规定的tick边。",
+        "在本例两周期是边表加分类的推论；删去翻转边，周期结论立即失效。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04.yinyang.phase-demo",
+          "states": [
+            "yin",
+            "yang"
+          ],
+          "start": "yin",
+          "predicate_extensions": {
+            "YinPhase": [
+              "yin"
+            ],
+            "YangPhase": [
+              "yang"
+            ]
+          },
+          "program_relations": {
+            "tick": [
+              [
+                "yin",
+                "yang"
+              ],
+              [
+                "yang",
+                "yin"
+              ]
+            ]
+          },
+          "time_semantics": "每条tick边推进同一固定正时间单位Δ；skip和test不推进时间。",
+          "hand_checks": [
+            {
+              "query": "[tick]YangPhase @ yin",
+              "expected": true,
+              "reason": "yin唯一tick后继为yang。"
+            },
+            {
+              "query": "〈tick;tick〉YinPhase @ yin",
+              "expected": true,
+              "reason": "yin→yang→yin。"
+            },
+            {
+              "query": "[tick*](C ∧ Enabled(tick)) @ yin",
+              "expected": true,
+              "reason": "仅两状态可达，均满足分类契约且有tick后继；这是所给完整模型的性质。"
+            }
+          ],
+          "countermodel": {
+            "states": [
+              "yin",
+              "yang"
+            ],
+            "same_classification": true,
+            "program_relations": {
+              "tick": [
+                [
+                  "yin",
+                  "yin"
+                ],
+                [
+                  "yang",
+                  "yang"
+                ]
+              ]
+            },
+            "failed_query": "〈tick〉YangPhase @ yin",
+            "expected": false,
+            "meaning": "完全相同的阴阳分类也允许停留模型；所以交替不能由字义或分类契约推出。"
+          }
+        }
+      ],
+      "failure_example": "把冷热贴成阴阳后，若装置一直维持冷相，阴阳命名仍可存在而交替不成立；据名称声称必然相变或守恒即越出证据。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "short_quote": "在线已核",
+          "reading": "有文本入口的选择性解释",
+          "word_boundary": "待证",
+          "earliest_occurrence": "未研究",
+          "finite_model": "现代构造，手算",
+          "empirical_dynamics": "未证",
+          "normative_generalization": "未提出"
+        }
+      },
+      "existing_sense_ids": [
+        "core.108.01",
+        "core.109.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "阴",
+          "阳"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX10",
+      "name": "自然",
+      "source_row_ids": [
+        "R23"
+      ],
+      "unit": {
+        "working_type": "自＋然的结构性读法及历史概念候选；词界和词汇化时期待证",
+        "word_boundary_status": "词界待证；本卡不认证历史单词地位。"
+      },
+      "sources": [
+        {
+          "source_id": "L04",
+          "source_relation": "L04",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二十五章",
+          "location": "二十五章末句，网页第829行",
+          "short_quotes": [
+            "道法自然"
+          ],
+          "layer": "经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "老子·二十五章（王弼本）"
+        },
+        {
+          "source_id": "L04",
+          "source_relation": "L04（注层补定位）",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二十五章",
+          "location": "‘道法自然’下注，网页第831行",
+          "short_quotes": [
+            "自然者，無稱之言，窮極之辭也"
+          ],
+          "layer": "魏晋注释，不能冒充老子原句",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "王弼注老子二十五章"
+        },
+        {
+          "source_id": "L07",
+          "source_relation": "L07",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章",
+          "location": "守之—自化句，网页第1075行",
+          "short_quotes": [
+            "侯王若能守之，萬物將自化"
+          ],
+          "layer": "经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "老子·三十七章（王弼本）"
+        }
+      ],
+      "selected_reading": "选择‘自己如此、由其自身所由而成’的读法，并以王弼的解释层作为佐证；不将自然直接读成现代环境或一切非人工物。",
+      "components": [
+        {
+          "form": "自",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "然",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "bounded_process_origin",
+        "description": "自规定归属与所由，然指所呈现的如此状态。组合要求先绑定‘何物自身’及比较边界，不能只把自当封闭、然当恒定。"
+      },
+      "whole_meaning": "整体压缩一个有边界的来源判断：这个状态变化在本情境中不由所指定的外部命令强制选定，而从已声明的内部组织与条件发生。",
+      "non_compositional_residue": "‘不由外部命令强制选定’只是本卡可检查的现代近似；原文的法自然与王弼无称之论不能穷尽为自治系统属性。内部/外部界线、命令与资源之别、过程机制也不是二字自带。",
+      "textual_constraints": [
+        "二十五章的法自然处于道、天、地、人之所法的论述，既不是独立的自然环境名词定义，也不是动力方程。",
+        "三十七章自化仍以侯王守之为条件；‘自’没有抹去政治或环境条件。",
+        "王弼注是后世解释证据，不能等同为唯一原始词义证明。"
+      ],
+      "modern_additions": [
+        "指定系统边界为一枚教学种子；水分是允许输入的资源，命令是另设的控制变量。",
+        "由领域建模者给LocalStep关系及NoExternalCommand、Water、Mature、Failed的完整取值。",
+        "将‘本例的自然过程’操作性定义为没有外部命令条件下的局部生长边；这不是现实植物学验证，更不把内部机制定义为无因。"
+      ],
+      "facts_vs_norms": {
+        "facts": "外部命令是否缺席、资源是否具备、局部变化是否发生可分别判真。",
+        "norms": "自然与否不推出好坏；本模型的缺水失败也可发生在没有命令时。任何‘应顺自然’是另需给出理由与标准的规范主张。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [
+          "Water、NoExternalCommand、Mature、Failed:Formula；local_tick、dry_tick:Program。",
+          "natural_tick := ?NoExternalCommand;local_tick;?NoExternalCommand。该过程过滤局部边，不宣告任何无条件必然生长。",
+          "资源许可条件另写Water；在给定模型中可检验 Water ∧ NoExternalCommand → 〈natural_tick;natural_tick〉Mature，而不能删除Water。"
+        ],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "系统边界和控制来源先确定‘自’，状态及条件确定‘然’；二者组合压缩的是来源关系。",
+        "无外部命令并不取消物质资源、触发条件或内部因果；同一判断可与生长成功或缺水失败共存。"
+      ],
+      "consequences": [
+        "系统边界和控制来源先确定‘自’，状态及条件确定‘然’；二者组合压缩的是来源关系。",
+        "无外部命令并不取消物质资源、触发条件或内部因果；同一判断可与生长成功或缺水失败共存。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04.ziran.boundary-demo",
+          "states": [
+            "seed_wet",
+            "sprout_wet",
+            "mature_wet",
+            "seed_dry",
+            "failed_dry"
+          ],
+          "start": "seed_wet",
+          "predicate_extensions": {
+            "Water": [
+              "seed_wet",
+              "sprout_wet",
+              "mature_wet"
+            ],
+            "NoExternalCommand": [
+              "seed_wet",
+              "sprout_wet",
+              "mature_wet",
+              "seed_dry",
+              "failed_dry"
+            ],
+            "Mature": [
+              "mature_wet"
+            ],
+            "Failed": [
+              "failed_dry"
+            ]
+          },
+          "program_relations": {
+            "local_tick": [
+              [
+                "seed_wet",
+                "sprout_wet"
+              ],
+              [
+                "sprout_wet",
+                "mature_wet"
+              ],
+              [
+                "mature_wet",
+                "mature_wet"
+              ]
+            ],
+            "dry_tick": [
+              [
+                "seed_dry",
+                "failed_dry"
+              ],
+              [
+                "failed_dry",
+                "failed_dry"
+              ]
+            ]
+          },
+          "time_semantics": "local_tick、dry_tick每边均推进固定Δ；natural_tick中的两个test不额外消耗时间。",
+          "hand_checks": [
+            {
+              "query": "〈natural_tick;natural_tick〉Mature @ seed_wet",
+              "expected": true,
+              "reason": "水分条件和两条已给局部边允许seed_wet→sprout_wet→mature_wet。"
+            },
+            {
+              "query": "〈natural_tick*〉Mature @ seed_dry",
+              "expected": false,
+              "reason": "seed_dry没有local_tick边，且自身非Mature；零步也不能满足终点。"
+            },
+            {
+              "query": "NoExternalCommand ∧ 〈dry_tick〉Failed @ seed_dry",
+              "expected": true,
+              "reason": "缺少外部命令与发生失败可同时为真。"
+            }
+          ]
+        }
+      ],
+      "failure_example": "一个未受指令但已经缺水的系统走向失败；据‘自然’二字声称它必自我恢复、无需输入或因此应当任其失败，都不是本模型或所引原句的后果。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "short_quote": "在线已核，经注分层",
+          "reading": "有文本及注释入口，现代边界定义只作近似",
+          "word_boundary": "待证",
+          "earliest_occurrence": "未研究",
+          "finite_model": "现代构造，手算",
+          "empirical_dynamics": "未证",
+          "normative_generalization": "拒绝由事实自动推出"
+        }
+      },
+      "existing_sense_ids": [
+        "core.025.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "自"
+        ],
+        "not_registered_in08": [
+          "然"
+        ],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX11",
+      "name": "无为",
+      "source_row_ids": [
+        "R23"
+      ],
+      "unit": {
+        "working_type": "否定性哲学构式／词候选；具体否定范围须按篇章选择，词界待证",
+        "word_boundary_status": "词界待证；本卡不认证历史单词地位。"
+      },
+      "sources": [
+        {
+          "source_id": "L07",
+          "source_relation": "L07",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章",
+          "location": "章首，网页第1067—1075行",
+          "short_quotes": [
+            "道常無為而無不為"
+          ],
+          "layer": "经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "老子·三十七章（王弼本）"
+        },
+        {
+          "source_id": "L07",
+          "source_relation": "L07",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章",
+          "location": "自化后的条件句，网页第1075行",
+          "short_quotes": [
+            "化而欲作，吾將鎮之以無名之樸"
+          ],
+          "layer": "经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "老子·三十七章（王弼本）"
+        },
+        {
+          "source_id": "L07",
+          "source_relation": "L07（注层补定位）",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#三十七章",
+          "location": "道常无为下注，网页第1069行",
+          "short_quotes": [
+            "順自然也"
+          ],
+          "layer": "魏晋注释",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "王弼注老子三十七章"
+        }
+      ],
+      "selected_reading": "选择本章侯王守道、自化而欲作则镇的治理语境，把无为理解为限制强制主宰式干预，同时保留守、镇等有条件的行动。不是不做任何动作。",
+      "components": [
+        {
+          "form": "无",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "为",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "scoped_negation_and_conditional_policy",
+        "description": "无的否定作用域须限制到所选为类。把‘为’分为强制塑形、守持条件、回应扰动等行动类型是显式解释与现代分类，不能从无字自动得到通用skip。"
+      },
+      "whole_meaning": "整体压缩一个治理姿态及约束：不以行动者意志任意塑造所有后继，给物自身过程留空间；必要的条件守持与回应须在同一解释中说明。",
+      "non_compositional_residue": "哪个动作构成强制、何时应镇、朴的政治含义，以及无不为的哲学尺度，都不由‘无＋动作’的普通否定直接推出。",
+      "textual_constraints": [
+        "经文同时出现无为、守、自化和镇；解释不能只保留‘无’而删去后续的守镇条件。",
+        "自化与自定是本章的论说主张，不可无条件升格为对所有社会系统已验的稳定定理。",
+        "王弼‘顺自然’说明一种解释传统，不能替代对经文行动条件的逐项辨析。"
+      ],
+      "modern_additions": [
+        "采用三种已命名行动：let（容许过程继续）、restore（撤去诱导扰动并复朴的教学替身）、force（强制统一）。这些标签及边表由项目规定。",
+        "Desire是会破坏本例协调的竞争性扰动标签，不等于一切人类欲望。",
+        "另给V判断：在q可选let，在d可选restore；该表是教学评估标准，不是从古文句子直接计算出来的道德真理。"
+      ],
+      "facts_vs_norms": {
+        "facts": "每个状态的扰动及行动后继由模型给定。",
+        "norms": "V分别给出状态—动作评价；‘策略能达到stable’和‘V许可该动作’是两个检查。V可被质疑或更换，不能由可达性伪装推出。",
+        "V_table": [
+          {
+            "state": "q",
+            "action": "let",
+            "decision": "permitted"
+          },
+          {
+            "state": "q",
+            "action": "force",
+            "decision": "rejected"
+          },
+          {
+            "state": "d",
+            "action": "restore",
+            "decision": "permitted"
+          },
+          {
+            "state": "d",
+            "action": "let",
+            "decision": "rejected"
+          },
+          {
+            "state": "stable",
+            "action": "let",
+            "decision": "permitted"
+          }
+        ]
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [
+          "Desire、Stable、Disrupted:Formula；let、restore、force:Program；V评估:Judgement。",
+          "wuwei_policy := (?¬Desire;let) ∪ (?Desire;restore)。这是以本章条件关系启发的现代程序，不是古字的唯一编译结果。",
+          "‘无为’不译为skip：let和restore都包含一个真实Δ步；是否合V另外查询。"
+        ],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "作用域受限的否定＋条件分支组成策略；其效果依赖边表，许可依赖V。",
+        "留出自主过程与回应扰动并非逻辑矛盾；但何种回应算相容，需要明示解释与证据。"
+      ],
+      "consequences": [
+        "作用域受限的否定＋条件分支组成策略；其效果依赖边表，许可依赖V。",
+        "留出自主过程与回应扰动并非逻辑矛盾；但何种回应算相容，需要明示解释与证据。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04.wuwei.conditional-policy-demo",
+          "states": [
+            "q",
+            "d",
+            "stable",
+            "broken"
+          ],
+          "start": "d",
+          "predicate_extensions": {
+            "Desire": [
+              "d"
+            ],
+            "Stable": [
+              "stable"
+            ],
+            "Disrupted": [
+              "broken"
+            ]
+          },
+          "program_relations": {
+            "let": [
+              [
+                "q",
+                "stable"
+              ],
+              [
+                "d",
+                "broken"
+              ],
+              [
+                "stable",
+                "stable"
+              ],
+              [
+                "broken",
+                "broken"
+              ]
+            ],
+            "restore": [
+              [
+                "d",
+                "q"
+              ]
+            ],
+            "force": [
+              [
+                "q",
+                "broken"
+              ],
+              [
+                "d",
+                "broken"
+              ],
+              [
+                "stable",
+                "broken"
+              ]
+            ]
+          },
+          "time_semantics": "每条行动边推进固定Δ；策略guard不推进时间。",
+          "hand_checks": [
+            {
+              "query": "〈wuwei_policy;wuwei_policy〉Stable @ d",
+              "expected": true,
+              "reason": "d满足Desire故restore到q；q不满足Desire故let到stable。"
+            },
+            {
+              "query": "〈let;let〉Stable @ d",
+              "expected": false,
+              "reason": "d→broken→broken。把无为定义成一律放任会漏掉条件分支。"
+            },
+            {
+              "query": "[wuwei_policy]¬Disrupted @ d",
+              "expected": true,
+              "reason": "唯一策略后继q非Disrupted。"
+            },
+            {
+              "query": "V(d,restore)=permitted",
+              "expected": true,
+              "reason": "这是独立给定的V表记录，不由上一条事实蕴含。"
+            }
+          ],
+          "countermodel": {
+            "same_V": true,
+            "change": "将restore的(d,q)边改为(d,broken)，其余保持",
+            "failed_query": "[wuwei_policy]¬Disrupted @ d",
+            "expected": false,
+            "meaning": "相同文字解释、guard和规范许可也无法保证动作有效；机制边一改，安全结论失效。"
+          }
+        }
+      ],
+      "failure_example": "用‘无为’为任何不干预辩护会在d走到broken；另一反例是许可的restore实际失效，表明伦理许可和事实效能不可混同。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "short_quote": "在线已核，经注分层",
+          "reading": "选定政治语境的解释候选",
+          "word_boundary": "待证",
+          "earliest_occurrence": "未研究",
+          "finite_model": "现代策略示意，手算",
+          "empirical_dynamics": "未证",
+          "normative_generalization": "仅显式V，不冒充古文普遍伦理算法"
+        }
+      },
+      "existing_sense_ids": [
+        "core.012.03",
+        "syntax.08"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "无",
+          "为"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    },
+    {
+      "id": "CX12",
+      "name": "相生",
+      "source_row_ids": [
+        "R04",
+        "R05"
+      ],
+      "unit": {
+        "working_type": "相＋生关系构式／词候选；不同篇章同形而关系类型可不同，词界待证",
+        "word_boundary_status": "词界待证；本卡不认证历史单词地位。"
+      },
+      "sources": [
+        {
+          "source_id": "L01",
+          "source_relation": "L01",
+          "url": "https://zh.wikisource.org/wiki/道德經_(王弼本)#二章",
+          "location": "美恶、善不善后六组相待，网页第246行",
+          "short_quotes": [
+            "故有無相生，難易相成"
+          ],
+          "layer": "经文",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "老子·二章（王弼本）"
+        },
+        {
+          "source_id": "F03",
+          "source_relation": "F03",
+          "url": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13",
+          "location": "篇首，网页第127—128行",
+          "short_quotes": [
+            "五行者五官也比相生而間相勝也"
+          ],
+          "layer": "传世诸子篇章，传统归属与编集问题另论",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "春秋繁露（四库全书本）卷十三·五行相生第五十九"
+        },
+        {
+          "source_id": "F03",
+          "source_relation": "F03",
+          "url": "https://zh.wikisource.org/wiki/春秋繁露_(四庫全書本)/卷13",
+          "location": "木生火段，网页第129行；其余四边在第130—131行",
+          "short_quotes": [
+            "司馬食榖……故曰木生火"
+          ],
+          "layer": "传世文本",
+          "web_checked": "2026-10-21；已实际打开核对短引和邻近段落，未声称影印底本校勘",
+          "work": "同篇"
+        }
+      ],
+      "selected_reading": "主读A：在老子二章选相待概念的相互确定；分读B：在五行相生篇选官职与功能的顺次支持。两读使用不同谓词，绝不合并成一个对称物理因果算子。",
+      "components": [
+        {
+          "form": "相",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        },
+        {
+          "form": "生",
+          "note": "具体选义与角色见selected_reading及component_relation；不另给字形固有运算。"
+        }
+      ],
+      "component_relation": {
+        "kind": "typed_relational_distribution",
+        "description": "相指定参与项之间的关系分布；生的读法再确定是概念产生/确定，还是所引功能支持。相不自行规定每对双向，也不规定强度、时滞、守恒或稳定。"
+      },
+      "whole_meaning": "整体压缩有方向、类型和语境的生成/支持网络；必须恢复参与项、相待标准或支持机制，才能推论。",
+      "non_compositional_residue": "‘生’在两段的关系类型不同；五行篇还包含农食、军政、君官、司法等具体制度论述，这些内容不由两字推出。老子相待读法也不是由所有正反概念必互为现实原因的一般定律。",
+      "textual_constraints": [
+        "老子二章先说美恶与善不善，再列不同关系动词；它给出相待论述入口，并未把相生、相成、相和、相随全变成同一种因果。",
+        "五行相生篇明说五行者五官，并逐段说明支持；每条边须依文本辨认，不能只看‘相’就补反向边。",
+        "四库本卷十三篇次为五行相胜58、五行相生59。文中顺逆治乱的规范/政治主张须保留为TextClaim；本卡不将其当现实经验公理。"
+      ],
+      "modern_additions": [
+        "A将概念名作Concept域项，给CoDetermines关系；这只是所选相待读法的形式化。",
+        "B把五行节点作Role域项，给Support关系及长度路径；支持路径是解释/依赖图，不等同真实时间推进。",
+        "为演示动态传播另加条件：一次tick只把一个已选支持令牌沿一条Support边传给下个节点。令牌、资源、离散时间和唯一激活均是现代假设。"
+      ],
+      "facts_vs_norms": {
+        "facts": "A检查概念关系；B检查方向与可达性；动态扩展检查令牌转移。",
+        "norms": "文本的顺则治等主张作为历史论说记载，未写入事实边；良好、合法、应当等须另有V，本卡不给统一肯定评价。"
+      },
+      "g1_interface": {
+        "status": "现代参数化说明；须领域声明、选义及补参，非现成AST",
+        "typed_rules": [
+          "A: CoDetermines(有,无) ∧ CoDetermines(无,有):Formula；不推出Causes(有,无)。",
+          "B: Support:Role×Role→Formula；Role={木,火,土,金,水}。关系外延为{木→火,火→土,土→金,金→水,水→木}。",
+          "图路径可组成，但Support(a,b)不推出Support(b,a)，Support(a,b)∧Support(b,c)也不自动推出直接Support(a,c)。",
+          "只有在新增令牌传播机制后，tick才是Program；原支持图本身不强制现实系统随时间逐环运行。"
+        ],
+        "note": "Formula/Program/规范Judgement不可互相强制转换。"
+      },
+      "rules": [
+        "先按文本选关系类型，再决定对称性、方向及组合方式；这是相生压缩的信息展开。",
+        "有向环不等于双向边；路径可达不等于直接作用；闭环不等于反馈已具增益、延迟或稳定条件。"
+      ],
+      "consequences": [
+        "先按文本选关系类型，再决定对称性、方向及组合方式；这是相生压缩的信息展开。",
+        "有向环不等于双向边；路径可达不等于直接作用；闭环不等于反馈已具增益、延迟或稳定条件。"
+      ],
+      "micro_models": [
+        {
+          "context_id": "v04.xiangsheng.conceptual",
+          "states": [
+            "paired"
+          ],
+          "domains": {
+            "Concept": [
+              "有",
+              "无"
+            ]
+          },
+          "predicate_extensions": {
+            "CoDetermines": [
+              [
+                "有",
+                "无"
+              ],
+              [
+                "无",
+                "有"
+              ]
+            ],
+            "Causes": []
+          },
+          "program_relations": {},
+          "hand_checks": [
+            {
+              "query": "CoDetermines(有,无)∧CoDetermines(无,有)",
+              "expected": true,
+              "reason": "两条关系是本选义的明确输入。"
+            },
+            {
+              "query": "Causes(有,无)∨Causes(无,有)",
+              "expected": false,
+              "reason": "概念相待不是Causes的定义或桥梁。"
+            }
+          ]
+        },
+        {
+          "context_id": "v04.xiangsheng.support-token",
+          "states": [
+            "wood",
+            "fire",
+            "earth",
+            "metal",
+            "water"
+          ],
+          "start": "wood",
+          "predicate_extensions": {
+            "AtWood": [
+              "wood"
+            ],
+            "AtFire": [
+              "fire"
+            ],
+            "AtEarth": [
+              "earth"
+            ],
+            "AtMetal": [
+              "metal"
+            ],
+            "AtWater": [
+              "water"
+            ]
+          },
+          "program_relations": {
+            "tick": [
+              [
+                "wood",
+                "fire"
+              ],
+              [
+                "fire",
+                "earth"
+              ],
+              [
+                "earth",
+                "metal"
+              ],
+              [
+                "metal",
+                "water"
+              ],
+              [
+                "water",
+                "wood"
+              ]
+            ]
+          },
+          "time_semantics": "每边Δ，仅在新增令牌传播解释中成立；不把五行官职支持关系本身当钟表。",
+          "hand_checks": [
+            {
+              "query": "〈tick〉AtWood @ fire",
+              "expected": false,
+              "reason": "fire唯一后继earth，无反向fire→wood。"
+            },
+            {
+              "query": "〈tick;tick〉AtEarth @ wood",
+              "expected": true,
+              "reason": "wood→fire→earth，是两步路径而非直接边。"
+            },
+            {
+              "query": "〈repeat(5,tick)〉AtWood @ wood",
+              "expected": true,
+              "reason": "指定五边回到起点；这说明该令牌模型有环，不证明资源增长或正反馈。"
+            }
+          ],
+          "countermodel": {
+            "change": "保持相生五边支持图，但在动态传播层删去water→wood的tick边（资源不足）。",
+            "failed_query": "〈repeat(5,tick)〉AtWood @ wood",
+            "expected": false,
+            "meaning": "支持分类可以保持而传播停止；相生之名并不保证循环过程实际闭合。"
+          }
+        }
+      ],
+      "failure_example": "将火→木补成五行直接相生边违反所登记关系；将概念互定称为现实互因混淆类型；即使五边令牌环可运行，也不能推出任何实际材料都无限增殖。",
+      "evidence_status": {
+        "text": "本卡短引本轮实际在线核读；已区分经/传/注",
+        "word_boundary": "待证；构式登记不等于已认证复合词",
+        "earliest_attestation": "未研究/未证",
+        "selection": "语境内选义；不穷尽各时代义项",
+        "formalization": "本项目现代构造，非原典已有同一形式系统",
+        "empirical_validation": "未进行；表内计算不认证真实世界机制",
+        "execution": "有限表手算；本文件不声称由G1引擎执行",
+        "details": {
+          "short_quote": "在线已核，两原典不混同",
+          "reading": "A相待读法与B功能支持读法分别登记",
+          "word_boundary": "待证",
+          "earliest_occurrence": "未研究",
+          "finite_model": "现代关系图及条件令牌扩展，手算",
+          "empirical_dynamics": "未证",
+          "normative_generalization": "历史评价记为TextClaim，不当普遍事实"
+        }
+      },
+      "existing_sense_ids": [
+        "core.022.01"
+      ],
+      "character_coverage": {
+        "registered_in08": [
+          "相",
+          "生"
+        ],
+        "not_registered_in08": [],
+        "note": "义项ID只作既有接口入口，不能证明整构式已自动编译；未登记成分只作本卡解释。"
+      }
+    }
+  ],
+  "system_map": {
+    "link_meaning": "都是本项目设计的可组合接口；并不主张12词按此历史顺序生成。",
+    "links": [
+      {
+        "id": "MAP01",
+        "from_card": "CX06",
+        "to_card": "CX09",
+        "relation_type": "representation_to_classification",
+        "bridge": "先给名称所指，再给同一比较维度的分类；名称不改变相位，分类不自动生成转移。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP02",
+        "from_card": "CX09",
+        "to_card": "CX04",
+        "relation_type": "classification_to_transition_check",
+        "bridge": "相位分类可作为重配置的前后条件；具体边与合时条件另给。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP03",
+        "from_card": "CX05",
+        "to_card": "CX04",
+        "relation_type": "structural_reconfiguration_instance",
+        "bridge": "split/merge可作为reconfigure候选，但还必须通过CanReach目标检验。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP04",
+        "from_card": "CX07",
+        "to_card": "CX04",
+        "relation_type": "dependency_guard",
+        "bridge": "依赖条件可作行动guard；基础就绪仍需执行边，必要不自动充分。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP05",
+        "from_card": "CX08",
+        "to_card": "CX02",
+        "relation_type": "observation_to_response",
+        "bridge": "容量配置经观测形成输入，再选择响应；信息过时会使据标签的行动失败。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP06",
+        "from_card": "CX02",
+        "to_card": "CX04",
+        "relation_type": "response_to_adaptation",
+        "bridge": "响应可是一种改制候选；有响应不等于恢复目标可达。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP07",
+        "from_card": "CX10",
+        "to_card": "CX11",
+        "relation_type": "process_and_intervention_scope",
+        "bridge": "先界定局部过程与外部命令，再谈哪些干预受限制；资源输入与命令不同。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP08",
+        "from_card": "CX11",
+        "to_card": "CX03",
+        "relation_type": "process_and_judgement",
+        "bridge": "过程许可/可行性与规范判断分别求值；守镇策略和情感合节不共用一个未声明V。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP09",
+        "from_card": "CX12",
+        "to_card": "CX01",
+        "relation_type": "support_to_generation_bridge",
+        "bridge": "支持关系只有配上资源与发生机制，才可能产生接续生成；有环不保证发生。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP10",
+        "from_card": "CX04",
+        "to_card": "CX01",
+        "relation_type": "feasibility_to_recurrence_bridge",
+        "bridge": "到达生成可行状态只是起点；继续生成仍需每步真实事件及资源，通不自动久。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP11",
+        "from_card": "CX06",
+        "to_card": "CX08",
+        "relation_type": "sense_disambiguation_barrier",
+        "bridge": "名实之实取所指，虚实之实取容量配置；禁止同字类型偷换。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      },
+      {
+        "id": "MAP12",
+        "from_card": "CX07",
+        "to_card": "CX03",
+        "relation_type": "normative_standard_barrier",
+        "bridge": "优先序和合节判断均需规范，但可以属于不同V；不由二者含价值就认作同一善。",
+        "status": "现代组合接口，不是原典直接声明的同义或因果边"
+      }
+    ]
+  },
+  "coverage_note": "12张重点卡中11张关联原32行中的11行；自然/无为共用R23，相生兼R04/R05；分合单列补充。关联数不等于各行全部子项完成。"
+}

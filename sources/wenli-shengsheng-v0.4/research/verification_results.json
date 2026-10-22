@@ -1,0 +1,40 @@
+{
+  "release": "0.4",
+  "passed": true,
+  "reference_integrity": {
+    "registered_characters": 144,
+    "registered_interfaces": 245,
+    "graph_existing_senses": 19,
+    "graph_used_senses": 13,
+    "graph_sources": 15,
+    "graph_edges": 13
+  },
+  "validation_groups": [
+    {
+      "script": "corpus/report_corpus.py",
+      "passed": true,
+      "report": "{\"pass\": true, \"units\": 55, \"agreement\": 46, \"joint_E\": 30, \"integrity_checks\": 302}"
+    },
+    {
+      "script": "constructions/validate_constructions.py",
+      "passed": true,
+      "report": "{\"checker\": \"independent finite-table assertions; not G1 engine\", \"input_sha256\": \"eb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac\", \"checks\": 194, \"passed\": 194, \"structure_checks\": 139, \"finite_calculations\": 55, \"scope\": \"核对显式表、引用与若干核心推论；不执行自然语言解析，不证明原典解释或经验因果。\"}"
+    },
+    {
+      "script": "constructions/independent_model_review.py",
+      "passed": true,
+      "report": "{\"checks\": 36, \"passed\": 36, \"cards_checked\": 12}\neb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac"
+    },
+    {
+      "script": "engine/verify_rules.py",
+      "passed": true,
+      "report": "{\"rule_count\": 13, \"query_count\": 48, \"cross_checked_query_count\": 48, \"raw_fact_checks\": 432, \"action_domain_completeness_checks\": 2, \"rejection_count\": 2, \"passed\": true, \"graph_join\": {\"graph_edges\": 13, \"primary_query_links\": 26, \"support_query_links\": 25, \"passed\": true, \"scope\": \"reference, model and actual-result consistency; textual interpretation still requires review\"}}"
+    },
+    {
+      "script": "basis/normalizer.py",
+      "passed": true,
+      "report": "{\"all_pass\": true, \"saved_result_match\": true, \"models\": 25, \"formula_inputs\": 2750, \"state_truth_comparisons\": 13750, \"program_inputs\": 1900, \"full_relation_comparisons\": 1900, \"true_results\": 7433, \"false_results\": 6317, \"nonempty_nonidentity_relations\": 708, \"boundary_checks\": 51}"
+    }
+  ],
+  "scope": "Frozen data, finite model calculations and implementation consistency; not a proof of lexicon-wide prevalence, historical unity or universal minimality."
+}

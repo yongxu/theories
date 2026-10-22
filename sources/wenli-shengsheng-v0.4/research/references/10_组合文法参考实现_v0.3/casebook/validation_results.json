@@ -1,0 +1,1219 @@
+{
+  "title": "07与09完整推导案例的实际执行验证",
+  "bundles": 12,
+  "checks": 120,
+  "counts": {
+    "formula": 84,
+    "program": 13,
+    "norm": 3,
+    "integration": 6,
+    "rejection": 11,
+    "bridge_arithmetic": 1,
+    "declared_norm_consistency": 2
+  },
+  "all_pass": true,
+  "scope": "Finite supplied models and explicit assumptions; no claim of empirical or philological proof.",
+  "bundle_reports": [
+    {
+      "file": "01_negation_observation.json",
+      "title": "09第二节 否定 窗口与观测",
+      "checks": 12,
+      "all_pass": true
+    },
+    {
+      "file": "01_negation_possible_unseen.json",
+      "title": "09第二节 反候选 I内发生但没有观测到",
+      "checks": 4,
+      "all_pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "title": "09第三节 七状态穷变通久",
+      "checks": 14,
+      "all_pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "title": "09第三节 反模型 供给下降",
+      "checks": 6,
+      "all_pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "title": "09第四节 有无相待与有向相生",
+      "checks": 11,
+      "all_pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "title": "09第五节 和而不同及双向反例",
+      "checks": 6,
+      "all_pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "title": "09第六节 生灭过程 共同转移与谱系",
+      "checks": 12,
+      "all_pass": true
+    },
+    {
+      "file": "06_blocked_structure.json",
+      "title": "09第七节 反模型 第二通道堵塞",
+      "checks": 4,
+      "all_pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "title": "09第七节 依结构的合法路径",
+      "checks": 6,
+      "all_pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "title": "09第八节 后果与规范分别输入",
+      "checks": 10,
+      "all_pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "title": "07第十节 反模型 c不再稳定",
+      "checks": 6,
+      "all_pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "title": "07第十节 五状态完整推导",
+      "checks": 9,
+      "all_pass": true
+    }
+  ],
+  "results": [
+    {
+      "file": "01_negation_observation.json",
+      "name": "I内未发生",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "J内未发生为假",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "未观测到事件",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "扩大窗口并非仍未发生",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "空食物域不存在食物",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "无tick后继时box空真",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "无tick后继时不能实际前进",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "测试闭包可以保持K但不计时间",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "安全死端不可永续",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "T零仍接受安全起点",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "T零也拒绝不安全起点",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_observation.json",
+      "name": "测试闭包只是恒等关系",
+      "type": "program",
+      "actual": [
+        [
+          "safe",
+          "safe"
+        ],
+        [
+          "unsafe",
+          "unsafe"
+        ]
+      ],
+      "expected": [
+        [
+          "safe",
+          "safe"
+        ],
+        [
+          "unsafe",
+          "unsafe"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "01_negation_possible_unseen.json",
+      "name": "未观测到仍然为真",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "01_negation_possible_unseen.json",
+      "name": "I内未发生已为假",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_possible_unseen.json",
+      "name": "未观测到不蕴含未发生",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "01_negation_possible_unseen.json",
+      "name": "J内仍有未来事件",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "旧方式有三步安全路径",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "旧方式没有四步安全路径",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "四步穷判断成立",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "改革在o3可行且后态安全",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "改革后可获得所有路径永续安全",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "n1所有新路径永续安全",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "n0所有新路径永续安全",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "o1改革成本不可付",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "可改革不意味着当前已改革",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "dead虽有真实循环但不安全",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "有限状态N步安全见证存在无限安全环",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "T零不能掩盖dead不安全",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "安全旧边过滤失败边",
+      "type": "program",
+      "actual": [
+        [
+          "o1",
+          "o0"
+        ],
+        [
+          "o2",
+          "o1"
+        ],
+        [
+          "o3",
+          "o2"
+        ]
+      ],
+      "expected": [
+        [
+          "o1",
+          "o0"
+        ],
+        [
+          "o2",
+          "o1"
+        ],
+        [
+          "o3",
+          "o2"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "02_qiong_bian_tong_jiu.json",
+      "name": "安全新边只保留安全自环",
+      "type": "program",
+      "actual": [
+        [
+          "n0",
+          "n0"
+        ],
+        [
+          "n1",
+          "n1"
+        ]
+      ],
+      "expected": [
+        [
+          "n0",
+          "n0"
+        ],
+        [
+          "n1",
+          "n1"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "改革仍可行",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "改革不再产生永续安全",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "n1仍能安全一步",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "n1已不能安全两步",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "原来的久结论失效",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "02_supply_failure.json",
+      "name": "失败供给下的安全新边",
+      "type": "program",
+      "actual": [
+        [
+          "n1",
+          "n0"
+        ]
+      ],
+      "expected": [
+        [
+          "n1",
+          "n0"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "相待互向是显式输入",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "非空域全部占据所以有",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "占据状态的无为假",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "空置状态的无为真",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "有无在同态同域不共真",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "相待关系不要求当前有无均实例化",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "相似不蕴含因果",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "木生火边已登记",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "不能自动补火生木",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "全环每个节点有下一项",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "03_relational_concepts.json",
+      "name": "环不是对称关系",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "和而不同的见证",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "合取可以消去获得和",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "合取可以消去获得不同",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "不同不充分保证和",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "和不充分保证不同",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "04_harmony_difference.json",
+      "name": "一致合作也是允许状态",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "一条共同转移兼具A终止与BC生起",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "同一实例同一模式生灭的交集不可行",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "转移后有双支谱系",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "谱系不把A等同B",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "B和C保持不同实例",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "分裂前无Q实例",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "分裂后有Q实例",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "EndA的边",
+      "type": "program",
+      "actual": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "BornB的边",
+      "type": "program",
+      "actual": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "BornC的边",
+      "type": "program",
+      "actual": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "Combined的边",
+      "type": "program",
+      "actual": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "expected": [
+        [
+          "s0",
+          "s1"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "05_birth_end_lineage.json",
+      "name": "互斥生灭过程交集为空",
+      "type": "program",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "file": "06_blocked_structure.json",
+      "name": "第一步仍可行",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "06_blocked_structure.json",
+      "name": "第二步已不可行",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "06_blocked_structure.json",
+      "name": "顺结构不保证目标可达",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "06_blocked_structure.json",
+      "name": "堵塞后的复合关系为空",
+      "type": "program",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "第一步到达B",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "第二步从B到C",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "顺接得到到达C的路径",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "次序倒转没有完成路径",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "刀绑定工具位而非施事位",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "06_follow_structure.json",
+      "name": "复合路径只有A到C",
+      "type": "program",
+      "actual": [
+        [
+          "at_A",
+          "at_C"
+        ]
+      ],
+      "expected": [
+        [
+          "at_A",
+          "at_C"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "a可以导致可持续后态",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "b也可以导致可持续后态",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "a不能通过不伤害后果检查",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "b通过不伤害后果检查",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "h可持续仍有伤害",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "终态没有b动作但box可以空真",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "实际后果检查拒绝无动作的空真",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "V在s禁止a",
+      "type": "norm",
+      "actual": "forbidden",
+      "expected": "forbidden",
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "V在s许可b",
+      "type": "norm",
+      "actual": "permitted",
+      "expected": "permitted",
+      "pass": true
+    },
+    {
+      "file": "07_norms_and_feasibility.json",
+      "name": "V在h尚未评定b",
+      "type": "norm",
+      "actual": "undetermined",
+      "expected": "undetermined",
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "改革仍可行",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "改组后两步安全失败",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "b尚可安全一步",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "b不可安全两步",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "原来的永续断言失败",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_failure.json",
+      "name": "改革后两步安全关系为空",
+      "type": "program",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "a穷而未死",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "d也穷而未死",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "a改革可行",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "b有两步安全新路径",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "a改革后续存两步",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "d相同条件链失败",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "b在此完整模型所有新路径永续",
+      "type": "formula",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "e零步亦不算可存",
+      "type": "formula",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "file": "08_five_state_tutorial.json",
+      "name": "改革后两步终点为c",
+      "type": "program",
+      "actual": [
+        [
+          "a",
+          "c"
+        ]
+      ],
+      "expected": [
+        [
+          "a",
+          "c"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "观测相同的候选模型不能决定是否发生",
+      "type": "integration",
+      "actual": "unknown",
+      "expected": "unknown",
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "候选模型一致支持未观测到",
+      "type": "integration",
+      "actual": "true",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "候选模型一致否定全窗口未发生",
+      "type": "integration",
+      "actual": "false",
+      "expected": "false",
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "候选模型为空不能借空真得到知识",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "assess: requires a nonempty list of Model objects"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "相同签名但不同context不可合评",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "assess: candidate model signatures are incompatible"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "Interval项不能占Time参数位",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula: predicate signature mismatch: expected ('Event', 'Time'), got ('Event', 'Interval')"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "Observed不能以Formula作事件项",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula.args[0]: term must have exactly one of const or var"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "Concept不能自动提升为Entity因果关系",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula: predicate signature mismatch: expected ('Entity', 'Entity'), got ('Concept', 'Concept')"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "生灭Program不能以命题合取连接",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula.args[0]: unknown Formula operator 'pref'; Program and Norm are not Formula"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "不不能直接否定刀对象",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula.arg: expression must be an object with op"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "刀工具不能填入施事角色",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula: predicate signature mismatch: expected ('Agent', 'Body', 'Tool', 'Path'), got ('Tool', 'Body', 'Agent', 'Path')"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "明确附加的零损伤边成本相加为零",
+      "type": "bridge_arithmetic",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "a虽可行但被V禁止",
+      "type": "integration",
+      "actual": {
+        "judgment": "forbidden",
+        "feasible": true,
+        "eligible": false
+      },
+      "expected": {
+        "judgment": "forbidden",
+        "feasible": true,
+        "eligible": false
+      },
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "b可行且获V许可",
+      "type": "integration",
+      "actual": {
+        "judgment": "permitted",
+        "feasible": true,
+        "eligible": true
+      },
+      "expected": {
+        "judgment": "permitted",
+        "feasible": true,
+        "eligible": true
+      },
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "未定规范不能制造不存在的动作",
+      "type": "integration",
+      "actual": {
+        "judgment": "undetermined",
+        "feasible": false,
+        "eligible": false
+      },
+      "expected": {
+        "judgment": "undetermined",
+        "feasible": false,
+        "eligible": false
+      },
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "V表对a与其明示准则相容",
+      "type": "declared_norm_consistency",
+      "actual": "forbidden",
+      "expected": "forbidden",
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "V表对b与其明示准则相容",
+      "type": "declared_norm_consistency",
+      "actual": "permitted",
+      "expected": "permitted",
+      "pass": true
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "Judgement不属于Formula",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula: unknown Formula operator 'judge'; Program and Norm are not Formula"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "TextClaim不能作为现实Formula执行",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "formula: unknown Formula operator 'TextClaim'; Program and Norm are not Formula"
+    },
+    {
+      "file": "validate_casebook.py",
+      "name": "缺失整项解释不默认为假",
+      "type": "rejection",
+      "actual": "GrammarError",
+      "expected": "GrammarError",
+      "pass": true,
+      "diagnostic": "model.predicates.Observed.true_at: must interpret every state, with no extra states"
+    }
+  ]
+}

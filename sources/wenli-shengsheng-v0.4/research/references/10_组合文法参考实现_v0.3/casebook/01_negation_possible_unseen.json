@@ -1,0 +1,326 @@
+{
+  "title": "09第二节 反候选 I内发生但没有观测到",
+  "notes": [
+    "Bridge: Time为固定四元素域；I/J只是窗口标识。Occurs与Observed是分别提供的完整解释。",
+    "ignite是Event项，I/J是Interval项；Formula不作为Observed的参数。",
+    "本模型没有tick边；test和skip不推进真实时间。",
+    "出处线索JC6b、S5；本演示的事件、窗口和真值表为人为设定。",
+    "与同组基础模型共用context_id和签名，仅把Occurs(ignite,t1)改为真。"
+  ],
+  "model": {
+    "context_id": "G1-09-negation-windows",
+    "closed_world": true,
+    "states": [
+      "safe",
+      "unsafe"
+    ],
+    "sorts": {
+      "Time": [
+        "t0",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "Event": [
+        "ignite"
+      ],
+      "Interval": [
+        "I",
+        "J"
+      ],
+      "Food": []
+    },
+    "constants": {
+      "t0": {
+        "sort": "Time",
+        "value": "t0"
+      },
+      "t1": {
+        "sort": "Time",
+        "value": "t1"
+      },
+      "t2": {
+        "sort": "Time",
+        "value": "t2"
+      },
+      "t3": {
+        "sort": "Time",
+        "value": "t3"
+      },
+      "ignite": {
+        "sort": "Event",
+        "value": "ignite"
+      },
+      "I": {
+        "sort": "Interval",
+        "value": "I"
+      },
+      "J": {
+        "sort": "Interval",
+        "value": "J"
+      }
+    },
+    "predicates": {
+      "InWindow": {
+        "sorts": [
+          "Time",
+          "Interval"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "safe": [
+            [
+              "t0",
+              "I"
+            ],
+            [
+              "t1",
+              "I"
+            ],
+            [
+              "t2",
+              "I"
+            ],
+            [
+              "t0",
+              "J"
+            ],
+            [
+              "t1",
+              "J"
+            ],
+            [
+              "t2",
+              "J"
+            ],
+            [
+              "t3",
+              "J"
+            ]
+          ],
+          "unsafe": [
+            [
+              "t0",
+              "I"
+            ],
+            [
+              "t1",
+              "I"
+            ],
+            [
+              "t2",
+              "I"
+            ],
+            [
+              "t0",
+              "J"
+            ],
+            [
+              "t1",
+              "J"
+            ],
+            [
+              "t2",
+              "J"
+            ],
+            [
+              "t3",
+              "J"
+            ]
+          ]
+        }
+      },
+      "Occurs": {
+        "sorts": [
+          "Event",
+          "Time"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "safe": [
+            [
+              "ignite",
+              "t1"
+            ],
+            [
+              "ignite",
+              "t3"
+            ]
+          ],
+          "unsafe": [
+            [
+              "ignite",
+              "t1"
+            ],
+            [
+              "ignite",
+              "t3"
+            ]
+          ]
+        }
+      },
+      "Observed": {
+        "sorts": [
+          "Event",
+          "Interval"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "safe": [],
+          "unsafe": []
+        }
+      },
+      "K": {
+        "sorts": [],
+        "kind": "descriptive",
+        "true_at": {
+          "safe": [
+            []
+          ],
+          "unsafe": []
+        }
+      }
+    },
+    "programs": {
+      "tick": []
+    },
+    "formula_defs": {
+      "NotPast": {
+        "op": "not",
+        "arg": {
+          "op": "exists",
+          "var": "t",
+          "sort": "Time",
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "InWindow",
+                "args": [
+                  {
+                    "var": "t"
+                  },
+                  {
+                    "const": "I"
+                  }
+                ]
+              },
+              {
+                "op": "atom",
+                "name": "Occurs",
+                "args": [
+                  {
+                    "const": "ignite"
+                  },
+                  {
+                    "var": "t"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "NotFull": {
+        "op": "not",
+        "arg": {
+          "op": "exists",
+          "var": "t",
+          "sort": "Time",
+          "body": {
+            "op": "and",
+            "args": [
+              {
+                "op": "atom",
+                "name": "InWindow",
+                "args": [
+                  {
+                    "var": "t"
+                  },
+                  {
+                    "const": "J"
+                  }
+                ]
+              },
+              {
+                "op": "atom",
+                "name": "Occurs",
+                "args": [
+                  {
+                    "const": "ignite"
+                  },
+                  {
+                    "var": "t"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "NotObservedPast": {
+        "op": "not",
+        "arg": {
+          "op": "atom",
+          "name": "Observed",
+          "args": [
+            {
+              "const": "ignite"
+            },
+            {
+              "const": "I"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "name": "未观测到仍然为真",
+      "state": "safe",
+      "formula": {
+        "op": "fref",
+        "name": "NotObservedPast"
+      },
+      "expected": true
+    },
+    {
+      "name": "I内未发生已为假",
+      "state": "safe",
+      "formula": {
+        "op": "fref",
+        "name": "NotPast"
+      },
+      "expected": false
+    },
+    {
+      "name": "未观测到不蕴含未发生",
+      "state": "safe",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "fref",
+          "name": "NotObservedPast"
+        },
+        "right": {
+          "op": "fref",
+          "name": "NotPast"
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "J内仍有未来事件",
+      "state": "safe",
+      "formula": {
+        "op": "fref",
+        "name": "NotFull"
+      },
+      "expected": false
+    }
+  ],
+  "relations": [],
+  "norm_queries": []
+}

@@ -1,0 +1,275 @@
+{
+  "title": "09第五节 和而不同及双向反例",
+  "notes": [
+    "Bridge: H表示任务协作，U表示本次议题全员意见一致；不声称穷尽古义。",
+    "三个状态的事实表明示给定，不据和字自动生成H。",
+    "来源C08 https://zh.wikisource.org/zh-hans/論語/全覽#子路第十三"
+  ],
+  "model": {
+    "context_id": "G1-09-harmony",
+    "closed_world": true,
+    "states": [
+      "difference_and_harmony",
+      "difference_and_conflict",
+      "uniform_and_harmony"
+    ],
+    "sorts": {
+      "Group": [
+        "g"
+      ]
+    },
+    "constants": {
+      "g": {
+        "sort": "Group",
+        "value": "g"
+      }
+    },
+    "predicates": {
+      "H": {
+        "sorts": [
+          "Group"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "difference_and_harmony": [
+            [
+              "g"
+            ]
+          ],
+          "difference_and_conflict": [],
+          "uniform_and_harmony": [
+            [
+              "g"
+            ]
+          ]
+        }
+      },
+      "U": {
+        "sorts": [
+          "Group"
+        ],
+        "kind": "descriptive",
+        "true_at": {
+          "difference_and_harmony": [],
+          "difference_and_conflict": [],
+          "uniform_and_harmony": [
+            [
+              "g"
+            ]
+          ]
+        }
+      }
+    },
+    "programs": {}
+  },
+  "queries": [
+    {
+      "name": "和而不同的见证",
+      "state": "difference_and_harmony",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "H",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "atom",
+              "name": "U",
+              "args": [
+                {
+                  "const": "g"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "合取可以消去获得和",
+      "state": "difference_and_harmony",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "H",
+              "args": [
+                {
+                  "const": "g"
+                }
+              ]
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "U",
+                "args": [
+                  {
+                    "const": "g"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "right": {
+          "op": "atom",
+          "name": "H",
+          "args": [
+            {
+              "const": "g"
+            }
+          ]
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "合取可以消去获得不同",
+      "state": "difference_and_harmony",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "and",
+          "args": [
+            {
+              "op": "atom",
+              "name": "H",
+              "args": [
+                {
+                  "const": "g"
+                }
+              ]
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "atom",
+                "name": "U",
+                "args": [
+                  {
+                    "const": "g"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "right": {
+          "op": "not",
+          "arg": {
+            "op": "atom",
+            "name": "U",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          }
+        }
+      },
+      "expected": true
+    },
+    {
+      "name": "不同不充分保证和",
+      "state": "difference_and_conflict",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "not",
+          "arg": {
+            "op": "atom",
+            "name": "U",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          }
+        },
+        "right": {
+          "op": "atom",
+          "name": "H",
+          "args": [
+            {
+              "const": "g"
+            }
+          ]
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "和不充分保证不同",
+      "state": "uniform_and_harmony",
+      "formula": {
+        "op": "implies",
+        "left": {
+          "op": "atom",
+          "name": "H",
+          "args": [
+            {
+              "const": "g"
+            }
+          ]
+        },
+        "right": {
+          "op": "not",
+          "arg": {
+            "op": "atom",
+            "name": "U",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          }
+        }
+      },
+      "expected": false
+    },
+    {
+      "name": "一致合作也是允许状态",
+      "state": "uniform_and_harmony",
+      "formula": {
+        "op": "and",
+        "args": [
+          {
+            "op": "atom",
+            "name": "H",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          },
+          {
+            "op": "atom",
+            "name": "U",
+            "args": [
+              {
+                "const": "g"
+              }
+            ]
+          }
+        ]
+      },
+      "expected": true
+    }
+  ],
+  "relations": [],
+  "norm_queries": []
+}

@@ -1,0 +1,553 @@
+{
+  "review_type": "独立有限表复算；非G1执行器、非原典解释认证、非经验因果验证",
+  "input_sha256": "eb9e6b4c746e13ee66b5aecf907eaa26da201970301dc1983928d55988499eac",
+  "method": "未导入validate_constructions.py，未读取模型hand_checks、calculations或expected用于求值。仅从状态、原始边、谓词外延、对象表、分区和显式V重新计算；review_requirement是审查者预期断言，computed由表运算生成。",
+  "independence_limit": "本代理曾起草CX09—CX12的候选卡；本轮对计算采取另写实现复核，不宣称独立人类审查。",
+  "summary": {
+    "checks": 36,
+    "passed": 36,
+    "cards_checked": 12
+  },
+  "checks": [
+    {
+      "card": "CX01",
+      "check": "Alive agrees exactly with nonempty extant rows",
+      "computed": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "review_requirement": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "passed": true,
+      "calculation_basis": "Read predicates.Alive and every extant list independently."
+    },
+    {
+      "card": "CX01",
+      "check": "gen edges equal tick edges introducing a presently absent identity",
+      "computed": [
+        [
+          "s0",
+          "s1"
+        ],
+        [
+          "s1",
+          "s2"
+        ]
+      ],
+      "review_requirement": [
+        [
+          "s0",
+          "s1"
+        ],
+        [
+          "s1",
+          "s2"
+        ]
+      ],
+      "passed": true,
+      "calculation_basis": "Compute destination-minus-source identity sets for each tick."
+    },
+    {
+      "card": "CX01",
+      "check": "GenT at s0 for T=0..5",
+      "computed": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "review_requirement": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Start Alive guard, then apply gen and filter target Alive at every repetition."
+    },
+    {
+      "card": "CX01",
+      "check": "GenT(0) at all five states",
+      "computed": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": false
+      },
+      "review_requirement": {
+        "s0": true,
+        "s1": true,
+        "s2": true,
+        "s3": true,
+        "s4": false
+      },
+      "passed": true,
+      "calculation_basis": "Zero repetition retains the starting state; outer Alive remains mandatory."
+    },
+    {
+      "card": "CX01",
+      "check": "Alive at s2 does not enable gen",
+      "computed": true,
+      "review_requirement": true,
+      "passed": true,
+      "calculation_basis": "Check s2 membership and empty gen successor set separately."
+    },
+    {
+      "card": "CX01",
+      "check": "three safe positive ticks succeed but four fail",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Filter each actual tick by both endpoint Alive values, then advance frontier."
+    },
+    {
+      "card": "CX01",
+      "check": "globally fresh births on the supplied chain",
+      "computed": [
+        [
+          "b"
+        ],
+        [
+          "c"
+        ],
+        [],
+        []
+      ],
+      "review_requirement": [
+        [
+          "b"
+        ],
+        [
+          "c"
+        ],
+        [],
+        []
+      ],
+      "passed": true,
+      "calculation_basis": "Keep accumulated Seen identities; do not merely compare adjacent extant rows."
+    },
+    {
+      "card": "CX01",
+      "check": "all displayed horizons respect prefix monotonicity",
+      "computed": true,
+      "review_requirement": true,
+      "passed": true,
+      "calculation_basis": "Direct evaluation for each state and T=0..6; the general result also follows by truncating witnesses."
+    },
+    {
+      "card": "CX02",
+      "check": "response endpoint",
+      "computed": [
+        "s2"
+      ],
+      "review_requirement": [
+        "s2"
+      ],
+      "passed": true,
+      "calculation_basis": "Sequential frontier traversal of stimulus then respond."
+    },
+    {
+      "card": "CX02",
+      "check": "feedback closed endpoint",
+      "computed": [
+        "s0"
+      ],
+      "review_requirement": [
+        "s0"
+      ],
+      "passed": true,
+      "calculation_basis": "Traverse all four named edge tables."
+    },
+    {
+      "card": "CX02",
+      "check": "removing feedback preserves response but destroys full episode",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Only the feedback table is replaced by empty."
+    },
+    {
+      "card": "CX03",
+      "check": "norm evaluation includes nonempty precondition",
+      "computed": {
+        "unexpressed": false,
+        "soft_done": true,
+        "harsh_done": false
+      },
+      "review_requirement": {
+        "unexpressed": false,
+        "soft_done": true,
+        "harsh_done": false
+      },
+      "passed": true,
+      "calculation_basis": "Read complete expression records and the independently specified V table."
+    },
+    {
+      "card": "CX03",
+      "check": "exists approved successor but not all successors approved",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Quantify over actual response successors, then consult He evaluation."
+    },
+    {
+      "card": "CX03",
+      "check": "deleting soft edge destroys approved reachability",
+      "computed": false,
+      "review_requirement": false,
+      "passed": true,
+      "calculation_basis": "Keep the same V and expression tables; retain only harsh response edge."
+    },
+    {
+      "card": "CX04",
+      "check": "exact execute-star reachable-goal set",
+      "computed": [
+        "done",
+        "routeA"
+      ],
+      "review_requirement": [
+        "done",
+        "routeA"
+      ],
+      "passed": true,
+      "calculation_basis": "Breadth first closure includes zero steps, not plain Open membership."
+    },
+    {
+      "card": "CX04",
+      "check": "reconfiguration succeeds existentially but not universally",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Compute all three reconfiguration destinations and intersect viable states."
+    },
+    {
+      "card": "CX04",
+      "check": "target has no positive continuation",
+      "computed": [],
+      "review_requirement": [],
+      "passed": true,
+      "calculation_basis": "Read tick edge table at done; star reflexivity does not count as a next step."
+    },
+    {
+      "card": "CX05",
+      "check": "split then merge at a",
+      "computed": [
+        "a"
+      ],
+      "review_requirement": [
+        "a"
+      ],
+      "passed": true,
+      "calculation_basis": "Traverse split choices and merge their successors."
+    },
+    {
+      "card": "CX05",
+      "check": "merge then split at b admits changed partition",
+      "computed": [
+        "b",
+        "c"
+      ],
+      "review_requirement": [
+        "b",
+        "c"
+      ],
+      "passed": true,
+      "calculation_basis": "Compute all branches, not only one witness."
+    },
+    {
+      "card": "CX05",
+      "check": "partitions are disjoint nonempty covers",
+      "computed": true,
+      "review_requirement": true,
+      "passed": true,
+      "calculation_basis": "Check nonempty blocks, no repeated member, and exact member set at every configuration."
+    },
+    {
+      "card": "CX06",
+      "check": "exact consistent naming states",
+      "computed": [
+        "correct",
+        "repaired"
+      ],
+      "review_requirement": [
+        "correct",
+        "repaired"
+      ],
+      "passed": true,
+      "calculation_basis": "Check each used symbol/object pair against the fixed denotation relation."
+    },
+    {
+      "card": "CX06",
+      "check": "repair reaches consistency but cannot recolor B",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "First compute repair targets; object color is a separately fixed predicate."
+    },
+    {
+      "card": "CX07",
+      "check": "dependency valid but base insufficient",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Necessary condition is set inclusion in the indicated direction only."
+    },
+    {
+      "card": "CX07",
+      "check": "repair alone fails while repair-activate succeeds",
+      "computed": [
+        false,
+        true
+      ],
+      "review_requirement": [
+        false,
+        true
+      ],
+      "passed": true,
+      "calculation_basis": "Use the raw two distinct action tables."
+    },
+    {
+      "card": "CX08",
+      "check": "all configuration thresholds agree with explicit predicates",
+      "computed": true,
+      "review_requirement": true,
+      "passed": true,
+      "calculation_basis": "Compare all six numerical capacities to 3; terminal states are outside this classification domain."
+    },
+    {
+      "card": "CX08",
+      "check": "current A succeeds; stale A after reallocation fails",
+      "computed": [
+        [
+          "pass"
+        ],
+        [
+          "fail"
+        ]
+      ],
+      "review_requirement": [
+        [
+          "pass"
+        ],
+        [
+          "fail"
+        ]
+      ],
+      "passed": true,
+      "calculation_basis": "Directly propagate state frontiers using action tables."
+    },
+    {
+      "card": "CX08",
+      "check": "r33 has no weak channel",
+      "computed": [],
+      "review_requirement": [],
+      "passed": true,
+      "calculation_basis": "Read both capacities at 3 and evaluate the strict less-than threshold."
+    },
+    {
+      "card": "CX09",
+      "check": "two positive steps return yin",
+      "computed": [
+        "yin"
+      ],
+      "review_requirement": [
+        "yin"
+      ],
+      "passed": true,
+      "calculation_basis": "Two successor operations on the supplied flip relation."
+    },
+    {
+      "card": "CX09",
+      "check": "same classification with stationary relation cannot reach yang",
+      "computed": false,
+      "review_requirement": false,
+      "passed": true,
+      "calculation_basis": "Use countermodel raw edges and unchanged classification; any finite path remains yin."
+    },
+    {
+      "card": "CX10",
+      "check": "wet two-step maturation and dry impossibility",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Apply no-command tests at both ends of local edges before graph traversal."
+    },
+    {
+      "card": "CX10",
+      "check": "stated Water implication is true at every supplied state",
+      "computed": true,
+      "review_requirement": true,
+      "passed": true,
+      "calculation_basis": "Evaluate antecedent and two-step consequent per state, including mature self-loop."
+    },
+    {
+      "card": "CX11",
+      "check": "guarded policy vs blanket let",
+      "computed": [
+        [
+          "stable"
+        ],
+        [
+          "broken"
+        ]
+      ],
+      "review_requirement": [
+        [
+          "stable"
+        ],
+        [
+          "broken"
+        ]
+      ],
+      "passed": true,
+      "calculation_basis": "Choose edges by Desire at the source; no decisions copied from normative table."
+    },
+    {
+      "card": "CX11",
+      "check": "permitted repair may still have a failed fact effect",
+      "computed": [
+        "broken"
+      ],
+      "review_requirement": [
+        "broken"
+      ],
+      "passed": true,
+      "calculation_basis": "Change only restore effect as specified; keeping V cannot change this endpoint."
+    },
+    {
+      "card": "CX12",
+      "check": "concept reciprocity does not imply populated cause table",
+      "computed": [
+        true,
+        false
+      ],
+      "review_requirement": [
+        true,
+        false
+      ],
+      "passed": true,
+      "calculation_basis": "Separate the two declared predicates, without auto-bridging."
+    },
+    {
+      "card": "CX12",
+      "check": "no direct reverse, five-step return",
+      "computed": [
+        false,
+        true
+      ],
+      "review_requirement": [
+        false,
+        true
+      ],
+      "passed": true,
+      "calculation_basis": "Compute one and five steps from the given ring."
+    },
+    {
+      "card": "CX12",
+      "check": "deleted resource edge blocks five-step return",
+      "computed": [],
+      "review_requirement": [],
+      "passed": true,
+      "calculation_basis": "Remove only the listed water-to-wood transition, then propagate five times."
+    }
+  ],
+  "CX01_rule_wording_finding": {
+    "states": [
+      "dead",
+      "live"
+    ],
+    "Alive": [
+      "live"
+    ],
+    "gen": [
+      [
+        "dead",
+        "live"
+      ]
+    ],
+    "tick": [
+      [
+        "dead",
+        "live"
+      ]
+    ],
+    "old_R1_without_source_Alive_antecedent": true,
+    "GenT1_at_dead": false,
+    "status": "resolved_in_reviewed_revision",
+    "current_R1": {
+      "id": "CX01.R1",
+      "if": "起点s满足Alive，给定s→s'属于gen，并在s'满足Alive",
+      "then": "一次有效生成延续GenT(1)成立；若起点不Alive，则只能另判断出生事件，不能套用本延续式",
+      "status": "模型定义；原文未给出此判定式"
+    },
+    "explanation": "A gen edge and live destination do not imply the source is Alive. Add the source Alive premise if R1 concludes GenT(1)."
+  },
+  "CX01_identity_boundary": {
+    "finite_domain_size": 3,
+    "initial_seen": [
+      "a"
+    ],
+    "max_fresh_identity_birth_steps_if_each_step_adds_one_or_more_never_seen_identity": 2,
+    "reason": "With fixed finite Entity and globally unique nonreused identities, each qualifying step consumes at least one previously unseen domain element. No infinite sequence of distinct fresh identities fits in the domain. Current extant differences alone do not establish global novelty after a return cycle.",
+    "distinction": "Finite states may support an infinite positive-time cycle, repeated events or reappearance of old IDs. That is different from infinitely many globally new unique identities."
+  },
+  "implementation_scope_notes": [
+    "现有主脚本的finite_calculation实际读取表计算，并非直接抄expected；结构检查和有限表断言须分别计数。",
+    "当前主脚本已实现起点Alive及每步gen终点Alive；早版仅测plain gen^n的覆盖缺口已修正。本次以另写的逐步前沿算法复核guard。",
+    "CX08终局范围问题已解决：pass/fail的Weak、Strong均显式为空外延，赋值总定义；阈值及穷尽分类命题保留Config守卫，终局¬Strong不推出Weak。本轮仅复跑既有36项，不增加检查数。",
+    "主脚本检查字段和引用ID存在，不验证自然语言选义、源引精确性或全部G1类型接口。"
+  ]
+}

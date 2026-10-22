@@ -1,0 +1,1288 @@
+{
+  "schema_version": "v0.4.0",
+  "trace": [
+    {
+      "source": "s0",
+      "event": "split",
+      "target": "s1",
+      "raw_before": {
+        "active": [
+          "A"
+        ],
+        "holdings": {
+          "A": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [
+          [
+            "Unit",
+            "B"
+          ],
+          [
+            "Unit",
+            "C"
+          ]
+        ],
+        "exited_modes": [
+          [
+            "Org",
+            "A"
+          ]
+        ],
+        "new_lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": false,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s0",
+      "event": "cut_in_place",
+      "target": "s_cut",
+      "raw_before": {
+        "active": [
+          "A"
+        ],
+        "holdings": {
+          "A": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "A"
+        ],
+        "holdings": {
+          "A": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [
+          [
+            "Org",
+            "A"
+          ]
+        ],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": false,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1",
+      "event": "merge",
+      "target": "s2",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [
+          [
+            "Org",
+            "D"
+          ]
+        ],
+        "exited_modes": [
+          [
+            "Unit",
+            "B"
+          ],
+          [
+            "Unit",
+            "C"
+          ]
+        ],
+        "new_lineage": [
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "information_lost": [],
+        "resource_delta": -1,
+        "Coord_D_after": true,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1",
+      "event": "merge_lossy",
+      "target": "s3",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [
+          [
+            "Org",
+            "D"
+          ]
+        ],
+        "exited_modes": [
+          [
+            "Unit",
+            "B"
+          ],
+          [
+            "Unit",
+            "C"
+          ]
+        ],
+        "new_lineage": [
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "information_lost": [
+          "v"
+        ],
+        "resource_delta": -1,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1",
+      "event": "drain",
+      "target": "s1_empty",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": -2,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1",
+      "event": "spoil",
+      "target": "s1_bad",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1",
+      "event": "delay",
+      "target": "s1_late",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1_empty",
+      "event": "attempt_merge",
+      "target": "s_empty_fail",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": false,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s1_bad",
+      "event": "attempt_merge",
+      "target": "s_bad_fail",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": 0,
+        "Coord_D_after": false,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": false
+        }
+      }
+    },
+    {
+      "source": "s1_late",
+      "event": "merge",
+      "target": "s2_late",
+      "raw_before": {
+        "active": [
+          "B",
+          "C"
+        ],
+        "holdings": {
+          "B": [
+            "u"
+          ],
+          "C": [
+            "v"
+          ]
+        },
+        "bonds": [],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 2,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "derived": {
+        "entered_modes": [
+          [
+            "Org",
+            "D"
+          ]
+        ],
+        "exited_modes": [
+          [
+            "Unit",
+            "B"
+          ],
+          [
+            "Unit",
+            "C"
+          ]
+        ],
+        "new_lineage": [
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "information_lost": [],
+        "resource_delta": -1,
+        "Coord_D_after": true,
+        "merge_requirements_before": {
+          "parts_supplied": true,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s2",
+      "event": "operate",
+      "target": "s_done",
+      "raw_before": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": true,
+        "task_required": true,
+        "completed_tasks": [
+          "task"
+        ]
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": -1,
+        "Coord_D_after": true,
+        "merge_requirements_before": {
+          "parts_supplied": false,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source": "s2_late",
+      "event": "operate",
+      "target": "s_done_late",
+      "raw_before": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 1,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": []
+      },
+      "raw_after": {
+        "active": [
+          "D"
+        ],
+        "holdings": {
+          "D": [
+            "u",
+            "v"
+          ]
+        },
+        "bonds": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "information": [
+          "u",
+          "v"
+        ],
+        "resource": 0,
+        "compatible_pairs": [
+          [
+            "u",
+            "v"
+          ]
+        ],
+        "lineage": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ],
+        "window_open": false,
+        "task_required": true,
+        "completed_tasks": [
+          "task"
+        ]
+      },
+      "derived": {
+        "entered_modes": [],
+        "exited_modes": [],
+        "new_lineage": [],
+        "information_lost": [],
+        "resource_delta": -1,
+        "Coord_D_after": true,
+        "merge_requirements_before": {
+          "parts_supplied": false,
+          "resource_enough": true,
+          "compatible": true
+        }
+      }
+    }
+  ]
+}

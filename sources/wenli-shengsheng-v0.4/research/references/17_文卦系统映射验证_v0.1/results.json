@@ -1,0 +1,1273 @@
+{
+  "scope": {
+    "status": "modern stipulated examples; exact model evaluation, not empirical validation",
+    "time": "each physical update tick has fixed delta_t=1 second",
+    "classical_mapping": "Tai/Pi and Gen are interpretive analogies, not sources of these update laws",
+    "A_state": "real signal perturbation amplitudes (x,y), not conserved resource or information amounts",
+    "A_G1_state": "finite influence-token location only; not a finite abstraction certificate for amplitudes",
+    "B_state": "integer tank level plus remembered pump mode after controller update"
+  },
+  "A": {
+    "cases": [
+      {
+        "id": "decay",
+        "label": "消退",
+        "p": 0.5,
+        "q": 0.5,
+        "p_exact": "1/2",
+        "q_exact": "1/2",
+        "loop_gain": 0.25,
+        "loop_gain_exact": "1/4",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 0.5,
+            "norm_inf": 0.5,
+            "x_exact": "0",
+            "y_exact": "1/2",
+            "norm_inf_exact": "1/2"
+          },
+          {
+            "t": 2,
+            "x": 0.25,
+            "y": 0.0,
+            "norm_inf": 0.25,
+            "x_exact": "1/4",
+            "y_exact": "0",
+            "norm_inf_exact": "1/4"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 0.125,
+            "norm_inf": 0.125,
+            "x_exact": "0",
+            "y_exact": "1/8",
+            "norm_inf_exact": "1/8"
+          },
+          {
+            "t": 4,
+            "x": 0.0625,
+            "y": 0.0,
+            "norm_inf": 0.0625,
+            "x_exact": "1/16",
+            "y_exact": "0",
+            "norm_inf_exact": "1/16"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 0.03125,
+            "norm_inf": 0.03125,
+            "x_exact": "0",
+            "y_exact": "1/32",
+            "norm_inf_exact": "1/32"
+          },
+          {
+            "t": 6,
+            "x": 0.015625,
+            "y": 0.0,
+            "norm_inf": 0.015625,
+            "x_exact": "1/64",
+            "y_exact": "0",
+            "norm_inf_exact": "1/64"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 0.0078125,
+            "norm_inf": 0.0078125,
+            "x_exact": "0",
+            "y_exact": "1/128",
+            "norm_inf_exact": "1/128"
+          },
+          {
+            "t": 8,
+            "x": 0.00390625,
+            "y": 0.0,
+            "norm_inf": 0.00390625,
+            "x_exact": "1/256",
+            "y_exact": "0",
+            "norm_inf_exact": "1/256"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 0.001953125,
+            "norm_inf": 0.001953125,
+            "x_exact": "0",
+            "y_exact": "1/512",
+            "norm_inf_exact": "1/512"
+          },
+          {
+            "t": 10,
+            "x": 0.0009765625,
+            "y": 0.0,
+            "norm_inf": 0.0009765625,
+            "x_exact": "1/1024",
+            "y_exact": "0",
+            "norm_inf_exact": "1/1024"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 0.00048828125,
+            "norm_inf": 0.00048828125,
+            "x_exact": "0",
+            "y_exact": "1/2048",
+            "norm_inf_exact": "1/2048"
+          },
+          {
+            "t": 12,
+            "x": 0.000244140625,
+            "y": 0.0,
+            "norm_inf": 0.000244140625,
+            "x_exact": "1/4096",
+            "y_exact": "0",
+            "norm_inf_exact": "1/4096"
+          }
+        ]
+      },
+      {
+        "id": "hold",
+        "label": "幅度保持",
+        "p": 1.0,
+        "q": 1.0,
+        "p_exact": "1",
+        "q_exact": "1",
+        "loop_gain": 1.0,
+        "loop_gain_exact": "1",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 4,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 6,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 8,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 10,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 12,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          }
+        ]
+      },
+      {
+        "id": "grow",
+        "label": "放大失稳",
+        "p": 2.0,
+        "q": 1.0,
+        "p_exact": "2",
+        "q_exact": "1",
+        "loop_gain": 2.0,
+        "loop_gain_exact": "2",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 2.0,
+            "y": 0.0,
+            "norm_inf": 2.0,
+            "x_exact": "2",
+            "y_exact": "0",
+            "norm_inf_exact": "2"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 2.0,
+            "norm_inf": 2.0,
+            "x_exact": "0",
+            "y_exact": "2",
+            "norm_inf_exact": "2"
+          },
+          {
+            "t": 4,
+            "x": 4.0,
+            "y": 0.0,
+            "norm_inf": 4.0,
+            "x_exact": "4",
+            "y_exact": "0",
+            "norm_inf_exact": "4"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 4.0,
+            "norm_inf": 4.0,
+            "x_exact": "0",
+            "y_exact": "4",
+            "norm_inf_exact": "4"
+          },
+          {
+            "t": 6,
+            "x": 8.0,
+            "y": 0.0,
+            "norm_inf": 8.0,
+            "x_exact": "8",
+            "y_exact": "0",
+            "norm_inf_exact": "8"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 8.0,
+            "norm_inf": 8.0,
+            "x_exact": "0",
+            "y_exact": "8",
+            "norm_inf_exact": "8"
+          },
+          {
+            "t": 8,
+            "x": 16.0,
+            "y": 0.0,
+            "norm_inf": 16.0,
+            "x_exact": "16",
+            "y_exact": "0",
+            "norm_inf_exact": "16"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 16.0,
+            "norm_inf": 16.0,
+            "x_exact": "0",
+            "y_exact": "16",
+            "norm_inf_exact": "16"
+          },
+          {
+            "t": 10,
+            "x": 32.0,
+            "y": 0.0,
+            "norm_inf": 32.0,
+            "x_exact": "32",
+            "y_exact": "0",
+            "norm_inf_exact": "32"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 32.0,
+            "norm_inf": 32.0,
+            "x_exact": "0",
+            "y_exact": "32",
+            "norm_inf_exact": "32"
+          },
+          {
+            "t": 12,
+            "x": 64.0,
+            "y": 0.0,
+            "norm_inf": 64.0,
+            "x_exact": "64",
+            "y_exact": "0",
+            "norm_inf_exact": "64"
+          }
+        ]
+      },
+      {
+        "id": "one_way",
+        "label": "单向无返程",
+        "p": 0.0,
+        "q": 1.0,
+        "p_exact": "0",
+        "q_exact": "1",
+        "loop_gain": 0.0,
+        "loop_gain_exact": "0",
+        "initial": [
+          1,
+          0
+        ],
+        "dt_seconds": 1,
+        "trace": [
+          {
+            "t": 0,
+            "x": 1.0,
+            "y": 0.0,
+            "norm_inf": 1.0,
+            "x_exact": "1",
+            "y_exact": "0",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 1,
+            "x": 0.0,
+            "y": 1.0,
+            "norm_inf": 1.0,
+            "x_exact": "0",
+            "y_exact": "1",
+            "norm_inf_exact": "1"
+          },
+          {
+            "t": 2,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 3,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 4,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 5,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 6,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 7,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 8,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 9,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 10,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 11,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          },
+          {
+            "t": 12,
+            "x": 0.0,
+            "y": 0.0,
+            "norm_inf": 0.0,
+            "x_exact": "0",
+            "y_exact": "0",
+            "norm_inf_exact": "0"
+          }
+        ]
+      }
+    ],
+    "rule": "x_next=p*y; y_next=q*x",
+    "orientation": "q:A->B, p:B->A",
+    "identity": "M^2=pq I; z_(2k)=(pq)^k z_0; z_(2k+1)=(pq)^k M z_0",
+    "topology_checks": {
+      "decay": {
+        "initial": "A",
+        "queries": {
+          "outbound_A_to_B": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "AB"
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtB",
+              "args": []
+            }
+          },
+          "return_A_to_B_to_A": {
+            "op": "diamond",
+            "program": {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "AB"
+                },
+                {
+                  "op": "atomic",
+                  "name": "BA"
+                }
+              ]
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtA",
+              "args": []
+            }
+          },
+          "all_reachable_locations_have_next_hop": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "hop"
+              }
+            },
+            "body": {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "hop"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          }
+        },
+        "values": {
+          "outbound_A_to_B": true,
+          "return_A_to_B_to_A": true,
+          "all_reachable_locations_have_next_hop": true
+        }
+      },
+      "hold": {
+        "initial": "A",
+        "queries": {
+          "outbound_A_to_B": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "AB"
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtB",
+              "args": []
+            }
+          },
+          "return_A_to_B_to_A": {
+            "op": "diamond",
+            "program": {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "AB"
+                },
+                {
+                  "op": "atomic",
+                  "name": "BA"
+                }
+              ]
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtA",
+              "args": []
+            }
+          },
+          "all_reachable_locations_have_next_hop": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "hop"
+              }
+            },
+            "body": {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "hop"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          }
+        },
+        "values": {
+          "outbound_A_to_B": true,
+          "return_A_to_B_to_A": true,
+          "all_reachable_locations_have_next_hop": true
+        }
+      },
+      "grow": {
+        "initial": "A",
+        "queries": {
+          "outbound_A_to_B": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "AB"
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtB",
+              "args": []
+            }
+          },
+          "return_A_to_B_to_A": {
+            "op": "diamond",
+            "program": {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "AB"
+                },
+                {
+                  "op": "atomic",
+                  "name": "BA"
+                }
+              ]
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtA",
+              "args": []
+            }
+          },
+          "all_reachable_locations_have_next_hop": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "hop"
+              }
+            },
+            "body": {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "hop"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          }
+        },
+        "values": {
+          "outbound_A_to_B": true,
+          "return_A_to_B_to_A": true,
+          "all_reachable_locations_have_next_hop": true
+        }
+      },
+      "one_way": {
+        "initial": "A",
+        "queries": {
+          "outbound_A_to_B": {
+            "op": "diamond",
+            "program": {
+              "op": "atomic",
+              "name": "AB"
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtB",
+              "args": []
+            }
+          },
+          "return_A_to_B_to_A": {
+            "op": "diamond",
+            "program": {
+              "op": "seq",
+              "args": [
+                {
+                  "op": "atomic",
+                  "name": "AB"
+                },
+                {
+                  "op": "atomic",
+                  "name": "BA"
+                }
+              ]
+            },
+            "body": {
+              "op": "atom",
+              "name": "AtA",
+              "args": []
+            }
+          },
+          "all_reachable_locations_have_next_hop": {
+            "op": "box",
+            "program": {
+              "op": "star",
+              "body": {
+                "op": "atomic",
+                "name": "hop"
+              }
+            },
+            "body": {
+              "op": "diamond",
+              "program": {
+                "op": "atomic",
+                "name": "hop"
+              },
+              "body": {
+                "op": "true"
+              }
+            }
+          }
+        },
+        "values": {
+          "outbound_A_to_B": true,
+          "return_A_to_B_to_A": false,
+          "all_reachable_locations_have_next_hop": false
+        }
+      }
+    },
+    "counterexample": "identical bidirectional graphs yield decay, persistence, or unbounded exponential growth",
+    "limits": "infinite-time conclusions use the exact linear identity; a 12-step trace alone does not prove them"
+  },
+  "B": {
+    "dt_seconds": 1,
+    "level_unit": "arbitrary volume unit",
+    "plant": "inflow ON=2, OFF=0, drain=1 unit/second",
+    "relay": "new level<=2 => ON; >=4 => OFF; otherwise retain prior mode",
+    "state_count": 8,
+    "transition_count": 8,
+    "trace": [
+      {
+        "t": 0,
+        "state": "4OFF",
+        "level": 4,
+        "mode": "OFF"
+      },
+      {
+        "t": 1,
+        "state": "3OFF",
+        "level": 3,
+        "mode": "OFF"
+      },
+      {
+        "t": 2,
+        "state": "2ON",
+        "level": 2,
+        "mode": "ON"
+      },
+      {
+        "t": 3,
+        "state": "3ON",
+        "level": 3,
+        "mode": "ON"
+      },
+      {
+        "t": 4,
+        "state": "4OFF",
+        "level": 4,
+        "mode": "OFF"
+      },
+      {
+        "t": 5,
+        "state": "3OFF",
+        "level": 3,
+        "mode": "OFF"
+      },
+      {
+        "t": 6,
+        "state": "2ON",
+        "level": 2,
+        "mode": "ON"
+      },
+      {
+        "t": 7,
+        "state": "3ON",
+        "level": 3,
+        "mode": "ON"
+      },
+      {
+        "t": 8,
+        "state": "4OFF",
+        "level": 4,
+        "mode": "OFF"
+      },
+      {
+        "t": 9,
+        "state": "3OFF",
+        "level": 3,
+        "mode": "OFF"
+      },
+      {
+        "t": 10,
+        "state": "2ON",
+        "level": 2,
+        "mode": "ON"
+      },
+      {
+        "t": 11,
+        "state": "3ON",
+        "level": 3,
+        "mode": "ON"
+      },
+      {
+        "t": 12,
+        "state": "4OFF",
+        "level": 4,
+        "mode": "OFF"
+      }
+    ],
+    "queries_all_states": {
+      "0ON": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": false,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "1ON": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": false,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "2ON": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": true,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "3ON": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": true,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "3OFF": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": true,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "4OFF": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": true,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": false
+      },
+      "5OFF": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": false,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      },
+      "6OFF": {
+        "Enabled": true,
+        "CanResume": true,
+        "AlwaysOff": false,
+        "ReachesBand": true,
+        "BandForever": false,
+        "HighToLow": true,
+        "LowToHigh": true,
+        "HighRoundTrip": true,
+        "DeadBoxLow": true,
+        "DeadEnabled": false,
+        "DeadGuarantee": true
+      }
+    },
+    "composition": {
+      "definition": "C(P,pi,Q)=P implies (<pi>true and [pi]Q)",
+      "P_states": [
+        "4OFF"
+      ],
+      "Q_states": [
+        "2ON"
+      ],
+      "R_states": [
+        "4OFF"
+      ],
+      "pi": {
+        "op": "repeat",
+        "count": 2,
+        "body": {
+          "op": "atomic",
+          "name": "tick"
+        }
+      },
+      "rho": {
+        "op": "repeat",
+        "count": 2,
+        "body": {
+          "op": "atomic",
+          "name": "tick"
+        }
+      },
+      "steps": [
+        {
+          "start": "4OFF",
+          "program": {
+            "op": "repeat",
+            "count": 2,
+            "body": {
+              "op": "atomic",
+              "name": "tick"
+            }
+          },
+          "end_states": [
+            "2ON"
+          ],
+          "nonempty": true
+        },
+        {
+          "start": "2ON",
+          "program": {
+            "op": "repeat",
+            "count": 2,
+            "body": {
+              "op": "atomic",
+              "name": "tick"
+            }
+          },
+          "end_states": [
+            "4OFF"
+          ],
+          "nonempty": true
+        },
+        {
+          "start": "4OFF",
+          "program": {
+            "op": "seq",
+            "args": [
+              {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              },
+              {
+                "op": "repeat",
+                "count": 2,
+                "body": {
+                  "op": "atomic",
+                  "name": "tick"
+                }
+              }
+            ]
+          },
+          "end_states": [
+            "4OFF"
+          ],
+          "nonempty": true
+        }
+      ],
+      "all_states_satisfy_first_guarantee": true,
+      "all_states_satisfy_second_guarantee": true,
+      "all_states_satisfy_composed_guarantee": true
+    },
+    "recurrence": {
+      "cycles": [
+        {
+          "cycle": [
+            "2ON",
+            "3ON",
+            "4OFF",
+            "3OFF"
+          ],
+          "period_seconds": 4,
+          "basin": [
+            "0ON",
+            "1ON",
+            "2ON",
+            "3ON",
+            "3OFF",
+            "4OFF",
+            "5OFF",
+            "6OFF"
+          ],
+          "switches_per_period": 2,
+          "long_run_switches_per_second": 0.5
+        }
+      ],
+      "entry_steps": {
+        "0ON": 2,
+        "1ON": 1,
+        "2ON": 0,
+        "3ON": 0,
+        "3OFF": 0,
+        "4OFF": 0,
+        "5OFF": 1,
+        "6OFF": 2
+      },
+      "max_entry_seconds": 2
+    },
+    "memoryless_comparator": {
+      "rule": "new level<=3 => ON, else OFF",
+      "trace": [
+        {
+          "t": 0,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 1,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 2,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 3,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 4,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 5,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 6,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 7,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 8,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 9,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 10,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        },
+        {
+          "t": 11,
+          "state": "3ON",
+          "level": 3,
+          "mode": "ON"
+        },
+        {
+          "t": 12,
+          "state": "4OFF",
+          "level": 4,
+          "mode": "OFF"
+        }
+      ],
+      "recurrence": {
+        "cycles": [
+          {
+            "cycle": [
+              "3ON",
+              "4OFF"
+            ],
+            "period_seconds": 2,
+            "basin": [
+              "0ON",
+              "1ON",
+              "2ON",
+              "3ON",
+              "4OFF",
+              "5OFF",
+              "6OFF"
+            ],
+            "switches_per_period": 2,
+            "long_run_switches_per_second": 1.0
+          }
+        ],
+        "entry_steps": {
+          "0ON": 3,
+          "1ON": 2,
+          "2ON": 1,
+          "3ON": 0,
+          "4OFF": 0,
+          "5OFF": 1,
+          "6OFF": 2
+        },
+        "max_entry_seconds": 3
+      }
+    },
+    "counterexamples": {
+      "stop_is_not_absorbing": [
+        "4OFF",
+        "3OFF",
+        "2ON"
+      ],
+      "level_alone_loses_memory": {
+        "3ON": "4OFF",
+        "3OFF": "2ON"
+      },
+      "vacuous_box": {
+        "state": "4OFF",
+        "box_dead_Low": true,
+        "diamond_dead_true": false,
+        "executable_guarantee": false
+      },
+      "arbitrary_composition_fails": {
+        "state": "4OFF",
+        "ticks": 3,
+        "High_postcondition": false
+      }
+    },
+    "limits": "finite noise-free relay example; closed recurrent class is not a proof of physical robustness"
+  },
+  "verification": {
+    "assertions": 163,
+    "g1_formula_evaluations": 124,
+    "passed": true
+  }
+}
