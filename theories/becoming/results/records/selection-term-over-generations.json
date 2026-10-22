@@ -369,7 +369,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
       "role": "proof",
-      "sha256": "49f9c6c9dc8cce99a7713012d4e4ee26901ddbd7652de97e6448edc51ac75a9b"
+      "sha256": "ff397af9f86d0a1e4e7546cb8072c350b4b34e8574a751f31f491b93af480e66"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",

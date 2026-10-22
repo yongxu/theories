@@ -90,7 +90,7 @@
         "Becoming.Flow.transmitted_along",
         "Becoming.Flow.transmitted_along_supported"
       ],
-      "sha256": "49f9c6c9dc8cce99a7713012d4e4ee26901ddbd7652de97e6448edc51ac75a9b"
+      "sha256": "ff397af9f86d0a1e4e7546cb8072c350b4b34e8574a751f31f491b93af480e66"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
@@ -110,23 +110,29 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
     },
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "df5d320454a24a67e2beeefd7ede1f0dd28a1e94555af9950f8dc6bfac6ffbd0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Evolution",
       "success_pointer": "/status",
       "success_value": "passed"

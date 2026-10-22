@@ -33226,21 +33226,24 @@
       "Becoming.RuleCapture.Reversed.not_absorbed",
       "Becoming.ClosedCapture.reading_absorbed",
       "Becoming.ClosedCapture.readers_uniform_locks",
-      "Becoming.share_rises"
+      "Becoming.share_rises",
+      "Becoming.RuleCapture.pair_locks",
+      "Becoming.RuleCapture.against_not_rising"
      ],
      "records": [
       "capture-through-the-rule",
       "closed-capture",
-      "target-capture"
+      "target-capture",
+      "two-rules-lock-together"
      ],
-     "reading": "AI读法：「爲之斗斛以量之，則并與斗斛而竊之」「爲之仁義以矯之，則并與仁義而竊之」。结构：规则的读取只是份额的单调函数时（RuleCapture.ReadsShare），一个已锁定的构形此后每一步都保持锁定（RuleCapture.locked_stays）；保持方向的规则扰动在下一读取步之后被吸收，规则不低于扰动之前（RuleCapture.perturbation_absorbed）；读取在每一份额都偏向时，每个历程自第二个读取步之后锁定，无论起点（RuleCapture.uniform_locks），这一界是确切的（RuleCapture.Second.second_exact）；没有规则与读取相逆时，锁定始于第一个读取步之后（RuleCapture.favouring_locks）。在这些条件下，离开锁定须改变律、读取或选择三者之一；在一个构造模型中，跨过阈的反向扰动也不被吸收（RuleCapture.Reversed.not_absorbed，见证）。新加的「斗斛」若由同一读取设定，就一并被俘：加一条规则不等于改变规则怎样读。「并與仁義而竊之」更进一步：读取本身也是份额的单调函数时，从一个锁定构形把规则换成仍偏向的规则、把读取换成另一读取（高或低），在每个读取步之后规则不低于原规则、读取不低于原读取，并再次锁定（ClosedCapture.reading_absorbed）；读取在每一读取与份额都偏向时，规则与读取之对自第二个读取步之后锁定（ClosedCapture.readers_uniform_locks）；这时改变读取也被吸收，离开要靠改变律。「彼竊鉤者誅，竊國者爲諸侯」：规则由胜者所书而得保持，这是劫；携带者的后代多于其余者且两类都在时，携带者份额上升（share_rises）。剩余：胠箧由此主张弃绝圣知，这一结论不取。结构上，在 ClosedCapture 的条件下换读取之值也被吸收，离开要改变律，或使读取不再随份额单调；§7.4 的 AI 读法由此说池须到达规则怎样读，池作读取时是否解除锁定，脊柱尚无定律（G3，见 hanfei-er-bing）。",
+     "reading": "AI读法：「爲之斗斛以量之，則并與斗斛而竊之」「爲之仁義以矯之，則并與仁義而竊之」。结构：规则的读取只是份额的单调函数时（RuleCapture.ReadsShare），一个已锁定的构形此后每一步都保持锁定（RuleCapture.locked_stays）；保持方向的规则扰动在下一读取步之后被吸收，规则不低于扰动之前（RuleCapture.perturbation_absorbed）；读取在每一份额都偏向时，每个历程自第二个读取步之后锁定，无论起点（RuleCapture.uniform_locks），这一界是确切的（RuleCapture.Second.second_exact）；没有规则与读取相逆时，锁定始于第一个读取步之后（RuleCapture.favouring_locks）。在这些条件下，离开锁定须改变律、读取或选择三者之一；在一个构造模型中，跨过阈的反向扰动也不被吸收（RuleCapture.Reversed.not_absorbed，见证）。新加的「斗斛」若由同一读取设定，就一并被俘：加一条规则不等于改变规则怎样读。「并與仁義而竊之」更进一步：读取本身也是份额的单调函数时，从一个锁定构形把规则换成仍偏向的规则、把读取换成另一读取（高或低），在每个读取步之后规则不低于原规则、读取不低于原读取，并再次锁定（ClosedCapture.reading_absorbed）；读取在每一读取与份额都偏向时，规则与读取之对自第二个读取步之后锁定（ClosedCapture.readers_uniform_locks）；这时改变读取也被吸收，离开要靠改变律。「彼竊鉤者誅，竊國者爲諸侯」：规则由胜者所书而得保持，这是劫；携带者的后代多于其余者且两类都在时，携带者份额上升（share_rises）。剩余：胠箧由此主张弃绝圣知，这一结论不取。结构上，在 ClosedCapture 的条件下换读取之值也被吸收，离开要改变律，或使读取不再随份额单调；两条规则（斗斛与权衡，或仁义与规则）同由份额单调读出、在每一份额都偏向时，自首个读取步之后同锁（RuleCapture.pair_locks），「并與仁義而竊之」即此。§7.4 的 AI 读法由此说池须到达规则怎样读：规则逆份额而读时，沿偏向之历程后读之规则不高于先读者（RuleCapture.against_not_rising），锁之所恃不成。",
      "names_used": [
       "劫",
       "择"
      ],
      "tradition": "庄",
      "work": "庄子·胠箧",
-     "gap": "G4（已大体由 ClosedCapture 覆盖，实例，非新律）：规则与读取之积，在每一读取与份额都偏向时，自第二个读取步之后锁定（Becoming.ClosedCapture.readers_uniform_locks），读取之变被吸收（Becoming.ClosedCapture.reading_absorbed），这就是「并與仁義而竊之」。尚未陈述的只是两条规则之积（新加的斗斛也由同一份额单调读出）在首个读取步之后即锁定的形式，即 Becoming.RuleCapture.favouring_locks 的积形式。最近声明：Becoming.RuleCapture.favouring_locks、Becoming.ClosedCapture.readers_uniform_locks。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.RuleCapture.pair_locks（积形式，由 ReadsShare.pair）。见记录 two-rules-lock-together。",
      "checked": "corrected"
     },
     {
@@ -33962,18 +33965,21 @@
      "kind": "scope",
      "declarations": [
       "Becoming.Web.pooled_iff_member",
-      "Becoming.Web.pool_adds"
+      "Becoming.Web.pool_adds",
+      "Becoming.Web.majority_through_all",
+      "Becoming.Web.majority_outvoted"
      ],
      "records": [
-      "what-pooled-coupling-reaches"
+      "what-pooled-coupling-reaches",
+      "a-pool-read-by-its-majority"
      ],
-     "reading": "AI读法：「能得其師者王，能得其友者霸。今寡人不才而群臣莫及者，楚國其殆矣」：「莫及」是比较能力，没有一个臣比得上君；庄王所忧在缺一个高于自己的师友。脊柱所承接的只是一点：经兼感的选择恰是经某成员耦合的选择，恰当凡该成员耦合无别者每个成员也都耦合无别（Web.pooled_iff_member），这时兼感一无所加；某成员耦合无别而成员不全无别时，兼感才多出该成员没有的选择（Web.pool_adds）。作定域：「殆」在池退化为一个成员时成立；能力不及者是否耦合不同，文本未定，能力高下不等于耦合之差。「師」「友」的等级框架属争胜与等级一层，不承接。",
+     "reading": "AI读法：「能得其師者王，能得其友者霸。今寡人不才而群臣莫及者，楚國其殆矣」：「莫及」是比较能力，没有一个臣比得上君；庄王所忧在缺一个高于自己的师友。脊柱所承接的只是一点：经兼感的选择恰是经某成员耦合的选择，恰当凡该成员耦合无别者每个成员也都耦合无别（Web.pooled_iff_member），这时兼感一无所加；某成员耦合无别而成员不全无别时，兼感才多出该成员没有的选择（Web.pool_adds）。作定域：「殆」在池退化为一个成员时成立；能力不及者是否耦合不同，文本未定，能力高下不等于耦合之差。「師」「友」的等级框架属争胜与等级一层，不承接。已补：按份额加权之池：取过半成员之所读，是经合用之耦合之选择（Web.majority_through_all），不分开池所不分者；过半之成员对两历程读法相同处，无论多少成员能分开二者，其读皆同（Web.majority_outvoted）。合用之池只要一员能分开即分开（separates_all_iff_member），多数之池则看份额：群臣莫及而皆同于君，所分开者只余君之所分。",
      "names_used": [
       "兼感"
      ],
      "tradition": "兵",
      "work": "吴子·图国",
-     "gap": "G1（改述）：在 SelectsThroughAll 之下，池能分开者只取决于在场的耦合类型（Becoming.Web.separates_all_iff），与各类型所占份额无关；份额动态（Becoming.share_rises_through）只经绝灭（b = 0，或有限群体中某类型丢失）才消去兼感所加，这时下一代之池若只余与某成员同一耦合类型者，其选择恰为该成员的选择（Becoming.Web.pooled_iff_member）。要使份额本身影响池所分开者，需要一条按份额加权的池（例如多数读取）之律，这才是所缺。最近声明：Becoming.share_rises_through、Becoming.Web.pooled_iff_member、Becoming.Web.separates_all_iff、Becoming.Web.pool_adds。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.Web.MajorityHolds、Web.majority_through_all、Web.majority_outvoted。见记录 a-pool-read-by-its-majority。",
      "checked": "corrected"
     },
     {
@@ -33998,15 +34004,19 @@
       "Becoming.RuleCapture.locked_stays",
       "Becoming.RuleCapture.favouring_locks",
       "Becoming.RuleCapture.perturbation_absorbed",
-      "Becoming.RuleCapture.uniform_locks"
+      "Becoming.RuleCapture.uniform_locks",
+      "Becoming.RuleCapture.against_not_rising",
+      "Becoming.Web.majority_outvoted"
      ],
      "records": [
       "target-capture",
       "how-fast-a-rule-may-change",
       "selection-through-couplings",
-      "capture-through-the-rule"
+      "capture-through-the-rule",
+      "a-reading-against-the-share-does-not-ratchet",
+      "a-pool-read-by-its-majority"
      ],
-     "reading": "AI读法：沿用 RO 的相分判断（D57）。二柄是一个选择：以赏选择所奖者，在 b < a 的后代条件下携带者份额上升（share_rises_through）；下一构形只依规则而不依状态时，状态的扰动从下一步起被吸收（复归，Law.perturbation_reabsorbed；在 Pace 中为 Pace.byRule_reabsorbed）；在一个构造模型中，扰动规则则改变结果（Captured.rule_perturbation_changes，见证）。「今君人者釋其刑德而使臣用之，則君反制於臣矣」是被选者握住规则的回路：在迟速的读取步，下一规则由快层给出（Pace.rule_at_reading）；规则的读取只是份额的单调函数时，已锁定的构形保持锁定（RuleCapture.locked_stays），没有规则与读取相逆时锁定始于第一个读取步之后（RuleCapture.favouring_locks），保持方向的扰动被吸收（RuleCapture.perturbation_absorbed）；读取在每一份额都偏向时，每个历程自第二个读取步之后锁定（RuleCapture.uniform_locks），离开须改变律、读取或选择三者之一。「故田常上請爵禄而行之羣臣，下大斗斛而施於百姓」是被选者以规则之值收取份额，即劫。分歧在于韩非把关系读成利益相反者之间的控制，并以君独握二柄为对治。",
+     "reading": "AI读法：沿用 RO 的相分判断（D57）。二柄是一个选择：以赏选择所奖者，在 b < a 的后代条件下携带者份额上升（share_rises_through）；下一构形只依规则而不依状态时，状态的扰动从下一步起被吸收（复归，Law.perturbation_reabsorbed；在 Pace 中为 Pace.byRule_reabsorbed）；在一个构造模型中，扰动规则则改变结果（Captured.rule_perturbation_changes，见证）。「今君人者釋其刑德而使臣用之，則君反制於臣矣」是被选者握住规则的回路：在迟速的读取步，下一规则由快层给出（Pace.rule_at_reading）；规则的读取只是份额的单调函数时，已锁定的构形保持锁定（RuleCapture.locked_stays），没有规则与读取相逆时锁定始于第一个读取步之后（RuleCapture.favouring_locks），保持方向的扰动被吸收（RuleCapture.perturbation_absorbed）；读取在每一份额都偏向时，每个历程自第二个读取步之后锁定（RuleCapture.uniform_locks），离开须改变律、读取或选择三者之一。「故田常上請爵禄而行之羣臣，下大斗斛而施於百姓」是被选者以规则之值收取份额，即劫。分歧在于韩非把关系读成利益相反者之间的控制，并以君独握二柄为对治。已补：规则不锁定之条件：锁之所恃是规则随份额不降（locked_not_below，读法单调）；读法逆份额时（如池中被该选择压低者之读），沿偏向之历程份额不降，而后读之规则不高于先读者（RuleCapture.against_not_rising）；池按多数读时，份额决定其所读（Web.majority_outvoted）。",
      "names_used": [
       "劫",
       "复归",
@@ -34017,7 +34027,7 @@
      "tradition": "法",
      "work": "韩非子·二柄",
      "layer_checked": "争胜与等级",
-     "gap": "G3（中，并入原 simafa-zhuan-yu-fa 之缺）：读取映射是一个池的行为、池中含被该选择压低者（或握规则者自身也是被选者）且其读法逆着份额时，规则不锁定的条件。现有只是单一逆读者的实例（Becoming.RuleCapture.Alternating.alternates、Becoming.RuleCapture.Alternating.never_locked、Becoming.RuleCapture.Reversed.not_absorbed）；读取本身也随份额单调、且在每一读取与份额都偏向时，规则与读取之对锁定（Becoming.ClosedCapture.readers_uniform_locks）。在此律证明之前，以池到达规则为对治只是方向，不是定理。最近声明：Becoming.RuleCapture.favouring_locks、Becoming.ClosedCapture.readers_uniform_locks、Becoming.ExchangeLaw.Through.selectsThroughAll。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.RuleCapture.against_not_rising（由 share_kept_along）；池按多数读之律 Becoming.Web.majority_outvoted。见记录 a-reading-against-the-share-does-not-ratchet、a-pool-read-by-its-majority。",
      "checked": "passed"
     },
     {
@@ -34041,15 +34051,18 @@
       "Becoming.RuleCapture.ReadsShare",
       "Becoming.RuleCapture.locked_stays",
       "Becoming.Law.perturbation_reabsorbed",
-      "Becoming.Web.pooled_iff_member"
+      "Becoming.Web.pooled_iff_member",
+      "Becoming.Web.majority_through_all",
+      "Becoming.Web.majority_outvoted"
      ],
      "records": [
       "target-capture",
       "capture-through-the-rule",
       "what-pooled-coupling-reaches",
-      "selection-through-couplings"
+      "selection-through-couplings",
+      "a-pool-read-by-its-majority"
      ],
-     "reading": "AI读法：篇首言三守，其一之不完是「因傳柄移藉，使殺生之機、奪予之要在大臣，如是者侵」：选择之规则（柄）移到其所选者手中；「三守不完，則劫殺之徵也」。下文「凡劫有三：有明劫，有事劫，有刑劫」。明劫：「人臣有大臣之尊，外操國要以資羣臣，使外内之事非己不得行」「雖有賢良，逆者必有禍，而順者必有福」：大臣书写赏罚之律，所奖者在 b < a 的后代条件下份额上升（share_rises_through）；规则的读取若只是所选者份额的单调函数（RuleCapture.ReadsShare），已锁定的构形保持锁定（RuleCapture.locked_stays）；下一构形只依规则时，状态的扰动被吸收（复归，Law.perturbation_reabsorbed）。事劫：「諸用事之人，壹心同辭以語其美，則主言惡者必不信矣，此謂事劫」：众声被造成一声，凡一成员耦合无别者一切成员都无别时，经兼感的选择恰是该成员的选择（Web.pooled_iff_member）。刑劫：「至於守司囹圄，禁制刑罰，人臣擅之，此謂刑劫」：刑罚之柄为臣所专，同是规则移到所选者手中，即上面的 RuleCapture 读取。这是劫之名的出处。分歧在框架：韩非以君臣利益相反为前提、以君独握其柄为对治；理论不设单一中心。结构上，锁定只经改变律、读取之律或选择而离开；§7.4 的 AI 读法由此说池须到达规则怎样读，但池作读取时是否不锁定，脊柱尚无定律（见 hanfei-er-bing 的 G3）。",
+     "reading": "AI读法：篇首言三守，其一之不完是「因傳柄移藉，使殺生之機、奪予之要在大臣，如是者侵」：选择之规则（柄）移到其所选者手中；「三守不完，則劫殺之徵也」。下文「凡劫有三：有明劫，有事劫，有刑劫」。明劫：「人臣有大臣之尊，外操國要以資羣臣，使外内之事非己不得行」「雖有賢良，逆者必有禍，而順者必有福」：大臣书写赏罚之律，所奖者在 b < a 的后代条件下份额上升（share_rises_through）；规则的读取若只是所选者份额的单调函数（RuleCapture.ReadsShare），已锁定的构形保持锁定（RuleCapture.locked_stays）；下一构形只依规则时，状态的扰动被吸收（复归，Law.perturbation_reabsorbed）。事劫：「諸用事之人，壹心同辭以語其美，則主言惡者必不信矣，此謂事劫」：众声被造成一声，凡一成员耦合无别者一切成员都无别时，经兼感的选择恰是该成员的选择（Web.pooled_iff_member）。刑劫：「至於守司囹圄，禁制刑罰，人臣擅之，此謂刑劫」：刑罚之柄为臣所专，同是规则移到所选者手中，即上面的 RuleCapture 读取。这是劫之名的出处。分歧在框架：韩非以君臣利益相反为前提、以君独握其柄为对治；理论不设单一中心。结构上，锁定只经改变律、读取之律或选择而离开；§7.4 的 AI 读法由此说池须到达规则怎样读：池按多数读时，过半之成员读法相同处，无论多少成员能分开，其读皆同（Web.majority_outvoted），所以事劫使成员同辞，在多数之池中正是使份额压过分辨；规则逆份额而读时不棘轮（RuleCapture.against_not_rising）。",
      "names_used": [
       "劫",
       "兼感",
@@ -34058,7 +34071,7 @@
      ],
      "tradition": "法",
      "work": "韩非子·三守",
-     "gap": "同 wuzi-qun-chen-mo-ji 之缺（已改述）：在 SelectsThroughAll 之下池能分开者只取决于在场的耦合类型；事劫使成员同辞，是使耦合类型变少，不是份额上升；所缺的是按份额加权的池之律。最近声明：Becoming.share_rises_through、Becoming.Web.pooled_iff_member、Becoming.Web.separates_all_iff。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.Web.MajorityHolds、Web.majority_through_all、Web.majority_outvoted（按份额加权之池）。见记录 a-pool-read-by-its-majority。",
      "layer_checked": "争胜与等级",
      "checked": "corrected"
     },
@@ -36767,7 +36780,10 @@
       "Becoming.Law.drawn_iff_not_returns",
       "Becoming.carried_eq_carriedWithin_add",
       "Becoming.carriedWithin_lt_of_recurring_loop",
-      "Becoming.exact_of_reading_before"
+      "Becoming.exact_of_reading_before",
+      "Becoming.Flow.closes_through_coupling_apart",
+      "Becoming.Flow.gap_made_up",
+      "Becoming.Flow.stays_beyond_response"
      ],
      "records": [
       "recurrence-without-premise",
@@ -36777,9 +36793,9 @@
      ],
      "relational": "平息大怨之后，必有剩下的怨。",
      "ro_passage": "lao-79-he-da-yuan",
-     "gap": "脊柱缺：一个介入与截断所失之间的律。现有 carried_eq_carriedWithin_add 是同一历程按回应之阶的分解，不是世界中另留的余量；缺的是：一个新形成自某步起读入怨所在之条件、并以与之相反的交换回应时，携带量（而非其阶的截断）是否在有限步内归零、以何为界，即把 Remainder 的阶之计算与闭合之律（Rejoining 的 closes_through_coupling_apart、stays_beyond_response，LoopReturn 的 closes_within、cut_closes）连起来。最近：Becoming.carried_eq_carriedWithin_add、Becoming.exact_of_reading_before、Becoming.Flow.closes_through_coupling_apart、Becoming.Flow.stays_beyond_response、Becoming.LoopReturn.closes_within、Becoming.LoopReturn.cut_closes。",
+     "gap": "已补（ZG7，2026年10月22日）（现有之律）：Becoming.Flow.closes_through_coupling_apart、Flow.gap_made_up、Flow.stays_beyond_response，见证 Replenishing.closes。其余为范围：Remainder 之阶的计算只加（携带量为自然数之和），以相反之交换使携带量归零之律须有符号之量，不在此模型之内。",
      "layer_checked": "",
-     "reading": "AI读法：RO 的声明保留：在任何律下，某步已不可达的组态此后都不可达（Law.lost_stays），被合并者保持合并（Law.merged_stays），一个有限见证中支持恢复后已失之主张仍失（MatchedCourses.recovery_retains_loss，以 decide 检查的见证，不是一般律），每个确定之律所吸入的恰是不回者（Law.drawn_iff_not_returns）。本条另有一个 AI 读法：把「和大怨」之「和」读作只处理到有限阶的回应。在此读法下，所失有确切公式：携带量等于 j 阶之内者加上从携带量本身经 j+1 次回应依次所携者，所以在 j 阶截断，所失恰是后一项（carried_eq_carriedWithin_add）；这是对同一历程按回应之阶的计算，不是世界中另留的余量。差异进入一个由不已之耦合构成的环（环长为正）、且不已之耦合由环通到 c 时，对每个有限阶 J，都有某一步 t 在 c 处有所失（carriedWithin_lt_of_recurring_loop；是〈对每个 J 存在 t〉，不是每一步）。另一方面，自某步 N 起没有耦合再读入时，N 阶精确（exact_of_reading_before）。所以「必有馀怨」定域为：怨在不已之环上时，任何有限阶的平息都在某步留下所失；耦合自某步停止处，有限阶可以无所失。余怨能否经新形成的关系化解，经文未说，脊柱也未证，见缺口。",
+     "reading": "AI读法：RO 的声明保留：在任何律下，某步已不可达的组态此后都不可达（Law.lost_stays），被合并者保持合并（Law.merged_stays），一个有限见证中支持恢复后已失之主张仍失（MatchedCourses.recovery_retains_loss，以 decide 检查的见证，不是一般律），每个确定之律所吸入的恰是不回者（Law.drawn_iff_not_returns）。本条另有一个 AI 读法：把「和大怨」之「和」读作只处理到有限阶的回应。在此读法下，所失有确切公式：携带量等于 j 阶之内者加上从携带量本身经 j+1 次回应依次所携者，所以在 j 阶截断，所失恰是后一项（carried_eq_carriedWithin_add）；这是对同一历程按回应之阶的计算，不是世界中另留的余量。差异进入一个由不已之耦合构成的环（环长为正）、且不已之耦合由环通到 c 时，对每个有限阶 J，都有某一步 t 在 c 处有所失（carriedWithin_lt_of_recurring_loop；是〈对每个 J 存在 t〉，不是每一步）。另一方面，自某步 N 起没有耦合再读入时，N 阶精确（exact_of_reading_before）。所以「必有馀怨」定域为：怨在不已之环上时，任何有限阶的平息都在某步留下所失；耦合自某步停止处，有限阶可以无所失。余怨能否经新形成的关系化解：恰经一个与该条件交换不同、把两历程耦合开之形成（Flow.closes_through_coupling_apart），化解时两流所交换者恰补其差（Flow.gap_made_up），见证 Replenishing.closes；响应所不及之条件上，差异保持其时之状（Flow.stays_beyond_response），此即余怨之所在。",
      "names_used": [
       "所失",
       "不已",
@@ -39856,14 +39872,17 @@
       "Becoming.RuleHandoff.rule_inherited",
       "Becoming.RuleHandoff.successor_can_revise_inherited_rule",
       "Becoming.Law.rests_iff",
-      "Becoming.share_rises"
+      "Becoming.share_rises",
+      "Becoming.Flow.goal_along",
+      "Becoming.Flow.goal_descends_iff"
      ],
      "records": [
       "organizational-rule-inheritance",
       "seeking-boundary",
-      "target-capture"
+      "target-capture",
+      "a-goal-along-a-lineage"
      ],
-     "reading": "AI读法：「善繼人之志，善述人之事」：后来者带着前者之所向（「志」）及所为（「事」）接下去。脊柱有所为之一半：一个量若每个非关卡之动都不改它，则沿只走非关卡之动的历程它不改（Gated.kept_along，对每个过程为真）；在所述之协议中，规则经一再授受而不改（RuleHandoff.repeated_handoff_inherits，按协议之界定即得；RuleHandoff.rule_inherited，协议内一般，是 Gated.kept_along 之实例），后任在有在场者实际赞同（协议之票）之处可以再改（RuleHandoff.successor_can_revise_inherited_rule，见证）——「善」述可读为带着改（AI读法）。所向之一半没有：在确定之律下，寻求停下，恰在其所处之态为律所不改且满足其目标之处（足，Law.rests_iff）；每个带目标之亲代留下之后代多于每个其他亲代、两种都在场之处，带目标者之份额在后代中更大（share_rises，计的是带目标者之后代数，不是后代是否带此目标）。Capture 模块写出后代带着亲代之目标未被推出，Seeking 模块写出这样的目标之形成及其向后代之递下未被陈述：是前提，不是推出之律。字面之「繼」只在引文中，不取为接续（继）之锚。宗庙、序爵、辨贵贱不在此映射。",
+     "reading": "AI读法：「善繼人之志，善述人之事」：后来者带着前者之所向（「志」）及所为（「事」）接下去。脊柱有所为之一半：一个量若每个非关卡之动都不改它，则沿只走非关卡之动的历程它不改（Gated.kept_along，对每个过程为真）；在所述之协议中，规则经一再授受而不改（RuleHandoff.repeated_handoff_inherits，按协议之界定即得；RuleHandoff.rule_inherited，协议内一般，是 Gated.kept_along 之实例），后任在有在场者实际赞同（协议之票）之处可以再改（RuleHandoff.successor_can_revise_inherited_rule，见证）——「善」述可读为带着改（AI读法）。所向之一半没有：在确定之律下，寻求停下，恰在其所处之态为律所不改且满足其目标之处（足，Law.rests_iff）；每个带目标之亲代留下之后代多于每个其他亲代、两种都在场之处，带目标者之份额在后代中更大（share_rises，计的是带目标者之后代数，不是后代是否带此目标）。Capture 模块写出后代带着亲代之目标未被推出，Seeking 模块写出这样的目标之形成及其向后代之递下未被陈述：是前提，不是推出之律。字面之「繼」只在引文中，不取为接续（继）之锚。宗庙、序爵、辨贵贱不在此映射。已补：目标沿世系之递下：以「x 在第 t 步带目标」为谓词（carries），带目标者之后代皆带之，恰在目标跨每一自带目标者之降皆传之处（Flow.goal_descends_iff），沿一世系则还须每员在其给予之前守之（Flow.goal_along）；条件是单次之降之传，降本身不使之成立。「善繼人之志」即此条件。",
      "names_used": [
       "动",
       "足",
@@ -39875,7 +39894,7 @@
      "work": "中庸",
      "locator": "中庸 段19",
      "layer_checked": "",
-     "gap": "目标沿世系之递下：先在 Flow／Web 一层给出「某形成在某步带某目标」之谓词（如 holds : Nat → X → Prop；现今 Seeking 之目标是确定律之状态谓词，Capture 只以列表给出带目标者），再在 Flow.DescendsAt 之下陈述「出于带目标者之后代亦带之」之充要条件；它只能是条件律，其条件须写出。最近：Becoming.Law.rests_iff、Becoming.share_rises、Becoming.Web.inheritsAt_iff_forming、Becoming.RuleHandoff.rule_inherited。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.Flow.goal_along、Flow.goal_descends_iff（条件律，条件为每一降之传与给予前之守）。见记录 a-goal-along-a-lineage。",
      "checked": "corrected"
     },
     {
@@ -40367,7 +40386,7 @@
      "work": "成唯识论",
      "locator": "卷二 种子新熏说之难",
      "layer_checked": "",
-     "gap": "一条依存之结的律（充要）：聚者在哪一步新结一个给予者不依之依存。只用给予、取用、水平陈述之条件做不到：去掉一条依存（Web.drop）不改给予、取用及水平，按其界定即得，而凡在这一去掉下不改、又推出传之条件，都推出传不起约束（World.vacuous_of_drop_invariant）。所以须以汲取及依存（draws、requires）陈述；Flow.inherits_of_drawn 给出够的一半（汲取之读法加「汲取即依存」之连接推出因），World.drawn_and_link_needed 示二者在具备其余七个前提之有限世界中缺一不可；必要的一半尚缺。这是章 §8.1 第 9 项所列之开放问题。最近：Becoming.Flow.inherits_of_drawn、Becoming.World.drawn_and_link_needed、Becoming.World.vacuous_of_drop_invariant、Becoming.Web.inheritsAt_iff_forming。",
+     "gap": "仍开（ZG7 复核，2026年10月22日）：这是主章 §8.1 第 9 项之开放问题（「a law of forming that is necessary as well as sufficient」）。只以汲取与依存陈述时，依存即汲取或持而不汲，充要之式退为传之定义；以给予、取用、水平陈述则不可（World.vacuous_of_drop_invariant）。所缺是依存如何结成之结构。原注：一条依存之结的律（充要）：聚者在哪一步新结一个给予者不依之依存。只用给予、取用、水平陈述之条件做不到：去掉一条依存（Web.drop）不改给予、取用及水平，按其界定即得，而凡在这一去掉下不改、又推出传之条件，都推出传不起约束（World.vacuous_of_drop_invariant）。所以须以汲取及依存（draws、requires）陈述；Flow.inherits_of_drawn 给出够的一半（汲取之读法加「汲取即依存」之连接推出因），World.drawn_and_link_needed 示二者在具备其余七个前提之有限世界中缺一不可；必要的一半尚缺。这是章 §8.1 第 9 项所列之开放问题。最近：Becoming.Flow.inherits_of_drawn、Becoming.World.drawn_and_link_needed、Becoming.World.vacuous_of_drop_invariant、Becoming.Web.inheritsAt_iff_forming。",
      "checked": "corrected"
     },
     {
@@ -46867,7 +46886,7 @@
       "顾",
       "活皆有顾"
      ],
-     "gap": "缺：按闭包层级分级的序，及其跨中心的一致性。设关系链 R_0 ⊆ R_1 ⊆ … ⊆ R_n（喂养、影响、系统、全体），中心 center : Pos → F，level p g 为使 WithinClosure R_i (center p) g 成立的最小 i；令 sig↾i 为 fun q t g => sig q t g ∧ level p g = i（把意义限制到第 i 层）。相异层 d(p, l, l') 定义为最小的 i，使 Web.Retains (sig↾i) p l l' 与 Web.Retains (sig↾i) p l' l 不同时成立。GradedRetains sig p l l' 定义为 Web.Retains (sig↾d(p, l, l')) p l l'：在最低的相异层上，l 保留 l' 沿该层所容纳的有意义者，与 Web.Retains 的参数次序一致。(1) 立得，不需 Unrestricted：由 Becoming.Web.Retains.of_fewer，Web.Retains sig p l l' 推出每一层 i 上的 Web.Retains (sig↾i) p l l'，所以分级不推翻保留。(2) 实质命题：对两个中心 p、q，在容许分别只保留 g 或只保留 h 的走法族上，GradedRetains 于 p、q 在每一对走法上一致，当且仅当 level p 与 level q 在形成上诱导同一前序；否则存在一对走法被二者反向排序。由此差等是加在凡续皆有顾之上的度量，不是由它导出。最近的声明：Becoming.Lexical.Above、Becoming.Flow.withinInfluence_of_withinFeeding、Becoming.Flow.presupposition_order、Becoming.Clearing.centers_disagree、Becoming.Web.Retains.of_fewer、Becoming.Web.retains_agree。",
+     "gap": "范围之注（ZG7，2026年10月22日）：不是缺律。（1）按层限制意义而无丧立得（Web.Retains.of_fewer），分级不推翻保留；（2）两我之分级一致恰当层级诱导同一前序，一旦把走法抽象为所失之形成，即是层级之定义，其实质在网中是否有只失一者之走法，是网之性质，不是律。所以差等是加在凡续皆有顾之上的比较，与本条之相分同，不是待证之定理。原注：缺：按闭包层级分级的序，及其跨中心的一致性。设关系链 R_0 ⊆ R_1 ⊆ … ⊆ R_n（喂养、影响、系统、全体），中心 center : Pos → F，level p g 为使 WithinClosure R_i (center p) g 成立的最小 i；令 sig↾i 为 fun q t g => sig q t g ∧ level p g = i（把意义限制到第 i 层）。相异层 d(p, l, l') 定义为最小的 i，使 Web.Retains (sig↾i) p l l' 与 Web.Retains (sig↾i) p l' l 不同时成立。GradedRetains sig p l l' 定义为 Web.Retains (sig↾d(p, l, l')) p l l'：在最低的相异层上，l 保留 l' 沿该层所容纳的有意义者，与 Web.Retains 的参数次序一致。(1) 立得，不需 Unrestricted：由 Becoming.Web.Retains.of_fewer，Web.Retains sig p l l' 推出每一层 i 上的 Web.Retains (sig↾i) p l l'，所以分级不推翻保留。(2) 实质命题：对两个中心 p、q，在容许分别只保留 g 或只保留 h 的走法族上，GradedRetains 于 p、q 在每一对走法上一致，当且仅当 level p 与 level q 在形成上诱导同一前序；否则存在一对走法被二者反向排序。由此差等是加在凡续皆有顾之上的度量，不是由它导出。最近的声明：Becoming.Lexical.Above、Becoming.Flow.withinInfluence_of_withinFeeding、Becoming.Flow.presupposition_order、Becoming.Clearing.centers_disagree、Becoming.Web.Retains.of_fewer、Becoming.Web.retains_agree。",
      "layer_checked": "争胜与等级",
      "locator": "尽心上·45",
      "relational": "关系层：嵌套的闭包；非关系层：顾的等差（位阶）。",
@@ -48060,15 +48079,19 @@
       "Becoming.Clearing.center_not_derived",
       "Becoming.Flow.within_closure_iff_retains",
       "Becoming.bounded_whole",
-      "Becoming.Clearing.clearer_loses_dweller"
+      "Becoming.Clearing.clearer_loses_dweller",
+      "Becoming.Flow.WithinFeedingFrom",
+      "Becoming.Flow.feedingFrom_permits",
+      "Becoming.Flow.feedingFrom_parts"
      ],
      "records": [
       "presupposition-scopes",
       "living-significance-on-held-lives",
       "closure-verdict-meets-continuation-condition",
-      "whole-first-and-bounded-centers"
+      "whole-first-and-bounded-centers",
+      "feeding-from-a-step"
      ],
-     "reading": "AI读法：经说上：「仁，愛民者，非爲用民也，不若愛馬者」：此爱不是为了用，不同于爱马（为用而爱）。冻结本（维基文库，非校勘定本）作愛民、用民；通行校本（道藏本、孙诒让《墨子閒詁》）多作爱己、用己。若作爱己，本条说的是以非工具性的爱己为式，接近自顾，下面的读法就要改到自顾一侧，定读待查。按冻结本读：理论的两条路线正好对应。以各我闭包为界的意义，是无论畛怎样划都落在自身之内者的意义（bounded_closure_iff），即路线 (b)；沿喂养，它对一物的顾止于该物在某一步对我有所供给之处（资域跨一切步取闭包），这是爱马式的顾；在清除者的构造模型中，这样的顾不及居住者（Clearing.center_not_derived，见证）。凡续皆有顾的顾不以供给为条件。两者在资域即整体之处一致——在凡续皆有顾下，以资域为界的无丧判断在每个比较上与条件的判断相同（Flow.within_closure_iff_retains），以整体为界的意义就是凡续皆有顾（bounded_whole，立得）——资域不是整体时可以分开：在构造模型中清除者的部分在凡续皆有顾下从每个方丧失居住者（Clearing.clearer_loses_dweller，见证）。所释经文是「仁，體愛也」。",
+     "reading": "AI读法：经说上：「仁，愛民者，非爲用民也，不若愛馬者」：此爱不是为了用，不同于爱马（为用而爱）。冻结本（维基文库，非校勘定本）作愛民、用民；通行校本（道藏本、孙诒让《墨子閒詁》）多作爱己、用己。若作爱己，本条说的是以非工具性的爱己为式，接近自顾，下面的读法就要改到自顾一侧，定读待查。按冻结本读：理论的两条路线正好对应。以各我闭包为界的意义，是无论畛怎样划都落在自身之内者的意义（bounded_closure_iff），即路线 (b)；沿喂养，它对一物的顾止于该物在某一步对我有所供给之处（资域跨一切步取闭包），这是爱马式的顾；在清除者的构造模型中，这样的顾不及居住者（Clearing.center_not_derived，见证）。凡续皆有顾的顾不以供给为条件。两者在资域即整体之处一致——在凡续皆有顾下，以资域为界的无丧判断在每个比较上与条件的判断相同（Flow.within_closure_iff_retains），以整体为界的意义就是凡续皆有顾（bounded_whole，立得）——资域不是整体时可以分开：在构造模型中清除者的部分在凡续皆有顾下从每个方丧失居住者（Clearing.clearer_loses_dweller，见证）。所释经文是「仁，體愛也」。已补：按步之资域：自第 s 步起之资域（Flow.WithinFeedingFrom）自第 0 步起即资域（withinFeedingFrom_zero），随时而缩（WithinFeedingFrom.earlier）；自 s 起不给任何所需者，不在他者自 s 起之资域内（not_withinFeedingFrom）。所以以每步之资域为界之顾，许可终结不再供给者（Flow.feedingFrom_permits），而在凡续皆有顾之下同一部分有丧（Flow.feedingFrom_parts）：「不若愛馬」之顾随供给停止而撤回。",
      "names_used": [
       "自顾",
       "我",
@@ -48079,7 +48102,7 @@
       "无丧",
       "方"
      ],
-     "gap": "缺：按步的资域及其许可。现有资域（Becoming.Flow.WithinFeeding，沿 Becoming.Flow.FedBy 跨一切步取闭包）不随时间收缩：g 只要在某一步喂养 p 的延续，就在每一步都落在 p 的资域内，所以以资域为界的顾（路线 (b)，Becoming.bounded_closure_iff）不能表示「不若愛馬」式的、随供给停止而撤回的顾。要补的定义：WithinFeedingFrom W p s g，沿第 s 步及以后的 FedBy 所成的闭包；sig_b p s g := WithinFeedingFrom W p s g。实质命题：给一个平衡的 Flow，使 g 在第 t 步之前喂养 p 的延续、此后不再喂养，带某个部分的水平使 g 在 t 之后不被容纳，不带它的水平仍容纳 g；则从 p，在 sig_b 下带该部分的水平无丧于不带它的水平（Web.Retains sig_b p W.level l），而在 Unrestricted 下有丧（¬ Web.Retains sig p W.level l）：以供给为界的顾许可终结不再供给者。最近的声明：Becoming.Flow.WithinFeeding、Becoming.Flow.FedBy、Becoming.bounded_closure_iff、Becoming.Flow.within_closure_iff_retains、Becoming.Clearing.centers_disagree、Becoming.Clearing.clearer_loses_dweller。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.Flow.WithinFeedingFrom、Flow.feedingFrom_permits、Flow.feedingFrom_parts（对任一流，不需见证）。见记录 feeding-from-a-step。",
      "layer_checked": "",
      "locator": "經說上",
      "relational": "关系层：爱民不以用为条件；非关系层：无。",
@@ -50195,14 +50218,17 @@
       "Becoming.Lexical.Crossed.incomparable",
       "Becoming.Dependence.MakesDifference",
       "Becoming.Requirement.Assigned.unique_required",
-      "Becoming.Requirement.residual_of_unfulfilled"
+      "Becoming.Requirement.residual_of_unfulfilled",
+      "Becoming.Lexical.BasicPriority.same_claims_alike",
+      "Becoming.Lexical.Above.agent_adjoined"
      ],
      "records": [
       "joint-difference-making",
       "practical-judgment-under-living-significance",
-      "continuation-condition-decomposition"
+      "continuation-condition-decomposition",
+      "what-the-claims-do-not-read"
      ],
-     "reading": "AI读法：大取断言一个不对称：“殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。”同一结果，只因被杀者是他人还是自己，行为的描述不同；结果相同而比较分不出高下时，大取自己说“無擇”（mojing-daqu-wu-ze）。大取又说“愛人不外己，己在所愛之中”：己与人同在所爱的范围之内，所以不对称不来自范围，而来自动作关系：谁的动作加于谁。理论在范围上与“愛人不外己”同向：不易乎畛（不变的一步，BoundaryInvariant，定义）要求预设不随边界怎样划而改变，己与他者的失去同样计入；它只定范围，不排序。核心比较只看构形实现与失去哪些主张：在一个构造的情形中，各持一个对方所缺的受保护主张者不可比（见证：Lexical.Crossed.incomparable）。理论能说谁的部分造成差别（有力；Dependence.MakesDifference，定义）、谁是每个可接纳计划中唯一的应答者因而被要求（Requirement.Assigned.unique_required）、一项任务何时留下余责（Requirement.residual_of_unfulfilled，依定义）；承诺层也已分开施加的基本剥夺与实际同意（J2、J3 的条件），但核心比较中没有失去由承受者自己承担与失去由他者的动作加于承受者之分。所以大取的不对称，理论既不推出也不否定；它断言了一个理论尚缺的结构，这是相分，不是相合。荀子“可殺而不可使……”（RU2-R0273）同一结构，列为平行；“愛人不外己”的记录 MI1-R-DQ-self 在 C14，此处只引其文。",
+     "reading": "AI读法：大取断言一个不对称：“殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。”同一结果，只因被杀者是他人还是自己，行为的描述不同；结果相同而比较分不出高下时，大取自己说“無擇”（mojing-daqu-wu-ze）。大取又说“愛人不外己，己在所愛之中”：己与人同在所爱的范围之内，所以不对称不来自范围，而来自动作关系：谁的动作加于谁。理论在范围上与“愛人不外己”同向：不易乎畛（不变的一步，BoundaryInvariant，定义）要求预设不随边界怎样划而改变，己与他者的失去同样计入；它只定范围，不排序。核心比较只看构形实现与失去哪些主张：在一个构造的情形中，各持一个对方所缺的受保护主张者不可比（见证：Lexical.Crossed.incomparable）。理论能说谁的部分造成差别（有力；Dependence.MakesDifference，定义）、谁是每个可接纳计划中唯一的应答者因而被要求（Requirement.Assigned.unique_required）、一项任务何时留下余责（Requirement.residual_of_unfulfilled，依定义）；承诺层也已分开施加的基本剥夺与实际同意（J2、J3 的条件）；核心比较只读所实现之主张，所以二者实现同一主张时比较相同，无一优于另一（Lexical.BasicPriority.same_claims_alike）：只看构形所实现的主张，写不出这一不对称；把「无他者之部分加损于承受者」加为基本主张，则自承者在施加者之上（Lexical.Above.agent_adjoined）。所以大取的不对称，理论既不推出也不否定；它断言了一个理论尚缺的结构，这是相分，不是相合。荀子“可殺而不可使……”（RU2-R0273）同一结构，列为平行；“愛人不外己”的记录 MI1-R-DQ-self 在 C14，此处只引其文。",
      "names_used": [
       "不易乎畛",
       "有力"
@@ -50211,7 +50237,7 @@
      "relational": "同一失去，因承受者与动因者是否同一而描述不同",
      "tradition": "墨家（名辩）",
      "work": "《墨子·大取》",
-     "gap": "脊柱缺：承诺层已有“施加的基本剥夺”与“实际同意”之分（J2、J3 与同类积小的条件），核心比较中没有。缺的是：在选项上加入承受者（谁失去）与动因者（谁的部分造成失去）两种关系，并陈述在 Lexical.BasicPriority 之下，施加之损与自承之损在其他方面相同时如何比较；或者证明只看构形所实现的主张，写不出这一不对称。最近的声明：Becoming.Dependence.MakesDifference、Becoming.Requirement.Assigned.unique_required、Becoming.Lexical.Crossed.incomparable、Becoming.Requirement.residual_of_unfulfilled、Becoming.BoundaryInvariant。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.Lexical.BasicPriority.same_claims_alike（不可写之一半）、Lexical.Above.agent_adjoined（加入动因之主张）。见记录 what-the-claims-do-not-read。",
      "checked": "passed"
     },
     {
@@ -56981,19 +57007,22 @@
       "Becoming.Branching.keeping_greatest",
       "Becoming.Branching.juncture_iff",
       "Becoming.Branching.losing_not_returns",
-      "Becoming.TimedResponse.different_answers_require_reached"
+      "Becoming.TimedResponse.different_answers_require_reached",
+      "Becoming.TimedResponse.same_step_unreached",
+      "Becoming.TimedResponse.turned_at_juncture"
      ],
      "records": [
       "every-loss-passes-a-juncture",
-      "timely-response-necessity"
+      "timely-response-necessity",
+      "a-source-before-a-juncture"
      ],
-     "reading": "AI读法：苏辙解《老子》六十四章（RO lao-64-wei-zhi-yu-wei-you 已对经文作映射）：在未有之时为之，在未乱之时治之。Junctures：若所护者 s 可回（Returns P s），从 s 出发而终于不能回到 s 的每一条进程，不能没有一个机在其途中（loss_passes_juncture，结论为双重否定；在可回与否可判定时，存在一个机）；护是护持 s 的最大子过程（keeping_greatest）；失之一步之后不再回（losing_not_returns）；机是护与失都有一步之处（juncture_iff，定义）。所以「為之于未有」即在机之前或机处取护之一步。定域：这只在前面有机之处要紧。回应要依来源而异，来源须先到达（different_answers_require_reached，需到达与否可判定及该节前提）；到达须在机之前，脊柱尚未把到达的时限与机放进同一个模型（G9，见 gap）。",
+     "reading": "AI读法：苏辙解《老子》六十四章（RO lao-64-wei-zhi-yu-wei-you 已对经文作映射）：在未有之时为之，在未乱之时治之。Junctures：若所护者 s 可回（Returns P s），从 s 出发而终于不能回到 s 的每一条进程，不能没有一个机在其途中（loss_passes_juncture，结论为双重否定；在可回与否可判定时，存在一个机）；护是护持 s 的最大子过程（keeping_greatest）；失之一步之后不再回（losing_not_returns）；机是护与失都有一步之处（juncture_iff，定义）。所以「為之于未有」即在机之前或机处取护之一步。定域：这只在前面有机之处要紧。回应要依来源而异，来源须先到达（different_answers_require_reached，需到达与否可判定及该节前提）；到达须在机之前，今在同一定理中：来源到期未达读者时，读者在机处所取之步于两历程相同，失之步于两者皆失（TimedResponse.same_step_unreached）；两历程在机处一保一失时，该处是机，且来源不能未达（TimedResponse.turned_at_juncture）。",
      "names_used": [
       "机"
      ],
      "locator": "老子解·第六十四章",
      "relational": "为之须在机之前；机之后失者不回。",
-     "gap": "G9：把 TimedResponse 与 Junctures 连成一条定理。在同一过程 P 中，设两世界在 t₀ 之前只在来源上不同；读者在 t₀ 于两者中处于同一构形 x（这要求读者之状态在到达之前相同；answer_alike_before 只给出回答相同，不给出构形相同，所以须另设或另证）；x 是所护者 s 的一个机；读者在 x 所取之步是其经耦合读出之回答的函数。若来源到 t₀ 尚未到达读者（¬ ReachedBy … t₀），则两者在 x 取同一步（由 answer_alike_before）；所以其中一个取失之步，另一个也取，此后 s 在两者中都不能再得（losing_not_returns）。逆向形式（取不同之步则已到达）还需 ReachedBy 可判定，如 different_answers_require_reached。即：来源要使读者在机处改取护之步，须在机之前到达。最近：Becoming.TimedResponse.answer_alike_before、Becoming.TimedResponse.levels_alike_before、Becoming.TimedResponse.different_answers_require_reached、Becoming.Branching.losing_not_returns、Becoming.Branching.juncture_iff、Becoming.Branching.loss_passes_juncture。",
+     "gap": "已补（ZG7，2026年10月22日）：Becoming.TimedResponse.same_step_unreached、TimedResponse.turned_at_juncture（读者在机处之构形为所设）。见记录 a-source-before-a-juncture。",
      "tradition": "道",
      "work": "苏辙《老子解》第六十四章",
      "checked": "passed"
@@ -57017,13 +57046,16 @@
       "Becoming.Branching.juncture_iff",
       "Becoming.Branching.losing_not_returns",
       "Becoming.Branching.loss_passes_juncture",
-      "Becoming.Branching.no_juncture_of_keeps"
+      "Becoming.Branching.no_juncture_of_keeps",
+      "Becoming.TimedResponse.same_step_unreached",
+      "Becoming.TimedResponse.turned_at_juncture"
      ],
      "records": [
       "timely-response-necessity",
-      "every-loss-passes-a-juncture"
+      "every-loss-passes-a-juncture",
+      "a-source-before-a-juncture"
      ],
-     "reading": "AI读法：苏辙以易「先天而天弗違」「後天而奉天時」解「能為雌」：上文「聖人循理而知天命則待唱而後和」，是待所应者至而后答；本句说有一段可答之步，早于它、晚于它都失。脊柱给出两端各自的律，各带条件，两端合为一个窗口的定理尚缺。早的一端：在 TimedResponse 的前提下（两条历程起点水平相同、每步在场之形成相同且皆衡，来源以外者凡其耦合所读相同则取与相同），读者之答若只经其耦合读出，则来源至期未及读者（至期所及不成立）时，两条历程中其答相同（answer_alike_before）；至期所及可判定时，答有不同则必已至期所及（different_answers_require_reached）。晚的一端在机：机是既有护闭之一步（其后所护者仍可再得）、又有失之一步（其后不可再得）的构形（juncture_iff，定义）；只取失之步的过程不回到所护者（losing_not_returns）；可回之构形每一次失去，途中必经一机（loss_passes_juncture，结论为双重否定）。定域：「先者必蚤」之失只在所需之答随来源而异之处成立（同一答于两者皆可时，早答不失）；「後者必莫」之失只在途中有机之处成立（过程处处能回到所护者时途中无机，no_juncture_of_keeps，晚答不失）。两端合一见 G9（laozi-sz-weizhi-yuweiyou 之 gap）。「天命」在此与所引「天時」并举，读作所遇之时机，不取意志之义；若读作有意志之命，则是不采之字表「天」「命」所记的意志层，属相分，不在本条。",
+     "reading": "AI读法：苏辙以易「先天而天弗違」「後天而奉天時」解「能為雌」：上文「聖人循理而知天命則待唱而後和」，是待所应者至而后答；本句说有一段可答之步，早于它、晚于它都失。脊柱给出两端各自的律，各带条件，两端合为一个窗口的定理尚缺。早的一端：在 TimedResponse 的前提下（两条历程起点水平相同、每步在场之形成相同且皆衡，来源以外者凡其耦合所读相同则取与相同），读者之答若只经其耦合读出，则来源至期未及读者（至期所及不成立）时，两条历程中其答相同（answer_alike_before）；至期所及可判定时，答有不同则必已至期所及（different_answers_require_reached）。晚的一端在机：机是既有护闭之一步（其后所护者仍可再得）、又有失之一步（其后不可再得）的构形（juncture_iff，定义）；只取失之步的过程不回到所护者（losing_not_returns）；可回之构形每一次失去，途中必经一机（loss_passes_juncture，结论为双重否定）。定域：「先者必蚤」之失只在所需之答随来源而异之处成立（同一答于两者皆可时，早答不失）；「後者必莫」之失只在途中有机之处成立（过程处处能回到所护者时途中无机，no_juncture_of_keeps，晚答不失）。两端合一：来源到期未达读者，读者在机处之步不改（TimedResponse.same_step_unreached），要改须先达（TimedResponse.turned_at_juncture）。「天命」在此与所引「天時」并举，读作所遇之时机，不取意志之义；若读作有意志之命，则是不采之字表「天」「命」所记的意志层，属相分，不在本条。",
      "names_used": [
       "机",
       "至期所及",
@@ -57034,7 +57066,7 @@
      "locator": "老子解·第十章",
      "relational": "可答之步在至期所及之后、机之前：至期未及之答不随来源而异，过机而取失之步者不回。",
      "ro_passage": "",
-     "gap": "G9（见 laozi-sz-weizhi-yuweiyou）：把 TimedResponse 之至期所及与 Junctures 之机连成一条定理。",
+     "gap": "已补（ZG7，2026年10月22日）：同 laozi-sz-weizhi-yuweiyou，见记录 a-source-before-a-juncture。",
      "checked": "corrected"
     },
     {

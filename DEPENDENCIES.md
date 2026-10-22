@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-373 registered results: 348 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 884 curated edges join 325 results to the results they draw on.
+380 registered results: 355 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 892 curated edges join 332 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -13,12 +13,16 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 
 - [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [a-coupling-saturated-by-what-it-has-carried][] ← <a id="a-coupling-saturated-by-what-it-has-carried--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="a-coupling-saturated-by-what-it-has-carried--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="a-coupling-saturated-by-what-it-has-carried--how-loops-form"></a>[how-loops-form][]
+- [a-goal-along-a-lineage][] ← <a id="a-goal-along-a-lineage--need-drift-along-a-lineage"></a>[need-drift-along-a-lineage][]
 - [a-history-read-off-its-finite-stretches][] ← <a id="a-history-read-off-its-finite-stretches--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][]
 - [a-law-through-a-projection-along-one-run][] ← <a id="a-law-through-a-projection-along-one-run--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-law-through-a-projection-along-one-run--experiment-needs-return"></a>[experiment-needs-return][] · <a id="a-law-through-a-projection-along-one-run--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="a-law-through-a-projection-along-one-run--finite-trace-transport"></a>[finite-trace-transport][] · <a id="a-law-through-a-projection-along-one-run--determinacy-up-to-likeness"></a>[determinacy-up-to-likeness][] · <a id="a-law-through-a-projection-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-a-projection-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-a-projection-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [a-law-through-changing-coupling-along-one-run][] ← <a id="a-law-through-changing-coupling-along-one-run--a-law-through-coupling-along-one-run"></a>[a-law-through-coupling-along-one-run][] · <a id="a-law-through-changing-coupling-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-changing-coupling-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-changing-coupling-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [a-law-through-coupling-along-one-run][] ← <a id="a-law-through-coupling-along-one-run--a-law-through-a-projection-along-one-run"></a>[a-law-through-a-projection-along-one-run][] · <a id="a-law-through-coupling-along-one-run--determinacy-up-to-likeness"></a>[determinacy-up-to-likeness][] · <a id="a-law-through-coupling-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-coupling-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-coupling-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [a-need-with-a-cap][] ← <a id="a-need-with-a-cap--closing-needs-net-draw"></a>[closing-needs-net-draw][]
 - [a-pattern-lasts-through-passing][] ← <a id="a-pattern-lasts-through-passing--whole-persists-through-generation"></a>[whole-persists-through-generation][]
+- [a-pool-read-by-its-majority][] ← <a id="a-pool-read-by-its-majority--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][]
+- [a-reading-against-the-share-does-not-ratchet][] ← <a id="a-reading-against-the-share-does-not-ratchet--capture-through-the-rule"></a>[capture-through-the-rule][]
+- [a-source-before-a-juncture][] ← <a id="a-source-before-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="a-source-before-a-juncture--timely-response-necessity"></a>[timely-response-necessity][]
 - [a-step-coupling-keeps-at-every-horizon][] ← <a id="a-step-coupling-keeps-at-every-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][] · <a id="a-step-coupling-keeps-at-every-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-step-coupling-keeps-at-every-horizon--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [a-weighting-faster-than-renewal-ends-the-base][] ← <a id="a-weighting-faster-than-renewal-ends-the-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-weighting-faster-than-renewal-ends-the-base--a-step-coupling-keeps-at-every-horizon"></a>[a-step-coupling-keeps-at-every-horizon][] · <a id="a-weighting-faster-than-renewal-ends-the-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [a-whole-carried-by-lasting-parts][] ← <a id="a-whole-carried-by-lasting-parts--whole-persists-through-generation"></a>[whole-persists-through-generation][]
@@ -104,6 +108,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [far-conveying-runs-the-family-down][] ← <a id="far-conveying-runs-the-family-down--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [feedback-and-reach][] ← <a id="feedback-and-reach--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="feedback-and-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="feedback-and-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][]
 - [feeding-closure][] ← <a id="feeding-closure--derived-extent-limits"></a>[derived-extent-limits][] · <a id="feeding-closure--loss-beyond-a-region"></a>[loss-beyond-a-region][] · <a id="feeding-closure--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="feeding-closure--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
+- [feeding-from-a-step][] ← <a id="feeding-from-a-step--closure-verdict-meets-continuation-condition"></a>[closure-verdict-meets-continuation-condition][]
 - [finite-aggregation-within-restorable-basic-losses][] ← <a id="finite-aggregation-within-restorable-basic-losses--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(interpretive)* · <a id="finite-aggregation-within-restorable-basic-losses--becoming-spine-instances"></a>[becoming-spine-instances][] · <a id="finite-aggregation-within-restorable-basic-losses--comparison-content-under-regrouping"></a>[comparison-content-under-regrouping][] *(interpretive)*
 - [finite-basis-common-interpretation][] ← <a id="finite-basis-common-interpretation--derivation-soundness"></a>[derivation-soundness][]
 - [finite-fallible-inquiry-necessity][] ← <a id="finite-fallible-inquiry-necessity--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="finite-fallible-inquiry-necessity--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="finite-fallible-inquiry-necessity--imbalance-as-relatum"></a>[imbalance-as-relatum][]
@@ -297,6 +302,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [transmission-independent-where-it-binds][] ← <a id="transmission-independent-where-it-binds--map-of-premises"></a>[map-of-premises][] · <a id="transmission-independent-where-it-binds--transmission-is-inheritance-and-need"></a>[transmission-is-inheritance-and-need][]
 - [transmission-is-inheritance-and-need][] ← <a id="transmission-is-inheritance-and-need--evolution-on-descent"></a>[evolution-on-descent][]
 - [two-act-worlds-carry-the-difference][] ← <a id="two-act-worlds-carry-the-difference--worlds-are-runs"></a>[worlds-are-runs][] · <a id="two-act-worlds-carry-the-difference--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="two-act-worlds-carry-the-difference--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="two-act-worlds-carry-the-difference--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="two-act-worlds-carry-the-difference--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="two-act-worlds-carry-the-difference--orders-as-a-sum-over-histories"></a>[orders-as-a-sum-over-histories][] · <a id="two-act-worlds-carry-the-difference--how-loops-form"></a>[how-loops-form][] · <a id="two-act-worlds-carry-the-difference--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="two-act-worlds-carry-the-difference--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="two-act-worlds-carry-the-difference--observation-is-a-route"></a>[observation-is-a-route][]
+- [two-rules-lock-together][] ← <a id="two-rules-lock-together--capture-through-the-rule"></a>[capture-through-the-rule][]
 - [two-sided-regulation-and-late-reading][] ← <a id="two-sided-regulation-and-late-reading--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="two-sided-regulation-and-late-reading--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [typicality-by-counting][] ← <a id="typicality-by-counting--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="typicality-by-counting--identification-where-bounded"></a>[identification-where-bounded][] · <a id="typicality-by-counting--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [unanchored-incidence-collapse][] ← <a id="unanchored-incidence-collapse--joining-open-map-factor"></a>[joining-open-map-factor][]
@@ -318,6 +324,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-bounds-offspring-numbers][] ← <a id="what-bounds-offspring-numbers--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-bounds-offspring-numbers--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
+- [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
 - [where-a-level-couples][] ← <a id="where-a-level-couples--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="where-a-level-couples--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="where-a-level-couples--observation-is-a-route"></a>[observation-is-a-route][] · <a id="where-a-level-couples--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="where-a-level-couples--testing-within-couplings"></a>[testing-within-couplings][] · <a id="where-a-level-couples--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [where-a-move-is-formed][] ← <a id="where-a-move-is-formed--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="where-a-move-is-formed--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="where-a-move-is-formed--causal-models-as-processes"></a>[causal-models-as-processes][] · <a id="where-a-move-is-formed--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="where-a-move-is-formed--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="where-a-move-is-formed--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="where-a-move-is-formed--learning-by-refutation"></a>[learning-by-refutation][] · <a id="where-a-move-is-formed--control-coherence-loss"></a>[control-coherence-loss][] · <a id="where-a-move-is-formed--experiment-needs-return"></a>[experiment-needs-return][]
@@ -339,12 +346,16 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 
 [a-code-formed-between-formations]: theories/becoming/results/records/a-code-formed-between-formations.md
 [a-coupling-saturated-by-what-it-has-carried]: theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md
+[a-goal-along-a-lineage]: theories/becoming/results/records/a-goal-along-a-lineage.md
 [a-history-read-off-its-finite-stretches]: theories/becoming/results/records/a-history-read-off-its-finite-stretches.md
 [a-law-through-a-projection-along-one-run]: theories/becoming/results/records/a-law-through-a-projection-along-one-run.md
 [a-law-through-changing-coupling-along-one-run]: theories/becoming/results/records/a-law-through-changing-coupling-along-one-run.md
 [a-law-through-coupling-along-one-run]: theories/becoming/results/records/a-law-through-coupling-along-one-run.md
 [a-need-with-a-cap]: theories/becoming/results/records/a-need-with-a-cap.md
 [a-pattern-lasts-through-passing]: theories/becoming/results/records/a-pattern-lasts-through-passing.md
+[a-pool-read-by-its-majority]: theories/becoming/results/records/a-pool-read-by-its-majority.md
+[a-reading-against-the-share-does-not-ratchet]: theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md
+[a-source-before-a-juncture]: theories/becoming/results/records/a-source-before-a-juncture.md
 [a-step-coupling-keeps-at-every-horizon]: theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md
 [a-weighting-faster-than-renewal-ends-the-base]: theories/becoming/results/records/a-weighting-faster-than-renewal-ends-the-base.md
 [a-whole-carried-by-lasting-parts]: theories/becoming/results/records/a-whole-carried-by-lasting-parts.md
@@ -438,6 +449,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [far-conveying-runs-the-family-down]: theories/becoming/results/records/far-conveying-runs-the-family-down.md
 [feedback-and-reach]: theories/becoming/results/records/feedback-and-reach.md
 [feeding-closure]: theories/becoming/results/records/feeding-closure.md
+[feeding-from-a-step]: theories/becoming/results/records/feeding-from-a-step.md
 [finite-aggregation-within-restorable-basic-losses]: theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.md
 [finite-basis-common-interpretation]: theories/becoming/results/records/finite-basis-common-interpretation.md
 [finite-continuation-plans]: theories/becoming/results/records/finite-continuation-plans.md
@@ -652,6 +664,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [transmission-independent-where-it-binds]: theories/becoming/results/records/transmission-independent-where-it-binds.md
 [transmission-is-inheritance-and-need]: theories/becoming/results/records/transmission-is-inheritance-and-need.md
 [two-act-worlds-carry-the-difference]: theories/becoming/results/records/two-act-worlds-carry-the-difference.md
+[two-rules-lock-together]: theories/becoming/results/records/two-rules-lock-together.md
 [two-sided-regulation-and-late-reading]: theories/becoming/results/records/two-sided-regulation-and-late-reading.md
 [typicality-by-counting]: theories/becoming/results/records/typicality-by-counting.md
 [unanchored-incidence-collapse]: theories/becoming/results/records/unanchored-incidence-collapse.md
@@ -675,6 +688,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-dependence-alone-carries-of-a-level]: theories/becoming/results/records/what-dependence-alone-carries-of-a-level.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
+[what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md
 [where-a-level-couples]: theories/becoming/results/records/where-a-level-couples.md

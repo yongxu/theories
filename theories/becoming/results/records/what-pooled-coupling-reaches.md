@@ -74,7 +74,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 - related, not a proved adapter: [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md). Derives this record's premise that a selection goes through the pooled coupling for what a pool decides by its acts, where each member's law reads through its coupling, and turns the gap for a pool's act into the gap for its response.
 - related, not a proved adapter: [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md). Reading another's couplings by level is pooling with it.
 
-**Used by:** [alignment-approaches-under-the-selection-laws](alignment-approaches-under-the-selection-laws.md) (application) · [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md)
+**Used by:** [a-pool-read-by-its-majority](a-pool-read-by-its-majority.md) · [alignment-approaches-under-the-selection-laws](alignment-approaches-under-the-selection-laws.md) (application) · [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -104,6 +104,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `what pooled coupling reaches`, `合起来的耦合及于什么`, `the gap for a pool's act`, `一组之动作的缺口`, `pooling closes the gap`, `合起来合上缺口`, `difference is what a pool adds`, `差别是一组所加的`
 

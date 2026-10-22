@@ -305,7 +305,7 @@
         "Becoming.Branching.reach_keeping_of_trace",
         "Becoming.Branching.step_back"
       ],
-      "sha256": "23f243f34ca930063cadb0f273d68e09964364c251fa3432e32d7e0d08f2ffba"
+      "sha256": "2fafdb411e7b0b9236636f0d11b73eb291cd2c7ebdc5179cf8377c4d71dca544"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean",
@@ -404,12 +404,18 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Junctures",
       "success_pointer": "/status",
       "success_value": "passed"

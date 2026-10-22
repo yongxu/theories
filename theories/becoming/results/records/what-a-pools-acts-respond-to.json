@@ -362,7 +362,7 @@
         "Becoming.Clearing.restLaw",
         "Becoming.Clearing.rest_follows_spared"
       ],
-      "sha256": "013359d5e9d8ffaf9eaad3130bd3c904c110fed234ad16eb59fb9494fd7dc0e8"
+      "sha256": "cfd533d96853ecf0b9e3788372aeaa6ea9e53c2e4fbeadf92c37e036b0729ab9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",

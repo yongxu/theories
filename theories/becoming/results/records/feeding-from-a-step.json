@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "id": "feeding-from-a-step",
+  "title": {
+    "en": "Feeding from a step",
+    "zh": "自一步起之资域"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "The feeding closure from step s shrinks as feeding stops; what gives to no requirement from s on lies outside every other closure from s; so care bounded by feeding from each step permits ending what feeds no more, which the continuation condition counts as a loss.",
+    "zh": "自第 s 步起之资域随供给停止而缩；自 s 起不给任何所需者，不在他者自 s 起之资域内；所以以每步之资域为界之顾，许可终结不再供给者，而延续之条件以之为丧。"
+  },
+  "laws": [
+    {
+      "en": "Feeding from a step: from the first step it is the feeding closure; from a later step it is within the closure from an earlier one.",
+      "zh": "自一步起之资域：自第一步起即资域；自较后之步起者在自较前之步起者之内。",
+      "declarations": [
+        "Becoming.Flow.FedFromAfter",
+        "Becoming.Flow.WithinFeedingFrom",
+        "Becoming.Flow.withinFeedingFrom_zero",
+        "Becoming.Flow.WithinFeedingFrom.earlier"
+      ]
+    },
+    {
+      "en": "What gives to no requirement from s on is outside every other formation's closure from s; where l admits all l' admits but such a formation from T on, l retains against l' what has significance bounded by feeding from each step, while under the condition it does not where l' admits that formation at a step l does not.",
+      "zh": "自 s 起不给任何所需者，不在他者自 s 起之资域内；l 除自 T 起之此形成外皆容 l′ 之所容时，以每步资域为界之意义下 l 对 l′ 无丧，而在延续之条件下，l′ 容此形成于 l 不容之步时有丧。",
+      "declarations": [
+        "Becoming.Flow.not_withinFeedingFrom",
+        "Becoming.Flow.feedingFrom_permits",
+        "Becoming.Flow.feedingFrom_parts"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the continuation condition is a hypothesis of feedingFrom_parts only.",
+      "zh": "不加公理；延续之条件只是 feedingFrom_parts 之前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual care is bounded by feeding, or that a formation stops feeding.",
+      "zh": "实际之顾以资域为界，或某形成停止供给。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 7 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Instrumental concern that lapses when usefulness ends.",
+    "zh": "工具性之关切，用尽即止。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BoundedSignificance.lean",
+  "aliases": [
+    "Feeding from a step",
+    "自一步起之资域",
+    "Becoming.Flow.FedFromAfter"
+  ],
+  "dependencies": [
+    {
+      "id": "closure-verdict-meets-continuation-condition",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its significance bounded by a closure, here taken from each step.",
+        "zh": "其以闭包为界之意义，此处自每步起取之。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries jingshuo-ai-min-fei-yong-min).",
+        "zh": "陈述其对应所发现之缺口（条目 jingshuo-ai-min-fei-yong-min）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BoundedSignificance.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.FedFromAfter",
+        "Becoming.Flow.WithinFeedingFrom",
+        "Becoming.Flow.WithinFeedingFrom.earlier",
+        "Becoming.Flow.feedingFrom_parts",
+        "Becoming.Flow.feedingFrom_permits",
+        "Becoming.Flow.not_withinFeedingFrom",
+        "Becoming.Flow.withinFeedingFrom_zero"
+      ],
+      "sha256": "e02b71ef69f4d7ec07317c3b86ad68d9216989af880c8c21c7bb60773747e71b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BoundedSignificance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BoundedSignificance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "id": "a-reading-against-the-share-does-not-ratchet",
+  "title": {
+    "en": "A reading against the share does not ratchet",
+    "zh": "逆份额之读法不棘轮"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "Where the rule is read against the share and selection under a favouring rule does not lower the share, along a course whose rules favour the rule read at a later reading step is not above the rule read at an earlier one: the rise the lock rests on does not form.",
+    "zh": "规则逆份额而读、偏向之规则下选择不降份额时，沿规则皆偏向之历程，后一读取步所读之规则不高于先者：锁之所恃之升不成。"
+  },
+  "laws": [
+    {
+      "en": "Along a course whose rules favour, the share falls at no stretch; read against the share, the rule read later is not above the rule read earlier.",
+      "zh": "沿规则皆偏向之历程，份额无一段下降；逆份额而读，后读之规则不高于先读者。",
+      "declarations": [
+        "Becoming.RuleCapture.share_kept_along",
+        "Becoming.RuleCapture.against_not_rising"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; selection under a favouring rule does not lower the share; the rule read against the share (the reading monotone into the reversed order); rules favouring along the course.",
+      "zh": "不加公理；偏向之规则下选择不降份额；规则逆份额而读（读法单调入反序）；沿历程规则皆偏向。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a course read against the share is never locked at a step, or that its share falls.",
+      "zh": "逆份额而读之历程在任一步皆不锁，或其份额下降。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Negative feedback from those a selection disfavours.",
+    "zh": "来自被选择所不利者之负反馈。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+  "aliases": [
+    "A reading against the share does not ratchet",
+    "逆份额之读法不棘轮",
+    "Becoming.RuleCapture.share_kept_along"
+  ],
+  "dependencies": [
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its locked_not_below rests on the monotone reading; against the share the rule does not rise.",
+        "zh": "其 locked_not_below 依于单调之读；逆份额则规则不升。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries hanfei-er-bing).",
+        "zh": "陈述其对应所发现之缺口（条目 hanfei-er-bing）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RuleCapture.against_not_rising",
+        "Becoming.RuleCapture.share_kept_along"
+      ],
+      "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RuleCapture",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

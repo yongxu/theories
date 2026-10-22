@@ -360,7 +360,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
       "role": "proof",
-      "sha256": "23f243f34ca930063cadb0f273d68e09964364c251fa3432e32d7e0d08f2ffba"
+      "sha256": "2fafdb411e7b0b9236636f0d11b73eb291cd2c7ebdc5179cf8377c4d71dca544"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T102354.824114Z/verification.json",

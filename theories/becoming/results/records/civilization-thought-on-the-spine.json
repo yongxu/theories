@@ -313,13 +313,62 @@
         "en": "States gaps its map found (ZG).",
         "zh": "陈述其对应所发现之缺口（ZG）。"
       }
+    },
+    {
+      "id": "two-rules-lock-together",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "a-reading-against-the-share-does-not-ratchet",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "a-pool-read-by-its-majority",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "what-the-claims-do-not-read",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "feeding-from-a-step",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "a-goal-along-a-lineage",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "a-source-before-a-juncture",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
     }
   ],
   "references": [
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -329,7 +378,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -396,6 +445,10 @@
     {
       "en": "22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.",
       "zh": "2026年10月22日，ZG4-ZG6：21 个条目之缺口已陈述（十二项记录；研究第 341-343 节），其读法修订，gap 注指向新律；13 条不求律之 gap 注标为范围之注，原文保留。对应之类别与计数不变；三个以缺定类之条目注明其缺已补。"
+    },
+    {
+      "en": "22 October 2026, ZG7: the last open gap notes. Nine entries are stated (seven records; study section 344), 老子七十九章 answered by laws on the spine with its signed form out of scope, 孟子「亲亲而仁民」 marked a scope remark, and 唯识「無因」 left open as the chapter's open problem with its reason. The map's kinds and counts are unchanged.",
+      "zh": "2026年10月22日，ZG7：最后仍开之 gap 注。九个条目之缺口已陈述（七项记录；研究第 344 节），老子七十九章由脊柱现有之律补，其有符号之形为范围；孟子「亲亲而仁民」标为范围之注；唯识「無因」作为主章之开放问题仍开，注明其故。对应之类别与计数不变。"
     }
   ]
 }

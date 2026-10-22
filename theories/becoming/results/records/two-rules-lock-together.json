@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "id": "two-rules-lock-together",
+  "title": {
+    "en": "Two rules read from one share lock together",
+    "zh": "两条规则同由份额读出而同锁"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "Two rules each read as a monotone function of one share are read so together; where selection under both favouring does not lower the share and both favour at every share, the pair is locked from the step after the first reading step.",
+    "zh": "两条规则各为同一份额之单调函数时，合读亦然；两者皆偏向时选择不降份额、且在每一份额皆偏向，则这一对规则自首个读取步之后锁定。"
+  },
+  "laws": [
+    {
+      "en": "Two orders on rules compared together, and two rules each read from the share; each read monotonically, the pair is read monotonically.",
+      "zh": "两条规则之序合而比较，两条规则各由份额读出；各单调，则合亦单调。",
+      "declarations": [
+        "Becoming.RuleCapture.pairOrder",
+        "Becoming.RuleCapture.pairReading",
+        "Becoming.RuleCapture.ReadsShare.pair"
+      ]
+    },
+    {
+      "en": "From a start whose two rules favour, the share falls at no step and the pair is locked from the step after the first reading step.",
+      "zh": "自两条规则皆偏向之起点，份额无一步下降，这一对自首个读取步之后锁定。",
+      "declarations": [
+        "Becoming.RuleCapture.pair_locks"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the premises of favouring_locks for the pair: selection under both favouring does not lower the share, each rule read monotonically from the share and favouring at every share.",
+      "zh": "不加公理；favouring_locks 对一对规则之前提：两者皆偏向时选择不降份额，各由份额单调读出且在每一份额偏向。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual rule is read from the share it selects, or that a second rule is.",
+      "zh": "实际之规则由其所选之份额读出，或第二条规则亦然。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 4 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 4 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Lock-in of coupled institutions reinforcing one advantage.",
+    "zh": "相互加强同一优势之诸制度之锁定。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+  "aliases": [
+    "Two rules read from one share lock together",
+    "两条规则同由份额读出而同锁",
+    "Becoming.RuleCapture.pairOrder"
+  ],
+  "dependencies": [
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its favouring_locks, with a pair of rules as the rule.",
+        "zh": "其 favouring_locks，以一对规则为规则。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries zhuangzi-quqie).",
+        "zh": "陈述其对应所发现之缺口（条目 zhuangzi-quqie）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RuleCapture.ReadsShare.pair",
+        "Becoming.RuleCapture.pairOrder",
+        "Becoming.RuleCapture.pairReading",
+        "Becoming.RuleCapture.pair_locks"
+      ],
+      "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RuleCapture",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

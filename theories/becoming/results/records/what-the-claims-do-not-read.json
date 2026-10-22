@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "id": "what-the-claims-do-not-read",
+  "title": {
+    "en": "What the claims do not read, the comparison cannot weigh",
+    "zh": "主张所不读者，比较不能权衡"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "Under BasicPriority two alternatives realizing the same claims are compared alike, neither better than the other, so a loss laid on someone by another's part and the same loss self-borne are not ordered; adjoined as a basic claim, the agent orders them.",
+    "zh": "在 BasicPriority 下，实现同一主张之两选项比较相同，无一优于另一，所以他者之部分所加之损与自承之同一损不被排序；把动因加为基本主张，则排序之。"
+  },
+  "laws": [
+    {
+      "en": "Inclusion and strict inclusion carry over to claims held alike, and so does Above on either side.",
+      "zh": "包含与严格包含移至相同所持之主张，Above 两侧亦然。",
+      "declarations": [
+        "Becoming.Lexical.Included.congr",
+        "Becoming.Lexical.StrictIncluded.congr",
+        "Becoming.Lexical.Above.congr_left",
+        "Becoming.Lexical.Above.congr_right"
+      ]
+    },
+    {
+      "en": "Under BasicPriority, alternatives realizing the same basic claims and gains: neither better, and each better or worse than a third exactly where the other is.",
+      "zh": "在 BasicPriority 下，实现同一基本主张与所得之选项：无一更好，且各比第三者好或坏恰在另一如此之处。",
+      "declarations": [
+        "Becoming.Lexical.BasicPriority.same_claims_alike"
+      ]
+    },
+    {
+      "en": "A fresh basic claim held by the self-borne alternative and not the imposed one puts the self-borne above, where it holds the imposed one's old basic claims.",
+      "zh": "自承者持而施加者缺之新基本主张，在自承者持施加者旧基本主张之处，使自承者在上。",
+      "declarations": [
+        "Becoming.Lexical.Above.agent_adjoined"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; BasicPriority is a hypothesis wherever better is concluded.",
+      "zh": "不加公理；凡推及 better 处皆以 BasicPriority 为前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which of imposed and self-borne loss is worse, or that the agent belongs among the basic claims.",
+      "zh": "施加之损与自承之损孰更坏，或动因当在基本主张之中。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 6 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 6 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "The doing/allowing and agent-relative distinctions in ethics, which outcome-only comparisons cannot state.",
+    "zh": "伦理学中之作为与容许、相对于行动者之分，只看结果之比较不能陈述。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+  "aliases": [
+    "What the claims do not read, the comparison cannot weigh",
+    "主张所不读者，比较不能权衡",
+    "Becoming.Lexical.Included.congr"
+  ],
+  "dependencies": [
+    {
+      "id": "basic-priority-step-by-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its comparison, read on alternatives realizing the same claims.",
+        "zh": "其比较，读于实现同一主张之选项。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries mojing-daqu-sha-ji).",
+        "zh": "陈述其对应所发现之缺口（条目 mojing-daqu-sha-ji）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lexical.Above.agent_adjoined",
+        "Becoming.Lexical.Above.congr_left",
+        "Becoming.Lexical.Above.congr_right",
+        "Becoming.Lexical.BasicPriority.same_claims_alike",
+        "Becoming.Lexical.Included.congr",
+        "Becoming.Lexical.StrictIncluded.congr"
+      ],
+      "sha256": "1c326a77df4cea25bf95130c834195d8d5faa9e809e2f340bf6ceae95634c6db"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lexical",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

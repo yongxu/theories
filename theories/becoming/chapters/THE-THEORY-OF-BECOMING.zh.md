@@ -695,6 +695,13 @@
 | [象、彖之句对位之普查](../results/records/censuses-of-the-xiang-and-tuan.md) | 普查 | 取自文本之句表 | §1.5 |
 | [三才之带与高度](../results/records/bands-of-the-three-powers.md) | 不加前提的定理 | — | §1.5 |
 | [一索一线](../results/records/one-search-one-line.md) | 不加前提的定理 | — | §1.5 |
+| [两条规则同由份额读出而同锁](../results/records/two-rules-lock-together.md) | 有所述前提的定理 | 选择不降份额；单调、偏向之读 | §1.5 |
+| [逆份额之读法不棘轮](../results/records/a-reading-against-the-share-does-not-ratchet.md) | 有所述前提的定理 | 逆份额之读；沿历程规则偏向 | §1.5 |
+| [按多数读取之池](../results/records/a-pool-read-by-its-majority.md) | 不加前提的定理 | — | §1.5 |
+| [主张所不读者，比较不能权衡](../results/records/what-the-claims-do-not-read.md) | 有所述前提的定理 | BasicPriority（J1/J2）为前提 | §1.5 |
+| [自一步起之资域](../results/records/feeding-from-a-step.md) | 不加前提的定理 | —（丧须延续之条件） | §1.5 |
+| [目标沿世系](../results/records/a-goal-along-a-lineage.md) | 不加前提的定理 | — | §1.5 |
+| [来源须在机前到达](../results/records/a-source-before-a-juncture.md) | 有所述前提的定理 | 限时回应之前提 | §1.5 |
 | [回路在律所读之内，经储量起作用的回路在断裂处形成](../results/records/loops-within-what-a-law-reads.md) | 不加前提的定理 | — | §2.6 |
 | [观察不出下游：差别只往下游去](../results/records/observation-is-a-route.md) | 不加前提的定理 | — | §2.6 |
 | [携带差别的阶作为历史之和](../results/records/orders-as-a-sum-over-histories.md) | 不加前提的定理 | — | §2.6 |
@@ -1087,16 +1094,16 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261022T060905.150236Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 341 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#341-copied-witnesses-codes-with-synonyms-coined-forms-and-majority-imposing-and-the-move-alone-zg4)）。
+**当前回执**是运行 [`20261022T064310.304329Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 344 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#344-the-last-gaps-rules-read-from-one-share-a-pool-by-its-majority-what-the-claims-do-not-read-feeding-from-a-step-goals-along-a-lineage-a-source-before-a-juncture-zg7)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,484 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,512 条定理 |
 | 实例模块 | 7 个模块，581 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 301 个模块，13,318 条定理 |
-| 审计的脊柱声明 | 18,142 |
+| 闭包（核心、环与根基） | 301 个模块，13,346 条定理 |
+| 审计的脊柱声明 | 18,176 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 202 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。

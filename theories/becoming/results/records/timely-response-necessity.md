@@ -62,7 +62,7 @@ Necessary bound, not sufficient control, complete knowledge or a universal scien
 **Preserved conditions:** Finite weights, opposite targets, common readout and timely-reach decision. [FallibleInquiry.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean)
 
 
-**Used by:** [how-much-difference-arrives](how-much-difference-arrives.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [a-source-before-a-juncture](a-source-before-a-juncture.md) · [how-much-difference-arrives](how-much-difference-arrives.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

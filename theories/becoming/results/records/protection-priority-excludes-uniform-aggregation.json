@@ -238,7 +238,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
       "role": "proof",
-      "sha256": "2b1cfc252a2099b5e7ae9da5dae21f20a5c7e1a2c73e8b31abe0c20378c1364b",
+      "sha256": "1c326a77df4cea25bf95130c834195d8d5faa9e809e2f340bf6ceae95634c6db",
       "declarations": [
         "Becoming.Lexical.Above",
         "Becoming.Lexical.BasicPriority",
@@ -293,6 +293,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -305,7 +311,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Lexical",
       "success_pointer": "/status",
       "success_value": "passed"

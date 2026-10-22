@@ -49,6 +49,8 @@ Bounded mutation accumulating along a lineage.
 - **formal-reuse**: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). Its one-step law is applied along a lineage.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries lunyu-yin-sun-yi).
 
+**Used by:** [a-goal-along-a-lineage](a-goal-along-a-lineage.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -61,6 +63,7 @@ Bounded mutation accumulating along a lineage.
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `Need drift along a lineage`, `世系上之需要漂移`, `Becoming.Flow.transmitted_along`
 

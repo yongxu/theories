@@ -90,6 +90,8 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 - related, not a proved adapter: [comparison-within-reach](comparison-within-reach.md). Advances this result: for any significance covering what a part has reached before each step, the comparison with and without the part is the axiom's (Flow.Balances.comparison_within_reach), so the covering condition of Web.retains_bounded_iff_includes follows from the dynamics.
 - related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). Significance bounded by each center's closure is the least making every presupposition sub-true; route (b) and the axiom are one presupposition at narrow and at wide scope (presupposition_scopes).
 
+**Used by:** [feeding-from-a-step](feeding-from-a-step.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -120,6 +122,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `Becoming.bounded_whole`, `Becoming.Web.retains_bounded_iff_includes`, `Becoming.Web.retains_bounded_iff_retains`, `Becoming.Flow.within_closure_iff_retains`, `Becoming.Overshoot.within_closure_iff_retains`, `Becoming.Clearing.within_closure_yet_loses`
 

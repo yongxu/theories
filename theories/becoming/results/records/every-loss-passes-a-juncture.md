@@ -70,7 +70,7 @@ The earlier treatise's 机 (补篇一 §八, §十一), two continuations leadin
   - Preserved conditions: Configurations a list holds; steps decided. [Undecided.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean)
 - related, not a proved adapter: [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md). A symmetric process carries junctures in pairs under an exchange (Branching.Symmetric.juncture).
 
-**Used by:** [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md)
+**Used by:** [a-source-before-a-juncture](a-source-before-a-juncture.md) · [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +95,7 @@ The earlier treatise's 机 (补篇一 §八, §十一), two continuations leadin
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `every loss passes a juncture`, `每次失去都经过一个关节`, `机 (AI reading)`, `护闭 as keeping (AI reading)`, `Becoming.Branching.loss_passes_juncture`, `Becoming.Branching.keeping_greatest`, `Becoming.Branching.lpo_of_junctures_found`
 

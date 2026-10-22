@@ -320,7 +320,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
       "role": "proof",
-      "sha256": "68bd784a3af4d22a133ba01145857d7850960ddc172193ee55736a9fb68b72a8"
+      "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",

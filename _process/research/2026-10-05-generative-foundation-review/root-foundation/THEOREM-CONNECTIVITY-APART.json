@@ -2371,6 +2371,21 @@
    "module": "Becoming.SharedCodes",
    "category": "model-witness",
    "reason": "Two formations holding different forms rest under taking what most hold: one constructed model (ZG4)."
+  },
+  "Becoming.Lexical.BasicPriority.same_claims_alike": {
+   "module": "Becoming.Lexical",
+   "category": "general-structure",
+   "reason": "Under BasicPriority alternatives realizing the same claims are compared alike: a law of every comparison of two tiers of claims on any type of alternatives; the base supplies no reading of its vocabulary (ZG7)."
+  },
+  "Becoming.Lexical.Above.agent_adjoined": {
+   "module": "Becoming.Lexical",
+   "category": "general-structure",
+   "reason": "A fresh basic claim held by one alternative and not the other puts it above: a law of the lexical order with adjoined claims on any type (ZG7)."
+  },
+  "Becoming.Web.majority_outvoted": {
+   "module": "Becoming.SelectionPool",
+   "category": "general-structure",
+   "reason": "Where more than half the members read alike on two histories, taking what most read goes alike on them: a counting law of every majority reading over a list of members, in its own vocabulary (ZG7)."
   }
  },
  "instances": {

@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "id": "a-source-before-a-juncture",
+  "title": {
+    "en": "A source must arrive before the juncture",
+    "zh": "来源须在机前到达"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "Where a source has not reached a reader by D, a reader whose step at x is chosen from its answer read through its couplings takes the same step in both courses; where the chosen steps keep s in one course and lose it in the other, x is a juncture and the source has, not not, reached the reader.",
+    "zh": "来源到 D 未达读者时，在 x 处之步由其至 D 经耦合所读之答选出之读者，于两历程取同一步；所取之步在一历程保 s、另一失之时，x 是机，且来源不能未达读者。"
+  },
+  "laws": [
+    {
+      "en": "Not reached, the step chosen at x is the same in both courses, and a step losing s in one loses it in the other.",
+      "zh": "未达，则在 x 所取之步两历程相同，在一历程失 s 之步在另一亦失。",
+      "declarations": [
+        "Becoming.TimedResponse.same_step_unreached"
+      ]
+    },
+    {
+      "en": "Chosen steps keeping s in one course and losing it in the other: x is a juncture for s and the source has, not not, reached the reader by D.",
+      "zh": "所取之步在一历程保 s、在另一失之：x 是 s 之机，且来源到 D 不能未达读者。",
+      "declarations": [
+        "Becoming.TimedResponse.turned_at_juncture"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the hypotheses of answer_alike_before (balance, the same present formations, common start, response through coupling); the reader at the same configuration x in both courses is supplied.",
+      "zh": "不加公理；answer_alike_before 之前提（衡、同一在场之形成、同一起点、经耦合回应）；读者在两历程处于同一构形 x 为所设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the reader is at x in both courses, or that a step is chosen from the answer.",
+      "zh": "读者在两历程皆处于 x，或其步由答选出。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The converse found, not only not refuted: that needs ReachedBy decided.",
+      "zh": "逆向之发现，而非只不可驳：须 ReachedBy 可判定。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Early warning: an intervention changes an outcome only if its signal arrives before the decision point.",
+    "zh": "预警：干预只在其信号于决断点前到达时才改结果。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+  "aliases": [
+    "A source must arrive before the juncture",
+    "来源须在机前到达",
+    "Becoming.TimedResponse.same_step_unreached"
+  ],
+  "dependencies": [
+    {
+      "id": "every-loss-passes-a-juncture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its juncture, with timed response.",
+        "zh": "其机，与限时之回应。"
+      }
+    },
+    {
+      "id": "timely-response-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its answer_alike_before, at a juncture.",
+        "zh": "其 answer_alike_before，在机处。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries laozi-sz-weizhi-yuweiyou, laozi-sz-bu-shishi).",
+        "zh": "陈述其对应所发现之缺口（条目 laozi-sz-weizhi-yuweiyou、laozi-sz-bu-shishi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TimedResponse.same_step_unreached",
+        "Becoming.TimedResponse.turned_at_juncture"
+      ],
+      "sha256": "2fafdb411e7b0b9236636f0d11b73eb291cd2c7ebdc5179cf8377c4d71dca544"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Junctures",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

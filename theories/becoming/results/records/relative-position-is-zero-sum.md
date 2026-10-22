@@ -90,6 +90,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `the game of relative position`, `相对位置的博弈`, `zero-sum game of relative position`, `relative position is zero-sum`, `相对位置是零和的`, `position does not protect`, `Becoming.RelativePosition.change_balances`, `Becoming.RelativePosition.not_all_rise`, `Becoming.Flow.race_ends_greatest`, `Becoming.Flow.ends_at_race_end`
 

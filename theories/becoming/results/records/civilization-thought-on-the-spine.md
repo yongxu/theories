@@ -83,6 +83,13 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 - related, not a proved adapter: [censuses-of-the-xiang-and-tuan](censuses-of-the-xiang-and-tuan.md). States gaps its map found (ZG).
 - related, not a proved adapter: [bands-of-the-three-powers](bands-of-the-three-powers.md). States gaps its map found (ZG).
 - related, not a proved adapter: [one-search-one-line](one-search-one-line.md). States gaps its map found (ZG).
+- related, not a proved adapter: [two-rules-lock-together](two-rules-lock-together.md). States gaps its map found (ZG).
+- related, not a proved adapter: [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md). States gaps its map found (ZG).
+- related, not a proved adapter: [a-pool-read-by-its-majority](a-pool-read-by-its-majority.md). States gaps its map found (ZG).
+- related, not a proved adapter: [what-the-claims-do-not-read](what-the-claims-do-not-read.md). States gaps its map found (ZG).
+- related, not a proved adapter: [feeding-from-a-step](feeding-from-a-step.md). States gaps its map found (ZG).
+- related, not a proved adapter: [a-goal-along-a-lineage](a-goal-along-a-lineage.md). States gaps its map found (ZG).
+- related, not a proved adapter: [a-source-before-a-juncture](a-source-before-a-juncture.md). States gaps its map found (ZG).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -110,6 +117,7 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 - 22 October 2026, WH1 and SAT1: the first two gaps, a conjunctive or graded whole and saturation of a coupling, are stated (records a-whole-of-every-part, a-coupling-saturated-by-what-it-has-carried; study sections 333 and 334); the five entries naming them read the new laws and their gap notes point to them. The map's kinds and counts are unchanged.
 - 22 October 2026, ZG1-ZG3: 25 entries' gaps are stated (sixteen records; study sections 338-340), their readings revised and gap notes pointing to the laws; one-sided and local regulation, equal division and copying growth leave the gap list. The map's kinds and counts are unchanged.
 - 22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.
+- 22 October 2026, ZG7: the last open gap notes. Nine entries are stated (seven records; study section 344), 老子七十九章 answered by laws on the spine with its signed form out of scope, 孟子「亲亲而仁民」 marked a scope remark, and 唯识「無因」 left open as the chapter's open problem with its reason. The map's kinds and counts are unchanged.
 
 </details>
 

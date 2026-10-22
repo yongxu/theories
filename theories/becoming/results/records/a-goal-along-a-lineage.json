@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "id": "a-goal-along-a-lineage",
+  "title": {
+    "en": "A goal along a lineage",
+    "zh": "目标沿世系"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "A goal carried at each step passes down a lineage where it passes across each descent and each member keeps it until it gives; descendants of carriers carry it exactly where it passes across every descent from a carrier.",
+    "zh": "每步所带之目标，在其跨每一降皆传、每员在给予前守之之处，沿世系下传；带目标者之后代皆带之，恰在目标跨每一自带目标者之降皆传之处。"
+  },
+  "laws": [
+    {
+      "en": "Along a lineage, with the goal passed at each descent and kept until each member gives, every member carries it from its first standing step.",
+      "zh": "沿世系，目标每降皆传、每员给予前守之，则每员自其首立之步带之。",
+      "declarations": [
+        "Becoming.Flow.goal_along"
+      ]
+    },
+    {
+      "en": "Passing across every descent from a carrier is equivalent to the goal passing down every lineage whose members keep it, from a carrying founder.",
+      "zh": "跨每一自带目标者之降皆传，等价于目标沿每一成员守之、始祖带之之世系下传。",
+      "declarations": [
+        "Becoming.Flow.goal_descends_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the goal is any predicate of steps and formations.",
+      "zh": "不加公理；目标是步与形成上之任一谓词。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any goal passes across a descent: the condition is not derived from descent.",
+      "zh": "任一目标跨降而传：此条件不由降推出。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Vertical transmission of a trait: inheritance as a condition at each generation.",
+    "zh": "性状之纵向传递：遗传为每代之条件。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+  "aliases": [
+    "A goal along a lineage",
+    "目标沿世系",
+    "Becoming.Flow.goal_along"
+  ],
+  "dependencies": [
+    {
+      "id": "need-drift-along-a-lineage",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its lineages, with a goal in place of a need.",
+        "zh": "其世系，以目标代所需。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries zhongyong-shan-ji-ren-zhi-zhi).",
+        "zh": "陈述其对应所发现之缺口（条目 zhongyong-shan-ji-ren-zhi-zhi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.goal_along",
+        "Becoming.Flow.goal_descends_iff"
+      ],
+      "sha256": "ff397af9f86d0a1e4e7546cb8072c350b4b34e8574a751f31f491b93af480e66"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d64492d2119f409a5e92b5e3d9cb7ca2279cca01b8c300181d035b2f3f417cd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "12ef364f487ccba6579814eb19d3041fe44ade91e8d824cac656290cc9100719"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d0b2ccf550e981dd4b66dcbf261b0583c15d6d831b255ad1cd31fd9fc81b94d7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Evolution",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

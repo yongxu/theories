@@ -113,6 +113,7 @@ Roles arise through shared living and formed dependence; causation, benefit and 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 
 Aliases: `Practical judgment G0/J1–J4`, `Becoming.Judgment.better_iff_betterAt`, `Becoming.Judgment.frontier_exists`, `Becoming.exists_undominated`, `J1–J4 in the core`, `实践承诺在核心中`, `Becoming.FrontierFrames.Priority`, `Becoming.FrontierFrames.choice_exists_iff_weakly`, `Becoming.FrontierFrames.Priority.kept_required`, `Becoming.FrontierWorlds.sole_giver_required`, `Becoming.FrontierWorlds.Discharged.no_residual`
 
