@@ -295,11 +295,11 @@
 <a id="what-a-collectives-continuation-needs"></a>
 ### 4.3 相对位置，与集体的延续需要什么
 
-**要点。** 一个部分相对于其他部分读出的位置按计数相加为零：它的上升是其余的下降之和，没有变化能提高每个部分。位置不保护：联合超出经依存在其终点终结一个部分，不论其位置。集体的延续问的是运行，不是位置：保持一个部分不是更新，整体没有一个数，条件是相连而不是相乘，反向回路须及于规则怎样读取，不变量是律，不是公理。
+**要点。** 一个部分相对于其他部分读出的位置按计数相加为零：它的上升是其余的下降之和，没有变化能提高每个部分。位置读各量，只读到差一个各部分共有的量为止，所以它从下以展布界定总共所汲，从不从上界定。位置不保护：联合超出经依存在其终点终结一个部分，不论其位置。集体的延续问的是运行，不是位置：保持一个部分不是更新，整体没有一个数，条件是相连而不是相乘，反向回路须及于规则怎样读取，不变量是律，不是公理。
 
-**定理。** 本节陈述 `RelativePosition.change_balances`、`Flow.ends_at_race_end`、`Renewable.kept_part_not_renewal`、`Viability.kernel_and_iff`、`ChoicePoint.no_rule_decides_joint`；完整陈述见[英文版 §4.3](THE-THEORY-OF-BECOMING.md#43-relative-position-and-what-a-collectives-continuation-needs)。
+**定理。** 本节陈述 `RelativePosition.change_balances`、`RelativePosition.keeps_iff_common`、`RelativePosition.exceeds_iff_spread`、`Flow.excess_iff_spread`、`RaceWithin.same_positions_apart`、`Flow.ends_at_race_end`、`Renewable.kept_part_not_renewal`、`Viability.kernel_and_iff`、`ChoicePoint.no_rule_decides_joint`；完整陈述见[英文版 §4.3](THE-THEORY-OF-BECOMING.md#43-relative-position-and-what-a-collectives-continuation-needs)。
 
-记录：[conditions-kept-together](../results/records/conditions-kept-together.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)、[protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)。
+记录：[conditions-kept-together](../results/records/conditions-kept-together.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)、[what-position-reads](../results/records/what-position-reads.md)、[protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)。
 
 ### 4.4 等待给予的给予、容忍、回路、步调与调节
 
@@ -330,7 +330,9 @@
 
 **要点。** 立场、其区域与意义都在展开之内形成。立场自身的区域是已形成关系的区域，不是所有者；意义 `sig` 是唯一给出的评价参数。一个标准获得影响、认出其目标、有根据、被遵循，是四个不同的问题；形成的标准可以错，学得一种倾向不是学得一个理由。所表示的动力学不含意义，所以不推出任何意义（`Web.significance_undetermined`）。
 
-**定理。** 本节陈述 `Web.selfValuation_own_least`、`Web.significance_undetermined`、`LivingSignificance`；完整陈述见[英文版 §5](THE-THEORY-OF-BECOMING.md#5-how-evaluation-forms)。
+中心对其所及能知者每步至多增一耦合链接，故它从所读者能表示的区域沿耦合链接而划（CK1，`TimedResponse.answer_alike_far`）；中心为相互所及之环，其行动回返恰当其环于影响下封闭，此为全环之性质；一链接闭环即成中心，有限多形成时每一形成之所及中皆有之；行动回返处，其所作用者皆在其能表示者之内，仅依阈值耦合时恰相合（CK2，`Flow.reachReturns_iff_closed`）。回返之环是否沿历程持续，仍开放。
+
+**定理。** 本节陈述 `Web.selfValuation_own_least`、`TimedResponse.answer_alike_far`、`Flow.reachReturns_iff_closed`、`Web.significance_undetermined`、`LivingSignificance`；完整陈述见[英文版 §5](THE-THEORY-OF-BECOMING.md#5-how-evaluation-forms)。
 
 记录：[own-good-to-reachable-living-significance](../results/records/own-good-to-reachable-living-significance.md)、[relational-generative-comparison](../results/records/relational-generative-comparison.md)、[relational-reading-comparison](../results/records/relational-reading-comparison.md)、[protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)、[metaethical-core-characterization](../results/records/metaethical-core-characterization.md)。
 
@@ -473,7 +475,9 @@
 
 **要点。** 合起来把差距移到池的耦合闭包，并不去掉它。池在此闭包之外联合所做的，只经此闭包之外把差别耦合分开的形成被分开，例如其支持被该动作改变者；闭包之内没有什么响应它。耦合界定池的动作所响应者，而不固定它：在界之内，每个成员所遵循的律决定。差别是池所加的。已知的对齐路径（RLHF 与奖励建模、宪法式 AI、辩论与可扩展监督、基于可解释性的监督、有保证的安全 AI、影响度量）都读作经耦合的选择，各有使之成为选择的前提、由这些律得出的差距，以及这些律所不给的（安装与服从）；接上系统闭包之内的耦合（同类输入的反馈、读取系统本身）只加规模或安装的证据，不加所及。这些是约束，不是策略，也不是排序 [AI 读法]（[研究第 282 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1)）。
 
-**定理。** 本节陈述 `Flow.act_unselected_pool`、`Flow.act_selected_by_pool`、`ExchangeLaw.Through.selectsThroughAll`、`ExchangeLaw.response_not_fixed_by_coupling`、`Web.pool_adds`；完整陈述见[英文版 §7.4](THE-THEORY-OF-BECOMING.md#74-alignment-for-all-pooled-coupling-across-intelligences)。
+池的所及随其成员而存；经自身合池耦合接纳下一批成员的池，耦合进一损失只如无此损失之历程本会如此，要耦合进更多，须有不由池之耦合所定的接纳（PL1）。已发表的训练与监测流程，其信号皆为决定者所读者之函数，§7.1 的前提依构造成立；三项已发表的测量见到 `Optimum.least_of_room` 的余地条款（CR1）[AI 读法]。
+
+**定理。** 本节陈述 `Flow.act_unselected_pool`、`Flow.act_selected_by_pool`、`ExchangeLaw.Through.selectsThroughAll`、`ExchangeLaw.response_not_fixed_by_coupling`、`Web.pool_adds`、`Web.RecruitsThrough.alike_iff`；完整陈述见[英文版 §7.4](THE-THEORY-OF-BECOMING.md#74-alignment-for-all-pooled-coupling-across-intelligences)。
 
 记录：[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)、[the-gap-for-ones-own-act](../results/records/the-gap-for-ones-own-act.md)、[alignment-approaches-under-the-selection-laws](../results/records/alignment-approaches-under-the-selection-laws.md)。
 
@@ -485,6 +489,8 @@
 
 记录：[alignment-direction-under-widening](../results/records/alignment-direction-under-widening.md)。
 
+第三项冻结检验以跨状态推广的学习者为之（EM1）：律在每一历程上成立，而在锁定一侧桥接失败；六个锁定设置中有三个，这些学习者达到节制而保住斑块，终局读取加权 32 者在内。故 CG2 的 X2 是关于表格学习者的发现。
+
 ### 7.6 所请求的改变须是可执行的序列
 
 **要点。** 接受一个所请求的改变（如停止或修订）的倾向，不意味着这一改变能到达系统并完成。所检查的条件包括恢复期间为关机保留的余量、中断改变后恢复证据及到达停止的界、保证到达的判据，以及风险界与实际结果的区别。每项都是关于所述协议的条件推理；部署需要对所识别的安装的另外证据。
@@ -495,7 +501,7 @@
 
 ### 7.7 仍开放的
 
-**要点。** 看见不是估值，耦合不是服从：§7.1–§7.4 的规律界定选择能分开者与动作所响应者，而留开哪些差别重要、系统的动作遵循哪个律，以及池怎样形成、怎样抵御劫持。
+**要点。** 看见不是估值，耦合不是服从：§7.1–§7.4 的规律界定选择能分开者与动作所响应者，而留开哪些差别重要、系统的动作遵循哪个律。池之成员一面已述（PL1）：经自身耦合招募的池只如其无损失之历程而耦合进损失，故抵御隐藏损失的劫持须有池尚未读者所接纳的成员；实际的池如何接纳，仍开放。
 
 <a id="理论的完整陈述"></a>
 <a id="理论的总陈述"></a>
@@ -820,6 +826,7 @@
 | [共同保持的条件，以及保持一个部分](../results/records/conditions-kept-together.md) | 不加前提的定理 | — | §4.3 |
 | [基本条件优先](../results/records/protection-priority-excludes-uniform-aggregation.md) | 在所述前提下的定理 | 生命意义、C、J1–J4 | §4.3 |
 | [相对位置是零和的；竞逐只经由依赖终结领先者](../results/records/relative-position-is-zero-sum.md) | 定理，条件在其假设中 | 条件（一条定理） | §4.3 |
+| [位置所读](../results/records/what-position-reads.md) | 无前提定理 | — | §4.3 |
 | [等待给出的给出](../results/records/giving-that-waits-on-giving.md) | 不加前提的定理 | — | §4.4 |
 | [规则可以多快地改变](../results/records/how-fast-a-rule-may-change.md) | 不加前提的定理 | — | §4.4 |
 | [从最坏的开始恢复给出](../results/records/restoring-giving-from-the-worst-start.md) | 不加前提的定理 | — | §4.4 |
@@ -1083,6 +1090,8 @@
 ### 8.7 经验对应
 
 共同条件与每个机制的实际实现；实际展开是否满足前提；平衡是带局部性的第一定律：读作相对于一个环境的可用功，只由参与的交换携带的量恰在没有条件产生它之处使水平平衡，没有局部性的总量守恒则不然，储存处的第一定律与熵平衡使水平恰在没有储存生熵之处平衡（`balances_iff_stores_generate_nothing`），交换处的同样两条给出其㶲平衡（`exergyBalance_of_laws`），故平衡与耗散出自同一读法；在核心上，沿一个关系使一步平衡的转移，恰在总量于该关系封闭的每个家族上守恒时存在，只读相关关系项、守恒总量的规律给出这一守恒（`Continuity.balancing_iff`、`Continuity.conservedOn_of_law`）；所述的耗散强于统计的第二定律，只在取用不可逆于整单位或毁灭有 Landauer 下限之处由它推出；位置／变迁网按其自身定义满足前提；余量已被测量（MQ1–MQ6，[experiments/margin-measured](../../../experiments/margin-measured/README.md)，每项检验都在运行之前或读任何留出数值之前冻结）：余量之律的冻结其余的核算在测量数据上是恒等式，其检验在于一个体制的余量（§2.3）；在实验室中余量预测阈值：在模拟的 Allee 酵母中以干预测得，它与最大持续汲取一起界定破断时间，不论历史；在真实酵母上（Dai 等 2012），以四个稀释因子拟合的生长映射预测了留出体制的需求及其所分的命运（每侧 93–100%，无需求的零模型 68–81%），而同等密度下所给随稀释下降（事后），故需求属于体制；在因稀释升高或蔗糖下降而被推过折叠的酵母中（Dai、Korolev 与 Gore 2015；MQ6），恒定汲取下水平即状态，并在实验之间相符到 8% 以内，体制的余量在远离破断处比冻结其余更好地预测水平，但种群比在恒定体制中测得的曲线所说早三天和至少六天破断，因为这些曲线把折叠放得太晚；在已评估的鱼类种群中（RAM Legacy，三项检验共 258 个种群），水平不是状态，由水平读出的所给预测不如冻结其余；状态是水平、近期所给与一个滞后，体制的步与冻结其余是同一规律的两端，种群靠近后者；冻结其余的余量除以净汲取对破断风险排序正确，但不给出破断时间，因为所给向汲取移动，汲取随种群而变；共享条件上的汲取相加而损害不相加；盲汲取对照余量只对精确的最优者预测副作用；这些关系到论题 [T1](#t1-持续证明的是联合汲取) 与 [T2](#t2-处于汲取下的可更新条件的状态)（研究 [§253](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1)、[§266](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2)、[§272](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3)、[§277](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4)、[§280](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5)、[§314](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#314-the-margins-time-to-break-past-the-fold-in-the-lab-mq6)）；智慧在实际的人与 AI 中怎样形成；更强的方向假说（实在一般地发展出更多共享而更有回应的更新）开放，不是前提。
+
+选择之律于实际流程与学习者：已发表的流程依构造满足 §7.1 的前提，三项已发表的测量见其余地条款（CR1）；跨状态推广的学习者在每一历程上遵循律，而在锁定一侧不遵循 CG2 的桥接（EM1）；以语言模型行动者经其奖励反馈而选择的冻结检验（LA1）为其次。
 
 关于实际系统的完整强度的主张，各附会驳倒它的观察与至今冻结的检验：[论题与猜想](#theses-and-conjectures)。
 

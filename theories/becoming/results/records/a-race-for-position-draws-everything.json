@@ -223,7 +223,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "eff6172f45464f2b80fbd2e0f8d5eb3c0869e2af74c68212655a9246f18e805c"
+      "sha256": "8f2135022917a2e4f6ee7121d63c809d2b37eb699719e283706092675dbe337b"
     }
   ],
   "proof_bindings": [
@@ -239,6 +239,10 @@
     {
       "en": "22 October 2026: added (RP1): drawers in turn ranking position, the race of RelativePosition read on the draws; study section 355.",
       "zh": "2026年10月22日：新增（RP1）：按位次排序的轮流抽取者，RelativePosition 的竞争读在所抽之上；研究第 355 节。"
+    },
+    {
+      "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
     }
   ]
 }

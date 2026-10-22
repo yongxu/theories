@@ -85,6 +85,7 @@ Aliases: `a rise past the inflow is drawn from beyond`, `超过流入的上升�
 ### History
 
 - 22 October 2026: added (IF1): the gainless laws of SelectionReach and DrawnBeyond graded by the containing family's inflow, the gainless laws derived as the case of no inflow; study section 355.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 

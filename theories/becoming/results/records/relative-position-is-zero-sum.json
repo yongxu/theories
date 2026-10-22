@@ -330,7 +330,7 @@
         "Becoming.Restored.takeAt",
         "Becoming.Restored.web"
       ],
-      "sha256": "948ffe849a9f2dfa464842ab1d5080a9f6f724bbd303430f054e336dab6bbad7"
+      "sha256": "e81542b402d13537801a820ae58251b8ef43852aaa993bbec39282fd6c9363c3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
@@ -369,12 +369,12 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "bcc33e825c71b8aae3ad574deccc2ed6a54cec6551d5596d5aad6c5bd7f1b45e"
     },
     {
       "path": "theories/becoming/OPENING.md",
       "role": "provenance",
-      "sha256": "3b5d2e130423d314cb0031ef7a3eae12e66be5992474aea6276e578bd4b1ab0d"
+      "sha256": "6785f059d4e099719805d6533b94e408f5caed5455d241e8d8185de59e062224"
     },
     {
       "path": "drafts/2026-10-10-opening/history/OPENING-V7-PROPOSAL.md",
@@ -415,12 +415,18 @@
       "role": "receipt",
       "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "role": "receipt",
+      "sha256": "67438a4250795993c0b215b4891d7d83788ee830e41db1e945319b76b3c45904",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RelativePosition",
       "success_pointer": "/status",
       "success_value": "passed"

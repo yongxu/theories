@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 289 | 12,727 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 292 | 12,795 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -110,6 +110,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CensusBinding.lean](lean-declarations/becoming-core.md#module-970a8214feea) | Becoming pure core |
 | [CensusCounts.lean](lean-declarations/becoming-core.md#module-85b456df5b23) | Becoming pure core |
 | [CensusTable.lean](lean-declarations/becoming-core.md#module-2990dae75c25) | Becoming pure core |
+| [Centers.lean](lean-declarations/becoming-core.md#module-c4dcc5c8def4) | Becoming pure core |
 | [ChanceAdequacy.lean](lean-declarations/ethics.md#module-166f8dbba86d) | Normative grounding and generative direction |
 | [ChanceFloors.lean](lean-declarations/becoming-core.md#module-db39c7932968) | Becoming pure core |
 | [ChanceGrounding.lean](lean-declarations/ethics.md#module-d2e31b48895f) | Normative grounding and generative direction |
@@ -487,6 +488,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LastChange.lean](lean-declarations/becoming-core.md#module-9e3b47c1ecb7) | Becoming pure core |
 | [Lasting.lean](lean-declarations/becoming-core.md#module-2804e16a6285) | Becoming pure core |
 | [LastingRuns.lean](lean-declarations/becoming-core.md#module-48d8228de025) | Becoming pure core |
+| [Latency.lean](lean-declarations/becoming-core.md#module-4acc2ee430c6) | Becoming pure core |
 | [LawAlongRun.lean](lean-declarations/becoming-core.md#module-354b3396bde2) | Becoming pure core |
 | [Laws.lean](lean-declarations/becoming-core.md#module-7666864624e3) | Becoming pure core |
 | [Learnable.lean](lean-declarations/becoming-core.md#module-72648641cffc) | Becoming pure core |
@@ -611,6 +613,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PlasticityPreparation.lean](lean-declarations/shared.md#module-c527ff17c751) | Organizational formation through revisable evaluation |
 | [PlasticityWitness.lean](lean-declarations/shared.md#module-ac933f076498) | Organizational formation through revisable evaluation |
 | [PluralRecords.lean](lean-declarations/abstraction.md#module-2a54e07465df) | Abstraction, applicability and constitution |
+| [PoolCourse.lean](lean-declarations/becoming-core.md#module-034ebac54637) | Becoming pure core |
 | [PoolResponse.lean](lean-declarations/becoming-core.md#module-618dbf62e7d3) | Becoming pure core |
 | [PooledEnvelopes.lean](lean-declarations/becoming-core.md#module-df2e497ed5db) | Becoming pure core |
 | [Population.lean](lean-declarations/becoming-core.md#module-161ef92f702e) | Becoming pure core |

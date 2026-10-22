@@ -477,7 +477,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "8f2135022917a2e4f6ee7121d63c809d2b37eb699719e283706092675dbe337b"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-18-the-light-and-alignment-for-all.md",
@@ -591,6 +591,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosureOf, WithinClosureOf.of_member, withinClosureOf_iff to Becoming.Frame; WithinClosure, WithinClosure.of_rel to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosureOf, WithinClosureOf.of_member, withinClosureOf_iff to Becoming.Frame; WithinClosure, WithinClosure.of_rel to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
     }
   ],
   "text_versions": [

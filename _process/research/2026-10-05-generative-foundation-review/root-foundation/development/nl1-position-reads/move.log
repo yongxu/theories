@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "batch": "opening-v12",
+    "entries": 1,
+    "files_moved": 1,
+    "conflicts": 0,
+    "live_files_rewritten": 0,
+    "references_rewritten": 0,
+    "references_by_kind": {},
+    "rewritten_links_not_resolving_after_move": 0,
+    "generated_pages_to_rerender": 0,
+    "frozen_files_referring_by_role": {},
+    "unrewritten_live_mentions": 5,
+    "moved_markdown_links_broken_by_move": 7,
+    "untracked_or_ignored_left_behind": 0
+  },
+  "conflicts": [],
+  "applied": true,
+  "receipt": "_process/architecture/moves/opening-v12.json",
+  "history_roots": [
+    "drafts/2026-10-10-opening/history"
+  ],
+  "verification_errors": [],
+  "next": "Review `git status`; run make research-render, make research-check and research.py links; the integrator commits."
+}

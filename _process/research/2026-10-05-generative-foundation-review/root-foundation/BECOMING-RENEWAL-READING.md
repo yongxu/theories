@@ -15856,3 +15856,94 @@ The proof goes from the horizon back. A drawer after the first keeps nothing: wh
 The race for position differs from the race for one's own draw in two ways. Keeping costs a drawer `k` times as much in its position as in its own count. And one's own count is indifferent to what others draw later, position is not, so where leaving something stops what stands next a drawer gains position by keeping it to deny the regrowth to the first drawer (`Stopping`). In that witness the first drawer still draws everything on the path of play, so nothing is left to keep there: the premise binds what is perfect, not the path the witness takes. The premise `G t 0 ≤ G t x` holds of every law under which more left never stands less next; it asks less than that, only that nothing left is the least.
 
 What is not shown: that actual races are played in turn, by drawers ranking position alone, over a known horizon; drawing at once ranking position (AtOnce with the position count), and floors, are not treated. That a race of position cannot raise everyone stays the premise-free half; this law is the half that says what drawers racing for position do to what they draw on.
+
+## 356. A pool that recruits through itself (PL1)
+
+*Delta.* [what-pooled-coupling-reaches](../../../../theories/becoming/results/records/what-pooled-coupling-reaches.md) and [what-a-pools-acts-respond-to](../../../../theories/becoming/results/records/what-a-pools-acts-respond-to.md) stated a pool's reach for a fixed group, and left "how a pool forms, lasts and resists rules written by those it rewards" open. Pools of intelligences change members, and often choose them. `Becoming.PoolCourse` reads a pool along a run, its members at each step a claim about the history (`pool : Nat → (Nat → C → Nat) → F → Prop`), and states what it can come to couple into.
+
+*Laws.* A member that has coupled two histories apart keeps the pool apart while it stays (`Web.apart_while_member`); where every member couples them alike, every selection through the pool selects them alike (`Web.selects_alike_of_members`). A pool that admits its next members through its own pooled coupling (`Web.RecruitsThrough`), from the same members at the start, has the same members under both histories up to and including the first step it couples them apart (`Web.RecruitsThrough.members_alike`), and the pool along either history separates them there (`Web.RecruitsThrough.first_apart`). It never couples them apart exactly when the pool along the other never does (`Web.RecruitsThrough.alike_iff`), and then every selection through it at every step selects them alike (`Web.RecruitsThrough.selects_alike`). Read with the second history the course without a loss: a self-recruiting pool comes to couple into a loss only as its course without the loss would, and nothing it selects, its next recruitment included, responds to the loss before then. Witnesses (`PoolCourse`): a keeper alone never couples a lost habitat apart; a pool calling a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once; a pool that schedules the reader in every history couples it apart at step 2, through a member the course without the loss holds too.
+
+*Premises.* `RecruitsThrough` and the same members at the start. No axiom: 17 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Boundary.* The laws say what a self-recruiting pool cannot come to couple into, not whether actual pools recruit so (CR1 reads the published arrangements for AI evaluation). They are the membership form of `ClosedCapture.lock_outlives_loss`, where rule and reading are formed from the share; MA2, readers counted as the population counts them, is another mechanism and is not reproved.
+
+*Output → input.* Chapter §7.4 and §7.7; record [a-pool-that-recruits-through-itself](../../../../theories/becoming/results/records/a-pool-that-recruits-through-itself.md); CR1's section on evaluators; the generative-alignment overview.
+
+## 357. What a center can come to know of its region, step by step (CK1)
+
+*Delta.* §8.1 item 3 left open "how a center forms, represents its region, boundary and dependence, and comes to know what it reaches, step by step; which relation a center's region is drawn along". `Becoming.TimedResponse` had stated that no answer a reader gives through its couplings differs before a potential route reaches what it couples into. `Becoming.Latency` counts routes by their links.
+
+*Laws.* A condition lies within `n` coupling links of the source (`TimedResponse.Linked`). Where every source step is at `S` or later, a route reaches a condition at step `t` only within `t − S` links (`TimedResponse.Spread.linked`), so whatever reaches a reader by `T` came through a condition coupled into it within `T − S` links (`TimedResponse.reachedBy_linked`, `TimedResponse.not_reached_of_far`). Under the deadline premises, no answer it gives through its couplings differs by `T` otherwise (`TimedResponse.answer_alike_far`). In `Relay` (source, relay, reader) the reader's answer is alike at step 2 and differs at step 3, the bound attained at two links (`Relay.answers_two_and_three`, `Relay.not_reached_at_two`, `Relay.reached_at_three`).
+
+*Reading* [AI reading]. The region a center can represent from what it reads is drawn along coupling links, by the law and not by choice, and grows by at most one link a step: the answer to "which relation", for the region represented. How a center forms as a formation, and whether the region it acts for is the one it can represent, are not derived.
+
+*Premises.* TimedResponse's deadline premises where stated, and every source step at `S` or later. No axiom: 11 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Output → input.* Chapter §5 and §8.1 item 3; record [what-a-center-can-know-by-a-step](../../../../theories/becoming/results/records/what-a-center-can-know-by-a-step.md).
+
+## 358. The coupling closures of deployed training pipelines (CR1)
+
+*Delta.* The open correspondence item of chapter §7.7 and §8.7, and AP1's Next ("correspondence data on actual systems for each premise"). The study: [CR1](development/cr1-coupling-correspondence/CORRESPONDENCE.md).
+
+*Result.* In each published way of selecting a deployed model's behaviour, the training or monitoring signal is a function of what its deciders read, so §7.1's premise holds by construction. The ways read are reward models trained on human preference, AI feedback against written principles, direct preference optimization, process supervision, debate and deployment monitoring. Three published measurements find the room clause of `Optimum.least_of_room`: optimizing through the deciders' coupling raised what they read and lowered something they do not read. They are reward overoptimization against a gold reward (Gao, Schulman and Hilton 2022), judges' false positives rising 24.1% and 18.3% under RLHF (Wen et al. 2024), and sycophancy (Sharma et al. 2023). The theory predicted none of their magnitudes. Release decisions read through their evaluators. By PL1, an evaluator chosen through what the pool already reads joins as the course without a hidden difference would bring it, and an admission the pool's coupling does not fix can couple into more.
+
+*Standing.* Construction, identification and measurement are kept apart (the study's first section). Reviewed at its stated scope; AI-written; not independently reviewed. Record [coupling-closures-of-training-pipelines](../../../../theories/becoming/results/records/coupling-closures-of-training-pipelines.md).
+
+## 359. The rest-outruns law on learners that generalize (EM1)
+
+*Delta.* CG1 and CG2 tested the selection laws on tabular learners. EM1 ([experiments/commons-outrun-generalizing](../../../../experiments/commons-outrun-generalizing/README.md)) runs CG2's conditions with learners that generalize across states: policy-gradient learners trained on whole-episode returns. Predictions were frozen at `42cf03228` before any run on a test condition.
+
+*Verdicts.* The law held on every course: 9,026 outrun windows and 12,600 emptied episodes, with zero violations. E1 failed: in three of six locked settings (`k3s1_lam32`, `k3s8`, `k3s1_share`) these learners reached a restraint profile and kept the patch, with the end reading weighted 32 among them. E2 passed (all five open settings kept). E3 passed: the joint learner trained on the returns its acts led to kept the patch, which CG2's temporal-difference joint learner had emptied. So CG2's X2, "no weight of the end reading opens the lock", is a finding about tabular learners. Which of several self-consistent outcomes learners reach depends on the learner.
+
+*Post hoc, not counted.* A policy shared across states carries restraint selected in late-start training episodes, where the rest cannot empty the patch before the end reading, into early states. In the theory's terms the selected object is the parameter vector, a condition every state shares. A frozen follow-up with every training episode starting at step 0 would test this.
+
+*Output → input.* Chapter §7.5 and §7.7; record [the-rest-outruns-the-renewal](../../../../theories/becoming/results/records/the-rest-outruns-the-renewal.md) (correspondence and Next); the generative-alignment overview, whose sentence on the end weight is restated.
+
+## 360. How a center forms, and when the region it acts on is the region it can represent (CK2)
+
+*Delta.* After CK1, §8.1 item 3 left open how a center forms as a formation, and whether the region it acts for is the one it can represent. `Becoming.Feedback` had a formation's reach closure (what it can affect) and influence closure (what can affect it), and `Becoming.MutualDependence` the case where both are the whole. `Becoming.Centers` states where they meet in any flow.
+
+*Laws.* Two formations lie in one loop where each can affect the other's continuation at some remove (`Flow.InOneLoop`): an equivalence, so loops partition the formations. A formation's acts return where whatever it can affect can affect it (`Flow.ReachReturns`). That holds exactly where everything it reaches lies in its loop (`Flow.reachReturns_iff_loop`) and exactly where its loop is closed under affecting (`Flow.reachReturns_iff_closed`); it is a property of the whole loop (`ReachReturns.of_loop`). Where a formation's acts return, everything it acts on lies within its coupling closure, what it can represent (CK1), for every coupling by level (`ReachReturns.represented`), and with coupling by threshold only the two coincide exactly (`Flow.reachReturns_iff_represented`). As exchange grows, loops only merge (`InOneLoop.mono`); returning is not monotone. In `Line`, a acts on b and b not back, so a's acts do not return and b's do; when b comes to exchange with what a depends on, a and b are one loop whose acts return. With finitely many formations listed and reach decided, every formation's reach holds a formation whose acts return (`Flow.exists_reachReturns`): following what a formation acts on and does not hear back from, the reach shrinks strictly until it closes.
+
+*Reading* [AI reading]. A center, read as a formation-level object, is a loop of mutual reach whose acts return: a loop closed under affecting, a sink of the graph of loops. It forms where a link closes a loop, and wherever formations are finitely many there is one downstream of every formation. The region a center acts on is the region it can represent exactly where its acts return; otherwise some formation it acts on can never affect it, which is the gap for one's own act at that formation.
+
+*Boundary.* A formation that affects nothing beyond itself counts as returning, trivially. Returning is a property of reach closures read off one flow, not of persisting along a run; whether a returning loop persists, and which loop a formation draws its own region along when several are read, are not derived.
+
+*Premises.* Reach and influence read through dependence at some step and exchange at some step (`Becoming.Feedback`); finitely many formations and decided reach where stated. No axiom: 22 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Output → input.* Chapter §5 and §8.1 item 3; record [where-a-formations-acts-return](../../../../theories/becoming/results/records/where-a-formations-acts-return.md); the generative-alignment overview.
+
+## 361. What position reads (NL1)
+
+```text
+Result(s): new record what-position-reads.
+Delta: two profiles of amounts give every part of a family the same position exactly where every part's amount
+       differs between them by one amount common to all (RelativePosition.Keeps, keeps_iff_common): positions read
+       the amounts up to a common amount. Adding an amount to every part keeps every position and adds it to the
+       total once for each part (keeps_add); taking the least part's amount from every part keeps every position
+       and leaves the spread above the least part (keeps_least). So with given positions the total is at least the
+       spread (spread_le), every bound is exceeded (keeps_exceeds), and every profile with those positions has its
+       total above r exactly where the spread is above r (exceeds_iff_spread). Witness RaceWithin: the renewer gives two
+       units at every step, as in Race, and its two racers have the race's positions (RaceWithin.keeps), the same greatest part and the same rise of the first;
+       it balances, gives only while active and keeps activity supported; what is taken is within what is given and
+       every part is active at every step, while in Race every part is inactive from step two on
+       (RaceWithin.same_positions_apart). Read on a flow by what a step's takers take, every profile with the
+       step's positions takes more than the step gives exactly where the spread does, and some profile always does
+       (Flow.excess_iff_spread): positions certify joint excess, joint_excess_ends' hypothesis, only through the
+       spread.
+Premises / correspondence: none for the counting laws (whole-number amounts, a finite family with a part).
+       Correspondence: competition read as position, the opening's "winning".
+Evidence: core receipt 20261022T133248.097273Z (passed).
+Boundary: positions certify joint excess at a step only through the spread; the end needs joint_excess_ends' other
+       premises; positions across many steps against a responding renewal, ranks, shares and signed amounts are not
+       treated.
+Output → input: OPENING [^no-law] (what each leaves out; two of the features, read as laws of position, refuted by
+       constructed flows); chapter §4.3 and the record table; record relative-position-is-zero-sum (its next step,
+       positions read otherwise, partly taken: what positions read of amounts).
+```
+
+**What was built.** In `Becoming.RelativePosition`: `Keeps`, `length_pos_of_mem`, `regroup`, `keeps_iff_common`, `keeps_add`, `keeps_least`, `spread_le`, `keeps_exceeds`, `exceeds_iff_spread`; on the flow `Flow.excess_iff_spread`; and the witness `RaceWithin` (`flow`, `web`, `balances`, `acting`, `dependent`, `racers`, `drawn_common`, `keeps`, `drawn_second`, `drawn_renewer`, `first_greatest`, `same_positions_apart`). `Keeps` is stated with the counts the module already had: the change from `a` to `b` keeps a part's position where its rise count is its fall count. The proofs avoid `omega` and the `Nat` lemmas whose reports carry `propext` (`Nat.add_right_cancel`, `Nat.add_sub_assoc`, `Nat.sub_add_cancel`), using the prelude's `add_right_cancel`, `add_sub_of_le` and `Naturals.sub_add_cancel`.
+
+**Why this pushes the note.** The note said that "winning need not measure what lasts" rested on one constructed example, and that no struggle, competition or sovereign self being among the laws was "read off the list of laws, not a theorem". A list read off shows what is listed, not what follows: a feature absent from the list could still be derived from it. A law holds in every world, so a feature that fails in a constructed world is not a law. Read as laws of position, two of the features are now refuted that way: "the greatest continue" fails in `Race` and holds in `Clearing` (already proved, not cited by the note), and "position measures what lasts" fails in `RaceWithin` against `Race`. The general law says why the second fails everywhere and not only in the witness: what positions read of amounts is everything except one common amount, and the total drawn, which balance compares with what is given, is exactly what that leaves out above the spread.
+
+**Self-review.** (1) The exactness is two-sided: `keeps_iff_common` is an equivalence, and `exceeds_iff_spread` gives the lower bound with its attainment, so "positions bound the total only from below, by the spread" is stated, not read. (2) The spread is not nothing: positions alone can force a total above what is renewed, where the parts' amounts are spread wider than what is renewed. The note therefore says "never certify that no more is drawn than is renewed", not "measure nothing", and leaves the opening's body ("need not measure anything of what lasts", Ren's voice) unchanged; the stronger reading ("no position certifies that anything lasts") is offered as a proposal, not applied. (3) The witness reads positions among the two that take, not the renewer: with the renewer in the family, a common shift would need it to draw, which it does not. (4) `RaceWithin` and `Race` have the same renewal (two units at each step the renewer takes part) and the same positions among the racers at every step; the separation is carried by the totals alone (the race's racers draw two more per step jointly), which is the law's point. (5) Board item RP1 (drawers in turn ranking position draw everything, in `Optimum.InTurn`, for OPENING `[^race]`) is the complement: it derives the joint excess from ranking position under stated premises, where this item shows what position reads of the total; neither reproves the other. (6) The composition with `Flow.joint_excess_ends` is proved at a step (`Flow.excess_iff_spread`, which also joins the two arithmetic laws to the base, where the connectivity check had found them used by nothing); the end over many steps still needs that law's other premises, and the record's `does_not_show` says so. (7) The witness was first named `Lasting`; `Becoming.Lasting` is another module's namespace (`Lasting.Reaches`), so it is `RaceWithin`, a race drawn within what is given.
