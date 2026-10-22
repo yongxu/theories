@@ -64,6 +64,11 @@ given does require it: alongside a full taker that continues, a formation living
 the condition ends where its activity does not resume. The witnesses stipulate the activity, as
 those of `Becoming.Continuation` do, and show it consistent with balance, support and dependence;
 the general laws derive the ending. No ethical predicate, ranking or axiom occurs.
+* **Division by exclusive footprints.** Where what the formations take from `c` is what the leaves
+  of a realized joint plan draw, the parts' footprints within their whole's and apart, and the
+  root's within what is given, the joint draw is within what is given (`withinJoint_of_plan`, by
+  `distinct_of_nodup`); under balance, with such a division at every step, the level never falls
+  (`level_kept_of_plans`).
 -/
 
 namespace Becoming

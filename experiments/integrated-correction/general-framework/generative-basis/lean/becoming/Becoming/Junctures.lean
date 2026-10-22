@@ -59,6 +59,11 @@ happens, with no premise beyond what each law names.
 What is not derived: junctures for sets of configurations or for profiles of several
 possibilities; a measure of how many steps a juncture loses; which junctures actual unfoldings
 pass. No ethical predicate, ranking or axiom occurs.
+* **Within the count, and before a juncture.** With every configuration listed and steps decided,
+  what can be had again is had within as many steps as there are configurations
+  (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within
+  that count; at a configuration that is not a juncture, no step can be refuted to keep `s`
+  (`keeps_before_juncture`): choosing is needed only at a juncture.
 -/
 
 namespace Becoming

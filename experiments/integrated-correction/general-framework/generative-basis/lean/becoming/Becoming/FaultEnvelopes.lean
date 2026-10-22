@@ -32,6 +32,9 @@ supplied; this is not Byzantine agreement, a proof of legitimate initial authori
 cryptographic implementation. This states the certificate laws of `FaultTolerantCorrection`
 (8 October) in the core (board item F3C, 18 October 2026). No premise; every declaration has an
 empty axiom report.
+* **Copied witnesses warrant nothing more.** Where each added witness copies one on the roster,
+  supporting as it supports and inside every fault set it is inside, the certificate is unchanged
+  (`copied_roster_same`; `duplicated_roster_same`, the roster listed twice, its case).
 -/
 
 namespace Becoming

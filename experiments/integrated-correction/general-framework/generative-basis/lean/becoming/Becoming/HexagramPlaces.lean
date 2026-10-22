@@ -112,6 +112,14 @@ states them on the configurations and proves what they do under the laws of `Bec
 `waxWane3` is the twisted ring counter on three cells.
 
 No ethical predicate, ranking or axiom occurs.
+* **Censuses and bands.** Every 小象 sentence saying a line is 中 is of a middle place, four other
+  sentences listed apart (`xiaoxiangMiddle_census`); every sentence saying a line's way is spent is
+  of the top place, five others apart (`spent_census`); every sentence of a broken line carrying an
+  unbroken one is of a rise (`riseStatements_agree`); every 彖 中正 is of a middle line in phase
+  (`tuanCentreStatements_agree`); two more place statements agree (`placeStatementsMore_agree`). The
+  bands of the three powers and the heights are two divisions, jointly fixing a place and neither a
+  function of the other, each band spanning one seam (`bands_and_heights`, `neither_function`,
+  `band_seams`, `band_seam_unique`).
 -/
 
 namespace Becoming

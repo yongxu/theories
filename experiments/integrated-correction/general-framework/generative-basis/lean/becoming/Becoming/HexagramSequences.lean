@@ -88,6 +88,9 @@ Readings (AI): the 序卦's and 雜卦's reasons, the stations' seasons and dire
 the 彖 means for a configuration it names, and the judgments 泰 and 否 carry are not in the
 module. Equality and membership are decided line by line; the finite facts are checked by
 evaluation over the sixty-four. No ethical predicate, ranking or axiom occurs.
+* **One search, one line.** On three lines, a line is the sole one differing from the others exactly
+  where the three are 乾 or 坤 with that line turned (`Trigram.sole_iff_searched`,
+  `Trigram.searched`).
 -/
 
 namespace Becoming

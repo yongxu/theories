@@ -66,6 +66,10 @@ pairs of them, such as real or complex amplitudes. A count of situations does no
 situations they count do not (`cancels_situations`). No ethical predicate, ranking or axiom occurs. Ren took the AI's readings of their words on
 16 October 2026 ("yes, i take those readings"): the core states what every situation obeys,
 the situation makes the actual change true, and a chance is a number of situations of a kind.
+* **The move alone underdetermines.** Where a step by `a` from `s` has situations reaching two
+  configurations, the finer law takes both by the same move and no law giving the next configuration
+  from the configuration and the move alone is right on both (`move_underdetermines`):
+  `Confound.misattributes` generalized.
 -/
 
 namespace Becoming

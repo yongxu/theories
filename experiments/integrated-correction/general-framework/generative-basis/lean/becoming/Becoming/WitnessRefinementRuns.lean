@@ -44,6 +44,9 @@ The certificate of a state is taken over the pool of the fault sets its candidat
 The roster, the fault sets, the answers and the faithfulness of the witnesses outside the actual
 fault set are supplied, as in the modules read. No premise; every declaration has an empty axiom
 report.
+* **Copied witnesses change nothing.** Where each added witness copies one on the roster, in its
+  reports, its support and every fault set it is inside, inspection takes the same steps and gives
+  the same certificate (`copied_witnesses_same`; `doubled_roster_same` its case).
 -/
 
 namespace Becoming

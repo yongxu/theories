@@ -94,6 +94,10 @@ natural quantities and a decided part.
   above by giving beyond the margin to the cap (`Flow.fitsBand_iff_within_margins_at`). A formation
   active exactly where supported does not arise across a step at which what it reads does not change
   (`Web.not_arises_of_unchanged`).
+* **Support passed on.** In a balanced flow where only active formations give, activity needs
+  support, requirements never loosen and support spells are bounded, support gained at arbitrarily
+  late steps is, not refutably otherwise, gained from givers that themselves gained support after
+  any given step (`Flow.support_passes_on`, with `comes_within_not_not`).
 -/
 
 namespace Becoming

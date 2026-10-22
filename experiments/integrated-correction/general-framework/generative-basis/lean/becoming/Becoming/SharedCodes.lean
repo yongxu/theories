@@ -137,6 +137,14 @@ What is not derived: which order actual exchange takes (probabilities over order
 modelled), the time agreement takes, codes holding several forms for a sense (inventories), rules
 reading more than the two codes, adoption of whole codes, and whether actual conventions form
 this way. No ethical predicate or ranking occurs, and every declaration has an empty axiom report.
+* **Synonyms, a coined form, majority and imposing.** A code letting a sense hold several forms
+  reads back exactly where no two senses hold one form (`synonyms_read_iff`; `one_form_reads_iff`
+  the case of one form a sense). Coining a form (`coin`) is the step hearing lacks: a form coined at
+  `m` and heard by all brings back a distinction an imposed code merged (`coined_returns`). Taking
+  what most hold (`majority`) makes no form (`majority_held`); two of three agree at once and one of
+  two rests (`Majority.odd_agrees`, `Majority.even_rests`). Imposing a code keeps every exchange of
+  formations (`impose_keeps_exchange`) and privileges its forms (`impose_privileges_forms`), the
+  symmetry it breaks.
 -/
 
 namespace Becoming

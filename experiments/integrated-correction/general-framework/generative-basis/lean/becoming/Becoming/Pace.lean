@@ -72,6 +72,9 @@ holds.
 What is not derived: which rule a slow level reads into, that it reads at stretches of any
 length, that the course a stretch fixes ranks above another, or how many states the actual fast
 level has. No ethical predicate, ranking or axiom occurs.
+* **Reading through a pool.** Where the rule reads the fast configuration only through what a pool
+  reads of it, rules part across a reading step only where what the pool reads parts
+  (`rule_through_pool`).
 -/
 
 namespace Becoming

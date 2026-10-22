@@ -1071,6 +1071,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   these as Ren's generative, degenerative and neutral is the AI's reading.
   A need with a cap is harmed by too much as by too little, the band exact on both sides; what does
   not change gives no arising.
+  Support gained ever later is passed on by formations that gained it later.
 * `Becoming.Exclusion` (L1): what taking all that is given excludes, with no ethical premise.
   A formation takes all that is given to a condition across a step where it takes part and
   takes from it at least all that the step gives to it; alongside it, any other taker makes
@@ -1086,6 +1087,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Where a part (the rest) takes jointly more than is given, renewal ends whatever a member
   outside it takes, and with need one every reading after the end is alike under the
   member's acts: its restraint is invisible to such a reading.
+  Division by exclusive footprints keeps the joint draw within what is given, so under balance the
+  level stands.
 * `Becoming.Exhaustion` (L1): where a take that is more than now ends, with no ethical premise.
   Read on what a formation takes from a condition, "more than now" (`Becoming.Seeking`) rises by
   at least one at each step, so from a condition given at most `B` at each step the take comes
@@ -1615,6 +1618,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Each law is read along the runs of the spine: of waxing and waning, of the change of one line,
   of the law backward, and of any process. Four censuses of the 彖 and the 小象 are checked on
   their configurations; the chapter on the 易传 reads each passage.
+  The 象 and 彖 sentences on middles, spent tops, rises, 中正 and places are counted against the places;
+  bands and heights are two divisions.
 * `Becoming.HexagramLaws` (L1): four more laws on the sixty-four configurations and the census
   of the law of waxing and waning, with no premise, stated along the runs of the spine. The
   nuclear law (互) merges: what it makes of a hexagram is fixed by the four inner lines, and
@@ -1658,6 +1663,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   run of waxing and waning rests or comes to rest. The stations of 說卦 ch. 5 are the run of no
   law commuting with 錯, 綜 or the rotation; 交 holds at every height of 泰 and none of 否, which
   every reading the complement keeps reads alike along their runs.
+  A line of three is the sole one differing exactly where 乾 or 坤 is searched at its height.
 * `Becoming.Withholding` (L1): giving that waits on giving. With memory (a formation gives
   where it gave and all it waits on gave), a formation gives at a step exactly where every
   formation within that many waits of it gave at the start; withholding stays, spreads
@@ -1694,6 +1700,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   stretch of `L` steps fixes every pair of courses with at most `N` states that held rules
   generate exactly when `L ≥ 2N - 1`; a course of configurations read whole is fixed by its
   first `N + 1` steps, exactly.
+  Where the rule reads through a pool, rules part at a reading step only where the pool's reading
+  parts.
 * `Becoming.RuleCapture` (L1): a selection whose rule reads the share it selects. The fast step of
   `Pace`'s two-level course is a selection and the rule read at a reading step is a monotone
   function of the share. Where no rule turns against the reading the share falls at no step and the
@@ -1770,6 +1778,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   limited principle of omniscience. Keeping the steps after which `s` can still be had keeps `s`
   and is the greatest sub-process that does; on its course it removes exactly the losing steps
   at junctures; losing never returns. Many options make no juncture.
+  What can be had is had within the count of configurations, and before a juncture no step needs
+  choosing.
 * `Becoming.Commuting` (L1): what a commuting law keeps apart. Where a law commutes with a map
   that moves every configuration, its runs from a configuration and from its image are never at
   one configuration at the same step: to merge what a symmetry tells apart a law must break it.
@@ -2103,6 +2113,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`certificate_sound`), availability exactly where the envelope is separated
   (`availability_iff_separated`), and no warrant from duplication, an empty envelope or a stronger
   one (`duplicated_roster_same`, `stronger_envelope_no_new_acceptance`).
+  Witnesses copying witnesses on the roster leave the certificate unchanged.
 * `Becoming.Transactions` (L1): a gate of certified readings and approvals, and the monitor
   process it makes (no premise): an open gate finds the route and keeps the scope (`gate_route`,
   `gate_within_scope`), a transaction has exact effects and blocks its replay (`execute_exact`,
@@ -2137,6 +2148,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   changes nothing; a candidate admitting every failure is kept and blocks every later
   certificate; a test leaving no candidate certifies nothing, and a separated pool after a
   faithful test completes.
+  Witnesses copying witnesses on the roster change no step of inspection and no certificate.
 * `Becoming.ChanceFloors` (L1): what pointwise fulfilment of a due protection gives under a finite
   law of chance (no premise): a chance floor (`fulfillment_gives_chance_floor`, through
   `mass_mono`), repair as an event that raises the mass (`repair_adds_new_protection`), and a
@@ -2230,6 +2242,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   records do not recover what came before (`Law.merged_stays`), records kept from before bar a
   different resolution, and where records are only added a resolution can be lost but never
   replaced.
+  Synonyms do no harm and homonyms do; a coined form brings back a merged distinction; taking what
+  most hold agrees on an odd split and rests on an even one; imposing a code keeps the exchange of
+  formations and privileges forms.
 * `Becoming.Likeness` (L1): the laws stated with equality, completed up to likeness, with no
   premise. A description carries a law up to likeness exactly where some equivalence
   registering the claims makes configurations go alike, the law stated with equality being the
@@ -2495,6 +2510,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   taken by its weight of situations, for every process. Signed weights are pairs of counts of
   situations, those composing to adding and those composing to subtracting. Which situation
   happens is not a count.
+  Where a move has two situations, no law from the move alone is right on both.
 * `Becoming.Propagation` (L1): how much difference arrives, with no premise beyond what each law
   names. In two balanced flows a condition's gap changes across a step by exactly the difference
   given less the difference taken. An exchange is coupled to a level with strength at most `k`
