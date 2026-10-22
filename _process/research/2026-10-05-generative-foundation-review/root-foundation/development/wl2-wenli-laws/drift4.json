@@ -415,7 +415,8 @@
    "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
    "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
    "changed_sections": [
-    "(reviewed version not in history)"
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
    ]
   },
   {
@@ -424,7 +425,8 @@
    "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
    "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
    "changed_sections": [
-    "(reviewed version not in history)"
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
    ]
   },
   {
@@ -433,7 +435,8 @@
    "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
    "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
    "changed_sections": [
-    "(reviewed version not in history)"
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
    ]
   },
   {
@@ -442,25 +445,8 @@
    "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
    "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
    "changed_sections": [
-    "(reviewed version not in history)"
-   ]
-  },
-  {
-   "id": "slowing-down-before-an-own-end",
-   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
-   "reviewed_sha256": "de3ae64484487cb8fe5451b39e7255867f5c747080a6ff8d20f38cbf49f52953",
-   "current_sha256": "721514bfa17552922843632bd503596e9e8a9ab20cde3de9ff61f91ddc1f802c",
-   "changed_sections": [
-    "(reviewed version not in history)"
-   ]
-  },
-  {
-   "id": "slowing-down-before-an-own-end",
-   "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-   "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-   "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-   "changed_sections": [
-    "(reviewed version not in history)"
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
    ]
   },
   {
@@ -479,7 +465,8 @@
    "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
    "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
    "changed_sections": [
-    "(reviewed version not in history)"
+    "## 3. Knowing and inquiry",
+    "## 9. The formal spine"
    ]
   }
  ],
@@ -506,8 +493,11 @@
   },
   "list": "python3 -B tools/research/research.py lint [--ids ...]"
  },
- "changed_outside_cited": 673,
+ "changed_outside_cited": 675,
  "reading_drift": 91,
- "stale_indexes": [],
+ "stale_indexes": [
+  "_process/research/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md"
+ ],
  "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
 }

@@ -1,5 +1,5 @@
 {
- "commit": "725f0ac29e317cef9d36cf7efc21230bc94d331c",
+ "commit": "55107cee504f51ce3708af255637acc3e8256b98",
  "sources_match_commit": true,
  "core_receipt_at_commit": "20261022T110022.458880Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",

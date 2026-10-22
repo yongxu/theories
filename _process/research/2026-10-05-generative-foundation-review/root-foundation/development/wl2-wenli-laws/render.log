@@ -390,100 +390,7 @@ python3 -B tools/research/research.py render
     "worlds-are-runs"
   ],
   "errors": [],
-  "source_drift": [
-    {
-      "id": "a-formations-own-course",
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
-      "reviewed_sha256": "d9d41d58a1eb965ac3f6827ab6c4d528f684f0dbefe7a4d2f5bbdb9ccb1e292f",
-      "current_sha256": "721514bfa17552922843632bd503596e9e8a9ab20cde3de9ff61f91ddc1f802c",
-      "changed_sections": [
-        "## 349. The laws of 文 as theorems: the coarsest value-keeping class, a formation's own course, the course of forms (WL2)"
-      ]
-    },
-    {
-      "id": "a-formations-own-course",
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
-      "reviewed_sha256": "2d7cf7613bb31783ba905946b6518b73ab214d8ae67dbe43429885bdcbc5ba77",
-      "current_sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b",
-      "changed_sections": [
-        "## 文、理与读：核心的认识论在文中",
-        "(before the first heading)"
-      ]
-    },
-    {
-      "id": "any-number-of-drawers-in-turn",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "drawers-in-turn-draw-everything",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "drawers-in-turn-within-capacities",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "revision-comes-to-drawing-everything",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "slowing-down-before-an-own-end",
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
-      "reviewed_sha256": "de3ae64484487cb8fe5451b39e7255867f5c747080a6ff8d20f38cbf49f52953",
-      "current_sha256": "721514bfa17552922843632bd503596e9e8a9ab20cde3de9ff61f91ddc1f802c",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "slowing-down-before-an-own-end",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    },
-    {
-      "id": "wenli-on-the-spine",
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
-      "reviewed_sha256": "2d7cf7613bb31783ba905946b6518b73ab214d8ae67dbe43429885bdcbc5ba77",
-      "current_sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b",
-      "changed_sections": [
-        "## 文、理与读：核心的认识论在文中",
-        "(before the first heading)"
-      ]
-    },
-    {
-      "id": "widening-along-a-reading",
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
-      "reviewed_sha256": "c2f4adcc6968f338fcf0def1c09ec3c29ae46564143cfd36bd234391bff13ac5",
-      "current_sha256": "ca35417f0d0849a00ab48399d20b09777f69e88999c5af440ed4283695a45230",
-      "changed_sections": [
-        "(reviewed version not in history)"
-      ]
-    }
-  ],
+  "source_drift": [],
   "unrelated_source_drift": [],
   "style_warnings": {
     "findings": 657,
@@ -507,9 +414,8 @@ python3 -B tools/research/research.py render
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 673,
+  "changed_outside_cited": 675,
   "reading_drift": 91,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
 }
-make: *** [research-render] Error 2
