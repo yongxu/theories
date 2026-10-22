@@ -28,13 +28,14 @@
       ]
     },
     {
-      "en": "One law: what a best response keeps above its floor returns to it at least one for one; so it leaves its floor where nothing it keeps returns, a drawer draws to capacity wherever what it draws later is fixed, and every drawer at the last step.",
-      "zh": "一条律：最优回应在下限之上所留至少一对一地回到自身；故无所回之处留下限，此后所抽固定之处抽到容量，最后一步每者皆然。",
+      "en": "One law: what a best response keeps above its floor returns to it at least one for one; so it leaves its floor where what it keeps returns less than one for one, a drawer draws to capacity wherever what it draws later is fixed, and every drawer at the last step.",
+      "zh": "一条律：最优回应在下限之上所留至少一对一地回到自身；故所回少于一对一之处留下限，此后所抽固定之处抽到容量，最后一步每者皆然。",
       "declarations": [
         "Becoming.Optimum.InTurn.kept_returns",
         "Becoming.Optimum.InTurn.leaves_floor",
         "Becoming.Optimum.InTurn.at_floor",
-        "Becoming.Optimum.InTurn.last_at_floor"
+        "Becoming.Optimum.InTurn.last_at_floor",
+        "Becoming.Optimum.InTurn.floor_of_less"
       ]
     },
     {
@@ -69,6 +70,31 @@
       ]
     },
     {
+      "en": "Drawing at once, the same law: where the level is divided into portions and all draw at once, what a drawer leaves returns to it only through its portion; where that return is less than one for one, every perfect profile and every revision draws everything, and a dependence above what stands at nothing is broken.",
+      "zh": "同时抽取，同一条律：水平分为份额、众者同时抽取时，抽取者所留只经其份额回到自身；此回报少于一对一时，每个完美组合与每次修订都全部抽取，高于零处所立者的依存被打破。",
+      "declarations": [
+        "Becoming.Optimum.AtOnce.sumTo",
+        "Becoming.Optimum.AtOnce.pool",
+        "Becoming.Optimum.AtOnce.next",
+        "Becoming.Optimum.AtOnce.drawn",
+        "Becoming.Optimum.AtOnce.later",
+        "Becoming.Optimum.AtOnce.levels",
+        "Becoming.Optimum.AtOnce.Revises",
+        "Becoming.Optimum.AtOnce.Perfect",
+        "Becoming.Optimum.AtOnce.ReturnsLess",
+        "Becoming.Optimum.AtOnce.sumTo_congr",
+        "Becoming.Optimum.AtOnce.sumTo_zeros",
+        "Becoming.Optimum.AtOnce.sumTo_zero",
+        "Becoming.Optimum.AtOnce.sumTo_set",
+        "Becoming.Optimum.AtOnce.drawn_step",
+        "Becoming.Optimum.AtOnce.later_less",
+        "Becoming.Optimum.AtOnce.revisions_drain",
+        "Becoming.Optimum.AtOnce.drains",
+        "Becoming.Optimum.AtOnce.levels_drained",
+        "Becoming.Web.at_once_broken"
+      ]
+    },
+    {
       "en": "Witnesses: under the gate, alone an optimum keeps the dweller, restraint keeps it, and every perfect profile and every revision from restraint breaks it; under doubling with a one-unit floor on the second, the first leaves everything from three and the dweller is kept.",
       "zh": "见证：门控下单独的最优与克制保持居者，每个完美组合与自克制的每次修订打破它；倍增且第二者下限为一单位时，第一者自三全留，居者得以保持。",
       "declarations": [
@@ -94,8 +120,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Drawing at once with a rule of sharing; which profiles are perfect where at most one drawer has no floor, away from the last step.",
-      "zh": "按分享规则同时抽取；至多一个抽取者无下限时最后一步之外何种组合完美。",
+      "en": "Drawing at once where a portion returns at least one for one; which profiles are perfect where at most one drawer has no floor, away from the last step.",
+      "zh": "份额所回至少一对一时的同时抽取；至多一个抽取者无下限时最后一步之外何种组合完美。",
       "kind": "scope"
     },
     {
@@ -123,8 +149,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T045034.169350Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 335 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Drawing at once with a rule of sharing; perfect profiles where at most one drawer is free; an independent review.",
-    "zh": "按分享规则同时抽取；至多一个抽取者无下限时的完美组合；独立审查。"
+    "en": "Drawing at once where a portion returns at least one for one; perfect profiles where at most one drawer is free; an independent review.",
+    "zh": "份额所回至少一对一时的同时抽取；至多一个抽取者无下限时的完美组合；独立审查。"
   },
   "correspondence": {
     "en": "The optimality condition of dynamic programming (Bellman 1957); the dynamic commons (Levhari and Mirman 1980); backward induction (Selten 1965); best-response dynamics (Fudenberg and Levine 1998).",
@@ -174,6 +200,24 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.Optimum.AtOnce.Perfect",
+        "Becoming.Optimum.AtOnce.ReturnsLess",
+        "Becoming.Optimum.AtOnce.Revises",
+        "Becoming.Optimum.AtOnce.drains",
+        "Becoming.Optimum.AtOnce.drawn",
+        "Becoming.Optimum.AtOnce.drawn_step",
+        "Becoming.Optimum.AtOnce.later",
+        "Becoming.Optimum.AtOnce.later_less",
+        "Becoming.Optimum.AtOnce.levels",
+        "Becoming.Optimum.AtOnce.levels_drained",
+        "Becoming.Optimum.AtOnce.next",
+        "Becoming.Optimum.AtOnce.pool",
+        "Becoming.Optimum.AtOnce.revisions_drain",
+        "Becoming.Optimum.AtOnce.sumTo",
+        "Becoming.Optimum.AtOnce.sumTo_congr",
+        "Becoming.Optimum.AtOnce.sumTo_set",
+        "Becoming.Optimum.AtOnce.sumTo_zero",
+        "Becoming.Optimum.AtOnce.sumTo_zeros",
         "Becoming.Optimum.Holding.doubling_capacity",
         "Becoming.Optimum.Holding.gate",
         "Becoming.Optimum.Holding.gated_alike",
@@ -198,6 +242,7 @@
         "Becoming.Optimum.InTurn.best_from",
         "Becoming.Optimum.InTurn.drawn",
         "Becoming.Optimum.InTurn.floor_after",
+        "Becoming.Optimum.InTurn.floor_of_less",
         "Becoming.Optimum.InTurn.floor_through",
         "Becoming.Optimum.InTurn.floors_perfect",
         "Becoming.Optimum.InTurn.kept_returns",
@@ -217,9 +262,10 @@
         "Becoming.Optimum.InTurn.revised_at_floors",
         "Becoming.Optimum.InTurn.revised_leaves",
         "Becoming.Optimum.InTurn.revisions_reach_floors",
+        "Becoming.Web.at_once_broken",
         "Becoming.Web.drained_broken"
       ],
-      "sha256": "d5297a0ed29f810cdbe7559b77917cfae485e0dc31496f8e5c733b9452ac86a8"
+      "sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
@@ -239,19 +285,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3e9a25dfeff8cfea1680acd3e986f7ffa06f873a388f5a48524e08f624c36603"
+      "sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json",
       "role": "receipt",
       "sha256": "09bc4969c4386206e3d877defc9e5c2e4a8327ceac4ec437cf03d82011f4758d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json",
+      "role": "receipt",
+      "sha256": "92a80bb4c0aaad5b6acdd19dd539d4d0f2beac9c6f2e28e3e5ecea76e1d4fd77",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -265,6 +317,10 @@
     {
       "en": "22 October 2026, UM2: the drain's premise generalized from no floor anywhere to two drawers with no floor, whatever the others' floors; every perfect profile is then the floor profile and revision reaches it; the laws with no floor anywhere replaced by their general forms (study section 336).",
       "zh": "2026年10月22日，UM2：抽干的前提由处处无下限推广为两个抽取者无下限，不论其他下限；此时每个完美组合即下限组合，修订达到它；处处无下限之律由其一般形式取代（研究第 336 节）。"
+    },
+    {
+      "en": "22 October 2026, UM3: drawing at once from portions added as a second arrangement on the same law, the drain holding where each portion returns less than one for one; the law's strict form (floor_of_less) stated, leaves_floor its case (study section 337).",
+      "zh": "2026年10月22日，UM3：自份额同时抽取作为同一条律的第二种安排加入，每份所回少于一对一时抽干成立；此律的严格形式（floor_of_less）陈述，leaves_floor 为其情形（研究第 337 节）。"
     }
   ]
 }

@@ -1493,3 +1493,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; at most one free drawer away from the last step not characterized
 Integration: chapter §3.4, §7.1, row 6, item 10 and the record row
 ```
+
+<a id="at-once-check"></a>
+## A check: drawing at once (22 October 2026, UM3)
+
+An AI check (one session, 22 October) of drawing at once against known forms. **Verdict: known in its kind. In the n-player commons each player internalizes only its share of the stock effect, so extraction exceeds the cooperative level; with a share returning less than one for one, the subgame-perfect outcome drains. The spine's form states the exact condition and derives it from the same law as drawing in turn.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The common-property resource: each user internalizes only its share | Gordon (1954) (from memory) | `Optimum.AtOnce.ReturnsLess`, `Optimum.AtOnce.drains` |
+| The n-player dynamic commons | Levhari and Mirman (1980) (from memory) | `Optimum.AtOnce.revisions_drain` |
+
+```text
+Result(s): record drawers-in-turn (UM3)
+Delta: drawing at once from portions on the same law: where each portion returns less than one for one, every perfect profile and every revision draws everything
+Supplied premises / correspondence: portions; no floor; the return condition. Correspondence: the common-property resource; the n-player dynamic commons
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; returns of at least one for one not stated
+Integration: chapter §3.4, §7.1, item 10 and the record row
+```
