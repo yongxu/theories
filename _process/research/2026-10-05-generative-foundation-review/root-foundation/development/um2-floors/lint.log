@@ -1,0 +1,12 @@
+{
+  "records": 1,
+  "summary": {
+    "findings": 0,
+    "records": 0,
+    "by_severity": {},
+    "by_rule": {}
+  },
+  "findings": [],
+  "errors": [],
+  "scope": "Form only: length, process narration, shared boundaries written out. Whether a boundary is substantive is the author's reading."
+}

@@ -5,26 +5,26 @@
 
 `drawers-in-turn` · **recorded-checked** · theorem · F01 · [record](drawers-in-turn.json) · [register](../../../../RESULTS.md)
 
-> Drawers in turn are one model, each with a floor, on one law of best response: what a drawer keeps above its floor returns to it at least one for one; so with no floor and two or more drawers revision and perfection both draw everything.
+> Drawers in turn are one model, each with a floor, on one law of best response: what a drawer keeps above its floor returns to it at least one for one; so where two drawers have no floor, revision and perfection both come to the floors, whatever the others' floors.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. One model: at each step k drawers draw in turn, drawer d leaving of what it is given at least its floor and at most all of it; a profile revises another where each rule is a best response against it at every step from every level, and is perfect where it revises itself. (`Becoming.Optimum.InTurn.pass`, `Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.drawn`, `Becoming.Optimum.InTurn.later`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.Perfect`)
 2. One law: what a best response keeps above its floor returns to it at least one for one; so it leaves its floor where nothing it keeps returns, a drawer draws to capacity wherever what it draws later is fixed, and every drawer at the last step. (`Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.leaves_floor`, `Becoming.Optimum.InTurn.at_floor`, `Becoming.Optimum.InTurn.last_at_floor`)
-3. With no floor and two or more drawers, every drawer after the first draws nothing later and what the first leaves goes to the second: every sequence of revisions draws everything from round 2N on, a revision always exists, and every perfect profile draws everything. (`Becoming.Optimum.InTurn.pass_zero`, `Becoming.Optimum.InTurn.pass_of_first`, `Becoming.Optimum.InTurn.others_draw_nothing`, `Becoming.Optimum.InTurn.revisions_end`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.best_from`, `Becoming.Optimum.InTurn.revise`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_leaves`, `Becoming.Optimum.InTurn.revised_draw_all`)
-4. Where the first drawer leaves nothing the base stands at what stands at nothing, and on a web every dependence above it, met at the start, is broken at the first step. (`Becoming.Optimum.InTurn.levels_of_first`, `Becoming.Web.drained_broken`)
+3. Where two drawers have no floor, whatever the others' floors, what any drawer keeps passes through one of them, so nothing returns: every sequence of revisions reaches the floor profile, a revision always exists, and every perfect profile is the floor profile, which is perfect; with no floor anywhere that is drawing everything. (`Becoming.Optimum.InTurn.pass_zero`, `Becoming.Optimum.InTurn.pass_through`, `Becoming.Optimum.InTurn.after_draw_nothing`, `Becoming.Optimum.InTurn.floor_after`, `Becoming.Optimum.InTurn.floor_through`, `Becoming.Optimum.InTurn.revisions_reach_floors`, `Becoming.Optimum.InTurn.perfect_at_floors`, `Becoming.Optimum.InTurn.floors_perfect`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.best_from`, `Becoming.Optimum.InTurn.revise`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_leaves`, `Becoming.Optimum.InTurn.revised_at_floors`)
+4. Where a drawer leaves nothing the base stands at what stands at nothing, and on a web every dependence above it, met at the start, is broken at the first step. (`Becoming.Optimum.InTurn.levels_through`, `Becoming.Web.drained_broken`)
 5. Witnesses: under the gate, alone an optimum keeps the dweller, restraint keeps it, and every perfect profile and every revision from restraint breaks it; under doubling with a one-unit floor on the second, the first leaves everything from three and the dweller is kept. (`Becoming.Optimum.Holding.pass_keep`, `Becoming.Optimum.Holding.restraint_keeps`, `Becoming.Optimum.Holding.gated_in_turn`, `Becoming.Optimum.Holding.oneUnit`, `Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keeping`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.doubling_capacity`)
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. Any law G of what stands; k drawers in turn at each step, each leaving between its floor and what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; for the drain and the revision no floor and k at least two, the start leaving at most what it is given; natural amounts, discrete steps.
+- No axiom. Any law G of what stands; k drawers in turn at each step, each leaving between its floor and what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; for the drain and the revision two drawers with no floor, the start leaving at most what it is given; natural amounts, discrete steps.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Drawing at once with a rule of sharing; which profiles are perfect where a floor binds away from the last step.
+- Drawing at once with a rule of sharing; which profiles are perfect where at most one drawer has no floor, away from the last step.
 - Revision that is not a best response: noisy, partial or local learning.
 - That the drain is a harm or restraint better: no evaluation enters; the laws say what profiles do.
 
@@ -40,7 +40,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Drawing at once with a rule of sharing; perfect profiles where a floor binds; an independent review.
+Drawing at once with a rule of sharing; perfect profiles where at most one drawer is free; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -63,18 +63,20 @@ The optimality condition of dynamic programming (Bellman 1957); the dynamic comm
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.doubling_capacity`, `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_alike`, `Becoming.Optimum.Holding.gated_in_turn`, `Becoming.Optimum.Holding.keeping`, `Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.onSource`, `Becoming.Optimum.Holding.oneUnit`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.pass_keep`, `Becoming.Optimum.Holding.restraint_keeps`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.at_floor`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.best_from`, `Becoming.Optimum.InTurn.drawn`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.last_at_floor`, `Becoming.Optimum.InTurn.later`, `Becoming.Optimum.InTurn.leaves_floor`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.levels_of_first`, `Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.others_draw_nothing`, `Becoming.Optimum.InTurn.pass`, `Becoming.Optimum.InTurn.pass_of_first`, `Becoming.Optimum.InTurn.pass_zero`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.revise`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_draw_all`, `Becoming.Optimum.InTurn.revised_leaves`, `Becoming.Optimum.InTurn.revisions_end`, `Becoming.Web.drained_broken` |
+| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.doubling_capacity`, `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_alike`, `Becoming.Optimum.Holding.gated_in_turn`, `Becoming.Optimum.Holding.keeping`, `Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.onSource`, `Becoming.Optimum.Holding.oneUnit`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.pass_keep`, `Becoming.Optimum.Holding.restraint_keeps`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.after_draw_nothing`, `Becoming.Optimum.InTurn.at_floor`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.best_from`, `Becoming.Optimum.InTurn.drawn`, `Becoming.Optimum.InTurn.floor_after`, `Becoming.Optimum.InTurn.floor_through`, `Becoming.Optimum.InTurn.floors_perfect`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.last_at_floor`, `Becoming.Optimum.InTurn.later`, `Becoming.Optimum.InTurn.leaves_floor`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.levels_through`, `Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.pass`, `Becoming.Optimum.InTurn.pass_through`, `Becoming.Optimum.InTurn.pass_zero`, `Becoming.Optimum.InTurn.perfect_at_floors`, `Becoming.Optimum.InTurn.revise`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_at_floors`, `Becoming.Optimum.InTurn.revised_leaves`, `Becoming.Optimum.InTurn.revisions_reach_floors`, `Becoming.Web.drained_broken` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 
-Aliases: `drawers in turn`, `one model of drawers in turn`, `轮流的抽取者`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.revisions_end`
+Aliases: `drawers in turn`, `one model of drawers in turn`, `轮流的抽取者`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.revisions_reach_floors`
 
 <a id="history--沿革"></a>
 ### History
 
 - 22 October 2026: added (UM), one model of drawers in turn with floors on one law of best response, superseding drawers-in-turn-draw-everything, revision-comes-to-drawing-everything, drawers-in-turn-within-capacities, any-number-of-drawers-in-turn; study section 335.
+- 22 October 2026, UM2: the drain's premise generalized from no floor anywhere to two drawers with no floor, whatever the others' floors; every perfect profile is then the floor profile and revision reaches it; the laws with no floor anywhere replaced by their general forms (study section 336).
 
 </details>
 
