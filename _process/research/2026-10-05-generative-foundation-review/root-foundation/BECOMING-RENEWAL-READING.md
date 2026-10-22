@@ -15549,3 +15549,88 @@ The question was whether balance should come from conservation of energy, as dis
 - *One reading.* `balance_and_least_loss`: under the store and exchange laws with one transfer read on both sides, the levels balance exactly where no store generates entropy, the flow is gainless where no exchange generates negative entropy, and dissipative where every taking exchange generates some. In `Burning` (one store, one exchange that takes its unit and passes it as heat) all the premises hold together, and the flow balances and is dissipative (`Burning.meets`, `Burning.balanced_and_dissipative`), so the hypotheses are not jointly empty.
 
 **What it does not do.** Balance is not thereby a theorem of the dynamics: it is relocated to the first law with locality and to a reading of amounts, which stay hypotheses and a correspondence. Stores whose volume or composition changes carry pressure and chemical terms of available work that are not represented, and levels are whole numbers, so a store's available work is read as a whole number of units; amounts that may be dense are the next step, with a core form needing no Mathlib.
+
+## 349. Slowing down before a condition's own end: T6's seen half (CS1)
+
+```text
+Result(s): new record slowing-down-before-an-own-end (the periphery module SlowingDown, a leaf: a model over the
+       reals in which statistical warnings are read; nothing in the core needs it); reuses runaway-distance-uncoupled
+       (Web.break_not_bounded, T6's unseen half) only as the half it complements.
+Delta: T6's seen half, which the chapter called "known and not proved here", proved in its model. One step of a
+       deviation about a rest is the return multiplier a times the deviation plus noise independent of it; its
+       variance is a^2 Var Y + Var E and its covariance with the deviation now a Var Y (variance_step,
+       covariance_step). Where the variance stays the same across the step and a^2 < 1, it is Var E / (1 - a^2) and the
+       lag-1 autocorrelation is a (stationary_variance, stationary_lag1); the stationary variance rises strictly with
+       a on [0, 1) and tends to infinity as a rises to one (stationaryVariance_strictMonoOn,
+       stationaryVariance_tendsto). At the fold step x + h (m - x^2), rest sqrt m, the step's derivative at the rest is
+       1 - 2 h sqrt m (foldStep_hasDerivAt); it rises to one as the margin m goes to zero (foldMultiplier_tendsto), the
+       variance rises strictly as the margin shrinks (fold_variance_strictAntiOn) and without bound
+       (fold_variance_tendsto), and m = ((1 - a) / (2 h))^2 (fold_margin_read). Under logistic renewal with a
+       proportional draw, rest K (1 - q / r), the multiplier is 1 - h (r - q) (drawnStep_hasDerivAt) = 1 - h r x* / K
+       (drawn_multiplier_level), the level is K (1 - a) / (h r) (drawn_level_read), and as the draw rises to the
+       renewal rate the variance rises strictly and without bound (drawn_variance_strictMonoOn,
+       drawn_variance_tendsto). A dependent's need enters neither statistic: every reading of the margin to it from the
+       multiplier is wrong for some need (need_not_read), and with the need measured the margin is read exactly
+       (need_margin_read).
+Premises / correspondence: discrete steps; the deviation read in the linearization about a rest (the step's
+       derivative there); noise independent of the deviation, with finite variance; stationarity supplied as a
+       hypothesis (the variance the same across the step), not derived from a run; one variable; white noise.
+       Correspondence: critical slowing down (Wissel 1984; Wiesenfeld 1985; Scheffer et al. 2009), before a
+       transcritical end (Kefi et al. 2013), the AR(1) reading of rolling-window indicators (Dakos et al. 2008, 2012).
+Evidence: periphery receipt 20261022T104044.892409Z (passed; 22 theorems, Lean 4.30.0-rc2 and the pinned Mathlib,
+       each declaration on Lean's standard axioms); the literature from memory, not reread.
+Boundary: the known result stated on the theory's terms, not a new result about slowing down; no law here says a
+       run of the nonlinear step stays near its rest, or that a finite window's estimates converge to the stationary
+       values; red noise, several variables (where the critical mode loads on some variables only, Boerlijst et al.
+       2013), flickering and noise-induced transitions are not stated; the need's not being read holds by
+       construction, and its content in the world is the premise that the dependent's feedback onto the stock is
+       negligible, which the field tests measure apart (EW2, EW3).
+Output -> input: chapter T6's standing (EN, ZH); OPENING [^cancer] ("the seen half is the early-warning literature"
+       replaced by the theorem with its premises); new record; board CS1 to the history file.
+```
+
+**What was asked.** OPENING's note on cancer says the warning comes only to those who couple into what breaks, and calls that thesis T6, "whose unseen half is the theorem and whose seen half is the early-warning literature". The unseen half is `Web.break_not_bounded`: a stock coupled by threshold only bounds nothing about how near the break is. The seen half had no Lean. The question was whether it can be proved, and in which model, without claiming more than the literature does.
+
+**What was built** (periphery, `lean/warning/SlowingDown.lean`, with Mathlib's variance, covariance and independence). The model is the one rolling-window indicators are read in: a deviation from a rest that steps by a multiplier plus independent noise. The stochastic step is stated on random variables, not as a moment recursion: the variance and covariance laws come from Mathlib's `IndepFun.variance_add` and `IndepFun.covariance_eq_zero`. Two normal forms then supply the multiplier as the step's derivative at its rest, and give the two ends T6's evidence names: the fold, where the yeast of Dai et al. (2012) collapse, and the transcritical end of a renewal under a rising proportional draw, the case EW1 used against T6's first wording. In that second form the multiplier is `1 − h r x*/K`, so the stock's slowing down tracks its own level. That is why its statistics rise before any dependent's need is crossed on the way down, and why they say nothing about where the need lies.
+
+**The uncoupled side.** `need_not_read` is deliberately weak: the need is not an argument of anything the stock's statistics depend on, so no function of them gives the margin to it for every need. The chapter already said the uncoupled side "holds by construction"; the theorem says no more. What is empirical is whether actual dependents leave their stock's law unchanged, which is what EW2 tested and EW3 will test on longer series.
+
+**Self-review.** Two judgments could be wrong. First, stationarity is a hypothesis: the theorem says what the variance is where it stays the same across a step, not that a run reaches that state. For `a² < 1` the variance recursion converges to the fixed point, but that is not stated here. Second, the derivative at the rest stands in for the nonlinear step near it. That is the standard reading, but nothing here bounds the error of the linearization near the fold, where the basin narrows as the margin goes to zero. Neither changes what the note in OPENING now says, which names the model and calls its fit to measured fluctuations a correspondence.
+
+## 350. Early warnings before seabird breeding failures, on longer series (EW3)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A second frozen field test of thesis T6's
+       uncoupled side (section 289's open item), experiments/break-warnings (ew3.py on ew2.py's statistics).
+Delta: EW2's design, unchanged, on series EW2 had not read: Sydeman et al.'s breeding success to 2020-2021
+       (BCO-DMO 985565), the 2024 South African sardine and anchovy data records (November survey biomass west of
+       Cape Agulhas and to Port Alfred; monthly catches), ICES's 2025 Norwegian spring-spawning herring assessment
+       (recruitment at age 2 read as the year class two years earlier; catches), with the catch in the year and the
+       year before added to EW2's four level covariates as the draw. Benguela 1992-2020 (29 usable years, 10
+       failures), Rost 1994-2021 (28, 9). V1 passed (p = 0.452), V2 passed (p = 0.864). Combined partial r +0.02 for
+       AR1 (95% interval -0.35 to 0.40), -0.20 for variance (-0.52 to 0.16), post hoc. By the frozen reading rule
+       the variance resolves EW2's estimate toward T6 and the AR1 leaves it open.
+Supplied premises / correspondence: EW2's (T6's refutation clause read as conditional independence given the
+       stock's own course, here level and draw; the birds' small share measured apart, Saraux et al. 2021); the new
+       series matched to EW2's on the prey alone (Benguela 0.87, Rost 0.95, raw values in the survey's year and two
+       years before the recruitment year).
+Evidence: frozen predictions, code, layout and dry runs landed on main at 836281856 before any statistic relating a
+       prey series to a breeding series was computed; dry runs: every null at most 0.030, power 0.91 (AR1) and 0.88
+       (variance) against EW2's effect; one run (b8e5787b0), results/ew3/test.json and posthoc.json.
+Boundary: half of Benguela's rows and a quarter of Rost's were EW2's, so the verdicts are not independent of EW2;
+       the series are revised survey and assessment outputs, not Cury et al.'s; the herring's draw falls on adults,
+       not on the year class read; failure relative; feedback not seen by the design; Shetland and the Farallon birds
+       not run (their prey series to 2020 not obtained).
+Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'s field-test sentence; board EW3 to
+       the history file.
+```
+
+**What was asked.** EW2 passed at the frozen level, but every estimate lay in the direction T6's refutation clause names, with a combined partial correlation of about 0.3 ([§289](#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2)). That section named the next test: the same design on longer, unread series, with the catch as the draw, since the clause compares with what "the stock's own level and draw predict". Ren approved the downloads in chat.
+
+**What was done before the freeze.** The breeding success came from BCO-DMO 985565, which has no prey series. The prey and catch came from the data records of the 2024 South African sardine and anchovy assessments and from ICES's summary table for the 2025 herring assessment. The new prey series were matched to EW2's on the prey alone: Benguela's sum of sardine west of Cape Agulhas and anchovy in the survey's year correlates 0.87 with Cury et al.'s series, and ICES's recruitment at age 2, two years later, correlates 0.95 with their age-0 herring. So the series are read as raw values, z-scored, as Cury et al. did. The herring and survey tables' values were seen while they were parsed; no breeding-success value was displayed, and no statistic relating prey to birds was computed. The dry runs took EW2's generators onto the new calendar, with the catch observed and one more null (breeding success also falling with the catch). Every null rejected at most 0.030, and the power against EW2's effect rose from about 0.7 to about 0.9.
+
+**What it found.** Both verdicts passed by wide margins (p = 0.45 and 0.86). The estimates moved toward zero and below: +0.02 for autocorrelation and −0.20 for variance combined, Benguela near zero (0.14, −0.04) and Røst negative (−0.20, −0.53). Without the draw (R4) the estimates were the same within 0.03 for autocorrelation; the draw did not carry them. Windows of 6 and 10 years gave +0.16 and −0.16 for autocorrelation. On the rows EW2 did not test alone (R5), Benguela's partial correlations were 0.64 and 0.61, on 15 rows with six covariates and eight residual degrees of freedom, and Røst's were −0.15 and −0.30; the combined estimates there (+0.17 and +0.03) have intervals of about ±0.5.
+
+**What it means for T6.** The association EW2's estimates pointed to did not appear at more than twice the power. The variance's interval excludes EW2's size; the autocorrelation's does not, so by the rule frozen before the run that half stays open. T6's uncoupled side stays conjectured, now with two passes, the second of moderate power. Nothing here bears on the birds' feedback, which the design cannot see.
+
+**Self-review.** Three judgments could be wrong. First, the verdicts reuse EW2's rows, so a reader who wants independent evidence has only R5, which is weak and whose Benguela estimates are large and positive. A third test on stocks never read (the Farallon juvenile rockfish to 2021, the Shetland sandeel) would settle that. Second, the draw for Røst is the catch of adults, not of the year class read as the prey, so it adjusts the stock's course only through the spawners. Third, the Benguela anchovy is surveyed to Port Alfred, wider than the birds' foraging range west of Cape Agulhas; the 0.87 against Cury et al.'s series bounds how far that matters.

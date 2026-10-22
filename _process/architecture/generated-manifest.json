@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "c31ab68f9c6f8a6f36a39bc33dcd8cff88876985bee5bb1ea86f61b002197e79",
+    "README.md": "359db3fba4610fa49353d81cb49a2860e3cdfebfbceb860284447a8b564c6188",
     "RESEARCH.md": "58769f37ec9d2d57dcb31f8cab019a49963ec04a46c283fe5998ad6c25818a74",
-    "RESULTS.md": "e72f891d0f4fe06f87a0593893cd3ff1dd684048f5fe6b849d8f95f78977863e",
+    "RESULTS.md": "141435654c08d695a202d8949290e5d70e92fc1c2a175183d316b0e8b21ad2d3",
     "GOALS.md": "73232261a2f09d11e72fd5c5dd6cb3129e97a1d5e8edaa120d3f7e239e28b4f9",
-    "DEPENDENCIES.md": "54b3642f8fd930e00da5ef862e3f2c8244f0bae72ab23b974fa9cd2ce41e215b",
+    "DEPENDENCIES.md": "00f8e4e6655577273ee418c4bc8aa8ddfe604f2c14b02be4c27ea0d4d3026ff3",
     "_process/BRIEF.md": "746932ccf78a6acecfdf42f51fae45c5989a474060ec89ebebac2ae6bd81cd38",
     "theories/becoming/README.md": "1b0956e329e311025518754beb399f5ef36711f6bbcbb8cea216d0070324dda3",
     "theories/becoming/results/ROADMAP.md": "f7bcb082edd444bb6d2aee897c817b27ca9a21128f54272b065f999087b2696d",
@@ -43,7 +43,7 @@
     "theories/becoming/results/records/trace-law-equivalence.md": "58f1aeead76cb8ebd71d23ff6cd061cdc1b8bbecbb4ef92f51b38b0b4b4a7dec",
     "theories/becoming/results/records/transition-grouping-word-partition.md": "e3c3f8f72c952077f5c22d6a565af6877e11c915ac4ad3acceb9f4f07e2f44af",
     "theories/becoming/results/records/wisdom-root.md": "16aeb546837a2551edcb59b1825d953cc59d386cfde1cfc790875df9ec1ddb6b",
-    "theories/becoming/results/RESULT-REGISTER.md": "e16f974c0599cc1e6ac83d177711f2b013ba7764eb89538bb1491ef771afebb1",
+    "theories/becoming/results/RESULT-REGISTER.md": "62f67b54539a5de4fb9d4769349f38cb502facc123db9e3735b289e61d35cdcc",
     "theories/becoming/results/records/universal-practical-warrant.md": "eedd767d58ca12ac202eef60ebe3271f68e421816864d5d69faa982f11fe4f0e",
     "theories/becoming/results/records/enacted-scene-binding.md": "afda30044df72ee2d09384992d1a42ba7453b1414441181196c28549830b142c",
     "theories/becoming/results/records/market-protected-continuation.md": "dbde2b0a538e543cc57a65a6ce4e7dc5f42eabb1e6a581d4b567feddbfdec12c",
@@ -252,9 +252,9 @@
     "theories/becoming/results/README.md": "a0d791fd14cd809ebdb792bc472f064d087badb6826cd73ee7c82f82ea5ce868",
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
-    "theories/becoming/results/data/lean-index.json": "02bfc89c4ce3c845347364a289b8a3f663eb1fde8aeaf0d8f2df69b698d4f266",
-    "theories/becoming/results/data/source-index.json": "4712df3125be2c01675e4ca85568a4550c8786bb53879466ba5c11a65dcd1ef5",
-    "theories/becoming/results/LEAN-INDEX.md": "1a87eae178e5a70ceb75d7add6fe97307840925fde8f4ec4ab015b11fe6869d4",
+    "theories/becoming/results/data/lean-index.json": "20538e3ab79933e7b8cf00b8a139379964dd12471c93b2092dc66681faa30fd0",
+    "theories/becoming/results/data/source-index.json": "7efd4690ebcf6536ba7257b6ebb352b44ddb8d6f13deab762df2552206fb3aa2",
+    "theories/becoming/results/LEAN-INDEX.md": "b00b669f8ecc1f2929e8653e518d1f3dfdb0012a0f338a2442c89844404caf5b",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "9972b7c54ee70e97dfadd02dc751ec6a880d9b8244a97f026a83ac4ffcac4dd9",
     "theories/becoming/results/lean-declarations/becoming-core.md": "4cfedc0d67345bdb410faa17801193fc9992cc40f44f400bcd76a94ebeb8f88f",
     "theories/becoming/results/lean-declarations/ethics.md": "9cba6e4017973b9bc35b5f6ee04694c27d566533e774a732fdc19cfc80236321",
@@ -265,7 +265,7 @@
     "theories/becoming/results/lean-declarations/abstraction.md": "65b351fab68cfef941315664dfe1411255c1fbd38ba3e0b039295beade1cadbe",
     "theories/becoming/results/lean-declarations/concern.md": "ad2486429116d5914460b2abff084d7fc805fbd2c770c44670f6c5b91439759d",
     "theories/becoming/results/lean-declarations/shared.md": "3ddbea408c0270c45b5bce9f1bc9d68322d38836b0d146645e23f47b0b37eeb6",
-    "theories/becoming/results/lean-declarations/core.md": "d5f3e8a8aa1ffaeb1d1a00969afda0fc5cf5cc1d72811f443c94110f15580275",
+    "theories/becoming/results/lean-declarations/core.md": "9ff0320a83b53dbbe125441625e76927baf7b1bd827b81aa7c3cfc87832594e1",
     "theories/becoming/results/lean-declarations/other.md": "129392fb752ec5746a8b1e553c3d1622370813687dc7e4e7068c816177657602",
     "theories/becoming/results/records/where-a-level-couples.md": "961ff4cb490132f4e674957bf48da815652035c0b22319d4e60d4e03823c72c9",
     "theories/becoming/results/records/the-step-index-from-own-courses.md": "c86c4e4aa99125bbff71da910de0b9045633f21e453b3bdb001257795bb07580",
@@ -440,6 +440,7 @@
     "theories/becoming/results/records/forming-anew-necessary-and-sufficient.md": "ad3e3b4d07cacf3b72607fbcfc5e9f34b677c704d21e687c5e8599f461e50415",
     "theories/becoming/results/records/wenli-on-the-spine.md": "333c4db6c58742d348195183c804f1e9ab50dbf520766b1281088a1a77c9709a",
     "theories/becoming/results/records/what-the-dynamics-leave-open.md": "3aac5a43a4c088d7d062a466047086562dc1314104c7595d1e6694df0c58e6d0",
-    "theories/becoming/results/records/balance-from-the-first-law.md": "5439c86573f86aa6c39b2e2df63585be1f3b7833436d18251788d13eb94b9ebd"
+    "theories/becoming/results/records/balance-from-the-first-law.md": "5439c86573f86aa6c39b2e2df63585be1f3b7833436d18251788d13eb94b9ebd",
+    "theories/becoming/results/records/slowing-down-before-an-own-end.md": "50d7efae45c3501c6ca92865d59ddc2a031099bf2190fdb93af4ba5b4bba1895"
   }
 }
