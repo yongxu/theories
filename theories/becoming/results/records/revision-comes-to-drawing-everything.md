@@ -61,12 +61,13 @@ Best-response dynamics settles on the backward-induction outcome in finite games
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_restraint_keeps`, `Becoming.Optimum.Holding.gated_revised`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.levels_of_zero`, `Becoming.Optimum.InTurn.perfect_levels`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.reviseFirst`, `Becoming.Optimum.InTurn.reviseSecond`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_draw_all`, `Becoming.Optimum.InTurn.revisions_end`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.secondDrawn_of_zero`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Web.revised_broken` |
+| proof | [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) | `Becoming.Optimum.Holding.gate`, `Becoming.Optimum.Holding.gated_restraint_keeps`, `Becoming.Optimum.Holding.gated_revised`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Many.perfect_levels`, `Becoming.Optimum.InTurn.Perfect`, `Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.levels_of_zero`, `Becoming.Optimum.InTurn.perfect_of_zero`, `Becoming.Optimum.InTurn.reviseFirst`, `Becoming.Optimum.InTurn.reviseSecond`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`, `Becoming.Optimum.InTurn.revised_draw_all`, `Becoming.Optimum.InTurn.revisions_end`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.secondDrawn_of_zero`, `Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Web.revised_broken` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
 
 Aliases: `revision comes to drawing everything`, `how drawers come to a mutual best response`, `修订达到全部抽取`, `Becoming.Optimum.InTurn.revised_draw_all`, `Becoming.Optimum.InTurn.revisions_end`
 
@@ -74,6 +75,7 @@ Aliases: `revision comes to drawing everything`, `how drawers come to a mutual b
 ### History
 
 - 22 October 2026: added (SG16), revision toward best responses comes to drawing everything within 2N rounds; study section 326.
+- 22 October 2026, SG17: the two drawers' perfect_ends and perfect_levels, removed as the case k = 2 of the general laws, are cited as Many.perfect_ends and Many.perfect_levels (record any-number-of-drawers-in-turn); its laws are unchanged.
 
 </details>
 

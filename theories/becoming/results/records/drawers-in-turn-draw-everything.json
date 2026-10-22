@@ -31,10 +31,10 @@
       "zh": "自视野回溯：第二个在其余各步不抽取时，相互最优回应使两者都不留，第一个所留第二个抽取，第二个所留第一个在下一次抽取；故每个完美组合每步都使两者不留，不论零处所立为何，自第一步起基础立于零处所立者。",
       "declarations": [
         "Becoming.Optimum.InTurn.zero_of_le_sub",
-        "Becoming.Optimum.InTurn.step_ends",
-        "Becoming.Optimum.InTurn.ends_at",
-        "Becoming.Optimum.InTurn.perfect_ends",
-        "Becoming.Optimum.InTurn.perfect_levels"
+        "Becoming.Optimum.InTurn.Many.step_ends",
+        "Becoming.Optimum.InTurn.Many.ends_at",
+        "Becoming.Optimum.InTurn.Many.perfect_ends",
+        "Becoming.Optimum.InTurn.Many.perfect_levels"
       ]
     },
     {
@@ -68,8 +68,8 @@
   ],
   "does_not_show": [
     {
-      "en": "More than two drawers, or drawing at once with a rule of sharing; with capacities limiting a draw, which profiles are perfect away from the last step (record drawers-in-turn-within-capacities).",
-      "zh": "多于两个抽取者，或按分享规则同时抽取；抽取受容量限制时，最后一步之外何种组合完美（记录 drawers-in-turn-within-capacities）。",
+      "en": "Drawing at once with a rule of sharing (more than two drawers in turn: record any-number-of-drawers-in-turn); with capacities limiting a draw, which profiles are perfect away from the last step (record drawers-in-turn-within-capacities).",
+      "zh": "按分享规则同时抽取（多于两个轮流者见记录 any-number-of-drawers-in-turn）；受容量限制时，最后一步之外何种组合完美（记录 drawers-in-turn-within-capacities）。",
       "kind": "scope"
     },
     {
@@ -97,8 +97,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T184941.328469Z）：Becoming.Optimum 新增的 15 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 324 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "More than two drawers or drawing at once; noisy or partial revision; an independent review.",
-    "zh": "多于两个抽取者或同时抽取；有噪声或部分的修订；独立审查。"
+    "en": "Drawing at once; noisy or partial revision; an independent review.",
+    "zh": "同时抽取；有噪声或部分的修订；独立审查。"
   },
   "correspondence": {
     "en": "The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit on a draw the subgame-perfect outcome is immediate exhaustion, here for every perfect profile of drawers in turn, by backward induction (Kuhn 1953; Selten 1965).",
@@ -109,7 +109,6 @@
     "drawers in turn draw everything",
     "the others' rule derived",
     "轮流的抽取者全部抽取",
-    "Becoming.Optimum.InTurn.perfect_ends",
     "Becoming.Web.perfect_broken"
   ],
   "dependencies": [
@@ -181,6 +180,13 @@
         "en": "With capacities limiting a draw, each draws to capacity at the last step, and a limit on the other's draw can make restraint the best response.",
         "zh": "抽取受容量限制时，各自在最后一步抽到容量；对方抽取受限可使克制成为最优回应。"
       }
+    },
+    {
+      "id": "any-number-of-drawers-in-turn",
+      "detail": {
+        "en": "With any number of drawers in turn from two every perfect profile draws everything; these two drawers are the case k = 2.",
+        "zh": "两个及以上任意多个轮流的抽取者，每个完美组合都全部抽取；这两个抽取者是 k = 2 的情形。"
+      }
     }
   ],
   "references": [
@@ -193,16 +199,16 @@
         "Becoming.Optimum.Holding.gated_in_turn",
         "Becoming.Optimum.Holding.onSource",
         "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.Many.ends_at",
+        "Becoming.Optimum.InTurn.Many.perfect_ends",
+        "Becoming.Optimum.InTurn.Many.perfect_levels",
+        "Becoming.Optimum.InTurn.Many.step_ends",
         "Becoming.Optimum.InTurn.Perfect",
-        "Becoming.Optimum.InTurn.ends_at",
         "Becoming.Optimum.InTurn.firstDrawn",
         "Becoming.Optimum.InTurn.levels",
         "Becoming.Optimum.InTurn.next",
-        "Becoming.Optimum.InTurn.perfect_ends",
-        "Becoming.Optimum.InTurn.perfect_levels",
         "Becoming.Optimum.InTurn.perfect_of_zero",
         "Becoming.Optimum.InTurn.secondDrawn",
-        "Becoming.Optimum.InTurn.step_ends",
         "Becoming.Optimum.InTurn.zero_of_le_sub",
         "Becoming.Optimum.InTurn.zero_secondDrawn",
         "Becoming.Optimum.Next.frontier_ends_drawn_first",
@@ -211,7 +217,7 @@
         "Becoming.Optimum.byDrawn",
         "Becoming.Web.perfect_broken"
       ],
-      "sha256": "50c37906fce3a368e8dc9a3b1ff584665ae9238a3eefa3db341d1ae8b904232d"
+      "sha256": "350b9e9a3935b0aea89d896f8c95a82a43a19040d9539141879a52dc9718b87c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
@@ -231,7 +237,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "740f6d588bfb7232ee88dc26c5b728f0d92b60cb0bcbbf42172fe26f37745983"
+      "sha256": "fc5d2929697d0add12c22cd557657685fd737b80a08f08590e39ef6327a7d5c6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
@@ -244,12 +250,18 @@
       "role": "receipt",
       "sha256": "b8fdc6970f0440b71b6aee8a0eb438a962dc76cd97684430c56be2c94a4be82b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
+      "role": "receipt",
+      "sha256": "2df21afb87f40cc1d5a2be2ed77cbab2bd7712fe6085c8d599e8f2f2b684b8b1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -267,6 +279,10 @@
     {
       "en": "22 October 2026, SG15: capacities limiting a draw are stated in part (record drawers-in-turn-within-capacities, study section 329); zero_of_le_sub now reads eq_of_sub_le_sub. Its laws are unchanged.",
       "zh": "2026年10月22日，SG15：容量限制抽取已部分陈述（记录 drawers-in-turn-within-capacities，研究第 329 节）；zero_of_le_sub 今读取 eq_of_sub_le_sub。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG17: more than two drawers in turn stated (record any-number-of-drawers-in-turn, study section 332); step_ends, ends_at, perfect_ends and perfect_levels now cited in their general form, the Many laws of which these two drawers are the case; the statements of its laws are unchanged.",
+      "zh": "2026年10月22日，SG17：多于两个轮流的抽取者已陈述（记录 any-number-of-drawers-in-turn，研究第 332 节）；step_ends、ends_at、perfect_ends 与 perfect_levels 今以其一般形式（这两个抽取者是其情形的 Many 之律）引用；其律的陈述不变。"
     }
   ]
 }

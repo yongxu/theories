@@ -14887,3 +14887,46 @@ Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the 
 **Self-review.** Every premise is used: reading condition by condition for the decision, the order for the threshold, the covering list for the finite states, the bound for their number. The generalization removed nothing; RM9's laws keep their names and their web forms are instances. Rest within a band, which RM3 proved for one condition through a measure of unordered steps, is not lifted to webs: the bounded decision covers a band (a band bounds every run from it) but gives the exponential step count, not a rest. The witness is one condition; a web of several with recent giving is the same law at another index. Limits: whole numbers; giving reading the last step only; bounded runs.
 
 **The run.** Core 285 modules and 12,322 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,195 reused. 29 declarations added to Becoming.RegimeMargin, 18 of them theorems, none removed, all with empty axiom reports; RM9's bounded laws now take a law read condition by condition, the web's step an instance, and `run_alike` reads `run_alike_of`. Connectivity: 647 of 13,068 apart, unchanged; no new apart root, every new law stated on a run of the web or read by a law that is, the witness on the run; register check passes.
+
+## 332. Any number of drawers in turn (SG17)
+
+```text
+Result(s): new record any-number-of-drawers-in-turn (new laws of Becoming.Optimum); reuses
+       drawers-in-turn-draw-everything (the two drawers' profile, draws, perfect profiles and web law, now its case).
+Delta: SG14 proved every perfect profile of two drawers in turn draws everything. With k drawers in turn at each
+       step (Optimum.InTurn.Many: pass, drawn, BestAt, Perfect), wherever k is at least two, backward from the horizon
+       every drawer after the first draws nothing later, so of whatever it is given it leaves nothing, and then
+       whatever the first leaves the second takes (Many.step_ends, Many.ends_at): every perfect profile has every
+       drawer leave nothing at every step (Many.perfect_ends), the base standing from the first step at what stands at
+       nothing (Many.perfect_levels), and drawing everything is perfect (Many.perfect_of_zero). Rule 9: two drawers are
+       the case k = 2 (Many.pair, drawn_first, drawn_second, levels_pair, perfect_pair); SG14's web law perfect_broken is
+       derived from the general laws (Web.turns_broken), and its step_ends, ends_at, perfect_ends and perfect_levels
+       are removed. Witness: under the gate every perfect profile of any number of drawers from two breaks the dweller at
+       the first step (Holding.gated_turns).
+Premises / correspondence: SG14's model (any law G of what stands; plain sums; rules reading the drawer, the step and
+       the level; no capacity limit), with k drawers in turn, k at least two; natural amounts, discrete steps.
+       Correspondence: the n-player dynamic commons (Levhari and Mirman 1980), sequential moves.
+Evidence: core receipt 20261022T040548.209667Z (passed).
+Boundary: drawers drawing at once with a rule of sharing; one drawer (k = 1), where an optimum may keep the base;
+       capacities limiting draws of more than two drawers.
+Output → input: chapter §3.4, §7.1, §8.1 item 10 (EN, ZH), the record table; Optimum's header; record
+       drawers-in-turn-draw-everything (its open item, its step laws re-cited); significance review, many check.
+```
+
+**The question.** SG14's open-access result was stated for two drawers ([§324](#324-drawers-in-turn-each-ranking-courses-sg14)); the chapter's item 10 lists more than two as open. Whether more drawers change it is not obvious from the two-drawer proof, which used that the second drawer is the last: whatever the first leaves the second takes. With more drawers, a middle drawer's leaving goes to the next drawer, not to the last.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *Drawers in turn, any number* (`Optimum.InTurn.Many.pass`, `Optimum.InTurn.Many.next`, `Optimum.InTurn.Many.drawn`, `Optimum.InTurn.Many.BestAt`, `Optimum.InTurn.Many.Perfect`, `Optimum.InTurn.Many.levels`). At each step drawer `0` is given the level and each drawer leaves part of what it is given to the next; what the last leaves stands as `G` says. A profile is perfect where each leaves at most what it is given and every drawer, of whatever it is given, leaves what draws it the most over the rest, the drawers after it at the step and all drawers later responding by their rules.
+- *Backward from the horizon* (`Optimum.InTurn.Many.pass_zero`, `Optimum.InTurn.Many.pass_of_first`, `Optimum.InTurn.Many.step_ends`, `Optimum.InTurn.Many.ends_at`, `Optimum.InTurn.Many.perfect_ends`, `Optimum.InTurn.Many.perfect_levels`). Where every drawer after the first draws nothing later, each of them leaves nothing of whatever it is given, since only its draw at the step counts for it; then whatever the first leaves the second takes, so what the first draws later does not depend on what it leaves, and the first leaves nothing. Every drawer after the first then draws nothing over one more step, which carries the induction. So every perfect profile of two or more drawers has every drawer leave nothing at every step before the horizon, and the base stands from the first step at what stands at nothing.
+- *Drawing everything is perfect* (`Optimum.InTurn.Many.zero_drawn`, `Optimum.InTurn.Many.perfect_of_zero`), for every number of drawers from two, so the law is not vacuous.
+- *Two drawers are the case k = 2* (`Optimum.InTurn.Many.pair`, `Optimum.InTurn.Many.drawn_first`, `Optimum.InTurn.Many.drawn_second`, `Optimum.InTurn.Many.levels_pair`, `Optimum.InTurn.Many.perfect_pair`). SG14's profile, draws and levels are those of drawers `0` and `1`, and a perfect profile of two is perfect as such. SG14's `Web.perfect_broken` is now derived from the general laws, and its `step_ends`, `ends_at`, `perfect_ends` and `perfect_levels`, each the case `k = 2` of a law here, are removed (rule 9); the chapter and records cite the general laws.
+- *On a web, and the witness* (`Web.turns_broken`, `Optimum.Holding.gated_turns`). Along every perfect profile of two or more drawers a dependence above what stands at nothing, met at the start, is broken at the first step. Under the gate, drawing everything is perfect for every number of drawers from two, and every perfect profile of them breaks the dweller at the first step; alone, a drawer's optimum may keep it (`Holding.gated_in_turn`).
+
+**Against the prior form** ([significance review, many check](BECOMING-SIGNIFICANCE-REVIEW.md#many-check)). In the dynamic commons with n players the equilibrium stock falls as players are added, and with linear payoffs and no discounting the subgame-perfect outcome is immediate depletion. The spine's form gives every perfect profile, over any law of what stands, for every number of drawers in turn from two, and makes the two-drawer law a case rather than a separate proof.
+
+*Reading* [AI reading, D45]. The open-access outcome does not depend on how many share the base, once there are two: what any drawer leaves goes to the next, and only a drawer that keeps what it leaves for itself has a reason to leave it. Number does not create restraint; a limit on what others can take can (SG15).
+
+**Self-review.** Every premise is used: at least two drawers, since with one the first's later draws depend on what it leaves (`Holding.gated_in_turn`'s first part, an optimum keeping the dweller alone); each leaving at most what it is given, for what drawers leave of nothing. The induction carries only that every drawer after the first draws nothing later. Four removed laws were cited by SG14's record and two by SG15's and SG16's, which now cite their general forms; `perfect_ends` and `perfect_levels` were removed after the first check showed no law read them once the web law went through the general one. Limits: drawers in turn, not at once; no capacity limit.
+
+**The run.** Core 285 modules and 12,332 theorems, instances 7 and 567, applications 6 and 179; 13 Lean steps ran, 1,191 reused. 21 declarations added to Becoming.Optimum, 14 of them theorems; InTurn.step_ends, ends_at, perfect_ends and perfect_levels removed, Web.perfect_broken now reading the general laws with its statement unchanged, all with empty axiom reports. Connectivity: 647 of 13,078 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the witness on the flow; register check passes.

@@ -1,0 +1,221 @@
+{
+  "schema_version": 2,
+  "id": "any-number-of-drawers-in-turn",
+  "title": {
+    "en": "Any number of drawers in turn",
+    "zh": "任意多个轮流的抽取者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T04:07:53+00:00",
+  "statement": {
+    "en": "With any number of drawers in turn from two, each ranking courses, every profile at a mutual best response at every step from every level has every drawer leave nothing, so the base stands at once at what stands at nothing; two drawers are the case.",
+    "zh": "两个及以上任意多个各自对过程排序的轮流抽取者，每步、每个水平都处于相互最优回应的每个组合中每者都不留，故基底立即立于零处所立者；两个抽取者是其情形。"
+  },
+  "laws": [
+    {
+      "en": "At each step k drawers draw in turn, each leaving part of what it is given to the next; a profile is perfect where each leaves at most what it is given and every drawer, of whatever it is given, leaves what draws it the most.",
+      "zh": "每步 k 个抽取者轮流抽取，各自把所给的一部分留给下一者；若各自至多留所给，且每者对所给都留下使自己抽取最多者，组合即完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.Many.pass",
+        "Becoming.Optimum.InTurn.Many.next",
+        "Becoming.Optimum.InTurn.Many.drawn",
+        "Becoming.Optimum.InTurn.Many.BestAt",
+        "Becoming.Optimum.InTurn.Many.Perfect",
+        "Becoming.Optimum.InTurn.Many.levels"
+      ]
+    },
+    {
+      "en": "With at least two drawers, backward from the horizon every drawer after the first draws nothing later and leaves nothing, and then so does the first: every perfect profile has every drawer leave nothing at every step, the base standing at what stands at nothing.",
+      "zh": "两个及以上抽取者时，自视野逆推，第一者之后的每者此后不抽而全不留，于是第一者亦然：每个完美组合中每者每步都不留，基底立于零处所立者。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.Many.pass_zero",
+        "Becoming.Optimum.InTurn.Many.pass_of_first",
+        "Becoming.Optimum.InTurn.Many.step_ends",
+        "Becoming.Optimum.InTurn.Many.ends_at",
+        "Becoming.Optimum.InTurn.Many.perfect_ends",
+        "Becoming.Optimum.InTurn.Many.perfect_levels"
+      ]
+    },
+    {
+      "en": "Drawing everything is perfect for every number of drawers from two.",
+      "zh": "全部抽取对两个及以上任意多个抽取者都是完美的。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.Many.zero_drawn",
+        "Becoming.Optimum.InTurn.Many.perfect_of_zero"
+      ]
+    },
+    {
+      "en": "Two drawers are the case k = 2: their draws, levels and perfect profiles are those of drawers 0 and 1, and their laws are derived from these.",
+      "zh": "两个抽取者是 k = 2 的情形：其所抽、水平与完美组合即抽取者 0 与 1 的，其律由此导出。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.Many.pair",
+        "Becoming.Optimum.InTurn.Many.drawn_first",
+        "Becoming.Optimum.InTurn.Many.drawn_second",
+        "Becoming.Optimum.InTurn.Many.levels_pair",
+        "Becoming.Optimum.InTurn.Many.perfect_pair"
+      ]
+    },
+    {
+      "en": "On a web, along every perfect profile of two or more drawers a dependence above what stands at nothing is broken at the first step; under the gate, every perfect profile of any number from two breaks the dweller.",
+      "zh": "在网上，沿两个及以上抽取者的每个完美组合，高于零处所立者的依存在第一步被打破；门控下，两个及以上任意多个的每个完美组合都打破居者。",
+      "declarations": [
+        "Becoming.Web.turns_broken",
+        "Becoming.Optimum.Holding.gated_turns"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. SG14's model: any law G of what stands; k drawers in turn at each step, k at least two; plain sums over the steps that remain; rules reading the drawer, the step and the level; each leaving at most what it is given, with no capacity limit; natural amounts, discrete steps.",
+      "zh": "不加公理。SG14 的模型：任一所立之律 G；每步 k 个轮流的抽取者，k 至少为二；其后各步之和；规则读取抽取者、步与水平；各自至多留所给，无容量限制；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Drawers drawing at once with a rule of sharing; capacities limiting the draws of more than two drawers.",
+      "zh": "按分享规则同时抽取的抽取者；限制多于两个抽取者之抽取的容量。",
+      "kind": "scope"
+    },
+    {
+      "en": "One drawer: with k = 1 an optimum may keep the base (Holding.gated_in_turn).",
+      "zh": "一个抽取者：k = 1 时最优可保持基底（Holding.gated_in_turn）。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the drain is a harm or restraint better: no evaluation enters; the laws say what perfect profiles do.",
+      "zh": "抽干是伤害或克制更好：没有评价进入；这些律只说完美组合做什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T040548.209667Z): the 21 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 332; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T040548.209667Z）：Becoming.Optimum 新增的 21 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 332 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Drawing at once with a rule of sharing; capacities for more drawers; an independent review.",
+    "zh": "按分享规则同时抽取；更多抽取者的容量；独立审查。"
+  },
+  "correspondence": {
+    "en": "In the n-player dynamic commons the equilibrium stock falls as players are added (Levhari and Mirman 1980); backward induction in finite games of perfect information (Selten 1965).",
+    "zh": "在 n 人动态公地中，均衡存量随参与者增加而下降（Levhari 与 Mirman 1980）；有限完美信息博弈中的逆向归纳（Selten 1965）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "any number of drawers in turn",
+    "many drawers in turn",
+    "任意多个轮流的抽取者",
+    "Becoming.Optimum.InTurn.Many.perfect_ends",
+    "Becoming.Web.turns_broken"
+  ],
+  "dependencies": [
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its two drawers are the case k = 2; its web law is derived from these, its step laws, perfect_ends and perfect_levels removed; its open item on more than two drawers is answered.",
+        "zh": "其两个抽取者是 k = 2 的情形；其网律由此导出，其步律、perfect_ends 与 perfect_levels 被移除；回答其关于多于两个抽取者的开放项。"
+      },
+      "interface": {
+        "output": {
+          "en": "Perfect, BestAt, firstDrawn, secondDrawn, levels, zero_of_le_sub.",
+          "zh": "Perfect、BestAt、firstDrawn、secondDrawn、levels、zero_of_le_sub。"
+        },
+        "input": {
+          "en": "Any number of drawers in turn.",
+          "zh": "任意多个轮流的抽取者。"
+        },
+        "conditions": {
+          "en": "At least two drawers.",
+          "zh": "至少两个抽取者。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.gate",
+        "Becoming.Optimum.Holding.gated_in_turn",
+        "Becoming.Optimum.Holding.gated_turns",
+        "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.Many.BestAt",
+        "Becoming.Optimum.InTurn.Many.Perfect",
+        "Becoming.Optimum.InTurn.Many.drawn",
+        "Becoming.Optimum.InTurn.Many.drawn_first",
+        "Becoming.Optimum.InTurn.Many.drawn_second",
+        "Becoming.Optimum.InTurn.Many.ends_at",
+        "Becoming.Optimum.InTurn.Many.levels",
+        "Becoming.Optimum.InTurn.Many.levels_pair",
+        "Becoming.Optimum.InTurn.Many.next",
+        "Becoming.Optimum.InTurn.Many.pair",
+        "Becoming.Optimum.InTurn.Many.pass",
+        "Becoming.Optimum.InTurn.Many.pass_of_first",
+        "Becoming.Optimum.InTurn.Many.pass_zero",
+        "Becoming.Optimum.InTurn.Many.perfect_ends",
+        "Becoming.Optimum.InTurn.Many.perfect_levels",
+        "Becoming.Optimum.InTurn.Many.perfect_of_zero",
+        "Becoming.Optimum.InTurn.Many.perfect_pair",
+        "Becoming.Optimum.InTurn.Many.step_ends",
+        "Becoming.Optimum.InTurn.Many.zero_drawn",
+        "Becoming.Optimum.InTurn.Perfect",
+        "Becoming.Optimum.InTurn.firstDrawn",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.secondDrawn",
+        "Becoming.Optimum.InTurn.zero_of_le_sub",
+        "Becoming.Web.perfect_broken",
+        "Becoming.Web.turns_broken"
+      ],
+      "sha256": "350b9e9a3935b0aea89d896f8c95a82a43a19040d9539141879a52dc9718b87c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
+      "role": "receipt",
+      "sha256": "2df21afb87f40cc1d5a2be2ed77cbab2bd7712fe6085c8d599e8f2f2b684b8b1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "91e98c707d986663fc35a23cdb052aa2e1b98d3cb466ebe848d7b966ea49f462"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "1dca6f4771a84ddbd70b0054966dd615ddb48b6d24e8015c73cf0e59b630eefb"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "fc5d2929697d0add12c22cd557657685fd737b80a08f08590e39ef6327a7d5c6"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG17), any number of drawers in turn; SG14's two drawers the case k = 2, its step_ends, ends_at, perfect_ends and perfect_levels removed; study section 332.",
+      "zh": "2026年10月22日：新增（SG17），任意多个轮流的抽取者；SG14 的两个抽取者是 k = 2 的情形，其 step_ends、ends_at、perfect_ends 与 perfect_levels 被移除；研究第 332 节。"
+    }
+  ]
+}
