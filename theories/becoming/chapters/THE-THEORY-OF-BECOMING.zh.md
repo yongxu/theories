@@ -624,6 +624,7 @@
 | [不息的生成需要更新](../results/records/unceasing-generation-needs-renewal.md) | 不加前提的定理 | — | §2.2 |
 | [新的增益从哪里来](../results/records/where-novelty-gain-comes-from.md) | 不加前提的定理 | — | §2.2 |
 | [整体经由部分的生成而持续](../results/records/whole-persists-through-generation.md) | 不加前提的定理 | — | §2.2 |
+| [每个部分之整体与分级之整体](../results/records/a-whole-of-every-part.md) | 不加前提的定理 | — | §2.2 |
 | [推出范围的界限](../results/records/derived-extent-limits.md) | 不加前提的定理 | — | §2.3 |
 | [只计自身的取用漏掉联合超出](../results/records/own-count-misses-joint-excess.md) | 在所述前提下的定理 | 活动需要支持 | §2.3 |
 | [汲取其部分之生起超过更新的整体终结](../results/records/whole-drawing-beyond-renewal-ends.md) | 在所述前提下的定理 | 平衡、活动需要支持 | §2.3 |
@@ -665,6 +666,7 @@
 | [回路怎样在展开中形成](../results/records/how-loops-form.md) | 不加前提的定理 | — | §2.6 |
 | [差别到达多少](../results/records/how-much-difference-arrives.md) | 不加前提的定理 | — | §2.6 |
 | [耦合多常作用：安定、失控与其速度](../results/records/how-often-couplings-act.md) | 不加前提的定理 | — | §2.6 |
+| [为所传之量所饱和的耦合](../results/records/a-coupling-saturated-by-what-it-has-carried.md) | 有所述前提的定理 | 强度读自已传之量，响应给定；至阈值之步停止，须未饱和时每步作用、源之水平常在 | §2.6 |
 | [回路在律所读之内，经储量起作用的回路在断裂处形成](../results/records/loops-within-what-a-law-reads.md) | 不加前提的定理 | — | §2.6 |
 | [观察不出下游：差别只往下游去](../results/records/observation-is-a-route.md) | 不加前提的定理 | — | §2.6 |
 | [携带差别的阶作为历史之和](../results/records/orders-as-a-sum-over-histories.md) | 不加前提的定理 | — | §2.6 |
@@ -1060,17 +1062,17 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261022T040548.209667Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 332 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#332-any-number-of-drawers-in-turn-sg17)）。
+**当前回执**是运行 [`20261022T042540.776869Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 333 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#333-a-whole-of-every-part-and-a-graded-whole-wh1)、[第 334 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#334-a-coupling-saturated-by-what-it-has-carried-sat1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,332 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,392 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 301 个模块，13,152 条定理 |
-| 审计的脊柱声明 | 17,929 |
-| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 201 条 |
+| 闭包（核心、环与根基） | 301 个模块，13,212 条定理 |
+| 审计的脊柱声明 | 18,003 |
+| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 202 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。
 

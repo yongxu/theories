@@ -513,7 +513,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
       "role": "proof",
-      "sha256": "5f99b203eb6e274510a097fd49368d96eeb7a31faefb6c429ab4b016540f9c5e",
+      "sha256": "1acdba626af7fa0266679d5c158e5129c4662be832bf47e660abea3e04310a2e",
       "declarations": [
         "Becoming.Frequency.count",
         "Becoming.RoundTrip",
@@ -637,6 +637,12 @@
       "role": "receipt",
       "sha256": "16700ce917afb8c661619f7cf3516102370bea4eb545893a4a4284ed47419622",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "role": "receipt",
+      "sha256": "6276e35d34eb8d014bfd7227d549bacf967a072420c3de86f1de6903a551e0a8",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -698,7 +704,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Frequency",
       "success_pointer": "/status",
       "success_value": "passed"

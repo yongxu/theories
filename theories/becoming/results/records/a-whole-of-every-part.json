@@ -1,0 +1,291 @@
+{
+  "schema_version": 2,
+  "id": "a-whole-of-every-part",
+  "title": {
+    "en": "A whole of every part, and a graded whole",
+    "zh": "每个部分之整体与分级之整体"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T04:28:57+00:00",
+  "statement": {
+    "en": "A whole active while every part is ends as soon as one part ends; between it and a whole of some part, the grade of listed parts gains what arises and loses what ceases, so a whole of at least j of them arises and ceases only through one, and the whole is diminished where some are active, not all.",
+    "zh": "每个部分都活跃时才活跃的整体，一个部分终结即终结；它与某部分之整体之间，所列部分之等级增其生起者、减其止息者，故至少 j 个之整体只经由其一生起与止息，某些活跃而非全部时整体减损。"
+  },
+  "laws": [
+    {
+      "en": "A formation is the whole of every part when it is active exactly while every part is; every formation is that of itself. It is inactive wherever one part is, so it ends as soon as one part ends, with no listing and nothing of arising, and persists exactly while every part does; a whole of a brief part is brief.",
+      "zh": "一个形成恰在每个部分都活跃时活跃，即为每个部分之整体；每个形成都是其自身的这种整体。它在任一部分不活跃之处不活跃，故一个部分终结它即终结，无须列举，也无关生起；它恰在每个部分都持续时持续；一个短暂部分之整体是短暂的。",
+      "declarations": [
+        "Becoming.Web.AllWhole",
+        "Becoming.Web.allWhole_self",
+        "Becoming.Web.AllWhole.inactive_of_part",
+        "Becoming.Web.AllWhole.ends_of_part",
+        "Becoming.Web.AllWhole.persists_iff",
+        "Becoming.Web.AllWhole.brief_of_part"
+      ]
+    },
+    {
+      "en": "A whole of some part ceases only as some part ceases, dually to its arising. With some part, the whole of every part is active only where the whole of some part is, and the two coincide exactly where the parts are in step; with no part they part entirely.",
+      "zh": "某部分之整体只经由某部分之止息而止息，与其生起对偶。有部分时，每个部分之整体只在某部分之整体活跃处活跃，二者恰在诸部分同步之处相合；无部分时二者全然分开。",
+      "declarations": [
+        "Becoming.Web.Whole.ceases_part",
+        "Becoming.Web.AllWhole.active_whole",
+        "Becoming.Web.InStep",
+        "Becoming.Web.Whole.same_iff_inStep",
+        "Becoming.Web.AllWhole.active_of_none"
+      ]
+    },
+    {
+      "en": "The grade of listed parts at a step is a count of their activity, existing exactly where it is decided: positive exactly where some is active, the number listed exactly where every one is, short of it wherever one is not. Across a step it gains what arises and loses what ceases, so it rises only as a listed part arises and falls only as one ceases.",
+      "zh": "所列部分在一步的等级是其活动之计数，恰在活动可判定之处存在：恰在某部分活跃时为正，恰在每个部分都活跃时等于所列之数，任一部分不活跃即不足。跨一步它增其生起者、减其止息者，故只在某所列部分生起时上升，只在某一止息时下降。",
+      "declarations": [
+        "Becoming.Web.Grade",
+        "Becoming.Web.Grade.pos_iff",
+        "Becoming.Web.Grade.eq_length_iff",
+        "Becoming.Web.Grade.lt_length_of_inactive",
+        "Becoming.Web.Grade.across_step",
+        "Becoming.Web.Grade.arises_of_lt",
+        "Becoming.Web.Grade.ceases_of_lt",
+        "Becoming.Counts.lt_length_of_fails",
+        "Becoming.Counts.all_of_eq_length"
+      ]
+    },
+    {
+      "en": "A formation active exactly where the grade is at least j arises and ceases only through a listed part. At j one it is the whole of some listed part, at the number listed the whole of every one, and conversely where activity is decided; so a whole of every listed part arises and ceases only through a listed part.",
+      "zh": "恰在等级至少为 j 时活跃的形成，只经由所列部分之生起与止息而生起与止息。j 为一时它是某所列部分之整体，j 为所列之数时是每个部分之整体，活动可判定时反之亦然；故每个所列部分之整体只经由所列部分而生起与止息。",
+      "declarations": [
+        "Becoming.Web.AtLeastWhole",
+        "Becoming.Web.AtLeastWhole.arises_part",
+        "Becoming.Web.AtLeastWhole.ceases_part",
+        "Becoming.Web.AtLeastWhole.whole",
+        "Becoming.Web.Whole.atLeastWhole",
+        "Becoming.Web.AtLeastWhole.allWhole",
+        "Becoming.Web.AllWhole.atLeastWhole",
+        "Becoming.Web.AllWhole.arises_part",
+        "Becoming.Web.AllWhole.ceases_part"
+      ]
+    },
+    {
+      "en": "The whole is diminished where some listed parts are active and not all: where their activity is decided, exactly where the whole of some is active and the whole of every one is not.",
+      "zh": "某些所列部分活跃而非全部时，整体是减损的：活动可判定之处，恰是某部分之整体活跃而每个部分之整体不活跃。",
+      "declarations": [
+        "Becoming.Web.Diminished",
+        "Becoming.Web.Grade.diminished_iff",
+        "Becoming.Web.diminished_iff"
+      ]
+    },
+    {
+      "en": "Witnesses: the lineage of Generations is active at every step while no whole of every member is active at any; a house of three rafters, the first taken after the first step, ceases with it, and from then on two of three are active, the whole diminished, what is left standing and the house not.",
+      "zh": "见证：Generations 的世系每步活跃，而任何每个成员之整体在任何一步都不活跃；三椽之舍，第一椽在第一步之后被取去，舍随之止息，此后三椽中二椽活跃，整体减损，所余者立而舍不立。",
+      "declarations": [
+        "Becoming.Generations.allWhole_never",
+        "Becoming.Rafters.Formation",
+        "Becoming.Rafters.rafters",
+        "Becoming.Rafters.web",
+        "Becoming.Rafters.house",
+        "Becoming.Rafters.remains",
+        "Becoming.Rafters.decided",
+        "Becoming.Rafters.grade_two",
+        "Becoming.Rafters.taken"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Activity a proposition at each step; for the grade, finitely many listed parts whose activity is decided where the grade is taken (the whole of at least j parts asks a grade at every step, and the converses from the two wholes ask decided activity); some part where the two wholes are compared; discrete steps.",
+      "zh": "不加公理。每步之活动是一个命题；等级须有限个所列部分，其活动在取等级之处可判定（至少 j 个部分之整体每步要求一个等级，由两种整体之反向要求活动可判定）；比较两种整体时须有某部分；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Weighted parts, wholes of wholes, or the grade of infinitely many parts.",
+      "zh": "加权的部分、整体之整体，或无穷多部分之等级。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which whole a given formation is, or which formations are its parts: these are readings.",
+      "zh": "某个形成是哪一种整体，或哪些形成是其部分：这些是读法。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That any of the three wholes is constitution rather than coincidence of activity.",
+      "zh": "三种整体中任何一种是构成而非活动之相合。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T042540.776869Z): the 41 declarations Becoming.Wholes gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 333; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T042540.776869Z）：Becoming.Wholes 新增的 41 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 333 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Weighted parts and wholes of wholes; an independent review.",
+    "zh": "加权的部分与整体之整体；独立审查。"
+  },
+  "correspondence": {
+    "en": "Series, parallel and k-out-of-n systems of reliability theory, the life of a series system the least of its components' lives (Barlow and Proschan 1975); threshold functions of Boolean logic.",
+    "zh": "可靠性理论中的串联、并联与 n 中取 k 系统，串联系统之寿命为诸部件寿命之最小者（Barlow 与 Proschan 1975）；布尔逻辑的阈值函数。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+  "aliases": [
+    "a whole of every part",
+    "conjunctive whole",
+    "graded whole",
+    "diminished whole",
+    "每个部分之整体",
+    "合取的整体",
+    "分级的整体",
+    "减损之整体",
+    "Becoming.Web.AllWhole",
+    "Becoming.Web.AtLeastWhole",
+    "Becoming.Web.diminished_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "whole-persists-through-generation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its whole of some part is compared with the whole of every part; its witness Generations shows the two apart.",
+        "zh": "其某部分之整体与每个部分之整体相比较；其见证 Generations 显示二者之别。"
+      },
+      "interface": {
+        "output": {
+          "en": "Web.Whole, Web.Ends, Web.Brief, Generations.",
+          "zh": "Web.Whole、Web.Ends、Web.Brief、Generations。"
+        },
+        "input": {
+          "en": "The whole of some part, with its arising through a part.",
+          "zh": "某部分之整体及其经由部分之生起。"
+        },
+        "conditions": {
+          "en": "Some part, for the comparison.",
+          "zh": "比较时须有某部分。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States the gap its map found in 华严六相 and 墨经「損」 (entries huayan-liu-xiang, mojing-sun-jian-ti, suzhe-che-bu-ke-shu).",
+        "zh": "陈述其对应在华严六相与墨经「損」中发现的缺口（条目 huayan-liu-xiang、mojing-sun-jian-ti、suzhe-che-bu-ke-shu）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Counts.all_of_eq_length",
+        "Becoming.Counts.lt_length_of_fails",
+        "Becoming.Generations.allWhole_never",
+        "Becoming.Generations.generations",
+        "Becoming.Generations.whole",
+        "Becoming.Rafters.Formation",
+        "Becoming.Rafters.decided",
+        "Becoming.Rafters.grade_two",
+        "Becoming.Rafters.house",
+        "Becoming.Rafters.rafters",
+        "Becoming.Rafters.remains",
+        "Becoming.Rafters.taken",
+        "Becoming.Rafters.web",
+        "Becoming.Web.AllWhole",
+        "Becoming.Web.AllWhole.active_of_none",
+        "Becoming.Web.AllWhole.active_whole",
+        "Becoming.Web.AllWhole.arises_part",
+        "Becoming.Web.AllWhole.atLeastWhole",
+        "Becoming.Web.AllWhole.brief_of_part",
+        "Becoming.Web.AllWhole.ceases_part",
+        "Becoming.Web.AllWhole.ends_of_part",
+        "Becoming.Web.AllWhole.inactive_of_part",
+        "Becoming.Web.AllWhole.persists_iff",
+        "Becoming.Web.AtLeastWhole",
+        "Becoming.Web.AtLeastWhole.allWhole",
+        "Becoming.Web.AtLeastWhole.arises_part",
+        "Becoming.Web.AtLeastWhole.ceases_part",
+        "Becoming.Web.AtLeastWhole.whole",
+        "Becoming.Web.Brief",
+        "Becoming.Web.Diminished",
+        "Becoming.Web.Ends",
+        "Becoming.Web.Grade",
+        "Becoming.Web.Grade.across_step",
+        "Becoming.Web.Grade.arises_of_lt",
+        "Becoming.Web.Grade.ceases_of_lt",
+        "Becoming.Web.Grade.diminished_iff",
+        "Becoming.Web.Grade.eq_length_iff",
+        "Becoming.Web.Grade.lt_length_of_inactive",
+        "Becoming.Web.Grade.pos_iff",
+        "Becoming.Web.InStep",
+        "Becoming.Web.Whole",
+        "Becoming.Web.Whole.arises_part",
+        "Becoming.Web.Whole.atLeastWhole",
+        "Becoming.Web.Whole.ceases_part",
+        "Becoming.Web.Whole.ends_without_arising",
+        "Becoming.Web.Whole.needs_arising",
+        "Becoming.Web.Whole.same_iff_inStep",
+        "Becoming.Web.allWhole_self",
+        "Becoming.Web.diminished_iff",
+        "Becoming.Web.whole_self"
+      ],
+      "sha256": "b8c89ed98f3b1bbb98c823628d9d96b16873098c8fa99fd28398dd2217c6ebf6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "role": "receipt",
+      "sha256": "6276e35d34eb8d014bfd7227d549bacf967a072420c3de86f1de6903a551e0a8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "73c09fb8f511618a8b036ec5c641a6c7250782f582c46e259cd4d644b7911317"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "1bde506b19b826bd9000cfcb2fa9cf78100c3efa0c8eb8db04762667e78044ff"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "26c706a8730956de99d09bb56f331c3721e737f7981b7da3f402e748b9fb267d"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "faae80a364ffc654a661b0c390bc8ce39e8ec6f4e94cd14069d8b54625c44090"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "f93187196f4571793df3efa9bc718bfefb230e9b8354b3ab2849e16aeff005a9"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Wholes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (WH1), the whole of every part, the grade and the diminished whole, for the gap the ZH reading raised; study section 333.",
+      "zh": "2026年10月22日：新增（WH1），每个部分之整体、等级与减损之整体，补中华思想脉络之读所提出的缺口；研究第 333 节。"
+    }
+  ]
+}

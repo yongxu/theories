@@ -37,7 +37,7 @@ Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZA
 <a id="next--下一步"></a>
 ## Next
 
-The gaps the texts raise, each to be claimed before it is written: a conjunctive or graded whole; saturation of a coupling by what it has carried; one-sided and local regulation; equal division; copying growth; witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.
+The gaps the texts raise, each to be claimed before it is written: one-sided and local regulation; equal division; copying growth; witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -53,6 +53,8 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 - **interpretive**: [a-code-formed-between-formations](a-code-formed-between-formations.md). Why the name table is a convention among users: a code forms between formations (约定俗成).
 - related, not a proved adapter: [hexagrams-on-the-spine](hexagrams-on-the-spine.md). Its 易传 entries keep these maps' correspondences.
 - related, not a proved adapter: [hexagram-arrangements-and-laws](hexagram-arrangements-and-laws.md). Its 易传 entries keep these maps' correspondences.
+- related, not a proved adapter: [a-whole-of-every-part](a-whole-of-every-part.md). States the conjunctive and the graded whole its map found missing (WH1).
+- related, not a proved adapter: [a-coupling-saturated-by-what-it-has-carried](a-coupling-saturated-by-what-it-has-carried.md). States the saturation of a coupling its map found missing (SAT1).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -77,6 +79,7 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 ### History
 
 - 21 October 2026: added (ZH), on Ren's request for a 中华 edition and for the 脉络 to be joined to the theories; study section 328; readings D62.
+- 22 October 2026, WH1 and SAT1: the first two gaps, a conjunctive or graded whole and saturation of a coupling, are stated (records a-whole-of-every-part, a-coupling-saturated-by-what-it-has-carried; study sections 333 and 334); the five entries naming them read the new laws and their gap notes point to them. The map's kinds and counts are unchanged.
 
 </details>
 

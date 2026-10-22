@@ -133,6 +133,13 @@
         "en": "How a whole of ending listed parts ends where their arising stops, and a draw beyond renewal that stops it.",
         "zh": "可列出的终结部分之整体在其生起停止时如何终结，以及使之停止的超过更新的汲取。"
       }
+    },
+    {
+      "id": "a-whole-of-every-part",
+      "detail": {
+        "en": "The whole of every part, beside this whole of some part: it ends as soon as one part ends; the grade and the diminished whole lie between them.",
+        "zh": "每个部分之整体，与此某部分之整体并立：一个部分终结它即终结；等级与减损之整体在二者之间。"
+      }
     }
   ],
   "counterexamples": [
@@ -184,7 +191,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
       "role": "proof",
-      "sha256": "454216066bedcf870b0cbaab4a6fb0928f59cb8d60cbd6c4088d8c8d0ea89bb3",
+      "sha256": "b8c89ed98f3b1bbb98c823628d9d96b16873098c8fa99fd28398dd2217c6ebf6",
       "declarations": [
         "Becoming.Web.Whole",
         "Becoming.Web.Listed",
@@ -370,12 +377,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
+      "role": "receipt",
+      "sha256": "6276e35d34eb8d014bfd7227d549bacf967a072420c3de86f1de6903a551e0a8",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T042540.776869Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Wholes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -465,6 +478,10 @@
     {
       "en": "21 October 2026, WE1: Covered.needs_arising is now proved from Listed.end_without_arising, the law below it (record whole-drawing-beyond-renewal-ends, study section 287); this record's statement, laws and declarations are unchanged.",
       "zh": "2026年10月21日，WE1：Covered.needs_arising 现由其下的律 Listed.end_without_arising 证明（记录 whole-drawing-beyond-renewal-ends，研究第 287 节）；本记录的陈述、定律与声明不变。"
+    },
+    {
+      "en": "22 October 2026: related to a-whole-of-every-part (study section 333); its statements are unchanged.",
+      "zh": "2026年10月22日：与 a-whole-of-every-part 相关（研究第 333 节）；其陈述不变。"
     }
   ]
 }

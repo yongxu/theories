@@ -2196,6 +2196,11 @@
    "module": "Becoming.Frame",
    "category": "general-structure",
    "reason": "A group's closure is the union of its members' closures, by definition (Iff.rfl): a law of every relation on any type, kept by name because records, chapters and frozen predictions cite it. The base reads it through the pooled coupling closure (Flow.WithinPoolCoupling), whose laws use the definition directly."
+  },
+  "Becoming.Saturation.passed_lt": {
+   "module": "Becoming.Frequency",
+   "category": "general-structure",
+   "reason": "a bound on what passes through a coupling whose strengths, read off what has passed, are zero once A has passed: below A + m for any level history, m the most one step passes, in its own vocabulary; the formed course is one history, and the stopping it rests on, Saturation.stops, feeds the base through Saturation.exact and Saturation.course_stops_by (SAT1)"
   }
  },
  "instances": {

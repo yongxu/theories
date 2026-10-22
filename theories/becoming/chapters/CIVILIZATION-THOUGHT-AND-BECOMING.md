@@ -310,10 +310,10 @@ Ren 说：“其中大多重要的符号，应该在先秦就存在了”。这�
 
 ## 八、古典文字提出的缺口
 
-61 个条目写出了一个缺口：原文说了一种结构，脊柱还没有它的律。去掉重复，主要有以下几类：
+61 个条目写出了一个缺口：原文说了一种结构，脊柱还没有它的律。去掉重复，主要有以下几类。前两类已证（WH1、SAT1），述及它们的 5 个条目改读新律，其 `gap` 注指向新律：
 
-1. **合取的或分级的整体。** 华严六相「去却椽即無舍」〔FO2-FQ〕与墨经「謂其存者損」〔MI1-S-SS〕都说缺一部分时整体不成，或成为减损的整体。脊柱的整体（`Becoming.Web.Whole`）是析取的：某部分活跃，整体就活跃。
-2. **饱和之律。** 老子七十二章“民不畏威”：耦合的强度随已经传过的量而降。
+1. **合取的或分级的整体。** 华严六相「去却椽即無舍」〔FO2-FQ〕与墨经「謂其存者損」〔MI1-S-SS〕都说缺一部分时整体不成，或成为减损的整体。脊柱原有的整体（`Becoming.Web.Whole`）是析取的：某部分活跃，整体就活跃。已证：每个部分之整体（`Becoming.Web.AllWhole`）一个部分终结即终结，所列部分之等级（`Becoming.Web.Grade`）跨一步增其生起者、减其止息者，减损之整体恰是某部分之整体活跃而每个部分之整体不活跃（`Becoming.Web.diminished_iff`）（WH1，[研究第 333 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#333-a-whole-of-every-part-and-a-graded-whole-wh1)，[a-whole-of-every-part](../results/records/a-whole-of-every-part.md)）。
+2. **饱和之律。** 老子七十二章“民不畏威”：耦合的强度随已经传过的量而降。已证：强度读自经耦合已传之量时，强度归零则耦合停止（`Becoming.Saturation.stops`），恰在响应归零处停止，以一为下限则复现（`Becoming.Saturation.stops_iff`、`Becoming.Saturation.floored`）（SAT1，[研究第 334 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#334-a-coupling-saturated-by-what-it-has-carried-sat1)，[a-coupling-saturated-by-what-it-has-carried](../results/records/a-coupling-saturated-by-what-it-has-carried.md)）。
 3. **单侧与局部的调节。** 老子三十七章“自定”、五十七章“自正”：每个形成只读其邻近条件的水平时，整体水平在什么条件下定于一处。
 4. **均分之律。** 论语“不患寡而患不均”：所给按等份分配时，每个依存者被支持，恰当等份不少于最大的需要。由此，需要不等之处，总给足够而均分仍可使人不被支持。
 5. **抄录之律。** 吴子「一人學戰，教成十人」〔BI1-S-WZ〕：每个单元汲取后得 b 个单元，n 轮之后有几个单元，以及存量在什么条件下够用。

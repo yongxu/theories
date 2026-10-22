@@ -77,7 +77,7 @@ Ren, 12 October 2026, on the loops: “how how accurate can we do that uh what i
 - related, not a proved adapter: [orders-as-a-sum-over-histories](orders-as-a-sum-over-histories.md). A cut is a horizon: a cut at order j is the truncation at horizon j + 1 of the sum over routes back in time, so what a cut loses is what that truncation of the sum over histories drops.
 - related, not a proved adapter: [how-often-couplings-act](how-often-couplings-act.md). Answers the first two items of its next step: every schedule settling is exactly the dichotomy RecursOrStops, which gives the limited principle of omniscience; a loop of recurring couplings need not run away, runs away where its returns are frequent, and the rate counts the steps at which couplings act.
 
-**Used by:** [how-loops-form](how-loops-form.md) · [how-often-couplings-act](how-often-couplings-act.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
+**Used by:** [a-coupling-saturated-by-what-it-has-carried](a-coupling-saturated-by-what-it-has-carried.md) · [how-loops-form](how-loops-form.md) · [how-often-couplings-act](how-often-couplings-act.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
 
 <a id="sources--来源"></a>
 ### Sources
