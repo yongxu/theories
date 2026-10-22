@@ -15398,3 +15398,32 @@ Output → input: the ZH map's last entries; records capture-through-the-rule, w
 **Self-review.** Each law is stated for any flow, web, rule or process, with no witness needed: the per-step feeding law and the timed juncture law were asked for with witnesses and hold generally. `pair_locks` is `favouring_locks` at a pair of rules, its content the monotone pair reading. `goal_descends_iff` is a conditional law whose condition is single-descent passing, as the note asked; it adds no direction to descent. The majority counts are written with `Bool.toNat` and term-mode proofs, so the reports stay empty.
 
 **The run.** Core 285 modules and 12,512 theorems, instances 7 and 581, applications 6 and 179; 852 Lean steps ran, 352 reused. Connectivity: 704 of 13,272 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 345. The law of forming, necessary and sufficient (ZG8)
+
+```text
+Result(s): new record forming-anew-necessary-and-sufficient.
+Delta: a dependence forms anew at a descent (Web.FormsAnewAt: the descendant holds it at its first standing step, the
+       giver did not at the giving step) exactly where inheritance fails, the giver's dependence stable
+       (inheritsAt_iff_not_formsAnew); depending and drawing coinciding at the giver, exactly where the descendant
+       depends on what the giver did not draw on (formsAnew_iff_undrawn). Inheritance gives the drawing at a descent
+       exactly where the giver draws on what it holds and passes on (drawn_necessary_iff), so the reading of drawing is
+       inheritance with the givers drawing what they pass on (Flow.PassesDrawn, Flow.dependsOnDrawn_iff): the necessary
+       half of inherits_of_drawn, with no premise. With the two coinciding, inheritance, the reading of drawing and no
+       descendant depending on what its giver did not draw on are one (Flow.inherits_iff_none_undrawn).
+Premises / correspondence: drawing being depending for the sufficient half; depending being drawing at the givers and
+       stable dependences for the full equivalence. Correspondence: what a parent passes on is what it uses.
+Evidence: core receipt 20261022T070506.681048Z (passed).
+Boundary: how dependences form where depending and drawing part at the givers is not derived; the chapter's §8.1 item
+       9 keeps that as open.
+Output → input: the ZH map's 唯识「無因」 entry, its last open gap note; record transmission-is-inheritance-and-need;
+       chapter §8.1 item 9 (EN, ZH); ZH chapter §八 item 10.
+```
+
+**What was built.** In `Becoming.Transmission`: `Web.FormsAnewAt`, `Web.inheritsAt_iff_not_formsAnew`, `Web.formsAnew_iff_undrawn`, `Web.drawn_necessary_iff`, `Flow.PassesDrawn`, `Flow.dependsOnDrawn_iff`, `Flow.inherits_iff_none_undrawn`. A first run failed at the package root: `Web.NewAt` is `Becoming.Gain`'s, so the new notion is named `FormsAnewAt`.
+
+*Reading* [AI reading, D45]. 唯识「若唯始起，有為無漏無因緣故，應不得生」: a new dependence without a cause is one on what the giver did not draw on. Where giving and drawing coincide, that is exactly where the reading of drawing fails; the objection holds where the cause holds and nowhere else.
+
+**Self-review.** The vocabulary is the one the note named (drawing and depending), since no condition on giving, taking and levels can state it (`World.vacuous_of_drop_invariant`). The necessary half needs no premise; it shows that the reading of drawing is stronger than inheritance by exactly the givers drawing what they pass on. The equivalence of forming anew and depending on the undrawn needs depending and drawing to coincide at the giver, a premise named, not hidden.
+
+**The run.** Core 285 modules and 12,517 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,197 reused. Connectivity: 704 of 13,277 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.

@@ -1579,3 +1579,18 @@ Evidence: the prior forms from memory, not reread; Lean in the records' receipt
 Boundary: AI check, one session; 唯识「無因」 open (the chapter's §8.1 item 9)
 Integration: the ZH map's entries and chapter §八; the chapter's record tables
 ```
+
+<a id="gaps-check-4"></a>
+## A check: the law of forming (22 October 2026, ZG8)
+
+An AI check (one session, 22 October) of the last open gap note. **Verdict: the law is stated in the vocabulary the note named; what stays open is how dependences form where depending and drawing part at the givers, a question of mechanism, not of this law.**
+
+```text
+Result(s): one new record (ZG8)
+Delta: forming anew exactly where the descendant depends on what its giver did not draw on; the necessary half of the
+       reading of drawing
+Supplied premises / correspondence: as the record names
+Evidence: Lean in the record's receipt
+Boundary: AI check, one session
+Integration: the ZH map's last entry; chapter §8.1 item 9; ZH chapter §八
+```

@@ -20965,7 +20965,7 @@ Definitions and types:
 <a id="module-914f5b4db0b5"></a>
 
 <details>
-<summary>Transmission.lean — 83 explicit declarations</summary>
+<summary>Transmission.lean — 90 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -20975,92 +20975,99 @@ Imports: `Becoming.Premises`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.Web.transmits_at_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L134) | 134 |
-| [Becoming.Web.InheritsAt.split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L146) | 146 |
-| [Becoming.Web.inheritsAt_iff_forming](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L154) | 154 |
-| [Becoming.Web.inheritsAt_of_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L160) | 160 |
-| [Becoming.Web.inheritsAt_not_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L168) | 168 |
-| [Becoming.Web.needsWithinAt_of_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L176) | 176 |
-| [Becoming.Web.drop_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L187) | 187 |
-| [Becoming.Web.drop_dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L192) | 192 |
-| [Becoming.Web.drop_keeps_next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L196) | 196 |
-| [Becoming.Web.drop_not_inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L201) | 201 |
-| [Becoming.split_of_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L208) | 208 |
-| [Becoming.Split.descends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L248) | 248 |
-| [Becoming.split_iff_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L254) | 254 |
-| [Becoming.Flow.transmitsWithin_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L303) | 303 |
-| [Becoming.Flow.transmitsWithin_iff_forming](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L314) | 314 |
-| [Becoming.Flow.transmitsWithin_iff_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L327) | 327 |
-| [Becoming.Flow.descends_of_comes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L342) | 342 |
-| [Becoming.Flow.inherited_from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L352) | 352 |
-| [Becoming.Flow.forms_from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L362) | 362 |
-| [Becoming.Flow.no_new_dependence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L372) | 372 |
-| [Becoming.Flow.Inherits.from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L382) | 382 |
-| [Becoming.Flow.TransmitsWithin.fromSome](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L388) | 388 |
-| [Becoming.Flow.inherited_supported_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L398) | 398 |
-| [Becoming.Flow.inherited_within_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L408) | 408 |
-| [Becoming.Flow.inherited_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L421) | 421 |
-| [Becoming.Flow.inherited_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L430) | 430 |
-| [Becoming.Flow.fromSome_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L442) | 442 |
-| [Becoming.Flow.fromSome_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L452) | 452 |
-| [Becoming.Flow.descendant_supported_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L466) | 466 |
-| [Becoming.Flow.embodied_descendant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L475) | 475 |
-| [Becoming.Flow.needsWithin_of_embodied](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L486) | 486 |
-| [Becoming.Flow.drop_untransmitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L496) | 496 |
-| [Becoming.Flow.inherits_of_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L503) | 503 |
-| [Becoming.Flow.dependsOnDrawn_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L509) | 509 |
-| [Becoming.Flow.inherits_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L514) | 514 |
-| [Becoming.Flow.DependsOnDrawn.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L519) | 519 |
-| [Becoming.Flow.DependsOnFed.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L524) | 524 |
-| [Becoming.World.drop_holds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L542) | 542 |
-| [Becoming.World.drop_finite](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L554) | 554 |
-| [Becoming.World.drop_untransmitting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L559) | 559 |
-| [Becoming.World.drop_but](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L567) | 567 |
-| [Becoming.World.vacuous_of_drop_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L585) | 585 |
-| [Becoming.World.stock_le_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L594) | 594 |
-| [Becoming.World.Finite.level_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L605) | 605 |
-| [Becoming.World.transmitting_iff_inherits_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L614) | 614 |
-| [Becoming.World.transmitting_iff_inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L623) | 623 |
-| [Becoming.World.transmitting_of_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L630) | 630 |
-| [Becoming.World.transmitting_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L639) | 639 |
-| [Becoming.World.finiteHatch_descends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L654) | 654 |
-| [Becoming.World.finiteHatch_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L660) | 660 |
-| [Becoming.World.finiteHatch_pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L668) | 668 |
-| [Becoming.World.drawn_without_link](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L685) | 685 |
-| [Becoming.World.link_without_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L700) | 700 |
-| [Becoming.World.drawn_and_link_needed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L712) | 712 |
-| [Becoming.World.drawn_not_enough](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L725) | 725 |
-| [Becoming.World.bearingHatch_derived](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L748) | 748 |
-| [Becoming.Drawdown.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L784) | 784 |
-| [Becoming.TwoGivers.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L842) | 842 |
-| [Becoming.TwoGivers.acting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L852) | 852 |
-| [Becoming.TwoGivers.dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L859) | 859 |
-| [Becoming.TwoGivers.comes_child](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L863) | 863 |
-| [Becoming.TwoGivers.descends_first](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L872) | 872 |
-| [Becoming.TwoGivers.descends_second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L875) | 875 |
-| [Becoming.TwoGivers.twofold](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L883) | 883 |
+| [Becoming.Web.transmits_at_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L144) | 144 |
+| [Becoming.Web.InheritsAt.split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L156) | 156 |
+| [Becoming.Web.inheritsAt_iff_forming](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L164) | 164 |
+| [Becoming.Web.inheritsAt_of_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L170) | 170 |
+| [Becoming.Web.inheritsAt_not_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L178) | 178 |
+| [Becoming.Web.needsWithinAt_of_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L186) | 186 |
+| [Becoming.Web.drop_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L197) | 197 |
+| [Becoming.Web.drop_dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L202) | 202 |
+| [Becoming.Web.drop_keeps_next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L206) | 206 |
+| [Becoming.Web.drop_not_inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L211) | 211 |
+| [Becoming.Web.inheritsAt_iff_not_formsAnew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L225) | 225 |
+| [Becoming.Web.formsAnew_iff_undrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L234) | 234 |
+| [Becoming.Web.drawn_necessary_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L243) | 243 |
+| [Becoming.split_of_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L252) | 252 |
+| [Becoming.Split.descends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L292) | 292 |
+| [Becoming.split_iff_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L298) | 298 |
+| [Becoming.Flow.transmitsWithin_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L347) | 347 |
+| [Becoming.Flow.transmitsWithin_iff_forming](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L358) | 358 |
+| [Becoming.Flow.transmitsWithin_iff_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L371) | 371 |
+| [Becoming.Flow.descends_of_comes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L386) | 386 |
+| [Becoming.Flow.inherited_from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L396) | 396 |
+| [Becoming.Flow.forms_from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L406) | 406 |
+| [Becoming.Flow.no_new_dependence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L416) | 416 |
+| [Becoming.Flow.Inherits.from_giver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L426) | 426 |
+| [Becoming.Flow.TransmitsWithin.fromSome](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L432) | 432 |
+| [Becoming.Flow.inherited_supported_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L442) | 442 |
+| [Becoming.Flow.inherited_within_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L452) | 452 |
+| [Becoming.Flow.inherited_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L465) | 465 |
+| [Becoming.Flow.inherited_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L474) | 474 |
+| [Becoming.Flow.fromSome_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L486) | 486 |
+| [Becoming.Flow.fromSome_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L496) | 496 |
+| [Becoming.Flow.descendant_supported_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L510) | 510 |
+| [Becoming.Flow.embodied_descendant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L519) | 519 |
+| [Becoming.Flow.needsWithin_of_embodied](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L530) | 530 |
+| [Becoming.Flow.drop_untransmitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L540) | 540 |
+| [Becoming.Flow.inherits_of_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L547) | 547 |
+| [Becoming.Flow.dependsOnDrawn_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L553) | 553 |
+| [Becoming.Flow.inherits_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L558) | 558 |
+| [Becoming.Flow.DependsOnDrawn.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L563) | 563 |
+| [Becoming.Flow.DependsOnFed.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L568) | 568 |
+| [Becoming.Flow.dependsOnDrawn_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L583) | 583 |
+| [Becoming.Flow.inherits_iff_none_undrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L593) | 593 |
+| [Becoming.World.drop_holds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L623) | 623 |
+| [Becoming.World.drop_finite](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L635) | 635 |
+| [Becoming.World.drop_untransmitting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L640) | 640 |
+| [Becoming.World.drop_but](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L648) | 648 |
+| [Becoming.World.vacuous_of_drop_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L666) | 666 |
+| [Becoming.World.stock_le_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L675) | 675 |
+| [Becoming.World.Finite.level_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L686) | 686 |
+| [Becoming.World.transmitting_iff_inherits_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L695) | 695 |
+| [Becoming.World.transmitting_iff_inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L704) | 704 |
+| [Becoming.World.transmitting_of_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L711) | 711 |
+| [Becoming.World.transmitting_of_fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L720) | 720 |
+| [Becoming.World.finiteHatch_descends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L735) | 735 |
+| [Becoming.World.finiteHatch_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L741) | 741 |
+| [Becoming.World.finiteHatch_pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L749) | 749 |
+| [Becoming.World.drawn_without_link](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L766) | 766 |
+| [Becoming.World.link_without_drawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L781) | 781 |
+| [Becoming.World.drawn_and_link_needed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L793) | 793 |
+| [Becoming.World.drawn_not_enough](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L806) | 806 |
+| [Becoming.World.bearingHatch_derived](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L829) | 829 |
+| [Becoming.Drawdown.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L865) | 865 |
+| [Becoming.TwoGivers.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L923) | 923 |
+| [Becoming.TwoGivers.acting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L933) | 933 |
+| [Becoming.TwoGivers.dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L940) | 940 |
+| [Becoming.TwoGivers.comes_child](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L944) | 944 |
+| [Becoming.TwoGivers.descends_first](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L953) | 953 |
+| [Becoming.TwoGivers.descends_second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L956) | 956 |
+| [Becoming.TwoGivers.twofold](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L964) | 964 |
 
 Definitions and types:
 
-- `def` [Becoming.Web.InheritsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L115) (L115)
-- `def` [Becoming.Web.NeedsWithinAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L120) (L120)
-- `def` [Becoming.Web.DrawingDepends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L124) (L124)
-- `def` [Becoming.Web.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L128) (L128)
-- `def` [Becoming.Split.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L221) (L221)
-- `def` [Becoming.Split.toDescendant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L235) (L235)
-- `def` [Becoming.Split.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L240) (L240)
-- `def` [Becoming.Flow.Inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L275) (L275)
-- `def` [Becoming.Flow.NeedsWithin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L279) (L279)
-- `def` [Becoming.Flow.TransmitsFromSome](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L284) (L284)
-- `def` [Becoming.Flow.DependsOnDrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L290) (L290)
-- `def` [Becoming.Flow.DependsOnFed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L295) (L295)
-- `def` [Becoming.World.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L536) (L536)
-- `def` [Becoming.World.droppedHatch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L649) (L649)
-- `def` [Becoming.World.bearingHatch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L740) (L740)
-- `inductive` [Becoming.TwoGivers.Relatum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L797) (L797)
-- `def` [Becoming.TwoGivers.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L806) (L806)
-- `def` [Becoming.TwoGivers.toChild](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L823) (L823)
-- `def` [Becoming.TwoGivers.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L830) (L830)
+- `def` [Becoming.Web.InheritsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L125) (L125)
+- `def` [Becoming.Web.NeedsWithinAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L130) (L130)
+- `def` [Becoming.Web.DrawingDepends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L134) (L134)
+- `def` [Becoming.Web.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L138) (L138)
+- `def` [Becoming.Web.FormsAnewAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L219) (L219)
+- `def` [Becoming.Split.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L265) (L265)
+- `def` [Becoming.Split.toDescendant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L279) (L279)
+- `def` [Becoming.Split.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L284) (L284)
+- `def` [Becoming.Flow.Inherits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L319) (L319)
+- `def` [Becoming.Flow.NeedsWithin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L323) (L323)
+- `def` [Becoming.Flow.TransmitsFromSome](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L328) (L328)
+- `def` [Becoming.Flow.DependsOnDrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L334) (L334)
+- `def` [Becoming.Flow.DependsOnFed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L339) (L339)
+- `def` [Becoming.Flow.PassesDrawn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L575) (L575)
+- `def` [Becoming.World.drop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L617) (L617)
+- `def` [Becoming.World.droppedHatch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L730) (L730)
+- `def` [Becoming.World.bearingHatch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L821) (L821)
+- `inductive` [Becoming.TwoGivers.Relatum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L878) (L878)
+- `def` [Becoming.TwoGivers.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L887) (L887)
+- `def` [Becoming.TwoGivers.toChild](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L904) (L904)
+- `def` [Becoming.TwoGivers.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean#L911) (L911)
 
 </details>
 

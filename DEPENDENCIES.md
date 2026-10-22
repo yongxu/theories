@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-380 registered results: 355 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 892 curated edges join 332 results to the results they draw on.
+381 registered results: 356 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 893 curated edges join 333 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -119,6 +119,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [formed-copying-correction][] ← <a id="formed-copying-correction--formed-copying-registration"></a>[formed-copying-registration][]
 - [formed-copying-registration][] ← <a id="formed-copying-registration--inherited-structural-copying"></a>[inherited-structural-copying][]
 - [formed-software-continuation][] ← <a id="formed-software-continuation--market-finite-support-obstruction"></a>[market-finite-support-obstruction][] *(interpretive)*
+- [forming-anew-necessary-and-sufficient][] ← <a id="forming-anew-necessary-and-sufficient--transmission-is-inheritance-and-need"></a>[transmission-is-inheritance-and-need][]
 - [four-cases-of-a-part][] ← <a id="four-cases-of-a-part--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="four-cases-of-a-part--support-from-the-supported"></a>[support-from-the-supported][] · <a id="four-cases-of-a-part--derived-extent-limits"></a>[derived-extent-limits][]
 - [generalization-through-lumping][] ← <a id="generalization-through-lumping--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="generalization-through-lumping--selection-through-couplings"></a>[selection-through-couplings][]
 - [generation-is-replenishment][] ← <a id="generation-is-replenishment--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="generation-is-replenishment--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="generation-is-replenishment--more-needs-renewers"></a>[more-needs-renewers][] · <a id="generation-is-replenishment--becoming-renewal-reading"></a>[becoming-renewal-reading][]
@@ -463,6 +464,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [formed-copying-registration]: theories/becoming/results/records/formed-copying-registration.md
 [formed-goal-revision-continuation]: theories/becoming/results/records/formed-goal-revision-continuation.md
 [formed-software-continuation]: theories/becoming/results/records/formed-software-continuation.md
+[forming-anew-necessary-and-sufficient]: theories/becoming/results/records/forming-anew-necessary-and-sufficient.md
 [four-cases-of-a-part]: theories/becoming/results/records/four-cases-of-a-part.md
 [functional-joining-common-structure]: theories/becoming/results/records/functional-joining-common-structure.md
 [generalization-through-lumping]: theories/becoming/results/records/generalization-through-lumping.md

@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "id": "forming-anew-necessary-and-sufficient",
+  "title": {
+    "en": "Forming anew, necessary and sufficient",
+    "zh": "新结之依存，充要"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T07:07:32+00:00",
+  "statement": {
+    "en": "A dependence forms anew at a descent exactly where inheritance fails, and, depending and drawing coinciding at the giver, exactly where the descendant depends on what its giver did not draw on; the reading of drawing is inheritance with the givers drawing what they pass on.",
+    "zh": "一依存在一降中新结，恰在因不成之处；给予者处依存与汲取相合时，恰在后代依于给予者所未汲者之处；汲取之读法恰是因加上给予者汲取其所传。"
+  },
+  "laws": [
+    {
+      "en": "A dependence forming anew at a descent excludes inheritance there, and, the giver's dependence stable, its exclusion gives inheritance; depending and drawing coinciding at the giver, it forms anew exactly where the descendant depends on what the giver did not draw on.",
+      "zh": "一降中新结之依存排除因，给予者之依存稳定时，排除新结即得因；给予者处依存与汲取相合时，新结恰在后代依于给予者所未汲者之处。",
+      "declarations": [
+        "Becoming.Web.FormsAnewAt",
+        "Becoming.Web.inheritsAt_iff_not_formsAnew",
+        "Becoming.Web.formsAnew_iff_undrawn"
+      ]
+    },
+    {
+      "en": "At a descent, inheritance gives the drawing exactly where the giver draws on what it holds and passes on; so the reading of drawing is inheritance with the givers drawing what they pass on, with no premise for this half.",
+      "zh": "一降中，因得汲取，恰在给予者汲取其所持而传下者之处；所以汲取之读法恰是因加上给予者汲取其所传，此一半无前提。",
+      "declarations": [
+        "Becoming.Web.drawn_necessary_iff",
+        "Becoming.Flow.PassesDrawn",
+        "Becoming.Flow.dependsOnDrawn_iff"
+      ]
+    },
+    {
+      "en": "Depending and drawing coinciding at the givers, their dependences stable: inheritance, the reading of drawing, and no descendant depending on what its giver did not draw on are one.",
+      "zh": "给予者处依存与汲取相合、其依存稳定时：因、汲取之读法、无后代依于给予者所未汲者，三者为一。",
+      "declarations": [
+        "Becoming.Flow.inherits_iff_none_undrawn"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; drawing being depending (DrawingDepends) for the sufficient half; depending being drawing at the givers and stable dependences where the full equivalence is stated.",
+      "zh": "不加公理；充分之一半须汲取即依存（DrawingDepends）；全等价须给予者处依存即汲取且依存稳定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How dependences form at coming to stand, or that depending and drawing coincide in any actual descent.",
+      "zh": "依存在首立时如何结成，或在实际之降中依存与汲取相合。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T070506.681048Z): the 7 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 345; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T070506.681048Z）：本记录所引之新增 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 345 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Inheritance as transmission of what the parent uses: a trait is passed on where the parent expresses it.",
+    "zh": "因为亲之所用之传：亲所表达者才传下。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+  "aliases": [
+    "Forming anew, necessary and sufficient",
+    "新结之依存，充要",
+    "Becoming.Web.FormsAnewAt"
+  ],
+  "dependencies": [
+    {
+      "id": "transmission-is-inheritance-and-need",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its inherits_of_drawn, here with its necessary half.",
+        "zh": "其 inherits_of_drawn，此处加上必要之一半。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries weishi-shiqi-wu-yin).",
+        "zh": "陈述其对应所发现之缺口（条目 weishi-shiqi-wu-yin）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.PassesDrawn",
+        "Becoming.Flow.dependsOnDrawn_iff",
+        "Becoming.Flow.inherits_iff_none_undrawn",
+        "Becoming.Web.FormsAnewAt",
+        "Becoming.Web.drawn_necessary_iff",
+        "Becoming.Web.formsAnew_iff_undrawn",
+        "Becoming.Web.inheritsAt_iff_not_formsAnew"
+      ],
+      "sha256": "5258995b79e2de66a66f046e5808f7690a5ca0ea513b68916a9d89e706ad70bf"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dd27dea627cc21868bafb80daf055d19cfe3a948ba4ad1e336bbe2e1cd0821e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "a5b9cc1b0ed99010f4eb11a022bc71879dc5e944f6bea247b40f33ef3e5cc204"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "3280d17798e98add6c70161abffad8037c618a0411a8a712cc867958cb2625a5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "39e70de4690cc6d8a4870c303333486e08e12312585670331b9b6d3c7cfc6f07"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "0912771b8a34b0650c01eb53c0ab2d32acc21f10952018d841286acd2a0e0822"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "4265685bbaa34f6a8747d0bd35729482fc8158b493569920c35dd5c0343e6753"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Transmission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 345.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 345 节。"
+    }
+  ]
+}

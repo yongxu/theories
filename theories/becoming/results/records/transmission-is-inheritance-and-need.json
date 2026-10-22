@@ -126,7 +126,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
       "role": "proof",
-      "sha256": "27bc4019c0952ecbb9889613cd0cd39fe9274e7dea81165b790d28deee612bf7",
+      "sha256": "5258995b79e2de66a66f046e5808f7690a5ca0ea513b68916a9d89e706ad70bf",
       "declarations": [
         "Becoming.Web.InheritsAt",
         "Becoming.Web.NeedsWithinAt",
@@ -210,7 +210,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+      "sha256": "4265685bbaa34f6a8747d0bd35729482fc8158b493569920c35dd5c0343e6753",
       "declarations": []
     },
     {
@@ -242,12 +242,18 @@
       "role": "receipt",
       "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dd27dea627cc21868bafb80daf055d19cfe3a948ba4ad1e336bbe2e1cd0821e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Transmission",
       "success_pointer": "/status",
       "success_value": "passed"

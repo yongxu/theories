@@ -90,6 +90,7 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 - related, not a proved adapter: [feeding-from-a-step](feeding-from-a-step.md). States gaps its map found (ZG).
 - related, not a proved adapter: [a-goal-along-a-lineage](a-goal-along-a-lineage.md). States gaps its map found (ZG).
 - related, not a proved adapter: [a-source-before-a-juncture](a-source-before-a-juncture.md). States gaps its map found (ZG).
+- related, not a proved adapter: [forming-anew-necessary-and-sufficient](forming-anew-necessary-and-sufficient.md). States gaps its map found (ZG).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -118,6 +119,7 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 - 22 October 2026, ZG1-ZG3: 25 entries' gaps are stated (sixteen records; study sections 338-340), their readings revised and gap notes pointing to the laws; one-sided and local regulation, equal division and copying growth leave the gap list. The map's kinds and counts are unchanged.
 - 22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.
 - 22 October 2026, ZG7: the last open gap notes. Nine entries are stated (seven records; study section 344), 老子七十九章 answered by laws on the spine with its signed form out of scope, 孟子「亲亲而仁民」 marked a scope remark, and 唯识「無因」 left open as the chapter's open problem with its reason. The map's kinds and counts are unchanged.
+- 22 October 2026, ZG8: the last open gap note, 唯识「無因」, reads the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient; study section 345); no gap note of the map is open.
 
 </details>
 

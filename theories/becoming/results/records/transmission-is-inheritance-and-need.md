@@ -50,7 +50,7 @@ Stated for discrete steps and natural-number amounts; the need bound δ is a coa
 - Related, not a proved adapter: [transmission-independent-where-it-binds](transmission-independent-where-it-binds.md). This record states what transmission is; the other proves that the other premises do not give it and states the reading that does.
 - Related, not a proved adapter: [map-of-premises](map-of-premises.md). Transmission is one of the eight premises; TransmitsFromSome is a possible weakening.
 
-**Used by:** [need-drift-along-a-lineage](need-drift-along-a-lineage.md) · [transmission-independent-where-it-binds](transmission-independent-where-it-binds.md)
+**Used by:** [forming-anew-necessary-and-sufficient](forming-anew-necessary-and-sufficient.md) · [need-drift-along-a-lineage](need-drift-along-a-lineage.md) · [transmission-independent-where-it-binds](transmission-independent-where-it-binds.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
@@ -67,6 +67,7 @@ Stated for discrete steps and natural-number amounts; the need bound δ is a coa
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json) | — |
 
 Hashes in the editable record bind the reviewed source versions. The checker does not audit transitive Lean imports or establish premise warrant.
 

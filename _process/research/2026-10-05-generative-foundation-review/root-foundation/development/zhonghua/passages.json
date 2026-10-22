@@ -40364,14 +40364,18 @@
       "Becoming.World.novel",
       "Becoming.World.novel_but",
       "Becoming.World.novel_finite",
-      "Becoming.Web.InheritsAt.split"
+      "Becoming.Web.InheritsAt.split",
+      "Becoming.Web.formsAnew_iff_undrawn",
+      "Becoming.Flow.dependsOnDrawn_iff",
+      "Becoming.Flow.inherits_iff_none_undrawn"
      ],
      "records": [
       "transmission-is-inheritance-and-need",
       "map-of-premises",
-      "transmission-independent-where-it-binds"
+      "transmission-independent-where-it-binds",
+      "forming-anew-necessary-and-sufficient"
      ],
-     "reading": "AI读法：论中难「始起」之论：「若唯始起，有為無漏無因緣故，應不得生」——若无先有之种，新者无从而有。脊柱给出这一难之确切范围：在平衡及因之下，聚者跨步后所依之条件，必有给予它的在场者早先也依（Flow.inherited_from_giver）；此步无在场者依之条件，聚者也不依（Flow.no_new_dependence）——在因之内，此难为真。但因是前提，不是定律：有一个有限世界具备除传以外之一切前提，其中亲取用燃料而给予子、使子聚，子依其亲，而亲先前无所依（World.novel、World.novel_but、World.novel_finite）。因覆盖新结及跨步仍依两种情形（Web.InheritsAt.split），而新结一个给予者不依之依存，恰是难中所言「無因緣」之处。所以「應不得生」只在有因之处为真，不是一切世界之律。",
+     "reading": "AI读法：论中难「始起」之论：「若唯始起，有為無漏無因緣故，應不得生」——若无先有之种，新者无从而有。脊柱给出这一难之确切范围：在平衡及因之下，聚者跨步后所依之条件，必有给予它的在场者早先也依（Flow.inherited_from_giver）；此步无在场者依之条件，聚者也不依（Flow.no_new_dependence）——在因之内，此难为真。但因是前提，不是定律：有一个有限世界具备除传以外之一切前提，其中亲取用燃料而给予子、使子聚，子依其亲，而亲先前无所依（World.novel、World.novel_but、World.novel_finite）。因覆盖新结及跨步仍依两种情形（Web.InheritsAt.split），而新结一个给予者不依之依存，恰是难中所言「無因緣」之处。所以「應不得生」只在有因之处为真，不是一切世界之律。充要之律今已证（ZG8）：一个依存在一降中新结（Web.FormsAnewAt：后代持之，给予者未持），恰在因于此不成之处（Web.inheritsAt_iff_not_formsAnew，给予者之依存稳定），而在给予者处依存与汲取相合时，恰在后代依于给予者所未汲取者之处（Web.formsAnew_iff_undrawn）；汲取之读法恰是因加上给予者汲取其所持而传下者（Flow.dependsOnDrawn_iff），这是 inherits_of_drawn 所缺之必要一半。所以「無因緣」之新结恰是依于给予者所未汲者。",
      "names_used": [
       "因",
       "聚",
@@ -40386,7 +40390,7 @@
      "work": "成唯识论",
      "locator": "卷二 种子新熏说之难",
      "layer_checked": "",
-     "gap": "仍开（ZG7 复核，2026年10月22日）：这是主章 §8.1 第 9 项之开放问题（「a law of forming that is necessary as well as sufficient」）。只以汲取与依存陈述时，依存即汲取或持而不汲，充要之式退为传之定义；以给予、取用、水平陈述则不可（World.vacuous_of_drop_invariant）。所缺是依存如何结成之结构。原注：一条依存之结的律（充要）：聚者在哪一步新结一个给予者不依之依存。只用给予、取用、水平陈述之条件做不到：去掉一条依存（Web.drop）不改给予、取用及水平，按其界定即得，而凡在这一去掉下不改、又推出传之条件，都推出传不起约束（World.vacuous_of_drop_invariant）。所以须以汲取及依存（draws、requires）陈述；Flow.inherits_of_drawn 给出够的一半（汲取之读法加「汲取即依存」之连接推出因），World.drawn_and_link_needed 示二者在具备其余七个前提之有限世界中缺一不可；必要的一半尚缺。这是章 §8.1 第 9 项所列之开放问题。最近：Becoming.Flow.inherits_of_drawn、Becoming.World.drawn_and_link_needed、Becoming.World.vacuous_of_drop_invariant、Becoming.Web.inheritsAt_iff_forming。",
+     "gap": "已补（ZG8，2026年10月22日）：Becoming.Web.FormsAnewAt、Web.inheritsAt_iff_not_formsAnew、Web.formsAnew_iff_undrawn、Web.drawn_necessary_iff、Flow.PassesDrawn、Flow.dependsOnDrawn_iff、Flow.inherits_iff_none_undrawn（以汲取与依存陈述之充要之律；依存与汲取相合为所设）。见记录 forming-anew-necessary-and-sufficient。",
      "checked": "corrected"
     },
     {

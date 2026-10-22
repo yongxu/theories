@@ -362,13 +362,20 @@
         "en": "States gaps its map found (ZG).",
         "zh": "陈述其对应所发现之缺口（ZG）。"
       }
+    },
+    {
+      "id": "forming-anew-necessary-and-sufficient",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
     }
   ],
   "references": [
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "05157c482d65dbd7de78fb6fcf04cddaae53dd0f2a05f270c274df222aa5c3c4"
+      "sha256": "0912771b8a34b0650c01eb53c0ab2d32acc21f10952018d841286acd2a0e0822"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -378,7 +385,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "f063af353aa9a419cde0691d56f4eef087b2eef0906e21c10b8ec5a0c6ec92ae"
+      "sha256": "39e70de4690cc6d8a4870c303333486e08e12312585670331b9b6d3c7cfc6f07"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -449,6 +456,10 @@
     {
       "en": "22 October 2026, ZG7: the last open gap notes. Nine entries are stated (seven records; study section 344), 老子七十九章 answered by laws on the spine with its signed form out of scope, 孟子「亲亲而仁民」 marked a scope remark, and 唯识「無因」 left open as the chapter's open problem with its reason. The map's kinds and counts are unchanged.",
       "zh": "2026年10月22日，ZG7：最后仍开之 gap 注。九个条目之缺口已陈述（七项记录；研究第 344 节），老子七十九章由脊柱现有之律补，其有符号之形为范围；孟子「亲亲而仁民」标为范围之注；唯识「無因」作为主章之开放问题仍开，注明其故。对应之类别与计数不变。"
+    },
+    {
+      "en": "22 October 2026, ZG8: the last open gap note, 唯识「無因」, reads the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient; study section 345); no gap note of the map is open.",
+      "zh": "2026年10月22日，ZG8：最后仍开之 gap 注唯识「無因」改读充要之形成之律（记录 forming-anew-necessary-and-sufficient；研究第 345 节）；对应中已无仍开之 gap 注。"
     }
   ]
 }
