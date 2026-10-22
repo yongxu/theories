@@ -1494,7 +1494,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one for one, gives drawing to capacity wherever what is drawn later is fixed and, where two
   drawers have no floor, whatever the others' floors, every perfect profile the floor profile and
   every revision reaching it; with no floor anywhere, drawing everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
-  the dweller; under doubling a one-unit floor on the second keeps it.
+  the dweller; under doubling a one-unit floor on the second keeps it. Drawing at once from
+  portions is the same law: where each portion returns what its drawer leaves less than one
+  for one, every perfect profile and every revision draws everything.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
