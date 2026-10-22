@@ -70,6 +70,7 @@ The ranking is the count of RelativePosition read on the draws: a game zero-sum 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
 
 Aliases: `a race for position draws everything`, `争位次的轮流抽取者全部抽取`, `Becoming.Optimum.InTurn.PerfectPosition`, `Becoming.Optimum.InTurn.position_perfect_ends`, `Becoming.Optimum.InTurn.position_keeps_nothing`
 

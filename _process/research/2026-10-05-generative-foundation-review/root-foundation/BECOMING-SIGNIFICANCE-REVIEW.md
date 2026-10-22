@@ -1619,3 +1619,22 @@ Evidence: web searches on 22 October 2026 (Hattori and Takesue; Pivato's paper r
 Boundary: AI check, one session; the local flux and bounded displacements not proved
 Integration: chapter premise card C, §8.7's balance bullet, the relation to known results, the record table
 ```
+
+<a id="aligned-check"></a>
+## A check: when drawing at once drains, and whom restraint pays (22 October 2026, AL1)
+
+An AI check (one session, 22 October) of AL1 against known forms. **Verdict: known in its kind. In the dynamic commons each player internalizes only its share of the stock effect and a sole owner all of it; noncooperative extraction exceeds the cooperative level. The spine's form states the exact condition for drawing everything to be perfect, shows that the strict premise of `drains` in whole amounts makes the drain costless to every drawer, and gives the sole owner as the case of a portion equal to the whole.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The common-property resource: each user internalizes only its share | Gordon (1954) (from memory) | `Optimum.AtOnce.drain_perfect_iff`, `Optimum.Holding.halves_race` |
+| The dynamic commons and the sole owner | Levhari and Mirman (1980) (from memory) | `Optimum.AtOnce.holding_draws_more`, `Optimum.AtOnce.whole_perfect_iff` |
+
+```text
+Result(s): record drawers-in-turn (AL1)
+Delta: the converse of drains; ReturnsLess in whole amounts as no return; whom holding pays; the whole as a portion
+Supplied premises / correspondence: portions; no floor; a holding profile; a portion equal to the whole. Correspondence: the common-property resource; the dynamic commons and the sole owner
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; perfect profiles other than drawing everything not characterized where a portion returns more than one for one
+Integration: OPENING [^aligned] and [^race]; chapter §3.4, §7.1, §7.5, item 10 and the record row
+```

@@ -95,8 +95,39 @@
       ]
     },
     {
-      "en": "Witnesses: under the gate, alone an optimum keeps the dweller, restraint keeps it, and every perfect profile and every revision from restraint breaks it; under doubling with a one-unit floor on the second, the first leaves everything from three and the dweller is kept.",
-      "zh": "见证：门控下单独的最优与克制保持居者，每个完美组合与自克制的每次修订打破它；倍增且第二者下限为一单位时，第一者自三全留，居者得以保持。",
+      "en": "The converse, exactly: drawing at once with no floor, drawing everything is perfect exactly where, at every step before the last, no drawer's portion of what stands next returns more than one for one on what it alone leaves while the others draw everything; a perfect profile draws everything at the last step; on a web the drain then breaks a dependence above what stands at nothing.",
+      "zh": "确切的逆命题：无下限地同时抽取时，全部抽取是完美的，当且仅当在最后一步之前的每一步，没有抽取者的下一步份额对其在他者全部抽取时独留之量所回多于一对一；完美组合在最后一步全部抽取；在网上，此时抽干打破高于零处所立者的依存。",
+      "declarations": [
+        "Becoming.Optimum.AtOnce.later_drained",
+        "Becoming.Optimum.AtOnce.steps_after",
+        "Becoming.Optimum.AtOnce.drain_perfect_iff",
+        "Becoming.Optimum.AtOnce.last_draws",
+        "Becoming.Web.drain_perfect_broken"
+      ]
+    },
+    {
+      "en": "Whom restraint pays: where each portion returns less than one for one, in whole amounts a portion never rises with what is left, so along no profile does any drawer draw more than where all draw everything, and what the drain breaks lies beyond every drawer; where a profile holds the level and draws a drawer at every later step more than its portion of what stands at nothing, over a horizon at least two steps longer than its first portion it draws that drawer more.",
+      "zh": "克制使谁得益：每份所回少于一对一时，以整数量计份额从不随所留而升，故沿任何组合，没有抽取者比众者全部抽取时多得，抽干所破者在每个抽取者之外；某组合保持水平、在此后每步给某抽取者多于其在零处所立者中的份额时，在比其首份长两步以上的视野上，它使该抽取者多得。",
+      "declarations": [
+        "Becoming.Optimum.AtOnce.portion_falls",
+        "Becoming.Optimum.AtOnce.drain_most",
+        "Becoming.Optimum.AtOnce.drained_add_le",
+        "Becoming.Optimum.AtOnce.holding_draws_more",
+        "Becoming.Web.at_once_beyond"
+      ]
+    },
+    {
+      "en": "The standpoint of the whole as a case: a drawer whose portion is all that stands finds drawing everything imperfect wherever the whole returns more than one for one; one drawer given the whole drains exactly where the whole never does, and where it never does the drain is perfect for it and still breaks what depends on the base.",
+      "zh": "全体的立场作为情形：份额为全部所立者的抽取者，在全体所回多于一对一处不以全部抽取为完美；得全体的单一抽取者恰在全体从不多回之处抽干，此时抽干对它完美而仍打破依存于基础者。",
+      "declarations": [
+        "Becoming.Optimum.AtOnce.whole_not_drained",
+        "Becoming.Optimum.AtOnce.whole_perfect_iff",
+        "Becoming.Web.whole_drain_broken"
+      ]
+    },
+    {
+      "en": "Witnesses: under the gate, alone an optimum keeps the dweller, restraint keeps it, and every perfect profile and every revision from restraint breaks it; under doubling with a one-unit floor on the second, the first leaves everything from three and the dweller is kept; under halves, what both leave standing next with half of it again, drawing everything is perfect for the two and breaks the dweller, leaving all but one unit of each half holds the source at six, keeps the dweller and draws each drawer more, and for a single drawer given the whole draining is no best response.",
+      "zh": "见证：门控下单独的最优与克制保持居者，每个完美组合与自克制的每次修订打破它；倍增且第二者下限为一单位时，第一者自三全留，居者得以保持；对分之下，两者所留于下一步再加其半而立，全部抽取对二者完美并打破居者，各留其半而只取一单位则把源保持在六、保持居者并使每个抽取者多得，对得全体的单一抽取者，抽干不是最优回应。",
       "declarations": [
         "Becoming.Optimum.Holding.pass_keep",
         "Becoming.Optimum.Holding.restraint_keeps",
@@ -108,7 +139,19 @@
         "Becoming.Optimum.Holding.twice_sum",
         "Becoming.Optimum.Holding.keepsFirst_best",
         "Becoming.Optimum.Holding.only_three",
-        "Becoming.Optimum.Holding.doubling_capacity"
+        "Becoming.Optimum.Holding.doubling_capacity",
+        "Becoming.Optimum.Holding.half",
+        "Becoming.Optimum.Holding.half_le_succ",
+        "Becoming.Optimum.Holding.half_mono",
+        "Becoming.Optimum.Holding.half_double",
+        "Becoming.Optimum.Holding.half_le",
+        "Becoming.Optimum.Holding.halfMore",
+        "Becoming.Optimum.Holding.halves",
+        "Becoming.Optimum.Holding.leavesAllButOne",
+        "Becoming.Optimum.Holding.halves_return",
+        "Becoming.Optimum.Holding.halves_hold",
+        "Becoming.Optimum.Holding.halves_held",
+        "Becoming.Optimum.Holding.halves_race"
       ]
     }
   ],
@@ -120,8 +163,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Drawing at once where a portion returns at least one for one; which profiles are perfect where at most one drawer has no floor, away from the last step.",
-      "zh": "份额所回至少一对一时的同时抽取；至多一个抽取者无下限时最后一步之外何种组合完美。",
+      "en": "Drawing at once, which profiles are perfect where some portion returns more than one for one, and whether every perfect profile of the halves draws each drawer less than holding; which profiles are perfect where at most one drawer has no floor, away from the last step.",
+      "zh": "同时抽取时，某份所回多于一对一处何种组合完美，以及对分中每个完美组合是否都使每个抽取者少于保持所得；至多一个抽取者无下限时最后一步之外何种组合完美。",
       "kind": "scope"
     },
     {
@@ -149,12 +192,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T045034.169350Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 335 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Drawing at once where a portion returns at least one for one; perfect profiles where at most one drawer is free; an independent review.",
-    "zh": "份额所回至少一对一时的同时抽取；至多一个抽取者无下限时的完美组合；独立审查。"
+    "en": "Perfect profiles drawing at once where some portion returns more than one for one; perfect profiles where at most one drawer is free; an independent review.",
+    "zh": "某份所回多于一对一时同时抽取的完美组合；至多一个抽取者无下限时的完美组合；独立审查。"
   },
   "correspondence": {
-    "en": "The optimality condition of dynamic programming (Bellman 1957); the dynamic commons (Levhari and Mirman 1980); backward induction (Selten 1965); best-response dynamics (Fudenberg and Levine 1998).",
-    "zh": "动态规划的最优条件（Bellman 1957）；动态公地（Levhari 与 Mirman 1980）；逆向归纳（Selten 1965）；最优回应动态（Fudenberg 与 Levine 1998）。"
+    "en": "The optimality condition of dynamic programming (Bellman 1957); the common-property resource (Gordon 1954); the dynamic commons and the sole owner (Levhari and Mirman 1980); backward induction (Selten 1965); best-response dynamics (Fudenberg and Levine 1998).",
+    "zh": "动态规划的最优条件（Bellman 1957）；公共财产资源（Gordon 1954）；动态公地与唯一所有者（Levhari 与 Mirman 1980）；逆向归纳（Selten 1965）；最优回应动态（Fudenberg 与 Levine 1998）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -203,29 +246,51 @@
         "Becoming.Optimum.AtOnce.Perfect",
         "Becoming.Optimum.AtOnce.ReturnsLess",
         "Becoming.Optimum.AtOnce.Revises",
+        "Becoming.Optimum.AtOnce.drain_most",
+        "Becoming.Optimum.AtOnce.drain_perfect_iff",
+        "Becoming.Optimum.AtOnce.drained_add_le",
         "Becoming.Optimum.AtOnce.drains",
         "Becoming.Optimum.AtOnce.drawn",
         "Becoming.Optimum.AtOnce.drawn_step",
+        "Becoming.Optimum.AtOnce.holding_draws_more",
+        "Becoming.Optimum.AtOnce.last_draws",
         "Becoming.Optimum.AtOnce.later",
+        "Becoming.Optimum.AtOnce.later_drained",
         "Becoming.Optimum.AtOnce.later_less",
         "Becoming.Optimum.AtOnce.levels",
         "Becoming.Optimum.AtOnce.levels_drained",
         "Becoming.Optimum.AtOnce.next",
         "Becoming.Optimum.AtOnce.pool",
+        "Becoming.Optimum.AtOnce.portion_falls",
         "Becoming.Optimum.AtOnce.revisions_drain",
+        "Becoming.Optimum.AtOnce.steps_after",
         "Becoming.Optimum.AtOnce.sumTo",
         "Becoming.Optimum.AtOnce.sumTo_congr",
         "Becoming.Optimum.AtOnce.sumTo_set",
         "Becoming.Optimum.AtOnce.sumTo_zero",
         "Becoming.Optimum.AtOnce.sumTo_zeros",
+        "Becoming.Optimum.AtOnce.whole_not_drained",
+        "Becoming.Optimum.AtOnce.whole_perfect_iff",
         "Becoming.Optimum.Holding.doubling_capacity",
         "Becoming.Optimum.Holding.gate",
         "Becoming.Optimum.Holding.gated_alike",
         "Becoming.Optimum.Holding.gated_in_turn",
+        "Becoming.Optimum.Holding.half",
+        "Becoming.Optimum.Holding.halfMore",
+        "Becoming.Optimum.Holding.half_double",
+        "Becoming.Optimum.Holding.half_le",
+        "Becoming.Optimum.Holding.half_le_succ",
+        "Becoming.Optimum.Holding.half_mono",
+        "Becoming.Optimum.Holding.halves",
+        "Becoming.Optimum.Holding.halves_held",
+        "Becoming.Optimum.Holding.halves_hold",
+        "Becoming.Optimum.Holding.halves_race",
+        "Becoming.Optimum.Holding.halves_return",
         "Becoming.Optimum.Holding.keeping",
         "Becoming.Optimum.Holding.keepsFirst",
         "Becoming.Optimum.Holding.keepsFirst_best",
         "Becoming.Optimum.Holding.keepsFirst_le",
+        "Becoming.Optimum.Holding.leavesAllButOne",
         "Becoming.Optimum.Holding.onSource",
         "Becoming.Optimum.Holding.oneUnit",
         "Becoming.Optimum.Holding.only_three",
@@ -262,10 +327,13 @@
         "Becoming.Optimum.InTurn.revised_at_floors",
         "Becoming.Optimum.InTurn.revised_leaves",
         "Becoming.Optimum.InTurn.revisions_reach_floors",
+        "Becoming.Web.at_once_beyond",
         "Becoming.Web.at_once_broken",
-        "Becoming.Web.drained_broken"
+        "Becoming.Web.drain_perfect_broken",
+        "Becoming.Web.drained_broken",
+        "Becoming.Web.whole_drain_broken"
       ],
-      "sha256": "16bff968de36bad0c8c03ef9488983fa08758c22d8c12ce262470c42452d0f05"
+      "sha256": "6e26a10f167034925a5748e730d32ff8bdb03b0ea6b97d11b9eff3589e87bd24"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
@@ -285,7 +353,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "8f2135022917a2e4f6ee7121d63c809d2b37eb699719e283706092675dbe337b"
+      "sha256": "a4005ae3a026cd756459542b49121aa0cfd95a4284ee1f73eefdea3f80b3707b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json",
@@ -304,12 +372,18 @@
       "role": "receipt",
       "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json",
+      "role": "receipt",
+      "sha256": "a2bd5a858da6ba62d93a14c24c9b8bdf1588768ef9bca72341058621afdc307c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -331,6 +405,10 @@
     {
       "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "22 October 2026, AL1: the open item on drawing at once where a portion returns at least one for one answered by the exact converse of the drain (drain_perfect_iff); UM3's reading of ReturnsLess as a share of renewal below one corrected: in whole amounts it means a unit left returns nothing, so the drain costs no drawer anything (drain_most); whom holding pays and the standpoint of the whole added, with the halves as witness (study section 362).",
+      "zh": "2026年10月22日，AL1：份额所回至少一对一时同时抽取的未决项，由抽干的确切逆命题（drain_perfect_iff）回答；UM3 把 ReturnsLess 读作更新份额低于一，此读法更正：以整数量计，它意味着留下一单位毫无所回，故抽干不使任何抽取者有所失（drain_most）；加入保持使谁得益与全体的立场，以对分为见证（研究第 362 节）。"
     }
   ]
 }
