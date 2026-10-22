@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 288 | 12,591 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 288 | 12,601 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -22,7 +22,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 138 | 1,921 |
+| [Generative core and relational structure](lean-declarations/core.md) | 139 | 1,943 |
 | [Other formal studies](lean-declarations/other.md) | 29 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -836,6 +836,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SituatedTracking.lean](lean-declarations/learning.md#module-0484b39d8ec3) | Learning, prediction and dynamics |
 | [SituationTraces.lean](lean-declarations/becoming-core.md#module-c5c02f33d020) | Becoming pure core |
 | [Situations.lean](lean-declarations/becoming-core.md#module-dadafeb9c9af) | Becoming pure core |
+| [SlowingDown.lean](lean-declarations/core.md#module-c24e6fba1313) | Generative core and relational structure |
 | [SourceReliance.lean](lean-declarations/inquiry.md#module-c6d60dbda60c) | Attainable inquiry, contact and process laws |
 | [SourceRelianceCases.lean](lean-declarations/inquiry.md#module-ca0448c58a45) | Attainable inquiry, contact and process laws |
 | [Space.lean](lean-declarations/becoming-core.md#module-716b4d991654) | Becoming pure core |

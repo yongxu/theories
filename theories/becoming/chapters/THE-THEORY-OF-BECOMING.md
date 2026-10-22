@@ -968,6 +968,7 @@ Where each principle of classical reasoning enters a law of change is §8.6; wha
 | [A need with a cap](../results/records/a-need-with-a-cap.md) | theorem under stated premises | balance at the conditions required | §1.5 |
 | [Tolerance monotone across laws](../results/records/tolerance-monotone-across-laws.md) | theorem without premise | — | §1.5 |
 | [Rivals bounded in time](../results/records/rivals-bounded-in-time.md) | theorem without premise | — | §1.5 |
+| [What the dynamics leave open of the continuation condition, and what closes it](../results/records/what-the-dynamics-leave-open.md) | theorem without premise | — (decidedness of significance where stated) | §6.4 |
 | [Exchanges sharing a relatum need not commute](../results/records/order-of-exchanges-sharing-a-relatum.md) | witness | — | §1.5 |
 | [Selection right exactly where what matters is read](../results/records/selection-right-exactly-where-read.md) | theorem without premise | — | §1.5 |
 | [Regulation from one side, beyond the gap, and locally](../results/records/regulation-from-one-side-and-locally.md) | theorem under stated premises | balance; per-formation opposing and shares | §1.5 |
