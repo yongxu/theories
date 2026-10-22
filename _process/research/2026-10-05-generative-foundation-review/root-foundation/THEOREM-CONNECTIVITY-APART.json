@@ -2386,6 +2386,11 @@
    "module": "Becoming.SelectionPool",
    "category": "general-structure",
    "reason": "Where more than half the members read alike on two histories, taking what most read goes alike on them: a counting law of every majority reading over a list of members, in its own vocabulary (ZG7)."
+  },
+  "Becoming.SharedCodes.code_read_every": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "A code whose every sequence of forms resolution reads back tells senses apart, and its course of forms is one state exactly where the course of senses is: a law of every code on any type of senses and forms and of courses of any values (with course_states_iff and course_read, which it uses). A course is the values of a run read through a map and every course is the course of a run of free branching (Parting.freeRun_course), so it holds of the courses of runs without naming one (WL2)."
   }
  },
  "instances": {

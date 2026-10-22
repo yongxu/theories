@@ -5,14 +5,15 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-383 registered results: 357 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 897 curated edges join 335 results to the results they draw on.
+384 registered results: 358 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 900 curated edges join 336 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
 ## Edges
 
-- [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="a-code-formed-between-formations--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][]
 - [a-coupling-saturated-by-what-it-has-carried][] ← <a id="a-coupling-saturated-by-what-it-has-carried--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="a-coupling-saturated-by-what-it-has-carried--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="a-coupling-saturated-by-what-it-has-carried--how-loops-form"></a>[how-loops-form][]
+- [a-formations-own-course][] ← <a id="a-formations-own-course--selection-through-couplings"></a>[selection-through-couplings][] · <a id="a-formations-own-course--identification-where-bounded"></a>[identification-where-bounded][]
 - [a-goal-along-a-lineage][] ← <a id="a-goal-along-a-lineage--need-drift-along-a-lineage"></a>[need-drift-along-a-lineage][]
 - [a-history-read-off-its-finite-stretches][] ← <a id="a-history-read-off-its-finite-stretches--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][]
 - [a-law-through-a-projection-along-one-run][] ← <a id="a-law-through-a-projection-along-one-run--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-law-through-a-projection-along-one-run--experiment-needs-return"></a>[experiment-needs-return][] · <a id="a-law-through-a-projection-along-one-run--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="a-law-through-a-projection-along-one-run--finite-trace-transport"></a>[finite-trace-transport][] · <a id="a-law-through-a-projection-along-one-run--determinacy-up-to-likeness"></a>[determinacy-up-to-likeness][] · <a id="a-law-through-a-projection-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-a-projection-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-a-projection-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
@@ -349,6 +350,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 
 [a-code-formed-between-formations]: theories/becoming/results/records/a-code-formed-between-formations.md
 [a-coupling-saturated-by-what-it-has-carried]: theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md
+[a-formations-own-course]: theories/becoming/results/records/a-formations-own-course.md
 [a-goal-along-a-lineage]: theories/becoming/results/records/a-goal-along-a-lineage.md
 [a-history-read-off-its-finite-stretches]: theories/becoming/results/records/a-history-read-off-its-finite-stretches.md
 [a-law-through-a-projection-along-one-run]: theories/becoming/results/records/a-law-through-a-projection-along-one-run.md
