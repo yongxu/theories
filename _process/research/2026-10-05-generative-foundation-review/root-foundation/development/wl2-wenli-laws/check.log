@@ -9,7 +9,7 @@ python3 -B tools/research/research.py secrets
 }
 python3 -B tools/research/research.py check
 {
-  "records": 384,
+  "records": 385,
   "selected_records": [
     "a-code-formed-between-formations",
     "a-coupling-saturated-by-what-it-has-carried",
@@ -37,6 +37,7 @@ python3 -B tools/research/research.py check
     "arising-needs-change",
     "assured-route-criterion",
     "attraction-is-not-returning",
+    "balance-from-the-first-law",
     "bands-of-the-three-powers",
     "basic-priority-step-by-step",
     "basins-of-a-determined-law",
@@ -400,13 +401,13 @@ python3 -B tools/research/research.py check
   "source_drift": [],
   "unrelated_source_drift": [],
   "style_warnings": {
-    "findings": 661,
+    "findings": 657,
     "records": 214,
     "by_severity": {
-      "warning": 661
+      "warning": 657
     },
     "by_rule": {
-      "length": 507,
+      "length": 503,
       "status-restatement": 37,
       "negation-lead": 33,
       "stock-boundary": 26,
@@ -421,7 +422,7 @@ python3 -B tools/research/research.py check
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 649,
+  "changed_outside_cited": 670,
   "reading_drift": 91,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."

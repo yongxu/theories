@@ -33,7 +33,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110022.458880Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built in one session, with an independent AI review applied; author review in study section 348; not independently reviewed by a person. The definitional laws (alikeThrough_iff and the prefix form) unpack ValuesThrough; the content is the selection by the prefix, the bounds with their attainment, and the dependence of the states on the reading.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110022.458880Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built in one session, with an independent AI review applied; author review in study section 349; not independently reviewed by a person. The definitional laws (alikeThrough_iff and the prefix form) unpack ValuesThrough; the content is the selection by the prefix, the bounds with their attainment, and the dependence of the states on the reading.
 
 Canonical source: [IdentificationRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean)
 
@@ -75,7 +75,7 @@ Aliases: `A formation's own course`, `待者自身之文`, `Becoming.Web.courseT
 <a id="history--沿革"></a>
 ### History
 
-- 22 October 2026: added (WL2), for the open Lean item of WENLI-AND-BECOMING §六; study section 348.
+- 22 October 2026: added (WL2), for the open Lean item of WENLI-AND-BECOMING §六; study section 349.
 
 </details>
 

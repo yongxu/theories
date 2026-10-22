@@ -146,7 +146,7 @@
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "805700c9d0a2dd7dfae85b910bc9347da71f62e6b416b05b7884c7a48208e242"
+      "sha256": "2d7cf7613bb31783ba905946b6518b73ab214d8ae67dbe43429885bdcbc5ba77"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -204,7 +204,7 @@
     {
       "en": "WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back).",
       "zh": "WL2：所列 Lean 项已证（守值之最粗之类作一条律，待者自身之文，名之文之读回）。",
-      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#348-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2"
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#349-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2"
     }
   ],
   "history": [
@@ -213,8 +213,8 @@
       "zh": "2026年10月22日：新增（WL），按 Ren 以文之认识论为中心整合文理生生、并为文立名之要求；研究第 346 节；读法 D63。"
     },
     {
-      "en": "22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 348.",
-      "zh": "2026年10月22日，WL2：本章所列之 Lean 项已证，于原注之处引之；研究第 348 节。"
+      "en": "22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 349.",
+      "zh": "2026年10月22日，WL2：本章所列之 Lean 项已证，于原注之处引之；研究第 349 节。"
     }
   ]
 }

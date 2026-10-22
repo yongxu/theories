@@ -93,8 +93,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110022.458880Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built in one session, with an independent AI review applied; author review in study section 348; not independently reviewed by a person. The definitional laws (alikeThrough_iff and the prefix form) unpack ValuesThrough; the content is the selection by the prefix, the bounds with their attainment, and the dependence of the states on the reading.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110022.458880Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并经一次独立的 AI 审查；作者审查见研究第 348 节；未经人的独立审查。定义性之律（alikeThrough_iff 与往之形）只是展开 ValuesThrough；内容在依往而择、界及其达到、状随读而定。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110022.458880Z): every declaration cited has an empty axiom report; the checker verifies core purity. Built in one session, with an independent AI review applied; author review in study section 349; not independently reviewed by a person. The definitional laws (alikeThrough_iff and the prefix form) unpack ValuesThrough; the content is the selection by the prefix, the bounds with their attainment, and the dependence of the states on the reading.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110022.458880Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并经一次独立的 AI 审查；作者审查见研究第 349 节；未经人的独立审查。定义性之律（alikeThrough_iff 与往之形）只是展开 ValuesThrough；内容在依往而择、界及其达到、状随读而定。"
   },
   "next_delta": {
     "en": "A reading as values derived from the web where admission is decided; an independent review.",
@@ -182,12 +182,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e4063dbfcc7dca861d8db7dc8269596934e6f5547caec97dd8fc8b707c243a06"
+      "sha256": "d9d41d58a1eb965ac3f6827ab6c4d528f684f0dbefe7a4d2f5bbdb9ccb1e292f"
     },
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "805700c9d0a2dd7dfae85b910bc9347da71f62e6b416b05b7884c7a48208e242"
+      "sha256": "2d7cf7613bb31783ba905946b6518b73ab214d8ae67dbe43429885bdcbc5ba77"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -211,8 +211,8 @@
   ],
   "history": [
     {
-      "en": "22 October 2026: added (WL2), for the open Lean item of WENLI-AND-BECOMING §六; study section 348.",
-      "zh": "2026年10月22日：新增（WL2），补 WENLI-AND-BECOMING §六 所列之 Lean 项；研究第 348 节。"
+      "en": "22 October 2026: added (WL2), for the open Lean item of WENLI-AND-BECOMING §六; study section 349.",
+      "zh": "2026年10月22日：新增（WL2），补 WENLI-AND-BECOMING §六 所列之 Lean 项；研究第 349 节。"
     }
   ]
 }

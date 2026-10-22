@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the periphery module on the physical premises of the spine's least loss.
+"""Check the periphery module on the physical premises of the spine's balance and least loss.
 
 `EntropyProduction` imports the core and Mathlib's reals, integrals and measures, so it is compiled with
 Lean 4.30.0-rc2 against the installed Mathlib (`SYSTEMS_MATHLIB_PROJECT`, default
@@ -42,7 +42,12 @@ STANDARD_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 TIMEOUT = int(os.environ.get("LEAN_TIMEOUT", "900"))
 
 SCOPE = (
-    "On the Becoming core's flows: an exergy balance with the second law (no exchange destroys negative "
+    "On the Becoming core's flows: a quantity carried only by the exchanges taking part balances the levels it "
+    "is read on exactly where no condition produces it, and conservation of the total alone does not give "
+    "balance; read in available work relative to an environment at T0 > 0, the first law and the entropy "
+    "balance at each store give Flow.Balances exactly where no store generates entropy, and at each exchange "
+    "give the exergy balance with T0 times the generated entropy destroyed, so balance, Flow.Gainless and "
+    "Flow.Dissipative come from one reading (premises jointly met in Burning). An exergy balance with the second law (no exchange destroys negative "
     "exergy) gives Flow.Gainless; with strict irreversibility of every taking exchange, or a floor of "
     "destroyed exergy at least the unit, it gives Flow.Dissipative; a floor counts r units at an r-fold "
     "finer unit; destroying at least a (q+1)th of what is taken gives Flow.DissipativeBy q. Over runs "
@@ -50,8 +55,8 @@ SCOPE = (
     "the summed probabilities of taking by the expected stock, and taking does not recur almost surely; "
     "Fluctuation gains on one run while dissipated on in expectation; the integral fluctuation theorem "
     "gives a non-negative expected entropy production and an exponential bound on gains. That a physical "
-    "system's amounts are available work, that its exchanges meet these premises, and Landauer's bound "
-    "itself are correspondences, not checked."
+    "system's amounts are available work, that its stores and exchanges meet these premises, and Landauer's "
+    "bound itself are correspondences, not checked."
 )
 
 

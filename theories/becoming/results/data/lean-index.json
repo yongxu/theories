@@ -28,8 +28,8 @@
       "imported-archive": 23,
       "working-source": 874
     },
-    "working_named_theorem_lemma_occurrences": 24701,
-    "working_explicit_named_declaration_occurrences": 36722,
+    "working_named_theorem_lemma_occurrences": 24721,
+    "working_explicit_named_declaration_occurrences": 36763,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 288,
@@ -13164,7 +13164,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
-      "sha256": "5350e798bbe102ff086beb97dc13040366bb43c5156175e9b93ea2392cc21e4a",
+      "sha256": "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -150655,228 +150655,6 @@
         "unsafe": []
       },
       "print_axioms_commands": 28
-    },
-    "5350e798bbe102ff086beb97dc13040366bb43c5156175e9b93ea2392cc21e4a": {
-      "byte_size": 25273,
-      "line_count": 469,
-      "imports": [
-        "Mathlib.MeasureTheory.Integral.Bochner.Basic",
-        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
-        "Mathlib.Analysis.Complex.Exponential",
-        "Becoming.Entropy"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "ExergyBalance",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance",
-          "line": 74
-        },
-        {
-          "kind": "def",
-          "name": "SecondLaw",
-          "qualified_name_hint": "Becoming.EntropyProduction.SecondLaw",
-          "line": 79
-        },
-        {
-          "kind": "def",
-          "name": "Irreversible",
-          "qualified_name_hint": "Becoming.EntropyProduction.Irreversible",
-          "line": 84
-        },
-        {
-          "kind": "def",
-          "name": "DestroysAtLeast",
-          "qualified_name_hint": "Becoming.EntropyProduction.DestroysAtLeast",
-          "line": 90
-        },
-        {
-          "kind": "theorem",
-          "name": "ExergyBalance.give_le",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance.give_le",
-          "line": 98
-        },
-        {
-          "kind": "theorem",
-          "name": "gainless_of_secondLaw",
-          "qualified_name_hint": "Becoming.EntropyProduction.gainless_of_secondLaw",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "ExergyBalance.destroyed_eq_residue",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue",
-          "line": 113
-        },
-        {
-          "kind": "theorem",
-          "name": "passing_balance",
-          "qualified_name_hint": "Becoming.EntropyProduction.passing_balance",
-          "line": 134
-        },
-        {
-          "kind": "theorem",
-          "name": "secondLaw_not_dissipative",
-          "qualified_name_hint": "Becoming.EntropyProduction.secondLaw_not_dissipative",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipative_of_irreversible",
-          "qualified_name_hint": "Becoming.EntropyProduction.dissipative_of_irreversible",
-          "line": 153
-        },
-        {
-          "kind": "theorem",
-          "name": "loss_of_floor",
-          "qualified_name_hint": "Becoming.EntropyProduction.loss_of_floor",
-          "line": 172
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipative_of_floor",
-          "qualified_name_hint": "Becoming.EntropyProduction.dissipative_of_floor",
-          "line": 184
-        },
-        {
-          "kind": "theorem",
-          "name": "loss_at_finer_unit",
-          "qualified_name_hint": "Becoming.EntropyProduction.loss_at_finer_unit",
-          "line": 194
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipativeBy_of_efficiency",
-          "qualified_name_hint": "Becoming.EntropyProduction.dissipativeBy_of_efficiency",
-          "line": 207
-        },
-        {
-          "kind": "def",
-          "name": "ExpectedDissipatesOn",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn",
-          "line": 228
-        },
-        {
-          "kind": "def",
-          "name": "HasExpectations",
-          "qualified_name_hint": "Becoming.EntropyProduction.HasExpectations",
-          "line": 233
-        },
-        {
-          "kind": "theorem",
-          "name": "ExpectedDissipatesOn.of_pathwise",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise",
-          "line": 242
-        },
-        {
-          "kind": "theorem",
-          "name": "ExpectedDissipatesOn.of_exergy",
-          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy",
-          "line": 257
-        },
-        {
-          "kind": "theorem",
-          "name": "expected_runs_down",
-          "qualified_name_hint": "Becoming.EntropyProduction.expected_runs_down",
-          "line": 279
-        },
-        {
-          "kind": "theorem",
-          "name": "expected_takers_within",
-          "qualified_name_hint": "Becoming.EntropyProduction.expected_takers_within",
-          "line": 299
-        },
-        {
-          "kind": "theorem",
-          "name": "expected_stock_nonneg",
-          "qualified_name_hint": "Becoming.EntropyProduction.expected_stock_nonneg",
-          "line": 315
-        },
-        {
-          "kind": "theorem",
-          "name": "taking_probability_le",
-          "qualified_name_hint": "Becoming.EntropyProduction.taking_probability_le",
-          "line": 319
-        },
-        {
-          "kind": "theorem",
-          "name": "taking_probability_within",
-          "qualified_name_hint": "Becoming.EntropyProduction.taking_probability_within",
-          "line": 333
-        },
-        {
-          "kind": "theorem",
-          "name": "taking_not_recurring_ae",
-          "qualified_name_hint": "Becoming.EntropyProduction.taking_not_recurring_ae",
-          "line": 347
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.flow",
-          "line": 372
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.web",
-          "line": 378
-        },
-        {
-          "kind": "def",
-          "name": "coin",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.coin",
-          "line": 386
-        },
-        {
-          "kind": "theorem",
-          "name": "integral_coin",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.integral_coin",
-          "line": 388
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.balances",
-          "line": 394
-        },
-        {
-          "kind": "theorem",
-          "name": "closed",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.closed",
-          "line": 399
-        },
-        {
-          "kind": "theorem",
-          "name": "gains_in_one_run",
-          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.gains_in_one_run",
-          "line": 405
-        },
-        {
-          "kind": "theorem",
-          "name": "expected_production_nonneg",
-          "qualified_name_hint": "Becoming.EntropyProduction.expected_production_nonneg",
-          "line": 432
-        },
-        {
-          "kind": "theorem",
-          "name": "gain_probability_le",
-          "qualified_name_hint": "Becoming.EntropyProduction.gain_probability_le",
-          "line": 448
-        }
-      ],
-      "declaration_counts": {
-        "def": 9,
-        "theorem": 24
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
     },
     "5357953ee4b838da22d426e831a0a04b782042cb3eb736ed81960110e98799eb": {
       "byte_size": 9229,
@@ -404786,6 +404564,474 @@
         "def": 6,
         "inductive": 1,
         "theorem": 18
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3": {
+      "byte_size": 46360,
+      "line_count": 880,
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+        "Mathlib.Analysis.Complex.Exponential",
+        "Becoming.Entropy"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "ExergyBalance",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance",
+          "line": 89
+        },
+        {
+          "kind": "def",
+          "name": "SecondLaw",
+          "qualified_name_hint": "Becoming.EntropyProduction.SecondLaw",
+          "line": 94
+        },
+        {
+          "kind": "def",
+          "name": "Irreversible",
+          "qualified_name_hint": "Becoming.EntropyProduction.Irreversible",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "DestroysAtLeast",
+          "qualified_name_hint": "Becoming.EntropyProduction.DestroysAtLeast",
+          "line": 105
+        },
+        {
+          "kind": "theorem",
+          "name": "ExergyBalance.give_le",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance.give_le",
+          "line": 113
+        },
+        {
+          "kind": "theorem",
+          "name": "gainless_of_secondLaw",
+          "qualified_name_hint": "Becoming.EntropyProduction.gainless_of_secondLaw",
+          "line": 122
+        },
+        {
+          "kind": "theorem",
+          "name": "ExergyBalance.destroyed_eq_residue",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue",
+          "line": 128
+        },
+        {
+          "kind": "theorem",
+          "name": "passing_balance",
+          "qualified_name_hint": "Becoming.EntropyProduction.passing_balance",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "secondLaw_not_dissipative",
+          "qualified_name_hint": "Becoming.EntropyProduction.secondLaw_not_dissipative",
+          "line": 159
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipative_of_irreversible",
+          "qualified_name_hint": "Becoming.EntropyProduction.dissipative_of_irreversible",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "loss_of_floor",
+          "qualified_name_hint": "Becoming.EntropyProduction.loss_of_floor",
+          "line": 187
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipative_of_floor",
+          "qualified_name_hint": "Becoming.EntropyProduction.dissipative_of_floor",
+          "line": 199
+        },
+        {
+          "kind": "theorem",
+          "name": "loss_at_finer_unit",
+          "qualified_name_hint": "Becoming.EntropyProduction.loss_at_finer_unit",
+          "line": 209
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipativeBy_of_efficiency",
+          "qualified_name_hint": "Becoming.EntropyProduction.dissipativeBy_of_efficiency",
+          "line": 222
+        },
+        {
+          "kind": "def",
+          "name": "rtotal",
+          "qualified_name_hint": "Becoming.EntropyProduction.rtotal",
+          "line": 255
+        },
+        {
+          "kind": "theorem",
+          "name": "cast_total",
+          "qualified_name_hint": "Becoming.EntropyProduction.cast_total",
+          "line": 259
+        },
+        {
+          "kind": "theorem",
+          "name": "rtotal_combine",
+          "qualified_name_hint": "Becoming.EntropyProduction.rtotal_combine",
+          "line": 265
+        },
+        {
+          "kind": "theorem",
+          "name": "rtotal_congr_on",
+          "qualified_name_hint": "Becoming.EntropyProduction.rtotal_congr_on",
+          "line": 271
+        },
+        {
+          "kind": "theorem",
+          "name": "rtotal_read",
+          "qualified_name_hint": "Becoming.EntropyProduction.rtotal_read",
+          "line": 281
+        },
+        {
+          "kind": "def",
+          "name": "LocalBalance",
+          "qualified_name_hint": "Becoming.EntropyProduction.LocalBalance",
+          "line": 297
+        },
+        {
+          "kind": "def",
+          "name": "ReadsLevels",
+          "qualified_name_hint": "Becoming.EntropyProduction.ReadsLevels",
+          "line": 302
+        },
+        {
+          "kind": "def",
+          "name": "ReadsTransfers",
+          "qualified_name_hint": "Becoming.EntropyProduction.ReadsTransfers",
+          "line": 307
+        },
+        {
+          "kind": "theorem",
+          "name": "ReadsTransfers.carried",
+          "qualified_name_hint": "Becoming.EntropyProduction.ReadsTransfers.carried",
+          "line": 312
+        },
+        {
+          "kind": "theorem",
+          "name": "LocalBalance.produced",
+          "qualified_name_hint": "Becoming.EntropyProduction.LocalBalance.produced",
+          "line": 319
+        },
+        {
+          "kind": "theorem",
+          "name": "balances_iff_unproduced",
+          "qualified_name_hint": "Becoming.EntropyProduction.balances_iff_unproduced",
+          "line": 331
+        },
+        {
+          "kind": "theorem",
+          "name": "balances_of_conserved",
+          "qualified_name_hint": "Becoming.EntropyProduction.balances_of_conserved",
+          "line": 349
+        },
+        {
+          "kind": "def",
+          "name": "StoreLaws",
+          "qualified_name_hint": "Becoming.EntropyProduction.StoreLaws",
+          "line": 358
+        },
+        {
+          "kind": "theorem",
+          "name": "StoreLaws.availableWork",
+          "qualified_name_hint": "Becoming.EntropyProduction.StoreLaws.availableWork",
+          "line": 365
+        },
+        {
+          "kind": "theorem",
+          "name": "balances_iff_stores_generate_nothing",
+          "qualified_name_hint": "Becoming.EntropyProduction.balances_iff_stores_generate_nothing",
+          "line": 382
+        },
+        {
+          "kind": "theorem",
+          "name": "stores_within",
+          "qualified_name_hint": "Becoming.EntropyProduction.stores_within",
+          "line": 399
+        },
+        {
+          "kind": "def",
+          "name": "ExchangeLaws",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExchangeLaws",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "exergyBalance_of_laws",
+          "qualified_name_hint": "Becoming.EntropyProduction.exergyBalance_of_laws",
+          "line": 428
+        },
+        {
+          "kind": "theorem",
+          "name": "secondLaw_of_generation",
+          "qualified_name_hint": "Becoming.EntropyProduction.secondLaw_of_generation",
+          "line": 449
+        },
+        {
+          "kind": "theorem",
+          "name": "irreversible_of_generation",
+          "qualified_name_hint": "Becoming.EntropyProduction.irreversible_of_generation",
+          "line": 455
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_and_least_loss",
+          "qualified_name_hint": "Becoming.EntropyProduction.balance_and_least_loss",
+          "line": 467
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.EntropyProduction.Teleport.flow",
+          "line": 491
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.EntropyProduction.Teleport.web",
+          "line": 497
+        },
+        {
+          "kind": "theorem",
+          "name": "conserved_not_balanced",
+          "qualified_name_hint": "Becoming.EntropyProduction.Teleport.conserved_not_balanced",
+          "line": 506
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.flow",
+          "line": 521
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.web",
+          "line": 527
+        },
+        {
+          "kind": "def",
+          "name": "energy",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.energy",
+          "line": 535
+        },
+        {
+          "kind": "def",
+          "name": "entropy",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.entropy",
+          "line": 538
+        },
+        {
+          "kind": "def",
+          "name": "energyDrawn",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.energyDrawn",
+          "line": 541
+        },
+        {
+          "kind": "def",
+          "name": "entropyDrawn",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.entropyDrawn",
+          "line": 544
+        },
+        {
+          "kind": "def",
+          "name": "storeGenerates",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.storeGenerates",
+          "line": 547
+        },
+        {
+          "kind": "def",
+          "name": "heat",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.heat",
+          "line": 550
+        },
+        {
+          "kind": "def",
+          "name": "generates",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.generates",
+          "line": 553
+        },
+        {
+          "kind": "theorem",
+          "name": "family",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.family",
+          "line": 555
+        },
+        {
+          "kind": "theorem",
+          "name": "meets",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.meets",
+          "line": 564
+        },
+        {
+          "kind": "theorem",
+          "name": "balanced_and_dissipative",
+          "qualified_name_hint": "Becoming.EntropyProduction.Burning.balanced_and_dissipative",
+          "line": 585
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.EntropyProduction.Leaking.flow",
+          "line": 595
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.EntropyProduction.Leaking.web",
+          "line": 601
+        },
+        {
+          "kind": "def",
+          "name": "entropy",
+          "qualified_name_hint": "Becoming.EntropyProduction.Leaking.entropy",
+          "line": 609
+        },
+        {
+          "kind": "def",
+          "name": "storeGenerates",
+          "qualified_name_hint": "Becoming.EntropyProduction.Leaking.storeGenerates",
+          "line": 612
+        },
+        {
+          "kind": "theorem",
+          "name": "energy_conserved_not_balanced",
+          "qualified_name_hint": "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced",
+          "line": 617
+        },
+        {
+          "kind": "def",
+          "name": "ExpectedDissipatesOn",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn",
+          "line": 639
+        },
+        {
+          "kind": "def",
+          "name": "HasExpectations",
+          "qualified_name_hint": "Becoming.EntropyProduction.HasExpectations",
+          "line": 644
+        },
+        {
+          "kind": "theorem",
+          "name": "ExpectedDissipatesOn.of_pathwise",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise",
+          "line": 653
+        },
+        {
+          "kind": "theorem",
+          "name": "ExpectedDissipatesOn.of_exergy",
+          "qualified_name_hint": "Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy",
+          "line": 668
+        },
+        {
+          "kind": "theorem",
+          "name": "expected_runs_down",
+          "qualified_name_hint": "Becoming.EntropyProduction.expected_runs_down",
+          "line": 690
+        },
+        {
+          "kind": "theorem",
+          "name": "expected_takers_within",
+          "qualified_name_hint": "Becoming.EntropyProduction.expected_takers_within",
+          "line": 710
+        },
+        {
+          "kind": "theorem",
+          "name": "expected_stock_nonneg",
+          "qualified_name_hint": "Becoming.EntropyProduction.expected_stock_nonneg",
+          "line": 726
+        },
+        {
+          "kind": "theorem",
+          "name": "taking_probability_le",
+          "qualified_name_hint": "Becoming.EntropyProduction.taking_probability_le",
+          "line": 730
+        },
+        {
+          "kind": "theorem",
+          "name": "taking_probability_within",
+          "qualified_name_hint": "Becoming.EntropyProduction.taking_probability_within",
+          "line": 744
+        },
+        {
+          "kind": "theorem",
+          "name": "taking_not_recurring_ae",
+          "qualified_name_hint": "Becoming.EntropyProduction.taking_not_recurring_ae",
+          "line": 758
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.flow",
+          "line": 783
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.web",
+          "line": 789
+        },
+        {
+          "kind": "def",
+          "name": "coin",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.coin",
+          "line": 797
+        },
+        {
+          "kind": "theorem",
+          "name": "integral_coin",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.integral_coin",
+          "line": 799
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.balances",
+          "line": 805
+        },
+        {
+          "kind": "theorem",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.closed",
+          "line": 810
+        },
+        {
+          "kind": "theorem",
+          "name": "gains_in_one_run",
+          "qualified_name_hint": "Becoming.EntropyProduction.Fluctuation.gains_in_one_run",
+          "line": 816
+        },
+        {
+          "kind": "theorem",
+          "name": "expected_production_nonneg",
+          "qualified_name_hint": "Becoming.EntropyProduction.expected_production_nonneg",
+          "line": 843
+        },
+        {
+          "kind": "theorem",
+          "name": "gain_probability_le",
+          "qualified_name_hint": "Becoming.EntropyProduction.gain_probability_le",
+          "line": 859
+        }
+      ],
+      "declaration_counts": {
+        "def": 30,
+        "theorem": 44
       },
       "textual_markers": {
         "sorry": [],

@@ -26,7 +26,7 @@
 
 **没有建成什么。**
 
-- 本章初成时不新增 Lean。它列为未立的三项 Lean，已由其后的看板项 WL2 证出，引在正文相应之处（第一部分 §四 律 6、§六、§七与总表；[研究第 348 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#348-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）：守值之理中最粗者恰并文同之状，作一条定理；缘感无异与待者自身之文；名之文与通意。嵌入文理生生的 G1，仍是「文理生生的形式部分与八卦」一节所说的可以认领的后续项目。
+- 本章初成时不新增 Lean。它列为未立的三项 Lean，已由其后的看板项 WL2 证出，引在正文相应之处（第一部分 §四 律 6、§六、§七与总表；[研究第 349 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#349-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）：守值之理中最粗者恰并文同之状，作一条定理；缘感无异与待者自身之文；名之文与通意。嵌入文理生生的 G1，仍是「文理生生的形式部分与八卦」一节所说的可以认领的后续项目。
 - 本章不说文理生生或古汉语是核心之最好的表达。这一点未经检验；本章所设计的检验也只比较所运行的几种表达，不能判定「最好」。文理生生的 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移）是另一个假说，也未经检验。
 - 不说古人意谓这些律。相合不是印证。
 
@@ -524,7 +524,7 @@
 2. **文理生生的 H2：理解这些组合可改善对未见实例的结构重建、解释与迁移。** 律只说明从文中学到状值在什么时候可能、经由什么程序可能。人类读者是否这样学、读者怎样到达他的类，都没有导出，须另做实验（实验设计见总计划 §八；文理生生 18 号审计记其「尚未进行」）。
 3. **古汉语是核心的最佳媒介。** 未经检验。一一改名不改变所载之法（`Becoming.SharedCodes.renamed_carries_iff`）；认识论在文与其状、法之中，不在某一种书写之中。
 4. **任意系统的最小概念语法（H3）。** 脊柱只有对某一条法、某一个类的最小之读（`Becoming.Image.least`、`Becoming.ExchangeLaw.ReadsFinitely.least_coupling`、`Becoming.Law.identifiesAlike_of_law`），没有一个普遍的最小语法。
-5. **恰并文同之类，于任一法皆有。** 一族尽其状时有之（`Becoming.Law.coarsest_class`）；一般以文同取商，商并文同之状须 `Quot.sound`，核心不用，只立其关系（`Becoming.Law.sameFuture_coarsest`）。缘感无异之为象亦然：一般而言要以此关系取商，核心只在容已定、以积感入者列尽之处给出其值（`Becoming.Web.listed_values`）。原列于此的三项 Lean，已由看板项 WL2 证出，见 §四 律 6、§六、§七（[研究第 348 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#348-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）。
+5. **恰并文同之类，于任一法皆有。** 一族尽其状时有之（`Becoming.Law.coarsest_class`）；一般以文同取商，商并文同之状须 `Quot.sound`，核心不用，只立其关系（`Becoming.Law.sameFuture_coarsest`）。缘感无异之为象亦然：一般而言要以此关系取商，核心只在容已定、以积感入者列尽之处给出其值（`Becoming.Web.listed_values`）。原列于此的三项 Lean，已由看板项 WL2 证出，见 §四 律 6、§六、§七（[研究第 349 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#349-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）。
 
 ## 两个项目的对照
 

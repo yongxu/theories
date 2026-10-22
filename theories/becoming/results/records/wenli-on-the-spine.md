@@ -25,7 +25,7 @@
 ## Progress
 
 1. The name 文, the epistemology of 文 on the laws, and the comparison with 文理生生. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)
-2. WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#348-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)
+2. WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#349-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -82,7 +82,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 ### History
 
 - 22 October 2026: added (WL), on Ren's request to join 文理生生 with the epistemology of 文 at the centre and to name 文; study section 346; readings D63.
-- 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 348.
+- 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 349.
 
 </details>
 

@@ -37,3 +37,6 @@ text)
   python3 -B $D/THEOREM-CONNECTIVITY.py --write > $K/connectivity_write.log 2>&1
   ;;
 esac
+# 22 October 2026: FL1 landed on main with study section 348 while this landing was in progress; on merging main the
+# WL2 section became 349, and its citations (chapter EN/ZH, WENLI fragments, records, round 8's notes, board) were
+# renumbered; the logs in this folder from the first pass still show 348.
