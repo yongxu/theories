@@ -1,0 +1,341 @@
+{
+  "status": "passed",
+  "utc": "20261022T104044.892409Z",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "retained_run": "slowing-down-checks/20261022T104044.892409Z",
+  "bridge_module": "SlowingDown",
+  "compile_order": [
+    "SlowingDown"
+  ],
+  "source_paths": {
+    "SlowingDown": "warning/SlowingDown.lean"
+  },
+  "source_sha256": {
+    "SlowingDown": "4ab7d5f9b66e6f63bbaac790117af0377a130b997a54b1ed6fbffdb00fa14291"
+  },
+  "checker_sha256": {
+    "check_slowing_down.py": "0035ecaab01dc25c9fbe1aa6a8692850ba64a614a4fd117bd7ec18bf1f4dd700",
+    "check_becoming.py": "8c0c6153f22490551a6bbeb28577e5eeb73d72837b1a2cc85fe48fee9d97d85b"
+  },
+  "source_commit": {
+    "main": "e45b0fa8a02884736208cff362f60eb7b23df394",
+    "copied": [
+      "SlowingDown.lean",
+      "check_slowing_down.py"
+    ]
+  },
+  "scope": "Over the reals: one step of a deviation about a rest, the return multiplier a times the deviation plus noise independent of it with finite variance, has variance a^2 Var Y + Var E and covariance a Var Y with the deviation now; where the variance stays the same across the step and a^2 < 1 it is Var E / (1 - a^2), and the lag-1 autocorrelation is a; the stationary variance rises strictly with a on [0, 1) and tends to infinity as a rises to one. At the fold step x + h (m - x^2) with rest sqrt m the multiplier (the step's derivative at the rest) is 1 - 2 h sqrt m: it tends to one as the margin m goes to zero, the variance rises strictly as the margin shrinks and tends to infinity, and m = ((1 - a) / (2 h))^2. At logistic renewal under a proportional draw, rest K (1 - q / r), the multiplier is 1 - h (r - q) = 1 - h r x* / K, the level is K (1 - a) / (h r), and as the draw rises to the renewal rate the variance rises strictly and tends to infinity. A dependent's need enters neither statistic, so no reading of the margin to it from the multiplier is right for every need, and with the need measured the margin is read exactly (by construction). That a measured condition's fluctuations are such a linearized step with independent noise, and stationary, are correspondences, not checked.",
+  "lean_steps": {
+    "cache": "/Users/ren/.cache/becoming-lean",
+    "fresh": false,
+    "ran": [
+      "version.log",
+      "SlowingDown.log",
+      "SlowingDownAxiomAudit.log",
+      "SlowingDownSignatures.log"
+    ],
+    "reused": {},
+    "keys": {
+      "SlowingDown.log": "6a45115a8a43611d87a4dafcaea8e6af48e199d9e191f449b49ad71b391715ec",
+      "SlowingDownAxiomAudit.log": "a0687d6f93828408f21af06fd414e10bf1bb42f77717050e26f16face697f7e8",
+      "SlowingDownSignatures.log": "68b818998e8bc914a81ef2d21909e369e711151ab4ce3ed094bff0f24839fd02"
+    }
+  },
+  "inherited_receipts": {},
+  "lean_binary_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "source_unchanged_during_check": true,
+  "modules": [
+    {
+      "module": "SlowingDown",
+      "layer": "periphery",
+      "theorems": 22,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.memLp_step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.variance_step"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.covariance_step"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.stationaryVariance"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.stationary_variance"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.lag1"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.stationary_lag1"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.stationaryVariance_tendsto"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.stationaryVariance_strictMonoOn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.foldStep"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.foldStep_rest"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.foldMultiplier"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.foldStep_hasDerivAt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.foldMultiplier_tendsto"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.fold_variance_tendsto"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.fold_variance_strictAntiOn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.fold_margin_read"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.drawnStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.drawnRest"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawnStep_rest"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.SlowingDown.drawnMultiplier"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawnStep_hasDerivAt"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawn_multiplier_level"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawn_level_read"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawnMultiplier_tendsto"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawn_variance_tendsto"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.drawn_variance_strictMonoOn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.need_not_read"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.SlowingDown.need_margin_read"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.SlowingDown.step": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.memLp_step": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.variance_step": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.covariance_step": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.stationaryVariance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.stationary_variance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.lag1": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.stationary_lag1": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.stationaryVariance_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.stationaryVariance_strictMonoOn": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.foldStep": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.foldStep_rest": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.foldMultiplier": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.foldStep_hasDerivAt": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.foldMultiplier_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.fold_variance_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.fold_variance_strictAntiOn": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.fold_margin_read": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnStep": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnRest": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnStep_rest": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnMultiplier": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnStep_hasDerivAt": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawn_multiplier_level": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawn_level_read": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawnMultiplier_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawn_variance_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.drawn_variance_strictMonoOn": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.need_not_read": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.SlowingDown.need_margin_read": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "kernel_checked": true
+    }
+  ],
+  "artifact_sha256": {
+    "SlowingDown.lean": "4ab7d5f9b66e6f63bbaac790117af0377a130b997a54b1ed6fbffdb00fa14291",
+    "SlowingDown.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SlowingDownAxiomAudit.lean": "0accc8e15ad47b001d8e31bbbe4e262515ec827ea3cf699a5f65a2155f59cbff",
+    "SlowingDownAxiomAudit.log": "cbd33109a2f1373f628d6f5acb69ecd2dc678145bf1983f9fe4486fa8eeb046f",
+    "SlowingDownSignatures.lean": "02e1dd9c727e03357b57ed5e09e21a3e0074c0653f0a02c361d12eaa551923d7",
+    "SlowingDownSignatures.log": "807d6eba651350a5e95273e807f8e63d670ab032d2b4e37525c326812a72dd5f",
+    "check_slowing_down.py": "0035ecaab01dc25c9fbe1aa6a8692850ba64a614a4fd117bd7ec18bf1f4dd700",
+    "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
+  }
+}

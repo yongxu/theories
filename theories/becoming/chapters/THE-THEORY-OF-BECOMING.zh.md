@@ -422,9 +422,9 @@
 <a id="611-条件的分解自身的预设与不变的一步"></a>
 <a id="65-比较提升与实践判断"></a>
 <a id="66-不做什么"></a>
-**定理。** 本节陈述 `Valuation.premises_of_unrestricted`、`unrestricted_iff_livingSignificance`、`Web.retains_iff_includes`、`Preemption.not_undermining_yet_loses`、`Clearing.clearer_loses_dweller`、`Flow.Balances.keeps_of_not_arising`（只有活动的形成取与给时，成员在起点不活动、整段上不生起的部分不改变能形成者；生起不定次序，见 `ArisingDrawer.arises_narrows` 与 `ArisingGiver.arises_widens`）；完整陈述见[英文版 §6.4](THE-THEORY-OF-BECOMING.md#64-the-continuation-condition)。
+**定理。** 本节陈述 `Valuation.premises_of_unrestricted`、`unrestricted_iff_livingSignificance`、`Web.retains_iff_includes`、`Preemption.not_undermining_yet_loses`、`excludes_rivals_iff`（对手恰是某处缺意义；条件排除一切对手，一个前提排除一切对手恰当它推出无处缺意义，在每处意义已定处即是条件；只读动力之陈述对一切意义同样成立，不排除任何对手，有立场与形成时也不推出条件，见 `ReadsOnlyDynamics.admits_rival` 与 `ReadsOnlyDynamics.not_entails`）、`Clearing.clearer_loses_dweller`、`Flow.Balances.keeps_of_not_arising`（只有活动的形成取与给时，成员在起点不活动、整段上不生起的部分不改变能形成者；生起不定次序，见 `ArisingDrawer.arises_narrows` 与 `ArisingGiver.arises_widens`）；完整陈述见[英文版 §6.4](THE-THEORY-OF-BECOMING.md#64-the-continuation-condition)。
 
-记录：[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[the-run-classes-and-widening](../results/records/the-run-classes-and-widening.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)、[ranking-under-readings](../results/records/ranking-under-readings.md)。
+记录：[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[what-the-dynamics-leave-open](../results/records/what-the-dynamics-leave-open.md)、[significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[the-run-classes-and-widening](../results/records/the-run-classes-and-widening.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)、[ranking-under-readings](../results/records/ranking-under-readings.md)。
 
 <a id="611-公理的分解自身的预设与不变的一步p43-the-axiom-decomposed-the-selfs-presupposition-and-the-step-of-invariance-p43"></a>
 <a id="611-公理的分解自身的预设与不变的一步--the-axiom-decomposed-the-selfs-presupposition-and-the-step-of-invariance"></a>

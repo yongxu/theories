@@ -15475,3 +15475,38 @@ Ren, 22 October 2026, after the AI's comparison of 文理生生 with the theory:
 
 **Self-review.** Every classical quotation (「…」〔source〕), every `Becoming.…` name, record link and generated table in the three chapters is checked by verify_zh.py, and the quotations of 文理生生's files and of the conversation were checked by hand against `sources/wenli-shengsheng-v0.4/`; the central section was checked against each cited Lean statement (eleven corrections); the chapter and the changed 條 were reviewed in four rounds by independent lenses with a skeptic for each finding; the integrator's own edits are recorded with their reasons (kit `development/zhonghua/work/integrator-edits.json`, `work/seventh_pass.py`, `wenli/`).
 
+
+## 347. What the dynamics leave open of the continuation condition, and what closes it (SD1)
+
+```text
+Result(s): new record what-the-dynamics-leave-open; reuses rivals-bounded-in-time (bounded_rival, rival_of_outside)
+       and continuation-condition-yields-living-significance (Web.significance_undetermined).
+Delta: README note [^ethics] stated outside Lean that a rival significance is consistent with every law of the
+       dynamics and that only the condition rules it out. Now in Lean: a statement reading only the dynamics
+       (ReadsOnlyDynamics: its truth unchanged by the significance) holds with every significance alike, so it admits
+       a significance bounded by any region with a formation outside, a rival and not the condition
+       (ReadsOnlyDynamics.admits_rival), and where there is a standpoint and a formation none entails the condition
+       (ReadsOnlyDynamics.not_entails). A rival (a significance holding exactly within a region with a point outside)
+       is exactly a point lacking significance (rival_iff_lacks); the condition excludes every rival
+       (Unrestricted.not_rival); a premise excludes every rival exactly where it implies that no point lacks
+       significance (excludes_rivals_iff, not_rival_iff), which is the condition exactly where significance at each
+       point is decided (unrestricted_iff_not_rival); over every significance that step is exactly double-negation
+       elimination (not_rival_unrestricted_iff_stable).
+Premises / correspondence: none beyond those stated; decidedness only in unrestricted_iff_not_rival. That every law
+       stated on World, Web or Flow reads only the dynamics is a fact about the representation (significance is not
+       a field of them), not a theorem; readsOnlyDynamics_of states what that gives. Correspondence: the is–ought
+       gap for the represented dynamics; independence of a parameter from the laws that do not read it.
+Evidence: core receipt 20261022T103619.721318Z (passed).
+Boundary: the condition is neither proved nor shown needed; the warrant of a premise about significance excluding
+       every rival stays open (chapter §8.5, item 12), and C's warrant is untouched.
+Output → input: OPENING [^ethics] (README note 8), chapter §5 (Web.significance_undetermined's bullet) and §6.4
+       (EN, ZH); record rivals-bounded-in-time's non-implication restated.
+```
+
+**What was built.** In `Becoming.Significance`: `Rival`, `rival_iff_lacks`, `bounded_is_rival`, `Unrestricted.not_rival`, `not_rival_iff`, `excludes_rivals_iff`, `unrestricted_iff_not_rival`, `not_rival_unrestricted_iff_stable`, `ReadsOnlyDynamics`, `readsOnlyDynamics_of`, `ReadsOnlyDynamics.admits_rival`, `ReadsOnlyDynamics.not_entails`. Every one has an empty axiom report.
+
+**What the need for decidedness says.** Excluding every rival gives, at each point, that a continuation does not lack significance; the condition says it has it. The two coincide where significance at each point is decided, and over every significance their coincidence is exactly double-negation elimination. So the constructive form of "only the condition rules the rival out" is: a premise rules out every rival exactly where it leaves no continuation denied significance, and the condition is that, together with significance at each point being settled. Significance is Prop-valued in the representation; this is a fact about that choice, stated where the law depends on it.
+
+**Self-review.** The independence theorems are thin by design: their content lies in the quantifier, every statement whose truth does not change with the significance, and the record says which part is the representation. They replace a meta-theoretic sentence by a stated theorem; they do not show that becoming leaves significance undetermined, nor that the condition is needed. Names: `Rival` takes the existing word of `rival_of_outside` and `bounded_rival`; `ReadsOnlyDynamics` states exactly what the hypothesis is. `Web.significance_undetermined` is not a case (it reads `Retains` and `Significant`, which take the significance), so rule 9 moves nothing.
+
+**The run.** Core closure passed with no core axiom; 73 Lean steps ran, 1,131 reused.
