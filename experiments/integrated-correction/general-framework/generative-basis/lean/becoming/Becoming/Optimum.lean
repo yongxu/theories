@@ -8272,7 +8272,7 @@ theorem gated_in_turn (n : Nat) {k : Nat} (two : 2 ≤ k) {m : Nat} (enough : 2 
   ⟨alone.1, alone.2.2.2.1, restraint_keeps k, InTurn.perfect_of_zero two (n + 2), fun rules perfect =>
     (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z) rules k 2)))
       (c := Place.source) (f := Formation.dweller) one (fun d t a => (perfect.1 d t a).2)
-      (fun t lt => InTurn.perfect_ends two perfect lt 0 firstPos) (fun _ _ => rfl) (Nat.succ_pos (n + 1))
+      (fun _ lt => InTurn.perfect_ends two perfect lt 0 firstPos) (fun _ _ => rfl) (Nat.succ_pos (n + 1))
       trivial (Nat.succ_pos 1) (Nat.le_refl 2)).1,
    (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z)
       (InTurn.revised (fun _ z => z + gate z) (fun _ _ _ => 0) k (n + 2) (fun _ _ a => a) m) k 2)))
@@ -8398,7 +8398,7 @@ theorem doubling_capacity :
    fun rules perfect =>
     (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3)))
       (c := Place.source) (f := Formation.dweller) (Nat.le_succ 1) (fun d t a => (perfect.1 d t a).2)
-      (fun t lt => InTurn.perfect_ends (Nat.le_refl 2) perfect lt 0 (Nat.zero_lt_succ 1)) (fun _ _ => rfl)
+      (fun _ lt => InTurn.perfect_ends (Nat.le_refl 2) perfect lt 0 (Nat.zero_lt_succ 1)) (fun _ _ => rfl)
       (Nat.succ_pos 1) trivial (Nat.succ_pos 1) (Nat.le_succ 2)).1⟩
 
 
