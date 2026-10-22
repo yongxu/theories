@@ -1483,18 +1483,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   at every step ends the base at once; where they draw more, so does every optimum of an
   order with positive weights rising at no step. Witness: from two, the doubling source is
   rebuilt alone and ended with others drawing first, under the same weights.
-  With two drawers in turn, each ranking what it draws over the steps that remain, the
-  others' rule is derived: at every profile that is a mutual best response at every step
-  from every level, both leave nothing at every step, so the base stands from the first step
-  at what stands at nothing, and drawing everything is such a profile. Witness: under a gate,
-  alone an optimum may keep the dweller; in turn every perfect profile breaks it at once.
-  Revising toward best responses, from any profile, both come to leave nothing at every step
-  within twice the horizon. Witness: from restraint under the gate, revision breaks the dweller.
-  Where capacities limit a draw, each draws to capacity at the last step and wherever what the
-  other draws after is fixed; with no limit this is the perfect profile. Witness: under doubling, a
-  one-unit limit on the second makes leaving everything the first's best response, keeping the dweller.
-  With any number of drawers in turn from two, every perfect profile has every drawer leave
-  nothing; two drawers are the case k = 2. Witness: under the gate, any number breaks the dweller.
+  Drawers in turn, one model: k drawers each leaving at least a floor, a profile perfect where it
+  revises itself; one law, that a best response keeps above its floor only what returns to it
+  one for one, gives drawing to capacity wherever what is drawn later is fixed and, with no floor
+  and two or more drawers, every perfect profile and every revision from round 2N on drawing
+  everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
+  the dweller; under doubling a one-unit floor on the second keeps it.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

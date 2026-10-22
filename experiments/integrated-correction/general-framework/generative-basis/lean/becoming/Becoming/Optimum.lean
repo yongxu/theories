@@ -305,59 +305,32 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   it at two are both optima, so the strict fall cannot be dropped. Under weights falling by one a
   step from `n + 4` the same order rebuilds the source alone and ends it with others drawing all but
   half (`Holding.doubling_drawn_first_linear`).
-* **Drawers in turn, each ranking courses.** The others' rule need not be supplied. With two
-  drawers in turn at each step, the first leaving part of the level and the second part of that,
-  what remains standing at the next step by a law `G`, each ranking what it draws over the steps
-  that remain (`Optimum.InTurn.firstDrawn`, `Optimum.InTurn.secondDrawn`), a profile is perfect where
-  each leaves at most what it is given and the two are at a mutual best response at every step from
-  every level (`Optimum.InTurn.BestAt`, `Optimum.InTurn.Perfect`). Backward from the horizon, whatever
-  the first leaves the second draws, and whatever the second leaves the first draws at its next
-  move, so every perfect profile has both leave nothing at every step, whatever stands at nothing
-  (`Optimum.InTurn.Many.perfect_ends`, of which two drawers are the case below); the base stands from
-  the first step at what stands at nothing (`Optimum.InTurn.Many.perfect_levels`), and
-  drawing everything is perfect over every horizon (`Optimum.InTurn.perfect_of_zero`). On a web,
-  every dependence on the base whose need, met at the start, lies above what stands at nothing is
-  broken at the first step (`Web.perfect_broken`). `Holding.gated_in_turn` is the instance: under a
-  gate, alone a drawer's optimum may hold the source at the dweller's need, keeping it through the
-  horizon; in turn, every perfect profile breaks the dweller at the first step.
-* **Any number of drawers in turn.** At each step `k` drawers draw in turn, each leaving part of what
-  it is given (`Optimum.InTurn.Many.pass`, `Optimum.InTurn.Many.drawn`); a profile is perfect where each
-  leaves at most what it is given and all are at a mutual best response at every step from every
-  level (`Optimum.InTurn.Many.BestAt`, `Optimum.InTurn.Many.Perfect`). With at least two, backward
-  from the horizon every drawer after the first draws nothing later, so it leaves nothing of whatever
-  it is given, and then whatever the first leaves the second takes, so the first leaves nothing too
-  (`Optimum.InTurn.Many.step_ends`, `Optimum.InTurn.Many.ends_at`): every perfect profile has every
-  drawer leave nothing at every step (`Optimum.InTurn.Many.perfect_ends`), the base standing from the
-  first step at what stands at nothing (`Optimum.InTurn.Many.perfect_levels`), and drawing everything
-  is perfect (`Optimum.InTurn.Many.perfect_of_zero`). Two drawers are the case `k = 2`
-  (`Optimum.InTurn.Many.pair`, `Optimum.InTurn.Many.perfect_pair`, `Optimum.InTurn.Many.levels_pair`),
-  and their laws above are derived from these. On a web a dependence above what stands at nothing is
-  broken at the first step (`Web.turns_broken`); under the gate every perfect profile of any number of
-  drawers from two breaks the dweller (`Holding.gated_turns`), where one drawer alone may keep it.
-* **How drawers in turn come to it.** A profile revises another where each new rule, at every step
-  from every level, is a best response to the old profile (`Optimum.InTurn.Revises`); such a revision
-  always exists, the first of finitely many amounts that draws the most (`Optimum.InTurn.bestUpTo`,
-  `Optimum.InTurn.revise_revises`). Revising from any profile, at the last step both leave nothing
-  after one round, and each step back takes two more: the second's revision leaves nothing once
-  nothing it leaves is left to it later, and the first's once the old second leaves nothing
-  (`Optimum.InTurn.revisions_end`). So from round `2 N` on both leave nothing at every step before the
-  horizon, and the base stands from the first step at what stands at nothing
-  (`Optimum.InTurn.revised_draw_all`, `Optimum.InTurn.levels_of_zero`); on a web every dependence above
-  what stands at nothing is then broken at the first step (`Web.revised_broken`). `Holding.gated_revised`
-  is the instance: two drawers who both start by leaving everything keep the dweller under the gate,
-  and revising toward best responses they break it from round `2 (n + 2)` on.
-* **Where a capacity limits a draw.** A drawer with a capacity leaves at least a floor, `z - c` of `z`
-  (`Optimum.InTurn.BestWithin`, `Optimum.InTurn.PerfectWithin`); with no limit, perfect within
-  capacities is perfect (`Optimum.InTurn.within_zero_iff`). In every profile perfect within
-  capacities each draws to capacity at the last step (`Optimum.InTurn.last_at_floor`), the second
-  wherever it draws nothing after (`Optimum.InTurn.second_at_floor`), and the first wherever what it
-  draws after does not depend on what it leaves (`Optimum.InTurn.first_at_floor`): where leaving the
-  floor draws no less than what was left, what was left is the floor (`Optimum.InTurn.eq_of_sub_le_sub`,
-  of which `zero_of_le_sub` is the case). Away from those steps a limit can keep the base.
-  `Holding.doubling_capacity` doubles what is left, over two steps, the second able to take one unit a
-  step and the first any amount: in every profile perfect within these capacities the first leaves
-  everything at the first step from three, the source stands at four after it and the dweller is
-  kept, where with neither draw limited every perfect profile breaks it.
+* **Drawers in turn.** The others' rule need not be supplied. At each step `k` drawers draw in turn,
+  each leaving of what it is given at least its floor, what a capacity leaves it, and at most all of
+  it (`Optimum.InTurn.pass`, `Optimum.InTurn.drawn`, `Optimum.InTurn.later`), what the last leaves
+  standing at the next step by a law `G`. A profile revises another where each of its rules, at every
+  step from every level, leaves what draws its drawer the most over the steps that remain against the
+  other profile (`Optimum.InTurn.Revises`); a profile is perfect where it revises itself
+  (`Optimum.InTurn.Perfect`). One law carries every result: what a best response keeps above its
+  floor returns to it at least one for one (`Optimum.InTurn.kept_returns`), so it leaves its floor
+  wherever nothing it keeps returns to it (`Optimum.InTurn.leaves_floor`): a drawer draws to capacity
+  wherever what it draws later does not depend on what it leaves (`Optimum.InTurn.at_floor`), and at
+  the last step every drawer does (`Optimum.InTurn.last_at_floor`). With no floor and at least two
+  drawers, backward from the horizon every drawer after the first draws nothing later
+  (`Optimum.InTurn.others_draw_nothing`), and what the first leaves goes to the second: revising from
+  any profile, from round `2 c` on every drawer leaves nothing at the last `c` steps
+  (`Optimum.InTurn.revisions_end`). A revision always exists, the first amount from the floor up that
+  draws the most (`Optimum.InTurn.revise`, `Optimum.InTurn.revise_revises`), so from round `2 N` on
+  drawers come to drawing everything (`Optimum.InTurn.revised_draw_all`); a perfect profile is its own
+  sequence of revisions, so every perfect profile draws everything (`Optimum.InTurn.perfect_ends`),
+  drawing everything being perfect (`Optimum.InTurn.perfect_of_zero`). Where the first drawer leaves
+  nothing the base stands from the first step at what stands at nothing
+  (`Optimum.InTurn.levels_of_first`), and on a web every dependence above it is broken at the first
+  step (`Web.drained_broken`). `Holding.gated_in_turn` is the gate witness: alone a drawer's optimum
+  may keep the dweller, drawers in turn who all leave everything keep it, and every perfect profile and
+  every profile revised from restraint breaks it. `Holding.doubling_capacity` is the floor witness:
+  under doubling, where the second can take one unit a step, what the first leaves returns to it
+  twice, less one, so leaving everything is its only best response and the dweller is kept.
 
 **Reading (the AI's).** This is the spine's form of a known result: optimizing a proxy that
 references only some attributes drives the others to their lower bounds (Zhuang and
@@ -451,19 +424,19 @@ they draw at least what the remainder renews any weighting falling at every step
 now better (Gordon 1954; Levhari and Mirman 1980, where the stock at equilibrium falls as players
 are added). What the spine's form adds: the threshold moves exactly from what the base renews to what the others' leaving
 renews, for every order rising with the weighted draw, and the same order that rebuilds the base
-alone ends it with others drawing first. With two drawers in turn, each ranking courses, the
+alone ends it with others drawing first. With drawers in turn, each ranking courses, the
 others' rule is derived: at every subgame-perfect profile, a mutual best response at every step from
-every level, both draw everything, so the base ends at once wherever nothing stands at nothing, the
-open-access outcome as the unique perfect one where no capacity limits a draw (the dynamic commons
-with linear payoffs, Levhari and Mirman 1980; alternating moves). What the spine's form adds: every
-perfect profile, not one equilibrium, over any law of what stands, and with no discounting: far-sight
-on both sides does not keep the base that either alone, far-sighted, may keep. Nor does learning:
-drawers revising toward best responses from any profile, restraint included, come to drawing
-everything within twice the horizon, the backward induction run as a process (best-response
-dynamics; Fudenberg and Levine 1998). Restraint can return with a limit on the other's draw: where the
-second can take only a unit a step, what the first leaves renews for the first, and leaving everything
-is its best response (the alternating-move game of Levhari and Mirman 1980 has no such limit). Nor
-do more drawers keep it: with any number from two in turn, every perfect profile draws everything.
+every level, every drawer draws everything wherever there are two or more and no floor, so the base
+ends at once wherever nothing stands at nothing, the open-access outcome as the unique perfect one
+(the dynamic commons, Levhari and Mirman 1980; alternating moves). What the spine's form adds: every
+perfect profile, not one equilibrium, over any law of what stands and any number of drawers, with no
+discounting, and the reason in one law: a drawer keeps only what returns to it at least one for one,
+and what one drawer leaves goes to the next. Far-sight on all sides does not keep the base that one
+alone, far-sighted, may keep, nor does learning: revising toward best responses from any profile,
+restraint included, comes to drawing everything within twice the horizon, the backward induction run
+as a process (best-response dynamics; Fudenberg and Levine 1998). A floor can bring restraint back:
+where the other can take only a unit a step, what the first leaves returns to it, and leaving
+everything is its best response.
 
 What is not derived: outside the outcomes open to a part across one step of exchange, which
 outcomes are eligible and whether there is room (hypotheses wherever they enter, with witnesses
@@ -475,9 +448,9 @@ below it, or the capacity cannot draw down to it in one step or draw everything 
 horizon's last step, a worth on what is left where the most a course can leave is not regrown in
 one step from a level of greatest renewal, the
 weighted optimum where no course gains the most against every open course, drawers ranking courses
-and drawing at once, and how such optimizers come to a mutual best response other than by revision;
-for drawers whose capacities limit a draw, which profiles are perfect away from the last step and the
-steps where what the other draws after is fixed; for several optimizers,
+and drawing at once, and how drawers come to a mutual best response other than by revision; for
+drawers whose floors bind, which profiles are perfect away from the last step and the steps where what
+a drawer draws later is fixed; for several optimizers,
 that a mutual best response exists in general (the instance has one) and where a condition lies
 within some optimizer's family; that a given optimizer's order rises with just the couplings listed (supplied, as in `Becoming.SelectionGap`); which formation depends on which
 condition beyond and at what need (named by `dep`). That an order keeping what lies beyond
@@ -7919,353 +7892,235 @@ end Holding
 
 end Optimum
 
-/-! ## Drawers in turn, each ranking courses
+/-! ## Drawers in turn
 
-Above, others drawing first were supplied as a rule reading the level. Here two drawers both rank
-courses. At each step the first leaves `first t z` of the level `z`, the second leaves `second t a`
-of what the first left, and what the second leaves stands at the next step as `G t` of it. Each
-ranks what it draws over the steps that remain. A profile is perfect over a horizon where each
-leaves at most what it is given and the two are at a mutual best response at every step from every
-level, over the steps that remain. Every perfect profile has both leave nothing at every step:
-whatever one leaves, the other draws at its next move, so the base stands from the first step at
-what stands at nothing, and where nothing stands at nothing it ends at once; drawing everything is
-such a profile. No capacity limits a draw. -/
+Above, others drawing first were supplied as a rule reading the level. Here every drawer ranks
+courses. At each step `k` drawers draw in turn: drawer `0` is given the level, drawer `d` leaves of
+what it is given `a` at least its floor `low d t a`, what a capacity leaves it, and at most `a`, and
+what the last leaves stands at the next step as `G t` of it. Each ranks what it draws over the steps
+that remain. A profile revises another where each of its rules, at every step from every level,
+leaves what draws its drawer the most against the other profile; a profile is perfect where it
+revises itself. One law carries every result: what a best response keeps above its floor returns
+to it at least one for one (`kept_returns`). So a drawer leaves its floor wherever what it draws later
+does not depend on what it leaves (`at_floor`). With no floor and at least two drawers, backward
+from the horizon every drawer after the first draws nothing later, and what the first leaves goes to
+the second: revising from any profile comes to drawing everything within twice the horizon, and
+every perfect profile draws everything. -/
 
 namespace Optimum
 
 namespace InTurn
 
-variable {G : Nat → Nat → Nat} {first second : Nat → Nat → Nat}
-
-/-- What stands at the step after `t` from the level `z`: what the second leaves of what the first
-leaves, as it stands. -/
-def next (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (t z : Nat) : Nat :=
-  G t (second t (first t z))
-
-/-- What the first drawer draws over `j` steps from step `t` at level `z`. -/
-def firstDrawn (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) : Nat → Nat → Nat → Nat
-  | 0, _, _ => 0
-  | j + 1, t, z => (z - first t z) + firstDrawn G first second j (t + 1) (next G first second t z)
-
-/-- What the second drawer draws over `j` steps from step `t` at level `z`. -/
-def secondDrawn (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) : Nat → Nat → Nat → Nat
-  | 0, _, _ => 0
-  | j + 1, t, z => (first t z - second t (first t z)) +
-      secondDrawn G first second j (t + 1) (next G first second t z)
-
-/-- **A mutual best response at a step, over the steps that remain.** With `j` steps after step `t`:
-of whatever the first leaves, the second leaves what draws it the most over the rest, and from every
-level the first leaves what draws it the most, the second responding by its rule. -/
-def BestAt (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (j t : Nat) : Prop :=
-  (∀ a b, b ≤ a → a - b + secondDrawn G first second j (t + 1) (G t b) ≤
-      a - second t a + secondDrawn G first second j (t + 1) (G t (second t a))) ∧
-  ∀ z a, a ≤ z → z - a + firstDrawn G first second j (t + 1) (G t (second t a)) ≤
-      firstDrawn G first second (j + 1) t z
-
-/-- **Perfect over a horizon.** Each leaves at most what it is given, and over a horizon of `N`
-steps the two are at a mutual best response at every step, from every level. -/
-def Perfect (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (N : Nat) : Prop :=
-  (∀ t z, first t z ≤ z) ∧ (∀ t a, second t a ≤ a) ∧
-    ∀ t j, t + j + 1 = N → BestAt G first second j t
-
-/-- The levels along a profile from `s`. -/
-def levels (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (s : Nat) : Nat → Nat
-  | 0 => s
-  | t + 1 => next G first second t (levels G first second s t)
-
-/-- What leaves no less, taken from the whole, than a floor at most what was taken is the floor. -/
-theorem eq_of_sub_le_sub {z f low : Nat} (floor : low ≤ f) (le : f ≤ z) (ge : z - low ≤ z - f) : f = low :=
-  have same : z - f = z - low := Nat.le_antisymm (sub_le_sub_left_of_le floor z) ge
-  Naturals.add_left_cancel ((Naturals.sub_add_cancel le).trans
-    ((Naturals.sub_add_cancel (Nat.le_trans floor le)).symm.trans (congrArg (· + low) same.symm)))
-
-/-- What leaves no less than the whole when taken from it is nothing: the floor at nothing. -/
-theorem zero_of_le_sub {z f : Nat} (le : f ≤ z) (ge : z ≤ z - f) : f = 0 :=
-  eq_of_sub_le_sub (Nat.zero_le f) le ge
-
-/-! ### Any number of drawers in turn
-
-At each step `k` drawers draw in turn: drawer `0` is given the level, each leaves what its rule says of
-what it is given, and what the last leaves stands as `G` says. With at least two drawers, backward from
-the horizon, every drawer after the first draws nothing later, so of whatever it is given it leaves
-nothing; then whatever the first leaves the second takes, so the first leaves nothing too. Two drawers
-are the case `k = 2` (`Many.perfect_pair`). -/
-
-namespace Many
-
-/-- What drawers `m, …, m + c - 1` leave in turn of `b` at step `t`, drawer `m` leaving `rules m t b` of
-the `b` it is given. -/
+/-- What drawers `d, …, d + c - 1` leave in turn of `b` at step `t`, drawer `d` leaving `rules d t b`
+of the `b` it is given. -/
 def pass (rules : Nat → Nat → Nat → Nat) (t : Nat) : Nat → Nat → Nat → Nat
   | _, 0, b => b
-  | m, c + 1, b => pass rules t (m + 1) c (rules m t b)
+  | d, c + 1, b => pass rules t (d + 1) c (rules d t b)
 
 /-- What stands at the step after `t`, `k` drawers in turn from the level `z`. -/
 def next (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k t z : Nat) : Nat :=
   G t (pass rules t 0 k z)
 
-/-- What drawer `m` of `k` draws over `j` steps from step `t` at level `z`. -/
-def drawn (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k m : Nat) : Nat → Nat → Nat → Nat
+/-- What drawer `d` of `k` draws over `j` steps from step `t` at level `z`. -/
+def drawn (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k d : Nat) : Nat → Nat → Nat → Nat
   | 0, _, _ => 0
-  | j + 1, t, z => (pass rules t 0 m z - rules m t (pass rules t 0 m z)) +
-      drawn G rules k m j (t + 1) (next G rules k t z)
+  | j + 1, t, z => (pass rules t 0 d z - rules d t (pass rules t 0 d z)) +
+      drawn G rules k d j (t + 1) (next G rules k t z)
 
-/-- **A mutual best response of `k` drawers at a step**, `j` steps after it: of whatever it is given,
-each drawer leaves what draws it the most over the rest, the drawers after it at the step and every
-drawer at later steps responding by their rules. -/
-def BestAt (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k j t : Nat) : Prop :=
-  ∀ m, m < k → ∀ a b, b ≤ a →
-    a - b + drawn G rules k m j (t + 1) (G t (pass rules t (m + 1) (k - (m + 1)) b)) ≤
-      a - rules m t a + drawn G rules k m j (t + 1) (G t (pass rules t (m + 1) (k - (m + 1)) (rules m t a)))
-
-/-- **Perfect over a horizon.** Each leaves at most what it is given, and over `N` steps the `k` drawers
-are at a mutual best response at every step, from every level. -/
-def Perfect (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k N : Nat) : Prop :=
-  (∀ m t a, rules m t a ≤ a) ∧ ∀ t j, t + j + 1 = N → BestAt G rules k j t
+/-- What drawer `d` draws over the `j` steps after step `t`, having left `b` there: the drawers after
+it at `t` and every drawer later following `rules`. -/
+def later (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k d j t b : Nat) : Nat :=
+  drawn G rules k d j (t + 1) (G t (pass rules t (d + 1) (k - (d + 1)) b))
 
 /-- The levels along a profile of `k` drawers from `s`. -/
 def levels (G : Nat → Nat → Nat) (rules : Nat → Nat → Nat → Nat) (k s : Nat) : Nat → Nat
   | 0 => s
   | t + 1 => next G rules k t (levels G rules k s t)
 
-variable {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k : Nat}
+/-- **A revision.** Each rule of `rules'` leaves between its floor and all of what it is given, and
+over a horizon of `N` steps, at every step from every level, it leaves what draws its drawer the most
+against the profile `rules`: of what drawer `d` is given at `t`, its draw there and what it draws
+later. -/
+def Revises (G : Nat → Nat → Nat) (low rules rules' : Nat → Nat → Nat → Nat) (k N : Nat) : Prop :=
+  (∀ d t a, low d t a ≤ rules' d t a ∧ rules' d t a ≤ a) ∧
+  ∀ t j, t + j + 1 = N → ∀ d, d < k → ∀ a b, low d t a ≤ b → b ≤ a →
+    a - b + later G rules k d j t b ≤ a - rules' d t a + later G rules k d j t (rules' d t a)
+
+/-- **Perfect over a horizon**: the profile revises itself, every drawer at a best response at every
+step from every level, over the steps that remain. -/
+def Perfect (G : Nat → Nat → Nat) (low rules : Nat → Nat → Nat → Nat) (k N : Nat) : Prop :=
+  Revises G low rules rules k N
+
+/-- **What a best response keeps above its floor returns to it at least one for one.** Of `a`, leaving
+`r` draws `a - r` now and `C r` later; where that draws no less than leaving the floor `low ≤ r ≤ a`,
+what `r` brings later exceeds what the floor brings by at least what it keeps above the floor. -/
+theorem kept_returns {C : Nat → Nat} {a low r : Nat} (floor : low ≤ r) (le : r ≤ a)
+    (best : a - low + C low ≤ a - r + C r) : C low + (r - low) ≤ C r := by
+  match le_dest floor, le_dest le with
+  | ⟨e, hr⟩, ⟨d, ha⟩ =>
+    subst ha
+    subst hr
+    rw [Naturals.add_sub_cancel_left low e]
+    rw [Nat.add_assoc low e d, Naturals.add_sub_cancel_left low (e + d),
+      ← Nat.add_assoc low e d, Naturals.add_sub_cancel_left (low + e) d] at best
+    rw [Nat.add_comm (C low) e]
+    exact Naturals.le_of_add_le_add_right (Nat.le_trans
+      (Nat.le_of_eq (Nat.add_right_comm e (C low) d))
+      (Nat.le_trans best (Nat.le_of_eq (Nat.add_comm d (C (low + e))))))
+
+/-- **A best response leaves its floor wherever nothing it keeps above the floor returns to it.** -/
+theorem leaves_floor {C : Nat → Nat} {a low r : Nat} (floor : low ≤ r) (le : r ≤ a)
+    (best : a - low + C low ≤ a - r + C r) (same : C r = C low) : r = low :=
+  have none : r - low = 0 := Nat.eq_zero_of_le_zero (Naturals.le_of_add_le_add_left
+    (Nat.le_trans (kept_returns floor le best) (Nat.le_of_eq (same.trans (Nat.add_zero (C low)).symm))))
+  (Becoming.add_sub_of_le floor).symm.trans ((congrArg (low + ·) none).trans (Nat.add_zero low))
+
+variable {G : Nat → Nat → Nat} {low rules rules' : Nat → Nat → Nat → Nat} {k N : Nat}
+
+/-- **A drawer draws to capacity wherever what it draws later does not depend on what it leaves.** In
+a revision, where what drawer `d` draws after step `t` is the same whether it leaves its rule's amount
+or its floor, its rule leaves the floor. -/
+theorem at_floor (rev : Revises G low rules rules' k N) {t j : Nat} (at_ : t + j + 1 = N) {d : Nat}
+    (lt : d < k) (a : Nat)
+    (same : later G rules k d j t (rules' d t a) = later G rules k d j t (low d t a)) :
+    rules' d t a = low d t a :=
+  leaves_floor (C := later G rules k d j t) (rev.1 d t a).1 (rev.1 d t a).2
+    (rev.2 t j at_ d lt a (low d t a) (Nat.le_refl _) (Nat.le_trans (rev.1 d t a).1 (rev.1 d t a).2)) same
+
+/-- **At the last step every drawer draws to capacity**, nothing being drawn after it. -/
+theorem last_at_floor (rev : Revises G low rules rules' k N) {t : Nat} (at_ : t + 1 = N) :
+    ∀ d, d < k → ∀ a, rules' d t a = low d t a := fun _ lt a =>
+  at_floor rev (j := 0) at_ lt a rfl
 
 /-- Of nothing, drawers who leave at most what they are given leave nothing. -/
-theorem pass_zero (leaves : ∀ m t a, rules m t a ≤ a) (t : Nat) : ∀ m c, pass rules t m c 0 = 0
+theorem pass_zero (leaves : ∀ d t a, rules d t a ≤ a) (t : Nat) : ∀ d c, pass rules t d c 0 = 0
   | _, 0 => rfl
-  | m, c + 1 => (congrArg (pass rules t (m + 1) c) (Nat.eq_zero_of_le_zero (leaves m t 0))).trans
-      (pass_zero leaves t (m + 1) c)
+  | d, c + 1 => (congrArg (pass rules t (d + 1) c) (Nat.eq_zero_of_le_zero (leaves d t 0))).trans
+      (pass_zero leaves t (d + 1) c)
 
 /-- Where the first of them leaves nothing, drawers in turn leave nothing. -/
-theorem pass_of_first (leaves : ∀ m t a, rules m t a ≤ a) {t m : Nat} (none : ∀ a, rules m t a = 0) :
-    ∀ c b, pass rules t m (c + 1) b = 0 := fun c b =>
-  (congrArg (pass rules t (m + 1) c) (none b)).trans (pass_zero leaves t (m + 1) c)
+theorem pass_of_first (leaves : ∀ d t a, rules d t a ≤ a) {t d : Nat} (none : ∀ a, rules d t a = 0) :
+    ∀ c b, pass rules t d (c + 1) b = 0 := fun c b =>
+  (congrArg (pass rules t (d + 1) c) (none b)).trans (pass_zero leaves t (d + 1) c)
 
-/-- **One step back from the horizon.** With at least two drawers, each leaving at most what it is
-given, where every drawer after the first draws nothing over the `j` steps after step `t` from any
-level, a mutual best response at `t` has every drawer leave nothing there, and every drawer after the
-first draws nothing over the `j + 1` steps from `t`. -/
-theorem step_ends (leaves : ∀ m t a, rules m t a ≤ a) (two : 2 ≤ k) {j t : Nat}
-    (none : ∀ m, 1 ≤ m → m < k → ∀ w, drawn G rules k m j (t + 1) w = 0)
-    (best : BestAt G rules k j t) :
-    (∀ m, m < k → ∀ a, rules m t a = 0) ∧ ∀ m, 1 ≤ m → m < k → ∀ z, drawn G rules k m (j + 1) t z = 0 :=
-  have later : ∀ m, 1 ≤ m → m < k → ∀ a, rules m t a = 0 := fun m one lt a =>
-    have pick := best m lt a 0 (Nat.zero_le a)
-    zero_of_le_sub (leaves m t a) (by
-      rw [none m one lt, none m one lt, Nat.add_zero, Nat.add_zero, Nat.sub_zero] at pick
-      exact pick)
-  have second : ∀ a, rules 1 t a = 0 := later 1 (Nat.le_refl 1) (Nat.lt_of_lt_of_le (Nat.lt_succ_self 1) two)
-  have rest : ∀ b, pass rules t (0 + 1) (k - (0 + 1)) b = 0 := fun b =>
-    match le_dest two with
-    | ⟨c, split⟩ =>
-      have count : k - (0 + 1) = c + 1 := (congrArg (· - 1) split).trans (congrArg (· - 1) (Nat.add_comm 2 c))
-      Eq.subst (motive := fun n => pass rules t (0 + 1) n b = 0) count.symm (pass_of_first leaves second c b)
-  have first : ∀ a, rules 0 t a = 0 := fun a =>
-    have pick := best 0 (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) a 0 (Nat.zero_le a)
-    zero_of_le_sub (leaves 0 t a) (Naturals.le_of_add_le_add_right (by
-      rw [rest, rest, Nat.sub_zero] at pick
-      exact pick))
-  ⟨fun m lt a => match m, lt with
-    | 0, _ => first a
-    | m + 1, lt => later (m + 1) (Nat.succ_le_succ (Nat.zero_le m)) lt a,
-   fun m one lt z => match m, one, lt with
-    | 0, one, _ => absurd one (Nat.not_succ_le_zero 0)
-    | m + 1, one, lt => by
-      show pass rules t 0 (m + 1) z - rules (m + 1) t (pass rules t 0 (m + 1) z) +
-        drawn G rules k (m + 1) j (t + 1) (next G rules k t z) = 0
-      rw [pass_of_first leaves first m z, none (m + 1) one lt, Nat.zero_sub]⟩
+/-- **Where the first drawer leaves nothing, the others draw nothing.** Where drawer `0` leaves nothing
+at every step from `t` to the horizon, every other drawer draws nothing over the steps that
+remain. -/
+theorem others_draw_nothing (leaves : ∀ d t a, rules d t a ≤ a) {t : Nat}
+    (first : ∀ u, t ≤ u → u < N → ∀ a, rules 0 u a = 0) :
+    ∀ j, t + j = N → ∀ d, 1 ≤ d → ∀ w, drawn G rules k d j t w = 0
+  | 0, _, _, _, _ => rfl
+  | j + 1, at_, d, one, w => match d, one with
+    | 0, one => absurd one (Nat.not_succ_le_zero 0)
+    | d + 1, one => by
+      have now : ∀ a, rules 0 t a = 0 := first t (Nat.le_refl t)
+        (Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right (Nat.succ_pos j)) (Nat.le_of_eq at_))
+      show pass rules t 0 (d + 1) w - rules (d + 1) t (pass rules t 0 (d + 1) w) +
+        drawn G rules k (d + 1) j (t + 1) (next G rules k t w) = 0
+      rw [pass_of_first leaves now d w, others_draw_nothing leaves (t := t + 1)
+        (fun u le lt => first u (Nat.le_of_succ_le le) lt) j ((Nat.add_right_comm t 1 j).trans at_) (d + 1) one,
+        Nat.zero_sub]
 
-/-- **Backward from the horizon, every drawer leaves nothing.** With at least two drawers, along a
-profile perfect over `N` steps, at every step with `j` steps after it every drawer leaves nothing from
-every level, and every drawer after the first draws nothing over the `j + 1` steps. -/
-theorem ends_at (two : 2 ≤ k) {N : Nat} (perfect : Perfect G rules k N) :
-    ∀ j t, t + j + 1 = N → (∀ m, m < k → ∀ a, rules m t a = 0) ∧
-      ∀ m, 1 ≤ m → m < k → ∀ z, drawn G rules k m (j + 1) t z = 0
-  | 0, t, at_ => step_ends perfect.1 two (fun _ _ _ _ => rfl) (perfect.2 t 0 at_)
-  | j + 1, t, at_ =>
-    have later := ends_at two perfect j (t + 1)
-      ((congrArg (· + 1) ((Nat.add_assoc t 1 j).trans (congrArg (t + ·) (Nat.add_comm 1 j)))).trans at_)
-    step_ends perfect.1 two later.2 (perfect.2 t (j + 1) at_)
-
-/-- **Every perfect profile of two or more drawers draws everything.** Along every profile of `k ≥ 2`
-drawers in turn perfect over `N` steps, every drawer leaves nothing at every step before the horizon,
-from every level, whatever stands at nothing. -/
-theorem perfect_ends (two : 2 ≤ k) {N : Nat} (perfect : Perfect G rules k N) {t : Nat} (before : t < N) :
-    ∀ m, m < k → ∀ a, rules m t a = 0 :=
-  match le_dest before with
-  | ⟨j, split⟩ => (ends_at two perfect j t ((Nat.add_right_comm t j 1).trans split.symm)).1
-
-/-- **The base stands at what stands at nothing.** Along every profile of `k ≥ 2` drawers perfect over
-`N` steps, at every step from the first to the `N`-th the base stands at what stands at nothing. -/
-theorem perfect_levels (two : 2 ≤ k) {N : Nat} (perfect : Perfect G rules k N) (s : Nat) {t : Nat}
-    (before : t < N) : levels G rules k s (t + 1) = G t 0 :=
-  match le_dest two with
-  | ⟨c, split⟩ =>
-    have count : k = c + 1 + 1 := split.trans ((Nat.add_comm 2 c).trans (Nat.add_assoc c 1 1).symm)
-    congrArg (G t) (Eq.subst (motive := fun n => pass rules t 0 n (levels G rules k s t) = 0) count.symm
-      (pass_of_first perfect.1 (perfect_ends two perfect before 0 (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two))
-        (c + 1) _))
-
-/-- Where each draws everything, every drawer after the first draws nothing. -/
-theorem zero_drawn {m : Nat} (one : 1 ≤ m) : ∀ j t z, drawn G (fun _ _ _ => 0) k m j t z = 0
-  | 0, _, _ => rfl
-  | j + 1, t, z => match m, one with
-    | m + 1, _ => by
-      show pass (fun _ _ _ => 0) t 0 (m + 1) z - 0 +
-        drawn G (fun _ _ _ => 0) k (m + 1) j (t + 1) (next G (fun _ _ _ => 0) k t z) = 0
-      rw [pass_of_first (fun _ _ _ => Nat.zero_le _) (fun _ => rfl) m z,
-        zero_drawn (Nat.succ_le_succ (Nat.zero_le m)) j]
-
-/-- **Drawing everything is perfect** for every number of drawers from two. -/
-theorem perfect_of_zero (two : 2 ≤ k) (N : Nat) : Perfect G (fun _ _ _ => 0) k N :=
-  ⟨fun _ _ _ => Nat.zero_le _, fun t j _ m lt a b _ => match m, lt with
-    | 0, _ =>
-      match le_dest two with
-      | ⟨c, split⟩ =>
-        have count : k - (0 + 1) = c + 1 :=
-          (congrArg (· - 1) split).trans (congrArg (· - 1) (Nat.add_comm 2 c))
-        have rest : ∀ b', pass (fun _ _ _ => 0) t (0 + 1) (k - (0 + 1)) b' = 0 := fun b' =>
-          Eq.subst (motive := fun n => pass (fun _ _ _ => 0) t (0 + 1) n b' = 0) count.symm
-            (pass_of_first (fun _ _ _ => Nat.zero_le _) (fun _ => rfl) c b')
-        by
-          rw [rest, rest, Nat.sub_zero]
-          exact Nat.add_le_add_right (Nat.sub_le a b) _
-    | m + 1, _ => by
-      rw [zero_drawn (Nat.succ_le_succ (Nat.zero_le m)), zero_drawn (Nat.succ_le_succ (Nat.zero_le m)),
-        Nat.add_zero, Nat.add_zero, Nat.sub_zero]
-      exact Nat.sub_le a b⟩
-
-/-- Two drawers as drawers `0` and `1`. -/
-def pair (first second : Nat → Nat → Nat) : Nat → Nat → Nat → Nat
-  | 0 => first
-  | _ + 1 => second
-
-theorem drawn_first {first second : Nat → Nat → Nat} :
-    ∀ j t z, drawn G (pair first second) 2 0 j t z = firstDrawn G first second j t z
-  | 0, _, _ => rfl
-  | j + 1, t, z => congrArg (z - first t z + ·) (drawn_first j (t + 1) _)
-
-theorem drawn_second {first second : Nat → Nat → Nat} :
-    ∀ j t z, drawn G (pair first second) 2 1 j t z = secondDrawn G first second j t z
-  | 0, _, _ => rfl
-  | j + 1, t, z => congrArg (first t z - second t (first t z) + ·) (drawn_second j (t + 1) _)
-
-theorem levels_pair {first second : Nat → Nat → Nat} (s : Nat) :
-    ∀ t, levels G (pair first second) 2 s t = InTurn.levels G first second s t
-  | 0 => rfl
-  | t + 1 => congrArg (fun z => G t (second t (first t z))) (levels_pair s t)
-
-/-- **Two drawers in turn are the case `k = 2`.** A profile of two drawers perfect over `N` steps is
-perfect as drawers `0` and `1`. -/
-theorem perfect_pair {first second : Nat → Nat → Nat} {N : Nat} (perfect : InTurn.Perfect G first second N) :
-    Perfect G (pair first second) 2 N :=
-  ⟨fun m t a => match m with
-    | 0 => perfect.1 t a
-    | _ + 1 => perfect.2.1 t a,
-   fun t j at_ m lt a b le => match m, lt with
-    | 0, _ => Nat.le_trans (Nat.le_of_eq (congrArg (a - b + ·) (drawn_first _ _ _)))
-        (Nat.le_trans ((perfect.2.2 t j at_).2 a b le)
-          (Nat.le_of_eq (congrArg (a - first t a + ·) (drawn_first _ _ _)).symm))
-    | 1, _ => Nat.le_trans (Nat.le_of_eq (congrArg (a - b + ·) (drawn_second _ _ _)))
-        (Nat.le_trans ((perfect.2.2 t j at_).1 a b le)
-          (Nat.le_of_eq (congrArg (a - second t a + ·) (drawn_second _ _ _)).symm))
-    | m + 2, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 2 m))⟩
-
-end Many
-
-/-- **Leaving nothing ends the base at once.** Where both leave nothing at every step before `N`, from
-every level, the base stands at what stands at nothing at every step from the first to the `N`-th. -/
-theorem levels_of_zero (zeros : ∀ t, t < N → (∀ z, first t z = 0) ∧ ∀ a, second t a = 0) (s : Nat)
-    {t : Nat} (before : t < N) : levels G first second s (t + 1) = G t 0 :=
-  congrArg (G t) ((congrArg (second t) ((zeros t before).1 _)).trans ((zeros t before).2 0))
-
-/-- Where each draws everything, the second draws nothing. -/
-theorem zero_secondDrawn : ∀ j t z,
-    secondDrawn G (fun _ _ => 0) (fun _ _ => 0) j t z = 0
-  | 0, _, _ => rfl
-  | j + 1, t, _ => show 0 - 0 + secondDrawn G (fun _ _ => 0) (fun _ _ => 0) j (t + 1) (G t 0) = 0 by
-      rw [zero_secondDrawn j]
-
-/-- **Drawing everything is perfect.** The profile in which each draws everything it is given is
-perfect over every horizon. -/
-theorem perfect_of_zero (N : Nat) : Perfect G (fun _ _ => 0) (fun _ _ => 0) N :=
-  ⟨fun _ _ => Nat.zero_le _, fun _ _ => Nat.zero_le _, fun t j _ =>
-    ⟨fun a b _ => by
-      show a - b + secondDrawn G (fun _ _ => 0) (fun _ _ => 0) j (t + 1) (G t b) ≤
-        a - 0 + secondDrawn G (fun _ _ => 0) (fun _ _ => 0) j (t + 1) (G t 0)
-      rw [zero_secondDrawn, zero_secondDrawn, Nat.add_zero, Nat.add_zero, Nat.sub_zero]
-      exact Nat.sub_le a b,
-     fun z a _ => by
-      show z - a + firstDrawn G (fun _ _ => 0) (fun _ _ => 0) j (t + 1) (G t 0) ≤
-        z - 0 + firstDrawn G (fun _ _ => 0) (fun _ _ => 0) j (t + 1) (G t 0)
-      exact Nat.add_le_add_right (Nat.le_trans (Nat.sub_le z a) (Nat.le_of_eq (Nat.sub_zero z).symm))
-        _⟩⟩
-
-/-- Where both leave nothing at every step from `t` to the horizon, the second draws nothing over the
-steps that remain. -/
-theorem secondDrawn_of_zero {N : Nat}
-    (zeros : ∀ u, t ≤ u → u < N → (∀ z, first u z = 0) ∧ ∀ a, second u a = 0) :
-    ∀ j, t + j = N → ∀ w, secondDrawn G first second j t w = 0
-  | 0, _, _ => rfl
-  | j + 1, at_, w =>
-    have now := zeros t (Nat.le_refl t) (Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right (Nat.succ_pos j))
-      (Nat.le_of_eq at_))
-    have later := secondDrawn_of_zero (t := t + 1) (N := N)
-      (fun u le lt => zeros u (Nat.le_of_succ_le le) lt) j
-      ((Nat.add_right_comm t 1 j).trans at_) (next G first second t w)
-    show first t w - second t (first t w) + secondDrawn G first second j (t + 1) (next G first second t w) = 0
-    by rw [now.1 w, now.2 0, later]
-
-/-- **A revision.** The profile `first' second'` revises `first second` over a horizon of `N` steps
-where each new rule leaves at most what it is given and, at every step from every level, is a best
-response to the old profile: the second's to what follows under the old rules, the first's to the
-old second at the step and what follows. -/
-def Revises (G : Nat → Nat → Nat) (first second first' second' : Nat → Nat → Nat) (N : Nat) : Prop :=
-  (∀ t z, first' t z ≤ z) ∧ (∀ t a, second' t a ≤ a) ∧
-  ∀ t j, t + j + 1 = N →
-    (∀ a b, b ≤ a → a - b + secondDrawn G first second j (t + 1) (G t b) ≤
-      a - second' t a + secondDrawn G first second j (t + 1) (G t (second' t a))) ∧
-    ∀ z a, a ≤ z → z - a + firstDrawn G first second j (t + 1) (G t (second t a)) ≤
-      z - first' t z + firstDrawn G first second j (t + 1) (G t (second t (first' t z)))
-
-/-- **Revising from the horizon back, both come to leave nothing.** Along every sequence of profiles
-each revising the one before over a horizon of `N` steps, at every round from `2 k` on both leave
-nothing at every step of the last `k` before the horizon, from every level, whatever the profile they
-started from. -/
-theorem revisions_end {fs ss : Nat → Nat → Nat → Nat} {N : Nat}
-    (rev : ∀ m, Revises G (fs m) (ss m) (fs (m + 1)) (ss (m + 1)) N) :
-    ∀ k t, t + k = N → ∀ m, 2 * k ≤ m → ∀ u, t ≤ u → u < N →
-      (∀ z, fs m u z = 0) ∧ ∀ a, ss m u a = 0
+/-- **Revising from the horizon back, every drawer comes to leave nothing.** With no floor and at
+least two drawers, along every sequence of profiles each revising the one before over a horizon of
+`N` steps, at every round from `2 c` on every drawer leaves nothing at every step of the last `c`,
+from every level, whatever profile they started from: every drawer after the first draws nothing
+later, so its revision leaves its floor, and then what the first leaves goes to the second. -/
+theorem revisions_end {fs : Nat → Nat → Nat → Nat → Nat} (two : 2 ≤ k)
+    (leaves : ∀ m d t a, fs m d t a ≤ a) (rev : ∀ m, Revises G (fun _ _ _ => 0) (fs m) (fs (m + 1)) k N) :
+    ∀ c t, t + c = N → ∀ m, 2 * c ≤ m → ∀ u, t ≤ u → u < N → ∀ d, d < k → ∀ a, fs m d u a = 0
   | 0, t, at_, _, _, u, le, lt => absurd (Nat.lt_of_lt_of_le lt (Nat.le_of_eq at_.symm))
       (Nat.not_lt_of_ge le)
-  | k + 1, t, at_, m, enough, u, le, lt =>
-    have here : t + k + 1 = N := (Nat.add_assoc t k 1).trans at_
-    have later := revisions_end rev k (t + 1) ((Nat.add_right_comm t 1 k).trans here)
-    -- From round `2 k + 1` on, the second leaves nothing at `t`.
-    have sec : ∀ m', 2 * k + 1 ≤ m' → ∀ a, ss m' t a = 0 := fun m' big a =>
+  | c + 1, t, at_, m, enough, u, le, lt =>
+    have here : t + c + 1 = N := (Nat.add_assoc t c 1).trans at_
+    have after : t + 1 + c = N := (Nat.add_right_comm t 1 c).trans here
+    have later_ := revisions_end two leaves rev c (t + 1) after
+    have firstPos : 0 < k := Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two
+    -- From round `2 c + 1` on, every drawer after the first leaves nothing at `t`.
+    have others : ∀ m', 2 * c + 1 ≤ m' → ∀ d, 1 ≤ d → d < k → ∀ a, fs m' d t a = 0 :=
+      fun m' big d one dk a => match m', big with
+      | m'' + 1, big =>
+        have none : ∀ w, drawn G (fs m'') k d c (t + 1) w = 0 :=
+          others_draw_nothing (leaves m'') (t := t + 1)
+            (fun u le' lt' => later_ m'' (Nat.le_of_succ_le_succ big) u le' lt' 0 firstPos) c after d one
+        at_floor (rev m'') here dk a (by
+          show drawn G (fs m'') k d c (t + 1) _ = drawn G (fs m'') k d c (t + 1) _
+          rw [none, none])
+    -- From round `2 c + 2` on, the first leaves nothing at `t`.
+    have first : ∀ m', 2 * c + 2 ≤ m' → ∀ a, fs m' 0 t a = 0 := fun m' big a =>
       match m', big with
       | m'' + 1, big =>
-        have none := secondDrawn_of_zero (t := t + 1) (N := N)
-          (fun u le' lt' => later m'' (Nat.le_of_succ_le_succ big) u le' lt') k
-          ((Nat.add_right_comm t 1 k).trans here)
-        have best := ((rev m'').2.2 t k here).1 a 0 (Nat.zero_le a)
-        zero_of_le_sub ((rev m'').2.1 t a) (Nat.le_trans (Nat.le_of_eq (by rw [none, Nat.sub_zero,
-          Nat.add_zero])) (Nat.le_trans best (Nat.le_of_eq (by rw [none, Nat.add_zero]))))
-    -- From round `2 k + 2` on, the first leaves nothing at `t`.
-    have fst : ∀ m', 2 * k + 2 ≤ m' → ∀ z, fs m' t z = 0 := fun m' big z =>
-      match m', big with
-      | m'' + 1, big =>
-        have old := sec m'' (Nat.le_of_succ_le_succ big)
-        have best := ((rev m'').2.2 t k here).2 z 0 (Nat.zero_le z)
-        zero_of_le_sub ((rev m'').1 t z) (Naturals.le_of_add_le_add_right
-          (Nat.le_trans (Nat.le_of_eq (congrArg (· + _) (Nat.sub_zero z).symm))
-            (Nat.le_trans best (Nat.le_of_eq (by rw [old, old])))))
+        have second : ∀ b, fs m'' 1 t b = 0 := others m'' (Nat.le_of_succ_le_succ big) 1 (Nat.le_refl 1)
+          (Nat.lt_of_lt_of_le (Nat.lt_succ_self 1) two)
+        have rest : ∀ b, pass (fs m'') t (0 + 1) (k - (0 + 1)) b = 0 := fun b =>
+          match le_dest two with
+          | ⟨e, split⟩ =>
+            have count : k - (0 + 1) = e + 1 :=
+              (congrArg (· - 1) split).trans (congrArg (· - 1) (Nat.add_comm 2 e))
+            Eq.subst (motive := fun n => pass (fs m'') t (0 + 1) n b = 0) count.symm
+              (pass_of_first (leaves m'') second e b)
+        at_floor (rev m'') here firstPos a (by
+          show drawn G (fs m'') k 0 c (t + 1) (G t (pass (fs m'') t (0 + 1) (k - (0 + 1)) _)) =
+            drawn G (fs m'') k 0 c (t + 1) (G t (pass (fs m'') t (0 + 1) (k - (0 + 1)) _))
+          rw [rest, rest])
     match Nat.lt_or_ge t u with
-    | .inl after => later m (Nat.le_trans (Nat.mul_le_mul_left 2 (Nat.le_succ k)) enough) u after lt
+    | .inl later' => later_ m (Nat.le_trans (Nat.mul_le_mul_left 2 (Nat.le_succ c)) enough) u later' lt
     | .inr before =>
       have same : u = t := Nat.le_antisymm before le
-      have two : 2 * (k + 1) = 2 * k + 2 := Nat.mul_succ 2 k
-      ⟨fun z => same ▸ fst m (Nat.le_trans (Nat.le_of_eq two.symm) enough) z,
-       fun a => same ▸ sec m (Nat.le_trans (Nat.le_succ _) (Nat.le_trans (Nat.le_of_eq two.symm) enough)) a⟩
+      have twice : 2 * (c + 1) = 2 * c + 2 := Nat.mul_succ 2 c
+      fun d dk a => match d, dk with
+        | 0, _ => same ▸ first m (Nat.le_trans (Nat.le_of_eq twice.symm) enough) a
+        | d + 1, dk => same ▸ others m (Nat.le_trans (Nat.le_succ _) (Nat.le_trans (Nat.le_of_eq twice.symm) enough))
+            (d + 1) (Nat.succ_le_succ (Nat.zero_le d)) dk a
+
+/-- **Every perfect profile draws everything.** With no floor and at least two drawers in turn,
+along every profile perfect over `N` steps every drawer leaves nothing at every step before the
+horizon, from every level, whatever stands at nothing: a perfect profile is its own sequence of
+revisions. -/
+theorem perfect_ends (two : 2 ≤ k) (perfect : Perfect G (fun _ _ _ => 0) rules k N) {t : Nat}
+    (before : t < N) : ∀ d, d < k → ∀ a, rules d t a = 0 :=
+  revisions_end (fs := fun _ => rules) two (fun _ d t a => (perfect.1 d t a).2) (fun _ => perfect)
+    N 0 (Nat.zero_add N) (2 * N) (Nat.le_refl _) t (Nat.zero_le t) before
+
+/-- **Where the first drawer leaves nothing, the base stands at what stands at nothing**, from the
+first step to the `N`-th. -/
+theorem levels_of_first (one : 1 ≤ k) (leaves : ∀ d t a, rules d t a ≤ a)
+    (first : ∀ t, t < N → ∀ a, rules 0 t a = 0) (s : Nat) {t : Nat} (before : t < N) :
+    levels G rules k s (t + 1) = G t 0 :=
+  match le_dest one with
+  | ⟨c, split⟩ =>
+    have count : k = c + 1 := split.trans (Nat.add_comm 1 c)
+    congrArg (G t) (Eq.subst (motive := fun n => pass rules t 0 n (levels G rules k s t) = 0) count.symm
+      (pass_of_first leaves (first t before) c _))
+
+/-- **Drawing everything is perfect** for every number of drawers from two. -/
+theorem perfect_of_zero (two : 2 ≤ k) (N : Nat) : Perfect G (fun _ _ _ => 0) (fun _ _ _ => 0) k N :=
+  ⟨fun _ _ _ => ⟨Nat.le_refl 0, Nat.zero_le _⟩, fun t j at_ d _ a b _ _ =>
+    match d with
+    | 0 =>
+      match le_dest two with
+      | ⟨e, split⟩ =>
+        have count : k - (0 + 1) = e + 1 :=
+          (congrArg (· - 1) split).trans (congrArg (· - 1) (Nat.add_comm 2 e))
+        have rest : ∀ b', pass (fun _ _ _ => 0) t (0 + 1) (k - (0 + 1)) b' = 0 := fun b' =>
+          Eq.subst (motive := fun n => pass (fun _ _ _ => 0) t (0 + 1) n b' = 0) count.symm
+            (pass_of_first (fun _ _ _ => Nat.zero_le _) (fun _ => rfl) e b')
+        by
+          show a - b + drawn G (fun _ _ _ => 0) k 0 j (t + 1)
+              (G t (pass (fun _ _ _ => 0) t (0 + 1) (k - (0 + 1)) b)) ≤
+            a - 0 + drawn G (fun _ _ _ => 0) k 0 j (t + 1)
+              (G t (pass (fun _ _ _ => 0) t (0 + 1) (k - (0 + 1)) 0))
+          rw [rest, rest, Nat.sub_zero]
+          exact Nat.add_le_add_right (Nat.sub_le a b) _
+    | d + 1 =>
+      have nd : ∀ w, drawn G (fun _ _ _ => 0) k (d + 1) j (t + 1) w = 0 :=
+        others_draw_nothing (fun _ _ _ => Nat.zero_le _) (t := t + 1) (N := N) (fun _ _ _ _ => rfl) j
+          ((Nat.add_right_comm t 1 j).trans at_) (d + 1) (Nat.succ_le_succ (Nat.zero_le d))
+      by
+        show a - b + drawn G (fun _ _ _ => 0) k (d + 1) j (t + 1) _ ≤
+          a - 0 + drawn G (fun _ _ _ => 0) k (d + 1) j (t + 1) _
+        rw [nd, nd, Nat.add_zero, Nat.add_zero, Nat.sub_zero]
+        exact Nat.sub_le a b⟩
 
 /-- The first of `0, …, z` at which `f` is greatest among them. -/
 def bestUpTo (f : Nat → Nat) : Nat → Nat
@@ -8295,136 +8150,58 @@ theorem bestUpTo_max (f : Nat → Nat) : ∀ z a, a ≤ z → f a ≤ f (bestUpT
           | .inl earlier => bestUpTo_max f z a earlier
           | .inr last => Nat.le_trans (Nat.le_of_eq (congrArg f last)) (Nat.ge_of_not_lt h)
 
-/-- The second's revision: of what the first leaves, the first amount it may leave that draws it the
-most over the rest, the old rules following. -/
-def reviseSecond (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (N t a : Nat) : Nat :=
-  bestUpTo (fun b => a - b + secondDrawn G first second (N - t - 1) (t + 1) (G t b)) a
+/-- **The greatest from a floor.** No value of `f` between `low` and `a` exceeds its value at the
+first amount from `low` up at which it is greatest. -/
+theorem best_from (f : Nat → Nat) {low a b : Nat} (floor : low ≤ b) (le : b ≤ a) :
+    f b ≤ f (low + bestUpTo (fun i => f (low + i)) (a - low)) :=
+  Nat.le_trans (Nat.le_of_eq (congrArg f (Becoming.add_sub_of_le floor)).symm)
+    (bestUpTo_max (fun i => f (low + i)) (a - low) (b - low) (Nat.sub_le_sub_right le low))
 
-/-- The first's revision: of the level, the first amount it may leave that draws it the most over the
-rest, the old second responding. -/
-def reviseFirst (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (N t z : Nat) : Nat :=
-  bestUpTo (fun a => z - a + firstDrawn G first second (N - t - 1) (t + 1) (G t (second t a))) z
+/-- **The revision of a profile**: of what drawer `d` is given at `t`, the first amount from its floor
+up that draws it the most against the profile over the steps that remain. -/
+def revise (G : Nat → Nat → Nat) (low rules : Nat → Nat → Nat → Nat) (k N d t a : Nat) : Nat :=
+  low d t a + bestUpTo (fun i => a - (low d t a + i) + later G rules k d (N - t - 1) t (low d t a + i))
+    (a - low d t a)
 
-/-- **A revision always exists.** Taking at every step from every level the first amount that draws
-the most, against the old profile, revises it. -/
-theorem revise_revises (G : Nat → Nat → Nat) (first second : Nat → Nat → Nat) (N : Nat) :
-    Revises G first second (reviseFirst G first second N) (reviseSecond G first second N) N :=
-  ⟨fun t z => bestUpTo_le _ z, fun t a => bestUpTo_le _ a, fun t j at_ =>
+/-- **A revision always exists.** Where every floor is at most what is given, `revise` revises every
+profile. -/
+theorem revise_revises (floors : ∀ d t a, low d t a ≤ a) (rules : Nat → Nat → Nat → Nat) :
+    Revises G low rules (revise G low rules k N) k N :=
+  ⟨fun d t a => ⟨Nat.le_add_right _ _, Nat.le_trans (Nat.add_le_add_left (bestUpTo_le _ _) _)
+      (Nat.le_of_eq (Becoming.add_sub_of_le (floors d t a)))⟩,
+   fun t j at_ d _ a b floor le => by
     have steps : N - t - 1 = j := by rw [← at_, Nat.add_assoc, Naturals.add_sub_cancel_left]; rfl
-    ⟨fun a b le => by
-      show a - b + secondDrawn G first second j (t + 1) (G t b) ≤
-        a - reviseSecond G first second N t a +
-          secondDrawn G first second j (t + 1) (G t (reviseSecond G first second N t a))
-      have h := bestUpTo_max (fun b => a - b + secondDrawn G first second (N - t - 1) (t + 1) (G t b)) a b le
-      rw [← steps]
-      exact h,
-     fun z a le => by
-      show z - a + firstDrawn G first second j (t + 1) (G t (second t a)) ≤
-        z - reviseFirst G first second N t z +
-          firstDrawn G first second j (t + 1) (G t (second t (reviseFirst G first second N t z)))
-      have h := bestUpTo_max
-        (fun a => z - a + firstDrawn G first second (N - t - 1) (t + 1) (G t (second t a))) z a le
-      rw [← steps]
-      exact h⟩⟩
+    have h := best_from (fun b => a - b + later G rules k d (N - t - 1) t b) floor le
+    rw [← steps]
+    exact h⟩
 
-/-- The profiles of successive revisions from `first second`. -/
-def revised (G : Nat → Nat → Nat) (N : Nat) (first second : Nat → Nat → Nat) :
-    Nat → (Nat → Nat → Nat) × (Nat → Nat → Nat)
-  | 0 => (first, second)
-  | m + 1 => (reviseFirst G (revised G N first second m).1 (revised G N first second m).2 N,
-      reviseSecond G (revised G N first second m).1 (revised G N first second m).2 N)
+/-- The profiles of successive revisions from `start`. -/
+def revised (G : Nat → Nat → Nat) (low : Nat → Nat → Nat → Nat) (k N : Nat)
+    (start : Nat → Nat → Nat → Nat) : Nat → Nat → Nat → Nat → Nat
+  | 0 => start
+  | m + 1 => revise G low (revised G low k N start m) k N
 
-/-- **Revising toward best responses, drawers in turn come to drawing everything.** From every profile,
-at every round of revision from `2 N` on both leave nothing at every step before the horizon, from
-every level: the perfect profile of drawing everything (`perfect_of_zero`) is reached within twice
-the horizon, and the base stands from the first step at what stands at nothing. -/
-theorem revised_draw_all (G : Nat → Nat → Nat) (N : Nat) (first second : Nat → Nat → Nat) {m : Nat}
-    (enough : 2 * N ≤ m) :
-    (∀ t, t < N → (∀ z, (revised G N first second m).1 t z = 0) ∧
-      ∀ a, (revised G N first second m).2 t a = 0) ∧
-    ∀ s t, t < N → levels G (revised G N first second m).1 (revised G N first second m).2 s (t + 1) =
-      G t 0 :=
-  have zeros : ∀ t, t < N → (∀ z, (revised G N first second m).1 t z = 0) ∧
-      ∀ a, (revised G N first second m).2 t a = 0 := fun t lt =>
-    revisions_end (fs := fun m => (revised G N first second m).1)
-      (ss := fun m => (revised G N first second m).2)
-      (fun m => revise_revises G (revised G N first second m).1 (revised G N first second m).2 N)
+/-- Every profile revised from one leaving at most what it is given leaves at most what it is given. -/
+theorem revised_leaves (floors : ∀ d t a, low d t a ≤ a) {start : Nat → Nat → Nat → Nat}
+    (starts : ∀ d t a, start d t a ≤ a) : ∀ i d t a, revised G low k N start i d t a ≤ a
+  | 0 => starts
+  | i + 1 => fun d t a => ((revise_revises (G := G) (k := k) (N := N) floors (revised G low k N start i)).1 d t a).2
+
+/-- **Revising toward best responses, drawers in turn come to drawing everything.** With no floor and
+at least two drawers, from every profile leaving at most what it is given, at every round of
+revision from `2 N` on every drawer leaves nothing at every step before the horizon, and the base
+stands from the first step at what stands at nothing. -/
+theorem revised_draw_all (two : 2 ≤ k) {start : Nat → Nat → Nat → Nat} (starts : ∀ d t a, start d t a ≤ a)
+    {m : Nat} (enough : 2 * N ≤ m) :
+    (∀ t, t < N → ∀ d, d < k → ∀ a, revised G (fun _ _ _ => 0) k N start m d t a = 0) ∧
+    ∀ s t, t < N → levels G (revised G (fun _ _ _ => 0) k N start m) k s (t + 1) = G t 0 :=
+  have leaves := revised_leaves (G := G) (k := k) (N := N) (fun _ _ _ => Nat.zero_le _) starts
+  have zeros : ∀ t, t < N → ∀ d, d < k → ∀ a, revised G (fun _ _ _ => 0) k N start m d t a = 0 :=
+    fun t lt => revisions_end (fs := revised G (fun _ _ _ => 0) k N start) two leaves
+      (fun m => revise_revises (fun _ _ _ => Nat.zero_le _) (revised G (fun _ _ _ => 0) k N start m))
       N 0 (Nat.zero_add N) m enough t (Nat.zero_le t) lt
-  ⟨zeros, fun s _ lt => levels_of_zero zeros s lt⟩
-
-/-! ### Capacities that limit a draw
-
-A capacity limits what a drawer can take at a step: the drawer leaves at least a floor, `z - c` of `z`
-for a capacity `c`. Perfect within capacities, each draws to capacity at the last step, and a drawer
-draws to capacity wherever what the other draws after does not depend on what it leaves. With no
-limit, perfect within capacities is SG14's perfect, and both draw everything; a limit on the other's
-draw can make restraint the best response (`Holding.doubling_capacity`). -/
-
-/-- **A mutual best response within capacities, at a step.** With `j` steps after step `t`: the second
-leaves at least `low₂ t a` of `a`, and of whatever the first leaves it leaves what draws it the most over
-the rest among what it may leave; the first leaves at least `low₁ t z` of `z`, and from every level it
-leaves what draws it the most among what it may leave, the second responding by its rule. -/
-def BestWithin (G : Nat → Nat → Nat) (low₁ low₂ : Nat → Nat → Nat) (first second : Nat → Nat → Nat)
-    (j t : Nat) : Prop :=
-  (∀ a b, low₂ t a ≤ b → b ≤ a → a - b + secondDrawn G first second j (t + 1) (G t b) ≤
-      a - second t a + secondDrawn G first second j (t + 1) (G t (second t a))) ∧
-  ∀ z a, low₁ t z ≤ a → a ≤ z → z - a + firstDrawn G first second j (t + 1) (G t (second t a)) ≤
-      firstDrawn G first second (j + 1) t z
-
-/-- **Perfect within capacities over a horizon.** Each leaves at least its floor and at most what it is
-given, and over `N` steps the two are at a mutual best response within the capacities at every step,
-from every level. -/
-def PerfectWithin (G : Nat → Nat → Nat) (low₁ low₂ : Nat → Nat → Nat) (first second : Nat → Nat → Nat)
-    (N : Nat) : Prop :=
-  (∀ t z, low₁ t z ≤ first t z ∧ first t z ≤ z) ∧ (∀ t a, low₂ t a ≤ second t a ∧ second t a ≤ a) ∧
-    ∀ t j, t + j + 1 = N → BestWithin G low₁ low₂ first second j t
-
-/-- **With no limit, perfect within capacities is perfect.** Where both floors are nothing, a profile is
-perfect within the capacities exactly where it is perfect, so every such profile draws everything
-(`Many.perfect_ends`, `Many.perfect_pair`). -/
-theorem within_zero_iff {N : Nat} :
-    PerfectWithin G (fun _ _ => 0) (fun _ _ => 0) first second N ↔ Perfect G first second N :=
-  ⟨fun ⟨l₁, l₂, best⟩ => ⟨fun t z => (l₁ t z).2, fun t a => (l₂ t a).2, fun t j at_ =>
-      ⟨fun a b le => (best t j at_).1 a b (Nat.zero_le b) le,
-       fun z a le => (best t j at_).2 z a (Nat.zero_le a) le⟩⟩,
-   fun ⟨l₁, l₂, best⟩ => ⟨fun t z => ⟨Nat.zero_le _, l₁ t z⟩, fun t a => ⟨Nat.zero_le _, l₂ t a⟩,
-     fun t j at_ => ⟨fun a b _ le => (best t j at_).1 a b le, fun z a _ le => (best t j at_).2 z a le⟩⟩⟩
-
-/-- **The second draws to capacity where it draws nothing after.** At a mutual best response within
-capacities, where the second draws nothing over the steps after `t` from any level, it leaves exactly
-its floor at `t`, from every level. -/
-theorem second_at_floor {low₁ low₂ : Nat → Nat → Nat}
-    (leaves₂ : ∀ t a, low₂ t a ≤ second t a ∧ second t a ≤ a) {j t : Nat}
-    (none : ∀ w, secondDrawn G first second j (t + 1) w = 0)
-    (best : BestWithin G low₁ low₂ first second j t) : ∀ a, second t a = low₂ t a := fun a =>
-  have pick := best.1 a (low₂ t a) (Nat.le_refl _) (Nat.le_trans (leaves₂ t a).1 (leaves₂ t a).2)
-  have ge : a - low₂ t a ≤ a - second t a := by
-    rw [none, none, Nat.add_zero, Nat.add_zero] at pick
-    exact pick
-  eq_of_sub_le_sub (leaves₂ t a).1 (leaves₂ t a).2 ge
-
-/-- **The first draws to capacity where what it draws after does not depend on what it leaves.** At a
-mutual best response within capacities, where the first draws the same over the steps after `t`
-whatever it leaves at `t`, the second responding by its rule, it leaves exactly its floor at `t`, from
-every level. -/
-theorem first_at_floor {low₁ low₂ : Nat → Nat → Nat}
-    (leaves₁ : ∀ t z, low₁ t z ≤ first t z ∧ first t z ≤ z) {j t c : Nat}
-    (same : ∀ a, firstDrawn G first second j (t + 1) (G t (second t a)) = c)
-    (best : BestWithin G low₁ low₂ first second j t) : ∀ z, first t z = low₁ t z := fun z =>
-  have pick := best.2 z (low₁ t z) (Nat.le_refl _) (Nat.le_trans (leaves₁ t z).1 (leaves₁ t z).2)
-  have whole : firstDrawn G first second (j + 1) t z = z - first t z + c :=
-    congrArg (z - first t z + ·) (same (first t z))
-  eq_of_sub_le_sub (leaves₁ t z).1 (leaves₁ t z).2 (Naturals.le_of_add_le_add_right
-    (Nat.le_trans (Nat.le_of_eq (congrArg (z - low₁ t z + ·) (same (low₁ t z))).symm)
-      (Nat.le_trans pick (Nat.le_of_eq whole))))
-
-/-- **At the last step both draw to capacity.** Along every profile perfect within capacities over `N`
-steps, at the step before the horizon each leaves exactly its floor, from every level. -/
-theorem last_at_floor {low₁ low₂ : Nat → Nat → Nat} {N t : Nat}
-    (perfect : PerfectWithin G low₁ low₂ first second N) (at_ : t + 1 = N) :
-    (∀ z, first t z = low₁ t z) ∧ ∀ a, second t a = low₂ t a :=
-  ⟨first_at_floor perfect.1 (c := 0) (fun _ => rfl) (perfect.2.2 t 0 at_),
-   second_at_floor perfect.2.1 (fun _ => rfl) (perfect.2.2 t 0 at_)⟩
+  ⟨zeros, fun s _ lt => levels_of_first (Nat.le_trans (Nat.le_succ 1) two) (leaves m)
+    (fun t lt' => zeros t lt' 0 (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two)) s lt⟩
 
 end InTurn
 
@@ -8434,46 +8211,22 @@ namespace Web
 
 variable {W : Web F C} {c : C} {f : F}
 
-/-- **Drawers in turn, any number from two, break at the first step every dependence on the base above
-what stands at nothing.** Along every profile of `k ≥ 2` drawers in turn perfect over a horizon of at
-least one step the base stands at what stands at nothing from the first step on: a formation depending
-on it, whose need, met at the start, lies above what stands at nothing at the first step, is broken
-there. -/
-theorem turns_broken {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k N s : Nat} (two : 2 ≤ k)
-    (perfect : Optimum.InTurn.Many.Perfect G rules k N)
-    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.Many.levels G rules k s t)
+/-- **Where the first drawer leaves nothing, every dependence on the base above what stands at nothing
+is broken at the first step.** Along a profile of drawers in turn, each leaving at most what it is
+given, whose first drawer leaves nothing at every step before a horizon of at least one step, the
+base stands from the first step at what stands at nothing: a formation depending on it, whose need,
+met at the start, lies above what stands at nothing at the first step, is broken there. Every
+perfect profile of two or more drawers (`Optimum.InTurn.perfect_ends`) and every profile revised from
+round `2 N` on (`Optimum.InTurn.revised_draw_all`) is such a profile. -/
+theorem drained_broken {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat → Nat} {k N s : Nat} (one : 1 ≤ k)
+    (leaves : ∀ d t a, rules d t a ≤ a) (first : ∀ t, t < N → ∀ a, rules 0 t a = 0)
+    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.levels G rules k s t)
     (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
     (start : W.need 0 f c ≤ W.level 0 c) :
     W.Broken 0 f c ∧ ∀ t, t < N → W.level (t + 1) c = G t 0 :=
   have stands : ∀ t, t < N → W.level (t + 1) c = G t 0 := fun t before =>
-    (follows (t + 1) before).trans (Optimum.InTurn.Many.perfect_levels two perfect s before)
+    (follows (t + 1) before).trans (Optimum.InTurn.levels_of_first one leaves first s before)
   ⟨⟨depends, start, Nat.lt_of_le_of_lt (Nat.le_of_eq (stands 0 long)) low⟩, stands⟩
-
-/-- **Drawers in turn break at the first step every dependence on the base above what stands at
-nothing.** Along every profile of two drawers in turn perfect over a horizon of at least one step the
-base stands at what stands at nothing from the first step on: a formation depending on it, whose
-need, met at the start, lies above what stands at nothing at the first step, is broken there. -/
-theorem perfect_broken {G first second : Nat → Nat → Nat} {N s : Nat}
-    (perfect : Optimum.InTurn.Perfect G first second N)
-    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.levels G first second s t)
-    (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
-    (start : W.need 0 f c ≤ W.level 0 c) :
-    W.Broken 0 f c ∧ ∀ t, t < N → W.level (t + 1) c = G t 0 :=
-  turns_broken (Nat.le_refl 2) (Optimum.InTurn.Many.perfect_pair perfect)
-    (fun t le => (follows t le).trans (Optimum.InTurn.Many.levels_pair s t).symm) long depends low start
-
-
-/-- **Revising toward best responses breaks at the first step every dependence above what stands at
-nothing.** From every profile of two drawers in turn, along the profile reached by `2 N` or more
-rounds of revision over a horizon of at least one step, a formation depending on the base, whose need,
-met at the start, lies above what stands at nothing at the first step, is broken there. -/
-theorem revised_broken {G first second : Nat → Nat → Nat} {N s m : Nat} (enough : 2 * N ≤ m)
-    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.levels G
-      (Optimum.InTurn.revised G N first second m).1 (Optimum.InTurn.revised G N first second m).2 s t)
-    (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
-    (start : W.need 0 f c ≤ W.level 0 c) : W.Broken 0 f c :=
-  ⟨depends, start, Nat.lt_of_le_of_lt (Nat.le_of_eq ((follows 1 long).trans
-    ((Optimum.InTurn.revised_draw_all G N first second enough).2 s 0 long))) low⟩
 
 end Web
 
@@ -8483,66 +8236,66 @@ namespace Holding
 
 open Diversion
 
-/-- **The gate witness: alone a drawer may keep the dweller; in turn every perfect profile breaks
-it.** From a source at two, the level the dweller needs, under a gate renewing one unit at every
-level from one: alone, the course holding the source at two is an optimum of the order by what the
-taker draws across `n + 2` steps with capacity three, keeping the dweller met through the horizon
-(`gated_alike`); with two drawers in turn, each ranking what it draws over the steps that remain,
-drawing everything is perfect over every horizon (`InTurn.perfect_of_zero`), and along every perfect
-profile the dweller is broken at the first step (`Web.perfect_broken`). -/
-theorem gated_in_turn (n : Nat) :
+/-- Drawers who leave everything they are given pass it on whole. -/
+theorem pass_keep (t : Nat) : ∀ d c b, InTurn.pass (fun _ _ a => a) t d c b = b
+  | _, 0, _ => rfl
+  | d, c + 1, b => pass_keep t (d + 1) c b
+
+/-- Under the gate, drawers in turn who all leave everything keep the source at two or above. -/
+theorem restraint_keeps (k : Nat) : ∀ t, 2 ≤ InTurn.levels (fun _ z => z + gate z) (fun _ _ a => a) k 2 t
+  | 0 => Nat.le_refl 2
+  | t + 1 => Nat.le_trans (restraint_keeps k t) (Nat.le_trans (Nat.le_of_eq (pass_keep t 0 k _).symm)
+      (Nat.le_add_right _ _))
+
+/-- **The gate witness.** From a source at two, the level the dweller needs, under a gate renewing
+one unit at every level from one: alone, the course holding the source at two is an optimum of the
+order by what the taker draws across `n + 2` steps with capacity three, keeping the dweller met
+through the horizon (`gated_alike`). Any number of drawers in turn from two who all leave
+everything keep the source at two or above; drawing everything is perfect for them; every perfect
+profile breaks the dweller at the first step; and revising from restraint, from round `2 (n + 2)` on
+every profile breaks it there. -/
+theorem gated_in_turn (n : Nat) {k : Nat} (two : 2 ≤ k) {m : Nat} (enough : 2 * (n + 2) ≤ m) :
     Frontier (OpenCourse gate 3 2) (byDrawn gate (n + 1)) (holding 2 2 (n + 1)) ∧
       (∀ t, t ≤ n + 1 → 2 ≤ (web (level gate 2 2 (n + 1))).level t .source) ∧
-      InTurn.Perfect (fun _ z => z + gate z) (fun _ _ => 0) (fun _ _ => 0) (n + 2) ∧
-      ∀ first second, InTurn.Perfect (fun _ z => z + gate z) first second (n + 2) →
-        (web (onSource (InTurn.levels (fun _ z => z + gate z) first second 2))).Broken 0
+      (∀ t, 2 ≤ InTurn.levels (fun _ z => z + gate z) (fun _ _ a => a) k 2 t) ∧
+      InTurn.Perfect (fun _ z => z + gate z) (fun _ _ _ => 0) (fun _ _ _ => 0) k (n + 2) ∧
+      (∀ rules, InTurn.Perfect (fun _ z => z + gate z) (fun _ _ _ => 0) rules k (n + 2) →
+        (web (onSource (InTurn.levels (fun _ z => z + gate z) rules k 2))).Broken 0 .dweller .source) ∧
+      (web (onSource (InTurn.levels (fun _ z => z + gate z)
+        (InTurn.revised (fun _ z => z + gate z) (fun _ _ _ => 0) k (n + 2) (fun _ _ a => a) m) k 2))).Broken 0
           .dweller .source :=
   have alone := gated_alike n
-  ⟨alone.1, alone.2.2.2.1, InTurn.perfect_of_zero (n + 2), fun first second perfect =>
-    (Web.perfect_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z) first second 2)))
-      (c := Place.source) (f := Formation.dweller) perfect (fun _ _ => rfl) (Nat.succ_pos (n + 1))
+  have one : 1 ≤ k := Nat.le_trans (Nat.le_succ 1) two
+  have firstPos : 0 < k := Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two
+  have revised := InTurn.revised_draw_all (G := fun _ z => z + gate z) (N := n + 2) two
+    (start := fun _ _ a => a) (fun _ _ a => Nat.le_refl a) enough
+  ⟨alone.1, alone.2.2.2.1, restraint_keeps k, InTurn.perfect_of_zero two (n + 2), fun rules perfect =>
+    (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z) rules k 2)))
+      (c := Place.source) (f := Formation.dweller) one (fun d t a => (perfect.1 d t a).2)
+      (fun t lt => InTurn.perfect_ends two perfect lt 0 firstPos) (fun _ _ => rfl) (Nat.succ_pos (n + 1))
+      trivial (Nat.succ_pos 1) (Nat.le_refl 2)).1,
+   (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z)
+      (InTurn.revised (fun _ z => z + gate z) (fun _ _ _ => 0) k (n + 2) (fun _ _ a => a) m) k 2)))
+      (c := Place.source) (f := Formation.dweller)
+      (rules := InTurn.revised (fun _ z => z + gate z) (fun _ _ _ => 0) k (n + 2) (fun _ _ a => a) m) one
+      (InTurn.revised_leaves (fun _ _ _ => Nat.zero_le _) (fun _ _ a => Nat.le_refl a) m)
+      (fun t lt => revised.1 t lt 0 firstPos) (fun _ _ => rfl) (Nat.succ_pos (n + 1))
       trivial (Nat.succ_pos 1) (Nat.le_refl 2)).1⟩
 
-/-- **The gate witness, any number of drawers.** From a source at two, under a gate renewing one unit
-at every level from one, drawing everything is perfect for every number of drawers in turn from two,
-and every perfect profile of them breaks the dweller at the first step. -/
-theorem gated_turns (n : Nat) {k : Nat} (two : 2 ≤ k) :
-    InTurn.Many.Perfect (fun _ z => z + gate z) (fun _ _ _ => 0) k (n + 2) ∧
-      ∀ rules, InTurn.Many.Perfect (fun _ z => z + gate z) rules k (n + 2) →
-        (web (onSource (InTurn.Many.levels (fun _ z => z + gate z) rules k 2))).Broken 0 .dweller .source :=
-  ⟨InTurn.Many.perfect_of_zero two (n + 2), fun rules perfect =>
-    (Web.turns_broken (W := web (onSource (InTurn.Many.levels (fun _ z => z + gate z) rules k 2)))
-      (c := Place.source) (f := Formation.dweller) two perfect (fun _ _ => rfl) (Nat.succ_pos (n + 1))
-      trivial (Nat.succ_pos 1) (Nat.le_refl 2)).1⟩
-
-
-/-- Under the gate, two drawers who both leave everything keep the source at two or above. -/
-theorem gated_restraint_keeps :
-    ∀ t, 2 ≤ InTurn.levels (fun _ z => z + gate z) (fun _ z => z) (fun _ a => a) 2 t
-  | 0 => Nat.le_refl 2
-  | t + 1 => Nat.le_trans (gated_restraint_keeps t) (Nat.le_add_right _ _)
-
-/-- **The gate witness: restraint revised away.** From a source at two, the level the dweller needs,
-under a gate, two drawers in turn who both start by leaving everything keep the dweller; revising
-toward best responses, from round `2 (n + 2)` on every profile breaks it at the first step
-(`InTurn.revised_draw_all`, `Web.revised_broken`). -/
-theorem gated_revised (n : Nat) {m : Nat} (enough : 2 * (n + 2) ≤ m) :
-    (∀ t, 2 ≤ InTurn.levels (fun _ z => z + gate z) (fun _ z => z) (fun _ a => a) 2 t) ∧
-    (web (onSource (InTurn.levels (fun _ z => z + gate z)
-      (InTurn.revised (fun _ z => z + gate z) (n + 2) (fun _ z => z) (fun _ a => a) m).1
-      (InTurn.revised (fun _ z => z + gate z) (n + 2) (fun _ z => z) (fun _ a => a) m).2 2))).Broken 0
-        .dweller .source :=
-  ⟨gated_restraint_keeps,
-   Web.revised_broken (W := web (onSource (InTurn.levels (fun _ z => z + gate z)
-      (InTurn.revised (fun _ z => z + gate z) (n + 2) (fun _ z => z) (fun _ a => a) m).1
-      (InTurn.revised (fun _ z => z + gate z) (n + 2) (fun _ z => z) (fun _ a => a) m).2 2)))
-     (c := Place.source) (f := Formation.dweller) enough (fun _ _ => rfl) (Nat.succ_pos (n + 1)) trivial
-     (Nat.succ_pos 1) (Nat.le_refl 2)⟩
+/-- A capacity of one unit a step for every drawer after the first, none for the first. -/
+def oneUnit : Nat → Nat → Nat → Nat
+  | 0, _, _ => 0
+  | _ + 1, _, a => a - 1
 
 /-- The first leaves everything at the first step from two up and draws everything otherwise. -/
 def keepsFirst : Nat → Nat → Nat
   | 0, z => if 2 ≤ z then z else 0
   | _ + 1, _ => 0
+
+/-- The first keeps as `keepsFirst` says, the others take their unit. -/
+def keeping : Nat → Nat → Nat → Nat
+  | 0, t, z => keepsFirst t z
+  | _ + 1, _, a => a - 1
 
 theorem keepsFirst_le : ∀ t z, keepsFirst t z ≤ z
   | 0, z => if h : 2 ≤ z then Nat.le_of_eq (if_pos h) else Nat.le_trans (Nat.le_of_eq (if_neg h)) (Nat.zero_le z)
@@ -8589,59 +8342,63 @@ theorem only_three : ∀ f, f ≤ 3 → 4 ≤ 3 - f + ((f - 1) + (f - 1)) → f 
   | f + 4, le, _ => absurd le (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (Nat.lt_succ_self 3) (Nat.le_add_left 4 f)))
 
 /-- **The capacity witness: a limit on the other's draw makes restraint the best response.** What
-stands after a step is twice what is left; over two steps, the first can take any amount and the
-second one unit a step. The profile in which the first leaves everything at the first step from two
-up, and draws everything otherwise, and the second takes its unit, is perfect within these
-capacities. In every profile perfect within them, from three the first leaves everything at the first
-step, the second takes its unit, and the source stands at four after it: a dweller needing two,
-met at three, is kept across the first step. Where neither draw is limited, every perfect profile
-breaks it there (`Web.perfect_broken`). -/
+stands after a step is twice what is left; over two steps, the first of two drawers can take any
+amount and the second one unit a step. The profile in which the first leaves everything at the first
+step from two up, and draws everything otherwise, and the second takes its unit, is perfect within
+these floors. In every such perfect profile, from three, the second takes its unit, so what the first
+leaves returns to it twice, less one: the first leaves everything at the first step, the source stands
+at four after it and a dweller needing two, met at three, is kept across the first step. With no
+floor every perfect profile breaks it there. -/
 theorem doubling_capacity :
-    InTurn.PerfectWithin (fun _ z => z + z) (fun _ _ => 0) (fun _ a => a - 1) keepsFirst (fun _ a => a - 1) 2 ∧
-    (∀ first second, InTurn.PerfectWithin (fun _ z => z + z) (fun _ _ => 0) (fun _ a => a - 1) first second 2 →
-      first 0 3 = 3 ∧ (web (onSource (InTurn.levels (fun _ z => z + z) first second 3))).Kept 0
-        .dweller .source) ∧
-    ∀ first second, InTurn.PerfectWithin (fun _ z => z + z) (fun _ _ => 0) (fun _ _ => 0) first second 2 →
-      (web (onSource (InTurn.levels (fun _ z => z + z) first second 3))).Broken 0 .dweller .source :=
-  ⟨⟨fun t z => ⟨Nat.zero_le _, keepsFirst_le t z⟩, fun _ a => ⟨Nat.le_refl _, Nat.sub_le a 1⟩,
-    fun t j at_ => match t, j, at_ with
-      | 0, 0, h => absurd h (by decide)
-      | 0, j + 2, h => absurd h (Nat.ne_of_gt (Nat.succ_le_succ
+    InTurn.Perfect (fun _ z => z + z) oneUnit keeping 2 2 ∧
+    (∀ rules, InTurn.Perfect (fun _ z => z + z) oneUnit rules 2 2 →
+      rules 0 0 3 = 3 ∧ (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Kept 0 .dweller .source) ∧
+    ∀ rules, InTurn.Perfect (fun _ z => z + z) (fun _ _ _ => 0) rules 2 2 →
+      (web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3))).Broken 0 .dweller .source :=
+  ⟨⟨fun d t a => match d with
+      | 0 => ⟨Nat.zero_le _, keepsFirst_le t a⟩
+      | _ + 1 => ⟨Nat.le_refl _, Nat.sub_le a 1⟩,
+    fun t j at_ d lt a b floor _ => match t, j, at_, d, lt with
+      | 0, 0, h, _, _ => absurd h (by decide)
+      | 0, j + 2, h, _, _ => absurd h (Nat.ne_of_gt (Nat.succ_le_succ
           (Nat.succ_le_succ (Nat.succ_le_succ (Nat.zero_le (0 + j))))))
-      | 0, 1, _ => ⟨fun a _ low _ => sub_le_sub_left_of_le low a,
-          fun z a _ le => keepsFirst_best z a le⟩
-      | 1, 0, _ => ⟨fun a _ low _ => sub_le_sub_left_of_le low a,
-          fun z a _ _ => Nat.sub_le z a⟩
-      | 1, j + 1, h => absurd h (Nat.ne_of_gt (Nat.succ_le_succ (Nat.succ_le_succ (Nat.le_add_right 1 j))))
-      | t + 2, j, h => absurd h (Nat.ne_of_gt (Nat.succ_le_succ
-          (Nat.le_trans (Nat.le_add_left 2 t) (Nat.le_add_right (t + 2) j))))⟩,
-   fun first second perfect =>
+      | 1, j + 1, h, _, _ => absurd h (Nat.ne_of_gt (Nat.succ_le_succ (Nat.succ_le_succ (Nat.le_add_right 1 j))))
+      | t + 2, j, h, _, _ => absurd h (Nat.ne_of_gt (Nat.succ_le_succ
+          (Nat.le_trans (Nat.le_add_left 2 t) (Nat.le_add_right (t + 2) j))))
+      | _, _, _, d + 2, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 2 d))
+      | 0, 1, _, 0, _ => keepsFirst_best a b ‹b ≤ a›
+      | 0, 1, _, 1, _ => sub_le_sub_left_of_le floor a
+      | 1, 0, _, 0, _ => Nat.sub_le a b
+      | 1, 0, _, 1, _ => sub_le_sub_left_of_le floor a⟩,
+   fun rules perfect =>
     have last := InTurn.last_at_floor perfect (t := 1) rfl
-    have none : ∀ w, InTurn.secondDrawn (fun _ z => z + z) first second 1 1 w = 0 := fun w => by
-      show first 1 w - second 1 (first 1 w) + 0 = 0
-      rw [last.1 w, last.2 0]
-    have sec : ∀ a, second 0 a = a - 1 := InTurn.second_at_floor perfect.2.1 none (perfect.2.2 0 1 rfl)
-    have drawn : ∀ w, InTurn.firstDrawn (fun _ z => z + z) first second 1 1 w = w := fun w => by
-      show w - first 1 w + 0 = w
-      rw [last.1 w]
+    have none : ∀ w, InTurn.drawn (fun _ z => z + z) rules 2 1 1 1 w = 0 := fun w => by
+      show rules 0 1 w - rules 1 1 (rules 0 1 w) + 0 = 0
+      rw [last 0 (Nat.zero_lt_succ 1) w, last 1 (Nat.lt_succ_self 1) (oneUnit 0 1 w)]
       try rfl
-    have pick := (perfect.2.2 0 1 rfl).2 3 3 (Nat.zero_le 3) (Nat.le_refl 3)
-    have three : first 0 3 = 3 := only_three (first 0 3) (perfect.1 0 3).2 (by
-      have whole : InTurn.firstDrawn (fun _ z => z + z) first second 2 0 3 =
-          3 - first 0 3 + ((first 0 3 - 1) + (first 0 3 - 1)) := by
-        show 3 - first 0 3 + InTurn.firstDrawn (fun _ z => z + z) first second 1 1
-          (second 0 (first 0 3) + second 0 (first 0 3)) = _
-        rw [drawn, sec]
-      rw [drawn, sec, whole] at pick
+    have sec : ∀ a, rules 1 0 a = a - 1 := fun a =>
+      InTurn.at_floor perfect (t := 0) (j := 1) rfl (Nat.lt_succ_self 1) a (by
+        show InTurn.drawn (fun _ z => z + z) rules 2 1 1 1 _ = InTurn.drawn (fun _ z => z + z) rules 2 1 1 1 _
+        rw [none, none])
+    have drawnOne : ∀ w, InTurn.drawn (fun _ z => z + z) rules 2 0 1 1 w = w := fun w =>
+      congrArg (fun x => w - x + 0) (last 0 (Nat.zero_lt_succ 1) w)
+    have laterOne : ∀ b, InTurn.later (fun _ z => z + z) rules 2 0 1 0 b = (b - 1) + (b - 1) := fun b =>
+      (drawnOne _).trans (by
+        show rules 1 0 b + rules 1 0 b = _
+        rw [sec])
+    have pick := perfect.2 0 1 rfl 0 (Nat.zero_lt_succ 1) 3 3 (Nat.zero_le 3) (Nat.le_refl 3)
+    have three : rules 0 0 3 = 3 := only_three (rules 0 0 3) (perfect.1 0 0 3).2 (by
+      rw [laterOne, laterOne] at pick
       exact pick)
-    have four : InTurn.levels (fun _ z => z + z) first second 3 1 = 4 := by
-      show second 0 (first 0 3) + second 0 (first 0 3) = 4
+    have four : InTurn.levels (fun _ z => z + z) rules 2 3 1 = 4 := by
+      show rules 1 0 (rules 0 0 3) + rules 1 0 (rules 0 0 3) = 4
       rw [three, sec]
     ⟨three, Nat.le_succ 2,
      Nat.le_trans (Nat.le_trans (Nat.le_succ 2) (Nat.le_succ 3)) (Nat.le_of_eq four.symm)⟩,
-   fun first second perfect =>
-    (Web.perfect_broken (W := web (onSource (InTurn.levels (fun _ z => z + z) first second 3)))
-      (c := Place.source) (f := Formation.dweller) (InTurn.within_zero_iff.1 perfect) (fun _ _ => rfl)
+   fun rules perfect =>
+    (Web.drained_broken (W := web (onSource (InTurn.levels (fun _ z => z + z) rules 2 3)))
+      (c := Place.source) (f := Formation.dweller) (Nat.le_succ 1) (fun d t a => (perfect.1 d t a).2)
+      (fun t lt => InTurn.perfect_ends (Nat.le_refl 2) perfect lt 0 (Nat.zero_lt_succ 1)) (fun _ _ => rfl)
       (Nat.succ_pos 1) trivial (Nat.succ_pos 1) (Nat.le_succ 2)).1⟩
 
 

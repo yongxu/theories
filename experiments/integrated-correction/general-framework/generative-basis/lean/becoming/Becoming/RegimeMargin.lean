@@ -75,6 +75,12 @@ the regime's and not the level's alone.
   nothing from more keeps every state up to two within two under a draw of one, yet the run from one
   moves between one and two at every step (`Alternation.alternates`); under the gated giving, with no
   band, the run from five rises by one at every step (`Crossing.rises_without_rest`).
+* **One law of exact thresholds.** Every point of no return below is one law, stated once on the
+  leading run of `true` among a check's first values (`leading`): where a reading of levels is closed
+  downward up to `hi` and a check is exact for it there, the reading holds exactly below the check's
+  leading run (`leading_exact`); a reading implied by another has a threshold no lower
+  (`leading_falls`); and a check exact for the levels below `t` has threshold `t` (`leading_eq`).
+  Checks that agree have the same threshold (`leading_congr`).
 * **The threshold in the plane.** Where the adjustment rises with what is left and with the recent
   giving and keeps a band up to `hi`, a state at or below one whose run comes to rest below the draw
   comes to rest below it too (`Adjusted.falls_of_below`), and whether it does is decided at step
@@ -1530,6 +1536,55 @@ theorem leading_false (b : Nat → Bool) : ∀ k, leading b k < k → b (leading
           | true => absurd ⟨same, hb⟩ h
           | false => (congrArg b same).trans hb
 
+/-- Leading runs of `true` agree for checks that agree. -/
+theorem leading_congr {b b' : Nat → Bool} (same : ∀ x, b x = b' x) : ∀ k, leading b k = leading b' k
+  | 0 => rfl
+  | k + 1 => by
+    show (if leading b k = k ∧ b k = true then k + 1 else leading b k) =
+      (if leading b' k = k ∧ b' k = true then k + 1 else leading b' k)
+    rw [leading_congr same k, same k]
+
+/-- **The law of exact thresholds.** Where a reading `P` of levels is closed downward up to `hi` and a
+check `d` is exact for it there, the levels up to `hi` the reading holds of are exactly those below
+the leading run of `true` among `d`'s first `hi + 1` values. Every point of no return in this module
+is this law for its own reading and check. -/
+theorem leading_exact {P : Nat → Prop} {d : Nat → Bool} {hi : Nat}
+    (down : ∀ a b, b ≤ hi → P b → a ≤ b → P a) (exact : ∀ a, a ≤ hi → (P a ↔ d a = true)) :
+    ∀ a, a ≤ hi → (P a ↔ a < leading d (hi + 1)) :=
+  fun a high =>
+    ⟨fun holds => (Nat.lt_or_ge a (leading d (hi + 1))).elim id fun ge =>
+        have short : leading d (hi + 1) < hi + 1 := Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
+        False.elim (Bool.noConfusion ((leading_false d (hi + 1) short).symm.trans
+          ((exact _ (Nat.le_of_lt_succ short)).1 (down _ a high holds ge)))),
+     fun lt => (exact a high).2 (leading_true d (hi + 1) a lt)⟩
+
+/-- **A threshold falls with its reading.** Where checks `d` and `e` are exact up to `hi` for readings
+`P` and `Q`, and `Q` implies `P` there, `e`'s threshold is no higher than `d`'s. -/
+theorem leading_falls {P Q : Nat → Prop} {d e : Nat → Bool} {hi : Nat}
+    (exactP : ∀ a, a ≤ hi → (P a ↔ d a = true)) (exactQ : ∀ a, a ≤ hi → (Q a ↔ e a = true))
+    (implies : ∀ a, a ≤ hi → Q a → P a) : leading e (hi + 1) ≤ leading d (hi + 1) :=
+  (Nat.lt_or_ge (leading d (hi + 1)) (leading e (hi + 1))).elim
+    (fun lt =>
+      have high : leading d (hi + 1) ≤ hi :=
+        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le e (hi + 1)))
+      False.elim (Bool.noConfusion ((leading_false d (hi + 1) (Nat.lt_succ_of_le high)).symm.trans
+        ((exactP _ high).1 (implies _ high ((exactQ _ high).2 (leading_true e (hi + 1) _ lt)))))))
+    id
+
+/-- **A check exact for the levels below `t` has threshold `t`**, where `t` is at most `hi + 1`: the
+law of exact thresholds for the reading "below `t`". -/
+theorem leading_eq {d : Nat → Bool} {hi t : Nat} (exact : ∀ a, a ≤ hi → (a < t ↔ d a = true))
+    (reach : t ≤ hi + 1) : leading d (hi + 1) = t :=
+  have same := leading_exact (P := fun a => a < t) (fun _ _ _ lt le => Nat.lt_of_le_of_lt le lt) exact
+  Nat.le_antisymm
+    ((Nat.lt_or_ge t (leading d (hi + 1))).elim
+      (fun lt => absurd ((same t (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le d (hi + 1))))).2
+        lt) (Nat.lt_irrefl t))
+      id)
+    ((Nat.lt_or_ge (leading d (hi + 1)) t).elim
+      (fun lt => absurd ((same _ (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt reach))).1 lt) (Nat.lt_irrefl _))
+      id)
+
 namespace Adjusted
 
 /-- The run from a state comes to rest below the draw. -/
@@ -1543,9 +1598,6 @@ def falling (A : Nat → Nat → Nat) (H hi r x : Nat) : Bool :=
 /-- **The threshold in the plane.** For a recent giving `r`, the least level up to `hi + 1` whose run,
 within the band up to `hi`, is not below the draw at step `3 hi + 3`. -/
 def threshold (A : Nat → Nat → Nat) (H hi r : Nat) : Nat := leading (falling A H hi r) (hi + 1)
-
-theorem threshold_le (A : Nat → Nat → Nat) (H hi r : Nat) : threshold A H hi r ≤ hi + 1 :=
-  leading_le _ _
 
 /-- **Below a state whose run rests below the draw, every run does.** Where the adjustment rises with
 what is left and with the recent giving and keeps a band, a state at or below one within the band
@@ -1578,35 +1630,37 @@ theorem falls_iff {A : Nat → Nat → Nat} {H hi x r : Nat} (rises : Rises A) (
       (atM.trans (LastChange.still_same still0 still)))) low,
    fun low => ⟨N0, still0, Nat.lt_of_le_of_lt (Nat.le_of_eq (congrArg Prod.fst atM.symm)) low⟩⟩
 
+/-- Within a band, the check at step `3 hi + 3` is exact for a run of a rising adjustment coming to
+rest below the draw. -/
+theorem rests_iff_falling {A : Nat → Nat → Nat} {H hi x r : Nat} (rises : Rises A)
+    (band : Band A H hi) (high : x ≤ hi) (given : r ≤ hi) :
+    RestsBelow A H (x, r) ↔ falling A H hi r x = true :=
+  (falls_iff rises band high given).trans ⟨decide_eq_true, of_decide_eq_true⟩
+
 /-- **The threshold is exact.** Where the adjustment rises with what is left and with the recent
 giving and keeps a band up to `hi`, the run from a level and a recent giving up to `hi` comes to rest
-below the draw exactly where the level is below the threshold for that recent giving. -/
+below the draw exactly where the level is below the threshold for that recent giving: the law of exact
+thresholds (`leading_exact`) for coming to rest below the draw. -/
 theorem falls_iff_below {A : Nat → Nat → Nat} {H hi x r : Nat} (rises : Rises A)
     (band : Band A H hi) (high : x ≤ hi) (given : r ≤ hi) :
     RestsBelow A H (x, r) ↔ x < threshold A H hi r :=
-  ⟨fun falls => (Nat.lt_or_ge x (threshold A H hi r)).elim id fun ge =>
-      have short : threshold A H hi r < hi + 1 := Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
-      have notFalls : ¬ RestsBelow A H (threshold A H hi r, r) := fun f =>
-        absurd ((falls_iff rises band (Nat.le_of_lt_succ short) given).1 f)
-          (of_decide_eq_false (leading_false (falling A H hi r) (hi + 1) short))
-      absurd (falls_of_below rises band ⟨ge, Nat.le_refl r⟩ high given falls) notFalls,
-   fun lt => (falls_iff rises band high given).2
-      (of_decide_eq_true (leading_true (falling A H hi r) (hi + 1) x lt))⟩
+  leading_exact (P := fun x => RestsBelow A H (x, r)) (d := falling A H hi r)
+    (fun a b high' falls le =>
+      falls_of_below (p := (a, r)) (q := (b, r)) rises band ⟨le, Nat.le_refl r⟩ high' given falls)
+    (fun _ high' => rests_iff_falling rises band high' given) x high
 
 /-- **The threshold falls as the recent giving rises.** Where the adjustment rises with what is left
 and with the recent giving and keeps a band up to `hi`, a larger recent giving up to `hi` has a
-threshold no higher. -/
+threshold no higher: the law of exact thresholds (`leading_falls`), a run resting below the draw with
+the larger recent giving resting below it with the smaller. -/
 theorem threshold_falls {A : Nat → Nat → Nat} {H hi r r' : Nat} (rises : Rises A)
     (band : Band A H hi) (le : r ≤ r') (given : r' ≤ hi) :
     threshold A H hi r' ≤ threshold A H hi r :=
-  (Nat.lt_or_ge (threshold A H hi r) (threshold A H hi r')).elim
-    (fun lt =>
-      have high : threshold A H hi r ≤ hi :=
-        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (threshold_le A H hi r'))
-      have falls := falls_of_below (p := (threshold A H hi r, r)) (q := (threshold A H hi r, r')) rises
-        band ⟨Nat.le_refl _, le⟩ high given ((falls_iff_below rises band high given).2 lt)
-      absurd ((falls_iff_below rises band high (Nat.le_trans le given)).1 falls) (Nat.lt_irrefl _))
-    id
+  leading_falls (P := fun x => RestsBelow A H (x, r)) (Q := fun x => RestsBelow A H (x, r'))
+    (fun _ high => rests_iff_falling rises band high (Nat.le_trans le given))
+    (fun _ high => rests_iff_falling rises band high given)
+    (fun a high falls =>
+      falls_of_below (p := (a, r)) (q := (a, r')) rises band ⟨Nat.le_refl a, le⟩ high given falls)
 
 /-- **Every state in the band has its fate by the threshold.** Where the adjustment rises with what
 is left and with the recent giving, rests at the draw exactly where the regime gives the draw, and
@@ -1667,18 +1721,8 @@ theorem threshold_regime {g : Nat → Nat} {H y hi r : Nat} (grows : ∀ a b, a 
               (show (0 - H + g (0 - H), g (0 - H)) = (0, 0) by rw [Nat.zero_sub, nothing]) k)
         ⟨x + 1, fun k => (stays (k + 1)).trans (stays k).symm,
           Nat.lt_of_le_of_lt (Nat.le_of_eq (congrArg Prod.fst next)) (Adjusted.draw_pos short below)⟩⟩
-  have same : ∀ x, x ≤ hi → (x < Adjusted.threshold (fun e _ => g e) H hi r ↔ x < H + y) :=
-    fun x high => (Adjusted.falls_iff_below rises band high given).symm.trans (regime x high)
-  have top := Adjusted.threshold_le (fun e _ => g e) H hi r
-  exact Nat.le_antisymm
-    ((Nat.lt_or_ge (H + y) (Adjusted.threshold (fun e _ => g e) H hi r)).elim
-      (fun lt => absurd ((same (H + y) (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt top))).1 lt)
-        (Nat.lt_irrefl _))
-      id)
-    ((Nat.lt_or_ge (Adjusted.threshold (fun e _ => g e) H hi r) (H + y)).elim
-      (fun lt => absurd ((same _ (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt reach))).2 lt)
-        (Nat.lt_irrefl _))
-      id)
+  exact leading_eq (fun x high => (regime x high).symm.trans
+    (Adjusted.rests_iff_falling rises band high given)) reach
 
 namespace Notch
 
@@ -2616,41 +2660,41 @@ def threshold [DecidableEq ι] (G : ι → (ι → Nat) → Nat) (H : ι → Nat
     (y : ι → Nat) (i : ι) : Nat :=
   leading (ending G H (cs.length * hi + 1) y i) (hi + 1)
 
+/-- Within a band under mutual support, the check at step `cs.length * hi + 1` is exact for condition
+`i` ending from a level up to `hi`, the others as in `y` within the band. -/
+theorem ends_iff_ending [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
+    (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat}
+    (high : a ≤ hi) (highs : ∀ j, y j ≤ hi) :
+    Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ ending G H (cs.length * hi + 1) y i a = true :=
+  (ends_iff rises band covers (setAt_within high highs) i).trans ⟨decide_eq_true, of_decide_eq_true⟩
+
 /-- **The point of no return is exact.** Within a band under mutual support, condition `i` ends from
 a level up to `hi`, the others as in `y` within the band, exactly where its level is below its
-threshold. -/
+threshold: the law of exact thresholds (`leading_exact`) for ending. -/
 theorem ends_iff_below [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
     (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat}
     (high : a ≤ hi) (highs : ∀ j, y j ≤ hi) :
     Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < threshold G H cs hi y i :=
-  ⟨fun ends => (Nat.lt_or_ge a (threshold G H cs hi y i)).elim id fun ge =>
-      have short : threshold G H cs hi y i < hi + 1 := Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
-      have notEnds : ¬ Ends Drawn.whole G H (fun x => x i) (setAt y i (threshold G H cs hi y i)) :=
-        fun e => absurd ((ends_iff rises band covers
-          (setAt_within (Nat.le_of_lt_succ short) highs) i).1 e)
-          (of_decide_eq_false (leading_false (ending G H (cs.length * hi + 1) y i) (hi + 1) short))
-      absurd (ends_of_below rises (fun _ _ b => b i) (setAt_below ge fun j => Nat.le_refl (y j)) ends)
-        notEnds,
-   fun lt => (ends_iff rises band covers (setAt_within high highs) i).2
-      (of_decide_eq_true (leading_true (ending G H (cs.length * hi + 1) y i) (hi + 1) a lt))⟩
+  leading_exact (P := fun a => Ends Drawn.whole G H (fun x => x i) (setAt y i a))
+    (d := ending G H (cs.length * hi + 1) y i)
+    (fun _ _ _ ends le =>
+      ends_of_below rises (fun _ _ b => b i) (setAt_below le fun j => Nat.le_refl (y j)) ends)
+    (fun _ high' => ends_iff_ending rises band covers high' highs) a high
 
 /-- **The point of no return does not rise as any other level rises.** Within a band under mutual
 support, others' levels at or above `y`'s, within the band, give condition `i` a threshold no
-higher. -/
+higher: the law of exact thresholds (`leading_falls`), ending with the others higher ending with them
+lower. -/
 theorem threshold_falls [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
     (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y y' : ι → Nat} {i : ι}
     (le : ∀ j, y j ≤ y' j) (highs' : ∀ j, y' j ≤ hi) :
     threshold G H cs hi y' i ≤ threshold G H cs hi y i :=
-  (Nat.lt_or_ge (threshold G H cs hi y i) (threshold G H cs hi y' i)).elim
-    (fun lt =>
-      have high : threshold G H cs hi y i ≤ hi :=
-        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le _ _))
-      have highs : ∀ j, y j ≤ hi := fun j => Nat.le_trans (le j) (highs' j)
-      have ends := ends_of_below rises (fun _ _ b => b i)
-        (setAt_below (Nat.le_refl (threshold G H cs hi y i)) le)
-        ((ends_iff_below rises band covers high highs').2 lt)
-      absurd ((ends_iff_below rises band covers high highs).1 ends) (Nat.lt_irrefl _))
-    id
+  have highs : ∀ j, y j ≤ hi := fun j => Nat.le_trans (le j) (highs' j)
+  leading_falls (P := fun a => Ends Drawn.whole G H (fun x => x i) (setAt y i a))
+    (Q := fun a => Ends Drawn.whole G H (fun x => x i) (setAt y' i a))
+    (fun _ high => ends_iff_ending rises band covers high highs)
+    (fun _ high => ends_iff_ending rises band covers high highs')
+    (fun a _ ends => ends_of_below rises (fun _ _ b => b i) (setAt_below (Nat.le_refl a) le) ends)
 
 /-- **Every state in the band has its fate by the threshold.** Within a band under mutual support,
 the run from condition `i` at a level up to `hi`, the others as in `y` within the band, is still from
@@ -2922,42 +2966,31 @@ theorem ending_iff [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (reads :
 
 /-- **The point of no return is exact beyond a band.** Under a law keeping the order of states, for
 finitely many conditions, where the run from condition `i` at `hi`, the others as in `y`, stays within
-`B`, condition `i` ends from a level up to `hi` exactly where its level is below `thresholdWithin`. -/
+`B`, condition `i` ends from a level up to `hi` exactly where its level is below `thresholdWithin`:
+the law of exact thresholds (`leading_exact`) for the finite check. -/
 theorem ends_iff_below_within [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f)
     {cs : List ι} (covers : ∀ i, i ∈ cs) {B hi : Nat} {y : ι → Nat} {i : ι} {a : Nat}
     (within : StaysWithin f B (setAt y i hi)) (high : a ≤ hi) :
     EndsUnder f i (setAt y i a) ↔ a < thresholdWithin f cs B hi y i :=
-  have reads := reads_of_keepsBelow keeps
-  have withinAt : ∀ {b}, b ≤ hi → StaysWithin f B (setAt y i b) := fun le =>
-    within_below keeps (setAt_below le fun j => Nat.le_refl (y j)) within
-  ⟨fun ends => (Nat.lt_or_ge a (thresholdWithin f cs B hi y i)).elim id fun ge =>
-      have short : thresholdWithin f cs B hi y i < hi + 1 :=
-        Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
-      have notEnds : ¬ EndsUnder f i (setAt y i (thresholdWithin f cs B hi y i)) :=
-        fun e => Bool.noConfusion ((leading_false (endingWithin f ((B + 1) ^ cs.length) y i) (hi + 1)
-          short).symm.trans ((ending_iff reads covers (withinAt (Nat.le_of_lt_succ short))).1 e))
-      absurd (endsUnder_of_below keeps (setAt_below ge fun j => Nat.le_refl (y j)) ends) notEnds,
-   fun lt => (ending_iff reads covers (withinAt high)).2
-      (leading_true (endingWithin f ((B + 1) ^ cs.length) y i) (hi + 1) a lt)⟩
+  leading_exact (P := fun a => EndsUnder f i (setAt y i a)) (d := endingWithin f ((B + 1) ^ cs.length) y i)
+    (fun _ _ _ ends le => endsUnder_of_below keeps (setAt_below le fun j => Nat.le_refl (y j)) ends)
+    (fun _ high' => ending_iff (reads_of_keepsBelow keeps) covers
+      (within_below keeps (setAt_below high' fun j => Nat.le_refl (y j)) within)) a high
 
 /-- **Beyond a band, the point of no return does not rise as any other level rises.** Under a law
 keeping the order of states, where the run from condition `i` at `hi`, the others as in `y'`, stays
-within `B`, others' levels at or below `y'` give condition `i` a threshold no lower than `y'` gives. -/
+within `B`, others' levels at or below `y'` give condition `i` a threshold no lower than `y'` gives:
+the law of exact thresholds (`leading_falls`) for the finite check. -/
 theorem threshold_falls_within [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f)
     {cs : List ι} (covers : ∀ i, i ∈ cs) {B hi : Nat} {y y' : ι → Nat} {i : ι} (le : ∀ j, y j ≤ y' j)
     (within' : StaysWithin f B (setAt y' i hi)) :
     thresholdWithin f cs B hi y' i ≤ thresholdWithin f cs B hi y i :=
-  have within : StaysWithin f B (setAt y i hi) :=
-    within_below keeps (setAt_below (Nat.le_refl hi) le) within'
-  (Nat.lt_or_ge (thresholdWithin f cs B hi y i) (thresholdWithin f cs B hi y' i)).elim
-    (fun lt =>
-      have high : thresholdWithin f cs B hi y i ≤ hi :=
-        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le _ _))
-      have ends := endsUnder_of_below keeps
-        (setAt_below (Nat.le_refl (thresholdWithin f cs B hi y i)) le)
-        ((ends_iff_below_within keeps covers within' high).2 lt)
-      absurd ((ends_iff_below_within keeps covers within high).1 ends) (Nat.lt_irrefl _))
-    id
+  leading_falls (P := fun a => EndsUnder f i (setAt y i a)) (Q := fun a => EndsUnder f i (setAt y' i a))
+    (fun _ high => ending_iff (reads_of_keepsBelow keeps) covers
+      (within_below keeps (setAt_below high le) within'))
+    (fun _ high => ending_iff (reads_of_keepsBelow keeps) covers
+      (within_below keeps (setAt_below high fun j => Nat.le_refl (y' j)) within'))
+    (fun a _ ends => endsUnder_of_below keeps (setAt_below (Nat.le_refl a) le) ends)
 
 /-! #### Webs with a recent giving
 
@@ -3244,14 +3277,6 @@ def ending (g₁ g₂ : Nat → Nat → Nat) (H₁ H₂ hi y x : Nat) : Bool :=
 `hi + 1` from which the first condition is not nothing at step `2 hi + 1`. -/
 def threshold (g₁ g₂ : Nat → Nat → Nat) (H₁ H₂ hi y : Nat) : Nat :=
   leading (ending g₁ g₂ H₁ H₂ hi y) (hi + 1)
-
-/-- Leading runs of `true` agree for readings that agree. -/
-theorem leading_congr {b b' : Nat → Bool} (same : ∀ x, b x = b' x) : ∀ k, leading b k = leading b' k
-  | 0 => rfl
-  | k + 1 => by
-    show (if leading b k = k ∧ b k = true then k + 1 else leading b k) =
-      (if leading b' k = k ∧ b' k = true then k + 1 else leading b' k)
-    rw [leading_congr same k, same k]
 
 /-- The pair from `x` with its partner at `y` is the web's state with the first level set to `x`. -/
 theorem setAt_pair (x y : Nat) : ∀ j, Indexed.setAt (ofPair (0, y)) true x j = ofPair (x, y) j
