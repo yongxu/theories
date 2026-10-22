@@ -232,9 +232,12 @@ def main():
 
     def val(coder, pass_, sid, key):
         if coder == 'consensus':
+            # the mean where both coders coded the segment; the Claude coder's count elsewhere (plan amendment 2)
             v = [cnt.get((c, pass_, sid), {}).get(key) for c in CODERS]
             v = [x for x in v if x is not None]
-            return sum(v) / len(v) if len(v) == len(CODERS) else None
+            if which == 'calib':
+                return sum(v) / len(v) if len(v) == len(CODERS) else None
+            return sum(v) / len(v) if v else None
         x = cnt.get((coder, pass_, sid))
         return x[key] if x else None
 
@@ -288,6 +291,23 @@ def main():
         cc['genre'] = g
         comps[coder] = cc
     res['comparisons'] = comps
+    if which == 'main':
+        both = lambda sid: all((c, 'table', sid) in cnt for c in CODERS)
+        ov = [u for u in units if both(u['jing']) and both(u['en'])]
+        res['overlap'] = {'units': len(ov), 'tiao': len({u['tiao'] for u in ov}),
+                          'codex_segments': sum(1 for k in cnt if k[0] == 'codex')}
+        for coder in CODERS + ('mean',):
+            def v(u, side, k, coder=coder):
+                if coder == 'mean':
+                    return sum(cnt[(c, 'table', u[side])][k] for c in CODERS) / len(CODERS)
+                return cnt[(coder, 'table', u[side])][k]
+            res['overlap'][coder] = {k: compare(ov, lambda u, k=k: v(u, 'jing', k), lambda u, k=k: v(u, 'en', k),
+                                                'overlap, 經 − E1, %s (%s)' % (k, coder))
+                                     for k in ('X', 'X_A', 'X_R', 'X_E', 'O_rate')}
+        sids = [s for s in S if S[s]['kind'] in ('jing', 'en') and both(s)]
+        res['overlap']['reliability'] = {lang: {'alpha_X': alpha_interval([[cnt[(c, 'table', s)]['X'] for c in CODERS]
+                                                                           for s in sids if S[s]['lang'] == lang]),
+                                                'n': sum(1 for s in sids if S[s]['lang'] == lang)} for lang in ('zh', 'en')}
     # by 篇
     bp = {}
     for pian in sorted({u['pian'] for u in units}):
