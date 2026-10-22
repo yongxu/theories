@@ -27,6 +27,7 @@ PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-bas
 RECORDS = ROOT / 'theories/becoming/results/records'
 CHAPTER = ROOT / 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md'
 MAP_CHAPTER = ROOT / 'theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md'
+WL_CHAPTER = ROOT / 'theories/becoming/chapters/WENLI-AND-BECOMING.md'
 sys.path.insert(0, str(HERE / 'work'))
 from simplify import simp  # noqa: E402
 
@@ -162,7 +163,7 @@ def main():
 
     # 5. chapters
     n_q = n_d = n_l = n_dz = 0
-    for ch in [args.chapter, MAP_CHAPTER]:
+    for ch in [args.chapter, MAP_CHAPTER, WL_CHAPTER]:
         if not ch.exists():
             continue
         t = ch.read_text(encoding='utf-8')

@@ -836,12 +836,16 @@
    }
   ]
  },
+ "round6-edits.json": {
+  "applied": 61,
+  "failed": []
+ },
  "global-replacements": {
   "applied": 64,
   "failed": []
  },
  "moves-after-rounds": {
-  "applied": 4,
+  "applied": 5,
   "failed": []
  }
 }

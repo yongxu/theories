@@ -1,0 +1,329 @@
+[
+ {
+  "row": "文",
+  "op": "set",
+  "fields": {
+   "篇": "C08",
+   "所名": "文（course）：一历之状经一象逐步之值（Parting.course reg r n = reg (r.state n)；法下自一状起者 Learnable.course next reg s n = reg (orbit next s n)）；凡逐步之值（o : Nat → O）皆文，其状与法自文读出，不须给状",
+   "锚": "Becoming.Parting.course；Becoming.Learnable.course；Becoming.SameAhead；Becoming.alike_moments_iff；Becoming.SameAhead.next；Becoming.IdentificationRuns.sameAhead_iff_alike；Becoming.finitely_many_states_iff；Becoming.Identification.sameAhead_iff_below；Becoming.Identification.bounded_agree_exact",
+   "引": "通其变，遂成天下之文@DS02",
+   "式": "古",
+   "注": "所取之义：一历之状经一象逐步之值（讀，AI；须一决定记录）。文只给值，不给状与动。凡逐步之值皆文：以每步至其次步为法、以此值为象，二步同恰当自二步起逐步之值皆同（alike_moments_iff，近于定义）；二步同则其次步亦同（SameAhead.next）：文之状与法皆自文读出，无文外之立法者，与凡历皆其自然之法之行（Shown.run）同构。实质之律：法之一行，其文之二步同，恰当法经此象示之此二步之状同（IdentificationRuns.sameAhead_iff_alike）；文之状有穷，恰当有二异步同，即其值自某步起复（finitely_many_states_iff）；每步皆与前 N 步之一同者，二步同恰当自二步起 N＋N－1 步之值皆同（Identification.sameAhead_iff_below），此长对每二界皆确切（bounded_agree_exact）。篇九之知皆在文上：往是文之前段，知来自往出值，符、不符、得、阙皆在文上，终而复始是文之性质，不测是对角之文，衢是二行之文于某步分。读书百遍之条件即此：重读同一往不增所见；给界，则有穷之往定文之状；不给界，则无往定其次值（Learning.no_prefix_fixes_next）。系辞上「参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象」〔DS02〕：通（名表：行之可续）其变（名表：过程），文乃成，即文只沿行而成（相合）；「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；揲蓍之「参伍」「错综」，与同章「遂知来物」（九·三十，相分），皆不带。对照：系辞下「物相杂，故曰文」〔DS03〕定域：文分其步只在其值有异处，每值皆新则每步自为一状（SameAhead.new_each）；一卦六爻同时之杂是一状（卦），不是文；同句「文不当，故吉凶生焉」仍相分（YI-ZHUAN p-wen-budang 不改）。贲彖「剛柔交錯，天文也」〔YD-JP22〕、「觀乎天文，以察時變」〔YD-JP22〕定域：读文得其状与法，有界方定；观、察、时于此是常语，不带名表之观（视图）、察（敏感性）、时（情境）；交错（Interleavings）、错（互补）不由此借；「觀乎人文，以化成天下」不带。荀子正名「累而成文，名之丽也」〔RU2-S-XZ22〕：一书是名经码之文；文不名符号，符号及其组合归名、码、义项（十·九知名之对照不改）。所不带：文饰、文采；文德、文治、谥号之文；人文化成；文质（文为质外之饰：状自文读出，文下无质）；天文作占；文字及《说文》文／字之分；荀子礼论之文理；吉凶。不取：历程（作名则与历混：历给状与动，文只给值，其状自读出；称之历程，又误示状已给）；序（名表已名所给之序）；像（一者之值：文于一步之值即其像）；迹（所以迹不采）。分工：同一序列，作所给之状与动则为历（其律为自然之法），作所读之值而自读其状则为文；象是映射；状值是每状之值；类、理自文读出而非文（见理）；自一状所许之历程与其后所能然之辞皆同（SameTests）者，不名文同，仍依一·二十三写之。所依之拟：步为共同之自然数索引；值以相等相比；界须所给；可知等律依一族尽其状之宇。须改写（经）：五·六「往，历程至某步之前段也」改「往，文至某步之前段也」；九·三十、九·三十一、九·三十二、九·三十三经中作逐步之值之「历程」（凡十七处）改「文」；他处「历程」（一·二十三、八·八之动之串，八·十一、九·三十七之诸历程，九·十、九·十九、九·二十二、十一·十、十一·二十四、十二·十一、十四·九之流与历，识之进一步历程）读作历之程，不改；凡例经中「古文」（凡·十九、二十六、二十七、二十八）改「古书」，免一字二义；十三·二十经「文法」改「语法」。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "文同",
+  "op": "set",
+  "fields": {
+   "篇": "C08",
+   "所名": "文＋同：二状于一法经一象，其文逐步皆同（Law.SameFuture next o s s'：∀ n, o (orbit next s n) = o (orbit next s' n)，即二状之 Learnable.course 逐步相等）（same course through a map under a law）",
+   "锚": "Becoming.Law.SameFuture；Becoming.Law.alike_iff_sameFuture；Becoming.Law.sameFuture_iff_within；Becoming.Law.sameFuture_of_law；Becoming.Law.identifiesAlike_of_law；Becoming.Learnable.learnable_iff",
+   "引": "—",
+   "式": "新",
+   "注": "新组合：文＋同，与经中「类同」同式。法经一象示之，二状同恰当文同（Law.alike_iff_sameFuture）；文同含当步之值（n = 0），旧写「其后每步」于此不明。状闭于一族之中者，文同恰当其文于族之员数减一步之前皆同，不须判定值之同异（Law.sameFuture_iff_within）。凡守象之值而为理之类，所并之二状皆文同（Law.sameFuture_of_law）；守象之值、为理而并凡文同之状者为正名（Law.identifiesAlike_of_law）。类之同异定然否，于一族尽其状之宇：一状值经一类可知，恰当凡经此类文同之二状其状值自某步起皆同（Learnable.learnable_iff）。不写「同文」：篇十「书同文」是制名之码。文同只在法经一象之下：一般之系辞，自二状所许之历程与其后所能然之辞皆同（SameTests）者不必同（Choosing.not_alike），不名文同。经中三见（一·二十二、九·三十三、九·三十五），故立名。须改写（经）：一·二十二「恰当经此象其后每步之值皆同」改「恰当其文同」；九·三十三「族中二状经类同其来，恰当其来经类于族之员数减一步之前皆同」改「族中二状经类文同，恰当其文经类于族之员数减一步之前皆同」；九·三十五「凡经此类同其来之二状」「经类同来之二状」改「凡经此类文同之二状」「经类文同之二状」。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "往",
+  "op": "set",
+  "fields": {
+   "篇": "C08",
+   "所名": "文之前段（course prefix）：文至某步之前之值",
+   "锚": "Learning.prefixOf；Run.Fixes；Run.FixesThrough",
+   "引": "彰往而察来@DS03",
+   "式": "古",
+   "注": "往只指文之前段（Learning.prefixOf，最近者在前）。一行之往（Run.Fixes：于某步之前之诸移）是其诸移（状、动、次状）逐步所成之文之前段；经 π 读之者（Run.FixesThrough）是其经类之文之前段。「过此以往」（此后）与「不保其往」二读不入；带着历史名「藏往」。本次改（WL）：所名去「记录」（依錄之注：录是证之一员，往是全段）；「历程之前段」改「文之前段」（文，见文）；五·六经同改。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "歷",
+  "op": "set",
+  "fields": {
+   "篇": "C01",
+   "所名": "沿步之状与动之任一序列，不问它是否为某变所许（history: any sequence of configurations and moves (g : Nat →）",
+   "锚": "Becoming.Shown；Becoming.Shown.run；Becoming.shown_le_iff；Becoming.Consistent",
+   "引": "历年多@RU2-S-MZ",
+   "式": "古",
+   "注": "所取之义：沿步之状与动之任一序列，不问它是否为某变所许。凡历皆其自然之法之行（Shown.run），自然之法是以此历为行之最小之变（shown_le_iff）；行是为某变所许之历。积之历（Nat → C → Nat，level path）是历之一种，取代稿中「水平之路」「水平之历」；SelectionPool 稿中已以历名积之历。孟子万章上「历年多」：历为逐一经过（先秦）。所不带：历法、历数（曆，简体并为历）、历史之人事叙事义、阅历之个人义。三家所同。nat 键其余诸义不在此名：步标之辞 p : Nat → Prop（C03 之所然）、感之日程（on : Nat → Bool）、员之量（a : α → Nat）另定；作逐步之值而自读其状者，皆文。本次改（WL）：原注末句「稿中「历程」（course，名表识、往之所名亦用）读作历之程，不另立名，也不与历混为一名」改为：作逐步之值（o : Nat → O，一历经一象，状不给而自读出）之「历程」今名文（见文）；他处「历程」（动之串、流之程、反事实之程、识之进一步历程）仍读作历之程，不另立名。同一序列，作所给之状与动则为历，作所读之值而自读其状则为文，二名不混。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "理",
+  "op": "set",
+  "fields": {
+   "篇": "C07",
+   "所名": "理：对结构与变化之律的建模",
+   "锚": "Learning.goAlike_iff_lumped；carries_law_iff；Law.sameFuture_of_law；Law.identifiesAlike_of_law",
+   "引": "理者，成物之文也",
+   "式": "古",
+   "注": "已采；凡理皆类，类不皆理；不带「理先气后」；先秦给「分」（解老），魏晋注给「变化」（韩康伯「盡聚散之理」）；携带律是理论另加的条件。本次改（WL）：文既立名，引文「理者，成物之文也」〔CV1-S-JL〕读作定域：理是自文读出之类，不是文。法经一象示之，凡守象之值而为理之类所并之二状皆文同（Law.sameFuture_of_law）；守象之值、为理而并凡文同之状者为正名（Law.identifiesAlike_of_law）。于此最粗之理，理与文所分者同，「物有理，不可以相薄」〔CV1-S-JL〕即理不并文异之状；此是四条已检之律之合，非一条定理。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "終而復始",
+  "op": "set",
+  "fields": {
+   "篇": "C08",
+   "所名": "套索（lasso）：文自某步起每隔定数之步而复",
+   "锚": "Learning.Lasso",
+   "引": "終而復始，日月是也",
+   "式": "复",
+   "注": "套索是文之性质；环是耦合之回路；复是构形之返回。文之状有穷，恰当其为套索（finitely_many_states_iff_lasso）。本次改（WL）：「历程」与所名「套索程」改「文」（文，见文）。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "不測",
+  "op": "set",
+  "fields": {
+   "篇": "C08",
+   "所名": "对角之文（diagonal course）：于其上一外推所出之每值皆不符",
+   "锚": "Learning.diagonal",
+   "引": "阴阳不测之谓神@DS02",
+   "式": "复",
+   "注": "沿用易章；阴阳、神之义不入。本次改（WL）：所名「对角序列」改「对角之文」（文，见文；序已名所给之序，不作序列）。"
+  },
+  "why": "WL judge (D63): 文 names the course"
+ },
+ {
+  "row": "繫辭",
+  "op": "note-append",
+  "text": "；系不单立为关系之名：本编不立泛称之关系，每一关系各有其名（待、取与、感等），一宇只有一类物，待者与所待是一物之二角（凡·二）；文理生生 core.007.01 以系为带类型关系之总标签，其 04 表自注为项目定义，05 JY7 亦自注五元之系只是借字；系辞焉之系是系属、系附，正是此名所取",
+  "why": "WL revisions (系, keep): Keep is right. 系辞焉 means attaching statements to the figures, which is what Frame does, and 文理生生's own JY7 says its 系 on"
+ },
+ {
+  "row": "有形",
+  "op": "note-set",
+  "text": "取代以「体」名体现；World.ArisingEmbodied 同族；只取运恰在有积之处：一物于他物之为所待，就是它自身之运（二·十一），不带形体之义。字义：形是形状、显露（孙子「形人而我無形」〔BI1-S-SZ〕；文理生生 core.015：结构形态、对观察者显露）：构形本编名状，显露于观者名闻见。先秦之「有形」是有形体：解老「凡物之有形者易裁也」〔CV1-S-JL〕、「有形則有短長」〔CV1-S-JL〕、秋水「夫精粗者，期於有形者也」〔ZH1-S17〕以有形体者为可度、可分；其说不及运，而遗骸有形体却不运（二·十一），故不作引。距离：此名取有＋形之字面，所名是约定",
+  "why": "WL revisions (形, keep): The quotation is exact, but it does not fit the row. (1) In 解老, 有形 means having a physical body, a thing that is 易裁、易割. "
+ },
+ {
+  "row": "因",
+  "op": "note-set",
+  "text": "与「损益」同出论语；所取之义：x 出于 g 之步，x 步后所待者 g 步前皆待之（InheritsAt，逐一所待而言）。字之主要哲学义是依、顺：依条件而行（养生主「因其固然」〔ZH1-S03〕；文理生生 core.026：依条件行事、依观测择动），此构本编名应（ExchangeLaw.RespondsTo）、缘感而择（Web.SelectsThrough），不名因；因亦不读作今语之原因（必要、充要之条件名小故、大故）。距离：此名只取因之承袭一义",
+  "why": "WL revisions (因, keep): The proposal is sound, with one wording collision. The phrase 「后者跨步之所待皆出于前者之所待」 uses 出于, the 所出 row's word for descent ("
+ },
+ {
+  "row": "承",
+  "op": "note-set",
+  "text": "只名下柔上刚之缝（Hexagram.rises；易传彖、小象之承乘，王弼爻位之技术义）；字之通义是承受、承载与承接（坤彖「乃順承天」〔YD-HX01〕；文理生生 core.028：承受作用、谱系承接）：承受作用之构本编名感、正需，谱系之承接名所出、因；在下承上之通义与「相承」相助之义不入",
+  "why": "WL revisions (承, keep): Keep is right, because the general senses already have names. The comparison also exposed two things. The seam has an ex"
+ },
+ {
+  "row": "承",
+  "op": "anchor-set",
+  "text": "Hexagram.rises",
+  "why": "WL revisions (承, keep): Keep is right, because the general senses already have names. The comparison also exposed two things. The seam has an ex"
+ },
+ {
+  "row": "涸界",
+  "op": "note-prepend",
+  "text": "界取分界：荀子礼论「求而无度量分界，则不能不争」〔RU2-S-XZ19〕之界是分配之限（文理生生 core.040：成员边界、分配界限）；涸界之界分始积为二域：始于其下者涸，始于其上至 hi 者不降于其始（holds）；成员之界本编名己、畛，分配之限名分。",
+  "why": "WL revisions (界, keep): Nothing conflicts and the quotation is exact. The proposal's 「始于其上者守」 overstates the result: RegimeMargin.holds assumes "
+ },
+ {
+  "row": "生",
+  "op": "note-set",
+  "text": "生只指生成：积之历广偏去此体之积之历（成生，Web.Widens，六·六），与绝生（退化）、相赅、互有所长四者不相兼。字义宽：先秦之生兼出现、出生、产生后继、活着（系辞上「生生之谓易」〔DS02〕、老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕、知北游「人之生，氣之聚也」〔ZH1-S22〕；文理生生 core.044.01–04 分为模式出现、实例入类、产生后续实例、活着四义）；字之他义本编另名：出现与入类→作、成、新作；产生后继→所出、出者；活着→活。距离：以生专名与退化相对之生成是本编之约定（讀，AI，D1、D2），不是字之通义；任一新出现不即是生。系辞下「天地之大德曰生」〔DS03〕以生为德，价值之义不带：诸程孰愈只在以广为愈。文理生生亦拒以生推善（CX01），与此同向",
+  "why": "WL revisions (生, keep): The reasoning is right, and every quotation is exact. CX01 does refuse 生成就是善. One correction: the proposal wrote 「一体之积之历"
+ },
+ {
+  "row": "開",
+  "op": "note-append",
+  "text": "；开是宇之性质，不是一次动作：不能自某步起每步有封，即取与超出每一有穷之族（四·十二）。字义：开启门户、通道（老子五十二章「开其兑，济其事，终身不救」〔YD-LAO-BASE〕；文理生生 core.052.01：使一通道由不可用而可用）；一部分之开启本编名闢（需净与），一族一步不封即此字义读于一族；老子以开为终身不救、以闭为终身不勤之价值不带。距离：字义是一通道之一开，此名是「自某步起每步皆有一有穷之族封」之否，读于宇之全行；不以开其兑作引，因其所言是一身之孔窍与欲之境",
+  "why": "WL revisions (开, keep): Keep is right. Two corrections. (1) The proposal's 「自某步起每族皆封」 misstates arising_opens: it is ¬ ∀ t ≥ T, Enclosed t, and "
+ },
+ {
+  "row": "閉",
+  "op": "note-append",
+  "text": "；字义：关闭门户、通道（老子五十二章「塞其兑，闭其门」〔YD-LAO-BASE〕；文理生生 core.053.01：使通道关闭，须择程度或全闭）；一族一步不与外交换本编名封（取代「闭关」），闭只名一域：律入之则不出（Absorbing 不要求有入者），与闭门之出入皆阻不同（讀，AI）。距离：字义是对一通道之动作，此名是一域之性质；老子以闭为善（终身不勤）之价值亦不带",
+  "why": "WL revisions (闭, keep): Keep is right. The proposal's 「可入而不可出」 was softened: Law.Absorbing is ∀ s, R s → R (next s). It forbids leaving, but it "
+ },
+ {
+  "row": "聚",
+  "op": "note-set",
+  "text": "与「散」成对；只取有积之一读：一所待之积跨一步由零而正（ComesToStand；作、结、聚为一变化之三读，一·六）；不带「气之聚」之本体义。字义：聚集、聚合成团（知北游「人之生，氣之聚也，聚則爲生，散則爲死」〔ZH1-S22〕，系辞上「方以类聚」〔DS02〕；文理生生 core.056：聚合过程、已成聚合）：组成者间关系之形成本编名结，有形之物上作则聚（Web.Embodied.comesToStand）。距离：字义是多者会聚，此名只说一所待之积之有无",
+  "why": "WL revisions (聚, keep): The quotations are exact, the anchors resolve, and the three readings match change_readings (Iff.rfl) and 一·六."
+ },
+ {
+  "row": "散",
+  "op": "note-set",
+  "text": "与「聚」成对；只取有积之一读：一所待之积跨一步由正而零（CeasesToStand）。字义：离散、解组（知北游；文理生生 core.057：组织关系解除而组成物可仍在）：关系之消解本编名解，组成者之仍在由其各自之积读出；达生「散則成始」之散读为裂，不是此名。距离同聚",
+  "why": "WL revisions (散, keep): The anchor error is confirmed: Change.lean:481 defines CeasesToStand, and ZH 三·二 cites it. The 达生 reading as 裂 is alread"
+ },
+ {
+  "row": "散",
+  "op": "anchor-set",
+  "text": "Web.CeasesToStand",
+  "why": "WL revisions (散, keep): The anchor error is confirmed: Change.lean:481 defines CeasesToStand, and ZH 三·二 cites it. The 达生 reading as 裂 is alread"
+ },
+ {
+  "row": "動",
+  "op": "note-set",
+  "text": "墨经义：或即域（古字），处所：动是所处之移徙；同篇「窮，或有前不容尺也」〔MI1-S-JS〕、經下「宇或徙，說在長宇久」〔MI1-S-JX〕皆以或为处所，經說上「動，偏、祭徙」〔MI1-S-SS〕或分一偏之徙与全徙（训释有分歧，只作旁证）。此处所之域是墨经之字，不是名表之域（一组状）。动作是步间之移之标记，律在一步所留开者；施于一状，状移至他状（withMove 把动读入状），以之读墨经之徙是讀（AI）。原注「一种可能的移易」读或为或然，误，已改；此或亦不是凡·四之或。不带「动静」形上义。文理生生 core.058.01（位置移动）与此同读",
+  "why": "WL revisions (动, revise-gloss): The correction is right, and every quotation is exact. The proposal's wording 「所在之域」 would let the reader take 域 as the "
+ },
+ {
+  "row": "動",
+  "op": "quote-set",
+  "text": "動，或徙也@MI1-S-JS",
+  "why": "WL revisions (动, revise-gloss): The correction is right, and every quotation is exact. The proposal's wording 「所在之域」 would let the reader take 域 as the "
+ },
+ {
+  "row": "往",
+  "op": "note-append",
+  "text": "字之常义是去、离开（系辞下「日往则月来」〔DS03〕；文理生生 core.071：离开参照、向后续推进）：往来之交替本编不以往名，其构见复、环，往来不必周期。距离：此名取往之已过一义（彰往、藏往、数往），以之名文之前段是本编之约定",
+  "why": "WL revisions (往, keep): The quotations are exact: 日往则月来@DS03, 知以藏往@DS02, 数往者顺@DS04. The sense knowing needs is the one taken."
+ },
+ {
+  "row": "亡",
+  "op": "note-append",
+  "text": "；文理生生 core.076 之亡（一事件中实例退出某类）是一辞（属此类）跨一步由然而不然，本编名毁（CeasesToBe）；读于运即已（止息，Web.Ceases）：已是一步之止，亡是自某步起永不再运；退出一类不即亡，文理生生亦自注之",
+  "why": "WL revisions (亡, keep): The proposal mapped core.076 to 已 alone. EndAs is ?E(P,i);a;?¬E(P,i), which is a membership claim ceasing to hold, so it"
+ },
+ {
+  "row": "中和",
+  "op": "note-set",
+  "text": "已采；中庸之中是「喜怒哀樂之未發，謂之中」〔RU1-S-ZY〕，和是发而中节：情之未发与发之合度，带情感与规范之境（文理生生 core.082：情感未发、时中之合宜判断，拒以中点、稳定点读中）；此名只取其构：相反给向，中节给界，二者合而积定于 m（Regulation，十二·十五）；十二·十四以同章「發而皆中節，謂之和」为定域，十二·十五以「中也者，天下之大本也」为相分；情感、修养、时中之义不带",
+  "why": "WL revisions (中, keep): Keep is right. The proposal's 「对照标为定域（十二·十四、十二·十五）」 is inaccurate: 十二·十五 labels the 中庸 passage 相分 (中也者天下之大本也), and its 定"
+ },
+ {
+  "row": "中節",
+  "op": "note-set",
+  "text": "中庸「發而皆中節，謂之和」只取其构：一步之共取与不使积越过 m（无过冲）；情感与合宜之评价不带；节不单立为名：节用之约束本编名俭，节拍之「節如發機」〔BI1-S-SZ〕是機之引（D52），节度之评价不立名",
+  "why": "WL revisions (中, keep): Keep is right. The proposal's 「对照标为定域（十二·十四、十二·十五）」 is inaccurate: 十二·十五 labels the 中庸 passage 相分 (中也者天下之大本也), and its 定"
+ },
+ {
+  "row": "中節",
+  "op": "quote-set",
+  "text": "發而皆中節，謂之和@RU1-S-ZY",
+  "why": "WL revisions (中, keep): Keep is right. The proposal's 「对照标为定域（十二·十四、十二·十五）」 is inaccurate: 十二·十五 labels the 中庸 passage 相分 (中也者天下之大本也), and its 定"
+ },
+ {
+  "row": "中節",
+  "op": "anchor-set",
+  "text": "Flow.WithinGap；Flow.withinGap_iff_between",
+  "why": "WL revisions (中, keep): Keep is right. The proposal's 「对照标为定域（十二·十四、十二·十五）」 is inaccurate: 十二·十五 labels the 中庸 passage 相分 (中也者天下之大本也), and its 定"
+ },
+ {
+  "row": "衡",
+  "op": "note-set",
+  "text": "所取之义：称之两边相等：步后之积加共取，等于步前之积加共与（Flow.Balances；一·十五）。荀子正名以衡为称：「衡不正，则重县于仰，而人以为轻」〔RU2-S-XZ22〕，衡正则两边相当（讀，AI；战国）；同段之取、去是择取与舍去，不是名表之取；以道为正权、择祸福之义不带。对照（相合）：同段「以一易一，人曰：无得亦无丧也」〔RU2-S-XZ22〕，一易之得丧是易入与易出之差，与衡之账同式；此得、丧与名表之有得、无丧（Web.Adds、Web.Retains）及得、丧同字异构，不借。不取：解蔽「何谓衡？曰：道」〔RU2-S-XZ21〕之衡是判断之准绳（文理生生 core.084.01；其 JC2 自注不支持均衡态），其本亦是悬衡（「兼陈万物而中县衡焉」）；墨经经说下之衡是称与杆之静力（「衡加重於其一旁，必捶」「本短標長」〔MI1-S-SX〕），亦不入。距离：字义之衡是称与准绳，此名只取称平时所写之等式；衡是宇之设，不是律",
+  "why": "WL revisions (衡, add-quotation): Both quotations are exact (@RU2-S-XZ22, rank 0), and 正名's 衡 as a scale used to weigh what is taken and given up is a sou"
+ },
+ {
+  "row": "衡",
+  "op": "quote-set",
+  "text": "衡不正，则重县于仰@RU2-S-XZ22",
+  "why": "WL revisions (衡, add-quotation): Both quotations are exact (@RU2-S-XZ22, rank 0), and 正名's 衡 as a scale used to weigh what is taken and given up is a sou"
+ },
+ {
+  "row": "正",
+  "op": "note-set",
+  "text": "只名 inPhase（爻之刚柔与位之奇偶相合）；当位（holdsPlace）比正为窄；贞正之例不入。字之主义是正当与纠正（论语「其身正，不令而行」〔RU1-S-LY〕；文理生生 core.087：规范上之正、纠正行为）：正当属价值层，不立为名；纠正之构本编名二程之复合（Rejoining，十一·十一），而无动之程只是比较，不是标准，故不名正；过正、正名之正各有其条",
+  "why": "WL revisions (正, keep): Keep is right. Rejoining's docstring does say that the course without the act is a comparison, not a standard. ZH names "
+ },
+ {
+  "row": "正",
+  "op": "anchor-set",
+  "text": "Hexagram.inPhase",
+  "why": "WL revisions (正, keep): Keep is right. Rejoining's docstring does say that the course without the act is a comparison, not a standard. ZH names "
+ },
+ {
+  "row": "觀",
+  "op": "note-set",
+  "text": "观只指视图（读法之所施：变读其移，系辞读其辞，宇读其积与取与，一·二十）；读只名以象予值，AI 之读法另名「讀」。字义是观看、观察（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.091：观测记录，含误差、漏检与尺度）：观察本编名闻见（从所观者出发之读法之路线）。距离：字义是观之事，此名是观之所施；观其会通之观亦是动作，取所观为视图是本编之约定",
+  "why": "WL revisions (观, keep): The proposal's 「觀乎天文以察時變」 is not exact: the frozen 彖 has a comma, 觀乎天文，以察時變. It passes check_names only because the matc"
+ },
+ {
+  "row": "察",
+  "op": "note-set",
+  "text": "所取之义：一律给一待者之取与，于某步非独由他所待之积而定（ExchangeLaw.Sensitive，不感之否定；不给二历之见证，二历只于一所待之积异而取与异者名应，ExchangeLaw.RespondsTo）；只问是否，多少为应倍；读有穷者，察是法所缘之最小感（不可非之形，least_coupling），不是识。字之常义是察看、检视多条线索（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.095：检视多条线索，不重计同源证据）：检验、验证本编名验、徵；同源证据不重计是 CIVILIZATION 八之缺口六（相通的见证）。孟子「明足以察秋毫之末」〔RU2-S-MZ〕不作引：此句是设为王所不许之辞，察是目之察看，能及至微之升者本编名明（讀，AI）。察看、苛察、心之察（心知之分辨）、监察不入",
+  "why": "WL revisions (察, revise-gloss): The 所名 and 锚 corrections are right, but the proposal's new 所名 「因一所待之积独异而异」 is the shape of RespondsTo (应): ∃ l l' differ"
+ },
+ {
+  "row": "察",
+  "op": "what-set",
+  "text": "敏感（sensitivity）：一待者之取与于某步，非独由他所待至此步之积而定",
+  "why": "WL revisions (察, revise-gloss): The 所名 and 锚 corrections are right, but the proposal's new 所名 「因一所待之积独异而异」 is the shape of RespondsTo (应): ∃ l l' differ"
+ },
+ {
+  "row": "察",
+  "op": "anchor-set",
+  "text": "ExchangeLaw.Sensitive；ExchangeLaw.ReadsFinitely.least_coupling",
+  "why": "WL revisions (察, revise-gloss): The 所名 and 锚 corrections are right, but the proposal's new 所名 「因一所待之积独异而异」 is the shape of RespondsTo (应): ∃ l l' differ"
+ },
+ {
+  "row": "明",
+  "op": "note-set",
+  "text": "已采；字义：明辨、清明（老子十六章「知常曰明」〔YD-LAO-BASE〕、荀子解蔽「虚壹而静，谓之大清明」〔RU2-S-XZ21〕；文理生生 core.096：清楚区分与判断）；此名只取论语之一构：浸润之谮、肤受之愬不行，即耦合及于支持所不标记之积之升，任一正之升皆即分开二程（observed_raise_couples）；老子五十二章「见小曰明」〔YD-LAO-BASE〕与之同向（讀，AI）。距离：字义是一般之明辨，此名是其窄义，且不含判断之真伪；「知常曰明」对应「常」，不作明之引；与察（法所缘之最小感）、知幾（及早所读之耦合）分开",
+  "why": "WL revisions (明, keep): Keep is right, and every quotation is exact. 见小曰明 fits well: observed_raise_couples says any positive raise passes at on"
+ },
+ {
+  "row": "宇",
+  "op": "note-set",
+  "text": "墨经义：遍及异所（經說上「宇，莫東、西、家、南、北」〔MI1-S-SS〕），与久（彌異時）相对；字之本义是屋檐（系辞下「上栋下宇」〔DS03〕），墨经引申为空间之遍及（文理生生 extension.10 取此）。本编无空间之元：以宇名世界，读异所为一宇诸物各所之全（讀，AI）；时间之展开是其行（宇与行为一展开之二读，一·十二），故此宇不与久对；名表之久亦取经上「久，彌異時也」，二名皆离其墨经之对。每个宇是一观，回到展开；不带「宇宙」为实体之义。对照（相合）：庚桑楚「有實而无乎處者，宇也」〔ZH1-S23〕：宇有实而不在任何处，与物之外无容器相合（杂篇，年代有争议；讀，AI）。距离：墨经之宇是空间，此名是诸物及其流与待网之全",
+  "why": "WL revisions (宇, keep): Keep is right. The proposal's 「字之本义是空间之广」 is philologically wrong: the root sense is eaves (上栋下宇@DS03, exact), and space"
+ },
+ {
+  "row": "易",
+  "op": "notad-append",
+  "text": "；文理生生 core.004 亦分二义（持续生成变化、难易之易），证其多义；其持续生成变化之配方是声明有界有限转移模型而登记其变化程序，对本编之变（Generative.Process，不限有穷），其标签以生入变，本编生与变分开",
+  "why": "WL revisions (易, keep): Keep is right. The proposal's 「即本编之变」 overstates: core.004.01 declares a bounded finite transition model, while Generati"
+ },
+ {
+  "row": "德",
+  "op": "notad-append",
+  "text": "；文理生生 core.005.01 取老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕之养护义：其构本编分在与（补给）、容（支持）、持（维持）、恒（更新）；core.005.02 是规范判断，属价值层",
+  "why": "WL revisions (德, keep): The quotation is exact and the names exist (與, 容, 持, 恆). Refusing 德 suits a core whose definitions carry no weight."
+ },
+ {
+  "row": "礼",
+  "op": "notad-append",
+  "text": "；文理生生 core.104 以礼为角色、分配之制度及其践行（应用层）；二者读荀子皆以分配为礼之构：本编据「群而無分則爭」〔RU2-S-XZ10〕，文理生生据礼论「求而无度量分界」（C02），其 core.032.03 对本编分（JointPlan.supports_of_realizes）；礼可作应用之名，核心用分",
+  "why": "WL revisions (礼, keep): Keep is right. The proposal's 「二者读荀子礼论皆为分配」 misattributes ZH's source: ZH's 分 takes 群而無分則爭 from 富國 (RU2-S-XZ10; 王制 RU2-S"
+ },
+ {
+  "row": "信",
+  "op": "notad-append",
+  "text": "；文理生生 core.097.01（履约可靠）之事实标准对本编徵（Verification）、符（Learning.Accords）；core.097.02（信任）是一读者取他者之辞，本编以闻见之经他者之路计，不立信名",
+  "why": "WL revisions (信, keep): Each sense maps onto an existing structure, and 信 carries the agent and value layers the core does not name."
+ },
+ {
+  "row": "虚",
+  "op": "notad-append",
+  "text": "；文理生生 core.110 明言虚不是绝对无（致虚之践、防备薄弱、可容纳之现代延展），容纳之构本编名容，余量名余地；二者皆不以虚为实体或为零，差只在是否立名",
+  "why": "WL revisions (虚, keep): It is a tie, as proposed. Capacity relative to a load, core.110.02 and core.110.03, maps more exactly to 餘地 (Flow.Balanc"
+ },
+ {
+  "row": "反",
+  "op": "notad-append",
+  "text": "；文理生生 core.054 分方向相反与可返归（以 ⟨program⟩origin 判）：一状经一串动可回此状即本编复（Branching.Returns），自今可至某状名可得（Branching.Reachable）；方向相反无须另名；反者道之动二者皆限其域",
+  "why": "WL revisions (反, keep): The difference is in naming only. Branching.Returns is ∃ a t, step s a t ∧ Reach t s, the possibility that a configurati"
+ },
+ {
+  "row": "人",
+  "op": "notad-append",
+  "text": "；文理生生 extension.14 以人为行动主体之域，其签名以 Agent、Entity、Kind 为类（08 semantic_contract.signature_types）；本编不设行动者之元：施者、受者在一展开中分化（非二方法），故不采",
+  "why": "WL revisions (人, keep): The disagreement is substantive. An agent primitive presupposes what the core differentiates within the unfolding, as th"
+ },
+ {
+  "row": "今",
+  "op": "note-replace",
+  "old": "（名表往：历程之前段）",
+  "new": "（名表往：文之前段）",
+  "why": "WL: 往 is the prefix of a 文"
+ },
+ {
+  "row": "錄",
+  "op": "note-replace",
+  "old": "建议：名表往之释「记录、历程之前段」去「记录」二字，免与此名相混。",
+  "new": "名表往之释原为「记录、历程之前段」，今去「记录」二字，免与此名相混，并改名文之前段（WL）。",
+  "why": "WL: the suggestion was taken and 往 now names the prefix of a 文"
+ }
+]

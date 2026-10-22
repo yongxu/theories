@@ -312,3 +312,39 @@ add('域之兼', 'C03', '部分之整体（whole of given parts）：每步运�
 with open(F, 'w', encoding='utf-8') as fh:
     w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
 print('sixth pass:', len(by), 'names')
+# seventh pass (22 October, board item WL, decision D63): 文 and 文同, the judge's five changed rows, and the revisions
+# from 文理生生's textual evidence (parsed by seventh_pass.py into seventh-pass.json, each with its reason)
+_sp = H + '/seventh-pass.json'
+if os.path.exists(_sp):
+    FIELD = {'note': '注', 'what': '所名', 'quote': '引', 'anchor': '锚'}
+    for o in _json.load(open(_sp, encoding='utf-8')):
+        if o['op'] == 'notad-append':
+            continue
+        if o['op'] == 'set':
+            r = by.setdefault(o['row'], {'名': o['row']})
+            r.update(o['fields'])
+            continue
+        r = by[o['row']]
+        kind, how = o['op'].split('-')
+        f = FIELD[kind]
+        if how == 'replace':
+            assert o['old'] in r[f] or o['new'] in r[f], (o['row'], o['old'])
+            r[f] = r[f].replace(o['old'], o['new'])
+        elif how == 'set':
+            r[f] = o['text']
+        elif how == 'append' and o['text'] not in r[f]:
+            r[f] = (r[f] if r[f] not in ('', '—') else '') + o['text']
+        elif how == 'prepend' and o['text'] not in r[f]:
+            r[f] = o['text'] + (r[f] if r[f] not in ('', '—') else '')
+    with open(F, 'w', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
+    na = H + '/symbols-not-adopted.tsv'
+    nrows = list(csv.DictReader(open(na, encoding='utf-8'), delimiter='\t'))
+    for o in _json.load(open(_sp, encoding='utf-8')):
+        if o['op'] == 'notad-append':
+            for r in nrows:
+                if r['字'] == o['row'] and o['text'] not in r['理由']:
+                    r['理由'] += o['text']
+    with open(na, 'w', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=list(nrows[0].keys()), delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(nrows)
+    print('seventh pass:', len(by), 'names')

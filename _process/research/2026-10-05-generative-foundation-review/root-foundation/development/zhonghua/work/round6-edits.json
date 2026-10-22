@@ -1,0 +1,368 @@
+[
+ {
+  "id": "五·四",
+  "find": "往，历程至某步之前段也。",
+  "replace": "往，文至某步之前段也。",
+  "why": "往 is Learning.prefixOf on o : Nat → O, the prefix of a 文; name table row 往 revised (WL)."
+ },
+ {
+  "id": "五·四",
+  "find": "把每一步之状连同其往（历程之前段）读作一状",
+  "replace": "把每一步之状连同其往（以状为值之文之前段）读作一状",
+  "why": "Law.withHistory keeps past configurations latest first, as prefixOf does: the 往 is the prefix of the law's orbit read through the identity (Learnable.course next id s), a sequence of values with no moves, so a 文; kept."
+ },
+ {
+  "id": "九·二十二",
+  "find": "终而复始，历程自某步起，每隔定数之步而复也。凡历程、凡步，有二值，则有二历程同其往而于此步各为一值，二历程皆终而复始；自此往出一值，于二历程皆无不符，不然；值之同异定然否，则于其一不符。不测，凡知来于其上所给之值皆不符之历程也：有一象移每一值，则凡知来于其不测之历程上所给之每值皆不符，无一步起每步皆得者；不测之历程为一法之轨，此法之状含其全往，无一族尽其状。",
+  "replace": "终而复始，文自某步起，每隔定数之步而复也。凡文、凡步，有二值，则有二文与之同往而于此步各为一值，二文皆终而复始；自此往出一值，于二文皆无不符，不然；值之同异定然否，则于其一不符。不测，一知来于其上所给之值皆不符之文也：有一象移每一值，则凡知来于其不测之文上所给之每值皆不符，无一步起每步皆得者；不测之文为一法之轨经一象之文，此法之状含其全往，无一族尽其状。",
+  "why": "All eight 历程 are o : Nat → O (Lasso, no_prefix_fixes_next, holdFrom, claim_missed_on_one, no_prefix_fixes_next_finite, diagonal_misses): 文. no_prefix_fixes_next takes a given o and builds holdFrom o t x / y with o's prefix, so 「二文与之同往」 is exact and avoids the collocation 文同; 不测 is per extrapolation (diagonal pred), so 「一知来」; diagonal t = answerTo other x (pred (orbit answerStep [] t)), the orbit of answerStep read through a map, so 「一法之轨经一象之文」."
+ },
+ {
+  "id": "九·二十二",
+  "find": "这一律不对历程作任何假定",
+  "replace": "这一律不对文作任何假定",
+  "why": "說 follows the 經: no_prefix_fixes_next holds of every o : Nat → O."
+ },
+ {
+  "id": "九·二十二",
+  "find": "二历程都终而复始，即有一族尽其状之宇之历程",
+  "replace": "二文都终而复始，即有一族尽其状之宇之文",
+  "why": "no_prefix_fixes_next_finite: both holdFrom courses are Lasso, so courses of worlds held by a list (lasso_realized)."
+ },
+ {
+  "id": "九·二十二",
+  "find": "任一涯，二历程至涯而同，其后可异",
+  "replace": "任一涯，二文至涯而同，其后可异",
+  "why": "The law cited (此首律) is no_prefix_fixes_next, on courses."
+ },
+ {
+  "id": "九·二十二",
+  "find": "不测之历程（对角历程，`Becoming.Learning.diagonal`）",
+  "replace": "不测之文（对角之文，`Becoming.Learning.diagonal`）",
+  "why": "Learning.diagonal : Nat → O; table row 不測 所名 「对角之文」."
+ },
+ {
+  "id": "九·二十二",
+  "find": "它是一个含全往之法之轨",
+  "replace": "它是一个含全往之法之轨经一象之文",
+  "why": "diagonal_open: the diagonal course is the orbit of answerStep read through a map; the orbit's states are the prefixes (prefix_diagonal)."
+ },
+ {
+  "id": "九·二十三",
+  "find": "凡与历程相符之候选",
+  "replace": "凡与文相符之候选",
+  "why": "index_le_of_accords: Accords (H j) o, o : Nat → O."
+ },
+ {
+  "id": "九·二十四",
+  "find": "则经任一类之历程终而复始",
+  "replace": "则经任一类之文终而复始",
+  "why": "lasso_of_held: Lasso (fun n => reg (Law.orbit next s n)) i q, the orbit read through any map: a 文."
+ },
+ {
+  "id": "九·二十四",
+  "find": "其历程终而复始；有一象移每一值，则其不测之历程不终而复始。",
+  "replace": "其文终而复始；有一象移每一值，则其不测之文不终而复始。",
+  "why": "lasso_of_rest (∃ i q, Lasso o i q) and diagonal_not_lasso: both on o : Nat → O."
+ },
+ {
+  "id": "九·二十四",
+  "find": "是历程之性质",
+  "replace": "是文之性质",
+  "why": "Learning.Lasso is a predicate on o : Nat → O; table row 終而復始: 套索是文之性质."
+ },
+ {
+  "id": "九·二十四",
+  "find": "经任何类之历程都终而复始",
+  "replace": "经任何类之文都终而复始",
+  "why": "lasso_of_held."
+ },
+ {
+  "id": "九·二十四",
+  "find": "对任一终而复始之历程",
+  "replace": "对任一终而复始之文",
+  "why": "rest_unrefuted: Lasso o i q."
+ },
+ {
+  "id": "九·二十四",
+  "find": "它只在终而复始之历程上终于每步皆得",
+  "replace": "它只在终而复始之文上终于每步皆得",
+  "why": "lasso_of_rest."
+ },
+ {
+  "id": "九·二十四",
+  "find": "其不测之历程不终而复始（",
+  "replace": "其不测之文不终而复始（",
+  "why": "diagonal_not_lasso."
+ },
+ {
+  "id": "九·二十五",
+  "find": "凡二历程，其状一不过 N 种、一不过 N′ 种，于 N＋N′－1 步之前皆同，则处处皆同：其往至此定之。此长确切：有二值，则于任何界，有二历程，状各不过其界，同至 N＋N′－2 步之前而于此步异。值之同异定然否，状不过 N 种之历程上，界内终而复始之候选于 N＋N－1 步之前无不符者，永无不符。值之同异定然否，不给界而用最小界之知来，于状不过 N 种之历程，自 N＋N－1 步起每步皆得；有二值，则无知来能于每一状不过 M＋2 种之历程，皆于 M＋M＋2 步得。法下，族中之状闭于此法者，族中二状经类同其来，恰当其来经类于族之员数减一步之前皆同；",
+  "replace": "凡二文，其状一不过 N 种、一不过 N′ 种，于 N＋N′－1 步之前皆同，则处处皆同：其往至此定之。此长确切：有二值，则于任何界，有二文，状各不过其界，同至 N＋N′－2 步之前而于此步异。值之同异定然否，状不过 N 种之文上，界内终而复始之候选于 N＋N－1 步之前无不符者，永无不符。值之同异定然否，不给界而用最小界之知来，于状不过 N 种之文，自 N＋N－1 步起每步皆得；有二值，则无知来能于每一状不过 M＋2 种之文，皆于 M＋M＋2 步得。法下，族中之状闭于此法者，族中二状经类文同，恰当其文于族之员数减一步之前皆同；",
+  "why": "bounded_agree, bounded_agree_exact, bounded_induction, leastBound_exact, rest_earliest are all on o : Nat → O with StatesBelow (states read off the 文): five 历程 → 文. 文同 row: Law.sameFuture_iff_within states Law.SameFuture next o s s′ ↔ agreement of the two courses before l.length − 1."
+ },
+ {
+  "id": "九·二十五",
+  "find": "界只是历程之状之种数，不对历程另作假定",
+  "replace": "界只是文之状之种数，不对文另作假定",
+  "why": "StatesBelow o N counts the states read off the 文 (SameAhead)."
+ },
+ {
+  "id": "九·二十五",
+  "find": "所循之迹出于一法、历程有界之处成立",
+  "replace": "所循之迹出于一法、其文之状有界之处成立",
+  "why": "Same object: the bound is StatesBelow on the course."
+ },
+ {
+  "id": "九·二十一",
+  "find": "是自一历程至某步之前段配一所给之值或阙之任一象",
+  "replace": "是自一文至某步之前段（往）配一所给之值或阙之任一象",
+  "why": "pred : List O → Option O is applied to prefixOf o t, o : Nat → O: 知来 is stated on a 文."
+ },
+ {
+  "id": "九·十九",
+  "find": "一在域之状，一在历程之步",
+  "replace": "一在域之状，一在文之步",
+  "why": "Learning.Accords pred o is on o : Nat → O."
+ },
+ {
+  "id": "凡·三",
+  "find": "则有两个历程同其往而于下一步各取其一",
+  "replace": "则有两串逐步之值同有此往而于下一步各取其一",
+  "why": "no_prefix_fixes_next is on o : Nat → O, so 历程 is the wrong word, but 凡·三 precedes WEN-1 in the outline and may not use 文; 「逐步之值」 says the same object in plain words. The proposed 「与之同往」 had no antecedent here: the sentence gives only 一往, no course."
+ },
+ {
+  "id": "十三·二十",
+  "find": "不经往（所记）本身；记得多不等于择得对",
+  "replace": "不经往（文之前段）本身；所经之往长，不等于择得对",
+  "why": "往 no longer 「记录」 (往 row: 所名去「记录」); this 說's only use of that sense."
+ },
+ {
+  "id": "七·十",
+  "find": "法经一象示之，二状同，恰当经此象其后每步之值皆同。",
+  "replace": "法经一象示之，二状同，恰当其文同。",
+  "why": "文同 row (Law.alike_iff_sameFuture: Alike (frameBy next o) … s s′ ↔ Law.SameFuture next o s s′); 文同 includes the value at step 0, which 「其后每步」 left unclear. 七·十 follows WEN-1 in the outline, so 文 is defined here."
+ },
+ {
+  "id": "七·十",
+  "find": "经所示之象之未来相同（`Becoming.Law.alike_iff_sameFuture`）",
+  "replace": "经所示之象文同（`Becoming.Law.alike_iff_sameFuture`，⟦WEN-1⟧）",
+  "why": "說 follows the 經."
+ },
+ {
+  "id": "九·二十七",
+  "find": "恰当凡经此类同其来之二状，其特征自某步起皆同",
+  "replace": "恰当凡经此类文同之二状，其特征自某步起皆同",
+  "why": "Learnable.learnable_iff quantifies over Law.SameFuture next reg s s′."
+ },
+ {
+  "id": "九·二十七",
+  "find": "经类同来之二状，其特征屡异",
+  "replace": "经类文同之二状，其特征屡异",
+  "why": "Learnable.not_predicts_on_both takes (same : Law.SameFuture next reg s s′)."
+ },
+ {
+  "id": "九·二十七",
+  "find": "把范围推到经类同来而特征在任意晚之步犹异之状",
+  "replace": "把范围推到经类文同而特征在任意晚之步犹异之状",
+  "why": "說 follows the 經 (not_predicts_on_both)."
+ },
+ {
+  "id": "十·十五",
+  "find": "前段之名，以状经类之未来之前段为状之名也。",
+  "replace": "前段之名，以状经类之文之前段为状之名也。",
+  "why": "Law.name next o T s := Learning.prefixOf (fun n => o (Law.orbit next s n)) T: the prefix of the state's 文 (Learnable.course next o s)."
+ },
+ {
+  "id": "十·十五",
+  "find": "此长足以分开凡经类之未来不同之状",
+  "replace": "此长足以分开凡经类不文同之状",
+  "why": "Law.sameFuture_iff_within: 文同."
+ },
+ {
+  "id": "十·十五",
+  "find": "而在一切历程上，没有前段定下一值",
+  "replace": "而在一切文上，没有前段定下一值",
+  "why": "no_prefix_fixes_next is on o : Nat → O."
+ },
+ {
+  "id": "十·一",
+  "find": "（状经类之未来之前段亦其一种，⟦十·十五⟧）",
+  "replace": "（状经类之文之前段亦其一种，⟦十·十五⟧）",
+  "why": "Law.name, as in 十·十五."
+ },
+ {
+  "id": "十·一",
+  "find": "状之名也可以是它经类之未来之有穷前段",
+  "replace": "状之名也可以是它经类之文之有穷前段",
+  "why": "Law.name."
+ },
+ {
+  "id": "凡·十九",
+  "find": "于所证之内容或古文之结构所取之解",
+  "replace": "于所证之内容或古书之结构所取之解",
+  "why": "文 has one sense in 經; 凡 precedes WEN-1."
+ },
+ {
+  "id": "凡·二六",
+  "find": "相合，一段古文所言之结构",
+  "replace": "相合，一段古书所言之结构",
+  "why": "文 has one sense in 經; 凡 precedes WEN-1."
+ },
+ {
+  "id": "凡·二七",
+  "find": "定域，脊柱给出一段古文所言然之确切范围",
+  "replace": "定域，脊柱给出一段古书所言然之确切范围",
+  "why": "文 has one sense in 經; 凡 precedes WEN-1."
+ },
+ {
+  "id": "凡·二八",
+  "find": "相分，古文所断言者理论不断言",
+  "replace": "相分，古书所断言者理论不断言",
+  "why": "文 has one sense in 經; 凡 precedes WEN-1."
+ },
+ {
+  "id": "十三·二十一",
+  "find": "所装、文法、一族问与积皆为所给",
+  "replace": "所装、语法、一族问与积皆为所给",
+  "why": "文 has one sense in 經, and 「文法」 would read as 文＋法 now that both are names (stable id 十三·二十一, rendered 十三·二十 取法)."
+ },
+ {
+  "id": "一·二",
+  "find": "之义（一种可能的移易）",
+  "replace": "之义（或，处所，古之域字，不是名表之域：动是所处之移徙；讀，AI，D62）",
+  "why": "動 row: 墨经义：或即域（古字），处所：动是所处之移徙. The row also says this 域 is not the table's 域 (一组状) and that reading 徙 this way is 讀（AI）. 域 is a name, so the 說 has to say so."
+ },
+ {
+  "id": "四·二",
+  "find": "对照（相合，zhuangzi-qiushui-bu-ying-bu-xu）",
+  "replace": "名取「衡不正，则重县于仰」〔RU2-S-XZ22〕（先秦，《荀子·正名》，战国末）之衡：衡是称，正则两边相当（讀，AI，D62）；同段以道为古今之正权、择祸福之义不带（相分，xunzi-zhengming-zheng-quan）。对照（相合，zhuangzi-qiushui-bu-ying-bu-xu）",
+  "why": "衡 row: the name quotation (exact ctq.py hit in RU2-S-XZ22). Its reading is marked 讀 as the row marks it, the layer is given as elsewhere for 正名, and the passage's divergence (xunzi-zhengming-zheng-quan, kind divergence) is kept."
+ },
+ {
+  "id": "四·十三",
+  "find": "取与出于每一族。",
+  "replace": "取与超出每一族。",
+  "why": "出于 here means \"beyond\" (開 row: 超出每个有限家族的交换); 出于 reads as \"comes from\"."
+ },
+ {
+  "id": "四·十三",
+  "find": "开是出于每一族之取与",
+  "replace": "开是超出每一族之取与",
+  "why": "Same."
+ },
+ {
+  "id": "七·十二",
+  "find": "以其类代状之变为法，亦恰当此。",
+  "replace": "以其类代状之变为法，亦恰当此。以其类代状之变，许变经此类之每步；凡许变经此类之每步者，皆许以其类代状之变之每步。",
+  "why": "The image laws belong to 理 (judge): factors_image (FactorsThrough P π (Image P π)) and Image.least (FactorsThrough P π Q → every Image step is a Q step)."
+ },
+ {
+  "id": "七·十二",
+  "find": "承载者可取以其类代状之变（`Becoming.image_determined_iff`）。",
+  "replace": "承载者可取以其类代状之变（`Becoming.image_determined_iff`）。以其类代状之变（`Becoming.Image`，变经一类所示之变）许变经此类之每步（`Becoming.factors_image`），且是这样的变中最少者：任何一变，只要许变经此类之每一步，就许以其类代状之变的每一步（`Becoming.Image.least`）；所以理恰是其所示之变为法之类。此变是相若（⟦九·十四⟧）之最小者，不另立名；它也不是文：它给状之类与动，文只给值（⟦WEN-1⟧）。",
+  "why": "States the image laws and how they divide the work with 相若 and 文, with no new name. Image : Process K A gives classes and moves, not values."
+ },
+ {
+  "id": "七·十二",
+  "find": "理是分，这一半相合；一分何时为理，原句未说。",
+  "replace": "理是分，这一半相合；一分何时为理，原句未说。同篇「理者，成物之文也」〔CV1-S-JL〕亦定域（讀，AI，D63）：理自文读出，不是文（⟦WEN-1⟧）。法经一象示之，凡守象之值而为理之类所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守象之值、为理而并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`）。所以于守象之值之最粗之理，所并者恰为文同之状，「物有理，不可以相薄」〔CV1-S-JL〕即理不并不文同之状；这是四条已检之律之合（又 `Becoming.Law.alike_iff_sameFuture`、`Becoming.identifiesAlike_iff`），不是一条定理。同篇以理为物之制、以道为万物之所以成，皆不带。",
+  "why": "Now that 文 is a name, the 理 row's quotation becomes 定域 (exact ctq.py hits in CV1-S-JL). sameFuture_of_law takes keeps, GoAlike and π s = π s′ to SameFuture; identifiesAlike_of_law adds coarsest. The proposed 「文异」 is an undefined combination, so 「不文同」 is used, as in 十·十五. The proposed 「成物之成」 named nothing in the passage; the two senses not carried are 「理之為物之制」 and 「道者，萬物之所以成也」."
+ },
+ {
+  "id": "七·十二",
+  "find": "`Becoming.image_determined_iff`、`Becoming.carries_law_alike_iff`",
+  "replace": "`Becoming.image_determined_iff`、`Becoming.Image`、`Becoming.factors_image`、`Becoming.Image.least`、`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`、`Becoming.carries_law_alike_iff`",
+  "why": "證 for the added laws."
+ },
+ {
+  "id": "七·十二",
+  "find": "记录 [projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、",
+  "replace": "记录 [projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)、",
+  "why": "the-split-that-makes-sense records sameFuture_of_law and identifiesAlike_of_law; projection-carrying-a-law records factors_image and Image.least."
+ },
+ {
+  "id": "九·十四",
+  "find": "在相若之下，一次代其类（`Becoming.Run.generalizes`）。",
+  "replace": "在相若之下，一次代其类（`Becoming.Run.generalizes`）。以其类代状之变（`Becoming.Image`，变经一类所示之变）是相若之最小者：原变之步经此类都是它的步（`Becoming.factors_image`），而任何一变，只要原变之步经此类都是它的步，就许以其类代状之变的每一步（`Becoming.Image.least`）。此变为法，恰当此类为理（⟦七·十二⟧）；它不另立名，也不是文（⟦WEN-1⟧）。",
+  "why": "The judge assigns the image laws to 相若 as well; they are stated without a new name. 「此变为法，恰当此类为理」 is image_determined_iff (cited in 七·十二)."
+ },
+ {
+  "id": "九·十四",
+  "find": "`Becoming.FactorsThrough`、`Becoming.Run.generalizes`",
+  "replace": "`Becoming.FactorsThrough`、`Becoming.Image`、`Becoming.factors_image`、`Becoming.Image.least`、`Becoming.Run.generalizes`",
+  "why": "證."
+ },
+ {
+  "id": "九·十四",
+  "find": "记录 [experiment-needs-return](../results/records/experiment-needs-return.md)、",
+  "replace": "记录 [experiment-needs-return](../results/records/experiment-needs-return.md)、[projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、",
+  "why": "證 record for the image laws."
+ },
+ {
+  "id": "C01:INTRO",
+  "find": "次说系辞与辞、观与名；",
+  "replace": "次说系辞与辞、观与名，文（一历经一象逐步之值，其状与法自文读出）与文同；",
+  "why": "The new 條 WEN-1 sits after 观 (一·十四)."
+ },
+ {
+  "id": "C08:INTRO",
+  "find": "终说知来：往不定来，凡知来皆有其不测之历程；过则改在终而复始之历程上不符有界；",
+  "replace": "终说知来，皆在文上（⟦WEN-1⟧）：往不定来，凡知来皆有其不测之文；过则改在终而复始之文上不符有界；",
+  "why": "不测 and 终而复始 are on a 文 (diagonal, Lasso)."
+ },
+ {
+  "id": "凡·七",
+  "find": "「盡有窮無難」一句文有校改之争",
+  "replace": "「盡有窮無難」一句有校改之争",
+  "why": "No 條 may use 文 before WEN-1, and 凡 precedes it in the outline; 「一句文」 is the text sense."
+ },
+ {
+  "id": "凡·十九",
+  "find": "名之出处与古文对照之读",
+  "replace": "名之出处与古书对照之读",
+  "why": "Matches this 條's 經 (古文 → 古书) and keeps 文 out of 凡, which precedes WEN-1."
+ },
+ {
+  "id": "凡·十九",
+  "find": "来源之文是一词何义的证据",
+  "replace": "来源之书是一词何义的证据",
+  "why": "No 條 uses 文 before WEN-1; 「来源之文」 is the text sense."
+ },
+ {
+  "id": "凡·十九",
+  "find": "不是原文如其所言为真",
+  "replace": "不是原句如其所言为真",
+  "why": "No 條 uses 文 before WEN-1; 原句 is the book's word elsewhere (七·十二 「原句未说」)."
+ },
+ {
+  "id": "凡·二六",
+  "find": "律之然不靠原文，原文之义也不由律穷尽",
+  "replace": "律之然不靠原句，原句之义也不由律穷尽",
+  "why": "No 條 uses 文 before WEN-1."
+ },
+ {
+  "id": "凡·二七",
+  "find": "古文以全称讲出的结构",
+  "replace": "古书以全称讲出的结构",
+  "why": "Matches this 條's 經 (古文 → 古书); 凡 precedes WEN-1."
+ },
+ {
+  "id": "一·十",
+  "find": "（文中「法」「因」「果」都取佛典之义",
+  "replace": "（句中「法」「因」「果」都取佛典之义",
+  "why": "No 條 uses 文 before WEN-1 (一·十, rendered 一·十三, precedes it); the quoted 法藏 passage is one sentence."
+ },
+ {
+  "id": "C16:INTRO",
+  "find": "古典之文与脊柱之律以哪三种关系对照",
+  "replace": "古书与脊柱之律以哪三种关系对照",
+  "why": "Matches 凡·二六–二八 (古文 → 古书); the 凡例 intro precedes WEN-1."
+ },
+ {
+  "id": "十·十四",
+  "find": "文法、所问与习之程皆是所给",
+  "replace": "语法、所问与习之程皆是所给",
+  "why": "After WEN-1, 「文法」 reads as 文＋法 (WEN-1 speaks of 文之法); same fix as 十三·二十一's 經."
+ }
+]

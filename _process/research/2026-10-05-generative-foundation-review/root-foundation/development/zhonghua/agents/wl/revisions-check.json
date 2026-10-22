@@ -1,0 +1,237 @@
+{
+ "decisions": [
+  {
+   "character": "系",
+   "ours": "繫辭 (C01): frame (Frame); 引 系辞焉而明吉凶@DS02. 系 is not a name by itself.",
+   "theirs": "core.007.01 系 = typed relation (RelationSymbol × TypedArguments → Formula), a label borrowed from 系辞 (04: 项目定义; 05 JY7).",
+   "decision": "keep",
+   "change": "繫辭 row: 所名, 锚 and 引 unchanged. Append to 注: 「；系不单立为关系之名：本编不立泛称之关系，每一关系各有其名（待、取与、感等），一宇只有一类物，待者与所待是一物之二角（凡·二）；文理生生 core.007.01 以系为带类型关系之总标签，其 04 表自注为项目定义，05 JY7 亦自注五元之系只是借字；系辞焉之系是系属、系附，正是此名所取」. Corrections to the proposal: 「凡·拟」 becomes 凡·二 (the citation form), and 「关系项本身是关系的」 is replaced by what 凡·二 actually says.",
+   "why": "Keep is right. 系辞焉 means attaching statements to the figures, which is what Frame does, and 文理生生's own JY7 says its 系 only borrows the character. One part of the stated reason is wrong, though: typed relations are not 'the entities-first framing the core does not presuppose'. The Lean core is typed as well: Web F C is over formations and conditions, and requires is Nat → F → C → Prop. The real difference is that ZH names each relation and keeps no generic label."
+  },
+  {
+   "character": "形",
+   "ours": "有形 (C02, 新): embodied, activity exactly where the level is positive (Web.Embodied; World.Embodied). No 引. 状 names the configuration.",
+   "theirs": "core.015.01 structural shape; core.015.02 disclosure to an observer (系辞, 老子51, 孙子 形人而我無形).",
+   "decision": "keep",
+   "change": "Reject the add-quotation. 有形 row: 所名 and 锚 unchanged, 引 stays —, 式 stays 新, and ZH 二·十一 說 stays as it is (「新组合：有＋形」 remains). 注→「取代以「体」名体现；World.ArisingEmbodied 同族；只取运恰在有积之处：一物于他物之为所待，就是它自身之运（二·十一），不带形体之义。字义：形是形状、显露（孙子「形人而我無形」〔BI1-S-SZ〕；文理生生 core.015：结构形态、对观察者显露）：构形本编名状，显露于观者名闻见。先秦之「有形」是有形体：解老「凡物之有形者易裁也……有形則有短長」〔CV1-S-JL〕、秋水「夫精粗者，期於有形者也」〔ZH1-S17〕以有形体者为可度、可分；其说不及运，而遗骸有形体却不运（二·十一），故不作引。距离：此名取有＋形之字面，所名是约定」",
+   "why": "The quotation is exact, but it does not fit the row. (1) In 解老, 有形 means having a physical body, a thing that is 易裁、易割. That is the 形体 sense the row refuses. (2) The passage also lists 方圓 and 白黑 among what form brings, and it concludes 理定而物易割, so 'having magnitudes' overstates it. (3) The passage says nothing about activity, while Web.Embodied is ∀ t, active t x ↔ 0 < level t x. ZH 二·十一's own example, remains that keep a level after activity stops, is 有形 in 解老's sense but is not Embodied. (4) 秋水 runs the other way (精粗 presupposes 有形); it is not '同向'. (5) check_names gives CV1-S-JL rank 2, because the title 解老 matches its commentary pattern. The claimed rank 0 is wrong."
+  },
+  {
+   "character": "因",
+   "ours": "因 (C12): inheritance (Web.InheritsAt); 引 殷因於夏禮，所損益可知也.",
+   "theirs": "core.026 acting according to conditions, and choosing actions by observation (因其固然; 孙子 因敌).",
+   "decision": "keep",
+   "change": "因 row: 所名, 锚 and 引 unchanged. 注→「与「损益」同出论语；所取之义：x 出于 g 之步，x 步后所待者 g 步前皆待之（InheritsAt，逐一所待而言）。字之主要哲学义是依、顺：依条件而行（养生主「因其固然」〔ZH1-S03〕；文理生生 core.026：依条件行事、依观测择动），此构本编名应（ExchangeLaw.RespondsTo）、缘感而择（Web.SelectsThrough），不名因；因亦不读作今语之原因（必要、充要之条件名小故、大故）。距离：此名只取因之承袭一义」",
+   "why": "The proposal is sound, with one wording collision. The phrase 「后者跨步之所待皆出于前者之所待」 uses 出于, the 所出 row's word for descent (x 出于 g), for a different relation. InheritsAt t x g c is: x requires c at t+1 → g required c at t. The rewrite states that exactly, uses 出于 only for the descent itself, and has been checked against Transmission.lean. The mappings to 应 and 缘感而择, and to 小故 and 大故, match the table."
+  },
+  {
+   "character": "承",
+   "ours": "承 (C17): only the hexagram seam (soft below, firm above). No anchor and no 引.",
+   "theirs": "core.028 bearing an influence, and lineage (坤 乃順承天).",
+   "decision": "keep",
+   "change": "承 row: 所名 and 引 unchanged. 锚 —→Hexagram.rises (it resolves; HexagramPlaces.lean's definition is 'A rise across a seam (承): a broken line below an unbroken one'). 注→「只名下柔上刚之缝（Hexagram.rises；易传彖、小象之承乘，王弼爻位之技术义）；字之通义是承受、承载与承接（坤彖「乃順承天」〔YD-HX01〕；文理生生 core.028：承受作用、谱系承接）：承受作用之构本编名感、正需，谱系之承接名所出、因；在下承上之通义与「相承」相助之义不入」. Follow-up for the chapter: ZH 序, line 19 (「与、取、容、承都是这样。以它们立名」), lists 承 among the characters that names are set with, which contradicts this row. Replace 承 there, for example with 感.",
+   "why": "Keep is right, because the general senses already have names. The comparison also exposed two things. The seam has an exact Lean anchor, and the 承乘 vocabulary is the 易传's (乘剛 in 彖, 承上 in 小象), systematized by 王弼, not 王弼's alone. It also exposed the contradiction in the preface."
+  },
+  {
+   "character": "界",
+   "ours": "界 only in 涸界 (RegimeMargin.ends_iff_below). The boundary of a self is 畛.",
+   "theirs": "core.040 membership boundary, and allocation limit (荀子礼论 度量分界).",
+   "decision": "keep",
+   "change": "涸界 row: 所名, 锚 and 引 unchanged. Prepend to 注: 「界取分界：荀子礼论「求而无度量分界，则不能不争」〔RU2-S-XZ19〕之界是分配之限（文理生生 core.040：成员边界、分配界限）；涸界之界分始积为二域：始于其下者涸，始于其上至 hi 者不降于其始（holds）；成员之界本编名己、畛，分配之限名分。」",
+   "why": "Nothing conflicts and the quotation is exact. The proposal's 「始于其上者守」 overstates the result: RegimeMargin.holds assumes H+y ≤ x ≤ hi, and the row's own note already says 自其上至 hi. ends_iff_below likewise carries x ≤ hi."
+  },
+  {
+   "character": "生",
+   "ours": "生 (C06): generation, as opposed to degeneration. No anchor and no 引. 作 names arising, 活 names living, and 成生 is Web.Widens.",
+   "theirs": "core.044.01–04: a kind appears; an instance is born into a kind; producing successors; being alive.",
+   "decision": "keep",
+   "change": "生 row: 所名, 锚 and 引 unchanged, and 「天地之大德曰生」 is not taken as 引. 注→「生只指生成：积之历广偏去此体之积之历（成生，Web.Widens，六·六），与绝生（退化）、相赅、互有所长四者不相兼。字义宽：先秦之生兼出现、出生、产生后继、活着（系辞上「生生之谓易」〔DS02〕、老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕、知北游「人之生，氣之聚也」〔ZH1-S22〕；文理生生 core.044.01–04 分为模式出现、实例入类、产生后续实例、活着四义）；字之他义本编另名：出现与入类→作、成、新作；产生后继→所出、出者；活着→活。距离：以生专名与退化相对之生成是本编之约定（讀，AI，D1、D2），不是字之通义；任一新出现不即是生。系辞下「天地之大德曰生」〔DS03〕以生为德，价值之义不带：诸程孰愈只在以广为愈。文理生生亦拒以生推善（CX01），与此同向」",
+   "why": "The reasoning is right, and every quotation is exact. CX01 does refuse 生成就是善. One correction: the proposal wrote 「一体之积之历与偏去此体之积之历相较而广」. Widens compares the level history with the part against the history without it, not the part's own levels, so the clause now follows 六·六's wording."
+  },
+  {
+   "character": "开",
+   "ours": "開 (C04): openness, exchange beyond every finite family (World.arising_opens). No 引.",
+   "theirs": "core.052.01: making a channel available (老子52 开其兑; JY4).",
+   "decision": "keep",
+   "change": "開 row: 所名, 锚 and 引 unchanged. Append to 注: 「；开是宇之性质，不是一次动作：不能自某步起每步有封，即取与超出每一有穷之族（四·十二）。字义：开启门户、通道（老子五十二章「开其兑，济其事，终身不救」〔YD-LAO-BASE〕；文理生生 core.052.01：使一通道由不可用而可用）；一部分之开启本编名闢（需净与），一族一步不封即此字义读于一族；老子以开为终身不救、以闭为终身不勤之价值不带。距离：字义是一通道之一开，此名是「自某步起每步皆有一有穷之族封」之否，读于宇之全行；不以开其兑作引，因其所言是一身之孔窍与欲之境」. Follow-up: the wording 「取与出于每一族」 in ZH 四·十二's 經 and 說 uses 出于 (the 所出 word for descent) to mean 'beyond'; it should be revised the same way.",
+   "why": "Keep is right. Two corrections. (1) The proposal's 「自某步起每族皆封」 misstates arising_opens: it is ¬ ∀ t ≥ T, Enclosed t, and Enclosed t is ∃ cs, Distinct cs ∧ ClosedAt cs t. That is some finite family per step, not every family. (2) The proposal's 「取与出于每一族」 collides with 所出's 出于."
+  },
+  {
+   "character": "闭",
+   "ours": "閉 (C07): absorbing region (Law.Absorbing; equals 常 under a determined law). No 引.",
+   "theirs": "core.053.01: closing a channel (老子52 塞其兑，闭其门; JY4).",
+   "decision": "keep",
+   "change": "閉 row: 所名, 锚 and 引 unchanged. Append to 注: 「；字义：关闭门户、通道（老子五十二章「塞其兑，闭其门」〔YD-LAO-BASE〕；文理生生 core.053.01：使通道关闭，须择程度或全闭）；一族一步不与外交换本编名封（取代「闭关」），闭只名一域：律入之则不出（Absorbing 不要求有入者），与闭门之出入皆阻不同（讀，AI）。距离：字义是对一通道之动作，此名是一域之性质；老子以闭为善（终身不勤）之价值亦不带」",
+   "why": "Keep is right. The proposal's 「可入而不可出」 was softened: Law.Absorbing is ∀ s, R s → R (next s). It forbids leaving, but it does not assert that anything can enter. 老子27 「善闭无关楗而不可开」 (exact @YD-LAO-BASE) was considered as a 引 and declined: it blocks both ways and carries 善."
+  },
+  {
+   "character": "聚",
+   "ours": "聚 (C03): comes to stand as a condition (Web.ComesToStand). No 引.",
+   "theirs": "core.056: aggregation, and a formed aggregate (知北游 气之聚; Z01).",
+   "decision": "keep",
+   "change": "Adopt the proposal unchanged. 聚 row: 所名, 锚 and 引 unchanged. 注→「与「散」成对；只取有积之一读：一所待之积跨一步由零而正（ComesToStand；作、结、聚为一变化之三读，一·六）；不带「气之聚」之本体义。字义：聚集、聚合成团（知北游「人之生，氣之聚也，聚則爲生，散則爲死」〔ZH1-S22〕，系辞上「方以类聚」〔DS02〕；文理生生 core.056：聚合过程、已成聚合）：组成者间关系之形成本编名结，有形之物上作则聚（Web.Embodied.comesToStand）。距离：字义是多者会聚，此名只说一所待之积之有无」",
+   "why": "The quotations are exact, the anchors resolve, and the three readings match change_readings (Iff.rfl) and 一·六."
+  },
+  {
+   "character": "散",
+   "ours": "散 (C03): ceases to stand. The table's anchor reads Web.ComesToStand, which is an error.",
+   "theirs": "core.057: disassembly; organizing relations dissolve while the components may remain.",
+   "decision": "keep",
+   "change": "Adopt the proposal. 散 row: 所名 and 引 unchanged. 锚 Web.ComesToStand→Web.CeasesToStand. 注→「与「聚」成对；只取有积之一读：一所待之积跨一步由正而零（CeasesToStand）。字义：离散、解组（知北游；文理生生 core.057：组织关系解除而组成物可仍在）：关系之消解本编名解，组成者之仍在由其各自之积读出；达生「散則成始」之散读为裂，不是此名。距离同聚」. Also regenerate the chapter's name appendix (ZH line 3650 repeats the wrong anchor) and NAMES-ZH.md from the tsv.",
+   "why": "The anchor error is confirmed: Change.lean:481 defines CeasesToStand, and ZH 三·二 cites it. The 达生 reading as 裂 is already ZH's own (its 对照 zhuangzi-dasheng-he-san, line 803)."
+  },
+  {
+   "character": "动",
+   "ours": "動 (C01): move (withMove); 引 動，或徙也; 注 glosses 或徙 as 一种可能的移易.",
+   "theirs": "core.058.01: change of position (墨经; M1); core.058.02: activity.",
+   "decision": "revise-gloss",
+   "change": "動 row: 所名 and 锚 unchanged. 引→「動，或徙也@MI1-S-JS」. 注→「墨经义：或即域（古字），处所：动是所处之移徙；同篇「窮，或有前不容尺也」〔MI1-S-JS〕、經下「宇或徙，說在長宇久」〔MI1-S-JX〕皆以或为处所，經說上「動，偏、祭徙」〔MI1-S-SS〕或分一偏之徙与全徙（训释有分歧，只作旁证）。此处所之域是墨经之字，不是名表之域（一组状）。动作是步间之移之标记，律在一步所留开者；施于一状，状移至他状（withMove 把动读入状），以之读墨经之徙是讀（AI）。原注「一种可能的移易」读或为或然，误，已改；此或亦不是凡·四之或。不带「动静」形上义。文理生生 core.058.01（位置移动）与此同读」. In ZH 一·三 說, replace 「（一种可能的移易）」 with 「（或即域，处所：所处之移徙）」.",
+   "why": "The correction is right, and every quotation is exact. The proposal's wording 「所在之域」 would let the reader take 域 as the table's 域 (a set of configurations), so the gloss says 处所 and states the difference. The function word 或 is 凡·四 (必与或)."
+  },
+  {
+   "character": "往",
+   "ours": "往 (C08): record, course prefix (Learning.prefixOf; Run.Fixes); 引 彰往而察来@DS03.",
+   "theirs": "core.071: leaving a reference, and advancing to the next event (系辞下 日往月来; JY8).",
+   "decision": "keep",
+   "change": "Adopt the proposal unchanged. Append to 往 注: 「；字之常义是去、离开（系辞下「日往则月来」〔DS03〕；文理生生 core.071：离开参照、向后续推进）：往来之交替本编不以往名，其构见复、环，往来不必周期。距离：此名取往之已过一义（彰往、藏往、数往），以之名历程之前段是本编之约定」",
+   "why": "The quotations are exact: 日往则月来@DS03, 知以藏往@DS02, 数往者顺@DS04. The sense knowing needs is the one taken."
+  },
+  {
+   "character": "亡",
+   "ours": "亡 (C03): ends (Web.Ends); 引 死而不亡者寿@YD-LAO-BASE.",
+   "theirs": "core.076: an instance leaves a kind in one event (EndAs).",
+   "decision": "keep",
+   "change": "亡 row: 所名, 锚 and 引 unchanged. Append to 注: 「；文理生生 core.076 之亡（一事件中实例退出某类）是一辞（属此类）跨一步由然而不然，本编名毁（CeasesToBe）；读于运即已（止息，Web.Ceases）：已是一步之止，亡是自某步起永不再运；退出一类不即亡，文理生生亦自注之」",
+   "why": "The proposal mapped core.076 to 已 alone. EndAs is ?E(P,i);a;?¬E(P,i), which is a membership claim ceasing to hold, so its exact name is 毁 (CeasesToBe). 已 is that change read of activity (一·六)."
+  },
+  {
+   "character": "中",
+   "ours": "中 not a single-character name; 中和 (Regulation; 致中和), 中節 (Regulation; 發而皆中節謂之和), 中位.",
+   "theirs": "core.082: affect not yet expressed; timely appropriateness. It refuses the mean and stability readings (C06).",
+   "decision": "keep",
+   "change": "中和 row: 所名, 锚 and 引 unchanged. 注 「已采」→「已采；中庸之中是「喜怒哀樂之未發，謂之中」〔RU1-S-ZY〕，和是发而中节：情之未发与发之合度，带情感与规范之境（文理生生 core.082：情感未发、时中之合宜判断，拒以中点、稳定点读中）；此名只取其构：相反给向，中节给界，二者合而积定于 m（Regulation，十二·十五）；十二·十四以同章「發而皆中節，謂之和」为定域，十二·十五以「中也者，天下之大本也」为相分；情感、修养、时中之义不带」. 中節 row: 锚 Regulation→「Flow.WithinGap；Flow.withinGap_iff_between」, which is what 十二·十四 cites, and both resolve. 引 may take the frozen comma, 「發而皆中節，謂之和@RU1-S-ZY」. 注 —→「中庸「發而皆中節，謂之和」只取其构：一步之共取与不使积越过 m（无过冲）；情感与合宜之评价不带；节不单立为名：节用之约束本编名俭，节拍之「節如發機」〔BI1-S-SZ〕是機之引（D52），节度之评价不立名」",
+   "why": "Keep is right. The proposal's 「对照标为定域（十二·十四、十二·十五）」 is inaccurate: 十二·十五 labels the 中庸 passage 相分 (中也者天下之大本也), and its 定域 is 老子77. The 中節 anchor is the module, not the definition the chapter uses. The 节 senses of 文理生生 map onto existing names: 儉 and 機, whose 引 is 節如發機."
+  },
+  {
+   "character": "衡",
+   "ours": "衡 (C04): balance (Flow.Balances). No 引. 注: 墨经之衡是杠杆、荀子之衡是标准，都不入.",
+   "theirs": "core.084.01: a standard of judgment (荀子解蔽; JC2, which says it does not support equilibrium); core.084.02: a modern regulation extension.",
+   "decision": "add-quotation",
+   "change": "衡 row: 所名 and 锚 unchanged. 引 —→「衡不正，则重县于仰@RU2-S-XZ22」. This is the only 引: drop the proposed second 引 「以一易一，人曰：无得亦无丧也」. 注→「所取之义：称之两边相等：步后之积加共取，等于步前之积加共与（Flow.Balances；一·十五）。荀子正名以衡为称：「衡不正，则重县于仰，而人以为轻」〔RU2-S-XZ22〕，衡正则两边相当（讀，AI；战国）；同段之取、去是择取与舍去，不是名表之取；以道为正权、择祸福之义不带。对照（相合）：同段「以一易一，人曰：无得亦无丧也」〔RU2-S-XZ22〕，一易之得丧是易入与易出之差，与衡之账同式；此得、丧与名表之有得、无丧（Web.Adds、Web.Retains）及得、丧同字异构，不借。不取：解蔽「何谓衡？曰：道」〔RU2-S-XZ21〕之衡是判断之准绳（文理生生 core.084.01；其 JC2 自注不支持均衡态），其本亦是悬衡（「兼陈万物而中县衡焉」）；墨经经说下之衡是称与杆之静力（「衡加重於其一旁，必捶」「本短標長」〔MI1-S-SX〕），亦不入。距离：字义之衡是称与准绳，此名只取称平时所写之等式；衡是宇之设，不是律」. Add to ZH 一·十五 說: 「名取「衡不正，则重县于仰」〔RU2-S-XZ22〕之衡：称，正则两边相当」.",
+   "why": "Both quotations are exact (@RU2-S-XZ22, rank 0), and 正名's 衡 as a scale used to weigh what is taken and given up is a sound source. The second 引 does not belong in the field, for two reasons. It does not contain 衡. Its 得 and 丧 collide with four existing names: 有得 (Web.Adds), 無喪 (Web.Retains), whose own note already marks 「无喪无得」 as 同字异构, 得 (RightAt) and 喪 (loss of a claim). So it becomes a labelled 对照. The note also names 共取 and 共与 as Balances does (L.taken and L.given are totals), and it records that this 取 is choosing, not the table's 取."
+  },
+  {
+   "character": "节",
+   "ours": "节 is not a single-character name; only in 中節 and 環節. 環節's note already says 不单用节.",
+   "theirs": "core.085: budget constraint, timing and rhythm, institutional measure (节卦; 孙子 节如发机).",
+   "decision": "keep",
+   "change": "No row of its own. The senses are recorded in the new 中節 note (see 中): the budget constraint is 儉 (Flow restraint, 俭故能广@YD-LAO-BASE); timing is 機, whose 引 is the very sentence 節如發機; the normative measure is not a name. 文理生生 core.085.02's timing sense also meets the open CIVILIZATION 八 gap 7, 「其勢險，其節短」〔BI1-S-SZ〕 (机之度量), which stays open.",
+   "why": "Nothing conflicts. The proposal left 文理生生's senses unmapped, but ZH has exact homes for two of them: 儉 for restraint, and 機, whose 引 is 文理生生's own S3 sentence."
+  },
+  {
+   "character": "正",
+   "ours": "正 (C17): only inPhase (HexagramPlaces); 贞正之例不入.",
+   "theirs": "core.087: normative correctness, and correcting an action (论语 其身正; C08, C07).",
+   "decision": "keep",
+   "change": "正 row: 所名 and 引 unchanged. Optional exact anchor: 锚 HexagramPlaces→Hexagram.inPhase (it resolves). 注→「只名 inPhase（爻之刚柔与位之奇偶相合）；当位（holdsPlace）比正为窄；贞正之例不入。字之主义是正当与纠正（论语「其身正，不令而行」〔RU1-S-LY〕；文理生生 core.087：规范上之正、纠正行为）：正当属价值层，不立为名；纠正之构本编名二程之复合（Rejoining，十一·十一），而无动之程只是比较，不是标准，故不名正；过正、正名之正各有其条」",
+   "why": "Keep is right. Rejoining's docstring does say that the course without the act is a comparison, not a standard. ZH names that structure 复合 (十一·十一), and the note uses that name rather than the bare Lean module. The note also records that 當位 is holdsPlace, which is narrower; the Lean docstring's '(inPhase, 正, 當位)' is out of date on this."
+  },
+  {
+   "character": "观",
+   "ours": "觀 (C01): view, the general name for process, frame and world; 引 观其会通@DS02. Observation is 聞見.",
+   "theirs": "core.091: an observation record with error and scale (贲彖 观乎天文以察时变; M4).",
+   "decision": "keep",
+   "change": "Adopt the proposal with the quotation made exact. 觀 row: 所名, 锚 and 引 unchanged. 注→「观只指视图（读法之所施：变读其移，系辞读其辞，宇读其积与取与，一·二十）；读只名以象予值，AI 之读法另名「讀」。字义是观看、观察（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.091：观测记录，含误差、漏检与尺度）：观察本编名闻见（从所观者出发之读法之路线）。距离：字义是观之事，此名是观之所施；观其会通之观亦是动作，取所观为视图是本编之约定」",
+   "why": "The proposal's 「觀乎天文以察時變」 is not exact: the frozen 彖 has a comma, 觀乎天文，以察時變. It passes check_names only because the matching ignores punctuation. The rest fits 一·二十."
+  },
+  {
+   "character": "察",
+   "ours": "察 (C08): 所名 「敏感性：读有限多条件之律之最小耦合」; anchor Sensitivity (module); no 引. ZH 九·十一 anchors ExchangeLaw.Sensitive.",
+   "theirs": "core.095: examining several clues, without double-counting evidence from one source (Y01, C08).",
+   "decision": "revise-gloss",
+   "change": "察 row: 所名→「敏感（sensitivity）：一待者之取与于某步，非独由他所待至此步之积而定」 (as in 九·十一 經). 锚 Sensitivity→「ExchangeLaw.Sensitive；ExchangeLaw.ReadsFinitely.least_coupling」. 引 stays —; reject 「明足以察秋毫之末@RU2-S-MZ」 and add no 名取 sentence to 九·十一. 注→「所取之义：一律给一待者之取与，于某步非独由他所待之积而定（ExchangeLaw.Sensitive，不感之否定；不给二历之见证，二历只于一所待之积异而取与异者名应，ExchangeLaw.RespondsTo）；只问是否，多少为应倍；读有穷者，察是法所缘之最小感（不可非之形，least_coupling），不是识。字之常义是察看、检视多条线索（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.095：检视多条线索，不重计同源证据）：检验、验证本编名验、徵；同源证据不重计是 CIVILIZATION 八之缺口六（相通的见证）。孟子「明足以察秋毫之末」〔RU2-S-MZ〕不作引：此句是设为王所不许之辞，察是目之察看，能及至微之升者本编名明（讀，AI）。察看、苛察、心之察（心知之分辨）、监察不入」",
+   "why": "The 所名 and 锚 corrections are right, but the proposal's new 所名 「因一所待之积独异而异」 is the shape of RespondsTo (应): ∃ l l' differing at one level, with a positive gap. Sensitive is ∃ t, ¬ InsensitiveAt t h c, which gives no witness pair, and the core is constructive. So the gloss both misstated 察 and collided with 应. The 孟子 引 fails for four reasons. (1) It is a hypothetical claim the king rejects (王曰否). (2) Its 察 is the eye's 察看, which the row excludes. (3) Discerning the minutest rise is what ZH names 明: observed_raise_couples says any positive raise d > 0 of a stock coupled by level passes, and the sentence's own subject is 明. (4) 秋毫 stresses fineness, while 察 asks only whether."
+  },
+  {
+   "character": "明",
+   "ours": "明 (C10): coupling that reaches what support does not mark (Web.observed_raise_couples); 引 浸潤之譖… 可謂明也已矣.",
+   "theirs": "core.096: clear discernment and judgment (知常曰明; 解蔽 大清明).",
+   "decision": "keep",
+   "change": "明 row: 所名, 锚 and 引 unchanged. 注→「已采；字义：明辨、清明（老子十六章「知常曰明」〔YD-LAO-BASE〕、荀子解蔽「虚壹而静，谓之大清明」〔RU2-S-XZ21〕；文理生生 core.096：清楚区分与判断）；此名只取论语之一构：浸润之谮、肤受之愬不行，即耦合及于支持所不标记之积之升，任一正之升皆即分开二程（observed_raise_couples）；老子五十二章「见小曰明」〔YD-LAO-BASE〕与之同向（讀，AI）。距离：字义是一般之明辨，此名是其窄义，且不含判断之真伪；「知常曰明」对应「常」，不作明之引；与察（法所缘之最小感）、知幾（及早所读之耦合）分开」",
+   "why": "Keep is right, and every quotation is exact. 见小曰明 fits well: observed_raise_couples says any positive raise passes at once. Small edits: a source id for 知常曰明, and 察's contrast now follows the corrected 察 row."
+  },
+  {
+   "character": "宇",
+   "ours": "宇 (C01): world (World; World.run_world); 引 宇，彌異所也.",
+   "theirs": "extension.10: spatial extent (宇弥异所, paired with 久; M1).",
+   "decision": "keep",
+   "change": "宇 row: 所名, 锚 and 引 unchanged. 注→「墨经义：遍及异所（經說上「宇，莫東、西、家、南、北」〔MI1-S-SS〕），与久（彌異時）相对；字之本义是屋檐（系辞下「上栋下宇」〔DS03〕），墨经引申为空间之遍及（文理生生 extension.10 取此）。本编无空间之元：以宇名世界，读异所为一宇诸物各所之全（讀，AI）；时间之展开是其行（宇与行为一展开之二读，一·十二），故此宇不与久对；名表之久亦取经上「久，彌異時也」，二名皆离其墨经之对。每个宇是一观，回到展开；不带「宇宙」为实体之义。对照（相合）：庚桑楚「有實而无乎處者，宇也」〔ZH1-S23〕：宇有实而不在任何处，与物之外无容器相合（杂篇，年代有争议；讀，AI）。距离：墨经之宇是空间，此名是诸物及其流与待网之全」",
+   "why": "Keep is right. The proposal's 「字之本义是空间之广」 is philologically wrong: the root sense is eaves (上栋下宇@DS03, exact), and space is 墨经's extension. ZH's 久 row also takes 久，彌異時也, so the note says both names leave the 墨经 pair, which removes the apparent clash with 「此宇不与久对」."
+  },
+  {
+   "character": "游",
+   "ours": "游 only in 下游; its note fixes the sense.",
+   "theirs": "extension.11–12: practice (游于艺); reflection on dependence in 逍遥游.",
+   "decision": "keep",
+   "change": "No change.",
+   "why": "Nothing conflicts. 文理生生's point that 无所待 does not delete environmental inputs agrees with ZH 待 and the fed-from-beyond laws."
+  },
+  {
+   "character": "易",
+   "ours": "Declined (symbols-not-adopted): polysemous; 生生之谓易 sources 生生.",
+   "theirs": "core.004.01: a family of transitions (持续生成变化); core.004.02: easy or difficult.",
+   "decision": "keep",
+   "change": "symbols-not-adopted 易 row: decision unchanged. Append to 理由: 「；文理生生 core.004 亦分二义（持续生成变化、难易之易），证其多义；其持续生成变化之配方是声明有界有限转移模型而登记其变化程序，对本编之变（Generative.Process，不限有穷），其标签以生入变，本编生与变分开」",
+   "why": "Keep is right. The proposal's 「即本编之变」 overstates: core.004.01 declares a bounded finite transition model, while Generative.Process is not restricted to finite processes."
+  },
+  {
+   "character": "德",
+   "ours": "Declined: a virtue word carrying value and a fixed-nature layer.",
+   "theirs": "core.005.01: rearing and support (老子51 德畜之); core.005.02: a norm.",
+   "decision": "keep",
+   "change": "Adopt the proposal unchanged. Append to 理由: 「；文理生生 core.005.01 取老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕之养护义：其构本编分在与（补给）、容（支持）、持（维持）、恒（更新）；core.005.02 是规范判断，属价值层」",
+   "why": "The quotation is exact and the names exist (與, 容, 持, 恆). Refusing 德 suits a core whose definitions carry no weight."
+  },
+  {
+   "character": "礼",
+   "ours": "Declined: its structural core is 分 (群而无分则争).",
+   "theirs": "core.104: an institution of roles and allocation, and its practice (C02 礼论, C08).",
+   "decision": "keep",
+   "change": "礼 row: decision unchanged. Append to 理由: 「；文理生生 core.104 以礼为角色、分配之制度及其践行（应用层）；二者读荀子皆以分配为礼之构：本编据「群而無分則爭」〔RU2-S-XZ10〕，文理生生据礼论「求而无度量分界」（C02），其 core.032.03 对本编分（JointPlan.supports_of_realizes）；礼可作应用之名，核心用分」",
+   "why": "Keep is right. The proposal's 「二者读荀子礼论皆为分配」 misattributes ZH's source: ZH's 分 takes 群而無分則爭 from 富國 (RU2-S-XZ10; 王制 RU2-S-XZ09 has the same sentence), not 礼论."
+  },
+  {
+   "character": "信",
+   "ours": "Declined: its structure is in 征 and 符.",
+   "theirs": "core.097.01: reliability in keeping promises; core.097.02: trust (C08).",
+   "decision": "keep",
+   "change": "Adopt the proposal unchanged. Append to 理由: 「；文理生生 core.097.01（履约可靠）之事实标准对本编徵（Verification）、符（Learning.Accords）；core.097.02（信任）是一读者取他者之辞，本编以闻见之经他者之路计，不立信名」",
+   "why": "Each sense maps onto an existing structure, and 信 carries the agent and value layers the core does not name."
+  },
+  {
+   "character": "虚",
+   "ours": "Declined: 太虚 as a substance has a ground-layer face.",
+   "theirs": "core.110: the practice of 致虚, weak defences, and capacity, explicitly not a void.",
+   "decision": "keep",
+   "change": "虚 row: decision unchanged. Append to 理由: 「；文理生生 core.110 明言虚不是绝对无（致虚之践、防备薄弱、可容纳之现代延展），容纳之构本编名容，余量名余地；二者皆不以虚为实体或为零，差只在是否立名」",
+   "why": "It is a tie, as proposed. Capacity relative to a load, core.110.02 and core.110.03, maps more exactly to 餘地 (Flow.Balances.supported_iff_within_margin) than to 容 alone, so the note now names both."
+  },
+  {
+   "character": "反",
+   "ours": "Not a name: 穷则反，终则始 goes under 复 and 环.",
+   "theirs": "core.054.01: opposite direction; core.054.02: return is possible, ⟨program⟩origin (L05, Y09).",
+   "decision": "keep",
+   "change": "反 row: decision unchanged. Append to 理由: 「；文理生生 core.054 分方向相反与可返归（以 ⟨program⟩origin 判）：一状经一串动可回此状即本编复（Branching.Returns），自今可至某状名可得（Branching.Reachable）；方向相反无须另名；反者道之动二者皆限其域」",
+   "why": "The difference is in naming only. Branching.Returns is ∃ a t, step s a t ∧ Reach t s, the possibility that a configuration recurs. Reaching a distinct origin from now is 可得. Both projects give 反者道之动 a scoped reading: 文理生生 in L05, ZH in CHINESE-SOURCES' lossless_iff_returns."
+  },
+  {
+   "character": "人",
+   "ours": "Declined: paired with 天, it sets up a dualist frame.",
+   "theirs": "extension.14: an Agent domain; signatures presuppose Agent, Entity and Kind sorts.",
+   "decision": "keep",
+   "change": "Adopt the proposal unchanged. Append to 理由: 「；文理生生 extension.14 以人为行动主体之域，其签名以 Agent、Entity、Kind 为类（08 semantic_contract.signature_types）；本编不设行动者之元：施者、受者在一展开中分化（非二方法），故不采」",
+   "why": "The disagreement is substantive. An agent primitive presupposes what the core differentiates within the unfolding, as the nondual method requires."
+  }
+ ],
+ "notes": "I checked all 29 decisions and edited no file. My only file is a read-only locator, /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/wl-check/q.py. It copies check_names.py's matching: @-qualified phrases are matched punctuation-insensitively and without simplification, and it also reports check_names' rank and whether the phrase is an exact substring. I also ran ctq.py text for each context.\n\n**Tally against the proposal (3 add, 1 revise, 25 keep → 1 add, 2 revise, 26 keep)**\n- 衡 is the one add-quotation.\n- 動 and 察 are revise-gloss.\n- The other 26 are keep, several with corrected note text.\n\n**Proposals reversed or cut**\n- **有形.** Rejected. 解老's 有形 is having a physical body, the sense the row refuses. The passage says nothing about activity, and ZH 二·十一's own example (remains: a level but no activity) is 有形 in 解老's sense but not Embodied. 秋水 runs the converse direction. CV1-S-JL is rank 2 in check_names, not 0.\n- **察.**\n  - The 孟子 引 is rejected. The sentence is a claim the king rejects, its 察 is 察看 (which the row excludes), and discerning the minutest rise is ZH's 明 (observed_raise_couples), which is also the sentence's subject.\n  - The proposed 所名 「因一所待之积独异而异」 is RespondsTo's witnessed form (应), not Sensitive. I use 九·十一's 「非独由他所待…而定」.\n- **衡.** Only 「衡不正，则重县于仰@RU2-S-XZ22」 is kept as 引. 「以一易一…无得亦无丧也」 lacks 衡, and its 得 and 丧 collide with 有得 (Web.Adds), 無喪 (Web.Retains), 得 and 喪. It becomes a labelled 对照.\n\n**Quotations**\n- Every proposed 引 and every in-note citation was located exactly in its stated source.\n- Not exact: 「觀乎天文以察時變」, cited in the 觀 and 察 notes. The frozen text has a comma; this is fixed in both rows.\n- Accepted 引: 衡不正，则重县于仰@RU2-S-XZ22 and 動，或徙也@MI1-S-JS, both rank 0.\n\n**Wording collisions and errors fixed in the notes**\n- 因 and 開 used 出于 (the 所出 word for descent) for other relations.\n- 開: 「每族皆封」 should be 「每步有一族封」 (Enclosed is ∃ a distinct list closed at t).\n- 涸界: 「始于其上者守」 holds only up to hi.\n- 生: 「一体之积之历」 is not what Widens compares.\n- 亡: core.076 is 毁 (CeasesToBe), and 已 only on activity.\n- 中和: 十二·十五's 中庸 对照 is 相分, not 定域.\n- 宇: its root sense is eaves (上栋下宇@DS03), not space; the 久 pair is noted.\n- 礼: ZH's 分 is from 富國, not 礼论.\n- 易: 「即本编之变」 overstated (Process is not restricted to finite).\n- 系: 凡·拟 should be 凡·二, and the 'typed relations are entities-first' reason is wrong (Web F C is typed).\n\n**Anchors**\n- Exact anchors added where the chapter already cites them: 中節 → Flow.WithinGap with withinGap_iff_between, and 承 → Hexagram.rises.\n- Optional: 正 → Hexagram.inPhase.\n- Confirmed:\n  - 散 → Web.CeasesToStand.\n  - 察 → ExchangeLaw.Sensitive with ReadsFinitely.least_coupling.\n- All cited Lean names resolve with resolve.py; Rejoining, Verification and Sensitivity resolve as modules.\n\n**Follow-ups outside the 29**\n1. ZH 序, line 19, lists 承 among the characters names are set with; this contradicts the 承 row.\n2. ZH 四·十二 writes 「取与出于每一族」, which collides with 所出.\n3. The chapter's name appendix (line 3650) and NAMES-ZH.md must be regenerated after the tsv edits, because 散's wrong anchor is repeated there. check_names.py writes names-checked.json when run.\n4. HexagramPlaces.lean's docstring '(inPhase, 正, 當位)' disagrees with ZH, where 當位 is holdsPlace and narrower.\n5. I agree with the proposer that 諸宇's 所名 「空间」 should change.\n6. Considered and declined as 引:\n   - 老子27 「善闭无关楗而不可开」 for 閉: it blocks both ways and carries 善.\n   - 中庸 「文理密察，足以有別也」@RU1-S-ZY for 察: exact, but 察 there is the sage's 明辨. It is worth weighing in the 文 naming work.\n\n**Bearing on naming 文**\nThe 觀 and 察 notes now cite 贲彖 「剛柔交錯，天文也……觀乎天文，以察時變」〔YD-HX01〕 exactly. Together with 系辞下 「物相杂，故曰文」〔DS03〕, these are the frozen passages that tie 文 to differing things intermixed and read for change."
+}

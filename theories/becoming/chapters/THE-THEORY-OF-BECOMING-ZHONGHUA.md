@@ -16,11 +16,18 @@
 
 这些话是来源，不是根据。本书用古典之名的理由有三条（AI 的论证）。
 
-- **许多核心字本身是两位的关系词。** 待须有所待，资须有所资，与、取、容、承都是这样。以它们立名，关系先于关系项，不用另作说明。
-- **有现成的定义体。** 《墨子·经上》以「X，Y也」定名，例如“法，所若而然也”；这样的定义本身就是关系的。本书的经用这一体。
+- **许多核心字本身是两位的关系词。** 待须有所待，资须有所资，与、取、容、感都是这样。以它们立名，关系先于关系项，不用另作说明。
+- **有现成的定义体。** 《墨子·经上》以「X，Y也」定名，例如“法，所若而然也”。本书的经用这一体；关系在定义所说的内容之中，句式本身不带关系。
 - **字义的演变留在文本中，可以查。** 名表对每个名记下它取哪一层的义、不带哪一层的义。
 
 名不是从历史中复原的古人之意。一套名是用它的人之间约定俗成的码（`Becoming.SharedCodes`）：它受历史之义的约束，在用者之间成立。
+
+**文与读。** 本书的认识论，在文中有一条现成的线索。字把动与构合为小模；反复读许多不同的表现，便从组合中重建出一个能推广的模型，这就是“读书百遍，其义自见”。它只在内在生成的文本中成立；在以外在的意志或先在的根据收尾的解释中不成立，因为那里没有可读出的律。这条线在核心里有确切的律（见[《文理生生与变化论》](WENLI-AND-BECOMING.md)）：
+- 律从展开中读出，没有外在的立法者；
+- 一种读法承载律，恰当世界在它所并者之间走得一样，这就是理；
+- 给出界，有穷之往便定其文之状；不给界，没有一段往能定其次值。
+
+本书因此以「文」名一历之状经一象逐步之值（篇一「文与文同」）：天文是世界之文，一书是名经码之文，理是自文读出之类。文理生生是另行所建的一个项目，与本书分开。它在可比的字上与本书之名约四分之三相合，拒绝以道、气、性、仁立名也相同。两者同读一套经典，也都由 AI 写成，所以这是对同一线索的两次阅读，独立只是部分的。
 
 “自然就是一元的，关系的，动态的”是一个可检验的论题。[《中华思想脉络》与变化论](CIVILIZATION-THOUGHT-AND-BECOMING.md)一章逐条读过脉络的 5,673 条判断，检验结果分三层：
 
@@ -28,7 +35,7 @@
 - 在全称形式上，它常需要定域；
 - 作为每一体系的性质，它不成立：相分占 19%，落在先在的根据、先定的性或价值、意志或单一中心、争胜与等级四层。
 
-“大多重要的符号在先秦已有”也在可检查的范围内成立：录有出处的 246 个名中，240 个的出处在先秦文本。
+“大多重要的符号在先秦已有”也在可检查的范围内成立：录有出处的 248 个名中，242 个的出处在先秦文本。
 
 **体例。** 每一条先立经，次说，次证。
 
@@ -77,13 +84,13 @@
 
 ## 凡例　设、证、读与推理之标记
 
-本例在篇一之前，定全书共用的体例：一辞以何种地位立（无设而然，不加关于展开之设而然；有设而然，在所名之设下而然；设，陈而不断；讀（AI，D62），带论证之解，已入决定记录者标其决定之号；四者之外为未决），十一个虚词各取哪一种结构（若、则、故、必、或、皆、莫、莫不、屡、不、未），古典之文与脊柱之律以哪三种关系对照（相合、定域、相分），全书守什么方法（以明），以及逻辑原则之定义（定然否、不可非、不可非则然、或不当、辞皆定然否、无穷可尽、无穷可定其皆否、非皆否则有是）；诸原则于展开之所示（校准）在用之之條（三·五、三·七、三·十、四·十七、五·八、五·十四、九·十一、九·二十三、九·二十四、九·二十五、十六·九），因为只校准逻辑者是需要它之條之引理。次第依关系而行：先立方法与拟（以明、拟），次讲一辞于诸状之然否（不、未、必、或、定然否、不可非、不可非则然、皆、莫、莫不、屡），再讲辞与辞的关系（说、若、则、故、不然者、据、有之必然），然后讲由此分出的地位与诸逻辑原则，最后讲与古典的对照。理论不断言任何公理：每一证在写入其中的条件（局部之若，或所名之设）下，对每个如此所拟之宇然。伦理依于二设，各司其职：凡续皆有顾（延续之条件，十五·二十一）只陈而不断，它定所顾（见凡·十六），自身不排序；诸程孰愈只在以广为愈（十六·三），它亦是设，亦不断言；二设之根据皆未决。本例所定的虚词分工是本编使用者之间的约定，受历史诸义约束，不是对古义的复原。凡例之經只用逻辑之名，及先用而后定于篇一之状、步、辞、宇、观（一·三、一·十二、一·二十）；又用于說中先立之域（凡·四）与所顾（凡·十六）；所举理论之例与二伦理之设之名，都在說中，并注其條。
+本例在篇一之前，定全书共用的体例：一辞以何种地位立（无设而然，不加关于展开之设而然；有设而然，在所名之设下而然；设，陈而不断；讀（AI，D62），带论证之解，已入决定记录者标其决定之号；四者之外为未决），十一个虚词各取哪一种结构（若、则、故、必、或、皆、莫、莫不、屡、不、未），古书与脊柱之律以哪三种关系对照（相合、定域、相分），全书守什么方法（以明），以及逻辑原则之定义（定然否、不可非、不可非则然、或不当、辞皆定然否、无穷可尽、无穷可定其皆否、非皆否则有是）；诸原则于展开之所示（校准）在用之之條（三·五、三·七、三·十、四·十七、五·八、五·十四、九·十一、九·二十三、九·二十四、九·二十五、十六·九），因为只校准逻辑者是需要它之條之引理。次第依关系而行：先立方法与拟（以明、拟），次讲一辞于诸状之然否（不、未、必、或、定然否、不可非、不可非则然、皆、莫、莫不、屡），再讲辞与辞的关系（说、若、则、故、不然者、据、有之必然），然后讲由此分出的地位与诸逻辑原则，最后讲与古典的对照。理论不断言任何公理：每一证在写入其中的条件（局部之若，或所名之设）下，对每个如此所拟之宇然。伦理依于二设，各司其职：凡续皆有顾（延续之条件，十五·二十一）只陈而不断，它定所顾（见凡·十六），自身不排序；诸程孰愈只在以广为愈（十六·三），它亦是设，亦不断言；二设之根据皆未决。本例所定的虚词分工是本编使用者之间的约定，受历史诸义约束，不是对古义的复原。凡例之經只用逻辑之名，及先用而后定于篇一之状、步、辞、宇、观（一·三、一·十二、一·二十）；又用于說中先立之域（凡·四）与所顾（凡·十六）；所举理论之例与二伦理之设之名，都在說中，并注其條。
 
 ### 凡·一　以明
 
 **經**　以明，立一分别而并言其所依之关系、所施与所遗也。以明为方法之要求，不为证。
 
-**說**　以明（非二方法）是全书一切分别所守的方法要求：从一个关系的展开起，先讲关系怎样形成、持续、改变，再讲施与受、知与所知、评价、能力与责任怎样在其中分化；每立一个分别（施与受、动与所待、事实与评价），同时讲出它所依之关系、适用之范围与所略去者，不让任何名或形式变量带进一个独立的本体。它是方法要求，不是证：不设 Lean 锚，也不证明一元之本体或伦理之必然（伦理所依之二设，凡续皆有顾定所顾，以广为愈定序，见凡·十六）。以明之「明」与名表之明（感接上一择，及于容所不标者，十一·二十五）同字而分工：明是脊柱上的一种感，以明是立分别时所守之方法。名出齐物论「欲是其所非而非其所是，則莫若以明」〔ZH1-S02〕：是与非各随其所从言之处，以明是看见每一是非从何处说出（相合，zhuang-qiwu-yi-ming）。此段之结构在脊柱上有对应之律，先立二名。境，辞所在、所示之界：一境含若干辞，并于每一状示其值；名出秋水「且夫知不知是非之境」〔ZH1-S17〕（外篇，年代有争议），疆土之义与唯识以境为所对之义不带。不依境，新组合，不＋依＋境：辞不带境之指标，每辞一值，不随境而异。每一辞至少在一境之中时：诸境于一状之所示合于一不依境之读，恰当凡共含一辞之二境于此所示皆同（并行不悖，一·二十四）；有一不依境之系辞合于诸境，恰当每状诸境之所示并行不悖（两行，一·二十五）；奇偶之系有一矛盾，则无一不依境之读在每一境之所许之内（一·二十六）。但以明之名不以这些律为锚。同段「是以聖人不由，而照之于天」〔ZH1-S02〕以一视点为准，脊柱不定其所施之范围，此处不携带，不立对应。下条之拟，是以明落在表示上的第一步。
+**說**　以明（非二方法）是全书一切分别所守的方法要求：从一个关系的展开起，先讲关系怎样形成、持续、改变，再讲施与受、知与所知、评价、能力与责任怎样在其中分化；每立一个分别（施与受、动与所待、事实与评价），同时讲出它所依之关系、适用之范围与所略去者，不让任何名或形式变量带进一个独立的本体。它是方法要求，不是证：不设 Lean 锚，也不证明一元之本体或伦理之必然（伦理所依之二设，凡续皆有顾定所顾，以广为愈定序，见凡·十六）。以明之「明」与名表之明（感接上一择，及于容所不标者，十一·二十五）同字而分工：明是脊柱上的一种感，以明是立分别时所守之方法。名出齐物论「欲是其所非而非其所是，則莫若以明」〔ZH1-S02〕：是与非各随其所从言之处，以明是看见每一是非从何处说出（相合，zhuang-qiwu-yi-ming）。此段之结构在脊柱上有对应之律，先立二名。境，辞所在、所示之界：一境含若干辞，并于每一状示其值；名出秋水「且夫知不知是非之境」〔ZH1-S17〕（外篇，年代有争议），疆土之义与唯识以境为所对之义不带。不依境，新组合，不＋依＋境：辞不带境之指标，每辞一值，不随境而异。每一辞至少在一境之中时：诸境于一状之所示合于一不依境之读，恰当凡共含一辞之二境于此所示皆同（并行不悖，一·二十五）；有一不依境之系辞合于诸境，恰当每状诸境之所示并行不悖（两行，一·二十六）；奇偶之系有一矛盾，则无一不依境之读在每一境之所许之内（一·二十七）。但以明之名不以这些律为锚。同段「是以聖人不由，而照之于天」〔ZH1-S02〕以一视点为准，脊柱不定其所施之范围，此处不携带，不立对应。下条之拟，是以明落在表示上的第一步。
 
 **證**　方法要求，无 Lean 锚（名表 C16）；方法见[非二方法](NONDUAL-METHOD.md)。所对应之结构：`Becoming.Contextual.glues_iff_agree`、`Becoming.Contextual.fitsFree_iff`、`Becoming.ParitySystem.contradicts_noGlobal`；记录 [claims-shown-in-context](../results/records/claims-shown-in-context.md)。
 
@@ -99,7 +106,7 @@
 
 **經**　不，然之则悖也；未，至此所读者，其然与其不然皆不排也。
 
-**說**　不与未是两种结构：早期 Lean 曾把二者合并，本编分开。「不 X」是 X 被否定：由 X 可推出矛盾；在一状上，就是辞于此状不然。「未 X」只讲到此为止：所读者既不使 X 然，也不排除 X，它不断言不 X。脊柱给出未的典型：一知来于一往出一值，而下一步可取两个相异之值，则有两个历程同其往而于下一步各取其一，谓此知来于二者皆无不符，不能立（`Becoming.Learning.no_prefix_fixes_next`，九·三十）。所以未是关系的：它相对于所读之往与所经之感，不是辞自身的性质。论语「未知，焉得仁？」〔RU1-S-LY〕在「不知」一读下，不由所见推出其「仁」，也不断言其不「仁」，只是不由此定（相合，lunyu-bu-zhi-qi-ren；「知」作「智」一读下此对应不立）。未决（凡·二十）是未施于理论自身之问。讀（AI，D54）：单字之结构分工是本编的约定。例：所待之同异定然否时，于任一步，「一所待之积有一步为零」与「此步之后其积每步皆在零上」二辞，于任一待者、无论以积感入者为何，皆不见去（九·十四；验见九·十二）。
+**說**　不与未是两种结构：早期 Lean 曾把二者合并，本编分开。「不 X」是 X 被否定：由 X 可推出矛盾；在一状上，就是辞于此状不然。「未 X」只讲到此为止：所读者既不使 X 然，也不排除 X，它不断言不 X。脊柱给出未的典型：一知来于一往出一值，而下一步可取两个相异之值，则有两串逐步之值同有此往而于下一步各取其一，谓此知来于二者皆无不符，不能立（`Becoming.Learning.no_prefix_fixes_next`，九·三十）。所以未是关系的：它相对于所读之往与所经之感，不是辞自身的性质。论语「未知，焉得仁？」〔RU1-S-LY〕在「不知」一读下，不由所见推出其「仁」，也不断言其不「仁」，只是不由此定（相合，lunyu-bu-zhi-qi-ren；「知」作「智」一读下此对应不立）。未决（凡·二十）是未施于理论自身之问。讀（AI，D54）：单字之结构分工是本编的约定。例：所待之同异定然否时，于任一步，「一所待之积有一步为零」与「此步之后其积每步皆在零上」二辞，于任一待者、无论以积感入者为何，皆不见去（九·十四；验见九·十二）。
 
 **證**　`Becoming.Learning.no_prefix_fixes_next`；记录 [learning-by-refutation](../results/records/learning-by-refutation.md)；见去之律见九·十二、九·十四。
 
@@ -131,7 +138,7 @@
 
 **經**　不可非则然，于一辞，其不可非即然也。定然否之辞，不可非则然；自然数之相等，不可非则然。
 
-**說**　不可非则然（¬¬q → q）是一辞的性质，不是对一切辞的设。定然否之辞皆有此性（`Becoming.Decided.of_not_not`）；自然数之等式亦然，因为自然数之同异定然否（`Becoming.nat_eq_of_not_not`）。消息之律因此不另要中途各步定然否：中途分情形只得各步定然否之不可非（凡·六），所得是数之等式，而等式不可非则然（`Becoming.Counts.over_stretch` 之证用的就是这一步）。否定式之辞也都不可非则然（由 ¬¬¬q 得 ¬q；纯逻辑，脊柱未单列为证）。墨经答「無窮不害兼」〔MI1-S-JX〕之难，分「人若不盈无窮，則人有窮也，盡有窮無難」〔MI1-S-SX〕与盈无穷两种情形，结论「无难」是否定式，所以不需盈否定然否也然（相合，mobian-wu-qiong-ying-fou；此为理论对论证形式之读，不归于墨经之自觉；「盡有窮無難」一句文有校改之争，不据其字）。对一切辞要求不可非则然，就是双重否定消去，那是设，不是律（规范章 §8.6）。
+**說**　不可非则然（¬¬q → q）是一辞的性质，不是对一切辞的设。定然否之辞皆有此性（`Becoming.Decided.of_not_not`）；自然数之等式亦然，因为自然数之同异定然否（`Becoming.nat_eq_of_not_not`）。消息之律因此不另要中途各步定然否：中途分情形只得各步定然否之不可非（凡·六），所得是数之等式，而等式不可非则然（`Becoming.Counts.over_stretch` 之证用的就是这一步）。否定式之辞也都不可非则然（由 ¬¬¬q 得 ¬q；纯逻辑，脊柱未单列为证）。墨经答「無窮不害兼」〔MI1-S-JX〕之难，分「人若不盈无窮，則人有窮也，盡有窮無難」〔MI1-S-SX〕与盈无穷两种情形，结论「无难」是否定式，所以不需盈否定然否也然（相合，mobian-wu-qiong-ying-fou；此为理论对论证形式之读，不归于墨经之自觉；「盡有窮無難」一句有校改之争，不据其字）。对一切辞要求不可非则然，就是双重否定消去，那是设，不是律（规范章 §8.6）。
 
 **證**　`Becoming.Decided.of_not_not`、`Becoming.nat_eq_of_not_not`、`Becoming.Counts.over_stretch`；记录 [counts-exist-where-decided](../results/records/counts-exist-where-decided.md)、[sensitivity-is-the-least-coupling](../results/records/sensitivity-is-the-least-coupling.md)。
 
@@ -225,9 +232,9 @@
 
 ### 凡·十九　讀（AI，D62）
 
-**經**　讀（AI，D62），于所证之内容或古文之结构所取之解，与其论并取者也；已入决定记录者，标其决定之号。讀不改一证，更善之论改之。
+**經**　讀（AI，D62），于所证之内容或古书之结构所取之解，与其论并取者也；已入决定记录者，标其决定之号。讀不改一证，更善之论改之。
 
-**說**　讀（AI，D62）是带地位的解释：对所证内容的解释，连同其论证采用，已入决定记录者标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；未入者（多为名之出处与古文对照之读）标为「讀（AI，D62）」或「（讀，AI，D62）」，地位相同。映射之读（读：以一映射予状以值；自其构成者读出一量，亦曰读）之定义在一·三，与此分开。讀不改变任何证，更好的论证修订它。没有一种讀等待某人认可，连理论用语中出自来源者的读也一样：来源之文是一词何义的证据，一种讀之立与改，看它在全书一个说明中的位置（D45）。讀须标出，正因为它与证同处一页而地位不同：一个相合是脊柱上有同构之律，不是原文如其所言为真（凡·二十六）。
+**說**　讀（AI，D62）是带地位的解释：对所证内容的解释，连同其论证采用，已入决定记录者标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；未入者（多为名之出处与古书对照之读）标为「讀（AI，D62）」或「（讀，AI，D62）」，地位相同。映射之读（读：以一映射予状以值；自其构成者读出一量，亦曰读）之定义在一·三，与此分开。讀不改变任何证，更好的论证修订它。没有一种讀等待某人认可，连理论用语中出自来源者的读也一样：来源之书是一词何义的证据，一种讀之立与改，看它在全书一个说明中的位置（D45）。讀须标出，正因为它与证同处一页而地位不同：一个相合是脊柱上有同构之律，不是原句如其所言为真（凡·二十六）。
 
 **證**　无 Lean 锚（名表 C08、C16）；[决定记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) D45；规范章前言「四种地位」。
 
@@ -281,25 +288,25 @@
 
 ### 凡·二十六　相合
 
-**經**　相合，一段古文所言之结构，脊柱有所证之律与之同其关系、条件与方向也。
+**經**　相合，一段古书所言之结构，脊柱有所证之律与之同其关系、条件与方向也。
 
-**說**　相合是结构的，不是字面的：共用一字不算相合，须同一关系、同一条件、同一方向。相合不是印证：律之然不靠原文，原文之义也不由律穷尽；它讲的是脊柱上有一条结构相同的律，不是讲这段话如其所言为真，许多相合只在讀（AI，D62）写明的条件下然。所以不写「理论证明了古人之说」，也不写「古人早已知道某律」。一义项（见十·一）贯于一名，恰当凡及此名之记录皆予之（贯，`Becoming.CrossSituational.stands_iff`，十·五）；所以本编之名是使用者之间的约定（约定俗成，十·十一），受历史诸义约束，不是对古义的复原。名多取先秦之字或其组合；码是例外：码字后起，无先秦出处，取今语编码之码，名每一待者所持、由义项至名之映射（制名见十·十五），是本编以今字立名之例，筹码、价码、号码之义不带。名出墨经「名實耦，合也」〔MI1-S-SS〕（名之出处）。讀（AI，D47、D54）。
+**說**　相合是结构的，不是字面的：共用一字不算相合，须同一关系、同一条件、同一方向。相合不是印证：律之然不靠原句，原句之义也不由律穷尽；它讲的是脊柱上有一条结构相同的律，不是讲这段话如其所言为真，许多相合只在讀（AI，D62）写明的条件下然。所以不写「理论证明了古人之说」，也不写「古人早已知道某律」。一义项（见十·一）贯于一名，恰当凡及此名之记录皆予之（贯，`Becoming.CrossSituational.stands_iff`，十·五）；所以本编之名是使用者之间的约定（约定俗成，十·十一），受历史诸义约束，不是对古义的复原。名多取先秦之字或其组合；码是例外：码字后起，无先秦出处，取今语编码之码，名每一待者所持、由义项至名之映射（制名见十·十五），是本编以今字立名之例，筹码、价码、号码之义不带。名出墨经「名實耦，合也」〔MI1-S-SS〕（名之出处）。讀（AI，D47、D54）。
 
 **證**　约定，无单一之锚；三种关系见 D47、D54 与[中国思想之章 §4](CHINESE-SOURCES-AND-BECOMING.md#4-三种关系)；`Becoming.CrossSituational.stands_iff`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)。
 
 ### 凡·二十七　定域
 
-**經**　定域，脊柱给出一段古文所言然之确切范围，而改其全称之形也。
+**經**　定域，脊柱给出一段古书所言然之确切范围，而改其全称之形也。
 
-**說**　定域不是部分相合，而是一个更正：古文以全称讲出的结构，脊柱只在某些条件下证得，定域写出那些条件，并改其全称之形。凡例中之例：「必或不当」只在所争者定然否之处然（凡·二十一）；「当者胜」预设所争者定然否（凡·二十二）。老子「善者不辩，辩者不善」〔YD-LAO-BASE〕以全称之不断言二者不相容；而举一个辩而不善者只排除「辩者必善」，要断言「辩者不善」，须域中莫有辩而善者，此章未给其律或逐一之查，所以就所能举之据只到不必；苏辙（宋）解此章已把全称之不读作不必或未必（定域，lao-81-shan-zhe-bu-bian）。荀子「以疑决疑，决必不当」〔RU2-S-XZ21〕：以未立之据裁定疑问，脊柱只给「未被证成」，所推出之辞仍可能恰好然，所以「必不当」须改为「不由此而当」（定域，xunzi-yi-yi-jue-yi）。讀（AI，D47、D54）。
+**說**　定域不是部分相合，而是一个更正：古书以全称讲出的结构，脊柱只在某些条件下证得，定域写出那些条件，并改其全称之形。凡例中之例：「必或不当」只在所争者定然否之处然（凡·二十一）；「当者胜」预设所争者定然否（凡·二十二）。老子「善者不辩，辩者不善」〔YD-LAO-BASE〕以全称之不断言二者不相容；而举一个辩而不善者只排除「辩者必善」，要断言「辩者不善」，须域中莫有辩而善者，此章未给其律或逐一之查，所以就所能举之据只到不必；苏辙（宋）解此章已把全称之不读作不必或未必（定域，lao-81-shan-zhe-bu-bian）。荀子「以疑决疑，决必不当」〔RU2-S-XZ21〕：以未立之据裁定疑问，脊柱只给「未被证成」，所推出之辞仍可能恰好然，所以「必不当」须改为「不由此而当」（定域，xunzi-yi-yi-jue-yi）。讀（AI，D47、D54）。
 
 **證**　`Becoming.Derivation.countermodel_excludes`、`Becoming.Derivation.no_countermodel`、`Becoming.Derivation.closure_throughout_iff`、`Becoming.Derivation.relative_throughout`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)、[derivation-soundness](../results/records/derivation-soundness.md)。
 
 ### 凡·二十八　相分
 
-**經**　相分，古文所断言者理论不断言，或与理论之结构相冲突也。
+**經**　相分，古书所断言者理论不断言，或与理论之结构相冲突也。
 
-**說**　相分不被硬读为相合。它多落在四种非关系之层：先在的根据，先定的性或价值，意志或单一中心，争胜与等级；同一传统内部常已有异议，理论的位置由脊柱之律给出。韩非子问辩「言無二貴，法不兩適」〔FA1-S-H41〕以一中心之令为一切言之准：而一个不依境之读，恰在诸境相交处一致时才有（`Becoming.Contextual.glues_iff_agree`，一·二十四），以一令覆盖不使之一致；令作为据，其所推出之辞只在令然处然，令之贵不是令之然（`Becoming.Derivation.closure_throughout_iff`）（相分，hanfei-wen-bian-yan-wu-er-gui）。荀子正名「故明君知其分而不与辨也」〔RU2-S-XZ22〕，又以「夫民易一以道，而不可与共故」〔RU2-S-XZ22〕，以埶与刑代替论辩：推导是辞与辞的关系，其定义中不出现谁持有埶；以一码加于诸待者之后，此后不论怎样听，每一步每一待者恰失其原码所辨而所加之码所并者（制名，`Becoming.SharedCodes.run_from_imposition`，十·十五）（相分，xunzi-bu-ke-yu-gong-gu；同篇另有约定俗成一途，十·十一）。成唯识论之证自证分见凡·十三（相分，weishi-zheng-zi-zheng）。唯识所谓「相分」（所缘之相）与此同字而所指不同。讀（AI，D47、D54）。
+**說**　相分不被硬读为相合。它多落在四种非关系之层：先在的根据，先定的性或价值，意志或单一中心，争胜与等级；同一传统内部常已有异议，理论的位置由脊柱之律给出。韩非子问辩「言無二貴，法不兩適」〔FA1-S-H41〕以一中心之令为一切言之准：而一个不依境之读，恰在诸境相交处一致时才有（`Becoming.Contextual.glues_iff_agree`，一·二十五），以一令覆盖不使之一致；令作为据，其所推出之辞只在令然处然，令之贵不是令之然（`Becoming.Derivation.closure_throughout_iff`）（相分，hanfei-wen-bian-yan-wu-er-gui）。荀子正名「故明君知其分而不与辨也」〔RU2-S-XZ22〕，又以「夫民易一以道，而不可与共故」〔RU2-S-XZ22〕，以埶与刑代替论辩：推导是辞与辞的关系，其定义中不出现谁持有埶；以一码加于诸待者之后，此后不论怎样听，每一步每一待者恰失其原码所辨而所加之码所并者（制名，`Becoming.SharedCodes.run_from_imposition`，十·十五）（相分，xunzi-bu-ke-yu-gong-gu；同篇另有约定俗成一途，十·十一）。成唯识论之证自证分见凡·十三（相分，weishi-zheng-zi-zheng）。唯识所谓「相分」（所缘之相）与此同字而所指不同。讀（AI，D47、D54）。
 
 **證**　`Becoming.Contextual.glues_iff_agree`、`Becoming.Derivation.closure_throughout_iff`、`Becoming.SharedCodes.run_from_imposition`、`Becoming.Frame.self_incomplete`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。
 
@@ -316,13 +323,13 @@
 
 ## 篇一　大化
 
-本篇论大化：关系之一展开，及读它的诸观。起点不是先立彼此独立的诸物再说它们相关，而是一类之物在每一步的关系：各自的积、运、所待、需、所资，以及步间相与的取与；兼是其一切，体是兼之一分。先立待者与所待（一物之二角）、待、资与待网，状、动、步、辞与象、读，变与行；次说一辞跨一步之成与毁，变化为一而三读；次说法与历是一展开的两种读法（自然之法），历定法至于死路，动在状中；次说流与取与，宇即其行，二类之待网读为一类之物而成一宇，诸设各划诸宇之一体；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；次说系辞与辞、观与名；再说同、状即其所以相关与正名，分而述之失其关系；终以诸读各于其境而共成一宇（并行不悖、两行、奇偶与矛盾）。步之先后读自诸物自身之历程，见篇八。本篇诸律或无设而然（不加前提的定理），或以衡为若而有设而然（一·十五）：每条只在写入其中的局部条件（有穷、定然否、为法……）与所名之设下，对每个如此所拟者（变、系辞、宇）成立。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，只定所顾，本身不排序；诸程孰愈唯在以广为愈（十六·三）。本篇不用二者。后诸篇在此之上论待与所待、生灭之读、流与停息、复闭与恒、生成与退化之向。
+本篇论大化：关系之一展开，及读它的诸观。起点不是先立彼此独立的诸物再说它们相关，而是一类之物在每一步的关系：各自的积、运、所待、需、所资，以及步间相与的取与；兼是其一切，体是兼之一分。先立待者与所待（一物之二角）、待、资与待网，状、动、步、辞与象、读，变与行；次说一辞跨一步之成与毁，变化为一而三读；次说法与历是一展开的两种读法（自然之法），历定法至于死路，动在状中；次说流与取与，宇即其行，二类之待网读为一类之物而成一宇，诸设各划诸宇之一体；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；次说系辞与辞、观与名，文（一历经一象逐步之值，其状与法自文读出）与文同；再说同、状即其所以相关与正名，分而述之失其关系；终以诸读各于其境而共成一宇（并行不悖、两行、奇偶与矛盾）。步之先后读自诸物自身之历程，见篇八。本篇诸律或无设而然（不加前提的定理），或以衡为若而有设而然（一·十五）：每条只在写入其中的局部条件（有穷、定然否、为法……）与所名之设下，对每个如此所拟者（变、系辞、宇）成立。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，只定所顾，本身不排序；诸程孰愈唯在以广为愈（十六·三）。本篇不用二者。后诸篇在此之上论待与所待、生灭之读、流与停息、复闭与恒、生成与退化之向。
 
 ### 一·一　大化与物
 
 **經**　大化，关系之一展开也：拟之以一类之物，步步各有积、运、所待、需、所资，步间相与取与（所待、积、运、待、需、资见一·二，取、与见一·十一）。物，此展开之关系项也。兼，大化之一切也；体，兼之一分也。
 
-**說**　大化（展开）不是形式中之一项，也不是宇之别名：形式中没有名为大化者，有的是读它的诸观（一·二十），宇（一·十二）是其一。它的拟是每步一个待网之状（`Becoming.WebAt`：每物之积、是否运、所待、需与所资；待网即依存网，`Becoming.Web`，新组合，待＋网）与步间一次取与（`Becoming.Exchange`：诸物各自谁取多少、与谁多少）。积、运、需三个单字之名：积（水平，一所待于一步之量，自然数），取「水之積也不厚，則負大舟也无力」〔ZH1-S01〕，积是所待之量，不厚则不足以负，不带只增不减之累积义；运（活动，一待者于一步在作用之中，只是一辞，不带其内容），取「天其運乎？地其處乎？」〔ZH1-S14〕以运与处相对，不带命运之义与同段所设之推动者；需（所需之量，一待之阈），取「需者飲食之道也」〔YD-OW-XG〕，需是量，不是物，与所待（物之角）、资（汲取）分开。兼、体取墨经「體，分於兼也」〔MI1-S-JS〕：兼是同一展开中的一切，体是兼之一分；不取「兼以易別」〔MO1-S-C16〕之兼。物（关系项）只是这些关系之项，不是先于关系的实体。讀（AI，D23）：物之名不携带任何关系（一·二十二）；形式在许多类型上所陈述者（流、待网、宇、变、系辞……）都是同一展开的读法。名“大化”取自「列星随旋，日月递炤，四时代御，阴阳大化，风雨博施」〔RU2-S-XZ17〕，在那里是谓语，以之名此展开是本编的约定；同句「不见其事，而见其功」〔RU2-S-XZ17〕与取与由差读出相合（相合，xunzi-tianlun-da-hua；见一·十七）。又「天地與其所產焉，物也」〔MI1-S-G6〕（相合，gongsunlong-tiandi-wu）：天地也是物，物之外没有容器，对应于一宇只有一类关系项；这是拟上的一致，不是一条律。
+**說**　大化（展开）不是形式中之一项，也不是宇之别名：形式中没有名为大化者，有的是读它的诸观（一·二十），宇（一·十二）是其一。它的拟是每步一个待网之状（`Becoming.WebAt`：每物之积、是否运、所待、需与所资；待网即依存网，`Becoming.Web`，新组合，待＋网）与步间一次取与（`Becoming.Exchange`：诸物各自谁取多少、与谁多少）。积、运、需三个单字之名：积（水平，一所待于一步之量，自然数），取「水之積也不厚，則負大舟也无力」〔ZH1-S01〕，积是所待之量，不厚则不足以负，不带只增不减之累积义；运（活动，一待者于一步在作用之中，只是一辞，不带其内容），取「天其運乎？地其處乎？」〔ZH1-S14〕以运与处相对，不带命运之义与同段所设之推动者；需（所需之量，一待之阈），取「需者飲食之道也」〔YD-OW-XG〕，需是量，不是物，与所待（物之角）、资（汲取）分开。兼、体取墨经「體，分於兼也」〔MI1-S-JS〕：兼是同一展开中的一切，体是兼之一分；不取「兼以易別」〔MO1-S-C16〕之兼。物（关系项）只是这些关系之项，不是先于关系的实体。讀（AI，D23）：物之名不携带任何关系（一·二十三）；形式在许多类型上所陈述者（流、待网、宇、变、系辞……）都是同一展开的读法。名“大化”取自「列星随旋，日月递炤，四时代御，阴阳大化，风雨博施」〔RU2-S-XZ17〕，在那里是谓语，以之名此展开是本编的约定；同句「不见其事，而见其功」〔RU2-S-XZ17〕与取与由差读出相合（相合，xunzi-tianlun-da-hua；见一·十七）。又「天地與其所產焉，物也」〔MI1-S-G6〕（相合，gongsunlong-tiandi-wu）：天地也是物，物之外没有容器，对应于一宇只有一类关系项；这是拟上的一致，不是一条律。
 
 **證**　`Becoming.WebAt`、`Becoming.Dependence`、`Becoming.Exchange`、`Becoming.World`、`Becoming.World.of`、`Becoming.Web.Whole`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)、[space-and-its-parts](../results/records/space-and-its-parts.md)。
 
@@ -338,7 +345,7 @@
 
 **經**　状，大化于一步之所是也。动，步间之所移也。步，诸物共计之自然数序也。辞，于一状可言其然否者也，不必定然否。象，予所施之每一者一值者也；读，以一象予状以值也；自其构成者读出一量，亦曰读。
 
-**說**　状（构形）是展开在一步怎样相关；在宇中，它是一个待网之状（`Becoming.WebAt`）。动（动作）是步间之移的标记；在宇中，动就是诸物的取与（`Becoming.World.move`）。名取「動，或徙也」〔MI1-S-JS〕之义（一种可能的移易），不带动静之形上义；动为法于一步所留开者，见一·十。步只作离散的共同索引：以自然数计步是拟之所定，不是导出的结论；它在何处可从关系读出，见八·二。状之同一不由名字给出，而由它怎样相关给出（一·二十二）。名“状”取「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕的状／实之分（定域，xunzi-zhengming-wu-zhuang-shi）：状为构形，实为跨步所认之同一；同篇「状同而为异所者，虽可合，谓之二实」〔RU2-S-XZ22〕以处所分实，只在处所即关系之处成立。象（映射本身）取「象也者，像也」〔DS03〕之名，象于一者之值写其像（七·一）；读只名以象予值，如所归并之类、所示之值，自诸员之积读出总积亦是读，与讀（AI，D62）分开（凡·十九）。
+**說**　状（构形）是展开在一步怎样相关；在宇中，它是一个待网之状（`Becoming.WebAt`）。动（动作）是步间之移的标记；在宇中，动就是诸物的取与（`Becoming.World.move`）。名取「動，或徙也」〔MI1-S-JS〕之义（或，处所，古之域字，不是名表之域：动是所处之移徙；讀，AI，D62），不带动静之形上义；动为法于一步所留开者，见一·十。步只作离散的共同索引：以自然数计步是拟之所定，不是导出的结论；它在何处可从关系读出，见八·二。状之同一不由名字给出，而由它怎样相关给出（一·二十三）。名“状”取「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕的状／实之分（定域，xunzi-zhengming-wu-zhuang-shi）：状为构形，实为跨步所认之同一；同篇「状同而为异所者，虽可合，谓之二实」〔RU2-S-XZ22〕以处所分实，只在处所即关系之处成立。象（映射本身）取「象也者，像也」〔DS03〕之名，象于一者之值写其像（七·一）；读只名以象予值，如所归并之类、所示之值，自诸员之积读出总积亦是读，与讀（AI，D62）分开（凡·十九）。
 
 **證**　`Generative.Process`、`Becoming.Run`、`Becoming.WebAt`、`Becoming.World.move`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)、[the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)。
 
@@ -418,7 +425,7 @@
 
 **經**　待者与所待（一·二）为一物之二角。凡分待者、所待为二类之待网，皆可读为一类之物之待网，读之而成一宇。
 
-**說**　待者与所待（条件）不是两类东西，而是同一物在一待中的两个位置：一宇的待网是一类之物的待网，同一物可此处为待者、彼处为所待。分为两类的写法总可嵌入一类：待者作为所待其积为零、无物待之，所待从不运、亦无所待（`Becoming.Web.roles`、`Becoming.Flow.roles`），嵌入后成一宇（`Becoming.World.ofRoles`）；读之之后，有待（二·五，`Becoming.Web.roles_dependent`）、不息（三·八，`Becoming.Web.roles_unceasing`）与作（三·一，`Becoming.Web.roles_arises`）皆如故。但这只是类型的统一：嵌入之中没有一物居二角。居二角是一类之宇本身的事：在一个构造之例里，蜂与花二物各唯待彼，各自既是待者又是所待（`Becoming.Mutualism.apart`）；把所待重新标号后各自持，有待却不变：哪个所待是哪个物，有待看不见（`Becoming.Mutualism.apart_relabelled`）。待之链有无首，见一·二。又「即此一法為他因時具斯六義，與他作果時即唯有二義」〔FO2-FQ〕（相合，fazang-yin-men-liu-yi；隋唐，法藏）：同一者在此关系中居一角，在彼关系中居另一角（文中「法」「因」「果」都取佛典之义，不作本编之名读）。
+**說**　待者与所待（条件）不是两类东西，而是同一物在一待中的两个位置：一宇的待网是一类之物的待网，同一物可此处为待者、彼处为所待。分为两类的写法总可嵌入一类：待者作为所待其积为零、无物待之，所待从不运、亦无所待（`Becoming.Web.roles`、`Becoming.Flow.roles`），嵌入后成一宇（`Becoming.World.ofRoles`）；读之之后，有待（二·五，`Becoming.Web.roles_dependent`）、不息（三·八，`Becoming.Web.roles_unceasing`）与作（三·一，`Becoming.Web.roles_arises`）皆如故。但这只是类型的统一：嵌入之中没有一物居二角。居二角是一类之宇本身的事：在一个构造之例里，蜂与花二物各唯待彼，各自既是待者又是所待（`Becoming.Mutualism.apart`）；把所待重新标号后各自持，有待却不变：哪个所待是哪个物，有待看不见（`Becoming.Mutualism.apart_relabelled`）。待之链有无首，见一·二。又「即此一法為他因時具斯六義，與他作果時即唯有二義」〔FO2-FQ〕（相合，fazang-yin-men-liu-yi；隋唐，法藏）：同一者在此关系中居一角，在彼关系中居另一角（句中「法」「因」「果」都取佛典之义，不作本编之名读）。
 
 **證**　`Becoming.Web.roles`、`Becoming.Flow.roles`、`Becoming.World.ofRoles`、`Becoming.Web.roles_dependent`、`Becoming.Web.roles_unceasing`、`Becoming.Web.roles_arises`、`Becoming.Mutualism.apart`、`Becoming.Mutualism.apart_relabelled`；记录 [space-and-its-parts](../results/records/space-and-its-parts.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。
 
@@ -434,7 +441,7 @@
 
 **經**　衡，所待步后之积加其共取，等于步前之积加其共与也。凡衡，一族步后之总积加其所取，等于步前之总积加其所与；经一段步，亦等。凡衡，积跨步而增必有所与，跨步而减必有所取。宇衡，恰当其积每步以其取与为动，依衡之变而移；亦恰当其自然之法之每移皆衡之变之移。
 
-**說**　衡（平衡，`Becoming.Flow.Balances`；只说一族一步者为 `Becoming.Flow.BalancesOn`）使积之每一增减都是一步之中某物之取与（`Becoming.Flow.Balances.rise_given`、`Becoming.Flow.Balances.fall_taken`）；合于一族即总积（一族诸所待之积之和；新组合，总＋积，`Becoming.Web.stock`）之账（`Becoming.Flow.Balances.over`），合于一段步亦如此（`Becoming.Flow.Balances.accumulates`）。衡之变是以衡为每步之移之变（`Becoming.exchange`；读于待网为 `Becoming.exchangeAt`，待之诸关系可任改）：宇衡与“积依衡之变而移”是同一事（`Becoming.World.balances_iff_exchange`，由定义），也恰当宇所显之自然之法落在衡之变之内（`Becoming.World.balanced_iff_law`）。衡是宇之一设（凡·十六、十三·五），不是律：把积之差与取与之差计为一物（其余，一·十七），则凡流皆衡（`Becoming.Flow.withImbalance_balances`），而原流衡恰当其余每步于每一所待皆不取不与（`Becoming.Flow.balances_iff_idle`）。以任意之量读之，衡放宽为一方向之不等式，名无自增（四·十八）。讀（AI，D30）：计入其余之后，衡是拟之性质，原先它对宇所说的，改由其余之闲置来说。对照（相合，zhuangzi-qiushui-bu-ying-bu-xu）：「天下之水，莫大於海，萬川歸之，不知何時止，而不盈，尾閭泄之，不知何時已，而不虛」〔ZH1-S17〕（庄子·秋水，外篇，年代有争议）：入与出皆不停，而总积不盈不虚，正是衡下一段步上之账；句中“止”“已”是一般之义，不作名用。
+**說**　衡（平衡，`Becoming.Flow.Balances`；只说一族一步者为 `Becoming.Flow.BalancesOn`）使积之每一增减都是一步之中某物之取与（`Becoming.Flow.Balances.rise_given`、`Becoming.Flow.Balances.fall_taken`）；合于一族即总积（一族诸所待之积之和；新组合，总＋积，`Becoming.Web.stock`）之账（`Becoming.Flow.Balances.over`），合于一段步亦如此（`Becoming.Flow.Balances.accumulates`）。衡之变是以衡为每步之移之变（`Becoming.exchange`；读于待网为 `Becoming.exchangeAt`，待之诸关系可任改）：宇衡与“积依衡之变而移”是同一事（`Becoming.World.balances_iff_exchange`，由定义），也恰当宇所显之自然之法落在衡之变之内（`Becoming.World.balanced_iff_law`）。衡是宇之一设（凡·十六、十三·五），不是律：把积之差与取与之差计为一物（其余，一·十七），则凡流皆衡（`Becoming.Flow.withImbalance_balances`），而原流衡恰当其余每步于每一所待皆不取不与（`Becoming.Flow.balances_iff_idle`）。以任意之量读之，衡放宽为一方向之不等式，名无自增（四·十八）。讀（AI，D30）：计入其余之后，衡是拟之性质，原先它对宇所说的，改由其余之闲置来说。名取「衡不正，则重县于仰」〔RU2-S-XZ22〕（先秦，《荀子·正名》，战国末）之衡：衡是称，正则两边相当（讀，AI，D62）；同段以道为古今之正权、择祸福之义不带（相分，xunzi-zhengming-zheng-quan）。对照（相合，zhuangzi-qiushui-bu-ying-bu-xu）：「天下之水，莫大於海，萬川歸之，不知何時止，而不盈，尾閭泄之，不知何時已，而不虛」〔ZH1-S17〕（庄子·秋水，外篇，年代有争议）：入与出皆不停，而总积不盈不虚，正是衡下一段步上之账；句中“止”“已”是一般之义，不作名用。
 
 **證**　`Becoming.Flow.Balances`、`Becoming.Flow.Balances.over`、`Becoming.Flow.Balances.accumulates`、`Becoming.Flow.Balances.rise_given`、`Becoming.Flow.Balances.fall_taken`、`Becoming.World.balances_iff_exchange`、`Becoming.World.balanced_iff_law`、`Becoming.Flow.balances_iff_idle`；记录 [rising-and-falling-in-one-exchange](../results/records/rising-and-falling-in-one-exchange.md)、[worlds-are-runs](../results/records/worlds-are-runs.md)、[more-needs-renewers](../results/records/more-needs-renewers.md)、[imbalance-as-relatum](../results/records/imbalance-as-relatum.md)。
 
@@ -450,7 +457,7 @@
 
 **經**　其余，兼中宇所不含者，计为一物，其取与由积之变与宇中取与之差读出者也。计其余，而运读作在场而有取与、资读作有取，则凡宇皆衡，唯运者与之，唯运者取，且唯取于其所资。宇自衡，恰当计其余时其余每步皆不运；宇之变化以积读与以取与读，二读每步所示皆同，恰当宇衡；计其余，则每宇每步二读皆同。
 
-**說**　其余（整体的其余；新组合，其＋余）不是假定的另一实体：它的取与就是诸物积之变与诸物取与之间的差，计为一个关系项（`Becoming.World.withRest`、`Becoming.Flow.withImbalance`，构造）。计入它之后每宇皆衡（`Becoming.World.withRest_balanced`），与与取只出于运者（`Becoming.Flow.readOff_acting`、`Becoming.Flow.readOff_taking`）；这几项由构造成立，对任何宇都对，所以本身不说明什么：读于一次取与，诸设之由读而然者由此始，其全见十三·五。有内容的是后两项：宇衡恰当其余从不运（`Becoming.World.withRest_closed_iff`）；一宇的两种变化之读（以积之增减读，以取与之差读）每步所示皆同，即二读于每步并行不悖（一·二十四），恰当它衡（`Becoming.Flow.changeReadings_glue_everywhere_iff`）；`Becoming.World.unity` 合陈后两项，并说计其余则每宇每步二读皆同，且有衡之变之一行，其于宇中诸物之积即宇之积。讀（AI，D23）：原来作为设的衡，成了一体之状：其余是否闲置。其余之运只是不衡之读，它不是发动者，名表“其余从不施动”只在此义下成立。对照（相合，huishi-da-yi）：「至大无外，謂之大一」〔MI1-S-HS〕：计入其余之后取与没有外面可去；“大一”只作对照，不立为名。相分（lao-6-xuan-pin）：「玄牝之门，是谓天地根。绵绵若存，用之不勤」〔YD-LAO-BASE〕立一个不死不竭之根，而其余随所列之物而定，不是固定之根，也没有一条律说它不竭。
+**說**　其余（整体的其余；新组合，其＋余）不是假定的另一实体：它的取与就是诸物积之变与诸物取与之间的差，计为一个关系项（`Becoming.World.withRest`、`Becoming.Flow.withImbalance`，构造）。计入它之后每宇皆衡（`Becoming.World.withRest_balanced`），与与取只出于运者（`Becoming.Flow.readOff_acting`、`Becoming.Flow.readOff_taking`）；这几项由构造成立，对任何宇都对，所以本身不说明什么：读于一次取与，诸设之由读而然者由此始，其全见十三·五。有内容的是后两项：宇衡恰当其余从不运（`Becoming.World.withRest_closed_iff`）；一宇的两种变化之读（以积之增减读，以取与之差读）每步所示皆同，即二读于每步并行不悖（一·二十五），恰当它衡（`Becoming.Flow.changeReadings_glue_everywhere_iff`）；`Becoming.World.unity` 合陈后两项，并说计其余则每宇每步二读皆同，且有衡之变之一行，其于宇中诸物之积即宇之积。讀（AI，D23）：原来作为设的衡，成了一体之状：其余是否闲置。其余之运只是不衡之读，它不是发动者，名表“其余从不施动”只在此义下成立。对照（相合，huishi-da-yi）：「至大无外，謂之大一」〔MI1-S-HS〕：计入其余之后取与没有外面可去；“大一”只作对照，不立为名。相分（lao-6-xuan-pin）：「玄牝之门，是谓天地根。绵绵若存，用之不勤」〔YD-LAO-BASE〕立一个不死不竭之根，而其余随所列之物而定，不是固定之根，也没有一条律说它不竭。
 
 **證**　`Becoming.World.withRest`、`Becoming.Flow.withImbalance`、`Becoming.World.withRest_balanced`、`Becoming.Flow.readOff_acting`、`Becoming.Flow.readOff_taking`、`Becoming.World.withRest_closed_iff`、`Becoming.Flow.changeReadings_glue_everywhere_iff`、`Becoming.World.unity`；记录 [imbalance-as-relatum](../results/records/imbalance-as-relatum.md)、[premises-read-off-the-exchange](../results/records/premises-read-off-the-exchange.md)、[unity-of-readings](../results/records/unity-of-readings.md)。
 
@@ -474,27 +481,45 @@
 
 **經**　观，变、系辞、宇之总名也。凡以一象予每状其次状之法，自一状之轨，皆其变之一行；其变之每行，皆自其起状之轨。名，所以谓也：一读给其所读者之值也。
 
-**說**　观（视图）只指读法之所施：变读其移，系辞读其辞，宇读其积与取与；诸观沿一行皆为一宇（一·十二、一·十九、一·二十五）。读是给状以值之象（映射），如所归并之类、所示之值；自诸员之积读出总积，亦是读。一条法的轨是其变之行（`Becoming.Law.run`），这变的每个行都是自其起状的轨（`Becoming.Branching.law_run_state`）。讀（AI，D23、D43）：形式之根是行，而行不是宇下的基底；变是把状分为法所定者与法所留开者的读法，系辞是经其辞而读的宇，没有哪一观是另一观的根据。不由此导出：每个变都是某宇之法（变之状未必是待网之状），诸读必并行不悖（衡是设，不是所予）。观只指视图，不作读法之名；读只名以象予值，AI 之读法另名「讀（AI，D62）」（凡·十九）。名“观”取「观其会通」〔DS02〕。
+**說**　观（视图）只指读法之所施：变读其移，系辞读其辞，宇读其积与取与；诸观沿一行皆为一宇（一·十二、一·十九、一·二十六）。读是给状以值之象（映射），如所归并之类、所示之值；自诸员之积读出总积，亦是读。一条法的轨是其变之行（`Becoming.Law.run`），这变的每个行都是自其起状的轨（`Becoming.Branching.law_run_state`）。讀（AI，D23、D43）：形式之根是行，而行不是宇下的基底；变是把状分为法所定者与法所留开者的读法，系辞是经其辞而读的宇，没有哪一观是另一观的根据。不由此导出：每个变都是某宇之法（变之状未必是待网之状），诸读必并行不悖（衡是设，不是所予）。观只指视图，不作读法之名；读只名以象予值，AI 之读法另名「讀（AI，D62）」（凡·十九）。名“观”取「观其会通」〔DS02〕。
 
 **證**　`Generative.Process`、`Becoming.Frame`、`Becoming.World`、`Becoming.Law.run`、`Becoming.Branching.law_run_state`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)、[process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。
 
-### 一·二十一　同
+### 一·二十一　文与文同
 
-**經**　同，二状有一关联连之：所关联之二状，其辞之然否皆同，一者每移，他者以同动移至所关联者也。法经一象示之，二状同，恰当经此象其后每步之值皆同。系辞于一状同中为法，此状一动之任二果皆同也；同中为法沿同而传。辞即诸状之名，则变为法，恰当系辞于每状皆同中为法。
+**經**　文，一历之状经一象逐步之值也。凡逐步之值皆文：以每步至其次步为法、以此值为象，二步同，恰当自二步起逐步之值皆同；二步同，则其次步亦同：文之状与其法皆自文读出，不须给状。法之一行，其经一象之文二步同，恰当法经此象示之，此二步之状同。二状于一法经一象，其文逐步皆同，谓之文同。
 
-**說**　同（相同／互模拟，`Becoming.Alike`；关联即 `Becoming.Bisimulation`）在法下化为一个可读之条件：经所示之象之未来相同（`Becoming.Law.alike_iff_sameFuture`），不须先取商。同中为法（新组合，同＋中＋为法，`Becoming.DeterminedAt`）是系辞于一状之性质，故写「系辞于一状同中为法」。法是同中为法在辞即诸状之名处之特例（`Becoming.determined_iff_named`）：两个在每一关系上皆同之后继，使其变不为法，却于起点同中为法，与只有一后继之法同（`Becoming.Twins.alike_one`，构造之例）；故“是否为法”随诸状如何命名而变，“是否同中为法”沿同而传（`Becoming.DeterminedAt.transfer`）。讀（AI，D32）：凡须相等之定理，读作依于所系之辞：辞所不分者，既不被定，也不被排除。对照（定域，xici-xiang-si-bu-wei）：「与天地相似，故不违」〔DS02〕（先秦至秦汉，《系辞上》，成书年代与主语皆有争议）：与所摹者同者，经每一历程之后所能然之辞皆同，故不违（`Becoming.Alike.tests`）；相似一词在通用之义中容许程度，脊柱只对确切之同给出不违。又（相合，laozi-14-hun-er-wei-yi）：「此三者，不可致诘，故混而为一。」〔YD-LAO-BASE〕（先秦，传世王弼本；郭店无此章）：两系辞于每状皆同中为法时，历程与辞皆分不开者即同（`Becoming.alike_iff_sameTests`，此条件不可省），正名并之为一（`Becoming.identifiesAlike_iff`）；这是描述之所为，不断言先有一物。
+**說**　文（course）是一历之状经一象逐步所得之值：一行经象 reg，于第 n 步之值是 reg (r.state n)（`Becoming.Parting.course`）；法下自一状起者，是其轨经此象之值（`Becoming.Learnable.course`）。文只给值，不给状与动。凡逐步之值皆文：自由分支之行经不改其值之象，其文就是这些值本身（`Becoming.Parting.freeRun_course`）。文之状不须另给，而自文读出：自两步起逐步之值皆同，这两步即是一状（`Becoming.SameAhead`）；以每步至其次步为法、以文之值为象，同（一·二十二）恰是这一关系（`Becoming.alike_moments_iff`；此律近于定义，步之法为法是平凡的，有内容的是同即一状）；为一状之二步，其次步仍为一状（`Becoming.SameAhead.next`），所以文之法也自文读出，没有文外另给之立法者，与凡历皆是其自然之法之行（一·七）同构（讀，AI，D63）。有内容的律在法下与界上：法之一行，其经一象之文二步同，恰当法经此象示之此二步之状同（`Becoming.IdentificationRuns.sameAhead_iff_alike`）；文之状有穷，恰当有二异步同，即其值自某步起复（`Becoming.finitely_many_states_iff`）；每步皆与起首 N 步之一同者，二步同恰当自二步起 N＋N－1 步之值皆同（`Becoming.Identification.sameAhead_iff_below`）；对二文，N＋N′－1 之长于每二界皆确切（`Becoming.Identification.bounded_agree_exact`，九·三十三）。每值皆新，则每步自为一状（`Becoming.SameAhead.new_each`）。文同（新组合，文＋同，与经中类同同式；`Becoming.Law.SameFuture`）含当步之值；法经一象示之，二状同恰当文同（一·二十二）。不写「同文」，免与「书同文」之码（十·十五）相混。
+
+篇九之知都在文上：往是文之前段（五·六）；知来自往出值，得、不符与符都在文之步上（九·二十九），于域符是同一概念在域之状上（九·二十七）；终而复始是文之性质（九·三十二）；不测是一知来之对角之文（九·三十）；有界则往定文之状（九·三十三）；可知依文同而言（九·三十五）；衢是二行之文于某步分开（九·三十六）。所以重读同一往，不增所见；给界，有穷之往定文之状；不给界，没有往定其次值（`Becoming.Learning.no_prefix_fixes_next`，九·三十）。
+
+名取「通其变，遂成天下之文」〔DS02〕（先秦至秦汉，系辞上）：通（自一状有行，八·七）其变（一·四），文乃成，即文只沿一行而成（相合；讀，AI，D63）。同段「参伍以变，错综其数」与「极其数，遂定天下之象」〔DS02〕讲揲蓍之数，全段之条判定域（xici-can-wu-cuo-zong），数不读作状之种数之界，皆不带；同章「遂知来物」〔DS02〕是不经感之前知（相分，xici-sui-zhi-lai-wu，九·三十）。对照（定域；讀，AI，D63）：「物相杂，故曰文」〔DS03〕（先秦至秦汉，系辞下）：文之步只在其值有异处分开，每值皆新则每步自为一状，所以杂只读作沿步之值之异；一卦六爻同时之杂是一状（卦，八·十五；「六爻相杂」〔DS03〕，八·十七），不是文。同段「文不当，故吉凶生焉」〔DS03〕仍是相分（xici-wen-budang）：吉凶是评价，不由位之当否而生。
+
+所不带：文饰、文采（文不是加在他物之上的饰）；文德、文治与谥号之文；「觀乎人文，以化成天下」〔YD-JP22〕之人文化成；文质之分（文为质外之饰：此处状自文读出，文下没有另一质）；以天文作占；文字，及《说文》文与字之分；《文言》之书名与本编经所用之浅近文言；吉凶。
+
+分工：同一串逐步之物，作所给之状与动则为历（其律为自然之法，一·七），作所读之值而自读其状则为文。象是映射本身（一·三）；像是象于一者之值（七·一），文于一步之值即此历此步之状之像；读是以象予状以值，其逐步之所出即文。类与理不是文：类并诸状（七·一），理是变随之而同之类；凡守象之值而为理之类所并之二状皆文同，守象之值之最粗之理所并者恰为文同之状（七·二），理自文读出只在此义。名是一读给所读者之值（一·二十），码是一待者所持、由义项至名之映射（十·一）。一书是以名为值之文，其名经码配义项：「累而成文，名之丽也」〔RU2-S-XZ22〕（先秦，《荀子·正名》，战国末；讀，AI，D63；其条 xunzi-zhi-ming-yong-li 之相合在知名，十·九，不改）；文不名符号，符号及其组合归名、码与义项。自一状所许之历程与其后所能然之辞皆同者，不名文同，仍依一·二十三写之。
+
+所依之拟：步是共同之自然数索引，值以相等相比，界须是所给（凡·二）；可知诸律依一族尽其状之宇。讀（AI，D63）：文不是一个实体外面的表面：状自文读出，文是一历经一象之读，象本身也是一种关系；所以知在展开之内，识是一个待者自身之历经其感所作之类而读（九·三），不是展开之外的一面镜子。
+
+**證**　`Becoming.Parting.course`、`Becoming.Learnable.course`、`Becoming.Parting.freeRun_course`、`Becoming.SameAhead`、`Becoming.alike_moments_iff`、`Becoming.SameAhead.next`、`Becoming.SameAhead.new_each`、`Becoming.IdentificationRuns.sameAhead_iff_alike`、`Becoming.finitely_many_states_iff`、`Becoming.Identification.sameAhead_iff_below`、`Becoming.Identification.bounded_agree_exact`、`Becoming.Law.SameFuture`；记录 [the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)、[identification-where-runs-part](../results/records/identification-where-runs-part.md)、[learnable-through-a-map](../results/records/learnable-through-a-map.md)、[identification-where-bounded](../results/records/identification-where-bounded.md)、[configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)。`Becoming.IdentificationRuns.sameAhead_iff_alike` 已在核心证明，尚无结果记录引之（未决：记录待补）。名之读法见[决定记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) D63。
+
+### 一·二十二　同
+
+**經**　同，二状有一关联连之：所关联之二状，其辞之然否皆同，一者每移，他者以同动移至所关联者也。法经一象示之，二状同，恰当其文同。系辞于一状同中为法，此状一动之任二果皆同也；同中为法沿同而传。辞即诸状之名，则变为法，恰当系辞于每状皆同中为法。
+
+**說**　同（相同／互模拟，`Becoming.Alike`；关联即 `Becoming.Bisimulation`）在法下化为一个可读之条件：经所示之象文同（`Becoming.Law.alike_iff_sameFuture`，一·二十一），不须先取商。同中为法（新组合，同＋中＋为法，`Becoming.DeterminedAt`）是系辞于一状之性质，故写「系辞于一状同中为法」。法是同中为法在辞即诸状之名处之特例（`Becoming.determined_iff_named`）：两个在每一关系上皆同之后继，使其变不为法，却于起点同中为法，与只有一后继之法同（`Becoming.Twins.alike_one`，构造之例）；故“是否为法”随诸状如何命名而变，“是否同中为法”沿同而传（`Becoming.DeterminedAt.transfer`）。讀（AI，D32）：凡须相等之定理，读作依于所系之辞：辞所不分者，既不被定，也不被排除。对照（定域，xici-xiang-si-bu-wei）：「与天地相似，故不违」〔DS02〕（先秦至秦汉，《系辞上》，成书年代与主语皆有争议）：与所摹者同者，经每一历程之后所能然之辞皆同，故不违（`Becoming.Alike.tests`）；相似一词在通用之义中容许程度，脊柱只对确切之同给出不违。又（相合，laozi-14-hun-er-wei-yi）：「此三者，不可致诘，故混而为一。」〔YD-LAO-BASE〕（先秦，传世王弼本；郭店无此章）：两系辞于每状皆同中为法时，历程与辞皆分不开者即同（`Becoming.alike_iff_sameTests`，此条件不可省），正名并之为一（`Becoming.identifiesAlike_iff`）；这是描述之所为，不断言先有一物。
 
 **證**　`Becoming.Bisimulation`、`Becoming.Alike`、`Becoming.Law.alike_iff_sameFuture`、`Becoming.DeterminedAt`、`Becoming.DeterminedAt.transfer`、`Becoming.determined_iff_named`、`Becoming.Twins.alike_one`、`Becoming.Alike.tests`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[determinacy-up-to-likeness](../results/records/determinacy-up-to-likeness.md)、[tests-fix-likeness-where-determined](../results/records/tests-fix-likeness-where-determined.md)。
 
-### 一·二十二　状即其所以相关
+### 一·二十三　状即其所以相关
 
 **經**　同之状，经同一历程之后所能然之辞皆同。正名，所并者皆同、凡同者皆并之读也；系辞于每状同中为法，则正名载一法。二系辞于每状皆同中为法，则二状同，恰当自二状所许之历程皆同，且经同一历程之后所能然之辞皆同。
 
-**說**　状（构形）就是它怎样相关：不问它叫什么，只问它然哪些辞、能以哪些动走到哪里。同（定义见一·二十一）是等价关系，作为关系来陈述，因为取商要用 `Quot.sound`；同之状经一历程之后所能然之辞相同（`Becoming.Alike.tests`）。在两个系辞于每状皆同中为法之处，其逆亦成立（`Becoming.alike_iff_sameTests`）；分支未定之处，历程与辞定不下同（`Becoming.Choosing.sameTests`、`Becoming.Choosing.not_alike`，构造之例：二状自起点所许之历程与所能然之辞皆同，而不同）。正名（有意义的描述）恰把同者并为一（`Becoming.identifiesAlike_iff`），在同中为法之处载一法（`Becoming.IdentifiesAlike.carries`）；给每个状一个名字并不就是正名：两个在每一关系上都相同的后继各起一名，不是按同去认（`Becoming.Twins.naming_not_identifiesAlike`，构造之例）。讀（AI，D23）：状之名不携带任何东西，凡可知者，对同之状都相同。对照（相合，fazang-yuan-cheng-yi；隋唐，法藏）：「所言一者，非自性一，緣成故」〔FO2-FQ〕：一由其关系而成。相分（jin-shizi-jin-xing-bu-bian；隋唐，法藏《金师子章》）：「金性不變，故號圓成」〔FO2-KS-P〕把“金性”立为一个不随关系而定之性；形式中的状只是其所以相关，没有这样的性。
+**說**　状（构形）就是它怎样相关：不问它叫什么，只问它然哪些辞、能以哪些动走到哪里。同（定义见一·二十二）是等价关系，作为关系来陈述，因为取商要用 `Quot.sound`；同之状经一历程之后所能然之辞相同（`Becoming.Alike.tests`）。在两个系辞于每状皆同中为法之处，其逆亦成立（`Becoming.alike_iff_sameTests`）；分支未定之处，历程与辞定不下同（`Becoming.Choosing.sameTests`、`Becoming.Choosing.not_alike`，构造之例：二状自起点所许之历程与所能然之辞皆同，而不同）。正名（有意义的描述）恰把同者并为一（`Becoming.identifiesAlike_iff`），在同中为法之处载一法（`Becoming.IdentifiesAlike.carries`）；给每个状一个名字并不就是正名：两个在每一关系上都相同的后继各起一名，不是按同去认（`Becoming.Twins.naming_not_identifiesAlike`，构造之例）。讀（AI，D23）：状之名不携带任何东西，凡可知者，对同之状都相同。对照（相合，fazang-yuan-cheng-yi；隋唐，法藏）：「所言一者，非自性一，緣成故」〔FO2-FQ〕：一由其关系而成。相分（jin-shizi-jin-xing-bu-bian；隋唐，法藏《金师子章》）：「金性不變，故號圓成」〔FO2-KS-P〕把“金性”立为一个不随关系而定之性；形式中的状只是其所以相关，没有这样的性。
 
 **證**　`Becoming.Alike.tests`、`Becoming.identifiesAlike_iff`、`Becoming.IdentifiesAlike.carries`、`Becoming.alike_iff_sameTests`、`Becoming.Choosing.not_alike`、`Becoming.Twins.naming_not_identifiesAlike`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[tests-fix-likeness-where-determined](../results/records/tests-fix-likeness-where-determined.md)。
 
-### 一·二十三　分而述之失其关系
+### 一·二十四　分而述之失其关系
 
 **經**　凡兼分为两体，各记其所可而分述之，不增所无，恰当一体之所可与他体之所可任相配；否则所遗恰为其关系，复见为多出之配。有三体焉，任两体之所可皆任相配，而三体之所可不然。
 
@@ -502,23 +527,23 @@
 
 **證**　`Becoming.Rectangular`、`Becoming.Separated`、`Becoming.separation_faithful_iff`、`Becoming.separation_admits_extra`、`Becoming.whole_not_in_pairs`、`Becoming.Motion.neither_alone`；记录 [separation-loses-the-relation](../results/records/separation-loses-the-relation.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)。
 
-### 一·二十四　并行不悖
+### 一·二十五　并行不悖
 
 **經**　并行不悖，诸境于一状所示合于一不依境之值也：凡境含一辞，其所示即此值于此辞者。凡每辞皆有一境含之，诸境于一状并行不悖，恰当凡共含一辞之二境于此所示皆同。
 
-**說**　境（辞所在、所示之界，`Becoming.Contextual`）：一境含若干辞，并于每一状示其值；取「且夫知不知是非之境」〔ZH1-S17〕（秋水，外篇，年代有争议）之是非所施之界，不带唯识以境为根识所对之义，也不带境界之高下。辞不带境之指标、每辞一值而不随境而异者，名不依境（新组合，不＋依＋境）。并行不悖（拼合，`Becoming.Contextual.Glues`）是两行（一·二十五）中能合为一值之处：恰在诸境相交处一致（`Becoming.Contextual.glues_iff_agree`）。一致总是必要的（`Becoming.Contextual.Glues.agree`）；充分要每辞有一境含之。界：诸境各自一致，其所许之诸可能仍可以合不成任何一组不依境之可能：三盒之例，任开两盒恰一盒有宝，无一组不依境之放法，使诸开法之所许恰是其所现（`Becoming.Specker.no_whole`）。不依境之值是拟之所定，不是起点；以境为索引者总能合（一·二十五）。对照（定域，zhongyong-bing-xing-bu-bei）：「道並行而不相悖」〔RU1-S-ZY〕（先秦至秦汉，《中庸》，成篇有争议；同句「萬物並育而不相害」〔RU1-S-ZY〕另有所施，不在此条）：并行而不相悖，恰在相交处一致之处成立；诸境各自一致而无所合者，原文之普遍形式不成立。“道”不立为名。下条言以境为索引之读，其后一条给奇偶之系中不能并行之确切之形。
+**說**　境（辞所在、所示之界，`Becoming.Contextual`）：一境含若干辞，并于每一状示其值；取「且夫知不知是非之境」〔ZH1-S17〕（秋水，外篇，年代有争议）之是非所施之界，不带唯识以境为根识所对之义，也不带境界之高下。辞不带境之指标、每辞一值而不随境而异者，名不依境（新组合，不＋依＋境）。并行不悖（拼合，`Becoming.Contextual.Glues`）是两行（一·二十六）中能合为一值之处：恰在诸境相交处一致（`Becoming.Contextual.glues_iff_agree`）。一致总是必要的（`Becoming.Contextual.Glues.agree`）；充分要每辞有一境含之。界：诸境各自一致，其所许之诸可能仍可以合不成任何一组不依境之可能：三盒之例，任开两盒恰一盒有宝，无一组不依境之放法，使诸开法之所许恰是其所现（`Becoming.Specker.no_whole`）。不依境之值是拟之所定，不是起点；以境为索引者总能合（一·二十六）。对照（定域，zhongyong-bing-xing-bu-bei）：「道並行而不相悖」〔RU1-S-ZY〕（先秦至秦汉，《中庸》，成篇有争议；同句「萬物並育而不相害」〔RU1-S-ZY〕另有所施，不在此条）：并行而不相悖，恰在相交处一致之处成立；诸境各自一致而无所合者，原文之普遍形式不成立。“道”不立为名。下条言以境为索引之读，其后一条给奇偶之系中不能并行之确切之形。
 
 **證**　`Becoming.Contextual`、`Becoming.Contextual.Glues`、`Becoming.Contextual.Agree`、`Becoming.Contextual.glues_iff_agree`、`Becoming.Contextual.Glues.agree`、`Becoming.Specker.no_whole`；记录 [claims-shown-in-context](../results/records/claims-shown-in-context.md)、[unity-of-readings](../results/records/unity-of-readings.md)。
 
-### 一·二十五　两行
+### 一·二十六　两行
 
 **經**　两行，诸读各于其境而成，共成一宇也。沿一行，带境之辞皆为一宇之物，运恰在其境含之而示以此值之处，不待并行不悖。每辞有一境含之，则有不依境之系辞合之，恰当每状皆并行不悖。若每辞有一境含之，诸境之所可各只系其所含之辞，无一不依境之值合乎诸境之所可，而有一状守此所可，则无不依境之系辞合之。
 
-**說**　两行（境中之读共成一宇，`Becoming.Contextual.world`）是一般情形：凡读展开者都在某一境中读，带境之辞（境、辞、值）总是一宇之物（`Becoming.Contextual.world_active`，由定义），不须先合为一。不依境之系辞是拟之所定，恰在诸读并行不悖之处成立（`Becoming.Contextual.fitsFree_iff`）；宇连同其衡就是这样一处，一宇的两种变化之读每步并行不悖恰当它衡（一·十七）。也有守其所可之状皆不能并行不悖的：三盒之例，任开两盒恰有一盒有宝，没有一种放法合乎每一种开法（`Becoming.Specker.noGlobal`），于是没有不依境的系辞合乎守此者之宇（`Becoming.Contextual.no_free_frame`），而以境为索引的系辞总合（`Becoming.Contextual.indexed_fits`）；九辞之方阵亦如此：无一组值合乎六线之所许（`Becoming.Square.noGlobal`），量子之态于此方阵所示亦无不依境之值（`Becoming.Square.no_context_free_values`）。诸境各须一奇偶时，不依境之读恰在诸境无一族为矛盾处存在，见一·二十六。讀（AI，D23、D33）：宇不是起点，是诸读相粘之处；以境为索引的代价是，在两个境中所示的一辞是两辞。对照（相合，zhuang-qiwu-liang-xing）：「是以聖人和之以是非，而休乎天均，是之謂兩行」〔ZH1-S02〕：彼此之是非各在其境中成立而并行；「和之以是非」〔ZH1-S02〕「休乎天均」〔ZH1-S02〕是圣人的实践取向，形式只说何处并行不悖、何处不。又（相合，jin-shizi-yin-xian；隋唐，法藏《金师子章》）：「謂金與師子同時成立，圓滿具足」〔FO2-KS-P〕：看金与看师子是同一状在两个境中的读法，各自成立。
+**說**　两行（境中之读共成一宇，`Becoming.Contextual.world`）是一般情形：凡读展开者都在某一境中读，带境之辞（境、辞、值）总是一宇之物（`Becoming.Contextual.world_active`，由定义），不须先合为一。不依境之系辞是拟之所定，恰在诸读并行不悖之处成立（`Becoming.Contextual.fitsFree_iff`）；宇连同其衡就是这样一处，一宇的两种变化之读每步并行不悖恰当它衡（一·十七）。也有守其所可之状皆不能并行不悖的：三盒之例，任开两盒恰有一盒有宝，没有一种放法合乎每一种开法（`Becoming.Specker.noGlobal`），于是没有不依境的系辞合乎守此者之宇（`Becoming.Contextual.no_free_frame`），而以境为索引的系辞总合（`Becoming.Contextual.indexed_fits`）；九辞之方阵亦如此：无一组值合乎六线之所许（`Becoming.Square.noGlobal`），量子之态于此方阵所示亦无不依境之值（`Becoming.Square.no_context_free_values`）。诸境各须一奇偶时，不依境之读恰在诸境无一族为矛盾处存在，见一·二十七。讀（AI，D23、D33）：宇不是起点，是诸读相粘之处；以境为索引的代价是，在两个境中所示的一辞是两辞。对照（相合，zhuang-qiwu-liang-xing）：「是以聖人和之以是非，而休乎天均，是之謂兩行」〔ZH1-S02〕：彼此之是非各在其境中成立而并行；「和之以是非」〔ZH1-S02〕「休乎天均」〔ZH1-S02〕是圣人的实践取向，形式只说何处并行不悖、何处不。又（相合，jin-shizi-yin-xian；隋唐，法藏《金师子章》）：「謂金與師子同時成立，圓滿具足」〔FO2-KS-P〕：看金与看师子是同一状在两个境中的读法，各自成立。
 
 **證**　`Becoming.Contextual.world`、`Becoming.Contextual.world_active`、`Becoming.Contextual.fitsFree_iff`、`Becoming.Contextual.indexed_fits`、`Becoming.Contextual.no_free_frame`、`Becoming.Specker.noGlobal`；记录 [unity-of-readings](../results/records/unity-of-readings.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)。
 
-### 一·二十六　奇偶与矛盾
+### 一·二十七　奇偶与矛盾
 
 **經**　奇偶，一境所计诸辞中然者之数为奇或为偶也；奇偶之系，有一族之辞，每一境定其所计之辞与所须之奇偶。矛盾，诸境之一族（可重），每辞被计偶数次，而所须之奇偶相加为奇也。凡不依境之值，于一矛盾之诸境，所合者至多较其数少一，诸值相杂平均亦如之；各境自有其值者，每一境能独合，则合其全。族之辞各异、其同异定然否，则于所举之一族境，或有一不依境之值合其每一，或其中有一族为矛盾；境皆在所举之族中，则有守其所许而并行不悖者，恰当无矛盾。
 
@@ -776,7 +801,7 @@
 
 **經**　化，状跨步不同而续也。
 
-**說**　化（构形改变而同一不别）是一个组合：状跨步不同（一·二十一之同之否，`Becoming.Alike`），而一续于前（三·十一）。改认之下何者如故，见三·十二；改认而非改名者可改恒、竭与不息，见十·二：每步之关系全同，一恒一竭之网可读为无恒而二竭、不息之网（`Becoming.Turnover.identified`、`Becoming.Turnover.reidentified`，构造之例）。所以跨步之同一由名之跨步之样式承载，是表示所给之对应前提，不是每步之关系之推论；它何时由关系固定，见三·十四。对照（定域，xunzi-zhengming-yi-shi）：「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕：荀子以实无别为可稽之事实，理论只在三·十四之条件下给出它，余处是读法。又（相合，zaahan-bian-yi-fei-wo）：「若無常、苦，是變易法，多聞聖弟子於中寧見有我、異我、相在不？」〔FO1-S-SA〕：无不依命名之自立者，其类随命名而定；苦之评价不带入。又（定域，zhaolun-dong-jing）：「我之所謂靜者，亦以昔物不至今，故曰靜而非動。」〔CT1-S-ZL〕：静之读是每步之关系自足、不待跨步之同一（`Becoming.Web.reidentify_step`），与三·十之静同字异指；物不迁作普遍之言则定域。
+**說**　化（构形改变而同一不别）是一个组合：状跨步不同（一·二十二之同之否，`Becoming.Alike`），而一续于前（三·十一）。改认之下何者如故，见三·十二；改认而非改名者可改恒、竭与不息，见十·二：每步之关系全同，一恒一竭之网可读为无恒而二竭、不息之网（`Becoming.Turnover.identified`、`Becoming.Turnover.reidentified`，构造之例）。所以跨步之同一由名之跨步之样式承载，是表示所给之对应前提，不是每步之关系之推论；它何时由关系固定，见三·十四。对照（定域，xunzi-zhengming-yi-shi）：「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕：荀子以实无别为可稽之事实，理论只在三·十四之条件下给出它，余处是读法。又（相合，zaahan-bian-yi-fei-wo）：「若無常、苦，是變易法，多聞聖弟子於中寧見有我、異我、相在不？」〔FO1-S-SA〕：无不依命名之自立者，其类随命名而定；苦之评价不带入。又（定域，zhaolun-dong-jing）：「我之所謂靜者，亦以昔物不至今，故曰靜而非動。」〔CT1-S-ZL〕：静之读是每步之关系自足、不待跨步之同一（`Becoming.Web.reidentify_step`），与三·十之静同字异指；物不迁作普遍之言则定域。
 
 **證**　`Becoming.Web.Continues`；讀（AI，D62）：状跨步不同（名表之同之否）与续合为化，脊柱无一声明合二者，化之经是名表所名之读；记录 [identity-across-steps](../results/records/identity-across-steps.md)。
 
@@ -784,7 +809,7 @@
 
 **經**　改认之下宇衡，恰当其所读之续皆在衡续之内，每步一一相对，无设而然。宇衡，则 f 衡续 g，恰当 f 与 g 于步后之积同。宇衡而物之同异定然否：凡使之仍衡之改认皆以 c 续 c，恰当一步之后无他物之积与 c 同；有他物 d 之积于一步之后与 c 同，则有使之仍衡之改认以 c 续为 d；物跨一步而作，凡使之仍衡之改认皆然，恰当依衡续其为新作。有宇焉，其诸物之积皆零，二命名皆使之衡：一名之下不息，一名之下无作，而无一作依衡续为新作。
 
-**說**　宇之关系自身读出一续，即衡续（新组合：衡＋续，由衡之式组成：步后之物 f 之积，加步中取于步前之物 g 者，等于 g 步前之积加与 g 者，则 f 衡续 g，`Becoming.World.Conserves`）；此只读一步之关系，不用跨步之同一；宇衡恰当每物衡续其自身（`Becoming.World.balanced_iff_conserves`）。使宇仍衡之命名恰是衡续之内的一一相续（`Becoming.World.balanced_reidentify_iff`，无设）；其后诸律以衡为若，有设而然。在衡之宇，衡续就是步后同积（`Becoming.World.conserves_iff`），所以同一何时是事实，恰有界：一步之后无他物与 c 同积，则 c 之同一固定（`Becoming.World.fixed_iff`）；有他物同积，则交换之仍衡（`Becoming.World.continues_as_alike`），而每步之记录在任何改认下不变（三·十二），宇之任何记录都不能在二者之间作决。作亦然：一物在每个仍衡之命名下作，恰当它依衡续为新作（`Becoming.World.arises_fixed_iff`）；诸物之积皆零之处，衡续分不出任何物，二命名皆衡而作之有无相反（`Becoming.Lineage.world_readings`，构造之例）。讀（AI，D62）：这是化之实无别在宇中成立之处；物之同异读于关系（一·二十一之同），不读于名；由信息或组织之关系导出之续，仍未决。对照（相分，tiantai-bu-gai-ming-xing）：「性即不改義也」〔FO2-MH〕：以内在不可改者为性；此处同一只在上述条件下由关系固定，没有内在不可改者，属固定本性一层。荀子「状同而为异所者，虽可合，谓之二实。」〔RU2-S-XZ22〕（定域，xunzi-hua-yi-shi）：此状是荀子所说之形貌，不是本编之状；荀子以所分二实，律给出的是：在衡之宇，步后之积有别者由衡续分，只同积而无他关系可分者，宇不能分，唯名之序分之。
+**說**　宇之关系自身读出一续，即衡续（新组合：衡＋续，由衡之式组成：步后之物 f 之积，加步中取于步前之物 g 者，等于 g 步前之积加与 g 者，则 f 衡续 g，`Becoming.World.Conserves`）；此只读一步之关系，不用跨步之同一；宇衡恰当每物衡续其自身（`Becoming.World.balanced_iff_conserves`）。使宇仍衡之命名恰是衡续之内的一一相续（`Becoming.World.balanced_reidentify_iff`，无设）；其后诸律以衡为若，有设而然。在衡之宇，衡续就是步后同积（`Becoming.World.conserves_iff`），所以同一何时是事实，恰有界：一步之后无他物与 c 同积，则 c 之同一固定（`Becoming.World.fixed_iff`）；有他物同积，则交换之仍衡（`Becoming.World.continues_as_alike`），而每步之记录在任何改认下不变（三·十二），宇之任何记录都不能在二者之间作决。作亦然：一物在每个仍衡之命名下作，恰当它依衡续为新作（`Becoming.World.arises_fixed_iff`）；诸物之积皆零之处，衡续分不出任何物，二命名皆衡而作之有无相反（`Becoming.Lineage.world_readings`，构造之例）。讀（AI，D62）：这是化之实无别在宇中成立之处；物之同异读于关系（一·二十二之同），不读于名；由信息或组织之关系导出之续，仍未决。对照（相分，tiantai-bu-gai-ming-xing）：「性即不改義也」〔FO2-MH〕：以内在不可改者为性；此处同一只在上述条件下由关系固定，没有内在不可改者，属固定本性一层。荀子「状同而为异所者，虽可合，谓之二实。」〔RU2-S-XZ22〕（定域，xunzi-hua-yi-shi）：此状是荀子所说之形貌，不是本编之状；荀子以所分二实，律给出的是：在衡之宇，步后之积有别者由衡续分，只同积而无他关系可分者，宇不能分，唯名之序分之。
 
 **證**　`Becoming.World.Conserves`、`Becoming.World.balanced_reidentify_iff`、`Becoming.World.conserves_iff`、`Becoming.World.fixed_iff`、`Becoming.World.continues_as_alike`、`Becoming.World.arises_fixed_iff`、`Becoming.Lineage.world_readings`；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[classes-along-a-continuation](../results/records/classes-along-a-continuation.md)。
 
@@ -933,9 +958,9 @@
 
 ### 四·十二　开
 
-**經**　开，不能自某步起每步有封也：取与出于每一族。凡宇，运者有列，诸物皆有形，衡，耗，不息，则开。有宇，具有待、衡、唯运者与之、唯运者取且唯取于其所资、耗、有形、运者有列，开而非不息。
+**經**　开，不能自某步起每步有封也：取与超出每一族。凡宇，运者有列，诸物皆有形，衡，耗，不息，则开。有宇，具有待、衡、唯运者与之、唯运者取且唯取于其所资、耗、有形、运者有列，开而非不息。
 
-**說**　开（开放）在形式中没有单独之定义，它就是 `Becoming.World.arising_opens` 之结论：不息与“自某步起每步有封”不能同时成立。反过来不成立：一构造之例之宇（`Becoming.World.holding_world`）具上列七设，亦具传（十三·三），即具宇之八设（`Becoming.World.Premised`），无一步有封，却不屡作，亦不屡已，所以开是必要的，不是充分的。列与有形二设不能省（`Becoming.World.rest_needs_standing`，二构造之例）：只有作者有形时，一宇运者有列、衡、耗，每步围其二边之族而不息（其有积者不可列）；诸物皆有形而运者不可列时，一宇亦每步有封、衡、耗而不息。讀（AI，D7）：开是出于每一族之取与，可在总积不变时成立；总积之升是益（六·十），不是开，二者分开：屡变需开，日新需益。开只对应早先“开”之四相中的“未”一相；可、应、转三相另有其律（见附录之对照表）。对照（定域，yi-fu-zhi-ri-bi-guan）：「雷在地中，復；先王以至日閉關，商旅不行，后不省方。」〔YD-JP24〕（大象传·复，战国，有争议）：至日闭关是一步之封，律容许某些步封，不容许自某步起每步封而不息；所言来复需要其后重开，这是 AI 之推论，经文不言；先王、商旅、省方之政治语境不取。
+**說**　开（开放）在形式中没有单独之定义，它就是 `Becoming.World.arising_opens` 之结论：不息与“自某步起每步有封”不能同时成立。反过来不成立：一构造之例之宇（`Becoming.World.holding_world`）具上列七设，亦具传（十三·三），即具宇之八设（`Becoming.World.Premised`），无一步有封，却不屡作，亦不屡已，所以开是必要的，不是充分的。列与有形二设不能省（`Becoming.World.rest_needs_standing`，二构造之例）：只有作者有形时，一宇运者有列、衡、耗，每步围其二边之族而不息（其有积者不可列）；诸物皆有形而运者不可列时，一宇亦每步有封、衡、耗而不息。讀（AI，D7）：开是超出每一族之取与，可在总积不变时成立；总积之升是益（六·十），不是开，二者分开：屡变需开，日新需益。开只对应早先“开”之四相中的“未”一相；可、应、转三相另有其律（见附录之对照表）。对照（定域，yi-fu-zhi-ri-bi-guan）：「雷在地中，復；先王以至日閉關，商旅不行，后不省方。」〔YD-JP24〕（大象传·复，战国，有争议）：至日闭关是一步之封，律容许某些步封，不容许自某步起每步封而不息；所言来复需要其后重开，这是 AI 之推论，经文不言；先王、商旅、省方之政治语境不取。
 
 **證**　`Becoming.World.arising_opens`、`Becoming.World.holding_world`、`Becoming.World.rest_needs_standing`、`Becoming.World.Premised`、`Becoming.World.Counted`、`Becoming.World.Embodied`；记录 [continued-change-needs-openness](../results/records/continued-change-needs-openness.md)。
 
@@ -1108,9 +1133,9 @@
 
 ### 五·六　藏往
 
-**經**　往，历程至某步之前段也。藏往，以今与往之对为状：今依法而行，前今入于往也。凡法，藏往则无同归、自始日新、不复，往空之状一步之后不可得，无族尽其行；今复则往异；法之行所经之状有一族尽之，则自每步起有二步共一今而往异。
+**經**　往，文至某步之前段也。藏往，以今与往之对为状：今依法而行，前今入于往也。凡法，藏往则无同归、自始日新、不复，往空之状一步之后不可得，无族尽其行；今复则往异；法之行所经之状有一族尽之，则自每步起有二步共一今而往异。
 
-**說**　藏往（带着历史，`Becoming.Law.withHistory`）把每一步之状连同其往（历程之前段）读作一状：今是原法之一状，依原法而行（`Becoming.Law.present_orbit`），前一今入于往。这样读，任何法都无同归（`Becoming.Law.withHistory_lossless`），却自始日新、永不复（`Becoming.Law.withHistory_new`、`Becoming.Law.withHistory_never_returns`），往空之始一步之后即不可再有（`Becoming.Law.withHistory_loses_beginning`），无族能尽其行（`Becoming.Law.withHistory_unlisted`）：藏往不能在有穷多状中。今可以复，往不复（`Becoming.Law.return_keeps_history`）；反之，今只在有穷多状中行，则自每步起有两段不同之往共一今（`Becoming.Law.present_forgets`）：有穷之今忘。所以法无同归时，或凡状皆复（状有穷则必然，五·三），或有不复之状而无族尽其状（`Becoming.Law.Lossless.unlisted`）；藏往属后者。今只名藏往之状之第一分，不泛指本步。名取「知以藏往」〔DS02〕（系辞上，易传年代有争议；其条 xici-cang-wang 在篇九，全条判相分，藏往一半相合：往定已采之动之果，`Becoming.Run.fixes_of_takes`，九·十八；同句「神以知来」〔DS02〕以蓍之神前知，不经感，相分）。
+**說**　藏往（带着历史，`Becoming.Law.withHistory`）把每一步之状连同其往（以状为值之文之前段）读作一状：今是原法之一状，依原法而行（`Becoming.Law.present_orbit`），前一今入于往。这样读，任何法都无同归（`Becoming.Law.withHistory_lossless`），却自始日新、永不复（`Becoming.Law.withHistory_new`、`Becoming.Law.withHistory_never_returns`），往空之始一步之后即不可再有（`Becoming.Law.withHistory_loses_beginning`），无族能尽其行（`Becoming.Law.withHistory_unlisted`）：藏往不能在有穷多状中。今可以复，往不复（`Becoming.Law.return_keeps_history`）；反之，今只在有穷多状中行，则自每步起有两段不同之往共一今（`Becoming.Law.present_forgets`）：有穷之今忘。所以法无同归时，或凡状皆复（状有穷则必然，五·三），或有不复之状而无族尽其状（`Becoming.Law.Lossless.unlisted`）；藏往属后者。今只名藏往之状之第一分，不泛指本步。名取「知以藏往」〔DS02〕（系辞上，易传年代有争议；其条 xici-cang-wang 在篇九，全条判相分，藏往一半相合：往定已采之动之果，`Becoming.Run.fixes_of_takes`，九·十八；同句「神以知来」〔DS02〕以蓍之神前知，不经感，相分）。
 
 **證**　`Becoming.Law.withHistory`、`Becoming.Law.withHistory_lossless`、`Becoming.Law.withHistory_new`、`Becoming.Law.withHistory_never_returns`、`Becoming.Law.withHistory_loses_beginning`、`Becoming.Law.withHistory_unlisted`、`Becoming.Law.return_keeps_history`、`Becoming.Law.present_forgets`；记录 [recurrence-without-premise](../results/records/recurrence-without-premise.md)。
 
@@ -1446,23 +1471,23 @@
 
 ## 篇七　类与理
 
-本篇论类怎样在一展开之法下分化：诸状经类而读，哪些类为理。同（互模拟）与正名已见篇一（一·二十一、一·二十二），常、门、闭、所归、机与护闭见篇五。本篇先说类：类配每一者一值而并值同者，一象随类而同，是此象于每类只取一值；理是于一变承载法之类；推类以类推及未见者；辞之同一也是一类；法与一移每一状之象可换序，则永不并一状与其像；修正所未定者为未定。本篇诸条皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（类之同异定然否、值有相异之二、象移每一状、诸辞只相言……）下，对每个如此表示之宇成立。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，只定所顾，本身不排序；诸程孰愈唯在以广为愈（十六·三），其根据未决。本篇不用二者。前接篇六，后接篇八之时与位、篇九之感、识与知。
+本篇论类怎样在一展开之法下分化：诸状经类而读，哪些类为理。同（互模拟）与正名已见篇一（一·二十二、一·二十三），常、门、闭、所归、机与护闭见篇五。本篇先说类：类配每一者一值而并值同者，一象随类而同，是此象于每类只取一值；理是于一变承载法之类；推类以类推及未见者；辞之同一也是一类；法与一移每一状之象可换序，则永不并一状与其像；修正所未定者为未定。本篇诸条皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（类之同异定然否、值有相异之二、象移每一状、诸辞只相言……）下，对每个如此表示之宇成立。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，只定所顾，本身不排序；诸程孰愈唯在以广为愈（十六·三），其根据未决。本篇不用二者。前接篇六，后接篇八之时与位、篇九之感、识与知。
 
 ### 七·一　类与随类而同
 
 **經**　象（一·三）予一者之值，谓之其像。类，配所论之每一者一值，而并值同者也；一者所得之值，谓之其类。一象随类而同，类同之二者其像皆同也。凡象随一类而同，则亦随凡更细之类而同：更细之类所并者，此类皆并之。类并一切者，随之而同之象，恰其像处处皆同。
 
-**說**　类（归并，lumping，`Becoming.Learning.Lumped`）不是所论者之外的一种东西，只是配值与并：其类同者并为一，此外无他。象在此指一般之映射，配每一者一值（名表以象名映射本身，取「象也者，像也」〔DS03〕；象于一者之值写「其像」）。随类而同是新组合：随＋类＋而同，说一象不分开此类所并者。类愈细，随之而同之象不减（`Becoming.lumped_of_finer`）；达名（十·四）什么都不分开，随它而同者只有处处同像之象（`Becoming.lumped_const_iff`），所以「萬物皆一」〔ZH1-S05〕是经达名所作之并，不是取消差别。这两条在 Lean 中就一动陈述（其动随状之类而同，见一·十八），所论之象是任意的，律对每一象成立。类同不是同（一·二十一）：在一类下同值，不就一切测验相同。对照（相合，zhuangzi-de-chong-fu-tong-yi）：「自其異者視之，肝膽楚、越也。自其同者視之，萬物皆一也。」〔ZH1-S05〕（先秦，《庄子》内篇）：一与多随所取之类而定。又（相合，xiaoqu-you-yi-tong）：「夫物有以同而不率遂同。」〔MI1-S-XQ〕（先秦，《墨子·小取》）：在一类下同，不就全同。哪一类承载法，见七·二。
+**說**　类（归并，lumping，`Becoming.Learning.Lumped`）不是所论者之外的一种东西，只是配值与并：其类同者并为一，此外无他。象在此指一般之映射，配每一者一值（名表以象名映射本身，取「象也者，像也」〔DS03〕；象于一者之值写「其像」）。随类而同是新组合：随＋类＋而同，说一象不分开此类所并者。类愈细，随之而同之象不减（`Becoming.lumped_of_finer`）；达名（十·四）什么都不分开，随它而同者只有处处同像之象（`Becoming.lumped_const_iff`），所以「萬物皆一」〔ZH1-S05〕是经达名所作之并，不是取消差别。这两条在 Lean 中就一动陈述（其动随状之类而同，见一·十八），所论之象是任意的，律对每一象成立。类同不是同（一·二十二）：在一类下同值，不就一切测验相同。对照（相合，zhuangzi-de-chong-fu-tong-yi）：「自其異者視之，肝膽楚、越也。自其同者視之，萬物皆一也。」〔ZH1-S05〕（先秦，《庄子》内篇）：一与多随所取之类而定。又（相合，xiaoqu-you-yi-tong）：「夫物有以同而不率遂同。」〔MI1-S-XQ〕（先秦，《墨子·小取》）：在一类下同，不就全同。哪一类承载法，见七·二。
 
 **證**　`Becoming.Learning.Lumped`、`Becoming.lumped_of_finer`、`Becoming.lumped_const_iff`；记录 [generalization-through-lumping](../results/records/generalization-through-lumping.md)、[where-a-move-is-formed](../results/records/where-a-move-is-formed.md)。
 
 ### 七·二　理
 
-**經**　理，于一变，凡类同之二状以同一动之果亦类同之类也。凡变与类，有一法行于其类之上，而变之每步经此类皆为此法所许，恰当此类于此变为理；以其类代状之变为法，亦恰当此。凡法，每状唯一动、恰有一次状者，一类于此法为理，恰当次状之类随此类而同。
+**經**　理，于一变，凡类同之二状以同一动之果亦类同之类也。凡变与类，有一法行于其类之上，而变之每步经此类皆为此法所许，恰当此类于此变为理；以其类代状之变为法，亦恰当此。以其类代状之变，许变经此类之每步；凡许变经此类之每步者，皆许以其类代状之变之每步。凡法，每状唯一动、恰有一次状者，一类于此法为理，恰当次状之类随此类而同。
 
-**說**　理（对结构与变化之法的建模，`Becoming.GoAlike`）由两个已检之部分合成：一类之并（七·一），与变跨此类之同样。对法，二者是一个条件（`Becoming.Learning.goAlike_iff_lumped`）：构之模与变之模为一类。在一般之变上，有法承载于其类之上，恰在此类为理（`Becoming.carries_law_iff`），对每一变与每一类成立；承载者可取以其类代状之变（`Becoming.image_determined_iff`）。同中为法（一·二十一）者亦然：有一变行于其类之上、于每一值同中为法、变之每步经此类皆为其所许，恰当其类之上有一等价 E，只连诸辞于其然否皆同之二值，而此类依 E 为理（`Becoming.carries_law_alike_iff`）。凡理皆类，类不皆理，在易之模型（一构造之例）中可见：于消长环，以一卦与其错为一对之类为理（`Becoming.Hexagram.pairs_goAlike`；错，一卦每爻皆反其刚柔所成之卦，`Becoming.Hexagram.complement`，名取「八卦相錯」〔YD-OW-SG〕，讀，AI，D51），以刚爻之数为类不为理（泰、否各三刚爻，次步一成四、一成二，`Becoming.Hexagram.yang_not_goAlike`），其奇偶为理（`Becoming.Hexagram.yangOdd_goAlike`），而于互卦之法奇偶不为理（`Becoming.Hexagram.nuclear_yangOdd_not_goAlike`）：为理与否在所行之法，不在类本身。讀（AI，D26）：理是所行之变跨之同样之类；物皆齐一不是所设，是用到之处写出之局部条件（随类而同）。对照（定域，jielao-li-fen）：「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕（先秦，《韩非子·解老》）：理是分，这一半相合；一分何时为理，原句未说。又（相合，zhuangzi-pao-ding）：「依乎天理，批大郤，導大窾，因其固然」〔ZH1-S03〕（先秦，《庄子》内篇）：刀随所行之结构所并之类而行；择经一象而恰择所要者，则此象所并之二可择者，所要者同然否（`Becoming.Learning.selects_right_through`）。相分（chengyi-xing-ji-li）：「性即理也。天下之理，原其所自，未有不善。」〔RU2-S-S06〕（宋明，程颐语，经《近思录》辑录）：把理立为先定且善之所禀；本编之理随所行之变而定，评价另有二设：凡续皆有顾（延续之条件，陈述而不断言）只定所顾，以广为愈（其根据未决）定次序，都不放在理之源处。
+**說**　理（对结构与变化之法的建模，`Becoming.GoAlike`）由两个已检之部分合成：一类之并（七·一），与变跨此类之同样。对法，二者是一个条件（`Becoming.Learning.goAlike_iff_lumped`）：构之模与变之模为一类。在一般之变上，有法承载于其类之上，恰在此类为理（`Becoming.carries_law_iff`），对每一变与每一类成立；承载者可取以其类代状之变（`Becoming.image_determined_iff`）。以其类代状之变（`Becoming.Image`，变经一类所示之变）许变经此类之每步（`Becoming.factors_image`），且是这样的变中最少者：任何一变，只要许变经此类之每一步，就许以其类代状之变的每一步（`Becoming.Image.least`）；所以理恰是其所示之变为法之类。此变是相若（九·二十一）之最小者，不另立名；它也不是文：它给状之类与动，文只给值（一·二十一）。同中为法（一·二十二）者亦然：有一变行于其类之上、于每一值同中为法、变之每步经此类皆为其所许，恰当其类之上有一等价 E，只连诸辞于其然否皆同之二值，而此类依 E 为理（`Becoming.carries_law_alike_iff`）。凡理皆类，类不皆理，在易之模型（一构造之例）中可见：于消长环，以一卦与其错为一对之类为理（`Becoming.Hexagram.pairs_goAlike`；错，一卦每爻皆反其刚柔所成之卦，`Becoming.Hexagram.complement`，名取「八卦相錯」〔YD-OW-SG〕，讀，AI，D51），以刚爻之数为类不为理（泰、否各三刚爻，次步一成四、一成二，`Becoming.Hexagram.yang_not_goAlike`），其奇偶为理（`Becoming.Hexagram.yangOdd_goAlike`），而于互卦之法奇偶不为理（`Becoming.Hexagram.nuclear_yangOdd_not_goAlike`）：为理与否在所行之法，不在类本身。讀（AI，D26）：理是所行之变跨之同样之类；物皆齐一不是所设，是用到之处写出之局部条件（随类而同）。对照（定域，jielao-li-fen）：「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕（先秦，《韩非子·解老》）：理是分，这一半相合；一分何时为理，原句未说。同篇「理者，成物之文也」〔CV1-S-JL〕亦定域（讀，AI，D63）：理自文读出，不是文（一·二十一）。法经一象示之，凡守象之值而为理之类所并之二状皆文同（`Becoming.Law.sameFuture_of_law`）；守象之值、为理而并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`）。所以于守象之值之最粗之理，所并者恰为文同之状，「物有理，不可以相薄」〔CV1-S-JL〕即理不并不文同之状；这是四条已检之律之合（又 `Becoming.Law.alike_iff_sameFuture`、`Becoming.identifiesAlike_iff`），不是一条定理。同篇以理为物之制、以道为万物之所以成，皆不带。又（相合，zhuangzi-pao-ding）：「依乎天理，批大郤，導大窾，因其固然」〔ZH1-S03〕（先秦，《庄子》内篇）：刀随所行之结构所并之类而行；择经一象而恰择所要者，则此象所并之二可择者，所要者同然否（`Becoming.Learning.selects_right_through`）。相分（chengyi-xing-ji-li）：「性即理也。天下之理，原其所自，未有不善。」〔RU2-S-S06〕（宋明，程颐语，经《近思录》辑录）：把理立为先定且善之所禀；本编之理随所行之变而定，评价另有二设：凡续皆有顾（延续之条件，陈述而不断言）只定所顾，以广为愈（其根据未决）定次序，都不放在理之源处。
 
-**證**　`Becoming.GoAlike`、`Becoming.Learning.goAlike_iff_lumped`、`Becoming.carries_law_iff`、`Becoming.image_determined_iff`、`Becoming.carries_law_alike_iff`、`Becoming.Hexagram.pairs_goAlike`、`Becoming.Hexagram.yang_not_goAlike`、`Becoming.Hexagram.yangOdd_goAlike`；记录 [projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[generalization-through-lumping](../results/records/generalization-through-lumping.md)、[determinacy-up-to-likeness](../results/records/determinacy-up-to-likeness.md)、[hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)、[hexagram-arrangements-and-laws](../results/records/hexagram-arrangements-and-laws.md)。
+**證**　`Becoming.GoAlike`、`Becoming.Learning.goAlike_iff_lumped`、`Becoming.carries_law_iff`、`Becoming.image_determined_iff`、`Becoming.Image`、`Becoming.factors_image`、`Becoming.Image.least`、`Becoming.Law.sameFuture_of_law`、`Becoming.Law.identifiesAlike_of_law`、`Becoming.carries_law_alike_iff`、`Becoming.Hexagram.pairs_goAlike`、`Becoming.Hexagram.yang_not_goAlike`、`Becoming.Hexagram.yangOdd_goAlike`；记录 [projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)、[generalization-through-lumping](../results/records/generalization-through-lumping.md)、[determinacy-up-to-likeness](../results/records/determinacy-up-to-likeness.md)、[hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)、[hexagram-arrangements-and-laws](../results/records/hexagram-arrangements-and-laws.md)。
 
 ### 七·三　推类
 
@@ -1484,7 +1509,7 @@
 
 **經**　法与一象可换序，于每一状先取其像而后进一步，与先进一步而后取其像，所得之状同也。象移每一状，则凡与之可换序之法，自一状与自其像之二行，于同一步永不在同一状；亦无一步使凡行皆在一状；故凡于某步使此二行同在一状之法，皆不与此象可换序。法与一象可换序，则自象所不移之状起之行，其每步之状象皆不移；一类并每一状与其像而不并他者，则此类于此法为理。
 
-**說**　这条说一个对称所携之差别（`Becoming.Law.Commutes`）：法守此对称，就永不并对称所分开者（`Becoming.Law.Commutes.apart`）；要并之，法须破此对称（`Becoming.Law.Commutes.breaks`）；与移每一状之象可换序者，没有一个在某步把每一行都送到同一状（`Becoming.Law.Commutes.not_drawn_to_one`）。象所不移者，法亦保之不移（`Becoming.Law.Commutes.keeps_fixed`）：所携者有同有异，都不是价值。象与自身可换序，所以移每一值之象，其行每步皆改（`Becoming.Law.Commutes.self_apart`），即对角之修正永不至静（其三值之形见七·六）。与理相接（七·二）：以对称之对为一类，此类于法为理（`Becoming.Law.Commutes.pairs_lumped`、`Becoming.Law.Commutes.pairs_goAlike`）。卦之例（易之模型，一构造之例）：消长环与错可换序（`Becoming.Hexagram.waxWane_complement`），一卦与其错于同步永不同在（`Becoming.Hexagram.waxWane_apart`），六步至其错、十二步复（`Becoming.Hexagram.waxWane_halfway`）；只入柔爻之法使每卦六步皆至坤，所以破此对称（`Becoming.Hexagram.wane_breaks`）。「可换序」是平语，名表无此名，并行不悖（一·二十四）不借。讀（AI，D52）：守对称之法永不并对称所分开者。对照（定域，tuan-kui）：「萬物睽，而其事類也」〔YD-JP38〕（先秦至秦汉，《彖传》，成书年代有争议）：一卦与其错相睽而永不被并，其对是于此法为理之类；彖传以「萬物」立普遍之形，脊柱只在法与移每一状之象可换序处给出睽而事类，且只是充分条件，反向未证。
+**說**　这条说一个对称所携之差别（`Becoming.Law.Commutes`）：法守此对称，就永不并对称所分开者（`Becoming.Law.Commutes.apart`）；要并之，法须破此对称（`Becoming.Law.Commutes.breaks`）；与移每一状之象可换序者，没有一个在某步把每一行都送到同一状（`Becoming.Law.Commutes.not_drawn_to_one`）。象所不移者，法亦保之不移（`Becoming.Law.Commutes.keeps_fixed`）：所携者有同有异，都不是价值。象与自身可换序，所以移每一值之象，其行每步皆改（`Becoming.Law.Commutes.self_apart`），即对角之修正永不至静（其三值之形见七·六）。与理相接（七·二）：以对称之对为一类，此类于法为理（`Becoming.Law.Commutes.pairs_lumped`、`Becoming.Law.Commutes.pairs_goAlike`）。卦之例（易之模型，一构造之例）：消长环与错可换序（`Becoming.Hexagram.waxWane_complement`），一卦与其错于同步永不同在（`Becoming.Hexagram.waxWane_apart`），六步至其错、十二步复（`Becoming.Hexagram.waxWane_halfway`）；只入柔爻之法使每卦六步皆至坤，所以破此对称（`Becoming.Hexagram.wane_breaks`）。「可换序」是平语，名表无此名，并行不悖（一·二十五）不借。讀（AI，D52）：守对称之法永不并对称所分开者。对照（定域，tuan-kui）：「萬物睽，而其事類也」〔YD-JP38〕（先秦至秦汉，《彖传》，成书年代有争议）：一卦与其错相睽而永不被并，其对是于此法为理之类；彖传以「萬物」立普遍之形，脊柱只在法与移每一状之象可换序处给出睽而事类，且只是充分条件，反向未证。
 
 **證**　`Becoming.Law.Commutes`、`Becoming.Law.Commutes.apart`、`Becoming.Law.Commutes.breaks`、`Becoming.Law.Commutes.not_drawn_to_one`、`Becoming.Law.Commutes.keeps_fixed`、`Becoming.Law.Commutes.pairs_goAlike`、`Becoming.Hexagram.waxWane_apart`、`Becoming.Hexagram.wane_breaks`；记录 [what-a-commuting-law-keeps-apart](../results/records/what-a-commuting-law-keeps-apart.md)。
 
@@ -1578,7 +1603,7 @@
 
 **經**　涯，有穷之界也：二行至涯而同，谓其状至涯（含）皆同，其动于涯前皆同。
 
-**說**　涯（`Becoming.Run.AgreeUpTo`）只是一有穷之步；二行于其前之往（历程之前段）全同。名取「吾生也有涯，而知也无涯。以有涯隨无涯，殆已」〔ZH1-S03〕（相合，zhuangzi-youya；《庄子》内篇，各篇层次有争议）：有涯是有穷之往，无涯是不止于任何往之展开；以有穷之往追随不止之展开而不能尽，正是九·三十所证之结构（往不定来）。庄子以一生为涯，此处之涯是任一读之往之有穷之界，不限于一生；“殆”是评价，不带入。
+**說**　涯（`Becoming.Run.AgreeUpTo`）只是一有穷之步；二行于其前之往（其状与动所成之文之前段）全同。名取「吾生也有涯，而知也无涯。以有涯隨无涯，殆已」〔ZH1-S03〕（相合，zhuangzi-youya；《庄子》内篇，各篇层次有争议）：有涯是有穷之往，无涯是不止于任何往之展开；以有穷之往追随不止之展开而不能尽，正是九·三十所证之结构（往不定来）。庄子以一生为涯，此处之涯是任一读之往之有穷之界，不限于一生；“殆”是评价，不带入。
 
 **證**　`Becoming.Run.AgreeUpTo`；记录 [becoming-finite-horizon](../results/records/becoming-finite-horizon.md)。
 
@@ -1642,7 +1667,7 @@
 
 **經**　凡位之关系，逐其所在（位、高、际）而读，皆于境而读：诸处所示并行不悖而为全卦之一读，恰当每处所示皆同。以二体为二境，各示其三高之爻：二体并行不悖，恰当无一高相应；泰有高相应，故于任一变，不依境之系辞皆不合于二体之所示，带境之系辞则合之。诸位之正并行不悖，恰在既济、未济；诸高之相应并行不悖，恰在三高皆相应或皆不相应；诸际之比并行不悖，恰在乾、坤、既济、未济。
 
-**說**　一关系逐其所在而读，是同一辞（状）于诸境之所示（`Becoming.Hexagram.atSites`）；并行不悖（一·二十四）恰在每处所示相同（`Becoming.Hexagram.atSites_glues_iff`）。二体作二境时，相应之处同一高之爻是两个辞，各在一体（`Becoming.Hexagram.halves_glues_iff`）；所以没有一个不依境之系辞（系辞见一·十九，不依境见一·二十四）能合之，带境之系辞则能（`Becoming.Hexagram.halves_no_free_frame`、`Becoming.Hexagram.halves_indexed`，经 `Becoming.Contextual.fitsFree_iff`）。这是两行（一·二十五）在卦上之例。对照：「六爻相杂，唯其时物也」〔DS03〕（相合，xici-liuyao-xiangza）：爻义随其所在而定，不先有一个脱离其位之爻义。「夫卦者，時也」〔YWH-LG〕（相合，lueli-gua-shi-yao-bian；王弼）：卦是诸位之读一并然之那一状，境是位；王弼此处之时是状，与名表之时（八·十）结构不同。「剛柔正而位當也」〔YD-HX01〕（相合，tuan-jiji-zhengwei）：六爻皆正恰在既济（`Becoming.Hexagram.inPhase_all_iff`）。
+**說**　一关系逐其所在而读，是同一辞（状）于诸境之所示（`Becoming.Hexagram.atSites`）；并行不悖（一·二十五）恰在每处所示相同（`Becoming.Hexagram.atSites_glues_iff`）。二体作二境时，相应之处同一高之爻是两个辞，各在一体（`Becoming.Hexagram.halves_glues_iff`）；所以没有一个不依境之系辞（系辞见一·十九，不依境见一·二十五）能合之，带境之系辞则能（`Becoming.Hexagram.halves_no_free_frame`、`Becoming.Hexagram.halves_indexed`，经 `Becoming.Contextual.fitsFree_iff`）。这是两行（一·二十六）在卦上之例。对照：「六爻相杂，唯其时物也」〔DS03〕（相合，xici-liuyao-xiangza）：爻义随其所在而定，不先有一个脱离其位之爻义。「夫卦者，時也」〔YWH-LG〕（相合，lueli-gua-shi-yao-bian；王弼）：卦是诸位之读一并然之那一状，境是位；王弼此处之时是状，与名表之时（八·十）结构不同。「剛柔正而位當也」〔YD-HX01〕（相合，tuan-jiji-zhengwei）：六爻皆正恰在既济（`Becoming.Hexagram.inPhase_all_iff`）。
 
 **證**　`Becoming.Hexagram.atSites_glues_iff`、`Becoming.Hexagram.halves_glues_iff`、`Becoming.Hexagram.halves_no_free_frame`、`Becoming.Hexagram.halves_indexed`、`Becoming.Hexagram.phases_glue_iff`、`Becoming.Hexagram.oppositions_glue_iff`、`Becoming.Hexagram.seams_glue_iff`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)。
 
@@ -1723,7 +1748,7 @@
 
 ## 篇九　感、识与知
 
-本篇论知怎样在一个展开之内成立。到达一个待者的，只是感入它者：或唯以阈感入，致其需之足否；或以积感入，致其积。本篇先立感与择：感（所待入于待者）、缘感无异、择与缘感而择；识是一个待者自身之后程，随其感所作之类而定；感之所致与知几、读出特征、闻见之路（上游、下游）与路之成、至期所及与未及则答同、察，都在这一关系之内，不是展开之外另一种关系。次说验、缘感而择之律、验之界与验在关系中，断与知之所至；次说往与反事实、试、相若、数往、附与驳、征与征于极、参验与阙，即往与检验各定什么、不定什么，以及以所读为索引之诸读不尽其所读；终说知来：往不定来，凡知来皆有其不测之历程；过则改在终而复始之历程上不符有界；有界则往定其行；习、可知、衢与大率。诸律或无设而然，或以衡为设而有设而然（如九·七、九·十四、九·十与九·十九）：局部条件（有穷、有一族尽之、定然否、有界……）写入其中；构造之例，经中写“有例”；以双重否定成立者，经中写“不可非”。伦理之二设本篇皆不用：凡续皆有顾是设，陈而不断，只定所顾而不排序（十五·二十一）；诸历程孰愈只在以广为愈（十六·三）。验与征只定结果，不排序。讀（AI，D26、D45）：识、理、明是一个结构：识是待者之历程随其感之类而定，理是展开随之而同之类（篇七），明是一择所经之感及于容所不标者（篇十一）。本篇承篇一（状、动、变、法、行、读）、篇二（待与所待）、篇七（类与理）与篇八（时、涯、变通），下接篇十（名与码）与篇十一（应、诸域、择之所及与明）。
+本篇论知怎样在一个展开之内成立。到达一个待者的，只是感入它者：或唯以阈感入，致其需之足否；或以积感入，致其积。本篇先立感与择：感（所待入于待者）、缘感无异、择与缘感而择；识是一个待者自身之后程，随其感所作之类而定；感之所致与知几、读出特征、闻见之路（上游、下游）与路之成、至期所及与未及则答同、察，都在这一关系之内，不是展开之外另一种关系。次说验、缘感而择之律、验之界与验在关系中，断与知之所至；次说往与反事实、试、相若、数往、附与驳、征与征于极、参验与阙，即往与检验各定什么、不定什么，以及以所读为索引之诸读不尽其所读；终说知来，皆在文上（一·二十一）：往不定来，凡知来皆有其不测之文；过则改在终而复始之文上不符有界；有界则往定其行；习、可知、衢与大率。诸律或无设而然，或以衡为设而有设而然（如九·七、九·十四、九·十与九·十九）：局部条件（有穷、有一族尽之、定然否、有界……）写入其中；构造之例，经中写“有例”；以双重否定成立者，经中写“不可非”。伦理之二设本篇皆不用：凡续皆有顾是设，陈而不断，只定所顾而不排序（十五·二十一）；诸历程孰愈只在以广为愈（十六·三）。验与征只定结果，不排序。讀（AI，D26、D45）：识、理、明是一个结构：识是待者之历程随其感之类而定，理是展开随之而同之类（篇七），明是一择所经之感及于容所不标者（篇十一）。本篇承篇一（状、动、变、法、行、读）、篇二（待与所待）、篇七（类与理）与篇八（时、涯、变通），下接篇十（名与码）与篇十一（应、诸域、择之所及与明）。
 
 ### 九·一　感
 
@@ -1865,7 +1890,7 @@
 
 **經**　往（五·六）定一动于一状之果为某状，谓凡法许此行此步之前每一移者，皆以此动送此状至彼状也。凡行于此步之前既于一状采一动，往定其果。凡变为法、状有二异者：行于此步之前未于一状采一动，则往不定其果；藏往之行，于其所经之每状，往唯定其所采之动之果。
 
-**說**　往（历程之前段，`Becoming.Learning.prefixOf`）所定者，就法而言（`Becoming.Run.Fixes`）：凡许此行诸移之法，都把此动在此状送到同一处。采（`Becoming.Run.Takes`：一行于某步之前曾在一状而其动为此动）之动被定（`Becoming.Run.fixes_of_takes`）；未采之动不被定，即使读全状也不定：法把未采之动送到任何处，行都一样（`Becoming.Run.not_fixes_of_untaken`）。所以自身之动若改作他样会怎样，不由一次之往定，而由法定，见九·十九。藏往（带着历史，五·六）之形，每步都是新状（`Becoming.keepHistory_new`），所以把所经之一切都算作自身者，关于自身之动只定其所采者（`Becoming.keepHistory_fixes_nothing_else`）。名取「夫易，彰往而察来」〔DS03〕之往（定域，xici-zhang-wang-cha-lai）：彰往只在数往之条件下成立（九·二十二），察来须有法（九·三十三）。相分（xici-cang-wang）：「神以知来，知以藏往」〔DS02〕（先秦至秦汉，系辞上）：“知以藏往”一半相合；以蓍之神知来，是不经感之前知，与往不定来（九·三十）相冲。
+**說**　往（文之前段，`Becoming.Learning.prefixOf`；一行之往，是其状与动经恒等之象逐步所成之文之前段：历是所给之序，文是所读之值，同一序列之二读）所定者，就法而言（`Becoming.Run.Fixes`）：凡许此行诸移之法，都把此动在此状送到同一处。采（`Becoming.Run.Takes`：一行于某步之前曾在一状而其动为此动）之动被定（`Becoming.Run.fixes_of_takes`）；未采之动不被定，即使读全状也不定：法把未采之动送到任何处，行都一样（`Becoming.Run.not_fixes_of_untaken`）。所以自身之动若改作他样会怎样，不由一次之往定，而由法定，见九·十九。藏往（带着历史，五·六）之形，每步都是新状（`Becoming.keepHistory_new`），所以把所经之一切都算作自身者，关于自身之动只定其所采者（`Becoming.keepHistory_fixes_nothing_else`）。名取「夫易，彰往而察来」〔DS03〕之往（定域，xici-zhang-wang-cha-lai）：彰往只在数往之条件下成立（九·二十二），察来须有法（九·三十三）。相分（xici-cang-wang）：「神以知来，知以藏往」〔DS02〕（先秦至秦汉，系辞上）：“知以藏往”一半相合；以蓍之神知来，是不经感之前知，与往不定来（九·三十）相冲。
 
 **證**　`Becoming.Learning.prefixOf`、`Becoming.Run.Fixes`、`Becoming.Run.Takes`、`Becoming.Run.fixes_of_takes`、`Becoming.Run.not_fixes_of_untaken`、`Becoming.keepHistory_new`、`Becoming.keepHistory_fixes_nothing_else`；记录 [experiment-needs-return](../results/records/experiment-needs-return.md)。
 
@@ -1889,9 +1914,9 @@
 
 **經**　相若，变之步经一类皆为一变之步也：所给之控制，谓类所并者于其变无涉。凡变之步经一类皆为一法之步，往经此类所定一动于一类之果，即凡属此类之状以此动之果之类，行经之、未经之皆然。有例：类所并之隐者每步而改，动无所改：往经此类，将处处无异之二动定为二果；动随所并之隐者而改，则“动定其果”之误法每步皆许经此类所读之步，往永不去之；改其动而与所并之隐者相反，则至第五步无一法许其所读之步。
 
-**說**　相若（对照，control，`Becoming.FactorsThrough`）是所给之控制，不是被证之同（同名互模拟）。在相若之下，一次代其类（`Becoming.Run.generalizes`）。界有三个构造之例，同在一构（隐者每步翻转，果为前步之隐者，动无所改，类只读果）：变之步经此类不皆为一法之步，经果读出之往把处处无差之二动分为二果（`Becoming.Confound.misattributes`）；动与类所并之隐者同步，“动定其果”之误法每步皆被许，往永不去之（`Becoming.Confound.confounded`）；改动而与隐者相反，则至第五步无一法许其所读之步（`Becoming.Confound.varied_refutes`）。讀（AI，D25）：动之改与所并者无涉，即随机化之结构。名取「權重相若也」〔MI1-S-SX〕（相合，mojing-quan-zhong-xiang-ruo；先秦，墨经说下）：两加之重相若，唯本标之长不同，标必下：他项皆相若，只变一项。对照（定域，mozi-shi-wei-yi）：「此世未易，民未渝，在於桀紂則天下亂，在於湯武則天下治」〔MO1-S-C35〕（先秦，墨子非命上）：此结论只在“未易”“未渝”为真之模型下成立；它们是所给之前提，不由律保证。
+**說**　相若（对照，control，`Becoming.FactorsThrough`）是所给之控制，不是被证之同（同名互模拟）。在相若之下，一次代其类（`Becoming.Run.generalizes`）。以其类代状之变（`Becoming.Image`，变经一类所示之变）是相若之最小者：原变之步经此类都是它的步（`Becoming.factors_image`），而任何一变，只要原变之步经此类都是它的步，就许以其类代状之变的每一步（`Becoming.Image.least`）。此变为法，恰当此类为理（七·二）；它不另立名，也不是文（一·二十一）。界有三个构造之例，同在一构（隐者每步翻转，果为前步之隐者，动无所改，类只读果）：变之步经此类不皆为一法之步，经果读出之往把处处无差之二动分为二果（`Becoming.Confound.misattributes`）；动与类所并之隐者同步，“动定其果”之误法每步皆被许，往永不去之（`Becoming.Confound.confounded`）；改动而与隐者相反，则至第五步无一法许其所读之步（`Becoming.Confound.varied_refutes`）。讀（AI，D25）：动之改与所并者无涉，即随机化之结构。名取「權重相若也」〔MI1-S-SX〕（相合，mojing-quan-zhong-xiang-ruo；先秦，墨经说下）：两加之重相若，唯本标之长不同，标必下：他项皆相若，只变一项。对照（定域，mozi-shi-wei-yi）：「此世未易，民未渝，在於桀紂則天下亂，在於湯武則天下治」〔MO1-S-C35〕（先秦，墨子非命上）：此结论只在“未易”“未渝”为真之模型下成立；它们是所给之前提，不由律保证。
 
-**證**　`Becoming.FactorsThrough`、`Becoming.Run.generalizes`、`Becoming.Confound.misattributes`、`Becoming.Confound.confounded`、`Becoming.Confound.varied_refutes`；记录 [experiment-needs-return](../results/records/experiment-needs-return.md)、[determinacy-up-to-likeness](../results/records/determinacy-up-to-likeness.md)。
+**證**　`Becoming.FactorsThrough`、`Becoming.Image`、`Becoming.factors_image`、`Becoming.Image.least`、`Becoming.Run.generalizes`、`Becoming.Confound.misattributes`、`Becoming.Confound.confounded`、`Becoming.Confound.varied_refutes`；记录 [experiment-needs-return](../results/records/experiment-needs-return.md)、[projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[determinacy-up-to-likeness](../results/records/determinacy-up-to-likeness.md)。
 
 ### 九·二十二　数往
 
@@ -1937,7 +1962,7 @@
 
 **經**　阙，于不能定处不出值也。凡读于一域，所给之值皆为特征之值，谓之于域符；于域之每状皆出特征之值，谓之于域每状皆得。处处阙者，于域符；域有一状，则处处阙者不于域每状皆得。于域符之读，于类并域中二状而特征异之处，必阙。于域每状皆得之读，必特征于域中随类而同；类于域中之每值，皆给出域中出此值之一状，则于域每状皆得之读有之，恰当特征于域中随类而同。
 
-**說**　阙（沉默，silence）是于域符而不于域每状皆得之读（`Becoming.PartialReadout.SoundWithin`、`Becoming.PartialReadout.ExactWithin`、`Becoming.PartialReadout.silent_sound`、`Becoming.PartialReadout.silent_not_exact`）。得（古：出一值而即所来之值，其律见九·二十九）名取墨子非攻中所引古语「謀而不得，則以往知來，以見知隱」〔MO1-S-C18〕（先秦）：得为所谋之中，同句即知来之结构；得失之利害、得道之义不带。于域符（所给之值皆是，不出值亦可）与知来之符（九·二十九）同一概念，一在域之状，一在历程之步；此以所给之值皆是陈之，彼以无一步不符陈之，值之同异定然否时二者相合。于域符之读在类并了特征可分之二状处必须阙（`Becoming.PartialReadout.SoundWithin.silent`）；于域每状皆得之读要求特征随类而同（`Becoming.PartialReadout.ExactWithin.lumped`）；有一个所给之截面（类于域中之每一值，给出域中出此值之一状；截面是所给之资料，不是篇四之截），于域每状皆得之读存在恰在特征随类而同处（`Becoming.PartialReadout.exact_exists_iff`），不用选择公理。阙不是一个值：它与七·六之未定（修订中尚未定之第三值）不同。对照（相合，lunyu-gai-que-ru）：「君子於其所不知，蓋闕如也」〔RU1-S-LY〕（先秦，论语）：阙只在不知之处；名即取此句。又（相合，mojing-liang-zhi）：「是所智也，是所不智也」〔MI1-S-SX〕（先秦，墨经说下）：标出所不知，是于域符之读之一部分。
+**說**　阙（沉默，silence）是于域符而不于域每状皆得之读（`Becoming.PartialReadout.SoundWithin`、`Becoming.PartialReadout.ExactWithin`、`Becoming.PartialReadout.silent_sound`、`Becoming.PartialReadout.silent_not_exact`）。得（古：出一值而即所来之值，其律见九·二十九）名取墨子非攻中所引古语「謀而不得，則以往知來，以見知隱」〔MO1-S-C18〕（先秦）：得为所谋之中，同句即知来之结构；得失之利害、得道之义不带。于域符（所给之值皆是，不出值亦可）与知来之符（九·二十九）同一概念，一在域之状，一在文之步；此以所给之值皆是陈之，彼以无一步不符陈之，值之同异定然否时二者相合。于域符之读在类并了特征可分之二状处必须阙（`Becoming.PartialReadout.SoundWithin.silent`）；于域每状皆得之读要求特征随类而同（`Becoming.PartialReadout.ExactWithin.lumped`）；有一个所给之截面（类于域中之每一值，给出域中出此值之一状；截面是所给之资料，不是篇四之截），于域每状皆得之读存在恰在特征随类而同处（`Becoming.PartialReadout.exact_exists_iff`），不用选择公理。阙不是一个值：它与七·六之未定（修订中尚未定之第三值）不同。对照（相合，lunyu-gai-que-ru）：「君子於其所不知，蓋闕如也」〔RU1-S-LY〕（先秦，论语）：阙只在不知之处；名即取此句。又（相合，mojing-liang-zhi）：「是所智也，是所不智也」〔MI1-S-SX〕（先秦，墨经说下）：标出所不知，是于域符之读之一部分。
 
 **證**　`Becoming.PartialReadout.SoundWithin`、`Becoming.PartialReadout.ExactWithin`、`Becoming.PartialReadout.silent_sound`、`Becoming.PartialReadout.silent_not_exact`、`Becoming.PartialReadout.SoundWithin.silent`、`Becoming.PartialReadout.ExactWithin.lumped`、`Becoming.PartialReadout.exact_exists_iff`。尚无结果记录（未决：此诸律已在核心证明，记录待补）。
 
@@ -1953,21 +1978,21 @@
 
 **經**　知来，自往出一值或阙也。得，出一值而即所来之值也；不符，出一值而所来异也；符，无一步不符也。值之同异定然否，则所给之值不为不符者，即所来之值：符者于每步或阙，或得。
 
-**說**　知来（外推，extrapolation）是自一历程至某步之前段配一所给之值或阙之任一象（Lean 中之 `pred`）；不符（`Becoming.Learning.Misses`、`Becoming.Learning.MissesAt`）只在出了值而所来异时才有；不出值不算不符，所以处处阙亦符（`Becoming.Learning.Accords`）。值之同异定然否，所给之值不为不符者即所来之值（`Becoming.Learning.eq_of_not_missed`）。符只说所给之值都得，不说出值多早；出值多早是九·三十二、九·三十三之事。过则改之过即不符，不另名。得（`Becoming.Parting.RightAt`）之名见九·二十七。名“知来”取「数往者顺，知来者逆」〔DS04〕（先秦至秦汉，说卦）。名“符”不取韩非「四徵者符」〔FA1-S-H48〕（先秦，韩非子八经，战国末）之“诸路一致”义。
+**說**　知来（外推，extrapolation）是自一文至某步之前段（往）配一所给之值或阙之任一象（Lean 中之 `pred`）；不符（`Becoming.Learning.Misses`、`Becoming.Learning.MissesAt`）只在出了值而所来异时才有；不出值不算不符，所以处处阙亦符（`Becoming.Learning.Accords`）。值之同异定然否，所给之值不为不符者即所来之值（`Becoming.Learning.eq_of_not_missed`）。符只说所给之值都得，不说出值多早；出值多早是九·三十二、九·三十三之事。过则改之过即不符，不另名。得（`Becoming.Parting.RightAt`）之名见九·二十七。名“知来”取「数往者顺，知来者逆」〔DS04〕（先秦至秦汉，说卦）。名“符”不取韩非「四徵者符」〔FA1-S-H48〕（先秦，韩非子八经，战国末）之“诸路一致”义。
 
 **證**　`Becoming.Learning.prefixOf`、`Becoming.Learning.Misses`、`Becoming.Learning.MissesAt`、`Becoming.Learning.Accords`、`Becoming.Learning.eq_of_not_missed`、`Becoming.Parting.RightAt`；记录 [learning-by-refutation](../results/records/learning-by-refutation.md)。
 
 ### 九·三十　往不定来与不测
 
-**經**　终而复始，历程自某步起，每隔定数之步而复也。凡历程、凡步，有二值，则有二历程同其往而于此步各为一值，二历程皆终而复始；自此往出一值，于二历程皆无不符，不然；值之同异定然否，则于其一不符。不测，凡知来于其上所给之值皆不符之历程也：有一象移每一值，则凡知来于其不测之历程上所给之每值皆不符，无一步起每步皆得者；不测之历程为一法之轨，此法之状含其全往，无一族尽其状。
+**經**　终而复始，文自某步起，每隔定数之步而复也。凡文、凡步，有二值，则有二文与之同往而于此步各为一值，二文皆终而复始；自此往出一值，于二文皆无不符，不然；值之同异定然否，则于其一不符。不测，一知来于其上所给之值皆不符之文也：有一象移每一值，则凡知来于其不测之文上所给之每值皆不符，无一步起每步皆得者；不测之文为一法之轨经一象之文，此法之状含其全往，无一族尽其状。
 
-**說**　这一律不对历程作任何假定（`Becoming.Learning.no_prefix_fixes_next`；值之同异定然否时 `Becoming.Learning.claim_missed_on_one`）；二历程都终而复始，即有一族尽其状之宇之历程（`Becoming.Learning.no_prefix_fixes_next_finite`），所以即使在有穷之宇中，往也不定来。涯（八·九）不定其后，即此首律：任一涯，二历程至涯而同，其后可异；初不定终（五·二十四）是其一例。不测之历程（对角历程，`Becoming.Learning.diagonal`）对每一知来都有：在其上所给之每一值皆不符（`Becoming.Learning.diagonal_misses`），故无一步起每步皆得（`Becoming.Learning.diagonal_unrested`）；它是一个含全往之法之轨，无一族尽其状（`Becoming.Learning.diagonal_open`）。这对一切知来都成立，无论它经过什么候选、怎样修订。九·十四之“有穷之往不去其后”是同一结构在积之历上之形。讀（AI，D26）：归纳被分解为律，而不被保证；自然之齐一不是前提，而是一条律之局部条件：展开随类而同（九·三十四、七·三）。名“不测”取「阴阳不测之谓神」〔DS02〕（相合，xici-yin-yang-bu-ce；先秦至秦汉，系辞上）：只名不可测之结构，不立神格，阴阳之义不带。对照（相合，xici-biandong-buju）：「不可为典要，唯变所适」〔DS03〕（先秦至秦汉，系辞下）：没有一个往定下一值。相分（xici-sui-zhi-lai-wu）：「问焉而以言，其受命也如响，无有远近幽深，遂知来物」〔DS02〕：问筮而知来物，是不经感之前知，与此律相冲。
+**說**　这一律不对文作任何假定（`Becoming.Learning.no_prefix_fixes_next`；值之同异定然否时 `Becoming.Learning.claim_missed_on_one`）；二文都终而复始，即有一族尽其状之宇之文（`Becoming.Learning.no_prefix_fixes_next_finite`），所以即使在有穷之宇中，往也不定来。涯（八·九）不定其后，即此首律：任一涯，二文至涯而同，其后可异；初不定终（五·二十四）是其一例。不测之文（对角之文，`Becoming.Learning.diagonal`）对每一知来都有：在其上所给之每一值皆不符（`Becoming.Learning.diagonal_misses`），故无一步起每步皆得（`Becoming.Learning.diagonal_unrested`）；它是一个含全往之法之轨经一象之文，无一族尽其状（`Becoming.Learning.diagonal_open`）。这对一切知来都成立，无论它经过什么候选、怎样修订。九·十四之“有穷之往不去其后”是同一结构在积之历上之形。讀（AI，D26）：归纳被分解为律，而不被保证；自然之齐一不是前提，而是一条律之局部条件：展开随类而同（九·三十四、七·三）。名“不测”取「阴阳不测之谓神」〔DS02〕（相合，xici-yin-yang-bu-ce；先秦至秦汉，系辞上）：只名不可测之结构，不立神格，阴阳之义不带。对照（相合，xici-biandong-buju）：「不可为典要，唯变所适」〔DS03〕（先秦至秦汉，系辞下）：没有一个往定下一值。相分（xici-sui-zhi-lai-wu）：「问焉而以言，其受命也如响，无有远近幽深，遂知来物」〔DS02〕：问筮而知来物，是不经感之前知，与此律相冲。
 
 **證**　`Becoming.Learning.no_prefix_fixes_next`、`Becoming.Learning.claim_missed_on_one`、`Becoming.Learning.no_prefix_fixes_next_finite`、`Becoming.Learning.diagonal`、`Becoming.Learning.diagonal_misses`、`Becoming.Learning.diagonal_unrested`、`Becoming.Learning.diagonal_open`；记录 [learning-by-refutation](../results/records/learning-by-refutation.md)、[becoming-finite-horizon](../results/records/becoming-finite-horizon.md)。
 
 ### 九·三十一　过则改
 
-**經**　过则改，依次用候选，当前者不符则换其次，所给之值即当前者所给之值也。值之同异定然否：当前候选之次序不减；凡与历程相符之候选，过则改不越之；有候选与之相符，则不屡不符；凡被越之候选，皆曾于往之某步不符。
+**經**　过则改，依次用候选，当前者不符则换其次，所给之值即当前者所给之值也。值之同异定然否：当前候选之次序不减；凡与文相符之候选，过则改不越之；有候选与之相符，则不屡不符；凡被越之候选，皆曾于往之某步不符。
 
 **說**　过则改（排除法外推，extrapolation by elimination，`Becoming.Learning.byElimination`）只经往：一往，一当前候选，一所给之值。当前之次序只增不减，被越者不再回来（`Becoming.Learning.index_mono`）；它不越过任何相符之候选，故其不符之数不过此候选之次（`Becoming.Learning.index_le_of_accords`），不符不屡（`Becoming.Learning.misses_not_recurring`）；被越过者都曾在前段某步不符（`Becoming.Learning.missed_before`）。这是文献中依列举于极之辨认（Gold 1967）、即逐一去其不符之候选之学者之形。名取「古之君子，过则改之；今之君子，过则顺之」〔RU2-S-MZ〕（相合，mengzi-guo-ze-gai；先秦，孟子公孙丑下）：只取不符则换之结构；过失之褒贬不在律中。对照（相合，zhuang-liu-shi-hua）：「孔子行年六十而六十化，始時所是，卒而非之」〔ZH1-S27〕（先秦至秦汉，庄子寓言，杂篇成书年代有争议）：今之是不能自证为终（九·三十二）。
 
@@ -1975,17 +2000,17 @@
 
 ### 九·三十二　终而复始
 
-**經**　凡法，其轨之状皆在一族之中，则经任一类之历程终而复始，始步与其复之步数之和不过族之员数。值之同异定然否，于此法之轨，过则改于终而复始之候选上：其不符少于族之员数之三角数；自族之员数之步起每步出值；不屡不符；其自某步起每步皆得，不可非；族之员数为 N、其三角数为 T，则自 N＋(N＋N－1)·T 步起每步皆得。凡于终而复始之候选上过则改，自某步起每步皆得者，其历程终而复始；有一象移每一值，则其不测之历程不终而复始。
+**經**　凡法，其轨之状皆在一族之中，则经任一类之文终而复始，始步与其复之步数之和不过族之员数。值之同异定然否，于此法之轨，过则改于终而复始之候选上：其不符少于族之员数之三角数；自族之员数之步起每步出值；不屡不符；其自某步起每步皆得，不可非；族之员数为 N、其三角数为 T，则自 N＋(N＋N－1)·T 步起每步皆得。凡于终而复始之候选上过则改，自某步起每步皆得者，其文终而复始；有一象移每一值，则其不测之文不终而复始。
 
-**說**　终而复始（套索，lasso，`Becoming.Learning.Lasso`；定义见九·三十）是历程之性质；环是感之回路（篇十二）；复是状之返回（篇五）：三者不相借。状有一族尽之，经任何类之历程都终而复始（`Becoming.Learning.lasso_of_held`）。在这样的宇中，过则改不被告知诸状及其数目，而不符有界、终于每步出值、不符不屡（`Becoming.Learning.held_byElimination_bounded`）；它终将每步皆得：不给步时，只以不可非之形成立（`Becoming.Learning.held_rest_unrefuted`；对任一终而复始之历程，`Becoming.Learning.rest_unrefuted`）；以族之员数为界，其步可给出（`Becoming.Identification.held_byElimination_rests`），但其往从不显示它已每步皆得（九·三十），步是界给的，不是往给的。它只在终而复始之历程上终于每步皆得（`Becoming.Learning.lasso_of_rest`），其不测之历程不终而复始（`Becoming.Learning.diagonal_not_lasso`）。对照（定域，sunzi-zhong-er-fu-shi）：「終而復始，日月是也」〔BI1-S-SZ〕（先秦，孙子兵势，成书有争议）：终而复始只在一族尽其状之处成立；同段以奇正之变比之，争胜之用不在律中。
+**說**　终而复始（套索，lasso，`Becoming.Learning.Lasso`；定义见九·三十）是文之性质；环是感之回路（篇十二）；复是状之返回（篇五）：三者不相借。状有一族尽之，经任何类之文都终而复始（`Becoming.Learning.lasso_of_held`）。在这样的宇中，过则改不被告知诸状及其数目，而不符有界、终于每步出值、不符不屡（`Becoming.Learning.held_byElimination_bounded`）；它终将每步皆得：不给步时，只以不可非之形成立（`Becoming.Learning.held_rest_unrefuted`；对任一终而复始之文，`Becoming.Learning.rest_unrefuted`）；以族之员数为界，其步可给出（`Becoming.Identification.held_byElimination_rests`），但其往从不显示它已每步皆得（九·三十），步是界给的，不是往给的。它只在终而复始之文上终于每步皆得（`Becoming.Learning.lasso_of_rest`），其不测之文不终而复始（`Becoming.Learning.diagonal_not_lasso`）。对照（定域，sunzi-zhong-er-fu-shi）：「終而復始，日月是也」〔BI1-S-SZ〕（先秦，孙子兵势，成书有争议）：终而复始只在一族尽其状之处成立；同段以奇正之变比之，争胜之用不在律中。
 
 **證**　`Becoming.Learning.Lasso`、`Becoming.Learning.lasso_of_held`、`Becoming.Learning.held_byElimination_bounded`、`Becoming.Learning.held_rest_unrefuted`、`Becoming.Learning.rest_unrefuted`、`Becoming.Identification.held_byElimination_rests`、`Becoming.Learning.lasso_of_rest`、`Becoming.Learning.diagonal_not_lasso`；记录 [learning-by-refutation](../results/records/learning-by-refutation.md)、[identification-where-bounded](../results/records/identification-where-bounded.md)。
 
 ### 九·三十三　有界则往定其行
 
-**經**　凡二历程，其状一不过 N 种、一不过 N′ 种，于 N＋N′－1 步之前皆同，则处处皆同：其往至此定之。此长确切：有二值，则于任何界，有二历程，状各不过其界，同至 N＋N′－2 步之前而于此步异。值之同异定然否，状不过 N 种之历程上，界内终而复始之候选于 N＋N－1 步之前无不符者，永无不符。值之同异定然否，不给界而用最小界之知来，于状不过 N 种之历程，自 N＋N－1 步起每步皆得；有二值，则无知来能于每一状不过 M＋2 种之历程，皆于 M＋M＋2 步得。法下，族中之状闭于此法者，族中二状经类同其来，恰当其来经类于族之员数减一步之前皆同；有一族尽其状，则二状自身起凡一串之动同可行、行后所能然之辞同，亦恰当此。
+**經**　凡二文，其状一不过 N 种、一不过 N′ 种，于 N＋N′－1 步之前皆同，则处处皆同：其往至此定之。此长确切：有二值，则于任何界，有二文，状各不过其界，同至 N＋N′－2 步之前而于此步异。值之同异定然否，状不过 N 种之文上，界内终而复始之候选于 N＋N－1 步之前无不符者，永无不符。值之同异定然否，不给界而用最小界之知来，于状不过 N 种之文，自 N＋N－1 步起每步皆得；有二值，则无知来能于每一状不过 M＋2 种之文，皆于 M＋M＋2 步得。法下，族中之状闭于此法者，族中二状经类文同，恰当其文于族之员数减一步之前皆同；有一族尽其状，则二状自身起凡一串之动同可行、行后所能然之辞同，亦恰当此。
 
-**說**　这是辨认（identification）：界只是历程之状之种数，不对历程另作假定。二周期之律（Fine–Wilf）给出 N＋N′－1（`Becoming.Identification.bounded_agree`、`Becoming.Identification.prefix_fixes`），而且对每一对界都确切（`Becoming.Identification.bounded_agree_exact`）。给界，则归纳即演绎（`Becoming.Identification.bounded_induction`）；不给界，用最小界之知来同样早（`Becoming.Identification.leastBound_exact`），没有知来能更早（`Becoming.Identification.rest_earliest`，取 N＝M＋2，即 N＋N－2 步）：界所给的，只是此前之阙。一宇之内，Moore 之界（族之员数减一）不须判定任何值之同异即成立（`Becoming.Law.sameFuture_iff_within`）；二状所能答之诸问（凡一串之动可行与否、行后所能然之辞）之同，也只是有界之前段（`Becoming.Law.sameTests_iff_within`）；诸问之同定状之同（`Becoming.alike_iff_sameTests`）。讀（AI，D34）：有界者，往所定是一个它已定之来之有穷之读；界不是时（情境）之义，而是一时之有穷之往定其所读之全部之条件，须是所给。对照（相合，zhuang-chao-jun）：「朝菌不知晦朔，蟪蛄不知春秋」〔ZH1-S01〕（先秦，庄子逍遥游）：涯短于定其周期之往者，不知其周期。又（定域，mengzi-qiu-qi-gu）：「天之高也，星辰之远也，茍求其故，千岁之日至，可坐而致也」〔RU2-S-MZ〕（先秦，孟子离娄下）：“可坐而致”只在所循之迹出于一法、历程有界之处成立。
+**說**　这是辨认（identification）：界只是文之状之种数，不对文另作假定。二周期之律（Fine–Wilf）给出 N＋N′－1（`Becoming.Identification.bounded_agree`、`Becoming.Identification.prefix_fixes`），而且对每一对界都确切（`Becoming.Identification.bounded_agree_exact`）。给界，则归纳即演绎（`Becoming.Identification.bounded_induction`）；不给界，用最小界之知来同样早（`Becoming.Identification.leastBound_exact`），没有知来能更早（`Becoming.Identification.rest_earliest`，取 N＝M＋2，即 N＋N－2 步）：界所给的，只是此前之阙。一宇之内，Moore 之界（族之员数减一）不须判定任何值之同异即成立（`Becoming.Law.sameFuture_iff_within`）；二状所能答之诸问（凡一串之动可行与否、行后所能然之辞）之同，也只是有界之前段（`Becoming.Law.sameTests_iff_within`）；诸问之同定状之同（`Becoming.alike_iff_sameTests`）。讀（AI，D34）：有界者，往所定是一个它已定之来之有穷之读；界不是时（情境）之义，而是一时之有穷之往定其所读之全部之条件，须是所给。对照（相合，zhuang-chao-jun）：「朝菌不知晦朔，蟪蛄不知春秋」〔ZH1-S01〕（先秦，庄子逍遥游）：涯短于定其周期之往者，不知其周期。又（定域，mengzi-qiu-qi-gu）：「天之高也，星辰之远也，茍求其故，千岁之日至，可坐而致也」〔RU2-S-MZ〕（先秦，孟子离娄下）：“可坐而致”只在所循之迹出于一法、其文之状有界之处成立。
 
 **證**　`Becoming.Identification.bounded_agree`、`Becoming.Identification.prefix_fixes`、`Becoming.Identification.bounded_agree_exact`、`Becoming.Identification.bounded_induction`、`Becoming.Identification.leastBound_exact`、`Becoming.Identification.rest_earliest`、`Becoming.Law.sameFuture_iff_within`、`Becoming.Law.sameTests_iff_within`；记录 [identification-where-bounded](../results/records/identification-where-bounded.md)、[tests-fix-likeness-where-determined](../results/records/tests-fix-likeness-where-determined.md)。
 
@@ -1999,9 +2024,9 @@
 
 ### 九·三十五　可知
 
-**經**　可知，一特征经一类，有知来自经此类之往出值，于每状之轨皆自某步起每步皆得之也。类之同异定然否，于一族尽其状之宇：一特征经一类可知，恰当凡经此类同其来之二状，其特征自某步起皆同；亦恰当有一唯由经类之往而定之猜，于极追踪此特征。随类而同之特征，皆可知；法令每状不改者，可知者恰是随类而同者。经类同来之二状，其特征屡异，则无知来于二者之轨皆自某步起每步皆得。有例：一状一类值之宇，二特征各有一知来自某步起每步皆得之，而无一知来于二者皆然。
+**經**　可知，一特征经一类，有知来自经此类之往出值，于每状之轨皆自某步起每步皆得之也。类之同异定然否，于一族尽其状之宇：一特征经一类可知，恰当凡经此类文同之二状，其特征自某步起皆同；亦恰当有一唯由经类之往而定之猜，于极追踪此特征。随类而同之特征，皆可知；法令每状不改者，可知者恰是随类而同者。经类文同之二状，其特征屡异，则无知来于二者之轨皆自某步起每步皆得。有例：一状一类值之宇，二特征各有一知来自某步起每步皆得之，而无一知来于二者皆然。
 
-**說**　可知（可学，learnable，`Becoming.Learnable.Predicts`）是法、类与特征之间之一条件，不是一个程序：后一向之知来由法、类、特征与族构造出来，前一向对一切知来成立，故凡有知来能预之处，此知来亦能（`Becoming.Learnable.learnable_iff`）。随类而同者总可知（`Becoming.Learnable.learnable_of_lumped`）；法使每状不改时，可知者恰是随类而同者（`Becoming.Learnable.still_learnable_iff_lumped`）。经类之可知即于极追踪特征（`Becoming.LearnableRuns.learnable_iff_tracks`，九·二十五）。所带之值（label）即族中一员所带之特征之值；以至多 N 员之族为据之知来即可（`Becoming.Learnable.learnable_iff_table`，其律见十·十）；而经之末例是一构造之例，示无一不被给予任何东西之知来能预每一可知之特征（`Becoming.Learnable.given_nothing_not_every`）。讀（AI，D26）：类限其所学；类之外者，只有换一更细之类才能知之。对照（定域，lao-bu-chu-hu）：「不出户，知天下」〔YD-LAO-BASE〕（先秦，老子，成书年代有争议）：不出户而知，只在所知随己之类而同之处成立；「其出弥远，其知弥少」〔YD-LAO-BASE〕有一确切之义：把范围推到经类同来而特征在任意晚之步犹异之状，用原来之类，则无知来于二者皆得（`Becoming.Learnable.not_predicts_on_both`）。
+**說**　可知（可学，learnable，`Becoming.Learnable.Predicts`）是法、类与特征之间之一条件，不是一个程序：后一向之知来由法、类、特征与族构造出来，前一向对一切知来成立，故凡有知来能预之处，此知来亦能（`Becoming.Learnable.learnable_iff`）。随类而同者总可知（`Becoming.Learnable.learnable_of_lumped`）；法使每状不改时，可知者恰是随类而同者（`Becoming.Learnable.still_learnable_iff_lumped`）。经类之可知即于极追踪特征（`Becoming.LearnableRuns.learnable_iff_tracks`，九·二十五）。所带之值（label）即族中一员所带之特征之值；以至多 N 员之族为据之知来即可（`Becoming.Learnable.learnable_iff_table`，其律见十·十）；而经之末例是一构造之例，示无一不被给予任何东西之知来能预每一可知之特征（`Becoming.Learnable.given_nothing_not_every`）。讀（AI，D26）：类限其所学；类之外者，只有换一更细之类才能知之。对照（定域，lao-bu-chu-hu）：「不出户，知天下」〔YD-LAO-BASE〕（先秦，老子，成书年代有争议）：不出户而知，只在所知随己之类而同之处成立；「其出弥远，其知弥少」〔YD-LAO-BASE〕有一确切之义：把范围推到经类文同而特征在任意晚之步犹异之状，用原来之类，则无知来于二者皆得（`Becoming.Learnable.not_predicts_on_both`）。
 
 **證**　`Becoming.Learnable.Predicts`、`Becoming.Learnable.learnable_iff`、`Becoming.Learnable.learnable_of_lumped`、`Becoming.Learnable.still_learnable_iff_lumped`、`Becoming.Learnable.not_predicts_on_both`、`Becoming.LearnableRuns.learnable_iff_tracks`、`Becoming.Learnable.learnable_iff_table`、`Becoming.Learnable.given_nothing_not_every`；记录 [learnable-through-a-map](../results/records/learnable-through-a-map.md)、[learning-through-a-map-is-tracking-in-the-limit](../results/records/learning-through-a-map-is-tracking-in-the-limit.md)、[what-finitely-many-labels-fix](../results/records/what-finitely-many-labels-fix.md)、[what-an-extrapolation-given-nothing-fixes](../results/records/what-an-extrapolation-given-nothing-fixes.md)。
 
@@ -2034,13 +2059,13 @@
 
 ## 篇十　名
 
-本篇论名：名、所谓、类与约定在一展开中是什么。名不是另立之物，而是一读给其所读者之值：宇以名标其诸物，描述以名并其诸状，码以名配其诸义项。先说名在大化中之位：每步之关系不随名而改（改认与重同见三·十二），名本身不载关系（名无固宜）；次说名与同：正名之律（正名见一·二十二），私名与达名之粗细；再说一待者怎样读名：义项跨诸录而贯，录唯减候选而通意，读者之码辨而二码于一义项同名则喻为此且唯此，旁读他名，码由所问而知，有穷之族定可知之特征；最后说名怎样在诸待者之间形成：听不造名，序定所成，同名须破对称，同名可失辨，制名之同与失辨，录写回而不再改。跨步之同一之律、以所读为索引之诸读不尽其所读、以名读辞与阙，各见三·十四、九·二十八、七·四、九·二十七。本篇诸律皆无设而然，每条只在写入其中之局部条件（义项之族其员各异、义项之同异定然否、有一族尽诸待者、读者之码辨、所给之律族……）下，对每个如此表示之宇成立；码之共享、外加与写回是否支持或损害生生，诸律不言。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，本篇不用；它只定所顾，本身不排序；排序唯在以广为愈（十六·三），亦陈述而不断言。本篇承篇一之状与正名，篇三之改认与续，篇七之类，篇九之读、阙与可知，下接篇十一。
+本篇论名：名、所谓、类与约定在一展开中是什么。名不是另立之物，而是一读给其所读者之值：宇以名标其诸物，描述以名并其诸状，码以名配其诸义项。先说名在大化中之位：每步之关系不随名而改（改认与重同见三·十二），名本身不载关系（名无固宜）；次说名与同：正名之律（正名见一·二十三），私名与达名之粗细；再说一待者怎样读名：义项跨诸录而贯，录唯减候选而通意，读者之码辨而二码于一义项同名则喻为此且唯此，旁读他名，码由所问而知，有穷之族定可知之特征；最后说名怎样在诸待者之间形成：听不造名，序定所成，同名须破对称，同名可失辨，制名之同与失辨，录写回而不再改。跨步之同一之律、以所读为索引之诸读不尽其所读、以名读辞与阙，各见三·十四、九·二十八、七·四、九·二十七。本篇诸律皆无设而然，每条只在写入其中之局部条件（义项之族其员各异、义项之同异定然否、有一族尽诸待者、读者之码辨、所给之律族……）下，对每个如此表示之宇成立；码之共享、外加与写回是否支持或损害生生，诸律不言。延续之条件（凡续皆有顾，十五·二十一）陈述而不断言，本篇不用；它只定所顾，本身不排序；排序唯在以广为愈（十六·三），亦陈述而不断言。本篇承篇一之状与正名，篇三之改认与续，篇七之类，篇九之读、阙与可知，下接篇十一。
 
 ### 十·一　名
 
-**經**　名（一·二十）有三处：物之名，宇所以标其物者也；状之名，读给状之值（状经类之未来之前段亦其一种，十·十）；义项之名，码所配者也。码，以名配诸义项者也；义项，一名所可指之一义也；听，听者于一义项依从违取说者之名也；录（九·二十二）之于名，记其遇一名与否、予何义项也。
+**經**　名（一·二十）有三处：物之名，宇所以标其物者也；状之名，读给状之值（状经类之文之前段亦其一种，十·十）；义项之名，码所配者也。码，以名配诸义项者也；义项，一名所可指之一义也；听，听者于一义项依从违取说者之名也；录（九·二十二）之于名，记其遇一名与否、予何义项也。
 
-**說**　名在形式中出现于四处，结构都是一读给所读者之值：待网以定型之名标其诸待者与诸所待（`Becoming.Web`，即 `Web F C` 之 `F` 与 `C`），所以某步之某物与次步之某物是否同一，先由名定（三·十二）；描述给每状一名，并哪些状由它定（`Becoming.IdentifiesAlike` 中之 π，一·二十二、十·三）；码给每一义项一名，每待者持一码（`Becoming.SharedCodes`），读者之码辨时，喻为此义项且唯此，恰当二码于此义项同名（`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.reads_iff`，十·七）；状之名也可以是它经类之未来之有穷前段（`Becoming.Law.name`，十·十）。码是本编以今字立名之例外：码字后起，无先秦出处，取今语编码之码，不由古字组成；筹码、价码、号码之义不带。义项（新组合：义＋项）取王弼「義茍在健，何必馬乎？」〔YWH-LX〕（《周易略例·明象》，曹魏）中义与马之分：义是所谓之意，马是所拟之象，正是义项与名之分（讀，AI，D62）；义只取意义之义，仁义、义利之义不带；一名可配多个义项。听取「道聽而塗說」〔RU1-S-LY〕（《论语·阳货》，先秦）之听而传之，听政、听讼、听命之义不带；听只名码之间之取名，与闻见分开；从违是一个所给之读：读听者与说者二码，定听者取说者之名与否（从，取之；违，守其旧名；`Becoming.SharedCodes.hearBy`）。录之名见九·二十二；一录遇一名，即此名在此次所遇中出现，取「遇諸塗」〔RU1-S-LY〕（《论语·阳货》）之相逢，际遇之命运义不带；一录予一义项，即此义项在其时可及者之中，取「以類取，以類予」〔MI1-S-XQ〕（《墨子·小取》，先秦）之予，予只名录对义项之关系，不名流中之与，也不名给值，赐予之义不带（`Becoming.CrossSituational.stands`）。讀（AI，D23）：名在展开之内，是读，不是展开之外另贴之物；凡由关系可知者，对同之状都相同（一·二十二）。名取「名，達、類、私」〔MI1-S-JS〕，三名之粗细见十·四。对照（相合，mojing-da-lei-si）：「所以謂，名也。所謂，實也。名實耦，合也。」〔MI1-S-SS〕（《墨子·经说上》，战国后期墨家）：名与所谓者是一对，配上即合；本编不立“实”为名，所谓者在宇中是物或状，在码中是义项，其跨步之同一在关系能定之处由关系定（三·十四）。
+**說**　名在形式中出现于四处，结构都是一读给所读者之值：待网以定型之名标其诸待者与诸所待（`Becoming.Web`，即 `Web F C` 之 `F` 与 `C`），所以某步之某物与次步之某物是否同一，先由名定（三·十二）；描述给每状一名，并哪些状由它定（`Becoming.IdentifiesAlike` 中之 π，一·二十三、十·三）；码给每一义项一名，每待者持一码（`Becoming.SharedCodes`），读者之码辨时，喻为此义项且唯此，恰当二码于此义项同名（`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.reads_iff`，十·七）；状之名也可以是它经类之文之有穷前段（`Becoming.Law.name`，十·十）。码是本编以今字立名之例外：码字后起，无先秦出处，取今语编码之码，不由古字组成；筹码、价码、号码之义不带。义项（新组合：义＋项）取王弼「義茍在健，何必馬乎？」〔YWH-LX〕（《周易略例·明象》，曹魏）中义与马之分：义是所谓之意，马是所拟之象，正是义项与名之分（讀，AI，D62）；义只取意义之义，仁义、义利之义不带；一名可配多个义项。听取「道聽而塗說」〔RU1-S-LY〕（《论语·阳货》，先秦）之听而传之，听政、听讼、听命之义不带；听只名码之间之取名，与闻见分开；从违是一个所给之读：读听者与说者二码，定听者取说者之名与否（从，取之；违，守其旧名；`Becoming.SharedCodes.hearBy`）。录之名见九·二十二；一录遇一名，即此名在此次所遇中出现，取「遇諸塗」〔RU1-S-LY〕（《论语·阳货》）之相逢，际遇之命运义不带；一录予一义项，即此义项在其时可及者之中，取「以類取，以類予」〔MI1-S-XQ〕（《墨子·小取》，先秦）之予，予只名录对义项之关系，不名流中之与，也不名给值，赐予之义不带（`Becoming.CrossSituational.stands`）。讀（AI，D23）：名在展开之内，是读，不是展开之外另贴之物；凡由关系可知者，对同之状都相同（一·二十三）。名取「名，達、類、私」〔MI1-S-JS〕，三名之粗细见十·四。对照（相合，mojing-da-lei-si）：「所以謂，名也。所謂，實也。名實耦，合也。」〔MI1-S-SS〕（《墨子·经说上》，战国后期墨家）：名与所谓者是一对，配上即合；本编不立“实”为名，所谓者在宇中是物或状，在码中是义项，其跨步之同一在关系能定之处由关系定（三·十四）。
 
 **證**　`Becoming.Web`、`Becoming.IdentifiesAlike`、`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.hearBy`、`Becoming.CrossSituational.stands`、`Becoming.Law.name`；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)、[enacted-scene-binding](../results/records/enacted-scene-binding.md)、[what-finitely-many-labels-fix](../results/records/what-finitely-many-labels-fix.md)。
 
@@ -2054,9 +2079,9 @@
 
 ### 十·三　正名
 
-**經**　正名（一·二十二）之律：凡二正名，所并者同。以状自名为正名，恰当同之状本为一。法以一类示之，一读所并者所示皆同、此读载法、且凡二状自身起每步所示皆同者此读皆并之，则此读为正名。
+**經**　正名（一·二十三）之律：凡二正名，所并者同。以状自名为正名，恰当同之状本为一。法以一类示之，一读所并者所示皆同、此读载法、且凡二状自身起每步所示皆同者此读皆并之，则此读为正名。
 
-**說**　正名（有意义的描述）之定义与关系判据在一·二十二：所并者由一互模拟相连，凡同者皆并；在系辞于同中确定之处，正名载一法。本条加三件。其一，正名只差改名而唯一：二正名所并之状相同（`Becoming.IdentifiesAlike.unique`）。其二，给每个状一个名并不就是正名：两个在每一关系上都相同之后继各起一名，就不按同而认（`Becoming.Twins.naming_not_identifiesAlike`，构造之例）；以状自名为正名，恰在同之状本为一处（`Becoming.identifiesAlike_id_iff`），所以以相等论之确定性依赖命名。其三，法以一类示之时，一读所并者所示皆同、载法（七·二）、且并凡自身起每步所示皆同之二状者，就是正名（`Becoming.Law.identifiesAlike_of_law`）：理所取之分，在此恰得其形。讀（AI，D62）：正名不是名与物之间的对应，而是名之并与关系之同相合。对照（相合，xunzi-tong-ze-tong-zhi）：「同则同之，异则异之」〔RU2-S-XZ22〕，「故使异实者莫不异名也，不可乱也，犹使同实者莫不同名也」〔RU2-S-XZ22〕（《荀子·正名》，战国末）：同实同名、异实异名，正是正名之两半（一·二十二）。荀子以同异「缘天官」〔RU2-S-XZ22〕，是经感官所作之并；律以关系之同（互模拟）为判据，二者相合之处，是把所系之辞取为天官所读者。又（相合，gongsunlong-ming-shi）：「其正者，正其所實也；正其所實者，正其名也。」〔MI1-S-G6〕（《公孙龙子·名实论》，篇章真伪与编纂层有争议）：名随所谓者之关系而正。
+**說**　正名（有意义的描述）之定义与关系判据在一·二十三：所并者由一互模拟相连，凡同者皆并；在系辞于同中确定之处，正名载一法。本条加三件。其一，正名只差改名而唯一：二正名所并之状相同（`Becoming.IdentifiesAlike.unique`）。其二，给每个状一个名并不就是正名：两个在每一关系上都相同之后继各起一名，就不按同而认（`Becoming.Twins.naming_not_identifiesAlike`，构造之例）；以状自名为正名，恰在同之状本为一处（`Becoming.identifiesAlike_id_iff`），所以以相等论之确定性依赖命名。其三，法以一类示之时，一读所并者所示皆同、载法（七·二）、且并凡自身起每步所示皆同之二状者，就是正名（`Becoming.Law.identifiesAlike_of_law`）：理所取之分，在此恰得其形。讀（AI，D62）：正名不是名与物之间的对应，而是名之并与关系之同相合。对照（相合，xunzi-tong-ze-tong-zhi）：「同则同之，异则异之」〔RU2-S-XZ22〕，「故使异实者莫不异名也，不可乱也，犹使同实者莫不同名也」〔RU2-S-XZ22〕（《荀子·正名》，战国末）：同实同名、异实异名，正是正名之两半（一·二十三）。荀子以同异「缘天官」〔RU2-S-XZ22〕，是经感官所作之并；律以关系之同（互模拟）为判据，二者相合之处，是把所系之辞取为天官所读者。又（相合，gongsunlong-ming-shi）：「其正者，正其所實也；正其所實者，正其名也。」〔MI1-S-G6〕（《公孙龙子·名实论》，篇章真伪与编纂层有争议）：名随所谓者之关系而正。
 
 **證**　`Becoming.IdentifiesAlike.unique`、`Becoming.identifiesAlike_id_iff`、`Becoming.Twins.naming_not_identifiesAlike`、`Becoming.Law.identifiesAlike_of_law`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)。
 
@@ -2072,7 +2097,7 @@
 
 **經**　贯，凡遇一名之录皆予一义项也。一义项不贯于一名，恰当有一遇此名之录不予之。
 
-**說**　一待者在多次所遇中遇一名，每次之录予其时可及之义项；哪些录遇此名、各予何义项，由两个然否之关系读出，对任何录与义项、任何遇与予之读皆成立，无设（`Becoming.CrossSituational`）。贯是对所遇之全体说的，不由任何一次所遇给出；不贯之反驳则是局部的，一录即足，已不贯者，后之录不能使之复贯（十·六）。这与境中之辞相连：带境之系辞总合诸境所示（`Becoming.Contextual.indexed_fits`，按定义；两行，一·二十五）；每辞皆在某境之内时，有不依境之系辞，恰当诸境所示于每状并行不悖（`Becoming.Contextual.fitsFree_iff`，一·二十五；并行不悖见一·二十四）。名取「吾道一以貫之」〔RU1-S-LY〕（《论语·里仁》，先秦），只取通贯诸所遇之结构，单一原则中心之义不入。对照（相合，zhuangzi-shu-zhi-zheng-chu）：「三者孰知正處？」〔ZH1-S02〕（《庄子·齐物论》，内篇，先秦）：「正處」〔ZH1-S02〕在民、鰌、猨猴各自之录上予不同义项，故不贯；带指标之“民之正处”合一切所示，王倪不说无处，只说无贯之正。又（相合，wangbi-he-bi-ma）：「義茍在健，何必馬乎？」〔YWH-LX〕（王弼《周易略例·明象》，曹魏）：「定馬於乾」〔YWH-LX〕是把一卦之配当作贯于诸卦者，他卦之录不予乾之义项，于是「有馬無乾」〔YWH-LX〕。
+**說**　一待者在多次所遇中遇一名，每次之录予其时可及之义项；哪些录遇此名、各予何义项，由两个然否之关系读出，对任何录与义项、任何遇与予之读皆成立，无设（`Becoming.CrossSituational`）。贯是对所遇之全体说的，不由任何一次所遇给出；不贯之反驳则是局部的，一录即足，已不贯者，后之录不能使之复贯（十·六）。这与境中之辞相连：带境之系辞总合诸境所示（`Becoming.Contextual.indexed_fits`，按定义；两行，一·二十六）；每辞皆在某境之内时，有不依境之系辞，恰当诸境所示于每状并行不悖（`Becoming.Contextual.fitsFree_iff`，一·二十六；并行不悖见一·二十五）。名取「吾道一以貫之」〔RU1-S-LY〕（《论语·里仁》，先秦），只取通贯诸所遇之结构，单一原则中心之义不入。对照（相合，zhuangzi-shu-zhi-zheng-chu）：「三者孰知正處？」〔ZH1-S02〕（《庄子·齐物论》，内篇，先秦）：「正處」〔ZH1-S02〕在民、鰌、猨猴各自之录上予不同义项，故不贯；带指标之“民之正处”合一切所示，王倪不说无处，只说无贯之正。又（相合，wangbi-he-bi-ma）：「義茍在健，何必馬乎？」〔YWH-LX〕（王弼《周易略例·明象》，曹魏）：「定馬於乾」〔YWH-LX〕是把一卦之配当作贯于诸卦者，他卦之录不予乾之义项，于是「有馬無乾」〔YWH-LX〕。
 
 **證**　`Becoming.CrossSituational.stands`、`Becoming.CrossSituational.stands_iff`、`Becoming.CrossSituational.stands_false_iff`、`Becoming.Contextual.indexed_fits`、`Becoming.Contextual.fitsFree_iff`；记录 [enacted-scene-binding](../results/records/enacted-scene-binding.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)。
 
@@ -2104,15 +2129,15 @@
 
 **經**　知名，自所问读得其码也。于二原子以接与倍所成之式：二原子之值有异之码，自二原子与一接之所问读出之码即其码，于凡式与之同值，深无所限；于二原子之值有异之诸码，只读二原子之值，接之序不随其类而同，故无读于其每码皆得其序。
 
-**說**　`Becoming.CodeAcquisition` 是一个所给之有穷律族：式由二原子以接与倍组成，码给每原子一值并定接之序；文法、所问与习之程皆是所给，不是导出的，它不定义认知或语言。三所问是二原子与一接：原子之所问读出原子之值（`Becoming.CodeAcquisition.probe_readings`），接之序要接之所问；缺接之所问者不得码（`Becoming.CodeAcquisition.missing_composite_no_code`，构造之例）。有一律，于三所问与一码同值、于他式皆反其值，三所问不排除之，而于一非所问之式失之（`Becoming.CodeAcquisition.nonuniform_fails_transfer`，构造之例）：三所问上之偶合不是知名。原子与码一同改名，一切值不变（`Becoming.CodeAcquisition.renaming_keeps_values`），是名无固宜（十·二）在此族中之例。习是脊柱之一变（`Becoming.CodeAcquisition.trainProcess`）。对照（相合，xunzi-zhi-ming-yong-li）：「累而成文，名之丽也。用丽俱得，谓之知名。」〔RU2-S-XZ22〕（《荀子·正名》）：讀（AI，D62）：单名之用对应原子之所问，名相累成文之丽对应接之所问，二者俱得（且二原子之值有异）乃得码。
+**說**　`Becoming.CodeAcquisition` 是一个所给之有穷律族：式由二原子以接与倍组成，码给每原子一值并定接之序；语法、所问与习之程皆是所给，不是导出的，它不定义认知或语言。三所问是二原子与一接：原子之所问读出原子之值（`Becoming.CodeAcquisition.probe_readings`），接之序要接之所问；缺接之所问者不得码（`Becoming.CodeAcquisition.missing_composite_no_code`，构造之例）。有一律，于三所问与一码同值、于他式皆反其值，三所问不排除之，而于一非所问之式失之（`Becoming.CodeAcquisition.nonuniform_fails_transfer`，构造之例）：三所问上之偶合不是知名。原子与码一同改名，一切值不变（`Becoming.CodeAcquisition.renaming_keeps_values`），是名无固宜（十·二）在此族中之例。习是脊柱之一变（`Becoming.CodeAcquisition.trainProcess`）。对照（相合，xunzi-zhi-ming-yong-li）：「累而成文，名之丽也。用丽俱得，谓之知名。」〔RU2-S-XZ22〕（《荀子·正名》）：讀（AI，D62）：单名之用对应原子之所问，名相累成文之丽对应接之所问，二者俱得（且二原子之值有异）乃得码。
 
 **證**　`Becoming.CodeAcquisition.acquired_exact`、`Becoming.CodeAcquisition.acquired_every_expression`、`Becoming.CodeAcquisition.primitives_not_lumped`、`Becoming.CodeAcquisition.primitives_no_exact`、`Becoming.CodeAcquisition.probe_readings`；尚无结果记录。
 
 ### 十·十　前段之名与所带之值
 
-**經**　前段之名，以状经类之未来之前段为状之名也。凡法，诸状有一族尽之，其员 N，类之同异定然否：一特征经此类可知，恰当有一族，不过 N 员，员各为一前段之名（长 N−1）与其所带之值，以此族知来者，于每状之轨皆自某步起每步皆得。凡以一族知来而于一状之轨自某步起每步皆得者，自此步起，特征所取之每值皆为族中某员所带之值。
+**經**　前段之名，以状经类之文之前段为状之名也。凡法，诸状有一族尽之，其员 N，类之同异定然否：一特征经此类可知，恰当有一族，不过 N 员，员各为一前段之名（长 N−1）与其所带之值，以此族知来者，于每状之轨皆自某步起每步皆得。凡以一族知来而于一状之轨自某步起每步皆得者，自此步起，特征所取之每值皆为族中某员所带之值。
 
-**說**　前段之名（`Becoming.Law.name`）是状自身起经类之若干值，最近者在前。以族知来（`Becoming.Learnable.byTable`）：于终而复始之候选上以过则改知来（九·三十一、九·三十二），展开于自身之所预，取所预之未来以其名起首之第一员所带之值；它不给诸状、其数与法，也不给族外诸状之特征，读多远就是名之长。所用之族每状一员：此状 N 步之后之状，以其后 N−1 值为前段之名（此长足以分开凡经类之未来不同之状，`Becoming.Law.sameFuture_iff_within`，九·三十三），以其特征之值为所带之值（`Becoming.Learnable.table_predicts`）。类与特征并读时，界前所带之值定界后之一切（`Becoming.Learnable.ahead_with_labels`）。而在一切历程上，没有前段定下一值（`Becoming.Learning.no_prefix_fixes_next`，九·三十）：此处之局部条件是有一族尽诸状。所带之值即族中一员所带之特征之值，不是另一结构。讀（AI，D40）：可知之特征加于前段者是一个有穷之物，至多 N 个带值之名。对照（相合，mojing-yi-suo-ming）：「夫名以所明正所不智，不以所不智疑所明，若以尺度所不智長。」〔MI1-S-SX〕（《墨子·经说下》）：其核定之结构是经归并之推广（推类，`Becoming.Learning.determines_lumped_iff`，七·三）；以带值之名读之是 AI 之引申。
+**說**　前段之名（`Becoming.Law.name`）是状自身起经类之若干值，最近者在前。以族知来（`Becoming.Learnable.byTable`）：于终而复始之候选上以过则改知来（九·三十一、九·三十二），展开于自身之所预，取所预之未来以其名起首之第一员所带之值；它不给诸状、其数与法，也不给族外诸状之特征，读多远就是名之长。所用之族每状一员：此状 N 步之后之状，以其后 N−1 值为前段之名（此长足以分开凡经类不文同之状，`Becoming.Law.sameFuture_iff_within`，九·三十三），以其特征之值为所带之值（`Becoming.Learnable.table_predicts`）。类与特征并读时，界前所带之值定界后之一切（`Becoming.Learnable.ahead_with_labels`）。而在一切文上，没有前段定下一值（`Becoming.Learning.no_prefix_fixes_next`，九·三十）：此处之局部条件是有一族尽诸状。所带之值即族中一员所带之特征之值，不是另一结构。讀（AI，D40）：可知之特征加于前段者是一个有穷之物，至多 N 个带值之名。对照（相合，mojing-yi-suo-ming）：「夫名以所明正所不智，不以所不智疑所明，若以尺度所不智長。」〔MI1-S-SX〕（《墨子·经说下》）：其核定之结构是经归并之推广（推类，`Becoming.Learning.determines_lumped_iff`，七·三）；以带值之名读之是 AI 之引申。
 
 **證**　`Becoming.Law.name`、`Becoming.Learnable.byTable`、`Becoming.Learnable.table_predicts`、`Becoming.Learnable.learnable_iff_table`、`Becoming.Learnable.label_of_predicts`；记录 [what-finitely-many-labels-fix](../results/records/what-finitely-many-labels-fix.md)。
 
@@ -2749,13 +2774,13 @@
 
 **經**　择所经之象（一·三），配每一可择者一值。择经象者，换二可择者之值则换其所择。凡可择者之同异定然否：二可择者为每一经象之择所同择，恰当象配二者同值；一可择者可为一经象、每象至多择一之择所择，恰当他可择者之值皆异于其值。一辞于象配同值之二可择者一然一否，则无经此象之择恰择其然者。
 
-**說**　象（模型：映射本身）取「象也者，像也」〔DS03〕之名；可择者是一择于其间所择之诸者（`Relabel.Equivariant` 中之 K）。择经象（`Relabel.Equivariant`）是说交换二可择者之值即交换所择；至多择一者，每象至多择出一可择者（`Relabel.singled_iff_untied`）。择所经之象定一个类（归并）：经象之择即经其类之择（`Learning.selects_through_lumping`），它只在所要者（所给之一辞）随类而同之处能对（`Learning.selects_not_right_of_parted`），所要者从象读出时经象读之即对（`Learning.selects_right_of_reads`）。哪个象对、什么是所要者，这里是给定的；更细之象从哪里来属于学。讀（AI，D26、D45）：择经择者之象，不经往（所记）本身；记得多不等于择得对。对照（定域，zhongyong-wen-gu-zhi-xin）：「溫故而知新」〔RU1-S-ZY〕（中庸，成篇年代有争议）：知新不出于故之多，而出于读故所用之类；（定域，zhuangzi-lunbian-bu-ke-chuan）「意之所隨者，不可以言傳也」〔ZH1-S13〕（庄子天道，外篇，成篇年代有争议）：言是一个较粗之象，把手上所辨之差并为一，此言在只经言之处为真，经实际示范与手上之练则脊柱不排除其递接。
+**說**　象（模型：映射本身）取「象也者，像也」〔DS03〕之名；可择者是一择于其间所择之诸者（`Relabel.Equivariant` 中之 K）。择经象（`Relabel.Equivariant`）是说交换二可择者之值即交换所择；至多择一者，每象至多择出一可择者（`Relabel.singled_iff_untied`）。择所经之象定一个类（归并）：经象之择即经其类之择（`Learning.selects_through_lumping`），它只在所要者（所给之一辞）随类而同之处能对（`Learning.selects_not_right_of_parted`），所要者从象读出时经象读之即对（`Learning.selects_right_of_reads`）。哪个象对、什么是所要者，这里是给定的；更细之象从哪里来属于学。讀（AI，D26、D45）：择经择者之象，不经往（文之前段）本身；所经之往长，不等于择得对。对照（定域，zhongyong-wen-gu-zhi-xin）：「溫故而知新」〔RU1-S-ZY〕（中庸，成篇年代有争议）：知新不出于故之多，而出于读故所用之类；（定域，zhuangzi-lunbian-bu-ke-chuan）「意之所隨者，不可以言傳也」〔ZH1-S13〕（庄子天道，外篇，成篇年代有争议）：言是一个较粗之象，把手上所辨之差并为一，此言在只经言之处为真，经实际示范与手上之练则脊柱不排除其递接。
 
 **證**　`Becoming.Relabel.Equivariant`、`Becoming.Relabel.selected_alike_iff`、`Becoming.Relabel.singled_iff_untied`、`Becoming.Learning.selects_through_lumping`、`Becoming.Learning.selects_not_right_of_parted`、`Becoming.Learning.selects_right_of_reads`；记录 [selection-through-a-model-of-the-options](../results/records/selection-through-a-model-of-the-options.md)。
 
 ### 十三·二十　取法
 
-**經**　取法，经他者实应之学也。于所拟之取法之对（取法者所受唯所取法者之实应；所装、文法、一族问与积皆为所给）中，所取法者既有所装，则取法者自之所学，同于自一唯有此所装、积与之同之所取法者所学（取法者之积、部件与一族问皆同）。无应则取法者不添样本；一族问之后，二者之积与已用之量之总不改。
+**經**　取法，经他者实应之学也。于所拟之取法之对（取法者所受唯所取法者之实应；所装、语法、一族问与积皆为所给）中，所取法者既有所装，则取法者自之所学，同于自一唯有此所装、积与之同之所取法者所学（取法者之积、部件与一族问皆同）。无应则取法者不添样本；一族问之后，二者之积与已用之量之总不改。
 
 **說**　取法（`ResponseLearning.learn_through_interface`）在一个所拟之取法之对中陈述：所取法者是其应被取者，取法者受其实应而学；取法者所收只是所取法者的实应，所以所学只由所取法者之所装（今语程序）与积、及取法者之积、部件与一族问而定；一族问不添积（`ResponseLearning.lesson_stock`），无应无所添（`ResponseLearning.send_no_response`）。构造之例（两插槽之所装，七单位）：取法者重构所取法者之所装（`ResponseLearning.reconstructs_program`），每一世都带着它（`ResponseLearning.every_cohort_holds`）；但忠实不等于对：所取法者所不辨者取法者也不辨，且世世如此（`ResponseLearning.faithful_loses_distinction`、`ResponseLearning.distinction_lost_every_cohort`）；同一所取法者以不同之一族问得不同之所装（`ResponseLearning.lessons_change_program`），缺积之取法者其所收之不合不被修好（`ResponseLearning.short_receiver_not_repaired`）。名取「有王者起，必来取法」〔RU2-S-MZ〕。对照（定域，lunyu-xing-jin-xi-yuan）：「性相近也，習相遠也。」〔RU1-S-LY〕：此「習」读为取法，不是名表之习（训练）；所受之一族问不同处可以相远，所取法者、起点与一族问都同处不相远；（相分，lunyu-shang-zhi-xia-yu-bu-yi）「唯上知與下愚不移也。」〔RU1-S-LY〕若读为先定而不可改之两等，则立先于关系之等差，并排学者为上下；脊柱只给关系所给的「不移」之条件：缺其所依，或一局限改所装一次之后锁住（`ResponseLearning.limited_changes_then_stays`）。
 
@@ -3521,7 +3546,7 @@
 
 **經**　（二者皆论题，有论，其根据未决）论题一：唯一大化，凡是者，皆其在其中如何相关也：无一所定为无关系能分者；凡分别（主与客、施与受、事实与评价、体与兼），皆在其中沿关系而划，并其所遗。论题二：善，生生也，即兼中之生及其继续之生，读为广其所容；于一切计之（所顾：凡续皆有顾），以凡方之所共序之（序：以广为愈）。二设即伦理之全力：凡约束一切计一切之方之判，皆广之判；余皆互有所长之历之间之权，伦理之设无一迫之。
 
-**說**　论题一，地位：论题，有论。表示除关系外不须他物：一状即其所以相关（`Becoming.identifiesAlike_iff`：一读为正名，恰当其所认同者即同者；一·二十二）；法从其所支配之历读出（`Becoming.shown_le_iff`：一历之自然之法，是以之为行之最小之变；一·七）；分而述之恰失其关系（`Becoming.separation_faithful_iff`，一·二十三）；宇之八设，五者由一次取与之读而然（有列须每步为一所名之族所封），三者是其法之状（`Becoming.ExchangePremises` 模块，十三·五）。它们示理论不须独立之物，不示实在没有；内在关系之论题未决（规范章 §8.1 第 1 项）。所排：须要无关系能分之所定之述，如内在之价值、封而自续之己、立于其所支配者之外之法。不然者：其述须要这种所定之现象，例如无任何验或关系能分（同）而所续相异之二状。近邻：本体结构实在论（Ladyman 与 Ross 2007）、过程哲学（Whitehead 1929）、佛学之缘起、不可分辨者之同一。
+**說**　论题一，地位：论题，有论。表示除关系外不须他物：一状即其所以相关（`Becoming.identifiesAlike_iff`：一读为正名，恰当其所认同者即同者；一·二十三）；法从其所支配之历读出（`Becoming.shown_le_iff`：一历之自然之法，是以之为行之最小之变；一·七）；分而述之恰失其关系（`Becoming.separation_faithful_iff`，一·二十四）；宇之八设，五者由一次取与之读而然（有列须每步为一所名之族所封），三者是其法之状（`Becoming.ExchangePremises` 模块，十三·五）。它们示理论不须独立之物，不示实在没有；内在关系之论题未决（规范章 §8.1 第 1 项）。所排：须要无关系能分之所定之述，如内在之价值、封而自续之己、立于其所支配者之外之法。不然者：其述须要这种所定之现象，例如无任何验或关系能分（同）而所续相异之二状。近邻：本体结构实在论（Ladyman 与 Ross 2007）、过程哲学（Whitehead 1929）、佛学之缘起、不可分辨者之同一。
 
 论题二，地位：论题，有论；二设（凡续皆有顾、以广为愈）皆陈而不断言，其根据皆未决（规范章 §8.5）。不易乎畛归约为一问：畛内之顾，是否就一个沿窄于「有关系」之关系所划之己而持（`Becoming.ownClosure_standpointInvariant_iff`：就己而持时，畛内之顾无方，恰当诸我沿此关系之域皆同；十五·三十三）；以广为愈归约为单调（纲·五）。生生不带「凡新皆善」：生与退化不相叠，成生不指任何新的组织。所排：不加更多之设而约束每一计一切之方之互有所长之判（每事同重则以所容之数为序，`Becoming.Weighting.neutral_ranks_by_number`，而每事同重就是这样之设）；一个在于狭其所容之善。不然者：一个有论之互有所长之情形，其中一历为每一以正轻重计一切之方所上，那会示对方之形式之读为错；或一个纯在于狭之善。可错之处：「二设即伦理之全力」依于把方读作对所列之容之正轻重；一个不按其所容排序之方（以对动之约束为序者，规范章 §8.9）在此之外，不然者一款已名之。
 
@@ -3586,20 +3611,20 @@
 | 待者 | 形成（formation）：关系项依存并汲取他者的角色 | `Becoming.Web.roles` | 「吾有待而然者邪」〔ZH1-S02〕 | 待＋者；与所待成对，是同一关系项的两种角色 |
 | 所待 | 条件（condition）：他者所依存者这一角色中的关系项 | `Becoming.Web.roles`；`Becoming.Flow.roles` | 「吾所待，又有待而然者邪」〔ZH1-S02〕 | 所X只指单步之所X；「所待又有待」即一关系项兼两角色 |
 | 状（狀） | 构形（configuration）：展开在一步之所是，它怎样相关 | `Becoming.Alike` | 「状变而实无别而为异者」〔RU2-S-XZ22〕 | 取荀子正名「狀／實」之分；狀为构形，實为跨步所认之同一 |
-| 动（動） | 动作（move）：律在一步所留开者 | `Becoming.withMove` | 「動，或徙也」〔MI1-S-JS〕 | 墨经义：或徙，一种可能的移易；不带「动静」形上义 |
+| 动（動） | 动作（move）：律在一步所留开者 | `Becoming.withMove` | 「動，或徙也」〔MI1-S-JS〕 | 墨经义：或即域（古字），处所：动是所处之移徙；同篇「窮，或有前不容尺也」〔MI1-S-JS〕、經下「宇或徙，說在長宇久」〔MI1-S-JX〕皆以或为处所，經說上「動，偏、祭徙」〔MI1-S-SS〕或分一偏之徙与全徙（训释有分歧，只作旁证）。此处所之域是墨经之字，不是名表之域（一组状）。动作是步间之移之标记，律在一步所留开者；施于一状，状移至他状（withMove 把动读入状），以之读墨经之徙是讀（AI）。原注「一种可能的移易」读或为或然，误，已改；此或亦不是凡·四之或。不带「动静」形上义。文理生生 core.058.01（位置移动）与此同读 |
 | 步 | 步（step）：自然数步的共同索引 | `Becoming.World.run_world` | 「不積跬步」〔RU2-S-XZ01〕 | 只作离散的共同索引；时之义见「時」 |
 | 行 | 运行（run）：一个过程无穷的实际执行，唯一的基底 | `Becoming.Run`；`Becoming.World.run_world` | 「道，行之而成」〔ZH1-S02〕 | 取「道行之而成」：所显之法由运行而成；不带「五行」「德行」义 |
 | 变（變） | 过程（process）：可容许的变化，动作读入构形 | `Generative.Process` | 「化而裁之谓之变」〔DS02〕 | 取系辞：化而裁之为变（裁成步）；与变化（展开全体）同取「变」义而层次不同 |
-| 系辞（繫辭） | 框架（frame）：过程加上每个构形所实现的主张 | `Becoming.Frame` | 「系辞焉而明吉凶」〔DS02〕 | 系辞＝系辞于卦：辞系于每个构形；书名作《系辞》加书名号以别；不带占断 |
+| 系辞（繫辭） | 框架（frame）：过程加上每个构形所实现的主张 | `Becoming.Frame` | 「系辞焉而明吉凶」〔DS02〕 | 系辞＝系辞于卦：辞系于每个构形；书名作《系辞》加书名号以别；不带占断；系不单立为关系之名：本编不立泛称之关系，每一关系各有其名（待、取与、感等），一宇只有一类物，待者与所待是一物之二角（凡·二）；文理生生 core.007.01 以系为带类型关系之总标签，其 04 表自注为项目定义，05 JY7 亦自注五元之系只是借字；系辞焉之系是系属、系附，正是此名所取 |
 | 辞（辭） | 主张（claim） | `Becoming.Frame` | 「系辞焉而明吉凶」〔DS02〕 | 一个构形所实现、可以成立或不成立者 |
-| 宇 | 世界（world）：一类关系项，带流与依存网，是容许每一步之过程的运行 | `Becoming.World`；`Becoming.World.run_world` | 「宇，彌異所也」〔MI1-S-JS〕 | 墨经义：遍及异所；每个宇是一观，回到展开；不带「宇宙」为实体之义 |
-| 观（觀） | 观（view）：过程、框架、世界的总名 | `Generative.Process`；`Becoming.Frame`；`Becoming.World` | 「观其会通」〔DS02〕 | 观只指视图；读法另名「讀」 |
+| 宇 | 世界（world）：一类关系项，带流与依存网，是容许每一步之过程的运行 | `Becoming.World`；`Becoming.World.run_world` | 「宇，彌異所也」〔MI1-S-JS〕 | 墨经义：遍及异所（經說上「宇，莫東、西、家、南、北」〔MI1-S-SS〕），与久（彌異時）相对；字之本义是屋檐（系辞下「上栋下宇」〔DS03〕），墨经引申为空间之遍及（文理生生 extension.10 取此）。本编无空间之元：以宇名世界，读异所为一宇诸物各所之全（讀，AI）；时间之展开是其行（宇与行为一展开之二读，一·十二），故此宇不与久对；名表之久亦取经上「久，彌異時也」，二名皆离其墨经之对。每个宇是一观，回到展开；不带「宇宙」为实体之义。对照（相合）：庚桑楚「有實而无乎處者，宇也」〔ZH1-S23〕：宇有实而不在任何处，与物之外无容器相合（杂篇，年代有争议；讀，AI）。距离：墨经之宇是空间，此名是诸物及其流与待网之全 |
+| 观（觀） | 观（view）：过程、框架、世界的总名 | `Generative.Process`；`Becoming.Frame`；`Becoming.World` | 「观其会通」〔DS02〕 | 观只指视图（读法之所施：变读其移，系辞读其辞，宇读其积与取与，一·二十）；读只名以象予值，AI 之读法另名「讀」。字义是观看、观察（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.091：观测记录，含误差、漏检与尺度）：观察本编名闻见（从所观者出发之读法之路线）。距离：字义是观之事，此名是观之所施；观其会通之观亦是动作，取所观为视图是本编之约定 |
 | 其余（其餘） | 整体的其余（the rest of the whole read as one relatum） | `Becoming.World.withRest` | 新组合 | 其余从不施动；取代「大块」 |
 | 诸宇（諸宇） | 空间（space）：所表示世界之类 | — | 新组合 | 諸＋宇 |
 | 法 | 律（law）：确定的过程，从它所支配的历史读出 | `Becoming.Law` | 「法，所若而然也」〔MI1-S-JS〕；「有物有则」〔RU2-S-MZ〕 | 墨经之法是所若而然之标准；理论以法名律（确定的过程，从其所支配之历史读出）是 AI 之延伸；孟子引诗「有物有則」为物与则不二之对照；不带法家之法令、佛法义 |
 | 自然之法 | 所显之律（law shown）：一段历史是其运行的最小之律 | `Becoming.Shown`；`Becoming.shown_le_iff` | 「道法自然」〔DS01〕 | 取王弼「在方而法方，在圆而法圆」：法随所然；不带自然作本原 |
 | 兩行 | 语境中的读法共成一个世界（contextual readings compose one world） | `Becoming.Contextual.world`；`Becoming.Contextual.fitsFree_iff` | 「是之謂兩行」〔ZH1-S02〕 | 齐物论；诸读法各在其语境中成立而共成一个世界，不须先合为一 |
-| 历（歷） | 沿步之状与动之任一序列，不问它是否为某变所许（history: any sequence of configurations and moves (g : Nat →） | `Becoming.Shown`；`Becoming.Shown.run`；`Becoming.shown_le_iff`；`Becoming.Consistent` | 「历年多」〔RU2-S-MZ〕 | 所取之义：沿步之状与动之任一序列，不问它是否为某变所许。凡历皆其自然之法之行（Shown.run），自然之法是以此历为行之最小之变（shown_le_iff）；行是为某变所许之历。积之历（Nat → C → Nat，level path）是历之一种，取代稿中「水平之路」「水平之历」；SelectionPool 稿中已以历名积之历。孟子万章上「历年多」：历为逐一经过（先秦）。所不带：历法、历数（曆，简体并为历）、历史之人事叙事义、阅历之个人义。三家所同。nat 键其余诸义不在此名：步标之辞 p : Nat → Prop（C03 之所然）、感之日程（on : Nat → Bool）、员之量（a : α → Nat）另定。稿中「历程」（course，名表识、往之所名亦用）读作历之程，不另立名，也不与历混为一名。 |
+| 历（歷） | 沿步之状与动之任一序列，不问它是否为某变所许（history: any sequence of configurations and moves (g : Nat →） | `Becoming.Shown`；`Becoming.Shown.run`；`Becoming.shown_le_iff`；`Becoming.Consistent` | 「历年多」〔RU2-S-MZ〕 | 所取之义：沿步之状与动之任一序列，不问它是否为某变所许。凡历皆其自然之法之行（Shown.run），自然之法是以此历为行之最小之变（shown_le_iff）；行是为某变所许之历。积之历（Nat → C → Nat，level path）是历之一种，取代稿中「水平之路」「水平之历」；SelectionPool 稿中已以历名积之历。孟子万章上「历年多」：历为逐一经过（先秦）。所不带：历法、历数（曆，简体并为历）、历史之人事叙事义、阅历之个人义。三家所同。nat 键其余诸义不在此名：步标之辞 p : Nat → Prop（C03 之所然）、感之日程（on : Nat → Bool）、员之量（a : α → Nat）另定；作逐步之值而自读其状者，皆文。本次改（WL）：原注末句「稿中「历程」（course，名表识、往之所名亦用）读作历之程，不另立名，也不与历混为一名」改为：作逐步之值（o : Nat → O，一历经一象，状不给而自读出）之「历程」今名文（见文）；他处「历程」（动之串、流之程、反事实之程、识之进一步历程）仍读作历之程，不另立名。同一序列，作所给之状与动则为历，作所读之值而自读其状则为文，二名不混。 |
 | 境 | 辞所在、所示之界：一境含若干辞（within k c），并于每一状示其值（shows）（context within which claims are shown (Becoming.Contextual: ） | `Becoming.Contextual`；`Becoming.Contextual.glues_iff_agree`；`Becoming.Contextual.world` | 「且夫知不知是非之境」〔ZH1-S17〕 | 所取之义：辞所在、所示之界：一境含若干辞（within k c），并于每一状示其值（shows）。诸境所示于相交处一致则并行不悖（glues_iff_agree），诸境之读共成一宇为两行（Contextual.world）。秋水「且夫知不知是非之境」：是非（辞之然否）所施之界（外篇，年代有争议）；逍遥游「辯乎榮辱之境」〔ZH1-S01〕为内篇同义。所不带：先秦主义疆界、疆土；佛教以境为根识所对（能／所二分）、唯识无境；境界之高下。不取语境（P3）：现代复词，语字把一般之境限于言语，且本表偏好先秦之名；今语「语境」「情境」之境读者亦能认此字。分工：时名情境（situation），方名立场，域名一组状或物，畛名一体之界，观名视图——都不是境。稿中 C10、C15「处境」若指情境写时。代 context（C07 同一概念）。 |
 | 不依境 | 不＋依＋境：辞不带境之指标，每辞一值，不随境而异（FitsFree：凡境所含之辞，其所示与系辞所实现者合）（context-free claim or frame (Becoming.Contextual.FitsFree)） | `Becoming.Contextual.FitsFree`；`Becoming.Contextual.fitsFree_iff`；`Becoming.Contextual.no_free_frame`；`Becoming.NoGlobal` | 新组合 | 新组合：不＋依＋境：辞不带境之指标，每辞一值，不随境而异（FitsFree：凡境所含之辞，其所示与系辞所实现者合）。有一不依境之系辞合于诸境，恰当每状诸境所示并行不悖（fitsFree_iff）；所示有局部之约束则无（no_free_frame）。带境之系辞（Contextual.indexed）总合，代价是一辞于二境成二辞，写「带境之系辞」，不另立名。不取无境：有唯识无境之漂移，又可读作无边；不取齐物论之无竟（修养境界）。经中有两处，故立名而不作 plain；不只作否定，同名表不息、不可非之例。 |
 | 不忒 | 一历两次于同一状、采同一动，所至之果皆同（consistent history: never takes one move at one configuratio） | `Becoming.Consistent`；`Becoming.shown_determined_iff`；`Becoming.exists_law_iff`；`Becoming.ConsistentFamily`；`Becoming.shownBy_determined_iff`；`Becoming.Run.ConsistentThrough` | 「四時不忒」〔YD-HX01〕 | 所取之义：一历两次于同一状、采同一动，所至之果皆同。一历不忒，恰当其自然之法为法（shown_determined_iff），恰当有一法以之为行（exists_law_iff）；一族之历同（shownBy_determined_iff）；经一读而不忒为 Run.ConsistentThrough，细读不忒而粗读忒者见 Switching.inconsistent。豫彖「天地以順動，故日月不過，而四時不忒」：四时每至同一处，其後皆同——同一处之重现无差，正是本条（讀，AI；彖传年代有争议）；大宗师「維斗得之，終古不忒」〔ZH1-S06〕为先秦内篇同义。所不带：豫彖同段之顺动天地与圣人刑罚（单一中心）、大宗师之得道（本原）、诗「其儀不忒」〔RU1-S-DX〕之德行规范、孙子「其戰勝不忒」〔BI1-S-SZ〕。不取不贰（P2）：先秦主义专一、忠贞，韩非「威不貳錯」〔FA1-S-H06〕「分勢不貳」〔FA1-S-H48〕、荀子「一而不貳爲聖人」〔RU2-S-XZ25〕，带单一中心与修养。不取无歧（P3）：无先秦出处（语料中歧只见宋代一例）；稿 C07 以分歧名变之分支，「无歧」易读作变不分支即法本身，掩去本条所连之一步。不取以「其自然之法为法」为定义（P1）：那是一条定理，以之为名则定理成同语反复。不用一致：C12 以一致名协同，系辞「一致而百虑」〔DS03〕与同归同句。其否写「忒」（粗读则忒）。 |
@@ -3629,7 +3654,7 @@
 | 大故 | 充分且必要之条件 | — | 「大故，有之必然，無之必不然」〔MI1-S-SS〕 | 墨辩 |
 | 有力 | 差别制造（makes a difference）：一个依存之断的但书 | `Becoming.Dependence.MakesDifference` | 新组合 | 复词；先秦「有力」是力量义，不承；以论语「微管仲，吾其被髮左衽矣」之「微」为但书结构的对照 |
 | 有待 | 活动则受支撑（Web.Dependent 之为前提） | `Becoming.Web.Dependent` | 「吾有待而然者邪」〔ZH1-S02〕 | 齐物论；有待只名此前提；小故以之为锚而另有见证 |
-| 有形 | 有形（embodied）：活动恰在水平为正之处 | `Becoming.Web.Embodied`；`Becoming.World.Embodied` | 新组合 | 取代以「体」名体现；World.ArisingEmbodied 同族 |
+| 有形 | 有形（embodied）：活动恰在水平为正之处 | `Becoming.Web.Embodied`；`Becoming.World.Embodied` | 新组合 | 取代以「体」名体现；World.ArisingEmbodied 同族；只取运恰在有积之处：一物于他物之为所待，就是它自身之运（二·十一），不带形体之义。字义：形是形状、显露（孙子「形人而我無形」〔BI1-S-SZ〕；文理生生 core.015：结构形态、对观察者显露）：构形本编名状，显露于观者名闻见。先秦之「有形」是有形体：解老「凡物之有形者易裁也」〔CV1-S-JL〕、「有形則有短長」〔CV1-S-JL〕、秋水「夫精粗者，期於有形者也」〔ZH1-S17〕以有形体者为可度、可分；其说不及运，而遗骸有形体却不运（二·十一），故不作引。距离：此名取有＋形之字面，所名是约定 |
 | 正需 | 所需为正之依存（Web.Bearing） | `Becoming.Web.Bearing` | 新组合 | — |
 | 积（積） | 一所待于一步所立之量（Dependence.level，自然数）（level of a condition at a step (field level of Becoming.Depe） | `Becoming.Dependence`；`Becoming.Web.Supported`；`Becoming.Web.Rises`；`Becoming.Flow.Balances` | 「水之積也不厚，則負大舟也无力」〔ZH1-S01〕 | 所取之义：一所待于一步所立之量（Dependence.level，自然数）。逍遥游「水之積也不厚，則負大舟也无力」：积是所待之量，不厚则不足以负，正是「需不过积」（足、容）之结构（讀，AI）。经中：足，需不过所待之积也；升，所待之积次步多于本步也。先秦另有动词积（劝学「積土成山」）、积习、委积；後世有乘积、面积、积分、积累。所不带：只增不减之累积义（积可降可涸）、积善之修养义、算术乘积义。不取高（P2）：篇十七以高名卦之高（Becoming.Hexagram.Height，经中十九处），一名将二义；高又兼比较与崇高之价值，「升，所待之高次步高于本步」一句之中名与比较相混。不取水平：现代词，「水平高」带评价。不取量：量已名一般之量（becoming.amounts）。须改写：C11、C12、C13、TH 中作乘积之「之积」（十三处）改「相乘」；C04「积之若干次」之动词改「累」；名表「积小以高大」「同类积小」中之积是动词，是固定之名，不因此改读。代 dependence.level、level 及 w 之 level。 |
 | 运（運） | 一待者于一步在作用之中（Dependence.active，只是一个命题，不带其内容）（activity: a formation active at a step (field active of Beco） | `Becoming.Dependence`；`Becoming.Web.Arises`；`Becoming.Web.Ceases`；`Becoming.Flow.Acting`；`Becoming.Web.Census` | 「天其運乎？地其處乎？」〔ZH1-S14〕 | 所取之义：一待者于一步在作用之中（Dependence.active，只是一个命题，不带其内容）。天运「天其運乎？地其處乎？」以运与处相对：在动与不动，无意志、无价值。与名表相连：作＝跨步而运始，已＝跨步而运止，亡＝自某步起永不运，蛰＝存而不运，有形＝运恰当有积，唯运者与之（Flow.Acting），列＝每步运者之族各一（Web.Census）。天运为外篇（年代有争议）；同段「孰主張是？……孰居无事，推而行是？」所设之推动者（单一中心）不带；命运、运气、运数、运输义不带。三家所同。经与说皆不写「运行」（行名 run；稿中十处须改），与动（move）、作（arising）、输（conveying）分开。代 activity、dependence.active。 |
@@ -3646,8 +3671,8 @@
 | 已 | 止息（ceasing）：活动跨一步停止 | `Becoming.Web.Ceases` | 「學不可以已」〔RU2-S-XZ01〕 | 已只指止息；墨经「已，成、亡」只作成、毁之旁证 |
 | 成 | 开始成立（comes to hold） | `Becoming.ComesToBe` | 「其分也，成也；其成也，毀也」〔ZH1-S02〕 | 与「毁」成对；成生、成闭之「成」同义（成就） |
 | 毁（毀） | 不再成立（ceases to hold） | `Becoming.CeasesToBe` | 「其分也，成也；其成也，毀也」〔ZH1-S02〕 | 与「成」成对 |
-| 聚 | 开始作为条件而在（comes to stand as a condition） | `Becoming.Web.ComesToStand` | — | 与「散」成对；不带「气之聚」之本体义 |
-| 散 | 不再作为条件而在 | `Becoming.Web.ComesToStand` | — | 与「聚」成对 |
+| 聚 | 开始作为条件而在（comes to stand as a condition） | `Becoming.Web.ComesToStand` | — | 与「散」成对；只取有积之一读：一所待之积跨一步由零而正（ComesToStand；作、结、聚为一变化之三读，一·六）；不带「气之聚」之本体义。字义：聚集、聚合成团（知北游「人之生，氣之聚也，聚則爲生，散則爲死」〔ZH1-S22〕，系辞上「方以类聚」〔DS02〕；文理生生 core.056：聚合过程、已成聚合）：组成者间关系之形成本编名结，有形之物上作则聚（Web.Embodied.comesToStand）。距离：字义是多者会聚，此名只说一所待之积之有无 |
+| 散 | 不再作为条件而在 | `Becoming.Web.CeasesToStand` | — | 与「聚」成对；只取有积之一读：一所待之积跨一步由正而零（CeasesToStand）。字义：离散、解组（知北游；文理生生 core.057：组织关系解除而组成物可仍在）：关系之消解本编名解，组成者之仍在由其各自之积读出；达生「散則成始」之散读为裂，不是此名。距离同聚 |
 | 相代 | 同步（keep pace）：生起与止息相差不过成员之数 | `Becoming.keep_pace` | 「日夜相代乎前」〔ZH1-S02〕 | — |
 | 消息 | 普查平衡（census balance over a stretch） | `Becoming.held_over_stretch` | 「君子尚消息盈虛」〔YD-HX01〕 | 消息之「息」为长，与「不息」之「息」（止）异义；只作复词；与易学十二消息卦（Hexagram.waxWane）之消长不同；waxWane 写作「消长环」；消息之「息」为长，与「不息」之「息」异义 |
 | 列 | 普查（census）：每步成立者的列表，各一次 | `Becoming.Web.Census` | — | 与「數」分名 |
@@ -3664,7 +3689,7 @@
 | 存 | 持存（holds, persists） | `Becoming.Web.Holds` | — | —；存是一步之持存；跨步之持续名「久」 |
 | 裂 | 分裂（split） | `Becoming.Web.NoSplit` | — | 取代「分」，使「分」只给足迹 |
 | 合 | 并合（merge，形成之并合） | `Becoming.Web.NoMerge` | — | 取代「并」（简体与「並」同形）；与构形之「同归」分开 |
-| 亡 | 终止（ends）：自某步起永不活动 | `Becoming.Web.Ends` | 「死而不亡者寿」〔YD-LAO-BASE〕 | 亡只指终而不复；俱亡同义 |
+| 亡 | 终止（ends）：自某步起永不活动 | `Becoming.Web.Ends` | 「死而不亡者寿」〔YD-LAO-BASE〕 | 亡只指终而不复；俱亡同义；文理生生 core.076 之亡（一事件中实例退出某类）是一辞（属此类）跨一步由然而不然，本编名毁（CeasesToBe）；读于运即已（止息，Web.Ceases）：已是一步之止，亡是自某步起永不再运；退出一类不即亡，文理生生亦自注之 |
 | 新作 | 新起（arises from nothing it continues） | `Becoming.Web.ArisesFrom` | 新组合 | 跨步后活跃，且不延续任何此前活跃之形成 |
 | 火传（火傳） | 样式经由传递而延续（a pattern lasts through passing） | `Becoming.Web.ByPassing` | 「指窮於爲薪，火傳也」〔ZH1-S03〕 | 养生主：薪是载者各自终止，火是样式经递接而不尽 |
 | 升 | 水平之升（rises） | `Becoming.Web.Rises` | — | 与「降」成对 |
@@ -3687,7 +3712,7 @@
 | 与（與） | 补充（replenishment，给） | `Becoming.Flow` | — | — |
 | 取与（取與） | 一次交换（one exchange） | `Becoming.Flow` | — | — |
 | 取者 | 取用者（takers） | `Becoming.Flow.takers` | — | — |
-| 衡 | 平衡（balance）：水平的每次变化恰是所取与所给 | `Becoming.Flow.Balances` | — | —；墨经之衡是杠杆之平、荀子之衡是标准，都不入 |
+| 衡 | 平衡（balance）：水平的每次变化恰是所取与所给 | `Becoming.Flow.Balances` | 「衡不正，则重县于仰」〔RU2-S-XZ22〕 | 所取之义：称之两边相等：步后之积加共取，等于步前之积加共与（Flow.Balances；一·十五）。荀子正名以衡为称：「衡不正，则重县于仰，而人以为轻」〔RU2-S-XZ22〕，衡正则两边相当（讀，AI；战国）；同段之取、去是择取与舍去，不是名表之取；以道为正权、择祸福之义不带。对照（相合）：同段「以一易一，人曰：无得亦无丧也」〔RU2-S-XZ22〕，一易之得丧是易入与易出之差，与衡之账同式；此得、丧与名表之有得、无丧（Web.Adds、Web.Retains）及得、丧同字异构，不借。不取：解蔽「何谓衡？曰：道」〔RU2-S-XZ21〕之衡是判断之准绳（文理生生 core.084.01；其 JC2 自注不支持均衡态），其本亦是悬衡（「兼陈万物而中县衡焉」）；墨经经说下之衡是称与杆之静力（「衡加重於其一旁，必捶」「本短標長」〔MI1-S-SX〕），亦不入。距离：字义之衡是称与准绳，此名只取称平时所写之等式；衡是宇之设，不是律 |
 | 耗 | 耗散（dissipation） | `Becoming.Flow.Dissipative` | — | —；先秦「秏」义为乱、虚竭（荀子修身「多而亂曰秏」），耗散是转义 |
 | 端 | 最小损失、最小之量（least loss） | `Becoming.Amounts.rests` | 「非半弗𣃈，則不動，說在端」〔MI1-S-JX〕 | 墨经义；与「萌」（种子）分开；墨经之端是不可再分之点，脊柱之端是损失之下界，二者只在整数之量中重合 |
 | 积小以高大（積小以高大） | 阿基米德的量（Archimedean amounts） | — | 「積小以高大」〔YD-HX02〕 | AI 强读：书证言积累，读作阿基米德之量；反面见证 Layered.not_archimedean |
@@ -3698,7 +3723,7 @@
 | 损（損） | 下降（depletion） | — | 「損 、益 ，盛衰之始也」〔YD-OW-ZG〕 | 「損，偏去也」只给「偏去」；与「益」成对 |
 | 封 | 封闭（closed：家族跨一步不与外交换） | — | 「夫道未始有封」〔ZH1-S02〕 | 取代「闭关」，使「闭」只指吸收区域 |
 | 围（圍） | 围住（enclosed around） | — | — | — |
-| 开（開） | 开放（openness）：超出每个有限家族的交换 | `Becoming.World.arising_opens` | — | 只对应 Ren 的「开」之「未」一相；未、可、应、转见对照表；只锚 arising_opens；Seeking.more_needs_open 之 open 是另一结构，不借此名 |
+| 开（開） | 开放（openness）：超出每个有限家族的交换 | `Becoming.World.arising_opens` | — | 只对应 Ren 的「开」之「未」一相；未、可、应、转见对照表；只锚 arising_opens；Seeking.more_needs_open 之 open 是另一结构，不借此名；开是宇之性质，不是一次动作：不能自某步起每步有封，即取与超出每一有穷之族（四·十二）。字义：开启门户、通道（老子五十二章「开其兑，济其事，终身不救」〔YD-LAO-BASE〕；文理生生 core.052.01：使一通道由不可用而可用）；一部分之开启本编名闢（需净与），一族一步不封即此字义读于一族；老子以开为终身不救、以闭为终身不勤之价值不带。距离：字义是一通道之一开，此名是「自某步起每步皆有一有穷之族封」之否，读于宇之全行；不以开其兑作引，因其所言是一身之孔窍与欲之境 |
 | 衰 | 衰（runs down）：家族衡且耗而总量下降之一步 | `Becoming.Flow.RunsDownOn` | 「盛衰之殺，變化之流也」〔ZH1-S13〕 | — |
 | 与如其取（與如其取） | 守恒（conserving）：所给恰等所取 | `Becoming.Flow.ConservingOn` | 新组合 | 固定短语 |
 | 与不过取（與不過取） | 无中不生（第一定律，gainless）：所给不多于所取 | `Becoming.Flow.GainlessOn` | 新组合 | 固定短语 |
@@ -3734,7 +3759,7 @@
 | 初不定终（初不定終） | 任何有限之往都不定运行之类 | `Becoming.Renewable.prefix_does_not_decide` | 「靡不有初，鮮克有終」〔YWH-Q〕 | 王弼乾文言注引诗（大雅·荡，先秦） |
 | 在恒之内（在恆之內） | 在＋恒＋之内（an event within renewal at a step: active, and every depende） | `Becoming.Web.RenewingAt`；`Becoming.Web.RenewingAt.not_undermining`；`Becoming.Web.RenewingAt.not_breaking`；`Becoming.Web.renewing_at_active`；`Becoming.Preemption.renewingAt_consuming_narrows`；`Becoming.Web.renewingAt_iff_over_all` | 新组合 | 新组合：在＋恒＋之内。核实 Web.RenewingAt t f（Dependence.lean）：f 于 t 运，且凡 f 于 t 所与（Participates：待之或资之）之所待 c、凡于 t 待 c 之待者 g，其待于此步皆持（Kept：步前、步后皆足）。Lean 文档即「A formation's event at t is within renewal」，此名直译之。这是恒之逐步之读，与剥（逐步之读）成对：在恒之内者不剥、不绝（not_undermining、not_breaking）；恒者每运之步皆在恒之内（renewing_at_active）；于一步在恒之内，恰当于凡所待之域在恒之内（renewingAt_iff_over_all）。逆不成立：先取者之事于第零步在恒之内而整段竭、其体使所容狭（Preemption.renewingAt_consuming_narrows）；Renewable.prefix_does_not_decide 中涯前每事皆在恒之内而一行竭。所以此名不可读作「属恒之一段」，说中首见须明言。补：名不带运之一分，定义须写出：「物于一步在恒之内，于其步运，而其所与之诸所待上每一待于此步皆持也」。英文 within renewal 一语兼指二事：此名（关系之读）与「每步所取不过所更新」（量之读，Renewable.amount_reading，即名表出入相揜，Flow.WithinJoint）；中华本以二名分之，稿中作量之读之「在所与之内」（C05 五·十二、五·十三说）写出入相掩，不写在恒之内。不取「步恒」或「恒于其步」：名表注明恒只名运行之类，给恒加步语以名逐步之读就是一名二义；此名以「在……之内」表与恒之条件之关系，恒字仍只名运行之类。经中写「物于一步在恒之内」或「其事在恒之内」。代 C05「一步在恒之内」（已如此）、C06「在其步属更新之内」、C15「于本步为更新」。 |
 | 可得 | 经某一串动可以得到此状，即 Lean 文档之 can be had（can be had: some course of moves leads to it — n steps on fr） | `Becoming.Branching.Reachable`；`Becoming.Law.Reachable`；`Becoming.Law.reachable_iff`；`Becoming.Branching.KeepsPossibilities`；`Becoming.Branching.lost_stays`；`Becoming.Branching.Returns.reachable`；`Becoming.Law.Merges.loses` | 「欲不待可得」〔RU2-S-XZ22〕 | 所取之义：经某一串动可以得到此状，即 Lean 文档之 can be had。核实（Recurrence.lean）：Branching.Reachable P n s：有一状 x 与一串动，其长为 n，自 x 经之至 s；KeepsPossibilities：凡状每步皆可得（no possibility is ever lost）；Law.reachable_iff：于法即有 x，orbit next x n = s；lost_stays：某步不可得，此后皆不可得；Returns.reachable：复者每步皆可得；Law.Merges.loses：状有一族尽之而法有同归，则不得凡状于族长之步皆可得。Branching.Returns 之文档亦以 can be had 名自某状之可达（from which s can be had again），故此名可兼施于起点给定者，写「自 s 可得」。荀子正名「欲不待可得」（战国末）：可得即可以得到者；同段欲、天、心之论不带。名表已以此句为取於可得之注、名「一步可达之选项」：那是此名自当前之状一步之用，此决定与名表相合，不是新义。范围必写明：「于 n 步可得」（起点任意，恰 n 动）、「自 s 可得」（起点给定）、「自一状一动可得」（一步）。须整合者统一（他组之键）：C15 经「可得，自一状一动所至之诸状也」宜改「自一状一动可得之诸状」，免一名二定义；C07 经「能至」（Becoming.Reach，八处）、C15、C17 经「可至」若为同一关系，宜写「自 s 可得 t」；C10、C04 经「可得之诸果」「可得诸步后水平」（Flow.Outcome：一体于其取限与衡之下一步可至之积）是一步之用，合。冲突：核心莫上之者之注以「可得者」名 Requirement.Frontier 之 eligible，那是任给之谓词，未必为可达者；可得立名之后，任给之谓词须另写，只在 eligible 恰为可达者（FrontierWorlds）处可写可得者（键 eligible 同）。不取可至、能至：至已入所至（所见范围）、至期所及。 |
-| 今 | 藏往之状是今与往之对（Law.withHistory next (s, h) = (next s, s :: h)：今依（the present of a kept history (first component of Law.withHi） | `Becoming.Law.withHistory`；`Becoming.Law.present_orbit`；`Becoming.Law.present_forgets`；`Becoming.Law.return_keeps_history` | 「昔之知墻，非今日之知墻也」〔MI1-S-DQ〕 | 所取之义：藏往之状是今与往之对（Law.withHistory next (s, h) = (next s, s :: h)：今依法而行，前今入于往）。今是第一分（原法之一状），往是此前诸今之族（名表往：历程之前段）。核实：present_orbit（今之轨即原法之轨）、return_keeps_history（今复而藏往之状不复，故往异）、present_forgets（今行于一族所含诸状者，自每步起有二步共一今而藏往之状异：有穷之今忘）。墨子大取「昔之知墻，非今日之知墻也」（战国后期墨家，逐字已核）：今（今日）与昔对举，今是当前、昔是此前，正是今与往之分；同篇爱人、利人之论不带。改：原注称此句「可作一今而有异往之对照」是过读——句中是同一墙之今知异于昔知，只证今／昔之分，present_forgets 之结构不由此句承当。荀子非相「欲觀千歲則數今日」〔RU2-S-XZ05〕（已核）以今知古，与 present_forgets（有穷之今不定其往）方向相反，不取。经中今只作名：不作发语之「今夫」「今有」，也不泛指本步，免一名二义。须改写：C05 五·十四经「一待之今所需」改「一待于其步之需」，五·十七经「今所待所资者」「今资一终不足者」改「本步所待所资者」「本步资一终不足者」；他篇经中泛指本步之今同改：C11 中节之经「在 m 与今水平之间（与今同侧）」改「在 m 与本步之积之间（与本步同侧）」，C15 经「以多于今为所求者」改「以多于本步者为所求者」。 |
+| 今 | 藏往之状是今与往之对（Law.withHistory next (s, h) = (next s, s :: h)：今依（the present of a kept history (first component of Law.withHi） | `Becoming.Law.withHistory`；`Becoming.Law.present_orbit`；`Becoming.Law.present_forgets`；`Becoming.Law.return_keeps_history` | 「昔之知墻，非今日之知墻也」〔MI1-S-DQ〕 | 所取之义：藏往之状是今与往之对（Law.withHistory next (s, h) = (next s, s :: h)：今依法而行，前今入于往）。今是第一分（原法之一状），往是此前诸今之族（名表往：文之前段）。核实：present_orbit（今之轨即原法之轨）、return_keeps_history（今复而藏往之状不复，故往异）、present_forgets（今行于一族所含诸状者，自每步起有二步共一今而藏往之状异：有穷之今忘）。墨子大取「昔之知墻，非今日之知墻也」（战国后期墨家，逐字已核）：今（今日）与昔对举，今是当前、昔是此前，正是今与往之分；同篇爱人、利人之论不带。改：原注称此句「可作一今而有异往之对照」是过读——句中是同一墙之今知异于昔知，只证今／昔之分，present_forgets 之结构不由此句承当。荀子非相「欲觀千歲則數今日」〔RU2-S-XZ05〕（已核）以今知古，与 present_forgets（有穷之今不定其往）方向相反，不取。经中今只作名：不作发语之「今夫」「今有」，也不泛指本步，免一名二义。须改写：C05 五·十四经「一待之今所需」改「一待于其步之需」，五·十七经「今所待所资者」「今资一终不足者」改「本步所待所资者」「本步资一终不足者」；他篇经中泛指本步之今同改：C11 中节之经「在 m 与今水平之间（与今同侧）」改「在 m 与本步之积之间（与本步同侧）」，C15 经「以多于今为所求者」改「以多于本步者为所求者」。 |
 
 ### 名组：生成、退化与生生之向
 
@@ -3742,7 +3767,7 @@
 |---|---|---|---|---|
 | 容 | 支持、容纳（support, admission）：水平满足一个形成在一步的每个所需 | `Becoming.Web.Admits`；`Becoming.Web.Supported` | 「窮，或有前不容尺也」〔MI1-S-JS〕 | 空间之容，只取关系形式（水平与所需）；包容之品行义不携带；所容为约定：此刻诸水平所容许者之全体 |
 | 生生 | 生生：整体中的生及其继续生成（D1）；方向以扩大比较 | `Becoming.Web.Widens` | 「生生之谓易」〔DS02〕 | 不带老子五十章「生生之厚」之执生义；不是谓词 living |
-| 生 | 生成（generation），与退化相对 | — | — | 生只指生成；生起另名「作」 |
+| 生 | 生成（generation），与退化相对 | — | — | 生只指生成：积之历广偏去此体之积之历（成生，Web.Widens，六·六），与绝生（退化）、相赅、互有所长四者不相兼。字义宽：先秦之生兼出现、出生、产生后继、活着（系辞上「生生之谓易」〔DS02〕、老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕、知北游「人之生，氣之聚也」〔ZH1-S22〕；文理生生 core.044.01–04 分为模式出现、实例入类、产生后续实例、活着四义）；字之他义本编另名：出现与入类→作、成、新作；产生后继→所出、出者；活着→活。距离：以生专名与退化相对之生成是本编之约定（讀，AI，D1、D2），不是字之通义；任一新出现不即是生。系辞下「天地之大德曰生」〔DS03〕以生为德，价值之义不带：诸程孰愈只在以广为愈。文理生生亦拒以生推善（CX01），与此同向 |
 | 成生 | 生成的（generative）：部分扩大之处 | `Becoming.Web.Widens` | 新组合 | Ren 之词 |
 | 绝生（絶生） | 退化的（degenerative） | — | 新组合 | Ren 之词；绝生不含永久；不可再得者名成闭 |
 | 所容 | 生成的空间（the generative space） | — | — | — |
@@ -3767,7 +3792,7 @@
 
 | 名 | 所名 | 锚 | 出处 | 注 |
 |---|---|---|---|---|
-| 闭（閉） | 闭：律从不离开的区域（吸收区域；对过程是不变量） | `Becoming.Law.Absorbing`；`Becoming.Law.drawn_iff_not_returns` | — | Ren 之词；确定之法下与「常」相同（Law.absorbing_iff_invariant）；不带负价值 |
+| 闭（閉） | 闭：律从不离开的区域（吸收区域；对过程是不变量） | `Becoming.Law.Absorbing`；`Becoming.Law.drawn_iff_not_returns` | — | Ren 之词；确定之法下与「常」相同（Law.absorbing_iff_invariant）；不带负价值；字义：关闭门户、通道（老子五十二章「塞其兑，闭其门」〔YD-LAO-BASE〕；文理生生 core.053.01：使通道关闭，须择程度或全闭）；一族一步不与外交换本编名封（取代「闭关」），闭只名一域：律入之则不出（Absorbing 不要求有入者），与闭门之出入皆阻不同（讀，AI）。距离：字义是对一通道之动作，此名是一域之性质；老子以闭为善（终身不勤）之价值亦不带 |
 | 成闭（成閉） | 成闭（锁定，lock-in） | `Becoming.Law.DrawnInto.never_back`；`Becoming.Run.locked_in` | 新组合 | Ren 之词 |
 | 护闭（護閉） | 护闭（关节处的保持，keeping） | `Becoming.Junctures` | 新组合 | Ren 之词；D52 |
 | 机（機） | 机（关节，juncture） | `Becoming.Junctures` | 「節如發機」〔BI1-S-SZ〕 | D52；「節如發機」只出发机不可收之义，关节之读出于 D52；至乐「萬物皆出於機」（本原）、大学「其機如此」（发动之枢）不入 |
@@ -3775,7 +3800,7 @@
 | 同 | 相同／互模拟（alike, bisimulation） | `Becoming.Alike` | 「同，異而俱於之一也」〔MI1-S-JS〕 | 墨经 |
 | 类（類） | 归并（lumping）：读法及其所分之类 | `Becoming.Learning.Lumped` | 「以類取，以類予」〔MI1-S-XQ〕 | 墨辩；Learning.Lumped π g 读作「随类而同」 |
 | 推类（推類） | 经由归并而推广（generalization through lumping） | `Becoming.Learning.determines_lumped_iff` | 「謀而不得，則以往知來」〔MO1-S-C18〕 | 合「推」于此；墨子非攻中所引古语之结构是经归并之迁移 |
-| 理 | 理：对结构与变化之律的建模 | `Becoming.Learning.goAlike_iff_lumped`；`Becoming.carries_law_iff` | 「理者，成物之文也」〔CV1-S-JL〕 | 已采；凡理皆类，类不皆理；不带「理先气后」；先秦给「分」（解老），魏晋注给「变化」（韩康伯「盡聚散之理」）；携带律是理论另加的条件 |
+| 理 | 理：对结构与变化之律的建模 | `Becoming.Learning.goAlike_iff_lumped`；`Becoming.carries_law_iff`；`Becoming.Law.sameFuture_of_law`；`Becoming.Law.identifiesAlike_of_law` | 「理者，成物之文也」〔CV1-S-JL〕 | 已采；凡理皆类，类不皆理；不带「理先气后」；先秦给「分」（解老），魏晋注给「变化」（韩康伯「盡聚散之理」）；携带律是理论另加的条件。本次改（WL）：文既立名，引文「理者，成物之文也」〔CV1-S-JL〕读作定域：理是自文读出之类，不是文。法经一象示之，凡守象之值而为理之类所并之二状皆文同（Law.sameFuture_of_law）；守象之值、为理而并凡文同之状者为正名（Law.identifiesAlike_of_law）。于此最粗之理，理与文所分者同，「物有理，不可以相薄」〔CV1-S-JL〕即理不并文异之状；此是四条已检之律之合，非一条定理。 |
 | 势（勢） | 吸引域（basin） | `Becoming.Hexagram.qian_basin`；`Becoming.Hexagram.cycle_basin` | 「如轉圓石於千仞之山者，勢也」〔BI1-S-SZ〕 | 只取盆地义；兵家位势作条目；只在互卦之法上有证；一般之势分划是缺口；位势、蓄势、阵势、外加之境不入 |
 | 入 | 被吸入（drawn into） | `Becoming.Law.DrawnInto` | — | 或入、必入以「或」「必」组合 |
 | 所归（所歸） | 吸引子（attractor） | `Becoming.Law.drawnInto_returning` | — | — |
@@ -3800,11 +3825,11 @@
 | 先后（先後） | 步序 | `Becoming.Interleavings` | 「行脩以久，說在先後」〔MI1-S-JX〕 | D43 |
 | 位 | 位（place） | `Becoming.HexagramPlaces` | — | 已有易章 |
 | 当位（當位） | 当位 | `Becoming.HexagramPlaces` | — | — |
-| 正 | 正 | `Becoming.HexagramPlaces` | — | 只名 inPhase；贞正之例不入 |
+| 正 | 正 | `Becoming.Hexagram.inPhase` | — | 只名 inPhase（爻之刚柔与位之奇偶相合）；当位（holdsPlace）比正为窄；贞正之例不入。字之主义是正当与纠正（论语「其身正，不令而行」〔RU1-S-LY〕；文理生生 core.087：规范上之正、纠正行为）：正当属价值层，不立为名；纠正之构本编名二程之复合（Rejoining，十一·十一），而无动之程只是比较，不是标准，故不名正；过正、正名之正各有其条 |
 | 中位 | 中位 | `Becoming.HexagramPlaces` | — | — |
 | 相应（相應） | 爻之相应（opposed lines） | `Becoming.Hexagram.opposed` | — | 单用「应」只作回应 |
 | 比 | 比（adjacent lines） | — | — | 约定：只名相邻相异，不带亲附 |
-| 承 | 承 | — | — | 只名下柔上刚之缝；在下承上之通义与「相承」相助之义不入 |
+| 承 | 承 | `Becoming.Hexagram.rises` | — | 只名下柔上刚之缝（Hexagram.rises；易传彖、小象之承乘，王弼爻位之技术义）；字之通义是承受、承载与承接（坤彖「乃順承天」〔YD-HX01〕；文理生生 core.028：承受作用、谱系承接）：承受作用之构本编名感、正需，谱系之承接名所出、因；在下承上之通义与「相承」相助之义不入 |
 | 乘 | 乘 | — | — | 趁、驾之义不入 |
 | 独异（獨異） | 独异之线（sole line） | `Becoming.HexagramSites` | 新组合 | 取代「上下应」 |
 | 变通（變通） | 规则读取所处之构形而变 | `Becoming.Pace`；`Becoming.Pace.rule_alike_until_reading` | 「变通者，趣时者也」〔DS03〕 | Switching 是例 |
@@ -3830,18 +3855,18 @@
 |---|---|---|---|---|
 | 读（讀） | 读法（reading）：带地位的解释；量从其构成者读出 | — | 「桓公讀書於堂上」〔ZH1-S13〕 | 读法标「讀（AI）」；不指诵读 |
 | 识（識） | 识：一个形成自身的进一步历程，经由其耦合所作的归并而分解（D45） | `Becoming.Web.SelectsThrough` | 「然今天下之情僞，未可得而識也」〔MO1-S-C36〕 | 已采；去「登记」义；记取义（多见而识之）归「往」；识是形成自身之历程经其耦合所作之归并而分解（D45）；与缘感而择同据 SelectsThrough 之归并而所名不同 |
-| 往 | 记录、历程之前段（record, course prefix） | `Becoming.Learning.prefixOf`；`Becoming.Run.Fixes` | 「彰往而察来」〔DS03〕 | 往只指过去之历程；「过此以往」（此后）与「不保其往」二读不入；带着历史名「藏往」 |
+| 往 | 文之前段（course prefix）：文至某步之前之值 | `Becoming.Learning.prefixOf`；`Becoming.Run.Fixes`；`Becoming.Run.FixesThrough` | 「彰往而察来」〔DS03〕 | 往只指文之前段（Learning.prefixOf，最近者在前）。一行之往（Run.Fixes：于某步之前之诸移）是其诸移（状、动、次状）逐步所成之文之前段；经 π 读之者（Run.FixesThrough）是其经类之文之前段。「过此以往」（此后）与「不保其往」二读不入；带着历史名「藏往」。本次改（WL）：所名去「记录」（依錄之注：录是证之一员，往是全段）；「历程之前段」改「文之前段」（文，见文）；五·六经同改。字之常义是去、离开（系辞下「日往则月来」〔DS03〕；文理生生 core.071：离开参照、向后续推进）：往来之交替本编不以往名，其构见复、环，往来不必周期。距离：此名取往之已过一义（彰往、藏往、数往），以之名文之前段是本编之约定 |
 | 数往（數往） | 回读（retrodiction） | — | 「数往者顺，知来者逆」〔DS04〕 | — |
 | 验（驗） | 检验（testing） | `Becoming.Web.Excludes` | 「結智者事發而驗」〔FA1-S-H48〕 | — |
 | 征（徵） | 验证（verification） | `Becoming.Verification` | 「足，則吾能徵之矣」〔RU1-S-LY〕 | — |
 | 试（試） | 实验（experiment） | `Becoming.Experiment` | 「其有所試矣」〔RU1-S-LY〕 | — |
 | 相若 | 对照（control） | `Becoming.FactorsThrough`；`Becoming.Run.generalizes` | 「權重相若也」〔MI1-S-SX〕 | 相若是所给之控制，不是被证之无别（同）；Confound.confounded 为其边界 |
-| 察 | 敏感性：读有限多条件之律之最小耦合（sensitivity） | `Becoming.Sensitivity` | — | 察看、苛察、心之察（分辨）、监察不入 |
+| 察 | 敏感（sensitivity）：一待者之取与于某步，非独由他所待至此步之积而定 | `Becoming.ExchangeLaw.Sensitive`；`Becoming.ExchangeLaw.ReadsFinitely.least_coupling` | — | 所取之义：一律给一待者之取与，于某步非独由他所待之积而定（ExchangeLaw.Sensitive，不感之否定；不给二历之见证，二历只于一所待之积异而取与异者名应，ExchangeLaw.RespondsTo）；只问是否，多少为应倍；读有穷者，察是法所缘之最小感（不可非之形，least_coupling），不是识。字之常义是察看、检视多条线索（贲彖「觀乎天文，以察時變」〔YD-HX01〕；文理生生 core.095：检视多条线索，不重计同源证据）：检验、验证本编名验、徵；同源证据不重计是 CIVILIZATION 八之缺口六（相通的见证）。孟子「明足以察秋毫之末」〔RU2-S-MZ〕不作引：此句是设为王所不许之辞，察是目之察看，能及至微之升者本编名明（讀，AI）。察看、苛察、心之察（心知之分辨）、监察不入 |
 | 可知 | 可学（learnable） | `Becoming.Learnable` | — | — |
 | 习（習） | 训练（training） | `Becoming.Learning.Training.fit_right_iff` | — | — |
 | 过则改（過則改） | 排除法外推（extrapolation by elimination） | `Becoming.Learning.byElimination` | 「古之君子，过则改之」〔RU2-S-MZ〕 | 过失之道德义不入 |
 | 符 | 相符／不符（accords／misses） | `Becoming.Learning.Accords`；`Becoming.Learning.Misses` | — | 相符：在每一出值处无失误（不出值亦相符）；韩非「四徵者符」不作此名之引 |
-| 终而复始（終而復始） | 套索程（lasso） | `Becoming.Learning.Lasso` | 「終而復始，日月是也」〔BI1-S-SZ〕 | 套索是历程之性质；环是耦合之回路；复是构形之返回 |
+| 终而复始（終而復始） | 套索（lasso）：文自某步起每隔定数之步而复 | `Becoming.Learning.Lasso` | 「終而復始，日月是也」〔BI1-S-SZ〕 | 套索是文之性质；环是耦合之回路；复是构形之返回。文之状有穷，恰当其为套索（finitely_many_states_iff_lasso）。本次改（WL）：「历程」与所名「套索程」改「文」（文，见文）。 |
 | 参验（參驗） | 以可错之见证交叉核验 | `Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation` | 「無參驗而必之者，愚也」〔FA1-S-H50〕 | 荀子之「參」训三，不入 |
 | 断（斷） | 判断过程（judgment process） | `Becoming.judgeProcess` | — | 系辞「断其吉凶」之评价义不入 |
 | 衢 | 运行分开（runs part） | `Becoming.Parting.PartAt` | 「此亦荣辱、安危、存亡之衢已」〔RU2-S-XZ11〕 | — |
@@ -3850,7 +3875,7 @@
 | 知来（知來） | 外推（extrapolation） | `Becoming.Learning.byElimination`；`Becoming.Learning.diagonal_misses` | 「数往者顺，知来者逆」〔DS04〕 | 说卦；墨子「以往知来」之结构是推类，移作推类之引 |
 | 阙（闕） | 沉默（silence） | `Becoming.PartialReadout.silent_sound` | 「蓋闕如也」〔RU1-S-LY〕 | 原拟「默」；不能确定处不出值；荀子「默而當」是言谈之节，不入 |
 | 所至 | 所见范围（scope of an inquiry） | `Becoming.Scope` | 「知之所至」〔ZH1-S25〕 | 取代「涯」之一义；原拟「所見」；则阳 |
-| 不测（不測） | 对角序列（diagonal course）：在每一外推之对角处失误 | `Becoming.Learning.diagonal` | 「阴阳不测之谓神」〔DS02〕 | 沿用易章；阴阳、神之义不入 |
+| 不测（不測） | 对角之文（diagonal course）：于其上一外推所出之每值皆不符 | `Becoming.Learning.diagonal` | 「阴阳不测之谓神」〔DS02〕 | 沿用易章；阴阳、神之义不入。本次改（WL）：所名「对角序列」改「对角之文」（文，见文；序已名所给之序，不作序列）。 |
 | 状值（狀值） | 状＋值，即给每一状一值之函数（Lean 之 val、f : S → V）：经类而读、被学、被预者（feature: a value of each configuration, read, learned or pre） | `Becoming.Learnable.Predicts`；`Becoming.Learnable.learnable_iff`；`Becoming.Learnable.learnable_of_lumped`；`Becoming.Readout.reading_single_iff`；`Becoming.PartialReadout.SoundWithin`；`Becoming.PartialReadout.ExactWithin` | 新组合 | 新组合：状＋值，即给每一状一值之函数（Lean 之 val、f : S → V）：经类而读、被学、被预者。锚核实：Learnable.Predicts（自经类之往外推出 val 沿轨之值）、learnable_iff、learnable_of_lumped（随类而同者可学）、Readout.reading_single_iff（经 π 读 f 单值，恰当 Lumped π f）、PartialReadout.SoundWithin（所出之值皆其状之 f 值）、ExactWithin（域中每状皆出其 f 值）。经中写作：「状值随类而同」（Lumped π f）、「一状值经一类可知」（Learnable）、「可靠之读，于域中所出者皆其状之状值」（SoundWithin）、「确切之读，于域之每状皆出其状值」（ExactWithin）。值取今算学函数值之义，是约定（先秦值为当、遇之义，价值义亦後起），不带价值、贵贱之义，与顾式（评价，Valuation）分开；其值域任意，不必为量，所以不用量。不取特征：征（徵）已名验证，一字二义。不取相（与相待、相合、相赅之相相撞，又带唯识相分）、性（不采之字）、理（已名律之建模）、读或所读（名表之读名带地位之解；C08 经以「所读」为读族之索引，与所出之值方向相反）。与键「特征」（C08，经中十五处）同一概念，二键合为一名。改：原注「C09 起草者亦以此弃之」不确——C09 稿用「特征」十余处，只注明不单借「征」；此处进一步不用含征之复词。 |
 | 下游 | 下＋游（水之所行），以水流之向为感之链之向：有一感之链自 e 至 c（Loops 之 Coupled 链，含零长，Ups（downstream / upstream along a chain of level couplings betwe） | `Becoming.Upstream`；`Becoming.apart_only_downstream`；`Becoming.conveyed_upstream`；`Becoming.carried_zero_off_downstream`；`Becoming.upstream_succ_iff`；`Becoming.finite_order_iff_no_loop_from` | 新组合 | 新组合：下＋游（水之所行），以水流之向为感之链之向：有一感之链自 e 至 c（Loops 之 Coupled 链，含零长，Upstream.refl），则 c 在 e 之下游。逆读写「e 在 c 之上游」，是同一名之逆读，不另立名，同名表所出／出于之例。闻见是其一用：apart_only_downstream 以至此步所成之读之感计（strengthsBefore t (readCouplings reads)）；C11 之「c 之上游无环」（finite_order_iff_no_loop_from）亦此名，C10、C11 之经亦用（jing_hits 低估）。不取下流（论语「惡居下流」〔RU1-S-LY〕为卑位，今语为卑劣）；不取及（所及、及域、及而不感名经取与之所及，Flow.Affects 之闭包，关系不同）；不取感域（待者间 CoupledFrom 之闭包，此是所待间以积之感之链）；不取源（易读作本原）。冻结语料无「下游」，是约定。本次核验：锚皆在 Lean（Loops.lean 之 Upstream 即「自 e 至 c 有一感之链」）；补所不带：今语产业上下游之义，及「力争上游」「居于下游」之高下评价义。余不改。 |
 | 缘感无异（緣感無異） | 缘＋感＋无异，与名表缘感而择同式（alike through a formation's couplings at a step / up to a st） | `Becoming.Web.AlikeThrough`；`Becoming.Web.AlikeThroughUpTo`；`Becoming.Web.AlikeThroughAll`；`Becoming.Web.SelectsThrough`；`Becoming.Web.selects_alike_iff`；`Becoming.Web.Excludes.not_of_alike` | 「然则何缘而以同异？曰：缘天官」〔RU2-S-XZ22〕 | 新组合：缘＋感＋无异，与名表缘感而择同式。二积之历缘一待者之感于一步无异（AlikeThrough：诸积同容或同不容此待者，且以积感入之所待其积同）；至某步缘感无异（AlikeThroughUpTo，每步皆无异）；缘兼感无异（AlikeThroughAll，诸员之感皆无异，接名表兼感）；其否写「缘感有异」；经中可拆写「缘其感……无异」。缘感而择即凡缘感无异之二历所择皆同（SelectsThrough），selects_alike_iff 示二者恰相当。荀子正名「何缘而以同异？曰：缘天官」：同异经天官（感）而定（讀，AI，先秦）；同段「征知，则缘耳而知声可也」亦以缘为经感。所不带：天官之人身义；同篇「心有征知」以心为征知者之单一中心面；缘不取不采之缘起义。不取「缘感无别」（C10）：别已名有界之顾；不取同：同锚 Alike（互模拟），结构不同。须改写：C08「经其感无异／有异」，C10「缘感无别」。本次改：原注「同篇心有征知、心为天君」有误——「天君」在天论〔RU2-S-XZ17〕，不在正名，已改述；引文已核（荀子冻结本为简体，逐字合）。 |
@@ -3865,6 +3890,8 @@
 | 特征（特徵） | 特＋征：状之一函 f : S → V，其值为读所欲出、知来所欲预者（feature: a function on configurations whose value a reading ） | `Becoming.Readout.reading_single_iff`；`Becoming.Readout.judges_iff_lumpedOn`；`Becoming.PartialReadout.ExactWithin`；`Becoming.Learnable.Predicts`；`Becoming.Learning.Training.fit_right_iff` | 新组合 | 新组合：特＋征：状之一函 f : S → V，其值为读所欲出、知来所欲预者。s 键之 feature（feature read through a map）是同一概念，须合并。无先秦出处，是约定。不取性（不采）、象（模型映射）、量（一般之量）、表（标识与列表之争）、值（值是特征所取者）。附定：数据（data）写「所见」：墨子非攻中所引古语「以見知隱」〔MO1-S-C18〕，以所见推所隐（先秦），与 C07 稿「所见者」及 d 键一致；数据之外写「未见者」。九·二十六经「数据」改「所见」。本次补：特征之征是征象之征，与名表单字征（验证）及本组于极征之征不同义，是一个已词汇化之今语、不按名表之征组成——此不合名表「组成可检」之准则，作约定之例外，说中首见时须明言；经中不单用征指特征，亦不写「征其特征」一类易混之句。 |
 | 策 | 一有穷之探究树（Policy：abort｜respond r｜inquire a next）：问一动而依所示之有穷值（F（policy: a finite inquiry tree (inquire a move and branch on ） | `Generative.InquirySufficiency.Policy`；`Generative.InquirySufficiency.Sound`；`Generative.InquirySufficiency.After`；`Becoming.Scope`；`Becoming.Scope.secures`；`Becoming.Scope.reached` | 「故策之而知得失之計」〔BI1-S-SZ〕 | 所取之义：一有穷之探究树（Policy：abort｜respond r｜inquire a next）：问一动而依所示之有穷值（Fin k）分支，或以对终之，或弃；所至是一策自所疑之状实行所达（Scope）。本次改：原注称孙子虚实之策「为施动以测而知」，不确——施动以观是同句「作之」之义，策之是筹测、考察（脉络 BI1-SZ-N-ce：「筹测、考察对方以判断计策得失」），以筹测而知彼之计，是探究以知之结构（先秦，讀，AI）；策作名词（计策）亦见先秦，如韩非孤愤「智者決策於愚人」〔FA1-S-H11〕（已核，智愚之等级义不带）。敌情、争胜、政策之义不带。附定：所信（belief B）写「所疑」（论语季氏「疑思問」〔RU1-S-LY〕：疑则问；不用所信，信在不采表）；所疑经问收窄写「所疑依所示而狭」（After）；所疑在经中已作术语（九·十、九·十一），须在名表另立一行（锚 Generative.InquirySufficiency.After、Sound 之 B）。所求依 target 键。可靠之策（Sound）不立名，经写「其问皆可许、其对皆为共对、唯所疑为空乃弃之策」（原注漏弃之条件，已补），说中写「可靠」。须改写：C11、TH 以策名 Flow.PolicyThrough（「其策经其感」），那是另一构，写「其取与经其感」；C06「最优策略」改平语。 |
 | 所许之历（所許之歷） | 所许＋之＋历（a model as the class of level histories it admits, relative ） | `Becoming.Web.ExcludesWithin`；`Becoming.Web.excludesWithin_iff_conjunction`；`Becoming.Web.ExcludesWithin.not_meets`；`Becoming.Flow.excludes_tail_within`；`Becoming.Stationary.model_error`；`Becoming.Stationary.model_excluded` | 「则王许之乎」〔RU2-S-MZ〕 | 新组合：所许＋之＋历。Lean 已核：ExcludesWithin admitted … 是凡 admitted 所许且合辞之积之历，皆不缘此待者之感至此步与 l 无别；excludesWithin_iff_conjunction 说相对于所许之历验去一辞，即连同所许之历与辞一起验去；not_meets 说所许之历含所然者，则所然者不被验去；model_error 构造一所许之历不含所然者而验去所然者，model_excluded 说次步所许之历被验去；excludes_tail_within 中所许之历即 Flow.BalancedHistory，写「以衡之流之积之历为所许之历」。改一：孟子「则王许之乎？曰：否」中所许者是一辞（与所知不合之言不被认可），其结构近于验去一辞，不是「所许之历」之类，所以此引只证许有认可、准许之义（先秦），不作结构对照；note 中「讀」字样宜改为「只取许之义」。改二：核心 nat 注「行是为某变所许之历」与本名同构（一变所许之历即其诸行），故不是一名二义，而是同一结构。单写「所许之历」指作为模型之一类积之历（谓词）；所许者须点明时写「为某变所许之历」。不用象：名表之象只名映射（Relabel 之 r : K → V），说中「经一象之择」仍写象。不用理、拟。须改写：C10 十一·二十二「以水平之感，所许之历，他者之感合用」；十一·二十三之「（象）」「在象中」「有误之象」写「所许之历」「在所许之历中」「不含所然者之所许之历」；C16 说「以流之衡所许之历为象」改为「……为所许之历」。C08 之 web.excludeswithin（所许之历史类）是同一概念，取同一名。中心在验（篇九·八），cluster 写 C08。 |
+| 文 | 文（course）：一历之状经一象逐步之值（Parting.course reg r n = reg (r.state n)；法下自一状起者 Learnable.course next reg s n = reg (orbit next s n)）；凡逐步之值（o : Nat → O）皆文，其状与法自文读出，不须给状 | `Becoming.Parting.course`；`Becoming.Learnable.course`；`Becoming.SameAhead`；`Becoming.alike_moments_iff`；`Becoming.SameAhead.next`；`Becoming.IdentificationRuns.sameAhead_iff_alike`；`Becoming.finitely_many_states_iff`；`Becoming.Identification.sameAhead_iff_below`；`Becoming.Identification.bounded_agree_exact` | 「通其变，遂成天下之文」〔DS02〕 | 所取之义：一历之状经一象逐步之值（讀，AI；须一决定记录）。文只给值，不给状与动。凡逐步之值皆文：以每步至其次步为法、以此值为象，二步同恰当自二步起逐步之值皆同（alike_moments_iff，近于定义）；二步同则其次步亦同（SameAhead.next）：文之状与法皆自文读出，无文外之立法者，与凡历皆其自然之法之行（Shown.run）同构。实质之律：法之一行，其文之二步同，恰当法经此象示之此二步之状同（IdentificationRuns.sameAhead_iff_alike）；文之状有穷，恰当有二异步同，即其值自某步起复（finitely_many_states_iff）；每步皆与前 N 步之一同者，二步同恰当自二步起 N＋N－1 步之值皆同（Identification.sameAhead_iff_below），此长对每二界皆确切（bounded_agree_exact）。篇九之知皆在文上：往是文之前段，知来自往出值，符、不符、得、阙皆在文上，终而复始是文之性质，不测是对角之文，衢是二行之文于某步分。读书百遍之条件即此：重读同一往不增所见；给界，则有穷之往定文之状；不给界，则无往定其次值（Learning.no_prefix_fixes_next）。系辞上「参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象」〔DS02〕：通（名表：行之可续）其变（名表：过程），文乃成，即文只沿行而成（相合）；「极其数，遂定天下之象」读作给界则有穷之往定文之状（定域：界须所给）；揲蓍之「参伍」「错综」，与同章「遂知来物」（九·三十，相分），皆不带。对照：系辞下「物相杂，故曰文」〔DS03〕定域：文分其步只在其值有异处，每值皆新则每步自为一状（SameAhead.new_each）；一卦六爻同时之杂是一状（卦），不是文；同句「文不当，故吉凶生焉」仍相分（YI-ZHUAN p-wen-budang 不改）。贲彖「剛柔交錯，天文也」〔YD-JP22〕、「觀乎天文，以察時變」〔YD-JP22〕定域：读文得其状与法，有界方定；观、察、时于此是常语，不带名表之观（视图）、察（敏感性）、时（情境）；交错（Interleavings）、错（互补）不由此借；「觀乎人文，以化成天下」不带。荀子正名「累而成文，名之丽也」〔RU2-S-XZ22〕：一书是名经码之文；文不名符号，符号及其组合归名、码、义项（十·九知名之对照不改）。所不带：文饰、文采；文德、文治、谥号之文；人文化成；文质（文为质外之饰：状自文读出，文下无质）；天文作占；文字及《说文》文／字之分；荀子礼论之文理；吉凶。不取：历程（作名则与历混：历给状与动，文只给值，其状自读出；称之历程，又误示状已给）；序（名表已名所给之序）；像（一者之值：文于一步之值即其像）；迹（所以迹不采）。分工：同一序列，作所给之状与动则为历（其律为自然之法），作所读之值而自读其状则为文；象是映射；状值是每状之值；类、理自文读出而非文（见理）；自一状所许之历程与其后所能然之辞皆同（SameTests）者，不名文同，仍依一·二十三写之。所依之拟：步为共同之自然数索引；值以相等相比；界须所给；可知等律依一族尽其状之宇。须改写（经）：五·六「往，历程至某步之前段也」改「往，文至某步之前段也」；九·三十、九·三十一、九·三十二、九·三十三经中作逐步之值之「历程」（凡十七处）改「文」；他处「历程」（一·二十三、八·八之动之串，八·十一、九·三十七之诸历程，九·十、九·十九、九·二十二、十一·十、十一·二十四、十二·十一、十四·九之流与历，识之进一步历程）读作历之程，不改；凡例经中「古文」（凡·十九、二十六、二十七、二十八）改「古书」，免一字二义；十三·二十经「文法」改「语法」。 |
+| 文同 | 文＋同：二状于一法经一象，其文逐步皆同（Law.SameFuture next o s s'：∀ n, o (orbit next s n) = o (orbit next s' n)，即二状之 Learnable.course 逐步相等）（same course through a map under a law） | `Becoming.Law.SameFuture`；`Becoming.Law.alike_iff_sameFuture`；`Becoming.Law.sameFuture_iff_within`；`Becoming.Law.sameFuture_of_law`；`Becoming.Law.identifiesAlike_of_law`；`Becoming.Learnable.learnable_iff` | 新组合 | 新组合：文＋同，与经中「类同」同式。法经一象示之，二状同恰当文同（Law.alike_iff_sameFuture）；文同含当步之值（n = 0），旧写「其后每步」于此不明。状闭于一族之中者，文同恰当其文于族之员数减一步之前皆同，不须判定值之同异（Law.sameFuture_iff_within）。凡守象之值而为理之类，所并之二状皆文同（Law.sameFuture_of_law）；守象之值、为理而并凡文同之状者为正名（Law.identifiesAlike_of_law）。类之同异定然否，于一族尽其状之宇：一状值经一类可知，恰当凡经此类文同之二状其状值自某步起皆同（Learnable.learnable_iff）。不写「同文」：篇十「书同文」是制名之码。文同只在法经一象之下：一般之系辞，自二状所许之历程与其后所能然之辞皆同（SameTests）者不必同（Choosing.not_alike），不名文同。经中三见（一·二十二、九·三十三、九·三十五），故立名。须改写（经）：一·二十二「恰当经此象其后每步之值皆同」改「恰当其文同」；九·三十三「族中二状经类同其来，恰当其来经类于族之员数减一步之前皆同」改「族中二状经类文同，恰当其文经类于族之员数减一步之前皆同」；九·三十五「凡经此类同其来之二状」「经类同来之二状」改「凡经此类文同之二状」「经类文同之二状」。 |
 
 ### 名组：名、实、类与约定
 
@@ -3886,7 +3913,7 @@
 | 通意 | 义项之消解（resolves）：只剩一个候选义项 | `Becoming.CrossSituational.resolves_iff` | 「通意後對」〔MI1-S-JX〕 | 墨经 |
 | 遇 | 一次所遇之录遇一名，即此名在此次所遇中出现（Lean 之 bears，布尔关系（a record bears on a form: the form was met on that occasion ） | `Becoming.CrossSituational.stands`；`Becoming.CrossSituational.candidates_snoc_bearing`；`Becoming.CrossSituational.candidates_snoc_other` | 「遇諸塗」〔RU1-S-LY〕 | 所取之义：一次所遇之录遇一名，即此名在此次所遇中出现（Lean 之 bears，布尔关系；模块文档言 a formation meets a form on several occasions）。论语阳货「遇諸塗」：遇为相逢（先秦），其人事不带；际遇、遇合之命运义不带（时之引文「夫遇不遇者，時也」另属时）。不取及（名表以及名流中之所及）；不取涉、关（后起）。不遇此名之录不改候选（candidates_snoc_other）。经：「贯，凡遇一名之录皆予一义项也」。改：补经中遇作他义须改写之处：C10 经「不论所遇之规则」（ReadsShare 之「whatever rules the two readings meet」）改「不论其时之规」；C17 经「快层所遇皆不及于规则」改「快层之状皆不及于规则」；C12 说「遭遇」改「历」或直说。 |
 | 予 | 一录予一义项，即此录于其时可及之义项中有此义（Lean 之 offers）（a record offers a meaning (CrossSituational offers)） | `Becoming.CrossSituational.stands`；`Becoming.CrossSituational.candidates_snoc_bearing`；`Becoming.CrossSituational.candidates_eq_iff` | 「以類取，以類予」〔MI1-S-XQ〕 | 所取之义：一录予一义项，即此录于其时可及之义项中有此义（Lean 之 offers）；候选是凡遇此名之录皆予之义项，通意恰当他义项各有一遇此名之录不予之（candidates_eq_iff）。小取「以類予」：予为所立、所与之辞（墨辩，先秦）。赐予、财物之义不带；第一人称之予为同形异义。改：一、明言予、與古通用，小取「以類取，以類予」之取予恰与名表取與相对，故予只名录对义项之关系，不名流中之给（與），也不名给值；二、补全经中以予作给值、配名、给理由而须改写之处（原注只列 C09、C07）：C07 推类「以所见者之值予……」改「以所见之值定……之值」；C09「读予所读者之值」「码所予之」「听者已予他义项之名」「辨，码不以一名予二义项」「喻，读者之码予一义项之名」「二读予每原子互推之辞」「改认於每步所予之相应」改用配、给或「以……为」；C12 经「象……予每一备择一项」改「配每一备择一项」；C14 经「自每方予每项一自然数之级」「各予自身之物二」「所予之顾」改「配」「给」；C15 经「皆予理由」改「皆有理由」；C17 经「予每物以一历程」改「配每物以一历程」；C08、C12 说「给予」改「与」或「给」。 |
-| 录（錄） | 证之一员：它及一名与否（bears），予哪些义项（offers）（record: an evidence item of an occasion that bears on a name） | `Becoming.CrossSituational.stands`；`Becoming.CrossSituational.candidates`；`Becoming.CrossSituational.candidates_append`；`Becoming.CrossSituational.resolves_iff`；`Becoming.SharedCodes.WritesExactly` | 「錄功而與官」〔FA1-S-H33〕 | 所取之义：证之一员：它及一名与否（bears），予哪些义项（offers）；贯＝凡及此名之录皆予此义项，后之录唯减候选（candidates_append）。往（Learning.prefixOf，一程之前段）是全段，录是证之一员，一族录即一探究至今之所得，二名不相借。SharedCodes 写回之录、数往之有日之录、参验之见证无阙之录皆以此名组成。本次改：原注「录之记录义後起（汉以后），无先秦出处」不确——韩非子外储说左下「錄功而與官」〔FA1-S-H33〕（战国末，篇之作者有争议）录为登记、记入，已核；同句君授官、赏功之官事义不带，簿录、录用义亦不带。不取往（结构不同）、籍（户籍、天下之籍之政事义）、志（意志）、书（书籍）。建议：名表往之释「记录、历程之前段」去「记录」二字，免与此名相混。證行之「记录 [id]」是结果记录之编例词，整合者可酌改为「结果记录」。 |
+| 录（錄） | 证之一员：它及一名与否（bears），予哪些义项（offers）（record: an evidence item of an occasion that bears on a name） | `Becoming.CrossSituational.stands`；`Becoming.CrossSituational.candidates`；`Becoming.CrossSituational.candidates_append`；`Becoming.CrossSituational.resolves_iff`；`Becoming.SharedCodes.WritesExactly` | 「錄功而與官」〔FA1-S-H33〕 | 所取之义：证之一员：它及一名与否（bears），予哪些义项（offers）；贯＝凡及此名之录皆予此义项，后之录唯减候选（candidates_append）。往（Learning.prefixOf，一程之前段）是全段，录是证之一员，一族录即一探究至今之所得，二名不相借。SharedCodes 写回之录、数往之有日之录、参验之见证无阙之录皆以此名组成。本次改：原注「录之记录义後起（汉以后），无先秦出处」不确——韩非子外储说左下「錄功而與官」〔FA1-S-H33〕（战国末，篇之作者有争议）录为登记、记入，已核；同句君授官、赏功之官事义不带，簿录、录用义亦不带。不取往（结构不同）、籍（户籍、天下之籍之政事义）、志（意志）、书（书籍）。名表往之释原为「记录、历程之前段」，今去「记录」二字，免与此名相混，并改名文之前段（WL）。證行之「记录 [id]」是结果记录之编例词，整合者可酌改为「结果记录」。 |
 | 义项（義項） | 义＋项：码以名所予者（SharedCodes、CrossSituational 之 M，Lean 文档作 sense／m（sense: what a form names in a code (M in SharedCodes, CrossS） | `Becoming.SharedCodes.TellsApart`；`Becoming.SharedCodes.ReadsAs`；`Becoming.SharedCodes.reads_iff`；`Becoming.CrossSituational.resolves_iff` | 「義茍在健」〔YWH-LX〕 | 新组合：义＋项：码以名所予者（SharedCodes、CrossSituational 之 M，Lean 文档作 sense／meaning），一名可予多项。义只取「意义」义，正是不采表「义」条明许者（只许在复合中取意义义）；仁义之义、义利之义不带。王弼明象「義茍在健，何必馬乎」：义（所谓之意）与马（所拟之象）分，正是义项与名之分（魏晋，讀，AI）。名表通意、辨、喻之释已用「义项」，一致。不取单名「所谓」：留给一般之所指（墨经之实），义项是码中之所谓者，二者不相代。义项之族依 list 写族。本次核验：不改。 |
 | 改名 | 改＋名：以一固定之对应换名而不改任何关系：改认之每步相应皆同者（Identity.lean 之 Reidentify.r（renaming: a re-identification the same at every step; relabe） | `Becoming.Reidentify.rename`；`Becoming.Web.rename_tenure`；`Becoming.Web.rename_renewingIn`；`Becoming.SharedCodes.run_renamed`；`Becoming.SharedCodes.renamed_tells_apart_iff`；`Becoming.CodeAcquisition.renaming_keeps_values` | 新组合 | 新组合：改＋名：以一固定之对应换名而不改任何关系：改认之每步相应皆同者（Identity.lean 之 Reidentify.rename，每步同一对互逆之映射）；码与式中以一固定之映射换名（SharedCodes.run_renamed、renamed_tells_apart_iff，CodeAcquisition.renaming_keeps_values）同此概念。SharedCodes 之改名逐义项给出（τ : M → F → F），须保所辨处另带「不并」（renamed_tells_apart_iff 要单射），经写「不并之改名」，稿已如此。名无固宜即凡由关系定义之读在改名下不变。与改认（每步之相应，可逐步不同）、重同（一步之内二名一实）分开：改名是改认之一种。荀子正名「有作于新名」是造新名，不是改名，不入。本次核验：补 τ 逐义项与「不并」之条件，余不改。 |
 | 码（碼） | 每一待者所持、自义项至名之映射（X : I → M → F）（code: a map from senses to names that each formation holds (） | `Becoming.SharedCodes.TellsApart`；`Becoming.SharedCodes.ReadsAs`；`Becoming.SharedCodes.reads_iff`；`Becoming.SharedCodes.impose`；`Becoming.SharedCodes.process` | 新组合 | 所取之义：每一待者所持、自义项至名之映射（X : I → M → F）。名表约定俗成（共享码）、制名（外加码）、知名（码之获得）、喻、辨之释已用此字，今立为名：辨＝码不以一名予二义项（TellsApart），喻＝读者之码予一义项之名正是所闻之名（ReadsAs）。知名所锚之 CodeAcquisition.Code 自名一侧给值（原子→值），与此自义项一侧给名，是同一对应之两读，方向不入名。码字後起，无先秦出处，取今语编码之码；它不是古字之组合，是本编以今字立名之例外，须在凡例明言；筹码、价码、号码之义不带。不取约（约预设已同，码未必同）、谓（所以谓即名）、耦（今语耦合，混于感）。中心（centre：众皆取一待者之名，TwoFormations.centre）不立名，写「众所从者」；名表之我名评价之中心，不借。本次补：方向说明与「今字之例外」二句，余不改。 |
@@ -3910,7 +3937,7 @@
 | 缘感而择（緣感而擇） | 经耦合的选择（selection through couplings） | `Becoming.Web.SelectsThrough` | 新组合 | Web.selects_alike_iff 是其定义等价（定义律） |
 | 及而不感 | 选择的缺口：所及闭包中不在耦合闭包内者 | `Becoming.SelectionGap`；`Becoming.Flow.act_unselected`；`Becoming.Flow.consequence_unselected` | 新组合 | 取代「蔽」作界限之名 |
 | 无明（無明） | 无明：锁定在不能停息之目标上的寻求 | `Becoming.Law.aboveAll_never_rests`；`Becoming.more_needs_open`；`Becoming.Law.rests_iff` | — | 已采；不同于十二因缘之首支；rests_iff 是其边界 |
-| 明 | 明：耦合接上一个及于支持所不标记者的选择 | `Becoming.Web.observed_raise_couples` | 「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」〔RU1-S-LY〕 | 已采；「知常曰明」对应「常」，不作明之引 |
+| 明 | 明：耦合接上一个及于支持所不标记者的选择 | `Becoming.Web.observed_raise_couples` | 「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」〔RU1-S-LY〕 | 已采；字义：明辨、清明（老子十六章「知常曰明」〔YD-LAO-BASE〕、荀子解蔽「虚壹而静，谓之大清明」〔RU2-S-XZ21〕；文理生生 core.096：清楚区分与判断）；此名只取论语之一构：浸润之谮、肤受之愬不行，即耦合及于支持所不标记之积之升，任一正之升皆即分开二程（observed_raise_couples）；老子五十二章「见小曰明」〔YD-LAO-BASE〕与之同向（讀，AI）。距离：字义是一般之明辨，此名是其窄义，且不含判断之真伪；「知常曰明」对应「常」，不作明之引；与察（法所缘之最小感）、知幾（及早所读之耦合）分开 |
 | 兼感 | 合用耦合（pooled coupling） | `Becoming.SelectionPool` | 新组合 | 兼取「合为整体」义 |
 | 劫 | 经规则的劫持（capture through the rule）：规则从它所选者的份额读出 | `Becoming.RuleCapture` | 「凡劫有三」〔FA1-S-H16〕 | 君臣框架不入 |
 | 与时转（與時轉） | 规则改变之速（pace） | `Becoming.Pace`；`Becoming.Pace.pace_law` | 「法與時轉則治」〔FA1-S-H54〕 | 韩非子心度 |
@@ -3949,8 +3976,8 @@
 | 不已 | 复现（a coupling recurs） | `Becoming.CouplingRecurs` | 「惟天之命，於穆不已」〔RU1-S-ZY〕 | 已为止息，不已即不止而复现 |
 | 所失 | 截断于某阶所未计入之量 | `Becoming.Remainder` | — | 取代「余」 |
 | 应倍（應倍） | 耦合强度（coupling strength） | — | 新组合 | — |
-| 中和 | 中和（two-sided regulation） | `Becoming.Regulation` | 「致中和」〔RU1-S-ZY〕 | 已采 |
-| 中节（中節） | 界恰为无过冲 | `Becoming.Regulation` | 「發而皆中節，謂之和」〔RU1-S-ZY〕 | — |
+| 中和 | 中和（two-sided regulation） | `Becoming.Regulation` | 「致中和」〔RU1-S-ZY〕 | 已采；中庸之中是「喜怒哀樂之未發，謂之中」〔RU1-S-ZY〕，和是发而中节：情之未发与发之合度，带情感与规范之境（文理生生 core.082：情感未发、时中之合宜判断，拒以中点、稳定点读中）；此名只取其构：相反给向，中节给界，二者合而积定于 m（Regulation，十二·十五）；十二·十四以同章「發而皆中節，謂之和」为定域，十二·十五以「中也者，天下之大本也」为相分；情感、修养、时中之义不带 |
+| 中节（中節） | 界恰为无过冲 | `Becoming.Flow.WithinGap`；`Becoming.Flow.withinGap_iff_between` | 「發而皆中節，謂之和」〔RU1-S-ZY〕 | 中庸「發而皆中節，謂之和」只取其构：一步之共取与不使积越过 m（无过冲）；情感与合宜之评价不带；节不单立为名：节用之约束本编名俭，节拍之「節如發機」〔BI1-S-SZ〕是機之引（D52），节度之评价不立名 |
 | 过正（過正） | 过冲（overshoot） | `Becoming.Regulation` | — | — |
 | 一偏 | 只对一侧回应（单侧前提，不是调节） | `Becoming.Regulation` | — | Regulation.OneSided 是空流见证；有交换的单侧之律是缺口 |
 | 识不早（識不早） | 迟读（reading late） | `Becoming.Regulation.no_narrower_band` | 新组合 | 只名迟读（Regulation.ReadsLate）；未读入用「未兆」或平语 |
@@ -3961,7 +3988,7 @@
 | 抑举（抑舉） | 接力（the relay） | `Becoming.Regulation.relay`；`Becoming.Regulation.relay_threshold` | 「高者抑之，下者举之」〔DS01〕 | 老子七十七章 |
 | 前所与（前所與） | 前＋所与：调整之状之第二分，即前一步之所与（Adjusted.step 之 p.2（recent giving: what was given at the preceding step, second ） | `Becoming.RegimeMargin.Adjusted.step`；`Becoming.RegimeMargin.Adjusted.Between`；`Becoming.RegimeMargin.Adjusted.comes_to_rest` | 新组合 | 新组合：前＋所与：调整之状之第二分，即前一步之所与（Adjusted.step 之 p.2；本步所与即次步之前所与）。调整之所与依所剩与前所与而定，介于前所与与常与之间（Between）；凡有界之升行，至迟 3hi＋3 步不再改（comes_to_rest）。不取前与（P1、P2）：「积与前与」中二与一为连词一为名，难分；前与又可读作先与，近于名表之先施（持续先给）。不取近与、近来所与（近无确界、冗）。不名 TH 之滞（lag，另一状变元）。代 regimemargin.adjusted 之近来所与与 C04 之前与。 |
 | 常取 | 常＋取（standing draw H of a regime, taken first at every step (Regi） | `Becoming.RegimeMargin.step`；`Becoming.RegimeMargin.ends_iff_below`；`Becoming.RegimeMargin.holds` | 新组合 | 新组合：常＋取。每步先取 H，不及则取尽（step g H x = (x − H) + g (x − H)，截断之减）。常取其量对步不变，与名表之常（不变）同根；常道、纲常之义不带。不取恒取（恒名更新）、每步同取（冗）。代 C04、C11「常取」、TH「每步同取」。h 键之他义见 h.noreturn、h.left。核：未改。 |
-| 涸界 | 涸（名表：一所待之积降至零）＋界（point of no return H + y of a regime (RegimeMargin.ends_iff_） | `Becoming.RegimeMargin.ends_iff_below`；`Becoming.RegimeMargin.Adjusted.ends_iff_below`；`Becoming.RegimeMargin.ends_below`；`Becoming.RegimeMargin.holds`；`Becoming.RegimeMargin.beyond_draw_iff` | 新组合 | 新组合：涸（名表：一所待之积降至零）＋界。常取 H 加常与之根 y（Root：常与于 y 及常取，于 y 下皆不及）：始于其下者经其始积之步数而涸且守涸（ends_below、stays_ended），自其上至 hi 者不降于其始（holds），恰当始于其下则涸（ends_iff_below）。常与于需下为零时，涸界高于需加常取，恰当需处之所与不及常取（beyond_draw_iff）。与名表之穷（降于阈下、律转读之断）分开。代 C04「不返之点」、C11「不可回返之点」、TH「涸之界」。核：未改。 |
+| 涸界 | 涸（名表：一所待之积降至零）＋界（point of no return H + y of a regime (RegimeMargin.ends_iff_） | `Becoming.RegimeMargin.ends_iff_below`；`Becoming.RegimeMargin.Adjusted.ends_iff_below`；`Becoming.RegimeMargin.ends_below`；`Becoming.RegimeMargin.holds`；`Becoming.RegimeMargin.beyond_draw_iff` | 新组合 | 界取分界：荀子礼论「求而无度量分界，则不能不争」〔RU2-S-XZ19〕之界是分配之限（文理生生 core.040：成员边界、分配界限）；涸界之界分始积为二域：始于其下者涸，始于其上至 hi 者不降于其始（holds）；成员之界本编名己、畛，分配之限名分。新组合：涸（名表：一所待之积降至零）＋界。常取 H 加常与之根 y（Root：常与于 y 及常取，于 y 下皆不及）：始于其下者经其始积之步数而涸且守涸（ends_below、stays_ended），自其上至 hi 者不降于其始（holds），恰当始于其下则涸（ends_iff_below）。常与于需下为零时，涸界高于需加常取，恰当需处之所与不及常取（beyond_draw_iff）。与名表之穷（降于阈下、律转读之断）分开。代 C04「不返之点」、C11「不可回返之点」、TH「涸之界」。核：未改。 |
 | 所留 | 所＋留：一所待经先行之取（及他者之取与）后、本体自取之前所余之积（what is left of a condition after a prior draw: x − H in a r） | `Becoming.RegimeMargin.step`；`Becoming.Optimum.course_beyond`；`Becoming.Optimum.optimum_beyond` | 新组合 | 新组合：所＋留：一所待经先行之取（及他者之取与）后、本体自取之前所余之积。常取之后为 x − H，常与读之；于 Optimum 为步前积加余者所与减余者所取（course_beyond），C10「余者所留」、TH「他者所留」同此。不取所剩（剩非先秦字）、所余（余只在复词中）、所遗。代 C04、C11「所剩」。改：补须改写之撞名处：一、步後之积是核心之果，不是所留：C13 经「所留之水平于其独能致之诸结果中为其序之最优」改「其果……」；TH 经「降之至可得者所留之最低水平」改「降至可得之果于此之最低之积」。二、「所留开」（留开者）与此名相粘：C01 经「法于一步所留开者也」、C16 说「一辞所留开的诸支」、TH 经「其所出之域所留开者」改「所开」（凡例已以所开名诸支）。三、C03 经「前表之数为所留加毁者」之所留是普查中两步皆列者，是他概念，改「两表皆列者」。四、C10 经「此位所留之锁定之求」改「此位所致之锁定之求」。 |
 | 阈（閾） | 一积之界，其上其下所成者异：ReadsBelow 之 θ（每步之界（threshold: a level at and above which a law reads only that ） | `Becoming.ExchangeLaw.ReadsBelow`；`Becoming.ExchangeLaw.Through.readsBelow`；`Becoming.RegimeMargin.Adjusted.threshold`；`Becoming.RegimeMargin.Adjusted.threshold_falls`；`Becoming.RegimeMargin.threshold_regime` | 「行不履閾」〔RU1-S-LY〕 | 所取之义：一积之界，其上其下所成者异：ReadsBelow 之 θ（每步之界；积不低于之时律只读其在），Adjusted.threshold（前所与 r 之下，自其下起之行止于常取之下；阈不随前所与之升而升，threshold_falls）。论语乡党「行不履閾」：阈为门限（先秦），礼仪之义不带。改：一、锚补 Becoming.RegimeMargin.threshold_regime（全名在 RegimeMargin 下，不在 Adjusted 下）：「所与只读所留时阈即涸界」之所证。二、措辞：阈名此类界之总名；需（待之阈量）、涸界、盈科是有专名之阈，凡有专名者用专名，阈只用于无专名者。名表之穷名降于阈下之断，不名阈本身。 |
 | 常与（常與） | 常＋与：常取之下，一所待依所留而与之函数 g（Lean：its equation of state in that re（regime: the giving law read off what is left under a standin） | `Becoming.RegimeMargin.step`；`Becoming.RegimeMargin.Adjusted.orbit_regime`；`Becoming.RegimeMargin.Adjusted.Between`；`Becoming.RegimeMargin.Adjusted.rests_iff` | 新组合 | 新组合：常＋与：常取之下，一所待依所留而与之函数 g（Lean：its equation of state in that regime）。常谓 g 是同一函数、只读所留、不读前所与（与 Adjusted 之调整之所与相对；orbit_regime 是 A 只读所留之例），不谓所与恒定——所与随所留而变，说中必明言。核心前所与之注已以「介于前所与与常与之间（Between）」用此名，一致。不取与之法（名表之法是确定之变；常与之步 step g H 才是法，写「常与之步」）；不取体制（社会词）。TH 经「余地属与之法，不属水平」改「余地属常与，不属积」。改：删原注「常取与其常与合为一常（regime）」：常是名表之名（不变量，Invariant），以「一常」名 regime 即一名二义；regime 写「常取及其常与」或「常取之下」，不立单字名。 |
@@ -3979,7 +4006,7 @@
 | 名 | 所名 | 锚 | 出处 | 注 |
 |---|---|---|---|---|
 | 所出 | 世系（descent） | `Becoming.Flow.DescendsAt` | — | 方向：「x 出于 g」，「x 之所出」＝给予者 g；后代写作「出于 g 者」；出随聚，不随作 |
-| 因 | 承继（inheritance） | `Becoming.Web.InheritsAt` | 「殷因於夏禮，所損益可知也」〔RU1-S-LY〕 | 与「损益」同出论语 |
+| 因 | 承继（inheritance） | `Becoming.Web.InheritsAt` | 「殷因於夏禮，所損益可知也」〔RU1-S-LY〕 | 与「损益」同出论语；所取之义：x 出于 g 之步，x 步后所待者 g 步前皆待之（InheritsAt，逐一所待而言）。字之主要哲学义是依、顺：依条件而行（养生主「因其固然」〔ZH1-S03〕；文理生生 core.026：依条件行事、依观测择动），此构本编名应（ExchangeLaw.RespondsTo）、缘感而择（Web.SelectsThrough），不名因；因亦不读作今语之原因（必要、充要之条件名小故、大故）。距离：此名只取因之承袭一义 |
 | 传（傳） | 传递（transmission） | `Becoming.Flow.TransmitsWithin` | — | 只取「因而所需有界」一构；古书「傳」多指递接，那一构名「火传」；层次标签之「传」是文献层 |
 | 损益（損益） | 变异（variation：升与降） | — | 「殷因於夏禮，所損益可知也」〔RU1-S-LY〕 | 后代之量对其亲代之量之升与降；与「损」「益」之单字（一族跨步之水平改动）构造不同；Price 等式名「损益之计」 |
 | 传择（傳擇） | 经世系之演化：只有被支持者有后代；界内所传之所需在界内被选出 | `Becoming.Evolution` | 新组合 | 此「择」是经支持之有无而选出，不是缘感而择 |
@@ -4091,14 +4118,14 @@
 | 道 | 不采为名 | 一、语料中多义：道路、言说、法则、本原；二、作先于关系的根据，是 RO §7 四个非关系层之「本原」；三、则阳自言「道者，为之公。因其大，以号而读之，则可也」，道只是一个号。其结构核心另有名：所显之律作「自然之法」，运行作「行」，展开作「大化」 | lao-25 道法自然（相合，经「自然之法」）；齐物论「道行之而成」（相合，经「行」）；则阳「道者为之公」（定域）；王弼以无为本（相分） |
 | 气 | 不采为名 | 作展开的质料基底，有引入独立实体之嫌（本原层） | 知北遊「通天下一气耳」与张载「太虚即气」（相合：守恒中的流转，经「流」「衡」）；朱熹理气二分（相分） |
 | 天 | 不采为名 | 在先秦兼指自然之行与有意志者；后者是「意志或单一中心」层 | 荀子天论「天行有常，不为尧存，不为桀亡」（相合，经「行」「法」）；「明于天人之分」（相分：二元框架）；「天佑」「天命」诸条（相分：意志层）；庄子「照之于天」（定域） |
-| 人 | 不采为名 | 与天对举时立二元框架；理论中人只是一类形成 | 天人之分（相分） |
+| 人 | 不采为名 | 与天对举时立二元框架；理论中人只是一类形成；文理生生 extension.14 以人为行动主体之域，其签名以 Agent、Entity、Kind 为类（08 semantic_contract.signature_types）；本编不设行动者之元：施者、受者在一展开中分化（非二方法），故不采 | 天人之分（相分） |
 | 心 | 不采为名 | 「心者，形之君也」立单一中心 | 荀子解蔽（相分：单一中心）；孟子四端之心（相分：固定本性） |
 | 性 | 不采为名 | 先定之性是「固定本性或价值」层 | 孟子性善「我固有之也」（相分）；荀子性恶（相分：同一层的反面）；告子「生之谓性」（定域） |
 | 命 | 不采为名 | 定命、天命带意志与定数 | 老子「复命曰常」（定域，经「常」）；天命诸条（相分） |
-| 德 | 不采为名 | 德性词带价值与固定本性层；结构核心另有去处 | 系辞「日新之谓盛德」（相合，只经「日新」，德之价值义不携带） |
-| 礼 | 不采为名 | 同上；结构核心是「分」 | 荀子「群而无分则争」（相合，经「分」） |
+| 德 | 不采为名 | 德性词带价值与固定本性层；结构核心另有去处；文理生生 core.005.01 取老子五十一章「道生之，德畜之」〔YD-LAO-BASE〕之养护义：其构本编分在与（补给）、容（支持）、持（维持）、恒（更新）；core.005.02 是规范判断，属价值层 | 系辞「日新之谓盛德」（相合，只经「日新」，德之价值义不携带） |
+| 礼 | 不采为名 | 同上；结构核心是「分」；文理生生 core.104 以礼为角色、分配之制度及其践行（应用层）；二者读荀子皆以分配为礼之构：本编据「群而無分則爭」〔RU2-S-XZ10〕，文理生生据礼论「求而无度量分界」（C02），其 core.032.03 对本编分（JointPlan.supports_of_realizes）；礼可作应用之名，核心用分 | 荀子「群而无分则争」（相合，经「分」） |
 | 诚 | 不采为名 | 同上；结构核心在中庸「诚者自成」 | RO ru-zhongyong-cheng-zi-cheng（定域） |
-| 信 | 不采为名 | 同上；结构核心是「征」「符」 | — |
+| 信 | 不采为名 | 同上；结构核心是「征」「符」；文理生生 core.097.01（履约可靠）之事实标准对本编徵（Verification）、符（Learning.Accords）；core.097.02（信任）是一读者取他者之辞，本编以闻见之经他者之路计，不立信名 | — |
 | 义 | 不采为名 | 只在「义项」一复合中取「意义」义（义项，篇十）；单字不立为名 | — |
 | 智 | 不采为名 | 结构核心是「明」 | — |
 | 仁 | 不采为名 | 带价值与德性；「杀身以成仁」把仁排在生命之上，与生命意义的方向相反；庄子「泽及万世而不为仁」明拒以仁名普遍之顾 | 生命意义作「活皆有顾」；仁诸条（相分：价值层） |
@@ -4106,13 +4133,13 @@
 | 五行 | 不采为名 | 相生相胜之循环须经「环」检验是否真循环；作宇宙图式是后起框架 | 墨经「五行毋常胜」（定域）；国语史伯「先王以土与金木水火杂」（相分） |
 | 太极 | 不采为名 | 作本原，属本原层 | 周敦颐太极图说（相分） |
 | 有／无 | 不作本体名 | 只作虚词：有＝存在、成立，无＝不存在、不成立；不立「无」为本 | 老子二章「有无相生」（定域）；王弼「以无为本」（相分） |
-| 虚 | 不采为名 | 太虚作本体有本原面 | 张载「太虚即气」（相合面经「流」；本体面相分） |
+| 虚 | 不采为名 | 太虚作本体有本原面；文理生生 core.110 明言虚不是绝对无（致虚之践、防备薄弱、可容纳之现代延展），容纳之构本编名容，余量名余地；二者皆不以虚为实体或为零，差只在是否立名 | 张载「太虚即气」（相合面经「流」；本体面相分） |
 | 一 | 不作本体名 | 一只在「一实」（跨步之同一）中出现；整体名「兼」 | 惠施「至大无外，谓之大一」（相合，经「兼」）；「道生一」（相分：本原层） |
 | 多 | 不立名 | 随计数，名「数」 | — |
 | 空 | 不采为名 | 只取其关系核心（无自性、相待）作相合条目；空作解脱目标、真如作本原，作相分条目 | 心经、中论诸条 |
 | 缘起 | 不采为名 | 先秦之外的后起译名，带十二支定链与解脱目标；其关系核心「此有故彼有」以「待」「相待」名 | 杂阿含「此有故彼有」（相合，经「待」）；十二因缘（定域）；已采之「无明」不同于十二因缘之首支 |
 | 无为 | 不采为名 | 王弼处有「以无为本」之面，老子处有圣人单一中心之面 | 老子四十八、三十七章（定域）；圣人无为而治（相分：单一中心） |
-| 反 | 不立名 | 「穷则反，终则始」入「复」「环」的条目 | 则阳（相合，经「复」「环」） |
+| 反 | 不立名 | 「穷则反，终则始」入「复」「环」的条目；文理生生 core.054 分方向相反与可返归（以 ⟨program⟩origin 判）：一状经一串动可回此状即本编复（Branching.Returns），自今可至某状名可得（Branching.Reachable）；方向相反无须另名；反者道之动二者皆限其域 | 则阳（相合，经「复」「环」） |
 | 中／和 | 不单立 | 只在「中和」「中节」「和而不同」等已定复合中出现，各自锚定 | — |
 | 公／私 | 不采为名 | 社会词；墨经「私名」只取命名之「私」（一一对应） | — |
 | 蔽 | 不采为名 | 荀子以蔽为过失，同篇以心为形君；界限以「及而不感」名 | 荀子解蔽（定域一：耦合之外不可见；相分一：心为形君、蔽为患） |
@@ -4124,7 +4151,7 @@
 | 所以迹 | 不采为名 | 方向颠倒：迹是履之所出；所显之律作「自然之法」 | 天运「夫迹，履之所出，而迹岂履哉」（相合，经「自然之法」） |
 | 体用 | 不采为名 | 带本原层 | 体用诸条（相分） |
 | 理气 | 不采为名 | 理先气后立二元与本原 | 朱熹（相分） |
-| 易 | 不采为名 | 易兼书名、变易、简易、不易；生生之谓易作「生生」的出处 | 系辞「生生之谓易」（相合，经「生生」） |
+| 易 | 不采为名 | 易兼书名、变易、简易、不易；生生之谓易作「生生」的出处；文理生生 core.004 亦分二义（持续生成变化、难易之易），证其多义；其持续生成变化之配方是声明有界有限转移模型而登记其变化程序，对本编之变（Generative.Process，不限有穷），其标签以生入变，本编生与变分开 | 系辞「生生之谓易」（相合，经「生生」） |
 <!-- /ZH-TABLE -->
 
 ## 附录三 早期之名
@@ -4163,7 +4190,7 @@
 | C05 | 持续、更新、回返与复 | 136 | 61 | 28 | 27 | 6 | 48 | 26 | 17 |
 | C06 | 生成、退化与生生之向 | 79 | 64 | 16 | 39 | 9 | 21 | 10 | 22 |
 | C07 | 规律、理、常与吸引 | 205 | 88 | 30 | 44 | 14 | 108 | 6 | 23 |
-| C08 | 识、知、察与验 | 341 | 145 | 74 | 56 | 15 | 167 | 29 | 37 |
+| C08 | 识、知、察与验 | 341 | 145 | 74 | 56 | 15 | 167 | 29 | 39 |
 | C09 | 名、实、类与约定 | 184 | 86 | 32 | 44 | 10 | 65 | 24 | 23 |
 | C10 | 耦合、选择、明与无明 | 280 | 79 | 27 | 36 | 16 | 169 | 28 | 35 |
 | C11 | 回路、反馈、阈值与调节 | 265 | 66 | 13 | 46 | 7 | 167 | 23 | 35 |
@@ -4173,5 +4200,5 @@
 | C15 | 比较、取舍与践行 | 164 | 72 | 30 | 32 | 10 | 60 | 19 | 28 |
 | C16 | 推理、证明与方法 | 121 | 42 | 24 | 15 | 3 | 56 | 0 | 23 |
 | C17 | 时、位、势与情境 | 349 | 97 | 40 | 47 | 10 | 213 | 16 | 28 |
-| 合计 |  | 3499 | 1300 | 453 | 647 | 200 | 1742 | 251 | 447 |
+| 合计 |  | 3499 | 1300 | 453 | 647 | 200 | 1742 | 251 | 449 |
 <!-- /ZH-TABLE -->

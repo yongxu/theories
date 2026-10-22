@@ -1,0 +1,198 @@
+{
+ "text": "## 文、理与读：核心的认识论在文中\n\n本节是本章的中心，下文各节都从这里展开。文理生生以「文」为基础（[研究总计划 v0.1 §二](../../../sources/wenli-shengsheng-v0.4/research/references/01_文理生生_以古文为基的最小概念文法_研究总计划_v0.1.md)），它的认识论见于[对话全记录](../../../sources/wenli-shengsheng-v0.4/research/references/02_对话全记录_中文概念组合_文与系统生成_2026-10-21.md)第二轮。问题的出处是 Ren 的原话。这份记录是可读的转存，不是逐字节的记录：\n\n> You know, in Chinese, it was said that, 疑读百遍，其意自现. This only makes sense when the context that you're ingesting are structures and dynamics and the composition of the, which leads to this, like, inherent construction of their models that can be generalized. This does not necessarily happen to some other, like, dualist books.\n\n总计划 §八 把它立为一条假说（这是 AI 所写）：「遇到高度可组合、彼此约束的结构性概念时，重读可能使读者逐渐发现隐含规则，并向未见事物迁移。」它把认知过程分成五环：「例句积累 → 提取不变量 → 建构关系模型 → 解释未见例子 → 遇反例修正模型」。\n\n本节的论点是一条 AI 的读法（讀，AI）：这套认识论就是核心自己的认识论。它的每一环在形式脊柱上都有一条已证的律，律还给出它恰在何处成立、何处不成立。原话只说明问题从哪里来，论据是下面的律与对照。\n\n**体例。**\n\n- 每条对应分三项：\n  - **古文**：照《中华思想脉络》冻结文本逐字引用，〔〕内为来源号；冻结语料里没有的，另行注明。\n  - **律**：Lean 声明的全名，以及它在 Lean 中所带的前提。\n  - **域**：它在何处成立，在何处不成立。\n- 下文所引之律都在纯核心之中（只导入 Lean 的 `Init`），所在模块的公理报告皆空（核心收据 20261022T040548.209667Z）。两处例外：易卦诸律在实例层，`Generative.trace_append_iff` 在基础层。公理报告只关乎逻辑，不说明任何实际的展开满足其前提。\n- 只在一个构造出来的模型里成立的，称**一例**。\n- 本节不用伦理的两项前提。延续之条件（凡续皆有顾）只定所顾，以广为愈只定次序。下文都是无设而然之律，即不加关于展开的前提；各条所带的局部条件写在条中。\n- 古今对照分三类：\n  - **相合**：脊柱上有关系、条件、方向都相同的律。\n  - **定域**：脊柱给出原文所言恰好成立的范围，改动它的全称形式。\n  - **相分**：原文立了一个非关系之层，或断言了律所否定的东西。\n\n  相合不是印证。律对满足其条件的每一结构成立；某一文本所说的世界是否满足这些条件，是另一个问题。\n- 「讀（AI）」标出 AI 的解释。§一 中文的立名是一项读法，也是一项提议，须经看板的 WL 项才能进入名表。\n\n### 一、文：一变经一象而示之变\n\n中华本已有以下一组名：\n\n- 象：映射本身，给每一者一个值，这个值叫像（一·三、七·一）。\n- 读：用一个象给状以值（一·三）。\n- 类：把像相同者并在一起（七·一）。\n- 理：变化跨之而同的类（七·二）。\n- 观：变、系辞、宇的总名（一·二十）。\n\n七·二之经说「以其类代状之变为法」，规范章 §3.1 的 `carries_law_iff` 和易传一章的「象与易简」用的也是同一个东西：一变经一象之后所成的变。这个东西一直没有名字。本节用「文」来名它。\n\n**所名。** 文，是一变经一象而示之变。一步从一状经一动到达一状，则其文从前状之像经同一动到达后状之像。Lean 中即 `Becoming.Image`：`(Image P π).step k a κ` 按定义就是 `∃ s u, π s = k ∧ P.step s a u ∧ π u = κ`。在一步之中，文所示的只是像；沿一行，是此行经象所得的历；就全体而言，是诸像之间以动相连而成的样。\n\n**律。**\n\n1. 每一变、每一象都有它的文，变的每一步经象读出后都为其文所许（`Becoming.factors_image`，无设）。若有一变 Q 许变经象的每一步（`FactorsThrough P π Q`），Q 也许文的每一步（`Becoming.Image.least`）。所以文就是变经此象所示的东西，一步也不多。沿一行，经象所读的每一步都为文所许（`Becoming.Run.stepsThrough_of_factors`，取 `Becoming.factors_image` 为其设）。\n2. 文为法（每状每动至多一个结果，即 `Determined`），恰当像相同的两状经同一动所到之状，像也相同（`Becoming.image_determined_iff : Determined (Image P π) ↔ GoAlike P π`）。有一个为法之变承载变经此象的每一步，也恰当这一条件（`Becoming.carries_law_iff`），对每一变、每一象成立。所以七·二的理，就是其文为法的类。\n3. 文的文：用象 ρ 去读 π 的文，所得之文为法，恰当用复合之象 ρ ∘ π 读原变所得之文为法（`Becoming.goAlike_image_iff : GoAlike (Image P π) ρ ↔ GoAlike P (ρ ∘ π)`）。\n4. 界：不分开任何者的象（达名），其文只有一个像，每一变用它都为法（`Becoming.goAlike_const`），但这个法什么也没有说。文所载的东西，在于它留下的差异。\n\n**古文。**\n\n- 「道有变动，故曰爻；爻有等，故曰物；物相杂，故曰文；文不当，故吉凶生焉。」〔DS03〕\n  - 这是名的出处。易传一章判全段为相分（[p-wen-budang](YI-ZHUAN-AND-BECOMING.md)）：「爻有等」读作等级，「文不当，故吉凶生焉」把不当读作吉凶之源。\n  - 立名只取「物相杂，故曰文」的结构，不带等级，也不带吉凶。\n  - 讀（AI）：同篇「爻也者，效天下之动者也」〔DS03〕说爻摹效动，爻是动的一种读；诸爻相杂而成的样叫文。文是动经爻读出的样，不是一个物，和「一变经一象而示之变」同构。「相杂」须有相异者，与律 4 相应。\n- 「剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。」〔YD-JP22〕\n  - 定域：从所观之文察其变，恰在其文为法之处成立（律 2）。\n  - 沿一段有穷的历，其文到第 t 步为法，恰当此前经象所读的各步一致：像相同的两步经同一动所到之处，像也相同（`Becoming.Run.law_through_iff`，即 `r.ConsistentThrough π t`）。\n  - 此历在某一像上未曾取过的动，记录不能定它的结果（`Becoming.Run.not_fixesThrough_of_untaken`；前提：有一为法之变许此前各步、此动未被取过、像有两个不同的值）。\n  - 彖传没有说出这些条件。「以化成天下」属治理之用，不带。\n- 「理者，成物之文也」〔CV1-S-JL〕\n  - 定域。解老之理是一种读所能分开的形质，即后文的短长、大小、方圆、坚脆等。它在一步之中就是像，也就是一个类。本编的理另加了「其文为法」这一条件，名表理之注已写明。凡理皆文，这一半相合；何种文是理，原句没有说。\n  - 同段「道者，萬物之所以成也」〔CV1-S-JL〕立了一个先在的根据，相分（道不立为名，见附录二）。\n\n**立名之议（讀，AI）。**\n\n| 名 | 篇 | 所名 | 锚 | 引 | 式 | 不带 |\n|---|---|---|---|---|---|---|\n| 文 | C07 | 文：一变经一象而示之变（the change read through a map） | `Becoming.Image`；`Becoming.factors_image`；`Becoming.Image.least`；`Becoming.image_determined_iff` | 物相杂，故曰文@DS03 | 古 | 文饰、文采；文德、文治，及「以化成天下」之化成；文武之等；「爻有等」之等级；「文不当」之吉凶；字形本身 |\n\n理由有五条：\n\n1. **补一个缺名。** 这一概念在七·二、规范章 §3.1 和易传一章反复出现，却没有名。名表的规则是一概念一名、一名一概念。\n2. **先秦有此义。** 系辞用文来名动经爻所读出的样，贲彖用「观乎天文，以察时变」来说从文读变。前者正是这一概念，后者正是它的用法。\n3. **使理的引文有确切的意义。** 名表理之引「理者，成物之文也」由此可以确切地读：凡理皆文，文不皆理，与七·二「凡理皆类，类不皆理」并行。\n4. **一个名容纳文理生生的三层，而不相互强制。**\n   - 文理生生把文分为三义：可辨样态、文字表达、模型表达（[逐字类型词典](../../../sources/wenli-shengsheng-v0.4/research/references/08_组合文法逐字类型词典_v0.3.md) core.001；总计划 §2.1），并禁止「文本、表征、世界对象不可互相强制转换」。\n   - 在本名之下：可辨样态是经「感入者之象」所示之文；文字是经一个码之象所示之文（码以名所予者，`Becoming.SharedCodes`）；模型表达是理，即其文为法的象，而不是文本身。\n   - 不同的象给出不同的文，两种文只经复合之象相关（律 3），彼此不强制转换。\n5. **它是关系的，也是一元的。** 文既不单属于世界，也不单属于读者，而是展开经一个象所示的东西；读者的象本身就在展开之中（§六）。\n\n不取的其他方案：\n\n- 以文名状：构形已名为状（一·二十二）。\n- 以文名类：类是并，文是变跨此并所成之样。\n- 以文名象：象是映射本身。\n- 以文名往：往是一段历的前段，是文的历（「彰往而察来」〔DS03〕）。\n- 像道一样不立为名：道不立为名，是因为它作先在的根据，且自称只是一个号。文在系辞、贲彖中的意义不带这两者；文的其他义项放入「不带」，正如理不带「理先气后」。\n\n**对中华本的影响（提议）。** 七·二之经「以其类代状之变为法，亦恰当此」可写作「其文为法，亦恰当此」。这一改动不影响任何证明。\n\n### 二、律读自展开：内在生成的解释\n\n**古文。**\n\n- 「天行有常，不为尧存，不为桀亡。」〔RU2-S-XZ17〕——相合，与[脉络一章 §四·四](CIVILIZATION-THOUGHT-AND-BECOMING.md)相同：一段一致的历，恰有一个为法之变许它。天不立为名，只取「天行」作展开之行；同段「应之以治则吉，应之以乱则凶」中的吉凶不带。\n- 「圣人有以见天下之动，而观其会通，以行其典礼」〔DS02〕——定域：从所见之动读出其会通，恰在所见一致之处成立。「以行其典礼」不带。\n- 「神以知来，知以藏往」〔DS02〕——「神以知来」相分：这是不经感的前知（脉络一章 §四·三）。「知以藏往」相合：已取之动，在所取之处为记录所定（`Becoming.Run.fixes_of_takes`）。\n\n**律。**\n\n- `Becoming.Shown.run (g m) : Run (Shown g m)`：每一段历都是它所示之法的一行，无设。`Shown g m` 就是此历所取的各步。\n- `Becoming.shown_le_iff`：一段历所示之法，是此历作为其行的最小之法。一变许所示的每一步，恰当它许此历的每一步。\n- `Becoming.exists_law_iff`：有一个为法之变许此历的每一步，恰当此历一致（`Consistent g m`：同状同动，下一状也相同）。\n- `Becoming.Run.law_through_iff`：经一象读时同样成立（§一）。\n- `Becoming.Run.not_fixes_of_untaken`：前提是变为法、此历到 t 为止未在 s 取 b、状有两个不同者；结论是记录不定 b 在 s 的结果。\n\n**域。**\n\n- **成立。** 每一段历都读出它的法，无设。读出之法为法，恰在此历一致之处；经一象读，则恰在经象读出的各步一致之处。\n- **不及。** 律不及于未取之动。在历之前所立的法，比所示之法多出的只是此历未取的动，而这些动的结果没有任何记录能定（规范章 §1.1 之读法）。所以一个外在的立法者（一个意志）既不会被任何记录否定，也不为任何记录所需要：它在所示之法以外所加的，正在记录到不了的地方。\n- **不一致时。** 一段历在某一象上不一致，则此象之上没有为法之变许它。或者需要更细的象（所并之中有关系没有读进来），或者展开在此处本有分支。\n\n讀（AI）：\n\n- 内在生成的解释，是从展开读出的法。外止的解释，是其内容落在四种非关系之层上的解释：先在的根据，先定的性或价值，意志或单一中心，争胜与等级。这四层在[脉络一章 §四·三](CIVILIZATION-THOUGHT-AND-BECOMING.md)各有其律。外止解释在认识上的一面，见 §三 的失效 (a)。\n- 这不是中西之分。已对应的判断中相分占 19%，多出现在法、墨、三教互动之中。对话中的 AI 当时也已改述：障碍不在信神本身，而在解释终止于内在关系得到重建之前。\n\n### 三、读书百遍，其义自见\n\n**古文。** 「读书百遍而义自见」。总计划 §八 的文献校正引《三国志·王肃传》裴松之注中所引董遇之事。此句不在冻结语料之中，本节未能逐字核对。对话中 Ren 记作「疑读百遍，其意自现」。\n\n总计划的五环，每一环都有一条律（环与律的配合是 讀，AI）：\n\n| 环 | 律 |\n|---|---|\n| 例句积累 | 往：一段历程到某步为止的前段（`Becoming.Learning.prefixOf`） |\n| 提取不变量 | 一个变化跨之而同的类（`Becoming.Learning.goAlike_iff_lumped`，见 §四） |\n| 建构关系模型 | 其文为法（`Becoming.image_determined_iff`，见 §一） |\n| 解释未见例子 | 推类（`Becoming.Learning.determines_lumped_iff`）；一次所取之动代表其全类（`Becoming.Run.generalizes`） |\n| 遇反例修正模型 | 过则改（`Becoming.Learning.byElimination`）。有相符的候选，则不越过它，也不会屡次不符（`Becoming.Learning.index_le_of_accords`、`Becoming.Learning.misses_not_recurring`；前提：值之同异定然否） |\n\n「读书百遍，其义自见」可分为三条律。\n\n**(1) 百遍：有穷的读定其文之全。**\n\n- `Becoming.Identification.bounded_agree`：\n  - 前提：两段历程分别满足 `StatesBelow o N` 与 `StatesBelow o' N'`（每一时的后程都同于 N，或 N′，之前某一时的后程，即其态不过 N 种）；两者在 N + N′ − 1 步之前处处相同。\n  - 结论：两者处处相同。\n  - 此长度是确切的：有两个不同的值时，对任何界，都有两段历程在 N + N′ − 2 步之前相同、在这一步不同（`Becoming.Identification.bounded_agree_exact`）。\n- `Becoming.Identification.leastBound_exact`：\n  - 前提：值之同异定然否；`StatesBelow o N`；N + N − 1 ≤ t。\n  - 结论：不给界而用最小界的知来，在第 t 步就得中。\n  - 与之相配的是 `Becoming.Identification.rest_earliest`（前提：有两个不同的值）：对每一个 M，没有一个知来能在每一段满足 `StatesBelow o (M + 2)` 的历程上都于第 M + M + 2 步得中。\n- `Becoming.Learnable.ahead_fixes`：\n  - 前提：值之同异定然否；从 s 出发的轨都在一族 l 之中。\n  - 结论：从第 l.length + (l.length + l.length − 1)·tri l.length 步起，对终而复始的候选做过则改，再向前展开，它给出经此象之后每一步的值。它没有被给予诸状、诸状的数目、法，也没有被给予任何特征。\n- **域。** 在一族尽其状之处成立；或在历程之态有界之处成立。讀（AI）：「百遍」的确切意义是，所读的步数须达到由其文之态的数目所定的界，此后再读不增加所知；给出界时，界所换得的只是界之前的不作答（`rest_earliest`）。\n\n**(2) 其义：义须是此文自身后程的一种读。**\n\n- `Becoming.Learnable.learnable_iff`：\n  - 前提：值之同异定然否；`world : ∀ s, s ∈ l`，即有一族尽其状。\n  - 结论：有一个知来，从经象之往出发，在每一状的轨上都从某步起每步得中其特征，恰当凡经象同其来的两状（`Law.SameFuture next reg s s'`），其特征从某步起都相同。\n- `Becoming.Learnable.learnable_iff_reading`（前提同上，且 V 中有一值 v₀）：上述条件也恰当存在一种读 G（对每步同值的两个输入给出同值），使每一状的特征从某步起就是 G 对其经象后程的读出。\n- **域。** 义能从文中读出，恰在义是此文自身后程的一种读之处。讀（AI）：这就是「内在生成」的确切形式。\n\n**(3) 自见：只给出义的所读，不给其余。**\n\n- `Becoming.Learnable.reading_predicts`：\n  - 前提：值之同异定然否；从 s 出发的轨在 l 中；G 对每步同值的两个输入给出同值；`ReadOff next reg val G`，即每一状的特征恰好是 G 对其经象后程的读出。\n  - 结论：只被给予 G 的知来，从 (1) 中的界起每步得中这一特征。它没有被给予诸状、诸状的数目、法，也没有被给予特征的任何值。\n- `Becoming.Learnable.given_nothing_not_every`（一例：一个状，经象只有一个值）：特征恒真与特征恒伪，各自都能被给予其读的知来得中，但没有一个知来能两者都得中。自见须先问「其义」是对什么的读；什么都不给，就不能得中每一种可得之义。\n- **自见而不自证。**\n  - 过则改终将每步都得中，这一点不可否定（`Becoming.Learning.held_rest_unrefuted`，双重否定之形；前提：值之同异定然否、轨在一族之中）。\n  - 但没有一段往能显示它已经得中：有两个不同的值时，凡所给之值，都会在某一段同其往而终而复始的历程上不符（`Becoming.Learning.no_prefix_fixes_next_finite`）。\n  - 义会自己显出，但没有一种读能显示它已经显出。\n\n**失效。**\n\n- **(a) 义止于文外。**\n  - 律：经象同其来的两状，若其特征在任意晚的步上仍不同，则没有一个知来能在两者上都得中（`Becoming.Learnable.not_predicts_on_both`；不须一族尽其状）。\n  - 若一书之义由读所不及者（一个意志）来定，同一文本的两种读可以有不同的义，读多少遍都不能定。这是原话所说「dualist books」的确切形式。\n  - 这条律说的是义能否从文中读出，不说那个义本身的真伪。\n- **(b) 不测之文。**\n  - 对每一个知来，都有一段历程使它所给的每一个值都不符（`Becoming.Learning.diagonal_misses`；前提：有一个象移动每一个值）。\n  - 在这段历程上，没有一步之后每步都得中（`Becoming.Learning.diagonal_unrested`），而这段历程的宇不能由任何一族尽其状（`Becoming.Learning.diagonal_open`）。\n  - 读书百遍而义仍不见，只发生在没有一族尽其状的地方。\n- **(c) 无类。** 在全体函数之中，所见的值不定任何未见输入的值（`Becoming.Learning.every_determines_nothing`；前提：输入之同异定然否、x 未见、有两个不同的值）。对应「學而不思則罔」〔RU1-S-LY〕（相合，中华本九·三十四）。\n\n**字的义。** 读书百遍也定下一个字的义：\n\n- `Becoming.CrossSituational.stands_iff`：一个义项立于一个名，恰当凡与此名相关的记录都给出它。\n- `Becoming.CrossSituational.candidates_eq_iff`（前提：义项之同异定然否，所列义项无重复）：此名的候选恰为 [e]，恰当 e 在所列之中、每一条相关记录都给出 e、其余每一个义项都被某条相关记录所不给。\n- `Becoming.CrossSituational.narrows`：记录只会减少候选，已去掉的不会再回来。\n- `Becoming.CrossSituational.resolved_is_target`：所求的义项被每一条相关记录给出，则唯一的候选就是它。\n- `Becoming.CrossSituational.Omitted.wrong_unique`（一例）：只要一条记录漏了所求的义项，就可能留下一个错义作为唯一候选。\n\n文理生生的词典（每个义项附出处号）和中华本的名表（每个名附引文），都是这条律的应用（脉络一章 §五·一）。\n\n**举一反三。**\n\n- 「擧一隅，不以三隅反，則不復也。」〔RU1-S-LY〕——定域。\n  - `Becoming.Run.fixesThrough_of_takes`：一段历已在某状取过一个动，则经象所读的结果为记录所定。\n  - `Becoming.Run.generalizes`：前提是变经 π 的每一步都为一个为法之变 Q 所许、记录经 π 定 a 在像 k 上的结果为 κ、π s = k、s 经 a 到达 u；结论是 π u = κ，无论此历是否经过 s。\n  - `Becoming.Run.not_fixesThrough_of_untaken`：这一类中没有一状取过此动，记录就不能定它。\n  - 所以三隅能反，恰当四隅同属一个象的一类，并且变经此象为法。「则不复也」是教者的做法，不在律中。\n- 「引而伸之，触类而长之，天下之能事毕矣。」〔DS02〕——定域：在类中推，恰在世界跨此类同值之处为对（`Becoming.Learning.lumped_right_iff`）。「天下之能事毕矣」这一全称，只及于与已见者同类的事（`Becoming.Learning.determines_lumped_iff`）。\n- 「欲知億萬則審一二」「以近知遠，以一知萬，以微知明」〔RU2-S-XZ05〕——定域，与中华本九·三十四所引同篇「類不悖，雖久同理」相同：以一知万，恰在万者与一同类、且展开跨此类而同之处成立。\n- 「推類之難，說在之大小。」〔MI1-S-JX〕——相合（中华本七·三）。\n\n### 四、压缩与推广是同一件事\n\n对话中的 AI 曾经猜测：读到共同的结构时，压缩与推广「may be deeply connected」。在脊柱上，它们是同一件事，并且有确切的界。\n\n**古文。**\n\n- 「其称名也小，其取类也大，其旨远，其辞文」〔DS03〕——定域：名小而所取之类大，所及也远，这就是压缩即推广。所及之处要为对，须世界跨此类同值（`Becoming.Learning.lumped_right_iff`），原句没有说这一条件。\n- 「仰则观象于天，俯则观法于地，观鸟兽之文，与地之宜，近取诸身，远取诸物；于是始作八卦，以通神明之德，以类万物之情。」〔DS03〕——定域：用八类去并万物之情，推得的结论恰在万物跨此并而同之处为对。「以通神明之德」不带。易传一章不把说卦的取象当作律（[易传一章 §0](YI-ZHUAN-AND-BECOMING.md)）；文理生生的试点也说，说卦的单项卦训与对照表「不应仅因能写成对照表就算作动力模型」（[README](../../../sources/wenli-shengsheng-v0.4/research/README.md)）。\n- 「子曰：『賜也，女以予為多學而識之者與？』對曰：『然，非與？』曰：『非也，予一以貫之。』」〔RU1-S-LY〕——定域，见下面律 3。里仁篇「夫子之道，忠恕而已矣！」〔RU1-S-LY〕以忠恕为这个「一」，不带。\n- 「易简，而天下之理得矣。」〔DS02〕——定域（[易传一章 p-yijian](YI-ZHUAN-AND-BECOMING.md)）。\n- 「所見无非牛者。三年之後，未嘗見全牛也。……依乎天理，批大郤，導大窾，因其固然」〔ZH1-S03〕\n  - 「依乎天理……因其固然」相合（中华本七·二）。\n  - 「三年之後」定域：读者怎样到达他的类，脊柱不导出。`Becoming.Learning` 明言不导出的，正是一个形成实际经过或能够到达哪一个类。\n\n**律。**\n\n1. **一个类，三种用途：结构的模型、变化的模型、推广的所及。**\n   - `Becoming.Learning.goAlike_iff_lumped {next : S → S} {π : S → K} : GoAlike (Law.process next) π ↔ Lumped π (fun s => π (next s))`：变化跨此类而同，恰当下一状之像随此类而同。除此之外没有别的前提。\n   - `Becoming.Learning.determines_lumped_iff`（前提：类之同异定然否；有两个不同的值）：在随类而同的诸函数中，所见的值定 x 的值，恰当所见之中有与 x 同类者。\n   - 所以压缩所并的东西，恰好就是推广所及的东西。\n2. **对与不对。**\n   - `Becoming.Learning.lumped_right_iff`：随此类而同的 g 在所见处与 f 相合，则对与所见之 d 同类的 x，g x = f x 恰当 f d = f x。\n   - 对为法之变：`Becoming.Learning.transfer_right_iff`（前提：变为法；在 s₀ 见到 a 到达 u₀）：此结果经 π 移到 s 上为对，恰当 s₀ 与 s 经 a 同行。\n3. **记与贯。**\n   - `Becoming.keepHistory_fixes_nothing_else`（前提：变为法；行在藏往之变上；b 不是此历第 n 步所取之动；状有两个不同者）：藏有全部之往的历，在每一状上只定它所取之动的结果。\n   - `Becoming.Run.generalizes`：经一个承载法的象，一次所取之动便定其全类的结果。\n   - 多学而识之，所定的不出所记；一以贯之，所定的及于全类，但这恰在那个「一」是承载法的类时才成立。\n   - 能贯的「一」总是存在的，但可能无用：达名承载每一种法（`Becoming.goAlike_const`）。所需要的是一个留下所要之差异的「一」。\n4. **不是每一种简化都能得理**（一例，易之模型中的消息之律）：\n   - 以一卦与其错为一类，消息之律跨之而同（`Becoming.Hexagram.pairs_goAlike`）。\n   - 以刚爻之数为类，不同（`Becoming.Hexagram.yang_not_goAlike`）。\n   - 以刚爻之数的奇偶为类，又同（`Becoming.Hexagram.yangOdd_goAlike`），而奇偶比数目更粗。\n   - 所以一个类是否承载法，不随它的粗细单调变化。\n5. **最小的压缩与可学之界是同一个关系。**\n   - `Becoming.Law.identifiesAlike_of_law`：前提是 π 相同者其 o 值也相同、`GoAlike (Law.process next) π`、凡经 o 同其来的两状 π 都把它们并在一起；结论是 π 为正名（`IdentifiesAlike (frameBy next o) π`），即恰好把相同者并为一。\n   - `Becoming.Law.sameFuture_of_law`（取前两条前提）：这样的类所并的两状，经 o 同其来，不失去 o 所分开的任何东西。\n   - 所以保留 o 的值、并承载法的最粗之类，恰好并起经 o 同其来的那些状。\n   - 另一面：经象同其来的两状，在每一步上其往都相同（`Becoming.Learnable.prefixes_same`），任何知来都分不开它们。法使每状不变时，经象可学的东西恰好就是随其类而同的东西（`Becoming.Learnable.still_learnable_iff_lumped`）。\n\n**域。** 压缩与推广是同一件事，恰在压缩是一个其文跨之而同的类之处。讀（AI）：总计划 §七 以最小描述长度（MDL）作为压缩的度量，脊柱上没有关于这种度量的律。脊柱上的压缩是「并」，以所并的东西来度量，而不是以长短来度量。\n\n### 五、最小的读，及其失效\n\n**古文。**\n\n- 「书不尽言，言不尽意。」〔DS02〕——定域：一个象只要有所并，其文就不保留被并者之间的差异（`Becoming.Image.least`：文一步也不多）。\n- 「圣人立象以尽意」〔DS02〕——定域：义能从文中读出，恰在义是文之后程的一种读之处（§三 (2)）。义若是一个尾（见下），没有任何有穷的读能尽它。读者读其自身的情形，见中华本九·二十八（「设卦以尽情伪」判为相分）。\n\n**律。**\n\n- `Becoming.ExchangeLaw.ReadsFinitely.least_coupling`：\n  - 前提：条件之同异定然否；`fin : law.ReadsFinitely`，即在每一步、对每一个待者、在每一段历上，此法只读某一族条件。\n  - 结论：此法经它所敏的感来读；凡此法所经之感，都含有它所敏的每一个条件，以双重否定之形成立（`¬ ¬ W.CoupledInto obs h c`）。\n  - 所谓所敏，就是逐一改动一个条件、它所给出的东西就随之改变的那些条件。\n- `Becoming.tailLaw_no_least_coupling`：前提是对每一自然数列给出「是否消失」的判定 `decides`（这一判定给出 LPO），且所论的待者不待任何条件。结论是尾法所经之感没有最小者。\n- `Becoming.wlpo_of_not_through_sensitive`：前提是法只读已然者、条件以自然数编号。结论是每一个反例都给出 WLPO。\n\n**域。**\n\n- 最小的读就是所敏者。这一点在法于每段历只读有穷多个条件之处成立，条件的总数不限。\n- 没有这一条件时，反例不能以构造的方式给出；要给出一个反例，必须对无穷有所判定。\n- 讀（AI）：一种义若依于无尽之文的全体，而不依于它的任何有穷部分，就是一个尾，例如某事是否无尽地复现、长程的平均值。尾没有最小的读。复现是稠的，既不可验证，也不可驳倒（`Becoming.Sequences.recurs_not_verifiable`）。\n\n### 六、知在展开之中：识，与文理生生的「观／证」\n\n文理生生以「观／证」为一面镜子。总计划 §3.2 说：“「观—证」是知识论层（meta-level），不是宇宙中必须存在的人类观察者”。观问所据为何、尺度何在、哪些现象不可见；证问凭什么判断真伪、什么发现会推翻此说。在核心中，这面镜子不在展开之上，而在展开之中，它的名字是识。\n\n**古文。**\n\n- 「然则何缘而以同异？曰：缘天官。」〔RU2-S-XZ22〕\n- 同篇：「心有征知。征知，则缘耳而知声可也，缘目而知形可也。然而征知必将待天官之当簿其类，然后可也。」〔RU2-S-XZ22〕\n- 以上两条相合：同异经感而定；心的征知，须等感官各依其类有所记录之后才成立。心的征知也是一种读（见下面的律），不立为另一层。\n- 「觀我生，進退」〔YD-JG20〕——相合（中华本九·三）。\n- 「吾生也有涯，而知也无涯。以有涯隨无涯，殆已。」〔ZH1-S03〕——相合（中华本九·二十八）。\n\n**律。**\n\n- **识**（中华本九·三）：\n  - `Becoming.Web.SelectsThrough`（定义）：经 g 之感到 t 为止无异的两段历，择之皆同。\n  - `Becoming.Web.selects_alike_iff`：两段历被凡经 g 之感的择同样地择，恰当两段历经 g 之感到 t 为止无异。这是由定义所建立的。\n  - `Becoming.Learning.Training.web_selectsThrough_iff`：经感而择，就是经「经感无异」这个类而择（`Iff.rfl`）。\n  - 所以知者的感就是它的象；它所知的，是展开经其感所示之文。\n- **所据与不可见：**\n  - 只以阈值感入者，只传递「需求是否得到满足」（`Becoming.Web.alike_of_threshold`）。\n  - 其余的交换固定、感入者在其上守衡时，感的闭包以外的部分，有它或没有它，凡经闭包之内之感的择都同样地择（`Becoming.Flow.unselected_beyond_coupling`）。\n- **证：** 一个辞要被排除，它与其对手须在感入者之处有所不同（`Becoming.Web.Excludes.not_of_alike`：若有一段满足此辞的历，与实际的历经 g 之感到 t 为止无异，则此辞不被排除）。\n- **无顶：**\n  - 在诸类合并之上学习，仍然是学习，并且在它的对角历程上不会静止（`Becoming.Learning.merged_unrested`；前提：有一个象移动每一个值）。\n  - 以所读者为索引的诸读，总有一种读是诸读都没有说出的（`Becoming.Diagonal.gap_unsaid`）。\n\n**域与比较。**\n\n- 文理生生那面镜子所问的东西，在核心中都是展开之中的关系：\n  - 所据，是感；\n  - 尺度，是感所作的类；\n  - 不可见者，是阈值以下与闭包以外的东西；\n  - 证，是只经感入者之差异的排除。\n- 那面镜子所护持的两种区分，核心不另立一层也保住了：\n  - 知者之感以外的东西照样展开，照样有所失（`Becoming.Clearing.unselected`，一例：清者的每一种择都同样地择两个宇，而栖者在一个宇中终止，在另一个宇中不终止）。\n  - 动力学不决定意义（`Becoming.Web.significance_undetermined`）。\n- 那面镜子所失去的：一面在上的镜子就是一个顶，而学习之上仍是学习，没有顶；读者读自身，必有所不尽。\n- 讀（AI，D45）：识、理、明是同一个结构。识是待者之后程随其感之类而定；理是展开随之而同的类；明是一个择所经之感，达到容所不标出者（中华本篇九、篇十一）。\n\n### 七、组合：字合为模\n\n对话第一轮中，Ren 观察到：单字多是动态，合起来就成为结构，一个合成词可以就是一个小模型。在脊柱上，组合有三种，各有其律和界。\n\n**古文。**\n\n- 「以名舉實，以辭抒意，以說出故。」〔MI1-S-XQ〕——相合（讀，AI）：名、辞、说是组合的三层，各有所出。\n- 文理生生的每张构式卡都有「整体义」「不能逐字推出」「现代补充」「失败条件」四栏（[README](../../../sources/wenli-shengsheng-v0.4/research/README.md)），组合的界就记在这里。\n\n**律。**\n\n- **过程的接续：** `Generative.trace_append_iff`（基础层）：从 s 经 xs ++ ys 到达 t，恰当有某个 m，使从 s 经 xs 到达 m、从 m 经 ys 到达 t。两个过程相接，须有同一个中间状态；文理生生说「过程顺接要求实际中间状态相同」，与此相同。\n- **读的接续：** `Becoming.goAlike_image_iff`（§一 律 3）。\n- **码的组合**（一个给定的小文法：两个原子、合、叠）：\n  - `Becoming.CodeAcquisition.acquired_every_expression`（前提：两个原子的值不同）：从三次探测（两个原子、一次合）读出的码，对每一个式都与原码同值，深度不限。\n  - `Becoming.CodeAcquisition.primitives_no_exact`：只读原子，没有一种读能确定次序；须有一次合成的探测。\n  - `Becoming.CodeAcquisition.nonuniform_fails_transfer`（一例）：有一条律在三次探测上都与常码相合，其余的值都相反；三次探测不能排除它，而它在一个新式上失败。\n  - `Becoming.CodeAcquisition.equal_primitives_unresolved`（一例）：两个原子同值时，次序改变了码，却不改变新式的值。\n- **读出一切序列：** `Becoming.CrossSituational.reads_every_iff`（前提：分组能在每一个编码序列中复得其词）：逐组以消解读之，得出每一序列的词义，恰当每一个词的记录都能分开它的义。\n- **整体不在两两之中：**\n  - `Becoming.separation_faithful_iff`：分别描述两个体，能复得其兼，恰当兼是矩形的。\n  - `Becoming.whole_not_in_pairs`（一例）：三个体中任两个都可以自由相配，而三者合起来有一个关系。\n- **名是自由的：** `Becoming.SharedCodes.renamed_carries_iff`（前提：改名能分开诸名）：改名之后的象承载一条法，恰当原来的象承载它。\n\n**域。**\n\n- 合成之义就是其部分之义的组合，这恰在合成之码中、并且有合成之探测时成立。\n- 整体之义不能由部分推出之处（文理生生称为「不能逐字推出」），诸探测不能排除非组合的律，推广就会失败；三者之间的关系也可以不在任何两者之中。\n- 字形本身不承载所载之义：改名不改变所承载的法。文理生生的审计也说，它的推导「其来源是公开的关系语义与证明，不是字形本身」（18 号 §5.2）。\n- 讀（AI）：认识论在文之中，不在字形之中；它在字所绑定的关系之中。\n\n### 总表\n\n表中省去 `Becoming.` 前缀。\n\n| 文理生生或对话中的主张 | 脊柱之律 | 成立于 | 不成立于 |\n|---|---|---|---|\n| 物相杂，故曰文 | `Image`、`factors_image`、`Image.least` | 每一变、每一象 | 不分任何者的象：其文只有一个像，无所载（`goAlike_const`） |\n| 观乎天文，以察时变 | `image_determined_iff`、`Run.law_through_iff` | 文为法之处；有穷之历一致之处 | 未取之动（`Run.not_fixesThrough_of_untaken`） |\n| 律读自展开，无外在的立法者 | `Shown.run`、`shown_le_iff`、`exists_law_iff` | 每一段历；恰在一致处为法 | 外加之法只在未取之动上（`Run.not_fixes_of_untaken`） |\n| 读书百遍 | `Identification.bounded_agree`、`Identification.leastBound_exact`、`Learnable.ahead_fixes` | 一族尽其状；历程之态有界 | 不测之文（`Learning.diagonal_misses`、`Learning.diagonal_open`） |\n| 其义 | `Learnable.learnable_iff`、`Learnable.learnable_iff_reading` | 义是文之后程的一种读 | 义止于文外（`Learnable.not_predicts_on_both`）；无类（`Learning.every_determines_nothing`） |\n| 自见 | `Learnable.reading_predicts`、`Learning.held_rest_unrefuted` | 给出义之所读；以不可非之形成立 | 没有一段往能显示义已得（`Learning.no_prefix_fixes_next_finite`）；什么都不给则不能得每一种义（`Learnable.given_nothing_not_every`，一例） |\n| 举一反三 | `Run.fixesThrough_of_takes`、`Run.generalizes` | 四隅同类，且变经此象为法 | 类中无一状取过此动（`Run.not_fixesThrough_of_untaken`） |\n| 压缩与推广 | `Learning.goAlike_iff_lumped`、`Learning.determines_lumped_iff`、`Learning.lumped_right_iff`、`Law.identifiesAlike_of_law` | 压缩是一个其文跨之而同的类 | 不承载法的简化（`Hexagram.yang_not_goAlike`，一例）；只记不贯（`keepHistory_fixes_nothing_else`） |\n| 最小的读 | `ExchangeLaw.ReadsFinitely.least_coupling` | 法在每段历上只读有穷多个条件 | 尾（`tailLaw_no_least_coupling`；反例给出 WLPO） |\n| 观／证 | `Web.SelectsThrough`、`Web.selects_alike_iff`、`Web.Excludes.not_of_alike` | 知者之感以内 | 没有在上之镜（`Learning.merged_unrested`、`Diagonal.gap_unsaid`） |\n| 字合为模 | `Generative.trace_append_iff`、`goAlike_image_iff`、`CodeAcquisition.acquired_every_expression`、`CrossSituational.reads_every_iff` | 合成之码，且有合成之探测 | 非组合的整体（`CodeAcquisition.nonuniform_fails_transfer`，一例）；整体不在两两之中（`whole_not_in_pairs`，一例） |\n\n### 本节未立者\n\n1. **任一实际文本满足上述条件，即它是内在生成之文。** 这是一种对应，不是定理；相合不是印证。\n2. **文理生生的 H2：读这些文本能改善对未见者的重建与迁移。** 律只说明从文中学义何时可能、经由何种程序可能。人类读者是否这样学，读者怎样到达他的类，都没有导出，须另做实验（实验设计见总计划 §八）。\n3. **古汉语是核心的最佳媒介。** 未经检验；改名不改变所承载的法（`Becoming.SharedCodes.renamed_carries_iff`）。认识论在文的结构之中，不在某一种文字之中。\n4. **任意系统的最小概念文法（H3）。** 脊柱只有对某一条法的最小之读（`Becoming.Image.least`、`Becoming.ExchangeLaw.ReadsFinitely.least_coupling`、`Becoming.Law.identifiesAlike_of_law`），没有一个普遍的最小文法。\n5. **文这个名。** 它是本节的提议，须经看板才能进入名表。",
+ "claims": [
+  {
+   "claim": "文 is proposed as the name of `Becoming.Image` (the change read through a map); every process and map has its image, the run read through the map steps in it, and the image is the least process the change factors through.",
+   "declarations": [
+    "Becoming.Image",
+    "Becoming.factors_image",
+    "Becoming.Image.least",
+    "Becoming.Run.stepsThrough_of_factors"
+   ],
+   "standing": "core theorems (no premise beyond FactorsThrough for Image.least); the naming is an AI reading and a proposal not yet in the name table"
+  },
+  {
+   "claim": "A map is 理 exactly where its 文 is a law: Determined (Image P π) ↔ GoAlike P π, equivalently some determined process carries every step read through π.",
+   "declarations": [
+    "Becoming.image_determined_iff",
+    "Becoming.carries_law_iff"
+   ],
+   "standing": "core theorems, every process and every map"
+  },
+  {
+   "claim": "Readings compose: the 文 of a 文 read through ρ is a law exactly where the composite reading ρ ∘ π gives a law; the reading that distinguishes nothing carries every law and says nothing.",
+   "declarations": [
+    "Becoming.goAlike_image_iff",
+    "Becoming.goAlike_const"
+   ],
+   "standing": "core theorems"
+  },
+  {
+   "claim": "Laws are read off the unfolding: every history is a run of the law it shows, that law is the least one it is a run of, and a determined law admits it exactly where it is consistent; along one run through a map, exactly where the steps so read are consistent.",
+   "declarations": [
+    "Becoming.Shown.run",
+    "Becoming.shown_le_iff",
+    "Becoming.exists_law_iff",
+    "Becoming.Run.law_through_iff"
+   ],
+   "standing": "core theorems with no premise (consistency is the stated condition)"
+  },
+  {
+   "claim": "What a law given before the history adds lies only in untaken moves, whose outcome no record fixes (determined process, untaken move, two configurations); the same through a map.",
+   "declarations": [
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Run.not_fixesThrough_of_untaken"
+   ],
+   "standing": "core theorems; reading of this as the idleness of an external lawgiver is AI reading (canonical chapter §1.1)"
+  },
+  {
+   "claim": "百遍: within bounded states a prefix of N + N′ − 1 fixes the course (exact); the least-bound extrapolation is right from 2N − 1 and none is right earlier on every such course; given nothing, elimination over lasso candidates fixes the whole future through the map from an explicit bound in a world a list holds.",
+   "declarations": [
+    "Becoming.Identification.bounded_agree",
+    "Becoming.Identification.bounded_agree_exact",
+    "Becoming.Identification.leastBound_exact",
+    "Becoming.Identification.rest_earliest",
+    "Becoming.Learnable.ahead_fixes"
+   ],
+   "standing": "core theorems with the stated hypotheses (StatesBelow, DecidableEq, orbit held by a list, two values)"
+  },
+  {
+   "claim": "其义: in a world a list holds, a feature is learnable through a map exactly where configurations with the same future through it have features eventually agreeing, equivalently exactly where the feature is eventually a reading of the future through the map.",
+   "declarations": [
+    "Becoming.Learnable.learnable_iff",
+    "Becoming.Learnable.learnable_iff_reading"
+   ],
+   "standing": "core theorems (DecidableEq R, world held by a list, V inhabited for the second); reading as 'internally generative' is AI reading"
+  },
+  {
+   "claim": "自见: given only the reading G, the extrapolation predicts the feature from an explicit bound; given nothing, not every learnable feature (witness); its coming to rest is unrefuted while no prefix shows it.",
+   "declarations": [
+    "Becoming.Learnable.reading_predicts",
+    "Becoming.Learnable.given_nothing_not_every",
+    "Becoming.Learning.held_rest_unrefuted",
+    "Becoming.Learning.no_prefix_fixes_next_finite"
+   ],
+   "standing": "core theorems; given_nothing_not_every is a witness in one model"
+  },
+  {
+   "claim": "Failures: a feature differing at arbitrarily late steps between configurations with the same future through the map is predicted on both by no extrapolation; every extrapolation has a diagonal course on which every proposal misses, in an open world; with no lumping, data fix no untried value.",
+   "declarations": [
+    "Becoming.Learnable.not_predicts_on_both",
+    "Becoming.Learning.diagonal_misses",
+    "Becoming.Learning.diagonal_unrested",
+    "Becoming.Learning.diagonal_open",
+    "Becoming.Learning.every_determines_nothing"
+   ],
+   "standing": "core theorems; reading of (a) as 'dualist books' is AI reading"
+  },
+  {
+   "claim": "Word sense from many occurrences: a sense stands exactly where every bearing record offers it; a form resolves exactly where records separate its sense; records only narrow; coverage makes a unique candidate the target; one omitting record can leave a wrong unique candidate.",
+   "declarations": [
+    "Becoming.CrossSituational.stands_iff",
+    "Becoming.CrossSituational.candidates_eq_iff",
+    "Becoming.CrossSituational.narrows",
+    "Becoming.CrossSituational.resolved_is_target",
+    "Becoming.CrossSituational.Omitted.wrong_unique"
+   ],
+   "standing": "core theorems; Omitted.wrong_unique is a witness"
+  },
+  {
+   "claim": "举一反三: once a move is taken at one configuration, its outcome read through the map is fixed, and where the change factors through the map into a determined law it fixes the outcome at every configuration of the class, passed or not.",
+   "declarations": [
+    "Becoming.Run.fixesThrough_of_takes",
+    "Becoming.Run.generalizes"
+   ],
+   "standing": "core theorems; correspondence to the Analects passage is 定域"
+  },
+  {
+   "claim": "Compression and generalization are one lumping: model of structure = model of change; data fix an untried value exactly where it is lumped with an observed one; the transfer is right exactly where the world goes alike across the lumping.",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Learning.transfer_right_iff"
+   ],
+   "standing": "core theorems"
+  },
+  {
+   "claim": "Memory versus a thread: keeping the whole history fixes nothing but what was done, while a law-carrying reading fixes the whole class from one occasion.",
+   "declarations": [
+    "Becoming.keepHistory_fixes_nothing_else",
+    "Becoming.Run.generalizes"
+   ],
+   "standing": "core theorems; the 一以贯之 correspondence is 定域 (AI reading)"
+  },
+  {
+   "claim": "Carrying a law is not monotone in coarseness: in the hexagram world under waxing and waning, complement pairs and parity of unbroken lines carry the law, the count of unbroken lines does not.",
+   "declarations": [
+    "Becoming.Hexagram.pairs_goAlike",
+    "Becoming.Hexagram.yang_not_goAlike",
+    "Becoming.Hexagram.yangOdd_goAlike"
+   ],
+   "standing": "witness in one model (instance layer)"
+  },
+  {
+   "claim": "The coarsest split keeping the read value and carrying the law identifies exactly the configurations with the same future through the reading; those are the configurations no extrapolation through the reading can separate; under a still law the learnable features are exactly those lumped by the reading.",
+   "declarations": [
+    "Becoming.Law.identifiesAlike_of_law",
+    "Becoming.Law.sameFuture_of_law",
+    "Becoming.Learnable.prefixes_same",
+    "Becoming.Learnable.still_learnable_iff_lumped"
+   ],
+   "standing": "core theorems; the 'one relation' framing is AI reading"
+  },
+  {
+   "claim": "The least reading is sensitivity wherever a law reads finitely many conditions under each history; the tail law has no least coupling given a decision of vanishing, and every counterexample gives WLPO.",
+   "declarations": [
+    "Becoming.ExchangeLaw.ReadsFinitely.least_coupling",
+    "Becoming.tailLaw_no_least_coupling",
+    "Becoming.wlpo_of_not_through_sensitive",
+    "Becoming.Sequences.recurs_not_verifiable"
+   ],
+   "standing": "core theorems with stated hypotheses (DecidableEq C, ReadsFinitely; decides; Nonanticipating, conditions numbered)"
+  },
+  {
+   "claim": "Knowing inside the unfolding (识): selection through couplings reaches exactly what couples in, and is selection through the classes alike through them; threshold coupling passes only whether a need is met; selections are blind beyond the coupling closure; a claim is excluded only through a difference that couples in; learning over classes is learning again with no top; readings indexed by what they read miss one.",
+   "declarations": [
+    "Becoming.Web.SelectsThrough",
+    "Becoming.Web.selects_alike_iff",
+    "Becoming.Learning.Training.web_selectsThrough_iff",
+    "Becoming.Web.alike_of_threshold",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Web.Excludes.not_of_alike",
+    "Becoming.Learning.merged_unrested",
+    "Becoming.Diagonal.gap_unsaid"
+   ],
+   "standing": "core theorems (selects_alike_iff holds by construction); contrast with 文理生生's meta-level 观/证 is AI reading"
+  },
+  {
+   "claim": "What lies beyond a knower's couplings still unfolds (witness), and the dynamics do not fix significance.",
+   "declarations": [
+    "Becoming.Clearing.unselected",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "standing": "Clearing.unselected is a witness in one model; significance_undetermined is a core theorem"
+  },
+  {
+   "claim": "Composition: courses compose through a shared intermediate configuration; in one supplied grammar a code read off two atoms and one composite evaluates every expression at any depth where the atoms differ, the composite probe is needed, and a nonuniform law agreeing on the probes fails on a novel expression; reading every sequence gives word meanings exactly where records separate them; a whole can be related while every pair is free; renaming does not change what a reading carries.",
+   "declarations": [
+    "Generative.trace_append_iff",
+    "Becoming.CodeAcquisition.acquired_every_expression",
+    "Becoming.CodeAcquisition.primitives_no_exact",
+    "Becoming.CodeAcquisition.nonuniform_fails_transfer",
+    "Becoming.CodeAcquisition.equal_primitives_unresolved",
+    "Becoming.CrossSituational.reads_every_iff",
+    "Becoming.separation_faithful_iff",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.SharedCodes.renamed_carries_iff"
+   ],
+   "standing": "core theorems except trace_append_iff (foundation layer); nonuniform_fails_transfer, equal_primitives_unresolved and whole_not_in_pairs are witnesses; CodeAcquisition is a law over one supplied grammar, not languages in general"
+  },
+  {
+   "claim": "Not established: that any actual text is internally generative; 文理生生's H2 (gain from reading these texts); that classical Chinese is the best medium for the core; a universal minimal grammar (H3); the name 文 in the name table.",
+   "declarations": [],
+   "standing": "open / proposal"
+  }
+ ],
+ "notes": "I edited no files. Every declaration cited resolves with work/resolve.py and appears in the newest core receipt, becoming-checks/20261022T040548.209667Z/verification.json (status passed). Each module involved has an empty axiom report. Hexagrams and HexagramSequences are in the instance layer; GenerativeCore (`Generative.trace_append_iff`) is in the foundation layer. I did not rerun Lean. Every classical quotation was checked character by character with ctq.py text against the frozen corpus. DS02, DS03, RU2-S-XZ22 and RU2-S-XZ17 are stored in simplified form and are quoted that way; the other sources are quoted in the form they are stored.\n\nPoints for the integrator:\n\n(1) 读书百遍而义自见 is not in the frozen corpus. Its wording comes from 文理生生's own plan (01 §八), which cites 三国志·王肃传 裴注, and the section says so.\n\n(2) The naming of 文 is a proposal, labelled 讀（AI）. The name-table row is in §一, cluster C07, anchored at `Becoming.Image`.\n- It covers WL's 文¹ and 文² as one concept relative to a map; WL's 文³ maps to our 理.\n- It also proposes rewording ZH 七·二's 經 「以其类代状之变为法，亦恰当此」 as 「其文为法，亦恰当此」; this changes no proof.\n\n(3) Tensions to know about when landing:\n- YZ already judges the whole passage 「道有变动……文不当，故吉凶生焉」 as 相分 (p-wen-budang): 等 is read as rank, and 吉凶 comes from 不当. The proposal therefore takes only the structure of 「物相杂，故曰文」 and lists 等级 and 吉凶 under 不带.\n- passages.json already records a critic note: 解老's 理 is the 形质 a reading distinguishes, and carrying a law is the theory's addition. I followed that note and marked 「理者，成物之文也」 as 定域.\n\n(4) ZH quotes RU2-S-XZ22 in traditional characters (「然則何緣而以同異？曰：緣天官」), but the frozen text is simplified, and ctq finds no exact hit for the traditional form. verify_zh.py may normalise this; I did not check.\n\n(5) Possible follow-ups:\n- the 贲彖 passage YD-JP22 is not yet mapped in YZ or the ChineseSources chapter;\n- 「其称名也小，其取类也大」 and 「一以贯之」 (RU1-S-LY 卫灵公) are new 对照 candidates;\n- 「多学而识之」 uses 识 in the remembering sense, which the name table assigns to 往, so it is not our 识.\n\nFiles relied on (absolute):\n- /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/{Mechanism,Labelled,Unfolding,Experiment,LawAlongRun,Learning,LearningRuns,Learnable,Unrolling,Identification,IdentificationRuns,Sensitivity,Selection,Testing,CrossSituational,CodeAcquisition,SharedCodes,Description,Hexagrams,HexagramSequences}.lean\n- /Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md (一·三, 一·二十, 七·一–七·三, 九·三, 九·二十八–九·三十五)\n- /Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md\n- /Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md\n- /Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv\n- /Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json\n- /Users/ren/theories/.claude/worktrees/zhonghua/sources/wenli-shengsheng-v0.4/research/references/{01,02,08,18}_*.md and README.md"
+}

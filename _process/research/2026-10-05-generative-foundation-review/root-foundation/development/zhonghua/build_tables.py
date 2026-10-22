@@ -21,7 +21,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[5]
 MODEL = ROOT / 'sources/civilization-thought-v1.0/data/model.json'
 CHAPTERS = [ROOT / 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md',
-            ROOT / 'theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md']
+            ROOT / 'theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md',
+            ROOT / 'theories/becoming/chapters/WENLI-AND-BECOMING.md']
 
 PRE = re.compile('周易|易傳|易传|道德經|道德经|老子|墨子|庄子|莊子|荀子|孟子|論語|论语|禮記|礼记|孙子|孫子|吴子|吳子|'
                  '司马法|司馬法|韓非子|韩非子|商君|公孫龍|公孙龙|郭店|帛書|尹文|鄧析|邓析|管子|鬼谷|呂氏|吕氏|國語|国语|'
@@ -232,7 +233,38 @@ def t_notadopted(P, rows, verdicts):
     return '\n'.join(out)
 
 
-TABLES = {'clusters': t_clusters, 'domains': t_domains, 'eras': t_eras, 'names': t_names, 'namelist': t_namelist,
+CROSS_LABEL = OrderedDict([('S', '同构'), ('O', '部分同构'), ('D', '同字异构'), ('NC', '两边皆不立为名'),
+                           ('ND', '本表不立、文理生生立为接口'), ('G', '虚词'), ('W', '本表未用')])
+
+
+def t_crosswalk(P, rows, verdicts):
+    """文理生生's 144 characters against the name table, by category (wenli/crosswalk.tsv, judged per character)."""
+    cw = list(csv.DictReader(open(HERE / 'wenli/crosswalk.tsv', encoding='utf-8'), delimiter='\t'))
+    out = [row(['类别', '字数', '字']), row(['---', '---:', '---'])]
+    for k, label in CROSS_LABEL.items():
+        cs = [r['字'] for r in cw if r['类别'] == k]
+        out.append(row([label, len(cs), ''.join(cs)]))
+    out.append(row(['合计', len(cw), '']))
+    return '\n'.join(out)
+
+
+def t_wl_revisions(P, rows, verdicts):
+    """The seventh pass of the name table (work/seventh-pass.json): which rows changed and how (each reason is in the file)."""
+    sys.path.insert(0, str(HERE / 'work'))
+    from simplify import simp
+    ops = json.loads((HERE / 'work/seventh-pass.json').read_text(encoding='utf-8'))
+    KIND = {'set': '立名或改行', 'note-set': '注改写', 'note-append': '注补', 'note-prepend': '注补', 'what-set': '所名改',
+            'quote-set': '引改', 'anchor-set': '锚改', 'notad-append': '不采之理由补', 'note-replace': '注改写'}
+    by = OrderedDict()
+    for o in ops:
+        by.setdefault(o['row'], []).append(KIND[o['op']])
+    out = [row(['名', '改动']), row(['---', '---'])]
+    for n, ks in by.items():
+        out.append(row([simp(n), '、'.join(OrderedDict.fromkeys(ks))]))
+    return '\n'.join(out)
+
+
+TABLES = {'crosswalk': t_crosswalk, 'wl_revisions': t_wl_revisions, 'clusters': t_clusters, 'domains': t_domains, 'eras': t_eras, 'names': t_names, 'namelist': t_namelist,
           'notadopted': t_notadopted}
 
 

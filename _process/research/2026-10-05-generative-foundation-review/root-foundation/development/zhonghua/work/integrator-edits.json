@@ -36,5 +36,17 @@
   "replace": "`Becoming.Pass.levels_unlisted`",
   "why": "LC3 (main, 21 October) put HalvingPass below the general Pass (rule 9); its laws are Pass.endless_keeps_from_rest and Pass.levels_unlisted at Halving.stock",
   "all": true
+ },
+ {
+  "id": "九·十二",
+  "find": "往（历程之前段，`Becoming.Learning.prefixOf`）所定者",
+  "replace": "往（文之前段，`Becoming.Learning.prefixOf`；一行之往，是其状与动经恒等之象逐步所成之文之前段：历是所给之序，文是所读之值，同一序列之二读）所定者",
+  "why": "WL: a run's 往 is the prefix of the 文 its states and moves give when read through the identity map; the 历 (as given) and the 文 (as read) are two readings of one sequence"
+ },
+ {
+  "id": "八·八",
+  "find": "二行于其前之往（历程之前段）全同",
+  "replace": "二行于其前之往（其状与动所成之文之前段）全同",
+  "why": "WL: a run's 往 is the prefix of the 文 its states and moves give when read through the identity map; the 历 (as given) and the 文 (as read) are two readings of one sequence"
  }
 ]
