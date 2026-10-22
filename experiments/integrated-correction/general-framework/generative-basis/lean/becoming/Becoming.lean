@@ -70,6 +70,7 @@ import Becoming.Standing
 import Becoming.Resolution
 import Becoming.Amounts
 import Becoming.LeastLoss
+import Becoming.WholeAmounts
 import Becoming.InAmounts
 import Becoming.Entropy
 import Becoming.Units
@@ -206,6 +207,7 @@ import Becoming.Reading
 import Becoming.PlaceTransitionNets
 import Becoming.SharedCodes
 import Becoming.ExchangePremises
+import Becoming.OverExchange
 import Becoming.Readings
 import Becoming.MoveFormation
 import Becoming.Sensitivity
@@ -992,6 +994,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leaves no amount falling without end, as in whole numbers, while dyadic amounts (no least fall)
   and layered amounts (not Archimedean) fall without end; and under a law that merges nothing a part's narrowing is kept by the rest, the
   possibilities being kept apart, so a part reset at every step needs a whole no list holds.
+* `Becoming.WholeAmounts` (L1): what reading amounts in whole numbers carries. In any amounts with
+  an endless fall no reading into the whole numbers keeps every strict fall, so dyadic amounts have
+  none; the halving stock is new at every step with no gain, so `Web.rises_late_of_new` fails over
+  dense amounts; a return of strength one half does not double, so `carried_doubles_roundTrip`
+  needs whole strengths. The real forms (novelty by a least separation needs gain, the frequency
+  law for every positive real strength, damping) are in the periphery's `Representation`. A leaf.
 * `Becoming.InAmounts` (L1): the rest theorem over any amounts. A world's standings, takes and
   gives read in any amounts, its activity and what takes part its own: a family balanced (no
   amount made) and dissipated on (whatever gives back all it takes takes nothing) has a total
@@ -2513,6 +2521,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   failed by another; with the rest counted, embodiment is closure and no dormancy. Requirement read
   as necessary response over a relation leaving several exchanges open gives activity needing
   support on every run; read as possible response it does not.
+* `Becoming.OverExchange` (L1): the central laws over every relation of exchange, with the four
+  tying premises discharged by the reading. Every central law needing balance and the two activity
+  premises holds of every world with its rest counted; the comparisons of two courses hold of every
+  two worlds of one kind of relatum with their rests counted, under every law of exchange over the
+  relata with the rest; every central law needing activity needing support holds of every world
+  read off a relation of exchange (its flow a run of the relation along its standings, each
+  requirement a necessary response of its exchange), which every run of every relation and the
+  course of every law are, and a world whose relatum exchanges unsupported is not. The rest theorem
+  holds with balance by the reading and the census read off the exchange where a named family closes
+  each step; under balance the rest exchanges nothing, so the laws read the world's own relata. What
+  stays a hypothesis is a state of the law (dissipation, embodiment, bounded transmission,
+  enclosure, feasibility) or the law's own. A leaf: it instantiates, and nothing builds on the
+  instances.
 * `Becoming.PlaceTransitionNets` (L1): place/transition nets (Petri nets; reaction networks with
   whole-number counts), a formalism defined outside the theory by its own rules, read on the
   spine. The net is a law of exchange reading nothing, its course along a schedule is its flow,

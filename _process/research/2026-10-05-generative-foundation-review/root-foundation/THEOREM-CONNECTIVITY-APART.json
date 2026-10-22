@@ -1547,11 +1547,6 @@
    "category": "general-structure",
    "reason": "the family law of rest for any amounts, with the bound of the stock by m least losses named; the base reads amounts only as whole numbers, where it is used in its Archimedean form, Amounts.family_rests_of_archimedean, by Flow.taking_not_recurring_whole"
   },
-  "Becoming.Dyadic.half_below": {
-   "module": "Becoming.LeastLoss",
-   "category": "model-witness",
-   "reason": "density of the dyadic amounts: below every amount above nothing lies its half, above nothing; a fact about one constructed model of the amounts, which the base does not read"
-  },
   "Becoming.Amounts.whole_losing_steps": {
    "module": "Becoming.Amounts",
    "category": "general-structure",
@@ -2531,6 +2526,21 @@
    "module": "Becoming.Significance",
    "category": "general-structure",
    "reason": "a law of every significance on any formations decided at each point: excluding every rival is the continuation condition; the significance is supplied, not read off a world"
+  },
+  "Becoming.Dyadic.half_return": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "in the dyadic model of the amounts a return of strength one half rises and stays below twice what it was: the dense counterexample to carried_doubles_roundTrip, a fact about one constructed model the base does not read (it uses half_below, the density of the dyadics)"
+  },
+  "Becoming.Halving.new_without_gain": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the halving stock of the dyadic model is new at every step, never rises and stays within one: the dense counterexample to Web.rises_late_of_new, a fact about one constructed model the base does not read"
+  },
+  "Becoming.Halving.no_whole_reading": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the dyadic amounts have no whole-number reading keeping strict falls, the instance of Amounts.no_whole_reading at the halving model"
   }
  },
  "instances": {
