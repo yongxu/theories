@@ -29,7 +29,7 @@ def sha(path):
 def declared(module):
     found = [m for m in R['modules'] if m['module'] == module]
     assert len(found) == 1, module
-    assert not found[0]['axiom_dependencies'], (module, found[0]['axiom_dependencies'])
+    assert not any(found[0]['axiom_dependencies'].values()), module
     return {d['name'] for d in found[0]['declarations']}, found[0]
 
 
