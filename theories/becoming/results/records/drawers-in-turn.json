@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-22T04:54:10+00:00",
   "statement": {
-    "en": "Drawers in turn are one model, each with a floor, on one law of best response: what a drawer keeps above its floor returns to it at least one for one; so with no floor and two or more drawers revision and perfection both draw everything.",
-    "zh": "轮流的抽取者是一个模型，各有下限，依一条最优回应之律：抽取者在下限之上所留至少一对一地回到自身；故无下限且两个及以上抽取者时，修订与完美都全部抽取。"
+    "en": "Drawers in turn are one model, each with a floor, on one law of best response: what a drawer keeps above its floor returns to it at least one for one; so where two drawers have no floor, revision and perfection both come to the floors, whatever the others' floors.",
+    "zh": "轮流的抽取者是一个模型，各有下限，依一条最优回应之律：抽取者在下限之上所留至少一对一地回到自身；故两个抽取者无下限时，不论其他下限，修订与完美都达到下限组合。"
   },
   "laws": [
     {
@@ -38,15 +38,17 @@
       ]
     },
     {
-      "en": "With no floor and two or more drawers, every drawer after the first draws nothing later and what the first leaves goes to the second: every sequence of revisions draws everything from round 2N on, a revision always exists, and every perfect profile draws everything.",
-      "zh": "无下限且两个及以上抽取者时，第一者之后的每者此后不抽，第一者所留归第二者：每个修订序列自第 2N 轮起全部抽取，修订总存在，每个完美组合全部抽取。",
+      "en": "Where two drawers have no floor, whatever the others' floors, what any drawer keeps passes through one of them, so nothing returns: every sequence of revisions reaches the floor profile, a revision always exists, and every perfect profile is the floor profile, which is perfect; with no floor anywhere that is drawing everything.",
+      "zh": "两个抽取者无下限时，不论其他下限，任一抽取者所留经过其一，故不回到自身：每个修订序列达到下限组合，修订总存在，每个完美组合即下限组合且它完美；处处无下限即全部抽取。",
       "declarations": [
         "Becoming.Optimum.InTurn.pass_zero",
-        "Becoming.Optimum.InTurn.pass_of_first",
-        "Becoming.Optimum.InTurn.others_draw_nothing",
-        "Becoming.Optimum.InTurn.revisions_end",
-        "Becoming.Optimum.InTurn.perfect_ends",
-        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.pass_through",
+        "Becoming.Optimum.InTurn.after_draw_nothing",
+        "Becoming.Optimum.InTurn.floor_after",
+        "Becoming.Optimum.InTurn.floor_through",
+        "Becoming.Optimum.InTurn.revisions_reach_floors",
+        "Becoming.Optimum.InTurn.perfect_at_floors",
+        "Becoming.Optimum.InTurn.floors_perfect",
         "Becoming.Optimum.InTurn.bestUpTo",
         "Becoming.Optimum.InTurn.bestUpTo_le",
         "Becoming.Optimum.InTurn.bestUpTo_max",
@@ -55,14 +57,14 @@
         "Becoming.Optimum.InTurn.revise_revises",
         "Becoming.Optimum.InTurn.revised",
         "Becoming.Optimum.InTurn.revised_leaves",
-        "Becoming.Optimum.InTurn.revised_draw_all"
+        "Becoming.Optimum.InTurn.revised_at_floors"
       ]
     },
     {
-      "en": "Where the first drawer leaves nothing the base stands at what stands at nothing, and on a web every dependence above it, met at the start, is broken at the first step.",
-      "zh": "第一者不留之处，基础立于零处所立者；在网上，起始时被满足、高于它的每个依存在第一步被打破。",
+      "en": "Where a drawer leaves nothing the base stands at what stands at nothing, and on a web every dependence above it, met at the start, is broken at the first step.",
+      "zh": "某抽取者不留之处，基础立于零处所立者；在网上，起始时被满足、高于它的每个依存在第一步被打破。",
       "declarations": [
-        "Becoming.Optimum.InTurn.levels_of_first",
+        "Becoming.Optimum.InTurn.levels_through",
         "Becoming.Web.drained_broken"
       ]
     },
@@ -86,14 +88,14 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Any law G of what stands; k drawers in turn at each step, each leaving between its floor and what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; for the drain and the revision no floor and k at least two, the start leaving at most what it is given; natural amounts, discrete steps.",
-      "zh": "不加公理。任一所立之律 G；每步 k 个轮流的抽取者，各自留于其下限与所给之间；其后各步之和；规则读取抽取者、步与水平；抽干与修订无下限且 k 至少为二，起始组合至多留所给；自然数量，离散步。"
+      "en": "No axiom. Any law G of what stands; k drawers in turn at each step, each leaving between its floor and what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; for the drain and the revision two drawers with no floor, the start leaving at most what it is given; natural amounts, discrete steps.",
+      "zh": "不加公理。任一所立之律 G；每步 k 个轮流的抽取者，各自留于其下限与所给之间；其后各步之和；规则读取抽取者、步与水平；抽干与修订两个抽取者无下限，起始组合至多留所给；自然数量，离散步。"
     }
   ],
   "does_not_show": [
     {
-      "en": "Drawing at once with a rule of sharing; which profiles are perfect where a floor binds away from the last step.",
-      "zh": "按分享规则同时抽取；下限起作用时最后一步之外何种组合完美。",
+      "en": "Drawing at once with a rule of sharing; which profiles are perfect where at most one drawer has no floor, away from the last step.",
+      "zh": "按分享规则同时抽取；至多一个抽取者无下限时最后一步之外何种组合完美。",
       "kind": "scope"
     },
     {
@@ -121,8 +123,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T045034.169350Z）：所引每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 335 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Drawing at once with a rule of sharing; perfect profiles where a floor binds; an independent review.",
-    "zh": "按分享规则同时抽取；下限起作用时的完美组合；独立审查。"
+    "en": "Drawing at once with a rule of sharing; perfect profiles where at most one drawer is free; an independent review.",
+    "zh": "按分享规则同时抽取；至多一个抽取者无下限时的完美组合；独立审查。"
   },
   "correspondence": {
     "en": "The optimality condition of dynamic programming (Bellman 1957); the dynamic commons (Levhari and Mirman 1980); backward induction (Selten 1965); best-response dynamics (Fudenberg and Levine 1998).",
@@ -134,7 +136,7 @@
     "one model of drawers in turn",
     "轮流的抽取者",
     "Becoming.Optimum.InTurn.kept_returns",
-    "Becoming.Optimum.InTurn.revisions_end"
+    "Becoming.Optimum.InTurn.revisions_reach_floors"
   ],
   "dependencies": [],
   "related": [
@@ -188,34 +190,36 @@
         "Becoming.Optimum.Holding.twice_sum",
         "Becoming.Optimum.InTurn.Perfect",
         "Becoming.Optimum.InTurn.Revises",
+        "Becoming.Optimum.InTurn.after_draw_nothing",
         "Becoming.Optimum.InTurn.at_floor",
         "Becoming.Optimum.InTurn.bestUpTo",
         "Becoming.Optimum.InTurn.bestUpTo_le",
         "Becoming.Optimum.InTurn.bestUpTo_max",
         "Becoming.Optimum.InTurn.best_from",
         "Becoming.Optimum.InTurn.drawn",
+        "Becoming.Optimum.InTurn.floor_after",
+        "Becoming.Optimum.InTurn.floor_through",
+        "Becoming.Optimum.InTurn.floors_perfect",
         "Becoming.Optimum.InTurn.kept_returns",
         "Becoming.Optimum.InTurn.last_at_floor",
         "Becoming.Optimum.InTurn.later",
         "Becoming.Optimum.InTurn.leaves_floor",
         "Becoming.Optimum.InTurn.levels",
-        "Becoming.Optimum.InTurn.levels_of_first",
+        "Becoming.Optimum.InTurn.levels_through",
         "Becoming.Optimum.InTurn.next",
-        "Becoming.Optimum.InTurn.others_draw_nothing",
         "Becoming.Optimum.InTurn.pass",
-        "Becoming.Optimum.InTurn.pass_of_first",
+        "Becoming.Optimum.InTurn.pass_through",
         "Becoming.Optimum.InTurn.pass_zero",
-        "Becoming.Optimum.InTurn.perfect_ends",
-        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.perfect_at_floors",
         "Becoming.Optimum.InTurn.revise",
         "Becoming.Optimum.InTurn.revise_revises",
         "Becoming.Optimum.InTurn.revised",
-        "Becoming.Optimum.InTurn.revised_draw_all",
+        "Becoming.Optimum.InTurn.revised_at_floors",
         "Becoming.Optimum.InTurn.revised_leaves",
-        "Becoming.Optimum.InTurn.revisions_end",
+        "Becoming.Optimum.InTurn.revisions_reach_floors",
         "Becoming.Web.drained_broken"
       ],
-      "sha256": "e9523bee6cf0f7ba706f04ae10c3a57268fca0259fed0db9a81dd0eb0ef1ddcc"
+      "sha256": "d5297a0ed29f810cdbe7559b77917cfae485e0dc31496f8e5c733b9452ac86a8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
@@ -235,13 +239,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "07480c3fde0ba5298b69503733972d3348b7f9a5f6c1c9ea1da2af6ac1ead4ce"
+      "sha256": "3e9a25dfeff8cfea1680acd3e986f7ffa06f873a388f5a48524e08f624c36603"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json",
+      "role": "receipt",
+      "sha256": "09bc4969c4386206e3d877defc9e5c2e4a8327ceac4ec437cf03d82011f4758d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -251,6 +261,10 @@
     {
       "en": "22 October 2026: added (UM), one model of drawers in turn with floors on one law of best response, superseding drawers-in-turn-draw-everything, revision-comes-to-drawing-everything, drawers-in-turn-within-capacities, any-number-of-drawers-in-turn; study section 335.",
       "zh": "2026年10月22日：新增（UM），依一条最优回应之律、各有下限的轮流抽取者的一个模型，取代 drawers-in-turn-draw-everything、revision-comes-to-drawing-everything、drawers-in-turn-within-capacities、any-number-of-drawers-in-turn；研究第 335 节。"
+    },
+    {
+      "en": "22 October 2026, UM2: the drain's premise generalized from no floor anywhere to two drawers with no floor, whatever the others' floors; every perfect profile is then the floor profile and revision reaches it; the laws with no floor anywhere replaced by their general forms (study section 336).",
+      "zh": "2026年10月22日，UM2：抽干的前提由处处无下限推广为两个抽取者无下限，不论其他下限；此时每个完美组合即下限组合，修订达到它；处处无下限之律由其一般形式取代（研究第 336 节）。"
     }
   ]
 }

@@ -1509,9 +1509,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   rebuilt alone and ended with others drawing first, under the same weights.
   Drawers in turn, one model: k drawers each leaving at least a floor, a profile perfect where it
   revises itself; one law, that a best response keeps above its floor only what returns to it
-  one for one, gives drawing to capacity wherever what is drawn later is fixed and, with no floor
-  and two or more drawers, every perfect profile and every revision from round 2N on drawing
-  everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
+  one for one, gives drawing to capacity wherever what is drawn later is fixed and, where two
+  drawers have no floor, whatever the others' floors, every perfect profile the floor profile and
+  every revision reaching it; with no floor anywhere, drawing everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
   the dweller; under doubling a one-unit floor on the second keeps it.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the

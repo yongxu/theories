@@ -100,6 +100,7 @@ The most rapid approach path: with a linear objective, the optimal path from a s
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 
 Aliases: `every optimum rebuilds a depleted base`, `rebuilding from below`, `the most rapid approach path`, `a course gaining the most against every open course`, `每个最优都重建耗竭的基础`, `Becoming.Optimum.frontier_rebuilds`, `Becoming.Optimum.rebuilding_frontier`, `Becoming.Web.frontier_rebuilds`
 
