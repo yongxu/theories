@@ -1,0 +1,176 @@
+{
+  "schema_version": 2,
+  "id": "what-the-dynamics-leave-open",
+  "title": {
+    "en": "What the dynamics leave open of the continuation condition, and what closes it",
+    "zh": "动力于延续条件所留之开放，与何者闭之"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T10:39:27+00:00",
+  "statement": {
+    "en": "No statement that reads only the dynamics excludes a rival or, given a standpoint and a formation, entails the continuation condition. A rival is exactly a point lacking significance; a premise excludes every rival exactly where no point lacks significance, the condition where each point is decided.",
+    "zh": "只读动力之陈述不排除任何对手，有立场与形成处亦不推出延续之条件。对手恰是某处缺意义；一前提排除一切对手恰当其推出无处缺意义，每处意义已定处即为条件。"
+  },
+  "laws": [
+    {
+      "en": "A statement about a dynamics (a world, a web, a flow or any other) and a significance reads only the dynamics when its truth does not change with the significance; every statement about the dynamics alone does. Such a statement holding with some significance holds with a significance bounded by any region with a formation outside it, which is a rival and not the condition; where there is a standpoint and a formation, such a statement entailing the condition holds of nothing.",
+      "zh": "关于一动力（世界、网、流或其他）与一意义之陈述，其真不随意义而变，则只读动力；凡仅关于动力之陈述皆然。此类陈述以某意义成立，则以任一有形成在外之域所界之意义亦成立，此为对手而非条件；有立场与形成处，推出条件之此类陈述无所成立。",
+      "declarations": [
+        "Becoming.ReadsOnlyDynamics",
+        "Becoming.readsOnlyDynamics_of",
+        "Becoming.ReadsOnlyDynamics.admits_rival",
+        "Becoming.ReadsOnlyDynamics.not_entails"
+      ]
+    },
+    {
+      "en": "A rival, a significance holding exactly within a region of standpoints, steps and formations with a point outside, is exactly a point lacking significance. The condition excludes every rival; excluding every rival is that no point lacks significance, and a premise excludes every rival exactly where it implies this; where significance at each point is decided, excluding every rival is the condition. Over every significance, with a standpoint and a formation, that excluding every rival gives the condition is exactly double-negation elimination.",
+      "zh": "对手，即恰在立场、步与形成之一域内成立而域外有点之意义，恰是某处缺意义。条件排除一切对手；排除一切对手即无处缺意义，一前提排除一切对手恰当其推出此；每处意义已定处，排除一切对手即条件。遍及一切意义，有立场与形成时，排除一切对手推出条件恰为双重否定之消去。",
+      "declarations": [
+        "Becoming.Rival",
+        "Becoming.rival_iff_lacks",
+        "Becoming.bounded_is_rival",
+        "Becoming.Unrestricted.not_rival",
+        "Becoming.not_rival_iff",
+        "Becoming.excludes_rivals_iff",
+        "Becoming.unrestricted_iff_not_rival",
+        "Becoming.not_rival_unrestricted_iff_stable"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A statement reading only the dynamics is given as a predicate on a dynamics and a significance whose truth does not change with the significance; decidedness of significance at each point is a hypothesis where stated.",
+      "zh": "不加公理。只读动力之陈述以一动力与一意义之谓词给出，其真不随意义而变；每处意义已定只在所述处为前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every law stated on World, Web or Flow reads only the dynamics: that holds because significance is not a field of them, a fact about the representation, not a theorem here.",
+      "zh": "凡陈述于 World、Web 或 Flow 之律皆只读动力：此因意义非其字段而成立，为表示之事实，非此处之定理。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the continuation condition holds, or that it is needed: the results locate what a proof of it would need, a premise about significance excluding every rival, and the theory asserts none.",
+      "zh": "延续之条件成立，或其为必需：诸结果只指明其证明所需者，即一排除一切对手之关于意义之前提，理论不主张之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That all ethics rests on this ground: the order of courses (C) and practical judgment are separate premises.",
+      "zh": "一切伦理以此为基：诸历程之次序（C）与实践判断为别立之前提。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T103619.721318Z): the 12 declarations cited here have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 347; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T103619.721318Z）：本记录所引 12 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 347 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review; whether a premise about significance that excludes every rival has a warrant (the chapter's open question of warrant).",
+    "zh": "独立审查；排除一切对手之关于意义之前提是否有据（章中关于依据之开放问题）。"
+  },
+  "correspondence": {
+    "en": "Hume's is–ought gap, stated for the represented dynamics: no statement about the dynamics alone fixes significance; independence of a parameter from the laws that do not read it.",
+    "zh": "休谟之是与应当之隔，就所表示之动力而言：仅关于动力之陈述不定意义；参数独立于不读它之律。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+  "aliases": [
+    "Becoming.ReadsOnlyDynamics",
+    "Becoming.readsOnlyDynamics_of",
+    "Becoming.ReadsOnlyDynamics.admits_rival",
+    "Becoming.ReadsOnlyDynamics.not_entails",
+    "Becoming.Rival",
+    "Becoming.rival_iff_lacks",
+    "Becoming.bounded_is_rival",
+    "Becoming.Unrestricted.not_rival",
+    "Becoming.not_rival_iff",
+    "Becoming.excludes_rivals_iff",
+    "Becoming.unrestricted_iff_not_rival",
+    "Becoming.not_rival_unrestricted_iff_stable"
+  ],
+  "dependencies": [
+    {
+      "id": "rivals-bounded-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ReadsOnlyDynamics.admits_rival uses bounded_rival for the rival it admits; rival_iff_lacks has rival_of_outside as its case.",
+        "zh": "ReadsOnlyDynamics.admits_rival 用 bounded_rival 得其所容之对手；rival_iff_lacks 以 rival_of_outside 为其情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "continuation-condition-yields-living-significance",
+      "detail": {
+        "en": "Web.significance_undetermined evaluates two constant significances on a web; this record states the non-entailment for every statement reading only the dynamics.",
+        "zh": "Web.significance_undetermined 于一网上评两常意义；本记录就一切只读动力之陈述述其不推出。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadsOnlyDynamics",
+        "Becoming.ReadsOnlyDynamics.admits_rival",
+        "Becoming.ReadsOnlyDynamics.not_entails",
+        "Becoming.Rival",
+        "Becoming.Unrestricted.not_rival",
+        "Becoming.bounded_is_rival",
+        "Becoming.excludes_rivals_iff",
+        "Becoming.not_rival_iff",
+        "Becoming.not_rival_unrestricted_iff_stable",
+        "Becoming.readsOnlyDynamics_of",
+        "Becoming.rival_iff_lacks",
+        "Becoming.unrestricted_iff_not_rival"
+      ],
+      "sha256": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b95161950a33c0786cd1b0deb2afc0d821998ca4a4420c3a594d048252c57fb"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e4417464cfefdb4383af402b6d0a59a86469ae5a83c932f6a189e54600ca933d"
+    },
+    {
+      "path": "theories/becoming/OPENING.md",
+      "role": "statement",
+      "sha256": "ad8f76dcaa271d3a7e8b81926fc78f07d44e759cc5265ae19501dbd0782e9b39"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "1bef43732cf2f391b28fa6154bb058c55eb213835405e69880b240912997fa13"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Significance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SD1), for README note [^ethics], which had stated outside Lean that a rival is consistent with every law of the dynamics; study section 347.",
+      "zh": "2026年10月22日：新增（SD1），为 README 注 [^ethics]，该注原于 Lean 之外陈述对手与动力之一切律相容；研究第 347 节。"
+    }
+  ]
+}
