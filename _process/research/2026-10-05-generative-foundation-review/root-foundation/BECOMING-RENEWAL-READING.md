@@ -15510,3 +15510,42 @@ Output → input: OPENING [^ethics] (README note 8), chapter §5 (Web.significan
 **Self-review.** The independence theorems are thin by design: their content lies in the quantifier, every statement whose truth does not change with the significance, and the record says which part is the representation. They replace a meta-theoretic sentence by a stated theorem; they do not show that becoming leaves significance undetermined, nor that the condition is needed. Names: `Rival` takes the existing word of `rival_of_outside` and `bounded_rival`; `ReadsOnlyDynamics` states exactly what the hypothesis is. `Web.significance_undetermined` is not a case (it reads `Retains` and `Significant`, which take the significance), so rule 9 moves nothing.
 
 **The run.** Core closure passed with no core axiom; 73 Lean steps ran, 1,131 reused.
+
+## 348. Balance from the first law (FL1)
+
+```text
+Result(s): balance-from-the-first-law (new); reused: least-loss-from-entropy-production (ExergyBalance,
+           SecondLaw, Irreversible, gainless_of_secondLaw, dissipative_of_irreversible); related:
+           premises-read-off-the-exchange, place-transition-nets-on-the-spine, entropy-history-and-record
+Delta: the physical premise of balance, the other half of §201. A quantity carried only by the exchanges
+       taking part balances the levels exactly where no condition produces it; a conserved total without
+       locality does not. Read in available work, the first law and the entropy balance at each store give
+       Flow.Balances exactly where no store generates entropy, and at each exchange give §201's
+       ExergyBalance, the destroyed exergy T0 times the generated entropy. §201's exergy balance is no
+       longer a separate premise: balance and least loss come from one reading.
+Supplied premises / correspondence: amounts read as available work relative to one environment at
+       T0 > 0, at fixed volume and composition; locality (one transfer per exchange and store, what leaves
+       the one entering the other); each exchange holds nothing across its step; each a hypothesis of a
+       theorem and a correspondence to physics, not proved
+Evidence: periphery module EntropyProduction (now 44 theorems, 74 declarations; Lean 4.30.0-rc2 and the
+          pinned Mathlib; axioms propext, Classical.choice, Quot.sound only), periphery receipt
+          `20261022T103802.432439Z`, checker check_entropy_production.py; the core modules it imports
+          match passed receipts
+Boundary: the step from physics to the Lean; changing volume or composition; amounts that may be dense;
+          a core (prelude-only) form
+Integration: least-loss-from-entropy-production re-pointed and related; OPENING [^conditions]; chapter
+          premise card C and §8.7 (EN, ZH)
+```
+
+The question was whether balance should come from conservation of energy, as dissipation comes from the second law in §201. §201 left it without physics: "Balance needs no bridge (it holds by reading, premise card C)". That is true of a world read off an exchange, but the reading relocates the premise rather than removing it: with the rest counted, balance holds exactly where the rest is never active, and under a law of what has stood exactly where the course is feasible (`World.withRest_closed_iff`, `ExchangeLaw.course_balances_iff`). What says that the counted exchanges are all there is, and that nothing on a condition changes by itself, is physics, and it was nowhere stated.
+
+**Why energy conservation alone is not it.** Three things stand between "energy is conserved" and `Flow.Balances`. Conservation of a total says nothing about one condition: the total over two conditions can stay fixed while a unit moves between them with no exchange (`Teleport.conserved_not_balanced`), so the premise is locality, the continuity equation, not the global law. The levels the dissipation half reads are available work, not energy (§201's move: energy is conserved, so with the environment counted every exchange is lossless), and available work is not conserved: a store that keeps its energy and degrades within itself loses level with no exchange (`Leaking.energy_conserved_not_balanced`). And the conditions are not all energy: mass of an element and a count of individuals obey the same local balance, so the core keeps `Flow.Balances` general and the periphery gives its physical sources.
+
+**What is proved** (each a theorem of `EntropyProduction`, from the stated hypotheses):
+
+- *Balance is local conservation.* `LocalBalance L q x p`: what stands on a condition changes by what the exchanges present carry out of it and what it produces itself. Read at a unit `u > 0` on the levels and the exchanges, what a condition produces is `u` times its departure from balance (`LocalBalance.produced`), so the levels balance exactly where nothing is produced (`balances_iff_unproduced`), and every quantity conserved locally balances (`balances_of_conserved`).
+- *Stores.* The first law and the entropy balance at each store (`StoreLaws`: energy a local balance with no source, entropy one with the store's own generation `g` as source) give available work `E − T0 S` a local balance carried as `e − T0 s` with source `−T0 g` (`StoreLaws.availableWork`, Gouy–Stodola at the store). So with `T0 > 0` the levels balance exactly where no store generates entropy (`balances_iff_stores_generate_nothing`), and where none generates negative entropy no level rises beyond what the exchanges bring (`stores_within`).
+- *Exchanges.* The first law and the entropy balance at each exchange that holds nothing across its step, its heat passing to the environment (`ExchangeLaws`), give §201's `ExergyBalance` with `σ = T0 γ` (`exergyBalance_of_laws`); generation never negative gives `SecondLaw`, and generation whenever it takes gives `Irreversible` (`secondLaw_of_generation`, `irreversible_of_generation`). Heat drawn from the environment carries no available work, so §201's worry that heat from outside gives a formation more than it took does not arise in this reading.
+- *One reading.* `balance_and_least_loss`: under the store and exchange laws with one transfer read on both sides, the levels balance exactly where no store generates entropy, the flow is gainless where no exchange generates negative entropy, and dissipative where every taking exchange generates some. In `Burning` (one store, one exchange that takes its unit and passes it as heat) all the premises hold together, and the flow balances and is dissipative (`Burning.meets`, `Burning.balanced_and_dissipative`), so the hypotheses are not jointly empty.
+
+**What it does not do.** Balance is not thereby a theorem of the dynamics: it is relocated to the first law with locality and to a reading of amounts, which stay hypotheses and a correspondence. Stores whose volume or composition changes carry pressure and chemical terms of available work that are not represented, and levels are whole numbers, so a store's available work is read as a whole number of units; amounts that may be dense are the next step, with a core form needing no Mathlib.

@@ -1,0 +1,363 @@
+{
+  "schema_version": 2,
+  "id": "balance-from-the-first-law",
+  "title": {
+    "en": "Balance from the first law",
+    "zh": "第一定律给出的平衡"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
+  "statement": {
+    "en": "A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, the first law and the entropy balance give balance where no store generates entropy, and the exchanges' exergy balance: balance and least loss from one reading.",
+    "zh": "只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，第一定律与熵平衡在没有储存生熵之处给出平衡，也给出交换的㶲平衡：平衡与最小损失出自同一读法。"
+  },
+  "laws": [
+    {
+      "en": "A quantity held on the conditions obeys a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance.",
+      "zh": "条件上所持的量服从局部平衡：每一步中，条件上所立者的变化，等于在场交换从它带出的，加上条件自身产生的。以单位 u > 0 读水平与交换，条件所产生的，正是 u 乘以它偏离平衡之数。",
+      "declarations": [
+        "Becoming.EntropyProduction.LocalBalance",
+        "Becoming.EntropyProduction.ReadsLevels",
+        "Becoming.EntropyProduction.ReadsTransfers",
+        "Becoming.EntropyProduction.ReadsTransfers.carried",
+        "Becoming.EntropyProduction.LocalBalance.produced"
+      ]
+    },
+    {
+      "en": "Balance is local conservation: the levels balance exactly where no condition produces the quantity, so a quantity conserved locally and carried only by the exchanges taking part, as energy, the mass of an element or a count of individuals, balances the levels it is read on.",
+      "zh": "平衡即局部守恒：恰在没有条件产生该量之处，水平平衡；故凡局部守恒、只由参与的交换携带的量（能量、某元素的质量、个体之数），都使其所读的水平平衡。",
+      "declarations": [
+        "Becoming.EntropyProduction.balances_iff_unproduced",
+        "Becoming.EntropyProduction.balances_of_conserved"
+      ]
+    },
+    {
+      "en": "Conservation of the total does not give balance: in Teleport one unit moves between two conditions with no exchange taking part; the total stays one and the levels do not balance. Locality is the premise.",
+      "zh": "总量守恒不给出平衡：在 Teleport 中，一个单位在两个条件之间移动而没有交换参与，总量保持为一，水平却不平衡。前提是局部性。",
+      "declarations": [
+        "Becoming.EntropyProduction.Teleport.flow",
+        "Becoming.EntropyProduction.Teleport.web",
+        "Becoming.EntropyProduction.Teleport.conserved_not_balanced"
+      ]
+    },
+    {
+      "en": "With the first law and the entropy balance at each store, available work relative to an environment at T0 is carried as e − T0 s and destroyed within a store as T0 times the entropy it generates. With T0 > 0 the levels balance exactly where no store generates entropy, and where none generates negative entropy no level rises beyond what the exchanges bring.",
+      "zh": "每个储存满足第一定律与熵平衡时，相对于温度 T0 的环境的可用功以 e − T0 s 被携带，在储存内部以 T0 乘其所生之熵被毁。T0 > 0 时，恰在没有储存生熵之处水平平衡；在没有储存生负熵之处，没有水平超出交换所带来的而上升。",
+      "declarations": [
+        "Becoming.EntropyProduction.StoreLaws",
+        "Becoming.EntropyProduction.StoreLaws.availableWork",
+        "Becoming.EntropyProduction.balances_iff_stores_generate_nothing",
+        "Becoming.EntropyProduction.stores_within"
+      ]
+    },
+    {
+      "en": "With the first law and the entropy balance at each exchange, which holds nothing across its step and passes heat to the environment, each exchange meets the exergy balance, the exergy it destroys being T0 times the entropy it generates. Generation never negative gives the second law there, and generation whenever it takes gives irreversibility.",
+      "zh": "每个交换满足第一定律与熵平衡、一步之中不持有任何量、把热交给环境时，每个交换满足㶲平衡，其所毁之㶲为 T0 乘其所生之熵。生熵从不为负，在那里给出第二定律；凡取用即生熵，给出不可逆。",
+      "declarations": [
+        "Becoming.EntropyProduction.ExchangeLaws",
+        "Becoming.EntropyProduction.exergyBalance_of_laws",
+        "Becoming.EntropyProduction.secondLaw_of_generation",
+        "Becoming.EntropyProduction.irreversible_of_generation"
+      ]
+    },
+    {
+      "en": "From one reading: the levels balance where no store generates entropy, nothing comes from nothing at the unit where no exchange generates negative entropy, and the flow is dissipative where every taking exchange generates some. In Burning all these premises hold together, and the flow balances and is dissipative.",
+      "zh": "出自同一读法：在没有储存生熵之处水平平衡；在没有交换生负熵之处，在单位上无中不生有；在每个取用的交换都生熵之处，流是耗散的。在 Burning 中这些前提一起成立，流既平衡又耗散。",
+      "declarations": [
+        "Becoming.EntropyProduction.balance_and_least_loss",
+        "Becoming.EntropyProduction.Burning.flow",
+        "Becoming.EntropyProduction.Burning.web",
+        "Becoming.EntropyProduction.Burning.energy",
+        "Becoming.EntropyProduction.Burning.entropy",
+        "Becoming.EntropyProduction.Burning.energyDrawn",
+        "Becoming.EntropyProduction.Burning.entropyDrawn",
+        "Becoming.EntropyProduction.Burning.storeGenerates",
+        "Becoming.EntropyProduction.Burning.heat",
+        "Becoming.EntropyProduction.Burning.generates",
+        "Becoming.EntropyProduction.Burning.family",
+        "Becoming.EntropyProduction.Burning.meets",
+        "Becoming.EntropyProduction.Burning.balanced_and_dissipative"
+      ]
+    },
+    {
+      "en": "Energy conserved at each store does not give balance in available work: in Leaking a store keeps its energy and generates entropy within itself, and its level falls with no exchange taking part.",
+      "zh": "每个储存的能量守恒，并不给出以可用功计的平衡：在 Leaking 中，一个储存保持其能量而在内部生熵，其水平在没有交换参与时下降。",
+      "declarations": [
+        "Becoming.EntropyProduction.Leaking.flow",
+        "Becoming.EntropyProduction.Leaking.web",
+        "Becoming.EntropyProduction.Leaking.entropy",
+        "Becoming.EntropyProduction.Leaking.storeGenerates",
+        "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Each unit of amount is read as u > 0 of a quantity; in the physical instance, of available work relative to one environment at temperature T0 > 0. Energies, entropies, transfers and heat are reals. These are hypotheses of the theorems, read as physics by correspondence, not axioms.",
+      "zh": "每单位的量读作 u > 0 的某个量；在物理实例中，读作相对于温度 T0 > 0 的一个环境的可用功。能量、熵、传递与热都是实数。这些是定理的假设，经对应读作物理，不是公理。"
+    },
+    {
+      "en": "Locality: a store's energy and entropy change only through the exchanges taking part at the step, and one transfer per exchange and store is what leaves the one and enters the other. A store that degrades within itself generates entropy there.",
+      "zh": "局部性：储存的能量与熵只经由该步参与的交换而变化，每一对交换与储存只有一个传递，离开一方者即进入另一方。在内部退化的储存在那里生熵。"
+    },
+    {
+      "en": "Each exchange holds nothing across its step: over a closed family, the energy it draws leaves as heat to the environment, and the entropy it draws, with the entropy it generates, leaves with that heat.",
+      "zh": "每个交换在一步之中不持有任何量：在一个闭合的族上，它取得的能量作为热交给环境，它取得的熵连同它所生的熵随这热而去。"
+    },
+    {
+      "en": "A store's available work is read as E − T0 S, its energy and entropy measured from its state at equilibrium with the environment, at fixed volume and composition.",
+      "zh": "储存的可用功读作 E − T0 S，其能量与熵从它与环境平衡的状态量起，体积与组成固定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual system's stores and exchanges meet these laws, or that its amounts are available work: the step from physics to the Lean is a stated correspondence.",
+      "zh": "任何实际系统的储存与交换满足这些规律，或其量是可用功：从物理到 Lean 的一步是陈述的对应。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That conservation of a total gives balance: without locality it does not.",
+      "zh": "总量守恒给出平衡：没有局部性就不给出。",
+      "kind": "non-implication",
+      "witness": "Becoming.EntropyProduction.Teleport.conserved_not_balanced"
+    },
+    {
+      "en": "That energy conserved at each store gives balance in available work: a store generating entropy within itself keeps its energy and loses level.",
+      "zh": "每个储存的能量守恒给出以可用功计的平衡：在内部生熵的储存保持能量而失去水平。",
+      "kind": "non-implication",
+      "witness": "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced"
+    },
+    {
+      "en": "That balance is a theorem of the dynamics: it is relocated to the first law with locality, which stays a premise about what is represented.",
+      "zh": "平衡是动力学的定理：它被移到带局部性的第一定律上，这仍是关于所表示者的前提。",
+      "kind": "scope"
+    },
+    {
+      "en": "Stores whose volume or composition changes: the pressure and chemical terms of available work are not represented.",
+      "zh": "体积或组成变化的储存：可用功的压力项与化学项没有表示。",
+      "kind": "scope"
+    },
+    {
+      "en": "Amounts that may be dense: levels are whole numbers, so each store's available work is read as a whole number of units.",
+      "zh": "可稠密的量：水平是整数，故每个储存的可用功读作整数个单位。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+      "detail": {
+        "en": "Teleport: the total over two conditions stays one while one unit moves between them with no exchange, and the levels do not balance (Teleport.conserved_not_balanced).",
+        "zh": "Teleport：两个条件上的总量保持为一，一个单位在其间移动而没有交换，水平不平衡（Teleport.conserved_not_balanced）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+      "detail": {
+        "en": "Leaking: a store keeps its energy and generates entropy within itself; its level falls with no exchange, and the store laws hold (Leaking.energy_conserved_not_balanced).",
+        "zh": "Leaking：一个储存保持能量而在内部生熵；其水平在没有交换时下降，而储存的规律成立（Leaking.energy_conserved_not_balanced）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: EntropyProduction, 44 theorems and 74 declarations, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals; the core modules it imports match passed receipts, and the core does not import it. No independent review.",
+    "zh": "由外围检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 检查：EntropyProduction，44 条定理、74 个声明，每个只经由 Mathlib 的实数依赖 propext、Classical.choice 与 Quot.sound；它导入的核心模块与通过的收据相符，核心不导入它。没有独立审查。"
+  },
+  "next_delta": {
+    "en": "A core form with rational amounts and no Mathlib, so that balance from local conservation holds with an empty axiom report; and the reading over amounts that may be dense (Becoming.Amounts), where a store's available work need not be a whole number of units.",
+    "zh": "以有理量、不用 Mathlib 的核心形式，使由局部守恒得出的平衡有空的公理报告；以及在可稠密的量（Becoming.Amounts）上的读法，那里储存的可用功不必是整数个单位。"
+  },
+  "correspondence": {
+    "en": "First law: the energy of a store changes only by the heat and work crossing its boundary; locality, the continuity equation of energy, places that crossing at the exchanges taking part. Entropy balance (Clausius): dS = δQ/T + S_gen, with S_gen ≥ 0 by the second law. Available work relative to an environment at T0, at fixed volume and composition, is E − T0 S measured from the dead state; heat Q at temperature T carries Q(1 − T0/T) = e − T0 s of it and work carries all of it; Gouy–Stodola: the exergy destroyed is T0 S_gen. A store that spoils, leaks heat or mixes within itself generates entropy and is counted, on the spine, as an exchange. The same local balance holds of the mass of each element in chemistry, and of a count of individuals with births and deaths counted as exchanges."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+  "aliases": [
+    "Becoming.EntropyProduction.rtotal",
+    "Becoming.EntropyProduction.cast_total",
+    "Becoming.EntropyProduction.rtotal_combine",
+    "Becoming.EntropyProduction.rtotal_congr_on",
+    "Becoming.EntropyProduction.rtotal_read",
+    "Becoming.EntropyProduction.LocalBalance",
+    "Becoming.EntropyProduction.ReadsLevels",
+    "Becoming.EntropyProduction.ReadsTransfers",
+    "Becoming.EntropyProduction.ReadsTransfers.carried",
+    "Becoming.EntropyProduction.LocalBalance.produced",
+    "Becoming.EntropyProduction.balances_iff_unproduced",
+    "Becoming.EntropyProduction.balances_of_conserved",
+    "Becoming.EntropyProduction.Teleport.flow",
+    "Becoming.EntropyProduction.Teleport.web",
+    "Becoming.EntropyProduction.Teleport.conserved_not_balanced",
+    "Becoming.EntropyProduction.StoreLaws",
+    "Becoming.EntropyProduction.StoreLaws.availableWork",
+    "Becoming.EntropyProduction.balances_iff_stores_generate_nothing",
+    "Becoming.EntropyProduction.stores_within",
+    "Becoming.EntropyProduction.ExchangeLaws",
+    "Becoming.EntropyProduction.exergyBalance_of_laws",
+    "Becoming.EntropyProduction.secondLaw_of_generation",
+    "Becoming.EntropyProduction.irreversible_of_generation",
+    "Becoming.EntropyProduction.balance_and_least_loss",
+    "Becoming.EntropyProduction.Burning.flow",
+    "Becoming.EntropyProduction.Burning.web",
+    "Becoming.EntropyProduction.Burning.energy",
+    "Becoming.EntropyProduction.Burning.entropy",
+    "Becoming.EntropyProduction.Burning.energyDrawn",
+    "Becoming.EntropyProduction.Burning.entropyDrawn",
+    "Becoming.EntropyProduction.Burning.storeGenerates",
+    "Becoming.EntropyProduction.Burning.heat",
+    "Becoming.EntropyProduction.Burning.generates",
+    "Becoming.EntropyProduction.Burning.family",
+    "Becoming.EntropyProduction.Burning.meets",
+    "Becoming.EntropyProduction.Burning.balanced_and_dissipative",
+    "Becoming.EntropyProduction.Leaking.flow",
+    "Becoming.EntropyProduction.Leaking.web",
+    "Becoming.EntropyProduction.Leaking.entropy",
+    "Becoming.EntropyProduction.Leaking.storeGenerates",
+    "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced"
+  ],
+  "dependencies": [
+    {
+      "id": "least-loss-from-entropy-production",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses ExergyBalance, SecondLaw, Irreversible, gainless_of_secondLaw and dissipative_of_irreversible: exergyBalance_of_laws gives that record's exergy-balance premise from the first law and the entropy balance at each exchange, with the destroyed exergy T0 times the generated entropy.",
+        "zh": "复用 ExergyBalance、SecondLaw、Irreversible、gainless_of_secondLaw 与 dissipative_of_irreversible：exergyBalance_of_laws 由每个交换处的第一定律与熵平衡给出那条记录的㶲平衡前提，所毁之㶲为 T0 乘所生之熵。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "premises-read-off-the-exchange",
+      "detail": {
+        "en": "There a course generated by a law of exchange balances exactly where the law never overdraws; here what physics gives that balance.",
+        "zh": "那里，由交换之律生成的历程恰在该律从不透支之处平衡；这里是物理给出这平衡的前提。"
+      }
+    },
+    {
+      "id": "place-transition-nets-on-the-spine",
+      "detail": {
+        "en": "There balance is a net's firing rule; here it is the first law with locality.",
+        "zh": "那里平衡是网的激发规则；这里它是带局部性的第一定律。"
+      }
+    },
+    {
+      "id": "entropy-history-and-record",
+      "detail": {
+        "en": "There least loss is the first law plus a record held in the conserved amount; here the physical first law with locality gives balance, and with the entropy balance the record.",
+        "zh": "那里最小损失是第一律加上守恒量中所持的记录；这里物理的第一定律加局部性给出平衡，加上熵平衡给出记录。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+      "role": "proof",
+      "sha256": "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3",
+      "declarations": [
+        "Becoming.EntropyProduction.rtotal",
+        "Becoming.EntropyProduction.cast_total",
+        "Becoming.EntropyProduction.rtotal_combine",
+        "Becoming.EntropyProduction.rtotal_congr_on",
+        "Becoming.EntropyProduction.rtotal_read",
+        "Becoming.EntropyProduction.LocalBalance",
+        "Becoming.EntropyProduction.ReadsLevels",
+        "Becoming.EntropyProduction.ReadsTransfers",
+        "Becoming.EntropyProduction.ReadsTransfers.carried",
+        "Becoming.EntropyProduction.LocalBalance.produced",
+        "Becoming.EntropyProduction.balances_iff_unproduced",
+        "Becoming.EntropyProduction.balances_of_conserved",
+        "Becoming.EntropyProduction.Teleport.flow",
+        "Becoming.EntropyProduction.Teleport.web",
+        "Becoming.EntropyProduction.Teleport.conserved_not_balanced",
+        "Becoming.EntropyProduction.StoreLaws",
+        "Becoming.EntropyProduction.StoreLaws.availableWork",
+        "Becoming.EntropyProduction.balances_iff_stores_generate_nothing",
+        "Becoming.EntropyProduction.stores_within",
+        "Becoming.EntropyProduction.ExchangeLaws",
+        "Becoming.EntropyProduction.exergyBalance_of_laws",
+        "Becoming.EntropyProduction.secondLaw_of_generation",
+        "Becoming.EntropyProduction.irreversible_of_generation",
+        "Becoming.EntropyProduction.balance_and_least_loss",
+        "Becoming.EntropyProduction.Burning.flow",
+        "Becoming.EntropyProduction.Burning.web",
+        "Becoming.EntropyProduction.Burning.energy",
+        "Becoming.EntropyProduction.Burning.entropy",
+        "Becoming.EntropyProduction.Burning.energyDrawn",
+        "Becoming.EntropyProduction.Burning.entropyDrawn",
+        "Becoming.EntropyProduction.Burning.storeGenerates",
+        "Becoming.EntropyProduction.Burning.heat",
+        "Becoming.EntropyProduction.Burning.generates",
+        "Becoming.EntropyProduction.Burning.family",
+        "Becoming.EntropyProduction.Burning.meets",
+        "Becoming.EntropyProduction.Burning.balanced_and_dissipative",
+        "Becoming.EntropyProduction.Leaking.flow",
+        "Becoming.EntropyProduction.Leaking.web",
+        "Becoming.EntropyProduction.Leaking.entropy",
+        "Becoming.EntropyProduction.Leaking.storeGenerates",
+        "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced",
+        "Becoming.EntropyProduction.ExergyBalance",
+        "Becoming.EntropyProduction.SecondLaw",
+        "Becoming.EntropyProduction.Irreversible",
+        "Becoming.EntropyProduction.gainless_of_secondLaw",
+        "Becoming.EntropyProduction.dissipative_of_irreversible"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd780afc4bf1144cc3ebc96855836de1d12bd3920771d6ef6c5a6d980bff5d83"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/check_entropy_production.py",
+      "role": "integration",
+      "sha256": "e2ab6913181423c16b4da1a496e5048dbb2d028cefbda0a273b673fac38c5cce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "statement",
+      "sha256": "fd40f0139f004b10ca255b8119e08aa008e3da267c7190540e6a1d31483d535a",
+      "declarations": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.taken",
+        "Becoming.Flow.given"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "role": "statement",
+      "sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "declarations": [
+        "Becoming.Flow.Dissipative",
+        "Becoming.Flow.ClosedAt"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
+      "role": "statement",
+      "sha256": "d6c950deed4a243e979261f6fd6ec0273b50e415eaf6baa9758ca6f16e1e4b57",
+      "declarations": [
+        "Becoming.Flow.Gainless"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+      "sha256_pointer": "/source_sha256/EntropyProduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026, board item FL1: added for the question whether balance should come from conservation of energy, as dissipation comes from the second law; balance and the exchanges' exergy balance derived from the first law and the entropy balance in one reading of amounts as available work.",
+      "zh": "2026年10月22日，工作板条目 FL1：为“平衡是否应来自能量守恒，如同耗散来自第二定律”之问而加；在把量读作可用功的同一读法中，由第一定律与熵平衡推出平衡与交换的㶲平衡。"
+    }
+  ]
+}
