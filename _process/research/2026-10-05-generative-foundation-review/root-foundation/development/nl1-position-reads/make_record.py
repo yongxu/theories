@@ -17,17 +17,18 @@ def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 RP = "Becoming.RelativePosition."
-LA = "Becoming.Lasting."
+LA = "Becoming.RaceWithin."
 law1 = [RP + n for n in ["Keeps", "keeps_iff_common", "length_pos_of_mem", "regroup"]]
 law2 = [RP + n for n in ["keeps_add", "keeps_least"]]
 law3 = [RP + n for n in ["spread_le", "keeps_exceeds", "exceeds_iff_spread"]]
+law5 = ["Becoming.Flow.excess_iff_spread"]
 law4 = [LA + n for n in ["Member", "flow", "web", "balances", "acting", "dependent", "racers", "drawn_common",
                          "keeps", "drawn_second", "drawn_renewer", "first_greatest", "same_positions_apart"]]
 reused = ["Becoming.Race.flow", "Becoming.Race.web", "Becoming.Race.greatest_ends", "Becoming.Race.drawn_renewer",
           "Becoming.Race.drawn_second_le", "Becoming.RelativePosition.riseCount",
           "Becoming.RelativePosition.fallCount", "Becoming.RelativePosition.Least",
           "Becoming.RelativePosition.Greatest", "Becoming.Flow.drawn"]
-decls = sorted(set(law1 + law2 + law3 + law4 + reused))
+decls = sorted(set(law1 + law2 + law3 + law4 + law5 + reused))
 now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 r = {
@@ -52,19 +53,22 @@ r = {
     {"en": "With given positions the total is at least the spread; every profile with those positions has its total above a bound exactly where the spread is above it, and some profile with them exceeds every bound.",
      "zh": "位置给定时，总量至少是展布；具这些位置的每一组量，其总量高于一界，恰在展布高于该界之处；且具这些位置的某组量超过任一界。",
      "declarations": law3},
-    {"en": "In Lasting the renewer gives two units at every step, as in Race, and the two racers have the race's positions at every step, the same greatest part and the same rise of the first; what is taken stays within what is given and every part is active at every step, while in the race every part is inactive from step two on.",
-     "zh": "在 Lasting 中，更新者每步给两个单位，与 Race 相同；两个竞逐者每一步都有竞逐中的位置、相同的最大者、首者相同的上升；所取不超过所给，每个部分每一步都活跃，而在竞逐中每个部分自第二步起不再活跃。",
+    {"en": "Read on a flow by what a step's takers take: every profile of takes with the step's positions takes more than the step gives exactly where the takes' spread does, and some profile with them always does. So positions certify joint excess, the joint-excess law's hypothesis, only through the spread.",
+     "zh": "以一步中取用者之所取读于流上：具该步位置的每一组所取，取多于该步所给，恰在所取之展布如此之处；且具这些位置的某组所取总是如此。所以位置只经由展布保证联合超出，即联合超出律之假设。",
+     "declarations": law5},
+    {"en": "In RaceWithin the renewer gives two units at every step, as in Race, and the two racers have the race's positions at every step, the same greatest part and the same rise of the first; what is taken stays within what is given and every part is active at every step, while in the race every part is inactive from step two on.",
+     "zh": "在 RaceWithin 中，更新者每步给两个单位，与 Race 相同；两个竞逐者每一步都有竞逐中的位置、相同的最大者、首者相同的上升；所取不超过所给，每个部分每一步都活跃，而在竞逐中每个部分自第二步起不再活跃。",
      "declarations": law4},
   ],
   "hypotheses": [
-    {"en": "No axiom. The counting laws use no premise: whole-number amounts, any finite family with a part. Lasting and Race are constructed flows with balance, only active formations giving and activity needing support.",
-     "zh": "无公理。计数规律不用前提：自然数的量，任何有一部分的有限族。Lasting 与 Race 是构造的流，具平衡、只有活跃者给予、活跃需要支持。"}
+    {"en": "No axiom. The counting laws use no premise: whole-number amounts, any finite family with a part. RaceWithin and Race are constructed flows with balance, only active formations giving and activity needing support.",
+     "zh": "无公理。计数规律不用前提：自然数的量，任何有一部分的有限族。RaceWithin 与 Race 是构造的流，具平衡、只有活跃者给予、活跃需要支持。"}
   ],
   "does_not_show": [
     {"en": "That positions read nothing of the total: the spread above the least part bounds it from below, so a spread wider than what is renewed forces more to be drawn whatever the common amount.",
      "zh": "位置对总量毫无所读：高出最少者的展布从下界定总量，所以宽于所更新者的展布，不论共有的量为何，都使所汲多于所更新。", "kind": "non-implication"},
-    {"en": "That a race ends or lasts: the end needs the joint-excess law's premises, and reading the two laws together is not stated as one theorem on a flow.",
-     "zh": "竞逐终结或延续：终结需要联合超出律的前提，而把两律合读并未陈述为流上的一条定理。", "kind": "non-implication"},
+    {"en": "That a race ends or lasts: positions certify joint excess at a step only through the spread, and the end needs the joint-excess law's other premises (balance, dependence, gated renewal).",
+     "zh": "竞逐终结或延续：位置只经由展布保证一步中的联合超出，而终结还需联合超出律的其余前提（平衡、依赖、受门控的更新）。", "kind": "non-implication"},
     {"en": "Positions read as ranks, shares or signed amounts.",
      "zh": "以名次、份额或带号的量读的位置。", "kind": "scope"},
     {"en": "That actual competitors' positions are read off what they draw from one shared condition, or how much an actual condition renews.",
@@ -78,8 +82,8 @@ r = {
     "zh": f"Lean 4.29.1 合并检查器实查（回执 {receipt}）：Becoming.RelativePosition 新增声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 {sec} 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The two laws read together as one theorem on a flow's takes; positions read as ranks or shares; an independent review.",
-    "zh": "两律合读为流之所取上的一条定理；以名次或份额读的位置；独立审查。"
+    "en": "Positions read as ranks or shares; positions across many steps against a renewal that responds to the level; an independent review.",
+    "zh": "以名次或份额读的位置；多步中的位置与随水平而应的更新；独立审查。"
   },
   "correspondence": {
     "en": "Competition read as position, the opening's \"winning\": a standing read against the others, by amount drawn or held, reads the amounts up to a common amount, while whether a shared condition lasts reads the total against what is renewed. With this record the opening's body, in Ren's voice, was brought to its law on his word (version 12): \"position, read against the others, bounds what all draw only from below, so no winning certifies that anything lasts\", in place of \"so winning need not measure anything of what lasts\"; its note [^no-law] states the laws and the readings.",
@@ -87,7 +91,7 @@ r = {
   },
   "canonical_source": SRC,
   "aliases": ["What position reads", "位置所读", "position reads amounts up to a common amount",
-              "Becoming.RelativePosition.keeps_iff_common", "Becoming.Lasting.same_positions_apart"],
+              "Becoming.RelativePosition.keeps_iff_common", "Becoming.RaceWithin.same_positions_apart"],
   "dependencies": [
     {"id": "relative-position-is-zero-sum", "relation": "formal-reuse",
      "detail": {"en": "Its rise and fall counts, least and greatest parts, and the Race witness; the delta is what positions read of the amounts, exactly, and a witness with the race's positions that lasts.",

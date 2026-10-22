@@ -72,10 +72,13 @@ declaration has an empty axiom report.
   the least part's amount from every part keeps every position and leaves the spread above the least
   part (`keeps_least`). So with given positions the total is at least the spread (`spread_le`), above
   a bound exactly where the spread is (`exceeds_iff_spread`), and above every bound for some profile
-  (`keeps_exceeds`): positions bound the total from below and never from above. In `Lasting` the
+  (`keeps_exceeds`): positions bound the total from below and never from above. Read on a flow by
+  what a step's takers take, they certify that the step takes more than it gives, the hypothesis of
+  `Flow.joint_excess_ends`, exactly where the spread does, and never that it takes within it
+  (`Flow.excess_iff_spread`). In `RaceWithin` the
   renewer gives two units at every step, as in `Race`, and the two racers have the race's positions
   at every step; there what is taken is within what is given and every part is active at every step,
-  while in the race every part ends (`Lasting.same_positions_apart`). What separates them is the
+  while in the race every part ends (`RaceWithin.same_positions_apart`). What separates them is the
   total drawn, which positions do not read.
 -/
 
@@ -473,6 +476,19 @@ theorem greatest_end_for_good (balances : L.Balances W) (acting : L.Acting W)
     (race_ends_greatest balances acting dependent gated excess start (p :: ps) pos).2.2.2 k g mem
       greatest (all k g mem).1 (all k g mem).2⟩
 
+/-- **What a step's positions certify of joint excess.** Read by what each formation taking part
+takes from `c` across the step from `t`, with `l` a least taker: every profile of takes giving the
+same positions takes more than the step gives exactly where the takes' spread above `l` does; and
+some profile giving the same positions always takes more than the step gives. Joint excess is the
+hypothesis of `joint_excess_ends`, so positions certify it, and with that law's premises the end,
+only through the spread, and never certify that a step takes within what it gives. -/
+theorem excess_iff_spread (L : Flow F C) (t : Nat) (c : C) {l : F} (inl : l ∈ L.present t)
+    (least : Least (L.present t) (fun f => L.take t f c) l) :
+    ((∀ b, Keeps (L.present t) (fun f => L.take t f c) b → L.given t c < total (L.present t) b) ↔
+      L.given t c + (L.present t).length * L.take t l c < L.taken t c) ∧
+    ∃ b, Keeps (L.present t) (fun f => L.take t f c) b ∧ L.given t c < total (L.present t) b :=
+  ⟨exceeds_iff_spread inl least (L.given t c), keeps_exceeds inl _ _⟩
+
 end Flow
 
 /-! ## Witnesses -/
@@ -611,7 +627,7 @@ theorem greatest_ends :
 
 end Race
 
-namespace Lasting
+namespace RaceWithin
 
 /-! ## The same positions, the condition standing -/
 
@@ -706,7 +722,7 @@ theorem same_positions_apart :
     | _ + 2 => .inr (Nat.le_add_left 2 _),
    Race.greatest_ends.2.2.2.2.2⟩
 
-end Lasting
+end RaceWithin
 
 namespace Restored
 
