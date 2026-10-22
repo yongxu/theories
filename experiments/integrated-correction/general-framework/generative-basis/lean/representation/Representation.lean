@@ -3,6 +3,7 @@ import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.Data.Fintype.Pi
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+import Mathlib.Analysis.Normed.Algebra.TrivSqZeroExt
 import Becoming.Frequency
 
 
@@ -56,7 +57,16 @@ states the laws that depend on the representation with real amounts and real-val
   damping, `a ^ (1 - θ) B ^ θ < 1` with `θ` the share of steps that couple, it vanishes whatever its
   strength (`dampedWeb_vanishes`); where they are frequent enough, `a ^ (1 - θ) ρ ^ θ > 1` with `θ`
   a share of steps that couple at least and `ρ` the rate of `a + S`, it runs away
-  (`dampedWeb_unbounded`).
+  (`dampedWeb_unbounded`). At rate at most one a web grows slower than every exponential
+  (`subexponential`, through `rate_smul`), and whether it stays bounded is not decided by the rate:
+  the step keeping every difference is bounded with rate one (`rate_one`), and the shear, two
+  conditions with the second passed whole to the first, carries `1 + n` without bound with rate one
+  too (`shear_rate`).
+* **Noise.** Along every realization of a noise a law of exchange with noise is a law of exchange,
+  so the core's laws hold path by path (`Becoming.NoisyLaw.readOffExchange`). Balance, being linear,
+  passes to the expectation (`expected_balance`); rest does not: a condition ending at a random step
+  comes to rest along every realization while its expected level falls at every step and never
+  rests (`RandomEnd.rest_not_in_expectation`).
 
 The declarations use Lean's standard axioms through Mathlib; the laws they read are the core's, with
 empty axiom reports. That an actual becoming's rates are summable, its amounts real and its loops
@@ -599,5 +609,128 @@ theorem dampedWeb_unbounded {a θ : ℝ} {S : A} {on : ℕ → Bool} (a0 : 0 < a
         exact rate_pow_le_norm _ (by linarith) _
 
 end Damped
+
+section RateOne
+
+variable {A : Type*} [NormedRing A]
+
+theorem rate_nonneg (M : A) : 0 ≤ rate M :=
+  le_ciInf fun _ => by positivity
+
+/-- **Scaling the step scales the rate.** -/
+theorem rate_smul [NormedAlgebra ℝ A] (c : ℝ) (M : A) : rate (c • M) = |c| * rate M := by
+  have each : ∀ k : ℕ, ‖(c • M) ^ (k + 1)‖ ^ ((1 : ℝ) / (k + 1)) =
+      |c| * ‖M ^ (k + 1)‖ ^ ((1 : ℝ) / (k + 1)) := fun k => by
+    rw [smul_pow, norm_smul, norm_pow, Real.norm_eq_abs,
+      Real.mul_rpow (by positivity) (norm_nonneg _), ← Real.rpow_natCast, ← Real.rpow_mul (abs_nonneg c),
+      show ((k + 1 : ℕ) : ℝ) * (1 / (k + 1)) = 1 by push_cast; field_simp, Real.rpow_one]
+  simp only [rate, each]
+  exact (Real.mul_iInf_of_nonneg (abs_nonneg c) _).symm
+
+/-- **At rate at most one, growth is slower than every exponential.** -/
+theorem subexponential [NormedAlgebra ℝ A] [NormOneClass A] {M : A} (atMost : rate M ≤ 1) {r : ℝ} (above : 1 < r) :
+    Tendsto (fun n => ‖M ^ n‖ / r ^ n) atTop (𝓝 0) := by
+  have r0 : 0 < r := by linarith
+  have lt : rate (r⁻¹ • M) < 1 := by
+    rw [rate_smul, abs_of_pos (inv_pos.mpr r0)]
+    calc r⁻¹ * rate M ≤ r⁻¹ * 1 := by gcongr
+      _ < 1 := by rw [mul_one]; exact inv_lt_one_of_one_lt₀ above
+  have h := (vanishes_iff (r⁻¹ • M)).mpr lt
+  refine h.congr fun n => ?_
+  rw [smul_pow, norm_smul, Real.norm_eq_abs, inv_pow, abs_of_pos (by positivity), div_eq_inv_mul]
+
+/-- **A bounded web of rate one**: the step that keeps every difference. -/
+theorem rate_one [NormOneClass A] : rate (1 : A) = 1 ∧ ∀ n, ‖(1 : A) ^ n‖ = 1 := by
+  refine ⟨?_, fun n => by simp⟩
+  have each : ∀ k : ℕ, ‖(1 : A) ^ (k + 1)‖ ^ ((1 : ℝ) / (k + 1)) = 1 := fun k => by simp
+  simp only [rate, each, ciInf_const]
+
+/-- The step of two conditions, the second held and passed whole to the first, which is held too:
+the dual number `1 + ε`. -/
+noncomputable def shear : TrivSqZeroExt ℝ ℝ := TrivSqZeroExt.inl 1 + TrivSqZeroExt.inr 1
+
+theorem shear_pow_norm (n : ℕ) : ‖shear ^ n‖ = 1 + n := by
+  rw [TrivSqZeroExt.norm_def, TrivSqZeroExt.fst_pow, TrivSqZeroExt.snd_pow]
+  simp [shear]
+
+/-- **An unbounded web of rate one**: the shear carries `1 + n`, without bound, and its rate is
+one, so rate one does not decide whether a web stays bounded. -/
+theorem shear_rate : rate shear = 1 ∧ ∀ K : ℝ, ∃ n, K < ‖shear ^ n‖ := by
+  refine ⟨le_antisymm ?_ ?_, fun K => ?_⟩
+  · by_contra above
+    rw [not_le] at above
+    have lim := tendsto_pow_const_div_const_pow_of_one_lt 1 above
+    obtain ⟨n, hn⟩ := (lim.eventually (gt_mem_nhds (show (0 : ℝ) < 1 / 2 by norm_num))).exists_forall_of_atTop
+    have small := hn (n + 1) (Nat.le_succ n)
+    have big := pow_rate_le shear n (rate_nonneg shear)
+    rw [shear_pow_norm] at big
+    have rp : 0 < rate shear ^ (n + 1) := by positivity
+    rw [div_lt_iff₀ rp] at small
+    push_cast at small big
+    nlinarith
+  · exact le_ciInf fun k => by
+      rw [shear_pow_norm]
+      exact Real.one_le_rpow (by push_cast; linarith) (by positivity)
+  · obtain ⟨n, hn⟩ := exists_nat_gt K
+    exact ⟨n, by rw [shear_pow_norm]; linarith⟩
+
+end RateOne
+
+/-! ## Noise: path by path and in expectation -/
+
+/-- **Balance holds in expectation.** Where along every realization of the noise a level balances
+across each step with what is given and taken, and the amounts can be averaged, the averaged level
+balances with the averaged amounts: balance, being linear, passes to the expectation. -/
+theorem expected_balance {Ω : Type*} [MeasurableSpace Ω] (μ : Measure Ω) (level given taken : Ω → ℕ → ℝ)
+    (balances : ∀ ω t, level ω (t + 1) + taken ω t = level ω t + given ω t) (t : ℕ)
+    (il : Integrable (fun ω => level ω (t + 1)) μ) (ik : Integrable (fun ω => taken ω t) μ)
+    (il' : Integrable (fun ω => level ω t) μ) (ig : Integrable (fun ω => given ω t) μ) :
+    ∫ ω, level ω (t + 1) ∂μ + ∫ ω, taken ω t ∂μ = ∫ ω, level ω t ∂μ + ∫ ω, given ω t ∂μ := by
+  rw [← integral_add il ik, ← integral_add il' ig]
+  exact integral_congr_ae (Filter.Eventually.of_forall fun ω => balances ω t)
+
+namespace RandomEnd
+
+/-- A condition standing at one up to a random step `ω` and at nothing after it. -/
+def level (ω t : ℕ) : ℝ := if t ≤ ω then 1 else 0
+
+/-- Each realization comes to rest: from step `ω + 1` on it stands at nothing. -/
+theorem rests (ω : ℕ) : ∀ t, ω + 1 ≤ t → level ω t = 0 ∧ level ω (t + 1) = 0 := fun t le => by
+  simp only [level]; constructor <;> (rw [if_neg]; omega)
+
+/-- The weight of the step `ω`: one half to the power `ω + 1`. -/
+noncomputable def weight (ω : ℕ) : ℝ := (1 / 2) ^ (ω + 1)
+
+theorem summable_weighted (t : ℕ) : Summable fun ω => weight ω * level ω t := by
+  refine Summable.of_nonneg_of_le (fun ω => ?_) (fun ω => ?_) (summable_geometric_two.mul_left (1 / 2))
+  · unfold weight level; split_ifs <;> positivity
+  · unfold weight level
+    have h : (0 : ℝ) < (1 / 2) ^ ω := by positivity
+    split_ifs
+    · rw [pow_succ, mul_one, mul_comm]
+    · rw [mul_zero]; positivity
+
+/-- The expected level at step `t` is one half to the power `t`. -/
+theorem expected (t : ℕ) : ∑' ω, weight ω * level ω t = (1 / 2) ^ t := by
+  rw [← Summable.sum_add_tsum_nat_add t (summable_weighted t)]
+  have zero : ∑ i ∈ Finset.range t, weight i * level i t = 0 :=
+    Finset.sum_eq_zero fun i mem => by
+      simp only [level, if_neg (by simpa using (Finset.mem_range.mp mem).not_ge : ¬ t ≤ i), mul_zero]
+  have tail : ∀ k, weight (k + t) * level (k + t) t = (1 / 2) ^ (t + 1) * (1 / 2) ^ k := fun k => by
+    simp only [level, if_pos (by omega : t ≤ k + t), mul_one, weight]; ring
+  rw [zero, zero_add, tsum_congr tail, tsum_mul_left, tsum_geometric_two]; ring
+
+/-- **Rest is path by path, not in expectation.** Every realization comes to rest, while the expected
+level falls strictly at every step and never rests: a law that a run comes to rest does not pass to
+the expectation of the runs. -/
+theorem rest_not_in_expectation :
+    (∀ ω, ∃ N, ∀ t, N ≤ t → level ω (t + 1) = level ω t) ∧
+      ∀ t, ∑' ω, weight ω * level ω (t + 1) < ∑' ω, weight ω * level ω t := by
+  refine ⟨fun ω => ⟨ω + 1, fun t le => by rw [(rests ω t le).1, (rests ω t le).2]⟩, fun t => ?_⟩
+  rw [expected, expected, pow_succ]
+  have : (0 : ℝ) < (1 / 2) ^ t := by positivity
+  linarith
+
+end RandomEnd
 
 end Becoming.Representation

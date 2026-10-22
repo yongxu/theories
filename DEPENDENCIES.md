@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-405 registered results: 378 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 932 curated edges join 356 results to the results they draw on.
+407 registered results: 380 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 934 curated edges join 358 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -170,6 +170,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [laws-at-finer-units][] ← <a id="laws-at-finer-units--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-finer-units--rest-at-every-resolution"></a>[rest-at-every-resolution][]
 - [laws-of-one-step][] ← <a id="laws-of-one-step--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="laws-of-one-step--more-needs-renewers"></a>[more-needs-renewers][] · <a id="laws-of-one-step--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="laws-of-one-step--census-balance"></a>[census-balance][]
 - [laws-of-one-step-complete][] ← <a id="laws-of-one-step-complete--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-of-one-step-complete--whole-law-of-counting"></a>[whole-law-of-counting][] *(interpretive)*
+- [laws-with-noise][] ← <a id="laws-with-noise--central-laws-over-every-exchange"></a>[central-laws-over-every-exchange][]
 - [learnable-through-a-map][] ← <a id="learnable-through-a-map--learning-by-refutation"></a>[learning-by-refutation][] · <a id="learnable-through-a-map--identification-where-bounded"></a>[identification-where-bounded][] · <a id="learnable-through-a-map--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="learnable-through-a-map--seeking-boundary"></a>[seeking-boundary][] · <a id="learnable-through-a-map--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [learned-procedure-transmission][] ← <a id="learned-procedure-transmission--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)* · <a id="learned-procedure-transmission--inherited-structural-copying"></a>[inherited-structural-copying][] · <a id="learned-procedure-transmission--evolution-on-descent"></a>[evolution-on-descent][]
 - [learning-by-refutation][] ← <a id="learning-by-refutation--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="learning-by-refutation--testing-within-couplings"></a>[testing-within-couplings][] *(interpretive)*
@@ -250,6 +251,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [relative-position-is-zero-sum][] ← <a id="relative-position-is-zero-sum--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="relative-position-is-zero-sum--derived-extent-limits"></a>[derived-extent-limits][] · <a id="relative-position-is-zero-sum--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
 - [repeated-disturbance][] ← <a id="repeated-disturbance--how-often-couplings-act"></a>[how-often-couplings-act][]
 - [represented-boundary-against-dependence][] ← <a id="represented-boundary-against-dependence--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="represented-boundary-against-dependence--derived-extent-limits"></a>[derived-extent-limits][] · <a id="represented-boundary-against-dependence--support-from-the-supported"></a>[support-from-the-supported][]
+- [requirement-is-the-weakest-sound-reading][] ← <a id="requirement-is-the-weakest-sound-reading--requirement-over-open-exchanges"></a>[requirement-over-open-exchanges][]
 - [requirement-over-open-exchanges][] ← <a id="requirement-over-open-exchanges--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="requirement-over-open-exchanges--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [reserve-defers-ending][] ← <a id="reserve-defers-ending--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="reserve-defers-ending--becoming-renewal-reading"></a>[becoming-renewal-reading][] · <a id="reserve-defers-ending--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="reserve-defers-ending--more-needs-renewers"></a>[more-needs-renewers][]
 - [reserved-shutdown-during-recovery][] ← <a id="reserved-shutdown-during-recovery--recoverable-mediated-change"></a>[recoverable-mediated-change][]
@@ -542,6 +544,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [laws-at-finer-units]: theories/becoming/results/records/laws-at-finer-units.md
 [laws-of-one-step]: theories/becoming/results/records/laws-of-one-step.md
 [laws-of-one-step-complete]: theories/becoming/results/records/laws-of-one-step-complete.md
+[laws-with-noise]: theories/becoming/results/records/laws-with-noise.md
 [learnable-through-a-map]: theories/becoming/results/records/learnable-through-a-map.md
 [learned-procedure-transmission]: theories/becoming/results/records/learned-procedure-transmission.md
 [learning-by-refutation]: theories/becoming/results/records/learning-by-refutation.md
@@ -632,6 +635,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [renewing-consuming-formation]: theories/becoming/results/records/renewing-consuming-formation.md
 [repeated-disturbance]: theories/becoming/results/records/repeated-disturbance.md
 [represented-boundary-against-dependence]: theories/becoming/results/records/represented-boundary-against-dependence.md
+[requirement-is-the-weakest-sound-reading]: theories/becoming/results/records/requirement-is-the-weakest-sound-reading.md
 [requirement-over-open-exchanges]: theories/becoming/results/records/requirement-over-open-exchanges.md
 [reserve-defers-ending]: theories/becoming/results/records/reserve-defers-ending.md
 [reserved-shutdown-during-recovery]: theories/becoming/results/records/reserved-shutdown-during-recovery.md

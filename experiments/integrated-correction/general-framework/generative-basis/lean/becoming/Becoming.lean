@@ -2569,8 +2569,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   holds with balance by the reading and the census read off the exchange where a named family closes
   each step; under balance the rest exchanges nothing, so the laws read the world's own relata. What
   stays a hypothesis is a state of the law (dissipation, embodiment, bounded transmission,
-  enclosure, feasibility) or the law's own. A leaf: it instantiates, and nothing builds on the
-  instances.
+  enclosure, feasibility) or the law's own. Necessary response is the weakest reading of
+  requirement that does not read the current level of what is required and under which activity
+  needs support; a law with noise is a relation of exchange, so the forms hold path by path. A leaf:
+  it instantiates, and nothing builds on the instances.
 * `Becoming.PlaceTransitionNets` (L1): place/transition nets (Petri nets; reaction networks with
   whole-number counts), a formalism defined outside the theory by its own rules, read on the
   spine. The net is a law of exchange reading nothing, its course along a schedule is its flow,

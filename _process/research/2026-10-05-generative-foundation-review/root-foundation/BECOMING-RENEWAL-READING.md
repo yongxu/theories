@@ -16421,3 +16421,37 @@ The kit is [`development/ev13-ev16-draw-mutation-breeding-forming/`](development
 - **Forming.** At a descent with the descendant depending on `c`, inheritance is the giver's holding and forming anew its not holding; the reading of drawing makes drawing necessary, which removes the case of neither.
 
 **Self-review.** Both are known: the Moran fixation probability with selection, `(1 − (b/a)^i)/(1 − (b/a)^N)` (Moran 1958; the harmonic-function argument is standard for birth–death chains), and mutation–selection balance with the error threshold (Haldane 1927; Eigen 1971), all from memory and not reread. What is stated here is each in counts, axiom-free: the fixation share as a limit of weighted histories with explicit bounds (the potential's ratio is the Moran formula with denominators cleared), and the balance read as Price's balance, so mutation is the transmission term the selection term's course already carries. The replacement chain reads only the steps that change the count; that the common factor `i·(N−i)` drops is stated, not proved from a fuller one-birth-one-death chain. Wright–Fisher with selection and mutation with drift stay open. The breeding value and Fisher's fundamental theorem with breeding values are standard (Fisher 1930; Price 1972 read it through the covariance), here in counts with the normal equations as a premise. The forming law is short once the cases are set out; its content is the split of the reading of drawing into passing on what is drawn and forming from drawing. EV15 and EV16 were proved by subagents of this session from a written specification, then reviewed and rebuilt here.
+
+## 369. Requirement as the weakest sound reading, laws with noise, and a web of rate one (XL4)
+
+```text
+Result(s): new records requirement-is-the-weakest-sound-reading and laws-with-noise; what-discrete-steps-and-whole-
+       amounts-represent gains the rate-one law; central-laws-over-every-exchange's warrant note restated.
+Delta: XL1-XL3 left three items open. (1) The warrant of reading requirement as necessary response: now
+       necessary response is the weakest reading of requirement that does not read the current level of what is
+       required and under which activity needs support on every run (respondsBelow_weakest), and possible
+       response is not sound (mayRespond_not_supports), so the warrant reduces to locality. (2) Laws with noise: a
+       law whose exchange also reads a noise is a relation of exchange and every realization's course a run of it
+       (NoisyLaw.course_runs, NoisyLaw.readOffExchange), so the laws over relations of exchange hold path by path;
+       balance passes to the expectation (expected_balance) and rest does not (RandomEnd.rest_not_in_expectation).
+       (3) A web of rate exactly one: rate at most one is growth below every exponential (subexponential, through
+       rate_smul), and the rate does not decide boundedness: the identity is bounded with rate one (rate_one) and
+       the shear, the dual number 1 + ε, carries 1 + n with rate one (shear_rate).
+Premises / correspondence: none in the core declarations; the periphery uses Lean's standard axioms through
+       Mathlib (TrivSqZeroExt's L1 normed ring, Bochner integrals, geometric series).
+Evidence: core receipt 20261022T151214.034215Z (Becoming.OverExchange, 57 declarations, empty axiom reports); periphery
+       receipt 20261022T151119.678274Z (Representation, 47 theorems in 62 declarations).
+Boundary: locality of requirement is argued, not proved; the noise is a value read at each step, so laws that read
+       a distribution of exchanges rather than a realization are not stated; the gap between the damped laws where
+       a coupled step's norm exceeds its rate stays.
+Output → input: chapter §0 block C, §8.1 items 6 and 7, §8.5, §8.9 (EN, ZH); BECOMING-FOUNDATION §9.1 (2) (EN, ZH);
+       goal record next step.
+```
+
+**What was built.** In `Becoming.OverExchange`: `ExchangeRelation.Local`, `ExchangeRelation.Supports`, `ExchangeRelation.mayRespond_not_supports`, `ExchangeRelation.respondsBelow_local`, `ExchangeRelation.respondsBelow_supports`, `ExchangeRelation.respondsBelow_weakest`, `NoisyLaw`, `NoisyLaw.course_runs`, `NoisyLaw.readOffExchange`, `NoisyLaw.realize`, `NoisyLaw.relation`; empty axiom reports. In `Representation`: `rate_nonneg`, `rate_one`, `rate_smul`, `shear`, `shear_pow_norm`, `shear_rate`, `subexponential`, `RandomEnd.expected`, `RandomEnd.level`, `RandomEnd.rest_not_in_expectation`, `RandomEnd.rests`, `RandomEnd.summable_weighted`, `RandomEnd.weight`, `expected_balance`.
+
+**The warrant of requirement.** A reading of requirement, a relation between a history, a step, a formation, a condition and a need, is *sound* over a relation of exchange where, whenever it holds and an open exchange has the formation exchange, the condition stands at the need; and *local* where changing only the required condition's level at that step does not change it. Necessary response is both. Every sound, local reading implies it: given the reading at a history, change the condition's level alone to below the need; locality keeps the reading, so an open exchange having the formation exchange there would contradict soundness. So necessary response is the weakest reading under which activity needs support that does not read whether the requirement is met, and possible response, which is not sound, is not a candidate. What is left to warrant is locality, argued in [BECOMING-FOUNDATION §9.1](../../../../theories/becoming/chapters/BECOMING-FOUNDATION.md#91-the-passage-from-inclusion-to-relation-argued): a requirement read off the current level would make being required depend on being met, and requirement is a counterfactual of the law (`ExchangeLaw.requirement_beyond_course`).
+
+**Noise.** `NoisyLaw` reads a noise value at each step; its relation opens the exchanges some noise value gives. Along each realization the law is a law of exchange (`NoisyLaw.realize`) whose course is a run of the relation, so every form of `World.ReadOffExchange` holds of it, with requirement read as necessary response over every noise value: a formation requires a condition where no noise value lets it exchange with the condition below the need. Balance is linear and passes to the expectation over any distribution of the noise with integrable amounts. Rest is not: a condition standing at one until a random step, the step `ω` having weight one half to the power `ω + 1`, rests along every realization, while its expected level is one half to the power `t` and falls at every step. Laws that state that something stops, ends or rests hold path by path, not of the expectation.
+
+**Rate one.** For the step of a web in a normed algebra over the reals, the rate of `c M` is `|c|` times the rate of `M`, so where the rate is at most one, the web scaled by `1 / r` for any `r > 1` has rate below one and vanishes: `‖M ^ n‖ / r ^ n → 0`. The identity has rate one and stays at one; the dual number `1 + ε` (two conditions, the second held and passed whole to the first) has `‖(1 + ε) ^ n‖ = 1 + n`, unbounded, and rate one, the infimum of `(k + 2) ^ (1 / (k + 1))`. So at rate one the growth is below every exponential and boundedness is not decided by the rate.

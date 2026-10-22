@@ -1,11 +1,11 @@
 {
- "commit": "09a1f1821900ebe02e6698cbebb20e426c2cc949",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261022T143810.042893Z",
+ "commit": "113470de6cd6bf23891cd12548e645ea8c783d37",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261022T145016.701975Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 309,
- "constants": 41522,
- "spine_theorems": 13822,
+ "constants": 41550,
+ "spine_theorems": 13828,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -26,18 +26,18 @@
   "Process reaches World family": false
  },
  "classes": {
-  "statement on both families": 1051,
+  "statement on both families": 1052,
   "statement on Process/Frame/Run/Trace": 2949,
-  "statement on World/Flow/Web": 3245,
+  "statement on World/Flow/Web": 3246,
   "statement on the base only through a law of its own module": 261,
-  "proof through a base family": 165,
+  "proof through a base family": 166,
   "used by a theorem on the base": 5083,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 829,
+  "apart: own vocabulary": 832,
   "apart: prelude-only statement": 84
  },
- "apart": 913,
- "apart_general_structure_by_design": 319,
+ "apart": 916,
+ "apart_general_structure_by_design": 322,
  "apart_otherwise": 594,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 85,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 541,
- "apart_roots": 541,
+ "apart_used_by_nothing": 544,
+ "apart_roots": 544,
  "apart_roots_by_category": {
   "model-witness": 282,
   "support": 97,
-  "general-structure": 139,
+  "general-structure": 142,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -90,7 +90,7 @@
   "Becoming.OneStep": 73,
   "Becoming.InAmounts": 52,
   "Becoming.Premises": 46,
-  "Becoming.OverExchange": 44,
+  "Becoming.OverExchange": 45,
   "Becoming.Standing": 42,
   "Becoming.Space": 39,
   "Becoming.Resolution": 34,
@@ -430,6 +430,10 @@
    3,
    34
   ],
+  "Becoming.OverExchange": [
+   3,
+   50
+  ],
   "Becoming.Routes": [
    3,
    28
@@ -622,17 +626,17 @@
  "rings": {
   "core": {
    "modules": 293,
-   "theorems": 13062,
-   "apart": 819,
+   "theorems": 13068,
+   "apart": 822,
    "classes": {
-    "statement on both families": 1037,
+    "statement on both families": 1038,
     "statement on Process/Frame/Run/Trace": 2738,
-    "statement on World/Flow/Web": 3220,
+    "statement on World/Flow/Web": 3221,
     "statement on the base only through a law of its own module": 215,
-    "proof through a base family": 154,
+    "proof through a base family": 155,
     "used by a theorem on the base": 4724,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 736,
+    "apart: own vocabulary": 739,
     "apart: prelude-only statement": 83
    }
   },
@@ -731,14 +735,14 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 73,
+  "statement on both families": 75,
   "statement on Process/Frame/Run/Trace": 131,
   "statement on World/Flow/Web": 124,
   "statement on the base only through a law of its own module": 5,
-  "proof through a base family": 3,
+  "proof through a base family": 4,
   "used by a theorem on the base": 10,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 18
+  "apart: own vocabulary": 21
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -772,6 +776,12 @@
    ]
   },
   {
+   "id": "fixation-with-selection",
+   "modules": [
+    "Becoming.Drift"
+   ]
+  },
+  {
    "id": "graded-significance-and-priority",
    "modules": [
     "Becoming.Weightings"
@@ -787,6 +797,12 @@
    "id": "least-parts-and-equal-shares",
    "modules": [
     "Becoming.RelativePosition"
+   ]
+  },
+  {
+   "id": "mutation-and-the-balance-it-sets",
+   "modules": [
+    "Becoming.Reproduction"
    ]
   },
   {
@@ -829,6 +845,12 @@
    "id": "taking-what-most-hold",
    "modules": [
     "Becoming.SharedCodes"
+   ]
+  },
+  {
+   "id": "the-breeding-value",
+   "modules": [
+    "Becoming.Reproduction"
    ]
   },
   {
@@ -11610,6 +11632,12 @@
   "Becoming.World.ReadOffExchange.family_childless": "statement on both families",
   "Becoming.World.ReadOffExchange.coupled_end_together": "statement on both families",
   "Becoming.World.ReadOffExchange.family_excess_ends": "statement on both families",
+  "Becoming.ExchangeRelation.respondsBelow_supports": "apart: own vocabulary",
+  "Becoming.ExchangeRelation.respondsBelow_local": "apart: own vocabulary",
+  "Becoming.ExchangeRelation.respondsBelow_weakest": "apart: own vocabulary",
+  "Becoming.ExchangeRelation.mayRespond_not_supports": "proof through a base family",
+  "Becoming.NoisyLaw.course_runs": "statement on World/Flow/Web",
+  "Becoming.NoisyLaw.readOffExchange": "statement on both families",
   "Becoming.Contextual.world_active": "statement on both families",
   "Becoming.sub_add_add_right": "used by a theorem on the base",
   "Becoming.sub_eq_of_add_eq": "used by a theorem on the base",

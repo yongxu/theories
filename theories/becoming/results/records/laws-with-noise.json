@@ -1,0 +1,196 @@
+{
+  "schema_version": 2,
+  "id": "laws-with-noise",
+  "title": {
+    "en": "Laws with noise: path by path, and in expectation",
+    "zh": "带噪声的规律：逐路径与取期望"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T15:13:45+00:00",
+  "statement": {
+    "en": "A law of exchange with noise is a relation of exchange, every realization's course a run of it, so the laws hold path by path; balance passes to the expectation, and rest does not.",
+    "zh": "带噪声的交换之律是交换关系，每个实现的进程是其运行，所以规律逐路径成立；平衡传到期望，停息则不然。"
+  },
+  "laws": [
+    {
+      "en": "A law with noise is the relation of exchange opening what some noise value gives; along every realization its course is a run, and the world read off it a world read off a relation of exchange.",
+      "zh": "带噪声的律是打开某个噪声值所给者的交换关系；沿每个实现，其进程是运行，从它读出的世界是从交换关系读出的世界。",
+      "declarations": [
+        "Becoming.NoisyLaw",
+        "Becoming.NoisyLaw.course_runs",
+        "Becoming.NoisyLaw.readOffExchange",
+        "Becoming.NoisyLaw.realize",
+        "Becoming.NoisyLaw.relation"
+      ]
+    },
+    {
+      "en": "Balance holds in expectation over any distribution of the noise with integrable amounts; a condition ending at a random step rests along every realization while its expected level falls at every step.",
+      "zh": "对噪声的任何分布、量可积时，平衡在期望上成立；在随机一步终结的条件沿每个实现停息，而其期望水平每步都下降。",
+      "declarations": [
+        "Becoming.Representation.RandomEnd.expected",
+        "Becoming.Representation.RandomEnd.level",
+        "Becoming.Representation.RandomEnd.rest_not_in_expectation",
+        "Becoming.Representation.RandomEnd.rests",
+        "Becoming.Representation.RandomEnd.summable_weighted",
+        "Becoming.Representation.RandomEnd.weight",
+        "Becoming.Representation.expected_balance"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No premise in the core declarations; the periphery uses Lean's standard axioms through Mathlib and names integrability where it enters.",
+      "zh": "核心声明不加前提；外围经 Mathlib 使用 Lean 的标准公理，可积性在其进入处写明。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Laws reading a distribution of exchanges rather than a realization; that an actual noise is a value read at each step.",
+      "zh": "读交换之分布而非某一实现的规律；实际噪声是每步读取的一个值。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "detail": {
+        "en": "RandomEnd.rest_not_in_expectation: rest along every realization, none in expectation.",
+        "zh": "RandomEnd.rest_not_in_expectation：沿每个实现停息，期望上不停息。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Core: Lean 4.29.1 checker, receipt 20261022T151214.034215Z, empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261022T151119.678274Z, Lean's standard axioms only. Author review in study section 369; not independently reviewed.",
+    "zh": "核心：Lean 4.29.1 检查器，回执 20261022T151214.034215Z，公理报告为空。外围：Lean 4.30.0-rc2 与 Mathlib，回执 20261022T151119.678274Z，只用 Lean 的标准公理。作者审查见研究第 369 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Laws of the distribution of courses (variance, the seen half of T6 is one); an independent review.",
+    "zh": "进程分布的规律（方差，T6 的可见一半即其一）；独立审查。"
+  },
+  "correspondence": {
+    "en": "Chapter §8.1 item 7's \"a law with noise and its course\". The seen half of T6 (periphery SlowingDown) states a variance law of a linear step with noise.",
+    "zh": "第 8.1 节第 7 项的“带噪声的律及其历程”。T6 的可见一半（外围 SlowingDown）陈述带噪声线性步的方差规律。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+  "aliases": [
+    "laws with noise",
+    "带噪声的规律",
+    "Becoming.NoisyLaw.readOffExchange",
+    "Becoming.Representation.expected_balance",
+    "Becoming.Representation.RandomEnd.rest_not_in_expectation"
+  ],
+  "dependencies": [
+    {
+      "id": "central-laws-over-every-exchange",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses World.ReadOffExchange and ExchangeRelation.Runs.readOffExchange.",
+        "zh": "复用 World.ReadOffExchange 与 ExchangeRelation.Runs.readOffExchange。"
+      },
+      "interface": {
+        "output": {
+          "en": "Reuses World.ReadOffExchange and ExchangeRelation.Runs.readOffExchange.",
+          "zh": "复用 World.ReadOffExchange 与 ExchangeRelation.Runs.readOffExchange。"
+        },
+        "input": {
+          "en": "This record's laws.",
+          "zh": "本记录的规律。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-discrete-steps-and-whole-amounts-represent",
+      "detail": {
+        "en": "The same periphery module.",
+        "zh": "同一外围模块。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "role": "proof",
+      "sha256": "18a90a39f162ab351cb4f055c3d71235993f007916b1941b2736f58488dbc90c",
+      "declarations": [
+        "Becoming.NoisyLaw",
+        "Becoming.NoisyLaw.course_runs",
+        "Becoming.NoisyLaw.readOffExchange",
+        "Becoming.NoisyLaw.realize",
+        "Becoming.NoisyLaw.relation"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Representation.RandomEnd.expected",
+        "Becoming.Representation.RandomEnd.level",
+        "Becoming.Representation.RandomEnd.rest_not_in_expectation",
+        "Becoming.Representation.RandomEnd.rests",
+        "Becoming.Representation.RandomEnd.summable_weighted",
+        "Becoming.Representation.RandomEnd.weight",
+        "Becoming.Representation.expected_balance"
+      ],
+      "sha256": "a00b61d45ecc98de5cbc095ee1fb3eea4a0463c67178119560bafff6d396f42a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "role": "receipt",
+      "sha256": "a40250701ebee86db75602f749c5a9038ea7bd83845c67a8ac04f77715251d5e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+      "role": "receipt",
+      "sha256": "dc0dfb8237a022fb036736f5c32a930b36dd5612e37a4694d0ee78ea1906d711"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b7b8c020a683f63a821824279a2f66135bb2421d1fc0d2a64b42a5261c3915ed"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OverExchange",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+      "sha256_pointer": "/source_sha256/Representation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (XL4); study section 369.",
+      "zh": "2026年10月22日：新增（XL4）；研究第 369 节。"
+    }
+  ]
+}

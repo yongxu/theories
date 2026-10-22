@@ -58,7 +58,10 @@ SCOPE = (
     "count is; a damped web coupling at some steps carries a ^ (t - count) (a + S) ^ count and vanishes where "
     "a ^ (1 - theta) B ^ theta < 1, theta bounding the share of steps that couple and B the coupled step's norm, "
     "and runs away where a ^ (1 - theta) rho ^ theta > 1, theta a share of steps that couple at least and rho the "
-    "rate of a + S. "
+    "rate of a + S; at rate at most one growth is slower than every exponential, the step keeping every "
+    "difference is bounded with rate one and the shear carries 1 + n with rate one; balance passes to the "
+    "expectation over a noise while rest does not, a condition ending at a random step resting along every "
+    "realization while its expected level falls at every step. "
     "That an actual becoming's rates, amounts and loops are of these forms is a correspondence, not checked."
 )
 

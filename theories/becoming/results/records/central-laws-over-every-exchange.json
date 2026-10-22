@@ -102,8 +102,8 @@
       "kind": "scope"
     },
     {
-      "en": "The warrant of reading requirement as necessary response; read as possible response, activity needing support fails.",
-      "zh": "把需要读作必然回应的根据；读作可能回应时，活动需要支撑不成立。",
+      "en": "The warrant of locality, on which reading requirement as necessary response rests: necessary response is the weakest local reading under which activity needs support (requirement-is-the-weakest-sound-reading); read as possible response, activity needing support fails.",
+      "zh": "局部性的根据，把需要读作必然回应依赖于它：必然回应是使活动需要支撑的最弱局部读法（requirement-is-the-weakest-sound-reading）；读作可能回应时，活动需要支撑不成立。",
       "kind": "non-implication"
     }
   ],
@@ -125,8 +125,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T140546.324820Z): the 46 declarations of Becoming.OverExchange, 44 of them theorems, have empty axiom reports; the checker verifies core purity. completion.py's K3 checks that each central declaration taking a tying premise has its form, whose proof uses it and whose binders take none of the four. Author review in study section 364; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T140546.324820Z）：Becoming.OverExchange 的 46 项声明（44 项定理）公理报告为空；检查器并核对核心纯净。completion.py 的 K3 检查每条取联结前提的中心声明都有其形式，形式的证明用到它，绑定中不取四者之一。作者审查见研究第 364 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T140546.324820Z, rebound to 20261022T151214.034215Z after XL4 added two sections): the 57 declarations of Becoming.OverExchange, have empty axiom reports; the checker verifies core purity. completion.py's K3 checks that each central declaration taking a tying premise has its form, whose proof uses it and whose binders take none of the four. Author review in study section 364; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T140546.324820Z，XL4 增加两节后重新绑定到 20261022T151214.034215Z）：Becoming.OverExchange 的 57 项声明公理报告为空；检查器并核对核心纯净。completion.py 的 K3 检查每条取联结前提的中心声明都有其形式，形式的证明用到它，绑定中不取四者之一。作者审查见研究第 364 节；未经独立审查。"
   },
   "next_delta": {
     "en": "The laws over dense amounts and continuous time; local conditions on a law giving each state; an independent review.",
@@ -237,7 +237,18 @@
       "role": "proof",
       "declarations": [
         "Becoming.ExchangeLaw.readWorld_readOffExchange",
+        "Becoming.ExchangeRelation.Local",
         "Becoming.ExchangeRelation.Runs.readOffExchange",
+        "Becoming.ExchangeRelation.Supports",
+        "Becoming.ExchangeRelation.mayRespond_not_supports",
+        "Becoming.ExchangeRelation.respondsBelow_local",
+        "Becoming.ExchangeRelation.respondsBelow_supports",
+        "Becoming.ExchangeRelation.respondsBelow_weakest",
+        "Becoming.NoisyLaw",
+        "Becoming.NoisyLaw.course_runs",
+        "Becoming.NoisyLaw.readOffExchange",
+        "Becoming.NoisyLaw.realize",
+        "Becoming.NoisyLaw.relation",
         "Becoming.World.ReadOffExchange",
         "Becoming.World.ReadOffExchange.consumption_ends_with_feeders",
         "Becoming.World.ReadOffExchange.continuing_excludes",
@@ -283,12 +294,12 @@
         "Becoming.World.withRest_widening_selected_by_pool",
         "Becoming.World.withRest_widens_iff_others_within"
       ],
-      "sha256": "02eb12f6d4728a911cb163f65ef279b306a0e07991e90874dffe51a629286f83"
+      "sha256": "18a90a39f162ab351cb4f055c3d71235993f007916b1941b2736f58488dbc90c"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T140546.324820Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
       "role": "receipt",
-      "sha256": "a36d6ffd5d803a0d9f99a7905328f9a5b3b34738c793524b510353622339dfff"
+      "sha256": "a40250701ebee86db75602f749c5a9038ea7bd83845c67a8ac04f77715251d5e"
     },
     {
       "path": "theories/becoming/results/completion/COVERAGE.json",
@@ -303,23 +314,23 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "b0db2b9098443bb60b7a665795ce514b12e0c2b6910dbd1537217839193a931d"
+      "sha256": "b7b8c020a683f63a821824279a2f66135bb2421d1fc0d2a64b42a5261c3915ed"
     },
     {
       "path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
       "role": "statement",
-      "sha256": "2ab5d47cfea38b8b302a59d6e774aeebb96e149b577bfbdf3cf1be65842e37c3"
+      "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T140546.324820Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OverExchange",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -329,6 +340,10 @@
     {
       "en": "22 October 2026: added (XL1), on chapter §8.1 item 1, the formal part of the first target; study section 364.",
       "zh": "2026年10月22日：新增（XL1），针对第 8.1 节第 1 项，首要目标的形式部分；研究第 364 节。"
+    },
+    {
+      "en": "22 October 2026: the warrant note restated after XL4 (study section 369); no statement changed. Proof binding moved to receipt 20261022T151214.034215Z, which binds the module with XL4's two sections; the record's declarations are unchanged and still pass.",
+      "zh": "2026年10月22日：XL4 之后重述根据一条（研究第 369 节）；陈述未变。证明绑定移到回执 20261022T151214.034215Z，它绑定含 XL4 两节的模块；本记录的声明未变，仍通过。"
     }
   ]
 }

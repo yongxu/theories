@@ -5674,67 +5674,81 @@ Definitions and types:
 <a id="module-cac9de43b3e1"></a>
 
 <details>
-<summary>Representation.lean — 48 explicit declarations</summary>
+<summary>Representation.lean — 62 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean`
 
-Imports: `Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus`, `Mathlib.Analysis.SpecificLimits.Basic`, `Mathlib.Analysis.SpecificLimits.Normed`, `Mathlib.Data.Fintype.Pi`, `Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv`, `Becoming.Frequency`
+Imports: `Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus`, `Mathlib.Analysis.SpecificLimits.Basic`, `Mathlib.Analysis.SpecificLimits.Normed`, `Mathlib.Data.Fintype.Pi`, `Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv`, `Mathlib.Analysis.Normed.Algebra.TrivSqZeroExt`, `Becoming.Frequency`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.Representation.Course.balance_over](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L103) | 103 |
-| [Becoming.Representation.Course.sample_balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L119) | 119 |
-| [Becoming.Representation.Course.givenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L126) | 126 |
-| [Becoming.Representation.Course.takenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L134) | 134 |
-| [Becoming.Representation.Oscillation.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L155) | 155 |
-| [Becoming.Representation.Oscillation.summable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L165) | 165 |
-| [Becoming.Representation.Oscillation.still_at_steps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L170) | 170 |
-| [Becoming.Representation.Oscillation.changes_between](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L176) | 176 |
-| [Becoming.Representation.Oscillation.still_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L185) | 185 |
-| [Becoming.Representation.no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L196) | 196 |
-| [Becoming.Representation.halving_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L208) | 208 |
-| [Becoming.Representation.reals_no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L214) | 214 |
-| [Becoming.Representation.unit_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L218) | 218 |
-| [Becoming.Representation.new_without_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L227) | 227 |
-| [Becoming.Representation.close_of_cell](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L234) | 234 |
-| [Becoming.Representation.separated_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L249) | 249 |
-| [Becoming.Representation.separated_exceeds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L268) | 268 |
-| [Becoming.Representation.held_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L289) | 289 |
-| [Becoming.Representation.selfLoop_cast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L301) | 301 |
-| [Becoming.Representation.held_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L312) | 312 |
-| [Becoming.Representation.every_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L340) | 340 |
-| [Becoming.Representation.every_bounded_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L348) | 348 |
-| [Becoming.Representation.every_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L364) | 364 |
-| [Becoming.Representation.rate_bdd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L383) | 383 |
-| [Becoming.Representation.rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L386) | 386 |
-| [Becoming.Representation.pow_rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L390) | 390 |
-| [Becoming.Representation.unbounded_of_one_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L396) | 396 |
-| [Becoming.Representation.vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L402) | 402 |
-| [Becoming.Representation.rate_real](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L435) | 435 |
-| [Becoming.Representation.webCarried_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L450) | 450 |
-| [Becoming.Representation.web_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L461) | 461 |
-| [Becoming.Representation.every_vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L493) | 493 |
-| [Becoming.Representation.dampedWeb_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L520) | 520 |
-| [Becoming.Representation.dampedWeb_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L539) | 539 |
-| [Becoming.Representation.rate_pow_le_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L566) | 566 |
-| [Becoming.Representation.dampedWeb_unbounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L575) | 575 |
+| [Becoming.Representation.Course.balance_over](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L113) | 113 |
+| [Becoming.Representation.Course.sample_balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L129) | 129 |
+| [Becoming.Representation.Course.givenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L136) | 136 |
+| [Becoming.Representation.Course.takenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L144) | 144 |
+| [Becoming.Representation.Oscillation.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L165) | 165 |
+| [Becoming.Representation.Oscillation.summable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L175) | 175 |
+| [Becoming.Representation.Oscillation.still_at_steps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L180) | 180 |
+| [Becoming.Representation.Oscillation.changes_between](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L186) | 186 |
+| [Becoming.Representation.Oscillation.still_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L195) | 195 |
+| [Becoming.Representation.no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L206) | 206 |
+| [Becoming.Representation.halving_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L218) | 218 |
+| [Becoming.Representation.reals_no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L224) | 224 |
+| [Becoming.Representation.unit_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L228) | 228 |
+| [Becoming.Representation.new_without_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L237) | 237 |
+| [Becoming.Representation.close_of_cell](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L244) | 244 |
+| [Becoming.Representation.separated_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L259) | 259 |
+| [Becoming.Representation.separated_exceeds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L278) | 278 |
+| [Becoming.Representation.held_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L299) | 299 |
+| [Becoming.Representation.selfLoop_cast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L311) | 311 |
+| [Becoming.Representation.held_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L322) | 322 |
+| [Becoming.Representation.every_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L350) | 350 |
+| [Becoming.Representation.every_bounded_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L358) | 358 |
+| [Becoming.Representation.every_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L374) | 374 |
+| [Becoming.Representation.rate_bdd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L393) | 393 |
+| [Becoming.Representation.rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L396) | 396 |
+| [Becoming.Representation.pow_rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L400) | 400 |
+| [Becoming.Representation.unbounded_of_one_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L406) | 406 |
+| [Becoming.Representation.vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L412) | 412 |
+| [Becoming.Representation.rate_real](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L445) | 445 |
+| [Becoming.Representation.webCarried_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L460) | 460 |
+| [Becoming.Representation.web_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L471) | 471 |
+| [Becoming.Representation.every_vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L503) | 503 |
+| [Becoming.Representation.dampedWeb_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L530) | 530 |
+| [Becoming.Representation.dampedWeb_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L549) | 549 |
+| [Becoming.Representation.rate_pow_le_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L576) | 576 |
+| [Becoming.Representation.dampedWeb_unbounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L585) | 585 |
+| [Becoming.Representation.rate_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L617) | 617 |
+| [Becoming.Representation.rate_smul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L621) | 621 |
+| [Becoming.Representation.subexponential](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L631) | 631 |
+| [Becoming.Representation.rate_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L643) | 643 |
+| [Becoming.Representation.shear_pow_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L652) | 652 |
+| [Becoming.Representation.shear_rate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L658) | 658 |
+| [Becoming.Representation.expected_balance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L684) | 684 |
+| [Becoming.Representation.RandomEnd.rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L698) | 698 |
+| [Becoming.Representation.RandomEnd.summable_weighted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L704) | 704 |
+| [Becoming.Representation.RandomEnd.expected](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L714) | 714 |
+| [Becoming.Representation.RandomEnd.rest_not_in_expectation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L726) | 726 |
 
 Definitions and types:
 
-- `structure` [Becoming.Representation.Course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L74) (L74)
-- `def` [Becoming.Representation.Course.Balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L85) (L85)
-- `def` [Becoming.Representation.Course.Summable'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L89) (L89)
-- `def` [Becoming.Representation.Course.givenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L94) (L94)
-- `def` [Becoming.Representation.Course.takenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L97) (L97)
-- `def` [Becoming.Representation.Course.sample](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L113) (L113)
-- `def` [Becoming.Representation.Oscillation.course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L151) (L151)
-- `def` [Becoming.Representation.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L280) (L280)
-- `def` [Becoming.Representation.Polynomial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L285) (L285)
-- `def` [Becoming.Representation.rate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L380) (L380)
-- `def` [Becoming.Representation.webCarried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L444) (L444)
-- `def` [Becoming.Representation.dampedWeb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L513) (L513)
+- `structure` [Becoming.Representation.Course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L84) (L84)
+- `def` [Becoming.Representation.Course.Balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L95) (L95)
+- `def` [Becoming.Representation.Course.Summable'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L99) (L99)
+- `def` [Becoming.Representation.Course.givenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L104) (L104)
+- `def` [Becoming.Representation.Course.takenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L107) (L107)
+- `def` [Becoming.Representation.Course.sample](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L123) (L123)
+- `def` [Becoming.Representation.Oscillation.course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L161) (L161)
+- `def` [Becoming.Representation.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L290) (L290)
+- `def` [Becoming.Representation.Polynomial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L295) (L295)
+- `def` [Becoming.Representation.rate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L390) (L390)
+- `def` [Becoming.Representation.webCarried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L454) (L454)
+- `def` [Becoming.Representation.dampedWeb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L523) (L523)
+- `def` [Becoming.Representation.shear](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L650) (L650)
+- `def` [Becoming.Representation.RandomEnd.level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L695) (L695)
+- `def` [Becoming.Representation.RandomEnd.weight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L702) (L702)
 
 </details>
 

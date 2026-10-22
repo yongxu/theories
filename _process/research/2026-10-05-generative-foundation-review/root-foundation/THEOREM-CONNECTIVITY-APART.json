@@ -2721,6 +2721,21 @@
    "module": "Becoming.Reproduction",
    "category": "model-witness",
    "reason": "at threshold: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_local": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_supports": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_weakest": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
   }
  },
  "instances": {

@@ -61,6 +61,18 @@ off an exchange, the four discharged by the reading.
   roles holds (`World.ReadOffExchange.roles_dependent`). Bounded transmission, a state of the law,
   stays the hypothesis of `World.ReadOffExchange.transmitted_supported`.
 
+* **Why requirement is necessary response.** A reading of requirement is sound where, under it,
+  activity needs support on every run (`ExchangeRelation.Supports`), and local where it does not read
+  the current level of what is required (`ExchangeRelation.Local`). Necessary response is sound and
+  local (`ExchangeRelation.respondsBelow_supports`, `ExchangeRelation.respondsBelow_local`), and every
+  sound, local reading says no more than it (`ExchangeRelation.respondsBelow_weakest`): it is the
+  weakest reading of requirement under which activity needs support. Possible response is not sound
+  (`ExchangeRelation.mayRespond_not_supports`).
+* **Laws with noise.** A law whose exchange also reads a noise value (`NoisyLaw`) is a relation of
+  exchange, open being the exchanges some noise value gives (`NoisyLaw.relation`), and the course along
+  every realization of the noise is a run of it (`NoisyLaw.course_runs`), so a world read off it
+  (`NoisyLaw.readOffExchange`): every form above holds path by path.
+
 **What changes in the reading.** With the rest counted, what the world's own relata do not
 account for is the rest's exchange: a law that names givers or feeders counts the rest among them
 where it gives. The rest is idle exactly where the world balances (`World.withRest_closed_iff`), and
@@ -690,5 +702,95 @@ theorem family_excess_ends (read : w.ReadOffExchange) {parts : w.withRest.Relatu
 end ReadOffExchange
 
 end World
+
+/-! ## Why requirement is necessary response -/
+
+namespace ExchangeRelation
+
+variable {F C : Type} (rel : ExchangeRelation F C) (present : Nat → List F)
+
+/-- A reading of requirement is **sound** over a relation of exchange where, under every history,
+whenever it says that a formation requires a condition at a need and an open exchange has the
+formation exchange, the condition stands at the need: read so, activity needs support on every
+run. -/
+def Supports (R : (Nat → C → Nat) → Nat → F → C → Nat → Prop) : Prop :=
+  ∀ l t take give f c n, rel.admits t l take give → Exchanges present take give t f →
+    R l t f c n → n ≤ l t c
+
+/-- A reading of requirement is **local** where it does not read the current level of what is
+required: changing that level alone at that step does not change it. -/
+def Local (R : (Nat → C → Nat) → Nat → F → C → Nat → Prop) : Prop :=
+  ∀ l l' t f c n, (∀ s d, ¬ (s = t ∧ d = c) → l' s d = l s d) → R l t f c n → R l' t f c n
+
+variable {rel present}
+
+/-- Necessary response is sound. -/
+theorem respondsBelow_supports : rel.Supports present (rel.RespondsBelow present) :=
+  fun l _ take give _ _ _ admits exchanges responds => Nat.ge_of_not_lt fun below =>
+    responds l (fun _ _ _ => rfl) below take give admits exchanges
+
+/-- Necessary response is local. -/
+theorem respondsBelow_local : Local (rel.RespondsBelow present) :=
+  fun _ _ _ _ _ _ agree responds l'' agree'' below take give admits =>
+    responds l'' (fun s d off => (agree'' s d off).trans (agree s d off)) below take give admits
+
+/-- **Necessary response is the weakest local, sound reading of requirement.** Every reading of
+requirement that does not read the current level of what is required, and under which activity
+needs support on every run, says no more than that the formation's exchange necessarily responds
+to the condition falling below the need. -/
+theorem respondsBelow_weakest {R : (Nat → C → Nat) → Nat → F → C → Nat → Prop}
+    (sound : rel.Supports present R) (local_ : Local R) {l : Nat → C → Nat} {t : Nat} {f : F}
+    {c : C} {n : Nat} (reads : R l t f c n) : rel.RespondsBelow present l t f c n :=
+  fun l' agree below take give admits exchanges =>
+    Nat.lt_irrefl _ (Nat.lt_of_lt_of_le below
+      (sound l' t take give f c n admits exchanges (local_ l l' t f c n agree reads)))
+
+/-- **Possible response is not sound**: under the free relation, a formation taking a unit at
+every step from a condition standing at nothing possibly responds to it falling below one. -/
+theorem mayRespond_not_supports :
+    ¬ free.Supports ExchangeLaw.single (free.MayRespondBelow ExchangeLaw.single) :=
+  fun sound => match free_unsupported.2 0 with
+  | ⟨⟨mem, c, exchanged⟩, may, below⟩ =>
+    Nat.lt_irrefl _ (Nat.lt_of_lt_of_le below
+      (sound _ 0 (takingOne.take 0) (takingOne.give 0) () () 1 trivial ⟨mem, c, exchanged⟩ may))
+
+end ExchangeRelation
+
+/-! ## Laws with noise -/
+
+/-- A law of exchange with noise: what each formation takes from and gives to each condition across
+the step from `t` reads the level history and a noise value. -/
+structure NoisyLaw (Ω F C : Type) where
+  take : Nat → F → (Nat → C → Nat) → Ω → C → Nat
+  give : Nat → F → (Nat → C → Nat) → Ω → C → Nat
+
+namespace NoisyLaw
+
+variable {Ω F C : Type} (law : NoisyLaw Ω F C)
+
+/-- The relation of exchange a law with noise is: open are the exchanges some noise value gives. -/
+def relation : ExchangeRelation F C :=
+  ⟨fun t l take give => ∃ ω, (∀ f c, take f c = law.take t f l ω c) ∧ ∀ f c, give f c = law.give t f l ω c⟩
+
+/-- The law along one realization of the noise, one value at each step. -/
+def realize (ξ : Nat → Ω) : ExchangeLaw F C :=
+  ⟨fun t f l c => law.take t f l (ξ t) c, fun t f l c => law.give t f l (ξ t) c⟩
+
+/-- **Each realization's course is a run of the relation.** -/
+theorem course_runs (ξ : Nat → Ω) (present : Nat → List F) (start : C → Nat) :
+    law.relation.Runs present ((law.realize ξ).levels present start) ((law.realize ξ).course present start) :=
+  fun t => ⟨rfl, ξ t, fun _ _ => rfl, fun _ _ => rfl⟩
+
+/-- **The laws over a relation of exchange hold path by path.** Along every realization of the
+noise, the course read with requirement as necessary response over every noise value is a world read
+off a relation of exchange, so every form of `World.ReadOffExchange` holds of it, and every form of
+`World.withRest` of every world. -/
+theorem readOffExchange {R : Type} (law : NoisyLaw Ω R R) (ξ : Nat → Ω) (present : Nat → List R)
+    (start : R → Nat) (need : Nat → R → R → Nat) :
+    (law.relation.world present ((law.realize ξ).course present start)
+      ((law.realize ξ).levels present start) need).ReadOffExchange :=
+  ExchangeRelation.Runs.readOffExchange (law.course_runs ξ present start) need
+
+end NoisyLaw
 
 end Becoming
