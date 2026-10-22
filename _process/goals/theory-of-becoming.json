@@ -1,69 +1,69 @@
 {
-  "schema_version": 1,
-  "id": "theory-of-becoming",
+ "schema_version": 1,
+ "id": "theory-of-becoming",
+ "title": {
+  "en": "Theory of Becoming — current first priority",
+  "zh": "生成／变化之论——当前首要研究方向"
+ },
+ "scope_type": "project-direction",
+ "state": "unmarked",
+ "scope": {
+  "en": "Ren's current first priority for the continuing foundation programme: explain the whole scope of becoming, including generation and degeneration. Preserve completed ethical and evolutionary results and the scopes of independently authorized tasks. Ren clarifies that deductive necessity concerns the whole Theory of Becoming; generativity is within its manifold.",
+  "zh": "Ren 为持续基础研究确立的当前首要方向：解释包含生成与退化的整个变化范围。保留已完成伦理、演化成果及其他独立授权任务的范围。 Ren进一步明确：演绎必然性的对象是Theory of Becoming整体；生成性是其manifold的部分。"
+ },
+ "objective": {
+  "en": "Establish the deductive necessity of the Theory of Becoming as a whole without added substantive axioms, in two parts: its formal part, every central law of the spine (the coverage of the completion criterion, K1) stated over every law, or relation, of exchange (`ExchangeLaw`, `ExchangeRelation`), with each `World` premise shown to be a reading of the exchange or a state of the law, and the process and world families joined by definition (a world is a run by its type); and its philosophical part, that the whole's determinations are internally related moments of one unfolding. Explain generative forms within its manifold. Articulate how relations form, persist, transform and dissolve, including life and evolution, without requiring every becoming to be generative or favorably directed.",
+  "zh": "无需附加实质公理，建立Theory of Becoming整体的演绎必然性，分两部分：形式部分，脊柱的每条中心规律（完成标准的覆盖，K1）都对每个交换之律或交换关系（`ExchangeLaw`、`ExchangeRelation`）陈述，每个 `World` 前提都示为交换的读法或律的状态，过程族与世界族由定义相连（世界按其类型就是一段运行）；哲学部分，整体的诸规定是同一展开中内在相关的环节。说明其manifold中的生成形态。阐明关系怎样形成、维持、转化与消失，包含生命与演化，不要求每种变化均有生成性或有利方向。"
+ },
+ "premises": {
+  "en": "Begin with the monist relational method and disclose its role. Retain mixed effects, real losses and terminal continuations. Distinguish logical machinery, definitions, local laws, correspondence and normative commitments; a supplied local law is not thereby external to reality. The theory asserts no axiom: everything that holds for any significance is stated without one, living significance is characterized and shown undecided by the dynamics, and the continuation condition (for anything, its continuation into the future has significance) enters only as the condition of chapter section 6.4, under which living significance is a theorem. Courses are compared on possibilities. The generative space is stated with no axiom: a part is generative where the levels with it widen those without it, and on level paths comparison is a law with “better” read as widening; under the continuation condition, widening is retaining and adding what has significance. The practical commitments of the alignment route stay explicit within the whole, without becoming premises of every dynamical explanation.",
+  "zh": "从一元关系方法出发并公开其作用。保留混合效果、真实损失与终结的延续。区分逻辑工具、定义、局部规律、对应与规范承诺；给定的局部规律并不因此外在于实在。理论不断言任何公理：凡对任何意义成立者都无需公理陈述；生命的意义得到刻画，且动力学不决定它；延续条件（任何东西向未来的延续都有意义）只作为章节 §6.4 的条件出现，在此条件下生命的意义是定理。各进程按可能性比较。生成空间无需公理陈述：一个部分在“有它”的层级扩展了“无它”的层级之处是生成的；在层级路径上，以“更好”读作扩展，比较是规律；在延续条件下，扩展即保留并增加有意义者。对齐路线的实践承诺在整体之内保持明示，不成为每个动力学解释的前提。"
+ },
+ "completion": {
+  "en": "Reuse completed conditional mechanisms and identify the exact remaining foundational inference. Assess zero normative axioms and zero added substantive axioms separately; neither outcome inclusion, an empty Lean axiom report nor hidden hypotheses establishes the stronger target. Explain actual possibilities and constraints, expose remaining dependencies, and preserve substantive counterexamples. This priority authorization does not certify a new result or universal completion. Establish the whole claim at its stated scope; do not substitute universal generativity for the whole or treat a mode’s absence as its refutation. Completeness is checked by the completion criterion K1–K7 (coverage, unity, premises, representation, enclosure, the ethics chain, the open register; study section 218), adopted 20 October 2026 with Ren's approval; it runs (tools/research/completion.py, report theories/becoming/results/completion/COMPLETION.md, R39), and while a criterion is unmet the chapter claims completeness only in the qualified sense it states.",
+  "zh": "复用已完成条件机制，指出尚缺的确切基础推论。分别检验无规范公理与无附加实质公理；包容全部结果、空 Lean 公理报告或隐藏假设都不等于更强目标成立。说明实际可能与限制，公开剩余依赖并保留实质反例。本优先授权不认证新成果或普遍完成。 按所声明范围建立整体主张；不以普遍生成性替换整体，不把某种形态缺失直接视为整体反例。 完整性由完成标准 K1–K7 检查（覆盖、统一、前提、表示、封闭、伦理之链、开放登记；研究第 218 节），2026年10月20日经 Ren 批准采用；它已运行（tools/research/completion.py，报告 theories/becoming/results/completion/COMPLETION.md，R39）；只要有一项未满足，正文只在其所述的限定意义上声称完整。"
+ },
+ "sources": [
+  "sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md",
+  "theories/becoming/chapters/NONDUAL-METHOD.md",
+  "theories/becoming/history/GENERATIVE-GROUNDING.md",
+  "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+  "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-continuation.md",
+  "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+  "sources/15-codex-theory-conversations/2026-10-09-becoming-whole-generative-manifold.md",
+  "sources/15-codex-theory-conversations/2026-10-09-renewing-consuming-without-axioms.md",
+  "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
+  "sources/15-codex-theory-conversations/2026-10-09-complete-theory-of-becoming.md",
+  "sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md",
+  "sources/15-codex-theory-conversations/2026-10-11-fold-g0.md",
+  "sources/15-codex-theory-conversations/2026-10-11-part-ii-into-part-i.md",
+  "sources/15-codex-theory-conversations/2026-10-11-generative-space-no-axiom.md",
+  "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
+  "sources/15-codex-theory-conversations/2026-10-20-fix-all-twentieth-review.md"
+ ],
+ "result_ids": [
+  "conditional-foundation-assessment",
+  "endpoint-loss-and-return",
+  "becoming-context-coherence",
+  "theory-of-becoming-foundation",
+  "relational-renewal-classification",
+  "relational-reading-comparison",
+  "metaethical-core-characterization",
+  "becoming-spine-instances",
+  "becoming-renewal-reading"
+ ],
+ "overview": {
   "title": {
-    "en": "Theory of Becoming — current first priority",
-    "zh": "生成／变化之论——当前首要研究方向"
+   "en": "First priority: Theory of Becoming",
+   "zh": "首要研究方向：生成／变化之论"
   },
-  "scope_type": "project-direction",
-  "state": "unmarked",
-  "scope": {
-    "en": "Ren's current first priority for the continuing foundation programme: explain the whole scope of becoming, including generation and degeneration. Preserve completed ethical and evolutionary results and the scopes of independently authorized tasks. Ren clarifies that deductive necessity concerns the whole Theory of Becoming; generativity is within its manifold.",
-    "zh": "Ren 为持续基础研究确立的当前首要方向：解释包含生成与退化的整个变化范围。保留已完成伦理、演化成果及其他独立授权任务的范围。 Ren进一步明确：演绎必然性的对象是Theory of Becoming整体；生成性是其manifold的部分。"
+  "summary": {
+   "en": "Deductive necessity lies in the Theory of Becoming as a whole; generativity is within its manifold. Develop that deduction without added substantive axioms, retaining persistence, degeneration, dissolution and mixed changes. Life, evolution and evaluation under the conditional alignment route remain differentiated within the same reality.",
+   "zh": "整体Theory of Becoming是演绎必然性的对象，生成性是其manifold中的部分。无需附加实质公理推进这一演绎，保留维持、退化、消解及混合变化；生命、演化与有条件的对齐路线下的评价在同一现实中分化。"
   },
-  "objective": {
-    "en": "Establish the deductive necessity of the Theory of Becoming as a whole without added substantive axioms, in two parts: its formal part, every central law of the spine (the coverage of the completion criterion, K1) stated over every law, or relation, of exchange (`ExchangeLaw`, `ExchangeRelation`), with each `World` premise shown to be a reading of the exchange or a state of the law, and the process and world families joined by definition (a world is a run by its type); and its philosophical part, that the whole's determinations are internally related moments of one unfolding. Explain generative forms within its manifold. Articulate how relations form, persist, transform and dissolve, including life and evolution, without requiring every becoming to be generative or favorably directed.",
-    "zh": "无需附加实质公理，建立Theory of Becoming整体的演绎必然性，分两部分：形式部分，脊柱的每条中心规律（完成标准的覆盖，K1）都对每个交换之律或交换关系（`ExchangeLaw`、`ExchangeRelation`）陈述，每个 `World` 前提都示为交换的读法或律的状态，过程族与世界族由定义相连（世界按其类型就是一段运行）；哲学部分，整体的诸规定是同一展开中内在相关的环节。说明其manifold中的生成形态。阐明关系怎样形成、维持、转化与消失，包含生命与演化，不要求每种变化均有生成性或有利方向。"
-  },
-  "premises": {
-    "en": "Begin with the monist relational method and disclose its role. Retain mixed effects, real losses and terminal continuations. Distinguish logical machinery, definitions, local laws, correspondence and normative commitments; a supplied local law is not thereby external to reality. The theory asserts no axiom: everything that holds for any significance is stated without one, living significance is characterized and shown undecided by the dynamics, and the continuation condition (for anything, its continuation into the future has significance) enters only as the condition of chapter section 6.4, under which living significance is a theorem. Courses are compared on possibilities. The generative space is stated with no axiom: a part is generative where the levels with it widen those without it, and on level paths comparison is a law with “better” read as widening; under the continuation condition, widening is retaining and adding what has significance. The practical commitments of the alignment route stay explicit within the whole, without becoming premises of every dynamical explanation.",
-    "zh": "从一元关系方法出发并公开其作用。保留混合效果、真实损失与终结的延续。区分逻辑工具、定义、局部规律、对应与规范承诺；给定的局部规律并不因此外在于实在。理论不断言任何公理：凡对任何意义成立者都无需公理陈述；生命的意义得到刻画，且动力学不决定它；延续条件（任何东西向未来的延续都有意义）只作为章节 §6.4 的条件出现，在此条件下生命的意义是定理。各进程按可能性比较。生成空间无需公理陈述：一个部分在“有它”的层级扩展了“无它”的层级之处是生成的；在层级路径上，以“更好”读作扩展，比较是规律；在延续条件下，扩展即保留并增加有意义者。对齐路线的实践承诺在整体之内保持明示，不成为每个动力学解释的前提。"
-  },
-  "completion": {
-    "en": "Reuse completed conditional mechanisms and identify the exact remaining foundational inference. Assess zero normative axioms and zero added substantive axioms separately; neither outcome inclusion, an empty Lean axiom report nor hidden hypotheses establishes the stronger target. Explain actual possibilities and constraints, expose remaining dependencies, and preserve substantive counterexamples. This priority authorization does not certify a new result or universal completion. Establish the whole claim at its stated scope; do not substitute universal generativity for the whole or treat a mode’s absence as its refutation. Completeness is checked by the completion criterion K1–K7 (coverage, unity, premises, representation, enclosure, the ethics chain, the open register; study section 218), adopted 20 October 2026 with Ren's approval; it runs (tools/research/completion.py, report theories/becoming/results/completion/COMPLETION.md, R39), and while a criterion is unmet the chapter claims completeness only in the qualified sense it states.",
-    "zh": "复用已完成条件机制，指出尚缺的确切基础推论。分别检验无规范公理与无附加实质公理；包容全部结果、空 Lean 公理报告或隐藏假设都不等于更强目标成立。说明实际可能与限制，公开剩余依赖并保留实质反例。本优先授权不认证新成果或普遍完成。 按所声明范围建立整体主张；不以普遍生成性替换整体，不把某种形态缺失直接视为整体反例。 完整性由完成标准 K1–K7 检查（覆盖、统一、前提、表示、封闭、伦理之链、开放登记；研究第 218 节），2026年10月20日经 Ren 批准采用；它已运行（tools/research/completion.py，报告 theories/becoming/results/completion/COMPLETION.md，R39）；只要有一项未满足，正文只在其所述的限定意义上声称完整。"
-  },
-  "sources": [
-    "sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md",
-    "theories/becoming/chapters/NONDUAL-METHOD.md",
-    "theories/becoming/history/GENERATIVE-GROUNDING.md",
-    "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
-    "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-continuation.md",
-    "theories/becoming/chapters/BECOMING-FOUNDATION.md",
-    "sources/15-codex-theory-conversations/2026-10-09-becoming-whole-generative-manifold.md",
-    "sources/15-codex-theory-conversations/2026-10-09-renewing-consuming-without-axioms.md",
-    "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
-    "sources/15-codex-theory-conversations/2026-10-09-complete-theory-of-becoming.md",
-    "sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md",
-    "sources/15-codex-theory-conversations/2026-10-11-fold-g0.md",
-    "sources/15-codex-theory-conversations/2026-10-11-part-ii-into-part-i.md",
-    "sources/15-codex-theory-conversations/2026-10-11-generative-space-no-axiom.md",
-    "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
-    "sources/15-codex-theory-conversations/2026-10-20-fix-all-twentieth-review.md"
-  ],
-  "result_ids": [
-    "conditional-foundation-assessment",
-    "endpoint-loss-and-return",
-    "becoming-context-coherence",
-    "theory-of-becoming-foundation",
-    "relational-renewal-classification",
-    "relational-reading-comparison",
-    "metaethical-core-characterization",
-    "becoming-spine-instances",
-    "becoming-renewal-reading"
-  ],
-  "overview": {
-    "title": {
-      "en": "First priority: Theory of Becoming",
-      "zh": "首要研究方向：生成／变化之论"
-    },
-    "summary": {
-      "en": "Deductive necessity lies in the Theory of Becoming as a whole; generativity is within its manifold. Develop that deduction without added substantive axioms, retaining persistence, degeneration, dissolution and mixed changes. Life, evolution and evaluation under the conditional alignment route remain differentiated within the same reality.",
-      "zh": "整体Theory of Becoming是演绎必然性的对象，生成性是其manifold中的部分。无需附加实质公理推进这一演绎，保留维持、退化、消解及混合变化；生命、演化与有条件的对齐路线下的评价在同一现实中分化。"
-    },
-    "next_step": {
-      "en": "The formal part of the necessity of the whole: every central law of the spine (the coverage of the completion criterion, K1) stated over every law, or relation, of exchange (`ExchangeLaw`, `ExchangeRelation`), with each `World` premise shown to be a reading of the exchange or a state of the law, and the process and world families joined by definition (a world is a run by its type). Five of the eight `World` premises are readings of one exchange and three are states of the law (`Becoming.ExchangePremises`); the families are joined by definition (`Becoming.Runs`, R28); what remains is the spine's central laws stated over every law of exchange rather than over separately chosen premises. The philosophical part: that the whole's determinations are internally related moments of one unfolding, not a collection of laws each holding of every represented world. Settle whether every becoming can be represented with discrete steps and natural-number amounts, on which rest, novelty needing gain and the setting of runaway by frequency depend, and state the laws with real amounts and continuous time. Completeness is checked by K1–K7.",
-      "zh": "整体必然性的形式部分：脊柱的每条中心规律（完成标准的覆盖，K1）都对每个交换之律或交换关系（`ExchangeLaw`、`ExchangeRelation`）陈述，每个 `World` 前提都示为交换的读法或律的状态，过程族与世界族由定义相连（世界按其类型就是一段运行）。八个 `World` 前提中五个是同一交换的读法、三个是律的状态（`Becoming.ExchangePremises`）；两族由定义相连（`Becoming.Runs`，R28）；尚待的是把脊柱的中心规律对每个交换之律陈述，而非对分别选定的前提陈述。哲学部分：整体的诸规定是同一展开中内在相关的环节，而非各自对每个被表示世界成立的一组规律。判明每个生成／变化能否以离散步与自然数量表示（停息、新颖需要增益、由频率决定失控都依赖于此），并陈述实数量与连续时间下的规律。完整性由 K1–K7 检查。"
-    }
+  "next_step": {
+   "en": "The formal part of the necessity of the whole: every central law of the spine (the coverage of the completion criterion, K1) stated over every law, or relation, of exchange (`ExchangeLaw`, `ExchangeRelation`), with each `World` premise shown to be a reading of the exchange or a state of the law, and the process and world families joined by definition (a world is a run by its type). Five of the eight `World` premises are readings of one exchange and three are states of the law (`Becoming.ExchangePremises`); the families are joined by definition (`Becoming.Runs`, R28); the spine's central laws are stated over every relation of exchange rather than over separately chosen premises (`Becoming.OverExchange`, XL1: each of the 33 central declarations taking a tying premise has its form over what is read off an exchange, what stays a hypothesis a state of the law; K3 checks the forms). The companion modules left are readings with laws of their own, kept by R32's criterion, so nothing formal remains of the first target's formal part beyond which law holds and the representation. The philosophical part: that the whole's determinations are internally related moments of one unfolding, not a collection of laws each holding of every represented world. Argued for the determinations the World premises name (BECOMING-FOUNDATION §9.1); open: that every becoming has a law or relation of exchange of this kind; for requirement the warrant is reduced to locality, necessary response being the weakest reading under which activity needs support that does not read the current level of what is required (`ExchangeRelation.respondsBelow_weakest`, XL4). Representation (XL2): discrete steps represent real-valued time exactly for balance, at every reading, what changes within a step not shown; whole amounts are not available where amounts change by ever smaller amounts, and over real amounts rest needs a least fall, novelty needs gain exactly where it is by a least separation, and runaway is set by frequency where the difference is held and by strength where it is damped and for several conditions by the rate of the step, its spectral radius (`Becoming.WholeAmounts`, periphery `Representation`). Settled too (XL4): at rate one growth is below every exponential and the rate does not decide boundedness; a law with noise is a relation of exchange, so the laws hold path by path, balance passing to the expectation and rest not. Open: the gap between the damped laws where a coupled step's norm exceeds its rate. Completeness is checked by K1–K7.",
+   "zh": "整体必然性的形式部分：脊柱的每条中心规律（完成标准的覆盖，K1）都对每个交换之律或交换关系（`ExchangeLaw`、`ExchangeRelation`）陈述，每个 `World` 前提都示为交换的读法或律的状态，过程族与世界族由定义相连（世界按其类型就是一段运行）。八个 `World` 前提中五个是同一交换的读法、三个是律的状态（`Becoming.ExchangePremises`）；两族由定义相连（`Becoming.Runs`，R28）；脊柱的中心规律已对每个交换关系陈述，而非对分别选定的前提陈述（`Becoming.OverExchange`，XL1：33 条取联结前提的中心规律各有其在交换上的形式，仍为假设者是律的状态；K3 检查这些形式）。余下的伴随模块是有自身规律的读法，按 R32 的标准保留，所以形式部分除哪条律成立与表示之外不再有待。哲学部分：整体的诸规定是同一展开中内在相关的环节，而非各自对每个被表示世界成立的一组规律。对世界前提所称的规定已有论证（BECOMING-FOUNDATION 第 9.1 节）；开放：每个生成／变化是否都有这样的交换之律或关系；需要的根据已归结为局部性：必然回应是不读所需者当前水平、且使活动需要支撑的最弱读法（`ExchangeRelation.respondsBelow_weakest`，XL4）。表示（XL2）：离散步对平衡恰好表示实数时间，每次读取皆然，步内的变化不显示；量以越来越小的量变化之处没有整数表示；实数量中停息需要最小下降，新颖恰在以最小间隔为新时需要增益，差别保持时失控由频率决定、有阻尼时由强度决定，多个条件时由一步的速率即谱半径决定（`Becoming.WholeAmounts`、外围 `Representation`）。亦已判明（XL4）：速率为一时增长慢于任何指数，速率不决定是否有界；带噪声的律是交换关系，规律逐路径成立，平衡在期望上成立而停息不然。开放：耦合步的范数超过其速率时两条阻尼规律之间的间隙。完整性由 K1–K7 检查。"
   }
+ }
 }

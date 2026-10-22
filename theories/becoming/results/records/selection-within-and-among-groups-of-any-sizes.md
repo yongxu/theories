@@ -82,6 +82,7 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 
 Aliases: `selection within and among groups of any sizes`, `大小任意之组的组内与组间选择`, `multilevel Price equation with unequal group sizes`, `contextual reading`, `Becoming.SelectionLevels.levels_sized`, `Becoming.SelectionLevels.rises_exact_iff_within_of_alike`, `Becoming.GroupEnding.Flow.rises_iff_inactive_sized`, `Becoming.GroupEnding.Exhausted.next_step`
 

@@ -64,8 +64,9 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
   - Preserved conditions: Only active formations give; descent. [GroupEnding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Its one-condition laws, now the family of one.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Groups on conditions of their own; here groups on coupled conditions.
+- related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). A lineage within a whole confined to one family of conditions in excess has no member once it ends, whatever selection within had raised it to.
 
-**Used by:** [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
+**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +89,7 @@ Aliases: `groups whose conditions are coupled`, `条件相互耦合的组`, `cou
 ### History
 
 - 20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.
+- 22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.
 
 </details>
 

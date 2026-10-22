@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "id": "a-pool-that-recruits-through-itself",
+  "title": {
+    "en": "A pool that recruits through itself",
+    "zh": "经自身招募之合池"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
+  "statement": {
+    "en": "A pool's reach lasts with its members. A pool admitting its next members through its own pooled coupling never couples two histories apart exactly when the pool along the other never does: it comes to couple into a loss only as its course without the loss would.",
+    "zh": "合池之所及随其成员而存。经自身合池耦合接纳下一批成员之合池，在两历史下直至其初次耦合二者有别之步成员皆同；其永不分别二者，恰当另一历史下之合池永不分别之：其耦合进一损失，只如无此损失之历程本会如此。"
+  },
+  "laws": [
+    {
+      "en": "A member that has coupled two histories apart up to a step keeps the pool apart at every later step at which it stays; where every member at a step couples them alike up to it, every selection through the pool there selects them alike.",
+      "zh": "一成员至某步已耦合两历史有别，则其留在池中之每一后步，池皆分别之；某步每一成员至该步皆耦合二者相同，则经池于该步之每一选择皆同选二者。",
+      "declarations": [
+        "Becoming.Web.apart_while_member",
+        "Becoming.Web.selects_alike_of_members"
+      ]
+    },
+    {
+      "en": "Under recruitment through the pool and the same members at the start, the members are the same under both histories at every step up to and including the first at which the pool couples them apart, and the pool along either history separates them there; it never separates them exactly when the pool along the other never does, the members are then the same at every step, and every selection through the pool at every step selects them alike.",
+      "zh": "经池招募且起始成员相同，则直至并含池初次耦合二者有别之步，两历史下每步成员皆同，且任一历史下之池于该步分别之；其永不分别二者，恰当另一历史下之池永不分别之，此时每步成员皆同，经池之每步每一选择皆同选二者。",
+      "declarations": [
+        "Becoming.Web.SameMembers",
+        "Becoming.Web.RecruitsThrough",
+        "Becoming.Web.AlikeThroughAll.of_same",
+        "Becoming.Web.RecruitsThrough.members_alike",
+        "Becoming.Web.RecruitsThrough.first_apart",
+        "Becoming.Web.RecruitsThrough.members_alike_always",
+        "Becoming.Web.RecruitsThrough.alike_iff",
+        "Becoming.Web.RecruitsThrough.selects_alike"
+      ]
+    },
+    {
+      "en": "The exits bind: a keeper alone, recruiting through itself, never couples a lost habitat apart; a pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once; a pool that recruits through itself and admits the reader at step 2 in every history couples the loss apart there, through a member the course without the loss holds too.",
+      "zh": "出口皆有约束：独一守者经自身招募，永不耦合失去之栖地有别；于栖地读空处接纳读者之池不经自身招募，即刻耦合损失有别；经自身招募而于每一历史第 2 步接纳读者之池，于该步经无损失之历程亦有之成员耦合损失有别。",
+      "declarations": [
+        "Becoming.PoolCourse.alone_through",
+        "Becoming.PoolCourse.alone_never_apart",
+        "Becoming.PoolCourse.called_not_through",
+        "Becoming.PoolCourse.called_apart",
+        "Becoming.PoolCourse.scheduled_through",
+        "Becoming.PoolCourse.scheduled_apart"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Recruitment through the pool and the same members at the start are hypotheses of the theorems. Membership is any claim about histories at each step; no count, weight or rule of aggregation is assumed. Coupling is read as in Testing (admission and the levels coupled in by level, at every step up to the one read). Discrete steps.",
+      "zh": "不加公理。经池招募与起始成员相同为定理之前提。成员为每步关于历史之任一断言；不设计数、权重或汇总规则。耦合之读法同 Testing（至所读之步每步之容纳与依水平耦合进之水平）。离散之步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual pool recruits through its own coupling: a question of correspondence (CR1 reads the published arrangements for AI evaluation).",
+      "zh": "任一实际之池经自身耦合招募：为对应之问题（CR1 读已发表之 AI 评估安排）。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "How soon, or whether, a self-recruiting pool comes to couple into a loss its course would reach: the scheduled witness shows only that it can.",
+      "zh": "经自身招募之池多快、是否耦合进其历程本会及之损失：所排程之见证只示其可能。",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about the rule a pool reads, or readers counted as the population counts them (ClosedCapture, MA2).",
+      "zh": "关于池所读之规则，或依人口计数之读者（ClosedCapture、MA2）。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T132056.171285Z): the 16 declarations cited here have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in the study section named in the history; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T132056.171285Z）：本记录所引 16 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见历史所列研究节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Pools whose recruitment reads part of what lies beyond; a pool whose rule and members are both formed through what it reads (with ClosedCapture and MA2); an independent review.",
+    "zh": "招募读及部分之外者之池；规则与成员皆经其所读而形成之池（与 ClosedCapture、MA2）；独立审查。"
+  },
+  "correspondence": {
+    "en": "Co-optation and self-perpetuating boards; hiring by current staff on their own criteria; evaluators chosen by those evaluated. The exit corresponds to an outside evaluator with its own access and criteria (CR1). The membership form of ClosedCapture.lock_outlives_loss.",
+    "zh": "增补与自我延续之董事会；现任者依其自身标准之聘用；由被评者所选之评者。出口对应于有其自身取用与标准之外部评者（CR1）。ClosedCapture.lock_outlives_loss 之成员形式。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
+  "aliases": [
+    "Becoming.PoolCourse.alone_never_apart",
+    "Becoming.PoolCourse.alone_through",
+    "Becoming.PoolCourse.called_apart",
+    "Becoming.PoolCourse.called_not_through",
+    "Becoming.PoolCourse.scheduled_apart",
+    "Becoming.PoolCourse.scheduled_through",
+    "Becoming.Web.AlikeThroughAll.of_same",
+    "Becoming.Web.RecruitsThrough",
+    "Becoming.Web.RecruitsThrough.alike_iff",
+    "Becoming.Web.RecruitsThrough.first_apart",
+    "Becoming.Web.RecruitsThrough.members_alike",
+    "Becoming.Web.RecruitsThrough.members_alike_always",
+    "Becoming.Web.RecruitsThrough.selects_alike",
+    "Becoming.Web.SameMembers",
+    "Becoming.Web.apart_while_member",
+    "Becoming.Web.selects_alike_of_members"
+  ],
+  "dependencies": [
+    {
+      "id": "what-pooled-coupling-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reads the pooled coupling (Web.AlikeThroughAll, Web.SelectsThroughAll) along a run with membership depending on the history.",
+        "zh": "沿历程读合池耦合（Web.AlikeThroughAll、Web.SelectsThroughAll），成员依历史而定。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "closed-capture",
+      "detail": {
+        "en": "ClosedCapture forms the rule and its reading from the share; PoolCourse forms the membership through what the members couple into.",
+        "zh": "ClosedCapture 由份额形成规则及其读法；PoolCourse 经成员所耦合进者形成成员。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PoolCourse.alone_never_apart",
+        "Becoming.PoolCourse.alone_through",
+        "Becoming.PoolCourse.called_apart",
+        "Becoming.PoolCourse.called_not_through",
+        "Becoming.PoolCourse.scheduled_apart",
+        "Becoming.PoolCourse.scheduled_through",
+        "Becoming.Web.AlikeThroughAll.of_same",
+        "Becoming.Web.RecruitsThrough",
+        "Becoming.Web.RecruitsThrough.alike_iff",
+        "Becoming.Web.RecruitsThrough.first_apart",
+        "Becoming.Web.RecruitsThrough.members_alike",
+        "Becoming.Web.RecruitsThrough.members_alike_always",
+        "Becoming.Web.RecruitsThrough.selects_alike",
+        "Becoming.Web.SameMembers",
+        "Becoming.Web.apart_while_member",
+        "Becoming.Web.selects_alike_of_members"
+      ],
+      "sha256": "a9c556cf9a875397133c51264faa56b84756558c0ec2683363b62ad5b94d35cd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "role": "receipt",
+      "sha256": "765980088a75fd76884c5b8b9882714526ab907cf6416b81e18abe2f2fe3a684"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "2d8de6818a9ba69e9fb6d55fd55d64330be51aabdc051ac00d398a0d0614b3ab"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "2a8b0d0df14d26e1dc4e1e09f2d26eef68962f8fe279c629f7b6e33100627e4d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
+      "role": "statement",
+      "sha256": "57ef1663b2f89399985f62b7de5f7dc9b61bc4a76155cbc6ec6d2f5c81dc9fde"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PoolCourse",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (PL1), for chapter §7.7 'how pools form, last and resist capture'; study section 356.",
+      "zh": "2026年10月22日：新增（PL1），为章 §7.7「池如何形成、维持、抵御劫持」；研究第 356 节。"
+    }
+  ]
+}

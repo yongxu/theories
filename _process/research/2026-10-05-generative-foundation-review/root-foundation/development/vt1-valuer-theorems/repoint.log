@@ -1,0 +1,103 @@
+{
+ "records": 16,
+ "apply": true,
+ "by_record": {
+  "alignment-approaches-under-the-selection-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+   ],
+   "rebound": []
+  },
+  "any-number-of-drawers-in-turn": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "central-laws-over-every-exchange": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "confined-rise-within-a-whole": {
+   "paths": [
+    "theories/becoming/OPENING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-draw-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-within-capacities": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "graded-significance-and-priority": {
+   "paths": [
+    "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md"
+   ],
+   "rebound": []
+  },
+  "revision-comes-to-drawing-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-a-center-can-know-by-a-step": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-discrete-steps-and-whole-amounts-represent": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-position-reads": {
+   "paths": [
+    "theories/becoming/OPENING.md"
+   ],
+   "rebound": []
+  },
+  "what-the-dynamics-leave-open": {
+   "paths": [
+    "theories/becoming/OPENING.md"
+   ],
+   "rebound": []
+  },
+  "what-the-step-across-standpoints-reaches": {
+   "paths": [
+    "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md"
+   ],
+   "rebound": []
+  },
+  "where-a-formations-acts-return": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "widening-as-what-every-weighting-ranks": {
+   "paths": [
+    "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

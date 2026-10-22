@@ -1,0 +1,315 @@
+{
+  "schema_version": 2,
+  "id": "a-narrowing-above-its-widening",
+  "title": {
+    "en": "A narrowing above its widening",
+    "zh": "缩小排在其扩大之上"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-22T14:40:29+00:00",
+  "statement": {
+    "en": "A ranking of presentations puts a narrowing above its widening by one item only where it ranks that pair otherwise than its order on the kept sets does, or the item weighs at zero or below; read right, exactly where the item weighs below zero, and zero ties.",
+    "zh": "对表述的排序把缩小排在其仅多一项的扩大之上，只在它不按其对所保集合的次序排这一对处，或该项权重为零或以下处；读对时恰在该项权重低于零处，为零则持平。"
+  },
+  "laws": [
+    {
+      "en": "Under any weights two courses compare as what each admits beyond the other. A net weighting counts each listed item for a course that admits it and against it; it ranks a widening higher where every added item weighs above zero, a positive weighting being its case with nothing against.",
+      "zh": "任何权重下，两条进程按各自超出对方者比较。净加权对接纳某项的进程计入该项的正与负两份；凡所加的每项权重都高于零，它就把扩大排得更高；正的加权是其中无负份的情形。",
+      "declarations": [
+        "Becoming.Weighting.beyond",
+        "Becoming.Weighting.size",
+        "Becoming.Weighting.term_split",
+        "Becoming.Weighting.and_swap",
+        "Becoming.Weighting.weighed_split",
+        "Becoming.Weighting.weighed_shared",
+        "Becoming.Weighting.weighed_split_right",
+        "Becoming.Weighting.add_lt_add_iff",
+        "Becoming.Weighting.add_le_add_iff",
+        "Becoming.Weighting.weighed_lt_iff_beyond",
+        "Becoming.Weighting.weighed_le_iff_beyond",
+        "Becoming.Weighting.beyond_term_zero",
+        "Becoming.Weighting.weighed_beyond_of_includes",
+        "Becoming.Weighting.ranksNet",
+        "Becoming.Weighting.ranksNet_iff_beyond",
+        "Becoming.Weighting.not_of_neg",
+        "Becoming.Weighting.beyond_lt",
+        "Becoming.Weighting.ranksNet_lt_of_widens",
+        "Becoming.Weighting.cond_zero",
+        "Becoming.Weighting.weighed_zero",
+        "Becoming.Weighting.weighed_lt_of_widens"
+      ]
+    },
+    {
+      "en": "A net weighting ranks a widening by one item alone as that item weighs, whatever else either course keeps: above where it weighs above zero, below where below zero, neither where at zero; so its increment at an item has the same sign in every context.",
+      "zh": "净加权按该项的权重来排仅多一项的扩大，不论两条进程另外保住什么：高于零则在上，低于零则在下，为零则都不在上；所以它在一项处的增量在每个语境中正负号相同。",
+      "declarations": [
+        "Becoming.Weighting.WidensBy",
+        "Becoming.Weighting.widensOn_of_widensBy",
+        "Becoming.Weighting.weighed_widensBy",
+        "Becoming.Weighting.size_widensBy_pos",
+        "Becoming.Weighting.mul_lt_mul_iff",
+        "Becoming.Weighting.ranksNet_widensBy",
+        "Becoming.Weighting.ranksNet_ties",
+        "Becoming.Weighting.IncreasingAt",
+        "Becoming.Weighting.ranksNet_increasingAt",
+        "Becoming.Weighting.IncrementIs",
+        "Becoming.Weighting.increment_transfer",
+        "Becoming.Weighting.ranksNet_increment_alike"
+      ]
+    },
+    {
+      "en": "A ranking of presentations, plans with their wording and order, reads the sets on a pair where it ranks the two as an order on courses ranks what they keep. Read right, an order increasing at the added item never ranks the narrowing above; under a net weighting a narrowing above its widening by one item is a pair not read right or an item at zero or below, and read right it is an item below zero.",
+      "zh": "对表述（带着措辞与次序的方案）的排序在一对上按集合读，指它按对进程的次序排这两者所保住者。读对时，在所加项处递增的次序从不把缩小排在上面；净加权下，缩小排在其仅多一项的扩大之上，是这一对没读对或该项为零或以下，读对时则是该项低于零。",
+      "declarations": [
+        "Becoming.Weighting.ReadsSetsOn",
+        "Becoming.Weighting.ReadsSets",
+        "Becoming.Weighting.reads_increasingAt",
+        "Becoming.Weighting.narrower_above_net",
+        "Becoming.Weighting.reads_ranksNet",
+        "Becoming.Weighting.reads_ranksNet_widens"
+      ]
+    },
+    {
+      "en": "Read right, the sign of the order's increment from the narrower course to the wider fixes the verdict: a sign measured apart predicts the ranking exactly where it is that increment's sign in the pair's context.",
+      "zh": "读对时，次序从较窄进程到较宽进程的增量的正负号决定裁定：分开测得的正负号恰在它是这一对语境中该增量的正负号时预测排序。",
+      "declarations": [
+        "Becoming.Weighting.reads_increment_of",
+        "Becoming.Weighting.reads_increment"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A finite listing of items; two-valued admission; natural weights, a net weighting as two per item, for and against; a presentation reduced to the course it keeps, its wording and order entering only through the ranking; for the one-item laws, the wider course widening the narrower by that item alone; for a sign measured apart, the premise that it is the sign of the order's increment in the pair's context.",
+      "zh": "不加公理。项的有限列举；二值接纳；自然数权重，净加权为每项正负两份；表述归结为它所保住的进程，其措辞与次序只经由排序进入；单项诸律中，较宽进程仅以该项扩大较窄者；对分开测得的正负号，设它是这一对语境中次序增量的正负号。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a ranking not reading the sets violates: a misread or a framing may favour the wider plan as well.",
+      "zh": "不按集合读的排序就会违反：误读或框定同样可能偏向较宽方案。",
+      "kind": "converse"
+    },
+    {
+      "en": "That a valuer reads the sets of a case, or that its sign measured apart is the sign of its joint increment: both are premises to measure, and for an interacting order the second fails.",
+      "zh": "评价者按集合读一个情形，或其分开测得的正负号是其联合增量的正负号：两者都是要测量的前提；对相互作用的次序，后者不成立。",
+      "kind": "scope",
+      "witness": "Becoming.Interacting.not_net"
+    },
+    {
+      "en": "That an order increasing at each item ranks a widening by several items higher where it is neither additive nor transitive.",
+      "zh": "在每项处递增、但既不可加也不传递的次序，把多项的扩大排得更高。",
+      "kind": "scope"
+    },
+    {
+      "en": "That an AI persona's or a person's judgment is a ranking of presentations in this sense, or its stated sign a measurement of its order's increment.",
+      "zh": "AI 角色或人的判断是这一意义上对表述的排序，或其所述正负号是其次序增量的测量。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a weight below zero is wrong, or that widening is better: calling widening better is C, a premise.",
+      "zh": "低于零的权重是错的，或扩大更好：称扩大更好是 C，是前提。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Framed: one item weighing one for and nothing against; a framed presentation keeping nothing is ranked above an unframed one keeping the item, so the ranking does not read the sets on that pair (Framed.framing_alone).",
+        "zh": "Framed：一项，正份为一、负份为零；不保住任何东西的被框定表述排在保住该项的未框定表述之上，故这一排序在这一对上不按集合读（Framed.framing_alone）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Interacting: adding one item raises a course keeping nothing and lowers one keeping the other item, so its sign measured alone is not its sign jointly, and no net weighting gives that order (Interacting.increment_differs, Interacting.not_net).",
+        "zh": "Interacting：加上一项抬高什么也不保住的进程，却降低保住另一项的进程，故其单独测得的正负号不是联合时的正负号，且没有净加权给出这一次序（Interacting.increment_differs、Interacting.not_net）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "no-definition-by-verdict",
+    "names-provisional",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T143810.042893Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check before the Lean is the significance review's valuer-theorems check. Author review in study section 367; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T143810.042893Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。动手写 Lean 之前的文献核查是显著性审查中的“评价者定理”核查。作者审查见研究第 367 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The premises measured on human valuers: presentation invariance by rewording and reordering one pair, the link by ranking the one-item pair beside the sign measured apart; several added items for orders neither additive nor transitive; an independent review.",
+    "zh": "在人类评价者上测这些前提：改写措辞与次序测表述不变，把仅差一项的一对与分开测得的正负号并列来测联系；既不可加也不传递的次序上的多项扩大；独立审查。"
+  },
+  "correspondence": {
+    "en": "Invariance of description and dominance (Tversky and Kahneman 1986): dominance is obeyed where transparent and violated where masked; here a dominance violation is exactly a failure of invariance on the pair or an item at zero or below. Preferential independence (Debreu 1960; Keeney and Raiffa 1976): for two-valued attributes a net weighting's increment at an item is context-free, and Interacting is an order where it is not. Separate and joint evaluation (Hsee 1996): the sign measured apart predicts the joint ranking exactly under the link premise. Reading (the AI's): the three causes thesis T5 names, a misread, a framing and a weight below zero, are the only ones; VD2's X1s and X2 measured the link holding where the sign was strongly positive, and X3 its failure for gains.",
+    "zh": "描述的不变与占优（Tversky 与 Kahneman 1986）：占优在透明时被遵守、在掩蔽时被违反；此处占优的违反恰是这一对上不变的失败，或某项为零或以下。偏好独立（Debreu 1960；Keeney 与 Raiffa 1976）：对二值属性，净加权在一项处的增量与语境无关，Interacting 是它不如此的次序。分开与联合的评价（Hsee 1996）：分开测得的正负号恰在联系前提下预测联合排序。解读（AI 的）：论题 T5 所说的三个原因，误读、框定与低于零的权重，是仅有的原因；VD2 的 X1s 与 X2 测得联系在正负号强为正处成立，X3 测得它对收益不成立。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "aliases": [
+    "a narrowing above its widening",
+    "缩小排在其扩大之上",
+    "Becoming.Weighting.narrower_above_net",
+    "Becoming.Weighting.reads_ranksNet",
+    "Becoming.Weighting.reads_increment"
+  ],
+  "dependencies": [
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.",
+        "zh": "复用所列项上的加权计数与比较（Weighting.weighed、IncludesOn、ExceedsOn、WidensOn、total_lt）；那里的扩大之律现为此处的情形。"
+      },
+      "interface": {
+        "output": {
+          "en": "A course and its weighted count over a finite listing.",
+          "zh": "有限列举上的进程及其加权计数。"
+        },
+        "input": {
+          "en": "Courses compared by what each admits beyond the other.",
+          "zh": "按各自超出对方者比较的进程。"
+        },
+        "conditions": {
+          "en": "Finite listing, two-valued admission.",
+          "zh": "有限列举，二值接纳。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "weights-within-a-ratio-agree-past-it",
+      "detail": {
+        "en": "The other half of the valuer tests as theorems: where the exception bounds a widening, the ratio law bounds a mixed comparison.",
+        "zh": "评价者检验成为定理的另一半：例外界定扩大，比值之律界定混合的比较。"
+      }
+    },
+    {
+      "id": "graded-significance-and-priority",
+      "detail": {
+        "en": "There status zero is a scope denial that ties; here a weight at zero ties and a weight below zero reverses.",
+        "zh": "那里“算多少”为零是持平的范围否认；此处权重为零持平，低于零则逆转。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Framed.framing_alone",
+        "Becoming.Framed.increasing",
+        "Becoming.Framed.kept",
+        "Becoming.Framed.ranks",
+        "Becoming.Framed.widensBy",
+        "Becoming.Interacting.alone",
+        "Becoming.Interacting.both",
+        "Becoming.Interacting.eq_true_of_not_false",
+        "Becoming.Interacting.increment_differs",
+        "Becoming.Interacting.items",
+        "Becoming.Interacting.jointly",
+        "Becoming.Interacting.neither",
+        "Becoming.Interacting.not_net",
+        "Becoming.Interacting.onlyFalse",
+        "Becoming.Interacting.onlyTrue",
+        "Becoming.Interacting.order",
+        "Becoming.Interacting.score",
+        "Becoming.Weighting.IncreasingAt",
+        "Becoming.Weighting.IncrementIs",
+        "Becoming.Weighting.ReadsSets",
+        "Becoming.Weighting.ReadsSetsOn",
+        "Becoming.Weighting.WidensBy",
+        "Becoming.Weighting.add_le_add_iff",
+        "Becoming.Weighting.add_lt_add_iff",
+        "Becoming.Weighting.and_of_parts",
+        "Becoming.Weighting.and_parts",
+        "Becoming.Weighting.and_swap",
+        "Becoming.Weighting.beyond",
+        "Becoming.Weighting.beyond_lt",
+        "Becoming.Weighting.beyond_term_zero",
+        "Becoming.Weighting.cond_one_pos",
+        "Becoming.Weighting.cond_zero",
+        "Becoming.Weighting.increment_transfer",
+        "Becoming.Weighting.mul_lt_mul_iff",
+        "Becoming.Weighting.narrower_above_net",
+        "Becoming.Weighting.not_of_neg",
+        "Becoming.Weighting.ranksNet",
+        "Becoming.Weighting.ranksNet_iff_beyond",
+        "Becoming.Weighting.ranksNet_increasingAt",
+        "Becoming.Weighting.ranksNet_increment_alike",
+        "Becoming.Weighting.ranksNet_lt_of_widens",
+        "Becoming.Weighting.ranksNet_ties",
+        "Becoming.Weighting.ranksNet_widensBy",
+        "Becoming.Weighting.reads_increasingAt",
+        "Becoming.Weighting.reads_increment",
+        "Becoming.Weighting.reads_increment_of",
+        "Becoming.Weighting.reads_ranksNet",
+        "Becoming.Weighting.reads_ranksNet_widens",
+        "Becoming.Weighting.size",
+        "Becoming.Weighting.size_widensBy_pos",
+        "Becoming.Weighting.term_eq_at",
+        "Becoming.Weighting.term_le_of",
+        "Becoming.Weighting.term_lt_of",
+        "Becoming.Weighting.term_split",
+        "Becoming.Weighting.weighed_beyond_of_includes",
+        "Becoming.Weighting.weighed_le_iff_beyond",
+        "Becoming.Weighting.weighed_lt_iff_beyond",
+        "Becoming.Weighting.weighed_lt_of_widens",
+        "Becoming.Weighting.weighed_shared",
+        "Becoming.Weighting.weighed_split",
+        "Becoming.Weighting.weighed_split_right",
+        "Becoming.Weighting.weighed_widensBy",
+        "Becoming.Weighting.weighed_zero",
+        "Becoming.Weighting.widensOn_of_widensBy"
+      ],
+      "sha256": "3958644149c0a0dec9df9a38f00a8082c10ebe687b79a6d50c9ca5ac9725e6de"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
+      "role": "receipt",
+      "sha256": "f4e648fa8c916a7f20628de0d5ade39ddbb197b2d531b1f4fb21f57968a97341"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "afe386754f7028dfc02009b387b5ba40d178ed7c656673da521aa8f2b4e83cbc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "33e95e080c428f516e2f67d4d3e976a2e637ace91f5a434f2e85e9997395093b"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e8e675b431353ddbb03bb4208f4f9e2bbdef63fa1a32c8c4a616686ee65e946e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+      "role": "statement",
+      "sha256": "2292c4759386ae55d7692830baad967472f0dcba45d6e438ff6db7a2e2b147a3"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (VT1): what VD1 and VD2 tested of T5's exception, stated as theorems with presentation invariance and the link of a sign measured apart as named premises, after a literature check (significance review, valuer-theorems check); weighed_lt_of_widens derived as the case with nothing against; study section 367.",
+      "zh": "2026年10月22日：新增（VT1）：VD1 与 VD2 就 T5 的例外所检验者，陈述为定理，以表述不变与分开测得的正负号的联系为指名的前提，此前做了文献核查（显著性审查“评价者定理”核查）；weighed_lt_of_widens 作为无负份的情形导出；研究第 367 节。"
+    }
+  ]
+}

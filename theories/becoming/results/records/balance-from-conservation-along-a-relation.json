@@ -1,0 +1,323 @@
+{
+  "schema_version": 2,
+  "id": "balance-from-conservation-along-a-relation",
+  "title": {
+    "en": "Balance from conservation along a relation",
+    "zh": "沿关系的守恒给出的平衡"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T18:00:00+00:00",
+  "statement": {
+    "en": "Over finitely many relata, transfers between related relata that balance a step exist exactly where the total is conserved on every family the relation closes, and a law reading only related relata that conserves its total gives that conservation.",
+    "zh": "在有限多个关系项上，只在相关关系项之间移动、使一步平衡的转移，恰在总量于关系封闭的每个家族上守恒时存在；只读相关关系项、守恒总量的规律给出这一守恒。"
+  },
+  "laws": [
+    {
+      "en": "A family is a test on the relata and the part of a quantity on it its value there; two relata are adjacent where the relation holds one way or the other, and a family is closed where no two adjacent listed relata lie one in it and one outside. Transfers balance a step along the relation where something moves only between adjacent listed relata and each listed relatum's level after, with what it sends, is its level before, with what it receives.",
+      "zh": "家族是关系项上的一个检验，量在其上的部分是它在那里的值；关系一方或另一方成立时两个关系项相邻；没有两个相邻的列出关系项一在其内一在其外时，家族封闭。只在相邻的列出关系项之间移动、且每个列出关系项步后的水平加其所送等于步前的水平加其所收时，转移沿关系使一步平衡。",
+      "declarations": [
+        "Becoming.Continuity.adj",
+        "Becoming.Continuity.adj_symm",
+        "Becoming.Continuity.within",
+        "Becoming.Continuity.within_add",
+        "Becoming.Continuity.Closes",
+        "Becoming.Continuity.ConservedOn",
+        "Becoming.Continuity.Balancing"
+      ]
+    },
+    {
+      "en": "Transfers along the relation that balance a step conserve the total on every family the relation closes: what moves inside the family is counted once sent and once received.",
+      "zh": "沿关系使一步平衡的转移，在关系封闭的每个家族上守恒总量：家族内移动的，送出计一次，收到计一次。",
+      "declarations": [
+        "Becoming.Continuity.inside",
+        "Becoming.Continuity.within_sent",
+        "Becoming.Continuity.within_received",
+        "Becoming.Continuity.conserved_of_balancing"
+      ]
+    },
+    {
+      "en": "Over relata listed without repetition, with equality decided and the relation a computable test, wherever the total is conserved on every closed family the routed transfers balance the step along the relation: one relatum at a time, its change is exchanged with the first relatum adjacent to it, and the rest are routed with its neighbours taken as adjacent, their moves passing through it. So such transfers exist exactly where the total is conserved on every closed family.",
+      "zh": "在不重复列出的关系项上，相等可判定、关系是可计算的检验时，凡总量在每个封闭家族上守恒，经路由的转移就沿关系使一步平衡：每次取一个关系项，其变化与第一个与之相邻者交换，其余者以其邻居为相邻而路由，其移动经过它。故这样的转移恰在总量于每个封闭家族上守恒时存在。",
+      "declarations": [
+        "Becoming.Continuity.joined",
+        "Becoming.Continuity.direct",
+        "Becoming.Continuity.via",
+        "Becoming.Continuity.edge",
+        "Becoming.Continuity.expand",
+        "Becoming.Continuity.route",
+        "Becoming.Continuity.route_cons",
+        "Becoming.Continuity.conservedOn_rest",
+        "Becoming.Continuity.kept_alone",
+        "Becoming.Continuity.route_balancing",
+        "Becoming.Continuity.balancing_iff"
+      ]
+    },
+    {
+      "en": "A law whose next level at a listed relatum is the same from two configurations agreeing there and at every listed relatum adjacent to it, and which conserves the total from every configuration, conserves it on every family the relation closes.",
+      "zh": "下一步水平在一个列出关系项上，对在它和每个与之相邻的列出关系项上一致的两个配置相同，且从每个配置守恒总量的规律，在关系封闭的每个家族上守恒总量。",
+      "declarations": [
+        "Becoming.Continuity.ReadsAdjacent",
+        "Becoming.Continuity.Conserves",
+        "Becoming.Continuity.conservedOn_of_law"
+      ]
+    },
+    {
+      "en": "Read as a flow in which each relatum takes from a condition what moves from it to the relatum and gives what moves back, transfers along the relation balancing a web's levels on the listed relata at every step exist exactly where the levels are conserved on every closed family at every step; with every relatum listed the routed flow balances the web, and every run of a law reading only adjacent relata and conserving the total balances.",
+      "zh": "读作一个流（每个关系项从一个条件取走从它移到该关系项的，并给回反向移动的），沿关系、在每一步使网在列出关系项上的水平平衡的转移，恰在水平于每一步在每个封闭家族上守恒时存在；列出全部关系项时，经路由的流使网平衡；只读相邻关系项、守恒总量的规律，其每次运行都平衡。",
+      "declarations": [
+        "Becoming.Continuity.flow",
+        "Becoming.Continuity.routed",
+        "Becoming.Continuity.balancesOn_iff_conserved",
+        "Becoming.Continuity.balances_of_conserved",
+        "Becoming.Continuity.balancesOn_of_law"
+      ]
+    },
+    {
+      "en": "Teleport: swapping the levels of two relata conserves the total from every configuration and reads both. Along the empty relation each relatum alone is a closed family and the swap moves one unit out of it, so no transfers along it balance the swap; along the full relation the routed transfers balance it.",
+      "zh": "Teleport：交换两个关系项的水平，从每个配置守恒总量，并读两者。沿空关系，每个关系项自身是封闭家族，交换把一个单位移出，故没有沿它的转移使交换平衡；沿完全关系，经路由的转移使它平衡。",
+      "declarations": [
+        "Becoming.Continuity.Teleport.all",
+        "Becoming.Continuity.Teleport.distinct",
+        "Becoming.Continuity.Teleport.swap",
+        "Becoming.Continuity.Teleport.apart",
+        "Becoming.Continuity.Teleport.together",
+        "Becoming.Continuity.Teleport.conserves",
+        "Becoming.Continuity.Teleport.reads",
+        "Becoming.Continuity.Teleport.unit",
+        "Becoming.Continuity.Teleport.no_transfers_apart",
+        "Becoming.Continuity.Teleport.balanced_together"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Finitely many relata listed without repetition; equality of relata decided and the relation a Bool test, so the transfers are computed; levels are whole numbers.",
+      "zh": "有限多个不重复列出的关系项；关系项的相等可判定，关系是布尔检验，故转移可计算；水平是整数。"
+    },
+    {
+      "en": "For the law: its next level at a listed relatum reads only that relatum and the listed relata adjacent to it, and it conserves the total from every configuration, the configuration with nothing anywhere included.",
+      "zh": "对规律：它在一个列出关系项上的下一步水平只读该关系项及与之相邻的列出关系项，且从每个配置守恒总量，包括处处为零的配置。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the flux is local: the routed transfers depend on the whole configuration, as the lattice results of Hattori and Takesue and of Pivato do not.",
+      "zh": "通量是局部的：经路由的转移依赖整个配置，而 Hattori 与 Takesue、Pivato 在格点上的结果则不然。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a transfer stays within what stands on its source: an amount may pass through a relatum within the step.",
+      "zh": "转移不超过其来源上所立者：一个量可在一步内经过一个关系项。",
+      "kind": "scope"
+    },
+    {
+      "en": "That conservation of the whole total gives balance along a relation: it does not where the relation does not join where the amount moves.",
+      "zh": "整体总量的守恒给出沿关系的平衡：关系不连接量移动之处时就不给出。",
+      "kind": "non-implication",
+      "witness": "Becoming.Continuity.Teleport.no_transfers_apart"
+    },
+    {
+      "en": "That balance holds of every dynamics: conservation on closed families is the content and fails where a law creates or destroys the quantity.",
+      "zh": "平衡对每个动力学都成立：封闭家族上的守恒是内容，规律产生或毁灭该量处它就不成立。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Infinitely many relata, or a relation that is not decided.",
+      "zh": "无限多个关系项，或不可判定的关系。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
+      "detail": {
+        "en": "Teleport: the swap conserves the total of two relata and no transfers along the empty relation balance it (Continuity.Teleport.no_transfers_apart).",
+        "zh": "Teleport：交换守恒两个关系项的总量，而沿空关系没有转移使它平衡（Continuity.Teleport.no_transfers_apart）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, each with an empty axiom report. No independent review.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理，公理报告均为空。没有独立审查。"
+  },
+  "next_delta": {
+    "en": "A flux chosen local, depending only on the levels near each related pair, for laws that read within a bounded neighbourhood, as for cellular automata on lattices; and transfers within what stands on their source where the law moves units, as particle displacements do.",
+    "zh": "对只在有界邻域内读取的规律，选取局部的通量（只依赖每对相关关系项附近的水平），如格点上的元胞自动机；以及在规律移动单位处，不超过来源所立者的转移，如粒子位移表示。"
+  },
+  "correspondence": {
+    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which FL1's first law with locality is the energy case."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
+  "aliases": [
+    "Becoming.Continuity.Balancing",
+    "Becoming.Continuity.Closes",
+    "Becoming.Continuity.ConservedOn",
+    "Becoming.Continuity.Conserves",
+    "Becoming.Continuity.ReadsAdjacent",
+    "Becoming.Continuity.Teleport.all",
+    "Becoming.Continuity.Teleport.apart",
+    "Becoming.Continuity.Teleport.balanced_together",
+    "Becoming.Continuity.Teleport.conserves",
+    "Becoming.Continuity.Teleport.distinct",
+    "Becoming.Continuity.Teleport.no_transfers_apart",
+    "Becoming.Continuity.Teleport.reads",
+    "Becoming.Continuity.Teleport.swap",
+    "Becoming.Continuity.Teleport.together",
+    "Becoming.Continuity.Teleport.unit",
+    "Becoming.Continuity.adj",
+    "Becoming.Continuity.adj_symm",
+    "Becoming.Continuity.balancesOn_iff_conserved",
+    "Becoming.Continuity.balancesOn_of_law",
+    "Becoming.Continuity.balances_of_conserved",
+    "Becoming.Continuity.balancing_iff",
+    "Becoming.Continuity.conservedOn_of_law",
+    "Becoming.Continuity.conservedOn_rest",
+    "Becoming.Continuity.conserved_of_balancing",
+    "Becoming.Continuity.direct",
+    "Becoming.Continuity.edge",
+    "Becoming.Continuity.expand",
+    "Becoming.Continuity.flow",
+    "Becoming.Continuity.inside",
+    "Becoming.Continuity.joined",
+    "Becoming.Continuity.kept_alone",
+    "Becoming.Continuity.route",
+    "Becoming.Continuity.route_balancing",
+    "Becoming.Continuity.route_cons",
+    "Becoming.Continuity.routed",
+    "Becoming.Continuity.via",
+    "Becoming.Continuity.within",
+    "Becoming.Continuity.within_add",
+    "Becoming.Continuity.within_received",
+    "Becoming.Continuity.within_sent"
+  ],
+  "dependencies": [
+    {
+      "id": "balance-from-the-first-law",
+      "relation": "interpretive",
+      "detail": {
+        "en": "FL1 reads balance as the first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.",
+        "zh": "FL1 把平衡读作带局部性的第一定律，把局部性陈述为每对交换与储存一个转移；这里转移由每个封闭家族上的守恒推出，局部性是规律的性质。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "premises-read-off-the-exchange",
+      "detail": {
+        "en": "There balance holds by reading a world off an exchange, with the rest counted; here balance along a given relation is equivalent to conservation on the families it closes.",
+        "zh": "那里平衡因把世界读自交换（计入其余）而成立；这里沿给定关系的平衡等价于它所封闭的家族上的守恒。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
+      "role": "proof",
+      "sha256": "bb7753b154a8f30d1cbc720575b55fa13cc5f33b63a94064115ec92a9c018331",
+      "declarations": [
+        "Becoming.Continuity.Balancing",
+        "Becoming.Continuity.Closes",
+        "Becoming.Continuity.ConservedOn",
+        "Becoming.Continuity.Conserves",
+        "Becoming.Continuity.ReadsAdjacent",
+        "Becoming.Continuity.Teleport.all",
+        "Becoming.Continuity.Teleport.apart",
+        "Becoming.Continuity.Teleport.balanced_together",
+        "Becoming.Continuity.Teleport.conserves",
+        "Becoming.Continuity.Teleport.distinct",
+        "Becoming.Continuity.Teleport.no_transfers_apart",
+        "Becoming.Continuity.Teleport.reads",
+        "Becoming.Continuity.Teleport.swap",
+        "Becoming.Continuity.Teleport.together",
+        "Becoming.Continuity.Teleport.unit",
+        "Becoming.Continuity.add_pos_cases",
+        "Becoming.Continuity.adj",
+        "Becoming.Continuity.adj_symm",
+        "Becoming.Continuity.balancesOn_iff_conserved",
+        "Becoming.Continuity.balancesOn_of_law",
+        "Becoming.Continuity.balances_of_conserved",
+        "Becoming.Continuity.balancing_iff",
+        "Becoming.Continuity.conservedOn_of_law",
+        "Becoming.Continuity.conservedOn_rest",
+        "Becoming.Continuity.conserved_of_balancing",
+        "Becoming.Continuity.direct",
+        "Becoming.Continuity.direct_add_via",
+        "Becoming.Continuity.edge",
+        "Becoming.Continuity.edge_pos",
+        "Becoming.Continuity.expand",
+        "Becoming.Continuity.expand_along",
+        "Becoming.Continuity.expand_received",
+        "Becoming.Continuity.expand_received_x",
+        "Becoming.Continuity.expand_sent",
+        "Becoming.Continuity.expand_sent_x",
+        "Becoming.Continuity.flow",
+        "Becoming.Continuity.inside",
+        "Becoming.Continuity.inside_of_false",
+        "Becoming.Continuity.inside_of_true",
+        "Becoming.Continuity.joined",
+        "Becoming.Continuity.joined_apart",
+        "Becoming.Continuity.joined_of_adj",
+        "Becoming.Continuity.joined_of_both",
+        "Becoming.Continuity.kept_alone",
+        "Becoming.Continuity.mid",
+        "Becoming.Continuity.mid2",
+        "Becoming.Continuity.not_eq_of_mem_rest",
+        "Becoming.Continuity.rearrange",
+        "Becoming.Continuity.route",
+        "Becoming.Continuity.route_balancing",
+        "Becoming.Continuity.route_cons",
+        "Becoming.Continuity.routed",
+        "Becoming.Continuity.shift",
+        "Becoming.Continuity.total_edge",
+        "Becoming.Continuity.total_within_edge",
+        "Becoming.Continuity.via",
+        "Becoming.Continuity.via_through",
+        "Becoming.Continuity.within",
+        "Becoming.Continuity.within_add",
+        "Becoming.Continuity.within_edge_off",
+        "Becoming.Continuity.within_false",
+        "Becoming.Continuity.within_received",
+        "Becoming.Continuity.within_sent",
+        "Becoming.Continuity.within_true"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T124646.497747Z/verification.json",
+      "role": "receipt",
+      "sha256": "760c0f8cc6d5a892afc0657d73bac8e06aa08e60296a4513e41ba2c3b470c587"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "statement",
+      "sha256": "fd40f0139f004b10ca255b8119e08aa008e3da267c7190540e6a1d31483d535a",
+      "declarations": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.BalancesOn",
+        "Becoming.Flow.taken",
+        "Becoming.Flow.given"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T124646.497747Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026, board item FL2 (study section 354): added after FL1, for the question whether balance can be more than a premise about transfers; the literature on conserved quantities of cellular automata checked first.",
+      "zh": "2026年10月22日，工作板条目 FL2（研究第 354 节）：继 FL1 之后，为“平衡能否不止是关于转移的前提”之问而加；先查了元胞自动机守恒量的文献。"
+    }
+  ]
+}

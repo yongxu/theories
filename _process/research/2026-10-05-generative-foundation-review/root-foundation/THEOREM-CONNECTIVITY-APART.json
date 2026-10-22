@@ -312,11 +312,6 @@
    "category": "general-structure",
    "reason": "a law of every valuation or rule on any claims; the base supplies no reading of living, own or significance (the theory states them as conditions, chapter §6.15), so an instance on a world's relata would only fix the type"
   },
-  "Becoming.bounded_rival": {
-   "module": "Becoming.Significance",
-   "category": "general-structure",
-   "reason": "a law of every bounded significance on any formations: it is not the continuation condition where a formation lies outside a region; the regions are supplied, not read off a world"
-  },
   "Becoming.configurations_examples": {
    "module": "Becoming.Entropy",
    "category": "support",
@@ -1552,11 +1547,6 @@
    "category": "general-structure",
    "reason": "the family law of rest for any amounts, with the bound of the stock by m least losses named; the base reads amounts only as whole numbers, where it is used in its Archimedean form, Amounts.family_rests_of_archimedean, by Flow.taking_not_recurring_whole"
   },
-  "Becoming.Dyadic.half_below": {
-   "module": "Becoming.LeastLoss",
-   "category": "model-witness",
-   "reason": "density of the dyadic amounts: below every amount above nothing lies its half, above nothing; a fact about one constructed model of the amounts, which the base does not read"
-  },
   "Becoming.Amounts.whole_losing_steps": {
    "module": "Becoming.Amounts",
    "category": "general-structure",
@@ -2391,6 +2381,361 @@
    "module": "Becoming.SharedCodes",
    "category": "general-structure",
    "reason": "A code whose every sequence of forms resolution reads back tells senses apart, and its course of forms is one state exactly where the course of senses is: a law of every code on any type of senses and forms and of courses of any values (with course_states_iff and course_read, which it uses). A course is the values of a run read through a map and every course is the course of a run of free branching (Parting.freeRun_course), so it holds of the courses of runs without naming one (WL2)."
+  },
+  "Becoming.SelectionLevels.rises_iff_reading": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "where a weight with k per unit of the amount is a base with b per unit of a reading, the whole selects for the amount exactly where b times the reading's covariation with it exceeds k times its spread: a law of any finite family read with weights and amounts, with no world"
+  },
+  "Becoming.SelectionLevels.within_against": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "selection within groups goes against keeping wherever a group varies in it: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.among_for_iff": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "selection among groups goes for keeping exactly where b + c falls short of m b times the spread among them: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.rises_iff_returns_of_uniform": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "groups uniform in the amount select for it, where they differ, exactly where b (m - 1) exceeds c: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.not_rises_of_alike": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "groups alike in their totals of the amount never select for it: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.rises_exact_iff_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "over listed generations with exact transmission, the mean rises across a step exactly where the rule of returns to groupmates holds: a law of any family listed as groups of equal size whose members' offspring numbers return to groupmates additively, with no world"
+  },
+  "Becoming.SelectionLevels.Founding.mixed_equal": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the mixed founding lists two groups of two: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Founding.mixed_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the mixed founding's offspring numbers meet the returns premise: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Founding.either_verdict": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the same returns select for keeping with the keepers together and against it with them apart: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.Partly.below_one": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "assortment below one loses where assortment one would win: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Continuity.Teleport.no_transfers_apart": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "Swapping the levels of two relata conserves their total, and along the empty relation the family of one relatum is closed and loses its unit, so no transfers along that relation balance the swap: a fact about one constructed law showing that conservation of the whole total does not give balance along a relation (FL2)."
+  },
+  "Becoming.Continuity.Teleport.balanced_together": {
+   "module": "Becoming.Continuity",
+   "category": "model-witness",
+   "reason": "The same swap reads both relata, and along the full relation the routed transfers balance it from every configuration: the constructed law meeting the premises of conservedOn_of_law and route_balancing (FL2)."
+  },
+  "Becoming.Optimum.InTurn.Stopping.not_least": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "Stopping's law of what stands next, two from nothing and nothing from anything left, has what stands from nothing above what stands from one unit: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.position_perfect_ends fails there."
+  },
+  "Becoming.Optimum.InTurn.Stopping.zero_not_perfect": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping, with two drawers over two steps, drawing everything is not perfect for position: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.zero_position_perfect binds."
+  },
+  "Becoming.Optimum.InTurn.Stopping.perfect_keeps": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping every profile perfect for position has the second drawer keep the unit it is given at the first step, stopping what the first would draw next: a fact about one constructed law, the witness that without G t 0 ≤ G t x a race for position need not draw everything."
+  },
+  "Becoming.Optimum.InTurn.position_one": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "With one drawer every profile is perfect for position, its draw being all that is drawn: the case k = 1 of the model, showing that the premise of two drawers in Optimum.InTurn.position_perfect_ends binds."
+  },
+  "Becoming.Training.Commons.drawing_responds": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "the drawing law of the computed commons takes one where the stock stands at three and nothing where it stands at none, and restraint takes nothing: a fact about two constructed act laws, read on the learner's courses by Training.start_decides"
+  },
+  "Becoming.Training.Commons.outrun_drawing_settles": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest drawing two a step against a renewal of one, the drawing law is settled at every weight: a computed fact about one model, the witness of Training.outrun_settles_iff"
+  },
+  "Becoming.Training.Commons.outrun_neighbourhood_decides": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest outrunning the renewal, restraint is settled at no weight, a local search with empty neighbourhoods rests at it and one with every candidate a neighbour leaves it: one model witnessing that a parameterization can install what no reward weight installs"
+  },
+  "Becoming.Training.Commons.renewed_restraint_settles_iff": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest drawing within the renewal, restraint is settled exactly at weights of at least one: the contrast case of one model"
+  },
+  "Becoming.Training.Commons.start_decides": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons at weight one every improving search keeps the law it starts from, one responding to the stock and one not: Training.settled_stays read on one model"
+  },
+  "Becoming.Training.LocalSearch.improving": {
+   "module": "Becoming.Training",
+   "category": "general-structure",
+   "reason": "a local search over any neighbourhood relation on any type of candidates is an improving search; the candidates are read on the spine through Training.levels, the search law itself ranges over any type"
+  },
+  "Becoming.Training.comes_to_rest": {
+   "module": "Becoming.Training",
+   "category": "general-structure",
+   "reason": "an improving search under a reward at most B rests by step B + 1 from every start, for candidates of any type: the search runs on Law.orbit, and the base supplies no reading of the candidates beyond Training.levels"
+  },
+  "Becoming.ReadsOnlyDynamics.admits_rival": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every statement whose truth does not change with the significance: it admits a rival significance; it ranges over any dynamics type and any significance, and the base supplies no reading of the statement"
+  },
+  "Becoming.ReadsOnlyDynamics.not_entails": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every statement whose truth does not change with the significance: none entails the continuation condition where a standpoint and a formation exist; over any dynamics type"
+  },
+  "Becoming.excludes_rivals_iff": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every premise on significance over any formations: it excludes every rival exactly where it implies that no point lacks significance"
+  },
+  "Becoming.not_rival_unrestricted_iff_stable": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "over every significance on any formations, that excluding every rival gives the continuation condition is exactly double-negation elimination; the significance is supplied, not read off a world"
+  },
+  "Becoming.readsOnlyDynamics_of": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a statement whose truth is given without the significance reads only the dynamics: an unpacking over any dynamics type"
+  },
+  "Becoming.unrestricted_iff_not_rival": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every significance on any formations decided at each point: excluding every rival is the continuation condition; the significance is supplied, not read off a world"
+  },
+  "Becoming.Dyadic.half_return": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "in the dyadic model of the amounts a return of strength one half rises and stays below twice what it was: the dense counterexample to carried_doubles_roundTrip, a fact about one constructed model the base does not read (it uses half_below, the density of the dyadics)"
+  },
+  "Becoming.Halving.new_without_gain": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the halving stock of the dyadic model is new at every step, never rises and stays within one: the dense counterexample to Web.rises_late_of_new, a fact about one constructed model the base does not read"
+  },
+  "Becoming.Halving.no_whole_reading": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the dyadic amounts have no whole-number reading keeping strict falls, the instance of Amounts.no_whole_reading at the halving model"
+  },
+  "Becoming.Founding.Nested.raises_iff_carried": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "the mean founding value rises across a generation of wholes exactly where selection among wholes, with the change carried within the wholes to the next founders as the transmission term, comes out positive: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Nested.varied_within": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "within each whole of a founded reading, selection at a step needs transmission that raised or lowered the amount at some step before it: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Body.spread_outlasts": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the spreading lineage, whose descendant depends on a condition outside the body, has a member at the second generation: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_founded": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the reading with the next founders drawn from the variants is founded: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.within_against": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "within the first whole a variant arises from the founder and selection within goes against holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.sequestered_rises": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founder from the line carrying the founder's value, the mean founding value rises: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_falls": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founders from the variants, the mean founding value falls although selection among wholes goes for holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Weighting.narrower_above_net": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a ranking of presentations putting a narrowing above its widening by one item does not read the pair as a net weighting ranks the sets, or the item weighs at zero or below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a net weighting puts a narrowing above its widening by one item exactly where the item weighs below zero: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet_widens": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right on every pair, a net weighting with every item above zero never ranks a widening below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_increment": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a sign measured apart fixes the verdict exactly where it is the sign of the increment in the pair's context: a law of any order on courses, any ranking of any presentations and any sign, with no world"
+  },
+  "Becoming.Weighting.ranksNet_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a net weighting ranks a widening by one item weighing zero neither above nor below: a law of any finite listing and any net weighting, with no world"
+  },
+  "Becoming.Weighting.every_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "every positive weighting within n / d ranks a above b exactly where n q < d p: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.opposite_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "two positive weightings within n / d rank a pair opposite ways exactly where d q < n p and d p < n q: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.tilted_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "on the boundary n q = d p the weighting tilted toward the smaller side ties the two courses: a law of any finite listing and any ratio, with no world"
+  },
+  "Becoming.Weighting.widensOn_of_widensBy": {
+   "module": "Becoming.Weightings",
+   "category": "support",
+   "reason": "a widening by one item alone is a widening: a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.Framed.framing_alone": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "one item weighing one for and nothing against, where a framed presentation keeping nothing is ranked above an unframed one keeping the item; a fact about one constructed ranking, not a law of the unfolding"
+  },
+  "Becoming.Interacting.not_net": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "two items, adding one raising a course keeping nothing and lowering one keeping the other, an order no net weighting gives; a fact about one constructed order, not a law of the unfolding"
+  },
+  "Becoming.Drift.Favoured.two_members": {
+   "module": "Becoming.Drift",
+   "category": "model-witness",
+   "reason": "two members: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Drift.Replacement.favoured_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.favoured_share_above": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share above: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.fixation": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "fixation: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.lost_ge": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "lost ge: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.neutral_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "neutral share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Reproduction.Additive.additive": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "additive: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Breeding.one_amount": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "one amount: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Breeding.response_rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "response rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Interaction.interaction": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "interaction: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Mutation.above_always": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "above always: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.falls_of_outrun": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "falls of outrun: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.kept_share": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "kept share: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.lowered_count": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "lowered count: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.never_rises": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "never rises: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.not_falls_below": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "not falls below: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Threshold.at_threshold": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "at threshold: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_local": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_supports": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_weakest": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
   }
  },
  "instances": {

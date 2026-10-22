@@ -1,0 +1,91 @@
+@Becoming.Representation.Course.balance_over : ∀ {C : Type u_1} {κ : Becoming.Representation.Course C},
+  κ.Balances → κ.Summable' → ∀ (a b : ℝ) (c : C), κ.level b c + κ.takenOver a b c = κ.level a c + κ.givenOver a b c
+@Becoming.Representation.Course.sample_balances : ∀ {C : Type u_1} {κ : Becoming.Representation.Course C},
+  κ.Balances →
+    κ.Summable' →
+      ∀ (τ : ℕ → ℝ) (n : ℕ) (c : C),
+        (κ.sample τ).1 (n + 1) c + (κ.sample τ).2.2 n c = (κ.sample τ).1 n c + (κ.sample τ).2.1 n c
+@Becoming.Representation.Course.givenOver_coarse : ∀ {C : Type u_1} {κ : Becoming.Representation.Course C},
+  κ.Summable' →
+    ∀ (τ : ℕ → ℝ) (m k : ℕ) (c : C),
+      κ.givenOver (τ m) (τ (m + k)) c = ∑ i ∈ Finset.range k, κ.givenOver (τ (m + i)) (τ (m + i + 1)) c
+@Becoming.Representation.Course.takenOver_coarse : ∀ {C : Type u_1} {κ : Becoming.Representation.Course C},
+  κ.Summable' →
+    ∀ (τ : ℕ → ℝ) (m k : ℕ) (c : C),
+      κ.takenOver (τ m) (τ (m + k)) c = ∑ i ∈ Finset.range k, κ.takenOver (τ (m + i)) (τ (m + i + 1)) c
+Becoming.Representation.Oscillation.balances : Becoming.Representation.Oscillation.course.Balances
+Becoming.Representation.Oscillation.summable : Becoming.Representation.Oscillation.course.Summable'
+Becoming.Representation.Oscillation.still_at_steps : ∀ (n : ℕ),
+  (Becoming.Representation.Oscillation.course.sample fun n => ↑n).1 n () = 0
+Becoming.Representation.Oscillation.changes_between : ∀ (n : ℕ),
+  Becoming.Representation.Oscillation.course.level (↑n + 1 / 2) () = 2
+Becoming.Representation.Oscillation.still_reading : Becoming.Representation.Oscillation.course.Balances ∧
+  (∀ (n : ℕ), (Becoming.Representation.Oscillation.course.sample fun n => ↑n).1 n () = 0) ∧
+    ∀ (n : ℕ), Becoming.Representation.Oscillation.course.level (↑n + 1 / 2) () = 2
+@Becoming.Representation.no_whole_reading : ∀ {α : Type u_1} [inst : Preorder α] (s : ℕ → α),
+  (∀ (n : ℕ), s (n + 1) < s n) → ¬∃ φ, StrictMono φ
+Becoming.Representation.halving_falls : ∀ (n : ℕ), (1 / 2) ^ (n + 1) < (1 / 2) ^ n
+Becoming.Representation.reals_no_whole_reading : ¬∃ φ, StrictMono φ
+@Becoming.Representation.unit_reading : ∀ {ε : ℝ},
+  0 < ε → ∀ (m n : ℕ), (↑m * ε ≤ ↑n * ε ↔ m ≤ n) ∧ ↑m * ε + ↑n * ε = ↑(m + n) * ε
+Becoming.Representation.new_without_gain : (∀ (m n : ℕ), m < n → (1 / 2) ^ n ≠ (1 / 2) ^ m) ∧
+  (∀ (n : ℕ), (1 / 2) ^ (n + 1) ≤ (1 / 2) ^ n) ∧ ∀ (n : ℕ), (1 / 2) ^ n ≤ 1
+@Becoming.Representation.close_of_cell : ∀ {a b ε : ℝ}, 0 < ε → 0 ≤ a → 0 ≤ b → ⌊a / ε⌋₊ = ⌊b / ε⌋₊ → |a - b| < ε
+@Becoming.Representation.separated_bounded : ∀ {C : Type u_1} [Fintype C] {x : ℕ → C → ℝ} {B ε : ℝ},
+  0 < ε →
+    (∀ (n : ℕ) (c : C), 0 ≤ x n c) →
+      (∀ (n : ℕ) (c : C), x n c ≤ B) → (∀ (m n : ℕ), m < n → ∃ c, ε ≤ |x n c - x m c|) → False
+@Becoming.Representation.separated_exceeds : ∀ {C : Type u_1} [Fintype C] {x : ℕ → C → ℝ} {ε : ℝ},
+  0 < ε → (∀ (n : ℕ) (c : C), 0 ≤ x n c) → (∀ (m n : ℕ), m < n → ∃ c, ε ≤ |x n c - x m c|) → ∀ (B : ℝ), ∃ n c, B < x n c
+Becoming.Representation.held_carried : ∀ (r D : ℝ) (on : ℕ → Bool) (t : ℕ),
+  Becoming.Representation.carried 1 r D on t = D * (1 + r) ^ Becoming.Frequency.count on t
+Becoming.Representation.selfLoop_cast : ∀ (on : ℕ → Bool) (M D t : ℕ),
+  ↑(Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Frequency.SelfLoop.strengths on M)
+        (fun x => [()]) (fun x => D) t ()) =
+    Becoming.Representation.carried 1 (↑M) (↑D) on t
+@Becoming.Representation.held_polynomial_iff : ∀ {r D : ℝ},
+  0 < r →
+    0 < D →
+      ∀ (on : ℕ → Bool),
+        Becoming.Representation.Polynomial (Becoming.Representation.carried 1 r D on) ↔
+          Becoming.Representation.Polynomial fun t => 2 ^ Becoming.Frequency.count on t
+Becoming.Representation.every_carried : ∀ (a r D : ℝ) (t : ℕ),
+  Becoming.Representation.carried a r D (fun x => true) t = D * (a + r) ^ t
+@Becoming.Representation.every_bounded_iff : ∀ {a r D : ℝ},
+  0 < D → 0 ≤ a + r → ((∃ K, ∀ (t : ℕ), Becoming.Representation.carried a r D (fun x => true) t ≤ K) ↔ a + r ≤ 1)
+@Becoming.Representation.every_vanishes : ∀ {a r D : ℝ},
+  0 ≤ a + r → a + r < 1 → Filter.Tendsto (Becoming.Representation.carried a r D fun x => true) Filter.atTop (nhds 0)
+@Becoming.Representation.rate_bdd : ∀ {A : Type u_1} [inst : NormedRing A] (M : A),
+  BddBelow (Set.range fun k => ‖M ^ (k + 1)‖ ^ (1 / (↑k + 1)))
+@Becoming.Representation.rate_le : ∀ {A : Type u_1} [inst : NormedRing A] (M : A) (k : ℕ),
+  Becoming.Representation.rate M ≤ ‖M ^ (k + 1)‖ ^ (1 / (↑k + 1))
+@Becoming.Representation.pow_rate_le : ∀ {A : Type u_1} [inst : NormedRing A] (M : A) (k : ℕ),
+  0 ≤ Becoming.Representation.rate M → Becoming.Representation.rate M ^ (k + 1) ≤ ‖M ^ (k + 1)‖
+@Becoming.Representation.unbounded_of_one_lt : ∀ {A : Type u_1} [inst : NormedRing A] {M : A},
+  1 < Becoming.Representation.rate M → ∀ (K : ℝ), ∃ n, K < ‖M ^ n‖
+@Becoming.Representation.vanishes_iff : ∀ {A : Type u_1} [inst : NormedRing A] [NormOneClass A] (M : A),
+  Filter.Tendsto (fun n => ‖M ^ n‖) Filter.atTop (nhds 0) ↔ Becoming.Representation.rate M < 1
+Becoming.Representation.rate_real : ∀ (c : ℝ), Becoming.Representation.rate c = |c|
+@Becoming.Representation.webCarried_eq : ∀ {A : Type u_1} [inst : NormedRing A] (S : A) (on : ℕ → Bool) (t : ℕ),
+  Becoming.Representation.webCarried S on t = (1 + S) ^ Becoming.Frequency.count on t
+@Becoming.Representation.web_polynomial_iff : ∀ {A : Type u_1} [inst : NormedRing A] [NormOneClass A] {S : A},
+  1 < Becoming.Representation.rate (1 + S) →
+    ∀ (on : ℕ → Bool),
+      (Becoming.Representation.Polynomial fun t => ‖Becoming.Representation.webCarried S on t‖) ↔
+        Becoming.Representation.Polynomial fun t => 2 ^ Becoming.Frequency.count on t
+@Becoming.Representation.every_vanishes_iff : ∀ {a r D : ℝ},
+  0 < D →
+    0 ≤ a + r → (Filter.Tendsto (Becoming.Representation.carried a r D fun x => true) Filter.atTop (nhds 0) ↔ a + r < 1)
+@Becoming.Representation.dampedWeb_eq : ∀ {A : Type u_1} [inst : NormedRing A] [inst_1 : NormedAlgebra ℝ A] (a : ℝ)
+  (S : A) (on : ℕ → Bool) (t : ℕ),
+  Becoming.Representation.dampedWeb a S on t =
+    (algebraMap ℝ A) a ^ (t - Becoming.Frequency.count on t) * ((algebraMap ℝ A) a + S) ^ Becoming.Frequency.count on t
+@Becoming.Representation.dampedWeb_vanishes : ∀ {A : Type u_1} [inst : NormedRing A] [inst_1 : NormedAlgebra ℝ A]
+  [NormOneClass A] {a B θ : ℝ} {S : A} {on : ℕ → Bool},
+  0 < a →
+    a < 1 →
+      1 ≤ B →
+        ‖(algebraMap ℝ A) a + S‖ ≤ B →
+          (∀ (t : ℕ), ↑(Becoming.Frequency.count on t) ≤ θ * ↑t) →
+            a ^ (1 - θ) * B ^ θ < 1 →
+              Filter.Tendsto (fun t => ‖Becoming.Representation.dampedWeb a S on t‖) Filter.atTop (nhds 0)

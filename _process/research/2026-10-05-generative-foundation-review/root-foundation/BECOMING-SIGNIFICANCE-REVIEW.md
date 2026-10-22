@@ -839,6 +839,8 @@ An AI review (board item SA2, the session that wrote SA1), read-only, with no Le
 
 *On 22 October:* VD2 measured each valuer's sign apart from the ranking. Where the sign was strongly positive, no model ranked against it, and within valuers the violations followed their own non-positive signs (X1s, X2, S1 passed). T5's full cell failed for one model of six, a measured gain was not reliably acted on, and two standpoints not named gave gains (X1, X3, S2 failed) ([sign check](#sign-check), [study §330](BECOMING-RENEWAL-READING.md#330-the-sign-measured-apart-from-the-ranking-vd2)).
 
+*Later on 22 October:* VT1 proved what VD1 and VD2 tested, leaving three premises to measure: presentation invariance, the link of a sign measured apart to the joint increment, and how dispersed the weights are ([valuer-theorems check](#valuer-theorems-check), [study §367](BECOMING-RENEWAL-READING.md#367-the-valuer-tests-as-theorems-vt1)).
+
 The adversarial reading:
 - **The risky passes test the ecological notion, not what only this theory says.** MQ2's need is depensation and Allee thresholds measured carefully (Clark 1976; May 1977; Dai et al. 2012, which the check cites). MQ4 and MQ5 pass with states known in fisheries (surplus production; delay-difference models). A pass supports the margin as a measurable quantity in those systems. It is not evidence that the theory's laws are universal, or that its ethics or its alignment direction are right. A rival account built on the same ecology would make the same predictions.
 - **The field series is a search after a failure.** MQ3 failed outright; MQ4 added recent giving and MQ5 added a lag, each frozen and run on held-out stocks, which is good practice. The honest summary is one clean failure, then two partial passes after two re-specifications on one database. Counted as a model search, it does not count as three tests.
@@ -869,6 +871,8 @@ Integration: none applied; TH1's three corrections listed for its owner and for 
 *Version 10 (21 October 2026, OP10).* On Ren's "aim elegant completion" ([source](../../../../sources/15-codex-theory-conversations/2026-10-21-opening-v10.md)), the opening was read as one text. Two of this review's own points changed it. The ethics sentence now gives each premise its role: the step says whose losses count, and C orders them. B9's "how hard" now also meets the far-sighted objection, which TH1's revision left open: by SG5, SG8 and SG10, looking further ahead keeps only the optimizer's base, at the level of greatest renewal, and that only under a discount no faster than renewal and where no one draws first. B8's note now records VD1's failed verdicts on T5.
 
 *Version 11 (22 October 2026, OP11).* Version 10's far-sight clause repeated SA2's B9 finding: it stated a law of optima as what an optimizer does. On Ren's "please" ([source](../../../../sources/15-codex-theory-conversations/2026-10-22-opening-v11.md)), it now reads "at its optimum".
+
+*Version 12 (22 October 2026, NL1).* The sentence on the three theories had said that none of their features is "among the laws" and that winning "need not" measure what lasts. A list shows what is listed, not what follows from it, and the second rested on one example. On Ren's "we should aim frontier, not my past understanding" ([source](../../../../sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md)), it now reads that none of them is a law, each failing in a world the laws admit, and that position, read against the others, bounds what all draw only from below, so no winning certifies that anything lasts ([what-position-reads](../../../../theories/becoming/results/records/what-position-reads.md)). The readings of each feature as a law are the note's, labelled as such.
 
 <a id="horizon-check"></a>
 ## A check: courses ranked over a horizon (21 October 2026, SG5)
@@ -1593,4 +1597,79 @@ Supplied premises / correspondence: as the record names
 Evidence: Lean in the record's receipt
 Boundary: AI check, one session
 Integration: the ZH map's last entry; chapter §8.1 item 9; ZH chapter §八
+```
+
+<a id="continuity-check"></a>
+## A check before building: balance from conservation along a relation (22 October 2026, FL2)
+
+An AI check (one session, 22 October), made before the Lean. FL1 grounded balance in the first law with locality but stated locality as one transfer per exchange and store. The question: given only levels before and after a step and a relation among the relata, when are there transfers along the relation that balance the step, and does a law that reads only related relata give them? **Verdict: the step form is known (flows with prescribed divergence); the local flux is known for cellular automata on lattices and is not reproduced. What the module adds is the statement on the spine's relations, computed with an empty axiom report, and the step from a local law to conservation on every closed family.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| A flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component | network flows; the standard spanning-forest construction | `Continuity.balancing_iff` is this, with the spine's families in place of components and the flow computed by `Continuity.route` |
+| A conserved additive quantity of a cellular automaton on a lattice has a flux depending only on a finite window, and a discrete continuity equation | Hattori and Takesue, "Additive conserved quantities in discrete-time lattice dynamical systems", Physica D 49 (1991); Pivato, "Conservation laws in cellular automata", Nonlinearity 15 (2002), Proposition 12 ([arXiv math/0111014](https://arxiv.org/abs/math/0111014)) | Not proved here: `route` depends on the whole configuration. The local flux is the module's next step |
+| Number-conserving rules have particle-displacement representations: each unit moves to a neighbour | one dimension: Fukś 2000; Moreira, Boccara and Goles 2004 ([arXiv nlin/0306040](https://arxiv.org/abs/nlin/0306040)); two dimensions, radius one half: Kari and Taati 2008 (JAC 2008; Taati's thesis, Turku 2009); three or more open | Not proved here: a routed transfer may exceed what stands on its source within the step |
+| The continuity equation of a locally conserved quantity | physics; FL1 (§348) for energy and available work | `Continuity.conservedOn_of_law` is its discrete, relational form: a local law conserving its total conserves it on every closed family |
+
+**What is claimed, and what is not.** No new mathematics. The module states on the spine's relations that balance along a relation is conservation on every family the relation closes, computes the transfers, and proves that a law reading only related relata and conserving its total from every configuration conserves it on every closed family. The flux is not local and the moves are not displacements bounded by occupancy; both are known on lattices and left as the next step.
+
+```text
+Result(s): new record balance-from-conservation-along-a-relation (FL2, new core module Becoming.Continuity)
+Delta: transfers along a relation balancing a step exist exactly where the total is conserved on every family the relation closes; a local law conserving its total conserves it on every closed family; Teleport along the empty relation
+Supplied premises / correspondence: finitely many relata, equality decided, the relation a Bool test, whole-number levels. Correspondence: network flows; Hattori and Takesue 1991; Pivato 2002; Fukś 2000; Moreira, Boccara and Goles 2004; Kari and Taati 2008
+Evidence: web searches on 22 October 2026 (Hattori and Takesue; Pivato's paper read for its flux proposition; particle displacements in one and two dimensions); Hattori and Takesue, Fukś and Kari and Taati cited from abstracts and secondary sources, not reread; Lean in the record's receipt
+Boundary: AI check, one session; the local flux and bounded displacements not proved
+Integration: chapter premise card C, §8.7's balance bullet, the relation to known results, the record table
+```
+
+<a id="aligned-check"></a>
+## A check: when drawing at once drains, and whom restraint pays (22 October 2026, AL1)
+
+An AI check (one session, 22 October) of AL1 against known forms. **Verdict: known in its kind. In the dynamic commons each player internalizes only its share of the stock effect and a sole owner all of it; noncooperative extraction exceeds the cooperative level. The spine's form states the exact condition for drawing everything to be perfect, shows that the strict premise of `drains` in whole amounts makes the drain costless to every drawer, and gives the sole owner as the case of a portion equal to the whole.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The common-property resource: each user internalizes only its share | Gordon (1954) (from memory) | `Optimum.AtOnce.drain_perfect_iff`, `Optimum.Holding.halves_race` |
+| The dynamic commons and the sole owner | Levhari and Mirman (1980) (from memory) | `Optimum.AtOnce.holding_draws_more`, `Optimum.AtOnce.whole_perfect_iff` |
+
+```text
+Result(s): record drawers-in-turn (AL1)
+Delta: the converse of drains; ReturnsLess in whole amounts as no return; whom holding pays; the whole as a portion
+Supplied premises / correspondence: portions; no floor; a holding profile; a portion equal to the whole. Correspondence: the common-property resource; the dynamic commons and the sole owner
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; perfect profiles other than drawing everything not characterized where a portion returns more than one for one
+Integration: OPENING [^aligned] and [^race]; chapter §3.4, §7.1, §7.5, item 10 and the record row
+```
+
+<a id="valuer-theorems-check"></a>
+## A check before building: what the valuer tests reduce to (22 October 2026, VT1)
+
+An AI check (one session, 22 October), made before the Lean. VD1 and VD2 tested on AI personas what thesis T5 says of valuers ([valuer check](#valuer-check), [sign check](#sign-check)). Most of what they tested is a consistency property that the mathematics fixes once its premises hold. The question: can formal proof reach those conclusions, so that T5's empirical side is the premises alone? **Verdict: both forms are known in pieces, and neither is known joined.**
+- *The exception.* Dominance is obeyed where it is transparent and violated where it is masked, and the invariance of a description explains both (Tversky and Kahneman 1986). An additive value exists where attributes are preferentially independent (Debreu 1960; Keeney and Raiffa 1976). Separate and joint evaluation reverse where an attribute is hard to evaluate alone (Hsee 1996).
+- *The locus.* Equal weights approximate estimated ones (Einhorn and Hogarth 1975; Dawes 1979). Dominance under weights bounded by ratios is decided at the extreme points of a linear program (Kirkwood and Sarin 1985; Salo and Hämäläinen 1992). Robust ordinal regression's necessary relation is the ranking every compatible value function shares (Greco, Mousseau and Słowiński 2008).
+- *Not found.* These joined on the sets that plans keep: the exception as an exact decomposition, the link of a separate sign to a joint ranking as one premise, and the closed threshold for two-valued courses under a ratio bound with its tie at the boundary.
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Invariance of description and dominance: equivalent descriptions of one problem should not change the choice. Dominance is obeyed where transparent (all 88 subjects) and violated where masked (58% chose the dominated option). The two are normatively essential and descriptively false | Tversky and Kahneman, "Rational Choice and the Framing of Decisions", Journal of Business 59 (1986), S251–S278 (abstract; the marbles figures from a secondary reproduction, not the paper) | `Weighting.ReadsSetsOn` is invariance stated on one pair: a ranking of presentations that ranks the pair as its order on the kept sets does. `Weighting.narrower_above_net` says a dominance violation is a failure of it or an item weighing at zero or below; `Framed` is the masked case |
+| Preferential independence: preferences over some attributes do not depend on the levels of the rest; mutual preferential independence, with measurability conditions, gives an additive value function | Debreu 1960 ("Topological methods in cardinal utility theory"); Keeney and Raiffa, *Decisions with Multiple Objectives*, 1976 (secondary summaries) | For two-valued attributes, a net weighting's increment at an item has the same sign in every context (`Weighting.ranksNet_increment_alike`). `Interacting` is an order where it does not, and no net weighting gives it (`Interacting.not_net`) |
+| Separate and joint evaluation reverse preferences where one attribute is hard to evaluate alone (the evaluability hypothesis) | Hsee, OBHDP 67 (1996), 247–257; Hsee, Loewenstein, Blount and Bazerman, Psychological Bulletin 125 (1999) (abstracts) | VD2's sign is a separate evaluation and its ranking a joint one. `Weighting.reads_increment` states the one premise linking them: the sign measured apart is the sign of the order's increment in the pair's context. Hsee's reversals are failures of it, and so is VD2's failed X3 (a gain not acted on) |
+| Unit weights predict about as well as estimated weights; under many conditions any weights give composites highly correlated with one another | Einhorn and Hogarth, OBHP 13 (1975), 171–192; Dawes, American Psychologist 34 (1979), 571–582; Wilks, Psychometrika 3 (1938), 23–40 (abstracts and summaries) | The statistical form of "valuers count". `Weighting.every_within_iff` is the exact ordinal form for two-valued courses: weights within `n / d` agree with counting on every pair where `n q < d p` |
+| Ranking with partial information on weights: whether one alternative is preferred under every weight vector meeting linear constraints is decided by a linear program; imprecise ratio statements (PAIRS) and preference ratios (PRIME) | Kirkwood and Sarin, Operations Research 33 (1985), 38–48; Salo and Hämäläinen, Operations Research 40 (1992), 1053–1061, and IEEE SMC-A 31 (2001), 533–545 (abstracts) | A ratio bound on weights is such a constraint set. For two-valued courses its deciding point is the tilted weighting, and the verdict is the closed threshold `n q < d p` (`Weighting.tilted_lt_iff`, `Weighting.every_within_iff`) |
+| Robust ordinal regression: the necessary relation (every compatible additive value function prefers) and the possible relation (some does); with no preference information the necessary relation is weak dominance | Greco, Mousseau and Słowiński, EJOR 191 (2008), 415–435 (the paper's listing and summaries) | With a ratio bound as the information, the necessary relation on two-valued courses is `n q < d p` and a possible reversal `d p < n q` (`Weighting.some_within_reverses_iff`); two compatible functions disagree exactly as `Weighting.opposite_within_iff` says |
+
+**What the theorems add, read exactly.**
+- *The exception as a decomposition.* Take a valuer's ranking of presentations, plans with their wording and order. Where it ranks a narrowing above its widening by one formation, either it does not rank the pair as the sets are ranked (a misread or a framing), or the formation weighs at zero or below. Read right, it is exactly the second, and zero ties. Each cause suffices alone. This is invariance and dominance stated together on what plans keep, and T5's three causes (misread, framing, a weight below zero) are its only cases.
+- *The separate–joint link as one premise.* A sign measured apart predicts every pair adding the formation exactly where it is the sign of the joint increment. Additivity carries it across contexts and interaction does not. So VD2's rules tested this premise, not the bound: X1s and X2 passing say the link held where the sign was strongly positive, and X3 failing says it did not hold for gains.
+- *The locus as a threshold.* Weights within a ratio `r` decide every mixed pair whose larger side alone keeps more than `r` times what the other alone keeps, with an exact tie at the boundary. Disagreement needs `r` above both `p / q` and `q / p`, and equal weights are `r = 1`. VD1's size-matched mixed pairs (2 : 1 and 3 : 1) are decided alike by every valuer whose weights are dispersed less than twofold: "valuers count" is low dispersion, not a failure of structure.
+
+Human data: none is needed for the theorems. The premises are measurable on any population. Presentation invariance is measured by rewording and reordering one pair, the link by ranking the one-formation pair in a transparent presentation beside the separate sign, and dispersion by graded signs.
+
+```text
+Result(s): new records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it (VT1, Becoming.Weightings); reuses widening-as-what-every-weighting-ranks
+Delta: T5's exception and locus stated as theorems with three measurable premises (presentation invariance, the link of a separate sign to the joint increment, weight dispersion)
+Supplied premises / correspondence: finite listing, two-valued admission, natural weights (a net weighting as two per item); Tversky and Kahneman 1986; Debreu 1960; Keeney and Raiffa 1976; Hsee 1996; Hsee et al. 1999; Einhorn and Hogarth 1975; Dawes 1979; Wilks 1938; Kirkwood and Sarin 1985; Salo and Hämäläinen 1992, 2001; Greco, Mousseau and Słowiński 2008
+Evidence: web searches on 22 October 2026; every source by abstract, listing or secondary summary, none reread in full; the marbles figures (88 of 88; 58%) from a secondary reproduction of the problem
+Boundary: AI check, one session; the probabilistic form over exchangeable weights not built
+Integration: chapter T5 (EN, ZH), THE-STEP-OF-INVARIANCE §5, OPENING [^good-evil], study §367
 ```

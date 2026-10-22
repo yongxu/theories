@@ -64,6 +64,9 @@ The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 
   - Preserved conditions: Natural weights. [Typicality.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean)
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). One generation of sampling, here iterated.
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Ending among groups uses up the differences it acts on; drift uses up variation too.
+- related, not a proved adapter: [fixation-with-selection](fixation-with-selection.md). With selection in the draw, replacement one at a time: the fixation share a potential's ratio.
+
+**Used by:** [fixation-with-selection](fixation-with-selection.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -76,6 +79,7 @@ The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `fixation by drift`, `neutral fixation probability`, `漂变导致的固定`, `genetic drift over generations`, `Becoming.Drift.fixation`, `Becoming.Drift.sampled_count`, `Becoming.Drift.varied_vanishes`
 
@@ -83,6 +87,7 @@ Aliases: `fixation by drift`, `neutral fixation probability`, `漂变导致的�
 ### History
 
 - 20 October 2026: added (EV9), fixation by drift over many sampled generations: the count kept, the ends absorbing, variation ending geometrically, the fixing share h/N; study section 278.
+- 22 October 2026, EV13-EV16: related record fixation-with-selection added (study section 368); its laws and their statements are unchanged.
 
 </details>
 

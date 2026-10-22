@@ -50,6 +50,9 @@ Inheritance as transmission of what the parent uses: a trait is passed on where 
 
 - **formal-reuse**: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). Its inherits_of_drawn, here with its necessary half.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries weishi-shiqi-wu-yin).
+- related, not a proved adapter: [dependence-formed-from-drawing](dependence-formed-from-drawing.md). Where depending and drawing part at the giver.
+
+**Used by:** [dependence-formed-from-drawing](dependence-formed-from-drawing.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -63,6 +66,7 @@ Inheritance as transmission of what the parent uses: a trait is passed on where 
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `Forming anew, necessary and sufficient`, `新结之依存，充要`, `Becoming.Web.FormsAnewAt`
 
@@ -70,6 +74,7 @@ Aliases: `Forming anew, necessary and sufficient`, `新结之依存，充要`, `
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 345.
+- 22 October 2026, EV13-EV16: related record dependence-formed-from-drawing added (study section 368); its laws and their statements are unchanged.
 
 </details>
 

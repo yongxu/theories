@@ -97,6 +97,13 @@
         "en": "States a gap its map found (entries weishi-shiqi-wu-yin).",
         "zh": "陈述其对应所发现之缺口（条目 weishi-shiqi-wu-yin）。"
       }
+    },
+    {
+      "id": "dependence-formed-from-drawing",
+      "detail": {
+        "en": "Where depending and drawing part at the giver.",
+        "zh": "给予者处依存与汲取相分之处。"
+      }
     }
   ],
   "references": [
@@ -112,7 +119,7 @@
         "Becoming.Web.formsAnew_iff_undrawn",
         "Becoming.Web.inheritsAt_iff_not_formsAnew"
       ],
-      "sha256": "5258995b79e2de66a66f046e5808f7690a5ca0ea513b68916a9d89e706ad70bf"
+      "sha256": "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
@@ -142,13 +149,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4265685bbaa34f6a8747d0bd35729482fc8158b493569920c35dd5c0343e6753"
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Transmission",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -158,6 +171,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 345.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 345 节。"
+    },
+    {
+      "en": "22 October 2026, EV13-EV16: related record dependence-formed-from-drawing added (study section 368); its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV13-EV16：加入相关记录 dependence-formed-from-drawing（研究第 368 节）；定律及其陈述不变。"
     }
   ]
 }

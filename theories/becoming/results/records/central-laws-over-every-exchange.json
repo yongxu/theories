@@ -1,0 +1,349 @@
+{
+  "schema_version": 2,
+  "id": "central-laws-over-every-exchange",
+  "title": {
+    "en": "The central laws over every relation of exchange",
+    "zh": "中心规律对每个交换关系成立"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:07:17+00:00",
+  "statement": {
+    "en": "Each of the 33 central laws taking balance, only active giving or taking, or activity needing support holds over what is read off an exchange, those premises discharged by the reading; what stays a hypothesis is a state of the law or the law's own.",
+    "zh": "取平衡、只有活跃者给出或取用、或活动需要支撑的 33 条中心规律，都对从交换读出者成立，这些前提由读法卸去；仍为假设者是律的状态或律自身的假设。"
+  },
+  "laws": [
+    {
+      "en": "Over every world with its rest counted: balance and the two activity premises hold by the reading, so every central law needing no more holds with no premise, and the rest theorem reads the census off the exchange where a named family closes each step; under balance the rest exchanges nothing and the world's relata are as they were.",
+      "zh": "对每个算入其余的世界：平衡与两个活跃前提由读法成立，故只需它们的中心规律不加前提成立；在有指名的族封闭每一步之处，停息定理从交换读出普查；平衡时其余不交换任何东西，世界的关系项一如原样。",
+      "declarations": [
+        "Becoming.World.withRest_acting",
+        "Becoming.World.withRest_all_end",
+        "Becoming.World.withRest_closed_lineage_lowered",
+        "Becoming.World.withRest_comes_to_rest_unrefuted",
+        "Becoming.World.withRest_counterfactual_is_course",
+        "Becoming.World.withRest_lineage_ends",
+        "Becoming.World.withRest_opens",
+        "Becoming.World.withRest_renewedBy",
+        "Becoming.World.withRest_replenishes",
+        "Becoming.World.withRest_replenishment_unbounded",
+        "Becoming.World.withRest_rest_idle",
+        "Becoming.World.withRest_restores",
+        "Becoming.World.withRest_retains_iff_within_margin",
+        "Becoming.World.withRest_rises_iff_inactive",
+        "Becoming.World.withRest_some",
+        "Becoming.World.withRest_taking",
+        "Becoming.World.withRest_unexcluded_beyond_coupling",
+        "Becoming.World.withRest_unselected_beyond_coupling",
+        "Becoming.World.withRest_unselected_beyond_pool",
+        "Becoming.World.withRest_uptake_needs_replenishment",
+        "Becoming.World.withRest_widens_iff_others_within"
+      ]
+    },
+    {
+      "en": "Over every two worlds of one kind of relatum with their rests counted: the comparisons of two courses hold with balance discharged in both, under every law of exchange over the relata with the rest.",
+      "zh": "对同一种关系项、各自算入其余的每两个世界：两段进程的比较在两者平衡都卸去时成立，在关系项连同其余上的每个交换之律下。",
+      "declarations": [
+        "Becoming.World.withRest_act_selected_by_pool",
+        "Becoming.World.withRest_act_unselected",
+        "Becoming.World.withRest_apart_only_downstream",
+        "Becoming.World.withRest_comparison_within_response",
+        "Becoming.World.withRest_present",
+        "Becoming.World.withRest_start",
+        "Becoming.World.withRest_widening_selected_by_pool"
+      ]
+    },
+    {
+      "en": "Over every world read off a relation of exchange, its flow a run along its standings and each requirement a necessary response of its exchange: activity needs support with its rest counted, so the central laws needing it hold with no premise. Every run of every relation and the course of every law are such worlds; a world whose relatum exchanges unsupported is not.",
+      "zh": "对每个从交换关系读出的世界（其流是沿其立着的一段运行，每个需要都是其交换的必然回应）：算入其余时活动需要支撑，故需要它的中心规律不加前提成立。每个关系的每段运行与每个律的进程都是这样的世界；关系项不受支撑而交换的世界不是。",
+      "declarations": [
+        "Becoming.ExchangeLaw.readWorld_readOffExchange",
+        "Becoming.ExchangeRelation.Runs.readOffExchange",
+        "Becoming.World.ReadOffExchange",
+        "Becoming.World.ReadOffExchange.consumption_ends_with_feeders",
+        "Becoming.World.ReadOffExchange.continuing_excludes",
+        "Becoming.World.ReadOffExchange.coupled_end_together",
+        "Becoming.World.ReadOffExchange.dependent",
+        "Becoming.World.ReadOffExchange.family_childless",
+        "Becoming.World.ReadOffExchange.family_excess_ends",
+        "Becoming.World.ReadOffExchange.outrun_below",
+        "Becoming.World.ReadOffExchange.roles_dependent",
+        "Becoming.World.ReadOffExchange.selected_le",
+        "Becoming.World.ReadOffExchange.selection_within",
+        "Becoming.World.ReadOffExchange.support_moved_rises",
+        "Becoming.World.ReadOffExchange.support_not_lower",
+        "Becoming.World.ReadOffExchange.transmitted_supported",
+        "Becoming.World.takingUnsupported",
+        "Becoming.World.takingUnsupported_not_readOff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own hypotheses and the states of the law it takes (dissipation, embodiment, bounded transmission, enclosure, feasibility, a census of what stands); the forms over a world read off a relation take that reading.",
+      "zh": "除各律自身的假设与它所取的律的状态（耗散、体现、有界传递、包围、可行、立着者的普查）外，不加公理与前提；对从交换关系读出的世界的形式取这一读法。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every becoming has a law or relation of exchange whose readings these are: discrete steps and natural-number amounts stay commitments of the representation.",
+      "zh": "每个生成／变化都有其读法如此的交换之律或关系：离散步与自然数量仍是表示的承诺。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which law of exchange holds, or whether it meets the states the laws take.",
+      "zh": "哪个交换之律成立，或它是否满足规律所取的状态。",
+      "kind": "scope"
+    },
+    {
+      "en": "The laws over the world's own relata where closure fails: there the rest is a relatum the laws count, a giver or a feeder.",
+      "zh": "封闭不成立时，关于世界自身关系项的规律：那里其余是规律所计的关系项，一个给予者或供给者。",
+      "kind": "scope"
+    },
+    {
+      "en": "The warrant of locality, on which reading requirement as necessary response rests: necessary response is the weakest local reading under which activity needs support (requirement-is-the-weakest-sound-reading); read as possible response, activity needing support fails.",
+      "zh": "局部性的根据，把需要读作必然回应依赖于它：必然回应是使活动需要支撑的最弱局部读法（requirement-is-the-weakest-sound-reading）；读作可能回应时，活动需要支撑不成立。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "detail": {
+        "en": "World.takingUnsupported: a world whose relatum takes a unit from itself at every step while standing at nothing and requiring itself at need one is read off no relation of exchange (takingUnsupported_not_readOff).",
+        "zh": "World.takingUnsupported：关系项每步从自身取一个单位、立于零、以需要一要求自身的世界，不从任何交换关系读出（takingUnsupported_not_readOff）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T140546.324820Z, rebound to 20261022T151214.034215Z after XL4 added two sections): the 57 declarations of Becoming.OverExchange, have empty axiom reports; the checker verifies core purity. completion.py's K3 checks that each central declaration taking a tying premise has its form, whose proof uses it and whose binders take none of the four. Author review in study section 364; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T140546.324820Z，XL4 增加两节后重新绑定到 20261022T151214.034215Z）：Becoming.OverExchange 的 57 项声明公理报告为空；检查器并核对核心纯净。completion.py 的 K3 检查每条取联结前提的中心声明都有其形式，形式的证明用到它，绑定中不取四者之一。作者审查见研究第 364 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The laws over dense amounts and continuous time; local conditions on a law giving each state; an independent review.",
+    "zh": "稠密量与连续时间下的规律；给出各状态的律的局部条件；独立审查。"
+  },
+  "correspondence": {
+    "en": "Chapter §8.1 item 1, the formal part of the first target as restated on 20 October 2026: every central law stated over every law, or relation, of exchange, each World premise a reading of the exchange or a state of the law. The classification of the premises is premises-that-are-states-of-the-law's; this record states the laws over it. The philosophical reading (BECOMING-FOUNDATION §9.1) is the AI's.",
+    "zh": "第 8.1 节第 1 项，即 2026年10月20日重述的首要目标的形式部分：每条中心规律都对每个交换之律或关系陈述，每个世界前提是交换的读法或律的状态。前提的分类属于 premises-that-are-states-of-the-law；本记录在其上陈述规律。哲学读法（BECOMING-FOUNDATION 第 9.1 节）是 AI 的。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+  "aliases": [
+    "the central laws over every relation of exchange",
+    "中心规律对每个交换关系成立",
+    "laws over every law of exchange",
+    "Becoming.World.ReadOffExchange",
+    "Becoming.World.ReadOffExchange.dependent"
+  ],
+  "dependencies": [
+    {
+      "id": "premises-read-off-the-exchange",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses World.withRest, withRest_balanced, withRest_dependent_iff, withRest_exchanging_iff, Flow.readOff_acting, Flow.readOff_taking and ExchangeLaw.readWorld.",
+        "zh": "复用 World.withRest、withRest_balanced、withRest_dependent_iff、withRest_exchanging_iff、Flow.readOff_acting、Flow.readOff_taking 与 ExchangeLaw.readWorld。"
+      },
+      "interface": {
+        "output": {
+          "en": "Worlds read off an exchange with the rest counted and the ties holding.",
+          "zh": "算入其余、联结成立、从交换读出的世界。"
+        },
+        "input": {
+          "en": "The worlds the central laws are instantiated at.",
+          "zh": "中心规律所实例化的世界。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean"
+      }
+    },
+    {
+      "id": "requirement-over-open-exchanges",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses ExchangeRelation, Runs, RespondsBelow, ExchangeLaw.relation, course_runs and relation_responds_iff.",
+        "zh": "复用 ExchangeRelation、Runs、RespondsBelow、ExchangeLaw.relation、course_runs 与 relation_responds_iff。"
+      },
+      "interface": {
+        "output": {
+          "en": "Requirement as necessary response over a relation of exchange.",
+          "zh": "交换关系上作为必然回应的需要。"
+        },
+        "input": {
+          "en": "World.ReadOffExchange and its dependence.",
+          "zh": "World.ReadOffExchange 及其依存。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean"
+      }
+    },
+    {
+      "id": "premises-that-are-states-of-the-law",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "What stays a hypothesis of the forms is a state of the law in its sense.",
+        "zh": "形式中仍为假设者，是其意义上的律的状态。"
+      },
+      "interface": {
+        "output": {
+          "en": "The classification of the World premises.",
+          "zh": "世界前提的分类。"
+        },
+        "input": {
+          "en": "The hypotheses the forms keep.",
+          "zh": "形式保留的假设。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "theory-of-becoming-foundation",
+      "detail": {
+        "en": "The formal part of the first target, for the coverage of K1.",
+        "zh": "首要目标的形式部分，就 K1 的覆盖而言。"
+      }
+    },
+    {
+      "id": "map-of-premises",
+      "detail": {
+        "en": "There the World premises are independent as separately chosen fields; here the laws under them hold of every world read off an exchange.",
+        "zh": "那里世界前提作为分别选定的字段彼此独立；这里其下的规律对每个从交换读出的世界成立。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ExchangeLaw.readWorld_readOffExchange",
+        "Becoming.ExchangeRelation.Local",
+        "Becoming.ExchangeRelation.Runs.readOffExchange",
+        "Becoming.ExchangeRelation.Supports",
+        "Becoming.ExchangeRelation.mayRespond_not_supports",
+        "Becoming.ExchangeRelation.respondsBelow_local",
+        "Becoming.ExchangeRelation.respondsBelow_supports",
+        "Becoming.ExchangeRelation.respondsBelow_weakest",
+        "Becoming.NoisyLaw",
+        "Becoming.NoisyLaw.course_runs",
+        "Becoming.NoisyLaw.readOffExchange",
+        "Becoming.NoisyLaw.realize",
+        "Becoming.NoisyLaw.relation",
+        "Becoming.World.ReadOffExchange",
+        "Becoming.World.ReadOffExchange.consumption_ends_with_feeders",
+        "Becoming.World.ReadOffExchange.continuing_excludes",
+        "Becoming.World.ReadOffExchange.coupled_end_together",
+        "Becoming.World.ReadOffExchange.dependent",
+        "Becoming.World.ReadOffExchange.family_childless",
+        "Becoming.World.ReadOffExchange.family_excess_ends",
+        "Becoming.World.ReadOffExchange.outrun_below",
+        "Becoming.World.ReadOffExchange.roles_dependent",
+        "Becoming.World.ReadOffExchange.selected_le",
+        "Becoming.World.ReadOffExchange.selection_within",
+        "Becoming.World.ReadOffExchange.support_moved_rises",
+        "Becoming.World.ReadOffExchange.support_not_lower",
+        "Becoming.World.ReadOffExchange.transmitted_supported",
+        "Becoming.World.takingUnsupported",
+        "Becoming.World.takingUnsupported_not_readOff",
+        "Becoming.World.withRest_act_selected_by_pool",
+        "Becoming.World.withRest_act_unselected",
+        "Becoming.World.withRest_acting",
+        "Becoming.World.withRest_all_end",
+        "Becoming.World.withRest_apart_only_downstream",
+        "Becoming.World.withRest_closed_lineage_lowered",
+        "Becoming.World.withRest_comes_to_rest_unrefuted",
+        "Becoming.World.withRest_comparison_within_response",
+        "Becoming.World.withRest_counterfactual_is_course",
+        "Becoming.World.withRest_lineage_ends",
+        "Becoming.World.withRest_opens",
+        "Becoming.World.withRest_present",
+        "Becoming.World.withRest_renewedBy",
+        "Becoming.World.withRest_replenishes",
+        "Becoming.World.withRest_replenishment_unbounded",
+        "Becoming.World.withRest_rest_idle",
+        "Becoming.World.withRest_restores",
+        "Becoming.World.withRest_retains_iff_within_margin",
+        "Becoming.World.withRest_rises_iff_inactive",
+        "Becoming.World.withRest_some",
+        "Becoming.World.withRest_start",
+        "Becoming.World.withRest_taking",
+        "Becoming.World.withRest_unexcluded_beyond_coupling",
+        "Becoming.World.withRest_unselected_beyond_coupling",
+        "Becoming.World.withRest_unselected_beyond_pool",
+        "Becoming.World.withRest_uptake_needs_replenishment",
+        "Becoming.World.withRest_widening_selected_by_pool",
+        "Becoming.World.withRest_widens_iff_others_within"
+      ],
+      "sha256": "18a90a39f162ab351cb4f055c3d71235993f007916b1941b2736f58488dbc90c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "role": "receipt",
+      "sha256": "a40250701ebee86db75602f749c5a9038ea7bd83845c67a8ac04f77715251d5e"
+    },
+    {
+      "path": "theories/becoming/results/completion/COVERAGE.json",
+      "role": "integration",
+      "sha256": "2ac033b736665e705a8d12566e91740becdcce27300f539ab67e0d40f051643b"
+    },
+    {
+      "path": "tools/research/completion.py",
+      "role": "integration",
+      "sha256": "b80afefc4f99bbb813e0b3a139da69035a3e4c93d6769298858fadaefa02f079"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b7b8c020a683f63a821824279a2f66135bb2421d1fc0d2a64b42a5261c3915ed"
+    },
+    {
+      "path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+      "role": "statement",
+      "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OverExchange",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (XL1), on chapter §8.1 item 1, the formal part of the first target; study section 364.",
+      "zh": "2026年10月22日：新增（XL1），针对第 8.1 节第 1 项，首要目标的形式部分；研究第 364 节。"
+    },
+    {
+      "en": "22 October 2026: the warrant note restated after XL4 (study section 369); no statement changed. Proof binding moved to receipt 20261022T151214.034215Z, which binds the module with XL4's two sections; the record's declarations are unchanged and still pass.",
+      "zh": "2026年10月22日：XL4 之后重述根据一条（研究第 369 节）；陈述未变。证明绑定移到回执 20261022T151214.034215Z，它绑定含 XL4 两节的模块；本记录的声明未变，仍通过。"
+    }
+  ]
+}

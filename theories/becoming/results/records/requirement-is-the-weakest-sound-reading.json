@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "id": "requirement-is-the-weakest-sound-reading",
+  "title": {
+    "en": "Necessary response is the weakest sound reading of requirement",
+    "zh": "必然回应是需要的最弱健全读法"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T15:13:45+00:00",
+  "statement": {
+    "en": "Over every relation of exchange, necessary response is the weakest reading of requirement that does not read the current level of what is required and under which activity needs support on every run; possible response is not sound.",
+    "zh": "在每个交换关系上，必然回应是不读所需者当前水平、且使活动在每段运行上需要支撑的最弱需要读法；可能回应不健全。"
+  },
+  "laws": [
+    {
+      "en": "Necessary response is sound and local, and every sound, local reading of requirement implies it.",
+      "zh": "必然回应健全且局部，每个健全而局部的需要读法都蕴含它。",
+      "declarations": [
+        "Becoming.ExchangeRelation.Local",
+        "Becoming.ExchangeRelation.Supports",
+        "Becoming.ExchangeRelation.respondsBelow_local",
+        "Becoming.ExchangeRelation.respondsBelow_supports",
+        "Becoming.ExchangeRelation.respondsBelow_weakest"
+      ]
+    },
+    {
+      "en": "Possible response is not sound: under the free relation a formation taking from a condition at nothing possibly responds to it falling below one.",
+      "zh": "可能回应不健全：在自由关系下，从处于零的条件取用的形成，可能回应它降到一以下。",
+      "declarations": [
+        "Becoming.ExchangeRelation.mayRespond_not_supports"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise.",
+      "zh": "不加公理，不加前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That requirement is local: that what a formation requires does not read the current level of what is required is argued in the foundation chapter, not proved.",
+      "zh": "需要是局部的：形成所需不读所需者当前水平，这一点在基础一章中论证，不是证明。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "detail": {
+        "en": "mayRespond_not_supports: possible response under the free relation.",
+        "zh": "mayRespond_not_supports：自由关系下的可能回应。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the Lean 4.29.1 checker (receipt 20261022T151214.034215Z); empty axiom reports. Author review in study section 369; not independently reviewed.",
+    "zh": "Lean 4.29.1 检查器实查（回执 20261022T151214.034215Z）；公理报告为空。作者审查见研究第 369 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "An argument for or against locality; an independent review.",
+    "zh": "支持或反对局部性的论证；独立审查。"
+  },
+  "correspondence": {
+    "en": "The warrant of the reading on which the internal relatedness of activity and support rests (BECOMING-FOUNDATION §9.1, chapter §8.5). The reduction is the AI's.",
+    "zh": "活动与支撑的内在相关所依赖之读法的根据（BECOMING-FOUNDATION 第 9.1 节，第 8.5 节）。这一归结是 AI 的。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+  "aliases": [
+    "necessary response is the weakest sound reading of requirement",
+    "必然回应是需要的最弱健全读法",
+    "Becoming.ExchangeRelation.respondsBelow_weakest",
+    "Becoming.ExchangeRelation.mayRespond_not_supports"
+  ],
+  "dependencies": [
+    {
+      "id": "requirement-over-open-exchanges",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses ExchangeRelation, RespondsBelow, MayRespondBelow and free_unsupported.",
+        "zh": "复用 ExchangeRelation、RespondsBelow、MayRespondBelow 与 free_unsupported。"
+      },
+      "interface": {
+        "output": {
+          "en": "Reuses ExchangeRelation, RespondsBelow, MayRespondBelow and free_unsupported.",
+          "zh": "复用 ExchangeRelation、RespondsBelow、MayRespondBelow 与 free_unsupported。"
+        },
+        "input": {
+          "en": "This record's laws.",
+          "zh": "本记录的规律。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "central-laws-over-every-exchange",
+      "detail": {
+        "en": "The reading the forms over a world read off a relation take.",
+        "zh": "从交换关系读出之世界上的形式所取的读法。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "role": "proof",
+      "sha256": "18a90a39f162ab351cb4f055c3d71235993f007916b1941b2736f58488dbc90c",
+      "declarations": [
+        "Becoming.ExchangeRelation.Local",
+        "Becoming.ExchangeRelation.Supports",
+        "Becoming.ExchangeRelation.mayRespond_not_supports",
+        "Becoming.ExchangeRelation.respondsBelow_local",
+        "Becoming.ExchangeRelation.respondsBelow_supports",
+        "Becoming.ExchangeRelation.respondsBelow_weakest"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "role": "receipt",
+      "sha256": "a40250701ebee86db75602f749c5a9038ea7bd83845c67a8ac04f77715251d5e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b7b8c020a683f63a821824279a2f66135bb2421d1fc0d2a64b42a5261c3915ed"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+      "role": "statement",
+      "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OverExchange",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (XL4); study section 369.",
+      "zh": "2026年10月22日：新增（XL4）；研究第 369 节。"
+    }
+  ]
+}

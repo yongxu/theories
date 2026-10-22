@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/al1b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/al1-aligned/tree",
+  "modules": 43,
+  "ran": [
+    "Becoming.Optimum",
+    "BecomingOptimumAxiomAudit"
+  ],
+  "reused": 42,
+  "unclean": [],
+  "audits": {
+    "Becoming.Optimum": {
+      "theorems": 503,
+      "declarations": 634,
+      "with_axioms": {}
+    }
+  }
+}

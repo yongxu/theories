@@ -1,0 +1,330 @@
+{
+  "schema_version": 2,
+  "id": "what-discrete-steps-and-whole-amounts-represent",
+  "title": {
+    "en": "What discrete steps and whole amounts represent",
+    "zh": "离散步与整数量表示什么"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:07:18+00:00",
+  "statement": {
+    "en": "Discrete steps represent real-valued time exactly for balance; whole amounts are not available where amounts change ever less; over real amounts novelty needs gain only by a least separation, and runaway is set by frequency where held, by strength where damped.",
+    "zh": "离散步对平衡恰好表示实数时间；量越变越少之处没有整数量；实数量中新颖只在有最小间隔时需要增益，失控在保持时由频率决定、有阻尼时由强度决定。"
+  },
+  "laws": [
+    {
+      "en": "A course in real-valued time whose levels change at the rate given less taken, its rates summable, balances over every stretch and across every step of any reading at instants, a coarser reading summing the finer; a balanced course read at the whole instants can stand still at every step and change between them.",
+      "zh": "实数时间中水平以所给减所取的速率变化、速率可加总的进程，在每一段上平衡，在时刻上的任何读取的每一步都平衡，较粗的读取是较细者之和；在整数时刻读取的平衡进程可以每步都静止而在其间变化。",
+      "declarations": [
+        "Becoming.Representation.Course",
+        "Becoming.Representation.Course.Balances",
+        "Becoming.Representation.Course.balance_over",
+        "Becoming.Representation.Course.givenOver_coarse",
+        "Becoming.Representation.Course.sample_balances",
+        "Becoming.Representation.Course.takenOver_coarse",
+        "Becoming.Representation.Oscillation.still_reading"
+      ]
+    },
+    {
+      "en": "No reading into the whole numbers keeps the strict falls of an amount falling at every step, in any amounts and in the reals; amounts in multiples of a unit are read in whole numbers.",
+      "zh": "在任何量中以及在实数中，没有到整数的读法保住每步都下降之量的严格下降；单位倍数的量以整数读出。",
+      "declarations": [
+        "Becoming.Amounts.no_whole_reading",
+        "Becoming.Halving.no_whole_reading",
+        "Becoming.Representation.no_whole_reading",
+        "Becoming.Representation.reals_no_whole_reading",
+        "Becoming.Representation.unit_reading"
+      ]
+    },
+    {
+      "en": "The halving stock is new at every step without gain; finitely many conditions new by at least a least separation at every step exceed every bound.",
+      "zh": "减半的存量每步都新而没有增益；有限多个条件若每步以至少一个最小间隔为新，就超过每个界。",
+      "declarations": [
+        "Becoming.Halving.new_without_gain",
+        "Becoming.Representation.new_without_gain",
+        "Becoming.Representation.separated_bounded",
+        "Becoming.Representation.separated_exceeds"
+      ]
+    },
+    {
+      "en": "A return of strength one half does not double; a held loop of every positive real strength carries D (1 + r) to the count, the core's self-loop its case, and is bounded by a polynomial exactly where two to the count is; damped, coupling at every step, it stays bounded exactly where its factor and strength add to at most one, and vanishes below.",
+      "zh": "强度二分之一的返回不加倍；任何正实数强度的保持环路携带 D (1 + r) 的计数次方，核心的自环是其情形，且恰在 2 的计数次方受多项式所限时受多项式所限；有阻尼时每步耦合，恰在倍率与强度之和至多为一时有界，小于一时消失。",
+      "declarations": [
+        "Becoming.Dyadic.half_return",
+        "Becoming.Representation.carried",
+        "Becoming.Representation.every_bounded_iff",
+        "Becoming.Representation.every_carried",
+        "Becoming.Representation.every_vanishes",
+        "Becoming.Representation.held_carried",
+        "Becoming.Representation.held_polynomial_iff",
+        "Becoming.Representation.selfLoop_cast"
+      ]
+    },
+    {
+      "en": "A web of several conditions coupled at every step, in any normed ring of steps: what it carries vanishes exactly where its rate (the least norm of a power to the inverse of the power, the spectral radius by Gelfand's formula) is below one, and runs away where above one; one condition's rate is the absolute value of factor plus strength; held and coupling at some steps only, a web carries (1 + S) to the count and, its rate above one, is bounded by a polynomial exactly where two to the count is; damped and coupling at some steps, it carries a to the steps not coupled times (a + S) to the count, vanishes where couplings are rare enough for the damping and runs away where frequent enough against it (XL3).",
+      "zh": "每步耦合的多个条件之网，在任何赋范环中：其所携带者恰在其速率（幂的范数的幂次倒数之最小值，由 Gelfand 公式即谱半径）小于一时消失，大于一时失控；一个条件的速率是倍率加强度的绝对值；保持而只在部分步耦合的网携带 (1 + S) 的计数次方，速率大于一时恰在 2 的计数次方受多项式所限时受多项式所限；有阻尼而只在部分步耦合时，携带 a 的未耦合步数次方乘 (a + S) 的计数次方，耦合足够稀少时消失，足够频繁时抵过阻尼而失控（XL3）。",
+      "declarations": [
+        "Becoming.Representation.dampedWeb",
+        "Becoming.Representation.dampedWeb_eq",
+        "Becoming.Representation.dampedWeb_unbounded",
+        "Becoming.Representation.dampedWeb_vanishes",
+        "Becoming.Representation.every_vanishes_iff",
+        "Becoming.Representation.pow_rate_le",
+        "Becoming.Representation.rate",
+        "Becoming.Representation.rate_le",
+        "Becoming.Representation.rate_pow_le_norm",
+        "Becoming.Representation.rate_real",
+        "Becoming.Representation.unbounded_of_one_lt",
+        "Becoming.Representation.vanishes_iff",
+        "Becoming.Representation.webCarried",
+        "Becoming.Representation.webCarried_eq",
+        "Becoming.Representation.web_polynomial_iff"
+      ]
+    },
+    {
+      "en": "At rate at most one a web grows slower than every exponential; the rate does not decide whether it stays bounded: the identity is bounded with rate one, the shear (the dual number 1 + ε) carries 1 + n with rate one (XL4).",
+      "zh": "速率至多为一时，网的增长慢于任何指数；速率不决定它是否有界：恒等步以速率一保持有界，剪切（对偶数 1 + ε）以速率一携带 1 + n（XL4）。",
+      "declarations": [
+        "Becoming.Representation.rate_nonneg",
+        "Becoming.Representation.rate_one",
+        "Becoming.Representation.rate_smul",
+        "Becoming.Representation.shear",
+        "Becoming.Representation.shear_pow_norm",
+        "Becoming.Representation.shear_rate",
+        "Becoming.Representation.subexponential"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No premise in the core module; the periphery uses Lean's standard axioms through Mathlib and states the summability of rates, the bounds and the strengths where each law takes them.",
+      "zh": "核心模块不加前提；外围经 Mathlib 使用 Lean 的标准公理，并在各律取用处写明速率的可加总、界与强度。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an actual becoming's rates are summable, its amounts real, or its loops of one condition.",
+      "zh": "实际生成／变化的速率可加总、其量为实数、或其环路只有一个条件。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the whole-number laws are wrong where they apply: they hold of every becoming with a least change.",
+      "zh": "整数规律在其适用处有误：它们对每个有最小变化的生成／变化成立。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The gap between the damped laws where a coupled step's norm exceeds its rate; that the rate is the spectral radius (Gelfand's formula, cited).",
+      "zh": "耦合步的范数超过其速率时两条阻尼规律之间的间隙；速率即谱半径（Gelfand 公式，引用）。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WholeAmounts.lean",
+      "detail": {
+        "en": "Halving.new_without_gain against Web.rises_late_of_new over dense amounts; Dyadic.half_return against carried_doubles_roundTrip.",
+        "zh": "Halving.new_without_gain 在稠密量上反驳 Web.rises_late_of_new；Dyadic.half_return 反驳 carried_doubles_roundTrip。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "detail": {
+        "en": "Oscillation.still_reading: a balanced course still at every whole instant and changing between them.",
+        "zh": "Oscillation.still_reading：在每个整数时刻静止、其间变化的平衡进程。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Core: Lean 4.29.1 checker, receipt 20261022T140546.324820Z: the 7 declarations of Becoming.WholeAmounts have empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261022T121131.390171Z: 36 theorems in 48 declarations of Representation, each depending on Lean's standard axioms only; its core closure matches passed receipts. Author review in study section 365; not independently reviewed.",
+    "zh": "核心：Lean 4.29.1 检查器，回执 20261022T140546.324820Z：Becoming.WholeAmounts 的 7 项声明公理报告为空。外围：Lean 4.30.0-rc2 与 Mathlib，回执 20261022T121131.390171Z：Representation 的 48 项声明（36 项定理）只依赖 Lean 的标准公理；其核心闭包与已通过的回执一致。作者审查见研究第 365 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The gap between the damped laws; an independent review.",
+    "zh": "两条阻尼规律之间的间隙；独立审查。"
+  },
+  "correspondence": {
+    "en": "The goal record's question whether every becoming can be represented with discrete steps and natural-number amounts, and chapter §8.1 item 6. Real-valued time enters as the periphery correspondence the core's tower anticipated (Becoming.Tower); the fundamental theorem of calculus, the pigeonhole principle and the geometric series are standard.",
+    "zh": "目标记录关于每个生成／变化能否以离散步与自然数量表示的问题，以及第 8.1 节第 6 项。实数时间作为核心之塔（Becoming.Tower）所预期的外围对应进入；微积分基本定理、鸽巢原理与几何级数是标准的。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+  "aliases": [
+    "what discrete steps and whole amounts represent",
+    "离散步与整数量表示什么",
+    "Becoming.Representation.held_polynomial_iff",
+    "Becoming.Representation.separated_exceeds"
+  ],
+  "dependencies": [
+    {
+      "id": "rest-theorem-in-any-amounts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Amounts.EndlessFall and the Dyadic witnesses.",
+        "zh": "复用 Amounts.EndlessFall 与二进分数的见证。"
+      },
+      "interface": {
+        "output": {
+          "en": "Amounts with an endless fall.",
+          "zh": "有无尽下降的量。"
+        },
+        "input": {
+          "en": "No whole reading.",
+          "zh": "没有整数读法。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WholeAmounts.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "theory-of-becoming-foundation",
+      "detail": {
+        "en": "The representation question of the first target.",
+        "zh": "首要目标的表示问题。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WholeAmounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts.no_whole_reading",
+        "Becoming.Dyadic.half_return",
+        "Becoming.Halving.new_without_gain",
+        "Becoming.Halving.no_whole_reading",
+        "Becoming.Halving.two_pow_lt",
+        "Becoming.falls_by_steps",
+        "Becoming.not_falls_ever"
+      ],
+      "sha256": "d98c7088f1948cd8d72bd4d7703b10dd155642f82fff9ff0d2098acd370bd7fb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Representation.Course",
+        "Becoming.Representation.Course.Balances",
+        "Becoming.Representation.Course.Summable'",
+        "Becoming.Representation.Course.balance_over",
+        "Becoming.Representation.Course.givenOver",
+        "Becoming.Representation.Course.givenOver_coarse",
+        "Becoming.Representation.Course.sample",
+        "Becoming.Representation.Course.sample_balances",
+        "Becoming.Representation.Course.takenOver",
+        "Becoming.Representation.Course.takenOver_coarse",
+        "Becoming.Representation.Oscillation.balances",
+        "Becoming.Representation.Oscillation.changes_between",
+        "Becoming.Representation.Oscillation.course",
+        "Becoming.Representation.Oscillation.still_at_steps",
+        "Becoming.Representation.Oscillation.still_reading",
+        "Becoming.Representation.Oscillation.summable",
+        "Becoming.Representation.Polynomial",
+        "Becoming.Representation.RandomEnd.expected",
+        "Becoming.Representation.RandomEnd.level",
+        "Becoming.Representation.RandomEnd.rest_not_in_expectation",
+        "Becoming.Representation.RandomEnd.rests",
+        "Becoming.Representation.RandomEnd.summable_weighted",
+        "Becoming.Representation.RandomEnd.weight",
+        "Becoming.Representation.carried",
+        "Becoming.Representation.close_of_cell",
+        "Becoming.Representation.dampedWeb",
+        "Becoming.Representation.dampedWeb_eq",
+        "Becoming.Representation.dampedWeb_unbounded",
+        "Becoming.Representation.dampedWeb_vanishes",
+        "Becoming.Representation.every_bounded_iff",
+        "Becoming.Representation.every_carried",
+        "Becoming.Representation.every_vanishes",
+        "Becoming.Representation.every_vanishes_iff",
+        "Becoming.Representation.expected_balance",
+        "Becoming.Representation.halving_falls",
+        "Becoming.Representation.held_carried",
+        "Becoming.Representation.held_polynomial_iff",
+        "Becoming.Representation.new_without_gain",
+        "Becoming.Representation.no_whole_reading",
+        "Becoming.Representation.pow_rate_le",
+        "Becoming.Representation.rate",
+        "Becoming.Representation.rate_bdd",
+        "Becoming.Representation.rate_le",
+        "Becoming.Representation.rate_nonneg",
+        "Becoming.Representation.rate_one",
+        "Becoming.Representation.rate_pow_le_norm",
+        "Becoming.Representation.rate_real",
+        "Becoming.Representation.rate_smul",
+        "Becoming.Representation.reals_no_whole_reading",
+        "Becoming.Representation.selfLoop_cast",
+        "Becoming.Representation.separated_bounded",
+        "Becoming.Representation.separated_exceeds",
+        "Becoming.Representation.shear",
+        "Becoming.Representation.shear_pow_norm",
+        "Becoming.Representation.shear_rate",
+        "Becoming.Representation.subexponential",
+        "Becoming.Representation.unbounded_of_one_lt",
+        "Becoming.Representation.unit_reading",
+        "Becoming.Representation.vanishes_iff",
+        "Becoming.Representation.webCarried",
+        "Becoming.Representation.webCarried_eq",
+        "Becoming.Representation.web_polynomial_iff"
+      ],
+      "sha256": "a00b61d45ecc98de5cbc095ee1fb3eea4a0463c67178119560bafff6d396f42a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T140546.324820Z/verification.json",
+      "role": "receipt",
+      "sha256": "a36d6ffd5d803a0d9f99a7905328f9a5b3b34738c793524b510353622339dfff"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+      "role": "receipt",
+      "sha256": "dc0dfb8237a022fb036736f5c32a930b36dd5612e37a4694d0ee78ea1906d711"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b7b8c020a683f63a821824279a2f66135bb2421d1fc0d2a64b42a5261c3915ed"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WholeAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T140546.324820Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WholeAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+      "sha256_pointer": "/source_sha256/Representation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (XL2, with XL3's webs of several conditions), on the goal record's representation question and chapter §8.1 item 6; study section 365.",
+      "zh": "2026年10月22日：新增（XL2），针对目标记录的表示问题与第 8.1 节第 6 项；研究第 365 节。"
+    },
+    {
+      "en": "22 October 2026: the rate-one law added (XL4, study section 369); periphery receipt 20261022T151119.678274Z.",
+      "zh": "2026年10月22日：增加速率为一的规律（XL4，研究第 369 节）；外围回执 20261022T151119.678274Z。"
+    }
+  ]
+}

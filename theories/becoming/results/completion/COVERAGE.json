@@ -416,13 +416,19 @@
         "selection-term-over-generations",
         "what-bounds-offspring-numbers",
         "additive-part-of-offspring-variance",
+        "mutation-and-the-balance-it-sets",
+        "the-breeding-value",
+        "dependence-formed-from-drawing",
         "selection-within-and-among-groups",
         "selection-among-groups-by-ending",
         "groups-whose-conditions-are-coupled",
         "selection-within-and-among-groups-of-any-sizes",
         "groups-formed-by-descent",
+        "confined-rise-within-a-whole",
+        "selection-with-returns-to-groupmates",
         "drift-offspring-sampled",
         "fixation-by-drift",
+        "fixation-with-selection",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [
@@ -628,11 +634,11 @@
     }
   ],
   "premises": {
-    "about": "K3. Each premise a central statement may use, the pattern that finds it in a statement, and its witnesses: declarations exhibiting worlds or models that meet it and fail it. A premise with no witnesses listed is reported. A logical premise (kind logical: decidedness) is one no world can be shown to fail, since no proposition is refuted to be decided; it lists instead a witness meeting it (meets), the proof that it is never refuted (unrefuted), and a calibration: what asking it of every case amounts to (calibration).",
+    "about": "K3. Each premise a central statement may use, the pattern that finds it in a statement, and its witnesses: declarations exhibiting worlds or models that meet it and fail it. A premise with no witnesses listed is reported. A logical premise (kind logical: decidedness) is one no world can be shown to fail, since no proposition is refuted to be decided; it lists instead a witness meeting it (meets), the proof that it is never refuted (unrefuted), and a calibration: what asking it of every case amounts to (calibration). The tying premises (tying) are those a reading of one exchange settles: each central statement whose binders take one lists its form over the exchange (exchange_forms), a declaration whose proof uses it and whose binders use none of them; the forms over a world read off a relation of exchange take that reading (reading), met and failed by the declarations listed.",
     "items": [
       {
         "name": "balance",
-        "pattern": "Flow\\.Balances(On)?\\b|World\\.Balanced|\\bBalances(On)?\\b",
+        "pattern": "Flow\\.Balances(On)?\\b|World\\.Balanced|\\bBalances(On)?\\b|\\.Balanced\\b",
         "witnesses": [
           "Becoming.World.contingent",
           "Becoming.World.independent"
@@ -648,7 +654,7 @@
       },
       {
         "name": "embodiment",
-        "pattern": "\\bEmbodied\\b",
+        "pattern": "\\bEmbodied\\b|\\bArisingEmbodied\\b",
         "witnesses": [
           "Becoming.World.contingent",
           "Becoming.World.independent"
@@ -768,7 +774,60 @@
         "witnesses": [],
         "note": "an order premise: no theorem exhibits a lifting meeting and one failing it"
       }
-    ]
+    ],
+    "tying": [
+      "balance",
+      "only active relata give",
+      "only active relata take",
+      "activity needing support"
+    ],
+    "exchange_forms": {
+      "Becoming.Flow.uptake_needs_replenishment": "Becoming.World.withRest_uptake_needs_replenishment",
+      "Becoming.Web.Embodied.replenishes": "Becoming.World.withRest_replenishes",
+      "Becoming.Flow.restores": "Becoming.World.withRest_restores",
+      "Becoming.Flow.Balances.renewedBy": "Becoming.World.withRest_renewedBy",
+      "Becoming.Flow.More.replenishment_unbounded": "Becoming.World.withRest_replenishment_unbounded",
+      "Becoming.Flow.Balances.consumption_ends_with_feeders": "Becoming.World.ReadOffExchange.consumption_ends_with_feeders",
+      "Becoming.Flow.Dissipative.opens": "Becoming.World.withRest_opens",
+      "Becoming.Flow.continuing_excludes": "Becoming.World.ReadOffExchange.continuing_excludes",
+      "Becoming.Flow.outrun_below": "Becoming.World.ReadOffExchange.outrun_below",
+      "Becoming.counterfactual_is_course": "Becoming.World.withRest_counterfactual_is_course",
+      "Becoming.Flow.unexcluded_beyond_coupling": "Becoming.World.withRest_unexcluded_beyond_coupling",
+      "Becoming.apart_only_downstream": "Becoming.World.withRest_apart_only_downstream",
+      "Becoming.Flow.Balances.retains_iff_within_margin": "Becoming.World.withRest_retains_iff_within_margin",
+      "Becoming.Flow.Balances.widens_iff_others_within": "Becoming.World.withRest_widens_iff_others_within",
+      "Becoming.Flow.act_unselected": "Becoming.World.withRest_act_unselected",
+      "Becoming.Flow.Balances.comparison_within_response": "Becoming.World.withRest_comparison_within_response",
+      "Becoming.Flow.selection_within": "Becoming.World.ReadOffExchange.selection_within",
+      "Becoming.Flow.transmitted_supported": "Becoming.World.ReadOffExchange.transmitted_supported",
+      "Becoming.Flow.selected_le": "Becoming.World.ReadOffExchange.selected_le",
+      "Becoming.SelectionTerm.Flow.support_not_lower": "Becoming.World.ReadOffExchange.support_not_lower",
+      "Becoming.SelectionTerm.Flow.support_moved_rises": "Becoming.World.ReadOffExchange.support_moved_rises",
+      "Becoming.Reproduction.Flow.lineage_ends": "Becoming.World.withRest_lineage_ends",
+      "Becoming.Reproduction.Flow.closed_lineage_lowered": "Becoming.World.withRest_closed_lineage_lowered",
+      "Becoming.GroupEnding.Flow.rises_iff_inactive": "Becoming.World.withRest_rises_iff_inactive",
+      "Becoming.GroupEnding.Flow.family_childless": "Becoming.World.ReadOffExchange.family_childless",
+      "Becoming.GroupEnding.Flow.coupled_end_together": "Becoming.World.ReadOffExchange.coupled_end_together",
+      "Becoming.GroupEnding.Flow.all_end": "Becoming.World.withRest_all_end",
+      "Becoming.Web.Whole.family_excess_ends": "Becoming.World.ReadOffExchange.family_excess_ends",
+      "Becoming.Flow.unselected_beyond_coupling": "Becoming.World.withRest_unselected_beyond_coupling",
+      "Becoming.Flow.unselected_beyond_pool": "Becoming.World.withRest_unselected_beyond_pool",
+      "Becoming.Flow.act_selected_by_pool": "Becoming.World.withRest_act_selected_by_pool",
+      "Becoming.Direction.widening_selected_by_pool": "Becoming.World.withRest_widening_selected_by_pool",
+      "Becoming.World.comes_to_rest_unrefuted": "Becoming.World.withRest_comes_to_rest_unrefuted"
+    },
+    "reading": {
+      "name": "requirement read as response",
+      "declaration": "Becoming.World.ReadOffExchange",
+      "meets": [
+        "Becoming.ExchangeRelation.Runs.readOffExchange",
+        "Becoming.ExchangeLaw.readWorld_readOffExchange"
+      ],
+      "fails": [
+        "Becoming.World.takingUnsupported_not_readOff"
+      ],
+      "gives": "Becoming.World.ReadOffExchange.dependent"
+    }
   },
   "representation": {
     "about": "K4. Modelling choices of chapter section 0, block A, and the pattern that finds each in a central statement; the natural-number laws (whose truth depends on whole-number amounts) with their form over dense amounts or a counterexample (kind: form or counterexample). A statement with no choice found is a law over any type (of configurations, claims or standpoints) that uses none of them.",
@@ -828,6 +887,18 @@
         "dense": "Becoming.Amounts.replenishment_unbounded",
         "kind": "form",
         "note": "in Archimedean amounts, uptake beyond every multiple of a least take needs replenishment beyond every multiple of it; the whole-number law is proved as its instance (least take one); without a least take it fails (Halving.takes_halve)"
+      },
+      {
+        "law": "Becoming.Web.rises_late_of_new",
+        "dense": "Becoming.Halving.new_without_gain",
+        "kind": "counterexample",
+        "note": "over dyadic amounts the halving stock is new at every step, never rises and stays within one; over the reals novelty by a least separation needs gain (periphery Representation.separated_exceeds)"
+      },
+      {
+        "law": "Becoming.carried_doubles_roundTrip",
+        "dense": "Becoming.Dyadic.half_return",
+        "kind": "counterexample",
+        "note": "a return of strength one half rises and stays below twice; over the reals a held loop of every positive strength runs away exactly where it couples often, a damped one where its strength makes up for the damping (periphery Representation.held_polynomial_iff, every_bounded_iff)"
       }
     ]
   },

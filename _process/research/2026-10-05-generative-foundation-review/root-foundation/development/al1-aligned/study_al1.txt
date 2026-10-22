@@ -1,0 +1,50 @@
+## {N}. When drawing at once drains, and whom restraint pays (AL1)
+
+```text
+Result(s): record drawers-in-turn (Becoming.Optimum): its open item "drawing at once where a portion returns at least
+       one for one" answered by an exact converse; what the premise of drains says in whole amounts; whom restraint
+       pays; the standpoint of the whole as a case.
+Delta: (1) drawing everything is perfect exactly where, at every step before the last, no drawer's portion of what
+       stands next returns more than one for one on what it alone leaves while the others draw everything
+       (AtOnce.drain_perfect_iff, through later_drained; Web.drain_perfect_broken). (2) In whole amounts the premise
+       of drains (ReturnsLess) means a unit left returns nothing: a portion never rises with what is left
+       (portion_falls), so along no profile whatever does any drawer draw more than where all draw everything
+       (drain_most; Web.at_once_beyond): there restraint pays no drawer, and what the drain breaks lies beyond them.
+       (3) Where the drain is perfect and a profile holding the level draws a drawer, at every step after the first,
+       more than its portion of what stands at nothing, it draws that drawer more over n + 1 steps with its first
+       portion below n (holding_draws_more, through drained_add_le); a perfect profile draws everything at the last
+       step (last_draws). (4) A drawer whose portion is all that stands finds the drain imperfect wherever the whole
+       returns more than one for one (whole_not_drained); one drawer given the whole drains exactly where the whole
+       never does (whole_perfect_iff), and then the drain still breaks what depends on the base (Web.whole_drain_broken). Witness Holding.halves_race.
+Premises / correspondence: any law G; k drawers given portions of one level, all drawing at once; no floor; natural
+       amounts, discrete steps; for (3) a profile holding the level and a long enough horizon; for (4) a portion equal
+       to all that stands. Correspondence: the dynamic commons, where each player internalizes only its share of the
+       stock effect (Gordon 1954; Levhari and Mirman 1980), and the sole owner who internalizes all of it.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: which profiles are perfect where some portion returns more than one for one; whether every perfect profile
+       of the halves draws each drawer less than holding (shown for drawing everything only); floors drawing at
+       once; sharing rules depending on the others' claims; a drawer's ranking of all drawers' draws (a portion equal
+       to the whole is the case stated).
+Output → input: OPENING [^aligned] and [^race]; chapter §3.4, §7.1, §7.5, item 10 and the record row (EN, ZH);
+       Optimum's header; record drawers-in-turn; significance review, aligned check.
+```
+
+**The question.** OPENING's alignment note said its theorems "concern dependence and significance, not incentive or motivation", while `Optimum.AtOnce.drains` already proved a law of best response: drawers ranking only what they draw. The drawers' record left one item open, drawing at once where a portion returns at least one for one. Answering it says when a race of drawers is each one's best response, whom restraint pays, and what changes when one drawer's portion is the whole.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The converse, exactly* (`Optimum.AtOnce.later_drained`, `steps_after`, `drain_perfect_iff`, `Web.drain_perfect_broken`). Where the others draw everything, what drawer `d` draws after leaving `b` is its portion of what stands next from `b` alone and its portions of what stands at nothing after. So drawing everything is perfect exactly where that portion is at most its portion from nothing, and `b`: no drawer's portion returns more than one for one on what it alone leaves. The condition quantifies only over what a drawer alone leaves while the others drain; `drains` needs more (every amount the others leave) for every perfect profile to drain.
+- *What `ReturnsLess` says in whole amounts* (`Optimum.AtOnce.portion_falls`, `drain_most`, `Web.at_once_beyond`). With `b = 1` the premise says a unit left returns less than a unit, so nothing; by induction a portion never rises with what is left. Then at every later step a drawer's portion along any profile is at most its portion of what stands at nothing, and along no profile whatever does any drawer draw more than where all draw everything. Where `drains` holds, restraint pays no drawer, and what the drain breaks (`Web.at_once_broken`) lies beyond every drawer.
+- *Whom holding pays* (`Optimum.AtOnce.drained_add_le`, `holding_draws_more`, `last_draws`). Along a profile under which what stands is the level it started at, a drawer drawing at each later step more than its portion of what stands at nothing gives draws, over `n + 1` steps with its first portion below `n`, more than where all draw everything. A perfect profile draws everything at the last step, so such a holding profile is not perfect.
+- *The standpoint of the whole as a case* (`Optimum.AtOnce.whole_not_drained`, `whole_perfect_iff`, `Web.whole_drain_broken`). A drawer whose portion is all that stands does not find the drain perfect wherever what stands from `b` left exceeds what stands from nothing by more than `b`. With one drawer given the whole, the drain is perfect exactly where the whole never returns more than one for one. Where it never does, the drain is perfect for that drawer and still breaks what depends on the base (`Web.whole_drain_broken`): counting the whole of what is drawn does not count what depends on what is left.
+- *The two halves* (`Optimum.Holding.half`, `half_le_succ`, `half_mono`, `half_double`, `half_le`, `halfMore`, `halves`, `leavesAllButOne`, `halves_return`, `halves_hold`, `halves_held`, `halves_race`). Two drawers share a level, the first the larger half and the second the smaller, and what both leave, `x`, stands next as `x` and half of it. Neither half returns more than one for one on what its drawer alone leaves, so drawing everything is perfect over every horizon and breaks the dweller at the first step from a source at six. Leaving all of each half but one unit holds the source at six, keeps the dweller at every step and, over `n + 1` steps with `4 ≤ n`, draws each drawer more than drawing everything; it is not perfect. For a single drawer given all that stands, drawing everything is not perfect over any horizon of two steps or more, since two units left stand next as three.
+
+**A correction to the record's reading.** UM3 read `ReturnsLess` as the commons condition, a share of renewal below one (Gordon 1954). In real amounts a share below one returns something; in whole amounts, at unit grain, it returns nothing, and under it the drain costs the drawers nothing. The tragedy of the commons, where the drain is each one's best response and yet holding pays each more, needs the weaker condition of `drain_perfect_iff` with some return: the halves are its witness. Under `ReturnsLess` the drain is the unique perfect outcome but no trap for the drawers; its loss falls beyond them.
+
+**Against the prior form** ([significance review, aligned check](BECOMING-SIGNIFICANCE-REVIEW.md#aligned-check)). The dynamic commons: each player internalizes only its share of the stock effect, so the noncooperative outcome extracts more than the cooperative one, and a sole owner internalizes all of it (Gordon 1954; Levhari and Mirman 1980). The spine's form states the exact condition for the drain to be perfect, its converse, the whole-amount reading of the strict premise, and the sole owner as the case of one portion equal to the whole.
+
+*Reading* [AI reading, D45]. Seen from inside the race, each drawer is rewarded for draining exactly where nothing it alone leaves comes back to it more than one for one. Seen from the whole, what is left comes back as the whole renews. Where the two differ, as with the halves, the race is each one's best response and none is better for it; where nothing left comes back to any drawer, the race is no trap for them and its loss returns to no one among them, the case the continuation condition's scope reaches (losses that return to no one).
+
+**Self-review.** Every premise is used: no floor for the drain's profile; `t + 1 < N` for each later step; the holding premise and the horizon for (3); the portion equal to the whole for (4). What lies in no portion does not stand, a modelling choice. Not covered: which profiles are perfect where some portion returns more than one for one, whether every perfect profile of the halves draws each less than holding, floors, sharing rules that depend on claims, and drawers ranking the sum of all draws.
+
+**The run.** {CORE_LINE}. Becoming.Optimum {OPT_LINE}; all with empty axiom reports. Connectivity: {APART}.

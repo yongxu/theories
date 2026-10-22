@@ -56,6 +56,7 @@ import Becoming.SelectionTerm
 import Becoming.Reproduction
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.Founding
 import Becoming.Drift
 import Becoming.Space
 import Becoming.Premises
@@ -70,10 +71,12 @@ import Becoming.Standing
 import Becoming.Resolution
 import Becoming.Amounts
 import Becoming.LeastLoss
+import Becoming.WholeAmounts
 import Becoming.InAmounts
 import Becoming.Entropy
 import Becoming.Units
 import Becoming.Imbalance
+import Becoming.Continuity
 import Becoming.Continuation
 import Becoming.RenewalFlow
 import Becoming.Admission
@@ -113,6 +116,8 @@ import Becoming.Testing
 import Becoming.Runaway
 import Becoming.Response
 import Becoming.TimedResponse
+import Becoming.Latency
+import Becoming.Centers
 import Becoming.Counterfactual
 import Becoming.Regrouping
 import Becoming.Selection
@@ -203,6 +208,7 @@ import Becoming.Reading
 import Becoming.PlaceTransitionNets
 import Becoming.SharedCodes
 import Becoming.ExchangePremises
+import Becoming.OverExchange
 import Becoming.Readings
 import Becoming.MoveFormation
 import Becoming.Sensitivity
@@ -278,6 +284,8 @@ import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
+import Becoming.Training
+import Becoming.PoolCourse
 import Becoming.Rejoining
 import Becoming.Lexical
 import Becoming.Frontier
@@ -500,7 +508,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.Weighted` (L1): Weighted histories and their losses (P82). Given weights with their laws and finite lists of moves and configurations, the sum of histories over a finite horizon is exactly stepwise transfer (`Weights.sum_courses`). Possibility is the core's trace relation, and counting preserves possibility. For a description with representatives, exact preservation at every horizon is exactly one-step lumpability (`Weights.lumped_iff`); truncation, cancellation, unkept memory and loops have explicit boundary witnesses.
 * `Becoming.Transmission` (L1): The exact conditions and boundary of transmission (P84). Transmission is exactly inheritance with a need bound (`Flow.transmitsWithin_iff`); where no dependence was held before, inheritance is the forming law, while the general forming/holding split uses decidedness. Dropping one dependence of a giver keeps the other premises and breaks binding transmission (`World.drop_but`). Under the named finite, balance, dissipation, embodiment and support conditions, a reading of drawing together with drawing being depending derives transmission (`World.transmitting_of_drawn`).
   A dependence forms anew exactly where the descendant depends on what its giver did not draw on;
-  the reading of drawing is inheritance with the givers drawing what they pass on.
+  the reading of drawing is inheritance with the givers drawing what they pass on. Where depending
+  and drawing part at the giver, its holding alone decides inheritance against forming anew, and
+  under the reading of drawing a dependence forms anew exactly where the giver drew on what it did
+  not depend on: a dependence formed by descent is a giver's drawing become its descendant's
+  dependence; in a balanced flow nothing comes to depend on what no participant drew on.
 * `Becoming.Succession` (L1): Fed without any source recurring (P85). `Successive.relay` gives a balanced, dissipative flow in which only active formations give, the pool is fed at every step, and each source participates and is active at its own step only. Continuing to be fed needs no source formation to recur. This advances continuing-self-fed-from-beyond and is not a separate result.
 * `Becoming.Attraction` (L1): for every determined law, with no premise, a configuration is
   drawn into an absorbing region exactly where it does not return, and what is drawn in never
@@ -743,6 +755,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   differences of offspring numbers over pairs times those of the amount (the additive variance at
   most the whole, all of it where the amount is offspring number itself); with exact
   transmission the rise of the amount's mean, cross-multiplied and squared, is at most that.
+  Mutation: carriers leaving k carrying offspring and m not, others w: the carriers' share rises
+  exactly where d · k exceeds c · m + d · w, never where k ≤ w (the error threshold), is kept at
+  s / (s + m) where k = w + s and is approached without overshoot; read as generations, the step
+  is balanced exactly there, transmission lowering c · m. The breeding value: an amount combining
+  carried amounts that reproduces, d times, offspring number's covariation with each (the normal
+  equations cleared of denominators) has d times its covariation with offspring number equal to
+  its own spread, at most d² times offspring number's (the additive part at most the whole), and
+  with exact transmission the cross-multiplied rise of its mean, d times, is that spread: Fisher's
+  fundamental theorem with breeding values, one carried amount its case.
 * `Becoming.SelectionLevels` (L1): selection within groups and among them, the multilevel form
   of Price's equation (no premise beyond groups of equal size). Over a family listed as k groups
   of m members, the whole's concordance, with k times the groups' own discordance and the
@@ -757,7 +778,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   group's lineage over generations): with exact transmission, lineages of groups uniform in an
   amount keep the value each was founded at, the family is the union of the lineages, nothing is
   selected within them, and the mean rises exactly where the lineages' means select for the
-  amount. Witnesses: two groups of two with one member holding back, the whole going either way.
+  amount. Returns to groupmates: where each unit a member keeps gives b to every member of its
+  group and takes c from the keeper, selection within goes against keeping, among groups for it
+  exactly where b + c falls short of m times b, and the whole selects for it exactly where b + c
+  times the spread falls short of m times b times the spread among groups (Hamilton's rule with
+  the assortment the share of the spread among groups). Witnesses: two groups of two with one
+  member holding back, the whole going either way; the same returns either way by how the groups
+  are founded; assortment below one losing where assortment one would win.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -776,6 +803,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   wherever a lineage founded higher leaves offspring beside a lower one with members. Witnesses:
   selection within the keeping group outweighed, and outweighing; mixed groups regrouped by
   descent falling back, and lineages keeping what ending selected.
+* `Becoming.Founding` (L1): selection within a whole, a lineage confined to it, and what a
+  founding carries. Where a family of conditions ran into excess under the coupled gate, every
+  member of a later generation of descent is the offspring of a member that did not depend on
+  the family, and a lineage every later member of which depends on the family has no member
+  after its end, whatever selection within had raised it to: a rise confined to the family ends
+  with it. In generations founded uniform, selection within at a step
+  needs transmission that raised or lowered the amount at some step before it. Read over
+  wholes each founded by one part, what transmission raised and lowered across a generation of
+  wholes is how far the next founders moved from their founder within the whole; where the
+  next founders carry their founder's value (sequestered), the mean founding value rises exactly
+  where selection among wholes goes for it. Witnesses: two rises on one body, the confined one
+  ending and the other still having a member after the body's parts end; foundings with and
+  without a line carrying the founder's value.
 * `Becoming.Drift` (L1): offspring sampled rather than listed. A next generation of two kinds
   sampled n times from listed offspring, p of the first kind and q of the second, each sampling
   a course of `Becoming.Typicality` weighed by the ways of drawing it: on average the sampled
@@ -789,8 +829,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   population of N, the final count summed over the histories is its start times the whole
   weight, the ends absorb, the histories still varied after k generations weigh at most r^k with
   r + 2 = N^N, and the histories fixing the first kind weigh, times N, within N · r^k of h times
-  the whole weight: drift ends variation and fixes each kind with its starting share h/N.
-  Witnesses: one draw falling back with weight two of five; two members over one generation.
+  the whole weight: drift ends variation and fixes each kind with its starting share h/N. With selection in the
+  draw, replacement one at a time (up with weight a, down with b): the potential with steps
+  b^j · a^(M − j) keeps its weighted value, so the fixation share tends to its value at the start
+  over its value at the top, the starting share where a = b and above it where b < a; the
+  favoured kind is lost with weight at least b^i. Witnesses: one draw falling back with weight two
+  of five; two members over one generation; two members fixing the favoured kind two of three.
 * `Becoming.Space` (L1): the whole and its parts, one structure for Ren's proposal (an AI
   reading). The space is every world, a world being relata read with one kind, their flow
   and their web. The laws stated with no premise hold of every world; in a finite world
@@ -981,6 +1025,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leaves no amount falling without end, as in whole numbers, while dyadic amounts (no least fall)
   and layered amounts (not Archimedean) fall without end; and under a law that merges nothing a part's narrowing is kept by the rest, the
   possibilities being kept apart, so a part reset at every step needs a whole no list holds.
+* `Becoming.WholeAmounts` (L1): what reading amounts in whole numbers carries. In any amounts with
+  an endless fall no reading into the whole numbers keeps every strict fall, so dyadic amounts have
+  none; the halving stock is new at every step with no gain, so `Web.rises_late_of_new` fails over
+  dense amounts; a return of strength one half does not double, so `carried_doubles_roundTrip`
+  needs whole strengths. The real forms (novelty by a least separation needs gain, the frequency
+  law for every positive real strength, damping) are in the periphery's `Representation`. A leaf.
 * `Becoming.InAmounts` (L1): the rest theorem over any amounts. A world's standings, takes and
   gives read in any amounts, its activity and what takes part its own: a family balanced (no
   amount made) and dissipated on (whatever gives back all it takes takes nothing) has a total
@@ -1010,7 +1060,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   function of the configuration, coming to rest or any arrow merges two configurations
   while merging none keeps change going and coming back. An arrow without end under exact
   conservation draws on relata beyond the family. In proportion, what is taken is at most
-  `q + 1` times what is dissipated.
+  `q + 1` times what is dissipated. A family's inflow, what each formation taking part gives it
+  beyond what it takes from it, is zero exactly where it gains nothing; in a balanced flow the
+  stock after a step with what the family loses is the stock before with what it gains, which is
+  at most the inflow, and over a stretch the stock rises by at most the stretch's inflow. Losing
+  exactly what is dissipated is the case of no inflow.
 * `Becoming.Units` (L1): the laws of one step at a finer unit, the test of the commitment
   to whole units. Arising needing an active giver holds at every resolution with no condition
   on the split; the law of one exchange holds with change read in the unit (read in raw counts
@@ -1025,6 +1079,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   activity premises hold of the extended flow exactly where they hold of the flow and it
   balances there. Adopted, the landed laws keep their statements, with balance a local
   condition read as the rest idle. The readings are the AI's, adopted with the re-founding.
+* `Becoming.Continuity` (L1): balance from conservation along a relation. Over finitely many
+  relata, with the relation a computable test and equality of relata decided, transfers that
+  move only between adjacent relata and balance a step exist exactly where the total is
+  conserved on every family the relation closes (`Continuity.balancing_iff`); the transfers
+  are computed one relatum at a time (`Continuity.route`). A law whose next level at a
+  relatum reads only it and the relata adjacent to it, conserving the total from every
+  configuration, conserves it on every closed family (`Continuity.conservedOn_of_law`), so
+  every run of it balances along the relation (`Continuity.balancesOn_of_law`). Swapping two
+  levels conserves the total and balances along the full relation, not along the empty one
+  (`Continuity.Teleport`). The transfers depend on the whole configuration: a local flux is
+  known for cellular automata on lattices (Hattori and Takesue 1991; Pivato 2002), not shown
+  here. A leaf: nothing builds on the transfers yet.
 * `Becoming.Continuation` (L1): what a continuing formation must count, with no ethical
   premise. Across a step something is conveyed from one condition to another when a
   formation taking part takes from the first and gives to the second, and a family is fed
@@ -1356,6 +1422,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   only, the union of the members' reach closures. Beyond it every formation registers and
   exchanges alike. The readings are the AI's, adopted on Ren's delegation of 15 October 2026.
 * `Becoming.TimedResponse` (L1): Response through exchanges in their order.
+* `Becoming.Latency` (L1): what a reader can come to know of an act, step by step. Routes
+  counted by coupling links (`TimedResponse.Linked`): where every source step is at `S` or later,
+  a potential route reaches a condition at step `t` only within `t - S` links, so under
+  TimedResponse's deadline premises no answer a reader gives through its couplings differs by `T`
+  unless a condition coupled into it lies within `T - S` links of the source. The region a reader
+  can represent from what it reads is drawn along coupling links and grows by at most one link a
+  step; in `Relay` the bound is attained at two links.
+* `Becoming.Centers` (L1): where what a formation does comes back to it. Two formations lie in
+  one loop where each can affect the other's continuation at some remove, an equivalence; a
+  formation's acts return where whatever it can affect can affect it, exactly where its loop is
+  closed under affecting, a property of the whole loop. Where its acts return, everything it acts
+  on lies within what it can represent, exactly so with coupling by threshold only. Loops only
+  merge as exchange grows, and in `Line` closing one link makes one returning loop; with finitely
+  many formations and reach decided, every formation's reach holds a formation whose acts return.
 * `Becoming.Counterfactual` (L1): the rest's exchange given by a law of what has stood, the
   counterfactual of an act is the course the law gives: fixed by the act, existing exactly where
   feasible. Where the law reads only what each formation registers, P65's response premise is a
@@ -1390,6 +1470,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   beyond in full. So every selection
   holding only where what couples in rises holds only on flows reaching beyond the coupling.
   `Diversion` is an instance, and its supplying flow, which gains, shows the premise binds.
+  Graded by the containing family's inflow the laws need no such premise: wherever what couples
+  in rises by more than that inflow, a formation raising it takes from beyond, the rise past the
+  inflow is drawn from beyond in full, and a selection rewarding such a rise favours reaching
+  beyond; the gainless laws are the case of no inflow, and the supplying flow, rising by exactly
+  its inflow, shows the bound exact.
 * `Becoming.DrawnBeyond` (L1): whose dependence a rise breaks, and the share that reaches beyond.
   In a balanced flow, where the family with the conditions beyond it gains nothing across a
   step, the two stocks after the step with what the whole loses are the two before, so the
@@ -1402,7 +1487,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   reaching beyond; over generations whose more offspring go only to raisers the share reaching
   beyond has no discordant pair, does not fall where reaching is transmitted and with exact
   transmission moves only upward. Closed over a stretch, the family rises by at most what the
-  beyond loses; a rise above all the whole held needs an open step. Witnesses on `Diversion`.
+  beyond loses; a rise above all the whole held needs an open step. Graded by the whole's
+  inflow: the beyond falls by at least the rise less the inflow, a rise above the slack and the
+  inflow breaks a dependence beyond and a selection rewarding it favours the break, a formation
+  raising the family by more than it adds to the whole takes from beyond, and over a stretch the
+  family rises by at most what the beyond lost and the stretch's inflow; the gainless laws are the
+  case of no inflow. Witnesses on `Diversion`.
 * `Becoming.JointDraw` (L1): which dependence breaks when several formations take at once, and
   restraint over any number of drawers. In a balanced flow a dependence breaks exactly where its
   need with all that is taken exceeds the level with all that is given; the highest needs break
@@ -1522,7 +1612,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   every revision reaching it; with no floor anywhere, drawing everything. Witnesses: under a gate restraint is revised away and every perfect profile breaks
   the dweller; under doubling a one-unit floor on the second keeps it. Drawing at once from
   portions is the same law: where each portion returns what its drawer leaves less than one
-  for one, every perfect profile and every revision draws everything.
+  for one, every perfect profile and every revision draws everything. Drawers in turn ranking
+  their position, what each draws counted once for each drawer against what all draw: at the
+  last step every best response draws everything; where what stands from nothing is at most what
+  stands from anything left and there are at least two drawers, every profile perfect for
+  position draws everything at every step, drawing everything is perfect, and the base stands at
+  what stands from nothing, breaking at the first step every dependence above it. With one drawer every profile is perfect; where something left stops
+  what stands next (`Stopping`), drawing everything is not perfect, a drawer given something
+  keeping it to stop what the first drawer would draw next. Drawing at once, conversely, drawing
+  everything is perfect exactly where no portion returns more than one for one on what its
+  drawer alone leaves; where each returns less, in whole amounts a portion never rises with
+  what is left and no profile draws any drawer more, so restraint pays none; where the drain
+  is perfect and holding the level draws each more at every later step, holding draws each
+  more over a long horizon, and for a drawer given the whole drawing everything is not perfect where the whole
+  returns more than one for one.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
@@ -1559,6 +1662,35 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   difference has entered what it couples into. In `Clearing` what every pool holding the dweller
   separates goes unresponded outside the clearer's part; in `Loop` a response returns through the
   actor's coupling closure.
+* `Becoming.PoolCourse` (L1): how a pool's membership forms along a run, and what it can come
+  to couple into. A member that has coupled two histories apart keeps the pool apart while it
+  stays. A pool that admits its next members through its own pooled coupling has the same
+  members under two histories up to and including the first step it couples them apart, and the
+  pool along either history separates them there; it never couples them apart exactly when the
+  pool along the other never does, and then every selection through it selects them alike. So a
+  pool recruiting through itself comes to couple into a loss only as its course without the loss
+  would; an admission by what no member couples into, or a member its course holds anyway, is
+  needed for more (`PoolCourse`).
+* `Becoming.Training` (L1): what a selection over act laws installs. Training is read as a
+  selection over a learner's candidate act laws through the courses each generates, a situation
+  fixing the others' law (a realization of their noise), the start and the execution. Two laws of
+  what has stood exchanging alike along the levels the first generates generate the same levels,
+  so candidates giving alike along the first's courses are trained alike by every training: a law
+  is installed only along its own courses, and an explored law only where it acts on an explored
+  course. Off them, within the laws reading through a lumping of histories (a representation; the
+  coupling and agreement are lumpings), it is installed exactly where the lumping cannot tell a
+  history from a course, and elsewhere a law of the class with the same courses takes any amount
+  and responds or not. Through a reward's couplings, candidates are trained alike exactly where
+  their levels are alike through them (by construction, as `Web.selects_alike_iff`), and a
+  difference in the act is installed only where it reaches what couples into the reward's
+  closure. Every settled candidate is a rest of every improving search, which under a bounded
+  reward rests within the bound; a local search rests exactly where no neighbour is rewarded more,
+  and with every candidate a neighbour exactly where the reward settles. A reading the same for
+  every candidate leaves the optimum at any weight, as a reading after the rest's end does where
+  the rest outruns the renewal. In `Training.Commons` restraint is settled exactly at weights of at
+  least one where the rest stays within the renewal and at no weight where it outruns it; at
+  weight one the start decides, and where the rest outruns it a neighbourhood can install
+  restraint that no weight installs.
 * `Becoming.Rejoining` (L1): where the courses with and without an act rejoin. A difference
   between the two courses opens or closes at a condition only across a step at which the two
   flows exchange with it differently, and where they rejoin, what they exchanged with it makes up
@@ -1895,8 +2027,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   closures, and the two agree exactly where the closures do (`selfAscribed_iff_withinSome`). Invariant
   grades give invariant standing, not conversely (`Partial`); a strictly increasing transform of
   levels of continuation ranks every widening higher, one strictly concave up to a bound decides
-  transfers C leaves mixed, and a threshold of sufficiency ties above it. The readings are the AI's
-  (D59, D60).
+  transfers C leaves mixed, and a threshold of sufficiency ties above it. Under a net weighting, which
+  may count an item against a course, a ranking of presentations puts a narrowing above its widening by
+  one item only where it does not read the pair as the sets or the item weighs at zero or below, and,
+  read right, exactly where it weighs below zero; a sign measured apart predicts it exactly where it is
+  the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).
+  Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
+  each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
+  exceeds both `p / q` and `q / p`. The readings are the AI's (D59, D60).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance
@@ -2420,6 +2558,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   failed by another; with the rest counted, embodiment is closure and no dormancy. Requirement read
   as necessary response over a relation leaving several exchanges open gives activity needing
   support on every run; read as possible response it does not.
+* `Becoming.OverExchange` (L1): the central laws over every relation of exchange, with the four
+  tying premises discharged by the reading. Every central law needing balance and the two activity
+  premises holds of every world with its rest counted; the comparisons of two courses hold of every
+  two worlds of one kind of relatum with their rests counted, under every law of exchange over the
+  relata with the rest; every central law needing activity needing support holds of every world
+  read off a relation of exchange (its flow a run of the relation along its standings, each
+  requirement a necessary response of its exchange), which every run of every relation and the
+  course of every law are, and a world whose relatum exchanges unsupported is not. The rest theorem
+  holds with balance by the reading and the census read off the exchange where a named family closes
+  each step; under balance the rest exchanges nothing, so the laws read the world's own relata. What
+  stays a hypothesis is a state of the law (dissipation, embodiment, bounded transmission,
+  enclosure, feasibility) or the law's own. Necessary response is the weakest reading of
+  requirement that does not read the current level of what is required and under which activity
+  needs support; a law with noise is a relation of exchange, so the forms hold path by path. A leaf:
+  it instantiates, and nothing builds on the instances.
 * `Becoming.PlaceTransitionNets` (L1): place/transition nets (Petri nets; reaction networks with
   whole-number counts), a formalism defined outside the theory by its own rules, read on the
   spine. The net is a law of exchange reading nothing, its course along a schedule is its flow,

@@ -74,8 +74,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Groups founded mixed (assortment below one, relatedness within groups below one), migration between lineages and inexact transmission are not stated; so the share of selection among groups as a function of assortment (Hamilton 1975) is not stated.",
-      "zh": "混合建立的组（聚合低于一、组内亲缘低于一）、世系间迁移与不精确的传递未陈述；故组间选择份额作为聚合程度之函数（Hamilton 1975）未陈述。",
+      "en": "Migration between lineages and inexact transmission are not stated, nor how assortment changes over generations; groups founded mixed, with additive returns to groupmates, are stated in record selection-with-returns-to-groupmates.",
+      "zh": "世系间迁移与不精确的传递未陈述，聚合在世代中如何变化亦未陈述；混合建立的组在可加的组员间回报下见记录 selection-with-returns-to-groupmates。",
       "kind": "scope"
     },
     {
@@ -111,8 +111,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T181337.294917Z）：Becoming.SelectionLevels 与 Becoming.GroupEnding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 281 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Groups founded mixed (assortment below one); migration between lineages; inexact transmission; an independent review.",
-    "zh": "混合建立的组（聚合低于一）；世系间迁移；不精确的传递；独立审查。"
+    "en": "How assortment changes over generations; migration between lineages; inexact transmission; an independent review.",
+    "zh": "聚合在世代中如何变化；世系间迁移；不精确的传递；独立审查。"
   },
   "correspondence": {
     "en": "Hamilton 1975 read the Price equation's among-group share through assortment (relatedness within groups): with groups formed by descent from uniform founders (clonal groups, the haystack limit) the within-group part vanishes and selection is among groups alone. Readings (the AI's): whether selection among groups accumulates or falls back is fixed by how the next groups are formed.",
@@ -198,6 +198,20 @@
         "en": "The mean's course over generations, chained here over lineages.",
         "zh": "均值在世代中的进程，此处沿世系连接。"
       }
+    },
+    {
+      "id": "selection-with-returns-to-groupmates",
+      "detail": {
+        "en": "Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.",
+        "zh": "聚合由零到一之间的每一情形：组员间回报的 Hamilton 规则，本记录是其聚合为一的一端。"
+      }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "detail": {
+        "en": "Within one whole founded by one part, a lineage confined to its conditions in excess has no member once they end, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it.",
+        "zh": "在由一个部分奠基的整体内，局限于过度之条件的世系在其终结后不再有成员；下一批奠基者携带原奠基者之值时，平均奠基值恰在整体间选择为它时上升。"
+      }
     }
   ],
   "references": [
@@ -282,7 +296,7 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "9241e078267cbec92455476c9e88a7b021c5139930134d9d168fa964b01fde2d"
+      "sha256": "f6cb9359ec15d601e97d1e4768fa197293d3092581c5202207eadcadc74baa55"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
@@ -375,18 +389,24 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4265685bbaa34f6a8747d0bd35729482fc8158b493569920c35dd5c0343e6753"
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "65757a112124544398d656391c164cebe7f3f2d3c48d3bdfdbcfa2c4260fb5fc"
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
+      "role": "receipt",
+      "sha256": "89035973bd7cbbc9087d59bd0c3988d80217507e29e482b8d5ff1f523376596b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -410,6 +430,14 @@
     {
       "en": "21 October 2026: added (EV11), groups formed by descent: lineages keep the values their groups were founded at, selection among them alone, and on the base the mean never falling back where the lower lineages end; study section 281.",
       "zh": "2026年10月21日：新增（EV11），由世系形成的组：世系保持其组建立时的值，选择只在世系之间，在基上较低世系终止时均值从不回落；研究第 281 节。"
+    },
+    {
+      "en": "22 October 2026, EV12: groups founded mixed, with returns to groupmates, stated (record selection-with-returns-to-groupmates, study section 353); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV12：混合建立的组在组员间回报下已陈述（记录 selection-with-returns-to-groupmates，研究第 353 节）；本记录关于聚合的“未表明”项与下一步已更新；定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.",
+      "zh": "2026年10月22日，CA1：与 confined-rise-within-a-whole 相关（研究第 366 节）；本记录的定律与陈述不变。"
     }
   ]
 }

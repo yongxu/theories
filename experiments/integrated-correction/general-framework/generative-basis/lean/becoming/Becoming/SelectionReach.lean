@@ -30,6 +30,16 @@ finishing". No premise enters beyond what each theorem names.
   condition no member of the group couples into (`Flow.favours_reaching_beyond`). Raising an
   observed family's stock is itself a selection through the observer's coupling
   (`Web.raises_selectsThrough`).
+* **Graded by the inflow.** A family's inflow across a step (`Flow.inflow`: what each formation
+  taking part gives it beyond what it takes from it) is zero exactly where it gains nothing. Without
+  that premise, where the family's stock rises by more than the containing family's inflow, a
+  formation taking part gives it more than it takes from it and takes from beyond
+  (`Flow.Balances.rise_draws_beyond_inflow`, `Flow.Balances.rise_takes_beyond_inflow`); the rise past
+  the inflow is drawn from beyond in full (`Flow.Balances.rise_le_inflow_beyond`); and every
+  selection holding only where the family rises past the inflow favours reaching beyond
+  (`Flow.favours_reaching_beyond_inflow`). The gainless laws above are their case of no inflow. The
+  bound is exact: the supplying flow raises the store by exactly its inflow, taking nothing
+  (`Diversion.supplying_rises_by_inflow`).
 * **The premise binds.** `Diversion` is an instance: its diverting flow gains nothing on the source
   and the store, so the rise of the store has the taker taking from the source, which it does not
   couple into (`Diversion.draws_beyond`, derived from the general law). Its supplying flow raises
@@ -43,8 +53,9 @@ favour is structural: it holds for every such selection and every gainless flow,
 intent of the selected. It does not say that drawing from beyond is wrong, or that any formation
 there is harmed: what is drawn may be replenished.
 
-What is not derived: that the flow gains nothing (a hypothesis wherever it enters); that the
-family lists everything coupled into (a hypothesis of `Flow.favours_reaching_beyond`); how much more
+What is not derived: that the flow gains nothing, or how much its inflow is (a hypothesis wherever
+it enters; graded by the inflow the laws hold whatever it is, and say only what a rise past it
+draws); that the family lists everything coupled into (a hypothesis of `Flow.favours_reaching_beyond`); how much more
 than the rise is drawn beyond, which dissipation would add; whether what is drawn beyond is depended
 on. The representation commits to discrete steps and natural
 amounts. No ethical predicate, ranking or axiom occurs.
@@ -90,55 +101,117 @@ theorem Balances.gives_more_of_rise (balances : L.Balances W)
       (Nat.lt_of_lt_of_le up
         (Nat.le_of_eq (total_swap (fun c f => L.give t f c) (L.present t) ds))))
 
+/-- **A rise past the inflow is drawn from beyond.** In a balanced flow, where a family without
+repetition rises across a step by more than the inflow of a family containing it, some formation
+taking part gives the risen family more than it takes from it by more than it gives the containing
+family beyond what it takes from it, and so takes from the containing family more than from the
+risen one. -/
+theorem Balances.rise_draws_beyond_inflow (balances : L.Balances W) (distinct : Distinct ds)
+    (sub : ∀ c, c ∈ ds → c ∈ es) (rises : W.stock ds t + L.inflow es t < W.stock ds (t + 1)) :
+    ∃ f, f ∈ L.present t ∧
+      excess (total es (L.give t f)) (total es (L.take t f)) <
+        excess (total ds (L.give t f)) (total ds (L.take t f)) ∧
+      total ds (L.take t f) < total ds (L.give t f) ∧
+      total ds (L.take t f) < total es (L.take t f) :=
+  have within : W.stock ds (t + 1) ≤ W.stock ds t + L.inflow ds t :=
+    Nat.le_trans (Nat.le_add_right _ (L.lost ds t)) (balances.stock_inflow ds t)
+  have more : L.inflow es t < L.inflow ds t :=
+    Nat.lt_of_add_lt_add_left (Nat.lt_of_lt_of_le rises within)
+  match exists_lt_of_total_lt (as := L.present t) more with
+  | ⟨f, present, lt⟩ =>
+    ⟨f, present, lt, excess_pos.mp (Nat.lt_of_le_of_lt (Nat.zero_le _) lt),
+     Nat.lt_of_not_le fun le => Nat.not_le_of_gt lt (excess_le_of_le_add
+       (Nat.le_trans (total_le_of_support distinct fun c mem _ => sub c mem)
+         (Nat.le_trans (le_add_excess _ _) (Nat.add_le_add_right le _))))⟩
+
 /-- **From nothing new, a rise is drawn from beyond.** In a balanced flow, where a family without
 repetition rises across a step and a family containing it gains nothing across the step, some
 formation taking part gives the risen family more than it takes from it, and takes from the
-containing family more than from the risen one. -/
+containing family more than from the risen one: the case of `Flow.Balances.rise_draws_beyond_inflow`
+with no inflow. -/
 theorem Balances.rise_draws_beyond (balances : L.Balances W) (distinct : Distinct ds)
     (sub : ∀ c, c ∈ ds → c ∈ es) (gainless : L.GainlessOn es t)
     (rises : W.stock ds t < W.stock ds (t + 1)) :
     ∃ f, f ∈ L.present t ∧ total ds (L.take t f) < total ds (L.give t f) ∧
       total ds (L.take t f) < total es (L.take t f) :=
-  match balances.gives_more_of_rise rises with
-  | ⟨f, present, more⟩ => ⟨f, present, more, Nat.lt_of_lt_of_le more
-      (Nat.le_trans (total_le_of_support distinct fun c mem _ => sub c mem)
-        (gainless f present))⟩
+  match balances.rise_draws_beyond_inflow distinct sub (Nat.lt_of_le_of_lt
+      (Nat.le_of_eq ((congrArg (W.stock ds t + ·) (gainlessOn_iff_inflow.mp gainless)).trans
+        (Nat.add_zero _))) rises) with
+  | ⟨f, present, _, more, beyond⟩ => ⟨f, present, more, beyond⟩
+
+/-- **The rise past the inflow is drawn from beyond, in full.** In a balanced flow, across every step,
+a family without repetition's stock after the step is at most its stock before, the inflow of a
+family containing it, and what the formations taking part take from the containing family beyond
+what they take from the family itself. -/
+theorem Balances.rise_le_inflow_beyond (balances : L.Balances W) (distinct : Distinct ds)
+    (sub : ∀ c, c ∈ ds → c ∈ es) :
+    W.stock ds (t + 1) ≤ W.stock ds t + L.inflow es t +
+      total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f) :=
+  have within : ∀ f, total ds (L.take t f) ≤ total es (L.take t f) := fun _ =>
+    total_le_of_support distinct fun c mem _ => sub c mem
+  have each : ∀ f, total ds (L.give t f) ≤ total ds (L.take t f) +
+      ((total es (L.take t f) - total ds (L.take t f)) +
+        excess (total es (L.give t f)) (total es (L.take t f))) := fun f =>
+    Nat.le_trans (total_le_of_support distinct fun c mem _ => sub c mem)
+      (Nat.le_trans (le_add_excess _ _)
+        (Nat.le_of_eq ((congrArg (· + excess (total es (L.give t f)) (total es (L.take t f)))
+          (add_sub_of_le (within f)).symm).trans (Nat.add_assoc _ _ _))))
+  have given : L.replenishment ds t ≤ L.uptake ds t + (L.inflow es t +
+      total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f)) :=
+    Nat.le_trans (Nat.le_of_eq (total_swap (fun c f => L.give t f c) (L.present t) ds))
+      (Nat.le_trans (total_le (L.present t) fun f _ => each f)
+        (Nat.le_of_eq ((total_add (fun f => total ds (L.take t f))
+            (fun f => (total es (L.take t f) - total ds (L.take t f)) +
+              excess (total es (L.give t f)) (total es (L.take t f))) (L.present t)).trans
+          ((congrArg (· + total (L.present t) fun f =>
+              (total es (L.take t f) - total ds (L.take t f)) +
+                excess (total es (L.give t f)) (total es (L.take t f)))
+            (total_swap (fun f c => L.take t f c) ds (L.present t))).trans
+           (congrArg (L.uptake ds t + ·) ((total_add (fun f => total es (L.take t f) - total ds (L.take t f))
+              (fun f => excess (total es (L.give t f)) (total es (L.take t f)))
+              (L.present t)).trans (Nat.add_comm _ _)))))))
+  le_of_add_le_add_right (L.uptake ds t) (Nat.le_trans
+    (Nat.le_of_eq (balances.over ds t))
+    (Nat.le_trans (Nat.add_le_add_left given _)
+      (Nat.le_of_eq ((congrArg (W.stock ds t + ·) (Nat.add_comm _ _)).trans
+        ((Nat.add_assoc _ _ _).symm.trans (congrArg (· + L.uptake ds t) (Nat.add_assoc _ _ _).symm))))))
 
 /-- **The rise is paid from beyond, in full.** In a balanced flow, where a family containing a
 family without repetition gains nothing across a step, the family's stock after the step is at most
 its stock before plus what the formations taking part take from the containing family beyond what
-they take from the family itself. -/
+they take from the family itself: the case of `Flow.Balances.rise_le_inflow_beyond` with no
+inflow. -/
 theorem Balances.rise_paid_from_beyond (balances : L.Balances W) (distinct : Distinct ds)
     (sub : ∀ c, c ∈ ds → c ∈ es) (gainless : L.GainlessOn es t) :
     W.stock ds (t + 1) ≤
       W.stock ds t + total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f) :=
-  have within : ∀ f, total ds (L.take t f) ≤ total es (L.take t f) := fun _ =>
-    total_le_of_support distinct fun c mem _ => sub c mem
-  have given : L.replenishment ds t ≤
-      L.uptake ds t + total (L.present t) fun f => total es (L.take t f) - total ds (L.take t f) :=
-    Nat.le_trans (Nat.le_of_eq (total_swap (fun c f => L.give t f c) (L.present t) ds))
-      (Nat.le_trans (total_le (L.present t) fun f present =>
-          Nat.le_trans (total_le_of_support distinct fun c mem _ => sub c mem)
-            (Nat.le_trans (gainless f present) (Nat.le_of_eq (add_sub_of_le (within f)).symm)))
-        (Nat.le_of_eq ((total_add (fun f => total ds (L.take t f))
-            (fun f => total es (L.take t f) - total ds (L.take t f)) (L.present t)).trans
-          (congrArg (· + _) (total_swap (fun f c => L.take t f c) ds (L.present t))))))
-  le_of_add_le_add_right (L.uptake ds t) (Nat.le_trans
-    (Nat.le_of_eq (balances.over ds t))
-    (Nat.le_trans (Nat.add_le_add_left given _)
-      (Nat.le_of_eq ((Nat.add_assoc _ _ _).symm.trans (Nat.add_right_comm _ _ _)))))
+  Nat.le_trans (balances.rise_le_inflow_beyond distinct sub)
+    (Nat.le_of_eq (congrArg (· + _) ((congrArg (W.stock ds t + ·)
+      (gainlessOn_iff_inflow.mp gainless)).trans (Nat.add_zero _))))
 
 /-- **It takes from a condition beyond.** With equality of conditions decided, and the containing
-family without repetition, that formation takes from a condition of the containing family outside
-the risen one. -/
+family without repetition, where the family rises past the containing family's inflow, the formation
+of `Flow.Balances.rise_draws_beyond_inflow` takes from a condition of the containing family outside the
+risen one. -/
+theorem Balances.rise_takes_beyond_inflow [DecidableEq C] (balances : L.Balances W)
+    (distinct : Distinct ds) (distinctE : Distinct es) (sub : ∀ c, c ∈ ds → c ∈ es)
+    (rises : W.stock ds t + L.inflow es t < W.stock ds (t + 1)) :
+    ∃ f c, f ∈ L.present t ∧ total ds (L.take t f) < total ds (L.give t f) ∧
+      c ∈ es ∧ ¬ c ∈ ds ∧ 0 < L.take t f c :=
+  match balances.rise_draws_beyond_inflow distinct sub rises with
+  | ⟨f, present, _, more, beyond⟩ => match exists_outside_of_total_lt distinctE beyond with
+    | ⟨c, mem, out, takes⟩ => ⟨f, c, present, more, mem, out, takes⟩
+
+/-- **It takes from a condition beyond**, where the containing family gains nothing: the case of no
+inflow. -/
 theorem Balances.rise_takes_beyond [DecidableEq C] (balances : L.Balances W)
     (distinct : Distinct ds) (distinctE : Distinct es) (sub : ∀ c, c ∈ ds → c ∈ es)
     (gainless : L.GainlessOn es t) (rises : W.stock ds t < W.stock ds (t + 1)) :
     ∃ f c, f ∈ L.present t ∧ total ds (L.take t f) < total ds (L.give t f) ∧
       c ∈ es ∧ ¬ c ∈ ds ∧ 0 < L.take t f c :=
-  match balances.rise_draws_beyond distinct sub gainless rises with
-  | ⟨f, present, more, beyond⟩ => match exists_outside_of_total_lt distinctE beyond with
-    | ⟨c, mem, out, takes⟩ => ⟨f, c, present, more, mem, out, takes⟩
+  balances.rise_takes_beyond_inflow distinct distinctE sub (Nat.lt_of_le_of_lt
+    (Nat.le_of_eq ((congrArg (W.stock ds t + ·) (gainlessOn_iff_inflow.mp gainless)).trans
+      (Nat.add_zero _))) rises)
 
 /-- Under nothing from nothing, wherever the step is enclosed around a family without repetition,
 a rise of its stock has a formation giving it more than it takes from it and taking from a
@@ -153,12 +226,31 @@ theorem Gainless.rise_takes_beyond [DecidableEq C] (balances : L.Balances W)
     match balances.rise_takes_beyond distinct distinctE sub (gainless _ t distinctE closed) rises with
     | ⟨f, c, present, more, _, out, takes⟩ => ⟨f, c, present, more, out, takes⟩
 
+/-- **Selection favours reaching beyond, past the inflow.** In a balanced flow, let a family without
+repetition list every condition a member of a group couples into, inside a family without repetition
+containing it. Then every selection that holds of the flow's levels only where that family's stock
+rises across a step by more than the containing family's inflow, and holds of them, holds only where,
+across the step, a formation taking part gives the family more than it takes from it and takes from
+a condition no member of the group couples into. -/
+theorem favours_reaching_beyond_inflow [DecidableEq C] {obs : F → C → Prop} {members : F → Prop}
+    {select : (Nat → C → Nat) → Prop} (balances : L.Balances W) (distinct : Distinct ds)
+    (distinctE : Distinct es) (sub : ∀ c, c ∈ ds → c ∈ es)
+    (listed : ∀ h c, members h → W.CoupledInto obs h c → c ∈ ds)
+    (rewards : select W.level → W.stock ds t + L.inflow es t < W.stock ds (t + 1))
+    (holds : select W.level) :
+    ∃ f c, f ∈ L.present t ∧ total ds (L.take t f) < total ds (L.give t f) ∧
+      0 < L.take t f c ∧ ∀ h, members h → ¬ W.CoupledInto obs h c :=
+  match balances.rise_takes_beyond_inflow distinct distinctE sub (rewards holds) with
+  | ⟨f, c, present, more, _, out, takes⟩ =>
+    ⟨f, c, present, more, takes, fun h member couples => out (listed h c member couples)⟩
+
 /-- **Selection favours reaching beyond.** In a balanced flow, let a family without repetition
 list every condition a member of a group couples into, and let a family containing it gain
 nothing across a step. Then every selection that holds of the flow's levels only where that
 family's stock rises across the step, and holds of them, holds only where, across the step, a
 formation taking part gives the family more than it takes from it and takes from a condition no
-member of the group couples into. -/
+member of the group couples into: the case of `Flow.favours_reaching_beyond_inflow` with no
+inflow. -/
 theorem favours_reaching_beyond [DecidableEq C] {obs : F → C → Prop} {members : F → Prop}
     {select : (Nat → C → Nat) → Prop} (balances : L.Balances W) (distinct : Distinct ds)
     (distinctE : Distinct es) (sub : ∀ c, c ∈ ds → c ∈ es) (gainless : L.GainlessOn es t)
@@ -166,9 +258,9 @@ theorem favours_reaching_beyond [DecidableEq C] {obs : F → C → Prop} {member
     (rewards : select W.level → W.stock ds t < W.stock ds (t + 1)) (holds : select W.level) :
     ∃ f c, f ∈ L.present t ∧ total ds (L.take t f) < total ds (L.give t f) ∧
       0 < L.take t f c ∧ ∀ h, members h → ¬ W.CoupledInto obs h c :=
-  match balances.rise_takes_beyond distinct distinctE sub gainless (rewards holds) with
-  | ⟨f, c, present, more, _, out, takes⟩ =>
-    ⟨f, c, present, more, takes, fun h member couples => out (listed h c member couples)⟩
+  favours_reaching_beyond_inflow balances distinct distinctE sub listed (fun held =>
+    Nat.lt_of_le_of_lt (Nat.le_of_eq ((congrArg (W.stock ds t + ·)
+      (gainlessOn_iff_inflow.mp gainless)).trans (Nat.add_zero _))) (rewards held)) holds
 
 end Flow
 
@@ -256,6 +348,17 @@ theorem supplying_raises_untaken :
       (web suppliedLevel).stock [Place.store] 0 < (web suppliedLevel).stock [Place.store] 1 ∧
       ∀ t f c, supplying.take t f c = 0 :=
   ⟨blind_to_source.1, Nat.lt_succ_self 0, fun _ _ _ => rfl⟩
+
+/-- **The inflow bound is exact.** Across the first step the supplying flow's inflow on the source
+and the store is one unit, the store rises by exactly that unit, and nothing is taken: a rise up to
+the inflow need not reach beyond, so `Flow.Balances.rise_draws_beyond_inflow` needs the rise to pass
+the inflow. -/
+theorem supplying_rises_by_inflow :
+    supplying.inflow [Place.source, Place.store] 0 = 1 ∧
+      (web suppliedLevel).stock [Place.store] 1 =
+        (web suppliedLevel).stock [Place.store] 0 + supplying.inflow [Place.source, Place.store] 0 ∧
+      ∀ t f c, supplying.take t f c = 0 :=
+  ⟨rfl, rfl, fun _ _ _ => rfl⟩
 
 end Diversion
 

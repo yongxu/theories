@@ -1,0 +1,482 @@
+{
+  "schema_version": 2,
+  "id": "confined-rise-within-a-whole",
+  "title": {
+    "en": "A confined rise within a whole, and what a founding carries",
+    "zh": "整体内局限的上升与一次奠基所携带者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T14:24:32+00:00",
+  "statement": {
+    "en": "A lineage confined to a whole's conditions in excess has no member once they end, whatever selection within raised; selection within a whole founded uniform needs variation arisen in it; where next founders carry their founder's value, selection among wholes decides the rise.",
+    "zh": "局限于过度之整体条件的世系在其终结后不再有成员，无论组内选择抬高了什么；由均匀者奠基的整体内的选择需要在其中产生的变异；下一批奠基者携带原奠基者之值时，由整体间选择决定是否上升。"
+  },
+  "laws": [
+    {
+      "en": "Where a family of conditions ran into excess under the coupled gate, every member of a later generation of descent is the offspring of a member that depended on no condition of the family at the gate's need, and a lineage every later member of which depends on the family has no member after its end.",
+      "zh": "一族条件在耦合门控下遭遇过度后，此后各代的每个成员都是某个在门控之需上不依存于该族之成员的后代；此后每个成员都依存于该族的世系在其终结后不再有成员。",
+      "declarations": [
+        "Becoming.Founding.Flow.survivors_independent",
+        "Becoming.Founding.Flow.confined_ends",
+        "Becoming.Founding.nil_of_none"
+      ]
+    },
+    {
+      "en": "A rise: a lineage marked by an amount that selection within goes for before the end, taking from the family during its excess, the family's renewal gated and in excess. Confined (every later member depending on the family), it has no member after the end, whatever selection within had raised it to.",
+      "zh": "上升：由组内选择在终结前所偏向之量标记、在该族过度期间汲取它、该族更新受门控且过度的世系。若局限（此后每个成员都依存于该族），无论组内选择曾把它抬到多高，终结后它不再有成员。",
+      "declarations": [
+        "Becoming.Founding.Flow.Rise",
+        "Becoming.Founding.Flow.ConfinedRise",
+        "Becoming.Founding.Flow.ConfinedRise.ends"
+      ]
+    },
+    {
+      "en": "In generations founded uniform, exact transmission keeps every later member at the founding value, so nothing is selected within; wherever offspring number is concordant or discordant with the amount at a step, transmission raised or lowered it at some step before.",
+      "zh": "由均匀者奠基的世代中，精确的传递使此后每个成员保持奠基值，故组内无选择；某步后代数与该量一致或不一致时，此前某步的传递升高或降低了它。",
+      "declarations": [
+        "Becoming.Founding.uniform_until",
+        "Becoming.Founding.none_within_until",
+        "Becoming.Founding.exact_of_none",
+        "Becoming.Founding.changed_or_none",
+        "Becoming.Founding.varied_before",
+        "Becoming.Founding.of_mem_single"
+      ]
+    },
+    {
+      "en": "Over wholes each founded by one part, transmission across a generation of wholes is how far the next founders moved from their founder within the whole; where they carry the founder's value, the mean founding value rises exactly where selection among wholes goes for it.",
+      "zh": "在每个整体由一个部分奠基的读法中，跨整体世代的传递即下一批奠基者在整体内离开其奠基者的距离；下一批奠基者携带原奠基者之值时，平均奠基值恰在整体间选择为它时上升。",
+      "declarations": [
+        "Becoming.Founding.Nested",
+        "Becoming.Founding.Nested.Founded",
+        "Becoming.Founding.Nested.Sequestered",
+        "Becoming.Founding.Nested.raised_carried",
+        "Becoming.Founding.Nested.lowered_carried",
+        "Becoming.Founding.Nested.raises_iff_carried",
+        "Becoming.Founding.Nested.exact_of_sequestered",
+        "Becoming.Founding.Nested.raises_iff_among",
+        "Becoming.Founding.Nested.varied_within"
+      ]
+    },
+    {
+      "en": "Witness Body: two lineages each meet every clause of a rise on one body; the confined one ends, the one whose descendant depends on a condition outside the body still has a member a generation after every part depending on the body has ended.",
+      "zh": "见证 Body：两个世系都在同一身体上满足上升的每一条件；局限者终结，后代依存于身体之外条件者在依存于身体的一切部分终结后一代仍有成员。",
+      "declarations": [
+        "Becoming.Founding.Body.balances",
+        "Becoming.Founding.Body.acting",
+        "Becoming.Founding.Body.dependent",
+        "Becoming.Founding.Body.descended",
+        "Becoming.Founding.Body.confined_marks",
+        "Becoming.Founding.Body.confined_rise",
+        "Becoming.Founding.Body.confined_ended",
+        "Becoming.Founding.Body.spread_marks",
+        "Becoming.Founding.Body.spread_rise",
+        "Becoming.Founding.Body.spread_unconfined",
+        "Becoming.Founding.Body.body_ended",
+        "Becoming.Founding.Body.spread_outlasts"
+      ]
+    },
+    {
+      "en": "Witness Germline: a variant not holding back arises within a whole and is selected for within it; with the next founder from the line carrying the founder's value the mean founding value rises from a half to one, with the founders from the variants it falls from a half to none although selection among wholes goes for holding back.",
+      "zh": "见证 Germline：整体内产生不保留的变体并在其中被选择；下一奠基者来自携带原奠基者之值的系时平均奠基值由一半升到一，来自变体时由一半降为零，尽管整体间选择偏向保留。",
+      "declarations": [
+        "Becoming.Founding.Germline.within_against",
+        "Becoming.Founding.Germline.sequestered_founded",
+        "Becoming.Founding.Germline.sequestered_sequestered",
+        "Becoming.Founding.Germline.sequestered_rises",
+        "Becoming.Founding.Germline.unsequestered_founded",
+        "Becoming.Founding.Germline.unsequestered_falls"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. On the base, balance, only active formations giving, activity needing support, descent, the coupled gate on the family and n steps of its excess from a stock below n + m; confinement as a hypothesis of the lineage law. For varied_before, a first generation uniform in the amount. For the founding laws, one founder per whole carrying the whole's value and next founders among its members (Founded), and for the among-wholes law, foundings carrying the founder's value (Sequestered).",
+      "zh": "不加公理。在基上，平衡、只有活跃的形成给予、活动需要支持、世系、该族上的耦合门控及其从低于 n + m 的存量起 n 步的过度；局限是世系定律的假设。varied_before 需第一代在该量上均匀。奠基定律需每个整体一个携带其值的奠基者、下一批奠基者是其成员（Founded），整体间定律另需奠基者携带奠基值（Sequestered）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How parts first come to live as one (the major transitions themselves): the laws hold of a whole once formed and of its foundings.",
+      "zh": "部分如何初次成为一体（重大转变本身）：定律只对已形成的整体及其奠基成立。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a given tumour meets the clauses of ConfinedRise, or that a given germ line is sequestered: empirical. Confinement, the excess and how founders are drawn are hypotheses wherever they enter.",
+      "zh": "某一肿瘤满足 ConfinedRise 的各条件，或某一生殖系是隔离的：属经验问题。局限、过度与奠基者如何抽取在出现处都是假设。",
+      "kind": "scope"
+    },
+    {
+      "en": "Wholes founded by several parts (colonial and aggregative routes), removal of parts by the whole's rule (policing in the literature), and a lineage founding a new whole elsewhere are not stated; the spreading witness has a member for one generation past the end.",
+      "zh": "由多个部分奠基的整体（群体与聚合途径）、整体之规则移除部分，以及在别处奠基新整体的世系未陈述；扩散见证在终结之后只有一代有成员。",
+      "kind": "scope"
+    },
+    {
+      "en": "Sequestered states an outcome (each next founder carries its founder's value), not a mechanism; germ lines do vary, and the rise's drawing clause says the lineage takes from the family during the excess, not that it causes it.",
+      "zh": "Sequestered 陈述的是结果（每个下一奠基者携带其奠基者之值），而非机制；生殖系确有变异；上升的汲取条件只说世系在过度期间汲取该族，并不说它造成过度。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a lineage ending with its whole is worse, or that sequestration is better: the counts read who leaves descendants; ranking goes through the comparison C.",
+      "zh": "世系随其整体终结更坏、隔离更好：计数只读出谁留下后代；排序经由比较 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+      "detail": {
+        "en": "Confinement is needed: in Body the spreading lineage is a rise on the same body (Body.spread_rise), its descendant depends on a condition outside the body, and it has a member after the body's parts end (Body.spread_unconfined, Body.spread_outlasts). Sequestration is needed for the among-wholes law: in Germline with the founders from the variants the mean founding value falls although selection among wholes goes for holding back (Germline.unsequestered_falls).",
+        "zh": "局限是必要的：Body 中扩散的世系是同一身体上的上升（Body.spread_rise），其后代依存于身体之外的条件，在身体的部分终结后仍有成员（Body.spread_unconfined、Body.spread_outlasts）。整体间定律需要隔离：Germline 中奠基者来自变体时，平均奠基值下降，尽管整体间选择偏向保留（Germline.unsequestered_falls）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T142108.117415Z): every declaration of Becoming.Founding has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 366; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T142108.117415Z）：Becoming.Founding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 366 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Wholes founded by several parts (with assortment below one); removal of parts by the whole's rule; how parts first come to live as one; a review by a person.",
+    "zh": "由多个部分奠基的整体（聚合低于一）；整体之规则移除部分；部分如何初次成为一体；人的审查。"
+  },
+  "correspondence": {
+    "en": "Buss 1987 and Michod 1999 (with Michod and Roze 2001) read the transitions in individuality through selection within and among organisms: a single-cell bottleneck (Grosberg and Strathmann 1998) reduces variation within, a sequestered germ line reduces the within-organism change in what founding transmits, and within-organism selection enters the organism level as transmission bias (the transmission term of Price 1970, 1972). Aktipis et al. 2015 read cancer as cheating on the foundations of multicellular cooperation; Metzger et al. 2015 report transmissible cancers. Readings (the AI's): ConfinedRise as cancer, Sequestered as a germ line where it does not vary, Founded with one founder as the bottleneck, a rise whose confinement fails as a transmissible cancer.",
+    "zh": "Buss 1987 与 Michod 1999（及 Michod 与 Roze 2001）经由生物体内与生物体间的选择读个体性转变：单细胞瓶颈（Grosberg 与 Strathmann 1998）减少体内变异，隔离的生殖系减少奠基所传递者中的体内变化，体内选择以传递偏差（Price 1970、1972 的传递项）进入生物体层面。Aktipis 等 2015 把癌读作对多细胞合作之基础的欺骗；Metzger 等 2015 报告可传播的癌。读法（AI 的）：ConfinedRise 读作癌，Sequestered 读作不变异时的生殖系，单个奠基者的 Founded 读作瓶颈，局限失败的上升读作可传播的癌。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+  "aliases": [
+    "confined rise",
+    "rise within a whole",
+    "cancer",
+    "germ line",
+    "sequestration",
+    "single-cell bottleneck",
+    "transmissible cancer",
+    "turning back",
+    "局限的上升",
+    "癌",
+    "生殖系",
+    "隔离",
+    "单细胞瓶颈",
+    "Becoming.Founding.Flow.confined_ends",
+    "Becoming.Founding.Nested.raises_iff_among",
+    "Becoming.Founding.varied_before"
+  ],
+  "dependencies": [
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The base laws read family_childless by lineage: a member depending on a condition of a family whose gated renewal ran into excess leaves no descendant.",
+        "zh": "基上的定律按世系读 family_childless：依存于其门控更新遭遇过度之族中某条件的成员不留后代。"
+      },
+      "interface": {
+        "output": {
+          "en": "Members depending on a family in excess leave no descendant.",
+          "zh": "依存于过度之族的成员不留后代。"
+        },
+        "input": {
+          "en": "A confined lineage ending, and survivors independent of the family.",
+          "zh": "局限世系的终结，以及不依存于该族的幸存者。"
+        },
+        "conditions": {
+          "en": "Balance, acting, dependence, the coupled gate, the excess, descent.",
+          "zh": "平衡、行动、依存、耦合门控、过度、世系。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+      }
+    },
+    {
+      "id": "groups-formed-by-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The lineage of a group and its staying within the generations are those of groups formed by descent.",
+        "zh": "组的世系及其留在各代之内，即由世系形成之组的世系。"
+      },
+      "interface": {
+        "output": {
+          "en": "Lineages over listed generations.",
+          "zh": "列出世代上的世系。"
+        },
+        "input": {
+          "en": "The lineage a confined rise is read on.",
+          "zh": "局限的上升所读的世系。"
+        },
+        "conditions": {
+          "en": "A group of the first generation.",
+          "zh": "第一代中的一个组。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The founding laws are the selection term with exact transmission one level up (raises_exact_iff), and varied_before reads its transmission term.",
+        "zh": "奠基定律即高一层的、传递精确的选择项（raises_exact_iff），varied_before 读其传递项。"
+      },
+      "interface": {
+        "output": {
+          "en": "The mean's course over generations with its transmission term.",
+          "zh": "均值在世代中的进程及其传递项。"
+        },
+        "input": {
+          "en": "What a founding carries; variation since the founding.",
+          "zh": "一次奠基所携带者；奠基以来的变异。"
+        },
+        "conditions": {
+          "en": "Founded, and Sequestered for the among-wholes law.",
+          "zh": "Founded，整体间定律另需 Sequestered。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "groups-formed-by-descent",
+      "detail": {
+        "en": "Groups formed by descent from uniform founders: the bottleneck's other half, among groups.",
+        "zh": "由均匀奠基者的世系形成的组：瓶颈在组间的另一半。"
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "Groups on one family of conditions ending together; here a lineage within a whole read on its family.",
+        "zh": "在同一族条件上的组一同终结；此处读整体内依于其族的世系。"
+      }
+    },
+    {
+      "id": "whole-persists-through-generation",
+      "detail": {
+        "en": "A whole goes on only as parts keep arising; here what its parts' lineages can carry past it.",
+        "zh": "整体只在部分不断生起时延续；此处是其部分的世系能越过它携带什么。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Founding.Body.Relatum",
+        "Becoming.Founding.Body.acting",
+        "Becoming.Founding.Body.atBody",
+        "Becoming.Founding.Body.atOutside",
+        "Becoming.Founding.Body.balances",
+        "Becoming.Founding.Body.beyond",
+        "Becoming.Founding.Body.body_ended",
+        "Becoming.Founding.Body.confined_ended",
+        "Becoming.Founding.Body.confined_late",
+        "Becoming.Founding.Body.confined_marks",
+        "Becoming.Founding.Body.confined_rise",
+        "Becoming.Founding.Body.dependent",
+        "Becoming.Founding.Body.descended",
+        "Becoming.Founding.Body.excess",
+        "Becoming.Founding.Body.family_late",
+        "Becoming.Founding.Body.flow",
+        "Becoming.Founding.Body.founder",
+        "Becoming.Founding.Body.gated",
+        "Becoming.Founding.Body.generationsBy",
+        "Becoming.Founding.Body.give_body",
+        "Becoming.Founding.Body.give₀",
+        "Becoming.Founding.Body.give₁",
+        "Becoming.Founding.Body.kids",
+        "Becoming.Founding.Body.kids₀",
+        "Becoming.Founding.Body.kids₁",
+        "Becoming.Founding.Body.level",
+        "Becoming.Founding.Body.need",
+        "Becoming.Founding.Body.ofBody",
+        "Becoming.Founding.Body.ofConfined",
+        "Becoming.Founding.Body.ofSpread",
+        "Becoming.Founding.Body.present",
+        "Becoming.Founding.Body.spread_marks",
+        "Becoming.Founding.Body.spread_outlasts",
+        "Becoming.Founding.Body.spread_rise",
+        "Becoming.Founding.Body.spread_unconfined",
+        "Becoming.Founding.Body.start",
+        "Becoming.Founding.Body.toConfined₁",
+        "Becoming.Founding.Body.toSpread₁",
+        "Becoming.Founding.Body.toSpread₂",
+        "Becoming.Founding.Body.web",
+        "Becoming.Founding.Flow.ConfinedRise",
+        "Becoming.Founding.Flow.ConfinedRise.ends",
+        "Becoming.Founding.Flow.Rise",
+        "Becoming.Founding.Flow.confined_ends",
+        "Becoming.Founding.Flow.survivors_independent",
+        "Becoming.Founding.Germline.Part",
+        "Becoming.Founding.Germline.family_two",
+        "Becoming.Founding.Germline.founded",
+        "Becoming.Founding.Germline.foundings",
+        "Becoming.Founding.Germline.holds",
+        "Becoming.Founding.Germline.nested",
+        "Becoming.Founding.Germline.sequestered",
+        "Becoming.Founding.Germline.sequestered_founded",
+        "Becoming.Founding.Germline.sequestered_rises",
+        "Becoming.Founding.Germline.sequestered_sequestered",
+        "Becoming.Founding.Germline.soma",
+        "Becoming.Founding.Germline.unsequestered",
+        "Becoming.Founding.Germline.unsequestered_falls",
+        "Becoming.Founding.Germline.unsequestered_founded",
+        "Becoming.Founding.Germline.within",
+        "Becoming.Founding.Germline.within_against",
+        "Becoming.Founding.Nested",
+        "Becoming.Founding.Nested.Founded",
+        "Becoming.Founding.Nested.Sequestered",
+        "Becoming.Founding.Nested.exact_of_sequestered",
+        "Becoming.Founding.Nested.lowered_carried",
+        "Becoming.Founding.Nested.raised_carried",
+        "Becoming.Founding.Nested.raises_iff_among",
+        "Becoming.Founding.Nested.raises_iff_carried",
+        "Becoming.Founding.Nested.varied_within",
+        "Becoming.Founding.changed_or_none",
+        "Becoming.Founding.exact_of_none",
+        "Becoming.Founding.nil_of_none",
+        "Becoming.Founding.none_within_until",
+        "Becoming.Founding.of_mem_single",
+        "Becoming.Founding.uniform_until",
+        "Becoming.Founding.varied_before"
+      ],
+      "sha256": "17b5ac1fe3bde2b9ba32b578f03df84bf280849d61946812bb9fca687961f390"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GroupEnding.Flow.family_childless"
+      ],
+      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionLevels.lineage",
+        "Becoming.SelectionLevels.lineage_within",
+        "Becoming.SelectionLevels.total_eq_of_mem"
+      ],
+      "sha256": "f6cb9359ec15d601e97d1e4768fa197293d3092581c5202207eadcadc74baa55"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionTerm.Exact",
+        "Becoming.SelectionTerm.Generations.family",
+        "Becoming.SelectionTerm.Generations.raises_exact_iff",
+        "Becoming.SelectionTerm.Flow.Descended",
+        "Becoming.SelectionTerm.concord_alike",
+        "Becoming.SelectionTerm.discord_alike"
+      ],
+      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reproduction.le_of_excess_zero"
+      ],
+      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.family_excess_ends"
+      ],
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "role": "receipt",
+      "sha256": "34682323d41b5c3da8f21e96bba0b49a96a7b4cfe7fd2f218f9e70c7765a740a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "2e6bde864d2b3f6a62ae2ddbaaae2829078a1bc2b656e33fe294c491612ee30e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e10d37b78bdeabc14e7157e21b32579930f8a6085899e9abc5fbe2147d23ae3a"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "0fe652dc01bca8df9bbe3a593e4043da5b05a817dd8a2b2bc77d693418036daf"
+    },
+    {
+      "path": "theories/becoming/OPENING.md",
+      "role": "statement",
+      "sha256": "88e31087d92cebe63f0d3d9e5ecd8cc9f8ad4586c7162f82fa66a70b4912be7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Founding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (CA1), what cancer is and what keeps a part from turning back: a confined rise has no member once the conditions it draws on end, selection within a whole founded uniform needs variation arisen in it, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it; an independent review applied; OPENING [^transitions] restated; study section 366.",
+      "zh": "2026年10月22日：新增（CA1），癌是什么以及什么使部分不回头：局限的上升在其所汲取的条件终结后不再有成员，由均匀者奠基的整体内的选择需要在其中产生的变异，下一批奠基者携带原奠基者之值时，平均奠基值恰在整体间选择为它时上升；已采纳独立审查；OPENING [^transitions] 重述；研究第 366 节。"
+    }
+  ]
+}

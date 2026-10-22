@@ -236,7 +236,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "ad7dc6d953a54b01daab08f39291c345cbd406c9bed2d4974d9c82e9b4dca967"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
@@ -278,6 +278,10 @@
     {
       "en": "22 October 2026, UM: superseded by drawers-in-turn, one model of drawers in turn on one law of best response, of which these laws are cases; the Lean they cited was replaced, and is kept as provenance in the receipt copy experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean (study section 335). The claim is unchanged.",
       "zh": "2026年10月22日，UM：被 drawers-in-turn 取代（依一条最优回应之律的轮流抽取者的一个模型，本记录之律为其情形）；所引 Lean 已被替换，作为来源保存在回执副本 experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean 中（研究第 335 节）。主张不变。"
+    },
+    {
+      "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
     }
   ],
   "superseded_by": "drawers-in-turn"

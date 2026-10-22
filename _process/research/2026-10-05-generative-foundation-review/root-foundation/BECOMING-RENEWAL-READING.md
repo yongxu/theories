@@ -15725,3 +15725,733 @@ Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'
 
 **Self-review.** First, the stop rule was met by 0.006 on variance; a slightly different generator could have stopped the test, and the frozen rule was kept. Second, the index is the mean of log catches over whatever core hauls a year had (15 in 2020), not the survey's standardized index; its 0.935 with Cury et al.'s series bounds the difference before 2008, not after. Third, scope by mechanism leaves open a large share of the year class taken during the survey itself, which would enter the level as a same-year effect and could add variance the covariates do not match.
 
+## 353. Groups founded mixed, and the rule of returns to groupmates (EV12)
+
+```text
+Result(s): Becoming.SelectionLevels (78 theorems (55 before), 31 declarations added (23 theorems), none removed) states selection with returns to groupmates. For any family read with a
+       weight, an amount and a reading o, where each member's weight with k per unit of its own amount is a base with
+       b per unit of o, the weight's concordance with the amount, with k times the amount's spread (its concordance
+       with itself) and b times o's discordance with it, is the weight's discordance with b times o's concordance
+       (returns_balance, from covariation and Reproduction.variation with the relation carried to the totals,
+       returns_total, returns_weighted); so the whole selects for the amount exactly where b times o's covariation
+       with it exceeds k times its spread (rises_iff_reading). For a family listed as groups of m members, where each
+       unit a member keeps gives b to every member of its group, its own included, and takes c from the keeper: the
+       spread over the whole is k times the groups' own spreads with the spread among them (spread_levels); within
+       the groups the offspring number goes against the amount by b + c times their spreads (within_returns), so
+       selection within goes against keeping wherever a group varies (within_against); among groups read by their
+       totals it goes for keeping exactly where b + c falls short of m b (among_returns, among_for_iff); and the
+       whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread
+       among groups (rises_iff_returns). Groups uniform in the amount (assortment one) select for it, where they
+       differ, exactly where b (m - 1) exceeds c (rises_iff_returns_of_uniform); groups alike in total (assortment
+       none) never do (not_rises_of_alike); over listed generations with exact transmission the mean rises across a
+       step exactly so (rises_exact_iff_returns). Witnesses: Founding.either_verdict (the same returns, keepers
+       together selected for, keepers apart selected against); Partly.below_one (two thirds of the spread among
+       pairs; the rule met at assortment one, b (m - 1) = 3 > 2 = c, and yet the whole selects against keeping, 45
+       against 36). Record selection-with-returns-to-groupmates.
+Delta: the evolution chapter's next connection 1 asked when selection within groups against keeping a condition loses
+       to selection among groups for it; for groups founded mixed (assortment below one) with additive returns, the
+       answer is exact: where m b times the share of the spread among groups exceeds b + c. Record
+       groups-formed-by-descent stated the complete-assortment end and left the share as a function of assortment
+       unstated. No new module: the laws lie in Becoming.SelectionLevels (board rule 9), which now imports
+       Becoming.Reproduction for the amount's spread (variation, discord_self).
+Premises: offspring numbers depending on own and groupmates' amounts additively (each unit kept giving b to every
+       member of its group, own included, and taking c from the keeper; no synergy), groups of equal size; for the
+       step law, exact transmission. Natural numbers: the premise is written w p + (b + c) a p = B + b A_g, nothing
+       subtracted.
+Evidence: core receipt 20261022T122330.896153Z (passed; Becoming.SelectionLevels every axiom report empty; core 285 modules and 12,570 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,197 reused); the
+       connectivity rerun (740 of 13,330 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: additive returns only: synergy (returns depending on the product of own and groupmates' amounts) is not
+       stated, nor groups of unequal size for the returns law, nor how assortment arises (how groups are founded is
+       given). The share of the spread among groups is read off the given grouping at the step; how it changes over
+       generations (selection within re-entering at each step, migration, inexact transmission) is not stated.
+       Natural-number amounts and returns, finite lists, discrete generations.
+Output → input: EV11 gave the complete-assortment end: groups formed by descent from uniform groups, selection among
+       lineages alone. Here every assortment between: within goes against keeping by b + c times the spread within,
+       among goes for it by m b - (b + c) times the spread among, so the verdict is read off how the spread divides,
+       the multilevel division of Price's equation meeting Hamilton's rule in one balance. The same returns give
+       either verdict by how the groups are founded, so the collective concern of chapter section 7 turns on how
+       the groups whose members give to each other are formed. Next: drift with selection in one draw; mutation
+       (transmission not exact); several carried amounts and Fisher's identity.
+```
+
+The kit is [`development/ev12-returns/`](development/ev12-returns/): the module as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev12.txt`), record (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **One balance from three covariations.** With `ew`, `ea`, `eo` the covariations of weight, amount and reading with the amount, `ew + k·ea + b·(eo reversed)` sums to `n·W_w + k·n·W_a + b·T_o·T_a + (D_w + b·C_o) = T_w·T_a + k·T_a² + b·n·W_o + (C_w + k·S + b·D_o)`. The premise carried to the totals gives `n·W_w + k·n·W_a = n·B·T_a + b·n·W_o` and `T_w·T_a + k·T_a² = n·B·T_a + b·T_o·T_a`, so both sides open with the same three terms and cancel to the balance.
+- **Within.** Read on one group, the reading is the group's total, uniform there: nothing concordant or discordant, so `C_g(w) + (b + c)·S_g = D_g(w)`.
+- **Among.** A group's totals satisfy `W_g + (b + c)·A_g = m·B + m·b·A_g`; the balance read on the groups, with `D(A, A) = 0`, gives `C_A(w) + (b + c)·S_A = D_A(w) + m·b·S_A`.
+- **Whole.** `levels` with the two laws: `k·C_W(w) + C_A(w) + (b + c)·(k·S_W + S_A) = k·D_W(w) + D_A(w) + m·b·S_A`, read through `lt_iff_of_balance`.
+- **Reading over the rationals.** With N members, `S = N²·V_T` and `S_A = N²·V_A` (the variance of group means, member-weighted), so the rule is `m·b·ρ > b + c` with `ρ = V_A / V_T`; with the regression of groupmates' mean amount on own `r = (m·ρ − 1)/(m − 1)`, it is `r·b·(m − 1) > c`.
+
+**Self-review.** The rule is known: Hamilton (1964) for kin, Hamilton (1975) reading the Price equation's among-group share through relatedness within groups, and the equivalence of the multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006; Marshall 2015), all from memory and not reread. What is stated here is that equivalence in counting form with nothing subtracted and no regression coefficient formed: one balance whose within and among parts are the multilevel division of the selection term, and whose whole is the rule. The witnesses show the content beyond the complete-assortment end: the same returns give either verdict by how the groups are founded, and assortment below one can lose where assortment one would win. Synergy, unequal sizes and the change of assortment over generations stay open; the rule does not say how groups are founded.
+
+## 354. Balance from conservation along a relation (FL2)
+
+```text
+Result(s): balance-from-conservation-along-a-relation (new); reused: Flow.Balances, Flow.BalancesOn, Prelude total
+           and Distinct, Dissipation.total_eq_zero; related: balance-from-the-first-law (§348), premises-read-off-the-
+           exchange
+Delta: FL1 grounded balance in the first law with locality, but stated locality as a property of transfers
+       (LocalBalance assumes each exchange carries a definite transfer). Here the transfers are derived. Over finitely
+       many relata, with the relation a computable test: transfers moving only between adjacent relata that balance a
+       step exist exactly where the total is conserved on every family the relation closes (Continuity.balancing_iff),
+       the transfers computed one relatum at a time (Continuity.route, Continuity.route_balancing); a law whose next
+       level at a relatum reads only it and the relata adjacent to it and that conserves the total from every
+       configuration conserves it on every closed family (Continuity.conservedOn_of_law), so each of its runs
+       balances along the relation (Continuity.balancesOn_of_law). Teleport: swapping two levels conserves the total
+       and balances along the full relation, not along the empty one (Continuity.Teleport.no_transfers_apart,
+       Continuity.Teleport.balanced_together).
+Supplied premises / correspondence: finitely many relata listed without repetition; equality of relata decided and
+       the relation a Bool test; levels whole numbers; for the law, conservation from every configuration, the one with
+       nothing anywhere included
+Evidence: core module Becoming.Continuity, 43 theorems in 64 declarations, empty axiom reports; core
+          receipt `20261022T124646.497747Z` (core 286 modules and 12,613 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,201 reused); connectivity: 745 of 13,373 apart, 5 of the module's 43; its two apart roots, the Teleport witnesses, registered (model witness); unregistered roots of other landings, not FL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival
+Boundary: the transfers depend on the whole configuration (no local flux); a transfer may exceed what stands on its
+          source; infinitely many relata; a relation that is not decided
+Integration: balance-from-the-first-law related; chapter premise card C, §8.7's balance bullet, the relation to known
+          results and §9 (EN, ZH); significance review, continuity check
+```
+
+The question left by §348 was whether balance could be more than a premise about transfers. FL1 derived it from the first law with locality, but `LocalBalance` already assumes that what leaves a store is carried by one transfer per exchange. Given only the levels before and after a step and a relation among the relata, are there transfers along the relation that account for every change, and when?
+
+**The answer is conservation on every closed family.** Read a family as a test on the relata. A family is closed when no two adjacent relata lie one inside it and one outside. If transfers move only between adjacent relata and balance the step, the total on a closed family changes only by what crosses its boundary, and nothing does: `conserved_of_balancing`, by swapping the double sum of what moves inside the family. Conversely, where every closed family keeps its total, `route` builds the transfers. It removes the first listed relatum `x`, exchanges `x`'s change with the first relatum `y` adjacent to it (`y` sends `next x - prev x` to `x`, `x` sends `prev x - next x` to `y`, one of them zero), and routes the rest with two neighbours of `x` taken as adjacent; a move between two relata that were adjacent only through `x` is passed through `x`, which receives and sends the same amount. The family condition passes to the smaller problem because a family closed once `x` is removed, extended to `x` by its value at `y`, is closed before (`conservedOn_rest`); where `x` has no neighbour, `{x}` is itself closed and keeps its level (`kept_alone`). The construction is a function, not an existence claim, so it gives transfers at every step of a run with no choice principle, and every declaration has an empty axiom report.
+
+**Where locality enters.** The equivalence uses no property of a law, only of a step. Locality enters through `conservedOn_of_law`: if the law's next level at a relatum reads only that relatum and its neighbours, and the law conserves the total from every configuration, then on a closed family it conserves the total too. From the configuration with nothing anywhere, conservation gives nothing anywhere; from the part of any configuration on a closed family, the law gives on the family what it gives from the whole (the family's relata read only the family) and outside it what it gives from nothing. So a local law that conserves its total balances every run along the relation it reads. FL1's Teleport fails exactly here: along the empty relation the family of `true` alone is closed and the swap moves its unit out, so no transfers along that relation balance it; along the relation the swap actually reads, they do.
+
+**Literature.** A flow on a finite graph with a prescribed divergence exists exactly where the divergence sums to zero on each connected component; that is the network-flow fact behind `balancing_iff`, here stated with the spine's families and computed. For cellular automata on lattices more is known: a globally conserved additive quantity has a flux that depends only on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and in two (Kari and Taati 2008). Neither the locality of the flux nor a displacement bounded by occupancy is shown here; `route` depends on the whole configuration, and a move may exceed what stands on its source within the step.
+
+**What it does not do.** It does not make balance a theorem of every dynamics: conservation on closed families is the content, and it fails where a law creates or destroys the quantity. It covers finitely many relata with a decided relation; an infinite world needs totals that the core does not state, and the local flux of the lattice literature is the next step.
+
+## 355. A rise past the inflow, and a race for position (IF1, RP1)
+
+Asked on 22 October 2026 how far README note 21 (OPENING `[^race]`) can reach and where it stops. The note set two results side by side: a selection rewarding a rise of what a group couples into favours a formation that takes from beyond, where the containing family gains nothing (`Flow.favours_reaching_beyond`), and a race of position cannot raise everyone (`RelativePosition.not_all_rise`). Two limits were reachable: the premise that the containing family gains nothing fails for an open whole, and no law joined a race for position to drawing down.
+
+**IF1: a rise past the inflow is drawn from beyond.**
+
+```text
+Result(s): new a-rise-past-the-inflow-is-drawn-from-beyond; reuses raising-what-couples-in-draws-from-beyond, what-a-rise-draws-from-beyond, entropy-history-and-record
+Delta: the gainless premise replaced by a quantity. A family's inflow across a step (Flow.inflow: what each formation taking part gives it beyond what it takes from it, summed) is zero exactly where the family gains nothing (Flow.gainlessOn_iff_inflow). One exact law with balance alone: the stock after a step with what the family loses is the stock before with what it gains (Flow.Balances.stock_gained), at most the inflow (Flow.gained_le_inflow, Flow.Balances.stock_inflow; over a stretch Flow.Balances.stock_over_inflow). Every gainless law of SelectionReach and DrawnBeyond is restated past the inflow (rise_draws_beyond_inflow, rise_le_inflow_beyond, rise_takes_beyond_inflow, favours_reaching_beyond_inflow; beyond_falls_inflow, rise_lowers_beyond_inflow, breaks_beyond_inflow, rise_breaks_beyond_inflow, favours_breaking_beyond_inflow, reaches_inflow, rise_bounded_by_beyond_inflow), and the gainless laws are derived from them as the case of no inflow (board rule 9): stock_lost, GainlessOn.replenishment_le, rise_draws_beyond, rise_paid_from_beyond, rise_takes_beyond, favours_reaching_beyond, rise_lowers_beyond, breaks_beyond, favours_breaking_beyond, RaisesOn.reaches, stock_not_rises_over.
+Supplied premises / correspondence: balance; for the selection forms, the family listing every condition the group couples into. Reading an actual whole's inflow (sunlight into a biosphere, imports into a region) is a correspondence, not a law of the spine.
+Evidence: Becoming.Entropy, Becoming.SelectionReach, Becoming.DrawnBeyond; core receipt 20261022T130149.371173Z, empty axiom reports.
+Boundary: the bound is exact: Diversion's supplying flow raises the store by exactly its inflow, taking nothing (Diversion.supplying_rises_by_inflow). The formation found is some formation taking part, not the one a selection rewards: a selection reading only the rise cannot tell who drew it.
+Integration: OPENING [^race] restated past the inflow; chapter §3.4 rows; the two gainless records now name the graded record.
+```
+
+The inflow is a sum over formations of each one's own excess on the containing family, not the family's net gain: a formation that gives the family beyond what it takes from it adds to the inflow even where another takes the same back. So the hypothesis of the main law, that the family rises by more than the containing family's inflow, is the strongest form available from the accounting: the proof finds a formation whose excess on the risen family is above its excess on the containing family (`rise_draws_beyond_inflow` states that inequality), and such a formation takes from the containing family more than from the risen one. With the gainless premise the inflow is zero and the earlier law is the case.
+
+What this changes for the note: for an open whole the premise "gains nothing" was never true, and the law said nothing there. Graded, the law applies to every whole and says how much of a rise must be drawn from beyond: the part above what flows in. Whether a given race raises what it rewards faster than its whole's inflow renews the conditions it draws on is now the empirical question, with a law on each side of it.
+
+**RP1: a race for position draws everything.**
+
+```text
+Result(s): new a-race-for-position-draws-everything; reuses drawers-in-turn (Optimum.InTurn's model: pass, drawn, later, levels, pass_zero, pass_through, levels_through); related relative-position-is-zero-sum
+Delta: drawers in turn, no floor, each ranking its position over the steps that remain, k times its draw against what all draw (the count of RelativePosition, n * a p against total ps a, read on the draws): RevisesPosition, PerfectPosition. One law: what a drawer keeps for position it keeps for nothing where its own later draw is the same, what passes on of it is at most it, and all draw no less later (position_keeps_nothing, with two drawers or more). So at the last step every best response draws everything, with no premise on what stands next (position_last); where what stands from nothing is at most what stands from anything left (G t 0 ≤ G t x) and k ≥ 2, every perfect profile draws everything at every step (position_perfect_ends, position_perfect_draws) and the base stands at G t 0 (position_levels); drawing everything is perfect (zero_position_perfect).
+Supplied premises / correspondence: drawers in turn with no floor; position over the steps that remain; G t 0 ≤ G t x for the steps before the last; at least two drawers.
+Evidence: Becoming.Optimum (InTurn, section "A race for position"); core receipt 20261022T130149.371173Z, empty axiom reports.
+Boundary: each premise binds. With one drawer every profile is perfect (position_one): position is then constant. Where something left stops what stands next (Stopping: G t 0 = 2, G t x = 0 above), drawing everything is not perfect (Stopping.zero_not_perfect), and every perfect profile has the second drawer keep the unit it is given at the first step (Stopping.perfect_keeps), stopping the two units the first drawer would draw next.
+Integration: OPENING [^race] joins the two halves of the note's sentence by a law; chapter §3.4 rows.
+```
+
+The proof goes from the horizon back. A drawer after the first keeps nothing: what it leaves passes the drawers after it, at most what it leaves, and once every drawer draws everything later, its own later draw does not depend on what it leaves while what all draw later rises with what stands next, which is least from nothing. Keeping `r` then lowers `k` times its own draw by `k r` and what all draw by at most `r`, so with `k ≥ 2` it places itself lower. The first drawer then keeps nothing, since what it leaves passes to drawers who draw everything at once; here the premise on `G` is not needed.
+
+The race for position differs from the race for one's own draw in two ways. Keeping costs a drawer `k` times as much in its position as in its own count. And one's own count is indifferent to what others draw later, position is not, so where leaving something stops what stands next a drawer gains position by keeping it to deny the regrowth to the first drawer (`Stopping`). In that witness the first drawer still draws everything on the path of play, so nothing is left to keep there: the premise binds what is perfect, not the path the witness takes. The premise `G t 0 ≤ G t x` holds of every law under which more left never stands less next; it asks less than that, only that nothing left is the least.
+
+What is not shown: that actual races are played in turn, by drawers ranking position alone, over a known horizon; drawing at once ranking position (AtOnce with the position count), and floors, are not treated. That a race of position cannot raise everyone stays the premise-free half; this law is the half that says what drawers racing for position do to what they draw on.
+
+## 356. A pool that recruits through itself (PL1)
+
+*Delta.* [what-pooled-coupling-reaches](../../../../theories/becoming/results/records/what-pooled-coupling-reaches.md) and [what-a-pools-acts-respond-to](../../../../theories/becoming/results/records/what-a-pools-acts-respond-to.md) stated a pool's reach for a fixed group, and left "how a pool forms, lasts and resists rules written by those it rewards" open. Pools of intelligences change members, and often choose them. `Becoming.PoolCourse` reads a pool along a run, its members at each step a claim about the history (`pool : Nat → (Nat → C → Nat) → F → Prop`), and states what it can come to couple into.
+
+*Laws.* A member that has coupled two histories apart keeps the pool apart while it stays (`Web.apart_while_member`); where every member couples them alike, every selection through the pool selects them alike (`Web.selects_alike_of_members`). A pool that admits its next members through its own pooled coupling (`Web.RecruitsThrough`), from the same members at the start, has the same members under both histories up to and including the first step it couples them apart (`Web.RecruitsThrough.members_alike`), and the pool along either history separates them there (`Web.RecruitsThrough.first_apart`). It never couples them apart exactly when the pool along the other never does (`Web.RecruitsThrough.alike_iff`), and then every selection through it at every step selects them alike (`Web.RecruitsThrough.selects_alike`). Read with the second history the course without a loss: a self-recruiting pool comes to couple into a loss only as its course without the loss would, and nothing it selects, its next recruitment included, responds to the loss before then. Witnesses (`PoolCourse`): a keeper alone never couples a lost habitat apart; a pool calling a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once; a pool that schedules the reader in every history couples it apart at step 2, through a member the course without the loss holds too.
+
+*Premises.* `RecruitsThrough` and the same members at the start. No axiom: 17 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Boundary.* The laws say what a self-recruiting pool cannot come to couple into, not whether actual pools recruit so (CR1 reads the published arrangements for AI evaluation). They are the membership form of `ClosedCapture.lock_outlives_loss`, where rule and reading are formed from the share; MA2, readers counted as the population counts them, is another mechanism and is not reproved.
+
+*Output → input.* Chapter §7.4 and §7.7; record [a-pool-that-recruits-through-itself](../../../../theories/becoming/results/records/a-pool-that-recruits-through-itself.md); CR1's section on evaluators; the generative-alignment overview.
+
+## 357. What a center can come to know of its region, step by step (CK1)
+
+*Delta.* §8.1 item 3 left open "how a center forms, represents its region, boundary and dependence, and comes to know what it reaches, step by step; which relation a center's region is drawn along". `Becoming.TimedResponse` had stated that no answer a reader gives through its couplings differs before a potential route reaches what it couples into. `Becoming.Latency` counts routes by their links.
+
+*Laws.* A condition lies within `n` coupling links of the source (`TimedResponse.Linked`). Where every source step is at `S` or later, a route reaches a condition at step `t` only within `t − S` links (`TimedResponse.Spread.linked`), so whatever reaches a reader by `T` came through a condition coupled into it within `T − S` links (`TimedResponse.reachedBy_linked`, `TimedResponse.not_reached_of_far`). Under the deadline premises, no answer it gives through its couplings differs by `T` otherwise (`TimedResponse.answer_alike_far`). In `Relay` (source, relay, reader) the reader's answer is alike at step 2 and differs at step 3, the bound attained at two links (`Relay.answers_two_and_three`, `Relay.not_reached_at_two`, `Relay.reached_at_three`).
+
+*Reading* [AI reading]. The region a center can represent from what it reads is drawn along coupling links, by the law and not by choice, and grows by at most one link a step: the answer to "which relation", for the region represented. How a center forms as a formation, and whether the region it acts for is the one it can represent, are not derived.
+
+*Premises.* TimedResponse's deadline premises where stated, and every source step at `S` or later. No axiom: 11 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Output → input.* Chapter §5 and §8.1 item 3; record [what-a-center-can-know-by-a-step](../../../../theories/becoming/results/records/what-a-center-can-know-by-a-step.md).
+
+## 358. The coupling closures of deployed training pipelines (CR1)
+
+*Delta.* The open correspondence item of chapter §7.7 and §8.7, and AP1's Next ("correspondence data on actual systems for each premise"). The study: [CR1](development/cr1-coupling-correspondence/CORRESPONDENCE.md).
+
+*Result.* In each published way of selecting a deployed model's behaviour, the training or monitoring signal is a function of what its deciders read, so §7.1's premise holds by construction. The ways read are reward models trained on human preference, AI feedback against written principles, direct preference optimization, process supervision, debate and deployment monitoring. Three published measurements find the room clause of `Optimum.least_of_room`: optimizing through the deciders' coupling raised what they read and lowered something they do not read. They are reward overoptimization against a gold reward (Gao, Schulman and Hilton 2022), judges' false positives rising 24.1% and 18.3% under RLHF (Wen et al. 2024), and sycophancy (Sharma et al. 2023). The theory predicted none of their magnitudes. Release decisions read through their evaluators. By PL1, an evaluator chosen through what the pool already reads joins as the course without a hidden difference would bring it, and an admission the pool's coupling does not fix can couple into more.
+
+*Standing.* Construction, identification and measurement are kept apart (the study's first section). Reviewed at its stated scope; AI-written; not independently reviewed. Record [coupling-closures-of-training-pipelines](../../../../theories/becoming/results/records/coupling-closures-of-training-pipelines.md).
+
+## 359. The rest-outruns law on learners that generalize (EM1)
+
+*Delta.* CG1 and CG2 tested the selection laws on tabular learners. EM1 ([experiments/commons-outrun-generalizing](../../../../experiments/commons-outrun-generalizing/README.md)) runs CG2's conditions with learners that generalize across states: policy-gradient learners trained on whole-episode returns. Predictions were frozen at `42cf03228` before any run on a test condition.
+
+*Verdicts.* The law held on every course: 9,026 outrun windows and 12,600 emptied episodes, with zero violations. E1 failed: in three of six locked settings (`k3s1_lam32`, `k3s8`, `k3s1_share`) these learners reached a restraint profile and kept the patch, with the end reading weighted 32 among them. E2 passed (all five open settings kept). E3 passed: the joint learner trained on the returns its acts led to kept the patch, which CG2's temporal-difference joint learner had emptied. So CG2's X2, "no weight of the end reading opens the lock", is a finding about tabular learners. Which of several self-consistent outcomes learners reach depends on the learner.
+
+*Post hoc, not counted.* A policy shared across states carries restraint selected in late-start training episodes, where the rest cannot empty the patch before the end reading, into early states. In the theory's terms the selected object is the parameter vector, a condition every state shares. A frozen follow-up with every training episode starting at step 0 would test this.
+
+*Output → input.* Chapter §7.5 and §7.7; record [the-rest-outruns-the-renewal](../../../../theories/becoming/results/records/the-rest-outruns-the-renewal.md) (correspondence and Next); the generative-alignment overview, whose sentence on the end weight is restated.
+
+## 360. How a center forms, and when the region it acts on is the region it can represent (CK2)
+
+*Delta.* After CK1, §8.1 item 3 left open how a center forms as a formation, and whether the region it acts for is the one it can represent. `Becoming.Feedback` had a formation's reach closure (what it can affect) and influence closure (what can affect it), and `Becoming.MutualDependence` the case where both are the whole. `Becoming.Centers` states where they meet in any flow.
+
+*Laws.* Two formations lie in one loop where each can affect the other's continuation at some remove (`Flow.InOneLoop`): an equivalence, so loops partition the formations. A formation's acts return where whatever it can affect can affect it (`Flow.ReachReturns`). That holds exactly where everything it reaches lies in its loop (`Flow.reachReturns_iff_loop`) and exactly where its loop is closed under affecting (`Flow.reachReturns_iff_closed`); it is a property of the whole loop (`ReachReturns.of_loop`). Where a formation's acts return, everything it acts on lies within its coupling closure, what it can represent (CK1), for every coupling by level (`ReachReturns.represented`), and with coupling by threshold only the two coincide exactly (`Flow.reachReturns_iff_represented`). As exchange grows, loops only merge (`InOneLoop.mono`); returning is not monotone. In `Line`, a acts on b and b not back, so a's acts do not return and b's do; when b comes to exchange with what a depends on, a and b are one loop whose acts return. With finitely many formations listed and reach decided, every formation's reach holds a formation whose acts return (`Flow.exists_reachReturns`): following what a formation acts on and does not hear back from, the reach shrinks strictly until it closes.
+
+*Reading* [AI reading]. A center, read as a formation-level object, is a loop of mutual reach whose acts return: a loop closed under affecting, a sink of the graph of loops. It forms where a link closes a loop, and wherever formations are finitely many there is one downstream of every formation. The region a center acts on is the region it can represent exactly where its acts return; otherwise some formation it acts on can never affect it, which is the gap for one's own act at that formation.
+
+*Boundary.* A formation that affects nothing beyond itself counts as returning, trivially. Returning is a property of reach closures read off one flow, not of persisting along a run; whether a returning loop persists, and which loop a formation draws its own region along when several are read, are not derived.
+
+*Premises.* Reach and influence read through dependence at some step and exchange at some step (`Becoming.Feedback`); finitely many formations and decided reach where stated. No axiom: 22 theorems, empty axiom reports, core receipt `20261022T132056.171285Z`.
+
+*Output → input.* Chapter §5 and §8.1 item 3; record [where-a-formations-acts-return](../../../../theories/becoming/results/records/where-a-formations-acts-return.md); the generative-alignment overview.
+
+## 361. What position reads (NL1)
+
+```text
+Result(s): new record what-position-reads.
+Delta: two profiles of amounts give every part of a family the same position exactly where every part's amount
+       differs between them by one amount common to all (RelativePosition.Keeps, keeps_iff_common): positions read
+       the amounts up to a common amount. Adding an amount to every part keeps every position and adds it to the
+       total once for each part (keeps_add); taking the least part's amount from every part keeps every position
+       and leaves the spread above the least part (keeps_least). So with given positions the total is at least the
+       spread (spread_le), every bound is exceeded (keeps_exceeds), and every profile with those positions has its
+       total above r exactly where the spread is above r (exceeds_iff_spread). Witness RaceWithin: the renewer gives two
+       units at every step, as in Race, and its two racers have the race's positions (RaceWithin.keeps), the same greatest part and the same rise of the first;
+       it balances, gives only while active and keeps activity supported; what is taken is within what is given and
+       every part is active at every step, while in Race every part is inactive from step two on
+       (RaceWithin.same_positions_apart). Read on a flow by what a step's takers take, every profile with the
+       step's positions takes more than the step gives exactly where the spread does, and some profile always does
+       (Flow.excess_iff_spread): positions certify joint excess, joint_excess_ends' hypothesis, only through the
+       spread.
+Premises / correspondence: none for the counting laws (whole-number amounts, a finite family with a part).
+       Correspondence: competition read as position, the opening's "winning".
+Evidence: core receipt 20261022T133248.097273Z (passed).
+Boundary: positions certify joint excess at a step only through the spread; the end needs joint_excess_ends' other
+       premises; positions across many steps against a responding renewal, ranks, shares and signed amounts are not
+       treated.
+Output → input: OPENING [^no-law] (what each leaves out; two of the features, read as laws of position, refuted by
+       constructed flows); chapter §4.3 and the record table; record relative-position-is-zero-sum (its next step,
+       positions read otherwise, partly taken: what positions read of amounts).
+```
+
+**What was built.** In `Becoming.RelativePosition`: `Keeps`, `length_pos_of_mem`, `regroup`, `keeps_iff_common`, `keeps_add`, `keeps_least`, `spread_le`, `keeps_exceeds`, `exceeds_iff_spread`; on the flow `Flow.excess_iff_spread`; and the witness `RaceWithin` (`flow`, `web`, `balances`, `acting`, `dependent`, `racers`, `drawn_common`, `keeps`, `drawn_second`, `drawn_renewer`, `first_greatest`, `same_positions_apart`). `Keeps` is stated with the counts the module already had: the change from `a` to `b` keeps a part's position where its rise count is its fall count. The proofs avoid `omega` and the `Nat` lemmas whose reports carry `propext` (`Nat.add_right_cancel`, `Nat.add_sub_assoc`, `Nat.sub_add_cancel`), using the prelude's `add_right_cancel`, `add_sub_of_le` and `Naturals.sub_add_cancel`.
+
+**Why this pushes the note.** The note said that "winning need not measure what lasts" rested on one constructed example, and that no struggle, competition or sovereign self being among the laws was "read off the list of laws, not a theorem". A list read off shows what is listed, not what follows: a feature absent from the list could still be derived from it. A law holds in every world, so a feature that fails in a constructed world is not a law. Read as laws of position, two of the features are now refuted that way: "the greatest continue" fails in `Race` and holds in `Clearing` (already proved, not cited by the note), and "position measures what lasts" fails in `RaceWithin` against `Race`. The general law says why the second fails everywhere and not only in the witness: what positions read of amounts is everything except one common amount, and the total drawn, which balance compares with what is given, is exactly what that leaves out above the spread.
+
+**Self-review.** (1) The exactness is two-sided: `keeps_iff_common` is an equivalence, and `exceeds_iff_spread` gives the lower bound with its attainment, so "positions bound the total only from below, by the spread" is stated, not read. (2) The spread is not nothing: positions alone can force a total above what is renewed, where the parts' amounts are spread wider than what is renewed. The note therefore says "never certify that no more is drawn than is renewed", not "measure nothing", and leaves the opening's body ("need not measure anything of what lasts", Ren's voice) unchanged; the stronger reading ("no position certifies that anything lasts") is offered as a proposal, not applied. (3) The witness reads positions among the two that take, not the renewer: with the renewer in the family, a common shift would need it to draw, which it does not. (4) `RaceWithin` and `Race` have the same renewal (two units at each step the renewer takes part) and the same positions among the racers at every step; the separation is carried by the totals alone (the race's racers draw two more per step jointly), which is the law's point. (5) Board item RP1 (drawers in turn ranking position draw everything, in `Optimum.InTurn`, for OPENING `[^race]`) is the complement: it derives the joint excess from ranking position under stated premises, where this item shows what position reads of the total; neither reproves the other. (6) The composition with `Flow.joint_excess_ends` is proved at a step (`Flow.excess_iff_spread`, which also joins the two arithmetic laws to the base, where the connectivity check had found them used by nothing); the end over many steps still needs that law's other premises, and the record's `does_not_show` says so. (7) The witness was first named `Lasting`; `Becoming.Lasting` is another module's namespace (`Lasting.Reaches`), so it is `RaceWithin`, a race drawn within what is given.
+
+## 362. When drawing at once drains, and whom restraint pays (AL1)
+
+```text
+Result(s): record drawers-in-turn (Becoming.Optimum): its open item "drawing at once where a portion returns at least
+       one for one" answered by an exact converse; what the premise of drains says in whole amounts; whom restraint
+       pays; the standpoint of the whole as a case.
+Delta: (1) drawing everything is perfect exactly where, at every step before the last, no drawer's portion of what
+       stands next returns more than one for one on what it alone leaves while the others draw everything
+       (AtOnce.drain_perfect_iff, through later_drained; Web.drain_perfect_broken). (2) In whole amounts the premise
+       of drains (ReturnsLess) means a unit left returns nothing: a portion never rises with what is left
+       (portion_falls), so along no profile whatever does any drawer draw more than where all draw everything
+       (drain_most; Web.at_once_beyond): there restraint pays no drawer, and what the drain breaks lies beyond them.
+       (3) Where the drain is perfect and a profile holding the level draws a drawer, at every step after the first,
+       more than its portion of what stands at nothing, it draws that drawer more over n + 1 steps with its first
+       portion below n (holding_draws_more, through drained_add_le); a perfect profile draws everything at the last
+       step (last_draws). (4) A drawer whose portion is all that stands finds the drain imperfect wherever the whole
+       returns more than one for one (whole_not_drained); one drawer given the whole drains exactly where the whole
+       never does (whole_perfect_iff), and then the drain still breaks what depends on the base (Web.whole_drain_broken). Witness Holding.halves_race.
+Premises / correspondence: any law G; k drawers given portions of one level, all drawing at once; no floor; natural
+       amounts, discrete steps; for (3) a profile holding the level and a long enough horizon; for (4) a portion equal
+       to all that stands. Correspondence: the dynamic commons, where each player internalizes only its share of the
+       stock effect (Gordon 1954; Levhari and Mirman 1980), and the sole owner who internalizes all of it.
+Evidence: core receipt 20261022T134333.178862Z (passed).
+Boundary: which profiles are perfect where some portion returns more than one for one; whether every perfect profile
+       of the halves draws each drawer less than holding (shown for drawing everything only); floors drawing at
+       once; sharing rules depending on the others' claims; a drawer's ranking of all drawers' draws (a portion equal
+       to the whole is the case stated).
+Output → input: OPENING [^aligned] and [^race]; chapter §3.4, §7.1, §7.5, item 10 and the record row (EN, ZH);
+       Optimum's header; record drawers-in-turn; significance review, aligned check.
+```
+
+**The question.** OPENING's alignment note said its theorems "concern dependence and significance, not incentive or motivation", while `Optimum.AtOnce.drains` already proved a law of best response: drawers ranking only what they draw. The drawers' record left one item open, drawing at once where a portion returns at least one for one. Answering it says when a race of drawers is each one's best response, whom restraint pays, and what changes when one drawer's portion is the whole.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The converse, exactly* (`Optimum.AtOnce.later_drained`, `steps_after`, `drain_perfect_iff`, `Web.drain_perfect_broken`). Where the others draw everything, what drawer `d` draws after leaving `b` is its portion of what stands next from `b` alone and its portions of what stands at nothing after. So drawing everything is perfect exactly where that portion is at most its portion from nothing, and `b`: no drawer's portion returns more than one for one on what it alone leaves. The condition quantifies only over what a drawer alone leaves while the others drain; `drains` needs more (every amount the others leave) for every perfect profile to drain.
+- *What `ReturnsLess` says in whole amounts* (`Optimum.AtOnce.portion_falls`, `drain_most`, `Web.at_once_beyond`). With `b = 1` the premise says a unit left returns less than a unit, so nothing; by induction a portion never rises with what is left. Then at every later step a drawer's portion along any profile is at most its portion of what stands at nothing, and along no profile whatever does any drawer draw more than where all draw everything. Where `drains` holds, restraint pays no drawer, and what the drain breaks (`Web.at_once_broken`) lies beyond every drawer.
+- *Whom holding pays* (`Optimum.AtOnce.drained_add_le`, `holding_draws_more`, `last_draws`). Along a profile under which what stands is the level it started at, a drawer drawing at each later step more than its portion of what stands at nothing gives draws, over `n + 1` steps with its first portion below `n`, more than where all draw everything. A perfect profile draws everything at the last step, so such a holding profile is not perfect.
+- *The standpoint of the whole as a case* (`Optimum.AtOnce.whole_not_drained`, `whole_perfect_iff`, `Web.whole_drain_broken`). A drawer whose portion is all that stands does not find the drain perfect wherever what stands from `b` left exceeds what stands from nothing by more than `b`. With one drawer given the whole, the drain is perfect exactly where the whole never returns more than one for one. Where it never does, the drain is perfect for that drawer and still breaks what depends on the base (`Web.whole_drain_broken`): counting the whole of what is drawn does not count what depends on what is left.
+- *The two halves* (`Optimum.Holding.half`, `half_le_succ`, `half_mono`, `half_double`, `half_le`, `halfMore`, `halves`, `leavesAllButOne`, `halves_return`, `halves_hold`, `halves_held`, `halves_race`). Two drawers share a level, the first the larger half and the second the smaller, and what both leave, `x`, stands next as `x` and half of it. Neither half returns more than one for one on what its drawer alone leaves, so drawing everything is perfect over every horizon and breaks the dweller at the first step from a source at six. Leaving all of each half but one unit holds the source at six, keeps the dweller at every step and, over `n + 1` steps with `4 ≤ n`, draws each drawer more than drawing everything; it is not perfect. For a single drawer given all that stands, drawing everything is not perfect over any horizon of two steps or more, since two units left stand next as three.
+
+**A correction to the record's reading.** UM3 read `ReturnsLess` as the commons condition, a share of renewal below one (Gordon 1954). In real amounts a share below one returns something; in whole amounts, at unit grain, it returns nothing, and under it the drain costs the drawers nothing. The tragedy of the commons, where the drain is each one's best response and yet holding pays each more, needs the weaker condition of `drain_perfect_iff` with some return: the halves are its witness. Under `ReturnsLess` the drain is the unique perfect outcome but no trap for the drawers; its loss falls beyond them.
+
+**Against the prior form** ([significance review, aligned check](BECOMING-SIGNIFICANCE-REVIEW.md#aligned-check)). The dynamic commons: each player internalizes only its share of the stock effect, so the noncooperative outcome extracts more than the cooperative one, and a sole owner internalizes all of it (Gordon 1954; Levhari and Mirman 1980). The spine's form states the exact condition for the drain to be perfect, its converse, the whole-amount reading of the strict premise, and the sole owner as the case of one portion equal to the whole.
+
+*Reading* [AI reading, D45]. Seen from inside the race, each drawer is rewarded for draining exactly where nothing it alone leaves comes back to it more than one for one. Seen from the whole, what is left comes back as the whole renews. Where the two differ, as with the halves, the race is each one's best response and none is better for it; where nothing left comes back to any drawer, the race is no trap for them and its loss returns to no one among them, the case the continuation condition's scope reaches (losses that return to no one).
+
+**Self-review.** Every premise is used: no floor for the drain's profile; `t + 1 < N` for each later step; the holding premise and the horizon for (3); the portion equal to the whole for (4). What lies in no portion does not stand, a modelling choice. Not covered: which profiles are perfect where some portion returns more than one for one, whether every perfect profile of the halves draws each less than holding, floors, sharing rules that depend on claims, and drawers ranking the sum of all draws.
+
+**The run.** Core 289 modules and 12,742 theorems, instances 7 and 581, applications 6 and 179; 13 Lean steps ran, 1,207 reused. Becoming.Optimum 503 theorems (482 before), 25 declarations added (21 theorems), 0 removed; all with empty axiom reports. Connectivity: 747 of 13,502 apart; no new apart root from AL1, every new law stated on the web or read by a law that is.
+
+## 363. What training installs: a law is installed only along its own courses (TI1, TI2)
+
+```text
+Result(s): new record what-training-installs; reuses counterfactual-is-the-course (ExchangeLaw, withAct, levels,
+       course, history_agree, levels_succ, withAct_nonanticipating), selection-through-couplings
+       (Web.SelectsThrough, Web.ScoresThrough, Web.class_selects, Web.selects_alike_iff), the-gap-for-ones-own-act
+       (act_courses_unselected), the-rest-outruns-the-renewal (Flow.outrun_reading_alike) and
+       recurrence-without-premise (Law.orbit); related: generalization-through-lumping (Training.fit_right_iff,
+       Training.unselected_beyond_data), what-a-pools-acts-respond-to (ExchangeLaw.response_not_fixed_by_coupling).
+Delta: chapter §7.7 left open "how training installs one that responds to what it couples into", §8.1 item 7 "how a
+       member's law forms and comes to respond to what it couples into", and §7.5 how learners come to one outcome
+       where several are self-consistent; TI1's own remainder was the class a system searches, a local search's
+       implicit bias, which basin a start leads to, noise and exploration. Training is read on the spine as a
+       selection over a learner's candidate act laws through the courses each generates, a situation fixing what
+       the learner's law does not: the others' law (one realization of their noise), the start, and how the law is
+       executed (Training.levels, Training.SameCourses, Training.Reads).
+       (1) Along the courses. Two laws of what has stood exchanging alike along the levels the first generates
+       generate the same levels (ExchangeLaw.levels_agree_of_along); candidates giving alike along the first's
+       course in each situation have the same courses and every training trains them alike
+       (Training.same_courses_of_along, Training.trained_alike_of_along). With noise, what is fixed is fixed by the
+       realizations; their weights change what is rewarded more, not what can be installed. Exploration: a law
+       explored on a schedule (Training.explore) is fixed only at the steps left to it on the explored courses
+       (Training.explored_same_courses).
+       (2) Off the courses. A lumping of histories (Training.Lumping), an equivalence at each step coarser than
+       agreement, is a learner's representation; the part's coupling and agreement are lumpings. Two laws reading
+       through a lumping with the same courses exchange alike at every history it lumps with a course
+       (Training.installed_where_lumped); at a history it lumps with no course a law of the class with the same
+       courses takes any amount and responds or not to a difference the lumping separates
+       (Training.free_where_unlumped, Training.response_free_where_unlumped, one construction Training.setOn,
+       Training.setOn_lumped). The coupling and agreement are cases (Training.installed_where_alike,
+       Training.response_free_where_apart; Training.response_free_off_courses: nothing is installed off the
+       courses beyond what the representation lumps with them).
+       (3) Through a reward. A training through a selector's couplings (Training.TrainsThrough) reads the courses,
+       trains two candidates alike exactly where their levels are alike through those couplings
+       (Training.trained_alike_iff, by construction as Web.selects_alike_iff), the optimum of a reward through them
+       is one (Training.settles_through, Training.score_rewards), some such reward separates two candidates apart
+       through them (Training.settles_apart), and candidates agreeing on what couples into the reward's closure are
+       trained alike (Training.trained_alike_beyond_closure).
+       (4) Which settled law, and which basin. Every candidate a reward settles on is a rest of every improving
+       search (Training.Improving, Training.settled_rests), which started there stays (Training.settled_stays);
+       under a reward at most B an improving search rests from every start by step B + 1, so the basin of a start
+       is its orbit there (Training.rested_or_risen, Training.comes_to_rest). A local search over a neighbourhood
+       relation, its parameterization (Training.LocalSearch), rests exactly where no neighbour is rewarded more,
+       and with every candidate a neighbour exactly where the reward settles (Training.LocalSearch.rests_iff,
+       Training.LocalSearch.rests_iff_settles): the rests a narrower neighbourhood adds are its implicit bias.
+       (5) Weight. A reading the same for every candidate leaves the optimum at any weight
+       (Training.settles_weighted_iff); where the rest outruns a gated renewal in every candidate's course, a
+       reading after its end is one (Training.outrun_reading_same, Training.outrun_settles_iff).
+       The computed commons (Training.Commons): the learner's reward reads its store and the stock at step four
+       through its coupling, by level, into both; restraint is settled exactly at weights of at least one where the
+       rest draws within the renewal (Commons.renewed_restraint_settles_iff), at no weight where it outruns it, the
+       drawing law then settled at every weight (Commons.outrun_restraint_unsettled, Commons.outrun_drawing_settles):
+       CG2's X2. At weight one both are settled, the drawing law responding to the stock and restraint not, and
+       every improving search keeps the one it starts from (Commons.renewed_both_settle, Commons.drawing_responds,
+       Commons.start_decides); where the rest outruns the renewal, a local search with empty neighbourhoods rests at
+       restraint, which no weight settles on, and one with every candidate a neighbour leaves it
+       (Commons.outrun_neighbourhood_decides).
+Premises / correspondence: the situations' laws and the candidates read what has stood; for the off-course laws, the
+       law reading through a lumping and being lumped with the history decided; for the closure law, the
+       situations' laws reading through coupling and both courses feasible; for the outrun laws, outrun_below's
+       premises in every candidate's course; for the basin law, a bound on the reward. A training reads each
+       candidate through its own courses, as the optimum of any reward does. Correspondence: the on-policy point of
+       imitation learning (Ross, Gordon and Bagnell 2011); goal misgeneralization (Langosco, Koch, Sharkey, Pfau and
+       Krueger 2022; Shah et al. 2022) as the off-course law read on deep reinforcement learning; generalization by
+       a learner's own representation as the lumping law, fit_right_iff with the courses as the data; pivotality
+       (Palfrey and Rosenthal 1984) read on a reward; for the search laws, local optima of local search and the
+       basins of attraction of best-response dynamics, among which stochastic stability (Kandori, Mailath and Rob
+       1993; Young 1993) selects by noise, cited, not proved here.
+Evidence: core receipt 20261022T135732.423997Z (passed).
+Boundary: which lumping an actual architecture's representation makes and which neighbourhoods its updates search,
+       both read empirically; the weights a training gives noise realizations or explored courses, which change what
+       is rewarded more and not what can be installed; which basin a particular start lies in for a given system,
+       beyond that it is reached within the bound; the evidence for an identified installation.
+Output → input: chapter §7.1 (Training bullet; the proxy paragraph), §7.5 (how learners come to one outcome), §7.7
+       (coupling is not compliance; what a response does), §8.1 item 7, the relation to known results, the
+       glossary row "training", the record table and section 9 (EN, ZH).
+```
+
+**What was built.** In the new core module `Becoming.Training` (a leaf: it joins `Becoming.SelectionGap` and `Becoming.Exclusion`, which do not import each other): the on-course law (`ExchangeLaw.AlongAlike`, `ExchangeLaw.exchange_along`, `ExchangeLaw.levels_agree_of_along`; `Training.levels`, `Training.course`, `Training.SameCourses`, `Training.Reads`, `Training.same_courses_of_along`, `Training.trained_alike_of_along`); exploration (`Training.explore`, `Training.explore_nonanticipating`, `Training.explored_same_courses`); the off-course laws over a lumping (`Training.Lumping`, `Training.Lumping.coupling`, `Training.Lumping.agreement`, `Training.ReadsThrough` and its conversions, `Training.installed_where_lumped`, `Training.installed_where_alike`, `Training.setOn` with its laws, `Training.setOn_lumped`, `Training.free_where_unlumped`, `Training.response_free_where_unlumped`, `Training.response_free_where_apart`, `Training.response_free_off_courses`); training through a reward (`Training.TrainsThrough`, `Training.trained_alike_iff`, `Training.RewardsThrough`, `Training.Settles`, `Training.settles_through`, `Training.score_rewards`, `Training.settles_apart`, `Training.trained_alike_beyond_closure`); the search laws (`Training.Improving`, `Training.settled_rests`, `Training.settled_stays`, `Training.rested_or_risen`, `Training.comes_to_rest`, `Training.LocalSearch` and its laws); the weight laws (`Training.settles_weighted_iff`, `Training.outrun_reading_same`, `Training.outrun_settles_iff`); and the computed commons `Training.Commons`. 59 theorems in 88 declarations, every axiom report empty.
+
+**What the laws say about installation.** `Training.fit_right_iff` said that a fit is right beyond the data exactly where the class determines it. A learner in a world has no fixed data: its data are the courses its own candidate law generates with everything else, and they change with the candidate. The first law moves the boundary onto the learner's own courses: a candidate is fixed, for every training reading courses, by what it does along them, since a law of what has stood exchanging alike along the levels another generates generates the same levels; noise only adds realizations, and exploration fixes the law only at the steps left to it. Off the courses, what is installed is exactly what the learner's representation cannot tell from them: a law reading through a lumping generalizes from a course to every history the lumping puts with it, and to nothing else, where it may respond or not. This is `fit_right_iff` with the courses as the data and the representation's lumping as the class; the coupling and agreement are its cases, and agreement gives the bare statement that nothing is installed off the courses. Through a reward, what is installed narrows to what the reward's couplings separate, and a difference in the act's exchange is installed only where it reaches what couples into the reward's closure. Where the reward settles on several laws, every improving search keeps the one it reaches; under a bounded reward it reaches one within the bound from every start; and a local search rests wherever its neighbourhoods leave no better neighbour, which with every candidate a neighbour is where the reward settles. So the formal part of "how training installs a law that responds to what it couples into" is answered: response is installed only along the learner's own courses, at the steps its law acts, as far as its representation lumps, only where it changes what the reward reads, and among equally rewarded laws by where the search starts and what its neighbourhoods let it compare. What is left is empirical: the lumping and neighbourhoods of an actual system.
+
+**X2 as a theorem, the start and the neighbourhood.** CG2's X2 found that weighting the end reading sixteen times more changed nothing. `Training.outrun_settles_iff` says why for every weight: where the rest outruns a gated renewal in every candidate's course, every reading of the condition after the rest's end is the same for every candidate, and a reading the same for every candidate moves no optimum. The commons makes it concrete with the learner coupled into the stock by level: the same reward, with the same coupling, settles on restraint from weight one where the rest draws within the renewal, and never where the rest outruns it. At weight one both laws are settled, one responding to the stock and one not, and every improving search keeps the one it starts from. Where the rest outruns the renewal, no weight settles on restraint, yet a search whose neighbourhoods do not reach the drawing law keeps it: the parameterization can install what the reward cannot, which is what implicit bias is.
+
+**Self-review.** `Training.trained_alike_iff` holds by construction, as `Web.selects_alike_iff` does; its substantive premise is that a given training goes through those couplings, which is supplied. `Training.outrun_reading_same` is `Flow.outrun_reading_alike` read on the candidates' courses, and `Training.trained_alike_beyond_closure` is `act_courses_unselected` read on them: instances, with the training's selection derived. `settled_rests` and `LocalSearch.rests_iff` are short; their content is that the reward fixes the set of settled laws while the search's start and neighbourhoods fix which rest is reached. The new content is the on-course law (the levels fixed along one course without feasibility, which `ExchangeLaw.course_unique` gives only for feasible courses), the lumping law with its two exact sides, exploration, the exactness through a reward, the basin bound and the computed commons. Rule 9: the coupling and agreement forms of the off-course law are derived from the lumping law, not proved beside it; `Training.unselected_beyond_data` and `Training.fit_right_iff` hold for data fixed in advance and are not cases, whose data depend on the candidate. Names: `Training` is the namespace `Becoming.Learning` already uses; `Lumping` takes the theory's word for a map's classes; `TrainsThrough`, `RewardsThrough`, `Settles`, `Improving` and `LocalSearch` state what they define; `setOn` is the law with its take set on a predicate.
+
+**The run.** Core closure passed with no core axiom; 7 Lean steps ran, 1,217 reused. The connectivity rerun counts 774 of 13,561 spine theorems apart, 27 of the module's 59; the register check passes.
+
+## 364. The central laws over every relation of exchange (XL1)
+
+```text
+Result(s): new record central-laws-over-every-exchange; reuses premises-read-off-the-exchange (World.withRest, withRest_balanced,
+       withRest_dependent_iff, ExchangeLaw.readWorld), requirement-over-open-exchanges (ExchangeRelation, Runs,
+       RespondsBelow), census-read-off-the-exchange (World.withRest_counted) and premises-that-are-states-of-the-law;
+       instantiates the 33 central declarations listed below.
+Delta: chapter §8.1 item 1 left open "the spine's laws over every law, or relation, of exchange rather than over
+       separately chosen premises". Of the 118 central declarations of the completion criterion's coverage, 33
+       take in their binders balance, only active relata giving or taking, or activity needing support. Each now has
+       a form over what is read off an exchange, its proof the central law, its binders taking none of the four:
+       17 over every world with its rest counted, 5 (the comparisons of two courses) over every two worlds of one
+       kind of relatum with their rests counted, and 11 over every world read off a relation of exchange
+       (World.ReadOffExchange: its flow a run of the relation along its standings, each requirement a necessary
+       response of its exchange), which every run of every relation and the course of every law are and a world
+       whose relatum exchanges unsupported is not. The rest theorem's form also reads the census off the exchange
+       where a named family closes each step. completion.py's K3 checks every form.
+Premises / correspondence: what stays a hypothesis is a state of the law (dissipation, embodiment, bounded
+       transmission, enclosure, feasibility, a census of what stands) or the law's own; the forms over a world read
+       off a relation take that reading. No ethical predicate, ranking or axiom.
+Evidence: core receipt 20261022T140546.324820Z (passed): 46 declarations of Becoming.OverExchange, 44 theorems, empty axiom
+       reports; research-check runs the K3 check on the forms.
+Boundary: the forms read the world with its rest counted; where closure fails the rest is a relatum the laws count
+       (a giver, a feeder). Discrete steps and natural-number amounts unchanged (item 6). The twelve companion modules
+       left are kept, judged below. Which law or relation of exchange holds is not derived.
+Output → input: chapter §0 block C, §8.1 item 1, §8.5, §8.9 and T8 (EN, ZH); BECOMING-FOUNDATION §9.1 (EN, ZH);
+       COVERAGE.json (tying, exchange_forms, reading; the balance and embodiment patterns widened to `.Balanced` and
+       `ArisingEmbodied`); completion.py K3; premises-that-are-states-of-the-law's next_delta met; the goal record's
+       next step.
+```
+
+**What was built.** `Becoming.OverExchange`, a leaf module of the pure core: `World.withRest_acting`, `World.withRest_taking`, `World.withRest_rest_idle` (under balance the rest takes and gives nothing), `World.withRest_some` (the world's relata exchange and stand as in the world), `World.withRest_present`, `World.withRest_start`, `World.ReadOffExchange`, `World.ReadOffExchange.dependent`, `ExchangeRelation.Runs.readOffExchange`, `ExchangeLaw.readWorld_readOffExchange`, `World.takingUnsupported` with `World.takingUnsupported_not_readOff`, and the forms. Every one has an empty axiom report.
+
+**The forms.** Over every world with its rest counted (17): `Flow.Balances.renewedBy`, `Flow.Balances.retains_iff_within_margin`, `Flow.Balances.widens_iff_others_within`, `Flow.Dissipative.opens`, `Flow.More.replenishment_unbounded`, `Flow.restores`, `Flow.unexcluded_beyond_coupling`, `Flow.unselected_beyond_coupling`, `Flow.unselected_beyond_pool`, `Flow.uptake_needs_replenishment`, `GroupEnding.Flow.all_end`, `GroupEnding.Flow.rises_iff_inactive`, `Reproduction.Flow.closed_lineage_lowered`, `Reproduction.Flow.lineage_ends`, `Web.Embodied.replenishes`, `World.comes_to_rest_unrefuted`, `counterfactual_is_course`. Over every two worlds of one kind of relatum (5): `Direction.widening_selected_by_pool`, `Flow.Balances.comparison_within_response`, `Flow.act_selected_by_pool`, `Flow.act_unselected`, `apart_only_downstream`. Over every world read off a relation of exchange (11): `Flow.Balances.consumption_ends_with_feeders`, `Flow.continuing_excludes`, `Flow.outrun_below`, `Flow.selected_le`, `Flow.selection_within`, `Flow.transmitted_supported`, `GroupEnding.Flow.coupled_end_together`, `GroupEnding.Flow.family_childless`, `SelectionTerm.Flow.support_moved_rises`, `SelectionTerm.Flow.support_not_lower`, `Web.Whole.family_excess_ends`. Each central declaration is mapped to its form in `COVERAGE.json` (`premises.exchange_forms`).
+
+**What the reading changes.** With the rest counted, what the world's own relata do not account for is the rest's exchange, and a law naming givers or feeders counts the rest among them where it gives: `consumption_ends_with_feeders`'s feeders include the rest wherever something comes from beyond, and the rest, requiring nothing, is never unsupported, so consumption fed from beyond is not bounded by it. That is the content, not a defect: the law over the world's own relata is the case where the world balances, and there the rest takes and gives nothing (`World.withRest_rest_idle`) and the world's relata are as they were (`World.withRest_some`). Closure is a state of the law (feasibility, `ExchangeLaw.readWorld_closed_iff`); the forms hold whether or not it holds.
+
+**Requirement as response.** Activity needing support is the one tying premise that needs more than counting the rest: requirement read as necessary response of the exchange. `World.ReadOffExchange` names exactly that reading, and K3 lists what meets and fails it. Read as possible response it fails (`ExchangeRelation.free_unsupported`), so the forms of the 11 laws hold of what is read off an exchange with requirement read as what the exchange cannot go on without.
+
+**The check.** `completion.py` gains `exchange_forms`: for each central declaration whose binders take one of the four tying premises, the listed form must be a declaration of the receipt, its binders must take none of the four, and its proof must reach the central declaration; the report lists the forms and what they still take. Two of K3's patterns were too narrow: `w.Balanced` and `ArisingEmbodied` were not found, so `World.comes_to_rest_unrefuted` was reported without balance and embodiment; the patterns now find them (`World.balanced_reidentify_iff`, an equivalence about balance, is now counted as using it, as K3 counts every use). The tying check reads binders only, so a statement about a premise (`Web.roles_dependent`, an equivalence) is not taken as assuming it.
+
+**The internal-relations thesis.** The argument that the determinations the World premises name are internally related moments of one exchange, and its limits, is in [BECOMING-FOUNDATION §9.1](../../../../theories/becoming/chapters/BECOMING-FOUNDATION.md#91-the-passage-from-inclusion-to-relation-argued). In short: four ties hold by what the readings are, the central laws then hold of every world read off an exchange, and what varies is the law, not a relation between separately given items; what this does not reach is that every becoming has a law or relation of exchange of this kind (items 6 and 7) and the warrant of the readings.
+
+**The companion modules, judged.** R32 folded 26 reading modules into the modules they read and kept 19 with reasons ([§223](#223-forwarders-copies-and-reading-modules-r32)). Twelve with a run, trace or frame suffix were left unjudged. By R32's criterion (fold where the module adds no import to its source), each is kept. Folding would add to its law module imports that the module does not otherwise reach: `FrontierFrames` into `Frontier` (Extension, Acceptance), `LearnableRuns` into `Learnable` (Parting, LimitVerification), `FinerTraces` into `Situations` (WeightedTraces), `SeekingRuns` into `Seeking` (Branching, Capture). For seven, the added import itself reaches the law module, so the fold is impossible without a cycle: `ContextualRuns` (ParityReadings), `CounterfactualRuns` (Runs, which reads `Becoming.Reading` above `Counterfactual`), `IdentificationRuns` (LearningRuns, Courses), `LearningRuns` (LearnableRuns, Parting), `RouteTraces` (FormedLoops), `SituationTraces` and `TypicalRuns` (FinerTraces). `ContextArrivalTraces` alone would add only the base `Becoming.Frame` to `Context`; the fold changes no statement and recompiles every module above `Context`, so it is left for the next change to `Context`. None of the twelve is a forwarder: each states laws of its own (6 to 44 theorems). So no companion module only carries laws across the old gap; the gap is closed by definition (R28), and these modules are readings with content of their own, placed where their imports put them.
+
+**What remains of item 1.** Nothing formal beyond which law holds (item 7) and the representation (item 6).
+
+## 365. What discrete steps and whole amounts represent (XL2, XL3)
+
+```text
+Result(s): new record what-discrete-steps-and-whole-amounts-represent; reuses rest-theorem-in-any-amounts (Amounts.EndlessFall, InAmounts.change_stops_iff),
+       least-loss-rest (Dyadic, Halving), where-novelty-gain-comes-from (Web.rises_late_of_new) and the frequency
+       record (Frequency.count, Frequency.SelfLoop.carried_eq, polynomial_iff, carried_doubles_roundTrip); the
+       sampling of Becoming.Sampling and the tower of Becoming.Tower.
+Delta: the goal record asked to settle whether every becoming can be represented with discrete steps and
+       natural-number amounts, on which rest, novelty needing gain and the setting of runaway by frequency depend,
+       and to state the laws with real amounts and continuous time. Settled: discrete steps represent real-valued
+       time exactly for balance, at every reading at instants, coarser steps summing the finer (a tower), and what
+       changes within a step is not shown; whole amounts are not available wherever amounts change by ever smaller
+       amounts; over real amounts rest needs a least fall, novelty needs gain exactly where it is by a least
+       separation, and runaway is set by frequency where the difference is held (every positive real strength) and
+       by strength where it is damped. For a web of several conditions coupled at every step (XL3), its rate (the least
+       norm of a power to the inverse of the power, the spectral radius by Gelfand's formula) decides: what it
+       carries vanishes exactly where the rate is below one and runs away where above one.
+Premises / correspondence: none in the core module; the periphery uses Lean's standard axioms through Mathlib. That
+       an actual becoming's rates are summable, its amounts real and its loops of the module's form is a
+       correspondence.
+Evidence: core receipt 20261022T140546.324820Z (Becoming.WholeAmounts, 7 theorems, empty axiom reports); periphery receipt
+       20261022T121131.390171Z (Representation, 36 theorems in 48 declarations, axioms propext, Quot.sound, Classical.choice only).
+Boundary: the gap between the damped laws where the coupled step's norm exceeds its rate, noise, and
+       real-valued time with rates that are not summable are not treated; the rate at exactly one is left open.
+Output → input: chapter §0 block A and §8.1 item 6 (EN, ZH); COVERAGE.json's natural-number laws gain
+       Web.rises_late_of_new and carried_doubles_roundTrip with their dense counterexamples; the goal record's next
+       step.
+```
+
+**What was built.** In the core, `Becoming.WholeAmounts`: `falls_by_steps`, `not_falls_ever`, `Amounts.no_whole_reading`, `Halving.no_whole_reading`, `Halving.two_pow_lt`, `Halving.new_without_gain`, `Dyadic.half_return`; every one has an empty axiom report. In the periphery, `Representation` over Mathlib: `Course`, `Course.Balances`, `Course.balance_over`, `Course.sample_balances`, `Course.givenOver_coarse`, `Course.takenOver_coarse`, `Oscillation.still_reading`, `no_whole_reading`, `reals_no_whole_reading`, `unit_reading`, `new_without_gain`, `separated_bounded`, `separated_exceeds`, `carried`, `held_carried`, `selfLoop_cast`, `held_polynomial_iff`, `every_carried`, `every_bounded_iff`, `every_vanishes`, and (XL3) `rate`, `rate_bdd`, `rate_le`, `pow_rate_le`, `unbounded_of_one_lt`, `vanishes_iff`, `rate_real`, `every_vanishes_iff`, `webCarried`, `webCarried_eq`, `web_polynomial_iff`, `dampedWeb`, `dampedWeb_eq`, `dampedWeb_vanishes`, `rate_pow_le_norm`, `dampedWeb_unbounded`.
+
+**Discrete steps.** A course in real-valued time whose levels change at the rate given less the rate taken, with rates summable over every stretch, balances over every stretch (the fundamental theorem of calculus), so read at any instants it balances across each step with the amounts summed over the step, and a coarser reading sums the finer: the readings at ever finer instants are a tower, as `Becoming.Tower` builds continuous time in the core. So every such becoming is represented by discrete steps, for balance exactly. What a reading does not show is what changes within a step: `Oscillation.still_reading` stands at nothing at every whole instant and rises to two between them, the analogue for levels of `Becoming.Sampling`'s strobe for activity. Laws of the levels at the instants read hold at every reading; laws about what happens between them are relative to the reading.
+
+**Whole amounts.** Where some amount falls strictly at every step, no reading into the whole numbers keeps the strict falls (`Amounts.no_whole_reading`, in any amounts; the reals in the periphery). So a becoming whose amounts change by ever smaller amounts is not represented in whole numbers keeping its order; amounts in multiples of a unit are (`unit_reading`). The whole-number representation is exactly the representation with a least change.
+
+**The three laws.** Rest: over any amounts it needs exactly that the census's total stop falling, which a least fall gives and an endless fall refutes (`World.InAmounts.change_stops_iff`, unchanged). Novelty: the halving stock is new at every step without gain (`Halving.new_without_gain`, core, and `new_without_gain`, reals), so `Web.rises_late_of_new` needs whole amounts; with a least separation `ε`, finitely many conditions new by `ε` at every step exceed every bound (`separated_exceeds`): novelty needs gain exactly where it is by a least separation. Runaway: a return of strength one half does not double (`Dyadic.half_return`), so `carried_doubles_roundTrip` needs whole strengths; but the held loop carries `D (1 + r) ^ count` for every real strength (the core's self-loop its case, `selfLoop_cast`), and for every positive strength it is bounded by a polynomial exactly where two to the count is (`held_polynomial_iff`): frequency decides, as in whole numbers. Damped with factor `a`, coupling at every step, it stays bounded exactly where `a + r ≤ 1` (`every_bounded_iff`): there strength decides. Whole amounts cannot keep a factor below one, which is why the core's loop is held.
+
+**Several conditions (XL3).** For the step `M = a I + S` of a web of conditions coupled at every step, in any normed ring of such steps (matrices with an operator norm, for example), the rate is the least `‖M ^ k‖ ^ (1 / k)`; Gelfand's formula, cited and not proved here, identifies it with the spectral radius. What the web carries vanishes exactly where the rate is below one (`vanishes_iff`): one power below one in norm bounds every later power by a geometric factor. Above one it runs away (`unbounded_of_one_lt`), each power being at least the rate to that power. One condition's rate is `|a + r|` (`rate_real`), so XL2's damped loop is the web law's case (`every_vanishes_iff`). With several conditions, as with one, the damping and the strengths together decide, not each strength alone. Held and coupling at some steps only, a web carries `(1 + S) ^ count` (`webCarried_eq`): the steps at which it does not couple change nothing, so only how many steps couple matters. Where the rate of `1 + S` is above one, it is bounded by a polynomial exactly where two to the count is (`web_polynomial_iff`), the frequency law of `Becoming.Frequency` for several conditions and real strengths. Damped with factor `a` and coupling at some steps only, a web carries `a ^ (t - count) (a + S) ^ count` (`dampedWeb_eq`): the damping commutes with every step. Where `0 < a < 1`, the coupled step is at most `B ≥ 1` in norm and at most a share `θ` of the steps couple, with `a ^ (1 - θ) B ^ θ < 1`, what it carries vanishes whatever its strength (`dampedWeb_vanishes`): rare couplings are absorbed by damping. Where at least a share `θ` of the steps couple and `a ^ (1 - θ) ρ ^ θ > 1`, `ρ` the rate of `a + S`, it runs away (`dampedWeb_unbounded`): frequent strong couplings outrun the damping. Here frequency and strength trade against the damping, and the two laws meet where `B` is the rate.
+
+**What stays open.** The gap between the two damped laws, where the norm of the coupled step exceeds its rate; the rate exactly one; a law with noise; rates that are not summable.
+
+## 366. What cancer is, and what keeps a part from turning back (CA1)
+
+```text
+Result(s): Becoming.Founding (42 theorems in 77 declarations, a new core module on GroupEnding and
+       Reproduction) states what selection within a whole can and cannot carry. On the base (Founding.Flow): where a
+       family of conditions ran into excess under the coupled gate (Flow.family_excess_ends), every member of a later
+       generation of descent is the offspring of a member that depended on no condition of the family at the gate's
+       need (survivors_independent), and a lineage of a group of the first generation every later member of which
+       depends on the family has no member at any generation after the family's end (confined_ends), both through
+       GroupEnding.Flow.family_childless. Rise names a lineage that selection within goes for while a family runs
+       into excess: at a step before the end an amount marks the lineage there (positive exactly at its members) and
+       offspring number is concordant with it beyond its discordance, a member of the lineage takes from the family
+       during the excess, and the family's renewal is gated on it and runs into excess from a stock below n + m.
+       ConfinedRise extends it by confinement (from T + n on every member of the lineage depends on the family), the
+       conjunction read as cancer; ConfinedRise.ends is confined_ends (the rise's other clauses do not enter): the
+       lineage has no member after T + n, whatever selection within had raised it to. Selection within needs
+       variation: in generations founded uniform at v, exact transmission before t keeps every member at t at v
+       (uniform_until), so nothing is selected within at t for any weight (none_within_until); transmission that
+       raised and lowered nothing is exact (exact_of_none); deciding each earlier step (changed_or_none), wherever
+       offspring number is concordant or discordant with the amount at t, transmission raised or lowered it at some
+       step before t (varied_before). What a founding carries (Nested: generations of wholes, each whole read over its
+       own generations from its founder, founding the next wholes from its members at a span): under Founded (one
+       founder carrying the whole's value; each next founder a member of the whole at the span, carrying what it
+       carries there), what transmission raised and lowered across a generation of wholes is exactly how far the next
+       founders moved from their founder within the whole (raised_carried, lowered_carried), so the mean founding
+       value rises exactly where selection among wholes with that within-whole change as Price's transmission term
+       comes out positive (raises_iff_carried, the Raises of the wholes' generations rewritten); under Sequestered
+       (every next founder carries its founder's value) transmission across generations of wholes is exact
+       (exact_of_sequestered) and the mean founding value rises exactly where selection among wholes goes for it
+       (raises_iff_among, the exact case of Generations.raises_exact_iff); within each whole of a founded reading,
+       selection at a step needs variation arisen within it (varied_within). Witnesses: Body, one body condition at
+       two in excess across the first step, two lineages each marked by its own amount; both meet every clause of
+       Rise (confined_rise, spread_rise, with confined_marks and spread_marks); the confined lineage meets ConfinedRise
+       and ends (confined_ended); the spreading lineage's descendant depends on a condition outside the body
+       (spread_unconfined), and the lineage has a member at the second generation (spread_outlasts), after every part
+       depending on the body has ended (body_ended); it has none from the third, the witness modelling no new whole.
+       Germline: within the first whole a variant not holding back arises from the founder (transmission lowers
+       holding back) and selection within goes against holding back (within_against); among wholes the whole holding
+       back founds the next and the other none (by construction). With the next founder from the line carrying the
+       founder's value the mean founding value rises from a half to one (sequestered_rises: sizes 2 then 1, sums 1
+       then 1); with the next founders from the variants it falls from a half to none although selection among wholes
+       goes for holding back (unsequestered_falls: sums 1 then 0). Record confined-rise-within-a-whole.
+Delta: OPENING [^transitions] said that no law states what keeps a part from turning back; GroupEnding's lineage
+       laws already stated the founding-by-descent half, and this states what a confined rise loses, the founding
+       laws (sequestration as their exact case) and variation after founding, with the boundary case of a lineage
+       whose confinement fails. A new module is a leaf by reason: it reads the levels and ending laws across a whole's
+       foundings, and nothing below it needs it; it generalizes no existing law (board rule 9).
+Premises: for the base laws, balance, only active formations giving, activity needing support, descent, the coupled
+       gate on the family, n steps of the family's excess from a stock below n + m, and, for confined_ends,
+       confinement as a hypothesis; for varied_before, a first generation uniform in the amount; for the founding
+       laws, Founded, and for raises_iff_among, Sequestered. Which family runs into excess, which members depend on
+       it, and how the next founders are drawn are hypotheses wherever they enter.
+Evidence: core receipt 20261022T142108.117415Z (passed; Becoming.Founding every axiom report empty; core 293 modules and 12,894 theorems, instances 7 and 581, applications 6 and 179; 11 Lean steps ran, 1,225 reused); the connectivity
+       rerun (802 of 13,654 apart; the new apart roots registered; register check passes); render, check, links and tests; an independent review by a separate agent (seven must-fix
+       findings, all applied: the rise's selection made to mark the lineage, Rise split from ConfinedRise with the
+       spreading lineage shown a Rise, "goes on" and "falls to none" stated as proved, the exact-transmission premise
+       and the AI label in the OPENING note, and its claim narrowed to two ways that keep a part from turning back).
+Boundary: How parts first come to live as one (the transitions themselves) is not stated: the laws hold of a whole
+       once formed and of its foundings. Removal of parts by the whole's rule (policing in the literature) is not
+       stated. Confinement and the excess are hypotheses; that a given tumour meets the clauses of ConfinedRise is
+       empirical. The rise's drawing clause says the lineage takes from the family during the excess, not that it
+       causes it. The spreading lineage has a member for one generation past the end; a lineage founding a new whole
+       elsewhere is not modelled. Sequestered states an outcome (each next founder carries its founder's value), read
+       as what a germ line set apart gives where it does not vary; germ lines do vary. varied_before reads variation
+       as transmission raising or lowering the amount (Price's transmission term), not as a mechanism of mutation.
+       Nested has one founder per whole; foundings by several parts (the colonial and aggregative routes) are not
+       stated. raises_iff_among states the rise; a fall is the same identity read the other way and is not separately
+       stated. Natural-number amounts, finite lists, discrete generations.
+Output → input: GroupEnding fixed the among-group part by ending and EV11 kept it by descent from uniform founders.
+       Here the two levels meet in one whole: a lineage selected for within the whole and confined to its conditions
+       has no member once they end, so what selection within raised is not carried past them; a whole founded by one
+       part has nothing selected within it until variation arises in it; and where every next founder carries its
+       founder's value, selection among wholes alone decides whether the mean founding value rises. These are known
+       results (Price 1970, 1972; Buss 1987; Grosberg and Strathmann 1998; Michod 1999; Michod and Roze 2001; on
+       cancer, Aktipis et al. 2015; on transmissible cancers, Metzger et al. 2015) restated with the flow. OPENING
+       [^transitions] now cites them. Next: wholes founded by several parts (aggregation, assortment below one with
+       EV12), removal of parts by the whole's rule on Regulation, and how parts first come to live as one.
+```
+
+The kit is [`development/ca1-founding/`](development/ca1-founding/): the module (`tree/`), its joining (`integrate.py`), this landing's text (`apply_text.py`, `study_ca1.txt`), record (`make_record.py`), apart roots (`apart.py`), re-pointing (`repoint.sh`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Survivors.** A member of generation `T + n + k + 1` is an offspring of some member `p` of generation `T + n + k` (`mem_flatMap_iff`); were `p` to depend on a condition of the family at need `m`, `family_childless` would make its descent across that step impossible.
+- **Confined.** The same for a member of the lineage: its parent is in the lineage at `T + n + k`, hence in the generation (`lineage_within`), and depends on the family by confinement; so the lineage at `T + n + k + 1` has no member and is empty (`nil_of_none`).
+- **Uniform until.** By induction on `t`: a member at `t + 1` is an offspring of a member at `t`, exact transmission gives it its parent's value, which is `v`. Uniform amounts make `concord` and `discord` zero (`concord_alike`, `discord_alike`).
+- **Exact of none.** Each `excess (b k) (a p)` and `excess (a p) (b k)` is at most its total (`le_total_of_mem`), hence zero; `le_of_excess_zero` both ways gives `b k = a p`.
+- **Varied before.** `changed_or_none` decides, step by step from 0, whether `raisedAt s` and `loweredAt s` are zero (`Nat.decEq`); where all are, every step before `t` is exact and `none_within_until` contradicts the selection at `t`.
+- **Carried.** `raisedAt t` is `total (family t) fun f => total (kids t f) fun k => excess (amount (t+1) k) (amount t f)`; `Founded` rewrites `amount (t+1) k` to the soma's value at the span and `amount t f` to the founder's (`total_eq_of_mem`, twice).
+- **Witnesses.** `Body`: levels body 2 then 0, outside 1, each offspring 0 then 1; `need f c = ofBody f · 2 · atBody c + beyond f · atOutside c`, `requires` is a positive need; both founders take one unit of the body at step 0; balance, acting and dependence by cases; the generations `generationsBy mark` share the kids and differ in the mark (`ofConfined`, `ofSpread`), so `descended` holds for both. `Germline`: holding back 1 at the founder, germ and germ₂, 0 elsewhere; within the first whole the founder leaves germ and variant, germ one offspring and variant two; next wholes at span 2.
+
+**Self-review.** The base laws are compositions of `family_childless` with lineages, and what they add is the reading: the end of a family of conditions is the horizon of every lineage confined to it, whatever selection within had done, and only lineages with a member independent of the family go past it. `Body` shows the confinement premise does real work: both lineages are rises on one body, and among what the base leaves free they differ only in where one descendant's need lies. The founding laws are Price's equation one level up with the transmission term read through the whole (the transmission bias that within-organism selection enters; Michod 1999); sequestration makes it vanish, and `raises_iff_among` is then the exact case of the selection term. `varied_before` is the counting form of "no within-group selection without within-group variation", with the bottleneck as the uniform founding. None of this says that every tumour meets the clauses, that wholes formed by aggregation behave alike, that a whole's removal of parts keeps them from turning back, or how a transition starts.
+
+## 367. The valuer tests as theorems (VT1)
+
+Asked on 22 October 2026 whether formal proof can reach what the valuer tests VD1 and VD2 aimed at (§297, §330; chapter thesis T5). Those tests mostly checked consistency properties that the mathematics fixes once its premises hold, on AI personas whose judgments under standpoint prompts are role-play. This section proves the mathematical part and names the premises that are left; whether actual valuers meet them stays empirical. The literature check is the significance review's [valuer-theorems check](BECOMING-SIGNIFICANCE-REVIEW.md#valuer-theorems-check).
+
+```text
+Result(s): new records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it; reuses and
+       re-derives widening-as-what-every-weighting-ranks (weighed_lt_of_widens, outweighs, neutral_ranks_by_number
+       now cases of the new laws).
+Delta: (1) the exception. Two courses compare under any weights as what each admits beyond the other
+       (Weighting.beyond, weighed_split, weighed_lt_iff_beyond). A net weighting counts each item for a course
+       that admits it and against it (Weighting.ranksNet); it ranks a widening higher where every added item weighs
+       above zero (ranksNet_lt_of_widens; weighed_lt_of_widens is its case with nothing against), and a widening by
+       one item alone (WidensBy) as that item weighs, whatever else is kept (ranksNet_widensBy; zero ties,
+       ranksNet_ties), so its increment's sign at an item is context-free (IncrementIs, ranksNet_increment_alike).
+       A ranking of presentations reads the sets on a pair where it ranks them as an order on the kept courses does
+       (ReadsSetsOn, ReadsSets). Read right, an order increasing at the added item never ranks the narrowing above
+       (reads_increasingAt); under a net weighting a narrowing above its widening by one item is a pair not read
+       right or an item weighing at zero or below (narrower_above_net), and read right it occurs exactly where the
+       item weighs below zero (reads_ranksNet); read right everywhere with every item above zero, no widening by
+       any number of items is ranked below (reads_ranksNet_widens). A sign measured apart fixes the right-read
+       verdict exactly where it is the sign of the increment in the pair's context (reads_increment).
+       (2) the locus. Where every two weights stand within n/d (RatioWithin), every positive weighting ranks a above
+       b exactly where n q < d p, p and q the numbers of items each alone admits (ranks_past_ratio,
+       every_within_iff, via beyond_within); the weighting tilted toward b (tilted) decides the boundary and ties on
+       it (tilted_lt_iff, tilted_ties); some weighting within the ratio reverses exactly where d p < n q
+       (some_within_reverses_iff), so two disagree exactly where d q < n p and d p < n q (opposite_within_iff).
+       outweighs is the case n = length + 1, d = 1; neutral_ranks_by_number the case n = d = 1
+       (const_lt_iff_beyond). The direct proofs of the three earlier laws went (rule 9), with the witness
+       outweighing and its four lemmas.
+Supplied premises / correspondence: finite listing, two-valued admission, natural weights (a net weighting as two
+       per item, for and against); a presentation reduced to the course it keeps. The three premises T5 now rests
+       on: presentation invariance (ReadsSetsOn), the link of a sign measured apart to the joint increment (the
+       hypothesis of reads_increment), weight dispersion (RatioWithin). Correspondence: Tversky and Kahneman 1986;
+       Debreu 1960; Keeney and Raiffa 1976; Hsee 1996; Einhorn and Hogarth 1975; Dawes 1979; Kirkwood and Sarin
+       1985; Salo and Hämäläinen 1992; Greco, Mousseau and Słowiński 2008.
+Evidence: Becoming.Weightings; core receipt 20261022T143810.042893Z, empty axiom reports.
+Boundary: a framing alone produces a violation with the item weighing above zero (Framed.framing_alone), so not
+       reading the pair is a cause by itself, not a sign of one; in Interacting adding an item raises a course
+       keeping nothing and lowers one keeping the other item, so the sign measured alone is not the joint sign, and
+       no net weighting gives that order (Interacting.increment_differs, Interacting.not_net). The converse of the
+       exception fails: a ranking not reading the sets need not violate. Several added items need additivity (or
+       transitivity, not treated). The locus says which weightings can disagree, not how many do: no probability
+       over weights is stated.
+Output → input: chapter T5's claim, standing, forbids and refuted-by (EN, ZH) and the relation-to-known-results row;
+       THE-STEP-OF-INVARIANCE §5; OPENING [^good-evil]; the valuer-agreement README; the record table.
+```
+
+**What was built.** In `Becoming.Weightings`, before the class laws: `beyond`, `size`, `term_split`, `and_swap`, `weighed_split`, `weighed_shared`, `weighed_split_right`, `weighed_lt_iff_beyond`, `weighed_le_iff_beyond`, `beyond_term_zero`, `weighed_beyond_of_includes`; the net weightings `ranksNet`, `ranksNet_iff_beyond`, `beyond_lt`, `ranksNet_lt_of_widens`, `weighed_zero`, `WidensBy`, `widensOn_of_widensBy`, `weighed_widensBy`, `size_widensBy_pos`, `ranksNet_widensBy`, `ranksNet_ties`, `IncreasingAt`, `ranksNet_increasingAt`, `IncrementIs`, `increment_transfer`, `ranksNet_increment_alike`; the presentations `ReadsSetsOn`, `ReadsSets`, `reads_increasingAt`, `narrower_above_net`, `reads_ranksNet`, `reads_ranksNet_widens`, `reads_increment_of`, `reads_increment`; the ratio laws `RatioWithin`, `weighed_scale`, `beyond_within`, `weighed_pos_of_size`, `weighed_zero_of_size`, `ranks_past_ratio`, `ranks_le_past_ratio`, `tilted`, `tilted_positive`, `tilted_within`, `weighed_tilted_beyond`, `weighed_tilted_toward`, `tilted_lt_iff`, `tilted_gt_iff`, `tilted_ties`, `every_within_iff`, `some_within_reverses_iff`, `opposite_within_iff`, `const_lt_iff_beyond`, `size_le_length`, `size_pos_of_exceeds`; and the witnesses `Framed` and `Interacting`. `weighed_lt_of_widens`, `outweighs` and `neutral_ranks_by_number` keep their statements and are derived; `outweighing`, `cond_pos`, `outweighing_positive`, `outweighing_term_le_one` and `outweighing_term_at` are gone. The module has 146 theorems in 199 declarations (81 in 116 before). Rewriting with an iff inserts `propext`, so the proofs chain iffs with `Iff.trans` and rewrite only with equations; `Nat.mul_assoc` is replaced by the prelude's `mul_assoc_nat`.
+
+**The exception, exactly.** The parent question asked for an iff: a narrowing above its widening exactly when (a) the ranking is not presentation-invariant on the pair or (b) its order on sets is not increasing at the added item. As an iff that is false in one direction and was proved in the form that is true. The direction from a violation to (a) or (b) holds, constructively for a net weighting (`narrower_above_net`: the disjunction is decided by comparing the item's two weights) and as its contrapositive for any order (`reads_increasingAt`). The direction from (a) to a violation fails: a ranking that does not read the sets may favour the wider plan. What is exact is the case without (a): read right, the violation occurs exactly where the item weighs below zero, and at zero the plans tie (`reads_ranksNet`, `ranksNet_ties`), which is the strictness the question asked for. Each cause suffices alone (`Framed`; a weight below zero read right). "Its order on sets" has to be given independently of the ranking: an order read off the ranking itself, over all presentations, would make (b) fail whenever a violation occurs, which says nothing. So the order is the valuer's valuation of courses, measured apart (in a transparent presentation, or through its signs), and (a) is whether the ranking of this pair agrees with it.
+
+**The separate–joint premise.** VD2's sign was a separate evaluation, its ranking a joint one. `reads_increment` states the one premise that links them: the sign measured apart is the sign of the order's increment from the narrower course to the wider in that pair's context. For an additive valuation that holds in every context once it holds in one (`ranksNet_increment_alike`); this is preferential independence for two-valued attributes. `Interacting` shows it is a premise: the ending of `true` is a loss alone and a gain beside `false`, so a valuer reading the sets exactly ranks the narrowing above while its separate sign says loss. Read on VD2: X1s and X2 passing say the link held where the sign was strongly positive; X3 failing (a gain not acted on) says it did not hold for gains, which Hsee's evaluability account predicts where an item is hard to evaluate alone.
+
+**The locus, exactly.** For the side keeping `p` formations the other does not against `q`, every positive weighting within `n / d` ranks it higher exactly where `n q < d p`; the proof counts each pair of an item of each side once (`beyond_within`: `d B p ≤ n q A`), and the tilted weighting attains the bound. With `k = p − q` the threshold is `k > (r − 1) q`, `r = n / d`: it depends on what the smaller side alone keeps, not on what the two share. Read on VD1 after the run: M1 keeps 2 : 1, M2 3 : 1, M0 1 : 1, so weightings within twofold agree on M1 and M2 and only M0 is open to them; VD1's mean disagreement was 0.27 on M0, 0.10 on M1 and 0.08 on M2, in the order of the thresholds, and the larger plan was chosen in 86% and 90% of M1 and M2 judgments. The locus prediction failed because it was made without a premise on dispersion, not because structure does not bound where disagreement falls.
+
+**Self-review.** (1) Every iff is two-sided as stated: `every_within_iff` and `some_within_reverses_iff` need `0 < d ≤ n` (a ratio below one admits no positive weighting on a non-empty listing, and the universal statement is then vacuous); `ranks_le_past_ratio` needs `0 < n`. (2) `p` and `q` count the listing's repetitions, as `weighed` does; on a listing without repetition they are the numbers of formations. (3) The presentation laws reduce a presentation to the course it keeps; wording and order enter only through the ranking, so a misread and a framing are the same failure here, a ranking not agreeing with the order on the pair. The tests could tell them apart only through each judgment's own reading lists. (4) The laws use no ethical predicate: a weight below zero, a framing and dispersion are structure. That the impartial order is C, and that widening is better, stay premises. (5) What is new is the joining, not the mathematics: invariance and dominance, preferential independence, unit weights and dominance under ratio bounds are each known (the review's table). (6) Not done: the probabilistic form over exchangeable weights (the share of valuers who disagree as a function of dispersion), which would be a periphery module with its axioms reported; and several added items for orders neither additive nor transitive.
+
+## 368. Selection in the draw, mutation, the breeding value, and dependences formed from drawing (EV13-EV16)
+
+```text
+Result(s): Becoming.Drift (82 theorems (46 before), 43 declarations added (36 theorems), none removed) states selection in the draw. Among M + 1 members, replacement one at a time,
+       reading only the steps that change the count: from a mixed population up with weight a, down with b, a
+       population of one kind staying (Replacement.value, its histories counted step by step; value_add, value_mul,
+       value_le, value_congr, value_const, value_stays, value_comp). The potential with steps b^j a^(M - j)
+       (rise, potential) is harmonic for the steps, a times a step being b times the one below (rise_step,
+       potential_harmonic), so it keeps its weighted value over any number of steps (value_potential). The
+       histories fixing the first kind weigh, times the potential at the top, at most (a + b)^k times the potential
+       at the start, and with the histories still varied at least that (fixation_bounds); within M + 1 steps the
+       histories climbing straight up weigh at least a^(M + 1) (climbs), so the varied ones weigh at most r^m after m
+       rounds, r + a^(M + 1) = (a + b)^(M + 1) (varied_step, varied_vanishes), and the fixation share tends to the
+       potential at the start over the potential at the top (fixation). With a = b the share is the starting share
+       (rise_neutral, potential_neutral, neutral_share); with b <= a at least it (rise_antitone, potential_above,
+       potential_from, favoured_share); with b < a strictly above it from every mixed start (favoured_share_above).
+       From i the histories losing the favoured kind weigh at least b^i times every later history (lost_ge).
+       Witness Favoured.two_members (share two of three from one of two).
+       Becoming.Reproduction (114 theorems (66 before), 67 declarations added (48 theorems), none removed) states mutation. Carriers each leave k offspring that carry the amount and m
+       that do not, the others w, none carrying it: from c carriers and d others the share, cross-multiplied,
+       rises exactly where d k exceeds c m + d w, is kept where they are equal and falls where d k falls short
+       (Mutation.step_balance, rises_iff, kept_iff, falls_iff); where k <= w it never rises and with any loss
+       falls at every step (never_rises, falls_of_outrun); where k = w + s it is kept exactly at s / (s + m)
+       (kept_share), and a run at or below that balance stays at or below it with the share never falling, one
+       above staying above (run, below_stays, below_always, not_falls_below, above_stays, above_always). Read as
+       generations of descent (Mutation.generations), transmission lowers the amount by c m and raises nothing
+       (lowered_count; size_first, sum_first, size_next, sum_next), and the step is balanced exactly where the
+       count balance holds (balanced_iff). Witness Threshold.at_threshold.
+       Becoming.Reproduction also states the breeding value (EV15). The counted covariance is linear in the amount
+       (Breeding.covPair, covariance_add, excess_mul, concord_mul, discord_mul, covPair_const, combine,
+       covPair_combine, read through Integers.Same). A breeding value g combines carried amounts with natural
+       coefficients on each side and a base (Combination) and reproduces, d times, offspring number's covariation
+       with each (Normal, the normal equations with denominators cleared); then d times its covariation with
+       offspring number is its own spread (breeding_balance), at most d^2 times offspring number's
+       (additive_part_le: the additive part at most the whole), one carried amount its case (one_amount), and with
+       exact transmission d times the cross-multiplied rise of its mean is that spread (response, response_rises_iff):
+       Fisher's fundamental theorem with breeding values. Witnesses Additive.additive (the additive part the whole)
+       and Interaction.interaction (offspring number the product of two amounts: 32 against 48).
+       Becoming.Transmission (88 theorems (69 before), 21 declarations added (19 theorems), none removed) states dependences formed by descent where depending and drawing part at
+       the giver (EV16). At a descent where the descendant depends on c, the giver's holding alone decides
+       inheritance against forming anew (Web.inheritsAt_iff_held; the four cases, Web.four_cases,
+       Web.formsAnew_iff_drawn_or_neither); under the reading of drawing at the descent (Web.DependsOnDrawnAt) the
+       case of neither held nor drawn is excluded (DependsOnDrawnAt.not_undrawn) and a dependence forms anew exactly
+       where the giver drew on c without depending on it (Web.formsAnew_iff_drawn_unheld); with drawing depending,
+       only the case of neither is left (Web.formsAnew_iff_neither), and with both nothing forms anew
+       (DependsOnDrawnAt.not_formsAnew, Flow.DependsOnDrawn.none_formsAnew). For the flow, the reading of drawing is
+       passing on what is drawn with forming from drawing (Flow.FormsFromDrawn, Flow.dependsOnDrawn_iff_split,
+       Flow.Inherits.formsFromDrawn), and under balance a relatum coming to stand depends only on what some giver drew
+       on (Flow.drawn_by_giver, Flow.formed_from_drawing, Flow.no_dependence_undrawn). Witnesses
+       World.droppedHatch_formed (formed from drawing), World.novel_formed_undrawn (formed from nothing drawn, the
+       reading failing), TwoGivers.passed_undrawn (passed on without drawing). Records fixation-with-selection, mutation-and-the-balance-it-sets, the-breeding-value,
+       dependence-formed-from-drawing.
+Delta: the evolution chapter's next connections 2 and 3 left open drift and selection in one draw, mutation read
+       through the transmission term, several carried amounts at once and Fisher's identity; chapter section 8.1 item
+       9 left open how dependences form where depending and drawing part at the givers. All are stated. No new
+       module: the replacement chain lies in Becoming.Drift, mutation and the breeding value in Becoming.Reproduction
+       (which now imports Becoming.Integers for its difference pairs), the forming law in Becoming.Transmission (board
+       rule 9).
+Premises: for selection in the draw, two kinds, replacement one at a time with constant natural-number weights a and b
+       (the common factor i (M + 1 - i) of the one-birth-one-death chain dropped, only the steps that change the
+       count read), no mutation; for mutation, two kinds, loss in one direction only, constant offspring numbers; for
+       the breeding value, an amount combining the carried amounts satisfying the scaled normal equations (its
+       existence, the solving of the normal equations, is given, not constructed); for the forming law, the reading of
+       drawing at the descent as a hypothesis, and balance for the flow laws.
+Evidence: core receipt 20261022T145016.701975Z (passed; Becoming.Drift, Becoming.Reproduction and Becoming.Transmission every
+       axiom report empty;
+       core 293 modules and 13,062 theorems, instances 7 and 581, applications 6 and 179; 26 Lean steps ran, 1,210 reused); the connectivity rerun (913 of 13,822 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: selection in the draw is stated for replacement one at a time; for sampled generations (Wright-Fisher with
+       selection) the fixation share has no closed count and is not stated. Mutation is one-way and without drift:
+       back mutation, mutation with drift (the balance of mutation and drift) and the stationary weights of a run
+       with both are not stated. The breeding value is any solution of the normal equations; that one exists with
+       natural coefficients after clearing denominators is not proved here. The forming law says where a new
+       dependence comes from, not why a descendant comes to depend on what its giver drew on. Natural-number weights
+       and counts, discrete steps.
+Output → input: EV9 gave drift alone fixing each kind with its starting share. With selection in the draw the potential
+       replaces the count as what the weighted histories keep, so the fixation share moves off the starting share
+       exactly as far as the potential bends: up for the favoured kind, and never to certainty, the favoured kind
+       lost with weight at least b^i. Mutation enters as the transmission term of Price's equation: the carriers'
+       advantage must outrun what mutation takes from them, else they decline whatever their share, the error
+       threshold. The breeding value turns the additive part into an equality: the spread of the best additive
+       predictor is its covariation with offspring number, so Fisher's theorem is Price's equation read on that
+       predictor, and an interacting offspring number leaves a part no combination carries. And dependences formed by
+       descent are drawing become depending: what a giver drew on without depending on it is where its descendant's
+       new dependence comes from. Next: mutation both ways and with drift; selection in sampled generations; why
+       drawing becomes depending.
+```
+
+The kit is [`development/ev13-ev16-draw-mutation-breeding-forming/`](development/ev13-ev16-draw-mutation-breeding-forming/): the modules as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev13.txt`), records (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Harmonic potential.** With `d_j = b^j a^(M−j)` for `j ≤ M` and nothing beyond, `a·d_{j+1} = b·d_j` for `j < M`; for `0 < i ≤ M`, `a·h(i+1) + b·h(i−1) = a·h(i) + a·d_i + b·h(i−1) = a·h(i) + b·d_{i−1} + b·h(i−1) = (a+b)·h(i)`.
+- **Bounds.** `h(N)·[N ≤ j] ≤ h(j)` and `h(j) ≤ h(N)·([N ≤ j] + [0 < j < N])` (the potential stays at `h(N)` beyond the top and is `0` at `0`), read through `value_le` and `value_potential`.
+- **Vanishing.** From a mixed `j`, `M + 1` steps up reach and stay at the top with weight at least `a^{M+1}`; the partition of every history into fixed, lost and varied gives `V(M+1, j) + a^{M+1} ≤ (a+b)^{M+1}`; composition (`value_comp`) gives `V((M+1)(m+1), i) ≤ r·V((M+1)m, i)`.
+- **Against the starting share.** With steps not growing, `h(i+t) ≤ h(i) + t·d_i` and `i·d_i ≤ h(i)`, so `i·h(i+t) ≤ (i+t)·h(i)`; with `b < a`, `d_1 < d_0`, and `h(j+1) ≥ d_0 + j·d_{j+1} > (j+1)·d_{j+1}`.
+- **Mutation.** `c'·(c+d) + c·(c m + d w) = c·(c' + d') + c·(d k)` with `c' = c k`, `d' = c m + d w`; the next generation's two sides share `c k m`, and differ by `w` times this generation's.
+- **Breeding value.** The counted covariance as a difference pair (`Integers.Same`) is linear in the amount; with `g` a two-sided combination, `Cov(·, g)` is the coefficients' combination of `Cov(·, z)`, and the normal equations turn `Cov(g, g)` into `d · Cov(w, g)`. Counted Cauchy–Schwarz (`additive_le`) then gives `Var(g)² ≤ d²·Var(w)·Var(g)`.
+- **Forming.** At a descent with the descendant depending on `c`, inheritance is the giver's holding and forming anew its not holding; the reading of drawing makes drawing necessary, which removes the case of neither.
+
+**Self-review.** Both are known: the Moran fixation probability with selection, `(1 − (b/a)^i)/(1 − (b/a)^N)` (Moran 1958; the harmonic-function argument is standard for birth–death chains), and mutation–selection balance with the error threshold (Haldane 1927; Eigen 1971), all from memory and not reread. What is stated here is each in counts, axiom-free: the fixation share as a limit of weighted histories with explicit bounds (the potential's ratio is the Moran formula with denominators cleared), and the balance read as Price's balance, so mutation is the transmission term the selection term's course already carries. The replacement chain reads only the steps that change the count; that the common factor `i·(N−i)` drops is stated, not proved from a fuller one-birth-one-death chain. Wright–Fisher with selection and mutation with drift stay open. The breeding value and Fisher's fundamental theorem with breeding values are standard (Fisher 1930; Price 1972 read it through the covariance), here in counts with the normal equations as a premise. The forming law is short once the cases are set out; its content is the split of the reading of drawing into passing on what is drawn and forming from drawing. EV15 and EV16 were proved by subagents of this session from a written specification, then reviewed and rebuilt here.
+
+## 369. Requirement as the weakest sound reading, laws with noise, and a web of rate one (XL4)
+
+```text
+Result(s): new records requirement-is-the-weakest-sound-reading and laws-with-noise; what-discrete-steps-and-whole-
+       amounts-represent gains the rate-one law; central-laws-over-every-exchange's warrant note restated.
+Delta: XL1-XL3 left three items open. (1) The warrant of reading requirement as necessary response: now
+       necessary response is the weakest reading of requirement that does not read the current level of what is
+       required and under which activity needs support on every run (respondsBelow_weakest), and possible
+       response is not sound (mayRespond_not_supports), so the warrant reduces to locality. (2) Laws with noise: a
+       law whose exchange also reads a noise is a relation of exchange and every realization's course a run of it
+       (NoisyLaw.course_runs, NoisyLaw.readOffExchange), so the laws over relations of exchange hold path by path;
+       balance passes to the expectation (expected_balance) and rest does not (RandomEnd.rest_not_in_expectation).
+       (3) A web of rate exactly one: rate at most one is growth below every exponential (subexponential, through
+       rate_smul), and the rate does not decide boundedness: the identity is bounded with rate one (rate_one) and
+       the shear, the dual number 1 + ε, carries 1 + n with rate one (shear_rate).
+Premises / correspondence: none in the core declarations; the periphery uses Lean's standard axioms through
+       Mathlib (TrivSqZeroExt's L1 normed ring, Bochner integrals, geometric series).
+Evidence: core receipt 20261022T151214.034215Z (Becoming.OverExchange, 57 declarations, empty axiom reports); periphery
+       receipt 20261022T151119.678274Z (Representation, 47 theorems in 62 declarations).
+Boundary: locality of requirement is argued, not proved; the noise is a value read at each step, so laws that read
+       a distribution of exchanges rather than a realization are not stated; the gap between the damped laws where
+       a coupled step's norm exceeds its rate stays.
+Output → input: chapter §0 block C, §8.1 items 6 and 7, §8.5, §8.9 (EN, ZH); BECOMING-FOUNDATION §9.1 (2) (EN, ZH);
+       goal record next step.
+```
+
+**What was built.** In `Becoming.OverExchange`: `ExchangeRelation.Local`, `ExchangeRelation.Supports`, `ExchangeRelation.mayRespond_not_supports`, `ExchangeRelation.respondsBelow_local`, `ExchangeRelation.respondsBelow_supports`, `ExchangeRelation.respondsBelow_weakest`, `NoisyLaw`, `NoisyLaw.course_runs`, `NoisyLaw.readOffExchange`, `NoisyLaw.realize`, `NoisyLaw.relation`; empty axiom reports. In `Representation`: `rate_nonneg`, `rate_one`, `rate_smul`, `shear`, `shear_pow_norm`, `shear_rate`, `subexponential`, `RandomEnd.expected`, `RandomEnd.level`, `RandomEnd.rest_not_in_expectation`, `RandomEnd.rests`, `RandomEnd.summable_weighted`, `RandomEnd.weight`, `expected_balance`.
+
+**The warrant of requirement.** A reading of requirement, a relation between a history, a step, a formation, a condition and a need, is *sound* over a relation of exchange where, whenever it holds and an open exchange has the formation exchange, the condition stands at the need; and *local* where changing only the required condition's level at that step does not change it. Necessary response is both. Every sound, local reading implies it: given the reading at a history, change the condition's level alone to below the need; locality keeps the reading, so an open exchange having the formation exchange there would contradict soundness. So necessary response is the weakest reading under which activity needs support that does not read whether the requirement is met, and possible response, which is not sound, is not a candidate. What is left to warrant is locality, argued in [BECOMING-FOUNDATION §9.1](../../../../theories/becoming/chapters/BECOMING-FOUNDATION.md#91-the-passage-from-inclusion-to-relation-argued): a requirement read off the current level would make being required depend on being met, and requirement is a counterfactual of the law (`ExchangeLaw.requirement_beyond_course`).
+
+**Noise.** `NoisyLaw` reads a noise value at each step; its relation opens the exchanges some noise value gives. Along each realization the law is a law of exchange (`NoisyLaw.realize`) whose course is a run of the relation, so every form of `World.ReadOffExchange` holds of it, with requirement read as necessary response over every noise value: a formation requires a condition where no noise value lets it exchange with the condition below the need. Balance is linear and passes to the expectation over any distribution of the noise with integrable amounts. Rest is not: a condition standing at one until a random step, the step `ω` having weight one half to the power `ω + 1`, rests along every realization, while its expected level is one half to the power `t` and falls at every step. Laws that state that something stops, ends or rests hold path by path, not of the expectation.
+
+**Rate one.** For the step of a web in a normed algebra over the reals, the rate of `c M` is `|c|` times the rate of `M`, so where the rate is at most one, the web scaled by `1 / r` for any `r > 1` has rate below one and vanishes: `‖M ^ n‖ / r ^ n → 0`. The identity has rate one and stays at one; the dual number `1 + ε` (two conditions, the second held and passed whole to the first) has `‖(1 + ε) ^ n‖ = 1 + n`, unbounded, and rate one, the infimum of `(k + 2) ^ (1 / (k + 1))`. So at rate one the growth is below every exponential and boundedness is not decided by the rate.

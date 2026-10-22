@@ -91,6 +91,7 @@ Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流�
 - 22 October 2026, SG15: capacities limiting a draw are stated in part (record drawers-in-turn-within-capacities, study section 329); zero_of_le_sub now reads eq_of_sub_le_sub. Its laws are unchanged.
 - 22 October 2026, SG17: more than two drawers in turn stated (record any-number-of-drawers-in-turn, study section 332); step_ends, ends_at, perfect_ends and perfect_levels now cited in their general form, the Many laws of which these two drawers are the case; the statements of its laws are unchanged.
 - 22 October 2026, UM: superseded by drawers-in-turn, one model of drawers in turn on one law of best response, of which these laws are cases; the Lean they cited was replaced, and is kept as provenance in the receipt copy experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean (study section 335). The claim is unchanged.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 

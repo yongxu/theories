@@ -1,0 +1,36 @@
+## {N}. Balance from conservation along a relation (FL2)
+
+```text
+Result(s): balance-from-conservation-along-a-relation (new); reused: Flow.Balances, Flow.BalancesOn, Prelude total
+           and Distinct, Dissipation.total_eq_zero; related: balance-from-the-first-law (§348), premises-read-off-the-
+           exchange
+Delta: FL1 grounded balance in the first law with locality, but stated locality as a property of transfers
+       (LocalBalance assumes each exchange carries a definite transfer). Here the transfers are derived. Over finitely
+       many relata, with the relation a computable test: transfers moving only between adjacent relata that balance a
+       step exist exactly where the total is conserved on every family the relation closes (Continuity.balancing_iff),
+       the transfers computed one relatum at a time (Continuity.route, Continuity.route_balancing); a law whose next
+       level at a relatum reads only it and the relata adjacent to it and that conserves the total from every
+       configuration conserves it on every closed family (Continuity.conservedOn_of_law), so each of its runs
+       balances along the relation (Continuity.balancesOn_of_law). Teleport: swapping two levels conserves the total
+       and balances along the full relation, not along the empty one (Continuity.Teleport.no_transfers_apart,
+       Continuity.Teleport.balanced_together).
+Supplied premises / correspondence: finitely many relata listed without repetition; equality of relata decided and
+       the relation a Bool test; levels whole numbers; for the law, conservation from every configuration, the one with
+       nothing anywhere included
+Evidence: core module Becoming.Continuity, {THEOREMS} theorems in {DECLS} declarations, empty axiom reports; core
+          receipt `{RECEIPT}` ({CORE_LINE}); connectivity: {APART}
+Boundary: the transfers depend on the whole configuration (no local flux); a transfer may exceed what stands on its
+          source; infinitely many relata; a relation that is not decided
+Integration: balance-from-the-first-law related; chapter premise card C, §8.7's balance bullet, the relation to known
+          results and §9 (EN, ZH); significance review, continuity check
+```
+
+The question left by §348 was whether balance could be more than a premise about transfers. FL1 derived it from the first law with locality, but `LocalBalance` already assumes that what leaves a store is carried by one transfer per exchange. Given only the levels before and after a step and a relation among the relata, are there transfers along the relation that account for every change, and when?
+
+**The answer is conservation on every closed family.** Read a family as a test on the relata. A family is closed when no two adjacent relata lie one inside it and one outside. If transfers move only between adjacent relata and balance the step, the total on a closed family changes only by what crosses its boundary, and nothing does: `conserved_of_balancing`, by swapping the double sum of what moves inside the family. Conversely, where every closed family keeps its total, `route` builds the transfers. It removes the first listed relatum `x`, exchanges `x`'s change with the first relatum `y` adjacent to it (`y` sends `next x - prev x` to `x`, `x` sends `prev x - next x` to `y`, one of them zero), and routes the rest with two neighbours of `x` taken as adjacent; a move between two relata that were adjacent only through `x` is passed through `x`, which receives and sends the same amount. The family condition passes to the smaller problem because a family closed once `x` is removed, extended to `x` by its value at `y`, is closed before (`conservedOn_rest`); where `x` has no neighbour, `{x}` is itself closed and keeps its level (`kept_alone`). The construction is a function, not an existence claim, so it gives transfers at every step of a run with no choice principle, and every declaration has an empty axiom report.
+
+**Where locality enters.** The equivalence uses no property of a law, only of a step. Locality enters through `conservedOn_of_law`: if the law's next level at a relatum reads only that relatum and its neighbours, and the law conserves the total from every configuration, then on a closed family it conserves the total too. From the configuration with nothing anywhere, conservation gives nothing anywhere; from the part of any configuration on a closed family, the law gives on the family what it gives from the whole (the family's relata read only the family) and outside it what it gives from nothing. So a local law that conserves its total balances every run along the relation it reads. FL1's Teleport fails exactly here: along the empty relation the family of `true` alone is closed and the swap moves its unit out, so no transfers along that relation balance it; along the relation the swap actually reads, they do.
+
+**Literature.** A flow on a finite graph with a prescribed divergence exists exactly where the divergence sums to zero on each connected component; that is the network-flow fact behind `balancing_iff`, here stated with the spine's families and computed. For cellular automata on lattices more is known: a globally conserved additive quantity has a flux that depends only on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and in two (Kari and Taati 2008). Neither the locality of the flux nor a displacement bounded by occupancy is shown here; `route` depends on the whole configuration, and a move may exceed what stands on its source within the step.
+
+**What it does not do.** It does not make balance a theorem of every dynamics: conservation on closed families is the content, and it fails where a law creates or destroys the quantity. It covers finitely many relata with a decided relation; an infinite world needs totals that the core does not state, and the local flux of the lattice literature is the next step.

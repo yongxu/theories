@@ -75,12 +75,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T113206.066061Z）：Becoming.Exclusion 的声明（含此处各项）公理报告为空；检查器并核对核心纯净。在 CG2 中以学习者检验（experiments/commons-outrun，预测在任何学习运行之前冻结于 8a049b4fb；判定见其 README 与研究第 250 节）。文献核查见显著性审查。一个会话；未经独立审查。"
   },
   "next_delta": {
-    "en": "A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist; an independent review.",
-    "zh": "随机形式（其余者在读取之前超出的概率，由余量与最大期望更新给出）；两者都是均衡时学习者到达哪一个；独立审查。"
+    "en": "A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist, now known to depend on the learner (EM1: learners that generalize reached restraint where tabular learners did not); a frozen test with every training episode starting at step 0; an independent review.",
+    "zh": "随机形式（其余者在读取之前超出的概率，由余量与最大期望更新给出）；两者都是均衡时学习者到达哪一个，今知其依学习者而定（EM1：跨状态推广之学习者于表格学习者不能处达到节制）；每一训练回合皆自第 0 步起之冻结检验；独立审查。"
   },
   "correspondence": {
-    "en": "Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a member is pivotal exactly where the rest alone does not cross the margin before the reading. Coordination at a known threshold (Barrett 2013; Diekert 2017); the folk theorem for stochastic games (Dutta 1995); extinction in equilibrium past a player-number threshold (Mitra and Sorger 2014); risk-dominant selection under learning (Kandori, Mailath and Rob 1993). CG2, on tabular learners in a Harvest-style commons (Perolat et al. 2017): X1_boundary_is_the_rest held; X2_end_weight_does_not_open held; X3_reading_before_the_end_opens_above_vstar held; X4_sharing_opens_only_with_renewal failed; X5_joint_reading failed.",
-    "zh": "在阈值处的关键性（Palfrey 与 Rosenthal 1984）读到其余者上：成员恰在其余者单独不会在读取之前越过余量时是关键的。已知阈值处的协调（Barrett 2013；Diekert 2017）；随机博弈的无名氏定理（Dutta 1995）；超过参与者数阈值时均衡中的灭绝（Mitra 与 Sorger 2014）；学习下的风险占优选择（Kandori、Mailath 与 Rob 1993）。CG2 以表格学习者在 Harvest 式公地中检验（Perolat 等 2017）。"
+    "en": "Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a member is pivotal exactly where the rest alone does not cross the margin before the reading. Coordination at a known threshold (Barrett 2013; Diekert 2017); the folk theorem for stochastic games (Dutta 1995); extinction in equilibrium past a player-number threshold (Mitra and Sorger 2014); risk-dominant selection under learning (Kandori, Mailath and Rob 1993). CG2, on tabular learners in a Harvest-style commons (Perolat et al. 2017): X1_boundary_is_the_rest held; X2_end_weight_does_not_open held; X3_reading_before_the_end_opens_above_vstar held; X4_sharing_opens_only_with_renewal failed; X5_joint_reading failed. EM1, on policy-gradient learners that generalize across states (experiments/commons-outrun-generalizing, frozen at 42cf03228; study section 359): the law held on every course (no violation in 9,026 outrun windows); E1 failed (three of six locked settings kept, the end reading weighted 32 among them), E2 and E3 passed, so X2 is a finding about tabular learners.",
+    "zh": "在阈值处的关键性（Palfrey 与 Rosenthal 1984）读到其余者上：成员恰在其余者单独不会在读取之前越过余量时是关键的。已知阈值处的协调（Barrett 2013；Diekert 2017）；随机博弈的无名氏定理（Dutta 1995）；超过参与者数阈值时均衡中的灭绝（Mitra 与 Sorger 2014）；学习下的风险占优选择（Kandori、Mailath 与 Rob 1993）。CG2 以表格学习者在 Harvest 式公地中检验（Perolat 等 2017）。 EM1 以跨状态推广之策略梯度学习者检验（experiments/commons-outrun-generalizing，冻结于 42cf03228；研究第 359 节）：律在每一历程上成立（9,026 个超出窗口无违反）；E1 失败（六个锁定设置中三个被保住，终局读取加权 32 者在内），E2 与 E3 通过，故 X2 是关于表格学习者的发现。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
   "aliases": [
@@ -196,6 +196,12 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/commons-outrun-generalizing/README.md",
+      "role": "review",
+      "sha256": "568d7bd156941086a804ea3b7da78d8bbb0257a1e94213f919722daa664ee3e8",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -211,6 +217,10 @@
     {
       "en": "20 October 2026: added (CG2), the condition on the rest that CG1's D2b failure turned on, after a literature check (significance review, \"restraint as an equilibrium on a gated renewal\"), and tested on learners with predictions frozen before any run; study section 250.",
       "zh": "2026年10月20日：新增（CG2），即 CG1 的 D2b 失败所系的关于其余者的条件，此前做了文献核查（显著性审查“门控更新上作为均衡的克制”），并以学习者检验，预测在任何运行之前冻结；研究第 250 节。"
+    },
+    {
+      "en": "22 October 2026: EM1's verdicts added to the correspondence and Next; study section 359.",
+      "zh": "2026年10月22日：EM1 之判定加入对应与下一步；研究第 359 节。"
     }
   ]
 }

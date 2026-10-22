@@ -72,3 +72,14 @@
 | 具体作用形态 | Explain the relationships through which a claimed formation, persistence, loss or restoration occurs. Their conditions and consequences may differ, and no single generative mechanism is required everywhere. |
 
 **整体不是“所有情况”这个名称本身。** 包容范围说明理论要解释什么；关系整体主张说明这些规定怎样在同一展开中成立；具体作用说明某种形态怎样发生。三者须接通，不能用包容替代根据，也不能以每种变化都有生成后效作为整体的必要条件。此前把共同生成法则处处成立作为完成门槛的用法撤回，相关条件定理与历史尝试保留原范围。
+
+<a id="91-从包容到关系的过渡论证"></a>
+### 9.1 从包容到关系的过渡，论证
+
+[AI 的论证，XL1，2026年10月22日；[研究第 364 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#364-the-central-laws-over-every-relation-of-exchange-xl1)；英文见 [§9.1](BECOMING-FOUNDATION.md#91-the-passage-from-inclusion-to-relation-argued)]
+
+本节留待证明的一步，是整体的各规定在同一展开中有其构成，而非已确立实例的汇集。对世界前提所称的规定，这一步现在可以论证，并说明其界限。世界（`World`）把立着、活跃、各关系项需要什么与需要多少、汲取什么，作为分别选定的字段；如此持有，联结它们的八个前提彼此独立（`World.independent`），整体便是各部分恰好满足者的汇集。另一种方式是从同一交换读出每个规定：活跃读作交换，汲取读作所取，需要读作交换不能缺少者（必然回应），关系项未说明者读作整体的其余。
+
+**这里的关系是内在的**，指它凭其项之所是而成立。从同一交换读出时，四个联结是内在的：平衡与只有活跃者给出、取用，对每个算入其余的世界成立；活动需要支撑，对每个从交换关系读出的世界成立，而关系项在所需低于需要时仍交换的世界不是这样的世界（`World.ReadOffExchange.dependent`、`World.takingUnsupported_not_readOff`）。于是覆盖中取这些联结的每条中心规律，对每个从交换读出的世界成立（`Becoming.OverExchange`，33 条，K3 检查）：它们说的是同一交换的诸环节彼此怎样相处。读法不决定的，是有哪一个交换：封闭（可行）、耗散、体现、有界传递与包围是律的状态（`ExchangeLaw.contingent`），是同一交换的规定，不是独立项之间的关系。各环节并不相互消融：需要是律的反事实，没有进程确定它；活跃与立着在休眠处分开；规律所述的损失、终结与排斥是同一交换之内的损失。
+
+**它不及之处。** 每个生成／变化是否都有其读法如此的交换之律或关系（第 8.1 节第 6、7 项）；读法的根据：需要读作必然回应时，活动需要支撑才是内在的；读作可能回应时它不成立（`ExchangeRelation.free_unsupported`、`ExchangeRelation.mayRespond_not_supports`）。必然回应是不读所需者当前水平、且使活动需要支撑的最弱读法（`ExchangeRelation.respondsBelow_weakest`，XL4），所以根据归结为局部性：需要什么，由交换在所需条件的其他水平下怎样做决定，而非由该条件恰好所处的水平决定，否则是否被需要就取决于是否已被满足（论证，而非证明）；“在表示之内凭其项之所是而成立”之外的必然性；世界前提未称的规定（评价、意义、方向），那里条件与 C 作为前提进入。

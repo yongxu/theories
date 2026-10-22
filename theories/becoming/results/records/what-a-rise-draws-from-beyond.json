@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T08:38:00+00:00",
+  "reviewed_at_utc": "2026-10-22T13:10:31+00:00",
   "statement": {
     "en": "Where the whole gains nothing, the beyond falls by the rise and the loss; past the slack of the dependences there one breaks, unseen by a selection rewarding the rise; raising is reaching beyond, whose share over generations favouring raisers is never selected against; closed, the beyond bounds it.",
     "zh": "整体无所增益时，其外降低上升之量加损失；超出其外依存的余量时其中一个被打断，奖励上升的选择看不见它；升高即伸向之外，在偏向升高者的世代中其份额从不被逆向选择；封闭时其外约束上升。"
@@ -299,6 +299,13 @@
         "en": "How much each formation takes when several draw, derived for optimizers at a mutual best response.",
         "zh": "多个构成汲取时各取多少，对处于相互最优回应的优化者导出。"
       }
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "detail": {
+        "en": "Graded by the whole's inflow, the fall of the beyond, the break past the slack, reaching beyond and the bound over a stretch hold past the inflow; the gainless laws here are their case of no inflow and are derived from them.",
+        "zh": "按整体的流入分级，其外的降低、超出余量的打断、伸向之外与一段之上的界限都超过流入而成立；此处无所增益的规律是其无流入的情形，由之导出。"
+      }
     }
   ],
   "references": [
@@ -356,12 +363,12 @@
         "Becoming.Web.MetOn.stock_eq",
         "Becoming.Web.slack"
       ],
-      "sha256": "3f86d159bbc36f8027394c5b8ce89fb80312d482ccede3ab5b15ad5574a3502c"
+      "sha256": "10e2a94d61f5a521e59d0c724b900bfa22984984cbb8a61c8388ab006804b352"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
       "role": "proof",
-      "sha256": "41675fb36d500d258685c70186a6323373b108420d26633eae5e830ca18ce005"
+      "sha256": "72727ec8c69c9a9243352da8895cd39e9d48d2c56b5453bf19a7dac5bddac80b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -371,7 +378,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
       "role": "proof",
-      "sha256": "d6c950deed4a243e979261f6fd6ec0273b50e415eaf6baa9758ca6f16e1e4b57"
+      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
@@ -391,7 +398,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9"
+      "sha256": "a4005ae3a026cd756459542b49121aa0cfd95a4284ee1f73eefdea3f80b3707b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -427,12 +434,18 @@
       "role": "receipt",
       "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "role": "receipt",
+      "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T083557.882986Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -461,6 +474,10 @@
     {
       "en": "21 October 2026, SG3: how much each formation takes when several draw, which the joint-draw laws take as supplied, derived for optimizers at a mutual best response (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG3：联合汲取之律所给定的多个构成各取多少，对处于相互最优回应的优化者导出（记录 several-optimizers-drain-by-their-joint-capacity，研究第 290 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).",
+      "zh": "2026年10月22日，IF1：在记录 a-rise-past-the-inflow-is-drawn-from-beyond 中按流入分级；本记录无所增益的规律现作为其无流入的情形导出，陈述不变（研究第 355 节）。"
     }
   ]
 }

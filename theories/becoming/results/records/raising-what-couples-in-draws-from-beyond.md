@@ -62,6 +62,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
 - related, not a proved adapter: [continuing-self-fed-from-beyond](continuing-self-fed-from-beyond.md). There, under dissipation, rising recurring at arbitrarily late steps of a family enclosed around draws in, in a negative form; here one step, the weaker premise of gaining nothing, and a named formation and condition.
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). There what lies beyond the coupling closure enters no selection through it; here a selection rewarding what couples in rewards drawing on what lies beyond.
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Whose dependence the draw breaks past the slack, how much is drawn, and the share that reaches beyond.
+- related, not a proved adapter: [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md). Graded by the containing family's inflow, the laws hold without the gainless premise for a rise past the inflow; the gainless laws here are its case of no inflow and are derived from it.
 
 **Used by:** [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md)
 
@@ -86,6 +87,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 
 Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples in`, `抬高所耦合者`, `draws from beyond`, `取自其外`, `nothing from nothing`, `无中不生有`
 
@@ -99,6 +101,7 @@ Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples 
 - 19 October 2026, R22 (the names of the nineteenth review): THE-THEORY-OF-BECOMING.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: THE-THEORY-OF-BECOMING.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Entropy.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Entropy.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, RB1: whether what is drawn is depended on, how much more than the rise is drawn and the rising share of what reaches beyond are stated in Becoming.DrawnBeyond (record what-a-rise-draws-from-beyond, study section 241); the scope items now point there and those parts leave the next step. The claim is unchanged.
+- 22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](raising-what-couples-in-draws-from-beyond.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -108,4 +111,4 @@ Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples 
 
 </details>
 
-Documentary review UTC: `2026-10-18T09:24:32+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T13:10:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

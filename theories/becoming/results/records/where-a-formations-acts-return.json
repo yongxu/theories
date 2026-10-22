@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "id": "where-a-formations-acts-return",
+  "title": {
+    "en": "How a center forms: where a formation's acts return",
+    "zh": "中心之形成：形成之行动回返之处"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
+  "statement": {
+    "en": "Two formations lie in one loop where each can affect the other. A formation's acts return, all it acts on lying within what it can represent, exactly where its loop is closed under affecting; loops form as links close them, and over finitely many formations every reach holds one.",
+    "zh": "两形成能互相影响则同在一环。一形成之行动回返，其所作用者皆在其能表示者之内，恰当其环于影响下封闭；诸环随链接闭合而成，有限多形成时每一所及中皆有之。"
+  },
+  "laws": [
+    {
+      "en": "Two formations lie in one loop where each can affect the other's continuation at some remove: an equivalence, so loops partition the formations; being in a formation's reach is that formation being in one's influence closure.",
+      "zh": "两形成各能于某距影响对方之延续，则同在一环：此为等价，故诸环分割诸形成；在一形成之所及内，即该形成在己之影响闭包内。",
+      "declarations": [
+        "Becoming.Flow.InOneLoop",
+        "Becoming.Flow.InOneLoop.refl",
+        "Becoming.Flow.InOneLoop.symm",
+        "Becoming.Flow.InOneLoop.trans",
+        "Becoming.Flow.withinReach_iff_influence"
+      ]
+    },
+    {
+      "en": "A formation's acts return where whatever it can affect can affect it: exactly where everything it reaches lies in its loop, and exactly where its loop is closed under affecting; returning is a property of the loop.",
+      "zh": "一形成凡能影响者皆能影响之，则其行动回返：恰当其所及皆在其环内，亦恰当其环于影响下封闭；回返为环之性质。",
+      "declarations": [
+        "Becoming.Flow.ReachReturns",
+        "Becoming.Flow.reachReturns_iff_loop",
+        "Becoming.Flow.reachReturns_iff_closed",
+        "Becoming.Flow.ReachReturns.of_loop"
+      ]
+    },
+    {
+      "en": "Where acts return, everything acted on lies within the coupling closure, what can be represented, for every coupling by level; with coupling by threshold only, acts return exactly where everything acted on can be represented.",
+      "zh": "行动回返处，所作用者皆在耦合闭包之内，即能表示者，对一切依水平之耦合皆然；仅依阈值耦合时，行动回返恰当所作用者皆能被表示。",
+      "declarations": [
+        "Becoming.Flow.ReachReturns.represented",
+        "Becoming.Flow.reachReturns_iff_represented"
+      ]
+    },
+    {
+      "en": "Loops only merge as exchange grows, while returning is not monotone: where one formation acts on another that does not act back, the first's acts do not return and the second's do; closing the link makes one loop whose acts return.",
+      "zh": "交换增长时诸环只合并，而回返非单调：一形成作用于不回作用之另一形成，前者之行动不回返而后者回返；闭合此链接即成一回返之环。",
+      "declarations": [
+        "Becoming.Flow.InOneLoop.mono",
+        "Becoming.Line.open_not_returns",
+        "Becoming.Line.open_b_returns",
+        "Becoming.Line.closed_one_loop",
+        "Becoming.Line.closed_returns"
+      ]
+    },
+    {
+      "en": "With finitely many formations listed and reach decided, every formation's reach holds a formation whose acts return.",
+      "zh": "诸形成有限可列且所及已定，则每一形成之所及中皆有其行动回返之形成。",
+      "declarations": [
+        "Becoming.Flow.exists_reachReturns",
+        "Becoming.Flow.holdsCount_pos",
+        "Becoming.Flow.holdsCount_lt",
+        "Becoming.Flow.search"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Reach and influence are read off one flow and one web through dependence at some step and exchange at some step (Becoming.Feedback). Finitely many formations listed and reach decided where stated.",
+      "zh": "不加公理。所及与影响经某步之依存与某步之交换读自一流一网（Becoming.Feedback）。所述处诸形成有限可列且所及已定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Whether a returning loop persists along a run: returning is a property of the reach closures of one flow.",
+      "zh": "回返之环是否沿历程持续：回返为一流之所及闭包之性质。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a returning formation acts for anything: a formation that affects nothing beyond itself returns trivially.",
+      "zh": "回返之形成为何者而行动：不影响自身以外者之形成平凡地回返。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which loop a formation draws its own region along when several relations are read.",
+      "zh": "读多种关系时一形成沿何环划其自身之区域。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T132056.171285Z): the 20 declarations cited here have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 360; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T132056.171285Z）：本记录所引 20 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 360 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Whether a returning loop persists along a run (with ContinuedClasses and Persistence); returning loops under several relations at once; an independent review.",
+    "zh": "回返之环是否沿历程持续（与 ContinuedClasses、Persistence）；多种关系同时之回返之环；独立审查。"
+  },
+  "correspondence": {
+    "en": "The strongly connected components of a directed graph and the sink components of its condensation (every finite directed graph has one, reachable from every vertex); in ecology, closed loops of interaction within a food web; in systems theory, operational closure.",
+    "zh": "有向图之强连通分量与其凝聚图之汇分量（每一有限有向图皆有之，自每一顶点可达）；生态学中食物网内交互之闭环；系统论中之运作封闭。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Centers.lean",
+  "aliases": [
+    "Becoming.Flow.InOneLoop",
+    "Becoming.Flow.InOneLoop.mono",
+    "Becoming.Flow.InOneLoop.refl",
+    "Becoming.Flow.InOneLoop.symm",
+    "Becoming.Flow.InOneLoop.trans",
+    "Becoming.Flow.ReachReturns",
+    "Becoming.Flow.ReachReturns.of_loop",
+    "Becoming.Flow.ReachReturns.represented",
+    "Becoming.Flow.exists_reachReturns",
+    "Becoming.Flow.holdsCount_lt",
+    "Becoming.Flow.holdsCount_pos",
+    "Becoming.Flow.reachReturns_iff_closed",
+    "Becoming.Flow.reachReturns_iff_loop",
+    "Becoming.Flow.reachReturns_iff_represented",
+    "Becoming.Flow.search",
+    "Becoming.Flow.withinReach_iff_influence",
+    "Becoming.Line.closed_one_loop",
+    "Becoming.Line.closed_returns",
+    "Becoming.Line.open_b_returns",
+    "Becoming.Line.open_not_returns"
+  ],
+  "dependencies": [
+    {
+      "id": "what-a-center-can-know-by-a-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The region a center can represent is its coupling closure (CK1); this record says when the region it acts on lies within it.",
+        "zh": "中心能表示之区域为其耦合闭包（CK1）；本记录说其所作用之区域何时在其内。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "whole-first-and-bounded-centers",
+      "detail": {
+        "en": "Answers its Next, a model of how a center forms and represents its boundary, for the region acted on and the region represented.",
+        "zh": "就所作用之区域与所表示之区域，答其下一步：中心如何形成并表示其边界之模型。"
+      }
+    },
+    {
+      "id": "the-gap-for-ones-own-act",
+      "detail": {
+        "en": "Where acts do not return, some formation acted on can never affect the actor: that gap, at that formation.",
+        "zh": "行动不回返处，所作用之某形成永不能影响行动者：即该处之差距。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Centers.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.InOneLoop",
+        "Becoming.Flow.InOneLoop.mono",
+        "Becoming.Flow.InOneLoop.refl",
+        "Becoming.Flow.InOneLoop.symm",
+        "Becoming.Flow.InOneLoop.trans",
+        "Becoming.Flow.ReachReturns",
+        "Becoming.Flow.ReachReturns.of_loop",
+        "Becoming.Flow.ReachReturns.represented",
+        "Becoming.Flow.exists_reachReturns",
+        "Becoming.Flow.holdsCount_lt",
+        "Becoming.Flow.holdsCount_pos",
+        "Becoming.Flow.reachReturns_iff_closed",
+        "Becoming.Flow.reachReturns_iff_loop",
+        "Becoming.Flow.reachReturns_iff_represented",
+        "Becoming.Flow.search",
+        "Becoming.Flow.withinReach_iff_influence",
+        "Becoming.Line.closed_one_loop",
+        "Becoming.Line.closed_returns",
+        "Becoming.Line.open_b_returns",
+        "Becoming.Line.open_not_returns"
+      ],
+      "sha256": "bc3e400f3ea27df2340bb62b89466e92f82a431f67cfc8010f9e46cc093dae97"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "role": "receipt",
+      "sha256": "765980088a75fd76884c5b8b9882714526ab907cf6416b81e18abe2f2fe3a684"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "2d8de6818a9ba69e9fb6d55fd55d64330be51aabdc051ac00d398a0d0614b3ab"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Centers.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Centers",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (CK2), for chapter §8.1 item 3; study section 360.",
+      "zh": "2026年10月22日：新增（CK2），为章 §8.1 第 3 项；研究第 360 节。"
+    }
+  ]
+}
