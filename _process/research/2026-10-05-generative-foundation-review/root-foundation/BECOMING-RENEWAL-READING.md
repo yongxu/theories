@@ -15635,7 +15635,193 @@ Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'
 
 **Self-review.** Three judgments could be wrong. First, the verdicts reuse EW2's rows, so a reader who wants independent evidence has only R5, which is weak and whose Benguela estimates are large and positive. A third test on stocks never read (the Farallon juvenile rockfish to 2021, the Shetland sandeel) would settle that. Second, the draw for Røst is the catch of adults, not of the year class read as the prey, so it adjusts the stock's course only through the spawners. Third, the Benguela anchovy is surveyed to Port Alfred, wider than the birds' foraging range west of Cape Agulhas; the 0.87 against Cury et al.'s series bounds how far that matters.
 
-## 351. Readers drawn from the selected (MA2)
+## 351. The laws of 文 as theorems: the coarsest value-keeping class, a formation's own course, the course of forms (WL2)
+
+```text
+Result(s): record the-split-that-makes-sense extended (the coarsest class, one law); new record
+       a-formations-own-course; record a-code-formed-between-formations extended (the course of forms).
+Delta: (1) The same course through the map is the coarsest relation that keeps the map's values and that the law keeps,
+       with no premise (Law.sameFuture_coarsest). For a class keeping the values and carrying the law
+       (Law.KeepsAndCarries), being coarser than every such relation, merging every two configurations with the same
+       course, merging exactly those and making sense are one (Law.coarsest_iff); a class merging exactly those is
+       coarser than every class keeping the values and carrying the law, in every universe (Law.coarser_of_exact).
+       Where a list holds every configuration the names are such a class, and a class keeping the values and carrying
+       the law is coarser than every such class into the names' universe exactly where it merges exactly the
+       configurations with the same course (Law.coarsest_class). (2) Where what couples into a formation is read as
+       values (Web.ValuesThrough; given where admission is decided and the conditions coupled in by level are listed,
+       Web.listed_values), its own course is the value at each step of what couples in then (Web.courseThrough); being
+       alike through its couplings up to a step is one prefix of it (Web.alikeThroughUpTo_iff_prefix), a selection is
+       through them exactly where it selects by that prefix (Web.selectsThrough_iff_prefix), and own courses with at
+       most N and N' states alike before N + N' - 1 are alike through the couplings at every step
+       (Web.alike_of_bounded, Web.selects_alike_of_bounded), a bound attained (Web.bounded_exact); two courses read
+       together with at most P states need agreement before P only (IdentificationRuns.joint_agree,
+       Web.alike_of_joint_bounded); the states of an own course depend on the reading (Web.states_by_reading). (3)
+       Through a code, the course of forms of every course of senses is one state at exactly the moments the course
+       of senses is, exactly where the code tells the senses apart (SharedCodes.course_states_iff); where resolution reads every encoded sequence, it reads
+       the course of forms of every course of words as its course of meanings step by step
+       (SharedCodes.course_read), and a code whose every encoded sequence resolution reads back tells the senses apart
+       (SharedCodes.code_read_every).
+Premises / correspondence: (1) none for the relation; a list holding every configuration for the class. (2) a reading
+       of what couples in as values; for the bound, at most N and N' states of the own courses under that reading.
+       (3) the premises of CrossSituational.reads_every_iff. The bounds hold under every reading and say most under
+       the reading with the fewest states. Correspondence: 理 read off the 文 (D63); 识 as a
+       formation reading its own course (D45, D63); a book as a course of names read back as its senses.
+Evidence: core receipt 20261022T110022.458880Z (passed).
+Boundary: for a law on any type no class merging exactly the configurations with the same course is constructed
+       (the quotient can be formed; that it merges them takes Quot.sound, which the core does not use); being alike through a formation's couplings is in general a relation
+       (admission is a claim, the conditions coupled in by level may be infinitely many); the states of an own course
+       compare values at different steps and so depend on the reading.
+Output → input: chapter WENLI-AND-BECOMING (its 「本节未立者」 item 5, §四 law 6, §六, §七 and the table); 中华本
+       一·二十一, 七·二, 九·三, 九·十三, 十·六; chapter §3.3 and §3.4 (EN, ZH); records the-split-that-makes-sense,
+       a-code-formed-between-formations, wenli-on-the-spine.
+```
+
+**What was built.** In `Becoming.IdentificationRuns`: `Law.KeepsAndCarries`, `Law.sameFuture_coarsest`, `Law.KeepsAndCarries.of_exact`, `Law.coarser_of_exact`, `Law.coarsest_iff`, `Law.coarsest_class`; `Law.KeepsRelation` and `Law.KeepsRelation.run` moved there unchanged from `Becoming.SharedCodes`, so that the coarsest relation is stated with them and the run law keeps one proof (board rule 9; `Becoming.SharedCodes` now imports `Becoming.IdentificationRuns`); `IdentificationRuns.joint_agree`; `Web.ValuesThrough`, `Web.courseThrough`, `Web.listed_values` (through `Becoming.Gain`'s `map_eq_at` and `map_eq_on`, now imported), `Web.alikeThrough_iff`, `Web.alikeThroughUpTo_iff_prefix`, `Web.selectsThrough_iff_prefix`, `Web.selects_alike_iff_prefix`, `Web.alike_of_bounded`, `Web.selects_alike_of_bounded`, `Web.alike_of_joint_bounded`, `Web.oneCondition`, `Web.oneCondition_values`, `Web.bounded_exact`, `Web.states_by_reading`. In `Becoming.SharedCodes`: `course_states_iff` (its witness `Learning.holdFrom`), `course_read`, `code_read_every`. Three modules depend on `Becoming.IdentificationRuns` and none on `Becoming.SharedCodes`, so each run recompiled 23 steps. A first receipt (`20261022T104642.753699Z`, passed) preceded the review; the review's changes were checked again by 20261022T110022.458880Z.
+
+**The exact statement for a formation's coupling.** `Web.AlikeThroughUpTo` compares two level histories at the same steps: admission as a claim (by `↔`) and the levels of the conditions coupled in by level (by `=`, one for each). It is a relation. The evident map with that kernel, to the claim of admission and the family of levels, has it as kernel only with `propext` and function extensionality, or through a quotient; the core gives no map with that kernel in general. So the laws are stated where `value` gives the values of what couples in (`Web.ValuesThrough`), and the core gives such a reading where admission at the formation is decided and the conditions coupled in by level are listed (`Web.listed_values`: whether the levels admit it, and the listed levels). There the formation's own course is a course in the sense of D63, and the laws of the course apply to it: being alike through its couplings is the same prefix, selecting through them is selecting by that prefix, and the bound on states of `Identification.bounded_agree` becomes a bound on what the formation ever tells apart. The states of the own course compare values at different steps, which the coupling never compares: they belong to the reading. `Web.states_by_reading` shows it in the web of one condition: read by the level, a history holding the level at zero has one state; read with the step, more than every bound. The bounded laws hold under every reading, and say most under the reading with the fewest states. Read together, two courses may need fewer steps: where the pair of courses has at most P states, agreement before P is enough (`IdentificationRuns.joint_agree`).
+
+*Reading* [AI reading, D45, D63]. 识, a formation's own further course read through what couples into it, reads exactly the prefix of its own course: nothing about two histories enters its selections beyond that prefix. Where its own courses have finitely many states, everything it will ever tell apart between two histories it tells apart within N + N' − 1 steps; two histories alike through its couplings for T steps and apart later give own courses with more than T + 1 states between them. 理 read off the 文 is one law: among the classes keeping the values and carrying the law, being coarsest against the relations is merging exactly the configurations with the same course, and the relation of the same course is always the coarsest such relation. A book is a course of names: where every sequence is read back, its course of senses is its course of names read through the reading, and the two have the same states where the code tells senses apart.
+
+**Review.** An independent AI review (one agent, read-only) checked statements against docstrings, the index arithmetic of `bounded_exact` (right), naming and stale references. Applied: the binding of `Law.KeepsRelation` in record a-code-formed-between-formations moved to `Becoming.IdentificationRuns` (it would have failed the record check); the package-root and header text no longer say the coarsest-among-classes property holds without the list premise, and name the universe of `Law.coarsest_class`; `Law.coarsest_iff`'s docstring states the comparison with relations, not a coarsest class that might not exist; the quotient remark corrected (the core can form the quotient; that it merges takes `Quot.sound`); the claim that the reading fixes the states got its Lean witness (`Web.states_by_reading`); the headline of `Web.alike_of_bounded` puts the bound on the own courses, not on the formation; `Web.ReadsAsValues` renamed `Web.ValuesThrough` (the old name was close to `SharedCodes.ReadsAs`) and its reading `value`; `selectsThrough_iff_reading` renamed `selectsThrough_iff_prefix`; a new list lemma dropped for `Becoming.Gain`'s `map_eq_at` and `map_eq_on`; `firstThen` dropped for `Learning.holdFrom`; `bounded_exact` carries its reading as a conjunct; `code_read_every` proved from `course_read` directly, with free universes; the joint bound added, as the review suggested. Kept: `code_read_every`'s hypothesis in the form `reads_every_iff` takes with the identity as the meaning, which needs no new list lemma.
+
+**Self-review.** (1) `Law.coarsest_iff` gathers what `sameFuture_of_law`, `identifiesAlike_of_law` and `alike_iff_sameFuture` gave together; what it adds is the coarsest property against every relation keeping the values and kept by the law, with `Law.sameFuture_coarsest`, which needs no premise, and the comparison among classes with existence where a list holds every configuration (`Law.coarsest_class`). The record says so. (2) `Web.alikeThrough_iff` and the prefix form unpack `Web.ValuesThrough`; the content is in `Web.selectsThrough_iff_prefix` (constructed without choice: the reading of the prefix is the class of histories with that prefix), in the bounds with their attainment, which carry `Identification.bounded_agree` and `Identification.bounded_agree_exact` to a formation through a web of one condition, and in `Web.states_by_reading`. (3) The code laws join `CrossSituational.reads_every_iff` to the states of a course; `course_read` lifts that the meaning of a word is read off its form, step by step. The three code theorems stand apart from the base; `code_read_every`, the root, is registered as general structure.
+
+**The run.** Core 285 modules and 12,547 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. Connectivity: 717 of 13,307 apart; the one new apart root of WL2, SharedCodes.code_read_every, registered (general structure); the Law and Web laws reach the base; unregistered roots of other landings, not WL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival.
+
+## 352. Early warnings before Farallon seabird breeding failures (EW4)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A third frozen field test of thesis T6's
+       uncoupled side (section 350's open item: a stock no verdict had used), experiments/break-warnings (ew4.py on
+       ew2.py's statistics).
+Delta: EW2's design, unchanged, with EW2's four level covariates and no draw, on the Southeast Farallon common
+       murres, rhinoceros auklets and pigeon guillemots (BCO-DMO 985565) and the young-of-year rockfish in the core
+       area of the NMFS midwater trawl survey (ERDDAP FED_Rockfish_Catch; the mean over core hauls of log(1 + catch),
+       0.935 with Cury et al.'s series), 1998-2021: 24 usable years, 8 failures, 14 after the years EW2 read. V1
+       passed (p = 0.354), V2 passed (p = 0.373); partial r +0.09 (95% interval -0.37 to 0.51) and +0.08 (-0.38 to
+       0.50), post hoc.
+Supplied premises / correspondence: T6's refutation clause read as conditional independence given the level path;
+       scope by mechanism, the birds' share of the year class unmeasured (Warzybok et al. 2018 give consumption, not
+       a share): the survey reads the year class the birds then eat, and their take reaches later years only through
+       spawners several years on; no draw, since the birds' rockfish are young of the year, mostly the unfished
+       shortbelly rockfish.
+Evidence: frozen predictions, code, layout and dry runs landed on main at 74204a684 before any statistic relating
+       the prey to the birds was computed; dry runs: every null at most 0.028, power 0.57 (AR1) and 0.51 (variance)
+       against EW2's effect, EW2's stop rule met narrowly; one run (79dfef1e0), results/ew4/test.json and posthoc.json.
+Boundary: one stock and 24 years, power about 0.5 only against a large association; scope argued, not measured; a
+       simple index, not the survey's standardized one; ten rows overlap years EW2 read as a reported-only
+       secondary; Shetland not run, since ICES's 2025 assessment of Shetland sandeel carries catches only.
+Output -> input: chapter T6's standing and evidence (EN, ZH); OPENING [^cancer]'s field-test sentence; board EW4 to
+       the history file.
+```
+
+**What was asked.** EW3's verdicts reused EW2's rows, so a stock no verdict had used was needed ([§350](#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3)). The candidates named were the Farallon seabirds and the Shetland sandeel. Before claiming, two facts were raised with Ren: EW2 had run both as reported-only secondaries to 2007-2009, and neither was in scope as EW2 drew it, Shetland being the coupled case (the seabird community takes 26-96% near its need) and Farallon's share unmeasured. Ren chose Farallon as the verdict stock after a scope check, with Shetland as the coupled contrast.
+
+**The scope check.** Warzybok et al. (2018) give the Farallon seabirds' consumption by prey and conclude that the rockfish they eat are almost all young of the year, mostly shortbelly rockfish, which is not fished, so competition with the fisheries is "likely to be modest". No source read gives the take as a share of the year class. So the premise that the birds' feedback onto the observed series is negligible is argued by mechanism, as for Røst in EW2: the survey reads each year's young of the year in May-June, the birds eat that year class during and after the survey, and the next year's index is a new year class spawned by adults the birds do not eat, with recruitment weakly tied to spawners. A same-year take during the survey lowers that year's index, which the level covariates match. Shetland could not be run at all: ICES's 2025 assessment of Shetland sandeel carries catches only.
+
+**What it found.** Both verdicts passed (p = 0.35 and 0.37), with partial correlations of +0.09 and +0.08, intervals from about -0.37 to 0.51. Without the level covariates the variance's association was +0.39 (interval -0.02 to 0.68): the poor years follow the stock's low years, the decline T6 allows, and the level path carries it. Windows of 6 and 10 years gave +0.09 and -0.12 for autocorrelation; with the two cormorants added, +0.14 and -0.25; on the rows after EW2's years alone, +0.13 and -0.12 on 14 rows.
+
+**What it means for T6.** A third pass, the first on a stock no verdict had used, and at power about 0.5 against EW2's effect. Across EW2, EW3 and EW4, no stock's prey statistics carried information on the birds' poor years beyond the prey's own course at the frozen levels, and the positive estimates of EW2 have not recurred. The passes are weak in different ways: EW2's by power, EW3's by reuse of EW2's rows, EW4's by power and by scope argued rather than measured. T6's uncoupled side stays conjectured.
+
+**Self-review.** First, the stop rule was met by 0.006 on variance; a slightly different generator could have stopped the test, and the frozen rule was kept. Second, the index is the mean of log catches over whatever core hauls a year had (15 in 2020), not the survey's standardized index; its 0.935 with Cury et al.'s series bounds the difference before 2008, not after. Third, scope by mechanism leaves open a large share of the year class taken during the survey itself, which would enter the level as a same-year effect and could add variance the covariates do not match.
+
+## 353. Groups founded mixed, and the rule of returns to groupmates (EV12)
+
+```text
+Result(s): Becoming.SelectionLevels (78 theorems (55 before), 31 declarations added (23 theorems), none removed) states selection with returns to groupmates. For any family read with a
+       weight, an amount and a reading o, where each member's weight with k per unit of its own amount is a base with
+       b per unit of o, the weight's concordance with the amount, with k times the amount's spread (its concordance
+       with itself) and b times o's discordance with it, is the weight's discordance with b times o's concordance
+       (returns_balance, from covariation and Reproduction.variation with the relation carried to the totals,
+       returns_total, returns_weighted); so the whole selects for the amount exactly where b times o's covariation
+       with it exceeds k times its spread (rises_iff_reading). For a family listed as groups of m members, where each
+       unit a member keeps gives b to every member of its group, its own included, and takes c from the keeper: the
+       spread over the whole is k times the groups' own spreads with the spread among them (spread_levels); within
+       the groups the offspring number goes against the amount by b + c times their spreads (within_returns), so
+       selection within goes against keeping wherever a group varies (within_against); among groups read by their
+       totals it goes for keeping exactly where b + c falls short of m b (among_returns, among_for_iff); and the
+       whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread
+       among groups (rises_iff_returns). Groups uniform in the amount (assortment one) select for it, where they
+       differ, exactly where b (m - 1) exceeds c (rises_iff_returns_of_uniform); groups alike in total (assortment
+       none) never do (not_rises_of_alike); over listed generations with exact transmission the mean rises across a
+       step exactly so (rises_exact_iff_returns). Witnesses: Founding.either_verdict (the same returns, keepers
+       together selected for, keepers apart selected against); Partly.below_one (two thirds of the spread among
+       pairs; the rule met at assortment one, b (m - 1) = 3 > 2 = c, and yet the whole selects against keeping, 45
+       against 36). Record selection-with-returns-to-groupmates.
+Delta: the evolution chapter's next connection 1 asked when selection within groups against keeping a condition loses
+       to selection among groups for it; for groups founded mixed (assortment below one) with additive returns, the
+       answer is exact: where m b times the share of the spread among groups exceeds b + c. Record
+       groups-formed-by-descent stated the complete-assortment end and left the share as a function of assortment
+       unstated. No new module: the laws lie in Becoming.SelectionLevels (board rule 9), which now imports
+       Becoming.Reproduction for the amount's spread (variation, discord_self).
+Premises: offspring numbers depending on own and groupmates' amounts additively (each unit kept giving b to every
+       member of its group, own included, and taking c from the keeper; no synergy), groups of equal size; for the
+       step law, exact transmission. Natural numbers: the premise is written w p + (b + c) a p = B + b A_g, nothing
+       subtracted.
+Evidence: core receipt 20261022T122330.896153Z (passed; Becoming.SelectionLevels every axiom report empty; core 285 modules and 12,570 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,197 reused); the
+       connectivity rerun (740 of 13,330 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: additive returns only: synergy (returns depending on the product of own and groupmates' amounts) is not
+       stated, nor groups of unequal size for the returns law, nor how assortment arises (how groups are founded is
+       given). The share of the spread among groups is read off the given grouping at the step; how it changes over
+       generations (selection within re-entering at each step, migration, inexact transmission) is not stated.
+       Natural-number amounts and returns, finite lists, discrete generations.
+Output → input: EV11 gave the complete-assortment end: groups formed by descent from uniform groups, selection among
+       lineages alone. Here every assortment between: within goes against keeping by b + c times the spread within,
+       among goes for it by m b - (b + c) times the spread among, so the verdict is read off how the spread divides,
+       the multilevel division of Price's equation meeting Hamilton's rule in one balance. The same returns give
+       either verdict by how the groups are founded, so the collective concern of chapter section 7 turns on how
+       the groups whose members give to each other are formed. Next: drift with selection in one draw; mutation
+       (transmission not exact); several carried amounts and Fisher's identity.
+```
+
+The kit is [`development/ev12-returns/`](development/ev12-returns/): the module as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev12.txt`), record (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **One balance from three covariations.** With `ew`, `ea`, `eo` the covariations of weight, amount and reading with the amount, `ew + k·ea + b·(eo reversed)` sums to `n·W_w + k·n·W_a + b·T_o·T_a + (D_w + b·C_o) = T_w·T_a + k·T_a² + b·n·W_o + (C_w + k·S + b·D_o)`. The premise carried to the totals gives `n·W_w + k·n·W_a = n·B·T_a + b·n·W_o` and `T_w·T_a + k·T_a² = n·B·T_a + b·T_o·T_a`, so both sides open with the same three terms and cancel to the balance.
+- **Within.** Read on one group, the reading is the group's total, uniform there: nothing concordant or discordant, so `C_g(w) + (b + c)·S_g = D_g(w)`.
+- **Among.** A group's totals satisfy `W_g + (b + c)·A_g = m·B + m·b·A_g`; the balance read on the groups, with `D(A, A) = 0`, gives `C_A(w) + (b + c)·S_A = D_A(w) + m·b·S_A`.
+- **Whole.** `levels` with the two laws: `k·C_W(w) + C_A(w) + (b + c)·(k·S_W + S_A) = k·D_W(w) + D_A(w) + m·b·S_A`, read through `lt_iff_of_balance`.
+- **Reading over the rationals.** With N members, `S = N²·V_T` and `S_A = N²·V_A` (the variance of group means, member-weighted), so the rule is `m·b·ρ > b + c` with `ρ = V_A / V_T`; with the regression of groupmates' mean amount on own `r = (m·ρ − 1)/(m − 1)`, it is `r·b·(m − 1) > c`.
+
+**Self-review.** The rule is known: Hamilton (1964) for kin, Hamilton (1975) reading the Price equation's among-group share through relatedness within groups, and the equivalence of the multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006; Marshall 2015), all from memory and not reread. What is stated here is that equivalence in counting form with nothing subtracted and no regression coefficient formed: one balance whose within and among parts are the multilevel division of the selection term, and whose whole is the rule. The witnesses show the content beyond the complete-assortment end: the same returns give either verdict by how the groups are founded, and assortment below one can lose where assortment one would win. Synergy, unequal sizes and the change of assortment over generations stay open; the rule does not say how groups are founded.
+
+## 354. Balance from conservation along a relation (FL2)
+
+```text
+Result(s): balance-from-conservation-along-a-relation (new); reused: Flow.Balances, Flow.BalancesOn, Prelude total
+           and Distinct, Dissipation.total_eq_zero; related: balance-from-the-first-law (§348), premises-read-off-the-
+           exchange
+Delta: FL1 grounded balance in the first law with locality, but stated locality as a property of transfers
+       (LocalBalance assumes each exchange carries a definite transfer). Here the transfers are derived. Over finitely
+       many relata, with the relation a computable test: transfers moving only between adjacent relata that balance a
+       step exist exactly where the total is conserved on every family the relation closes (Continuity.balancing_iff),
+       the transfers computed one relatum at a time (Continuity.route, Continuity.route_balancing); a law whose next
+       level at a relatum reads only it and the relata adjacent to it and that conserves the total from every
+       configuration conserves it on every closed family (Continuity.conservedOn_of_law), so each of its runs
+       balances along the relation (Continuity.balancesOn_of_law). Teleport: swapping two levels conserves the total
+       and balances along the full relation, not along the empty one (Continuity.Teleport.no_transfers_apart,
+       Continuity.Teleport.balanced_together).
+Supplied premises / correspondence: finitely many relata listed without repetition; equality of relata decided and
+       the relation a Bool test; levels whole numbers; for the law, conservation from every configuration, the one with
+       nothing anywhere included
+Evidence: core module Becoming.Continuity, 43 theorems in 64 declarations, empty axiom reports; core
+          receipt `20261022T124646.497747Z` (core 286 modules and 12,613 theorems, instances 7 and 581, applications 6 and 179; 7 Lean steps ran, 1,201 reused); connectivity: 745 of 13,373 apart, 5 of the module's 43; its two apart roots, the Teleport witnesses, registered (model witness); unregistered roots of other landings, not FL2's: Becoming.ReadsOnlyDynamics.admits_rival, Becoming.ReadsOnlyDynamics.not_entails, Becoming.excludes_rivals_iff, Becoming.not_rival_unrestricted_iff_stable, Becoming.readsOnlyDynamics_of, Becoming.unrestricted_iff_not_rival
+Boundary: the transfers depend on the whole configuration (no local flux); a transfer may exceed what stands on its
+          source; infinitely many relata; a relation that is not decided
+Integration: balance-from-the-first-law related; chapter premise card C, §8.7's balance bullet, the relation to known
+          results and §9 (EN, ZH); significance review, continuity check
+```
+
+The question left by §348 was whether balance could be more than a premise about transfers. FL1 derived it from the first law with locality, but `LocalBalance` already assumes that what leaves a store is carried by one transfer per exchange. Given only the levels before and after a step and a relation among the relata, are there transfers along the relation that account for every change, and when?
+
+**The answer is conservation on every closed family.** Read a family as a test on the relata. A family is closed when no two adjacent relata lie one inside it and one outside. If transfers move only between adjacent relata and balance the step, the total on a closed family changes only by what crosses its boundary, and nothing does: `conserved_of_balancing`, by swapping the double sum of what moves inside the family. Conversely, where every closed family keeps its total, `route` builds the transfers. It removes the first listed relatum `x`, exchanges `x`'s change with the first relatum `y` adjacent to it (`y` sends `next x - prev x` to `x`, `x` sends `prev x - next x` to `y`, one of them zero), and routes the rest with two neighbours of `x` taken as adjacent; a move between two relata that were adjacent only through `x` is passed through `x`, which receives and sends the same amount. The family condition passes to the smaller problem because a family closed once `x` is removed, extended to `x` by its value at `y`, is closed before (`conservedOn_rest`); where `x` has no neighbour, `{x}` is itself closed and keeps its level (`kept_alone`). The construction is a function, not an existence claim, so it gives transfers at every step of a run with no choice principle, and every declaration has an empty axiom report.
+
+**Where locality enters.** The equivalence uses no property of a law, only of a step. Locality enters through `conservedOn_of_law`: if the law's next level at a relatum reads only that relatum and its neighbours, and the law conserves the total from every configuration, then on a closed family it conserves the total too. From the configuration with nothing anywhere, conservation gives nothing anywhere; from the part of any configuration on a closed family, the law gives on the family what it gives from the whole (the family's relata read only the family) and outside it what it gives from nothing. So a local law that conserves its total balances every run along the relation it reads. FL1's Teleport fails exactly here: along the empty relation the family of `true` alone is closed and the swap moves its unit out, so no transfers along that relation balance it; along the relation the swap actually reads, they do.
+
+**Literature.** A flow on a finite graph with a prescribed divergence exists exactly where the divergence sums to zero on each connected component; that is the network-flow fact behind `balancing_iff`, here stated with the spine's families and computed. For cellular automata on lattices more is known: a globally conserved additive quantity has a flux that depends only on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and in two (Kari and Taati 2008). Neither the locality of the flux nor a displacement bounded by occupancy is shown here; `route` depends on the whole configuration, and a move may exceed what stands on its source within the step.
+
+**What it does not do.** It does not make balance a theorem of every dynamics: conservation on closed families is the content, and it fails where a law creates or destroys the quantity. It covers finitely many relata with a decided relation; an infinite world needs totals that the core does not state, and the local flux of the lattice literature is the next step.
+
+## 355. Readers drawn from the selected (MA2)
 
 ```text
 Result(s): readers-drawn-from-the-selected (new); reuses capture-through-the-rule (Raises, ReadsShare,

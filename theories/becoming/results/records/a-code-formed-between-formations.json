@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T14:17:58+00:00",
+  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
   "statement": {
     "en": "Codes changed only by hearing keep agreement exactly through closed hearings; the start and the order fix the form reached; reading across holds where codes agree; no law privileging neither form nor formation settles a symmetric disagreement; imposed and written-back codes stay.",
     "zh": "只经听取而变的编码，恰经封闭的听取保持相合；所成之形由起点与次序固定；编码相合处可互读；既不特许形式也不特许形成者的律不能解决对称的分歧；强加的与写回的编码保持。"
@@ -144,12 +144,25 @@
         "Becoming.SharedCodes.Gloss.taken_up_locks",
         "Becoming.SharedCodes.Gloss.uptake_loses"
       ]
+    },
+    {
+      "en": "The course of forms: through a code, the course of forms of every course of senses is one state at exactly the moments the course of senses is, exactly where the code tells senses apart; where resolution reads every encoded sequence, it reads the course of forms of every course of words as its course of meanings step by step, and a code read back so tells senses apart.",
+      "zh": "名之文：经一码，凡义之文，其名之文恰在义之文同状之步同状，恰当此码辨诸义；以通意读出每一串时，逐步把词之名之文读为义之文，名之文二步同则义之文二步同；如此读回之码辨诸义。",
+      "declarations": [
+        "Becoming.SharedCodes.course_states_iff",
+        "Becoming.SharedCodes.course_read",
+        "Becoming.SharedCodes.code_read_every"
+      ]
     }
   ],
   "hypotheses": [
     {
       "en": "No axiom. The codes, the hearings and the rule of adoption are given; every other premise is named where it is used: hearings closed for a group; hearings that take the form heard; two forms that differ; a list of every formation; a rule reading codes alike after a renaming; a law keeping an exchange and a renaming; a renaming moving every form at the sense; records written to offer exactly what was resolved; decided equality of formations and senses where an order is stepped back through.",
       "zh": "不加公理。编码、听取与采纳规则是给定的；其余每个前提都在用到之处具名：对一组封闭的听取；取所听之形的听取；两个不同的形；列出每个形成的列表；在改名后同样读编码的规则；保持一个交换与一个改名的律；在该义上移动每个形的改名；写下恰提供所判定者的记录；在回溯次序之处形成与义的相等可判定。"
+    },
+    {
+      "en": "For the course of forms: the premises of CrossSituational.reads_every_iff (grouping recovers the words of every encoded sequence, a repertoire without repeats, decided equality of meanings).",
+      "zh": "名之文：CrossSituational.reads_every_iff 之前提（分组复原每一串编码之词，义项之族各异，义项之同异定然否）。"
     }
   ],
   "does_not_show": [
@@ -201,8 +214,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T141645.763808Z): the 163 declarations of Becoming.SharedCodes, 119 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study section 210; readings D56; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T141645.763808Z）：Becoming.SharedCodes 的 163 项声明（119 项定理）公理报告为空；检查器并核对核心纯净。作者审查见研究第 210 节；读法 D56；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T141645.763808Z): the 163 declarations of Becoming.SharedCodes, 119 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study section 210; readings D56; not independently reviewed by a person. The course of forms (WL2) is checked by receipt 20261022T110022.458880Z, with empty axiom reports; study section 351.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T141645.763808Z）：Becoming.SharedCodes 的 163 项声明（119 项定理）公理报告为空；检查器并核对核心纯净。作者审查见研究第 210 节；读法 D56；未经人的独立审查。 名之文（WL2）由回执 20261022T110022.458880Z 检查，公理报告为空；研究第 351 节。"
   },
   "next_delta": {
     "en": "Probabilities over orders and the time agreement takes; codes with several forms for a sense; adoption of whole codes; the step bound of a pointer law on finite sets; an independent review.",
@@ -295,6 +308,14 @@
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean"
       }
+    },
+    {
+      "id": "acquired-binding-compositional-use",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "CrossSituational.reads_every_iff, reading every encoded sequence by resolution.",
+        "zh": "CrossSituational.reads_every_iff，以通意读出每一串编码。"
+      }
     }
   ],
   "related": [
@@ -326,8 +347,6 @@
       "role": "proof",
       "declarations": [
         "Becoming.Law.Commutes.keepsRelation",
-        "Becoming.Law.KeepsRelation",
-        "Becoming.Law.KeepsRelation.run",
         "Becoming.SharedCodes.AgreeAt",
         "Becoming.SharedCodes.Closed",
         "Becoming.SharedCodes.Gloss.distinct",
@@ -340,7 +359,6 @@
         "Becoming.SharedCodes.Gloss.uptake_loses",
         "Becoming.SharedCodes.Gloss.zero_ne_one",
         "Becoming.SharedCodes.Hearing",
-        "Becoming.SharedCodes.Relabels",
         "Becoming.SharedCodes.KeepsExchange",
         "Becoming.SharedCodes.KeepsRenaming",
         "Becoming.SharedCodes.Loses",
@@ -355,6 +373,7 @@
         "Becoming.SharedCodes.Path.stays_a",
         "Becoming.SharedCodes.Path.stays_b",
         "Becoming.SharedCodes.ReadsAs",
+        "Becoming.SharedCodes.Relabels",
         "Becoming.SharedCodes.TellsApart",
         "Becoming.SharedCodes.TwoFormations.bor_comm",
         "Becoming.SharedCodes.TwoFormations.centre",
@@ -394,15 +413,15 @@
         "Becoming.SharedCodes.broadcast_holds",
         "Becoming.SharedCodes.broadcast_reaches",
         "Becoming.SharedCodes.changes_iff",
+        "Becoming.SharedCodes.code_read_every",
+        "Becoming.SharedCodes.course_read",
+        "Becoming.SharedCodes.course_states_iff",
         "Becoming.SharedCodes.covered_rest",
         "Becoming.SharedCodes.every_cohort_resolves",
         "Becoming.SharedCodes.exchange",
         "Becoming.SharedCodes.follow",
         "Becoming.SharedCodes.follow_agrees_iff",
         "Becoming.SharedCodes.follow_state",
-        "Becoming.SharedCodes.nextCohort",
-        "Becoming.SharedCodes.nextCohort_merges",
-        "Becoming.SharedCodes.nextCohort_of_resolved",
         "Becoming.SharedCodes.hear",
         "Becoming.SharedCodes.hearBy",
         "Becoming.SharedCodes.hearBy_held",
@@ -422,7 +441,6 @@
         "Becoming.SharedCodes.impose",
         "Becoming.SharedCodes.impose_agrees",
         "Becoming.SharedCodes.impose_loses_iff",
-        "Becoming.SharedCodes.self_reads_iff",
         "Becoming.SharedCodes.keep",
         "Becoming.SharedCodes.keep_of_resolved",
         "Becoming.SharedCodes.keeps_apart_iff",
@@ -435,6 +453,9 @@
         "Becoming.SharedCodes.marked",
         "Becoming.SharedCodes.never_agrees",
         "Becoming.SharedCodes.never_agrees_of_both",
+        "Becoming.SharedCodes.nextCohort",
+        "Becoming.SharedCodes.nextCohort_merges",
+        "Becoming.SharedCodes.nextCohort_of_resolved",
         "Becoming.SharedCodes.no_reading_recovers",
         "Becoming.SharedCodes.omitted_rest",
         "Becoming.SharedCodes.origin",
@@ -473,6 +494,7 @@
         "Becoming.SharedCodes.run_renamed",
         "Becoming.SharedCodes.run_renamed_tells_apart_iff",
         "Becoming.SharedCodes.run_shared_iff_in_use",
+        "Becoming.SharedCodes.self_reads_iff",
         "Becoming.SharedCodes.shared_iff_in_use",
         "Becoming.SharedCodes.source_loses_nothing",
         "Becoming.SharedCodes.state_hearings",
@@ -482,7 +504,7 @@
         "Becoming.SharedCodes.window_runBy",
         "Becoming.SharedCodes.written_rests"
       ],
-      "sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2"
+      "sha256": "787286e05f9bfe145fe144f8748dba51a893285656902bfac9b6439f9feb3e46"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -515,6 +537,15 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
       "role": "proof",
       "sha256": "402e2de8c945ee033006718beedc27b76eb7e266050f5b794c7bb51970551a79"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.KeepsRelation",
+        "Becoming.Law.KeepsRelation.run"
+      ],
+      "sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T141645.763808Z/verification.json",
@@ -582,12 +613,17 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "role": "receipt",
+      "sha256": "9f5bb21571a19c50267843a5484f876b12f87f6059a9c6920305cee179fd3077"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SharedCodes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -596,6 +632,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -628,6 +671,10 @@
     {
       "en": "20 October 2026, MA1 (the meta-attractor's loop closed on the spine): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed in section 4 only by MA1's additions: a sentence in 4.1, the law cell of row 6 of 4.3's table, and in 4.5 a sentence of \"In words\", a bullet for Becoming.ClosedCapture, a reading of the meta-attractor and the record list; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，MA1（元吸引子的回路在主干上闭合）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，第 4 节所引文字只因 MA1 的增补而改动：4.1 的一句，4.3 表第 6 行的定律格，4.5 的“要点”一句、Becoming.ClosedCapture 的一条、元吸引子的读法与记录列表；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "22 October 2026, WL2: the course of forms through a code and read by cross-situational resolution added (SharedCodes.course_states_iff, course_read, code_read_every); Law.KeepsRelation and Law.KeepsRelation.run moved to Becoming.IdentificationRuns, cited there; study section 351.",
+      "zh": "2026年10月22日，WL2：增经码与通意之名之文（SharedCodes.course_states_iff、course_read、code_read_every）；Law.KeepsRelation 与 Law.KeepsRelation.run 移至 Becoming.IdentificationRuns，于彼引之；研究第 351 节。"
     }
   ],
   "text_versions": [

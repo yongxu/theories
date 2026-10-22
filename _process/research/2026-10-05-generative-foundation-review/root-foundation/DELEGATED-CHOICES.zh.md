@@ -659,7 +659,7 @@ L1、S1 与 S2 是 D40-D42。
 - 同一要求，由看板项 RC（经由规则的捕获，RO 所见的第三项缺口）接续：D57（研究第 213 节）。
 - Ren 2026-10-19 要求以古中文之符号系统作中华本，并把脉络整合进理论，“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)）：D62（研究第 328 节）。
 - Ren 2026-10-22 要求以文之认识论为中心整合文理生生，并为文找到最恰当的立名，“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md)）：D63（研究第 346 节）。
-- Ren 2026-10-22 关于 OPENING 元吸引子之注的消息，“can we push this further?”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md)）：D64（[研究第 351 节](BECOMING-RENEWAL-READING.md#351-readers-drawn-from-the-selected-ma2)）。
+- Ren 2026-10-22 关于 OPENING 元吸引子之注的消息，“can we push this further?”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md)）：D64（[研究第 355 节](BECOMING-RENEWAL-READING.md#355-readers-drawn-from-the-selected-ma2)）。
 
 <a id="13-一个说明--one-account"></a>
 ## 13. 一个说明
@@ -853,7 +853,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d64-从所选者中抽出的读者--readers-drawn-from-the-selected"></a>
 ### D64. 从所选者中抽出的读者
 
-所在：OPENING 之注 `[^meta]`；章 §4.5 与 T7（[《变化论》](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.zh.md)）；记录 [readers-drawn-from-the-selected](../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md)；研究第 351 节（[MA2](BECOMING-RENEWAL-READING.md#351-readers-drawn-from-the-selected-ma2)）。在 D45 的一个说明中决定；续 D58。
+所在：OPENING 之注 `[^meta]`；章 §4.5 与 T7（[《变化论》](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.zh.md)）；记录 [readers-drawn-from-the-selected](../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md)；研究第 355 节（[MA2](BECOMING-RENEWAL-READING.md#355-readers-drawn-from-the-selected-ma2)）。在 D45 的一个说明中决定；续 D58。
 
 **决定。** 依所述范围采用。一、**选择选择者。** 元吸引子文本中“从被规则选择到帮助再生产选择你的规则”，读作规则是其读者之读法的汇合，读者从规则所选的人口中抽出，并如它计数那样计数（`ClosedCapture.Drawn.pool`）。在汇合之内，规则从份额单调读出，恰在每个携带者的读法偏向携带者不少于每个其他者的读法之时（`Drawn.pool_reads_iff`）；D58 把胜者书写评分表读作前提 `ReadsShare`，保留，此前提现在陈述为谁在读。二、**回路在其所选的心智中闭合。** 读作只由选择所不偏向、其人数被选择稀释的读者读损失（`Thinned.lossPool`）：在他们读到的那一步，计数连同当时施行的规则永远决定锁定是保持还是翻转（`Thinned.kept_iff`、`Thinned.turned_iff`）。三、**及时之明。** 在其读者尚未成为少数时对份额之外者的读取；他们成为少数之后同样的读取使锁定保持（`Thinned.inTime_turned`、`Thinned.late_kept`）。四、**承 D58。** 读者是心智、机构或文化是读法；实际的规则是从其所选者中抽出的读者之汇合，且每类读者对本类的偏向不少于另一类，是前提。
 

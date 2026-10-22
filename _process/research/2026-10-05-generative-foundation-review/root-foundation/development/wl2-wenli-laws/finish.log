@@ -1,0 +1,34 @@
+wrote theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md
+C16 edits 13, failed 0, 條 losing content 11
+C01 edits 33, failed 0, 條 losing content 8
+C02 edits 22, failed 0, 條 losing content 4
+C03 edits 12, failed 0, 條 losing content 6
+C04 edits 21, failed 0, 條 losing content 5
+C05 edits 36, failed 0, 條 losing content 5
+C06 edits 26, failed 0, 條 losing content 5
+C07 edits 18, failed 0, 條 losing content 1
+C17 edits 27, failed 0, 條 losing content 2
+C08 edits 29, failed 0, 條 losing content 7
+C09 edits 19, failed 0, 條 losing content 5
+C10 edits 16, failed 0, 條 losing content 8
+C11 edits 18, failed 0, 條 losing content 1
+C12 edits 20, failed 0, 條 losing content 0
+C13 edits 22, failed 0, 條 losing content 5
+C14 edits 46, failed 0, 條 losing content 4
+C15 edits 20, failed 0, 條 losing content 4
+TH edits 20, failed 0, 條 losing content 0
+round2-edits.json applied 123, failed 7
+round3-edits.json applied 4, failed 0
+round4-edits.json applied 57, failed 0
+round5-edits.json applied 127, failed 8
+round6-edits.json applied 61, failed 0
+round7-edits.json applied 3, failed 0
+round8-edits.json applied 10, failed 0
+global-replacements applied 64, failed 0
+moves-after-rounds applied 5, failed 0
+ok: 438 files bound; 5673 judgments, 3499 flagged; 1300 entries (agreement 453, divergence 200, scope 647), 2023 fragments; 449 names; chapters: 1342 quotations, 5527 declarations, 711 record links, 135 对照 lines; receipt 20261022T110022.458880Z; periphery declarations: 4
+  periphery: Becoming.EntropyProduction.dissipative_of_irreversible
+  periphery: Becoming.EntropyProduction.gainless_of_secondLaw
+  periphery: Becoming.EntropyProduction.secondLaw_not_dissipative
+  periphery: Becoming.RegimeMargin.Drawn.converges
+

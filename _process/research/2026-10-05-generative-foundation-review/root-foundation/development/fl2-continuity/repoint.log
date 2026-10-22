@@ -1,0 +1,49 @@
+{
+ "records": 7,
+ "apply": true,
+ "by_record": {
+  "any-number-of-drawers-in-turn": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-draw-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-within-capacities": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "generalization-through-lumping": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "place-transition-nets-on-the-spine": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "revision-comes-to-drawing-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

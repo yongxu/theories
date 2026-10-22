@@ -1,0 +1,58 @@
+## {N}. Groups founded mixed, and the rule of returns to groupmates (EV12)
+
+```text
+Result(s): Becoming.SelectionLevels ({SL_LINE}) states selection with returns to groupmates. For any family read with a
+       weight, an amount and a reading o, where each member's weight with k per unit of its own amount is a base with
+       b per unit of o, the weight's concordance with the amount, with k times the amount's spread (its concordance
+       with itself) and b times o's discordance with it, is the weight's discordance with b times o's concordance
+       (returns_balance, from covariation and Reproduction.variation with the relation carried to the totals,
+       returns_total, returns_weighted); so the whole selects for the amount exactly where b times o's covariation
+       with it exceeds k times its spread (rises_iff_reading). For a family listed as groups of m members, where each
+       unit a member keeps gives b to every member of its group, its own included, and takes c from the keeper: the
+       spread over the whole is k times the groups' own spreads with the spread among them (spread_levels); within
+       the groups the offspring number goes against the amount by b + c times their spreads (within_returns), so
+       selection within goes against keeping wherever a group varies (within_against); among groups read by their
+       totals it goes for keeping exactly where b + c falls short of m b (among_returns, among_for_iff); and the
+       whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread
+       among groups (rises_iff_returns). Groups uniform in the amount (assortment one) select for it, where they
+       differ, exactly where b (m - 1) exceeds c (rises_iff_returns_of_uniform); groups alike in total (assortment
+       none) never do (not_rises_of_alike); over listed generations with exact transmission the mean rises across a
+       step exactly so (rises_exact_iff_returns). Witnesses: Founding.either_verdict (the same returns, keepers
+       together selected for, keepers apart selected against); Partly.below_one (two thirds of the spread among
+       pairs; the rule met at assortment one, b (m - 1) = 3 > 2 = c, and yet the whole selects against keeping, 45
+       against 36). Record {RID}.
+Delta: the evolution chapter's next connection 1 asked when selection within groups against keeping a condition loses
+       to selection among groups for it; for groups founded mixed (assortment below one) with additive returns, the
+       answer is exact: where m b times the share of the spread among groups exceeds b + c. Record
+       groups-formed-by-descent stated the complete-assortment end and left the share as a function of assortment
+       unstated. No new module: the laws lie in Becoming.SelectionLevels (board rule 9), which now imports
+       Becoming.Reproduction for the amount's spread (variation, discord_self).
+Premises: offspring numbers depending on own and groupmates' amounts additively (each unit kept giving b to every
+       member of its group, own included, and taking c from the keeper; no synergy), groups of equal size; for the
+       step law, exact transmission. Natural numbers: the premise is written w p + (b + c) a p = B + b A_g, nothing
+       subtracted.
+Evidence: core receipt {RECEIPT} (passed; Becoming.SelectionLevels every axiom report empty; {CORE_LINE}); the
+       connectivity rerun ({APART}); render, check, links and tests.
+Boundary: additive returns only: synergy (returns depending on the product of own and groupmates' amounts) is not
+       stated, nor groups of unequal size for the returns law, nor how assortment arises (how groups are founded is
+       given). The share of the spread among groups is read off the given grouping at the step; how it changes over
+       generations (selection within re-entering at each step, migration, inexact transmission) is not stated.
+       Natural-number amounts and returns, finite lists, discrete generations.
+Output → input: EV11 gave the complete-assortment end: groups formed by descent from uniform groups, selection among
+       lineages alone. Here every assortment between: within goes against keeping by b + c times the spread within,
+       among goes for it by m b - (b + c) times the spread among, so the verdict is read off how the spread divides,
+       the multilevel division of Price's equation meeting Hamilton's rule in one balance. The same returns give
+       either verdict by how the groups are founded, so the collective concern of chapter section 7 turns on how
+       the groups whose members give to each other are formed. Next: drift with selection in one draw; mutation
+       (transmission not exact); several carried amounts and Fisher's identity.
+```
+
+The kit is [`development/ev12-returns/`](development/ev12-returns/): the module as landed (`tree/`), this landing's text (`apply_text.py`, `study_ev12.txt`), record (`make_record.py`), apart registration (`apart.py`) and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **One balance from three covariations.** With `ew`, `ea`, `eo` the covariations of weight, amount and reading with the amount, `ew + k·ea + b·(eo reversed)` sums to `n·W_w + k·n·W_a + b·T_o·T_a + (D_w + b·C_o) = T_w·T_a + k·T_a² + b·n·W_o + (C_w + k·S + b·D_o)`. The premise carried to the totals gives `n·W_w + k·n·W_a = n·B·T_a + b·n·W_o` and `T_w·T_a + k·T_a² = n·B·T_a + b·T_o·T_a`, so both sides open with the same three terms and cancel to the balance.
+- **Within.** Read on one group, the reading is the group's total, uniform there: nothing concordant or discordant, so `C_g(w) + (b + c)·S_g = D_g(w)`.
+- **Among.** A group's totals satisfy `W_g + (b + c)·A_g = m·B + m·b·A_g`; the balance read on the groups, with `D(A, A) = 0`, gives `C_A(w) + (b + c)·S_A = D_A(w) + m·b·S_A`.
+- **Whole.** `levels` with the two laws: `k·C_W(w) + C_A(w) + (b + c)·(k·S_W + S_A) = k·D_W(w) + D_A(w) + m·b·S_A`, read through `lt_iff_of_balance`.
+- **Reading over the rationals.** With N members, `S = N²·V_T` and `S_A = N²·V_A` (the variance of group means, member-weighted), so the rule is `m·b·ρ > b + c` with `ρ = V_A / V_T`; with the regression of groupmates' mean amount on own `r = (m·ρ − 1)/(m − 1)`, it is `r·b·(m − 1) > c`.
+
+**Self-review.** The rule is known: Hamilton (1964) for kin, Hamilton (1975) reading the Price equation's among-group share through relatedness within groups, and the equivalence of the multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006; Marshall 2015), all from memory and not reread. What is stated here is that equivalence in counting form with nothing subtracted and no regression coefficient formed: one balance whose within and among parts are the multilevel division of the selection term, and whose whole is the rule. The witnesses show the content beyond the complete-assortment end: the same returns give either verdict by how the groups are founded, and assortment below one can lose where assortment one would win. Synergy, unequal sizes and the change of assortment over generations stay open; the rule does not say how groups are founded.

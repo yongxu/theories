@@ -64,7 +64,7 @@ The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of 
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). The among-group part fixed by ending: groups whose own condition ran into joint excess leave no offspring.
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). The division for groups of any sizes, of which this is the case of equal sizes.
 
-**Used by:** [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
+**Used by:** [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -78,6 +78,7 @@ The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of 
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 
 Aliases: `selection within groups and among them`, `组内选择与组间选择`, `multilevel Price equation`, `multilevel selection`, `law of total covariance`, `Becoming.SelectionLevels.levels`, `Becoming.SelectionLevels.among_for_of_rises`, `Becoming.SelectionLevels.rises_exact_iff_levels`
 

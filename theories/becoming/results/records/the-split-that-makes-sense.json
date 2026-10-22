@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T15:39:01+00:00",
+  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
   "statement": {
-    "zh": "确定的律下，保留映射之值并承载规律的最粗切分有意义；映射之值的一部分单独有意义，恰当其余对它的下一值不造成差别。每段值的历史是一条确定的律，状态有限恰当它从某一刻起重复。",
-    "en": "For a determined law, the coarsest split keeping the map's value and carrying a law makes sense, and part of the value alone makes sense exactly where the rest makes no difference to its next value. Every history of values is a determined law, finite-state exactly where it is eventually periodic."
+    "en": "For a determined law, the coarsest class keeping the map's values and carrying the law merges exactly the configurations with the same course and makes sense; a part alone makes sense exactly where the rest makes no difference to its next value; every history of values is a determined law.",
+    "zh": "确定的律下，守映射之值并承载规律的最粗之类，恰并经映射未来相同之配置，且有意义；值的一部分单独有意义，恰当其余对它的下一值不造成差别；每段值的历史是一条确定的律。"
   },
   "laws": [
     {
@@ -138,6 +138,26 @@
         "Becoming.lasso_iff_sameAhead",
         "Becoming.finitely_many_states_iff_lasso"
       ]
+    },
+    {
+      "en": "The coarsest class, one law: the same course through the map is the coarsest relation keeping the map's values that the law keeps, with no premise; for a class keeping the values and carrying the law, being coarser than every such relation, merging every two configurations with the same course, merging exactly those and making sense are one, and it is then coarser than every other such class.",
+      "zh": "最粗之类，一条律：经象文同是守象之值、为法所守之最粗关系，不加前提；守值载法之类，粗于每一如此关系、并凡文同之二状、恰并文同之状、为正名，四者是一；恰并文同之类粗于每一守值载法之类。",
+      "declarations": [
+        "Becoming.Law.KeepsRelation",
+        "Becoming.Law.KeepsRelation.run",
+        "Becoming.Law.KeepsAndCarries",
+        "Becoming.Law.sameFuture_coarsest",
+        "Becoming.Law.KeepsAndCarries.of_exact",
+        "Becoming.Law.coarser_of_exact",
+        "Becoming.Law.coarsest_iff"
+      ]
+    },
+    {
+      "en": "Where a list holds every configuration the names keep the values, carry the law and merge exactly the configurations with the same course, and a class keeping the values and carrying the law is coarser than every such class into the universe of the values exactly where it merges exactly those.",
+      "zh": "一列表尽其状时，名守值、载法、恰并文同之状；守值载法之类，粗于每一值在同一 universe 之守值载法之类，恰当它恰并文同之状。",
+      "declarations": [
+        "Becoming.Law.coarsest_class"
+      ]
     }
   ],
   "hypotheses": [
@@ -160,12 +180,16 @@
     {
       "zh": "有意义的描述作为值（给每个类一个名字）存在没有陈述；类作为关系（SameFuture、SameAhead）总在。",
       "en": "That a description making sense exists as values (a name for each class) is not stated; the classes always exist as relations (SameFuture, SameAhead)."
+    },
+    {
+      "en": "Law.coarsest_iff takes a class keeping the values and carrying the law (Law.KeepsAndCarries); Law.coarsest_class a list holding every configuration, and compares classes into the universe of the map's values.",
+      "zh": "Law.coarsest_iff 设一类守值而载法（Law.KeepsAndCarries）；Law.coarsest_class 设一列表尽其状，所比之类其值与映射之值同一 universe。"
     }
   ],
   "does_not_show": [
     {
-      "zh": "有意义的描述作为值存在没有陈述：命名一般要商（Quot.sound）。",
-      "en": "That a description making sense exists as values is not stated: naming in general needs a quotient (Quot.sound).",
+      "zh": "对任一类型上的律，恰并未来相同之配置的类未构造：商并之须 Quot.sound。其关系不加前提；一列表尽其状时类亦给出。",
+      "en": "For a law on any type no class merging exactly the configurations with the same course is constructed: that the quotient merges them takes Quot.sound. The relation needs no premise; a class is given where a list holds every configuration.",
       "kind": "scope"
     },
     {
@@ -200,8 +224,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Description、Becoming.Unfolding、Becoming.Mechanism 与 Becoming.Diagonal 的当前字节绑定回执 20261013T204910.042715Z（以现名检查），Becoming.Recurrence 与 Becoming.Learning 的绑定回执 20261013T094743.528770Z；源声明公理报告全空，检查器并核对核心纯净。作者反审见整合文档，其中也说明独立审查的范围。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Description, Becoming.Unfolding, Becoming.Mechanism and Becoming.Diagonal are bound to receipt 20261013T204910.042715Z, which checked them under the current names, and those of Becoming.Recurrence and Becoming.Learning to receipt 20261013T094743.528770Z; every source declaration has an empty axiom report, and core purity is verified. Author counterreview in the integration note, which also states the scope of the independent review."
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: each cited module's current bytes are bound to a passing receipt (proof_bindings), every source declaration has an empty axiom report, and core purity is verified; the coarsest-class laws WL2 added by receipt 20261022T110022.458880Z. Author counterreview in the integration notes (for WL2 study section 351, with an independent AI review), which state the scope of the independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：所引各模块之当前字节绑定于通过之回执（proof_bindings），源声明公理报告全空，并核对核心纯净；WL2 所加最粗之类诸律由回执 20261022T110022.458880Z 检查。作者反审见整合文档（WL2 见研究第 351 节，并经一次独立的 AI 审查），其中也说明独立审查的范围。"
   },
   "next_delta": {
     "zh": "有分支的框架下最粗切分与部分单独的形式；状态有限时可判定的命名。",
@@ -396,23 +420,31 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
       "role": "proof",
-      "sha256": "9564da982531bc1652257f0be08e69f99a2702ae957e61854af80099cb029867",
+      "sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9",
       "declarations": [
-        "Becoming.Law.kernel_bisimulation",
-        "Becoming.Law.sameFuture_of_law",
-        "Becoming.Law.identifiesAlike_of_law",
-        "Becoming.Law.const_identifiesAlike_iff",
-        "Becoming.Law.now_identifiesAlike_iff",
-        "Becoming.Law.whole_identifiesAlike",
-        "Becoming.Law.part_identifiesAlike_iff",
-        "Becoming.Law.sameFuture_of_goAlike",
-        "Becoming.Law.now_identifiesAlike_iff_goAlike",
-        "Becoming.Law.part_identifiesAlike_iff_step",
+        "Becoming.Law.KeepsAndCarries",
+        "Becoming.Law.KeepsAndCarries.of_exact",
+        "Becoming.Law.KeepsRelation",
+        "Becoming.Law.KeepsRelation.run",
         "Becoming.Law.adaptive_identifiesAlike_iff",
+        "Becoming.Law.coarser_of_exact",
+        "Becoming.Law.coarsest_class",
+        "Becoming.Law.coarsest_iff",
+        "Becoming.Law.const_identifiesAlike_iff",
+        "Becoming.Law.identifiesAlike_of_law",
+        "Becoming.Law.kernel_bisimulation",
+        "Becoming.Law.now_identifiesAlike_iff",
+        "Becoming.Law.now_identifiesAlike_iff_goAlike",
+        "Becoming.Law.part_identifiesAlike_iff",
+        "Becoming.Law.part_identifiesAlike_iff_step",
+        "Becoming.Law.sameFuture_coarsest",
+        "Becoming.Law.sameFuture_of_goAlike",
+        "Becoming.Law.sameFuture_of_law",
+        "Becoming.Law.whole_identifiesAlike",
         "Becoming.Motion.move_adaptive",
+        "Becoming.Motion.neither_alone",
         "Becoming.Motion.pair_identifiesAlike",
         "Becoming.Motion.standing_alone",
-        "Becoming.Motion.neither_alone",
         "Becoming.Motion.still_identifiesAlike",
         "Becoming.alike_moments_iff"
       ]
@@ -637,6 +669,11 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "role": "receipt",
+      "sha256": "9f5bb21571a19c50267843a5484f876b12f87f6059a9c6920305cee179fd3077"
     }
   ],
   "proof_bindings": [
@@ -691,7 +728,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -781,6 +818,10 @@
     {
       "en": "2026-10-20: 45 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/60d26132566767b0/the-split-that-makes-sense.json and in git.",
       "zh": "2026-10-20：45 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/60d26132566767b0/the-split-that-makes-sense.json 和 git 中。"
+    },
+    {
+      "en": "22 October 2026, WL2: the coarsest class keeping the values and carrying the law stated as one law, with the coarsest relation (no premise) and the class where a list holds every configuration (Law.sameFuture_coarsest, Law.coarsest_iff, Law.coarser_of_exact, Law.coarsest_class); it gathers sameFuture_of_law, identifiesAlike_of_law and alike_iff_sameFuture, and adds the coarsest property; Law.KeepsRelation moved here from SharedCodes; the statement and the scope note on naming revised; study section 351.",
+      "zh": "2026年10月22日，WL2：守值载法之最粗之类作一条律，含最粗之关系（无设）与一列表尽其状时之类（Law.sameFuture_coarsest、Law.coarsest_iff、Law.coarser_of_exact、Law.coarsest_class）；它合 sameFuture_of_law、identifiesAlike_of_law 与 alike_iff_sameFuture，并加最粗之性；Law.KeepsRelation 自 SharedCodes 移来；改陈述与命名之范围注；研究第 351 节。"
     }
   ],
   "text_versions": [

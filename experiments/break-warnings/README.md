@@ -85,3 +85,25 @@ Run once, after the freeze landed on main (`836281856`). Study section [350](../
 | V2 | variance of the same window | **passed**: Z = −1.10, p = 0.864; partial r −0.04, −0.53 |
 
 Combined partial correlation (`posthoc_ew3.py`, not a verdict): +0.02 for autocorrelation (95% interval −0.35 to 0.40), −0.20 for variance (−0.52 to 0.16). EW2's positive estimate did not hold up at about twice the power; by the frozen reading rule the variance resolves it toward T6 and the autocorrelation leaves it open. On the rows EW2 did not test (R5), Benguela's estimates are 0.64 and 0.61 on 15 rows with six covariates, Røst's −0.15 and −0.30. Everything reported only is in `results/ew3/test.json` and `posthoc.json`.
+
+## EW4: the Farallon seabirds and central California juvenile rockfish, to 2021
+
+Board item EW4, 22 October 2026. EW2's frozen test, unchanged (four level covariates; the birds' prey is mostly unfished shortbelly rockfish, so no draw), on a stock no verdict had used: Sydeman et al.'s breeding success at Southeast Farallon (BCO-DMO 985565) and the NMFS midwater trawl survey's young-of-year rockfish in the core area (ERDDAP `FED_Rockfish_Catch`). Scope is argued by mechanism; the birds' share is unmeasured. Shetland is not run: ICES's 2025 Shetland sandeel assessment carries catches only.
+
+| File | What it is |
+|---|---|
+| [PREDICTIONS-2026-10-22-EW4.md](PREDICTIONS-2026-10-22-EW4.md) | Sources and hashes, what was seen before the freeze, scope, layout, verdicts and reading rules, dry runs and the stop rule, limits (`results/ew4/FROZEN-AT`) |
+| [ew4.py](ew4.py) | Extraction of the rockfish index, layout, dry runs and the frozen test, on EW2's statistics |
+| [posthoc_ew4.py](posthoc_ew4.py) | After the run, not a verdict: the partial correlation and its 95% interval |
+| [results/ew4/](results/ew4/) | `layout.json`, `dry.json`, `FROZEN-AT`; after the run, `test.json` and `posthoc.json` |
+
+### Results
+
+Run once, after the freeze landed on main (`74204a684`). Study section [352](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#352-early-warnings-before-farallon-seabird-breeding-failures-ew4).
+
+| Verdict | Statistic | Result |
+|---|---|---|
+| V1 | lag-1 autocorrelation of the prey's 8-year window, given the level path; Southeast Farallon (24 years, 8 poor) | **passed**: Z = 0.37, one-sided p = 0.354; partial r +0.09 (95% −0.37 to 0.51) |
+| V2 | variance of the same window | **passed**: Z = 0.33, p = 0.373; partial r +0.08 (−0.38 to 0.50) |
+
+Without the level covariates the variance's association is +0.39: the poor years follow the stock's decline, which T6 allows. The scope premise is argued by mechanism, not measured. Everything reported only is in `results/ew4/test.json` and `posthoc.json`.

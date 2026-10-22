@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T10:16:55+00:00",
+  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
   "statement": {
     "en": "文 names a run's states read through a map step by step (Parting.course), 文同 two states whose courses agree (Law.SameFuture); the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 and the 文) is tied to checked laws, each with its scope; 文理生生 is compared character by character.",
     "zh": "以文名一历之状经一象逐步之值，文同即二状之文逐步皆同（Law.SameFuture）；文之认识论（律读自展开、读书百遍其义自见、理与文）逐环对到已检之律，各写其域；文理生生逐字对照名表。"
@@ -102,8 +102,8 @@
     {
       "id": "the-split-that-makes-sense",
       "detail": {
-        "en": "alike_moments_iff and identifiesAlike_of_law: states read off a course, the class that names the alike.",
-        "zh": "alike_moments_iff 与 identifiesAlike_of_law：自文读状，名同之类。"
+        "en": "alike_moments_iff and coarsest_iff: states read off a course; the coarsest value-keeping class merges exactly the states with the same course, one law (WL2).",
+        "zh": "alike_moments_iff 与 coarsest_iff：自文读状；守值之最粗之类恰并文同之状，一条律（WL2）。"
       }
     },
     {
@@ -133,18 +133,25 @@
         "en": "The RO map, whose kinds and layers are used.",
         "zh": "RO 之对应，用其关系与层。"
       }
+    },
+    {
+      "id": "a-formations-own-course",
+      "detail": {
+        "en": "WL2: 识 reads the prefix of its own course where what couples in is read as values.",
+        "zh": "WL2：感读作值时，识所读者是其自身之文之往。"
+      }
     }
   ],
   "references": [
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "a37e7781ba0d7c27f565cac5fd45f1c103ca220e456f060c2dcc837f50d775bd"
+      "sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
-      "sha256": "ede9c903f0e0ccb82cadbd01888fa4b569918fa7b121dbe22f3940485e48b254"
+      "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
@@ -193,12 +200,21 @@
       "en": "The name 文, the epistemology of 文 on the laws, and the comparison with 文理生生.",
       "zh": "文之立名，文之认识论在诸律上，与文理生生之对照。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl"
+    },
+    {
+      "en": "WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back).",
+      "zh": "WL2：所列 Lean 项已证（守值之最粗之类作一条律，待者自身之文，名之文之读回）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2"
     }
   ],
   "history": [
     {
       "en": "22 October 2026: added (WL), on Ren's request to join 文理生生 with the epistemology of 文 at the centre and to name 文; study section 346; readings D63.",
       "zh": "2026年10月22日：新增（WL），按 Ren 以文之认识论为中心整合文理生生、并为文立名之要求；研究第 346 节；读法 D63。"
+    },
+    {
+      "en": "22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.",
+      "zh": "2026年10月22日，WL2：本章所列之 Lean 项已证，于原注之处引之；研究第 351 节。"
     }
   ]
 }

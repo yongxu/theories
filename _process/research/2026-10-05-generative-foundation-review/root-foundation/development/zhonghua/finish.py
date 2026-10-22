@@ -16,7 +16,7 @@ import book as B
 
 ROOT = os.path.abspath(os.path.join(HERE, *(['..'] * 6)))
 OUT = os.path.join(ROOT, 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md')
-ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json', 'work/round4-edits.json', 'work/round5-edits.json', 'work/round6-edits.json', 'work/round7-edits.json']
+ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json', 'work/round4-edits.json', 'work/round5-edits.json', 'work/round6-edits.json', 'work/round7-edits.json', 'work/round8-edits.json']
 DECL = re.compile(r'`(Becoming\.[^`]+)`')
 QUOTE = re.compile(r'「([^」]{2,})」〔([A-Za-z0-9\-]+)〕')
 

@@ -844,6 +844,10 @@
   "applied": 3,
   "failed": []
  },
+ "round8-edits.json": {
+  "applied": 10,
+  "failed": []
+ },
  "global-replacements": {
   "applied": 64,
   "failed": []

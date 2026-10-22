@@ -25,6 +25,7 @@
 ## Progress
 
 1. The name 文, the epistemology of 文 on the laws, and the comparison with 文理生生. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)
+2. WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -52,11 +53,12 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 - **interpretive**: [learnable-through-a-map](learnable-through-a-map.md). Learnable.learnable_iff gives 其义: in a world a list holds, with values through the map decidably equal or not, a state value is learnable exactly when any two states with the same 文 have state values agreeing from some step on along their orbits; its reading form, Learnable.learnable_iff_reading, is held by what-an-extrapolation-given-nothing-fixes (related).
 - **interpretive**: [identification-where-bounded](identification-where-bounded.md). A bound makes a finite prefix fix the course, with the exact length.
 - related, not a proved adapter: [identification-where-runs-part](identification-where-runs-part.md). Parting.course, the course of a run.
-- related, not a proved adapter: [the-split-that-makes-sense](the-split-that-makes-sense.md). alike_moments_iff and identifiesAlike_of_law: states read off a course, the class that names the alike.
+- related, not a proved adapter: [the-split-that-makes-sense](the-split-that-makes-sense.md). alike_moments_iff and coarsest_iff: states read off a course; the coarsest value-keeping class merges exactly the states with the same course, one law (WL2).
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). Compression and generalization by one class.
 - related, not a proved adapter: [learning-by-refutation](learning-by-refutation.md). Learning by elimination and no prefix fixing the next value.
 - related, not a proved adapter: [what-an-extrapolation-given-nothing-fixes](what-an-extrapolation-given-nothing-fixes.md). learnable_iff_reading, reading_predicts and given_nothing_not_every: a state value learnable exactly when eventually a reading of the course, prediction given that reading, and no extrapolation given nothing learning every learnable value.
 - related, not a proved adapter: [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md). The RO map, whose kinds and layers are used.
+- related, not a proved adapter: [a-formations-own-course](a-formations-own-course.md). WL2: 识 reads the prefix of its own course where what couples in is read as values.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -80,7 +82,8 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 ### History
 
 - 22 October 2026: added (WL), on Ren's request to join 文理生生 with the epistemology of 文 at the centre and to name 文; study section 346; readings D63.
+- 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.
 
 </details>
 
-Documentary review UTC: `2026-10-22T10:16:55+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-22T11:07:36+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

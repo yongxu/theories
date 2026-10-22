@@ -150,12 +150,12 @@
     {
       "path": "theories/becoming/OPENING.md",
       "role": "statement",
-      "sha256": "482fcfd4d825944bd6a68eab4d6581368fcc1d8f92cf7ed0b68c5d14b9313a71"
+      "sha256": "a6307c8252397edecbaa23235c8534d67e77cab909d0e02405f4a11b40953a3a"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b52f81ba9685c59c2589bb817f3442192c8b8c40a1663fb4e9abd3e43b1bf099"
+      "sha256": "d8efb2a6736e0c3e513143360aecd63f5976c99fe87d1db98de92c185554d92d"
     }
   ],
   "proof_bindings": [
