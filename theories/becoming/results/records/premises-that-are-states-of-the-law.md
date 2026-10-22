@@ -40,7 +40,7 @@ Canonical source: [ExchangePremises.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-The spine's laws that use these premises stated over the laws of exchange that meet them; local conditions on a law that give each; an independent review.
+Local conditions on a law that give each state; an independent review. (The spine's laws that use these premises are stated over the laws of exchange: central-laws-over-every-exchange.)
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,8 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
   - Preserved conditions: None. [Premises.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean)
 - related, not a proved adapter: [map-of-premises](map-of-premises.md). There the eight premises are independent relative to one another; here three of them are contingent on the law with the rest of the readings fixed by it.
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Progress on the first target: what a reading of the exchange makes necessary, and where becoming is contingent in the law.
+
+**Used by:** [central-laws-over-every-exchange](central-laws-over-every-exchange.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +97,7 @@ Aliases: `states of the law of exchange`, `交换之律的状态`, `Becoming.Exc
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Premises.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Space.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (ExchangePremises.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; ExchangePremises.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Reading.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Dissipative, World.Embodied to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
+- 22 October 2026: next_delta's first item met by XL1 (central-laws-over-every-exchange, study section 364); no statement changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](premises-that-are-states-of-the-law.json).
 
 <a id="earlier-text--早期文本"></a>

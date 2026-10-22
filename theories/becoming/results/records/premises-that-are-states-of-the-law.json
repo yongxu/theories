@@ -118,8 +118,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T100412.397267Z）：Becoming.ExchangePremises 的 78 项声明（51 项定理）公理报告为空；检查器并核对核心纯净。作者审查见研究第 197 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "The spine's laws that use these premises stated over the laws of exchange that meet them; local conditions on a law that give each; an independent review.",
-    "zh": "用到这些前提的脊柱规律，陈述在满足它们的交换之律上；给出每个前提的律的局部条件；独立审查。"
+    "en": "Local conditions on a law that give each state; an independent review. (The spine's laws that use these premises are stated over the laws of exchange: central-laws-over-every-exchange.)",
+    "zh": "给出每个状态的律的局部条件；独立审查。（用到这些前提的脊柱规律已对交换之律陈述：central-laws-over-every-exchange。）"
   },
   "correspondence": {
     "en": "The first open target of chapter §8.1, the deductive necessity of the whole, had no progress entry since the early spine; §125 left four World premises as states of parts. This result settles dissipation, embodiment and bounded transmission: states of the law of exchange, not readings. The classification of the eight premises into readings of one exchange and states of the law is the AI's; the session reviewing the repository on 19 October 2026 set the task.",
@@ -357,7 +357,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "e9ce6dd08d58a90939222fa7a30ba6027264d5593a3710e6fe6052162b77cf5e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
@@ -418,6 +418,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Dissipative, World.Embodied to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Dissipative, World.Embodied to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "22 October 2026: next_delta's first item met by XL1 (central-laws-over-every-exchange, study section 364); no statement changed.",
+      "zh": "2026年10月22日：next_delta 的第一项由 XL1 完成（central-laws-over-every-exchange，研究第 364 节）；陈述未变。"
     }
   ],
   "text_versions": [

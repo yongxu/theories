@@ -67,7 +67,7 @@ Termination of a finite-state system under a potential that never rises and fall
 - related, not a proved adapter: [space-and-its-parts](space-and-its-parts.md). The rest theorem there in whole numbers is the case this one reads in any amounts.
 - related, not a proved adapter: [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md). Rest over any amounts, exactly where the total stops falling.
 
-**Used by:** [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md)
+**Used by:** [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md) · [what-discrete-steps-and-whole-amounts-represent](what-discrete-steps-and-whole-amounts-represent.md)
 
 <a id="sources--来源"></a>
 ### Sources

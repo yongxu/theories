@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261022T135732.423997Z` and the connectivity measure of `5de8b639b` (core receipt `20261022T134333.178862Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261022T140546.324820Z` and the connectivity measure of `e469176ee` (core receipt `20261022T135732.423997Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -46,7 +46,13 @@ No finding.
 
 ## K3. Premises: met
 
-Premises found in central statements: C, the widening comparison (1); a census (2); a reserve (1); a supplied law of exchange (8); activity needing support (12); balance (25); bounded transmission (1); decided (8); dissipation (5); embodiment (1); enclosed (1); living significance (2); only active relata give (14); the continuation condition (3).
+Premises found in central statements: C, the widening comparison (1); a census (2); a reserve (1); a supplied law of exchange (8); activity needing support (12); balance (27); bounded transmission (1); decided (8); dissipation (5); embodiment (2); enclosed (1); living significance (2); only active relata give (14); the continuation condition (3).
+
+Tying premises over the exchange: 33 central statements take, in their binders, balance, only active relata giving or taking, or activity needing support, and each has its form over what is read off an exchange, whose proof uses it and whose binders take none of the four (`Becoming.OverExchange`): `Direction.widening_selected_by_pool` → `World.withRest_widening_selected_by_pool`, `Flow.Balances.comparison_within_response` → `World.withRest_comparison_within_response`, `Flow.Balances.consumption_ends_with_feeders` → `World.ReadOffExchange.consumption_ends_with_feeders`, `Flow.Balances.renewedBy` → `World.withRest_renewedBy`, `Flow.Balances.retains_iff_within_margin` → `World.withRest_retains_iff_within_margin`, `Flow.Balances.widens_iff_others_within` → `World.withRest_widens_iff_others_within`, `Flow.Dissipative.opens` → `World.withRest_opens`, `Flow.More.replenishment_unbounded` → `World.withRest_replenishment_unbounded`, `Flow.act_selected_by_pool` → `World.withRest_act_selected_by_pool`, `Flow.act_unselected` → `World.withRest_act_unselected`, `Flow.continuing_excludes` → `World.ReadOffExchange.continuing_excludes`, `Flow.outrun_below` → `World.ReadOffExchange.outrun_below`, `Flow.restores` → `World.withRest_restores`, `Flow.selected_le` → `World.ReadOffExchange.selected_le`, `Flow.selection_within` → `World.ReadOffExchange.selection_within`, `Flow.transmitted_supported` → `World.ReadOffExchange.transmitted_supported`, `Flow.unexcluded_beyond_coupling` → `World.withRest_unexcluded_beyond_coupling`, `Flow.unselected_beyond_coupling` → `World.withRest_unselected_beyond_coupling`, `Flow.unselected_beyond_pool` → `World.withRest_unselected_beyond_pool`, `Flow.uptake_needs_replenishment` → `World.withRest_uptake_needs_replenishment`, `GroupEnding.Flow.all_end` → `World.withRest_all_end`, `GroupEnding.Flow.coupled_end_together` → `World.ReadOffExchange.coupled_end_together`, `GroupEnding.Flow.family_childless` → `World.ReadOffExchange.family_childless`, `GroupEnding.Flow.rises_iff_inactive` → `World.withRest_rises_iff_inactive`, `Reproduction.Flow.closed_lineage_lowered` → `World.withRest_closed_lineage_lowered`, `Reproduction.Flow.lineage_ends` → `World.withRest_lineage_ends`, `SelectionTerm.Flow.support_moved_rises` → `World.ReadOffExchange.support_moved_rises`, `SelectionTerm.Flow.support_not_lower` → `World.ReadOffExchange.support_not_lower`, `Web.Embodied.replenishes` → `World.withRest_replenishes`, `Web.Whole.family_excess_ends` → `World.ReadOffExchange.family_excess_ends`, `World.comes_to_rest_unrefuted` → `World.withRest_comes_to_rest_unrefuted`, `apart_only_downstream` → `World.withRest_apart_only_downstream`, `counterfactual_is_course` → `World.withRest_counterfactual_is_course`.
+
+What the forms still take, each a state of the law or a law's own hypothesis: a census (1); a supplied law of exchange (5); bounded transmission (1); dissipation (4); embodiment (2); enclosed (1).
+
+The forms over a world read off a relation of exchange take the reading requirement read as response (`World.ReadOffExchange`), which gives activity needing support (`World.ReadOffExchange.dependent`); met by `ExchangeRelation.Runs.readOffExchange`, `ExchangeLaw.readWorld_readOffExchange`; failed by `World.takingUnsupported_not_readOff`.
 
 Logical premise decided: meets `Decided.exists_below`; unrefuted `not_not_decided`; calibration `HistoryIdeals.cut_decided_iff_lpo`.
 
@@ -56,7 +62,7 @@ No finding.
 
 Modelling choices found in central statements: discrete steps (112); natural-number amounts (74); supplied observation (10); a fixed type of formations (9); decidedness (8); naming (1).
 
-Natural-number laws: `falls_not_recurring`: form `Amounts.rests`; `World.comes_to_rest_unrefuted`: form `Amounts.family_rests`; `rising_recurs`: counterexample `Halving.never_rests`; `Flow.excess_bounded`: form `Amounts.losses_within`; `Flow.More.replenishment_unbounded`: form `Amounts.replenishment_unbounded`.
+Natural-number laws: `falls_not_recurring`: form `Amounts.rests`; `World.comes_to_rest_unrefuted`: form `Amounts.family_rests`; `rising_recurs`: counterexample `Halving.never_rests`; `Flow.excess_bounded`: form `Amounts.losses_within`; `Flow.More.replenishment_unbounded`: form `Amounts.replenishment_unbounded`; `Web.rises_late_of_new`: counterexample `Halving.new_without_gain`; `carried_doubles_roundTrip`: counterexample `Dyadic.half_return`.
 
 No finding.
 

@@ -315,6 +315,68 @@ def _central(cov):
     return [(row['id'], name) for row in cov['rows'] for name in row['declarations']]
 
 
+def _binders(statement: str) -> str:
+    """The binder groups of a statement: what precedes the colon, at bracket depth zero, that opens its type."""
+    m = re.match(r'\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable)\s+)*(?:theorem|lemma|def|abbrev)\s+\S+', statement)
+    rest = statement[m.end():] if m else statement
+    depth = 0
+    for i, ch in enumerate(rest):
+        if ch in '([{⦃':
+            depth += 1
+        elif ch in ')]}⦄':
+            depth -= 1
+        elif ch == ':' and depth == 0 and not rest[i + 1:i + 2] == '=':
+            return rest[:i]
+    return rest
+
+
+def exchange_forms(cov, decls):
+    """K3's tying premises: each central statement whose binders take one has a form over the exchange, a declaration whose
+    proof reaches the statement and whose binders use none of the tying premises. Returns findings, the forms
+    found, and the premises the forms still take (each a state of the law or the law's own)."""
+    pr = cov['premises']
+    tying = {p['name']: p['pattern'] for p in pr['items'] if p['name'] in pr.get('tying', [])}
+    forms = pr.get('exchange_forms', {})
+    findings, found, kept = [], {}, collections.defaultdict(set)
+    for rid, name in _central(cov):
+        if name in found:
+            continue
+        taken = [n for n, pat in tying.items() if re.search(pat, _binders(decls.get(name, {}).get('statement', '')))]
+        if not taken:
+            continue
+        form = forms.get(name)
+        if not form:
+            findings.append(f'{name}: takes {", ".join(taken)} and lists no form over the exchange')
+            continue
+        if form not in decls:
+            findings.append(f'{name}: its form over the exchange {form} is not a declaration of the receipt')
+            continue
+        hyp = _binders(decls[form].get('statement', ''))
+        left = [n for n, pat in tying.items() if re.search(pat, hyp)]
+        if left:
+            findings.append(f'{name}: its form over the exchange {form} still takes {", ".join(left)}')
+            continue
+        if not reaches(decls, form, name):
+            findings.append(f'{name}: the proof of its form over the exchange {form} does not use it')
+            continue
+        found[name] = form
+        for p in pr['items']:
+            if p['name'] not in tying and re.search(p['pattern'], hyp):
+                kept[p['name']].add(form)
+    reading_ = pr.get('reading')
+    if reading_:
+        for k in ('declaration', 'gives'):
+            if reading_.get(k) and reading_[k] not in decls:
+                findings.append(f'the reading {reading_["name"]}: {reading_[k]} is not a declaration of the receipt')
+        for k in ('meets', 'fails'):
+            if not reading_.get(k):
+                findings.append(f'the reading {reading_["name"]}: no declaration listed that {k[:-1]}s it')
+            for w in reading_.get(k, []):
+                if w not in decls:
+                    findings.append(f'the reading {reading_["name"]}: {w} is not a declaration of the receipt')
+    return findings, found, {k: sorted(v) for k, v in kept.items()}
+
+
 def k3(cov, decls):
     findings, used = [], collections.defaultdict(list)
     for rid, name in _central(cov):
@@ -478,6 +540,8 @@ def evaluate() -> dict:
     if errors:
         return {'errors': errors}
     f3, used = k3(cov, decls)
+    fx, forms, kept = exchange_forms(cov, decls)
+    f3 = f3 + fx
     f4, tags = k4(cov, decls)
     f5, params = k5(cov, decls, chapter)
     f6, links, normative = k6(cov, decls)
@@ -491,7 +555,7 @@ def evaluate() -> dict:
         'receipt': receipt.get('utc'), 'connectivity_commit': conn.get('commit'),
         'connectivity_receipt': conn.get('core_receipt_at_commit'),
         'met': {k: not v for k, v in criteria.items()}, 'findings': criteria,
-        'rows': cov['rows'], 'natural_number_laws': cov['representation']['natural_number_laws'], 'premises_used': used, 'logical_premises': [p for p in cov['premises']['items'] if p.get('kind') == 'logical'], 'modelling': tags, 'parameters': params,
+        'rows': cov['rows'], 'natural_number_laws': cov['representation']['natural_number_laws'], 'premises_used': used, 'exchange_forms': forms, 'exchange_kept': kept, 'exchange_reading': cov['premises'].get('reading'), 'logical_premises': [p for p in cov['premises']['items'] if p.get('kind') == 'logical'], 'modelling': tags, 'parameters': params,
         'chain_start': cov['ethics_chain']['steps'][0], 'chain': links, 'normative_hypotheses': normative, 'open_items': items,
         'master_laws': {'laws': cov['master_laws'], 'measured': conn.get('master_laws')} if cov.get('master_laws') else None,
     }
@@ -523,6 +587,21 @@ def render_report(result: dict) -> str:
         if k == 'K3' and result['premises_used']:
             out += ['Premises found in central statements: ' + '; '.join(
                 f'{p} ({len(v)})' for p, v in sorted(result['premises_used'].items())) + '.', '']
+            if result.get('exchange_forms') is not None:
+                forms = result['exchange_forms']
+                out += [f'Tying premises over the exchange: {len(forms)} central statements take, in their binders, balance, only active relata '
+                        'giving or taking, or activity needing support, and each has its form over what is read off an exchange, '
+                        'whose proof uses it and whose binders take none of the four (`Becoming.OverExchange`): '
+                        + ', '.join(f'`{a.removeprefix("Becoming.")}` → `{b.removeprefix("Becoming.")}`' for a, b in sorted(forms.items())) + '.', '']
+                if result['exchange_kept']:
+                    out += ['What the forms still take, each a state of the law or a law\'s own hypothesis: ' + '; '.join(
+                        f'{p} ({len(v)})' for p, v in sorted(result['exchange_kept'].items())) + '.', '']
+                r = result.get('exchange_reading')
+                if r:
+                    out += [f'The forms over a world read off a relation of exchange take the reading {r["name"]} '
+                            f'(`{r["declaration"].removeprefix("Becoming.")}`), which gives activity needing support '
+                            f'(`{r["gives"].removeprefix("Becoming.")}`); met by ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in r['meets'])
+                            + '; failed by ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in r['fails']) + '.', '']
             for p in result['logical_premises']:
                 out += [f'Logical premise {p["name"]}: ' + '; '.join(
                     f'{k} ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in p.get(k, []))
