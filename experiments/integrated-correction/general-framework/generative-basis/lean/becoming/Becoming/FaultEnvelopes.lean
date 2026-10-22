@@ -150,11 +150,33 @@ theorem all_congr {α : Type} {p q : α → Bool} :
     show (p a && l.all p) = (q a && l.all q)
     rw [same a (.head l), all_congr fun x m => same x (.tail a m)]
 
-/-- **Listing the roster twice warrants nothing more.** -/
+/-- An added test true only where a test already true is, adds nothing to their disjunction. -/
+theorem or_absorbed {a b : Bool} (absorbed : a = true → b = true) : (a || b) = b :=
+  match a, b with
+  | false, _ => rfl
+  | true, true => rfl
+  | true, false => absurd (absorbed rfl) (fun h => Bool.noConfusion h)
+
+/-- **Witnesses copying witnesses on the roster warrant nothing more.** Where each added witness
+supports as some witness on the roster does and lies in exactly the admitted fault sets it lies
+in, the certificate over the longer roster is the certificate over the roster: a witness whose
+report and failures go with another's is no second check. -/
+theorem copied_roster_same {roster extra : List Domain} {faults : Envelope} {supports : Domain → Bool}
+    (copies : ∀ e, e ∈ extra → ∃ d, d ∈ roster ∧ supports e = supports d ∧
+      ∀ bad, bad ∈ faults → (e ∈ bad ↔ d ∈ bad)) :
+    certificate (extra ++ roster) faults supports = certificate roster faults supports :=
+  congrArg (!faults.isEmpty && ·) (all_congr fun bad inside => (any_append extra roster).trans
+    (or_absorbed fun some => match any_true_iff.mp some with
+      | ⟨e, member, holds⟩ => match copies e member, supports_outside_iff.mp holds with
+        | ⟨d, onRoster, same, alike⟩, ⟨supported, outside⟩ =>
+          any_true_iff.mpr ⟨d, onRoster, supports_outside_iff.mpr
+            ⟨same ▸ supported, fun within => outside ((alike bad inside).mpr within)⟩⟩))
+
+/-- **Listing the roster twice warrants nothing more**: each witness listed again copies itself. -/
 theorem duplicated_roster_same (roster : List Domain) (faults : Envelope)
     (supports : Domain → Bool) :
     certificate (roster ++ roster) faults supports = certificate roster faults supports :=
-  congrArg (!faults.isEmpty && ·) (all_congr fun _ _ => (any_append roster roster).trans (or_self _))
+  copied_roster_same fun e member => ⟨e, member, rfl, fun _ _ => Iff.rfl⟩
 
 /-- **An empty envelope certifies nothing.** -/
 theorem empty_envelope_rejects (roster : List Domain) (supports : Domain → Bool) :

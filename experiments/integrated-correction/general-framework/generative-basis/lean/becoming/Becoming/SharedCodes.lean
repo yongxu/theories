@@ -1222,6 +1222,118 @@ end WrittenBack
 /-! ## Witnesses -/
 
 /-! Two formations (`true` and `false`) and one sense; the form `true` and the form `false`. -/
+/-! ## Synonyms, a coined form, and taking what most hold -/
+
+section Synonyms
+
+variable {M : Type v} {F : Type w}
+
+/-- **Synonyms do no harm, homonyms do.** A code letting a sense hold several forms (`holds m x`:
+the sense `m` holds the form `x`) reads every form held back as its sense, and only it, exactly
+where no two senses hold one form; a sense may hold as many forms as it likes. -/
+theorem synonyms_read_iff (holds : M → F → Prop) :
+    (∀ m x, holds m x → ∀ n, holds n x ↔ n = m) ↔ ∀ m n x, holds m x → holds n x → n = m :=
+  ⟨fun reads m n x hm hn => (reads m x hm n).mp hn,
+   fun apart m x hm n => ⟨fun hn => apart m n x hm hn,
+     fun same => Eq.subst (motive := fun k => holds k x) same.symm hm⟩⟩
+
+/-- A code with one form a sense is the case: it reads back exactly where it tells senses apart
+(`self_reads_iff`). -/
+theorem one_form_reads_iff (c : M → F) :
+    (∀ m n x, c m = x → c n = x → n = m) ↔ TellsApart c :=
+  ⟨fun apart n n' same => apart n' n (c n') rfl same,
+   fun tells m n _ hm hn => tells n m (hn.trans hm.symm)⟩
+
+end Synonyms
+
+section Coining
+
+variable {I : Type u} {M : Type v} {F : Type w} [DecidableEq I] [DecidableEq M]
+
+/-- A formation *coins* the form `x` for the sense `m`: it gives `m` the form `x`, and nothing else
+changes. Hearing makes no form (`hearBy_held`); coining does. -/
+def coin (i : I) (m : M) (x : F) (X : I → M → F) : I → M → F :=
+  fun k n => if k = i then if n = m then x else X k n else X k n
+
+theorem coin_at (i : I) (m : M) (x : F) (X : I → M → F) : coin i m x X i m = x :=
+  (if_pos rfl).trans (if_pos rfl)
+
+theorem coin_other_sense {i k : I} {m n : M} (x : F) (X : I → M → F) (ne : n ≠ m) :
+    coin i m x X k n = X k n :=
+  match decEq k i with
+  | isTrue h => (if_pos h).trans (if_neg ne)
+  | isFalse h => if_neg h
+
+/-- Hearings all at the sense `m` leave every other sense as it was. -/
+theorem runBy_other_sense {adopt : (M → F) → (M → F) → M → Bool} {m n : M} (ne : n ≠ m) :
+    ∀ (es : List (Hearing I M)), (∀ e, e ∈ es → e.sense = m) → ∀ (X : I → M → F) (i : I),
+      runBy adopt es X i n = X i n
+  | [], _, _, _ => rfl
+  | e :: es, at_m, X, i =>
+    (runBy_other_sense ne es (fun e' mem => at_m e' (.tail e mem)) (hearBy adopt e X) i).trans
+      (hearBy_other (.inr fun same => ne (same.trans (at_m e (.head es)))))
+
+/-- **A coined form, heard by all, brings back a merged distinction.** Where every formation holds
+a code that merges `m` and `m'`, a formation coining at `m` a form the code does not give `m'`,
+and every formation then hearing it at `m`, every formation tells `m` from `m'` again. -/
+theorem coined_returns {all : List I} (every : ∀ i, i ∈ all) {c : M → F} {m m' : M}
+    (ne : m' ≠ m) (o : I) {x : F} (fresh : x ≠ c m') (X : I → M → F) (j : I) :
+    runBy always (broadcast o m all) (coin o m x (impose c X)) j m ≠
+      runBy always (broadcast o m all) (coin o m x (impose c X)) j m' :=
+  fun same => fresh (((broadcast_reaches every o m _ j).trans (coin_at o m x _)).symm.trans
+    (same.trans ((runBy_other_sense ne _ (fun _ mem => match ListTests.mem_map_iff.mp mem with
+      | ⟨_, _, made⟩ => made ▸ rfl) _ j).trans (coin_other_sense x _ ne))))
+
+end Coining
+
+section Majority
+
+variable {I : Type u} {M : Type v} {F : Type w} [DecidableEq F]
+
+/-- How many formations of `all` hold the form `x` at `m`. -/
+def holders (all : List I) (X : I → M → F) (m : M) (x : F) : Nat :=
+  (all.filter fun k => decide (X k m = x)).length
+
+/-- **Taking what most hold**: each formation takes, at each sense, a form more than half of `all`
+hold there, where there is one, and otherwise keeps its own. -/
+def majority (all : List I) (X : I → M → F) : I → M → F := fun i m =>
+  match all.find? (fun j => decide (all.length < 2 * holders all X m (X j m))) with
+  | some j => X j m
+  | none => X i m
+
+/-- **Taking what most hold makes no form**: every form after it was held by some formation. -/
+theorem majority_held (all : List I) (X : I → M → F) (i : I) (m : M) :
+    ∃ j, majority all X i m = X j m := by
+  unfold majority
+  cases all.find? (fun j => decide (all.length < 2 * holders all X m (X j m))) with
+  | none => exact ⟨i, rfl⟩
+  | some j => exact ⟨j, rfl⟩
+
+end Majority
+
+namespace Majority
+
+/-- Three formations, two holding `true` and one `false`. -/
+def three : Nat → Unit → Bool := fun k _ => decide (k < 2)
+
+/-- Two formations, one holding `true` and one `false`. -/
+def two : Nat → Unit → Bool := fun k _ => decide (k = 0)
+
+/-- **An odd split agrees at once.** Two of three holding `true`, taking what most hold brings
+every one of them to `true`. -/
+theorem odd_agrees :
+    majority [0, 1, 2] three 0 () = true ∧ majority [0, 1, 2] three 1 () = true ∧
+      majority [0, 1, 2] three 2 () = true :=
+  ⟨rfl, rfl, rfl⟩
+
+/-- **An even split rests.** One of two holding `true`, taking what most hold changes nothing:
+the tie is a rest, and agreement needs something that breaks the symmetry. -/
+theorem even_rests : majority [0, 1] two 0 () = two 0 () ∧ majority [0, 1] two 1 () = two 1 () ∧
+    two 0 () ≠ two 1 () :=
+  ⟨rfl, rfl, fun same => Bool.noConfusion same⟩
+
+end Majority
+
 namespace TwoFormations
 
 /-- Each formation gives the sense its own name as form: they disagree. -/

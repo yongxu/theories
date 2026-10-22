@@ -174,6 +174,16 @@ theorem finer_count (weight : S → A → S → Nat) (moves : List A) (all : Lis
     (Weights.sum_congr _ fun _ _ => Nat.mul_one _).trans
       (Weights.sum_courses weight moves all (fun _ => 1) n s)
 
+/-- **The move alone does not fix the outcome where it has two situations.** Where a step by `a`
+from `s` has situations reaching two different configurations, the finer law takes both, by the
+same move, and no law giving the next configuration from the configuration and the move alone is
+right on both: whatever difference between them is set down to the move is misattributed. -/
+theorem move_underdetermines (weight : S → A → S → Nat) {s m m' : S} {a : A} (ne : m ≠ m')
+    (pos : 0 < weight s a m) (pos' : 0 < weight s a m') :
+    (finerLaw weight).step s (a, m, 0) m ∧ (finerLaw weight).step s (a, m', 0) m' ∧
+      ∀ next : S → A → S, ¬ (next s a = m ∧ next s a = m') :=
+  ⟨⟨rfl, pos⟩, ⟨rfl, pos'⟩, fun _ ⟨first, second⟩ => ne (first.symm.trans second)⟩
+
 end Finer
 
 /-! ## Two values -/

@@ -229,20 +229,66 @@ theorem filter_congr {α : Type} {p q : α → Bool} (same : ∀ x, p x = q x) :
       (match q a with | true => a :: l.filter q | false => l.filter q)
     rw [same a, filter_congr same l]
 
-/-- **Listing the roster twice changes no step and no certificate.** -/
+theorem any_congr_on {α : Type} {p q : α → Bool} :
+    ∀ {l : List α}, (∀ x, x ∈ l → p x = q x) → l.any p = l.any q
+  | [], _ => rfl
+  | a :: l, same => by
+    show (p a || l.any p) = (q a || l.any q)
+    rw [same a (.head l), any_congr_on fun x m => same x (.tail a m)]
+
+/-- A test both of whose terms agree where the second is true adds the first nothing. -/
+theorem and_absorbed {a b : Bool} (absorbed : b = true → a = true) : (a && b) = b :=
+  match a, b with
+  | true, false => rfl
+  | false, false => rfl
+  | true, true => rfl
+  | false, true => absurd (absorbed rfl) (fun h => Bool.noConfusion h)
+
+/-- A witness with another's report and membership of a fault set is witnessed alike. -/
+theorem witnessed_copy {bad : List Domain} {x : Bool} {reports : Reports} {e d : Domain}
+    (report : reports e = reports d) (alike : e ∈ bad ↔ d ∈ bad) :
+    witnessed bad x reports e = witnessed bad x reports d := by
+  unfold witnessed
+  rw [report]
+  cases hd : bad.contains d with
+  | true => rw [contains_true_iff.mpr (alike.mpr (contains_true_iff.mp hd))]
+  | false => rw [contains_false_iff.mpr fun within => (contains_false_iff.mp hd) (alike.mp within)]
+
+/-- **Witnesses copying witnesses on the roster change no step and no certificate.** Where each
+added witness reports as some witness on the roster does, supports as it does and lies in exactly
+the fault sets it lies in among those any candidate admits, inspection over the longer roster
+takes the same steps, and the certificate over every pool is the same: a witness whose report is
+another's and whose failures go with it is no second check, however many are added. -/
+theorem copied_witnesses_same {extra : List Domain} {reports : Reports} {supports : Domain → Bool}
+    (copies : ∀ e, e ∈ extra → ∃ d, d ∈ roster ∧ reports e = reports d ∧ supports e = supports d ∧
+      ∀ h bad, bad ∈ faults h → (e ∈ bad ↔ d ∈ bad)) (ms ns : List H) :
+    ((inspection (extra ++ roster) faults answer).step ms reports ns ↔
+      (inspection roster faults answer).step ms reports ns) ∧
+    certificate (extra ++ roster) (pool faults ns) supports =
+      certificate roster (pool faults ns) supports :=
+  have explains_same : ∀ h bad x, bad ∈ faults h →
+      explains (extra ++ roster) bad x reports = explains roster bad x reports :=
+    fun h bad _ inside => (all_append _ extra roster).trans (and_absorbed fun all => all_true_iff.mpr
+      fun e member => match copies e member with
+        | ⟨d, onRoster, report, _, alike⟩ => (witnessed_copy report (alike h bad inside)).trans
+            (all_true_iff.mp all d onRoster))
+  have same : refine (extra ++ roster) faults answer ms reports =
+      refine roster faults answer ms reports :=
+    filter_congr (fun h => any_congr_on fun bad inside => explains_same h bad (answer h) inside) ms
+  ⟨⟨fun e => e.trans same, fun e => e.trans same.symm⟩,
+   copied_roster_same fun e member => match copies e member with
+    | ⟨d, onRoster, _, support, alike⟩ => ⟨d, onRoster, support, fun bad pooled =>
+        match mem_flatMap_iff.mp pooled with
+        | ⟨h, _, inside⟩ => alike h bad inside⟩⟩
+
+/-- **Listing the roster twice changes no step and no certificate**: each witness listed again
+copies itself. -/
 theorem doubled_roster_same (ms ns : List H) (reports : Reports) (supports : Domain → Bool) :
     ((inspection (roster ++ roster) faults answer).step ms reports ns ↔
       (inspection roster faults answer).step ms reports ns) ∧
     certificate (roster ++ roster) (pool faults ns) supports =
       certificate roster (pool faults ns) supports :=
-  have explains_same : ∀ bad x, explains (roster ++ roster) bad x reports =
-      explains roster bad x reports :=
-    fun _ _ => (all_append _ roster roster).trans (and_self' _)
-  have same : refine (roster ++ roster) faults answer ms reports =
-      refine roster faults answer ms reports :=
-    filter_congr (fun h => any_congr (fun bad => explains_same bad (answer h)) (faults h)) ms
-  ⟨⟨fun e => e.trans same, fun e => e.trans same.symm⟩,
-   duplicated_roster_same roster (pool faults ns) supports⟩
+  copied_witnesses_same (fun e member => ⟨e, member, rfl, rfl, fun _ _ _ => Iff.rfl⟩) ms ns
 
 /-- **A candidate admitting the failure of the whole roster is kept by every step.** -/
 theorem total_fault_kept {ms ns : List H} {reports : Reports}
