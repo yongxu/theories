@@ -83,7 +83,7 @@ laws = [
 ]
 for en, zh, _ in laws:
     assert len(en) <= 420 and len(zh) <= 190, (en[:40], len(en), len(zh))
-EARLIER = resolve(['Optimum.Holding.gate', 'Optimum.Holding.gated_alike', 'Optimum.Holding.web', 'Optimum.Holding.onSource'])
+EARLIER = resolve(['Optimum.Holding.gate', 'Optimum.Holding.gated_alike', 'Optimum.Holding.onSource'])
 cited = sorted(d for _, _, names in laws for d in resolve(names))
 rec = {
     'schema_version': 2, 'id': RID,
@@ -162,6 +162,9 @@ for oid in OLD_IDS:
     if d.get('canonical_source') == SRC:
         d['canonical_source'] = FROZEN
     d['proof_bindings'] = [b for b in d.get('proof_bindings', []) if b['source'] != SRC]
+    for dep in d.get('dependencies', []):
+        if dep.get('interface', {}).get('evidence') == SRC:
+            dep['interface']['evidence'] = FROZEN
     d['aliases'] = [a for a in d.get('aliases', []) if not a.startswith('Becoming.')]
     d['history'].append({
         'en': f'22 October 2026, UM: superseded by {RID}, one model of drawers in turn on one law of best response, of which '

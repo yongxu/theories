@@ -1,11 +1,11 @@
 {
- "commit": "0266b4d379145b4712ad5069fea9ae44374e08aa",
+ "commit": "0ff6bd35f99c77a78af46657226bd258d9e077c3",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261022T044527.296525Z",
+ "core_receipt_at_commit": "20261022T045034.169350Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39645,
- "spine_theorems": 13069,
+ "constants": 39804,
+ "spine_theorems": 13129,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,25 +28,25 @@
  "classes": {
   "statement on both families": 1003,
   "statement on Process/Frame/Run/Trace": 2930,
-  "statement on World/Flow/Web": 3024,
+  "statement on World/Flow/Web": 3055,
   "statement on the base only through a law of its own module": 259,
-  "proof through a base family": 155,
-  "used by a theorem on the base": 4896,
+  "proof through a base family": 162,
+  "used by a theorem on the base": 4917,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 588,
+  "apart: own vocabulary": 589,
   "apart: prelude-only statement": 59
  },
- "apart": 647,
- "apart_general_structure_by_design": 186,
+ "apart": 648,
+ "apart_general_structure_by_design": 187,
  "apart_otherwise": 461,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 78,
-  "of them on the base": 63,
+  "spine theorems that are pure forwarders": 80,
+  "of them on the base": 65,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 11,
    "instance on the base recorded": 11,
    "statement on both families": 1,
-   "used by a theorem on the base": 29,
+   "used by a theorem on the base": 31,
    "statement on World/Flow/Web": 8,
    "statement on the base only through a law of its own module": 1
   }
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 436,
- "apart_roots": 436,
+ "apart_used_by_nothing": 437,
+ "apart_roots": 437,
  "apart_roots_by_category": {
   "model-witness": 239,
   "support": 86,
-  "general-structure": 88,
+  "general-structure": 89,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -344,6 +344,10 @@
    4,
    15
   ],
+  "Becoming.Frequency": [
+   4,
+   105
+  ],
   "Becoming.Relevance": [
    4,
    34
@@ -391,10 +395,6 @@
   "Becoming.Interleavings": [
    3,
    162
-  ],
-  "Becoming.Frequency": [
-   3,
-   78
   ],
   "Becoming.MutualDependence": [
    3,
@@ -584,17 +584,17 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12323,
-   "apart": 567,
+   "theorems": 12383,
+   "apart": 568,
    "classes": {
     "statement on both families": 989,
     "statement on Process/Frame/Run/Trace": 2719,
-    "statement on World/Flow/Web": 2999,
+    "statement on World/Flow/Web": 3030,
     "statement on the base only through a law of its own module": 213,
-    "proof through a base family": 144,
-    "used by a theorem on the base": 4537,
+    "proof through a base family": 151,
+    "used by a theorem on the base": 4558,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 509,
+    "apart: own vocabulary": 510,
     "apart: prelude-only statement": 58
    }
   },
@@ -691,9 +691,9 @@
  "records_by_best_alias_class": {
   "statement on both families": 71,
   "statement on Process/Frame/Run/Trace": 123,
-  "statement on World/Flow/Web": 97,
+  "statement on World/Flow/Web": 98,
   "statement on the base only through a law of its own module": 4,
-  "proof through a base family": 1,
+  "proof through a base family": 2,
   "used by a theorem on the base": 8,
   "instance on the base recorded": 2,
   "apart: own vocabulary": 5

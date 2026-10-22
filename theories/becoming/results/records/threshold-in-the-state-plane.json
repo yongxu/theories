@@ -41,7 +41,6 @@
         "Becoming.RegimeMargin.leading_false",
         "Becoming.RegimeMargin.Adjusted.falling",
         "Becoming.RegimeMargin.Adjusted.threshold",
-        "Becoming.RegimeMargin.Adjusted.threshold_le",
         "Becoming.RegimeMargin.Adjusted.falls_iff_below",
         "Becoming.RegimeMargin.Adjusted.threshold_falls"
       ]
@@ -69,6 +68,17 @@
         "Becoming.RegimeMargin.Notch.stays_three",
         "Becoming.RegimeMargin.Notch.ends_four",
         "Becoming.RegimeMargin.Notch.no_threshold"
+      ]
+    },
+    {
+      "en": "One law of exact thresholds: where a fate is down-closed in the level and read off an exact check, the least level up to a bound from which the check fails is exact, and no lower where one fate implies another; every threshold of the regime and its webs is derived from it.",
+      "zh": "一条精确阈值之律：命运在水平上向下封闭且由精确检查读出时，至多到一界、检查失败的最小水平是精确的，一个命运蕴含另一个时它不更低；体制及其网的每个阈值由它导出。",
+      "declarations": [
+        "Becoming.RegimeMargin.leading_exact",
+        "Becoming.RegimeMargin.leading_falls",
+        "Becoming.RegimeMargin.leading_eq",
+        "Becoming.RegimeMargin.leading_congr",
+        "Becoming.RegimeMargin.Adjusted.rests_iff_falling"
       ]
     }
   ],
@@ -255,11 +265,11 @@
         "Becoming.RegimeMargin.Adjusted.falls_of_below",
         "Becoming.RegimeMargin.Adjusted.fates",
         "Becoming.RegimeMargin.Adjusted.orbit_regime",
+        "Becoming.RegimeMargin.Adjusted.rests_iff_falling",
         "Becoming.RegimeMargin.Adjusted.step",
         "Becoming.RegimeMargin.Adjusted.step_mono",
         "Becoming.RegimeMargin.Adjusted.threshold",
         "Becoming.RegimeMargin.Adjusted.threshold_falls",
-        "Becoming.RegimeMargin.Adjusted.threshold_le",
         "Becoming.RegimeMargin.FromNothing",
         "Becoming.RegimeMargin.Keeps",
         "Becoming.RegimeMargin.Meets",
@@ -272,13 +282,17 @@
         "Becoming.RegimeMargin.ends_below",
         "Becoming.RegimeMargin.holds",
         "Becoming.RegimeMargin.leading",
+        "Becoming.RegimeMargin.leading_congr",
+        "Becoming.RegimeMargin.leading_eq",
+        "Becoming.RegimeMargin.leading_exact",
+        "Becoming.RegimeMargin.leading_falls",
         "Becoming.RegimeMargin.leading_false",
         "Becoming.RegimeMargin.leading_le",
         "Becoming.RegimeMargin.leading_true",
         "Becoming.RegimeMargin.step",
         "Becoming.RegimeMargin.threshold_regime"
       ],
-      "sha256": "03746d31f21df89b9dfca102312b07823f6816b51b3205c71dbc28967b622d3c"
+      "sha256": "50f28d79a676ad30d9b637be3f549151f2907983a3cf7d589e066d8bc54bc138"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -336,7 +350,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3317db1c9bdc8260ec8c2f67e9f15d50eab6e7fad43497da2a8ddba7d1b88165"
+      "sha256": "07480c3fde0ba5298b69503733972d3348b7f9a5f6c1c9ea1da2af6ac1ead4ce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
@@ -385,12 +399,18 @@
       "role": "receipt",
       "sha256": "2e55e957277c6850ab333116aff5b4dff2fce182955a5c60e4c0d6e9aeabbb0c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "role": "receipt",
+      "sha256": "1e74422727acd0467bc4e68475b978f5397a2059a38c3f83b1ec1850a948e309",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -448,6 +468,10 @@
     {
       "en": "21 October 2026, MQ7: the field frequency of fates on either side of the curve was put to a frozen test on the 21 primary stocks in NOAA Stock SMART and ICES Stock Assessment Graphs that no analysis had read (study section 316): below the regime's point, on the low side, episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, from 5 stocks, with a lower bound of 0.00 (C1 failed; C2 not testable). What this record does not show and its next delta now say so. Its laws are unchanged.",
       "zh": "2026年10月21日，MQ7：曲线两侧命运的野外频率已在 NOAA Stock SMART 与 ICES Stock Assessment Graphs 中未经任何分析读过的 21 个主组存量上做冻结检验（研究第 316 节）：在体制之点以下、峰值低侧，同一存量、同一亏缺档内，不足捕捞的片段比满足者多下降 0.39，来自 5 个存量，下界为 0.00（C1 未通过；C2 不可检验）。本记录所不表明者与其下一步现已如此说明。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, UM: one law of exact thresholds added, from which this record's exactness and falling are now derived; Adjusted.threshold_le removed, no law reading it (study section 335).",
+      "zh": "2026年10月22日，UM：新增一条精确阈值之律，本记录的精确与下降今由它导出；Adjusted.threshold_le 被移除，无律读取它（研究第 335 节）。"
     }
   ]
 }

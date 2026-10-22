@@ -15036,3 +15036,58 @@ Output → input: chapter §2.6 (a law of the line; record tables, EN and ZH); F
 **Self-review.** Every premise is used: the zero from `A` for stopping, the bound `m` for the bound on what passes, acting at each step and a standing level for stopping by step `A`, `f` not rising for the exact line. The gap's second theorem asked that a non-rising response never reaching zero is eventually a positive constant; in whole numbers it is, but saying at which step needs the limited principle of omniscience (by hand, not in Lean: a response one at each amount before the first at which a Boolean sequence is true, and zero from there, does not rise, and its eventual value decides whether the sequence is false throughout), so it is not stated. What is stated suffices for the contrast: such a coupling recurs, and coupled into itself leaves every finite order inexact. The doubling around a loop (`carried_doubles_roundTrip`) applies once the loop's couplings act at each return, and is not restated. The laws on any level history are joined to the base through their instances in the formed course; the bound on what passes (`Saturation.passed_lt`) is not, and stands apart as general structure in the connectivity register. Nothing earlier is generalized: the saturated strengths are a case of strengths read before, and `StopsBy` and `exact_of_reading_before` are used as they stand. Limits: recovery after rest, strengths read off what passed through other couplings, amounts beyond whole numbers.
 
 **The run.** Core 285 modules and 12,392 theorems, instances 7 and 567, applications 6 and 179; 35 Lean steps ran, 1,169 reused. 33 declarations added to Becoming.Frequency, 27 of them theorems, none removed, all with empty axiom reports. Connectivity: 648 of 13,138 apart; no new apart root, every new law stated on a web or a carrying law read on one, the witnesses on webs; register check passes.
+
+## 335. One model of drawers in turn, and one law of exact thresholds (UM)
+
+```text
+Result(s): new record drawers-in-turn (Becoming.Optimum), superseding drawers-in-turn-draw-everything,
+       revision-comes-to-drawing-everything, drawers-in-turn-within-capacities and any-number-of-drawers-in-turn;
+       threshold-in-the-state-plane and rest-on-coupled-webs gain the one law of exact thresholds
+       (Becoming.RegimeMargin).
+Delta: the drawers line had grown as four models beside one another: two drawers (SG14), revision of two (SG16),
+       two with capacities (SG15) and any number (SG17). They are one now. At each step k drawers draw in turn, drawer
+       d leaving of what it is given at least its floor low d t a and at most all of it (Optimum.InTurn: pass, drawn,
+       later, levels). A profile revises another where each of its rules is, at every step from every level, a best
+       response against the other (Revises); a profile is perfect where it revises itself (Perfect). One law of best
+       response carries every result: what a best response keeps above its floor returns to it at least one for one
+       (kept_returns), so it leaves its floor wherever nothing it keeps returns to it (leaves_floor), a drawer draws to
+       capacity wherever what it draws later does not depend on what it leaves (at_floor), and every drawer does at the
+       last step (last_at_floor). With no floor and two or more drawers, one backward induction over a sequence of
+       revisions (revisions_end, through others_draw_nothing) gives both the revision (a revision always exists,
+       revise_revises; revised_draw_all) and the perfect profile, its own constant sequence (perfect_ends); where the
+       first drawer leaves nothing the base stands at what stands at nothing (levels_of_first) and one web law breaks
+       every dependence above it (Web.drained_broken). Two witnesses replace six: under the gate (Holding.gated_in_turn)
+       and under doubling with a one-unit floor (Holding.doubling_capacity). Removed: the two-drawer model, Many, the
+       capacity layer, three web laws and four witnesses. The margins' thresholds share one law at the leading layer:
+       a down-closed fate read off an exact check has its threshold exact (leading_exact) and lower where it is implied
+       (leading_falls); the adjusted regime's, the web's, the bounded web's and the regime's thresholds are derived
+       from it (subagent-built, checked here).
+Premises / correspondence: drawers: any law G of what stands; k drawers in turn, each leaving between its floor and
+       what it is given; plain sums over the steps that remain; rules reading the drawer, the step and the level; the
+       drain and the revision with no floor and k ≥ 2; natural amounts, discrete steps. Correspondence: the dynamic
+       commons (Levhari and Mirman 1980), backward induction (Selten 1965), best-response dynamics (Fudenberg and
+       Levine 1998).
+Evidence: core receipt 20261022T045034.169350Z (passed).
+Boundary: drawing at once with a rule of sharing; which profiles are perfect where a floor binds away from the last
+       step and the steps where what a drawer draws later is fixed; noisy or partial revision.
+Output → input: chapter §2.3, §3.4, §7.1, §8.1 item 10, the relation table's row 6 and the record table (EN, ZH);
+       Optimum's and RegimeMargin's headers; the four drawer records superseded; significance review, unified check.
+```
+
+**The question.** Four landings in one day had each answered a question about drawers in turn with a model of its own: SG14 two drawers, SG16 their revision, SG15 two drawers with capacities, SG17 any number ([§324](#324-drawers-in-turn-each-ranking-courses-sg14), [§326](#326-how-drawers-in-turn-come-to-a-mutual-best-response-sg16), [§329](#329-drawers-in-turn-whose-capacity-limits-a-draw-sg15), [§332](#332-any-number-of-drawers-in-turn-sg17)). Each proved the same step again: a drawer whose later draws do not depend on what it leaves takes everything it may. The aim here is the elegant form: one model, one law, every result from it.
+
+**What was built** (Becoming.Optimum and Becoming.RegimeMargin, pure core, every axiom report empty).
+
+- *One model* (`Optimum.InTurn.pass`, `Optimum.InTurn.next`, `Optimum.InTurn.drawn`, `Optimum.InTurn.later`, `Optimum.InTurn.levels`, `Optimum.InTurn.Revises`, `Optimum.InTurn.Perfect`). `k` drawers in turn, each with a floor; a capacity `c` is the floor `a - c`, no capacity the floor nothing. A perfect profile is a profile that revises itself, so revision and perfection are one notion read twice.
+- *One law* (`Optimum.InTurn.kept_returns`, `Optimum.InTurn.leaves_floor`, `Optimum.InTurn.at_floor`, `Optimum.InTurn.last_at_floor`). Of `a`, leaving `r` draws `a - r` now and `C r` later; at a best response against leaving the floor, `C low + (r - low) ≤ C r`. Everything a drawer keeps must come back to it at least one for one; where nothing comes back, it keeps nothing above its floor.
+- *The drain and the revision* (`Optimum.InTurn.pass_zero`, `Optimum.InTurn.pass_of_first`, `Optimum.InTurn.others_draw_nothing`, `Optimum.InTurn.revisions_end`, `Optimum.InTurn.perfect_ends`, `Optimum.InTurn.levels_of_first`, `Optimum.InTurn.perfect_of_zero`, `Optimum.InTurn.bestUpTo`, `Optimum.InTurn.bestUpTo_le`, `Optimum.InTurn.bestUpTo_max`, `Optimum.InTurn.best_from`, `Optimum.InTurn.revise`, `Optimum.InTurn.revise_revises`, `Optimum.InTurn.revised`, `Optimum.InTurn.revised_leaves`, `Optimum.InTurn.revised_draw_all`, `Web.drained_broken`). With no floor and two or more drawers: where the first drawer leaves nothing later, every other drawer draws nothing later, so by the law it leaves nothing; then what the first leaves goes to the second, so it leaves nothing too. Over a sequence of revisions this takes two rounds a step back; a perfect profile is its own sequence, so it draws everything at once.
+- *Two witnesses* (`Optimum.Holding.pass_keep`, `Optimum.Holding.restraint_keeps`, `Optimum.Holding.gated_in_turn`, `Optimum.Holding.oneUnit`, `Optimum.Holding.keepsFirst`, `Optimum.Holding.keeping`, `Optimum.Holding.keepsFirst_le`, `Optimum.Holding.twice_sum`, `Optimum.Holding.keepsFirst_best`, `Optimum.Holding.only_three`, `Optimum.Holding.doubling_capacity`). Under the gate, for any number of drawers from two: alone an optimum keeps the dweller, restraint keeps it, every perfect profile and every revision from restraint breaks it. Under doubling with a one-unit floor on the second: what the first leaves returns to it twice, less one, so leaving everything is its only best response from three, and the dweller is kept.
+- *One law of exact thresholds* (`RegimeMargin.leading_exact`, `RegimeMargin.leading_falls`, `RegimeMargin.leading_eq`, `RegimeMargin.leading_congr`, `RegimeMargin.Adjusted.rests_iff_falling`, `RegimeMargin.Coupled.Indexed.ends_iff_ending`). The margins' thresholds were each proved exact by the same argument; now the least level below which a down-closed fate holds, read off an exact check, is exact once, and lower where one fate implies another. `Adjusted.falls_iff_below`, `Adjusted.threshold_falls`, `threshold_regime`, `Coupled.Indexed.ends_iff_below`, `Coupled.Indexed.threshold_falls`, `Coupled.Indexed.ends_iff_below_within` and `Coupled.Indexed.threshold_falls_within` are derived from it, statements unchanged; `Adjusted.threshold_le` is removed and `leading_congr` moved to that layer.
+
+**Against the prior form** ([significance review, unified check](BECOMING-SIGNIFICANCE-REVIEW.md#unified-check)). In dynamic programming a choice is optimal where the marginal value of what is kept equals or exceeds what giving it up yields now; the one-for-one return here is that condition in natural amounts with a floor, read as a relation: what one leaves is kept only where it comes back to oneself. Backward induction and best-response dynamics are the known forms of the rest.
+
+*Reading* [AI reading, D45]. The commons line now reads as one sentence: a drawer keeps only what returns to it. Number, far-sight and learning change nothing where what one leaves goes to another; a limit on what another can take is what makes what one leaves come back.
+
+**Self-review.** The model keeps every premise each landing needed and no more: floors for SG15, no floor and `k ≥ 2` for the drain and the revision, the start leaving at most what it is given for the revision. SG14, SG15, SG16 and SG17's results are not restated as separate laws; their records are superseded by one, their evidence kept with their receipts. The witnesses were reduced to two. Removing the two-drawer model removed SG14's alone-and-in-turn statement only as a separate theorem; it is a conjunct of the gate witness. The thresholds' law is a lemma about `leading`, small in itself; its value is that seven exactness and falling laws now have one proof.
+
+**The run.** Core 285 modules and 12,383 theorems, instances 7 and 567, applications 6 and 179; 7 Lean steps ran, 1,197 reused. Becoming.Optimum 449 theorems (462 before), 19 declarations added (13 theorems), 40 removed; Becoming.RegimeMargin 244 theorems (240 before), 6 declarations added (6 theorems), 2 removed; all with empty axiom reports. Connectivity: 648 of 13,129 apart, unchanged; no new apart root, every law stated on the web or read by a law that is; register check passes.

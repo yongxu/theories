@@ -107,6 +107,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resourc
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T040548.209667Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 
 Aliases: `room read off the exchange`, `room from conservation with capacity`, `the drain where units are shared`, `从交换读出的余地`, `Becoming.Optimum.Above.room`, `Becoming.Optimum.optimum_beyond`, `Becoming.Web.optimum_broken_iff_capacity`
 

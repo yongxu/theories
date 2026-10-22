@@ -1,0 +1,281 @@
+{
+ "records": 30,
+ "apply": true,
+ "by_record": {
+  "a-step-coupling-keeps-at-every-horizon": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "a-weighting-faster-than-renewal-ends-the-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "any-number-of-drawers-in-turn": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "coupled-regimes": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "coupled-webs": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "drawers-in-turn-draw-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "drawers-in-turn-within-capacities": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "horizon-optima-hold-the-greatest-renewal": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "keeping-forgoes-the-renewal-at-the-need": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "margin-of-a-regime": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "optima-rebuild-a-depleted-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "others-drawing-first-end-the-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "raising-what-couples-in-draws-from-beyond": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "re-optimizing-above-a-renewal-ends-it": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "regime-in-any-amounts": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "regime-point-under-adjusting-giving": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "rest-on-coupled-webs": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "revision-comes-to-drawing-everything": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "room-read-off-the-exchange": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "several-optimizers-drain-by-their-joint-capacity": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "steps-met-again-after-a-fall": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "threshold-in-the-state-plane": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "thresholds-beyond-a-band": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "valuing-what-is-left-at-any-worth": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "valuing-what-is-left-at-the-horizon": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "webs-with-a-recent-giving": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "what-a-rise-draws-from-beyond": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  },
+  "what-an-optimum-does-beyond-what-couples-in": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "where-a-run-of-a-regime-comes-to-rest": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ]
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
