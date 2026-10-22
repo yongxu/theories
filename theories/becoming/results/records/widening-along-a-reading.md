@@ -79,6 +79,7 @@ Aliases: `widening along a reading`, `沿读法的扩大`, `widening over a grow
 - 20 October 2026, PE1 (what identifying interderivable propositions keeps and loses): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the chapter changed only by PE1's edits: a sentence in section 0's proof-language row, and in section 9 a paragraph on why the core excludes propext, the receipt, counts and layers. Read before re-pointing. The claim is unchanged.
 - 20 October 2026, EV5b (the evolution row's central laws on the base): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV5b's edits: the Becoming.GroupEnding bullet in 2.4 (the law for groups not uniform) and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R51 (study section 271): law 4 added, widening across a stretch along a continuation (the reading derived within one unfolding); does_not_show item 1 and next_delta updated.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 

@@ -114,6 +114,8 @@ import Becoming.Testing
 import Becoming.Runaway
 import Becoming.Response
 import Becoming.TimedResponse
+import Becoming.Latency
+import Becoming.Centers
 import Becoming.Counterfactual
 import Becoming.Regrouping
 import Becoming.Selection
@@ -279,6 +281,7 @@ import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
+import Becoming.PoolCourse
 import Becoming.Rejoining
 import Becoming.Lexical
 import Becoming.Frontier
@@ -1379,6 +1382,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   only, the union of the members' reach closures. Beyond it every formation registers and
   exchanges alike. The readings are the AI's, adopted on Ren's delegation of 15 October 2026.
 * `Becoming.TimedResponse` (L1): Response through exchanges in their order.
+* `Becoming.Latency` (L1): what a reader can come to know of an act, step by step. Routes
+  counted by coupling links (`TimedResponse.Linked`): where every source step is at `S` or later,
+  a potential route reaches a condition at step `t` only within `t - S` links, so under
+  TimedResponse's deadline premises no answer a reader gives through its couplings differs by `T`
+  unless a condition coupled into it lies within `T - S` links of the source. The region a reader
+  can represent from what it reads is drawn along coupling links and grows by at most one link a
+  step; in `Relay` the bound is attained at two links.
+* `Becoming.Centers` (L1): where what a formation does comes back to it. Two formations lie in
+  one loop where each can affect the other's continuation at some remove, an equivalence; a
+  formation's acts return where whatever it can affect can affect it, exactly where its loop is
+  closed under affecting, a property of the whole loop. Where its acts return, everything it acts
+  on lies within what it can represent, exactly so with coupling by threshold only. Loops only
+  merge as exchange grows, and in `Line` closing one link makes one returning loop; with finitely
+  many formations and reach decided, every formation's reach holds a formation whose acts return.
 * `Becoming.Counterfactual` (L1): the rest's exchange given by a law of what has stood, the
   counterfactual of an act is the course the law gives: fixed by the act, existing exactly where
   feasible. Where the law reads only what each formation registers, P65's response premise is a
@@ -1599,6 +1616,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   difference has entered what it couples into. In `Clearing` what every pool holding the dweller
   separates goes unresponded outside the clearer's part; in `Loop` a response returns through the
   actor's coupling closure.
+* `Becoming.PoolCourse` (L1): how a pool's membership forms along a run, and what it can come
+  to couple into. A member that has coupled two histories apart keeps the pool apart while it
+  stays. A pool that admits its next members through its own pooled coupling has the same
+  members under two histories up to and including the first step it couples them apart, and the
+  pool along either history separates them there; it never couples them apart exactly when the
+  pool along the other never does, and then every selection through it selects them alike. So a
+  pool recruiting through itself comes to couple into a loss only as its course without the loss
+  would; an admission by what no member couples into, or a member its course holds anyway, is
+  needed for more (`PoolCourse`).
 * `Becoming.Rejoining` (L1): where the courses with and without an act rejoin. A difference
   between the two courses opens or closes at a condition only across a step at which the two
   flows exchange with it differently, and where they rejoin, what they exchanged with it makes up

@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "id": "what-a-center-can-know-by-a-step",
+  "title": {
+    "en": "What a center can come to know of its region, step by step",
+    "zh": "中心逐步能知其区域之何者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
+  "statement": {
+    "en": "From an act at step S, no answer a center gives through its couplings differs by T unless a condition coupled into it lies within T − S coupling links of the act: what it can come to know of what it reaches grows by at most one link a step, along coupling.",
+    "zh": "自第 S 步之一行动起，中心经其耦合所给之答于第 T 步皆无别，除非某耦合进它之条件距该行动在 T − S 耦合链接之内：其对所及能知者每步至多增一链接，沿耦合而行。"
+  },
+  "laws": [
+    {
+      "en": "A condition lies within one coupling link of the source where a source formation exchanges with it, and within n + 1 where a formation coupled into a condition within n links exchanges with it; every such condition lies within at least one link.",
+      "zh": "源之形成与之交换之条件距源一链接；耦合进距源 n 链接之条件之形成与之交换者，距 n + 1；凡此条件至少距一链接。",
+      "declarations": [
+        "Becoming.TimedResponse.Linked",
+        "Becoming.TimedResponse.Linked.one_le"
+      ]
+    },
+    {
+      "en": "Where every source step is at S or later, a potential route reaches a condition at step t only within t − S links; whatever reaches a reader by T came through a condition coupled into it within T − S links, and where none lies so near nothing reaches it by T; under the deadline premises, no answer it gives through its couplings differs by T otherwise.",
+      "zh": "凡源之步皆不早于 S，潜在之途于第 t 步及一条件只在 t − S 链接之内；第 T 步前及于读者者皆经一耦合进它而在 T − S 链接内之条件，无此近者则第 T 步前无所及；在期限前提下，否则其经耦合所给之答于第 T 步皆无别。",
+      "declarations": [
+        "Becoming.TimedResponse.Spread.linked",
+        "Becoming.TimedResponse.reachedBy_linked",
+        "Becoming.TimedResponse.not_reached_of_far",
+        "Becoming.TimedResponse.answer_alike_far"
+      ]
+    },
+    {
+      "en": "The bound is attained: with a source, a relay and a reader, the reader's answer is alike at step 2 and differs at step 3.",
+      "zh": "其界可及：源、中继与读者，读者之答于第 2 步相同，于第 3 步有别。",
+      "declarations": [
+        "Becoming.TimedResponse.Relay.reader_far",
+        "Becoming.TimedResponse.Relay.not_reached_at_two",
+        "Becoming.TimedResponse.Relay.reached_at_three",
+        "Becoming.TimedResponse.Relay.answers_two_and_three"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. TimedResponse's deadline premises where stated (balance before the deadline in both courses, the same formations present, common initial levels, every formation other than a source exchanging alike wherever alike through its couplings), and every source step at S or later. Discrete steps: an exchange at t first affects levels at t + 1.",
+      "zh": "不加公理。所述处为 TimedResponse 之期限前提（两历程期限前平衡、在场形成相同、初始水平相同、源以外之每一形成凡经其耦合相同处交换相同），及凡源之步皆不早于 S。离散之步：第 t 步之交换首先影响第 t + 1 步之水平。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How a center forms as a formation, or whether the region it acts for is the one it can represent.",
+      "zh": "中心作为形成如何形成，或其所为之区域是否即其能表示者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a center uses what reaches it: a reached signal may be ignored (Delayed.constant_read_ignores).",
+      "zh": "中心用其所及者：所及之信号可被忽略（Delayed.constant_read_ignores）。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T132056.171285Z): the 10 declarations cited here have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in the study section named in the history; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T132056.171285Z）：本记录所引 10 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见历史所列研究节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "How a center forms as a formation and represents its boundary and dependence; whether the region it acts for is the one it can represent; an independent review.",
+    "zh": "中心作为形成如何形成并表示其边界与依存；其所为之区域是否即其能表示者；独立审查。"
+  },
+  "correspondence": {
+    "en": "A light cone counted in coupling links: information propagates at most one link a step, as signals in a network with unit delays (the round lower bound of distributed computing, where a node learns nothing beyond its radius-r ball in r rounds).",
+    "zh": "以耦合链接计之光锥：信息每步至多传一链接，如单位延时网络中之信号（分布式计算之轮次下界：r 轮内节点不知其半径 r 球之外者）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Latency.lean",
+  "aliases": [
+    "Becoming.TimedResponse.Linked",
+    "Becoming.TimedResponse.Linked.one_le",
+    "Becoming.TimedResponse.Relay.answers_two_and_three",
+    "Becoming.TimedResponse.Relay.not_reached_at_two",
+    "Becoming.TimedResponse.Relay.reached_at_three",
+    "Becoming.TimedResponse.Relay.reader_far",
+    "Becoming.TimedResponse.Spread.linked",
+    "Becoming.TimedResponse.answer_alike_far",
+    "Becoming.TimedResponse.not_reached_of_far",
+    "Becoming.TimedResponse.reachedBy_linked"
+  ],
+  "dependencies": [
+    {
+      "id": "whole-first-and-bounded-centers",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Answers part of its Next ('a model of how a center forms and represents its boundary'): the region represented is drawn along coupling links.",
+        "zh": "答其下一步之一部分（「中心如何形成并表示其边界之模型」）：所表示之区域沿耦合链接而划。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Latency.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TimedResponse.Linked",
+        "Becoming.TimedResponse.Linked.one_le",
+        "Becoming.TimedResponse.Relay.answers_two_and_three",
+        "Becoming.TimedResponse.Relay.not_reached_at_two",
+        "Becoming.TimedResponse.Relay.reached_at_three",
+        "Becoming.TimedResponse.Relay.reader_far",
+        "Becoming.TimedResponse.Spread.linked",
+        "Becoming.TimedResponse.answer_alike_far",
+        "Becoming.TimedResponse.not_reached_of_far",
+        "Becoming.TimedResponse.reachedBy_linked"
+      ],
+      "sha256": "3d4c3c37d95d8dc909fba6d365e676ea84a6796d11477a1cda038817fdc37f46"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "role": "receipt",
+      "sha256": "765980088a75fd76884c5b8b9882714526ab907cf6416b81e18abe2f2fe3a684"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "2d8de6818a9ba69e9fb6d55fd55d64330be51aabdc051ac00d398a0d0614b3ab"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "8f2135022917a2e4f6ee7121d63c809d2b37eb699719e283706092675dbe337b"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Latency.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Latency",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (CK1), for chapter §8.1 item 3; study section 357.",
+      "zh": "2026年10月22日：新增（CK1），为章 §8.1 第 3 项；研究第 357 节。"
+    }
+  ]
+}

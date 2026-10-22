@@ -83,6 +83,7 @@ Aliases: `drawers in turn`, `one model of drawers in turn`, `轮流的抽取者`
 - 22 October 2026: added (UM), one model of drawers in turn with floors on one law of best response, superseding drawers-in-turn-draw-everything, revision-comes-to-drawing-everything, drawers-in-turn-within-capacities, any-number-of-drawers-in-turn; study section 335.
 - 22 October 2026, UM2: the drain's premise generalized from no floor anywhere to two drawers with no floor, whatever the others' floors; every perfect profile is then the floor profile and revision reaches it; the laws with no floor anywhere replaced by their general forms (study section 336).
 - 22 October 2026, UM3: drawing at once from portions added as a second arrangement on the same law, the drain holding where each portion returns less than one for one; the law's strict form (floor_of_less) stated, leaves_floor its case (study section 337).
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 

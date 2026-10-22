@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "id": "coupling-closures-of-training-pipelines",
+  "title": {
+    "en": "The coupling closures of deployed training pipelines",
+    "zh": "已部署训练流程之耦合闭包"
+  },
+  "kind": "assessment",
+  "status": "reviewed-scoped",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
+  "statement": {
+    "en": "In each published way of selecting a deployed model's behaviour the signal is a function of what its deciders read, so the selection laws' premise holds by construction; three published measurements find optimizing through that coupling lowering what the deciders do not read.",
+    "zh": "已发表之每一选择已部署模型行为之法，其信号皆为决定者所读者之函数，故选择之律之前提依构造成立；三项已发表之测量见经决定者之耦合优化，升其所读而降其所不读者。"
+  },
+  "hypotheses": [
+    {
+      "en": "The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction; figures are from the papers abstracts, read 22 October 2026.",
+      "zh": "将每一流程识别为网（形成、条件、耦合）为对其已发表构造之 AI 读法；数字取自论文摘要，2026年10月22日所读。"
+    }
+  ],
+  "correspondence": {
+    "en": "Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 2023; Lightman et al. 2023; Irving, Christiano and Amodei 2018; Tamkin et al. 2024 (constructions). Gao, Schulman and Hilton 2022; Wen et al. 2024; Sharma et al. 2023 (measurements). NIST, 29 August 2024 (pre-deployment testing agreements).",
+    "zh": "Christiano 等 2017；Ouyang 等 2022；Bai 等 2022；Rafailov 等 2023；Lightman 等 2023；Irving、Christiano 与 Amodei 2018；Tamkin 等 2024（构造）。Gao、Schulman 与 Hilton 2022；Wen 等 2024；Sharma 等 2023（测量）。NIST，2024年8月29日（部署前检测协议）。"
+  },
+  "canonical_source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
+  "aliases": [
+    "CR1",
+    "coupling closures of training pipelines"
+  ],
+  "dependencies": [
+    {
+      "id": "alignment-approaches-under-the-selection-laws",
+      "relation": "application",
+      "detail": {
+        "en": "Gives the correspondence data its Next asks for, pipeline by pipeline.",
+        "zh": "逐一流程给其下一步所求之对应资料。"
+      }
+    },
+    {
+      "id": "a-pool-that-recruits-through-itself",
+      "relation": "application",
+      "detail": {
+        "en": "Reads evaluators of release decisions through RecruitsThrough.",
+        "zh": "经 RecruitsThrough 读发布决定之评者。"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [],
+  "does_not_show": [
+    {
+      "en": "What an actual deployed system's pipeline reads beyond what its papers state, or anything about unpublished pipelines.",
+      "zh": "实际已部署系统之流程于其论文所述之外读何者，或关于未发表流程之任何事。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the theory predicts the magnitudes or shapes measured: it predicts none.",
+      "zh": "理论预测所测之大小或形状：一无所预测。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Whether outside evaluators are in fact admitted other than through the labs own coupling.",
+      "zh": "外部评者实际上是否不经实验室自身之耦合而被接纳。",
+      "kind": "correspondence"
+    }
+  ],
+  "standard_boundaries": [
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "A correspondence study (no Lean) reviewed at its stated scope in one session; sources read from their abstracts and the NIST release on 22 October 2026; not independently reviewed.",
+    "zh": "对应研究（无 Lean），在一个会话中按其所述范围审查；来源于2026年10月22日读其摘要与 NIST 发布；未经独立审查。"
+  },
+  "references": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
+      "role": "statement",
+      "sha256": "57ef1663b2f89399985f62b7de5f7dc9b61bc4a76155cbc6ec6d2f5c81dc9fde",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "review",
+      "sha256": "2d8de6818a9ba69e9fb6d55fd55d64330be51aabdc051ac00d398a0d0614b3ab",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "next_delta": {
+    "en": "A frozen test designed from the theory on a deployed pipeline (a prediction of which beyond falls, fixed before measuring); the language-model agent test LA1; an independent review, including by practitioners of each pipeline.",
+    "zh": "于已部署流程上依理论设计之冻结检验（测量前定下何处之外下降之预测）；语言模型行动者检验 LA1；独立审查，含各流程之实践者。"
+  },
+  "history": [
+    {
+      "en": "22 October 2026: added (CR1); study section 358.",
+      "zh": "2026年10月22日：新增（CR1）；研究第 358 节。"
+    }
+  ]
+}

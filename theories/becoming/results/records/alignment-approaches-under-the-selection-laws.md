@@ -92,6 +92,8 @@ Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitut
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). What C asks: the order every order increasing in admission shares.
 - related, not a proved adapter: [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md). The narrower scope against the condition, where the incompleteness of preference-coupled approaches lies.
 
+**Used by:** [coupling-closures-of-training-pipelines](coupling-closures-of-training-pipelines.md) (application)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -110,6 +112,7 @@ Aliases: `alignment approaches`, `RLHF under the selection laws`, `debate under 
 ### History
 
 - 21 October 2026: added (AP1), six alignment approaches read under the selection laws, each with what it couples into, its premise, its gap and what it adds, no ranking; the gap premise-free, the incompleteness of preference-coupled approaches the scope of the continuation condition, the order unanimity; study section 282.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 

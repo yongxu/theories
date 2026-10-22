@@ -77,6 +77,7 @@ Aliases: `a race for position draws everything`, `争位次的轮流抽取者全
 ### History
 
 - 22 October 2026: added (RP1): drawers in turn ranking position, the race of RelativePosition read on the draws; study section 355.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 
 </details>
 
