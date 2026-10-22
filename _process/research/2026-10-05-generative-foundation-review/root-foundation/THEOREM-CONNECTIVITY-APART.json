@@ -2541,6 +2541,41 @@
    "module": "Becoming.WholeAmounts",
    "category": "model-witness",
    "reason": "the dyadic amounts have no whole-number reading keeping strict falls, the instance of Amounts.no_whole_reading at the halving model"
+  },
+  "Becoming.Founding.Nested.raises_iff_carried": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "the mean founding value rises across a generation of wholes exactly where selection among wholes, with the change carried within the wholes to the next founders as the transmission term, comes out positive: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Nested.varied_within": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "within each whole of a founded reading, selection at a step needs transmission that raised or lowered the amount at some step before it: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Body.spread_outlasts": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the spreading lineage, whose descendant depends on a condition outside the body, has a member at the second generation: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_founded": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the reading with the next founders drawn from the variants is founded: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.within_against": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "within the first whole a variant arises from the founder and selection within goes against holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.sequestered_rises": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founder from the line carrying the founder's value, the mean founding value rises: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_falls": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founders from the variants, the mean founding value falls although selection among wholes goes for holding back: a fact about one constructed family, not a law of the unfolding"
   }
  },
  "instances": {

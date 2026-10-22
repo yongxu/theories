@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-398 registered results: 371 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 923 curated edges join 349 results to the results they draw on.
+399 registered results: 372 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 926 curated edges join 350 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -76,6 +76,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [condition-correspondence-discipline][] ← <a id="condition-correspondence-discipline--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="condition-correspondence-discipline--metaethical-core-characterization"></a>[metaethical-core-characterization][]
 - [conditions-kept-together][] ← <a id="conditions-kept-together--becoming-renewal-reading"></a>[becoming-renewal-reading][] · <a id="conditions-kept-together--where-a-run-goes-on"></a>[where-a-run-goes-on][]
 - [configurations-alike-by-relation][] ← <a id="configurations-alike-by-relation--joint-difference-making"></a>[joint-difference-making][] · <a id="configurations-alike-by-relation--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="configurations-alike-by-relation--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="configurations-alike-by-relation--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="configurations-alike-by-relation--branching-tests-bisimulation"></a>[branching-tests-bisimulation][]
+- [confined-rise-within-a-whole][] ← <a id="confined-rise-within-a-whole--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][] · <a id="confined-rise-within-a-whole--groups-formed-by-descent"></a>[groups-formed-by-descent][] · <a id="confined-rise-within-a-whole--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [consequence-revised-reference-plan][] ← <a id="consequence-revised-reference-plan--selection-under-registration-revision"></a>[selection-under-registration-revision][] · <a id="consequence-revised-reference-plan--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="consequence-revised-reference-plan--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
 - [constitutive-binding-assessment][] ← <a id="constitutive-binding-assessment--binding-preserving-substitution"></a>[binding-preserving-substitution][] *(interpretive)*
 - [consumption-ends-with-feeders][] ← <a id="consumption-ends-with-feeders--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="consumption-ends-with-feeders--feeding-closure"></a>[feeding-closure][] · <a id="consumption-ends-with-feeders--represented-boundary-against-dependence"></a>[represented-boundary-against-dependence][] *(application)* · <a id="consumption-ends-with-feeders--derived-extent-limits"></a>[derived-extent-limits][] *(interpretive)* · <a id="consumption-ends-with-feeders--laws-of-one-step"></a>[laws-of-one-step][]
@@ -430,6 +431,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [condition-correspondence-discipline]: theories/becoming/results/records/condition-correspondence-discipline.md
 [conditions-kept-together]: theories/becoming/results/records/conditions-kept-together.md
 [configurations-alike-by-relation]: theories/becoming/results/records/configurations-alike-by-relation.md
+[confined-rise-within-a-whole]: theories/becoming/results/records/confined-rise-within-a-whole.md
 [consequence-revised-reference-plan]: theories/becoming/results/records/consequence-revised-reference-plan.md
 [constitutive-binding-assessment]: theories/becoming/results/records/constitutive-binding-assessment.md
 [consumption-ends-with-feeders]: theories/becoming/results/records/consumption-ends-with-feeders.md

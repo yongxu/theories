@@ -107,7 +107,8 @@ NEW_B = OLD_B + (
     '(`Founding.Germline.unsequestered_falls`). Read (the AI\'s reading) as cancer and as a germ line, these are known '
     'results (Buss 1987; Michod 1999; Michod and Roze 2001; Aktipis et al. 2015) restated with the flow; removal of parts '
     'by the whole\'s rule, and how parts first come to live as one, are not stated.\n')
-OLD_RECS = f'{GFDREC}, [transmission-is-inheritance-and-need]'
+SWR = 'selection-with-returns-to-groupmates'
+OLD_RECS = f'[{SWR}](../results/records/{SWR}.md), '
 assert ch0.count(OLD_RECS) == 2, ch0.count(OLD_RECS)  # the section 2.4 list and item 9
 i = ch0.index(f'| [Groups formed by descent](../results/records/{GFD}.md) |')
 OLD_ROW = ch0[i:ch0.index('\n', i) + 1]
@@ -126,11 +127,11 @@ OLD9b = 'rational amounts beyond a common denominator;'
 NEW9b = ('wholes founded by several parts, removal of parts by the whole\'s rule, and how parts first come to live as '
          'one; rational amounts beyond a common denominator;')
 assert OLD9.count(OLD9a) == 1 and OLD9.count(OLD9b) == 1, (OLD9.count(OLD9a), OLD9.count(OLD9b))
-NEW9 = OLD9.replace(OLD9a, NEW9a).replace(OLD9b, NEW9b).replace(OLD_RECS, f'{GFDREC}, {REC}, [transmission-is-inheritance-and-need]')
+NEW9 = OLD9.replace(OLD9a, NEW9a).replace(OLD9b, NEW9b).replace(OLD_RECS, OLD_RECS + f'{REC}, ')
 i = ch0.index('Records: [evolution-on-descent](../results/records/evolution-on-descent.md), ')
 OLD_RECLINE = ch0[i:ch0.index('\n', i)]
 assert OLD_RECLINE.count(OLD_RECS) == 1
-NEW_RECLINE = OLD_RECLINE.replace(OLD_RECS, f'{GFDREC}, {REC}, [transmission-is-inheritance-and-need]')
+NEW_RECLINE = OLD_RECLINE.replace(OLD_RECS, OLD_RECS + f'{REC}, ')
 OLD_CORE = re.search(r'with the base and its layers: (\d+) modules counting the root `Becoming`\.', ch0).group(0)
 i = ch0.index('**The current receipt** is run [`')
 OLD_RECEIPT = ch0[i:ch0.index('\n', i)]
@@ -220,12 +221,12 @@ NEW_T4 = ('Groups whose conditions are coupled into one family end together, so 
           'Within a whole, a lineage confined to its conditions has no member once they end, whatever selection within '
           'raised, and where every next founder carries its founder\'s value the mean founding value rises exactly where '
           f'selection among wholes goes for it ({REC}); how parts first come to live as one is not stated. |')
-OLD_C1 = 'Open are groups founded mixed (assortment below one), how couplings form,'
+OLD_C1 = 'Open are how assortment changes over generations, returns with synergy, how couplings form,'
 NEW_C1 = ('Within a whole founded by one part, a lineage confined to the whole\'s conditions in excess has no member once '
           'they end, selection within needs variation arisen in the whole, and where every next founder carries its '
           'founder\'s value the mean founding value rises exactly where selection among wholes goes for it '
-          f'({REC}). Open are groups founded mixed (assortment below one), wholes founded by several parts, removal of '
-          'parts by the whole\'s rule, how couplings form,')
+          f'({REC}). Open are how assortment changes over generations, returns with synergy, wholes founded by several '
+          'parts, removal of parts by the whole\'s rule, how couplings form,')
 edit(EVO, [(OLD_S, NEW_S), (OLD_T4, NEW_T4), (OLD_C1, NEW_C1)])
 
 # OPENING's [^transitions] note (AI-written; the body in Ren's voice is unchanged).

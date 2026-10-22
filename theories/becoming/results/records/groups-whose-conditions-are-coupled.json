@@ -209,6 +209,13 @@
         "en": "Groups on conditions of their own; here groups on coupled conditions.",
         "zh": "依存于自身条件的组；此处为依存于耦合条件的组。"
       }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "detail": {
+        "en": "A lineage within a whole confined to one family of conditions in excess has no member once it ends, whatever selection within had raised it to.",
+        "zh": "整体内局限于一族过度之条件的世系在其终结后不再有成员，无论组内选择曾把它抬到多高。"
+      }
     }
   ],
   "references": [
@@ -366,12 +373,12 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "9e2fe596762d6a422a95fd717dd2f2d9e350d4840108df93cbf00ab281ef3f12"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "0fe652dc01bca8df9bbe3a593e4043da5b05a817dd8a2b2bc77d693418036daf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
@@ -412,6 +419,10 @@
     {
       "en": "20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.",
       "zh": "2026年10月20日：新增（EV6），读作一体的条件族上的联合计入与门控终结，以及条件相互耦合的组；研究第 265 节。"
+    },
+    {
+      "en": "22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.",
+      "zh": "2026年10月22日，CA1：与 confined-rise-within-a-whole 相关（研究第 366 节）；本记录的定律与陈述不变。"
     }
   ]
 }

@@ -65,8 +65,9 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Ending among groups, read here by lineage.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The mean's course over generations, chained here over lineages.
 - related, not a proved adapter: [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md). Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.
+- related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). Within one whole founded by one part, a lineage confined to its conditions in excess has no member once they end, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it.
 
-**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
+**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -89,6 +90,7 @@ Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortm
 
 - 21 October 2026: added (EV11), groups formed by descent: lineages keep the values their groups were founded at, selection among them alone, and on the base the mean never falling back where the lower lineages end; study section 281.
 - 22 October 2026, EV12: groups founded mixed, with returns to groupmates, stated (record selection-with-returns-to-groupmates, study section 353); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.
+- 22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.
 
 </details>
 
