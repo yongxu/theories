@@ -281,6 +281,7 @@ import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
+import Becoming.Training
 import Becoming.PoolCourse
 import Becoming.Rejoining
 import Becoming.Lexical
@@ -1631,6 +1632,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   pool recruiting through itself comes to couple into a loss only as its course without the loss
   would; an admission by what no member couples into, or a member its course holds anyway, is
   needed for more (`PoolCourse`).
+* `Becoming.Training` (L1): what a selection over act laws installs. Training is read as a
+  selection over a learner's candidate act laws through the courses each generates, a situation
+  fixing the others' law (a realization of their noise), the start and the execution. Two laws of
+  what has stood exchanging alike along the levels the first generates generate the same levels,
+  so candidates giving alike along the first's courses are trained alike by every training: a law
+  is installed only along its own courses, and an explored law only where it acts on an explored
+  course. Off them, within the laws reading through a lumping of histories (a representation; the
+  coupling and agreement are lumpings), it is installed exactly where the lumping cannot tell a
+  history from a course, and elsewhere a law of the class with the same courses takes any amount
+  and responds or not. Through a reward's couplings, candidates are trained alike exactly where
+  their levels are alike through them (by construction, as `Web.selects_alike_iff`), and a
+  difference in the act is installed only where it reaches what couples into the reward's
+  closure. Every settled candidate is a rest of every improving search, which under a bounded
+  reward rests within the bound; a local search rests exactly where no neighbour is rewarded more,
+  and with every candidate a neighbour exactly where the reward settles. A reading the same for
+  every candidate leaves the optimum at any weight, as a reading after the rest's end does where
+  the rest outruns the renewal. In `Training.Commons` restraint is settled exactly at weights of at
+  least one where the rest stays within the renewal and at no weight where it outruns it; at
+  weight one the start decides, and where the rest outruns it a neighbourhood can install
+  restraint that no weight installs.
 * `Becoming.Rejoining` (L1): where the courses with and without an act rejoin. A difference
   between the two courses opens or closes at a condition only across a step at which the two
   flows exchange with it differently, and where they rejoin, what they exchanged with it makes up

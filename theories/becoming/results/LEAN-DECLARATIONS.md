@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 292 | 12,816 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 293 | 12,875 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -882,6 +882,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [TimedResponse.lean](lean-declarations/becoming-core.md#module-907d8b03c01c) | Becoming pure core |
 | [Tolerance.lean](lean-declarations/becoming-core.md#module-5bbb21d1eaf8) | Becoming pure core |
 | [Tower.lean](lean-declarations/becoming-core.md#module-14bb83ca577e) | Becoming pure core |
+| [Training.lean](lean-declarations/becoming-core.md#module-a2152838a051) | Becoming pure core |
 | [TrajectoryFidelity.lean](lean-declarations/valuation.md#module-baf6d4d24a70) | Valuation development and liangzhi |
 | [Transactions.lean](lean-declarations/becoming-core.md#module-ebf5d9388e0c) | Becoming pure core |
 | [Transmission.lean](lean-declarations/becoming-core.md#module-914f5b4db0b5) | Becoming pure core |

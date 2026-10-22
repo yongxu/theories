@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-395 registered results: 368 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 915 curated edges join 346 results to the results they draw on.
+396 registered results: 369 with a recorded Lean receipt (`recorded-checked`), 16 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 919 curated edges join 347 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -339,6 +339,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
 - [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
+- [what-training-installs][] ← <a id="what-training-installs--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-training-installs--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-training-installs--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][] · <a id="what-training-installs--the-rest-outruns-the-renewal"></a>[the-rest-outruns-the-renewal][]
 - [where-a-formations-acts-return][] ← <a id="where-a-formations-acts-return--what-a-center-can-know-by-a-step"></a>[what-a-center-can-know-by-a-step][]
 - [where-a-level-couples][] ← <a id="where-a-level-couples--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="where-a-level-couples--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="where-a-level-couples--observation-is-a-route"></a>[observation-is-a-route][] · <a id="where-a-level-couples--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="where-a-level-couples--testing-within-couplings"></a>[testing-within-couplings][] · <a id="where-a-level-couples--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [where-a-move-is-formed][] ← <a id="where-a-move-is-formed--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="where-a-move-is-formed--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="where-a-move-is-formed--causal-models-as-processes"></a>[causal-models-as-processes][] · <a id="where-a-move-is-formed--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="where-a-move-is-formed--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="where-a-move-is-formed--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="where-a-move-is-formed--learning-by-refutation"></a>[learning-by-refutation][] · <a id="where-a-move-is-formed--control-coherence-loss"></a>[control-coherence-loss][] · <a id="where-a-move-is-formed--experiment-needs-return"></a>[experiment-needs-return][]
@@ -718,6 +719,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
 [what-the-dynamics-leave-open]: theories/becoming/results/records/what-the-dynamics-leave-open.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
+[what-training-installs]: theories/becoming/results/records/what-training-installs.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md
 [where-a-formations-acts-return]: theories/becoming/results/records/where-a-formations-acts-return.md
 [where-a-level-couples]: theories/becoming/results/records/where-a-level-couples.md

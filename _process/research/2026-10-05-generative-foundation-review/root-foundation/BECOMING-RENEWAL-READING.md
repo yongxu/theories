@@ -15998,3 +15998,91 @@ Output → input: OPENING [^aligned] and [^race]; chapter §3.4, §7.1, §7.5, i
 **Self-review.** Every premise is used: no floor for the drain's profile; `t + 1 < N` for each later step; the holding premise and the horizon for (3); the portion equal to the whole for (4). What lies in no portion does not stand, a modelling choice. Not covered: which profiles are perfect where some portion returns more than one for one, whether every perfect profile of the halves draws each less than holding, floors, sharing rules that depend on claims, and drawers ranking the sum of all draws.
 
 **The run.** Core 289 modules and 12,742 theorems, instances 7 and 581, applications 6 and 179; 13 Lean steps ran, 1,207 reused. Becoming.Optimum 503 theorems (482 before), 25 declarations added (21 theorems), 0 removed; all with empty axiom reports. Connectivity: 747 of 13,502 apart; no new apart root from AL1, every new law stated on the web or read by a law that is.
+
+## 363. What training installs: a law is installed only along its own courses (TI1, TI2)
+
+```text
+Result(s): new record what-training-installs; reuses counterfactual-is-the-course (ExchangeLaw, withAct, levels,
+       course, history_agree, levels_succ, withAct_nonanticipating), selection-through-couplings
+       (Web.SelectsThrough, Web.ScoresThrough, Web.class_selects, Web.selects_alike_iff), the-gap-for-ones-own-act
+       (act_courses_unselected), the-rest-outruns-the-renewal (Flow.outrun_reading_alike) and
+       recurrence-without-premise (Law.orbit); related: generalization-through-lumping (Training.fit_right_iff,
+       Training.unselected_beyond_data), what-a-pools-acts-respond-to (ExchangeLaw.response_not_fixed_by_coupling).
+Delta: chapter §7.7 left open "how training installs one that responds to what it couples into", §8.1 item 7 "how a
+       member's law forms and comes to respond to what it couples into", and §7.5 how learners come to one outcome
+       where several are self-consistent; TI1's own remainder was the class a system searches, a local search's
+       implicit bias, which basin a start leads to, noise and exploration. Training is read on the spine as a
+       selection over a learner's candidate act laws through the courses each generates, a situation fixing what
+       the learner's law does not: the others' law (one realization of their noise), the start, and how the law is
+       executed (Training.levels, Training.SameCourses, Training.Reads).
+       (1) Along the courses. Two laws of what has stood exchanging alike along the levels the first generates
+       generate the same levels (ExchangeLaw.levels_agree_of_along); candidates giving alike along the first's
+       course in each situation have the same courses and every training trains them alike
+       (Training.same_courses_of_along, Training.trained_alike_of_along). With noise, what is fixed is fixed by the
+       realizations; their weights change what is rewarded more, not what can be installed. Exploration: a law
+       explored on a schedule (Training.explore) is fixed only at the steps left to it on the explored courses
+       (Training.explored_same_courses).
+       (2) Off the courses. A lumping of histories (Training.Lumping), an equivalence at each step coarser than
+       agreement, is a learner's representation; the part's coupling and agreement are lumpings. Two laws reading
+       through a lumping with the same courses exchange alike at every history it lumps with a course
+       (Training.installed_where_lumped); at a history it lumps with no course a law of the class with the same
+       courses takes any amount and responds or not to a difference the lumping separates
+       (Training.free_where_unlumped, Training.response_free_where_unlumped, one construction Training.setOn,
+       Training.setOn_lumped). The coupling and agreement are cases (Training.installed_where_alike,
+       Training.response_free_where_apart; Training.response_free_off_courses: nothing is installed off the
+       courses beyond what the representation lumps with them).
+       (3) Through a reward. A training through a selector's couplings (Training.TrainsThrough) reads the courses,
+       trains two candidates alike exactly where their levels are alike through those couplings
+       (Training.trained_alike_iff, by construction as Web.selects_alike_iff), the optimum of a reward through them
+       is one (Training.settles_through, Training.score_rewards), some such reward separates two candidates apart
+       through them (Training.settles_apart), and candidates agreeing on what couples into the reward's closure are
+       trained alike (Training.trained_alike_beyond_closure).
+       (4) Which settled law, and which basin. Every candidate a reward settles on is a rest of every improving
+       search (Training.Improving, Training.settled_rests), which started there stays (Training.settled_stays);
+       under a reward at most B an improving search rests from every start by step B + 1, so the basin of a start
+       is its orbit there (Training.rested_or_risen, Training.comes_to_rest). A local search over a neighbourhood
+       relation, its parameterization (Training.LocalSearch), rests exactly where no neighbour is rewarded more,
+       and with every candidate a neighbour exactly where the reward settles (Training.LocalSearch.rests_iff,
+       Training.LocalSearch.rests_iff_settles): the rests a narrower neighbourhood adds are its implicit bias.
+       (5) Weight. A reading the same for every candidate leaves the optimum at any weight
+       (Training.settles_weighted_iff); where the rest outruns a gated renewal in every candidate's course, a
+       reading after its end is one (Training.outrun_reading_same, Training.outrun_settles_iff).
+       The computed commons (Training.Commons): the learner's reward reads its store and the stock at step four
+       through its coupling, by level, into both; restraint is settled exactly at weights of at least one where the
+       rest draws within the renewal (Commons.renewed_restraint_settles_iff), at no weight where it outruns it, the
+       drawing law then settled at every weight (Commons.outrun_restraint_unsettled, Commons.outrun_drawing_settles):
+       CG2's X2. At weight one both are settled, the drawing law responding to the stock and restraint not, and
+       every improving search keeps the one it starts from (Commons.renewed_both_settle, Commons.drawing_responds,
+       Commons.start_decides); where the rest outruns the renewal, a local search with empty neighbourhoods rests at
+       restraint, which no weight settles on, and one with every candidate a neighbour leaves it
+       (Commons.outrun_neighbourhood_decides).
+Premises / correspondence: the situations' laws and the candidates read what has stood; for the off-course laws, the
+       law reading through a lumping and being lumped with the history decided; for the closure law, the
+       situations' laws reading through coupling and both courses feasible; for the outrun laws, outrun_below's
+       premises in every candidate's course; for the basin law, a bound on the reward. A training reads each
+       candidate through its own courses, as the optimum of any reward does. Correspondence: the on-policy point of
+       imitation learning (Ross, Gordon and Bagnell 2011); goal misgeneralization (Langosco, Koch, Sharkey, Pfau and
+       Krueger 2022; Shah et al. 2022) as the off-course law read on deep reinforcement learning; generalization by
+       a learner's own representation as the lumping law, fit_right_iff with the courses as the data; pivotality
+       (Palfrey and Rosenthal 1984) read on a reward; for the search laws, local optima of local search and the
+       basins of attraction of best-response dynamics, among which stochastic stability (Kandori, Mailath and Rob
+       1993; Young 1993) selects by noise, cited, not proved here.
+Evidence: core receipt 20261022T135732.423997Z (passed).
+Boundary: which lumping an actual architecture's representation makes and which neighbourhoods its updates search,
+       both read empirically; the weights a training gives noise realizations or explored courses, which change what
+       is rewarded more and not what can be installed; which basin a particular start lies in for a given system,
+       beyond that it is reached within the bound; the evidence for an identified installation.
+Output → input: chapter §7.1 (Training bullet; the proxy paragraph), §7.5 (how learners come to one outcome), §7.7
+       (coupling is not compliance; what a response does), §8.1 item 7, the relation to known results, the
+       glossary row "training", the record table and section 9 (EN, ZH).
+```
+
+**What was built.** In the new core module `Becoming.Training` (a leaf: it joins `Becoming.SelectionGap` and `Becoming.Exclusion`, which do not import each other): the on-course law (`ExchangeLaw.AlongAlike`, `ExchangeLaw.exchange_along`, `ExchangeLaw.levels_agree_of_along`; `Training.levels`, `Training.course`, `Training.SameCourses`, `Training.Reads`, `Training.same_courses_of_along`, `Training.trained_alike_of_along`); exploration (`Training.explore`, `Training.explore_nonanticipating`, `Training.explored_same_courses`); the off-course laws over a lumping (`Training.Lumping`, `Training.Lumping.coupling`, `Training.Lumping.agreement`, `Training.ReadsThrough` and its conversions, `Training.installed_where_lumped`, `Training.installed_where_alike`, `Training.setOn` with its laws, `Training.setOn_lumped`, `Training.free_where_unlumped`, `Training.response_free_where_unlumped`, `Training.response_free_where_apart`, `Training.response_free_off_courses`); training through a reward (`Training.TrainsThrough`, `Training.trained_alike_iff`, `Training.RewardsThrough`, `Training.Settles`, `Training.settles_through`, `Training.score_rewards`, `Training.settles_apart`, `Training.trained_alike_beyond_closure`); the search laws (`Training.Improving`, `Training.settled_rests`, `Training.settled_stays`, `Training.rested_or_risen`, `Training.comes_to_rest`, `Training.LocalSearch` and its laws); the weight laws (`Training.settles_weighted_iff`, `Training.outrun_reading_same`, `Training.outrun_settles_iff`); and the computed commons `Training.Commons`. 59 theorems in 88 declarations, every axiom report empty.
+
+**What the laws say about installation.** `Training.fit_right_iff` said that a fit is right beyond the data exactly where the class determines it. A learner in a world has no fixed data: its data are the courses its own candidate law generates with everything else, and they change with the candidate. The first law moves the boundary onto the learner's own courses: a candidate is fixed, for every training reading courses, by what it does along them, since a law of what has stood exchanging alike along the levels another generates generates the same levels; noise only adds realizations, and exploration fixes the law only at the steps left to it. Off the courses, what is installed is exactly what the learner's representation cannot tell from them: a law reading through a lumping generalizes from a course to every history the lumping puts with it, and to nothing else, where it may respond or not. This is `fit_right_iff` with the courses as the data and the representation's lumping as the class; the coupling and agreement are its cases, and agreement gives the bare statement that nothing is installed off the courses. Through a reward, what is installed narrows to what the reward's couplings separate, and a difference in the act's exchange is installed only where it reaches what couples into the reward's closure. Where the reward settles on several laws, every improving search keeps the one it reaches; under a bounded reward it reaches one within the bound from every start; and a local search rests wherever its neighbourhoods leave no better neighbour, which with every candidate a neighbour is where the reward settles. So the formal part of "how training installs a law that responds to what it couples into" is answered: response is installed only along the learner's own courses, at the steps its law acts, as far as its representation lumps, only where it changes what the reward reads, and among equally rewarded laws by where the search starts and what its neighbourhoods let it compare. What is left is empirical: the lumping and neighbourhoods of an actual system.
+
+**X2 as a theorem, the start and the neighbourhood.** CG2's X2 found that weighting the end reading sixteen times more changed nothing. `Training.outrun_settles_iff` says why for every weight: where the rest outruns a gated renewal in every candidate's course, every reading of the condition after the rest's end is the same for every candidate, and a reading the same for every candidate moves no optimum. The commons makes it concrete with the learner coupled into the stock by level: the same reward, with the same coupling, settles on restraint from weight one where the rest draws within the renewal, and never where the rest outruns it. At weight one both laws are settled, one responding to the stock and one not, and every improving search keeps the one it starts from. Where the rest outruns the renewal, no weight settles on restraint, yet a search whose neighbourhoods do not reach the drawing law keeps it: the parameterization can install what the reward cannot, which is what implicit bias is.
+
+**Self-review.** `Training.trained_alike_iff` holds by construction, as `Web.selects_alike_iff` does; its substantive premise is that a given training goes through those couplings, which is supplied. `Training.outrun_reading_same` is `Flow.outrun_reading_alike` read on the candidates' courses, and `Training.trained_alike_beyond_closure` is `act_courses_unselected` read on them: instances, with the training's selection derived. `settled_rests` and `LocalSearch.rests_iff` are short; their content is that the reward fixes the set of settled laws while the search's start and neighbourhoods fix which rest is reached. The new content is the on-course law (the levels fixed along one course without feasibility, which `ExchangeLaw.course_unique` gives only for feasible courses), the lumping law with its two exact sides, exploration, the exactness through a reward, the basin bound and the computed commons. Rule 9: the coupling and agreement forms of the off-course law are derived from the lumping law, not proved beside it; `Training.unselected_beyond_data` and `Training.fit_right_iff` hold for data fixed in advance and are not cases, whose data depend on the candidate. Names: `Training` is the namespace `Becoming.Learning` already uses; `Lumping` takes the theory's word for a map's classes; `TrainsThrough`, `RewardsThrough`, `Settles`, `Improving` and `LocalSearch` state what they define; `setOn` is the law with its take set on a predicate.
+
+**The run.** Core closure passed with no core axiom; 7 Lean steps ran, 1,217 reused. The connectivity rerun counts 774 of 13,561 spine theorems apart, 27 of the module's 59; the register check passes.

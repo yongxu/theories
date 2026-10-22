@@ -60,7 +60,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
   - Preserved conditions: Nonanticipating laws; feasibility. [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean)
 - related, not a proved adapter: [testing-within-couplings](testing-within-couplings.md). There nothing beyond the closure exchanges with a condition coupled into it (Flow.beyond_coupling); so a difference beyond cannot come back into the closure through a formation outside it.
 
-**Used by:** [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md)
+**Used by:** [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md) · [what-training-installs](what-training-installs.md)
 
 <a id="sources--来源"></a>
 ### Sources

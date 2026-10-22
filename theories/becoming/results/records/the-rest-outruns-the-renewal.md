@@ -60,7 +60,7 @@ Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a membe
   - Preserved conditions: The two apart and taking part. [Exclusion.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean)
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The gap read on the rest: the member's act differs only where its reading no longer looks once the rest has ended the condition, so no selection through that reading tells its acts apart.
 
-**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md)
+**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md) · [what-training-installs](what-training-installs.md)
 
 <a id="sources--来源"></a>
 ### Sources
