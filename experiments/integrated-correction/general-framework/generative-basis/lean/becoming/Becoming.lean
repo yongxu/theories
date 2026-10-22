@@ -757,7 +757,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   group's lineage over generations): with exact transmission, lineages of groups uniform in an
   amount keep the value each was founded at, the family is the union of the lineages, nothing is
   selected within them, and the mean rises exactly where the lineages' means select for the
-  amount. Witnesses: two groups of two with one member holding back, the whole going either way.
+  amount. Returns to groupmates: where each unit a member keeps gives b to every member of its
+  group and takes c from the keeper, selection within goes against keeping, among groups for it
+  exactly where b + c falls short of m times b, and the whole selects for it exactly where b + c
+  times the spread falls short of m times b times the spread among groups (Hamilton's rule with
+  the assortment the share of the spread among groups). Witnesses: two groups of two with one
+  member holding back, the whole going either way; the same returns either way by how the groups
+  are founded; assortment below one losing where assortment one would win.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group

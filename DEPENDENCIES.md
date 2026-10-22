@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-386 registered results: 360 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 901 curated edges join 337 results to the results they draw on.
+387 registered results: 361 with a recorded Lean receipt (`recorded-checked`), 15 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 904 curated edges join 338 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -269,6 +269,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [selection-term-over-generations][] ← <a id="selection-term-over-generations--evolution-on-descent"></a>[evolution-on-descent][] · <a id="selection-term-over-generations--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
 - [selection-through-couplings][] ← <a id="selection-through-couplings--testing-within-couplings"></a>[testing-within-couplings][] · <a id="selection-through-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="selection-through-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="selection-through-couplings--target-capture"></a>[target-capture][]
 - [selection-under-registration-revision][] ← <a id="selection-under-registration-revision--selection-through-couplings"></a>[selection-through-couplings][] · <a id="selection-under-registration-revision--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="selection-under-registration-revision--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
+- [selection-with-returns-to-groupmates][] ← <a id="selection-with-returns-to-groupmates--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-with-returns-to-groupmates--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][] · <a id="selection-with-returns-to-groupmates--groups-formed-by-descent"></a>[groups-formed-by-descent][]
 - [selection-within-and-among-groups][] ← <a id="selection-within-and-among-groups--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [selection-within-and-among-groups-of-any-sizes][] ← <a id="selection-within-and-among-groups-of-any-sizes--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-within-and-among-groups-of-any-sizes--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [sensitivity-is-the-least-coupling][] ← <a id="sensitivity-is-the-least-coupling--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="sensitivity-is-the-least-coupling--testing-within-couplings"></a>[testing-within-couplings][]
@@ -632,6 +633,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [selection-through-a-model-of-the-options]: theories/becoming/results/records/selection-through-a-model-of-the-options.md
 [selection-through-couplings]: theories/becoming/results/records/selection-through-couplings.md
 [selection-under-registration-revision]: theories/becoming/results/records/selection-under-registration-revision.md
+[selection-with-returns-to-groupmates]: theories/becoming/results/records/selection-with-returns-to-groupmates.md
 [selection-within-and-among-groups]: theories/becoming/results/records/selection-within-and-among-groups.md
 [selection-within-and-among-groups-of-any-sizes]: theories/becoming/results/records/selection-within-and-among-groups-of-any-sizes.md
 [sensitivity-is-the-least-coupling]: theories/becoming/results/records/sensitivity-is-the-least-coupling.md

@@ -1,11 +1,11 @@
 {
- "commit": "55107cee504f51ce3708af255637acc3e8256b98",
- "sources_match_commit": true,
+ "commit": "934bfc9cc2edc4a0bee812a5f2738a3aae600a24",
+ "sources_match_commit": false,
  "core_receipt_at_commit": "20261022T110022.458880Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 40236,
- "spine_theorems": 13307,
+ "constants": 40284,
+ "spine_theorems": 13330,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 164,
   "used by a theorem on the base": 4949,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 649,
-  "apart: prelude-only statement": 68
+  "apart: own vocabulary": 670,
+  "apart: prelude-only statement": 70
  },
- "apart": 717,
- "apart_general_structure_by_design": 215,
- "apart_otherwise": 502,
+ "apart": 740,
+ "apart_general_structure_by_design": 219,
+ "apart_otherwise": 521,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 81,
   "of them on the base": 66,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 480,
- "apart_roots": 480,
+ "apart_used_by_nothing": 490,
+ "apart_roots": 490,
  "apart_roots_by_category": {
-  "model-witness": 254,
+  "model-witness": 258,
   "support": 96,
-  "general-structure": 101,
+  "general-structure": 107,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -170,6 +170,10 @@
    55,
    81
   ],
+  "Becoming.SelectionLevels": [
+   47,
+   78
+  ],
   "Becoming.Drift": [
    34,
    46
@@ -181,10 +185,6 @@
   "Becoming.HexagramPlaces": [
    32,
    121
-  ],
-  "Becoming.SelectionLevels": [
-   24,
-   55
   ],
   "Becoming.HexagramSites": [
    23,
@@ -614,8 +614,8 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12547,
-   "apart": 623,
+   "theorems": 12570,
+   "apart": 646,
    "classes": {
     "statement on both families": 991,
     "statement on Process/Frame/Run/Trace": 2738,
@@ -624,8 +624,8 @@
     "proof through a base family": 153,
     "used by a theorem on the base": 4590,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 556,
-    "apart: prelude-only statement": 67
+    "apart: own vocabulary": 577,
+    "apart: prelude-only statement": 69
    }
   },
   "instances": {
@@ -4743,11 +4743,34 @@
   "Becoming.SelectionLevels.lineages_uniform": "apart: own vocabulary",
   "Becoming.SelectionLevels.lineages_within_none": "apart: own vocabulary",
   "Becoming.SelectionLevels.rises_iff_lineages": "apart: own vocabulary",
+  "Becoming.SelectionLevels.balance_add": "apart: prelude-only statement",
+  "Becoming.SelectionLevels.balance_mul": "apart: prelude-only statement",
+  "Becoming.SelectionLevels.returns_total": "apart: own vocabulary",
+  "Becoming.SelectionLevels.returns_weighted": "apart: own vocabulary",
+  "Becoming.SelectionLevels.returns_balance": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_reading": "apart: own vocabulary",
+  "Becoming.SelectionLevels.spread_levels": "apart: own vocabulary",
+  "Becoming.SelectionLevels.within_returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.within_against": "apart: own vocabulary",
+  "Becoming.SelectionLevels.among_returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.among_for_iff": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_returns_of_uniform": "apart: own vocabulary",
+  "Becoming.SelectionLevels.not_rises_of_alike": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_exact_iff_returns": "apart: own vocabulary",
   "Becoming.SelectionLevels.equal": "apart: own vocabulary",
   "Becoming.SelectionLevels.AmongWins.among_wins": "apart: own vocabulary",
   "Becoming.SelectionLevels.WithinWins.within_wins": "apart: own vocabulary",
   "Becoming.SelectionLevels.ByMeans.common": "apart: own vocabulary",
   "Becoming.SelectionLevels.ByMeans.by_means": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Founding.assorted_equal": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Founding.mixed_equal": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Founding.assorted_returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Founding.mixed_returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Founding.either_verdict": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Partly.equal": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Partly.returns": "apart: own vocabulary",
+  "Becoming.SelectionLevels.Partly.below_one": "apart: own vocabulary",
   "Becoming.GroupEnding.excess_pos_of_lt": "used by a theorem on the base",
   "Becoming.GroupEnding.among_not_against": "used by a theorem on the base",
   "Becoming.GroupEnding.rises_iff_ended": "apart: own vocabulary",
