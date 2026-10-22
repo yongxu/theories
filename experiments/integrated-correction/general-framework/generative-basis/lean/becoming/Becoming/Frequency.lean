@@ -69,20 +69,20 @@ every schedule settles is a principle of reasoning, exactly.
   step, and `Saturation.strengths` gives each reading of `d` into `c` the strength `sat a`, `a` that
   amount. They read the levels before (`Saturation.readsBefore`), so the carrying law with them
   generates a course, and what passes is what the course carries through the coupling
-  (`Saturation.course_succ`). Where the strengths are zero once `A` has passed, and `A` has passed by
-  step `N`, the coupling stops by `N` (`Saturation.stops`): it does not recur
+  (`Saturation.course_succ`). Where the strengths are zero once `A` has passed, and `A` has passed
+  by step `N`, the coupling stops by `N` (`Saturation.stops`): it does not recur
   (`Saturation.not_recurs`) and nothing more passes (`Saturation.passed_from`), and where every
   coupling has saturated a finite order is exact (`Saturation.exact`). What passes in all is below
-  `A` and the most one step passes (`Saturation.passed_lt`). A coupling that acts at each step until
+  `A + m`, `m` the most one step passes (`Saturation.passed_lt`). A coupling that acts at each step until
   it saturates, from a level that stands, has passed `A` by step `A` and stops there
   (`Saturation.stops_by`; in the formed course, from a level standing at the start,
-  `Saturation.course_stops_by`). With strengths `f a` times a coupling acting at each step, `f` not
-  rising, the coupling stops exactly where `f` reaches zero at some amount
-  (`Saturation.stops_iff`); with `f` at least one it recurs and at least one more passes at every
-  step, however far it has weakened (`Saturation.floored`); coupled into itself, it is then a loop
-  that leaves every finite order inexact (`Saturation.floored_inexact`). A response `A - a` stops it
-  by step `A`
-  (`Saturation.wearing_stops`).
+  `Saturation.course_stops_by`). With strengths `f a` times a
+  coupling acting at each step, `f` not rising, the coupling stops by step `A` where `f` is zero at
+  `A` (`Saturation.stops_by_zero`), and stops by some step exactly where `f` reaches zero at some
+  amount (`Saturation.stops_iff`; in the formed course `Saturation.course_stops_iff`); with `f` at least one it recurs and at least one more passes at
+  every step, however far it has weakened (`Saturation.floored`), and coupled into itself it is a
+  loop that leaves every finite order inexact (`Saturation.floored_inexact`). In the formed course a
+  response `A - a` stops it by step `A` (`Saturation.wearing_stops`).
 
 **Readings (the AI's, D43).**
 - On 12 October Ren asked of the loops "how how accurate can we do that uh what is the limitation do
@@ -1075,11 +1075,6 @@ def scaled (f : Nat → Nat) (k : Nat → F → C → Nat → C → Nat) : Nat �
 variable {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat} {present : Nat → List F}
   {sat : Nat → Nat → F → C → Nat → C → Nat} {l : Nat → C → Nat} {d c : C}
 
-theorem passed_succ (t : Nat) :
-    passed part sat present l d c (t + 1) =
-      passed part sat present l d c t +
-        passingAt part (sat (passed part sat present l d c t)) present l t d c := rfl
-
 /-- Strengths that do not rise as more passes and are zero at `A` are zero from `A` on. -/
 theorem Antitone.zeroFrom {A : Nat} (antitone : Antitone sat d c)
     (zero : ∀ t h s, sat A t h c s d = 0) : ZeroFrom sat d c A :=
@@ -1239,11 +1234,35 @@ theorem stops_by {A : Nat} (zero : ZeroFrom sat d c A)
 
 variable {f : Nat → Nat} {k : Nat → F → C → Nat → C → Nat}
 
-/-- **A coupling stops exactly where its response reaches zero.** Let the strengths of `d` into `c`
-be `f a` times `k`, `a` what has passed and `f` not rising as it grows; let `k` read the level of
-`d`, listed, into `c` at each step through some formation present outside the part, and the level
-of `d` stand at every step. The coupling stops by some step exactly where `f` is zero at some
-amount `A`; it then stops by step `A`. -/
+/-- **Where the response reaches zero, the coupling stops by that amount as a step.** Let the
+strengths of `d` into `c` be `f a` times `k`, `a` what has passed and `f` not rising as it grows; let
+`k` read the level of `d` into `c` at each step through some formation present outside the part,
+and the level of `d` stand at every step. Where `f` is zero at `A`, the coupling stops by step `A`:
+by then `A` has passed, or the response is already zero. -/
+theorem stops_by_zero {A : Nat} (antitone : ∀ a a', a ≤ a' → f a' ≤ f a)
+    (acts : ∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d)
+    (stands : ∀ t, 0 < l t d) (zero : f A = 0) :
+    StopsBy cs part (strengths part (scaled f k) present l) present d c A :=
+  have climbed := climbs (sat := scaled f k) (P := (f · = 0))
+    (fun a => match Nat.eq_zero_or_pos (f a) with
+      | .inl zero => .inl zero
+      | .inr pos => .inr fun zero => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) zero pos))
+    (fun a a' le zero => Nat.eq_zero_of_le_zero (Nat.le_trans (antitone a a' le) (Nat.le_of_eq zero)))
+    (fun t a open_ => match acts t with
+      | ⟨h, mem, out, strong⟩ => ⟨h, mem, out, Nat.mul_pos (match Nat.eq_zero_or_pos (f a) with
+          | .inl zero => absurd zero open_
+          | .inr pos => pos) strong⟩) stands A
+  have spent : f (passed part (scaled f k) present l d c A) = 0 := match climbed with
+    | .inl reached => Nat.eq_zero_of_le_zero (Nat.le_trans (antitone _ _ reached) (Nat.le_of_eq zero))
+    | .inr zero => zero
+  stops (A := passed part (scaled f k) present l d c A)
+    (Antitone.zeroFrom (fun a a' le t h s => Nat.mul_le_mul_right (k t h c s d) (antitone a a' le))
+      fun t h s => (congrArg (· * k t h c s d) spent).trans (Nat.zero_mul _))
+    (Nat.le_refl _)
+
+/-- **A coupling stops exactly where its response reaches zero.** With the premises of
+`Saturation.stops_by_zero` and `d` listed, the coupling stops by some step exactly where `f` is
+zero at some amount: if it stops, the strength at the stopping step is zero. -/
 theorem stops_iff (antitone : ∀ a a', a ≤ a' → f a' ≤ f a) (listed : d ∈ cs)
     (acts : ∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d)
     (stands : ∀ t, 0 < l t d) :
@@ -1254,23 +1273,7 @@ theorem stops_iff (antitone : ∀ a a', a ≤ a' → f a' ≤ f a) (listed : d �
     | .inr pos => match acts N with
       | ⟨h, mem, out, strong⟩ => absurd (stopped N N ⟨h, mem, out, Nat.le_refl N, listed,
           Nat.mul_pos pos strong⟩) (Nat.lt_irrefl N),
-   fun ⟨A, zero⟩ =>
-    have climbed := climbs (sat := scaled f k) (P := (f · = 0))
-      (fun a => match Nat.eq_zero_or_pos (f a) with
-        | .inl zero => .inl zero
-        | .inr pos => .inr fun zero => Nat.lt_irrefl 0 (Eq.subst (motive := (0 < ·)) zero pos))
-      (fun a a' le zero => Nat.eq_zero_of_le_zero (Nat.le_trans (antitone a a' le) (Nat.le_of_eq zero)))
-      (fun t a open_ => match acts t with
-        | ⟨h, mem, out, strong⟩ => ⟨h, mem, out, Nat.mul_pos (match Nat.eq_zero_or_pos (f a) with
-            | .inl zero => absurd zero open_
-            | .inr pos => pos) strong⟩) stands A
-    have spent : f (passed part (scaled f k) present l d c A) = 0 := match climbed with
-      | .inl reached => Nat.eq_zero_of_le_zero (Nat.le_trans (antitone _ _ reached) (Nat.le_of_eq zero))
-      | .inr zero => zero
-    ⟨A, stops (A := passed part (scaled f k) present l d c A)
-      (fun a le t h s => (congrArg (· * k t h c s d) (Nat.eq_zero_of_le_zero
-        (Nat.le_trans (antitone _ a le) (Nat.le_of_eq spent)))).trans (Nat.zero_mul _))
-      (Nat.le_refl _)⟩⟩
+   fun ⟨A, zero⟩ => ⟨A, stops_by_zero antitone acts stands zero⟩⟩
 
 /-- **Saturation that never reaches zero does not stop the coupling.** With the response at least one
 at every amount, the coupling of `d` into `c` recurs, and at least one more passes at every step. -/
@@ -1301,17 +1304,6 @@ theorem floored_inexact (floor : ∀ a, 0 < f a) (listed : c ∈ cs)
   unbounded_of_recurring_loop (v := fun _ => c) (m := 1) (Nat.succ_pos 0) rfl rfl
     (fun _ _ => (floored floor listed acts stands).1) (u := fun _ => c) (q := 0) rfl rfl
     (fun _ lt => absurd lt (Nat.not_lt_zero _))
-
-/-- **A response wearing down by what passes stops the coupling by its threshold.** With the response
-`A - a`, the coupling stops by step `A`. -/
-theorem wearing_stops {A : Nat} (listed : d ∈ cs)
-    (acts : ∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d)
-    (stands : ∀ t, 0 < l t d) :
-    ∃ N, StopsBy cs part (strengths part (scaled (A - ·) k) present l) present d c N :=
-  (stops_iff (fun a _ le => match le_dest le with
-      | ⟨j, same⟩ => Eq.subst (motive := fun y => A - y ≤ A - a) same.symm
-          (Nat.le_trans (Nat.le_of_eq (Naturals.sub_sub A a j).symm) (Nat.sub_le (A - a) j)))
-    listed acts stands).mpr ⟨A, Nat.sub_self A⟩
 
 /-! ### In the formed course -/
 
@@ -1372,11 +1364,38 @@ theorem course_stops_by {A : Nat} (zero : ZeroFrom sat d c A)
     (start : 0 < δ d) :
     StopsBy cs part (strengths part sat present
         (formedCourse cs part σ (strengths part sat present) present δ)) present d c A ∧
+      ¬ CouplingRecurs cs part (strengths part sat present
+        (formedCourse cs part σ (strengths part sat present) present δ)) present d c ∧
       ∀ k, passed part sat present (formedCourse cs part σ (strengths part sat present) present δ)
           d c (A + k) =
         passed part sat present (formedCourse cs part σ (strengths part sat present) present δ) d c A :=
   match stops_by zero acts (course_stands start) with
-  | ⟨reached, stopped⟩ => ⟨stopped, passed_from zero reached⟩
+  | ⟨reached, stopped⟩ => ⟨stopped, not_recurs zero reached, passed_from zero reached⟩
+
+/-- **In the formed course, a coupling stops exactly where its response reaches zero.** Under the
+carrying law with strengths `f a` times `k`, `a` what has passed and `f` not rising, `k` reading the
+level of `d`, listed, into `c` at each step through some formation present outside the part, and `d`
+standing at the start, the coupling stops by some step exactly where `f` is zero at some amount
+(`Saturation.stops_iff`). -/
+theorem course_stops_iff (antitone : ∀ a a', a ≤ a' → f a' ≤ f a) (listed : d ∈ cs)
+    (acts : ∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d) (start : 0 < δ d) :
+    (∃ N, StopsBy cs part (strengths part (scaled f k) present
+        (formedCourse cs part σ (strengths part (scaled f k) present) present δ)) present d c N) ↔
+      ∃ A, f A = 0 :=
+  stops_iff antitone listed acts (course_stands start)
+
+/-- **A response wearing down by what passes stops the coupling by its threshold.** In the formed
+course with strengths `A - a` times `k`, `a` what has passed, `k` reading the level of `d` into `c`
+at each step through some formation present outside the part, and `d` standing at the start, the
+coupling stops by step `A` (`Saturation.stops_by_zero`). -/
+theorem wearing_stops {A : Nat} {k : Nat → F → C → Nat → C → Nat}
+    (acts : ∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d) (start : 0 < δ d) :
+    StopsBy cs part (strengths part (scaled (A - ·) k) present
+      (formedCourse cs part σ (strengths part (scaled (A - ·) k) present) present δ)) present d c A :=
+  stops_by_zero (fun a _ le => match le_dest le with
+      | ⟨j, same⟩ => Eq.subst (motive := fun y => A - y ≤ A - a) same.symm
+          (Nat.le_trans (Nat.le_of_eq (Naturals.sub_sub A a j).symm) (Nat.sub_le (A - a) j)))
+    acts (course_stands start) (Nat.sub_self A)
 
 end Saturation
 
