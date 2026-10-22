@@ -225,7 +225,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
       "role": "proof",
-      "sha256": "be2732f6554e6cb9ec1e5331a2c8c0762101a072038c96925028b62583955ab9"
+      "sha256": "6d97f6b26e6396b6ea64fae3f46c0fa7b6bc10d359ff3be3dea5213e683303e1"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T085940.676690Z/verification.json",

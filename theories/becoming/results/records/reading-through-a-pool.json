@@ -1,0 +1,139 @@
+{
+  "schema_version": 2,
+  "id": "reading-through-a-pool",
+  "title": {
+    "en": "Reading through a pool",
+    "zh": "经池读取"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "Where the rule reads the fast configuration only through what a pool reads of it, two courses with one rule at a reading step, read alike by the pool there, have one rule after it: rules part at a reading step only where the pool's reading parts.",
+    "zh": "规则只经一池对快层构形之所读而读之时，读取步上规则相同、池所读相同之两历程，其后规则相同：规则只在池所读分开处于读取步分开。"
+  },
+  "laws": [
+    {
+      "en": "With h x g = H (read x) g, one rule and one reading of the pool at a reading step give one rule after it.",
+      "zh": "h x g = H (read x) g 时，读取步上规则同、池之所读同，则其后规则同。",
+      "declarations": [
+        "Becoming.Pace.rule_through_pool"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the two-layer course of Pace with the rule read through a map of the fast configuration.",
+      "zh": "不加公理；Pace 之两层历程，规则经快层构形之一映射读取。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an actual rule reads through a pool, or which pool.",
+      "zh": "实际之规则经池读取，或经何池。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 1 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 1 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Sampled-data control through an aggregating sensor.",
+    "zh": "经聚合之传感之采样控制。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
+  "aliases": [
+    "Reading through a pool",
+    "经池读取",
+    "Becoming.Pace.rule_through_pool"
+  ],
+  "dependencies": [
+    {
+      "id": "how-fast-a-rule-may-change",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its law of the reading step, with the rule reading through a pool.",
+        "zh": "其读取步之律，规则经池读取。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xunzi-wangzhi-fa-er-bu-yi).",
+        "zh": "陈述其对应所发现之缺口（条目 xunzi-wangzhi-fa-er-bu-yi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Pace.rule_through_pool"
+      ],
+      "sha256": "6e3ff605c2dc083a3b7a745ce8832dbeea4b4bade11cdfb16d5acfc83c8838b5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Pace",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    }
+  ]
+}

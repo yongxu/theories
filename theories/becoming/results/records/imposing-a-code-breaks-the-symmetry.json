@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "id": "imposing-a-code-breaks-the-symmetry",
+  "title": {
+    "en": "Imposing a code breaks the symmetry of forms",
+    "zh": "施加之码打破形式之对称"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "For any family and any forms, imposing one code makes all agree in a step, keeps every exchange of formations and keeps no renaming that moves a form it gives: agreement from symmetry without a formation above the others.",
+    "zh": "对任意族与任意形式，施加一码一步使众一致，保持形成之一切交换，而不保持移动其所给之形之改名：无一形成居上而自对称得一致。"
+  },
+  "laws": [
+    {
+      "en": "Imposing a code keeps every exchange of formations; where a renaming moves the form the code gives some sense, imposing does not keep that renaming.",
+      "zh": "施加一码保持形成之一切交换；凡改名移动该码所给某义之形，施加不保持该改名。",
+      "declarations": [
+        "Becoming.SharedCodes.impose_keeps_exchange",
+        "Becoming.SharedCodes.impose_privileges_forms"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; any type of formations, senses and forms.",
+      "zh": "不加公理；任意之形成、义与形之类型。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a code is in fact imposed, or that imposing is better than another way to agree.",
+      "zh": "实际有码被施加，或施加优于其他致一致之方式。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 341; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 341 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Symmetry breaking: a symmetric dynamics reaches an asymmetric state only through an asymmetric term.",
+    "zh": "对称破缺：对称之动力只经不对称之项达不对称之态。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+  "aliases": [
+    "Imposing a code breaks the symmetry of forms",
+    "施加之码打破形式之对称",
+    "Becoming.SharedCodes.impose_keeps_exchange"
+  ],
+  "dependencies": [
+    {
+      "id": "a-code-formed-between-formations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "With never_agrees_of_both there, the two halves of the symmetry law.",
+        "zh": "与该记录之 never_agrees_of_both 合为对称之律之两半。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries wangbi-lueli-zhi-zhong-zhe-zhi-gua).",
+        "zh": "陈述其对应所发现之缺口（条目 wangbi-lueli-zhi-zhong-zhe-zhi-gua）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SharedCodes.impose_keeps_exchange",
+        "Becoming.SharedCodes.impose_privileges_forms"
+      ],
+      "sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SharedCodes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 341.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 341 节。"
+    }
+  ]
+}

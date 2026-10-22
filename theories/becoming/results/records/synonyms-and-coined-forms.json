@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "id": "synonyms-and-coined-forms",
+  "title": {
+    "en": "Synonyms and coined forms",
+    "zh": "同义之名与造出之形"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "A code letting a sense hold several forms reads every held form back as its sense exactly where no two senses hold one form; a form coined at a sense and heard by all brings back a distinction an imposed code merged.",
+    "zh": "一义可持多形之码，恰在无二义共持一形之处读回每一所持之形为其义；在一义造出一形而众皆听之，则施加之码所合并之区分回来。"
+  },
+  "laws": [
+    {
+      "en": "Synonyms do no harm and homonyms do: a code letting a sense hold several forms reads each held form back as its sense, and only it, exactly where no two senses hold one form; a code with one form a sense is the case.",
+      "zh": "同义无害，同形异义有害：一义可持多形之码，恰在无二义共持一形之处，读回每一所持之形为其义且只为之；一义一形之码为其情形。",
+      "declarations": [
+        "Becoming.SharedCodes.synonyms_read_iff",
+        "Becoming.SharedCodes.one_form_reads_iff"
+      ]
+    },
+    {
+      "en": "Coining gives one formation a form at one sense and changes nothing else; hearings at that sense leave every other sense as it was; where all hold a code merging m and m', a form coined at m that the code does not give m', heard by all, makes every formation tell m from m' again.",
+      "zh": "造形使一形成在一义得一形而余皆不变；在该义之听不改他义；众持合并 m 与 m′ 之码时，在 m 造出此码不给 m′ 之形，众皆听之，则每一形成复分 m 与 m′。",
+      "declarations": [
+        "Becoming.SharedCodes.coin",
+        "Becoming.SharedCodes.coin_at",
+        "Becoming.SharedCodes.coin_other_sense",
+        "Becoming.SharedCodes.runBy_other_sense",
+        "Becoming.SharedCodes.coined_returns"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; codes as maps from senses to forms, decidable equality of formations and senses where coining is stated.",
+      "zh": "不加公理；码为义到形之映射，述造形处形成与义之相等可判定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That names in use are coined deliberately, or that a coined form is heard.",
+      "zh": "实际之名是有意造出，或所造之形会被听到。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 7 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 341; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 341 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Synonymy and homonymy in a lexicon; coinage as the source of new distinctions.",
+    "zh": "词汇中之同义与同形异义；造词为新区分之来源。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+  "aliases": [
+    "Synonyms and coined forms",
+    "同义之名与造出之形",
+    "Becoming.SharedCodes.synonyms_read_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "a-code-formed-between-formations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Hearing makes no form there; coining is the step it lacks.",
+        "zh": "该记录中听不造形；造形是其所缺之一步。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xunzi-zhi-ming-yong-li, xunzi-wang-zhe-zhi-ming).",
+        "zh": "陈述其对应所发现之缺口（条目 xunzi-zhi-ming-yong-li、xunzi-wang-zhe-zhi-ming）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SharedCodes.coin",
+        "Becoming.SharedCodes.coin_at",
+        "Becoming.SharedCodes.coin_other_sense",
+        "Becoming.SharedCodes.coined_returns",
+        "Becoming.SharedCodes.one_form_reads_iff",
+        "Becoming.SharedCodes.runBy_other_sense",
+        "Becoming.SharedCodes.synonyms_read_iff"
+      ],
+      "sha256": "bccdbb371bf552ebd5ad6a61a60ffa7e65550f3f987f5f7edede6e4b391228c2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SharedCodes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 341.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 341 节。"
+    }
+  ]
+}

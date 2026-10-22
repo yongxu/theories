@@ -1,0 +1,146 @@
+{
+  "schema_version": 2,
+  "id": "support-passed-on",
+  "title": {
+    "en": "Support passed on by later gainers",
+    "zh": "支持由后得者传下"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "In a balanced flow where only active formations give, activity needs support, requirements never loosen and support spells are bounded, support gained ever later cannot be refuted to come from givers that themselves gained support after any given step.",
+    "zh": "平衡之流中，只有活动者给予、活动需要支持、需求不松、受支持之连续步数有界时，支持若任意晚仍被获得，则不能驳倒：其给予者自身在任一给定步之后才获得支持。"
+  },
+  "laws": [
+    {
+      "en": "A property at S + K that fails at S cannot be refuted to come about within the K steps; in such a flow, for every T and N, it cannot be refuted that from N on a formation gains support from a supported giver that itself gained support after T.",
+      "zh": "在 S + K 成立而在 S 不成立之性质，不能驳倒其在 K 步内生起；如此之流中，对每一 T 与 N，不能驳倒：自 N 起有形成从一个自身在 T 之后得支持之受支持之给予者得支持。",
+      "declarations": [
+        "Becoming.Flow.comes_within_not_not",
+        "Becoming.Flow.support_passes_on"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Balance, acting only when active, dependence, unloosened requirements, support spells of at most K + 1 steps, gains at arbitrarily late steps.",
+      "zh": "衡、只有活动者给予、依存、需求不松、受支持至多连续 K + 1 步、任意晚之步有所得。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A direction: a chain of support is not yet 生生, which asks widening as well.",
+      "zh": "方向：支持之链还不是生生，生生另需加宽。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A witness of the chain: the conclusion is a double negation.",
+      "zh": "链之见证：结论是双重否定。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Relay of resources through successive generations of recipients.",
+    "zh": "资源经相继之受者传递。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+  "aliases": [
+    "Support passed on by later gainers",
+    "支持由后得者传下",
+    "Becoming.Flow.comes_within_not_not"
+  ],
+  "dependencies": [
+    {
+      "id": "support-from-the-supported",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its gain from a supported giver, taken along: the giver itself a later gainer.",
+        "zh": "其从受支持之给予者之所得，延而取之：给予者自身是后得者。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xici-sheng-sheng-zhi-wei-yi).",
+        "zh": "陈述其对应所发现之缺口（条目 xici-sheng-sheng-zhi-wei-yi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.comes_within_not_not",
+        "Becoming.Flow.support_passes_on"
+      ],
+      "sha256": "6d97f6b26e6396b6ea64fae3f46c0fa7b6bc10d359ff3be3dea5213e683303e1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    }
+  ]
+}

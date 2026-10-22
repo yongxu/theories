@@ -229,13 +229,97 @@
         "en": "States gaps its map found (ZG).",
         "zh": "陈述其对应所发现之缺口（ZG）。"
       }
+    },
+    {
+      "id": "copied-witnesses-change-nothing",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "synonyms-and-coined-forms",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "taking-what-most-hold",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "imposing-a-code-breaks-the-symmetry",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "the-move-alone-underdetermines",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "reaching-before-and-after-a-juncture",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "reading-through-a-pool",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "division-by-exclusive-footprints",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "support-passed-on",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "censuses-of-the-xiang-and-tuan",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "bands-of-the-three-powers",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
+    },
+    {
+      "id": "one-search-one-line",
+      "detail": {
+        "en": "States gaps its map found (ZG).",
+        "zh": "陈述其对应所发现之缺口（ZG）。"
+      }
     }
   ],
   "references": [
     {
       "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "3a24a9f401195295da06cc3c0a58a37bdad369782acbb865dc1b19b97de06660"
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -245,7 +329,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "ccea558d1412d09e76e325f0ea42c30d426750baf706cd1b7d0d433398c212a1"
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -308,6 +392,10 @@
     {
       "en": "22 October 2026, ZG1-ZG3: 25 entries' gaps are stated (sixteen records; study sections 338-340), their readings revised and gap notes pointing to the laws; one-sided and local regulation, equal division and copying growth leave the gap list. The map's kinds and counts are unchanged.",
       "zh": "2026年10月22日，ZG1-ZG3：25 个条目之缺口已陈述（十六项记录；研究第 338-340 节），其读法修订，gap 注指向新律；单侧与局部的调节、均分、抄录之增离开缺口之列。对应之类别与计数不变。"
+    },
+    {
+      "en": "22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.",
+      "zh": "2026年10月22日，ZG4-ZG6：21 个条目之缺口已陈述（十二项记录；研究第 341-343 节），其读法修订，gap 注指向新律；13 条不求律之 gap 注标为范围之注，原文保留。对应之类别与计数不变；三个以缺定类之条目注明其缺已补。"
     }
   ]
 }

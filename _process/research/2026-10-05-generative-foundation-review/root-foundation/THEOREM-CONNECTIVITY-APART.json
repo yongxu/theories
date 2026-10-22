@@ -2256,6 +2256,121 @@
    "module": "Becoming.Significance",
    "category": "general-structure",
    "reason": "a law of every significance bounded in time on any types of standpoints and formations, the case of rival_of_outside for a time bound; its instance on the base is Clearing.time_bounded_permits (大取「愛尚世與愛後世」, ZG1)"
+  },
+  "Becoming.FaultEnvelopes.duplicated_roster_same": {
+   "module": "Becoming.FaultEnvelopes",
+   "category": "general-structure",
+   "reason": "A roster listed twice gives the certificate of the roster: a law of every certificate on any roster, now the case of copied_roster_same, each witness copying itself (ZG4)."
+  },
+  "Becoming.FaultEnvelopes.or_self": {
+   "module": "Becoming.FaultEnvelopes",
+   "category": "support",
+   "reason": "A Boolean lemma (a || a = a), formerly used for the duplicated roster, now derived through the copy law (ZG4)."
+  },
+  "Becoming.WitnessRefinementRuns.and_self'": {
+   "module": "Becoming.WitnessRefinementRuns",
+   "category": "support",
+   "reason": "A Boolean lemma, formerly used for the doubled roster, now derived through the copy law (ZG4)."
+  },
+  "Becoming.WitnessRefinementRuns.any_congr": {
+   "module": "Becoming.WitnessRefinementRuns",
+   "category": "support",
+   "reason": "A list lemma (any over a list with pointwise equal tests), formerly used for the doubled roster, now derived through the copy law and any_congr_on (ZG4)."
+  },
+  "Becoming.Hexagram.xiaoxiangMiddle_census": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "The census of the 小象's sentences saying a line is 中, and of four others with 中, holds of each listed configuration: a fact about the text's list, extracted from the preserved pages of sources/zhouyi-yizhuan by script and checked here by evaluation (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.exhausted_census": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "The census of the sentences saying a line's way is exhausted (窮, 亢), and of five others with 窮, holds of each listed configuration: a fact about the text's list, extracted from the preserved pages of sources/zhouyi-yizhuan by script and checked here by evaluation (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.riseStatements_agree": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "The census of the sentences of a broken line carrying an unbroken one (承, 順乎剛) holds of each listed configuration: a fact about the text's list, extracted from the preserved pages of sources/zhouyi-yizhuan by script and checked here by evaluation (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.tuanCentreStatements_agree": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "The census of the 彖's statements that a line is 中正 holds of each listed configuration: a fact about the text's list, extracted from the preserved pages of sources/zhouyi-yizhuan by script and checked here by evaluation (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.placeStatementsMore_agree": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "Two more of the 小象's statements of place (恆九四, 渙九五) holds of each listed configuration: a fact about the text's list, extracted from the preserved pages of sources/zhouyi-yizhuan by script and checked here by evaluation (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.bands_and_heights": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "The bands of the three powers and the heights jointly fix a place: a fact about the six places, checked on each (ZG6); the places are read on the base by shown_along_run."
+  },
+  "Becoming.Hexagram.band_seams": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "Each band of the three powers spans its seam: a fact about the six places and five seams, checked on each (ZG6); the seams are read on the base by run_carried."
+  },
+  "Becoming.Hexagram.band_seam_unique": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "Each band spans exactly one seam: a fact about the three bands and five seams, checked by evaluation (ZG6)."
+  },
+  "Becoming.Hexagram.neither_function": {
+   "module": "Becoming.HexagramPlaces",
+   "category": "model-witness",
+   "reason": "No map from heights gives the bands and none from bands the heights: a fact about the six places, checked by evaluation (ZG6)."
+  },
+  "Becoming.Hexagram.Trigram.sole_iff_searched": {
+   "module": "Becoming.HexagramSequences",
+   "category": "model-witness",
+   "reason": "On three lines a line is sole exactly where 乾 or 坤 is searched at its height: a fact about the eight trigrams, checked on each (ZG6); the six-line law sole_iff_flip is read on the base by sole_shown_along_run."
+  },
+  "Becoming.Hexagram.Trigram.searched": {
+   "module": "Becoming.HexagramSequences",
+   "category": "model-witness",
+   "reason": "The six trigrams searched from 乾 and 坤 (說卦 一索 再索 三索): a fact about eight trigrams, checked by evaluation (ZG6)."
+  },
+  "Becoming.SharedCodes.synonyms_read_iff": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "Synonyms do no harm, homonyms do: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.one_form_reads_iff": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "A code with one form a sense reads back exactly where it tells senses apart: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.coined_returns": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "A coined form heard by all brings back a merged distinction: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.impose_keeps_exchange": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "Imposing a code keeps every exchange of formations: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.impose_privileges_forms": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "Imposing a code keeps no renaming that moves its forms: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.majority_held": {
+   "module": "Becoming.SharedCodes",
+   "category": "general-structure",
+   "reason": "Taking what most hold makes no form: a law of every code on any type of formations, senses and forms; the base supplies no reading of its vocabulary (ZG4)."
+  },
+  "Becoming.SharedCodes.Majority.odd_agrees": {
+   "module": "Becoming.SharedCodes",
+   "category": "model-witness",
+   "reason": "Three formations, two holding one form, agree after one step of taking what most hold: one constructed model (ZG4)."
+  },
+  "Becoming.SharedCodes.Majority.even_rests": {
+   "module": "Becoming.SharedCodes",
+   "category": "model-witness",
+   "reason": "Two formations holding different forms rest under taking what most hold: one constructed model (ZG4)."
   }
  },
  "instances": {

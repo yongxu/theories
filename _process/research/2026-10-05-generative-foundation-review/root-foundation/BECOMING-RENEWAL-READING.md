@@ -15271,3 +15271,92 @@ Output → input: the ZH map's entries (中庸, 王弼, 孟子, 唯识, 论语�
 **Self-review.** The dormancy laws generalize the from-S laws, which are derived (rule 9); meeting needs no finiteness, the one cycle needs it. Finality is a premise, not hidden in a definition, since a supported formation may be active again.
 
 **The run.** Core 285 modules and 12,457 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. Connectivity: 662 of 13,203 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 341. Copied witnesses, codes with synonyms, coined forms and majority, imposing, and the move alone (ZG4)
+
+```text
+Result(s): new records copied-witnesses-change-nothing, synonyms-and-coined-forms, taking-what-most-hold,
+       imposing-a-code-breaks-the-symmetry, the-move-alone-underdetermines.
+Delta: witnesses copying witnesses on the roster (in reports, support and every fault set) change no step of
+       inspection and no certificate (WitnessRefinementRuns.copied_witnesses_same, FaultEnvelopes.copied_roster_same;
+       the doubled and duplicated rosters their cases). A code letting a sense hold several forms reads back exactly
+       where no two senses share a form (SharedCodes.synonyms_read_iff; one form a sense its case). Coining is the step
+       hearing lacks: a form coined at m and heard by all brings back a distinction an imposed code merged
+       (coined_returns). Taking what most hold makes no form; two of three agree at once, one of two rests. Imposing a
+       code keeps every exchange of formations and keeps no renaming moving its forms, for any family. Where a move has
+       two situations reaching two configurations, no law from configuration and move alone is right on both
+       (Situations.move_underdetermines; Confound.misattributes its case).
+Premises / correspondence: none beyond the models' finite lists and decidable equalities. Correspondence:
+       common-cause redundancy; synonymy and homonymy; majority dynamics; symmetry breaking; confounding.
+Evidence: core receipt 20261022T060905.150236Z (passed).
+Boundary: majority agreement from every start is not claimed (an even split rests); a witness merely agreeing with
+       another, without copying it, is outside the law.
+Output → input: the ZH map's 韩非 (八经, 八奸, 二柄's 一多心), 荀子 正名, 王弼 明彖, 大取 entries; records
+       fallible-witness-diagnosability, a-code-formed-between-formations, weights-count-situations.
+```
+
+**What was built.** `FaultEnvelopes.or_absorbed`, `FaultEnvelopes.copied_roster_same` (`duplicated_roster_same` now derived); `WitnessRefinementRuns.any_congr_on`, `and_absorbed`, `witnessed_copy`, `copied_witnesses_same` (`doubled_roster_same` now derived); `SharedCodes.synonyms_read_iff`, `one_form_reads_iff`, `coin`, `coin_at`, `coin_other_sense`, `runBy_other_sense`, `coined_returns`, `holders`, `majority`, `majority_held`, `Majority.three`, `Majority.two`, `Majority.odd_agrees`, `Majority.even_rests`, `impose_keeps_exchange`, `impose_privileges_forms`; `Situations.move_underdetermines`.
+
+*Reading* [AI reading, D45]. 韩非「十人云疑，百人然乎，千人不可解也」: hearsay passed on adds no witness. 荀子「單與兼無所相避則共」: synonyms are harmless where no form is shared. 「有作於新名」: a coined form, heard by all, brings back what an imposed name merged. 韩非「一多心」: taking what most hold still needs a break of symmetry. 王弼「至寡」: imposing a code agrees without a formation above the others, for any family. 大取「非彼其行益也」: what the move does not determine is not set down to it.
+
+**Self-review.** The copy laws generalize the doubled rosters, which are derived (rule 9). The synonym law and coining are stated on codes as they are, with no new type; the majority witnesses are small and say only what they show. `move_underdetermines` needs only two positive weights; its proof is short because the content is the finer law's definition, now stated generally.
+
+**The run.** Core 285 modules and 12,484 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. A first run on the same sources passed but listed three new names under market words (`spent…`); the census was renamed (`exhausted…`) and the run repeated; the first run's receipt is not kept. Connectivity: 691 of 13,244 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 342. Junctures within the count, reading through a pool, division by exclusive footprints, support passed on (ZG5)
+
+```text
+Result(s): new records reaching-before-and-after-a-juncture, reading-through-a-pool,
+       division-by-exclusive-footprints, support-passed-on.
+Delta: with every configuration listed and steps decided, what can be had again is had within the count of
+       configurations (Branching.reach_within_listed, leadsWithin_trace); at a configuration that is not a juncture no
+       step can be refuted to keep s (keeps_before_juncture). Where the rule reads through a pool, rules part at a
+       reading step only where the pool's reading parts (Pace.rule_through_pool). A realized joint plan with parts'
+       footprints within and apart and the root's within what is given keeps the joint draw within what is given, and
+       under balance the level (Flow.withinJoint_of_plan, level_kept_of_plans). In a balanced flow with bounded support
+       spells, support gained ever later cannot be refuted to come from givers that gained it after any given step
+       (Flow.support_passes_on).
+Premises / correspondence: finite listing for the bound; the per-law premises named in the records.
+       Correspondence: shortest paths within the number of states; sampled control through an aggregating sensor;
+       disjoint allocation; relay of resources.
+Evidence: core receipt 20261022T060905.150236Z (passed).
+Boundary: how long s stays obtainable along a course has no general bound (a cycle keeps it obtainable for ever); the
+       support chain is a double negation and carries no direction.
+Output → input: the ZH map's 系辞「知幾其神」, 孙子「其節短」, 扁鹊, 荀子「兼聽而時稽之」「群分」, 韩非「使不相干」,
+       系辞「生生之謂易」 entries; records every-loss-passes-a-juncture, how-fast-a-rule-may-change,
+       exclusive-footprint-support, what-taking-all-excludes, support-from-the-supported.
+```
+
+**What was built.** `Branching.leadsWithin_trace`, `Branching.reach_within_listed`, `Branching.keeps_before_juncture` (in `Becoming.Junctures`); `Pace.rule_through_pool`; `Flow.distinct_of_nodup`, `Flow.withinJoint_of_plan`, `Flow.level_kept_of_plans` (`Becoming.Exclusion` now imports `Becoming.JointPlans`); `Flow.comes_within_not_not`, `Flow.support_passes_on` (in `Becoming.Admission`).
+
+*Reading* [AI reading, D45]. 系辞「幾者，動之微」and 孙子「其節短」: what a juncture keeps is had within the count; 扁鹊: before the juncture nothing need be refused, at it the losing steps must be. 荀子「兼聽而時稽之」: the rule hears through the many, at the times it reads. 「群分」 and 韩非「使雞司夜，令狸執鼠」: exclusive footprints keep the draw within what is given. 系辞「生生之謂易」: support passed on by those who gained it later, a chain, not yet 生生.
+
+**Self-review.** The bound within the count is stated where a configuration list is given and needs it; the juncture law needs nothing. `withinJoint_of_plan` joins the footprint support of `JointPlans` to the joint draw of `Exclusion`, the interface the map found missing. `support_passes_on` is a double negation, constructive: it does not choose the step.
+
+**The run.** Core 285 modules and 12,484 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. Connectivity: 691 of 13,244 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.
+
+## 343. The censuses of the Changes, bands of the three powers, one search one line (ZG6)
+
+```text
+Result(s): new records censuses-of-the-xiang-and-tuan, bands-of-the-three-powers, one-search-one-line.
+Delta: forty-seven 小象 sentences saying a line is 中 are of the second or fifth place, four others with 中 not so;
+       nine sentences of a way exhausted (窮, 亢) are of the top place, five with 窮 of will, trust or going lower;
+       four of a broken line carrying an unbroken one are of rises; eleven 彖 中正 are of middle lines in phase; 恆九四
+       and 渙九五 agree with their phase (噬嗑六五「得當」 not a statement of place, its reason in the Lean). Bands and
+       heights are two divisions, jointly fixing a place, neither a function of the other, each band spanning one seam.
+       On three lines a line is sole exactly where 乾 or 坤 is searched at its height.
+Premises / correspondence: the sentence lists, extracted from sources/zhouyi-yizhuan by script and checked by
+       evaluation. Correspondence: the commentarial reading of 中, 上 and 承 by place; 說卦's searches.
+Evidence: core receipt 20261022T060905.150236Z (passed).
+Boundary: the lists are complete for the texts read, not beyond them; the census says where the sentences are, not
+       what they judge.
+Output → input: the ZH map's 小象 and 說卦 entries; records place-relations-in-context, fixed-places-and-sole-lines.
+```
+
+**What was built.** In `Becoming.HexagramPlaces`: `middlesHold`, `middlesHold_sound`, `xiaoxiangMiddle`, `xiaoxiangMiddleOther`, `xiaoxiangMiddle_census`; `isTop`, `topsHold`, `topsHold_sound`, `exhaustedStatements`, `exhaustedOther`, `exhausted_census`; `risesHold`, `risesHold_sound`, `riseStatements`, `riseStatements_agree`; `tuanCentreStatements`, `tuanCentreStatements_agree`; `placeStatementsMore`, `placeStatementsMore_agree`; `Band`, `bandOf`, `bandSeam`, `bands_and_heights`, `band_seams`, `band_seam_unique`, `neither_function`. In `Becoming.HexagramSequences`: `Trigram.flip3`, `Trigram.soleAt`, `Trigram.sole_iff_searched`, `Trigram.searched`.
+
+*Reading* [AI reading, D45]. 小象's 中 is a place, as its sentences show; 窮 at the top is the line's end, while 志窮 below is not; 承 is a rise; 中正 is middle and in phase. 說卦「兼三才而兩之」 pairs the places in a division of its own; 「一索而得男」 is one line turned.
+
+**Self-review.** Each census is a checked Boolean scan with a soundness lemma, written without wildcard matches so the reports stay empty. The exceptions are listed, not dropped, and the 噬嗑 reason is kept beside the list.
+
+**The run.** Core 285 modules and 12,484 theorems, instances 7 and 581, applications 6 and 179; 23 Lean steps ran, 1,181 reused. Connectivity: 691 of 13,244 apart; every new apart root registered (support, general structure, model witness) or joined through an instance on a web; register check passes.

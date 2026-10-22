@@ -149,6 +149,7 @@ The chapter's open programme (section 8.2) named a constructive criterion along 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 
 Aliases: `criterion along one run`, `沿一个运行的判据`, `law through a projection`, `经投影的规律`, `exact projection`, `精确投影`, `matching steps`, `匹配步`, `law through coupling`, `经耦合的规律`, `criterion up to a relation`, `到关系为止的判据`, `law through registration`, `经识的规律`, `uncoupled level decides`, `未耦合的水平决定`, `law through changing coupling`, `经改变的耦合的规律`, `forming and dissolving dependence`, `形成与消散的依赖`, `coupling fixed at one step`, `固定于一步的耦合`
 

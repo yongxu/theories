@@ -389,7 +389,7 @@
         "Becoming.Pace.turn",
         "Becoming.Pace.paced_succ"
       ],
-      "sha256": "950af3e13f76620ce65a0cde19ada6bc7c2576eef619d0ce7e6ed664ded449ba"
+      "sha256": "6e3ff605c2dc083a3b7a745ce8832dbeea4b4bade11cdfb16d5acfc83c8838b5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean",

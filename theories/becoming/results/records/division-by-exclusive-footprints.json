@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "id": "division-by-exclusive-footprints",
+  "title": {
+    "en": "Division by exclusive footprints",
+    "zh": "以互斥之足迹分"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "Where what formations take from a condition is what the leaves of a realized joint plan draw, the parts' footprints within their whole's and apart and the root's within what is given, the joint draw is within what is given; under balance, so at every step, the level never falls.",
+    "zh": "诸形成自一条件所取即一实现了之联合计划之叶所汲，诸部分足迹在其整体之内且不交，根之足迹在所给之内，则合取在所给之内；平衡之下每步如此，水平不降。"
+  },
+  "laws": [
+    {
+      "en": "A list without repetition is distinct; with the plan realized, parts within and apart, the root's footprint within a list no longer than what is given and the draw the plan's draws, the joint draw is within what is given.",
+      "zh": "无重复之列表各异；计划实现、部分在内且不交、根之足迹在不长于所给之列表内、所取即计划之所汲时，合取在所给之内。",
+      "declarations": [
+        "Becoming.Flow.distinct_of_nodup",
+        "Becoming.Flow.withinJoint_of_plan"
+      ]
+    },
+    {
+      "en": "Under balance, with such a division at every step, the level of the condition never falls below its start.",
+      "zh": "平衡之下，每步皆如此分，则该条件之水平永不低于起点。",
+      "declarations": [
+        "Becoming.Flow.level_kept_of_plans"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; balance for the level; footprints as lists of units; the plan realized at each step.",
+      "zh": "不加公理；水平之律须衡；足迹为单元之列表；每步计划实现。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an actual division is by exclusive footprints, or that the level rises.",
+      "zh": "实际之分以互斥之足迹，或水平上升。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 3 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Partitioning a resource: disjoint allocations within capacity.",
+    "zh": "资源之划分：容量之内不交之分配。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+  "aliases": [
+    "Division by exclusive footprints",
+    "以互斥之足迹分",
+    "Becoming.Flow.distinct_of_nodup"
+  ],
+  "dependencies": [
+    {
+      "id": "exclusive-footprint-support",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its support of the footprints is joined here to the joint draw.",
+        "zh": "其足迹之支撑在此接到合取。"
+      }
+    },
+    {
+      "id": "what-taking-all-excludes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Within the joint draw the level is kept, its law.",
+        "zh": "合取在内则水平得保，其律。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xunzi-wangzhi-qun-fen-yi, hanfei-yongren-shi-bu-xiang-gan).",
+        "zh": "陈述其对应所发现之缺口（条目 xunzi-wangzhi-qun-fen-yi、hanfei-yongren-shi-bu-xiang-gan）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.distinct_of_nodup",
+        "Becoming.Flow.level_kept_of_plans",
+        "Becoming.Flow.withinJoint_of_plan"
+      ],
+      "sha256": "fa25d3cfc8c2439f369d24149f6d003a7419a52179fefafecb7ed4fc84907952"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Exclusion",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    }
+  ]
+}

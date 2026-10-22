@@ -71,6 +71,18 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 - related, not a proved adapter: [dormancy-over-a-stretch](dormancy-over-a-stretch.md). States gaps its map found (ZG).
 - related, not a proved adapter: [arising-needs-change](arising-needs-change.md). States gaps its map found (ZG).
 - related, not a proved adapter: [need-drift-along-a-lineage](need-drift-along-a-lineage.md). States gaps its map found (ZG).
+- related, not a proved adapter: [copied-witnesses-change-nothing](copied-witnesses-change-nothing.md). States gaps its map found (ZG).
+- related, not a proved adapter: [synonyms-and-coined-forms](synonyms-and-coined-forms.md). States gaps its map found (ZG).
+- related, not a proved adapter: [taking-what-most-hold](taking-what-most-hold.md). States gaps its map found (ZG).
+- related, not a proved adapter: [imposing-a-code-breaks-the-symmetry](imposing-a-code-breaks-the-symmetry.md). States gaps its map found (ZG).
+- related, not a proved adapter: [the-move-alone-underdetermines](the-move-alone-underdetermines.md). States gaps its map found (ZG).
+- related, not a proved adapter: [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md). States gaps its map found (ZG).
+- related, not a proved adapter: [reading-through-a-pool](reading-through-a-pool.md). States gaps its map found (ZG).
+- related, not a proved adapter: [division-by-exclusive-footprints](division-by-exclusive-footprints.md). States gaps its map found (ZG).
+- related, not a proved adapter: [support-passed-on](support-passed-on.md). States gaps its map found (ZG).
+- related, not a proved adapter: [censuses-of-the-xiang-and-tuan](censuses-of-the-xiang-and-tuan.md). States gaps its map found (ZG).
+- related, not a proved adapter: [bands-of-the-three-powers](bands-of-the-three-powers.md). States gaps its map found (ZG).
+- related, not a proved adapter: [one-search-one-line](one-search-one-line.md). States gaps its map found (ZG).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -97,6 +109,7 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 - 21 October 2026: added (ZH), on Ren's request for a 中华 edition and for the 脉络 to be joined to the theories; study section 328; readings D62.
 - 22 October 2026, WH1 and SAT1: the first two gaps, a conjunctive or graded whole and saturation of a coupling, are stated (records a-whole-of-every-part, a-coupling-saturated-by-what-it-has-carried; study sections 333 and 334); the five entries naming them read the new laws and their gap notes point to them. The map's kinds and counts are unchanged.
 - 22 October 2026, ZG1-ZG3: 25 entries' gaps are stated (sixteen records; study sections 338-340), their readings revised and gap notes pointing to the laws; one-sided and local regulation, equal division and copying growth leave the gap list. The map's kinds and counts are unchanged.
+- 22 October 2026, ZG4-ZG6: 21 entries' gaps are stated (twelve records; study sections 341-343), their readings revised and gap notes pointing to the laws; 13 gap notes that ask for no law are marked as scope remarks, their text kept. The map's kinds and counts are unchanged; three entries whose kind rested on a gap now proved say so.
 
 </details>
 

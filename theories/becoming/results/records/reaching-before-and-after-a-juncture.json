@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "id": "reaching-before-and-after-a-juncture",
+  "title": {
+    "en": "Reaching before and after a juncture",
+    "zh": "机前与机后之可得"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations; at a configuration that is not a juncture, no step can be refuted to keep it.",
+    "zh": "构形列尽、步可判定时，仍可再得者在不多于构形数之步内得之；不是机之处，无一步可被驳为不保之。"
+  },
+  "laws": [
+    {
+      "en": "A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations.",
+      "zh": "在 k 步内通向 s 之构形有一步及其后少于 k 步之行程入 s；构形列尽、步可判定、s 复返时，可得 s 之构形在构形数之内得之。",
+      "declarations": [
+        "Becoming.Branching.leadsWithin_trace",
+        "Becoming.Branching.reach_within_listed"
+      ]
+    },
+    {
+      "en": "At a configuration with a step keeping s and which is not a juncture for s, no step can be refuted to keep s: choosing is needed only at a juncture.",
+      "zh": "有保 s 之一步而非 s 之机之构形上，无一步可被驳为不保 s：择只在机上。",
+      "declarations": [
+        "Becoming.Branching.keeps_before_juncture"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; a finite list of every configuration and decided steps for the bound; none for the juncture law.",
+      "zh": "不加公理；界须构形之有限全列与可判定之步；机之律无前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A bound on how long s stays obtainable along a course: on a cycle it can stay so for ever.",
+      "zh": "沿一行程 s 保持可得之久之界：在回环上可永远如此。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 3 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Reachability within the number of states (the pigeonhole bound on shortest paths).",
+    "zh": "状态数之内之可达（最短路径之鸽笼界）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+  "aliases": [
+    "Reaching before and after a juncture",
+    "机前与机后之可得",
+    "Becoming.Branching.leadsWithin_trace"
+  ],
+  "dependencies": [
+    {
+      "id": "every-loss-passes-a-juncture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its juncture; before one no step needs choosing.",
+        "zh": "其机；机前无须择步。"
+      }
+    },
+    {
+      "id": "basins-of-a-determined-law",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Entering what returns within the count is the same bound on a determined law.",
+        "zh": "在构形数之内入复返之域是确定之律上之同一界。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries xici-zhi-ji-qi-shen, sunzi-bing-shi, hanfei-yulao-bian-que).",
+        "zh": "陈述其对应所发现之缺口（条目 xici-zhi-ji-qi-shen、sunzi-bing-shi、hanfei-yulao-bian-que）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Branching.keeps_before_juncture",
+        "Becoming.Branching.leadsWithin_trace",
+        "Becoming.Branching.reach_within_listed"
+      ],
+      "sha256": "23f243f34ca930063cadb0f273d68e09964364c251fa3432e32d7e0d08f2ffba"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Junctures",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    }
+  ]
+}

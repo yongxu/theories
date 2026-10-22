@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "id": "copied-witnesses-change-nothing",
+  "title": {
+    "en": "Copied witnesses change nothing",
+    "zh": "抄录之见证不改任何检查"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "Where each witness added to a roster copies one already on it, in its reports, its support and every fault set it is inside, inspection takes the same steps and gives the same certificate; the roster listed twice is the case.",
+    "zh": "加入名单之每一见证抄录名单上一员之报告、支持与所在之故障集合时，检查之每一步与证书皆不变；名单列两遍为其情形。"
+  },
+  "laws": [
+    {
+      "en": "With every added witness supporting as a witness on the roster supports and inside exactly the fault sets it is inside, the certificate of the longer roster is the certificate of the roster.",
+      "zh": "每一加入之见证与名单上一员支持相同、所在之故障集合相同时，较长名单之证书即原名单之证书。",
+      "declarations": [
+        "Becoming.FaultEnvelopes.or_absorbed",
+        "Becoming.FaultEnvelopes.copied_roster_same"
+      ]
+    },
+    {
+      "en": "With every added witness also reporting as its original reports, inspection of the longer roster takes exactly the steps of inspection of the roster, and the certificate at every pool of faults is the same; listing the roster twice is the case.",
+      "zh": "每一加入之见证并与其原者报告相同时，较长名单之检查与原名单之检查步步相同，每一故障之池上证书相同；名单列两遍为其情形。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.any_congr_on",
+        "Becoming.WitnessRefinementRuns.and_absorbed",
+        "Becoming.WitnessRefinementRuns.witnessed_copy",
+        "Becoming.WitnessRefinementRuns.copied_witnesses_same"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; witnesses on a finite roster with Boolean reports and support; fault sets as finite lists.",
+      "zh": "不加公理；有限名单上之见证，报告与支持为布尔值；故障集合为有限列表。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a witness which merely agrees with another, without copying it, adds nothing.",
+      "zh": "只与另一见证相合而非抄录者亦不增分辨。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 6 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 341; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 6 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 341 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Correlated evidence: a source that is a function of another and fails with it carries no further information (common-cause redundancy).",
+    "zh": "相关之证据：是另一来源之函数且与之同错者不增信息（共因之冗余）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+  "aliases": [
+    "Copied witnesses change nothing",
+    "抄录之见证不改任何检查",
+    "Becoming.FaultEnvelopes.or_absorbed"
+  ],
+  "dependencies": [
+    {
+      "id": "fallible-witness-diagnosability",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The doubled roster of that record is the case of a roster copying itself.",
+        "zh": "该记录之双列名单是名单抄录自身之情形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries hanfei-bu-shi-xiang-yu, hanfei-shi-ren-yun-yi).",
+        "zh": "陈述其对应所发现之缺口（条目 hanfei-bu-shi-xiang-yu、hanfei-shi-ren-yun-yi）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.FaultEnvelopes.copied_roster_same",
+        "Becoming.FaultEnvelopes.or_absorbed"
+      ],
+      "sha256": "020c64bdc60178c891a4ffa168d275efb35c4cddd8356ae3b4ad1521e5c9ec88"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.and_absorbed",
+        "Becoming.WitnessRefinementRuns.any_congr_on",
+        "Becoming.WitnessRefinementRuns.copied_witnesses_same",
+        "Becoming.WitnessRefinementRuns.witnessed_copy"
+      ],
+      "sha256": "1298363a6960f61f4fb4e04419fa678a90b0d910a9912de9c08e0d64a69295b8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FaultEnvelopes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WitnessRefinementRuns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 341.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 341 节。"
+    }
+  ]
+}

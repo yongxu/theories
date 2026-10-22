@@ -51,6 +51,8 @@ Basins of attraction of a finite map: its functional graph splits into component
 - **formal-reuse**: [attraction-is-not-returning](attraction-is-not-returning.md). Its enters_returning is derived from the bound within the count.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries xugua-jin-bi-you-suo-gui, xici-tong-gui-shu-tu).
 
+**Used by:** [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

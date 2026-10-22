@@ -74,6 +74,7 @@ Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a membe
 | integration | [PREDICTIONS-2026-10-20.md](../../../../experiments/commons-outrun/PREDICTIONS-2026-10-20.md) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 
 Aliases: `the rest outruns the renewal`, `其余者超出更新`, `restraint invisible after the rest's end`, `Becoming.Flow.outrun_below`, `Becoming.Flow.outrun_reading_alike`
 

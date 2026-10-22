@@ -82,7 +82,7 @@
      ],
      "layer_checked": "",
      "relational": "物与其所出：任何物之出都以已有之物为条件，没有一个先于诸物而不在诸物之中的起点。",
-     "gap": "「无始」的限度在表示：运行以自然数为步序，从 0 起（章节 §8）。向后无尽是反向过程上 Onward.KeepsMoving.run（有限构形）与 Onward.runs_iff_dependentChoice（一般，依赖选择）的推论；若需要写出，只作这两条的实例陈述，不立新律。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。所言是已有两律之实例，步序起于 0 是模型之设，不立新律。原注：「无始」的限度在表示：运行以自然数为步序，从 0 起（章节 §8）。向后无尽是反向过程上 Onward.KeepsMoving.run（有限构形）与 Onward.runs_iff_dependentChoice（一般，依赖选择）的推论；若需要写出，只作这两条的实例陈述，不立新律。",
      "locator": "庄子·知北遊；冉求问于仲尼曰未有天地可知邪章",
      "tradition": "道家（庄子）",
      "work": "《庄子·知北遊》冉求问未有天地章",
@@ -17484,7 +17484,8 @@
       "Becoming.Flow.whole_not_new_of_rest_idle",
       "Becoming.Web.Widens",
       "Becoming.Flow.Balances.not_narrows_of_renewed",
-      "Becoming.Flow.Balances.narrows_of_consumed"
+      "Becoming.Flow.Balances.narrows_of_consumed",
+      "Becoming.Flow.support_passes_on"
      ],
      "records": [
       "unceasing-generation-needs-renewal",
@@ -17492,10 +17493,11 @@
       "hexagrams-on-the-spine",
       "where-novelty-gain-comes-from",
       "comparison-by-widening",
-      "the-run-classes-and-widening"
+      "the-run-classes-and-widening",
+      "support-passed-on"
      ],
-     "gap": "G1：在平衡流中，只有活动者给予且活动需要支持，需求不松，无族外之给，每一形成被支持的连续步数有界（≤L）；若在任意晚的步上有形成获得支持，则在任意晚的步上有形成从一个自身在 T 之后才获得支持的给予者获得支持（支持之传递反复出现）。最近之声明：Becoming.Flow.gains_from_supported、Becoming.Flow.rise_given_by_supported、Becoming.Web.Unceasing.activeRenewer_recurs、Becoming.Web.Whole.needs_arising。即使证得，它只是一条支持之链，不即是生生：获得支持的形成可以落在狭或各有所长的部分中；生生之律须另加方向（Web.Widens），并处理新类之生长（Flow.GrownBy：Web.Widens 只比较固定类型的形成，新类不在其比较之内，R25），否则会把不息（D5）当作生生（D1）。",
-     "reading": "AI读法：韩注“陰陽轉易，以成化生”，孔疏“生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生，謂之易也”（YWH-H5，魏晋南北朝·注／隋唐·疏）：此句的史义是相续不绝。脊柱给出相续之结构及其范围：作耗减一有限族、且每一上升都由更新该条件的形成所为时，不息使更新活动不从任何一步起停止（Web.Unceasing.activeRenewer_recurs，结论是双重否定；这是不息，D5）；一个从某步起持续活动的整体，其部分之活动皆终、活动之部分有清单，则它只经由部分之不断作而续（Web.Whole.needs_arising）。在易的有限构形上，相续是复：消息之律下每一构形都复（Hexagram.waxWane_returns）；有界整体中其余皆闲，则整体不能每步皆新，必有两步构形相同（Flow.whole_not_new_of_rest_idle，第一定律之下；量为自然数，这是表示的承诺）。按 D49，复有不息而无生生。本理论的生生（D1：生成生成生成，所成者保存、恢复、传递或创造进一步生成之条件与生成者；方向以广比较，Web.Widens）是以此词名之的约定，比系辞的相续义多出方向：在流平衡、只有活动者取用且只从所汲取之条件取用之处，一部分之汲取都落在被更新的条件上，则它不狭（Flow.Balances.not_narrows_of_renewed）；不狭不即是广，恒（更新）不即成生（D2）。它每步所给不多于所取、一依存被消耗、而无它时之水平后来仍以不小之需容之，则狭（Flow.Balances.narrows_of_consumed）。易（变）也包括退化，生成与退化不重叠，故“生生之谓易”在本理论中只就生成一面成立。原条“所生者成为再生的给予者”不是 Flow.gains_from_supported 所说，已删；“生成生成”作为一条定律尚缺，见缺口。",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Flow.support_passes_on（由 comes_within_not_not）。见记录 support-passed-on。",
+     "reading": "AI读法：韩注“陰陽轉易，以成化生”，孔疏“生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生，謂之易也”（YWH-H5，魏晋南北朝·注／隋唐·疏）：此句的史义是相续不绝。脊柱给出相续之结构及其范围：作耗减一有限族、且每一上升都由更新该条件的形成所为时，不息使更新活动不从任何一步起停止（Web.Unceasing.activeRenewer_recurs，结论是双重否定；这是不息，D5）；一个从某步起持续活动的整体，其部分之活动皆终、活动之部分有清单，则它只经由部分之不断作而续（Web.Whole.needs_arising）。在易的有限构形上，相续是复：消息之律下每一构形都复（Hexagram.waxWane_returns）；有界整体中其余皆闲，则整体不能每步皆新，必有两步构形相同（Flow.whole_not_new_of_rest_idle，第一定律之下；量为自然数，这是表示的承诺）。按 D49，复有不息而无生生。本理论的生生（D1：生成生成生成，所成者保存、恢复、传递或创造进一步生成之条件与生成者；方向以广比较，Web.Widens）是以此词名之的约定，比系辞的相续义多出方向：在流平衡、只有活动者取用且只从所汲取之条件取用之处，一部分之汲取都落在被更新的条件上，则它不狭（Flow.Balances.not_narrows_of_renewed）；不狭不即是广，恒（更新）不即成生（D2）。它每步所给不多于所取、一依存被消耗、而无它时之水平后来仍以不小之需容之，则狭（Flow.Balances.narrows_of_consumed）。易（变）也包括退化，生成与退化不重叠，故“生生之谓易”在本理论中只就生成一面成立。原条“所生者成为再生的给予者”不是 Flow.gains_from_supported 所说，已删；“生成生成”之传递一半今为定律：平衡之流中，只有活动者给予、活动需要支持、需求不松、每一形成连续受支持之步数有界时，若任意晚之步上有形成获得支持，则不能驳倒：任意晚之步上有形成从一个自身在 T 之后才获得支持之给予者获得支持（Flow.support_passes_on）。支持之链还不是生生，生生另需方向（章 §6.1）。",
      "names_used": [
       "生生",
       "不息",
@@ -18802,7 +18804,7 @@
       "loss-beyond-a-region",
       "classification-robust-generative-comparison"
      ],
-     "gap": "G2：一个对各有所长之部分作排序的度量（例如更新能力与关系之丰富），在赅之序上单调（赅则不小），并说明它对分类的依赖（Requirement.Routes.none_robust 在一个模型中表明没有在每一分类下都居前沿的路径）。这是比较承诺，须明言为设，不是待证之定理。最近之声明：Becoming.Transfer.unordered、Becoming.Requirement.Routes.opposite_routes、Becoming.Requirement.Routes.none_robust、Becoming.Web.Widens。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。所求之度量是比较之承诺（与以加宽为更好之 C 同类），须明言为设，不是待证之定理。原注：G2：一个对各有所长之部分作排序的度量（例如更新能力与关系之丰富），在赅之序上单调（赅则不小），并说明它对分类的依赖（Requirement.Routes.none_robust 在一个模型中表明没有在每一分类下都居前沿的路径）。这是比较承诺，须明言为设，不是待证之定理。最近之声明：Becoming.Transfer.unordered、Becoming.Requirement.Routes.opposite_routes、Becoming.Requirement.Routes.none_robust、Becoming.Web.Widens。",
      "reading": "AI读法：百家众技皆有所长、时有所用，而不该不遍。分两层。百家之间：两条水平路径各在某步容许对方所不容许者，即各有所长（Web.Mixed，定义）；在凡续皆有顾之下，各有所长恰是双方各自增加对方所缺的有意义之延续（Web.mixed_iff_adds）；一个构造模型中二者都不保留对方，排序需要一个度量（Transfer.unordered，见证）；不同分类可偏向相反的路径（Requirement.Routes.opposite_routes，见证）。同段“耳目鼻口，皆有所明，不能相通”即各有所长之例。各家对全体：“不該不徧”是每家不赅“古之道術”之全；全体之赅恰是每一区域内之赅（Web.includes_iff_within_every），只得一察者在其所察之外不赅。庄子以“一曲之士”贬之，此评价不被携带：各有所长不是缺陷，而是需要度量的处境；排序只在以广为愈（C），而 C 不排各有所长之先后，见缺口 G2。",
      "names_used": [
       "各有所长",
@@ -20728,7 +20730,7 @@
       "类",
       "随类而同"
      ],
-     "gap": "彖传的「万物」不立条件；脊柱给出的条件（律与对称交换）只是充分条件，反向未证。RO 的 tuan-kui 把三句合在一起判为相合（天地一句的乾坤正是易的模型中的互补之对）；本条只取万物一句，它的普遍之形改判定域。「睽之時用大矣哉」不在脊柱上。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。「万物」一句之普遍形不立条件，反向不是此句所说，只记定域。原注：彖传的「万物」不立条件；脊柱给出的条件（律与对称交换）只是充分条件，反向未证。RO 的 tuan-kui 把三句合在一起判为相合（天地一句的乾坤正是易的模型中的互补之对）；本条只取万物一句，它的普遍之形改判定域。「睽之時用大矣哉」不在脊柱上。",
      "locator": "第38卦睽·彖传",
      "relational": "相异者在一个类下相关而不合并",
      "ro_passage": "tuan-kui",
@@ -21397,7 +21399,7 @@
       "象",
       "择"
      ],
-     "gap": "小取以此说明辟、侔、援、推之辞「行而異，轉而危」；论辩的规矩不在脊柱上。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。论辩之规矩是辞之事，不是结构之律。原注：小取以此说明辟、侔、援、推之辞「行而異，轉而危」；论辩的规矩不在脊柱上。",
      "locator": "小取·冻结正文段13",
      "relational": "部分之同与全同之别",
      "ro_passage": "",
@@ -21465,7 +21467,7 @@
       "同",
       "类"
      ],
-     "gap": "RO 同条兼取「以說出故」，并引 apart_only_downstream；本条的片段不含这一句，所以不引。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。是引文之说明，不是缺律。原注：RO 同条兼取「以說出故」，并引 apart_only_downstream；本条的片段不含这一句，所以不引。",
      "locator": "小取·冻结正文段13",
      "relational": "然与所以然：结果与其故之关系",
      "ro_passage": "mobian-qi-ran-suo-yi-ran",
@@ -21660,7 +21662,7 @@
       "类",
       "随类而同"
      ],
-     "gap": "「則不復也」是施教者的规矩（学者不能推，就不再举），不在脊柱上；四隅同类、世界跨此类一致，是这个读法的前提，不是定理。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。施教之规矩与同类之前提是读法之设，不是待证之律。原注：「則不復也」是施教者的规矩（学者不能推，就不再举），不在脊柱上；四隅同类、世界跨此类一致，是这个读法的前提，不是定理。",
      "locator": "《论语》述而第七",
      "relational": "一隅与三隅经类相关",
      "ro_passage": "",
@@ -21695,7 +21697,7 @@
       "类",
       "随类而同"
      ],
-     "gap": "原文的语境是筮法成卦；把「触类而长之」读作经归并而推广，是 AI 的结构读法。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。是读法之注（AI 之结构读法），不是缺律。原注：原文的语境是筮法成卦；把「触类而长之」读作经归并而推广，是 AI 的结构读法。",
      "locator": "系辞上·冻结第9章·编者论证段4",
      "relational": "由类引伸",
      "ro_passage": "",
@@ -21730,7 +21732,7 @@
       "类",
       "推类"
      ],
-     "gap": "苏辙在同章以「以道為主」作为一之者，又说「萬物同出于性」：以道为主是单一中心一层，以性为万物所同出是固定本性一层，这两层都不带入；理论中没有哪一个类能保证一切推移都对。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。不带入之层，是范围之界，不是缺律。原注：苏辙在同章以「以道為主」作为一之者，又说「萬物同出于性」：以道为主是单一中心一层，以性为万物所同出是固定本性一层，这两层都不带入；理论中没有哪一个类能保证一切推移都对。",
      "locator": "苏辙《老子解》第20章",
      "relational": "所积之闻须经一类才能推；推之对还须世界跨此类一致",
      "ro_passage": "",
@@ -22336,20 +22338,23 @@
       "Becoming.Branching.reach_decided_listed",
       "Becoming.Branching.loss_passes_juncture_listed",
       "Becoming.Branching.lpo_of_junctures_found",
-      "Becoming.Web.observed_level_couples"
+      "Becoming.Web.observed_level_couples",
+      "Becoming.Branching.reach_within_listed",
+      "Becoming.Branching.keeps_before_juncture"
      ],
      "records": [
       "every-loss-passes-a-juncture",
-      "testing-within-couplings"
+      "testing-within-couplings",
+      "reaching-before-and-after-a-juncture"
      ],
-     "reading": "AI读法：「知几其神乎」：知几之确切范围。一个会复返之构形 s，其每一次失去都经过一个机，以双重否定陈述（Branching.loss_passes_juncture）；沿途已判定 s 是否仍可得时，机可被找到（Branching.loss_passes_juncture_decided）；构形列出且步已判定时，可达性可判定（Branching.reach_decided_listed），机可被找到（Branching.loss_passes_juncture_listed）。若对一切过程都能找到每一失去之机，就蕴含有限全知原则 LPO（Branching.lpo_of_junctures_found；只证此一方向）。所以知几不是神，而是判定可达：列出之有限处可行，一般需要 LPO。预见机还须相关条件以水平耦合入读法（YI-ZHUAN p-zhiji；Web.observed_level_couples）。「君子见几而作，不俟终日」要求在机仍为机时取保住之步，即护闭；机能等待多少步，脊柱未导出。",
+     "reading": "AI读法：「知几其神乎」：知几之确切范围。一个会复返之构形 s，其每一次失去都经过一个机，以双重否定陈述（Branching.loss_passes_juncture）；沿途已判定 s 是否仍可得时，机可被找到（Branching.loss_passes_juncture_decided）；构形列出且步已判定时，可达性可判定（Branching.reach_decided_listed），机可被找到（Branching.loss_passes_juncture_listed）。若对一切过程都能找到每一失去之机，就蕴含有限全知原则 LPO（Branching.lpo_of_junctures_found；只证此一方向）。所以知几不是神，而是判定可达：列出之有限处可行，一般需要 LPO。预见机还须相关条件以水平耦合入读法（YI-ZHUAN p-zhiji；Web.observed_level_couples）。「君子见几而作，不俟终日」要求在机仍为机时取保住之步，即护闭；机能等待多少步，脊柱未导出。已补：构形列尽、步可判定而 s 复返时，凡仍可再得 s 者，在不多于构形数之步内得之（Branching.reach_within_listed）：机上保住之一步之后，s 在构形数之内可得；不是机之处，无一步可被驳为不保 s（Branching.keeps_before_juncture），择只在机上。机可延之步数（沿一路径 s 仍可得之最晚之步）一般无界：s 在回环上时，路径可无尽地停在可得之处，所以只有得之之界，没有待之之界。",
      "names_used": [
       "知几",
       "机",
       "护闭",
       "复"
      ],
-     "gap": "机可待之步数：自一个对 s 之机起，保住之步仍可取的最大步数（或沿一路径 s 仍可得之最晚之步）的界；Junctures 模块明言未导出「一机失去多少步之度量」。最近：Becoming.Branching.Juncture、Becoming.Branching.loss_passes_juncture、Becoming.Branching.keeping_removes_at_juncture、Becoming.LoopReturn.closes_within",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Branching.reach_within_listed（得之之界为构形数）、Branching.keeps_before_juncture；待之无一般之界（回环）。见记录 reaching-before-and-after-a-juncture。",
      "locator": "系辞下·冻结第四章",
      "relational": "知几即判定 s 是否仍可得，并经耦合先见",
      "tradition": "共享经典",
@@ -22640,14 +22645,17 @@
       "Becoming.Branching.Juncture",
       "Becoming.Branching.juncture_iff",
       "Becoming.Branching.Juncture.outcomes_differ",
-      "Becoming.Branching.Juncture.possiblyDrawn"
+      "Becoming.Branching.Juncture.possiblyDrawn",
+      "Becoming.Law.enters_returning_within",
+      "Becoming.Branching.reach_within_listed"
      ],
      "records": [
       "attraction-is-not-returning",
       "necessarily-drawn-is-not-returning",
-      "every-loss-passes-a-juncture"
+      "every-loss-passes-a-juncture",
+      "reaching-before-and-after-a-juncture"
      ],
-     "reading": "AI读法：「如轉圓石於千仞之山者，勢也」：石之所至由其所在之处与形状决定，「圓則行」，一动即被引向山下。在此读为势：一组构形，其行程都进入同一区域。脊柱：一构形在某区域之外而其行程进入之，即被入（Law.DrawnInto）；确定之法下，被入恰是不复返（Law.drawn_iff_not_returns），入者永不复返（Law.DrawnInto.never_back）。「勢如彍弩，節如發機」：弩张而未发之时，结构上近于机：一构形有一步之后某构形仍可得、另一步之后不可得（Branching.Juncture、Branching.juncture_iff），两步之所至不同（Branching.Juncture.outcomes_differ），机在其失去之步后不能再得（Branching.Juncture.possiblyDrawn）。「機」是弩之发机，与《系辞》之「幾」字不同而结构相近。「其勢險，其節短」：势险是入之深，节短是从机到所至之步少，这两个度量脊柱未给。「求之於勢，不責於人」之用兵规范不带。",
+     "reading": "AI读法：「如轉圓石於千仞之山者，勢也」：石之所至由其所在之处与形状决定，「圓則行」，一动即被引向山下。在此读为势：一组构形，其行程都进入同一区域。脊柱：一构形在某区域之外而其行程进入之，即被入（Law.DrawnInto）；确定之法下，被入恰是不复返（Law.drawn_iff_not_returns），入者永不复返（Law.DrawnInto.never_back）。「勢如彍弩，節如發機」：弩张而未发之时，结构上近于机：一构形有一步之后某构形仍可得、另一步之后不可得（Branching.Juncture、Branching.juncture_iff），两步之所至不同（Branching.Juncture.outcomes_differ），机在其失去之步后不能再得（Branching.Juncture.possiblyDrawn）。「機」是弩之发机，与《系辞》之「幾」字不同而结构相近。「其勢險，其節短」：势险是入之深，节短是从机到所至之步少，这两个度量脊柱未给。「求之於勢，不責於人」之用兵规范不带。已补：入势之深与节之短各有界：列 m 个构形时，每一行程在第 m 步之前入复返之域（Law.enters_returning_within）；机上保住之一步之后，所护者在构形数之内可得（Branching.reach_within_listed）。",
      "names_used": [
       "势",
       "入",
@@ -22655,7 +22663,7 @@
       "复",
       "法"
      ],
-     "gap": "势之险（入之深、离开之难）与节之短（从机到所至之步数）之度量：脊柱有 Becoming.Law.DrawnInto 与 Becoming.Branching.Juncture，无入之深度、亦无从机到所入之步数之度量；最近：Becoming.Law.enters_returning（只断言存在）、Becoming.LoopReturn.closes_within（只对回返映射）",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Law.enters_returning_within（ZG1）、Branching.reach_within_listed。见记录 reaching-before-and-after-a-juncture。",
      "locator": "《孙子·兵势》",
      "relational": "石与山之形相关，所至由所在之区域决定；发机之一步分开两种所至",
      "tradition": "兵",
@@ -22786,18 +22794,20 @@
       "Becoming.Branching.juncture_iff",
       "Becoming.Branching.loss_passes_juncture",
       "Becoming.Branching.keeping_removes_at_juncture",
-      "Becoming.Branching.keeping_greatest"
+      "Becoming.Branching.keeping_greatest",
+      "Becoming.Branching.keeps_before_juncture"
      ],
      "records": [
-      "every-loss-passes-a-juncture"
+      "every-loss-passes-a-juncture",
+      "reaching-before-and-after-a-juncture"
      ],
-     "reading": "AI读法：「疾在腠理，湯熨之所及也；在肌膚，鍼石之所及也；在腸胃，火齊之所及也；在骨髓，司命之所屬，無柰何也」：病之行程上，每一处都有一个仍能使无病复得之手段，直到骨髓不可复得。在肠胃，火齐仍可及，再进一步入骨髓则不可复得：肠胃之处是机。脊柱：一构形对 s 为机，恰有一步之后 s 仍可得、另一步之后不可得（Branching.Juncture、Branching.juncture_iff）；一个会复返之构形，其每一次失去都经过一个机，以双重否定陈述（Branching.loss_passes_juncture）；护闭所去者恰是机处之失去之步（Branching.keeping_removes_at_juncture），每一保住 s 之子过程，在其从 s 出发之行程上只取护闭之步（Branching.keeping_greatest）。「千丈之堤，以螻蟻之穴潰」与「白圭之行堤也塞其穴」：在小处塞之，是在机之前取保住之步。同篇引《老子》「其安易持也，其未兆易謀也」：机之前持之不难。定域：脊柱给出机与护闭之结构，但不给机之前诸步之代价为何更小，「易」之比较未导出。",
+     "reading": "AI读法：「疾在腠理，湯熨之所及也；在肌膚，鍼石之所及也；在腸胃，火齊之所及也；在骨髓，司命之所屬，無柰何也」：病之行程上，每一处都有一个仍能使无病复得之手段，直到骨髓不可复得。在肠胃，火齐仍可及，再进一步入骨髓则不可复得：肠胃之处是机。脊柱：一构形对 s 为机，恰有一步之后 s 仍可得、另一步之后不可得（Branching.Juncture、Branching.juncture_iff）；一个会复返之构形，其每一次失去都经过一个机，以双重否定陈述（Branching.loss_passes_juncture）；护闭所去者恰是机处之失去之步（Branching.keeping_removes_at_juncture），每一保住 s 之子过程，在其从 s 出发之行程上只取护闭之步（Branching.keeping_greatest）。「千丈之堤，以螻蟻之穴潰」与「白圭之行堤也塞其穴」：在小处塞之，是在机之前取保住之步。同篇引《老子》「其安易持也，其未兆易謀也」：机之前持之不难。定域：脊柱给出机与护闭之结构，但不给机之前诸步之代价为何更小，「易」之比较未导出。已补：机前保住之所需更少：不是机之处，无一步可被驳为不保所护者（Branching.keeps_before_juncture），在机上则须去掉失之之步（keeping_removes_at_juncture），失之之后无复得（losing_not_returns）。",
      "names_used": [
       "机",
       "护闭",
       "复"
      ],
-     "gap": "机之前诸步之代价：脊柱有 Becoming.Branching.Juncture 与 Becoming.Branching.keeping，无「机之前保住之步所需更少」之比较或度量；最近：Becoming.Branching.keeping_removes_at_juncture、Becoming.LoopReturn.closes_within（小差在差额轮数内闭合，只对回返映射）",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Branching.keeps_before_juncture。见记录 reaching-before-and-after-a-juncture。",
      "locator": "《韩非子·喻老》",
      "relational": "病与治之手段在行程上相关：每一处有其所及，机之后无所及",
      "ro_passage": "",
@@ -26446,16 +26456,19 @@
       "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual",
       "Becoming.WitnessRefinementRuns.doubled_roster_same",
       "Becoming.WitnessRefinementRuns.diagnosable_iff",
-      "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation"
+      "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation",
+      "Becoming.WitnessRefinementRuns.copied_witnesses_same",
+      "Becoming.FaultEnvelopes.copied_roster_same"
      ],
      "records": [
-      "fallible-witness-diagnosability"
+      "fallible-witness-diagnosability",
+      "copied-witnesses-change-nothing"
      ],
-     "reading": "AI读法：‘必實其能，察其過，不使羣臣相爲語’：核实其能、察其过，并使见证者彼此不通。脊柱：共因之见证不增诊断，甚至可删去实际之模型，有构造之例（WitnessRefinement.duplicated_fifth_no_repair、uncovered_correlation_deletes_actual）；名单列两次，不改任何步骤与证书（WitnessRefinementRuns.doubled_roster_same）；答案不同之两候选在完整之记录上被每一步区分，恰当其故障包络交叉分离（WitnessRefinementRuns.diagnosable_iff；WitnessRefinement.complete_diagnosability_iff_cross_separation）。见证相通时名单等同于其一之一般律未证（G1），故只标定域。",
+     "reading": "AI读法：‘必實其能，察其過，不使羣臣相爲語’：核实其能、察其过，并使见证者彼此不通。脊柱：共因之见证不增诊断，甚至可删去实际之模型，有构造之例（WitnessRefinement.duplicated_fifth_no_repair、uncovered_correlation_deletes_actual）；名单列两次，不改任何步骤与证书（WitnessRefinementRuns.doubled_roster_same）；答案不同之两候选在完整之记录上被每一步区分，恰当其故障包络交叉分离（WitnessRefinementRuns.diagnosable_iff；WitnessRefinement.complete_diagnosability_iff_cross_separation）。见证相通时名单等同于其一：每一加入之见证抄录名单上一员之报告、支持与所在之故障集合时，检查之每一步与证书皆不变（WitnessRefinementRuns.copied_witnesses_same、FaultEnvelopes.copied_roster_same；完全重复之名单为其情形）。种类原以此缺定为定域，今未改判，留给中华本之重读。",
      "names_used": [
       "参验"
      ],
-     "gap": "缺（G1）：一见证者之报告是另一见证者报告之函数、且其故障集合与之重合（相通或抄录之见证）时，加入它不改变任何检查步骤与证书之一般律；脊柱已有完全重复之名单（WitnessRefinementRuns.doubled_roster_same）与共因之构造之例（WitnessRefinement.duplicated_fifth_no_repair、uncovered_correlation_deletes_actual），一般律未证。",
+     "gap": "已补（ZG4，2026年10月22日）：Becoming.WitnessRefinementRuns.copied_witnesses_same、FaultEnvelopes.copied_roster_same（doubled_roster_same、duplicated_roster_same 为其情形）。见记录 copied-witnesses-change-nothing。",
      "checked": "passed"
     },
     {
@@ -27350,18 +27363,21 @@
      "declarations": [
       "Becoming.WitnessRefinementRuns.doubled_roster_same",
       "Becoming.WitnessRefinement.duplicated_fifth_no_repair",
-      "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual"
+      "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual",
+      "Becoming.WitnessRefinementRuns.copied_witnesses_same",
+      "Becoming.FaultEnvelopes.copied_roster_same"
      ],
      "records": [
-      "fallible-witness-diagnosability"
+      "fallible-witness-diagnosability",
+      "copied-witnesses-change-nothing"
      ],
-     "reading": "AI读法：‘言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也’：言以传者之多而被采纳，不然之事经众口相传，终成不可解。脊柱：名单列两次，不改任何步骤与证书（WitnessRefinementRuns.doubled_roster_same）；在一构造之例中，与第三见证共因之第五见证，加倍其支持也不修复诊断（WitnessRefinement.duplicated_fifth_no_repair）；未被覆盖之相关故障可删去实际之模型（WitnessRefinement.uncovered_correlation_deletes_actual）。相传之众证不增分辨之一般律未证（G1），故标定域。",
+     "reading": "AI读法：‘言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也’：言以传者之多而被采纳，不然之事经众口相传，终成不可解。脊柱：名单列两次，不改任何步骤与证书（WitnessRefinementRuns.doubled_roster_same）；在一构造之例中，与第三见证共因之第五见证，加倍其支持也不修复诊断（WitnessRefinement.duplicated_fifth_no_repair）；未被覆盖之相关故障可删去实际之模型（WitnessRefinement.uncovered_correlation_deletes_actual）。相传之众证不增分辨：抄录名单上一员之见证不改检查之步与证书（WitnessRefinementRuns.copied_witnesses_same）。种类原以此缺定为定域，今未改判，留给中华本之重读。",
      "names_used": [
       "参验"
      ],
      "work": "韩非子·八经",
      "tradition": "法",
-     "gap": "缺（G1）：一见证者之报告是另一见证者报告之函数、且其故障集合与之重合（相传或抄录之见证）时，加入它不改变任何检查步骤与证书之一般律；脊柱只有完全重复之名单与共因之构造之例。",
+     "gap": "已补（ZG4，2026年10月22日）：同 hanfei-bu-shi-xiang-yu，见记录 copied-witnesses-change-nothing。",
      "checked": "passed"
     },
     {
@@ -28451,13 +28467,16 @@
       "Becoming.PartialReadout.LumpedWithin.finer",
       "Becoming.lumped_of_finer",
       "Becoming.lumped_id",
-      "Becoming.SharedCodes.reads_iff"
+      "Becoming.SharedCodes.reads_iff",
+      "Becoming.SharedCodes.synonyms_read_iff",
+      "Becoming.SharedCodes.one_form_reads_iff"
      ],
      "records": [
       "a-code-formed-between-formations",
-      "where-a-move-is-formed"
+      "where-a-move-is-formed",
+      "synonyms-and-coined-forms"
      ],
-     "reading": "AI读法：荀子把知名分成两件：单名之「用」（「名闻而实喻」）与名相累成文之「丽」，「用丽俱得，谓之知名」。CodeAcquisition 在一个给定的有限组合族中给出同样的两件：只探测原子之值，定不了组合的次序（primitives_not_lumped、primitives_no_exact，族内之例）；缺少复合探测就得不到码（missing_composite_no_code，族内之例）；原子与复合都探到，且两个原子之值不同时，读出的码就是原码（acquired_exact），对任意深度的表达式与原码同值（acquired_every_expression）。「单足以喻则单，单不足以喻则兼」：在一个有截面的映射下，精确读法存在，恰当所需特征在映射所合并处同值（PartialReadout.exact_exists_iff；精确者必如此，ExactWithin.lumped），单名若合并了特征不同者，就没有经由它的精确读法。兼名是更细的映射：单名已足之处兼名仍足（LumpedWithin.finer；经由较粗读法形成的动作经由较细读法也形成，lumped_of_finer），最细的读法形成一切动作（lumped_id），所以单不足时可以兼而求足；律不保证某一个兼名就足，兼名只在把单名所合并而特征不同者分开之处才精确。「单与兼无所相避则共；虽共不为害矣」可读为一物同受单名与兼名（如白马既可称马也可称白马）：兼名所读包含单名所读（LumpedWithin.finer），二者不相冲突，故共而不害；「共」另有共名之训（一名遍举众实，见 xunzi-da-gong-ming），结构同是归并的粗细。听者把说者之名读为其义项：在听者之码分开诸义项的前提下，恰当两码在该处一致（SharedCodes.reads_iff）。CodeAcquisition 是给定的组合族，不是认知模型。",
+     "reading": "AI读法：荀子把知名分成两件：单名之「用」（「名闻而实喻」）与名相累成文之「丽」，「用丽俱得，谓之知名」。CodeAcquisition 在一个给定的有限组合族中给出同样的两件：只探测原子之值，定不了组合的次序（primitives_not_lumped、primitives_no_exact，族内之例）；缺少复合探测就得不到码（missing_composite_no_code，族内之例）；原子与复合都探到，且两个原子之值不同时，读出的码就是原码（acquired_exact），对任意深度的表达式与原码同值（acquired_every_expression）。「单足以喻则单，单不足以喻则兼」：在一个有截面的映射下，精确读法存在，恰当所需特征在映射所合并处同值（PartialReadout.exact_exists_iff；精确者必如此，ExactWithin.lumped），单名若合并了特征不同者，就没有经由它的精确读法。兼名是更细的映射：单名已足之处兼名仍足（LumpedWithin.finer；经由较粗读法形成的动作经由较细读法也形成，lumped_of_finer），最细的读法形成一切动作（lumped_id），所以单不足时可以兼而求足；律不保证某一个兼名就足，兼名只在把单名所合并而特征不同者分开之处才精确。「单与兼无所相避则共；虽共不为害矣」可读为一物同受单名与兼名（如白马既可称马也可称白马）：兼名所读包含单名所读（LumpedWithin.finer），二者不相冲突，故共而不害；「共」另有共名之训（一名遍举众实，见 xunzi-da-gong-ming），结构同是归并的粗细。听者把说者之名读为其义项：在听者之码分开诸义项的前提下，恰当两码在该处一致（SharedCodes.reads_iff）。CodeAcquisition 是给定的组合族，不是认知模型。已补：一个义项可持多个形式之码，恰在无二义项共持一形之处，读回每一所持之形为其义项且只为之（SharedCodes.synonyms_read_iff；一义一形为其情形，one_form_reads_iff）：同义之名无害，同形异义有害，「单与兼无所相避则共」由此成立。",
      "names_used": [
       "知名",
       "名"
@@ -28467,7 +28486,7 @@
      "relational": "名—实经由听者的码而联系；知名是说者与听者之间的一种关系能力，不是名或实各自的性质。",
      "tradition": "儒",
      "work": "荀子·正名",
-     "gap": "若把「单与兼无所相避则共」读作一个码中一个义项有多个形式（同义之名），其读出律未推出：SharedCodes 模块头把一个义项持多个形式之码列为未推出项。最近：SharedCodes.reads_iff（一个义项一个形式）、CodeAcquisition.acquired_every_expression（族内单一码）。",
+     "gap": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.synonyms_read_iff、SharedCodes.one_form_reads_iff。见记录 synonyms-and-coined-forms。",
      "checked": "corrected"
     },
     {
@@ -28613,12 +28632,15 @@
       "Becoming.SharedCodes.outside_returns",
       "Becoming.SharedCodes.hearBy_held",
       "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming",
-      "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange"
+      "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange",
+      "Becoming.SharedCodes.coin",
+      "Becoming.SharedCodes.coined_returns"
      ],
      "records": [
-      "a-code-formed-between-formations"
+      "a-code-formed-between-formations",
+      "synonyms-and-coined-forms"
      ],
-     "reading": "AI读法：王者制名可读为外加一码（制名）：从每个形成者都持码 c 的一步起，此后在一切规则下全体在每个义项上一致；每个形成者读另一个，恰在 c 分开诸义项之处——「名定而实辨」只在外加之码本身分开所需义项之处成立；对照外加前所持之码，每个形成者恰失去其原码分开而 c 合并的区分（SharedCodes.run_from_imposition）。外加一步之内的一致与损失按定义成立（impose_agrees、impose_loses_iff，按定义）；码被采用的那个形成者不失（source_loses_nothing），「循于旧名」若以某一形成者已在用之码为外加之码，即是此种情形，其余形成者仍恰失其码分开而此码合并者；外加之码与其合并沿此后任何听的过程保持（run_imposed_stays）。在只经由听的模型里，被合并的区分只从外加之外留存的形式回来（outside_needed），一听到留存之形，区分即刻回来（outside_returns）。王者在律中只是打破对称的一个中心：在两形成者的模型里，中心保持每个改名（TwoFormations.centre_keeps_renaming）而打破形成者之间的交换（TwoFormations.centre_breaks_exchange），二者都是该模型中的见证；律不给出中心在先。范围：「有作于新名」是造新形，模型中听不造形（hearBy_held），模块中没有造形的一步，见缺口；以罪维持唯一之码、不与民共享理由的一层另见 xunzi-xi-ci-shan-zuo-ming（相分）。",
+     "reading": "AI读法：王者制名可读为外加一码（制名）：从每个形成者都持码 c 的一步起，此后在一切规则下全体在每个义项上一致；每个形成者读另一个，恰在 c 分开诸义项之处——「名定而实辨」只在外加之码本身分开所需义项之处成立；对照外加前所持之码，每个形成者恰失去其原码分开而 c 合并的区分（SharedCodes.run_from_imposition）。外加一步之内的一致与损失按定义成立（impose_agrees、impose_loses_iff，按定义）；码被采用的那个形成者不失（source_loses_nothing），「循于旧名」若以某一形成者已在用之码为外加之码，即是此种情形，其余形成者仍恰失其码分开而此码合并者；外加之码与其合并沿此后任何听的过程保持（run_imposed_stays）。在只经由听的模型里，被合并的区分只从外加之外留存的形式回来（outside_needed），一听到留存之形，区分即刻回来（outside_returns）。王者在律中只是打破对称的一个中心：在两形成者的模型里，中心保持每个改名（TwoFormations.centre_keeps_renaming）而打破形成者之间的交换（TwoFormations.centre_breaks_exchange），二者都是该模型中的见证；律不给出中心在先。范围：「有作于新名」是造新形；听不造形（hearBy_held），造形是另一步（SharedCodes.coin）：众持一合并 m 与 m′ 之码时，一形成在 m 造出此码不给 m′ 之形，众皆听之，则每一形成复分 m 与 m′（SharedCodes.coined_returns）；以罪维持唯一之码、不与民共享理由的一层另见 xunzi-xi-ci-shan-zuo-ming（相分）。",
      "names_used": [
       "制名"
      ],
@@ -28627,7 +28649,7 @@
      "relational": "码由一个中心加于众形成者；一致与损失都是形成者之间的关系变化。",
      "tradition": "儒",
      "work": "荀子·正名",
-     "gap": "「有作于新名」：造出一个新形式并沿听的过程传播，使被合并的区分回来。最近：SharedCodes.hearBy_held（听不造形）、outside_returns（区分从留存之形回来）；SharedCodes 中没有造形的一步。",
+     "gap": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.coin、SharedCodes.coined_returns。见记录 synonyms-and-coined-forms。",
      "checked": "corrected"
     },
     {
@@ -29229,7 +29251,7 @@
      "relational": "辩是对同一对象的相反之谓；与所显示者相当者成立。",
      "tradition": "名辩",
      "work": "墨经",
-     "gap": "「當者勝」：对同一对象的相反之谓，与所显示者相当者成立。最近：Becoming.Decided（定然否，定义）；Ideals.refutableBy_iff_compl（驳倒一个读法即证实其补，限于有限片段的证实与驳倒）结构不同，未引为相合。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。「當者勝」是读法之真在其成立：相反之谓不俱成立，无前提；俱不成立之排除即定然否（Decided），是定义层之事。原注：「當者勝」：对同一对象的相反之谓，与所显示者相当者成立。最近：Becoming.Decided（定然否，定义）；Ideals.refutableBy_iff_compl（驳倒一个读法即证实其补，限于有限片段的证实与驳倒）结构不同，未引为相合。",
      "checked": "corrected"
     },
     {
@@ -30558,19 +30580,23 @@
      "declarations": [
       "Becoming.SharedCodes.shared_iff_in_use",
       "Becoming.SharedCodes.broadcast_reaches",
-      "Becoming.SharedCodes.all_agree_rest"
+      "Becoming.SharedCodes.all_agree_rest",
+      "Becoming.SharedCodes.majority_held",
+      "Becoming.SharedCodes.Majority.odd_agrees",
+      "Becoming.SharedCodes.Majority.even_rests"
      ],
      "records": [
-      "a-code-formed-between-formations"
+      "a-code-formed-between-formations",
+      "taking-what-most-hold"
      ],
-     "reading": "AI读法：「言之爲物也以多信」：「信」随言者之数而增，这是一条多数规则；SharedCodes 只有读两个码的采纳规则，模块头也把读多于两码的规则列为未推出项，见缺口。相合的只是：在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），一个在用的形式在适当次序下传到每个形成者（broadcast_reaches），不论它是否与所显示者相当；全体一致后在一切规则下不再变（all_agree_rest），「千人不可解」与此相应。同段韩非先已说「聽不參，則無以責下」：以交叉参验来检验一致，这一步不在模块之内。",
+     "reading": "AI读法：「言之爲物也以多信」：「信」随言者之数而增，这是一条多数规则；读多于两码之规则，一例是从众（SharedCodes.majority：各形成在每一义项取多于半数所持之形，无则守己）：从众不造形（majority_held）；三中二同即一步一致（Majority.odd_agrees），二中一同则不动（Majority.even_rests），一致仍需打破对称。相合的只是：在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），一个在用的形式在适当次序下传到每个形成者（broadcast_reaches），不论它是否与所显示者相当；全体一致后在一切规则下不再变（all_agree_rest），「千人不可解」与此相应。同段韩非先已说「聽不參，則無以責下」：以交叉参验来检验一致，这一步不在模块之内。",
      "names_used": [],
      "layer_checked": "",
      "locator": "韩非子·八經",
      "relational": "「信」是在众人之间形成的一致，与所言是否与所显示者相当是两层关系。",
      "tradition": "法",
      "work": "韩非子",
-     "gap": "多数规则：读多于两个码的采纳规则（如按人数）之下，哪些形式成为共享，一致是否仍需打破对称。最近：SharedCodes.never_agrees_of_both、TwoFormations.three_agree（两形成者的见证）、shared_iff_in_use。",
+     "gap": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.majority、majority_held、Majority.odd_agrees、Majority.even_rests。见记录 taking-what-most-hold。",
      "checked": "corrected"
     },
     {
@@ -32209,15 +32235,17 @@
       "Becoming.Flow.unselected_beyond_pool",
       "Becoming.Pace.rule_alike_until_reading",
       "Becoming.Pace.rule_at_reading",
-      "Becoming.Pace.never_reads_loses"
+      "Becoming.Pace.never_reads_loses",
+      "Becoming.Pace.rule_through_pool"
      ],
      "records": [
       "selection-through-couplings",
       "selection-through-a-model-of-the-options",
       "what-pooled-coupling-reaches",
-      "how-fast-a-rule-may-change"
+      "how-fast-a-rule-may-change",
+      "reading-through-a-pool"
      ],
-     "reading": "AI读法：「故法而不议，则法之所不至者必废」：下文「其有法者以法行，无法者以类举，听之尽也」，议是对法所不至之事以类推举，不是修改法。法所不至者，余者固定、条件平衡时，经法所读之耦合的任何选择都选不出（Flow.unselected_beyond_coupling）；以类推举只在要紧之事于类的归并上同去之处才对（Learning.selects_right_through），类把要紧之事所分开者归在一起时，经它的任何选择都不对（Learning.selects_not_right_of_parted）。「职而不通，则职之所不及者必队」：诸职不合用时，各职感域之外的差别不被选出；兼感之后，池感域之外者仍选不出（Flow.unselected_beyond_pool）。「兼听而时稽之」把兼感与读取步（迟速）合起来：规则在第一个读取步之前（含该步）对快层的一切差异保持不变（Pace.rule_alike_until_reading），在读取步，下一规则由当时的快层给出（Pace.rule_at_reading）；快层构形有限多个且规则之律有一次归并时，从不读取的规则之下，从列表长度那一步起，并非每个快层构形都还能出现（Pace.never_reads_loses）。范围：「必废」「必队」在法不以类推、诸职不相通时成立。",
+     "reading": "AI读法：「故法而不议，则法之所不至者必废」：下文「其有法者以法行，无法者以类举，听之尽也」，议是对法所不至之事以类推举，不是修改法。法所不至者，余者固定、条件平衡时，经法所读之耦合的任何选择都选不出（Flow.unselected_beyond_coupling）；以类推举只在要紧之事于类的归并上同去之处才对（Learning.selects_right_through），类把要紧之事所分开者归在一起时，经它的任何选择都不对（Learning.selects_not_right_of_parted）。「职而不通，则职之所不及者必队」：诸职不合用时，各职感域之外的差别不被选出；兼感之后，池感域之外者仍选不出（Flow.unselected_beyond_pool）。「兼听而时稽之」把兼感与读取步（迟速）合起来：规则在第一个读取步之前（含该步）对快层的一切差异保持不变（Pace.rule_alike_until_reading），在读取步，下一规则由当时的快层给出（Pace.rule_at_reading）；快层构形有限多个且规则之律有一次归并时，从不读取的规则之下，从列表长度那一步起，并非每个快层构形都还能出现（Pace.never_reads_loses）。范围：「必废」「必队」在法不以类推、诸职不相通时成立。已补：读取与兼感合一之律：规则只经一池对快层构形之所读而读之时，读取步上两历程规则相同、池所读相同，则其后规则相同；所以规则在读取步上分开，只在池所读分开之处（Pace.rule_through_pool）。",
      "names_used": [
       "类",
       "法",
@@ -32228,7 +32256,7 @@
      ],
      "tradition": "儒",
      "work": "荀子·王制",
-     "gap": "脊柱缺一条把读取步与兼感合起来的定律（「兼听而时稽之」）：在 Pace 的两层历程中，若读取映射是一个池按经其成员耦合读取的交换律所作的行为，则凡在读取步之前一切成员都耦合无别的两段快层历史，读取步之后给出同一规则；读取步之后规则不同，则有一成员把它们耦合开。已有散文：PRE-QIN-AND-WENYAN §2 以 Pace.rule_until_reading、Pace.rule_unreached 与 Clearing.pool_closes_gap 读《察今》；所缺只是二者合成的律。最近声明：Becoming.Pace.rule_at_reading、Becoming.Pace.rule_alike_until_reading、Becoming.ExchangeLaw.Through.selectsThroughAll、Becoming.ExchangeLaw.acts_alike_all_iff、Becoming.ExchangeLaw.Through.acts_separate_member。",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Pace.rule_through_pool。见记录 reading-through-a-pool。",
      "checked": "passed"
     },
     {
@@ -41194,7 +41222,9 @@
       "Becoming.Flow.joint_excess_ends",
       "Becoming.Excluding.three_courses",
       "Becoming.Dependence.MakesDifferenceTogether",
-      "Becoming.Dependence.makesDifference_iff_together"
+      "Becoming.Dependence.makesDifference_iff_together",
+      "Becoming.Flow.withinJoint_of_plan",
+      "Becoming.Flow.level_kept_of_plans"
      ],
      "records": [
       "own-count-misses-joint-excess",
@@ -41202,9 +41232,10 @@
       "exclusive-footprint-support",
       "joint-difference-making",
       "levels-of-closure",
-      "mutual-dependence-and-its-pace"
+      "mutual-dependence-and-its-pace",
+      "division-by-exclusive-footprints"
      ],
-     "reading": "AI读法：荀子以「人能群，彼不能群也」说人何以使牛马为用，又以「人何以能群？曰：分」把能群放在分上。脊柱之〈群域〉（Flow.WithinSystem，定义）只说诸形成经共同参与之条件相连，一个共同条件使全体同在一群（Flow.system_whole_of_common）；牛马同饮一水也在〈群域〉之内，所以荀子之能群是群居加〈分〉，闭包本身不给出分。共同参与也不推出相互依赖：处处共享（Flow.SharesThroughout，定义）在构造之例 Clearing 中成立而依赖不相互（Clearing.shares_not_mutual）。〈分〉在脊柱上只是足迹之界：各部分之足迹在整体之足迹之内（PartsWithin，定义），两部分之足迹不交（PartsApart，定义），实现了的联合计划由根之足迹支撑诸叶而不重复（JointPlan.supports_of_realizes）。流一侧（沿用 RO ru-xunzi-qun-fen-yi，种类同为定域）：各自取在所给之内不保证合取在所给之内（Exceeding.own_not_joint，构造之例），合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept），合取连续超出而更新受门控（给予者自身依此条件、需要不小于门槛 m）时，依此条件而需要不小于 m 者终结（Flow.joint_excess_ends）；单一条件三方之构造之例中只有分取者使三者都持续（Excluding.three_courses）。足迹之不交推出合取在所给之内，这一步没有定理，见 gap。「一则多力」读为〈同力〉：一族部分合起来造成一个变化，即一并扣留则同一走法保持依赖（Dependence.MakesDifferenceTogether，定义）；单个部分之〈有力〉恰是单元素一族之〈同力〉（makesDifference_iff_together，Iff.rfl）。「多力」若指力之相加，脊柱没有相加之律。剩余：（一）「和则一」若读为合一于一个中心，是单一中心之层；（二）「多力则彊，彊则胜物」把群之力导向胜物，是争胜之层（RU2-R0089）；（三）「分何以能行？曰：义」，分由先王所制（同篇「先王恶其乱也」），脊柱只说足迹之界与合取之关系，不说谁定分；（四）前句「人有气、有生、有知，亦且有义，故最为天下贵也」以人居万物之上，是等级之层，理论没有。",
+     "reading": "AI读法：荀子以「人能群，彼不能群也」说人何以使牛马为用，又以「人何以能群？曰：分」把能群放在分上。脊柱之〈群域〉（Flow.WithinSystem，定义）只说诸形成经共同参与之条件相连，一个共同条件使全体同在一群（Flow.system_whole_of_common）；牛马同饮一水也在〈群域〉之内，所以荀子之能群是群居加〈分〉，闭包本身不给出分。共同参与也不推出相互依赖：处处共享（Flow.SharesThroughout，定义）在构造之例 Clearing 中成立而依赖不相互（Clearing.shares_not_mutual）。〈分〉在脊柱上只是足迹之界：各部分之足迹在整体之足迹之内（PartsWithin，定义），两部分之足迹不交（PartsApart，定义），实现了的联合计划由根之足迹支撑诸叶而不重复（JointPlan.supports_of_realizes）。流一侧（沿用 RO ru-xunzi-qun-fen-yi，种类同为定域）：各自取在所给之内不保证合取在所给之内（Exceeding.own_not_joint，构造之例），合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept），合取连续超出而更新受门控（给予者自身依此条件、需要不小于门槛 m）时，依此条件而需要不小于 m 者终结（Flow.joint_excess_ends）；单一条件三方之构造之例中只有分取者使三者都持续（Excluding.three_courses）。足迹之不交推出合取在所给之内：所取由一实现了的联合计划给出，诸部分足迹在其整体之内且两两不交，根之足迹不多于所给，则合取在所给之内（Flow.withinJoint_of_plan），平衡之下每步如此则水平不降（Flow.level_kept_of_plans）。「一则多力」读为〈同力〉：一族部分合起来造成一个变化，即一并扣留则同一走法保持依赖（Dependence.MakesDifferenceTogether，定义）；单个部分之〈有力〉恰是单元素一族之〈同力〉（makesDifference_iff_together，Iff.rfl）。「多力」若指力之相加，脊柱没有相加之律。剩余：（一）「和则一」若读为合一于一个中心，是单一中心之层；（二）「多力则彊，彊则胜物」把群之力导向胜物，是争胜之层（RU2-R0089）；（三）「分何以能行？曰：义」，分由先王所制（同篇「先王恶其乱也」），脊柱只说足迹之界与合取之关系，不说谁定分；（四）前句「人有气、有生、有知，亦且有义，故最为天下贵也」以人居万物之上，是等级之层，理论没有。",
      "names_used": [
       "群",
       "群域",
@@ -41214,7 +41245,7 @@
       "出入相揜",
       "合取过与"
      ],
-     "gap": "从足迹之界到流之合取在所给之内的一般定理：设一族在条件 c 上之所取由一个实现了的联合计划给出，诸叶之足迹在根之足迹之内且两两不交（PartsWithin、PartsApart），根之足迹不多于 c 一步之所给，则此流在 c 上合取在所给之内（Flow.WithinJoint），因而在平衡下水平不降（Flow.level_kept）。脊柱只有 JointPlan.supports_of_realizes（足迹之支撑）与单一条件三方之构造之例（Excluding.three_courses），二者之间没有接口（记录 exclusive-footprint-support 只说二者相关）；多条件之分同缺；力之相加亦无律。",
+     "gap": "已补（ZG5，2026年10月22日）：Becoming.Flow.withinJoint_of_plan、Flow.level_kept_of_plans。见记录 division-by-exclusive-footprints。",
      "layer_checked": "",
      "locator": "荀子·王制（RU2-S-XZ09）",
      "relational": "是：能群＝群居（〈群域〉）加分（足迹之界）；「胜物」与「最为天下贵」为争胜与等级之层",
@@ -43789,20 +43820,23 @@
       "Becoming.Web.pooled_iff_member",
       "Becoming.Web.pool_adds",
       "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming",
-      "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange"
+      "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange",
+      "Becoming.SharedCodes.impose_keeps_exchange",
+      "Becoming.SharedCodes.impose_privileges_forms"
      ],
      "records": [
       "a-code-formed-between-formations",
-      "what-pooled-coupling-reaches"
+      "what-pooled-coupling-reaches",
+      "imposing-a-code-breaks-the-symmetry"
      ],
-     "reading": "AI读法：本来之意是读卦之法：明彖由「統論一卦之體，明其所由之主」（YCM130-LM-W-01-R01）说一卦以主爻统之，「夫眾不能治眾，治眾者，至寡者也」是这一读卦法中之类比，政治之表述由此而来。脊柱给出这句话成立之确切范围。成立之部分：不偏任何形成、也不偏任何形式之律，不能从对称之分歧形成一致（SharedCodes.never_agrees_of_both），即众在完全对称时不能自致一致；按次序听取之码从每个起点一致，恰当诸形成在那时之来源都是同一个（agrees_every_start_iff），这是「至寡」之确切形式。不成立之部分：打破对称之方式不止一个中心：两个形成之构造之例中，一个中心、一个优先之形式、一个交换之次序各在一步内使二者一致（TwoFormations.three_agree）；中心保持一切改名（centre_keeps_renaming）而打破形成之交换（centre_breaks_exchange），优先之形式保持形成之交换（preferred_keeps_exchange）而打破改名（preferred_breaks_renaming），即无一形成居上也能一致；一般族见 gap；来源也不必是常设之主。代价：自强加之码起，每个形成恰失去其旧码所分而强加之码所合者，旧码即所强加之码者（码之来源）本身无所失（SharedCodes.run_from_imposition，〈制名〉）；以一主之耦合代替合用，合用等于一员，恰当该员之分辨已含其余一切（Web.pooled_iff_member，〈同而不和〉），合用所加之差别失去（Web.pool_adds，〈和而不同〉）。所以「至寡」是一致之一种充分方式而非必然，「制天下之動者，貞夫一者也」作为一切动之制者是单一中心之层，本簇以此条为魏晋以下单一中心诸说之代表条目。",
+     "reading": "AI读法：本来之意是读卦之法：明彖由「統論一卦之體，明其所由之主」（YCM130-LM-W-01-R01）说一卦以主爻统之，「夫眾不能治眾，治眾者，至寡者也」是这一读卦法中之类比，政治之表述由此而来。脊柱给出这句话成立之确切范围。成立之部分：不偏任何形成、也不偏任何形式之律，不能从对称之分歧形成一致（SharedCodes.never_agrees_of_both），即众在完全对称时不能自致一致；按次序听取之码从每个起点一致，恰当诸形成在那时之来源都是同一个（agrees_every_start_iff），这是「至寡」之确切形式。不成立之部分：打破对称之方式不止一个中心：两个形成之构造之例中，一个中心、一个优先之形式、一个交换之次序各在一步内使二者一致（TwoFormations.three_agree）；中心保持一切改名（centre_keeps_renaming）而打破形成之交换（centre_breaks_exchange），优先之形式保持形成之交换（preferred_keeps_exchange）而打破改名（preferred_breaks_renaming），即无一形成居上也能一致；对任意族与任意形式，施加一码使众一步一致（impose_agrees），保持形成之交换（SharedCodes.impose_keeps_exchange），而凡移动其所给之形之改名皆不保持（SharedCodes.impose_privileges_forms）：无一形成居上而偏于形式，一般族亦然；来源也不必是常设之主。代价：自强加之码起，每个形成恰失去其旧码所分而强加之码所合者，旧码即所强加之码者（码之来源）本身无所失（SharedCodes.run_from_imposition，〈制名〉）；以一主之耦合代替合用，合用等于一员，恰当该员之分辨已含其余一切（Web.pooled_iff_member，〈同而不和〉），合用所加之差别失去（Web.pool_adds，〈和而不同〉）。所以「至寡」是一致之一种充分方式而非必然，「制天下之動者，貞夫一者也」作为一切动之制者是单一中心之层，本簇以此条为魏晋以下单一中心诸说之代表条目。",
      "names_used": [
       "同而不和",
       "和而不同",
       "制名",
       "群"
      ],
-     "gap": "一般之对称打破律：对任意有限族与两个以上之形式，存在一个保持形成之交换（无一形成居上）而偏向一个形式之码律，使每个起点在有限步内一致；且凡从对称起点达到一致之律，或不保持形成之交换，或不保持形式之改名。后一半是 SharedCodes.never_agrees_of_both 之逆否，已有；前一半脊柱只在两个形成之构造之例中证明（SharedCodes.TwoFormations.three_agree、preferred_keeps_exchange、preferred_breaks_renaming），一般族没有定理，所以无中心亦可一致在一般之群中之确切范围未证。",
+     "gap": "已补（ZG4，2026年10月22日）：前一半 Becoming.SharedCodes.impose_agrees、impose_keeps_exchange、impose_privileges_forms（一般族与一切形式）；后一半 never_agrees_of_both。见记录 imposing-a-code-breaks-the-symmetry。",
      "layer_checked": "",
      "locator": "周易略例·明彖（YWH-LM）",
      "relational": "部分：众之对称需要打破是关系的；以一主为必然是单一中心之层",
@@ -43938,7 +43972,7 @@
       "凡续皆有顾",
       "以广为愈"
      ],
-     "gap": "脊柱没有「恩」之模型，也没有「所及即得保」之律；以恩所及读作所及者所需条件得到给予是 AI 设定。「王请度之」之应当不由依存结构推出。",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。恩之模型是 AI 之设，应当不由依存之结构推出是理论本有之立场，不是缺律。原注：脊柱没有「恩」之模型，也没有「所及即得保」之律；以恩所及读作所及者所需条件得到给予是 AI 设定。「王请度之」之应当不由依存结构推出。",
      "locator": "孟子·梁惠王上 第7章",
      "relational": "是：保近依其资域，保远需诸部分各自之条件；「大过人」是对人之评比，本条不取；非关系层：无",
      "ro_passage": "ru-mengzi-tui-en",
@@ -44071,19 +44105,22 @@
       "Becoming.PartsApart",
       "Becoming.JointPlan.supports_of_realizes",
       "Becoming.Flow.WithinJoint",
-      "Becoming.Flow.level_kept"
+      "Becoming.Flow.level_kept",
+      "Becoming.Flow.withinJoint_of_plan",
+      "Becoming.Flow.level_kept_of_plans"
      ],
      "records": [
       "exclusive-footprint-support",
-      "what-taking-all-excludes"
+      "what-taking-all-excludes",
+      "division-by-exclusive-footprints"
      ],
-     "reading": "AI读法：先秦最直接之由〈分〉到不〈争〉之陈述：「使事不相干」「使士不兼官」「使人不同功」是各部分之足迹两两不交，「故莫訟」「故莫爭」是其后果。脊柱：各部分之足迹在整体之足迹之内（PartsWithin，定义），两部分之足迹不交（PartsApart，定义），实现了的联合计划诸叶由根之足迹支撑而不重复（JointPlan.supports_of_realizes）；合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept）。由足迹不交到合取在所给之内、因而不争，这一步没有定理（见 xunzi-wangzhi-qun-fen-yi 之 gap），所以种类为定域：前一半与后一半各有律，桥未证。「冰炭不合形」把不相容者分开放置，是足迹之界之另一面。剩余：定界者是「明君」，同篇又以「明賞罰」维持，是单一中心之层。",
+     "reading": "AI读法：先秦最直接之由〈分〉到不〈争〉之陈述：「使事不相干」「使士不兼官」「使人不同功」是各部分之足迹两两不交，「故莫訟」「故莫爭」是其后果。脊柱：各部分之足迹在整体之足迹之内（PartsWithin，定义），两部分之足迹不交（PartsApart，定义），实现了的联合计划诸叶由根之足迹支撑而不重复（JointPlan.supports_of_realizes）；合取在所给之内则水平不降（Flow.WithinJoint 为定义，Flow.level_kept）。由足迹不交到合取在所给之内、因而不争，今有其律（Flow.withinJoint_of_plan、Flow.level_kept_of_plans）。种类原以此缺定为定域，今未改判，留给中华本之重读。「冰炭不合形」把不相容者分开放置，是足迹之界之另一面。剩余：定界者是「明君」，同篇又以「明賞罰」维持，是单一中心之层。",
      "names_used": [
       "分",
       "争",
       "出入相揜"
      ],
-     "gap": "由足迹之界到合取在所给之内：同 xunzi-wangzhi-qun-fen-yi 之 gap（PartsApart 与 Flow.WithinJoint 之间无已证之接口）。",
+     "gap": "已补（ZG5，2026年10月22日）：同 xunzi-wangzhi-qun-fen-yi，见记录 division-by-exclusive-footprints。",
      "layer_checked": "",
      "locator": "韩非子·用人（脉络单元 FA1-H27-U00）",
      "relational": "是：以不相干之界说不争；明君定界为单一中心之剩余",
@@ -52727,7 +52764,7 @@
      "ro_passage": "",
      "tradition": "墨家（名辩）",
      "work": "《墨子·經說下》",
-     "gap": "所问是否已及一切民，此段不定；全称与数之分在脊柱是定义之分，律只说全称之说不用列表、数要列表且每员定然否",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。此段不定所问之范围，是读法之注。原注：所问是否已及一切民，此段不定；全称与数之分在脊柱是定义之分，律只说全称之说不用列表、数要列表且每员定然否",
      "checked": "corrected"
     },
     {
@@ -52850,7 +52887,7 @@
      "ro_passage": "",
      "tradition": "墨家（名辩）",
      "work": "《墨子·小取》",
-     "gap": "谓词各要求何量（爱须周、乘不须周），脊柱无律；或白只有一个构造模型中的见证",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。谓词各要求何量，取决于谓词之内容，不是结构之律。原注：谓词各要求何量（爱须周、乘不须周），脊柱无律；或白只有一个构造模型中的见证",
      "checked": "corrected"
     },
     {
@@ -53719,7 +53756,7 @@
      "ro_passage": "",
      "tradition": "佛教（因明）",
      "work": "《因明入正理论》",
-     "gap": "三相在宗外检验，不给出宗与同类之例实取同值；《脉络》无不共不定之关系条目（仅有共不定 FO1-R-NY09）",
+     "gap": "范围之注（ZG，2026年10月22日）：不是缺律。三相之检验在宗外，是读法之注。原注：三相在宗外检验，不给出宗与同类之例实取同值；《脉络》无不共不定之关系条目（仅有共不定 FO1-R-NY09）",
      "checked": "corrected"
     },
     {
@@ -54570,19 +54607,21 @@
       "Becoming.Situations.finerLaw_determined",
       "Becoming.Situations.finerLaw_step_iff",
       "Becoming.Situations.coarse",
-      "Becoming.Confound.misattributes"
+      "Becoming.Confound.misattributes",
+      "Becoming.Situations.move_underdetermines"
      ],
      "records": [
       "weights-count-situations",
-      "experiment-needs-return"
+      "experiment-needs-return",
+      "the-move-alone-underdetermines"
      ],
-     "reading": "AI读法：两子所行相同（事親），所遇不同（年成熟或凶），亲所得之物有厚薄。文本把差异归于所遇而不归于所行（「非彼其行益也」），又说「外埶無能厚吾利者」：外在之埶不能增其所利。上文「貴爲天子，其利人不厚於匹夫，非加也」与此同一义：墨家所计之利不随外遇增减。Situations 给出同一结构：一步在若干情境（时）中被取；以情境为动作的细律（finerLaw）是确定的（finerLaw_determined），这是构造所致，因为每个情境本身含其所到的构形；细律只在该步有情境（权重为正）之处走这一步（finerLaw_step_iff）；把情境忘掉便回到原来的进程（coarse）。同一动作在不同情境中到达不同构形。Confound.misattributes 是 Experiment 所构的一个例：经一个错误的投影（通过结果）去读记录，会把差异归给两个在任何地方都不造成差异的动作。「非彼其行益也」正是拒绝这种误归，但这一例不是一般律（见 gap）。所余：「其親也相若」说对亲的评价只看所行、不看所遇；这是评价，脊柱不给评价定理。",
+     "reading": "AI读法：两子所行相同（事親），所遇不同（年成熟或凶），亲所得之物有厚薄。文本把差异归于所遇而不归于所行（「非彼其行益也」），又说「外埶無能厚吾利者」：外在之埶不能增其所利。上文「貴爲天子，其利人不厚於匹夫，非加也」与此同一义：墨家所计之利不随外遇增减。Situations 给出同一结构：一步在若干情境（时）中被取；以情境为动作的细律（finerLaw）是确定的（finerLaw_determined），这是构造所致，因为每个情境本身含其所到的构形；细律只在该步有情境（权重为正）之处走这一步（finerLaw_step_iff）；把情境忘掉便回到原来的进程（coarse）。同一动作在不同情境中到达不同构形。Confound.misattributes 是 Experiment 所构的一个例：经一个错误的投影（通过结果）去读记录，会把差异归给两个在任何地方都不造成差异的动作。「非彼其行益也」正是拒绝这种误归，今为一般律：凡一步之动作有两情境到达不同构形，细律以同一动作取二者，只由构形与动作给下一构形之律不能二者皆对（Situations.move_underdetermines；Confound.misattributes 为其一例）。所余：「其親也相若」说对亲的评价只看所行、不看所遇；这是评价，脊柱不给评价定理。",
      "names_used": [
       "时"
      ],
      "locator": "大取「二子事親」條",
      "relational": "同一所行在不同之遇中走向不同结果；结果之差属于遇与行的合，不单属于行。",
-     "gap": "Situations 与 Confound 之间缺一条一般定理：对任意自然权重 weight，若有构形 s、动作 a 与两个目标 m ≠ m′，weight s a m 与 weight s a m′ 都为正，则在 finerLaw 之下有两步（finerLaw_step_iff），其动作相同而所到构形不同；所以任何只由动作给出下一构形的模型都不能在两者上都对，把两者之差归于动作即是误归。这把 Confound.misattributes 的单例推广到每个一步有多于一个情境目标的律。最近：Becoming.Situations.finerLaw_step_iff、Becoming.Situations.coarse、Becoming.Confound.misattributes、Becoming.Confound.confounded、Becoming.Parting.not_right_on_both。",
+     "gap": "已补（ZG4，2026年10月22日）：Becoming.Situations.move_underdetermines。见记录 the-move-alone-underdetermines。",
      "tradition": "名辩（后期墨家）",
      "work": "《墨子·大取》",
      "checked": "passed"
@@ -54809,19 +54848,23 @@
       "Becoming.Hexagram.places",
       "Becoming.Hexagram.line",
       "Becoming.Hexagram.Height",
-      "Becoming.Hexagram.halves"
+      "Becoming.Hexagram.halves",
+      "Becoming.Hexagram.bands_and_heights",
+      "Becoming.Hexagram.neither_function",
+      "Becoming.Hexagram.band_seams"
      ],
      "records": [
       "hexagrams-on-the-spine",
-      "place-relations-in-context"
+      "place-relations-in-context",
+      "bands-of-the-three-powers"
      ],
-     "reading": "AI读法：「兼三才而兩之」有两种古读，孔颖达《周易正义·乾》疏两说并记。其一是两体之读：「先儒以為重卦之時，重於上下兩體，故初與四相應，二與五相應，三與上相應。是上下兩體，論天地人各別」：每一三画各具天地人（下中上），重为上下两体而成六。其二是六位之读：同疏「及其六位，則一、二為地道，三、四為人道，五、上為天道」，朱熹《本义》卷七「六爻𥘉二為地三四為人五上為天」同；说卦上文「立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義」每道一对，本章语境更近这一读。脊柱的 HexagramPlaces 以两个三画（halves）与三个高度（Height）合成六位（places，每位一线 line），高度（下中上）在两半中各出一次：结构上是第一读（先儒两体之读），只是高度只为位置的次序，不带天地人之分属。原读说以高度读三才没有古注支持，不确，此处改正；原读又说朱熹卷八系辞下注同，卷八不在已登记的冻结语料中，不引。第二读的三才之带脊柱尚未定义，是本条的主要缺口（gap）。所以本条在“六画由两个三画合成、每画三高度”这一层相合（同 Y1 hexagrams-on-the-spine），在本章语境更近的带之读上未及。天地人之分属，三道各自所立之对，「將以順性命之理」所说之理，都不带入。",
+     "reading": "AI读法：「兼三才而兩之」有两种古读，孔颖达《周易正义·乾》疏两说并记。其一是两体之读：「先儒以為重卦之時，重於上下兩體，故初與四相應，二與五相應，三與上相應。是上下兩體，論天地人各別」：每一三画各具天地人（下中上），重为上下两体而成六。其二是六位之读：同疏「及其六位，則一、二為地道，三、四為人道，五、上為天道」，朱熹《本义》卷七「六爻𥘉二為地三四為人五上為天」同；说卦上文「立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義」每道一对，本章语境更近这一读。脊柱的 HexagramPlaces 以两个三画（halves）与三个高度（Height）合成六位（places，每位一线 line），高度（下中上）在两半中各出一次：结构上是第一读（先儒两体之读），只是高度只为位置的次序，不带天地人之分属。原读说以高度读三才没有古注支持，不确，此处改正；原读又说朱熹卷八系辞下注同，卷八不在已登记的冻结语料中，不引。第二读的三才之带今已定义（Hexagram.bandOf）：带与高度是两种划分，合之定一位，各不为他之函数（Hexagram.bands_and_heights、Hexagram.neither_function），每带恰跨一缝，人带所跨之 s34 是两半之交（Hexagram.band_seams、Hexagram.band_seam_unique）。所以本条在“六画由两个三画合成、每画三高度”这一层相合（同 Y1 hexagrams-on-the-spine），在本章语境更近的带之读上未及。天地人之分属，三道各自所立之对，「將以順性命之理」所说之理，都不带入。",
      "names_used": [
       "位"
      ],
      "locator": "说卦第二章",
      "relational": "六位由两个三画合成、每画具下中上三高度（先儒两体之读）；三才之带（每才两位）是另一种划分，尚未在脊柱定义。",
-     "gap": "在 HexagramPlaces 中定义三才之带（初二、三四、五上各为一带），并证带与高度是两种不同的划分：每一带的两位高度不同（地带：初 low、二 middle；人带：三 high、四 low；天带：五 middle、上 high），每一高度的两位分属两带，所以带不是高度的函数，高度也不是带的函数；并证每一带恰跨一条接缝（s12、s34、s56），人带所跨的 s34 正是两半之交。最近：Becoming.Hexagram.Height、Becoming.Hexagram.heightOf、Becoming.Hexagram.halves、Becoming.Hexagram.Seam。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.bandOf、bands_and_heights、neither_function、band_seams、band_seam_unique。见记录 bands-of-the-three-powers。",
      "tradition": "易（共享经典）",
      "work": "《说卦》",
      "checked": "corrected"
@@ -55012,13 +55055,15 @@
       "Becoming.Hexagram.placeStatements_agree",
       "Becoming.Hexagram.placeStatements_between",
       "Becoming.Hexagram.placeStatements_hold",
-      "Becoming.Hexagram.inPhase"
+      "Becoming.Hexagram.inPhase",
+      "Becoming.Hexagram.placeStatementsMore_agree"
      ],
      "records": [
       "place-relations-in-context",
-      "fixed-places-and-sole-lines"
+      "fixed-places-and-sole-lines",
+      "censuses-of-the-xiang-and-tuan"
      ],
-     "reading": "AI读法：《小象》言「位當」「位正當」「位不當」「未當位」「未得位」，HexagramPlaces 列为 placeStatements（二十六句，需上六另计），并证明每一句都与该线的奇偶相合（placeStatements_agree），都在二至五之间（placeStatements_between）；在第二种关系下连需上六与乾上九「无位」也都成立（placeStatements_hold）。履六三柔居三位，不当位，在列。贲六四「當位疑也」也在列（22, p4, true），今补为本条的平行。相合。同 Y1:lv-weibudang。",
+     "reading": "AI读法：《小象》言「位當」「位正當」「位不當」「未當位」「未得位」，HexagramPlaces 列为 placeStatements（二十六句，需上六另计），并证明每一句都与该线的奇偶相合（placeStatements_agree），都在二至五之间（placeStatements_between）；在第二种关系下连需上六与乾上九「无位」也都成立（placeStatements_hold）。履六三柔居三位，不当位，在列。贲六四「當位疑也」也在列（22, p4, true），今补为本条的平行。相合。同 Y1:lv-weibudang。已补：恒九四「久非其位」与涣九五「正位也」入列，与其线之位相合（Hexagram.placeStatementsMore_agree）；噬嗑六五「得當也」不入列：其线柔居五位而不正，彖亦言「雖不當位」，「得當」不是位之陈述（理由记于 placeStatementsMore）。",
      "names_used": [
       "当位",
       "正",
@@ -55026,7 +55071,7 @@
      ],
      "locator": "履六三小象",
      "relational": "当位是线的刚柔对位的奇偶而言，只在两端之间。",
-     "gap": "把《小象》另外两句言位者补入 placeStatements 并证其相合：恒九四「久非其位」(32, p4, false) 与涣九五「王居无咎，正位也」(59, p5, true)；并在 Lean 中记下噬嗑六五「得當也」不入列的理由（该线柔居五位而不正，彖亦言「雖不當位」，「得當」不是位的陈述）。最近：Becoming.Hexagram.placeStatements、Becoming.Hexagram.placeStatements_agree、Becoming.Hexagram.tuanPlaceStatements。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.placeStatementsMore_agree。见记录 censuses-of-the-xiang-and-tuan。",
      "tradition": "易（共享经典）",
      "work": "《小象·履六三》",
      "checked": "passed"
@@ -55048,19 +55093,21 @@
       "Becoming.Hexagram.centreStatements_agree",
       "Becoming.Hexagram.middle",
       "Becoming.Hexagram.inPhase",
-      "Becoming.Hexagram.gen_fifth_out_of_phase"
+      "Becoming.Hexagram.gen_fifth_out_of_phase",
+      "Becoming.Hexagram.tuanCentreStatements_agree"
      ],
      "records": [
-      "place-relations-in-context"
+      "place-relations-in-context",
+      "censuses-of-the-xiang-and-tuan"
      ],
-     "reading": "AI读法：「中正」是两个关系的合：居中（二或五，middle）且正（inPhase）。《小象》言中正、正中者十句；HexagramPlaces 把其中九句列为 centreStatements，并证这九句所言之线都居中且正（centreStatements_agree）；第十句艮六五「以中正也」，其线居中而不正，不入列，另证（gen_fifth_out_of_phase），本表另立为相分条（xiaoxiang-gen-liuwu）。需九五刚居五，在列。相合。同 Y1:xu-zhongzheng。",
+     "reading": "AI读法：「中正」是两个关系的合：居中（二或五，middle）且正（inPhase）。《小象》言中正、正中者十句；HexagramPlaces 把其中九句列为 centreStatements，并证这九句所言之线都居中且正（centreStatements_agree）；第十句艮六五「以中正也」，其线居中而不正，不入列，另证（gen_fifth_out_of_phase），本表另立为相分条（xiaoxiang-gen-liuwu）。需九五刚居五，在列。相合。同 Y1:xu-zhongzheng。已补：《彖》言中正者 11 句，所指之线皆居中且正（Hexagram.tuanCentreStatements_agree）。",
      "names_used": [
       "中位",
       "正"
      ],
      "locator": "需九五小象",
      "relational": "中正是线对其位（居二五）与对位之奇偶（正）两个关系的合。",
-     "gap": "《彖》言「中正」者（讼「尚中正也」、离「柔麗乎中正」、姤「剛遇中正」、巽「剛巽乎中正」等）尚无普查：列出 (卦序, 所指之线) 并证每一句所指之线居中且正，或列出例外。最近：Becoming.Hexagram.centreStatements、Becoming.Hexagram.centreStatements_agree、Becoming.Hexagram.tuanPlaceStatements_agree。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.tuanCentreStatements_agree。见记录 censuses-of-the-xiang-and-tuan。",
      "tradition": "易（共享经典）",
      "work": "《小象·需九五》",
      "checked": "passed"
@@ -55113,19 +55160,21 @@
       "Becoming.Hexagram.middle",
       "Becoming.Hexagram.betweenEnds",
       "Becoming.Hexagram.lineTextMiddle_places",
-      "Becoming.Hexagram.centreStatements_agree"
+      "Becoming.Hexagram.centreStatements_agree",
+      "Becoming.Hexagram.xiaoxiangMiddle_census"
      ],
      "records": [
       "place-relations-in-context",
-      "fixed-places-and-sole-lines"
+      "fixed-places-and-sole-lines",
+      "censuses-of-the-xiang-and-tuan"
      ],
-     "reading": "AI读法：《小象》单言「中」（如大壮九二「以中也」）只说线居二或五（middle），不问正否：大壮九二刚居二，不正而居中，《小象》仍以「中」许之。可证的部分：二五是居中之位（middle），都在两端之间（betweenEnds）；卦爻辞言中者十一处都在两端之间，只五处在中位（lineTextMiddle_places），所以爻辞的「中」与《小象》的中位不是同一用法。相合于《小象》之例；《小象》单言中之句尚未普查（gap）。",
+     "reading": "AI读法：《小象》单言「中」（如大壮九二「以中也」）只说线居二或五（middle），不问正否：大壮九二刚居二，不正而居中，《小象》仍以「中」许之。可证的部分：二五是居中之位（middle），都在两端之间（betweenEnds）；卦爻辞言中者十一处都在两端之间，只五处在中位（lineTextMiddle_places），所以爻辞的「中」与《小象》的中位不是同一用法。相合于《小象》之例；《小象》单言中之句已普查：说一线为中之 47 句皆在二、五（Hexagram.xiaoxiangMiddle_census），另 4 句含「中」而不说该线为中，其位皆不在中，震上六「中未得也」在其中。",
      "names_used": [
       "中位"
      ],
      "locator": "大壮九二小象",
      "relational": "中是线对其位（二或五）的关系，在上下两半各居其中。",
-     "gap": "《小象》单言「中」之句的普查：列出 (卦序, 位)——以中、得中、中道、中未亡、中未變、中以為志／實／行正、中无尤、以中行／直／節、其位／事在中、居位中——证每一句都在 p2 或 p5（middle），并证震上六「中未得也」之线不在中位（middle .p6 = false）。最近：Becoming.Hexagram.middle、Becoming.Hexagram.centreStatements_agree、Becoming.Hexagram.lineTextMiddle_places。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.xiaoxiangMiddle_census。见记录 censuses-of-the-xiang-and-tuan。",
      "tradition": "易（共享经典）",
      "work": "《小象·大壮九二》",
      "checked": "passed"
@@ -55212,19 +55261,21 @@
       "Becoming.Hexagram.rises",
       "Becoming.Hexagram.falls",
       "Becoming.Hexagram.riseCount",
-      "Becoming.Hexagram.rises_falls_ends"
+      "Becoming.Hexagram.rises_falls_ends",
+      "Becoming.Hexagram.riseStatements_agree"
      ],
      "records": [
-      "place-relations-in-context"
+      "place-relations-in-context",
+      "censuses-of-the-xiang-and-tuan"
      ],
-     "reading": "AI读法：节六四柔在九五之下，是承：一缝之下线柔、上线刚（rises）。承与乘是接缝上两线相异的两个方向：下柔上刚为承（rises），下刚上柔为乘（falls）；自下而上，承之数加初线（刚计一）等于乘之数加上线（刚计一），只差两端（rises_falls_ends）。相合。名表的承是一个约定：邢璹注「陰承陽則順，陽承陰則逆」，承的通义不限于柔在刚下（见名「承」的意见）。「上道」所含的尊卑不带入。",
+     "reading": "AI读法：节六四柔在九五之下，是承：一缝之下线柔、上线刚（rises）。承与乘是接缝上两线相异的两个方向：下柔上刚为承（rises），下刚上柔为乘（falls）；自下而上，承之数加初线（刚计一）等于乘之数加上线（刚计一），只差两端（rises_falls_ends）。相合。名表的承是一个约定：邢璹注「陰承陽則順，陽承陰則逆」，承的通义不限于柔在刚下（见名「承」的意见）。「上道」所含的尊卑不带入。已补：言承、順乎剛者 4 处皆是 rises（Hexagram.riseStatements_agree）；归妹初九「相承也」同形异义，不入列。",
      "names_used": [
       "承",
       "乘"
      ],
      "locator": "节六四小象",
      "relational": "承是一条接缝两侧之线的关系：柔在刚下。",
-     "gap": "《易》中言「承」「順乎剛」者的普查：列出 (卦序, 缝) 并证每一处都是 rises。归妹初九「跛能履吉，相承也」是同形异义（相承为相助、相续），不是线间之承，不入列。最近：Becoming.Hexagram.rises、Becoming.Hexagram.fallStatements_agree、Becoming.Hexagram.riseCount。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.riseStatements_agree。见记录 censuses-of-the-xiang-and-tuan。",
      "tradition": "易（共享经典）",
      "work": "《小象·节六四》",
      "checked": "passed"
@@ -56195,18 +56246,20 @@
      "declarations": [
       "Becoming.Hexagram.fixedPhase_end",
       "Becoming.Hexagram.betweenEnds",
-      "Becoming.Hexagram.sole_top_passes"
+      "Becoming.Hexagram.sole_top_passes",
+      "Becoming.Hexagram.exhausted_census"
      ],
      "records": [
-      "fixed-places-and-sole-lines"
+      "fixed-places-and-sole-lines",
+      "censuses-of-the-xiang-and-tuan"
      ],
-     "reading": "AI读法：「上窮」：上是两端之一，不在有定奇偶的位中（fixedPhase_end、betweenEnds），这是可证的部分。在十二消息卦的消长环中，居上的独异之线下一步离去（sole_top_passes），把上读成线离开进程之处是 AI 组合。此处的「窮」是线之终端，不是名表的窮（断点）。定域：上作为终端可证；「窮」所带的困顿与凶是占断。《易》中上位言「窮」者尚未普查。",
+     "reading": "AI读法：「上窮」：上是两端之一，不在有定奇偶的位中（fixedPhase_end、betweenEnds），这是可证的部分。在十二消息卦的消长环中，居上的独异之线下一步离去（sole_top_passes），把上读成线离开进程之处是 AI 组合。此处的「窮」是线之终端，不是名表的窮（断点）。定域：上作为终端可证；「窮」所带的困顿与凶是占断。已普查：说一线之道穷、亢之 9 句皆在上位（Hexagram.exhausted_census），比彖「其道窮也」在其中；另 5 句之「窮」说志、孚、往之穷，其位皆在下（屯六三、豫初六、大壮初九、旅初六、巽九三），不是线之终端。",
      "names_used": [
       "位"
      ],
      "locator": "随上六小象",
      "relational": "上是两端之一，无定奇偶；「窮」是线之终端。",
-     "gap": "《易》以「窮」「亢」说一线者的普查：列出《小象》《文言》中此类句子的 (卦序, 位)——如随上六「上窮也」、坤上六「其道窮也」、姤上九「上窮吝也」、节上六「其道窮也」、小过上六「已亢也」、乾上九文言「穷之灾也」——证所列之位都是 p6，或列出例外。普查也包括指一线的《彖》句：比彖「後夫凶，其道窮也」指上六，入线一类（见平行 TP-H08-T-R05）。《彖》以「其道窮也」「所尚乃窮也」说全卦者（蹇、节、夬等）另列一类，不入此普查。最近：Becoming.Hexagram.fixedPhase_end、Becoming.Hexagram.sole_top_passes、Becoming.Hexagram.topStatements。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.exhausted_census。见记录 censuses-of-the-xiang-and-tuan。",
      "tradition": "易（共享经典）",
      "work": "《小象·随上六》",
      "checked": "passed"
@@ -56439,14 +56492,17 @@
       "Becoming.Hexagram.sole_iff_flip",
       "Becoming.Hexagram.sole_flip",
       "Becoming.Hexagram.flip",
-      "Becoming.Hexagram.flip_complement"
+      "Becoming.Hexagram.flip_complement",
+      "Becoming.Hexagram.Trigram.sole_iff_searched",
+      "Becoming.Hexagram.Trigram.searched"
      ],
      "records": [
       "fixed-places-and-sole-lines",
       "what-a-commuting-law-keeps-apart",
-      "hexagrams-on-the-spine"
+      "hexagrams-on-the-spine",
+      "one-search-one-line"
      ],
-     "reading": "AI读法：沿用 RO：一索、再索、三索是从坤或乾在下、中、上一个高度变一线（震坎艮从坤，巽离兑从乾）；所得之卦，其独异之线就在所变之高度，长、中、少只是这三个高度之名。脊柱在六线层面证此结构：一线为独异之线，恰在其构形是从六线皆同（乾或坤）在该位变一线而得之处（Hexagram.sole_iff_flip）；如此一变必生独异之线（Hexagram.sole_flip）。同一索之二卦互补（震巽、坎离、艮兑），因变一线与取互补可交换（Hexagram.flip_complement）。说卦所言是三画卦，脊柱没有三画卦之型，三线上的同一陈述未单独证（见 gap）。C17 只记：索之次第是独异之线所在的位（高度）；男女与家族之名不带入。",
+     "reading": "AI读法：沿用 RO：一索、再索、三索是从坤或乾在下、中、上一个高度变一线（震坎艮从坤，巽离兑从乾）；所得之卦，其独异之线就在所变之高度，长、中、少只是这三个高度之名。脊柱在六线层面证此结构：一线为独异之线，恰在其构形是从六线皆同（乾或坤）在该位变一线而得之处（Hexagram.sole_iff_flip）；如此一变必生独异之线（Hexagram.sole_flip）。同一索之二卦互补（震巽、坎离、艮兑），因变一线与取互补可交换（Hexagram.flip_complement）。说卦所言是三画卦：三线上，一线独异恰在其为乾或坤在该高度变一线之时（Hexagram.Trigram.sole_iff_searched），震、坎、艮为坤之一索、再索、三索，巽、离、兑为乾之（Hexagram.Trigram.searched）。C17 只记：索之次第是独异之线所在的位（高度）；男女与家族之名不带入。",
      "names_used": [
       "位",
       "独异"
@@ -56456,7 +56512,7 @@
      "locator": "说卦第十章",
      "relational": "索是从乾坤变一线之高度，所得之卦的独异之线即在此高度。",
      "ro_passage": "shuogua-yi-suo",
-     "gap": "三画卦层面：三线构形中一线独异，恰在其为三线皆同者（乾或坤）在该高度变一线而得之时。最近：Becoming.Hexagram.sole_iff_flip（六线）、Becoming.Hexagram.flip_complement。",
+     "gap": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.Trigram.sole_iff_searched、Trigram.searched。见记录 one-search-one-line。",
      "checked": "corrected"
     },
     {

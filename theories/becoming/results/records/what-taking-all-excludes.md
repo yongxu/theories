@@ -60,7 +60,7 @@ The chapter's open programme (section 8.2, "Continuation (§6.7) and feeding") n
 - related, not a proved adapter: [consumption-ends-with-feeders](consumption-ends-with-feeders.md). There a taker ends with its feeders; here a taker ends alongside a full taker while the renewer and the full taker continue.
 - related, not a proved adapter: [where-a-rising-take-ends](where-a-rising-take-ends.md). There a full taker that continues excludes every other taker; here a take more than now comes to take all that is given and does not continue.
 
-**Used by:** [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md)
+**Used by:** [division-by-exclusive-footprints](division-by-exclusive-footprints.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -74,6 +74,7 @@ The chapter's open programme (section 8.2, "Continuation (§6.7) and feeding") n
 | provenance | [2026-10-18-representation-scope-go.md](../../../../sources/15-codex-theory-conversations/2026-10-18-representation-scope-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T113206.066061Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 
 Aliases: `what taking all that is given excludes`, `取尽所给所排除的`, `competitive exclusion`, `竞争排除`, `taking all that is given`, `取尽所给`, `the joint course that keeps all`, `全部保持的联合进程`, `admission does not see exclusion`, `容纳看不见排除`
 

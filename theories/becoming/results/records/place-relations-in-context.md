@@ -76,7 +76,7 @@ Continues hexagrams-on-the-spine (Y1), which listed the relations of the places 
 - related, not a proved adapter: [hexagram-world-laws](hexagram-world-laws.md). The nuclear law, the cast, the four symmetries, the counter and the six orbits of waxing and waning on the same configurations, using the rises and falls for the changes around.
 - related, not a proved adapter: [fixed-places-and-sole-lines](fixed-places-and-sole-lines.md). 王弼's second relation of phase on places 2 to 5 beside inPhase, under which 需's top line agrees, and the line answered by all others.
 
-**Used by:** [fixed-places-and-sole-lines](fixed-places-and-sole-lines.md) · [hexagram-arrangements-and-laws](hexagram-arrangements-and-laws.md) · [hexagram-world-laws](hexagram-world-laws.md)
+**Used by:** [bands-of-the-three-powers](bands-of-the-three-powers.md) · [censuses-of-the-xiang-and-tuan](censuses-of-the-xiang-and-tuan.md) · [fixed-places-and-sole-lines](fixed-places-and-sole-lines.md) · [hexagram-arrangements-and-laws](hexagram-arrangements-and-laws.md) · [hexagram-world-laws](hexagram-world-laws.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -115,6 +115,7 @@ Continues hexagrams-on-the-spine (Y1), which listed the relations of the places 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 
 Aliases: `the relations of the places`, `爻位之关系`, `應`, `应`, `比`, `中`, `正`, `當位`, `当位`, `敵應`, `承`, `乘`, `中正`, `剛中而應`, `六位時成`, `readings of the places in context`, `Becoming.Hexagram.halves_glues_iff`, `Becoming.Hexagram.opposed_iff_phase`, `Becoming.Hexagram.phaseCount_waxWane`, `Becoming.Hexagram.opposition_goAlike`, `Becoming.Hexagram.placeStatements_agree`
 

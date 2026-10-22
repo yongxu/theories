@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "id": "bands-of-the-three-powers",
+  "title": {
+    "en": "Bands of the three powers and heights",
+    "zh": "三才之带与高度"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "The bands of the three powers (first and second, third and fourth, fifth and top) and the heights are two divisions of the places: together they fix a place, neither is a function of the other, and each band spans one seam, the band of man the junction of the halves.",
+    "zh": "三才之带（初二、三四、五上）与高度是位之两种划分：合之定一位，各不为他之函数，每带恰跨一缝，人带所跨为两半之交。"
+  },
+  "laws": [
+    {
+      "en": "Two places with the same band and the same height are one place; the band of each place and the seam of each band are listed, each band spanning exactly its seam; no map from heights gives bands and none from bands gives heights.",
+      "zh": "带与高度皆同之两位是一位；列出每位之带与每带之缝，每带恰跨其缝；无由高度给带之映射，亦无由带给高度者。",
+      "declarations": [
+        "Becoming.Hexagram.Band",
+        "Becoming.Hexagram.bandOf",
+        "Becoming.Hexagram.bandSeam",
+        "Becoming.Hexagram.bands_and_heights",
+        "Becoming.Hexagram.band_seams",
+        "Becoming.Hexagram.band_seam_unique",
+        "Becoming.Hexagram.neither_function"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; the six places and their heights as defined in HexagramPlaces.",
+      "zh": "不加公理；HexagramPlaces 所定义之六位及其高度。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the three powers are heaven, man and earth in any sense beyond the division.",
+      "zh": "三才在划分之外之天、人、地之义。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 7 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 343; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 343 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "說卦 「兼三才而兩之」 read as a pairing of places.",
+    "zh": "說卦「兼三才而兩之」读为位之成对。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+  "aliases": [
+    "Bands of the three powers and heights",
+    "三才之带与高度",
+    "Becoming.Hexagram.Band"
+  ],
+  "dependencies": [
+    {
+      "id": "place-relations-in-context",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its heights; the bands are the second division.",
+        "zh": "其高度；带为第二种划分。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries shuogua-sancai-liuhua).",
+        "zh": "陈述其对应所发现之缺口（条目 shuogua-sancai-liuhua）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Hexagram.Band",
+        "Becoming.Hexagram.bandOf",
+        "Becoming.Hexagram.bandSeam",
+        "Becoming.Hexagram.band_seam_unique",
+        "Becoming.Hexagram.band_seams",
+        "Becoming.Hexagram.bands_and_heights",
+        "Becoming.Hexagram.neither_function"
+      ],
+      "sha256": "c7e8dba76f7b0a33606d84e65e05933bb28431d8454aee00ad84e309a26a2598"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.HexagramPlaces",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 343.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 343 节。"
+    }
+  ]
+}

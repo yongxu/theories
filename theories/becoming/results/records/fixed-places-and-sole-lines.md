@@ -79,6 +79,8 @@ Continues place-relations-in-context (Y2), which listed 初上无位, the line a
   - Input: betweenPhases under waxWane.
   - Preserved conditions: None. [Learning.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean)
 
+**Used by:** [one-search-one-line](one-search-one-line.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -123,6 +125,7 @@ Continues place-relations-in-context (Y2), which listed 初上无位, the line a
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 
 Aliases: `初上无位`, `初上無位`, `初上无阴阳定位`, `辯位`, `卦主`, `一爻为主`, `独应`, `上下應之`, `上下應`, `乘五剛`, `周易略例`, `王弼`, `the sole line`, `places between the ends`, `second relation of phase`, `Becoming.Hexagram.top_no_parity`, `Becoming.Hexagram.holdsPlace`, `Becoming.Hexagram.sole_unique`, `Becoming.Hexagram.sole_top_passes`, `Becoming.Hexagram.placeStatements_hold`
 

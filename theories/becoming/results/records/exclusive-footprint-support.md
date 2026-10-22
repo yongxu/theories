@@ -39,7 +39,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 
 - Related, not a proved adapter: [draws-on-a-shared-stock](draws-on-a-shared-stock.md). Different representations of shared support; neither is registered as a proved generalization of the other.
 
-**Used by:** [code-plan-global-support](code-plan-global-support.md)
+**Used by:** [code-plan-global-support](code-plan-global-support.md) · [division-by-exclusive-footprints](division-by-exclusive-footprints.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

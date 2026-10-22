@@ -1,0 +1,139 @@
+{
+  "schema_version": 2,
+  "id": "the-move-alone-underdetermines",
+  "title": {
+    "en": "The move alone does not fix the outcome",
+    "zh": "动作本身不定结果"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "statement": {
+    "en": "Where a step by a move has situations reaching two different configurations, the finer law takes both by the same move, and no law giving the next configuration from the configuration and the move alone is right on both.",
+    "zh": "一步之动作有两情境到达不同构形时，细律以同一动作取二者，只由构形与动作给下一构形之律不能二者皆对。"
+  },
+  "laws": [
+    {
+      "en": "With positive weight on two different targets of one move from one configuration, the finer law has a step to each, and no map from configuration and move to the next configuration gives both.",
+      "zh": "一构形上一动作之两不同目标皆有正权时，细律对每一目标有一步，无一由构形与动作到下一构形之映射给出二者。",
+      "declarations": [
+        "Becoming.Situations.move_underdetermines"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; natural-number weights of situations.",
+      "zh": "不加公理；情境之自然数权。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which situation obtains, or that any actual move has two.",
+      "zh": "何情境实际成立，或某实际动作有两情境。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 1 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 341; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 1 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 341 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Confounding: an outcome difference set down to the action that the action does not determine.",
+    "zh": "混杂：把动作不定之结果之差归于动作。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
+  "aliases": [
+    "The move alone does not fix the outcome",
+    "动作本身不定结果",
+    "Becoming.Situations.move_underdetermines"
+  ],
+  "dependencies": [
+    {
+      "id": "weights-count-situations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Confound.misattributes there is a case.",
+        "zh": "该记录之 Confound.misattributes 为其一例。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries daqu-yushu-yuxiong).",
+        "zh": "陈述其对应所发现之缺口（条目 daqu-yushu-yuxiong）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Situations.move_underdetermines"
+      ],
+      "sha256": "bc93e75f8b7df8bd31048157d1ef32cf963313b437af22a125e89a526f131ea2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0d271e9aa8f5f78cf3ef164a53f041a85bc37ecca4c4c40b554c4fb05622c0b9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bc66269244f332f01632c9d05cb3d6ca87a26d730741761622c2fba3dd2a0fd2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "246e550ee7487f035bd41495b06da6ff25cf13e9c1d77a26ee6c8336e74a6a00"
+    },
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "ec8dff9a621ee747902e661f39a2d0cf6dea9ca25bfa005fe4d19edca2473ed0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "7bb1bd3490cb16553a8bb7ceefc4d4e882901998f855bcd09d2636e8557d29aa"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Situations",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 341.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 341 节。"
+    }
+  ]
+}
