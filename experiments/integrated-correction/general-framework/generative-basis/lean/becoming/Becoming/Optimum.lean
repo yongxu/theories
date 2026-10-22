@@ -8805,9 +8805,24 @@ theorem position_broken {G : Nat → Nat → Nat} {rules : Nat → Nat → Nat �
     (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
     (start : W.need 0 f c ≤ W.level 0 c) :
     W.Broken 0 f c ∧ ∀ t, t < N → W.level (t + 1) c = G t 0 :=
-  drained_broken (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) perfect.1
-    (fun _ before a => Optimum.InTurn.position_perfect_draws perfect two least before 0
-      (Nat.lt_of_lt_of_le (Nat.zero_lt_succ 1) two) a) follows long depends low start
+  have stands : ∀ t, t < N → W.level (t + 1) c = G t 0 := fun t before =>
+    (follows (t + 1) before).trans (Optimum.InTurn.position_levels perfect two least s before)
+  ⟨⟨depends, start, Nat.lt_of_le_of_lt (Nat.le_of_eq (stands 0 long)) low⟩, stands⟩
+
+/-- **Drawing everything is a perfect race for position, and it breaks what depends above nothing.**
+Among at least two drawers in turn, where what stands from nothing is at most what stands from
+anything left, drawing everything is perfect for position (`Optimum.InTurn.zero_position_perfect`),
+and on a web whose base follows it over a horizon of at least one step, a formation depending on the
+base, whose need, met at the start, lies above what stands from nothing at the first step, is broken
+there. -/
+theorem drain_position_broken {G : Nat → Nat → Nat} {k N s : Nat} (two : 2 ≤ k)
+    (least : ∀ t x, G t 0 ≤ G t x)
+    (follows : ∀ t, t ≤ N → W.level t c = Optimum.InTurn.levels G (fun _ _ _ => 0) k s t)
+    (long : 0 < N) (depends : W.requires 0 f c) (low : G 0 0 < W.need 0 f c)
+    (start : W.need 0 f c ≤ W.level 0 c) :
+    Optimum.InTurn.PerfectPosition G (fun _ _ _ => 0) k N ∧ W.Broken 0 f c :=
+  have perfect := Optimum.InTurn.zero_position_perfect two least N
+  ⟨perfect, (position_broken perfect two least follows long depends low start).1⟩
 
 end Web
 

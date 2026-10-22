@@ -2386,6 +2386,26 @@
    "module": "Becoming.SelectionPool",
    "category": "general-structure",
    "reason": "Where more than half the members read alike on two histories, taking what most read goes alike on them: a counting law of every majority reading over a list of members, in its own vocabulary (ZG7)."
+  },
+  "Becoming.Optimum.InTurn.Stopping.not_least": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "Stopping's law of what stands next, two from nothing and nothing from anything left, has what stands from nothing above what stands from one unit: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.position_perfect_ends fails there."
+  },
+  "Becoming.Optimum.InTurn.Stopping.zero_not_perfect": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping, with two drawers over two steps, drawing everything is not perfect for position: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.zero_position_perfect binds."
+  },
+  "Becoming.Optimum.InTurn.Stopping.perfect_keeps": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping every profile perfect for position has the second drawer keep the unit it is given at the first step, stopping what the first would draw next: a fact about one constructed law, the witness that without G t 0 ≤ G t x a race for position need not draw everything."
+  },
+  "Becoming.Optimum.InTurn.position_one": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "With one drawer every profile is perfect for position, its draw being all that is drawn: the case k = 1 of the model, showing that the premise of two drawers in Optimum.InTurn.position_perfect_ends binds."
   }
  },
  "instances": {

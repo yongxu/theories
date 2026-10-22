@@ -71,7 +71,7 @@ LAW = need('Becoming.Optimum', [I + n for n in ['position_keeps_nothing', 'posit
 STEP = need('Becoming.Optimum', [I + n for n in ['drawn_first_none', 'drawn_other_none', 'drawnAll_none', 'later_same',
                                                  'drawnAll_grows', 'position_step', 'position_last']])
 DRAIN = need('Becoming.Optimum', [I + n for n in ['position_perfect_ends', 'position_perfect_draws', 'position_levels',
-                                                  'zero_position_perfect']] + ['Becoming.Web.position_broken'])
+                                                  'zero_position_perfect']] + ['Becoming.Web.position_broken', 'Becoming.Web.drain_position_broken'])
 BIND = need('Becoming.Optimum', [I + n for n in ['position_one', 'stopping', 'Stopping.not_least', 'Stopping.zero_not_perfect',
                                                  'Stopping.perfect_keeps']])
 BOUNDARIES = ['no-ethical-premise', 'no-evaluation', 'discrete-steps', 'formal-not-empirical', 'names-provisional',
