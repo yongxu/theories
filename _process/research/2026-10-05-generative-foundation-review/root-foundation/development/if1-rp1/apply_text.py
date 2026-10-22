@@ -80,8 +80,11 @@ edit(ZH, [
 old_race = OPENING.read_text().split('\n')
 idx = [i for i, line in enumerate(old_race) if line.startswith('[^race]:')]
 assert len(idx) == 1
-old_race[idx[0]] = (
-    "[^race]: **Proved under conditions; that it describes the present race is a judgment.** In a balanced flow, let a family "
+KEEP = "In a balanced flow, let a family list every condition"
+line = old_race[idx[0]]
+assert line.count(KEEP) == 1
+old_race[idx[0]] = line[:line.index(KEEP)] + (
+    "In a balanced flow, let a family "
     "list every condition a member of a group couples into, inside a family containing it. Then every selection that holds only "
     "where the first family's stock rises across a step by more than the containing family's inflow (what the formations taking "
     "part give it beyond what they take from it), and does hold, holds only where some formation taking part gives that family "
