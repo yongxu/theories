@@ -1,11 +1,11 @@
 {
- "commit": "7a7d74c487cd7a0ff7e4000548f5874e5ea29ca9",
+ "commit": "cac77c0b7e12499c0af344e393c5fced690870c9",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261022T064310.304329Z",
+ "core_receipt_at_commit": "20261022T070506.681048Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 40168,
- "spine_theorems": 13272,
+ "constants": 40179,
+ "spine_theorems": 13277,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,7 +28,7 @@
  "classes": {
   "statement on both families": 1005,
   "statement on Process/Frame/Run/Trace": 2945,
-  "statement on World/Flow/Web": 3091,
+  "statement on World/Flow/Web": 3096,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 163,
   "used by a theorem on the base": 4948,
@@ -605,12 +605,12 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12512,
+   "theorems": 12517,
    "apart": 610,
    "classes": {
     "statement on both families": 991,
     "statement on Process/Frame/Run/Trace": 2734,
-    "statement on World/Flow/Web": 3066,
+    "statement on World/Flow/Web": 3071,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 152,
     "used by a theorem on the base": 4589,
@@ -716,7 +716,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 72,
   "statement on Process/Frame/Run/Trace": 131,
-  "statement on World/Flow/Web": 113,
+  "statement on World/Flow/Web": 114,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 3,
   "used by a theorem on the base": 8,
@@ -3266,6 +3266,9 @@
   "Becoming.Web.drop_dependent": "statement on World/Flow/Web",
   "Becoming.Web.drop_keeps_next": "statement on World/Flow/Web",
   "Becoming.Web.drop_not_inherits": "statement on World/Flow/Web",
+  "Becoming.Web.inheritsAt_iff_not_formsAnew": "statement on World/Flow/Web",
+  "Becoming.Web.formsAnew_iff_undrawn": "statement on World/Flow/Web",
+  "Becoming.Web.drawn_necessary_iff": "statement on World/Flow/Web",
   "Becoming.split_of_em": "statement on World/Flow/Web",
   "Becoming.Split.descends": "statement on World/Flow/Web",
   "Becoming.split_iff_em": "statement on World/Flow/Web",
@@ -3293,6 +3296,8 @@
   "Becoming.Flow.inherits_of_fed": "statement on World/Flow/Web",
   "Becoming.Flow.DependsOnDrawn.drop": "statement on World/Flow/Web",
   "Becoming.Flow.DependsOnFed.drop": "statement on World/Flow/Web",
+  "Becoming.Flow.dependsOnDrawn_iff": "statement on World/Flow/Web",
+  "Becoming.Flow.inherits_iff_none_undrawn": "statement on World/Flow/Web",
   "Becoming.World.drop_holds": "statement on both families",
   "Becoming.World.drop_finite": "statement on both families",
   "Becoming.World.drop_untransmitting": "statement on both families",

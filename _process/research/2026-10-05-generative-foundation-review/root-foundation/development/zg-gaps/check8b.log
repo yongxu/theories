@@ -420,9 +420,6 @@ python3 -B tools/research/research.py check
   },
   "changed_outside_cited": 665,
   "reading_drift": 90,
-  "stale_indexes": [
-    "_process/research/README.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md"
-  ],
+  "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
 }
