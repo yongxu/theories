@@ -22,6 +22,13 @@ N=$(python3 -c "import re;s=open('$RF/BECOMING-RENEWAL-READING.md',encoding='utf
 python3 -B $K4/land3.py $N
 python3 -B $K5/land5.py
 python3 -B $K6/land6.py
+python3 - <<'PY'
+p='_process/BECOMING-WORKBOARD.md'
+b=open(p,encoding='utf-8').read()
+m='**OU4, OU5 and OU2c at the head of the queue (checker running)**; '
+assert b.count(m)==1
+open(p,'w',encoding='utf-8').write(b.replace(m,''))
+PY
 make research-render > $L/render1.log 2>&1 || true
 python3 -B tools/research/research.py check > $L/drift.json 2>/dev/null || true
 python3 -B tools/research/repoint.py --reason "OU4, OU5 and OU2c: sources revised since the records were reviewed (the one-unfolding plan by the second-round classification and the earlier landings); no claim of the re-pointed records changed; read before re-pointing" --drift-json $L/drift.json --apply > $L/repoint.log 2>&1
