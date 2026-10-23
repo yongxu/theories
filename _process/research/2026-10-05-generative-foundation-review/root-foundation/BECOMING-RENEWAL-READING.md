@@ -16665,3 +16665,48 @@ Output → input: the 文 line now rests on the grammar's core; two proposals fo
 **Why the core and not continuation.** The grammar has two ways in which a 文 could be "one": continuation (`«续»`), a single step that keeps the class, and the core (`«核»`), the greatest symmetric relation inside the class that the step keeps. The 文 line's sameness, 文同, compares whole courses, so it is the core: `Law.core_is_sameFuture` proves it, with `Law.constant_iff_keeps` translating the 文 line's "the law keeps the relation" (`Law.KeepsRelation`) into the grammar's constancy. Continuation under the core is then exactly a course that never changes again (`Law.continues_in_core_iff`), the grammar's flame lesson (`«以核为判据则火无续»`) seen on a 文: a course that changes at every moment has no continuation under its core (`SameAhead.no_continuation`). So the coarsest 理 that keeps the values in the 文 line's sense (WL2: a class that keeps the map's values and that the law carries) is the plan's 理 of the class of values, its core (PLAN §4.1, 「理是它之类（有常之核）」); the 文 line's other 理, classes that keep the values but are finer, are the symmetric constant relations inside the core.
 
 **Two 文 as one net.** The bounded law for two courses (`Identification.bounded_agree`) compares two sequences, while the grammar's core relates occurrences of one net. Taking the moments of both courses side by side, each going to its own next moment (`TwoCourses.next` on `Nat ⊕ Nat`, values `TwoCourses.value`), puts the comparison inside one net: the first moments lie in one class of the core exactly where the courses agree everywhere (`TwoCourses.core_iff`), so the bounded law and its exactness are laws of that core (`TwoCourses.core_iff_bounded`, `TwoCourses.core_exact`).
+
+## 375. Rest by balance: the course and regime series as its cases (EC6)
+
+Board item EC, its sixth step (the master law of balance, its rest part). Core receipt `20261023T055339.893510Z`.
+
+**Why.**
+- EC5's measure (study §317) left 63 of 127 central declarations resting on no master law. Among them the optimum series (SG1–SG17) and the regime series (RM1–RM10) prove the same kind of law in separate models, each by its own induction:
+  - a course above its renewal ends within its starting excess (`Optimum.ends_within`, by an induction on the fall);
+  - a course gaining the most draws, weighted, at least what any open course could (`Optimum.Next.drawable_le_of_gains`, by an induction setting two step identities side by side);
+  - a law's run with a bounded mark comes to rest (`LastChange.still_within`, an induction on the room left), on which the regime's rest and its threshold in the plane stand;
+  - below a regime's point of no return the level falls by at least one a step (`RegimeMargin.Adjusted.orbit_bound`, an induction on the level);
+  - a coupled web within a band rests (`RegimeMargin.Coupled.Indexed.rests_by`, an induction on what the draws leave).
+- Each of these is the stretch balance (`balance_over_stretch_on`, EC2) read once more: a level after a step with what is taken is the level before with what is given. Board rule 9 asks for the general law below and the special ones through it.
+
+**What changed.**
+- **One law, in `Becoming.Amounts`, from the stretch balance.** In whole numbers:
+  - a count balanced across each step of a stretch, losing at least one more than it gains at each, falls across it by at least its length (`Amounts.falls_by_stretch`);
+  - where whether a step is marked is decided and each marked step loses at least one more than it gains, an unmarked step comes within what stood at the start (`Amounts.unmarked_within`; the steps up to the bound are searched, so no omniscience is used);
+  - two balanced counts, the first starting within the second, where at each step the first's gain with the second's loss is within the second's gain with the first's loss, end in the same order (`Amounts.le_by_exchange`).
+- **The five laws above are its cases, under their names and with their statements unchanged.**
+  - `Optimum.ends_within`: a course balances with what its step takes (`drawnAt`, moved above it), and at the need or above it is positive and loses at least one more than it is given (`falls_over`).
+  - `Optimum.Next.drawable_le_of_gains`: what a course could draw, with what it drew before, balances across each step (`drawable_step`); the premise `gains` is exactly the exchange condition.
+  - `LastChange.still_within`: the room the bound leaves above the mark, with the mark's rise, is the room before (`LastChange.room_balance`), and it loses at least one at each change; the first unchanged step gives the rest (`LastChange.still_of_fixed_at`).
+  - `RegimeMargin.Adjusted.orbit_bound`: the adjusted step balances, the draw taking all there is up to `H` (`Adjusted.step_balances`); the run stays below the point with the recent giving short (`Adjusted.orbit_inside`), so at each positive level the draw takes at least one more than is given; where the level reaches nothing first, it stays there.
+  - `RegimeMargin.Coupled.Indexed.rests_by`: what the draws leave, added, never rises, so with its fall recorded as what is taken it balances, and it falls at each step that is not alike at every condition.
+- The central declarations that stood on these now stand on balance: `Web.course_lost_iff`, `Web.frontier_exhausts`, `Web.frontier_rebuilds` and `Web.Next.frontier_ends_drawn_first` (each in the degeneration and alignment rows), `RegimeMargin.ends_iff_below`, `RegimeMargin.Adjusted.ends_iff_below`, `RegimeMargin.Adjusted.comes_to_rest`, `RegimeMargin.Adjusted.falls_iff_below` and `RegimeMargin.Coupled.threshold_falls`.
+
+**Delta.**
+- One law for the ending and rest of courses, regimes, runs and coupled webs, and for the comparison of weighted draws; five direct inductions gone.
+- The measure: 63 of 127 central declarations rested on no master law on `b400d3c7f`; 50 do now, and balance carries 52. Defined notions in the central statements: 319 → 319.
+- No statement changed; no record's claim changes.
+
+**Premises and honesty of the reading.** Where the loss is a real exchange (a course's draw, a regime's draw, a weighted draw) the balance is the step law of the model, read as balance. Where the loss is a count's own fall recorded as what it loses (a run's mark, what the draws leave of a web), balance adds no premise: the law there counts the falls of a count that never rises, and its content is the least-loss law of rest in whole numbers decided at each step. The measure counts both as resting on balance; the second kind could equally be counted under finite runs (rest is a case of being drawn), and the anchors are left as EC5 set them.
+
+**Not done here.**
+- `RegimeMargin.Coupled.Indexed.ends_downstream`: the cascade's ending rests on the exact drain (`ends_after`), an identity; reading it through the balance would add a case split and no reason.
+- `Optimum.optimum_beyond` and `Optimum.mutual_beyond`: the outcomes open to a part (`Flow.Outcome`) write the balance equation inline instead of through `Flow.Balances`; stating the step balance once on two levels (a `Flow.BalancesFrom` with `Flow.Balances` defined through it) would join them, at the cost of a change to `Becoming.Flow` that rebuilds nearly the whole spine.
+- `Web.optimum_broken_iff` (an order fact about frontiers) and `RegimeMargin.Drawn.run_shape` (the shape of a run in any amounts, from the order of states) rest on order, not on any of the five laws as stated; whether a law of monotone runs should join the master laws is open.
+- The other 45 declarations on the completion report's list.
+
+**Evidence.** The checker run `20261023T055339.893510Z` passed with every axiom report empty (`Becoming.Amounts`, `Becoming.LastChange`, `Becoming.Optimum`, `Becoming.RegimeMargin` among them); the connectivity measure and `measure.py` were rerun on it.
+
+**Boundary.** A restructuring of proofs with one new law and its helpers; the statements of the five laws and of every central declaration are unchanged. New record `rest-by-balance`; the seven records citing the five laws carry a history note; the other records citing the four changed sources are re-pointed.
+
+**Output → input.** Balance now carries the ending and rest of the optimum and regime series. Next: `Flow.Outcome` through a step balance, and whether monotone runs are a law of their own.

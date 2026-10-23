@@ -1,11 +1,11 @@
 {
- "commit": "7dc40db7c252cd9bed78c487c1b3bc5b2bb14e6f",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T051150.969269Z",
+ "commit": "369cd7445e2cdf2afd47a24e23309ac156b4bde7",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261023T055339.893510Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 312,
- "constants": 42211,
- "spine_theorems": 14088,
+ "constants": 42229,
+ "spine_theorems": 14099,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,11 +27,11 @@
  },
  "classes": {
   "statement on both families": 1056,
-  "statement on Process/Frame/Run/Trace": 2952,
+  "statement on Process/Frame/Run/Trace": 2953,
   "statement on World/Flow/Web": 3327,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 181,
-  "used by a theorem on the base": 5132,
+  "used by a theorem on the base": 5142,
   "instance on the base recorded": 153,
   "apart: own vocabulary": 940,
   "apart: prelude-only statement": 86
@@ -280,7 +280,7 @@
   ],
   "Becoming.RegimeMargin": [
    9,
-   244
+   246
   ],
   "Becoming.ProfileReach": [
    9,
@@ -292,7 +292,7 @@
   ],
   "Becoming.Amounts": [
    8,
-   29
+   36
   ],
   "Becoming.SecuredContent": [
    8,
@@ -654,15 +654,15 @@
  "rings": {
   "core": {
    "modules": 296,
-   "theorems": 13328,
+   "theorems": 13339,
    "apart": 932,
    "classes": {
     "statement on both families": 1042,
-    "statement on Process/Frame/Run/Trace": 2741,
+    "statement on Process/Frame/Run/Trace": 2742,
     "statement on World/Flow/Web": 3302,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 170,
-    "used by a theorem on the base": 4773,
+    "used by a theorem on the base": 4783,
     "instance on the base recorded": 153,
     "apart: own vocabulary": 847,
     "apart: prelude-only statement": 85
@@ -914,10 +914,10 @@
  ],
  "master_laws": {
   "central_declarations": 127,
-  "resting_on_no_master_law": 63,
+  "resting_on_no_master_law": 50,
   "by_law": {
    "closure": 16,
-   "balance": 39,
+   "balance": 52,
    "return": 14,
    "lumping": 1,
    "order": 9
@@ -1063,19 +1063,27 @@
      },
      {
       "declaration": "Becoming.RegimeMargin.ends_iff_below",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
@@ -1083,7 +1091,9 @@
      },
      {
       "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
@@ -1091,7 +1101,9 @@
      },
      {
       "declaration": "Becoming.Web.course_lost_iff",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.frontier_broken",
@@ -1113,15 +1125,21 @@
      },
      {
       "declaration": "Becoming.Web.frontier_exhausts",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.frontier_rebuilds",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -1580,7 +1598,9 @@
      },
      {
       "declaration": "Becoming.Web.course_lost_iff",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.frontier_broken",
@@ -1602,15 +1622,21 @@
      },
      {
       "declaration": "Becoming.Web.frontier_exhausts",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.frontier_rebuilds",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Flow.unselected_beyond_pool",
@@ -6195,6 +6221,13 @@
   "Becoming.Amounts.whole_within": "used by a theorem on the base",
   "Becoming.Amounts.whole_archimedean": "used by a theorem on the base",
   "Becoming.Amounts.whole_losing_steps": "apart: prelude-only statement",
+  "Becoming.Amounts.total_steps_lose": "used by a theorem on the base",
+  "Becoming.Amounts.total_steps_le": "used by a theorem on the base",
+  "Becoming.Amounts.total_steps_add": "used by a theorem on the base",
+  "Becoming.Amounts.falls_by_stretch": "used by a theorem on the base",
+  "Becoming.Amounts.unmarked_or_marked": "used by a theorem on the base",
+  "Becoming.Amounts.unmarked_within": "used by a theorem on the base",
+  "Becoming.Amounts.le_by_exchange": "used by a theorem on the base",
   "Becoming.Dyadic.ext'": "used by a theorem on the base",
   "Becoming.Dyadic.le_trans'": "used by a theorem on the base",
   "Becoming.Dyadic.add_assoc'": "used by a theorem on the base",
@@ -12579,6 +12612,8 @@
   "Becoming.RegimeMargin.Adjusted.left_below": "used by a theorem on the base",
   "Becoming.RegimeMargin.Adjusted.step_below": "used by a theorem on the base",
   "Becoming.RegimeMargin.Adjusted.from_zero": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Adjusted.step_balances": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Adjusted.orbit_inside": "used by a theorem on the base",
   "Becoming.RegimeMargin.Adjusted.orbit_bound": "used by a theorem on the base",
   "Becoming.RegimeMargin.Adjusted.ends_below": "statement on the base only through a law of its own module",
   "Becoming.RegimeMargin.Adjusted.stays_ended": "statement on the base only through a law of its own module",
@@ -14824,6 +14859,8 @@
   "Becoming.LastChange.lpo_iff_settles": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.still_of_fixed": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.still_succ": "statement on Process/Frame/Run/Trace",
+  "Becoming.LastChange.room_balance": "used by a theorem on the base",
+  "Becoming.LastChange.still_of_fixed_at": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.still_within": "statement on Process/Frame/Run/Trace",
   "Becoming.Limit.true_ne_false'": "used by a theorem on the base",
   "Becoming.Limit.converges_unique": "statement on Process/Frame/Run/Trace",

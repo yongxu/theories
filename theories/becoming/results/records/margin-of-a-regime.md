@@ -66,6 +66,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Own draws within what is given can jointly exceed it; Peaked shows two draws each held alone that together end the condition, with giving read off the level.
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). Giving that adjusts: these laws on ending and holding hold over any law of what is left and of the recent giving, and every rest at or above the draw is the regime's where the adjustment rests where the regime does.
 - related, not a proved adapter: [coupled-regimes](coupled-regimes.md). Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.
 
 **Used by:** [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
 
@@ -91,6 +92,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.harms_superadditive`
 
@@ -107,6 +109,7 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); its next delta now says what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 - 21 October 2026: MQ6 (study section 314), a frozen test on yeast driven past its fold: the level is the state at a constant draw and carries across experiments, and the regime margin forecasts the level away from the break, but the breaks came early; the scope and the next step are revised.
+- 23 October 2026, EC6 (study section 375): RegimeMargin.Adjusted.orbit_bound is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

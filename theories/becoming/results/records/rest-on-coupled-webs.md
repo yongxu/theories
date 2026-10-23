@@ -62,6 +62,7 @@ A monotone map on a finite ordered set iterated from a state it does not raise r
   - Preserved conditions: Mutual support; a band. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 - related, not a proved adapter: [thresholds-beyond-a-band](thresholds-beyond-a-band.md). Beyond a band, a bound on the run decides ending by a finite check, and each threshold is exact and falls as others rise.
 - related, not a proved adapter: [webs-with-a-recent-giving](webs-with-a-recent-giving.md). Webs with a recent giving keep the order under mutual support; their bounded runs have ending decided and exact thresholds.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). RegimeMargin.Coupled.Indexed.rests_by is a case of rest by balance.
 
 **Used by:** [thresholds-beyond-a-band](thresholds-beyond-a-band.md) · [webs-with-a-recent-giving](webs-with-a-recent-giving.md)
 
@@ -78,6 +79,7 @@ A monotone map on a finite ordered set iterated from a state it does not raise r
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `rest and points of no return on coupled webs`, `coupled webs come to rest`, `耦合之网的静止`, `Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls`
 
@@ -88,6 +90,7 @@ Aliases: `rest and points of no return on coupled webs`, `coupled webs come to r
 - 22 October 2026, RM9: thresholds beyond a band are stated with a bound on the run in its place (record thresholds-beyond-a-band, study section 327); step_alike, run_alike and ends_alike now take pointwise reading, of which mutual support is the case. The statements of its laws are unchanged.
 - 22 October 2026, RM10: webs with a recent giving are stated (record webs-with-a-recent-giving, study section 331); run_alike is now derived from run_alike_of. The statements of its laws are unchanged.
 - 22 October 2026, UM: its thresholds' exactness and falling are derived from the one law of exact thresholds (leading_exact, leading_falls), Coupled.leading_congr moved to leading_congr (study section 335). Its laws are unchanged.
+- 23 October 2026, EC6 (study section 375): RegimeMargin.Coupled.Indexed.rests_by is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

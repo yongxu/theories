@@ -198,6 +198,13 @@
         "en": "Where the adjustment rises with what is left and with the recent giving within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, which falls as the recent giving rises; under the regime's step it is H + y.",
         "zh": "调整在带内随所剩与近来所给而升时，静于汲取之下的运行恰是自低于每个近来所给之最小水平出发者，该水平随近来所给上升而降；在体制之步下为 H + y。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.",
+        "zh": "RegimeMargin.Adjusted.orbit_bound 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -261,7 +268,7 @@
         "Becoming.RegimeMargin.stays_ended",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "50f28d79a676ad30d9b637be3f549151f2907983a3cf7d589e066d8bc54bc138"
+      "sha256": "16b148405dfddb4e6f8d2b454254b3fdaa7ab0b0b9e61c16906f5f832a079d73"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -357,12 +364,18 @@
       "role": "receipt",
       "sha256": "1e74422727acd0467bc4e68475b978f5397a2059a38c3f83b1ec1850a948e309",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -395,6 +408,10 @@
     {
       "en": "21 October 2026, MQ7: the reading that the point separates fates on the state failed its frozen field test on the 21 primary stocks no analysis had read (study section 316; C1 failed, C2 not testable); what this record does not show and its next delta now say so. Its laws are unchanged.",
       "zh": "2026年10月21日，MQ7：此点按状态区分命运这一读法，在未经任何分析读过的 21 个主组存量上未通过其冻结的野外检验（研究第 316 节；C1 未通过，C2 不可检验）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): RegimeMargin.Adjusted.orbit_bound is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：RegimeMargin.Adjusted.orbit_bound 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }

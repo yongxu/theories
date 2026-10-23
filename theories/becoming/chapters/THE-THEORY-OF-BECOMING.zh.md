@@ -50,12 +50,12 @@
 
 **主律。** 五条主律承载中心结果所共有者，各置于能容纳它的最低一层；依于其中一条的中心结果经它证明，而不在其旁另证（工作项 EC，[研究第 317 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#317-the-master-laws-stated-and-measured-ec5)）。
 - *闭包*（`WithinClosure`，在框架中）。一个关系所带的恰及于其闭包，闭包之内无物以此关系通向其外。过程的所及即其步的闭包。供给、影响、所及、系统、耦合与合池的耦合都是各自关系下的这一闭包，两种中立所迫出的范围也是（`Valuation.forced_iff_reach`）。
-- *平衡*（`Flow.Balances`；跨段时为序言中的 `balance_over_stretch_on`）。水平按所给与所取而变，每一步如此，每一段亦然。
+- *平衡*（`Flow.Balances`；跨段时为序言中的 `balance_over_stretch_on`）。水平按所给与所取而变，每一步如此，每一段亦然。在整数中，它限定一个计数能失去多久：每步平衡、每步所失比所得至少多一的计数，至少下降所经的步数；两个平衡的计数由其交换相比较（`Amounts.falls_by_stretch`、`Amounts.unmarked_within`、`Amounts.le_by_exchange`）。过程在更新之上的终结、加权汲取的比较、带有界标记的律之运行的静止、体制不归点之下的下降与耦合网的静止，都是它的情形（[研究第 375 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#375-rest-by-balance-the-course-and-regime-series-as-its-cases-ec6)）。
 - *有限的运行*（`Branching.Returns`、`revisits_within`；停息，`Amounts.rests`）。在有限多个构形之内，律或使每个构形返回，或被吸引；停息在量的下降停止之处到来（`Amounts.FallsStop`）。
 - *归并*（`GoAlikeUnder`）。单独读出的部分恰在其余对其下一值不造成差别之处带有一条律。学习、选择之所及与俘获都是其情形。
 - *次序*（`Web.Widens`；在列举上，`Weighting.WidensOn`）。扩大是保持并增添。伦理在此加上两个前提：延续条件，为范围，读作承载意义的关系连通一切存活者（`Valuation.forced_whole_iff_connected`）；C，为次序。
 
-连通度量在每次落地时，对每个中心声明的编译依据计入其中的主律（[完成报告](../results/completion/COMPLETION.md#master-laws)）。127 个中心声明中有 64 个至少依于一条主律；其余 63 个列于报告，或属定义层面，或尚未经主律导出。它们是一个优雅的完成仍须导出或表明为定义的；优雅不是 K1–K7 的判据。
+连通度量在每次落地时，对每个中心声明的编译依据计入其中的主律（[完成报告](../results/completion/COMPLETION.md#master-laws)）。127 个中心声明中有 77 个至少依于一条主律；其余 50 个列于报告，或属定义层面，或尚未经主律导出。它们是一个优雅的完成仍须导出或表明为定义的；优雅不是 K1–K7 的判据。
 
 **定理之外。** 理论关于实际系统、AI 与伦理的最强主张，各以完整强度连同其地位、所禁止者与会驳倒它的观察陈述，见[论题与猜想](#theses-and-conjectures)：持续证明的是联合汲取；处于汲取下的可更新条件的状态；优化抽干其耦合之外给出余地之处；范围可以安装；次序为每个评价者所共有；只有经耦合入断裂者的才能预先看到断裂；从其所选者读出的度量活得比对它的驳斥更久；以及哲学论题。论题不是定理，其地位与它一同写明。
 

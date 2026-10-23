@@ -67,6 +67,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActivationCapacity.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",

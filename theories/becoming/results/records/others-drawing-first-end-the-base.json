@@ -307,6 +307,13 @@
         "en": "With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.",
         "zh": "两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取，自第一步起基础立于零处所立者。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "Optimum.Next.drawable_le_of_gains is a case of rest by balance.",
+        "zh": "Optimum.Next.drawable_le_of_gains 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -409,7 +416,7 @@
         "Becoming.Web.Next.frontier_leaves",
         "Becoming.Web.Next.frontier_rebuilds"
       ],
-      "sha256": "6e26a10f167034925a5748e730d32ff8bdb03b0ea6b97d11b9eff3589e87bd24"
+      "sha256": "3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -437,7 +444,7 @@
         "Becoming.Amounts.sum",
         "Becoming.Amounts.whole"
       ],
-      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+      "sha256": "858694cf4ec927c9af8043dd0441ca384b72e8314b347437102cab0f4f796dc6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
@@ -576,12 +583,18 @@
       "role": "receipt",
       "sha256": "a2bd5a858da6ba62d93a14c24c9b8bdf1588768ef9bca72341058621afdc307c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -602,7 +615,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Amounts",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -656,6 +669,10 @@
     {
       "en": "22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.",
       "zh": "2026年10月22日，SG14：两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取（记录 drawers-in-turn-draw-everything，研究第 324 节）。其规律不变。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：Optimum.Next.drawable_le_of_gains 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }
