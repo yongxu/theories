@@ -1,0 +1,10 @@
+* `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
+  grains, a fine class of parts and a coarse class of the pattern they make up. A carrying renewal
+  (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`, 火传). Generation
+  (`«生成»`: the pattern never ends and a carrying renewal lies ahead), keeping (`«守»`: it never
+  ends and stops renewing) and degeneration (`«退化»`: it ends) exclude each other, each is
+  inhabited, and with excluded middle they cover every point (`«三域之周»`); renewal does not decide
+  the region (`Map.Short.renews_and_ends`); a constant coarse class never degenerates from a
+  continued point; telling generation from degeneration on every line is exactly excluded middle
+  (`«生败之定当且仅当排中»`); a chain of classes reads generation at every order (`«阶生成»`). A
+  leaf.

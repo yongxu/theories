@@ -1,0 +1,5 @@
+    "GrammarMap: at a fine and a coarse class, a carrying renewal is an alteration; generation, "
+    "keeping and degeneration exclude each other, are each inhabited and, with excluded middle, cover "
+    "every point; generation holds along its line and degeneration reaches back; renewal does not "
+    "decide the region; a constant coarse class never degenerates from a continued point; telling "
+    "generation from degeneration on every line is exactly excluded middle. "

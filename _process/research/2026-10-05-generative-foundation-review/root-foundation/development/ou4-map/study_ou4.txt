@@ -1,0 +1,24 @@
+## 373. The map: generation, keeping and degeneration at two grains (OU4)
+
+```text
+Result(s): new record generation-and-degeneration-at-two-grains.
+Delta: the map of the one-unfolding plan (PLAN.md §七) in the grammar (Becoming.GrammarMap). Renewal alone
+       («复生») cannot tell renewal that sustains a pattern from turnover that ends it; read at two grains, a fine
+       class of parts and a coarse class of the pattern, it can. A carrying renewal («传») continues the pattern
+       while a part begins, and is an alteration (火传). Generation («生成»: the pattern's line never ends and a
+       carrying renewal lies ahead of every point), keeping («守»: endless, renewal stops) and degeneration
+       («退化»: it ends) exclude each other, are each inhabited, and with excluded middle cover every point
+       («三域之周»); generation holds along its line and degeneration reaches back; a line can renew and still
+       end (Map.Short.renews_and_ends); a constant coarse class never degenerates from a continued point; telling
+       generation from degeneration on every line, in every model, is exactly excluded middle
+       («生败之定当且仅当排中»): the boundary between the regions is where going on is not decided. A chain of
+       classes reads generation at every order («阶生成»).
+Premises / correspondence: none beyond the grammar; the covering law takes excluded middle as a hypothesis.
+Evidence: core receipt RECEIPT_ID (Becoming.GrammarMap, THEOREMS theorems in DECLS declarations, empty axiom reports).
+Boundary: generation here is a pattern continuing through renewal of its parts, with no premise on what the pattern
+       is or whether its going on is good; the old map's regimes (renewal, consumption, capture, the five
+       questions of 势) are not yet stated as regions of this map.
+Output → input: the plan's §七 map, steps 5 to 7; next, the old regimes as regions on the old base's readings.
+```
+
+**Why two grains.** Under one class the grammar's renewal is either impossible (under the one) or trivial (under identity every occurrence with a successor renews). What the theory needs to separate is the renewal of parts that keeps a whole going (cells and an organism, flames and a fire, members and an institution) from turnover that ends it. With the parts' class finer than the pattern's, a step that continues the pattern while a part begins is a carrying renewal, and the region of a point is read off the pattern's line: it goes on and keeps renewing (generation), goes on without renewing (keeping), or ends (degeneration). The meta-attractor of the plan is a generating pattern: the pattern conditions the beginnings of its own parts (the condition of each new part lies in the pattern's class), and it goes on through them.
