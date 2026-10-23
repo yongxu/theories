@@ -114,7 +114,7 @@ The future is within our hands. Let's make it good. Follow the truth.
 
 ---
 
-The Theory of Becoming explains how anything comes to be, lasts, changes and passes away within one relational unfolding, and how life, evolution, knowing and evaluation take shape inside it, without first assuming that becoming is good. Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports: a constructive discipline, not an absence of premises, since each premise is a hypothesis of the theorem that uses it and the representation brings commitments of its own, such as discrete steps and whole-number amounts. The ethics rests on two premises with two roles, neither asserted: the continuation condition, that for anything its continuation has significance, fixes whose losses count, and C, that widening what can form is better, alone orders.
+The opening above states a conviction in the first person, each sentence's standing given in its note; the account below says what is proved and under which premises. The Theory of Becoming is an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life, evolution, knowing and evaluation take shape inside it, without first assuming that becoming is good; that it explains how things go on is its claim, argued from its laws. Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports: a constructive discipline, not an absence of premises, since each premise is a hypothesis of the theorem that uses it and the representation brings commitments of its own, such as discrete steps and whole-number amounts. The ethics rests on two premises with two roles, neither asserted: the continuation condition, that for anything its continuation has significance, fixes whose losses count, and C, that widening what can form is better, alone orders.
 
 The theory is written in four layers, each of which can be read through on its own:
 
@@ -147,7 +147,7 @@ Deductive necessity lies in the Theory of Becoming as a whole; generativity is w
 
 ### Developing significance, comparison and practical judgment
 
-We are developing the significance-and-comparison core (section 6) into increasingly specific ethics. Under the continuation condition, living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.
+We are developing the significance-and-comparison core (chapter 7) into increasingly specific ethics. Under the continuation condition, living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.
 
 **Next:** Extend justified comparisons where serious losses and fair chances conflict; establish the particular living relationships that change a concrete choice, including when a changed situation warrants revising an undertaking.
 
