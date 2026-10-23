@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1899,
-    "distinct_byte_contents": 1498,
+    "lean_paths": 1903,
+    "distinct_byte_contents": 1502,
     "byte_identical_duplicate_groups": 138,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 975,
+      "development-attempt": 979,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 885
@@ -4389,6 +4389,15 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou2-candidates/tree/Becoming/GrammarCandidates.lean",
+      "sha256": "1c118c1f64d43104bb2458f25722d6d0e7b1e61aca48b7443250fdfe25487280",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou2-readings/tree/Becoming/GrammarReadings.lean",
       "sha256": "22a76b389829c6262f0e89e808669d12e7f484f5f7e28342b74601538993b39f",
       "role": "development-attempt",
@@ -4542,8 +4551,35 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-map/tree/Becoming/GrammarMap.lean",
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-instances/tree/Becoming/GrammarMap.lean",
       "sha256": "5a22ea5b09b1a621cc91ccca50eeaca9644985bbeb5a21ddc91c51d08108bfd6",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-instances/tree/Becoming/MapInstances.lean",
+      "sha256": "06bc5bb78f3bec9da41596b699a7c9ff337729c42d7c0708adeac2aaf6657500",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-map/tree/Becoming/GrammarMap.lean",
+      "sha256": "96d053e0a6903883e2cb32aed977ac874db9eff4bce5437c9bc7a1304f9d6089",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-map/tree/Becoming/MapInstances.lean",
+      "sha256": "4913f2eac92b4bb7ed7061a4387226d1aa20adbd35c740271cf145bdc605208d",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -30371,6 +30407,179 @@
         "unsafe": []
       },
       "print_axioms_commands": 49
+    },
+    "06bc5bb78f3bec9da41596b699a7c9ff337729c42d7c0708adeac2aaf6657500": {
+      "byte_size": 23055,
+      "line_count": 403,
+      "imports": [
+        "Becoming.GrammarMap",
+        "Becoming.ContinuedClasses",
+        "Becoming.PatternPassing",
+        "Becoming.Continuation"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "outside_of_not_endless",
+          "qualified_name_hint": "Becoming.Map.outside_of_not_endless",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "reached_later",
+          "qualified_name_hint": "Becoming.Web.reached_later",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "active_along",
+          "qualified_name_hint": "Becoming.Web.active_along",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "reaches_onward",
+          "qualified_name_hint": "Becoming.Web.reaches_onward",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_or_reaches",
+          "qualified_name_hint": "Becoming.Web.ends_or_reaches",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "carries_iff",
+          "qualified_name_hint": "Becoming.Web.carries_iff",
+          "line": 137
+        },
+        {
+          "kind": "theorem",
+          "name": "passing_carries_iff",
+          "qualified_name_hint": "Becoming.Web.passing_carries_iff",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_renews_late",
+          "qualified_name_hint": "Becoming.Web.generation_renews_late",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_arises_late",
+          "qualified_name_hint": "Becoming.Web.generation_arises_late",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "keeping_of_carried_on",
+          "qualified_name_hint": "Becoming.Web.keeping_of_carried_on",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_carries_nothing",
+          "qualified_name_hint": "Becoming.Web.itself_carries_nothing",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_not_generation",
+          "qualified_name_hint": "Becoming.Web.itself_not_generation",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_keeps",
+          "qualified_name_hint": "Becoming.Web.itself_keeps",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "always_keeps",
+          "qualified_name_hint": "Becoming.Web.always_keeps",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "not_endless_of_gone",
+          "qualified_name_hint": "Becoming.Web.not_endless_of_gone",
+          "line": 245
+        },
+        {
+          "kind": "theorem",
+          "name": "degenerates_of_gone",
+          "qualified_name_hint": "Becoming.Web.degenerates_of_gone",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "consumed_held_not_endless",
+          "qualified_name_hint": "Becoming.Web.consumed_held_not_endless",
+          "line": 270
+        },
+        {
+          "kind": "theorem",
+          "name": "family_excess_not_endless",
+          "qualified_name_hint": "Becoming.Web.family_excess_not_endless",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "stopped_not_endless",
+          "qualified_name_hint": "Becoming.Web.stopped_not_endless",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_carry",
+          "qualified_name_hint": "Becoming.Map.shifted_carry",
+          "line": 322
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_pass",
+          "qualified_name_hint": "Becoming.Map.shifted_pass",
+          "line": 329
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_generates",
+          "qualified_name_hint": "Becoming.Map.shifted_generates",
+          "line": 338
+        },
+        {
+          "kind": "theorem",
+          "name": "relay_after_two",
+          "qualified_name_hint": "Becoming.Map.relay_after_two",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "relay_renews_and_ends",
+          "qualified_name_hint": "Becoming.Map.relay_renews_and_ends",
+          "line": 364
+        },
+        {
+          "kind": "theorem",
+          "name": "renewal_undecided",
+          "qualified_name_hint": "Becoming.Map.renewal_undecided",
+          "line": 385
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 25
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "06daa2b84d9abcbefdf37c5646b2b4ca13897cbd2462ff30f9413e3b0675b898": {
       "byte_size": 7189,
@@ -67064,6 +67273,568 @@
       "declaration_counts": {
         "def": 4,
         "theorem": 9
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "1c118c1f64d43104bb2458f25722d6d0e7b1e61aca48b7443250fdfe25487280": {
+      "byte_size": 36280,
+      "line_count": 650,
+      "imports": [
+        "Becoming.GrammarReadings"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«能»",
+          "qualified_name_hint": "Becoming.«能»",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "«所»",
+          "qualified_name_hint": "Becoming.«所»",
+          "line": 51
+        },
+        {
+          "kind": "theorem",
+          "name": "«能所相待»",
+          "qualified_name_hint": "Becoming.«能所相待»",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "«因果互即»",
+          "qualified_name_hint": "Becoming.«因果互即»",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "«二际可偏举»",
+          "qualified_name_hint": "Becoming.«二际可偏举»",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "«同根则不可偏举»",
+          "qualified_name_hint": "Becoming.«同根则不可偏举»",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "«前后相随»",
+          "qualified_name_hint": "Becoming.«前后相随»",
+          "line": 82
+        },
+        {
+          "kind": "def",
+          "name": "«互»",
+          "qualified_name_hint": "Becoming.«互»",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "«互之对称»",
+          "qualified_name_hint": "Becoming.«互之对称»",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "«生亡对偶»",
+          "qualified_name_hint": "Becoming.«生亡对偶»",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "«有生不必有亡»",
+          "qualified_name_hint": "Becoming.«有生不必有亡»",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "«作者»",
+          "qualified_name_hint": "Becoming.«作者»",
+          "line": 106
+        },
+        {
+          "kind": "def",
+          "name": "«作业»",
+          "qualified_name_hint": "Becoming.«作业»",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "«处所»",
+          "qualified_name_hint": "Becoming.«处所»",
+          "line": 112
+        },
+        {
+          "kind": "theorem",
+          "name": "«三法相因待»",
+          "qualified_name_hint": "Becoming.«三法相因待»",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "«非缘»",
+          "qualified_name_hint": "Becoming.«非缘»",
+          "line": 123
+        },
+        {
+          "kind": "theorem",
+          "name": "«无果则缘非缘皆无»",
+          "qualified_name_hint": "Becoming.«无果则缘非缘皆无»",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "«无果则皆非能»",
+          "qualified_name_hint": "Becoming.«无果则皆非能»",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "«及之两端»",
+          "qualified_name_hint": "Becoming.«及之两端»",
+          "line": 138
+        },
+        {
+          "kind": "theorem",
+          "name": "«住因于续»",
+          "qualified_name_hint": "Becoming.«住因于续»",
+          "line": 145
+        },
+        {
+          "kind": "def",
+          "name": "«有相»",
+          "qualified_name_hint": "Becoming.«有相»",
+          "line": 158
+        },
+        {
+          "kind": "theorem",
+          "name": "«知相则有其非»",
+          "qualified_name_hint": "Becoming.«知相则有其非»",
+          "line": 162
+        },
+        {
+          "kind": "theorem",
+          "name": "«离非无相»",
+          "qualified_name_hint": "Becoming.«离非无相»",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "«无色则无虚空之相»",
+          "qualified_name_hint": "Becoming.«无色则无虚空之相»",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "«有相则非亦有相»",
+          "qualified_name_hint": "Becoming.«有相则非亦有相»",
+          "line": 174
+        },
+        {
+          "kind": "theorem",
+          "name": "«非真则假»",
+          "qualified_name_hint": "Becoming.«非真则假»",
+          "line": 179
+        },
+        {
+          "kind": "theorem",
+          "name": "«非假则真»",
+          "qualified_name_hint": "Becoming.«非假则真»",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "«二值之相待»",
+          "qualified_name_hint": "Becoming.«二值之相待»",
+          "line": 192
+        },
+        {
+          "kind": "def",
+          "name": "«二点»",
+          "qualified_name_hint": "Becoming.«二点»",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "«相待之还当且仅当双非可还»",
+          "qualified_name_hint": "Becoming.«相待之还当且仅当双非可还»",
+          "line": 204
+        },
+        {
+          "kind": "theorem",
+          "name": "«遍而无相»",
+          "qualified_name_hint": "Becoming.«遍而无相»",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "«离方无迷»",
+          "qualified_name_hint": "Becoming.«离方无迷»",
+          "line": 221
+        },
+        {
+          "kind": "theorem",
+          "name": "«离觉则皆不觉»",
+          "qualified_name_hint": "Becoming.«离觉则皆不觉»",
+          "line": 226
+        },
+        {
+          "kind": "def",
+          "name": "«始觉»",
+          "qualified_name_hint": "Becoming.«始觉»",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "«始觉依不觉»",
+          "qualified_name_hint": "Becoming.«始觉依不觉»",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "«静之为类»",
+          "qualified_name_hint": "Becoming.«静之为类»",
+          "line": 244
+        },
+        {
+          "kind": "def",
+          "name": "«无定性»",
+          "qualified_name_hint": "Becoming.«无定性»",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "«定性之判»",
+          "qualified_name_hint": "Becoming.«定性之判»",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "«缘生而不自生则无定性»",
+          "qualified_name_hint": "Becoming.«缘生而不自生则无定性»",
+          "line": 267
+        },
+        {
+          "kind": "theorem",
+          "name": "«自缘则常»",
+          "qualified_name_hint": "Becoming.«自缘则常»",
+          "line": 273
+        },
+        {
+          "kind": "theorem",
+          "name": "«缕之无定性»",
+          "qualified_name_hint": "Becoming.«缕之无定性»",
+          "line": 278
+        },
+        {
+          "kind": "theorem",
+          "name": "«四相俱时»",
+          "qualified_name_hint": "Becoming.«四相俱时»",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "«念念灭当且仅当无自缘»",
+          "qualified_name_hint": "Becoming.«念念灭当且仅当无自缘»",
+          "line": 295
+        },
+        {
+          "kind": "theorem",
+          "name": "«有成坏当且仅当不自缘»",
+          "qualified_name_hint": "Becoming.«有成坏当且仅当不自缘»",
+          "line": 300
+        },
+        {
+          "kind": "theorem",
+          "name": "«无为无别相»",
+          "qualified_name_hint": "Becoming.«无为无别相»",
+          "line": 309
+        },
+        {
+          "kind": "theorem",
+          "name": "«从缘生非文法之理»",
+          "qualified_name_hint": "Becoming.«从缘生非文法之理»",
+          "line": 316
+        },
+        {
+          "kind": "theorem",
+          "name": "«断则无相续»",
+          "qualified_name_hint": "Becoming.«断则无相续»",
+          "line": 321
+        },
+        {
+          "kind": "theorem",
+          "name": "«缘先果后当且仅当无环»",
+          "qualified_name_hint": "Becoming.«缘先果后当且仅当无环»",
+          "line": 334
+        },
+        {
+          "kind": "def",
+          "name": "«俱有»",
+          "qualified_name_hint": "Becoming.«俱有»",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "«相由则俱有»",
+          "qualified_name_hint": "Becoming.«相由则俱有»",
+          "line": 348
+        },
+        {
+          "kind": "theorem",
+          "name": "«俱有为一念»",
+          "qualified_name_hint": "Becoming.«俱有为一念»",
+          "line": 354
+        },
+        {
+          "kind": "theorem",
+          "name": "«自他随位»",
+          "qualified_name_hint": "Becoming.«自他随位»",
+          "line": 370
+        },
+        {
+          "kind": "theorem",
+          "name": "«他依于自»",
+          "qualified_name_hint": "Becoming.«他依于自»",
+          "line": 376
+        },
+        {
+          "kind": "theorem",
+          "name": "«有自不必有他»",
+          "qualified_name_hint": "Becoming.«有自不必有他»",
+          "line": 381
+        },
+        {
+          "kind": "theorem",
+          "name": "«同异交得»",
+          "qualified_name_hint": "Becoming.«同异交得»",
+          "line": 392
+        },
+        {
+          "kind": "theorem",
+          "name": "«至于无共然后止»",
+          "qualified_name_hint": "Becoming.«至于无共然后止»",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "«至于无别然后至»",
+          "qualified_name_hint": "Becoming.«至于无别然后至»",
+          "line": 403
+        },
+        {
+          "kind": "theorem",
+          "name": "«状所可别»",
+          "qualified_name_hint": "Becoming.«状所可别»",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "«门摄一切»",
+          "qualified_name_hint": "Becoming.«门摄一切»",
+          "line": 417
+        },
+        {
+          "kind": "theorem",
+          "name": "«平等无异»",
+          "qualified_name_hint": "Becoming.«平等无异»",
+          "line": 421
+        },
+        {
+          "kind": "def",
+          "name": "«薪火»",
+          "qualified_name_hint": "Becoming.«薪火»",
+          "line": 425
+        },
+        {
+          "kind": "theorem",
+          "name": "«薪尽火传»",
+          "qualified_name_hint": "Becoming.«薪尽火传»",
+          "line": 429
+        },
+        {
+          "kind": "def",
+          "name": "«攖»",
+          "qualified_name_hint": "Becoming.«攖»",
+          "line": 440
+        },
+        {
+          "kind": "def",
+          "name": "«尽»",
+          "qualified_name_hint": "Becoming.«尽»",
+          "line": 443
+        },
+        {
+          "kind": "def",
+          "name": "«端»",
+          "qualified_name_hint": "Becoming.«端»",
+          "line": 446
+        },
+        {
+          "kind": "def",
+          "name": "«有厚»",
+          "qualified_name_hint": "Becoming.«有厚»",
+          "line": 449
+        },
+        {
+          "kind": "theorem",
+          "name": "«端与端俱尽»",
+          "qualified_name_hint": "Becoming.«端与端俱尽»",
+          "line": 452
+        },
+        {
+          "kind": "theorem",
+          "name": "«尺与端或尽或不尽»",
+          "qualified_name_hint": "Becoming.«尺与端或尽或不尽»",
+          "line": 461
+        },
+        {
+          "kind": "theorem",
+          "name": "«尺与尺可相尽»",
+          "qualified_name_hint": "Becoming.«尺与尺可相尽»",
+          "line": 473
+        },
+        {
+          "kind": "def",
+          "name": "«相外»",
+          "qualified_name_hint": "Becoming.«相外»",
+          "line": 484
+        },
+        {
+          "kind": "def",
+          "name": "«不相外»",
+          "qualified_name_hint": "Becoming.«不相外»",
+          "line": 487
+        },
+        {
+          "kind": "def",
+          "name": "«相尽»",
+          "qualified_name_hint": "Becoming.«相尽»",
+          "line": 490
+        },
+        {
+          "kind": "theorem",
+          "name": "«相尽则不相外»",
+          "qualified_name_hint": "Becoming.«相尽则不相外»",
+          "line": 493
+        },
+        {
+          "kind": "def",
+          "name": "«坚白之体»",
+          "qualified_name_hint": "Becoming.«坚白之体»",
+          "line": 497
+        },
+        {
+          "kind": "theorem",
+          "name": "«不相外则相尽当且仅当双非可还»",
+          "qualified_name_hint": "Becoming.«不相外则相尽当且仅当双非可还»",
+          "line": 501
+        },
+        {
+          "kind": "theorem",
+          "name": "«是不俱当»",
+          "qualified_name_hint": "Becoming.«是不俱当»",
+          "line": 519
+        },
+        {
+          "kind": "theorem",
+          "name": "«必或不当当且仅当弱排中»",
+          "qualified_name_hint": "Becoming.«必或不当当且仅当弱排中»",
+          "line": 524
+        },
+        {
+          "kind": "def",
+          "name": "«诘»",
+          "qualified_name_hint": "Becoming.«诘»",
+          "line": 536
+        },
+        {
+          "kind": "theorem",
+          "name": "«对称有常则不可诘»",
+          "qualified_name_hint": "Becoming.«对称有常则不可诘»",
+          "line": 542
+        },
+        {
+          "kind": "theorem",
+          "name": "«核则不可致诘»",
+          "qualified_name_hint": "Becoming.«核则不可致诘»",
+          "line": 553
+        },
+        {
+          "kind": "theorem",
+          "name": "«诘之对称»",
+          "qualified_name_hint": "Becoming.«诘之对称»",
+          "line": 558
+        },
+        {
+          "kind": "theorem",
+          "name": "«不可致诘而有常则混而为一»",
+          "qualified_name_hint": "Becoming.«不可致诘而有常则混而为一»",
+          "line": 568
+        },
+        {
+          "kind": "inductive",
+          "name": "«歧网»",
+          "qualified_name_hint": "Becoming.«歧网»",
+          "line": 576
+        },
+        {
+          "kind": "def",
+          "name": "«歧网之步»",
+          "qualified_name_hint": "Becoming.«歧网之步»",
+          "line": 583
+        },
+        {
+          "kind": "theorem",
+          "name": "«歧网之自反»",
+          "qualified_name_hint": "Becoming.«歧网之自反»",
+          "line": 590
+        },
+        {
+          "kind": "theorem",
+          "name": "«链与无尽不可诘»",
+          "qualified_name_hint": "Becoming.«链与无尽不可诘»",
+          "line": 595
+        },
+        {
+          "kind": "theorem",
+          "name": "«甲乙不可诘»",
+          "qualified_name_hint": "Becoming.«甲乙不可诘»",
+          "line": 608
+        },
+        {
+          "kind": "theorem",
+          "name": "«无尽与链不同核»",
+          "qualified_name_hint": "Becoming.«无尽与链不同核»",
+          "line": 621
+        },
+        {
+          "kind": "theorem",
+          "name": "«甲乙不同核»",
+          "qualified_name_hint": "Becoming.«甲乙不同核»",
+          "line": 634
+        },
+        {
+          "kind": "theorem",
+          "name": "«致诘不尽»",
+          "qualified_name_hint": "Becoming.«致诘不尽»",
+          "line": 644
+        }
+      ],
+      "declaration_counts": {
+        "def": 23,
+        "inductive": 1,
+        "theorem": 66
       },
       "textual_markers": {
         "sorry": [],
@@ -138546,6 +139317,179 @@
         "def": 6,
         "structure": 2,
         "theorem": 10
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "4913f2eac92b4bb7ed7061a4387226d1aa20adbd35c740271cf145bdc605208d": {
+      "byte_size": 23103,
+      "line_count": 403,
+      "imports": [
+        "Becoming.GrammarMap",
+        "Becoming.ContinuedClasses",
+        "Becoming.PatternPassing",
+        "Becoming.Continuation"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "outside_of_not_endless",
+          "qualified_name_hint": "Becoming.Map.outside_of_not_endless",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "reached_later",
+          "qualified_name_hint": "Becoming.Web.reached_later",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "active_along",
+          "qualified_name_hint": "Becoming.Web.active_along",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "reaches_onward",
+          "qualified_name_hint": "Becoming.Web.reaches_onward",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_or_reaches",
+          "qualified_name_hint": "Becoming.Web.ends_or_reaches",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "carries_iff",
+          "qualified_name_hint": "Becoming.Web.carries_iff",
+          "line": 137
+        },
+        {
+          "kind": "theorem",
+          "name": "passing_carries_iff",
+          "qualified_name_hint": "Becoming.Web.passing_carries_iff",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_renews_late",
+          "qualified_name_hint": "Becoming.Web.generation_renews_late",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_arises_late",
+          "qualified_name_hint": "Becoming.Web.generation_arises_late",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "keeping_of_carried_on",
+          "qualified_name_hint": "Becoming.Web.keeping_of_carried_on",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_carries_nothing",
+          "qualified_name_hint": "Becoming.Web.itself_carries_nothing",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_not_generation",
+          "qualified_name_hint": "Becoming.Web.itself_not_generation",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "itself_keeps",
+          "qualified_name_hint": "Becoming.Web.itself_keeps",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "always_keeps",
+          "qualified_name_hint": "Becoming.Web.always_keeps",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "not_endless_of_gone",
+          "qualified_name_hint": "Becoming.Web.not_endless_of_gone",
+          "line": 245
+        },
+        {
+          "kind": "theorem",
+          "name": "degenerates_of_gone",
+          "qualified_name_hint": "Becoming.Web.degenerates_of_gone",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "consumed_held_not_endless",
+          "qualified_name_hint": "Becoming.Web.consumed_held_not_endless",
+          "line": 270
+        },
+        {
+          "kind": "theorem",
+          "name": "family_excess_not_endless",
+          "qualified_name_hint": "Becoming.Web.family_excess_not_endless",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "stopped_not_endless",
+          "qualified_name_hint": "Becoming.Web.stopped_not_endless",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_carry",
+          "qualified_name_hint": "Becoming.Map.shifted_carry",
+          "line": 322
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_pass",
+          "qualified_name_hint": "Becoming.Map.shifted_pass",
+          "line": 329
+        },
+        {
+          "kind": "theorem",
+          "name": "shifted_generates",
+          "qualified_name_hint": "Becoming.Map.shifted_generates",
+          "line": 338
+        },
+        {
+          "kind": "theorem",
+          "name": "relay_after_two",
+          "qualified_name_hint": "Becoming.Map.relay_after_two",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "relay_renews_and_ends",
+          "qualified_name_hint": "Becoming.Map.relay_renews_and_ends",
+          "line": 364
+        },
+        {
+          "kind": "theorem",
+          "name": "renewal_undecided",
+          "qualified_name_hint": "Becoming.Map.renewal_undecided",
+          "line": 385
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 25
       },
       "textual_markers": {
         "sorry": [],
@@ -258469,6 +259413,358 @@
         "def": 7,
         "structure": 1,
         "theorem": 14
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "96d053e0a6903883e2cb32aed977ac874db9eff4bce5437c9bc7a1304f9d6089": {
+      "byte_size": 21120,
+      "line_count": 409,
+      "imports": [
+        "Becoming.Grammar"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«传»",
+          "qualified_name_hint": "Becoming.«传»",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "«传则异»",
+          "qualified_name_hint": "Becoming.«传则异»",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "«所及»",
+          "qualified_name_hint": "Becoming.«所及»",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "«所及之传递»",
+          "qualified_name_hint": "Becoming.«所及之传递»",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "«全生成»",
+          "qualified_name_hint": "Becoming.«全生成»",
+          "line": 66
+        },
+        {
+          "kind": "def",
+          "name": "«全守»",
+          "qualified_name_hint": "Becoming.«全守»",
+          "line": 71
+        },
+        {
+          "kind": "def",
+          "name": "«有终»",
+          "qualified_name_hint": "Becoming.«有终»",
+          "line": 75
+        },
+        {
+          "kind": "def",
+          "name": "«新而有终»",
+          "qualified_name_hint": "Becoming.«新而有终»",
+          "line": 78
+        },
+        {
+          "kind": "theorem",
+          "name": "«全生成有终不并»",
+          "qualified_name_hint": "Becoming.«全生成有终不并»",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "«全生成全守不并»",
+          "qualified_name_hint": "Becoming.«全生成全守不并»",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "«全守有终不并»",
+          "qualified_name_hint": "Becoming.«全守有终不并»",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "«有常则无终»",
+          "qualified_name_hint": "Becoming.«有常则无终»",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "«有终则粗不有常»",
+          "qualified_name_hint": "Becoming.«有终则粗不有常»",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "«全生有终之定当且仅当排中»",
+          "qualified_name_hint": "Becoming.«全生有终之定当且仅当排中»",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "«全生成之所及亦全生成»",
+          "qualified_name_hint": "Becoming.«全生成之所及亦全生成»",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "«有终之所前亦有终»",
+          "qualified_name_hint": "Becoming.«有终之所前亦有终»",
+          "line": 135
+        },
+        {
+          "kind": "theorem",
+          "name": "«全三域之周»",
+          "qualified_name_hint": "Becoming.«全三域之周»",
+          "line": 142
+        },
+        {
+          "kind": "def",
+          "name": "«阶全生成»",
+          "qualified_name_hint": "Becoming.«阶全生成»",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "«阶全生成则上无终»",
+          "qualified_name_hint": "Becoming.«阶全生成则上无终»",
+          "line": 165
+        },
+        {
+          "kind": "theorem",
+          "name": "«相续之续»",
+          "qualified_name_hint": "Becoming.«相续之续»",
+          "line": 177
+        },
+        {
+          "kind": "def",
+          "name": "«延»",
+          "qualified_name_hint": "Becoming.«延»",
+          "line": 182
+        },
+        {
+          "kind": "inductive",
+          "name": "«尽»",
+          "qualified_name_hint": "Becoming.«尽»",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "«延尽不并»",
+          "qualified_name_hint": "Becoming.«延尽不并»",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "«不穷则延»",
+          "qualified_name_hint": "Becoming.«不穷则延»",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "«尽则非不穷»",
+          "qualified_name_hint": "Becoming.«尽则非不穷»",
+          "line": 205
+        },
+        {
+          "kind": "def",
+          "name": "«生成»",
+          "qualified_name_hint": "Becoming.«生成»",
+          "line": 210
+        },
+        {
+          "kind": "def",
+          "name": "«守»",
+          "qualified_name_hint": "Becoming.«守»",
+          "line": 215
+        },
+        {
+          "kind": "def",
+          "name": "«退化»",
+          "qualified_name_hint": "Becoming.«退化»",
+          "line": 219
+        },
+        {
+          "kind": "def",
+          "name": "«新而尽»",
+          "qualified_name_hint": "Becoming.«新而尽»",
+          "line": 222
+        },
+        {
+          "kind": "theorem",
+          "name": "«生成则延»",
+          "qualified_name_hint": "Becoming.«生成则延»",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "«守则延»",
+          "qualified_name_hint": "Becoming.«守则延»",
+          "line": 228
+        },
+        {
+          "kind": "theorem",
+          "name": "«生成退化不并»",
+          "qualified_name_hint": "Becoming.«生成退化不并»",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "«守退化不并»",
+          "qualified_name_hint": "Becoming.«守退化不并»",
+          "line": 236
+        },
+        {
+          "kind": "theorem",
+          "name": "«单行则族含所及»",
+          "qualified_name_hint": "Becoming.«单行则族含所及»",
+          "line": 241
+        },
+        {
+          "kind": "theorem",
+          "name": "«单行则生守不并»",
+          "qualified_name_hint": "Becoming.«单行则生守不并»",
+          "line": 253
+        },
+        {
+          "kind": "theorem",
+          "name": "«延尽之定当且仅当排中»",
+          "qualified_name_hint": "Becoming.«延尽之定当且仅当排中»",
+          "line": 266
+        },
+        {
+          "kind": "def",
+          "name": "«阶生成»",
+          "qualified_name_hint": "Becoming.«阶生成»",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "«阶生成则上不退化»",
+          "qualified_name_hint": "Becoming.«阶生成则上不退化»",
+          "line": 291
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Map.step",
+          "line": 303
+        },
+        {
+          "kind": "theorem",
+          "name": "step_irrefl",
+          "qualified_name_hint": "Becoming.Map.step_irrefl",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "Endless.generation",
+          "qualified_name_hint": "Becoming.Map.Endless.generation",
+          "line": 310
+        },
+        {
+          "kind": "def",
+          "name": "still",
+          "qualified_name_hint": "Becoming.Map.still",
+          "line": 317
+        },
+        {
+          "kind": "theorem",
+          "name": "Still.keeping",
+          "qualified_name_hint": "Becoming.Map.Still.keeping",
+          "line": 320
+        },
+        {
+          "kind": "def",
+          "name": "short",
+          "qualified_name_hint": "Becoming.Map.short",
+          "line": 324
+        },
+        {
+          "kind": "theorem",
+          "name": "short_end",
+          "qualified_name_hint": "Becoming.Map.short_end",
+          "line": 326
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.degeneration",
+          "qualified_name_hint": "Becoming.Map.Short.degeneration",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.renews_and_ends",
+          "qualified_name_hint": "Becoming.Map.Short.renews_and_ends",
+          "line": 335
+        },
+        {
+          "kind": "theorem",
+          "name": "Endless.generates",
+          "qualified_name_hint": "Becoming.Map.Endless.generates",
+          "line": 342
+        },
+        {
+          "kind": "theorem",
+          "name": "Still.keeps",
+          "qualified_name_hint": "Becoming.Map.Still.keeps",
+          "line": 348
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.ends",
+          "qualified_name_hint": "Becoming.Map.Short.ends",
+          "line": 353
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.renews_and_ends_everywhere",
+          "qualified_name_hint": "Becoming.Map.Short.renews_and_ends_everywhere",
+          "line": 359
+        },
+        {
+          "kind": "inductive",
+          "name": "Branch",
+          "qualified_name_hint": "Becoming.Map.Branch",
+          "line": 364
+        },
+        {
+          "kind": "def",
+          "name": "fork",
+          "qualified_name_hint": "Becoming.Map.fork",
+          "line": 368
+        },
+        {
+          "kind": "theorem",
+          "name": "fork_chain_begins",
+          "qualified_name_hint": "Becoming.Map.fork_chain_begins",
+          "line": 379
+        },
+        {
+          "kind": "theorem",
+          "name": "«生守相杂»",
+          "qualified_name_hint": "Becoming.Map.«生守相杂»",
+          "line": 384
+        }
+      ],
+      "declaration_counts": {
+        "def": 17,
+        "inductive": 2,
+        "theorem": 36
       },
       "textual_markers": {
         "sorry": [],
