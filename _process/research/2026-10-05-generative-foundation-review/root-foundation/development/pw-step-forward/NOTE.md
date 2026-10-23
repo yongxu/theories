@@ -74,6 +74,25 @@ So the organism's end leaves the core of the organism's class. Under a coarser c
 
 GS2's two descent witnesses are to say which case holds, and where.
 
+## 6b. What GS2 landed (`acb1c2a52`, 07 §4.5)
+
+Candidate (3) is on main in `Becoming.GrammarScope` (core receipt `20261023T220231.427406Z`), at [07 §4.5](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end):
+
+- `«过亡而续»`: on a line under a class from a center, what continues under that class an occurrence where a finer line (an organism's) ends is reached, and lies on no line of the finer class from there.
+- `«核有续当且仅当有不穷»`: a class's core continues something exactly where some line under it goes on without end.
+- Two lines of descent, both with the one as the class of descent:
+  - In endless descent the core is the whole and continues through each birth while each member's line ends (`LineOfDescent.Endless.core_through_birth`). This is §6a's first case.
+  - In descent that ends, no core continues anything, yet the one still reaches the second member past the first's end (`LineOfDescent.Last.descent_past_end`). The reach holds outside every core, which is the second case.
+
+**What this settles for PW.** The reach past one's end is a theorem, and both of §6a's cases now have a witness. The question of §5 is made exact, not answered:
+
+- Both models use the one, the coarsest class, as the class of descent. Neither has a class narrower than the one and wider than the member's, such as a family line, a practice or a people.
+- The reading that the dynamics fix a class only through its core is labelled a reading.
+
+What remains open, held de se, is which class a center's own line runs under. Whether a living line has a core of its own between the organism's and the one is the next witness worth building. Where only the one carries the line on, reaching one's successors is reaching everything, which is the condition itself.
+
+Also from GS2: 07's feeding and influence relations run toward conditions, the converse of 缘, so a closure reaches what one depends on. §4.5 states this, which is §2–3's point.
+
 ## 7. Candidate theorems, for the owners
 
 None is claimed here. Each goes to its owner on the board.
