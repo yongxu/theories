@@ -14,8 +14,8 @@ Result(s): relative-position-is-zero-sum, own-count-misses-joint-excess, loss-be
 Delta: none to any result. A reader's objections, raised in conversation before reading the
   text, each answered from the account or placed at its stated edge (§2); the conversation's
   ideas located (§3); six corrections, five of them to claims made in the conversation where the
-  account keeps a condition the talk dropped (§4); three text changes (§5); two test-system
-  candidates for GS3 (§6)
+  account keeps a condition the talk dropped (§4); three text changes and a fourth part of the
+  reading D66 (§5); two test-system candidates for GS3 (§6)
 Supplied premises / correspondence: which speaker said what (provisional); the transcript's
   wording (automatic); the notes' reconstruction (ChatGPT's)
 Evidence: argument; the cited records and their receipts
@@ -53,7 +53,7 @@ So "self-terminating" holds of a race that depends on what it draws down, has no
 
 **Q2. Why would an expanding AI future fail to be generative, given how much it would produce?** In the account, generation is a pattern going on through carrying renewal ([02](../../../../../../theories/becoming/chapters/02-MAP.md#branches)). 生生 is life in the whole and its continuing generation. And widening is not "generative" ([08](../../../../../../theories/becoming/chapters/08-METHOD.md#five-words)). Novelty and scale are none of these.
 
-Ren's own definition in the conversation is a situation continuing "in some way that creates more situations, but not less". That is the account's widening: one course widens another where at every step it admits everything the other admits, and at some step more ([07 §2](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#order)). An expansion that ends forms of life does not admit what the other course admits, so it is mixed, not a widening. C leaves mixed courses unordered. OPENING says so: "What neither yet does is weigh a part that does both". T8 is refuted by such a case argued better from every standpoint with no further premise. Where the expansion ends what it itself needs, self-concern alone ranks it below from every standpoint ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)).
+Ren's own definition in the conversation is a situation continuing "in some way that creates more situations, but not less". That is the account's widening: one course widens another where at every step it admits everything the other admits, and at some step more ([07 §2](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#order)). An expansion that ends forms of life which another course keeps both exceeds that course and fails to include it. So the two are mixed, and neither widens the other. C ranks only widenings, so it leaves them unordered. OPENING says so: "What neither yet does is weigh a part that does both". T8 would be refuted by such a case argued better from every standpoint with no further premise. Where what the expansion ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below, from every standpoint ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)).
 
 *Verdict:* answered as far as the account reaches. Beyond that lies its stated edge, a measure for mixed parts (open item 5). Proposed as a row of 07 §9 (§5, P3).
 
@@ -135,13 +135,29 @@ Nor is an objection answered by the frame it is said to come from. That it presu
 **P2, 08 §12**, a bullet after "What the checks reach" in "The work read by its own laws":
 
 ```markdown
-- *What the work draws on* [AI reading, new]. The work's selectors take in no reading of what renews the people who carry it, while its parallel lines each draw on their attention. The work is not a flow, and the law is used here only by analogy: takers each within what is renewed can together exceed it, and where they depend on it the excess ends what depends on it ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess)). So the work's pace is weighed against what renews its carriers, as its items are weighed against its purpose. Objections a reader raised in conversation, each with where the account stands, are read in [a study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/hc-a-conversation-at-home/NOTE.md).
+- *What the work draws on.* The work's selectors take in no reading of what renews the people who carry it, while its parallel lines each draw on their attention. The work is not a flow, and the law is used here only by analogy: takers each within what is renewed can together exceed it, and where they depend on it the excess ends what depends on it ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess)). So the work's pace is weighed against what renews its carriers, as its items are weighed against its purpose. Objections a reader raised in conversation, each with where the account stands, are read in [a study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/hc-a-conversation-at-home/NOTE.md).
 ```
+
+P1 and P2 read the work by its own laws, as the paragraph they join does, so they are registered as a fourth part of that paragraph's reading, D66, in the register of readings (P4). The bullet then sits under the paragraph's label `[AI reading, D66]`.
 
 **P3, 07 §9**, a row of the objections table, after "Graded status, priority, sufficiency, constraints":
 
 ```markdown
-| An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale ([02](02-MAP.md#branches)); an expansion that ends forms of life does not include what they admit, so it is mixed and C leaves it unranked, as T8 says ([§8](#theses)); where it ends what it needs itself, self-concern alone ranks it below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+| An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale ([02](02-MAP.md#branches)); an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8 falls only to such a case argued better from every standpoint with no further premise ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+```
+
+**P4, the register of readings**, D66 in [DELEGATED-CHOICES](../../DELEGATED-CHOICES.md#d66-the-work-read-by-its-own-laws). A fourth part after part 3, and one sentence added to each of "Reasons" and "What would change it":
+
+```markdown
+4. **What the work draws on, and what it takes in from objections** (added 24 October 2026, board item HC, from [a conversation at home](../../../../sources/15-codex-theory-conversations/2026-10-24-a-conversation-at-home.md)). The work's selectors take in no reading of what renews the people who carry it, while its parallel lines each draw on their attention; by analogy with joint excess, the work's pace is weighed against what renews its carriers, as its items are weighed against its purpose ([08 §12](../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws)). And an account that read every objection as its objector's capture would take in no objection, so an objection is answered on what it says, not by the frame it is said to come from ([08 §1](../../../../theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding)).
+```
+
+```markdown
+Part 4 is an analogy in its first half, as part 2 is, and in its second applies part 1's law to the work's answers: an objection couples into the work's selection only where the work reads what it says.
+```
+
+```markdown
+A pace set by a reading of what renews the work's carriers makes part 4's first half a statement of what was missing; an account that answered every objection by its frame and still took in what each says would refute its second half.
 ```
 
 ## 6. Handovers (board rule 2: the owner decides)
