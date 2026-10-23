@@ -2131,32 +2131,41 @@ theorem falls_over (step : ∀ t, x (t + 1) = x t + g t - d t) {t : Nat} (renews
         rw [← Naturals.sub_sub, Naturals.add_sub_cancel,
           Naturals.sub_add_cancel (c := 1) positive]
 
+/-- What the step from `t` takes from a level `x` given `g`: the level with what is given, less
+what stands after. -/
+def drawnAt (x g : Nat → Nat) (t : Nat) : Nat := x t + g t - x (t + 1)
+
 /-- **Above the renewal, the level falls below any need, within its starting excess over it.**
 Where at every step at most `r` is given, however low the level, and more than `r` is taken, the
 level stands below a positive need `m` at every step `t` with `x 0 < m + t`, so at every step from
-`x 0` on. -/
+`x 0` on. The case of rest by balance (`Amounts.falls_by_stretch`): what a step takes is the level
+with what is given, less what stands after (`drawnAt`), so the course balances across each step, and
+while the level stands at the need it is positive and loses at least one more than it is given. -/
 theorem ends_within (step : ∀ t, x (t + 1) = x t + g t - d t) (renews : ∀ t, g t ≤ r)
     (over : ∀ t, r < d t) (needs : 0 < m) :
     ∀ t, x 0 < m + t → x t < m :=
-  have falling : ∀ t, x t = 0 ∨ x t + t ≤ x 0 := fun t => by
-    induction t with
-    | zero => exact .inr (Nat.le_refl _)
-    | succ t ih =>
-      match Nat.eq_zero_or_pos (x t) with
-      | .inl gone => exact .inl (Nat.eq_zero_of_le_zero
-          (Nat.le_trans (never_rises step (renews t) (over t)) (Nat.le_of_eq gone)))
-      | .inr positive =>
-        match ih with
-        | .inl gone => exact (absurd (Eq.subst (motive := fun y => 0 < y) gone positive)
-            (Nat.lt_irrefl 0))
-        | .inr fell =>
-          exact .inr (calc x (t + 1) + (t + 1) = x (t + 1) + 1 + t :=
-                (Nat.add_assoc _ _ _).symm.trans (Nat.add_right_comm _ _ _)
-            _ ≤ x t + t := Nat.add_le_add_right (falls_over step (renews t) (over t) positive) t
-            _ ≤ x 0 := fell)
-  fun t within => match falling t with
-    | .inl gone => Nat.lt_of_le_of_lt (Nat.le_of_eq gone) needs
-    | .inr fell => Nat.lt_of_add_lt_add_right (Nat.lt_of_le_of_lt fell within)
+  have later_le : ∀ s k, x (s + k) ≤ x s := fun s k => by
+    induction k with
+    | zero => exact Nat.le_refl _
+    | succ k ih => exact Nat.le_trans (never_rises step (renews (s + k)) (over (s + k))) ih
+  fun t within => match Nat.lt_or_ge (x t) m with
+    | .inl below => below
+    | .inr atNeed =>
+      have stands : ∀ s, s < t → m ≤ x s := fun s before => match le_dest (Nat.le_of_lt before) with
+        | ⟨k, same⟩ => Nat.le_trans atNeed (Nat.le_trans (Nat.le_of_eq (congrArg x same))
+            (later_le s k))
+      have across : ∀ s, 0 ≤ s → s < 0 + t → x (s + 1) + drawnAt x g s = x s + g s :=
+        fun s _ _ => Naturals.add_sub_of_le (by rw [step s]; exact Nat.sub_le _ _)
+      have loses : ∀ s, 0 ≤ s → s < 0 + t → g s + 1 ≤ drawnAt x g s := fun s _ before =>
+        have positive : 0 < x s :=
+          Nat.lt_of_lt_of_le needs (stands s (Nat.lt_of_lt_of_le before (Nat.le_of_eq (Nat.zero_add t))))
+        Naturals.le_sub_of_add_le (Nat.le_trans
+          (Nat.le_of_eq ((Nat.add_assoc _ _ _).symm.trans (Nat.add_right_comm _ _ _)))
+          (Nat.add_le_add_right (falls_over step (renews s) (over s) positive) (g s)))
+      have fell := Amounts.falls_by_stretch (q := x) 0 t across loses
+      absurd (Nat.lt_of_lt_of_le within (Nat.le_trans (Nat.add_le_add_right atNeed t)
+        (Nat.le_trans (Nat.le_of_eq (congrArg (· + t) (congrArg x (Nat.zero_add t)).symm)) fell)))
+        (Nat.lt_irrefl _)
 
 /-- **Within the renewal, the level stays at the need and never falls.** Where exactly `r` is
 given while the level stands at the need or above and at most `r` is taken at every step, a level
@@ -2196,10 +2205,6 @@ theorem kept_iff_within (step : ∀ t, x (t + 1) = x t + g t - d t) {k : Nat}
     | .inr within => within,
    fun within t => (kept_at_need step renewing (fun t => Nat.le_trans (Nat.le_of_eq (draws t))
       within) start t).1⟩
-
-/-- What the step from `t` takes from a level `x` given `g`: the level with what is given, less
-what stands after. -/
-def drawnAt (x g : Nat → Nat) (t : Nat) : Nat := x t + g t - x (t + 1)
 
 /-- **What stands and what was drawn.** Where each step leaves at most the level with what is
 given, across `n` steps what stands after with everything drawn is the starting level with
@@ -6295,22 +6300,19 @@ theorem drawable_step {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ G t (x t)
 most what stands, and at each step to the `n`-th the level the first leaves gains, weighted, at most
 what the level the second leaves gains (`w (t + 1)` on what stands at it, against `w t` on it held),
 what the first could draw at each step to the `n`-th, with what it drew before, is at most what the
-second could. -/
+second could. The case of balanced counts comparing by their exchanges (`Amounts.le_by_exchange`):
+what a course could draw, with what it drew before, balances across each step (`drawable_step`). -/
 theorem drawable_le_of_gains {x h : Nat → Nat} (within : ∀ t, x (t + 1) ≤ G t (x t))
     (withinH : ∀ t, h (t + 1) ≤ G t (h t)) (start : x 0 = h 0)
     (gains : ∀ t, t < n → w (t + 1) * G (t + 1) (x (t + 1)) + w t * h (t + 1) ≤
       w (t + 1) * G (t + 1) (h (t + 1)) + w t * x (t + 1)) :
-    ∀ t, t ≤ n → drawable w G x t ≤ drawable w G h t
-  | 0, _ => by
-    show 0 + w 0 * G 0 (x 0) ≤ 0 + w 0 * G 0 (h 0)
-    rw [start]
-    exact Nat.le_refl _
-  | t + 1, le =>
-    have sum := add_steps (drawable_step (w := w) within t) (drawable_step (w := w) withinH t)
-    Naturals.le_of_add_le_add_right (k := w t * x (t + 1) + w t * h (t + 1))
-      (Nat.le_trans (Nat.le_of_eq sum.1) (Nat.le_trans (Nat.add_le_add
-        (drawable_le_of_gains within withinH start gains t (Nat.le_of_succ_le le))
-        (gains t (Nat.lt_of_succ_le le))) (Nat.le_of_eq sum.2.symm)))
+    ∀ t, t ≤ n → drawable w G x t ≤ drawable w G h t :=
+  fun t le => Eq.subst (motive := fun k => drawable w G x k ≤ drawable w G h k) (Nat.zero_add t)
+    (Amounts.le_by_exchange (q := drawable w G x) (q' := drawable w G h) 0 t
+      (fun s _ _ => drawable_step (w := w) within s) (fun s _ _ => drawable_step (w := w) withinH s)
+      (by show 0 + w 0 * G 0 (x 0) ≤ 0 + w 0 * G 0 (h 0); rw [start]; exact Nat.le_refl _)
+      fun s _ below => gains s (Nat.lt_of_lt_of_le below (Nat.le_trans
+        (Nat.le_of_eq (Nat.zero_add t)) le)))
 
 /-- Where, besides, the level the first course leaves at some step before the `n`-th gains less
 than the second's, the first could draw less at every later step to the `n`-th. -/

@@ -510,32 +510,59 @@ theorem from_zero {A : Nat → Nat → Nat} (H : Nat) (nothing : FromNothing A) 
       A ((Law.orbit (step A H) p k).1 - H) (Law.orbit (step A H) p k).2 = 0
     rw [from_zero H nothing zero k, Nat.zero_sub, nothing, Nat.zero_add]
 
+/-- **The adjusted step balances.** The level after a step, with what the draw takes (all there is,
+up to `H`), is the level before with what is given. -/
+theorem step_balances (A : Nat → Nat → Nat) (H : Nat) (p : Nat × Nat) :
+    (step A H p).1 + (p.1 - (p.1 - H)) = p.1 + A (p.1 - H) p.2 :=
+  (Nat.add_right_comm (p.1 - H) (A (p.1 - H) p.2) (p.1 - (p.1 - H))).trans
+    (congrArg (· + A (p.1 - H) p.2) (Naturals.add_sub_of_le (Nat.sub_le p.1 H)))
+
+/-- Below the point of no return, with the recent giving short of the draw, the run stays below the
+point with the recent giving short of the draw. -/
+theorem orbit_inside {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H) :
+    ∀ n, (Law.orbit (step A H) (x, r) n).1 < H + y ∧ (Law.orbit (step A H) (x, r) n).2 < H
+  | 0 => ⟨below, rshort⟩
+  | n + 1 =>
+    have ⟨inside, still⟩ := orbit_inside short stays nothing below rshort n
+    have next := step_below (x := (Law.orbit (step A H) (x, r) n).1)
+      (r := (Law.orbit (step A H) (x, r) n).2) short stays nothing inside still
+    ⟨next.1, next.2.1⟩
+
 /-- Below the point of no return, with the recent giving short of the draw, after `n` steps the
 level is still below the point, the recent giving still short of the draw, and the level has
-fallen by at least `n`. -/
+fallen by at least `n`. The fall is rest by balance (`Amounts.falls_by_stretch`): the run balances
+across each step (`step_balances`), and at each step at which the level is positive the draw takes
+at least one more than is given; where the level reaches nothing first, it stays there. -/
 theorem orbit_bound {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
     (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H) :
     ∀ n, (Law.orbit (step A H) (x, r) n).1 < H + y ∧ (Law.orbit (step A H) (x, r) n).2 < H ∧
-      (Law.orbit (step A H) (x, r) n).1 ≤ x - n
-  | 0 => ⟨below, rshort, Nat.le_refl x⟩
-  | n + 1 => by
-    have ⟨inside, still, le⟩ := orbit_bound short stays nothing below rshort n
-    have next := step_below (x := (Law.orbit (step A H) (x, r) n).1)
-      (r := (Law.orbit (step A H) (x, r) n).2) short stays nothing inside still
-    show (step A H (Law.orbit (step A H) (x, r) n)).1 < H + y ∧
-      (step A H (Law.orbit (step A H) (x, r) n)).2 < H ∧
-      (step A H (Law.orbit (step A H) (x, r) n)).1 ≤ x - (n + 1)
-    refine ⟨next.1, next.2.1, ?_⟩
-    refine (Nat.eq_zero_or_pos (Law.orbit (step A H) (x, r) n).1).elim
-      (fun zero => ?_) (fun pos => ?_)
-    · have z : (step A H (Law.orbit (step A H) (x, r) n)).1 = 0 := from_zero H nothing zero 1
-      rw [z]; exact Nat.zero_le _
-    · have h0 : (step A H (Law.orbit (step A H) (x, r) n)).1 + 1 ≤ x - n :=
-        Nat.le_trans (next.2.2 pos) le
-      have h1 : 1 + (step A H (Law.orbit (step A H) (x, r) n)).1 ≤ x - n := by
-        rw [Nat.add_comm]; exact h0
-      rw [← Naturals.sub_sub x n 1]
-      exact Naturals.le_sub_of_add_le h1
+      (Law.orbit (step A H) (x, r) n).1 ≤ x - n := fun n =>
+  have inside := orbit_inside short stays nothing below rshort
+  have fell : (Law.orbit (step A H) (x, r) n).1 ≤ x - n :=
+    match Amounts.unmarked_or_marked (P := fun k => 0 < (Law.orbit (step A H) (x, r) k).1)
+        (fun k => (Nat.lt_or_ge 0 (Law.orbit (step A H) (x, r) k).1).elim .inl
+          fun none => .inr (Nat.not_lt_of_ge none)) 0 n with
+    | .inl ⟨k, _, before, unmarked⟩ =>
+      have zero : (Law.orbit (step A H) (x, r) k).1 = 0 :=
+        Nat.eq_zero_of_le_zero (Nat.le_of_not_lt unmarked)
+      have same : k + (n - k) = n :=
+        Naturals.add_sub_of_le (Nat.le_of_lt (Nat.lt_of_lt_of_le before (Nat.le_of_eq (Nat.zero_add n))))
+      Nat.le_trans (Nat.le_of_eq ((congrArg (fun m => (Law.orbit (step A H) (x, r) m).1) same).symm.trans
+        ((congrArg Prod.fst (Law.orbit_add (step A H) (x, r) k (n - k))).trans
+          (from_zero H nothing zero (n - k))))) (Nat.zero_le _)
+    | .inr positive =>
+      have fallen := Amounts.falls_by_stretch (q := fun k => (Law.orbit (step A H) (x, r) k).1)
+        (x := fun k => (Law.orbit (step A H) (x, r) k).1 - ((Law.orbit (step A H) (x, r) k).1 - H))
+        (y := fun k => A ((Law.orbit (step A H) (x, r) k).1 - H) (Law.orbit (step A H) (x, r) k).2)
+        0 n (fun k _ _ => step_balances A H (Law.orbit (step A H) (x, r) k))
+        fun k _ before => Naturals.le_sub_of_add_le
+          ((step_below (x := (Law.orbit (step A H) (x, r) k).1) (r := (Law.orbit (step A H) (x, r) k).2)
+            short stays nothing (inside k).1 (inside k).2).2.2 (positive k (Nat.zero_le k) before))
+      Naturals.le_sub_of_add_le (Nat.le_trans (Nat.le_of_eq (Nat.add_comm _ _))
+        (Nat.le_trans (Nat.le_of_eq (congrArg (fun m => (Law.orbit (step A H) (x, r) m).1 + n)
+          (Nat.zero_add n).symm)) fallen))
+  ⟨(inside n).1, (inside n).2, fell⟩
 
 /-- **Below the point of no return, with the recent giving short of the draw, the condition is
 gone**, after as many steps as it stood, at every adjustment keeping giving short where the recent
@@ -2563,32 +2590,38 @@ theorem alikeOn_false {x y : ι → Nat} :
     else ⟨j, .head _, h⟩
 
 /-- Within a band under mutual support, the run of a web of the listed conditions is still, condition
-by condition, from some step at most one more than what the draws leave of them, added. -/
+by condition, from some step at most one more than what the draws leave of them, added. The case of
+rest by balance, decided (`Amounts.unmarked_within`): what the draws leave, added, never rises along
+the run (`left_falls`), so with its fall recorded as what is taken it balances, and it falls by at
+least one at each step that does not leave it alike at every listed condition (`leftOver_lt`). -/
 theorem rests_by (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
     {cs : List ι} (covers : ∀ i, i ∈ cs) :
     ∀ (d : Nat) (s : ι → Nat), (∀ i, s i ≤ hi) → leftOver H s cs ≤ d →
       ∃ N, N ≤ d + 1 ∧ ∀ k i, (Law.run (step Drawn.whole G H) s).state (N + k) i =
-        (Law.run (step Drawn.whole G H) s).state N i
-  | 0, s, high, fuel =>
-    match h : alikeOn H (step Drawn.whole G H s) s cs with
-    | true => ⟨1, Nat.le_refl 1, still_of_left (n := 0) rises fun j => alikeOn_true h j (covers j)⟩
-    | false => match alikeOn_false h with
-      | ⟨_, mem, apart⟩ => absurd (Nat.lt_of_lt_of_le
-          (leftOver_lt (left_falls rises band high 0) apart cs mem) fuel) (Nat.not_lt_zero _)
-  | d + 1, s, high, fuel =>
-    match h : alikeOn H (step Drawn.whole G H s) s cs with
-    | true => ⟨1, Nat.succ_le_succ (Nat.zero_le _),
-        still_of_left (n := 0) rises fun j => alikeOn_true h j (covers j)⟩
-    | false => match alikeOn_false h with
-      | ⟨_, mem, apart⟩ =>
-        match rests_by rises band covers d (step Drawn.whole G H s) (band s high)
-          (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le
-            (leftOver_lt (left_falls rises band high 0) apart cs mem) fuel)) with
-        | ⟨N, le, still⟩ => ⟨N + 1, Nat.succ_le_succ le, fun k i =>
-            (congrArg (fun m => (Law.run (step Drawn.whole G H) s).state m i)
-              (Nat.add_right_comm N 1 k)).trans
-            ((congrArg (· i) (run_shift (step Drawn.whole G H) s (N + k))).symm.trans
-              ((still k i).trans (congrArg (· i) (run_shift (step Drawn.whole G H) s N))))⟩
+        (Law.run (step Drawn.whole G H) s).state N i :=
+  fun _ s high fuel =>
+    have falls : ∀ n, leftOver H ((Law.run (step Drawn.whole G H) s).state (n + 1)) cs ≤
+        leftOver H ((Law.run (step Drawn.whole G H) s).state n) cs :=
+      fun n => leftOver_le (fun i => left_falls rises band high n i) cs
+    match Amounts.unmarked_within (q := fun n => leftOver H ((Law.run (step Drawn.whole G H) s).state n) cs)
+        (x := fun n => leftOver H ((Law.run (step Drawn.whole G H) s).state n) cs -
+          leftOver H ((Law.run (step Drawn.whole G H) s).state (n + 1)) cs) (y := fun _ => 0)
+        (P := fun n => alikeOn H ((Law.run (step Drawn.whole G H) s).state (n + 1))
+          ((Law.run (step Drawn.whole G H) s).state n) cs = false)
+        (fun n => match Bool.eq_false_or_eq_true (alikeOn H ((Law.run (step Drawn.whole G H) s).state (n + 1))
+            ((Law.run (step Drawn.whole G H) s).state n) cs) with
+          | .inl alike => .inr fun differs => Bool.noConfusion (alike.symm.trans differs)
+          | .inr differs => .inl differs)
+        0 (fun n _ => (Naturals.add_sub_of_le (falls n)).trans (Nat.add_zero _).symm)
+        (fun n _ differs => match alikeOn_false differs with
+          | ⟨_, mem, apart⟩ => Nat.le_trans (Nat.le_of_eq (Nat.zero_add 1))
+              (Naturals.le_sub_of_add_le (leftOver_lt (left_falls rises band high n) apart cs mem))) with
+    | ⟨N, _, within, unmoved⟩ =>
+      have alike : alikeOn H ((Law.run (step Drawn.whole G H) s).state (N + 1))
+          ((Law.run (step Drawn.whole G H) s).state N) cs = true :=
+        (Bool.eq_false_or_eq_true _).elim id fun differs => absurd differs unmoved
+      ⟨N + 1, Nat.succ_le_succ (Nat.le_trans within (Nat.le_trans (Nat.le_of_eq (Nat.zero_add _)) fuel)),
+        still_of_left (n := N) rises fun j => alikeOn_true alike j (covers j)⟩
 
 /-- **Under mutual support within a band, a web's run comes to rest.** In whole numbers, where each
 condition's giving rises with what is left of each and the step keeps a band up to `hi`, the run from
