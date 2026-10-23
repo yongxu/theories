@@ -235,8 +235,8 @@ order every standpoint shares when each weighs what can form in its own way.
   (`Capacities.second_in_degree`).
 * **When a consumer can draw past the stock at all.** Some flow read off a web with capacities
   lets the consumer draw past the stock exactly where, at every step of the stretch, the class can
-  give the step's demand (`Flow.possible_iff_covers`, with `Flow.givenFrom_outside`); elsewhere
-  every need holds vacuously (`needsPart_of_none`). Wherever a flow is possible, each member can
+  give the step's demand (`Flow.possible_iff_covers`, with `Flow.covers_of_drawsPast`); elsewhere
+  every need holds vacuously (`Flow.needs_of_class_short`, by `needsPart_of_none`). Wherever a flow is possible, each member can
   give its shortfall (`Flow.capacityWithout_split`, `Flow.able_of_covers`), so its degree of need is
   attained (`Flow.least_giving_of_possible`). Drawing without end needs giving without end: a
   consumer drawing at every step from `T` has, after every step `N`, some member giving within the
@@ -3615,6 +3615,27 @@ theorem able_of_covers (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g
     W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g :=
   excess_le_of_covered (Nat.le_trans covers (Nat.le_of_eq (capacityWithout_split apart outside member t)))
 
+/-- In a flow read off a web with capacities in which `f`, not a member, takes part and takes from
+the family at a step of the stretch, the class can give that step's demand. -/
+theorem covers_of_drawsPast {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    (outside : ¬ f ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n) (present : f ∈ L.present t)
+    (takes : 0 < total cs (L.take t f)) : W.demand cs t ≤ W.capacityWithout cap ks f t :=
+  Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) present takes)
+    (Nat.le_trans (Nat.le_of_eq ((replenishment_split (g := f) L t).trans
+        ((congrArg (total (L.present t) (fun x => if x = f then 0 else total cs (L.give t x)) + ·)
+          (givenFrom_outside fed outside t)).trans (Nat.add_zero _))))
+      (others_le_capacityWithout fed from_ to))
+
+/-- **Where the class cannot give some step's demand, every need is vacuous**: no flow read off
+the web with capacities lets `f`, not a member, draw past the stock, so `f` needs every
+formation's giving. -/
+theorem needs_of_class_short (outside : ¬ f ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n)
+    (short : W.capacityWithout cap ks f t < W.demand cs t) (h : F) :
+    NeedsPart (FedOnlyWithin W cap cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f h :=
+  needsPart_of_none fun _ fed draws => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le short
+    (covers_of_drawsPast fed outside from_ to (draws.2 t from_ to).2.1 (draws.2 t from_ to).2.2))
+
 end Possible
 
 /-- **Some flow lets `f` draw past the stock exactly where the class can give each step's
@@ -3623,7 +3644,7 @@ demand.** Over the flows read off a web with capacities, for a family without re
 let `f`, not a member, be active across a stretch longer than the family's stock. Some such flow has
 `f` drawing past the stock exactly where, at every step of the stretch, what the active members
 can give together covers the step's demand. Elsewhere `f` needs every member, vacuously
-(`needsPart_of_none`). -/
+(`needs_of_class_short`). -/
 theorem possible_iff_covers [DecidableEq F] [DecidableEq C] {W : Web F C}
     [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
     {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f : F}
@@ -3631,13 +3652,8 @@ theorem possible_iff_covers [DecidableEq F] [DecidableEq C] {W : Web F C}
     (below : W.stock cs T < n) :
     (∃ L, FedOnlyWithin W cap cs (· ∈ ks) T n L ∧ DrawsPast cs T n (L, W) f) ↔
       ∀ t, T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks f t :=
-  ⟨fun ⟨L, fed, draws⟩ t from_ to =>
-    Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) (draws.2 t from_ to).2.1
-        (draws.2 t from_ to).2.2)
-      (Nat.le_trans (Nat.le_of_eq ((replenishment_split (g := f) L t).trans
-          ((congrArg (total (L.present t) (fun x => if x = f then 0 else total cs (L.give t x)) + ·)
-            (givenFrom_outside fed outside t)).trans (Nat.add_zero _))))
-        (others_le_capacityWithout fed from_ to)),
+  ⟨fun ⟨_, fed, draws⟩ t from_ to =>
+    covers_of_drawsPast fed outside from_ to (draws.2 t from_ to).2.1 (draws.2 t from_ to).2.2,
    fun covers => ⟨sharedDrawn W cap cs c₀ ks T n f f,
      sharedDrawn_fedOnlyWithin distinct inside apart outside covers,
      sharedDrawn_drawsPast inside alive below⟩⟩

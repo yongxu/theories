@@ -95,7 +95,7 @@ replace_once(STEP, "| A feeder is needed in degree: the least it gives while the
              "`Flow.least_giving_of_possible`,")
 insert_after(STEP, '| A feeder is needed in degree: wherever a flow is possible,', [
     '| Some flow lets the consumer draw past the stock exactly where the class can give each step\'s demand, elsewhere '
-    'every need vacuous; drawing without end needs giving without end | `Flow.possible_iff_covers`, `needsPart_of_none`, '
+    'every need vacuous; drawing without end needs giving without end | `Flow.possible_iff_covers`, `Flow.needs_of_class_short`, '
     '`Flow.able_of_covers`, `Flow.needsSome_without_end`, `FeedersInTurn.possible` | `Becoming.Weightings` | landed |',
 ])
 
@@ -114,7 +114,7 @@ replace_once(CHOICES, "A feeder's degree of need is read as the least it gives w
 insert_after(CHOICES, '11. **Need in degree.**', [
     '12. **Possible courses.** That some flow lets the consumer draw past the stock is read off the web: exactly where the '
     'class can give each step\'s demand (`Flow.possible_iff_covers`). Where none does, need holds vacuously '
-    '(`needsPart_of_none`) and is not read as need: no reading here rests on a vacuous need '
+    '(`Flow.needs_of_class_short`) and is not read as need: no reading here rests on a vacuous need '
     f'(study section {N}, IV3h).',
 ])
 replace_once(CHOICES, "and they part exactly at copies, as transmission to facilitative and to necessary means part in the "

@@ -142,10 +142,10 @@ order every standpoint shares when each weighs what can form in its own way.
   of the class give to the family (`Flow.FedOnlyBy`). A formation that draws past the family's
   stock across a stretch (`Flow.DrawsPast`) has some member of the class giving to the family
   within the stretch (`Flow.GivesWithin`, `Flow.needsSome_of_drawsPast`): what was taken beyond
-  the stock was given. So it needs a given feeder's giving exactly where that feeder is the only
-  member that can feed the family alone (`Flow.needs_giver_iff_only`); on `Feeders`, two flows of
-  one condition each fed by one copy, the user needs some feeder's giving and neither feeder's
-  (`Feeders.two_feeders`).
+  the stock was given. Where each member can feed the family alone, it needs a given feeder's
+  giving exactly where that feeder is the only member (`Flow.needs_giver_iff_only`); on `Feeders`,
+  two flows of one condition each fed by one copy, the user needs some feeder's giving and neither
+  feeder's (`Feeders.two_feeders`).
 * **Which feeders can feed alone, read off a web.** Fix the web and read the possible flows off
   it: each balances on the family within the stretch, only active formations give and only members
   of the class give to the family (`Flow.FedOnlyOn`); the base law holds over them
@@ -157,7 +157,8 @@ order every standpoint shares when each weighs what can form in its own way.
   (`Flow.partAlone_on`), so the copies law holds over the web with nothing supplied
   (`Flow.needs_giver_iff_only_on`). Exactly: with activity and identity of formations decided, a
   consumer drawing past the stock needs a member's giving exactly where, at some step of the
-  stretch calling for giving, that member is the only one active (`Flow.needs_giver_iff_alone`).
+  stretch calling for giving, no member other than it is active (`Flow.needs_giver_iff_alone`);
+  this includes, vacuously, a step at which no member is active.
   On `Feeders`' web neither copy is needed (`Feeders.two_feeders_on`); in `FeedersInTurn`, two
   copies active in turn, both are (`FeedersInTurn.needs_both`).
 * **Capacities of giving.** Supply with the web what each formation can give the family at each
@@ -226,11 +227,21 @@ order every standpoint shares when each weighs what can form in its own way.
   most what they can together (`Flow.others_le_capacityWithout`), so the feeder gives at each step
   at least its shortfall (`Flow.shortfall_le_givenFrom`, `Flow.shortfalls_le_given`). Where it can
   give each of its shortfalls, the flow in which its capacity is its shortfall
-  (`Web.shortCapacity`, `Flow.gradedDrawn`) has it give exactly that (`Flow.least_giving`). So the
-  least a feeder gives while the consumer draws past the stock is the sum of its shortfalls, its
-  degree of need, and a feeder is needed exactly where that degree is positive
-  (`Flow.needs_giver_iff_shortfalls_pos`). In `Capacities` the user needs the second copy in
-  degree one and the first in degree zero (`Capacities.second_in_degree`).
+  (`Web.shortCapacity`, `Flow.gradedDrawn`) has it give exactly that (`Flow.least_giving`). So,
+  wherever some flow lets the consumer draw past the stock, the least a feeder gives is the sum of
+  its shortfalls, its degree of need (`Flow.least_giving_of_possible`), and a feeder is needed
+  exactly where that degree is positive (`Flow.needs_giver_iff_shortfalls_pos`). In `Capacities`
+  the user needs the second copy in degree one and the first in degree zero
+  (`Capacities.second_in_degree`).
+* **When a consumer can draw past the stock at all.** Some flow read off a web with capacities
+  lets the consumer draw past the stock exactly where, at every step of the stretch, the class can
+  give the step's demand (`Flow.possible_iff_covers`, with `Flow.covers_of_drawsPast`); elsewhere
+  every need holds vacuously (`Flow.needs_of_class_short`, by `needsPart_of_none`). Wherever a flow is possible, each member can
+  give its shortfall (`Flow.capacityWithout_split`, `Flow.able_of_covers`), so its degree of need is
+  attained (`Flow.least_giving_of_possible`). Drawing without end needs giving without end: a
+  consumer drawing at every step from `T` has, after every step `N`, some member giving within the
+  next `stock N + 1` steps (`Flow.needsSome_without_end`). In `FeedersInTurn` a flow is possible,
+  so the user's need of both copies is not vacuous (`FeedersInTurn.possible`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -288,16 +299,19 @@ decides nothing within their common closure, since each center's own closure is 
 and the step of invariance has work only beyond it. Drawn along need, self-concern reaches a copy
 of what it needs only where the copy is the only one, when each copy could carry the need alone,
 so with many such copies the presupposition reaches the class and none of them, and with one it
-reaches that one. With capacities a copy counts by what it can give: self-concern reaches a feeder
+reaches that one. With capacities a copy counts by what it can give: a consumer needs a feeder
 exactly where the others together could not give what a step demands, so two copies that can each
-give only part of it are both reached, three of one unit each against a demand of two leave none
-reached, and redundancy is a matter of capacity, not of number. Read a feeder's capacity as what
-its own supply passes on: a feeder whose store runs out is no copy from then on, and self-concern,
-drawn along need past what a hierarchy holds, reaches what feeds its top, so its reach is not
-bounded by the families a center draws on directly. Read a feeder's degree of need as the grade
-with which self-concern drawn along need reaches it: need itself is its standing, a positive
-degree, and the degree is how much the center's continuation draws on it beyond what the others
-could give. Read an order increasing in
+give only part of it are both needed, three of one unit each against a demand of two leave none
+needed, and redundancy is a matter of capacity, not of number. Read a feeder's capacity as what its
+own supply passes on: a feeder whose store runs out is no copy from then on, and drawing past what
+a hierarchy fed only at its top holds needs giving into that top. Read the need of these laws on
+flows as what self-concern drawn along need reaches: the presupposition reaches exactly what is
+needed where need is its own closure (the marked case), and need with two readings is not, so the
+reading carries the reach over without a theorem; on it, self-concern's reach is not bounded by the
+families a center draws on directly. Read a feeder's degree of need as the grade with which
+self-concern so drawn reaches it: need itself is its standing, a positive degree, and the degree is
+how much the center's continuation draws on it beyond what the others could give. Read an order
+increasing in
 its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
@@ -3537,6 +3551,142 @@ theorem needs_giver_iff_shortfalls_pos [DecidableEq F] [DecidableEq C] {W : Web 
 
 end Flow
 
+/-! ## When a consumer can draw past the stock at all -/
+
+/-- Where no possible course lets `f` continue, `f` needs every part, vacuously. -/
+theorem needsPart_of_none {Ω : Type} {possible : Ω → Prop} {continues part : Ω → F → Prop}
+    {f g : F} (none : ∀ ω, possible ω → ¬ continues ω f) : NeedsPart possible continues part f g :=
+  fun ω here going => absurd going (none ω here)
+
+namespace Flow
+
+variable {C : Type}
+
+section Possible
+
+variable [DecidableEq F] {W : Web F C} [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat}
+  {cs : List C} {ks : List F} {T n : Nat} {f g : F}
+
+omit [∀ t x, Decidable (W.active t x)] in
+/-- In a flow read off a web with capacities for a family fed only from `ks`, a formation that is
+not a member gives the family nothing. -/
+theorem givenFrom_outside {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    (outside : ¬ f ∈ ks) (t : Nat) : L.givenFrom cs t f = 0 :=
+  total_eq_zero fun x present => match decEq x f with
+  | isTrue same => (if_pos same).trans (total_eq_zero fun c inside => eq_zero_of_not_pos fun pos =>
+      outside (Eq.subst (motive := fun y => y ∈ ks) same (fed.1.2.2 t x c inside present pos)))
+  | isFalse other => if_neg other
+
+/-- A member's capacity apart from `f`, not a member, is its capacity apart from a member `g`, and
+`g`'s apart from `f` where it is `g`. -/
+theorem otherCapacity_split (outside : ¬ f ∈ ks) (t : Nat) {h : F} (member : h ∈ ks) :
+    W.otherCapacity cap f t h =
+      W.otherCapacity cap g t h + if h = g then W.otherCapacity cap f t g else 0 :=
+  have apartF : h ≠ f := fun same => outside (Eq.subst (motive := fun y => y ∈ ks) same member)
+  match decEq h g with
+  | isTrue same => (Nat.zero_add _).symm.trans
+      ((congrArg (· + W.otherCapacity cap f t h)
+        (if_neg fun both : W.active t h ∧ h ≠ g => both.2 same).symm).trans
+        (congrArg (W.otherCapacity cap g t h + ·)
+          ((congrArg (W.otherCapacity cap f t) same).trans (if_pos same).symm)))
+  | isFalse other => match (inferInstance : Decidable (W.active t h)) with
+    | isTrue active => (if_pos ⟨active, apartF⟩).trans ((if_pos ⟨active, other⟩).symm.trans
+        ((Nat.add_zero _).symm.trans (congrArg (W.otherCapacity cap g t h + ·) (if_neg other).symm)))
+    | isFalse idle => (if_neg fun both : W.active t h ∧ h ≠ f => idle both.1).trans
+        ((if_neg fun both : W.active t h ∧ h ≠ g => idle both.1).symm.trans
+          ((Nat.add_zero _).symm.trans (congrArg (W.otherCapacity cap g t h + ·) (if_neg other).symm)))
+
+/-- What the members can give together apart from `f`, not a member, is what those other than a
+member `g` can give and what `g` can give. -/
+theorem capacityWithout_split (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    (t : Nat) :
+    W.capacityWithout cap ks f t = W.capacityWithout cap ks g t + W.otherCapacity cap f t g :=
+  (Weighting.total_congr_on fun _ inks => otherCapacity_split (g := g) outside t inks).trans
+    ((total_add _ _ ks).trans (congrArg (W.capacityWithout cap ks g t + ·)
+      ((total_eq_at (a := g) (fun h pos => match decEq h g with
+          | isTrue same => same
+          | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+              (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other))))) apart member).trans
+        (if_pos rfl))))
+
+/-- Where the class can give a step's demand, each member can give its shortfall there. -/
+theorem able_of_covers (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks) {t : Nat}
+    (covers : W.demand cs t ≤ W.capacityWithout cap ks f t) :
+    W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g :=
+  excess_le_of_covered (Nat.le_trans covers (Nat.le_of_eq (capacityWithout_split apart outside member t)))
+
+/-- In a flow read off a web with capacities in which `f`, not a member, takes part and takes from
+the family at a step of the stretch, the class can give that step's demand. -/
+theorem covers_of_drawsPast {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    (outside : ¬ f ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n) (present : f ∈ L.present t)
+    (takes : 0 < total cs (L.take t f)) : W.demand cs t ≤ W.capacityWithout cap ks f t :=
+  Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) present takes)
+    (Nat.le_trans (Nat.le_of_eq ((replenishment_split (g := f) L t).trans
+        ((congrArg (total (L.present t) (fun x => if x = f then 0 else total cs (L.give t x)) + ·)
+          (givenFrom_outside fed outside t)).trans (Nat.add_zero _))))
+      (others_le_capacityWithout fed from_ to))
+
+/-- **Where the class cannot give some step's demand, every need is vacuous**: no flow read off
+the web with capacities lets `f`, not a member, draw past the stock, so `f` needs every
+formation's giving. -/
+theorem needs_of_class_short (outside : ¬ f ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n)
+    (short : W.capacityWithout cap ks f t < W.demand cs t) (h : F) :
+    NeedsPart (FedOnlyWithin W cap cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f h :=
+  needsPart_of_none fun _ fed draws => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le short
+    (covers_of_drawsPast fed outside from_ to (draws.2 t from_ to).2.1 (draws.2 t from_ to).2.2))
+
+end Possible
+
+/-- **Some flow lets `f` draw past the stock exactly where the class can give each step's
+demand.** Over the flows read off a web with capacities, for a family without repetition holding
+`c₀`, fed only from the members of a list without repetition, with activity and identity decided,
+let `f`, not a member, be active across a stretch longer than the family's stock. Some such flow has
+`f` drawing past the stock exactly where, at every step of the stretch, what the active members
+can give together covers the step's demand. Elsewhere `f` needs every member, vacuously
+(`needs_of_class_short`). -/
+theorem possible_iff_covers [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f : F}
+    (outside : ¬ f ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) :
+    (∃ L, FedOnlyWithin W cap cs (· ∈ ks) T n L ∧ DrawsPast cs T n (L, W) f) ↔
+      ∀ t, T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks f t :=
+  ⟨fun ⟨_, fed, draws⟩ t from_ to =>
+    covers_of_drawsPast fed outside from_ to (draws.2 t from_ to).2.1 (draws.2 t from_ to).2.2,
+   fun covers => ⟨sharedDrawn W cap cs c₀ ks T n f f,
+     sharedDrawn_fedOnlyWithin distinct inside apart outside covers,
+     sharedDrawn_drawsPast inside alive below⟩⟩
+
+/-- **Wherever some flow lets `f` draw past the stock, the least a member gives is the sum of its
+shortfalls**: the degree of need is attained wherever any flow is possible. -/
+theorem least_giving_of_possible [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (member : g ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n)
+    (possible : ∃ L, FedOnlyWithin W cap cs (· ∈ ks) T n L ∧ DrawsPast cs T n (L, W) f) :
+    ∃ L, FedOnlyWithin W cap cs (· ∈ ks) T n L ∧ DrawsPast cs T n (L, W) f ∧
+      total (steps T n) (fun t => L.givenFrom cs t g) = total (steps T n) (W.shortfall cap cs ks g) :=
+  (least_giving (c₀ := c₀) distinct inside apart outside member alive below).2 fun t from_ to =>
+    able_of_covers apart outside member
+      ((possible_iff_covers distinct inside apart outside alive below).mp possible t from_ to)
+
+/-- **Drawing without end needs giving without end.** On a flow balancing on a family at every
+step from `T`, in which only active formations give and only members of `K` give to the family, a
+formation taking part and taking from the family at every step from `T` has, after every step `N`
+from `T`, some member of `K` giving to the family within the next `stock N + 1` steps. -/
+theorem needsSome_without_end (W : Web F C) (cs : List C) (K : F → Prop) (T : Nat) (f : F)
+    (L : Flow F C) (balances : ∀ t, T ≤ t → L.BalancesOn W cs t) (acting : L.Acting W)
+    (only : ∀ t g c, c ∈ cs → g ∈ L.present t → 0 < L.give t g c → K g)
+    (draws : ∀ t, T ≤ t → W.active t f ∧ f ∈ L.present t ∧ 0 < total cs (L.take t f)) :
+    ∀ N, T ≤ N → ∃ g, K g ∧ GivesWithin cs N (W.stock cs N + 1) (L, W) g :=
+  fun N after => needsSome_on W cs K N (W.stock cs N + 1) f L
+    ⟨fun t from_ _ => balances t (Nat.le_trans after from_), acting, only⟩
+    ⟨Nat.lt_succ_self _, fun t from_ _ => draws t (Nat.le_trans after from_)⟩
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -4161,6 +4311,36 @@ theorem second_in_degree :
      by decide⟩
 
 end Capacities
+
+namespace FeedersInTurn
+
+open Copies (Part)
+
+/-- Who gives at a step: the first copy at step `0`, the second after it. -/
+def turn : Nat → Part
+  | 0 => .first
+  | _ + 1 => .second
+
+/-- **Some flow read off the web lets the user draw past the stock**: the flow drawn across the
+two steps with the copy active at each giving. The user's need of both copies is not vacuous. -/
+theorem possible :
+    Flow.FedOnlyOn web [()] (· ∈ [Part.first, .second]) 0 2
+        (Flow.drawnAcross web [()] 0 2 .user turn) ∧
+      Flow.DrawsPast [()] 0 2 (Flow.drawnAcross web [()] 0 2 .user turn, web) .user :=
+  ⟨Flow.drawnAcross_fedOnlyOn
+      (fun t => match t with
+        | 0 => fun same => Part.noConfusion same
+        | _ + 1 => fun same => Part.noConfusion same)
+      (fun t _ to _ => match t, to with
+        | 0, _ => rfl
+        | 1, _ => rfl
+        | _ + 2, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 2 _)))
+      (fun t => match t with
+        | 0 => .head _
+        | _ + 1 => .tail _ (.head _)),
+   Flow.drawnAcross_drawsPast (List.Mem.head []) (fun _ _ _ => rfl) (Nat.succ_pos 1)⟩
+
+end FeedersInTurn
 
 /-! ## What self-concern alone ranks -/
 

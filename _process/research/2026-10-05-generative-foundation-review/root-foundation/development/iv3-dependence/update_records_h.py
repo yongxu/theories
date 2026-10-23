@@ -54,7 +54,7 @@ def replace_text(item, old_en, new_en, new_zh):
 B, FL = 'Becoming.', 'Becoming.Flow.'
 POSSIBLE = need([B + 'needsPart_of_none']
                 + [FL + n for n in ['givenFrom_outside', 'otherCapacity_split', 'capacityWithout_split', 'able_of_covers',
-                                    'possible_iff_covers', 'least_giving_of_possible', 'needsSome_without_end']]
+                                    'covers_of_drawsPast', 'needs_of_class_short', 'possible_iff_covers', 'least_giving_of_possible', 'needsSome_without_end']]
                 + [B + 'FeedersInTurn.' + n for n in ['turn', 'possible']])
 SCOPE = t(
     f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {core_id}): every declaration of '
@@ -70,16 +70,17 @@ d = json.loads(path.read_text(encoding='utf-8'))
 assert len(d['laws']) == 18
 d['statement'] = t(
     'Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another\'s '
-    'closures; on the base, a consumer needs a feeder\'s giving exactly where the others could not together give what '
-    'a step demands, and drawing past a hierarchy fed only from above needs giving into its top.',
+    'closures; on the base, a consumer needs a feeder exactly where the others could not together give what a step '
+    'demands, and drawing past a hierarchy fed from above needs giving into its top.',
     '从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；在基底上，消耗者恰在其余者合起来给不出某步需求之处需要某供给者的'
     '给予，而汲取超出只从上方供给的层级，需要向其顶层的给予。')
 assert len(d['statement']['en']) <= 300 and len(d['statement']['zh']) <= 150, (len(d['statement']['en']), len(d['statement']['zh']))
 law5 = d['laws'][5]
 assert law5['en'].endswith('needs a given feeder\'s giving exactly where that feeder is the only one. Witness: two flows of one condition, each fed by one copy.')
-law5['en'] = law5['en'].replace('and needs a given feeder\'s giving exactly where that feeder is the only one.',
-                                'and, where each member can feed the family alone, needs a given feeder\'s giving exactly '
-                                'where that feeder is the only member.')
+law5['en'] = ('On the base, over balanced flows with their webs in which only active formations give and only a class '
+              'gives to a family, a formation drawing past the family\'s stock across a stretch has some member of the class '
+              'giving to the family within it, and, where each member can feed alone, needs a given feeder\'s giving exactly '
+              'where that feeder is the only member. Witness: two flows of one condition, each fed by one copy.')
 law5['zh'] = law5['zh'] + '（此“唯一者”之律以每个成员都能单独供给该族为前提。）'
 law8 = d['laws'][8]
 assert 'that member is the only one active.' in law8['en']

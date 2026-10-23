@@ -368,7 +368,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "cd8a41e162c8f8baa6f6cf3b84bbb98917078c3f256411edea90717d083a046d"
+      "sha256": "389e721489700828c87e695702448f55ea7ebbf186d6a55c9f346e07d2c6154d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
@@ -474,12 +474,18 @@
       "role": "receipt",
       "sha256": "e39f436b88c5fcc5d3bb9a06719f02f28f6cfacd88f07c19d6c116e6d507a720",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
+      "role": "receipt",
+      "sha256": "593ae19587ba22d782f219d409919498f8632094d30ecf0a5177cdac8160649e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T094249.727687Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-23T09:46:27+00:00",
+  "reviewed_at_utc": "2026-10-23T10:25:21+00:00",
   "statement": {
-    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures; drawn along need, it reaches a copy of what it needs exactly where the others could not together give what is drawn, and what feeds the top of any hierarchy it draws past.",
-    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；沿“所需”来画，它恰在其余者合起来给不出所汲取者之处达到其所需的该副本，并达到它汲取超出其所持有的任何层级之顶层的供给者。"
+    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures; on the base, a consumer needs a feeder exactly where the others could not together give what a step demands, and drawing past a hierarchy fed from above needs giving into its top.",
+    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；在基底上，消耗者恰在其余者合起来给不出某步需求之处需要某供给者的给予，而汲取超出只从上方供给的层级，需要向其顶层的给予。"
   },
   "laws": [
     {
@@ -76,8 +76,8 @@
       ]
     },
     {
-      "en": "On the base, over the flows with their webs that balance, in which only active formations give and only a class gives to a family of conditions, a formation drawing past the family's stock across a stretch has some member of the class giving to the family within it, and needs a given feeder's giving exactly where that feeder is the only one. Witness: two flows of one condition, each fed by one copy.",
-      "zh": "在基底上，就平衡、只有活跃构成给予、且只有某一类给予某条件族的流及其依存网而言，在一段步上汲取超出该族存量的构成，在这段之内有该类的某成员给予该族；它恰在某供给者是唯一者时需要该供给者的给予。见证：同一条件的两个流，各由一个副本供给。",
+      "en": "On the base, over balanced flows with their webs in which only active formations give and only a class gives to a family, a formation drawing past the family's stock across a stretch has some member of the class giving to the family within it, and, where each member can feed alone, needs a given feeder's giving exactly where that feeder is the only member. Witness: two flows of one condition, each fed by one copy.",
+      "zh": "在基底上，就平衡、只有活跃构成给予、且只有某一类给予某条件族的流及其依存网而言，在一段步上汲取超出该族存量的构成，在这段之内有该类的某成员给予该族；它恰在某供给者是唯一者时需要该供给者的给予。见证：同一条件的两个流，各由一个副本供给。（此“唯一者”之律以每个成员都能单独供给该族为前提。）",
       "declarations": [
         "Becoming.Flow.FedOnlyBy",
         "Becoming.Flow.DrawsPast",
@@ -127,8 +127,8 @@
       ]
     },
     {
-      "en": "With activity and identity decided and the class listed, a consumer drawing past the stock needs a member's giving exactly where, at some step calling for giving, that member is the only one active. Witness FeedersInTurn: two copies active in turn, both needed.",
-      "zh": "活动与同一可判定、类为有限列表时，汲取超出存量的消耗者恰在某个需要给予的步上某成员是唯一活跃者时需要它的给予。见证 FeedersInTurn：两个轮流活跃的副本，两者都被需要。",
+      "en": "With activity and identity decided and the class listed, a consumer drawing past the stock needs a member's giving exactly where, at some step calling for giving, no member other than it is active (vacuously so where none is). Witness FeedersInTurn: two copies active in turn, both needed.",
+      "zh": "活动与同一可判定、类为有限列表时，汲取超出存量的消耗者恰在某个需要给予的步上没有其他成员活跃时需要它的给予。见证 FeedersInTurn：两个轮流活跃的副本，两者都被需要。",
       "declarations": [
         "Becoming.Flow.firstActiveOther",
         "Becoming.Flow.firstActiveOther_mem",
@@ -321,8 +321,8 @@
       ]
     },
     {
-      "en": "A feeder's shortfall is what a step demands beyond what the other active members can give. In every possible flow in which the consumer draws past the stock the feeder gives at least the sum of its shortfalls, and where it can give each, some has it give exactly that: its degree of need. Need is a positive degree. Witness Capacities: the second copy needed in degree one, the first in degree zero.",
-      "zh": "供给者某步的缺额，是该步需求超出其余活跃成员合起来能给者。在消耗者汲取超出存量的每个可能的流中，供给者所给至少是其缺额之和；它能给出每个缺额时，某个可能的流使它恰好给出这么多：这是它被需要的程度。“所需”就是程度为正。见证 Capacities：第二个副本被需要的程度为一，第一个为零。",
+      "en": "A feeder's shortfall is what a step demands beyond what the other active members can give. In every possible flow in which the consumer draws past the stock the feeder gives at least the sum of its shortfalls, and wherever a flow is possible some has it give exactly that: its degree of need. Need is a positive degree. Witness Capacities: the second copy needed in degree one, the first in degree zero.",
+      "zh": "供给者某步的缺额，是该步需求超出其余活跃成员合起来能给者。在消耗者汲取超出存量的每个可能的流中，供给者所给至少是其缺额之和；凡有可能的流，某个流使它恰好给出这么多：这是它被需要的程度。“所需”就是程度为正。见证 Capacities：第二个副本被需要的程度为一，第一个为零。",
       "declarations": [
         "Becoming.covered_by_excess",
         "Becoming.excess_le_of_covered",
@@ -344,6 +344,24 @@
         "Becoming.Flow.needs_giver_iff_shortfalls_pos",
         "Becoming.Capacities.copies_apart",
         "Becoming.Capacities.second_in_degree"
+      ]
+    },
+    {
+      "en": "Some flow read off a web with capacities lets the consumer draw past the stock exactly where the class can give each step's demand; elsewhere every need holds vacuously, and wherever a flow is possible the degree of need is attained. Drawing without end needs giving without end: after every step some member gives within the next stock-plus-one steps. Witness FeedersInTurn.possible.",
+      "zh": "某个从依存网读出的有容量的流使消耗者汲取超出存量，恰在该类能给出每步需求之处；别处一切“所需”都是空真的，凡有可能的流，被需要的程度都可达成。无尽的汲取需要无尽的给予：每一步之后，在随后存量加一步之内有某成员给予。见证 FeedersInTurn.possible。",
+      "declarations": [
+        "Becoming.needsPart_of_none",
+        "Becoming.Flow.givenFrom_outside",
+        "Becoming.Flow.otherCapacity_split",
+        "Becoming.Flow.capacityWithout_split",
+        "Becoming.Flow.able_of_covers",
+        "Becoming.Flow.covers_of_drawsPast",
+        "Becoming.Flow.needs_of_class_short",
+        "Becoming.Flow.possible_iff_covers",
+        "Becoming.Flow.least_giving_of_possible",
+        "Becoming.Flow.needsSome_without_end",
+        "Becoming.FeedersInTurn.turn",
+        "Becoming.FeedersInTurn.possible"
       ]
     }
   ],
@@ -375,6 +393,10 @@
     {
       "en": "For need in degree to be attained: the feeder a member able to give its shortfall at every step of the stretch.",
       "zh": "就程度的达成：供给者是成员，且在这段步的每一步都能给出其缺额。"
+    },
+    {
+      "en": "Every exact law on the base: the consumer outside the class and active across a stretch longer than the family's stock.",
+      "zh": "基底上的每条精确之律：消耗者在该类之外，并在长于该族存量的一段步内活跃。"
     }
   ],
   "does_not_show": [
@@ -384,8 +406,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That actual centers depend on one another, or that the alternatives to a condition they all need could not together give what they draw: both are empirical.",
-      "zh": "实际的诸中心彼此依存，或它们都需要的某个条件的诸替代者合起来给不出它们所汲取者：二者都是经验问题。",
+      "en": "That actual centers depend on one another, or that the alternatives to a condition they all need could not together give what each step demands: both are empirical.",
+      "zh": "实际的诸中心彼此依存，或它们都需要的某个条件的诸替代者合起来给不出每步的需求：二者都是经验问题。",
       "kind": "correspondence"
     },
     {
@@ -415,8 +437,8 @@
       "kind": "scope"
     },
     {
-      "en": "Need without end: on the base a continuation is read as drawing past the stock within a stretch; that drawing without end needs giving without end holds in the core only doubly negated.",
-      "zh": "无尽的“所需”：在基底上，延续读作在一段步之内汲取超出存量；无尽的汲取需要无尽的给予，在核心中只以双重否定成立。",
+      "en": "That a need holding where no flow lets the consumer draw past the stock is substantive: there it holds vacuously, and that is exactly where the class cannot give some step's demand.",
+      "zh": "在没有流使消耗者汲取超出存量之处成立的“所需”是实质的：那里它是空真的，而这恰是该类给不出某步需求之处。",
       "kind": "scope"
     }
   ],
@@ -483,6 +505,13 @@
         "en": "Capacities in degree: with copies of one unit and two against a demand of two, every flow in which the user draws past the stock has the second copy give at least one unit, some has it give exactly one, and the first copy's degree is zero (Capacities.second_in_degree).",
         "zh": "Capacities 的程度：以一个单位与两个单位的副本对两个单位的需求，使用者汲取超出存量的每个流都使第二个副本至少给一个单位，某个流使它恰好给一个，第一个副本的程度为零（Capacities.second_in_degree）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "FeedersInTurn.possible: the flow drawn across the two steps with the copy active at each giving lets the user draw past the stock, so the user's need of both copies (FeedersInTurn.needs_both) is not vacuous.",
+        "zh": "FeedersInTurn.possible：以每步活跃的副本给予而画过两步的流使使用者汲取超出存量，所以使用者对两个副本的需要（FeedersInTurn.needs_both）不是空真的。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -494,15 +523,15 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T094249.727687Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 385 and 386; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T094249.727687Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 385 与 386 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T102240.429642Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378 and 382 to 386; reviewed against the Lean by a reader that did not write it, a separate AI agent, whose findings are fixed in study section 387.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T102240.429642Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386 节；另由一个非作者的读者（另一个 AI 代理）对照 Lean 审查，其发现在研究第 387 节修正。"
   },
   "next_delta": {
-    "en": "Capacities across a hierarchy whose upper tier divides its giving among several stores; the degree of need with capacities read off stores; an independent review.",
-    "zh": "上层把给予分给多个库存的层级中的容量；以从库存读出的容量计的被需要程度；独立审查。"
+    "en": "Capacities across a hierarchy whose upper tier divides its giving among several stores; the degree of need with capacities read off stores.",
+    "zh": "上层把给予分给多个库存的层级中的容量；以从库存读出的容量计的被需要程度。"
   },
   "correspondence": {
-    "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting exactly at copies. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
+    "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting where the others could together give what a feeder gives. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
     "zh": "生态的大我（Næss 1987）：为画得足够宽的自我而有的自我关切即对一切的关切；此处只需诸中心彼此依存。趋同假说（Norton 1984、1991）及其批评（Steverson 1995；Westra 1997）：人类中心与非人类中心的政策在人所需者之内趋同、在其外分开；此处从己与从言两种读法在共同闭包之内一致。理由向必要手段传递（Kiesewetter 2015）与向促成手段传递（Raz 2005）：“所需”与供养，恰在副本处分开。生态冗余（Walker 1992、1995）。解读（AI 的，D64）：经由同一个大气、同一个生物圈与同一个经济，人类如今大概彼此位于对方的供养闭包之内。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
@@ -642,6 +671,8 @@
         "Becoming.FeedersInTurn.calls",
         "Becoming.FeedersInTurn.decActive",
         "Becoming.FeedersInTurn.needs_both",
+        "Becoming.FeedersInTurn.possible",
+        "Becoming.FeedersInTurn.turn",
         "Becoming.FeedersInTurn.web",
         "Becoming.Flow.BalancesTiers",
         "Becoming.Flow.DrawsPast",
@@ -654,9 +685,12 @@
         "Becoming.Flow.GivesWithin",
         "Becoming.Flow.PassesOn",
         "Becoming.Flow.PassesTiers",
+        "Becoming.Flow.able_of_covers",
         "Becoming.Flow.capacityWithout_short",
+        "Becoming.Flow.capacityWithout_split",
         "Becoming.Flow.centersWithin_feeding_of_common",
         "Becoming.Flow.centersWithin_influence_of_common",
+        "Becoming.Flow.covers_of_drawsPast",
         "Becoming.Flow.demand_le_replenishment",
         "Becoming.Flow.drawnAcross",
         "Becoming.Flow.drawnAcross_acting",
@@ -670,6 +704,7 @@
         "Becoming.Flow.firstActiveOther_active",
         "Becoming.Flow.firstActiveOther_mem",
         "Becoming.Flow.givenFrom",
+        "Becoming.Flow.givenFrom_outside",
         "Becoming.Flow.given_of_steady",
         "Becoming.Flow.given_pos_of_calls",
         "Becoming.Flow.gradedDrawn",
@@ -683,10 +718,12 @@
         "Becoming.Flow.leastDrawn_given_total",
         "Becoming.Flow.leastDrawn_gives",
         "Becoming.Flow.least_giving",
+        "Becoming.Flow.least_giving_of_possible",
         "Becoming.Flow.needsSome_of_drawsPast",
         "Becoming.Flow.needsSome_on",
         "Becoming.Flow.needsSome_tiers",
         "Becoming.Flow.needsSome_within",
+        "Becoming.Flow.needsSome_without_end",
         "Becoming.Flow.needs_giver_iff_alone",
         "Becoming.Flow.needs_giver_iff_only",
         "Becoming.Flow.needs_giver_iff_only_on",
@@ -695,7 +732,9 @@
         "Becoming.Flow.needs_giver_iff_shortfalls_pos",
         "Becoming.Flow.needs_giver_iff_store_short",
         "Becoming.Flow.needs_giver_of_short",
+        "Becoming.Flow.needs_of_class_short",
         "Becoming.Flow.otherCapacity_short",
+        "Becoming.Flow.otherCapacity_split",
         "Becoming.Flow.others_le_capacityWithout",
         "Becoming.Flow.ownClosure_feeding_invariant_of_common",
         "Becoming.Flow.ownClosure_influence_invariant_of_common",
@@ -704,6 +743,7 @@
         "Becoming.Flow.passed_le_drop",
         "Becoming.Flow.passed_le_supply",
         "Becoming.Flow.passed_zero_of_exhausted",
+        "Becoming.Flow.possible_iff_covers",
         "Becoming.Flow.replenishment_le_uptake",
         "Becoming.Flow.replenishment_split",
         "Becoming.Flow.rise_le_given",
@@ -804,6 +844,7 @@
         "Becoming.mem_steps_of_between",
         "Becoming.mem_unitsOf",
         "Becoming.needsPart_iff_only",
+        "Becoming.needsPart_of_none",
         "Becoming.needs_iff_only",
         "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
         "Becoming.pairUp",
@@ -821,17 +862,17 @@
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "cd8a41e162c8f8baa6f6cf3b84bbb98917078c3f256411edea90717d083a046d"
+      "sha256": "389e721489700828c87e695702448f55ea7ebbf186d6a55c9f346e07d2c6154d"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T094249.727687Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
       "role": "receipt",
-      "sha256": "e39f436b88c5fcc5d3bb9a06719f02f28f6cfacd88f07c19d6c116e6d507a720"
+      "sha256": "593ae19587ba22d782f219d409919498f8632094d30ecf0a5177cdac8160649e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "3341d609e705da67d33cdd7ef62280bb845ea41a3fb77d73d2842495e06fdc1d"
+      "sha256": "99ffcc88f8b0dcbb775f8a494aa1f66fac69fdc427864d227621eec90055ef7f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -841,17 +882,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "14a3e5179b7a050f7e2d7d03a207721e68def9aea73415b9f061c0cf50436d7b"
+      "sha256": "95babf3a2361f00c66e7c317a710c1868a6543b0b3744dc44df847c285d9754e"
     },
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "30c15019d5922c5b408570ac155a2e57b7dd29f99ea99de8d523f6b5d3cb822a"
+      "sha256": "c0e9761bce2c0e30494a75bd991498ccf4800244f3ad1e8044bab8aaf4c29330"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "a562abc6369918bf702f885a5b74f032032ac694201fc6a4a8ee2050c3d8b2c5"
+      "sha256": "5e29ac4cf22beff519730f1a112425dd45dd231eb65308f5c103e1f13af7773e"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -862,7 +903,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T094249.727687Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -896,6 +937,10 @@
     {
       "en": "23 October 2026: extended (IV3g): need in degree (the shortfall; the least a feeder gives while the consumer draws past the stock, attained; need as a positive degree); the Capacities degree witness; study section 386.",
       "zh": "2026年10月23日：扩展（IV3g）：按程度的“所需”（缺额；消耗者汲取超出存量时供给者至少要给的，并可达成；“所需”即程度为正）；Capacities 的程度见证；研究第 386 节。"
+    },
+    {
+      "en": "23 October 2026: corrected and extended (IV3h) after an independent review against the Lean: the statement now says \"what a step demands\", not \"what is drawn\", and states need, not reach; the base copies law states its premise; \"no other member is active\", not \"the only one active\"; the degree where a flow is possible; the possibility law and giving without end added; the boundary on giving without end replaced; study section 387.",
+      "zh": "2026年10月23日：经对照 Lean 的独立审查后修正并扩展（IV3h）：陈述改为“某步的需求”而非“所汲取者”，并陈述“所需”而非“达到”；基底副本之律写明其前提；“没有其他成员活跃”而非“唯一活跃者”；程度限于有可能的流之处；增加可能性之律与无尽的给予；替换关于无尽给予的边界；研究第 387 节。"
     }
   ]
 }

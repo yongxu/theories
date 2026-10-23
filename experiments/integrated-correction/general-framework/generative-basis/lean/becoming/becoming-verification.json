@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261023T094249.727687Z",
+  "utc": "20261023T102240.429642Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261023T094249.727687Z",
+  "retained_run": "becoming-checks/20261023T102240.429642Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -1831,7 +1831,7 @@
     "Becoming.JoiningRoles": "721bbba16a2eed321383c4183954f41425ca91b92fc3f25ee8f4c6147b4bcb96",
     "Becoming.Postponement": "7d7fb8f831c6bcd93788e4b5d8c396720ee7f9d80b708bd93a83a4ec63f268d2",
     "Becoming.Boundaries": "6f80291124914c32ad379e25853eea9bb56cf46138b870b7ef06988579ec1c72",
-    "Becoming.Weightings": "cd8a41e162c8f8baa6f6cf3b84bbb98917078c3f256411edea90717d083a046d",
+    "Becoming.Weightings": "389e721489700828c87e695702448f55ea7ebbf186d6a55c9f346e07d2c6154d",
     "Becoming.Reading": "597a696fe502aa1fd1d667cef4788e2144612343e162d4fabd05f9fbee71ed16",
     "Becoming.ExchangePremises": "e0acae7f7a2010316afdc30e920c4b939d44e71874e0d40bd1aa53605ddd12a0",
     "Becoming.Thresholds": "062babfffda150c6165c8bd8c120bcdd804c51960d19161109a418c6f5a4147d",
@@ -1914,14 +1914,14 @@
     "Becoming.Coverage": "cb6bfd626354610d1bcf6c7a6be3518dd54bd3246db56c806fefb26f8c5d75a6",
     "Becoming.PlaceTransitionNets": "e6293a8d5ca23f901278b557e5f627df8237ca81f1ea4b376fc49001751130fc",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "f95f5658157dc75b7697d0da4ece6238274381b3573a638c5978809c1bfd7ab6"
+    "Becoming": "ebd26216e9fc9e241102e5cada6e6b73d26de917d31c89b31c0a9a931852c9e2"
   },
   "checker_sha256": {
     "check_becoming.py": "b422921cda1ce320cf01596fb32a15a19f99009d289a46eb9cd6c56762cf4fd8",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "source_commit": {
-    "main": "6741486c4c60e50a99c9d74539b71d8301010c70",
+    "main": "b6d6244d4f10f5c85a96197c02ca42aaa8a11973",
     "copied": [
       "Becoming.Weightings.lean",
       "Becoming.lean"
@@ -4716,11 +4716,11 @@
         "retained": "/Users/ren/theories/.claude/worktrees/agent-a239cfcdeaeb002f7/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T054022.933262Z"
       },
       "Becoming.Weightings.log": {
-        "utc": "20261023T094011.050645Z",
+        "utc": "20261023T102210.498897Z",
         "retained": "scratch build, not retained: /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/tree"
       },
       "BecomingWeightingsAxiomAudit.log": {
-        "utc": "20261023T094011.050645Z",
+        "utc": "20261023T102210.498897Z",
         "retained": "scratch build, not retained: /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/tree"
       },
       "Becoming.Reading.log": {
@@ -7658,9 +7658,9 @@
       "Becoming.Boundaries.log": "60c59d8e377190c6746b2cfd6d30b7b73bda7f15c385c1c6e702c732e3bc0c3f",
       "BecomingBoundariesAxiomAudit.log": "0043848d2625f6050c38ef0a81b87632d7639d4869f239bfa0106e2b47ad31b9",
       "BecomingBoundariesSignatures.log": "55b913b088fd0d280606729d2bffc2b5c0cb72e8e79e6599bcb8ade890859588",
-      "Becoming.Weightings.log": "c2fa6743cae267b47c035044f5f1c60a5af1287d83bfede7434cdb10b6594f3b",
-      "BecomingWeightingsAxiomAudit.log": "23a822c5efeca5bc9ba268cfba71620312d1942b553304505f7cb4f83de6e651",
-      "BecomingWeightingsSignatures.log": "8dd975c38b1b8f88742f8230db0908333cd5195649a570e094958695c214fa60",
+      "Becoming.Weightings.log": "13097e2a0781e7ea9773812cd9a1bd5c5cb8c2b52c4df822393f18449e4faaae",
+      "BecomingWeightingsAxiomAudit.log": "fe0e3b177c592b706091b89a66a44fc0ce970cb5da13403f2c1478a1d9f4fcc3",
+      "BecomingWeightingsSignatures.log": "9fa3f085fa390b892e9d40326339bc4a3539a11f9881f5957eb13c14e4ecc21a",
       "Becoming.Reading.log": "bebc718511d589c59c731200985701e1f0db727cb8575e283924fb75f04fd9cc",
       "BecomingReadingAxiomAudit.log": "0e7845561dc120c1d4fcbd649c1e49fb9d2427e70f7870300e511f90b1fae177",
       "BecomingReadingSignatures.log": "72ff9a0d652f3689dc0f308c5bf31c1ee771aeef4054730ec5bb9326c9ab2b30",
@@ -7907,11 +7907,11 @@
       "Becoming.ResponseLearning.log": "d6f98737ef2804a70c7e97a841dff9b85031f45edafd3666d2de458fc45f4252",
       "BecomingResponseLearningAxiomAudit.log": "6201ad97f02f327286cab93e11eeeb54e5b92786f30f2e08404e36b1d856b948",
       "BecomingResponseLearningSignatures.log": "a4f425e17700e4c306151117e7d6f27e1a2eb84d175b657bfcd49631c987d785",
-      "Becoming.log": "87761faad6aee1359dea647735eab37f8a5fb309f93c33fc76389cda91358d1b",
-      "BecomingAxiomAudit.log": "282e1d0a18b682a6222d4403ebdab34ec56f6833b57fdecd2dd9894418c76249",
-      "BecomingSignatures.log": "f82e277856483c704d7e1e0182f5694996ea5f75e17b82cf9d66336c1470221e",
-      "EnvironmentAudit.log": "cc3bcd2f7e2a5f11b5aabbd42be877994fe34c78e724013e4f6caf3696b10dce",
-      "Controls.log": "85556a6e31408e548549c900e5975f9c967a4da64778ced4f910bf304fde308a",
+      "Becoming.log": "629039248f7d9a5e8dc94a545868cfaff01b606a226e7797f957221a0cef22a7",
+      "BecomingAxiomAudit.log": "a06c3ed4aa3af504ff0c540cc842104c9ffb3e5ffabc4e5c9f5f5ffbca4e5b95",
+      "BecomingSignatures.log": "57c923675f29d70384d9070ca74f9392e8f576a8b21681636a01b72cf024709e",
+      "EnvironmentAudit.log": "49e363183059e4f3edf82e96c65d29984ad47d8b034036a57a88f58d1d6f1618",
+      "Controls.log": "d151a1295f5051c265c3488d365a3e2c6abeb058528a24f883ee66a19ceb3800",
       "Becoming.Grammar.PreludeOnly.log": "aa8504223d3aab13f627b8bdb3e02007980a1d88b379d86c2bcd45f79d5abe59",
       "Becoming.GrammarReadings.PreludeOnly.log": "6a1701884061823945c1b9ff53cc7b80fc90b0d8dfdb9f13d79731170a786ae9",
       "Becoming.GrammarMap.PreludeOnly.log": "4d3da615b4634efa6e9180c76c50366c7a32b382a4e0ebc3a707c3910d3c957e",
@@ -8144,7 +8144,7 @@
       "Becoming.JoiningRoles.PreludeOnly.log": "e348f0c02227776cd8f44a10bfa61154785a2f1d1a25948caeea6143d00d8df0",
       "Becoming.Postponement.PreludeOnly.log": "becb66592fffde389f6a84f0d119d25f62b61569e5b88550ff19b8d2dfe662bc",
       "Becoming.Boundaries.PreludeOnly.log": "1ba3b29ca06dde1ae1f5be9b267b65f4bf252cb5084a8bc15e2af9c6522a526e",
-      "Becoming.Weightings.PreludeOnly.log": "fa0008b177771ba7bb210d87a6459901178ddcd1b1888df477f999b8ddb8340f",
+      "Becoming.Weightings.PreludeOnly.log": "d6ec32973e1fbbfc937accd1dfedcb5a17010139d829071dc616ed619a850c54",
       "Becoming.Reading.PreludeOnly.log": "1dd9475d3d35fc5cb1a8ac95fd45f11c896b1f4babc7e20d0710379cb1ab9f65",
       "Becoming.ExchangePremises.PreludeOnly.log": "75f25a5bd18fd5c3045d3882e2d0b028614ad8333423ada965dfacb4fc16a353",
       "Becoming.Thresholds.PreludeOnly.log": "9e1ada479d7f4b1b9ef4063b4b266683e26f8ee25126db5bc53b28005a55f9f3",
@@ -8227,7 +8227,7 @@
       "Becoming.Coverage.PreludeOnly.log": "fcf5e570cbb44edadf46958c37d2d6d2f46fa3d61a317a1a07a3553c1058fe86",
       "Becoming.PlaceTransitionNets.PreludeOnly.log": "25e53d250e301cb5163aece1e9d77a8c14e275784f07ecc72cf4dd075e593764",
       "Becoming.ResponseLearning.PreludeOnly.log": "21ecfb9a3923ebe1de8488c2f4a7b20858c9cb102a100117e38f168fbfc33fbd",
-      "Becoming.PreludeOnly.log": "77928ff0ef31eb99385990078bc6a76fac17297cae07fb60dc1cf3879825a5fb"
+      "Becoming.PreludeOnly.log": "be6a9ff62d901ad257de40ded6655a5057f0779ecddb559a082c1dc004dbd95e"
     }
   },
   "superseded_modules": {
@@ -9941,7 +9941,7 @@
     "Becoming.JoiningRoles": 48,
     "Becoming.Postponement": 46,
     "Becoming.Boundaries": 87,
-    "Becoming.Weightings": 871,
+    "Becoming.Weightings": 890,
     "Becoming.Reading": 69,
     "Becoming.ExchangePremises": 189,
     "Becoming.Thresholds": 62,
@@ -89065,7 +89065,7 @@
       "module": "Becoming.Weightings",
       "spine": true,
       "layer": "core",
-      "theorems": 305,
+      "theorems": 316,
       "declarations": [
         {
           "kind": "def",
@@ -90272,6 +90272,46 @@
           "name": "Becoming.Flow.needs_giver_iff_shortfalls_pos"
         },
         {
+          "kind": "theorem",
+          "name": "Becoming.needsPart_of_none"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.givenFrom_outside"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.otherCapacity_split"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.capacityWithout_split"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.able_of_covers"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.covers_of_drawsPast"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.needs_of_class_short"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.possible_iff_covers"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.least_giving_of_possible"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.needsSome_without_end"
+        },
+        {
           "kind": "def",
           "name": "Becoming.Feeders.withFirst"
         },
@@ -90562,6 +90602,14 @@
         {
           "kind": "theorem",
           "name": "Becoming.Capacities.second_in_degree"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.FeedersInTurn.turn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.FeedersInTurn.possible"
         },
         {
           "kind": "def",
@@ -91102,6 +91150,16 @@
         "Becoming.Flow.gradedDrawn_givenFrom_le": [],
         "Becoming.Flow.least_giving": [],
         "Becoming.Flow.needs_giver_iff_shortfalls_pos": [],
+        "Becoming.needsPart_of_none": [],
+        "Becoming.Flow.givenFrom_outside": [],
+        "Becoming.Flow.otherCapacity_split": [],
+        "Becoming.Flow.capacityWithout_split": [],
+        "Becoming.Flow.able_of_covers": [],
+        "Becoming.Flow.covers_of_drawsPast": [],
+        "Becoming.Flow.needs_of_class_short": [],
+        "Becoming.Flow.possible_iff_covers": [],
+        "Becoming.Flow.least_giving_of_possible": [],
+        "Becoming.Flow.needsSome_without_end": [],
         "Becoming.Feeders.withFirst": [],
         "Becoming.Feeders.withSecond": [],
         "Becoming.Feeders.web": [],
@@ -91175,6 +91233,8 @@
         "Becoming.OwnStores.not_needs_second": [],
         "Becoming.Capacities.copies_apart": [],
         "Becoming.Capacities.second_in_degree": [],
+        "Becoming.FeedersInTurn.turn": [],
+        "Becoming.FeedersInTurn.possible": [],
         "Becoming.Weighting.AddsOwn": [],
         "Becoming.Weighting.IncreasingInOwn": [],
         "Becoming.Weighting.increasingInOwn_of_increasing": [],
@@ -113032,19 +113092,19 @@
   "artifact_sha256": {
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.Weightings.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.Weightings.lean": "cd8a41e162c8f8baa6f6cf3b84bbb98917078c3f256411edea90717d083a046d",
-    "Becoming.lean": "f95f5658157dc75b7697d0da4ece6238274381b3573a638c5978809c1bfd7ab6",
+    "Becoming.Weightings.lean": "389e721489700828c87e695702448f55ea7ebbf186d6a55c9f346e07d2c6154d",
+    "Becoming.lean": "ebd26216e9fc9e241102e5cada6e6b73d26de917d31c89b31c0a9a931852c9e2",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingWeightingsSignatures.lean": "234a436c11b1db0c96b5ba0c59ed410f8408d8942284a50752e40a6e48370bc9",
-    "BecomingWeightingsSignatures.log": "8dee51905fd9b94c64736f620b41703bcc8f7413a17a92db9f1b65f8addf1e28",
+    "BecomingWeightingsSignatures.lean": "94b56a43f202a52f1a66f2d5004c412fcd1bb47667879500e548bba00218172e",
+    "BecomingWeightingsSignatures.log": "50804b7b60902affcf70e9a2c4d482b1c179115b385471e419bd0f2906601038",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "EnvironmentAudit.lean": "0c03d6315b47187a916786a1fe58d8e940e7e4285d9e7feecac86d7b946a90d7",
-    "EnvironmentAudit.log": "978ad5eca0a704ded1a1bfb460d53ba02e443a4feaa87b608881e1dead537bfc",
+    "EnvironmentAudit.log": "c3ed38f4e401118d3e06059985f9d5747ccb06be44a79e38fe7a5699f9d132d5",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

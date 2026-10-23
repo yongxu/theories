@@ -2042,32 +2042,37 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
   each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
   exceeds both `p / q` and `q / p`. Held de se, self-concern is one from every standpoint exactly where
-  the centers lie within one another's closures, and centers that share one condition do
-  (`ownClosure_standpointInvariant_iff_centersWithin`, `Flow.centersWithin_feeding_of_common`); drawn
-  along need it reaches a copy of what it needs exactly where the copy is the only one
-  (`forced_member_iff_only`, `Copies`); an order increasing in its own continuation ranks a course
+  the centers lie within one another's closures, and centers that each depend on one condition and
+  exchange with it do (`ownClosure_standpointInvariant_iff_centersWithin`,
+  `Flow.centersWithin_influence_of_common`); drawn along need, where each copy can carry it alone, it
+  reaches a copy of what it needs exactly where the copy is the only one (`forced_member_iff_only`,
+  `Copies`); an order increasing in its own continuation ranks a course
   above another, where it adds to that continuation, exactly where the other keeps nothing beyond it,
   so the ending of what everything needs is ranked below from every standpoint
   (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise
-  where its own continuation is everything listed. Need holds over any courses with two readings, a
-  member needed exactly where it is the only one (`needsPart_iff_only`); on the base, a formation
-  drawing past its family's stock needs some feeder's giving, and a feeder's exactly where it is the
-  only one (`Flow.needsSome_of_drawsPast`, `Flow.needs_giver_iff_only`, `Feeders`); and the coupled
+  where its own continuation is everything listed. Need holds over any courses with two readings,
+  where each member can take its part alone a member needed exactly where it is the only one
+  (`needsPart_iff_only`); on the base, a formation drawing past its family's stock needs some
+  feeder's giving, and, where each can feed alone, a feeder's exactly where it is the only one
+  (`Flow.needsSome_of_drawsPast`, `Flow.needs_giver_iff_only`, `Feeders`); and the coupled
   ending is ranked below by self-concern in one theorem (`Flow.coupled_ending_ranked_below`). Read
   off a web, a feeder can feed a family alone where it is active at every step calling for giving
   (`Flow.partAlone_on`), and a consumer needs a feeder's giving exactly where, at some step calling
-  for giving, it is the only one active (`Flow.needs_giver_iff_alone`; `FeedersInTurn`). With
-  capacities of giving supplied with the web, a feeder can feed the family alone exactly where its
-  capacity covers each step's demand (`Flow.feedsAlone_iff`), and it is needed exactly where the
+  for giving, no other member is active (`Flow.needs_giver_iff_alone`; `FeedersInTurn`). With
+  capacities of giving supplied with the web, a feeder can feed the family alone exactly where, at
+  every step calling for giving, it is active and its capacity covers the demand
+  (`Flow.feedsAlone_iff`), and it is needed exactly where the
   others active at some step could not together give the demand, since otherwise they can share the
   giving (`Flow.needs_giver_iff_short`, `Flow.sharedDrawn`; `Capacities`, `SharedCopies`). Read
   off a feeder's own store, which nothing feeds, its capacity at a step is what the store falls, and
   the exact law holds with it (`Flow.needs_giver_iff_store_short`; `OwnStores`); over a hierarchy of
   families, each given only what is passed on from the one above, drawing past what the whole
-  hierarchy holds needs giving into its top (`Flow.needsSome_tiers`; `TwoTiers`). A feeder's degree
-  of need, the least it gives while the consumer draws past the stock, is the sum of what each step
-  demands beyond what the others can give (`Flow.least_giving`; `Capacities.second_in_degree`). The
-  readings are the AI's (D59, D60, D64).
+  hierarchy holds needs giving into its top (`Flow.needsSome_tiers`; `TwoTiers`). Some flow lets
+  the consumer draw past the stock exactly where the class can give each step's demand, and
+  elsewhere every need holds vacuously (`Flow.possible_iff_covers`); wherever a flow is possible, a
+  feeder's degree of need, the least it gives while the consumer draws past the stock, is the sum of
+  what each step demands beyond what the others can give (`Flow.least_giving_of_possible`;
+  `Capacities.second_in_degree`). The readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

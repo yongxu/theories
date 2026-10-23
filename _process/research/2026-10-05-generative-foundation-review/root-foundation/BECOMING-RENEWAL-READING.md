@@ -16617,7 +16617,7 @@ Output → input: THE-STEP-OF-INVARIANCE (a new §4.4, §5, §7, §8, In brief);
 
 **Need, copies and the class.** Need over possible courses is reflexive and transitive, so its closure is itself and the presupposition drawn along it reaches exactly what is needed. With copies (several alternatives, each able to carry the continuation alone) no member is needed, so the means-end step reaches none of them; it reaches the class, which a significance of single formations does not state. With one copy, the copy is needed. This is the redundancy point of conservation biology (Walker 1992, 1995: a functional group with one or few species is where a loss loses the function) and the line between transmission to necessary means and transmission to facilitative means in the theory of reasons (Kiesewetter 2015; Raz 2005), placed in the step: along need the presupposition reaches a copy only when it is alone, along feeding (Raz's side) it reaches every copy that actually feeds.
 
-**Order.** An order increasing in its own continuation is the weakest monotonicity a self-concerned standpoint can have: it ranks higher only widenings that add to its own continuation. What all such orders share is exactly those widenings. Where a course keeps the standpoint and the other keeps nothing beyond it, every such order ranks the first above; this is the ruin comparison, since a course on which a condition everything needs has ended admits nothing from that ending on. Where the other course keeps something beyond (a group that depended on none of the ended conditions), the comparison is mixed and some such order ranks it the other way. The dynamics say when the ruin course admits nothing: groups whose conditions are coupled end together and nothing is selected among them (`GroupEnding.Flow.coupled_end_together`), and after a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants (`Founding.Flow.survivors_independent`). The two are joined by argument here, not by one theorem. Drawn so that its own continuation is everything listed, as the self drawn along feeding is in a mutually fed flow, the order is increasing in admission: C's premise is then self-concern's monotonicity in its own continuation, so scope and order both rest on one premise, self-concern monotone in what carries it. That locates C's premise more narrowly; it does not warrant it.
+**Order.** An order increasing in its own continuation is the weakest monotonicity a self-concerned standpoint can have: it ranks higher only widenings that add to its own continuation. What all such orders share is exactly those widenings. Where a course keeps the standpoint and the other keeps nothing beyond it, every such order ranks the first above; this is the ruin comparison, since a course on which a condition everything needs has ended admits nothing from that ending on. Where the other course keeps something beyond (a group that depended on none of the ended conditions), the comparison is mixed and some such order ranks it the other way. The dynamics say when the ruin course admits nothing: groups whose conditions are coupled end together and nothing is selected among them (`GroupEnding.Flow.coupled_end_together`), and after a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants (`Founding.Flow.survivors_independent`). The two are joined by argument here, not by one theorem. Drawn so that its own continuation is everything listed, as the self drawn along feeding is in a mutually fed flow, the order is increasing in admission: C's premise is then self-concern's monotonicity in its own continuation: scope rests on the self's presupposition drawn along what carries it, and order on that monotonicity, two premises with their two roles (corrected in §387). That locates C's premise more narrowly; it does not warrant it.
 
 **Self-review.** (1) The iffs are two-sided as stated; `ownClosure_standpointInvariant_iff_centersWithin` needs nothing about the whole, so it is strictly more general than the whole-world laws of `Becoming.MutualDependence`, which it does not reprove (they bound significance by each closure; this law is about the de se reading). (2) The base instances use the existing relations `Flow.AffectedBy` and `Flow.FedFrom` and their premises are the ones `Flow.mutuallyDependent_of_common` and `Flow.feeding_whole_of_common` use, restricted to the centers. (3) `Needs` quantifies over a supplied predicate of possible courses; the base supplies no such predicate yet, so the copies law is general structure with a constructed witness, and its reading on the base (a condition fed by many formations, each able to sustain it alone) is not proved. (4) The ruin law's premise that the ended course admits nothing from the ending on is the dynamics' conclusion only where every formation listed depends on the coupled family; it is not derived for any actual system. (5) No ethical predicate occurs; significance and orders are parameters, and the presupposition, invariance and monotonicity are hypotheses. (6) What is new is the placement: the convergence of anthropocentric and nonanthropocentric policy within what humans need (Norton 1991) is the agreement of the de se and de dicto readings within the common closure, and the objection that convergence fails for what is not needed (Steverson 1995) is the copies law and the region beyond the closure. (7) Not done: a predicate of possible courses read off a web, so that need, and copies, are stated on the base; the ruin law composed with the dynamics in one theorem; graded need (how much a copy contributes), which would carry status.
 
@@ -17168,3 +17168,61 @@ Output → input: the record; THE-STEP-OF-INVARIANCE §1 (two stale markers remo
 **Constructivity.** The least-giving law decides identity of formations and activity, as IV3e did; it needs no search, since the bound holds at every step and the attaining flow is built outright. No omniscience principle is used. Two drafts used `congrArg₂`, which the prelude does not have, and reopened `Capacities` without its `open Copies (Part)`; the landed proofs use `congrArg` twice and open the namespace.
 
 **Self-review.** (1) No earlier statement changed; `Flow.needs_giver_iff_shortfalls_pos` restates the exact law of IV3e through the degree. (2) The attaining flow needs the feeder to be a member and able to give its shortfall at every step; where it cannot, no possible flow lets the consumer draw past the stock at that step, and the lower bound holds vacuously there. (3) The degree adds units across steps without weighting them; a unit late in the stretch counts as one early. (4) The same law with capacities read off stores is not stated; it follows the store law's pattern and is not claimed. (5) Not done: capacities across a hierarchy whose upper tier divides its giving among several stores; an independent review.
+
+## 387. The independent review of the IV3 line, and its fixes (IV3h)
+
+After §386 (IV3g) the line IV3–IV3g was reviewed by a reader that did not write it: a separate AI agent, given the module, the record, THE-STEP-OF-INVARIANCE §4.4 and §8, D64, the canonical chapter's dependence bullet, the study sections and the package README row, with the brief to check every sentence against the Lean statement it cites and to look for vacuous laws and non-witnesses. It found five errors, four imprecisions and two notes; all are fixed here, and three needed new Lean ([Ren's words](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md); the work below is the AI's).
+
+```text
+Result(s): record self-concern-through-dependence corrected and extended; no new record.
+Findings and fixes:
+  (1) error. "the others could not together give what is drawn" (record statement, canonical chapter, THE-STEP
+      §4.4 empirical paragraph, record boundary): the Lean's test is the step's demand (Web.demand: what the
+      family's conditions rise, and one more where none falls), not what the consumer draws; in Capacities the
+      user draws one unit and the demand is two. Now "what a step demands".
+  (2) error. "centers that share one condition do" (canonical chapter, THE-STEP §1 item 5 and §8, README): the
+      Lean needs each center to depend on the condition and exchange with it (Flow.centersWithin_influence_of_common)
+      or, at one step, to require it and give to it (Flow.centersWithin_feeding_of_common); sharing a condition
+      (Flow.Shares) does not suffice, as Clearing shows. Corrected.
+  (3) error. "reaches ... exactly" for need on flows (record statement, canonical chapter, THE-STEP §4.4, the
+      module's reading): the presupposition reaches exactly what is needed where need is its own closure (the
+      marked case, forced_needs_iff); need with two readings (NeedsPart) is not, and a feeder that cannot itself
+      draw past the stock needs everything vacuously. The flow laws are now stated as need; reach is named the AI's
+      reading. The hierarchy law is the class's need (NeedsSomePart) under FedThroughTiers, not "any hierarchy".
+  (4) error. "the only one active" (module, THE-STEP §4.4 and §8, record law, README): the right side of
+      Flow.needs_giver_iff_alone is that no member other than g is active, which includes, vacuously, a step at
+      which none is. Now "no other member is active".
+  (5) error. The README row dropped activity from Flow.feedsAlone_iff. Restored.
+  (6) imprecise. Need and degree hold vacuously where the class cannot give some step's demand, and "the least it
+      gives" dropped the attainment premise. New: some flow lets the consumer draw past the stock exactly where the
+      class can give each step's demand (Flow.possible_iff_covers, with Flow.covers_of_drawsPast); elsewhere every
+      need holds vacuously (Flow.needs_of_class_short, by needsPart_of_none); wherever a flow is possible each member can give its shortfall
+      (Flow.capacityWithout_split, Flow.able_of_covers), so the degree is attained (Flow.least_giving_of_possible).
+      FeedersInTurn gains a possible flow (FeedersInTurn.possible), so its need of both copies is not vacuous.
+  (7) imprecise. "giving without end holds only doubly negated" (record boundary; §378): its positive form follows
+      from the base law. New: Flow.needsSome_without_end, after every step some member gives within the next
+      stock-plus-one steps.
+  (8) imprecise. The base copies law was cited without its premise that each member can feed alone (module,
+      THE-STEP §4.4 and §8, record law, README). Stated.
+  (9) imprecise. D64: "need and feeding part exactly at copies" (Reasons; record correspondence) now "where the
+      others could together give what a feeder gives"; item 7 reads activity at every calling step as enough to
+      feed alone (Flow.partAlone_on proves sufficiency only); "What would change it" no longer names need in degree.
+  (10) note. "leaves the common closure" now "may leave" (THE-STEP §4.4).
+  (11) note. Study §373 said scope and order "both rest on one premise"; corrected in place to name the two
+      premises and their roles (the self's presupposition for scope, monotonicity for order).
+Evidence: Becoming.Weightings; core receipt 20261023T102240.429642Z, every axiom report empty.
+Boundary: the review was one pass by one reader of the same kind as the author; the Lean was not rechecked by it,
+       being machine-checked. Study sections 378 and 382, as records of their day, keep their wording; this section
+       says where they were corrected.
+Output → input: the record; THE-STEP-OF-INVARIANCE §1, §4.4 and §8; D64 items 7, 11 and 12, its Reasons and What
+       would change it; the canonical chapter's dependence bullet (EN, ZH) and §9; the package README row (EN, ZH);
+       the root module's doc; study §373.
+```
+
+**What was built.** In `Becoming.Weightings`: `needsPart_of_none`; `Flow.givenFrom_outside`, `Flow.otherCapacity_split`, `Flow.capacityWithout_split`, `Flow.able_of_covers`, `Flow.covers_of_drawsPast`, `Flow.needs_of_class_short`; `Flow.possible_iff_covers`; `Flow.least_giving_of_possible`; `Flow.needsSome_without_end`; `FeedersInTurn.turn` and `FeedersInTurn.possible`. The module has 316 theorems in 445 declarations (305 in 433 before). Every earlier statement is unchanged; the module's doc is corrected (findings 3, 4, 6 and 8).
+
+**Why the possibility law matters.** Every need over the possible flows is a statement about all of them, so where there are none it holds of everything. The exact laws of IV3c–IV3g were stated over the flows, and each held its exactness; but a reader told that a feeder is needed is told something only where some flow lets the consumer draw past the stock. That is now decided by the web: exactly where the class's capacity covers each step's demand. D64 item 12 reads need only where a flow is possible.
+
+**Constructivity.** The possibility law's two directions are the capacity bound of IV3g (with what a non-member gives being nothing) and the shared flow of IV3e with nobody left out; no decision is used beyond those laws'. No omniscience principle is used. A draft included the decided activity in a theorem that does not use it; the landed one omits it. The connectivity check found `needsPart_of_none` used by nothing on the base; the base law that every need is vacuous where the class falls short (`Flow.needs_of_class_short`) now uses it.
+
+**Self-review.** (1) No earlier statement changed. (2) The review found no fault in the witnesses' arithmetic or in the IV3d–IV3g Deltas; its errors were all in prose around the Lean. (3) The reading of need as reach stays in D64 and in the module's reading, labelled; nothing proves it for need with two readings. (4) Not done: capacities across a hierarchy whose upper tier divides its giving among several stores; the degree of need with capacities read off stores.
