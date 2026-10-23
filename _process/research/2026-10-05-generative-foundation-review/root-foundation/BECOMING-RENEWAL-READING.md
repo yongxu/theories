@@ -16710,3 +16710,31 @@ Board item EC, its sixth step (the master law of balance, its rest part). Core r
 **Boundary.** A restructuring of proofs with one new law and its helpers; the statements of the five laws and of every central declaration are unchanged. New record `rest-by-balance`; the seven records citing the five laws carry a history note; the other records citing the four changed sources are re-pointed.
 
 **Output → input.** Balance now carries the ending and rest of the optimum and regime series. Next: `Flow.Outcome` through a step balance, and whether monotone runs are a law of their own.
+
+## 376. Coders on their own and the other's texts (SC1)
+
+```text
+Result(s): fidelity-coders-on-own-and-other-texts (new); fidelity-of-the-classical-statements (next step: the
+       calibration observation tested; history note)
+Delta: a crossed, pre-registered test of FC1's calibration observation (the authoring Claude coder found no
+       excess in 26 經, the GPT coder some in 10). Claude and GPT each wrote a faithful plain-English
+       statement of 60 laws and a version with one planted excess referent; both coded all 240 texts
+       blind (codebook v1.1). No author-specific deficit: detection interaction +0.017, 95% CI
+       [-0.050, +0.083]; on faithful X -0.050 [-0.200, +0.083]. Coder effects: GPT detects fewer plants
+       (-0.042 [-0.075, -0.008]) and lists more excess in faithful texts (+0.158 [+0.083, +0.242]); the
+       Claude coder lists none in any faithful text, GPT's included
+Supplied premises / correspondence: codebook v1.1 and FC1's Lean table (sha256 478c555f…); plants made knowingly
+       by their authors as ground truth; English only
+Evidence: DESIGN.md committed before any text was written (e9052d667), texts and blind packets before any coding
+          (23c68a6eb); 480 of 480 codings; cluster bootstrap over laws, B = 10,000
+Boundary: English, no name table (the 經 case untested); no ground truth for unplanted excess; two families
+          identify only the summed self effect; detection near ceiling; no human audit
+```
+
+The test asks whether the calibration's discrepancy sits in the author of a text or in its coder. A blind spot is an interaction: a coder finds less in its own text than in the other's, relative to the other coder. Over-reading and general under-detection are main effects of the coder. Plants give the ground truth for detection that the unplanted count lacks ([design](development/sc1-source-check/DESIGN.md), [results](../../../../experiments/source-check/RESULTS.md)).
+
+**What was found.** Each coder caught its own plants at about the rate it caught the other's: Claude 0.97 own against 1.00 other, GPT 0.97 own against 0.92 other. The Claude coder's two misses were plants that both coders matched to the statement's own proposition or binder. The GPT coder listed more excess everywhere. 9 of its 19 excess referents in faithful texts are bare numerals counting binders, which clarification 1 of the codebook matches (described after the fact, not pre-registered).
+
+*Reading* [AI reading]. In English the difference between the two coders is the coder's threshold, not authorship, and the Claude coder's zero on the 經 fits its zero on GPT's English. The observation's tie to `Becoming.Web.SelectsThrough` (a judge does not mark what its coupling does not reach) is not supported here as an author effect. The law itself is untouched.
+
+**Output → input.** The open observation in FIDELITY-RESULTS now points to this result. Still open: the same crossing on the 經 under the name table, and adjudication or human audit of unplanted excess.

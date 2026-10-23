@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-414 registered results: 386 with a recorded Lean receipt (`recorded-checked`), 17 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 946 curated edges join 364 results to the results they draw on.
+415 registered results: 386 with a recorded Lean receipt (`recorded-checked`), 18 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 947 curated edges join 365 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -121,6 +121,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [feedback-and-reach][] ← <a id="feedback-and-reach--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="feedback-and-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="feedback-and-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][]
 - [feeding-closure][] ← <a id="feeding-closure--derived-extent-limits"></a>[derived-extent-limits][] · <a id="feeding-closure--loss-beyond-a-region"></a>[loss-beyond-a-region][] · <a id="feeding-closure--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="feeding-closure--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
 - [feeding-from-a-step][] ← <a id="feeding-from-a-step--closure-verdict-meets-continuation-condition"></a>[closure-verdict-meets-continuation-condition][]
+- [fidelity-coders-on-own-and-other-texts][] ← <a id="fidelity-coders-on-own-and-other-texts--fidelity-of-the-classical-statements"></a>[fidelity-of-the-classical-statements][] *(interpretive)*
 - [fidelity-of-the-classical-statements][] ← <a id="fidelity-of-the-classical-statements--wenli-on-the-spine"></a>[wenli-on-the-spine][] *(interpretive)*
 - [finite-aggregation-within-restorable-basic-losses][] ← <a id="finite-aggregation-within-restorable-basic-losses--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(interpretive)* · <a id="finite-aggregation-within-restorable-basic-losses--becoming-spine-instances"></a>[becoming-spine-instances][] · <a id="finite-aggregation-within-restorable-basic-losses--comparison-content-under-regrouping"></a>[comparison-content-under-regrouping][] *(interpretive)*
 - [finite-basis-common-interpretation][] ← <a id="finite-basis-common-interpretation--derivation-soundness"></a>[derivation-soundness][]
@@ -496,6 +497,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [feedback-and-reach]: theories/becoming/results/records/feedback-and-reach.md
 [feeding-closure]: theories/becoming/results/records/feeding-closure.md
 [feeding-from-a-step]: theories/becoming/results/records/feeding-from-a-step.md
+[fidelity-coders-on-own-and-other-texts]: theories/becoming/results/records/fidelity-coders-on-own-and-other-texts.md
 [fidelity-of-the-classical-statements]: theories/becoming/results/records/fidelity-of-the-classical-statements.md
 [finite-aggregation-within-restorable-basic-losses]: theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.md
 [finite-basis-common-interpretation]: theories/becoming/results/records/finite-basis-common-interpretation.md

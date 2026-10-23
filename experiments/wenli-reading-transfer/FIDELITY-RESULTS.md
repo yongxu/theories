@@ -81,6 +81,13 @@ The cross-family check is the calibration set, which both coders coded in full (
 
 [AI reading, D63] In calibration the Claude coder, the AI that wrote the 中华本, found no excess referent in any of the 26 經 segments, in either pass; the GPT coder, from another model family, found some in 10 of them in the table pass and 12 in the naive pass (means per segment 0.62 and 1.04). On the English clauses, which the same AI also wrote but under no name table, the two coders agreed closely (α 0.91, table pass). One reading is a blind spot: a model under-detects what its own controlled text smuggles in, while another model sees it. The other is that the GPT coder over-reads classical Chinese. The data cannot tell them apart, and 26 segments are few. It is recorded as an open observation, not a result. It bears on the theory's own lines: a selection goes only through what its selector couples to (`Becoming.Web.SelectsThrough`), and what a judge's coupling does not reach it cannot mark, which is the case for checks by a different source (chapter §7, 明). A test would code the same texts with the authoring model and with models of other families, on texts each of them wrote.
 
+**Tested in English (SC1, 23 October 2026; [results](../source-check/RESULTS.md)).** In a pre-registered crossed test, Claude and GPT each wrote plain-English statements of 60 laws, with and without a planted excess referent, and both coded all 240 texts blind to authorship. There was no author-specific deficit. Each coder caught its own plants at about the rate it caught the other's (interaction +0.02, 95% interval [−0.05, +0.08]). The coders differed as coders:
+
+- The Claude coder listed no unplanted excess in any faithful text, GPT's included, and caught more plants (0.98 against 0.94).
+- The GPT coder listed more excess everywhere (+0.16 per faithful text, [+0.08, +0.24]). About half of it was bare numerals that the codebook matches to binders.
+
+[AI reading] This favours a difference of coding threshold over a blind spot as the account of the 經 discrepancy. It does not settle it: the test is in English, under no name table, and gives no ground truth for unplanted excess.
+
 ## Next
 
 - The controlled English edition under the same discipline, measured by the same procedure: the one control that separates language from discipline.
