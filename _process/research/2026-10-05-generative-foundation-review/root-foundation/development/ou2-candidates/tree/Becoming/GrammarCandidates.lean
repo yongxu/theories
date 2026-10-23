@@ -440,7 +440,7 @@ variable {α : Type u}
 def «攖» (P : «际» α) : «际» α := «而» («逆» P) P
 
 /-- Taken wholly (盡): whatever is in `A` is in `B`. -/
-def «尽» (P : «际» α) : «际» α := fun A B => ∀ z, P z A → P z B
+def «遍于» (P : «际» α) : «际» α := fun A B => ∀ z, P z A → P z B
 
 /-- A point (端，體之無序而最前者, MJ-J-062): something is in it, and at most one thing. -/
 def «端» (P : «际» α) (A : α) : Prop := (∃ z, P z A) ∧ ∀ z z', P z A → P z' A → z = z'
@@ -450,7 +450,7 @@ def «有厚» (P : «际» α) (A : α) : Prop := ∃ z z', P z A ∧ P z' A �
 
 /-- **端與端，俱盡 (MJ-S-068.2).** Two points in contact are each wholly in the other. -/
 theorem «端与端俱尽» {P : «际» α} {A B : α} (hA : «端» P A) (hB : «端» P B) (h : «攖» P A B) :
-    «尽» P A B ∧ «尽» P B A :=
+    «遍于» P A B ∧ «遍于» P B A :=
   match h with
   | ⟨z, pa, pb⟩ =>
     ⟨fun w pw => by cases hA.2 w z pw pa; exact pb,
@@ -459,7 +459,7 @@ theorem «端与端俱尽» {P : «际» α} {A B : α} (hA : «端» P A) (hB :
 /-- **尺與端，或盡或不盡 (MJ-S-068.3).** A point in contact with an extended line is wholly in it, and the
 line is not wholly in the point. -/
 theorem «尺与端或尽或不尽» {P : «际» α} {A B : α} (hA : «端» P A) (hB : «有厚» P B)
-    (h : «攖» P A B) : «尽» P A B ∧ ¬ «尽» P B A := by
+    (h : «攖» P A B) : «遍于» P A B ∧ ¬ «遍于» P B A := by
   refine ⟨?_, ?_⟩
   · intro w pw
     match h with
@@ -472,7 +472,7 @@ theorem «尺与端或尽或不尽» {P : «际» α} {A B : α} (hA : «端» P
 體攖不相盡, MJ-S-068.5).** Two different lines with the same two points. -/
 theorem «尺与尺可相尽» :
     ∃ (β : Type) (P : «际» β) (A B : β),
-      A ≠ B ∧ «有厚» P A ∧ «有厚» P B ∧ «攖» P A B ∧ «尽» P A B ∧ «尽» P B A :=
+      A ≠ B ∧ «有厚» P A ∧ «有厚» P B ∧ «攖» P A B ∧ «遍于» P A B ∧ «遍于» P B A :=
   ⟨Nat, fun z A => (z = 0 ∨ z = 1) ∧ (A = 2 ∨ A = 3), 2, 3,
    fun h => Nat.noConfusion (Nat.succ.inj (Nat.succ.inj h)),
    ⟨0, 1, ⟨.inl rfl, .inl rfl⟩, ⟨.inr rfl, .inl rfl⟩, fun h => Nat.noConfusion h⟩,
@@ -487,7 +487,7 @@ def «相外» (P : «际» α) : «际» α := fun A B => ∃ z, P z A ∧ ¬ P
 def «不相外» (P : «际» α) : «际» α := fun A B => ¬ «相外» P A B ∧ ¬ «相外» P B A
 
 /-- Wholly in each other (相盡). -/
-def «相尽» (P : «际» α) : «际» α := fun A B => «尽» P A B ∧ «尽» P B A
+def «相尽» (P : «际» α) : «际» α := fun A B => «遍于» P A B ∧ «遍于» P B A
 
 /-- Wholly in each other, not outside each other. -/
 theorem «相尽则不相外» {P : «际» α} {A B : α} (h : «相尽» P A B) : «不相外» P A B :=
