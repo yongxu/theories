@@ -93,10 +93,33 @@ What remains open, held de se, is which class a center's own line runs under. Wh
 
 Also from GS2: 07's feeding and influence relations run toward conditions, the converse of 缘, so a closure reaches what one depends on. §4.5 states this, which is §2–3's point.
 
+## 6c. A class between: the family line (GS3, `04d49b8e6`, 01-ROOT §8.7)
+
+`TwoLines` in `Becoming.GrammarCases` is the witness §6b lacked:
+
+- two lines of descent with no condition between them;
+- the class of one family line, strictly between a member's class and the one (`TwoLines.between`);
+- the family line is constant (`TwoLines.family_constant`), so its core goes on through each birth while the member's line ends (`TwoLines.core_through_birth`);
+- from one family's first birth, even under the one, no member of the other family is reached (`TwoLines.other_line_outside`).
+
+**What it settles for PW.** A class narrower than the one can have a core that carries a line past a member's end, and the dynamics fix that core once the class is given. So reaching one's own successors is not reaching everything.
+
+**What it shows about the step** [AI reading]. Held de se along one's own line, concern for one's continuation reaches one's own descendants and not another family's. That is the shape of kin partiality, and it is what self-concern alone gives in time. Reaching the other family still needs the step, or a relation joining the lines. This matches the route through dependence in space, which reaches only those within one's closure.
+
+**The question both routes now meet.** `TwoLines` shares no condition between the families. In the world the theory cares about, lines share conditions: one atmosphere, one biosphere, one economy. Where they do, two questions arise:
+
+- Is there a class across the lines that is constant, whose core carries every family's line past each member's end?
+- Is the core of a family's class then still its own, or does sharing a condition join the cores?
+
+If shared conditions give one constant class across lines, self-concern held de se reaches every line's successors that share them, with no step of invariance. That would be the future-facing counterpart of `Flow.centersWithin_feeding_of_common`. If they do not, the future of other lines is the step's remaining work.
+
+This is candidate (4) in §7.
+
 ## 7. Candidate theorems, for the owners
 
 None is claimed here. Each goes to its owner on the board.
 
 1. **Need ends at the end** (`Becoming.Weightings`, the IV3 line). With possible courses closed under variation after `T`, a continuation across a stretch ending at `T` needs nothing active only after `T`.
 2. **The timeless closure overreaches** (the owner of `Becoming.Interdependence`). A witness: three formations overlapping in turn, the last within the first's feeding closure and not needed by it.
-3. **On the grammar** (GS2): the significance of a line under a class. Held de se of a line under `E`, the presupposition reaches what continues under `E` after a member's end. A model of descent in which a class with ending members has a core whose line goes on through new members, and one in which the core is trivial, so that both sides of §5 have a witness.
+4. **Lines that share a condition** (the owner of `Becoming.Grammar`; offered 24 October 2026). Two family lines that share a condition, each line's members drawing on it. Either a class across both lines that is constant and whose core carries each line past a member's end, so that from one family's first birth, under that class, members of the other family are reached; or a witness that sharing a condition gives no such class, with what more it needs.
+3. **On the grammar** (GS2, landed in `acb1c2a52`): the significance of a line under a class. Held de se of a line under `E`, the presupposition reaches what continues under `E` after a member's end. A model of descent in which a class with ending members has a core whose line goes on through new members, and one in which the core is trivial, so that both sides of §5 have a witness.
