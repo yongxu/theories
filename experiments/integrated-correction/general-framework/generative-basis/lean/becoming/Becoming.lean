@@ -2064,8 +2064,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   off a feeder's own store, which nothing feeds, its capacity at a step is what the store falls, and
   the exact law holds with it (`Flow.needs_giver_iff_store_short`; `OwnStores`); over a hierarchy of
   families, each given only what is passed on from the one above, drawing past what the whole
-  hierarchy holds needs giving into its top (`Flow.needsSome_tiers`; `TwoTiers`). The readings are
-  the AI's (D59, D60, D64).
+  hierarchy holds needs giving into its top (`Flow.needsSome_tiers`; `TwoTiers`). A feeder's degree
+  of need, the least it gives while the consumer draws past the stock, is the sum of what each step
+  demands beyond what the others can give (`Flow.least_giving`; `Capacities.second_in_degree`). The
+  readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

@@ -219,6 +219,18 @@ order every standpoint shares when each weighs what can form in its own way.
   above the bottom it is `Flow.needsSome_on`. In `TwoTiers` a user draws on a condition a feeder
   gives to, passing on what it takes from its supply, which a source gives to: the user needs the
   source's giving to the supply (`TwoTiers.needs_source`, `TwoTiers.possible`).
+* **Need in degree.** A feeder's shortfall at a step is what the step demands beyond what the
+  other active members can give together (`Web.shortfall`). In every flow read off a web with
+  capacities in which a consumer draws past the stock, the family is given what the others give
+  and what the feeder gives (`Flow.givenFrom`, `Flow.replenishment_split`), the others give at
+  most what they can together (`Flow.others_le_capacityWithout`), so the feeder gives at each step
+  at least its shortfall (`Flow.shortfall_le_givenFrom`, `Flow.shortfalls_le_given`). Where it can
+  give each of its shortfalls, the flow in which its capacity is its shortfall
+  (`Web.shortCapacity`, `Flow.gradedDrawn`) has it give exactly that (`Flow.least_giving`). So the
+  least a feeder gives while the consumer draws past the stock is the sum of its shortfalls, its
+  degree of need, and a feeder is needed exactly where that degree is positive
+  (`Flow.needs_giver_iff_shortfalls_pos`). In `Capacities` the user needs the second copy in
+  degree one and the first in degree zero (`Capacities.second_in_degree`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -282,7 +294,10 @@ give only part of it are both reached, three of one unit each against a demand o
 reached, and redundancy is a matter of capacity, not of number. Read a feeder's capacity as what
 its own supply passes on: a feeder whose store runs out is no copy from then on, and self-concern,
 drawn along need past what a hierarchy holds, reaches what feeds its top, so its reach is not
-bounded by the families a center draws on directly. Read an order increasing in
+bounded by the families a center draws on directly. Read a feeder's degree of need as the grade
+with which self-concern drawn along need reaches it: need itself is its standing, a positive
+degree, and the degree is how much the center's continuation draws on it beyond what the others
+could give. Read an order increasing in
 its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
@@ -3270,6 +3285,258 @@ theorem needs_giver_iff_store_short [DecidableEq F] [DecidableEq C] {W : Web F C
 
 end Flow
 
+/-! ## Need in degree -/
+
+/-- An amount is at most another with what it exceeds the other by. -/
+theorem covered_by_excess (a b : Nat) : a ≤ b + excess a b :=
+  Nat.le_trans (Nat.le_add_right a (excess b a)) (Nat.le_of_eq (excess_balance a b))
+
+/-- What exceeds `b` by at most `c` has excess over `b` at most `c`. -/
+theorem excess_le_of_covered : ∀ {a b c : Nat}, a ≤ b + c → excess a b ≤ c
+  | 0, _, _, _ => Nat.zero_le _
+  | _ + 1, 0, c, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add c))
+  | a + 1, b + 1, c, le => excess_le_of_covered (a := a) (b := b) (c := c)
+      (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add b c))))
+
+/-- An amount is the part a test removes and the part it keeps. -/
+theorem split_by {p : Prop} [d : Decidable p] (v : Nat) :
+    v = (if p then 0 else v) + (if p then v else 0) :=
+  match d with
+  | isTrue _ => (Nat.zero_add v).symm
+  | isFalse _ => (Nat.add_zero v).symm
+
+namespace Web
+
+variable {C : Type} (W : Web F C)
+
+/-- What the step from `t` demands beyond what the members of `ks` other than `g`, active there,
+can give together: the part of the demand only `g` can give. -/
+def shortfall [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : Nat → F → Nat)
+    (cs : List C) (ks : List F) (g : F) (t : Nat) : Nat :=
+  excess (W.demand cs t) (W.capacityWithout cap ks g t)
+
+/-- The capacities under which `g` can give only what the others cannot: `g`'s at a step is the
+step's shortfall without it, every other formation's is its own. -/
+def shortCapacity [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : Nat → F → Nat)
+    (cs : List C) (ks : List F) (g : F) (t : Nat) (h : F) : Nat :=
+  if h = g then W.shortfall cap cs ks g t else cap t h
+
+end Web
+
+namespace Flow
+
+variable {C : Type}
+
+/-- What `g` gives the family across the step from `t`, counted where it takes part. -/
+def givenFrom [DecidableEq F] (L : Flow F C) (cs : List C) (t : Nat) (g : F) : Nat :=
+  total (L.present t) fun x => if x = g then total cs (L.give t x) else 0
+
+/-- Across a stretch, the shared flow in which every active member gives within its capacity but
+`g`, whose capacity is its shortfall: `g` gives only what the others cannot. -/
+def gradedDrawn [DecidableEq F] [DecidableEq C] (W : Web F C) [∀ t x, Decidable (W.active t x)]
+    (cap : Nat → F → Nat) (cs : List C) (c₀ : C) (ks : List F) (T n : Nat) (f g : F) : Flow F C :=
+  sharedDrawn W (W.shortCapacity cap cs ks g) cs c₀ ks T n f f
+
+section Degree
+
+variable [DecidableEq F] {W : Web F C} [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat}
+  {cs : List C} {ks : List F} {T n : Nat} {f g : F}
+
+/-- What the family is given is what the formations other than `g` give it and what `g` gives
+it. -/
+theorem replenishment_split (L : Flow F C) (t : Nat) :
+    L.replenishment cs t =
+      total (L.present t) (fun x => if x = g then 0 else total cs (L.give t x)) +
+        L.givenFrom cs t g :=
+  (total_swap (fun x c => L.give t x c) cs (L.present t)).symm.trans
+    ((Weighting.total_congr_on fun x _ => split_by (p := x = g) (total cs (L.give t x))).trans
+      (total_add _ _ (L.present t)))
+
+/-- **What the others give is at most what they can give together.** In a flow read off a web
+with capacities, at a step of the stretch, what the formations taking part other than `g` give
+the family is at most what the active members other than `g` can give. -/
+theorem others_le_capacityWithout {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    {t : Nat} (from_ : T ≤ t) (to : t < T + n) :
+    total (L.present t) (fun x => if x = g then 0 else total cs (L.give t x)) ≤
+      W.capacityWithout cap ks g t :=
+  have each : ∀ x, x ∈ L.present t → (if x = g then 0 else total cs (L.give t x)) ≤
+      total ks (fun h => if h = x then W.otherCapacity cap g t h else 0) := fun x present =>
+    match decEq x g with
+    | isTrue same => Nat.le_trans (Nat.le_of_eq (if_pos same)) (Nat.zero_le _)
+    | isFalse other => Nat.le_trans (Nat.le_of_eq (if_neg other))
+      (match Nat.decEq (total cs (L.give t x)) 0 with
+      | isTrue zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _)
+      | isFalse pos => match total_pos cs (Nat.pos_of_ne_zero pos) with
+        | ⟨c, inside, positive⟩ =>
+          Nat.le_trans ((fed.2 t from_ to).2 x present) (Nat.le_trans
+            (Nat.le_of_eq ((if_pos ⟨fed.1.2.1 t x c present positive, other⟩).symm.trans
+              (if_pos rfl).symm))
+            (le_total_of_mem (q := fun h => if h = x then W.otherCapacity cap g t h else 0)
+              (fed.1.2.2 t x c inside present positive))))
+  Nat.le_trans (total_le _ each) (Nat.le_trans
+    (Nat.le_of_eq (total_swap (fun x h => if h = x then W.otherCapacity cap g t h else 0) ks
+      (L.present t)))
+    (total_le ks fun h _ => Nat.le_trans (total_le_at (a := h) (fun b pos => match decEq h b with
+        | isTrue same => same.symm
+        | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+            (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other))))) (fed.2 t from_ to).1)
+      (Nat.le_of_eq (if_pos rfl))))
+
+/-- **A feeder gives at least what the others cannot.** In a flow read off a web with capacities
+in which `f`, taking part, takes from the family at a step of the stretch, `g` gives the family
+there at least the step's shortfall without it. -/
+theorem shortfall_le_givenFrom {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    {t : Nat} (from_ : T ≤ t) (to : t < T + n) (present : f ∈ L.present t)
+    (takes : 0 < total cs (L.take t f)) : W.shortfall cap cs ks g t ≤ L.givenFrom cs t g :=
+  excess_le_of_covered (Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) present takes)
+    (Nat.le_trans (Nat.le_of_eq (replenishment_split (g := g) L t))
+      (Nat.add_le_add_right (others_le_capacityWithout fed from_ to) _)))
+
+/-- **Across a stretch in which `f` draws past the stock, `g` gives at least its shortfalls.** -/
+theorem shortfalls_le_given {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
+    (draws : DrawsPast cs T n (L, W) f) :
+    total (steps T n) (W.shortfall cap cs ks g) ≤ total (steps T n) fun t => L.givenFrom cs t g :=
+  Amounts.total_steps_le T n fun t from_ to =>
+    shortfall_le_givenFrom fed from_ to (draws.2 t from_ to).2.1 (draws.2 t from_ to).2.2
+
+/-- With its shortfall as its capacity, `g` can give at a step what it can give apart from `f`,
+and every other member what it could. -/
+theorem otherCapacity_short (outside : ¬ f ∈ ks) {t : Nat}
+    (able : W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) {h : F} (member : h ∈ ks) :
+    W.otherCapacity (W.shortCapacity cap cs ks g) f t h =
+      W.otherCapacity cap g t h + if h = g then W.shortfall cap cs ks g t else 0 :=
+  have apartF : h ≠ f := fun same => outside (Eq.subst (motive := fun y => y ∈ ks) same member)
+  match decEq h g with
+  | isTrue same => match (inferInstance : Decidable (W.active t h)) with
+    | isTrue active =>
+      (if_pos ⟨active, apartF⟩).trans ((if_pos same).trans ((Nat.zero_add _).symm.trans
+        ((congrArg (· + W.shortfall cap cs ks g t)
+          (if_neg fun both : W.active t h ∧ h ≠ g => both.2 same).symm).trans
+          (congrArg (W.otherCapacity cap g t h + ·) (if_pos same).symm))))
+    | isFalse idle =>
+      have zero : W.shortfall cap cs ks g t = 0 := Nat.eq_zero_of_le_zero (Nat.le_trans able
+        (Nat.le_of_eq (if_neg fun both : W.active t g ∧ g ≠ f =>
+          idle (Eq.subst (motive := fun y => W.active t y) same.symm both.1))))
+      (if_neg fun both : W.active t h ∧ h ≠ f => idle both.1).trans ((Nat.add_zero 0).symm.trans
+        ((congrArg (· + 0) (if_neg fun both : W.active t h ∧ h ≠ g => idle both.1).symm).trans
+          (congrArg (W.otherCapacity cap g t h + ·) ((if_pos same).trans zero).symm)))
+  | isFalse other => match (inferInstance : Decidable (W.active t h)) with
+    | isTrue active =>
+      (if_pos ⟨active, apartF⟩).trans ((if_neg other).trans ((Nat.add_zero _).symm.trans
+        ((congrArg (· + 0) (if_pos ⟨active, other⟩).symm).trans
+          (congrArg (W.otherCapacity cap g t h + ·) (if_neg other).symm))))
+    | isFalse idle =>
+      (if_neg fun both : W.active t h ∧ h ≠ f => idle both.1).trans ((Nat.add_zero 0).symm.trans
+        ((congrArg (· + 0) (if_neg fun both : W.active t h ∧ h ≠ g => idle both.1).symm).trans
+          (congrArg (W.otherCapacity cap g t h + ·) (if_neg other).symm)))
+
+/-- With its shortfall as its capacity, `g` together with the other members can give the step's
+demand where `g`, a member, can give its shortfall. -/
+theorem capacityWithout_short (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    {t : Nat} (able : W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) :
+    W.capacityWithout (W.shortCapacity cap cs ks g) ks f t =
+      W.capacityWithout cap ks g t + W.shortfall cap cs ks g t :=
+  (Weighting.total_congr_on fun _ inks => otherCapacity_short outside able inks).trans
+    ((total_add _ _ ks).trans (congrArg (W.capacityWithout cap ks g t + ·)
+      ((total_eq_at (a := g) (fun h pos => match decEq h g with
+          | isTrue same => same
+          | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+              (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other))))) apart member).trans
+        (if_pos rfl))))
+
+/-- A formation's capacity with `g`'s set to its shortfall is at most its own, where `g` can give
+its shortfall. -/
+theorem shortCapacity_le {t : Nat} (able : W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g)
+    (x : F) : W.shortCapacity cap cs ks g t x ≤ cap t x :=
+  match decEq x g with
+  | isTrue same => Nat.le_trans (Nat.le_of_eq (if_pos same)) (Nat.le_trans able
+      (Nat.le_trans (Web.otherCapacity_le cap f t g)
+        (Nat.le_of_eq (congrArg (cap t) same.symm))))
+  | isFalse other => Nat.le_of_eq (if_neg other)
+
+variable [DecidableEq C] {c₀ : C}
+
+/-- **The graded flow is a flow read off the web with capacities**, where `g`, a member, can give
+its shortfall at every step of the stretch. -/
+theorem gradedDrawn_fedOnlyWithin (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    (able : ∀ t, T ≤ t → t < T + n → W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) :
+    FedOnlyWithin W cap cs (· ∈ ks) T n (gradedDrawn W cap cs c₀ ks T n f g) :=
+  have fed : FedOnlyWithin W (W.shortCapacity cap cs ks g) cs (· ∈ ks) T n
+      (sharedDrawn W (W.shortCapacity cap cs ks g) cs c₀ ks T n f f) :=
+    sharedDrawn_fedOnlyWithin distinct inside apart outside fun t from_ to =>
+      Nat.le_trans (covered_by_excess (W.demand cs t) (W.capacityWithout cap ks g t))
+        (Nat.le_of_eq (capacityWithout_short apart outside member (able t from_ to)).symm)
+  ⟨fed.1, fun t from_ to => ⟨(fed.2 t from_ to).1, fun x present =>
+    Nat.le_trans ((fed.2 t from_ to).2 x present) (shortCapacity_le (able t from_ to) x)⟩⟩
+
+/-- In the graded flow `g` gives at each step of the stretch at most its shortfall. -/
+theorem gradedDrawn_givenFrom_le (distinct : Distinct cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks) (member : g ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n) :
+    (gradedDrawn W cap cs c₀ ks T n f g).givenFrom cs t g ≤ W.shortfall cap cs ks g t :=
+  have present : (gradedDrawn W cap cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+  have inPresent : g ∈ (gradedDrawn W cap cs c₀ ks T n f g).present t :=
+    Eq.subst (motive := fun l => g ∈ l) present.symm (.tail _ member)
+  have unique : Distinct ((gradedDrawn W cap cs c₀ ks T n f g).present t) :=
+    Eq.subst (motive := fun l => Distinct l) present.symm ⟨outside, apart⟩
+  Nat.le_trans (Nat.le_of_eq ((total_eq_at (a := g) (fun x pos => match decEq x g with
+      | isTrue same => same
+      | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+          (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other))))) unique inPresent).trans
+      (if_pos rfl)))
+    (Nat.le_trans (sharedDrawn_given_le (W := W) (cap := W.shortCapacity cap cs ks g) (c₀ := c₀)
+        (T := T) (n := n) (f := f) (g := f) distinct apart t g)
+      (Nat.le_trans (Web.otherCapacity_le (W.shortCapacity cap cs ks g) f t g)
+        (Nat.le_of_eq (if_pos rfl))))
+
+end Degree
+
+/-- **The least `g` gives while `f` draws past the stock is the sum of its shortfalls.** Over the
+flows read off a web with capacities, for a family without repetition holding `c₀`, fed only from
+the members of a list without repetition, with activity and identity decided, let `f`, not a
+member, be active across a stretch longer than the family's stock, and `g` a member. Every such
+flow in which `f` draws past the stock has `g` giving across the stretch at least the sum of its
+shortfalls, what each step demands beyond what the others can give; where `g` can give its
+shortfall at every step, some such flow has it give exactly that. -/
+theorem least_giving [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (member : g ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) :
+    (∀ L, FedOnlyWithin W cap cs (· ∈ ks) T n L → DrawsPast cs T n (L, W) f →
+      total (steps T n) (W.shortfall cap cs ks g) ≤ total (steps T n) fun t => L.givenFrom cs t g) ∧
+    ((∀ t, T ≤ t → t < T + n → W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) →
+      ∃ L, FedOnlyWithin W cap cs (· ∈ ks) T n L ∧ DrawsPast cs T n (L, W) f ∧
+        total (steps T n) (fun t => L.givenFrom cs t g) = total (steps T n) (W.shortfall cap cs ks g)) :=
+  ⟨fun _ fed draws => shortfalls_le_given fed draws,
+   fun able =>
+    have fed := gradedDrawn_fedOnlyWithin (c₀ := c₀) distinct inside apart outside member able
+    have draws : DrawsPast cs T n (gradedDrawn W cap cs c₀ ks T n f g, W) f :=
+      sharedDrawn_drawsPast inside alive below
+    ⟨gradedDrawn W cap cs c₀ ks T n f g, fed, draws, Nat.le_antisymm
+      (Amounts.total_steps_le T n fun _ from_ to =>
+        gradedDrawn_givenFrom_le distinct apart outside member from_ to)
+      (shortfalls_le_given fed draws)⟩⟩
+
+/-- **A feeder is needed exactly where its degree of need is positive**: where the sum of its
+shortfalls across the stretch is positive. -/
+theorem needs_giver_iff_shortfalls_pos [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) :
+    NeedsPart (FedOnlyWithin W cap cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔
+      0 < total (steps T n) (W.shortfall cap cs ks g) :=
+  (needs_giver_iff_short distinct inside apart outside alive below).trans
+    ⟨fun ⟨_, from_, to, short⟩ =>
+      total_pos_of_mem (mem_steps_of_between from_ to) (excess_pos.mpr short),
+     fun pos => match total_pos (steps T n) pos with
+      | ⟨t, mem, positive⟩ => match between_of_mem_steps mem with
+        | ⟨from_, to⟩ => ⟨t, from_, to, excess_pos.mp positive⟩⟩
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -3862,6 +4129,38 @@ theorem not_needs_second :
     | _ + 3, to, _ => absurd to (Nat.not_lt_of_le (Nat.le_add_left 3 _))
 
 end OwnStores
+
+namespace Capacities
+
+open Copies (Part)
+
+/-- The two copies are listed without repetition. -/
+theorem copies_apart : Distinct [Part.first, .second] :=
+  ⟨(fun mem => match mem_cons_cases mem with
+      | .inl same => Part.noConfusion same
+      | .inr empty => nomatch empty), (fun empty => nomatch empty), trivial⟩
+
+/-- **The user needs the second copy's giving in degree one**: every flow in which the user draws
+past the stock has the second copy give at least one unit, and some has it give exactly one; the
+first copy is needed in degree zero. -/
+theorem second_in_degree :
+    (∀ L, Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1 L →
+      Flow.DrawsPast [()] 0 1 (L, web) .user →
+        1 ≤ total (steps 0 1) fun t => L.givenFrom [()] t .second) ∧
+    (∃ L, Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1 L ∧
+      Flow.DrawsPast [()] 0 1 (L, web) .user ∧ total (steps 0 1) (fun t => L.givenFrom [()] t .second) = 1) ∧
+    total (steps 0 1) (web.shortfall cap [()] [Part.first, .second] .first) = 0 :=
+  match Flow.least_giving (g := Part.second) distinct (List.Mem.head []) copies_apart
+      Feeders.user_outside (.tail _ (.head _)) (fun _ _ _ => trivial) Nat.one_pos with
+  | ⟨low, attain⟩ =>
+    ⟨fun L fed draws => Nat.le_trans (by decide) (low L fed draws),
+     match attain (fun t _ to => match t, to with
+       | 0, _ => by decide
+       | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _))) with
+     | ⟨L, fed, draws, exact⟩ => ⟨L, fed, draws, exact.trans (by decide)⟩,
+     by decide⟩
+
+end Capacities
 
 /-! ## What self-concern alone ranks -/
 

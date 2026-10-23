@@ -65,10 +65,10 @@ path = RECORDS / 'self-concern-through-dependence.json'
 d = json.loads(path.read_text(encoding='utf-8'))
 assert len(d['laws']) == 17
 d['laws'].append({**t(
-    'A feeder\'s shortfall at a step is what the step demands beyond what the other active members can give. In every '
-    'possible flow in which the consumer draws past the stock the feeder gives at least the sum of its shortfalls, and '
-    'where it can give each, some possible flow has it give exactly that: its degree of need. Need is a positive '
-    'degree. Witness Capacities: the second copy needed in degree one, the first in degree zero.',
+    'A feeder\'s shortfall is what a step demands beyond what the other active members can give. In every possible '
+    'flow in which the consumer draws past the stock the feeder gives at least the sum of its shortfalls, and where '
+    'it can give each, some has it give exactly that: its degree of need. Need is a positive degree. Witness '
+    'Capacities: the second copy needed in degree one, the first in degree zero.',
     '供给者某步的缺额，是该步需求超出其余活跃成员合起来能给者。在消耗者汲取超出存量的每个可能的流中，供给者所给至少是其缺额之和；它能给出每个'
     '缺额时，某个可能的流使它恰好给出这么多：这是它被需要的程度。“所需”就是程度为正。见证 Capacities：第二个副本被需要的程度为一，第一个为零。'),
     'declarations': DEGREE})
