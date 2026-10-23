@@ -1,0 +1,3667 @@
+{
+ "about": "Regions and bases of the results and Lean modules (board item RA). Curated from the inventory of 23 October 2026 (seventeen readers; bases read from what each item states: old-base = World/Web/Flow, frame = Process/Run, general = any type, grammar = Becoming.Grammar, periphery = Mathlib). Edit to reassign.",
+ "records": {
+  "a-code-formed-between-formations": {
+   "region": "collective",
+   "base": "general",
+   "note": "SharedCodes: hearing-only code change keeps agreement; 约定俗成"
+  },
+  "a-coupling-saturated-by-what-it-has-carried": {
+   "region": "map",
+   "base": "frame",
+   "note": "Frequency: coupling stops once carried amount saturates"
+  },
+  "a-formations-own-course": {
+   "region": "knowing",
+   "base": "general",
+   "note": "IdentificationRuns: alike through couplings = prefix of own course"
+  },
+  "a-goal-along-a-lineage": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Evolution: goal carried down lineages"
+  },
+  "a-history-read-off-its-finite-stretches": {
+   "region": "root",
+   "base": "frame",
+   "note": "HistoryIdeals: histories are ideals of finite stretches"
+  },
+  "a-law-through-a-projection-along-one-run": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "law along one run under an equivalence; supersedes two coupling records"
+  },
+  "a-law-through-changing-coupling-along-one-run": {
+   "region": "retire",
+   "base": "old-base",
+   "note": "superseded by projection record"
+  },
+  "a-law-through-coupling-along-one-run": {
+   "region": "retire",
+   "base": "old-base",
+   "note": "superseded by projection record"
+  },
+  "a-narrowing-above-its-widening": {
+   "region": "significance",
+   "base": "general",
+   "note": "Weightings: rankings putting narrowing above widening"
+  },
+  "a-need-with-a-cap": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Admission: band between need and cap"
+  },
+  "a-pattern-lasts-through-passing": {
+   "region": "map",
+   "base": "old-base",
+   "note": "PatternPassing/Wholes: pattern outlasting brief carriers"
+  },
+  "a-pool-read-by-its-majority": {
+   "region": "collective",
+   "base": "frame",
+   "note": "SelectionPool: majority reading is a pooled selection"
+  },
+  "a-pool-that-recruits-through-itself": {
+   "region": "collective",
+   "base": "frame",
+   "note": "PoolCourse: self-recruiting pool reach"
+  },
+  "a-race-for-position-draws-everything": {
+   "region": "collective",
+   "base": "general",
+   "note": "Optimum: positional race draws everything (RP1)"
+  },
+  "a-reading-against-the-share-does-not-ratchet": {
+   "region": "map",
+   "base": "general",
+   "note": "RuleCapture: no ratchet when rule read against share"
+  },
+  "a-rise-past-the-inflow-is-drawn-from-beyond": {
+   "region": "map",
+   "base": "old-base",
+   "note": "DrawnBeyond: rise bounded by inflow plus draw beyond"
+  },
+  "a-source-before-a-juncture": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Junctures: source must reach reader before juncture"
+  },
+  "a-step-coupling-keeps-at-every-horizon": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Optimum: per-step coupling keeps dependence (SG7)"
+  },
+  "a-weighting-faster-than-renewal-ends-the-base": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Optimum: discounting faster than renewal ends base (SG8)"
+  },
+  "a-whole-carried-by-lasting-parts": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Wholes: whole active from lasting arising parts"
+  },
+  "a-whole-of-every-part": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Wholes: AllWhole, graded whole (WH1)"
+  },
+  "acquired-binding-compositional-use": {
+   "region": "knowing",
+   "base": "general",
+   "note": "AcquiredBinding: word bindings in compositional use"
+  },
+  "acquired-revision-of-pending-task": {
+   "region": "knowing",
+   "base": "general",
+   "note": "CommonTaskRevision: goal revision of pending task"
+  },
+  "additive-part-of-offspring-variance": {
+   "region": "life",
+   "base": "general",
+   "note": "SelectionTerm: covariance bound, additive variance (EV)"
+  },
+  "alignment-approaches-under-the-selection-laws": {
+   "region": "significance",
+   "base": "frame",
+   "note": "reviewed-scoped; AP1/AP2 alignment approaches via selection closures"
+  },
+  "alignment-direction-under-widening": {
+   "region": "significance",
+   "base": "frame",
+   "note": "reviewed-scoped; AlignmentDirection conditional on warranted correspondence"
+  },
+  "any-number-of-drawers-in-turn": {
+   "region": "retire",
+   "base": "general",
+   "note": "superseded by drawers-in-turn"
+  },
+  "arising-needs-change": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Admission: no arising without growing requirement change"
+  },
+  "assured-route-criterion": {
+   "region": "significance",
+   "base": "frame",
+   "note": "Assurance: assured plan completion in determined process"
+  },
+  "attraction-is-not-returning": {
+   "region": "map",
+   "base": "frame",
+   "note": "Attraction: meta-attractors, what does not return"
+  },
+  "balance-from-conservation-along-a-relation": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Continuity FL2: balance iff conservation on closed families"
+  },
+  "balance-from-the-first-law": {
+   "region": "root",
+   "base": "old-base",
+   "note": "FL1; EntropyProduction periphery for exergy reading"
+  },
+  "bands-of-the-three-powers": {
+   "region": "classical",
+   "base": "general",
+   "note": "HexagramPlaces: 三才 bands and heights"
+  },
+  "basic-priority-step-by-step": {
+   "region": "significance",
+   "base": "general",
+   "note": "Lexical/Ranking: J1 basic priority stepwise"
+  },
+  "basins-of-a-determined-law": {
+   "region": "map",
+   "base": "frame",
+   "note": "Attraction: basins as meeting classes"
+  },
+  "becoming-context-coherence": {
+   "region": "root",
+   "base": "frame",
+   "note": "pooled steps preserve histories iff closure"
+  },
+  "becoming-dependence-dynamics": {
+   "region": "map",
+   "base": "old-base",
+   "note": "dependence forms, holds, breaks, transforms"
+  },
+  "becoming-finite-horizon": {
+   "region": "map",
+   "base": "frame",
+   "note": "no finite prefix decides renewal vs consumption"
+  },
+  "becoming-renewal-reading": {
+   "region": "map",
+   "base": "frame",
+   "note": "renewal/consumption as run classes; relational reading of living"
+  },
+  "becoming-return-grades": {
+   "region": "map",
+   "base": "old-base",
+   "note": "consumption = never-returning dependence"
+  },
+  "becoming-spine-instances": {
+   "region": "method",
+   "base": "general",
+   "note": "existing interfaces as spine instances"
+  },
+  "becoming-stepwise-reading": {
+   "region": "significance",
+   "base": "frame",
+   "note": "stepwise vs whole-run reading of living"
+  },
+  "binding-preserving-substitution": {
+   "region": "knowing",
+   "base": "general",
+   "note": "InferentialSubstitution: exact position criterion"
+  },
+  "bounded-census-keeps-pace": {
+   "region": "root",
+   "base": "old-base",
+   "note": "bounded census: coming and ceasing keep pace"
+  },
+  "branching-target-uniqueness": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "ExplanatoryBranching: target uniqueness"
+  },
+  "branching-tests-bisimulation": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "finite branching tests iff bisimulation (known result)"
+  },
+  "candidate-theorems-of-the-corpus": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "GrammarCandidates: 59 candidates, 38 proved, 15 conditional, 3 refuted"
+  },
+  "capture-through-the-rule": {
+   "region": "map",
+   "base": "general",
+   "note": "RuleCapture: loop locks share and rule"
+  },
+  "causal-models-as-processes": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "structural causal models as determined processes"
+  },
+  "ceasing-needs-arising": {
+   "region": "root",
+   "base": "old-base",
+   "note": "census: recurring ceasing needs recurring arising"
+  },
+  "census-balance": {
+   "region": "root",
+   "base": "old-base",
+   "note": "end list + ceased = start list + came"
+  },
+  "census-balance-under-continuation": {
+   "region": "root",
+   "base": "old-base",
+   "note": "census balance in two halves under continuation"
+  },
+  "census-read-off-the-exchange": {
+   "region": "root",
+   "base": "old-base",
+   "note": "ExchangePremises: census from exchange relation"
+  },
+  "censuses-of-the-xiang-and-tuan": {
+   "region": "classical",
+   "base": "general",
+   "note": "HexagramPlaces: 小象/彖 against places"
+  },
+  "central-laws-over-every-exchange": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OverExchange: 33 central laws over any exchange relation"
+  },
+  "chinese-sources-on-the-spine": {
+   "region": "classical",
+   "base": "none",
+   "note": "reviewed-scoped; 248 passages tied to spine (RO)"
+  },
+  "civilization-thought-on-the-spine": {
+   "region": "classical",
+   "base": "none",
+   "note": "reviewed-scoped; 中华思想脉络 5,673 judgments (ZH)"
+  },
+  "claims-shown-in-context": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Context: gluing of context claims"
+  },
+  "classes-along-a-continuation": {
+   "region": "root",
+   "base": "old-base",
+   "note": "ContinuedClasses: splits and merges"
+  },
+  "classical-definitions-in-the-grammar": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "GrammarReadings: 墨经/荀子 化 in grammar"
+  },
+  "classification-robust-generative-comparison": {
+   "region": "significance",
+   "base": "frame",
+   "note": "two-tier comparator under unsettled classification"
+  },
+  "closed-capture": {
+   "region": "map",
+   "base": "general",
+   "note": "ClosedCapture MA1: loop reading only the share"
+  },
+  "closing-needs-net-draw": {
+   "region": "map",
+   "base": "old-base",
+   "note": "closing needs net draw on required condition"
+  },
+  "closure-verdict-meets-continuation-condition": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "BoundedSignificance: closure verdict vs continuation condition"
+  },
+  "code-plan-global-support": {
+   "region": "root",
+   "base": "general",
+   "note": "CompositionBridge: coded joint plans supported natively"
+  },
+  "coming-and-ceasing-keep-pace": {
+   "region": "root",
+   "base": "old-base",
+   "note": "decided finite family: arising and ceasing keep pace"
+  },
+  "comparison-by-widening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "comparison C read as widening"
+  },
+  "comparison-content-under-regrouping": {
+   "region": "significance",
+   "base": "frame",
+   "note": "regrouping fidelity of comparison content"
+  },
+  "comparison-where-the-rest-responds": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "comparison within responsive reach"
+  },
+  "comparison-within-reach": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "comparison decided within reach"
+  },
+  "condition-correspondence-discipline": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "correspondence discipline for conditions (Metaethics)"
+  },
+  "conditional-foundation-assessment": {
+   "region": "retire",
+   "base": "none",
+   "note": "superseded five-condition review"
+  },
+  "conditions-kept-together": {
+   "region": "map",
+   "base": "frame",
+   "note": "JointKeeping: joint keepability not decomposable"
+  },
+  "configurations-alike-by-relation": {
+   "region": "root",
+   "base": "frame",
+   "note": "bisimulation likeness; configuration is how it relates"
+  },
+  "confined-rise-within-a-whole": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Founding/GroupEnding: confined lineage ends"
+  },
+  "consequence-revised-reference-plan": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Contacts/Stock: consequences revise reference"
+  },
+  "constitutive-binding-assessment": {
+   "region": "knowing",
+   "base": "none",
+   "note": "reviewed-scoped assessment, no Lean"
+  },
+  "consumption-ends-with-feeders": {
+   "region": "map",
+   "base": "old-base",
+   "note": "consumption ends when feeders end"
+  },
+  "context-sensitive-updating-correspondence": {
+   "region": "knowing",
+   "base": "none",
+   "note": "reviewed-scoped empirical reanalysis (24 participants)"
+  },
+  "continuation-condition-decomposition": {
+   "region": "significance",
+   "base": "frame",
+   "note": "condition = presupposition + boundary invariance"
+  },
+  "continuation-condition-yields-living-significance": {
+   "region": "significance",
+   "base": "frame",
+   "note": "Unrestricted yields living significance; instantiation"
+  },
+  "continuation-relative-to-a-class": {
+   "region": "root",
+   "base": "grammar",
+   "note": "Grammar: continuation = 缘 met with a class"
+  },
+  "continued-change-needs-openness": {
+   "region": "map",
+   "base": "old-base",
+   "note": "rest theorem: enclosure excludes endless change"
+  },
+  "continuing-self-fed-from-beyond": {
+   "region": "map",
+   "base": "old-base",
+   "note": "continuing family must be fed from beyond"
+  },
+  "continuous-time-as-tower": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Tower: time scales as discrete readings"
+  },
+  "control-coherence-loss": {
+   "region": "map",
+   "base": "general",
+   "note": "OperativeCoherence/Dephasing: loss and recovery"
+  },
+  "conveyance-crosses-the-boundary": {
+   "region": "life",
+   "base": "old-base",
+   "note": "conveyance as reading of related; boundary"
+  },
+  "copied-witnesses-change-nothing": {
+   "region": "knowing",
+   "base": "general",
+   "note": "FaultEnvelopes: copied witnesses add nothing"
+  },
+  "copying-b-fold": {
+   "region": "life",
+   "base": "general",
+   "note": "Copying: b-fold rounds within stock"
+  },
+  "counterfactual-is-the-course": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P80: counterfactual = course of the law"
+  },
+  "counting-standing-and-dependence": {
+   "region": "root",
+   "base": "old-base",
+   "note": "CensusTable: counting under premise selections"
+  },
+  "counting-under-enclosure": {
+   "region": "root",
+   "base": "old-base",
+   "note": "enclosure bounds change"
+  },
+  "counting-where-the-counts-exist": {
+   "region": "root",
+   "base": "old-base",
+   "note": "CensusCounts R2: counting laws where counts exist"
+  },
+  "counts-exist-where-decided": {
+   "region": "method",
+   "base": "old-base",
+   "note": "Decidedness: count exists iff decided (calibration)"
+  },
+  "coupled-regimes": {
+   "region": "map",
+   "base": "general",
+   "note": "RM6 Coupled: margin not its own"
+  },
+  "coupled-webs": {
+   "region": "map",
+   "base": "general",
+   "note": "RM7: cascade of ends on webs"
+  },
+  "coupling-closures-of-training-pipelines": {
+   "region": "significance",
+   "base": "none",
+   "note": "reviewed-scoped AI training pipeline closures"
+  },
+  "dependence-formed-from-drawing": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Transmission: dependence forms anew at descent"
+  },
+  "derivation-soundness": {
+   "region": "method",
+   "base": "general",
+   "note": "Derivation: premise-tracked soundness"
+  },
+  "derived-extent-limits": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "derived extent ends with the want"
+  },
+  "derived-history-law-exactness": {
+   "region": "root",
+   "base": "frame",
+   "note": "DerivedHistoryLaw: local law from history summaries"
+  },
+  "determinacy-up-to-likeness": {
+   "region": "root",
+   "base": "frame",
+   "note": "determinacy as case of up-to-likeness"
+  },
+  "differences-below-threshold": {
+   "region": "map",
+   "base": "old-base",
+   "note": "threshold coupling: differences below vanish"
+  },
+  "division-by-exclusive-footprints": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Exclusion: division by exclusive footprints"
+  },
+  "dormancy-over-a-stretch": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Reserve: dormancy, final ending"
+  },
+  "drawers-in-turn": {
+   "region": "collective",
+   "base": "general",
+   "note": "Optimum UM: unified drawers with floors"
+  },
+  "drawers-in-turn-draw-everything": {
+   "region": "retire",
+   "base": "general",
+   "note": "superseded by drawers-in-turn (UM)"
+  },
+  "drawers-in-turn-within-capacities": {
+   "region": "retire",
+   "base": "general",
+   "note": "superseded by drawers-in-turn (UM)"
+  },
+  "draws-on-a-shared-stock": {
+   "region": "collective",
+   "base": "general",
+   "note": "SharedStock: selections fit iff total fits"
+  },
+  "drift-offspring-sampled": {
+   "region": "life",
+   "base": "general",
+   "note": "Drift: sampled offspring, exact spread"
+  },
+  "effective-capacity-and-eventual-reachability": {
+   "region": "map",
+   "base": "frame",
+   "note": "ActivationCapacity: joint realization reachability"
+  },
+  "enacted-scene-binding": {
+   "region": "knowing",
+   "base": "general",
+   "note": "CrossSituational/EnactedScene learning"
+  },
+  "encounter-control-and-retention": {
+   "region": "knowing",
+   "base": "none",
+   "note": "reviewed-scoped CuriGaze reanalysis"
+  },
+  "encounter-selection-and-revision": {
+   "region": "knowing",
+   "base": "general",
+   "note": "EncounterChoice: records only narrow"
+  },
+  "endpoint-loss-and-return": {
+   "region": "map",
+   "base": "frame",
+   "note": "endpoint possibilities lost and returned"
+  },
+  "entropy-history-and-record": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Entropy R5: history monotone, record"
+  },
+  "every-loss-passes-a-juncture": {
+   "region": "map",
+   "base": "frame",
+   "note": "Junctures: loss passes juncture, not-not form"
+  },
+  "every-origin-passes-the-gate": {
+   "region": "life",
+   "base": "frame",
+   "note": "Gated/LivingOrganization: origin passes gate"
+  },
+  "evolution-on-descent": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Evolution: premise-free identity on descent"
+  },
+  "exchanges-commute-unless-joined": {
+   "region": "root",
+   "base": "old-base",
+   "note": "independent exchanges commute"
+  },
+  "exclusive-footprint-support": {
+   "region": "root",
+   "base": "general",
+   "note": "Composition: exclusive footprints support leaves"
+  },
+  "experiment-needs-return": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "P53 Experiment: record fixes outcome where taken"
+  },
+  "fallible-witness-diagnosability": {
+   "region": "knowing",
+   "base": "general",
+   "note": "FallibleInspection: diagnosability with faults"
+  },
+  "far-conveying-runs-the-family-down": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Continuation: far conveying lowers family stock"
+  },
+  "feedback-and-reach": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "influence closure, reach (bounded significance)"
+  },
+  "feeding-closure": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "least feeding-closed region of a continuation"
+  },
+  "feeding-from-a-step": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "feeding closure from step s"
+  },
+  "fidelity-coders-on-own-and-other-texts": {
+   "region": "method",
+   "base": "none",
+   "note": "reviewed-scoped coder check, Claude vs GPT"
+  },
+  "fidelity-of-the-classical-statements": {
+   "region": "classical",
+   "base": "none",
+   "note": "reviewed-scoped 中华本 fidelity count"
+  },
+  "fidelity-under-one-discipline": {
+   "region": "classical",
+   "base": "none",
+   "note": "reviewed-scoped fidelity under name-table discipline"
+  },
+  "finite-aggregation-within-restorable-basic-losses": {
+   "region": "significance",
+   "base": "frame",
+   "note": "reviewed-scoped FR aggregation proposal"
+  },
+  "finite-basis-common-interpretation": {
+   "region": "method",
+   "base": "general",
+   "note": "JointInterpretation of finite basis"
+  },
+  "finite-continuation-plans": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ContinuationAdequacy: viability iff branching plan"
+  },
+  "finite-fallible-inquiry-necessity": {
+   "region": "knowing",
+   "base": "general",
+   "note": "FallibleInquiry: necessary info conditions"
+  },
+  "finite-granularity-question-recovery": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ExplanatoryGranularity: question translation"
+  },
+  "finite-joining-tree-lifting": {
+   "region": "root",
+   "base": "general",
+   "note": "Joining: trees lift from fragments"
+  },
+  "finite-trace-transport": {
+   "region": "root",
+   "base": "frame",
+   "note": "GenerativeCore: step maps transport traces"
+  },
+  "fixation-by-drift": {
+   "region": "life",
+   "base": "general",
+   "note": "Drift: fixation without selection"
+  },
+  "fixation-with-selection": {
+   "region": "life",
+   "base": "general",
+   "note": "Drift: fixation share as potential ratio"
+  },
+  "fixed-places-and-sole-lines": {
+   "region": "classical",
+   "base": "frame",
+   "note": "彖/小象 place statements, sole lines"
+  },
+  "formed-copying-correction": {
+   "region": "life",
+   "base": "general",
+   "note": "CopyingCorrection: correction never worsens"
+  },
+  "formed-copying-registration": {
+   "region": "life",
+   "base": "general",
+   "note": "CopyingRegistration: contacts change fidelity"
+  },
+  "formed-goal-revision-continuation": {
+   "region": "knowing",
+   "base": "general",
+   "note": "GoalFormationRevision: two-practice construction"
+  },
+  "formed-software-continuation": {
+   "region": "collective",
+   "base": "none",
+   "note": "reviewed-scoped LibreOffice/Narwhal history"
+  },
+  "forming-anew-necessary-and-sufficient": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Transmission: forms anew iff inheritance fails"
+  },
+  "four-cases-of-a-part": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "part widens, narrows, keeps, mixed"
+  },
+  "fulfillment-chance-floor": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ChanceFloors: same-law chance floor"
+  },
+  "functional-joining-common-structure": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ExplanatoryContextualStructure: common structure"
+  },
+  "generalization-through-lumping": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Learning: lumping generalizes exactly where"
+  },
+  "generation-and-degeneration-at-two-grains": {
+   "region": "map",
+   "base": "grammar",
+   "note": "GrammarMap OU4/OU5: two grains and branches"
+  },
+  "generation-is-replenishment": {
+   "region": "map",
+   "base": "old-base",
+   "note": "arising needs replenishment under dissipation"
+  },
+  "giving-that-waits-on-giving": {
+   "region": "collective",
+   "base": "general",
+   "note": "Withholding: one withholding ends giving"
+  },
+  "gluing-under-parity": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "Gluing: parity readings glue iff consistent"
+  },
+  "graded-significance-and-priority": {
+   "region": "significance",
+   "base": "general",
+   "note": "Weightings IV2: invariant grades"
+  },
+  "groups-formed-by-descent": {
+   "region": "life",
+   "base": "old-base",
+   "note": "SelectionLevels: groups by descent keep values"
+  },
+  "groups-whose-conditions-are-coupled": {
+   "region": "life",
+   "base": "old-base",
+   "note": "GroupEnding EV6: coupled conditions"
+  },
+  "growth-constrained-fragmentation": {
+   "region": "map",
+   "base": "frame",
+   "note": "Cuts K1/K2: growth constrains fragmentation"
+  },
+  "guarded-program-question-recovery": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ExplanatoryGuardedPrograms: questions compile"
+  },
+  "hexagram-arrangements-and-laws": {
+   "region": "classical",
+   "base": "frame",
+   "note": "HexagramSequences Y5: received order only a table"
+  },
+  "hexagram-world-laws": {
+   "region": "classical",
+   "base": "frame",
+   "note": "HexagramLaws Y3: 互 nuclear law"
+  },
+  "hexagrams-on-the-spine": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Hexagrams Y1: 64 hexagrams as a world"
+  },
+  "historical-source-binding": {
+   "region": "knowing",
+   "base": "general",
+   "note": "HistoricalBinding: histories fit dated records"
+  },
+  "histories-fix-law-up-to-dead-ends": {
+   "region": "root",
+   "base": "frame",
+   "note": "Histories: law-history correspondence"
+  },
+  "horizon-optima-hold-the-greatest-renewal": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Optimum SG5: horizon optima"
+  },
+  "how-a-carried-difference-grows": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Propagation: carried amount grows by order"
+  },
+  "how-fast-a-rule-may-change": {
+   "region": "map",
+   "base": "general",
+   "note": "Pace: rule must read fast level"
+  },
+  "how-loops-form": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Closing P122: loops form by closing"
+  },
+  "how-much-difference-arrives": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P115 coupling strength = sensitivity"
+  },
+  "how-often-couplings-act": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P123 Frequency: settling, runaway rate"
+  },
+  "identification-where-bounded": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Identification: bounded induction is deduction"
+  },
+  "identification-where-runs-part": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Distinguishing: prefix fixes course from 2N-1"
+  },
+  "identity-across-steps": {
+   "region": "root",
+   "base": "old-base",
+   "note": "labels carry nothing; who continues whom"
+  },
+  "imbalance-as-relatum": {
+   "region": "root",
+   "base": "old-base",
+   "note": "P59 Imbalance: counted imbalance balances"
+  },
+  "imposing-a-code-breaks-the-symmetry": {
+   "region": "collective",
+   "base": "general",
+   "note": "SharedCodes: imposed code symmetry break"
+  },
+  "incidence-common-refinement": {
+   "region": "knowing",
+   "base": "general",
+   "note": "BranchingCorrespondence: common refinement"
+  },
+  "inherited-structural-copying": {
+   "region": "life",
+   "base": "general",
+   "note": "Copying: inherited arrangement"
+  },
+  "joining-open-map-factor": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ExplanatoryJoiningRefinement: unique factors"
+  },
+  "joining-questions-survive-encoding": {
+   "region": "knowing",
+   "base": "general",
+   "note": "joining questions exact under encoding"
+  },
+  "joint-code-plan-lifting": {
+   "region": "root",
+   "base": "general",
+   "note": "CompositionBridge: nested joint plans lift"
+  },
+  "joint-correlation-reduced-dynamics": {
+   "region": "root",
+   "base": "frame",
+   "note": "JointPhase: relational change, unchanged local states"
+  },
+  "joint-decomposition-lifting": {
+   "region": "root",
+   "base": "general",
+   "note": "joint decomposition lifts under compactness"
+  },
+  "joint-difference-making": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Joint: but-for test for parts together"
+  },
+  "joint-plan-composition": {
+   "region": "collective",
+   "base": "general",
+   "note": "JointContinuation: joint continuation of local plans"
+  },
+  "joint-practice-forms-continuation": {
+   "region": "collective",
+   "base": "general",
+   "note": "JointPracticeContinuation: practice machine"
+  },
+  "joint-target-uniqueness": {
+   "region": "knowing",
+   "base": "general",
+   "note": "target uniqueness for joint tests"
+  },
+  "keeping-forgoes-the-renewal-at-the-need": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Optimum SG6: keeping forgoes renewal"
+  },
+  "laws-at-coarser-steps": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Locality: one-step laws compose at coarse steps"
+  },
+  "laws-at-finer-units": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Units/Resolution: laws at finer units"
+  },
+  "laws-of-one-step": {
+   "region": "root",
+   "base": "old-base",
+   "note": "laws of one step with conditions inside"
+  },
+  "laws-of-one-step-complete": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OneStep: completeness of one-step laws"
+  },
+  "laws-with-noise": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OverExchange/Representation: noise path by path"
+  },
+  "learnable-through-a-map": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "P106 Learnable: extrapolation through a map"
+  },
+  "learned-procedure-transmission": {
+   "region": "life",
+   "base": "general",
+   "note": "LearnedProcedureTransmission: reconstruction"
+  },
+  "learning-by-refutation": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Learning/Testing: no prefix fixes next value"
+  },
+  "learning-through-a-map-is-tracking-in-the-limit": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "LimitVerification: learning = limit tracking"
+  },
+  "least-footprint-where-idleness-decided": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OrderNormal/Reordering: least footprint, DecidesIdle"
+  },
+  "least-loss-from-entropy-production": {
+   "region": "map",
+   "base": "periphery",
+   "note": "T1 EntropyProduction: second law as first law"
+  },
+  "least-loss-rest": {
+   "region": "map",
+   "base": "old-base",
+   "note": "least loss as premise of rest (LC1)"
+  },
+  "least-parts-and-equal-shares": {
+   "region": "collective",
+   "base": "general",
+   "note": "RelativePosition Z1: least parts, equal shares"
+  },
+  "levels-of-closure": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "five nested closures"
+  },
+  "life-as-condition-of-life": {
+   "region": "life",
+   "base": "old-base",
+   "note": "formation and condition two roles of one relatum"
+  },
+  "lifting-where-branching-is-finite": {
+   "region": "method",
+   "base": "frame",
+   "note": "FiniteBranching: decided depth, calibration"
+  },
+  "listing-once-is-decided-identity": {
+   "region": "method",
+   "base": "old-base",
+   "note": "Listing: listing once iff decided identity"
+  },
+  "living-on-and-descent": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Descent: living on, descent readings of related"
+  },
+  "living-significance-on-held-lives": {
+   "region": "significance",
+   "base": "frame",
+   "note": "Standpoints: living significance on held lives"
+  },
+  "loops-within-what-a-law-reads": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P124 Thresholds: loops within what law reads"
+  },
+  "loss-beyond-a-region": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "loss beyond nested regions"
+  },
+  "losses-of-the-sum-over-histories": {
+   "region": "method",
+   "base": "general",
+   "note": "Weighted P121: truncation, cancellation, memory"
+  },
+  "map-of-premises": {
+   "region": "root",
+   "base": "old-base",
+   "note": "which World premises follow; eight independent"
+  },
+  "margin-of-a-regime": {
+   "region": "map",
+   "base": "general",
+   "note": "RegimeMargin: least level above need"
+  },
+  "market-finite-support-obstruction": {
+   "region": "map",
+   "base": "frame",
+   "note": "general drain law; market only an instance"
+  },
+  "market-partial-correction-boundary": {
+   "region": "map",
+   "base": "frame",
+   "note": "funnel characterization; market instance"
+  },
+  "market-protected-continuation": {
+   "region": "map",
+   "base": "frame",
+   "note": "viability kernel = largest certificate"
+  },
+  "market-supported-finite-transition": {
+   "region": "map",
+   "base": "frame",
+   "note": "ladder for lasting n steps; market instance"
+  },
+  "material-preparation-output": {
+   "region": "life",
+   "base": "frame",
+   "note": "recipe/pool routing, copying instance"
+  },
+  "mediated-evidence-transport": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "invariants along admitted courses; protocol instances"
+  },
+  "merge-of-a-part-kept-by-the-rest": {
+   "region": "knowing",
+   "base": "general",
+   "note": "part×rest count bound under merge-free law"
+  },
+  "metaethical-core-characterization": {
+   "region": "significance",
+   "base": "frame",
+   "note": "evaluation over one frame"
+  },
+  "more-needs-renewers": {
+   "region": "map",
+   "base": "old-base",
+   "note": "unbounded generation needs unbounded renewers"
+  },
+  "multivalued-joining-common-structure": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Explanatory* branch accounts alignment"
+  },
+  "mutation-and-the-balance-it-sets": {
+   "region": "life",
+   "base": "general",
+   "note": "mutation–selection balance s/(s+m)"
+  },
+  "mutual-dependence-and-its-pace": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "MD1 'entangled'; bounded significance; pace"
+  },
+  "naming-attention-coverage": {
+   "region": "knowing",
+   "base": "none",
+   "note": "empirical infant naming data; reviewed-scoped"
+  },
+  "necessarily-drawn-is-not-returning": {
+   "region": "map",
+   "base": "frame",
+   "note": "drawn = not returning"
+  },
+  "need-drift-along-a-lineage": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Evolution: need bound along descent"
+  },
+  "negation-change-and-stable-cases": {
+   "region": "root",
+   "base": "old-base",
+   "note": "ceasing as coming of negation; Decidedness"
+  },
+  "no-finite-part-bears-taking": {
+   "region": "map",
+   "base": "old-base",
+   "note": "under dissipation"
+  },
+  "normal-forms-need-decided-apartness": {
+   "region": "root",
+   "base": "general",
+   "note": "Reordering normal forms"
+  },
+  "observation-is-a-route": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P125 Observation"
+  },
+  "one-reader-several-conditions": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReadingSchedule; reciprocal windows sum ≤1"
+  },
+  "one-search-one-line": {
+   "region": "classical",
+   "base": "general",
+   "note": "HexagramSequences trigram search"
+  },
+  "one-step-missing-laws": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OneStep: taker law, no excess taking"
+  },
+  "only-the-order-of-change-shows": {
+   "region": "root",
+   "base": "general",
+   "note": "stuttering invariance; rates relative"
+  },
+  "open-form-realization-under-revision": {
+   "region": "map",
+   "base": "frame",
+   "note": "handoff into finite-renewal theorem"
+  },
+  "optima-rebuild-a-depleted-base": {
+   "region": "collective",
+   "base": "general",
+   "note": "SG9 Optimum rebuild"
+  },
+  "order-of-exchanges-is-the-invariant": {
+   "region": "root",
+   "base": "old-base",
+   "note": "partial order of joined exchanges"
+  },
+  "order-of-exchanges-sharing-a-relatum": {
+   "region": "root",
+   "base": "old-base",
+   "note": "counterexample: act_comm condition needed"
+  },
+  "orders-as-a-sum-over-histories": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P121 routes; orders of carried amount"
+  },
+  "organizational-formation-from-generative-comparison": {
+   "region": "life",
+   "base": "frame",
+   "note": "reviewed-scoped; conditional warrant"
+  },
+  "organizational-rule-inheritance": {
+   "region": "life",
+   "base": "frame",
+   "note": "Gated quantity kept along ungated moves"
+  },
+  "others-drawing-first-end-the-base": {
+   "region": "collective",
+   "base": "general",
+   "note": "SG10 Optimum.Next"
+  },
+  "own-count-misses-joint-excess": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "joint excess ends renewal"
+  },
+  "own-good-to-reachable-living-significance": {
+   "region": "significance",
+   "base": "frame",
+   "note": "standpoint-indexed instance"
+  },
+  "own-widening-within-the-margin": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "OW1 OwnWidening"
+  },
+  "pending-task-context-applicability": {
+   "region": "map",
+   "base": "frame",
+   "note": "Stock instance; candidate to fold"
+  },
+  "place-relations-in-context": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Y2 HexagramPlaces 正應比中 as context readings"
+  },
+  "place-transition-nets-on-the-spine": {
+   "region": "root",
+   "base": "old-base",
+   "note": "PT1 Petri nets as model"
+  },
+  "positioned-positive-reason": {
+   "region": "significance",
+   "base": "frame",
+   "note": "conditional on living significance"
+  },
+  "positive-ground-open-futures": {
+   "region": "significance",
+   "base": "frame",
+   "note": "conditional on living significance"
+  },
+  "practical-judgment-under-living-significance": {
+   "region": "significance",
+   "base": "frame",
+   "note": "reviewed-scoped candidate"
+  },
+  "prefix-observation-loss": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "granularity boundary"
+  },
+  "premises-read-off-the-exchange": {
+   "region": "root",
+   "base": "old-base",
+   "note": "E1 premises from exchange"
+  },
+  "premises-that-are-states-of-the-law": {
+   "region": "root",
+   "base": "old-base",
+   "note": "ExchangePremises independence"
+  },
+  "presupposition-scopes": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "sub/super-true presupposition"
+  },
+  "process-and-frame-as-readings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "frame/world correspondence, memory gap"
+  },
+  "projection-carrying-a-law": {
+   "region": "root",
+   "base": "general",
+   "note": "lumping carries law"
+  },
+  "proposition-identity": {
+   "region": "method",
+   "base": "general",
+   "note": "PE1 propext calibration"
+  },
+  "protection-priority-excludes-uniform-aggregation": {
+   "region": "significance",
+   "base": "frame",
+   "note": "BasicPriority, Lexical"
+  },
+  "raising-what-couples-in-draws-from-beyond": {
+   "region": "map",
+   "base": "old-base",
+   "note": "SelectionReach draw beyond"
+  },
+  "ranking-under-readings": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "stepwise C, JointDraw"
+  },
+  "re-optimizing-above-a-renewal-ends-it": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "DrawnBeyond"
+  },
+  "reaching-before-and-after-a-juncture": {
+   "region": "map",
+   "base": "general",
+   "note": "Junctures"
+  },
+  "reading-anothers-couplings-is-pooling": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "M2 SelectionPool"
+  },
+  "reading-through-a-pool": {
+   "region": "collective",
+   "base": "general",
+   "note": "Pace"
+  },
+  "readings-within-what-they-read": {
+   "region": "method",
+   "base": "general",
+   "note": "Diagonal; liar"
+  },
+  "recoverable-mediated-change": {
+   "region": "map",
+   "base": "frame",
+   "note": "overlaps mediated-evidence-transport"
+  },
+  "recurrence-without-decidedness": {
+   "region": "root",
+   "base": "old-base",
+   "note": "arising/ceasing recur together"
+  },
+  "recurrence-without-premise": {
+   "region": "root",
+   "base": "general",
+   "note": "merge-free = returning"
+  },
+  "recurrent-chain-assembly": {
+   "region": "life",
+   "base": "general",
+   "note": "Copying assembly"
+  },
+  "recurring-reference-revision": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Stock laws for revision"
+  },
+  "regime-in-any-amounts": {
+   "region": "map",
+   "base": "general",
+   "note": "RM5; reals convergence in periphery RegimeReals"
+  },
+  "regime-point-under-adjusting-giving": {
+   "region": "map",
+   "base": "general",
+   "note": "RM2 Adjusted"
+  },
+  "regulation-from-one-side-and-locally": {
+   "region": "map",
+   "base": "old-base",
+   "note": "RG Regulation"
+  },
+  "relata-counted-up-to-indiscernibility": {
+   "region": "method",
+   "base": "old-base",
+   "note": "excluded middle calibration"
+  },
+  "relation-level-law-of-easing": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "RL1"
+  },
+  "relational-generative-comparison": {
+   "region": "significance",
+   "base": "frame",
+   "note": "retaining coupling adds bundle"
+  },
+  "relational-reading-comparison": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "absence of overdrawer extends"
+  },
+  "relational-renewal-classification": {
+   "region": "map",
+   "base": "old-base",
+   "note": "renewing vs consuming as relations"
+  },
+  "relative-position-is-zero-sum": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Z1 RelativePosition"
+  },
+  "renewing-consuming-formation": {
+   "region": "map",
+   "base": "frame",
+   "note": "no-recovery wear law"
+  },
+  "repeated-disturbance": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Frequency bound"
+  },
+  "represented-boundary-against-dependence": {
+   "region": "map",
+   "base": "old-base",
+   "note": "region renewal"
+  },
+  "requirement-is-the-weakest-sound-reading": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OverExchange"
+  },
+  "requirement-over-open-exchanges": {
+   "region": "root",
+   "base": "old-base",
+   "note": "four tying premises"
+  },
+  "reserve-defers-ending": {
+   "region": "map",
+   "base": "old-base",
+   "note": "zero reserve = Dependent"
+  },
+  "reserved-shutdown-during-recovery": {
+   "region": "significance",
+   "base": "frame",
+   "note": "alignment: shutdown reachability"
+  },
+  "residual-continuation-correspondence": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Explanatory residuals"
+  },
+  "rest-at-every-resolution": {
+   "region": "map",
+   "base": "old-base",
+   "note": "R4 quantum of loss"
+  },
+  "rest-by-balance": {
+   "region": "map",
+   "base": "general",
+   "note": "balanced counts fall"
+  },
+  "rest-exactly-where-falls-stop": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LC3 FallsStop"
+  },
+  "rest-from-a-finite-reading": {
+   "region": "map",
+   "base": "general",
+   "note": "no least loss needed"
+  },
+  "rest-on-coupled-webs": {
+   "region": "map",
+   "base": "general",
+   "note": "RM8"
+  },
+  "rest-theorem-in-any-amounts": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LC2 InAmounts"
+  },
+  "rest-with-refinement-counted": {
+   "region": "map",
+   "base": "old-base",
+   "note": "R4 refinement counted"
+  },
+  "restoring-giving-from-the-worst-start": {
+   "region": "collective",
+   "base": "general",
+   "note": "Withholding/Tolerance"
+  },
+  "retained-reference-joining-recovery": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Explanatory joining"
+  },
+  "retrospective-source-binding": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "records through explanations"
+  },
+  "returning-novelty-forgetting-on-levels": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Novelty"
+  },
+  "returning-where-the-course-branches": {
+   "region": "root",
+   "base": "frame",
+   "note": "Branching returning"
+  },
+  "revision-comes-to-drawing-everything": {
+   "region": "retire",
+   "base": "general",
+   "note": "superseded (SG16 into UM)"
+  },
+  "revision-with-an-undecided-value": {
+   "region": "method",
+   "base": "general",
+   "note": "Kripke-style least fixed point"
+  },
+  "rising-and-falling-in-one-exchange": {
+   "region": "root",
+   "base": "old-base",
+   "note": "balance: rise needs fall"
+  },
+  "risk-certificate-outcome-distinction": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "fallible judging counterexample"
+  },
+  "rivals-bounded-in-time": {
+   "region": "significance",
+   "base": "general",
+   "note": "rivals to continuation condition"
+  },
+  "room-read-off-the-exchange": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "SG2"
+  },
+  "runaway-distance-uncoupled": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P55 Runaway"
+  },
+  "runs-on-families-chosen-step-by-step": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OneStep continuity"
+  },
+  "scientific-inquiry-foundation": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "open target"
+  },
+  "seeking-boundary": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P62 Seeking"
+  },
+  "selection-among-groups-by-ending": {
+   "region": "life",
+   "base": "old-base",
+   "note": "GroupEnding"
+  },
+  "selection-right-exactly-where-read": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Learning lumping"
+  },
+  "selection-term-over-generations": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EV1 Price selection term"
+  },
+  "selection-through-a-model-of-the-options": {
+   "region": "knowing",
+   "base": "general",
+   "note": "selection through map"
+  },
+  "selection-through-couplings": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "blind beyond coupling closure"
+  },
+  "selection-under-registration-revision": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Process/Trace/Run lumping"
+  },
+  "selection-with-returns-to-groupmates": {
+   "region": "life",
+   "base": "general",
+   "note": "kin/group returns"
+  },
+  "selection-within-and-among-groups": {
+   "region": "life",
+   "base": "general",
+   "note": "equal sizes; subsumed by any-sizes"
+  },
+  "selection-within-and-among-groups-of-any-sizes": {
+   "region": "life",
+   "base": "general",
+   "note": "generalizes equal-size case"
+  },
+  "self-concern-through-dependence": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "IV2 de se Weightings"
+  },
+  "sensitivity-is-the-least-coupling": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P113 Sensitivity"
+  },
+  "separation-loses-the-relation": {
+   "region": "root",
+   "base": "general",
+   "note": "rectangular description"
+  },
+  "several-optimizers-drain-by-their-joint-capacity": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "SG3"
+  },
+  "significance-retained-within-margin": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "Retaining preorder"
+  },
+  "situated-recovery-empirical-correspondence": {
+   "region": "knowing",
+   "base": "none",
+   "note": "empirical; reviewed-scoped"
+  },
+  "slowing-down-before-an-own-end": {
+   "region": "map",
+   "base": "periphery",
+   "note": "CS1 SlowingDown"
+  },
+  "space-and-its-parts": {
+   "region": "root",
+   "base": "old-base",
+   "note": "premise-free laws, parts by premises"
+  },
+  "steps-met-again-after-a-fall": {
+   "region": "collective",
+   "base": "general",
+   "note": "SG13"
+  },
+  "stepwise-law-of-easing": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ST1"
+  },
+  "substitution-preserves-consumption": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Substitution"
+  },
+  "sum-over-histories-exact": {
+   "region": "root",
+   "base": "frame",
+   "note": "Weighted transfer"
+  },
+  "sums-over-histories-by-support-horizon-and-order": {
+   "region": "map",
+   "base": "general",
+   "note": "HS HistorySums"
+  },
+  "support-from-the-supported": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Admission"
+  },
+  "support-passed-on": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Admission"
+  },
+  "supported-renewal-recovery": {
+   "region": "map",
+   "base": "old-base",
+   "note": "restoration law"
+  },
+  "synonyms-and-coined-forms": {
+   "region": "collective",
+   "base": "general",
+   "note": "SC SharedCodes"
+  },
+  "taking-what-most-hold": {
+   "region": "collective",
+   "base": "general",
+   "note": "SharedCodes majority"
+  },
+  "target-capture": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P62 Capture"
+  },
+  "testing-within-couplings": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P49 Testing"
+  },
+  "testing-within-the-net": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "GrammarTesting"
+  },
+  "tests-fix-likeness-where-determined": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Distinguishing"
+  },
+  "the-boundary-of-enough-under-undetermined-laws": {
+   "region": "map",
+   "base": "general",
+   "note": "Enough"
+  },
+  "the-breeding-value": {
+   "region": "life",
+   "base": "general",
+   "note": "Reproduction"
+  },
+  "the-gap-for-ones-own-act": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "G1 SelectionGap; alignment"
+  },
+  "the-last-change-of-a-run": {
+   "region": "method",
+   "base": "general",
+   "note": "settling = LPO calibration"
+  },
+  "the-move-alone-underdetermines": {
+   "region": "root",
+   "base": "general",
+   "note": "P117 Situations"
+  },
+  "the-rest-outruns-the-renewal": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "CG2 Exclusion"
+  },
+  "the-run-classes-and-widening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "Retaining"
+  },
+  "the-split-that-makes-sense": {
+   "region": "root",
+   "base": "general",
+   "note": "coarsest law-carrying class"
+  },
+  "the-step-index-from-own-courses": {
+   "region": "root",
+   "base": "old-base",
+   "note": "R1 Interleavings"
+  },
+  "the-world-an-interleaving-builds": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Interleavings builds World"
+  },
+  "theory-of-becoming-foundation": {
+   "region": "method",
+   "base": "none",
+   "note": "open target: deductive necessity"
+  },
+  "threshold-in-the-state-plane": {
+   "region": "map",
+   "base": "general",
+   "note": "RM4"
+  },
+  "thresholds-beyond-a-band": {
+   "region": "map",
+   "base": "general",
+   "note": "RM9"
+  },
+  "thresholds-of-waiting": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "V2 Tolerance"
+  },
+  "timely-response-necessity": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "TimedResponse"
+  },
+  "tolerance-monotone-across-laws": {
+   "region": "collective",
+   "base": "general",
+   "note": "Tolerance"
+  },
+  "trace-law-equivalence": {
+   "region": "root",
+   "base": "frame",
+   "note": "steps iff traces"
+  },
+  "transition-grouping-word-partition": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "acquired segmentation"
+  },
+  "transmission-independent-where-it-binds": {
+   "region": "root",
+   "base": "old-base",
+   "note": "premise independence"
+  },
+  "transmission-is-inheritance-and-need": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Transmission"
+  },
+  "two-act-worlds-carry-the-difference": {
+   "region": "root",
+   "base": "old-base",
+   "note": "CourseWorlds counterfactual"
+  },
+  "two-rules-lock-together": {
+   "region": "map",
+   "base": "general",
+   "note": "RC RuleCapture"
+  },
+  "two-sided-regulation-and-late-reading": {
+   "region": "map",
+   "base": "general",
+   "note": "Regulation late band"
+  },
+  "typicality-by-counting": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P116 Parting"
+  },
+  "unanchored-incidence-collapse": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "Explanatory joining"
+  },
+  "unceasing-generation-needs-renewal": {
+   "region": "map",
+   "base": "old-base",
+   "note": "core renewal law"
+  },
+  "unity-of-readings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "readings glue to one world"
+  },
+  "universal-practical-warrant": {
+   "region": "significance",
+   "base": "none",
+   "note": "open target"
+  },
+  "valuing-what-is-left-at-any-worth": {
+   "region": "collective",
+   "base": "general",
+   "note": "SG12"
+  },
+  "valuing-what-is-left-at-the-horizon": {
+   "region": "collective",
+   "base": "general",
+   "note": "SG11"
+  },
+  "versioned-request-completion": {
+   "region": "map",
+   "base": "frame",
+   "note": "countdown instance; candidate to fold"
+  },
+  "webs-with-a-recent-giving": {
+   "region": "map",
+   "base": "general",
+   "note": "RM10"
+  },
+  "weights-count-situations": {
+   "region": "root",
+   "base": "general",
+   "note": "natural weights as situations"
+  },
+  "weights-within-a-ratio-agree-past-it": {
+   "region": "significance",
+   "base": "general",
+   "note": "Weightings"
+  },
+  "wen-in-the-grammar": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "WL2 文同 as core"
+  },
+  "wenli-on-the-spine": {
+   "region": "classical",
+   "base": "general",
+   "note": "reviewed-scoped; superseded by wen-in-the-grammar?"
+  },
+  "what-a-center-can-know-by-a-step": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "Latency"
+  },
+  "what-a-commuting-law-keeps-apart": {
+   "region": "root",
+   "base": "general",
+   "note": "symmetry; hexagram instance"
+  },
+  "what-a-cut-loses": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P120 Remainder"
+  },
+  "what-a-finite-history-refutes": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "PrefixSafety"
+  },
+  "what-a-finite-stretch-verifies": {
+   "region": "knowing",
+   "base": "general",
+   "note": "O1 Verification"
+  },
+  "what-a-law-of-the-whole-and-no-part-takes": {
+   "region": "method",
+   "base": "old-base",
+   "note": "P126 WLPO calibration"
+  },
+  "what-a-method-comes-to-say-in-the-limit": {
+   "region": "knowing",
+   "base": "general",
+   "note": "O2 LimitVerification"
+  },
+  "what-a-pools-acts-respond-to": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "M3 PoolResponse"
+  },
+  "what-a-rise-draws-from-beyond": {
+   "region": "map",
+   "base": "old-base",
+   "note": "RB1 DrawnBeyond"
+  },
+  "what-an-extrapolation-given-nothing-fixes": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "L1 Unrolling"
+  },
+  "what-an-optimum-does-beyond-what-couples-in": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "SG1 Optimum"
+  },
+  "what-bounds-offspring-numbers": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Reproduction"
+  },
+  "what-dependence-alone-carries-of-a-level": {
+   "region": "root",
+   "base": "old-base",
+   "note": "OB1 LevelCoupling"
+  },
+  "what-discrete-steps-and-whole-amounts-represent": {
+   "region": "method",
+   "base": "periphery",
+   "note": "modelling choices: Representation, WholeAmounts"
+  },
+  "what-finitely-many-labels-fix": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "Labels"
+  },
+  "what-pooled-coupling-reaches": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "M2 pooled coupling"
+  },
+  "what-position-reads": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "RelativePosition"
+  },
+  "what-self-concern-alone-ranks": {
+   "region": "significance",
+   "base": "general",
+   "note": "Weightings"
+  },
+  "what-taking-all-excludes": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Exclusion"
+  },
+  "what-the-claims-do-not-read": {
+   "region": "significance",
+   "base": "frame",
+   "note": "Lexical BasicPriority"
+  },
+  "what-the-dynamics-leave-open": {
+   "region": "significance",
+   "base": "general",
+   "note": "SD1"
+  },
+  "what-the-step-across-standpoints-reaches": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "IV1 step of invariance"
+  },
+  "what-training-installs": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "alignment: training as selection"
+  },
+  "when-the-runs-of-a-process-settle": {
+   "region": "method",
+   "base": "general",
+   "note": "Settling, LPO limit"
+  },
+  "where-a-formations-acts-return": {
+   "region": "root",
+   "base": "general",
+   "note": "Centers loops"
+  },
+  "where-a-level-couples": {
+   "region": "root",
+   "base": "old-base",
+   "note": "LevelCoupling"
+  },
+  "where-a-move-is-formed": {
+   "region": "root",
+   "base": "frame",
+   "note": "P53 Experiment"
+  },
+  "where-a-rising-take-ends": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Exhaustion"
+  },
+  "where-a-run-goes-on": {
+   "region": "root",
+   "base": "frame",
+   "note": "P127 Onward"
+  },
+  "where-a-run-of-a-regime-comes-to-rest": {
+   "region": "map",
+   "base": "general",
+   "note": "RM3"
+  },
+  "where-novelty-gain-comes-from": {
+   "region": "map",
+   "base": "old-base",
+   "note": "first law gain"
+  },
+  "where-two-courses-rejoin": {
+   "region": "root",
+   "base": "old-base",
+   "note": "M4 Rejoining"
+  },
+  "whether-a-loop-closes-a-difference": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LoopReturn"
+  },
+  "which-links-a-closure-needs": {
+   "region": "root",
+   "base": "old-base",
+   "note": "K1 Cuts"
+  },
+  "whole-drawing-beyond-renewal-ends": {
+   "region": "map",
+   "base": "old-base",
+   "note": "WE1 Wholes"
+  },
+  "whole-first-and-bounded-centers": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "Regions retaining"
+  },
+  "whole-law-of-counting": {
+   "region": "root",
+   "base": "old-base",
+   "note": "CensusTable"
+  },
+  "whole-persists-through-generation": {
+   "region": "map",
+   "base": "old-base",
+   "note": "Wholes"
+  },
+  "widening-along-a-reading": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "R47 Growth"
+  },
+  "widening-as-what-every-weighting-ranks": {
+   "region": "significance",
+   "base": "general",
+   "note": "Weightings"
+  },
+  "wisdom-root": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "open target"
+  },
+  "wisdom-root-without-axiom": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "reviewed-scoped synthesis"
+  },
+  "worlds-are-runs": {
+   "region": "root",
+   "base": "old-base",
+   "note": "World = run of its law"
+  }
+ },
+ "modules": {
+  "Becoming.Acceptance": {
+   "region": "significance",
+   "base": "general",
+   "note": "accept bit restores no access; accepting_optimum_can_destroy_access (alignment)"
+  },
+  "Becoming.ActivationCapacity": {
+   "region": "significance",
+   "base": "frame",
+   "note": "capacity in activation law; preparation_changes_capacity, release_loses_joint"
+  },
+  "Becoming.ActiveReading": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "active-event reading beside whole-run reading"
+  },
+  "Becoming.Actuation": {
+   "region": "significance",
+   "base": "frame",
+   "note": "command issue/delivery/enactment; timely inquiry keeps change possible (alignment)"
+  },
+  "Becoming.Admission": {
+   "region": "map",
+   "base": "old-base",
+   "note": "what can form next; support as admission"
+  },
+  "Becoming.Alternatives": {
+   "region": "significance",
+   "base": "frame",
+   "note": "C, P, N appraisals on alternatives of one history; F3J port"
+  },
+  "Becoming.Amounts": {
+   "region": "map",
+   "base": "general",
+   "note": "rest over dense amounts; imports only Prelude"
+  },
+  "Becoming.Arising": {
+   "region": "map",
+   "base": "grammar",
+   "note": "formations arise; unceasing arising needs renewal; imports Grammar, reads Web"
+  },
+  "Becoming.Assurance": {
+   "region": "significance",
+   "base": "frame",
+   "note": "when plans secure targets; practical judgment"
+  },
+  "Becoming.AssurancePlans": {
+   "region": "significance",
+   "base": "frame",
+   "note": "plans on determined, open, shut processes"
+  },
+  "Becoming.Attraction": {
+   "region": "map",
+   "base": "frame",
+   "note": "absorbing regions for every determined law; lost possibility"
+  },
+  "Becoming.AttractionRuns": {
+   "region": "map",
+   "base": "frame",
+   "note": "attraction on runs"
+  },
+  "Becoming.Boundaries": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "continuation condition decomposed; super/sub-true"
+  },
+  "Becoming.BoundedSignificance": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "bounded significance meets continuation condition"
+  },
+  "Becoming.Branching": {
+   "region": "map",
+   "base": "frame",
+   "note": "recurrence, merging, returning"
+  },
+  "Becoming.BranchingCorrespondence": {
+   "region": "root",
+   "base": "frame",
+   "note": "bisimilarity via branching tests; excluded middle named"
+  },
+  "Becoming.Bundles": {
+   "region": "significance",
+   "base": "frame",
+   "note": "joint bundles of claims; regimes compared by joint content, not marginals"
+  },
+  "Becoming.Capture": {
+   "region": "map",
+   "base": "frame",
+   "note": "target share among descendants (P62)"
+  },
+  "Becoming.Carriers": {
+   "region": "root",
+   "base": "frame",
+   "note": "one carrier, several laws; symmetry does not fix law"
+  },
+  "Becoming.CensusBinding": {
+   "region": "root",
+   "base": "old-base",
+   "note": "rest of counting laws (R2b)"
+  },
+  "Becoming.CensusCounts": {
+   "region": "root",
+   "base": "old-base",
+   "note": "counting laws, no decision for activity (R2)"
+  },
+  "Becoming.CensusTable": {
+   "region": "method",
+   "base": "old-base",
+   "note": "R37b census table for listings; soundness"
+  },
+  "Becoming.Centers": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "loops where acts come back; equivalence"
+  },
+  "Becoming.ChanceFloors": {
+   "region": "significance",
+   "base": "general",
+   "note": "due protection gives chance floor; can miss protection"
+  },
+  "Becoming.Change": {
+   "region": "root",
+   "base": "grammar",
+   "note": "arising/forming/standing and ceasing as one change; no premise; imports Grammar, reads Web"
+  },
+  "Becoming.ClassifiedBeliefProcesses": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "decided belief inhabitation classifies beliefs; bounded sufficiency; 3 thms"
+  },
+  "Becoming.Clearing": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "Clearing witness: clearer renewed, dweller ends"
+  },
+  "Becoming.ClosedCapture": {
+   "region": "map",
+   "base": "general",
+   "note": "MA1 loop reading only the share"
+  },
+  "Becoming.Closing": {
+   "region": "map",
+   "base": "old-base",
+   "note": "how loops form (P122)"
+  },
+  "Becoming.CodeAcquisition": {
+   "region": "knowing",
+   "base": "general",
+   "note": "two-primitive code from probes"
+  },
+  "Becoming.Commuting": {
+   "region": "map",
+   "base": "frame",
+   "note": "commuting law keeps symmetric images apart"
+  },
+  "Becoming.Composition": {
+   "region": "root",
+   "base": "frame",
+   "note": "whole and parts as one more relation"
+  },
+  "Becoming.ContactCourses": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "revision rules as processes"
+  },
+  "Becoming.Contacts": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "registration through addressed contacts"
+  },
+  "Becoming.Context": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P72 contextual registration, gluing"
+  },
+  "Becoming.ContextArrivalTraces": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "arrival in context along traces; F2 join"
+  },
+  "Becoming.ContextualRuns": {
+   "region": "root",
+   "base": "frame",
+   "note": "parity bounds along runs"
+  },
+  "Becoming.ContingentPlans": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "probe-then-respond plans; run_iff_trace"
+  },
+  "Becoming.Continuation": {
+   "region": "map",
+   "base": "old-base",
+   "note": "what continuing formation must count; conveyed, fed; no ethical premise"
+  },
+  "Becoming.ContinuedClasses": {
+   "region": "root",
+   "base": "grammar",
+   "note": "R49 classes along continuation, split/merge laws; Grammar + Web"
+  },
+  "Becoming.ContinuingRevision": {
+   "region": "life",
+   "base": "frame",
+   "note": "successful activity supports next revision across carriers"
+  },
+  "Becoming.ContinuingRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "continuing revision witness at yield nine"
+  },
+  "Becoming.Continuity": {
+   "region": "map",
+   "base": "old-base",
+   "note": "FL2 balance along relation iff conservation on closed families"
+  },
+  "Becoming.CopyCourses": {
+   "region": "life",
+   "base": "frame",
+   "note": "copying on courses"
+  },
+  "Becoming.Copying": {
+   "region": "life",
+   "base": "general",
+   "note": "token-by-token copying from shared pool"
+  },
+  "Becoming.Correspondence": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "L2 which conditions relate under drawing discipline"
+  },
+  "Becoming.Countdown": {
+   "region": "map",
+   "base": "frame",
+   "note": "counted work, kept properties, reserved exit"
+  },
+  "Becoming.Counterfactual": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P80 counterfactual of act = course law gives"
+  },
+  "Becoming.CounterfactualRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "act course on runs (P80)"
+  },
+  "Becoming.Counting": {
+   "region": "root",
+   "base": "old-base",
+   "note": "census counts"
+  },
+  "Becoming.CouplingTraces": {
+   "region": "map",
+   "base": "frame",
+   "note": "couplings as process steps"
+  },
+  "Becoming.CourseRoles": {
+   "region": "root",
+   "base": "frame",
+   "note": "one course, one kind or two roles"
+  },
+  "Becoming.CourseWorlds": {
+   "region": "map",
+   "base": "old-base",
+   "note": "coupling-array frontier on act worlds"
+  },
+  "Becoming.Courses": {
+   "region": "root",
+   "base": "old-base",
+   "note": "apart laws on shared base (P114)"
+  },
+  "Becoming.Coverage": {
+   "region": "method",
+   "base": "general",
+   "note": "known result: mutilated_no_cover chessboard"
+  },
+  "Becoming.CrossSituational": {
+   "region": "knowing",
+   "base": "general",
+   "note": "what a form names across occasions"
+  },
+  "Becoming.Cuts": {
+   "region": "map",
+   "base": "old-base",
+   "note": "K1 which links a closure needs"
+  },
+  "Becoming.Decidedness": {
+   "region": "method",
+   "base": "old-base",
+   "note": "P58 decidedness made local; counts exist where decided"
+  },
+  "Becoming.Dependence": {
+   "region": "root",
+   "base": "old-base",
+   "note": "dependence forms, holds, breaks, dissolves; stepwise event readings"
+  },
+  "Becoming.Dephasing": {
+   "region": "knowing",
+   "base": "general",
+   "note": "quantum dephasing on integer amplitudes; no_diagonal_response_decoder"
+  },
+  "Becoming.Derivation": {
+   "region": "method",
+   "base": "frame",
+   "note": "premise-tracked derivation, Derives.sound"
+  },
+  "Becoming.Descent": {
+   "region": "life",
+   "base": "old-base",
+   "note": "L2 relata related directly; descent relation"
+  },
+  "Becoming.Description": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P70 description keeps/loses; rectangular wholes"
+  },
+  "Becoming.Diagonal": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "completing registration within itself"
+  },
+  "Becoming.Direction": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "R44 direction on a web's moves; C as widening"
+  },
+  "Becoming.Dispatch": {
+   "region": "significance",
+   "base": "frame",
+   "note": "found route re-read before action (oversight)"
+  },
+  "Becoming.Dissipation": {
+   "region": "map",
+   "base": "old-base",
+   "note": "closed family runs down when every formation gives less"
+  },
+  "Becoming.Distinguishing": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what tells configurations apart, depth bound"
+  },
+  "Becoming.DrawnBeyond": {
+   "region": "map",
+   "base": "old-base",
+   "note": "RB1 whose dependence a rise breaks"
+  },
+  "Becoming.Drift": {
+   "region": "life",
+   "base": "old-base",
+   "note": "sampled offspring, drift and fixation via Typicality"
+  },
+  "Becoming.EdgeClosure": {
+   "region": "root",
+   "base": "frame",
+   "note": "seed-edge closure; F1 fold"
+  },
+  "Becoming.Enough": {
+   "region": "map",
+   "base": "frame",
+   "note": "boundary of enough on runs"
+  },
+  "Becoming.Entropy": {
+   "region": "map",
+   "base": "old-base",
+   "note": "level and configuration laws on web"
+  },
+  "Becoming.Evolution": {
+   "region": "life",
+   "base": "old-base",
+   "note": "descent, transmission, variation, selection over finite families"
+  },
+  "Becoming.ExchangePremises": {
+   "region": "root",
+   "base": "old-base",
+   "note": "E1: premises a reading of exchange settles"
+  },
+  "Becoming.Exclusion": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "taking all that is given excludes others; no ethical premise"
+  },
+  "Becoming.Exhaustion": {
+   "region": "map",
+   "base": "old-base",
+   "note": "take of more than now ends under bound"
+  },
+  "Becoming.Experiment": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "P53 what varying one's own act tests; record fixes move where taken"
+  },
+  "Becoming.Extension": {
+   "region": "significance",
+   "base": "frame",
+   "note": "C on frames and level paths; scores climb and outgrow"
+  },
+  "Becoming.FallibleInquiry": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "fallible inquiry: belief revised by what tests show (assigned by hand; not in the inventory index)"
+  },
+  "Becoming.FaultEnvelopes": {
+   "region": "knowing",
+   "base": "general",
+   "note": "certificate soundness under supplied fault envelopes"
+  },
+  "Becoming.Feedback": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "five closure levels: feeding within influence; registration"
+  },
+  "Becoming.Feeding": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P86 feeding across steps; redundant feeders"
+  },
+  "Becoming.FinerTraces": {
+   "region": "root",
+   "base": "frame",
+   "note": "situations are courses of one process"
+  },
+  "Becoming.Flow": {
+   "region": "map",
+   "base": "old-base",
+   "note": "conditions as amounts; uptake needs replenishment"
+  },
+  "Becoming.FormedLoops": {
+   "region": "map",
+   "base": "old-base",
+   "note": "worlds whose loops form within them"
+  },
+  "Becoming.Founding": {
+   "region": "life",
+   "base": "old-base",
+   "note": "lineage confined to whole; what founding carries"
+  },
+  "Becoming.Fragments": {
+   "region": "root",
+   "base": "frame",
+   "note": "fragments joined end to start"
+  },
+  "Becoming.Frame": {
+   "region": "root",
+   "base": "frame",
+   "note": "L0 frame: process, runs, one closure, reach, invariants; frames as models"
+  },
+  "Becoming.Frequency": {
+   "region": "map",
+   "base": "old-base",
+   "note": "rate by coupling steps (P123)"
+  },
+  "Becoming.Frontier": {
+   "region": "significance",
+   "base": "general",
+   "note": "frontier of comparison, service and discharge"
+  },
+  "Becoming.FrontierFrames": {
+   "region": "significance",
+   "base": "frame",
+   "note": "J1/J2 on frames; listed twice (second: scores over options)"
+  },
+  "Becoming.FrontierWorlds": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "service across handover in a world"
+  },
+  "Becoming.Gain": {
+   "region": "map",
+   "base": "old-base",
+   "note": "every rise given by rest of whole"
+  },
+  "Becoming.Gated": {
+   "region": "map",
+   "base": "frame",
+   "note": "what only a class of moves can change"
+  },
+  "Becoming.Gluing": {
+   "region": "root",
+   "base": "general",
+   "note": "parity contextuality of readings"
+  },
+  "Becoming.Grammar": {
+   "region": "root",
+   "base": "grammar",
+   "note": "the grammar: relational calculus, continuation relative to a class"
+  },
+  "Becoming.GrammarCandidates": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "59 corpus candidates: 38 proved, 15 conditional, 3 refuted (OU2c)"
+  },
+  "Becoming.GrammarCourse": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "文 in grammar of continuation (WL3)"
+  },
+  "Becoming.GrammarMap": {
+   "region": "map",
+   "base": "grammar",
+   "note": "generation/keeping/degeneration at two grains and branches (OU4/OU5)"
+  },
+  "Becoming.GrammarReadings": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "corpus definitions (墨经, 荀子 化) in the grammar"
+  },
+  "Becoming.GrammarTesting": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "验 within the net; core approximated by stages"
+  },
+  "Becoming.Granularity": {
+   "region": "root",
+   "base": "frame",
+   "note": "one unfolding at coarser grain; blocks"
+  },
+  "Becoming.GroupEnding": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EV6 selection among groups through own conditions"
+  },
+  "Becoming.Growth": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "R47 widening along a reading; widening over grown world"
+  },
+  "Becoming.GuardHorizon": {
+   "region": "map",
+   "base": "frame",
+   "note": "controlled Viability over horizon; choice named where used"
+  },
+  "Becoming.Handoff": {
+   "region": "significance",
+   "base": "frame",
+   "note": "remaining-step certificate across revised rules; OpenFutureRevision port"
+  },
+  "Becoming.HexagramCommuting": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Changes as commuting-law instance; row duplicated (instance ring)"
+  },
+  "Becoming.HexagramLaws": {
+   "region": "classical",
+   "base": "general",
+   "note": "Y3 nuclear law 互, waxing/waning census"
+  },
+  "Becoming.HexagramPlaces": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Y2 places: 正, 應, adjacency in context"
+  },
+  "Becoming.HexagramSequences": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Y5 序卦 as law except 未濟"
+  },
+  "Becoming.HexagramSites": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Y4 王弼 sites, 初上无位"
+  },
+  "Becoming.Hexagrams": {
+   "region": "classical",
+   "base": "frame",
+   "note": "Y1 周易 64 configurations as a world"
+  },
+  "Becoming.Histories": {
+   "region": "root",
+   "base": "frame",
+   "note": "P76 what histories fix; families of law histories"
+  },
+  "Becoming.HistoryIdeals": {
+   "region": "root",
+   "base": "frame",
+   "note": "runs as ideals of stretches"
+  },
+  "Becoming.HistoryIdealsTraces": {
+   "region": "root",
+   "base": "frame",
+   "note": "word half of HistoryIdeals on courses"
+  },
+  "Becoming.HistoryLanguages": {
+   "region": "root",
+   "base": "frame",
+   "note": "prefix-closed languages realized by laws"
+  },
+  "Becoming.HistorySums": {
+   "region": "map",
+   "base": "frame",
+   "note": "sum over histories W1-W4 (HS)"
+  },
+  "Becoming.Horizon": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "no finite stretch decides renewal vs consumption; finite refutation"
+  },
+  "Becoming.HorizonWebs": {
+   "region": "map",
+   "base": "old-base",
+   "note": "horizon in support-gated law"
+  },
+  "Becoming.Ideals": {
+   "region": "method",
+   "base": "general",
+   "note": "history as ideal of finite stretches; double-negation calibration"
+  },
+  "Becoming.Identification": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P83 bounded record; Fine-Wilf"
+  },
+  "Becoming.IdentificationRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "coarsest value-keeping relation"
+  },
+  "Becoming.Identity": {
+   "region": "root",
+   "base": "grammar",
+   "note": "which formation continues which; names carry nothing; imports Grammar, Web-heavy"
+  },
+  "Becoming.IdleRemoval": {
+   "region": "method",
+   "base": "old-base",
+   "note": "world without idle steps keeps premises and totals"
+  },
+  "Becoming.Imbalance": {
+   "region": "method",
+   "base": "old-base",
+   "note": "P59 imbalance counted as a relatum; equivalence"
+  },
+  "Becoming.InAmounts": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LC2 rest theorem over any amounts"
+  },
+  "Becoming.Inquiry": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "visible scope of an inquiry; sound policy secures goal"
+  },
+  "Becoming.IntegerOrder": {
+   "region": "method",
+   "base": "general",
+   "note": "Int order laws without propext"
+  },
+  "Becoming.Integers": {
+   "region": "method",
+   "base": "general",
+   "note": "constructive Int ring laws, support lemma"
+  },
+  "Becoming.Interdependence": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "feeding closure; reach of route without axiom"
+  },
+  "Becoming.Interleavings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "step index from relata's courses (R1)"
+  },
+  "Becoming.Irreversibility": {
+   "region": "map",
+   "base": "frame",
+   "note": "return belongs to law; dead end vs flip; F2 port"
+  },
+  "Becoming.Joining": {
+   "region": "root",
+   "base": "frame",
+   "note": "fragments joining via partners, roles, references"
+  },
+  "Becoming.JoiningCodes": {
+   "region": "root",
+   "base": "frame",
+   "note": "codes against contexts; excluded middle named"
+  },
+  "Becoming.JoiningContexts": {
+   "region": "root",
+   "base": "frame",
+   "note": "ContextSame.iff_sameTests"
+  },
+  "Becoming.JoiningRoles": {
+   "region": "root",
+   "base": "frame",
+   "note": "roles and references; EM and funext named"
+  },
+  "Becoming.Joint": {
+   "region": "collective",
+   "base": "frame",
+   "note": "difference-making belongs to joint activity among formations"
+  },
+  "Becoming.JointCorrespondence": {
+   "region": "root",
+   "base": "frame",
+   "note": "joint frames by steps and parts"
+  },
+  "Becoming.JointDraw": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "R52 several drawers; restraint over any number"
+  },
+  "Becoming.JointKeeping": {
+   "region": "map",
+   "base": "frame",
+   "note": "conditions kept together; ChoicePoint counterexample"
+  },
+  "Becoming.JointPhase": {
+   "region": "root",
+   "base": "general",
+   "note": "relation told apart only through the joint; no_local_pair_update"
+  },
+  "Becoming.JointPlans": {
+   "region": "collective",
+   "base": "general",
+   "note": "nested decompositions, exclusive footprints; no frame"
+  },
+  "Becoming.Junctures": {
+   "region": "map",
+   "base": "frame",
+   "note": "junctures where a configuration is lost"
+  },
+  "Becoming.Keeping": {
+   "region": "map",
+   "base": "frame",
+   "note": "guard kept through what is registered"
+  },
+  "Becoming.Labelled": {
+   "region": "root",
+   "base": "frame",
+   "note": "labelled process and frame as readings of one unfolding; bisimulation; run readings of renewal"
+  },
+  "Becoming.LabelledRoles": {
+   "region": "root",
+   "base": "frame",
+   "note": "run readings of Roles and Dissipation"
+  },
+  "Becoming.Labels": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what labelled names fix"
+  },
+  "Becoming.LastChange": {
+   "region": "map",
+   "base": "frame",
+   "note": "knowing a run stopped; decidable configurations where stated"
+  },
+  "Becoming.Lasting": {
+   "region": "map",
+   "base": "frame",
+   "note": "lasting n steps via ladders; exhaustion"
+  },
+  "Becoming.LastingRuns": {
+   "region": "map",
+   "base": "frame",
+   "note": "lasting on runs"
+  },
+  "Becoming.Latency": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "what a reader can know of an act step by step"
+  },
+  "Becoming.LawAlongRun": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "law along one run under a relation; exactness"
+  },
+  "Becoming.Laws": {
+   "region": "root",
+   "base": "frame",
+   "note": "Determined, laws of change, partial laws as processes; 3 thms"
+  },
+  "Becoming.Learnable": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P106 learnable iff same registered future"
+  },
+  "Becoming.LearnableRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "learnable from run registration (P106)"
+  },
+  "Becoming.LearnedGrouping": {
+   "region": "knowing",
+   "base": "general",
+   "note": "received transitions form grouping"
+  },
+  "Becoming.Learning": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P73 no record fixes next value; lumping"
+  },
+  "Becoming.LearningRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what registered record fixes for learner"
+  },
+  "Becoming.LeastLoss": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LL1 each premise of rest needed; dyadic halving countermodel"
+  },
+  "Becoming.LevelCoupling": {
+   "region": "map",
+   "base": "old-base",
+   "note": "where level couples into formation (OB1)"
+  },
+  "Becoming.Lexical": {
+   "region": "significance",
+   "base": "frame",
+   "note": "lexical order; BasicPriority J1/J2 as condition"
+  },
+  "Becoming.Lifting": {
+   "region": "significance",
+   "base": "frame",
+   "note": "lifting rule L; countermodels show choice substantive"
+  },
+  "Becoming.Likeness": {
+   "region": "root",
+   "base": "general",
+   "note": "equality laws completed up to likeness"
+  },
+  "Becoming.LimitVerification": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "limit verification; Markov's principle named (O2)"
+  },
+  "Becoming.ListFootprints": {
+   "region": "collective",
+   "base": "general",
+   "note": "lists as footprints of plans"
+  },
+  "Becoming.ListedWebs": {
+   "region": "root",
+   "base": "old-base",
+   "note": "listing active; forcedAlong_iff_more (R48)"
+  },
+  "Becoming.Listing": {
+   "region": "root",
+   "base": "old-base",
+   "note": "counts of arising/ceasing, listing once"
+  },
+  "Becoming.ListingRefutations": {
+   "region": "method",
+   "base": "old-base",
+   "note": "refutation laws without Distinct or DecidableEq"
+  },
+  "Becoming.LocalUnits": {
+   "region": "root",
+   "base": "frame",
+   "note": "units of a joining"
+  },
+  "Becoming.Locality": {
+   "region": "method",
+   "base": "old-base",
+   "note": "laws of one step with condition inside; premise use localized"
+  },
+  "Becoming.LoopReturn": {
+   "region": "map",
+   "base": "old-base",
+   "note": "loop closes/keeps/widens difference via return map"
+  },
+  "Becoming.Loops": {
+   "region": "map",
+   "base": "old-base",
+   "note": "carried difference by order (P118)"
+  },
+  "Becoming.LossMatching": {
+   "region": "significance",
+   "base": "frame",
+   "note": "strict loss matching contains C"
+  },
+  "Becoming.MapInstances": {
+   "region": "map",
+   "base": "old-base",
+   "note": "old base's regimes on the map"
+  },
+  "Becoming.MatchedCourses": {
+   "region": "significance",
+   "base": "frame",
+   "note": "comparison anchors for courses; BasicAlike/BaseApart premises"
+  },
+  "Becoming.Mechanism": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "projection carries determined law; P64-P68 mechanism"
+  },
+  "Becoming.Metaethics": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "L2 premise card, living significance, universal reason, C and L"
+  },
+  "Becoming.MoveFormation": {
+   "region": "root",
+   "base": "frame",
+   "note": "where a move is formed: part, rest, whole"
+  },
+  "Becoming.MoveOutcomeProcesses": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "move outcomes cover; preorder; no premise"
+  },
+  "Becoming.MutualDependence": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "three readings of mutual dependence; bounded significance (MD1)"
+  },
+  "Becoming.Narrowing": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "learning a rule by narrowing belief through observation"
+  },
+  "Becoming.NarrowingRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "narrowing along runs of pure observation"
+  },
+  "Becoming.Novelty": {
+   "region": "map",
+   "base": "old-base",
+   "note": "returning, novelty, forgetting on levels"
+  },
+  "Becoming.Observation": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "observation as route (P125)"
+  },
+  "Becoming.OneStep": {
+   "region": "root",
+   "base": "old-base",
+   "note": "one-step laws give worlds"
+  },
+  "Becoming.Onward": {
+   "region": "map",
+   "base": "frame",
+   "note": "finite run = course into a return (P127)"
+  },
+  "Becoming.Openness": {
+   "region": "map",
+   "base": "old-base",
+   "note": "continued change needs exchange beyond what stands"
+  },
+  "Becoming.Optimum": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "SG1-SG17 optima at least level beyond; 503 thms"
+  },
+  "Becoming.OrderNormal": {
+   "region": "root",
+   "base": "old-base",
+   "note": "arrangements of exchanges, readings in time"
+  },
+  "Becoming.OverExchange": {
+   "region": "root",
+   "base": "old-base",
+   "note": "central laws over every exchange, tying premises discharged"
+  },
+  "Becoming.OwnWidening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "OW1 part's widening is whole's; vs POWER/AUP"
+  },
+  "Becoming.Pace": {
+   "region": "map",
+   "base": "general",
+   "note": "V how fast a rule may change; two-level course"
+  },
+  "Becoming.ParityReadings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "registrations glue at a run step"
+  },
+  "Becoming.PartialReadout": {
+   "region": "knowing",
+   "base": "general",
+   "note": "partial readout through map on domain"
+  },
+  "Becoming.Parting": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "what a record fixes at branching (P116)"
+  },
+  "Becoming.PatternPassing": {
+   "region": "life",
+   "base": "grammar",
+   "note": "pattern outlasting carriers lasts only through passing; Grammar + Web"
+  },
+  "Becoming.Persistence": {
+   "region": "root",
+   "base": "grammar",
+   "note": "P87 continuity across dormancy, identity from relations; Grammar + World"
+  },
+  "Becoming.PlaceTransitionNets": {
+   "region": "root",
+   "base": "old-base",
+   "note": "Petri nets read on spine (PT1); frames as models"
+  },
+  "Becoming.PoolCourse": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "pool membership along a run"
+  },
+  "Becoming.PoolResponse": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "M3 what pool's acts respond to"
+  },
+  "Becoming.PooledEnvelopes": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "inquiry narrowing pooled causal models"
+  },
+  "Becoming.Population": {
+   "region": "life",
+   "base": "old-base",
+   "note": "census of active formations; generation unceasing"
+  },
+  "Becoming.Postponement": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what linear tests see"
+  },
+  "Becoming.Prelude": {
+   "region": "method",
+   "base": "general",
+   "note": "shared lemmas, imports only Init"
+  },
+  "Becoming.Premises": {
+   "region": "root",
+   "base": "old-base",
+   "note": "map of premises of the old base"
+  },
+  "Becoming.Presentations": {
+   "region": "root",
+   "base": "frame",
+   "note": "exact and reduced presentations share kernel"
+  },
+  "Becoming.ProfileReach": {
+   "region": "significance",
+   "base": "frame",
+   "note": "self-significance reaches beyond own region via profiles; S0"
+  },
+  "Becoming.ProjectedLaws": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "reduced law commutes iff law factors through projection"
+  },
+  "Becoming.Propagation": {
+   "region": "map",
+   "base": "old-base",
+   "note": "coupling strength, carried difference (P115)"
+  },
+  "Becoming.PropositionIdentity": {
+   "region": "method",
+   "base": "general",
+   "note": "PE1 propext = lumping by interderivability"
+  },
+  "Becoming.Quantum": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P72q Mermin-Peres square realization; contextuality instance"
+  },
+  "Becoming.Ranking": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "what C ranks: sharing over consumption, restraint over overdraw"
+  },
+  "Becoming.Reading": {
+   "region": "root",
+   "base": "old-base",
+   "note": "activity/drawing/requirement read off exchange (P107)"
+  },
+  "Becoming.ReadingSchedule": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "one reader, several conditions (RS1)"
+  },
+  "Becoming.Readings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "readings in context are one world, no gluing"
+  },
+  "Becoming.Readout": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what a reduction keeps of observables and laws"
+  },
+  "Becoming.Reconfiguration": {
+   "region": "knowing",
+   "base": "general",
+   "note": "envelopes induced by root causes; roster install"
+  },
+  "Becoming.Recurrence": {
+   "region": "map",
+   "base": "frame",
+   "note": "what every law keeps, loses, returns to; pigeonhole, no decidability"
+  },
+  "Becoming.ReferencePlan": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "acquired consequences revise next reference plan"
+  },
+  "Becoming.ReferencePlanTraces": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "reference plan revision as process"
+  },
+  "Becoming.Refinement": {
+   "region": "method",
+   "base": "general",
+   "note": "P83c chain of equivalences stops within its classes"
+  },
+  "Becoming.RegimeMargin": {
+   "region": "map",
+   "base": "old-base",
+   "note": "regime margin on Law.run (RM1-RM4)"
+  },
+  "Becoming.Regions": {
+   "region": "root",
+   "base": "old-base",
+   "note": "self, system, whole as regions; represented boundaries"
+  },
+  "Becoming.Regrouping": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "comparison under regrouping; frames and webs"
+  },
+  "Becoming.RegroupingSelection": {
+   "region": "significance",
+   "base": "frame",
+   "note": "regrouping content, retaining selections"
+  },
+  "Becoming.Regulation": {
+   "region": "map",
+   "base": "old-base",
+   "note": "level held both sides, late reading (RG)"
+  },
+  "Becoming.Rejoining": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "M4 where courses with/without act rejoin"
+  },
+  "Becoming.RelativePosition": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "Z1 game of relative position; zero-sum as counting law"
+  },
+  "Becoming.Relevance": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "uses of living significance under condition"
+  },
+  "Becoming.Remainder": {
+   "region": "map",
+   "base": "old-base",
+   "note": "what a cut loses (P120)"
+  },
+  "Becoming.Renewal": {
+   "region": "root",
+   "base": "general",
+   "note": "run read through conditions is one relational unfolding; 1 thm; imports RelationalRenewal, Amounts"
+  },
+  "Becoming.RenewalBound": {
+   "region": "map",
+   "base": "general",
+   "note": "renewal recurs via well-founded descent, no negative decision"
+  },
+  "Becoming.RenewalFlow": {
+   "region": "map",
+   "base": "old-base",
+   "note": "renewal family as balanced flow; listed twice (second row: recovery laws absorbs, window_progress)"
+  },
+  "Becoming.Reordering": {
+   "region": "method",
+   "base": "old-base",
+   "note": "P78/P78b commuting independent exchanges keep premises; modelling test"
+  },
+  "Becoming.Reproduction": {
+   "region": "life",
+   "base": "old-base",
+   "note": "bounds on offspring numbers, selection on offspring number"
+  },
+  "Becoming.Reserve": {
+   "region": "map",
+   "base": "old-base",
+   "note": "reserve carries activity beyond support; Dependent = zero reserve"
+  },
+  "Becoming.Resolution": {
+   "region": "method",
+   "base": "old-base",
+   "note": "fixed unit of amounts in rest/openness laws; R5"
+  },
+  "Becoming.Response": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P65 responsive reach, dual of registration closure"
+  },
+  "Becoming.ResponseLearning": {
+   "region": "knowing",
+   "base": "general",
+   "note": "operation formed from another's responses"
+  },
+  "Becoming.Restoration": {
+   "region": "map",
+   "base": "old-base",
+   "note": "renewal graded by time to return"
+  },
+  "Becoming.Retaining": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "retaining and adding for any significance"
+  },
+  "Becoming.Retrodiction": {
+   "region": "knowing",
+   "base": "general",
+   "note": "earlier relation from later dated records"
+  },
+  "Becoming.Revision": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "registration history selects"
+  },
+  "Becoming.Roles": {
+   "region": "root",
+   "base": "old-base",
+   "note": "formations and conditions as roles of one relatum; two-kind embeds"
+  },
+  "Becoming.RouteFormation": {
+   "region": "knowing",
+   "base": "general",
+   "note": "code alone supplies no route"
+  },
+  "Becoming.RouteTraces": {
+   "region": "map",
+   "base": "frame",
+   "note": "sum over process histories"
+  },
+  "Becoming.Routes": {
+   "region": "map",
+   "base": "old-base",
+   "note": "orders as sum over histories (P121)"
+  },
+  "Becoming.RuleCapture": {
+   "region": "map",
+   "base": "general",
+   "note": "RC rule reading its share; capture through rule"
+  },
+  "Becoming.RuleHandoff": {
+   "region": "collective",
+   "base": "frame",
+   "note": "organizational rule inheritance through enacted relations"
+  },
+  "Becoming.Runaway": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P55 loop through own registration; break not bounded"
+  },
+  "Becoming.Runs": {
+   "region": "root",
+   "base": "old-base",
+   "note": "the one root: world is a run of its law"
+  },
+  "Becoming.Sampling": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "sampled flow, absent relatum"
+  },
+  "Becoming.ScopedReach": {
+   "region": "root",
+   "base": "frame",
+   "note": "reach through scopes; gluing invariants"
+  },
+  "Becoming.ScoreRepresentation": {
+   "region": "significance",
+   "base": "frame",
+   "note": "C does not yield protection first; F3 port"
+  },
+  "Becoming.SecuredContent": {
+   "region": "significance",
+   "base": "frame",
+   "note": "secured living content, open future form; F3J"
+  },
+  "Becoming.SeedReach": {
+   "region": "root",
+   "base": "frame",
+   "note": "reach from seeds = least invariant"
+  },
+  "Becoming.Seeking": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "P62 boundary for 无明: seeking rests iff fixed state meets target"
+  },
+  "Becoming.SeekingRuns": {
+   "region": "map",
+   "base": "old-base",
+   "note": "boundary of enough on unfolding"
+  },
+  "Becoming.Segmentation": {
+   "region": "knowing",
+   "base": "general",
+   "note": "grouping sequences by adjacency relation; partition laws"
+  },
+  "Becoming.Selection": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P64 selection blind beyond registration closure"
+  },
+  "Becoming.SelectionGap": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "G1 gap for one's own act; alignment boundary"
+  },
+  "Becoming.SelectionLevels": {
+   "region": "life",
+   "base": "general",
+   "note": "multilevel Price equation, k groups of m"
+  },
+  "Becoming.SelectionPool": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "M2 pooled coupling closure"
+  },
+  "Becoming.SelectionReach": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "favouring what reaches beyond in balanced flow"
+  },
+  "Becoming.SelectionRuns": {
+   "region": "life",
+   "base": "frame",
+   "note": "selection through registered course"
+  },
+  "Becoming.SelectionTerm": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EV1 Price selection term, course over generations"
+  },
+  "Becoming.Sensitivity": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "least registration (P113)"
+  },
+  "Becoming.SensitivityWebs": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "sensitivity on webs and flows"
+  },
+  "Becoming.Settling": {
+   "region": "map",
+   "base": "frame",
+   "note": "when runs keep changing"
+  },
+  "Becoming.SharedCodes": {
+   "region": "collective",
+   "base": "general",
+   "note": "codes formed between formations (约定俗成), SC"
+  },
+  "Becoming.Significance": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "continuation condition §6.15, not asserted"
+  },
+  "Becoming.SituationTraces": {
+   "region": "root",
+   "base": "frame",
+   "note": "situation counts are trace counts"
+  },
+  "Becoming.Situations": {
+   "region": "root",
+   "base": "frame",
+   "note": "weights count situations (P117)"
+  },
+  "Becoming.Space": {
+   "region": "root",
+   "base": "old-base",
+   "note": "space of every world, whole and parts; AI reading of Ren's proposal"
+  },
+  "Becoming.Standing": {
+   "region": "method",
+   "base": "old-base",
+   "note": "what premises add to counting standing and dependence"
+  },
+  "Becoming.Standpoints": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "whose continuation counts; S0, standpoint neutrality"
+  },
+  "Becoming.Stock": {
+   "region": "map",
+   "base": "frame",
+   "note": "course executable on stock, closed form"
+  },
+  "Becoming.StrengthFlows": {
+   "region": "map",
+   "base": "old-base",
+   "note": "strengths read off flows"
+  },
+  "Becoming.StrictTransport": {
+   "region": "significance",
+   "base": "frame",
+   "note": "strict transport along supplied comparison"
+  },
+  "Becoming.Stuttering": {
+   "region": "method",
+   "base": "old-base",
+   "note": "P78 idle steps keep premises; test of discrete-step modelling"
+  },
+  "Becoming.Substitution": {
+   "region": "map",
+   "base": "old-base",
+   "note": "substituting consumer persists, stepwise vs whole-run readings"
+  },
+  "Becoming.Succession": {
+   "region": "map",
+   "base": "old-base",
+   "note": "P85 fed without source recurring, Successive.relay"
+  },
+  "Becoming.SummaryFutures": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "summary carries futures yet moves endpoint"
+  },
+  "Becoming.Tail": {
+   "region": "method",
+   "base": "old-base",
+   "note": "law of whole and no part; WLPO calibration (P126)"
+  },
+  "Becoming.Testing": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "P49 what registers and what a formation can test"
+  },
+  "Becoming.Thresholds": {
+   "region": "map",
+   "base": "old-base",
+   "note": "loops within what law reads, break (P124)"
+  },
+  "Becoming.TimedResponse": {
+   "region": "knowing",
+   "base": "old-base",
+   "note": "Response through ordered exchanges"
+  },
+  "Becoming.Tolerance": {
+   "region": "collective",
+   "base": "general",
+   "note": "V2 waiting thresholds and restoring laws"
+  },
+  "Becoming.Tower": {
+   "region": "method",
+   "base": "old-base",
+   "note": "continuous time as tower of finer discrete readings; 6 thms"
+  },
+  "Becoming.Training": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "training as selection over act laws; alignment"
+  },
+  "Becoming.Transactions": {
+   "region": "significance",
+   "base": "frame",
+   "note": "approval gate, scope guard; correlated faults admit forbidden (alignment)"
+  },
+  "Becoming.Transmission": {
+   "region": "life",
+   "base": "old-base",
+   "note": "P84 transmission = inheritance with need bound"
+  },
+  "Becoming.TreeSearch": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "finite route search as determined law"
+  },
+  "Becoming.TypicalRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "counting on free-branching runs"
+  },
+  "Becoming.Typicality": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what counting says of the course that happens"
+  },
+  "Becoming.Undecided": {
+   "region": "method",
+   "base": "general",
+   "note": "three-valued logic and revision"
+  },
+  "Becoming.Unfolding": {
+   "region": "root",
+   "base": "old-base",
+   "note": "P69 one unfolding: labelled process and frame as readings of a world"
+  },
+  "Becoming.Units": {
+   "region": "life",
+   "base": "old-base",
+   "note": "support in fixed unit, coextinction"
+  },
+  "Becoming.Unrolling": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "extrapolation given nothing (L1)"
+  },
+  "Becoming.ValuationFrames": {
+   "region": "significance",
+   "base": "frame",
+   "note": "valuations and continuation condition on frames and runs"
+  },
+  "Becoming.Verification": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "what finite stretches verify/refute; O1"
+  },
+  "Becoming.Viability": {
+   "region": "map",
+   "base": "frame",
+   "note": "no course leaves guard iff certificate exists"
+  },
+  "Becoming.Weighted": {
+   "region": "knowing",
+   "base": "general",
+   "note": "P82 weighted histories, sum over courses = stepwise transfer"
+  },
+  "Becoming.WeightedTraces": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "integrating out and memory on traces"
+  },
+  "Becoming.Weightings": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "IV1/IV2 step of invariance; weightings rank widening"
+  },
+  "Becoming.WholeAmounts": {
+   "region": "method",
+   "base": "old-base",
+   "note": "what whole-number reading of amounts carries; 7 thms"
+  },
+  "Becoming.Wholes": {
+   "region": "map",
+   "base": "old-base",
+   "note": "whole active while some part is; persisting whole only through generation; WE1"
+  },
+  "Becoming.Withholding": {
+   "region": "collective",
+   "base": "general",
+   "note": "V giving that waits on giving; withholding spreads"
+  },
+  "Becoming.WitnessRefinement": {
+   "region": "knowing",
+   "base": "general",
+   "note": "fallible witnesses; refine_keeps_actual"
+  },
+  "Becoming.WitnessRefinementRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "inspection and testing as processes (U5)"
+  },
+  "Becoming.Witnesses": {
+   "region": "method",
+   "base": "old-base",
+   "note": "shared witness models, 0 theorems; infrastructure"
+  },
+  "Becoming.World": {
+   "region": "root",
+   "base": "old-base",
+   "note": "L0 old base: dependence, web, flow, exchange, world over Nat/Prop; premises as gluings; one model of grammar"
+  }
+ }
+}

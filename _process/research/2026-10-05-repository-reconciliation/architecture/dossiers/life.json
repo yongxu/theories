@@ -1,0 +1,899 @@
+[
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "§2.2 generation as replenishment, life as condition of life",
+  "summary": "Generation is replenishment. Also: identity across steps, formation classes along a continuation, life as a condition of life, living on and descent, more needs more renewers, a reserve defers the end, recurring taking keeps finite families from staying closed, unceasing generation needs renewal, novelty's gain, entropy/history/record, a whole persisting through its parts, and a graded whole.",
+  "source": "rows 917-931",
+  "status": "old-base",
+  "records": [
+   "generation-is-replenishment",
+   "identity-across-steps",
+   "classes-along-a-continuation",
+   "life-as-condition-of-life",
+   "living-on-and-descent",
+   "more-needs-renewers",
+   "no-finite-part-bears-taking",
+   "reserve-defers-ending",
+   "returning-novelty-forgetting-on-levels",
+   "rising-and-falling-in-one-exchange",
+   "unceasing-generation-needs-renewal",
+   "where-novelty-gain-comes-from",
+   "whole-persists-through-generation",
+   "a-whole-of-every-part",
+   "entropy-history-and-record"
+  ],
+  "note": "Splits between map (generation, keeping, degeneration) and life.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "§2.4 evolution on descent: selection terms, groups, drift, fixation",
+  "summary": "Evolution on descent, the selection term over generations, offspring bounds, selection within and among groups (equal and any sizes, by ending, coupled conditions, formed by descent, returns to groupmates), confined rise within a whole, drift, fixation by drift and with selection, the additive variance part, mutation balance, and the breeding value.",
+  "source": "rows 938-953",
+  "status": "current",
+  "records": [
+   "evolution-on-descent",
+   "selection-term-over-generations",
+   "what-bounds-offspring-numbers",
+   "selection-within-and-among-groups",
+   "selection-among-groups-by-ending",
+   "groups-whose-conditions-are-coupled",
+   "selection-within-and-among-groups-of-any-sizes",
+   "drift-offspring-sampled",
+   "fixation-by-drift",
+   "fixation-with-selection",
+   "additive-part-of-offspring-variance",
+   "mutation-and-the-balance-it-sets",
+   "the-breeding-value",
+   "groups-formed-by-descent",
+   "confined-rise-within-a-whole",
+   "selection-with-returns-to-groupmates"
+  ],
+  "note": "The additive-variance row reads 'theorem with no premise', which is inconsistent wording.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "§2.4 copying, transmission and organizational inheritance",
+  "summary": "Formed copying correction and fidelity, growth-constrained fragmentation, inherited structural copying, learned procedure transmission, material preparation and recurrent chain assembly (mostly periphery), organizational rule inheritance, independence of transmission where it binds, and transmission as inheritance with a bounded need.",
+  "source": "rows 954-963",
+  "status": "current",
+  "records": [
+   "formed-copying-correction",
+   "formed-copying-registration",
+   "growth-constrained-fragmentation",
+   "inherited-structural-copying",
+   "learned-procedure-transmission",
+   "material-preparation-output",
+   "organizational-rule-inheritance",
+   "recurrent-chain-assembly",
+   "transmission-independent-where-it-binds",
+   "transmission-is-inheritance-and-need"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Forming anew and dependence formed from drawing (§8.1)",
+  "summary": "Necessary and sufficient conditions for forming anew, and a dependence formed from drawing at descent.",
+  "source": "rows 1015-1016",
+  "status": "old-base",
+  "records": [
+   "forming-anew-necessary-and-sufficient",
+   "dependence-formed-from-drawing"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Living crosses arising and ceasing; listing independence",
+  "summary": "Living part crosses recurrence patterns (shuttle, grazing, mutualism, drawdown); 28 refutation laws need no listing once (Becoming.Listing, _listing corollaries); fixing list numbers up to indiscernibility is EM; open: listing vs likeness.",
+  "lean": [
+   "World.living_crosses",
+   "shuttle",
+   "grazing",
+   "mutualism",
+   "drawdown",
+   "Web.embodiedArising_fed_from_beyond_listing",
+   "World.numbers_indiscernible_iff_em"
+  ],
+  "records": [
+   "listing-once-is-decided-identity",
+   "relata-counted-up-to-indiscernibility",
+   "space-and-its-parts",
+   "ceasing-needs-arising"
+  ],
+  "source": "§1.3, l.202",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Law of forming necessary and sufficient (ZG8, 唯识 無因)",
+  "summary": "A dependence forms anew at a descent exactly where the descendant depends on what its giver did not draw on; depending and drawing coincide at the giver; drawing read as inheritance gives the necessary half of inherits_of_drawn; closes §8.1 item 9; no 脉络 gap note open. Study §345.",
+  "lean": [
+   "inherits_of_drawn"
+  ],
+  "records": [
+   "ZG8",
+   "forming-anew-necessary-and-sufficient",
+   "D45"
+  ],
+  "source": "§1.5, l.249-251",
+  "status": "old-base",
+  "note": "unique; carry into life (descent) with classical crosswalk",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "LivingOrganizationCorrespondence: pool origin through the core's gate",
+  "summary": "A periphery instance with standard axioms. With the recipe entering the pool as the gate, trace_pool_origin follows from the core's Gated.origin without deciding the pool. The pool is present after entry, and an empty pool stays empty where every admitted recipe closes.",
+  "source": "§9 zh-table row LivingOrganizationCorrespondence (l.1538)",
+  "status": "old-base",
+  "lean": [
+   "LivingOrganizationCorrespondence",
+   "trace_pool_origin_by_core",
+   "Gated.origin",
+   "entry_then_present",
+   "empty_pool_preserved_by_core"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "A pattern lasts only through passing",
+  "summary": "Pattern present from T with brief carriers has a carrier beginning within every d steps (double-negation form); under the passing premise beginnings are passings, empty steps stay empty, and pattern ends within d once passing stops; PatternRelay attains bounds. Passing premise supplied.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.5 (line 524)",
+  "status": "old-base",
+  "lean": [
+   "Web.ByPassing.ends_within",
+   "Web.begins_within",
+   "Web.ByPassing.begins_passed",
+   "Web.ByPassing.empty_stays",
+   "PatternRelay"
+  ],
+  "records": [
+   "a-pattern-lasts-through-passing"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "life",
+  "kind": "open",
+  "title": "§8.1 item 9: evolution's selection term",
+  "summary": "Stated: Price in counting form (SelectionTerm); Reproduction (variance form, bounds, the counted Cauchy-Schwarz, mutation balance, Fisher with breeding values); SelectionLevels (multilevel selection, Hamilton's rule with assortment); GroupEnding; Founding; Drift (sampling, fixation, Moran-type selection); Transmission; forming anew (ZG8). Open: why a descendant depends, Wright-Fisher with selection, mixing, assortment dynamics, synergy, how parts come to live as one.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 9, line 1371",
+  "status": "old-base",
+  "lean": [
+   "Becoming.SelectionTerm",
+   "Becoming.Reproduction",
+   "Becoming.SelectionLevels",
+   "Becoming.GroupEnding",
+   "Becoming.Continuation",
+   "Becoming.Founding",
+   "Becoming.Drift",
+   "Becoming.Transmission",
+   "Web.formsAnew_iff_undrawn",
+   "Web.formsAnew_iff_drawn_unheld"
+  ],
+  "records": [
+   "ZG8",
+   "evolution-on-descent",
+   "selection-term-over-generations",
+   "what-bounds-offspring-numbers",
+   "selection-within-and-among-groups",
+   "selection-among-groups-by-ending",
+   "groups-whose-conditions-are-coupled",
+   "selection-within-and-among-groups-of-any-sizes",
+   "drift-offspring-sampled",
+   "fixation-by-drift",
+   "fixation-with-selection",
+   "mutation-and-the-balance-it-sets",
+   "the-breeding-value",
+   "additive-part-of-offspring-variance",
+   "groups-formed-by-descent",
+   "selection-with-returns-to-groupmates",
+   "confined-rise-within-a-whole",
+   "transmission-is-inheritance-and-need",
+   "forming-anew-necessary-and-sufficient",
+   "dependence-formed-from-drawing"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "life",
+  "kind": "argument",
+  "title": "Consequences select the organization that learns (recursive selection)",
+  "summary": "Effects of activity change which operative relations are formed, kept or replaced, including the way of learning. Backpropagation, differential reproduction and institutional evaluation realize this as different mechanisms. Absolute continuation, rising relative frequency and renewal of wider conditions are distinct outcomes. Unconditional convergence to generative alignment is not established, and a proxy's success does not make a representation true.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 'Consequences can select the organization that learns'",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "life",
+  "kind": "example",
+  "title": "Checked history: learning → retained use → reconstruction of the updater → further use",
+  "summary": "From a zero network matrix, two updating procedures reach 40/40 and 30/40 successes and receive 2 versus 1 successor kits. Both continue. Changing the transmitted procedure or erasing the record changes later capability, while equal performance or a shared limit removes the advantage. 30 theorems, 50 audits. No ecological or ethical convergence is claimed.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 'A checked history from learning to reconstruction of the learner'",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "life",
+  "kind": "method",
+  "title": "Development and evolutionary psychology: four linked questions",
+  "summary": "An inheritance does not carry an adult psychology. The four questions are present mechanism, development, effects on continuation and historical distribution. Selection, drift, constraint, byproduct and cultural transmission must be told apart, and present benefit does not establish origin. The Liangzhi evidence is not to be spliced into one genealogy.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 (opening)",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "life",
+  "kind": "example",
+  "title": "Worked continuation: knowledge, action and support in one learner history",
+  "summary": "In the acquired-perspective learner, a work receipt jointly changes record, fuel, phase and command, and success replenishes support. These are dependent aspects of one history, and order matters (a failure receipt precedes repair). Event-word feasibility omits which action produced which endpoint. The next join is effective ranges → acquired distinctions → changed continuation.",
+  "source": "NONDUAL-METHOD.md, Worked continuation",
+  "status": "superseded",
+  "note": "illustrates the method on an old pre-spine learner; history",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "life",
+  "kind": "example",
+  "title": "Recurrence without selector revision",
+  "summary": "In the fixed-selector example, configurations recur and change while the causally effective selector stays the same. This blocks an unconditional inference from recurrence to learning or revision.",
+  "source": "MATHEMATICAL-CORE.md, The connection to organization learning and ethics",
+  "status": "current",
+  "lean": [
+   "BoundaryModels"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "life",
+  "kind": "argument",
+  "title": "Part–whole organization: cells, organs, bodies, ecosystems; cognition within them",
+  "summary": "Inclusion, functional participation and dependence are distinct relations. The cell–organ–body–ecosystem sequence is a case, not a fixed ladder. Upward and downward are relational paths, and an intervention needs an admissible realization. Cognition is not a layer on top. Mouse, fly and microbe studies constrain separate links.",
+  "source": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md §1 (Cells…; How cognition participates; Descriptions change with the question)",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Composition of organized activity and biological correspondence",
+  "summary": "A joint event law connects regional transfers, signals, retention, withdrawal and renewed exposure. Equal material and support can hide different retained effects. 26 theorems and a reanalysis of 403 published measurements; no single matched trajectory.",
+  "source": "RELATIONS-ACROSS-SCALES.md §11",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "More needs unbounded replenishment and renewers",
+  "summary": "Read as 'for every number, from some step on, at least that many take', more rules out any eventual bound on replenishment, and on renewers when each gives a bounded amount. Under a census, more forces unceasing arising; without the census (or with repetition, or with takers that are never active) it does not. The needed replenishment forms a strict hierarchy, and the takers themselves can be the renewers.",
+  "source": "§2.2 l.274",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Flow",
+   "Becoming.Population",
+   "More.replenishment_unbounded",
+   "More.renewers_unbounded",
+   "More.unceasing",
+   "Pulse.pulsed",
+   "Cycle.closed_more",
+   "Dormant",
+   "Repeated",
+   "Inactive"
+  ],
+  "records": [
+   "more-needs-renewers"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Arising is given: generation is replenishment (life as condition of life)",
+  "summary": "In a balanced flow where only active formations give, an embodied relatum arises only as some active formation gives to it, so generation is replenishment. Recurring embodied generation in a finite family opens the family. This fails without dissipation (Shuttle) or without embodiment (Flicker). Burning fresh fuel meets every premise.",
+  "source": "§2.2 l.276",
+  "status": "old-base",
+  "lean": [
+   "Embodied.arises_given",
+   "SourceSeed",
+   "EmbodiedSource",
+   "embodiedArising_opens",
+   "embodiedArising_draws_in",
+   "embodiedArising_not_recurring",
+   "Shuttle",
+   "Flicker",
+   "Throughput",
+   "relabel"
+  ],
+  "records": [
+   "life-as-condition-of-life",
+   "generation-is-replenishment"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "example",
+  "title": "Dormancy, reserves, mutualism, breaking at ending",
+  "summary": "The requirement tracks the rise of level, not activity (Provisioned, Sleeper). A reserve defers the end without escaping it. In mutualism, two formations each depending on itself and the other are connected, while two depending only on each other are not related by either valuation. Drawing on an embodied relatum at the step it ends is breaking; this is a stepwise verdict, not a valuation of the drawer [D6].",
+  "source": "§2.2 l.278",
+  "status": "old-base",
+  "lean": [
+   "Provisioned",
+   "Sleeper",
+   "Becoming.Reserve",
+   "Mutualism.apart_embodied",
+   "Embodied.ending_breaks",
+   "Predation",
+   "Wilting"
+  ],
+  "records": [
+   "reserve-defers-ending"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Price's equation and the selection term proper",
+  "summary": "Price's equation holds in counting form as an identity. The selection term is the covariance with denominators cleared, with no premise. Over generations the mean is kept or rises exactly where selection and transmission balance or raise it. Where only active formations give and activity needs support, a reading highest at the supported parents is never selected against.",
+  "source": "§2.4 l.308-309",
+  "status": "current",
+  "lean": [
+   "price",
+   "selected_uniform",
+   "SelectionTerm.covariation",
+   "SelectionTerm.offspring_covariation",
+   "Generations.kept_step_iff",
+   "Generations.rises_step_iff",
+   "Generations.moved_unbalanced",
+   "SelectionTerm.Flow.support_not_against",
+   "SelectionTerm.Flow.support_not_lower",
+   "SupportedDescent.supported_descent"
+  ],
+  "records": [
+   "evolution-on-descent",
+   "selection-term-over-generations"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Reproduction: Fisher's theorem in counts, bounds on offspring, mutation, breeding values",
+  "summary": "Variance in offspring number is zero exactly when weights are uniform. Fisher's fundamental theorem holds in counting form with exact transmission. Offspring number is bounded by giving, take and stock, so a lineage in a closed dissipated family ends. Cauchy-Schwarz bounds the additive part. The error threshold and the mutation-selection balance s/(s+m) are derived, and so is Fisher with breeding values; interaction leaves a residue.",
+  "source": "§2.4 l.310",
+  "status": "current",
+  "lean": [
+   "Reproduction.variation",
+   "Reproduction.none_iff_uniform",
+   "Reproduction.number_variation",
+   "Generations.ByNumber.rises_exact_iff",
+   "Reproduction.Flow.born_le_given",
+   "Reproduction.Flow.born_within_stock",
+   "Reproduction.Flow.lineage_ends",
+   "Reproduction.Relay.relay",
+   "Reproduction.additive_le",
+   "Reproduction.Mutation.rises_iff",
+   "Reproduction.Mutation.falls_of_outrun",
+   "Reproduction.Mutation.kept_share",
+   "Reproduction.Mutation.balanced_iff",
+   "Reproduction.Breeding.breeding_balance",
+   "Reproduction.Breeding.response",
+   "Reproduction.Interaction.interaction"
+  ],
+  "records": [
+   "what-bounds-offspring-numbers",
+   "mutation-and-the-balance-it-sets",
+   "the-breeding-value",
+   "additive-part-of-offspring-variance"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Multilevel selection and Hamilton's rule in counts",
+  "summary": "Multilevel Price is proved for equal and for any group sizes. A trait selected against within groups rises in the whole only through selection among groups. Groups formed by descent keep their founding values (complete assortment). Selection among groups accumulates or falls back depending on how the next groups form. With returns b to groupmates at cost c, Hamilton's rule is stated in counts, and the founding can flip the verdict.",
+  "source": "§2.4 l.311-312",
+  "status": "current",
+  "lean": [
+   "SelectionLevels.levels",
+   "SelectionLevels.levels_sized",
+   "SelectionLevels.among_for_of_rises",
+   "SelectionLevels.ByMeans.by_means",
+   "SelectionLevels.rises_exact_iff_within_of_alike",
+   "SelectionLevels.lineage_value",
+   "SelectionLevels.rises_iff_lineages",
+   "SelectionLevels.within_returns",
+   "SelectionLevels.among_for_iff",
+   "SelectionLevels.rises_iff_returns",
+   "SelectionLevels.Founding.either_verdict",
+   "SelectionLevels.Partly.below_one",
+   "GroupEnding.Exhausted.next_step",
+   "GroupEnding.Assorted.kept"
+  ],
+  "records": [
+   "selection-within-and-among-groups",
+   "selection-within-and-among-groups-of-any-sizes",
+   "groups-formed-by-descent",
+   "selection-with-returns-to-groupmates"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Selection among groups by ending, and coupled families end together",
+  "summary": "Groups with less of a trait leave no offspring, so selection runs within groups plus concordance. On the base, joint excess leaves no descendants, which raises the mean. A shared condition that ends every group supplies no selection among groups. Coupled families of conditions end together, so selection by ending works only between families. The commons scope prediction appears on the spine (Coupled).",
+  "source": "§2.4 l.313-314",
+  "status": "old-base",
+  "lean": [
+   "GroupEnding.rises_iff_ended",
+   "GroupEnding.not_against_of_ended",
+   "GroupEnding.Flow.excess_childless",
+   "GroupEnding.Flow.raises_of_inactive",
+   "GroupEnding.Flow.rises_iff_inactive",
+   "GroupEnding.Flow.all_end",
+   "Flow.family_excess_ends",
+   "Flow.family_excess_bounded",
+   "GroupEnding.Flow.coupled_end_together",
+   "Coupled.alone_within",
+   "Coupled.all_end",
+   "GroupEnding.Flow.ended_of_family",
+   "GroupEnding.Flow.lineages_not_lower"
+  ],
+  "records": [
+   "selection-among-groups-by-ending",
+   "groups-whose-conditions-are-coupled"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Confined rise within a whole (cancer and germ line)",
+  "summary": "After a family has run into excess, survivors descend from members that were independent of it. A lineage confined to the family ends however far selection within the family raised it; a lineage that spreads outlasts it. Nested founding with sequestration makes the founding value rise exactly as selection among wholes does. Read [AI] as cancer and germ line (Buss, Michod, Aktipis).",
+  "source": "§2.4 l.315",
+  "status": "old-base",
+  "lean": [
+   "Founding.Flow.confined_ends",
+   "Founding.Flow.survivors_independent",
+   "Founding.Flow.ConfinedRise.ends",
+   "Founding.Body.confined_ended",
+   "Founding.Body.spread_outlasts",
+   "Founding.varied_before",
+   "Founding.Nested.raises_iff_carried",
+   "Founding.Nested.raises_iff_among",
+   "Founding.Germline.unsequestered_falls"
+  ],
+  "records": [
+   "confined-rise-within-a-whole"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Drift and fixation, neutral and with selection (Moran)",
+  "summary": "A sampled share averages to the listed share, and its variance is given exactly. Sampling undoes selection rarely (Chebyshev-type bound) but is never ruled out. Over generations, ends absorb, variation vanishes and the fixation share equals the starting share. With selection in the draw, the Moran fixation probability is obtained in counts through a potential.",
+  "source": "§2.4 l.316",
+  "status": "current",
+  "lean": [
+   "Drift.falls_back",
+   "Drift.expected_ones",
+   "Typicality.spread",
+   "Drift.lost_weight",
+   "Drift.Generations.raised_falls_back",
+   "Drift.Flow.ended_falls_back",
+   "Drift.sampled_count",
+   "Drift.varied_vanishes",
+   "Drift.fixation",
+   "Drift.Replacement.value_potential",
+   "Drift.Replacement.fixation",
+   "Drift.Replacement.favoured_share_above"
+  ],
+  "records": [
+   "drift-offspring-sampled",
+   "fixation-by-drift",
+   "fixation-with-selection"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Unsupported childless; transmission bounded by slack",
+  "summary": "An unsupported formation leaves no descendants, and the parents' weighted need is bounded by the level. Under TransmitsWithin, a transmitted need exceeds the level by at most Slack. Drawdown holds transmission, variation, selection and feedback in one unfolding. Transmission is inheritance plus need.",
+  "source": "§2.4 l.317-320",
+  "status": "old-base",
+  "lean": [
+   "unsupported_childless",
+   "selected_le",
+   "transmitted_supported",
+   "TransmitsWithin",
+   "Slack",
+   "Drawdown",
+   "Becoming.Transmission"
+  ],
+  "records": [
+   "transmission-is-inheritance-and-need",
+   "transmission-independent-where-it-binds"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Periphery copying and assembly mechanisms",
+  "summary": "Periphery modules (standard axioms) cover inherited structural copying, formed copying and its correction, growth-constrained fragmentation (restated on the base in Cuts) and inherited organizational rules. No correspondence with the core content is proved. A recurrent chain runs n rounds exactly when the stock covers d·k(2^n−1).",
+  "source": "§2.4 l.320",
+  "status": "current",
+  "lean": [
+   "Copying.built_iff",
+   "RecurrentAssembly.supported_rounds"
+  ],
+  "records": [
+   "inherited-structural-copying",
+   "formed-copying-registration",
+   "formed-copying-correction",
+   "growth-constrained-fragmentation",
+   "organizational-rule-inheritance",
+   "learned-procedure-transmission",
+   "material-preparation-output",
+   "recurrent-chain-assembly"
+  ],
+  "note": "'formed-copying-registration' uses retired 'registration' vocabulary",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Acquired criterion, activity scope and initiation",
+  "summary": "AcquiredPurposeCriterion: a repaired dependency enters the completion criterion and changes closure. AcquiredActivityScope: with zero shared support no history completes the pending activity; an empty scope does not prove completion. Initiation: starting a new activity at a one-unit boundary can remove a reachable completion. Each comes with a finite run audit. After Ren's 'integral of the whole' correction, local projections do not represent the whole.",
+  "source": "NONINSTRUMENTAL-CONCERN.md §13–15",
+  "status": "old-base",
+  "lean": [
+   "AcquiredPurposeCriterion",
+   "AcquiredActivityScope"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Generative evolution of innate 良知: template versus successor structure; development; handoff",
+  "summary": "In a finite slice: template dominance and growth of response structure have different conditions, h(AA+HA)>a(AH+HH), with counterexample (1,5,2,2). Developmental rebuilding: same carrier and timing give different function. A support handoff can complete with or without failure. Sources: Burkart, Ben-Ami Bartal, Francis, Weaver, Hepach, Martin and Olson. No complete 良知 history is claimed.",
+  "source": "LIANGZHI-EVOLUTION.md §1–§8",
+  "status": "old-base",
+  "records": [],
+  "lean": [
+   "ConsequenceTransmission",
+   "DevelopedResponse",
+   "SupportHandoff"
+  ],
+  "note": "Pre-spine, 7 October. Experiment modules use propext and Quot.sound, old vocabulary (生成核心, 生成树, Process/Trace) and an old 'universal metaethics' target. RO §9 says to keep it and connect it by instance theorems; the spine has no theorem on how response to others' loss forms.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "life",
+  "kind": "definition",
+  "title": "Central candidate for evolution",
+  "summary": "Generative activity forms organizations that can continue and be reconstructed. Their differences enter later activity through actual transmission and change the conditions of variation, development, shared living and later selection, so evolution's own organization can change. Offered as a connected explanation, not a universal theorem. Mere change, or formation before inheritance, is not differential transmission.",
+  "source": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md, preamble (lines 7-11)",
+  "status": "current",
+  "note": "Bilingual statement (zh line 7 plus English). The goal-level framing of the evolution programme.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Descent and Price's equation in counting form",
+  "summary": "A descendant is given to by a parent that takes part and comes to stand. Over descent, Price's equation holds in counting form. Lean on the spine, empty axiom report.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus, bullet 1",
+  "status": "current",
+  "records": [
+   "evolution-on-descent"
+  ],
+  "note": "Known result (Price 1970/72) restated.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Selection term proper over generations",
+  "summary": "Concordance less discordance of offspring number and amount over ordered pairs is the covariance with its denominators cleared. A moved mean has a step of selection proper or of transmission, found by deciding each. A reading highest where activity is supported is never selected against.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus, bullet 2",
+  "status": "current",
+  "records": [
+   "selection-term-over-generations"
+  ],
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Fisher's theorem (exact transmission) and the flow bound on offspring numbers",
+  "summary": "Selection on offspring number is its spread over pairs; with exact transmission the mean offspring number rises exactly where offspring numbers vary. Offspring numbers are at most what a parent gives and takes. A lineage in a balanced family dissipated on ends within its stock must lose more through transmission than selection gains. A lossless relay escapes, so dissipation is needed.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus, bullet 3; Completion requirements rows 2-3",
+  "status": "current",
+  "records": [
+   "what-bounds-offspring-numbers"
+  ],
+  "note": "What the flow adds: offspring bounded by giving and taking.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Additive part of offspring variance and the breeding value",
+  "summary": "Counted Cauchy-Schwarz: squared covariance of a carried amount with offspring number is at most the product of the variances, so Fisher's additive part is at most the whole. A breeding value combining several amounts covaries with offspring number by its own spread. With exact transmission its mean rises by that spread over mean offspring number. Open: natural-coefficient solutions of the normal equations.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 3; The next theoretical connection item 2",
+  "status": "current",
+  "records": [
+   "additive-part-of-offspring-variance",
+   "the-breeding-value"
+  ],
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Multilevel Price: selection within and among groups of any sizes",
+  "summary": "The selection term divides exactly into the groups' own terms plus the term among group means. An amount selected against within every group is selected for overall only where selection among groups favours it, and the same within-group counts give either verdict. Groups alike in mean leave only within-group selection. Ending among groups can leave survivors alike, so the gain falls back.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 4; next connection item 1",
+  "status": "current",
+  "records": [
+   "selection-within-and-among-groups",
+   "selection-within-and-among-groups-of-any-sizes"
+  ],
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Selection among groups by ending, and coupled groups",
+  "summary": "On the base, a group whose own condition runs into joint excess under gated renewal leaves no offspring, which fixes the among-group part. One shared condition ends every group and selects nothing among them. Groups on a coupled family end together after the family's excess. A patch reseeded by its neighbour shows no excess when read alone, matching the commons test.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 4; Completion requirements rows 4-5; next connection item 1",
+  "status": "old-base",
+  "records": [
+   "selection-among-groups-by-ending",
+   "groups-whose-conditions-are-coupled"
+  ],
+  "note": "Stated on the World base (gated renewal, families of conditions). Links life to map (joint excess) and collective (commons).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Groups formed by descent",
+  "summary": "Groups descended from groups uniform in an amount keep their differences under exact transmission. Each lineage keeps its founding value, nothing is selected within lineages, and where lower lineages end the mean never falls back. This is the complete-assortment end: how the next groups are formed fixes whether among-group selection accumulates.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 4; next connection item 1",
+  "status": "current",
+  "records": [
+   "groups-formed-by-descent"
+  ],
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Confined rise within a whole (cancer and germ-line reading)",
+  "summary": "A lineage favoured within a whole, but confined to that whole's conditions while uptake exceeds renewal, has no member once those conditions end. Only lineages with a member independent of them go further. A whole founded by one part has no internal selection until variation arises. Where founders carry their founder's value, the mean founding value rises exactly where among-whole selection favours it.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 4",
+  "status": "old-base",
+  "records": [
+   "confined-rise-within-a-whole"
+  ],
+  "note": "The AI's reading as cancer/germ line, restating Buss 1987, Michod 1999 and Aktipis 2015. Uses the base's conditions in excess.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Hamilton's rule from returns to groupmates",
+  "summary": "Each unit kept gives b to every member of its group and takes c from the keeper. Within-group selection goes against keeping and among-group selection for it. The whole selects for keeping exactly where m b times the among-group spread exceeds (b+c) times the whole spread: Hamilton's rule with assortment as the among-group share of the spread.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 4; next connection item 1",
+  "status": "current",
+  "records": [
+   "selection-with-returns-to-groupmates"
+  ],
+  "note": "Known result (Hamilton 1975) restated. Open: changing assortment, synergy, several founders, couplings forming.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Drift: offspring sampled rather than listed, and neutral fixation",
+  "summary": "The sampled share is the listed share on average, with exact spread. Samplings that undo a step's selection weigh at most about one over the sample size, and at least the samplings that lose the favoured kind outright. Over many generations drift has no direction but ends variation geometrically. Each kind fixes with its starting share: the neutral fixation probability.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 5; next connection item 3",
+  "status": "current",
+  "records": [
+   "drift-offspring-sampled",
+   "fixation-by-drift"
+  ],
+  "note": "Counting weighs samplings; it does not say which happens.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Fixation with selection (Moran) and mutation-selection balance",
+  "summary": "With selection in the draw and replacement one at a time, the fixation share is a potential's ratio: above the starting share for the favoured kind and never certain. Mutation as inexact transmission keeps carriers where advantage balances loss, approached from below without overshoot. Below that, carriers decline at any share (the error threshold), which is Price's balance of selection against transmission.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 5; next connection item 3",
+  "status": "current",
+  "records": [
+   "fixation-with-selection",
+   "mutation-and-the-balance-it-sets"
+  ],
+  "note": "Open: Wright-Fisher with selection, two-way mutation, mutation with drift.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Selection blind beyond its couplings; a rise draws from beyond",
+  "summary": "Selection through a selector's couplings is blind beyond their closure. Where a whole gains nothing, a rise draws from beyond it, and past the slack of the dependences there one breaks unseen by a selection rewarding the rise. Over generations favouring raisers, the share reaching beyond is never selected against.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus bullet 6; Completion requirements row 3",
+  "status": "current",
+  "records": [
+   "selection-through-couplings",
+   "what-a-rise-draws-from-beyond"
+  ],
+  "note": "Bridges life to knowing (closure) and map (draw beyond, breaks).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "argument",
+  "title": "What the spine adds to known population genetics",
+  "summary": "The selection laws restate known results (Price, Fisher's exact case, Hamilton, the Malthusian bound). The spine adds that they are stated with the flow: offspring are bounded by giving and taking, and selection's verdict meets what the selected draw from shared conditions. Fitness is not defined, offspring number is a weight and a reading, and reproductive advantage is no ethical authority.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus, paragraph after bullets (line 24)",
+  "status": "current",
+  "note": "Key statement of standing. Pairs with the canonical chapter's relation to known results (method).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Organization and its continuation: enacted practice and social organizational evolution",
+  "summary": "Enacted-practice continuation joins response, revision, tested work, formed participation and succession in one history: joint activity can change who takes part next. Social organizations transmit changed rules (work-formed mandates, authorized procedural change, handoff, changed admission; 29 checked theorems). Organizing variation is differentiation and feedback within one system. How tasks, tests and procedures change stays open.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Current theoretical focus, 'Organization and its continuation'",
+  "status": "old-base",
+  "note": "Results live in history/EVOLUTIONARY-ORGANIZATION.md and the older Lean, not on the Grammar root. The systems/subsystems correction is the nondual point to carry.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "method",
+  "title": "Theoretical account first; differentiated roles within one unfolding",
+  "summary": "The current task is the theoretical account: which mechanisms the relations explain, what established results they recover and which premises stay independent. New measurements are not a prerequisite. Organism and environment are differentiated within one history, not separate substances. Variation, sampling, movement, transmission and development cannot all be relabelled selection, and individuality is not explained by repartitioning a supplied population.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'The theoretical account first'; 'One unfolding and differentiated evolutionary roles'",
+  "status": "current",
+  "note": "Nondual framing of evolution; the chain formation → inherited change → changed continuation → changed conditions of evolution.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Generated selection recurrence (transfer entries)",
+  "summary": "An initially absent, stronger arrangement can form by reconfiguring an existing one. Its actual output fixes how many daughters a declared recipe reconstructs; they operate, and later reconfiguration can remove the coupling. One material and support account. 16 Lean theorems: finite histories keep the accounts within initial support, and the model exactly recovers a two-type population recurrence (a correspondence, not superiority).",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Existing results and the new connection' (lines 40-44)",
+  "status": "old-base",
+  "note": "Builds on history/GENERATIVE-SELECTION.md (eight-theorem connection) and LIANGZHI-EVOLUTION. Not on the Grammar root. The fixed recipe and reconfiguration rates stay supplied.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Developmental association: group ancestry from bonds",
+  "summary": "Group ancestry follows from inherited local division and actual bonds: changed retention, separation and renewed daughter attachment, not a grouping specified each generation. 19 Lean theorems. Proved limit: snapshots omitting bonds miss common ancestry (conventional models that keep bonds are credited). Aggregation counterexamples bound common ancestry's scope. Ecological continuation and source renewal are not connected.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Existing results' (lines 46-48), incl. zh paragraph",
+  "status": "old-base",
+  "note": "Results in history/ DEVELOPMENTAL-ASSOCIATION-INTEGRATION. Relevant to how groups form (open item 1 on the spine).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Empirical correspondences: yeast retention, packing, settling, aggregation",
+  "summary": "Ecological retention (30 culture observations, ratios 1.0364/0.4307/0.4941); packing from 2,106 cell positions, with the census scale unresolved; a density/drag choice reversing 33 of 190 pair rankings (7 Lean sensitivity theorems); aggregation videos (54 means; K. lactis settling 3.61 to 16.34 mm/min). All credit conventional explanations. No comparative superiority.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Existing results' (lines 50-56); 'Retained empirical continuation'",
+  "status": "current",
+  "note": "Empirical programme, separate from the theoretical account. Candidate for process/history with a short summary kept live.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Bacterial lineage continuation, forecasts and assay transfer",
+  "summary": "3,808 records with 3,600 parent links; the evolved strain completes 42/72 cycles versus 7/72 for its revertant, and all 44 viable endpoints trace to the focal ancestor (6 Lean arithmetic theorems). Chronological forecasts over 3,424 outcomes: inherited lineage beats a changing stage average. Dated assay transfer exposes stage-specific overprediction. Oxygen gradients and mat development credit niche construction.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Existing results' (lines 58-68); 'Retained empirical continuation' (line 146)",
+  "status": "current",
+  "note": "Scoped inherited-change-to-descendant connection. Gains are credited to conventional lineage inference.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Microscopy and developmental-history measurement; contextual establishment",
+  "summary": "Surface-history movies, original microscopy (five acquisitions, timestamp lags of 225.89 s, a fivefold pixel-scale difference), and 91 captures decoding 23.9M crop pixels with identity sensitivity. Contextual establishment: 45 outcomes in 11 cohorts, and 7 Lean theorems on the local balance and the growth-dispersal gain condition. These close a first measurement step; linked descendants and broad advantage are missing.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Existing results' (lines 66-68); 'Completed focused account' (lines 74-76)",
+  "status": "current",
+  "note": "Process-heavy measurement detail; mostly retire-to-history with a pointer.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "application",
+  "title": "Completed focused account: evolutionary organization",
+  "summary": "A connected explanation of formation, inherited reconstruction and changes to further evolution, with primary evidence. 20 Lean theorems, 44 declaration audits and 113 closure audits connect sampled descendants to redevelopment and finite provision. Declared developmental laws, sampling, mutation and support stay inputs, and stronger rival stability results are credited. Local completion only.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Completed focused account: evolutionary organization'",
+  "status": "old-base",
+  "note": "The study lives in history/EVOLUTIONARY-ORGANIZATION.md. Its Lean is an older module, not on the Grammar root.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "open",
+  "title": "Six completion requirements of the evolution programme",
+  "summary": "(1) formation of evolving organization; (2) recovery of established explanations; (3) evolution of the conditions of evolution; (4) novel organization and changed units; (5) demonstrated comparative strength; (6) ethical continuation and evolved evaluation. Each row lists the existing basis, spine records included, and what is still needed. They are not to be weakened to fit results. Empirical obligations do not block theory.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Completion requirements' table",
+  "status": "current",
+  "note": "Row 6 connects to significance (PRACTICAL-JUDGMENT). Row 5 cites the commons-gated-renewal falsifiable test (identity held; pool's positive reading failed).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "argument",
+  "title": "Comparative standing: network comparison yields equivalence",
+  "summary": "Comparators are population and transmission models, development and niche construction, and transitions in individuality. An authored conventional implementation with the same information has exactly the same finite histories, failures and readouts (11 Lean theorems, 34,768 comparisons): equivalence, with no distinct prediction. The proposed contribution is explaining how the organization through which evolution proceeds forms, is inherited and is revised. The first test is cross-condition prediction without refitting.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Comparative standing'; 'Direction for demonstrating a comparative contribution' (incl. zh line 103)",
+  "status": "current",
+  "note": "Honest negative or neutral standing. Belongs in method (relation to known results) as well.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "open",
+  "title": "Next spine connections for evolution",
+  "summary": "(1) Mixing between groups and how groups and couplings form: changing assortment, synergy, several founders, removal by the whole's rule, inexact transmission across groups, changing families. (2) Natural-coefficient breeding values. (3) Wright-Fisher with selection, two-way mutation, mutation with drift. (4) How descent forms new dependences (canonical §8.1 item 9).",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'The next theoretical connection', From the spine items 1-4",
+  "status": "current",
+  "note": "Item 1 is the §7 collective concern stated with descent.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "law",
+  "title": "Updater line: connectionist recovery, developmental memory, updater turnover",
+  "summary": "The one-step connectionist recovery derives the developmental response, keeping the recurrence, initial profile and selection law as premises. A bounded realization (28 theorems) recalls two patterns, loses an old recall through favourable updates and restores it without reset. A finite replacement history (36 theorems): returns enter maintenance, failure allows an affordable proposal, and the replacement governs later updates.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'The updater line' (lines 114-118)",
+  "status": "old-base",
+  "note": "History-linked studies. A joined turnover mechanism, not population-frequency or ethical necessity. Overlaps knowing/learning.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "life",
+  "kind": "open",
+  "title": "Retained empirical continuation programme",
+  "summary": "Earlier next steps: observed formation, loss and reformation leading to a terminal mat criterion and calibrated cycle prediction. Connect developed association to an ecological interaction under altered resources or mixing. Track lineage identity apart from temporary aggregate membership. Calibrate the joint mechanism against conventional network accounts. Laboratory medium replacement is a real supply, not a free reset.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'Retained empirical continuation'",
+  "status": "superseded",
+  "note": "Explicitly lower priority than the theoretical connections. Candidate for process/history.",
+  "unit": "chapters-evolution-markets"
+ }
+]

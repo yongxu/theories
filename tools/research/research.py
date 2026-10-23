@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph
 
 
 @contextmanager
@@ -268,6 +268,8 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     completion_pages, completion_errors = completion.render()
     outputs.update(completion_pages)
     errors += completion_errors
+    # The theory graph (RA): one graph of concepts, results, modules, texts and chapter sections, and its index.
+    outputs.update(theory_graph.render(records))
     index_pages, index_errors, reading_drift = index_outputs(render or strict_fresh)
     stale_indexes = []
     errors += index_errors

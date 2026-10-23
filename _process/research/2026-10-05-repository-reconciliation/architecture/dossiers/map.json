@@ -1,0 +1,1649 @@
+[
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Differences propagate only downstream; nothing beyond the influence closure exchanges in",
+  "summary": "Under every law reading a schedule, courses apart at one condition stay alike at every condition not downstream of it. Nothing beyond a formation's influence closure exchanges with what a member depends on.",
+  "source": "§7.1 l.712",
+  "status": "old-base",
+  "lean": [
+   "apart_only_downstream",
+   "Flow.beyond_influence"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "What a response does to an act's difference: rejoining",
+  "summary": "A difference opens or closes only across steps where the flows exchange differently. On rejoining, what was exchanged makes up the gap exactly. Closing needs a formation outside the part coupling the courses apart; a difference nothing within the responsive reach exchanges with stays. Examples: Replenishing closes, Loop ends support. Open: laws off own courses, many conditions at once.",
+  "source": "§7.7 l.799",
+  "status": "old-base",
+  "lean": [
+   "Flow.exchange_apart_of_change",
+   "Flow.gap_made_up",
+   "Flow.closes_through_coupling_apart",
+   "Flow.stays_beyond_response",
+   "Replenishing.closes_through"
+  ],
+  "records": [
+   "where-two-courses-rejoin",
+   "M4 Rejoining"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§2.1 renewal, consumption and dependence dynamics",
+  "summary": "Dependence forms, holds, breaks and transforms. Also: finite horizon, return grades, the stepwise reading, renewal on runs as the relational reading of living, renewing vs consuming as relation to participated conditions (periphery), renewing/consuming formation in one wear-law class (periphery, under living significance and C), substitution preserving consumption, and supported repair.",
+  "source": "rows 908-916",
+  "status": "old-base",
+  "records": [
+   "becoming-dependence-dynamics",
+   "becoming-finite-horizon",
+   "becoming-renewal-reading",
+   "becoming-return-grades",
+   "becoming-stepwise-reading",
+   "relational-renewal-classification",
+   "renewing-consuming-formation",
+   "substitution-preserves-consumption",
+   "supported-renewal-recovery"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§2.3 joint excess and drawing from beyond",
+  "summary": "Counting one's own draw misses joint excess. Also: a whole drawing beyond renewal ends, the rest outruns the renewal, what taking all excludes, where a rising take ends, and limits of the derived extent.",
+  "source": "rows 932-937",
+  "status": "old-base",
+  "records": [
+   "derived-extent-limits",
+   "own-count-misses-joint-excess",
+   "whole-drawing-beyond-renewal-ends",
+   "what-taking-all-excludes",
+   "the-rest-outruns-the-renewal",
+   "where-a-rising-take-ends"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Regime margin and coupled regimes (§2.3, T1, T2)",
+  "summary": "The margin of a regime, the regime point under adjusting giving, where a run of a regime rests, the threshold in the level/recent-giving plane, the regime in any amounts (periphery over reals), coupled regimes, coupled webs, rest on coupled webs, thresholds beyond a band, and webs with recent giving. Mostly whole-number amounts with band premises.",
+  "source": "rows 1157-1166",
+  "status": "current",
+  "records": [
+   "margin-of-a-regime",
+   "regime-point-under-adjusting-giving",
+   "where-a-run-of-a-regime-comes-to-rest",
+   "threshold-in-the-state-plane",
+   "regime-in-any-amounts",
+   "coupled-regimes",
+   "coupled-webs",
+   "rest-on-coupled-webs",
+   "thresholds-beyond-a-band",
+   "webs-with-a-recent-giving"
+  ],
+  "note": "These rows sit out of section order in the table.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§2.5 feeding closure and comparison within reach",
+  "summary": "The feeding closure, five levels of closure, which links a closure needs, consumption ending with its feeders, feedback and reach, and draws on a shared stock (periphery). Comparison within reach and the closure verdict meeting the continuation condition both take the condition.",
+  "source": "rows 964-971",
+  "status": "old-base",
+  "records": [
+   "feeding-closure",
+   "levels-of-closure",
+   "which-links-a-closure-needs",
+   "consumption-ends-with-feeders",
+   "feedback-and-reach",
+   "draws-on-a-shared-stock",
+   "comparison-within-reach",
+   "closure-verdict-meets-continuation-condition"
+  ],
+  "note": "The two condition-taking rows go to significance.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§2.6 carried differences, loops, couplings and cuts",
+  "summary": "The counterfactual is the course, and comparison where the rest responds. Also: how a carried difference grows and how much arrives, loops forming within what a law reads, whether a loop closes or widens a difference, coupling frequency (settling, runaway rate), saturation, orders as sums over histories, least coupling, what a cut loses, what a whole-but-no-part law takes, where a level couples and a move is formed, two-act worlds, timely response, and what dependence alone carries.",
+  "source": "rows 972-978, 1017-1029",
+  "status": "old-base",
+  "records": [
+   "counterfactual-is-the-course",
+   "comparison-where-the-rest-responds",
+   "how-a-carried-difference-grows",
+   "how-loops-form",
+   "how-much-difference-arrives",
+   "how-often-couplings-act",
+   "a-coupling-saturated-by-what-it-has-carried",
+   "loops-within-what-a-law-reads",
+   "orders-as-a-sum-over-histories",
+   "sensitivity-is-the-least-coupling",
+   "sums-over-histories-by-support-horizon-and-order",
+   "timely-response-necessity",
+   "two-act-worlds-carry-the-difference",
+   "what-a-cut-loses",
+   "what-a-law-of-the-whole-and-no-part-takes",
+   "where-a-level-couples",
+   "what-dependence-alone-carries-of-a-level",
+   "where-a-move-is-formed",
+   "whether-a-loop-closes-a-difference"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§1.5 grab-bag: regulation, tolerance, disturbance, dormancy, arising",
+  "summary": "A §1.5 group with mixed content. Regulation from one side and locally, tolerance monotone across laws, rivals bounded in time, repeated disturbance, a whole carried by lasting parts, dormancy and final ending, arising needs change, a need with a cap, far conveying runs the family down, basins of a determined law, reaching before/after a juncture, feeding from a step, a source before a juncture, need drift along a lineage, a goal along a lineage, and support passed on.",
+  "source": "rows 979-1014 (part)",
+  "status": "old-base",
+  "records": [
+   "regulation-from-one-side-and-locally",
+   "tolerance-monotone-across-laws",
+   "rivals-bounded-in-time",
+   "repeated-disturbance",
+   "a-whole-carried-by-lasting-parts",
+   "dormancy-over-a-stretch",
+   "arising-needs-change",
+   "a-need-with-a-cap",
+   "far-conveying-runs-the-family-down",
+   "basins-of-a-determined-law",
+   "reaching-before-and-after-a-juncture",
+   "feeding-from-a-step",
+   "a-source-before-a-juncture",
+   "need-drift-along-a-lineage",
+   "a-goal-along-a-lineage",
+   "support-passed-on",
+   "negation-change-and-stable-cases",
+   "least-parts-and-equal-shares",
+   "copying-b-fold",
+   "one-search-one-line"
+  ],
+  "note": "§1.5 is a dumping section that mixes map, life and root content. It needs redistribution.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§3.4 selection, seeking, capture, runaway, settling",
+  "summary": "Runaway and distance to the uncoupled break, where seeking rests, selection through a map of alternatives and through couplings, a formation's own course, selection under lumping change, target capture (perturbing the state alone is re-absorbed), the boundary of enough, the gap for one's own act, the last change of a run, when runs settle, and recurring reference revision.",
+  "source": "rows 1059, 1078-1089",
+  "status": "old-base",
+  "records": [
+   "consequence-revised-reference-plan",
+   "recurring-reference-revision",
+   "runaway-distance-uncoupled",
+   "seeking-boundary",
+   "selection-through-a-model-of-the-options",
+   "selection-through-couplings",
+   "a-formations-own-course",
+   "selection-under-registration-revision",
+   "target-capture",
+   "the-boundary-of-enough-under-undetermined-laws",
+   "the-gap-for-ones-own-act",
+   "the-last-change-of-a-run",
+   "when-the-runs-of-a-process-settle"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "map",
+  "kind": "definition",
+  "title": "Scope: whole space of becoming",
+  "summary": "The theory counts generation and degeneration alike; generation is one part, not a condition on every change; degeneration, ending and mixed change are not renamed generation.",
+  "source": "Preface, Scope, l.63",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Attraction is not returning",
+  "summary": "A configuration is drawn into an absorbing region iff it does not return; drawn never comes back; reachable set at n is absorbing and draws every lost possibility; finitely, attraction is merging; open worlds separate them; under branching necessarily drawn iff not returning (Transit, OneWay witnesses).",
+  "lean": [
+   "Law.drawn_iff_not_returns",
+   "Law.DrawnInto.never_back",
+   "Law.reachable_absorbing",
+   "Law.lost_drawn",
+   "Law.lossless_iff_none_drawn",
+   "Law.succ_drawn_lossless",
+   "Law.pred_drawn_keeps",
+   "necessarilyDrawn_iff_not_returns",
+   "Transit.keeps_not_returns",
+   "OneWay.merge_keeps"
+  ],
+  "records": [
+   "attraction-is-not-returning",
+   "returning-where-the-course-branches",
+   "necessarily-drawn-is-not-returning"
+  ],
+  "source": "§1.2, l.182-183",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Every loss passes a juncture (机)",
+  "summary": "Where s returns, every course to where s can no longer be had passes a juncture up to double negation; finding it is deciding reachability, listed case constructive, in general exactly LPO; the greatest sub-process keeping s.",
+  "lean": [
+   "loss_passes_juncture",
+   "loss_passes_juncture_listed",
+   "lpo_of_junctures_found",
+   "keeping_greatest"
+  ],
+  "records": [
+   "every-loss-passes-a-juncture"
+  ],
+  "source": "§1.2, l.184",
+  "status": "old-base",
+  "note": "LPO calibration stated with its meaning for the unfolding",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "reading",
+  "title": "Readings of §1.2: lock-in, 机, 护闭/成闭, symmetry",
+  "summary": "Lock-in is not returning; an attractor is the unfolding narrowing its own future; 机 is a juncture; 护闭 keeping and 成闭 losing at a juncture, one operation without valuation; which regions actual unfoldings enter and measures on branching are not derived.",
+  "records": [
+   "D25",
+   "D32",
+   "D43",
+   "D52"
+  ],
+  "source": "§1.2 Readings, l.188",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "The rest theorem",
+  "summary": "Balanced dissipative world with censuses, embodied arising and enclosure around what stands from some step: coming to rest cannot be refuted; each premise needed (leaking, attrition, throughput); naming the last arising step is LPO; few standing at each step with enclosure, not world finiteness, brings rest (rest_few).",
+  "lean": [
+   "World.comes_to_rest_unrefuted",
+   "leaking",
+   "attrition",
+   "throughput",
+   "World.lpo_of_finite_ends",
+   "rest_few"
+  ],
+  "records": [
+   "least-loss-rest",
+   "least-loss-from-entropy-production"
+  ],
+  "source": "§1.3, l.197",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Rest needs a least loss or a finite reading; rest in any amounts",
+  "summary": "Amounts.rests (least-loss falls from bounded stock don't recur; each premise needed); Archimedean gives approach; loss needs a merging law; finite reading gives rest with no least loss (rests_of_finite_reading, Branching.rests_along_run); part's merge kept by the rest (Landauer count); in any amounts rest iff census total stops falling; Pass worlds never rest.",
+  "lean": [
+   "Amounts.rests",
+   "Amounts.rests_unrefuted",
+   "Flow.change_stops_unrefuted",
+   "World.rests_unrefuted_enclosed",
+   "Halving.never_rests",
+   "Layered.never_rests",
+   "Amounts.approaches_rest",
+   "Law.loss_needs_merge",
+   "Amounts.rests_of_finite_reading",
+   "Branching.rests_along_run",
+   "Halving.stock_unlisted",
+   "Law.Lossless.narrowing_spreads",
+   "Law.Lossless.reset_unlisted",
+   "World.InAmounts.change_lowers",
+   "World.InAmounts.rests_unrefuted_enclosed",
+   "World.InAmounts.change_stops_iff",
+   "Amounts.noEndlessFall_of_fallsAtLeast",
+   "Pass.endless_keeps_from_rest",
+   "Amounts.worldsRest_of_noEndlessFall",
+   "Amounts.not_endlessFall_of_worldsRest"
+  ],
+  "records": [
+   "EC3",
+   "LC2",
+   "LC3",
+   "rest-from-a-finite-reading",
+   "merge-of-a-part-kept-by-the-rest",
+   "rest-theorem-in-any-amounts",
+   "rest-exactly-where-falls-stop"
+  ],
+  "source": "§1.3, l.198",
+  "status": "old-base",
+  "note": "central result 4; one very long bullet, needs restructuring",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Openness and fed from beyond",
+  "summary": "Counted embodied balanced dissipative world: arising without end excludes enclosure from any step; premises decide neither (exposed, holding, hatch); a finite enclosed lossless never-resting world exists (Passing.passes); dissipative enclosed arising family cannot be fed from nothing beyond (double negation); more without end needs inflow beyond every bounded part; no recurring source needed (Successive.relay).",
+  "lean": [
+   "World.arising_opens",
+   "exposed",
+   "holding",
+   "hatch",
+   "Passing.passes",
+   "Web.embodiedArising_fed_from_beyond",
+   "Flow.new_beyond_every",
+   "Successive.relay"
+  ],
+  "records": [
+   "continued-change-needs-openness",
+   "continuing-self-fed-from-beyond"
+  ],
+  "source": "§1.3, l.199-200",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "RenewalFlow: no formation's trace decides the run's class",
+  "summary": "On webs, neither a formation's trace nor the focal formation's own trace decides whether a run renews. Formations each within renewal can consume jointly, upgrading can consume, and a seasonal web neither renews nor consumes.",
+  "source": "§9 zh-table row RenewalFlow (l.1535)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.RenewalFlow",
+   "SupportGatedWebs.formation_does_not_decide"
+  ],
+  "records": [
+   "F1"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "map",
+  "kind": "definition",
+  "title": "Core terms of the map: renewing and consuming, arising and ceasing, rest, dissipation, openness, joint excess, closures, coupling, carried amount, widening, margin",
+  "summary": "Definitions with anchors: RenewingIn/ConsumingIn; Arises/Web.Ceases, kept apart from generative (D36); World.RestsFrom and comes_to_rest_unrefuted (停息); Flow.Dissipative; World.arising_opens (openness is only the mark 未); Flow.joint_excess_ends; the feeding, influence, reach, system and coupling closures; Web.CoupledInto; carried and OnLoop; Web.Widens/Keeps/Mixed; supported_iff_within_margin.",
+  "source": "§10(a) rows renewing..margin (l.1589-1603)",
+  "status": "old-base",
+  "lean": [
+   "RenewingIn",
+   "ConsumingIn",
+   "Arises",
+   "World.RestsFrom",
+   "Flow.Dissipative",
+   "World.arising_opens",
+   "Web.Census",
+   "counts_iff_decided",
+   "Flow.FedFromBeyond",
+   "Flow.joint_excess_ends",
+   "Flow.WithinCoupling",
+   "Web.CoupledInto",
+   "Web.SelectsThrough",
+   "carried",
+   "OnLoop",
+   "Web.Widens",
+   "Flow.Balances.supported_iff_within_margin"
+  ],
+  "records": [
+   "D36"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Exponential pace around always-coupled loops; doubling needs",
+  "summary": "Around a loop coupled every step, R turns multiply by at least 2^R and at most D(1+M)^t (exponential_around, carried_pow_around, carried_le_pow_always, CoupledThroughout.exponential); selection with transmission raises share ratio as (a/b)^n; under balance a record-breaking draw leaves over half the stock until it fails, lasting n steps needs 2^n-1 (half_stands, doubling_needs, DoublingDraw).",
+  "source": "THE-THEORY-OF-BECOMING.md §4.2 (lines 467-468)",
+  "status": "old-base",
+  "lean": [
+   "exponential_around",
+   "CoupledAlways.chainInTime",
+   "carried_pow_around",
+   "carried_le_pow_always",
+   "CoupledThroughout.exponential",
+   "share_ratio_pow",
+   "Flow.Balances.half_stands",
+   "Flow.Balances.doubling_needs",
+   "DoublingDraw"
+  ],
+  "records": [
+   "mutual-dependence-and-its-pace"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Keeping a part is not renewal",
+  "summary": "No course leaves the guard 'focal formation active' while one run renews and another consumes its sustaining condition; guard-keeping is a fact of configuration, renewal a fact of the run.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 (line 482)",
+  "status": "old-base",
+  "lean": [
+   "Renewable.kept_part_not_renewal"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "A loop closes a difference only through a link giving back less",
+  "summary": "No-less links never close; sub-unit return map closes within as many turns as the difference; cuts; with whole-number factors close/keep/run away, nothing between; gradual closing needs a non-multiplicative link; self-loop return map is carried amount; gap of rejoining courses is a return map's course exactly where exchanges respond.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (line 509)",
+  "status": "old-base",
+  "lean": [
+   "closing_needs_less",
+   "never_closes_of_no_less",
+   "closes_within_exact",
+   "cut_closes",
+   "cut_reopened",
+   "nothing_between",
+   "gradual_needs_another_link",
+   "selfLoop_carried",
+   "selfLoop_gap",
+   "carried_around_excess",
+   "Ring.bound_strict",
+   "responds_iff",
+   "gap_course",
+   "gap_scaling"
+  ],
+  "records": [
+   "whether-a-loop-closes-a-difference"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Pace law: how fast a rule may change",
+  "summary": "Two-level course is a run of one law; a never-reading rule is unreached; fast differences reach the rule only at reading steps; regaining needs rule change; a stretch L fixes held-rule courses with ≤N states iff L ≥ 2N−1; whole course fixed by first N+1 steps.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (line 510)",
+  "status": "old-base",
+  "lean": [
+   "pace_law",
+   "paced_run",
+   "rule_unreached",
+   "never_reads_loses",
+   "rule_until_reading",
+   "Switching.changing_regains",
+   "whole_fixed_exact"
+  ],
+  "records": [
+   "how-fast-a-rule-may-change"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Two-sided regulation and late reading",
+  "summary": "With balance, departure within the gap iff next level between m and the level (no overshoot); then settles at m; overshoot oscillates; one-sided stays away; ℓ-late reading needs band ≥ 2(ℓ+1)d, attained; late relay threshold a+(ℓ+1)M ≤ b+1.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (line 511)",
+  "status": "old-base",
+  "lean": [
+   "Flow.withinGap_iff_between",
+   "Regulation.no_narrower_band",
+   "Flow.regulates",
+   "Flow.settles",
+   "Flow.restores_exactly",
+   "Regulation.Overshooting.oscillates",
+   "Regulation.OneSided.above",
+   "Regulation.lateReturn_band",
+   "Regulation.relay_threshold"
+  ],
+  "records": [
+   "two-sided-regulation-and-late-reading"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Capture through the rule (meta-attractor locking)",
+  "summary": "Under Raises and ReadsShare the share never falls and the course locks after first reading step; uniform favouring locks after second exactly; direction-keeping perturbation absorbed, reversed held past threshold locks other way; monotone two-level laws keep order. ReadsShare is premise where Becoming.Capture's 'winner shapes the rule' enters.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.5 (line 526)",
+  "status": "old-base",
+  "lean": [
+   "favouring_locks",
+   "uniform_locks",
+   "Raises",
+   "ReadsShare",
+   "Second.second_exact",
+   "perturbation_absorbed",
+   "Reversed.not_absorbed",
+   "order_kept",
+   "Becoming.Capture",
+   "Becoming.RuleCapture"
+  ],
+  "records": [
+   "capture-through-the-rule"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Closed capture: lock outlives loss",
+  "summary": "Where neither share nor rule reads what lies beyond (Unread), courses alike stay alike on every schedule (law of a part read alone); a rising loss passes every bound while locked; an open reading of loss turns it (Beyond witness); a reading formed from the share (mind) is one rule read from share, absorbed at any size; Proportional meets premises.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.5 (line 527)",
+  "status": "old-base",
+  "lean": [
+   "ClosedCapture.lock_outlives_loss",
+   "Unread",
+   "unread_course",
+   "courses_alike_iff_unread",
+   "Law.part_identifiesAlike_iff_step",
+   "identifiesAlike_iff_unread",
+   "join_course",
+   "turned_by_loss",
+   "Beyond.closed_locked",
+   "Beyond.open_turned",
+   "Beyond.open_falls",
+   "both_reads",
+   "readers_not_below",
+   "reading_absorbed",
+   "readers_uniform_locks",
+   "Proportional.reform_absorbed"
+  ],
+  "records": [
+   "closed-capture"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Widening order and four cases of a part, no premise",
+  "summary": "Widening is transitive and one-way; widen/narrow/keep/mixed exclude each other constructively; exhaustiveness is the classical step, not in Lean; witnesses Inflow.widens, Clearing.narrows, Transfer.mixed; mixed parts need a further measure.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 (lines 575-577)",
+  "status": "old-base",
+  "lean": [
+   "Web.Widens.trans",
+   "Web.Widens.not_reverse",
+   "Web.Widens.not_keeps",
+   "Web.Widens.not_mixed",
+   "Web.Keeps.not_mixed",
+   "Inflow.widens",
+   "Clearing.narrows",
+   "Transfer.mixed"
+  ],
+  "records": [
+   "four-cases-of-a-part"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Closing needs net draw beyond margin; support from the supported",
+  "summary": "Withholding a part, a formation is supported iff the part's cumulative net draw stays within the margin (finding uses classical logic); net give closes nothing; with non-loosening requirements support rises only via the supported; with no inflow the unsupported stays (premises needed, Restoring). Boundary of 'not harm'.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 (line 578)",
+  "status": "old-base",
+  "lean": [
+   "supported_iff_within_margin",
+   "Balances.withheld",
+   "supported_of_net_give",
+   "admits_of_net_draw",
+   "gains_from_supported",
+   "unsupported_stays",
+   "Restoring"
+  ],
+  "records": [
+   "closing-needs-net-draw",
+   "support-from-the-supported"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Widening, retaining, losing, adding within margin at each step",
+  "summary": "With balance only at required conditions, levels with a part widen those without iff net draw within margin for all admitted and some net exchange brings one more within; retaining/losing/adding boundaries hold for any significance.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 (line 579)",
+  "status": "old-base",
+  "lean": [
+   "Flow.widens_iff_within_margin_at",
+   "Flow.retains_iff_within_margin_at",
+   "Flow.loses_iff_beyond_margin_at",
+   "Flow.adds_iff_within_margin_at"
+  ],
+  "records": [
+   "significance-retained-within-margin"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Whole comparison = every region; loss beyond a region",
+  "summary": "Comparison over the whole is comparison within every region; nothing lies beyond the whole; Clearing: clearer closes nothing within itself and source but closes the dweller; 'only non-degenerating dynamics continue indefinitely' fails for parts.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 (line 581)",
+  "status": "old-base",
+  "lean": [
+   "Web.includes_iff_within_every",
+   "Web.AdmitsWithin.narrow",
+   "Clearing.loses_beyond"
+  ],
+  "records": [
+   "loss-beyond-a-region"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Represented boundaries; center not derived; whole never a center's model",
+  "summary": "Renewal over a region depends on region covering what a formation takes part in (Omitted); dynamics fix extent, not center (Clearing.center_not_derived); region is a parameter; no self-model realizes all claim patterns (Frame.self_incomplete).",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 Represented boundaries (line 583)",
+  "status": "old-base",
+  "lean": [
+   "Omitted",
+   "Clearing.center_not_derived",
+   "Frame.self_incomplete"
+  ],
+  "records": [
+   "represented-boundary-against-dependence"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "What widening counts: along readings, growth, across a stretch",
+  "summary": "Widens compares admission of type F only, so 生生 can exceed it; WidensAlong (identity = Widens); grown world widens iff old kept and gain/new admission; attachment widens iff new condition meets need; WidensAcross derived within one unfolding, reidentification-invariant, anti in links; budding adds nothing.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 What widening counts (line 585)",
+  "status": "old-base",
+  "lean": [
+   "Web.WidensAlong",
+   "Web.widensAlong_id_iff",
+   "Web.grow_widensAlong_iff",
+   "Web.grow_widens_unregistered",
+   "Web.attach_widensAlong_iff",
+   "Flow.GrownBy",
+   "Web.WidensAcross",
+   "Web.exceedsAcross_itself_iff",
+   "Web.widensAcross_reidentify",
+   "Web.ExceedsAcross.anti",
+   "Bud.readings"
+  ],
+  "note": "R47/R51",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Regrouping and open-form handoff",
+  "summary": "Regrouping merges claims; lossless under every level test iff same least requirement each step (decidable case); grouped descriptions can hide mixed gains/losses (omission, not refutation). Becoming.Handoff links finite formation witness to positive relevance with significance hypothesis explicit; formal connection only.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 What widening counts (line 585)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Handoff",
+   "Run.novel_by_handoff",
+   "Run.relevance_by_handoff_of_unrestricted"
+  ],
+  "records": [
+   "comparison-content-under-regrouping",
+   "open-form-realization-under-revision"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Constraint runs along feeding; derived extent limits",
+  "summary": "Consumption ends with feeders (Overshoot.ends_through_feeder); dependence region in Clearing is derived feeding closure; not derived: wanting continuation, representing closure, losses actually returning, others' response, positive adding comparisons beyond decidable significance, any warrant.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.3 (line 636)",
+  "status": "old-base",
+  "lean": [
+   "Flow.Balances.consumption_ends_with_feeders",
+   "Overshoot.ends_through_feeder",
+   "Clearing.dependenceRegion_iff",
+   "Downstream.one_way",
+   "Mortal.after_its_end",
+   "Clearing.undermines_within_renewal",
+   "Flow.Balances.adds_iff_exceeds_of_decidable"
+  ],
+  "records": [
+   "consumption-ends-with-feeders",
+   "derived-extent-limits"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Preemption and run-class laws: renewed/consumed/arising",
+  "summary": "Unformed counts: preemptive drawer is living yet narrows, losing under the condition; undermining signals loss, renewal at a step does not signal keeping; whole-run: renewed-only keeps, consumed narrows, consuming can keep (Untaken); non-arising parts change nothing, arising decides nothing (ArisingDrawer/ArisingGiver). Run-class laws need no condition.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (line 664)",
+  "status": "old-base",
+  "lean": [
+   "Preemption.not_undermining_yet_loses",
+   "Web.UnderminingOn.not_retains_unrestricted",
+   "Web.exceeded_of_below",
+   "Preemption.within_renewal_yet_loses",
+   "Flow.Balances.not_narrows_of_renewed",
+   "Flow.Balances.narrows_of_consumed",
+   "Untaken.consuming_keeps",
+   "Flow.Balances.keeps_of_not_arising",
+   "ArisingDrawer.arises_narrows",
+   "ArisingGiver.arises_widens"
+  ],
+  "records": [
+   "the-run-classes-and-widening"
+  ],
+  "note": "R44 arising class; condition-free part belongs in map",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "T1. Persistence certifies the joint draw",
+  "summary": "Whatever persists through many renewal cycles of a needed condition has had the joint draw, not its own draw, kept within the margin. The margin belongs to the regime. Under a standing draw, the point of no return lies more than the draw above the need. Proved in the model: joint excess ends the condition, the whole ends with its parts, others outrunning ends it, own draw is not joint draw, a family kept taking from is fed from beyond, and the coupled and web thresholds (RM6-RM10).",
+  "source": "THE-THEORY-OF-BECOMING.md, T1, lines 1248-1256",
+  "status": "old-base",
+  "lean": [
+   "Flow.joint_excess_ends",
+   "Web.Whole.family_excess_ends",
+   "Flow.outrun_ends",
+   "Pair.own_not_joint",
+   "Web.mutual_course_lost",
+   "Web.course_lost_iff",
+   "Web.course_kept_iff",
+   "Flow.fed_from_beyond",
+   "RegimeMargin.ends_iff_below",
+   "RegimeMargin.beyond_draw_iff",
+   "RegimeMargin.Coupled.ends_iff_below",
+   "RegimeMargin.Coupled.threshold_falls",
+   "RegimeMargin.Coupled.ends_after",
+   "RegimeMargin.Coupled.Indexed.ends_downstream",
+   "RegimeMargin.Coupled.Indexed.threshold_falls",
+   "RegimeMargin.Coupled.Indexed.threshold_falls_within",
+   "RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent"
+  ],
+  "records": [
+   "WE1",
+   "RM6",
+   "RM7",
+   "RM8",
+   "RM9",
+   "RM10",
+   "study §287",
+   "§291",
+   "§306",
+   "§311",
+   "§325",
+   "§327",
+   "§331"
+  ],
+  "note": "The thesis part (that actual conditions meet the premises) is supported in the lab and untested in the field.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "application",
+  "title": "T1 evidence: margin tests in yeast, a simulated commons and fisheries",
+  "summary": "Passed: MQ2 on real yeast held out (93-100% against a 68-81% null); MQ1 in a simulated Allee yeast (22/22, 12/12); CG1 joint-excess law in about 9.8M windows. Failed: MQ1 D2 (instrument floor); MQ2 C1 (salt shock); MQ3 F3 in fish stocks; MQ6 A1, A2 and T2 (breaks earlier than the constant-regime curves said). No field test with the need measured in advance. Sharpened from own draw to joint draw.",
+  "source": "THE-THEORY-OF-BECOMING.md, T1 evidence, line 1255-1256",
+  "status": "current",
+  "records": [
+   "MQ1",
+   "MQ2",
+   "MQ3",
+   "MQ6",
+   "CG1",
+   "study §253",
+   "§266",
+   "§272",
+   "§314",
+   "§240"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "T2. State of a renewable condition under a draw: level, recent giving, one lag",
+  "summary": "Conjectured: three numbers are the state, and no fourth variable removes a tenth of the residual variance. The regime's step and the frozen rest are the two ends of this state. Proved parts: rests over every adjustment (RM2), coming to rest (RM3), the threshold as a curve in the plane of level and recent giving (RM4), any amounts with real convergence in the periphery (RM5), and the coupled step bringing in the partner's level (RM6). Neighbours are delay-difference models (Deriso, Schnute).",
+  "source": "THE-THEORY-OF-BECOMING.md, T2, lines 1258-1266",
+  "status": "old-base",
+  "lean": [
+   "Becoming.RegimeMargin",
+   "Flow.WithheldLevels",
+   "RegimeMargin.Adjusted.rests_iff",
+   "RegimeMargin.Adjusted.comes_to_rest",
+   "RegimeMargin.Adjusted.falls_iff_below",
+   "RegimeMargin.Adjusted.threshold_falls",
+   "RegimeMargin.Drawn.run_shape",
+   "Drawn.converges",
+   "RegimeMargin.Coupled.step",
+   "RegimeMargin.Crossing.crosses"
+  ],
+  "records": [
+   "RM2",
+   "RM3",
+   "RM4",
+   "RM5",
+   "RM6",
+   "study §299",
+   "§300",
+   "§301",
+   "§302",
+   "§306"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "application",
+  "title": "T2 evidence: MQ4, MQ5, MQ6, MQ7 on fish stocks and yeast",
+  "summary": "MQ4 on 76 stocks: the pair of level and recent giving is not the whole state (0.12 above the 0.10 bound, failed). MQ5 on 69 stocks: with the lag nothing more is needed (passed), but assessment-model series may carry the lag themselves. MQ7 on 21 unread stocks: 0.39 of the predicted sign, but from 5 stocks with a lower bound of 0.00 (failed). MQ6 lab: residuals are uncorrelated at constant dilution. Predicts across domains: yeast under changing dilution, grassland.",
+  "source": "THE-THEORY-OF-BECOMING.md, T2 evidence, line 1265-1266",
+  "status": "current",
+  "records": [
+   "MQ4",
+   "MQ5",
+   "MQ6",
+   "MQ7",
+   "study §277",
+   "§280",
+   "§316",
+   "§314",
+   "§272"
+  ],
+  "note": "Contains AI readings labelled D45.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "T7. A measure read from what it selects outlives its refutation",
+  "summary": "Proved in the model: a closed capture loop is one law of the share. An unread loss changes nothing it does. It outlives a loss passing every bound and is turned only through what it reads. The first half is the one lumping law shared with identification and selection. That actual metrics are so formed is conjectured, with no frozen test. Neighbours: Goodhart, Campbell, Wakaiki et al., Everitt et al. 2017, Borkar-Varaiya, self-confirming equilibrium, performativity, Arthur.",
+  "source": "THE-THEORY-OF-BECOMING.md, T7, lines 1326-1333",
+  "status": "old-base",
+  "lean": [
+   "ClosedCapture.unread_course",
+   "ClosedCapture.lock_outlives_loss",
+   "ClosedCapture.turned_by_loss",
+   "ClosedCapture.readers_uniform_locks",
+   "RuleCapture.uniform_locks",
+   "ClosedCapture.identifiesAlike_iff_unread",
+   "ClosedCapture.courses_alike_iff_unread"
+  ],
+  "note": "Could sit in knowing or collective; the capture regime belongs with the map's regimes.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "open",
+  "title": "Dropped as a thesis: the stronger direction hypothesis",
+  "summary": "The hypothesis that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. A part can go on while closing what lies beyond (Clearing.loses_beyond), so persistence does not select widening. It stays an open empirical target, not a premise.",
+  "source": "THE-THEORY-OF-BECOMING.md, T8, line 1339; also §8.1 targets line 1376 and §8.7 line 1435",
+  "status": "current",
+  "lean": [
+   "Clearing.loses_beyond"
+  ],
+  "note": "Stated three times in this unit; carry it once.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§8.7 balance from the first law and from continuity",
+  "summary": "Locality: a quantity carried only by participating exchanges balances exactly where no condition produces it. A total conserved without locality does not balance (Teleport). The first law plus the entropy balance give balance exactly where no store generates entropy, and give the exergy balance. On the core, transfers follow from conservation on every family a relation closes (Continuity).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.7, line 1429",
+  "status": "old-base",
+  "lean": [
+   "balances_iff_unproduced",
+   "Teleport.conserved_not_balanced",
+   "balances_iff_stores_generate_nothing",
+   "Leaking",
+   "exergyBalance_of_laws",
+   "balance_and_least_loss",
+   "Burning.balanced_and_dissipative",
+   "Continuity.balancing_iff",
+   "Continuity.balancesOn_of_law",
+   "Continuity.Teleport"
+  ],
+  "records": [
+   "FL1",
+   "FL2",
+   "balance-from-the-first-law",
+   "balance-from-conservation-along-a-relation"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "§8.7 dissipation against the second law; Landauer floor",
+  "summary": "Dissipation as stated is stronger than the statistical second law; Passing is a finite, enclosed, lossless world that never rests. Dissipation needs whole-unit irreversibility or an exergy floor (kT ln 2). A destroyed share gives proportional loss. Dissipation in expectation still ends taking from a closed family almost surely. Landauer needs from physics only the step from count to heat.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.7, line 1430",
+  "status": "old-base",
+  "lean": [
+   "Passing",
+   "taking_not_recurring_ae",
+   "Law.Lossless.narrowing_spreads"
+  ],
+  "records": [
+   "least-loss-from-entropy-production",
+   "T1 (physics)"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "application",
+  "title": "§8.7 the margin measured (MQ1-MQ7 summary)",
+  "summary": "The frozen-rest accounting is an identity on measured data, so the test lies in the regime margin. In the lab: thresholds are predicted, and Dai 2012 held out (93-100%). MQ6: breaks came earlier than the constant-regime curves said. In 258 RAM stocks the level is not the state; the state is level, recent giving and lag, near the frozen-rest end. The margin ranks risk but does not time it. MQ7 missed its bound. Harms of joint draws do not add.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.7, line 1431",
+  "status": "duplicate",
+  "records": [
+   "MQ1",
+   "MQ2",
+   "MQ3",
+   "MQ4",
+   "MQ5",
+   "MQ6",
+   "MQ7"
+  ],
+  "note": "Duplicates the T1 and T2 evidence; keep one copy, at T1/T2.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "application",
+  "title": "§8.7 place/transition nets meet the premises by their own definitions",
+  "summary": "In a finite P/T net, balance is the firing rule, dissipation is a strict P-subinvariant and rest is unrefuted. Emptied siphons stay empty and conservative cycles never rest. This is agreement with known theory, not independent support for generality. Which systems are such nets remains open.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.7, line 1432",
+  "status": "old-base",
+  "lean": [
+   "Net.balances_iff",
+   "Net.dissipative_iff",
+   "Net.rests_unrefuted",
+   "Net.siphon_empty",
+   "Net.cycle_never_rests"
+  ],
+  "records": [
+   "PT1",
+   "place-transition-nets-on-the-spine"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Arising recurs exactly when ceasing does, in finite decided worlds",
+  "summary": "On the spine, arising and ceasing, forming and dissolving, and coming to stand and ceasing to stand are one change read three ways. In a finite world with decided activity, arising recurs exactly when ceasing does. A bounded census keeps them together; an unbounded census does not.",
+  "source": "BECOMING-FOUNDATION.md §5, rows 1 and 5",
+  "status": "old-base",
+  "records": [
+   "coming-and-ceasing-keep-pace",
+   "bounded-census-keeps-pace"
+  ],
+  "note": "the row's caveat on Ren's 不overlap吧 question is outdated: generation and degeneration are now read as non-overlapping",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Eight World premises are independent; continued arising needs openness",
+  "summary": "Eight premises (including census and bounded transmission) are each failed by a world meeting the other seven. They decide neither enclosure nor openness. Openness is necessary, not sufficient, for arising without end. Rest comes from finitely many standing and active relata at each step with enclosure, not from finiteness alone.",
+  "source": "BECOMING-FOUNDATION.md §5, row 5",
+  "status": "old-base",
+  "records": [
+   "map-of-premises",
+   "continued-change-needs-openness"
+  ],
+  "lean": [
+   "World.independent"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Renewal and consumption belong to runs",
+  "summary": "A formation renews when every condition it draws on keeps supporting its dependents, and consumes when some dependent loses support for good. The two classes are exclusive but not exhaustive. The class belongs to the run, not to the configuration or the formation's own course: in the same process from the same start, one run renews and another consumes. Joint consumption by two formations that each stay within renewal is also covered.",
+  "source": "THE-THEORY-OF-BECOMING.md §2.1 (l.256-263)",
+  "status": "old-base",
+  "lean": [
+   "Renewable.class_belongs_to_the_run",
+   "own_trajectory_does_not_decide",
+   "jointly_consuming",
+   "falls_not_recurring",
+   "Amounts.rests",
+   "Halving.approaches_without_reaching"
+  ],
+  "records": [
+   "becoming-renewal-reading",
+   "relational-renewal-classification",
+   "renewing-consuming-formation",
+   "becoming-dependence-dynamics"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "reading",
+  "title": "Stepwise reading of renewal and grades of return",
+  "summary": "[AI reading, D10] An event renews stepwise when its step keeps every dependence it takes part in (RenewingAt). On this reading, living means active and not undermining (MetAbove). It differs from the whole-run reading in both directions and costs something: draws carries no amount. Return is graded from kept to never returning, and consumption is exactly some dependence never returning. Further: no return below support, supported repair (periphery), substitution still consumes.",
+  "source": "§2.1 l.265",
+  "status": "old-base",
+  "lean": [
+   "RenewingAt",
+   "MetAbove",
+   "consumed_iff",
+   "no_return_below_support",
+   "stepwise_includes_substitution"
+  ],
+  "records": [
+   "becoming-stepwise-reading",
+   "becoming-return-grades",
+   "supported-renewal-recovery",
+   "substitution-preserves-consumption"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Continued generation needs renewal",
+  "summary": "Arising means inactive before a step and active after it. In a balanced flow, positive uptake at arbitrarily late steps rules out replenishment that stays zero from some step on. Under dissipation generation is not unceasing, while a closed cycle with constant total sustains it. Unceasing arising is strictly stronger than recurring renewal (Tide).",
+  "source": "§2.2 l.273",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Arising",
+   "uptake_needs_replenishment",
+   "dissipation_arising_not_recurring",
+   "Recycle.closed_unceasing",
+   "Tide.renewal_without_arising"
+  ],
+  "records": [
+   "unceasing-generation-needs-renewal"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "No finite part bears taking under dissipation",
+  "summary": "Under dissipation, a finite family on which taking recurs is not closed from any step on, and an enclosure around it draws in. With finitely many conditions in all, taking does not recur. Without dissipation, a rise can come without a fall (Brood). Further witnesses: Spray and SprayShuttle.",
+  "source": "§2.2 l.275",
+  "status": "old-base",
+  "lean": [
+   "Dissipative.opens",
+   "taking_draws_in",
+   "Brood.rise_without_fall",
+   "Spray",
+   "SprayShuttle"
+  ],
+  "records": [
+   "no-finite-part-bears-taking",
+   "rising-and-falling-in-one-exchange"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Fed from beyond",
+  "summary": "Under balance and dissipation, a finite family from which taking recurs, enclosed around from some step on, cannot be fed from nothing beyond it. The proof needs natural-number amounts and fails over reals. What is needed is being fed, not a recurring source.",
+  "source": "§2.3 l.292",
+  "status": "old-base",
+  "lean": [
+   "Flow.fed_from_beyond",
+   "Lone.fed_not_recurring"
+  ],
+  "records": [
+   "continuing-self-fed-from-beyond"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Margin of a regime: exact point of no return (RM1, MQ1, MQ2)",
+  "summary": "Giving is read off what a standing draw H leaves. A level below H+y ends within as many steps as it stood; at H+y and above it holds. The need belongs to the regime and rises with the draw. Lowered giving raises the need strictly. Harms are superadditive, and two draws that are each survivable alone can end the condition together. Time to break is bounded on both sides. MQ1 (simulated yeast) and MQ2 (real yeast, post hoc) are measured tests. This matches harvesting theory (Clark, May) in whole numbers.",
+  "source": "§2.3 l.295 (first part)",
+  "status": "old-base",
+  "lean": [
+   "RegimeMargin.ends_iff_below",
+   "RegimeMargin.step",
+   "RegimeMargin.ends_below",
+   "RegimeMargin.holds",
+   "RegimeMargin.beyond_draw_iff",
+   "RegimeMargin.rises_by_draw",
+   "RegimeMargin.lowered_raises_strictly",
+   "RegimeMargin.harms_superadditive",
+   "RegimeMargin.Peaked.together_ends",
+   "RegimeMargin.not_before",
+   "RegimeMargin.falls_within"
+  ],
+  "records": [
+   "margin-of-a-regime"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Regime point under adjusting giving; rest and threshold curve (RM2-RM4)",
+  "summary": "When giving adjusts to the level and the recent giving, its rests at or above the draw are exactly the regime's. Giving carried over from before can carry a condition across the point in either direction. Runs within a band come to rest within 3hi+3 steps, and settling needs no omniscience (LastChange.still_within). Overcompensation cycles. The point of no return becomes a least-level curve that does not rise with recent giving, found by finite search. Without monotonicity there is no threshold (Notch).",
+  "source": "§2.3 l.295",
+  "status": "old-base",
+  "lean": [
+   "RegimeMargin.Adjusted.step",
+   "RegimeMargin.Adjusted.rests_iff",
+   "RegimeMargin.Adjusted.Between.rests_iff",
+   "RegimeMargin.Adjusted.ends_iff_below",
+   "RegimeMargin.Crossing.crosses",
+   "RegimeMargin.Adjusted.comes_to_rest",
+   "LastChange.still_within",
+   "RegimeMargin.Alternation.alternates",
+   "LastChange.still_same",
+   "RegimeMargin.Adjusted.falls_iff_below",
+   "RegimeMargin.Adjusted.threshold_falls",
+   "RegimeMargin.threshold_regime",
+   "RegimeMargin.Notch.no_threshold"
+  ],
+  "records": [
+   "regime-point-under-adjusting-giving",
+   "where-a-run-of-a-regime-comes-to-rest",
+   "threshold-in-the-state-plane"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Regime in any ordered amounts and over the reals (RM5)",
+  "summary": "In any linearly ordered amounts with the draw taken first, a rising adjustment keeps the order of states, and runs have a fixed shape; rests are characterized. In the periphery over the non-negative reals (Mathlib, RegimeReals), runs converge and the fates are down-closed. Whole numbers add finite-time rest and a fate decided at a fixed step; relaxation over the reals converges and never rests.",
+  "source": "§2.3 l.295",
+  "status": "current",
+  "lean": [
+   "RegimeMargin.Drawn.run_shape",
+   "RegimeMargin.Drawn.still_iff",
+   "RegimeReals",
+   "Drawn.converges",
+   "Drawn.limit_fates",
+   "Drawn.falls_given",
+   "Drawn.Relaxation.never_rests"
+  ],
+  "records": [
+   "regime-in-any-amounts"
+  ],
+  "note": "periphery part uses Mathlib axioms",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Coupled regimes and coupled webs: cascades and thresholds (RM6-RM10)",
+  "summary": "When giving reads another condition, the point of no return is not the condition's own. Mutual support keeps order and gives least-level thresholds that do not rise with the partner's level. Ends cascade downstream along dependence chains, and rings end together. Inhibition breaks order, and a relay cycles beyond a band. On finite webs, rest is reached within count×band; beyond a band, a bound B on the run gives decision by finite check. These extend to webs with recent giving.",
+  "source": "§2.3 l.295",
+  "status": "old-base",
+  "lean": [
+   "RegimeMargin.Coupled.ends_of_below",
+   "RegimeMargin.Coupled.ends_iff_below",
+   "RegimeMargin.Coupled.threshold_falls",
+   "RegimeMargin.Coupled.ends_after",
+   "RegimeMargin.Coupled.MutualActivation.saves",
+   "RegimeMargin.Coupled.MutualInhibition.breaks_order",
+   "RegimeMargin.Coupled.Relay.cycles",
+   "RegimeMargin.Coupled.Indexed.ends_downstream",
+   "RegimeMargin.Coupled.Indexed.ends_together",
+   "RegimeMargin.Coupled.Indexed.Chain.cascades",
+   "RegimeMargin.Coupled.Indexed.comes_to_rest",
+   "RegimeMargin.Coupled.Indexed.ends_iff_within",
+   "RegimeMargin.Coupled.Relay.threshold_beyond_band",
+   "RegimeMargin.Coupled.Indexed.Recent.keepsBelow",
+   "RegimeMargin.Coupled.pair_run"
+  ],
+  "records": [
+   "coupled-regimes",
+   "coupled-webs",
+   "rest-on-coupled-webs",
+   "thresholds-beyond-a-band",
+   "webs-with-a-recent-giving"
+  ],
+  "note": "RM6-RM10 should be presented as one web law with the pair and regime as cases",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "One law of exact thresholds (UM)",
+  "summary": "Wherever a fate is down-closed in the level and read off an exact check, the least level at which the check fails is the point of no return. Where one fate implies another, the implied fate's point is no lower. This is the master law that every threshold above instantiates.",
+  "source": "§2.3 l.295 end",
+  "status": "current",
+  "lean": [
+   "RegimeMargin.leading_exact",
+   "RegimeMargin.leading_falls"
+  ],
+  "note": "master law; should lead the regimes chapter rather than trail it",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "A rising take exhausts and ends the seeker",
+  "summary": "Taking more than now rises by n in n steps. Against a bounded giving, the seeker takes everything after B+1 steps and, under balance, is not active through a bounded window, so it ends. Where renewal is gated, it exhausts the condition for renewers too. A taker that takes everything without its take rising continues.",
+  "source": "§2.3 l.298",
+  "status": "old-base",
+  "lean": [
+   "Flow.seeking_ends",
+   "more_accumulates",
+   "Flow.seeking_exhausts",
+   "Alone.takes_all"
+  ],
+  "records": [
+   "where-a-rising-take-ends"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Feeding closure: consumption ends with its feeders",
+  "summary": "The feeding closure is the least region closed under feeding, and nothing beyond it gives to what a member requires. Under balance, taking from a condition that nothing supported gives to lasts at most its starting level. Overshoot and Clearing (the dweller lies beyond) are the witnesses.",
+  "source": "§2.5 l.329",
+  "status": "old-base",
+  "lean": [
+   "Flow.beyond_gives_nothing",
+   "Flow.WithinFeeding",
+   "Flow.Balances.consumption_ends_with_feeders",
+   "Overshoot.ends_through_feeder",
+   "Clearing.dweller_beyond"
+  ],
+  "records": [
+   "feeding-closure",
+   "consumption-ends-with-feeders"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Carrying across steps through stores",
+  "summary": "Earlier giving reaches a later need through a condition that stands throughout; storage can make the closure strict. The exact condition for meeting a need is m + taken ≤ level + given. Withholding both of two redundant feeders can leave no path. Not derived: actual retention, and how a center represents the closure. Reading [D17, D20]: situational awareness is the gap between reach and what couples in.",
+  "source": "§2.5 l.335-337",
+  "status": "old-base",
+  "lean": [
+   "Provision.through_store",
+   "Redundant.withheld_both",
+   "Clearing.dependenceRegion_iff"
+  ],
+  "records": [
+   "draws-on-a-shared-stock"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Carried amount, orders as sums over routes, finite order iff no loop",
+  "summary": "Every gap is at most the carried amount, which is attained and positive along a route of positive strengths. Order j is exact where no loop lies upstream, and a cut loses exactly the next order for every schedule. Orders are route sums in the manner of Dyson and Neumann series (a structural match, not a physical one). The carried amount is polynomial exactly when there is no loop.",
+  "source": "§2.6 l.347-348, 358",
+  "status": "old-base",
+  "lean": [
+   "most_difference_arrives",
+   "ExchangeLaw.RespondsWithin",
+   "gap_le_carried",
+   "carried_attained",
+   "carried_pos_iff",
+   "finite_order_iff_no_loop",
+   "carried_eq_carriedWithin_add",
+   "Becoming.Remainder",
+   "routeSum_eq_carriedWithin",
+   "Becoming.Routes",
+   "polynomial_iff_no_loop",
+   "Loops.SelfLoop.attained",
+   "Loops.binom"
+  ],
+  "records": [
+   "how-much-difference-arrives",
+   "what-a-cut-loses",
+   "orders-as-a-sum-over-histories",
+   "sums-over-histories-by-support-horizon-and-order"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Loops form by closing; thresholds; observation is a route",
+  "summary": "A loop forms at the step a coupling closes a chain, and is not foreseeable from prior amounts. Loops lie within what a law reads. Under a law that reads a stock below a threshold, nothing changes up to the break, where the loop forms. A difference reaches a formation only downstream, and observing is the end of such a route.",
+  "source": "§2.6 l.349",
+  "status": "old-base",
+  "lean": [
+   "forms_by_closing",
+   "break_carried_nowhere",
+   "onLoop_succ_iff",
+   "Closing.Onset",
+   "not_onLoop_unread",
+   "ExchangeLaw.ReadsBelow.standing_no_loop",
+   "Thresholds.Draw",
+   "apart_only_downstream",
+   "route_forms_by_closing",
+   "Measure.loop_at"
+  ],
+  "records": [
+   "how-loops-form",
+   "loops-within-what-a-law-reads",
+   "observation-is-a-route"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Runaway needs frequent returns; settling ⇔ RecursOrStops ⇔ LPO",
+  "summary": "Each return at least doubles the carried amount, and frequent returns outgrow every polynomial. A sparse self-loop stays polynomial, so a loop need not run away. The rate counts coupling steps. That every schedule settles is exactly RecursOrStops, which gives LPO.",
+  "source": "§2.6 l.350",
+  "status": "old-base",
+  "lean": [
+   "runaway_of_roundTrip",
+   "Frequency.Sparse.polynomial",
+   "carried_doubles_roundTrip",
+   "carried_le_count",
+   "settled_iff_recursOrStops",
+   "RecursOrStops"
+  ],
+  "records": [
+   "how-a-carried-difference-grows",
+   "how-often-couplings-act"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Saturation: a coupling worn to zero (SAT1)",
+  "summary": "Strengths read off what has passed through a coupling. Once A has passed and strength is zero, the coupling stops and a finite order is exact. With a non-rising response, it stops exactly where the response reaches zero; floored at one, it recurs and leaves every finite order inexact. Passages of 老子 and 韩非 are read onto this [D45].",
+  "source": "§2.6 l.351",
+  "status": "current",
+  "lean": [
+   "Saturation.stops",
+   "Saturation.stops_iff",
+   "Saturation.readsBefore",
+   "Saturation.course_succ",
+   "Saturation.exact",
+   "Saturation.stops_by",
+   "Saturation.floored",
+   "Saturation.floored_inexact"
+  ],
+  "records": [
+   "a-coupling-saturated-by-what-it-has-carried"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Strength vs factor around a cycle",
+  "summary": "A strength is given per unit read, and a factor is what a return map multiplies by; for a self-loop the factor is 1+M. One turn around a cycle carries the product of strengths times the amount, plus what the intermediate conditions held. On a ring, 1 + product is a strict lower bound, not the factor. Open: closed-form turns and the spectral radius.",
+  "source": "§2.6 l.352, 356",
+  "status": "old-base",
+  "lean": [
+   "carried_around_exact",
+   "Ring.bound_strict",
+   "LoopReturn.scaling",
+   "LoopReturn.selfLoop_carried",
+   "LoopReturn.GivesExactly",
+   "carried_around_excess",
+   "around_course_iff"
+  ],
+  "records": [
+   "whether-a-loop-closes-a-difference"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "More-than-now needs an open world; above-all never rests for two; share rises",
+  "summary": "'More than now' needs an open world, and 'above all others' is met by at most one seeker (by definition). Where what stands runs down, rises stop by exhaustion. Where carriers of a target leave more offspring, their share rises (averaging).",
+  "source": "§3.4 l.419",
+  "status": "old-base",
+  "lean": [
+   "more_needs_open",
+   "Law.aboveAll_never_rests",
+   "Flow.more_exhausted",
+   "Flow.descent_exhausted",
+   "share_rises",
+   "share_rises_through"
+  ],
+  "records": [
+   "target-capture"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Runaway: distance to the break does not couple in",
+  "summary": "Before the break, for every horizon, a world with raised stock is alike through the couplings and lasts longer. A threshold-only policy never uses the larger stock, or uses it only after losing support. Coupling by level passes it at once. The hypothesis excludes early-warning cases (Scheffer 2009).",
+  "source": "§3.4 l.420",
+  "status": "old-base",
+  "lean": [
+   "Web.break_not_bounded",
+   "Flow.policy_keeps_difference",
+   "Flow.policy_uses_after_failure",
+   "Web.observed_raise_couples"
+  ],
+  "records": [
+   "runaway-distance-uncoupled"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Learning within capture; fulfillment test narrowed to diagnostic",
+  "summary": "A harmful arrangement can contain genuine learning that maintains a meta-attracting organization. Testing whether ends can change does not certify direction: an organization can help, end its project and still extend control through new dependencies. Revised question: how do the living relations an activity actually forms enter its ends, selection and ending?",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §21",
+  "status": "current",
+  "records": [
+   "selection-through-couplings"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "OPENING: no self can stay closed; lasting proves the joint draw",
+  "summary": "Whatever is closed and listed comes to rest, and no general method tells when. Whatever keeps taking cannot go on unfed from beyond. Parts that each draw within what is renewed can together exceed it. Lasting proves the joint draw, and one's own restraint proves nothing. A part can go on while it closes others' world.",
+  "source": "theories/becoming/OPENING.md, paragraphs 3, 5, 6 and [^self], [^count]",
+  "status": "current",
+  "lean": [
+   "World.arising_opens",
+   "Flow.fed_from_beyond",
+   "Flow.joint_excess_ends",
+   "World.RestsFrom"
+  ],
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "map",
+  "kind": "definition",
+  "title": "Meta-attractor (元吸引子 / 总体化吸引子)",
+  "summary": "Working definition (8 October): a recurrent organization of activity whose consequences reproduce the conditions selecting it, across changes of carrier. The 20 October banner puts the loop on the spine: a rule read from its selected share locks, and unread losses leave it locked. ReadsShare is a premise, and calibration to the present world is not established.",
+  "source": "theories/meta-attractor/README.md, banners 2026-10-20 and 2026-10-13; GENERATIVE-REGIMES.md head",
+  "status": "current",
+  "lean": [
+   "Becoming.RuleCapture",
+   "Becoming.ClosedCapture"
+  ],
+  "records": [
+   "closed-capture"
+  ],
+  "note": "The only earlier folder joined to the spine (chapter §4.5). The banners are current. The dated synthesis body (368 KB) is genealogy and should be read through META-ATTRACTOR-RECONCILIATION's completion ledger.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Basin vs viability vs recoverability; prefix renewal condition",
+  "summary": "An attractor basin, a viability region and a recoverable state are different things. Rule revision and its resources belong in the state. Necessary accounting condition: C0 plus the integral of (R minus L) stays at or above Cmin at every t. Eventual gains cannot pay an earlier irrecoverable loss, and supports keep separate units. This reuses the existing prefix renewal condition and is not a new theorem.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Making the basin claim precise'",
+  "status": "duplicate",
+  "note": "Duplicate of the prefix renewal condition (history/THEORY.md §4) and the exact discrete version, equation (14) in MARKET-DYNAMICS-MATH.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Enshittification as an institutional form of degeneration",
+  "summary": "Relations, capacities and dependences formed in shared activity are turned into control that limits later shared creation and correction. Degeneration can occur within refined optimization and commercial growth. Reddit/Apollo (growth with path loss) and the D&D licence (withdrawal after feedback) are entrances, not discoveries. Interface: once consequences are known, how do they gain force over decisions and later rules?",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Existing histories as tests'",
+  "status": "current",
+  "note": "The coexistence of growth and loss is explicitly not a new result. The later interface question is the live part.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Profit, externalities and reproduced rules",
+  "summary": "Profit optimization can ignore externalities. The research question is whether cost-shifting advantage enters admission, evaluation and revision rights and reproduces the conditions that favour it. 'External' is relative to the accounting scope; the affected remain in the same process. Rent transfer, externality and erosion of conditions are to be distinguished.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Profit, externalities and reproduced rules'",
+  "status": "current",
+  "note": "Nondual reading of externality, relative to an accounting boundary. Withdraws the weaker 'growth coexists with loss' target.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Degenerative meta-attractor boundary: the margin M",
+  "summary": "Law candidate: erosion of shared conditions gains selective advantage and rebuilds its own selection. Exact boundary in the market model, with M = α(1−θ) − βλθ: next-step protection of the threshold iff M ≥ 0 (M ≥ ε under error); a low-selection certificate exists iff M < 0, with an all-time invariant projection. A benign region coexists at negative margin. 19 Lean theorems.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Degeneration boundaries and transitions'",
+  "status": "current",
+  "note": "Lean in experiments/market-generativity/formal (boundary-verification.json), not on the spine or Grammar. Separates ethical, mechanism and region boundaries.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "argument",
+  "title": "Four transition routes",
+  "summary": "A parameter change removes a region's retention condition; a shock moves the state into another retainable region; failure of funds, authority or support stops the correction law being executed; or change is too fast for correction to finish. Region existence change, state departure and strict bifurcation are not one 'phase transition'. Each route can also run toward recovery.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Degeneration boundaries and transitions' (line 151)",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Two local attractors and actual support failure",
+  "summary": "On the β path, equilibria are classified: maintenance end H=(1,1,0), depletion end L_β, and interior S_β for β ≥ 5/12. At β=1/2 both ends attract geometrically and the interior escapes in finite time (38 Lean theorems). With support coupled back in, the low-end neighbourhood exhausts essential support and stops even with correction paid. An attracting organization can erode what it depends on.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Local attraction and actual support'",
+  "status": "current",
+  "note": "Lean in attraction-verification.json. Zero share cannot regenerate: a representational limit, not proved irreversibility.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Supported finite transition (β set to 0)",
+  "summary": "For every rational physical state with x > 0, a finite β=0 stage reaches the protected box x ≥ 3/4, q ≥ 1/2, w ≤ 1/4 in finite N, then hands over to the β=1/2 certificate. Sufficient reserve: C0 ≥ K_N = (15+10κ)(10/9)^N − 10(1+κ). Boundaries: x=0 needs entry; no uniform duration; immediate support failure at (1/100, 1/3, 1, 5). 27 Lean theorems.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'A supported finite transition'",
+  "status": "current",
+  "records": [
+   "market-supported-finite-transition",
+   "market-protected-continuation"
+  ],
+  "note": "Interim support cannot be paid with future improvement.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Partial correction threshold β ≤ 5/12 and fragility to error",
+  "summary": "In the family 0 ≤ β ≤ 3/4 with zero error, every physical positive-maintenance state enters protection in finite time iff β ≤ 5/12, including equality: partial correction suffices. Recovery at the critical point comes from the retained share x_n ≥ x0/2 lowering influence. Any small persistent error e admits a never-protected equilibrium (32e/5, 3/8, 1−32e/5). 26 Lean theorems.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Partial correction, critical feedback and error'",
+  "status": "current",
+  "records": [
+   "market-partial-correction-boundary"
+  ],
+  "note": "Entry is reconstructed from formation results. A free share increment is not allowed.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Finite-support obstruction: direction is not timely recovery",
+  "summary": "For every finite C0 ≥ 5 and integer N > C0 − 5, states with 0 < x0 ≤ (2/3)^N/6 fail by step N under every time-varying β/error sequence and nonnegative stock shock. The projected run may recover while the full guarded history ends first. The same stock sustains a high-maintenance state. A meta-attractor tendency needs an executable supporting history. 17 Lean theorems.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Recovery direction and timely realization'",
+  "status": "current",
+  "records": [
+   "market-finite-support-obstruction"
+  ],
+  "note": "'none' means the market organization ends, not reality. Explains generation, maintenance and disappearance in one history without an ethical premise, under explicit substantive laws.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Proposition 2 and the closed capture loop",
+  "summary": "The fund pays before this round's levy arrives (identity 6). Influence w' = (1−μ)w + μλ(1−x). Accountability q' = clip[(1 − αu − βw)q + αu − e]: selection, influence and exposure form a closed loop of endogenous rule erosion and repair. Proposition 2: with B ≥ k and τ ≥ k, correction is paid every round. If B < k, no later receipt pays the current bill.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'Paid correction and endogenous rule erosion'",
+  "status": "current",
+  "note": "Formal capture-through-the-rule mechanism. The legal target and recipe stay fixed; no deliberation invents institutions.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Theorem 3: robust invariant region K (sharp for the rectangle)",
+  "summary": "Under conditions (11) (fund, influence bound, α(1 − q̲) ≥ βw̄q̲ + ε, support inequalities per j), every step from K under every admitted disturbance stays in K. The whole infinite history meets all floors, and the renewing share is nondecreasing. The face conditions are sharp for this rectangular certificate, not necessary for every viable trajectory.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'A robust invariant region'; separate supports eq. (9)",
+  "status": "current",
+  "note": "Generative target is componentwise: every support above its floor.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Theorem 4: zero-disturbance attraction",
+  "summary": "From K with no disturbance, states converge to x=1, w=0, q=1, C_j = (r_j − h_j)/δ_j, and B goes to the cap (τ > k) or stays at its inherited value (τ = k), giving a set of equilibria. K is a certified subset of the basin. Real-valued proof via a stable-recursion lemma; Lean does not prove the real limits.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'An actual attracting set'",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Theorem 5: recovery from outside, and the exact prefix floor condition",
+  "summary": "A sufficient one-step entry condition (13) takes an external starting box into K: genuine recovery from outside the invariant region. Exact discrete prefix condition (14): a positive floor holds through H iff C0 is at least the maximum over t of a_j^(−t)[L_j − Σ a_j^(t−1−s) b_s]. Clipping cannot rescue a crossed positive floor.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'Recovery before support failure'",
+  "status": "current",
+  "note": "Exact form of the prefix renewal condition cited in the governance chapter.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "law",
+  "title": "Theorem 6: destructive region under the same laws",
+  "summary": "With correction paid every round, the region x ≤ x_D, q ≤ q_D < θ, w ≥ w_D (with α(1 − q_D) ≤ βw_D q_D) is invariant until failure. x decays geometrically and essential supports cross their floors in finite time. Continuously affordable correction can still lose to accumulated influence. Failure is conditional, not inevitable.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'A destructive region under the same laws'",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "map",
+  "kind": "example",
+  "title": "Fully specified rational instance",
+  "summary": "P=10, τ=k=1, c=2, f=4, ℓ=1/2, η=1/5, α=1/4, β=1/2, μ=1/4, λ=1, r=2, d=1, δ=1/10, L=5; θ = 3/8. Protected box x ≥ 3/4, q ≥ 1/2, w ≤ 1/4 is invariant for e ≤ 1/20, v ≤ 1/2, with C* = 20. A starting collar enters it, and a reversal from (4/5, 7/20, 1/20, 1, 5) reaches the box in one step. Destructive region x ≤ 1/10 fails by C_t ≤ (C0+7)0.9^t − 7.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'One fully specified instance'",
+  "status": "current",
+  "note": "Base instance reused by the β-path results in MARKETS-AND-GENERATIVE-REGIMES.",
+  "unit": "chapters-evolution-markets"
+ }
+]

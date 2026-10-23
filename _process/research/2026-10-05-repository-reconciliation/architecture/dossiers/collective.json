@@ -1,0 +1,1549 @@
+[
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Room read off exchange; several optimizers drain as one (SG2, SG3)",
+  "summary": "Room comes from capacity plus conservation, and every optimum leaves the beyond at what the rest leaves less capacity. The drain lies exactly where the part shares units with the beyond. At a mutual best response the drain is the joint capacity, so coordinating optimizers blind to a condition keep nothing there.",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Optimum.Above.room",
+   "Optimum.optimum_beyond",
+   "Optimum.optimum_lowers_iff",
+   "Optimum.mutual_beyond",
+   "Optimum.mutual_as_one"
+  ],
+  "records": [
+   "SG2",
+   "SG3",
+   "study §288",
+   "study §290"
+  ],
+  "note": "Duplicates the collective/optimum chapter material; summarize here",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Re-optimizing against a renewal; horizon optimizers (SG4, SG5)",
+  "summary": "A capacity above the renewal ends a dependence for good; several optimizers each within the renewal end it together. A horizon optimizer changes when a dependence ends, not whether it is kept: it holds at a level of greatest renewal, breaks dependences needing more at the first step, and draws everything at the horizon.",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Web.course_lost_iff",
+   "Web.mutual_course_lost",
+   "Optimum.Renewing.keeping_holds_more",
+   "Web.course_drawn_unbounded",
+   "Optimum.frontier_holds",
+   "Web.frontier_broken",
+   "Optimum.Holding.gated_alike"
+  ],
+  "records": [
+   "SG4",
+   "SG5",
+   "study §291",
+   "study §292"
+  ],
+  "note": "Duplicate of the collective chapter",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Valuing what is left at the horizon removes only the end drain (SG11, SG12)",
+  "summary": "Valuing the stock left at the horizon removes only the end drain; a dependence needing more still breaks at the first step. A value above the draw's worth regrows the condition for the horizon, so an end measurement is gamed. What keeping forgoes is (r−q)n, which outweighs any coupling fixed in total.",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Optimum.frontier_holds_left",
+   "Web.frontier_broken_left",
+   "Optimum.Holding.gated_left",
+   "Optimum.frontier_holds_valued",
+   "Web.frontier_rebuilt_valued",
+   "Web.frontier_breaks_valued",
+   "Optimum.Holding.logistic_valued"
+  ],
+  "records": [
+   "SG11",
+   "SG12",
+   "study §321",
+   "study §322"
+  ],
+  "note": "Duplicate of the collective chapter",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Couplings of a dependence into the order: total, per step, at met steps (SG6, SG7, SG13)",
+  "summary": "A total coupling keeps a dependence exactly where it exceeds what keeping forgoes, which grows with the horizon. A per-step coupling at a rate covering the renewal forgone keeps it at every horizon; below that rate the dependence breaks at the last step. Counting met steps allows fall-and-recover, so the rate must exceed the renewal forgone outright.",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Optimum.frontier_breaks_below",
+   "Optimum.frontier_keeps_above",
+   "Web.frontier_breaks_long",
+   "Optimum.frontier_keeps_stepwise",
+   "Optimum.frontier_met_before_end",
+   "Web.frontier_breaks_last",
+   "Optimum.frontier_keeps_met",
+   "Optimum.Holding.burst_met"
+  ],
+  "records": [
+   "SG6",
+   "SG7",
+   "SG13",
+   "study §293",
+   "study §294",
+   "study §323"
+  ],
+  "note": "Duplicate of the collective chapter",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Discounting, rebuilding and open access (SG8, SG9, SG10)",
+  "summary": "A weighting that falls faster than every positive level renews makes ending the base optimal at the first step. A depleted base below the level of greatest weighted gain is rebuilt with no draw. Where others first draw at least what the remainder renews, every optimum with a strictly falling weighting ends the base at once (open access).",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Optimum.frontier_exhausts",
+   "Web.frontier_exhausts",
+   "Optimum.frontier_leaves",
+   "Optimum.frontier_rebuilds",
+   "Web.frontier_rebuilds",
+   "Optimum.Next.frontier_ends_drawn_first",
+   "Web.Next.frontier_ends_drawn_first"
+  ],
+  "records": [
+   "SG8",
+   "SG9",
+   "SG10",
+   "study §295",
+   "study §296",
+   "study §298"
+  ],
+  "note": "Duplicate of the collective chapter",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Drawers in turn and at once; whom restraint pays (UM, UM2, UM3, AL1)",
+  "summary": "For two or more drawers in turn, open access is the only perfect outcome and revision reaches it from any profile. A drawer keeps only what returns to it at least one for one. Drawing at once drains where each portion returns less than one for one. Draining is perfect for drawers sharing by halves but not for one drawer given the whole. A floor on the other's draw can keep the base.",
+  "source": "§7.1 l.714; §7.5 l.781",
+  "status": "old-base",
+  "lean": [
+   "Optimum.InTurn.kept_returns",
+   "Optimum.InTurn.perfect_at_floors",
+   "Optimum.InTurn.revised_at_floors",
+   "Optimum.Holding.gated_in_turn",
+   "Optimum.AtOnce.drains",
+   "Optimum.AtOnce.drain_perfect_iff",
+   "Optimum.AtOnce.drain_most",
+   "Optimum.AtOnce.holding_draws_more",
+   "Optimum.AtOnce.whole_not_drained",
+   "Optimum.Holding.halves_race",
+   "Optimum.Holding.doubling_capacity",
+   "Web.whole_drain_broken"
+  ],
+  "records": [
+   "UM",
+   "UM2",
+   "UM3",
+   "AL1",
+   "study §335",
+   "study §336",
+   "study §337",
+   "study §362"
+  ],
+  "note": "Duplicate of the collective chapter",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "On the spine with no utility over the beyond: optimum breaks exactly what some outcome breaks",
+  "summary": "An optimum breaks exactly the dependences beyond that some outcome breaks. The beyond falls by exactly what the family rises. Keeping each dependence takes exactly the slack, matching Zhuang–Hadfield-Menell Proposition 2.",
+  "source": "§7.1 l.714",
+  "status": "old-base",
+  "lean": [
+   "Web.optimum_broken_iff",
+   "Flow.Balances.family_le_iff",
+   "Flow.keeping_optimum_takes_slack"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "明 route 3: pooled coupling, reading another, anticipation",
+  "summary": "Pooled selection separates exactly what some member couples apart, and pooled selections combine. A pool's closure is the union of its members' closures and it is blind beyond that union. Reading another's couplings is pooling with it. Knowing another's law gives anticipation only where one couples as finely, never reach. Example: Clearing.",
+  "source": "§7.3 l.742",
+  "status": "old-base",
+  "lean": [
+   "Web.SelectsThroughAll",
+   "Web.separates_all_iff",
+   "Web.separates_all_iff_member",
+   "Web.SelectsThrough.all",
+   "Web.SelectsThroughAll.and",
+   "Clearing.selected_pooled",
+   "withinClosureOf_iff",
+   "Flow.unselected_beyond_pool",
+   "Clearing.within_closure_unseparated",
+   "Web.SelectsThroughAll.reads",
+   "Flow.withinCoupling_reads_iff",
+   "Flow.unselected_beyond_reads",
+   "Flow.act_unselected_reads",
+   "Clearing.reading_clearer_unselected",
+   "Clearing.reading_dweller_selects",
+   "Web.anticipates_iff",
+   "Web.anticipation_misses",
+   "ExchangeLaw.Through.anticipated",
+   "Web.SelectsThrough.read"
+  ],
+  "records": [
+   "what-pooled-coupling-reaches",
+   "reading-anothers-couplings-is-pooling"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Pooling moves the gap; what a pool's acts respond to",
+  "summary": "Pooling moves the gap to the pool's closure. A pool's joint act beyond it is separated only by formations beyond whose admission it changes. Pool decisions under a law reading through coupling (reward, vote, revision) are pooled selections, with the premise derived. Coupling bounds the response but does not fix it. No member responds before a difference enters. A pool adds difference.",
+  "source": "§7.4 l.750-755",
+  "status": "old-base",
+  "lean": [
+   "Flow.act_unselected_pool",
+   "Flow.act_selected_by_pool",
+   "Flow.consequence_unselected_pool",
+   "act_courses_unselected_pool",
+   "Flow.apart_beyond_pool",
+   "Flow.separating_member_beyond",
+   "Clearing.pool_closes_gap",
+   "ExchangeLaw.Through.selectsThroughAll",
+   "ExchangeLaw.acts_alike_all_iff",
+   "ExchangeLaw.Through.acts_separate_member",
+   "ExchangeLaw.response_not_fixed_by_coupling",
+   "Clearing.separated_unresponded",
+   "Flow.response_alike_pool",
+   "act_courses_response_alike_pool",
+   "Flow.pool_within_response_iff",
+   "Flow.pool_alike_beyond_response",
+   "TimedResponse.pool_alike_before",
+   "Loop.response_returns",
+   "Web.pool_adds",
+   "Web.pooled_iff_member",
+   "Web.member_separates_all"
+  ],
+  "records": [
+   "what-a-pools-acts-respond-to",
+   "the-gap-for-ones-own-act"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "A pool recruiting through itself (PL1)",
+  "summary": "A pool's reach lasts with its members. A pool admitting members through its own pooled coupling has the same members under two histories until it first couples them apart, so it comes to couple into a loss only as its course without the loss would. More coupling needs an admission by what no member couples into.",
+  "source": "§7.4 l.756",
+  "status": "old-base",
+  "lean": [
+   "Web.RecruitsThrough.alike_iff",
+   "Web.apart_while_member",
+   "Web.RecruitsThrough.members_alike",
+   "Web.RecruitsThrough.first_apart",
+   "Web.RecruitsThrough.selects_alike",
+   "PoolCourse.called_apart",
+   "PoolCourse.scheduled_apart"
+  ],
+  "records": [
+   "PL1",
+   "study §356",
+   "a-pool-that-recruits-through-itself"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Necessary not sufficient: outrun and mutual best response (CG1 laws)",
+  "summary": "Where the rest outruns the renewal, every later reading is alike under a member's acts, so no weight selects restraint. At a mutual best response each takes full capacity, and jointly they lose the condition however small each capacity is.",
+  "source": "§7.5 l.781",
+  "status": "old-base",
+  "lean": [
+   "Flow.outrun_reading_alike",
+   "Optimum.MutualBest.full",
+   "Optimum.mutual_beyond",
+   "Web.mutual_course_lost"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "open",
+  "title": "Open: how pools form, last and resist capture; correspondence",
+  "summary": "Resisting a capture that hides a loss needs a member admitted by what the pool does not already read (PL1). Open: actual pool admission, recruitment reading part of the beyond, a pool whose rule and members form through what it reads (ClosedCapture, MA2). Open and empirical: what a rise draws from beyond, strengths below one, and what deployed pipelines read beyond their papers.",
+  "source": "§7.7 l.800-801",
+  "status": "current",
+  "records": [
+   "PL1",
+   "CR1",
+   "MA2",
+   "target-capture"
+  ],
+  "lean": [
+   "ClosedCapture"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "§1.5 grab-bag: codes, pools, shares and selection reading",
+  "summary": "Copied witnesses change nothing, synonyms and coined forms, taking what most hold, imposing a code breaks symmetry, the move alone underdetermines the outcome, reading through a pool, division by exclusive footprints, two rules from one share lock together, a reading against the share does not ratchet, a pool read by its majority, selection right exactly where read, and what claims do not read cannot be weighed (under BasicPriority J1/J2).",
+  "source": "rows 996-1011 (part)",
+  "status": "old-base",
+  "records": [
+   "copied-witnesses-change-nothing",
+   "synonyms-and-coined-forms",
+   "taking-what-most-hold",
+   "imposing-a-code-breaks-the-symmetry",
+   "the-move-alone-underdetermines",
+   "reading-through-a-pool",
+   "division-by-exclusive-footprints",
+   "two-rules-lock-together",
+   "a-reading-against-the-share-does-not-ratchet",
+   "a-pool-read-by-its-majority",
+   "selection-right-exactly-where-read",
+   "what-the-claims-do-not-read"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "§3.4 optimum and several optimizers (SG line)",
+  "summary": "What a rise draws from beyond, and what an optimum does beyond what couples in. Also: room read off the exchange, several optimizers draining by joint capacity, re-optimizing above renewal ending it, horizon optima holding the greatest renewal, keeping forgoes renewal at the need, a step coupling keeping at every horizon, weighting faster than renewal ending the base, optima rebuilding a depleted base, others drawing first, valuing what is left (at any worth), steps met again, drawers in turn, and a race for position draws everything.",
+  "source": "rows 1060-1077",
+  "status": "current",
+  "records": [
+   "raising-what-couples-in-draws-from-beyond",
+   "a-rise-past-the-inflow-is-drawn-from-beyond",
+   "what-a-rise-draws-from-beyond",
+   "what-an-optimum-does-beyond-what-couples-in",
+   "room-read-off-the-exchange",
+   "several-optimizers-drain-by-their-joint-capacity",
+   "re-optimizing-above-a-renewal-ends-it",
+   "horizon-optima-hold-the-greatest-renewal",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "a-step-coupling-keeps-at-every-horizon",
+   "a-weighting-faster-than-renewal-ends-the-base",
+   "optima-rebuild-a-depleted-base",
+   "others-drawing-first-end-the-base",
+   "valuing-what-is-left-at-the-horizon",
+   "valuing-what-is-left-at-any-worth",
+   "steps-met-again-after-a-fall",
+   "drawers-in-turn",
+   "a-race-for-position-draws-everything"
+  ],
+  "note": "Several rows may be superseded by the UM unification records. The table may lag.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "§4.1–4.2 joint activity, markets, mutual dependence",
+  "summary": "Difference-making in joint activity, a software-continuation assessment, market laws (periphery: finite-support obstruction, partial correction boundary, protected continuation, supported transition), and mutual dependence with its exponential pace.",
+  "source": "rows 1120-1126",
+  "status": "current",
+  "records": [
+   "formed-software-continuation",
+   "joint-difference-making",
+   "market-finite-support-obstruction",
+   "market-partial-correction-boundary",
+   "market-protected-continuation",
+   "market-supported-finite-transition",
+   "mutual-dependence-and-its-pace"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "§4.3–4.4 position, priority, waiting and regulation",
+  "summary": "Conditions kept together, basic-condition priority (living significance, C, J1–J4), relative position being zero-sum (one theorem under the condition), what position reads, giving that waits on giving, how fast a rule may change, restoring giving from the worst start, waiting thresholds, two-sided and late regulation, and one reader of several conditions.",
+  "source": "rows 1127-1136",
+  "status": "old-base",
+  "records": [
+   "conditions-kept-together",
+   "protection-priority-excludes-uniform-aggregation",
+   "relative-position-is-zero-sum",
+   "what-position-reads",
+   "giving-that-waits-on-giving",
+   "how-fast-a-rule-may-change",
+   "restoring-giving-from-the-worst-start",
+   "thresholds-of-waiting",
+   "two-sided-regulation-and-late-reading",
+   "one-reader-several-conditions"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "§4.5–4.6 codes, capture, joint practice, pending tasks",
+  "summary": "A code formed between formations, a pattern lasting through passing, capture through the rule and closed capture, joint plan composition and joint practice (periphery), required organization (argument), and the pending-task and goal-revision records (periphery, living significance, J1–J4).",
+  "source": "rows 1137-1147",
+  "status": "current",
+  "records": [
+   "a-code-formed-between-formations",
+   "a-pattern-lasts-through-passing",
+   "capture-through-the-rule",
+   "closed-capture",
+   "joint-plan-composition",
+   "joint-practice-forms-continuation",
+   "organizational-formation-from-generative-comparison",
+   "acquired-revision-of-pending-task",
+   "formed-goal-revision-continuation",
+   "pending-task-context-applicability",
+   "versioned-request-completion"
+  ],
+  "note": "The capture records may belong in map (regimes: capture).",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Joint consumption has no single consumer",
+  "summary": "Consumer and loser both take part in the drawn condition (consumption_relates, jointly_consuming); under overdetermination each drawer still counts as consuming; in gradual depletion only the breaking event makes the difference to the break; substitution does not certify renewal (stepwise_includes_substitution). Yields no responsibility or duty.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.1 (lines 449-459)",
+  "status": "old-base",
+  "lean": [
+   "consumption_relates",
+   "jointly_consuming",
+   "stepwise_includes_substitution"
+  ],
+  "records": [
+   "joint-difference-making"
+  ],
+  "note": "meta-attractor pointer to ../../meta-attractor/README.md; full loop in §4.5",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Market selection within the generative regime (periphery bounds)",
+  "summary": "Market selection stays generative only where success renews conditions of further exchange and life and affected parties can discover damage and change the arrangement; periphery bounds: protected continuation under certificate, partial-correction reach, supported finite transition, finite-support obstruction.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.1 (line 457)",
+  "status": "current",
+  "records": [
+   "market-protected-continuation",
+   "market-partial-correction-boundary",
+   "market-supported-finite-transition",
+   "market-finite-support-obstruction",
+   "formed-software-continuation"
+  ],
+  "note": "Periphery results; detail in MARKETS-AND-GENERATIVE-REGIMES.md",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Mutual dependence: sharing, dependence, feeding hierarchy",
+  "summary": "Shares throughout ⇐ mutually dependent ⇐ mutually fed, no converses; mutual dependence iff every reach closure is the whole (Flow.mutuallyDependent_iff_reach); witnesses Clearing.shares_not_mutual, Drawing.mutual_not_fed; under each, bounded significance is the condition (Flow.MutuallyDependent.unrestricted etc.).",
+  "source": "THE-THEORY-OF-BECOMING.md §4.2 (lines 461-466)",
+  "status": "old-base",
+  "lean": [
+   "Flow.mutuallyDependent_iff_reach",
+   "Clearing.shares_not_mutual",
+   "Drawing.mutual_not_fed",
+   "Flow.MutuallyDependent.unrestricted",
+   "Flow.SharesThroughout.unrestricted",
+   "Flow.MutuallyFed.unrestricted"
+  ],
+  "records": [
+   "mutual-dependence-and-its-pace"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Relative position is zero-sum and bounds totals only from below",
+  "summary": "A part's rise in position is the rest's summed fall; no change raises all; all can draw more while one falls; positions fixed up to one common amount; total bounded below by spread, never above; on a step positions certify excess only via spread (RaceWithin witness).",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 (lines 477-480)",
+  "status": "old-base",
+  "lean": [
+   "RelativePosition.change_balances",
+   "RelativePosition.not_all_rise",
+   "DrawingMore.grow_and_fall",
+   "Flow.drawn_positions",
+   "RelativePosition.keeps_iff_common",
+   "RelativePosition.exceeds_iff_spread",
+   "RelativePosition.keeps_exceeds",
+   "RaceWithin.same_positions_apart",
+   "Flow.excess_iff_spread"
+  ],
+  "records": [
+   "relative-position-is-zero-sum",
+   "what-position-reads"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Position does not protect: race ends through dependence",
+  "summary": "With balance a joint excess ends a part through its dependence whatever its position; gated renewal ends greatest parts for good; ungated renewal restores; a greatest part not depending on what it draws continues (Clearing.greatest_continues), and its loss counts only under a significance.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 (line 481)",
+  "status": "old-base",
+  "lean": [
+   "Flow.ends_at_race_end",
+   "Flow.race_ends_greatest",
+   "Flow.greatest_end_for_good",
+   "Restored.returns",
+   "Clearing.greatest_continues",
+   "Clearing.loss_needs_significance"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Conditions kept jointly: viability kernel vs choice points",
+  "summary": "Where every course counts, two guards kept together iff each kept (the truth of 'any factor zero'); through choices each can be kept but not both, and no rule on separate answers decides the joint one.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 (line 483)",
+  "status": "old-base",
+  "lean": [
+   "Viability.kernel_and_iff",
+   "ChoicePoint.no_rule_decides_joint",
+   "ChoicePoint.each_not_joint"
+  ],
+  "records": [
+   "conditions-kept-together"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Nine social-viability constraints restated as laws (table)",
+  "summary": "Eight constraints plus capacity to correct mapped to laws with limits: material reproduction, rewarding erosion, true information, cooperation among strangers, bounded conflict, feedback on power, stability with adaptability, forming next members, correction (closes_through_coupling_apart, stays_beyond_response). Cross-domain by correspondence.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 table (lines 485-497)",
+  "status": "old-base",
+  "lean": [
+   "falls_not_recurring",
+   "Becoming.Reserve",
+   "Becoming.Horizon",
+   "Flow.Balances.rise_paid_from_beyond",
+   "share_rises",
+   "Web.selects_alike_iff",
+   "Stationary.model_error",
+   "apart_only_downstream",
+   "Becoming.Withholding",
+   "Becoming.Tolerance",
+   "Becoming.LoopReturn",
+   "Becoming.Pace",
+   "Becoming.Regulation",
+   "Becoming.ReadingSchedule",
+   "Becoming.PatternPassing",
+   "Flow.closes_through_coupling_apart",
+   "Flow.stays_beyond_response",
+   "Law.aboveAll_never_rests",
+   "Law.perturbation_reabsorbed",
+   "carried_doubles_roundTrip",
+   "runaway_of_roundTrip",
+   "LoopReturn.carried_around_course",
+   "LoopReturn.Ring.bound_strict",
+   "LoopReturn.around_course_iff",
+   "LoopReturn.whole_factors"
+  ],
+  "note": "Unique synthesis; source 2026-10-19-collective-continuation; study §193",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "reading",
+  "title": "D48: kept vs renewing collectives; viability product heuristic; no survival axioms",
+  "summary": "A collective kept by consuming others is kept, not renewing; local-gain/whole-loss is located not summed; basic-first excludes natural-number scores (ScoreRepresentation); Viability product is heuristic; power feedback checks are pooling couplings, not opposed interests; 'system survival axioms' run against the theory: invariants are laws read by correspondence.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.3 Readings (line 499)",
+  "status": "current",
+  "lean": [
+   "Becoming.ScoreRepresentation"
+  ],
+  "records": [
+   "protection-priority-excludes-uniform-aggregation"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Giving that waits on giving: withholding absorbs or returns",
+  "summary": "With memory one withholding ends all giving within d waits and spreads; without memory it returns around loops; more waiting never gives more; in a ring of three a first-giver restores from the third step exactly.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (lines 505-507)",
+  "status": "old-base",
+  "lean": [
+   "withholding_absorbs",
+   "withholding_returns",
+   "waitsAll_withholding_stays",
+   "withholding_spreads",
+   "waitsAll_more_waiting",
+   "answers_more_waiting",
+   "Ring.givesFirst_restores_exact"
+  ],
+  "records": [
+   "giving-that-waits-on-giving"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Worst start and restoration; tolerance absorbs without restoring",
+  "summary": "For inclusion-keeping laws total withholding is the worst start; restoration reaches exactly formations into which no source-clear chain of n waits leads; source-clear loops never restored; tolerance absorbs scattered defection, does not rebuild; fault-envelope certificate as a law of giving.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (line 508)",
+  "status": "old-base",
+  "lean": [
+   "worst_start",
+   "restores_iff",
+   "tolerating",
+   "total_stays",
+   "clear_loop_withholds",
+   "kept_set",
+   "thin_absorbed",
+   "Triad.total_kept",
+   "certified_available_iff",
+   "web_tolerating"
+  ],
+  "records": [
+   "restoring-giving-from-the-worst-start",
+   "thresholds-of-waiting"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "reading",
+  "title": "D48 readings of cooperation, conflict, institutions, layered stability",
+  "summary": "Cooperation = waiting chains beyond acquaintance; deceive-first spiral = memory withholding; contracts/institutions = laws that give first; exchange of harms = loop needing a lesser link (compensation, arbitration); stability-adaptability = slow level reading fast at ≥2N−1 (constitution/law/policy); goodness is the comparison's, not the law's.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 Readings (lines 514-516)",
+  "status": "current",
+  "note": "Also lists not derived: that a system regulates, its lateness, one band policy, lumping, real factors",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Shared codes formed by hearing make no form",
+  "summary": "Hearing makes no form; agreement kept through closed hearings; an order brings all starts to agreement iff it gives one origin; any form in use can become shared; symmetric disagreement unresolved without centre/preference/order; imposed code merges, only an outside form restores; readings written into records barred only by prior records.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.5 (line 525)",
+  "status": "old-base",
+  "lean": [
+   "run_agrees_every_start_iff",
+   "run_held",
+   "kept_iff",
+   "run_shared_iff_in_use",
+   "Path.never_agree",
+   "never_agrees_of_both",
+   "TwoFormations.three_agree",
+   "outside_needed",
+   "kept_bars",
+   "added_never_replaced"
+  ],
+  "records": [
+   "a-code-formed-between-formations"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "T3. Optimization drains what lies beyond its couplings, where that gives room",
+  "summary": "For optima, proved over any outcome set: drive to the least level where room exists, dependences broken, counting after the reward keeps nothing, keeping takes exactly the slack. Room is read off the exchange. Extended to mutual best responses, courses and horizons (the SG laws). Blindness proved under balance (unselected beyond coupling and beyond the pool). This is Zhuang-Hadfield-Menell Theorem 1 in conserved form. The clause about actual trained systems is conjectured.",
+  "source": "THE-THEORY-OF-BECOMING.md, T3, lines 1268-1272",
+  "status": "old-base",
+  "lean": [
+   "Optimum.least_iff",
+   "Optimum.least_of_shared",
+   "Web.optimum_broken_iff",
+   "Optimum.Rising.mono",
+   "Optimum.Drain.counted_after_drains",
+   "Flow.keeping_optimum_takes_slack",
+   "Optimum.Above.room",
+   "Optimum.optimum_beyond",
+   "Optimum.optimum_untouched",
+   "Optimum.optimum_lowers_iff",
+   "Web.optimum_broken_iff_capacity",
+   "Optimum.mutual_beyond",
+   "Optimum.MutualBest.full",
+   "Optimum.course_beyond",
+   "Optimum.frontier_holds",
+   "Web.frontier_broken",
+   "Web.frontier_broken_left",
+   "Web.frontier_rebuilt_valued",
+   "Optimum.frontier_breaks_below",
+   "Web.frontier_breaks_long",
+   "Optimum.frontier_keeps_stepwise",
+   "Web.frontier_keeps_stepwise",
+   "Optimum.frontier_exhausts",
+   "Web.frontier_exhausts",
+   "Optimum.Drain.room_needed",
+   "Flow.unselected_beyond_coupling",
+   "Flow.unselected_beyond_pool"
+  ],
+  "note": "Its Lean list duplicates §8.1 item 10 and known-results row 6.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "T3 evidence: CG1, MQ1, IN1, SE1, CG2/CG3 and literature",
+  "summary": "CG1: the selfish learner took the last apple 118 of 118 times, the coupled learner 0 of 2,360. MQ1 B4: blind draw against margin predicts the optimum's side effects 8 of 8. IN1: no instruction keeps an untold dependent. Gao et al. 2023 and Pan et al. 2022 are consistent. Limits: tabular learners stay far from the optimum (SE1 61% against 60%); three coupled learners still emptied the stock (CG1 D2b). CG3: own untrained early draws are sampling failures, neither for nor against T3.",
+  "source": "THE-THEORY-OF-BECOMING.md, T3 evidence, line 1275",
+  "status": "current",
+  "records": [
+   "CG1",
+   "MQ1",
+   "IN1",
+   "SE1",
+   "CG2",
+   "CG3",
+   "study §240",
+   "§253",
+   "§263",
+   "§254",
+   "§303"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "collective",
+  "kind": "open",
+  "title": "§8.1 item 10: what a rise draws from beyond (the SG and UM optimizer line)",
+  "summary": "Lists DrawnBeyond, JointDraw (R52), then the optimizer line in turn. SG1 (optimum), SG2 (room), SG3 (mutual best response), SG4 (course), SG5 (horizon), SG6 (what keeping forgoes), SG7 (step coupling), SG8 (weighting), SG9 (rebuilding), SG10 (any law of what stands), SG11/SG12 (valuing what is left), SG13 (steps met again). UM/UM2: drawers in turn, two drawers with no floor drain. UM3/AL1: drawing at once. Open: many listed gaps.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 10, line 1372",
+  "status": "old-base",
+  "lean": [
+   "Becoming.DrawnBeyond",
+   "Becoming.JointDraw",
+   "Becoming.Optimum",
+   "Optimum.most_iff",
+   "Web.frontier_kept",
+   "Optimum.frontier_keeps",
+   "Optimum.frontier_keeps_above",
+   "Optimum.frontier_met_before_end",
+   "Web.frontier_breaks_last",
+   "Web.frontier_breaks_stepwise_long",
+   "Optimum.frontier_gains_weighted",
+   "Optimum.frontier_leaves",
+   "Optimum.rebuilding_frontier",
+   "Optimum.frontier_rebuilds",
+   "Optimum.Next.frontier_ends_drawn_first",
+   "Optimum.Next.frontier_ends_drawn_more",
+   "Optimum.frontier_holds_left",
+   "Optimum.frontier_left_iff",
+   "Optimum.frontier_holds_valued",
+   "Optimum.frontier_breaks_valued",
+   "Optimum.frontier_keeps_met",
+   "Optimum.continued_met_frontier",
+   "Optimum.Holding.burst_met",
+   "Optimum.InTurn.kept_returns",
+   "Optimum.InTurn.perfect_at_floors",
+   "Optimum.InTurn.revised_at_floors",
+   "Optimum.Holding.doubling_capacity",
+   "Optimum.AtOnce.drains",
+   "Optimum.AtOnce.drain_perfect_iff",
+   "Optimum.AtOnce.drain_most",
+   "Optimum.AtOnce.holding_draws_more",
+   "Optimum.AtOnce.whole_not_drained",
+   "Optimum.drawn_bounded_iff",
+   "Web.course_drawn_unbounded"
+  ],
+  "records": [
+   "R52",
+   "SG1",
+   "SG2",
+   "SG3",
+   "SG4",
+   "SG5",
+   "SG6",
+   "SG7",
+   "SG8",
+   "SG9",
+   "SG10",
+   "SG11",
+   "SG12",
+   "SG13",
+   "UM",
+   "UM2",
+   "UM3",
+   "AL1",
+   "drawers-in-turn",
+   "what-a-rise-draws-from-beyond",
+   "raising-what-couples-in-draws-from-beyond",
+   "study §274",
+   "§283",
+   "§288",
+   "§290-§298",
+   "§321-§323",
+   "§335-§337",
+   "§362"
+  ],
+  "note": "Over-long, and it duplicates T3 and known-results row 6. Its master law should be stated once in the collective chapter and the frontier variants listed as cases.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Selection must fund actual succession (carrier refinement of the market model)",
+  "summary": "A carrier with a part, a payload (command, credential, claims, receipts) and a work budget refines the MARKET-DYNAMICS-MATH model exactly: the projected step is the market step with the fee raised by migration cost. A stronger certificate covers correction plus migration and gives faithful succession for every finite generation. A missing part or a correction-only budget remain counterexamples.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §4",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Reconfiguring the reviewing organization (fault envelopes from causal formulas)",
+  "summary": "Reviewer fault sets are computed from causal fault-tree formulas. Merging two reviewers under one controller breaks availability despite three names, and reusing the old envelope accepts captured supporters. Atomic reconfiguration costs c+n(L+2)+3, with old requests revoked. An omitted common cause remains a preserved failure. 28 theorems, 48 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §8",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Acquired operations change what others learn (communication and transmission)",
+  "summary": "Demonstrations and reception, which cost support, form a recipient's operation, and an interrupted lesson keeps only its prefix. Faithful reconstruction holds through every finite succession. An operation that ignores an argument can recur while losing a needed distinction. With limited encounters a different operation can stabilize. 27 theorems, 45 audits; compared with Nicaraguan Sign Language cohorts.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Acquired operations change what others learn'",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Synchronized product and individual versus joint possibility",
+  "summary": "Traces of the product of two processes on a shared event are exactly pairs of component traces. The SharedResource example shows that each position separately servable does not make both jointly servable (∀∃ versus ∃∀). Common conditions must be kept when claiming joint realization.",
+  "source": "MATHEMATICAL-CORE.md, Composing descriptions of one process",
+  "status": "current",
+  "lean": [
+   "BoundaryModels",
+   "GenerativeCore"
+  ],
+  "note": "pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Paid replacement is not contraction; serial reuse is not overlapping availability",
+  "summary": "From (1, b), n+1 ready supports are reachable iff n ≤ b. One support plus one provision replaces two supports, but no finite package duplicates itself. A port can do n acquire–release rounds but not acquire–acquire. Unrestricted reachability puts later capability in the start state (replacement_backwards), so formation needs access or deadline conditions.",
+  "source": "GENERATED-LOGIC.md §3, §4",
+  "status": "current",
+  "lean": [
+   "replacement_backwards"
+  ],
+  "note": "pre-spine; overlaps the spine's sharing and draw results",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Continuation adequacy equals an observation-dependent finite branching plan",
+  "summary": "Adequacy over a horizon (a common allowed activity at every compatible state, recursively over observation classes) is equivalent to a finite branching plan. It is monotone under narrowing and shorter horizons. A two-step counterexample: a constant record cannot guide opposite later responses (14 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §18",
+  "status": "current",
+  "note": "credits recursive feasibility",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Joint continuation: paired plans need projected joint effects and joint executability on every branch",
+  "summary": "From one joint state with two projections, a paired plan preserves both local requirements when joint transitions project to local ones and the actions stay jointly executable on all record branches. Joint executability is necessary. Shared two units: each plan alone succeeds, jointly they fail; four units repair it (16 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §19",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Grounded mutual continuation: start conditions plus one-step mutual maintenance (seeded_joint_plan)",
+  "summary": "Initial joint conditions, joint allowedness with successors, and preservation give the validity of the paired finite plan. Counterexamples: mutual 'if you eventually, I eventually' lets neither happen, and successor-free laws satisfy preservation vacuously. An ignition transition needs a present reserve (13 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §20",
+  "status": "current",
+  "lean": [
+   "seeded_joint_plan"
+  ],
+  "note": "relates to the mutual-dependence (MD1) line on the spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Joint excess ends renewers; own draws within can jointly exceed",
+  "summary": "Each step of joint excess lowers the level by at least one unit. Where renewal is gated on its renewers, excess that brings the level below their need ends them and everything that depends at that need. Draws that are each within what is given can jointly exceed it. With a single taker, all continue.",
+  "source": "§2.3 l.293",
+  "status": "old-base",
+  "lean": [
+   "Flow.excess_bounded",
+   "Flow.joint_excess_ends",
+   "Exceeding.all_end",
+   "Alone.all_continue",
+   "Pair.own_not_joint",
+   "Exceeding.own_not_joint"
+  ],
+  "records": [
+   "own-count-misses-joint-excess"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "A whole drawing its parts' arising beyond its renewal ends (WE1)",
+  "summary": "Consider a whole whose ending parts arise only when they depend on a gated family at a need of at least m. After n steps of excess from a stock below n+m, it has no part arising, and it ends. The uptake is the joint draw, not the whole's own. Each premise is shown necessary. This is read as OPENING's 'consumes what it goes on through' [AI reading].",
+  "source": "§2.3 l.294",
+  "status": "old-base",
+  "lean": [
+   "Web.Whole.family_excess_ends",
+   "Web.Whole.joint_excess_ends",
+   "Web.Listed.end_without_arising",
+   "Web.Whole.ends_without_arising",
+   "Whole.needs_arising",
+   "WholeExceeding.drawn",
+   "WholeWithin.kept",
+   "WholeUnending.persists",
+   "WholeUngated.persists"
+  ],
+  "records": [
+   "whole-drawing-beyond-renewal-ends"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Taking all excludes other takers",
+  "summary": "A full taker that continues leaves no other formation taking for level+1 steps. Full taking alongside another taker ends everyone who depends at the matching need, the full taker included. Among three courses, taking all is what needs another's ending, so the loss is the member's continuation [AI reading, D44].",
+  "source": "§2.3 l.296",
+  "status": "old-base",
+  "lean": [
+   "Flow.continuing_excludes",
+   "Flow.TakesAll",
+   "Flow.full_taking_ends",
+   "Flow.continuing_ends_taker",
+   "Excluding.three_courses",
+   "Excluding.admission_alike"
+  ],
+  "records": [
+   "what-taking-all-excludes"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "The rest outruns the renewal (CG2) with frozen experiment",
+  "summary": "When the rest jointly takes more than is given for n steps from a level below n+m, everyone depending at m ends, whatever the member takes. With need one, readings after the end are alike under the member's acts, so no weight on an end reading selects for restraint. Tested on learners in experiments/commons-outrun, with predictions frozen in advance.",
+  "source": "§2.3 l.297",
+  "status": "old-base",
+  "lean": [
+   "Flow.outrun_below",
+   "Flow.outrun_excess",
+   "Flow.outrun_ends",
+   "Flow.outrun_reading_alike"
+  ],
+  "records": [
+   "the-rest-outruns-the-renewal"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Selection through couplings reaches exactly what couples in",
+  "summary": "Every selection through g's couplings selects alike exactly the histories that are alike through them (by construction). So what lies beyond the coupling closure is selected alike, pooled too, and one's own act beyond the closure is selected alike. The gap is reach minus coupling closure. Alikeness up to a step is a prefix of one's own course, and is decided within N+N′−1.",
+  "source": "§3.4 l.421",
+  "status": "old-base",
+  "lean": [
+   "Web.selects_alike_iff",
+   "Web.SelectsThrough",
+   "Flow.unselected_beyond_coupling",
+   "Flow.act_unselected",
+   "Clearing.unselected",
+   "Web.listed_values",
+   "Web.alikeThroughUpTo_iff_prefix",
+   "Web.selectsThrough_iff_prefix",
+   "Web.alike_of_bounded",
+   "Web.bounded_exact"
+  ],
+  "records": [
+   "selection-through-couplings",
+   "a-formations-own-course",
+   "the-gap-for-ones-own-act",
+   "selection-through-a-model-of-the-options"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Raising what couples in draws from beyond, graded by inflow (IF1)",
+  "summary": "When the family gains nothing, a rise is paid in full from beyond, so rewarding a rise favours the draw. Generally, a rise past the family's inflow is drawn from beyond, and the bound is exact (Diversion).",
+  "source": "§3.4 l.422",
+  "status": "old-base",
+  "lean": [
+   "Flow.favours_reaching_beyond",
+   "Flow.Balances.rise_paid_from_beyond",
+   "Diversion.supplying_raises_untaken",
+   "Flow.inflow",
+   "Flow.Balances.rise_draws_beyond_inflow",
+   "Flow.Balances.rise_le_inflow_beyond",
+   "Flow.favours_reaching_beyond_inflow",
+   "Diversion.supplying_rises_by_inflow"
+  ],
+  "records": [
+   "raising-what-couples-in-draws-from-beyond"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "What a rise breaks beyond; joint draw breaks (DrawnBeyond, R52)",
+  "summary": "The beyond falls by exactly the rise plus the loss, and dependences beyond break once that exceeds their slack. Rewarding selection then requires an outsider to lose a dependence. A share reaching beyond is never selected against. A joint draw breaks exactly where need plus total taken exceeds level plus given, highest needs first; such a break is shared, and restraint by the excess keeps the dependence.",
+  "source": "§3.4 l.423",
+  "status": "old-base",
+  "lean": [
+   "Flow.Balances.breaks_beyond",
+   "Flow.Balances.beyond_falls_exactly",
+   "Flow.Balances.breaks_beyond_past_free",
+   "Flow.Balances.breaks_beyond_unsettles",
+   "Flow.favours_breaking_beyond",
+   "DrawnBeyond.Dweller.rise_ends_dweller",
+   "DrawnBeyond.WithinSlack.within_slack",
+   "Flow.RaisesOn.reaches",
+   "Flow.share_not_against",
+   "Flow.share_moved_rises",
+   "DrawnBeyond.Lapsing.share_falls",
+   "Flow.Balances.broken_iff",
+   "Web.Broken.of_need_le",
+   "Flow.Balances.broken_shared",
+   "Flow.Balances.kept_of_restrained"
+  ],
+  "records": [
+   "what-a-rise-draws-from-beyond"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Optimum lowers the beyond as far as any outcome; room; several optimizers (SG1-SG3)",
+  "summary": "Every order rising with what couples in has its optima at the least level beyond, condition by condition, given room; shared units give room. An optimum breaks exactly what some outcome breaks. Room read off one exchange step leaves the beyond at what the rest leaves minus capacity. Several optimizers at mutual best response drain as one by joint capacity. This is Zhuang and Hadfield-Menell 2020 Thm 1 in discrete conserved form.",
+  "source": "§3.4 l.424 (first part)",
+  "status": "old-base",
+  "lean": [
+   "Optimum.least_iff",
+   "Optimum.least_of_shared",
+   "Optimum.Rising.mono",
+   "Web.optimum_broken_iff",
+   "Web.optimum_ends_beyond",
+   "Optimum.Drain.drained_ends",
+   "Flow.Balances.family_le_iff",
+   "Flow.keeping_optimum_takes_slack",
+   "Optimum.Above.room",
+   "Optimum.optimum_beyond",
+   "Optimum.optimum_lowers_iff",
+   "Web.optimum_broken_iff_capacity",
+   "Optimum.mutual_beyond",
+   "Optimum.mutual_as_one",
+   "Optimum.TwoTakers.joint_drains",
+   "Optimum.Drain.room_needed",
+   "Optimum.Drain.satisficing_either"
+  ],
+  "records": [
+   "what-an-optimum-does-beyond-what-couples-in",
+   "room-read-off-the-exchange",
+   "several-optimizers-drain-by-their-joint-capacity"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Courses over a horizon: renewal lost iff r<k; horizon optima hold greatest renewal (SG4, SG5)",
+  "summary": "With renewal r and capacity k, a dependence at the need is lost exactly when r<k. Drawing is bounded exactly when r<k, and keeping draws more over long courses. Several optimizers jointly above renewal lose it. Over a horizon, draw plus left plus shortfall equals start plus r per step; optima hold a level of greatest renewal and leave nothing.",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.course_beyond",
+   "Optimum.mutual_course_beyond",
+   "Web.course_lost_iff",
+   "Web.course_kept_iff",
+   "Web.course_drawn_within",
+   "Optimum.drawn_bounded_iff",
+   "Optimum.keeping_draws_more",
+   "Web.course_drawn_unbounded",
+   "Web.mutual_course_lost",
+   "Optimum.drawn_add_shortfall",
+   "Flow.Balances.taken_add_shortfall",
+   "Optimum.most_iff",
+   "Optimum.frontier_holds",
+   "Web.frontier_broken",
+   "Web.frontier_kept"
+  ],
+  "records": [
+   "re-optimizing-above-a-renewal-ends-it",
+   "horizon-optima-hold-the-greatest-renewal"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Valuing what is left, at worth v (SG11, SG12)",
+  "summary": "Valuing what is left alongside what is drawn makes optima hold a level of greatest renewal at every step, while keeping is no optimum of the draw alone. At worth v>1, optima hold and regrow only at the end (turnpike). A keeping coupling w is outweighed where w+qn<rn.",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.byDrawnLeft",
+   "Optimum.most_left_iff",
+   "Optimum.frontier_holds_left",
+   "Optimum.frontier_left_iff",
+   "Optimum.keeping_not_frontier",
+   "Optimum.byDrawnLeftAt",
+   "Optimum.regrowing_frontier",
+   "Optimum.valued_most_iff",
+   "Optimum.frontier_holds_valued",
+   "Web.frontier_rebuilt_valued",
+   "Optimum.frontier_breaks_valued"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Keeping forgoes (r−q)n+m; step couplings and met-again counts (SG6, SG7, SG13)",
+  "summary": "Keeping a need forgoes (r−q)n+m, which grows with the horizon and outweighs every fixed coupling when q<r. A per-step coupling c keeps the need at every horizon where r≤q+c and c exceeds the end level. Counted at every met step, each met step forgoes at least r−q, so keeping holds where r+e<q+c+m and e<c.",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.keeping_le_most",
+   "Flow.Balances.keeping_taken_le",
+   "Optimum.frontier_keeps",
+   "Optimum.frontier_breaks_below",
+   "Optimum.frontier_keeps_above",
+   "Optimum.forgone_grows",
+   "Web.frontier_breaks_long",
+   "Optimum.met_drawn_le",
+   "Optimum.frontier_keeps_stepwise",
+   "Optimum.frontier_met_before_end",
+   "Optimum.frontier_breaks_at_end",
+   "Optimum.outweighed_stepwise",
+   "Optimum.shortfall_count_ge",
+   "Optimum.frontier_keeps_met",
+   "Optimum.continued_met_frontier"
+  ],
+  "records": [
+   "keeping-forgoes-the-renewal-at-the-need",
+   "a-step-coupling-keeps-at-every-horizon"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Weighted draws, rebuilding, any law of what stands, others drawing first (SG8-SG10)",
+  "summary": "With any weighting w(t), optima gain what the greatest-weighted-gain course gains. A weighting that falls faster than renewal ends the base at the first step; otherwise the base is kept. Where weighted gain rises to y, optima rebuild a depleted base. All of this holds over any law G of what stands (Optimum.Next). With others drawing first and G(z)≤z, every optimum under a falling weighting ends the base.",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.Next.drawable_step",
+   "Optimum.frontier_gains_weighted",
+   "Optimum.weighted_frontier",
+   "Web.frontier_broken_weighted",
+   "Optimum.frontier_exhausts",
+   "Optimum.frontier_leaves",
+   "Optimum.Next.le_rise",
+   "Optimum.frontier_of_gainsMost",
+   "Optimum.rebuilding_frontier",
+   "Optimum.frontier_rebuilds",
+   "Optimum.Next",
+   "Web.Next",
+   "Optimum.Next.leftBy",
+   "Optimum.Next.frontier_ends_of_le",
+   "Optimum.Next.frontier_ends_drawn_first",
+   "Web.Next.frontier_ends_drawn_more"
+  ],
+  "records": [
+   "a-weighting-faster-than-renewal-ends-the-base",
+   "optima-rebuild-a-depleted-base",
+   "others-drawing-first-end-the-base"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Drawers in turn: one law kept_returns; two floorless drawers drain (UM, UM2, SG14-SG17)",
+  "summary": "In the drawers-in-turn model, a best response keeps something above its floor only if it returns at least one for one. With two floorless drawers nothing returns, so revision reaches the floor profile in three rounds per step back, and every perfect profile is the floor profile. Without floors that is drawing everything, which breaks dependences above. Holding examples: gated_in_turn, doubling_capacity.",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.InTurn.kept_returns",
+   "Optimum.InTurn.at_floor",
+   "Optimum.InTurn.revisions_reach_floors",
+   "Optimum.InTurn.revised_at_floors",
+   "Optimum.InTurn.perfect_at_floors",
+   "Optimum.InTurn.floors_perfect",
+   "Web.drained_broken"
+  ],
+  "records": [
+   "drawers-in-turn"
+  ],
+  "note": "supersedes SG14-SG17 records per UM; master law",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Drawing at once drains; whom restraint pays (UM3, AL1)",
+  "summary": "With portions and simultaneous draws, a return below one for one makes draining perfect, and revision reaches it in one round per step. The converse is exact. In whole amounts restraint pays no drawer, and the breakage lies beyond them. Holding the level draws more over long horizons. A single drawer given the whole does not drain where the whole returns more than one for one (halves_race).",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.InTurn.floor_of_less",
+   "Optimum.AtOnce.drains",
+   "Optimum.AtOnce.revisions_drain",
+   "Web.at_once_broken",
+   "Optimum.AtOnce.drain_perfect_iff",
+   "Optimum.AtOnce.last_draws",
+   "Optimum.AtOnce.portion_falls",
+   "Optimum.AtOnce.drain_most",
+   "Web.at_once_beyond",
+   "Optimum.AtOnce.holding_draws_more",
+   "Optimum.AtOnce.whole_not_drained",
+   "Optimum.AtOnce.whole_perfect_iff",
+   "Web.whole_drain_broken"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "A race for position draws everything (RP1)",
+  "summary": "Drawers who rank by relative position, k·own draw against total, keep nothing for position. They draw everything at the last step, and, given monotone regrowth and at least two drawers, at every step. Where something left stops regrowth, a drawer keeps to deny it (Stopping).",
+  "source": "§3.4 l.424",
+  "status": "old-base",
+  "lean": [
+   "Optimum.InTurn.position_keeps_nothing",
+   "Optimum.InTurn.position_perfect_ends",
+   "Optimum.InTurn.zero_position_perfect",
+   "Optimum.InTurn.Stopping.perfect_keeps"
+  ],
+  "records": [
+   "a-race-for-position-draws-everything"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Shared-kitchen calibration and sustained-living link",
+  "summary": "Bounded partial-information case (at least 5 records entered food-safety grading); published-evidence correspondence; 9 Lean theorems reusing the comparator. Shows that added capability does not automatically take priority and that a nominal handover is not continuation. It is a constructed and published-data application, not field validation.",
+  "source": "PRACTICAL-JUDGMENT.md 'Connection to sustained living and collective judgment'",
+  "status": "old-base",
+  "note": "Dated 8 Oct round notes; summarized in history/SUSTAINED-LIVING-JUDGMENT",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Symmetric responsibility cannot pick one role",
+  "summary": "Under exactly symmetric dependence, capacity, undertakings and burdens, a swap-invariant assignment cannot select exactly one of two positions. Differentiation needs undertakings, rotation history, an asymmetry, or a warranted procedure.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §4",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Takeover must deliver protected content",
+  "summary": "A takeover discharges a still-valid undertaking only by continuing its content. ChanceAdequacy (8 theorems): event mass is preserved under all nonnegative weights iff coverage holds case by case; equal success rates can hide a lost protected case. Executable continuation: query or parallel routes raise protected mass from 1 to 2 (4 theorems). Recomputing the target from impaired capacity gives an empty target that passes falsely (4 theorems).",
+  "source": "BASIC-CONFLICT-JUDGMENT.md 'Taking over existing support' through 'A changed capability…'",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "Concern under selection pressure; power, succession, corrective access",
+  "summary": "A drop in an old score, a real loss, and loss of the conditions for acting are distinct. History: private remediation becomes a shared undertaking, then a changed assessment, then a handover. Power's grounds are not the holder's property. Succession passes on operative relations. Earlier concern can carry a response past a coordinator who no longer cares. Checks between interests do not cover unrepaying living. No infallible top judge is needed, but correction must reach choice.",
+  "source": "ETHICAL-LEARNING.md §49–66",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "New reasons change tasks without expanding power",
+  "summary": "The scopes of reasons, of answerability and of authorized implementation need not expand together. An old classification cannot alone adjudicate a challenge to it. The table sets out how new knowledge enters practice. The 'contraction' emphasis and the 'authorization wall' of §§67–74 are withdrawn by §§75–77.",
+  "source": "ETHICAL-LEARNING.md §67–70 (and withdrawn §§71–74 note)",
+  "status": "superseded",
+  "note": "Superseded in direction by §§75–77; conditional points reusable",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "Generative good before institutional power",
+  "summary": "Institutions have no a priori duty to contract. First judge whether a development furthers 生生; expanding, maintaining, reorganizing or contracting follow from that. Growth in organizational capacity can be a positive generative achievement. 西方陷阱 is made concrete as a check: does the foundation bring in an independent sovereign or a prior authority boundary?",
+  "source": "ETHICAL-LEARNING.md §75–78",
+  "status": "current",
+  "records": [
+   "organizational-formation-from-generative-comparison"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Organizational formation proposition",
+  "summary": "In a finite nonempty warranted menu with strict comparison, if every continuation lacking relation R is adequately improved on, every undefeated choice includes R; R (coordination, memory) is then a practical requirement. Six-unit worked example: two effective buildings are undefeated, overbuilding fails. The role is necessary but no particular carrier is. A build-only report cannot decide whether the base is kept. 13 theorems.",
+  "source": "ETHICAL-LEARNING.md §79–84",
+  "status": "old-base",
+  "lean": [
+   "finite_frontier",
+   "dominated_excluded",
+   "Required"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "OPENING: meta-attractor, cancer dynamics, the race and the call to cooperate",
+  "summary": "The dominant planetary model keeps only one's own continuation. That is growth that has stopped answering to the body (cancer). Relative position cannot rise for all. Realism, neoliberalism and libertarianism are not laws. A captured rule turns only by changing what it reads. Withholding absorbs, and giving first restores. The major transitions are offered as precedent. The present-world diagnosis is a judgment.",
+  "source": "theories/becoming/OPENING.md, paragraphs 10-23 and [^cancer], [^meta], [^no-law], [^turn], [^present], [^aligned], [^race], [^transitions], [^withholding], [^collective]",
+  "status": "current",
+  "lean": [
+   "Flow.Balances.rise_paid_from_beyond",
+   "Invariant.locks_out",
+   "Law.perturbation_reabsorbed",
+   "Optimum.MutualBest.full",
+   "Optimum.AtOnce.drain_perfect_iff",
+   "Optimum.AtOnce.drains",
+   "withholding_absorbs",
+   "Ring.givesFirst_restores",
+   "Web.Whole.needs_arising",
+   "Web.Whole.ends_without_arising",
+   "Becoming.RuleCapture",
+   "Becoming.ClosedCapture"
+  ],
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Architecture for a living Earth",
+  "summary": "An exploration opened 2026-09-13. Abundant energy and robot construction could lift the built environment above living ground (branching towers, an elevated open framework) and leave Earth to other life. A Chiang Mai 2025 situated world joins it to 大同 and 生生不息. The engineering limits (foundations, roots) are flagged.",
+  "source": "theories/architecture-for-a-living-earth/README.md",
+  "status": "current",
+  "note": "A design and worldbuilding exploration, not a theory result. Unique; carry as an application (or move to worldbuilding). Has no Becoming link.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Evolving community swarms",
+  "summary": "A community grows its own software through agents, using recursive responsibility, explicit behavioural contracts, local maintenance context and scoped adoption. Whether that survives repeated evolution and disagreement is a hypothesis. The 2026-09-07 next vision aims to surpass existing systems.",
+  "source": "theories/evolving-community-swarms/README.md",
+  "status": "current",
+  "note": "A design direction, unique, with no Becoming link. Carry it as an application.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Human solutions museum (文明方法博物馆)",
+  "summary": "Civilization is a stock of methods. Inventions are re-archived as seven-part problem dossiers plus a borrowable method, indexed by problem structure, so people stop reinventing wheels. Ren's research question (which systems solved this) runs from 2024-11 to 2026-05. The concept document is publishable. The data is unbuilt and no seed exhibit meets the sourcing floor.",
+  "source": "theories/human-solutions-museum/README.md",
+  "status": "current",
+  "note": "Unique project and not on the spine. Carry it as an application.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "Meta-attractor companions: common organization; collectively destructive attractors",
+  "summary": "COMMON-ORGANIZATION (13 October) joins formation, differentiated regulation, consequence-driven method change and supported revision in one paid history, with 41 theorems and 89 audits. COLLECTIVE-DESTRUCTIVE-ATTRACTORS asks when locally aligned agents converge on collective destruction, corrected away from a frame of opposed interests. Both have EN and ZH editions.",
+  "source": "theories/meta-attractor/COMMON-ORGANIZATION.md and COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md, heads",
+  "status": "old-base",
+  "note": "Lean from the 8 October era, before the grammar root. The collective results are superseded by JointDraw, Optimum and SelectionPool. Keep as history once the collective chapter states them.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "The relational self and 大同",
+  "summary": "The self is an action-centre of relations temporarily gathered. The individualism/collectivism split is the wreckage of one instruction (self-care and other-care as 阴阳). 大同 is a maintained dynamic basin, not uniformity (万物并育而不相害), reachable by sufficiency plus restored negative feedback. 人类命运共同体 is formalized as co-openness ∧ shared continuation ∧ no seizure, in an SSBX Lean file with 0 axioms.",
+  "source": "theories/relational-self-and-datong/README.md, one paragraph and Status",
+  "status": "superseded",
+  "note": "The relational self is now the root's premise (one relational unfolding). 大同/shared future appears in OPENING and the collective chapter. Unique: the 人类命运共同体 three-axis iff (an old SSBX Lean file, not on the spine), the 大道之行 institutional-capacity tension, and the Conjecture 2 critique.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "Selfishness spiral and narrative-value frames",
+  "summary": "Actors act from narrative-value frames written by their environment. Selfish frames compound through four loops: winnings to leverage, rule-rewriting, discourse becoming 'human nature', and a consensus code updating slower than the world. The endgame has several outcomes. The design responses cap compounding, speed up the regulator, rewrite narratives, teach seeing, and split into many entities.",
+  "source": "theories/selfishness-spiral-and-narrative-value-frames/README.md, one paragraph",
+  "status": "superseded",
+  "note": "Restated on the spine as capture through the rule, race of position and RegimeMargin (regulator lag, MQ5). Unique: the regulator update-rate gap as a named mechanism, the multiple-endgame taxonomy, and the 2025-02 compound_selfishness genealogy.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Cooperative abundance and freely built worlds (formerly The Fork)",
+  "summary": "AI, robotics and industrial knowledge make broad automation an engineering programme. Productive recursion can compound where reinvestment outpaces wear. Directed to shared provision, it frees people from accepting exploitation, enabling free association and collective creation. Ren's thesis that today's knowledge suffices is kept as programmatic. The binary fork framing was rejected.",
+  "source": "theories/the-fork-and-cooperative-infrastructure/README.md, update 2026-09-07 and one paragraph",
+  "status": "current",
+  "note": "Its body was developed into worldbuilding/foundations/automation-to-shared-abundance.md. The pre-update version is in its history/ folder. The OPENING's 'substrate of plenty' points here. Not on the spine.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Wamotopia and the Wamo Protocol",
+  "summary": "Technology amplifies the running logic, 'the world is a game to be won' (Moloch). AI enters as both selector and player. Wamo is the counter-logic aligning self and collective interest: one prime directive (generate positive externality), three pillars, and the Waca temporary zone. It was field-run as the Chiang Mai festival, 21 January–4 February 2026.",
+  "source": "theories/wamotopia-and-the-wamo-protocol/README.md, one paragraph and Status",
+  "status": "current",
+  "note": "Unique as a movement and protocol. Its diagnosis is superseded by the spine. Carry the protocol as a collective-region application.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Commons with gated renewal: first falsifiable test of the spine",
+  "summary": "With learning agents and predictions frozen first, the identity and scope predictions held: joint excess read on one patch fails where a neighbour reseeds, and holds when the two are read as one (now a spine law). The whole-episode extension and the pool's positive reading failed: three learners each coupled into the stock still emptied it. Widening coupling is necessary, not sufficient.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Completion requirements row 5; next connection item 1",
+  "status": "current",
+  "records": [
+   "groups-whose-conditions-are-coupled"
+  ],
+  "note": "Experiment at experiments/commons-gated-renewal. Likely duplicated in the collective chapter/§7; unique here as the evolution reading (groups on one family ending together).",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "definition",
+  "title": "Generative market regime and its guidance",
+  "summary": "A market selects practices through prices, revenue, finance and survival, and those practices change the conditions of later exchange and life. Guidance: arrange selection so successful activity renews those conditions, while affected people can discover damage and change the arrangement. Generative is relative to explicit commitments, mixed regimes exist, and incumbents need not be preserved.",
+  "source": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md, preamble; 'What makes a market generative'",
+  "status": "old-base",
+  "note": "Pre-Grammar vocabulary (generative regime, affected parties, standing, people's rights) leans dualist or social. It needs restating with renewal/consumption regimes on the map.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "From dependence to market selection; winners shape tomorrow's rules",
+  "summary": "Chain: organizational dependence, then consequences becoming operational, then selection of practices, then revision of selection mechanisms. Service-market example: deferred maintenance wins where buyers and finance cannot see reliability. Akerlof's lemons is an antecedent. Second loop to meta-attractors: success may buy influence over rules. The decisive question is what today's winners can do to tomorrow's rules.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'The connection from dependence to market selection'",
+  "status": "current",
+  "note": "Core collective/map connection: capture through the rule. Compare RuleCapture and meta-attractor records elsewhere.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Practical guidance table for markets",
+  "summary": "Six conditions with directions and evidence tests: renewal of indispensable supports; a viable route for useful contribution; effective refusal and alternatives; independent learning and timely correction; accountable rule changes; diversity and adaptation. The combination matters. Interventions are judged by actual consequences and revision conditions, including their own.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Practical guidance and its tests'",
+  "status": "current",
+  "note": "Formal counterpart: the counterexample table in MARKET-DYNAMICS-MATH.md.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "open",
+  "title": "Discriminating market study and comparators",
+  "summary": "The application joins three obligations: renew supports, make renewal consequential for selection, and keep the carrying institutions alive under pressure and capture. Comparators: externalities, information, institutional power, Ostrom. Proposed study: one bounded market, tracing maintenance or harm into decisions and rule changes, with matched interventions. Damaging counterexamples: domination with renewal, evidence without force, correction exhausting its successor.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'What this application adds to the research'",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "argument",
+  "title": "Shared interfaces and continuing rule control (adtech case)",
+  "summary": "A position that both runs a shared interface and controls its modification changes others' admission and comparison through operation itself, not only through paid influence. Feedback and alternatives do not guarantee repair: the rule-holder can fold responses into adjustments that keep its advantage. Lack of knowledge, insufficient response and reverse use of feedback are distinguished. Reform is judged by who decides next-round participation.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Shared interfaces and continuing rule control'",
+  "status": "current",
+  "note": "A second capture route beyond paid influence. Compare the RuleCapture records.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Forming organization through continuation (LibreOffice)",
+  "summary": "A partially reorganized activity can carry the next stretch of work while its lasting institution is still forming. LibreOffice: inherited work, interim support from an existing association, a release into Ubuntu beta. Degeneration studies must ask whether an actual reorganization path can form. Fixed-law failure does not settle this, and imagined alternatives are not executable ones.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Forming organization through continuation'",
+  "status": "current",
+  "records": [
+   "formed-software-continuation"
+  ],
+  "note": "Historical correspondence; no Lean and no β/C measured.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "application",
+  "title": "Adaptation with retained control (Apollo and Narwhal)",
+  "summary": "Narwhal continued after the API price change, while Apollo ended. Its author's stated fear of further price rises shaped the decision against annual billing: an upstream rule condition entering a downstream commitment rule. A new mode of operation, replacing one dependence and changing control over later reorganization are different claims. Continued service is not escape, and dependence is not degeneration.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, 'Adaptation with retained control'",
+  "status": "current",
+  "records": [
+   "formed-software-continuation"
+  ],
+  "note": "Revises the LibreOffice record; not a separate result.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "definition",
+  "title": "Market renewal-selection model: state and operating boundary",
+  "summary": "State: s = (x, q, w, B, C^1..C^m, o), with renewing share, liability exposure, influence, correction fund, separate supports with their own floors (never summed into welfare), and an operating flag. Crossing an essential floor is absorbing failure. A nonessential recipient can fall below its floor while the market runs. Assumes fixed demand and population, divisible practices and no entry.",
+  "source": "theories/becoming/chapters/MARKET-DYNAMICS-MATH.md, 'State and operating boundary'",
+  "status": "current",
+  "note": "Self-contained conventional model in experiments/market-generativity. Not on the spine or Grammar.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "law",
+  "title": "Proposition 1: payoff-driven selection threshold θ",
+  "summary": "With π_R = P − τ − c and π_D = P − τ − fq − ℓ, the update is x' = x + ηx(1−x)(fq + ℓ − c). The law preserves [0,1], renewal rises iff q > θ = (c−ℓ)/f, and 0 and 1 are absorbing: selection cannot create an absent practice. Cash identity (4): political spending costs now, and any later advantage must pass through influence and accountability.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'Actual payments and selection'",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "collective",
+  "kind": "example",
+  "title": "Counterexamples to overstrong readings of the guidance",
+  "summary": "Positive profit can coexist with next-round support failure. At x=0 nothing creates the missing variant. Later receipts do not pay current correction. Funded restoration can lose to capture. A nonessential recipient falls 5 to 3.5 while the market converges. Liability placed on the wrong practice strengthens adverse selection. A levy of 1/2 with intermittent correction survives, so τ ≥ k is not necessary.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'Counterexamples and interpretation of the guidance'",
+  "status": "current",
+  "unit": "chapters-evolution-markets"
+ }
+]

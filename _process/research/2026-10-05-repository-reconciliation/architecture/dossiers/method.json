@@ -1,0 +1,1027 @@
+[
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Four layers of the theory",
+  "summary": "States the theory in four layers: I, laws holding of every unfolding with no premise (counting_laws, Law.lossless_iff_returns, a run is a course into a return); II, what each of the eight independent World premises adds (World.counting_under over 256 selections, rest, joint excess); III, where dynamics stop deciding (Web.significance_undetermined); IV, evaluation for any significance, with the condition fixing scope and C alone ordering.",
+  "source": "THE-THEORY-OF-BECOMING.md, The theorem map, In words (816-822)",
+  "status": "old-base",
+  "lean": [
+   "counting_laws",
+   "Law.lossless_iff_returns",
+   "World.counting_under",
+   "Web.significance_undetermined"
+  ],
+  "note": "Unique as a compact layering. Layer II is phrased on the World premises, so it needs restating with the grammar as root and World as one model.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Standing classification of the theorem map",
+  "summary": "Explains how the table is generated (assemble.py, not hand-edited) and defines its standings: without premise (block A/B commitments allowed), under stated premises, condition among hypotheses, periphery, and assessments, arguments and targets. Premises from blocks E–F are read record by record, and block C premises by Lean names.",
+  "source": "The theorem map, The table (824)",
+  "status": "current",
+  "note": "A tooling convention. It carries over if the table is regenerated per region.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "§8.1/§11 foundation targets and wisdom root",
+  "summary": "The root of wisdom without axiom (argument). Open targets: the full foundational target, and the core as root of wisdom. Assessments: constitutive binding and the limits of presuppositionless promotion, and situated recovery correspondence. Place/transition nets on the spine (§8.7, relation to known results).",
+  "source": "rows 1212-1218",
+  "status": "current",
+  "records": [
+   "wisdom-root-without-axiom",
+   "theory-of-becoming-foundation",
+   "wisdom-root",
+   "constitutive-binding-assessment",
+   "situated-recovery-empirical-correspondence",
+   "place-transition-nets-on-the-spine"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Four kinds of standing",
+  "summary": "Every statement is a theorem without premise, a theorem under stated premises (blocks C, D, F), the condition (Unrestricted, stated not asserted), or a reading marked [AI reading, Dn]; anything else is open. Every theorem checked in Lean with empty axiom report.",
+  "source": "Preface, l.16-23",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Five master laws: closure, balance, finite runs, lumping, order",
+  "summary": "Closure (WithinClosure, reach_iff_withinClosure, Valuation.forced_iff_reach); balance (Flow.Balances, balance_over_stretch_on, Amounts.falls_by_stretch, le_by_exchange); finite runs (Branching.Returns, revisits_within, Amounts.rests/FallsStop); lumping (GoAlikeUnder); order (Web.Widens, Weighting.WidensOn) with condition read via Valuation.forced_whole_iff_connected and C. Board item EC, study §317, §375.",
+  "lean": [
+   "WithinClosure",
+   "reach_iff_withinClosure",
+   "Flow.Balances",
+   "balance_over_stretch_on",
+   "Amounts.falls_by_stretch",
+   "Amounts.unmarked_within",
+   "Amounts.le_by_exchange",
+   "Branching.Returns",
+   "revisits_within",
+   "Amounts.rests",
+   "Amounts.FallsStop",
+   "GoAlikeUnder",
+   "Web.Widens",
+   "Weighting.WidensOn",
+   "Valuation.forced_whole_iff_connected",
+   "Valuation.forced_iff_reach"
+  ],
+  "records": [
+   "EC"
+  ],
+  "source": "Preface, master laws, l.47-55",
+  "status": "old-base",
+  "note": "unique organizing device; must be carried and restated on the grammar root",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "application",
+  "title": "Connectivity measure of master laws",
+  "summary": "Of 127 central declarations, 77 rest on at least one master law (closure 16, balance 52, finite runs 14, lumping 1, order 9); the other 50 are definitional or not yet derived; elegance is not a K1-K7 criterion.",
+  "source": "Preface, l.57",
+  "status": "current",
+  "note": "figures are a snapshot from the completion report; regenerate rather than hand-carry",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "reading",
+  "title": "Beyond the theorems: theses pointer",
+  "summary": "Pointer to theses and conjectures (persistence certifies joint draw, renewable condition under a draw, optimization drains beyond couplings, scope installable, order shared by every valuer, breaks seen only through coupling, measure outlives refutation, philosophical theses); a thesis is not a theorem.",
+  "source": "Preface, l.59",
+  "status": "current",
+  "note": "pointer only; content lives in theses section",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "Two targets kept apart",
+  "summary": "Deductive necessity of the whole (open, §8.1 items 1, 12) versus ethical orientation within the whole (complete in a thin sense under its premises, much unfolding a definition: Web.paths_comparison_widens, livingSignificance_of_unrestricted). Absence of ethical axioms or of logical axioms is not absence of substantive premises.",
+  "lean": [
+   "Web.paths_comparison_widens",
+   "livingSignificance_of_unrestricted"
+  ],
+  "source": "Preface, l.61",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Proof language and pure core commitment",
+  "summary": "Lean 4.29.1; core imports only Init; empty axiom report (no propext, Quot.sound, Classical.choice), stricter than constructive; classical principles appear as named hypotheses (EM, LPO, WLPO, LLPO, MP, DNE, DC); the report concerns logic only, substantive assumptions lie in modelling rows; periphery has receipts.",
+  "lean": [
+   "check_becoming.py",
+   "Becoming.PropositionIdentity"
+  ],
+  "source": "§0 block A, row Proof language, l.74",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Local hypotheses: finite, enclosed, listed, decided",
+  "summary": "Finite (World.Finite), enclosed (Flow.Enclosed, Flow.Around, AroundStanding), listed (Listed, Web.Census, Distinct), decided (counts_iff_decided, listsOnce_iff_decided, World.ceasings_exist_iff_listed); counted censuses need no global decidability.",
+  "lean": [
+   "World.Finite",
+   "Flow.Enclosed",
+   "Flow.Around",
+   "AroundStanding",
+   "Web.Census",
+   "counts_iff_decided",
+   "listsOnce_iff_decided",
+   "World.ceasings_exist_iff_listed",
+   "Becoming.Decidedness",
+   "Becoming.Listing",
+   "Becoming.CensusBinding"
+  ],
+  "source": "§0 block B, l.85-92",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "One spine; extend, do not rebuild",
+  "summary": "All new formal results go on one spine, and existing modules connect by instance or equivalence theorems. Since the F3 sweep the core states the content of every periphery module that was in the run, with excluded middle, choice and the like as hypotheses (72 theorems). The connectivity measure counts 503 of 11,552 spine theorems apart from both base families, with 356 roots each apart for a stated reason.",
+  "source": "THE-THEORY-OF-BECOMING.md §9 opening paragraph (l.1496)",
+  "status": "old-base",
+  "lean": [
+   "Becoming"
+  ],
+  "records": [
+   "R32",
+   "R37c",
+   "F3"
+  ],
+  "note": "The connectivity numbers are from R37c's tree and are stale relative to the current receipt; the THEOREM-CONNECTIVITY study holds the detail",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Rings: core, instances and applications, no bridge, periphery",
+  "summary": "Core: the foundation (GenerativeCore, InquirySufficiency, RelationalRenewal) plus the base and its layers. Instance ring: the Hexagram modules and PlaceTransitionNets (7). Application leaves: Dispatch, GuardHorizon, ResponseLearning, Coverage, SeedReach, ScopedReach (6). The ring is held to core conditions with ring_direction checked. There has been no bridge since F1/F3, and 75 superseded modules sit in lean/history. The periphery covers Mathlib leaves, CorrectionInquiry, LearningCorrespondence and FallibleInquiry.",
+  "source": "§9 Rings (l.1498-1502)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Hexagrams",
+   "Becoming.HexagramCommuting",
+   "Becoming.PlaceTransitionNets",
+   "Becoming.Dispatch",
+   "Becoming.SeedReach",
+   "Becoming.ScopedReach",
+   "Becoming.FallibleInquiry",
+   "CorrectionInquiry",
+   "LearningCorrespondence"
+  ],
+  "records": [
+   "R35b",
+   "F1",
+   "F3"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Three computed layers on one base (L0/L1/L2)",
+  "summary": "Layers come from source and imports via layers.py. L0 is the base (World, Frame, Prelude). L2 holds the 18 modules that name Unrestricted or Valuation, from Metaethics and Significance on. L1 is the rest. No module imports a higher layer. Sixteen core modules reach Significance or Metaethics through imports (138 before R31). The Prelude imports only Init and states each list and number lemma once.",
+  "source": "§9 Three layers on one base (l.1504)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Prelude",
+   "Becoming.World",
+   "Becoming.Laws",
+   "Becoming.Frame",
+   "Becoming.Metaethics",
+   "Becoming.Significance"
+  ],
+  "records": [
+   "R31",
+   "R32",
+   "R34"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "What the consolidated checker enforces",
+  "summary": "check_becoming.py checks five things: the import closure is exactly the foundation plus the core; every source declaration has an empty axiom report; the core compiles from the prelude with Std stripped; generated constants are audited (only injEq lemmas are on propext, and no source declaration uses them); inherited modules are bound to receipts by sha256. No SUPERSEDED module (75) is in the run. Living significance, C, D and the positive ground are each stated once in the core.",
+  "source": "§9 The checker (l.1506)",
+  "status": "current",
+  "lean": [
+   "check_becoming.py"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Why the core excludes propext: an exact lumping that loses the course",
+  "summary": "propext holds exactly where every reading of propositions is lumped by interderivability (extensional_iff_lumped, byName_lumped_iff). Relational readings respect ↔ already (Formula.eval_congr), and witnesses of ↔ are unique (iff_witness_unique). Transport along propext does not reduce, so rfl and decide fail; this is a kernel observation, not a theorem. The core therefore states ↔ and keeps propext as the hypothesis Extensional, while the periphery may use it.",
+  "source": "§9 Why the core excludes propext (l.1508)",
+  "status": "current",
+  "lean": [
+   "Becoming.PropositionIdentity",
+   "extensional_iff_lumped",
+   "byName_lumped_iff",
+   "Formula.eval_congr",
+   "iff_witness_unique",
+   "two_equivalences",
+   "transport_const",
+   "Extensional"
+  ],
+  "records": [
+   "proposition-identity",
+   "PE1"
+  ],
+  "note": "A unique argument linking the pure core to the relational start; it should be carried into the method chapter",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Current receipt and counts",
+  "summary": "Receipt 20261023T070625.290320Z, Lean 4.29.1, main fd618663d with IV3b. Core: 296 modules and 13,350 theorems. Instances: 7 modules, 581 theorems. Applications: 6 modules, 179 theorems. Foundation: 3 modules, 74 theorems. The closure is 312 modules and 14,184 theorems, with 18,916 audited declarations and 204 injEq on propext. Unnamed instances are covered by the environment audit. Three names carry market words. The last fresh run was 20261016T130738.412710Z.",
+  "source": "§9 The current receipt and table (l.1510-1526)",
+  "status": "current",
+  "lean": [
+   "MergeClass.spent_consumed",
+   "Flow.Balances.rise_paid_from_beyond",
+   "Coverage.charge"
+  ],
+  "records": [
+   "IV3b",
+   "I5"
+  ],
+  "note": "Changes on every landing; better generated than written into prose",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Periphery checks and receipts",
+  "summary": "CorrectionInquiry (Lean 4.30.0-rc2 with Mathlib, 7 bridge theorems with empty reports). MachineInstances: 103 theorems. Eighteen further instance modules each run their own checker. FallibleInquiry: 31 theorems, 17 on propext or Quot.sound. RegimeReals: 101 theorems (RM5). All 23 periphery receipts were renewed on 20 October (PR1), seven modules were renamed to current core names, and no periphery use of propext computes a value through an identification of propositions.",
+  "source": "§9 The periphery's own checks (l.1528)",
+  "status": "current",
+  "lean": [
+   "CorrectionInquiry",
+   "MachineInstances",
+   "FallibleInquiry",
+   "RegimeReals",
+   "LearningCorrespondence",
+   "ProtocolInstances",
+   "VersionedTaskInstances",
+   "IdealsCorrespondence",
+   "EntropyProduction",
+   "TransmissionCorrespondence"
+  ],
+  "records": [
+   "PR1",
+   "RM5"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "SeedReach: asserting reach equals DNE",
+  "summary": "Reach from a seed is the least invariant holding at the seed. A configuration is separated by some invariant exactly where it is not reached. 'Every process reaches every unseparated configuration' is exactly double-negation elimination, so asserting reach needs either a path or a decision of reach.",
+  "source": "§9 zh-table row SeedReach (l.1537)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.SeedReach",
+   "fromSeed_of_not_separated_iff_dne"
+  ],
+  "note": "A calibration that states what the need means for the unfolding (reach needs a path or a decision)",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Naming criteria and renaming history",
+  "summary": "Declarations take structural, formal and systems words, adopted only where the statement means exactly that. Renaming tables were made on 14, 18 and 20 October. Joining.Neutral was renamed Joining.TwoSidedUnit (R30), so Neutral now names only boundary neutrality.",
+  "source": "§9 Names (l.1565)",
+  "status": "current",
+  "lean": [
+   "Joining.TwoSidedUnit"
+  ],
+  "records": [
+   "R30",
+   "F12",
+   "N1"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Five words held to one sense",
+  "summary": "whole (everything in the unfolding; the represented class is the space); condition (the relatum depended on; local premises are hypotheses); law (a rule of change; a checked statement is a theorem); reading (an interpretation with its standing; process, frame and world are views); selection (through couplings; subsets of premises are premise subsets, and choice principles are choice).",
+  "source": "§10 intro (l.1573)",
+  "status": "current",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Reading and the four kinds of standing",
+  "summary": "A reading is an interpretation of checked content with its argument, labelled [AI reading, Dn]. There are four kinds of standing: a theorem without premise, a theorem under stated premises, the condition, and a reading.",
+  "source": "§10(a) row reading; standing (l.1615)",
+  "status": "current",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Dynamics do not entail significance (non-entailment)",
+  "summary": "Web.significance_undetermined on two constant significances; any ReadsOnlyDynamics statement admits a rival and does not entail the condition; that laws on World/Web/Flow read only dynamics is a representation fact. Shows non-entailment, not that becoming leaves significance undetermined nor that the condition is needed. Single canonical statement.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 549)",
+  "status": "old-base",
+  "lean": [
+   "Web.significance_undetermined",
+   "ReadsOnlyDynamics",
+   "ReadsOnlyDynamics.admits_rival",
+   "ReadsOnlyDynamics.not_entails"
+  ],
+  "note": "SD1; could be significance region; cited from later sections",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Relation to known results: ten central results with prior art and verdicts",
+  "summary": "An AI significance review (20 Oct) says none of the ten central results is new mathematics. Each is either near-definitional or a known result restated: demographic balance, Mazurkiewicz traces, finite Poincare recurrence, Landauer and Bennett, reverse-math calibrations, ranking functions and LaSalle, Pattanaik-Xu, Blackwell and Pearl, Zhuang and Hadfield-Menell, the commons, Gold, Gewirth, Sen, Perron-Frobenius. Item 3, the premise ledger, is new as an artefact.",
+  "source": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md, Relation to known results, lines 1222-1237",
+  "status": "current",
+  "lean": [
+   "World.separate",
+   "Web.selects_alike_iff",
+   "Optimum.least_iff",
+   "Web.optimum_broken_iff",
+   "Optimum.mutual_beyond",
+   "Web.course_lost_iff",
+   "Optimum.frontier_holds",
+   "Optimum.InTurn.perfect_at_floors"
+  ],
+  "note": "Row 6 lists the SG1-SG14 frontier laws in full, which duplicates §8.1 item 10 and T3. Belongs in the method chapter as one compact prior-art table.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Results outside the ten, with their known neighbours",
+  "summary": "Each result outside the ten is matched to its known neighbour. Training on own courses is DAgger (on-policy imitation learning) and goal misgeneralization. Continuity is the network-flow divergence fact. ReadingSchedule is pinwheel scheduling. The place/transition-net laws are P-subinvariants. The thermodynamic correspondence is Landauer's argument. Regulation is deadbeat control and requisite variety. The selection term is Price's. Own widening is power-seeking and its constant-sum case. Regime margin is depensation and the fold. Capture is observability with the reader inside the plant.",
+  "source": "THE-THEORY-OF-BECOMING.md, Relation to known results, line 1239",
+  "status": "current",
+  "lean": [
+   "Becoming.Training",
+   "Becoming.Continuity",
+   "Becoming.ReadingSchedule",
+   "Web.break_not_bounded",
+   "ClosedCapture.Unread",
+   "ClosedCapture.identifiesAlike_iff_unread"
+  ],
+  "note": "Unique: the cross-check links (continuity, reading-schedule, least-loss, endogenous-observation checks).",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "What survives the prior-art review",
+  "summary": "Three things survive, none a discovery: the premise ledger with its witnesses and calibrations; the ethics with scope and order apart (the universalization is Gewirth's, C is opportunity-set monotonicity); and one vocabulary joining conservation accounting, observation-limited selection and opportunity-set comparison. The verdicts would change with an unforeseeable theorem, a risky prediction that holds, or a premise derived from something weaker.",
+  "source": "THE-THEORY-OF-BECOMING.md, line 1241",
+  "status": "current",
+  "note": "Key framing for the significance of the whole; carry into the method chapter.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "The theses layer: strength as content, standing stated",
+  "summary": "A theory is judged by what it forbids, not by whether its theorems are new mathematics. Every thesis states its claim, its standing (proved, supported, conjectured or thesis), what it forbids, what would refute it, and its evidence including failures. A thesis adds no theorem, and a refutation removes none. The layer was set 21 Oct (study §284).",
+  "source": "THE-THEORY-OF-BECOMING.md, Theses and conjectures intro, line 1246",
+  "status": "current",
+  "records": [
+   "study §284"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "What the unifications claim beyond their sources (four rows)",
+  "summary": "Four rows. (1) Supervisory control: reward, training, natural selection, prices and votes as one selection through couplings, conjectured (T3). (2) Pareto unanimity and Pattanaik-Xu: C is just this unanimity applied to what can form (T5 status). (3) Landauer and Bennett: irreversibility as merge, kept as a law, not a conjecture (Law.lossless_iff_returns etc.). (4) Zhuang and Hadfield-Menell: overshoot, externality and Goodhart as one optimum law.",
+  "source": "THE-THEORY-OF-BECOMING.md, What the unifications claim, lines 1341-1353",
+  "status": "current",
+  "lean": [
+   "Law.lossless_iff_returns",
+   "Law.loss_needs_merge",
+   "Law.Lossless.narrowing_spreads",
+   "Law.withHistory_never_returns",
+   "Optimum.Rising.mono",
+   "Flow.keeping_optimum_takes_slack"
+  ],
+  "note": "This layer changes no verdict. The literature cited is from the AI's knowledge unless a linked check read it.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "§8 frame: open classes and ranking",
+  "summary": "Since 19 Oct no reading is open (D45). There are three open classes: further proof, philosophical warrant and empirical correspondence. Each record's next_delta is authoritative for its finer steps. The ranking is the AI's, from the twentieth review (D9). The area table of 20 Oct is kept in history.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8 intro, line 1358; §8.2 line 1382",
+  "status": "current",
+  "records": [
+   "D9",
+   "D45"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "§8.1 item 6: amounts that may be dense",
+  "summary": "Stated: rest from a finite reading; Landauer's count; the rest theorem over any amounts exactly where the total stops falling (LC2, LC3); dense forms or counterexamples for each natural-number law (R40, R41). XL4: sub-exponential growth at rate at most one; expected balance without expected rest. XL2/XL3: discrete steps, whole amounts, and runaway by frequency, strength or spectral radius. Open: a least loss in energy, the constructive status, damped-law gaps.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 6, line 1368",
+  "status": "old-base",
+  "lean": [
+   "Amounts.rests_of_finite_reading",
+   "Law.Lossless.narrowing_spreads",
+   "World.InAmounts.change_stops_iff",
+   "World.InAmounts.rests_unrefuted_enclosed_of_stops",
+   "Amounts.noEndlessFall_of_fallsAtLeast",
+   "Pass.endless_keeps_from_rest",
+   "Representation.subexponential",
+   "Representation.shear_rate",
+   "Representation.expected_balance",
+   "Representation.RandomEnd.rest_not_in_expectation",
+   "Becoming.WholeAmounts"
+  ],
+  "records": [
+   "LC2",
+   "LC3",
+   "XL2",
+   "XL3",
+   "XL4",
+   "R40",
+   "R41",
+   "least-loss-rest",
+   "least-loss-from-entropy-production",
+   "rest-from-a-finite-reading",
+   "merge-of-a-part-kept-by-the-rest",
+   "rest-theorem-in-any-amounts",
+   "rest-exactly-where-falls-stop",
+   "entropy-history-and-record",
+   "how-a-carried-difference-grows",
+   "study §308",
+   "§267",
+   "§365",
+   "§369"
+  ],
+  "note": "The modelling-choice audit (tagging each law with the choices it uses) belongs in method; the rest laws belong in the map.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "The five targets mapped onto the items",
+  "summary": "Deductive necessity of the whole maps to items 1 and 12. Universal practical warrant maps to item 12. The wisdom root is formally complete within the laws without premise; what remains is item 7. The relational foundation of inquiry has its formal side stated (§3.2). The stronger direction hypothesis is empirical, not a premise.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 The targets, line 1376",
+  "status": "current",
+  "records": [
+   "theory-of-becoming-foundation",
+   "universal-practical-warrant",
+   "wisdom-root",
+   "wisdom-root-without-axiom",
+   "scientific-inquiry-foundation"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Completeness in the qualified sense (K1-K7 criterion)",
+  "summary": "completion.py checks K1-K7 against COVERAGE.json, and all are met on R43's tree. K2 unity: definition one way, construction the others. K3 premises: C is met and failed; decidedness is met over finite stretches and calibrated as LPO. K4 representation: dense forms. The ethics chain is one derivation (R40). The criterion does not show warrant, and the zero-axiom strongest claim is unshown. Plan §9's criteria have not been audited since 10 Oct.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 Completeness, line 1378",
+  "status": "old-base",
+  "lean": [
+   "Frame.world_fixes_run",
+   "World.of_web",
+   "World.of_flow",
+   "carriedWorld_within_cut",
+   "Web.paths_comparison_widens",
+   "Regimes.no_comparison_through_marginals",
+   "not_not_decided",
+   "Decided.exists_below",
+   "HistoryIdeals.cut_decided_iff_lpo",
+   "Amounts.replenishment_unbounded",
+   "Flow.More.replenishment_unbounded",
+   "Halving.takes_halve",
+   "Direction.grounded_widening_selected",
+   "Valuation.significant_iff"
+  ],
+  "records": [
+   "R39",
+   "R40",
+   "R41",
+   "R42",
+   "R43",
+   "study §218"
+  ],
+  "note": "Will need re-running against the grammar root once the restructure lands.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "§8.3 readings adopted (D1-D57) and their placement",
+  "summary": "Readings are interpretations of checked content, numbered D1-D57 in DELEGATED-CHOICES. They form one account in five links and add no theorem or premise. Placement by section is listed. D36 adopts working names. The Chinese edition keeps 展开, 形成 and 生成 apart. 生生 may not be glossed by living (D1 revised). 名可名 and the Novelty/BoundaryInvariant likeness are analogies only.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.3, line 1387",
+  "status": "current",
+  "lean": [
+   "Novelty",
+   "BoundaryInvariant"
+  ],
+  "records": [
+   "D1",
+   "D36",
+   "D45"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "§8.5 the scope of representation",
+  "summary": "Can every becoming be represented with discrete steps and natural-number amounts? The shared index is read off own courses for local exchanges. What remains is whether every becoming has such a local law with finite courses; otherwise the spine is extended (items 1, 6).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.5, line 1408",
+  "status": "current",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "§8.6 calibrations: decidedness, EM, WEM, DNE, LPO, WLPO, Markov, LLPO, choice",
+  "summary": "The core assumes no classical principle; each one is a hypothesis or proved equivalent. Decidedness is local (counts_iff_decided). EM matches ten laws, among them the finite-world arising law. WEM is undominated members. DNE is the gated origin and refutable/closed passages. LPO is telling whether a history ends; RecursOrStops is Σ⁰₂ EM. WLPO is the least coupling. Markov is refutable tests. LLPO is EitherThroughout and EitherNever. Dependent choice gives runs.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.6, lines 1410-1424",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Decidedness",
+   "counts_iff_decided",
+   "World.enclosure_bounds_change",
+   "World.counting_under",
+   "Becoming.CensusCounts",
+   "Becoming.CensusBinding",
+   "World.law_iff_em",
+   "World.law_decides",
+   "World.law_of_em",
+   "Carries.chain_ends_of_em",
+   "World.undecided",
+   "World.numbers_indiscernible_iff_em",
+   "alike_decided_iff_em",
+   "alike_of_sameBranchingTests_iff_em",
+   "matchesParts_of_compact_iff_em",
+   "Recipe.holds_after_iff_em",
+   "diamond_correct_iff_em",
+   "classification_robust_iff_iff_em",
+   "split_iff_em",
+   "undominated_has_iff_em",
+   "orNotAdheres_dense_iff_em",
+   "exists_undominated_iff_weakly",
+   "FrontierFrames.choice_exists_iff_weakly",
+   "finite_frontier",
+   "Gated.origin_of_propositions_iff",
+   "refutable_holds_iff",
+   "Stretches.refutable_closed_iff",
+   "Stretches.closed_refutable_iff",
+   "Ideals.refutable_closed_iff",
+   "Ideals.closed_refutable_iff",
+   "Ideals.verifiable_compl_refutable_iff",
+   "Web.lpo_of_ending",
+   "Listed.lpo_of_few",
+   "World.lpo_of_finite_ends",
+   "lpo_of_junctures_found",
+   "LastChange.lpo_iff_settles",
+   "Settling.OneWay.lpo_of_settles",
+   "Limit.Sequences.eventuallyFalse_lpo",
+   "Lasting.Search.reaches_iff_lpo",
+   "Stretches.cut_decided_iff_lpo",
+   "HistoryIdeals.cut_decided_iff_lpo",
+   "World.rests_unrefuted",
+   "World.comes_to_rest_unrefuted",
+   "World.rests_unrefuted_enclosed",
+   "Flow.change_stops_unrefuted",
+   "Amounts.rests_unrefuted",
+   "lpo_of_vanish_decided",
+   "vanishDecision_iff_lpoRule",
+   "LPO.of_rule",
+   "settled_iff_recursOrStops",
+   "RecursOrStops.lpo",
+   "lpo_of_settled",
+   "WLPO.of_lpo",
+   "wlpo_of_not_through_sensitive",
+   "wlpo_of_insensitive_differs",
+   "not_through_sensitive_iff_rule",
+   "changedByNoCondition_iff_rule",
+   "WLPO.of_rule",
+   "refutable_passes_iff_markov",
+   "verifiable_compl_refutable_markov",
+   "LLPO.of_lpo",
+   "eitherThroughout_iff_llpoForDecided",
+   "eitherNever_iff_llpoForDecided",
+   "Lasting.lifting",
+   "runs_iff_dependentChoice",
+   "keptFor_iff_plan_of_choice",
+   "keptFor_iff_plan"
+  ],
+  "records": [
+   "DECIDABILITY-INVENTORY"
+  ],
+  "note": "Under AGENTS policy, a calibration counts as a result only where it says something about the unfolding: LPO as deciding whether a history changes again, WLPO as the least coupling, dependent choice as runs. Many EM items are lemmas of Prop-valued activity, so the method chapter should sort them. The grammar root has its own excluded-middle point (telling going on from ending, OU4).",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "§8.9 objection: every review so far is by AI",
+  "summary": "No human review exists. It would be answered by independent human review of the Lean statements against the prose and of the philosophical arguments, starting with §6 and §7.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1491",
+  "status": "current",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "method",
+  "kind": "history",
+  "title": "Contribution, antecedents and package count of the first alignment-through-change round",
+  "summary": "The connections run from observation to command completion, from inquiry to repair, and from aggregate selection to funded succession. Credit goes to shutdown instructability, shielding, performative learning and reward-tampering work; no priority is claimed. 59 theorems, 102 audits, 14,295 finite records. The next question is how real organizations acquire uncertainty sets, observation laws and authority.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §5",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "What the target with no added substantive axiom requires and does not require",
+  "summary": "Zero-axiom means no added substantive axioms, not only no ethical axiom. Proof language, rules, definitions, supplied relations, correspondence and normative commitments stay visible. The target requires warranting the universal content the theory asserts, not deriving every contingent local law's value. Calling an input immanent does not discharge it.",
+  "source": "BECOMING-FOUNDATION.md §4",
+  "status": "current",
+  "note": "unique at this length per the chapter's status; carry to method",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "reading",
+  "title": "Spine laws hold of worlds as the spine represents them",
+  "summary": "Laws with no premise hold of every world in the representation: discrete steps, natural-number amounts, a shared index identifying conditions with relata, and decided activity where needed. Whether every becoming is so representable is part of the warrant still owed.",
+  "source": "BECOMING-FOUNDATION.md §5, spine status P23",
+  "status": "old-base",
+  "note": "the modelling-choice caveat matches AGENTS; restate on the grammar root",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Requirement as necessary response is the weakest sound reading (locality)",
+  "summary": "Activity needing support is internal only when requirement is read as necessary response; read as possible response, it fails. Necessary response is the weakest reading that does not read the current level and under which support is needed on every run (XL4). The warrant is locality, which is an argument, not a proof. Necessity beyond the representation, and the determinations no premise names, are not reached.",
+  "source": "BECOMING-FOUNDATION.md §9.1, What this does not reach",
+  "status": "old-base",
+  "lean": [
+   "ExchangeRelation.free_unsupported",
+   "ExchangeRelation.mayRespond_not_supports",
+   "ExchangeRelation.respondsBelow_weakest"
+  ],
+  "note": "study §369; boundary items (1)–(4) must be carried",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Begin within the one unfolding; core and tree articulate each other",
+  "summary": "Core and branches are differentiated articulations of one unfolding, and branches can revise the core; a root-and-descendants diagram is an aid only. The starting point is activity forming and changing the conditions of further activity, and knowing, modelling and formalizing occur within it. Nonduality erases no difference and implies no cosmic subject or administrator.",
+  "source": "theories/becoming/chapters/NONDUAL-METHOD.md, Begin within the one unfolding",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Working terms: activity, conditions, formation, generative",
+  "summary": "Activity includes change without presupposing an agent or purpose. Conditions are enabling or constraining relations, not necessarily storable quantities. Formation covers generative and degenerative change. Generative is narrower: it widens what can form, and does not overlap degeneration.",
+  "source": "NONDUAL-METHOD.md, Begin within the one unfolding, paragraph 3",
+  "status": "current",
+  "note": "duplicates the canonical glossary",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Name relations, not authorship, payment or ownership",
+  "summary": "Replace 'authorship' with the formation and transformation of conditions and of dependence; use participation and self-direction for effective choice, and justify responsibility separately. Money, payment and rent belong to particular realizations, and code names like paid, rent and lease are local vocabulary. Actor and patient are roles formed in a history. A wording table maps each explanation to its terms.",
+  "source": "NONDUAL-METHOD.md, Keep foundational language at the right level (Formation, participation and responsibility; wording table)",
+  "status": "current",
+  "note": "overlaps the naming rule in AGENTS; carry the table",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Process, theory and model kept distinct",
+  "summary": "The process unfolds; the theory explains it; a model represents selected relations, and an internal model can itself take part in activity. A lens is not the whole foundation.",
+  "source": "NONDUAL-METHOD.md, end of Keep foundational language",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Value question versus description of dynamics",
+  "summary": "Explaining how evaluation forms is distinct from justifying what deserves favourable appraisal, without positing two realities. Good, harmful and fitting must not silently supply their conclusions. A dynamical construction is not ethical warrant.",
+  "source": "NONDUAL-METHOD.md, Value questions and descriptions of dynamics",
+  "status": "current",
+  "note": "the remark that 'necessity of an irreducible ethical principle is unsettled' is old framing; now the condition plus C",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Make analytical separations accountable; 'supplied' is local",
+  "summary": "Reconstruct the relation before treating pairs (core/tree, subject/object, observer/world…) as independent primitives. A decomposition states what it keeps and omits. A law supplied to a model is not external to reality. Moving content into definitions or calling it immanent discharges nothing. Ending an activity is assessed against the whole continuation (the severing example).",
+  "source": "NONDUAL-METHOD.md, Make analytical separations accountable",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Five-step test of constitutive connections",
+  "summary": "State the claim and its scope independently of the conclusion; reconstruct the strongest rival; separate a change in the condition from a change in its report or proxy; explain a formal countermodel's relevance, since free toggles show only non-entailment from weak premises; state what would defeat the claim, without expanding 'full condition' after each objection.",
+  "source": "NONDUAL-METHOD.md, Test constitutive connections substantively",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Proofs, evidence and philosophy each assessed for what they establish; gap classification",
+  "summary": "Proofs check relations under a representation, empirical work tests correspondence, and philosophy examines constitutive identities. A report states the configuration, the status of its differentiations, the preserved scope and a revision condition, and classifies each gap as an omitted relation, an unresolved explanation, or evidence against the claim.",
+  "source": "NONDUAL-METHOD.md, Use proofs, evidence and philosophical comparison",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Mathematical core: a supplied labelled relation, finite traces, predicates in Lean",
+  "summary": "Process data are a configuration type, an event type and a relation step : S → A → S → Prop. Representation, proof within it and correspondence are three distinct tasks. A table of roles separates orientation, mathematical background, model content, specification, consequences and correspondence. An empty #print axioms report does not erase parameters or interpretation.",
+  "source": "theories/becoming/chapters/MATHEMATICAL-CORE.md, opening; Relational context; Mathematical background; Constructing the transformation interface",
+  "status": "current",
+  "lean": [
+   "GenerativeCore.Process"
+  ],
+  "note": "pre-spine GenerativeCore exposition (6 Oct); superseded as foundation by the grammar but live as an exposition",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Type construction alone yields no dynamics (product tower)",
+  "summary": "Iterating T(n+1)(X) = T(n)(X) × T(n)(X) preserves emptiness and subsingleton-ness in both directions, so no distinction or occurrence arises from type formation alone. The dynamical content must be supplied explicitly.",
+  "source": "MATHEMATICAL-CORE.md, Why is the relation supplied?",
+  "status": "current",
+  "lean": [
+   "ProductTower"
+  ],
+  "note": "pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "What minimal means, and the seven-step investigation procedure",
+  "summary": "Separates a sufficient interface, least endpoint closure (proved) and absolute minimality (not established). A primitive count can change without reducing commitments. The procedure: state the question, explain configurations, supply or derive the law, specify independently of the verdict, prove the exact statement, check abstraction and countercases, validate correspondence.",
+  "source": "MATHEMATICAL-CORE.md, What minimal means here; Using the core for a concrete investigation",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "Object calculus Derives without contraction; soundness means only reachability correspondence",
+  "summary": "Lean is the metatheory. Derives has identity, primitive steps, cut and framing over configurations, not a full propositional language, so soundness and completeness concern finite endpoint reachability only.",
+  "source": "theories/becoming/chapters/GENERATED-LOGIC.md §1",
+  "status": "current",
+  "note": "pre-spine experiments (8 Oct)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Contraction is admissible exactly when duplication is reachable",
+  "summary": "Given a left unit and context compatibility of primitive steps, the contraction rule is admissible iff a ⇝ a⊗a. It yields every finite positive multiplicity, not the exponential modality or an infinite run. A five-state counterexample shows the context condition is needed.",
+  "source": "GENERATED-LOGIC.md §2, §4, §6",
+  "status": "current",
+  "lean": [
+   "admissible_contraction_iff_duplicate",
+   "contraction_iff_duplicate"
+  ],
+  "note": "38 theorems; pre-spine; no novelty claimed (linear and graded logic, Petri nets)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Reflective identity: the sameness rule holds iff I ⊆ O; continuation and Curry limits",
+  "summary": "Carrying a ground over directly holds for all values exactly when recognition set I is contained in O. Mixed standards refute the unrestricted claim. Sameness does not give inferential continuation: the standard a conclusion reaches must suffice as a premise. Admitting C ↔ (C → Q) yields any Q (Curry), so self-reference does not certify itself.",
+  "source": "GENERATED-LOGIC.md §13",
+  "status": "current",
+  "lean": [
+   "ReflectiveIdentity"
+  ],
+  "note": "11 theorems with empty reports; the presuppositionless-metalogic target stays open",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Recognitional binding: every atomic endomorphism term evaluates to identity",
+  "summary": "In the source-free fragment, a term t : atom(i) → atom(i) evaluates to the identity (logical relations). Two alternatives (return the surrounding ground, return a new ground) show the arrow type alone does not guarantee carry-over. The stipulated reference-back of 'use' is not derived.",
+  "source": "GENERATED-LOGIC.md §14",
+  "status": "current",
+  "note": "7 theorems with empty reports; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "Binding-preserving substitution: all consumers agree iff each substituted term supplies the required ground",
+  "summary": "Simultaneous substitution with shifting under binders: eval(t[σ], ρ) = eval(t, η) for all t iff eval(σ(p), ρ) = η(p) for all p. A wrong inner attachment can preserve types and agree on one occasion while differing in dependence.",
+  "source": "GENERATED-LOGIC.md §15",
+  "status": "current",
+  "records": [
+   "binding-preserving-substitution"
+  ],
+  "note": "9 theorems, 6 with Quot.sound (funext); pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Constitutive binding: local account complete, presuppositionless metalogic not reached",
+  "summary": "Introduction fixes local reference, and later uses carry, redirect or lose it. Within displayed carry-over, the same ground supports the same judgment without a new endorsement each step, and the demand for an external certificate on every binding is withdrawn. The shortfall: this cannot yet justify all the metareasoning resources used without premises.",
+  "source": "GENERATED-LOGIC.md §16",
+  "status": "current",
+  "records": [
+   "constitutive-binding-assessment"
+  ],
+  "note": "scoped philosophy; the zh edition holds fuller paragraphs for some sections",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "A law of the whole and no part: WLPO / LPO calibration (Tail)",
+  "summary": "A counterexample to the least coupling exists exactly where a rule decides falsity of every Boolean sequence (WLPO). The tail law takes the LPO rule. The record states what this calibrates.",
+  "source": "§2.6 l.354",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Tail",
+   "not_through_sensitive_iff_rule",
+   "vanishDecision_iff_lpoRule"
+  ],
+  "records": [
+   "what-a-law-of-the-whole-and-no-part-takes"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "Indispensability of the complete core to inquiry is open",
+  "summary": "It is not established that the complete core is indispensable to scientific inquiry (§8.1).",
+  "source": "§3.5 l.440",
+  "status": "current",
+  "records": [
+   "scientific-inquiry-foundation"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "method",
+  "kind": "open",
+  "title": "Not-derived lists for §2.6",
+  "summary": "Not derived: the strengths themselves, damping below one, continuous time, laws reading infinitely many conditions, which of the return and coupling bounds is met, closed-form cycle turns, the spectral radius, response only through couplings, and complements at a non-fixed total.",
+  "source": "§2.6 l.356",
+  "status": "current",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "method",
+  "kind": "law",
+  "title": "C2 equals two conditions; generated-relation counterexample",
+  "summary": "C2 is equivalent to: every bad event with an opportunity has some reasoned executor, and the reason holds alike across fitting executors. Replacing c2 with these two removes no normative content, and factorization alone admits all-zero reasons. A counterexample: relations generated from an empty record give each patient an executor yet fail across executors. 24 audits; 262,144-matrix check.",
+  "source": "NONINSTRUMENTAL-CONCERN.md §9 'Actual attempt to eliminate C2'",
+  "status": "old-base",
+  "note": "Unique formal result about premise elimination; carry to method as an example that rewriting a premise is not removing it",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Round-log structure and history moves of these chapters",
+  "summary": "Each chapter has a status line naming its statement-source record, and its dated round notes have moved to history/…-rounds-2026-10-17/20. Withdrawn sections leave anchors and pointers (ZERO-AXIOM §§2, 5–7; ETHICAL-LEARNING §26, §§29–30, first §37, §§71–74). The Chinese editions (ETHICAL-LEARNING.zh original; ZERO-AXIOM.zh not maintained) add no distinct content.",
+  "source": "status headers of all eight chapters; ETHICAL-LEARNING.md edition note",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "OPENING: no axiom; laws hold of systems defined without them (place/transition nets)",
+  "summary": "Each law is proved from the representation and openly named premises. Each premise is shown holding in one world and failing in another. The core has an empty axiom report. The laws hold as theorems of every place/transition net and of reactions counted in whole molecules, and agree with net theory.",
+  "source": "theories/becoming/OPENING.md, paragraph 4 and [^proof], [^no-law]",
+  "status": "current",
+  "lean": [
+   "World.contingent",
+   "Becoming.PlaceTransitionNets"
+  ],
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "How Ren works (memories and working style)",
+  "summary": "An operating manual from memory exports. A four-move cycle: a raw note that marks its own holes, delegated elaboration, rejection, rewrite. One commitment restated in many vocabularies (keep the possibility space open). A writing discipline: never reduce to one, never silently drop, judgment over rule stacks. It is also the salvage yard of a dozen projects that never became documents.",
+  "source": "theories/memories-and-working-style/README.md, 'What this is' and 'Working method'",
+  "status": "current",
+  "note": "Unique as provenance and method. Partly absorbed into AGENTS.md and the feedback memories. Belongs to method or process, not the theory body.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "A classical name system: 449 names, six rules, 37 characters not adopted",
+  "summary": "Six rules: one concept per name; structural characters only; anchored to Lean (379 of 449); a frozen source, pre-Qin first; each name states what it does not carry; traditional characters for names. Of 248 names with sources, 242 are pre-Qin. 道, 气, 天, 心, 性 and 仁 are not adopted, with reasons. A name table is a code between its users (SharedCodes), not recovered meaning.",
+  "source": "CIVILIZATION-THOUGHT-AND-BECOMING.md §五; ZHONGHUA 附录一, 附录二",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.SharedCodes",
+   "Becoming.CrossSituational.stands_iff"
+  ],
+  "note": "The bilingual naming register with its own rationale; tie it to the naming study §7.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "method",
+  "kind": "definition",
+  "title": "凡例: status markers, function words and logic principles in classical names",
+  "summary": "以明 is the nondual method requirement. 拟 states modelling choices. Four kinds of status: 无设而然, 有设而然, 设 and 讀 (AI, D62). Eleven function words are each fixed to one structure (若 则 故 必 或 皆 莫 莫不 屡 不 未). Logic principles get names: 定然否 (decidable), 不可非 (double negation), 无穷可尽 (LPO), 无穷可定其皆否 (WLPO), 非皆否则有是 (Markov) and others.",
+  "source": "THE-THEORY-OF-BECOMING-ZHONGHUA.md 凡例 凡·一–凡·二十八",
+  "status": "current",
+  "records": [
+   "claims-shown-in-context"
+  ],
+  "lean": [
+   "Becoming.Contextual.glues_iff_agree",
+   "Becoming.Contextual.fitsFree_iff"
+  ],
+  "note": "Carries out HANZI §6 (function words as relation markers, A13).",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "method",
+  "kind": "method",
+  "title": "Testing 'the most fitting expression': fidelity test (FC1) and controlled-English control (ZE)",
+  "summary": "In the fidelity test the classical 經 introduced fewer extra referents than English chapter sentences (−0.71, CI [−0.92, −0.54]). The controlled-English control (449 English names under the same discipline) erases the gap (+0.02, [−0.01, +0.06]). So the gain is the name-table discipline, not Chinese itself. The H2 reading-transfer trial is designed but not run. 'Best' cannot be tested.",
+  "source": "WENLI-AND-BECOMING.md 怎样检验「最合适的表达」",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "A significant negative result for the claim that Chinese is the best medium; carry it. An open observation: the author coder has a blind spot on its own controlled text.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "method",
+  "kind": "argument",
+  "title": "Market model is conventional; what the word generative adds",
+  "summary": "Real-valued proofs cover invariance, attraction, recovery and failure. Lean in experiments/market-generativity/formal checks the rational transitions, boundary inequalities, arbitrary-history invariant, accounting, guard and concrete cases, but not the real limits. An equation-identical conventional controller predicts the same, so 'generative' adds no mathematical advantage. The contribution is the connected composition of supports, rewards, rule dynamics and affected centres.",
+  "source": "MARKET-DYNAMICS-MATH.md, 'Verification and limits'; preamble",
+  "status": "current",
+  "note": "Honest relation-to-known-results statement. The model supplies the liability institution; its legitimacy and formation are not derived.",
+  "unit": "chapters-evolution-markets"
+ }
+]

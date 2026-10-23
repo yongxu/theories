@@ -27,7 +27,8 @@ class StrictFreshTests(unittest.TestCase):
                 patch.object(registry, 'render_index', lambda records: (research.ROOT / register).read_text()), \
                 patch.object(navigation, 'validate_goals', lambda records: []), \
                 patch.object(navigation, 'validate_history', lambda: []), \
-                patch.object(navigation, 'render_views', lambda records: {}):
+                patch.object(navigation, 'render_views', lambda records: {}), \
+                patch.object(research.theory_graph, 'render', lambda records: {}):
             code, result = research.check_or_render(False, strict_fresh=strict_fresh)
         return code, result, calls
 

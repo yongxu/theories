@@ -244,7 +244,7 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "3174f73eb6b6216b31051bfb6df91d1a2a48c23e0f1b1ac23d91c95e1c01d118",
     "theories/becoming/results/records/worlds-are-runs.md": "e2b90d22a29e81baac773d4593dfe5915d33f0cecd7c1e6fb9b241970bdac779",
     "theories/becoming/chapters/README.md": "e541bc02f10cb1071fda51ba141d8b99d91a168ae20a793b9e987104b09b1acd",
-    "_process/research/README.md": "f6e2c5ab72fe794a9edc11f24588afc1a32f4af458b9f92353807aa5904de28f",
+    "_process/research/README.md": "ec765f8583aa6650449bfffe432f9461dda3a58efdfedf963e4d9b0ea6d02216",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "cddbdaad96a6b0f81260bbd6a156c4339a3a4f6c18785885f06b8605287b6c22",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0bb673488ebb025ba6f081c5c1944c234c5198aeedcedefc52603a2cfce22b60",
     "sources/README.md": "20da9e9ccb612b2b131c2f2d440d03b2befdd3a292518a07708d185d34ada682",
@@ -475,6 +475,8 @@
     "theories/becoming/results/records/fidelity-under-one-discipline.md": "1a08971c533fa899792ae141fc44c81ab1f6859604dc3b4a7e00524025794031",
     "theories/becoming/results/records/candidate-theorems-of-the-corpus.md": "ad248cc115023501f44d0e4588a443983f7aee05d2bfdc1aea6f69986fdbf6de",
     "theories/becoming/results/records/generation-and-degeneration-at-two-grains.md": "2969904cfe8e126ddc677449844b73e50e53c33044f9f885157f5dd15909235f",
-    "theories/becoming/results/records/testing-within-the-net.md": "3bf2f483156d74c854da0575fdfd2fe3d38d7e6aeb656a1eaf023236af4b7d2e"
+    "theories/becoming/results/records/testing-within-the-net.md": "3bf2f483156d74c854da0575fdfd2fe3d38d7e6aeb656a1eaf023236af4b7d2e",
+    "theories/becoming/results/data/theory-graph.json": "277d013f2bb64317a9fb9029802f910bc429cc7b97c8372d4eaa6591968ac3b8",
+    "theories/becoming/results/THEORY-GRAPH.md": "46187a71bbb6fc66b612eb68dc82e05a7af18508cbdd4339a85deea7a02bd47c"
   }
 }

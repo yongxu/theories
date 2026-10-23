@@ -1,0 +1,2026 @@
+[
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "A selection reaches exactly what couples into the selector",
+  "summary": "Histories alike through a formation's couplings are selected alike. Optimizing harder through the same couplings reaches no further. What a selection can separate grows only with what couples in. The proposition holds by construction; the premise that an optimizer selects through just those couplings is supplied. Group form: alike through every member's couplings.",
+  "source": "§7.1 l.708-710",
+  "status": "old-base",
+  "lean": [
+   "Web.selects_alike_iff",
+   "Web.SelectsThrough",
+   "Web.selects_alike_all_iff",
+   "Web.SelectsThrough.widen",
+   "Web.observed_raise_couples"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Training as selection through data; right only where what matters is lumped alike",
+  "summary": "Training is right beyond its data exactly where the reachable class is determined there. A selection through a model is right only where what matters goes alike across the model's lumping, and is right through no selection if the model parts what matters. A learner's data are its own generated courses, so training fixes a law only along them.",
+  "source": "§7.1 l.711",
+  "status": "old-base",
+  "lean": [
+   "Training.fit_right_iff",
+   "Learning.selects_right_through",
+   "Learning.selects_not_right_of_parted",
+   "Training.trained_alike_of_along"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "明 route 1: measurement",
+  "summary": "An observed stock's every raise couples in at every step. A route of readings forms by closing, and the stock→record→draw loop forms when recording begins (Observation.Measure). Limit: differences reach a measurement only along routes of reading.",
+  "source": "§7.3 l.739",
+  "status": "old-base",
+  "lean": [
+   "Web.observed_raise_couples",
+   "route_forms_by_closing",
+   "Measure.loop_at",
+   "Measure.couples_after",
+   "apart_only_downstream"
+  ],
+  "records": [
+   "observation-is-a-route"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Reading schedule: one reader, several conditions (pinwheel)",
+  "summary": "A one-condition-per-step reader keeps a condition exactly where it reads within its window, and lateness shortens windows. The reciprocals of the windows sum to at most one. Windows 2, 3, M fail despite idle capacity, while density at most one half suffices (dyadic). Kawamura's threshold of 5/6 is cited, not proved; the draw is diffuse.",
+  "source": "§7.3 l.740",
+  "status": "old-base",
+  "lean": [
+   "ReadingSchedule.keeps_iff_within",
+   "ReadingSchedule.keeps_density",
+   "ReadingSchedule.spare_not_enough",
+   "ReadingSchedule.keeps_of_half"
+  ],
+  "records": [
+   "one-reader-several-conditions",
+   "RS1",
+   "reading-schedule check"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "明 route 2: a model",
+  "summary": "Relative to a model, observing a stock excludes at the first step false claims that it comes to nothing. With the law given, a counterfactual is the generated course. Limit: a wrong model can exclude what holds.",
+  "source": "§7.3 l.741",
+  "status": "old-base",
+  "lean": [
+   "Flow.excludes_tail_within",
+   "Stationary.model_error"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "明 as relation; 识/理/明 one structure; situational awareness",
+  "summary": "明 is a relation that widens as couplings are joined. 识 is a course factoring through one's lumping; 理 is a lumping the world goes alike across; 明 is the widening of couplings. Situational awareness is 明 of one's own reach, bounded by the influence closure and widened only by observation. Holding 明 for others means keeping the three routes open. A lasting change must reach the rule.",
+  "source": "§7.3 l.744",
+  "status": "current",
+  "records": [
+   "D20",
+   "D26",
+   "D45"
+  ],
+  "lean": [
+   "goAlike_iff_lumped",
+   "Flow.Balances.uncoupled_beyond_influence",
+   "Flow.withinCoupling_of_withinInfluence",
+   "Flow.withinCoupling_thresholdOnly",
+   "Flow.withinCoupling_mono_obs",
+   "Web.admits_through",
+   "Clearing.selected_by_dweller"
+  ],
+  "note": "The 识/理/明 unity is shared with the knowing and classical regions",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "What training installs (TI1, TI2)",
+  "summary": "A law is installed only along its own courses. Representation laws are installed where the lumping cannot tell a history from a course; elsewhere behaviour is free. Through a reward, candidates are trained alike exactly where their levels are alike. Improving search keeps its start and rests within the bound, with implicit bias in narrow neighbourhoods. In a commons, an end reading at any weight changes nothing when the others outrun.",
+  "source": "§7.5 l.781; §7.7 l.798",
+  "status": "old-base",
+  "lean": [
+   "Training.trained_alike_of_along",
+   "Training.explored_same_courses",
+   "Training.installed_where_lumped",
+   "Training.response_free_where_unlumped",
+   "Training.response_free_off_courses",
+   "Training.trained_alike_iff",
+   "Training.settles_apart",
+   "Training.trained_alike_beyond_closure",
+   "Training.settled_stays",
+   "Training.comes_to_rest",
+   "Training.LocalSearch.rests_iff",
+   "Training.outrun_settles_iff",
+   "Training.Commons"
+  ],
+  "records": [
+   "TI1",
+   "TI2",
+   "study §363",
+   "what-training-installs",
+   "CG3",
+   "study §254",
+   "study §303"
+  ],
+  "note": "The EM1 reading as representation installing across states is marked [AI reading, untested]",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Observation is a route downstream",
+  "summary": "Observation lies within the downstream: a difference goes only downstream.",
+  "source": "row 1018",
+  "status": "old-base",
+  "records": [
+   "observation-is-a-route"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "§3.1 laws along a run, causal models, experiment and testing",
+  "summary": "A law along one run under a relation, a projection carrying a law, standard causal models as processes, exactness of derived history laws, differences below threshold, experiment needs return, testing within couplings, and spine instances (comparison extends to every frame under the lifting rule, A and C). Two coupling-along-run records are marked superseded.",
+  "source": "rows 1030-1039",
+  "status": "old-base",
+  "records": [
+   "a-law-through-a-projection-along-one-run",
+   "becoming-spine-instances",
+   "causal-models-as-processes",
+   "derived-history-law-exactness",
+   "differences-below-threshold",
+   "experiment-needs-return",
+   "projection-carrying-a-law",
+   "testing-within-couplings"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "§3.2 learning in the limit and finite verification",
+  "summary": "A history is read off its finite stretches. Learning through a map is tracking in the limit. Also covers what a finite history refutes, what a finite stretch verifies and none refutes, and what a method says in the limit.",
+  "source": "rows 1040-1044",
+  "status": "old-base",
+  "records": [
+   "a-history-read-off-its-finite-stretches",
+   "learning-through-a-map-is-tracking-in-the-limit",
+   "what-a-finite-history-refutes",
+   "what-a-finite-stretch-verifies",
+   "what-a-method-comes-to-say-in-the-limit"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "§3.3 identification, generalization, lumping, typicality",
+  "summary": "Claims shown in context, generalization through lumping, identification where bounded and where runs part, learnability through a map, extrapolation by elimination, readings within what they read, revision with an undecided value, the split that makes sense, transition grouping recovering word partitions, typicality by counting, weights counting situations, what extrapolation given nothing fixes, and what finitely many labels fix.",
+  "source": "rows 1045-1058",
+  "status": "old-base",
+  "records": [
+   "claims-shown-in-context",
+   "generalization-through-lumping",
+   "identification-where-bounded",
+   "identification-where-runs-part",
+   "learnable-through-a-map",
+   "learning-by-refutation",
+   "readings-within-what-they-read",
+   "revision-with-an-undecided-value",
+   "the-split-that-makes-sense",
+   "transition-grouping-word-partition",
+   "typicality-by-counting",
+   "weights-count-situations",
+   "what-an-extrapolation-given-nothing-fixes",
+   "what-finitely-many-labels-fix"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "§3.5 inquiry, joining, binding and question recovery",
+  "summary": "Branching and joint target uniqueness, branching tests and bisimulation, derivation soundness, exclusive footprints, fallible witness diagnosability, a finite basis's common interpretation, joining structure (functional, multivalued, open-map factor, encoding, finite joining trees), question recovery, incidence refinement and unanchored collapse, prefix observation loss, residual continuation, and binding of sources and scenes (many periphery). Also assessments and one open target (scientific-inquiry-foundation).",
+  "source": "rows 1090-1119",
+  "status": "current",
+  "records": [
+   "acquired-binding-compositional-use",
+   "binding-preserving-substitution",
+   "branching-target-uniqueness",
+   "branching-tests-bisimulation",
+   "context-sensitive-updating-correspondence",
+   "derivation-soundness",
+   "enacted-scene-binding",
+   "exclusive-footprint-support",
+   "fallible-witness-diagnosability",
+   "finite-basis-common-interpretation",
+   "finite-continuation-plans",
+   "finite-fallible-inquiry-necessity",
+   "finite-granularity-question-recovery",
+   "finite-joining-tree-lifting",
+   "functional-joining-common-structure",
+   "guarded-program-question-recovery",
+   "historical-source-binding",
+   "incidence-common-refinement",
+   "joining-open-map-factor",
+   "joining-questions-survive-encoding",
+   "joint-target-uniqueness",
+   "mediated-evidence-transport",
+   "multivalued-joining-common-structure",
+   "naming-attention-coverage",
+   "prefix-observation-loss",
+   "residual-continuation-correspondence",
+   "retained-reference-joining-recovery",
+   "retrospective-source-binding",
+   "scientific-inquiry-foundation",
+   "unanchored-incidence-collapse"
+  ],
+  "note": "Early-generation records that may duplicate later knowing laws. Check for overlap.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "knowing",
+  "kind": "definition",
+  "title": "Context-free claims as a frame commitment",
+  "summary": "A frame reads what is shown of a claim as independent of what is shown with it; quantum states do not meet this (Becoming.Context).",
+  "lean": [
+   "Becoming.Context"
+  ],
+  "source": "§0 block A, l.81",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Contextual gluing and parity systems",
+  "summary": "Views in context form one world; context-free description exists iff they glue; under parity constraints a mixture of context-free readings meets at most m−1 of m contexts on average (Specker, CHSH, Mermin-Peres instances); change readings glue iff flow balances (World.unity); frame-to-world with loss.",
+  "lean": [
+   "Contextual.world",
+   "Contextual.fitsFree_iff",
+   "ParitySystem.glues_iff",
+   "ParitySystem.mixture_le",
+   "Flow.changeReadings_glue_iff",
+   "World.unity",
+   "Frame.world",
+   "Frame.world_fixes_run"
+  ],
+  "records": [
+   "unity-of-readings",
+   "gluing-under-parity",
+   "becoming-context-coherence"
+  ],
+  "source": "§1.1, l.170",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "ClassifiedBeliefProcesses: decided narrowing classifies beliefs",
+  "summary": "A narrowed belief whose inhabitation is decided is either empty or inhabited. Where every such belief is decided, beliefs are classified at every depth, and bounded sufficiency is the implication form. No premise is needed.",
+  "source": "§9 zh-table row ClassifiedBeliefProcesses (l.1533)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.ClassifiedBeliefProcesses",
+   "after_empty_or_inhabited",
+   "classified_of_decidable",
+   "sufficiency_iff_implication_of_decidable"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "MoveOutcomeProcesses: covering of processes",
+  "summary": "One process covers another exactly where every target the first completes in one step the second also completes (covers_iff). Covering is a preorder kept along revision. It fails exactly where some target is not carried, and with DNE as a hypothesis the lost target can be named. Four witness processes show that more outcomes need not cover and that a summary can hide a loss.",
+  "source": "§9 zh-table row MoveOutcomeProcesses (l.1534)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.MoveOutcomeProcesses",
+   "covers_iff",
+   "covers_along",
+   "not_covers_iff"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "One reader, several conditions: keeping is reading within the window (RS1)",
+  "summary": "A schedule reading one condition per step keeps a condition within margin m against all balanced draws ≤ d iff it reads it within every a steps, with (a+ℓ)d ≤ m < (a+1+ℓ)d; what one reader keeps is a pinwheel density question.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.4 (line 512)",
+  "status": "old-base",
+  "lean": [
+   "ReadingSchedule.keeps_iff_within",
+   "Flow.Balances.retains_of_read",
+   "ReadingSchedule.within_of_keeps"
+  ],
+  "records": [
+   "one-reader-several-conditions"
+  ],
+  "note": "Could sit in map (regimes) or collective; study §310",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "CK1: what a center can come to know of its region",
+  "summary": "Routes counted by coupling links; from an act at S a route reaches a condition at t only within t−S links; no answer differs unless a coupled condition lies within T−S links; representable region grows at most one link per step (Relay attains). Under TimedResponse deadline premises.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 547)",
+  "status": "old-base",
+  "lean": [
+   "TimedResponse.answer_alike_far",
+   "TimedResponse.Linked",
+   "TimedResponse.Spread.linked",
+   "TimedResponse.reachedBy_within_response",
+   "Relay"
+  ],
+  "records": [
+   "CK1"
+  ],
+  "note": "study §357",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "CK2: how a center forms; acts return iff loop closed",
+  "summary": "InOneLoop equivalence; a formation's acts return iff its loop is closed under affecting; then everything it acts on is representable (level coupling; exactly so for threshold); loops only merge as exchange grows; finite with decided reach, a returning formation exists in every reach. AI reading: a center is such a loop.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 548)",
+  "status": "old-base",
+  "lean": [
+   "Flow.reachReturns_iff_closed",
+   "Flow.InOneLoop",
+   "ReachReturns.represented",
+   "Flow.reachReturns_iff_represented",
+   "InOneLoop.mono",
+   "Flow.exists_reachReturns",
+   "Line"
+  ],
+  "records": [
+   "CK2"
+  ],
+  "note": "study §360; persistence along a run not derived",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "T6. A break is seen coming only through what couples into what breaks",
+  "summary": "Invisible half, proved: coupling by threshold only bounds nothing (break_not_bounded); a policy uses an unobserved stock only after failure. Seen half, proved in the periphery (Becoming.SlowingDown, Mathlib, CS1): AR(1) variance and lag-1 autocorrelation, divergence at a fold and at a transcritical end, the margin read back, and a dependent's need not read by the stock's statistics (by construction). This is critical slowing down restated. That it is one law across domains is conjectured.",
+  "source": "THE-THEORY-OF-BECOMING.md, T6, lines 1316-1320, 1324",
+  "status": "old-base",
+  "lean": [
+   "Web.break_not_bounded",
+   "Flow.policy_uses_after_failure",
+   "Web.observed_raise_couples",
+   "Becoming.SlowingDown",
+   "stationary_variance",
+   "stationary_lag1",
+   "fold_variance_strictAntiOn",
+   "fold_variance_tendsto",
+   "drawn_variance_strictMonoOn",
+   "drawn_variance_tendsto",
+   "fold_margin_read",
+   "drawn_level_read",
+   "drawn_multiplier_level",
+   "need_not_read",
+   "need_margin_read"
+  ],
+  "records": [
+   "CS1",
+   "EW1",
+   "slowing-down-before-an-own-end"
+  ],
+  "note": "Sharpened twice. The second time (EW1) the first wording was refuted from the literature: warnings follow the observed return rate, so what they never read is where the need lies.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "T6 evidence: EW1 literature, EW2, EW3, EW4 seabird field tests",
+  "summary": "Literature is consistent (Dai 2012, 2015; Boerlijst 2013; Dekker 2018; Drake-Griffen 2010; Clements 2017). EW2 on Benguela and Rost passed at low power, with estimates in the refuting direction (about 0.3). EW3 on longer series with the catch as the draw passed at power about 0.9 with estimates near zero; the variance result resolves EW2 toward T6, the autocorrelation stays open. EW4 on Farallon passed at power about 0.5. No simulation was built (it could fail only on its code).",
+  "source": "THE-THEORY-OF-BECOMING.md, T6 evidence, line 1323",
+  "status": "current",
+  "records": [
+   "EW1",
+   "EW2",
+   "EW3",
+   "EW4",
+   "study §286",
+   "§289",
+   "§350",
+   "§352"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "knowing",
+  "kind": "open",
+  "title": "§8.1 item 7: which law holds and how a member's law comes about",
+  "summary": "R38: the return map is a premise; one turn around a cycle is exact. AP1: reading another's couplings is pooling. AP2: knowing another's law adds anticipation, never reach. TI1/TI2: training installs a law only along its own courses, where a lumping cannot tell histories apart, through the reward's closure, and with settled laws as basins. Open: the law of exchange itself, actual lumpings, probabilistic learning and implicit bias.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 7, line 1369",
+  "status": "old-base",
+  "lean": [
+   "LoopReturn.responds_iff",
+   "LoopReturn.carried_around_exact",
+   "Flow.withinCoupling_reads_iff",
+   "Flow.unselected_beyond_reads",
+   "Web.anticipates_iff",
+   "Web.anticipation_misses",
+   "ExchangeLaw.Through.anticipated",
+   "ExchangeLaw.levels_agree_of_along",
+   "Training.trained_alike_of_along",
+   "Training.explored_same_courses",
+   "Training.installed_where_lumped",
+   "Training.response_free_where_unlumped",
+   "Training.trained_alike_iff",
+   "Training.trained_alike_beyond_closure",
+   "Training.settled_stays",
+   "Training.comes_to_rest",
+   "Training.LocalSearch.rests_iff",
+   "Training.outrun_settles_iff",
+   "NoisyLaw.readOffExchange"
+  ],
+  "records": [
+   "R38",
+   "AP1",
+   "AP2",
+   "TI1",
+   "TI2",
+   "XL4",
+   "how-much-difference-arrives",
+   "what-a-pools-acts-respond-to",
+   "selection-through-couplings",
+   "learnable-through-a-map",
+   "reading-anothers-couplings-is-pooling",
+   "what-training-installs",
+   "study §233",
+   "§282",
+   "§305",
+   "§363"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "§8.7 selection laws on actual pipelines and learners; wisdom formation",
+  "summary": "CR1: published training and monitoring pipelines meet §7.1's premise by construction, and three measurements find the room clause. EM1: generalizing learners follow the law on every course, not CG2's bridge on the locked side. LA1, a language-model agent test, is next. Open: how wisdom forms; which lumping an architecture imposes; identified installations of the §7 mechanisms.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.7, lines 1433-1434",
+  "status": "current",
+  "records": [
+   "CR1",
+   "EM1",
+   "LA1",
+   "CG2",
+   "generalization-through-lumping",
+   "situated-recovery-empirical-correspondence",
+   "study §358",
+   "§359"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "knowing",
+  "kind": "open",
+  "title": "§8.9 objection: which function is learned",
+  "summary": "The §7.1-§7.4 laws hold for every selection through couplings and say nothing about which function training installs: inductive bias, goal misgeneralization, deception. It would be answered by results on which law a trained system's acts follow, joined to the learning laws, and by evidence of identified installations.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1489",
+  "status": "current",
+  "note": "Partly superseded by TI1/TI2 (Training) in §8.1 item 7, which states where installation is fixed and where it is free. The objection should be updated to say so.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquiring correction routes: positive evidence vs negative closure",
+  "summary": "Depth-first search over a finite inspection tree acquires a command endpoint. A found route justifies acting, but a claim of no route needs real exhaustion, and running out of budget returns pending. For N nodes, 2N+3 units suffice. Recheck against current authority is required. A countermodel shows a captured credential process passes the freshness gate. 24 theorems, 45 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §6",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Enough evidence for correction under several causal descriptions",
+  "summary": "Pooling the fault sets of every retained description keeps certificates sound without a unique explanation. Availability can still be lost when descriptions that pass separately are combined. A one-unit structural inspection restores a usable common envelope without full identification. The policy acts on a certificate that passes at once, and complete knowledge is not an ethical aim. 24 theorems, 47 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §9",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Fallible witnesses and contested control (ambiguity criterion)",
+  "summary": "Complete transcripts tell opposing answers apart exactly when every cross pair of admitted fault sets leaves a witness outside their union. A four-witness example exhibits circular certification, where two rival models each certify their own answer. A fifth witness with distinct support resolves it even if it lies. Reporting competence, command permission and legitimacy are distinct roles. 24 theorems, 41 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §10",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Evidence across changing control (temporal fault transitions)",
+  "summary": "Faults that move over time can make every report false. The observer expands paired possibilities through admitted transitions before filtering, and the actual configuration stays represented. A control change can reopen excluded arrangements, so old verdicts are neither kept nor expired mechanically. A mislabelled change yields false confidence. 34 theorems, 66 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §11",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Evidence carried by executed changes (mediated control)",
+  "summary": "An interpreter derives the scope of a change from the fields its program writes and transports every retained possibility exactly, so coverage is kept without a fresh survey. Commits revoke old requests. A checked failure shows an extra write path that leaves the public view identical, so logging cannot establish complete mediation. 27 theorems, 57 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §12",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Central candidate: cognition, learning, development and evolution in one process",
+  "summary": "Cognition forms when differentiated organization makes consequential relations available to discrimination, skill, anticipation, representation and reflection. Learning changes that organization over its history, development reconstructs capacities, and evolution changes the distributions through which these recur. These are distinguishable relations in one process, not substances, and none is automatically ethical.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md preamble",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "open",
+  "title": "Completion obligations for cognition, learning and evolutionary psychology",
+  "summary": "A ten-row table records the dispositions. Partial: access and control, perception and attention, systematic thought, development, explanatory adequacy. Completed at stated scope: knowledge and content, learning laws, evolutionary organization. Incomplete: motivation and affect. Open: consciousness. The rows are obligations for coverage, not gates on completed work.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §1",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "definition",
+  "title": "Higher orders as functional and relational: regulation, learning, meta-learning, reflection",
+  "summary": "Regulation changes a condition, learning changes a disposition, meta-learning changes how modifications occur, and reflection makes formative relations into content. Evolution and institutions alter which learners continue. A slower timescale or a separate component does not establish a higher order, and one encompassing transition function does not explain how learning relations arise.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 (opening)",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Laws of learning without axiom (P73, P74)",
+  "summary": "No record fixes the next value. Every learner has an open course that refutes each of its claims, and refutation learning never rejects a true hypothesis. Where a list holds the world, refutations are bounded and the final rest is unrefuted though its time is not registered. Learning to learn is the same learning over merged classes, each merge with its diagonal course. Transfer is generalization through a lumping; without a class, data fix nothing.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 'Laws of learning on the Becoming spine (P73, P74)'; §1 table rows",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Learning",
+   "Becoming.Learning.Determines",
+   "every_determines_nothing"
+  ],
+  "records": [
+   "P73",
+   "P74"
+  ],
+  "note": "The only spine module in this unit. It is stated on the World-era spine and should be restated on the grammar root.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Network learning as one determined process on the joint configuration",
+  "summary": "The periphery bridge LearningCorrespondence reads the earlier networks as instances. With fixed weights, development is the orbit of the step, and Hebbian learning or a route of updating is one determined process on the joint configuration. Activity has a law of its own exactly where the weights make no difference. The responsive route learns exactly where the task fails.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 (P73/P74 second paragraph)",
+  "status": "old-base",
+  "lean": [
+   "LearningCorrespondence"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "From organization to cognitive activity: access, skill, content, understanding, imagination",
+  "summary": "Access is selective, and measurement can change what it measures. Skill can work without explicit sentences and depends on bodily and social supports. Content survives a false report. Understanding is differentiated answerability, not settled by a finite battery. Imagination evaluates without enacting, and that difference must be implemented in actual paths. The knowledge account is reused here.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §3",
+  "status": "current",
+  "note": "Overlaps KNOWLEDGE.md, which it reuses.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquired interpretation of unencountered combinations",
+  "summary": "Three probe encounters recover a uniform compositional law and so fix every finite expression in the grammar, including untried ones. On the spine, uniform_determines and nonuniform_not_determined show that uniformity is the lumping doing the work. Primitive-only data cannot identify argument order, and a nonuniform law can match training. Costs are 11 units for success versus 7.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §4 (incl. 'On the Becoming spine (P74)')",
+  "status": "old-base",
+  "lean": [
+   "CompositionalAcquisition",
+   "uniform_determines",
+   "nonuniform_not_determined",
+   "every_determines_nothing"
+  ],
+  "records": [
+   "P74"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Formation and repair of the operative composition route",
+  "summary": "Generic connectors form candidate routes, which are tested against retained records and replaced on failure. A duplicating route passes the old records but fails an asymmetric case, and a reference encounter repairs it. With the asymmetric demonstration, all-expression correctness holds across the four-route family. Without spare parts, an error is recorded but not repaired. 37 theorems, 65 audits.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §4 'Formation and repair of the operative connection'",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Learned content, acquired motives and changing ends are distinct roles",
+  "summary": "A learned relation can guide prediction, explanation, pursuit or the questioning of an end. In the minimal model, one interpreter supports different choices under two supplied preferences. Affect must connect bodily regulation, salience and felt quality. A motive's history does not certify it, and ethics follows the conditional alignment route.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §5",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "Formation, retention and use develop differently (developmental and comparative constraints)",
+  "summary": "Explaining someone's earlier lack of access does not show that explanation guides later word learning. Item memory differs from encounter memory, and access sensitivity from mental-state understanding. Similar task performance cannot tell conserved, convergent and differently trained solutions apart. A matched comparison is proposed, not performed.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Formation, retention and use can develop differently'",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquired grouping (segmentation) changes what reaches the operation",
+  "summary": "A grouping relation derived from observed transitions is used before decoding, with partition and decoding theorems for every finite sequence. Failures kept: identical frequencies can hide different transitions, gaps do not become adjacencies, repetition merges units, and partial experience misgroups. 23 theorems, 51 audits.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Acquired grouping changes what reaches the operation'",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquiring and correcting form-to-operation bindings from ambiguous encounters",
+  "summary": "Bindings are learned by cross-situational intersection and then used in message assembly. Repeated identical ambiguity establishes nothing, and a scene missing the intended alternative yields a wrong binding. Excluding a misleading source restores use, while excluding the sound one preserves error, so correction needs a source judgment. 23 theorems, 41 audits.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Acquiring and correcting the binding used in interpretation'",
+  "status": "old-base",
+  "records": [
+   "acquired-binding-compositional-use"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Enacted access: movement and naming generate the binding scene",
+  "summary": "Supported movement changes the receiving position, and naming plus position generates the binding records; the all-sequence theorem is reused through an input equality. Stationary repetition stays ambiguous, blocked storage acquires nothing, mistimed naming inverts bindings, and a narrow view gives confident error. 16 theorems.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Activity changes which encounters become available'",
+  "status": "old-base",
+  "records": [
+   "enacted-scene-binding"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquired access guides encounter selection and revision",
+  "summary": "Visits are chosen from current binding ambiguity and retained access reports, and reobservation revises a stale access model without erasing it. A restricted catalogue can leave ambiguity, learning can exhaust execution support, and a wrong unique binding can satisfy the stopping rule, so apparent certainty does not establish reference. 22 theorems.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Acquired access guides further encounters'",
+  "status": "old-base",
+  "records": [
+   "encounter-selection-and-revision"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "Public gaze records constrain automatic naming→target-gaze coverage",
+  "summary": "Of 1,508 naming events from 36 infants, 467 three-second windows show gaze to other objects and none to the target (35 infants), and 393 five-second windows do the same. This limits automatic coverage without showing wrong learning. Discrepancies with the published counts are unresolved.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Public gaze records constrain encounter coverage'",
+  "status": "current",
+  "records": [
+   "naming-attention-coverage"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "Encounter control vs later retained use (curiosity dataset)",
+  "summary": "With 75 participants and 451 trials, Curiosity−Yoked is −1.34 pp (95% interval −10.38 to +7.69) and Curiosity−Random is +0.50 pp (interval −8.08 to +9.08). This shows neither an advantage nor equivalence. The target is a history-dependent change in how new evidence is used.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Encounter control and retained use must be connected'",
+  "status": "current",
+  "records": [
+   "encounter-control-and-retention"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Later source learning reinterprets earlier records (retrospective source binding)",
+  "summary": "Later calibration narrows the production routes and so resolves two old ambiguous naming records without new naming, and the bindings then transfer. Accurate late calibration can misread a report made under an earlier propagation law. Remembered content, present source assessment and historical applicability stay distinct. 20 theorems.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §2 (retrospective paragraph) and §6 'Later source learning changes the use of earlier records'",
+  "status": "old-base",
+  "records": [
+   "retrospective-source-binding"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Evidence about when the source changed (historical source binding)",
+  "summary": "Dated controls constrain production histories, and a report is read with the routes possible at its own date. Under a one-change envelope, matching controls before and after support an old binding despite later deterioration, and later improvement does not make old false reports true. An omitted temporary change gives a wrong binding. 10 theorems.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §6 'Evidence about when the source changed'",
+  "status": "old-base",
+  "records": [
+   "historical-source-binding"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "open",
+  "title": "Next evidence: coordination cues → encounter admission → retained reference",
+  "summary": "Next steps: connect locally available reliability cues to the admission and weighting of encounters and to correction. A matched developmental test of task-sensitive use of access and source/order information is proposed. Mature structure does not identify its formative history. Consciousness, affect, natural language, social understanding and joint developmental-evolutionary correspondence remain open.",
+  "source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md §7",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "knowing",
+  "kind": "example",
+  "title": "Control coherence loss: dephasing by a blank register, restored by reversal",
+  "summary": "Controlled X/Z order on a prepared control gives plus-outcome probabilities 1, 0 and 1/2 after dephasing. The off-diagonal term carries the response that branch weights omit. Reduced matrices of different preparations coincide, so no local function recovers them, but retaining the joint interaction permits restoration. Quantum theory is supplied.",
+  "source": "BECOMING-FOUNDATION.md §8",
+  "status": "superseded",
+  "records": [
+   "control-coherence-loss"
+  ],
+  "note": "27 theorems, 10 with standard dependencies; the record now states it",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Invariants, May/Must composition, determinism and vacuity",
+  "summary": "An initial fact preserved by every step holds at every trace endpoint (trace_invariant, reach_invariant, invariant_excludes_endpoint). May and Must compose over word concatenation. Must is vacuous without feasibility. Under determinism, May implies Must. Naming a predicate Safe or Alive explains nothing, and invariance gives no normative warrant.",
+  "source": "MATHEMATICAL-CORE.md, Predicates…; Possibility and conditional prediction",
+  "status": "current",
+  "lean": [
+   "trace_invariant",
+   "reach_invariant",
+   "invariant_excludes_endpoint",
+   "CorePredication"
+  ],
+  "note": "12 elementary pedagogical theorems; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "History realization: finite-word feasibility of any process realized by a prefix-closed language",
+  "summary": "With full history as state, a word is feasible iff it lies in the prefix-closed language, and every process's feasible-word language has such a realization. Exact for word feasibility only, not hidden states, branching or probabilities. A state relation need not discard history, but any compression needs proof.",
+  "source": "MATHEMATICAL-CORE.md, History without a hidden memorylessness assumption",
+  "status": "current",
+  "lean": [
+   "HistoryRealization"
+  ],
+  "note": "pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Exact abstraction: preservation plus lifting iff exact finite-history contract",
+  "summary": "For a summary map, every step projects (preservation) and every summary step lifts from each detailed state (lifting) exactly when summary traces correspond to detailed traces. States differing in some word's feasibility cannot be identified by an exact summary; the ready/spent observation example shows this.",
+  "source": "MATHEMATICAL-CORE.md, Exact abstraction and consequential distinctions",
+  "status": "current",
+  "lean": [
+   "projection_exact_iff",
+   "local_exact_iff_trace_exact"
+  ],
+  "note": "pre-spine; spine lumping and abstraction results likely supersede it",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Frozen-context footprint test; counts are insufficient; selective one-bit compression",
+  "summary": "A local word replays in a frozen context iff its footprint slots are free there (guarded_substitution). A total occupancy count cannot decide readiness. A one-bit projection is exact for a selected workload but loses disjointness and other release information (safe_projection, visible_guard_exact). MayBy budgets transport word length under preservation and lifting.",
+  "source": "GENERATED-LOGIC.md §7–§10",
+  "status": "current",
+  "lean": [
+   "guarded_substitution",
+   "safe_projection",
+   "visible_guard_exact"
+  ],
+  "note": "220 audits; credits Iris and Leaf; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Future access scope fixes what a summary may forget",
+  "summary": "With the route fixed, all permitted words have the same feasibility iff occupancy agrees on every slot in the permitted set K. A newly admitted probe can distinguish states old observations cannot (hidden_formed). Redirecting the route can change readiness while occupancy stays the same. An old view plus destination cannot reconstruct an updated view without a fresh reading (refreshed_view).",
+  "source": "GENERATED-LOGIC.md §11",
+  "status": "current",
+  "lean": [
+   "hidden_formed",
+   "redirect_changes_readiness_only",
+   "refreshed_view"
+  ],
+  "note": "credits rely-guarantee and abstraction repair; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquired tickets support native use under atomic validation; exhaustion bound",
+  "summary": "Revision-checked tickets with atomic validate-and-use project every extended trace to a legal native trace (one-way refinement). A relevant update invalidates a ticket, and an untracked writer breaks mediation. For every finite budget B, B failed-read cycles exhaust it (B ≥ n+2 for a quiet history).",
+  "source": "GENERATED-LOGIC.md §12",
+  "status": "current",
+  "lean": [
+   "AcquiredSupportUse",
+   "AcquiredSupportUseCases"
+  ],
+  "note": "28 theorems, 20 with propext/Quot.sound; credits optimistic validation; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Scientific-philosophy compatibility conjecture: an adequate account of inquiry respects the conditions it requires",
+  "summary": "If D's assumptions hold and I realizes D, then C_D(I). A philosophy cannot endorse A_D and realizability while denying C_D. Compatibility is a requirement of adequacy, not a badge, and is insufficient for standing. The chain runs from consequential differences to evidence, retention, inference, criticism and rule reconstruction, with each arrow a separate obligation.",
+  "source": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md §1, §2, §8",
+  "status": "current",
+  "records": [
+   "scientific-inquiry-foundation"
+  ],
+  "note": "open target (canonical §8.1)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Necessary conditions table and TV bound on discrimination",
+  "summary": "Six conditions (accessible differentiation, inference interface, warranted restrictions, preservation through composition, revision, continuing support) each tied to a capability. The best equal-prior binary error is (1 − TV)/2, and post-processing cannot raise distinguishability. A two-world inverted-sensor case shows correction cannot replace calibration.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §3, §3.1, §3.2",
+  "status": "current",
+  "note": "hand proofs in the SCIENTIFIC-INQUIRY-CONDITIONS note; conventional statistics, no priority claimed",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Unrestricted induction obstruction and the completed conditional laws",
+  "summary": "Over all binary streams, no rule predicts the next bit with worst-case error below 1/2 (cf. Hume). The positive task is done conditionally on the core: learning by refutation, generalization through lumping, and identification under state bounds.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §3.3",
+  "status": "current",
+  "records": [
+   "learning-by-refutation",
+   "generalization-through-lumping",
+   "identification-where-bounded"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Sustained inquiry needs provision: cN(t) ≤ B0 + P(t); survival does not decide truth",
+  "summary": "If each inquiry consumes at least c of a support, unbounded inquiry needs unbounded provision. Two identically maintained machines with different unread propositions show persistence cannot adjudicate truth.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §3.4",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Comparison with Peirce, Popper, Kuhn, Quine, van Fraassen, Longino, Lakatos and Carnap",
+  "summary": "Each position is tied to a connection and a constraint (stabilization is not validity; tests must be able to count against a claim; shared values give no algorithm; …). Carnap blocks the inference from using distinctions to accepting the ontology. Lakatos: integration must do more than redescribe. No containment of traditions is claimed.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §4",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "Evidence about science: registered reports and the counterexample boundaries",
+  "summary": "Scheel et al. show that the publication format changes the positive-result rate (evidence selection), without isolating cause. Twelve preserved counterexamples include: evidence without learning, external support, wrong evidence-sensitive change, prediction without concern, and plural vocabularies.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §5, §6",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "open",
+  "title": "Status table of 6 Oct and revision criteria",
+  "summary": "Lists what is established conditionally, what is rejected (learning dynamics alone give warrant or concern) and what is unestablished (full ontology required; unique supply of conditions). Revision triggers: a realization violates a condition, a hidden oracle, an erased disagreement, or a root that adds no constraint.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §7, §8",
+  "status": "superseded",
+  "note": "§9 supersedes the research queue; the revision criteria are live",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Finite fallible inquiry necessity: coverage ≤ false-answer weights + distinguishing weight",
+  "summary": "For finite weighted alternatives, committed coverage is bounded by error weights plus the available distinguishing weight. Identical accessible answers force errors; a noisy case attains the bound. A relational simulation witness extends this to adaptive inquiry. Denying a relation while claiming the achievement that requires it is the conflict.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md, Fallible inquiry and necessary relational constraints",
+  "status": "current",
+  "records": [
+   "finite-fallible-inquiry-necessity"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Tests fix likeness where determined (alike_iff_sameTests)",
+  "summary": "Where frames are determined up to relational likeness, agreement on every finite course possibility and endpoint claim is equivalent to likeness, across different configuration types. Same move courses with different branching shows the limit. Three obligations remain: the conditional law, actual correspondence, and whole-core indispensability.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §9",
+  "status": "current",
+  "lean": [
+   "Becoming.alike_iff_sameTests"
+  ],
+  "records": [
+   "tests-fix-likeness-where-determined",
+   "testing-within-couplings",
+   "claims-shown-in-context"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Discrimination needs responsive reach; common residual exchange suffices",
+  "summary": "Under balance, matching registrations and a complete interface, coverage ≤ error weights + weight within responsive reach; entirely beyond reach, coverage equals the error weights (Flow.alike_beyond_response). Omitting the giving breaks balance without breaking the task. Common residual exchange suffices for answer equality beyond reach, a weakening of balance.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §10, §11",
+  "status": "old-base",
+  "lean": [
+   "Flow.alike_beyond_response"
+  ],
+  "records": [
+   "finite-fallible-inquiry-necessity"
+  ],
+  "note": "periphery adapter (13 + 15 theorems, propext/Quot.sound); on the Flow/ExchangeLaw base",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Task-specific warrant without exhaustive device knowledge; preserve task-relevant continuation content",
+  "summary": "Warrant concerns the restrictions licensing an inference, distributed across construction, calibration and cross-checks; a full instrument law is not required. A task's continuation content (operations available at a reached stage) must be preserved, while traces with both endpoints already determine steps. A finite experiment does not reconstruct bisimulation.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §12, §13",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "A distinction must arrive in time: timely route bound",
+  "summary": "With matching initial levels, balance before the answer step and a complete readout, no timely route implies equal answers. Committed weight ≤ error weights + timely-route weight. The time-ordered route refines whole-course reach, as a delayed signal shows.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §14",
+  "status": "old-base",
+  "note": "periphery; flows and webs base",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Scientific standing: inspectable grounds and operative correction routes; the form of insulation",
+  "summary": "Claimed empirical authority needs inspectable grounds; claimed correction needs routes from defeats to changed conclusions. Insulation exists exactly where no finite record refutes the favoured verdict, but this form alone does not decide standing, since honest hypotheses about unending courses are also unrefutable.",
+  "source": "SCIENTIFIC-PHILOSOPHY.md §15",
+  "status": "current",
+  "records": [
+   "what-a-finite-stretch-verifies"
+  ],
+  "note": "proposed demarcation standard; author counterreview only",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "definition",
+  "title": "Propositional knowledge: a true, available commitment competently connected to its truth-maker, not accidental relative to relevant errors",
+  "summary": "Defended candidate. Knowing-that, understanding (grasp of dependencies) and knowing-how are distinct. Knowledge need not have produced use, and knowing does not create its facts. Five conditions: determinate content and uptake, correctness, competent grounding, protection against relevant error, present warrant under defeaters.",
+  "source": "theories/becoming/chapters/KNOWLEDGE.md, The account; What makes the connection epistemic",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "How knowing differentiates; uptake; content and misrepresentation",
+  "summary": "A knowing position is an organized capacity to take up differences. The whole is not one knower. Uptake is a content-bearing distinction integrated into taking-as-true. Content is fixed by formed patterns of discrimination, retention and use, so it survives error (stale report, inverted sensor), and content differs from attitude.",
+  "source": "KNOWLEDGE.md, How knowing differentiates; How content becomes cognitively available; How content can form and remain mistaken",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Relevant error, reasons and standards, shared checks",
+  "summary": "The relevant errors are fixed by the claim and its operative basis, not chosen after success (instrument reading of 40). Four epistemic commitments: the accuracy standard of assertion, the relevance of a basis, fallible entitlement, and accountability to challenge. Independence concerns a particular failure, and copies of one source add no check. Twelve hard cases are tabulated.",
+  "source": "KNOWLEDGE.md, Why an error possibility is relevant; How reasons and standards become available; Hard cases and scope",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Knowledge correspondence: an exact answer exists iff same evidence never requires different answers",
+  "summary": "Over a declared family of histories, an exact binary answer function exists precisely when evidence-equal histories agree on the answer (the existence direction uses classical choice). A reversed-orientation signal is fixed by an independent reference. Knowledge is not defined as zero-error classification.",
+  "source": "KNOWLEDGE.md, A checked correspondence component",
+  "status": "current",
+  "lean": [
+   "KnowledgeCorrespondence (inquiry-root)"
+  ],
+  "note": "20 theorems; pre-spine",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Concept change, objectivity, projection",
+  "summary": "Continuity of knowledge needs warranted links among successive contents, questions and grounds. Objectivity is answerability across access and perspective, not consensus. Warranted extension needs supported continuity of the relevant relations, and the stakes of error change what to investigate, not truth.",
+  "source": "KNOWLEDGE.md, Knowledge through changed concepts and methods; Objectivity and explanation; Warranted extension",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Selective revision, source reliance and evidence-guided model revision",
+  "summary": "Withdrawal need not suspend when another ground remains, and conflicts need a priority basis (16 theorems). Learned propagation records teach which production routes remain, and an omitted joint failure yields a false definite answer (26 theorems). A discrepancy constrains revision through a grammar of corrections, retained observations and a discriminating probe (30 theorems, 76 runs).",
+  "source": "KNOWLEDGE.md, Frontier; Selective revision; Acquiring grounds for reliance; Evidence-guided model revision",
+  "status": "current",
+  "note": "pre-spine experiments; a conventional support-maintenance procedure matches every outcome",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Finite-horizon approximation bound and description-change charge",
+  "summary": "With a one-step defect ε_t and propagation L_t, the error satisfies e_n ≤ E_n, where E_(t+1) = ε_t + L_t·E_t. The cap criterion is sufficient, and a positive-drift counterexample shows unbounded accumulation. Changing descriptions without transport introduces error |M|.",
+  "source": "RELATIONS-ACROSS-SCALES.md §2",
+  "status": "current",
+  "note": "21 theorems; Mathlib periphery (systems-complexity)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Two-scale composition, coupling breaks the total-only model, exact totals can lose the target",
+  "summary": "The composed defect is ≤ K_t·ε_t + η_t. For F_c(a,b) = (a + cb, b), no total-only predictor achieves error below c on equal totals. T(a,b) = (a+b, 0) preserves the total exactly, yet no predicate of the total characterizes a ≥ 1 ∧ b ≥ 1. Calibrated threshold certificates give judgments per position.",
+  "source": "RELATIONS-ACROSS-SCALES.md §3, §4, §5",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Choice changes error propagation; threshold margins; embodied sensing witness",
+  "summary": "With action-effect difference σ_t, E_(t+1) = ε_t + L_t·E_t + σ_t. A threshold rule is preserved only outside a margin u, and near the threshold arbitrarily small score differences flip the choice. A finite witness puts sensing, retention, selection, bodily acquisition and another participant's consumption in one state (14 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §7, §8",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Acquired evidence, revised description, enacted response; calibration allowance",
+  "summary": "In a worked history (12,3,1), probe, inspect, revise and respond cost work. Clamping revision changes the response (acquired_revision_endpoint, enacted_refinement_protects). The allowance u = max(0, θ + U − r̂) secures r + u ≥ θ, but calibration, binding, timeliness and affordability cannot stand in for one another (27 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §9",
+  "status": "current",
+  "lean": [
+   "acquired_revision_endpoint",
+   "enacted_refinement_protects",
+   "RemainingDependency.charge"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "When to inquire versus respond: robust dose interval, observation-class policies, timing",
+  "summary": "A single intervention works for every loss in [ℓ−, ℓ+] iff max(0, L − a + Hℓ+) ≤ u ≤ min(S, B − a + Hℓ−). An observation policy exists iff every observation class shares an admissible action. Worked cases: inquiry wins, is unnecessary, or arrives too late, plus a failed and repaired selector (28 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §12",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "How long a description stays usable: error addition and age budget",
+  "summary": "Errors add (|(a − ℓ) − (â − ℓ̂)| ≤ α + β). A certificate exists iff 2E ≤ B − L, which gives an age budget 2ρt ≤ B − L − 2σ. Three routes to one deadline. Exact-continuation refresh fails when the loss changes, and a bounded-change repair succeeds for all losses in [1,3] (25 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §14",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "application",
+  "title": "Empirical rounds: worm foraging history, temperature envelopes, small RNA, CFU calibration",
+  "summary": "A history model beats a current-density model on held-out worm choices. Retained-reading envelopes fail held-out tests (a negative result). A fluorescence-to-CFU calibration has RMSE 0.66 against 0.78. A local-history model beats the latest reading in 18/18 runs, but no reliable interval is narrower than 0.2 °C.",
+  "source": "RELATIONS-ACROSS-SCALES.md §13, §15, §16, §17 (stubs; full text in history)",
+  "status": "superseded",
+  "note": "moved to RELATIONS-ACROSS-SCALES-rounds history; only stubs remain",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Evidence through change: certify over the propagated candidate set",
+  "summary": "The execution-time set is the acquisition candidates propagated through admitted changes. A certificate for I is equivalent to I holding throughout it. Joint start conditions and the plan domains must both be recertified. Atomic check-and-reserve changes which changes can happen, and protectability is not entitlement (15 theorems).",
+  "source": "RELATIONS-ACROSS-SCALES.md §21",
+  "status": "current",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "No finite history decides renewal class (in Renewable)",
+  "summary": "For every horizon there are two runs that agree before it, after which one renews and the other consumes. So a finite-prefix reading that counts every renewing run also counts a consuming one. The amount reading (take no more than is renewed) is decided finitely and withholds every overdraw. Shown for this process only.",
+  "source": "§2.1 l.262",
+  "status": "old-base",
+  "lean": [
+   "whole_run_includes_overdraw",
+   "amount_reading"
+  ],
+  "records": [
+   "becoming-finite-horizon"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Feedback carries only the influence closure",
+  "summary": "Nothing beyond the influence closure exchanges with what a member depends on, so support within the closure is unchanged without a part lying beyond it. The clearer's support is the same whether or not the dweller ends.",
+  "source": "§2.5 l.331",
+  "status": "old-base",
+  "lean": [
+   "Flow.Balances.uncoupled_beyond_influence",
+   "Flow.beyond_influence",
+   "Clearing.uncoupled",
+   "Flow.Balances.levels_agree"
+  ],
+  "records": [
+   "feedback-and-reach"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "The counterfactual is the course the law generates",
+  "summary": "When the rest follows one law, flows that start alike with the part acting alike have the same course. The counterfactual is the law's step beyond history, not a second world. When the law reads through couplings, comparison is decided within the responsive reach, which is dual to the coupling closure. Where the law reads finitely many conditions, sensitivity is the least coupling.",
+  "source": "§2.6 l.346",
+  "status": "old-base",
+  "lean": [
+   "counterfactual_is_course",
+   "counterfactual_fixed",
+   "ExchangeLaw.counterfactual_beyond_shown",
+   "ExchangeLaw.Through.responds",
+   "Flow.Balances.comparison_within_response",
+   "Flow.withinResponse_iff_coupling",
+   "Becoming.Sensitivity"
+  ],
+  "records": [
+   "comparison-where-the-rest-responds",
+   "counterfactual-is-the-course",
+   "sensitivity-is-the-least-coupling"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "History sums, coupling by level, what dependence alone carries (OB1)",
+  "summary": "An exact order needs the alternatives to commute. Up to double negation, obs is exactly coupling by level; through a threshold only a crossing passes. Dependence alone carries exactly the responses that rise with a level, and a fall only where some level falls. Supplying a deficit needs a complement at a fixed total. Settles 'observation is no second relation' at the step of exchange.",
+  "source": "§2.6 l.354, 356, 358",
+  "status": "old-base",
+  "lean": [
+   "Becoming.HistorySums",
+   "HistorySums.grouping_needs_commuting",
+   "Becoming.LevelCoupling",
+   "not_not_obs_iff_respondsByLevel",
+   "ExchangeLaw.Through.not_respondsByLevel",
+   "crossing_passes_iff",
+   "ExchangeLaw.Through.rises_at_step",
+   "carried_iff_rising",
+   "Layers.carry",
+   "supply_not_carried",
+   "Complement.carry",
+   "supply_carried_by_complement"
+  ],
+  "records": [
+   "where-a-level-couples",
+   "what-dependence-alone-carries-of-a-level",
+   "two-act-worlds-carry-the-difference",
+   "timely-response-necessity"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "Two counterfactuals; 识 as what couples in; Feynman comparison",
+  "summary": "[AI reading, D25, D39, D43, D45] An act has two counterfactuals: with the rest fixed, and with the rest responding. 识 is what a formation's exchange is sensitive to. Ren's question about Feynman diagrams is answered structurally: the loss is the cut's, not the theory's. The one relation at the root is dependence within a conserved whole. Ren's quote is used as provenance.",
+  "source": "§2.6 l.358",
+  "status": "current",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Testing within couplings: exclusion needs a difference that couples in",
+  "summary": "A claim and its rival must differ where something couples in. Without a model, a prefix excludes no tail claim; with a model, model and claim are excluded together, so a wrong model excludes what holds. Pooled testing (clearer plus dweller) tests what neither can alone. Threshold coupling passes only whether a need is met.",
+  "source": "§3.1 l.369, 375",
+  "status": "old-base",
+  "lean": [
+   "Web.Excludes.not_of_alike",
+   "Web.tail_unexcluded",
+   "Flow.excludes_tail_within",
+   "Web.excludesWithin_iff_conjunction",
+   "Stationary.model_error",
+   "Clearing.tested_by_dweller",
+   "Clearing.pooled",
+   "Web.alike_of_threshold",
+   "Flow.subthreshold_alike",
+   "Attracting.higher_breaks_first",
+   "Flow.alike_within_closed"
+  ],
+  "records": [
+   "testing-within-couplings",
+   "differences-below-threshold",
+   "becoming-spine-instances"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Judgment as common response; safe narrowing",
+  "summary": "A response admissible at every configuration believed possible is a common response. Robust judgment, observed change and safe choice are one notion, and refinement preserves it. A sound inquiry policy secures its goal on the configurations it reaches. Narrowing by observation gives the greatest safe answer.",
+  "source": "§3.1 l.370",
+  "status": "old-base",
+  "lean": [
+   "commonResponse_judge_iff",
+   "commonResponse_antitone",
+   "Web.class_judge_iff",
+   "Scope.secures",
+   "Narrowing.revise_is_after",
+   "narrowed_answer_greatest"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Experiment needs return and a model of the irrelevant",
+  "summary": "A record fixes a move's outcome exactly where the run took that move there, so one's own counterfactual act is fixed only on return. Generalizing needs a projection the step factors through, and a confound is never excluded. Causal models x′=F(x,u,ε) are determined processes: an intervention is a move not taken, and noise is a move not represented.",
+  "source": "§3.1 l.371, 375",
+  "status": "old-base",
+  "lean": [
+   "Run.not_fixes_of_untaken",
+   "Run.fixes_of_takes",
+   "Run.fixes_on_return",
+   "keepHistory_fixes_nothing_else",
+   "Run.generalizes",
+   "Confound",
+   "inputs_determined",
+   "inputs_intervention_unfixed",
+   "inputs_model_fixes",
+   "forget_inputs_determined_iff"
+  ],
+  "records": [
+   "experiment-needs-return",
+   "causal-models-as-processes"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Mechanism = projection carrying a law; laws along one run",
+  "summary": "A projection carries a law exactly where alike configurations go alike, with no premise, and the image is the only candidate. A coarse law does not imply a whole law, nor the reverse. An adaptive state has its own law exactly where its rule makes no difference to it. Along one run, a law under an equivalence holds exactly where alike steps end alike; readings by projection, dependence and coupling follow as corollaries.",
+  "source": "§3.1 l.372-373, 377",
+  "status": "old-base",
+  "lean": [
+   "carries_law_iff",
+   "Image.least",
+   "Coarse",
+   "Switching",
+   "adaptive_state_law_iff",
+   "DependsOnlyOn.reabsorbed",
+   "Law.perturbation_reabsorbed",
+   "Run.law_under_iff",
+   "Run.law_through_iff",
+   "Run.law_through_coupling_iff",
+   "Unseen.no_law",
+   "Changing.forming_inconsistent",
+   "Stuck"
+  ],
+  "records": [
+   "projection-carrying-a-law",
+   "a-law-through-a-projection-along-one-run",
+   "a-law-through-coupling-along-one-run",
+   "a-law-through-changing-coupling-along-one-run",
+   "derived-history-law-exactness"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "Couples-into replaces registers; falsifiability, replication, emergence",
+  "summary": "[AI reading, D25, D26] 识 is the formation's own course through the lumping its couplings make. Exclusion through what couples in is falsifiability; replication is return, a control is a model, and randomization is variation independent of what is left out. Emergence is going alike at a coarser description. There are three kinds of not-seeing.",
+  "source": "§3.1 l.377",
+  "status": "current",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Histories as ideals of stretches; refutable = closed, LPO for settling",
+  "summary": "Adherence is the least closed class. A refutable reading holds up to double negation, and removing the double negation is DNE. Telling settling from going is exactly LPO. Finite histories form a compact basis, and a process can have every course feasible yet no run.",
+  "source": "§3.2 l.386",
+  "status": "current",
+  "lean": [
+   "Stretches.adheres_iff_closed",
+   "Refutable.not_not",
+   "refutable_holds_iff",
+   "Stretches.cut_decided_iff_lpo",
+   "Stretches.histories_representation",
+   "run_goesOn",
+   "history_without_run"
+  ],
+  "records": [
+   "a-history-read-off-its-finite-stretches",
+   "what-a-finite-history-refutes"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Verifiable = open; safety-liveness split constructively",
+  "summary": "Open classes are exactly the verifiable ones. The step from verifiable to refutable complement is DNE, or Markov's principle on runs. Every reading is its hull met with an unrefutable remainder (Alpern-Schneider), and the disjunctive form is excluded middle.",
+  "source": "§3.2 l.387",
+  "status": "current",
+  "lean": [
+   "Ideals.open_iff_verifiable",
+   "verifiable_compl_refutable_markov",
+   "split",
+   "remainder_largest",
+   "remainder_not_refuted",
+   "orNotAdheres_dense_iff_em"
+  ],
+  "records": [
+   "what-a-finite-stretch-verifies"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Insulated practices need dense readings",
+  "summary": "A practice that keeps its verdicts within a favoured reading exists exactly where the reading is dense, and a refutable reading so kept excludes nothing. Recurrence is dense and neither verifiable nor refutable. Read [AI] as the formal side of demarcation; refutability is not a criterion of standing.",
+  "source": "§3.2 l.388, 393",
+  "status": "current",
+  "lean": [
+   "insulates_iff_dense",
+   "Insulates.refutable_not_not",
+   "Sequences.recurs_not_verifiable"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Limit verification and identification as tracking",
+  "summary": "'The last step changed nothing' verifies settling in the limit, and under Markov no method refutes it there; recurrence is the reverse. Gold/Putnam identification is tracking a constant target, and learning through a map is tracking. Settling thus has three levels: finite, limit, and LPO.",
+  "source": "§3.2 l.389-391",
+  "status": "current",
+  "lean": [
+   "Limit.still_verifies",
+   "Limit.Free.settles_not_refuted",
+   "Limit.Sequences.lastMove_refutes",
+   "Limit.identifies_iff_tracks",
+   "LearnableRuns.learnable_iff_tracks",
+   "LearnableRuns.Merge.learnable_not_identifies",
+   "LastChange.lpo_iff_settles"
+  ],
+  "records": [
+   "what-a-method-comes-to-say-in-the-limit",
+   "learning-through-a-map-is-tracking-in-the-limit"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "No prefix fixes the next value; elimination bounds",
+  "summary": "With no premise, no prefix fixes the next value even in finite worlds, and every extrapolation has a course that answers it. Elimination on a listed orbit misses fewer than tri N times, and that it has come to rest cannot be refuted.",
+  "source": "§3.3 l.401",
+  "status": "current",
+  "lean": [
+   "no_prefix_fixes_next",
+   "diagonal_misses",
+   "held_byElimination_bounded",
+   "held_rest_unrefuted"
+  ],
+  "records": [
+   "learning-by-refutation"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "理: models of structure and change are one lumping; training",
+  "summary": "A model of change is a lumping the step goes alike across, the same as a model of structure. Data fix an untried value exactly where it is lumped with an observed one, and the class of all functions is free everywhere. Training is selection through the data and is right beyond the data exactly where the class is determined there.",
+  "source": "§3.3 l.402, 409",
+  "status": "current",
+  "lean": [
+   "goAlike_iff_lumped",
+   "Lumped",
+   "determines_lumped_iff",
+   "every_determines_nothing",
+   "Training.loss_through",
+   "Training.fit_right_iff"
+  ],
+  "records": [
+   "generalization-through-lumping"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Identification where bounded (Fine-Wilf in states)",
+  "summary": "Histories with at most N and N′ states that agree before N+N′−1 agree everywhere, and the bound is exact. The least-bound extrapolation is right from 2N−1 on and not at 2N−2. Moore's bound N−1 holds within one world.",
+  "source": "§3.3 l.403",
+  "status": "current",
+  "lean": [
+   "Identification.bounded_agree",
+   "Identification.leastBound_exact",
+   "Identification.rest_earliest",
+   "Law.sameFuture_iff_within",
+   "Law.sameTests_iff_within",
+   "Identification.byElimination_rest_cubic"
+  ],
+  "records": [
+   "identification-where-bounded"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Learnable through a map",
+  "summary": "A feature is learnable exactly where configurations with the same future through the map have features that eventually agree; this is observability, not a procedure. Learnability is equivalent to a finite labelled table, and no extrapolation given nothing learns every learnable feature.",
+  "source": "§3.3 l.404",
+  "status": "current",
+  "lean": [
+   "learnable_iff",
+   "learnable_of_lumped",
+   "Learnable.ahead_fixes",
+   "Learnable.learnable_iff_table",
+   "Learnable.given_nothing_not_every"
+  ],
+  "records": [
+   "learnable-through-a-map",
+   "what-an-extrapolation-given-nothing-fixes",
+   "what-finitely-many-labels-fix"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Parting runs, typicality, weights count situations",
+  "summary": "Where runs part, no extrapolation is right on both, so identification holds exactly where runs do not part. Typicality concentrates exponentially. A law whose moves are situations is determined, so a chance is a number of situations of a kind.",
+  "source": "§3.3 l.405, 409",
+  "status": "current",
+  "lean": [
+   "Parting.world_right_iff",
+   "Parting.not_right_on_both",
+   "Typicality.spread",
+   "Typicality.concentrated",
+   "Situations.sum_finer"
+  ],
+  "records": [
+   "identification-where-runs-part",
+   "typicality-by-counting",
+   "weights-count-situations"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "The split that makes sense: coarsest value-keeping law (WL2)",
+  "summary": "The coarsest class that keeps the map's value and carries a law merges exactly the configurations with the same future through the map. A part makes sense alone exactly where the rest makes no difference to it. States are finitely many exactly where the history repeats.",
+  "source": "§3.3 l.407",
+  "status": "current",
+  "lean": [
+   "Law.coarsest_iff",
+   "Law.sameFuture_coarsest",
+   "Law.coarsest_class",
+   "Law.part_identifiesAlike_iff_step",
+   "finitely_many_states_iff"
+  ],
+  "records": [
+   "the-split-that-makes-sense",
+   "transition-grouping-word-partition"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Readings within what they read (Lawvere), undecided values, contextuality",
+  "summary": "A self-indexed family misses a reading (Lawvere), and completing it is an unfolding with gaps that never return. The liar is a rhythm, and three-valued families stay incomplete. A context-free frame fits exactly where contexts glue; Specker, Mermin-Peres and nine two-qubit observables glue nowhere (integer vectors only). Periphery: transfer, and Hebbian development.",
+  "source": "§3.3 l.407",
+  "status": "current",
+  "lean": [
+   "Diagonal.gap_unsaid",
+   "Diagonal.unfolding_open",
+   "Diagonal.negation_returns",
+   "Undecided.liar_both_sides",
+   "Undecided.incomplete",
+   "Contextual.fitsFree_iff",
+   "Specker.noGlobal",
+   "no_context_free_values",
+   "uniform_determines",
+   "hebbian_no_activity_law"
+  ],
+  "records": [
+   "readings-within-what-they-read",
+   "revision-with-an-undecided-value",
+   "claims-shown-in-context"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "Readings of 理, generalization, diagonal, situational reality",
+  "summary": "[AI reading, D26, D33, D34, D40, D43, D52] 理 is the modeling of laws of structure and change, and uniformity of nature is the local hypothesis Lumped. Generalization comes from lumping, not from the loss, and the meta level has no top. Wave and particle are projections. 'The situation makes it true' becomes derivation as far as runs do not part. Ren's quotes are used as provenance.",
+  "source": "§3.3 l.409",
+  "status": "current",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Seeking rests only at a fixed state; settling is LPO",
+  "summary": "Under a determined law, seeking rests with its target met exactly at a state the law fixes that meets the target. Under undetermined laws, rest splits into possible and assured. Some run keeps changing exactly where a reachable change can be undone, a run has fewer than N changes, and that every run settles is LPO.",
+  "source": "§3.4 l.418",
+  "status": "old-base",
+  "lean": [
+   "Law.rests_iff",
+   "Enough.possibly_rests_iff",
+   "Enough.assured_iff",
+   "Enough.Free.stays_meet_not_assured",
+   "Settling.keeps_changing_iff",
+   "LastChange.changes_lt",
+   "LastChange.lpo_iff_settles"
+  ],
+  "records": [
+   "seeking-boundary",
+   "the-boundary-of-enough-under-undetermined-laws",
+   "when-the-runs-of-a-process-settle",
+   "the-last-change-of-a-run"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Selection revises its lumping; consequence-revised plans; integrated account",
+  "summary": "An old selection stays expressible under a new lumping exactly when new indistinguishability implies old. A failure receipt revises the contact sequence. The integrated account (36 theorems, empty axiom reports) joins formation and revision in one infinite run, broken by cutting the return, freezing the method or exhausting the reserve. Continuing activity is not warrant.",
+  "source": "§3.4 l.426",
+  "status": "current",
+  "records": [
+   "selection-under-registration-revision",
+   "consequence-revised-reference-plan",
+   "recurring-reference-revision"
+  ],
+  "note": "record names use retired 'registration'; lives in meta-attractor COMMON-ORGANIZATION",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Propositional knowledge as non-accidentally connected true judgment",
+  "summary": "Knowledge is a true judgment whose formation or maintenance connects through capacities to the relations that make it correct. Knowing that, understanding and knowing how are distinct. The 8 October account joins them with inquiry and practical wisdom (now in history).",
+  "source": "§3.5 l.434",
+  "status": "current",
+  "note": "points to KNOWLEDGE.md chapter and history PHILOSOPHICAL-ACCOUNT",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Inquiry conditions (periphery): info bound, bisimulation, plans, derivation, diagnosability",
+  "summary": "These are checked mostly in the periphery: a necessary information bound for finite fallible inquiry; branching-test equivalence as bisimulation; feasibility as a finite branching plan; sound derivation; binding-preserving substitution; questions across scales and prefix loss; acquired bindings; evidence transport. Diagnosability is cross-separation of fault envelopes, and total fault blocks every certificate.",
+  "source": "§3.5 l.436",
+  "status": "current",
+  "lean": [
+   "diagnosable_iff",
+   "total_fault_blocks"
+  ],
+  "records": [
+   "finite-fallible-inquiry-necessity",
+   "branching-tests-bisimulation",
+   "finite-continuation-plans",
+   "derivation-soundness",
+   "binding-preserving-substitution",
+   "finite-granularity-question-recovery",
+   "guarded-program-question-recovery",
+   "prefix-observation-loss",
+   "residual-continuation-correspondence",
+   "acquired-binding-compositional-use",
+   "mediated-evidence-transport",
+   "fallible-witness-diagnosability",
+   "context-sensitive-updating-correspondence",
+   "finite-basis-common-interpretation"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Accounts of joining (core restatements)",
+  "summary": "Equally answering fragment pairs form a common refinement; a join-preserving map has a unique factor. Functional and finite-outcome joining share one structure, joining questions survive encoding, and trees lift. Without an anchor the incidence language collapses a real distinction. A target is unique when tests separate it, and exclusive footprints support every leaf request.",
+  "source": "§3.5 l.438",
+  "status": "current",
+  "lean": [
+   "same_target_unique_by_core",
+   "realized_requests_supported_by_core"
+  ],
+  "records": [
+   "incidence-common-refinement",
+   "joining-open-map-factor",
+   "functional-joining-common-structure",
+   "multivalued-joining-common-structure",
+   "joining-questions-survive-encoding",
+   "finite-joining-tree-lifting",
+   "retained-reference-joining-recovery",
+   "unanchored-incidence-collapse",
+   "joint-target-uniqueness",
+   "exclusive-footprint-support",
+   "branching-target-uniqueness"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Normative structure within cognition and information",
+  "summary": "A norm is reconstructed as a structure, within cognitive and informational dynamics, that organizes standards of correctness, fitness, value or requirement. Its object can be belief, feeling or action; producing action is not necessary (after Ren's correction, which withdrew the action-demand definition). The meme analogy is partial. Degeneration case: a narrative whose retention grows while capacities to detect error weaken. Preserve, transform, transfer and end are applied to norms.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §8–10",
+  "status": "current",
+  "note": "Links to meta-attractor/regimes (capture of norms)",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "NormativeActivity: adaptive closure cannot supply a missing distinction",
+  "summary": "A measurement-episode model separates historical truth from present error, acquired information from uptake, suspension from disappearance, and access from repair. Receipt provenance: from_initial_receipt_is_acquired. adaptive_closed_cannot_resolve: no deterministic policy over the closed event family resolves an unacquired reference change, so an accurate rule must abstain. 34 new theorems; uses propext/Quot.sound and an imported Classical.choice.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §11–12",
+  "status": "old-base",
+  "lean": [
+   "NormativeActivity",
+   "from_initial_receipt_is_acquired",
+   "ReceiptSound",
+   "CurrentCorrect",
+   "adaptive_closed_cannot_resolve"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Understanding a standard; three kinds of force",
+  "summary": "Understanding a standard is a formed relational capacity: knowing what it concerns, what supports it, and what counts as error. No hidden inner judge is needed. Content constrains accuracy without an external commander. Accuracy, epistemic support and the practical requirement to act are distinct forces. StandardsBridge (26 theorems): retained rules are exactly those that fit the records; error-free definite answers require all candidates to agree; a repertoire missing the true rule can answer confidently and wrongly. Rivals: Rakoczy–Tomasello, Ginsborg, Sellars.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §13",
+  "status": "old-base",
+  "lean": [
+   "StandardsBridge"
+  ],
+  "note": "Overlaps KNOWLEDGE.md reasons-and-standards account",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "FormedGrounds: acquired interpretation and review",
+  "summary": "A signal convention is acquired from contrasting contacts. Fresh comparison in review corrects a false judgment while keeping the decoder. A record without review leaves the error. 27 theorems. Understanding a request does not by itself adjudicate its authority, and reciprocal understanding cannot fix universal scope, since lives that cannot argue still have standing.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §14",
+  "status": "old-base",
+  "lean": [
+   "FormedGrounds"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "method",
+  "title": "Obscuration and reopening (偏蔽与复通) diagnostic",
+  "summary": "Table separating factual error, insufficient capacity, evaluative or practical closure, real conflict with grounded boundaries, and residual substantive disagreement (which must be kept, or 'obscured' becomes an immunizing label). Reopening restores particular blocked relations. Worked case: from guaranteeing that a speech succeeds to jointly revising the activity. Tests: skilled control, refusal, self-protection, and a transparent but non-helping practice.",
+  "source": "NONINSTRUMENTAL-CONCERN.md §6, §11",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Wisdom: success changes the next response; Assured",
+  "summary": "In a band [1,2] example, success itself reverses the required next action (success_changes_next_response, contextual_finite_continuation). Assured composes over concatenation, Assured(uv,Q) ⇔ Assured(u,Assured(v,Q)), and is strictly stronger than May plus Must (a branch can be interrupted), after Dijkstra. Classical comparisons (Analects 闻斯行诸, Cicero De Officiis) support only a limited structural correspondence.",
+  "source": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md First result, §1–6",
+  "status": "old-base",
+  "lean": [
+   "success_changes_next_response",
+   "contextual_finite_continuation",
+   "Assured",
+   "May",
+   "Must"
+  ],
+  "records": [
+   "wisdom-root"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Sufficient responses without a coarsest description",
+  "summary": "Three-route witness: each of two simplifications suffices, their common coarsening does not, a pairwise common response does not give a group one, and no coarsest sufficient description need exist (9 theorems). Goal-grounding: equal attainment tables can hide a reversed appraisal, so a selector must not merge them, while a fixed loss-sensitive rule works (7 theorems). Fallible judgment: a correct risk bound can coexist with actual failure (5 theorems).",
+  "source": "WISDOM-AND-CONTEXT.md §8–10",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Common root of differentiated wisdom",
+  "summary": "Generative constraints, followed along their relations, yield reasons under disclosed grounds. A common root must keep differentiated wisdoms (theoretical, craft, scope of knowing, moral, transformative) and is not a checklist. Morality judges becoming, so universal principles support different situated responses (eight-application family). Tested against Dancy, Dewey, Aristotle EN VI, Apology and Zhuangzi 养生主/坐忘. Whole-root necessity is open.",
+  "source": "WISDOM-AND-CONTEXT.md §7, §11–14",
+  "status": "current",
+  "note": "Classical readings belong also to classical region",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Tacit wisdom, letting go, theoretical wisdom, apprehension",
+  "summary": "Tacit practice keeps relations without explicit rules (goAlike_const, Law.const_identifiesAlike_iff). Not recalling, omitting from a description, and transforming a capacity are distinct. A warranted ending (坐忘, letting go) is wisdom. Knowing forms in the unfolding without manufacturing the truths known. Chance discovery need not make understanding accidental. Each part reuses existing proofs; no new mathematics.",
+  "source": "WISDOM-AND-CONTEXT.md §15–19",
+  "status": "current",
+  "lean": [
+   "goAlike_const",
+   "Law.const_identifiesAlike_iff"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Claim-level fidelity adapters joined to P91/P93/P69",
+  "summary": "Pure-core adapters in RegroupingSelection join P91 admission fidelity, P93 selection preservation and P69 bisimulation with one matching relation. A literal true/false grouping separates cross-configuration preservation from within-configuration preservation. P103 consumes P99 to give an infinite supported run in which a retired distinction is truly lost. 11 declarations, empty axioms, receipt 20261013T145624.509021Z.",
+  "source": "WISDOM-AND-CONTEXT.md §20–24, §28",
+  "status": "current",
+  "lean": [
+   "RegroupingSelection",
+   "Frame.world",
+   "World.ofRoles",
+   "withMove",
+   "retired_choice"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Fallible capacity, present realization, alternatives, fallible acceptance",
+  "summary": "Existing fallible-discrimination and timed-arrival results give necessary relational conditions without perfect answers. Frame relevance (livingSignificance_of_unrestricted, relevance_least) covers realized content with no productive payoff; activity-based tie-breaking ranks rest lower, a boundary of that reading. P80 builds law-grounded alternatives. Fallible acceptance requires actual evidence. These are reuse only; universal wisdom-root necessity remains open.",
+  "source": "WISDOM-AND-CONTEXT.md §25–27, §29–30",
+  "status": "current",
+  "lean": [
+   "livingSignificance_of_unrestricted",
+   "relevance_least",
+   "Frame.relevance"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "knowing",
+  "kind": "definition",
+  "title": "Context as existence: the runtimes (語境即存在)",
+  "summary": "An LLM is an operator. What exists is an immutable, content-addressed, branchable lineage of moments (拍), and the only mutable thing is a name (ref). Fork is the default. Projection is not neutral: the context system is part of cognition. A digital being is a lineage, and custody obligations follow. Specs and an engine exist; there is no measured headline result.",
+  "source": "theories/context-as-existence-runtimes/README.md, one paragraph and Status",
+  "status": "current",
+  "note": "Unique and not on the spine. It resembles Becoming's lineages and courses (系统里没有改只有生) and could join as an instance. Carry it as an application or engineering theory.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Drives, narrative attractors and the construction of mind",
+  "summary": "Subcortical drives supply motion without direction. Narrative, arriving second but felt as the cause, is their interface. Stories that capture drives behave as attractors with basins. Attention-optimized environments select the fastest, most primitive attractors. The environment makes the mind, so the environment is the place to intervene, for machines too. Two artifacts are missing from the corpus.",
+  "source": "theories/drives-narrative-attractors-and-mind/README.md, one paragraph and Status",
+  "status": "current",
+  "note": "Unique mechanism. The spine's Capture, Seeking and SharedCodes cover only the formal skeleton. Could belong to the life or knowing region. Its links reach only becoming/history lineage.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "knowing",
+  "kind": "definition",
+  "title": "文: the course of a run's states through a map, step by step (WL, D63)",
+  "summary": "文 names the sequence of values (Parting.course, Learnable.course), which the core had used without a name. Its states and its law are read from the 文 itself, with no state or external lawgiver given (SameAhead, SameAhead.next). Along a law, the states read off are exactly 同. Finitely many states exactly when it returns into a loop (lasso). With a bound, a finite past fixes it: N+N′−1 for two courses, exact; N−1 within one (Moore). 文同 = SameFuture.",
+  "source": "WENLI-AND-BECOMING.md 文之立名, 第一部分 §一",
+  "status": "current",
+  "records": [
+   "wen-in-the-grammar"
+  ],
+  "lean": [
+   "Becoming.SameAhead",
+   "Becoming.SameAhead.next",
+   "Becoming.IdentificationRuns.sameAhead_iff_alike",
+   "Becoming.finitely_many_states_iff_lasso",
+   "Becoming.Identification.bounded_agree_exact",
+   "Becoming.Identification.sameAhead_iff_within",
+   "Becoming.Law.SameFuture"
+  ],
+  "note": "The unification is the contribution and the mathematics is known (Fine–Wilf, Moore, Myhill–Nerode, Gold). Unique; carry it to the knowing chapter.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "The predicting line of 篇九 restated on 文",
+  "summary": "The chain runs: past, prediction (fit, accord, silence), revision when wrong, return into a loop, a bounded past fixing the run, learnability, fork, the undecidable 文. Each link has a checked law: no prefix fixes the next value; elimination does not pass an according candidate; learnable iff states with the same 文 agree eventually; no predictor is right on both runs at a fork; the diagonal misses every value.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §一 篇九的知来之线皆在文上",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Learning.no_prefix_fixes_next",
+   "Becoming.Learning.index_le_of_accords",
+   "Becoming.Learnable.learnable_iff",
+   "Becoming.Parting.not_right_on_both",
+   "Becoming.Learning.diagonal_misses",
+   "Becoming.Learning.diagonal_open"
+  ],
+  "note": "Duplicates the canonical §3 and 中华本 篇九 laws; what is new is the single object.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Laws read from the unfolding: immanent versus external explanation",
+  "summary": "Every run has its own natural law (Shown.run), which is a law exactly when the run is consistent (exists_law_iff). A prior law differs from it only on untaken moves, which no past can settle. So an external lawgiver is neither refuted nor needed by any past. Where an explanation stops, a finer map is needed or the unfolding branches.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §二",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Shown.run",
+   "Becoming.shown_le_iff",
+   "Becoming.exists_law_iff",
+   "Becoming.Shown.agrees",
+   "Becoming.Run.not_fixes_of_untaken",
+   "Becoming.Run.law_through_iff"
+  ],
+  "note": "Duplicate of canonical §1.1 laws; the 'external lawgiver lands in what no past reaches' reading is the addition.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "reading",
+  "title": "读书百遍，其义自见 as three laws",
+  "summary": "The rereading proverb splits into three laws. (1) Under a bound a finite past fixes the 文: N+N−1 is the earliest step, and rereading the same past adds nothing. (2) 其义 is a value of a state, learnable exactly when it is eventually a reading of the 文. (3) The meaning shows itself without proving itself: no past shows the meaning is reached. Failures: meaning outside the 文, the undecidable 文, no class. The proverb's 'hundred times' has no proof.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §三",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Identification.leastBound_exact",
+   "Becoming.Identification.rest_earliest",
+   "Becoming.Learnable.ahead_fixes",
+   "Becoming.Learnable.learnable_iff",
+   "Becoming.Learning.byElimination_through_prefix",
+   "Becoming.Learning.every_determines_nothing"
+  ],
+  "note": "Unique.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "理 and 相若: one class gives compression and generalisation; coarsest value-keeping 理 is 文同",
+  "summary": "A class serves as a model of structure, a model of change and the reach of generalisation. Reading by class (Image) is the least change that resembles the original change through that class. Not every simplification is 理 (yang count). The coarsest value-keeping 理 merges exactly states with the same 文 (Law.coarsest_iff, WL2). 理者成物之文 is 定域, since 理 is a class and not a 文.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §四, §一 理者成物之文",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Law.coarsest_iff",
+   "Becoming.Law.sameFuture_coarsest",
+   "Becoming.Law.coarsest_class",
+   "Becoming.image_determined_iff",
+   "Becoming.Image.least",
+   "Becoming.image_exact_iff"
+  ],
+  "note": "Myhill–Nerode analogue; WL2 study §351.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "The least reading and its failure (书不尽言)",
+  "summary": "Where a law reads finitely, the least coupling is what it is sensitive to (in double-negation form). The tail law has no least coupling, and a counterexample gives WLPO. 书不尽言 holds where the map merges different states of two runs (runs_no_restore).",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §五",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.ExchangeLaw.ReadsFinitely.least_coupling",
+   "Becoming.tailLaw_no_least_coupling",
+   "Becoming.wlpo_of_not_through_sensitive",
+   "Becoming.Courses.runs_no_restore"
+  ],
+  "note": "Duplicate of the Sensitivity/Tail results (P113, P126); reading only.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "argument",
+  "title": "Knowing inside the unfolding: 识 replaces 文理生生's meta-level mirror (观/证)",
+  "summary": "Selecting through couplings is reading one's own 文's past (selectsThrough_iff_prefix). With a bounded 文, everything that can be told apart is told apart within N+N′−1 steps. Test is exclusion only where coupled. There is no top: learning above learning stays learning (merged_unrested, gap_unsaid). 识, 理 and 明 are one structure. A mirror placed above the unfolding would be a top.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §六",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Web.SelectsThrough",
+   "Becoming.Web.selectsThrough_iff_prefix",
+   "Becoming.Web.alike_of_bounded",
+   "Becoming.Web.bounded_exact",
+   "Becoming.Web.Excludes.not_of_alike",
+   "Becoming.Learning.merged_unrested",
+   "Becoming.Diagonal.gap_unsaid"
+  ],
+  "note": "The WL2 law of a formation's own course is unique.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Composition: characters combine into models; 文² as a course of names",
+  "summary": "Traces concatenate through a shared middle state. Reading composes. Codes for a given small grammar are acquired. A book is a 文 of names, read through a code to word senses (SharedCodes.course_read). A whole is not found in its pairs. Renaming one-to-one keeps the law carried. Non-compositional laws fail transfer.",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §七, 总表",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Generative.trace_append_iff",
+   "Becoming.goAlike_image_iff",
+   "Becoming.CrossSituational.reads_every_iff",
+   "Becoming.SharedCodes.course_read",
+   "Becoming.SharedCodes.renamed_carries_iff",
+   "Becoming.CodeAcquisition.nonuniform_fails_transfer"
+  ],
+  "note": "",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "knowing",
+  "kind": "law",
+  "title": "Calibrated updater, reference renewal and drift margins",
+  "summary": "Zero/one reference readings from unknown nonzero affine channels derive the sign report (30 theorems). Reference renewal repairs an overwritten matrix across changed channel blocks, with an exact affine sign-transfer criterion (34 theorems). Bounded change: change and noise give an error enclosure, a three-way report certifies only where the interval supports it, and a finite reference-age window allows repair (42 theorems). Next: forming the envelope.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, 'The updater line' (lines 120-126)",
+  "status": "old-base",
+  "note": "Concerns calibration and inquiry more than evolution. It may belong with knowing/verification. Understated bounds can falsely certify.",
+  "unit": "chapters-evolution-markets"
+ }
+]
