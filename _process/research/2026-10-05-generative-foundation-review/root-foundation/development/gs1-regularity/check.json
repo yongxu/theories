@@ -448,8 +448,8 @@
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 633,
-  "reading_drift": 93,
+  "changed_outside_cited": 642,
+  "reading_drift": 94,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
 }
