@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1898,
-    "distinct_byte_contents": 1497,
+    "lean_paths": 1899,
+    "distinct_byte_contents": 1498,
     "byte_identical_duplicate_groups": 138,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 974,
+      "development-attempt": 975,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 885
@@ -4544,6 +4544,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-map/tree/Becoming/GrammarMap.lean",
       "sha256": "5a22ea5b09b1a621cc91ccca50eeaca9644985bbeb5a21ddc91c51d08108bfd6",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou5-testing/tree/Becoming/GrammarTesting.lean",
+      "sha256": "81b0193e7a5805d327403bcbe6a18ceaeacf334ccb3aef5b86f93b4cb3422305",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -224929,6 +224938,106 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "81b0193e7a5805d327403bcbe6a18ceaeacf334ccb3aef5b86f93b4cb3422305": {
+      "byte_size": 5921,
+      "line_count": 138,
+      "imports": [
+        "Becoming.Grammar"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«层»",
+          "qualified_name_hint": "Becoming.«层»",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "«核在每层之内»",
+          "qualified_name_hint": "Becoming.«核在每层之内»",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "«可分则不在核»",
+          "qualified_name_hint": "Becoming.«可分则不在核»",
+          "line": 53
+        },
+        {
+          "kind": "inductive",
+          "name": "Room",
+          "qualified_name_hint": "Becoming.Room",
+          "line": 63
+        },
+        {
+          "kind": "def",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.Room.closed",
+          "line": 68
+        },
+        {
+          "kind": "def",
+          "name": "opened",
+          "qualified_name_hint": "Becoming.Room.opened",
+          "line": 76
+        },
+        {
+          "kind": "def",
+          "name": "warm",
+          "qualified_name_hint": "Becoming.Room.warm",
+          "line": 83
+        },
+        {
+          "kind": "def",
+          "name": "alike",
+          "qualified_name_hint": "Becoming.Room.alike",
+          "line": 90
+        },
+        {
+          "kind": "def",
+          "name": "same",
+          "qualified_name_hint": "Becoming.Room.same",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "same_alike",
+          "qualified_name_hint": "Becoming.Room.same_alike",
+          "line": 99
+        },
+        {
+          "kind": "theorem",
+          "name": "same_symm",
+          "qualified_name_hint": "Becoming.Room.same_symm",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "same_constant",
+          "qualified_name_hint": "Becoming.Room.same_constant",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "«恒温与平衡»",
+          "qualified_name_hint": "Becoming.«恒温与平衡»",
+          "line": 125
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "inductive": 1,
+        "theorem": 6
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
