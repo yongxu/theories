@@ -1,0 +1,411 @@
+{
+  "schema_version": 2,
+  "id": "generation-and-degeneration-at-two-grains",
+  "title": {
+    "en": "Generation, keeping and degeneration at two grains",
+    "zh": "两种粒度下的生成、守与退化"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T07:22:19+00:00",
+  "statement": {
+    "en": "Read at a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; renewal does not decide the region, and telling going on from ending is exactly excluded middle.",
+    "zh": "以细类与粗类、按分支同读：样式或沿某支而延，或诸支皆尽；生成与守皆斥退化，而可共于一点；复生不定其域；分辨延与尽恰是排中律。"
+  },
+  "laws": [
+    {
+      "en": "A carrying renewal, read at a fine class of parts and a coarse class of the pattern they make up, continues the pattern from one occurrence to the next while a part begins there; it is an alteration (火传).",
+      "zh": "传：以部分之细类与其所成样式之粗类同读，样式自一事续至下一事，而一部分在下一事始；传即异（火传）。",
+      "declarations": [
+        "Becoming.«传»",
+        "Becoming.«传则异»",
+        "Becoming.«所及»",
+        "Becoming.«所及之传递»",
+        "Becoming.«相续之续»"
+      ]
+    },
+    {
+      "en": "On branches: the pattern goes on along some branch or ends on every branch, which exclude each other; going on along every branch is going on along some. Generation (some branch renews without end), keeping (some branch goes on without renewal) and degeneration (every branch ends) are read so; degeneration excludes both.",
+      "zh": "按分支：样式或沿某支而延，或诸支皆尽，二者互斥；诸支皆不穷即某支之延。生成（某支更新不已）、守（某支延而无传）、退化（诸支皆尽）如此读之；退化与二者皆斥。",
+      "declarations": [
+        "Becoming.«延»",
+        "Becoming.«尽»",
+        "Becoming.«延尽不并»",
+        "Becoming.«不穷则延»",
+        "Becoming.«尽则非不穷»",
+        "Becoming.«生成»",
+        "Becoming.«守»",
+        "Becoming.«退化»",
+        "Becoming.«新而尽»",
+        "Becoming.«生成则延»",
+        "Becoming.«守则延»",
+        "Becoming.«生成退化不并»",
+        "Becoming.«守退化不并»"
+      ]
+    },
+    {
+      "en": "Generation and keeping can hold at one point, along different branches: a root whose chain renews at every step and whose other branch stays still is in both, the mixed region. On a single line, where each occurrence conditions at most one other, they exclude each other.",
+      "zh": "生成与守可在一点上沿不同分支同时成立：一根之链每步更新而其另一支静止，即二者皆是，相杂之域。在单行之网中（每事至多为一事之缘），二者互斥。",
+      "declarations": [
+        "Becoming.Map.Branch",
+        "Becoming.Map.fork",
+        "Becoming.Map.fork_chain_begins",
+        "Becoming.Map.«生守相杂»",
+        "Becoming.«单行则族含所及»",
+        "Becoming.«单行则生守不并»"
+      ]
+    },
+    {
+      "en": "The every-branch forms: generation along every branch, keeping along every branch and an end on some branch exclude each other and, with excluded middle, cover every point; generation holds along its line and an end reaches back along it; telling them apart on every line is exactly excluded middle.",
+      "zh": "诸支之形：诸支之生成、诸支之守与某支之终两两互斥，有排中律时覆盖每一点；生成沿其线成立，终沿其线向前传；在每条线上分辨它们恰是排中律。",
+      "declarations": [
+        "Becoming.«全生成»",
+        "Becoming.«全守»",
+        "Becoming.«有终»",
+        "Becoming.«新而有终»",
+        "Becoming.«全生成有终不并»",
+        "Becoming.«全生成全守不并»",
+        "Becoming.«全守有终不并»",
+        "Becoming.«全三域之周»",
+        "Becoming.«全生成之所及亦全生成»",
+        "Becoming.«有终之所前亦有终»",
+        "Becoming.«全生有终之定当且仅当排中»"
+      ]
+    },
+    {
+      "en": "Each region is inhabited (an endless chain generates, a still pattern keeps, a short life ends on every branch), and the short life renews and still ends, so renewal does not decide the region. Telling going on from ending at every point, in every model, is exactly excluded middle.",
+      "zh": "每一域都有实例（无尽之链生成，静止之样式守，短命者诸支皆尽）；短命者复生而仍尽，故复生不定其域。在一切模型的每一点分辨延与尽，恰是排中律。",
+      "declarations": [
+        "Becoming.Map.step",
+        "Becoming.Map.step_irrefl",
+        "Becoming.Map.Endless.generation",
+        "Becoming.Map.Endless.generates",
+        "Becoming.Map.still",
+        "Becoming.Map.Still.keeping",
+        "Becoming.Map.Still.keeps",
+        "Becoming.Map.short",
+        "Becoming.Map.short_end",
+        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.ends",
+        "Becoming.Map.Short.renews_and_ends",
+        "Becoming.Map.Short.renews_and_ends_everywhere",
+        "Becoming.«延尽之定当且仅当排中»"
+      ]
+    },
+    {
+      "en": "A coarse class constant under 缘 has no end from a continued point, so what ends after a continued step has a coarse class that is not constant. A chain of classes reads generation at every order, and generation at an order keeps the next order's pattern from ending on every branch.",
+      "zh": "对缘有常之粗类，自有前之点无终；故有前而终者，其粗类不有常。一串类在每一阶读生成，某阶之生成使上一阶之样式不诸支皆尽。",
+      "declarations": [
+        "Becoming.«有常则无终»",
+        "Becoming.«有终则粗不有常»",
+        "Becoming.«阶全生成»",
+        "Becoming.«阶全生成则上无终»",
+        "Becoming.«阶生成»",
+        "Becoming.«阶生成则上不退化»"
+      ]
+    },
+    {
+      "en": "On the old base (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends.",
+      "zh": "在旧基底的延续关系上（事为步与形成之对）：传是步入一个其形成未以自身延续之事；在传递之下，生成使载者迟迟生起；只按名读则无生成；所耗仍持、家族超出更新、传之止皆否诸支之不穷；中继复生而终。",
+      "declarations": [
+        "Becoming.Web.carries_iff",
+        "Becoming.Web.passing_carries_iff",
+        "Becoming.Web.generation_renews_late",
+        "Becoming.Web.generation_arises_late",
+        "Becoming.Web.keeping_of_carried_on",
+        "Becoming.Web.itself_not_generation",
+        "Becoming.Web.always_keeps",
+        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.consumed_held_not_endless",
+        "Becoming.Web.family_excess_not_endless",
+        "Becoming.Web.stopped_not_endless",
+        "Becoming.Map.shifted_generates",
+        "Becoming.Map.relay_renews_and_ends",
+        "Becoming.Map.renewal_undecided"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "None beyond the grammar: every carrier, every relation read as 缘, a fine and a coarse class; the covering law takes excluded middle as a hypothesis.",
+      "zh": "除文法外无前提：每个载体、读作缘的每个关系、一个细类与一个粗类；覆盖之律以排中律为假设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That generation here is the 生生 of life in the whole: it is the continuation of a pattern through renewal of its parts, with no premise on what the pattern is or whether its going on is good.",
+      "zh": "此处之生成即全体之生命的生生：它只是样式经其部分之更新而延续，对样式为何、其延续是否为善没有前提。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the regions are decided: at a given point, whether the pattern goes on is in general not decided.",
+      "zh": "诸域可判定：在一个给定之点，样式是否继续，一般不可判定。",
+      "kind": "non-implication",
+      "witness": "Becoming.«延尽之定当且仅当排中»"
+    },
+    {
+      "en": "That generation and keeping exclude each other where lines branch: a point can lie in both.",
+      "zh": "分支之处生成与守互斥：一点可兼二者。",
+      "kind": "non-implication",
+      "witness": "Becoming.Map.«生守相杂»"
+    },
+    {
+      "en": "That renewal is generation: a line can renew and still end.",
+      "zh": "复生即生成：一条线可复生而仍终。",
+      "kind": "non-implication",
+      "witness": "Becoming.Map.Short.renews_and_ends"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+      "detail": {
+        "en": "A short life of two occurrences renews (its second occurrence begins a new part) and ends on every branch (Map.Short.renews_and_ends_everywhere).",
+        "zh": "两事之短命：复生（其第二事始一新部分）而诸支皆尽（Map.Short.renews_and_ends_everywhere）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 36 theorems in 55 declarations, and Becoming.MapInstances, 25 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，55 个声明中 36 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。"
+  },
+  "next_delta": {
+    "en": "State the old map's regimes (renewal, consumption, capture, the five questions of 势) as regions of this map on the old base's readings, and the meta-attractor's reading of selection at the coarse grain.",
+    "zh": "把旧地图的诸态（更新、消耗、捕获、势之五问）在旧基底之读上陈述为本地图之域，并给出元吸引在粗粒度上对选择之读。"
+  },
+  "correspondence": {
+    "en": "Generation as a pattern continuing through the renewal of its parts is close to autopoiesis (Maturana and Varela) and to the closure of constraints (Montévil and Mossio 2015), and the two grains to the levels of Rosas et al. (2024); the decidability calibration matches the old base's LastChange.lpo_iff_settles in form. Correspondences not proved."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+  "aliases": [
+    "Becoming.Map.Branch",
+    "Becoming.Map.Endless.generates",
+    "Becoming.Map.Endless.generation",
+    "Becoming.Map.Short.degeneration",
+    "Becoming.Map.Short.ends",
+    "Becoming.Map.Short.renews_and_ends",
+    "Becoming.Map.Short.renews_and_ends_everywhere",
+    "Becoming.Map.Still.keeping",
+    "Becoming.Map.Still.keeps",
+    "Becoming.Map.fork",
+    "Becoming.Map.fork_chain_begins",
+    "Becoming.Map.relay_renews_and_ends",
+    "Becoming.Map.renewal_undecided",
+    "Becoming.Map.shifted_generates",
+    "Becoming.Map.short",
+    "Becoming.Map.short_end",
+    "Becoming.Map.step",
+    "Becoming.Map.step_irrefl",
+    "Becoming.Map.still",
+    "Becoming.Map.«生守相杂»",
+    "Becoming.Web.always_keeps",
+    "Becoming.Web.carries_iff",
+    "Becoming.Web.consumed_held_not_endless",
+    "Becoming.Web.degenerates_of_gone",
+    "Becoming.Web.family_excess_not_endless",
+    "Becoming.Web.generation_arises_late",
+    "Becoming.Web.generation_renews_late",
+    "Becoming.Web.itself_not_generation",
+    "Becoming.Web.keeping_of_carried_on",
+    "Becoming.Web.passing_carries_iff",
+    "Becoming.Web.stopped_not_endless",
+    "Becoming.«不穷则延»",
+    "Becoming.«传»",
+    "Becoming.«传则异»",
+    "Becoming.«全三域之周»",
+    "Becoming.«全守»",
+    "Becoming.«全守有终不并»",
+    "Becoming.«全生成»",
+    "Becoming.«全生成之所及亦全生成»",
+    "Becoming.«全生成全守不并»",
+    "Becoming.«全生成有终不并»",
+    "Becoming.«全生有终之定当且仅当排中»",
+    "Becoming.«单行则族含所及»",
+    "Becoming.«单行则生守不并»",
+    "Becoming.«守»",
+    "Becoming.«守则延»",
+    "Becoming.«守退化不并»",
+    "Becoming.«尽»",
+    "Becoming.«尽则非不穷»",
+    "Becoming.«延»",
+    "Becoming.«延尽不并»",
+    "Becoming.«延尽之定当且仅当排中»",
+    "Becoming.«所及»",
+    "Becoming.«所及之传递»",
+    "Becoming.«新而尽»",
+    "Becoming.«新而有终»",
+    "Becoming.«有常则无终»",
+    "Becoming.«有终»",
+    "Becoming.«有终之所前亦有终»",
+    "Becoming.«有终则粗不有常»",
+    "Becoming.«生成»",
+    "Becoming.«生成则延»",
+    "Becoming.«生成退化不并»",
+    "Becoming.«相续之续»",
+    "Becoming.«退化»",
+    "Becoming.«阶全生成»",
+    "Becoming.«阶全生成则上无终»",
+    "Becoming.«阶生成»",
+    "Becoming.«阶生成则上不退化»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Continuation, lines, the positions, constancy and «有常则续不尽» are the grammar's.",
+        "zh": "续、线、诸位、有常与 «有常则续不尽» 皆出自文法。"
+      },
+      "interface": {
+        "output": {
+          "en": "«续», «相续», «生», «亡», «不穷», «有常则续不尽».",
+          "zh": "«续»、«相续»、«生»、«亡»、«不穷»、«有常则续不尽»。"
+        },
+        "input": {
+          "en": "A fine and a coarse class on one net.",
+          "zh": "同一网上的一个细类与一个粗类。"
+        },
+        "conditions": {
+          "en": "None beyond the grammar.",
+          "zh": "除文法外无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+      "role": "proof",
+      "sha256": "96d053e0a6903883e2cb32aed977ac874db9eff4bce5437c9bc7a1304f9d6089",
+      "declarations": [
+        "Becoming.Map.Branch",
+        "Becoming.Map.Endless.generates",
+        "Becoming.Map.Endless.generation",
+        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.ends",
+        "Becoming.Map.Short.renews_and_ends",
+        "Becoming.Map.Short.renews_and_ends_everywhere",
+        "Becoming.Map.Still.keeping",
+        "Becoming.Map.Still.keeps",
+        "Becoming.Map.fork",
+        "Becoming.Map.fork_chain_begins",
+        "Becoming.Map.short",
+        "Becoming.Map.short_end",
+        "Becoming.Map.step",
+        "Becoming.Map.step_irrefl",
+        "Becoming.Map.still",
+        "Becoming.Map.«生守相杂»",
+        "Becoming.«不穷则延»",
+        "Becoming.«传»",
+        "Becoming.«传则异»",
+        "Becoming.«全三域之周»",
+        "Becoming.«全守»",
+        "Becoming.«全守有终不并»",
+        "Becoming.«全生成»",
+        "Becoming.«全生成之所及亦全生成»",
+        "Becoming.«全生成全守不并»",
+        "Becoming.«全生成有终不并»",
+        "Becoming.«全生有终之定当且仅当排中»",
+        "Becoming.«单行则族含所及»",
+        "Becoming.«单行则生守不并»",
+        "Becoming.«守»",
+        "Becoming.«守则延»",
+        "Becoming.«守退化不并»",
+        "Becoming.«尽»",
+        "Becoming.«尽则非不穷»",
+        "Becoming.«延»",
+        "Becoming.«延尽不并»",
+        "Becoming.«延尽之定当且仅当排中»",
+        "Becoming.«所及»",
+        "Becoming.«所及之传递»",
+        "Becoming.«新而尽»",
+        "Becoming.«新而有终»",
+        "Becoming.«有常则无终»",
+        "Becoming.«有终»",
+        "Becoming.«有终之所前亦有终»",
+        "Becoming.«有终则粗不有常»",
+        "Becoming.«生成»",
+        "Becoming.«生成则延»",
+        "Becoming.«生成退化不并»",
+        "Becoming.«相续之续»",
+        "Becoming.«退化»",
+        "Becoming.«阶全生成»",
+        "Becoming.«阶全生成则上无终»",
+        "Becoming.«阶生成»",
+        "Becoming.«阶生成则上不退化»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "role": "proof",
+      "sha256": "02e903f61518361f89d19ab26576aa803b7e552c42babcd82962c05e4d03f112",
+      "declarations": [
+        "Becoming.Map.outside_of_not_endless",
+        "Becoming.Map.relay_after_two",
+        "Becoming.Map.relay_renews_and_ends",
+        "Becoming.Map.renewal_undecided",
+        "Becoming.Map.shifted_carry",
+        "Becoming.Map.shifted_generates",
+        "Becoming.Map.shifted_pass",
+        "Becoming.Web.active_along_line",
+        "Becoming.Web.always_keeps",
+        "Becoming.Web.carries_iff",
+        "Becoming.Web.consumed_held_not_endless",
+        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.ends_or_reaches",
+        "Becoming.Web.family_excess_not_endless",
+        "Becoming.Web.generation_arises_late",
+        "Becoming.Web.generation_renews_late",
+        "Becoming.Web.itself_carries_nothing",
+        "Becoming.Web.itself_keeps",
+        "Becoming.Web.itself_not_generation",
+        "Becoming.Web.keeping_of_carried_on",
+        "Becoming.Web.not_endless_of_gone",
+        "Becoming.Web.passing_carries_iff",
+        "Becoming.Web.reached_later",
+        "Becoming.Web.reaches_onward",
+        "Becoming.Web.stopped_not_endless"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "role": "receipt",
+      "sha256": "f6cd693c9b0301157adf4d71822fb5a78c53c70582cdf71654045a84dfe979ba"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
+      "role": "statement",
+      "sha256": "c5f38593796c85c1f0a2e3a66b95ff6efa20488600d17b56d8913c0c592742fe"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.MapInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026, board item OU4 (study section 379): the map of the one-unfolding plan, generation and degeneration with the region between them and its boundary, at two grains and at every order.",
+      "zh": "2026年10月23日，工作板条目 OU4（研究第 379 节）：一元计划之地图，生成与退化及其间之域与边界，以两种粒度及每一阶读之。"
+    }
+  ]
+}

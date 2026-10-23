@@ -1,5 +1,9 @@
 import Becoming.Grammar
 import Becoming.GrammarReadings
+import Becoming.GrammarMap
+import Becoming.GrammarTesting
+import Becoming.GrammarCandidates
+import Becoming.MapInstances
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -2256,6 +2260,42 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   class a line with a past never ends (`«有常则通»`); in a net without self-conditioning,
   continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
   holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.
+* `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
+  grains, a fine class of parts and a coarse class of the pattern they make up, and on branches.
+  A carrying renewal (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`,
+  火传). The pattern goes on along some branch (`«延»`) or ends on every branch (`«尽»`), which
+  exclude each other (`«延尽不并»`); generation (`«生成»`: some branch renews without end), keeping
+  (`«守»`: some branch goes on without renewal) and degeneration (`«退化»`: every branch ends) are
+  read on branches, generation and keeping can hold at one point (`Map.«生守相杂»`, the mixed
+  region) and exclude each other on a single line (`«单行则生守不并»`); the every-branch forms
+  (`«全生成»`, `«全守»`, `«有终»`) are their strong and weak cases. Renewal does not decide the
+  region (`Map.Short.renews_and_ends_everywhere`); telling going on from ending at every point is
+  exactly excluded middle (`«延尽之定当且仅当排中»`); a chain of classes reads generation at every
+  order (`«阶生成»`). A leaf.
+* `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
+  step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
+  alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
+  did not carry on as itself (`Web.carries_iff`); under passing, generation makes carriers arise at
+  arbitrarily late steps (`Web.generation_arises_late`); read by names alone nothing generates and
+  an always-active formation keeps (`Web.itself_not_generation`, `Web.always_keeps`); consumption
+  still held, a family drawn beyond renewal and passing that stops refute going on every branch
+  (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
+  the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.
+* `Becoming.GrammarTesting` (L0): testing within the net (验). The core of a class is approximated
+  by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
+  apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
+  calibration and is not stated. A room in balance and a room held by a thermostat share a core
+  class while no window opens and are told apart once the window's opening is in the net
+  (`«恒温与平衡»`): no intervener outside the net. A leaf.
+* `Becoming.GrammarCandidates` (L0): the corpus's 59 candidate theorems of the grammar, tested
+  (the OU2c kit's `outcomes.tsv`: 38 proved, 15 needing a premise, 3
+  refuted, 2 misclassified, 1 not expressible). Correlatives that are the two ends of one relation
+  are had together (`«能所相待»`, `«三法相因待»`); a mark gives its complement a mark, and the way
+  back holds for every carrier exactly under double-negation stability (`«相待之还当且仅当双非可还»`);
+  an occurrence's position depends on the class exactly where it is not its own condition
+  (`«定性之判»`), and everything ends under identity exactly where nothing is its own condition
+  (`«念念灭当且仅当无自缘»`); every condition precedes its result exactly where the net has no cycle
+  (`«缘先果后当且仅当无环»`). A leaf.
 * `Becoming.Prelude` (L0): the lemmas on numbers, truth values, lists and options that the layers
   use, each stated once (no premise; it imports only Init): cancellation, subtraction and products
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,

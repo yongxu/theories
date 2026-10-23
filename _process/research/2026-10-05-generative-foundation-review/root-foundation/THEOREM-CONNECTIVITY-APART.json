@@ -2802,11 +2802,6 @@
    "category": "support",
    "reason": "inclusion of relations is transitive: a one-line unpacking of the grammar's own definition"
   },
-  "Becoming.«一为类»": {
-   "module": "Becoming.Grammar",
-   "category": "support",
-   "reason": "the full relation is a class: a one-line unpacking of the grammar's own definitions"
-  },
   "Becoming.«同族为类»": {
    "module": "Becoming.Grammar",
    "category": "support",
@@ -3041,6 +3036,386 @@
    "module": "Becoming.GrammarCourse",
    "category": "general-structure",
    "reason": "a law of every relation and class on any carrier, from the root theorem: a core lies in another class's core exactly where it lies in that class; the base compares no two classes' cores yet"
+  },
+  "Becoming.Map.Endless.generates": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Endless.generation": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Short.renews_and_ends": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Short.renews_and_ends_everywhere": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Still.keeping": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Still.keeps": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.outside_of_not_endless": {
+   "module": "Becoming.MapInstances",
+   "category": "general-structure",
+   "reason": "a law of the map on the old base's continuation relations that reads no web"
+  },
+  "Becoming.Map.«生守相杂»": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«三法相因待»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«不可致诘而有常则混而为一»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«不相外则相尽当且仅当双非可还»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«二值之相待»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«二际可偏举»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«互之对称»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«从缘生非文法之理»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«他依于自»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«传则异»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«住因于续»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«俱有为一念»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«全三域之周»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全守有终不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生成之所及亦全生成»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生成全守不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生有终之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«前后相随»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«单行则生守不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«及之两端»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«同异交得»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«同根则不可偏举»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«四相俱时»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«因果互即»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«始觉依不觉»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«守退化不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«尺与尺可相尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«尺与端或尽或不尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«尽则非不穷»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«平等无异»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«延尽之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«必或不当当且仅当弱排中»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«念念灭当且仅当无自缘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«恒温与平衡»": {
+   "module": "Becoming.GrammarTesting",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«断则无相续»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无为无别相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无果则皆非能»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无果则缘非缘皆无»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无色则无虚空之相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«是不俱当»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有成坏当且仅当不自缘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有生不必有亡»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«有相则非亦有相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有终之所前亦有终»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«有终则粗不有常»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«有自不必有他»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«核则不可致诘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«状所可别»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«生亡对偶»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«相尽则不相外»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«相待之还当且仅当双非可还»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«相由则俱有»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«知相则有其非»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离方无迷»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离觉则皆不觉»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离非无相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«端与端俱尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«缘先果后当且仅当无环»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«缘生而不自生则无定性»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«自他随位»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«自缘则常»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«至于无共然后止»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«至于无别然后至»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«致诘不尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«薪尽火传»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«遍而无相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«门摄一切»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«阶全生成则上无终»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«阶生成则上不退化»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
   }
  },
  "instances": {

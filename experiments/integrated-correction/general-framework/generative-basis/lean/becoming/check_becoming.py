@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -194,6 +194,24 @@ SCOPE = (
     "one class of its core along the steps; a step continues under the core exactly where the line under the "
     "value class never ends; the bounded laws, two courses as one net and learnability restated through the "
     "core. "
+    "GrammarCandidates: correlatives as the two ends of one relation are had together; the way back "
+    "from a complement to a mark is exactly double-negation stability; position depends on the class "
+    "exactly where an occurrence is not its own condition; everything ends under identity exactly "
+    "where nothing is its own condition; conditions precede results exactly where the net has no cycle; "
+    "the core is never separated at a finite stage and the converse fails in an infinitely branching "
+    "net. "
+    "GrammarTesting: the core of a class lies in every stage of its approximation, so what a finite "
+    "stage tells apart is not in the core; a room in balance and a room held by a thermostat share a "
+    "core class under the closed net and are told apart under the net with the window's opening. "
+    "GrammarMap: at a fine and a coarse class, a carrying renewal is an alteration; going on along "
+    "some branch and ending on every branch exclude each other; generation, keeping and degeneration "
+    "on branches, generation and keeping both holding at a mixed point and excluding each other on a "
+    "single line; the every-branch forms exclusive and, with excluded middle, covering; renewal does "
+    "not decide the region; telling going on from ending at every point is exactly excluded middle. "
+    "MapInstances: on the old base's continuation relations, carrying renewal is a step into a "
+    "formation that did not carry on as itself; under passing, generation makes carriers arise late; "
+    "read by names nothing generates; consumption held, a family drawn beyond renewal and stopped "
+    "passing refute going on every branch; the relay renews and still ends. "
     "GrammarReadings: the corpus's definitions in the grammar: alteration read from the 墨经 and the "
     "荀子 is one form and is 成坏 along 缘; sameness in belonging is a class exactly where belonging is "
     "single and otherwise need not be transitive; what returns abides; under a constant class a line with "

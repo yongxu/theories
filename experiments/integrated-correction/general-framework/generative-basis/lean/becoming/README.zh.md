@@ -25,6 +25,10 @@
 | L0 | `GenerativeCore`（基础） | 过程、轨迹及其组合与传递 |
 | L0 | [`Becoming.Grammar`](Becoming/Grammar.lean) | 文法：对每个载体与关系成立的关系演算，名用中文并附绑定表；续（`«续»`）是缘与类之合，诸位由之读出，无一自立（`«四相无自立»`）；对缘有常之类，其续永不终了（`«有常则续不尽»`），故一条续之理是其类之核，即类中最大的对称而有常之关系（`«根»`）；对一个类，有常恰是粗网之闭合（`«闭合当且仅当有常»`）；“每一事或生或有前，对一切模型”恰是排中律（`«四相之定当且仅当排中»`） |
 | L0 | [`Becoming.GrammarReadings`](Becoming/GrammarReadings.lean) | 语料之定义写入文法：墨经与荀子之化同为一形，即异；化是沿缘之成坏（`«化为有缘之成坏»`）；同于一者，恰在所属唯一时为类（`«同于为类»`）；复者住（`«复者住»`）；续非一非异（`«非一非异»`），在相等之类下因灭，在较粗之类下线续（`«因灭而续»`） |
+| L0 | [`Becoming.GrammarMap`](Becoming/GrammarMap.lean) | 两种粒度、按分支之地图：传即异（`«传则异»`）；某支之延与诸支之尽互斥（`«延尽不并»`）；按分支读生成、守、退化，相杂之域有实例（`Map.«生守相杂»`），单行之网中互斥（`«单行则生守不并»`）；复生不定其域；在每一点分辨延与尽恰是排中律（`«延尽之定当且仅当排中»`） |
+| L0 | [`Becoming.GrammarTesting`](Becoming/GrammarTesting.lean) | 网内之验：核在每一层之内（`«核在每层之内»`），故有穷之层所分者不在核中（`«可分则不在核»`）；平衡之室与恒温之室在闭网中同属一核类，开窗入网则分（`«恒温与平衡»`） |
+| L0 | [`Becoming.GrammarCandidates`](Becoming/GrammarCandidates.lean) | 检验语料中文法之候选定理：一关系之两端相待而俱有（`«能所相待»`）；自非还于其相，恰是双非可还（`«相待之还当且仅当双非可还»`）；一事之位依于类，恰在其不自缘时（`«定性之判»`）；缘先果后恰在无环时（`«缘先果后当且仅当无环»`） |
+| L2 | [`Becoming.MapInstances`](Becoming/MapInstances.lean) | 旧基底之诸态在地图上：延续关系上的传（`Web.carries_iff`）；传递之下生成使载者迟迟生起（`Web.generation_arises_late`）；只按名读则无生成（`Web.itself_not_generation`）；所耗仍持、家族超出更新、传之止，皆否诸支之不穷；中继复生而终（`Map.relay_renews_and_ends`） |
 | L0 | [`Becoming.Prelude`](Becoming/Prelude.lean) | 各层所用的关于数、真值、列表与选项的引理，每条只陈述一次（不加前提；只导入 Init）：自然数的消去、减法与乘积（`add_right_cancel`、`Naturals.sub_sub`、`mul_assoc_nat`），`all`、`any`、`contains`、`filter`、`find?`、`bind` 与 `map` 检验什么（`ListTests.all_true_iff`、`ListTests.find_none_iff`），连接与映射之列表的成员（`mem_append_cases`、`preimage_of_mem_map`），在 Lean 自带版本用 `propext` 之处以递归证明；唯一的跨段平衡（`balance_over_stretch_on`），流、量、过程与普查的跨段平衡皆为其情形 |
 | L0 | [`Becoming.Frame`](Becoming/Frame.lean) | 框架：过程加上每个配置实现的主张；运行、关系的唯一闭包（`WithinClosure`）、可达即步的闭包、不变量即对步封闭的区域、新实现 |
 | L0 | [`Becoming.World`](Becoming/World.lean) | 展开的记录：依存、依存网（`Dependence Nat`）、流、交换，以及作为运行的世界（其构形是依存网、移动是交换；`World.of`、`World.web`、`World.flow`、`World.move`），彼此之间不设前提；导入框架 |

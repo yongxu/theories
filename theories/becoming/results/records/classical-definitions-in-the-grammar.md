@@ -59,6 +59,8 @@ Units: 墨经 MJ-J-045, MJ-J-039; 荀子 XZ-ZM-063, XZ-ZM-064; 金师子章 JSZ-
   - Input: Definitions read from the corpus.
   - Preserved conditions: A net without self-conditioning where identity is the class. [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean)
 
+**Used by:** [candidate-theorems-of-the-corpus](candidate-theorems-of-the-corpus.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

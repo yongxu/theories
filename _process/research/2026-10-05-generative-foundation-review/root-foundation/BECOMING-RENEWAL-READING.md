@@ -16818,3 +16818,77 @@ Output → input: the two records; THE-STEP-OF-INVARIANCE §4.4, §5 and §8; D6
 **Constructivity.** Balance over the stretch gives only that the replenishment over the stretch is positive. The giver is found by searching the finite stretch, the finite family and the finite list of formations taking part (`total_pos`), so no omniscience principle is used. The unbounded form, that a formation drawing without end needs feeders giving without end, holds in the core only doubly negated (`Flow.uptake_needs_replenishment`: its replenishment is not zero from any step on); the bounded form is the one that names a giver. Two early drafts used `propext`, through a match with a wildcard pattern in the witness flows and through the core lemma `Nat.exists_eq_add_of_lt`; the landed proofs use exhaustive patterns and `Nat.le.dest`, and every axiom report is empty.
 
 **Self-review.** (1) `Needs`, `NeedsSome` and `CarriesAlone` changed definition, not meaning: each is the two-reading form with the marking reading, and IV3's statements and proofs about them stand. (2) The base law uses balance, only active formations giving and the class of givers; it uses no requirement, need or support of the web, so it holds whatever the web requires. (3) `PartAlone` on the base asserts which flows are possible; the witness constructs them, and nothing derives them from a given web. (4) The joined theorem needs every member of every generation from the excess on coupled to the family; with one independent member the course keeps something beyond and the comparison is mixed. (5) Not done: possible flows read off a web so that `PartAlone` is derived; need graded by how much a feeder gives.
+
+## 379. The map: generation, keeping and degeneration at two grains and on branches (OU4)
+
+```text
+Result(s): new record generation-and-degeneration-at-two-grains.
+Delta: the map of the one-unfolding plan (PLAN.md §七) in the grammar (Becoming.GrammarMap), and the old base's
+       regimes on it (Becoming.MapInstances). Renewal alone («复生») cannot tell renewal that sustains a pattern
+       from turnover that ends it; read at two grains, a fine class of parts and a coarse class of the pattern,
+       it can, and the regions are read on branches. A carrying renewal («传») continues the pattern while a
+       part begins (火传). The pattern goes on along some branch («延», coinductive) or ends on every branch
+       («尽», inductive), which exclude each other; generation (some branch renews without end), keeping (some
+       branch goes on without renewal) and degeneration (every branch ends) are read so. Generation and keeping
+       can hold at one point (Map.«生守相杂»: the mixed region) and exclude each other on a single line
+       («单行则生守不并»). The every-branch forms («全生成», «全守», «有终») are their strong and weak cases,
+       exclusive and, with excluded middle, covering. Renewal does not decide the region; telling going on from
+       ending at every point, in every model, is exactly excluded middle («延尽之定当且仅当排中»). A chain of
+       classes reads generation at every order («阶生成»). On the old base: carrying renewal is a step into a
+       formation that did not carry on as itself; generation under passing makes carriers arise late; by names
+       nothing generates; consumption still held, a family drawn beyond renewal and passing that stops refute
+       going on every branch; the relay renews and still ends.
+Premises / correspondence: none beyond the grammar; the covering law of the every-branch forms takes excluded
+       middle as a hypothesis.
+Evidence: core receipt 20261023T071926.635620Z (Becoming.GrammarMap, 36 theorems in 55 declarations, and
+       Becoming.MapInstances; empty axiom reports); MapInstances written by an Opus coder (development/ou4-instances/).
+Boundary: generation is a pattern continuing through renewal of its parts, with no premise on what the pattern is
+       or whether its going on is good; Lasting, Capture and ClosedCapture are not regions of this map (they
+       concern guards, shares and rules, not lines of occurrences).
+Output → input: the plan's §七 map; next, generation at the coarse grain read as selection of the fine.
+```
+
+**Why branches.** The first form of the map read a pattern's line through «不穷», which asks every branch to go on; the coder of the instances found that a relay then degenerates although the pattern is present at every step, and a species would degenerate because its members die. So the regions are read on branches: going on along some branch is a family closed under continuation (coinductive), ending on every branch is inductive, and the two exclude each other constructively. Where lines branch, a point can renew along one branch and keep along another; that mixed region is part of the map, not an error of it, and on a single line it is empty.
+
+## 380. Testing within the net (OU5)
+
+```text
+Result(s): new record testing-within-the-net.
+Delta: 验 of the one-unfolding plan (PLAN.md §4.4) in the grammar (Becoming.GrammarTesting). The core of a class
+       is approximated by stages («层»); the core lies in every stage («核在每层之内»), so what a finite stage
+       tells apart is not in the core («可分则不在核»). A room in balance and a room held by a thermostat share a
+       core class of "warm or not" while no window opens, and the window's opening, read as part of the net,
+       tells them apart at the first stage («恒温与平衡»).
+Premises / correspondence: none beyond the grammar; the converse (what no finite stage tells apart lies in the
+       core) is the Hennessy–Milner direction, which needs finitely many successors and implies LLPO in its
+       limit form; it is a calibration, not stated here.
+Evidence: core receipt 20261023T071926.635620Z (Becoming.GrammarTesting, 6 theorems in 13 declarations, empty axiom
+       reports).
+Boundary: the net with the window's opening is a net of possibilities (its successors are alternatives); in one
+       history the open window either happens or not, and the comparison is counterfactual.
+Output → input: the plan's 穷理 (explanatory minimum): 验 is the root theorem's one direction.
+```
+
+**Why no intervener.** The source texts that prompted plan version 9 read the thermostat case through intervention (do(·)). In the grammar the window is not an act from outside: it is a relation of the net read, and two mechanisms are told apart where the wider net's relations tell their occurrences apart. 《荀子·正名》's 「验之所缘以同异」 names the same: one tests by what sameness and difference are conditioned by.
+
+## 381. The corpus's candidate theorems of the grammar, tested (OU2c)
+
+```text
+Result(s): new record candidate-theorems-of-the-corpus.
+Delta: the first batch's 59 units of class 乙 (candidate theorems of the grammar) read in Lean
+       (Becoming.GrammarCandidates): 38 proved, 15 conditional, 3 refuted, 2 misclassified, 1 not-expressible. Proved: correlatives as the two ends of one relation are had
+       together («能所相待», «三法相因待»); 無為 has no positions («无为无别相»). Needing a premise (really 丙一):
+       有無相生 needs double-negation stability for its way back («相待之还当且仅当双非可还»); 四相俱時 and
+       several 中论 lines on no fixed nature need that nothing is its own condition («定性之判»,
+       «念念灭当且仅当无自缘»); 果後緣先 is exactly the absence of cycles («缘先果后当且仅当无环»); 不可致詰故混而為一
+       fails in an infinitely branching net («致诘不尽»). Refuted: two lines in contact can each lie wholly in
+       the other (MJ-S-068.1, .5), and 一切物皆從眾緣生 is a condition on a model, not a law (ZL-07-285).
+Premises / correspondence: none beyond the grammar for the proved; the conditional name their premise.
+Evidence: core receipt 20261023T071926.635620Z (Becoming.GrammarCandidates, 66 theorems in 90 declarations, empty axiom
+       reports); outcomes per unit in development/ou2-candidates/outcomes.tsv; written by an Opus coder.
+Boundary: the readings are AI reconstructions; what the grammar lacks most often is own nature (自性), naming, 空,
+       extent, knowledge, and classical stability of the logic.
+Output → input: plan §三 (the 乙 class tested, not assumed); the plan's own examples 有無相生 and 四相俱時 move to 丙一.
+```
+
+**What the test says about the plan.** Both examples the plan gave of class 乙 need a premise. 有無相生 holds one way for every carrier (a mark gives its complement a mark) and the other way only under double-negation stability: the constructive core keeps the asymmetry 王弼's 本末 reading has. 四相俱時, read as positions depending on the class, needs that nothing is its own condition; the same premise carries the 中论's 「從眾緣生故無定性」. The grammar does not assume it: a self-conditioning occurrence abides under every class («自缘则常»), and whether the unfolding has such occurrences is a question of the model.
