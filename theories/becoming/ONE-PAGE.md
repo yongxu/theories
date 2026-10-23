@@ -28,4 +28,4 @@
 - The root and the ethics are not yet one account: the continuation condition is stated on its own formalism, not on continuation.
 - Whether either premise of the ethics can be warranted is open.
 - The test systems the theory should meet first (radioactive decay, an organism, an institution, a belief system) have no models yet.
-- No human has yet reviewed the work; review by scholars of the classical texts, of Buddhist thought and of logic is the next step.
+- No human has yet reviewed the work; review by scholars of the classical texts, of Buddhist thought and of logic is the next step ([the review packet](review/README.md)).

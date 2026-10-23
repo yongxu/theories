@@ -17355,3 +17355,34 @@ Output → input: 01-ROOT §4 (the kept-and-left laws, the orbit laws) and its O
 **The review, and what was taken.** Errors fixed in the texts: "never left" read as every successor (the law gives a successor; in a branching net another may leave the core); "its core changes" (the core is one relation; the line passes between its classes); "every ending is preceded by a change" (only an end reached by a step); "which step leaves the core needs decision" (the last step needs none, now a theorem); the class of `loopPart` named without its step count; "along every schedule" dropped from an iff; the hypotheses of `loss_ends_line` dropped and its line confused with the lock line; the Open item's "limits" dropped without being covered. Lean changed: `«亡前理变»` stated for every relation (the class hypothesis was superfluous); `«相续之末步»`, `«有亡之线末步离核»` and `adaptive_core_apart` added; the lock line stated under being locked, not only favouring; the witness's open line shown to end at its first step. Readings narrowed: the texts' claim read as true of a class that does not hold by itself, under the one-history reading; the withdrawal of "cannot be stated" narrowed to a rule changing by a fixed law; "the loop continues as itself" replaced by "the course stays locked"; the way out called one sufficient way, as T7 does; the closed loop called capture through the rule, the reading formed from the share not stated here. The record of the general laws says they are corollaries.
 
 **Self-review.** (1) Each sentence of the chapter paragraphs was read against its declaration after the review. (2) `favouredAlike` serves `loss_ends_line` because its reading is any `h` turning against favouring; `lockedAlike` serves the lock line. (3) Not done: the items in Boundary.
+
+## 391. The review packet for human readers (RP)
+
+Board item RP ([Ren's choice](../../../../sources/15-codex-theory-conversations/2026-10-24-review-packet.md), deferred until after §389; the work below is the AI's). No human has reviewed the theory. The packet asks people who know the fields to judge what a machine cannot: whether the readings are faithful, whether the claims stand at their right strength, and what is missing.
+
+```text
+Result(s): no new result; a review instrument.
+Delta: (1) a cover for reviewers (theories/becoming/review/README.md, README.zh.md): what is asked of whom,
+       in which language, how long, how to respond, and what happens with a review;
+       (2) three dossiers: classical Chinese texts (CLASSICAL-TEXTS.md, Chinese, 38 items), Buddhist thought
+       (BUDDHIST-THOUGHT.md, Chinese, 35 items), logic (LOGIC.md, English); each item quotes its source,
+       gives the theory's reading with its standing and use, its known weaknesses, and neutral questions,
+       with a response form;
+       (3) a blind re-coding of the corpus classification: 237 units drawn by text and AI class with a fixed
+       seed (development/review-packet/sample.py), the sheet without the AI's classes, the codebook
+       (recoding/CODEBOOK.md), the design and its reading fixed before coding (recoding/FREEZE.md), and the
+       analysis (recoding/agreement.py: kappa against the AI, agreement weighted to the corpus, per class,
+       alpha among coders, every figure also without the 18 sampled units the dossiers quote).
+Premises: none added.
+Evidence: every quotation in the packet is checked against its source and every Lean name against the
+       package (development/review-packet/check_dossiers.py, which ignores Wikisource markup and rejects an
+       ellipsis hiding one or two characters); each part was reviewed by an independent reader of its field,
+       and the logic dossier also by an independent model; the agreement script was tested on synthetic coders.
+Boundary: the packet records what the theory claims and where it is weak; it adds no theorem and changes
+       no reading. The codebook adds rules the AI coders did not have, marked and listed; on those classes
+       disagreement partly measures that difference.
+Output → input: the reviews, each answered where it concerns (a chapter, a record, the decision register);
+       the re-coding's agreement, read as FREEZE.md fixes.
+```
+
+**What the reviews of the packet found.** The classical reviewer found a quotation that dropped 無 and so reversed its line, passed by the first checker because Wikisource markup split the source text; the checker now strips the markup and rejects short omissions. It found the dossiers printing the AI's classes for sampled units, which would break the blinding; re-coders are asked to code first, and the analysis reports every figure without those units. It found a counter-model misdescribed and a manuscript variant (帛书乙「死而不忘者壽也」) not told. The codebook's reviewer found rules the AI coders never had; they are kept, marked and declared as a confound.

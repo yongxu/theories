@@ -1,0 +1,238 @@
+n	id	file	ai_class	inclusion_probability	ai_form	ai_confidence
+1	CWS-P1-016	chengweishi	乙	0.083333	用不離體 → 用應常	中
+2	CWS-P1-018	chengweishi	丙一	0.093750	Z=本識一類相續、任持種子、與一切法更互為因、熏習力，Y=有憶識等事	高
+3	CWS-P1-029	chengweishi	丁	0.300000		中
+4	CWS-P3-006	chengweishi	庚	0.015873		中
+5	CWS-P3-036	chengweishi	戊	0.300000	唯本識中功能差別具斯六義，成種非餘；外穀麥等 假立種名，非實種子	高
+6	CWS-P3-040	chengweishi	丙一	0.093750	Z=外種，Y=為增上緣辦果	中
+7	CWS-P3-067	chengweishi	甲	0.044776	能熏（有增減）	中
+8	CWS-P3-079	chengweishi	甲	0.044776	因緣 := 此二（同时之种现、前后之种种）；餘皆假說	高
+9	CWS-P4-012	chengweishi	庚	0.015873		高
+10	CWS-P4-033	chengweishi	己	1.000000	对方之难：因現有 → 果未生 → 因是誰因？	中
+11	CWS-P4-034	chengweishi	己	1.000000	对方之难：果現有 → 前因已滅 → 果是誰果？	中
+12	CWS-P4-036	chengweishi	己	1.000000	对方之难：因時已有後果 → 何待前因	中
+13	CWS-P4-046	chengweishi	丁	0.300000	遠離二邊，契會中道；應順修學	中
+14	CWS-P4-069	chengweishi	庚	0.015873		中
+15	CWS-P5-017	chengweishi	丙一	0.093750	Z=緣擊，Y=（種子）生轉識波浪，恒無間斷，猶如瀑流	高
+16	CWS-P5-023	chengweishi	戊	0.300000	眼等諸識無恒相續 → 別有第八識	高
+17	CWS-P6+P7+P8-001	chengweishi	戊	0.300000	心心所 離第八識不成	中
+18	CWS-P6+P7+P8-047	chengweishi	庚	0.015873		中
+19	CWS-P6+P7+P8-052	chengweishi	乙	0.083333	識緣名色 ∧ 名色緣識；二法展轉相依，如蘆束，俱時而轉	高
+20	CWS-P6+P7+P8-071	chengweishi	甲	0.044776	識食 := 執持為相	高
+21	CWS-P6+P7+P8-083	chengweishi	乙	0.083333	過去非食（已滅無體用）	中
+22	CWS-P9-019	chengweishi	丁	0.300000		低
+23	JSZ-P-06-011	jinshizizhang	未读出	0.176471		中
+24	JSZ-P-06-013	jinshizizhang	甲	0.062500	一乘圓教 := 師子情盡體露之法，渾成一塊	中
+25	JSZ-P-07-016	jinshizizhang	丙一	0.200000	Z=諸根同時相收，Y=一一皆純一一皆雜	低
+26	JSZ-P-07-029	jinshizizhang	乙	0.750000	九世有隔不同，相由成立（诸时互缘）	中
+27	JSZ-P-07-030	jinshizizhang	乙	0.750000	融通無礙，同為一念（环成俱有之聚）	低
+28	JSZ-P-07-035	jinshizizhang	戊	0.081081	說師子，用表無明	高
+29	JSZ-P-10-003	jinshizizhang	丁	0.214286		中
+30	JSZ-C-005	jinshizizhang	丙一	0.200000	Z=假緣，Y=萬像有	中
+31	JSZ-C-015	jinshizizhang	丙一	0.200000	Z=無因緣，Y=法不生；萬法無體，假緣成立	高
+32	JSZ-C-017	jinshizizhang	戊	0.081081	喻真理不變	高
+33	JSZ-C-035	jinshizizhang	甲	0.062500	遍計性 := 迷心所執，計有相生以為實	中
+34	JSZ-C-036	jinshizizhang	甲	0.062500	依他性 := 不了緣生	中
+35	JSZ-C-038	jinshizizhang	庚	0.037500		中
+36	JSZ-C-039	jinshizizhang	丁	0.214286		中
+37	JSZ-C-056	jinshizizhang	己	0.600000	拒：法有自生；法本無生，從緣有故	中
+38	JSZ-C-057	jinshizizhang	己	0.600000	拒：有自體之生；生而無生	中
+39	JSZ-C-058	jinshizizhang	戊	0.081081	喻真理隨緣成諸事法	中
+40	JSZ-C-061	jinshizizhang	己	0.600000	拒：生為自性之生；由緣生非生方得名生	低
+41	JSZ-C-068	jinshizizhang	丁	0.214286		中
+42	JSZ-C-086	jinshizizhang	庚	0.037500		中
+43	JSZ-C-093	jinshizizhang	未读出	0.176471		中
+44	JSZ-C-107	jinshizizhang	未读出	0.176471		中
+45	JSZ-C-108	jinshizizhang	庚	0.037500		中
+46	JSZ-C-123	jinshizizhang	乙	0.750000	果是即因之果，因是即果之因（相待）	低
+47	LZ-01-003	laozi	庚	0.033058	常無欲以觀其妙，常有欲以觀其徼	中
+48	LZ-01-005	laozi	庚	0.033058	玄之又玄（迭用）	中
+49	LZ-02-002	laozi	乙	0.428571	相待：知善之為善 → 不善	中
+50	LZ-02-003	laozi	乙	0.428571	相 X（六对）：有無相生、難易相成、長短相較、高下相傾、音聲相和、前後相隨	高
+51	LZ-07-001	laozi	庚	0.033058	天長地久	高
+52	LZ-11-004	laozi	丙一	0.073171	丙一：Z=有一无（空处）可资之器，Y=有之為利、無之為用	低
+53	LZ-16-006	laozi	丁	0.019011	丙一形：Z=不知常，Y=妄作凶	高
+54	LZ-17-002	laozi	未读出	0.750000	丙一形：Z=信不足，Y=有不信	中
+55	LZ-23-010	laozi	未读出	0.750000	丙一形：Z=信不足，Y=有不信	中
+56	LZ-24-002	laozi	甲	0.075000	其在道也 := 餘食贅行	低
+57	LZ-25-006	laozi	戊	0.500000	域中有四大，而王居其一	低
+58	LZ-26-001	laozi	戊	0.500000	重為輕根，靜為躁君	中
+59	LZ-27-002	laozi	丁	0.019011	善行無轍迹……常善救人，故無棄人	中
+60	LZ-30-002	laozi	未读出	0.750000	其事好還	低
+61	LZ-38-001	laozi	丁	0.019011	上德不德……上禮為之而莫之應	中
+62	LZ-39-003	laozi	戊	0.500000	貴以賤為本，高以下為基	中
+63	LZ-41-006	laozi	庚	0.033058	夫唯道，善貸且成	中
+64	LZ-56-005	laozi	乙	0.428571	相待（王弼）：可得而 X，則可得而 非X（親/疏、利/害、貴/賤）	低
+65	LZ-59-002	laozi	甲	0.075000	早服 := 嗇（是謂）	低
+66	LZ-65-005	laozi	甲	0.075000	玄德 := 常知稽式	低
+67	LZ-75-002	laozi	丙一	0.073171	丙一：Z=上之有為，Y=民難治	低
+68	LZ-76-002	laozi	丙一	0.073171	丙一：Z=草木之生/死，Y=柔脆/枯槁	中
+69	LZ-79-004	laozi	丁	0.019011	和大怨，必有餘怨……天道無親，常與善人	中
+70	LZ-80-004	laozi	丁	0.019011	小國寡民……樂其俗	中
+71	MJ-J-048	mojing	未读出	0.166667		低
+72	MJ-J-070	mojing	甲	0.027933	次 := 無閒而不攖（无间而不相交）	高
+73	MJ-S-009	mojing	戊	1.000000	禮：贵者称公、贱者称名，俱有敬慢：等异	中
+74	MJ-S-014	mojing	甲	0.027933	信 := 不以其言之當（使人視城得金）	中
+75	MJ-S-015	mojing	未读出	0.166667		低
+76	MJ-S-061	mojing	庚	0.058824		中
+77	MJ-S-064.3	mojing	甲	0.027933	及非齊之及	低
+78	MJ-S-068.1	mojing	乙	0.375000	尺与尺攖，俱不盡	低
+79	MJ-S-068.5	mojing	乙	0.375000	體攖，不相盡	低
+80	MJ-S-076.3	mojing	乙	0.375000	不俱當，必或不當	中
+81	MJ-S-077.1	mojing	丁	0.300000	欲𩁥其指，智不知其害，是智之罪	中
+82	MJ-S-080.1	mojing	庚	0.058824		高
+83	MJ-S-082.2	mojing	甲	0.027933	說（知之来源）:= 方不㢓	低
+84	MJ-S-084.2	mojing	甲	0.027933	親 := 身觀	高
+85	MJ-S-086.1	mojing	未读出	0.166667		低
+86	MJ-S-087	mojing	丁	0.300000	權：兩而勿偏	低
+87	MJ-S-091.4	mojing	庚	0.058824		低
+88	MJ-S-101.1	mojing	丁	0.300000		低
+89	QXL-YY-014	qixinlun	庚	0.018450		高
+90	QXL-LY-015	qixinlun	庚	0.018450		中
+91	QXL-JS-013	qixinlun	乙	0.300000	在全类（平等）之下无异：無有變異	低
+92	QXL-JS-027	qixinlun	未读出	0.750000		中
+93	QXL-JS-055	qixinlun	未读出	0.750000		中
+94	QXL-JS-073	qixinlun	乙	0.300000	若離不覺之心，則無真覺自相可說（相待）	中
+95	QXL-JS-093	qixinlun	甲	0.034188	執取相 := 依相續緣念境界，住持苦樂，心起著	中
+96	QXL-JS-119	qixinlun	丙一	0.057692	Z=離心，Y=無六塵境界；三界唯心所作	高
+97	QXL-JS-124	qixinlun	甲	0.034188	意識 := 即相續識，計我我所，分別六塵；亦名分離識	中
+98	QXL-JS-125	qixinlun	甲	0.034188	分別事識 := （意識之又名）依見愛煩惱增長	中
+99	QXL-JS-141	qixinlun	甲	0.034188	相應 := 心念法異，依染淨差別而知相緣相同	中
+100	QXL-JS-209	qixinlun	戊	0.250000	真如本一 / 無明無量差別	中
+101	QXL-JS-239	qixinlun	戊	0.250000	淨法熏習無有斷，盡於未來	中
+102	QXL-JS-242	qixinlun	戊	0.250000	真如自體相：無有增減，非前際生、非後際滅，畢竟常恒	高
+103	QXL-JS-278	qixinlun	庚	0.018450		中
+104	QXL-JS-302	qixinlun	未读出	0.750000		中
+105	QXL-JS-303	qixinlun	乙	0.300000	若無色則無虛空之相（虛空/色 相待）	中
+106	QXL-JS-313	qixinlun	丙一	0.057692	Z=因生滅染義，Y=說差別；唯依真如義說	低
+107	QXL-JS-325	qixinlun	己	1.000000	拒：三界外更有眾生始起	中
+108	QXL-JS-326	qixinlun	丙一	0.057692	Z=如來藏無後際，Y=涅槃與之相應無後際	中
+109	QXL-JS-330	qixinlun	己	1.000000	拒：五陰生滅自性實有；自性不生則無有滅	中
+110	QXL-JS-344	qixinlun	丁	0.033058		中
+111	QXL-JS-358	qixinlun	庚	0.018450		中
+112	QXL-JS-384	qixinlun	丁	0.033058	以知法性P故修Q	中
+113	QXL-XX-030	qixinlun	庚	0.018450		中
+114	QXL-XX-085	qixinlun	丁	0.033058		中
+115	QXL-XX-097	qixinlun	丁	0.033058		中
+116	WJZ-P1-007	wujiaozhang-liuxiang	戊	0.750000	一乘 / 三乘（權現）	中
+117	WJZ-P1-009	wujiaozhang-liuxiang	戊	0.750000	三乘 隨機；一乘 現佛身	中
+118	WJZ-P1-012	wujiaozhang-liuxiang	丁	1.000000	三乘以無窮為過；一乘以無窮為實德	中
+119	WJZ-P1-015	wujiaozhang-liuxiang	丁	1.000000		中
+120	WJZ-P1-017	wujiaozhang-liuxiang	庚	0.056604		高
+121	WJZ-P1-021	wujiaozhang-liuxiang	甲	0.150000	同相 := 多義不相違，同成一總	高
+122	WJZ-P1-025	wujiaozhang-liuxiang	戊	0.750000	一乘圓教 法界緣起，無盡圓融，自在相即；一斷一切斷	中
+123	WJZ-P1-028	wujiaozhang-liuxiang	丁	1.000000	始終皆齊，初發心時便成正覺	中
+124	WJZ-P1-033	wujiaozhang-liuxiang	甲	0.150000	總相 = 舍	高
+125	WJZ-P1-039	wujiaozhang-liuxiang	乙	0.058824	得椽 → 得舍	中
+126	WJZ-P1-065	wujiaozhang-liuxiang	乙	0.058824	無別 → 無總	高
+127	WJZ-P1-098	wujiaozhang-liuxiang	甲	0.150000	異相 := 諸緣迭互相望各各異（相望）	高
+128	WJZ-P1-108	wujiaozhang-liuxiang	庚	0.056604		高
+129	WJZ-P1-114	wujiaozhang-liuxiang	乙	0.058824	並不作 → 無舍 → 斷	中
+130	WJZ-P1-122	wujiaozhang-liuxiang	庚	0.056604		高
+131	XCS-01-001	xici	戊	0.428571	戊：尊/卑之等 → 乾坤定	高
+132	XCS-01-003	xici	丙一	0.214286	丙一：Z=動靜有常，Y=剛柔斷	中
+133	XCS-01-004	xici	丁	0.030769	丙一形：Z=方以類聚、物以羣分，Y=吉凶生	中
+134	XCS-01-010	xici	未读出	0.750000	X則Y（丙一形）：Z=易/簡，Y=易知/易從	中
+135	XCS-01-012	xici	未读出	0.750000	X則Y：Z=有親/有功，Y=可久/可大	低
+136	XCS-01-014	xici	未读出	0.750000	X而Y：易簡 → 天下之理得	中
+137	XCS-03-003	xici	甲	0.057692	吉凶 := 言乎其失得	高
+138	XCS-03-006	xici	戊	0.428571	列貴賤者存乎位（等级）；其余 X 存乎 Y	中
+139	XCS-06-004	xici	丙一	0.214286	乾：靜專、動直 → 大生	低
+140	XCS-08-011	xici	庚	0.027778	言行，君子之樞機	中
+141	XCS-08-024	xici	丁	0.030769	勞而不伐，有功而不德，厚之至也	高
+142	XCS-12-017	xici	庚	0.027778	X 存乎 Y（所在）	中
+143	XCX-01-003	xici	丙一	0.214286	丙一：Z=剛柔相推，Y=變在其中	中
+144	XCX-01-011	xici	甲	0.057692	天下之動 := 貞夫一者	低
+145	XCX-02-003	xici	庚	0.027778	制器取象（叙事）	高
+146	XCX-03-008	xici	庚	0.027778	其德行何也	高
+147	XCX-06-017	xici	丁	0.030769	損，先難而後易（先 X 後 Y）	中
+148	XCX-06-030	xici	丁	0.030769	X，以 Y（九卦之用）	高
+149	XCX-08-003	xici	戊	0.428571	三與五同功而異位……貴賤之等也	高
+150	XCX-08-007	xici	甲	0.057692	爻 := 道之變動（故曰）	中
+151	XZ-ZM-022	xunzi-zhengming	丁	0.042857		中
+152	XZ-ZM-024	xunzi-zhengming	丁	0.042857		中
+153	XZ-ZM-026	xunzi-zhengming	丙一	0.176471	Z=王者起，Y=循于旧名 ∧ 作于新名	低
+154	XZ-ZM-031	xunzi-zhengming	戊	0.750000	贵贱明、同异别 → 志无不喻、事无困废	中
+155	XZ-ZM-045	xunzi-zhengming	甲	0.076923	不知 := 五官簿之而不知，心征知而无说	高
+156	XZ-ZM-054	xunzi-zhengming	乙	1.000000	推而共之，至于无共然后止：粗化之极（最粗之类）	中
+157	XZ-ZM-057	xunzi-zhengming	乙	1.000000	推而别之，至于无别然后至：细化之极（最细之类）	中
+158	XZ-ZM-058	xunzi-zhengming	甲	0.076923	宜 := 约定俗成；不宜 := 异于约	高
+159	XZ-ZM-060	xunzi-zhengming	甲	0.076923	善名 := 径易而不拂	高
+160	XZ-ZM-061	xunzi-zhengming	乙	1.000000	状之类与所之类交叉：同状异所、异状同所皆可别	低
+161	XZ-ZM-072	xunzi-zhengming	丁	0.042857	惑于用名以乱实	中
+162	XZ-ZM-076	xunzi-zhengming	戊	0.750000	民可一以道而不可与共故	中
+163	XZ-ZM-109	xunzi-zhengming	庚	0.047619		高
+164	XZ-ZM-127	xunzi-zhengming	庚	0.047619		中
+165	XZ-ZM-131	xunzi-zhengming	戊	0.750000	天所受之欲制于心所受之多	低
+166	XZ-ZM-152	xunzi-zhengming	丙一	0.176471	凡人：Z=所可，Y=从之；Z=所不可，Y=去之	低
+167	XZ-ZM-162	xunzi-zhengming	庚	0.047619		中
+168	XZ-ZM-182	xunzi-zhengming	丙一	0.176471	Z=外危，Y=内恐	低
+169	ZL-01-002	zhonglun	丁	0.428571		中
+170	ZL-01-007	zhonglun	庚	0.020672		高
+171	ZL-01-013	zhonglun	丁	0.428571		中
+172	ZL-01-031	zhonglun	己	0.019126	一 → ¬緣；異 → ¬相續	中
+173	ZL-01-064	zhonglun	庚	0.020672		中
+174	ZL-01-101	zhonglun	丁	0.428571	Z=無因，Y=善惡果報顛倒	中
+175	ZL-01-104	zhonglun	乙	0.115385	¬(自性 ∈ 眾緣)；名字 ← 眾緣和合	中
+176	ZL-01-105	zhonglun	甲	0.100000	自性 := 自體	中
+177	ZL-01-167	zhonglun	庚	0.020672		中
+178	ZL-01-177	zhonglun	戊	0.600000	實法 / 隨宜所說	中
+179	ZL-01-183	zhonglun	乙	0.115385	從眾緣生 → 無定性 → 無有相	中
+180	ZL-02-040	zhonglun	庚	0.020672		高
+181	ZL-02-088	zhonglun	甲	0.100000	住 := 與去相違者	中
+182	ZL-02-110	zhonglun	甲	0.100000	止 := 穀子滅故芽莖葉滅	中
+183	ZL-02-129	zhonglun	戊	0.600000	人 常 / 法 無常	低
+184	ZL-02-157	zhonglun	甲	0.100000	去法 := 身動	高
+185	ZL-07-016	zhonglun	己	0.019126	生時 → ¬住∧¬滅	中
+186	ZL-07-047	zhonglun	庚	0.020672		中
+187	ZL-07-110	zhonglun	己	0.019126	¬生(生已) ∧ ¬生(未生) ∧ ¬生(生時)	中
+188	ZL-07-162	zhonglun	丙一	0.136364	Z=縷自有定相，Y=¬從麻出	中
+189	ZL-07-194	zhonglun	庚	0.020672		高
+190	ZL-07-216	zhonglun	己	0.019126		中
+191	ZL-07-235	zhonglun	丙一	0.136364	Z=自相住，Y=常	中
+192	ZL-07-240	zhonglun	未读出	1.000000		低
+193	ZL-07-285	zhonglun	乙	0.115385	一切物 → 從眾緣生	中
+194	ZL-07-304	zhonglun	戊	0.600000	凡人 / 賢聖：語言同而心異	中
+195	ZL-21-039	zhonglun	庚	0.020672		中
+196	ZL-21-048	zhonglun	己	0.019126		中
+197	ZL-21-113	zhonglun	丙一	0.136364	Z=常，Y=墮常邊；Z=無常，Y=墮斷邊	中
+198	ZL-21-114	zhonglun	庚	0.020672		高
+199	ZL-21-122	zhonglun	己	0.019126	因果生滅 ∧ 滅更不生 → 因 斷滅	中
+200	ZL-21-133	zhonglun	己	0.019126		中
+201	ZL-10-017	zhonglun-2	庚	0.024896		高
+202	ZL-10-028	zhonglun-2	己	0.030488	作=作者 → 陶師=瓶	高
+203	ZL-10-042	zhonglun-2	甲	0.121212	人功 := 將護火令燃	高
+204	ZL-10-113	zhonglun-2	己	0.030488		高
+205	ZL-10-149	zhonglun-2	丁	0.150000	說有我、諸法各異相 → 不得佛法味	中
+206	ZL-17-004	zhonglun-2	甲	0.121212	对方：慈善 := 降伏心 ∧ 利益眾生；為二世果報種	中
+207	ZL-17-037	zhonglun-2	己	0.030488	業是生滅相，一念不住 → ¬至果報	高
+208	ZL-17-040	zhonglun-2	丙一	0.120000	对方：Z=種子，Y=芽等相續→果；離種無相續	高
+209	ZL-17-065	zhonglun-2	己	0.030488	生滅不住 ∧ 欲以相續 → 不然	高
+210	ZL-17-076	zhonglun-2	丙一	0.120000	对方：Z=不失法（思惟所斷），Y=諸業有果報	中
+211	ZL-17-090	zhonglun-2	丙一	0.120000	对方：Z=業重，Y=先受報	低
+212	ZL-17-159	zhonglun-2	甲	0.121212	作者 := 如初變化人；業 := 變化人所作	中
+213	ZL-19-024	zhonglun-2	庚	0.024896		高
+214	ZL-19-047	zhonglun-2	己	0.030488	一實有 → ¬因異而有	高
+215	ZL-19-049	zhonglun-2	庚	0.024896		高
+216	ZL-24-021	zhonglun-2	丁	0.150000	对方：說空 → 壞三寶	中
+217	ZL-24-026	zhonglun-2	庚	0.024896		高
+218	ZL-24-033	zhonglun-2	戊	1.000000	二諦：世俗諦 / 第一義諦	高
+219	ZL-24-038	zhonglun-2	丁	0.150000		中
+220	ZL-24-071	zhonglun-2	乙	0.042553	從因緣生 → 無有性	高
+221	ZL-24-080	zhonglun-2	甲	0.121212	眾因緣生法 := 空	高
+222	ZL-24-085	zhonglun-2	乙	0.042553	有性相 → 不待眾緣；不待眾緣 → 無法	高
+223	ZL-24-092	zhonglun-2	乙	0.042553	苦 ¬從緣生 → 無苦	高
+224	ZL-24-094	zhonglun-2	乙	0.042553		高
+225	ZL-24-110	zhonglun-2	庚	0.024896		高
+226	ZL-24-149	zhonglun-2	庚	0.024896		高
+227	ZZ-YSZ-002	zhuangzi-yangshengzhu	丁	0.750000	Z=以有涯随无涯，Y=殆	中
+228	ZZ-YSZ-004	zhuangzi-yangshengzhu	丁	0.750000		中
+229	ZZ-YSZ-005	zhuangzi-yangshengzhu	庚	0.103448		高
+230	ZZ-YSZ-016	zhuangzi-yangshengzhu	丙一	1.000000	Z=以无厚入有间，Y=游刃必有余地	中
+231	ZZ-YSZ-024	zhuangzi-yangshengzhu	戊	1.000000	天 / 人（二源之分）	低
+232	ZZ-YSZ-026	zhuangzi-yangshengzhu	丁	0.750000		中
+233	ZZ-YSZ-028	zhuangzi-yangshengzhu	庚	0.103448		高
+234	ZZ-YSZ-029	zhuangzi-yangshengzhu	庚	0.103448		高
+235	ZZ-YSZ-034	zhuangzi-yangshengzhu	甲	1.000000	遁天之刑 := 遁天倍情，忘其所受	中
+236	ZZ-YSZ-037	zhuangzi-yangshengzhu	甲	1.000000	帝之县解 := 安时而处顺，哀乐不能入	中
+237	ZZ-YSZ-038	zhuangzi-yangshengzhu	乙	1.000000	薪尽（细之类下亡）而火传（火之类下续）：亡于细者不必亡于粗	中
