@@ -508,6 +508,18 @@
    "page": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md"
   },
   {
+   "id": "record:a-regularity-kept-and-changed",
+   "type": "result",
+   "record": "a-regularity-kept-and-changed",
+   "title": "A regularity kept and left along its own line",
+   "title_zh": "理之守与离",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/a-regularity-kept-and-changed.md"
+  },
+  {
    "id": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
    "type": "result",
    "record": "a-rise-past-the-inflow-is-drawn-from-beyond",
@@ -3986,6 +3998,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/room-read-off-the-exchange.md"
+  },
+  {
+   "id": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "result",
+   "record": "rules-that-change-themselves-in-the-grammar",
+   "title": "Rules that change themselves, read in the grammar",
+   "title_zh": "自改其则者于文法中读",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md"
   },
   {
    "id": "record:runaway-distance-uncoupled",
@@ -8783,6 +8807,17 @@
    "level": "L1",
    "theorems": 32,
    "region": "classical",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarRegularity",
+   "type": "module",
+   "name": "Becoming.GrammarRegularity",
+   "level": "L1",
+   "theorems": 25,
+   "region": "root",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -26040,6 +26075,12 @@
    "anchor": "r-negation-change-and-stable-cases"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-a-regularity-kept-and-changed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-a-regularity-kept-and-changed"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -26974,6 +27015,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
    "anchor": "r-closed-capture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rules-that-change-themselves-in-the-grammar"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
@@ -29559,6 +29606,21 @@
   {
    "from": "module:Becoming.GrammarReadings",
    "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarRegularity",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarRegularity",
+   "to": "module:Becoming.GrammarCourse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarRegularity",
+   "to": "module:Becoming.Mechanism",
    "type": "imports"
   },
   {
@@ -32342,6 +32404,26 @@
    "type": "related"
   },
   {
+   "from": "record:a-regularity-kept-and-changed",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-regularity-kept-and-changed",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-regularity-kept-and-changed",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "related"
+  },
+  {
+   "from": "record:a-regularity-kept-and-changed",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
    "to": "module:Becoming.DrawnBeyond",
    "type": "proved-in"
@@ -34464,6 +34546,11 @@
   {
    "from": "record:closed-capture",
    "to": "record:joint-difference-making",
+   "type": "related"
+  },
+  {
+   "from": "record:closed-capture",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
    "type": "related"
   },
   {
@@ -43538,6 +43625,11 @@
   },
   {
    "from": "record:projection-carrying-a-law",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "related"
+  },
+  {
+   "from": "record:projection-carrying-a-law",
    "to": "record:target-capture",
    "type": "related"
   },
@@ -45590,6 +45682,36 @@
    "from": "record:room-read-off-the-exchange",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
    "type": "related"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:a-regularity-kept-and-changed",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:closed-capture",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:projection-carrying-a-law",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:runaway-distance-uncoupled",
@@ -51042,6 +51164,11 @@
    "type": "related"
   },
   {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-a-regularity-kept-and-changed",
+   "to": "record:a-regularity-kept-and-changed",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-conservation-along-a-relation",
    "to": "record:balance-from-conservation-along-a-relation",
    "type": "states"
@@ -51729,6 +51856,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-returning-where-the-course-branches",
    "to": "record:returning-where-the-course-branches",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
    "type": "states"
   },
   {

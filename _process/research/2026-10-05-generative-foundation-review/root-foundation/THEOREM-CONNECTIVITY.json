@@ -1,11 +1,11 @@
 {
- "commit": "b02e2e3efc139864bb5a710b329c9e2768d1c5a4",
+ "commit": "48b33fc24437ee51d87afd8c6833a83489e6cdae",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T110057.158396Z",
+ "core_receipt_at_commit": "20261023T194747.611176Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 316,
- "constants": 43333,
- "spine_theorems": 14437,
+ "tracked_modules": 317,
+ "constants": 43376,
+ "spine_theorems": 14462,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,28 +27,28 @@
  },
  "classes": {
   "statement on both families": 1056,
-  "statement on Process/Frame/Run/Trace": 2953,
+  "statement on Process/Frame/Run/Trace": 2960,
   "statement on World/Flow/Web": 3503,
   "statement on the base only through a law of its own module": 261,
-  "proof through a base family": 181,
-  "used by a theorem on the base": 5199,
+  "proof through a base family": 185,
+  "used by a theorem on the base": 5204,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1040,
+  "apart: own vocabulary": 1049,
   "apart: prelude-only statement": 91
  },
- "apart": 1131,
- "apart_general_structure_by_design": 471,
- "apart_otherwise": 660,
+ "apart": 1140,
+ "apart_general_structure_by_design": 478,
+ "apart_otherwise": 662,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 89,
-  "of them on the base": 71,
+  "spine theorems that are pure forwarders": 90,
+  "of them on the base": 72,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 12,
    "instance on the base recorded": 11,
+   "statement on the base only through a law of its own module": 2,
    "statement on both families": 1,
    "used by a theorem on the base": 32,
-   "statement on World/Flow/Web": 12,
-   "statement on the base only through a law of its own module": 1
+   "statement on World/Flow/Web": 12
   }
  },
  "recorded_instances": {
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 680,
- "apart_roots": 680,
+ "apart_used_by_nothing": 685,
+ "apart_roots": 685,
  "apart_roots_by_category": {
-  "model-witness": 303,
-  "support": 104,
-  "general-structure": 241,
+  "model-witness": 304,
+  "support": 105,
+  "general-structure": 244,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 7
@@ -293,6 +293,10 @@
   "Becoming.ProfileReach": [
    9,
    16
+  ],
+  "Becoming.GrammarRegularity": [
+   9,
+   25
   ],
   "Becoming.Openness": [
    8,
@@ -669,18 +673,18 @@
  },
  "rings": {
   "core": {
-   "modules": 300,
-   "theorems": 13677,
-   "apart": 1037,
+   "modules": 301,
+   "theorems": 13702,
+   "apart": 1046,
    "classes": {
     "statement on both families": 1042,
-    "statement on Process/Frame/Run/Trace": 2742,
+    "statement on Process/Frame/Run/Trace": 2749,
     "statement on World/Flow/Web": 3478,
     "statement on the base only through a law of its own module": 215,
-    "proof through a base family": 170,
-    "used by a theorem on the base": 4840,
+    "proof through a base family": 174,
+    "used by a theorem on the base": 4845,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 947,
+    "apart: own vocabulary": 956,
     "apart: prelude-only statement": 90
    }
   },
@@ -792,11 +796,11 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 76,
-  "statement on Process/Frame/Run/Trace": 133,
+  "statement on Process/Frame/Run/Trace": 134,
   "statement on World/Flow/Web": 127,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
-  "used by a theorem on the base": 10,
+  "used by a theorem on the base": 11,
   "instance on the base recorded": 2,
   "apart: own vocabulary": 24
  },
@@ -15399,6 +15403,31 @@
   "Becoming.TwoCourses.core_iff": "proof through a base family",
   "Becoming.TwoCourses.core_iff_bounded": "proof through a base family",
   "Becoming.TwoCourses.core_exact": "proof through a base family",
+  "Becoming.«守理则不穷»": "apart: own vocabulary",
+  "Becoming.«相续之始有后»": "apart: own vocabulary",
+  "Becoming.«相续之末步»": "apart: own vocabulary",
+  "Becoming.«守理之线不亡»": "apart: own vocabulary",
+  "Becoming.«亡前理变»": "apart: own vocabulary",
+  "Becoming.«有亡之线末步离核»": "apart: own vocabulary",
+  "Becoming.«有亡之线两端理异»": "apart: own vocabulary",
+  "Becoming.Law.unending_iff_steps": "used by a theorem on the base",
+  "Becoming.Law.unending_alike": "used by a theorem on the base",
+  "Becoming.constant_of_goAlike": "statement on Process/Frame/Run/Trace",
+  "Becoming.goAlike_of_constant": "statement on Process/Frame/Run/Trace",
+  "Becoming.goAlike_iff_constant": "statement on Process/Frame/Run/Trace",
+  "Becoming.adaptive_constant_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.adaptive_core_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.adaptive_core_apart": "statement on Process/Frame/Run/Trace",
+  "Becoming.ClosedCapture.constant_iff_unread": "proof through a base family",
+  "Becoming.ClosedCapture.favouredAlike_class": "used by a theorem on the base",
+  "Becoming.ClosedCapture.lockedAlike_class": "apart: own vocabulary",
+  "Becoming.ClosedCapture.turn_fast": "used by a theorem on the base",
+  "Becoming.ClosedCapture.orbit_paced": "statement on Process/Frame/Run/Trace",
+  "Becoming.ClosedCapture.loss_alters": "used by a theorem on the base",
+  "Becoming.ClosedCapture.lock_line": "proof through a base family",
+  "Becoming.ClosedCapture.loss_ends_line": "proof through a base family",
+  "Becoming.ClosedCapture.Beyond.closed_line": "proof through a base family",
+  "Becoming.ClosedCapture.Beyond.open_line_ends": "apart: own vocabulary",
   "Becoming.Hexagram.same_eq": "used by a theorem on the base",
   "Becoming.Hexagram.same_self": "used by a theorem on the base",
   "Becoming.Hexagram.eq_of_eqb": "used by a theorem on the base",

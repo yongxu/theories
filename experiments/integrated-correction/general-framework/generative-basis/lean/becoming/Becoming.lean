@@ -310,6 +310,7 @@ import Becoming.RenewalBound
 import Becoming.Handoff
 import Becoming.RuleHandoff
 import Becoming.GrammarCourse
+import Becoming.GrammarRegularity
 
 /-!
 # The Theory of Becoming: the formal core
@@ -3233,6 +3234,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   class never ends (`Law.continues_in_core_iff`); the bounded laws, two 文 read as one net, and
   learnability are restated through the core where exact. The prefix, the bounds as numbers and
   eventual agreement have no counterpart in the grammar.
+* `Becoming.GrammarRegularity` (L1): the regularity of a line, kept and left, and rules that change
+  themselves, in the grammar (board item GS1). From a step continuing under the core, every
+  occurrence its line under the core reaches has a successor under the core (`«守理则不穷»`); a step
+  into an end leaves the core, for every relation (`«亡前理变»`), and so does the last step of every
+  line that ends (`«有亡之线末步离核»`). A move of a process is a relation (`moveRel`); the state of a
+  process changing its own rule has a class constant under every move exactly where the rule makes
+  no difference to it (`adaptive_constant_iff`). In closed capture the class of share, rule and step
+  count is constant along every schedule exactly where nothing beyond the share is read
+  (`ClosedCapture.constant_iff_unread`); from a locked start the line under being locked never ends
+  while every step alters the loss (`ClosedCapture.lock_line`); a reading that turns against
+  favouring past a loss bound leaves the line under favouring not unending
+  (`ClosedCapture.loss_ends_line`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

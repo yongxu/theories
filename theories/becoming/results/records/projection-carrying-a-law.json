@@ -372,6 +372,13 @@
         "en": "There the criterion along one run (the record read through the projection is the least candidate, a law exactly where consistent) and the bridge to GenerativeCore: the image is exact exactly where configurations alike match each other's steps, which going alike does not give.",
         "zh": "那里是沿一个运行的判据（经投影读出的记录是最小候选，恰在一致处是规律）与到 GenerativeCore 的桥接：像恰在相同的配置相互匹配对方的步之处是精确的，同去不给出它。"
       }
+    },
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "detail": {
+        "en": "A system changing its own rule read in the grammar: the state's class constant under every move exactly where the rule makes no difference to it (GS1).",
+        "zh": "改变自身规则之系统于文法中读：状之类于每一动下有常，恰当则于状无别（GS1）。"
+      }
     }
   ],
   "references": [
@@ -692,6 +699,10 @@
     {
       "en": "2026-10-20: 69 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/63653397a8d9e1c7/projection-carrying-a-law.json and in git.",
       "zh": "2026-10-20：69 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/63653397a8d9e1c7/projection-carrying-a-law.json 和 git 中。"
+    },
+    {
+      "en": "24 October 2026, GS1: read in the grammar (record rules-that-change-themselves-in-the-grammar, study section 390); no statement of this record changed.",
+      "zh": "2026年10月24日，GS1：于文法中读（记录 rules-that-change-themselves-in-the-grammar，研究第 390 节）；本记录之陈述未变。"
     }
   ],
   "text_versions": [

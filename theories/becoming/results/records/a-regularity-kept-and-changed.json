@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "id": "a-regularity-kept-and-changed",
+  "title": {
+    "en": "A regularity kept and left along its own line",
+    "zh": "理之守与离"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T19:47:47+00:00",
+  "statement": {
+    "en": "From a step under a relation's core, every occurrence its line under the core reaches is continued under it, so a kept regularity can always be kept; a line ends only by a step that leaves the core, its last step leaving it, found with no decision.",
+    "zh": "自关系之核下之一步起，其核下之续所及者皆于核下有后，故所守之理总可再守；一线之终，必由离核之一步，其末步即离核，无须判定而得。"
+  },
+  "laws": [
+    {
+      "en": "From a step continuing under the core of a relation, every occurrence its line under the core reaches has a successor under the core; a line along which the core is kept leaves its last occurrence continued under the class; the first occurrence of a line is continued, and its last is reached by a step from the first or from an occurrence the line reaches.",
+      "zh": "自核下之一步起，其核下之续所及者皆于核下有后；守核之线，其末于类下仍有后；一线之始有后，其末由一步而至，此步出自其始或其所及者。",
+      "declarations": [
+        "Becoming.«守理之线不亡»",
+        "Becoming.«守理则不穷»",
+        "Becoming.«相续之始有后»",
+        "Becoming.«相续之末步»"
+      ]
+    },
+    {
+      "en": "For every relation E, a step into an end under E leaves the core, and so does the last step of every line under E that ends; where E is a class, the two ends of such a line lie in different classes of the core.",
+      "zh": "对一切关系 E：于 E 下入亡之一步离核，凡于 E 下终之线之末步亦然；E 为类时，此线两端在核之不同类中。",
+      "declarations": [
+        "Becoming.«亡前理变»",
+        "Becoming.«有亡之线两端理异»",
+        "Becoming.«有亡之线末步离核»"
+      ]
+    },
+    {
+      "en": "Along a determined law's step a line under any relation never ends exactly where every step of the orbit continues under it, and under a class such a line keeps every configuration of the orbit alike with its start.",
+      "zh": "沿一确定之法之步，任一关系下之续不尽，恰当其轨之每一步皆于此关系下续；于类下，此续使轨上每一状皆与其始同类。",
+      "declarations": [
+        "Becoming.Law.unending_alike",
+        "Becoming.Law.unending_iff_steps"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: for every carrier and relation; E a class only for the two ends of a line lying apart in the core; for the orbit laws a determined law (a function) and, for the second, a class. The general laws are corollaries of the root theorem, constancy never letting a continuation end, and ending not told apart by the core.",
+      "zh": "不加公理，除各律所带者外不加前提：对一切载体与关系；唯「终线两端在核之不同类」设 E 为类；轨之律设一确定之法（函数），其二并设一类。诸一般之律是根定理、「有常则续不尽」与「亡于核下不变」之推论。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every successor of an occurrence kept under the core keeps it: under the core a continuation exists, which in a branching net is not every branch.",
+      "zh": "核下所守之事之每一后继皆守之：核下有续存在，分支之网中非每一枝皆然。",
+      "kind": "scope"
+    },
+    {
+      "en": "Where a longer line first leaves its start's class of the core: the last step is found with no decision, the first only where the core is decided at each step («两端分则中有标»).",
+      "zh": "较长之线首离其始之核类于何步：末步无须判定而得，首步唯于每步核之然否已定时由 «两端分则中有标» 得。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which class carries an actual pattern's regularity, or that a line ending is a loss.",
+      "zh": "实有之样式之理在何类，或一线之终为损。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T194024.593238Z): Becoming.GrammarRegularity, 25 theorems in 29 declarations, every declaration with an empty axiom report; the checker verifies core purity. This record cites 9 of them. Author review in study section 390; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T194024.593238Z）：Becoming.GrammarRegularity，29 项声明中 25 条定理，公理报告皆空；检查器并核对核心纯净。本记录引其中 9 项。作者审查见研究第 390 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The general laws moved into Becoming.Grammar if its owner agrees; the first step leaving the core placed where the core is decided along the line; the possibilities reading of the net, where the course taken can leave a core that an alternative keeps.",
+    "zh": "诸一般之律经其主同意后移入 Becoming.Grammar；沿线核之然否已定时，述首离核之步；可能之网之读法下，所行之途可离核而另一途守之。"
+  },
+  "correspondence": {
+    "en": "The source texts' \"a regularity can be temporarily self-maintaining without being eternal\" read in the grammar, one-history reading: what goes on for a while and then ends is a class that does not hold by itself, and its core always admits continuation; the core is the plan's 理 of the class.",
+    "zh": "来源二篇之「理可暂自持而非永恒」于文法中读（一史之读法）：暂行而终者，是不自持之类；其核总容续；核即计划所言类之理。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+  "aliases": [
+    "A regularity kept and left along its own line",
+    "理之守与离",
+    "Becoming.«有亡之线末步离核»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«根», «有常则续不尽», «有常则相续不尽», «亡于核下不变», «粗化», «及之传递».",
+        "zh": "«根»、«有常则续不尽»、«有常则相续不尽»、«亡于核下不变»、«粗化»、«及之传递»。"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.step, Law.step_hasSucc_iff, Law.line_on_orbit.",
+        "zh": "Law.step、Law.step_hasSucc_iff、Law.line_on_orbit。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "detail": {
+        "en": "The same module reads two-level steps, closed capture among them, as models; the lock line uses the orbit laws here.",
+        "zh": "同一模块以二层之步（含闭合之捕获）为模型；锁之续用此处轨之律。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.unending_alike",
+        "Becoming.Law.unending_iff_steps",
+        "Becoming.«亡前理变»",
+        "Becoming.«守理之线不亡»",
+        "Becoming.«守理则不穷»",
+        "Becoming.«有亡之线两端理异»",
+        "Becoming.«有亡之线末步离核»",
+        "Becoming.«相续之始有后»",
+        "Becoming.«相续之末步»"
+      ],
+      "sha256": "984f34169fac0411a35e0b0199e054529d49008ccbd818dcfc5083977c551dc1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
+      "role": "receipt",
+      "sha256": "a8e4464cf9b17611912894ba06d01426641dd7aec1a3d18f4b62e2e69ac98ccc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f1b998f7e58dab9e34a9ebbdea30e30f7d6e883297c22fd0093ab0a18bd690f1"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "69614011796b5ccfc8fcd9183c539038033f77f83e1b75b9ac7602a75258d9a8"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (GS1), from the review of the root against its two source texts; study section 390.",
+      "zh": "2026年10月24日：新增（GS1），出自根与其二篇来源之对照审查；研究第 390 节。"
+    }
+  ]
+}

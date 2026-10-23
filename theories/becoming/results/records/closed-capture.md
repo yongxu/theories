@@ -71,6 +71,9 @@ The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separate
 - related, not a proved adapter: [capture-through-the-rule](capture-through-the-rule.md). The loop this record closes: what it does not read, and the reading read from the share.
 - related, not a proved adapter: [target-capture](target-capture.md). The share that rises under selection, and the state re-absorbed where the step does not read it.
 - related, not a proved adapter: [joint-difference-making](joint-difference-making.md). What lies beyond the share is drawn jointly; that the loop does not read it does not remove a drawer from the drawing.
+- related, not a proved adapter: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). Read in the grammar: the class of share, rule and step count constant along every schedule exactly where nothing beyond is read, and the locked line unending while the loss alters (GS1).
+
+**Used by:** [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -94,6 +97,7 @@ Aliases: `closed capture`, `闭合的捕获`, `the loop closed in its readings`,
 
 - 20 October 2026: added (MA1), the meta-attractor's loop closed on the spine: OPENING's note on the meta-attractor said the loop was not on the spine; study section 242; readings D58.
 - 21 October 2026, LU1: a law added, Unread read as the law of a part read alone (identifiesAlike_iff_unread, courses_alike_iff_unread); unread_course derived from Law.sameFuture_of_goAlike, its statement unchanged; study section 309. The other laws are unchanged.
+- 24 October 2026, GS1: read in the grammar (record rules-that-change-themselves-in-the-grammar, study section 390); no statement of this record changed.
 
 </details>
 
