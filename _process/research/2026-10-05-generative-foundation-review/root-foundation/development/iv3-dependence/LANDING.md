@@ -37,3 +37,9 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 1. `integrate_d.py`; core checker; connectivity `--check` (register any new apart roots) and `--write`.
 2. `apply_text_d.py N RECEIPT`, `canonical_d.py` (the chapter's dependence bullet, EN and ZH), `section9_d.py RECEIPT MAIN N`, `update_records_d.py RECEIPT N`, `sh repoint_d.sh RECEIPT`.
 3. The scratch copy of the module goes; `board_d.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.
+
+## IV3e
+
+1. `integrate_e.py`; core checker; connectivity `--check` (register any new apart roots) and `--write`.
+2. `apply_text_e.py N RECEIPT`, `canonical_e.py` (the chapter's dependence bullet, EN and ZH), `section9_e.py RECEIPT MAIN N`, `update_records_e.py RECEIPT N` (lint the record before render), `sh repoint_e.sh RECEIPT`.
+3. The scratch copy of the module goes; `board_e.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.

@@ -9,8 +9,8 @@
   "unclean": [],
   "audits": {
     "Becoming.Weightings": {
-      "theorems": 226,
-      "declarations": 321,
+      "theorems": 258,
+      "declarations": 364,
       "with_axioms": {}
     }
   }
