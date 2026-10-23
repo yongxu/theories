@@ -1,0 +1,352 @@
+id	class	form	terms	commentary	registration	confidence	note
+XCS-01-001	戊	戊：尊/卑之等 → 乾坤定	尊卑=高下之等；定=定位	外传第1章（“《幹》《坤》定則貴賤位，剛柔斷……皆定之者不雜也”）	相分	高	plan §5.4 registers as 相分 (kept); 外传 reads 定 as 分秩 inside one 全體 (“全體之，則可以合，可以分”), a 定域-leaning reading; links XCS-01-002, XCS-01-003
+XCS-01-002	戊	戊：卑高陳 → 貴賤位	位=定其等级之位（非 §4.1 之位）	外传第1章	相分	高	位 here is rank, not the plan's 位 (双向之核); polysemy noted
+XCS-01-003	丙一	丙一：Z=動靜有常，Y=剛柔斷	有常=动静有其常度；斷=分判	none	相分	中	plan §5.4 registers it with XCS-01-001 as 相分 (kept). Read alone it is a conditional whose Z is the text's own 有常: a class split (剛/柔) is fixed where motion and rest are regular; the text's 有常 is of 动静, the plan's of a class under 缘 (§4.4) — the word has a textual source, its sense differs; AI reading; second function 戊
+XCS-01-004	丁	丙一形：Z=方以類聚、物以羣分，Y=吉凶生	類=同类相聚（等价之类）；分=分群	none		中	ends in 吉凶 (丁 by the plan's own example XCX-08-010); Z is a class/partition statement relevant to 类 (§4.1)
+XCS-01-005	庚	在天/在地：一变化之两处所见（象/形）	象=天之所垂；形=地之所成；見=显现	none	定域	中	assertion; readable as one 变化 seen in two domains
+XCS-01-006	庚	相 X（摩、荡：对称之交互）；一X一Y（一寒一暑：交替）	相摩=互相切摩；相荡=互相推荡	外传第1章（“遷以相摩，則相蕩而為六子”）		中	description of the generative process; supports §4.2 一X一Y = 交替 (一寒一暑) and 相 X as mutual action; 外传 reads 摩荡 as 遷 between 乾坤 within one whole
+XCS-01-007	庚	乾道 → 男，坤道 → 女	成=生成	外传第1章（“《幹》道成男，《艮》也”）	定域	中	correlative assignment, not a hierarchy; 外传 reads each of the six 子 as 乾坤 again (“《震》《巽》一《幹》《坤》也”)
+XCS-01-008	庚	乾：大始；坤：成物（一程之两位）	知=主、司（据记忆，朱熹本义，待核）；作=为	外传第1章（“於其始統其終，於其終如其始”）	定域	中	始/成 as two positions of one course: close to §4.2 (王弼 在首/在終) and §一 (生 = 续之始). 外传第1章 also has “萬變之理，相類相續而後成乎其章” (in repo; plan §5.2 marks it 待核)
+XCS-01-009	庚	乾：易；坤：簡	易=平易；簡=简约	外传第1章（“惟其純也”）	定域	中	易 polysemy: 平易 here, 变易 in XCS-05-005
+XCS-01-010	未读出	X則Y（丙一形）：Z=易/簡，Y=易知/易從	易知=易为人知；從=顺从	none		中	form clear; Y are agent-relative modalities (知, 從) the grammar lacks; chain XCS-01-010→013
+XCS-01-011	未读出	X則Y：Z=易知/易從，Y=有親/有功	親=亲附；功=成效	none		中	same reason
+XCS-01-012	未读出	X則Y：Z=有親/有功，Y=可久/可大	久=持续；大=广大	none		低	candidate 丙一 (久 = 续不尽, conditioned on 有親 = being related), but modal 可 and 親 need terms the grammar lacks; not forced
+XCS-01-013	丁	X則Y：可久 → 賢人之德，可大 → 賢人之業	德、業=evaluative	none		高	chain ends in 德/業
+XCS-01-014	未读出	X而Y：易簡 → 天下之理得	理=天下之条理；得=为人所得（认识）	外传第1章		中	得 is epistemic; 理 = order of things, not the plan's 理 (核) by itself; second function 丁
+XCS-01-015	庚	成位乎其中	位=人居天地之中之位	none		中	位 polysemy (place of the sage between 天地); no law
+XCS-02-001	丁	设卦、观象、系辞 → 明吉凶	吉凶=evaluation	none		高	narrative of the sage, evaluative end
+XCS-02-002	丙一	相 X 而 Y 生：Z=剛柔相推，Y=變化	相推=交互推移；變化=change	none	相合	中	the text's “Z 而 Y 生” form; 剛/柔 as two poles of one alternation (相合); same law XCX-01-003; no counterexample in this corpus
+XCS-02-003	甲	吉凶 := 失得之象	象=表示；失得=得失	none		中	definition of an evaluative term (丁 second); 象 = representation
+XCS-02-004	甲	悔吝 := 憂虞之象		none		中	as XCS-02-003
+XCS-02-005	甲	變化 := 進退之象	進退=前进/后退	none		中	变化 represented as 進退 (a relation and its converse, §4.2 往来); link XCS-11-010
+XCS-02-006	甲	剛柔 := 晝夜之象	晝夜=交替	none	相合	中	刚柔 represented by an alternation (相合)
+XCS-02-007	庚	六爻之動 = 三極之道	三極=天地人	none		中	identification, 三極 not defined here; link XCX-08-005
+XCS-02-008	丁	君子所居而安者，易之序也	序=次序	none		中	prescriptive (君子)
+XCS-02-009	丁	所樂而玩者，爻之辭		none		高	
+XCS-02-010	丁	居則觀象玩辭，動則觀變玩占		none		高	prescriptive
+XCS-02-011	丁	自天祐之，吉无不利		none		高	爻辞 quotation (大有上九), evaluative; repeated XCS-12-001, XCX-02-009
+XCS-03-001	甲	彖 := 言乎象者	象=卦象	none		高	definition of a text genre (meta-linguistic)
+XCS-03-002	甲	爻 := 言乎變者	變=change	none		高	meta-linguistic; links XCX-01-014, XCX-03-004, XCX-08-007
+XCS-03-003	甲	吉凶 := 言乎其失得		none		高	evaluative term (丁 second)
+XCS-03-004	甲	悔吝 := 言乎其小疵		none		高	丁 second
+XCS-03-005	甲	无咎 := 善補過	補過=弥补过失	none		高	丁 second
+XCS-03-006	戊	列貴賤者存乎位（等级）；其余 X 存乎 Y	位=爻位	none	相分	中	爻位 orders 贵贱 (hierarchy); the other clauses (卦、辭、介、悔) are 庚/丁
+XCS-03-007	庚	辭也者，各指其所之	所之=所趋之向	none		中	plan §4.7: 所之 = direction, not a functional projection
+XCS-04-001	庚	易與天地準 → 彌綸天地之道	準=等齐；彌綸=遍包	none		中	claim about the book
+XCS-04-002	庚	觀天文、察地理 → 知幽明之故	故=所以然；地理=地之文理	none	定域	中	epistemic; 理 = pattern of the earth (polysemy)
+XCS-04-003	庚	原始反終 → 知死生之說	始/終=一程之两端；原=推原；反=返求	none		中	始/終 as the two ends of a course (cf. §一 四位置); epistemic, no law stated; link XCX-07-006
+XCS-04-004	丙一	丙一（韩注）：Z=精氣聚，Y=成物；Z=聚極，Y=散（遊魂為變）	精氣=阴阳精灵之气（孔疏）；變=生变为死、成变为败、或变为异类（孔疏）	韩注·孔疏（H4）		低	base gives only “X 為 Y”; the condition 聚極 is 韩's, not the text's. 孔疏 reads 變 as 死, 敗, or 變為異類: 亡 and 异 of a course relative to a class (§4.3), the closest commentary match to the plan's positions; AI reading
+XCS-04-005	庚	與天地相似，故不違	似=相似；違=违背	韩注·孔疏（H4：“德合天地，故曰相似”）		中	about the sage/易
+XCS-04-006	丁	知周乎萬物，而道濟天下，故不過		韩注·孔疏（H4）		中	
+XCS-04-007	丁	旁行而不流，樂天知命，故不憂	流=流淫	韩注·孔疏（H4）		中	
+XCS-04-008	丁	安土敦乎仁，故能愛		韩注·孔疏（H4）		高	
+XCS-04-009	庚	故 Y：神无方，易无體	方=处所；體=形质；化=天地之化	韩注·孔疏（H4：“方、體者，皆繫於形器者也。神則陰陽不測，易則唯變所適，不可以一方、一體明”）		中	conclusion of the chapter; 孔疏 gives two senses of each (不见其处 / 不常在一处; 不知变之所由 / 无定在一体). 易无體 resonates with §二 (the carrier is a parameter, not a commitment); AI reading. 範圍天地之化而不過 part is 丁
+XCS-05-001	甲	道 := 一陰一陽；繼之者 := 善；成之者 := 性	一陰一陽=（韩）道即无，阴阳以之生成；（孔）一谓无；（外传）一之一之=主持而分剂；繼=相继、续（外传）	韩注·孔疏（H4）；外传第5章	相合	中	commentaries split on 一X一Y: 韩/孔 read 一 as 无 (道 not 阴阳, though 不离), 外传 rejects both 分析 (老氏) and 摶聚 (释氏) and puts 道 inside 阴阳 (“道不行而陰陽廢，陰陽不具而道亦亡”) → registered 相合 following 外传; none reads it as plain alternation (strain on §4.2). 繼之者善 ties continuation to 善 (丁 second): 外传 “繼之則善矣，不繼則不善矣”, “念與念之不相繼也，事與事之不相繼也” (in repo); links XCS-11-009
+XCS-05-002	庚	X 見之謂之 Y（以见者命名）	謂之=称之为（非定义）	韩注·孔疏（H4：“各盡其分”；“仁知則滯於所見”）		中	naming by a viewer, not a definition: a name relative to the viewer's reading (cf. §4.1 类 plural); AI reading
+XCS-05-003	丁	百姓日用而不知，故君子之道鮮		韩注·孔疏（H4）		中	
+XCS-05-004	庚	顯諸仁，藏諸用，鼓萬物而不與聖人同憂		韩注·孔疏（H5：“萬物由之以化”；“夫物之所以通，事之所以理，莫不由乎道也”）		中	韩: 道 has no 经营之跡, the sage has; 盛德大業 evaluative (丁 second); 理 here a verb (事之所以理 = 得其治)
+XCS-05-005	甲	大業 := 富有；盛德 := 日新；易 := 生生；乾 := 成象；坤 := 效法；占 := 極數知來；事 := 通變；神 := 陰陽不測	生生=不绝之辞，后生次于前生（孔疏）；易=阴阳转易以成化生（韩）；通變=物穷则变、变而通之（韩）；神=变化之极，不可以形诘（韩）	韩注·孔疏（H5）	定域	高	key unit. 孔疏: “陰陽變轉，後生次於前生，是萬物恒生” = 续而复生 (§4.6); “生必有死，易主勸戒，獎人為善，故云生不云死” = the name 生生 selects 生 for exhortation while the process includes 死: supports §4.6 (生生 as defined does not separate renewal from replacement; the selection is evaluative, cf. C). 神 := 陰陽不測 matches §4.6 神 (no prefix fixes the next value); 韩 “莫不獨化於大虛……化之無主，數自冥運” = no external agent. 通變之謂事 carries a 丙一 in 韩 (Z=窮, Y=變). 乾坤 定域
+XCS-06-001	庚	夫易，廣矣		韩注·孔疏（H5）		高	exclamation
+XCS-06-002	庚	大矣		韩注·孔疏（H5）		高	fragment of XCS-06-001 split at ！
+XCS-06-003	庚	遠則不禦，邇則靜而正，天地之間則備	禦=止	韩注·孔疏（H5：“窮幽極深，無所止也”）		中	易 without bound (不禦 ~ 不穷); assertion
+XCS-06-004	丙一	乾：靜專、動直 → 大生	專=专一；直=刚正（韩）；生=生物（及物）	韩注·孔疏（H5）	定域	低	“是以 Y” after 乾's two states (动/静); 生 = to produce (transitive), not §4.3 生 (start position)
+XCS-06-005	丙一	坤：靜翕、動闢 → 廣生	翕=敛；闢=开以生物（韩）	韩注·孔疏（H5：“乾以專直言乎其材，坤以翕辟言乎其形”）	定域	低	the 阖/辟 pattern inside 坤 alone (link XCS-11-009); 孔疏 “對則乾為物始，坤為物生，散則始亦為生” = 始/生 differ only in contrast (相待)
+XCS-06-006	庚	X 配 Y（四配）	配=相当	韩注·孔疏（H5）		中	correspondence list; 易簡之善 evaluative
+XCS-07-001	庚	子曰：易其至矣乎		韩注·孔疏（H5）		高	frame
+XCS-07-002	丁	崇德廣業；知崇禮卑，崇效天，卑法地	崇/卑=高/下	韩注·孔疏（H5：“知以崇為貴，禮以卑為用”）	定域	中	知/禮 mapped to 天/地 as roles; prescriptive
+XCS-07-003	庚	天地設位，而易行乎其中	位=天上地下之位；行=变易流行	韩注·孔疏（H5：“天地者，易之門戶”）	相合	中	易 as what unfolds between the pair (相合); 孔疏 also reads 天地 as 知/禮; cf. XCX-09-007
+XCS-07-004	丁	成性存存 → 道義之門	性=禀其始（孔疏）；存存=保其终（孔疏）	韩注·孔疏（H5：“物之存成，由乎道義也”）		低	孔疏 reads 性 = start, 存 = end kept: a course kept from start to end (住); Y evaluative (道義)
+XCS-08-001	甲	象 := 見天下之賾而擬其形容、象其物宜	賾=幽深繁杂；擬=比拟	韩注·孔疏（H12，重出处）		中	repeated XCS-12-014; 孔疏 explains the repetition
+XCS-08-002	甲	爻 := 見天下之動、觀其會通、行其典禮、繫辭斷吉凶	會通=会合变通	韩注·孔疏（H12，重出处）		中	repeated XCS-12-015; 吉凶 丁 second
+XCS-08-003	庚	言至賾而不可惡，言至動而不可亂		none		中	
+XCS-08-004	庚	擬之而後言，議之而後動（X 而後 Y：先后）		none		中	sequence form; prescriptive (丁 second)
+XCS-08-005	庚	爻辞引文（中孚九二）		none		高	quotation
+XCS-08-006	庚	爻辞引文（中孚九二）		none		高	quotation
+XCS-08-007	丁	丙一形：言善 → 千里應之	應=响应	none		中	agentive, evaluative
+XCS-08-008	丁	丙一形：言不善 → 千里違之		none		中	
+XCS-08-009	庚	言出乎身加乎民		none		中	
+XCS-08-010	庚	行發乎邇見乎遠		none		中	
+XCS-08-011	庚	言行，君子之樞機	樞機=关键	none		中	
+XCS-08-012	丁	樞機之發，榮辱之主		none		中	
+XCS-08-013	丁	可不慎乎		none		高	rhetorical prescription
+XCS-08-014	庚	爻辞引文（同人九五）		none		高	
+XCS-08-015	庚	或X或Y（或出或處，或默或語）	或…或…=择一	none		中	或X或Y = alternatives (可能之网, §4.1), not 一X一Y alternation
+XCS-08-016	丁	二人同心，其利斷金		none		中	
+XCS-08-017	庚	同心之言，其臭如蘭		none		中	simile
+XCS-08-018	丁	爻辞引文（大過初六）：无咎		none		高	quotation ending in 无咎
+XCS-08-019	庚	苟錯諸地而可矣		none		中	
+XCS-08-020	丁	藉之用茅，何咎之有		none		高	
+XCS-08-021	丁	慎之至也		none		高	
+XCS-08-022	丁	慎斯術也以往，其无所失		none		高	
+XCS-08-023	丁	爻辞引文（謙九三）：吉		none		高	quotation
+XCS-08-024	丁	勞而不伐，有功而不德，厚之至也		none		高	
+XCS-08-025	庚	語以其功下人者也		none		中	
+XCS-08-026	丁	德言盛，禮言恭		none		中	
+XCS-08-027	甲	謙 := 致恭以存其位者	存=保存（续）；位=其位	none		中	definition of an ethical term (丁 second); 存其位 = keep one's place (continuation of a position)
+XCS-08-028	丁	爻辞引文（乾上九）：有悔		none		高	
+XCS-08-029	丁	丙一形：Z=貴而无位、高而无民、賢人在下位而无輔，Y=動而有悔		none		中	structural Z (position without support), evaluative Y
+XCS-08-030	丁	爻辞引文（節初九）：无咎		none		高	
+XCS-08-031	丁	亂之所生，言語以為階	階=阶梯	none		中	
+XCS-08-032	丁	丙一形：不密 → 失臣、失身、害成		none		中	
+XCS-08-033	丁	君子慎密而不出		none		高	
+XCS-08-034	庚	作易者，其知盜乎		none		高	
+XCS-08-035	庚	爻辞引文（解六三）		none		高	
+XCS-08-036	甲	負 := 小人之事		none	相分	中	classifying definition inside a 君子/小人 split (戊 second)
+XCS-08-037	甲	乘 := 君子之器		none	相分	中	as XCS-08-036
+XCS-08-038	丁	丙一形（社会）：小人乘君子之器 → 盜思奪之 等		none		中	
+XCS-08-039	丁	丙一形（社会）：小人乘君子之器 → 盜思奪之 等		none		中	
+XCS-08-040	丁	丙一形（社会）：小人乘君子之器 → 盜思奪之 等		none		中	
+XCS-08-041	庚	爻辞引文（重出）		none		高	
+XCS-08-042	庚	盜之招也		none		中	
+XCS-09-001	庚	天一地二……天九地十	天=奇数；地=偶数	none	定域	高	number list
+XCS-09-002	庚	五位相得而各有合	相得=相配	none		中	
+XCS-09-003	庚	天地之數五十有五 → 成變化而行鬼神		none		中	
+XCS-09-004	庚	大衍之法（分二、掛一、揲四、歸奇）	象=表示	none		高	procedure narrative
+XCS-09-005	庚	策數		none		高	
+XCS-09-006	庚	策數		none		高	
+XCS-09-007	庚	四營而成易，十有八變而成卦	變=揲蓍一轮（计数之变）	none		高	變 polysemy: a counted round of operations
+XCS-09-008	庚	引而伸之，觸類而長之	類=类（推类）	none		中	extension by class (触类); relevant to 类 but no law
+XCS-09-009	丁	顯道神德行，可與酬酢，可與祐神		none		中	
+XCS-09-010	庚	知變化之道者，其知神之所為		none		中	
+XCS-10-001	庚	易有聖人之道四：辭、變、象、占		none		高	
+XCS-10-002	庚	卜筮之叙：問焉而以言，遂知來物		none		中	
+XCS-10-003	庚	非天下之至精，其孰能與於此		none		高	rhetorical
+XCS-10-004	庚	參伍以變，錯綜其數，通其變 → 成天下之文	文=纹理；通其變=使变相通	none		中	divination procedure; 通變 → 文 (cf. XCX-08-009 物相雜故曰文)
+XCS-10-005	庚	非天下之至變，其孰能與於此		none		高	
+XCS-10-006	丙一	丙一：Z=感，Y=遂通天下之故（寂然不動，感而遂通）	感=被感；通=通达	none		低	no activity without being affected: response only through relation (感 ~ 缘); agentive reading also possible; no commentary in repo
+XCS-10-007	庚	非天下之至神，其孰能與於此		none		高	
+XCS-10-008	庚	易，極深而研幾	幾=动之微（cf. XCX-04-041）	none		中	
+XCS-10-009	庚	唯深/唯幾/唯神，故 Y	神=不疾而速，不行而至	none		中	characterizations of 易
+XCS-10-010	庚	唯深/唯幾/唯神，故 Y	神=不疾而速，不行而至	none		中	characterizations of 易
+XCS-10-011	庚	唯深/唯幾/唯神，故 Y	神=不疾而速，不行而至	none		中	characterizations of 易
+XCS-10-012	庚	此之謂也		none		高	frame
+XCS-11-001	庚	夫易，何為者也		none		高	question
+XCS-11-002	甲	易 := 開物成務、冒天下之道（如斯而已）	冒=覆盖	none		低	answer to “what is 易”; definitional only in the loose sense
+XCS-11-003	丁	聖人以通志、定業、斷疑		none		中	
+XCS-11-004	庚	蓍之德圓而神，卦之德方以知，六爻之義易以貢		none		中	
+XCS-11-005	丁	聖人洗心……神以知來，知以藏往	來/往=未来/过去	none		中	time as 往/來 (§4.2)
+XCS-11-006	庚	古之聰明叡知神武而不殺者；興神物以前民用		none		中	
+XCS-11-007	庚	古之聰明叡知神武而不殺者；興神物以前民用		none		中	
+XCS-11-008	丁	聖人齊戒以神明其德		none		中	
+XCS-11-009	甲	坤 := 闔戶；乾 := 闢戶；變 := 一闔一闢	闔/闢=闭/开；變=交替	外传第11章（引作“閔戶之謂乾，闢戶之謂坤”；“材則其陰陽也，情則其往來也”）	相合	高	the plan's example (§4.2 一X一Y = 交替); 乾/坤 as two movements of one door (相合). 外传's quotation reverses the base's 乾/坤 assignment (transcription or variant). 外传: a door needs material (材) and movements (情), close to §二 (carrier as parameter). Second definition of 變 at XCS-12-013 (化而裁之)
+XCS-11-010	甲	通 := 往來不窮；象 := 見；器 := 形；法 := 制而用之；神 := 利用出入、民咸用之	往來=一关系与其逆；不窮=不尽；神=民用之妙（与 XCS-05-005 之“陰陽不測”异）	none		高	plan's example; 往來 = relation and converse, 不窮 = 不尽 (§4.2). Second definition of 通 at XCS-12-013 (推而行之); 神 polysemy within the text
+XCS-11-011	庚	由一而分：太極 → 兩儀 → 四象 → 八卦 → 吉凶 → 大業	生=产生（及物）；太極=（韩）无称之称，取有之所极；（孔）元气混一；（外传）易所固有、同有	韩注·孔疏（H11）；外传第11章	相合	中	commentaries split: 韩 “夫有必始於無” (无 prior to 有, 相分-leaning); 孔 a cosmogony (元气 → 天地); 外传 “非別有一太極”, “固有之則生，同有之則俱生”, “是生者，立於此而生” (相合; followed). Ends in 吉凶/大業 (丁 second); 生 polysemy (transitive)
+XCS-11-012	庚	X 莫大乎 Y（比较）	變通=（孔疏）四时以变得通	韩注·孔疏（H11）		中	comparisons; XCS-11-013 is an example of 变通 (四時)
+XCS-11-013	庚	X 莫大乎 Y（比较）	變通=（孔疏）四时以变得通	韩注·孔疏（H11）		中	comparisons; XCS-11-013 is an example of 变通 (四時)
+XCS-11-014	庚	X 莫大乎 Y（比较）	變通=（孔疏）四时以变得通	韩注·孔疏（H11）		中	comparisons; XCS-11-013 is an example of 变通 (四時)
+XCS-11-015	戊	崇高莫大乎富貴	富貴=（孔疏）王者居九五之位	韩注·孔疏（H11：“位所以一天下之動，而濟萬物”）	相分	中	hierarchy of position (王者之位)
+XCS-11-016	丁	聖人備物致用；蓍龜定吉凶		韩注·孔疏（H11）		中	
+XCS-11-017	丁	聖人備物致用；蓍龜定吉凶		韩注·孔疏（H11）		中	
+XCS-11-018	庚	天生神物，聖人則之 等（叙事）		韩注·孔疏（H11）		中	narrative
+XCS-11-019	庚	天生神物，聖人則之 等（叙事）		韩注·孔疏（H11）		中	narrative
+XCS-11-020	庚	天生神物，聖人則之 等（叙事）		韩注·孔疏（H11）		中	narrative
+XCS-11-021	庚	天生神物，聖人則之 等（叙事）		韩注·孔疏（H11）		中	narrative
+XCS-11-022	庚	易有四象，所以示；繫辭，所以告	四象=（孔疏）七八九六	韩注·孔疏（H11）		中	孔疏 rejects 莊氏's and 何氏's readings of 四象
+XCS-11-023	庚	易有四象，所以示；繫辭，所以告	四象=（孔疏）七八九六	韩注·孔疏（H11）		中	孔疏 rejects 莊氏's and 何氏's readings of 四象
+XCS-11-024	丁	定之以吉凶，所以斷		韩注·孔疏（H11）		高	
+XCS-12-001	丁	爻辞引文（大有上九）		韩注·孔疏（H11）		高	
+XCS-12-002	甲	祐 := 助		韩注·孔疏（H11）		高	
+XCS-12-003	丁	天之所助者順，人之所助者信……		韩注·孔疏（H11）		中	X者Y也 form but a claim, not a definition (孔疏 “唯在於順”)
+XCS-12-004	丁	天之所助者順，人之所助者信……		韩注·孔疏（H11）		中	X者Y也 form but a claim, not a definition (孔疏 “唯在於順”)
+XCS-12-005	丁	天之所助者順，人之所助者信……		韩注·孔疏（H11）		中	X者Y也 form but a claim, not a definition (孔疏 “唯在於順”)
+XCS-12-006	庚	也。」（残片）		none		高	segmentation artifact: the closing of XCS-12-005's quotation
+XCS-12-007	庚	子曰：書不盡言，言不盡意		韩注·孔疏（H12）		中	thesis on the limits of language, quoted inside a question frame; bears on 立言 (§三) but states no grammar law
+XCS-12-008	庚	然則聖人之意，其不可見乎		韩注·孔疏（H12）		高	question
+XCS-12-009	庚	立象以盡意……變而通之以盡利，鼓之舞之以盡神	盡=尽（穷尽表达）	韩注·孔疏（H12：“極變通之數，則盡利也。故曰「易窮則變，變則通，通則久」”）		中	韩 links this unit to XCX-02-008
+XCS-12-010	庚	乾坤，其易之縕邪	縕=渊奥（韩）；（孔疏）易道所缊积之根源	韩注·孔疏（H12）	相合	中	
+XCS-12-011	庚	乾坤成列 → 易立乎其中		韩注·孔疏（H12）	相合	中	
+XCS-12-012	丙一	丙一：Z=乾坤毀，Y=无以見易；Z=易不可見，Y=乾坤或幾乎息	毀=缺坏；息=止息；幾=近（孔疏）	韩注·孔疏（H12）；外传第12章（“《幹》《坤》與《易》相為保合而不可破。破而毀，毀而息矣”）	相合	高	two-way dependence of 乾坤 and 易: the 相须 shape (§4.5) as a pair of conditionals. 孔疏's image (根株 = 乾坤, 枝幹 = 易) adds an asymmetry, while the text's second clause runs from 易 back to 乾坤. 息 = ceasing (sense for §4.6 息). No counterexample in corpus
+XCS-12-013	甲	道 := 形而上者；器 := 形而下者；變 := 化而裁之；通 := 推而行之；事業 := 舉而錯之天下之民	形=有质；上/下=（孔疏）道在形先，形在道后；（外传）上下无定界，从所拟议而施之谓；化而裁之=阴阳变化而相裁节（孔疏）；推而行之=乘变而往（韩）	韩注·孔疏（H12）；外传第12章	相合	中	registration split: 孔疏 “凡有從無而生，形由道而立，是先道而後形” is 相分; 外传 “上下皆名也”, “天下惟器而已矣。道者器之道”, “統之乎一形” is 相合 (followed: 上/下 relative to 形, close to §一's class-relativity). 變 here = a cut of continuous 化 (second definition beside XCS-11-009 一闔一闢); 通 second definition (XCS-11-010)
+XCS-12-014	甲	象、爻之定义（重出 XCS-08-001、002）		韩注·孔疏（H12）		中	repeated definitions; 孔疏 explains the repetition
+XCS-12-015	甲	象、爻之定义（重出 XCS-08-001、002）		韩注·孔疏（H12）		中	repeated definitions; 孔疏 explains the repetition
+XCS-12-016	庚	X 存乎 Y（所在）	存乎=在于	韩注·孔疏（H12：“辭，爻辭也。爻以鼓動，效天下之動也”）		中	locating statements; XCS-12-018..019 restate XCS-12-013's definitions
+XCS-12-017	庚	X 存乎 Y（所在）	存乎=在于	韩注·孔疏（H12：“辭，爻辭也。爻以鼓動，效天下之動也”）		中	locating statements; XCS-12-018..019 restate XCS-12-013's definitions
+XCS-12-018	庚	X 存乎 Y（所在）	存乎=在于	韩注·孔疏（H12：“辭，爻辭也。爻以鼓動，效天下之動也”）		中	locating statements; XCS-12-018..019 restate XCS-12-013's definitions
+XCS-12-019	庚	X 存乎 Y（所在）	存乎=在于	韩注·孔疏（H12：“辭，爻辭也。爻以鼓動，效天下之動也”）		中	locating statements; XCS-12-018..019 restate XCS-12-013's definitions
+XCS-12-020	庚	神而明之，存乎其人	存乎其人=在于其人	韩注·孔疏（H12：“體神而明之，不假於象，故存乎其人”）		中	
+XCS-12-021	丁	默而成之，不言而信，存乎德行		韩注·孔疏（H12）		高	
+XCX-01-001	庚	八卦成列，象在其中；因而重之，爻在其中		none		高	
+XCX-01-002	庚	八卦成列，象在其中；因而重之，爻在其中		none		高	
+XCX-01-003	丙一	丙一：Z=剛柔相推，Y=變在其中	相推=交互推移	none	相合	中	same law as XCS-02-002
+XCX-01-004	庚	繫辭焉而命之，動在其中		none		中	
+XCX-01-005	丁	吉凶悔吝者，生乎動者也（丙一形：Z=動，Y=吉凶悔吝生）	生=产生	none		中	evaluation arises only with motion; evaluative
+XCX-01-006	甲	剛柔 := 立本者	本=根本	none	相合	中	no commentary in repo
+XCX-01-007	甲	變通 := 趣時者	趣時=趋向于时	none		中	变通 defined through time (時): relevant to §4.1 时 (time read from change); AI reading
+XCX-01-008	甲	吉凶 := 貞勝者	貞=正、常	none		低	evaluative (丁 second); 貞 polysemy
+XCX-01-009	甲	天地之道 := 貞觀者；日月之道 := 貞明者	貞=常	none		低	
+XCX-01-010	甲	天地之道 := 貞觀者；日月之道 := 貞明者	貞=常	none		低	
+XCX-01-011	甲	天下之動 := 貞夫一者	貞=常、正；一=一（所归之一）	none		低	“all motion holds constant to the one”: relevant to §4.3 四相无自立 (under the class 一, whatever has predecessor and successor is 住) and §一 (根是一); reading without commentary in repo, AI reading
+XCX-01-012	庚	乾確然示人易；坤隤然示人簡		none	定域	中	
+XCX-01-013	庚	乾確然示人易；坤隤然示人簡		none	定域	中	
+XCX-01-014	甲	爻 := 效此者	效=仿效	none		高	paronomastic definition
+XCX-01-015	甲	象 := 像此者	像=拟像	none		高	paronomastic definition
+XCX-01-016	庚	爻象動乎內，吉凶見乎外……	內/外=卦内/卦外	none	定域	中	丁 second
+XCX-01-017	甲	天地之大德 := 生；聖人之大寶 := 位；守位 := 仁；聚人 := 財；義 := 理財正辭、禁民為非	生=生物、生成（天地之德）；位=君位	none		中	X 曰 Y; 生 here is the production of things (cf. 生生 XCS-05-005), not §4.3 生 (start position); 位 = ruling position; political terms (丁 second)
+XCX-02-001	庚	包犧氏作八卦（叙事）	類=以类聚（類萬物之情）	none		高	narrative; 類 as verb (to class)
+XCX-02-002	庚	包犧氏作八卦（叙事）	類=以类聚（類萬物之情）	none		高	narrative; 類 as verb (to class)
+XCX-02-003	庚	制器取象（叙事）		none		高	narrative; units 003, 005 keep wiki link markup
+XCX-02-004	庚	制器取象（叙事）		none		高	narrative; units 003, 005 keep wiki link markup
+XCX-02-005	庚	制器取象（叙事）		none		高	narrative; units 003, 005 keep wiki link markup
+XCX-02-006	庚	通其變，使民不倦；神而化之，使民宜之		none		中	narrative
+XCX-02-007	庚	通其變，使民不倦；神而化之，使民宜之		none		中	narrative
+XCX-02-008	丙一	丙一（链）：Z=窮，Y=變；Z=變，Y=通；Z=通，Y=久	窮=穷尽、至极；變=变；通=通达（往来不穷，XCS-11-010）；久=持续	韩注·孔疏（H12 at XCS-12-009 引此句）		高	plan's example (穷则变). The chain ends in 久: continuation conditioned on 通. The plan's counterexample XCX-06-019 (困，窮而通) does not contradict the chain: 而 marks sequence/concession and 困's 彖 (sources/zhouyi-yizhuan/hexagrams/47.json) reads “困而不失其所，亨”, i.e. 通 = 亨 kept by not losing one's place; a counterexample would need 窮 without 變. No counterexample in this corpus
+XCX-02-009	丁	爻辞引文：自天祐之，吉无不利		none		高	
+XCX-02-010	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-011	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-012	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-013	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-014	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-015	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-016	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-017	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-02-018	庚	制器取象（叙事）		none		高	narrative; several units start with ':' (wikitext indentation) and keep wiki links
+XCX-03-001	甲	易 := 象		none		高	
+XCX-03-002	甲	象 := 像		none		高	paronomastic
+XCX-03-003	甲	彖 := 材	材=裁、材质	none		中	
+XCX-03-004	甲	爻 := 效天下之動者		none		高	
+XCX-03-005	丁	吉凶生而悔吝著		none		高	
+XCX-03-006	庚	陽卦多陰，陰卦多陽，其故何也		none		高	question
+XCX-03-007	甲	陽卦 := 奇；陰卦 := 偶		none		中	answer: classification by parity
+XCX-03-008	庚	其德行何也		none		高	question
+XCX-03-009	戊	陽一君而二民，君子之道；陰二君而一民，小人之道	君/民=上下之分	none	相分	高	hierarchy and 君子/小人 split (丁 second)
+XCX-03-010	戊	陽一君而二民，君子之道；陰二君而一民，小人之道	君/民=上下之分	none	相分	高	hierarchy and 君子/小人 split (丁 second)
+XCX-04-001	庚	爻辞引文（咸九四）：憧憧往來，朋從爾思		none		高	
+XCX-04-002	庚	天下何思何慮		none		高	rhetorical
+XCX-04-003	庚	天下同歸而殊途，一致而百慮	同歸/殊途=合（多途归一）	none		中	many courses into one end: the 合 shape (§4.3 修正 2, dual of 分叉); 王弼 quotes it (LZ-47-002 注); rhetorical frame
+XCX-04-004	丙一	相推而 Y 生：Z=日月相推（日往則月來），Y=明生	往/來=一关系与其逆；相推=交替；生=出现	none	相合	高	alternation at the fine grain yields 明 at a coarser one: one relation read at two grains (§4.6); §4.2 往来
+XCX-04-005	丙一	相推而 Y 成：Z=寒暑相推，Y=歲成	歲=由交替而成之粗单位	none	相合	高	as XCX-04-004; 歲 is a coarse unit made of the alternation (§4.6 粗网)
+XCX-04-006	甲	往 := 屈	屈=收缩	none	相合	中	往/來 defined by 屈/伸
+XCX-04-007	甲	來 := 信（伸）	信=伸	none	相合	中	
+XCX-04-008	丁	相感而 Y 生：Z=屈信相感，Y=利生	相感=交感；利=利益、所宜	none	相合	中	structural Z (mutual action of contraction/extension, 相 X), evaluative Y (利)
+XCX-04-009	庚	尺蠖之屈以求信；龍蛇之蟄以存身	存身=保其身（续）	none		中	examples: continuation through withdrawal (蟄 → 存身)
+XCX-04-010	庚	尺蠖之屈以求信；龍蛇之蟄以存身	存身=保其身（续）	none		中	examples: continuation through withdrawal (蟄 → 存身)
+XCX-04-011	丁	精義入神以致用；利用安身以崇德		none		中	
+XCX-04-012	丁	精義入神以致用；利用安身以崇德		none		中	
+XCX-04-013	庚	過此以往，未之或知		none		中	
+XCX-04-014	丁	窮神知化，德之盛也	化=变化	none		中	
+XCX-04-015	丁	爻辞引文（困六三）：凶		none		高	
+XCX-04-016	丁	非所困而困焉，名必辱……		none		中	
+XCX-04-017	丁	非所困而困焉，名必辱……		none		中	
+XCX-04-018	丁	非所困而困焉，名必辱……		none		中	
+XCX-04-019	丁	爻辞引文（解上六）：无不利		none		高	
+XCX-04-020	甲	隼 := 禽；弓矢 := 器；射之者 := 人		none		中	classifications of the image's terms (genus), not technical definitions
+XCX-04-021	甲	隼 := 禽；弓矢 := 器；射之者 := 人		none		中	classifications of the image's terms (genus), not technical definitions
+XCX-04-022	甲	隼 := 禽；弓矢 := 器；射之者 := 人		none		中	classifications of the image's terms (genus), not technical definitions
+XCX-04-023	丁	君子藏器於身，待時而動		none		中	
+XCX-04-024	丁	君子藏器於身，待時而動		none		中	
+XCX-04-025	丁	小人不恥不仁……小懲而大誡		none		中	
+XCX-04-026	丁	爻辞引文（噬嗑初九）：无咎		none		高	
+XCX-04-027	庚	此之謂也		none		高	
+XCX-04-028	丁	丙一形：Z=（善/惡）積，Y=成名/滅身	積=累积（达阈）	none		中	structural content: accumulation to a threshold; evaluative terms
+XCX-04-029	丁	惡積而不可揜，罪大而不可解		none		中	
+XCX-04-030	丁	爻辞引文（噬嗑上九）：凶		none		高	
+XCX-04-031	丁	危者，安其位者也（X者Y也之形）	安其位=以其位为安	none		中	not a definition of 危: danger belongs to one who takes his position as secure
+XCX-04-032	丁	亡者，保其存者也（X者Y也之形）	亡/存=亡失/存续	none		中	ceasing belongs to one who takes his continuing as secured: 存/亡 as positions read reflexively; evaluative/prescriptive
+XCX-04-033	丁	亂者有其治者；安而不忘危，存而不忘亡		none		中	
+XCX-04-034	丁	亂者有其治者；安而不忘危，存而不忘亡		none		中	
+XCX-04-035	庚	爻辞引文（否九五）：其亡其亡，繫于苞桑		none		高	
+XCX-04-036	丁	德薄而位尊……鮮不及矣		none		中	
+XCX-04-037	丁	爻辞引文（鼎九四）：凶		none		高	
+XCX-04-038	丁	言不勝其任也		none		中	
+XCX-04-039	庚	知幾其神乎		none		高	
+XCX-04-040	丁	君子上交不諂，下交不瀆		none		中	
+XCX-04-041	甲	幾 := 動之微、吉之先見者	幾=动之微兆	none		高	definition of 幾: the slight onset of motion, readable before the coarse change (cf. §4.6 grains); 吉 (丁 second)
+XCX-04-042	丁	君子見幾而作，不俟終日		none		中	
+XCX-04-043	丁	爻辞引文（豫六二）：貞吉		none		高	
+XCX-04-044	丁	介如石焉……知之，未嘗復行		none		中	
+XCX-04-045	丁	介如石焉……知之，未嘗復行		none		中	
+XCX-04-046	丁	介如石焉……知之，未嘗復行		none		中	
+XCX-04-047	丁	介如石焉……知之，未嘗復行		none		中	
+XCX-04-048	丁	介如石焉……知之，未嘗復行		none		中	
+XCX-04-049	丁	爻辞引文（復初九）：不遠復，元吉	復=返	none		高	
+XCX-04-050	丙一	丙一：Z=天地絪縕，Y=萬物化醇	絪縕=交密；化=变化而成	none	相合	低	generation from the mutual intermingling of a pair (相合)
+XCX-04-051	丙一	丙一：Z=男女構精，Y=萬物化生	化生=化而生	none	相合	低	as XCX-04-050; 化 polysemy (化醇 / 化生)
+XCX-04-052	庚	爻辞引文（損六三）		none		高	
+XCX-04-053	庚	爻辞引文（損六三）		none		高	
+XCX-04-054	庚	言致一也	致一=达于一	none		中	
+XCX-04-055	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-056	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-057	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-058	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-059	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-060	丁	君子安其身而後動……莫之與，則傷之者至		none		中	social conditionals, prescriptive
+XCX-04-061	庚	爻辞引文（益上九）		none		高	
+XCX-04-062	丁	爻辞引文：立心勿恒，凶	恒=恒常	none		高	
+XCX-05-001	庚	乾坤，其易之門邪		none	相合	中	
+XCX-05-002	甲	乾 := 陽物		none	定域	中	
+XCX-05-003	甲	坤 := 陰物		none	定域	中	
+XCX-05-004	丙一	丙一：Z=陰陽合德，Y=剛柔有體	合德=合其德；體=形体	none	相合	低	體 polysemy (形体 here vs 易无體 XCS-04-009)
+XCX-05-005	庚	其稱名也，雜而不越，於稽其類	類=类别（名之类）	none		中	names classed (稽其類): relevant to 类 but no law
+XCX-05-006	庚	彰往察來，微顯闡幽，當名辨物	辨=分别（类）	none		中	辨 = class use of 际 (§4.1)
+XCX-05-007	庚	其稱名也小，其取類也大……因貳以濟民行	取類=取其类；貳=疑贰	none		中	
+XCX-06-001	庚	易之興……作易者有憂患；是故		none		高	XCX-06-003 lacks terminal punctuation (flagged in corpus)
+XCX-06-002	庚	易之興……作易者有憂患；是故		none		高	XCX-06-003 lacks terminal punctuation (flagged in corpus)
+XCX-06-003	庚	易之興……作易者有憂患；是故		none		高	XCX-06-003 lacks terminal punctuation (flagged in corpus)
+XCX-06-004	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-005	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-006	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-007	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-008	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-009	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-010	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-011	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-012	丁	X，德之 Y 也（甲形）	德=德行	none		中	attributions of 九卦 to aspects of 德, not definitions of the hexagram names
+XCX-06-013	丁	履，和而至；謙，尊而光；復，小而辨於物		none		中	
+XCX-06-014	丁	履，和而至；謙，尊而光；復，小而辨於物		none		中	
+XCX-06-015	丁	履，和而至；謙，尊而光；復，小而辨於物		none		中	
+XCX-06-016	丁	恒，雜而不厭	恒=常；雜=相杂	none		中	constancy amid mixture: the text's 恒 is compatible with 雜 (cf. §4.4 有常 as compatibility)
+XCX-06-017	丁	損，先難而後易（先 X 後 Y）		none		中	sequence form
+XCX-06-018	丁	益，長裕而不没	没=尽	none		中	
+XCX-06-019	丁	困，窮而通（X 而 Y）	窮=困极；通=亨（困彖：“困而不失其所，亨”）	none		中	the plan's counterexample to 穷则变; read with 困's 彖 (hexagrams/47.json) 通 = 亨 kept by not losing one's 所; not a counterexample to XCX-02-008 (see there)
+XCX-06-020	丁	井，居其所而遷	所=处所；遷=迁移（井养之功）	none		中	stays in place yet moves: under the class of place a continuation, under the class of what it gives a change (cf. 荀子 一实, §一); AI reading
+XCX-06-021	丁	巽，稱而隱		none		中	
+XCX-06-022	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-023	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-024	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-025	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-026	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-027	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-028	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-029	丁	X，以 Y（九卦之用）		none		高	
+XCX-06-030	丁	X，以 Y（九卦之用）		none		高	
+XCX-07-001	庚	易之為書也不可遠，為道也屢遷	屢遷=屡变	none		中	
+XCX-07-002	庚	變動不居，周流六虛，上下无常，剛柔相易，不可為典要，唯變所適	无常=（爻位）无常处；典要=固定之准则；相易=互换	韩注（H4 at XCS-04-009 引“唯變所適”）		中	the text's 无常 is of line positions, not of a class under 缘; with XCX-07-005 (既有典常) the text denies a fixed rule for the moves and asserts a constant canon for reading them: constancy relative to the reading (class-relative), AI reading
+XCX-07-003	丁	出入以度，外內使知懼；明於憂患與故		none		中	
+XCX-07-004	丁	出入以度，外內使知懼；明於憂患與故		none		中	
+XCX-07-005	丁	初率其辭而揆其方，既有典常，苟非其人，道不虛行	典常=常法	none		中	典常 vs 典要 (XCX-07-002)
+XCX-07-006	甲	易之質 := 原始要終	原始=推其始；要終=总其终	none		低	the book's material is the beginning and end of a course (cf. §一 生/亡 positions); link XCS-04-003
+XCX-07-007	庚	六爻相雜，唯其時物也	相雜=相杂；時物=时与物	none		中	
+XCX-07-008	庚	其初難知，其上易知，本末也	本末=初/上（一程之始终）	none	相合	中	本/末 here = start/end of one course, not 王弼's 本/末 hierarchy (LZ)
+XCX-07-009	庚	初辭擬之，卒成之終	始/终	none		中	
+XCX-07-010	庚	雜物撰德，辨是與非，則非其中爻不備		none		中	
+XCX-07-011	丁	要存亡吉凶，則居可知	存亡=存/亡	none		中	
+XCX-07-012	庚	知者觀其彖辭，則思過半		none		中	
+XCX-08-001	丁	二與四同功而異位，其善不同：二多譽，四多懼	同功異位=功同而位异	none		中	structural: same under the class 功, different under the class 位 — one thing at different positions relative to classes (§一); evaluative end
+XCX-08-002	丁	柔之為道，不利近者，其要無咎		none		中	
+XCX-08-003	戊	三與五同功而異位……貴賤之等也	等=等级	none	相分	高	plan §5.4 (爻有等); hierarchy; 丁 second (凶/功)
+XCX-08-004	丁	其柔危，其剛勝邪		none		中	rhetorical; contradicts 老子 柔弱勝剛強 (LZ-36-006, LZ-78-002) across texts
+XCX-08-005	庚	兼三材而兩之，故六	三材=天地人；兩=重之	none	定域	中	plan §4.7: combining three and doubling, not a functional projection
+XCX-08-006	甲	六 := 三材之道		none		中	
+XCX-08-007	甲	爻 := 道之變動（故曰）	變動=变化运动	none		中	naming rule “Z，故曰 Y”
+XCX-08-008	甲	物 := 爻之有等（故曰）	等=等级	none	相分	中	plan §三 lists 爻有等 under 戊; by the brief's order 甲 is kept, the registration stays 相分
+XCX-08-009	甲	文 := 物之相雜（故曰）	相雜=交错相杂；文=纹理、成章	none		高	key for 成文 (§三): 文 is the mixing of graded things (相 X = mutual); cf. 外传第1章 “相類相續而後成乎其章”
+XCX-08-010	丁	丙一形：Z=文不當，Y=吉凶生	當=当位	none		高	the plan's own 丁 example
+XCX-08-011	庚	易之興，當殷之末世……		none		高	historical frame
+XCX-08-012	庚	易之興，當殷之末世……		none		高	historical frame
+XCX-08-013	丁	危者使平，易者使傾……懼以終始，其要无咎		none		中	
+XCX-08-014	庚	此之謂易之道也		none		高	
+XCX-09-001	甲	乾 := 天下之至健		none		中	
+XCX-09-002	丁	德行恒易以知險		none		中	
+XCX-09-003	甲	坤 := 天下之至順		none		中	
+XCX-09-004	丁	德行恒簡以知阻		none		中	
+XCX-09-005	庚	能說諸心……變化云為，吉事有祥，占事知來		none		中	
+XCX-09-006	庚	能說諸心……變化云為，吉事有祥，占事知來		none		中	
+XCX-09-007	庚	天地設位，聖人成能		none	相合	中	王弼 quotes it (LZ-49-006 注)
+XCX-09-008	庚	人謀鬼謀，百姓與能		none		中	王弼 quotes it (LZ-49-006 注)
+XCX-09-009	丁	剛柔雜居，而吉凶可見		none		中	
+XCX-09-010	丁	變動以利言，吉凶以情遷		none		中	
+XCX-09-011	丁	相 X 而 Y 生：愛惡相攻 → 吉凶生；遠近相取 → 悔吝生；情偽相感 → 利害生	相攻、相取、相感=相 X	none		中	structural: evaluation arises from mutual relations (相 X), three 丙一 forms with evaluative Y
+XCX-09-012	丁	近而不相得，則凶或害之		none		中	
+XCX-09-013	庚	將叛者其辭慚……（辭以人分）		none		中	characterization of speech by state
+XCX-09-014	庚	將叛者其辭慚……（辭以人分）		none		中	characterization of speech by state
+XCX-09-015	庚	將叛者其辭慚……（辭以人分）		none		中	characterization of speech by state

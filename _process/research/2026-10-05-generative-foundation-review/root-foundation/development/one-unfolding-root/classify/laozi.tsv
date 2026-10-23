@@ -1,0 +1,483 @@
+id	class	form	terms	commentary	registration	confidence	note
+LZ-01-001	丙一	丙一：Z=可道/可名，Y=非常道/非常名	常=恒常（不系于一形）；道=言说/道路（双关）	王弼（“可道之道，可名之名，指事造形，非其常也”）		低	王弼: what is fixed by pointing to a form is not constant; bounds 立言 (§三): what the grammar can name is not the 常道; the plan does not claim the 常道, so a strain, not a rejection; 常 polysemy against §4.4 有常
+LZ-01-002	甲	始 := 無名（天地之始）；母 := 有名（萬物之母）	始/母=（王弼）未形无名之时 / 有形有名之时	王弼（“凡有皆始於無……及其有形有名之時，則長之、育之、亭之、毒之，為其母也”）	相合	中	王弼 makes 始/母 two times of one course, but also “凡有皆始於無” (无 prior): asymmetry; links LZ-01-004, LZ-40-002
+LZ-01-003	庚	常無欲以觀其妙，常有欲以觀其徼	妙=微之极，始物（王弼）；徼=归终（王弼）；常=常常（副词）	王弼		中	王弼 reads 妙/徼 again as the start and the end of things; 常 is an adverb here (polysemy)
+LZ-01-004	甲	玄 := 兩者之同；兩者同出而異名	兩者=始与母（王弼）；同出=同出于玄；異名=所施不可同	王弼（注在 LZ-01-005 之后：“在首則謂之始，在終則謂之母。玄者，冥默無有也，始、母之所出也”）	相合	高	the plan's §4.2 form (one course named at two positions) is supported by 王弼's 在首/在終, but 王弼 also posits 玄 (冥默無有) as what both come out of, and refuses to fix it (“不可以定乎一玄”); the plan's reading drops this third term
+LZ-01-005	庚	玄之又玄（迭用）	又=再次	王弼（“若定乎一玄，則是名則失之遠矣。故曰玄之又玄也”）		中	iteration read by 王弼 as refusal to fix a name; no law
+LZ-02-001	乙	相待：知美之為美 → 惡（立一则其补随之）	已=矣（语气），非墨经“已，成、亡”	王弼（“美惡，猶喜怒也……喜怒同根，是非同門，故不可得偏舉也”）	相合	中	candidate: naming one class of a two-class partition gives its complement; 乙 like LZ-02-003; Lean decides
+LZ-02-002	乙	相待：知善之為善 → 不善	同上	王弼（同上）	相合	中	as LZ-02-001; 善/不善 here are correlatives, not an evaluation by the text
+LZ-02-003	乙	相 X（六对）：有無相生、難易相成、長短相較、高下相傾、音聲相和、前後相隨	相生=相待而生；相較=比较；相傾=相依倚；相隨=次序	王弼（“此六者皆陳自然不可偏舉之明數也”）	相合	高	the plan's 乙 example. The six 相 X are of different kinds (§4.2: mutual, comparison, order). Strain: the same text says 有生於無 (LZ-40-002) and 王弼 elsewhere puts 无 before 有 (LZ-01-002, LZ-40-002 注 “以無為本”); 王弼's 不可偏舉 concerns the pairs as names, not a symmetric ontology
+LZ-02-004	丁	聖人處無為之事，行不言之教		王弼（“自然已足，為則敗也”）		高	
+LZ-02-005	丁	萬物作焉而不辭，生而不有，為而不恃，功成而弗居	生=生物（及物）	王弼（“因物而用，功自彼成，故不居也”）		中	
+LZ-02-006	丁	丙一形：Z=弗居，Y=不去	去=离去（不续）	王弼（“使功在己，則功不可久也”）		中	continuation (不去, 久) conditioned on not appropriating; Z is an agent attitude the grammar lacks
+LZ-03-001	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-002	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-003	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-004	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-005	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-006	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-03-007	丁	治民之术（不尚賢……為無為，則無不治）		王弼		高	prescriptive
+LZ-04-001	庚	道沖而用之或不盈	沖=虚；不盈=不满	王弼（“沖而用之，用乃不能窮”）		中	characterization of 道; 王弼's 用不能窮 = 不尽
+LZ-04-002	庚	挫其銳……湛兮似或存	似或存=似存非存	王弼		中	
+LZ-04-003	庚	象帝之先	先=先于	王弼（“天地莫能及之，不亦似帝之先乎”）		中	priority of 道 (hierarchy of origin, 戊-leaning)
+LZ-05-001	丁	天地不仁，以萬物為芻狗	仁=造立施化之恩	王弼（“天地任自然，無為無造，萬物自相治理”）		中	evaluative term negated; 王弼: things govern one another without an external maker, consonant with one unfolding and no outside agent (§4.4 验)
+LZ-05-002	丁	聖人不仁，以百姓為芻狗		王弼		中	
+LZ-05-003	庚	天地之間，其猶橐籥乎		王弼		高	simile
+LZ-05-004	丙一	丙一：Z=虛，Y=不屈；Z=動，Y=愈出	屈=竭（王弼：窮屈）	王弼（“虛而不得窮屈，動而不可竭盡也”）		低	a model law of the bellows: emptiness never exhausted; unending continuation in a model
+LZ-05-005	丁	多言數窮，不如守中	窮=尽、穷困	王弼		中	
+LZ-06-001	甲	玄牝 := 谷神不死	不死=不亡	王弼（“欲言存邪，則不見其形，欲言亡邪，萬物以之生”）		中	王弼: neither 存 nor 亡 under the reading by form; class-relative positions (§一)
+LZ-06-002	甲	天地根 := 玄牝之門	根=本源	王弼		中	
+LZ-06-003	庚	緜緜若存，用之不勤	緜緜=连续不断；勤=尽	王弼（“無物不成，用而不勞也”）		中	unbroken continuation (緜緜) as a characterization
+LZ-07-001	庚	天長地久		王弼		高	
+LZ-07-002	丙一	丙一：Z=不自生，Y=能長生（長且久）	自生=自营其生（王弼：自生則與物爭）	王弼（“自生則與物爭，不自生則物歸也”）		低	continuation conditioned on not living for oneself; 王弼 reads it relationally (爭 vs 歸); 自生 needs reflexive agency the grammar lacks
+LZ-07-003	丁	後其身而身先，外其身而身存……		王弼		中	存 = continuation, prescriptive
+LZ-07-004	丁	後其身而身先，外其身而身存……		王弼		中	存 = continuation, prescriptive
+LZ-07-005	丁	後其身而身先，外其身而身存……		王弼		中	存 = continuation, prescriptive
+LZ-08-001	丁	上善若水……夫唯不爭，故無尤		王弼		高	
+LZ-08-002	丁	上善若水……夫唯不爭，故無尤		王弼		高	
+LZ-08-003	丁	上善若水……夫唯不爭，故無尤		王弼		高	
+LZ-08-004	丁	上善若水……夫唯不爭，故無尤		王弼		高	
+LZ-09-001	丁	持而盈之，不如其已	已=止	王弼（“既不失其德又盈之，勢必傾危”）		中	已 polysemy (止)
+LZ-09-002	丁	揣而梲之，不可長保……		王弼（“勢必摧衂”）		中	structural: excess cannot be kept long
+LZ-09-003	丁	揣而梲之，不可長保……		王弼（“勢必摧衂”）		中	structural: excess cannot be kept long
+LZ-09-004	丁	揣而梲之，不可長保……		王弼（“勢必摧衂”）		中	structural: excess cannot be kept long
+LZ-09-005	丁	功遂身退，天之道	天之道=（王弼）四时更运	王弼（“四時更運，功成則移”）		中	王弼 reads a law of succession (功成則移); prescriptive frame
+LZ-10-001	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-002	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-003	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-004	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-005	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-006	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-007	丁	修身之问（能無離乎 等）	開闔=（王弼）治乱之际，或开或阖	王弼		中	LZ-10-005 天門開闔 echoes 一阖一辟 (XCS-11-009)
+LZ-10-008	甲	玄德 := 生而不有、為而不恃、長而不宰	玄=幽冥（王弼）	王弼（“有德而不知其主，出乎幽冥”）		中	丁 second; repeated LZ-51-006/007
+LZ-11-001	庚	例：當其無，有車/器/室之用	無=空处	王弼（“轂所以能統三十輻者，無也”）		高	examples of LZ-11-004
+LZ-11-002	庚	例：當其無，有車/器/室之用	無=空处	王弼（“轂所以能統三十輻者，無也”）		高	examples of LZ-11-004
+LZ-11-003	庚	例：當其無，有車/器/室之用	無=空处	王弼（“轂所以能統三十輻者，無也”）		高	examples of LZ-11-004
+LZ-11-004	丙一	丙一：Z=有一无（空处）可资之器，Y=有之為利、無之為用	利/用=所利/所用	王弼（“言無者，有之所以為利，皆賴無以為用也”）	相合	低	mutual dependence of 有 and 无 in artifacts (the 相须 shape, §4.5); a model law over the examples LZ-11-001..003, not analytic
+LZ-12-001	丁	五色令人目盲……為腹不為目		王弼		高	
+LZ-12-002	丁	五色令人目盲……為腹不為目		王弼		高	
+LZ-13-001	丁	寵辱若驚，貴大患若身		王弼		中	
+LZ-13-002	庚	何謂寵辱若驚		none		高	question
+LZ-13-003	甲	寵辱若驚 := 寵為下，得之若驚，失之若驚		王弼（“寵必有辱，榮必有患”）		中	丁 second
+LZ-13-004	庚	何謂貴大患若身	生之厚=（王弼）	王弼（“生之厚，必入死之地”）		高	question; 王弼 links to LZ-50-006
+LZ-13-005	丁	吾所以有大患者，為吾有身……		王弼		中	
+LZ-13-006	丁	吾所以有大患者，為吾有身……		王弼		中	
+LZ-13-007	丁	吾所以有大患者，為吾有身……		王弼		中	
+LZ-14-001	甲	夷 := 視之不見；希 := 聽之不聞；微 := 搏之不得	名曰=命名	none		高	names defined by observations that fail to distinguish: relevant to §4.4 验
+LZ-14-002	乙	不可分 → 同于一：此三者不可致詰，故混而為一	致詰=究问分辨；混=合	王弼（“不得而知……故不可致詰，混而為一也”）		低	candidate: what no observation separates is one (in the core, §4.4). If 致詰 is observation at finite stages, this is the Hennessy–Milner direction the plan only calibrates (needs image-finiteness, LLPO), so it may be 丙一; Lean decides
+LZ-14-003	庚	其上不皦，其下不昧	皦/昧=明/暗	none	相合	中	denies an upper/lower split
+LZ-14-004	庚	繩繩不可名，復歸於無物	繩繩=连绵不断；復歸=返回	none		中	unbroken continuation and return (§4.2 反复)
+LZ-14-005	甲	惚恍 := 無狀之狀、無物之象	是謂=名之为	王弼（“欲言無邪，而物由以成。欲言有邪，而不見其形”）		中	neither 有 nor 无
+LZ-14-006	庚	迎之不見其首，隨之不見其後	首/後=始/终	none		中	a course with no visible first or last: a model property (no event 生, cf. 起信 “無有初相可知”, §5.2)
+LZ-14-007	丁	執古之道，以御今之有	有=有其事（王弼）	王弼（“雖今古不同，時移俗易，故莫不由乎此以成其治”）		中	constancy across a change of time
+LZ-14-008	甲	道紀 := 能知古始		王弼		中	
+LZ-15-001	庚	古之善為士者之容		王弼		中	description
+LZ-15-002	庚	古之善為士者之容		王弼		中	description
+LZ-15-003	庚	古之善為士者之容		王弼		中	description
+LZ-15-004	丙一	丙一（王弼）：Z=濁而靜之，Y=徐清	徐=详慎（王弼）	王弼（“濁以靜物則得清，安以動物則得生，此自然之道也”）		低	base is a rhetorical question; the law is 王弼's
+LZ-15-005	丙一	丙一（王弼）：Z=安而久動之，Y=徐生	生=生动、生长	王弼（同上）		低	as LZ-15-004
+LZ-15-006	丁	保此道者不欲盈……故能蔽不新成	蔽=覆盖（王弼）	王弼（“盈必溢也”）		低	sense of 蔽不新成 unclear
+LZ-16-001	丁	致虛極，守靜篤		王弼		高	
+LZ-16-002	庚	萬物並作，吾以觀復	復=反复、返	王弼（“凡有起於虛，動起於靜，故萬物雖並動作，卒復歸於虛靜”）		中	王弼 puts 虛/靜 before 有/動 (asymmetry)
+LZ-16-003	丙一	丙一：Z=凡物（芸芸），Y=各復歸其根	根=本	王弼		低	universal return claim; holds only in models where every course closes into a loop (环); courses that end without return (LZ-30-008 不道早已) are counterexamples unless 歸根 is read as ending
+LZ-16-004	甲	靜 := 歸根；復命 := 靜	歸根=返于其根	王弼（“歸根則靜，故曰靜。靜則復命，故曰復命也”）		高	the plan's §4.2 test (归、静: change that stays in place)
+LZ-16-005	甲	常 := 復命；明 := 知常	常=复命而得性命之常（王弼）	王弼（“復命則得性命之常，故曰常也”）		高	the text's 常 is a return (loop): consonant with the plan's theorem that a class 有常 has continuations that never end (§4.3); second definition of 常 at LZ-55-006
+LZ-16-006	丁	丙一形：Z=不知常，Y=妄作凶	分=物之分（王弼）	王弼（“失此以往，則邪入乎分，則物離其分”）		高	
+LZ-16-007	丁	链 X 乃 Y：知常 → 容 → 公 → 全 → 天 → 道 → 久，沒身不殆	久=持续	王弼（逐步“則乃至於”）		中	chain ends in 久 like XCX-02-008 (通則久); evaluative steps (公, 全)
+LZ-17-001	丁	太上……其次……（治之等）		王弼		高	ranking of governance
+LZ-17-002	未读出	丙一形：Z=信不足，Y=有不信	信=诚信	王弼（“信不足焉，則有不信，此自然之道也”）		中	form clear; 信 is an agent attitude the grammar lacks; repeated LZ-23-010
+LZ-17-003	庚	功成事遂，百姓皆謂我自然	自然=自己如此	王弼		中	
+LZ-18-001	丙一	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）		低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-002	丙一	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）		低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-003	丙一	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）		低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-004	丙一	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）		低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-19-001	丁	絕聖棄智……見素抱樸，少私寡欲		王弼		高	
+LZ-19-002	丁	絕聖棄智……見素抱樸，少私寡欲		王弼		高	
+LZ-19-003	丁	絕聖棄智……見素抱樸，少私寡欲		王弼		高	
+LZ-19-004	丁	絕聖棄智……見素抱樸，少私寡欲		王弼		高	
+LZ-20-001	庚	唯之與阿，相去幾何	相去=差距	王弼		中	rhetorical
+LZ-20-002	庚	善之與惡，相去若何	相去=差距	王弼（“唯阿美惡，相去何若”）	相合	低	questions the distance between 善/惡: correlatives, not an evaluation
+LZ-20-003	丁	人之所畏，不可不畏		王弼		中	
+LZ-20-004	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-005	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-006	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-007	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-008	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-009	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-010	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-011	庚	我獨……（自述）	別析=分别（王弼）	王弼（“心無所別析”）		中	self-description
+LZ-20-012	丁	我獨異於人，而貴食母	食母=生之本（王弼）	王弼		中	
+LZ-21-001	庚	孔德之容，惟道是從	孔=空（王弼）	王弼		中	
+LZ-21-002	庚	道之為物，惟恍惟惚，其中有象、物、精、信	信=信验（王弼）	王弼（“信，信驗也……萬物之性定”）		中	信 = verification (polysemy), cf. §4.4 验
+LZ-21-003	庚	道之為物，惟恍惟惚，其中有象、物、精、信	信=信验（王弼）	王弼（“信，信驗也……萬物之性定”）		中	信 = verification (polysemy), cf. §4.4 验
+LZ-21-004	庚	道之為物，惟恍惟惚，其中有象、物、精、信	信=信验（王弼）	王弼（“信，信驗也……萬物之性定”）		中	信 = verification (polysemy), cf. §4.4 验
+LZ-21-005	庚	道之為物，惟恍惟惚，其中有象、物、精、信	信=信验（王弼）	王弼（“信，信驗也……萬物之性定”）		中	信 = verification (polysemy), cf. §4.4 验
+LZ-21-006	庚	道之為物，惟恍惟惚，其中有象、物、精、信	信=信验（王弼）	王弼（“信，信驗也……萬物之性定”）		中	信 = verification (polysemy), cf. §4.4 验
+LZ-21-007	庚	其名不去，以閱眾甫	眾甫=物之始（王弼）	王弼（“自古及今，無不由此而成”）		中	a name kept through all beginnings
+LZ-21-008	庚	吾何以知眾甫之狀哉？以此		王弼		高	frame
+LZ-21-009	庚	吾何以知眾甫之狀哉？以此		王弼		高	frame
+LZ-22-001	丙一	丙一（反）：曲則全，枉則直，窪則盈，敝則新，少則得，多則惑	新=更新；惑=迷	王弼（“轉多轉遠其根，轉少轉得其本”）		低	reversal laws; 敝則新 = renewal after wear (§4.6 复生); 物壯則老 (LZ-30-008) runs the other way; 多則惑 is evaluative
+LZ-22-002	丁	聖人抱一為天下式；不自見故明……	一=少之极（王弼）	王弼		中	
+LZ-22-003	丁	聖人抱一為天下式；不自見故明……	一=少之极（王弼）	王弼		中	
+LZ-22-004	丁	聖人抱一為天下式；不自見故明……	一=少之极（王弼）	王弼		中	
+LZ-22-005	庚	豈虛言哉！誠全而歸之		none		中	
+LZ-22-006	庚	豈虛言哉！誠全而歸之		none		中	
+LZ-23-001	庚	希言自然	希言=（王弼）无味不足听之言	王弼		低	
+LZ-23-002	丙一	丙一：Z=飄風、驟雨（暴疾），Y=不終朝、不終日	終=尽	王弼（“言暴疾美興不長也”）		低	ending of a continuation under intensity; needs magnitude (暴/驟) the grammar lacks; 王弼 links LZ-30-008
+LZ-23-003	庚	孰為此者？天地		none		高	question and answer
+LZ-23-004	庚	孰為此者？天地		none		高	question and answer
+LZ-23-005	庚	天地尚不能久，而況於人乎		王弼		中	a fortiori argument
+LZ-23-006	庚	從事於道者同於道，德者同於德，失者同於失	同於=同类（王弼：同體）	王弼（“行得則與得同體……行失則與失同體”）		中	class by conduct (类)
+LZ-23-007	庚	同於 X 者，X 亦樂得之	同而應=同类相应	王弼（“言隨行其所，故同而應之”）		中	symmetric response within a class (类 symmetric), agentive wording
+LZ-23-008	庚	同於 X 者，X 亦樂得之	同而應=同类相应	王弼（“言隨行其所，故同而應之”）		中	symmetric response within a class (类 symmetric), agentive wording
+LZ-23-009	庚	同於 X 者，X 亦樂得之	同而應=同类相应	王弼（“言隨行其所，故同而應之”）		中	symmetric response within a class (类 symmetric), agentive wording
+LZ-23-010	未读出	丙一形：Z=信不足，Y=有不信		王弼		中	repeat of LZ-17-002; agent term
+LZ-24-001	丁	企者不立，跨者不行……		王弼（“物尚進則失安”）		中	
+LZ-24-002	甲	其在道也 := 餘食贅行		王弼		低	evaluative naming (丁 second)
+LZ-24-003	丁	物或惡之，故有道者不處		none		高	repeated LZ-31-001
+LZ-25-001	庚	有物混成，先天地生	生=生（不及物：出现）	王弼（“混然不可得而知，而萬物由之以成”）		中	gives 道 a 生 (start) position before 天地; priority of origin
+LZ-25-002	庚	寂兮寥兮，獨立而不改，周行而不殆，可以為天下母	不改=（王弼）返化終始，不失其常；周行=无所不至；殆=危、尽	王弼（“返化終始，不失其常，故曰不改也”）		中	constancy through the changes of start and end (不改) together with unending circulation (不殆): mirrors the plan's theorem 有常則续不尽 (§4.3), not stated as an implication by the text
+LZ-25-003	甲	道 := 字（之）；大 := 強名	名=定形（王弼）	王弼（“名以定形……大有繫，則必有分，有分則失其極矣”）		中	王弼: a name fixes a division (分) and so loses the whole: every narrowing loses something
+LZ-25-004	甲	逝 := 大；遠 := 逝；反 := 遠（链）	逝=行（王弼）；遠=极；反=返	王弼（“周行無所不至，故曰逝也……不隨於所適，其體獨立，故曰反也”）		中	return defined as the limit of going out: a loop (§4.2 反/复)
+LZ-25-005	庚	道大，天大，地大，王亦大		王弼		中	
+LZ-25-006	戊	域中有四大，而王居其一	王=人之主（王弼）	王弼（“天地之性，人為貴，而王是人之主也”）	相分	低	elevation of 王 (hierarchy, mostly in 王弼)
+LZ-25-007	戊	人法地，地法天，天法道，道法自然（法之序）	法=法则、取为模（王弼）；自然=无称之言（王弼）	王弼（“用智不及無知，而形魄不及精象，精象不及無形……故轉相法也”）	相分	中	an asymmetric order of modelling; the top is not a further thing (王弼 “自然者，無稱之言”), so the order ends in no entity
+LZ-26-001	戊	重為輕根，靜為躁君	根/君=本/主	王弼（“重必為輕根，靜必為躁君也”）	相分	中	asymmetric grounding inside pairs (本末)
+LZ-26-002	丁	聖人終日行不離輜重		王弼		中	
+LZ-26-003	丁	聖人終日行不離輜重		王弼		中	
+LZ-26-004	庚	奈何萬乘之主，而以身輕天下		none		高	rhetorical
+LZ-26-005	丁	輕則失本，躁則失君		王弼		中	
+LZ-27-001	丁	善行無轍迹……常善救人，故無棄人		王弼（“因物之性，不以形制物”）		中	
+LZ-27-002	丁	善行無轍迹……常善救人，故無棄人		王弼（“因物之性，不以形制物”）		中	
+LZ-27-003	丁	善行無轍迹……常善救人，故無棄人		王弼（“因物之性，不以形制物”）		中	
+LZ-27-004	丁	善行無轍迹……常善救人，故無棄人		王弼（“因物之性，不以形制物”）		中	
+LZ-27-005	甲	襲明 := 常善救物、無棄物		王弼		低	丁 second
+LZ-27-006	丁	善人者，不善人之師；不善人者，善人之資	資=取（王弼）	王弼		中	roles defined relative to each other (相待)
+LZ-27-007	丁	善人者，不善人之師；不善人者，善人之資	資=取（王弼）	王弼		中	roles defined relative to each other (相待)
+LZ-27-008	甲	要妙 := 不貴其師，不愛其資……		王弼		低	丁 second
+LZ-28-001	丁	知其雄，守其雌……復歸於嬰兒/無極/樸	復歸=返	王弼（“此三者，言常反終……下章云，反者道之動也”）		中	return (反) as prescription
+LZ-28-002	丁	知其雄，守其雌……復歸於嬰兒/無極/樸	復歸=返	王弼（“此三者，言常反終……下章云，反者道之動也”）		中	return (反) as prescription
+LZ-28-003	丁	知其雄，守其雌……復歸於嬰兒/無極/樸	復歸=返	王弼（“此三者，言常反終……下章云，反者道之動也”）		中	return (反) as prescription
+LZ-28-004	丁	知其雄，守其雌……復歸於嬰兒/無極/樸	復歸=返	王弼（“此三者，言常反終……下章云，反者道之動也”）		中	return (反) as prescription
+LZ-28-005	丁	知其雄，守其雌……復歸於嬰兒/無極/樸	復歸=返	王弼（“此三者，言常反終……下章云，反者道之動也”）		中	return (反) as prescription
+LZ-28-006	丙一	丙一：Z=樸散，Y=為器	樸=真（王弼）；器=殊类之成形	王弼（“真散則百行出，殊類生，若器也”）		中	classes (殊類) arise from the dispersal of an undivided whole: a generative account of classes, where the plan takes 类 as given relations (§4.1); 聖人用之……大制不割 is 丁
+LZ-29-001	丁	將欲取天下而為之，吾見其不得已		none		中	
+LZ-29-002	丁	天下神器，不可為也，為者敗之，執者失之	神器=无形以合之器（王弼）	王弼（“物有常性，而造為之，故必敗也。物有往來而執之，故必失矣”）		中	王弼's law: fixing (執) what has 往來 loses it
+LZ-29-003	庚	或X或Y（或行或隨……或挫或隳）	或=有的	王弼（“凡此諸或，言物事逆順反覆”）		中	alternatives, not alternation
+LZ-29-004	庚	或X或Y（或行或隨……或挫或隳）	或=有的	王弼（“凡此諸或，言物事逆順反覆”）		中	alternatives, not alternation
+LZ-29-005	丁	聖人去甚，去奢，去泰		王弼		高	
+LZ-30-001	丁	以道佐人主者，不以兵強天下		王弼		高	
+LZ-30-002	未读出	其事好還	還=报还（常见读法，据记忆）或还反无为（王弼）	王弼（“有道者務欲還反無為”）		低	sense unclear between two readings
+LZ-30-003	丙一	丙一：Z=師之所處，Y=荊棘生焉	生=生长	王弼（“無有所濟，必有所傷”）		低	model terms; 生 intransitive
+LZ-30-004	丁	大軍之後，必有凶年		王弼		中	
+LZ-30-005	丁	善有果而已……果而勿強	果=济（王弼）	王弼		中	
+LZ-30-006	丁	善有果而已……果而勿強	果=济（王弼）	王弼		中	
+LZ-30-007	丁	善有果而已……果而勿強	果=济（王弼）	王弼		中	
+LZ-30-008	丙一	丙一：Z=物壯，Y=老；Z=不道，Y=早已	壯=（王弼）武力暴兴；已=止、终	王弼（“飄風不終朝，驟雨不終日，故暴興必不道早已也”）		中	the plan's example (物壮则老). 已 = end (cf. 墨经 已 polysemy). 是謂不道 is evaluative (丁 second). No counterexample in this corpus; LZ-22-001 敝則新 is the reverse direction, not a counterexample; repeated LZ-55-009
+LZ-31-001	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-002	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-003	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-004	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-005	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-006	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-007	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-31-008	丁	兵者不祥之器……以喪禮處之	左/右=吉/凶之位	none		中	ritual of war; LZ-31-002 and LZ-31-006 assign 左/右 by context (定域 of a pair)
+LZ-32-001	庚	道常無名，樸雖小，天下莫能臣也	常=恒（王弼：以無名為常）	王弼		中	
+LZ-32-002	丁	侯王若能守之，萬物將自賓		王弼		中	
+LZ-32-003	丙一	丙一：Z=天地相合，Y=降甘露；民莫之令而自均	相合=相交合；自均=自然均平	王弼（“天地相合，則甘露不求而自降”）	相合	低	self-equalization without command (no external agent)
+LZ-32-004	丁	始制有名……知止所以不殆	名=名分	王弼（“始制官長，不可不立名分，以定尊卑”）		中	王弼 ties naming to 尊卑 (相分 in the commentary)
+LZ-32-005	庚	譬道之在天下，猶川谷之於江海		王弼		高	simile
+LZ-33-001	丁	知人者智，自知者明……		王弼		中	
+LZ-33-002	丁	知人者智，自知者明……		王弼		中	
+LZ-33-003	丁	知人者智，自知者明……		王弼		中	
+LZ-33-004	丁	知人者智，自知者明……		王弼		中	
+LZ-33-005	丙一	丙一：Z=不失其所，Y=久	所=处所、所当	王弼（“以明自察，量力而行，不失其所，必獲久長矣”）		低	continuation conditioned on keeping one's place: in the plan's terms a continuation under the class of 所 (cf. 荀子 一实 以所计); agentive in 王弼; link XCX-06-019 (困 彖 “困而不失其所”), XCX-06-020
+LZ-33-006	甲	壽 := 死而不亡	死=身没；亡=（王弼）道不亡	王弼（“雖死而以為生之道不亡……身沒而道猶存”）		中	死 under the class of the body, 不亡 under the class of the way: supports the plan's 乙 example 亡于细者不必亡于粗 (§三) and continuation relative to a class (§一)
+LZ-34-001	庚	大道氾兮……萬物恃之而生而不辭		王弼		中	
+LZ-34-002	庚	大道氾兮……萬物恃之而生而不辭		王弼		中	
+LZ-34-003	甲	可名於小（衣養萬物而不為主，常無欲）	名=称	王弼（“若道無施於物，故名於小矣”）		低	one 道 named 小 under one reading and 大 under another (LZ-34-004): names relative to the reading (§一)
+LZ-34-004	甲	可名為大（萬物歸焉而不為主）		王弼（“此不為小，故復可名於大矣”）		低	as LZ-34-003
+LZ-34-005	丁	以其終不自為大，故能成其大		王弼		中	
+LZ-35-001	丁	執大象，天下往；往而不害		王弼		中	
+LZ-35-002	丁	執大象，天下往；往而不害		王弼		中	
+LZ-35-003	庚	樂與餌，過客止		none		高	
+LZ-35-004	庚	道之出口，淡乎其無味……用之不足既	既=尽	王弼（“用之不可窮極也”）		中	inexhaustible (不尽)
+LZ-36-001	丙一	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）		低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-002	丙一	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）		低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-003	丙一	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）		低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-004	丙一	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）		低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-005	甲	微明 := 前四者		王弼		中	
+LZ-36-006	丙一	丙一：Z=柔弱與剛強相遇，Y=柔弱勝		none		低	model law; counterexample across texts: 系辞 XCX-08-004 “其柔危，其剛勝邪”; repeated LZ-78-002
+LZ-36-007	丁	魚不可脫於淵，國之利器不可以示人		王弼		中	
+LZ-37-001	庚	道常無為而無不為		王弼（“順自然也……萬物無不由為以治以成之也”）		中	the whole does nothing from outside, yet everything is done among things; thesis, not a grammar law
+LZ-37-002	丁	侯王若能守之，萬物將自化……天下將自定	自化=自然变化	王弼		中	self-transformation without an agent
+LZ-37-003	丁	侯王若能守之，萬物將自化……天下將自定	自化=自然变化	王弼		中	self-transformation without an agent
+LZ-37-004	丁	侯王若能守之，萬物將自化……天下將自定	自化=自然变化	王弼		中	self-transformation without an agent
+LZ-37-005	丁	侯王若能守之，萬物將自化……天下將自定	自化=自然变化	王弼		中	self-transformation without an agent
+LZ-38-001	丁	上德不德……上禮為之而莫之應		王弼（38 章长注）		中	
+LZ-38-002	丁	上德不德……上禮為之而莫之應		王弼（38 章长注）		中	
+LZ-38-003	丁	上德不德……上禮為之而莫之應		王弼（38 章长注）		中	
+LZ-38-004	丁	上德不德……上禮為之而莫之應		王弼（38 章长注）		中	
+LZ-38-005	丁	上德不德……上禮為之而莫之應		王弼（38 章长注）		中	
+LZ-38-006	丙一	丙一（退化之序）：失道而後德，失德而後仁，失仁而後義，失義而後禮	失 X 而後 Y=X 失则 Y 出	王弼（“夫大之極也，其唯道乎……所謂失道而後德也”；“守母以存其子，崇本以舉其末”）	相分	低	a degeneration chain (§七 map), each term appearing after the loss of the former; ranking 道>德>仁>義>禮; 王弼's 本/末, 母/子 frame is a hierarchy not registered in §5.4
+LZ-38-007	丁	夫禮者，忠信之薄……去彼取此		王弼		中	evaluative characterizations
+LZ-38-008	丁	夫禮者，忠信之薄……去彼取此		王弼		中	evaluative characterizations
+LZ-38-009	丁	夫禮者，忠信之薄……去彼取此		王弼		中	evaluative characterizations
+LZ-38-010	丁	夫禮者，忠信之薄……去彼取此		王弼		中	evaluative characterizations
+LZ-38-011	丁	夫禮者，忠信之薄……去彼取此		王弼		中	evaluative characterizations
+LZ-39-001	丙一	丙一：Z=得一，Y=天清、地寧、神靈、谷盈、萬物生、侯王貞	一=数之始而物之极（王弼）	王弼（“物皆各得此一以成，既成而舍以居成，居成則失其母，故皆裂發歇竭滅蹶也”）		中	each thing keeps its character only through its relation to the one; settling into the achieved state (居成) leads to ending: consonant with §4.4 (有常 is compatibility, not ground)
+LZ-39-002	丙一	丙一：Z=無以清（寧、靈、盈、生、貴高），Y=將恐裂（發、歇、竭、滅、蹶）	裂……滅=各种终了	王弼（“用一以致清耳，非用清以清也。守一則清不失，用清則恐裂也”）		中	converse of LZ-39-001: a property does not keep itself (非用清以清); cf. §4.5 自持/因于
+LZ-39-003	戊	貴以賤為本，高以下為基	本/基=根基	王弼（39-007 注：“貴乃以賤為本，高乃以下為基”）	相分	中	the text keeps 貴/賤 but roots the high in the low (因于, §4.5); 王弼 reads it as 反 (LZ-40-001)
+LZ-39-004	丁	侯王自稱孤、寡、不穀		none		中	
+LZ-39-005	庚	此非以賤為本邪？非乎		none		高	rhetorical
+LZ-39-006	庚	此非以賤為本邪？非乎		none		高	rhetorical
+LZ-39-007	丁	致數輿無輿，不欲琭琭如玉……		王弼		低	sense of 致數輿無輿 unclear
+LZ-40-001	甲	道之動 := 反；道之用 := 弱	反=（王弼）高以下為基、貴以賤為本、有以無為用；返	王弼（“動皆知其所無，則物通矣”）		中	反 polysemy (返 return vs 相反 inversion); §4.2 反/复
+LZ-40-002	戊	生之序：無 → 有 → 萬物	生於=来源于；無=有之所始（王弼）	王弼（“有之所始，以無為本，將欲全有，必反於無也”）	相分	中	asymmetric order of origin; strains LZ-02-003 有無相生 (the plan's 乙 example) inside the same text
+LZ-41-001	丁	上士、中士、下士聞道	若存若亡=似存似亡	王弼		中	ranking of hearers
+LZ-41-002	丁	上士、中士、下士聞道	若存若亡=似存似亡	王弼		中	ranking of hearers
+LZ-41-003	丁	上士、中士、下士聞道	若存若亡=似存似亡	王弼		中	ranking of hearers
+LZ-41-004	庚	不笑不足以為道		none		中	
+LZ-41-005	庚	建言：明道若昧……大象無形，道隱無名	若=似（表里相反）；分=分别（王弼）	王弼（“有聲則有分……故有聲者非大音也”；“有形則有分……故象而形者，非大象”）		中	quoted paradoxes; 王弼: having a form is having a division (分)
+LZ-41-006	庚	夫唯道，善貸且成		王弼（“一貸之則足以永終其德”）		中	
+LZ-42-001	庚	由一而分：道 → 一 → 二 → 三 → 萬物	生=产生（及物）	王弼（42-004 注：“由無乃一，一可謂無，已謂之一，豈得無言乎。有言有一，非二如何？有一有二，遂生乎三”）		中	王弼 reads the count as produced by naming (an 一 and the word for it make 二), not a cosmogony; §5.1 由一而分; gives 道 generative priority
+LZ-42-002	庚	萬物負陰而抱陽，沖氣以為和	和=和合	王弼（“雖有萬形，沖氣一焉”）	相合	中	the pair inside every thing
+LZ-42-003	丁	人之所惡，唯孤、寡、不穀，而王公以為稱		none		中	
+LZ-42-004	庚	或X之而Y：物或損之而益，或益之而損	或=有时	王弼（“損之而益，豈虛言也”）		中	existential, not a law: gives counterexamples to monotone laws
+LZ-42-005	丁	人之所教……強梁者不得其死	不得其死=不得善终	王弼（“强梁則必不得其死”）		中	link LZ-30-008, LZ-76-003
+LZ-42-006	丁	人之所教……強梁者不得其死	不得其死=不得善终	王弼（“强梁則必不得其死”）		中	link LZ-30-008, LZ-76-003
+LZ-43-001	丙一	丙一：Z=至柔，Y=馳騁至堅	至柔=（王弼）气、水	王弼（“氣無所不入，水無所不出於經”）		低	model terms
+LZ-43-002	丁	無有入無間，吾是以知無為之有益		王弼		中	
+LZ-43-003	丁	無有入無間，吾是以知無為之有益		王弼		中	
+LZ-44-001	丁	名與身孰親？身與貨孰多？得與亡孰病		王弼		中	evaluative questions
+LZ-44-002	丁	名與身孰親？身與貨孰多？得與亡孰病		王弼		中	evaluative questions
+LZ-44-003	丁	名與身孰親？身與貨孰多？得與亡孰病		王弼		中	evaluative questions
+LZ-44-004	丁	甚愛必大費，多藏必厚亡，知足不辱，知止不殆，可以長久	亡=亡失	王弼（“甚愛不與物通，多藏不與物散……故大費厚亡也”）		中	王弼: loss comes from not relating to things (不與物通); continuation (長久) by stopping
+LZ-45-001	庚	大成若缺，其用不弊	若=似	王弼（“隨物而成，不為一象，故若缺也”）		中	王弼: not fixed to one 象 (one class), use not worn out
+LZ-45-002	庚	大盈若沖，其用不窮	窮=尽	王弼		中	
+LZ-45-003	庚	大直若屈……大辯若訥		王弼		中	
+LZ-45-004	庚	大直若屈……大辯若訥		王弼		中	
+LZ-45-005	庚	大直若屈……大辯若訥		王弼		中	
+LZ-45-006	丙一	丙一：躁勝寒，靜勝熱		王弼		低	model terms
+LZ-45-007	丁	清靜為天下正		王弼		中	
+LZ-46-001	丁	天下有道/無道 → 走馬糞 / 戎馬生於郊		王弼		中	evaluative condition
+LZ-46-002	丁	天下有道/無道 → 走馬糞 / 戎馬生於郊		王弼		中	evaluative condition
+LZ-46-003	丁	禍莫大於不知足……知足之足，常足矣		none		高	
+LZ-46-004	丁	禍莫大於不知足……知足之足，常足矣		none		高	
+LZ-46-005	丁	禍莫大於不知足……知足之足，常足矣		none		高	
+LZ-47-001	庚	不出戶，知天下；不闚牖，見天道		王弼（“途雖殊而同歸也，慮雖百而其致一也”，引 XCX-04-003）		中	epistemic claim
+LZ-47-002	庚	不出戶，知天下；不闚牖，見天道		王弼（“途雖殊而同歸也，慮雖百而其致一也”，引 XCX-04-003）		中	epistemic claim
+LZ-47-003	未读出	其出彌遠，其知彌少（彌…彌…）	彌=愈	王弼		中	needs comparison of amounts and an epistemic predicate the grammar lacks
+LZ-47-004	丁	聖人不行而知，不見而名，不為而成		王弼		中	
+LZ-48-001	庚	為學日益，為道日損		王弼	定域	中	two practices, opposite directions
+LZ-48-002	丁	損之又損，以至於無為	又=迭用	none		中	iteration toward a limit (cf. §4.6 深)
+LZ-48-003	庚	無為而無不為		王弼		中	repeat of LZ-37-001
+LZ-48-004	丁	取天下常以無事		王弼		中	
+LZ-49-001	丁	聖人無常心，以百姓心為心	常心=固定之心	王弼（“動常因也”）		中	常 polysemy
+LZ-49-002	丁	善者吾善之……德信		王弼		高	
+LZ-49-003	丁	善者吾善之……德信		王弼		高	
+LZ-49-004	丁	善者吾善之……德信		王弼		高	
+LZ-49-005	丁	善者吾善之……德信		王弼		高	
+LZ-49-006	丁	聖人在天下歙歙……聖人皆孩之		王弼（引 XCX-09-007、XCX-09-008）		中	corpus: unit contains an escaped newline and an ASCII comma
+LZ-50-001	庚	出生入死	出/入=出于生地、入于死地（王弼）	王弼		低	a life course as transition 生 → 死
+LZ-50-002	庚	生之徒十有三……夫何故	十有三=十分有三（王弼）	王弼		中	
+LZ-50-003	庚	生之徒十有三……夫何故	十有三=十分有三（王弼）	王弼		中	
+LZ-50-004	庚	生之徒十有三……夫何故	十有三=十分有三（王弼）	王弼		中	
+LZ-50-005	庚	生之徒十有三……夫何故	十有三=十分有三（王弼）	王弼		中	
+LZ-50-006	丁	以其生生之厚	生生=求生而厚其生（动宾），非系辞“生生之谓易”	王弼（“民生生之厚，更之無生之地焉”）		高	key polysemy: here 生生 is living for life to excess, which leads to death; the plan's 生生 (§4.6) is the 系辞 sense (XCS-05-005); evaluative
+LZ-50-007	庚	善攝生者……以其無死地		王弼		中	
+LZ-50-008	庚	善攝生者……以其無死地		王弼		中	
+LZ-50-009	庚	善攝生者……以其無死地		王弼		中	
+LZ-50-010	庚	善攝生者……以其無死地		王弼		中	
+LZ-51-001	庚	一程之四位：道生之 → 德畜之 → 物形之 → 勢成之	生/畜/形/成=一物之程（王弼：物生而後畜，畜而後形，形而後成）	王弼（“隨其所因，故各有稱焉”）		中	four stages of one course, each named by what it depends on (所因): names follow their 缘; close to §一 (positions of one continuation) though the stages are not 生住异灭
+LZ-51-002	丁	萬物莫不尊道而貴德		王弼		中	
+LZ-51-003	庚	道之尊，德之貴，夫莫之命而常自然	命=命令（王弼注：一作爵）	王弼		中	no one commands: no external agent
+LZ-51-004	庚	道生之，德畜之；長之育之，亭之毒之，蓋之覆之		王弼		中	
+LZ-51-005	庚	道生之，德畜之；長之育之，亭之毒之，蓋之覆之		王弼		中	
+LZ-51-006	丁	生而不有，為而不恃，長而不宰		王弼		中	
+LZ-51-007	甲	玄德 := LZ-51-006 所述		王弼		中	repeat of LZ-10-008
+LZ-52-001	庚	天下有始，以為天下母	始/母=同 LZ-01-002	王弼（此注文据樓宇烈补，非传本王弼）		中	commentary flagged in the source as a modern supplement
+LZ-52-002	丁	既得其母，以知其子……復守其母，沒身不殆	母/子=本/末（王弼）	王弼（“母，本也，子，末也。得本以知末，不舍本以逐末也”）	相分	中	王弼's 本末 hierarchy
+LZ-52-003	丁	塞其兌，閉其門……開其兌，濟其事		王弼		中	
+LZ-52-004	丁	塞其兌，閉其門……開其兌，濟其事		王弼		中	
+LZ-52-005	甲	明 := 見小；強 := 守柔		王弼		中	丁 second; 强 is defined the opposite way at LZ-55-008
+LZ-52-006	甲	習常 := 用其光，復歸其明，無遺身殃	常=道之常（王弼）	王弼		低	丁 second
+LZ-53-001	丁	唯施是畏……財貨有餘		王弼（“設一而眾害生也”）		中	
+LZ-53-002	丁	唯施是畏……財貨有餘		王弼（“設一而眾害生也”）		中	
+LZ-53-003	丁	唯施是畏……財貨有餘		王弼（“設一而眾害生也”）		中	
+LZ-53-004	丁	唯施是畏……財貨有餘		王弼（“設一而眾害生也”）		中	
+LZ-53-005	甲	盜夸 := LZ-53-004 所述		王弼		低	丁 second
+LZ-53-006	丁	非道也哉		王弼		高	
+LZ-54-001	丁	善建者不拔……子孫以祭祀不輟	不輟=不断	王弼（“子孫傳此道以祭祀則不輟也”）		中	continuation across generations
+LZ-54-002	丁	修之於身、家、鄉、國、天下	真/餘/長/豐/普=德之增	王弼（“以身及人也……修之不廢，所施轉大”）		中	one practice at nested grains
+LZ-54-003	丁	修之於身、家、鄉、國、天下	真/餘/長/豐/普=德之增	王弼（“以身及人也……修之不廢，所施轉大”）		中	one practice at nested grains
+LZ-54-004	丁	修之於身、家、鄉、國、天下	真/餘/長/豐/普=德之增	王弼（“以身及人也……修之不廢，所施轉大”）		中	one practice at nested grains
+LZ-54-005	丁	修之於身、家、鄉、國、天下	真/餘/長/豐/普=德之增	王弼（“以身及人也……修之不廢，所施轉大”）		中	one practice at nested grains
+LZ-54-006	丁	修之於身、家、鄉、國、天下	真/餘/長/豐/普=德之增	王弼（“以身及人也……修之不廢，所施轉大”）		中	one practice at nested grains
+LZ-54-007	庚	以身觀身……以天下觀天下	觀=以其类观其类	王弼（“天下之道，逆順吉凶，亦皆如人之道也”）		中	each level read by its own grain; 王弼 adds that the same law holds at each grain
+LZ-54-008	庚	吾何以知天下然哉？以此		王弼		高	frame
+LZ-54-009	庚	吾何以知天下然哉？以此		王弼		高	frame
+LZ-55-001	丁	含德之厚，比於赤子		none		中	
+LZ-55-002	庚	赤子：毒蟲不螫……終日號而不嗄	作=长（王弼）	王弼		中	description
+LZ-55-003	庚	赤子：毒蟲不螫……終日號而不嗄	作=长（王弼）	王弼		中	description
+LZ-55-004	庚	赤子：毒蟲不螫……終日號而不嗄	作=长（王弼）	王弼		中	description
+LZ-55-005	庚	赤子：毒蟲不螫……終日號而不嗄	作=长（王弼）	王弼		中	description
+LZ-55-006	甲	常 := 知和；明 := 知常	和=（王弼）物以和为常	王弼（“物以和為常，故知和則得常也”）		中	second definition of 常 beside LZ-16-005 (復命曰常); 常 as harmony, not return
+LZ-55-007	甲	祥 := 益生	祥=妖祥（凶兆）	王弼（“生不可益，益之則夭也”）		中	祥 polysemy (ill omen); links LZ-50-006 生生之厚; 丁 second
+LZ-55-008	甲	強 := 心使氣	強=逞强	王弼（“心宜無有，使氣則強”）		中	opposite valence to LZ-52-005 守柔曰強
+LZ-55-009	丙一	丙一：Z=物壯，Y=老；不道 → 早已		none		中	repeat of LZ-30-008
+LZ-56-001	丁	知者不言，言者不知		王弼		中	
+LZ-56-002	甲	玄同 := 塞兌閉門……同其塵		王弼		中	丁 second
+LZ-56-003	乙	相待（王弼）：可得而 X，則可得而 非X（親/疏、利/害、貴/賤）	可得=可施加	王弼（“可得而親，則可得而疏也”）	相合	低	王弼's principle: the poles of a relational pair are available together or not at all (cf. LZ-02-003); the base unit is about the person of 玄同; 利害、貴賤 are evaluative pairs, the form is structural
+LZ-56-004	乙	相待（王弼）：可得而 X，則可得而 非X（親/疏、利/害、貴/賤）	可得=可施加	王弼（“可得而親，則可得而疏也”）	相合	低	王弼's principle: the poles of a relational pair are available together or not at all (cf. LZ-02-003); the base unit is about the person of 玄同; 利害、貴賤 are evaluative pairs, the form is structural
+LZ-56-005	乙	相待（王弼）：可得而 X，則可得而 非X（親/疏、利/害、貴/賤）	可得=可施加	王弼（“可得而親，則可得而疏也”）	相合	低	王弼's principle: the poles of a relational pair are available together or not at all (cf. LZ-02-003); the base unit is about the person of 玄同; 利害、貴賤 are evaluative pairs, the form is structural
+LZ-56-006	丁	故為天下貴		王弼		中	
+LZ-57-001	丁	以正治國，以奇用兵，以無事取天下		王弼（“崇本以息末”）		中	
+LZ-57-002	丁	以正治國，以奇用兵，以無事取天下		王弼（“崇本以息末”）		中	
+LZ-57-003	丁	以正治國，以奇用兵，以無事取天下		王弼（“崇本以息末”）		中	
+LZ-57-004	丁	多忌諱而民彌貧……法令滋彰，盜賊多有		王弼（“皆舍本以治末”）		中	policy conditionals in amounts
+LZ-57-005	丁	多忌諱而民彌貧……法令滋彰，盜賊多有		王弼（“皆舍本以治末”）		中	policy conditionals in amounts
+LZ-57-006	丁	多忌諱而民彌貧……法令滋彰，盜賊多有		王弼（“皆舍本以治末”）		中	policy conditionals in amounts
+LZ-57-007	丁	多忌諱而民彌貧……法令滋彰，盜賊多有		王弼（“皆舍本以治末”）		中	policy conditionals in amounts
+LZ-57-008	丁	我無為而民自化……我無欲而民自樸	自化=自然而化	王弼		中	self-organization without command
+LZ-58-001	丁	其政悶悶，其民淳淳；其政察察，其民缺缺		王弼（“殊類分析，民懷爭競”）		中	
+LZ-58-002	丁	其政悶悶，其民淳淳；其政察察，其民缺缺		王弼（“殊類分析，民懷爭競”）		中	
+LZ-58-003	丁	禍兮福之所倚，福兮禍之所伏	倚/伏=依附、潜伏	none		中	structural: each state contains the other (alternation with no fixed end); evaluative pair
+LZ-58-004	庚	孰知其極？其無正	正=定准	王弼（“唯無可正舉，無可形名”）		中	
+LZ-58-005	庚	孰知其極？其無正	正=定准	王弼（“唯無可正舉，無可形名”）		中	
+LZ-58-006	丁	正復為奇，善復為妖	復為=转而成为	王弼（“以正治國，則便復以奇用兵矣”）		中	structural: a class turns into its opposite; evaluative terms
+LZ-58-007	丁	人之迷……方而不割		王弼		中	
+LZ-58-008	丁	人之迷……方而不割		王弼		中	
+LZ-59-001	丁	治人事天，莫若嗇	嗇=（王弼）农夫	王弼		中	
+LZ-59-002	甲	早服 := 嗇（是謂）		王弼（“早服，常也”）		低	丁 second
+LZ-59-003	甲	重積德 := 早服（謂之）		王弼		低	丁 second
+LZ-59-004	丁	重積德則無不克……可以長久		王弼		中	chain ending in 長久
+LZ-59-005	丁	重積德則無不克……可以長久		王弼		中	chain ending in 長久
+LZ-59-006	丁	重積德則無不克……可以長久		王弼		中	chain ending in 長久
+LZ-59-007	甲	深根固柢、長生久視之道 := 前述		none		低	continuation by rooting; 丁 second
+LZ-60-001	丁	治大國，若烹小鮮……兩不相傷，故德交歸焉	相傷=互伤	王弼		中	
+LZ-60-002	丁	治大國，若烹小鮮……兩不相傷，故德交歸焉	相傷=互伤	王弼		中	
+LZ-60-003	丁	治大國，若烹小鮮……兩不相傷，故德交歸焉	相傷=互伤	王弼		中	
+LZ-60-004	丁	治大國，若烹小鮮……兩不相傷，故德交歸焉	相傷=互伤	王弼		中	
+LZ-60-005	丁	治大國，若烹小鮮……兩不相傷，故德交歸焉	相傷=互伤	王弼		中	
+LZ-61-001	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-002	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-003	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-004	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-005	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-006	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-61-007	丁	大國者下流……大者宜為下		王弼（“牝，雌也。雄躁動貪欲，雌常以靜，故能勝雄也”）		中	
+LZ-62-001	甲	道 := 萬物之奧	奧=可得庇荫（王弼）	王弼		低	characterization
+LZ-62-002	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-003	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-004	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-005	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-006	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-007	丁	善人之寶……故為天下貴		王弼		中	
+LZ-62-008	丁	善人之寶……故為天下貴		王弼		中	
+LZ-63-001	丁	為無為，事無事……為大於其細		王弼		中	
+LZ-63-002	丁	為無為，事無事……為大於其細		王弼		中	
+LZ-63-003	丁	為無為，事無事……為大於其細		王弼		中	
+LZ-63-004	丙一	丙一：Z=天下難事、大事，Y=必作於易、細	作=起始	none		低	every large course starts small (a small 生); needs magnitude; instances LZ-64-004..006
+LZ-63-005	丁	聖人終不為大……輕諾必寡信		none		中	
+LZ-63-006	丁	聖人終不為大……輕諾必寡信		none		中	
+LZ-63-007	丁	聖人猶難之，故終無難矣		王弼		中	corpus: no terminal punctuation
+LZ-64-001	丁	其安易持……其微易散	易=容易	王弼（“無而弗持則生有焉，微而不散則生大焉”）		中	王弼 states a structural law of arising (生有, 生大) from the untreated 无 and 微; base is advice
+LZ-64-002	丁	其安易持……其微易散	易=容易	王弼（“無而弗持則生有焉，微而不散則生大焉”）		中	王弼 states a structural law of arising (生有, 生大) from the untreated 无 and 微; base is advice
+LZ-64-003	丁	為之於未有，治之於未亂	未=尚未	王弼		中	act before the coarse 生
+LZ-64-004	庚	合抱之木，生於毫末	生於=起于（续之始）	none		中	instance of LZ-63-004; 生 here is the intransitive start, the sense of §4.3 生
+LZ-64-005	庚	九層之臺，起於累土；千里之行，始於足下	起/始=始	none		中	instances of LZ-63-004; 累 = accumulation
+LZ-64-006	庚	九層之臺，起於累土；千里之行，始於足下	起/始=始	none		中	instances of LZ-63-004; 累 = accumulation
+LZ-64-007	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-008	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-009	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-010	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-011	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-012	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-64-013	丁	為者敗之……以輔萬物之自然，而不敢為		王弼（“不慎終也”）		中	
+LZ-65-001	丁	古之善為道者，非以明民……		王弼		中	
+LZ-65-002	丁	古之善為道者，非以明民……		王弼		中	
+LZ-65-003	丁	古之善為道者，非以明民……		王弼		中	
+LZ-65-004	丁	古之善為道者，非以明民……		王弼		中	
+LZ-65-005	甲	玄德 := 常知稽式	稽=同（王弼）	王弼		低	丁 second
+LZ-65-006	丁	玄德……與物反矣，然後乃至大順	反=返其真（王弼）	王弼		中	反 polysemy
+LZ-66-001	丁	江海所以能為百谷王者，以其善下之		none		中	model image used as a precept
+LZ-66-002	丁	江海所以能為百谷王者，以其善下之		none		中	model image used as a precept
+LZ-66-003	丁	江海所以能為百谷王者，以其善下之		none		中	model image used as a precept
+LZ-66-004	丁	江海所以能為百谷王者，以其善下之		none		中	model image used as a precept
+LZ-66-005	丁	江海所以能為百谷王者，以其善下之		none		中	model image used as a precept
+LZ-67-001	庚	天下皆謂我道大，似不肖……	肖=似	王弼		中	argument
+LZ-67-002	庚	天下皆謂我道大，似不肖……	肖=似	王弼		中	argument
+LZ-67-003	庚	天下皆謂我道大，似不肖……	肖=似	王弼		中	argument
+LZ-67-004	丁	我有三寶，持而保之		none		中	
+LZ-67-005	甲	三寶 := 慈、儉、不敢為天下先		none		中	enumerative definition; 丁 second
+LZ-67-006	丁	慈故能勇……以慈衛之		王弼		中	
+LZ-67-007	丁	慈故能勇……以慈衛之		王弼		中	
+LZ-67-008	丁	慈故能勇……以慈衛之		王弼		中	
+LZ-67-009	丁	慈故能勇……以慈衛之		王弼		中	
+LZ-68-001	甲	不爭之德、用人之力、配天古之極 := 善為士者不武……為之下		王弼		低	丁 second
+LZ-69-001	丁	用兵有言：吾不敢為主而為客		none		中	
+LZ-69-002	甲	行無行、攘無臂、扔無敵、執無兵（是謂）		王弼		低	丁 second
+LZ-69-003	丁	禍莫大於輕敵……抗兵相加，哀者勝矣		王弼		中	
+LZ-69-004	丁	禍莫大於輕敵……抗兵相加，哀者勝矣		王弼		中	
+LZ-70-001	庚	吾言甚易知……天下莫能知		王弼		中	
+LZ-70-002	庚	吾言甚易知……天下莫能知		王弼		中	
+LZ-70-003	庚	言有宗，事有君	宗/君=万物之宗、主（王弼）	王弼		低	
+LZ-70-004	庚	夫唯無知，是以不我知		王弼		中	
+LZ-70-005	丁	知我者希，則我者貴；聖人被褐懷玉		王弼		中	
+LZ-70-006	丁	知我者希，則我者貴；聖人被褐懷玉		王弼		中	
+LZ-71-001	丁	知不知上，不知知病……		王弼		中	
+LZ-71-002	丁	知不知上，不知知病……		王弼		中	
+LZ-71-003	丁	知不知上，不知知病……		王弼		中	
+LZ-72-001	丁	民不畏威，則大威至……去彼取此		王弼		中	
+LZ-72-002	丁	民不畏威，則大威至……去彼取此		王弼		中	
+LZ-72-003	丁	民不畏威，則大威至……去彼取此		王弼		中	
+LZ-72-004	丁	民不畏威，則大威至……去彼取此		王弼		中	
+LZ-72-005	丁	民不畏威，則大威至……去彼取此		王弼		中	
+LZ-73-001	丁	勇於敢則殺……此兩者，或利或害		王弼		中	
+LZ-73-002	丁	勇於敢則殺……此兩者，或利或害		王弼		中	
+LZ-73-003	庚	天之所惡，孰知其故		王弼		高	
+LZ-73-004	丁	聖人猶難之；天之道，不爭而善勝……		王弼		中	
+LZ-73-005	丁	聖人猶難之；天之道，不爭而善勝……		王弼		中	
+LZ-73-006	庚	天網恢恢，疏而不失		none		中	nothing outside the net (one unfolding)
+LZ-74-001	丁	民不畏死，奈何以死懼之……		王弼		中	
+LZ-74-002	丁	民不畏死，奈何以死懼之……		王弼		中	
+LZ-74-003	甲	代大匠斲 := 代司殺者殺（是謂）		none		低	丁 second
+LZ-74-004	丁	夫代大匠斲者，希有不傷其手矣		王弼		中	
+LZ-75-001	丙一	丙一：Z=上食稅之多，Y=民饑		王弼（“皆由上不由其下也，民從上也”）		低	model terms (social); 王弼 adds an asymmetric dependence (民從上)
+LZ-75-002	丙一	丙一：Z=上之有為，Y=民難治		王弼		低	as LZ-75-001
+LZ-75-003	丙一	丙一：Z=上求生之厚，Y=民輕死	求生之厚=厚其生（cf. LZ-50-006）	王弼		低	生 polysemy as in LZ-50-006
+LZ-75-004	丁	無以生為者，是賢於貴生		王弼		中	
+LZ-76-001	丙一	丙一：Z=生，Y=柔弱；Z=死，Y=堅強	生/死=活/死之状态（非 §4.3 之位）	none		中	correlation of states, model predicates
+LZ-76-002	丙一	丙一：Z=草木之生/死，Y=柔脆/枯槁		none		中	as LZ-76-001
+LZ-76-003	丙一	丙一（概括）：堅強者死之徒，柔弱者生之徒	徒=类	none		中	classes by state (徒 = 类)
+LZ-76-004	丙一	丙一：Z=兵強，Y=不勝；Z=木強，Y=兵（伐）	兵=（王弼）物所加	王弼		低	木強則兵 sense uncertain
+LZ-76-005	戊	強大處下，柔弱處上	下/上=（王弼）木之本 / 枝條	王弼（“木之本也”；“枝條是也”）	相分	低	inverts the expected ranking; 王弼's tree reading would make it 定域
+LZ-77-001	庚	天之道，其猶張弓與		none		高	simile
+LZ-77-002	庚	高者抑之，下者舉之；有餘者損之，不足者補之		none		中	description of the bow
+LZ-77-003	庚	高者抑之，下者舉之；有餘者損之，不足者補之		none		中	description of the bow
+LZ-77-004	丙一	丙一：Z=天之道，Y=損有餘而補不足（均平）		王弼（“與天地合德，乃能包之，如天之道”）	定域	中	an equalizing law, conditional on its domain: counterexample in the same chapter LZ-77-005
+LZ-77-005	丙一	丙一：Z=人之道，Y=損不足以奉有餘		王弼（“如人之量，則各有其身，不得相均”）	定域	中	the opposite law for 人之道: two laws for two domains (戊 second: 天/人 split; 丁 context)
+LZ-77-006	庚	孰能有餘以奉天下？唯有道者		none		高	
+LZ-77-007	庚	孰能有餘以奉天下？唯有道者		none		高	
+LZ-77-008	丁	聖人為而不恃，功成而不處		王弼		中	
+LZ-78-001	丙一	丙一：Z=水之柔弱，Y=攻堅強者莫之能勝	易=替代	王弼（“言用水之柔弱，無物可以易之也”）		低	model terms
+LZ-78-002	丙一	丙一：弱之勝強，柔之勝剛		none		低	repeat of LZ-36-006; 天下莫不知莫能行 is 丁; contradicts XCX-08-004 across texts
+LZ-78-003	甲	社稷主 := 受國之垢；天下王 := 受國不祥（引聖人云）		none		低	丁 second
+LZ-78-004	甲	社稷主 := 受國之垢；天下王 := 受國不祥（引聖人云）		none		低	丁 second
+LZ-78-005	庚	正言若反	反=相反	none		中	meta-linguistic remark
+LZ-79-001	丁	和大怨，必有餘怨……天道無親，常與善人		王弼		中	
+LZ-79-002	丁	和大怨，必有餘怨……天道無親，常與善人		王弼		中	
+LZ-79-003	丁	和大怨，必有餘怨……天道無親，常與善人		王弼		中	
+LZ-79-004	丁	和大怨，必有餘怨……天道無親，常與善人		王弼		中	
+LZ-80-001	丁	小國寡民……樂其俗		王弼		中	
+LZ-80-002	丁	小國寡民……樂其俗		王弼		中	
+LZ-80-003	丁	小國寡民……樂其俗		王弼		中	
+LZ-80-004	丁	小國寡民……樂其俗		王弼		中	
+LZ-80-005	丁	鄰國相望……民至老死，不相往來	往來=交往	王弼（“無所欲求”）		中	往來 withheld by choice
+LZ-81-001	丁	信言不美，美言不信……		王弼		中	
+LZ-81-002	丁	信言不美，美言不信……		王弼		中	
+LZ-81-003	丁	信言不美，美言不信……		王弼		中	
+LZ-81-004	丁	聖人不積，既以為人己愈有……		王弼（“無私自有，唯善是與”）		中	giving increases one's own: no conserved amount
+LZ-81-005	丁	天之道，利而不害；聖人之道，為而不爭		王弼		中	
+LZ-81-006	丁	天之道，利而不害；聖人之道，為而不爭		王弼		中	

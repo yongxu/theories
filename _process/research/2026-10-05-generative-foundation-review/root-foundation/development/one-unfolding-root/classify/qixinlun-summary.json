@@ -1,0 +1,379 @@
+{
+ "text": "《大乘起信論》T1666（真谛译），含智愷序、卷首偈、迴向偈",
+ "source_tsv": "corpus/qixinlun.tsv",
+ "output_tsv": "classify/qixinlun.tsv",
+ "classification_is": "AI reconstruction (Claude), not human-audited; one class per unit by the brief order 甲>丙一>乙>戊>己>丁>庚, the second function in the note",
+ "commentary_sources": "No 起信論 commentary is in the repository; the column is none except JS-041..044, where the correspondence of the four grades of 覺 to the four marks in reverse order is from memory of 法藏《義記》 and 元曉 (confidence lowered).",
+ "conventions": [
+  "Enumeration headings (一者、X) and 問曰/何以故 frames are 庚; glossed list items (一者、X，謂Y) are 甲.",
+  "Similes are 庚, their law-shaped content noted; the application sentence carries the class.",
+  "Doctrinal theses of 唯心 are classed by their form (conditional → 丙一, identity → 未读出) and registered 定域, as §5.4 directs.",
+  "Path instructions, purposes and merit claims are 丁 (the whole 修行信心分 and 勸修利益分 are mostly 丁)."
+ ],
+ "units": 589,
+ "counts": {
+  "庚": 271,
+  "丁": 121,
+  "甲": 117,
+  "乙": 10,
+  "丙一": 52,
+  "未读出": 4,
+  "戊": 12,
+  "己": 2
+ },
+ "counts_by_unit_type": {
+  "题": {
+   "庚": 4
+  },
+  "序": {
+   "庚": 14
+  },
+  "偈": {
+   "庚": 1,
+   "丁": 2
+  },
+  "本文": {
+   "庚": 252,
+   "丁": 119,
+   "甲": 117,
+   "乙": 10,
+   "丙一": 52,
+   "未读出": 4,
+   "戊": 12,
+   "己": 2
+  }
+ },
+ "registrations": {
+  "體用": 1,
+  "唯心": 1,
+  "相合": 26,
+  "定域": 14,
+  "相分": 18,
+  "反读": 8
+ },
+ "wu_units": [
+  {
+   "id": "QXL-JS-129",
+   "form": "心自性清淨 / 無明所染",
+   "registration": "淨/染：相分"
+  },
+  {
+   "id": "QXL-JS-130",
+   "form": "雖有染心而常恒不變",
+   "registration": "淨/染：相分"
+  },
+  {
+   "id": "QXL-JS-147",
+   "form": "一切法常靜無起相 / 無明妄與法違",
+   "registration": "靜/起：相分"
+  },
+  {
+   "id": "QXL-JS-153",
+   "form": "麁中之麁 屬凡夫境界",
+   "registration": "知者之等：相分"
+  },
+  {
+   "id": "QXL-JS-154",
+   "form": "麁中之細、細中之麁 屬菩薩境界",
+   "registration": "知者之等：相分"
+  },
+  {
+   "id": "QXL-JS-155",
+   "form": "細中之細 是佛境界",
+   "registration": "知者之等：相分"
+  },
+  {
+   "id": "QXL-JS-209",
+   "form": "真如本一 / 無明無量差別",
+   "registration": "一/多：相分"
+  },
+  {
+   "id": "QXL-JS-239",
+   "form": "淨法熏習無有斷，盡於未來",
+   "registration": "染/淨：相分"
+  },
+  {
+   "id": "QXL-JS-242",
+   "form": "真如自體相：無有增減，非前際生、非後際滅，畢竟常恒",
+   "registration": "真如/生滅：相分"
+  },
+  {
+   "id": "QXL-JS-291",
+   "form": "心實不動 / 無明迷謂心為念",
+   "registration": "心/念：相分"
+  },
+  {
+   "id": "QXL-JS-317",
+   "form": "如來藏 唯有淨功德，不離不斷不異真如",
+   "registration": "淨/染：相分"
+  },
+  {
+   "id": "QXL-JS-318",
+   "form": "染法 唯是妄有，未曾與如來藏相應",
+   "registration": "淨/染：相分"
+  }
+ ],
+ "ji_units": [
+  {
+   "id": "QXL-JS-325",
+   "form": "拒：三界外更有眾生始起",
+   "note": "rejects an absolute first arising of beings; plan answer: 生 is relative to a class, and a 無始 model simply has no 生 for that class"
+  },
+  {
+   "id": "QXL-JS-330",
+   "form": "拒：五陰生滅自性實有；自性不生則無有滅",
+   "note": "rejects 生滅 as self-natured; plan answer: 生 and 亡 are relative to class, not 自性 (as for 中論, §一); the 不生則無滅 step is not a theorem of the grammar (an event can be 住 and later 亡)"
+  }
+ ],
+ "weidu_reasons": [
+  {
+   "id": "QXL-JS-015",
+   "reason": "reason: says the name 真如 itself has no mark; the grammar has no operation for a term exempt from every predicate"
+  },
+  {
+   "id": "QXL-JS-027",
+   "reason": "reason: tetralemma over 有/無 and 一/異 (非有相、非無相、非非有相…); needs a negation of both and of neither that the grammar (constructive or classical) lacks; compare the plan's 非一非异 relative to classes (§一), which is not this"
+  },
+  {
+   "id": "QXL-JS-055",
+   "reason": "reason: 非可壞非不可壞 needs a both-negation the grammar lacks; 不離 readable as 相合; 心識之相皆是無明 is evaluative"
+  },
+  {
+   "id": "QXL-JS-302",
+   "reason": "reason: identity 色=心 needs a carrier that is mind; the grammar's 一 is not 心; registered 定域"
+  }
+ ],
+ "most_important": [
+  {
+   "id": "QXL-JS-047",
+   "line": "相續 := 無明: \"念念相續未曾離念故，說無始無明\": continuity is beginningless ignorance (reversal of the plan’s neutral 续; registered 反读)"
+  },
+  {
+   "id": "QXL-JS-049",
+   "line": "四相俱時而有，皆無自立: synchronic; matches the plan’s 乙 (same event, several positions at once) only structurally"
+  },
+  {
+   "id": "QXL-JS-046",
+   "line": "心起者無有初相可知: model property, no event is 生"
+  },
+  {
+   "id": "QXL-JS-044",
+   "line": "究竟覺: knowing goes back through the four marks (滅→異→住→生) and finds no 初相; with JS-041..043"
+  },
+  {
+   "id": "QXL-JS-091",
+   "line": "相續相 := 覺心起念相應不斷: nearest definitional match to 续 (linked, same kind, unbroken), as a mark of 不覺"
+  },
+  {
+   "id": "QXL-JS-118",
+   "line": "相續識: carries past karma forward without loss and ripens future results: the plan’s 续 as carrier, valued as 妄"
+  },
+  {
+   "id": "QXL-JS-053",
+   "line": "the aim is 滅相續心相"
+  },
+  {
+   "id": "QXL-JS-058",
+   "line": "若無明滅相續則滅: conditional end of a continuation when its 缘 ends"
+  },
+  {
+   "id": "QXL-JS-160",
+   "line": "the text’s own 续/灭 dilemma: 若心滅者，云何相續？若相續者，云何說究竟滅？"
+  },
+  {
+   "id": "QXL-JS-162",
+   "line": "滅 := 唯心相滅，非心體滅: ceasing assigned to mark, not to 體 (相分)"
+  },
+  {
+   "id": "QXL-JS-167",
+   "line": "以體不滅，心得相續: a second, non-ignorant sense of 相續, grounded in an unceasing 體; parallels 有常则续不尽 but with a substance"
+  },
+  {
+   "id": "QXL-JS-005",
+   "line": "依一心法，有二種門: nondual form (相合), with JS-008 二門各總攝一切法 and JS-010 不相離"
+  },
+  {
+   "id": "QXL-JS-030",
+   "line": "依如來藏故有生滅心; 不生不滅與生滅和合，非一非異: one-way 依 (相分 aspect) and the plan’s own 非一非异, applied to a different pair"
+  },
+  {
+   "id": "QXL-JS-318",
+   "line": "染法…未曾與如來藏相應: no relation between 染 and 如來藏 (strong 相分), in tension with mutual 熏習 (JS-175, JS-178)"
+  },
+  {
+   "id": "QXL-JS-119",
+   "line": "三界虛偽唯心所作，離心則無六塵境界: 唯心 scope (定域); one-way 境 依 心"
+  },
+  {
+   "id": "QXL-JS-123",
+   "line": "心生則種種法生，心滅則種種法滅: 生/滅 of dharmas indexed by 心"
+  },
+  {
+   "id": "QXL-JS-012",
+   "line": "差別 依 妄念: distinction is produced by deluded thought (strains 类 as neutral)"
+  },
+  {
+   "id": "QXL-JS-406",
+   "line": "以眾生妄見境界故心有分齊: boundaries from deluded seeing"
+  },
+  {
+   "id": "QXL-JS-104",
+   "line": "同相: vessels one under 微塵 (coarse class); with JS-107 異相 (fine): the two grains in the text itself"
+  },
+  {
+   "id": "QXL-JS-252",
+   "line": "difference shown only 依業識: distinction relative to a reading"
+  },
+  {
+   "id": "QXL-JS-179",
+   "line": "熏習 cycle 真如→無明→妄心→無明: a closed loop of mutual 缘 keeps 染法 going (with JS-168, JS-175/176)"
+  },
+  {
+   "id": "QXL-JS-238",
+   "line": "染法 熏習 beginningless (no 生) but ends at 佛; JS-239 淨法 never ends: two asymmetric continuations"
+  },
+  {
+   "id": "QXL-JS-242",
+   "line": "真如 非前際生、非後際滅、畢竟常恒: neither 生 nor 亡, as an unchanging substance"
+  },
+  {
+   "id": "QXL-JS-212",
+   "line": "因緣具足乃得成辦: joint sufficiency of many 缘"
+  },
+  {
+   "id": "QXL-XX-034",
+   "line": "觀 := 分別因緣生滅相, valued positively and paired with 止 (XX-090): the plan’s own activity has a place in the text"
+  }
+ ],
+ "strains_with_plan": [
+  {
+   "ids": [
+    "QXL-JS-047",
+    "QXL-JS-053",
+    "QXL-JS-058",
+    "QXL-JS-090",
+    "QXL-JS-091",
+    "QXL-JS-110",
+    "QXL-JS-118",
+    "QXL-JS-197",
+    "QXL-XX-077"
+   ],
+   "plan": "§5.4 (反读), §5.2 四相",
+   "strain": "相續 belongs to 不覺 and 無明 and its ending is the goal; impermanence (念念生滅) is valued as 苦. The plan’s 续 is neutral. Registered 反读 as §5.4 says; no unit rejects that 相續 occurs, only its worth."
+  },
+  {
+   "ids": [
+    "QXL-JS-165",
+    "QXL-JS-167",
+    "QXL-JS-059",
+    "QXL-JS-239",
+    "QXL-JS-241"
+   ],
+   "plan": "§5.4, §4.3",
+   "strain": "The text has a second, non-ignorant 相續: 心得相續 because 體不滅, and the 淨 continuation 無有斷，盡於未來. So the valuation is not of continuation as such but of which continuation; §5.4 should say \"the 相續 of 念\" rather than \"相續\". The ground given (an unceasing 體) is a substance, where the plan’s 有常则续不尽 rests on a class."
+  },
+  {
+   "ids": [
+    "QXL-JS-049",
+    "QXL-JS-041",
+    "QXL-JS-042",
+    "QXL-JS-043",
+    "QXL-JS-044",
+    "QXL-JS-046"
+   ],
+   "plan": "§一, §4.3 四相无自立, §5.2",
+   "strain": "四相 are marks every thought has at once (俱時); they are 無自立 because all is 同一覺, not because position depends on a class. The four grades of 覺 know the marks in reverse and find 無初相: the 生 position is empty in this model. The plan’s use is a structural correspondence only, as §一 already says; the 乙 candidate JS-049 is proposed at low confidence."
+  },
+  {
+   "ids": [
+    "QXL-JS-005",
+    "QXL-JS-008",
+    "QXL-JS-010",
+    "QXL-JS-030",
+    "QXL-JS-314",
+    "QXL-JS-317",
+    "QXL-JS-318"
+   ],
+   "plan": "§5.4 起信论",
+   "strain": "The nondual 一心二門 (相合) sits beside a one-way ground (依如來藏故有生滅心) and the claim that 染法 never 相應 with 如來藏 (相分). JS-318 also strains the text’s own 熏習 (JS-175..179), where 真如 and 無明 condition each other. Registrations: 一心二門 相合; 如來藏/生滅心 相分 (asymmetry); 淨/染 相分."
+  },
+  {
+   "ids": [
+    "QXL-JS-030"
+   ],
+   "plan": "§一 中观之两难与本计划的回答",
+   "strain": "非一非異 is used here for the 和合 of 不生不滅 and 生滅 (阿梨耶識), not for two links of one 续. The plan’s answer borrows the phrase for a different pair; worth stating."
+  },
+  {
+   "ids": [
+    "QXL-JS-012",
+    "QXL-JS-026",
+    "QXL-JS-028",
+    "QXL-JS-095",
+    "QXL-JS-107",
+    "QXL-JS-121",
+    "QXL-JS-209",
+    "QXL-JS-252",
+    "QXL-JS-406"
+   ],
+   "plan": "§4.1 类, §4.6 粗网",
+   "strain": "Differences (差別, 分齊) and names come from 妄念; the fine reading (異相) is 隨染幻差別; unity is in 真如. The plan treats every class as legitimate and finer classes as no worse than coarse; the text ranks them. Coarse/fine readings themselves (JS-104/107, JS-151/152) do appear in the text; the grains are ranked to kinds of knower (JS-153..155, 戊)."
+  },
+  {
+   "ids": [
+    "QXL-LY-005",
+    "QXL-JS-119",
+    "QXL-JS-121",
+    "QXL-JS-122",
+    "QXL-JS-123",
+    "QXL-JS-254",
+    "QXL-JS-302",
+    "QXL-JS-304",
+    "QXL-XX-040"
+   ],
+   "plan": "§5.4 唯心之域",
+   "strain": "唯心 is registered 定域 as planned. Its dependence is one-way (境 依 心, 離心則無境界), where the plan’s 缘 may be mutual; JS-123 makes 生/滅 of all dharmas follow those of 心."
+  },
+  {
+   "ids": [
+    "QXL-JS-025",
+    "QXL-JS-309",
+    "QXL-JS-242",
+    "QXL-JS-130",
+    "QXL-JS-162"
+   ],
+   "plan": "§4.1 化与理, §5.4 本计划自己的一对",
+   "strain": "真如 有自體 and is 常恒不變, 無增減, neither 生 nor 滅; 滅 is only of 心相, never of 心體. This is the 金體/師子 shape inside the 起信論, against the plan’s 理 as a class among events. It adds a second text to the plan’s 理/事 registration."
+  },
+  {
+   "ids": [
+    "QXL-JS-086",
+    "QXL-JS-141"
+   ],
+   "plan": "§4.1 缘 (所缘缘 excluded)",
+   "strain": "境界緣 (the object as condition) is a main 缘 of the 六麁; the text’s 缘 often has the excluded object sense."
+  },
+  {
+   "ids": [
+    "QXL-JS-116",
+    "QXL-JS-179"
+   ],
+   "plan": "§4.1 时",
+   "strain": "現識 appears 無有前後 and 熏習 forms cycles: co-present clusters (俱有), consistent with time as the strict part of 及."
+  },
+  {
+   "ids": [
+    "QXL-JS-325",
+    "QXL-JS-330",
+    "QXL-XX-038"
+   ],
+   "plan": "§一, §三 己",
+   "strain": "The text rejects an absolute first arising of beings and 生滅 as self-natured, and in 止 says 念念不生、念念不滅. Plan answer: 生 and 亡 are relative to a class; but the text also holds 因緣和合，業果不失 (JS-366, XX-086) at the same time, which it places in practice (觀), a 定域 by 止/觀."
+  }
+ ],
+ "corpus_problems": [
+  "No commentary on the 起信論 (法藏《義記》, 元曉, 慧遠) is in the repository; nothing could be checked against a commentary.",
+  "QXL-JS-090 reads 二者相續相 without 、 (file reading, harmless).",
+  "The 智愷 preface (14 units) is classified 庚 throughout; its authenticity is not addressed (manifest)."
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "text": "zhuangzi-yangshengzhu",
+ "title": "《莊子·養生主》",
+ "classified_by": "Claude (AI), OU0 step 0, plan version 10 §三",
+ "provenance_note": "All classifications, forms and readings are AI reconstruction (Claude); commentary readings marked 记忆 are from memory and unverified (待核).",
+ "units": 38,
+ "counts_by_class": {
+  "甲": 2,
+  "乙": 1,
+  "丙一": 1,
+  "丁": 4,
+  "戊": 1,
+  "己": 0,
+  "庚": 29,
+  "未读出": 0
+ },
+ "wu_units_戊": [
+  {
+   "id": "ZZ-YSZ-024",
+   "note": "文本分天与人为二种来源；在上下文中是对一个特征的归属，也可登记为定域"
+  }
+ ],
+ "ji_units_己": [],
+ "weiduchu_未读出": [],
+ "ji_note": "No unit rejects a thesis of the plan explicitly.",
+ "most_important": [
+  {
+   "id": "ZZ-YSZ-038",
+   "why": "指窮於爲薪，火傳也，不知其盡也: the fuel ends while the fire passes on (乙 proposal: 亡于细者不必亡于粗); 不知其盡 is 'does not know its end', not 'has no end'"
+  },
+  {
+   "id": "ZZ-YSZ-035",
+   "why": "適來，夫子時也 with ZZ-YSZ-036 適去，夫子順也: coming and going (birth and death) as two positions of one course (相合)"
+  },
+  {
+   "id": "ZZ-YSZ-001",
+   "why": "吾生也有涯，而知也无涯: a continuation that ends beside one that does not (不穷)"
+  },
+  {
+   "id": "ZZ-YSZ-016",
+   "why": "以无厚入有间 → 有余地 (丙一): Z and Y are tests whose content (厚, 间) needs magnitude, which the grammar lacks; the 墨经 defines 厚 and 间 (MJ-J-056, MJ-J-063, MJ-J-064)"
+  },
+  {
+   "id": "ZZ-YSZ-011",
+   "why": "未嘗見全牛: the same ox read under a coarse class (whole ox) and a finer one (its joints) (AI reading)"
+  },
+  {
+   "id": "ZZ-YSZ-012",
+   "why": "依乎天理…因其固然: 理 = the ox's natural articulation; 神/目 split (相分, low)"
+  },
+  {
+   "id": "ZZ-YSZ-004",
+   "why": "緣督以爲經: 緣 = follow (the sense the plan excludes, verified); 盡年 = complete one's years"
+  },
+  {
+   "id": "ZZ-YSZ-024",
+   "why": "天也，非人也: 天/人 as two sources (戊, low)"
+  },
+  {
+   "id": "ZZ-YSZ-037",
+   "why": "帝之县解 := 安时而处顺，哀乐不能入 (甲 with 丁)"
+  }
+ ],
+ "polysemy_register": {
+  "生": [
+   "ZZ-YSZ-001 life",
+   "ZZ-YSZ-004 全生 whole life",
+   "ZZ-YSZ-019 养生",
+   "ZZ-YSZ-025 天之生 = to produce"
+  ],
+  "盡": [
+   "ZZ-YSZ-004 盡年 complete (a positive end)",
+   "ZZ-YSZ-038 end (不知其盡)"
+  ],
+  "窮": [
+   "ZZ-YSZ-038 used up"
+  ],
+  "緣": [
+   "ZZ-YSZ-004 follow (循)"
+  ],
+  "已": [
+   "ZZ-YSZ-002 殆已 particle",
+   "ZZ-YSZ-003 已而 / 而已矣 particles",
+   "ZZ-YSZ-017 已解 completed"
+  ],
+  "理": [
+   "ZZ-YSZ-012 天理 natural grain of the ox"
+  ],
+  "始": [
+   "ZZ-YSZ-010, ZZ-YSZ-032 at first"
+  ]
+ },
+ "strains_with_plan": [
+  {
+   "plan": "§一 and §5.2 火传 (续不要求成分不变)",
+   "units": [
+    "ZZ-YSZ-038"
+   ],
+   "point": "The reading fits (fuel ends, fire passes), but the text says 不知其盡 (one does not know its end), an epistemic statement, not that the fire has no end. The sentence closes the 老聃 death passage (ZZ-YSZ-027–037), so it is a figure for life and death; the class under which 'the fire' is one is not named. 指 is read as 'finger' or emended to 脂 (memory, 待核); no 郭象 commentary in the repository."
+  },
+  {
+   "plan": "§4.1 缘 excludes 庄子's sense",
+   "units": [
+    "ZZ-YSZ-004"
+   ],
+   "point": "Verified: 緣督以爲經, 緣 = follow."
+  },
+  {
+   "plan": "monist hypothesis",
+   "units": [
+    "ZZ-YSZ-024",
+    "ZZ-YSZ-025",
+    "ZZ-YSZ-012"
+   ],
+   "point": "天/人 attribution and 神/目 ranking; low confidence as 相分, may be 定域."
+  }
+ ],
+ "corpus_problems": [
+  "No commentary (郭象, 成玄英) in the repository; commentary column is 'none'.",
+  "Units 006–008, 020–023 are fragments of one speech split at ！ and ？ (segmentation rule); harmless for classification."
+ ]
+}

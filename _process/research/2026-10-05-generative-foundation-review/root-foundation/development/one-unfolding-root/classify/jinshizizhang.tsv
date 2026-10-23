@@ -1,0 +1,221 @@
+id	class	form	terms	commentary	registration	confidence	note
+JSZ-T-001	庚			承遷 JSZ-C-001,JSZ-C-002,JSZ-C-003,JSZ-C-004		高	title
+JSZ-T-002	庚			none		高	attribution line (法藏)
+JSZ-P-000	庚	分：十門		承遷 JSZ-C-005,JSZ-C-006,JSZ-C-007,JSZ-C-008,JSZ-C-009,JSZ-C-010,JSZ-C-011,JSZ-C-012,JSZ-C-013,JSZ-C-014		高	list of ten gates; in FO2-KS.txt each gate name is followed by a four-character couplet of 承遷 (JSZ-C-005..014)
+JSZ-P-01-001	庚			承遷 JSZ-C-015,JSZ-C-016		高	heading
+JSZ-P-01-002	庚		自性=自己之性；金=材料	承遷 JSZ-C-017	金/師子：相合（金亦無自性）	中	key: in 法藏's text the gold itself lacks self-nature, which weakens the 相分 of P-04/P-05 at its root; 承遷 (C-017) reads it as 真理不變, hardening the split
+JSZ-P-01-003	丙一	Z=巧匠之緣（及金無自性），Y=師子相起	緣=助成之條件；起=生起	承遷 JSZ-C-018		高	arising by a 缘 (an agent as condition)
+JSZ-P-01-004	甲	緣起 := 起但是緣	起=生起；緣=缘	承遷 JSZ-C-019,JSZ-C-020,JSZ-C-021,JSZ-C-022,JSZ-C-023		高	key: the arising is nothing but the 缘: close to the plan's 缘 as the main reading of 际 (§4.1)
+JSZ-P-02-001	庚			承遷 JSZ-C-024,JSZ-C-025,JSZ-C-026,JSZ-C-027		高	heading
+JSZ-P-02-002	戊	師子相虛	相=相狀；虛=不實	承遷 JSZ-C-028	金/師子：相分	中	
+JSZ-P-02-003	戊	唯是真金		承遷 JSZ-C-029	金/師子：相分	中	
+JSZ-P-02-004	戊	師子不有		承遷 JSZ-C-030	金/師子：相分	中	
+JSZ-P-02-005	戊	金體不無	體=體	承遷 JSZ-C-031	金/師子：相分	中	with P-02-004: 有/無 split between the two
+JSZ-P-02-006	甲	色空（名）		none		高	naming
+JSZ-P-02-007	甲	色空 := 空無自性，約色以明，不礙幻存	空=無自性；幻=假有	承遷 JSZ-C-032,JSZ-C-033,JSZ-C-034	色/空：相合	高	key: the nondual gloss in the same gate: emptiness itself has no self-nature and does not obstruct appearance
+JSZ-P-03-001	庚			承遷 JSZ-C-035,JSZ-C-036,JSZ-C-037,JSZ-C-038		高	heading
+JSZ-P-03-002	甲	遍計 := 師子情有	情有=由情計而有	承遷 JSZ-C-039	三性：定域	高	
+JSZ-P-03-003	甲	依他 := 師子似有	似有=依緣而似有	承遷 JSZ-C-040,JSZ-C-041	三性：定域	高	
+JSZ-P-03-004	甲	圓成 := 金性不變	不變=無變	承遷 JSZ-C-042,JSZ-C-043,JSZ-C-044,JSZ-C-045,JSZ-C-046,JSZ-C-047	三性：相分	高	戊 aspect: 金性不變
+JSZ-P-04-001	庚			承遷 JSZ-C-048,JSZ-C-049		高	heading
+JSZ-P-04-002	戊	以金收師子盡	收=攝入、讀入	承遷 JSZ-C-050	金/師子：相分	高	key: §5.4 registered 相分 (法藏's text)
+JSZ-P-04-003	戊	金外更無師子可得		承遷 JSZ-C-051	金/師子：相分	高	key: §5.4 registered 相分
+JSZ-P-04-004	甲	無相（名）		承遷 JSZ-C-052,JSZ-C-053,JSZ-C-054,JSZ-C-055		高	naming
+JSZ-P-05-001	庚			承遷 JSZ-C-056,JSZ-C-057		高	heading
+JSZ-P-05-002	戊	師子生時，但是金生	生=生起；正見=正確之看	承遷 JSZ-C-058	金/師子：相分	中	key: under the lion reading this is 生, under the gold reading 住: the plan's relativity of position to class (§一); the text ranks the gold reading as 正見, which is the 相分; 乙 aspect (structure only)
+JSZ-P-05-003	戊	金外更無一物		承遷 JSZ-C-059	金/師子：相分	高	
+JSZ-P-05-004	戊	師子雖有生滅，金體本無增減	生滅=起與亡；增減=多少之變	承遷 JSZ-C-060	金/師子：相分	高	key: §5.4 registered 相分; parallels 起信論 LY-012, JS-242
+JSZ-P-05-005	甲	無生（名）:= 師子生時但是金生	無生=無新生	承遷 JSZ-C-061,JSZ-C-062,JSZ-C-063,JSZ-C-064,JSZ-C-065,JSZ-C-066		高	naming of P-05-002..004
+JSZ-P-06-001	庚			none		高	heading
+JSZ-P-06-002	戊	五教之等（聲聞、始、終、頓、圓）		none	判教：相分	中	a ranked hierarchy of teachings (判教)
+JSZ-P-06-003	甲	聲聞教 := 師子緣生之法念念生滅	念念生滅=刹那生灭	承遷 JSZ-C-067	判教：相分	高	key: the view nearest to the plan (緣生, moment-to-moment arising and ceasing) is placed lowest of the five
+JSZ-P-06-004	甲	聲聞教（名）:= 實無師子可得		承遷 JSZ-C-068		高	
+JSZ-P-06-005	甲	大乘始教 := 緣生各無自性，徹底唯空		承遷 JSZ-C-069		高	
+JSZ-P-06-006	甲	大乘終教 := 徹底唯空，不礙幻法宛然		承遷 JSZ-C-070	空/有：相合	高	
+JSZ-P-06-007	甲	（終教）緣生假有，二相雙存	二相=空、有	承遷 JSZ-C-071	空/有：相合	中	
+JSZ-P-06-008	甲	（名）		none		高	naming
+JSZ-P-06-009	甲	大乘頓教 := 二相互奪兩亡	奪=相消	承遷 JSZ-C-072	空/有：相合（互奪）	中	key: mutual cancellation (互奪); 承遷 (C-072) reads it one-sided as 以理奪事
+JSZ-P-06-010	庚			none		中	
+JSZ-P-06-011	未读出			承遷 JSZ-C-073,JSZ-C-074		中	reason: 名言路絕 (beyond names); the grammar has no form for what no sentence reaches
+JSZ-P-06-012	甲	（名）		none		高	naming
+JSZ-P-06-013	甲	一乘圓教 := 師子情盡體露之法，渾成一塊	渾成一塊=合为一	承遷 JSZ-C-075		中	
+JSZ-P-06-014	庚	繁興大用，起必全真	起=生起；真=真性	承遷 JSZ-C-076	理事：相合	中	every arising is wholly true: nondual
+JSZ-P-06-015	庚	萬像紛紜，參而不雜		承遷 JSZ-C-077		中	differences kept within the whole
+JSZ-P-06-016	未读出		一切即一	承遷 JSZ-C-078	一/多：相合	中	reason: 相即 (all is one) is not class equivalence (that would collapse the distinctions JSZ-P-06-015, -017 keep); needs an operation the grammar lacks
+JSZ-P-06-017	未读出		一即一切；因果歷然=因果分明	承遷 JSZ-C-079	一/多：相合	中	reason as P-06-016; 因果歷然 keeps causal order
+JSZ-P-06-018	庚		收=攝；卷舒=收放	承遷 JSZ-C-080		中	
+JSZ-P-06-019	甲	（名）		none		高	naming
+JSZ-P-07-001	庚			承遷 JSZ-C-081		高	heading
+JSZ-P-07-002	甲	同時具足門 := 金與師子同時成立，圓滿具足	同時=同時	承遷 JSZ-C-082,JSZ-C-083	金/師子：相合	高	nondual: gold and lion stand at once
+JSZ-P-07-003	甲	（名）		none		高	naming
+JSZ-P-07-004	甲	一多相容不同門 := 金與師子相容成立，一多無礙	相容=互容	none	金/師子：相合	高	
+JSZ-P-07-005	庚	理事各各不同，或多各住自位	理事=理與事；自位=本位	承遷 JSZ-C-084,JSZ-C-085	理事：相合（存異）	中	difference kept inside mutual containment; cf. 壞相 P-08-003 (各住自位)
+JSZ-P-07-006	甲	（名）		none		高	naming
+JSZ-P-07-007	丙一	Z=看師子，Y=師子顯金隱	看=以某一读法观；顯隱=现与隐	承遷 JSZ-C-086	金/師子：相合	中	key: what is manifest is relative to the reading: the plan's relativity to class; 看 is an observer word, to be read as a class (§4.1)
+JSZ-P-07-008	丙一	Z=看金，Y=金顯師子隱		承遷 JSZ-C-087	金/師子：相合	中	converse of P-07-007
+JSZ-P-07-009	丙一	Z=兩處看，Y=俱隱俱顯		none	金/師子：相合	低	file reads 俱顯俱顯 (both FO2-KS-P and FO2-KS); the Taishō reading 俱隱俱顯 is from memory, not checked; confidence lowered
+JSZ-P-07-010	未读出		毛處=毛孔之處	承遷 JSZ-C-088		中	reason: each hair contains the whole lion: whole-in-part containment; the grammar has no containment relation; a candidate is a greatest fixed point (non-wellfounded), §4.7
+JSZ-P-07-011	未读出			承遷 JSZ-C-089		中	reason as P-07-010
+JSZ-P-07-012	未读出		重重無盡=无穷嵌套	承遷 JSZ-C-090		中	reason: infinite mutual nesting (重重無盡); cf. 不穷 needs dependent choice (§4.2)
+JSZ-P-07-013	甲	因陀羅網境界門（名）		none		高	naming by simile (帝網天珠)
+JSZ-P-07-014	丙一	Z=以眼收師子，Y=一切純是眼	收=以之为读	承遷 JSZ-C-091		低	the whole read under one part; Y is a reading, not an event
+JSZ-P-07-015	丙一	Z=以耳收師子，Y=一切純是耳		none		低	
+JSZ-P-07-016	丙一	Z=諸根同時相收，Y=一一皆純一一皆雜	純=一读；雜=多读	承遷 JSZ-C-092		低	
+JSZ-P-07-017	甲	（名）		none		高	naming
+JSZ-P-07-018	庚		收=攝	承遷 JSZ-C-093		中	
+JSZ-P-07-019	未读出		即=相即	承遷 JSZ-C-094		中	reason: 眼即耳 (identity of distinct parts, 相即) is not available; class equivalence would erase the parts' difference
+JSZ-P-07-020	甲	（名）		none		高	naming
+JSZ-P-07-021	甲	微細相容安立門 := 金與師子或隱或顯、或一或多，定散同時		承遷 JSZ-C-095	金/師子：相合	中	
+JSZ-P-07-022	乙	主伴交輝：以甲为读则甲主乙伴，反之亦然；理事齊現（两读并立）	主伴=主与从；有力無力	承遷 JSZ-C-096	理事：相合	低	key: §5.4 registers this nondual line from 法藏's text beside the 相分 of P-04/P-05; proposed 乙 only in the reading 'principal = the side taken as reading'
+JSZ-P-07-023	庚			承遷 JSZ-C-097		中	
+JSZ-P-07-024	甲	（名）		none		高	naming
+JSZ-P-07-025	庚		念念生滅=刹那生灭	承遷 JSZ-C-098		中	the lion as 有為法 arising and ceasing moment by moment
+JSZ-P-07-026	庚	剎那之間分為三際	三際=过去、未来、现在	承遷 JSZ-C-099	剎那：定域	中	time divided within a moment: a discrete-time commitment (§5.4)
+JSZ-P-07-027	庚			承遷 JSZ-C-100		中	三三之位 → 九世
+JSZ-P-07-028	庚			承遷 JSZ-C-101		中	
+JSZ-P-07-029	乙	九世有隔不同，相由成立（诸时互缘）	相由=相依而成	none		中	key: times are established through each other (mutual 缘); with P-07-030 a cycle of 缘 gives one co-present cluster (§4.1: 环为同时之聚)
+JSZ-P-07-030	乙	融通無礙，同為一念（环成俱有之聚）	一念=一时	承遷 JSZ-C-102		低	with P-07-029; the tenth 世 is this one 念; lost: soteriological 融通
+JSZ-P-07-031	甲	十世隔法異成門（名）		none		高	naming
+JSZ-P-07-032	丙一	Z=心迴轉，Y=金與師子顯隱一多；各無自性	迴轉=转变	承遷 JSZ-C-103	唯心：定域	低	
+JSZ-P-07-033	庚	說理說事有成立	說=言说	承遷 JSZ-C-104	理事：定域	中	理 and 事 are established as said
+JSZ-P-07-034	甲	（名）		none		高	naming
+JSZ-P-07-035	戊	說師子，用表無明	表=表示	none	金/師子：相分	高	key: 法藏's own text assigns 師子 = 無明 (with P-07-036 金 = 真性): a valued split; 丁 aspect
+JSZ-P-07-036	戊	論金體，具彰真性		承遷 JSZ-C-105	金/師子：相分	高	key: with P-07-035
+JSZ-P-07-037	甲	理事合論 況 阿賴耶識	況=比况	承遷 JSZ-C-106	理事：相合	低	link: 起信論 QXL-JS-030 (不生不滅與生滅和合 名阿梨耶識)
+JSZ-P-07-038	甲	（名）		none		高	naming
+JSZ-P-08-001	甲	總相 := 師子（全）；別相 := 五根差別（分）	相=標記（lakṣaṇa）；總=全；別=分	none	總/別：相合	高	key: synchronic part and whole; 相 is mark, not the reciprocal 相 X (§4.2)
+JSZ-P-08-002	甲	同相 := 共一緣起；異相 := 眼耳各不相到	同=同属一缘起；異=各不相及	none	同/異：相合	高	同 by the shared 緣起 (one class), 異 by non-reach between parts
+JSZ-P-08-003	甲	成相 := 諸根合會（粗类下合一）；壞相 := 諸緣各住自位（细类下各住）	成=合成；壞=各住本位（非毁灭）	承遷 JSZ-C-107	成/壞：相合	高	key: §一 reading confirmed: two readings at one time, not 生 then 亡; 五教章 (舍/椽) not in repo, cited only via plan §5.2
+JSZ-P-09-001	甲	菩提 := 道、覺		承遷 JSZ-C-108		高	
+JSZ-P-09-002	己	拒：有為諸法待壞而滅；本來寂滅	壞=毁坏（历时之亡，与P-08-003之壞相异）；寂滅=无生灭	承遷 JSZ-C-109		低	polysemy of 壞; rejects ceasing as something that must come; plan answer open (perhaps the reading under the total class, where nothing is distinguished to arise or cease)
+JSZ-P-09-003	丁			承遷 JSZ-C-110,JSZ-C-111		中	
+JSZ-P-09-004	甲	覺 := 了無始已來顛倒元無實有	無始=无前际	承遷 JSZ-C-112,JSZ-C-113,JSZ-C-114		中	
+JSZ-P-09-005	甲	成菩提 := 畢竟具一切種智		承遷 JSZ-C-115		中	丁 aspect
+JSZ-P-10-001	甲	入涅槃 := 見師子與金二相俱盡	盡=尽	承遷 JSZ-C-116	金/師子：相合（俱盡）	高	key: at the end the gold too ceases to be a mark: neither side is privileged, which weakens the 相分 of P-04/P-05
+JSZ-P-10-002	丁			承遷 JSZ-C-117		中	煩惱不生，好醜現前 (appearances remain)
+JSZ-P-10-003	丁			承遷 JSZ-C-118		中	
+JSZ-P-10-004	甲	入涅槃（名）:= 妄想都盡，無諸逼迫，永離苦源		承遷 JSZ-C-119,JSZ-C-120,JSZ-C-121,JSZ-C-122,JSZ-C-123,JSZ-C-124		中	丁 aspect
+JSZ-C-001	庚			本单元为承遷注；所注之本文：JSZ-T-001		高	承遷 on the title
+JSZ-C-002	庚			本单元为承遷注；所注之本文：JSZ-T-001		高	承遷: narrative (則天)
+JSZ-C-003	戊	金 況 法界體，師子 喻 法界用	體=本体；用=作用	本单元为承遷注；所注之本文：JSZ-T-001	體用：相分	中	承遷's 體/用 assignment; not 法藏's words
+JSZ-C-004	庚			本单元为承遷注；所注之本文：JSZ-T-001	理事：相合	中	承遷: 理事鎔融
+JSZ-C-005	丙一	Z=假緣，Y=萬像有	緣=缘	本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 couplet on gate 1 (明緣起)
+JSZ-C-006	戊	幻法紛然 / 真空不動		本单元为承遷注；所注之本文：JSZ-P-000	真空/幻法：相分	中	承遷 couplet on gate 2
+JSZ-C-007	丁			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 couplet on gate 3 (迷/悟)
+JSZ-C-008	未读出			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 couplet on gate 4; reason: paradox 相即無相，非相即相
+JSZ-C-009	未读出		生=生起	本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 couplet on gate 5; reason: 生即無生 asserts and denies 生 of one event; readable only if the two are relative to two classes (the plan's answer), which the line does not state
+JSZ-C-010	庚			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 on gate 6
+JSZ-C-011	未读出			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 on gate 7; reason: mutual reflection (交映, 重重) needs containment
+JSZ-C-012	未读出			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 on gate 8; reason: 舉一即多 (相即)
+JSZ-C-013	丁			本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 on gate 9
+JSZ-C-014	甲	大涅槃 := 智體即如		本单元为承遷注；所注之本文：JSZ-P-000		中	承遷 on gate 10
+JSZ-C-015	丙一	Z=無因緣，Y=法不生；萬法無體，假緣成立	因緣=缘	本单元为承遷注；所注之本文：JSZ-P-01-001		高	承遷 on P-01-001
+JSZ-C-016	丙一	Z=無緣，Y=不起		本单元为承遷注；所注之本文：JSZ-P-01-001		高	承遷 quoting a sutra
+JSZ-C-017	戊	喻真理不變	真理=理	本单元为承遷注；所注之本文：JSZ-P-01-002	理/事：相分	高	key: 承遷 on P-01-002 (金無自性): reads it as 真理不變; the commentator hardens the split the base text does not make here
+JSZ-C-018	戊	喻真理隨緣成諸事法	隨緣=随条件	本单元为承遷注；所注之本文：JSZ-P-01-003	理/事：相分	中	承遷 on P-01-003
+JSZ-C-019	戊	真理不動，動即事		本单元为承遷注；所注之本文：JSZ-P-01-004	理/事：相分	中	承遷 on P-01-004
+JSZ-C-020	戊	金喻一真之性，師子喻緣起事法		本单元为承遷注；所注之本文：JSZ-P-01-004	金/師子：相分	高	key: 承遷, not 法藏 (§5.4, review v9 F3)
+JSZ-C-021	戊	理本無生，隨諸緣法成差別相		本单元为承遷注；所注之本文：JSZ-P-01-004	理/事：相分	高	承遷, not 法藏
+JSZ-C-022	戊	相起繁興，理即無生		本单元为承遷注；所注之本文：JSZ-P-01-004	理/事：相分	中	承遷
+JSZ-C-023	庚			本单元为承遷注；所注之本文：JSZ-P-01-004	理事：相合	中	承遷 quoting 清涼 (later than 法藏): 理隨事變, which sits uneasily with C-017 真理不變
+JSZ-C-024	甲	色 := 悲；空 := 智		本单元为承遷注；所注之本文：JSZ-P-02-001		中	承遷 on gate 2 heading; 丁 aspect
+JSZ-C-025	丁			本单元为承遷注；所注之本文：JSZ-P-02-001		中	承遷
+JSZ-C-026	丁			本单元为承遷注；所注之本文：JSZ-P-02-001		中	承遷
+JSZ-C-027	庚			本单元为承遷注；所注之本文：JSZ-P-02-001		中	承遷
+JSZ-C-028	庚			本单元为承遷注；所注之本文：JSZ-P-02-002		中	承遷 on P-02-002
+JSZ-C-029	庚		性實=性之实	本单元为承遷注；所注之本文：JSZ-P-02-003		中	承遷 on P-02-003; 戊 aspect
+JSZ-C-030	戊	緣起幻色不是實有		本单元为承遷注；所注之本文：JSZ-P-02-004	色/空：相分	中	承遷 on P-02-004
+JSZ-C-031	戊	真空常存		本单元为承遷注；所注之本文：JSZ-P-02-005	色/空：相分	中	承遷 on P-02-005
+JSZ-C-032	庚			本单元为承遷注；所注之本文：JSZ-P-02-007		中	承遷 on P-02-007
+JSZ-C-033	庚			本单元为承遷注；所注之本文：JSZ-P-02-007		中	承遷
+JSZ-C-034	庚			本单元为承遷注；所注之本文：JSZ-P-02-007		中	承遷 quoting 清涼
+JSZ-C-035	甲	遍計性 := 迷心所執，計有相生以為實	相生=相续而生	本单元为承遷注；所注之本文：JSZ-P-03-001	三性：定域	中	承遷 on gate 3
+JSZ-C-036	甲	依他性 := 不了緣生		本单元为承遷注；所注之本文：JSZ-P-03-001	三性：定域	中	承遷
+JSZ-C-037	甲	圓成 := 依他無性		本单元为承遷注；所注之本文：JSZ-P-03-001	三性：相合	中	承遷
+JSZ-C-038	庚			本单元为承遷注；所注之本文：JSZ-P-03-001		中	承遷
+JSZ-C-039	丁			本单元为承遷注；所注之本文：JSZ-P-03-002		中	承遷 on P-03-002
+JSZ-C-040	庚		依真起妄	本单元为承遷注；所注之本文：JSZ-P-03-003	真/妄：相分	中	承遷 on P-03-003
+JSZ-C-041	庚			本单元为承遷注；所注之本文：JSZ-P-03-003		中	承遷 quoting a 論 (成唯識論 by memory, unchecked)
+JSZ-C-042	戊	圓而不減，成而不增		本单元为承遷注；所注之本文：JSZ-P-03-004	金/師子：相分	中	承遷 on P-03-004
+JSZ-C-043	戊	師子雖則相殊，金且不隨殊變		本单元为承遷注；所注之本文：JSZ-P-03-004	金/師子：相分	高	承遷
+JSZ-C-044	丙一	Z=法與自心為緣，Y=心法方起	緣=缘（互）	本单元为承遷注；所注之本文：JSZ-P-03-004		中	承遷; 法 and 心 condition each other (mutual 缘), but 法 as object is the 所缘 sense
+JSZ-C-045	庚			本单元为承遷注；所注之本文：JSZ-P-03-004		中	承遷
+JSZ-C-046	庚			本单元为承遷注；所注之本文：JSZ-P-03-004		中	承遷
+JSZ-C-047	庚			本单元为承遷注；所注之本文：JSZ-P-03-004		中	承遷 quoting a sutra
+JSZ-C-048	甲	生死 := 不了諸法無相，迷心為有		本单元为承遷注；所注之本文：JSZ-P-04-001		中	承遷 on gate 4 heading
+JSZ-C-049	甲	出世法 := 觀察即虛相即無相		本单元为承遷注；所注之本文：JSZ-P-04-001		中	承遷
+JSZ-C-050	戊	喻理奪事	奪=夺、使不显	本单元为承遷注；所注之本文：JSZ-P-04-002	理/事：相分	高	承遷 on P-04-002
+JSZ-C-051	戊	緣起事法當體本虛		本单元为承遷注；所注之本文：JSZ-P-04-003	理/事：相分	中	承遷 on P-04-003
+JSZ-C-052	戊	離真理外無片事可得		本单元为承遷注；所注之本文：JSZ-P-04-004	理/事：相分	中	承遷 on P-04-004
+JSZ-C-053	庚	喻：水奪波		本单元为承遷注；所注之本文：JSZ-P-04-004		中	承遷 simile; 戊 aspect
+JSZ-C-054	庚	喻：水存以壞波令盡	壞=毁坏（非壞相）	本单元为承遷注；所注之本文：JSZ-P-04-004		中	承遷; polysemy of 壞
+JSZ-C-055	庚			本单元为承遷注；所注之本文：JSZ-P-04-004		中	承遷 quoting a sutra
+JSZ-C-056	己	拒：法有自生；法本無生，從緣有故	無生=无自生	本单元为承遷注；所注之本文：JSZ-P-05-001		中	承遷 on gate 5 heading; plan answer: 生 relative to class and through 缘; agrees that there is no self-standing 生
+JSZ-C-057	己	拒：有自體之生；生而無生		本单元为承遷注；所注之本文：JSZ-P-05-001		中	承遷
+JSZ-C-058	戊	喻真理隨緣成諸事法		本单元为承遷注；所注之本文：JSZ-P-05-002	理/事：相分	中	承遷 on P-05-002
+JSZ-C-059	戊	離真理之外無別事相…無生生也	生生=生而又生（此处被否定）	本单元为承遷注；所注之本文：JSZ-P-05-003	理/事：相分	中	承遷 on P-05-003; note: 無生生 denies 生生, a word the plan uses for continuing generation (§4.6): polysemy, not the plan's sense
+JSZ-C-060	戊	無生之理本無生滅		本单元为承遷注；所注之本文：JSZ-P-05-004	理/事：相分	中	承遷 on P-05-004
+JSZ-C-061	己	拒：生為自性之生；由緣生非生方得名生		本单元为承遷注；所注之本文：JSZ-P-05-005		低	承遷 on P-05-005
+JSZ-C-062	庚			本单元为承遷注；所注之本文：JSZ-P-05-005		中	承遷 quoting a 論: 因不自生，緣生故
+JSZ-C-063	庚	因緣互生（引）		本单元为承遷注；所注之本文：JSZ-P-05-005		中	承遷 quoting: mutual 因/緣
+JSZ-C-064	丙一	Z=成（以缘读），Y=缘生；Z=奪，Y=无生	成=成立；奪=夺	本单元为承遷注；所注之本文：JSZ-P-05-005	生/無生：相合	低	key: 承遷 makes 生 and 無生 relative to two operations (成/奪); close to the plan's relativity to class
+JSZ-C-065	己	拒：生時有生		本单元为承遷注；所注之本文：JSZ-P-05-005		低	承遷
+JSZ-C-066	甲	達無生（名）		本单元为承遷注；所注之本文：JSZ-P-05-005		中	承遷
+JSZ-C-067	丙一	Z=從緣有，Y=無自性，無有停息	停息=住、止	本单元为承遷注；所注之本文：JSZ-P-06-003		低	承遷 on P-06-003: 無有停息 denies 住
+JSZ-C-068	丁			本单元为承遷注；所注之本文：JSZ-P-06-004		中	承遷 on P-06-004
+JSZ-C-069	丙一	Z=真金 與 工匠緣，Y=師子相顯		本单元为承遷注；所注之本文：JSZ-P-06-005		中	承遷 on P-06-005: joint 缘
+JSZ-C-070	庚			本单元为承遷注；所注之本文：JSZ-P-06-006	金/師子：相合	中	承遷 on P-06-006
+JSZ-C-071	庚			本单元为承遷注；所注之本文：JSZ-P-06-007	二諦：定域	中	承遷 on P-06-007: 真俗二諦歷然, 兩法齊現
+JSZ-C-072	戊	以理奪事，事隱理顯		本单元为承遷注；所注之本文：JSZ-P-06-009	理/事：相分	高	key: 承遷 on P-06-009, where 法藏 has 二相互奪兩亡 (mutual): the commentary makes it one-sided
+JSZ-C-073	庚			本单元为承遷注；所注之本文：JSZ-P-06-011		中	承遷 on P-06-011
+JSZ-C-074	庚			本单元为承遷注；所注之本文：JSZ-P-06-011	金/師子：相合（俱泯）	中	承遷
+JSZ-C-075	戊	師子相盡，真金現前		本单元为承遷注；所注之本文：JSZ-P-06-013	金/師子：相分	中	承遷 on P-06-013
+JSZ-C-076	戊	事事皆金		本单元为承遷注；所注之本文：JSZ-P-06-014	金/師子：相分	中	承遷 on P-06-014
+JSZ-C-077	庚		四像=四种相（义未明）；自位=本位	本单元为承遷注；所注之本文：JSZ-P-06-015		低	承遷 on P-06-015: 四像遷移，各住自位 (change with positions kept); sense of 四像 unclear
+JSZ-C-078	庚			本单元为承遷注；所注之本文：JSZ-P-06-016	本/末：相合	中	承遷 on P-06-016
+JSZ-C-079	庚			本单元为承遷注；所注之本文：JSZ-P-06-017	本/末：相合	中	承遷 on P-06-017
+JSZ-C-080	庚			本单元为承遷注；所注之本文：JSZ-P-06-018		中	承遷 on P-06-018
+JSZ-C-081	庚	分：十玄門		本单元为承遷注；所注之本文：JSZ-P-07-001		高	承遷 list; the file has a private-use character for 迴 in 由心󱍧轉 (corpus problem)
+JSZ-C-082	庚		依體起事	本单元为承遷注；所注之本文：JSZ-P-07-002		中	承遷 on P-07-002; 戊 aspect
+JSZ-C-083	庚			本单元为承遷注；所注之本文：JSZ-P-07-002		中	承遷
+JSZ-C-084	庚			本单元为承遷注；所注之本文：JSZ-P-07-005		中	承遷 on P-07-005
+JSZ-C-085	戊	雖相容，本不動		本单元为承遷注；所注之本文：JSZ-P-07-005	本/末：相分	中	承遷
+JSZ-C-086	庚			本单元为承遷注；所注之本文：JSZ-P-07-007	理事：相合	中	承遷 on P-07-007: 事能隱理
+JSZ-C-087	庚			本单元为承遷注；所注之本文：JSZ-P-07-008	理事：相合	中	承遷 on P-07-008: 理能隱事 (symmetric with C-086)
+JSZ-C-088	未读出			本单元为承遷注；所注之本文：JSZ-P-07-010		中	承遷 on P-07-010; reason: 小中含大 (containment)
+JSZ-C-089	未读出			本单元为承遷注；所注之本文：JSZ-P-07-011		中	承遷; reason: containment
+JSZ-C-090	未读出			本单元为承遷注；所注之本文：JSZ-P-07-012		中	承遷; reason: containment
+JSZ-C-091	庚			本单元为承遷注；所注之本文：JSZ-P-07-014		中	承遷 example (布施)
+JSZ-C-092	庚			本单元为承遷注；所注之本文：JSZ-P-07-016		中	承遷
+JSZ-C-093	未读出			本单元为承遷注；所注之本文：JSZ-P-07-018		中	承遷 on P-07-018; reason: 相即相遍
+JSZ-C-094	庚			本单元为承遷注；所注之本文：JSZ-P-07-019		中	承遷 example
+JSZ-C-095	庚			本单元为承遷注；所注之本文：JSZ-P-07-021		中	承遷 quoting a sutra
+JSZ-C-096	庚			本单元为承遷注；所注之本文：JSZ-P-07-022		中	承遷 on P-07-022
+JSZ-C-097	戊	以理成事，事法不定，互相容攝		本单元为承遷注；所注之本文：JSZ-P-07-023	理/事：相分	低	承遷 on P-07-023; 相合 aspect (互相容攝)
+JSZ-C-098	戊	真理隨緣成諸事法，各各不實		本单元为承遷注；所注之本文：JSZ-P-07-025	理/事：相分	中	承遷 on P-07-025
+JSZ-C-099	庚			本单元为承遷注；所注之本文：JSZ-P-07-026		中	承遷 on P-07-026
+JSZ-C-100	未读出			本单元为承遷注；所注之本文：JSZ-P-07-027		中	承遷 on P-07-027; reason: 一即多 (相即)
+JSZ-C-101	庚			本单元为承遷注；所注之本文：JSZ-P-07-028		中	承遷 on P-07-028
+JSZ-C-102	庚			本单元为承遷注；所注之本文：JSZ-P-07-030	本/末：相合	中	承遷 on P-07-030
+JSZ-C-103	庚			本单元为承遷注；所注之本文：JSZ-P-07-032	唯心：定域	中	承遷 on P-07-032
+JSZ-C-104	庚			本单元为承遷注；所注之本文：JSZ-P-07-033		中	承遷 on P-07-033
+JSZ-C-105	庚			本单元为承遷注；所注之本文：JSZ-P-07-036		中	承遷 on P-07-036
+JSZ-C-106	丁			本单元为承遷注；所注之本文：JSZ-P-07-037		中	承遷 on P-07-037
+JSZ-C-107	未读出		孤單法=孤立之法	本单元为承遷注；所注之本文：JSZ-P-08-003		中	承遷 (not 法藏) on P-08-003; reason: 無孤單法 is a model property stated without definition, and 一一相中含無盡相 needs containment; strains the plan, which admits isolated events (§4.3)
+JSZ-C-108	庚			本单元为承遷注；所注之本文：JSZ-P-09-001		中	承遷 on P-09-001
+JSZ-C-109	戊	師子相不實，當體是金，不可壞	壞=毁坏	本单元为承遷注；所注之本文：JSZ-P-09-002	金/師子：相分	中	承遷 on P-09-002; polysemy of 壞
+JSZ-C-110	丁			本单元为承遷注；所注之本文：JSZ-P-09-003		中	承遷 on P-09-003
+JSZ-C-111	甲	薩婆若 := 無生智		本单元为承遷注；所注之本文：JSZ-P-09-003		中	承遷
+JSZ-C-112	庚			本单元为承遷注；所注之本文：JSZ-P-09-004		中	承遷 verse on P-09-004
+JSZ-C-113	庚			本单元为承遷注；所注之本文：JSZ-P-09-004		中	承遷
+JSZ-C-114	庚			本单元为承遷注；所注之本文：JSZ-P-09-004		中	承遷
+JSZ-C-115	丁			本单元为承遷注；所注之本文：JSZ-P-09-005		中	承遷 on P-09-005
+JSZ-C-116	庚			本单元为承遷注；所注之本文：JSZ-P-10-001		中	承遷 on P-10-001
+JSZ-C-117	丁			本单元为承遷注；所注之本文：JSZ-P-10-002		中	承遷 on P-10-002
+JSZ-C-118	庚			本单元为承遷注；所注之本文：JSZ-P-10-003		中	承遷 quoting a sutra on P-10-003
+JSZ-C-119	丁			本单元为承遷注；所注之本文：JSZ-P-10-004		中	承遷 on P-10-004
+JSZ-C-120	庚		常存=常续	本单元为承遷注；所注之本文：JSZ-P-10-004		中	承遷 quoting 僧肇: merit continues (功流萬世而常存): a positively valued continuation, the opposite sign to 起信論's 相續 = 無明
+JSZ-C-121	庚		始簀、初步=始	本单元为承遷注；所注之本文：JSZ-P-10-004		中	承遷 quoting 僧肇
+JSZ-C-122	庚	因該果海，果徹因源		本单元为承遷注；所注之本文：JSZ-P-10-004	因/果：相合	中	承遷
+JSZ-C-123	乙	果是即因之果，因是即果之因（相待）	即=相依而立	本单元为承遷注；所注之本文：JSZ-P-10-004	因/果：相合	低	承遷; correlatives; compare 中論 青目 緣成由於果 (§5.2)
+JSZ-C-124	庚			本单元为承遷注；所注之本文：JSZ-P-10-004		中	承遷 quoting a sutra
