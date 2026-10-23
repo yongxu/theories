@@ -1,5 +1,6 @@
 import Becoming.Population
 import Becoming.Witnesses
+import Becoming.Grammar
 
 /-!
 # Identity across steps
@@ -2071,5 +2072,347 @@ theorem classes :
      (((web.reidentify_renewed join .pool).mp (renewing 2 .pool (.inr rfl))) 0 .consumer rfl).2⟩
 
 end Dormancy
+
+/-! ## The grammar's reading of identity across steps
+
+`Becoming.Grammar` states continuation (续) for every carrier and every relation. Here the carrier
+is the occurrences of formations, pairs `(t, f)` of a step and a formation. 缘 is one step of a
+continuation `R` (`Web.continuationStep R`: `(t, g)` is a condition of `(t + 1, f)` where
+`R t g f`), the relation this module already reads splits and merges with. The class is activity
+(`Web.activityClass W`: two occurrences are alike when both are active or neither is), as the
+flame's class is "flame or not". Nothing else is supplied.
+
+* **Positions.** Before an active occurrence, a 续 under activity is a formation active before
+  the step that `R` continues as it (`hasPred_iff_continues`); after an active occurrence, a
+  formation active after the step continuing it (`hasSucc_iff_continued`). So arising under a
+  continuation is beginning (生) of an active occurrence (`arisesFrom_iff_sheng`), ceasing under
+  it is ending (亡) (`ceasesFrom_iff_wang`), and an occurrence continuing one and continued by one
+  abides (住) (`abides_iff`); arising and ceasing as named are the case of each formation
+  continuing only itself (`arises_iff_sheng_itself`, `ceases_iff_wang_itself`). Every occurrence at step `0`
+  begins (`begins_at_zero`).
+* **Identity is not given by the occurrences.** Under identity (`«静»`) no occurrence continues
+  another (`nothing_continues_under_identity`), and an occurrence with a condition and a
+  consequence abides under the one while it begins and ends under identity
+  (`positions_not_self_standing`, from `«四相无自立»`): which formation at one step is the same as
+  which at the next is supplied by a class, which is this module's finding read in the grammar.
+* **Lines are orders of precedence.** Continuation steps advance the step index
+  (`reach_advances`), so `continuationStep R` has no cycle (`continuationStep_acyclic`) and its
+  reach is a strict order (`reach_strict_order`, from `«无环则及为序»`). A lineage (`Lineage`) is
+  exactly a line (相续) under activity from an active occurrence (`lineage_iff_line`).
+* **Splits and merges.** `NoSplit` says that an active occurrence is continued by at most one
+  (`noSplit_iff`), `NoMerge` that an active occurrence continues at most one (`noMerge_iff`). A
+  split is a fission (分叉): two occurrences in lines from one, neither in a line from the other,
+  in one family (同族) (`split_fission`), as in `Identity.Fork` and in `Tandem`'s budding
+  (`Identity.Fork.fission`, `Tandem.budding_fission`). A merge is the two candles (蜡烛之合)
+  (`merge_candles`, `Tandem.joining_candles`).
+* **Derived from a grammar law.** A formation active at a step and continued by nothing at all
+  under `R` ceases under `R` (`ceasesFrom_of_unconditioned`), from `«亡于粗则亡于细»`: activity is
+  finer than the one.
+-/
+
+namespace Web
+
+/-- 缘 read off a continuation `R`: the occurrence `(t, g)` is a condition of `(u, f)` when `u` is
+the step after `t` and `R t g f`. -/
+def continuationStep (R : Nat → F → F → Prop) : «际» (Nat × F) :=
+  fun x y => y.1 = x.1 + 1 ∧ R x.1 x.2 y.2
+
+/-- The class (类) of a property: two occurrences are alike when both have it or neither does. -/
+def alikeBy {α : Type} (P : α → Prop) : «际» α := fun x y => P x ↔ P y
+
+theorem alikeBy_class {α : Type} (P : α → Prop) : «类» (alikeBy P) :=
+  ⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
+
+
+
+/-- Two occurrences with the same step and the same formation are one. -/
+theorem occurrence_eq : ∀ {x y : Nat × F}, x.1 = y.1 → x.2 = y.2 → x = y
+  | (_, _), (_, _), rfl, rfl => rfl
+
+variable {W : Web F C} {R : Nat → F → F → Prop}
+
+/-- **Before an active occurrence (有前).** A 续 under activity into `(t + 1, f)` is a formation
+active at `t` that `R` continues as `f`. -/
+theorem hasPred_iff_continues {t : Nat} {f : F} (after : W.active (t + 1) f) :
+    «有前» (continuationStep R) W.activityClass (t + 1, f) ↔ W.Continues R t f :=
+  ⟨fun ⟨x, ⟨next, r⟩, alike⟩ =>
+     have same : t = x.1 := Nat.succ.inj next
+     ⟨x.2, Eq.subst (motive := fun s => W.active s x.2) same.symm (alike.mpr after),
+      Eq.subst (motive := fun s => R s x.2 f) same.symm r⟩,
+   fun ⟨g, before, r⟩ => ⟨(t, g), ⟨rfl, r⟩, ⟨fun _ => after, fun _ => before⟩⟩⟩
+
+/-- **After an active occurrence (有后).** A 续 under activity out of `(t, g)` is a formation
+active at `t + 1` continuing `g`. -/
+theorem hasSucc_iff_continued {t : Nat} {g : F} (before : W.active t g) :
+    «有后» (continuationStep R) W.activityClass (t, g) ↔ W.Continued R t g :=
+  ⟨fun ⟨y, ⟨next, r⟩, alike⟩ =>
+     ⟨y.2, Eq.subst (motive := fun s => W.active s y.2) next (alike.mp before), r⟩,
+   fun ⟨f, after, r⟩ => ⟨(t + 1, f), ⟨rfl, r⟩, ⟨fun _ => after, fun _ => before⟩⟩⟩
+
+/-- Every occurrence at step `0` begins (生), under every class: nothing precedes the first
+step. -/
+theorem begins_at_zero (E : «际» (Nat × F)) (f : F) : «生» (continuationStep R) E (0, f) :=
+  fun ⟨_, ⟨next, _⟩, _⟩ => Nat.noConfusion next
+
+/-- **Arising under a continuation is beginning (生)** of an active occurrence. -/
+theorem arisesFrom_iff_sheng {t : Nat} {f : F} :
+    W.ArisesFrom R t f ↔
+      W.active (t + 1) f ∧ «生» (continuationStep R) W.activityClass (t + 1, f) :=
+  ⟨fun ⟨after, alone⟩ => ⟨after, fun pred => alone ((hasPred_iff_continues after).mp pred)⟩,
+   fun ⟨after, begins⟩ => ⟨after, fun cont => begins ((hasPred_iff_continues after).mpr cont)⟩⟩
+
+/-- **Ceasing under a continuation is ending (亡)** of an active occurrence. -/
+theorem ceasesFrom_iff_wang {t : Nat} {g : F} :
+    W.CeasesFrom R t g ↔ W.active t g ∧ «亡» (continuationStep R) W.activityClass (t, g) :=
+  ⟨fun ⟨before, alone⟩ => ⟨before, fun succ => alone ((hasSucc_iff_continued before).mp succ)⟩,
+   fun ⟨before, ends⟩ => ⟨before, fun cont => ends ((hasSucc_iff_continued before).mpr cont)⟩⟩
+
+/-- **Abiding (住).** An active occurrence after a step abides exactly where it continues a
+formation active before the step and is continued by one active after the next. -/
+theorem abides_iff {t : Nat} {f : F} (after : W.active (t + 1) f) :
+    «住» (continuationStep R) W.activityClass (t + 1, f) ↔
+      W.Continues R t f ∧ W.Continued R (t + 1) f :=
+  ⟨fun ⟨pred, succ⟩ =>
+     ⟨(hasPred_iff_continues after).mp pred, (hasSucc_iff_continued after).mp succ⟩,
+   fun ⟨cont, contd⟩ =>
+     ⟨(hasPred_iff_continues after).mpr cont, (hasSucc_iff_continued after).mpr contd⟩⟩
+
+/-- **Arising as named is beginning (生)** where each formation continues only itself. -/
+theorem arises_iff_sheng_itself {t : Nat} {f : F} :
+    W.Arises t f ↔
+      W.active (t + 1) f ∧ «生» (continuationStep fun _ g f => g = f) W.activityClass (t + 1, f) :=
+  ⟨fun arises => arisesFrom_iff_sheng.mp ((W.arisesFrom_self t f).mpr arises),
+   fun begins => (W.arisesFrom_self t f).mp (arisesFrom_iff_sheng.mpr begins)⟩
+
+/-- **Ceasing as named is ending (亡)** where each formation continues only itself. -/
+theorem ceases_iff_wang_itself {t : Nat} {g : F} :
+    W.Ceases t g ↔
+      W.active t g ∧ «亡» (continuationStep fun _ g f => g = f) W.activityClass (t, g) :=
+  ⟨fun ceases => ceasesFrom_iff_wang.mp ((W.ceasesFrom_self t g).mpr ceases),
+   fun ends => (W.ceasesFrom_self t g).mp (ceasesFrom_iff_wang.mpr ends)⟩
+
+/-- **Derived from `«亡于粗则亡于细»`.** A formation active at a step and continued by nothing at
+all under `R` ceases under `R`: it ends under the one, and activity is finer than the one. -/
+theorem ceasesFrom_of_unconditioned {t : Nat} {g : F} (before : W.active t g)
+    (none : ∀ f, ¬ R t g f) : W.CeasesFrom R t g :=
+  ceasesFrom_iff_wang.mpr ⟨before,
+    «亡于粗则亡于细» (continuationStep R) (E := W.activityClass) (E' := «一»)
+      (fun _ _ _ => trivial) (fun ⟨_, ⟨_, r⟩, _⟩ => none _ r)⟩
+
+/-- No continuation step relates an occurrence to itself. -/
+theorem continuationStep_irrefl (x : Nat × F) : ¬ continuationStep R x x :=
+  fun ⟨next, _⟩ => Nat.lt_irrefl x.1
+    (Eq.subst (motive := fun s => x.1 < s) next.symm (Nat.lt_succ_self x.1))
+
+/-- **Identity does not continue.** Under identity (`«静»`) no occurrence continues another:
+which formation at one step is the same as which at the next is not given by the occurrences. -/
+theorem nothing_continues_under_identity (x y : Nat × F) :
+    ¬ «续» (continuationStep R) «静» x y :=
+  fun ⟨step, same⟩ => continuationStep_irrefl (R := R) y
+    (Eq.subst (motive := fun z => continuationStep R z y) same step)
+
+/-- **No position stands by itself (`«四相无自立»`).** Where `g` continues as `f` across the step
+from `t` and `f` as `h` across the next, the occurrence `(t + 1, f)` abides under the one and,
+under identity, both begins and ends. -/
+theorem positions_not_self_standing {t : Nat} {g f h : F} (r : R t g f) (r' : R (t + 1) f h) :
+    «住» (continuationStep R) «一» (t + 1, f) ∧ «生» (continuationStep R) «静» (t + 1, f) ∧
+      «亡» (continuationStep R) «静» (t + 1, f) :=
+  «四相无自立» (y := (t + 1, f)) (x := (t, g)) (z := (t + 2, h)) continuationStep_irrefl
+    ⟨rfl, r⟩ ⟨rfl, r'⟩
+
+/-- Reach along continuation steps advances the step. -/
+theorem reach_advances {x y : Nat × F} (h : «及» (continuationStep R) x y) : x.1 < y.1 := by
+  induction h with
+  | one h => exact Eq.subst (motive := fun s => _ < s) h.1.symm (Nat.lt_succ_self _)
+  | more h _ ih =>
+    exact Nat.lt_trans (Eq.subst (motive := fun s => _ < s) h.1.symm (Nat.lt_succ_self _)) ih
+
+/-- A line (相续) under any class advances the step. -/
+theorem line_advances {E : «际» (Nat × F)} {x y : Nat × F}
+    (h : «相续» (continuationStep R) E x y) : x.1 < y.1 :=
+  reach_advances («相续含于及» _ _ x y h)
+
+/-- **No cycle (无环).** No occurrence reaches itself along continuation steps. -/
+theorem continuationStep_acyclic : «无环» (continuationStep R) :=
+  fun x h => Nat.lt_irrefl x.1 (reach_advances h)
+
+/-- **Reach is an order of precedence**, from `«无环则及为序»`. -/
+theorem reach_strict_order :
+    (∀ x, ¬ «及» (continuationStep R) x x) ∧
+      (∀ {x y z}, «及» (continuationStep R) x y → «及» (continuationStep R) y z →
+        «及» (continuationStep R) x z) ∧
+      (∀ {x y}, «及» (continuationStep R) x y → ¬ «及» (continuationStep R) y x) :=
+  «无环则及为序» continuationStep_acyclic
+
+/-- **No split, on occurrences.** `NoSplit` says exactly that an active occurrence is continued
+(续) under activity by at most one occurrence. -/
+theorem noSplit_iff :
+    W.NoSplit R ↔ ∀ x y y' : Nat × F, W.active x.1 x.2 →
+      «续» (continuationStep R) W.activityClass x y →
+      «续» (continuationStep R) W.activityClass x y' → y = y' :=
+  ⟨fun noSplit x y y' before ⟨⟨next, r⟩, alike⟩ ⟨⟨next', r'⟩, alike'⟩ =>
+     occurrence_eq (next.trans next'.symm)
+       (noSplit x.1 x.2 y.2 y'.2 before r r'
+         (Eq.subst (motive := fun s => W.active s y.2) next (alike.mp before))
+         (Eq.subst (motive := fun s => W.active s y'.2) next' (alike'.mp before))),
+   fun one t g f f' before r r' after after' =>
+     congrArg Prod.snd (one (t, g) (t + 1, f) (t + 1, f') before
+       ⟨⟨rfl, r⟩, ⟨fun _ => after, fun _ => before⟩⟩
+       ⟨⟨rfl, r'⟩, ⟨fun _ => after', fun _ => before⟩⟩)⟩
+
+/-- **No merge, on occurrences.** `NoMerge` says exactly that an active occurrence continues (续)
+under activity at most one occurrence. -/
+theorem noMerge_iff :
+    W.NoMerge R ↔ ∀ x x' y : Nat × F, W.active y.1 y.2 →
+      «续» (continuationStep R) W.activityClass x y →
+      «续» (continuationStep R) W.activityClass x' y → x = x' :=
+  ⟨fun noMerge x x' y after ⟨⟨next, r⟩, alike⟩ ⟨⟨next', r'⟩, alike'⟩ =>
+     have same : x.1 = x'.1 := Nat.succ.inj (next.symm.trans next')
+     occurrence_eq same
+       (noMerge x.1 x.2 x'.2 y.2 (alike.mpr after)
+         (Eq.subst (motive := fun s => W.active s x'.2) same.symm (alike'.mpr after)) r
+         (Eq.subst (motive := fun s => R s x'.2 y.2) same.symm r')
+         (Eq.subst (motive := fun s => W.active s y.2) next after)),
+   fun one t g g' f before before' r r' after =>
+     congrArg Prod.snd (one (t, g) (t, g') (t + 1, f) after
+       ⟨⟨rfl, r⟩, ⟨fun _ => after, fun _ => before⟩⟩
+       ⟨⟨rfl, r'⟩, ⟨fun _ => after, fun _ => before'⟩⟩)⟩
+
+/-- **A split is a fission (分叉).** Where `g` active at `t` continues as two formations active
+after the step, both lie in lines from `(t, g)`, neither lies in a line from the other, they are
+two occurrences, and they are in one family (同族): sameness along a line is not transitive. -/
+theorem split_fission {t : Nat} {g f f' : F} (before : W.active t g) (r : R t g f)
+    (r' : R t g f') (after : W.active (t + 1) f) (after' : W.active (t + 1) f') (apart : f ≠ f') :
+    «相续» (continuationStep R) W.activityClass (t, g) (t + 1, f) ∧
+      «相续» (continuationStep R) W.activityClass (t, g) (t + 1, f') ∧
+      ¬ «相续» (continuationStep R) W.activityClass (t + 1, f) (t + 1, f') ∧
+      ¬ «相续» (continuationStep R) W.activityClass (t + 1, f') (t + 1, f) ∧
+      (t + 1, f) ≠ (t + 1, f') ∧
+      «同族» (continuationStep R) W.activityClass (t + 1, f) (t + 1, f') :=
+  have c : «续» (continuationStep R) W.activityClass (t, g) (t + 1, f) :=
+    ⟨⟨rfl, r⟩, ⟨fun _ => after, fun _ => before⟩⟩
+  have c' : «续» (continuationStep R) W.activityClass (t, g) (t + 1, f') :=
+    ⟨⟨rfl, r'⟩, ⟨fun _ => after', fun _ => before⟩⟩
+  ⟨.one c, .one c', fun line => Nat.lt_irrefl (t + 1) (line_advances line),
+   fun line => Nat.lt_irrefl (t + 1) (line_advances line), fun same => apart (congrArg Prod.snd same),
+   .trans (.symm (.step c)) (.step c')⟩
+
+/-- **A merge is the two candles (蜡烛之合).** Where `g` and `g'` active at `t` both continue as
+`f` active after the step, `f` continues both, and the two are in one family (同族). -/
+theorem merge_candles {t : Nat} {g g' f : F} (before : W.active t g) (before' : W.active t g')
+    (r : R t g f) (r' : R t g' f) (after : W.active (t + 1) f) :
+    «续» (continuationStep R) W.activityClass (t, g) (t + 1, f) ∧
+      «续» (continuationStep R) W.activityClass (t, g') (t + 1, f) ∧
+      «同族» (continuationStep R) W.activityClass (t, g) (t, g') :=
+  have both := «蜡烛之合» (R := continuationStep R) (E := W.activityClass) (a := (t, g))
+    (c := (t, g')) (b := (t + 1, f)) ⟨rfl, r⟩ ⟨rfl, r'⟩ ⟨fun _ => after, fun _ => before⟩
+    ⟨fun _ => after, fun _ => before'⟩
+  ⟨both.1, both.2, .trans (.step both.1) (.symm (.step both.2))⟩
+
+/-- A lineage of `k + 1` steps from `g` at `M`, continued by `R` from `M` and active at `M + 1`,
+is a lineage of `k + 2` steps from what `R` continues as `g`. -/
+theorem Lineage.cons {M : Nat} {g f : F} (before : W.active M g) (r : R M g f)
+    (after : W.active (M + 1) f) : ∀ (k : Nat) {h : F},
+      W.Lineage R (M + 1) f k h → W.Lineage R M g (k + 1) h
+  | 0, _, same => ⟨g, rfl, before, Eq.subst (motive := fun x => R M g x) same.symm r,
+      Eq.subst (motive := fun x => W.active (M + 1) x) same.symm after⟩
+  | k + 1, _, ⟨h₀, lineage, active₀, cont, active⟩ =>
+    have shift : M + 1 + k = M + (k + 1) := Nat.succ_add M k
+    ⟨h₀, Lineage.cons before r after k lineage,
+     Eq.subst (motive := fun s => W.active s h₀) shift active₀,
+     Eq.subst (motive := fun s => R s h₀ _) shift cont,
+     Eq.subst (motive := fun s => W.active (s + 1) _) shift active⟩
+
+/-- A lineage of `k + 1` steps is a line (相续) under activity from an active occurrence. -/
+theorem Lineage.line {M : Nat} {g : F} : ∀ (k : Nat) {h : F}, W.Lineage R M g (k + 1) h →
+    W.active M g ∧ «相续» (continuationStep R) W.activityClass (M, g) (M + (k + 1), h)
+  | 0, _, ⟨_, same, active₀, cont, active⟩ =>
+    have before : W.active M g := Eq.subst (motive := fun x => W.active M x) same active₀
+    ⟨before, .one ⟨⟨rfl, Eq.subst (motive := fun x => R M x _) same cont⟩,
+      ⟨fun _ => active, fun _ => before⟩⟩⟩
+  | k + 1, _, ⟨_, lineage, active₀, cont, active⟩ =>
+    match Lineage.line k lineage with
+    | ⟨before, line⟩ =>
+      ⟨before, «及之传递» line (.one ⟨⟨rfl, cont⟩, ⟨fun _ => active, fun _ => active₀⟩⟩)⟩
+
+/-- A line (相续) under activity from an active occurrence is a lineage of some number of
+steps. -/
+theorem line_lineage {x y : Nat × F}
+    (line : «及» («续» (continuationStep R) W.activityClass) x y) :
+    W.active x.1 x.2 → ∃ k, y.1 = x.1 + (k + 1) ∧ W.Lineage R x.1 x.2 (k + 1) y.2 := by
+  induction line with
+  | @one a b c =>
+    intro before
+    exact ⟨0, c.1.1, a.2, rfl, before, c.1.2,
+      Eq.subst (motive := fun s => W.active s b.2) c.1.1 (c.2.mp before)⟩
+  | @more a b z c _ ih =>
+    intro before
+    have next : b.1 = a.1 + 1 := c.1.1
+    have after : W.active (a.1 + 1) b.2 :=
+      Eq.subst (motive := fun s => W.active s b.2) next (c.2.mp before)
+    match ih (c.2.mp before) with
+    | ⟨k, reach, lineage⟩ =>
+      exact ⟨k + 1, reach.trans ((congrArg (· + (k + 1)) next).trans (Nat.succ_add a.1 (k + 1))),
+        Lineage.cons before c.1.2 after (k + 1)
+          (Eq.subst (motive := fun s => W.Lineage R s b.2 (k + 1) z.2) next lineage)⟩
+
+/-- Steps added to one start are equal where they reach the same step. -/
+theorem steps_cancel : ∀ {n m k : Nat}, n + m = n + k → m = k
+  | _, 0, 0, _ => rfl
+  | _, _ + 1, _ + 1, same => congrArg Nat.succ (steps_cancel (Nat.succ.inj same))
+  | n, 0, k + 1, same => absurd (Eq.subst (motive := fun s => n < s) same.symm
+      (Nat.lt_succ_of_le (Nat.le_add_right n k))) (Nat.lt_irrefl n)
+  | n, m + 1, 0, same => absurd (Eq.subst (motive := fun s => n < s) same
+      (Nat.lt_succ_of_le (Nat.le_add_right n m))) (Nat.lt_irrefl n)
+
+/-- **A lineage is a line (相续).** A lineage of `k + 1` steps from `g` at `M` is exactly a line
+under activity from `(M, g)`, `g` active at `M`, to the occurrence `k + 1` steps on. -/
+theorem lineage_iff_line {M k : Nat} {g h : F} :
+    W.Lineage R M g (k + 1) h ↔
+      W.active M g ∧ «相续» (continuationStep R) W.activityClass (M, g) (M + (k + 1), h) :=
+  ⟨Lineage.line k, fun ⟨before, line⟩ => match line_lineage line before with
+    | ⟨_, reach, lineage⟩ =>
+      Eq.subst (motive := fun i => W.Lineage R M g i h) (steps_cancel reach).symm lineage⟩
+
+end Web
+
+/-- **The fork is a fission (分叉).** In `Identity.Fork`, formation `0` continues as itself and as
+formation `1` across step one: two occurrences in lines from one, neither in a line from the
+other, in one family. -/
+theorem Identity.Fork.fission :
+    «相续» (Web.continuationStep Identity.Fork.forks) Cycle.web.activityClass (1, 0) (2, 0) ∧
+      «相续» (Web.continuationStep Identity.Fork.forks) Cycle.web.activityClass (1, 0) (2, 1) ∧
+      ¬ «相续» (Web.continuationStep Identity.Fork.forks) Cycle.web.activityClass (2, 0) (2, 1) ∧
+      ¬ «相续» (Web.continuationStep Identity.Fork.forks) Cycle.web.activityClass (2, 1) (2, 0) ∧
+      ((2, 0) : Nat × Nat) ≠ (2, 1) ∧
+      «同族» (Web.continuationStep Identity.Fork.forks) Cycle.web.activityClass (2, 0) (2, 1) :=
+  Web.split_fission (W := Cycle.web) (R := Identity.Fork.forks) (t := 1) (g := 0) (f := 0) (f' := 1)
+    Nat.zero_lt_one (.inl rfl) (.inr ⟨rfl, rfl, rfl⟩) (Nat.zero_lt_succ 1) (Nat.lt_succ_self 1)
+    (fun same => Nat.noConfusion same)
+
+/-- **Budding is a fission (分叉) at every step.** In `Tandem`, read as budding, the later
+formation continues as itself and as the formation arising across the step. -/
+theorem Tandem.budding_fission (t : Nat) :
+    «相续» (Web.continuationStep Tandem.buds) Tandem.web.activityClass (t, t + 1) (t + 1, t + 1) ∧
+      «相续» (Web.continuationStep Tandem.buds) Tandem.web.activityClass (t, t + 1) (t + 1, t + 2) ∧
+      ¬ «相续» (Web.continuationStep Tandem.buds) Tandem.web.activityClass
+        (t + 1, t + 1) (t + 1, t + 2) ∧
+      ¬ «相续» (Web.continuationStep Tandem.buds) Tandem.web.activityClass
+        (t + 1, t + 2) (t + 1, t + 1) ∧
+      (t + 1, t + 1) ≠ (t + 1, t + 2) ∧
+      «同族» (Web.continuationStep Tandem.buds) Tandem.web.activityClass
+        (t + 1, t + 1) (t + 1, t + 2) :=
+  Web.split_fission (W := Tandem.web) (R := Tandem.buds) (.inr rfl) ⟨rfl, .inl rfl⟩
+    ⟨rfl, .inr rfl⟩ (.inl rfl) (.inr rfl)
+    (fun same => Tandem.apart (t := t + 1) Nat.zero_lt_one same.symm)
+
+/-- **Joining is the two candles (蜡烛之合) at every step.** In `Tandem`, read as joining, both
+formations active at `t` continue as the later one. -/
+theorem Tandem.joining_candles (t : Nat) :
+    «续» (Web.continuationStep Tandem.joins) Tandem.web.activityClass (t, t) (t + 1, t + 1) ∧
+      «续» (Web.continuationStep Tandem.joins) Tandem.web.activityClass (t, t + 1) (t + 1, t + 1) ∧
+      «同族» (Web.continuationStep Tandem.joins) Tandem.web.activityClass (t, t) (t, t + 1) :=
+  Web.merge_candles (W := Tandem.web) (R := Tandem.joins) (.inl rfl) (.inr rfl) ⟨rfl, .inl rfl⟩
+    ⟨rfl, .inr rfl⟩ (.inl rfl)
 
 end Becoming

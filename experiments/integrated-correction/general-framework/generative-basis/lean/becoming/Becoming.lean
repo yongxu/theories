@@ -1,4 +1,5 @@
 import Becoming.Grammar
+import Becoming.GrammarReadings
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -2234,6 +2235,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   net (`«闭合当且仅当有常»`); that every occurrence either begins or has a predecessor is exactly
   excluded middle (`«四相之定当且仅当排中»`). A leaf until the continuation family is lifted
   onto it (board item OU3).
+* `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
+  荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
+  (`«化为有缘之成坏»`); the 墨经's 同 is a class exactly where belonging is to one only
+  (`«同于为类»`, `«同于不必传递»`); a returning occurrence abides (`«复者住»`) and under a constant
+  class a line with a past never ends (`«有常则通»`); in a net without self-conditioning,
+  continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
+  holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.
 * `Becoming.Prelude` (L0): the lemmas on numbers, truth values, lists and options that the layers
   use, each stated once (no premise; it imports only Init): cancellation, subtraction and products
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,

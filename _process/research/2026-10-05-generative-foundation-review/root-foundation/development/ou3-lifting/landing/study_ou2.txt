@@ -1,0 +1,35 @@
+## 372. The grammar extended, its first readings of the corpus, and the old continuation family as its instances (OU2, OU3a)
+
+```text
+Result(s): continuation-relative-to-a-class (laws added, claim widened to name the instances); new record
+       classical-definitions-in-the-grammar.
+Delta: (1) The grammar (Becoming.Grammar): holding, mutual need and leaning-on through constancy apply only to
+       lines that do not end («有常则续不尽»), so for every line they are restated through the core: a class
+       suffices for another's regularity where what is alike under both lies in the other's core («足以定理»,
+       «因于核», «相须核»); the old forms imply the new («因于则因于核», «相须则相须核»); a flame's regularity lies
+       in fire and fuel («火因于薪»), correcting a sentence withdrawn in plan version 10. Ceasing («息») is
+       defined positively and renewal without end does not cease («生生不息»). Four laws of lines moved down
+       from PatternPassing and Persistence (board rule 9). (2) Becoming.GrammarReadings: the corpus's
+       definitions in the grammar (化 of the 墨经 and 荀子 one form and 成坏 along 缘; 同 a class exactly where
+       belonging is single; return abides; neither one nor other; the cause ends and the line continues).
+       (3) OU3a: Arising, Change, Identity, ContinuedClasses, PatternPassing and Persistence each gain a section
+       stating their notions as instances of the grammar (occurrences are pairs of a step and a relatum, 缘 the
+       module's own relation): arising and ceasing are beginning and ending, a split is fission and a merge the
+       candles' merge, lineage, continuing, links and holding are lines, passing a pattern on is alteration
+       (火传), falling dormant is alteration under holding; Space states that the finite-world law of arising
+       and ceasing is exactly the decidability of the positions.
+Premises / correspondence: none beyond the grammar and each module's own; the readings are AI reconstructions
+       following the commentary named in the classification.
+Evidence: core receipt RECEIPT_ID (every declaration with an empty axiom report); the instance sections written
+       by three Opus coders (`development/ou3-lifting/`), merged with names reconciled (one activity class, at
+       Arising; the identity-continuation readings named `_itself`).
+Boundary: counting, amounts, recurrence and renaming laws of the old base are not instances (the grammar has no
+       counting and no map of carriers); generation and degeneration are not yet told apart by continuation and
+       renewal; the 中论's second horn (co-presence) is not expressible in the grammar.
+Output → input: the grammar is no longer a leaf: base theorems use it; next, the master laws with EC's owner
+       and the theorems that read activity only.
+```
+
+**The old family as instances.** In each lifted module the carrier is occurrences, pairs of a step and a relatum, and 缘 is the relation the module already uses: the same relatum's next step (`Steps.along`, Arising), a continuation relation (`Web.continuationStep R`, Identity), a passing of a pattern (`Web.passingContinuation`, PatternPassing). The class is read off the module: alike in activity (`Web.activityClass`), alike in carrying, alike in state. Under these readings the module's notions are the grammar's: `Web.arises_iff_sheng`, `Web.ceases_iff_wang`, `Web.arisesFrom_iff_sheng`, `Web.ceasesFrom_iff_wang`, `Web.lineage_iff_line`, `Web.continuing_iff_line`, `Web.split_fission`, `Web.merge_candles`, `Web.passing_fire` (the carrier ends under the carrier class and the pattern continues under its own class: «亡于细者不必亡于粗» in the old base), `Web.fallsDormant_alters`, `Hibernation.positions`, and `World.law_iff_positions`. Several old laws are derived from the grammar's laws as new theorems (the split and merge laws, the persistence laws through a weaker law needing only decided positions, the strict order of reach along steps), each beside the old proof.
+
+**What did not connect.** The counting laws (census balance, `forces_iff_noSplit`), the amount laws (rises, falls, stock), recurrence, and renaming: the grammar states no counting and no map of carriers. Their premises are connected where they are lines; the laws themselves wait.

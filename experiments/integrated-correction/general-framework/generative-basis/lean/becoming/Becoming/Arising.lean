@@ -1,5 +1,6 @@
 import Becoming.Restoration
 import Becoming.Witnesses
+import Becoming.Grammar
 
 /-!
 # Arising: unceasing arising and renewal
@@ -595,5 +596,154 @@ theorem readings :
     | .oscillator, _, .inr two => ⟨2, Nat.zero_lt_two, Nat.le_refl 2, two⟩⟩
 
 end Oscillation
+
+/-! ## The grammar's reading: arising as a beginning under the class of activity
+
+`Becoming.Grammar` states continuation relative to a class (`«续» R E`: linked by 缘, `R`, and alike
+under the class `E`) for every carrier and relation. This section reads arising in it.
+
+* **Along the steps of one determination.** The carrier is the step index; 缘 is the step, `s` a
+  condition of `s + 1` (`Steps.next`); the class of a determination `p` is the two-valued class
+  "alike in `p`" (`Steps.alike p`, 二值之类). Along the steps 缘 is one-to-one, so a line ends at a
+  step exactly where a line begins at the next (`Steps.wang_iff_sheng_next`).
+* **On a web.** An occurrence is a pair (step, formation); 缘 is the step along the same formation
+  (`Steps.along`), and the class is "alike in activity" (`Web.activityClass`). The reading takes no
+  dependence or drawing as 缘: what conditions an occurrence here is only the same formation's
+  previous step, so it reads activity and omits the conditions it rests on. Positions on the web are
+  positions of each formation's determination (`Web.sheng_iff_steps`, `Web.wang_iff_steps`).
+* **Arising is an active beginning with a condition.** A formation arises across the step from
+  `t` exactly where the occurrence `(t + 1, f)` is active and begins under the activity class
+  (`Web.arises_iff_sheng`, 生); an active occurrence at step `0` begins too, with no condition, and
+  is no arising. So arising does not cease exactly where active beginnings occur at arbitrarily late
+  steps (`Web.unceasing_iff_late_beginnings`).
+* **Arising whose line goes on is renewal.** An active beginning renews its condition in the
+  grammar's sense (`«复生»`: a condition of a beginning whose line goes on) exactly where the arising
+  formation is still active a step later (`Web.renews_iff`). `Arises` asks nothing of the step
+  after; the grammar's renewal does.
+
+Rises, falls, depletion and renewing activity read amounts and are not connected here: the grammar
+has no amounts.
+-/
+
+namespace Steps
+
+/-- 缘 along the steps of one determination: step `s` is a condition of step `t` when `t` is the
+step after `s`. -/
+def next : «际» Nat := fun s t => t = s + 1
+
+/-- The two-valued class of a determination along the steps (二值之类): two steps are alike when
+the determination holds at one exactly when it holds at the other. -/
+def alike (p : Nat → Prop) : «际» Nat := fun s t => p s ↔ p t
+
+theorem alike_class (p : Nat → Prop) : «类» (alike p) :=
+  ⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
+
+/-- A step has a successor in a line under `E` (有后) exactly when the next step is alike. -/
+theorem hasSucc_iff {E : «际» Nat} {t : Nat} : «有后» next E t ↔ E t (t + 1) :=
+  ⟨fun ⟨_, hy, he⟩ => by cases hy; exact he, fun he => ⟨t + 1, rfl, he⟩⟩
+
+/-- A step after another has a predecessor in a line under `E` (有前) exactly when the step
+before is alike. -/
+theorem hasPred_iff {E : «际» Nat} {t : Nat} : «有前» next E (t + 1) ↔ E t (t + 1) :=
+  ⟨fun ⟨_, hx, he⟩ => by cases Nat.succ.inj hx; exact he, fun he => ⟨t, rfl, he⟩⟩
+
+/-- The first step begins (生) under every class: nothing conditions it. -/
+theorem sheng_zero (E : «际» Nat) : «生» next E 0 :=
+  fun ⟨_, hx, _⟩ => Nat.noConfusion hx
+
+/-- Along the steps 缘 is one-to-one, so a line ends at a step (亡) exactly where a line begins at
+the next (生). For a many-to-many 缘 an ending does not make its consequence a beginning; here the
+consequence has no other condition. -/
+theorem wang_iff_sheng_next {E : «际» Nat} {t : Nat} : «亡» next E t ↔ «生» next E (t + 1) :=
+  ⟨fun h hp => h (hasSucc_iff.mpr (hasPred_iff.mp hp)),
+   fun h hs => h (hasPred_iff.mpr (hasSucc_iff.mp hs))⟩
+
+/-- 缘 along one relatum: the occurrence `(t, f)` is a condition of `(t + 1, f)`. -/
+def along {F : Type} : «际» (Nat × F) := fun x y => y.1 = x.1 + 1 ∧ y.2 = x.2
+
+/-- No occurrence conditions itself along a relatum. -/
+theorem along_irrefl {F : Type} (z : Nat × F) : ¬ along z z :=
+  fun h => Nat.succ_ne_self z.1 h.1.symm
+
+theorem along_hasSucc_iff {F : Type} {E : «际» (Nat × F)} {t : Nat} {f : F} :
+    «有后» along E (t, f) ↔ E (t, f) (t + 1, f) :=
+  ⟨fun ⟨⟨_, _⟩, ⟨h₁, h₂⟩, he⟩ => by cases h₁; cases h₂; exact he,
+   fun he => ⟨(t + 1, f), ⟨rfl, rfl⟩, he⟩⟩
+
+theorem along_hasPred_iff {F : Type} {E : «际» (Nat × F)} {t : Nat} {f : F} :
+    «有前» along E (t + 1, f) ↔ E (t, f) (t + 1, f) :=
+  ⟨fun ⟨⟨_, _⟩, ⟨h₁, h₂⟩, he⟩ => by cases Nat.succ.inj h₁; cases h₂; exact he,
+   fun he => ⟨(t, f), ⟨rfl, rfl⟩, he⟩⟩
+
+/-- An occurrence at the first step begins under every class. -/
+theorem along_sheng_zero {F : Type} (E : «际» (Nat × F)) (f : F) : «生» along E (0, f) :=
+  fun ⟨⟨_, _⟩, ⟨h₁, _⟩, _⟩ => Nat.noConfusion h₁
+
+end Steps
+
+namespace Web
+
+variable (W : Web F C)
+
+/-- The class of activity on a web's occurrences: two occurrences are alike when one is active
+exactly when the other is. -/
+def activityClass : «际» (Nat × F) := fun x y => W.active x.1 x.2 ↔ W.active y.1 y.2
+
+theorem activityClass_class : «类» W.activityClass :=
+  ⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
+
+variable {W}
+
+/-- A beginning on the web is a beginning of the formation's determination of activity along the
+steps. -/
+theorem sheng_iff_steps {t : Nat} {f : F} :
+    «生» Steps.along W.activityClass (t + 1, f) ↔
+      «生» Steps.next (Steps.alike (W.active · f)) (t + 1) :=
+  ⟨fun h hp => h (Steps.along_hasPred_iff.mpr (Steps.hasPred_iff.mp hp)),
+   fun h hp => h (Steps.hasPred_iff.mpr (Steps.along_hasPred_iff.mp hp))⟩
+
+/-- An ending on the web is an ending of the formation's determination of activity. -/
+theorem wang_iff_steps {t : Nat} {f : F} :
+    «亡» Steps.along W.activityClass (t, f) ↔ «亡» Steps.next (Steps.alike (W.active · f)) t :=
+  ⟨fun h hs => h (Steps.along_hasSucc_iff.mpr (Steps.hasSucc_iff.mp hs)),
+   fun h hs => h (Steps.hasSucc_iff.mpr (Steps.along_hasSucc_iff.mp hs))⟩
+
+/-- **Arising is an active beginning (生).** A formation arises across the step from `t` exactly
+where the occurrence after the step is active and begins under the class of activity. -/
+theorem arises_iff_sheng {t : Nat} {f : F} :
+    W.Arises t f ↔ W.active (t + 1) f ∧ «生» Steps.along W.activityClass (t + 1, f) :=
+  ⟨fun ⟨inactive, active⟩ =>
+    ⟨active, fun hp => inactive (Iff.mpr (Steps.along_hasPred_iff.mp hp) active)⟩,
+   fun ⟨active, begins⟩ =>
+    ⟨fun was => begins (Steps.along_hasPred_iff.mpr ⟨fun _ => active, fun _ => was⟩), active⟩⟩
+
+/-- Arising does not cease exactly where active occurrences that begin under the class of
+activity, after the first step, occur at arbitrarily late steps. -/
+theorem unceasing_iff_late_beginnings :
+    W.Unceasing ↔
+      ∀ N, ∃ y : Nat × F, N < y.1 ∧ W.active y.1 y.2 ∧ «生» Steps.along W.activityClass y :=
+  ⟨fun unceasing N => match unceasing N with
+    | ⟨t, f, later, arises⟩ =>
+      ⟨(t + 1, f), Nat.lt_succ_of_le later, arises_iff_sheng.mp arises⟩,
+   fun late N => match late N with
+    | ⟨(0, _), after, _⟩ => absurd after (Nat.not_lt_zero N)
+    | ⟨(t + 1, f), after, active, begins⟩ =>
+      ⟨t, f, Nat.le_of_lt_succ after, arises_iff_sheng.mpr ⟨active, begins⟩⟩⟩
+
+/-- **Arising whose line goes on is renewal (复生).** The occurrence before an active step renews
+under the class of activity (it is the condition of a beginning whose line goes on) exactly where
+the formation arises across the step and is still active a step later. -/
+theorem renews_iff {t : Nat} {f : F} :
+    «复生» Steps.along W.activityClass (t, f) ∧ W.active (t + 1) f ↔
+      W.Arises t f ∧ W.active (t + 1 + 1) f :=
+  ⟨fun ⟨⟨⟨_, _⟩, ⟨h₁, h₂⟩, begins, goes⟩, active⟩ => by
+    cases h₁; cases h₂
+    exact ⟨arises_iff_sheng.mpr ⟨active, begins⟩,
+      Iff.mp (Steps.along_hasSucc_iff.mp goes) active⟩,
+   fun ⟨arises, still⟩ =>
+    ⟨⟨(t + 1, f), ⟨rfl, rfl⟩, (arises_iff_sheng.mp arises).2,
+      Steps.along_hasSucc_iff.mpr ⟨fun _ => still, fun _ => arises.2⟩⟩, arises.2⟩⟩
+
+end Web
 
 end Becoming

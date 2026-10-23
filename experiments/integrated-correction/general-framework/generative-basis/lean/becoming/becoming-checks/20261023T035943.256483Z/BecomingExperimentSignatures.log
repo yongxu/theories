@@ -1,0 +1,67 @@
+@Becoming.Run.fixes_of_takes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {n t : Nat}, n < t → r.Fixes t (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.retarget_determined : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P → ∀ (s : S) (b : A) (u₀ : S), Becoming.Determined (Becoming.retarget P s b u₀)
+@Becoming.retarget_step : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S) (b : A) (u₀ : S),
+  (Becoming.retarget P s b u₀).step s b u₀
+@Becoming.Run.stepsOf_retarget : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {t : Nat} {s : S} {b : A}, ¬r.Takes t s b → ∀ (u₀ : S), r.StepsOf (Becoming.retarget P s b u₀) t
+@Becoming.Run.not_fixes_of_untaken : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r : Becoming.Run P) {t : Nat} {s : S} {b : A}, ¬r.Takes t s b → ∀ {x y : S}, x ≠ y → ¬∃ u, r.Fixes t s b u
+@Becoming.Run.fixes_on_return : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {n m t : Nat}, r.state m = r.state n → m < t → r.Fixes t (r.state n) (r.act m) (r.state (m + 1))
+@Becoming.Run.ordered_of_ne : ∀ {i j : Nat}, i ≠ j → i < j ∨ j < i
+@Becoming.Run.not_fixes_other_of_new : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r : Becoming.Run P),
+      (∀ (i j : Nat), i < j → r.state i ≠ r.state j) →
+        ∀ {n t : Nat} {b : A}, b ≠ r.act n → ∀ {x y : S}, x ≠ y → ¬∃ u, r.Fixes t (r.state n) b u
+@Becoming.keepHistory_length : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run (Becoming.keepHistory P)) (n : Nat), (r.state n).snd.length = (r.state 0).snd.length + n
+@Becoming.keepHistory_new : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run (Becoming.keepHistory P)) (i j : Nat), i < j → r.state i ≠ r.state j
+@Becoming.keepHistory_determined : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P → Becoming.Determined (Becoming.keepHistory P)
+@Becoming.keepHistory_fixes_nothing_else : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r : Becoming.Run (Becoming.keepHistory P)) {n t : Nat} {b : A},
+      b ≠ r.act n → ∀ {x y : S × List (S × A)}, x ≠ y → ¬∃ u, r.Fixes t (r.state n) b u
+@Becoming.Run.fixesThrough_of_takes : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (π : S → K) {n t : Nat},
+  n < t → r.FixesThrough π t (π (r.state n)) (r.act n) (π (r.state (n + 1)))
+@Becoming.Run.stepsThrough_of_factors : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {Q : Generative.Process K A},
+  Becoming.FactorsThrough P π Q → ∀ (t : Nat), r.StepsThrough π Q t
+@Becoming.Run.generalizes : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {Q : Generative.Process K A},
+  Becoming.Determined Q →
+    Becoming.FactorsThrough P π Q →
+      ∀ {t : Nat} {k : K} {a : A} {κ : K}, r.FixesThrough π t k a κ → ∀ {s u : S}, π s = k → P.step s a u → π u = κ
+@Becoming.Run.projection_returns : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {l : List K},
+  (∀ (n : Nat), π (r.state n) ∈ l) → ∀ (T : Nat), ∃ i j, T ≤ i ∧ i < j ∧ π (r.state i) = π (r.state j)
+Becoming.Confound.determined : Becoming.Determined Becoming.Confound.process
+Becoming.Confound.move_idle : ∀ (s : Bool × Bool) (a b : Becoming.Confound.Move) (u : Bool × Bool),
+  Becoming.Confound.process.step s a u ↔ Becoming.Confound.process.step s b u
+Becoming.Confound.hidden_two : ∀ (n : Nat), (Becoming.Confound.states (n + 2)).fst = (Becoming.Confound.states n).fst
+Becoming.Confound.aligned_with_hidden : ∀ (n : Nat),
+  Becoming.Confound.aligned n = Becoming.Confound.Move.left ∧ (Becoming.Confound.states n).fst = false ∨
+    Becoming.Confound.aligned n = Becoming.Confound.Move.right ∧ (Becoming.Confound.states n).fst = true
+Becoming.Confound.moveDecides_determined : Becoming.Determined Becoming.Confound.moveDecides
+Becoming.Confound.misattributes : ∀ (moves : Nat → Becoming.Confound.Move),
+  moves 0 = Becoming.Confound.Move.left →
+    moves 1 = Becoming.Confound.Move.right →
+      ∀ {t : Nat},
+        2 ≤ t →
+          (∀ (s : Bool × Bool) (a b : Becoming.Confound.Move) (u : Bool × Bool),
+              Becoming.Confound.process.step s a u ↔ Becoming.Confound.process.step s b u) ∧
+            (Becoming.Confound.run moves).FixesThrough Becoming.Confound.outcome t false Becoming.Confound.Move.left
+                false ∧
+              (Becoming.Confound.run moves).FixesThrough Becoming.Confound.outcome t false Becoming.Confound.Move.right
+                true
+Becoming.Confound.confounded : ∀ (t : Nat),
+  (Becoming.Confound.run Becoming.Confound.aligned).StepsThrough Becoming.Confound.outcome Becoming.Confound.moveDecides
+    t
+Becoming.Confound.varied_refutes : ¬∃ Q,
+    Becoming.Determined Q ∧ (Becoming.Confound.run Becoming.Confound.varied).StepsThrough Becoming.Confound.outcome Q 4

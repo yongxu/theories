@@ -1,0 +1,13 @@
+import Becoming.ContinuingRuns
+#check @Becoming.ContinuingRuns.none_ne_some
+#check @Becoming.ContinuingRuns.run_at
+#check @Becoming.ContinuingRuns.run_cycle_amounts
+#check @Becoming.ContinuingRuns.run_method_changed
+#check @Becoming.ContinuingRuns.run_new_available_choice
+#check @Becoming.ContinuingRuns.run_retired_choice
+#check @Becoming.ContinuingRuns.run_no_renewal_at_cycle
+#check @Becoming.ContinuingRuns.run_cut_renewal
+#check @Becoming.ContinuingRuns.run_cut_stops
+#check @Becoming.ContinuingRuns.run_of_trace
+#check @Becoming.ContinuingRuns.run_reserve_consumed
+#check @Becoming.ContinuingRuns.run_frozen_no_return

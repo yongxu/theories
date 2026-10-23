@@ -1,0 +1,96 @@
+@Becoming.LossMatching.total_middle : ∀ {α : Type} (f : α → Nat) (a : α) (p q : List α),
+  Becoming.total (p ++ a :: q) f = f a + Becoming.total (p ++ q) f
+@Becoming.Frame.StrictLossMatch.trans : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop},
+  (∀ (a b c : C), same a b → same b c → same a c) →
+    ∀ {x y z : S}, F.StrictLossMatch same x y → F.StrictLossMatch same y z → F.StrictLossMatch same x z
+@Becoming.Frame.StrictLossMatch.mono : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same same' : C → C → Prop},
+  (∀ (a b : C), same a b → same' a b) →
+    ∀ {b b' w w' : S},
+      (∀ (c : C), ¬F.realized b' c → ¬F.realized b c) →
+        (∀ (c : C), ¬F.realized w c → ¬F.realized w' c) → F.StrictLossMatch same b w → F.StrictLossMatch same' b' w'
+@Becoming.Frame.strictLossMatch_of_extension : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop},
+  (∀ (c : C), same c c) → ∀ {living : C → Prop} {s t : S}, Becoming.Extension F living s t → F.StrictLossMatch same t s
+@Becoming.Frame.SufficientMatching.comparison : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop},
+  (∀ (c : C), same c c) →
+    ∀ {scope Le : S → S → Prop},
+      F.SufficientMatching same scope Le →
+        ∀ {living : C → Prop},
+          (∀ (s t : S), Becoming.Extension F living s t → scope t s) →
+            Becoming.Comparison F living fun s t => Le s t ∧ ¬Le t s
+@Becoming.Frame.SufficientMatching.not_mutual : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {scope Le : S → S → Prop},
+  F.SufficientMatching same scope Le →
+    ∀ {a b : S}, scope a b → scope b a → F.StrictLossMatch same a b → ¬F.StrictLossMatch same b a
+@Becoming.Frame.SufficientMatching.not_self : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {scope Le : S → S → Prop}, F.SufficientMatching same scope Le → ∀ {a : S}, scope a a → ¬F.StrictLossMatch same a a
+@Becoming.Frame.StrictLossMatch.length_lt : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop} {b w : S}
+  {lb lw : List C},
+  F.LossesListed b lb → (∀ (c : C), ¬F.realized w c → c ∈ lw) → F.StrictLossMatch same b w → lb.length < lw.length
+@Becoming.Frame.StrictLossMatch.irrefl : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop} {s : S}
+  {l : List C}, F.LossesListed s l → ¬F.StrictLossMatch same s s
+@Becoming.Frame.StrictLossMatch.asymm : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop} {a b : S}
+  {la lb : List C}, F.LossesListed a la → F.LossesListed b lb → F.StrictLossMatch same a b → ¬F.StrictLossMatch same b a
+@Becoming.Frame.not_strictLossMatch_of_length_le : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {b w : S} {lb lw : List C},
+  F.LossesListed b lb → (∀ (c : C), ¬F.realized w c → c ∈ lw) → lw.length ≤ lb.length → ¬F.StrictLossMatch same b w
+@Becoming.Frame.StrictLossMatch.counterpart : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {b w : S}, F.StrictLossMatch same b w → ∀ (c : C), ¬F.realized b c → ∃ d, ¬F.realized w d ∧ same c d
+@Becoming.Frame.not_strictLossMatch_of_kept : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {b w : S} {c : C}, ¬F.realized b c → (∀ (d : C), same c d → F.realized w d) → ¬F.StrictLossMatch same b w
+@Becoming.Frame.not_strictLossMatch_of_base_lost : ∀ {S A C : Type} {F : Becoming.Frame S A C} {same : C → C → Prop}
+  {base : C},
+  (∀ (s : S) (c : C), F.realized s c → F.realized s base) →
+    ∀ {all : List C},
+      Becoming.Distinct all →
+        (∀ (c : C), c ∈ all) → ∀ {b : S}, ¬F.realized b base → ∀ (w : S), ¬F.StrictLossMatch same b w
+@Becoming.Frame.StrictLossMatch.classCount_le : ∀ {S A C K : Type} [inst : DecidableEq K] {F : Becoming.Frame S A C}
+  {κ : C → K} {b w : S} {lb lw : List C},
+  F.LossesListed b lb →
+    F.LossesListed w lw →
+      F.StrictLossMatch (fun c d => κ c = κ d) b w →
+        ∀ (k : K), Becoming.Frame.classCount κ k lb ≤ Becoming.Frame.classCount κ k lw
+@Becoming.Frame.matching_of_counts : ∀ {C K : Type} [inst : DecidableEq K] [DecidableEq C] (κ : C → K) (lb lw : List C),
+  Becoming.Distinct lb →
+    Becoming.Distinct lw →
+      (∀ (k : K), Becoming.Frame.classCount κ k lb ≤ Becoming.Frame.classCount κ k lw) →
+        ∃ image,
+          (∀ (c : C), c ∈ lb → image c ∈ lw ∧ κ c = κ (image c)) ∧
+            ∀ (c d : C), c ∈ lb → d ∈ lb → image c = image d → c = d
+@Becoming.Frame.exists_fresh : ∀ {C : Type} [DecidableEq C] {image : C → C} {lb lw : List C},
+  Becoming.Distinct lw → lb.length < lw.length → ∃ e, e ∈ lw ∧ ∀ (c : C), c ∈ lb → image c ≠ e
+@Becoming.Frame.strictLossMatch_of_counts : ∀ {S A C K : Type} [inst : DecidableEq K] [DecidableEq C]
+  {F : Becoming.Frame S A C} {κ : C → K} {b w : S} {lb lw : List C},
+  F.LossesListed b lb →
+    F.LossesListed w lw →
+      (∀ (k : K), Becoming.Frame.classCount κ k lb ≤ Becoming.Frame.classCount κ k lw) →
+        lb.length < lw.length → F.StrictLossMatch (fun c d => κ c = κ d) b w
+@Becoming.Frame.strictLossMatch_iff_counts : ∀ {S A C K : Type} [inst : DecidableEq K] [DecidableEq C]
+  {F : Becoming.Frame S A C} {κ : C → K} {b w : S} {lb lw : List C},
+  F.LossesListed b lb →
+    F.LossesListed w lw →
+      (F.StrictLossMatch (fun c d => κ c = κ d) b w ↔
+        (∀ (k : K), Becoming.Frame.classCount κ k lb ≤ Becoming.Frame.classCount κ k lw) ∧ lb.length < lw.length)
+@Becoming.Frame.classCount_unit : ∀ {C : Type} (l : List C), Becoming.Frame.classCount (fun x => ()) () l = l.length
+@Becoming.Frame.strictLossMatch_iff_length_of_alike : ∀ {S A C : Type} [DecidableEq C] {F : Becoming.Frame S A C}
+  {same : C → C → Prop} {b w : S} {lb lw : List C},
+  F.LossesListed b lb →
+    F.LossesListed w lw →
+      (∀ (c d : C), ¬F.realized b c → ¬F.realized w d → same c d) → (F.StrictLossMatch same b w ↔ lb.length < lw.length)
+@Becoming.Frame.mem_lostOf : ∀ {S A C : Type} {F : Becoming.Frame S A C} {s : S}
+  [dec : (c : C) → Decidable (F.realized s c)] {x : C} {l : List C}, x ∈ F.lostOf s l ↔ x ∈ l ∧ ¬F.realized s x
+@Becoming.Frame.distinct_lostOf : ∀ {S A C : Type} {F : Becoming.Frame S A C} {s : S}
+  [dec : (c : C) → Decidable (F.realized s c)] {l : List C}, Becoming.Distinct l → Becoming.Distinct (F.lostOf s l)
+@Becoming.Frame.lossesListed_lostOf : ∀ {S A C : Type} {F : Becoming.Frame S A C} {s : S}
+  [inst : (c : C) → Decidable (F.realized s c)] {all : List C},
+  Becoming.Distinct all → (∀ (c : C), c ∈ all) → F.LossesListed s (F.lostOf s all)
+@Becoming.Frame.ReadsAt.loss_retained : ∀ {S A C : Type} {F : Becoming.Frame S A C} {r : Becoming.Run F.P} {c : C}
+  {τ : Nat} {support : S → C → Prop},
+  F.ReadsAt r c τ support → ¬support (r.state τ) c → ∀ {t : Nat}, τ ≤ t → ¬F.realized (r.state t) c
+@Becoming.Frame.readsAt_iff_settled : ∀ {S A C : Type} {F : Becoming.Frame S A C} {r : Becoming.Run F.P} {c : C}
+  {τ : Nat},
+  (∃ support, F.ReadsAt r c τ support) ↔ ∀ (t : Nat), τ ≤ t → (F.realized (r.state t) c ↔ F.realized (r.state τ) c)
+@Becoming.Frame.not_readsAt_of_recovery : ∀ {S A C : Type} {F : Becoming.Frame S A C} {r : Becoming.Run F.P} {c : C}
+  {τ t : Nat}, τ ≤ t → ¬F.realized (r.state τ) c → F.realized (r.state t) c → ¬∃ support, F.ReadsAt r c τ support
+Becoming.EndlessLosses.self_match : Becoming.EndlessLosses.frame.StrictLossMatch (fun x x_1 => True) () ()
+Becoming.EndlessLosses.no_sufficient_matching : ∀ (Le : Unit → Unit → Prop),
+  ¬Becoming.EndlessLosses.frame.SufficientMatching (fun x x_1 => True) (fun x x_1 => True) Le

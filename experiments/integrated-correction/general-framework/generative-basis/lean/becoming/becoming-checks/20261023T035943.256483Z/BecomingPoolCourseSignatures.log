@@ -1,0 +1,69 @@
+@Becoming.Web.AlikeThroughAll.of_same : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {l l' : Nat → C → Nat} {t : Nat} {group group' : F → Prop},
+  (∀ (g : F), group g ↔ group' g) → W.AlikeThroughAll obs group l l' t → W.AlikeThroughAll obs group' l l' t
+@Becoming.Web.apart_while_member : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat} {g : F} {s t : Nat},
+  pool t l g → s ≤ t → ¬W.AlikeThroughUpTo obs g l l' s → ¬W.AlikeThroughAll obs (pool t l) l l' t
+@Becoming.Web.selects_alike_of_members : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat} {t : Nat},
+  (∀ (g : F), pool t l g → W.AlikeThroughUpTo obs g l l' t) →
+    ∀ {select : (Nat → C → Nat) → Prop}, W.SelectsThroughAll obs (pool t l) t select → (select l ↔ select l')
+@Becoming.Web.RecruitsThrough.members_alike : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat},
+  W.RecruitsThrough obs pool →
+    Becoming.Web.SameMembers pool l l' 0 →
+      ∀ (T : Nat), (∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s) → Becoming.Web.SameMembers pool l l' T
+@Becoming.Web.RecruitsThrough.first_apart : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat},
+  W.RecruitsThrough obs pool →
+    Becoming.Web.SameMembers pool l l' 0 →
+      ∀ {T : Nat},
+        (∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s) →
+          ¬W.AlikeThroughAll obs (pool T l) l l' T →
+            Becoming.Web.SameMembers pool l l' T ∧ ¬W.AlikeThroughAll obs (pool T l') l l' T
+@Becoming.Web.RecruitsThrough.members_alike_always : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat},
+  W.RecruitsThrough obs pool →
+    Becoming.Web.SameMembers pool l l' 0 →
+      (∀ (t : Nat), W.AlikeThroughAll obs (pool t l') l l' t) → ∀ (t : Nat), Becoming.Web.SameMembers pool l l' t
+@Becoming.Web.RecruitsThrough.alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat},
+  W.RecruitsThrough obs pool →
+    Becoming.Web.SameMembers pool l l' 0 →
+      ((∀ (t : Nat), W.AlikeThroughAll obs (pool t l) l l' t) ↔ ∀ (t : Nat), W.AlikeThroughAll obs (pool t l') l l' t)
+@Becoming.Web.RecruitsThrough.selects_alike : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {pool : Nat → (Nat → C → Nat) → F → Prop} {l l' : Nat → C → Nat},
+  W.RecruitsThrough obs pool →
+    Becoming.Web.SameMembers pool l l' 0 →
+      (∀ (t : Nat) (g : F), pool t l' g → W.AlikeThroughUpTo obs g l l' t) →
+        ∀ {t : Nat} {select : (Nat → C → Nat) → Prop},
+          W.SelectsThroughAll obs (pool t l) t select → (select l ↔ select l')
+Becoming.PoolCourse.admits_alike : ∀ (l l' : Nat → Becoming.PoolCourse.Place → Nat) (t : Nat)
+  (g : Becoming.PoolCourse.Member), Becoming.PoolCourse.web.Admits (l t) t g ↔ Becoming.PoolCourse.web.Admits (l' t) t g
+Becoming.PoolCourse.keeper_alike : ∀ (t : Nat),
+  Becoming.PoolCourse.web.AlikeThroughUpTo Becoming.PoolCourse.obs Becoming.PoolCourse.Member.keeper
+    Becoming.PoolCourse.lost Becoming.PoolCourse.spared t
+@Becoming.PoolCourse.reader_apart : ∀ {t : Nat},
+  1 ≤ t →
+    ¬Becoming.PoolCourse.web.AlikeThroughUpTo Becoming.PoolCourse.obs Becoming.PoolCourse.Member.reader
+        Becoming.PoolCourse.lost Becoming.PoolCourse.spared t
+Becoming.PoolCourse.alone_through : Becoming.PoolCourse.web.RecruitsThrough Becoming.PoolCourse.obs
+  Becoming.PoolCourse.alone
+Becoming.PoolCourse.alone_never_apart : ∀ (t : Nat),
+  Becoming.PoolCourse.web.AlikeThroughAll Becoming.PoolCourse.obs (Becoming.PoolCourse.alone t Becoming.PoolCourse.lost)
+    Becoming.PoolCourse.lost Becoming.PoolCourse.spared t
+Becoming.PoolCourse.called_not_through : ¬Becoming.PoolCourse.web.RecruitsThrough Becoming.PoolCourse.obs
+    Becoming.PoolCourse.called
+Becoming.PoolCourse.called_apart : ¬Becoming.PoolCourse.web.AlikeThroughAll Becoming.PoolCourse.obs
+    (Becoming.PoolCourse.called 1 Becoming.PoolCourse.lost) Becoming.PoolCourse.lost Becoming.PoolCourse.spared 1
+Becoming.PoolCourse.scheduled_through : Becoming.PoolCourse.web.RecruitsThrough Becoming.PoolCourse.obs
+  Becoming.PoolCourse.scheduled
+Becoming.PoolCourse.scheduled_apart : (∀ (s : Nat),
+    s < 2 →
+      Becoming.PoolCourse.web.AlikeThroughAll Becoming.PoolCourse.obs
+        (Becoming.PoolCourse.scheduled s Becoming.PoolCourse.lost) Becoming.PoolCourse.lost Becoming.PoolCourse.spared
+        s) ∧
+  ¬Becoming.PoolCourse.web.AlikeThroughAll Becoming.PoolCourse.obs
+        (Becoming.PoolCourse.scheduled 2 Becoming.PoolCourse.lost) Becoming.PoolCourse.lost Becoming.PoolCourse.spared
+        2 ∧
+    Becoming.PoolCourse.scheduled 2 Becoming.PoolCourse.spared Becoming.PoolCourse.Member.reader

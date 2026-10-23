@@ -2737,11 +2737,6 @@
    "category": "general-structure",
    "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
   },
-  "Becoming.«根»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "the root theorem: the core of a class under any relation is its greatest symmetric constant relation; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«核为类»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -2772,21 +2767,6 @@
    "category": "general-structure",
    "reason": "the coarse net joins only different classes; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«有常则相续不尽»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "under a constant class a line never ends after its first step; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«有亡之续则不有常»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "a class under which some line ends is not constant; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«相续含于及»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "a line runs along the reach of the relation; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«一之续»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -2797,20 +2777,10 @@
    "category": "general-structure",
    "reason": "under the full class an occurrence begins exactly where nothing conditions it; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«一之下无复生»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "under the full class nothing renews; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«一之下无生生»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
    "reason": "under the full class there is no renewal without end; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«亡于粗则亡于细»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "what ends under a coarser class ends under a finer; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
   "Becoming.«住于细则住于粗»": {
    "module": "Becoming.Grammar",
@@ -2827,11 +2797,6 @@
    "category": "general-structure",
    "reason": "abiding and ending exclude each other; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«四相无自立»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "the positions depend on the class: one occurrence abides under the full class and begins and ends under identity; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«复生则粗复生»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -2841,31 +2806,6 @@
    "module": "Becoming.Grammar",
    "category": "general-structure",
    "reason": "renewal without end is the greatest renewing family; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«生生则复生»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "renewal without end renews; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«无环则及为序»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "without cycles reach is a strict order; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«任一缘可为续»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "every single relation pair is a continuation under some class, so containment in the relation is necessary only; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«蜡烛之合»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "two alike conditions of one occurrence make a merge of continuations; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«则之自反»": {
-   "module": "Becoming.Grammar",
-   "category": "support",
-   "reason": "inclusion of relations is reflexive: a one-line unpacking of the grammar's own definition"
   },
   "Becoming.«则之传递»": {
    "module": "Becoming.Grammar",
@@ -2881,11 +2821,6 @@
    "module": "Becoming.Grammar",
    "category": "support",
    "reason": "the equivalence closure of continuation is a class: its constructors are the class laws"
-  },
-  "Becoming.«四相之定当且仅当排中»": {
-   "module": "Becoming.Grammar",
-   "category": "calibration",
-   "reason": "that every occurrence, in every model, either begins or has a predecessor is exactly excluded middle; a lemma of OU1, which reads the positions as decidable only in decidable models"
   },
   "Becoming.«分叉»": {
    "module": "Becoming.Grammar",
@@ -2906,6 +2841,166 @@
    "module": "Becoming.Grammar",
    "category": "model-witness",
    "reason": "the class \"flame or not\" of the flame witness is a class"
+  },
+  "Becoming.«一之下皆息»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; under the full class everything ceases"
+  },
+  "Becoming.«因于则因于核»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; leaning-on through constancy is leaning-on through the core"
+  },
+  "Becoming.«相须则相须核»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; mutual need through constancy is mutual need through the core"
+  },
+  "Becoming.«相须之对称»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; mutual need is symmetric"
+  },
+  "Becoming.«无自相须»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; nothing needs itself"
+  },
+  "Becoming.«生生不息»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; renewal without end does not cease"
+  },
+  "Becoming.«火因于薪»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the flame witness: its regularity lies in fire and fuel"
+  },
+  "Becoming.«化之二说同形»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; the 墨经 and 荀子 readings of 化 are one form"
+  },
+  "Becoming.«化为有缘之成坏»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; 化 is 成坏 along 缘"
+  },
+  "Becoming.«同于为类»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; sameness in belonging is a class where belonging is single"
+  },
+  "Becoming.«同于不必传递»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "model-witness",
+   "reason": "one constructed relation on numbers where belonging to two makes sameness intransitive"
+  },
+  "Becoming.«复者住»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; what returns abides"
+  },
+  "Becoming.«有常则通»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; under a constant class a line with a past never ends"
+  },
+  "Becoming.«非一非异»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; continuation is neither identity nor mere difference"
+  },
+  "Becoming.«因灭而续»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; the conditioning occurrence ends under identity while the line continues under a coarser class"
+  },
+  "Becoming.CeasesToBe.not_comes_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "CeasesToBe.not_comes derived through the grammar"
+  },
+  "Becoming.ComesToBe.not_ceases_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "ComesToBe.not_ceases derived through the grammar"
+  },
+  "Becoming.persists_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "persists derived through persists_of_positions"
+  },
+  "Becoming.persists_of_em_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "persists_of_em derived through persists_of_positions"
+  },
+  "Becoming.still_stays_of_constant": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (constancy never lets the line end)"
+  },
+  "Becoming.still_of_buqiong": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (a line that never ends stays still)"
+  },
+  "Becoming.buqiong_of_stays_failing": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (a predicate that stays false never ends its line)"
+  },
+  "Becoming.continues_in_core_iff_buqiong": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (continuing under the core is never ending)"
+  },
+  "Becoming.positions_iff_change": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (deciding a position is deciding a change)"
+  },
+  "Becoming.Steps.alike_class": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "alike in a predicate is a class: a one-line unpacking"
+  },
+  "Becoming.Steps.sheng_zero": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "the first step begins: a one-line unpacking"
+  },
+  "Becoming.Steps.along_sheng_zero": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "along a relatum the first step begins: a one-line unpacking"
+  },
+  "Becoming.Web.begins_at_zero": {
+   "module": "Becoming.Identity",
+   "category": "support",
+   "reason": "along a continuation the first step begins: a one-line unpacking"
+  },
+  "Becoming.Web.nothing_continues_under_identity": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (nothing continues under identity)"
+  },
+  "Becoming.Web.positions_not_self_standing": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (no position stands by itself)"
+  },
+  "Becoming.Web.reach_strict_order": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (reach along steps is a strict order)"
+  },
+  "Becoming.Web.linked_iff_line": {
+   "module": "Becoming.ContinuedClasses",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (links are lines under the one)"
   }
  },
  "instances": {

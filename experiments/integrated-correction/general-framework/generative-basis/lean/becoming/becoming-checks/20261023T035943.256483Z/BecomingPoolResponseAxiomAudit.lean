@@ -1,0 +1,22 @@
+import Becoming.PoolResponse
+#print axioms Becoming.ExchangeLaw.SelectsThroughActs
+#print axioms Becoming.ExchangeLaw.Through.acts_alike_all
+#print axioms Becoming.ExchangeLaw.Through.selectsThroughAll
+#print axioms Becoming.ExchangeLaw.Through.apart_of_acts
+#print axioms Becoming.ExchangeLaw.Through.acts_separate
+#print axioms Becoming.ExchangeLaw.Through.acts_separate_member
+#print axioms Becoming.ExchangeLaw.ofClass
+#print axioms Becoming.ExchangeLaw.ofClass_through
+#print axioms Becoming.ExchangeLaw.ofClass_take_iff
+#print axioms Becoming.ExchangeLaw.acts_alike_all_iff
+#print axioms Becoming.ExchangeLaw.zero
+#print axioms Becoming.ExchangeLaw.zero_through
+#print axioms Becoming.ExchangeLaw.response_not_fixed_by_coupling
+#print axioms Becoming.Flow.response_alike_pool
+#print axioms Becoming.Flow.act_unselected_by_acts_pool
+#print axioms Becoming.act_courses_response_alike_pool
+#print axioms Becoming.Flow.pool_within_response_iff
+#print axioms Becoming.Flow.pool_alike_beyond_response
+#print axioms Becoming.TimedResponse.pool_alike_before
+#print axioms Becoming.Clearing.separated_unresponded
+#print axioms Becoming.Loop.response_returns

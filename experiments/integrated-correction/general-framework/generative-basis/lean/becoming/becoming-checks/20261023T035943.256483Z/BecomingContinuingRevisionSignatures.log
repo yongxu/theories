@@ -1,0 +1,198 @@
+@Becoming.ContinuingRevision.step_conserves : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {a : Becoming.ContinuingRevision.Act},
+  (Becoming.ContinuingRevision.P yield).step s a t →
+    t.work.fuel + Becoming.ContinuingRevision.use a = s.work.fuel + Becoming.ContinuingRevision.returned yield a ∧
+      t.work.used = s.work.used + Becoming.ContinuingRevision.use a ∧
+        t.received = s.received + Becoming.ContinuingRevision.returned yield a
+@Becoming.ContinuingRevision.trace_conserves : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {as : List Becoming.ContinuingRevision.Act},
+  Generative.Trace (Becoming.ContinuingRevision.P yield) s as t →
+    t.work.fuel + t.work.used + s.received = s.work.fuel + s.work.used + t.received
+@Becoming.ContinuingRevision.forget_policy : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {as : List Becoming.ContinuingRevision.Act},
+  Generative.Trace (Becoming.ContinuingRevision.selected yield) s as t →
+    Generative.Trace (Becoming.ContinuingRevision.P yield) s as t
+Becoming.ContinuingRevision.absent_key : ∀ (n : Nat),
+  Becoming.ReferencePlan.keyAt [Becoming.ContinuingRevision.sample n] (n + 1) = false
+Becoming.ContinuingRevision.acquired_key : ∀ (n : Nat),
+  Becoming.ReferencePlan.keyAt [Becoming.ContinuingRevision.sample n, Becoming.ContinuingRevision.sample (n + 1)]
+      (n + 1) =
+    true
+Becoming.ContinuingRevision.retained_sample : ∀ (n : Nat),
+  List.filter (fun r => if r.address = n + 1 then true else false)
+      [Becoming.ContinuingRevision.sample n, Becoming.ContinuingRevision.sample (n + 1)] =
+    [Becoming.ContinuingRevision.sample (n + 1)]
+Becoming.ContinuingRevision.fail_step_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.readyAt m u g n)
+    (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (n + 1) true))
+    (Becoming.ContinuingRevision.failedAt m u g n)
+Becoming.ContinuingRevision.plan_step_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.failedAt m u g n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.revise)
+    (Becoming.ContinuingRevision.plannedAt m u g n)
+Becoming.ContinuingRevision.first_contact_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.plannedAt m u g n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe)
+    (Becoming.ContinuingRevision.contactedAt m u g n)
+Becoming.ContinuingRevision.second_contact_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.contactedAt m u g n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe)
+    (Becoming.ContinuingRevision.acquiredAt m u g n)
+Becoming.ContinuingRevision.install_step_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.acquiredAt m u g n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.install)
+    (Becoming.ContinuingRevision.installedAt m u g n)
+Becoming.ContinuingRevision.use_step_at : ∀ (y m u g n : Nat),
+  (Becoming.ContinuingRevision.selected y).step (Becoming.ContinuingRevision.installedAt m u g n)
+    (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (n + 1) true))
+    (Becoming.ContinuingRevision.successfulAt m u g n)
+Becoming.ContinuingRevision.renew_step_at : ∀ (e m u g n : Nat),
+  (Becoming.ContinuingRevision.selected (e + 9)).step (Becoming.ContinuingRevision.successfulAt m u g n)
+    Becoming.ContinuingRevision.Act.renew (Becoming.ContinuingRevision.readyAt (m + e) (u + 9) (g + (e + 9)) (n + 1))
+Becoming.ContinuingRevision.one_cycle_at : ∀ (e m u g n : Nat),
+  Generative.Trace (Becoming.ContinuingRevision.selected (e + 9)) (Becoming.ContinuingRevision.readyAt m u g n)
+    (Becoming.ContinuingRevision.word n) (Becoming.ContinuingRevision.readyAt (m + e) (u + 9) (g + (e + 9)) (n + 1))
+Becoming.ContinuingRevision.cycles_at : ∀ (e m u g k : Nat),
+  ∃ m' u' g',
+    Generative.Trace (Becoming.ContinuingRevision.selected (e + 9)) (Becoming.ContinuingRevision.readyAt m u g 0)
+      (Becoming.ContinuingRevision.history k) (Becoming.ContinuingRevision.readyAt m' u' g' k)
+Becoming.ContinuingRevision.fail_step : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.ready n)
+    (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (n + 1) true))
+    (Becoming.ContinuingRevision.failed n)
+Becoming.ContinuingRevision.plan_step : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.failed n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.revise) (Becoming.ContinuingRevision.planned n)
+Becoming.ContinuingRevision.first_contact : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.planned n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe) (Becoming.ContinuingRevision.contacted n)
+Becoming.ContinuingRevision.second_contact : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.contacted n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe) (Becoming.ContinuingRevision.acquired n)
+Becoming.ContinuingRevision.install_step : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.acquired n)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.install)
+    (Becoming.ContinuingRevision.installed n)
+Becoming.ContinuingRevision.use_step : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.installed n)
+    (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (n + 1) true))
+    (Becoming.ContinuingRevision.successful n)
+Becoming.ContinuingRevision.renew_step : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.successful n)
+    Becoming.ContinuingRevision.Act.renew (Becoming.ContinuingRevision.ready (n + 1))
+Becoming.ContinuingRevision.one_cycle : ∀ (n : Nat),
+  Generative.Trace (Becoming.ContinuingRevision.selected 9) (Becoming.ContinuingRevision.ready n)
+    (Becoming.ContinuingRevision.word n) (Becoming.ContinuingRevision.ready (n + 1))
+Becoming.ContinuingRevision.all_cycles : ∀ (n : Nat),
+  Generative.Trace (Becoming.ContinuingRevision.selected 9) (Becoming.ContinuingRevision.ready 0)
+    (Becoming.ContinuingRevision.history n) (Becoming.ContinuingRevision.ready n)
+Becoming.ContinuingRevision.all_cycles_amounts : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.ready n).work.fuel = 9 ∧
+    (Becoming.ContinuingRevision.ready n).work.used = 9 * n + 6 ∧
+      (Becoming.ContinuingRevision.ready n).received = 9 * n ∧ (Becoming.ContinuingRevision.ready n).carrier = n
+Becoming.ContinuingRevision.method_changed : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.planned n).work.method = [n + 1, n] ∧
+    (Becoming.ContinuingRevision.ready n).work.method = [n]
+@Becoming.ContinuingRevision.singleton_member : ∀ {x y : Nat}, x ∈ [y] → x = y
+Becoming.ContinuingRevision.next_absent : ∀ (n : Nat), ¬n + 1 ∈ [n]
+Becoming.ContinuingRevision.new_available_choice : ∀ (n : Nat),
+  (Becoming.Learning.Training.Through
+      (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.installed n).work) fun x =>
+      x (n + 1) = true) ∧
+    ¬Becoming.Learning.Training.Through
+        (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.ready n).work) fun x => x (n + 1) = true
+Becoming.ContinuingRevision.no_return_without_success : ∀ (n : Nat),
+  Becoming.ContinuingRevision.execute 9 (Becoming.ContinuingRevision.ready n) Becoming.ContinuingRevision.Act.renew =
+    none
+Becoming.ContinuingRevision.cut_return : ∀ (n : Nat),
+  Option.map (fun s => (s.work.fuel, s.enabled))
+      (Becoming.ContinuingRevision.execute 0 (Becoming.ContinuingRevision.successful n)
+        Becoming.ContinuingRevision.Act.renew) =
+    some (0, false)
+Becoming.ContinuingRevision.cut_stops_next : ∀ (n : Nat),
+  ((Becoming.ContinuingRevision.execute 0 (Becoming.ContinuingRevision.successful n)
+          Becoming.ContinuingRevision.Act.renew).bind
+      fun s =>
+      Becoming.ContinuingRevision.execute 0 s
+        (Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform (s.carrier + 1) true))) =
+    none
+@Becoming.ContinuingRevision.run_trace : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {as : List Becoming.ContinuingRevision.Act},
+  Becoming.ContinuingRevision.run yield s as = some t → Generative.Trace (Becoming.ContinuingRevision.P yield) s as t
+Becoming.ContinuingRevision.formation_enters : Generative.Trace (Becoming.ContinuingRevision.P 9)
+  Becoming.ContinuingRevision.seed Becoming.ContinuingRevision.formation (Becoming.ContinuingRevision.ready 0)
+Becoming.ContinuingRevision.formed_and_continues : ∀ (n : Nat),
+  Generative.Trace (Becoming.ContinuingRevision.P 9) Becoming.ContinuingRevision.seed
+    (Becoming.ContinuingRevision.formation ++ Becoming.ContinuingRevision.history n)
+    (Becoming.ContinuingRevision.ready n)
+Becoming.ContinuingRevision.reserve_consumed : Becoming.ContinuingRevision.run 9 (Becoming.ContinuingRevision.ready 0)
+    (Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.erase :: Becoming.ContinuingRevision.word 0) =
+  none
+Becoming.ContinuingRevision.frozen_plan_no_return : Becoming.ContinuingRevision.run 9
+    (Becoming.ContinuingRevision.failed 0)
+    [Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.frozen,
+      Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.probe,
+      Becoming.ContinuingRevision.Act.native Becoming.ReferencePlan.Act.install,
+      Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform 1 true),
+      Becoming.ContinuingRevision.Act.renew] =
+  none
+Becoming.ContinuingRevision.retired_choice : ∀ (n : Nat),
+  (Becoming.Learning.Training.Through
+      (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.installed n).work) fun x => x n = true) ∧
+    ¬Becoming.Learning.Training.Through
+        (Becoming.ReferencePlan.alikeOnInstalled (Becoming.ContinuingRevision.ready (n + 1)).work) fun x => x n = true
+Becoming.ContinuingRevision.clock_step : ∀ (q : Nat × Becoming.ContinuingRevision.Phase),
+  (Becoming.ContinuingRevision.selected 9).step (Becoming.ContinuingRevision.expose q)
+    (Becoming.ContinuingRevision.action q)
+    (Becoming.ContinuingRevision.expose (Becoming.ContinuingRevision.clockNext q))
+Becoming.ContinuingRevision.clock_cycles : ∀ (n : Nat),
+  Becoming.Law.orbit Becoming.ContinuingRevision.clockNext (0, Becoming.ContinuingRevision.Phase.ready) (7 * n) =
+    (n, Becoming.ContinuingRevision.Phase.ready)
+Becoming.ContinuingRevision.run_at_cycle : ∀ (n : Nat),
+  Becoming.ContinuingRevision.continuing.state (7 * n) = Becoming.ContinuingRevision.ready n
+Becoming.ContinuingRevision.run_installs : ∀ (n : Nat),
+  Becoming.ContinuingRevision.continuing.state (7 * n + 5) = Becoming.ContinuingRevision.installed n
+Becoming.ContinuingRevision.unbounded_succession : ∀ (n : Nat),
+  (Becoming.ContinuingRevision.continuing.state (7 * n)).carrier = n
+Becoming.ContinuingRevision.formation_to_run : Generative.Trace (Becoming.ContinuingRevision.P 9)
+  Becoming.ContinuingRevision.seed Becoming.ContinuingRevision.formation
+  (Becoming.ContinuingRevision.continuing.state 0)
+Becoming.ContinuingRevision.balanced : ∀ (yield : Nat),
+  Becoming.Stock.Balanced (Becoming.ContinuingRevision.P yield) (fun s => s.work.fuel) Becoming.ContinuingRevision.use
+    (Becoming.ContinuingRevision.returned yield)
+Becoming.ContinuingRevision.use_pos : ∀ (a : Becoming.ContinuingRevision.Act), 0 < Becoming.ContinuingRevision.use a
+@Becoming.ContinuingRevision.renew_of_returned : ∀ {yield : Nat} {a : Becoming.ContinuingRevision.Act},
+  0 < Becoming.ContinuingRevision.returned yield a → a = Becoming.ContinuingRevision.Act.renew
+Becoming.ContinuingRevision.no_return : ∀ (s : Becoming.ContinuingRevision.State) (a : Becoming.ContinuingRevision.Act),
+  s.work.fuel + Becoming.ContinuingRevision.returned 0 a = s.work.fuel
+Becoming.ContinuingRevision.no_run_without_return : ∀ (r : Becoming.Run (Becoming.ContinuingRevision.P 0)), False
+@Becoming.ContinuingRevision.renew_recurs : ∀ {yield : Nat} (r : Becoming.Run (Becoming.ContinuingRevision.P yield))
+  (N : Nat), ∃ n, N ≤ n ∧ r.act n = Becoming.ContinuingRevision.Act.renew
+@Becoming.ContinuingRevision.renew_needs_enabled : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State},
+  (Becoming.ContinuingRevision.P yield).step s Becoming.ContinuingRevision.Act.renew t → s.enabled = true
+@Becoming.ContinuingRevision.enabled_by_success : ∀ {yield : Nat} {s t : Becoming.ContinuingRevision.State}
+  {a : Becoming.ContinuingRevision.Act},
+  (Becoming.ContinuingRevision.P yield).step s a t →
+    t.enabled = true →
+      ∃ i,
+        a = Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform i true) ∧ t.work.response = true
+@Becoming.ContinuingRevision.success_recurs : ∀ {yield : Nat} (r : Becoming.Run (Becoming.ContinuingRevision.P yield))
+  (N : Nat),
+  ∃ n i,
+    N ≤ n ∧
+      r.act n = Becoming.ContinuingRevision.Act.native (Becoming.ReferencePlan.Act.perform i true) ∧
+        (r.state (n + 1)).work.response = true
+Becoming.ContinuingRevision.history_cycles : ∀ (k : Nat),
+  Becoming.ContinuingRevision.history k = Becoming.Stock.cycles Becoming.ContinuingRevision.word k
+Becoming.ContinuingRevision.word_use : ∀ (n : Nat),
+  Becoming.total (Becoming.ContinuingRevision.word n) Becoming.ContinuingRevision.use = 9
+Becoming.ContinuingRevision.word_return : ∀ (yield n : Nat),
+  Becoming.total (Becoming.ContinuingRevision.word n) (Becoming.ContinuingRevision.returned yield) = yield
+@Becoming.ContinuingRevision.cycles_need_yield : ∀ {yield : Nat} {s : Becoming.ContinuingRevision.State},
+  (∀ (k : Nat), Generative.Feasible (Becoming.ContinuingRevision.P yield) s (Becoming.ContinuingRevision.history k)) →
+    9 ≤ yield
+Becoming.ContinuingRevision.repeats_iff : ∀ (yield : Nat),
+  (∃ s,
+      ∀ (k : Nat),
+        Generative.Feasible (Becoming.ContinuingRevision.P yield) s (Becoming.ContinuingRevision.history k)) ↔
+    9 ≤ yield

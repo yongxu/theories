@@ -1,0 +1,210 @@
+Becoming.addParity_false : ∀ (b : Bool), Becoming.addParity b false = b
+Becoming.addParity_self : ∀ (b : Bool), Becoming.addParity b b = false
+Becoming.addParity_assoc : ∀ (a b c : Bool),
+  Becoming.addParity (Becoming.addParity a b) c = Becoming.addParity a (Becoming.addParity b c)
+Becoming.addParity_swap : ∀ (a b c d : Bool),
+  Becoming.addParity (Becoming.addParity a b) (Becoming.addParity c d) =
+    Becoming.addParity (Becoming.addParity a c) (Becoming.addParity b d)
+Becoming.addParity_and : ∀ (a b c : Bool), (Becoming.addParity a b && c) = Becoming.addParity (a && c) (b && c)
+Becoming.addParity_solve : ∀ (a b c : Bool), Becoming.addParity a b = c → a = Becoming.addParity c b
+Becoming.addParity_cancel : ∀ (a b c : Bool),
+  Becoming.addParity (Becoming.addParity b c) (Becoming.addParity (Becoming.addParity a b) c) = a
+Becoming.true_of_ne_false : ∀ (b : Bool), ¬b = false → b = true
+Becoming.and_congr_of : ∀ (b x y : Bool), (b = true → x = y) → (b && x) = (b && y)
+@Becoming.oddOver_add : ∀ {α : Type} (q r : α → Bool) (l : List α),
+  (Becoming.oddOver l fun a => Becoming.addParity (q a) (r a)) =
+    Becoming.addParity (Becoming.oddOver l q) (Becoming.oddOver l r)
+@Becoming.oddOver_and : ∀ {α : Type} (q : α → Bool) (b : Bool) (l : List α),
+  (Becoming.oddOver l fun a => q a && b) = (Becoming.oddOver l q && b)
+@Becoming.oddOver_congr : ∀ {α : Type} {q r : α → Bool} {l : List α},
+  (∀ (a : α), a ∈ l → q a = r a) → Becoming.oddOver l q = Becoming.oddOver l r
+@Becoming.oddOver_false : ∀ {α : Type} {q : α → Bool} {l : List α},
+  (∀ (a : α), a ∈ l → q a = false) → Becoming.oddOver l q = false
+@Becoming.oddOver_swap : ∀ {α β : Type} (q : α → β → Bool) (m : List β) (l : List α),
+  (Becoming.oddOver l fun a => Becoming.oddOver m (q a)) = Becoming.oddOver m fun b => Becoming.oddOver l fun a => q a b
+@Becoming.oddOver_map : ∀ {α β : Type} (g : α → β) (q : β → Bool) (l : List α),
+  Becoming.oddOver (List.map g l) q = Becoming.oddOver l fun a => q (g a)
+@Becoming.count_le_length : ∀ {α : Type} (q : α → Bool) (l : List α),
+  (Becoming.total l fun a => bif q a then 1 else 0) ≤ l.length
+@Becoming.count_all : ∀ {α : Type} {q : α → Bool} {l : List α},
+  (∀ (a : α), a ∈ l → q a = true) → (Becoming.total l fun a => bif q a then 1 else 0) = l.length
+Becoming.met_step : ∀ (b x : Bool) (n y : Nat),
+  y ≤ n → (x = true → y + 1 ≤ n) → Becoming.addParity b x = true → (bif !b then 1 else 0) + y + 1 ≤ n + 1
+@Becoming.even_le_of_odd : ∀ {α : Type} {q : α → Bool} {l : List α},
+  Becoming.oddOver l q = true → (Becoming.total l fun a => bif !q a then 1 else 0) + 1 ≤ l.length
+@Becoming.ParityConstraint.value_add : ∀ {C : Type} (xs : List C) (r p : Becoming.ParityConstraint C) (v : C → Bool),
+  Becoming.ParityConstraint.value xs (r.add p) v =
+    Becoming.addParity (Becoming.ParityConstraint.value xs r v) (Becoming.ParityConstraint.value xs p v)
+@Becoming.ParityConstraint.value_even : ∀ {C : Type} {xs : List C} {ks : List (Becoming.ParityConstraint C)},
+  (∀ (c : C), c ∈ xs → (Becoming.oddOver ks fun r => r.counts c) = false) →
+    ∀ (v : C → Bool), (Becoming.oddOver ks fun r => Becoming.ParityConstraint.value xs r v) = false
+@Becoming.ParityConstraint.unmet_odd : ∀ {C : Type} {xs : List C} {ks : List (Becoming.ParityConstraint C)},
+  Becoming.ParityConstraint.Contradicts xs ks →
+    ∀ (v : C → Bool),
+      (Becoming.oddOver ks fun r => Becoming.addParity (Becoming.ParityConstraint.value xs r v) r.odd) = true
+@Becoming.ParityConstraint.counts_after : ∀ {C : Type} {x : C} {p r : Becoming.ParityConstraint C},
+  p.counts x = true → ∀ (b : Bool), r.counts x = b → (bif b then r.add p else r).counts x = false
+@Becoming.ParityConstraint.eliminate_counts : ∀ {C : Type} {x : C} {p : Becoming.ParityConstraint C},
+  p.counts x = true → ∀ (r : Becoming.ParityConstraint C), (Becoming.ParityConstraint.eliminate x p r).counts x = false
+@Becoming.ParityConstraint.met_after : ∀ {C : Type} {xs : List C} {x : C} {p r : Becoming.ParityConstraint C}
+  {v v' : C → Bool},
+  v x = Becoming.addParity p.odd (Becoming.ParityConstraint.value xs p v') →
+    Becoming.ParityConstraint.value xs r v = Becoming.ParityConstraint.value xs r v' →
+      ∀ (b : Bool),
+        r.counts x = b →
+          Becoming.ParityConstraint.value xs (bif b then r.add p else r) v' = (bif b then r.add p else r).odd →
+            Becoming.addParity (r.counts x && v x) (Becoming.ParityConstraint.value xs r v) = r.odd
+@Becoming.ParityConstraint.pulled : ∀ {C : Type} {rs : List (Becoming.ParityConstraint C)}
+  {p r : Becoming.ParityConstraint C},
+  p ∈ rs →
+    r ∈ rs →
+      ∀ {rest ks : List (Becoming.ParityConstraint C)},
+        (∀ (k : Becoming.ParityConstraint C), k ∈ ks → k ∈ rs) →
+          (∀ (c : C), (Becoming.oddOver ks fun r => r.counts c) = Becoming.oddOver rest fun r => r.counts c) →
+            ((Becoming.oddOver ks fun r => r.odd) = Becoming.oddOver rest fun r => r.odd) →
+              ∀ (b : Bool),
+                ∃ ks₀,
+                  (∀ (k : Becoming.ParityConstraint C), k ∈ ks₀ → k ∈ rs) ∧
+                    (∀ (c : C),
+                        (Becoming.oddOver ks₀ fun r => r.counts c) =
+                          Becoming.oddOver ((bif b then r.add p else r) :: rest) fun r => r.counts c) ∧
+                      (Becoming.oddOver ks₀ fun r => r.odd) =
+                        Becoming.oddOver ((bif b then r.add p else r) :: rest) fun r => r.odd
+@Becoming.ParityConstraint.pull_back : ∀ {C : Type} {rs : List (Becoming.ParityConstraint C)} {x : C}
+  {p : Becoming.ParityConstraint C},
+  p ∈ rs →
+    ∀ (ks' : List (Becoming.ParityConstraint C)),
+      (∀ (k : Becoming.ParityConstraint C), k ∈ ks' → k ∈ List.map (Becoming.ParityConstraint.eliminate x p) rs) →
+        ∃ ks,
+          (∀ (k : Becoming.ParityConstraint C), k ∈ ks → k ∈ rs) ∧
+            (∀ (c : C), (Becoming.oddOver ks fun r => r.counts c) = Becoming.oddOver ks' fun r => r.counts c) ∧
+              (Becoming.oddOver ks fun r => r.odd) = Becoming.oddOver ks' fun r => r.odd
+@Becoming.ParityConstraint.met_or_contradicts : ∀ {C : Type} [DecidableEq C] (xs : List C),
+  Becoming.Distinct xs →
+    ∀ (rs : List (Becoming.ParityConstraint C)),
+      (∃ v, ∀ (r : Becoming.ParityConstraint C), r ∈ rs → Becoming.ParityConstraint.value xs r v = r.odd) ∨
+        ∃ ks, (∀ (k : Becoming.ParityConstraint C), k ∈ ks → k ∈ rs) ∧ Becoming.ParityConstraint.Contradicts xs ks
+@Becoming.ParitySystem.local_ : ∀ {K C : Type} (S : Becoming.ParitySystem K C), Becoming.Local S.within S.support
+@Becoming.ParitySystem.contradicts_iff : ∀ {K C : Type} (S : Becoming.ParitySystem K C) (ks : List K),
+  S.Contradicts ks ↔ Becoming.ParityConstraint.Contradicts S.claims (List.map S.constraint ks)
+@Becoming.ParitySystem.unmet_odd : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks → ∀ (v : C → Bool), (Becoming.oddOver ks fun k => Becoming.addParity (S.value k v) (S.odd k)) = true
+@Becoming.ParitySystem.unmet_of_contradicts : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks → ∀ (v : C → Bool), ∃ k, k ∈ ks ∧ ¬S.support k v
+@Becoming.ParitySystem.contradicts_noGlobal : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks → Becoming.NoGlobal S.support
+@Becoming.ParitySystem.met_le : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks → ∀ (v : C → Bool), (Becoming.total ks fun k => bif S.met k v then 1 else 0) + 1 ≤ ks.length
+@Becoming.ParitySystem.mixture_le : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K},
+  S.Contradicts ks →
+    ∀ (mix : List (C → Bool)),
+      (Becoming.total mix fun v => Becoming.total ks fun k => bif S.met k v then 1 else 0) + mix.length ≤
+        Becoming.total mix fun x => ks.length
+@Becoming.ParitySystem.indexed_met : ∀ {K C : Type} {S : Becoming.ParitySystem K C} {ks : List K}
+  (choose : K → C → Bool),
+  (∀ (k : K), k ∈ ks → S.support k (choose k)) →
+    (Becoming.total ks fun k => bif S.met k (choose k) then 1 else 0) = ks.length
+@Becoming.ParitySystem.lift_selection : ∀ {K C : Type} (S : Becoming.ParitySystem K C) {all : List K}
+  (rs : List (Becoming.ParityConstraint C)),
+  (∀ (r : Becoming.ParityConstraint C), r ∈ rs → r ∈ List.map S.constraint all) →
+    ∃ ks, (∀ (k : K), k ∈ ks → k ∈ all) ∧ List.map S.constraint ks = rs
+@Becoming.ParitySystem.global_or_contradicts : ∀ {K C : Type} (S : Becoming.ParitySystem K C) [DecidableEq C],
+  Becoming.Distinct S.claims →
+    ∀ (all : List K), (∃ v, ∀ (k : K), k ∈ all → S.support k v) ∨ ∃ ks, (∀ (k : K), k ∈ ks → k ∈ all) ∧ S.Contradicts ks
+@Becoming.ParitySystem.noGlobal_iff : ∀ {K C : Type} (S : Becoming.ParitySystem K C) [DecidableEq C],
+  Becoming.Distinct S.claims →
+    ∀ {all : List K}, (∀ (k : K), k ∈ all) → (Becoming.NoGlobal S.support ↔ ∃ ks, S.Contradicts ks)
+@Becoming.ParitySystem.glues_iff : ∀ {K C : Type} (S : Becoming.ParitySystem K C) [DecidableEq C],
+  Becoming.Distinct S.claims →
+    ∀ {all : List K},
+      (∀ (k : K), k ∈ all) →
+        ((∃ X, X.within = S.within ∧ X.Respects S.support () ∧ X.Glues ()) ↔ ¬∃ ks, S.Contradicts ks)
+Becoming.Specker.two_iff : ∀ (x y : Bool), Becoming.addParity x (Becoming.addParity y false) = true ↔ x ≠ y
+Becoming.Specker.two_iff_swap : ∀ (x y : Bool), Becoming.addParity x (Becoming.addParity y false) = true ↔ y ≠ x
+Becoming.Specker.support_iff : ∀ (k : Becoming.Specker.Opening) (v : Becoming.Specker.Box → Bool),
+  Becoming.Specker.paritySystem.support k v ↔ Becoming.Specker.support k v
+Becoming.Specker.openings_contradict : Becoming.Specker.paritySystem.Contradicts Becoming.Specker.openings
+Becoming.Specker.mixture_le : ∀ (mix : List (Becoming.Specker.Box → Bool)),
+  (Becoming.total mix fun v =>
+        Becoming.total Becoming.Specker.openings fun k => bif Becoming.Specker.paritySystem.met k v then 1 else 0) +
+      mix.length ≤
+    Becoming.total mix fun x => 3
+Becoming.Specker.indexed_met : (Becoming.total Becoming.Specker.openings fun k =>
+    bif Becoming.Specker.paritySystem.met k (Becoming.Specker.world.shows () k) then 1 else 0) =
+  3
+Becoming.CHSH.two_iff : ∀ (x y b : Bool),
+  Becoming.addParity x (Becoming.addParity y false) = b ↔ Becoming.addParity x y = b
+Becoming.CHSH.support_iff : ∀ (x y : Bool) (v : Becoming.CHSH.Outcome → Bool),
+  Becoming.CHSH.paritySystem.support (x, y) v ↔
+    Becoming.addParity (v (Becoming.CHSH.Outcome.left x)) (v (Becoming.CHSH.Outcome.right y)) = (x && y)
+Becoming.CHSH.pairs_contradict : Becoming.CHSH.paritySystem.Contradicts Becoming.CHSH.pairs
+Becoming.CHSH.mixture_le : ∀ (mix : List (Becoming.CHSH.Outcome → Bool)),
+  (Becoming.total mix fun v =>
+        Becoming.total Becoming.CHSH.pairs fun k => bif Becoming.CHSH.paritySystem.met k v then 1 else 0) +
+      mix.length ≤
+    Becoming.total mix fun x => 4
+Becoming.CHSH.inPair_support : ∀ (k : Bool × Bool), Becoming.CHSH.paritySystem.support k (Becoming.CHSH.inPair k)
+Becoming.CHSH.indexed_met : (Becoming.total Becoming.CHSH.pairs fun k =>
+    bif Becoming.CHSH.paritySystem.met k (Becoming.CHSH.inPair k) then 1 else 0) =
+  4
+Becoming.Square.three_iff : ∀ (x y z b : Bool),
+  Becoming.addParity x (Becoming.addParity y (Becoming.addParity z false)) = b ↔ (x ^^ (y ^^ z)) = b
+@Becoming.Square.not_beyond : ∀ {n : Nat}, n + 3 < 3 → False
+Becoming.Square.support_iff : ∀ (l : Becoming.Square.Line) (v : Becoming.Square.Cell → Bool),
+  Becoming.Square.paritySystem.support l v ↔ Becoming.Square.support l v
+Becoming.Square.cells_even : ∀ (p : Becoming.Square.Cell),
+  p ∈ Becoming.Square.cells → (Becoming.oddOver Becoming.Square.lines fun l => Becoming.Square.counts l p) = false
+Becoming.Square.lines_contradict : Becoming.Square.paritySystem.Contradicts Becoming.Square.lines
+Becoming.Square.mixture_le : ∀ (mix : List (Becoming.Square.Cell → Bool)),
+  (Becoming.total mix fun v =>
+        Becoming.total Becoming.Square.lines fun l => bif Becoming.Square.paritySystem.met l v then 1 else 0) +
+      mix.length ≤
+    Becoming.total mix fun x => 6
+Becoming.Square.inLine_support : ∀ (l : Becoming.Square.Line), Becoming.Square.support l (Becoming.Square.inLine l)
+Becoming.Square.indexed_met : (Becoming.total Becoming.Square.lines fun l =>
+    bif Becoming.Square.paritySystem.met l (Becoming.Square.inLine l) then 1 else 0) =
+  6
+Becoming.Gluing.Cycle.length_edges : ∀ (n : Nat), (Becoming.Gluing.Cycle.edges n).length = n + 1
+@Becoming.Gluing.Cycle.lt_of_mem_down : ∀ {n k : Nat}, k ∈ Becoming.Gluing.Cycle.down n → k < n
+Becoming.Gluing.Cycle.shift : ∀ (a b d : Bool),
+  Becoming.addParity (Becoming.addParity b d) (Becoming.addParity a b) = Becoming.addParity a d
+Becoming.Gluing.Cycle.cross : ∀ (a b : Bool),
+  Becoming.addParity (Becoming.addParity b a) (Becoming.addParity a b) = false
+Becoming.Gluing.Cycle.returns : ∀ (a p : Bool), Becoming.addParity a (Becoming.addParity p a) = p
+Becoming.Gluing.Cycle.eq_of_even : ∀ (c p : Bool), Becoming.addParity c p = false → p = c
+@Becoming.Gluing.Cycle.beq_of_ne : ∀ {a b : Nat}, a ≠ b → a.beq b = false
+Becoming.Gluing.Cycle.telescope : ∀ (c n : Nat),
+  (Becoming.oddOver (Becoming.Gluing.Cycle.down n) fun k => Becoming.addParity (c.beq k) (c.beq (k + 1))) =
+    Becoming.addParity (c.beq 0) (c.beq n)
+Becoming.Gluing.Cycle.counts_even : ∀ (n : Nat) (pol : Nat → Bool) (close : Bool) (c : Nat),
+  (Becoming.oddOver (Becoming.Gluing.Cycle.edges n) fun k => (Becoming.Gluing.Cycle.system n pol close).counts k c) =
+    false
+@Becoming.Gluing.Cycle.contradicts : ∀ {n : Nat} {pol : Nat → Bool} {close : Bool},
+  Becoming.Gluing.Cycle.polarity n pol close = true →
+    (Becoming.Gluing.Cycle.system n pol close).Contradicts (Becoming.Gluing.Cycle.edges n)
+@Becoming.Gluing.Cycle.mixture_le : ∀ {n : Nat} {pol : Nat → Bool} {close : Bool},
+  Becoming.Gluing.Cycle.polarity n pol close = true →
+    ∀ (mix : List (Nat → Bool)),
+      (Becoming.total mix fun v =>
+            Becoming.total (Becoming.Gluing.Cycle.edges n) fun k =>
+              bif (Becoming.Gluing.Cycle.system n pol close).met k v then 1 else 0) +
+          mix.length ≤
+        Becoming.total mix fun x => n + 1
+Becoming.Gluing.Cycle.miss : ∀ (x : Nat → Bool) {j m : Nat},
+  m ≤ j → (Becoming.oddOver (Becoming.Gluing.Cycle.down m) fun c => c.beq j && x c) = false
+Becoming.Gluing.Cycle.pick : ∀ (x : Nat → Bool) {j m : Nat},
+  j < m → (Becoming.oddOver (Becoming.Gluing.Cycle.down m) fun c => c.beq j && x c) = x j
+Becoming.Gluing.Cycle.value_pair : ∀ (n : Nat) (v : Nat → Bool) {a b : Nat},
+  a < n + 1 →
+    b < n + 1 →
+      (Becoming.oddOver (Becoming.Gluing.Cycle.down (n + 1)) fun c => Becoming.addParity (c.beq a) (c.beq b) && v c) =
+        Becoming.addParity (v a) (v b)
+@Becoming.Gluing.Cycle.walk_meets : ∀ {n : Nat} {pol : Nat → Bool} {close : Bool},
+  Becoming.Gluing.Cycle.polarity n pol close = false →
+    ∀ (k : Option Nat),
+      k ∈ Becoming.Gluing.Cycle.edges n →
+        (Becoming.Gluing.Cycle.system n pol close).support k (Becoming.Gluing.Cycle.walk pol)
+Becoming.Gluing.Cycle.met_iff_even : ∀ (n : Nat) (pol : Nat → Bool) (close : Bool),
+  (∃ v,
+      ∀ (k : Option Nat), k ∈ Becoming.Gluing.Cycle.edges n → (Becoming.Gluing.Cycle.system n pol close).support k v) ↔
+    Becoming.Gluing.Cycle.polarity n pol close = false

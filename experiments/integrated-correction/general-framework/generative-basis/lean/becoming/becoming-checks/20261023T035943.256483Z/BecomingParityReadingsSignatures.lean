@@ -1,0 +1,11 @@
+import Becoming.ParityReadings
+#check @Becoming.Contextual.glues_iff_freeAt
+#check @Becoming.ParitySystem.met_congr
+#check @Becoming.ParitySystem.world_free_iff
+#check @Becoming.ParitySystem.world_met_le
+#check @Becoming.ParitySystem.freeFrame_iff
+#check @Becoming.Square.QuantumAt.not_glues
+#check @Becoming.Square.QuantumAt.not_freeAt
+#check @Becoming.Square.QuantumAt.no_free_frame
+#check @Becoming.Square.quantum_at
+#check @Becoming.Square.quantum_readings

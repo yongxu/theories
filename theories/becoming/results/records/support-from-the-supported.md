@@ -111,6 +111,7 @@ Ren wrote that being generative is that “its existence creates more possibilit
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `Becoming.Web.GainsSupport`, `Becoming.Web.LosesSupport`, `Becoming.Web.Unloosened`, `Becoming.Web.Untightened`, `Becoming.Web.GainsSupport.rises`, `Becoming.Web.LosesSupport.falls`, `Becoming.Flow.rise_given_by_supported`, `Becoming.Flow.gains_from_supported`, `Becoming.Flow.unsupported_stays`, `Becoming.Flow.nothing_supported_stays`, `Becoming.Restoring.Adapting.restores`, `Becoming.Restoring.Inflow.restores`, `Becoming.Restoring.Idle.restores`, `Becoming.Restoring.Carried.restores`, `Becoming.Restoring.Spontaneous.restores`
 

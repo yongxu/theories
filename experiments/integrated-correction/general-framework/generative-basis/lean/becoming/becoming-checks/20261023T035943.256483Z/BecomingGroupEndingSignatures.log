@@ -1,0 +1,369 @@
+@Becoming.GroupEnding.excess_pos_of_lt : ∀ {x y : Nat}, y < x → 0 < Becoming.excess x y
+@Becoming.GroupEnding.among_not_against : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat},
+  Becoming.GroupEnding.Ended gs w a → Becoming.SelectionLevels.discordAmong gs w a = 0
+@Becoming.GroupEnding.rises_iff_ended : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.GroupEnding.Ended gs w a →
+      (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+        gs.length * Becoming.SelectionLevels.discordWithin gs w a <
+          gs.length * Becoming.SelectionLevels.concordWithin gs w a + Becoming.SelectionLevels.concordAmong gs w a)
+@Becoming.GroupEnding.not_against_of_ended : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∃ c, ∀ (p : α), p ∈ g → a p = c) →
+      Becoming.GroupEnding.Ended gs w a →
+        Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a ≤
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a
+@Becoming.GroupEnding.pairs_pos : ∀ {α : Type} {ps : List α} {F : α → α → Nat} {p q : α},
+  p ∈ ps → q ∈ ps → 0 < F p q → 0 < Becoming.total ps fun p' => Becoming.total ps (F p')
+@Becoming.GroupEnding.rises_of_ended : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∃ c, ∀ (p : α), p ∈ g → a p = c) →
+      Becoming.GroupEnding.Ended gs w a →
+        ∀ {g h : List α},
+          g ∈ gs →
+            h ∈ gs →
+              Becoming.total h a < Becoming.total g a →
+                0 < Becoming.total g w →
+                  Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+                    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a
+@Becoming.GroupEnding.means_not_against : ∀ {α : Type} {gs : List (List α)} {c : List α → Nat} {w a : α → Nat},
+  Becoming.GroupEnding.EndedBy gs c w a → Becoming.SelectionLevels.discordMeans gs c w a = 0
+@Becoming.GroupEnding.rises_iff_ended_sized : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+  {n : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    0 < n →
+      Becoming.GroupEnding.EndedBy gs c w a →
+        (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+          n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.discordWithinBy gs c w a <
+            n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.concordWithinBy gs c w a +
+              Becoming.SelectionLevels.concordMeans gs c w a)
+@Becoming.GroupEnding.mem_whole : ∀ {α : Type} {gs : List (List α)} {h : List α} {p : α},
+  h ∈ gs → p ∈ h → p ∈ Becoming.SelectionLevels.whole gs
+@Becoming.GroupEnding.Flow.inactive_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W → ∀ {t : Nat} {g : X}, ¬W.active t g → ∀ (x : X), ¬L.DescendsAt W t x g
+@Becoming.GroupEnding.Flow.family_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {ds : List X} {m : Nat},
+          (∀ (t : Nat) (f : X),
+              f ∈ L.present t →
+                ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                W.stock ds T < n + m →
+                  ∀ (k : Nat) {g e : X},
+                    e ∈ ds →
+                      W.requires (T + n + k) g e →
+                        m ≤ W.need (T + n + k) g e → ∀ (x : X), ¬L.DescendsAt W (T + n + k) x g
+@Becoming.GroupEnding.Flow.excess_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : X} {m : Nat},
+          (∀ (t : Nat) (f : X), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+                W.level T c < n + m →
+                  ∀ (k : Nat) {g : X},
+                    W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ∀ (x : X), ¬L.DescendsAt W (T + n + k) x g
+@Becoming.GroupEnding.Flow.offspring_zero : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat} {p : X}, p ∈ G.family t → ¬W.active t p → G.offspringNumber t p = 0
+@Becoming.GroupEnding.Flow.group_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat} {h : List X},
+          (∀ (p : X), p ∈ h → p ∈ G.family t) →
+            (∀ (p : X), p ∈ h → ¬W.active t p) → Becoming.total h (G.offspringNumber t) = 0
+@Becoming.GroupEnding.Flow.ended_of_inactive : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat} {gs : List (List X)},
+          Becoming.SelectionLevels.whole gs = G.family t →
+            ∀ {a : X → Nat},
+              (∀ (g h : List X),
+                  g ∈ gs → h ∈ gs → Becoming.total h a < Becoming.total g a → ∀ (p : X), p ∈ h → ¬W.active t p) →
+                Becoming.GroupEnding.Ended gs (G.offspringNumber t) a
+@Becoming.GroupEnding.Flow.raises_of_inactive : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t m : Nat} (gs : List (List X)),
+          Becoming.SelectionLevels.whole gs = G.family t →
+            (∀ (g : List X), g ∈ gs → g.length = m) →
+              (∀ (g : List X), g ∈ gs → ∃ c, ∀ (p : X), p ∈ g → G.amount t p = c) →
+                Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+                  (∀ (g h : List X),
+                      g ∈ gs →
+                        h ∈ gs →
+                          Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                            ∀ (p : X), p ∈ h → ¬W.active t p) →
+                    ∀ {g h : List X},
+                      g ∈ gs →
+                        h ∈ gs →
+                          Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                            0 < Becoming.total g (G.offspringNumber t) → G.Raises t
+@Becoming.GroupEnding.Flow.rises_iff_inactive : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t m : Nat} (gs : List (List X)),
+          Becoming.SelectionLevels.whole gs = G.family t →
+            (∀ (g : List X), g ∈ gs → g.length = m) →
+              Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+                (∀ (g h : List X),
+                    g ∈ gs →
+                      h ∈ gs →
+                        Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                          ∀ (p : X), p ∈ h → ¬W.active t p) →
+                  (G.Raises t ↔
+                    gs.length * Becoming.SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) <
+                      gs.length * Becoming.SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) +
+                        Becoming.SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t))
+@Becoming.GroupEnding.Flow.endedBy_of_inactive : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat} {gs : List (List X)},
+          Becoming.SelectionLevels.whole gs = G.family t →
+            ∀ {c : List X → Nat} {a : X → Nat},
+              (∀ (g h : List X),
+                  g ∈ gs →
+                    h ∈ gs → c h * Becoming.total h a < c g * Becoming.total g a → ∀ (p : X), p ∈ h → ¬W.active t p) →
+                Becoming.GroupEnding.EndedBy gs c (G.offspringNumber t) a
+@Becoming.GroupEnding.Flow.rises_iff_inactive_sized : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t n : Nat} (gs : List (List X)) (c : List X → Nat),
+          Becoming.SelectionLevels.whole gs = G.family t →
+            (∀ (g : List X), g ∈ gs → g.length * c g = n) →
+              0 < n →
+                Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+                  (∀ (g h : List X),
+                      g ∈ gs →
+                        h ∈ gs →
+                          c h * Becoming.total h (G.amount t) < c g * Becoming.total g (G.amount t) →
+                            ∀ (p : X), p ∈ h → ¬W.active t p) →
+                    (G.Raises t ↔
+                      n * (Becoming.SelectionLevels.whole gs).length *
+                          Becoming.SelectionLevels.discordWithinBy gs c (G.offspringNumber t) (G.amount t) <
+                        n * (Becoming.SelectionLevels.whole gs).length *
+                            Becoming.SelectionLevels.concordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+                          Becoming.SelectionLevels.concordMeans gs c (G.offspringNumber t) (G.amount t))
+@Becoming.GroupEnding.Flow.coupled_end_together : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {ds : List X} {m : Nat},
+          (∀ (t : Nat) (f : X),
+              f ∈ L.present t →
+                ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                W.stock ds T < n + m →
+                  ∀ (k : Nat) {G : Becoming.SelectionTerm.Generations X},
+                    Becoming.SelectionTerm.Flow.Descended L W G →
+                      ∀ {gs : List (List X)},
+                        (∀ (h : List X) (p : X), h ∈ gs → p ∈ h → p ∈ G.family (T + n + k)) →
+                          (∀ (h : List X) (p : X),
+                              h ∈ gs → p ∈ h → ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) →
+                            ∀ (a : X → Nat),
+                              (∀ (h : List X), h ∈ gs → Becoming.total h (G.offspringNumber (T + n + k)) = 0) ∧
+                                Becoming.SelectionLevels.concordAmong gs (G.offspringNumber (T + n + k)) a = 0 ∧
+                                  Becoming.SelectionLevels.discordAmong gs (G.offspringNumber (T + n + k)) a = 0
+@Becoming.GroupEnding.Flow.ended_of_family : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {ds : List X} {m : Nat},
+          (∀ (t : Nat) (f : X),
+              f ∈ L.present t →
+                ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                W.stock ds T < n + m →
+                  ∀ (k : Nat) {G : Becoming.SelectionTerm.Generations X},
+                    Becoming.SelectionTerm.Flow.Descended L W G →
+                      ∀ {gs : List (List X)},
+                        Becoming.SelectionLevels.whole gs = G.family (T + n + k) →
+                          ∀ {a : X → Nat},
+                            (∀ (g h : List X),
+                                g ∈ gs →
+                                  h ∈ gs →
+                                    Becoming.total h a < Becoming.total g a →
+                                      ∀ (p : X),
+                                        p ∈ h → ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) →
+                              Becoming.GroupEnding.Ended gs (G.offspringNumber (T + n + k)) a
+@Becoming.GroupEnding.Flow.all_end : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat}, (∀ (p : X), p ∈ G.family t → ¬W.active t p) → G.size (t + 1) = 0
+@Becoming.GroupEnding.Flow.lineages_none_against : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {gs : List (List X)},
+          Becoming.SelectionLevels.whole gs = G.family 0 →
+            (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+              ∀ {v : List X → Nat},
+                (∀ (g : List X), g ∈ gs → ∀ (p : X), p ∈ g → G.amount 0 p = v g) →
+                  ∀ {t : Nat},
+                    (∀ (g h : List X),
+                        g ∈ gs →
+                          h ∈ gs → v h < v g → ∀ (p : X), p ∈ Becoming.SelectionLevels.lineage G h t → ¬W.active t p) →
+                      G.discordAt t = 0
+@Becoming.GroupEnding.Flow.lineages_not_lower : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {gs : List (List X)},
+          Becoming.SelectionLevels.whole gs = G.family 0 →
+            (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+              ∀ {v : List X → Nat},
+                (∀ (g : List X), g ∈ gs → ∀ (p : X), p ∈ g → G.amount 0 p = v g) →
+                  ∀ {T : Nat},
+                    (∀ (t : Nat),
+                        t < T →
+                          ∀ (g h : List X),
+                            g ∈ gs →
+                              h ∈ gs →
+                                v h < v g → ∀ (p : X), p ∈ Becoming.SelectionLevels.lineage G h t → ¬W.active t p) →
+                      G.size T * G.sum 0 ≤ G.size 0 * G.sum T
+@Becoming.GroupEnding.Flow.lineages_raises : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {gs : List (List X)},
+          Becoming.SelectionLevels.whole gs = G.family 0 →
+            (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+              ∀ {v : List X → Nat},
+                (∀ (g : List X), g ∈ gs → ∀ (p : X), p ∈ g → G.amount 0 p = v g) →
+                  ∀ {t : Nat},
+                    (∀ (g h : List X),
+                        g ∈ gs →
+                          h ∈ gs → v h < v g → ∀ (p : X), p ∈ Becoming.SelectionLevels.lineage G h t → ¬W.active t p) →
+                      ∀ {g h : List X},
+                        g ∈ gs →
+                          h ∈ gs →
+                            v h < v g →
+                              ∀ {p q : X},
+                                p ∈ Becoming.SelectionLevels.lineage G g t →
+                                  q ∈ Becoming.SelectionLevels.lineage G h t → 0 < G.offspringNumber t p → G.Raises t
+Becoming.GroupEnding.uniform : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.GroupEnding.keepingFirst →
+    ∃ c, ∀ (p : Becoming.SelectionLevels.Member), p ∈ g → Becoming.GroupEnding.keeps p = c
+Becoming.GroupEnding.equal : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.GroupEnding.keepingFirst → g.length = 2
+Becoming.GroupEnding.Outweighed.outweighed : Becoming.GroupEnding.Ended Becoming.GroupEnding.keepingFirst
+    Becoming.GroupEnding.Outweighed.offspring Becoming.SelectionLevels.holds ∧
+  Becoming.SelectionLevels.concordWithin Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighed.offspring
+        Becoming.SelectionLevels.holds =
+      0 ∧
+    Becoming.SelectionLevels.discordWithin Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighed.offspring
+          Becoming.SelectionLevels.holds =
+        1 ∧
+      Becoming.SelectionLevels.concordAmong Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighed.offspring
+            Becoming.SelectionLevels.holds =
+          3 ∧
+        Becoming.SelectionLevels.discordAmong Becoming.GroupEnding.keepingFirst
+              Becoming.GroupEnding.Outweighed.offspring Becoming.SelectionLevels.holds =
+            0 ∧
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst)
+                Becoming.GroupEnding.Outweighed.offspring Becoming.SelectionLevels.holds =
+              2 ∧
+            Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst)
+                Becoming.GroupEnding.Outweighed.offspring Becoming.SelectionLevels.holds =
+              1
+Becoming.GroupEnding.Outweighed.keeping_rises : Becoming.SelectionTerm.discord
+    (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst) Becoming.GroupEnding.Outweighed.offspring
+    Becoming.GroupEnding.keeps <
+  Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst)
+    Becoming.GroupEnding.Outweighed.offspring Becoming.GroupEnding.keeps
+Becoming.GroupEnding.Outweighs.outweighs : Becoming.GroupEnding.Ended Becoming.GroupEnding.keepingFirst
+    Becoming.GroupEnding.Outweighs.offspring Becoming.SelectionLevels.holds ∧
+  Becoming.SelectionLevels.concordWithin Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighs.offspring
+        Becoming.SelectionLevels.holds =
+      0 ∧
+    Becoming.SelectionLevels.discordWithin Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighs.offspring
+          Becoming.SelectionLevels.holds =
+        4 ∧
+      Becoming.SelectionLevels.concordAmong Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighs.offspring
+            Becoming.SelectionLevels.holds =
+          6 ∧
+        Becoming.SelectionLevels.discordAmong Becoming.GroupEnding.keepingFirst Becoming.GroupEnding.Outweighs.offspring
+              Becoming.SelectionLevels.holds =
+            0 ∧
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst)
+                Becoming.GroupEnding.Outweighs.offspring Becoming.SelectionLevels.holds =
+              2 ∧
+            Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.GroupEnding.keepingFirst)
+                Becoming.GroupEnding.Outweighs.offspring Becoming.SelectionLevels.holds =
+              4
+Becoming.GroupEnding.Exhausted.first_listed : Becoming.SelectionLevels.whole Becoming.GroupEnding.Exhausted.first =
+  Becoming.GroupEnding.Exhausted.G.family 0
+Becoming.GroupEnding.Exhausted.next_listed : Becoming.SelectionLevels.whole Becoming.GroupEnding.Exhausted.next =
+  Becoming.GroupEnding.Exhausted.G.family 1
+Becoming.GroupEnding.Exhausted.first_step : Becoming.total [5, 7] (Becoming.GroupEnding.Exhausted.G.offspringNumber 0) =
+    0 ∧
+  Becoming.SelectionLevels.concordWithin Becoming.GroupEnding.Exhausted.first
+        (Becoming.GroupEnding.Exhausted.G.offspringNumber 0) (Becoming.GroupEnding.Exhausted.G.amount 0) =
+      0 ∧
+    Becoming.SelectionLevels.discordWithin Becoming.GroupEnding.Exhausted.first
+          (Becoming.GroupEnding.Exhausted.G.offspringNumber 0) (Becoming.GroupEnding.Exhausted.G.amount 0) =
+        2 ∧
+      Becoming.SelectionLevels.concordAmong Becoming.GroupEnding.Exhausted.first
+            (Becoming.GroupEnding.Exhausted.G.offspringNumber 0) (Becoming.GroupEnding.Exhausted.G.amount 0) =
+          10 ∧
+        Becoming.SelectionLevels.discordAmong Becoming.GroupEnding.Exhausted.first
+              (Becoming.GroupEnding.Exhausted.G.offspringNumber 0) (Becoming.GroupEnding.Exhausted.G.amount 0) =
+            0 ∧
+          Becoming.GroupEnding.Exhausted.G.Raises 0
+Becoming.GroupEnding.Exhausted.alike : ∀ (g : List Nat),
+  g ∈ Becoming.GroupEnding.Exhausted.next → Becoming.total g (Becoming.GroupEnding.Exhausted.G.amount 1) = 2
+Becoming.GroupEnding.Exhausted.next_step : (∀ (g : List Nat),
+    g ∈ Becoming.GroupEnding.Exhausted.next → Becoming.total g (Becoming.GroupEnding.Exhausted.G.amount 1) = 2) ∧
+  Becoming.SelectionLevels.concordAmong Becoming.GroupEnding.Exhausted.next
+        (Becoming.GroupEnding.Exhausted.G.offspringNumber 1) (Becoming.GroupEnding.Exhausted.G.amount 1) =
+      0 ∧
+    Becoming.SelectionLevels.discordAmong Becoming.GroupEnding.Exhausted.next
+          (Becoming.GroupEnding.Exhausted.G.offspringNumber 1) (Becoming.GroupEnding.Exhausted.G.amount 1) =
+        0 ∧
+      Becoming.SelectionLevels.concordWithin Becoming.GroupEnding.Exhausted.next
+            (Becoming.GroupEnding.Exhausted.G.offspringNumber 1) (Becoming.GroupEnding.Exhausted.G.amount 1) =
+          0 ∧
+        Becoming.SelectionLevels.discordWithin Becoming.GroupEnding.Exhausted.next
+              (Becoming.GroupEnding.Exhausted.G.offspringNumber 1) (Becoming.GroupEnding.Exhausted.G.amount 1) =
+            12 ∧
+          ¬Becoming.GroupEnding.Exhausted.G.Raises 1 ∧
+            Becoming.GroupEnding.Exhausted.G.size 0 * Becoming.GroupEnding.Exhausted.G.sum 2 <
+              Becoming.GroupEnding.Exhausted.G.size 2 * Becoming.GroupEnding.Exhausted.G.sum 0
+Becoming.GroupEnding.Assorted.first_listed : Becoming.SelectionLevels.whole Becoming.GroupEnding.Assorted.first =
+  Becoming.GroupEnding.Assorted.G.family 0
+Becoming.GroupEnding.Assorted.uniform : ∀ (g : List Nat),
+  g ∈ Becoming.GroupEnding.Assorted.first → ∃ c, ∀ (p : Nat), p ∈ g → Becoming.GroupEnding.Assorted.G.amount 0 p = c
+Becoming.GroupEnding.Assorted.kept : Becoming.SelectionLevels.lineages Becoming.GroupEnding.Assorted.G
+      Becoming.GroupEnding.Assorted.first 1 =
+    [[10, 12, 20, 22], []] ∧
+  Becoming.GroupEnding.Assorted.G.Raises 0 ∧
+    Becoming.SelectionLevels.concordWithin
+          (Becoming.SelectionLevels.lineages Becoming.GroupEnding.Assorted.G Becoming.GroupEnding.Assorted.first 1)
+          (Becoming.GroupEnding.Assorted.G.offspringNumber 1) (Becoming.GroupEnding.Assorted.G.amount 1) =
+        0 ∧
+      Becoming.SelectionLevels.discordWithin
+            (Becoming.SelectionLevels.lineages Becoming.GroupEnding.Assorted.G Becoming.GroupEnding.Assorted.first 1)
+            (Becoming.GroupEnding.Assorted.G.offspringNumber 1) (Becoming.GroupEnding.Assorted.G.amount 1) =
+          0 ∧
+        ¬Becoming.GroupEnding.Assorted.G.Raises 1 ∧
+          Becoming.GroupEnding.Assorted.G.size 2 * Becoming.GroupEnding.Assorted.G.sum 1 =
+              Becoming.GroupEnding.Assorted.G.size 1 * Becoming.GroupEnding.Assorted.G.sum 2 ∧
+            Becoming.GroupEnding.Assorted.G.size 2 * Becoming.GroupEnding.Assorted.G.sum 0 <
+              Becoming.GroupEnding.Assorted.G.size 0 * Becoming.GroupEnding.Assorted.G.sum 2

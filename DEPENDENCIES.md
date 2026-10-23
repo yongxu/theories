@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-409 registered results: 381 with a recorded Lean receipt (`recorded-checked`), 17 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 935 curated edges join 359 results to the results they draw on.
+410 registered results: 382 with a recorded Lean receipt (`recorded-checked`), 17 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 936 curated edges join 360 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -64,6 +64,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [chinese-sources-on-the-spine][] ← <a id="chinese-sources-on-the-spine--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] *(interpretive)* · <a id="chinese-sources-on-the-spine--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] *(interpretive)*
 - [civilization-thought-on-the-spine][] ← <a id="civilization-thought-on-the-spine--chinese-sources-on-the-spine"></a>[chinese-sources-on-the-spine][] *(interpretive)* · <a id="civilization-thought-on-the-spine--a-code-formed-between-formations"></a>[a-code-formed-between-formations][] *(interpretive)*
 - [classes-along-a-continuation][] ← <a id="classes-along-a-continuation--identity-across-steps"></a>[identity-across-steps][]
+- [classical-definitions-in-the-grammar][] ← <a id="classical-definitions-in-the-grammar--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [classification-robust-generative-comparison][] ← <a id="classification-robust-generative-comparison--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] · <a id="classification-robust-generative-comparison--organizational-formation-from-generative-comparison"></a>[organizational-formation-from-generative-comparison][] · <a id="classification-robust-generative-comparison--relational-generative-comparison"></a>[relational-generative-comparison][]
 - [closed-capture][] ← <a id="closed-capture--capture-through-the-rule"></a>[capture-through-the-rule][] · <a id="closed-capture--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][] · <a id="closed-capture--the-split-that-makes-sense"></a>[the-split-that-makes-sense][]
 - [closing-needs-net-draw][] ← <a id="closing-needs-net-draw--more-needs-renewers"></a>[more-needs-renewers][] · <a id="closing-needs-net-draw--laws-of-one-step"></a>[laws-of-one-step][]
@@ -428,6 +429,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [civilization-thought-on-the-spine]: theories/becoming/results/records/civilization-thought-on-the-spine.md
 [claims-shown-in-context]: theories/becoming/results/records/claims-shown-in-context.md
 [classes-along-a-continuation]: theories/becoming/results/records/classes-along-a-continuation.md
+[classical-definitions-in-the-grammar]: theories/becoming/results/records/classical-definitions-in-the-grammar.md
 [classification-robust-generative-comparison]: theories/becoming/results/records/classification-robust-generative-comparison.md
 [closed-capture]: theories/becoming/results/records/closed-capture.md
 [closing-needs-net-draw]: theories/becoming/results/records/closing-needs-net-draw.md
@@ -448,6 +450,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [context-sensitive-updating-correspondence]: theories/becoming/results/records/context-sensitive-updating-correspondence.md
 [continuation-condition-decomposition]: theories/becoming/results/records/continuation-condition-decomposition.md
 [continuation-condition-yields-living-significance]: theories/becoming/results/records/continuation-condition-yields-living-significance.md
+[continuation-relative-to-a-class]: theories/becoming/results/records/continuation-relative-to-a-class.md
 [continued-change-needs-openness]: theories/becoming/results/records/continued-change-needs-openness.md
 [continuing-self-fed-from-beyond]: theories/becoming/results/records/continuing-self-fed-from-beyond.md
 [continuous-time-as-tower]: theories/becoming/results/records/continuous-time-as-tower.md

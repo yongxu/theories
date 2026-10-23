@@ -1,0 +1,7 @@
+* `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
+  荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
+  (`«化为有缘之成坏»`); the 墨经's 同 is a class exactly where belonging is to one only
+  (`«同于为类»`, `«同于不必传递»`); a returning occurrence abides (`«复者住»`) and under a constant
+  class a line with a past never ends (`«有常则通»`); in a net without self-conditioning,
+  continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
+  holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.

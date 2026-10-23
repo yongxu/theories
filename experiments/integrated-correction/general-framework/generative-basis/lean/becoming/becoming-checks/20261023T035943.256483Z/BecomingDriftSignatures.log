@@ -1,0 +1,292 @@
+Becoming.Drift.step_ones : ∀ (p q W o : Nat), p * W * (o + 1) + q * W * o = (p + q) * (W * o) + p * W
+Becoming.Drift.step_zeros : ∀ (p q W o : Nat), p * W * o + q * W * (o + 1) = (p + q) * (W * o) + q * W
+Becoming.Drift.weighted_ones_step : ∀ (p q n : Nat),
+  (Becoming.total (Becoming.Typicality.courses (n + 1)) fun w =>
+      Becoming.Typicality.weight p q w * Becoming.Typicality.ones w) =
+    ((p + q) *
+        Becoming.total (Becoming.Typicality.courses n) fun w =>
+          Becoming.Typicality.weight p q w * Becoming.Typicality.ones w) +
+      p * (p + q) ^ n
+Becoming.Drift.weighted_zeros_step : ∀ (p q n : Nat),
+  (Becoming.total (Becoming.Typicality.courses (n + 1)) fun w =>
+      Becoming.Typicality.weight p q w * Becoming.Typicality.zeros w) =
+    ((p + q) *
+        Becoming.total (Becoming.Typicality.courses n) fun w =>
+          Becoming.Typicality.weight p q w * Becoming.Typicality.zeros w) +
+      q * (p + q) ^ n
+Becoming.Drift.step_expected : ∀ (a b X n : Nat), a * (n * b * X) + a * (b * X) = (n + 1) * b * (X * a)
+Becoming.Drift.expected_ones : ∀ (p q n : Nat),
+  ((p + q) *
+      Becoming.total (Becoming.Typicality.courses n) fun w =>
+        Becoming.Typicality.weight p q w * Becoming.Typicality.ones w) =
+    n * p * (p + q) ^ n
+Becoming.Drift.expected_zeros : ∀ (p q n : Nat),
+  ((p + q) *
+      Becoming.total (Becoming.Typicality.courses n) fun w =>
+        Becoming.Typicality.weight p q w * Becoming.Typicality.zeros w) =
+    n * q * (p + q) ^ n
+@Becoming.Drift.gap_le : ∀ {N p q h g n a b : Nat},
+  a + b = n → (p + q) * h + g = N * p → a * N ≤ h * n → N * (q * a) + n * g ≤ N * (p * b)
+Becoming.Drift.square_mul : ∀ (N e : Nat), N * e * (N * e) = N * N * (e * e)
+@Becoming.Drift.far_back : ∀ {N x y n g : Nat},
+  N * x + n * g ≤ N * y → N * N * (2 * (x * y)) + n * n * (g * g) ≤ N * N * (x * x + y * y)
+@Becoming.Drift.falls_back_le : ∀ {p q n h N g : Nat},
+  (p + q) * h + g = N * p →
+    ∀ {w : List Bool},
+      w.length = n →
+        Becoming.Drift.fallsBack p q n h N w * (n * n * (g * g)) +
+            Becoming.Typicality.weight p q w * (N * N * Becoming.Typicality.cross p q w) ≤
+          Becoming.Typicality.weight p q w * (N * N * Becoming.Typicality.square p q w)
+Becoming.Drift.falls_back : ∀ (p q n h N g : Nat),
+  (p + q) * h + g = N * p →
+    Becoming.total (Becoming.Typicality.courses n) (Becoming.Drift.fallsBack p q n h N) * (n * n * (g * g)) ≤
+      N * N * (n * (p * q * (p + q) ^ n))
+Becoming.Drift.lost_true : ∀ (p q : Nat) (w : List Bool), Becoming.Drift.lost p q (true :: w) = 0
+Becoming.Drift.lost_false : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Drift.lost p q (false :: w) = q * Becoming.Drift.lost p q w
+Becoming.Drift.lost_weight : ∀ (p q n : Nat),
+  Becoming.total (Becoming.Typicality.courses n) (Becoming.Drift.lost p q) = q ^ n
+Becoming.Drift.lost_le : ∀ (p q n h N : Nat) (w : List Bool),
+  Becoming.Drift.lost p q w ≤ Becoming.Drift.fallsBack p q n h N w
+Becoming.Drift.falls_back_ge : ∀ (p q n h N : Nat),
+  q ^ n ≤ Becoming.total (Becoming.Typicality.courses n) (Becoming.Drift.fallsBack p q n h N)
+@Becoming.Drift.Generations.expected_sampled : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t q : Nat},
+  G.size (t + 1) = G.sum (t + 1) + q →
+    ∀ (n : Nat),
+      (G.size (t + 1) *
+          Becoming.total (Becoming.Typicality.courses n) fun w =>
+            Becoming.Typicality.weight (G.sum (t + 1)) q w * Becoming.Typicality.ones w) =
+        n * G.sum (t + 1) * G.size (t + 1) ^ n
+@Becoming.Drift.Generations.raised_falls_back : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t q : Nat},
+  G.size (t + 1) = G.sum (t + 1) + q →
+    G.Raises t →
+      ∀ (n : Nat),
+        ∃ g,
+          0 < g ∧
+            Becoming.total (Becoming.Typicality.courses n)
+                  (Becoming.Drift.fallsBack (G.sum (t + 1)) q n (G.sum t) (G.size t)) *
+                (n * n * (g * g)) ≤
+              G.size t * G.size t * (n * (G.sum (t + 1) * q * (G.sum (t + 1) + q) ^ n))
+@Becoming.Drift.Flow.ended_falls_back : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    ∀ {G : Becoming.SelectionTerm.Generations X},
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t m q : Nat} (gs : List (List X)),
+          Becoming.SelectionLevels.whole gs = G.family t →
+            (∀ (g : List X), g ∈ gs → g.length = m) →
+              (∀ (g : List X), g ∈ gs → ∃ c, ∀ (p : X), p ∈ g → G.amount t p = c) →
+                Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+                  (∀ (g h : List X),
+                      g ∈ gs →
+                        h ∈ gs →
+                          Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                            ∀ (p : X), p ∈ h → ¬W.active t p) →
+                    ∀ {g h : List X},
+                      g ∈ gs →
+                        h ∈ gs →
+                          Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                            0 < Becoming.total g (G.offspringNumber t) →
+                              G.size (t + 1) = G.sum (t + 1) + q →
+                                ∀ (n : Nat),
+                                  (∃ gap,
+                                      0 < gap ∧
+                                        Becoming.total (Becoming.Typicality.courses n)
+                                              (Becoming.Drift.fallsBack (G.sum (t + 1)) q n (G.sum t) (G.size t)) *
+                                            (n * n * (gap * gap)) ≤
+                                          G.size t * G.size t * (n * (G.sum (t + 1) * q * (G.sum (t + 1) + q) ^ n))) ∧
+                                    q ^ n ≤
+                                      Becoming.total (Becoming.Typicality.courses n)
+                                        (Becoming.Drift.fallsBack (G.sum (t + 1)) q n (G.sum t) (G.size t))
+Becoming.Drift.whole_true : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Drift.whole p q (true :: w) = p * Becoming.Drift.whole p q w
+Becoming.Drift.whole_false : ∀ (p q : Nat) (w : List Bool), Becoming.Drift.whole p q (false :: w) = 0
+Becoming.Drift.whole_weight : ∀ (p q n : Nat),
+  Becoming.total (Becoming.Typicality.courses n) (Becoming.Drift.whole p q) = p ^ n
+Becoming.Drift.ones_le : ∀ (w : List Bool), Becoming.Typicality.ones w ≤ w.length
+Becoming.Drift.from_none : ∀ (q : Nat) (g : Nat → Nat) (n : Nat),
+  (Becoming.total (Becoming.Typicality.courses n) fun w =>
+      Becoming.Typicality.weight 0 q w * g (Becoming.Typicality.ones w)) =
+    q ^ n * g 0
+Becoming.Drift.from_all : ∀ (p n : Nat) (g : Nat → Nat),
+  (Becoming.total (Becoming.Typicality.courses n) fun w =>
+      Becoming.Typicality.weight p 0 w * g (Becoming.Typicality.ones w)) =
+    p ^ n * g n
+Becoming.Drift.sampled_succ : ∀ (N : Nat) (f : Nat → Nat) (k h : Nat),
+  Becoming.Drift.sampled N f (k + 1) h =
+    Becoming.total (Becoming.Typicality.courses N) fun w =>
+      Becoming.Typicality.weight h (N - h) w * Becoming.Drift.sampled N f k (Becoming.Typicality.ones w)
+@Becoming.Drift.sampled_le : ∀ {N : Nat} {f g : Nat → Nat},
+  (∀ (c : Nat), c ≤ N → f c ≤ g c) →
+    ∀ (k h : Nat), h ≤ N → Becoming.Drift.sampled N f k h ≤ Becoming.Drift.sampled N g k h
+Becoming.Drift.sampled_add : ∀ (N : Nat) (f g : Nat → Nat) (k h : Nat),
+  Becoming.Drift.sampled N (fun c => f c + g c) k h = Becoming.Drift.sampled N f k h + Becoming.Drift.sampled N g k h
+Becoming.Drift.sampled_mul : ∀ (N c : Nat) (f : Nat → Nat) (k h : Nat),
+  Becoming.Drift.sampled N (fun x => c * f x) k h = c * Becoming.Drift.sampled N f k h
+Becoming.Drift.sampled_one : ∀ (N k h : Nat), h ≤ N → Becoming.Drift.sampled N (fun x => 1) k h = (N ^ N) ^ k
+Becoming.Drift.sampled_none : ∀ (N : Nat) (f : Nat → Nat) (k : Nat), Becoming.Drift.sampled N f k 0 = (N ^ N) ^ k * f 0
+Becoming.Drift.sub_self_zero : ∀ (N : Nat), N - N = 0
+Becoming.Drift.sampled_all : ∀ (N : Nat) (f : Nat → Nat) (k : Nat), Becoming.Drift.sampled N f k N = (N ^ N) ^ k * f N
+Becoming.Drift.weighted_ones : ∀ (h N : Nat),
+  h ≤ N →
+    (Becoming.total (Becoming.Typicality.courses N) fun w =>
+        Becoming.Typicality.weight h (N - h) w * Becoming.Typicality.ones w) =
+      h * N ^ N
+Becoming.Drift.sampled_count : ∀ (N k h : Nat), h ≤ N → Becoming.Drift.sampled N (fun c => c) k h = h * (N ^ N) ^ k
+Becoming.Drift.varied_zero : ∀ (N : Nat), Becoming.Drift.varied N 0 = 0
+Becoming.Drift.varied_self : ∀ (N : Nat), Becoming.Drift.varied N N = 0
+@Becoming.Drift.varied_step : ∀ {N h M : Nat} (S : Nat → Nat),
+  S 0 = 0 →
+    S N = 0 →
+      (∀ (c : Nat), c ≤ N → S c ≤ M) →
+        0 < N →
+          ∀ {w : List Bool},
+            w.length = N →
+              Becoming.Typicality.weight h (N - h) w * S (Becoming.Typicality.ones w) +
+                  (Becoming.Drift.lost h (N - h) w * M + Becoming.Drift.whole h (N - h) w * M) ≤
+                Becoming.Typicality.weight h (N - h) w * M
+@Becoming.Drift.one_le_pow : ∀ {p : Nat}, 0 < p → ∀ (n : Nat), 1 ≤ p ^ n
+@Becoming.Drift.varied_vanishes : ∀ {N r : Nat},
+  r + 2 = N ^ N → ∀ (k h : Nat), h ≤ N → Becoming.Drift.sampled N (Becoming.Drift.varied N) k h ≤ r ^ k
+Becoming.Drift.count_le : ∀ (N c : Nat), c ≤ N → c ≤ N * Becoming.Drift.fixed N c + N * Becoming.Drift.varied N c
+Becoming.Drift.fixed_le : ∀ (N c : Nat), N * Becoming.Drift.fixed N c ≤ c
+@Becoming.Drift.fixation : ∀ {N r : Nat},
+  r + 2 = N ^ N →
+    ∀ (k h : Nat),
+      h ≤ N →
+        N * Becoming.Drift.sampled N (Becoming.Drift.fixed N) k h ≤ h * (N ^ N) ^ k ∧
+          h * (N ^ N) ^ k ≤ N * Becoming.Drift.sampled N (Becoming.Drift.fixed N) k h + N * r ^ k
+@Becoming.Drift.Replacement.value_mixed : ∀ {M a b : Nat} (f : Nat → Nat) (k : Nat) {i : Nat},
+  Becoming.Drift.Replacement.Mixed M i →
+    Becoming.Drift.Replacement.value M a b f (k + 1) i =
+      a * Becoming.Drift.Replacement.value M a b f k (i + 1) + b * Becoming.Drift.Replacement.value M a b f k (i - 1)
+@Becoming.Drift.Replacement.value_one_kind : ∀ {M a b : Nat} (f : Nat → Nat) (k : Nat) {i : Nat},
+  ¬Becoming.Drift.Replacement.Mixed M i →
+    Becoming.Drift.Replacement.value M a b f (k + 1) i = (a + b) * Becoming.Drift.Replacement.value M a b f k i
+@Becoming.Drift.Replacement.value_stays : ∀ {M a b : Nat} (f : Nat → Nat) {i : Nat},
+  ¬Becoming.Drift.Replacement.Mixed M i → ∀ (k : Nat), Becoming.Drift.Replacement.value M a b f k i = (a + b) ^ k * f i
+@Becoming.Drift.Replacement.value_add : ∀ {M a b : Nat} (f g : Nat → Nat) (k i : Nat),
+  Becoming.Drift.Replacement.value M a b (fun j => f j + g j) k i =
+    Becoming.Drift.Replacement.value M a b f k i + Becoming.Drift.Replacement.value M a b g k i
+@Becoming.Drift.Replacement.value_mul : ∀ {M a b : Nat} (c : Nat) (f : Nat → Nat) (k i : Nat),
+  Becoming.Drift.Replacement.value M a b (fun j => c * f j) k i = c * Becoming.Drift.Replacement.value M a b f k i
+@Becoming.Drift.Replacement.value_le : ∀ {M a b : Nat} {f g : Nat → Nat},
+  (∀ (j : Nat), f j ≤ g j) →
+    ∀ (k i : Nat), Becoming.Drift.Replacement.value M a b f k i ≤ Becoming.Drift.Replacement.value M a b g k i
+@Becoming.Drift.Replacement.value_const : ∀ {M a b : Nat} (c k i : Nat),
+  Becoming.Drift.Replacement.value M a b (fun x => c) k i = (a + b) ^ k * c
+@Becoming.Drift.Replacement.value_comp : ∀ {M a b : Nat} (f : Nat → Nat) (n k i : Nat),
+  Becoming.Drift.Replacement.value M a b f (n + k) i =
+    Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.value M a b f n) k i
+@Becoming.Drift.Replacement.rise_step : ∀ {M a b j : Nat},
+  j < M → a * Becoming.Drift.Replacement.rise M a b (j + 1) = b * Becoming.Drift.Replacement.rise M a b j
+@Becoming.Drift.Replacement.potential_harmonic : ∀ {M a b i : Nat},
+  Becoming.Drift.Replacement.Mixed M i →
+    a * Becoming.Drift.Replacement.potential M a b (i + 1) + b * Becoming.Drift.Replacement.potential M a b (i - 1) =
+      (a + b) * Becoming.Drift.Replacement.potential M a b i
+@Becoming.Drift.Replacement.value_potential : ∀ {M a b : Nat} (k i : Nat),
+  Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.potential M a b) k i =
+    (a + b) ^ k * Becoming.Drift.Replacement.potential M a b i
+@Becoming.Drift.Replacement.potential_le_succ : ∀ {M a b : Nat} (j : Nat),
+  Becoming.Drift.Replacement.potential M a b j ≤ Becoming.Drift.Replacement.potential M a b (j + 1)
+@Becoming.Drift.Replacement.potential_mono : ∀ {M a b i j : Nat},
+  i ≤ j → Becoming.Drift.Replacement.potential M a b i ≤ Becoming.Drift.Replacement.potential M a b j
+@Becoming.Drift.Replacement.potential_beyond : ∀ {M a b : Nat} (t : Nat),
+  Becoming.Drift.Replacement.potential M a b (M + 1 + t) = Becoming.Drift.Replacement.potential M a b (M + 1)
+@Becoming.Drift.Replacement.potential_le_top : ∀ {M a b : Nat} (j : Nat),
+  Becoming.Drift.Replacement.potential M a b j ≤ Becoming.Drift.Replacement.potential M a b (M + 1)
+Becoming.Drift.Replacement.partition : ∀ (M i : Nat),
+  Becoming.Drift.Replacement.fixed M i + Becoming.Drift.Replacement.lost i + Becoming.Drift.Replacement.varied M i = 1
+@Becoming.Drift.Replacement.value_congr : ∀ {M a b : Nat} {f g : Nat → Nat},
+  (∀ (j : Nat), f j = g j) →
+    ∀ (k i : Nat), Becoming.Drift.Replacement.value M a b f k i = Becoming.Drift.Replacement.value M a b g k i
+@Becoming.Drift.Replacement.value_partition : ∀ {M a b : Nat} (k i : Nat),
+  Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) k i +
+        Becoming.Drift.Replacement.value M a b Becoming.Drift.Replacement.lost k i +
+      Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.varied M) k i =
+    (a + b) ^ k
+@Becoming.Drift.Replacement.fixed_below : ∀ {M a b : Nat} (j : Nat),
+  Becoming.Drift.Replacement.potential M a b (M + 1) * Becoming.Drift.Replacement.fixed M j ≤
+    Becoming.Drift.Replacement.potential M a b j
+@Becoming.Drift.Replacement.potential_within : ∀ {M a b : Nat} (j : Nat),
+  Becoming.Drift.Replacement.potential M a b j ≤
+    Becoming.Drift.Replacement.potential M a b (M + 1) * Becoming.Drift.Replacement.fixed M j +
+      Becoming.Drift.Replacement.potential M a b (M + 1) * Becoming.Drift.Replacement.varied M j
+@Becoming.Drift.Replacement.fixation_bounds : ∀ {M a b : Nat} (k i : Nat),
+  Becoming.Drift.Replacement.potential M a b (M + 1) *
+        Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) k i ≤
+      (a + b) ^ k * Becoming.Drift.Replacement.potential M a b i ∧
+    (a + b) ^ k * Becoming.Drift.Replacement.potential M a b i ≤
+      Becoming.Drift.Replacement.potential M a b (M + 1) *
+          Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) k i +
+        Becoming.Drift.Replacement.potential M a b (M + 1) *
+          Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.varied M) k i
+@Becoming.Drift.Replacement.climbs : ∀ {M a b : Nat} (k i : Nat),
+  0 < i → M + 1 ≤ i + k → a ^ k ≤ Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) k i
+@Becoming.Drift.Replacement.varied_step : ∀ {M a b : Nat} (j : Nat),
+  Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.varied M) (M + 1) j +
+      a ^ (M + 1) * Becoming.Drift.Replacement.varied M j ≤
+    (a + b) ^ (M + 1) * Becoming.Drift.Replacement.varied M j
+@Becoming.Drift.Replacement.varied_vanishes : ∀ {M a b r : Nat},
+  r + a ^ (M + 1) = (a + b) ^ (M + 1) →
+    ∀ (m i : Nat), Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.varied M) ((M + 1) * m) i ≤ r ^ m
+@Becoming.Drift.Replacement.fixation : ∀ {M a b r : Nat},
+  r + a ^ (M + 1) = (a + b) ^ (M + 1) →
+    ∀ (m i : Nat),
+      Becoming.Drift.Replacement.potential M a b (M + 1) *
+            Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) ((M + 1) * m) i ≤
+          (a + b) ^ ((M + 1) * m) * Becoming.Drift.Replacement.potential M a b i ∧
+        (a + b) ^ ((M + 1) * m) * Becoming.Drift.Replacement.potential M a b i ≤
+          Becoming.Drift.Replacement.potential M a b (M + 1) *
+              Becoming.Drift.Replacement.value M a b (Becoming.Drift.Replacement.fixed M) ((M + 1) * m) i +
+            Becoming.Drift.Replacement.potential M a b (M + 1) * r ^ m
+@Becoming.Drift.Replacement.rise_neutral : ∀ {M a j : Nat}, j ≤ M → Becoming.Drift.Replacement.rise M a a j = a ^ M
+@Becoming.Drift.Replacement.potential_neutral : ∀ {M a : Nat} (i : Nat),
+  i ≤ M + 1 → Becoming.Drift.Replacement.potential M a a i = i * a ^ M
+@Becoming.Drift.Replacement.rise_antitone : ∀ {M a b : Nat},
+  0 < a → b ≤ a → ∀ (j : Nat), Becoming.Drift.Replacement.rise M a b (j + 1) ≤ Becoming.Drift.Replacement.rise M a b j
+@Becoming.Drift.Replacement.rise_antitone_le : ∀ {M a b : Nat},
+  0 < a →
+    b ≤ a → ∀ {i j : Nat}, i ≤ j → Becoming.Drift.Replacement.rise M a b j ≤ Becoming.Drift.Replacement.rise M a b i
+@Becoming.Drift.Replacement.potential_above : ∀ {M a b : Nat},
+  0 < a →
+    b ≤ a →
+      ∀ (i t : Nat),
+        Becoming.Drift.Replacement.potential M a b (i + t) ≤
+          Becoming.Drift.Replacement.potential M a b i + t * Becoming.Drift.Replacement.rise M a b i
+@Becoming.Drift.Replacement.potential_from : ∀ {M a b : Nat},
+  0 < a →
+    b ≤ a →
+      ∀ (s j : Nat),
+        Becoming.Drift.Replacement.potential M a b s + j * Becoming.Drift.Replacement.rise M a b (s + j) ≤
+          Becoming.Drift.Replacement.potential M a b (s + j)
+@Becoming.Drift.Replacement.favoured_share : ∀ {M a b : Nat},
+  0 < a →
+    b ≤ a →
+      ∀ {i t : Nat},
+        i + t = M + 1 →
+          i * Becoming.Drift.Replacement.potential M a b (M + 1) ≤
+            (M + 1) * Becoming.Drift.Replacement.potential M a b i
+@Becoming.Drift.Replacement.neutral_share : ∀ {M a i : Nat},
+  i ≤ M + 1 →
+    i * Becoming.Drift.Replacement.potential M a a (M + 1) = (M + 1) * Becoming.Drift.Replacement.potential M a a i
+@Becoming.Drift.Replacement.favoured_share_above : ∀ {M a b : Nat},
+  b < a →
+    ∀ {i t : Nat},
+      0 < i →
+        0 < t →
+          i + t = M + 1 →
+            i * Becoming.Drift.Replacement.potential M a b (M + 1) <
+              (M + 1) * Becoming.Drift.Replacement.potential M a b i
+@Becoming.Drift.Replacement.lost_ge : ∀ {M a b : Nat} (k i : Nat),
+  i ≤ M → b ^ i * (a + b) ^ k ≤ Becoming.Drift.Replacement.value M a b Becoming.Drift.Replacement.lost (k + i) i
+Becoming.Drift.OneDraw.falls_back : Becoming.total (Becoming.Typicality.courses 1)
+      (Becoming.Drift.fallsBack 3 2 1 1 2) =
+    2 ∧
+  Becoming.total (Becoming.Typicality.courses 1) (Becoming.Typicality.weight 3 2) = 5 ∧ (3 + 2) * 1 + 1 = 2 * 3
+Becoming.Drift.TwoMembers.one_generation : Becoming.Drift.sampled 2 (Becoming.Drift.fixed 2) 1 1 = 1 ∧
+  Becoming.Drift.sampled 2 (Becoming.Drift.varied 2) 1 1 = 2 ∧
+    Becoming.Drift.sampled 2 (fun c => c) 1 1 = 4 ∧ Becoming.Drift.sampled 2 (fun x => 1) 1 1 = 4
+Becoming.Drift.Favoured.two_members : Becoming.Drift.Replacement.potential 1 2 1 1 = 2 ∧
+  Becoming.Drift.Replacement.potential 1 2 1 2 = 3 ∧
+    Becoming.Drift.Replacement.value 1 2 1 (Becoming.Drift.Replacement.fixed 1) 2 1 = 6 ∧
+      Becoming.Drift.Replacement.value 1 2 1 (Becoming.Drift.Replacement.varied 1) 2 1 = 0 ∧ 1 * 3 < 2 * 2

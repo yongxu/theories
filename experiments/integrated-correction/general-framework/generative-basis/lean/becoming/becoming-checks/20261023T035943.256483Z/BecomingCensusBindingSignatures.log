@@ -1,0 +1,164 @@
+Becoming.World.binds_adds_counted : ¬∀ (w : Becoming.World), w.Premised → w.CountsHold fun x x_1 a => ∃ t, 0 < a t
+@Becoming.World.binding_counting_counted : ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (n c a : Nat → Nat), Becoming.Tally n c a → (∀ (t : Nat), 0 < a t → 0 < n t) → (∃ t, 0 < a t) → Q n c a) ↔
+    ∀ (w : Becoming.World), w.Premised → w.Binds → w.CountsHold Q
+Becoming.World.binding_counting_under_counted : ∀ (S : Becoming.World.Premise → Bool)
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (n c a : Nat → Nat),
+      Becoming.Tally n c a →
+        (Becoming.World.BindsCounting S → ∀ (t : Nat), 0 < a t → 0 < n t) →
+          (S Becoming.World.Premise.dependent = true ∨
+                S Becoming.World.Premise.acting = true ∨ S Becoming.World.Premise.taking = true →
+              ∃ t, 0 < n t) →
+            (S Becoming.World.Premise.embodied = true → ∃ t, 0 < a t) →
+              (S Becoming.World.Premise.embodied = true →
+                  S Becoming.World.Premise.acting = true →
+                    S Becoming.World.Premise.transmitting = true → ∃ t, 0 < n t ∧ 0 < a t) →
+                Q n c a) ↔
+    ∀ (w : Becoming.World), w.Meets S → (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold Q
+Becoming.World.binding_activity_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S → (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun n x x_1 => ∃ t, 0 < n t) ↔
+    S Becoming.World.Premise.dependent = true ∨
+      S Becoming.World.Premise.acting = true ∨
+        S Becoming.World.Premise.taking = true ∨ S Becoming.World.Premise.embodied = true
+Becoming.World.binding_arising_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S → (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun x x_1 a => ∃ t, 0 < a t) ↔
+    S Becoming.World.Premise.embodied = true
+Becoming.World.binding_joint_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S →
+        (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun n x a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+    S Becoming.World.Premise.embodied = true ∧
+      (Becoming.World.BindsCounting S ∨
+        S Becoming.World.Premise.acting = true ∧ S Becoming.World.Premise.transmitting = true)
+@Becoming.World.finite_binding_counting_counted : ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (n c a : Nat → Nat),
+      Becoming.Tally n c a →
+        (∀ (t : Nat), 0 < a t → 0 < n t) → (∃ B, Becoming.ChangeBound 0 B n c a) → (∃ t, 0 < a t) → Q n c a) ↔
+    ∀ (w : Becoming.World),
+      w.Premised →
+        w.Finite → (∀ (p : Becoming.World.Premise), p ≠ Becoming.World.Premise.counted → p.Binds w) → w.CountsHold Q
+@Becoming.World.enclosed_binding_counting_counted : ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (n c a : Nat → Nat),
+      Becoming.Tally n c a →
+        (∀ (t : Nat), 0 < a t → 0 < n t) → (∃ B, Becoming.ChangeBound 0 B n c a) → (∃ t, 0 < a t) → Q n c a) ↔
+    ∀ (w : Becoming.World), w.Premised → (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) → w.Binds → w.CountsHold Q
+@Becoming.World.finite_binding_census_counted : ∀ {S : Becoming.World.Premise → Bool},
+  S Becoming.World.Premise.counted = true →
+    ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (w : Becoming.World),
+      w.Meets S → w.Finite → (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold Q
+Becoming.World.finite_binding_counting_under_counted : ∀ (S : Becoming.World.Premise → Bool),
+  S Becoming.World.Premise.counted = false →
+    ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+      (∀ (n c a : Nat → Nat),
+          Becoming.Tally n c a →
+            (∃ M, ∀ (t : Nat), n t ≤ M) →
+              (Becoming.World.BindsCounting S ∨ Becoming.World.BoundsChange S → ∀ (t : Nat), 0 < a t → 0 < n t) →
+                (Becoming.World.BoundsChange S → ∃ B, Becoming.ChangeBound 0 B n c a) →
+                  (S Becoming.World.Premise.dependent = true ∨
+                        S Becoming.World.Premise.acting = true ∨ S Becoming.World.Premise.taking = true →
+                      ∃ t, 0 < n t) →
+                    (S Becoming.World.Premise.embodied = true → ∃ t, 0 < a t) →
+                      (S Becoming.World.Premise.embodied = true →
+                          S Becoming.World.Premise.acting = true ∨
+                              S Becoming.World.Premise.taking = true ∧ S Becoming.World.Premise.dissipative = true →
+                            S Becoming.World.Premise.transmitting = true → ∃ t, 0 < n t ∧ 0 < a t) →
+                        Q n c a) ↔
+        ∀ (w : Becoming.World),
+          w.Meets S → w.Finite → (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold Q
+Becoming.World.finite_binding_activity_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  S Becoming.World.Premise.counted = false →
+    ((∀ (w : Becoming.World),
+        w.Meets S →
+          w.Finite →
+            (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun n x x_1 => ∃ t, 0 < n t) ↔
+      S Becoming.World.Premise.dependent = true ∨
+        S Becoming.World.Premise.acting = true ∨
+          S Becoming.World.Premise.taking = true ∨ S Becoming.World.Premise.embodied = true)
+Becoming.World.finite_binding_arising_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  S Becoming.World.Premise.counted = false →
+    ((∀ (w : Becoming.World),
+        w.Meets S →
+          w.Finite →
+            (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun x x_1 a => ∃ t, 0 < a t) ↔
+      S Becoming.World.Premise.embodied = true)
+Becoming.World.finite_binding_joint_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  S Becoming.World.Premise.counted = false →
+    ((∀ (w : Becoming.World),
+        w.Meets S →
+          w.Finite →
+            (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) →
+              w.CountsHold fun n x a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+      S Becoming.World.Premise.embodied = true ∧
+        (Becoming.World.BindsCounting S ∨
+          Becoming.World.BoundsChange S ∨
+            (S Becoming.World.Premise.acting = true ∨
+                S Becoming.World.Premise.taking = true ∧ S Becoming.World.Premise.dissipative = true) ∧
+              S Becoming.World.Premise.transmitting = true))
+Becoming.World.enclosed_binding_counting_under_counted : ∀ (S : Becoming.World.Premise → Bool)
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (n c a : Nat → Nat),
+      Becoming.Tally n c a →
+        (Becoming.World.BindsCounting S → ∀ (t : Nat), 0 < a t → 0 < n t) →
+          (Becoming.World.BoundsChange S →
+              ∃ T B, Becoming.ChangeBound T B n c a ∧ ∀ (t : Nat), T ≤ t → 0 < a t → 0 < n t) →
+            (S Becoming.World.Premise.dependent = true ∨
+                  S Becoming.World.Premise.acting = true ∨ S Becoming.World.Premise.taking = true →
+                ∃ t, 0 < n t) →
+              (S Becoming.World.Premise.embodied = true → ∃ t, 0 < a t) →
+                (S Becoming.World.Premise.embodied = true →
+                    S Becoming.World.Premise.acting = true →
+                      S Becoming.World.Premise.transmitting = true → ∃ t, 0 < n t ∧ 0 < a t) →
+                  Q n c a) ↔
+    ∀ (w : Becoming.World),
+      w.Meets S →
+        (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+          (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold Q
+Becoming.World.enclosed_binding_activity_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S →
+        (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+          (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun n x x_1 => ∃ t, 0 < n t) ↔
+    S Becoming.World.Premise.dependent = true ∨
+      S Becoming.World.Premise.acting = true ∨
+        S Becoming.World.Premise.taking = true ∨ S Becoming.World.Premise.embodied = true
+Becoming.World.enclosed_binding_arising_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S →
+        (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+          (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun x x_1 a => ∃ t, 0 < a t) ↔
+    S Becoming.World.Premise.embodied = true
+Becoming.World.enclosed_binding_joint_iff_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (w : Becoming.World),
+      w.Meets S →
+        (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+          (∀ (p : Becoming.World.Premise), S p = true → p.Binds w) → w.CountsHold fun n x a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+    S Becoming.World.Premise.embodied = true ∧
+      (Becoming.World.BindsCounting S ∨
+        S Becoming.World.Premise.acting = true ∧ S Becoming.World.Premise.transmitting = true)
+@Becoming.World.counting_free_parts_counted : ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → Q n c a) ↔
+      ∀ (w : Becoming.World),
+        w.Dependent → w.Balanced → w.Acting → w.Taking → w.Dissipative → w.Transmitting → w.CountsHold Q) ∧
+    ((∀ (n c a : Nat → Nat), Becoming.Tally n c a → Q n c a) ↔
+      ∀ (w : Becoming.World),
+        w.Dependent → w.Acting → w.Taking → w.Dissipative → w.Embodied → w.Transmitting → w.CountsHold Q)
+Becoming.World.counting_binds_jointly_counted : (∀ (w : Becoming.World),
+    w.Balanced → w.Acting → w.ArisingEmbodied → w.CountsHold fun n x a => ∀ (t : Nat), 0 < a t → 0 < n t) ∧
+  (¬(Becoming.World.queue Becoming.Queue.lone fun x => 0).CountsHold fun n x a => ∀ (t : Nat), 0 < a t → 0 < n t) ∧
+    ¬(Becoming.World.embodiedQueue Becoming.Queue.lone fun x => 0).CountsHold fun n x a =>
+        ∀ (t : Nat), 0 < a t → 0 < n t
+@Becoming.World.enclosed_iff_finite_counting_counted : ∀ {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  (∀ (w : Becoming.World), w.Premised → (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) → w.CountsHold Q) ↔
+    ∀ (w : Becoming.World), w.Premised → w.Finite → w.CountsHold Q
+Becoming.World.enclosed_iff_finite_counting_under_counted : ∀ (S : Becoming.World.Premise → Bool),
+  (∀ (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop),
+      (∀ (w : Becoming.World), w.Meets S → (∃ T, ∀ (t : Nat), T ≤ t → w.flow.Enclosed t) → w.CountsHold Q) ↔
+        ∀ (w : Becoming.World), w.Meets S → w.Finite → w.CountsHold Q) ↔
+    Becoming.World.BoundsChange S ∧ Becoming.World.BindsCounting S
+Becoming.World.standing_iff_counting_counted : ∀ (S : Becoming.World.Premise → Bool)
+  {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop},
+  Becoming.Pointwise Q →
+    ((∀ (w : Becoming.World), w.Meets S → w.StandsObey Q) ↔ ∀ (w : Becoming.World), w.Meets S → w.CountsHold Q)

@@ -69,6 +69,7 @@ Relative reachability (Krakovna et al. 2019) compares the states reachable withi
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | proof | [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean) | `Becoming.Web.IncludesAcross`, `Becoming.Web.ExceedsAcross`, `Becoming.Web.WidensAcross`, `Becoming.Web.IncludesAcross.mono`, `Becoming.Web.ExceedsAcross.anti`, `Becoming.Web.exceedsAcross_of_unlinked`, `Becoming.Web.Linked.itself_same`, `Becoming.Web.Linked.itself_steps`, `Becoming.Web.Linked.itself_of_le`, `Becoming.Web.includesAcross_itself_iff`, `Becoming.Web.exceedsAcross_itself_iff`, `Becoming.Web.includesAcross_reidentify`, `Becoming.Web.exceedsAcross_reidentify`, `Becoming.Web.widensAcross_reidentify`, `Becoming.Bud.web`, `Becoming.Bud.bud`, `Becoming.Bud.widens_by_name`, `Becoming.Bud.bud_adds_nothing`, `Becoming.Bud.readings` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `widening along a reading`, `沿读法的扩大`, `widening over a grown world`, `Becoming.Web.WidensAlong`, `Becoming.Web.grow_widensAlong_iff`
 

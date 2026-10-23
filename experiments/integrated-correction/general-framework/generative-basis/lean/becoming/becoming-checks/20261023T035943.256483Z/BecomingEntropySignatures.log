@@ -1,0 +1,533 @@
+@Becoming.Flow.DissipatesOn.gainlessOn : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.GainlessOn cs t
+@Becoming.Flow.Dissipative.gainless : ∀ {F C : Type} {L : Becoming.Flow F C}, L.Dissipative → L.Gainless
+@Becoming.Flow.ConservingOn.gainlessOn : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.ConservingOn cs t → L.GainlessOn cs t
+@Becoming.Flow.Conserving.gainless : ∀ {F C : Type} {L : Becoming.Flow F C}, L.Conserving → L.Gainless
+@Becoming.Flow.eq_zero_of_add_sign_le : ∀ {a : Nat}, a + Becoming.sign a ≤ a → a = 0
+@Becoming.Flow.DissipatesOn.idle_of_conserving : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t →
+    ∀ {f : F},
+      f ∈ L.present t →
+        Becoming.total cs (L.give t f) = Becoming.total cs (L.take t f) →
+          Becoming.total cs (L.take t f) = 0 ∧ Becoming.total cs (L.give t f) = 0
+@Becoming.Flow.Reverses.mem : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ {f : F}, f ∈ L.present t → f ∈ L.present u
+@Becoming.Flow.Reverses.mem_back : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ {f : F}, f ∈ L.present u → f ∈ L.present t
+@Becoming.Flow.Reverses.take_total : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ (cs : List C) (f : F), Becoming.total cs (L.take u f) = Becoming.total cs (L.give t f)
+@Becoming.Flow.Reverses.give_total : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ (cs : List C) (f : F), Becoming.total cs (L.give u f) = Becoming.total cs (L.take t f)
+@Becoming.Flow.Reverses.taken : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ (c : C), L.taken u c = L.given t c
+@Becoming.Flow.Reverses.given : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ (c : C), L.given u c = L.taken t c
+@Becoming.Flow.Balances.reverse_restores : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t u : Nat},
+  L.Balances W →
+    L.Reverses u t → (∀ (c : C), W.level u c = W.level (t + 1) c) → ∀ (c : C), W.level (u + 1) c = W.level t c
+@Becoming.Flow.Reverses.closedAt : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t u : Nat},
+  L.Reverses u t → L.ClosedAt cs t → L.ClosedAt cs u
+@Becoming.Flow.Reverses.gainlessOn_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t u : Nat},
+  L.Reverses u t → L.GainlessOn cs t → (L.GainlessOn cs u ↔ L.ConservingOn cs t)
+@Becoming.Flow.Reverses.idle_of_dissipates : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t u : Nat},
+  L.Reverses u t →
+    L.DissipatesOn cs t →
+      L.DissipatesOn cs u →
+        ∀ {f : F}, f ∈ L.present t → Becoming.total cs (L.take t f) = 0 ∧ Becoming.total cs (L.give t f) = 0
+@Becoming.Flow.Dissipative.irreversible : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t u : Nat},
+  L.Dissipative →
+    Becoming.Distinct cs →
+      L.ClosedAt cs t →
+        L.Reverses u t → ∀ {f : F}, f ∈ L.present t → ∀ {c : C}, 0 < L.take t f c ∨ 0 < L.give t f c → False
+@Becoming.Flow.Reverses.exchanges_eq : ∀ {F C : Type} {L : Becoming.Flow F C} {t u : Nat},
+  L.Reverses u t → ∀ (cs : List C), L.exchanges cs u = L.exchanges cs t
+@Becoming.Flow.Balances.exchanges_of_change : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {t : Nat}, L.Balances W → ∀ {c : C}, c ∈ cs → W.Rises t c ∨ W.Falls t c → 0 < L.exchanges cs t
+@Becoming.Flow.Balances.restores_levels_not_history : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {t : Nat},
+  L.Balances W →
+    L.Reverses (t + 1) t →
+      ∀ (cs : List C),
+        (∀ (c : C), W.level (t + 2) c = W.level t c) ∧
+          Becoming.total (Becoming.steps t 2) (L.exchanges cs) = 2 * L.exchanges cs t
+@Becoming.none_not_mem : ∀ {C : Type} (cs : List C), ¬none ∈ List.map some cs
+@Becoming.distinct_withRecord : ∀ {C : Type} {cs : List C},
+  Becoming.Distinct cs → Becoming.Distinct (none :: List.map some cs)
+@Becoming.total_withRecord : ∀ {C : Type} (q : Option C → Nat) (cs : List C),
+  Becoming.total (none :: List.map some cs) q = q none + Becoming.total cs fun c => q (some c)
+@Becoming.sign_le_of : ∀ {a r : Nat}, (0 < a → 0 < r) → Becoming.sign a ≤ r
+@Becoming.sign_exchange_iff : ∀ {a b : Nat}, b + Becoming.sign a ≤ a ↔ b + Becoming.sign (a + b) ≤ a
+@Becoming.Flow.recorded_succ : ∀ {F C : Type} (L : Becoming.Flow F C) (ρ : Nat → F → Nat) (t : Nat),
+  L.recorded ρ (t + 1) = L.recorded ρ t + Becoming.total (L.present t) (ρ t)
+@Becoming.Flow.balances_withRecord : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ρ : Nat → F → Nat},
+  L.Balances W ↔ (L.withRecord ρ).Balances (W.withRecord L ρ)
+@Becoming.Flow.balancesOn_withRecord : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {ρ : Nat → F → Nat},
+  L.BalancesOn W cs t ↔ (L.withRecord ρ).BalancesOn (W.withRecord L ρ) (none :: List.map some cs) t
+@Becoming.Flow.closedAt_withRecord : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat} {ρ : Nat → F → Nat},
+  (L.withRecord ρ).ClosedAt (none :: List.map some cs) t ↔ L.ClosedAt cs t
+@Becoming.Flow.gainlessOn_withRecord_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {ρ : Nat → F → Nat},
+  (L.withRecord ρ).GainlessOn (none :: List.map some cs) t ↔
+    ∀ (f : F), f ∈ L.present t → Becoming.total cs (L.give t f) + ρ t f ≤ Becoming.total cs (L.take t f)
+@Becoming.Flow.dissipatesOn_iff_unitRecord : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t ↔ (L.withRecord (L.unitRecord cs)).GainlessOn (none :: List.map some cs) t
+@Becoming.Flow.unitRecord_records : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.RecordsOn (L.unitRecord cs) cs t
+@Becoming.Flow.DissipatesOn.of_recorded : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {ρ : Nat → F → Nat},
+  (L.withRecord ρ).GainlessOn (none :: List.map some cs) t → L.RecordsOn ρ cs t → L.DissipatesOn cs t
+@Becoming.Flow.dissipatesOn_iff_recorded : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t ↔ ∃ ρ, (L.withRecord ρ).GainlessOn (none :: List.map some cs) t ∧ L.RecordsOn ρ cs t
+@Becoming.Flow.Dissipative.of_recorded : ∀ {F C : Type} {L : Becoming.Flow F C} {ρ : Nat → F → Nat},
+  (L.withRecord ρ).Gainless →
+    (∀ (cs : List C) (t : Nat), Becoming.Distinct cs → L.ClosedAt cs t → L.RecordsOn ρ cs t) → L.Dissipative
+@Becoming.Flow.dissipative_iff_unitRecord : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative ↔
+    ∀ (cs : List C) (t : Nat),
+      Becoming.Distinct cs → L.ClosedAt cs t → (L.withRecord (L.unitRecord cs)).GainlessOn (none :: List.map some cs) t
+@Becoming.Flow.Balances.lowered_by : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  L.Balances W →
+    ∀ {loss : F → Nat},
+      (∀ (f : F), f ∈ L.present t → Becoming.total cs (L.give t f) + loss f ≤ Becoming.total cs (L.take t f)) →
+        W.stock cs (t + 1) + Becoming.total (L.present t) loss ≤ W.stock cs t
+@Becoming.Flow.Balances.nonrising : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat}, L.Balances W → L.GainlessOn cs t → W.stock cs (t + 1) ≤ W.stock cs t
+@Becoming.Flow.Balances.falls_by_record : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {ρ : Nat → F → Nat},
+  L.Balances W →
+    (L.withRecord ρ).GainlessOn (none :: List.map some cs) t →
+      W.stock cs (t + 1) + Becoming.total (L.present t) (ρ t) ≤ W.stock cs t
+@Becoming.Flow.RecordsOn.exchanges_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {ρ : Nat → F → Nat}, L.RecordsOn ρ cs t → L.exchanges cs t ≤ Becoming.total (L.present t) (ρ t)
+Becoming.Flow.le_add_excess : ∀ (a b : Nat), a ≤ b + Becoming.excess a b
+@Becoming.Flow.excess_le_of_le_add : ∀ {u x y : Nat}, u ≤ x + y → Becoming.excess u x ≤ y
+@Becoming.Flow.gainlessOn_iff_inflow : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.GainlessOn cs t ↔ L.inflow cs t = 0
+@Becoming.Flow.replenishment_le_inflow : ∀ {F C : Type} (L : Becoming.Flow F C) (cs : List C) (t : Nat),
+  L.replenishment cs t ≤ L.uptake cs t + L.inflow cs t
+@Becoming.Flow.gained_le_inflow : ∀ {F C : Type} (L : Becoming.Flow F C) (cs : List C) (t : Nat),
+  Becoming.excess (L.replenishment cs t) (L.uptake cs t) ≤ L.inflow cs t
+@Becoming.Flow.GainlessOn.replenishment_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.GainlessOn cs t → L.replenishment cs t ≤ L.uptake cs t
+@Becoming.Flow.GainlessOn.replenishment_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.GainlessOn cs t → L.replenishment cs t + L.lost cs t = L.uptake cs t
+@Becoming.Flow.Balances.stock_gained : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (cs : List C) (t : Nat),
+      W.stock cs (t + 1) + L.lost cs t = W.stock cs t + Becoming.excess (L.replenishment cs t) (L.uptake cs t)
+@Becoming.Flow.Balances.stock_inflow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ (cs : List C) (t : Nat), W.stock cs (t + 1) + L.lost cs t ≤ W.stock cs t + L.inflow cs t
+@Becoming.Flow.Balances.stock_over_inflow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (cs : List C) (S N : Nat), W.stock cs (S + N) ≤ W.stock cs S + Becoming.total (Becoming.steps S N) (L.inflow cs)
+@Becoming.Flow.Balances.stock_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat}, L.Balances W → L.GainlessOn cs t → W.stock cs (t + 1) + L.lost cs t = W.stock cs t
+@Becoming.Flow.DissipatesOn.takers_le_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.takers cs t ≤ L.lost cs t
+@Becoming.Flow.DissipatesOn.exchanges_le_takers : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.exchanges cs t ≤ L.takers cs t
+@Becoming.Flow.ConservingOn.lost_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.ConservingOn cs t → L.lost cs t = 0
+@Becoming.Flow.dissipated_succ : ∀ {F C : Type} (L : Becoming.Flow F C) (cs : List C) (T N : Nat),
+  L.dissipated cs T (N + 1) = L.dissipated cs T N + L.lost cs (T + N)
+@Becoming.Flow.dissipated_mono : ∀ {F C : Type} (L : Becoming.Flow F C) (cs : List C) (T N : Nat),
+  L.dissipated cs T N ≤ L.dissipated cs T (N + 1)
+@Becoming.Flow.DissipatesOn.dissipated_rises : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {T N : Nat},
+  L.DissipatesOn cs (T + N) → L.dissipated cs T N + L.takers cs (T + N) ≤ L.dissipated cs T (N + 1)
+@Becoming.Flow.Balances.stock_dissipated : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → ∀ (N : Nat), W.stock cs (T + N) + L.dissipated cs T N = W.stock cs T
+@Becoming.Flow.Balances.dissipated_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → ∀ (N : Nat), L.dissipated cs T N ≤ W.stock cs T
+@Becoming.Flow.dissipated_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.ConservingOn cs t) → ∀ (N : Nat), L.dissipated cs T N = 0
+@Becoming.Flow.Balances.history_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) →
+        ∀ (N : Nat),
+          Becoming.total (Becoming.steps T N) (L.exchanges cs) ≤ Becoming.total (Becoming.steps T N) (L.takers cs) ∧
+            Becoming.total (Becoming.steps T N) (L.takers cs) ≤ L.dissipated cs T N ∧ L.dissipated cs T N ≤ W.stock cs T
+@Becoming.Flow.Balances.loss_ceases : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.lost cs t
+@Becoming.Flow.conservingOn_withRecord_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {ρ : Nat → F → Nat},
+  (L.withRecord ρ).ConservingOn (none :: List.map some cs) t ↔
+    ∀ (f : F), f ∈ L.present t → Becoming.total cs (L.give t f) + ρ t f = Becoming.total cs (L.take t f)
+@Becoming.Flow.GainlessOn.conserves_residue : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.GainlessOn cs t →
+    ∀ {f : F}, f ∈ L.present t → Becoming.total cs (L.give t f) + L.residue cs t f = Becoming.total cs (L.take t f)
+@Becoming.Flow.dissipatesOn_iff_conserved : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t ↔ ∃ ρ, (L.withRecord ρ).ConservingOn (none :: List.map some cs) t ∧ L.RecordsOn ρ cs t
+@Becoming.Flow.GainlessOn.residues_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.GainlessOn cs t → Becoming.total (L.present t) (L.residue cs t) = L.lost cs t
+@Becoming.Flow.replenishment_lost_of_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.replenishment cs t ≤ L.uptake cs t → L.replenishment cs t + L.lost cs t = L.uptake cs t
+@Becoming.Flow.DissipatesBy.uptake_le_lost : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t q : Nat},
+  Becoming.Flow.DissipatesBy q cs t → L.uptake cs t ≤ (q + 1) * L.lost cs t
+@Becoming.Flow.uptake_within_dissipated : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {q T : Nat},
+  (∀ (t : Nat), T ≤ t → Becoming.Flow.DissipatesBy q cs t) →
+    ∀ (N : Nat), Becoming.total (Becoming.steps T N) (L.uptake cs) ≤ (q + 1) * L.dissipated cs T N
+@Becoming.EntropyLists.mem_joinMap : ∀ {α β : Type} {g : α → List β} {b : β} {as : List α} {a : α},
+  a ∈ as → b ∈ g a → b ∈ Becoming.EntropyLists.joinMap as g
+Becoming.head_splits : ∀ (K : Nat), (0, K) ∈ Becoming.splits K
+Becoming.mem_splits : ∀ (i j : Nat), (i, j) ∈ Becoming.splits (i + j)
+Becoming.mem_configurations : ∀ (l : List Nat), l ∈ Becoming.configurations l.length (Becoming.total l fun x => x)
+@Becoming.mem_configurationsWithin : ∀ {l : List Nat} {K : Nat},
+  (Becoming.total l fun x => x) ≤ K → l ∈ Becoming.configurationsWithin l.length K
+@Becoming.EntropyLists.mem_append_cases : ∀ {α : Type} {x : α} {m l : List α}, x ∈ l ++ m → x ∈ l ∨ x ∈ m
+@Becoming.mem_joinMap_cases : ∀ {α β : Type} {g : α → List β} {b : β} {as : List α},
+  b ∈ Becoming.EntropyLists.joinMap as g → ∃ a, a ∈ as ∧ b ∈ g a
+@Becoming.EntropyLists.distinct_append : ∀ {α : Type} {m : List α},
+  Becoming.Distinct m → ∀ {l : List α}, Becoming.Distinct l → (∀ (x : α), x ∈ l → ¬x ∈ m) → Becoming.Distinct (l ++ m)
+@Becoming.distinct_joinMap : ∀ {α β : Type} {g : α → List β},
+  (∀ (a : α), Becoming.Distinct (g a)) →
+    ∀ {as : List α},
+      Becoming.Distinct as →
+        (∀ (a a' : α) (b : β), a ∈ as → a' ∈ as → b ∈ g a → b ∈ g a' → a = a') →
+          Becoming.Distinct (Becoming.EntropyLists.joinMap as g)
+@Becoming.sum_of_mem_splits : ∀ {K : Nat} {p : Nat × Nat}, p ∈ Becoming.splits K → p.fst + p.snd = K
+@Becoming.splits_apart : ∀ {K : Nat} {p p' : Nat × Nat},
+  p ∈ Becoming.splits K → p' ∈ Becoming.splits K → p.fst = p'.fst → p = p'
+Becoming.distinct_splits : ∀ (K : Nat), Becoming.Distinct (Becoming.splits K)
+@Becoming.total_of_mem_configurations : ∀ {n K : Nat} {l : List Nat},
+  l ∈ Becoming.configurations n K → (Becoming.total l fun x => x) = K
+@Becoming.length_of_mem_configurations : ∀ {n K : Nat} {l : List Nat}, l ∈ Becoming.configurations n K → l.length = n
+Becoming.distinct_configurations : ∀ (n K : Nat), Becoming.Distinct (Becoming.configurations n K)
+Becoming.configurations_exact : ∀ (n K : Nat),
+  Becoming.Distinct (Becoming.configurations n K) ∧
+    ∀ (l : List Nat), l ∈ Becoming.configurations n K ↔ l.length = n ∧ (Becoming.total l fun x => x) = K
+Becoming.configurations_examples : (Becoming.configurations 2 3).length = 4 ∧ (Becoming.configurations 3 2).length = 6
+Becoming.distinct_downFrom : ∀ (K : Nat), Becoming.Distinct (Becoming.downFrom K)
+Becoming.distinct_configurationsWithin : ∀ (n K : Nat), Becoming.Distinct (Becoming.configurationsWithin n K)
+@Becoming.Web.config_total : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (t : Nat),
+  (Becoming.total (W.config cs t) fun x => x) = W.stock cs t
+@Becoming.Web.config_within : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {t K : Nat},
+  W.stock cs t ≤ K → W.config cs t ∈ Becoming.configurationsWithin cs.length K
+@Becoming.Web.config_exact : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {t K : Nat},
+  W.stock cs t = K → W.config cs t ∈ Becoming.configurations cs.length K
+@Becoming.Web.level_of_config : ∀ {F C : Type} {W : Becoming.Web F C} {u s : Nat} {cs : List C} {c : C},
+  W.config cs u = W.config cs s → c ∈ cs → W.level u c = W.level s c
+@Becoming.Web.changes_of_member : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {t : Nat} {c : C},
+  c ∈ cs → W.Rises t c ∨ W.Falls t c → W.Changes cs t
+@Becoming.Web.changes_member : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {cs : List C},
+  W.Changes cs t → ∃ c, c ∈ cs ∧ (W.Rises t c ∨ W.Falls t c)
+@Becoming.Web.seen_changes : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} (E : List (List Nat)) {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.config cs t ∈ E) →
+    ¬W.Revisits cs T →
+      ∀ (N : Nat),
+        ∃ seen,
+          Becoming.Distinct seen ∧
+            (∀ (x : List Nat), x ∈ seen → x ∈ E) ∧
+              (∀ (x : List Nat), x ∈ seen → ∃ t, T ≤ t ∧ t < T + N ∧ W.Changes cs t ∧ W.config cs (t + 1) = x) ∧
+                (Becoming.total (Becoming.steps T N) fun t => Becoming.mark (W.Changes cs t)) ≤ seen.length
+@Becoming.Web.changes_within : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} (E : List (List Nat)) {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.config cs t ∈ E) →
+    ¬W.Revisits cs T →
+      ∀ (N : Nat), (Becoming.total (Becoming.steps T N) fun t => Becoming.mark (W.Changes cs t)) ≤ E.length
+@Becoming.Web.rests_of_never_revisits : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} (E : List (List Nat))
+  {T : Nat}, (∀ (t : Nat), T ≤ t → W.config cs t ∈ E) → ¬W.Revisits cs T → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t
+@Becoming.nonrising_from : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → q (t + 1) ≤ q t) → ∀ {s : Nat}, T ≤ s → ∀ (m : Nat), q (s + m) ≤ q s
+@Becoming.nonrising_between : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → q (t + 1) ≤ q t) → ∀ {s u : Nat}, T ≤ s → s ≤ u → q u ≤ q s
+@Becoming.Flow.Balances.never_revisits : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) → ¬W.Revisits cs T
+@Becoming.Flow.Balances.changes_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ¬W.Revisits cs T →
+          ∀ (N : Nat),
+            (Becoming.total (Becoming.steps T N) fun t => Becoming.mark (W.Changes cs t)) ≤
+              (Becoming.configurationsWithin cs.length (W.stock cs T)).length
+@Becoming.Flow.Balances.changes_within_conserving : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.ConservingOn cs t) →
+        ¬W.Revisits cs T →
+          ∀ (N : Nat),
+            (Becoming.total (Becoming.steps T N) fun t => Becoming.mark (W.Changes cs t)) ≤
+              (Becoming.configurations cs.length (W.stock cs T)).length
+@Becoming.Flow.Balances.rests_of_never_revisits : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → ¬W.Revisits cs T → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t
+@Becoming.Flow.Balances.unending_change_revisits : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) → (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t) → ¬¬W.Revisits cs T
+@Becoming.nonfalling_from : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → q t ≤ q (t + 1)) → ∀ {s : Nat}, T ≤ s → ∀ (m : Nat), q s ≤ q (s + m)
+@Becoming.nonfalling_between : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → q t ≤ q (t + 1)) → ∀ {s u : Nat}, T ≤ s → s ≤ u → q s ≤ q u
+@Becoming.Web.never_revisits_of_arrow : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat}
+  {S : List Nat → Nat}, W.Arrow cs T S → ¬W.Revisits cs T
+@Becoming.Flow.Balances.rests_of_arrow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {S : List Nat → Nat}, W.Arrow cs T S → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t
+@Becoming.Flow.Balances.no_arrow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t) → ∀ (S : List Nat → Nat), ¬W.Arrow cs T S
+@Becoming.Web.merges_of_settles : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat}
+  {next : List Nat → List Nat},
+  W.Determined cs T next →
+    ∀ {v : Nat},
+      T ≤ v → W.Changes cs v → ∀ (n : Nat), W.config cs (v + n + 1) = W.config cs (v + n) → W.Merges cs T next
+@Becoming.Web.changes_persist : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat}
+  {next : List Nat → List Nat},
+  W.Determined cs T next → ¬W.Merges cs T next → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ∀ (n : Nat), W.Changes cs (v + n)
+@Becoming.Flow.Balances.revisits_of_apart : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next → ¬W.Merges cs T next → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬¬W.Revisits cs T
+@Becoming.Flow.Balances.merges_of_never_revisits : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next → ¬W.Revisits cs T → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬¬W.Merges cs T next
+@Becoming.Flow.Balances.merges_of_arrow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next →
+            ∀ {S : List Nat → Nat}, W.Arrow cs T S → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬¬W.Merges cs T next
+@Becoming.Flow.Balances.merges_of_dissipates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬¬W.Merges cs T next
+@Becoming.Web.Revisits.recurs : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  W.Revisits cs T → Becoming.Revisits fun n => W.config cs (T + n)
+@Becoming.Web.Arrow.marks : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat} {S : List Nat → Nat},
+  W.Arrow cs T S → Becoming.Marks S fun n => W.config cs (T + n)
+@Becoming.Web.Merges.law : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat} {next : List Nat → List Nat},
+  W.Merges cs T next → Becoming.Law.Merges next
+@Becoming.Web.Determined.orbit : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat}
+  {next : List Nat → List Nat},
+  W.Determined cs T next → ∀ (n : Nat), W.config cs (T + n) = Becoming.Law.orbit next (W.config cs T) n
+@Becoming.Flow.Balances.held : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ (n : Nat), W.config cs (T + n) ∈ Becoming.configurationsWithin cs.length (W.stock cs T)
+@Becoming.Flow.Balances.orbit_held : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next →
+            ∀ (n : Nat),
+              Becoming.Law.orbit next (W.config cs T) n ∈ Becoming.configurationsWithin cs.length (W.stock cs T)
+@Becoming.Flow.Balances.recurs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ (M : Nat), ∃ i j, M ≤ i ∧ i < j ∧ W.config cs (T + i) = W.config cs (T + j)
+@Becoming.Flow.Balances.arrow_stops : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {S : List Nat → Nat}, W.Arrow cs T S → ¬∀ (M : Nat), ∃ k, M ≤ k ∧ W.Changes cs (T + k)
+@Becoming.Flow.Balances.returns_of_conserving : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next → Becoming.Law.Lossless next → Becoming.Law.Returns next (W.config cs T)
+@Becoming.Flow.Balances.present_forgets : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next →
+            ∀ (M : Nat),
+              ∃ i j,
+                M ≤ i ∧
+                  i < j ∧
+                    (Becoming.Law.orbit (Becoming.Law.withHistory next) (W.config cs T, []) i).fst =
+                        (Becoming.Law.orbit (Becoming.Law.withHistory next) (W.config cs T, []) j).fst ∧
+                      Becoming.Law.orbit (Becoming.Law.withHistory next) (W.config cs T, []) i ≠
+                        Becoming.Law.orbit (Becoming.Law.withHistory next) (W.config cs T, []) j
+@Becoming.Flow.Balances.not_conserving_of_arrow : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next →
+            ∀ {S : List Nat → Nat}, W.Arrow cs T S → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬Becoming.Law.Lossless next
+@Becoming.Flow.Balances.not_conserving_of_dissipates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) →
+        ∀ {next : List Nat → List Nat},
+          W.Determined cs T next → ∀ {v : Nat}, T ≤ v → W.Changes cs v → ¬Becoming.Law.Lossless next
+@Becoming.mark_mono : ∀ {p q : Prop} [inst : Decidable p] [inst_1 : Decidable q],
+  (p → q) → Becoming.mark p ≤ Becoming.mark q
+@Becoming.le_of_add_le_add_left : ∀ {a b : Nat} (k : Nat), k + a ≤ k + b → a ≤ b
+@Becoming.Flow.history_mono : ∀ {F C : Type} (L : Becoming.Flow F C) (cs : List C) (T : Nat) {a b : Nat},
+  a ≤ b → L.exchangeCount cs T a ≤ L.exchangeCount cs T b
+@Becoming.Flow.exchanges_pos : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat} {f : F},
+  f ∈ L.present t → ∀ {c : C}, c ∈ cs → 0 < L.take t f c ∨ 0 < L.give t f c → 0 < L.exchanges cs t
+@Becoming.Flow.CarriesHistory.changes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T : Nat}, L.CarriesHistory W cs T → ∀ {N : Nat}, 0 < L.exchanges cs (T + N) → W.Changes cs (T + N)
+@Becoming.Flow.Balances.never_revisits_of_carries : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C}, L.Balances W → ∀ {T : Nat}, L.CarriesHistory W cs T → ¬W.Revisits cs T
+@Becoming.Flow.Balances.exchanges_within_of_carries : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        L.CarriesHistory W cs T →
+          ∀ (N : Nat),
+            (Becoming.total (Becoming.steps T N) fun t => Becoming.mark (0 < L.exchanges cs t)) ≤
+              (Becoming.configurationsWithin cs.length (W.stock cs T)).length
+@Becoming.Flow.Balances.exchange_stops_of_carries : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.GainlessOn cs t) →
+        L.CarriesHistory W cs T → ¬∀ (M : Nat), ∃ t, M ≤ t ∧ 0 < L.exchanges cs t
+@Becoming.Flow.Balances.arrow_of_carries : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W → ∀ {T : Nat}, L.CarriesHistory W cs T → ∃ S, W.Arrow cs T S
+@Becoming.World.rests_of_never_revisits : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all →
+    (∀ (x : w.Relatum), x ∈ all) →
+      w.Embodied →
+        w.Balanced → w.flow.Gainless → ∀ {T : Nat}, ¬w.web.Revisits all T → ¬w.ArisingRecurs ∧ ¬w.CeasingRecurs
+@Becoming.World.arising_revisits : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all →
+    (∀ (x : w.Relatum), x ∈ all) →
+      w.Embodied → w.Balanced → w.flow.Gainless → w.ArisingRecurs → ∀ (T : Nat), ¬¬w.web.Revisits all T
+@Becoming.World.never_revisits : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all → (∀ (x : w.Relatum), x ∈ all) → w.Balanced → w.Dissipative → ∀ (T : Nat), ¬w.web.Revisits all T
+@Becoming.World.forgets : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all →
+    (∀ (x : w.Relatum), x ∈ all) →
+      w.Balanced → w.flow.Gainless → w.flow.ExchangeRecurs → ∀ (T : Nat), ¬w.flow.CarriesHistory w.web all T
+@Becoming.World.no_arrow : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all →
+    (∀ (x : w.Relatum), x ∈ all) →
+      w.Embodied →
+        w.Balanced → w.flow.Gainless → w.ArisingRecurs → ∀ (T : Nat) (S : List Nat → Nat), ¬w.web.Arrow all T S
+Becoming.Passing.one_ne_zero : ¬1 = 0
+Becoming.Passing.holds_self : ∀ (b : Bool), Becoming.Passing.holds b b = 1
+Becoming.Passing.holds_not : ∀ (b : Bool), Becoming.Passing.holds (!b) b = 0
+Becoming.Passing.holds_to_not : ∀ (b : Bool), (Becoming.Passing.holds b !b) = 0
+@Becoming.Passing.holds_pos : ∀ {a b : Bool}, 0 < Becoming.Passing.holds a b → a = b
+Becoming.Passing.every : ∀ (x : Option Bool), x ∈ Becoming.Passing.all
+Becoming.Passing.distinct : Becoming.Distinct Becoming.Passing.all
+Becoming.Passing.total_at_all : ∀ (s : Bool), Becoming.total Becoming.Passing.all (Becoming.Passing.at_ s) = 1
+@Becoming.Passing.total_at : ∀ {cs : List (Option Bool)},
+  Becoming.Distinct cs → ∀ {s : Bool}, some s ∈ cs → Becoming.total cs (Becoming.Passing.at_ s) = 1
+@Becoming.Passing.holds_side : ∀ {cs : List (Option Bool)} {s : Bool},
+  (∀ (c : Option Bool), ¬c ∈ cs → Becoming.Passing.at_ s c = 0) → some s ∈ cs
+Becoming.Passing.balances : Becoming.Passing.flow.Balances Becoming.Passing.web
+Becoming.Passing.conserving : Becoming.Passing.flow.Conserving
+Becoming.Passing.closed : ∀ (t : Nat), Becoming.Passing.flow.ClosedAt Becoming.Passing.all t
+Becoming.Passing.reverses : ∀ (t : Nat), Becoming.Passing.flow.Reverses (t + 1) t
+Becoming.Passing.embodied : Becoming.Passing.world.Embodied
+@Becoming.Passing.mem_alive : ∀ {b s : Bool}, some b ∈ [none, some s] → b = s
+Becoming.Passing.counted : Becoming.Passing.world.Counted
+Becoming.Passing.config_back : ∀ (T : Nat),
+  Becoming.Passing.web.config Becoming.Passing.all (T + 2) = Becoming.Passing.web.config Becoming.Passing.all T
+Becoming.Passing.changes : ∀ (T : Nat), Becoming.Passing.web.Changes Becoming.Passing.all T
+Becoming.Passing.exchanges_one : ∀ (t : Nat), Becoming.Passing.flow.exchanges Becoming.Passing.all t = 1
+Becoming.Passing.history_grows : ∀ (T N : Nat), Becoming.Passing.flow.exchangeCount Becoming.Passing.all T N = N
+Becoming.Passing.revisits : ∀ (T : Nat), Becoming.Passing.web.Revisits Becoming.Passing.all T
+Becoming.Passing.passes : Becoming.Passing.world.Finite ∧
+  Becoming.Passing.world.Embodied ∧
+    Becoming.Passing.world.Counted ∧
+      Becoming.Passing.world.Balanced ∧
+        Becoming.Passing.flow.Conserving ∧
+          (∀ (t : Nat), Becoming.Passing.flow.Enclosed t) ∧
+            (∀ (t : Nat), Becoming.Passing.flow.Reverses (t + 1) t) ∧
+              Becoming.Passing.world.ArisingRecurs ∧
+                Becoming.Passing.world.CeasingRecurs ∧
+                  (∀ (T : Nat), Becoming.Passing.web.Revisits Becoming.Passing.all T) ∧
+                    ¬Becoming.Passing.world.Dissipative ∧
+                      (∀ (T N : Nat), Becoming.Passing.flow.dissipated Becoming.Passing.all T N = 0) ∧
+                        ∀ (t : Nat), Becoming.Passing.flow.exchanges Becoming.Passing.all t = 1
+Becoming.Passing.record_needs_both : ∀ (t : Nat),
+  (Becoming.Passing.flow.withRecord fun x x_1 => 0).GainlessOn (none :: List.map some Becoming.Passing.all) t ∧
+    ¬Becoming.Passing.flow.RecordsOn (fun x x_1 => 0) Becoming.Passing.all t ∧
+      Becoming.Passing.flow.RecordsOn (fun x x_1 => 1) Becoming.Passing.all t ∧
+        ¬(Becoming.Passing.flow.withRecord fun x x_1 => 1).GainlessOn (none :: List.map some Becoming.Passing.all) t
+Becoming.Passing.no_arrow : ∀ (T : Nat) (S : List Nat → Nat), ¬Becoming.Passing.web.Arrow Becoming.Passing.all T S
+Becoming.Passing.swap_side : ∀ (s : Bool),
+  [1, Becoming.Passing.holds true !s, Becoming.Passing.holds false !s] =
+    [1, Becoming.Passing.holds false s, Becoming.Passing.holds true s]
+Becoming.Passing.determined : Becoming.Passing.web.Determined Becoming.Passing.all 0 Becoming.Passing.swap
+Becoming.Passing.apart : ¬Becoming.Passing.web.Merges Becoming.Passing.all 0 Becoming.Passing.swap
+Becoming.Passing.history_without_arrow : Becoming.Passing.flow.Conserving ∧
+  (∀ (t : Nat), Becoming.Passing.flow.Reverses (t + 1) t) ∧
+    Becoming.Passing.web.Determined Becoming.Passing.all 0 Becoming.Passing.swap ∧
+      ¬Becoming.Passing.web.Merges Becoming.Passing.all 0 Becoming.Passing.swap ∧
+        (∀ (T N : Nat), Becoming.Passing.flow.exchangeCount Becoming.Passing.all T N = N) ∧
+          (∀ (T : Nat), Becoming.Passing.web.Revisits Becoming.Passing.all T) ∧
+            ∀ (T : Nat) (S : List Nat → Nat), ¬Becoming.Passing.web.Arrow Becoming.Passing.all T S
+Becoming.Entropy.Settling.balances : Becoming.Entropy.Settling.flow.Balances Becoming.Entropy.Settling.web
+Becoming.Entropy.Settling.conserving : Becoming.Entropy.Settling.flow.Conserving
+Becoming.Entropy.Settling.closed : ∀ (t : Nat), Becoming.Entropy.Settling.flow.ClosedAt Becoming.Passing.all t
+Becoming.Entropy.Settling.changed : Becoming.Entropy.Settling.web.Changes Becoming.Passing.all 0
+Becoming.Entropy.Settling.merges : Becoming.Entropy.Settling.web.Determined Becoming.Passing.all 0
+    Becoming.Entropy.Settling.rest ∧
+  Becoming.Entropy.Settling.web.Merges Becoming.Passing.all 0 Becoming.Entropy.Settling.rest ∧
+    Becoming.Entropy.Settling.web.Arrow Becoming.Passing.all 0 Becoming.Entropy.Settling.third
+Becoming.Entropy.Settling.settles : Becoming.Entropy.Settling.world.Embodied ∧
+  Becoming.Entropy.Settling.world.Balanced ∧
+    Becoming.Entropy.Settling.flow.Conserving ∧
+      (∀ (t : Nat), Becoming.Entropy.Settling.flow.Enclosed t) ∧
+        Becoming.Entropy.Settling.web.Changes Becoming.Passing.all 0 ∧
+          ¬Becoming.Entropy.Settling.web.Revisits Becoming.Passing.all 0 ∧
+            ¬Becoming.Entropy.Settling.world.Dissipative ∧
+              ¬Becoming.Entropy.Settling.world.ArisingRecurs ∧ ¬Becoming.Entropy.Settling.world.CeasingRecurs
+Becoming.Gathering.unit_self : ∀ (a : Nat), Becoming.Gathering.unit a a = 1
+@Becoming.Gathering.unit_off : ∀ {a x : Nat}, ¬x = a → Becoming.Gathering.unit a x = 0
+@Becoming.Gathering.succ_not_zero : ∀ {n : Nat}, ¬n + 1 = 0
+@Becoming.Gathering.total_unit : ∀ {cs : List Nat},
+  Becoming.Distinct cs → ∀ {a : Nat}, a ∈ cs → Becoming.total cs (Becoming.Gathering.unit a) = 1
+@Becoming.Gathering.unit_mem : ∀ {cs : List Nat} {a : Nat},
+  (∀ (c : Nat), ¬c ∈ cs → Becoming.Gathering.unit a c = 0) → a ∈ cs
+@Becoming.Gathering.sums_eq : ∀ {x₁ x₂ x₃ x₄ y₁ y₂ y₃ y₄ : Nat},
+  x₁ = y₁ → x₂ = y₂ → x₃ = y₃ → x₄ = y₄ → y₁ + y₂ = y₃ + y₄ → x₁ + x₂ = x₃ + x₄
+Becoming.Gathering.balances : Becoming.Gathering.flow.Balances Becoming.Gathering.web
+Becoming.Gathering.conserving : Becoming.Gathering.flow.Conserving
+Becoming.Gathering.enclosed : ∀ (t : Nat), Becoming.Gathering.flow.Enclosed t
+Becoming.Gathering.gathers : Becoming.Gathering.world.Balanced ∧
+  Becoming.Gathering.flow.Conserving ∧
+    (∀ (t : Nat), Becoming.Gathering.flow.Enclosed t) ∧
+      Becoming.Gathering.flow.ExchangeRecurs ∧
+        (Becoming.Gathering.web.Arrow [0] 0 fun l => Becoming.total l fun x => x) ∧
+          (∀ (t : Nat), ¬Becoming.Gathering.flow.GainlessOn [0] t) ∧ ¬Becoming.Gathering.world.Finite
+@Becoming.LevelWebs.level_falls_not_recurring : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {T : Nat},
+  (∀ (n : Nat), T ≤ n → ¬W.Rises n c) → ¬∀ (N : Nat), ∃ n, N ≤ n ∧ W.Falls n c
+@Becoming.LevelWebs.level_still_unrefuted : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {T : Nat},
+  (∀ (n : Nat), T ≤ n → ¬W.Rises n c) → ¬¬∃ M, T ≤ M ∧ ∀ (t : Nat), M ≤ t → W.level (t + 1) c = W.level t c
+@Becoming.LevelWebs.Balances.level_over_stretch : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (c : C) (S n : Nat),
+      (W.level (S + n) c + Becoming.total (Becoming.steps S n) fun t => L.taken t c) =
+        W.level S c + Becoming.total (Becoming.steps S n) fun t => L.given t c
+@Becoming.LevelWebs.config_mem_iff : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (t K : Nat),
+  W.config cs t ∈ Becoming.configurations cs.length K ↔ W.stock cs t = K

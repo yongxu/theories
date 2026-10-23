@@ -112,6 +112,7 @@ identity-across-steps shows that readings following a formation (arising, unceas
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Census.balanceFrom`, `Becoming.Web.Census.balanceFrom_eq`, `Becoming.Web.Census.arisingFrom_of_ceasingFrom`, `Becoming.Web.Census.ceasingFrom_of_arisingFrom`, `Becoming.Web.CeasesFrom`, `Becoming.Web.NoMerge`, `Becoming.Tandem.budding`, `Becoming.Tandem.joining`, `Becoming.gaining_of_losing`, `Becoming.losing_of_gaining`
 

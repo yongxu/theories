@@ -68,6 +68,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | provenance | [2026-10-19-collective-continuation.md](../../../../sources/15-codex-theory-conversations/2026-10-19-collective-continuation.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T164609.214116Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one empty step ends it`, `Becoming.Web.ByPassing.ends_within`, `forming the next members (reading)`
 

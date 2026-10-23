@@ -1,0 +1,75 @@
+@Becoming.Fragment.idle_traced : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S),
+  Becoming.Fragment.Traced P (Becoming.Fragment.idle s)
+@Becoming.Fragment.joint_iff_joined : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (f g : Becoming.Fragment S A), Becoming.Fragment.Joint P f g ↔ ∃ h, Becoming.Fragment.Joined P f g h
+@Becoming.Fragment.joined_functional : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g h k : Becoming.Fragment S A}, Becoming.Fragment.Joined P f g h → Becoming.Fragment.Joined P f g k → h = k
+@Becoming.Fragment.merge_traced : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g : Becoming.Fragment S A}, Becoming.Fragment.Joint P f g → Becoming.Fragment.Traced P (f.merge g)
+@Becoming.Fragment.joined_traced : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g h : Becoming.Fragment S A}, Becoming.Fragment.Joined P f g h → Becoming.Fragment.Traced P h
+@Becoming.Fragment.merge_assoc : ∀ {S : Type u_1} {A : Type u_2} (f g h : Becoming.Fragment S A),
+  (f.merge g).merge h = f.merge (g.merge h)
+@Becoming.Fragment.joint_chain_left : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g h : Becoming.Fragment S A},
+  Becoming.Fragment.Joint P f g → Becoming.Fragment.Joint P g h → Becoming.Fragment.Joint P (f.merge g) h
+@Becoming.Fragment.joint_chain_right : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g h : Becoming.Fragment S A},
+  Becoming.Fragment.Joint P f g → Becoming.Fragment.Joint P g h → Becoming.Fragment.Joint P f (g.merge h)
+@Becoming.Fragment.joined_assoc : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (f g h k : Becoming.Fragment S A),
+  (∃ m, Becoming.Fragment.Joined P f g m ∧ Becoming.Fragment.Joined P m h k) ↔
+    ∃ n, Becoming.Fragment.Joined P g h n ∧ Becoming.Fragment.Joined P f n k
+@Becoming.Fragment.idle_joint_left : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (f : Becoming.Fragment S A) (s : S),
+  Becoming.Fragment.Joint P (Becoming.Fragment.idle s) f ↔ Becoming.Fragment.Traced P f ∧ s = f.start
+@Becoming.Fragment.idle_joint_right : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (f : Becoming.Fragment S A) (s : S),
+  Becoming.Fragment.Joint P f (Becoming.Fragment.idle s) ↔ Becoming.Fragment.Traced P f ∧ f.finish = s
+@Becoming.Fragment.joined_idle_left : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f : Becoming.Fragment S A},
+  Becoming.Fragment.Traced P f → Becoming.Fragment.Joined P (Becoming.Fragment.idle f.start) f f
+@Becoming.Fragment.joined_idle_right : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f : Becoming.Fragment S A},
+  Becoming.Fragment.Traced P f → Becoming.Fragment.Joined P f (Becoming.Fragment.idle f.finish) f
+@Becoming.Fragment.same_probes_iff_ends : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f g : Becoming.Fragment S A},
+  Becoming.Fragment.Traced P f →
+    Becoming.Fragment.Traced P g →
+      (Becoming.Presentations.SameAnswers (Becoming.Fragment.probes P) f g ↔ f.start = g.start ∧ f.finish = g.finish)
+@Becoming.Fragment.joint_iff_probes : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (f g : Becoming.Fragment S A),
+  Becoming.Fragment.Joint P f g ↔
+    ∃ s,
+      Becoming.Fragment.probes P f (Becoming.Fragment.Probe.after s) ∧
+        Becoming.Fragment.probes P g (Becoming.Fragment.Probe.before s)
+@Becoming.Fragment.exact_codes_keep_ends : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {p : Becoming.Presentations.Presentation (Becoming.Fragment S A) (Becoming.Fragment.Probe S) C},
+  Becoming.Presentations.Exact (Becoming.Fragment.probes P) p →
+    ∀ {f g : Becoming.Fragment S A},
+      Becoming.Fragment.Traced P f →
+        Becoming.Fragment.Traced P g → p.encode f = p.encode g → f.start = g.start ∧ f.finish = g.finish
+@Becoming.Fragment.readJoint_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {p : Becoming.Presentations.Presentation (Becoming.Fragment S A) (Becoming.Fragment.Probe S) C},
+  Becoming.Presentations.Exact (Becoming.Fragment.probes P) p →
+    ∀ (f g : Becoming.Fragment S A),
+      Becoming.Fragment.readJoint p (p.encode f) (p.encode g) ↔ Becoming.Fragment.Joint P f g
+@Becoming.Fragment.joint_iff_of_same_probes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {f f' g g' : Becoming.Fragment S A},
+  Becoming.Fragment.Traced P f →
+    Becoming.Fragment.Traced P f' →
+      Becoming.Fragment.Traced P g →
+        Becoming.Fragment.Traced P g' →
+          Becoming.Presentations.SameAnswers (Becoming.Fragment.probes P) f f' →
+            Becoming.Presentations.SameAnswers (Becoming.Fragment.probes P) g g' →
+              (Becoming.Fragment.Joint P f g ↔ Becoming.Fragment.Joint P f' g')
+Becoming.Fragment.passage_traced : Becoming.Fragment.Traced Becoming.Fragment.once Becoming.Fragment.passage
+Becoming.Fragment.passage_not_self_joint : ¬Becoming.Fragment.Joint Becoming.Fragment.once Becoming.Fragment.passage
+    Becoming.Fragment.passage
+Becoming.Fragment.idle_ends_apart : ¬Becoming.Presentations.SameAnswers
+    (Becoming.Fragment.probes Becoming.Fragment.once) (Becoming.Fragment.idle false) (Becoming.Fragment.idle true)
+Becoming.Fragment.loop_traced : ∀ (a : Bool),
+  Becoming.Fragment.Traced Becoming.Fragment.loops (Becoming.Fragment.loop a)
+Becoming.Fragment.probes_miss_course : Becoming.Presentations.SameAnswers
+    (Becoming.Fragment.probes Becoming.Fragment.loops) (Becoming.Fragment.loop false) (Becoming.Fragment.loop true) ∧
+  (Becoming.Fragment.loop false).word ≠ (Becoming.Fragment.loop true).word

@@ -1,0 +1,8 @@
+Becoming.SummaryFutures.every_word : ∀ (word h : List Bool), Generative.Feasible Becoming.SummaryFutures.extend h word
+Becoming.SummaryFutures.futures_through : ∀ (π : List Bool → Bool) (h word : List Bool),
+  Generative.Feasible (Becoming.Image Becoming.SummaryFutures.extend π) (π h) word ↔
+    Generative.Feasible Becoming.SummaryFutures.extend h word
+Becoming.SummaryFutures.endpoint_moved : Generative.Trace
+    (Becoming.Image Becoming.SummaryFutures.extend Becoming.SummaryFutures.code) (Becoming.SummaryFutures.code [])
+    [false] false ∧
+  Becoming.SummaryFutures.code ([] ++ [false]) ≠ false

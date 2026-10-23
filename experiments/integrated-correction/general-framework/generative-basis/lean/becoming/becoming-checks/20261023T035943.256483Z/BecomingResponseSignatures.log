@@ -1,0 +1,146 @@
+@Becoming.WithinClosure.converse : ∀ {F : Type} {rel : F → F → Prop} {f g : F},
+  Becoming.WithinClosure (fun a b => rel b a) f g ↔ Becoming.WithinClosure rel g f
+@Becoming.Flow.member_within_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {h : F}, part h = true → L.WithinResponse L' W obs part h
+@Becoming.Flow.outside_part_of_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F}, ¬L.WithinResponse L' W obs part g → part g = false
+@Becoming.Flow.withinResponse_iff_coupling : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F},
+  L.WithinResponse L' W obs part g ↔ ∃ h, part h = true ∧ Becoming.WithinClosure (L.CoupledFromEither W L' obs) g h
+@Becoming.Flow.withinResponse_self_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F},
+  L.WithinResponse L W obs part g ↔ ∃ h, part h = true ∧ L.WithinCoupling W obs g h
+@Becoming.Flow.withinResponse_of_reaches : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F}, L.Reaches W part g → L.WithinResponse L' W obs part g
+@Becoming.Flow.withinResponse_of_withinReach : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {h g : F},
+  part h = true → L.WithinReach W h g → L.WithinResponse L' W obs part g
+@Becoming.Flow.withinResponse_thresholdOnly_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {g : F},
+  L.WithinResponse L W Becoming.thresholdOnly part g ↔ ∃ h, part h = true ∧ L.WithinReach W h g
+@Becoming.Flow.respondsThroughCoupling_withhold : ∀ {F C : Type} {L : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool}, L.RespondsThroughCoupling (L.withhold part) W W' obs part
+@Becoming.Flow.beyond_response_closed : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (Becoming.ClosedUnder (L.CoupledFrom W obs) fun g => ¬L.WithinResponse L' W obs part g) ∧
+    Becoming.ClosedUnder (L'.CoupledFrom W obs) fun g => ¬L.WithinResponse L' W obs part g
+@Becoming.Flow.alike_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (t : Nat) (g : F), ¬L.WithinResponse L' W obs part g → W.AlikeThrough obs g W.level W'.level t
+@Becoming.Flow.exchange_alike_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (t : Nat) (h : F),
+              ¬L.WithinResponse L' W obs part h → ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.Flow.totals_alike_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (t : Nat) (g : F) (c : C),
+              ¬L.WithinResponse L' W obs part g →
+                W.CoupledInto obs g c → L.taken t c = L'.taken t c ∧ L.given t c = L'.given t c
+@Becoming.Flow.not_differs_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ {t : Nat} {g : F}, ¬L.WithinResponse L' W obs part g → ¬L.DiffersBefore L' W t g
+@Becoming.Flow.Balances.comparison_within_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+              (∀ (t : Nat) (g : F), ¬¬L.WithinResponse L' W obs part g → sig p t g) →
+                (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+                  (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                    (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                      (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+@Becoming.Flow.Balances.comparison_within_response_of_decidable : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            ∀ (decided : (g : F) → Decidable (L.WithinResponse L' W obs part g)) {sig : Pos → Nat → F → Prop} {p : Pos},
+              (∀ (t : Nat) (g : F), L.WithinResponse L' W obs part g → sig p t g) →
+                (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+                  (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                    (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                      (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+Becoming.Trophic.forest_within_response : Becoming.Trophic.flow.WithinResponse Becoming.Trophic.responsiveFlow
+    Becoming.Trophic.web Becoming.thresholdOnly Becoming.Trophic.wolvesPart Becoming.Trophic.Formation.forest ∧
+  ¬Becoming.Trophic.flow.Reaches Becoming.Trophic.web Becoming.Trophic.wolvesPart Becoming.Trophic.Formation.forest
+Becoming.Trophic.responds_through_coupling : Becoming.Trophic.flow.RespondsThroughCoupling
+  Becoming.Trophic.responsiveFlow Becoming.Trophic.web Becoming.Trophic.responsiveWeb Becoming.thresholdOnly
+  Becoming.Trophic.wolvesPart
+Becoming.Trophic.den_untouched : ∀ (t : Nat) (a : Becoming.Trophic.Formation),
+  Becoming.Trophic.flow.take t a Becoming.Trophic.Place.den = 0 ∧
+    Becoming.Trophic.flow.give t a Becoming.Trophic.Place.den = 0 ∧
+      Becoming.Trophic.responsiveFlow.take t a Becoming.Trophic.Place.den = 0
+@Becoming.Trophic.far_unaffected : ∀ {a : Becoming.Trophic.Formation} {c : Becoming.Trophic.Place},
+  Becoming.Trophic.web.CoupledInto Becoming.thresholdOnly Becoming.Trophic.Formation.far c →
+    ¬Becoming.Trophic.flow.Exchanges a c ∧ ¬Becoming.Trophic.responsiveFlow.Exchanges a c
+Becoming.Trophic.responsiveReach_closed : Becoming.ClosedUnder
+  (fun a b =>
+    Becoming.Trophic.flow.CoupledFromEither Becoming.Trophic.web Becoming.Trophic.responsiveFlow Becoming.thresholdOnly
+      b a)
+  Becoming.Trophic.responsiveReach
+@Becoming.Trophic.within_response_iff : ∀ {g : Becoming.Trophic.Formation},
+  Becoming.Trophic.flow.WithinResponse Becoming.Trophic.responsiveFlow Becoming.Trophic.web Becoming.thresholdOnly
+      Becoming.Trophic.wolvesPart g ↔
+    Becoming.Trophic.responsiveReach g
+@Becoming.Trophic.responsive_comparison : ∀ {Pos : Type} {sig : Pos → Nat → Becoming.Trophic.Formation → Prop}
+  {p : Pos},
+  (∀ (t : Nat) (g : Becoming.Trophic.Formation), Becoming.Trophic.responsiveReach g → sig p t g) →
+    (Becoming.Trophic.web.Retains sig p Becoming.Trophic.web.level Becoming.Trophic.responsiveWeb.level ↔
+        Becoming.Trophic.web.Includes Becoming.Trophic.web.level Becoming.Trophic.responsiveWeb.level) ∧
+      (Becoming.Trophic.web.Retains sig p Becoming.Trophic.responsiveWeb.level Becoming.Trophic.web.level ↔
+          Becoming.Trophic.web.Includes Becoming.Trophic.responsiveWeb.level Becoming.Trophic.web.level) ∧
+        ¬Becoming.Trophic.web.Retains sig p Becoming.Trophic.web.level Becoming.Trophic.responsiveWeb.level ∧
+          ¬Becoming.Trophic.web.Retains sig p Becoming.Trophic.responsiveWeb.level Becoming.Trophic.web.level
+Becoming.Loop.balances : Becoming.Loop.escalation.Balances Becoming.Loop.web
+Becoming.Loop.quiet_balances : Becoming.Loop.quiet.Balances Becoming.Loop.quietWeb
+Becoming.Loop.dependent : Becoming.Loop.web.Dependent
+Becoming.Loop.quiet_dependent : Becoming.Loop.quietWeb.Dependent
+Becoming.Loop.responds : Becoming.Loop.escalation.RespondsThroughCoupling Becoming.Loop.quiet Becoming.Loop.web
+  Becoming.Loop.quietWeb Becoming.Loop.paired Becoming.Loop.firstPart
+Becoming.Loop.returns : Becoming.Loop.escalation.Balances Becoming.Loop.web ∧
+  Becoming.Loop.quiet.Balances Becoming.Loop.quietWeb ∧
+    Becoming.Loop.web.Dependent ∧
+      Becoming.Loop.quietWeb.Dependent ∧
+        (∀ (c : Becoming.Loop.Place), Becoming.Loop.web.level 0 c = Becoming.Loop.quietWeb.level 0 c) ∧
+          Becoming.Loop.escalation.RespondsThroughCoupling Becoming.Loop.quiet Becoming.Loop.web Becoming.Loop.quietWeb
+              Becoming.Loop.paired Becoming.Loop.firstPart ∧
+            Becoming.Loop.escalation.CoupledFromEither Becoming.Loop.web Becoming.Loop.quiet Becoming.Loop.paired
+                Becoming.Loop.Formation.second Becoming.Loop.Formation.first ∧
+              Becoming.Loop.escalation.CoupledFromEither Becoming.Loop.web Becoming.Loop.quiet Becoming.Loop.paired
+                  Becoming.Loop.Formation.first Becoming.Loop.Formation.second ∧
+                (∀ (t : Nat),
+                    Becoming.Loop.escalation.take t Becoming.Loop.Formation.first Becoming.Loop.Place.ofFirst =
+                        Becoming.Loop.quiet.take t Becoming.Loop.Formation.first Becoming.Loop.Place.ofFirst ∧
+                      Becoming.Loop.escalation.give t Becoming.Loop.Formation.first Becoming.Loop.Place.ofFirst =
+                        Becoming.Loop.quiet.give t Becoming.Loop.Formation.first Becoming.Loop.Place.ofFirst) ∧
+                  ¬Becoming.Loop.web.Supported 2 Becoming.Loop.Formation.first ∧
+                    Becoming.Loop.quietWeb.Supported 2 Becoming.Loop.Formation.first ∧
+                      ¬Becoming.Loop.escalation.Reaches Becoming.Loop.web Becoming.Loop.firstPart
+                            Becoming.Loop.Formation.first ∧
+                        Becoming.Loop.escalation.DiffersBefore Becoming.Loop.quiet Becoming.Loop.web 2
+                          Becoming.Loop.Formation.first

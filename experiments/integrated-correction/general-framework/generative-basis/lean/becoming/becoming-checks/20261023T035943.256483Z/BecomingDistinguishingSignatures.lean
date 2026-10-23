@@ -1,0 +1,12 @@
+import Becoming.Distinguishing
+#check @Becoming.Law.agree_bisimulation
+#check @Becoming.Law.alike_iff_agree
+#check @Becoming.Law.sameTests_iff_within
+#check @Becoming.Law.sameTests_iff_below_across
+#check @Becoming.Law.alikeTo_labelled_iff
+#check @Becoming.Law.labelled_finite
+#check @Becoming.Law.orbit_fin
+#check @Becoming.Law.realized_within
+#check @Becoming.labelled_across_exact
+#check @Becoming.frameBy_across_exact
+#check @Becoming.frameBy_within_exact

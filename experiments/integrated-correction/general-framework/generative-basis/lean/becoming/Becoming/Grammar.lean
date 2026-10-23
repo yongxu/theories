@@ -523,6 +523,142 @@ theorem «位同则四相同» {R E : «际» α} (hE : «类» E) {y y' : α} (
 
 end Position
 
+section Sufficing
+
+variable {α : Type u}
+
+/-- Holding by itself (自持): a class constant under the relation. By `«有常则续不尽»`, only lines
+that do not end can be held so. -/
+def «自持» (R E : «际» α) : Prop := «有常» R E
+
+/-- Mutual need through constancy (相须): the joint class is constant and neither is alone. Like
+holding by itself, it applies only to lines that do not end; `«相须核»` is the form for all. -/
+def «相须» (R E₁ E₂ : «际» α) : Prop := «有常» R («合» E₁ E₂) ∧ ¬ «有常» R E₁ ∧ ¬ «有常» R E₂
+
+/-- Leaning on through constancy (因于): the joint class and `E₂` are constant, `E₁` is not. -/
+def «因于» (R E₁ E₂ : «际» α) : Prop := «有常» R («合» E₁ E₂) ∧ «有常» R E₂ ∧ ¬ «有常» R E₁
+
+/-- Constancy depends only on the class pointwise. -/
+theorem «有常之同谓» {R E E' : «际» α} (h : «谓» E E') (hc : «有常» R E) : «有常» R E' :=
+  fun x z ⟨y, hyx, hr⟩ => match hc x z ⟨y, (h y x).mpr hyx, hr⟩ with
+    | ⟨w, hxw, hzw⟩ => ⟨w, hxw, (h z w).mp hzw⟩
+
+/-- Mutual need is symmetric. -/
+theorem «相须之对称» {R E₁ E₂ : «际» α} (h : «相须» R E₁ E₂) : «相须» R E₂ E₁ :=
+  ⟨«有常之同谓» (fun _ _ => ⟨fun ⟨a, b⟩ => ⟨b, a⟩, fun ⟨a, b⟩ => ⟨b, a⟩⟩) h.1, h.2.2, h.2.1⟩
+
+/-- Nothing needs itself. -/
+theorem «无自相须» {R E : «际» α} : ¬ «相须» R E E :=
+  fun ⟨hc, hn, _⟩ => hn («有常之同谓» (fun _ _ => ⟨fun h => h.1, fun h => ⟨h, h⟩⟩) hc)
+
+/-- The core is monotone in the class: a finer class has a finer core. -/
+theorem «核之单调» (R : «际» α) {E E' : «际» α} (h : «则» E E') : «则» («核» R E) («核» R E') :=
+  fun _ _ ⟨S, hS, hs, hc, hu⟩ => ⟨S, fun a b hab => h a b (hS a b hab), hs, hc, hu⟩
+
+/-- A class is constant exactly where it lies inside its own core. -/
+theorem «类有常当且仅当含于核» (R : «际» α) {E : «际» α} (hE : «类» E) :
+    «有常» R E ↔ «则» E («核» R E) :=
+  ⟨fun hc _ _ h => ⟨E, «则之自反» E, fun _ _ hab => hE.symm hab, hc, h⟩,
+   fun hin => fun x z ⟨y, hyx, hr⟩ =>
+     match («根» R E).2.1 x z ⟨y, hin y x hyx, hr⟩ with
+     | ⟨w, hxw, hzw⟩ => ⟨w, hxw, («根» R E).1 z w hzw⟩⟩
+
+/-- `E₂` suffices for the regularity of `E₁` (足以定理): what is alike under both is alike under
+`E₁`'s core, so `E₁` together with `E₂` fixes the course of a line under `E₁`. This applies to
+lines that end, where `E₁` itself is not constant. -/
+def «足以定理» (R E₁ E₂ : «际» α) : Prop := «则» («合» E₁ E₂) («核» R E₁)
+
+/-- `E₁`'s regularity lies in `E₂` (因于核): `E₂` suffices for it and `E₁` alone does not. -/
+def «因于核» (R E₁ E₂ : «际» α) : Prop := «足以定理» R E₁ E₂ ∧ ¬ «有常» R E₁
+
+/-- Mutual need (相须核): each suffices for the other's regularity, neither is constant alone. -/
+def «相须核» (R E₁ E₂ : «际» α) : Prop :=
+  «足以定理» R E₁ E₂ ∧ «足以定理» R E₂ E₁ ∧ ¬ «有常» R E₁ ∧ ¬ «有常» R E₂
+
+/-- Where the joint class is a class and constant, either class suffices for the other's
+regularity. -/
+theorem «合有常则足以定理» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
+    (hc : «有常» R («合» E₁ E₂)) : «足以定理» R E₁ E₂ ∧ «足以定理» R E₂ E₁ := by
+  have hj : «类» («合» E₁ E₂) :=
+    ⟨fun x => ⟨h₁.refl x, h₂.refl x⟩, fun ⟨a, b⟩ => ⟨h₁.symm a, h₂.symm b⟩,
+     fun ⟨a, b⟩ ⟨c, d⟩ => ⟨h₁.trans a c, h₂.trans b d⟩⟩
+  have hin := («类有常当且仅当含于核» R hj).mp hc
+  exact ⟨fun x y h => «核之单调» R (fun _ _ q => q.1) x y (hin x y h),
+    fun x y ⟨a, b⟩ => «核之单调» R (fun _ _ q => q.2) x y (hin x y ⟨b, a⟩)⟩
+
+/-- Leaning on (因于), as defined through constancy, is leaning on through the core. -/
+theorem «因于则因于核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
+    (h : «因于» R E₁ E₂) : «因于核» R E₁ E₂ :=
+  ⟨(«合有常则足以定理» R h₁ h₂ h.1).1, h.2.2⟩
+
+/-- Mutual need (相须), as defined through constancy, is mutual need through the core. -/
+theorem «相须则相须核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
+    (h : «相须» R E₁ E₂) : «相须核» R E₁ E₂ :=
+  have hs := «合有常则足以定理» R h₁ h₂ h.1
+  ⟨hs.1, hs.2, h.2.1, h.2.2⟩
+
+/-- Ceasing (息): nothing on the line from `x` renews. -/
+def «息» (R E : «际» α) (x : α) : Prop := ∀ y, (x = y ∨ «相续» R E x y) → ¬ «复生» R E y
+
+/-- **Renewal without end does not cease (生生不息).** -/
+theorem «生生不息» {R E : «际» α} {x : α} (h : «生生» R E x) : ¬ «息» R E x :=
+  fun hs => hs x (.inl rfl) («生生则复生» h)
+
+/-- Under the one, everything ceases. -/
+theorem «一之下皆息» (R : «际» α) (x : α) : «息» R «一» x :=
+  fun y _ => «一之下无复生» R y
+
+end Sufficing
+
+section Lines
+
+variable {α : Type u}
+
+/-- **A line whose ends a class tells apart has a marked step.** Where every step of continuation
+under `E` either keeps the class `K` or carries the mark `P`, a line (相续) under `E` from `x` to
+`y` with `K` telling `x` and `y` apart has a step carrying the mark, given with its place on the
+line: reached from `x`, and reaching `y`. Stated for every carrier and every relation; only
+transitivity of `K` is used. -/
+theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
+    (split : ∀ x y, «续» R E x y → K x y ∨ P x y) {x y : α} (line : «相续» R E x y) :
+    ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y) := by
+  induction line with
+  | one c =>
+    intro apart
+    match split _ _ c with
+    | .inl k => exact absurd k apart
+    | .inr p => exact ⟨_, _, c, p, .inl rfl, .inl rfl⟩
+  | more c rest ih =>
+    intro apart
+    match split _ _ c with
+    | .inl k =>
+      match ih (fun k' => apart (hK.trans k k')) with
+      | ⟨u, v, cuv, p, .inl same, after⟩ =>
+        exact ⟨u, v, cuv, p, .inr (Eq.subst (motive := fun w => «相续» R E _ w) same (.one c)), after⟩
+      | ⟨u, v, cuv, p, .inr reached, after⟩ =>
+        exact ⟨u, v, cuv, p, .inr (.more c reached), after⟩
+    | .inr p => exact ⟨_, _, c, p, .inl rfl, .inr rest⟩
+
+/-- A line (相续) under a class stays within the class: its ends are alike. -/
+theorem «线内同类» {R E : «际» α} (hE : «类» E) {x y : α}
+    (line : «相续» R E x y) : E x y := by
+  induction line with
+  | one c => exact c.2
+  | more c _ ih => exact hE.trans c.2 ih
+
+/-- **A beginning under a finer class, continued under a coarser one, is an alteration (异).** -/
+theorem «生于细而续于粗则异» {R E F : «际» α} {x y : α} (begins : «生» R F y)
+    (continues : «续» R E x y) : «异» R E F x y :=
+  ⟨continues, fun same => begins ⟨x, continues.1, same⟩⟩
+
+/-- **What begins under a coarser class begins under the finer one**, the dual of
+`«亡于粗则亡于细»`. -/
+theorem «生于粗则生于细» (R : «际» α) {E E' : «际» α} (h : «则» E E') {y : α}
+    (begins : «生» R E' y) : «生» R E y :=
+  fun ⟨x, c⟩ => begins ⟨x, «粗化» R h x y c⟩
+
+end Lines
+
 /-! ## Why continuation is not defined through the core -/
 
 /-- Three moments of a flame and its ash. -/
@@ -588,5 +724,38 @@ theorem «以核为判据则火无续» :
     | exact Flame.not_core_f₀ hSE hs hc h
     | exact Flame.not_core_f₁ hSE hs hc h
     | exact Bool.noConfusion (hSE _ _ h)
+
+namespace Flame
+
+/-- The fuel left: two, one, none, and the ash with none to burn. -/
+def fuel : Flame → Nat
+  | f₀ => 2
+  | f₁ => 1
+  | f₂ => 0
+  | ash => 0
+
+/-- The class "same fuel left". -/
+def sameFuel : «际» Flame := fun x y => fuel x = fuel y
+
+/-- Flame or not and the same fuel left: the moments of the flame are apart, and only the ash is
+alike with itself. -/
+theorem joint_eq {x y : Flame} (h : «合» alike sameFuel x y) : x = y := by
+  cases x <;> cases y
+  all_goals first
+    | rfl
+    | exact Bool.noConfusion h.1
+    | exact Nat.noConfusion h.2
+    | exact Nat.noConfusion (Nat.succ.inj h.2)
+
+end Flame
+
+/-- **The flame's regularity lies in fire and fuel (火因于薪).** "Flame or not" is not constant (a
+line under it ends), and together with the fuel left it fixes the course: what is alike under
+both lies in the core of "flame or not". -/
+theorem «火因于薪» : «因于核» Flame.step Flame.alike Flame.sameFuel :=
+  ⟨fun x y h => match Flame.joint_eq h with
+    | rfl => ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩,
+   «有亡之续则不有常» (x := Flame.f₁) (y := Flame.f₂) ⟨trivial, rfl⟩
+     (fun ⟨z, hr, _⟩ => by cases z <;> first | exact False.elim hr | exact Bool.noConfusion ‹_›)⟩
 
 end Becoming

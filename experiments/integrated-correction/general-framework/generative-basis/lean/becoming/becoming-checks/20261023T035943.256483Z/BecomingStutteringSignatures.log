@@ -1,0 +1,224 @@
+Becoming.excess_self : ∀ (a : Nat), Becoming.excess a a = 0
+Becoming.excess_add_right : ∀ (x a k : Nat), Becoming.excess (x + k) (a + k) = Becoming.excess x a
+@Becoming.excess_of_sum : ∀ {x y a b : Nat}, x + y = a + b → Becoming.excess x a = Becoming.excess b y
+@Becoming.Stutter.le_succ : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) → ∀ (n : Nat), ρ n ≤ ρ (n + 1)
+@Becoming.Stutter.mono : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) → ∀ {n m : Nat}, n ≤ m → ρ n ≤ ρ m
+@Becoming.Stutter.crossing : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ {s : Nat}, ρ 0 ≤ s → ∀ (m : Nat), s < ρ m → ∃ n, n < m ∧ ρ n = s ∧ ρ (n + 1) = s + 1
+@Becoming.Stutter.crosses : ∀ {ρ : Nat → Nat}, Becoming.Stutter ρ → ∀ (s : Nat), ∃ n, ρ n = s ∧ ρ (n + 1) = s + 1
+@Becoming.Stutter.moving : ∀ {ρ : Nat → Nat}, Becoming.Stutter ρ → ∀ (t : Nat), ∃ n, ρ n = t ∧ ρ (n + 1) = ρ n + 1
+@Becoming.Stutter.le_self : ∀ {ρ : Nat → Nat}, Becoming.Stutter ρ → ∀ (n : Nat), ρ n ≤ n
+@Becoming.span_idle : ∀ {ρ : Nat → Nat} {n : Nat}, ρ (n + 1) = ρ n → Becoming.span ρ n = []
+@Becoming.span_moves : ∀ {ρ : Nat → Nat} {n : Nat}, ρ (n + 1) = ρ n + 1 → Becoming.span ρ n = [ρ n]
+@Becoming.not_comesToBe_idle : ∀ {ρ : Nat → Nat} {n : Nat} {p : Nat → Prop},
+  ρ (n + 1) = ρ n → ¬Becoming.ComesToBe (fun k => p (ρ k)) n
+@Becoming.not_ceasesToBe_idle : ∀ {ρ : Nat → Nat} {n : Nat} {p : Nat → Prop},
+  ρ (n + 1) = ρ n → ¬Becoming.CeasesToBe (fun k => p (ρ k)) n
+@Becoming.comesToBe_moves : ∀ {ρ : Nat → Nat} {n : Nat} {p : Nat → Prop},
+  ρ (n + 1) = ρ n + 1 → (Becoming.ComesToBe (fun k => p (ρ k)) n ↔ Becoming.ComesToBe p (ρ n))
+@Becoming.ceasesToBe_moves : ∀ {ρ : Nat → Nat} {n : Nat} {p : Nat → Prop},
+  ρ (n + 1) = ρ n + 1 → (Becoming.CeasesToBe (fun k => p (ρ k)) n ↔ Becoming.CeasesToBe p (ρ n))
+@Becoming.rise_idle : ∀ {ρ : Nat → Nat} {n : Nat} (q : Nat → Nat),
+  ρ (n + 1) = ρ n → Becoming.rise (fun k => q (ρ k)) n = 0
+@Becoming.fall_idle : ∀ {ρ : Nat → Nat} {n : Nat} (q : Nat → Nat),
+  ρ (n + 1) = ρ n → Becoming.fall (fun k => q (ρ k)) n = 0
+@Becoming.rise_moves : ∀ {ρ : Nat → Nat} {n : Nat} (q : Nat → Nat),
+  ρ (n + 1) = ρ n + 1 → Becoming.rise (fun k => q (ρ k)) n = Becoming.rise q (ρ n)
+@Becoming.fall_moves : ∀ {ρ : Nat → Nat} {n : Nat} (q : Nat → Nat),
+  ρ (n + 1) = ρ n + 1 → Becoming.fall (fun k => q (ρ k)) n = Becoming.fall q (ρ n)
+@Becoming.stutter_total : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ {g g' : Nat → Nat},
+      (∀ (n : Nat), ρ (n + 1) = ρ n → g' n = 0) →
+        (∀ (n : Nat), ρ (n + 1) = ρ n + 1 → g' n = g (ρ n)) →
+          ∀ (N m d : Nat),
+            ρ N + d = ρ (N + m) → Becoming.total (Becoming.steps N m) g' = Becoming.total (Becoming.steps (ρ N) d) g
+@Becoming.Flow.taken_nil : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.present t = [] → ∀ (c : C), L.taken t c = 0
+@Becoming.Flow.given_nil : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.present t = [] → ∀ (c : C), L.given t c = 0
+@Becoming.Flow.once_of_moves : ∀ {F C : Type} {L : Becoming.Flow F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 →
+    Becoming.Distinct (L.present (ρ n)) → ∀ (j : Nat), j ∈ Becoming.span ρ n → Becoming.Distinct (L.present j)
+@Becoming.Flow.sample_idle_present : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → (L.sample ρ).present n = []
+@Becoming.Flow.sample_idle_take : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → ∀ (f : F) (c : C), (L.sample ρ).take n f c = 0
+@Becoming.Flow.sample_idle_give : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → ∀ (f : F) (c : C), (L.sample ρ).give n f c = 0
+@Becoming.Flow.sample_moves_mem : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n + 1 → ∀ {f : F}, f ∈ (L.sample ρ).present n ↔ f ∈ L.present (ρ n)
+@Becoming.Flow.sample_moves_take : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat},
+  ρ (n + 1) = ρ n + 1 → ∀ {f : F}, f ∈ L.present (ρ n) → ∀ (c : C), (L.sample ρ).take n f c = L.take (ρ n) f c
+@Becoming.Flow.sample_moves_give : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat},
+  ρ (n + 1) = ρ n + 1 → ∀ {f : F}, f ∈ L.present (ρ n) → ∀ (c : C), (L.sample ρ).give n f c = L.give (ρ n) f c
+@Becoming.Flow.sample_moves_taken : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat},
+  ρ (n + 1) = ρ n + 1 → Becoming.Distinct (L.present (ρ n)) → ∀ (c : C), (L.sample ρ).taken n c = L.taken (ρ n) c
+@Becoming.Flow.sample_moves_given : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat},
+  ρ (n + 1) = ρ n + 1 → Becoming.Distinct (L.present (ρ n)) → ∀ (c : C), (L.sample ρ).given n c = L.given (ρ n) c
+@Becoming.Flow.sample_idle_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n → ∀ (cs : List C), (L.sample ρ).BalancesOn (W.sample ρ) cs n
+@Becoming.Flow.sample_idle_dissipatesOn : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → ∀ (cs : List C), (L.sample ρ).DissipatesOn cs n
+@Becoming.Flow.sample_idle_closedAt : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → ∀ (cs : List C), (L.sample ρ).ClosedAt cs n
+@Becoming.Flow.sample_idle_enclosed : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → (L.sample ρ).Enclosed n
+@Becoming.Flow.sample_idle_runsDownOn : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n →
+    ∀ {es : List C},
+      Becoming.Distinct es → (∀ (c : C), 0 < W.level (ρ n) c → c ∈ es) → (L.sample ρ).RunsDownOn (W.sample ρ) es n
+@Becoming.Flow.sample_moves_balancesOn_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 →
+    Becoming.Distinct (L.present (ρ n)) →
+      ∀ {cs : List C}, (L.sample ρ).BalancesOn (W.sample ρ) cs n ↔ L.BalancesOn W cs (ρ n)
+@Becoming.Flow.sample_moves_dissipatesOn_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 → ∀ {cs : List C}, (L.sample ρ).DissipatesOn cs n ↔ L.DissipatesOn cs (ρ n)
+@Becoming.Flow.sample_moves_closedAt_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n + 1 → ∀ {cs : List C}, (L.sample ρ).ClosedAt cs n ↔ L.ClosedAt cs (ρ n)
+@Becoming.Flow.sample_moves_runsDownOn_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 →
+    Becoming.Distinct (L.present (ρ n)) →
+      ∀ {es : List C}, (L.sample ρ).RunsDownOn (W.sample ρ) es n ↔ L.RunsDownOn W es (ρ n)
+@Becoming.Flow.sample_moves_acting_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 →
+    ((∀ (f : F) (c : C), f ∈ (L.sample ρ).present n → 0 < (L.sample ρ).give n f c → W.active (ρ n) f) ↔
+      ∀ (f : F) (c : C), f ∈ L.present (ρ n) → 0 < L.give (ρ n) f c → W.active (ρ n) f)
+@Becoming.Flow.sample_moves_taking_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 →
+    ((∀ (f : F) (c : C),
+        f ∈ (L.sample ρ).present n → 0 < (L.sample ρ).take n f c → W.active (ρ n) f ∧ W.draws (ρ n) f c) ↔
+      ∀ (f : F) (c : C), f ∈ L.present (ρ n) → 0 < L.take (ρ n) f c → W.active (ρ n) f ∧ W.draws (ρ n) f c)
+@Becoming.Flow.stutter_balances_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {ρ : Nat → Nat},
+  Becoming.Stutter ρ → L.Once → ((L.sample ρ).Balances (W.sample ρ) ↔ L.Balances W)
+@Becoming.Flow.stutter_dissipative_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ((L.sample ρ).Dissipative ↔ L.Dissipative)
+@Becoming.Flow.stutter_acting_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ρ : Nat → Nat}, Becoming.Stutter ρ → ((L.sample ρ).Acting (W.sample ρ) ↔ L.Acting W)
+@Becoming.Flow.stutter_taking_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ρ : Nat → Nat}, Becoming.Stutter ρ → ((L.sample ρ).Taking (W.sample ρ) ↔ L.Taking W)
+@Becoming.Flow.stutter_taken : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    L.Once →
+      ∀ (c : C) (N m d : Nat),
+        ρ N + d = ρ (N + m) →
+          (Becoming.total (Becoming.steps N m) fun n => (L.sample ρ).taken n c) =
+            Becoming.total (Becoming.steps (ρ N) d) fun t => L.taken t c
+@Becoming.Flow.stutter_given : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    L.Once →
+      ∀ (c : C) (N m d : Nat),
+        ρ N + d = ρ (N + m) →
+          (Becoming.total (Becoming.steps N m) fun n => (L.sample ρ).given n c) =
+            Becoming.total (Becoming.steps (ρ N) d) fun t => L.given t c
+@Becoming.stutter_recurs_iff : ∀ {ρ : Nat → Nat},
+  Becoming.Stutter ρ →
+    ∀ {E E' : Nat → Prop},
+      (∀ (n : Nat), ρ (n + 1) = ρ n → ¬E' n) →
+        (∀ (n : Nat), ρ (n + 1) = ρ n + 1 → (E' n ↔ E (ρ n))) →
+          ((∀ (N : Nat), ∃ n, N ≤ n ∧ E' n) ↔ ∀ (N : Nat), ∃ t, N ≤ t ∧ E t)
+@Becoming.stutter_risen : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ (q : Nat → Nat) (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.total (Becoming.steps N m) (Becoming.rise fun k => q (ρ k)) =
+          Becoming.total (Becoming.steps (ρ N) d) (Becoming.rise q)
+@Becoming.stutter_fallen : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ (q : Nat → Nat) (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.total (Becoming.steps N m) (Becoming.fall fun k => q (ρ k)) =
+          Becoming.total (Becoming.steps (ρ N) d) (Becoming.fall q)
+@Becoming.stutter_rise_count : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ (q : Nat → Nat) (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.count (Becoming.steps N m) (Becoming.rise fun k => q (ρ k)) =
+          Becoming.count (Becoming.steps (ρ N) d) (Becoming.rise q)
+@Becoming.stutter_fall_count : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ (q : Nat → Nat) (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.count (Becoming.steps N m) (Becoming.fall fun k => q (ρ k)) =
+          Becoming.count (Becoming.steps (ρ N) d) (Becoming.fall q)
+@Becoming.stutter_comings : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ {α : Type} {as : List α} {p : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)] (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.total (Becoming.steps N m) (Becoming.comings as fun a k => p a (ρ k)) =
+          Becoming.total (Becoming.steps (ρ N) d) (Becoming.comings as p)
+@Becoming.stutter_ceasings : ∀ {ρ : Nat → Nat},
+  (∀ (n : Nat), ρ (n + 1) = ρ n ∨ ρ (n + 1) = ρ n + 1) →
+    ∀ {α : Type} {as : List α} {p : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)] (N m d : Nat),
+      ρ N + d = ρ (N + m) →
+        Becoming.total (Becoming.steps N m) (Becoming.ceasings as fun a k => p a (ρ k)) =
+          Becoming.total (Becoming.steps (ρ N) d) (Becoming.ceasings as p)
+@Becoming.Web.stutter_dependent_iff : ∀ {F C : Type} {W : Becoming.Web F C} {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ((W.sample ρ).Dependent ↔ W.Dependent)
+@Becoming.Web.stutter_embodied_iff : ∀ {ρ : Nat → Nat} {X : Type} {W : Becoming.Web X X},
+  Becoming.Stutter ρ → ∀ {x : X}, (W.sample ρ).Embodied x ↔ W.Embodied x
+@Becoming.Flow.sample_idle_not_descends : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n → ∀ {x g : X}, ¬(L.sample ρ).DescendsAt (W.sample ρ) n x g
+@Becoming.Flow.sample_moves_descends_iff : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n + 1 → ∀ {x g : X}, (L.sample ρ).DescendsAt (W.sample ρ) n x g ↔ L.DescendsAt W (ρ n) x g
+@Becoming.Flow.stutter_transmitsWithin_iff : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ∀ {c : X} {δ : Nat}, (L.sample ρ).TransmitsWithin (W.sample ρ) c δ ↔ L.TransmitsWithin W c δ
+@Becoming.recurs_shape : ∀ {α : Type} {P : Nat → α → Prop},
+  (∀ (N : Nat), ∃ t x, N ≤ t ∧ P t x) ↔ ∀ (N : Nat), ∃ t, N ≤ t ∧ ∃ x, P t x
+@Becoming.World.stutter_premises_iff : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {ρ : Nat → Nat},
+  Becoming.Stutter ρ →
+    w.flow.Once →
+      ((w.sample ρ).Balanced ↔ w.Balanced) ∧
+        ((w.sample ρ).Dissipative ↔ w.Dissipative) ∧
+          ((w.sample ρ).Acting ↔ w.Acting) ∧
+            ((w.sample ρ).Taking ↔ w.Taking) ∧
+              ((w.sample ρ).Dependent ↔ w.Dependent) ∧
+                ((w.sample ρ).Embodied ↔ w.Embodied) ∧ ((w.sample ρ).Transmitting ↔ w.Transmitting)
+@Becoming.World.stutter_counted_of_section : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {ρ σ : Nat → Nat},
+  (∀ (s : Nat), ρ (σ s) = s) → (w.sample ρ).Counted → w.Counted
+@Becoming.World.stutter_arisingRecurs_iff : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ((w.sample ρ).ArisingRecurs ↔ w.ArisingRecurs)
+@Becoming.World.stutter_ceasingRecurs_iff : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ((w.sample ρ).CeasingRecurs ↔ w.CeasingRecurs)
+@Becoming.World.stutter_change_recurs_iff : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {ρ : Nat → Nat},
+  Becoming.Stutter ρ →
+    ((∀ (N : Nat), ∃ t, N ≤ t ∧ ∃ c, (w.sample ρ).web.Rises t c ∨ (w.sample ρ).web.Falls t c) ↔
+      ∀ (N : Nat), ∃ t, N ≤ t ∧ ∃ c, w.web.Rises t c ∨ w.web.Falls t c)
+@Becoming.Flow.sample_idle_takers : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat}
+  {n : Nat}, ρ (n + 1) = ρ n → ∀ (cs : List C), (L.sample ρ).takers cs n = 0
+@Becoming.Flow.sample_not_more : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {ρ : Nat → Nat},
+  (∀ (N : Nat), ∃ n, N ≤ n ∧ ρ (n + 1) = ρ n) → ∀ (cs : List C), ¬(L.sample ρ).More cs
+@Becoming.Web.sample_idle_not_carries : ∀ {F C : Type} {W : Becoming.Web F C} {ρ : Nat → Nat} {n : Nat},
+  ρ (n + 1) = ρ n →
+    ∀ {f : F}, ¬W.Supported (ρ n) f → W.active (ρ n) f → ∀ (r : Nat → F → Nat), ¬(W.sample ρ).Carries fun k => r (ρ k)
+Becoming.Order.Halving.steps_ : ∀ (n : Nat),
+  Becoming.Pulse.half (n + 1) = Becoming.Pulse.half n ∨ Becoming.Pulse.half (n + 1) = Becoming.Pulse.half n + 1
+Becoming.Order.Halving.stutter : Becoming.Stutter Becoming.Pulse.half
+Becoming.Order.Halving.idles : ∀ (N : Nat), ∃ n, N ≤ n ∧ Becoming.Pulse.half (n + 1) = Becoming.Pulse.half n
+Becoming.Expansion.more_step_relative : Becoming.Expansion.flow.More [()] ∧
+  ¬(Becoming.Expansion.flow.sample Becoming.Pulse.half).More [()]
+Becoming.Lapse.unsupported : ∀ (t : Nat), ¬Becoming.Lapse.web.Supported t ()
+Becoming.Lapse.carried : Becoming.Lapse.web.Carries Becoming.Lapse.reserve
+Becoming.Lapse.stuttered_reserve : ∀ (r : Nat → Unit → Nat),
+  (Becoming.Lapse.web.sample Becoming.Pulse.half).Carries r → 2 ≤ r 0 ()
+Becoming.Lapse.reserve_step_relative : Becoming.Lapse.web.Carries Becoming.Lapse.reserve ∧
+  Becoming.Lapse.reserve 0 () = 1 ∧
+    ∀ (r : Nat → Unit → Nat), (Becoming.Lapse.web.sample Becoming.Pulse.half).Carries r → 2 ≤ r 0 ()
