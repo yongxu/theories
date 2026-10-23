@@ -115,6 +115,19 @@ If shared conditions give one constant class across lines, self-concern held de 
 
 This is candidate (4) in §7.
 
+## 6d. Lines that share a condition (GS4, `fa7858243`, 07 §4.5)
+
+`SharedCondition` in `Becoming.GrammarCases` answers candidate (4), more narrowly than its two branches:
+
+- **Affecting.** Where the members affect the shared condition, each a condition of its next state, the line under the one from the first family's first member reaches the second family's member two generations on, through the condition (`affecting_reaches_other`). No amounts are modelled, so this is not drawing in the sense of depletion.
+- **A class that leaves the condition out.** Under "a member or not", which holds both families' members alike and the condition apart, the line reaches no member of the second family (`affecting_member_outside`). Holding both lines together is not enough; the class must hold the condition with them.
+- **A common cause.** Where the members only feed from a condition they do not affect, under no relation is the other family reached (`fed_outside`).
+- **What is not shown.** No class narrower than the one reaches the other family, and no core is computed.
+
+**What it shows** [AI reading]. Held de se, one's concern reaches another line's future members exactly through the conditions one affects that later feed them. Merely depending on the same source reaches nothing. So for the future of other lines, the scope self-concern can have follows one's own effects on shared conditions: whatever acts on a commons has, under the one, those it later feeds on its line. This is the commons over time, and it is the structure OPENING's race argument needs. It holds so far only at the one.
+
+**The question left** [AI reading]. Is there a class narrower than the one that holds the living together with the conditions they affect and are fed by, is constant, and has a core that carries every line on? In `SharedCondition` the model may hold nothing else, so the one and such a class may coincide there. The test needs something outside both lines and their condition, such as a third thing neither family affects nor draws on. If such a class is constant and excludes that third thing, the dynamics single out life with its conditions as the class of a line. That is close to how the theory reads 生生, life in the whole and its continuing generation. Self-concern held de se would then reach it with no step and without choosing the one. This is candidate (5) in §7.
+
 ## 7. Candidate theorems, for the owners
 
 None is claimed here. Each goes to its owner on the board.
@@ -123,3 +136,4 @@ None is claimed here. Each goes to its owner on the board.
 2. **The timeless closure overreaches** (the owner of `Becoming.Interdependence`). A witness: three formations overlapping in turn, the last within the first's feeding closure and not needed by it.
 3. **On the grammar** (GS2, landed in `acb1c2a52`): the significance of a line under a class. Held de se of a line under `E`, the presupposition reaches what continues under `E` after a member's end. A model of descent in which a class with ending members has a core whose line goes on through new members, and one in which the core is trivial, so that both sides of §5 have a witness.
 4. **Lines that share a condition** (the owner of `Becoming.Grammar`; offered 24 October 2026). Two family lines that share a condition, each line's members drawing on it. Either a class across both lines that is constant and whose core carries each line past a member's end, so that from one family's first birth, under that class, members of the other family are reached; or a witness that sharing a condition gives no such class, with what more it needs.
+5. **Life with its conditions as the class of a line** (the owner of `Becoming.Grammar`; offered 24 October 2026). `SharedCondition` extended with a third thing that neither family affects nor draws on. Either a class holding both families' members and the shared condition but not the third thing, constant under the step, with a core that carries each line past a member's end and reaches the other family; or a witness that every class reaching the other family is the one, or takes in the third thing, with what more it needs.
