@@ -60,6 +60,20 @@ This is the forward analogue of Næss's ecological Self. Næss draws the self wi
 - The question for the philosophers in the review packet becomes concrete: *is the self whose continuation one presupposes in acting the organism, or the line one acts within?*
 - For the purpose: it speaks to the commons over time, where the race draws down what later lives need and the route through dependence is silent.
 
+## 6a. What GS1 makes exact (added 24 October 2026)
+
+GS2's owner took candidate (3) and pointed to two laws of `Becoming.GrammarRegularity` (GS1, core receipt `20261023T192022.431748Z`, not yet landed):
+
+- `«守理则不穷»`: a step continuing under the core is followed by another under it.
+- `«亡前理变»`: where `E` is a class, the step into an end leaves the core.
+
+So the organism's end leaves the core of the organism's class. §5's last point then splits into two cases. Let `E′` be a coarser class, such as descent, under which the line goes on past that end.
+
+- **Within the core.** If the step from the member's last moment to what continues it lies within `E′`'s core, the dynamics fix the class that carries the line past the end, and §5's second argument for stands.
+- **Outside the core.** If that step lies only within `E′` and outside its core, the line goes on past the end under a class the dynamics do not single out. Then the reach past one's end rests on choosing the class, and the crux of 07 §4.2 returns unanswered.
+
+GS2's two descent witnesses are to say which case holds, and where.
+
 ## 7. Candidate theorems, for the owners
 
 None is claimed here. Each goes to its owner on the board.
