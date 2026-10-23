@@ -114,3 +114,20 @@ Findings 2, 3, 5, 9, 10, 11 and 12 and the lead of finding 6 are fixed in the on
 - **Finding 3** brought one related correction. The one page said "every ranking needs C". It now says "every ranking of courses needs C or a premise in its place", as chapter 7 and AGENTS put it.
 - **A test followed the lead.** One test in `tools/research/tests/test_featured_results.py` found the lead by its old first words. It now looks for "The Theory of Becoming is an account of". Render, check, links and test pass.
 - **Still open:** findings 1, 4, 7 and 8, the placement of the reading list in finding 6, and the glossary's entry for C ("it alone orders"). The glossary entry now reads in line with the pages and was left unchanged.
+
+## Second round, 24 October
+
+Board row NR (`f91085843`). The edits are kept as exact replacements in [`development/nr-front-pages/nr2_edits.py`](development/nr-front-pages/nr2_edits.py), so they can be applied to HEAD apart from another session's uncommitted lines in the same pages.
+
+- **Finding 1: the line of the argument.** The one page has a paragraph after "What it is", and the overview has a short section before §1, each labelled an AI reading. The line runs:
+  - things go on by renewal;
+  - a renewal can be drawn down by takers each within it;
+  - what ends it can lie beyond what couples into any of them, and a selection reaches only what couples into it;
+  - so the dynamics leave open whose losses count, and calling the wider better is a further premise;
+  - the ethics names both premises and asserts neither, and under them argues for 生生, compared by widening.
+
+  Overview sections 3, 4, 5 and 7 now open with a sentence saying which question they take up.
+- **Finding 7: each law's point first.** On the one page, each of the five law items opens with its plain point in bold, followed by the laws as before. The terms that page used unexplained are now glossed in place: grains, decided, the point of no return, the lock, lumping and room. The overview's regime sentence states its point of no return first. The rest of the overview keeps its exact sentences; a full pass there is still open.
+- **Finding 8: a running example.** A fished stock runs through the overview's §2 (the regime and its point of no return), §3 (a fixed catch couples by threshold; reading the level shows the warning), §5 (boats each within the renewal end it together) and §7 (the boats' own continuation already ranks the collapse lower with no C; the condition adds the seabirds' loss, which returns to no boat). Each step is marked an illustration.
+- **Finding 4: gate.** It is not renamed. "Gate" names a decided mark on moves (01), the gate of a renewal (05) and several unrelated Lean definitions. A prose sweep would cross five chapters, their records and the Lean names, and the naming rule allows a sweep only for a name that states a wrong meaning. The glossary instead gives both senses, each with its home and a note that it is not the other.
+- **SW's handover taken (board rule 2).** SW argued that the non-entailment (SD1) holds by construction, because significance is a free predicate that nothing else reads, and handed the ethics lead of the one page and the overview to NR ([SW's note](development/sw-significance-without-a-value-layer/NOTE.md), §6.1). The argument stands on its own, so the lead is taken. Both pages now open the ethics with the structure: read as lying within what a center continues with along a relation, the continuation condition is a statement about relations, holding exactly where every center's closure is the whole (`ownClosure_unrestricted_iff`, stated in chapter 7, near-definitional). What the dynamics leave open is which relation is a center's own. SD1 follows, marked as holding by construction. The line of the argument was reworded to match: whose losses count turns on how far what each continues with reaches. The glossary's significance row gains the de se reading. Chapter 7's own order and the word itself go to their owners, as SW's note proposes.

@@ -15,6 +15,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | constancy (有常) | the class is carried by the relation: `E˘;R ⊆ R;E˘` | [01 §4](theories/becoming/chapters/01-ROOT.md#constancy-and-core) |
 | the core (核, *hé*) | the greatest symmetric relation inside a class that the relation never tells apart | [01 §4](theories/becoming/chapters/01-ROOT.md#constancy-and-core) |
 | renewal, renewal without end (复生, 生生) | a line started by another that goes on; a family that keeps renewing. 生生 also names life in the whole and its continuing generation | [01 §6](theories/becoming/chapters/01-ROOT.md#renewal-and-grains), [07](theories/becoming/chapters/07-SIGNIFICANCE.md) |
+| gate (on moves) | a decided mark on a process's moves; it locates where change can enter a line. Not the gate of a renewal | [01](theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate) |
 | reach (及) | the transitive closure of a relation | [01 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | model; the World model | a carrier, a relation read as condition and the classes used; the World is the model with flows, webs, natural-number amounts and discrete steps | [01 §8](theories/becoming/chapters/01-ROOT.md#models) |
 | view | process, frame and world are views of one unfolding | [01 §9](theories/becoming/chapters/01-ROOT.md#laws-on-every-model) |
@@ -48,8 +49,9 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 | Term | Sense | Home |
 |---|---|---|
+| the gate (of a renewal), gated renewal | every formation giving to a condition depends on it at a need of at least `m`, so the renewal depends on what it renews. Not the gate on moves | [05](theories/becoming/chapters/05-COLLECTIVES.md#collectives) |
 | optimum, drawer, pool, shared code | as defined where each is introduced | [05](theories/becoming/chapters/05-COLLECTIVES.md) |
-| significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number | [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
+| significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number; read de se, that it lies within what the center continues with along a relation |  [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | center | a formation as a standpoint | [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | widening | at every step admitting every formation the other admits, and at some step one more | [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |
 | the continuation condition (`Unrestricted`) | for anything, its continuation into the future has significance; stated, not asserted; it fixes scope | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
