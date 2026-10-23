@@ -61,3 +61,9 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 1. `integrate_h.py` (module and root bullet corrected); core checker; connectivity `--check` and `--write`.
 2. `apply_text_h.py N RECEIPT` (THE-STEP-OF-INVARIANCE, D64, README rows, study §373 in place, new section), `canonical_h.py`, `section9_h.py RECEIPT MAIN N`, `update_records_h.py RECEIPT N` (lint first), `sh repoint_h.sh RECEIPT`.
 3. The scratch copy of the module goes; `board_h.py land RECEIPT N THEOREMS DECLS`; render, check, links and test; commit; merge main if it moved, render and fast-forward.
+
+## IV3i
+
+1. `integrate_i.py`; core checker; connectivity `--check` and `--write`.
+2. `apply_text_i.py N RECEIPT`, `section9_i.py RECEIPT MAIN N`, `update_records_i.py RECEIPT N` (lint first), `sh repoint_i.sh RECEIPT`.
+3. The scratch copy goes (`git rm -f` if it was rebuilt after the kit commit); `board_i.py land RECEIPT N THEOREMS DECLS`; render, check, links and test; commit; merge main if it moved (board: take main's and re-land the row, history saved and restored), render and fast-forward.
