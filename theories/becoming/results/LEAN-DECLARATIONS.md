@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 304 | 13,725 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 305 | 13,755 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -413,6 +413,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarMap.lean](lean-declarations/becoming-core.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarReadings.lean](lean-declarations/becoming-core.md#module-ae9784542ef0) | Becoming pure core |
 | [GrammarRegularity.lean](lean-declarations/becoming-core.md#module-e198dd2b176a) | Becoming pure core |
+| [GrammarScope.lean](lean-declarations/becoming-core.md#module-4bf0cdef4736) | Becoming pure core |
 | [GrammarTesting.lean](lean-declarations/becoming-core.md#module-1d59f03d9751) | Becoming pure core |
 | [Granularity.lean](lean-declarations/becoming-core.md#module-78a06760a6af) | Becoming pure core |
 | [GroundRelationTransport.lean](lean-declarations/core.md#module-e5e3937cc286) | Generative core and relational structure |

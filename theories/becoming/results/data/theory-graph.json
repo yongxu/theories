@@ -3472,6 +3472,18 @@
    "page": "theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md"
   },
   {
+   "id": "record:reach-past-ones-own-end",
+   "type": "result",
+   "record": "reach-past-ones-own-end",
+   "title": "Past one's own end: the reach of a line under a class",
+   "title_zh": "过己之亡：一类下之线之所及",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/reach-past-ones-own-end.md"
+  },
+  {
    "id": "record:reaching-before-and-after-a-juncture",
    "type": "result",
    "record": "reaching-before-and-after-a-juncture",
@@ -4454,6 +4466,18 @@
    "region": "life",
    "base": "general",
    "page": "theories/becoming/results/records/the-breeding-value.md"
+  },
+  {
+   "id": "record:the-continuation-condition-on-the-root",
+   "type": "result",
+   "record": "the-continuation-condition-on-the-root",
+   "title": "The continuation condition on the root",
+   "title_zh": "根上之续存条件",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-continuation-condition-on-the-root.md"
   },
   {
    "id": "record:the-gap-for-ones-own-act",
@@ -8818,6 +8842,17 @@
    "level": "L1",
    "theorems": 25,
    "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarScope",
+   "type": "module",
+   "name": "Becoming.GrammarScope",
+   "level": "L1",
+   "theorems": 30,
+   "region": "significance",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -28307,6 +28342,18 @@
    "anchor": "r-graded-significance-and-priority"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-continuation-condition-on-the-root"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-reach-past-ones-own-end"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29621,6 +29668,21 @@
   {
    "from": "module:Becoming.GrammarRegularity",
    "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -43934,6 +43996,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:reach-past-ones-own-end",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:a-regularity-kept-and-changed",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
+  },
+  {
    "from": "record:reaching-before-and-after-a-juncture",
    "to": "module:Becoming.Junctures",
    "type": "proved-in"
@@ -47284,6 +47371,26 @@
    "type": "related"
   },
   {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-gap-for-ones-own-act",
    "to": "module:Becoming.Counterfactual",
    "type": "proved-in"
@@ -49572,6 +49679,11 @@
    "from": "record:what-the-step-across-standpoints-reaches",
    "to": "record:presupposition-scopes",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-step-across-standpoints-reaches",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
@@ -53049,6 +53161,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end",
+   "to": "record:reach-past-ones-own-end",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
    "to": "record:recoverable-mediated-change",
    "type": "states"
@@ -53096,6 +53213,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
    "to": "record:support-from-the-supported",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root",
+   "to": "record:the-continuation-condition-on-the-root",
    "type": "states"
   },
   {

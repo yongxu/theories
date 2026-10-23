@@ -70,8 +70,9 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
   - Preserved conditions: None. [Boundaries.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean)
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). Clearing's clearer loses the dweller beyond its dependence; the narrower scope, with the clearer the only center, reads that loss as nothing, and the condition reads it.
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
+- related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The de se own-closure condition read on the root: the root's condition at the one of the relation (GS2).
 
-**Used by:** [self-concern-through-dependence](self-concern-through-dependence.md)
+**Used by:** [self-concern-through-dependence](self-concern-through-dependence.md) · [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -111,6 +112,7 @@ Aliases: `what the step across standpoints reaches`, `跨立场的一步达到�
 - 20 October 2026 (IV2): four laws added, the de se and de dicto readings of the presupposition and where they part, and the web reading of what the step forces (Web.admitsWithin_forced_iff, which puts forced_iff_center on the base); the first non-implication restated in the exact form of the de se question; rebound to receipt 20261020T120729.506720Z; readings D60; study section 260.
 - 21 October 2026, EC4 (study section 313): a law added, the valuations' reading of the scope (Valuation.transmits_iff_closed, Valuation.forced_iff_reach, Valuation.forced_whole_iff_connected in Becoming.ValuationFrames): what the two neutralities force is the closure of a valued living claim, the same law as forced_iff_within on boundaries. Readings D61. The record's earlier laws are unchanged.
 - 22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.
+- 24 October 2026, GS2: read on the root (record the-continuation-condition-on-the-root, study section 392); no statement of this record changed.
 
 </details>
 

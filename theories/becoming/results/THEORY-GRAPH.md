@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2911 nodes, 4960 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2916 nodes, 4975 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 60 | 47 | 0 |
+| Significance and alignment | 0 | 62 | 48 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
@@ -437,7 +437,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (60):
+Results (62):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -466,6 +466,7 @@ Results (60):
 - [Living significance on the Becoming spine, characterized by a seed and boundary neutrality](records/metaethical-core-characterization.md) (recorded-checked)
 - [Loss beyond a region](records/loss-beyond-a-region.md) (recorded-checked)
 - [Own widening within the margin](records/own-widening-within-the-margin.md) (recorded-checked)
+- [Past one's own end: the reach of a line under a class](records/reach-past-ones-own-end.md) (recorded-checked)
 - [Pending-task applicability and supported continuation](records/pending-task-context-applicability.md) (recorded-checked)
 - [Positive reasons addressed to every situated position](records/positioned-positive-reason.md) (recorded-checked)
 - [Practical judgment under living significance and the practical commitments](records/practical-judgment-under-living-significance.md) (reviewed-scoped)
@@ -479,6 +480,7 @@ Results (60):
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
+- [The continuation condition on the root](records/the-continuation-condition-on-the-root.md) (recorded-checked)
 - [The continuation condition yields living significance](records/continuation-condition-yields-living-significance.md) (recorded-checked)
 - [The coupling closures of deployed training pipelines](records/coupling-closures-of-training-pipelines.md) (reviewed-scoped)
 - [The gap for one's own act](records/the-gap-for-ones-own-act.md) (recorded-checked)
@@ -500,7 +502,7 @@ Results (60):
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 
-Modules (47, 0 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
+Modules (48, 1 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
 
 
 ## Method and the formal core
@@ -540,4 +542,4 @@ Results (7):
 
 ## Not yet on the root
 
-298 of 313 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+298 of 314 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
