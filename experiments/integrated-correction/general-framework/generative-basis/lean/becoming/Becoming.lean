@@ -3255,7 +3255,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with no cycle the condition holds only with one center, which nothing conditions. Past one's own
   end (`«过亡而续»`); a class's core continues something exactly where some line under it goes on
   without end (`«核有续当且仅当有不穷»`); two lines of descent, one endless and one that ends
-  (`LineOfDescent`).
+  (`LineOfDescent`). The class of being joined by 缘 read either way has 缘 as its continuation, is
+  the finest class that does, and is constant where every occurrence conditions something
+  (`«续即缘当且仅当含族»`, `«遍有后则族有常»`; board item GS5).
 * `Becoming.GrammarCases` (L1): test systems of the source texts as small witnesses of the grammar
   (board item GS3), the behaviour in question supplied in each net. Decay: an alteration in a net with
   no cycle; in the net of possibilities "intact or not" is constant, so the step is not in its
@@ -3266,7 +3268,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and the one, constant, its core going on through each birth, the other family not reached
   (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
   reaches the other's through it under the one, not under "a member or not"; where they only feed
-  from it, under no relation (`SharedCondition`, board item GS4). A belief whose rate of spread
+  from it, under no relation (`SharedCondition`, board item GS4). A third thing joined to nothing lies
+  outside the class of being joined; one affecting the condition is left out by a finer constant class
+  that still reaches; one the condition feeds is taken in by every constant class holding a member
+  with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through

@@ -158,7 +158,7 @@
         "Becoming.SharedCondition.fed_step",
         "Becoming.SharedCondition.living"
       ],
-      "sha256": "693a3d00a91589f1b5ccb044e666a222ee70c8bb2909bc465cab65eba02135fc"
+      "sha256": "756728bd0d26a2dc26949eb85be3c55f6bb8ec875a45608b877d68a251523bda"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json",
@@ -174,12 +174,18 @@
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
       "sha256": "268ccddebe88454fb093d26114632fe5c888a9d402df7927ef9ff9cbd7d73ccd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "role": "receipt",
+      "sha256": "80395060726ea826a45ba114e74723738b07cb60413ed8c0366f81e139ffb1fe",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCases",
       "success_pointer": "/status",
       "success_value": "passed"

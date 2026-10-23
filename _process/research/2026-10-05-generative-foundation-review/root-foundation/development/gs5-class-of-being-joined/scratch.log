@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gs5-class-the-net-fixes/tree",
+  "modules": 111,
+  "ran": [
+    "Becoming.GrammarScope",
+    "Becoming.GrammarCases",
+    "BecomingGrammarScopeAxiomAudit",
+    "BecomingGrammarCasesAxiomAudit"
+  ],
+  "reused": 109,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarScope": {
+      "theorems": 37,
+      "declarations": 44,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarCases": {
+      "theorems": 42,
+      "declarations": 69,
+      "with_axioms": {}
+    }
+  }
+}

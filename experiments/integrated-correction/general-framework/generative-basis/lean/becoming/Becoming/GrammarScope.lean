@@ -41,6 +41,15 @@ parameter is added. No definition of an earlier module changes.
   net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)
   run from what is fed or affected to what feeds or affects it, the converse of 缘: read along them,
   "ahead" runs to conditions.
+* **The class of being joined.** The class of being joined by 缘 read either way, the family under
+  the one (`«同族» R «一»`), is defined from the net alone: under it continuation is 缘 itself
+  (`«族之续即缘»`), its lines reach exactly what the one's reach (`«族之所及即一之所及»`), and it is the
+  finest class under which every condition is a continuation (`«续即缘当且仅当含族»`). Where every
+  occurrence conditions something it is constant (`«遍有后则族有常»`), so its core holds both ends of
+  every condition (`«遍有后则缘在族核»`) and a line under the core reaches what the one's reaches
+  (`«遍有后则核之所及即一之所及»`). Where the net is joined it is the one; where the net has parts that
+  no chain of 缘 joins, it is narrower. It is not the only class that reaches: a constant class finer
+  than it can reach the same, depending on which way the rest is joined (`Becoming.GrammarCases`).
 * **Past one's own end.** On a line under a class `L`, what continues under `L` an occurrence at which
   the line under some relation `O` ends (in the case read, a finer class such as an organism's) is
   reached on the line from the center, and lies on no line under `O` from that occurrence
@@ -116,6 +125,64 @@ theorem «续无外之粗化» {R E E' : «际» α} {center : Pos → α} (h : 
 theorem «族无外之粗化» {R E E' : «际» α} {center : Pos → α} (h : «则» E E')
     (none : «族无外» R E center) : «族无外» R E' center :=
   fun p x => «同族之粗化» R h (none p x)
+
+/-- Every condition joins its two ends in one family under the one. -/
+theorem «缘在族中» (R : «际» α) {x y : α} (h : R x y) : «同族» R «一» x y := .step ⟨h, trivial⟩
+
+/-- **Under the class of being joined, continuation is 缘 itself** (族之续即缘): the class of being joined
+by 缘 read either way (`«同族» R «一»`, defined from the net alone) relates the two ends of every
+condition. -/
+theorem «族之续即缘» (R : «际» α) : «谓» («续» R («同族» R «一»)) R :=
+  fun _ _ => ⟨fun h => h.1, fun h => ⟨h, «缘在族中» R h⟩⟩
+
+/-- **The class of being joined and the one reach the same**: a line under either reaches exactly what a
+line under the other reaches, so a result stated through continuation under the one holds of it; a
+result about the one's own constancy or core need not. -/
+theorem «族之所及即一之所及» (R : «际» α) {x y : α} : «所及» R («同族» R «一») x y ↔ «所及» R «一» x y :=
+  ⟨fun h => match h with
+    | .inl e => .inl e
+    | .inr line => .inr («及之单调» (fun _ _ c => ⟨c.1, trivial⟩) _ _ line),
+   fun h => match h with
+    | .inl e => .inl e
+    | .inr line => .inr («及之单调» (fun _ _ c => ⟨c.1, «缘在族中» R c.1⟩) _ _ line)⟩
+
+/-- **The class of being joined is the finest class under which every condition is a continuation**: a
+class has 缘 as its continuation exactly where it contains the class of being joined by 缘 read either
+way; so every class containing it reaches what the one reaches. -/
+theorem «续即缘当且仅当含族» (R : «际» α) {E : «际» α} (hE : «类» E) :
+    «谓» («续» R E) R ↔ «则» («同族» R «一») E := by
+  constructor
+  · intro same x y fam
+    induction fam with
+    | refl x => exact hE.refl x
+    | step c => exact ((same _ _).mpr c.1).2
+    | symm _ ih => exact hE.symm ih
+    | trans _ _ ih₁ ih₂ => exact hE.trans ih₁ ih₂
+  · intro inside x y
+    exact ⟨fun h => h.1, fun h => ⟨h, inside x y («缘在族中» R h)⟩⟩
+
+/-- **Where every occurrence conditions something, the class of being joined is constant** (遍有后则族有常). -/
+theorem «遍有后则族有常» (R : «际» α) (total : ∀ x, ∃ y, R x y) : «有常» R («同族» R «一») :=
+  («有常之逐点» R («同族» R «一»)).mpr fun _ u' fam _ hv =>
+    match total u' with
+    | ⟨v', hv'⟩ => ⟨v', hv', .trans (.symm («缘在族中» R hv)) (.trans fam («缘在族中» R hv'))⟩
+
+/-- **And then every condition continues under its core**: the core of the class of being joined holds
+both ends of every condition, so every step of 缘, including one from an occurrence where a finer
+class's line ends, is a step under the core. -/
+theorem «遍有后则缘在族核» (R : «际» α) (total : ∀ x, ∃ y, R x y) {x y : α} (h : R x y) :
+    «续» R («核» R («同族» R «一»)) x y :=
+  ⟨h, («类有常当且仅当含于核» R («同族为类» R «一»)).mp («遍有后则族有常» R total) x y («缘在族中» R h)⟩
+
+/-- **And then a line under that core reaches exactly what a line under the one reaches.** -/
+theorem «遍有后则核之所及即一之所及» (R : «际» α) (total : ∀ x, ∃ y, R x y) {x y : α} :
+    «所及» R («核» R («同族» R «一»)) x y ↔ «所及» R «一» x y :=
+  ⟨fun h => match h with
+    | .inl e => .inl e
+    | .inr line => .inr («及之单调» (fun _ _ c => ⟨c.1, trivial⟩) _ _ line),
+   fun h => match h with
+    | .inl e => .inl e
+    | .inr line => .inr («及之单调» (fun _ _ c => «遍有后则缘在族核» R total c.1) _ _ line)⟩
 
 /-- **Past one's own end (过亡而续).** On a line under `L` from a center `c`, what continues under `L`
 an occurrence `m` at which the line under a relation `O` ends is reached on the line from `c`, and

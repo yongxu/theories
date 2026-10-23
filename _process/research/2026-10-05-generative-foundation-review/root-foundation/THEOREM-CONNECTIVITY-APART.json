@@ -2802,11 +2802,6 @@
    "category": "support",
    "reason": "inclusion of relations is transitive: a one-line unpacking of the grammar's own definition"
   },
-  "Becoming.«同族为类»": {
-   "module": "Becoming.Grammar",
-   "category": "support",
-   "reason": "the equivalence closure of continuation is a class: its constructors are the class laws"
-  },
   "Becoming.«分叉»": {
    "module": "Becoming.Grammar",
    "category": "model-witness",
@@ -3581,6 +3576,46 @@
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
    "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.«族之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«续即缘当且仅当含族»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the finest class with 缘 as its continuation: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«遍有后则核之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a line under the core of the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.ThirdThing.fixed_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "joined to nothing, outside the class of being joined: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdThing.fixed_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the class of being joined reaches the other family: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.finer_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a finer constant class reaches the same: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.third_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "support",
+   "reason": "a one-line check that the third thing or not is a class"
+  },
+  "Becoming.ThirdFed.constant_takes_third": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a constant class takes in what the condition feeds: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
   }
  },
  "instances": {

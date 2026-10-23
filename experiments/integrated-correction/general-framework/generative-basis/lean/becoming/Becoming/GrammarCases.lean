@@ -52,6 +52,20 @@ changes.
   (`SharedCondition.affecting_member_outside`). Where the members only feed from a condition they do
   not affect, the line under no relation reaches the other family (`SharedCondition.fed_outside`). No
   class narrower than the one is shown to reach, and no core is computed.
+* **A third thing joined to nothing** (`ThirdThing`). With a third thing that conditions nothing and
+  is conditioned by nothing but its own earlier stage, the class of being joined (`«同族» R «一»`,
+  GrammarScope) holds the first family's first member with the condition and with the second family's
+  member two generations on, and no stage of the third thing with any of them, so it is narrower than
+  the one (`ThirdThing.fixed_class`, `ThirdThing.family_keeps_third`); it is constant, and its line
+  from that member reaches the second family's (`ThirdThing.fixed_class_reaches`).
+* **A third thing that affects the condition** (`ThirdAffects`). Then the class of being joined is the
+  one, while "the third thing or not" is constant, leaves the third thing out and reaches the second
+  family (`ThirdAffects.finer_class_reaches`): a finer class than the class of being joined reaches
+  the same.
+* **A third thing the condition feeds** (`ThirdFed`). Then a constant class holding a stage of the
+  condition with a member takes in the stage the condition feeds, alike with what the member conditions
+  next (`ThirdFed.constant_takes_third`). Constancy reads which way the third thing is joined; the
+  class of being joined does not.
 * **A belief whose rate of spread grows with its number** (`Belief`). The number holding a belief goes
   up by the rate, and the rate by the number, both by supplied laws (`adaptive`). On the step the rate
   changes with the number (`Belief.rate_changes_on_step`), and two configurations with one holder at
@@ -399,6 +413,228 @@ theorem fed_outside (E : «际» Occ) (n : Nat) : ¬ «所及» fed E (.a 0) (.b
     | ⟨_, e⟩ => Occ.noConfusion e
 
 end SharedCondition
+
+/-! ## A third thing that shares no condition -/
+
+namespace ThirdThing
+
+/-- The two families and their shared condition, as in `SharedCondition`, and a third thing that goes
+on by itself, conditioning nothing and conditioned by nothing but its own earlier stage. -/
+inductive Occ | a (n : Nat) | b (n : Nat) | r (n : Nat) | s (n : Nat)
+
+/-- 缘: the members affect the shared condition and are fed by it, as in `SharedCondition.affecting`;
+the third thing goes on by itself, conditioning and conditioned by nothing else. -/
+def step : «际» Occ
+  | .a m, .a n => n = m + 1
+  | .a _, .b _ => False
+  | .a m, .r n => n = m + 1
+  | .a _, .s _ => False
+  | .b _, .a _ => False
+  | .b m, .b n => n = m + 1
+  | .b m, .r n => n = m + 1
+  | .b _, .s _ => False
+  | .r m, .a n => n = m + 1
+  | .r m, .b n => n = m + 1
+  | .r m, .r n => n = m + 1
+  | .r _, .s _ => False
+  | .s _, .a _ => False
+  | .s _, .b _ => False
+  | .s _, .r _ => False
+  | .s m, .s n => n = m + 1
+
+/-- Whether an occurrence is the third thing. -/
+def third : Occ → Bool
+  | .a _ => false
+  | .b _ => false
+  | .r _ => false
+  | .s _ => true
+
+/-- Every occurrence conditions a successor. -/
+theorem total : ∀ x : Occ, ∃ y, step x y
+  | .a m => ⟨.a (m + 1), rfl⟩
+  | .b m => ⟨.b (m + 1), rfl⟩
+  | .r m => ⟨.r (m + 1), rfl⟩
+  | .s m => ⟨.s (m + 1), rfl⟩
+
+/-- No condition joins the third thing to the rest. -/
+theorem step_keeps_third : ∀ {x y : Occ}, step x y → third x = third y
+  | .a _, .a _, _ => rfl
+  | .a _, .r _, _ => rfl
+  | .b _, .b _, _ => rfl
+  | .b _, .r _, _ => rfl
+  | .r _, .a _, _ => rfl
+  | .r _, .b _, _ => rfl
+  | .r _, .r _, _ => rfl
+  | .s _, .s _, _ => rfl
+  | .a _, .b _, h => False.elim h
+  | .a _, .s _, h => False.elim h
+  | .b _, .a _, h => False.elim h
+  | .b _, .s _, h => False.elim h
+  | .r _, .s _, h => False.elim h
+  | .s _, .a _, h => False.elim h
+  | .s _, .b _, h => False.elim h
+  | .s _, .r _, h => False.elim h
+
+/-- The class of being joined keeps every stage of the third thing apart from the rest. -/
+theorem family_keeps_third {x y : Occ} (fam : «同族» step «一» x y) : third x = third y := by
+  induction fam with
+  | refl _ => rfl
+  | step c => exact step_keeps_third c.1
+  | symm _ ih => exact ih.symm
+  | trans _ _ ih₁ ih₂ => exact ih₁.trans ih₂
+
+/-- **The class of being joined holds the first family's first member with the condition and with the
+second family's member two generations on, and not with the third thing**; so it is narrower than the
+one. -/
+theorem fixed_class :
+    «同族» step «一» (.a 0) (.b 2) ∧ «同族» step «一» (.a 0) (.r 1) ∧ ¬ «同族» step «一» (.a 0) (.s 0) ∧
+      ¬ «则» («一» : «际» Occ) («同族» step «一») :=
+  have joined : «同族» step «一» (.a 0) (.r 1) := «缘在族中» step (rfl : (1 : Nat) = 0 + 1)
+  have apart : ¬ «同族» step «一» (.a 0) (.s 0) := fun fam => Bool.noConfusion (family_keeps_third fam)
+  ⟨.trans joined («缘在族中» step (rfl : (2 : Nat) = 1 + 1)), joined, apart, fun inside => apart (inside _ _ trivial)⟩
+
+/-- **Under the class of being joined, the line from the first family's first member reaches the second
+family's member two generations on**; the class is constant, and its core carries the first step. -/
+theorem fixed_class_reaches :
+    «所及» step («同族» step «一») (.a 0) (.b 2) ∧ «有常» step («同族» step «一») ∧
+      «续» step («核» step («同族» step «一»)) (.a 0) (.r 1) :=
+  have first : «续» step («同族» step «一») (.a 0) (.r 1) := ((«族之续即缘» step _ _).mpr rfl)
+  have second : «续» step («同族» step «一») (.r 1) (.b 2) := ((«族之续即缘» step _ _).mpr rfl)
+  ⟨.inr («及».more first (.one second)), «遍有后则族有常» step total,
+   «遍有后则缘在族核» step total (rfl : (1 : Nat) = 0 + 1)⟩
+
+end ThirdThing
+
+/-! ## A third thing that affects the shared condition -/
+
+namespace ThirdAffects
+
+/-- The two families and their shared condition, and a third thing that goes on by itself and affects
+the shared condition, each stage a condition of the condition's next state; nothing conditions it but
+its own earlier stage. -/
+inductive Occ | a (n : Nat) | b (n : Nat) | r (n : Nat) | s (n : Nat)
+
+def step : «际» Occ
+  | .a m, .a n => n = m + 1
+  | .a _, .b _ => False
+  | .a m, .r n => n = m + 1
+  | .a _, .s _ => False
+  | .b _, .a _ => False
+  | .b m, .b n => n = m + 1
+  | .b m, .r n => n = m + 1
+  | .b _, .s _ => False
+  | .r m, .a n => n = m + 1
+  | .r m, .b n => n = m + 1
+  | .r m, .r n => n = m + 1
+  | .r _, .s _ => False
+  | .s _, .a _ => False
+  | .s _, .b _ => False
+  | .s m, .r n => n = m + 1
+  | .s m, .s n => n = m + 1
+
+/-- Whether an occurrence is the third thing. -/
+def third : Occ → Bool
+  | .a _ => false
+  | .b _ => false
+  | .r _ => false
+  | .s _ => true
+
+theorem third_class : «类» (sameValue third) := sameValue_class third
+
+/-- What is not the third thing conditions only what is not the third thing. -/
+theorem rest_to_rest : ∀ {u v : Occ}, third u = false → step u v → third v = false
+  | .a _, .a _, _, _ => rfl
+  | .a _, .r _, _, _ => rfl
+  | .b _, .b _, _, _ => rfl
+  | .b _, .r _, _, _ => rfl
+  | .r _, .a _, _, _ => rfl
+  | .r _, .b _, _, _ => rfl
+  | .r _, .r _, _, _ => rfl
+  | .a _, .b _, _, h => False.elim h
+  | .a _, .s _, _, h => False.elim h
+  | .b _, .a _, _, h => False.elim h
+  | .b _, .s _, _, h => False.elim h
+  | .r _, .s _, _, h => False.elim h
+  | .s _, _, e, _ => Bool.noConfusion e
+
+/-- From every occurrence a successor of either kind can be taken, where the kind is allowed. -/
+theorem succ_of_kind : ∀ (u : Occ) (k : Bool), (third u = false → k = false) → ∃ v, step u v ∧ third v = k
+  | .a m, _k, h => ⟨.a (m + 1), rfl, (h rfl).symm⟩
+  | .b m, _k, h => ⟨.b (m + 1), rfl, (h rfl).symm⟩
+  | .r m, _k, h => ⟨.r (m + 1), rfl, (h rfl).symm⟩
+  | .s m, true, _ => ⟨.s (m + 1), rfl, rfl⟩
+  | .s m, false, _ => ⟨.r (m + 1), rfl, rfl⟩
+
+/-- **"The third thing or not" is constant.** -/
+theorem third_constant : «有常» step (sameValue third) :=
+  («有常之逐点» step (sameValue third)).mpr fun _u u' same v hv =>
+    match succ_of_kind u' (third v) (fun e => rest_to_rest (same.trans e) hv) with
+    | ⟨v', h, e⟩ => ⟨v', h, e.symm⟩
+
+/-- Every stage of the condition is joined to its first stage. -/
+theorem condition_joined : ∀ m : Nat, «同族» step «一» (.r m) (.r 0)
+  | 0 => .refl _
+  | m + 1 => .trans (.symm («缘在族中» step (x := .r m) (y := .r (m + 1)) rfl)) (condition_joined m)
+
+/-- Every occurrence is joined to the condition's first stage. -/
+theorem joined_to_start : ∀ x : Occ, «同族» step «一» x (.r 0)
+  | .r m => condition_joined m
+  | .a n => .trans («缘在族中» step (x := .a n) (y := .r (n + 1)) rfl) (condition_joined (n + 1))
+  | .b n => .trans («缘在族中» step (x := .b n) (y := .r (n + 1)) rfl) (condition_joined (n + 1))
+  | .s n => .trans («缘在族中» step (x := .s n) (y := .r (n + 1)) rfl) (condition_joined (n + 1))
+
+/-- **Where the third thing affects the shared condition, a constant class finer than the class of being
+joined reaches the other family**: the class of being joined is the one here, while "the third thing
+or not" is constant, leaves the third thing out, and its line from the first family's first member
+reaches the second family's member two generations on. -/
+theorem finer_class_reaches :
+    «则» («一» : «际» Occ) («同族» step «一») ∧ «有常» step (sameValue third) ∧
+      ¬ sameValue third (.a 0) (.s 0) ∧ «所及» step (sameValue third) (.a 0) (.b 2) :=
+  have first : «续» step (sameValue third) (.a 0) (.r 1) := ⟨rfl, rfl⟩
+  have second : «续» step (sameValue third) (.r 1) (.b 2) := ⟨rfl, rfl⟩
+  ⟨fun x y _ => .trans (joined_to_start x) (.symm (joined_to_start y)), third_constant,
+   fun h => Bool.noConfusion h, .inr («及».more first (.one second))⟩
+
+end ThirdAffects
+
+/-! ## A third thing that the shared condition feeds -/
+
+namespace ThirdFed
+
+/-- The two families and their shared condition, and a third thing that the shared condition feeds,
+each stage of the condition a condition of the third thing's next stage. -/
+inductive Occ | a (n : Nat) | b (n : Nat) | r (n : Nat) | s (n : Nat)
+
+def step : «际» Occ
+  | .a m, .a n => n = m + 1
+  | .a _, .b _ => False
+  | .a m, .r n => n = m + 1
+  | .a _, .s _ => False
+  | .b _, .a _ => False
+  | .b m, .b n => n = m + 1
+  | .b m, .r n => n = m + 1
+  | .b _, .s _ => False
+  | .r m, .a n => n = m + 1
+  | .r m, .b n => n = m + 1
+  | .r m, .r n => n = m + 1
+  | .r m, .s n => n = m + 1
+  | .s _, .a _ => False
+  | .s _, .b _ => False
+  | .s _, .r _ => False
+  | .s m, .s n => n = m + 1
+
+/-- **Where the shared condition feeds the third thing, a constant class holding a stage of the condition
+with a member takes the third thing in**: the stage the condition feeds is alike with what the member
+conditions next, its next generation or the condition's next stage. -/
+theorem constant_takes_third {E : «际» Occ} (constant : «有常» step E) {m n : Nat} (held : E (.r m) (.a n)) :
+    E (.s (m + 1)) (.a (n + 1)) ∨ E (.s (m + 1)) (.r (n + 1)) :=
+  match («有常之逐点» step E).mp constant (.r m) (.a n) held (.s (m + 1)) rfl with
+  | ⟨.a _, e, alike⟩ => .inl (e ▸ alike)
+  | ⟨.r _, e, alike⟩ => .inr (e ▸ alike)
+  | ⟨.b _, h, _⟩ => False.elim h
+  | ⟨.s _, h, _⟩ => False.elim h
+
+end ThirdFed
 
 /-! ## A belief whose rate of spread grows with its number -/
 
