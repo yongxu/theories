@@ -19,17 +19,17 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **1,921 `.lean` paths and 1,512 distinct byte contents**, including 144 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **1,922 `.lean` paths and 1,513 distinct byte contents**, including 144 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 989 |
+| Development attempt | 990 |
 | Historical draft | 3 |
 | Imported archive | 23 |
 | Working source | 893 |
 
-The working-source and audit entries contain **25,924 explicit theorem/lemma occurrences** and 38,376 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **25,931 explicit theorem/lemma occurrences** and 38,387 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -160,7 +160,7 @@ Conceptual entry: [08-METHOD §pure](../chapters/08-METHOD.md#pure-core-and-peri
 | [Gluing](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean) · [Names](lean-declarations/becoming-core.md#module-0ec713783baa) | 76 | 32 | [Theory](../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Grammar](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) · [Names](lean-declarations/becoming-core.md#module-6f8602838f87) | 64 | 42 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [GrammarCandidates](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean) · [Names](lean-declarations/becoming-core.md#module-6e15a912d51f) | 66 | 24 | [Theory](../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
-| [GrammarCases](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean) · [Names](lean-declarations/becoming-core.md#module-eb5da91cd5d4) | 22 | 15 | [Theory](../chapters/01-ROOT.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
+| [GrammarCases](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean) · [Names](lean-declarations/becoming-core.md#module-eb5da91cd5d4) | 29 | 19 | [Theory](../chapters/01-ROOT.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [GrammarCourse](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean) · [Names](lean-declarations/becoming-core.md#module-cc6fc7f03b4e) | 32 | 4 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [GrammarMap](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean) · [Names](lean-declarations/becoming-core.md#module-3c1996315d3a) | 36 | 19 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [GrammarReadings](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean) · [Names](lean-declarations/becoming-core.md#module-ae9784542ef0) | 9 | 5 | [Theory](../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |

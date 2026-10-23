@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-424 registered results: 394 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 969 curated edges join 374 results to the results they draw on.
+425 registered results: 395 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 972 curated edges join 375 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -242,6 +242,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [ranking-under-readings][] ← <a id="ranking-under-readings--relational-reading-comparison"></a>[relational-reading-comparison][] · <a id="ranking-under-readings--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="ranking-under-readings--relational-renewal-classification"></a>[relational-renewal-classification][] · <a id="ranking-under-readings--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="ranking-under-readings--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="ranking-under-readings--closing-needs-net-draw"></a>[closing-needs-net-draw][]
 - [re-optimizing-above-a-renewal-ends-it][] ← <a id="re-optimizing-above-a-renewal-ends-it--room-read-off-the-exchange"></a>[room-read-off-the-exchange][] · <a id="re-optimizing-above-a-renewal-ends-it--several-optimizers-drain-by-their-joint-capacity"></a>[several-optimizers-drain-by-their-joint-capacity][] · <a id="re-optimizing-above-a-renewal-ends-it--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [reach-past-ones-own-end][] ← <a id="reach-past-ones-own-end--a-regularity-kept-and-changed"></a>[a-regularity-kept-and-changed][] · <a id="reach-past-ones-own-end--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="reach-past-ones-own-end--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][]
+- [reach-through-a-shared-condition][] ← <a id="reach-through-a-shared-condition--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="reach-through-a-shared-condition--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="reach-through-a-shared-condition--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [reaching-before-and-after-a-juncture][] ← <a id="reaching-before-and-after-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="reaching-before-and-after-a-juncture--basins-of-a-determined-law"></a>[basins-of-a-determined-law][]
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [reading-through-a-pool][] ← <a id="reading-through-a-pool--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][]
@@ -639,6 +640,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [ranking-under-readings]: theories/becoming/results/records/ranking-under-readings.md
 [re-optimizing-above-a-renewal-ends-it]: theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md
 [reach-past-ones-own-end]: theories/becoming/results/records/reach-past-ones-own-end.md
+[reach-through-a-shared-condition]: theories/becoming/results/records/reach-through-a-shared-condition.md
 [reaching-before-and-after-a-juncture]: theories/becoming/results/records/reaching-before-and-after-a-juncture.md
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [reading-through-a-pool]: theories/becoming/results/records/reading-through-a-pool.md
