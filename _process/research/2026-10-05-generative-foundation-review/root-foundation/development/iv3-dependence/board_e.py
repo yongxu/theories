@@ -31,8 +31,8 @@ elif sys.argv[1] == 'land':
     assert len(queue) == 1
     board[queue[0]] = board[queue[0]].replace(
         '- **Queue:** ',
-        '- **Queue:** IV3e landed (need with capacities, exact: where the other members active at a step can together give its '
-        'demand they share the giving within their capacities, so a feeder is needed exactly where they could not; '
+        '- **Queue:** IV3e landed (need with capacities, exact: where the other members active at each step can together give its '
+        'demand, they share the giving within their capacities, so a feeder is needed exactly where, at some step, they could not; '
         'three copies of one unit against a demand of two, none needed; '
         f'`Becoming.Weightings`, core receipt `{receipt}`, study §{section}, record self-concern-through-dependence '
         'extended, row in the history file); ', 1)

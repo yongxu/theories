@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-23T08:20:29+00:00",
+  "reviewed_at_utc": "2026-10-23T08:53:47+00:00",
   "statement": {
-    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs where the copy is the only one or the others could not together give what is drawn.",
-    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它在某个副本是唯一者、或其余者合起来给不出所汲取者之处，达到其所需的该副本。"
+    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs exactly where the others could not together give what is drawn.",
+    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它恰在其余者合起来给不出所汲取者之处达到其所需的该副本。"
   },
   "laws": [
     {
@@ -197,6 +197,61 @@
         "Becoming.Capacities.neither_alone",
         "Becoming.Capacities.needs_both"
       ]
+    },
+    {
+      "en": "Where the other active members can together give each step's demand, pairing in order the units each condition is to be given with the units they can give divides the giving within their capacities: the shared flow balances on the family, gives each formation at most what it can give apart from the feeder in question, and has the consumer drawing past the stock with that feeder never giving.",
+      "zh": "其余活跃成员合起来能给出每步的需求时，按顺序把每个条件应得的单位与它们能给的单位配对，就在容量之内分担了给予：分担之流对该族平衡，每个构成所给不超过它除所论供给者外能给的，消耗者汲取超出存量而该供给者从不给予。",
+      "declarations": [
+        "Becoming.repeatOnto",
+        "Becoming.unitsOf",
+        "Becoming.pairUp",
+        "Becoming.total_repeatOnto",
+        "Becoming.mem_repeatOnto",
+        "Becoming.total_unitsOf",
+        "Becoming.mem_unitsOf",
+        "Becoming.total_pairUp_fst",
+        "Becoming.total_pairUp_snd_le",
+        "Becoming.mem_pairUp",
+        "Becoming.total_eq_at",
+        "Becoming.Web.demandAt",
+        "Becoming.Web.otherCapacity",
+        "Becoming.Web.capacityWithout",
+        "Becoming.Web.shares",
+        "Becoming.Web.total_demandAt",
+        "Becoming.Web.otherCapacity_le",
+        "Becoming.Web.mem_shares",
+        "Becoming.Flow.sharedDrawn",
+        "Becoming.Flow.sharedDrawn_gives",
+        "Becoming.Flow.sharedDrawn_given_members",
+        "Becoming.Flow.sharedDrawn_balancesOn",
+        "Becoming.Flow.sharedDrawn_acting",
+        "Becoming.Flow.sharedDrawn_given_le",
+        "Becoming.Flow.sharedDrawn_quiet",
+        "Becoming.Flow.sharedDrawn_fedOnlyWithin",
+        "Becoming.Flow.sharedDrawn_drawsPast",
+        "Becoming.Flow.sharedDrawn_not_gives"
+      ]
+    },
+    {
+      "en": "With activity and identity decided and the family and the class listed without repetition, a consumer drawing past the stock needs a feeder's giving exactly where, at some step of the stretch, what the other active members can give together falls short of the demand. Witness SharedCopies: three copies of one unit each against a demand of two; no copy can feed alone, the class is needed, and no copy.",
+      "zh": "活动与同一可判定、该族与该类都列出而无重复时，汲取超出存量的消耗者恰在这段步的某步上其余活跃成员合起来能给的少于需求之处需要某供给者的给予。见证 SharedCopies：三个各一单位的副本对两个单位的需求；没有副本能单独供给，该类被需要，而没有哪个副本被需要。",
+      "declarations": [
+        "Becoming.Flow.needs_giver_iff_short",
+        "Becoming.SharedCopies.web",
+        "Becoming.SharedCopies.cap",
+        "Becoming.SharedCopies.decActive",
+        "Becoming.SharedCopies.cap_le_one",
+        "Becoming.SharedCopies.steady",
+        "Becoming.SharedCopies.demand_two",
+        "Becoming.SharedCopies.calls",
+        "Becoming.SharedCopies.distinct",
+        "Becoming.SharedCopies.apart",
+        "Becoming.SharedCopies.user_outside",
+        "Becoming.SharedCopies.without_two",
+        "Becoming.SharedCopies.none_alone",
+        "Becoming.SharedCopies.needs_some",
+        "Becoming.SharedCopies.none_needed"
+      ]
     }
   ],
   "hypotheses": [
@@ -215,6 +270,10 @@
     {
       "en": "For capacities: capacities supplied with the web, per formation and step over the whole family; each formation taking part once a step; the family listed without repetition and holding a named condition; for the shortfall law, activity and identity decided and the class listed.",
       "zh": "就容量：容量随依存网给定，按构成与步、对整个族；每个构成每步只参与一次；该族列出而无重复且含一个指名的条件；就缺额之律，活动与同一可判定，类为有限列表。"
+    },
+    {
+      "en": "For the exact law with capacities: the class listed without repetition, so that each member's capacity is counted once; activity and identity decided.",
+      "zh": "就有容量时的精确之律：类列出而无重复，使每个成员的容量只计一次；活动与同一可判定。"
     }
   ],
   "does_not_show": [
@@ -250,8 +309,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Which web an actual family has, what each formation can give (capacities are supplied with the web), or that a feeder is not needed where the others could together give the demand (that needs giving shared among givers).",
-      "zh": "实际的条件族有怎样的依存网、每个构成能给多少（容量随依存网给定），或在其余者合起来能给出需求之处供给者不被需要（那需要在给予者之间分担给予的流）。",
+      "en": "Which web an actual family has, or what each formation can give: the capacities are supplied with the web, not read off its levels or off what a feeder itself holds or draws on.",
+      "zh": "实际的条件族有怎样的依存网，或每个构成能给多少：容量随依存网给定，并非从其水平或从供给者自身所持有、所汲取者读出。",
       "kind": "scope"
     },
     {
@@ -295,6 +354,13 @@
         "en": "Capacities: one condition rising by one at every step, the user and two copies active throughout, so every step demands two units. With capacities one and two the user needs the second copy's giving and not the first's (Capacities.needs_second, Capacities.not_needs_first); with one each, neither can feed alone, both giving feed the condition, and the user needs both (Capacities.neither_alone, Capacities.jointly_feeds, Capacities.needs_both).",
         "zh": "Capacities：一个每步上升一个单位的条件，使用者与两个副本始终活跃，所以每步需要两个单位。容量为一与二时，使用者需要第二个副本的给予而不需要第一个的（Capacities.needs_second、Capacities.not_needs_first）；各为一时，两者都不能单独供给，两者一起给予能供给该条件，使用者两者都需要（Capacities.neither_alone、Capacities.jointly_feeds、Capacities.needs_both）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "SharedCopies: one condition rising by one at every step, the user and three copies active throughout, each copy able to give one unit, so every step demands two. No copy can feed alone (SharedCopies.none_alone), the user needs some copy's giving (SharedCopies.needs_some), and no copy's (SharedCopies.none_needed).",
+        "zh": "SharedCopies：一个每步上升一个单位的条件，使用者与三个副本始终活跃，每个副本能给一个单位，所以每步需要两个。没有副本能单独供给（SharedCopies.none_alone），使用者需要某个副本的给予（SharedCopies.needs_some），而不需要哪一个的（SharedCopies.none_needed）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -306,12 +372,12 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T081501.790566Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 and 383; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T081501.790566Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 与 383 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T085035.683962Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382, 383 and 384; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T085035.683962Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382、383 与 384 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "The converse of the shortfall law, by a flow sharing the giving among several givers within their capacities, which would make need with capacities exact; a capacity read off the levels of what a feeder itself holds or draws on, joining its capacity to its own dependence; graded need; an independent review.",
-    "zh": "以在多个给予者之间按容量分担给予的流证明缺额之律的逆向，使有容量时的“所需”成为精确之律；从供给者自身所持有、所汲取者的水平读出容量，使其容量与其自身的依存相连；分级的“所需”；独立审查。"
+    "en": "A capacity read off the levels of what a feeder itself holds or draws on, joining its capacity to its own dependence; graded need, under which a feeder is needed in degree; an independent review.",
+    "zh": "从供给者自身所持有、所汲取者的水平读出容量，使其容量与其自身的依存相连；分级的“所需”，使供给者按程度被需要；独立审查。"
   },
   "correspondence": {
     "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting exactly at copies. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
@@ -487,12 +553,23 @@
         "Becoming.Flow.needs_giver_iff_only",
         "Becoming.Flow.needs_giver_iff_only_on",
         "Becoming.Flow.needs_giver_iff_only_within",
+        "Becoming.Flow.needs_giver_iff_short",
         "Becoming.Flow.needs_giver_of_short",
         "Becoming.Flow.ownClosure_feeding_invariant_of_common",
         "Becoming.Flow.ownClosure_influence_invariant_of_common",
         "Becoming.Flow.partAlone_on",
         "Becoming.Flow.partAlone_within_iff",
         "Becoming.Flow.rise_le_given",
+        "Becoming.Flow.sharedDrawn",
+        "Becoming.Flow.sharedDrawn_acting",
+        "Becoming.Flow.sharedDrawn_balancesOn",
+        "Becoming.Flow.sharedDrawn_drawsPast",
+        "Becoming.Flow.sharedDrawn_fedOnlyWithin",
+        "Becoming.Flow.sharedDrawn_given_le",
+        "Becoming.Flow.sharedDrawn_given_members",
+        "Becoming.Flow.sharedDrawn_gives",
+        "Becoming.Flow.sharedDrawn_not_gives",
+        "Becoming.Flow.sharedDrawn_quiet",
         "Becoming.Marked",
         "Becoming.Needs",
         "Becoming.Needs.refl",
@@ -501,37 +578,69 @@
         "Becoming.NeedsSome",
         "Becoming.NeedsSomePart",
         "Becoming.PartAlone",
+        "Becoming.SharedCopies.apart",
+        "Becoming.SharedCopies.calls",
+        "Becoming.SharedCopies.cap",
+        "Becoming.SharedCopies.cap_le_one",
+        "Becoming.SharedCopies.decActive",
+        "Becoming.SharedCopies.demand_two",
+        "Becoming.SharedCopies.distinct",
+        "Becoming.SharedCopies.needs_some",
+        "Becoming.SharedCopies.none_alone",
+        "Becoming.SharedCopies.none_needed",
+        "Becoming.SharedCopies.steady",
+        "Becoming.SharedCopies.user_outside",
+        "Becoming.SharedCopies.web",
+        "Becoming.SharedCopies.without_two",
         "Becoming.Web.CallsForGiving",
         "Becoming.Web.CanFeedAlone",
         "Becoming.Web.callsForGiving_iff_demand_pos",
+        "Becoming.Web.capacityWithout",
         "Becoming.Web.decCallsForGiving",
         "Becoming.Web.decSomeFalls",
         "Becoming.Web.demand",
+        "Becoming.Web.demandAt",
         "Becoming.Web.drawnUnit",
+        "Becoming.Web.mem_shares",
+        "Becoming.Web.otherCapacity",
+        "Becoming.Web.otherCapacity_le",
+        "Becoming.Web.shares",
+        "Becoming.Web.total_demandAt",
         "Becoming.Web.total_drawnUnit",
         "Becoming.decSomeEq",
         "Becoming.forced_member_iff_only",
         "Becoming.forced_needs_iff",
+        "Becoming.mem_pairUp",
+        "Becoming.mem_repeatOnto",
         "Becoming.mem_steps_of_between",
+        "Becoming.mem_unitsOf",
         "Becoming.needsPart_iff_only",
         "Becoming.needs_iff_only",
         "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
+        "Becoming.pairUp",
+        "Becoming.repeatOnto",
         "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
+        "Becoming.total_eq_at",
+        "Becoming.total_pairUp_fst",
+        "Becoming.total_pairUp_snd_le",
+        "Becoming.total_repeatOnto",
         "Becoming.total_two",
+        "Becoming.total_unitsOf",
+        "Becoming.unitsOf",
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "160c0b3199d52677342b40087aff16f1b75b73fa114e030211bf276a342bde1b"
+      "sha256": "a06b1a1ccc37ca2531c1915eaf8e2b0f16f375e085bcc58c98e79a1f2028f3a8"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T081501.790566Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T085035.683962Z/verification.json",
       "role": "receipt",
-      "sha256": "746ae0d3da0bedf333013f8e49ba09983ce5e93087bb1f02a091bc5a1936aa8a"
+      "sha256": "02aba7cf1f784f45b4f7d76eb60f337a5a5a62996cc9013a4bdea0806ea6082e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "b3058ed2fccacfb09c73f0fd1dd03e49d41aa75a9dec2753dbe58e353a449580"
+      "sha256": "85b07f20ee6483914130b2902d7d271854017fffbb6c59b112a4b3e26f7aab56"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -541,17 +650,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "8e1da58f8d3313ea7c197e6292aebd28d9fd7180cdf5884867503d8480978c5c"
+      "sha256": "a3d277e7a89edb573235c0988181b6cc9288fb0a19d857d6d6c29b638f218d5d"
     },
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "9d01eb0828f02d3098d2885d86cc5c918778251f17334cf3c971d2ec8dfc5a92"
+      "sha256": "340947f75848626494cefdba2eb3ee4f9b700cde1761abedd9eefcf737be0c07"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "649dbf881fdce56f70440454d3fe35aacc1053538d83c51a87291dbd5e260c5d"
+      "sha256": "b8b904891551a608d8578c84c16f32757794f30765ee53eee04e589b214c8cc7"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -562,7 +671,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T081501.790566Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T085035.683962Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -584,6 +693,10 @@
     {
       "en": "23 October 2026: extended (IV3d): capacities of giving supplied with the web; a step's demand and the least flow; feeding alone exactly with capacities, and the copies law with them; need where the others could not together give the demand; the Capacities witnesses; the statement gained the capacity clause; study section 383.",
       "zh": "2026年10月23日：扩展（IV3d）：随依存网给定的给予容量；某步的需求与最小流；有容量时单独供给的精确之律，及其下的副本之律；凡其余者合起来给不出需求之处的“所需”；Capacities 见证；陈述增加了容量一句；研究第 383 节。"
+    },
+    {
+      "en": "23 October 2026: extended (IV3e): the shares and the flow sharing the giving within capacities; need with capacities exact (a feeder needed exactly where the others could not together give the demand); the SharedCopies witness; the statement's capacity clause made exact and the converse removed from the boundaries; study section 384.",
+      "zh": "2026年10月23日：扩展（IV3e）：配对份额与在容量之内分担给予之流；有容量时的“所需”成为精确之律（供给者恰在其余者合起来给不出需求之处被需要）；SharedCopies 见证；陈述的容量一句改为精确，逆向从边界中移除；研究第 384 节。"
     }
   ]
 }

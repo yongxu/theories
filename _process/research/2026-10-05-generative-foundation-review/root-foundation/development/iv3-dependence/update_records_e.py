@@ -76,11 +76,11 @@ d['statement'] = t(
     '从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它恰在其余者合起来'
     '给不出所汲取者之处达到其所需的该副本。')
 d['laws'] += [
-    {**t('Where the other active members can together give a step\'s demand, pairing in order the units each condition '
+    {**t('Where the other active members can together give each step\'s demand, pairing in order the units each condition '
          'is to be given with the units they can give divides the giving within their capacities: the shared flow '
          'balances on the family, gives each formation at most what it can give apart from the feeder in question, and '
          'has the consumer drawing past the stock with that feeder never giving.',
-         '其余活跃成员合起来能给出某步的需求时，按顺序把每个条件应得的单位与它们能给的单位配对，就在容量之内分担了给予：分担之流对该族'
+         '其余活跃成员合起来能给出每步的需求时，按顺序把每个条件应得的单位与它们能给的单位配对，就在容量之内分担了给予：分担之流对该族'
          '平衡，每个构成所给不超过它除所论供给者外能给的，消耗者汲取超出存量而该供给者从不给予。'),
      'declarations': SHARED},
     {**t('With activity and identity decided and the family and the class listed without repetition, a consumer drawing '

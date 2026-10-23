@@ -39,7 +39,7 @@ def replace_once(path, old, new):
 # ---- THE-STEP-OF-INVARIANCE ------------------------------------------------------------------------------
 assert '**Need with capacities, exactly.**' not in text(STEP)
 insert_after(STEP, '- **Capacities of giving.** Supply with the web what each formation can give the family at a step', [
-    '- **Need with capacities, exactly.** Where the other members active at a step can together give its demand, '
+    '- **Need with capacities, exactly.** Where the other members active at each step can together give its demand, '
     'they can share the giving within their capacities: pair, in order, the units each condition is to be given '
     'with the units they can give (`Web.shares`), and the flow in which each gives as it is paired balances, with '
     'the consumer drawing past the stock and the feeder in question never giving (`Flow.sharedDrawn`). So a consumer '

@@ -179,6 +179,20 @@ order every standpoint shares when each weighs what can form in its own way.
   `Capacities.not_needs_first`); with one each, neither can feed alone, both giving feed the
   condition, and the user needs both (`Capacities.neither_alone`, `Capacities.jointly_feeds`,
   `Capacities.needs_both`).
+* **Need with capacities, exactly.** Where the members other than a feeder `g` that are active at
+  a step can together give its demand (`Web.capacityWithout`), the shares pair the units each
+  condition of the family is to be given (`Web.demandAt`) with the units those members can give
+  (`Web.otherCapacity`), in order (`Web.shares`, by `unitsOf` and `pairUp`). The flow in which each
+  member gives as many units as the shares pair it with (`Flow.sharedDrawn`) balances on the
+  family, gives each member at most its capacity, and has the consumer drawing past the stock with
+  `g` never giving (`Flow.sharedDrawn_fedOnlyWithin`, `Flow.sharedDrawn_drawsPast`,
+  `Flow.sharedDrawn_not_gives`). So, with activity and identity decided and the family and the
+  class listed without repetition, a consumer outside the class needs `g`'s giving exactly where,
+  at some step of the stretch, what the other active members can give together falls short of the
+  demand (`Flow.needs_giver_iff_short`; `Flow.needs_giver_of_short` is one way). In
+  `SharedCopies` three copies of one unit each meet a demand of two: none can feed alone, the user
+  needs some copy's giving, and no copy's (`SharedCopies.none_alone`, `SharedCopies.needs_some`,
+  `SharedCopies.none_needed`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -234,10 +248,12 @@ Read the relation a self is drawn along as one its continuation is carried along
 or what it needs. Then where the centers depend on one another along it, the de se question
 decides nothing within their common closure, since each center's own closure is that closure,
 and the step of invariance has work only beyond it. Drawn along need, self-concern reaches a copy
-of what it needs only where the copy is the only one, so with many copies the presupposition
-reaches the class and none of them, and with one it reaches that one. A copy counts only where it
-can give alone what the steps demand: copies that can each give only part of it are each needed,
-so redundancy is a matter of capacity, not of number. Read an order increasing in
+of what it needs only where the copy is the only one, when each copy could carry the need alone,
+so with many such copies the presupposition reaches the class and none of them, and with one it
+reaches that one. With capacities a copy counts by what it can give: self-concern reaches a feeder
+exactly where the others together could not give what a step demands, so two copies that can each
+give only part of it are both reached, three of one unit each against a demand of two leave none
+reached, and redundancy is a matter of capacity, not of number. Read an order increasing in
 its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
@@ -2468,6 +2484,379 @@ theorem needs_giver_of_short [DecidableEq F] {W : Web F C} [∀ t x, Decidable (
 
 end Flow
 
+/-! ## Giving shared within capacities, and exactly when a feeder is needed -/
+
+section Sharing
+
+variable {α β : Type}
+
+/-- `a` repeated `k` times in front of `rest`. -/
+def repeatOnto (a : α) : Nat → List α → List α
+  | 0, rest => rest
+  | k + 1, rest => a :: repeatOnto a k rest
+
+/-- The units of `r` over a list: each listed item repeated as often as `r` gives it, in order. -/
+def unitsOf : List α → (α → Nat) → List α
+  | [], _ => []
+  | a :: as, r => repeatOnto a (r a) (unitsOf as r)
+
+/-- Two lists paired in order, as far as the shorter goes. -/
+def pairUp : List α → List β → List (α × β)
+  | [], [] => []
+  | [], _ :: _ => []
+  | _ :: _, [] => []
+  | a :: as, b :: bs => (a, b) :: pairUp as bs
+
+/-- Repeating `a` in front adds its value as many times. -/
+theorem total_repeatOnto (q : α → Nat) (a : α) (rest : List α) :
+    ∀ k : Nat, total (repeatOnto a k rest) q = k * q a + total rest q
+  | 0 => (Nat.zero_add _).symm.trans (congrArg (· + total rest q) (Nat.zero_mul (q a)).symm)
+  | k + 1 => (congrArg (q a + ·) (total_repeatOnto q a rest k)).trans
+      ((Nat.add_assoc _ _ _).symm.trans (congrArg (· + total rest q)
+        ((Nat.add_comm (q a) (k * q a)).trans (Nat.succ_mul k (q a)).symm)))
+
+/-- A member of `a` repeated in front of `rest` is `a`, repeated at least once, or a member of
+`rest`. -/
+theorem mem_repeatOnto {a x : α} {rest : List α} :
+    ∀ {k : Nat}, x ∈ repeatOnto a k rest → (x = a ∧ 0 < k) ∨ x ∈ rest
+  | 0, mem => .inr mem
+  | k + 1, mem => match mem_cons_cases mem with
+    | .inl same => .inl ⟨same, Nat.succ_pos k⟩
+    | .inr later => match mem_repeatOnto later with
+      | .inl ⟨same, _⟩ => .inl ⟨same, Nat.succ_pos k⟩
+      | .inr inRest => .inr inRest
+
+/-- Over the units of `r`, a total weighs each listed item by its count. -/
+theorem total_unitsOf (q r : α → Nat) :
+    ∀ as : List α, total (unitsOf as r) q = total as fun a => r a * q a
+  | [] => rfl
+  | a :: as => (total_repeatOnto q a (unitsOf as r) (r a)).trans
+      (congrArg (r a * q a + ·) (total_unitsOf q r as))
+
+/-- A unit of `r` over a list is a listed item with a positive count. -/
+theorem mem_unitsOf {r : α → Nat} {x : α} :
+    ∀ {as : List α}, x ∈ unitsOf as r → x ∈ as ∧ 0 < r x
+  | [], mem => nomatch mem
+  | a :: as, mem => match mem_repeatOnto mem with
+    | .inl ⟨same, pos⟩ => ⟨Eq.subst (motive := fun y => y ∈ a :: as) same.symm (.head as),
+        Eq.subst (motive := fun y => 0 < r y) same.symm pos⟩
+    | .inr later => match mem_unitsOf later with
+      | ⟨inside, pos⟩ => ⟨.tail a inside, pos⟩
+
+/-- Paired with a list at least as long, every item of a list is paired: a total over the first
+members of the pairs is the list's total. -/
+theorem total_pairUp_fst (q : α → Nat) :
+    ∀ (as : List α) (bs : List β), total as (fun _ => 1) ≤ total bs (fun _ => 1) →
+      total (pairUp as bs) (fun z => q z.1) = total as q
+  | [], [], _ => rfl
+  | [], _ :: _, _ => rfl
+  | _ :: rest, [], long =>
+    absurd (Nat.le_trans (Nat.le_add_right 1 (total rest fun _ => 1)) long) (Nat.not_succ_le_zero 0)
+  | a :: as, _ :: bs, long =>
+    congrArg (q a + ·) (total_pairUp_fst q as bs (le_of_add_le_add_left_core long))
+
+/-- A total over the second members of the pairs is at most the second list's total. -/
+theorem total_pairUp_snd_le (q : β → Nat) :
+    ∀ (as : List α) (bs : List β), total (pairUp as bs) (fun z => q z.2) ≤ total bs q
+  | [], [] => Nat.le_refl 0
+  | [], _ :: _ => Nat.zero_le _
+  | _ :: _, [] => Nat.le_refl 0
+  | _ :: as, b :: bs => Nat.add_le_add_left (total_pairUp_snd_le q as bs) (q b)
+
+/-- A pair of two lists paired in order pairs a member of the first with a member of the
+second. -/
+theorem mem_pairUp {z : α × β} :
+    ∀ {as : List α} {bs : List β}, z ∈ pairUp as bs → z.1 ∈ as ∧ z.2 ∈ bs
+  | [], [], mem => nomatch mem
+  | [], _ :: _, mem => nomatch mem
+  | _ :: _, [], mem => nomatch mem
+  | a :: as, b :: bs, mem => match mem_cons_cases mem with
+    | .inl same =>
+      ⟨Eq.subst (motive := fun y => y ∈ a :: as) (congrArg Prod.fst same).symm (.head as),
+       Eq.subst (motive := fun y => y ∈ b :: bs) (congrArg Prod.snd same).symm (.head bs)⟩
+    | .inr later => match mem_pairUp later with
+      | ⟨first, second⟩ => ⟨.tail a first, .tail b second⟩
+
+/-- **A total over a list without repetition of what is positive at one member alone is its value
+there.** -/
+theorem total_eq_at {q : α → Nat} {a : α} {as : List α} (only : ∀ b, 0 < q b → b = a)
+    (distinct : Distinct as) (inside : a ∈ as) : total as q = q a :=
+  Nat.le_antisymm (total_le_at only distinct) (le_total_of_mem inside)
+
+end Sharing
+
+namespace Web
+
+variable {C : Type} (W : Web F C)
+
+/-- What the step from `t` calls to be given to `c` while a consumer draws on the family: what
+`c` rises, and the unit drawn at `c₀` where no condition of the family falls. -/
+def demandAt [DecidableEq C] (cs : List C) (c₀ : C) (t : Nat) (c : C) : Nat :=
+  rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c
+
+/-- What `h` can give at the step from `t`, counted apart from `g`: its capacity where it is
+active and is not `g`, and nothing otherwise. -/
+def otherCapacity [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : Nat → F → Nat) (g : F)
+    (t : Nat) (h : F) : Nat :=
+  if W.active t h ∧ h ≠ g then cap t h else 0
+
+/-- What the members of `ks` other than `g`, active at the step from `t`, can give together. -/
+def capacityWithout [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : Nat → F → Nat)
+    (ks : List F) (g : F) (t : Nat) : Nat :=
+  total ks (W.otherCapacity cap g t)
+
+/-- The shares of the step from `t`: the units each condition of the family is to be given, in
+order, paired with the units the members other than `g` can give, in order. -/
+def shares [DecidableEq C] [∀ t x, Decidable (W.active t x)] [DecidableEq F]
+    (cap : Nat → F → Nat) (cs : List C) (c₀ : C) (ks : List F) (g : F) (t : Nat) : List (C × F) :=
+  pairUp (unitsOf cs (W.demandAt cs c₀ t)) (unitsOf ks (W.otherCapacity cap g t))
+
+variable {W}
+
+/-- Over a family without repetition holding `c₀`, the demands at its conditions total the step's
+demand. -/
+theorem total_demandAt [DecidableEq C] {cs : List C} (distinct : Distinct cs) {c₀ : C}
+    (inside : c₀ ∈ cs) (t : Nat) : total cs (W.demandAt cs c₀ t) = W.demand cs t :=
+  (total_add _ _ cs).trans
+    (congrArg (risen cs (fun c s => W.level s c) t + ·) (total_drawnUnit distinct inside t))
+
+/-- What a formation can give apart from `g` is at most its capacity. -/
+theorem otherCapacity_le [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : Nat → F → Nat)
+    (g : F) (t : Nat) (h : F) : W.otherCapacity cap g t h ≤ cap t h :=
+  match (instDecidableAnd : Decidable (W.active t h ∧ h ≠ g)) with
+  | isTrue both => Nat.le_of_eq (if_pos both)
+  | isFalse no => Nat.le_trans (Nat.le_of_eq (if_neg no)) (Nat.zero_le _)
+
+/-- A share pairs a condition of the family with a positive demand and a member, active and not
+`g`, with a positive capacity. -/
+theorem mem_shares [DecidableEq C] [∀ t x, Decidable (W.active t x)] [DecidableEq F]
+    {cap : Nat → F → Nat} {cs : List C} {c₀ : C} {ks : List F} {g : F} {t : Nat} {z : C × F}
+    (mem : z ∈ W.shares cap cs c₀ ks g t) :
+    z.1 ∈ cs ∧ 0 < W.demandAt cs c₀ t z.1 ∧ z.2 ∈ ks ∧ W.active t z.2 ∧ z.2 ≠ g :=
+  match mem_pairUp mem with
+  | ⟨first, second⟩ => match mem_unitsOf first, mem_unitsOf second with
+    | ⟨inside, owed⟩, ⟨member, spare⟩ =>
+      ⟨inside, owed, member, match (instDecidableAnd : Decidable (W.active t z.2 ∧ z.2 ≠ g)) with
+        | isTrue both => both
+        | isFalse no =>
+          absurd (Nat.lt_of_lt_of_le spare (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0)⟩
+
+end Web
+
+namespace Flow
+
+variable {C : Type}
+
+/-- Across a stretch, the flow read off a web in which `f` draws as in the least flow and the
+members of `ks` other than `g`, active at the step, share the giving within their capacities:
+each member gives each condition as many units as the shares pair them. Outside the stretch
+nothing takes part. -/
+def sharedDrawn [DecidableEq F] [DecidableEq C] (W : Web F C) [∀ t x, Decidable (W.active t x)]
+    (cap : Nat → F → Nat) (cs : List C) (c₀ : C) (ks : List F) (T n : Nat) (f g : F) :
+    Flow F C where
+  present t := if T ≤ t ∧ t < T + n then f :: ks else []
+  take t x c := if x = f ∧ (∃ d, d ∈ cs ∧ d = c) then
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c else 0
+  give t x c := total (W.shares cap cs c₀ ks g t) fun z => if z.1 = c ∧ z.2 = x then 1 else 0
+
+section Shared
+
+variable [DecidableEq F] [DecidableEq C] {W : Web F C} [∀ t x, Decidable (W.active t x)]
+  {cap : Nat → F → Nat} {cs : List C} {c₀ : C} {ks : List F} {T n : Nat} {f g : F}
+
+/-- What gives in the shared flow is a member of `ks` other than `g`, active at the step, and it
+gives to a condition of the family. -/
+theorem sharedDrawn_gives {t : Nat} {x : F} {c : C}
+    (gives : 0 < (sharedDrawn W cap cs c₀ ks T n f g).give t x c) :
+    c ∈ cs ∧ x ∈ ks ∧ W.active t x ∧ x ≠ g :=
+  match total_pos (W.shares cap cs c₀ ks g t) gives with
+  | ⟨z, mem, positive⟩ =>
+    match (instDecidableAnd : Decidable (z.1 = c ∧ z.2 = x)) with
+    | isFalse no =>
+      absurd (Nat.lt_of_lt_of_le positive (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0)
+    | isTrue ⟨first, second⟩ => match Web.mem_shares mem with
+      | ⟨inside, _, member, active, other⟩ =>
+        ⟨Eq.subst (motive := fun y => y ∈ cs) first inside,
+         Eq.subst (motive := fun y => y ∈ ks) second member,
+         Eq.subst (motive := fun y => W.active t y) second active,
+         Eq.subst (motive := fun y => y ≠ g) second other⟩
+
+/-- **The members give each condition of the family what the step demands of it**, where their
+capacity covers the step's demand. -/
+theorem sharedDrawn_given_members (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    {t : Nat} (covers : W.demand cs t ≤ W.capacityWithout cap ks g t) {c : C} (member : c ∈ cs) :
+    total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).give t x c) = W.demandAt cs c₀ t c :=
+  have long : total (unitsOf cs (W.demandAt cs c₀ t)) (fun _ => 1) ≤
+      total (unitsOf ks (W.otherCapacity cap g t)) (fun _ => 1) :=
+    Nat.le_trans (Nat.le_of_eq ((total_unitsOf (fun _ => 1) _ cs).trans
+      ((Weighting.total_congr_on fun _ _ => Nat.mul_one _).trans (Web.total_demandAt distinct inside t))))
+      (Nat.le_trans covers (Nat.le_of_eq ((total_unitsOf (fun _ => 1) _ ks).trans
+        (Weighting.total_congr_on fun _ _ => Nat.mul_one _)).symm))
+  show total ks (fun x => total (W.shares cap cs c₀ ks g t) fun z => if z.1 = c ∧ z.2 = x then 1 else 0)
+      = W.demandAt cs c₀ t c from
+  (total_swap (fun (x : F) (z : C × F) => if z.1 = c ∧ z.2 = x then 1 else 0)
+    (W.shares cap cs c₀ ks g t) ks).trans
+    ((Weighting.total_congr_on (q := fun (z : C × F) => if z.1 = c then 1 else 0) fun z mem =>
+      match Web.mem_shares mem with
+      | ⟨_, _, inks, _, _⟩ => match decEq z.1 c with
+        | isTrue same => (total_eq_at (a := z.2) (fun (x : F) pos =>
+              match (instDecidableAnd : Decidable (z.1 = c ∧ z.2 = x)) with
+              | isTrue both => both.2.symm
+              | isFalse no =>
+                absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0))
+            apart inks).trans ((if_pos ⟨same, rfl⟩).trans (if_pos same).symm)
+        | isFalse other =>
+          (total_eq_zero fun _ _ => if_neg fun both => other both.1).trans (if_neg other).symm).trans
+      ((total_pairUp_fst (fun d => if d = c then 1 else 0) _ _ long).trans
+        ((total_unitsOf (fun d => if d = c then 1 else 0) _ cs).trans
+          ((total_eq_at (a := c) (fun (d : C) pos => match decEq d c with
+              | isTrue same => same
+              | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
+                  ((congrArg (W.demandAt cs c₀ t d * ·) (if_neg other)).trans (Nat.mul_zero _))))
+                  (Nat.lt_irrefl 0)) distinct member).trans
+            ((congrArg (W.demandAt cs c₀ t c * ·) (if_pos rfl)).trans (Nat.mul_one _))))))
+
+/-- The shared flow balances on the family at every step of the stretch, where the members'
+capacity covers the demand there and `f` is not a member. -/
+theorem sharedDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks)
+    (covers : ∀ t, T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks g t) :
+    ∀ t, T ≤ t → t < T + n → (sharedDrawn W cap cs c₀ ks T n f g).BalancesOn W cs t := by
+  intro t from_ to c member
+  have present : (sharedDrawn W cap cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+  have takeSelf : (sharedDrawn W cap cs c₀ ks T n f g).take t f c =
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c := if_pos ⟨rfl, ⟨c, member, rfl⟩⟩
+  have takeOthers : total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).take t x c) = 0 :=
+    total_eq_zero fun x inks =>
+      if_neg fun both => outside (Eq.subst (motive := fun y => y ∈ ks) both.1 inks)
+  have giveSelf : (sharedDrawn W cap cs c₀ ks T n f g).give t f c = 0 :=
+    eq_zero_of_not_pos fun pos => outside (sharedDrawn_gives pos).2.1
+  have giveOthers : total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).give t x c) =
+      rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
+    sharedDrawn_given_members distinct inside apart (covers t from_ to) member
+  show W.level (t + 1) c + total ((sharedDrawn W cap cs c₀ ks T n f g).present t)
+      (fun x => (sharedDrawn W cap cs c₀ ks T n f g).take t x c) =
+    W.level t c + total ((sharedDrawn W cap cs c₀ ks T n f g).present t)
+      (fun x => (sharedDrawn W cap cs c₀ ks T n f g).give t x c)
+  rw [present]
+  show W.level (t + 1) c + ((sharedDrawn W cap cs c₀ ks T n f g).take t f c +
+      total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).take t x c)) =
+    W.level t c + ((sharedDrawn W cap cs c₀ ks T n f g).give t f c +
+      total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).give t x c))
+  rw [takeSelf, takeOthers, giveSelf, giveOthers]
+  exact (congrArg (W.level (t + 1) c + ·) (Nat.add_zero _)).trans ((Nat.add_assoc _ _ _).symm.trans
+    ((congrArg (· + W.drawnUnit cs c₀ t c) (across (fun s => W.level s c) t)).trans
+      ((Nat.add_assoc _ _ _).trans (congrArg (W.level t c + ·) (Nat.zero_add _).symm))))
+
+/-- In the shared flow only active formations give. -/
+theorem sharedDrawn_acting : (sharedDrawn W cap cs c₀ ks T n f g).Acting W :=
+  fun _ _ _ _ gives => (sharedDrawn_gives gives).2.2.1
+
+/-- **In the shared flow each formation gives the family at most what it can give apart from
+`g`.** -/
+theorem sharedDrawn_given_le (distinct : Distinct cs) (apart : Distinct ks) (t : Nat) (x : F) :
+    total cs ((sharedDrawn W cap cs c₀ ks T n f g).give t x) ≤ W.otherCapacity cap g t x :=
+  show total cs (fun c => total (W.shares cap cs c₀ ks g t) fun z => if z.1 = c ∧ z.2 = x then 1 else 0)
+      ≤ W.otherCapacity cap g t x from
+  Nat.le_trans (Nat.le_of_eq (total_swap (fun (c : C) (z : C × F) => if z.1 = c ∧ z.2 = x then 1 else 0)
+      (W.shares cap cs c₀ ks g t) cs))
+    (Nat.le_trans (total_le (q := fun (z : C × F) => if z.2 = x then 1 else 0) _ fun z _ => Nat.le_trans
+        (total_le_at (a := z.1) (fun (c : C) pos =>
+          match (instDecidableAnd : Decidable (z.1 = c ∧ z.2 = x)) with
+          | isTrue both => both.1.symm
+          | isFalse no =>
+            absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0))
+          distinct)
+        (match decEq z.2 x with
+          | isTrue same => Nat.le_of_eq ((if_pos ⟨rfl, same⟩).trans (if_pos same).symm)
+          | isFalse other =>
+            Nat.le_trans (Nat.le_of_eq (if_neg fun both => other both.2)) (Nat.zero_le _)))
+      (Nat.le_trans (total_pairUp_snd_le (fun h => if h = x then 1 else 0) _ _)
+        (Nat.le_trans (Nat.le_of_eq (total_unitsOf (fun h => if h = x then 1 else 0) _ ks))
+          (Nat.le_trans (total_le_at (a := x) (fun (h : F) pos => match decEq h x with
+              | isTrue same => same
+              | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
+                  ((congrArg (W.otherCapacity cap g t h * ·) (if_neg other)).trans
+                    (Nat.mul_zero _)))) (Nat.lt_irrefl 0)) apart)
+            (Nat.le_of_eq ((congrArg (W.otherCapacity cap g t x * ·) (if_pos rfl)).trans
+              (Nat.mul_one _)))))))
+
+/-- In the shared flow `g` gives the family nothing. -/
+theorem sharedDrawn_quiet (distinct : Distinct cs) (apart : Distinct ks) (t : Nat) :
+    total cs ((sharedDrawn W cap cs c₀ ks T n f g).give t g) = 0 :=
+  Nat.le_antisymm (Nat.le_trans (sharedDrawn_given_le distinct apart t g)
+    (Nat.le_of_eq (if_neg fun both => both.2 rfl))) (Nat.zero_le _)
+
+/-- The shared flow is read off the web with capacities for a family fed only from `ks`, where the
+members' capacity covers the demand at every step of the stretch and `f` is not a member. -/
+theorem sharedDrawn_fedOnlyWithin (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks)
+    (covers : ∀ t, T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks g t) :
+    FedOnlyWithin W cap cs (· ∈ ks) T n (sharedDrawn W cap cs c₀ ks T n f g) :=
+  ⟨⟨sharedDrawn_balancesOn distinct inside apart outside covers, sharedDrawn_acting,
+    fun _ _ _ _ _ gives => (sharedDrawn_gives gives).2.1⟩,
+   fun t from_ to =>
+    have present : (sharedDrawn W cap cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+    ⟨Eq.subst (motive := fun l => Distinct l) present.symm ⟨outside, apart⟩,
+     fun x _ => Nat.le_trans (sharedDrawn_given_le distinct apart t x)
+       (Web.otherCapacity_le cap g t x)⟩⟩
+
+/-- In the shared flow `f` draws past the family's stock, where it is active across a stretch
+longer than the stock and the family holds `c₀`. -/
+theorem sharedDrawn_drawsPast (inside : c₀ ∈ cs)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    DrawsPast cs T n (sharedDrawn W cap cs c₀ ks T n f g, W) f :=
+  ⟨below, fun t from_ to =>
+    have present : (sharedDrawn W cap cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+    ⟨alive t from_ to, Eq.subst (motive := fun l => f ∈ l) present.symm (.head _),
+     match W.decSomeFalls cs t with
+     | isTrue ⟨c, mem, falls⟩ =>
+       total_pos_of_mem (q := (sharedDrawn W cap cs c₀ ks T n f g).take t f) mem
+        (Nat.lt_of_lt_of_le (excess_pos.mpr falls) (Nat.le_trans (Nat.le_add_right _ _)
+          (Nat.le_of_eq (if_pos ⟨rfl, ⟨c, mem, rfl⟩⟩).symm)))
+     | isFalse steady =>
+       total_pos_of_mem (q := (sharedDrawn W cap cs c₀ ks T n f g).take t f) inside
+        (Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_trans (Nat.le_add_left _ _)
+          (Nat.le_trans (Nat.le_of_eq (congrArg (fall (fun s => W.level s c₀) t + ·)
+            (if_pos ⟨rfl, steady⟩)).symm)
+            (Nat.le_of_eq (if_pos ⟨rfl, ⟨c₀, inside, rfl⟩⟩).symm))))⟩⟩
+
+/-- In the shared flow `g` never gives to the family. -/
+theorem sharedDrawn_not_gives (distinct : Distinct cs) (apart : Distinct ks) :
+    ¬ GivesWithin cs T n (sharedDrawn W cap cs c₀ ks T n f g, W) g :=
+  fun ⟨t, _, _, _, gives⟩ => Nat.lt_irrefl 0
+    (Nat.lt_of_lt_of_le gives (Nat.le_of_eq (sharedDrawn_quiet distinct apart t)))
+
+end Shared
+
+/-- **A feeder is needed exactly where the others could not together give the demand.** Over the
+flows read off a web with capacities, for a family without repetition holding `c₀`, fed only from
+the members of a list without repetition, with activity and identity decided, let `f`, not a
+member, be active across a stretch longer than the family's stock. Then `f` drawing past the
+stock needs `g`'s giving exactly where, at some step of the stretch, what the active members other
+than `g` can give together falls short of the step's demand. -/
+theorem needs_giver_iff_short [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) :
+    NeedsPart (FedOnlyWithin W cap cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔
+      ∃ t, T ≤ t ∧ t < T + n ∧ W.capacityWithout cap ks g t < W.demand cs t :=
+  ⟨fun needs => match decideSome (p := fun t => W.capacityWithout cap ks g t < W.demand cs t)
+      (steps T n) with
+    | isTrue ⟨t, mem, short⟩ => match between_of_mem_steps mem with
+      | ⟨from_, to⟩ => ⟨t, from_, to, short⟩
+    | isFalse covered =>
+      absurd (needs _ (sharedDrawn_fedOnlyWithin (c₀ := c₀) distinct inside apart outside
+          fun t from_ to => Nat.ge_of_not_lt fun short =>
+            covered ⟨t, mem_steps_of_between from_ to, short⟩)
+        (sharedDrawn_drawsPast inside alive below))
+        (sharedDrawn_not_gives distinct apart),
+   fun short => needs_giver_of_short short⟩
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -2771,6 +3160,102 @@ theorem needs_both :
    Flow.needs_giver_of_short ⟨0, Nat.le_refl 0, Nat.one_pos, by decide⟩⟩
 
 end Capacities
+
+namespace SharedCopies
+
+/-- Formation `0` is the user and `1`, `2`, `3` three copies: one condition rising by one at
+every step, every formation active. -/
+def web : Web Nat Unit :=
+  ⟨fun t _ => t, fun _ _ => True, fun _ _ _ => True, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- What each can give at a step: the user nothing, each copy one unit. -/
+def cap (_ : Nat) : Nat → Nat
+  | 0 => 0
+  | _ + 1 => 1
+
+instance decActive : ∀ t x, Decidable (web.active t x) := fun _ _ => instDecidableTrue
+
+/-- No formation can give more than one unit a step. -/
+theorem cap_le_one (t x : Nat) : cap t x ≤ 1 :=
+  match x with
+  | 0 => Nat.zero_le 1
+  | _ + 1 => Nat.le_refl 1
+
+/-- The condition never falls. -/
+theorem steady (t : Nat) : ¬ ∃ d, d ∈ [()] ∧ web.Falls t d :=
+  fun ⟨_, _, falls⟩ => Nat.lt_irrefl t (Nat.lt_trans (Nat.lt_succ_self t) falls)
+
+/-- Every step demands two units: one the condition rises, and one the user draws. -/
+theorem demand_two (t : Nat) : web.demand [()] t = 2 := by
+  show (excess (t + 1) t + 0) + (if ¬ ∃ d, d ∈ [()] ∧ web.Falls t d then 1 else 0) = 2
+  rw [Capacities.excess_succ, if_pos (steady t)]
+
+/-- Every step calls for giving. -/
+theorem calls (t : Nat) : web.CallsForGiving [()] t :=
+  .inl ⟨(), .head [], Nat.lt_succ_self t⟩
+
+theorem distinct : Distinct [()] := ⟨(fun empty => nomatch empty), trivial⟩
+
+/-- The copies are listed without repetition. -/
+theorem apart : Distinct [1, 2, 3] :=
+  ⟨(fun mem => match mem_cons_cases mem with
+      | .inl same => absurd same (by decide)
+      | .inr rest => match mem_cons_cases rest with
+        | .inl same => absurd same (by decide)
+        | .inr empty => nomatch empty),
+   (fun mem => match mem_cons_cases mem with
+      | .inl same => absurd same (by decide)
+      | .inr empty => nomatch empty),
+   (fun empty => nomatch empty), trivial⟩
+
+/-- The user is no copy. -/
+theorem user_outside : ¬ (0 : Nat) ∈ [1, 2, 3] :=
+  fun mem => match mem_cons_cases mem with
+  | .inl same => absurd same (by decide)
+  | .inr rest => match mem_cons_cases rest with
+    | .inl same => absurd same (by decide)
+    | .inr rest' => match mem_cons_cases rest' with
+      | .inl same => absurd same (by decide)
+      | .inr empty => nomatch empty
+
+/-- Without any one copy, the other two can give two units a step together. -/
+theorem without_two {g : Nat} (member : g ∈ [1, 2, 3]) (t : Nat) :
+    web.capacityWithout cap [1, 2, 3] g t = 2 :=
+  match mem_cons_cases member with
+  | .inl same => Eq.subst (motive := fun x => web.capacityWithout cap [1, 2, 3] x t = 2) same.symm rfl
+  | .inr rest => match mem_cons_cases rest with
+    | .inl same =>
+      Eq.subst (motive := fun x => web.capacityWithout cap [1, 2, 3] x t = 2) same.symm rfl
+    | .inr rest' => match mem_cons_cases rest' with
+      | .inl same =>
+        Eq.subst (motive := fun x => web.capacityWithout cap [1, 2, 3] x t = 2) same.symm rfl
+      | .inr empty => nomatch empty
+
+/-- **No copy can feed the condition alone**: each gives one unit a step, short of the two each
+step demands. -/
+theorem none_alone (g : Nat) : ¬ web.CanFeedAlone cap [()] 0 1 g :=
+  fun can => Nat.not_succ_le_self 1 (Nat.le_trans (Nat.le_of_eq (demand_two 0).symm)
+    (Nat.le_trans (can 0 (Nat.le_refl 0) Nat.one_pos (calls 0)).2 (cap_le_one 0 g)))
+
+/-- The user needs some copy's giving. -/
+theorem needs_some :
+    NeedsSomePart (Flow.FedOnlyWithin web cap [()] (· ∈ [1, 2, 3]) 0 1)
+      (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web)) 0
+      (· ∈ [1, 2, 3]) :=
+  Flow.needsSome_within web cap [()] (· ∈ [1, 2, 3]) 0 1 0
+
+/-- **The user needs no copy's giving**: without any one, the other two can give together the two
+units each step demands. -/
+theorem none_needed {g : Nat} (member : g ∈ [1, 2, 3]) :
+    ¬ NeedsPart (Flow.FedOnlyWithin web cap [()] (· ∈ [1, 2, 3]) 0 1)
+      (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+      0 g :=
+  fun needs => match (Flow.needs_giver_iff_short distinct (List.Mem.head []) apart user_outside
+      (fun _ _ _ => trivial) Nat.one_pos).mp needs with
+  | ⟨t, _, _, short⟩ => Nat.lt_irrefl 2 (Eq.subst (motive := fun d => 2 < d) (demand_two t)
+      (Eq.subst (motive := fun w => w < web.demand [()] t) (without_two member t) short))
+
+end SharedCopies
 
 /-! ## What self-concern alone ranks -/
 
