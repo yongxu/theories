@@ -81,6 +81,7 @@ Invariance of description and dominance (Tversky and Kahneman 1986): dominance i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T094249.727687Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T110057.158396Z/verification.json) | — |
 
 Aliases: `a narrowing above its widening`, `缩小排在其扩大之上`, `Becoming.Weighting.narrower_above_net`, `Becoming.Weighting.reads_ranksNet`, `Becoming.Weighting.reads_increment`
 

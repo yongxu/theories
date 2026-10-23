@@ -242,6 +242,13 @@ order every standpoint shares when each weighs what can form in its own way.
   consumer drawing at every step from `T` has, after every step `N`, some member giving within the
   next `stock N + 1` steps (`Flow.needsSome_without_end`). In `FeedersInTurn` a flow is possible,
   so the user's need of both copies is not vacuous (`FeedersInTurn.possible`).
+* **Need in degree from the stores.** With capacities read off the feeders' own stores the degree
+  law holds as well: every flow from the stores in which the consumer draws past the stock has a
+  member giving at least the sum of its shortfalls under the stores' falls, and where it can give
+  each, the graded flow from the stores (`Flow.gradedStoreDrawn`), in which each member also takes
+  its store's fall, has it give exactly that (`Flow.least_giving_from_stores`). In `OwnStores` the
+  user needs the first feeder in degree two and the second in degree zero
+  (`OwnStores.first_in_degree`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -3687,6 +3694,212 @@ theorem needsSome_without_end (W : Web F C) (cs : List C) (K : F → Prop) (T : 
 
 end Flow
 
+/-! ## Need in degree with capacities read off the stores -/
+
+namespace Flow
+
+variable {C : Type}
+
+/-- Across a stretch, the graded flow from the stores: the shared flow under the capacities read
+off the stores with `g`'s set to its shortfall, in which each member also takes from its own store
+what the store falls. -/
+def gradedStoreDrawn [DecidableEq F] [DecidableEq C] (W : Web F C)
+    [∀ t x, Decidable (W.active t x)] (store : F → C) (cs : List C) (c₀ : C) (ks : List F)
+    (T n : Nat) (f g : F) : Flow F C :=
+  { gradedDrawn W (W.storeFall store) cs c₀ ks T n f g with
+    take := (storeDrawn W store cs c₀ ks T n f g).take }
+
+section GradedStored
+
+variable [DecidableEq F] [DecidableEq C] {W : Web F C} [∀ t x, Decidable (W.active t x)]
+  {store : F → C} {cs : List C} {c₀ : C} {ks : List F} {T n : Nat} {f g : F}
+
+/-- What gives in the graded flow from the stores gives to the family and is an active member
+other than `f`. -/
+theorem gradedStoreDrawn_gives {t : Nat} {x : F} {c : C}
+    (gives : 0 < (gradedStoreDrawn W store cs c₀ ks T n f g).give t x c) :
+    c ∈ cs ∧ x ∈ ks ∧ W.active t x ∧ x ≠ f :=
+  sharedDrawn_gives (W := W) (cap := W.shortCapacity (W.storeFall store) cs ks g) (cs := cs)
+    (c₀ := c₀) (ks := ks) (T := T) (n := n) (f := f) (g := f) gives
+
+/-- The graded flow from the stores balances on the family at every step of the stretch, where
+`g`, a member, can give its shortfall under the stores' falls, `f` is not a member and no store is
+in the family. -/
+theorem gradedStoreDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ cs)
+    (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (able : ∀ t, T ≤ t → t < T + n →
+      W.shortfall (W.storeFall store) cs ks g t ≤ W.otherCapacity (W.storeFall store) f t g) :
+    ∀ t, T ≤ t → t < T + n → (gradedStoreDrawn W store cs c₀ ks T n f g).BalancesOn W cs t := by
+  intro t from_ to c inFamily
+  have present : (gradedStoreDrawn W store cs c₀ ks T n f g).present t = f :: ks :=
+    if_pos ⟨from_, to⟩
+  have takeSelf : (gradedStoreDrawn W store cs c₀ ks T n f g).take t f c =
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c := if_pos ⟨rfl, ⟨c, inFamily, rfl⟩⟩
+  have takeOthers :
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x c) = 0 :=
+    total_eq_zero fun x inks =>
+      (if_neg fun both => outside (Eq.subst (motive := fun y => y ∈ ks) both.1 inks)).trans
+        (if_neg fun both => separate x inks (Eq.subst (motive := fun y => y ∈ cs) both.2 inFamily))
+  have giveSelf : (gradedStoreDrawn W store cs c₀ ks T n f g).give t f c = 0 :=
+    eq_zero_of_not_pos fun pos => outside (gradedStoreDrawn_gives pos).2.1
+  have giveOthers :
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).give t x c) =
+        rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
+    sharedDrawn_given_members (W := W) (cap := W.shortCapacity (W.storeFall store) cs ks g)
+      (T := T) (n := n) (f := f) (g := f) distinct inside apart
+      (Nat.le_trans (covered_by_excess (W.demand cs t) (W.capacityWithout (W.storeFall store) ks g t))
+        (Nat.le_of_eq (capacityWithout_short apart outside member (able t from_ to)).symm)) inFamily
+  show W.level (t + 1) c + total ((gradedStoreDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x c) =
+    W.level t c + total ((gradedStoreDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).give t x c)
+  rw [present]
+  show W.level (t + 1) c + ((gradedStoreDrawn W store cs c₀ ks T n f g).take t f c +
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x c)) =
+    W.level t c + ((gradedStoreDrawn W store cs c₀ ks T n f g).give t f c +
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).give t x c))
+  rw [takeSelf, takeOthers, giveSelf, giveOthers]
+  exact (congrArg (W.level (t + 1) c + ·) (Nat.add_zero _)).trans ((Nat.add_assoc _ _ _).symm.trans
+    ((congrArg (· + W.drawnUnit cs c₀ t c) (across (fun s => W.level s c) t)).trans
+      ((Nat.add_assoc _ _ _).trans (congrArg (W.level t c + ·) (Nat.zero_add _).symm))))
+
+/-- Each member's store balances in the graded flow from the stores, where the store does not
+rise across the step. -/
+theorem gradedStoreDrawn_balances_store (apart : Distinct ks) (outside : ¬ f ∈ ks)
+    (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs) {t : Nat} (from_ : T ≤ t) (to : t < T + n)
+    {h : F} (member : h ∈ ks) (steady : ¬ W.Rises t (store h)) :
+    (gradedStoreDrawn W store cs c₀ ks T n f g).BalancesOn W [store h] t := by
+  intro c mem
+  have same : c = store h := match mem_cons_cases mem with
+    | .inl same => same
+    | .inr empty => nomatch empty
+  subst same
+  have present : (gradedStoreDrawn W store cs c₀ ks T n f g).present t = f :: ks :=
+    if_pos ⟨from_, to⟩
+  have given : (gradedStoreDrawn W store cs c₀ ks T n f g).given t (store h) = 0 :=
+    total_eq_zero fun _ _ => eq_zero_of_not_pos fun pos =>
+      separate h member (gradedStoreDrawn_gives pos).1
+  have takeSelf : (gradedStoreDrawn W store cs c₀ ks T n f g).take t f (store h) = 0 :=
+    (if_neg fun both => match both.2 with
+      | ⟨_, dIn, same⟩ => separate h member (Eq.subst (motive := fun y => y ∈ cs) same dIn)).trans
+      (if_neg fun both => match both.1 with
+        | ⟨_, mem', same⟩ => outside (Eq.subst (motive := fun y => y ∈ ks) same mem'))
+  have takenOthers :
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x (store h)) =
+        W.storeFall store t h :=
+    storeDrawn_taken_store (W := W) (cs := cs) (c₀ := c₀) (T := T) (n := n) (f := f) (g := g)
+      apart outside own separate member
+  have flat : rise (fun s => W.level s (store h)) t = 0 :=
+    eq_zero_of_not_pos fun pos => steady (excess_pos.mp pos)
+  show W.level (t + 1) (store h) + total ((gradedStoreDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x (store h)) =
+    W.level t (store h) + (gradedStoreDrawn W store cs c₀ ks T n f g).given t (store h)
+  rw [present, given]
+  show W.level (t + 1) (store h) + ((gradedStoreDrawn W store cs c₀ ks T n f g).take t f (store h) +
+      total ks (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x (store h))) =
+    W.level t (store h) + 0
+  rw [takeSelf, takenOthers]
+  exact (congrArg (W.level (t + 1) (store h) + ·) (Nat.zero_add _)).trans
+    ((across (fun s => W.level s (store h)) t).trans (congrArg (W.level t (store h) + ·) flat))
+
+/-- **The graded flow from the stores is a flow of the family fed from its feeders' own stores**,
+where `g`, a member, can give its shortfall at every step of the stretch, `f` is not a member, the
+stores are the members' own and not in the family, and no store rises within the stretch. -/
+theorem gradedStoreDrawn_fedFromStores (distinct : Distinct cs) (inside : c₀ ∈ cs)
+    (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (steady : ∀ t, T ≤ t → t < T + n → ∀ h, h ∈ ks → ¬ W.Rises t (store h))
+    (able : ∀ t, T ≤ t → t < T + n →
+      W.shortfall (W.storeFall store) cs ks g t ≤ W.otherCapacity (W.storeFall store) f t g) :
+    FedFromStores W store cs ks T n (gradedStoreDrawn W store cs c₀ ks T n f g) :=
+  ⟨⟨gradedStoreDrawn_balancesOn distinct inside apart outside member separate able,
+    fun _ _ _ _ gives => (gradedStoreDrawn_gives gives).2.2.1,
+    fun _ _ _ _ _ gives => (gradedStoreDrawn_gives gives).2.1⟩,
+   fun t from_ to =>
+    have present : (gradedStoreDrawn W store cs c₀ ks T n f g).present t = f :: ks :=
+      if_pos ⟨from_, to⟩
+    ⟨Eq.subst (motive := fun l => Distinct l) present.symm ⟨outside, apart⟩, fun h inks =>
+      ⟨gradedStoreDrawn_balances_store apart outside own separate from_ to inks
+          (steady t from_ to h inks),
+       total_eq_zero fun _ _ => eq_zero_of_not_pos fun pos =>
+         separate h inks (gradedStoreDrawn_gives pos).1,
+       fun _ => Nat.le_trans (sharedDrawn_given_le (W := W)
+           (cap := W.shortCapacity (W.storeFall store) cs ks g) (c₀ := c₀) (T := T) (n := n)
+           (f := f) (g := f) distinct apart t h)
+         (Nat.le_trans (Web.otherCapacity_le (W.shortCapacity (W.storeFall store) cs ks g) f t h)
+           (Nat.le_trans (shortCapacity_le (able t from_ to) h)
+             (Nat.le_of_eq ((if_pos ⟨⟨h, inks, rfl⟩, rfl⟩).symm.trans
+               (if_neg fun both => outside
+                 (Eq.subst (motive := fun y => y ∈ ks) both.1 inks)).symm))))⟩⟩⟩
+
+/-- In the graded flow from the stores `f` draws past the family's stock, where it is active
+across a stretch longer than the stock and the family holds `c₀`. -/
+theorem gradedStoreDrawn_drawsPast (inside : c₀ ∈ cs)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    DrawsPast cs T n (gradedStoreDrawn W store cs c₀ ks T n f g, W) f :=
+  ⟨below, fun t from_ to =>
+    have present : (gradedStoreDrawn W store cs c₀ ks T n f g).present t = f :: ks :=
+      if_pos ⟨from_, to⟩
+    ⟨alive t from_ to, Eq.subst (motive := fun l => f ∈ l) present.symm (.head _),
+     match W.decSomeFalls cs t with
+     | isTrue ⟨c, mem, falls⟩ =>
+       total_pos_of_mem (q := (gradedStoreDrawn W store cs c₀ ks T n f g).take t f) mem
+        (Nat.lt_of_lt_of_le (excess_pos.mpr falls) (Nat.le_trans (Nat.le_add_right _ _)
+          (Nat.le_of_eq (if_pos ⟨rfl, ⟨c, mem, rfl⟩⟩).symm)))
+     | isFalse steady =>
+       total_pos_of_mem (q := (gradedStoreDrawn W store cs c₀ ks T n f g).take t f) inside
+        (Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_trans (Nat.le_add_left _ _)
+          (Nat.le_trans (Nat.le_of_eq (congrArg (fall (fun s => W.level s c₀) t + ·)
+            (if_pos ⟨rfl, steady⟩)).symm)
+            (Nat.le_of_eq (if_pos ⟨rfl, ⟨c₀, inside, rfl⟩⟩).symm))))⟩⟩
+
+/-- In the graded flow from the stores `g` gives at each step of the stretch at most its
+shortfall under the stores' falls. -/
+theorem gradedStoreDrawn_givenFrom_le (distinct : Distinct cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks) (member : g ∈ ks) {t : Nat} (from_ : T ≤ t) (to : t < T + n) :
+    (gradedStoreDrawn W store cs c₀ ks T n f g).givenFrom cs t g ≤
+      W.shortfall (W.storeFall store) cs ks g t :=
+  gradedDrawn_givenFrom_le (W := W) (cap := W.storeFall store) (c₀ := c₀) (T := T) (n := n)
+    (f := f) (g := g) distinct apart outside member from_ to
+
+end GradedStored
+
+/-- **With capacities read off the stores, the least a feeder gives is the sum of its
+shortfalls.** Over the flows of a family fed from its feeders' own stores, with the premises of the
+store law, every flow in which `f` draws past the stock has a member `g` giving across the stretch
+at least the sum of its shortfalls under the stores' falls; where `g` can give each of them, some
+such flow has it give exactly that. -/
+theorem least_giving_from_stores [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {store : F → C} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (member : g ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (steady : ∀ t, T ≤ t → t < T + n → ∀ h, h ∈ ks → ¬ W.Rises t (store h)) :
+    (∀ L, FedFromStores W store cs ks T n L → DrawsPast cs T n (L, W) f →
+      total (steps T n) (W.shortfall (W.storeFall store) cs ks g) ≤
+        total (steps T n) fun t => L.givenFrom cs t g) ∧
+    ((∀ t, T ≤ t → t < T + n →
+        W.shortfall (W.storeFall store) cs ks g t ≤ W.otherCapacity (W.storeFall store) f t g) →
+      ∃ L, FedFromStores W store cs ks T n L ∧ DrawsPast cs T n (L, W) f ∧
+        total (steps T n) (fun t => L.givenFrom cs t g) =
+          total (steps T n) (W.shortfall (W.storeFall store) cs ks g)) :=
+  ⟨fun _ fed draws => shortfalls_le_given (fedFromStores_within fed) draws,
+   fun able =>
+    have fed := gradedStoreDrawn_fedFromStores (c₀ := c₀) distinct inside apart outside member own
+      separate steady able
+    have draws : DrawsPast cs T n (gradedStoreDrawn W store cs c₀ ks T n f g, W) f :=
+      gradedStoreDrawn_drawsPast inside alive below
+    ⟨gradedStoreDrawn W store cs c₀ ks T n f g, fed, draws, Nat.le_antisymm
+      (Amounts.total_steps_le T n fun _ from_ to =>
+        gradedStoreDrawn_givenFrom_le distinct apart outside member from_ to)
+      (shortfalls_le_given (fedFromStores_within fed) draws)⟩⟩
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -4341,6 +4554,32 @@ theorem possible :
    Flow.drawnAcross_drawsPast (List.Mem.head []) (fun _ _ _ => rfl) (Nat.succ_pos 1)⟩
 
 end FeedersInTurn
+
+namespace OwnStores
+
+/-- **The user needs the first feeder in degree two and the second in degree zero.** Every flow
+from the stores in which the user draws past the stock has the first feeder give at least two
+units across the stretch, the units the second's empty store cannot give at steps 1 and 2, and
+some such flow has it give exactly two; the second's shortfalls total zero. -/
+theorem first_in_degree :
+    (∀ L, Flow.FedFromStores web store [0] [1, 2] 0 3 L → Flow.DrawsPast [0] 0 3 (L, web) 0 →
+      2 ≤ total (steps 0 3) fun t => L.givenFrom [0] t 1) ∧
+    (∃ L, Flow.FedFromStores web store [0] [1, 2] 0 3 L ∧ Flow.DrawsPast [0] 0 3 (L, web) 0 ∧
+      total (steps 0 3) (fun t => L.givenFrom [0] t 1) = 2) ∧
+    total (steps 0 3) (web.shortfall (web.storeFall store) [0] [1, 2] 2) = 0 :=
+  match Flow.least_giving_from_stores (g := 1) distinct (List.Mem.head []) apart user_outside
+      (.head _) (fun _ _ _ => trivial) (Nat.zero_lt_succ 2) own separate steady with
+  | ⟨low, attain⟩ =>
+    ⟨fun L fed draws => Nat.le_trans (by decide) (low L fed draws),
+     match attain (fun t _ to => match t, to with
+       | 0, _ => by decide
+       | 1, _ => by decide
+       | 2, _ => by decide
+       | _ + 3, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 3 _))) with
+     | ⟨L, fed, draws, exact⟩ => ⟨L, fed, draws, exact.trans (by decide)⟩,
+     by decide⟩
+
+end OwnStores
 
 /-! ## What self-concern alone ranks -/
 

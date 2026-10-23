@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-23T10:25:21+00:00",
+  "reviewed_at_utc": "2026-10-23T11:04:10+00:00",
   "statement": {
     "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures; on the base, a consumer needs a feeder exactly where the others could not together give what a step demands, and drawing past a hierarchy fed from above needs giving into its top.",
     "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；在基底上，消耗者恰在其余者合起来给不出某步需求之处需要某供给者的给予，而汲取超出只从上方供给的层级，需要向其顶层的给予。"
@@ -363,6 +363,21 @@
         "Becoming.FeedersInTurn.turn",
         "Becoming.FeedersInTurn.possible"
       ]
+    },
+    {
+      "en": "With capacities read off the feeders' own stores, under the store law's premises, every flow from the stores in which the consumer draws past the stock has a member giving at least the sum of its shortfalls under the stores' falls, and where it can give each some such flow has it give exactly that. Witness OwnStores: the first feeder needed in degree two, the second in degree zero.",
+      "zh": "以从供给者自身库存读出的容量，在库存之律的前提下，消耗者汲取超出存量的每个库存之流都使某成员至少给出其在库存下降量下的缺额之和；它能给出每个缺额时，某个这样的流使它恰好给出这么多。见证 OwnStores：第一个供给者被需要的程度为二，第二个为零。",
+      "declarations": [
+        "Becoming.Flow.gradedStoreDrawn",
+        "Becoming.Flow.gradedStoreDrawn_gives",
+        "Becoming.Flow.gradedStoreDrawn_balancesOn",
+        "Becoming.Flow.gradedStoreDrawn_balances_store",
+        "Becoming.Flow.gradedStoreDrawn_fedFromStores",
+        "Becoming.Flow.gradedStoreDrawn_drawsPast",
+        "Becoming.Flow.gradedStoreDrawn_givenFrom_le",
+        "Becoming.Flow.least_giving_from_stores",
+        "Becoming.OwnStores.first_in_degree"
+      ]
     }
   ],
   "hypotheses": [
@@ -512,6 +527,13 @@
         "en": "FeedersInTurn.possible: the flow drawn across the two steps with the copy active at each giving lets the user draw past the stock, so the user's need of both copies (FeedersInTurn.needs_both) is not vacuous.",
         "zh": "FeedersInTurn.possible：以每步活跃的副本给予而画过两步的流使使用者汲取超出存量，所以使用者对两个副本的需要（FeedersInTurn.needs_both）不是空真的。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "OwnStores in degree: every flow from the stores in which the user draws past the stock has the first feeder give at least two units, the units the second's empty store cannot give at steps 1 and 2, some has it give exactly two, and the second's degree is zero (OwnStores.first_in_degree).",
+        "zh": "OwnStores 的程度：使用者汲取超出存量的每个库存之流都使第一个供给者至少给两个单位，即第二个的空库存在第 1、2 步给不出的单位，某个流使它恰好给两个，第二个的程度为零（OwnStores.first_in_degree）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -523,12 +545,12 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T102240.429642Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378 and 382 to 386; reviewed against the Lean by a reader that did not write it, a separate AI agent, whose findings are fixed in study section 387.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T102240.429642Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386 节；另由一个非作者的读者（另一个 AI 代理）对照 Lean 审查，其发现在研究第 387 节修正。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T110057.158396Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 386 and 388; reviewed against the Lean by a reader that did not write it, a separate AI agent, whose findings are fixed in study section 387.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T110057.158396Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386 与 388 节；另由一个非作者的读者（另一个 AI 代理）对照 Lean 审查，其发现在研究第 387 节修正。"
   },
   "next_delta": {
-    "en": "Capacities across a hierarchy whose upper tier divides its giving among several stores; the degree of need with capacities read off stores.",
-    "zh": "上层把给予分给多个库存的层级中的容量；以从库存读出的容量计的被需要程度。"
+    "en": "Capacities across a hierarchy whose upper tier divides its giving among several stores, with the stores' rises to cover as well.",
+    "zh": "上层把给予分给多个库存、并须补足库存上升的层级中的容量。"
   },
   "correspondence": {
     "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting where the others could together give what a feeder gives. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
@@ -710,6 +732,13 @@
         "Becoming.Flow.gradedDrawn",
         "Becoming.Flow.gradedDrawn_fedOnlyWithin",
         "Becoming.Flow.gradedDrawn_givenFrom_le",
+        "Becoming.Flow.gradedStoreDrawn",
+        "Becoming.Flow.gradedStoreDrawn_balancesOn",
+        "Becoming.Flow.gradedStoreDrawn_balances_store",
+        "Becoming.Flow.gradedStoreDrawn_drawsPast",
+        "Becoming.Flow.gradedStoreDrawn_fedFromStores",
+        "Becoming.Flow.gradedStoreDrawn_givenFrom_le",
+        "Becoming.Flow.gradedStoreDrawn_gives",
         "Becoming.Flow.leastDrawn",
         "Becoming.Flow.leastDrawn_acting",
         "Becoming.Flow.leastDrawn_balancesOn",
@@ -718,6 +747,7 @@
         "Becoming.Flow.leastDrawn_given_total",
         "Becoming.Flow.leastDrawn_gives",
         "Becoming.Flow.least_giving",
+        "Becoming.Flow.least_giving_from_stores",
         "Becoming.Flow.least_giving_of_possible",
         "Becoming.Flow.needsSome_of_drawsPast",
         "Becoming.Flow.needsSome_on",
@@ -780,6 +810,7 @@
         "Becoming.OwnStores.apart",
         "Becoming.OwnStores.decActive",
         "Becoming.OwnStores.distinct",
+        "Becoming.OwnStores.first_in_degree",
         "Becoming.OwnStores.first_steady",
         "Becoming.OwnStores.level",
         "Becoming.OwnStores.needs_first",
@@ -862,17 +893,17 @@
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "389e721489700828c87e695702448f55ea7ebbf186d6a55c9f346e07d2c6154d"
+      "sha256": "92aba301167babec8ef659009b58f1de1d689f37fe16f042b51959d7ace8fb0e"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T110057.158396Z/verification.json",
       "role": "receipt",
-      "sha256": "593ae19587ba22d782f219d409919498f8632094d30ecf0a5177cdac8160649e"
+      "sha256": "a037908f10796011d1955545f51336403e2ff32d352de4e8063d44e57f06959f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "99ffcc88f8b0dcbb775f8a494aa1f66fac69fdc427864d227621eec90055ef7f"
+      "sha256": "6027ec6f85cc7a81f90441d3965309b11738c4a24cfc7995e6f58dbec8e1d69d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -882,17 +913,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "95babf3a2361f00c66e7c317a710c1868a6543b0b3744dc44df847c285d9754e"
+      "sha256": "e1852f4d3a2e9ed97f2b2782b413e2584daa34f709041c0a003a2689829aa837"
     },
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "c0e9761bce2c0e30494a75bd991498ccf4800244f3ad1e8044bab8aaf4c29330"
+      "sha256": "8fafc90c90b97d7bc6d50f0c4ef0f6a3c1ce405217b92fef64ddf1207e55662e"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "5e29ac4cf22beff519730f1a112425dd45dd231eb65308f5c103e1f13af7773e"
+      "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -903,7 +934,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T110057.158396Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -941,6 +972,10 @@
     {
       "en": "23 October 2026: corrected and extended (IV3h) after an independent review against the Lean: the statement now says \"what a step demands\", not \"what is drawn\", and states need, not reach; the base copies law states its premise; \"no other member is active\", not \"the only one active\"; the degree where a flow is possible; the possibility law and giving without end added; the boundary on giving without end replaced; study section 387.",
       "zh": "2026年10月23日：经对照 Lean 的独立审查后修正并扩展（IV3h）：陈述改为“某步的需求”而非“所汲取者”，并陈述“所需”而非“达到”；基底副本之律写明其前提；“没有其他成员活跃”而非“唯一活跃者”；程度限于有可能的流之处；增加可能性之律与无尽的给予；替换关于无尽给予的边界；研究第 387 节。"
+    },
+    {
+      "en": "23 October 2026: extended (IV3i): need in degree with capacities read off the stores, by the graded flow from the stores; the OwnStores degree witness; study section 388.",
+      "zh": "2026年10月23日：扩展（IV3i）：以从库存读出的容量计的被需要程度，借由库存的分级之流；OwnStores 的程度见证；研究第 388 节。"
     }
   ]
 }

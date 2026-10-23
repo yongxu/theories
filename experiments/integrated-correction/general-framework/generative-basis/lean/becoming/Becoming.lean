@@ -2072,7 +2072,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   elsewhere every need holds vacuously (`Flow.possible_iff_covers`); wherever a flow is possible, a
   feeder's degree of need, the least it gives while the consumer draws past the stock, is the sum of
   what each step demands beyond what the others can give (`Flow.least_giving_of_possible`;
-  `Capacities.second_in_degree`). The readings are the AI's (D59, D60, D64).
+  `Capacities.second_in_degree`), and so it is with capacities read off the feeders' own stores
+  (`Flow.least_giving_from_stores`; `OwnStores.first_in_degree`). The readings are the AI's (D59, D60,
+  D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

@@ -1,11 +1,11 @@
 {
- "commit": "b6d6244d4f10f5c85a96197c02ca42aaa8a11973",
+ "commit": "40a433e1c5935cff7d7bcd7892b518c39270a8d0",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T094249.727687Z",
+ "core_receipt_at_commit": "20261023T102240.429642Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 316,
- "constants": 43181,
- "spine_theorems": 14378,
+ "constants": 43198,
+ "spine_theorems": 14386,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,7 +28,7 @@
  "classes": {
   "statement on both families": 1056,
   "statement on Process/Frame/Run/Trace": 2953,
-  "statement on World/Flow/Web": 3463,
+  "statement on World/Flow/Web": 3471,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 181,
   "used by a theorem on the base": 5180,
@@ -40,14 +40,14 @@
  "apart_general_structure_by_design": 471,
  "apart_otherwise": 660,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 87,
-  "of them on the base": 69,
+  "spine theorems that are pure forwarders": 89,
+  "of them on the base": 71,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 12,
    "instance on the base recorded": 11,
    "statement on both families": 1,
    "used by a theorem on the base": 32,
-   "statement on World/Flow/Web": 10,
+   "statement on World/Flow/Web": 12,
    "statement on the base only through a law of its own module": 1
   }
  },
@@ -160,7 +160,7 @@
  "apart_by_module": {
   "Becoming.Weightings": [
    97,
-   316
+   324
   ],
   "Becoming.Reproduction": [
    80,
@@ -670,12 +670,12 @@
  "rings": {
   "core": {
    "modules": 300,
-   "theorems": 13618,
+   "theorems": 13626,
    "apart": 1037,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2742,
-    "statement on World/Flow/Web": 3438,
+    "statement on World/Flow/Web": 3446,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 170,
     "used by a theorem on the base": 4821,
@@ -12017,6 +12017,13 @@
   "Becoming.Flow.possible_iff_covers": "statement on World/Flow/Web",
   "Becoming.Flow.least_giving_of_possible": "statement on World/Flow/Web",
   "Becoming.Flow.needsSome_without_end": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_gives": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_balancesOn": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_balances_store": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_fedFromStores": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_drawsPast": "statement on World/Flow/Web",
+  "Becoming.Flow.gradedStoreDrawn_givenFrom_le": "statement on World/Flow/Web",
+  "Becoming.Flow.least_giving_from_stores": "statement on World/Flow/Web",
   "Becoming.Feeders.mem_pair": "used by a theorem on the base",
   "Becoming.Feeders.fedOnlyBy_withFirst": "statement on World/Flow/Web",
   "Becoming.Feeders.fedOnlyBy_withSecond": "statement on World/Flow/Web",
@@ -12068,6 +12075,7 @@
   "Becoming.Capacities.copies_apart": "used by a theorem on the base",
   "Becoming.Capacities.second_in_degree": "statement on World/Flow/Web",
   "Becoming.FeedersInTurn.possible": "statement on World/Flow/Web",
+  "Becoming.OwnStores.first_in_degree": "statement on World/Flow/Web",
   "Becoming.Weighting.increasingInOwn_of_increasing": "apart: own vocabulary",
   "Becoming.Weighting.increasingInOwn_iff_increasing": "apart: own vocabulary",
   "Becoming.Weighting.widensOwn_iff_every_increasingInOwn": "used by a theorem on the base",

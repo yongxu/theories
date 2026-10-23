@@ -84,6 +84,7 @@ Standing and status are Kagan's and Sebo's distinction (How to Count Animals, mo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T094249.727687Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T102240.429642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T110057.158396Z/verification.json) | — |
 
 Aliases: `graded significance and priority`, `分级的意义与优先`, `standing and status`, `prioritarianism on levels`, `sufficiency as a scope denial`, `Becoming.Weighting.prior_transfer`, `Becoming.Weighting.prior_lt_of_widens`, `Becoming.Weighting.ranks_alike_of_gradeInvariant`
 
