@@ -39,3 +39,13 @@ The owners decide. If the word stays, the glossary entry should at least carry t
 2. **Chapter 7 (the IV3 line's owner).** Thesis line and §1: state the same order (the structural reading first, SD1 as a fact about the free parameter), and tie the definition of `sig` to §1's own region, or say that it is untied.
 3. **GS2's owner.** State the condition on `«续»` as inclusion in what a line under a class continues with, with no separate significance formalism. Then `Unrestricted` is the instance where the class is the whole, and the board question "what it is for a line relative to a class to have significance" becomes "what lies within a line's continuing under a class".
 4. **Glossary.** The significance row gains the de se reading, or the name of §5.
+
+## 7. 道法自然
+
+The theory already holds the criterion this reading meets. [Chapter 6](../../../../../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict) reads 道法自然 as taking a model that stops at what is so of itself, with no commander outside it. [Chapter 7 §1](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) says no position outside the unfolding owns value. The method allows no formal variable that carries an independent layer. A significance supplied as a free predicate is a standard from outside, and it fails all three. Read as what lies within a center's own continuing (§3), it meets them: the standard is the unfolding's own relations.
+
+Two limits keep this from overreaching:
+- 自然 is not "whatever happens is good". Degeneration, ending and loss are so of themselves as much as generation is. So 道法自然 fixes where a standard may come from, not which course is better. C still alone orders, and 生生不息 (which OPENING sets beside 道法自然) is the direction C names, not a consequence of 自然.
+- What is so of itself does not settle which relation a self continues along (§4). The step stays argued. 道法自然 counts against a narrower relation only as far as that relation is a model put over the unfolding from outside it, and whether some narrower relation is the self's own is exactly the open question.
+
+For the work itself, the same reading applies: the change moves through the pages' owners, by the handovers in §6, and is not forced over their uncommitted edits.
