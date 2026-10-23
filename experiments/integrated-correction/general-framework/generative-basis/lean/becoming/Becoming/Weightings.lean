@@ -160,6 +160,25 @@ order every standpoint shares when each weighs what can form in its own way.
   stretch calling for giving, that member is the only one active (`Flow.needs_giver_iff_alone`).
   On `Feeders`' web neither copy is needed (`Feeders.two_feeders_on`); in `FeedersInTurn`, two
   copies active in turn, both are (`FeedersInTurn.needs_both`).
+* **Capacities of giving.** Supply with the web what each formation can give the family at each
+  step (a capacity; the base web has none), and read the possible flows off the two: those read off
+  the web in which the formations taking part at each step of the stretch are distinct and each
+  gives the family at most its capacity (`Flow.FedOnlyWithin`). A step's demand is what its
+  conditions rise, and one more where none falls (`Web.demand`); it is positive exactly where the
+  step calls for giving (`Web.callsForGiving_iff_demand_pos`), every balanced flow in which a
+  consumer takes from the family gives the family at least that much
+  (`Flow.demand_le_replenishment`), and the least flow, with one giver, gives exactly that
+  (`Flow.leastDrawn`, `Flow.leastDrawn_given_total`). So a member can feed the family alone exactly
+  where, at every step calling for giving, it is active and its capacity covers the demand
+  (`Web.CanFeedAlone`, `Flow.feedsAlone_iff`, `Flow.partAlone_within_iff`), and where every member
+  can, the copies law holds (`Flow.needs_giver_iff_only_within`). A feeder is needed where, at some
+  step, the capacities of the other members active there total less than the demand
+  (`Flow.needs_giver_of_short`). In `Capacities` two copies are active throughout and each step
+  demands two units: with capacities one and two the second can feed alone and is needed, the first
+  cannot and is not (`Capacities.second_alone_first_not`, `Capacities.needs_second`,
+  `Capacities.not_needs_first`); with one each, neither can feed alone, both giving feed the
+  condition, and the user needs both (`Capacities.neither_alone`, `Capacities.jointly_feeds`,
+  `Capacities.needs_both`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -216,7 +235,9 @@ or what it needs. Then where the centers depend on one another along it, the de 
 decides nothing within their common closure, since each center's own closure is that closure,
 and the step of invariance has work only beyond it. Drawn along need, self-concern reaches a copy
 of what it needs only where the copy is the only one, so with many copies the presupposition
-reaches the class and none of them, and with one it reaches that one. Read an order increasing in
+reaches the class and none of them, and with one it reaches that one. A copy counts only where it
+can give alone what the steps demand: copies that can each give only part of it are each needed,
+so redundancy is a matter of capacity, not of number. Read an order increasing in
 its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
@@ -248,8 +269,9 @@ sets of a case, whether its sign measured apart is the sign of the joint increme
 dispersed its weights are, each measurable and none derived; that the impartial order is what
 every standpoint shares rather than one privileged weighting; which formations are centers; the
 step of invariance itself; which relation a continuation is carried along, whether actual centers
-depend on one another, which webs actual families have, the decision of activity and identity
-the exact law of need uses, and that a standpoint's order is increasing in its own continuation.
+depend on one another, which webs actual families have and what each formation can give at a step
+(the capacities are supplied with the web), the decision of activity and identity the exact law of
+need uses, and that a standpoint's order is increasing in its own continuation.
 The representation commits to finite listings of steps and formations, two-valued admission and
 natural-number weights. No ethical predicate or axiom occurs.
 -/
@@ -2051,6 +2073,401 @@ theorem needs_giver_iff_alone [DecidableEq F] {W : Web F C} [∀ t x, Decidable 
 
 end Flow
 
+
+/-! ## Capacities of giving, and which feeders can feed a family alone -/
+
+/-- Whether some member of a list is a given element is decidable, with decided identity. -/
+instance decSomeEq {α : Type} [DecidableEq α] (l : List α) (a : α) :
+    Decidable (∃ y, y ∈ l ∧ y = a) :=
+  decideSome (p := fun y => y = a) l
+
+namespace Web
+
+variable {C : Type} (W : Web F C)
+
+instance decSomeFalls (cs : List C) (t : Nat) : Decidable (∃ c, c ∈ cs ∧ W.Falls t c) :=
+  decideSome (p := fun c => W.Falls t c)
+    (decide := fun c => Nat.decLt (W.level (t + 1) c) (W.level t c)) cs
+
+/-- What the step from `t` calls to be given to the family while a consumer draws on it: what
+its conditions rise, and one more where none falls. -/
+def demand (cs : List C) (t : Nat) : Nat :=
+  risen cs (fun c s => W.level s c) t + if ¬ ∃ c, c ∈ cs ∧ W.Falls t c then 1 else 0
+
+/-- The unit a consumer takes from `c₀` beyond the falls, where no condition of the family
+falls. -/
+def drawnUnit [DecidableEq C] (cs : List C) (c₀ : C) (t : Nat) (c : C) : Nat :=
+  if c = c₀ ∧ ¬ ∃ d, d ∈ cs ∧ W.Falls t d then 1 else 0
+
+/-- `g` can feed the family alone across a stretch, with the capacities `cap`: at every step of
+it calling for giving, `g` is active and its capacity covers the step's demand. -/
+def CanFeedAlone (cap : Nat → F → Nat) (cs : List C) (T n : Nat) (g : F) : Prop :=
+  ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t g ∧ W.demand cs t ≤ cap t g
+
+variable {W}
+
+/-- **A step calls for giving exactly where its demand is positive.** -/
+theorem callsForGiving_iff_demand_pos {cs : List C} {t : Nat} :
+    W.CallsForGiving cs t ↔ 0 < W.demand cs t :=
+  ⟨fun calls => match calls with
+    | .inl ⟨c, inside, rises⟩ => Nat.lt_of_lt_of_le
+        (total_pos_of_mem (q := fun c => rise (fun s => W.level s c) t) inside (excess_pos.mpr rises))
+        (Nat.le_add_right _ _)
+    | .inr steady => Nat.lt_of_lt_of_le (Nat.succ_pos 0)
+        (Nat.le_trans (Nat.le_of_eq (if_pos steady).symm) (Nat.le_add_left _ _)),
+   fun pos => match Nat.decEq (risen cs (fun c s => W.level s c) t) 0 with
+    | isFalse moved => match total_pos cs (Nat.pos_of_ne_zero moved) with
+      | ⟨c, inside, up⟩ => .inl ⟨c, inside, excess_pos.mp up⟩
+    | isTrue still => match W.decSomeFalls cs t with
+      | isFalse steady => .inr steady
+      | isTrue falls => absurd pos (by
+          show ¬ 0 < risen cs (fun c s => W.level s c) t +
+            (if ¬ ∃ c, c ∈ cs ∧ W.Falls t c then 1 else 0)
+          rw [still, if_neg (fun steady => steady falls)]
+          exact Nat.lt_irrefl 0)⟩
+
+/-- Over a family without repetition holding `c₀`, the units drawn beyond the falls total one
+where no condition falls and nothing otherwise. -/
+theorem total_drawnUnit [DecidableEq C] {cs : List C} (distinct : Distinct cs) {c₀ : C}
+    (inside : c₀ ∈ cs) (t : Nat) :
+    total cs (W.drawnUnit cs c₀ t) = if ¬ ∃ c, c ∈ cs ∧ W.Falls t c then 1 else 0 :=
+  match W.decSomeFalls cs t with
+  | isTrue falls => (total_eq_zero fun _ _ => if_neg fun both => both.2 falls).trans
+      (if_neg fun steady => steady falls).symm
+  | isFalse steady => (Nat.le_antisymm
+      (Nat.le_trans (total_le_at (a := c₀) (fun b pos => match decEq b c₀ with
+          | isTrue same => same
+          | isFalse other => absurd pos (Nat.lt_irrefl 0 ∘ fun p =>
+              Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg fun both => other both.1)))) distinct)
+        (Nat.le_of_eq (if_pos ⟨rfl, steady⟩)))
+      (Nat.le_trans (Nat.le_of_eq (if_pos ⟨rfl, steady⟩).symm)
+        (le_total_of_mem (q := W.drawnUnit cs c₀ t) inside))).trans (if_pos steady).symm
+
+end Web
+
+namespace Flow
+
+variable {C : Type}
+
+/-- **What is given to a condition that does not fall is its rise and what is taken.** -/
+theorem given_of_steady {L : Flow F C} {W : Web F C} {cs : List C} {t : Nat} {c : C}
+    (balances : L.BalancesOn W cs t) (inside : c ∈ cs) (steady : ¬ W.Falls t c) :
+    L.given t c = rise (fun s => W.level s c) t + L.taken t c :=
+  have flat : fall (fun s => W.level s c) t = 0 :=
+    eq_zero_of_not_pos fun pos => steady (excess_pos.mp pos)
+  have up : W.level (t + 1) c = W.level t c + rise (fun s => W.level s c) t :=
+    (Nat.add_zero _).symm.trans ((congrArg (W.level (t + 1) c + ·) flat.symm).trans
+      (across (fun s => W.level s c) t))
+  add_right_cancel (W.level t c) ((Nat.add_comm _ _).trans ((balances c inside).symm.trans
+    ((congrArg (· + L.taken t c) up).trans ((Nat.add_assoc _ _ _).trans (Nat.add_comm _ _)))))
+
+/-- What is given to a condition is at least what it rises. -/
+theorem rise_le_given {L : Flow F C} {W : Web F C} {cs : List C} {t : Nat} {c : C}
+    (balances : L.BalancesOn W cs t) (inside : c ∈ cs) :
+    rise (fun s => W.level s c) t ≤ L.given t c :=
+  match Nat.decEq (rise (fun s => W.level s c) t) 0 with
+  | isTrue zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _)
+  | isFalse moved =>
+    have steady : ¬ W.Falls t c := fun falls =>
+      Nat.lt_asymm (excess_pos.mp (Nat.pos_of_ne_zero moved)) falls
+    Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (given_of_steady balances inside steady).symm)
+
+/-- **A drawing consumer is given at least the step's demand.** Where the flow balances on the
+family across the step from `t` and `f`, taking part, takes from the family, what is given to the
+family is at least the step's demand. -/
+theorem demand_le_replenishment {L : Flow F C} {W : Web F C} {cs : List C} {t : Nat} {f : F}
+    (balances : L.BalancesOn W cs t) (present : f ∈ L.present t)
+    (takes : 0 < total cs (L.take t f)) : W.demand cs t ≤ L.replenishment cs t := by
+  show risen cs (fun c s => W.level s c) t + (if ¬ ∃ c, c ∈ cs ∧ W.Falls t c then 1 else 0) ≤
+    L.replenishment cs t
+  match W.decSomeFalls cs t with
+  | isTrue falls =>
+    rw [if_neg (fun steady : ¬ ∃ c, c ∈ cs ∧ W.Falls t c => steady falls), Nat.add_zero]
+    exact total_le cs fun c inside => rise_le_given balances inside
+  | isFalse steady =>
+    have parts : L.replenishment cs t = risen cs (fun c s => W.level s c) t + L.uptake cs t :=
+      (Weighting.total_congr_on fun c inside =>
+        given_of_steady balances inside fun falls => steady ⟨c, inside, falls⟩).trans
+        (total_add _ _ cs)
+    rw [if_pos steady, parts]
+    exact Nat.add_le_add_left (uptake_pos present takes) _
+
+/-- The flows read off a web with capacities: those read off the web for a family fed only from
+`K`, in which at each step of the stretch the formations taking part are distinct and each gives
+the family at most its capacity. -/
+def FedOnlyWithin (W : Web F C) (cap : Nat → F → Nat) (cs : List C) (K : F → Prop) (T n : Nat)
+    (L : Flow F C) : Prop :=
+  FedOnlyOn W cs K T n L ∧ ∀ t, T ≤ t → t < T + n →
+    Distinct (L.present t) ∧ ∀ x, x ∈ L.present t → total cs (L.give t x) ≤ cap t x
+
+/-- Over the flows read off a web with capacities, a formation drawing past its family's stock
+needs some member of what feeds it: the case of `needsSome_on`. -/
+theorem needsSome_within (W : Web F C) (cap : Nat → F → Nat) (cs : List C) (K : F → Prop)
+    (T n : Nat) (f : F) :
+    NeedsSomePart (FedOnlyWithin W cap cs K T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f K :=
+  fun L ⟨fed, _⟩ draws => needsSome_on W cs K T n f L fed draws
+
+/-- Across a stretch, the least flow read off a web in which `f` draws and `pick t` gives: the
+giver gives each condition of the family what it rises and `f` takes what it falls, with one more
+unit given to and taken from `c₀` where no condition of the family falls; the giver gives exactly
+the step's demand. Outside the stretch nothing takes part. -/
+def leastDrawn [DecidableEq F] [DecidableEq C] (W : Web F C) (cs : List C) (c₀ : C) (T n : Nat)
+    (f : F) (pick : Nat → F) : Flow F C where
+  present t := if T ≤ t ∧ t < T + n then [f, pick t] else []
+  take t x c := if x = f ∧ (∃ d, d ∈ cs ∧ d = c) then
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c else 0
+  give t x c := if x = pick t ∧ (∃ d, d ∈ cs ∧ d = c) then
+      rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c else 0
+
+section Least
+
+variable [DecidableEq F] [DecidableEq C] {W : Web F C} {cs : List C} {c₀ : C} {T n : Nat} {f : F}
+  {pick : Nat → F}
+
+/-- What gives in the least flow is the picked formation, at a step calling for giving. -/
+theorem leastDrawn_gives {t : Nat} {x : F} {c : C}
+    (gives : 0 < (leastDrawn W cs c₀ T n f pick).give t x c) :
+    x = pick t ∧ W.CallsForGiving cs t :=
+  match (instDecidableAnd : Decidable (x = pick t ∧ ∃ d, d ∈ cs ∧ d = c)) with
+  | isFalse no => absurd (Nat.lt_of_lt_of_le gives (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0)
+  | isTrue ⟨same, ⟨d, inside, at_⟩⟩ =>
+    have positive : 0 < rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
+      Nat.lt_of_lt_of_le gives (Nat.le_of_eq (if_pos ⟨same, ⟨d, inside, at_⟩⟩))
+    ⟨same, match Nat.decEq (rise (fun s => W.level s c) t) 0 with
+      | isFalse moved => .inl ⟨c, at_ ▸ inside, excess_pos.mp (Nat.pos_of_ne_zero moved)⟩
+      | isTrue zero => match W.decSomeFalls cs t with
+        | isFalse steady => .inr steady
+        | isTrue falls => absurd positive (by
+            rw [zero, Nat.zero_add]
+            show ¬ 0 < (if c = c₀ ∧ ¬ ∃ d, d ∈ cs ∧ W.Falls t d then 1 else 0)
+            rw [if_neg fun both => both.2 falls]
+            exact Nat.lt_irrefl 0)⟩
+
+/-- The least flow balances on the family at every step of the stretch, where the picked
+formation is never `f`. -/
+theorem leastDrawn_balancesOn (apart : ∀ t, pick t ≠ f) :
+    ∀ t, T ≤ t → t < T + n → (leastDrawn W cs c₀ T n f pick).BalancesOn W cs t := by
+  intro t from_ to c inside
+  have present : (leastDrawn W cs c₀ T n f pick).present t = [f, pick t] := if_pos ⟨from_, to⟩
+  have takeSelf : (leastDrawn W cs c₀ T n f pick).take t f c =
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c := if_pos ⟨rfl, ⟨c, inside, rfl⟩⟩
+  have takeOther : (leastDrawn W cs c₀ T n f pick).take t (pick t) c = 0 :=
+    if_neg fun both => apart t both.1
+  have giveSelf : (leastDrawn W cs c₀ T n f pick).give t f c = 0 :=
+    if_neg fun both => apart t both.1.symm
+  have giveOther : (leastDrawn W cs c₀ T n f pick).give t (pick t) c =
+      rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c := if_pos ⟨rfl, ⟨c, inside, rfl⟩⟩
+  show W.level (t + 1) c + total ((leastDrawn W cs c₀ T n f pick).present t)
+      (fun x => (leastDrawn W cs c₀ T n f pick).take t x c) =
+    W.level t c + total ((leastDrawn W cs c₀ T n f pick).present t)
+      (fun x => (leastDrawn W cs c₀ T n f pick).give t x c)
+  rw [present, total_two, total_two]
+  show W.level (t + 1) c + ((leastDrawn W cs c₀ T n f pick).take t f c +
+      (leastDrawn W cs c₀ T n f pick).take t (pick t) c) =
+    W.level t c + ((leastDrawn W cs c₀ T n f pick).give t f c +
+      (leastDrawn W cs c₀ T n f pick).give t (pick t) c)
+  rw [takeSelf, takeOther, giveSelf, giveOther]
+  show W.level (t + 1) c + ((fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c) + 0) =
+    W.level t c + (0 + (rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c))
+  exact (congrArg (W.level (t + 1) c + ·) (Nat.add_zero _)).trans ((Nat.add_assoc _ _ _).symm.trans
+    ((congrArg (· + W.drawnUnit cs c₀ t c) (across (fun s => W.level s c) t)).trans
+      ((Nat.add_assoc _ _ _).trans (congrArg (W.level t c + ·) (Nat.zero_add _).symm))))
+
+/-- In the least flow only active formations give, where the picked formation is active at every
+step of the stretch calling for giving. -/
+theorem leastDrawn_acting
+    (active : ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t)) :
+    (leastDrawn W cs c₀ T n f pick).Acting W :=
+  fun t x _ present gives => match leastDrawn_gives gives with
+  | ⟨same, calls⟩ => match Nat.decLe T t, Nat.decLt t (T + n) with
+    | isTrue from_, isTrue to => same ▸ active t from_ to calls
+    | isFalse early, _ => absurd (Eq.subst (motive := fun l => x ∈ l)
+        (if_neg fun both => early both.1) present) (fun empty => nomatch empty)
+    | _, isFalse late => absurd (Eq.subst (motive := fun l => x ∈ l)
+        (if_neg fun both => late both.2) present) (fun empty => nomatch empty)
+
+/-- **The giver of the least flow gives exactly the step's demand**, over a family without
+repetition holding `c₀`. -/
+theorem leastDrawn_given_total (distinct : Distinct cs) (inside : c₀ ∈ cs) (t : Nat) :
+    total cs ((leastDrawn W cs c₀ T n f pick).give t (pick t)) = W.demand cs t :=
+  (Weighting.total_congr_on (q := fun c => rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c)
+    fun c member => if_pos ⟨rfl, ⟨c, member, rfl⟩⟩).trans
+    ((total_add _ _ cs).trans (congrArg (risen cs (fun c s => W.level s c) t + ·)
+      (Web.total_drawnUnit distinct inside t)))
+
+/-- In the least flow `f` draws past the family's stock, where it is active across a stretch
+longer than the stock and the family holds `c₀`. -/
+theorem leastDrawn_drawsPast (inside : c₀ ∈ cs)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    DrawsPast cs T n (leastDrawn W cs c₀ T n f pick, W) f :=
+  ⟨below, fun t from_ to =>
+    have present : (leastDrawn W cs c₀ T n f pick).present t = [f, pick t] := if_pos ⟨from_, to⟩
+    ⟨alive t from_ to, Eq.subst (motive := fun l => f ∈ l) present.symm (.head _),
+     match W.decSomeFalls cs t with
+     | isTrue ⟨c, mem, falls⟩ => total_pos_of_mem (q := (leastDrawn W cs c₀ T n f pick).take t f) mem
+        (Nat.lt_of_lt_of_le (excess_pos.mpr falls) (Nat.le_trans (Nat.le_add_right _ _)
+          (Nat.le_of_eq (if_pos ⟨rfl, ⟨c, mem, rfl⟩⟩).symm)))
+     | isFalse steady => total_pos_of_mem (q := (leastDrawn W cs c₀ T n f pick).take t f) inside
+        (Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_trans (Nat.le_add_left _ _)
+          (Nat.le_trans (Nat.le_of_eq (congrArg (fall (fun s => W.level s c₀) t + ·)
+            (if_pos ⟨rfl, steady⟩)).symm)
+            (Nat.le_of_eq (if_pos ⟨rfl, ⟨c₀, inside, rfl⟩⟩).symm))))⟩⟩
+
+/-- The least flow is read off the web with capacities for a family fed only from `K`, where the
+picked formation is never `f`, always in `K`, and at every step calling for giving active with a
+capacity covering the demand. -/
+theorem leastDrawn_fedOnlyWithin {cap : Nat → F → Nat} {K : F → Prop} (distinct : Distinct cs)
+    (inside : c₀ ∈ cs) (apart : ∀ t, pick t ≠ f)
+    (able : ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t →
+      W.active t (pick t) ∧ W.demand cs t ≤ cap t (pick t))
+    (members : ∀ t, K (pick t)) :
+    FedOnlyWithin W cap cs K T n (leastDrawn W cs c₀ T n f pick) :=
+  ⟨⟨leastDrawn_balancesOn apart, leastDrawn_acting fun t from_ to calls =>
+      (able t from_ to calls).1,
+    fun t _ _ _ _ gives => (leastDrawn_gives gives).1 ▸ members t⟩,
+   fun t from_ to =>
+    have present : (leastDrawn W cs c₀ T n f pick).present t = [f, pick t] := if_pos ⟨from_, to⟩
+    ⟨Eq.subst (motive := fun l => Distinct l) present.symm
+      ⟨(fun mem => match mem_cons_cases mem with
+        | .inl same => apart t same.symm
+        | .inr empty => nomatch empty), (fun empty => nomatch empty), trivial⟩,
+     fun x mem => match mem_cons_cases (Eq.subst (motive := fun l => x ∈ l) present mem) with
+     | .inl same => Nat.le_trans (Nat.le_of_eq (total_eq_zero fun _ _ =>
+          if_neg fun both => apart t (same.symm.trans both.1).symm)) (Nat.zero_le _)
+     | .inr rest => match mem_cons_cases rest with
+       | .inl same => Eq.subst (motive := fun y => total cs ((leastDrawn W cs c₀ T n f pick).give t y)
+            ≤ cap t y) same.symm (Nat.le_trans (Nat.le_of_eq (leastDrawn_given_total distinct inside t))
+            (match Web.decCallsForGiving W cs t with
+             | isTrue calls => (able t from_ to calls).2
+             | isFalse quiet => Nat.le_trans (Nat.le_of_eq (eq_zero_of_not_pos fun pos =>
+                  quiet (Web.callsForGiving_iff_demand_pos.mpr pos))) (Nat.zero_le _)))
+       | .inr empty => nomatch empty⟩⟩
+
+end Least
+
+/-- **Which feeders can feed a family alone depends on how much each can give.** Over the flows
+read off a web with capacities, for a family without repetition holding `c₀`, let `f`, outside
+`K`, be active across a stretch longer than the family's stock. Then a member `g` of `K` is the
+only member giving in some such flow in which `f` draws past the stock exactly where, at every step
+of the stretch calling for giving, `g` is active and its capacity covers the step's demand. -/
+theorem feedsAlone_iff [DecidableEq F] [DecidableEq C] {W : Web F C} {cap : Nat → F → Nat}
+    {cs : List C} (distinct : Distinct cs) {c₀ : C} (inside : c₀ ∈ cs) {K : F → Prop} {T n : Nat}
+    {f g : F} (outside : ¬ K f) (member : K g)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    (∃ L, FedOnlyWithin W cap cs K T n L ∧ DrawsPast cs T n (L, W) f ∧
+        GivesWithin cs T n (L, W) g ∧ ∀ h, K h → GivesWithin cs T n (L, W) h → h = g) ↔
+      W.CanFeedAlone cap cs T n g :=
+  ⟨fun ⟨L, ⟨⟨on, acting, only⟩, within⟩, ⟨_, draws⟩, _, alone⟩ t from_ to calls =>
+    have lower : W.demand cs t ≤ L.replenishment cs t :=
+      demand_le_replenishment (on t from_ to) (draws t from_ to).2.1 (draws t from_ to).2.2
+    have gives : ∀ x, x ∈ L.present t → 0 < total cs (L.give t x) → x = g := fun x present pos =>
+      match total_pos cs pos with
+      | ⟨c, inside', positive⟩ => alone x (only t x c inside' present positive)
+          ⟨t, from_, to, present, pos⟩
+    match total_pos cs (Nat.lt_of_lt_of_le (Web.callsForGiving_iff_demand_pos.mp calls) lower) with
+    | ⟨c, inside', given⟩ => match total_pos (L.present t) given with
+      | ⟨x, present, positive⟩ =>
+        have same : x = g := gives x present (total_pos_of_mem inside' positive)
+        ⟨same ▸ acting t x c present positive,
+         Nat.le_trans lower (Nat.le_trans (Nat.le_of_eq (total_swap (fun y c => L.give t y c) cs
+           (L.present t)).symm) (Nat.le_trans (total_le (L.present t) (q := fun y =>
+             if y = g then total cs (L.give t g) else 0) fun y mem =>
+               match Nat.decEq (total cs (L.give t y)) 0 with
+               | isTrue zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _)
+               | isFalse pos => have yg : y = g := gives y mem (Nat.pos_of_ne_zero pos)
+                   Nat.le_of_eq ((congrArg (fun z => total cs (L.give t z)) yg).trans
+                     (if_pos yg).symm))
+             (Nat.le_trans (total_le_at (a := g) (fun b pos => match decEq b g with
+                 | isTrue same' => same'
+                 | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+                     (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other)))))
+               (within t from_ to).1)
+               (Nat.le_trans (Nat.le_of_eq (if_pos rfl))
+                 ((within t from_ to).2 g (same ▸ present))))))⟩,
+   fun able =>
+    have apart : ∀ _ : Nat, g ≠ f := fun _ same => outside (same ▸ member)
+    have possible : FedOnlyWithin W cap cs K T n (leastDrawn W cs c₀ T n f fun _ => g) :=
+      leastDrawn_fedOnlyWithin distinct inside apart (fun t from_ to calls => able t from_ to calls)
+        fun _ => member
+    have draws : DrawsPast cs T n (leastDrawn W cs c₀ T n f (fun _ => g), W) f :=
+      leastDrawn_drawsPast inside alive below
+    ⟨leastDrawn W cs c₀ T n f fun _ => g, possible, draws,
+     match needsSome_within W cap cs K T n f _ possible draws with
+     | ⟨_, _, t, from_, to, present, gives⟩ => match total_pos cs gives with
+       | ⟨_, _, positive⟩ => match leastDrawn_gives positive with
+         | ⟨same, _⟩ => ⟨t, from_, to, same ▸ present, same ▸ gives⟩,
+     fun _ _ ⟨_, _, _, _, gives⟩ => match total_pos cs gives with
+       | ⟨_, _, positive⟩ => (leastDrawn_gives positive).1⟩⟩
+
+/-- **Every member of a class can feed the family alone exactly where each, at every step calling
+for giving, is active with a capacity covering the step's demand.** -/
+theorem partAlone_within_iff [DecidableEq F] [DecidableEq C] {W : Web F C} {cap : Nat → F → Nat}
+    {cs : List C} (distinct : Distinct cs) {c₀ : C} (inside : c₀ ∈ cs) {K : F → Prop} {T n : Nat}
+    {f : F} (outside : ¬ K f) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) :
+    PartAlone (FedOnlyWithin W cap cs K T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f K ↔ ∀ g, K g → W.CanFeedAlone cap cs T n g :=
+  ⟨fun alone g member => (feedsAlone_iff distinct inside outside member alive below).mp
+      (alone g member),
+   fun able g member => (feedsAlone_iff distinct inside outside member alive below).mpr
+      (able g member)⟩
+
+/-- **The copies law with capacities.** Where every member of `K` can feed the family alone (active
+with a capacity covering the demand at every step calling for giving), `f` drawing past its
+family's stock needs a member's giving exactly where that member is the only one. -/
+theorem needs_giver_iff_only_within [DecidableEq F] [DecidableEq C] {W : Web F C}
+    {cap : Nat → F → Nat} {cs : List C} (distinct : Distinct cs) {c₀ : C} (inside : c₀ ∈ cs)
+    {K : F → Prop} {T n : Nat} {f g : F} (outside : ¬ K f)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n)
+    (able : ∀ g, K g → W.CanFeedAlone cap cs T n g) (member : K g) :
+    NeedsPart (FedOnlyWithin W cap cs K T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔ ∀ h, K h → h = g :=
+  needsPart_iff_only (needsSome_within W cap cs K T n f)
+    ((partAlone_within_iff distinct inside outside alive below).mpr able) member
+
+/-- **A feeder is needed where the others' joint capacity falls short.** Over the flows read off a
+web with capacities for a family fed only from the members of a list, where at some step of the
+stretch the capacities of the other members active there total less than the step's demand, `f`
+drawing past the stock needs `g`'s giving. -/
+theorem needs_giver_of_short [DecidableEq F] {W : Web F C} [∀ t x, Decidable (W.active t x)]
+    {cap : Nat → F → Nat} {cs : List C} {ks : List F} {T n : Nat} {f g : F}
+    (short : ∃ t, T ≤ t ∧ t < T + n ∧
+      total ks (fun h => if W.active t h ∧ h ≠ g then cap t h else 0) < W.demand cs t) :
+    NeedsPart (FedOnlyWithin W cap cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f g :=
+  fun L ⟨⟨on, acting, only⟩, within⟩ ⟨_, draws⟩ => match short with
+  | ⟨t, from_, to, below⟩ =>
+    have lower : W.demand cs t ≤ total (L.present t) (fun x => total cs (L.give t x)) :=
+      Nat.le_trans (demand_le_replenishment (on t from_ to) (draws t from_ to).2.1
+        (draws t from_ to).2.2) (Nat.le_of_eq (total_swap (fun y c => L.give t y c) cs
+          (L.present t)).symm)
+    match decideSome (p := fun x => x = g ∧ 0 < total cs (L.give t x)) (L.present t) with
+    | isTrue ⟨_, present, same, gives⟩ => ⟨t, from_, to, same ▸ present, same ▸ gives⟩
+    | isFalse quiet =>
+      have each : ∀ x, x ∈ L.present t → total cs (L.give t x) ≤
+          total ks (fun h => if h = x then (if W.active t h ∧ h ≠ g then cap t h else 0) else 0) :=
+        fun x present => match Nat.decEq (total cs (L.give t x)) 0 with
+        | isTrue zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _)
+        | isFalse pos => match total_pos cs (Nat.pos_of_ne_zero pos) with
+          | ⟨c, inside, positive⟩ =>
+            have other : x ≠ g := fun same => quiet ⟨x, present, same, Nat.pos_of_ne_zero pos⟩
+            Nat.le_trans ((within t from_ to).2 x present) (Nat.le_trans
+              (Nat.le_of_eq ((if_pos ⟨acting t x c present positive, other⟩).symm.trans
+                (if_pos rfl).symm))
+              (le_total_of_mem (q := fun h => if h = x then
+                (if W.active t h ∧ h ≠ g then cap t h else 0) else 0) (only t x c inside present positive)))
+      absurd (Nat.lt_of_le_of_lt lower (Nat.lt_of_le_of_lt (Nat.le_trans (total_le _ each)
+        (Nat.le_trans (Nat.le_of_eq (total_swap (fun x h => if h = x then
+            (if W.active t h ∧ h ≠ g then cap t h else 0) else 0) ks (L.present t)))
+          (total_le ks fun h _ => Nat.le_trans (total_le_at (a := h) (fun b pos => match decEq h b with
+              | isTrue same => same.symm
+              | isFalse other => absurd pos (fun p => Nat.lt_irrefl 0
+                  (Nat.lt_of_lt_of_le p (Nat.le_of_eq (if_neg other))))) (within t from_ to).1)
+            (Nat.le_of_eq (if_pos rfl))))) below)) (Nat.lt_irrefl _)
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -2227,6 +2644,133 @@ theorem needs_both :
         | .inr same => same⟩⟩
 
 end FeedersInTurn
+
+namespace Capacities
+
+open Copies (Part)
+
+/-- One condition rising by one at every step, every formation active. -/
+def web : Web Part Unit :=
+  ⟨fun t _ => t, fun _ _ => True, fun _ _ _ => True, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- What each can give at a step: the first copy one unit, the second two. -/
+def cap (_ : Nat) : Part → Nat
+  | .user => 0
+  | .first => 1
+  | .second => 2
+
+instance decActive : ∀ t x, Decidable (web.active t x) := fun _ _ => instDecidableTrue
+
+/-- One more than a number exceeds it by one. -/
+theorem excess_succ : ∀ t : Nat, excess (t + 1) t = 1
+  | 0 => rfl
+  | t + 1 => excess_succ t
+
+/-- The condition never falls. -/
+theorem steady (t : Nat) : ¬ ∃ d, d ∈ [()] ∧ web.Falls t d :=
+  fun ⟨_, _, falls⟩ => Nat.lt_irrefl t (Nat.lt_trans (Nat.lt_succ_self t) falls)
+
+/-- Every step demands two units: one the condition rises, and one the user draws. -/
+theorem demand_two (t : Nat) : web.demand [()] t = 2 := by
+  show (excess (t + 1) t + 0) + (if ¬ ∃ d, d ∈ [()] ∧ web.Falls t d then 1 else 0) = 2
+  rw [excess_succ, if_pos (steady t)]
+
+/-- Every step calls for giving. -/
+theorem calls (t : Nat) : web.CallsForGiving [()] t :=
+  .inl ⟨(), .head [], Nat.lt_succ_self t⟩
+
+theorem distinct : Distinct [()] := ⟨(fun empty => nomatch empty), trivial⟩
+
+/-- **The second copy can feed the condition alone, and the first cannot.** -/
+theorem second_alone_first_not :
+    (∃ L, Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1 L ∧
+      Flow.DrawsPast [()] 0 1 (L, web) .user ∧ Flow.GivesWithin [()] 0 1 (L, web) .second ∧
+      ∀ h, h ∈ [Part.first, .second] → Flow.GivesWithin [()] 0 1 (L, web) h → h = .second) ∧
+    ¬ ∃ L, Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1 L ∧
+      Flow.DrawsPast [()] 0 1 (L, web) .user ∧ Flow.GivesWithin [()] 0 1 (L, web) .first ∧
+      ∀ h, h ∈ [Part.first, .second] → Flow.GivesWithin [()] 0 1 (L, web) h → h = .first :=
+  ⟨(Flow.feedsAlone_iff distinct (List.Mem.head []) Feeders.user_outside (.tail _ (.head _))
+      (fun _ _ _ => trivial) Nat.one_pos).mpr fun t _ _ _ => ⟨trivial, Nat.le_of_eq (demand_two t)⟩,
+   fun can => Nat.not_succ_le_self 1 (Eq.subst (motive := fun d => d ≤ 1) (demand_two 0)
+     ((Flow.feedsAlone_iff distinct (List.Mem.head []) Feeders.user_outside (.head _)
+       (fun _ _ _ => trivial) Nat.one_pos).mp can 0 (Nat.le_refl 0) Nat.one_pos (calls 0)).2)⟩
+
+/-- **The user needs the second copy's giving**: the first alone can give one unit a step, short
+of the two each step demands. -/
+theorem needs_second :
+    NeedsPart (Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1)
+      (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+      .user .second :=
+  Flow.needs_giver_of_short ⟨0, Nat.le_refl 0, Nat.one_pos, by decide⟩
+
+/-- **The user does not need the first copy's giving**: the second can feed the condition alone. -/
+theorem not_needs_first :
+    ¬ NeedsPart (Flow.FedOnlyWithin web cap [()] (· ∈ [Part.first, .second]) 0 1)
+      (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+      .user .first :=
+  fun needs => match second_alone_first_not.1 with
+  | ⟨L, possible, draws, _, alone⟩ =>
+    Part.noConfusion (alone .first (.head _) (needs L possible draws))
+
+/-- What each copy can give at a step in the second reading: one unit each. -/
+def capOne (_ : Nat) : Part → Nat
+  | .user => 0
+  | .first => 1
+  | .second => 1
+
+/-- The flow in which both copies give: at every step the user takes one unit of the condition and
+each copy gives one. -/
+def jointly : Flow Part Unit where
+  present := fun _ => [.user, .first, .second]
+  take := fun _ x _ => match x with
+    | .user => 1
+    | .first => 0
+    | .second => 0
+  give := fun _ x _ => match x with
+    | .user => 0
+    | .first => 1
+    | .second => 1
+
+/-- With one unit each, both copies giving feed the condition while the user draws past its
+stock. -/
+theorem jointly_feeds :
+    Flow.FedOnlyWithin web capOne [()] (· ∈ [Part.first, .second]) 0 1 jointly ∧
+      Flow.DrawsPast [()] 0 1 (jointly, web) .user :=
+  ⟨⟨⟨fun _ _ _ _ _ => rfl, fun _ _ _ _ _ => trivial, fun _ g _ _ _ gives => match g, gives with
+      | .user, gives => absurd gives (Nat.lt_irrefl 0)
+      | .first, _ => .head _
+      | .second, _ => .tail _ (.head _)⟩,
+    fun _ _ _ => ⟨⟨Feeders.user_outside, (fun mem => match mem_cons_cases mem with
+        | .inl same => Part.noConfusion same
+        | .inr empty => nomatch empty), (fun empty => nomatch empty), trivial⟩,
+      fun x _ => match x with
+      | .user => Nat.le_refl _
+      | .first => Nat.le_refl _
+      | .second => Nat.le_refl _⟩⟩,
+   ⟨Nat.one_pos, fun _ _ _ => ⟨trivial, .head _, Nat.one_pos⟩⟩⟩
+
+/-- **Neither copy can feed the condition alone**: each gives one unit a step, short of the two
+each step demands. -/
+theorem neither_alone :
+    ¬ web.CanFeedAlone capOne [()] 0 1 .first ∧ ¬ web.CanFeedAlone capOne [()] 0 1 .second :=
+  ⟨fun can => Nat.not_succ_le_self 1 (Eq.subst (motive := fun d => d ≤ 1) (demand_two 0)
+      (can 0 (Nat.le_refl 0) Nat.one_pos (calls 0)).2),
+   fun can => Nat.not_succ_le_self 1 (Eq.subst (motive := fun d => d ≤ 1) (demand_two 0)
+      (can 0 (Nat.le_refl 0) Nat.one_pos (calls 0)).2)⟩
+
+/-- **The user needs both copies' giving**: what either gives alone falls short of the demand. Two
+copies in number are not two in capacity. -/
+theorem needs_both :
+    NeedsPart (Flow.FedOnlyWithin web capOne [()] (· ∈ [Part.first, .second]) 0 1)
+        (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+        .user .first ∧
+      NeedsPart (Flow.FedOnlyWithin web capOne [()] (· ∈ [Part.first, .second]) 0 1)
+        (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+        .user .second :=
+  ⟨Flow.needs_giver_of_short ⟨0, Nat.le_refl 0, Nat.one_pos, by decide⟩,
+   Flow.needs_giver_of_short ⟨0, Nat.le_refl 0, Nat.one_pos, by decide⟩⟩
+
+end Capacities
 
 /-! ## What self-concern alone ranks -/
 

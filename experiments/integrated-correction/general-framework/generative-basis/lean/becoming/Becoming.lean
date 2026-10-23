@@ -2056,8 +2056,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   ending is ranked below by self-concern in one theorem (`Flow.coupled_ending_ranked_below`). Read
   off a web, a feeder can feed a family alone where it is active at every step calling for giving
   (`Flow.partAlone_on`), and a consumer needs a feeder's giving exactly where, at some step calling
-  for giving, it is the only one active (`Flow.needs_giver_iff_alone`; `FeedersInTurn`). The
-  readings are the AI's (D59, D60, D64).
+  for giving, it is the only one active (`Flow.needs_giver_iff_alone`; `FeedersInTurn`). With
+  capacities of giving supplied with the web, a feeder can feed the family alone exactly where its
+  capacity covers each step's demand (`Flow.feedsAlone_iff`), and it is needed wherever the others
+  active at some step could not together give the demand (`Flow.needs_giver_of_short`;
+  `Capacities`). The readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

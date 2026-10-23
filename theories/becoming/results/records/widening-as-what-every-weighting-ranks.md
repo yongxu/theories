@@ -85,6 +85,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T073957.905247Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T081501.790566Z/verification.json) | — |
 
 Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
 

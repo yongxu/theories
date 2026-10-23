@@ -23,7 +23,7 @@ left = [(x['id'], x['path']) for x in data.get('source_drift', []) if x['path'] 
 json.dump({'source_drift': kept}, open(f, 'w'))
 print('re-pointing', len(kept), 'pairs; left to their owners:', left)
 PY
-python3 -B tools/research/repoint.py --reason "IV3d: Becoming.Weightings gained a step's demand, the least flow, the flows read off a web with capacities, the exact law of feeding alone with capacities and need by shortfall, its earlier statements unchanged; THE-STEP-OF-INVARIANCE §4.4 and §8, the canonical chapter §9, the study, D64 and the package README rows; read before re-pointing" \
+python3 -B tools/research/repoint.py --reason "IV3d: Becoming.Weightings gained a step's demand, the least flow, the flows read off a web with capacities, the exact law of feeding alone with capacities and need by shortfall, its earlier statements unchanged; THE-STEP-OF-INVARIANCE §4.4 and §8, the canonical chapter's dependence bullet and §9 (EN, ZH), the study, D64 and the package README rows; read before re-pointing" \
   --drift-json "$F" \
   --receipt "$P/becoming-checks/$1/verification.json" --lean "$P/Becoming/Weightings.lean" --apply
 rm -f "$D" "$F"

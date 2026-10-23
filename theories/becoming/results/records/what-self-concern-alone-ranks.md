@@ -79,6 +79,7 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-23-one-system.md](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T073957.905247Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T081501.790566Z/verification.json) | — |
 
 Aliases: `what self-concern alone ranks`, `单凭自我关切排出什么`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.ended_below`
 

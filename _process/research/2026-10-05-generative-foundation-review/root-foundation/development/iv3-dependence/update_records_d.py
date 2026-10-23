@@ -74,8 +74,11 @@ old_statement = ('Held de se, self-concern is the same from every standpoint exa
                  'it needs exactly where that copy is the only one.')
 assert d['statement']['en'] == old_statement
 d['statement'] = t(
-    old_statement[:-1] + ', and, with capacities of giving, wherever the others could not together give what is drawn.',
-    d['statement']['zh'].rstrip('。') + '，而在有给予容量时，凡其余者合起来给不出所汲取者之处，它都达到该副本。')
+    'Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another\'s '
+    'closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs where the copy '
+    'is the only one or the others could not together give what is drawn.',
+    '从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它在某个副本是唯一者、'
+    '或其余者合起来给不出所汲取者之处，达到其所需的该副本。')
 d['laws'] += [
     {**t('A step\'s demand is what the family\'s conditions rise, and one more where none falls; it is positive exactly '
          'where the step calls for giving. Every balanced flow in which a consumer takes from the family gives it at '
@@ -101,17 +104,11 @@ old = [i for i, item in enumerate(d['does_not_show'])
        if item['en'].startswith('Which web an actual family has, or a capacity of giving')]
 assert len(old) == 1, old
 d['does_not_show'][old[0]] = {**t(
-    'Which web an actual family has, or what each formation can give: the capacities are supplied with the web, not '
-    'read off its levels or off what a feeder itself holds or draws on.',
-    '实际的条件族有怎样的依存网，或每个构成能给多少：容量随依存网给定，并非从其水平或从供给者自身所持有、所汲取者读出。'),
+    'Which web an actual family has, what each formation can give (capacities are supplied with the web), or that a '
+    'feeder is not needed where the others could together give the demand (that needs giving shared among givers).',
+    '实际的条件族有怎样的依存网、每个构成能给多少（容量随依存网给定），或在其余者合起来能给出需求之处供给者不被需要（那需要在给予者之间分担'
+    '给予的流）。'),
     'kind': 'scope'}
-d['does_not_show'].append({**t(
-    'That a feeder is not needed where, at every step calling for giving, the others active there could together '
-    'give the demand: the converse of the shortfall law needs a flow sharing the giving among several givers within '
-    'their capacities, which is not built.',
-    '在每个需要给予之步上其余活跃者合起来能给出需求之处供给者不被需要：缺额之律的逆向需要一个在多个给予者之间按容量分担给予的流，'
-    '尚未构造。'),
-    'kind': 'scope'})
 corr = [i for i, item in enumerate(d['does_not_show']) if item['kind'] == 'correspondence']
 assert len(corr) == 1 and d['does_not_show'][corr[0]]['en'].startswith('That actual centers depend on one another')
 d['does_not_show'][corr[0]] = {**t(

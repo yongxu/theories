@@ -52,8 +52,8 @@ insert_after(STEP, '- **Which feeders can feed alone, read off a web.** Fix the 
     '(`Capacities.needs_both`). Copies count by capacity, not by number.',
 ])
 replace_once(STEP, 'and several conditions they all need have no second copy. If so,',
-             'and several conditions they all need have no second copy. Copies count by capacity: an alternative is '
-             'needed wherever the others could not together give what is drawn (`Flow.needs_giver_of_short`, '
+             'and several conditions they all need have no second copy, or none that with the rest could give what '
+             'they draw: copies count by capacity, not by number (`Flow.needs_giver_of_short`, '
              '`Capacities.needs_both`). If so,')
 insert_after(STEP, '| A feeder is needed exactly where, at some step calling for giving, it is the only one active |', [
     '| A step\'s demand: every flow with a drawing consumer gives the family at least it, and the least flow exactly '
