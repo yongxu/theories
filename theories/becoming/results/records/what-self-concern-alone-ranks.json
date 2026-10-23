@@ -1,0 +1,224 @@
+{
+  "schema_version": 2,
+  "id": "what-self-concern-alone-ranks",
+  "title": {
+    "en": "What self-concern alone ranks",
+    "zh": "单凭自我关切排出什么"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-23T05:28:43+00:00",
+  "statement": {
+    "en": "An order that ranks higher every widening adding to its own continuation ranks a course that adds to it above another exactly where the other keeps nothing beyond it; so the ending of what everything needs is ranked below from every standpoint.",
+    "zh": "把每个增加其自身延续的扩大都排得更高的次序，恰在另一条进程不保住任何超出者时，把增加其延续的进程排在上面；所以一切所需者的终结从每个立场都被排在下面。"
+  },
+  "laws": [
+    {
+      "en": "An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern's monotonicity is C's premise.",
+      "zh": "一个次序在其自身延续上递增，指它把每个增加其延续所标记之项的扩大都排得更高。每个随接纳递增的次序都是如此，而二者恰在其自身延续即每个所列项时重合：在那里，自我关切的单调性就是 C 的前提。",
+      "declarations": [
+        "Becoming.Weighting.AddsOwn",
+        "Becoming.Weighting.IncreasingInOwn",
+        "Becoming.Weighting.increasingInOwn_of_increasing",
+        "Becoming.Weighting.increasingInOwn_iff_increasing"
+      ]
+    },
+    {
+      "en": "What every such order shares is exactly the widenings that add to its own continuation. Where one course adds to it, every such order ranks it above the other exactly where the other keeps nothing beyond it; where the other keeps an item beyond, some positive weighting, such an order, ranks the other higher.",
+      "zh": "每个这样的次序所共有者，恰是增加其自身延续的扩大。一条进程增加其延续时，每个这样的次序恰在另一条不保住任何超出者时把前者排在上面；另一条保住某个超出的项时，某个正的加权（也是这样的次序）把另一条排得更高。",
+      "declarations": [
+        "Becoming.Weighting.widensOwn_iff_every_increasingInOwn",
+        "Becoming.Weighting.every_increasingInOwn_iff_includes",
+        "Becoming.Weighting.some_increasingInOwn_reverses"
+      ]
+    },
+    {
+      "en": "A course that admits nothing from an ending on, and agrees with another before it, keeps nothing beyond it; so from every standpoint whose own continuation the other adds to, every order increasing in its own continuation ranks the ending below.",
+      "zh": "自某一终结起什么也不接纳、此前与另一条一致的进程，不保住任何超出另一条者；所以从另一条增加其自身延续的每个立场看，每个在自身延续上递增的次序都把这一终结排在下面。",
+      "declarations": [
+        "Becoming.Weighting.includes_of_ended",
+        "Becoming.Weighting.ended_below"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A finite listing of items; two-valued admission; an order a relation on courses, not assumed complete, transitive or additive; a standpoint's own continuation a supplied marking of items, and the ending a supplied marking of the items from the ending on.",
+      "zh": "不加公理。项的有限列举；二值接纳；次序是进程上的关系，不设其完备、传递或可加；立场的自身延续是对项的给定标记，终结是对自终结起各项的给定标记。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a standpoint's order is increasing in its own continuation: a premise, weaker than C's.",
+      "zh": "立场的次序在其自身延续上递增：这是前提，比 C 的前提弱。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Comparisons in which the other course keeps something beyond, as a copy continuing without the ended condition does: some such order ranks them either way.",
+      "zh": "另一条进程保住某个超出者的比较，如不靠所终结的条件而延续的副本：某个这样的次序可以把它们排成任一方向。",
+      "kind": "scope",
+      "witness": "Becoming.Weighting.some_increasingInOwn_reverses"
+    },
+    {
+      "en": "That the dynamics give a course admitting nothing from an ending on: coupled groups ending together gives it where every formation depends on the coupled family, joined here by argument, not by one theorem.",
+      "zh": "动力学给出自某一终结起什么也不接纳的进程：诸条件耦合的群体一同终结，在每个构成都依存于该耦合族处给出它；此处以论证而非单一定理连接。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a risk of ending recurring along one run, with nothing to average over, comes to an ending: not formalized here.",
+      "zh": "沿一条运行反复出现、无可平均的终结风险终将导致终结：此处未形式化。",
+      "kind": "scope"
+    },
+    {
+      "en": "That widening is better, or that a ranking obliges anyone: an order is from a standpoint.",
+      "zh": "扩大更好，或某个排序约束任何人：次序是从一个立场而言的。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "no-definition-by-verdict",
+    "names-provisional",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T051150.969269Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study section 373; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T051150.969269Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "The ending stated on the base in one theorem with the dynamics of coupled ending; graded orders, how much a standpoint's own continuation weighs, under which comparisons near an ending are decided; an independent review.",
+    "zh": "在基底上以一个定理把终结与耦合终结的动力学连起来陈述；分级的次序（立场自身延续的权重多少），以裁定终结附近的比较；独立审查。"
+  },
+  "correspondence": {
+    "en": "Monotonicity in the opportunity-set literature, relocated to one's own continuation. Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern, with no impartial premise. Ergodicity (Peters 2019) and systemic ruin (Taleb and others 2014): with one copy there is no average over copies; not formalized here. Reading (the AI's, D64): an order increasing in its own continuation is the monotonicity of a self-concerned standpoint.",
+    "zh": "机会集文献中的单调性，移到自身的延续上。Jonas（1979）：整体的存在绝不可作赌注；此处一个人人所需、无第二副本的条件，其终结由每个立场的自我关切排在下面，不用任何公正的前提。遍历性（Peters 2019）与系统性毁灭（Taleb 等 2014）：只有一个副本时，没有跨副本的平均；此处未形式化。解读（AI 的，D64）：在自身延续上递增的次序，是有自我关切之立场的单调性。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "aliases": [
+    "what self-concern alone ranks",
+    "单凭自我关切排出什么",
+    "Becoming.Weighting.IncreasingInOwn",
+    "Becoming.Weighting.every_increasingInOwn_iff_includes",
+    "Becoming.Weighting.ended_below"
+  ],
+  "dependencies": [
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses widening on listed items and orders increasing in admission (WidensOn, Increasing, increasing_ranks) and the positive weighting that ranks a course admitting more higher (outweighs).",
+        "zh": "复用所列项上的扩大与随接纳递增的次序（WidensOn、Increasing、increasing_ranks），以及把多接纳者排得更高的正加权（outweighs）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Widening, orders increasing in admission, and a positive weighting deciding a mixed pair.",
+          "zh": "扩大、随接纳递增的次序，以及裁定混合一对的正加权。"
+        },
+        "input": {
+          "en": "Orders increasing in their own continuation, a weaker class.",
+          "zh": "在自身延续上递增的次序，一个更弱的类。"
+        },
+        "conditions": {
+          "en": "Finite listing, two-valued admission.",
+          "zh": "有限列举，二值接纳。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "The dynamic half: groups whose conditions are coupled end together, nothing selected among them, which gives the course admitting nothing from the ending on.",
+        "zh": "动力学的一半：诸条件耦合的群体一同终结，其间无所选择，这给出自终结起什么也不接纳的进程。"
+      }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "detail": {
+        "en": "After a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants: an independent copy, which makes the comparison mixed.",
+        "zh": "一族条件被汲取超出其更新之后，只有不依存于其中任何一个者留下后代：独立的副本，它使比较成为混合的。"
+      }
+    },
+    {
+      "id": "self-concern-through-dependence",
+      "detail": {
+        "en": "The same route's scope, which this order takes as fixed.",
+        "zh": "同一路线上的范围，此序以之为定。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Weighting.AddsOwn",
+        "Becoming.Weighting.IncreasingInOwn",
+        "Becoming.Weighting.ended_below",
+        "Becoming.Weighting.every_increasingInOwn_iff_includes",
+        "Becoming.Weighting.includes_of_ended",
+        "Becoming.Weighting.increasingInOwn_iff_increasing",
+        "Becoming.Weighting.increasingInOwn_of_increasing",
+        "Becoming.Weighting.some_increasingInOwn_reverses",
+        "Becoming.Weighting.widensOwn_iff_every_increasingInOwn"
+      ],
+      "sha256": "8d9cd84b5a8b21c364031636d063f8220cf5b7d6022bcf69effcc7e462120102"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "role": "receipt",
+      "sha256": "28c7a3ed762f946582851f68fecdd6b27e0243f35bff2b63c4b492a5fe68fdc7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "dd2aefd65c4b84759dc56c534a23af3b7056fbf9b1f0a573da88b7b8ba2b2392"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "e002ae3c64b440d5afe3abd430a465aed63f8ced0891629ac2095698350d286e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "role": "integration",
+      "sha256": "29cd2209ecbd75c0d6fab730e873f4e417fe28c59be98c4ca04b2bc31ff2a4c8"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+      "role": "statement",
+      "sha256": "66c59407a266e4e558ff9329a0a28be3671de0aa8be3916728c92d99cc295d9b"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
+      "role": "provenance",
+      "sha256": "a8b73f284cb195d4988570c83bf5cce290a50e2945235d5b88f20affe6badf37"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026: added (IV3): what an order increasing only in its own continuation ranks, the ending of what everything needs below from every standpoint, an independent copy making the comparison mixed, and C's premise where its own continuation is everything; after a literature check (significance review, dependence check); study section 373.",
+      "zh": "2026年10月23日：新增（IV3）：只在自身延续上递增的次序排出什么：一切所需者的终结从每个立场都被排在下面，独立的副本使比较成为混合的，其自身延续为一切时即 C 的前提；附文献核查（显著性审查“依存”核查）；研究第 373 节。"
+    }
+  ]
+}

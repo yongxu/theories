@@ -346,7 +346,7 @@
         "Becoming.Weighting.widens_iff_every_of_class",
         "Becoming.Weighting.widens_iff_every_score"
       ],
-      "sha256": "3958644149c0a0dec9df9a38f00a8082c10ebe687b79a6d50c9ca5ac9725e6de"
+      "sha256": "8d9cd84b5a8b21c364031636d063f8220cf5b7d6022bcf69effcc7e462120102"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
