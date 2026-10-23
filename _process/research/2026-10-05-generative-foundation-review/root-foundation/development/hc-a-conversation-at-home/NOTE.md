@@ -172,6 +172,8 @@ P1 and P2 read the work by its own laws, as the paragraph they join does, so the
 
 **For T7's test, which has no owner,** a candidate coding: reform events where the reading is visible calm.
 
+*Outcome.* GS3 landed on 24 October 2026 (`04d49b8e6`). It reads an institution kept by consent or by penalty as the thermostat witness, not restated, and it models a belief whose rate of spread grows with its number, read in its regularity. So candidate 1 falls under the thermostat witness, and candidate 2's nearest model is the belief; neither became a model of its own. The T7 coding stays a candidate.
+
 ## 7. What stays local
 
 Kept local: the friend's words and circumstances; substance use, health and family; the notes' personal sections and their factual corrections about substances (with FDA sources). The notes' agenda is met here or in the account:
