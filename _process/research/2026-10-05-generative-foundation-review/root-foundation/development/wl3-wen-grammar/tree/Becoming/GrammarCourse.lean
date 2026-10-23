@@ -316,7 +316,7 @@ theorem course_core_iff {next : S → S} {o : S → R} {s : S} {t t' : Nat} :
   (SameAhead.is_core t t').trans (sameAhead_orbit_iff.trans (Law.core_is_sameFuture _ _).symm)
 
 /-- **A 文 with a new value at every moment has no continuation under its core**: each moment is
-its own state, as no two moments of the flame lie in one class of its core. -/
+its own state, as the flame has no continuation under its core (`«以核为判据则火无续»`). -/
 theorem SameAhead.no_continuation {o : Nat → O} (new : ∀ t t', o t = o t' → t = t') (t t' : Nat) :
     ¬ «续» Steps.next («核» Steps.next (sameValue o)) t t' :=
   fun ⟨step, core⟩ => by
