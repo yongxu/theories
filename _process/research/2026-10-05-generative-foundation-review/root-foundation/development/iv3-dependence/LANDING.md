@@ -31,3 +31,9 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 1. `integrate_c.py`; core checker (a first run found `Shifts` taken in `Becoming.Wholes`, which the scratch build does not import; the witness was renamed `FeedersInTurn` and the run repeated); connectivity `--check` (no new apart roots) and `--write`.
 2. `apply_text_c.py N RECEIPT`, `section9_c.py RECEIPT MAIN N`, `update_records_c.py RECEIPT N`, `sh repoint_c.sh RECEIPT`.
 3. The scratch copy of the module goes; `board_c.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.
+
+## IV3d
+
+1. `integrate_d.py`; core checker; connectivity `--check` (register any new apart roots) and `--write`.
+2. `apply_text_d.py N RECEIPT`, `section9_d.py RECEIPT MAIN N`, `update_records_d.py RECEIPT N`, `sh repoint_d.sh RECEIPT`.
+3. The scratch copy of the module goes; `board_d.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.
