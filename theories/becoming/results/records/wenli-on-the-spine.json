@@ -145,6 +145,13 @@
         "en": "WL2: 识 reads the prefix of its own course where what couples in is read as values.",
         "zh": "WL2：感读作值时，识所读者是其自身之文之往。"
       }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "detail": {
+        "en": "文同 and the states of a 文 read in the grammar of continuation: the core (WL3).",
+        "zh": "文同与文之状于续之文法中读：核（WL3）。"
+      }
     }
   ],
   "references": [
@@ -228,6 +235,10 @@
     {
       "en": "23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.",
       "zh": "2026年10月23日：贡献写明以统一为主，并注诸律之已知数学来源；本章注明语言与名表纪律之混淆。"
+    },
+    {
+      "en": "23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.",
+      "zh": "2026年10月23日，WL3：文之线接于一元之根（记录 wen-in-the-grammar，研究第 374 节）；本章 §一 增一段，章首增一条。"
     }
   ]
 }
