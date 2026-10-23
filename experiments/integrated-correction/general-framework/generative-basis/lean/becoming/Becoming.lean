@@ -2045,7 +2045,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   above another, where it adds to that continuation, exactly where the other keeps nothing beyond it,
   so the ending of what everything needs is ranked below from every standpoint
   (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise
-  where its own continuation is everything listed. The readings are the AI's (D59, D60, D64).
+  where its own continuation is everything listed. Need holds over any courses with two readings, a
+  member needed exactly where it is the only one (`needsPart_iff_only`); on the base, a formation
+  drawing past its family's stock needs some feeder's giving, and a feeder's exactly where it is the
+  only one (`Flow.needsSome_of_drawsPast`, `Flow.needs_giver_iff_only`, `Feeders`); and the coupled
+  ending is ranked below by self-concern in one theorem (`Flow.coupled_ending_ranked_below`). The
+  readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

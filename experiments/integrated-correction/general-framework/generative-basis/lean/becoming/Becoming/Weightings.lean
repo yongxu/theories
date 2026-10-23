@@ -1,4 +1,5 @@
 import Becoming.Boundaries
+import Becoming.GroupEnding
 
 /-!
 # Weightings: what every standpoint's weighting ranks, and what the step across standpoints reaches
@@ -125,13 +126,26 @@ order every standpoint shares when each weighs what can form in its own way.
   feeding closures (`Flow.centersWithin_influence_of_common`, `Flow.centersWithin_feeding_of_common`),
   so self-concern held de se along either relation is one from all of them
   (`Flow.ownClosure_influence_invariant_of_common`, `Flow.ownClosure_feeding_invariant_of_common`).
-* **What a continuation needs, and copies.** Over possible courses, `f` needs `g` where `g`
-  continues on every course on which `f` does (`Needs`). Need is its own closure
-  (`withinClosure_needs_iff`), so drawn along need a standpoint's presupposition reaches exactly
-  what its continuation needs (`forced_needs_iff`). Where `f` needs some member of a class and each
-  member can carry it alone (`NeedsSome`, `CarriesAlone`), it needs a member exactly where that
-  member is the only one (`needs_iff_only`, `forced_member_iff_only`): in `Copies` the user needs
-  some copy and neither of the two (`Copies.two_copies`).
+* **What a continuation needs, and copies.** Over possible courses of any type, `f`'s continuation
+  needs `g`'s part where `g` takes its part on every possible course on which `f` continues, each
+  read off the course (`NeedsPart`); where `f` needs the part of some member of a class and each
+  member can take it alone (`NeedsSomePart`, `PartAlone`), it needs the part of a member exactly
+  where that member is the only one (`needsPart_iff_only`). With courses marking the formations
+  that continue and one reading for both (`Marked`), `f` needs `g` where `g` continues on every
+  course on which `f` does (`Needs`, `NeedsSome`, `CarriesAlone`, `needs_iff_only`). Need is then
+  its own closure (`withinClosure_needs_iff`), so drawn along need a standpoint's presupposition
+  reaches exactly what its continuation needs (`forced_needs_iff`) and a member of a class of
+  alternatives exactly where it is the only one (`forced_member_iff_only`): in `Copies` the user
+  needs some copy and neither of the two (`Copies.two_copies`).
+* **Need on the base.** Read the possible courses of a family of conditions fed only from a class
+  as the flows with their webs that balance, in which only active formations give and only members
+  of the class give to the family (`Flow.FedOnlyBy`). A formation that draws past the family's
+  stock across a stretch (`Flow.DrawsPast`) has some member of the class giving to the family
+  within the stretch (`Flow.GivesWithin`, `Flow.needsSome_of_drawsPast`): what was taken beyond
+  the stock was given. So it needs a given feeder's giving exactly where that feeder is the only
+  member that can feed the family alone (`Flow.needs_giver_iff_only`); on `Feeders`, two flows of
+  one condition each fed by one copy, the user needs some feeder's giving and neither feeder's
+  (`Feeders.two_feeders`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -142,7 +156,12 @@ order every standpoint shares when each weighs what can form in its own way.
   (`Weighting.every_increasingInOwn_iff_includes`), and where `b` keeps an item beyond, some such
   order ranks `b` higher (`Weighting.some_increasingInOwn_reverses`). So a course that admits
   nothing from an ending on, and agrees with `a` before it, is ranked below `a` from every
-  standpoint whose own continuation `a` adds to (`Weighting.ended_below`).
+  standpoint whose own continuation `a` adds to (`Weighting.ended_below`). Joined with coupled
+  ending in one theorem: under the premises of `GroupEnding.Flow.family_childless`, with every
+  member of every generation from the excess on depending on the coupled family, no later
+  generation has a member, and a course admitting only members of their generation is ranked below,
+  by every order increasing in a standpoint's own continuation, every course agreeing with it up to
+  the ending and adding to that continuation (`Flow.coupled_ending_ranked_below`).
 * **Standing and grades.** A graded significance gives each item a natural grade from each
   standpoint; its standing is whether the grade is positive. Invariant grades have invariant
   standing (`Weighting.standingInvariant_of_gradeInvariant`) and rank alike from every standpoint
@@ -215,7 +234,8 @@ sets of a case, whether its sign measured apart is the sign of the joint increme
 dispersed its weights are, each measurable and none derived; that the impartial order is what
 every standpoint shares rather than one privileged weighting; which formations are centers; the
 step of invariance itself; which relation a continuation is carried along, whether actual centers
-depend on one another, which courses are possible, and that a standpoint's order is increasing in
+depend on one another, which courses are possible, which feeders can feed a family alone
+(`PartAlone` is supplied, not derived from a web), and that a standpoint's order is increasing in
 its own continuation. The representation commits to finite listings of steps and formations,
 two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
 -/
@@ -1488,20 +1508,55 @@ end Divided
 
 /-! ## What a continuation needs, and copies -/
 
+/-- Over the possible courses of any type, `f`'s continuation needs `g`'s part: on every possible
+course on which `f` continues, `g` takes its part, each read off the course (`continues`,
+`part`). Read with one reading for both, need composes (`Needs`). -/
+def NeedsPart {Ω : Type} (possible : Ω → Prop) (continues part : Ω → F → Prop) (f g : F) :
+    Prop :=
+  ∀ ω, possible ω → continues ω f → part ω g
+
+/-- `f`'s continuation needs the part of some member of `K`. -/
+def NeedsSomePart {Ω : Type} (possible : Ω → Prop) (continues part : Ω → F → Prop) (f : F)
+    (K : F → Prop) : Prop :=
+  ∀ ω, possible ω → continues ω f → ∃ g, K g ∧ part ω g
+
+/-- Each member of `K` takes its part alone: for each member, on some possible course `f`
+continues with that member taking its part and no other member of `K`. -/
+def PartAlone {Ω : Type} (possible : Ω → Prop) (continues part : Ω → F → Prop) (f : F)
+    (K : F → Prop) : Prop :=
+  ∀ g, K g → ∃ ω, possible ω ∧ continues ω f ∧ part ω g ∧ ∀ h, K h → part ω h → h = g
+
+/-- **A member of a class of alternatives is needed exactly where it is the only member**, over
+any courses and readings: where `f`'s continuation needs the part of some member of `K` and each
+member can take it alone, it needs the part of `g` exactly when every member of `K` is `g`. -/
+theorem needsPart_iff_only {Ω : Type} {possible : Ω → Prop} {continues part : Ω → F → Prop}
+    {f g : F} {K : F → Prop} (needed : NeedsSomePart possible continues part f K)
+    (alone : PartAlone possible continues part f K) (member : K g) :
+    NeedsPart possible continues part f g ↔ ∀ h, K h → h = g :=
+  ⟨fun needs h other => match alone h other with
+    | ⟨ω, here, going, _, only⟩ => (only g member (needs ω here going)).symm,
+   fun only ω here going => match needed ω here going with
+    | ⟨h, other, held⟩ => Eq.subst (motive := fun x => part ω x) (only h other) held⟩
+
+/-- The marking reading: a course marks the formations that continue on it. -/
+def Marked (a : F → Bool) (x : F) : Prop :=
+  a x = true
+
 /-- Over the possible courses, each marking the formations that continue on it, `f` needs `g`:
-on every possible course on which `f` continues, `g` continues. -/
+on every possible course on which `f` continues, `g` continues. The marking case of
+`NeedsPart`. -/
 def Needs (possible : (F → Bool) → Prop) (f g : F) : Prop :=
-  ∀ a, possible a → a f = true → a g = true
+  NeedsPart possible Marked Marked f g
 
 /-- `f` needs some member of `K`: on every possible course on which `f` continues, some member of
 `K` continues. -/
 def NeedsSome (possible : (F → Bool) → Prop) (f : F) (K : F → Prop) : Prop :=
-  ∀ a, possible a → a f = true → ∃ g, K g ∧ a g = true
+  NeedsSomePart possible Marked Marked f K
 
 /-- Each member of `K` carries `f` alone: for each member, on some possible course `f` continues
 with that member and with no other member of `K`. -/
 def CarriesAlone (possible : (F → Bool) → Prop) (f : F) (K : F → Prop) : Prop :=
-  ∀ g, K g → ∃ a, possible a ∧ a f = true ∧ a g = true ∧ ∀ h, K h → a h = true → h = g
+  PartAlone possible Marked Marked f K
 
 /-- A continuation needs itself. -/
 theorem Needs.refl (possible : (F → Bool) → Prop) (f : F) : Needs possible f f :=
@@ -1533,10 +1588,7 @@ when every member of `K` is `g`. -/
 theorem needs_iff_only {possible : (F → Bool) → Prop} {f g : F} {K : F → Prop}
     (needed : NeedsSome possible f K) (alone : CarriesAlone possible f K) (member : K g) :
     Needs possible f g ↔ ∀ h, K h → h = g :=
-  ⟨fun needs h other => match alone h other with
-    | ⟨a, here, continues, _, only⟩ => (only g member (needs a here continues)).symm,
-   fun only a here continues => match needed a here continues with
-    | ⟨h, other, held⟩ => Eq.subst (motive := fun x => a x = true) (only h other) held⟩
+  needsPart_iff_only needed alone member
 
 /-- **Drawn along need, self-concern reaches a member of a class of alternatives exactly where it
 is the only member.** With copies each able to carry the continuation alone, the presupposition
@@ -1613,6 +1665,160 @@ theorem two_copies :
      ((needs_iff_only needsSome carriesAlone (.inr rfl)).mp needs .first (.inl rfl))⟩
 
 end Copies
+
+/-! ## Need on the base: a family of conditions and what feeds it -/
+
+namespace Flow
+
+variable {C : Type}
+
+/-- The courses of a family fed only from `K`: a flow with its web that balances, in which only
+active formations give and only members of `K` give to a condition of the family. -/
+def FedOnlyBy (cs : List C) (K : F → Prop) (ω : Flow F C × Web F C) : Prop :=
+  ω.1.Balances ω.2 ∧ ω.1.Acting ω.2 ∧
+    ∀ t g c, c ∈ cs → g ∈ ω.1.present t → 0 < ω.1.give t g c → K g
+
+/-- `f` draws past the family's stock: across a stretch of `n` steps from `T`, longer than the
+family's stock at `T`, at every step `f` is active, takes part and takes from the family. -/
+def DrawsPast (cs : List C) (T n : Nat) (ω : Flow F C × Web F C) (f : F) : Prop :=
+  ω.2.stock cs T < n ∧ ∀ t, T ≤ t → t < T + n →
+    ω.2.active t f ∧ f ∈ ω.1.present t ∧ 0 < total cs (ω.1.take t f)
+
+/-- `g` gives to the family within the stretch: at some step of it `g` takes part and gives to
+the family. -/
+def GivesWithin (cs : List C) (T n : Nat) (ω : Flow F C × Web F C) (g : F) : Prop :=
+  ∃ t, T ≤ t ∧ t < T + n ∧ g ∈ ω.1.present t ∧ 0 < total cs (ω.1.give t g)
+
+/-- **A formation drawing past its family's stock needs some member of what feeds it.** On every
+course of a family fed only from `K`, a formation that draws past the family's stock across a
+stretch has some member of `K` giving to the family within the stretch: what was taken beyond
+the stock was given. -/
+theorem needsSome_of_drawsPast (cs : List C) (K : F → Prop) (T n : Nat) (f : F) :
+    NeedsSomePart (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f K :=
+  fun ω ⟨balances, _, only⟩ ⟨below, draws⟩ =>
+    have taken : n ≤ total (steps T n) (ω.1.uptake cs) :=
+      Nat.le_trans (Nat.le_trans (Nat.le_of_eq (Nat.one_mul n).symm)
+          (steps_ge (q := fun _ => 1) T n fun _ _ => Nat.le_refl 1))
+        (total_le (steps T n) fun t mem => match between_of_mem_steps mem with
+          | ⟨from_, to⟩ => uptake_pos (draws t from_ to).2.1 (draws t from_ to).2.2)
+    have given : 0 < total (steps T n) (ω.1.replenishment cs) :=
+      Nat.pos_of_ne_zero fun zero => Nat.lt_irrefl (ω.2.stock cs T)
+        (Nat.lt_of_lt_of_le below (Nat.le_trans taken (Nat.le_trans (Nat.le_add_left _ _)
+          (Nat.le_of_eq ((balances.accumulates cs T n).trans
+            ((congrArg (ω.2.stock cs T + ·) zero).trans (Nat.add_zero _)))))))
+    match total_pos (steps T n) given with
+    | ⟨t, mem, replenished⟩ => match between_of_mem_steps mem with
+      | ⟨from_, to⟩ => match total_pos cs replenished with
+        | ⟨c, inside, positive⟩ => match total_pos (ω.1.present t) positive with
+          | ⟨g, present, gives⟩ =>
+            ⟨g, only t g c inside present gives, t, from_, to, present,
+             total_pos_of_mem inside gives⟩
+
+/-- **On the base, a feeder is needed exactly where it is the only one.** Where each member of
+`K` can feed the family alone while `f` draws past its stock, `f` needs the giving of the member
+`g` exactly when every member of `K` is `g`. -/
+theorem needs_giver_iff_only {cs : List C} {K : F → Prop} {T n : Nat} {f g : F}
+    (alone : PartAlone (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f K)
+    (member : K g) :
+    NeedsPart (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f g ↔ ∀ h, K h → h = g :=
+  needsPart_iff_only (needsSome_of_drawsPast cs K T n f) alone member
+
+end Flow
+
+namespace Feeders
+
+open Copies (Part copies)
+
+/-- The flow in which the first copy feeds: at every step the user and the first take part, the
+user takes one unit of the one condition and the first gives one. -/
+def withFirst : Flow Part Unit where
+  present := fun _ => [.user, .first]
+  take := fun _ x _ => match x with
+    | .user => 1
+    | .first => 0
+    | .second => 0
+  give := fun _ x _ => match x with
+    | .user => 0
+    | .first => 1
+    | .second => 0
+
+/-- The flow in which the second copy feeds. -/
+def withSecond : Flow Part Unit where
+  present := fun _ => [.user, .second]
+  take := fun _ x _ => match x with
+    | .user => 1
+    | .first => 0
+    | .second => 0
+  give := fun _ x _ => match x with
+    | .user => 0
+    | .first => 0
+    | .second => 1
+
+/-- The web: the condition stands at zero, and every formation is active. -/
+def web : Web Part Unit :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ _ _ => True, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- What takes part in either flow is the user or that flow's copy. -/
+theorem mem_pair {x a b : Part} (mem : x ∈ [a, b]) : x = a ∨ x = b :=
+  match mem_cons_cases mem with
+  | .inl same => .inl same
+  | .inr rest => match mem_cons_cases rest with
+    | .inl same => .inr same
+    | .inr empty => nomatch empty
+
+theorem fedOnlyBy_withFirst : Flow.FedOnlyBy [()] copies (withFirst, web) :=
+  ⟨fun _ _ => rfl, fun _ _ _ _ _ => trivial, fun t _ c _ present gives =>
+    match mem_pair present with
+    | .inl user => absurd gives (Eq.subst (motive := fun y => ¬ 0 < withFirst.give t y c) user.symm
+        (Nat.lt_irrefl 0))
+    | .inr first => .inl first⟩
+
+theorem fedOnlyBy_withSecond : Flow.FedOnlyBy [()] copies (withSecond, web) :=
+  ⟨fun _ _ => rfl, fun _ _ _ _ _ => trivial, fun t _ c _ present gives =>
+    match mem_pair present with
+    | .inl user => absurd gives (Eq.subst (motive := fun y => ¬ 0 < withSecond.give t y c) user.symm
+        (Nat.lt_irrefl 0))
+    | .inr second => .inr second⟩
+
+theorem drawsPast_withFirst : Flow.DrawsPast [()] 0 1 (withFirst, web) .user :=
+  ⟨Nat.one_pos, fun _ _ _ => ⟨trivial, .head _, Nat.one_pos⟩⟩
+
+theorem drawsPast_withSecond : Flow.DrawsPast [()] 0 1 (withSecond, web) .user :=
+  ⟨Nat.one_pos, fun _ _ _ => ⟨trivial, .head _, Nat.one_pos⟩⟩
+
+/-- Each copy feeds the user alone. -/
+theorem partAlone :
+    PartAlone (Flow.FedOnlyBy [()] copies) (Flow.DrawsPast [()] 0 1) (Flow.GivesWithin [()] 0 1)
+      .user copies :=
+  fun g member => match g, member with
+    | .user, member => absurd member Copies.user_not_copy
+    | .first, _ => ⟨(withFirst, web), fedOnlyBy_withFirst, drawsPast_withFirst,
+        ⟨0, Nat.le_refl 0, Nat.one_pos, .tail _ (.head _), Nat.one_pos⟩,
+        fun _ other ⟨_, _, _, present, _⟩ => match mem_pair present with
+          | .inl user => absurd (Eq.subst (motive := copies) user other) Copies.user_not_copy
+          | .inr first => first⟩
+    | .second, _ => ⟨(withSecond, web), fedOnlyBy_withSecond, drawsPast_withSecond,
+        ⟨0, Nat.le_refl 0, Nat.one_pos, .tail _ (.head _), Nat.one_pos⟩,
+        fun _ other ⟨_, _, _, present, _⟩ => match mem_pair present with
+          | .inl user => absurd (Eq.subst (motive := copies) user other) Copies.user_not_copy
+          | .inr second => second⟩
+
+/-- **Two feeders on a flow: the user, drawing past the stock, needs some feeder's giving and
+neither feeder's.** -/
+theorem two_feeders :
+    NeedsSomePart (Flow.FedOnlyBy [()] copies) (Flow.DrawsPast [()] 0 1)
+        (Flow.GivesWithin [()] 0 1) .user copies ∧
+      ¬ NeedsPart (Flow.FedOnlyBy [()] copies) (Flow.DrawsPast [()] 0 1)
+        (Flow.GivesWithin [()] 0 1) .user .first ∧
+      ¬ NeedsPart (Flow.FedOnlyBy [()] copies) (Flow.DrawsPast [()] 0 1)
+        (Flow.GivesWithin [()] 0 1) .user .second :=
+  ⟨Flow.needsSome_of_drawsPast [()] copies 0 1 .user,
+   fun needs => Part.noConfusion
+     ((Flow.needs_giver_iff_only partAlone (.inl rfl)).mp needs .second (.inr rfl)),
+   fun needs => Part.noConfusion
+     ((Flow.needs_giver_iff_only partAlone (.inr rfl)).mp needs .first (.inl rfl))⟩
+
+end Feeders
 
 /-! ## What self-concern alone ranks -/
 
@@ -1699,6 +1905,43 @@ theorem ended_below {items : List X} {own : Pos → X → Bool} {late : X → Bo
   (every_increasingInOwn_iff_includes adds).mpr (includes_of_ended ended agree)
 
 end Weighting
+
+/-- **The coupled ending, ranked below by self-concern, in one theorem.** Under balance, with only
+active formations giving, activity needing support and the renewal of a family of conditions gated
+on the family as one, let the family's uptake exceed its replenishment over `n` steps from `T`,
+from a stock below `n + m`, and let every member of every generation of descent from `T + n` on
+depend on some condition of the family at a need of at least `m`. Then no generation after `T + n`
+has a member; so a course over listed (step, formation) items admitting only members of their
+generation is ranked below, by every order increasing in a standpoint's own continuation, every
+course that agrees with it up to `T + n` and adds to that standpoint's continuation. -/
+theorem Flow.coupled_ending_ranked_below {X : Type} {L : Flow X X} {W : Web X X}
+    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m)
+    (coupled : ∀ k p, p ∈ G.family (T + n + k) →
+      ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e)
+    {items : List (Nat × X)} {a b : Nat × X → Bool}
+    (reads : ∀ x, x ∈ items → b x = true → x.2 ∈ G.family x.1)
+    (agree : ∀ x, x ∈ items → x.1 ≤ T + n → a x = b x)
+    {own : Pos → Nat × X → Bool} (p : Pos) (adds : Weighting.AddsOwn items (own p) a b) :
+    ∀ R, Weighting.IncreasingInOwn items (own p) R → R b a :=
+  have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k y mem =>
+    match ListTests.mem_flatMap_iff.mp mem with
+    | ⟨q, mq, kid⟩ => match coupled k q mq with
+      | ⟨_, inside, depends, high⟩ =>
+        GroupEnding.Flow.family_childless balances acting dependent gated excess start k inside
+          depends high y (descended (T + n + k) q y mq kid)
+  (Weighting.every_increasingInOwn_iff_includes adds).mpr fun x listed admits =>
+    match Nat.lt_or_ge (T + n) x.1 with
+    | .inl after => match Nat.le.dest after with
+      | ⟨k, at_⟩ => absurd (Eq.subst (motive := fun s => x.2 ∈ G.family s)
+          ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm (reads x listed admits))
+          (ended k x.2)
+    | .inr before => (agree x listed before).trans admits
 
 /-! ## Grades: standing and status -/
 

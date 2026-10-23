@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-23T05:28:43+00:00",
+  "reviewed_at_utc": "2026-10-23T07:08:56+00:00",
   "statement": {
     "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs exactly where that copy is the only one.",
     "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它恰在某个副本是唯一者处达到其所需的该副本。"
@@ -63,12 +63,48 @@
         "Becoming.Copies.carriesAlone",
         "Becoming.Copies.two_copies"
       ]
+    },
+    {
+      "en": "Over possible courses of any type, a formation's continuation needs another's part where that part is taken on every possible course on which the first continues, the two read off the course. Where it needs the part of some member of a class and each member can take it alone, it needs a member's part exactly where that member is the only one; one reading for both is the marking case.",
+      "zh": "在任何类型的可能进程上，一个构成的延续需要另一个的份，指在前者延续的每条可能进程上后者都尽其份，二者从进程读出。它需要某类中某成员的份、且每个成员都能单独尽之时，恰在某成员是唯一者时需要该成员的份；两者用同一读法，是标记的情形。",
+      "declarations": [
+        "Becoming.NeedsPart",
+        "Becoming.NeedsSomePart",
+        "Becoming.PartAlone",
+        "Becoming.needsPart_iff_only",
+        "Becoming.Marked"
+      ]
+    },
+    {
+      "en": "On the base, over the flows with their webs that balance, in which only active formations give and only a class gives to a family of conditions, a formation drawing past the family's stock across a stretch has some member of the class giving to the family within it, and needs a given feeder's giving exactly where that feeder is the only one. Witness: two flows of one condition, each fed by one copy.",
+      "zh": "在基底上，就平衡、只有活跃构成给予、且只有某一类给予某条件族的流及其依存网而言，在一段步上汲取超出该族存量的构成，在这段之内有该类的某成员给予该族；它恰在某供给者是唯一者时需要该供给者的给予。见证：同一条件的两个流，各由一个副本供给。",
+      "declarations": [
+        "Becoming.Flow.FedOnlyBy",
+        "Becoming.Flow.DrawsPast",
+        "Becoming.Flow.GivesWithin",
+        "Becoming.Flow.needsSome_of_drawsPast",
+        "Becoming.Flow.needs_giver_iff_only",
+        "Becoming.Feeders.withFirst",
+        "Becoming.Feeders.withSecond",
+        "Becoming.Feeders.web",
+        "Becoming.Feeders.mem_pair",
+        "Becoming.Feeders.fedOnlyBy_withFirst",
+        "Becoming.Feeders.fedOnlyBy_withSecond",
+        "Becoming.Feeders.drawsPast_withFirst",
+        "Becoming.Feeders.drawsPast_withSecond",
+        "Becoming.Feeders.partAlone",
+        "Becoming.Feeders.two_feeders"
+      ]
     }
   ],
   "hypotheses": [
     {
       "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; the relation a self is drawn along supplied, its base instances feeding and being affected; possible courses a supplied predicate on markings of the formations that continue; the presupposition a hypothesis of the laws it appears in, never asserted.",
       "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；画自我所沿的关系是给定的，其基底实例为供养与受影响；可能的进程是对“哪些构成延续”之标记的给定谓词；预设只作为出现它的规律的假设，从不断言。"
+    },
+    {
+      "en": "On the base: flows with their webs that balance and in which only active formations give; the class of possible feeders of a family supplied, and that each can feed it alone (PartAlone) supplied; a consumer drawing past the stock across a stretch longer than the stock.",
+      "zh": "在基底上：平衡且只有活跃构成给予的流及其依存网；某条件族可能的供给者之类是给定的，每个能否单独供给（PartAlone）也是给定的；消耗者在长于存量的一段步上汲取超出存量。"
     }
   ],
   "does_not_show": [
@@ -102,6 +138,16 @@
       "en": "Any order: scope fixes whose losses count; ranking is left to C or to self-concern's monotonicity.",
       "zh": "任何次序：范围只定谁的损失算数；排序留给 C 或自我关切的单调性。",
       "kind": "non-implication"
+    },
+    {
+      "en": "Which flows are possible, or that a given feeder can feed a family alone: both are premises, supplied with the class of feeders.",
+      "zh": "哪些流是可能的，或某供给者能单独供给某族：二者都是前提，与供给者之类一同给定。",
+      "kind": "scope"
+    },
+    {
+      "en": "Need without end: on the base a continuation is read as drawing past the stock within a stretch; that drawing without end needs giving without end holds in the core only doubly negated.",
+      "zh": "无尽的“所需”：在基底上，延续读作在一段步之内汲取超出存量；无尽的汲取需要无尽的给予，在核心中只以双重否定成立。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [
@@ -118,6 +164,13 @@
         "en": "Divided: two standpoints, each its own center along the empty relation; their closures differ, and the de se and de dicto readings part (Divided.selfAscribed_not_invariant).",
         "zh": "Divided：沿空关系各自为中心的两个立场；其闭包不同，从己与从言两种读法分开（Divided.selfAscribed_not_invariant）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Feeders: one condition, the user taking a unit at every step, fed in one possible flow by the first copy alone and in another by the second alone; the user needs some feeder's giving and neither feeder's (Feeders.two_feeders).",
+        "zh": "Feeders：一个条件，使用者每步取一单位，在一个可能的流中只由第一个副本供给，在另一个中只由第二个供给；使用者需要某个供给者的给予，而两个都不需要（Feeders.two_feeders）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -129,12 +182,12 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T051150.969269Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study section 373; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T051150.969269Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T070625.290320Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373 and 378; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T070625.290320Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373 与 378 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "A predicate of possible courses read off a web, so that need and copies are stated on the base; graded need, under which a copy is needed in degree and the class's continuation is stated; an independent review.",
-    "zh": "从依存网读出可能进程的谓词，使“所需”与副本在基底上陈述；分级的“所需”，使副本按程度被需要、类的延续得以陈述；独立审查。"
+    "en": "The possible flows read off a web, so that which feeders can feed a family alone is derived; graded need, under which a feeder is needed in degree and the class's continuation is stated; an independent review.",
+    "zh": "从依存网读出可能的流，使哪些供给者能单独供给某族得以导出；分级的“所需”，使供给者按程度被需要、类的延续得以陈述；独立审查。"
   },
   "correspondence": {
     "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting exactly at copies. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
@@ -242,33 +295,53 @@
         "Becoming.Copies.user_not_copy",
         "Becoming.Copies.withFirst",
         "Becoming.Copies.withSecond",
+        "Becoming.Feeders.drawsPast_withFirst",
+        "Becoming.Feeders.drawsPast_withSecond",
+        "Becoming.Feeders.fedOnlyBy_withFirst",
+        "Becoming.Feeders.fedOnlyBy_withSecond",
+        "Becoming.Feeders.mem_pair",
+        "Becoming.Feeders.partAlone",
+        "Becoming.Feeders.two_feeders",
+        "Becoming.Feeders.web",
+        "Becoming.Feeders.withFirst",
+        "Becoming.Feeders.withSecond",
+        "Becoming.Flow.DrawsPast",
+        "Becoming.Flow.FedOnlyBy",
+        "Becoming.Flow.GivesWithin",
         "Becoming.Flow.centersWithin_feeding_of_common",
         "Becoming.Flow.centersWithin_influence_of_common",
+        "Becoming.Flow.needsSome_of_drawsPast",
+        "Becoming.Flow.needs_giver_iff_only",
         "Becoming.Flow.ownClosure_feeding_invariant_of_common",
         "Becoming.Flow.ownClosure_influence_invariant_of_common",
+        "Becoming.Marked",
         "Becoming.Needs",
         "Becoming.Needs.refl",
         "Becoming.Needs.trans",
+        "Becoming.NeedsPart",
         "Becoming.NeedsSome",
+        "Becoming.NeedsSomePart",
+        "Becoming.PartAlone",
         "Becoming.forced_member_iff_only",
         "Becoming.forced_needs_iff",
+        "Becoming.needsPart_iff_only",
         "Becoming.needs_iff_only",
         "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
         "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "8d9cd84b5a8b21c364031636d063f8220cf5b7d6022bcf69effcc7e462120102"
+      "sha256": "303c1ba5de64faab1818d4607f10a7c0474a838e0b853441a7447e43fbeea795"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json",
       "role": "receipt",
-      "sha256": "28c7a3ed762f946582851f68fecdd6b27e0243f35bff2b63c4b492a5fe68fdc7"
+      "sha256": "2b4a2c074b8c7ad6f0d20c1a62ff735e6faaa921ae4ebe6fa94ce8083f9dc9cc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "dd2aefd65c4b84759dc56c534a23af3b7056fbf9b1f0a573da88b7b8ba2b2392"
+      "sha256": "5e1be6ebf3d7b333cc78a492c5371411c9859c2651abe4847f9371dd6af343b2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -278,17 +351,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "29cd2209ecbd75c0d6fab730e873f4e417fe28c59be98c4ca04b2bc31ff2a4c8"
+      "sha256": "bc55fb46cfe64ebf02614977d486fb6693a3e5a3b713283f7d23c0619f9470de"
     },
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "66c59407a266e4e558ff9329a0a28be3671de0aa8be3916728c92d99cc295d9b"
+      "sha256": "827d0c993ccd463fd612efb6d7677387bcb55dd90453eaeba30d08b26e8d01ee"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae"
+      "sha256": "e60b3eb021e0f4568ffbc3c00a5769274b54fac4469de6c1e85cb3ef508a2762"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -299,7 +372,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -309,6 +382,10 @@
     {
       "en": "23 October 2026: added (IV3): the route through dependence, the relation a self is drawn along read as one its continuation is carried along; the de se and de dicto readings agree exactly where the centers lie within one another's closures; need and copies; after a literature check (significance review, dependence check); study section 373.",
       "zh": "2026年10月23日：新增（IV3）：经由依存的路线，把画自我所沿的关系读作其延续所凭借者；从己与从言两种读法恰在诸中心彼此位于对方闭包之内处一致；“所需”与副本；附文献核查（显著性审查“依存”核查）；研究第 373 节。"
+    },
+    {
+      "en": "23 October 2026: extended (IV3b): need stated for any courses with two readings, the marking case being the earlier need; need on the base over balanced flows fed only from a class, with the Feeders witness; study section 378.",
+      "zh": "2026年10月23日：扩展（IV3b）：“所需”对任意进程以两种读法陈述，先前的“所需”是标记的情形；基底上的“所需”，就只由某一类供给的平衡流而言，附 Feeders 见证；研究第 378 节。"
     }
   ]
 }

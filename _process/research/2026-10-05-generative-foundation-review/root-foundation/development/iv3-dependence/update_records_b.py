@@ -102,8 +102,8 @@ scope['hypotheses'].append(t(
     '在基底上：平衡且只有活跃构成给予的流及其依存网；某条件族可能的供给者之类是给定的，每个能否单独供给（PartAlone）也是给定的；'
     '消耗者在长于存量的一段步上汲取超出存量。'))
 scope['does_not_show'] += [
-    {**t('Which flows are possible, or that a given feeder can feed a family alone: supplied, not derived from a web.',
-         '哪些流是可能的，或某供给者能单独供给某族：给定的，不从依存网导出。'), 'kind': 'scope'},
+    {**t('Which flows are possible, or that a given feeder can feed a family alone: both are premises, supplied with the class of feeders.',
+         '哪些流是可能的，或某供给者能单独供给某族：二者都是前提，与供给者之类一同给定。'), 'kind': 'scope'},
     {**t('Need without end: on the base a continuation is read as drawing past the stock within a stretch; that drawing '
          'without end needs giving without end holds in the core only doubly negated.',
          '无尽的“所需”：在基底上，延续读作在一段步之内汲取超出存量；无尽的汲取需要无尽的给予，在核心中只以双重否定成立。'),

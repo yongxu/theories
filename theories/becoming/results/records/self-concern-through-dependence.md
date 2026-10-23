@@ -14,11 +14,14 @@
 2. Centers that at one step take part, require one condition and give to it lie within one another's feeding closures; centers that depend on one condition and exchange with it lie within one another's influence closures. So self-concern held de se along feeding, or along being affected, is one from all of them. (`Becoming.Flow.centersWithin_feeding_of_common`, `Becoming.Flow.centersWithin_influence_of_common`, `Becoming.Flow.ownClosure_feeding_invariant_of_common`, `Becoming.Flow.ownClosure_influence_invariant_of_common`)
 3. Over possible courses, a formation needs another where the other continues on every course on which it does. Need is its own closure, so drawn along need a standpoint's presupposition reaches exactly what its continuation needs. (`Becoming.Needs`, `Becoming.Needs.refl`, `Becoming.Needs.trans`, `Becoming.withinClosure_needs_iff`, `Becoming.forced_needs_iff`)
 4. Where a formation needs some member of a class and each member can carry its continuation alone, it needs a member exactly where that member is the only one, and the presupposition drawn along need reaches it exactly then. Witness: with two copies the user needs some copy and neither of the two. (`Becoming.NeedsSome`, `Becoming.CarriesAlone`, `Becoming.needs_iff_only`, `Becoming.forced_member_iff_only`, `Becoming.Copies.Part`, `Becoming.Copies.copies`, `Becoming.Copies.possible`, `Becoming.Copies.withFirst`, `Becoming.Copies.withSecond`, `Becoming.Copies.user_not_copy`, `Becoming.Copies.needsSome`, `Becoming.Copies.carriesAlone`, `Becoming.Copies.two_copies`)
+5. Over possible courses of any type, a formation's continuation needs another's part where that part is taken on every possible course on which the first continues, the two read off the course. Where it needs the part of some member of a class and each member can take it alone, it needs a member's part exactly where that member is the only one; one reading for both is the marking case. (`Becoming.NeedsPart`, `Becoming.NeedsSomePart`, `Becoming.PartAlone`, `Becoming.needsPart_iff_only`, `Becoming.Marked`)
+6. On the base, over the flows with their webs that balance, in which only active formations give and only a class gives to a family of conditions, a formation drawing past the family's stock across a stretch has some member of the class giving to the family within it, and needs a given feeder's giving exactly where that feeder is the only one. Witness: two flows of one condition, each fed by one copy. (`Becoming.Flow.FedOnlyBy`, `Becoming.Flow.DrawsPast`, `Becoming.Flow.GivesWithin`, `Becoming.Flow.needsSome_of_drawsPast`, `Becoming.Flow.needs_giver_iff_only`, `Becoming.Feeders.withFirst`, `Becoming.Feeders.withSecond`, `Becoming.Feeders.web`, `Becoming.Feeders.mem_pair`, `Becoming.Feeders.fedOnlyBy_withFirst`, `Becoming.Feeders.fedOnlyBy_withSecond`, `Becoming.Feeders.drawsPast_withFirst`, `Becoming.Feeders.drawsPast_withSecond`, `Becoming.Feeders.partAlone`, `Becoming.Feeders.two_feeders`)
 
 <a id="conditions--条件"></a>
 ## Conditions
 
 - No axiom. Standpoints and formations as types, each standpoint's center given as a function; the relation a self is drawn along supplied, its base instances feeding and being affected; possible courses a supplied predicate on markings of the formations that continue; the presupposition a hypothesis of the laws it appears in, never asserted.
+- On the base: flows with their webs that balance and in which only active formations give; the class of possible feeders of a family supplied, and that each can feed it alone (PartAlone) supplied; a consumer drawing past the stock across a stretch longer than the stock.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -29,22 +32,25 @@
 - What the class's continuation is owed when there are copies: the law says which members are reached, and no significance of a single formation states the class. Witness: `Becoming.Copies.two_copies`.
 - That along being affected the shared scope carries the means-end warrant: what affects a continuation need not be needed by it.
 - Any order: scope fixes whose losses count; ranking is left to C or to self-concern's monotonicity.
+- Which flows are possible, or that a given feeder can feed a family alone: both are premises, supplied with the class of feeders.
+- Need without end: on the base a continuation is read as drawing past the stock within a stretch; that drawing without end needs giving without end holds in the core only doubly negated.
 - **Counterexample:** Copies: the user continues with the first copy alone on one possible course and with the second alone on the other, so it needs some copy and neither copy (Copies.two_copies). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 - **Counterexample:** Divided: two standpoints, each its own center along the empty relation; their closures differ, and the de se and de dicto readings part (Divided.selfAscribed_not_invariant). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
+- **Counterexample:** Feeders: one condition, the user taking a unit at every step, fed in one possible flow by the first copy alone and in another by the second alone; the user needs some feeder's giving and neither feeder's (Feeders.two_feeders). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
 **Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · No ethical premise and no Lean axiom is used. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · Encoding a desired verdict does not justify its premises. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T051150.969269Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study section 373; not independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T070625.290320Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373 and 378; not independently reviewed.
 
 Canonical source: [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-A predicate of possible courses read off a web, so that need and copies are stated on the base; graded need, under which a copy is needed in degree and the class's continuation is stated; an independent review.
+The possible flows read off a web, so that which feeders can feed a family alone is derived; graded need, under which a feeder is needed in degree and the class's continuation is stated; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -74,8 +80,8 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.CarriesAlone`, `Becoming.CentersWithin`, `Becoming.Copies.Part`, `Becoming.Copies.carriesAlone`, `Becoming.Copies.copies`, `Becoming.Copies.needsSome`, `Becoming.Copies.possible`, `Becoming.Copies.two_copies`, `Becoming.Copies.user_not_copy`, `Becoming.Copies.withFirst`, `Becoming.Copies.withSecond`, `Becoming.Flow.centersWithin_feeding_of_common`, `Becoming.Flow.centersWithin_influence_of_common`, `Becoming.Flow.ownClosure_feeding_invariant_of_common`, `Becoming.Flow.ownClosure_influence_invariant_of_common`, `Becoming.Needs`, `Becoming.Needs.refl`, `Becoming.Needs.trans`, `Becoming.NeedsSome`, `Becoming.forced_member_iff_only`, `Becoming.forced_needs_iff`, `Becoming.needs_iff_only`, `Becoming.ownClosure_standpointInvariant_iff_centersWithin`, `Becoming.selfAscribed_iff_withinSome_iff_centersWithin`, `Becoming.withinClosure_iff_of_centersWithin`, `Becoming.withinClosure_needs_iff` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json) | — |
+| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.CarriesAlone`, `Becoming.CentersWithin`, `Becoming.Copies.Part`, `Becoming.Copies.carriesAlone`, `Becoming.Copies.copies`, `Becoming.Copies.needsSome`, `Becoming.Copies.possible`, `Becoming.Copies.two_copies`, `Becoming.Copies.user_not_copy`, `Becoming.Copies.withFirst`, `Becoming.Copies.withSecond`, `Becoming.Feeders.drawsPast_withFirst`, `Becoming.Feeders.drawsPast_withSecond`, `Becoming.Feeders.fedOnlyBy_withFirst`, `Becoming.Feeders.fedOnlyBy_withSecond`, `Becoming.Feeders.mem_pair`, `Becoming.Feeders.partAlone`, `Becoming.Feeders.two_feeders`, `Becoming.Feeders.web`, `Becoming.Feeders.withFirst`, `Becoming.Feeders.withSecond`, `Becoming.Flow.DrawsPast`, `Becoming.Flow.FedOnlyBy`, `Becoming.Flow.GivesWithin`, `Becoming.Flow.centersWithin_feeding_of_common`, `Becoming.Flow.centersWithin_influence_of_common`, `Becoming.Flow.needsSome_of_drawsPast`, `Becoming.Flow.needs_giver_iff_only`, `Becoming.Flow.ownClosure_feeding_invariant_of_common`, `Becoming.Flow.ownClosure_influence_invariant_of_common`, `Becoming.Marked`, `Becoming.Needs`, `Becoming.Needs.refl`, `Becoming.Needs.trans`, `Becoming.NeedsPart`, `Becoming.NeedsSome`, `Becoming.NeedsSomePart`, `Becoming.PartAlone`, `Becoming.forced_member_iff_only`, `Becoming.forced_needs_iff`, `Becoming.needsPart_iff_only`, `Becoming.needs_iff_only`, `Becoming.ownClosure_standpointInvariant_iff_centersWithin`, `Becoming.selfAscribed_iff_withinSome_iff_centersWithin`, `Becoming.withinClosure_iff_of_centersWithin`, `Becoming.withinClosure_needs_iff` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
@@ -89,7 +95,8 @@ Aliases: `self-concern through dependence`, `经由依存的自我关切`, `Beco
 ### History
 
 - 23 October 2026: added (IV3): the route through dependence, the relation a self is drawn along read as one its continuation is carried along; the de se and de dicto readings agree exactly where the centers lie within one another's closures; need and copies; after a literature check (significance review, dependence check); study section 373.
+- 23 October 2026: extended (IV3b): need stated for any courses with two readings, the marking case being the earlier need; need on the base over balanced flows fed only from a class, with the Feeders witness; study section 378.
 
 </details>
 
-Documentary review UTC: `2026-10-23T05:28:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-23T07:08:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

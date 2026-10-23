@@ -13,18 +13,20 @@
 1. An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern's monotonicity is C's premise. (`Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.increasingInOwn_iff_increasing`)
 2. What every such order shares is exactly the widenings that add to its own continuation. Where one course adds to it, every such order ranks it above the other exactly where the other keeps nothing beyond it; where the other keeps an item beyond, some positive weighting, such an order, ranks the other higher. (`Becoming.Weighting.widensOwn_iff_every_increasingInOwn`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.some_increasingInOwn_reverses`)
 3. A course that admits nothing from an ending on, and agrees with another before it, keeps nothing beyond it; so from every standpoint whose own continuation the other adds to, every order increasing in its own continuation ranks the ending below. (`Becoming.Weighting.includes_of_ended`, `Becoming.Weighting.ended_below`)
+4. Joined with coupled ending in one theorem: where a family of conditions with gated renewal is drawn beyond it over a stretch and every member of every later generation depends on the family, no later generation has a member, and the generations' course is ranked below, by every order increasing in a standpoint's own continuation, every course agreeing with it up to the ending and adding to that continuation. (`Becoming.Flow.coupled_ending_ranked_below`)
 
 <a id="conditions--条件"></a>
 ## Conditions
 
 - No axiom. A finite listing of items; two-valued admission; an order a relation on courses, not assumed complete, transitive or additive; a standpoint's own continuation a supplied marking of items, and the ending a supplied marking of the items from the ending on.
+- For the joined theorem: the premises of coupled ending (balance, only active formations giving, activity needing support, renewal gated on the family, excess over a stretch from a stock below it and the least need), every later member depending on the family, a course admitting only members of their generation, agreement before the ending.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - That a standpoint's order is increasing in its own continuation: a premise, weaker than C's.
 - Comparisons in which the other course keeps something beyond, as a copy continuing without the ended condition does: some such order ranks them either way. Witness: `Becoming.Weighting.some_increasingInOwn_reverses`.
-- That the dynamics give a course admitting nothing from an ending on: coupled groups ending together gives it where every formation depends on the coupled family, joined here by argument, not by one theorem.
+- That every member of every later generation depends on the coupled family: the joined theorem takes it as a premise, the one-copy case; with an independent member the comparison is mixed.
 - That a risk of ending recurring along one run, with nothing to average over, comes to an ending: not formalized here.
 - That widening is better, or that a ranking obliges anyone: an order is from a standpoint.
 
@@ -33,14 +35,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T051150.969269Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study section 373; not independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T070625.290320Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373 and 378; not independently reviewed.
 
 Canonical source: [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-The ending stated on the base in one theorem with the dynamics of coupled ending; graded orders, how much a standpoint's own continuation weighs, under which comparisons near an ending are decided; an independent review.
+Graded orders, how much a standpoint's own continuation weighs, under which comparisons near an ending are decided; the joined theorem with some members independent of the family; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -56,7 +58,10 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
   - Output: Widening, orders increasing in admission, and a positive weighting deciding a mixed pair.
   - Input: Orders increasing in their own continuation, a weaker class.
   - Preserved conditions: Finite listing, two-valued admission. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
-- related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). The dynamic half: groups whose conditions are coupled end together, nothing selected among them, which gives the course admitting nothing from the ending on.
+- **formal-reuse**: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). The joined theorem uses that a member depending on a family drawn beyond its gated renewal leaves no descendant (GroupEnding.Flow.family_childless).
+  - Output: No member of a generation from the excess on that depends on the family leaves a descendant.
+  - Input: Every later member coupled to the family: no later generation has a member.
+  - Preserved conditions: Balance, only active formations giving, activity needing support, gated renewal, excess from a low stock; descent. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 - related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). After a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants: an independent copy, which makes the comparison mixed.
 - related, not a proved adapter: [self-concern-through-dependence](self-concern-through-dependence.md). The same route's scope, which this order takes as fixed.
 
@@ -65,8 +70,8 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.ended_below`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.includes_of_ended`, `Becoming.Weighting.increasingInOwn_iff_increasing`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.some_increasingInOwn_reverses`, `Becoming.Weighting.widensOwn_iff_every_increasingInOwn` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json) | — |
+| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Flow.coupled_ending_ranked_below`, `Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.ended_below`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.includes_of_ended`, `Becoming.Weighting.increasingInOwn_iff_increasing`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.some_increasingInOwn_reverses`, `Becoming.Weighting.widensOwn_iff_every_increasingInOwn` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
@@ -80,7 +85,8 @@ Aliases: `what self-concern alone ranks`, `单凭自我关切排出什么`, `Bec
 ### History
 
 - 23 October 2026: added (IV3): what an order increasing only in its own continuation ranks, the ending of what everything needs below from every standpoint, an independent copy making the comparison mixed, and C's premise where its own continuation is everything; after a literature check (significance review, dependence check); study section 373.
+- 23 October 2026: extended (IV3b): the ranking of the ending joined with coupled ending in one theorem, replacing the joining by argument; groups-whose-conditions-are-coupled moved from related to a formal-reuse dependency; study section 378.
 
 </details>
 
-Documentary review UTC: `2026-10-23T05:28:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-23T07:08:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

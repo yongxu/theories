@@ -18,3 +18,10 @@ started from.
 
 Re-point: repoint.sh re-pointed every drifting record, including continuation-relative-to-a-class, whose drift (on one-unfolding-root/PLAN.md) is another session's; that record and its line in the rebind log were restored, so its drift stays with its owner.
 The history file of the board had been truncated by the XL4 landing; restore_history.py restored it (a separate commit) before board.py land.
+
+## IV3b
+
+1. `integrate_b.py`; core checker; connectivity `--check` (no new apart roots) and `--write`.
+2. `apply_text_b.py N RECEIPT`, `section9_b.py RECEIPT MAIN N`, `update_records_b.py RECEIPT N`, `sh repoint_b.sh RECEIPT` (drift filtered to the paths IV3b changed).
+3. The scratch copy of the module goes (`tree/Becoming/Weightings.lean`; the IV3 landing had left it); `board_b.py land RECEIPT N THEOREMS DECLS`.
+4. Render, check, links and test with logs outside the repository; commit; merge main, render and fast-forward.
