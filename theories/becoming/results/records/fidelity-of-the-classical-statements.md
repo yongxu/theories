@@ -18,6 +18,7 @@
 - That classical Chinese is the best expression of the core: one English text is compared, in another register.
 - That the result survives a human audit or a second coder on the main-set 經: neither was run, and the coder of the main-set 經 wrote them.
 - Anything about readers (H2): the reading test is not run.
+- That the gain belongs to classical Chinese rather than to the name table's discipline (each name states what it does not carry and is anchored on a declaration): no controlled English edition under the same discipline was measured.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -36,7 +37,7 @@ Canonical source: [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-tr
 <a id="next--下一步"></a>
 ## Next
 
-The second coder on the main-set 經, a human audit, the genre-matched comparison (F3), the naive pass (F4), and the reading test (DESIGN-H2).
+A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and a test of the calibration observation that the authoring model finds less in its own text than another family does.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -71,6 +72,7 @@ Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 ### History
 
 - 22 October 2026: added (FC1); study section 370.
+- 23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.
 
 </details>
 

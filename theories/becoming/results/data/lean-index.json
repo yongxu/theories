@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1896,
-    "distinct_byte_contents": 1496,
+    "lean_paths": 1897,
+    "distinct_byte_contents": 1497,
     "byte_identical_duplicate_groups": 137,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 972,
+      "development-attempt": 973,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 885
@@ -4526,6 +4526,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3-lifting/passing-persistence/tree/Becoming/Persistence.lean",
       "sha256": "28a2f79178184378f12f2eb20176c039e5557809d17293a46494dca7cd410e60",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou4-map/tree/Becoming/GrammarMap.lean",
+      "sha256": "5a22ea5b09b1a621cc91ccca50eeaca9644985bbeb5a21ddc91c51d08108bfd6",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -165990,6 +165999,195 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "5a22ea5b09b1a621cc91ccca50eeaca9644985bbeb5a21ddc91c51d08108bfd6": {
+      "byte_size": 10951,
+      "line_count": 217,
+      "imports": [
+        "Becoming.Grammar"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«传»",
+          "qualified_name_hint": "Becoming.«传»",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "«传则异»",
+          "qualified_name_hint": "Becoming.«传则异»",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "«所及»",
+          "qualified_name_hint": "Becoming.«所及»",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "«所及之传递»",
+          "qualified_name_hint": "Becoming.«所及之传递»",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "«生成»",
+          "qualified_name_hint": "Becoming.«生成»",
+          "line": 66
+        },
+        {
+          "kind": "def",
+          "name": "«守»",
+          "qualified_name_hint": "Becoming.«守»",
+          "line": 71
+        },
+        {
+          "kind": "def",
+          "name": "«退化»",
+          "qualified_name_hint": "Becoming.«退化»",
+          "line": 75
+        },
+        {
+          "kind": "def",
+          "name": "«新而终»",
+          "qualified_name_hint": "Becoming.«新而终»",
+          "line": 78
+        },
+        {
+          "kind": "theorem",
+          "name": "«生成退化不并»",
+          "qualified_name_hint": "Becoming.«生成退化不并»",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "«生成守不并»",
+          "qualified_name_hint": "Becoming.«生成守不并»",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "«守退化不并»",
+          "qualified_name_hint": "Becoming.«守退化不并»",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "«有常则不退化»",
+          "qualified_name_hint": "Becoming.«有常则不退化»",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "«退化则粗不有常»",
+          "qualified_name_hint": "Becoming.«退化则粗不有常»",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "«生败之定当且仅当排中»",
+          "qualified_name_hint": "Becoming.«生败之定当且仅当排中»",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "«生成之所及亦生成»",
+          "qualified_name_hint": "Becoming.«生成之所及亦生成»",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "«退化之所前亦退化»",
+          "qualified_name_hint": "Becoming.«退化之所前亦退化»",
+          "line": 135
+        },
+        {
+          "kind": "theorem",
+          "name": "«三域之周»",
+          "qualified_name_hint": "Becoming.«三域之周»",
+          "line": 142
+        },
+        {
+          "kind": "def",
+          "name": "«阶生成»",
+          "qualified_name_hint": "Becoming.«阶生成»",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "«阶生成则上不退化»",
+          "qualified_name_hint": "Becoming.«阶生成则上不退化»",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Map.step",
+          "line": 177
+        },
+        {
+          "kind": "theorem",
+          "name": "step_irrefl",
+          "qualified_name_hint": "Becoming.Map.step_irrefl",
+          "line": 179
+        },
+        {
+          "kind": "theorem",
+          "name": "Endless.generation",
+          "qualified_name_hint": "Becoming.Map.Endless.generation",
+          "line": 184
+        },
+        {
+          "kind": "def",
+          "name": "still",
+          "qualified_name_hint": "Becoming.Map.still",
+          "line": 191
+        },
+        {
+          "kind": "theorem",
+          "name": "Still.keeping",
+          "qualified_name_hint": "Becoming.Map.Still.keeping",
+          "line": 194
+        },
+        {
+          "kind": "def",
+          "name": "short",
+          "qualified_name_hint": "Becoming.Map.short",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "short_end",
+          "qualified_name_hint": "Becoming.Map.short_end",
+          "line": 200
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.degeneration",
+          "qualified_name_hint": "Becoming.Map.Short.degeneration",
+          "line": 204
+        },
+        {
+          "kind": "theorem",
+          "name": "Short.renews_and_ends",
+          "qualified_name_hint": "Becoming.Map.Short.renews_and_ends",
+          "line": 209
+        }
+      ],
+      "declaration_counts": {
+        "def": 10,
+        "theorem": 18
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],

@@ -34,6 +34,11 @@
       "en": "That the coarsest value-keeping law-carrying class merges exactly the states with the same 文 as one theorem: it follows from four checked laws together.",
       "zh": "守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。",
       "kind": "scope"
+    },
+    {
+      "en": "New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.",
+      "zh": "统一之外之新数学：诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）。WL 为其共同对象立名并串成一条认识论；WL2 把诸律之合陈述为定理。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -146,7 +151,7 @@
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "a2cf7be779eca2b95a9aacc8197bf7be89bdd59ea5534c941ebe0eb838f84400"
+      "sha256": "723309ad7d95963a261da19445a0e677b2c0ca2e0a488b87398f5076a4e8d599"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
@@ -219,6 +224,10 @@
     {
       "en": "22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.",
       "zh": "2026年10月22日（FC1，研究第 370 节）：忠实之测已运行；见 fidelity-of-the-classical-statements。"
+    },
+    {
+      "en": "23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.",
+      "zh": "2026年10月23日：贡献写明以统一为主，并注诸律之已知数学来源；本章注明语言与名表纪律之混淆。"
     }
   ]
 }

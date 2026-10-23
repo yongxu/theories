@@ -18,6 +18,7 @@
 - That any actual book or reader meets the conditions of the laws: the correspondence is not a theorem, and agreement is not confirmation.
 - That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run.
 - That the coarsest value-keeping law-carrying class merges exactly the states with the same 文 as one theorem: it follows from four checked laws together.
+- New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
 
@@ -86,6 +87,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 22 October 2026: added (WL), on Ren's request to join 文理生生 with the epistemology of 文 at the centre and to name 文; study section 346; readings D63.
 - 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.
 - 22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.
+- 23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.
 
 </details>
 

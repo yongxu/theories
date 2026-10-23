@@ -73,13 +73,24 @@ The cross-family check is the calibration set, which both coders coded in full (
   - English: 0.69 (main, 320 segments) and 0.78 (calibration);
   - Chinese: 0.53 (calibration, after one revision of the codebook), below the design's 0.8.
 - **Register is not separated from language.** The 經 are full statements; the English clauses summarize within a long chapter. The genre-matched comparison (F3) that would separate the two was not run. The lower O-rate of the 經 shows they render more of each statement, not less, so omission is not what lowers their X. But the register difference stays.
+- **Language is not separated from the discipline of the vocabulary.** The 經 were written in the 中华本's name table, whose every name states the sense it takes and the senses it does not carry (所不带): grounds, wills, centres and inherited doctrines are stripped name by name, and each name is anchored on a Lean declaration. The English chapter's clauses were not written under a rule of that kind. Fewer excess referents may therefore come mostly from that discipline and the anchoring, not from classical Chinese as such. Two signs point that way. Counting as excess the matches made only through unfolding narrows the difference from −0.71 to −0.40: the 經's names work as pointers to defined constants. And a one-to-one renaming carries the same law (`Becoming.SharedCodes.renamed_carries_iff`), so nothing in the measure binds the gain to the script. The control that would separate the two is a controlled English edition written under the same discipline (an English name table with what each name does not carry, anchored the same way), measured by the same procedure. It was not built.
 - **No human audit.** The design makes a bilingual coder who reads Lean the deciding audit. None was available, so the result is provisional, as §8 of the design says.
 - **One pair of texts.** Both were written by the same AI for the same core. The result speaks to these two codes, not to classical Chinese or English in general.
+
+## An open observation: the author coding its own text
+
+[AI reading, D63] In calibration the Claude coder, the AI that wrote the 中华本, found no excess referent in any of the 26 經 segments, in either pass; the GPT coder, from another model family, found some in 10 of them in the table pass and 12 in the naive pass (means per segment 0.62 and 1.04). On the English clauses, which the same AI also wrote but under no name table, the two coders agreed closely (α 0.91, table pass). One reading is a blind spot: a model under-detects what its own controlled text smuggles in, while another model sees it. The other is that the GPT coder over-reads classical Chinese. The data cannot tell them apart, and 26 segments are few. It is recorded as an open observation, not a result. It bears on the theory's own lines: a selection goes only through what its selector couples to (`Becoming.Web.SelectsThrough`), and what a judge's coupling does not reach it cannot mark, which is the case for checks by a different source (chapter §7, 明). A test would code the same texts with the authoring model and with models of other families, on texts each of them wrote.
+
+## Next
+
+- The controlled English edition under the same discipline, measured by the same procedure: the one control that separates language from discipline.
+- The second coder on the main-set 經, and a human audit.
+- The genre-matched comparison (F3), the naive pass (F4), and the reading test (DESIGN-H2).
 
 ## Reading
 
 [AI reading, D63] On this core, the classical statements of the 中华本 introduce fewer referents the Lean lacks than the English chapter's clauses, and fewer agents. They also leave out fewer of each statement's binders and mismatch fewer connectives. The direction is the same for both coders where both coded.
 
-This supports the narrower claim the WL chapter makes: that the classical code is a fitting reading layer for the core. It does not show that classical Chinese is the best expression. The comparison is with one English text, in another register, with the 經 coded mostly by the AI that wrote them.
+This supports the narrower claim the WL chapter makes: that the classical code, as disciplined by its name table, is a fitting reading layer for the core. It does not show that classical Chinese is the best expression, nor that the gain belongs to the language rather than to the discipline. The comparison is with one English text, in another register, with the 經 coded mostly by the AI that wrote them.
 
 The other half of the design, the H2 reading test, is not run.

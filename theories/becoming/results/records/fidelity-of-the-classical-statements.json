@@ -34,6 +34,11 @@
       "en": "Anything about readers (H2): the reading test is not run.",
       "zh": "任何关于读者之事（H2）：阅读试验未运行。",
       "kind": "non-implication"
+    },
+    {
+      "en": "That the gain belongs to classical Chinese rather than to the name table's discipline (each name states what it does not carry and is anchored on a declaration): no controlled English edition under the same discipline was measured.",
+      "zh": "所得属于古汉语而非名表之纪律（每名写明所不带之义并锚于声明）：未测同样纪律下之受控英文本。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -48,8 +53,8 @@
     "zh": "对齐由二编码者为之（κ 0.952）；672 对由 Claude 编码，校准集与 320 段英文由 GPT 编码（盲，分语言）；X 之 α 英文 0.69，中文 0.53（校准）；按條之聚类自助法、Wilcoxon、McNemar、聚类稳健之 Poisson；计划与修订皆定于读主结果之前。"
   },
   "next_delta": {
-    "en": "The second coder on the main-set 經, a human audit, the genre-matched comparison (F3), the naive pass (F4), and the reading test (DESIGN-H2).",
-    "zh": "主集之经之第二编码者、人工复核、体裁对照（F3）、naive 一遍（F4），与阅读试验（DESIGN-H2）。"
+    "en": "A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and a test of the calibration observation that the authoring model finds less in its own text than another family does.",
+    "zh": "同样纪律下之受控英文本，以同样程序测之；主集之经之第二编码者与人工复核；F3、F4 与阅读试验；并检验校准中之观察：作者模型于己文所检出少于他家模型。"
   },
   "correspondence": {
     "en": "Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run (provenance, not warrant). Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.",
@@ -77,7 +82,7 @@
     {
       "path": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
       "role": "statement",
-      "sha256": "d70d985c588784933e52f5aacfb9f87404db386f8ea39c0d3c9af9d6da87bbef"
+      "sha256": "9fa8a67cce39b1a34b91e8ddd724d8a52ff28b8bd4586c4eb5808a76eaefa5e6"
     },
     {
       "path": "experiments/wenli-reading-transfer/FIDELITY.md",
@@ -112,7 +117,7 @@
     {
       "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "a2cf7be779eca2b95a9aacc8197bf7be89bdd59ea5534c941ebe0eb838f84400"
+      "sha256": "723309ad7d95963a261da19445a0e677b2c0ca2e0a488b87398f5076a4e8d599"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -132,6 +137,10 @@
     {
       "en": "22 October 2026: added (FC1); study section 370.",
       "zh": "2026年10月22日：新增（FC1）；研究第 370 节。"
+    },
+    {
+      "en": "23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.",
+      "zh": "2026年10月23日：语言与名表纪律之混淆及其对照（受控英文本）补入范围与下一步；作者编码者之盲点作为开放观察记于结果。"
     }
   ]
 }
