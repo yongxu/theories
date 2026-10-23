@@ -3416,6 +3416,31 @@
    "module": "Becoming.GrammarMap",
    "category": "general-structure",
    "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«守理则不穷»": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "general-structure",
+   "reason": "a kept regularity can always be kept: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
+  },
+  "Becoming.«有亡之线末步离核»": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "general-structure",
+   "reason": "the last step of a line that ends leaves the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
+  },
+  "Becoming.«有亡之线两端理异»": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "general-structure",
+   "reason": "the ends of a line that ends lie apart in the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
+  },
+  "Becoming.ClosedCapture.lockedAlike_class": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "support",
+   "reason": "a one-line check that being locked or not is a class; the lock line is stated without needing it"
+  },
+  "Becoming.ClosedCapture.Beyond.open_line_ends": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "model-witness",
+   "reason": "the witness read from the loss: its line under favouring ends at the first step, computed on the witness"
   }
  },
  "instances": {

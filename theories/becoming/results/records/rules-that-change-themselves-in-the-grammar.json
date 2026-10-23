@@ -1,0 +1,227 @@
+{
+  "schema_version": 2,
+  "id": "rules-that-change-themselves-in-the-grammar",
+  "title": {
+    "en": "Rules that change themselves, read in the grammar",
+    "zh": "自改其则者于文法中读"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T19:47:47+00:00",
+  "statement": {
+    "en": "A move of a process is a relation; a state going on under a rule that changes itself has a class constant under every move exactly where the rule makes no difference to it; in closed capture the locked course's line goes on while every step alters the loss.",
+    "zh": "变之一动为一际；依自改之则而行之状，其类于每一动下有常，恰当则于状无别；闭合之捕获中，锁住之途其续不尽而损每步皆异。"
+  },
+  "laws": [
+    {
+      "en": "A move of a process read as a relation: where every move is possible from every configuration, a process going alike by a map has the map's class constant under every move; where the process is determined, the converse; a determined process with every move possible goes alike exactly then.",
+      "zh": "以动为际：凡动于凡状皆可行时，依象同行之变，其象之类于每一动下有常；变确定时其逆亦然；确定且凡动可行之变，依象同行恰当如此。",
+      "declarations": [
+        "Becoming.constant_of_goAlike",
+        "Becoming.goAlike_iff_constant",
+        "Becoming.goAlike_of_constant",
+        "Becoming.moveRel"
+      ]
+    },
+    {
+      "en": "For a state going on under a rule that itself goes on, the state's class is constant under every move, and is its own core under every move, exactly where the rule makes no difference to the state; where two rules take one state by one move to different states, the core of the state's class under that move tells them apart.",
+      "zh": "状依一自行之则而行：状之类于每一动下有常、且于每一动下即其核，恰当则于状无别；二则以一动将一状引至不同之状时，此动下状之类之核分二构形。",
+      "declarations": [
+        "Becoming.adaptive_constant_iff",
+        "Becoming.adaptive_core_apart",
+        "Becoming.adaptive_core_iff"
+      ]
+    },
+    {
+      "en": "In closed capture the class of share, rule and step count is constant under the two-level step along every schedule exactly where nothing beyond the share is read.",
+      "zh": "闭合之捕获：份额、规则与步数之类于二层之步下、于每一读之时序皆有常，恰当份额之外无所读。",
+      "declarations": [
+        "Becoming.ClosedCapture.constant_iff_unread"
+      ]
+    },
+    {
+      "en": "Under the premises of lock_outlives_loss, from a locked start the line under being locked or not never ends along the joined two-level step, each step altering the loss; along a joined step whose reading favours at no loss past a bound, with a reading step past it, the line under favouring or not from a favouring start is not unending; in the witness the closed line never ends and the open one ends at its first step.",
+      "zh": "于 lock_outlives_loss 之前提下，自锁住之始，锁与否之类下之续沿合并之二层之步不尽，其每一步于损下皆异；读于过界之损皆不偏向、且有读之步过界者，自偏向之始，偏向与否之类下之续非不尽；见证中闭者续不尽，开者于首步终。",
+      "declarations": [
+        "Becoming.ClosedCapture.Beyond.closed_line",
+        "Becoming.ClosedCapture.Beyond.open_line_ends",
+        "Becoming.ClosedCapture.favouredAlike",
+        "Becoming.ClosedCapture.favouredAlike_class",
+        "Becoming.ClosedCapture.lock_line",
+        "Becoming.ClosedCapture.lockedAlike",
+        "Becoming.ClosedCapture.lockedAlike_class",
+        "Becoming.ClosedCapture.loss",
+        "Becoming.ClosedCapture.loss_alters",
+        "Becoming.ClosedCapture.loss_ends_line",
+        "Becoming.ClosedCapture.orbit_paced",
+        "Becoming.ClosedCapture.turn_fast"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "For moves: every move possible from every configuration (one direction), the process determined (the other).",
+      "zh": "动之律：凡动于凡状可行（一向），变确定（另一向）。"
+    },
+    {
+      "en": "The adaptive process of Becoming.Mechanism: the state stepped by the rule and the move, the rule by the rule and the state.",
+      "zh": "Becoming.Mechanism 之自适之变：状依则与动而行，则依则与状而行。"
+    },
+    {
+      "en": "For the lock line, the premises of lock_outlives_loss (selection not lowering the share under a favouring rule, the rule read monotonically from the share, favouring kept upward, every step adding to the loss); for the line under favouring, those of turned_by_loss (any reading favouring at no loss past a bound, a reading step past it, a favouring start); discrete steps and natural-number losses.",
+      "zh": "锁之续设 lock_outlives_loss 之前提（偏向之则下选择不降份额，则之读随份额单调，偏向向上保持，每步增损）；偏向之续设 turned_by_loss 之前提（读于过界之损皆不偏向，有读之步过界，始而偏向）；离散之步，损为自然数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The lock and absorption laws, and readers formed from the share, in the grammar's own terms: two lock laws are used as lemmas, the rest not used.",
+      "zh": "以文法自身之名述锁与吸回之律及由份额形成之读者：二条锁之律作引理被用，余者未用。",
+      "kind": "scope"
+    },
+    {
+      "en": "Selection of selection as a law relating two grains: here the two levels are one law on one joint carrier, read at one grain.",
+      "zh": "选择之被选择作为联系两种粒度之律：此处二层是一联合载体上之一法，于一种粒度读。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A change of the law of change with no fixed law above it, or a space of rules not given with the carrier.",
+      "zh": "无更上之定法之变法之变，或不随载体给出之规则之空间。",
+      "kind": "scope"
+    },
+    {
+      "en": "That an actual rule is read from what it selects, or that the coordinate beyond the share, named the loss, is a loss to any formation.",
+      "zh": "实有之则读自其所选，或份额之外名为损之坐标对任何形成为损。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T194024.593238Z): Becoming.GrammarRegularity, 25 theorems in 29 declarations, every declaration with an empty axiom report; the checker verifies core purity. This record cites 20 of them. Author review in study section 390; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T194024.593238Z）：Becoming.GrammarRegularity，29 项声明中 25 条定理，公理报告皆空；检查器并核对核心纯净。本记录引其中 20 项。作者审查见研究第 390 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "RuleCapture's lock and absorption laws stated on the grammar's classes; the reading formed from the share (both_reads) and readers formed from the selected (MA2) read in the grammar; selection of selection as a law of the coarse net at two grains.",
+    "zh": "以文法之类述 RuleCapture 之锁与吸回之律；于文法中读由份额形成之读（both_reads）与由所选形成之读者（MA2）；以粗网之两种粒度述选择之被选择。"
+  },
+  "correspondence": {
+    "en": "The root chapter's open item on self-changing conditions, narrowed: a rule changing by a fixed law is stated by taking the rule into the occurrence, the carrier being a parameter; capture through the rule is a course whose line under being locked goes on while the coordinate it does not read alters at every step.",
+    "zh": "根章关于自改之条件之未决项，范围收窄：依定法而变之则，取则入事即可述，载体为参数；经由规则之捕获，是锁之续不尽、而其所不读之坐标每步皆异之途。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+  "aliases": [
+    "Rules that change themselves, read in the grammar",
+    "自改其则者于文法中读",
+    "Becoming.ClosedCapture.lock_line"
+  ],
+  "dependencies": [
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Unread, loopPart, identifiesAlike_iff_unread, goAlike_of_unread, join, joinRead, Accrues, Locked, lock_outlives_loss, turned_by_loss and the Beyond witness.",
+        "zh": "Unread、loopPart、identifiesAlike_iff_unread、goAlike_of_unread、join、joinRead、Accrues、lock_outlives_loss、turned_by_loss 与 Beyond 之见证。"
+      }
+    },
+    {
+      "id": "projection-carrying-a-law",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "adaptive, adaptive_determined, adaptive_state_law_iff.",
+        "zh": "adaptive、adaptive_determined、adaptive_state_law_iff。"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "sameValue, sameValue_class, Law.step, Law.constant_iff_keeps.",
+        "zh": "sameValue、sameValue_class、Law.step、Law.constant_iff_keeps。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«有常之逐点», «类有常当且仅当含于核».",
+        "zh": "«有常之逐点»、«类有常当且仅当含于核»。"
+      }
+    },
+    {
+      "id": "a-regularity-kept-and-changed",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.unending_iff_steps, Law.unending_alike.",
+        "zh": "Law.unending_iff_steps、Law.unending_alike。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ClosedCapture.Beyond.closed_line",
+        "Becoming.ClosedCapture.Beyond.open_line_ends",
+        "Becoming.ClosedCapture.constant_iff_unread",
+        "Becoming.ClosedCapture.favouredAlike",
+        "Becoming.ClosedCapture.favouredAlike_class",
+        "Becoming.ClosedCapture.lock_line",
+        "Becoming.ClosedCapture.lockedAlike",
+        "Becoming.ClosedCapture.lockedAlike_class",
+        "Becoming.ClosedCapture.loss",
+        "Becoming.ClosedCapture.loss_alters",
+        "Becoming.ClosedCapture.loss_ends_line",
+        "Becoming.ClosedCapture.orbit_paced",
+        "Becoming.ClosedCapture.turn_fast",
+        "Becoming.adaptive_constant_iff",
+        "Becoming.adaptive_core_apart",
+        "Becoming.adaptive_core_iff",
+        "Becoming.constant_of_goAlike",
+        "Becoming.goAlike_iff_constant",
+        "Becoming.goAlike_of_constant",
+        "Becoming.moveRel"
+      ],
+      "sha256": "984f34169fac0411a35e0b0199e054529d49008ccbd818dcfc5083977c551dc1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
+      "role": "receipt",
+      "sha256": "a8e4464cf9b17611912894ba06d01426641dd7aec1a3d18f4b62e2e69ac98ccc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8756e3264fb7b38dd700091747ff8fcac6b646618b6ce7d752ce9e8a646d36a0"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "8d7245903e3a44ea2e321d79ab5443fd5f55c8191f87ca6065c3906e8a85945c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (GS1), from the review of the root against its two source texts; study section 390.",
+      "zh": "2026年10月24日：新增（GS1），出自根与其二篇来源之对照审查；研究第 390 节。"
+    }
+  ]
+}

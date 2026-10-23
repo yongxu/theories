@@ -76,6 +76,11 @@
    "base": "general",
    "note": "RuleCapture: no ratchet when rule read against share"
   },
+  "a-regularity-kept-and-changed": {
+   "region": "root",
+   "base": "grammar",
+   "note": "GrammarRegularity: core always admits continuation; last step into an end leaves it"
+  },
   "a-rise-past-the-inflow-is-drawn-from-beyond": {
    "region": "collective",
    "base": "old-base",
@@ -1526,6 +1531,11 @@
    "base": "old-base",
    "note": "SG2"
   },
+  "rules-that-change-themselves-in-the-grammar": {
+   "region": "map",
+   "base": "grammar",
+   "note": "GrammarRegularity: adaptive rule and closed capture as models of the grammar"
+  },
   "runaway-distance-uncoupled": {
    "region": "map",
    "base": "old-base",
@@ -2602,6 +2612,11 @@
    "region": "classical",
    "base": "grammar",
    "note": "corpus definitions (墨经, 荀子 化) in the grammar"
+  },
+  "Becoming.GrammarRegularity": {
+   "region": "root",
+   "base": "grammar",
+   "note": "kept and left regularity; two-level steps as models (GS1)"
   },
   "Becoming.GrammarTesting": {
    "region": "knowing",

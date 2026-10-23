@@ -264,6 +264,13 @@
         "en": "What lies beyond the share is drawn jointly; that the loop does not read it does not remove a drawer from the drawing.",
         "zh": "份额之外者是被联合汲取的；回路不读它，并不使汲取者脱离汲取。"
       }
+    },
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "detail": {
+        "en": "Read in the grammar: the class of share, rule and step count constant along every schedule exactly where nothing beyond is read, and the locked line unending while the loss alters (GS1).",
+        "zh": "于文法中读：份额、规则与步数之类于每一读之时序皆有常，恰当份额之外无所读；锁之续不尽而损每步皆异（GS1）。"
+      }
     }
   ],
   "references": [
@@ -375,6 +382,10 @@
     {
       "en": "21 October 2026, LU1: a law added, Unread read as the law of a part read alone (identifiesAlike_iff_unread, courses_alike_iff_unread); unread_course derived from Law.sameFuture_of_goAlike, its statement unchanged; study section 309. The other laws are unchanged.",
       "zh": "2026年10月21日，LU1：新增一律，把 Unread 读作单独读一部分之律（identifiesAlike_iff_unread、courses_alike_iff_unread）；unread_course 由 Law.sameFuture_of_goAlike 推出，陈述不变；研究第 309 节。其余诸律不变。"
+    },
+    {
+      "en": "24 October 2026, GS1: read in the grammar (record rules-that-change-themselves-in-the-grammar, study section 390); no statement of this record changed.",
+      "zh": "2026年10月24日，GS1：于文法中读（记录 rules-that-change-themselves-in-the-grammar，研究第 390 节）；本记录之陈述未变。"
     }
   ]
 }
