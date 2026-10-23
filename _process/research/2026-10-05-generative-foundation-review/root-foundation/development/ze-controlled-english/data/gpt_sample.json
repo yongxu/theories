@@ -1,0 +1,385 @@
+{
+ "seed": "ZE-20261023",
+ "allocation": {
+  "凡例": 0,
+  "篇一": 3,
+  "篇二": 1,
+  "篇三": 3,
+  "篇四": 4,
+  "篇五": 3,
+  "篇六": 3,
+  "篇七": 1,
+  "篇八": 2,
+  "篇九": 7,
+  "篇十": 1,
+  "篇十一": 7,
+  "篇十二": 4,
+  "篇十三": 5,
+  "篇十四": 3,
+  "篇十五": 8,
+  "篇十六": 3,
+  "论纲": 2
+ },
+ "units": [
+  {
+   "tiao": "一·八",
+   "decl": "Becoming.shown_determined_iff",
+   "jing": "jing0011",
+   "ce": "ce0011"
+  },
+  {
+   "tiao": "一·二十三",
+   "decl": "Becoming.alike_iff_sameTests",
+   "jing": "jing0032",
+   "ce": "ce0032"
+  },
+  {
+   "tiao": "一·九",
+   "decl": "Becoming.family_iff",
+   "jing": "jing0013",
+   "ce": "ce0013"
+  },
+  {
+   "tiao": "七·三",
+   "decl": "Becoming.Learning.determines_lumped_iff",
+   "jing": "jing0198",
+   "ce": "ce0198"
+  },
+  {
+   "tiao": "三·十八",
+   "decl": "Becoming.Web.persisting",
+   "jing": "jing0076",
+   "ce": "ce0076"
+  },
+  {
+   "tiao": "三·十八",
+   "decl": "Becoming.Web.steady_held",
+   "jing": "jing0077",
+   "ce": "ce0077"
+  },
+  {
+   "tiao": "三·八",
+   "decl": "Becoming.Tide.renewal_without_arising",
+   "jing": "jing0063",
+   "ce": "ce0063"
+  },
+  {
+   "tiao": "九·七",
+   "decl": "Becoming.apart_only_downstream",
+   "jing": "jing0234",
+   "ce": "ce0234"
+  },
+  {
+   "tiao": "九·三十三",
+   "decl": "Becoming.Identification.bounded_agree",
+   "jing": "jing0285",
+   "ce": "ce0285"
+  },
+  {
+   "tiao": "九·十九",
+   "decl": "Becoming.ExchangeLaw.course_balances_iff",
+   "jing": "jing0260",
+   "ce": "ce0260"
+  },
+  {
+   "tiao": "九·八",
+   "decl": "Becoming.route_forms_by_closing",
+   "jing": "jing0235",
+   "ce": "ce0235"
+  },
+  {
+   "tiao": "九·四",
+   "decl": "Becoming.Web.alike_of_threshold",
+   "jing": "jing0233",
+   "ce": "ce0233"
+  },
+  {
+   "tiao": "九·十六",
+   "decl": "Becoming.Web.class_judge_iff",
+   "jing": "jing0254",
+   "ce": "ce0254"
+  },
+  {
+   "tiao": "九·二十八",
+   "decl": "Becoming.Frame.self_incomplete",
+   "jing": "jing0279",
+   "ce": "ce0279"
+  },
+  {
+   "tiao": "二·四",
+   "decl": "Becoming.Flow.Balances.broken_iff",
+   "jing": "jing0041",
+   "ce": "ce0041"
+  },
+  {
+   "tiao": "五·五",
+   "decl": "Becoming.more_needs_open",
+   "jing": "jing0129",
+   "ce": "ce0129"
+  },
+  {
+   "tiao": "五·二十六",
+   "decl": "Becoming.Web.renewingAlong_reidentify",
+   "jing": "jing0158",
+   "ce": "ce0158"
+  },
+  {
+   "tiao": "五·二十四",
+   "decl": "Becoming.Renewable.finite_reading_includes_consumption",
+   "jing": "jing0153",
+   "ce": "ce0153"
+  },
+  {
+   "tiao": "八·四",
+   "decl": "Becoming.Interleavings.LocalLaw.world_reads_alike",
+   "jing": "jing0213",
+   "ce": "ce0213"
+  },
+  {
+   "tiao": "八·十二",
+   "decl": "Becoming.Weights.sum_courses",
+   "jing": "jing0222",
+   "ce": "ce0222"
+  },
+  {
+   "tiao": "六·五",
+   "decl": "Becoming.Flow.Balances.withheld",
+   "jing": "jing0169",
+   "ce": "ce0169"
+  },
+  {
+   "tiao": "六·十四",
+   "decl": "Becoming.Web.WidensAlong",
+   "jing": "jing0179",
+   "ce": "ce0179"
+  },
+  {
+   "tiao": "六·十八",
+   "decl": "Becoming.Web.widens_iff_every_weighting",
+   "jing": "jing0189",
+   "ce": "ce0189"
+  },
+  {
+   "tiao": "十·四",
+   "decl": "Becoming.carries_law_iff",
+   "jing": "jing0300",
+   "ce": "ce0300"
+  },
+  {
+   "tiao": "十一·四",
+   "decl": "Becoming.Flow.WithinFeeding",
+   "jing": "jing0317",
+   "ce": "ce0317"
+  },
+  {
+   "tiao": "十一·十三",
+   "decl": "Becoming.Optimum.least_iff",
+   "jing": "jing0338",
+   "ce": "ce0338"
+  },
+  {
+   "tiao": "十一·十三",
+   "decl": "Becoming.Optimum.Drain.satisficing_either",
+   "jing": "jing0340",
+   "ce": "ce0340"
+  },
+  {
+   "tiao": "十一·六",
+   "decl": "Becoming.Flow.beyond_influence",
+   "jing": "jing0321",
+   "ce": "ce0321"
+  },
+  {
+   "tiao": "十一·十一",
+   "decl": "Becoming.Flow.exchange_apart_of_change",
+   "jing": "jing0333",
+   "ce": "ce0333"
+  },
+  {
+   "tiao": "十一·七",
+   "decl": "Becoming.Cuts.closure_unchanged_iff_bypassed",
+   "jing": "jing0325",
+   "ce": "ce0325"
+  },
+  {
+   "tiao": "十一·二十八",
+   "decl": "Becoming.Web.pool_adds",
+   "jing": "jing0376",
+   "ce": "ce0376"
+  },
+  {
+   "tiao": "十三·十三",
+   "decl": "Becoming.Reproduction.Flow.lineage_ends",
+   "jing": "jing0459",
+   "ce": "ce0459"
+  },
+  {
+   "tiao": "十三·十三",
+   "decl": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+   "jing": "jing0460",
+   "ce": "ce0460"
+  },
+  {
+   "tiao": "十三·五",
+   "decl": "Becoming.World.withRest_counted",
+   "jing": "jing0434",
+   "ce": "ce0434"
+  },
+  {
+   "tiao": "十三·八",
+   "decl": "Becoming.SelectionTerm.offspring_covariation",
+   "jing": "jing0443",
+   "ce": "ce0443"
+  },
+  {
+   "tiao": "十三·五",
+   "decl": "Becoming.World.independent",
+   "jing": "jing0432",
+   "ce": "ce0432"
+  },
+  {
+   "tiao": "十二·一",
+   "decl": "Becoming.ExchangeLaw.RespondsWithin",
+   "jing": "jing0390",
+   "ce": "ce0390"
+  },
+  {
+   "tiao": "十二·八",
+   "decl": "Becoming.carried_le_count",
+   "jing": "jing0400",
+   "ce": "ce0400"
+  },
+  {
+   "tiao": "十二·十五",
+   "decl": "Becoming.Flow.restores_exactly",
+   "jing": "jing0421",
+   "ce": "ce0421"
+  },
+  {
+   "tiao": "十二·三",
+   "decl": "Becoming.forms_by_closing",
+   "jing": "jing0395",
+   "ce": "ce0395"
+  },
+  {
+   "tiao": "十五·十一",
+   "decl": "Becoming.Valuation.Significant",
+   "jing": "jing0529",
+   "ce": "ce0529"
+  },
+  {
+   "tiao": "十五·十六",
+   "decl": "Becoming.Clearing.clearer_not_living",
+   "jing": "jing0541",
+   "ce": "ce0541"
+  },
+  {
+   "tiao": "十五·二十九",
+   "decl": "Becoming.not_subTrue_of_invariant",
+   "jing": "jing0581",
+   "ce": "ce0581"
+  },
+  {
+   "tiao": "十五·十五",
+   "decl": "Becoming.Valuation.significant_of_transmits",
+   "jing": "jing0538",
+   "ce": "ce0538"
+  },
+  {
+   "tiao": "十五·二十九",
+   "decl": "Becoming.boundaryInvariant_iff_all",
+   "jing": "jing0580",
+   "ce": "ce0580"
+  },
+  {
+   "tiao": "十五·二十七",
+   "decl": "Becoming.Flow.MutuallyDependent.unrestricted",
+   "jing": "jing0567",
+   "ce": "ce0567"
+  },
+  {
+   "tiao": "十五·二十八",
+   "decl": "Becoming.SubTrue",
+   "jing": "jing0573",
+   "ce": "ce0573"
+  },
+  {
+   "tiao": "十五·八",
+   "decl": "Becoming.Valuation.Held",
+   "jing": "jing0525",
+   "ce": "ce0525"
+  },
+  {
+   "tiao": "十六·十三",
+   "decl": "Becoming.Direction.chosen_keeps_basic",
+   "jing": "jing0614",
+   "ce": "ce0614"
+  },
+  {
+   "tiao": "十六·四",
+   "decl": "Becoming.Transfer.unordered",
+   "jing": "jing0601",
+   "ce": "ce0601"
+  },
+  {
+   "tiao": "十六·十一",
+   "decl": "Becoming.Lexical.Repair.above",
+   "jing": "jing0611",
+   "ce": "ce0611"
+  },
+  {
+   "tiao": "十四·十四",
+   "decl": "Becoming.Flow.drawn_positions",
+   "jing": "jing0503",
+   "ce": "ce0503"
+  },
+  {
+   "tiao": "十四·十五",
+   "decl": "Becoming.Flow.race_ends_greatest",
+   "jing": "jing0505",
+   "ce": "ce0505"
+  },
+  {
+   "tiao": "十四·九",
+   "decl": "Becoming.Tolerance.total_stays",
+   "jing": "jing0497",
+   "ce": "ce0497"
+  },
+  {
+   "tiao": "四·二十",
+   "decl": "Becoming.Flow.family_excess_ends",
+   "jing": "jing0107",
+   "ce": "ce0107"
+  },
+  {
+   "tiao": "四·二十六",
+   "decl": "Becoming.RegimeMargin.Notch.no_threshold",
+   "jing": "jing0123",
+   "ce": "ce0123"
+  },
+  {
+   "tiao": "四·十六",
+   "decl": "Becoming.Halving.approaches_without_reaching",
+   "jing": "jing0097",
+   "ce": "ce0097"
+  },
+  {
+   "tiao": "四·二十四",
+   "decl": "Becoming.RegimeMargin.beyond_draw_iff",
+   "jing": "jing0118",
+   "ce": "ce0118"
+  },
+  {
+   "tiao": "纲·六",
+   "decl": "Becoming.Flow.policy_uses_after_failure",
+   "jing": "jing0637",
+   "ce": "ce0637"
+  },
+  {
+   "tiao": "纲·五",
+   "decl": "Becoming.Unrestricted",
+   "jing": "jing0635",
+   "ce": "ce0635"
+  }
+ ]
+}
