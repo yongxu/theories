@@ -44,6 +44,14 @@ changes.
   the member's line ends (`TwoLines.core_through_birth`); and from one family's first birth, even under
   the one, no member of the other family is reached (`TwoLines.other_line_outside`): reaching one's
   successors along 缘 is not reaching everything.
+* **Two lines that share a condition** (`SharedCondition`). Two family lines and a condition that
+  feeds both. Where the members affect the condition, each a condition of its next state, the line
+  under the one from the first family's first member reaches the second family's member two
+  generations on, through it (`SharedCondition.affecting_reaches_other`); under the class "a member or
+  not", which holds both families' members alike and the condition apart, it does not
+  (`SharedCondition.affecting_member_outside`). Where the members only feed from a condition they do
+  not affect, the line under no relation reaches the other family (`SharedCondition.fed_outside`). No
+  class narrower than the one is shown to reach, and no core is computed.
 * **A belief whose rate of spread grows with its number** (`Belief`). The number holding a belief goes
   up by the rate, and the rate by the number, both by supplied laws (`adaptive`). On the step the rate
   changes with the number (`Belief.rate_changes_on_step`), and two configurations with one holder at
@@ -278,6 +286,119 @@ theorem other_line_outside : ¬ «所及» step «一» (true, 0, false) (false,
   | .inr line => Bool.noConfusion (line_in_family line)
 
 end TwoLines
+
+/-! ## Two lines that share a condition -/
+
+namespace SharedCondition
+
+/-- A member of the first family at a generation, of the second, and the shared condition at a step. -/
+inductive Occ | a (n : Nat) | b (n : Nat) | r (n : Nat)
+
+/-- 缘 where the members affect the shared condition: each line goes on to its next generation; the
+condition feeds the next generation of both lines and goes on itself; and each member is a condition
+of the shared condition's next state (drawing on it is one way, with no amounts modelled). -/
+def affecting : «际» Occ
+  | .a m, .a n => n = m + 1
+  | .a _, .b _ => False
+  | .a m, .r n => n = m + 1
+  | .b _, .a _ => False
+  | .b m, .b n => n = m + 1
+  | .b m, .r n => n = m + 1
+  | .r m, .a n => n = m + 1
+  | .r m, .b n => n = m + 1
+  | .r m, .r n => n = m + 1
+
+/-- 缘 where the members only feed from the shared condition: as `affecting`, with no member a condition
+of the condition's next state, a common cause. -/
+def fed : «际» Occ
+  | .a m, .a n => n = m + 1
+  | .a _, .b _ => False
+  | .a _, .r _ => False
+  | .b _, .a _ => False
+  | .b m, .b n => n = m + 1
+  | .b _, .r _ => False
+  | .r m, .a n => n = m + 1
+  | .r m, .b n => n = m + 1
+  | .r m, .r n => n = m + 1
+
+/-- Whether an occurrence is a member of either family: the class "a member or not" holds the members of
+both families alike and the condition apart. -/
+def living : Occ → Bool
+  | .a _ => true
+  | .b _ => true
+  | .r _ => false
+
+/-- **Where the members affect the shared condition, one line's future reaches the other's**: from the
+first family's first member, the line under the one reaches the second family's member two
+generations on, through the condition it affects and that feeds the other. -/
+theorem affecting_reaches_other : «所及» affecting «一» (.a 0) (.b 2) :=
+  have first : «续» affecting «一» (.a 0) (.r 1) := ⟨rfl, trivial⟩
+  have second : «续» affecting «一» (.r 1) (.b 2) := ⟨rfl, trivial⟩
+  .inr («及».more first (.one second))
+
+/-- A step under the class of being a member or not, from a member of the first family, stays in it. -/
+theorem affecting_member_step {m : Nat} {y : Occ} (c : «续» affecting (sameValue living) (.a m) y) : ∃ k, y = .a k :=
+  match y, c with
+  | .a k, _ => ⟨k, rfl⟩
+  | .b _, c => False.elim c.1
+  | .r _, c => absurd c.2 (fun h => Bool.noConfusion h)
+
+/-- A line under the class of being a member or not, from a member of the first family, stays in the
+first family. -/
+theorem affecting_member_stays {x y : Occ} (line : «相续» affecting (sameValue living) x y) :
+    ∀ m, x = .a m → ∃ k, y = .a k := by
+  induction line with
+  | one c =>
+    intro m e
+    subst e
+    exact affecting_member_step c
+  | more c _ ih =>
+    intro m e
+    subst e
+    match affecting_member_step c with
+    | ⟨k, e'⟩ => exact ih k e'
+
+/-- **Under "a member or not", the other line is not reached**: that class holds both families' members
+alike and the condition apart, and its line from the first family's first member reaches no member of
+the second. -/
+theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) := fun reached =>
+  match reached with
+  | .inl e => Occ.noConfusion e
+  | .inr line => match affecting_member_stays line 0 rfl with
+    | ⟨_, e⟩ => Occ.noConfusion e
+
+/-- A step along `fed`, from a member of the first family, stays in it. -/
+theorem fed_step {E : «际» Occ} {m : Nat} {y : Occ} (c : «续» fed E (.a m) y) : ∃ k, y = .a k :=
+  match y, c with
+  | .a k, _ => ⟨k, rfl⟩
+  | .b _, c => False.elim c.1
+  | .r _, c => False.elim c.1
+
+/-- A line along `fed`, under any relation, from a member of the first family, stays in the first
+family. -/
+theorem fed_stays {E : «际» Occ} {x y : Occ} (line : «相续» fed E x y) :
+    ∀ m, x = .a m → ∃ k, y = .a k := by
+  induction line with
+  | one c =>
+    intro m e
+    subst e
+    exact fed_step c
+  | more c _ ih =>
+    intro m e
+    subst e
+    match fed_step c with
+    | ⟨k, e'⟩ => exact ih k e'
+
+/-- **Where the members only feed from a condition they do not affect, no relation reaches the other
+line**: under every relation, the line from the first family's first member reaches no member of the
+second. -/
+theorem fed_outside (E : «际» Occ) (n : Nat) : ¬ «所及» fed E (.a 0) (.b n) := fun reached =>
+  match reached with
+  | .inl e => Occ.noConfusion e
+  | .inr line => match fed_stays line 0 rfl with
+    | ⟨_, e⟩ => Occ.noConfusion e
+
+end SharedCondition
 
 /-! ## A belief whose rate of spread grows with its number -/
 

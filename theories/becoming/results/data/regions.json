@@ -1316,6 +1316,11 @@
    "base": "grammar",
    "note": "GrammarScope: reach past a finer line's end; core of descent, endless and ending"
   },
+  "reach-through-a-shared-condition": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarCases: one line reaching another through a condition it affects"
+  },
   "reaching-before-and-after-a-juncture": {
    "region": "map",
    "base": "general",

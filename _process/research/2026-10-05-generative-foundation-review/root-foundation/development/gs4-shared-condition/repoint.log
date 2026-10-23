@@ -1,0 +1,16 @@
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "the-source-texts-test-systems": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

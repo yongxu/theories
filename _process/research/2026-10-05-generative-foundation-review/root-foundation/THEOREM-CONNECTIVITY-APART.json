@@ -3566,6 +3566,21 @@
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
    "reason": "two family lines: the other family not reached: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.SharedCondition.affecting_reaches_other": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line under the one reaches the other family through the condition: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.affecting_member_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "under a member or not the other family is not reached: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.fed_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
   }
  },
  "instances": {

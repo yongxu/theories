@@ -3264,7 +3264,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   class, their union not a class (`Overlap`). A line of descent generating at two grains
   (`LineOfDescent.Endless.generates`). Two family lines, the class of one strictly between a member's
   and the one, constant, its core going on through each birth, the other family not reached
-  (`TwoLines`). A belief whose rate of spread grows with its number, the rate read in its
+  (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
+  reaches the other's through it under the one, not under "a member or not"; where they only feed
+  from it, under no relation (`SharedCondition`, board item GS4). A belief whose rate of spread
+  grows with its number, the rate read in its
   regularity (`Belief`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.

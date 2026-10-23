@@ -223,7 +223,7 @@
         "Becoming.TwoLines.step",
         "Becoming.TwoLines.total"
       ],
-      "sha256": "1603b2cc0fb09c289001fc22167180efa71cee53ed1ed96a86c79961fe856059"
+      "sha256": "693a3d00a91589f1b5ccb044e666a222ee70c8bb2909bc465cab65eba02135fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T221345.406636Z/verification.json",
@@ -239,12 +239,18 @@
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
       "sha256": "3245732dae19784008b716e831161ec35f23b619e01ea6b02dd222756978aaa4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc17fbb7cec7b7fc8faa026e6c6b6f84fbd33743ad61c05150ff32fd8238b82b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T221345.406636Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCases",
       "success_pointer": "/status",
       "success_value": "passed"
