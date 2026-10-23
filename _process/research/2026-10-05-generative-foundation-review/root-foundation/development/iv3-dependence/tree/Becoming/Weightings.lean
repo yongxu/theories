@@ -158,8 +158,8 @@ order every standpoint shares when each weighs what can form in its own way.
   (`Flow.needs_giver_iff_only_on`). Exactly: with activity and identity of formations decided, a
   consumer drawing past the stock needs a member's giving exactly where, at some step of the
   stretch calling for giving, that member is the only one active (`Flow.needs_giver_iff_alone`).
-  On `Feeders`' web neither copy is needed (`Feeders.two_feeders_on`); in `Shifts`, two copies
-  active in turn, both are (`Shifts.needs_both`).
+  On `Feeders`' web neither copy is needed (`Feeders.two_feeders_on`); in `FeedersInTurn`, two
+  copies active in turn, both are (`FeedersInTurn.needs_both`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -249,8 +249,9 @@ dispersed its weights are, each measurable and none derived; that the impartial 
 every standpoint shares rather than one privileged weighting; which formations are centers; the
 step of invariance itself; which relation a continuation is carried along, whether actual centers
 depend on one another, which webs actual families have, the decision of activity and identity
-the exact law of need uses, and that a standpoint's order is increasing in its own continuation. The representation commits to finite listings of steps and formations,
-two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
+the exact law of need uses, and that a standpoint's order is increasing in its own continuation.
+The representation commits to finite listings of steps and formations, two-valued admission and
+natural-number weights. No ethical predicate or axiom occurs.
 -/
 
 namespace Becoming
@@ -2180,7 +2181,7 @@ theorem two_feeders_on :
 
 end Feeders
 
-namespace Shifts
+namespace FeedersInTurn
 
 open Copies (Part)
 
@@ -2225,7 +2226,7 @@ theorem needs_both :
             (fun on => Bool.noConfusion on)
         | .inr same => same⟩⟩
 
-end Shifts
+end FeedersInTurn
 
 /-! ## What self-concern alone ranks -/
 

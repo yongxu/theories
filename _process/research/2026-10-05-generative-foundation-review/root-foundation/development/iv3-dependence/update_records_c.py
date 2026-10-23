@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """IV3c: extend the record self-concern-through-dependence with the flows read off a web, which feeders can feed a
-family alone (PartAlone derived), the exact law of need, and the Shifts witness; its references are re-hashed to the
+family alone (PartAlone derived), the exact law of need, and the FeedersInTurn witness; its references are re-hashed to the
 new receipt and it gets one history note.
 usage (from the checkout root, after apply_text_c.py): python3 -B update_records_c.py CORE_RECEIPT STUDY_SECTION"""
 import datetime
@@ -54,7 +54,7 @@ ALONE = need([FL + n for n in ['drawnAcross', 'drawnAcross_gives', 'drawnAcross_
              + [B + 'Feeders.decEqPart', B + 'Feeders.user_outside', B + 'Feeders.two_feeders_on'])
 EXACT = need([FL + n for n in ['firstActiveOther', 'firstActiveOther_mem', 'firstActiveOther_active',
                                'needs_giver_iff_alone']]
-             + [B + 'Shifts.' + n for n in ['activeAt', 'web', 'decActive', 'calls', 'needs_both']])
+             + [B + 'FeedersInTurn.' + n for n in ['activeAt', 'web', 'decActive', 'calls', 'needs_both']])
 SCOPE = t(
     f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {core_id}): every declaration of '
     'Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the '
@@ -81,9 +81,9 @@ d['laws'] += [
          '成立，无需另设。在 Feeders 的依存网上每个构成都活跃，两个副本都不被需要。'),
      'declarations': ALONE},
     {**t('With activity and identity decided and the class listed, a consumer drawing past the stock needs a member\'s '
-         'giving exactly where, at some step calling for giving, that member is the only one active. Witness Shifts: two '
+         'giving exactly where, at some step calling for giving, that member is the only one active. Witness FeedersInTurn: two '
          'copies active in turn, both needed.',
-         '活动与同一可判定、类为有限列表时，汲取超出存量的消耗者恰在某个需要给予的步上某成员是唯一活跃者时需要它的给予。见证 Shifts：'
+         '活动与同一可判定、类为有限列表时，汲取超出存量的消耗者恰在某个需要给予的步上某成员是唯一活跃者时需要它的给予。见证 FeedersInTurn：'
          '两个轮流活跃的副本，两者都被需要。'),
      'declarations': EXACT},
 ]
@@ -102,10 +102,10 @@ d['hypotheses'].append(t(
     '就从依存网读出的流：依存网固定，在一段步之内对该族平衡，只有活跃构成给予，取用不受限制；就精确之律：构成的活动与同一可判定，'
     '类为有限列表。'))
 d['counterexamples'].append({'path': SOURCE, 'detail': t(
-    'Shifts: one condition standing still, the first copy active at step 0 and the second at step 1; both steps call '
-    'for giving, so the user, drawing past the stock across both, needs each copy\'s giving (Shifts.needs_both).',
-    'Shifts：一个静止的条件，第一个副本在第 0 步活跃，第二个在第 1 步；两步都需要给予，所以在两步上汲取超出存量的使用者需要每个副本'
-    '的给予（Shifts.needs_both）。')})
+    'FeedersInTurn: one condition standing still, the first copy active at step 0 and the second at step 1; both steps call '
+    'for giving, so the user, drawing past the stock across both, needs each copy\'s giving (FeedersInTurn.needs_both).',
+    'FeedersInTurn：一个静止的条件，第一个副本在第 0 步活跃，第二个在第 1 步；两步都需要给予，所以在两步上汲取超出存量的使用者需要每个副本'
+    '的给予（FeedersInTurn.needs_both）。')})
 d['next_delta'] = t(
     'A capacity of giving read off the web, so that which feeders can feed alone depends on how much each can give; '
     'graded need, under which a feeder is needed in degree; an independent review.',
@@ -127,8 +127,8 @@ for binding in d['proof_bindings']:
 d['history'].append(t(
     f'{DATE}: extended (IV3c): the possible flows read off a fixed web; which feeders can feed a family alone derived '
     f'from activity at the steps calling for giving, so the copies law holds over the web; the exact law of need; the '
-    f'Shifts witness; study section {N}.',
+    f'FeedersInTurn witness; study section {N}.',
     f'2026年10月23日：扩展（IV3c）：从固定的依存网读出可能的流；哪些供给者能单独供给某族由其在需要给予之步上的活动导出，所以副本之律在依存网'
-    f'上成立；“所需”的精确之律；Shifts 见证；研究第 {N} 节。'))
+    f'上成立；“所需”的精确之律；FeedersInTurn 见证；研究第 {N} 节。'))
 path.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('updated', d['id'])

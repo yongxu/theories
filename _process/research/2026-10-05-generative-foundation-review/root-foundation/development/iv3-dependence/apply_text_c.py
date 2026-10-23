@@ -47,7 +47,7 @@ insert_after(STEP, '- **Need on the base.** Read the possible courses of a famil
     '(`Flow.needs_giver_iff_only_on`), and exactly: a consumer drawing past the stock needs a member\'s giving where, '
     'at some step calling for giving, that member is the only one active (`Flow.needs_giver_iff_alone`). Two copies '
     'active throughout are not needed (`Feeders.two_feeders_on`); two active in turn are both needed '
-    '(`Shifts.needs_both`). What has no second copy at a step that calls for giving is needed.',
+    '(`FeedersInTurn.needs_both`). What has no second copy at a step that calls for giving is needed.',
 ])
 insert_after(STEP, '| The coupled ending ranked below by self-concern, in one theorem |', [
     '| Over the flows read off a web, drawing past a family\'s stock needs some feeder\'s giving; where giving is '
@@ -57,7 +57,7 @@ insert_after(STEP, '| The coupled ending ranked below by self-concern, in one th
     '`Flow.drawnAcross`, `Flow.partAlone_on`, `Flow.needs_giver_iff_only_on`, `Feeders.two_feeders_on` | '
     '`Becoming.Weightings` | landed |',
     '| A feeder is needed exactly where, at some step calling for giving, it is the only one active | '
-    '`Flow.needs_giver_iff_alone`, `Flow.firstActiveOther`, `Shifts.needs_both` | `Becoming.Weightings` | landed |',
+    '`Flow.needs_giver_iff_alone`, `Flow.firstActiveOther`, `FeedersInTurn.needs_both` | `Becoming.Weightings` | landed |',
 ])
 
 # ---- the study ----------------------------------------------------------------------------------------------
@@ -88,11 +88,11 @@ insert_after(CHOICES, '6. **Need on the base.**', [
 replace_once(PKG / 'README.md', "; the readings are the AI's (D59, D60, D64) |",
              '; read off a web, a feeder can feed a family alone where it is active at every step calling for giving, '
              'and a consumer needs a feeder\'s giving exactly where, at some step calling for giving, it is the only one '
-             'active (`Web.CallsForGiving`, `Flow.partAlone_on`, `Flow.needs_giver_iff_alone`, `Shifts.needs_both`); '
+             'active (`Web.CallsForGiving`, `Flow.partAlone_on`, `Flow.needs_giver_iff_alone`, `FeedersInTurn.needs_both`); '
              'the readings are the AI\'s (D59, D60, D64) |')
 replace_once(PKG / 'README.zh.md', '；读法是 AI 的（D59、D60、D64） |',
              '；从依存网读出，供给者在每个需要给予的步上都活跃时能单独供给该族，而消耗者恰在某个需要给予的步上某供给者是唯一活跃者时'
-             '需要它的给予（`Web.CallsForGiving`、`Flow.partAlone_on`、`Flow.needs_giver_iff_alone`、`Shifts.needs_both`）；'
+             '需要它的给予（`Web.CallsForGiving`、`Flow.partAlone_on`、`Flow.needs_giver_iff_alone`、`FeedersInTurn.needs_both`）；'
              '读法是 AI 的（D59、D60、D64） |')
 
 for path, s in PENDING.items():
