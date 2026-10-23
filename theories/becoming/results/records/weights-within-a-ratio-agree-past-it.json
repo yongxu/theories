@@ -212,7 +212,7 @@
         "Becoming.Weighting.weighed_tilted_toward",
         "Becoming.Weighting.weighed_zero_of_size"
       ],
-      "sha256": "3958644149c0a0dec9df9a38f00a8082c10ebe687b79a6d50c9ca5ac9725e6de"
+      "sha256": "8d9cd84b5a8b21c364031636d063f8220cf5b7d6022bcf69effcc7e462120102"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
@@ -238,12 +238,18 @@
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
       "sha256": "2292c4759386ae55d7692830baad967472f0dcba45d6e438ff6db7a2e2b147a3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "role": "receipt",
+      "sha256": "28c7a3ed762f946582851f68fecdd6b27e0243f35bff2b63c4b492a5fe68fdc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

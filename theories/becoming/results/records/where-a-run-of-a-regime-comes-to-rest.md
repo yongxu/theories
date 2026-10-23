@@ -62,6 +62,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
   - Input: A law's run with a bounded mark is still within the bound, decided.
   - Preserved conditions: Decidable configurations; a deterministic law. [LastChange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean)
 - related, not a proved adapter: [margin-of-a-regime](margin-of-a-regime.md). The regime's step: with giving rising with what is left, every run within a band comes to rest within hi steps.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). LastChange.still_within is a case of rest by balance.
 
 **Used by:** [coupled-regimes](coupled-regimes.md) · [regime-in-any-amounts](regime-in-any-amounts.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
 
@@ -102,6 +103,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 
@@ -112,6 +114,7 @@ Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustm
 - 21 October 2026, RM5: convergence over the reals, left open here, is stated for rising adjustments within a band, with a witness that a run need not rest (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
+- 23 October 2026, EC6 (study section 375): LastChange.still_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

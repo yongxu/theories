@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-410 registered results: 382 with a recorded Lean receipt (`recorded-checked`), 17 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 936 curated edges join 360 results to the results they draw on.
+414 registered results: 386 with a recorded Lean receipt (`recorded-checked`), 17 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 946 curated edges join 364 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -259,6 +259,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [reserved-shutdown-during-recovery][] ← <a id="reserved-shutdown-during-recovery--recoverable-mediated-change"></a>[recoverable-mediated-change][]
 - [residual-continuation-correspondence][] ← <a id="residual-continuation-correspondence--guarded-program-question-recovery"></a>[guarded-program-question-recovery][] · <a id="residual-continuation-correspondence--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="residual-continuation-correspondence--finite-trace-transport"></a>[finite-trace-transport][]
 - [rest-at-every-resolution][] ← <a id="rest-at-every-resolution--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="rest-at-every-resolution--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="rest-at-every-resolution--reserve-defers-ending"></a>[reserve-defers-ending][]
+- [rest-by-balance][] ← <a id="rest-by-balance--census-balance"></a>[census-balance][] · <a id="rest-by-balance--least-loss-rest"></a>[least-loss-rest][]
 - [rest-exactly-where-falls-stop][] ← <a id="rest-exactly-where-falls-stop--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][] · <a id="rest-exactly-where-falls-stop--least-loss-rest"></a>[least-loss-rest][]
 - [rest-from-a-finite-reading][] ← <a id="rest-from-a-finite-reading--least-loss-rest"></a>[least-loss-rest][] · <a id="rest-from-a-finite-reading--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [rest-on-coupled-webs][] ← <a id="rest-on-coupled-webs--coupled-webs"></a>[coupled-webs][] · <a id="rest-on-coupled-webs--coupled-regimes"></a>[coupled-regimes][]
@@ -287,6 +288,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [selection-with-returns-to-groupmates][] ← <a id="selection-with-returns-to-groupmates--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-with-returns-to-groupmates--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][] · <a id="selection-with-returns-to-groupmates--groups-formed-by-descent"></a>[groups-formed-by-descent][]
 - [selection-within-and-among-groups][] ← <a id="selection-within-and-among-groups--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [selection-within-and-among-groups-of-any-sizes][] ← <a id="selection-within-and-among-groups-of-any-sizes--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-within-and-among-groups-of-any-sizes--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
+- [self-concern-through-dependence][] ← <a id="self-concern-through-dependence--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][] · <a id="self-concern-through-dependence--levels-of-closure"></a>[levels-of-closure][]
 - [sensitivity-is-the-least-coupling][] ← <a id="sensitivity-is-the-least-coupling--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="sensitivity-is-the-least-coupling--testing-within-couplings"></a>[testing-within-couplings][]
 - [separation-loses-the-relation][] ← <a id="separation-loses-the-relation--claims-shown-in-context"></a>[claims-shown-in-context][]
 - [several-optimizers-drain-by-their-joint-capacity][] ← <a id="several-optimizers-drain-by-their-joint-capacity--room-read-off-the-exchange"></a>[room-read-off-the-exchange][] · <a id="several-optimizers-drain-by-their-joint-capacity--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][]
@@ -333,6 +335,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [webs-with-a-recent-giving][] ← <a id="webs-with-a-recent-giving--thresholds-beyond-a-band"></a>[thresholds-beyond-a-band][] · <a id="webs-with-a-recent-giving--rest-on-coupled-webs"></a>[rest-on-coupled-webs][]
 - [weights-count-situations][] ← <a id="weights-count-situations--typicality-by-counting"></a>[typicality-by-counting][] · <a id="weights-count-situations--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="weights-count-situations--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][]
 - [weights-within-a-ratio-agree-past-it][] ← <a id="weights-within-a-ratio-agree-past-it--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][]
+- [wen-in-the-grammar][] ← <a id="wen-in-the-grammar--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="wen-in-the-grammar--the-split-that-makes-sense"></a>[the-split-that-makes-sense][] · <a id="wen-in-the-grammar--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="wen-in-the-grammar--identification-where-bounded"></a>[identification-where-bounded][] · <a id="wen-in-the-grammar--learnable-through-a-map"></a>[learnable-through-a-map][]
 - [wenli-on-the-spine][] ← <a id="wenli-on-the-spine--civilization-thought-on-the-spine"></a>[civilization-thought-on-the-spine][] *(interpretive)* · <a id="wenli-on-the-spine--learnable-through-a-map"></a>[learnable-through-a-map][] *(interpretive)* · <a id="wenli-on-the-spine--identification-where-bounded"></a>[identification-where-bounded][] *(interpretive)*
 - [what-a-center-can-know-by-a-step][] ← <a id="what-a-center-can-know-by-a-step--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][] *(interpretive)*
 - [what-a-commuting-law-keeps-apart][] ← <a id="what-a-commuting-law-keeps-apart--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="what-a-commuting-law-keeps-apart--readings-within-what-they-read"></a>[readings-within-what-they-read][] · <a id="what-a-commuting-law-keeps-apart--returning-where-the-course-branches"></a>[returning-where-the-course-branches][] · <a id="what-a-commuting-law-keeps-apart--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] *(application)* · <a id="what-a-commuting-law-keeps-apart--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="what-a-commuting-law-keeps-apart--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][]
@@ -349,6 +352,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-discrete-steps-and-whole-amounts-represent][] ← <a id="what-discrete-steps-and-whole-amounts-represent--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-position-reads][] ← <a id="what-position-reads--relative-position-is-zero-sum"></a>[relative-position-is-zero-sum][]
+- [what-self-concern-alone-ranks][] ← <a id="what-self-concern-alone-ranks--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][]
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
 - [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
@@ -646,6 +650,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [reserved-shutdown-during-recovery]: theories/becoming/results/records/reserved-shutdown-during-recovery.md
 [residual-continuation-correspondence]: theories/becoming/results/records/residual-continuation-correspondence.md
 [rest-at-every-resolution]: theories/becoming/results/records/rest-at-every-resolution.md
+[rest-by-balance]: theories/becoming/results/records/rest-by-balance.md
 [rest-exactly-where-falls-stop]: theories/becoming/results/records/rest-exactly-where-falls-stop.md
 [rest-from-a-finite-reading]: theories/becoming/results/records/rest-from-a-finite-reading.md
 [rest-on-coupled-webs]: theories/becoming/results/records/rest-on-coupled-webs.md
@@ -675,6 +680,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [selection-with-returns-to-groupmates]: theories/becoming/results/records/selection-with-returns-to-groupmates.md
 [selection-within-and-among-groups]: theories/becoming/results/records/selection-within-and-among-groups.md
 [selection-within-and-among-groups-of-any-sizes]: theories/becoming/results/records/selection-within-and-among-groups-of-any-sizes.md
+[self-concern-through-dependence]: theories/becoming/results/records/self-concern-through-dependence.md
 [sensitivity-is-the-least-coupling]: theories/becoming/results/records/sensitivity-is-the-least-coupling.md
 [separation-loses-the-relation]: theories/becoming/results/records/separation-loses-the-relation.md
 [several-optimizers-drain-by-their-joint-capacity]: theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.md
@@ -726,6 +732,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [webs-with-a-recent-giving]: theories/becoming/results/records/webs-with-a-recent-giving.md
 [weights-count-situations]: theories/becoming/results/records/weights-count-situations.md
 [weights-within-a-ratio-agree-past-it]: theories/becoming/results/records/weights-within-a-ratio-agree-past-it.md
+[wen-in-the-grammar]: theories/becoming/results/records/wen-in-the-grammar.md
 [wenli-on-the-spine]: theories/becoming/results/records/wenli-on-the-spine.md
 [what-a-center-can-know-by-a-step]: theories/becoming/results/records/what-a-center-can-know-by-a-step.md
 [what-a-commuting-law-keeps-apart]: theories/becoming/results/records/what-a-commuting-law-keeps-apart.md
@@ -742,6 +749,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-discrete-steps-and-whole-amounts-represent]: theories/becoming/results/records/what-discrete-steps-and-whole-amounts-represent.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-position-reads]: theories/becoming/results/records/what-position-reads.md
+[what-self-concern-alone-ranks]: theories/becoming/results/records/what-self-concern-alone-ranks.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
 [what-the-dynamics-leave-open]: theories/becoming/results/records/what-the-dynamics-leave-open.md

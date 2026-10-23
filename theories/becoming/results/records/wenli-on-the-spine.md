@@ -60,6 +60,7 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 - related, not a proved adapter: [what-an-extrapolation-given-nothing-fixes](what-an-extrapolation-given-nothing-fixes.md). learnable_iff_reading, reading_predicts and given_nothing_not_every: a state value learnable exactly when eventually a reading of the course, prediction given that reading, and no extrapolation given nothing learning every learnable value.
 - related, not a proved adapter: [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md). The RO map, whose kinds and layers are used.
 - related, not a proved adapter: [a-formations-own-course](a-formations-own-course.md). WL2: 识 reads the prefix of its own course where what couples in is read as values.
+- related, not a proved adapter: [wen-in-the-grammar](wen-in-the-grammar.md). 文同 and the states of a 文 read in the grammar of continuation: the core (WL3).
 
 **Used by:** [fidelity-of-the-classical-statements](fidelity-of-the-classical-statements.md) (interpretive)
 
@@ -88,6 +89,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.
 - 22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.
 - 23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.
+- 23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.
 
 </details>
 

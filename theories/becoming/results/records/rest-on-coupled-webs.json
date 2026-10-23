@@ -199,6 +199,13 @@
         "en": "Webs with a recent giving keep the order under mutual support; their bounded runs have ending decided and exact thresholds.",
         "zh": "带近来所给的网在相互支持下保持序；其有界运行的终结可判定，阈值精确。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "RegimeMargin.Coupled.Indexed.rests_by is a case of rest by balance.",
+        "zh": "RegimeMargin.Coupled.Indexed.rests_by 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -270,7 +277,7 @@
         "Becoming.RegimeMargin.leading_false",
         "Becoming.RegimeMargin.leading_true"
       ],
-      "sha256": "50f28d79a676ad30d9b637be3f549151f2907983a3cf7d589e066d8bc54bc138"
+      "sha256": "16b148405dfddb4e6f8d2b454254b3fdaa7ab0b0b9e61c16906f5f832a079d73"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
@@ -309,12 +316,18 @@
       "role": "receipt",
       "sha256": "1e74422727acd0467bc4e68475b978f5397a2059a38c3f83b1ec1850a948e309",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -336,6 +349,10 @@
     {
       "en": "22 October 2026, UM: its thresholds' exactness and falling are derived from the one law of exact thresholds (leading_exact, leading_falls), Coupled.leading_congr moved to leading_congr (study section 335). Its laws are unchanged.",
       "zh": "2026年10月22日，UM：其阈值的精确与下降由一条精确阈值之律导出（leading_exact、leading_falls），Coupled.leading_congr 移为 leading_congr（研究第 335 节）。其律不变。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): RegimeMargin.Coupled.Indexed.rests_by is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：RegimeMargin.Coupled.Indexed.rests_by 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }

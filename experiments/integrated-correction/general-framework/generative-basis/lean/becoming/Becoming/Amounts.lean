@@ -52,6 +52,16 @@ imports only `Becoming.Prelude`, so it lies below every module that reads a leve
 * **Whole numbers are the instance.** In whole-number amounts (`Amounts.whole`, Archimedean,
   `Amounts.whole_archimedean`) the least loss is one and every stock lies within its own count of
   ones, plus one (`Amounts.whole_within`).
+* **Rest by balance.** In whole numbers the stretch balance of the prelude bounds how long a count
+  can lose: balanced across each step of a stretch and losing at least one more than it gains at
+  each, it falls by at least the stretch's length (`Amounts.falls_by_stretch`); where whether a step
+  is marked is decided and each marked step loses at least one more than it gains, an unmarked step
+  comes within what stood at the start (`Amounts.unmarked_within`); and two balanced counts compare
+  by their exchanges (`Amounts.le_by_exchange`). The ending of courses above their renewal
+  (`Optimum.ends_within`), the comparison of weighted draws (`Optimum.Next.drawable_le_of_gains`), the
+  rest of a law's run with a bounded mark (`LastChange.still_within`), the fall below a
+  regime's point of no return (`RegimeMargin.Adjusted.orbit_bound`) and the rest of a coupled web
+  (`RegimeMargin.Coupled.Indexed.rests_by`) are its cases.
 
 That each premise is needed (dyadic and layered amounts) and what rest has to do with return
 (`Law.loss_needs_merge`) are stated in `Becoming.LeastLoss`. The representation commits to
@@ -396,6 +406,137 @@ theorem whole_losing_steps {s d : Nat → Nat} {T : Nat}
     (rising : ∀ i, f i < f (i + 1)) (k : Nat) (losing : ∀ i, i < k → 1 ≤ d (f i)) : k ≤ s T :=
   Eq.subst (motive := fun x => x ≤ s T) (whole_times_one k)
     (large_losses_within (M := Amounts.whole) (ε := 1) falls start rising k losing)
+
+end Amounts
+
+/-! ## Rest by balance, in whole numbers
+
+The stretch balance of the prelude (`balance_over_stretch_on`) bounds how long a count can lose: a
+count balanced across each step, what it gains against what it loses, that loses at least one more
+than it gains at each step of a stretch falls across the stretch by at least its length
+(`Amounts.falls_by_stretch`). So where whether a step is marked is decided, and the count loses at
+least one more than it gains at each marked step, a step that is not marked comes within what stood
+at the start (`Amounts.unmarked_within`): marked steps cannot outrun the count. And two balanced
+counts compare by their exchanges alone (`Amounts.le_by_exchange`). These are the one law on which
+the spine's courses end (`Optimum.ends_within`), its weighted draws compare
+(`Optimum.Next.drawable_le_of_gains`), a law's run with a bounded mark comes to rest
+(`LastChange.still_within`), and a regime's condition and a coupled web end and rest
+(`RegimeMargin.Adjusted.ends_below`, `RegimeMargin.Coupled.Indexed.ends_after`,
+`RegimeMargin.Coupled.Indexed.rests_by`); each was proved by its own induction before (board item
+EC6, 23 October 2026). -/
+
+namespace Amounts
+
+/-- Over a stretch at each step of which `x` exceeds `y`, the total of `y` with one for each step is
+within the total of `x`. -/
+theorem total_steps_lose {x y : Nat → Nat} :
+    ∀ S n, (∀ t, S ≤ t → t < S + n → y t + 1 ≤ x t) →
+      total (steps S n) y + n ≤ total (steps S n) x
+  | _, 0, _ => Nat.le_refl 0
+  | S, n + 1, loses =>
+    have rest : total (steps (S + 1) n) y + n ≤ total (steps (S + 1) n) x :=
+      total_steps_lose (S + 1) n fun t from_ below =>
+        loses t (Nat.le_of_succ_le from_)
+          (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.add_right_comm S 1 n)))
+    have first : y S + 1 ≤ x S :=
+      loses S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos n))
+    Nat.le_trans
+      (Nat.le_of_eq ((Nat.add_assoc (y S) (total (steps (S + 1) n) y) (n + 1)).trans
+        ((congrArg (y S + ·) (Nat.add_comm 1 (total (steps (S + 1) n) y + n)).symm).trans
+          (Nat.add_assoc (y S) 1 (total (steps (S + 1) n) y + n)).symm)))
+      (Nat.add_le_add first rest)
+
+/-- Over a stretch at each step of which `f` is at most `g`, the total of `f` is within the total of
+`g`. -/
+theorem total_steps_le {f g : Nat → Nat} :
+    ∀ S n, (∀ t, S ≤ t → t < S + n → f t ≤ g t) → total (steps S n) f ≤ total (steps S n) g
+  | _, 0, _ => Nat.le_refl 0
+  | S, n + 1, le => Nat.add_le_add
+      (le S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos n)))
+      (total_steps_le (S + 1) n fun t from_ below => le t (Nat.le_of_succ_le from_)
+        (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.add_right_comm S 1 n))))
+
+/-- The total over a stretch of two counts added is their totals added. -/
+theorem total_steps_add (f g : Nat → Nat) :
+    ∀ S n, total (steps S n) (fun t => f t + g t) = total (steps S n) f + total (steps S n) g
+  | _, 0 => rfl
+  | S, n + 1 => (congrArg (f S + g S + ·) (total_steps_add f g (S + 1) n)).trans
+      (Nat.add_add_add_comm (f S) (g S) _ _)
+
+/-- **Rest by balance.** A count balanced across each step of a stretch, what it gains against what
+it loses, that at each step of the stretch loses at least one more than it gains, falls across the
+stretch by at least its length: at the end, with the stretch's length, it is within what stood at
+the start. The stretch balance is the reason: what stands at the end with everything lost is what
+stood at the start with everything gained, and everything lost exceeds everything gained by at least
+one for each step. -/
+theorem falls_by_stretch {q x y : Nat → Nat} (S n : Nat)
+    (across : ∀ t, S ≤ t → t < S + n → q (t + 1) + x t = q t + y t)
+    (loses : ∀ t, S ≤ t → t < S + n → y t + 1 ≤ x t) :
+    q (S + n) + n ≤ q S :=
+  Naturals.le_of_add_le_add_right (k := total (steps S n) y)
+    (Nat.le_trans
+      (Nat.le_of_eq ((Nat.add_right_comm (q (S + n)) n (total (steps S n) y)).trans
+        (Nat.add_assoc (q (S + n)) (total (steps S n) y) n)))
+      (Nat.le_trans (Nat.add_le_add_left (total_steps_lose S n loses) (q (S + n)))
+        (Nat.le_of_eq (balance_over_stretch_on S n across))))
+
+/-- Whether each step of a stretch is marked being decided, either some step of it is unmarked or
+every step of it is marked. -/
+theorem unmarked_or_marked {P : Nat → Prop} (decide : ∀ t, P t ∨ ¬ P t) (S : Nat) :
+    ∀ n, (∃ N, S ≤ N ∧ N < S + n ∧ ¬ P N) ∨ ∀ t, S ≤ t → t < S + n → P t
+  | 0 => .inr fun _ from_ below => absurd (Nat.lt_of_le_of_lt from_ below) (Nat.lt_irrefl S)
+  | n + 1 => match unmarked_or_marked decide S n with
+    | .inl ⟨N, from_, below, unmarked⟩ =>
+      .inl ⟨N, from_, Nat.lt_of_lt_of_le below (Nat.le_succ (S + n)), unmarked⟩
+    | .inr marked => match decide (S + n) with
+      | .inr unmarked => .inl ⟨S + n, Nat.le_add_right S n, Nat.lt_succ_self (S + n), unmarked⟩
+      | .inl last => .inr fun t from_ below => match Nat.lt_or_ge t (S + n) with
+        | .inl earlier => marked t from_ earlier
+        | .inr late => Eq.subst (motive := P)
+            (Nat.le_antisymm (Nat.le_of_lt_succ below) late).symm last
+
+/-- **Rest by balance, decided.** Where whether a step is marked is decided, a count balanced across
+each step from `S` on, losing at least one more than it gains at each marked step, has an unmarked
+step from `S` on within what stood at `S`: the marked steps from `S` on cannot outrun the count. -/
+theorem unmarked_within {q x y : Nat → Nat} {P : Nat → Prop} (decide : ∀ t, P t ∨ ¬ P t)
+    (S : Nat) (across : ∀ t, S ≤ t → q (t + 1) + x t = q t + y t)
+    (loses : ∀ t, S ≤ t → P t → y t + 1 ≤ x t) :
+    ∃ N, S ≤ N ∧ N ≤ S + q S ∧ ¬ P N :=
+  match unmarked_or_marked decide S (q S + 1) with
+  | .inl ⟨N, from_, below, unmarked⟩ => ⟨N, from_, Nat.le_of_lt_succ below, unmarked⟩
+  | .inr marked => absurd
+      (falls_by_stretch (q := q) S (q S + 1) (fun t from_ _ => across t from_)
+        fun t from_ below => loses t from_ (marked t from_ below))
+      (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (Nat.lt_succ_self (q S)) (Nat.le_add_left _ _)))
+
+/-- **Balanced counts compare by their exchanges.** Two counts, each balanced across every step of a
+stretch, the first starting within the second: where at each step the first's gain with the
+second's loss is within the second's gain with the first's loss, the first ends the stretch within
+the second. The two stretch balances are the reason, and nothing about the counts between. -/
+theorem le_by_exchange {q x y q' x' y' : Nat → Nat} (S n : Nat)
+    (across : ∀ t, S ≤ t → t < S + n → q (t + 1) + x t = q t + y t)
+    (across' : ∀ t, S ≤ t → t < S + n → q' (t + 1) + x' t = q' t + y' t)
+    (start : q S ≤ q' S)
+    (exchange : ∀ t, S ≤ t → t < S + n → y t + x' t ≤ y' t + x t) :
+    q (S + n) ≤ q' (S + n) :=
+  have ex : total (steps S n) y + total (steps S n) x' ≤
+      total (steps S n) y' + total (steps S n) x :=
+    Nat.le_trans (Nat.le_of_eq (total_steps_add y x' S n).symm)
+      (Nat.le_trans (total_steps_le S n exchange) (Nat.le_of_eq (total_steps_add y' x S n)))
+  Naturals.le_of_add_le_add_right (k := total (steps S n) x + total (steps S n) x')
+    (calc q (S + n) + (total (steps S n) x + total (steps S n) x')
+        = q S + (total (steps S n) y + total (steps S n) x') :=
+          (Nat.add_assoc _ _ _).symm.trans
+            ((congrArg (· + total (steps S n) x') (balance_over_stretch_on S n across)).trans
+              (Nat.add_assoc _ _ _))
+      _ ≤ q S + (total (steps S n) y' + total (steps S n) x) := Nat.add_le_add_left ex _
+      _ ≤ q' S + (total (steps S n) y' + total (steps S n) x) := Nat.add_le_add_right start _
+      _ = q' (S + n) + (total (steps S n) x' + total (steps S n) x) :=
+          (Nat.add_assoc _ _ _).symm.trans
+            ((congrArg (· + total (steps S n) x) (balance_over_stretch_on S n across').symm).trans
+              (Nat.add_assoc _ _ _))
+      _ = q' (S + n) + (total (steps S n) x + total (steps S n) x') :=
+          congrArg (q' (S + n) + ·) (Nat.add_comm _ _))
 
 end Amounts
 

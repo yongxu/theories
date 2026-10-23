@@ -19,14 +19,16 @@ def kit(name):
 
 
 shutil.copyfile(HERE / 'tree' / 'Becoming' / 'GrammarMap.lean', PKG / 'Becoming' / 'GrammarMap.lean')
+shutil.copyfile(HERE / 'tree' / 'Becoming' / 'MapInstances.lean', PKG / 'Becoming' / 'MapInstances.lean')
 root = (PKG / 'Becoming.lean').read_text(encoding='utf-8')
-root = once(root, 'import Becoming.GrammarReadings\n', 'import Becoming.GrammarReadings\nimport Becoming.GrammarMap\n')
+root = once(root, 'import Becoming.GrammarReadings\n', 'import Becoming.GrammarReadings\nimport Becoming.GrammarMap\nimport Becoming.MapInstances\n')
 start = root.index('* `Becoming.Prelude` (L0)')
-root = root[:start] + kit('doc_bullet.txt') + root[start:]
+root = root[:start] + kit('doc_bullet.txt') + kit('doc_bullet_instances.txt') + root[start:]
 chk = (PKG / 'check_becoming.py').read_text(encoding='utf-8')
-chk = once(chk, '"Becoming.GrammarReadings", ', '"Becoming.GrammarReadings", "Becoming.GrammarMap", ')
-chk = once(chk, '    "GrammarReadings: the corpus', kit('scope.txt') + '    "GrammarReadings: the corpus')
-for name, row in (('README.md', kit('readme_row.txt').rstrip('\n')), ('README.zh.md', kit('readme_row_zh.txt').rstrip('\n'))):
+chk = once(chk, '"Becoming.GrammarReadings", ', '"Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.MapInstances", ')
+chk = once(chk, '    "GrammarReadings: the corpus', kit('scope.txt') + kit('scope_instances.txt') + '    "GrammarReadings: the corpus')
+for name, row in (('README.md', kit('readme_row.txt').rstrip('\n') + '\n' + kit('readme_row_instances.txt').rstrip('\n')),
+                  ('README.zh.md', kit('readme_row_zh.txt').rstrip('\n') + '\n' + kit('readme_row_instances_zh.txt').rstrip('\n'))):
     lines = (PKG / name).read_text(encoding='utf-8').split('\n')
     idx = [i for i, l in enumerate(lines) if l.startswith('| L0 | [`Becoming.GrammarReadings`]')]
     assert len(idx) == 1, (name, idx)
@@ -34,4 +36,4 @@ for name, row in (('README.md', kit('readme_row.txt').rstrip('\n')), ('README.zh
     (PKG / name).write_text('\n'.join(lines), encoding='utf-8')
 (PKG / 'Becoming.lean').write_text(root, encoding='utf-8')
 (PKG / 'check_becoming.py').write_text(chk, encoding='utf-8')
-print('integrated GrammarMap')
+print('integrated GrammarMap and MapInstances')

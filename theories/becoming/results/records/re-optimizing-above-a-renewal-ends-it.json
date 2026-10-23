@@ -340,6 +340,13 @@
         "en": "An order ranking whole courses over a horizon, against a renewal varying with the level.",
         "zh": "在视野上对整个过程排序之序，对随水平变化的更新。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "Optimum.ends_within is a case of rest by balance.",
+        "zh": "Optimum.ends_within 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -465,7 +472,7 @@
         "Becoming.Web.lost_over",
         "Becoming.Web.mutual_course_lost"
       ],
-      "sha256": "6e26a10f167034925a5748e730d32ff8bdb03b0ea6b97d11b9eff3589e87bd24"
+      "sha256": "3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -521,7 +528,7 @@
         "Becoming.Amounts.sum",
         "Becoming.Amounts.whole"
       ],
-      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+      "sha256": "858694cf4ec927c9af8043dd0441ca384b72e8314b347437102cab0f4f796dc6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
@@ -696,12 +703,18 @@
       "role": "receipt",
       "sha256": "a2bd5a858da6ba62d93a14c24c9b8bdf1588768ef9bca72341058621afdc307c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -736,7 +749,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Amounts",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -778,6 +791,10 @@
     {
       "en": "21 October 2026, SG5: an optimizer ranking courses over a horizon, against a renewal given by a law of the level, holds a level of greatest renewal and leaves nothing at the horizon; level_add_drawn is now the case of level_add_drawn_of_within (record horizon-optima-hold-the-greatest-renewal, study section 292); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG5：在视野上对过程排序的优化者，面对由水平之律给出的更新，保持在最大更新的水平并在视野之末不留；level_add_drawn 现为 level_add_drawn_of_within 的情形（记录 horizon-optima-hold-the-greatest-renewal，研究第 292 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): Optimum.ends_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：Optimum.ends_within 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }

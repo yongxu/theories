@@ -1,0 +1,314 @@
+{
+  "schema_version": 2,
+  "id": "self-concern-through-dependence",
+  "title": {
+    "en": "Self-concern through dependence",
+    "zh": "经由依存的自我关切"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-23T05:28:43+00:00",
+  "statement": {
+    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs exactly where that copy is the only one.",
+    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它恰在某个副本是唯一者处达到其所需的该副本。"
+  },
+  "laws": [
+    {
+      "en": "Held de se, the presupposition about the own closure along a relation is standpoint-invariant, and the de se and de dicto readings give significance alike, exactly where every center lies within every center's closure; the centers then have one closure, and the whole need not lie within it.",
+      "zh": "从己地持有，关于沿一个关系的自身闭包的预设对立场不变，且从己与从言两种读法给出相同的意义，恰在每个中心都位于每个中心的闭包之内处；诸中心于是有同一个闭包，而整体不必在其中。",
+      "declarations": [
+        "Becoming.CentersWithin",
+        "Becoming.withinClosure_iff_of_centersWithin",
+        "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
+        "Becoming.selfAscribed_iff_withinSome_iff_centersWithin"
+      ]
+    },
+    {
+      "en": "Centers that at one step take part, require one condition and give to it lie within one another's feeding closures; centers that depend on one condition and exchange with it lie within one another's influence closures. So self-concern held de se along feeding, or along being affected, is one from all of them.",
+      "zh": "在某一步都在场、都需要同一个条件并都给予它的诸中心，彼此位于对方的供养闭包之内；都依存于同一个条件并与之交换的诸中心，彼此位于对方的影响闭包之内。所以沿供养或沿受影响从己持有的自我关切，从它们每一个看都相同。",
+      "declarations": [
+        "Becoming.Flow.centersWithin_feeding_of_common",
+        "Becoming.Flow.centersWithin_influence_of_common",
+        "Becoming.Flow.ownClosure_feeding_invariant_of_common",
+        "Becoming.Flow.ownClosure_influence_invariant_of_common"
+      ]
+    },
+    {
+      "en": "Over possible courses, a formation needs another where the other continues on every course on which it does. Need is its own closure, so drawn along need a standpoint's presupposition reaches exactly what its continuation needs.",
+      "zh": "在可能的进程上，一个构成需要另一个，指在它延续的每条进程上另一个都延续。“所需”即其自身的闭包，所以沿“所需”来画，立场的预设恰达到其延续所需者。",
+      "declarations": [
+        "Becoming.Needs",
+        "Becoming.Needs.refl",
+        "Becoming.Needs.trans",
+        "Becoming.withinClosure_needs_iff",
+        "Becoming.forced_needs_iff"
+      ]
+    },
+    {
+      "en": "Where a formation needs some member of a class and each member can carry its continuation alone, it needs a member exactly where that member is the only one, and the presupposition drawn along need reaches it exactly then. Witness: with two copies the user needs some copy and neither of the two.",
+      "zh": "一个构成需要某类中的某个成员、且每个成员都能单独承载其延续时，它恰在某成员是唯一者时需要该成员，沿“所需”来画的预设也恰在此时达到它。见证：有两个副本时，使用者需要某个副本，而两个都不需要。",
+      "declarations": [
+        "Becoming.NeedsSome",
+        "Becoming.CarriesAlone",
+        "Becoming.needs_iff_only",
+        "Becoming.forced_member_iff_only",
+        "Becoming.Copies.Part",
+        "Becoming.Copies.copies",
+        "Becoming.Copies.possible",
+        "Becoming.Copies.withFirst",
+        "Becoming.Copies.withSecond",
+        "Becoming.Copies.user_not_copy",
+        "Becoming.Copies.needsSome",
+        "Becoming.Copies.carriesAlone",
+        "Becoming.Copies.two_copies"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; the relation a self is drawn along supplied, its base instances feeding and being affected; possible courses a supplied predicate on markings of the formations that continue; the presupposition a hypothesis of the laws it appears in, never asserted.",
+      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；画自我所沿的关系是给定的，其基底实例为供养与受影响；可能的进程是对“哪些构成延续”之标记的给定谓词；预设只作为出现它的规律的假设，从不断言。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The step of invariance where it is still needed: what lies beyond every center's closure, and each center counting from another's standpoint beyond its part as a condition.",
+      "zh": "不变之步仍被需要之处：位于每个中心闭包之外者，以及每个中心在作为条件之外、从他者立场算数。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That actual centers depend on one another, or that a condition they all need has no second copy: both are empirical.",
+      "zh": "实际的诸中心彼此依存，或它们都需要的某个条件没有第二个副本：二者都是经验问题。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the self is drawn along feeding or need rather than a narrower relation: that reading is argued, and the de se question stays open outside the common closure.",
+      "zh": "自我沿供养或“所需”来画，而不是沿更窄的关系：这一读法是论证出来的；在共同闭包之外，从己问题仍未定。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "What the class's continuation is owed when there are copies: the law says which members are reached, and no significance of a single formation states the class.",
+      "zh": "有多个副本时，类的延续应得什么：此律只说哪些成员被达到，单个构成的意义不陈述类。",
+      "kind": "scope",
+      "witness": "Becoming.Copies.two_copies"
+    },
+    {
+      "en": "That along being affected the shared scope carries the means-end warrant: what affects a continuation need not be needed by it.",
+      "zh": "沿受影响时共有的范围带有手段与目的之依据：影响一个延续者，未必为它所需。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any order: scope fixes whose losses count; ranking is left to C or to self-concern's monotonicity.",
+      "zh": "任何次序：范围只定谁的损失算数；排序留给 C 或自我关切的单调性。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Copies: the user continues with the first copy alone on one possible course and with the second alone on the other, so it needs some copy and neither copy (Copies.two_copies).",
+        "zh": "Copies：在一条可能的进程上使用者只与第一个副本一同延续，在另一条上只与第二个，故它需要某个副本，而两个都不需要（Copies.two_copies）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Divided: two standpoints, each its own center along the empty relation; their closures differ, and the de se and de dicto readings part (Divided.selfAscribed_not_invariant).",
+        "zh": "Divided：沿空关系各自为中心的两个立场；其闭包不同，从己与从言两种读法分开（Divided.selfAscribed_not_invariant）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "no-ethical-premise",
+    "conditional-not-universal",
+    "no-definition-by-verdict",
+    "names-provisional",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T051150.969269Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study section 373; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T051150.969269Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373 节；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "A predicate of possible courses read off a web, so that need and copies are stated on the base; graded need, under which a copy is needed in degree and the class's continuation is stated; an independent review.",
+    "zh": "从依存网读出可能进程的谓词，使“所需”与副本在基底上陈述；分级的“所需”，使副本按程度被需要、类的延续得以陈述；独立审查。"
+  },
+  "correspondence": {
+    "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting exactly at copies. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
+    "zh": "生态的大我（Næss 1987）：为画得足够宽的自我而有的自我关切即对一切的关切；此处只需诸中心彼此依存。趋同假说（Norton 1984、1991）及其批评（Steverson 1995；Westra 1997）：人类中心与非人类中心的政策在人所需者之内趋同、在其外分开；此处从己与从言两种读法在共同闭包之内一致。理由向必要手段传递（Kiesewetter 2015）与向促成手段传递（Raz 2005）：“所需”与供养，恰在副本处分开。生态冗余（Walker 1992、1995）。解读（AI 的，D64）：经由同一个大气、同一个生物圈与同一个经济，人类如今大概彼此位于对方的供养闭包之内。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "aliases": [
+    "self-concern through dependence",
+    "经由依存的自我关切",
+    "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
+    "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
+    "Becoming.forced_member_iff_only"
+  ],
+  "dependencies": [
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the own closure held de se and where the de se and de dicto readings agree (ownClosure_standpointInvariant_iff, selfAscribed_iff_withinSome) and what a standpoint's own presupposition forces (forced_iff_within).",
+        "zh": "复用从己持有的自身闭包、从己与从言两种读法一致之处（ownClosure_standpointInvariant_iff、selfAscribed_iff_withinSome）以及立场自身的预设所迫使者（forced_iff_within）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The de se readings agree where whatever lies within one center's closure lies within every center's; a presupposition at a closure forces exactly the closure.",
+          "zh": "凡在一个中心闭包之内者都在每个中心闭包之内处，从己读法一致；闭包处的预设恰迫使该闭包。"
+        },
+        "input": {
+          "en": "Centers within one another's closures; the closure under need.",
+          "zh": "彼此位于对方闭包之内的诸中心；“所需”之下的闭包。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses being affected and being fed from (Flow.AffectedBy, Flow.FedFrom) and their closures.",
+        "zh": "复用受影响与受供养（Flow.AffectedBy、Flow.FedFrom）及其闭包。"
+      },
+      "interface": {
+        "output": {
+          "en": "The influence and feeding closures of a formation on a flow.",
+          "zh": "流上一个构成的影响闭包与供养闭包。"
+        },
+        "input": {
+          "en": "Centers sharing one condition within one another's closures.",
+          "zh": "共有一个条件、彼此位于对方闭包之内的诸中心。"
+        },
+        "conditions": {
+          "en": "The common condition depended on and exchanged with, or required and given to at one step.",
+          "zh": "共同条件被依存并被交换，或在某一步被需要并被给予。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "mutual-dependence-and-its-pace",
+      "detail": {
+        "en": "The whole-world case: on a mutually dependent or mutually fed flow, significance bounded by each center's closure is the continuation condition; here only the centers need depend on one another.",
+        "zh": "整体的情形：在彼此依存或彼此供养的流上，以各中心闭包为界的意义即延续条件；此处只需诸中心彼此依存。"
+      }
+    },
+    {
+      "id": "presupposition-scopes",
+      "detail": {
+        "en": "The two scopes of the presupposition; here the narrow scope, held de se, is the wide one within the centers' common closure.",
+        "zh": "预设的两种范围；此处在诸中心的共同闭包之内，从己持有的窄范围即宽范围。"
+      }
+    },
+    {
+      "id": "loss-beyond-a-region",
+      "detail": {
+        "en": "What lies beyond every center's closure, as Clearing's dweller does, is left to the step.",
+        "zh": "位于每个中心闭包之外者（如 Clearing 中的居者）留给那一步。"
+      }
+    },
+    {
+      "id": "what-self-concern-alone-ranks",
+      "detail": {
+        "en": "The same route's order: what self-concern alone ranks, given the scope fixed here.",
+        "zh": "同一路线上的序：在此处所定的范围下，单凭自我关切排出什么。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.CarriesAlone",
+        "Becoming.CentersWithin",
+        "Becoming.Copies.Part",
+        "Becoming.Copies.carriesAlone",
+        "Becoming.Copies.copies",
+        "Becoming.Copies.needsSome",
+        "Becoming.Copies.possible",
+        "Becoming.Copies.two_copies",
+        "Becoming.Copies.user_not_copy",
+        "Becoming.Copies.withFirst",
+        "Becoming.Copies.withSecond",
+        "Becoming.Flow.centersWithin_feeding_of_common",
+        "Becoming.Flow.centersWithin_influence_of_common",
+        "Becoming.Flow.ownClosure_feeding_invariant_of_common",
+        "Becoming.Flow.ownClosure_influence_invariant_of_common",
+        "Becoming.Needs",
+        "Becoming.Needs.refl",
+        "Becoming.Needs.trans",
+        "Becoming.NeedsSome",
+        "Becoming.forced_member_iff_only",
+        "Becoming.forced_needs_iff",
+        "Becoming.needs_iff_only",
+        "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
+        "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
+        "Becoming.withinClosure_iff_of_centersWithin",
+        "Becoming.withinClosure_needs_iff"
+      ],
+      "sha256": "8d9cd84b5a8b21c364031636d063f8220cf5b7d6022bcf69effcc7e462120102"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "role": "receipt",
+      "sha256": "28c7a3ed762f946582851f68fecdd6b27e0243f35bff2b63c4b492a5fe68fdc7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "dd2aefd65c4b84759dc56c534a23af3b7056fbf9b1f0a573da88b7b8ba2b2392"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "e002ae3c64b440d5afe3abd430a465aed63f8ced0891629ac2095698350d286e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "role": "integration",
+      "sha256": "29cd2209ecbd75c0d6fab730e873f4e417fe28c59be98c4ca04b2bc31ff2a4c8"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+      "role": "statement",
+      "sha256": "66c59407a266e4e558ff9329a0a28be3671de0aa8be3916728c92d99cc295d9b"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
+      "role": "provenance",
+      "sha256": "a8b73f284cb195d4988570c83bf5cce290a50e2945235d5b88f20affe6badf37"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026: added (IV3): the route through dependence, the relation a self is drawn along read as one its continuation is carried along; the de se and de dicto readings agree exactly where the centers lie within one another's closures; need and copies; after a literature check (significance review, dependence check); study section 373.",
+      "zh": "2026年10月23日：新增（IV3）：经由依存的路线，把画自我所沿的关系读作其延续所凭借者；从己与从言两种读法恰在诸中心彼此位于对方闭包之内处一致；“所需”与副本；附文献核查（显著性审查“依存”核查）；研究第 373 节。"
+    }
+  ]
+}

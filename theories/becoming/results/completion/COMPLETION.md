@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261023T035943.256483Z` and the connectivity measure of `5757998ea` (core receipt `20261022T204050.535314Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261023T055339.893510Z` and the connectivity measure of `369cd7445` (core receipt `20261023T055339.893510Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -100,22 +100,22 @@ No finding.
 <a id="master-laws"></a>
 ## The master laws (EC, not a criterion)
 
-Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the master laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 64 of 127 central declarations rest on at least one master law.
+Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the master laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 77 of 127 central declarations rest on at least one master law.
 
 | Law | Statement | Anchors | Central declarations resting on it |
 |---|---|---|---:|
 | Closure | what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it | `WithinClosure` | 16 |
-| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `balance_over_stretch_on` | 39 |
+| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `balance_over_stretch_on` | 52 |
 | Finite runs | within finitely many configurations a law returns every configuration or is drawn, and rest is a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop` | 14 |
 | Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder` | 1 |
 | Order | widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn` | 9 |
 
-Resting on no master law (63), by row:
+Resting on no master law (50), by row:
 
 - Generation: `onLoop_of_closing`
 - Maintenance: `Tolerance.answers_restores_iff`, `Viability.kernel_and_iff`
 - Transformation: `Pace.rule_until_reading`
-- Degeneration: `RuleCapture.favouring_locks`, `RegimeMargin.ends_iff_below`, `RegimeMargin.Adjusted.ends_iff_below`, `RegimeMargin.Adjusted.comes_to_rest`, `RegimeMargin.Adjusted.falls_iff_below`, `RegimeMargin.Drawn.run_shape`, `RegimeMargin.Coupled.threshold_falls`, `RegimeMargin.Coupled.Indexed.ends_downstream`, `Web.course_lost_iff`, `Web.frontier_exhausts`, `Web.frontier_rebuilds`, `Web.Next.frontier_ends_drawn_first`
+- Degeneration: `RuleCapture.favouring_locks`, `RegimeMargin.Drawn.run_shape`, `RegimeMargin.Coupled.Indexed.ends_downstream`
 - Dissolution: `CensusWebs.keep_pace`
 - Actor: `Web.roles_supported`, `Dependence.differenceOnlyTogether_iff`, `partForms_iff`
 - Patient: `Web.roles_dependent`, `responses_le_missBound`
@@ -128,4 +128,4 @@ Resting on no master law (63), by row:
 - Learning: `Limit.identifies_iff_tracks`, `Learning.Training.unselected_beyond_data`
 - Collective: `Withholding.withholding_spreads`, `SharedCodes.run_agrees_every_start_iff`, `RelativePosition.rise_needs_fall`, `RuleCapture.uniform_locks`, `ClosedCapture.lock_outlives_loss`
 - Significance: `unrestricted_iff_livingSignificance`
-- Alignment: `Web.optimum_broken_iff`, `Optimum.optimum_beyond`, `Optimum.mutual_beyond`, `Web.course_lost_iff`, `Web.frontier_exhausts`, `Web.frontier_rebuilds`, `Web.Next.frontier_ends_drawn_first`, `ExchangeLaw.response_not_fixed_by_coupling`
+- Alignment: `Web.optimum_broken_iff`, `Optimum.optimum_beyond`, `Optimum.mutual_beyond`, `ExchangeLaw.response_not_fixed_by_coupling`

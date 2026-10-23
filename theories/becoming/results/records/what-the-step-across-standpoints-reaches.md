@@ -71,6 +71,8 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). Clearing's clearer loses the dweller beyond its dependence; the narrower scope, with the clearer the only center, reads that loss as nothing, and the condition reads it.
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
 
+**Used by:** [self-concern-through-dependence](self-concern-through-dependence.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -90,6 +92,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json) | — |
 
 Aliases: `what the step across standpoints reaches`, `跨立场的一步达到哪里`, `Gewirth's step reaches the centers`, `the narrower scope as the centers`, `what wants its continuation`, `Becoming.forced_iff_center`, `Becoming.forced_iff_within`, `Becoming.unrestricted_atCenters_iff`, `the de se question`, `de se and de dicto presupposition`, `Becoming.selfAscribed_iff_withinSome`, `Becoming.forced_iff_within_some`, `Becoming.Valuation.transmits_iff_closed`, `Becoming.Valuation.forced_iff_reach`, `Becoming.Valuation.forced_whole_iff_connected`
 

@@ -271,6 +271,13 @@
         "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.",
         "zh": "按每个被满足的步计数（不论位置）时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "Optimum.Next.drawable_le_of_gains is a case of rest by balance.",
+        "zh": "Optimum.Next.drawable_le_of_gains 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -324,7 +331,7 @@
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_leaves"
       ],
-      "sha256": "6e26a10f167034925a5748e730d32ff8bdb03b0ea6b97d11b9eff3589e87bd24"
+      "sha256": "3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -352,7 +359,7 @@
         "Becoming.Amounts.sum",
         "Becoming.Amounts.whole"
       ],
-      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+      "sha256": "858694cf4ec927c9af8043dd0441ca384b72e8314b347437102cab0f4f796dc6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
@@ -495,12 +502,18 @@
       "role": "receipt",
       "sha256": "a2bd5a858da6ba62d93a14c24c9b8bdf1588768ef9bca72341058621afdc307c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -521,7 +534,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Amounts",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -572,6 +585,10 @@
     {
       "en": "22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.",
       "zh": "2026年10月22日，SG13：跌落后再被满足的步已回答（记录 steps-met-again-after-a-fall，研究第 323 节）；其开放项如此说明。其规律不变。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：Optimum.Next.drawable_le_of_gains 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }
