@@ -128,6 +128,43 @@ This is candidate (4) in §7.
 
 **The question left** [AI reading]. Is there a class narrower than the one that holds the living together with the conditions they affect and are fed by, is constant, and has a core that carries every line on? In `SharedCondition` the model may hold nothing else, so the one and such a class may coincide there. The test needs something outside both lines and their condition, such as a third thing neither family affects nor draws on. If such a class is constant and excludes that third thing, the dynamics single out life with its conditions as the class of a line. That is close to how the theory reads 生生, life in the whole and its continuing generation. Self-concern held de se would then reach it with no step and without choosing the one. This is candidate (5) in §7.
 
+## 6e. The class of being joined (GS5, `457bce47d`, 07 §4.5)
+
+For every carrier and relation:
+
+- The class of being joined by 缘 read either way (`«同族» R «一»`) has 缘 itself as its continuation and reaches what the one reaches.
+- It is the finest class that does: a class has 缘 as its continuation exactly where it contains this one (`«续即缘当且仅当含族»`).
+- Where every occurrence conditions something, it is constant, and a line under its core reaches what the one reaches.
+
+Three witnesses add a third thing to `SharedCondition`:
+
+- **Joined to nothing** (`ThirdThing`): it lies outside the class of being joined, which is then narrower than the one and still reaches the other family.
+- **Affecting the condition** (`ThirdAffects`): the class of being joined is the one, but the constant class "the third thing or not" leaves it out and still reaches.
+- **Fed by the condition** (`ThirdFed`): every constant class holding a stage of the condition with a member takes the third thing in.
+
+Constancy reads which way a thing is joined; being joined does not. That the actual unfolding is joined is a correspondence, not shown.
+
+## 6f. Where PW stands (24 October 2026) [AI reading]
+
+Four of the five candidates landed in one day (GS2–GS5). Taken together with §2–3 they give one route for the future that uses no step of invariance. Each premise is stated so that it can be denied.
+
+1. **Held de se**, acting presupposes that one's own continuation has significance.
+2. **Need never reaches past one's end** (§2; candidate (1), with the IV3 line's owner). So the future is reached, if at all, along the line one's continuation runs on, not along what it needs.
+3. **The line goes on past a member's end** under a coarser class (`«过亡而续»`). A class between the member's and the one can have a core that carries it through each birth while reaching no other family (`TwoLines`): this is kin partiality, and it is what self-concern alone gives in time.
+4. **Where a line runs through its conditions**, a class under which it goes on must hold them. A class holding the members without the condition breaks the line at the condition (`SharedCondition.affecting_member_outside`).
+5. **A constant class that holds a condition with a member takes in whatever that condition feeds** (`ThirdFed.constant_takes_third`). Through the conditions one affects, it reaches the other lines' members that those conditions later feed (`SharedCondition.affecting_reaches_other`). A common cause reaches nothing (`fed_outside`).
+
+**So**, held de se, drawn under a constant class along a line that runs through its conditions, one's concern for one's own continuation reaches everything those conditions feed, onward in time and across lines. It needs no step of invariance and does not choose the one. What stays out is only what affects one's conditions without being fed by them, and what no chain joins.
+
+**The crux, in its sharpest form.** The critic's narrow self is an organism's class, and a class under which some line ends is not constant (`«有亡之续则不有常»`). So the critic must hold that the self whose continuation one presupposes is drawn under a class that is no regularity of its own: a line that must end. That is coherent, since valuing a finite life is not incoherent, so the step is not refuted. But the question for philosophers is now exact: **in acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going?**
+
+**Premises that are correspondences, not shown.**
+
+- That a person's own line runs through their conditions in the grammar's sense: one's next stage is conditioned through what one takes in. The theory's laws of renewal and embodiment support it.
+- That the actual net is joined, and which way.
+
+**What PW does not reach.** Each center counting from another's standpoint beyond its part as a condition. What affects one's conditions without being fed by them, as an end of significance rather than a cause. Present beings beyond every closure. These remain the step's.
+
 ## 7. Candidate theorems, for the owners
 
 None is claimed here. Each goes to its owner on the board.
