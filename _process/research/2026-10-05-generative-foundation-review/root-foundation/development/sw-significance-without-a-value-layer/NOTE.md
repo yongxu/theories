@@ -49,3 +49,19 @@ Two limits keep this from overreaching:
 - What is so of itself does not settle which relation a self continues along (§4). The step stays argued. 道法自然 counts against a narrower relation only as far as that relation is a model put over the unfolding from outside it, and whether some narrower relation is the self's own is exactly the open question.
 
 For the work itself, the same reading applies: the change moves through the pages' owners, by the handovers in §6, and is not forced over their uncommitted edits.
+
+## 8. C read the same way
+
+§7 said "C still alone orders". Ren asked for that to be explained, and on examination it repeats the dualism one level up: "better" as a verdict passed on courses from outside them. The work already has the relocation. An order is *increasing in its own continuation* when it ranks higher every widening that adds to what its own continuation marks (`Weighting.IncreasingInOwn`). Where its own continuation is everything listed, that is exactly an order increasing in admission, C's content (`Weighting.increasingInOwn_iff_increasing`). Chapter 7 §4.4 already says "Monotonicity at the standpoint is C's premise relocated: weaker, still a premise."
+
+Read as §3 reads significance, the two parts are:
+- **direction**: a continuing ranks more of its own continuing above less. Read as what continuing is, not as a standard laid on it, this adds nothing from outside. A self-maintaining line goes toward its own continuation, and the selection laws describe how.
+- **scope**: what its own continuing is. Drawn along the whole, its direction is widening and its course is 生生不息. Drawn narrower, it is self-concern, which can rank a course that ends others above one that does not (`Weighting.some_increasingInOwn_reverses`; the cancer's case).
+
+So, read this way, the ethics has one open item, not two: the step, whether one's own continuing is drawn along the whole. 生生不息 is then not a target that C names from outside. It is what a continuing whose own is the whole does of itself, which is 道法自然 applied to order.
+
+Limits:
+- Reading "better" as the direction of a continuing is a reading [AI reading, proposed]. It is stated openly, not hidden in a definition, and it gives no "ought" beyond that direction. A line that does not go toward its own continuation gets no reason from it.
+- Actual lives are not monotone in their organism's continuation (they die for offspring and trade one part against another). The monotonicity concerns a line under a class (PW §5), and whether lives are monotone there is an empirical question.
+- Mixed comparisons still need a measure (§4.4's table), and J1–J4 stay as they are.
+- Chapter 7's "two premises, two roles" and the instructions that repeat it change only if the owners of 07 and the instructions take this reading. Until then the live account keeps C as a premise, and this section is a proposal to the same owners as §6.
