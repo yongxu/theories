@@ -36,7 +36,7 @@ At [Ren's request](../../sources/15-codex-theory-conversations/2026-10-09-pure-c
 | Former path | Path |
 |---|---|
 | `theories/shengsheng-buxi-generative-existence/` | [`theories/becoming/`](../../theories/becoming/README.md) |
-| `theories/shengsheng-buxi-generative-existence/unified-2026-10-05/` | [`theories/becoming/chapters/`](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md) |
+| `theories/shengsheng-buxi-generative-existence/unified-2026-10-05/` | [`theories/becoming/chapters/`](../../theories/becoming/history/THE-THEORY-OF-BECOMING.md) |
 
 The move changed no file's content. Live references were rewritten by five ordered substitution rules that match only whole path components in path positions. This covers tools, configuration, records, catalogues, studies, experiment documentation and the other theories. In the directive register `sources/15-codex-theory-conversations/`, only Markdown link targets were rewritten, and no line quoting Ren was touched.
 

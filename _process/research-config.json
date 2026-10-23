@@ -18,20 +18,7 @@
   "readme_lead": "_process/navigation/README-LEAD.md",
   "readme_repository": "_process/navigation/REPOSITORY.md",
   "readme_featured_note": "Ordered as one argument about AI and human coordination: why a race to be more, or above all others, cannot come to rest; why each counting only its own draw can together end what all depend on, the winner included; what anything that wants to go on must count, and where that stops; why selection and policy through a selector's couplings are blind to what does not couple in, including how far off the break is; why reforming the state without changing the rule is re-absorbed; why what cannot be undone cannot be tested by trial; what closing and opening the future exactly take; and why relations and wholes go on only through joint action and continuing generation. Each is checked in Lean on the pure core, whose source declarations have empty axiom reports; that is a constructive discipline, not an absence of premises, and each holds under the hypotheses its record states. Where a result says that something can happen, a constructed example shows that it can, not how often it does. None is new mathematics: each is near-definitional or a known result in the theory's vocabulary (the commons and overshoot, ranking-function termination, transitive closure, the proxy problem, Price's selection differential, opportunity-set inclusion), and the chapter's [relation to known results](theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results) names the closest prior result of each; what the work adds is that they are stated in one model with every premise named. Chosen for significance; the selection is open to revision.",
-  "readme_featured_results": [
-    "seeking-boundary",
-    "own-count-misses-joint-excess",
-    "consumption-ends-with-feeders",
-    "feeding-closure",
-    "derived-extent-limits",
-    "selection-through-couplings",
-    "runaway-distance-uncoupled",
-    "target-capture",
-    "experiment-needs-return",
-    "closing-needs-net-draw",
-    "separation-loses-the-relation",
-    "whole-persists-through-generation"
-  ],
+  "readme_featured_results": [],
   "readme_featured_selection": {
     "by": "AI",
     "date": "2026-10-17",
@@ -57,12 +44,7 @@
       "what-a-law-of-the-whole-and-no-part-takes"
     ]
   },
-  "readme_conditional_results": [
-    "continuation-condition-yields-living-significance",
-    "positive-ground-open-futures",
-    "practical-judgment-under-living-significance",
-    "alignment-direction-under-widening"
-  ],
+  "readme_conditional_results": [],
   "readme_research_goals": [
     "theory-of-becoming",
     "chinese-sources-and-becoming",
@@ -73,38 +55,38 @@
   "open_questions": {
     "programme": [
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#81-open-items-ranked",
-        "label": "Section 8.1, open items, ranked"
+        "path": "theories/becoming/chapters/08-METHOD.md#open-items-ranked",
+        "label": "Method, the open items, ranked"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#82-further-proofs-by-area",
-        "label": "Section 8.2, further proofs, by area"
+        "path": "theories/becoming/chapters/08-METHOD.md#further-proofs",
+        "label": "Method, further proofs by area"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#85-philosophical-warrant",
-        "label": "Section 8.5, philosophical warrant"
+        "path": "theories/becoming/chapters/08-METHOD.md#philosophical-warrant",
+        "label": "Method, philosophical warrant"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#86-the-logical-commitment",
-        "label": "Section 8.6, the logical commitment"
+        "path": "theories/becoming/chapters/08-METHOD.md#logical-commitment",
+        "label": "Method, the logical commitment"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#87-empirical-correspondence",
-        "label": "Section 8.7, empirical correspondence"
+        "path": "theories/becoming/chapters/08-METHOD.md#empirical-correspondence",
+        "label": "Method, empirical correspondence"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#88-review-status",
-        "label": "Section 8.8, review status"
+        "path": "theories/becoming/chapters/08-METHOD.md#review-status",
+        "label": "Method, review status"
       }
     ],
     "pending_ren": [
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#83-readings-adopted",
-        "label": "Section 8.3, readings adopted, each with its argument"
+        "path": "theories/becoming/chapters/08-METHOD.md#readings-adopted",
+        "label": "Method, readings adopted, each with its argument"
       },
       {
-        "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#84-no-reading-open-texts-that-change-by-proposal",
-        "label": "Section 8.4, no reading open; the texts that change only by proposal"
+        "path": "theories/becoming/chapters/08-METHOD.md#no-reading-open",
+        "label": "Method, no reading open; the texts that change only by proposal"
       },
       {
         "path": "_process/BECOMING-WORKBOARD.md#decisions-pending-ren",
@@ -177,7 +159,9 @@
   "move_receipts": "_process/architecture/moves",
   "move_pinned": [
     "theories/becoming/OPENING.md",
-    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/ONE-PAGE.md",
+    "theories/becoming/chapters/0[1-8]-*.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
     "**/becoming-verification.json",
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/**",

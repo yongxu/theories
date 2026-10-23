@@ -97,7 +97,7 @@ The naming study of 17-18 October (N1, study section 6.2) adopted "couples into"
 | proof | [Testing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean) | `Becoming.Web.CoupledInto`, `Becoming.Web.AlikeThrough`, `Becoming.Web.alike_of_threshold` |
 | proof | [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean) | `Becoming.ExchangeLaw`, `Becoming.ExchangeLaw.Through` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-17-registration-dualist-vocabulary.md](../../../../sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md) | — |
 | integration | [REGISTRATION-VOCABULARY-STUDY.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REGISTRATION-VOCABULARY-STUDY.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T011212.424412Z/verification.json) | — |

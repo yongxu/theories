@@ -1,6 +1,6 @@
 # Acquired segmentation enters compositional use
 
-8 October 2026. AI-authored continuation of [Ren's full cognitive/evolutionary objective](../../../../sources/15-codex-theory-conversations/2026-10-08-cognition-learning-evolution-goal.md), within the [current theory](../../../../theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md). The full objective remains active. This round completes one conditional connection: retained encounters change a grouping relation, and that relation changes which messages reach the previously formed compositional operation. It does not complete the broader social formation of attention, segmentation and reconstruction dispositions.
+8 October 2026. AI-authored continuation of [Ren's full cognitive/evolutionary objective](../../../../sources/15-codex-theory-conversations/2026-10-08-cognition-learning-evolution-goal.md), within the [current theory](../../../../theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.md). The full objective remains active. This round completes one conditional connection: retained encounters change a grouping relation, and that relation changes which messages reach the previously formed compositional operation. It does not complete the broader social formation of attention, segmentation and reconstruction dispositions.
 
 **中文结果。** 实际接触留下的关系改变分节，分节进入已有组合操作的实际使用。形成出的关系适用于给定编码语言的任意有限词序列，但有限支持不保证每次都能执行。熟悉的重复可能跨过预定词界；部分经历可能已经支持某一个表达，同时仍误分另一个表达。基本辨别、关系判准、解码和继续取得的安排仍有前提，未宣称完整认知或演化心理完成。
 

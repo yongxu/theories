@@ -60,8 +60,8 @@ Relay of resources through successive generations of recipients.
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
-| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `Support passed on by later gainers`, `支持由后得者传下`, `Becoming.Flow.comes_within_not_not`
 

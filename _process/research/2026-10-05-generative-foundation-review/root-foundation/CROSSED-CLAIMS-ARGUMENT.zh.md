@@ -2,7 +2,7 @@
 
 > **中文版（2026-10-17）。** 正典文本是[英文版](CROSSED-CLAIMS-ARGUMENT.md)；本版由重构时从双语原文拆出，不与英文同步维护，两者有出入时以英文为准。
 
-2026-10-08。AI 撰写的肯定伦理论证，接续 Ren 的“继续”。按[非二元方法](../../../../theories/becoming/chapters/NONDUAL-METHOD.md)及 G0/J 明确公理路线推进。[本轮整合](CROSSED-CLAIMS-INTEGRATION.md)、[形式范围](../history/root-foundation/CROSSED-CLAIMS-PROOF.md)及[独立反审](../history/root-foundation/CROSSED-CLAIMS-REVIEW.md)分别说明结果及验证。本文提出的 LR 是可争辩的新增规范承诺，不归为 Ren 原话，也不当作无前提证明。
+2026-10-08。AI 撰写的肯定伦理论证，接续 Ren 的“继续”。按[非二元方法](../../../../theories/becoming/history/NONDUAL-METHOD.md)及 G0/J 明确公理路线推进。[本轮整合](CROSSED-CLAIMS-INTEGRATION.md)、[形式范围](../history/root-foundation/CROSSED-CLAIMS-PROOF.md)及[独立反审](../history/root-foundation/CROSSED-CLAIMS-REVIEW.md)分别说明结果及验证。本文提出的 LR 是可争辩的新增规范承诺，不归为 Ren 原话，也不当作无前提证明。
 
 **肯定候选 LR：已经获得充分根据的同等多救优先，不必因某处损失发生任意轻微的真实加重而立即失效。** 在一个固定且关系充分的救助情境中，若变化只是受限的受损加深，没有改变先行要求、强加伤害、支持关系或既有机会承诺与分配权，就应当容许某段实质非零的变化范围，仍然优先实现较多的基本保护。这给出少数稍重与多数稍轻之间的一部分肯定比较；不是给任意两个损失种类设置兑换率。
 

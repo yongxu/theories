@@ -76,7 +76,7 @@ Consequences of one organized activity affect reconstruction of its operative co
 | integration | [COGNITION-LEARNING-EVOLUTION-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/COGNITION-LEARNING-EVOLUTION-INTEGRATION.md) | — |
 | review | [LEARNING-SELECTION-COUNTERREVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LEARNING-SELECTION-COUNTERREVIEW.md) | — |
 | provenance | [LEARNING-SELECTION-SOURCES.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LEARNING-SELECTION-SOURCES.md) | — |
-| statement | [COGNITION-LEARNING-AND-EVOLUTION.md](../../chapters/COGNITION-LEARNING-AND-EVOLUTION.md) | — |
+| statement | [COGNITION-LEARNING-AND-EVOLUTION.md](../../history/COGNITION-LEARNING-AND-EVOLUTION.md) | — |
 | provenance | [2026-10-09-learning-recursive-selection.md](../../../../sources/15-codex-theory-conversations/2026-10-09-learning-recursive-selection.md) | — |
 | proof | [Copying.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean) | `Becoming.Copying.lineage_all_iff`, `Becoming.Copying.batch` |
 | proof | [Stock.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean) | `Becoming.Stock.Balanced`, `Becoming.Stock.trace_balance` |

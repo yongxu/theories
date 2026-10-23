@@ -76,7 +76,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
 | proof | [Entropy.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean) | `Becoming.Flow.GainlessOn`, `Becoming.Flow.Gainless` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T091757.535800Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-17-registration-dualist-vocabulary.md](../../../../sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json) | — |

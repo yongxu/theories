@@ -197,7 +197,7 @@ What the drafter could not state well:
 
 ## Second round (fix and audit, 23 October evening)
 
-Found by the fixers and auditors of the second round while checking every theorem sentence against its Lean declaration, and by the [review of the grammar against its sources](../../../2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md) (its Lean items are board item OU6). The chapters state what the Lean proves; these are corrections for the records and docstrings, and results the chapters state that have no record yet.
+Found by the fixers and auditors of the second round while checking every theorem sentence against its Lean declaration, and by the [review of the grammar against its sources](../../2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md) (its Lean items are board item OU6). The chapters state what the Lean proves; these are corrections for the records and docstrings, and results the chapters state that have no record yet.
 
 ### From chapter 01
 

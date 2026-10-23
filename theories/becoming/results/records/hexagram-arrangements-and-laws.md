@@ -125,14 +125,14 @@ Closes the seventh gap the record chinese-sources-on-the-spine found (the hexagr
 | proof | [Labelled.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean) | `Becoming.exchange` |
 | proof | [Unfolding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean) | `Becoming.World.balances_iff_exchange` |
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.Flow.Balances`, `Becoming.Flow.Balances.rise_given`, `Becoming.Flow.Balances.fall_taken` |
-| statement | [YI-ZHUAN-AND-BECOMING.md](../../chapters/YI-ZHUAN-AND-BECOMING.md) | — |
-| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| statement | [YI-ZHUAN-AND-BECOMING.md](../../history/YI-ZHUAN-AND-BECOMING.md) | — |
+| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json) | — |
 | integration | [verify_mapping.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | integration | [verify_ro.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [YD-OW-ZG.txt](../../../../sources/chinese-classical-texts/yidao-v1.3/evidence/texts/YD-OW-ZG.txt) | — |
 | provenance | [xugua.json](../../../../sources/zhouyi-yizhuan/yizhuan/xugua.json) | — |
 | provenance | [xici-xia.json](../../../../sources/zhouyi-yizhuan/yizhuan/xici-xia.json) | — |

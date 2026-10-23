@@ -23,7 +23,7 @@
     "en": "The whole deduction must warrant relational unity and differentiation, including its own articulation. Inclusive scope, established constitutive relations and particular operative mechanisms have distinct inferential roles within the same unfolding; no universally productive successor or complete causal connectivity is presumed.",
     "zh": "整体演绎须为关系整体与分化提供根据，包含自身的表达。包容范围、已确定的构成关系与具体作用机制在同一展开中承担不同推论角色；不预设普遍生成后继或完全因果连通。"
   },
-  "canonical_source": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+  "canonical_source": "theories/becoming/history/BECOMING-FOUNDATION.md",
   "aliases": [],
   "dependencies": [
     {
@@ -185,7 +185,7 @@
     {
       "en": "Whole and manifold: following Ren’s correction, the necessity target is Becoming as a whole, with generativity within its manifold; the completion audit no longer gates on universal generativity.",
       "zh": "整体与manifold：依Ren的修正，必然性对象是Becoming整体，生成性在其manifold之中；完成审计撤回普遍生成性门槛。",
-      "source": "theories/becoming/chapters/BECOMING-FOUNDATION.md#whole-and-manifold"
+      "source": "theories/becoming/history/BECOMING-FOUNDATION.md#whole-and-manifold"
     },
     {
       "en": "From inclusion to relation: the direct whole-inclusion argument is assessed and still lacks the passage to relational constitution; a primary Hegel comparison separates a category of becoming from a causal mechanism.",
@@ -195,7 +195,7 @@
     {
       "en": "Spine evidence: each audit row cites the spine’s laws of the whole, its parts carved by premises (seven shown met by some worlds and not others, eight shown independent) and countermodels, locating the remainder without discharging it.",
       "zh": "脊柱证据：完成审计各行引用Becoming脊柱的整体规律、前提划出的部分（七个已示为有满足与不满足它的世界，八个已示为彼此独立）与反模型；这定位剩余，不完成它。",
-      "source": "theories/becoming/chapters/BECOMING-FOUNDATION.md#5-completion-audit-and-next-central-inference"
+      "source": "theories/becoming/history/BECOMING-FOUNDATION.md#5-completion-audit-and-next-central-inference"
     },
     {
       "zh": "生生之意义不是采用的公理：在无公理的理论中，它是用到它的规律的条件，其定义与刻画保留；正面相关的读法是开放的读法。",
@@ -234,7 +234,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+      "path": "theories/becoming/history/BECOMING-FOUNDATION.md",
       "role": "statement",
       "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324",
       "declarations": []

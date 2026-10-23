@@ -1404,7 +1404,7 @@ Definitions and types:
 <details>
 <summary>ChangingDependency.lean — 36 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean`
 
@@ -1461,7 +1461,7 @@ Contains 25 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ContinuationAdequacy.lean — 29 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean`
 
@@ -1511,7 +1511,7 @@ Contains 14 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ContinuationCorrespondence.lean — 17 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean`
 
@@ -1634,7 +1634,7 @@ Contains 14 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>EvidenceThroughChange.lean — 28 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/EvidenceThroughChange.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/EvidenceThroughChange.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/EvidenceThroughChange.lean`
 
@@ -1723,7 +1723,7 @@ Definitions and types:
 <details>
 <summary>InquiryChoice.lean — 42 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean) · [Theory](../../chapters/03-KNOWING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean`
 
@@ -1853,7 +1853,7 @@ Definitions and types:
 <details>
 <summary>JointContinuation.lean — 29 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean`
 
@@ -2120,7 +2120,7 @@ Contains 21 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ScaleRevision.lean — 48 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ScaleRevision.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ScaleRevision.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ScaleRevision.lean`
 
@@ -2189,7 +2189,7 @@ Contains 27 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>SeededContinuation.lean — 18 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean) · [Theory](../../chapters/RELATIONS-ACROSS-SCALES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean`
 

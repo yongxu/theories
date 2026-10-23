@@ -65,7 +65,7 @@ Board item FC1, on Ren's request to run the fidelity count; the scope was cut by
 | integration | [results_main.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/data/results_main.json) | — |
 | integration | [results_calib.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/data/results_calib.json) | — |
 | integration | [score.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/score.py) | — |
-| statement | [WENLI-AND-BECOMING.md](../../chapters/WENLI-AND-BECOMING.md) | — |
+| statement | [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md) | — |
 | review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 
 Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`

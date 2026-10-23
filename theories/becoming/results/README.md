@@ -36,7 +36,7 @@ Readings of 8 October 2026 and later · [Repository home](../../../README.md) ·
 <a id="覆盖与证据含义--coverage-and-evidence"></a>
 ## Coverage and evidence
 
-This reading edition covers **146 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 91 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
+This reading edition covers **154 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 91 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
 
 | Category | Meaning |
 |---|---|
@@ -46,7 +46,7 @@ This reading edition covers **146 chapters** (current and moved to history) and 
 | Empirical or synthetic evidence | Real studies, correspondence and finite simulations keep distinct scopes. |
 | Open research | Targets, conjectures and proposed tests, not completed results. |
 
-Under the shared [nondual method](../chapters/NONDUAL-METHOD.md), roles, boundaries, knowing and evaluation are differentiated relations within one unfolding. The catalogue’s categories organize reading; they do not split reality into independent domains. Positive results, losses and counterexamples remain visible.
+Under the shared [nondual method](../chapters/08-METHOD.md#beginning-within-the-one-unfolding), roles, boundaries, knowing and evaluation are differentiated relations within one unfolding. The catalogue’s categories organize reading; they do not split reality into independent domains. Positive results, losses and counterexamples remain visible.
 
 <a id="逐项列表--complete-chapter-list"></a>
 ## Complete chapter list
@@ -68,9 +68,17 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`autonomous-method-formation`](../history/ARGUMENTS-A-L-2026-10-08.md#autonomous-method-formation) | Forming and replacing a mathematical method connection | learning |
 | [`basic-conflict-judgment`](../history/ARGUMENTS-A-L-2026-10-08.md#basic-conflict-judgment) | Judgment when basic claims conflict | ethical argument |
 | [`becoming-foundation`](../history/ARGUMENTS-A-L-2026-10-08.md#becoming-foundation) | Theory of Becoming: foundational scope | foundation |
+| [`chapter-01-root`](../chapters/01-ROOT.md) | The root: continuation relative to a class | foundation |
+| [`chapter-02-map`](../chapters/02-MAP.md) | Generation, keeping and degeneration | mechanism |
+| [`chapter-03-knowing`](../chapters/03-KNOWING.md) | Knowing, learning and testing | learning |
+| [`chapter-04-life`](../chapters/04-LIFE.md) | Life and evolution | mechanism |
+| [`chapter-05-collectives`](../chapters/05-COLLECTIVES.md) | Joint activity and selection | mechanism |
+| [`chapter-06-classical-texts`](../chapters/06-CLASSICAL-TEXTS.md) | The classical texts: readings, tests and divergences | classical |
+| [`chapter-07-significance`](../chapters/07-SIGNIFICANCE.md) | Significance, ethics and alignment | ethics |
+| [`chapter-08-method`](../chapters/08-METHOD.md) | Method and the formal core | methodology |
 | [`chinese-sources-and-becoming`](../history/ARGUMENTS-A-L-2026-10-08.md#chinese-sources-and-becoming) | The relational ontology of Chinese thought and the theory of becoming: the traditions on the spine | classical comparison |
 | [`choice-and-generative-context`](../history/ARGUMENTS-A-L-2026-10-08.md#choice-and-generative-context) | Joint choice, limited aggregation and context | ethical argument |
-| [`civilization-thought-and-becoming`](../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | 《中华思想脉络》 and the theory of becoming: every judgment mapped, the classical names, the thesis tested | classical comparison |
+| [`civilization-thought-and-becoming`](../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | 《中华思想脉络》 and the theory of becoming: every judgment mapped, the classical names, the thesis tested | classical comparison |
 | [`claims`](../history/ARGUMENTS-A-L-2026-10-08.md#claims) | Registered claims and historical ledger | navigation |
 | [`claims-and-paid-action`](../history/ARGUMENTS-A-L-2026-10-08.md#claims-and-paid-action) | Claims, actual action and continuing protection | ethics interface |
 | [`cognition-learning-and-evolution`](../history/ARGUMENTS-A-L-2026-10-08.md#cognition-learning-and-evolution) | Cognition, learning and evolution within becoming | learning |
@@ -183,10 +191,10 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`system-individuation`](../history/ARGUMENTS-M-Z-2026-10-08.md#system-individuation) | Systems, constitutive relationships and possible change | foundation |
 | [`system-warrant`](../history/ARGUMENTS-M-Z-2026-10-08.md#system-warrant) | Grounding system relationships and admissible variations | foundation |
 | [`systems-complexity-chaos`](../history/ARGUMENTS-M-Z-2026-10-08.md#systems-complexity-chaos) | Systems, complexity and chaos within generative grounding | mathematics |
-| [`the-step-of-invariance`](../chapters/THE-STEP-OF-INVARIANCE.md) | The step of invariance: the argument and its objections | ethical argument |
+| [`the-step-of-invariance`](../history/THE-STEP-OF-INVARIANCE.md) | The step of invariance: the argument and its objections | ethical argument |
 | [`the-theory-of-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-becoming) | The Theory of Becoming | synthesis |
 | [`the-theory-of-becoming-reference`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-becoming-reference) | The Theory of Becoming: reference catalogue | formal index |
-| [`the-theory-of-becoming-zhonghua`](../chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | The Theory of Becoming in classical Chinese names (中华本) | synthesis |
+| [`the-theory-of-becoming-zhonghua`](../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | The Theory of Becoming in classical Chinese names (中华本) | synthesis |
 | [`the-theory-of-evolution`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-evolution) | The Theory of Evolution | research programme |
 | [`theory`](../history/ARGUMENTS-M-Z-2026-10-08.md#theory) | Relational generativity and the conditions of wisdom | synthesis |
 | [`theory-of-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#theory-of-becoming) | How relations of becoming change | mechanism |
@@ -197,7 +205,7 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`valuation-development`](../history/ARGUMENTS-M-Z-2026-10-08.md#valuation-development) | How valuation develops | mechanism mathematics |
 | [`valuation-identification-bounds`](../history/ARGUMENTS-M-Z-2026-10-08.md#valuation-identification-bounds) | Bounds for identifying changed evaluation | identification mathematics |
 | [`wang-yangming`](../history/ARGUMENTS-M-Z-2026-10-08.md#wang-yangming) | Wang Yangming, benevolence and situated practice | classical ethical |
-| [`wenli-and-becoming`](../chapters/WENLI-AND-BECOMING.md) | 文理生生 and the theory of becoming: 文, 理 and reading | classical comparison |
+| [`wenli-and-becoming`](../history/WENLI-AND-BECOMING.md) | 文理生生 and the theory of becoming: 文, 理 and reading | classical comparison |
 | [`wisdom-and-context`](../history/ARGUMENTS-M-Z-2026-10-08.md#wisdom-and-context) | Wisdom, context and the common core | philosophical epistemic |
 | [`yi-zhuan-and-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#yi-zhuan-and-becoming) | The 易传 and the theory of becoming: the configurations of the 周易 on the spine | classical comparison |
 | [`zero-axiom-practical-judgment`](../history/ARGUMENTS-M-Z-2026-10-08.md#zero-axiom-practical-judgment) | Zero-axiom practical judgment | normative foundation |

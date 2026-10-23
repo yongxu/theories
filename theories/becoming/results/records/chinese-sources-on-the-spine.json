@@ -61,7 +61,7 @@
     "en": "Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论” (provenance, not warrant). The chapter maps 248 passages of the 易传 beyond Y1–Y4, the 老子 with three commentaries and the excavated witnesses, the 儒家 line, the script with 止戈, 庄子 and 玄学, 墨辩 and 名家, 兵家, 法家, 管子 and 纵横, the Buddhist lines received in China, and others. Reading (the AI's, D54): the thesis holds for what the lines start from and observe, its universal forms mostly need a scope, and four non-relational overlays recur, each answered inside its tradition.",
     "zh": "Ren，2026年10月19日，分享易道体系图 v1.3.0 之后说：“整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论”（来历，不是根据）。章节对应 248 段：易传（Y1–Y4 之外）、老子及三家注与出土诸本、儒家、文字与止戈、庄子与玄学、墨辩与名家、兵家、法家、管子与纵横、汉传佛教及其他。读法（AI 的，D54）：论题在诸线的起点与观察上成立，其全称形式大多需要定域，四种非关系之层反复出现，各在本传统内部得到回应。"
   },
-  "canonical_source": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+  "canonical_source": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
   "aliases": [
     "the Chinese sources on the spine",
     "中国思想诸传统在脊柱上",
@@ -134,7 +134,7 @@
   ],
   "references": [
     {
-      "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+      "path": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "statement",
       "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },
@@ -156,10 +156,10 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "review",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },

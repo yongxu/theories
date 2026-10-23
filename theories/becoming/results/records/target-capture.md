@@ -82,7 +82,7 @@ That taking more yields more offspring, that offspring carry their parents' targ
 | proof | [Mechanism.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean) | `Becoming.Law.reabsorbed` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | integration | [WUMING-BOUNDARY-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/WUMING-BOUNDARY-PLAN.md) | — |
 | provenance | [2026-10-10-truth-exists-opening.md](../../../../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md) | — |
 | provenance | [2026-10-11-wisdom-from-registration.md](../../../../sources/15-codex-theory-conversations/2026-10-11-wisdom-from-registration.md) | — |

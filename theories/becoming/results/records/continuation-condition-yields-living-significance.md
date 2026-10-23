@@ -81,7 +81,7 @@ Ren's axiom is “for anything, its continuation into the future has significanc
 - **interpretive**: [living-significance-on-held-lives](living-significance-on-held-lives.md). There G0 on held lives is exactly S0 at every standpoint with N_std (the reading of section 6.2: S0 as wanting, N_std as the axiom); here the axiom is stronger and gives S0 at every standpoint and N_std, so that reading is here a consequence.
   - Output: The equivalence of G0 with S0 at every standpoint and N_std.
   - Input: Under the axiom both sides of the equivalence hold.
-  - Preserved conditions: Holding; the reading of section 6.2 is the AI's, adopted on Ren's delegation (DELEGATED-CHOICES D11). [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md)
+  - Preserved conditions: Holding; the reading of section 6.2 is the AI's, adopted on Ren's delegation (DELEGATED-CHOICES D11). [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md)
 - **application**: [becoming-stepwise-reading](becoming-stepwise-reading.md). The stepwise reading (Web.valuation: an event active and not undermining is living) is one reading on which the axiom yields G0; significance_undetermined is stated on it.
   - Output: The stepwise valuation.
   - Input: Under the axiom G0 holds on it; without significance it fails.
@@ -141,7 +141,7 @@ Ren's axiom is “for anything, its continuation into the future has significanc
 | provenance | [PositionedPositiveReason.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean) | `PositionedPositiveReason.every_situated_position_has_reason` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-wanting-continuation-one-axiom.md](../../../../sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | provenance | [2026-10-10-centers-within-the-dynamics.md](../../../../sources/15-codex-theory-conversations/2026-10-10-centers-within-the-dynamics.md) | — |

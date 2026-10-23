@@ -1,6 +1,6 @@
 # Market renewal selection and capture
 
-6 October 2026. Executable counterpart of [the mathematical market study](../../theories/becoming/chapters/MARKET-DYNAMICS-MATH.md). The named connection is shared-support consequences → implemented charges → selection of practices → paid changes to the effective selection rule. These are supplied local economic and physical laws, not empirical market data or a completed derivation of institutions from the generative foundation.
+6 October 2026. Executable counterpart of [the mathematical market study](../../theories/becoming/history/MARKET-DYNAMICS-MATH.md). The named connection is shared-support consequences → implemented charges → selection of practices → paid changes to the effective selection rule. These are supplied local economic and physical laws, not empirical market data or a completed derivation of institutions from the generative foundation.
 
 The model tracks renewing share, effective accountability, accumulated paid influence, liquid correction funds and separate support stocks. Actual receipts pay a levy, maintenance, political organization, liability and private returns. A funded installed policy restores accountability; influence erodes it. An essential support failure stops all subsequent production and payment. A nonessential recipient can be harmed without disabling the market.
 

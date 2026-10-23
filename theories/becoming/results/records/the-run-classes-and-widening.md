@@ -80,7 +80,7 @@ The twentieth review's D2 and F13 asked how a part's class over a run relates to
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [BECOMING-TWENTIETH-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH-REVIEW.md) | — |
 
 Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow.Balances.not_narrows_of_renewed`, `Becoming.Flow.Balances.narrows_of_consumed`, `Becoming.Flow.Balances.keeps_of_not_arising`

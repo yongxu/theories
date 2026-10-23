@@ -35,7 +35,7 @@
 
 Original seven-HTML checks retained; eight additional documents are checked for representation, hashes, main-author anchors and milestone order. Author counterreview retains operator/developer interests; no new Lean, independent agent, contract audit or software execution.
 
-Canonical source: [MARKETS-AND-GENERATIVE-REGIMES.md](../../chapters/MARKETS-AND-GENERATIVE-REGIMES.md)
+Canonical source: [MARKETS-AND-GENERATIVE-REGIMES.md](../../history/MARKETS-AND-GENERATIVE-REGIMES.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -64,7 +64,7 @@ LibreOffice enters Ubuntu beta before foundation incorporation under interim ass
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [MARKETS-AND-GENERATIVE-REGIMES.md](../../chapters/MARKETS-AND-GENERATIVE-REGIMES.md) | — |
+| statement | [MARKETS-AND-GENERATIVE-REGIMES.md](../../history/MARKETS-AND-GENERATIVE-REGIMES.md) | — |
 | review | [MARKET-INTERNET-DEGENERATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md) | — |
 | provenance | [README.md](../../../../sources/market-generativity/libreoffice-formation/README.md) | — |
 | provenance | [manifest.json](../../../../sources/market-generativity/libreoffice-formation/manifest.json) | — |

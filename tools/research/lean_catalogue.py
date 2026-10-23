@@ -39,11 +39,13 @@ ROLE_LABELS = {
 # repository path: the current chapter (section) that covers the group where that is
 # unambiguous, else the earlier chapter that introduced it, which `current` follows into history.
 # Former titles were bilingual; FORMER keeps their anchors on the index page.
-CANONICAL = "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+CANONICAL = "theories/becoming/THE-THEORY-OF-BECOMING.md"  # the overview (RA, 23 October 2026)
+METHOD = "theories/becoming/chapters/08-METHOD.md"
+SIGNIFICANCE = "theories/becoming/chapters/07-SIGNIFICANCE.md"
 GROUPS = {
-    "becoming-core": ("Becoming pure core", CANONICAL + "#9-形式脊柱--the-formal-spine", "The spine modules the core receipt lists in its core and foundation layers: they import nothing outside the core, every source declaration has an empty axiom report, and they compile from Lean's prelude."),
-    "becoming-ring": ("Becoming instances and applications", CANONICAL + "#9-形式脊柱--the-formal-spine", "The spine modules the core receipt lists in its instance and application layers: held to the core's conditions (prelude only, empty axiom reports), imported by no core module but the root; instances read general laws on one carrier (the Changes, place/transition nets), applications are leaves."),
-    "ethics": ("Normative grounding and generative direction", CANONICAL + "#6-universal-metaethical-core--普遍元伦理核心", "Tests explicit inference, coverage and generative conditions; ethical warrant remains a substantive question."),
+    "becoming-core": ("Becoming pure core", METHOD + "#pure-core-and-periphery", "The spine modules the core receipt lists in its core and foundation layers: they import nothing outside the core, every source declaration has an empty axiom report, and they compile from Lean's prelude."),
+    "becoming-ring": ("Becoming instances and applications", METHOD + "#pure-core-and-periphery", "The spine modules the core receipt lists in its instance and application layers: held to the core's conditions (prelude only, empty axiom reports), imported by no core module but the root; instances read general laws on one carrier (the Changes, place/transition nets), applications are leaves."),
+    "ethics": ("Normative grounding and generative direction", SIGNIFICANCE, "Tests explicit inference, coverage and generative conditions; ethical warrant remains a substantive question."),
     "valuation": ("Valuation development and liangzhi", "theories/becoming/chapters/LIANGZHI-EVOLUTION.md", "Connects formation, retention, revision and action, preserving error, failure and transmission conditions."),
     "inquiry": ("Attainable inquiry, contact and process laws", "theories/becoming/chapters/GENERATIVE-CORE-LEAN.md", "Connects reachable paths, evidence acquisition and continuation while exposing apparatus and law premises."),
     "renewal": ("Support and renewal", "theories/becoming/chapters/GENERATIVE-GROUNDING.md", "Establishes necessary and sufficient conditions and limits of specified support and renewal relations."),

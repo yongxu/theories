@@ -8,7 +8,7 @@
 
 Searches covered physical robot self-modeling/damage recovery, human contextual and explicit/implicit motor learning, and cellular responses to changing osmotic inputs. Included studies manipulate a relevant condition and observe subsequent regulation, learning or action. Theory-only papers and publicity are not counted as experiments. Published models, physical observations and our interpretation are kept separate. Existing biological and thermal analyses are credited below rather than counted again as new replications.
 
-This follows the [nondual method](../../../../theories/becoming/chapters/NONDUAL-METHOD.md): sensing, remembered descriptions, intervention and subsequent conditions are roles within each studied activity. The experiments license particular analytical distinctions through actual apparatus and interventions. They do not require fundamentally separate mind/world domains; neither do they uniquely establish this ontology.
+This follows the [nondual method](../../../../theories/becoming/history/NONDUAL-METHOD.md): sensing, remembered descriptions, intervention and subsequent conditions are roles within each studied activity. The experiments license particular analytical distinctions through actual apparatus and interventions. They do not require fundamentally separate mind/world domains; neither do they uniquely establish this ontology.
 
 ## Six primary studies and their actual contribution
 

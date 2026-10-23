@@ -83,7 +83,7 @@ Ren, 12 October 2026, asked about the integration for laws that are not determin
 | proof | [Dissipation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean) | `Becoming.total_eq_zero` |
 | proof | [World.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [2026-10-16-loops-readings-and-delegated-choices.md](../../../../sources/15-codex-theory-conversations/2026-10-16-loops-readings-and-delegated-choices.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T204525.767887Z/verification.json) | — |

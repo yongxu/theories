@@ -1,6 +1,6 @@
 # WL3: 文 and the grammar of continuation, a mapping
 
-23 October 2026, board item WL3. AI-written. The 文 line (chapter [WENLI-AND-BECOMING](../../../../../../theories/becoming/chapters/WENLI-AND-BECOMING.md), 中华本 一·二十一, WL2's laws) and the one-unfolding root (`Becoming.Grammar`, [PLAN](../one-unfolding-root/PLAN.md), record continuation-relative-to-a-class) describe one structure in two vocabularies. This study states which notion of the one is which notion of the other, exactly where Lean proves it (`Becoming.GrammarCourse`, scratch `tree/`), and where they differ. Nothing in `Becoming.Grammar` is changed.
+23 October 2026, board item WL3. AI-written. The 文 line (chapter [WENLI-AND-BECOMING](../../../../../../theories/becoming/history/WENLI-AND-BECOMING.md), 中华本 一·二十一, WL2's laws) and the one-unfolding root (`Becoming.Grammar`, [PLAN](../one-unfolding-root/PLAN.md), record continuation-relative-to-a-class) describe one structure in two vocabularies. This study states which notion of the one is which notion of the other, exactly where Lean proves it (`Becoming.GrammarCourse`, scratch `tree/`), and where they differ. Nothing in `Becoming.Grammar` is changed.
 
 ## 1. The reading that joins them
 

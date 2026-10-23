@@ -903,25 +903,25 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "6027ec6f85cc7a81f90441d3965309b11738c4a24cfc7995e6f58dbec8e1d69d"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "integration",
-      "sha256": "e002ae3c64b440d5afe3abd430a465aed63f8ced0891629ac2095698350d286e"
+      "sha256": "ba6ed198c6a413310463809542fb4a2ada2e062230a04a6eb95d48387fd1e062"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "e1852f4d3a2e9ed97f2b2782b413e2584daa34f709041c0a003a2689829aa837"
+      "sha256": "e2a7256ca1c1bc187832d0d68887fc255dcfa520f26ae19495df736d45be4028"
     },
     {
-      "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+      "path": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
       "sha256": "8fafc90c90b97d7bc6d50f0c4ef0f6a3c1ce405217b92fef64ddf1207e55662e"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878"
     },

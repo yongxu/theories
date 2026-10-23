@@ -1,7 +1,7 @@
 [
   {
     "id": "market-dynamics-math",
-    "source": "theories/becoming/chapters/MARKET-DYNAMICS-MATH.md",
+    "source": "theories/becoming/history/MARKET-DYNAMICS-MATH.md",
     "title_zh": "市场更新、选择与俘获的数学模型",
     "title_en": "Market renewal, selection and capture",
     "category": "mathematical-model",
@@ -27,7 +27,7 @@
   },
   {
     "id": "markets-and-generative-regimes",
-    "source": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+    "source": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
     "title_zh": "使市场维持生成方向",
     "title_en": "Keeping markets in generative regimes",
     "category": "application",
@@ -145,7 +145,7 @@
     "scope_en": "Six modules and 61 printed axiom audits, all empty; twelve are new expository consequences, not novel mathematics. It derives neither all real laws, all mathematics nor ethical judgments from no premises; deriving an application’s law and its real correspondence remain connected explanatory work.",
     "next_zh": "新的形式结果在 Becoming 脊柱上陈述并扩展脊柱，而不另建模型；普遍数学构成与伦理根据各保其前提与完成条件。",
     "next_en": "State new formal results on the Becoming spine and extend it rather than build another model; universal mathematical constitution and ethical grounding keep their own premises and completion conditions.",
-    "source": "theories/becoming/chapters/MATHEMATICAL-CORE.md",
+    "source": "theories/becoming/history/MATHEMATICAL-CORE.md",
     "source_sha256": "548310e896c6c7de9eab1cb5efbd101589c621e61c89602a15b2b958770fddcc",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
@@ -418,7 +418,7 @@
   },
   {
     "id": "nondual-method",
-    "source": "theories/becoming/chapters/NONDUAL-METHOD.md",
+    "source": "theories/becoming/history/NONDUAL-METHOD.md",
     "title_zh": "全项目非二元研究方法",
     "title_en": "The project-wide nondual method",
     "category": "methodology",
@@ -442,7 +442,7 @@
   },
   {
     "id": "noninstrumental-concern",
-    "source": "theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md",
+    "source": "theories/becoming/history/NONINSTRUMENTAL-CONCERN.md",
     "title_zh": "一体之仁与非工具性关切",
     "title_en": "Co-formed benevolence and noninstrumental concern",
     "category": "ethical-mechanism",
@@ -582,7 +582,7 @@
     "scope_en": "J1–J4 are AI-proposed additional normative commitments, not deductions from G0 alone and not all Ren’s words. Lean checks conditional consequences for strict comparison, finite alternatives, joint requirements, allocation, transfer and discharge; it does not defend the premises. No universal total ranking, correctness of arbitrary thresholds, full implementation or axiom-free warrant is claimed. Shared-kitchen calibration (9 theorems / 20 audits) and published-evidence constraints are listed separately. In the unified structure G0 is folded into significance (a condition in Part I, yielded by Part II's one axiom); the timely-continuation section is an application argument with no new theorem.",
     "next_zh": "普遍实践根据（universal-practical-warrant）仍开放；交叉基本要求由基本冲突章节接续。",
     "next_en": "The universal practical warrant remains open; crossed basic claims continue in the basic-conflict chapter.",
-    "source": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+    "source": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
     "source_sha256": "be0b825678314c5ebd14ea08cb56c351917458be37057d736ccf9d104df50282",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean",
@@ -602,7 +602,7 @@
   },
   {
     "id": "pre-qin-and-wenyan",
-    "source": "theories/becoming/chapters/PRE-QIN-AND-WENYAN.md",
+    "source": "theories/becoming/history/PRE-QIN-AND-WENYAN-2026-10-23.md",
     "title_zh": "先秦与文言传统的竞争解释",
     "title_en": "Competing explanations across pre-Qin and classical Chinese traditions",
     "category": "classical-comparison",
@@ -1015,7 +1015,7 @@
     "scope_en": "Sections carry their own Lean receipts (for example evidence through change, 15 theorems / 15 audits, 10 empty and 5 propext-only) and empirical integrations; public-data comparisons are secondary analyses. No new proof of G0 or ethical weighting rule follows; ‘more detailed’ is relative to the map, not an ultimate microscopic ontology. Full experimental validation remains a selected, unfinished target.",
     "next_zh": "实际反馈怎样区分变化范围遗漏、读数失实与执行偏差，并接到已有修订机制。",
     "next_en": "How actual feedback distinguishes an omitted change range, a false reading and an execution deviation, connected to existing revision mechanisms.",
-    "source": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md",
+    "source": "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
     "source_sha256": "ef4f0355d83b9ee9ca8b39b90867f89b6c2579bf3c00f8645babd4d56119de84",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
@@ -1114,7 +1114,7 @@
   },
   {
     "id": "scientific-philosophy",
-    "source": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+    "source": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
     "title_zh": "科学哲学与探究的生成条件",
     "title_en": "Scientific philosophy and inquiry’s generative conditions",
     "category": "philosophical-epistemic",
@@ -1537,7 +1537,7 @@
     "scope_en": "Becoming.Weightings, 35 theorems with empty axiom reports; the literature check is in the significance review. An argument, not a proof: the step is neither shown nor defeated, and the de se question, a privileged relation, the range of the centers and covering, magnitude and monotonicity at the standpoint stay open.",
     "next_zh": "从己问题；基底上哪些构成是中心；跨立场的分级意义；独立的哲学审查。",
     "next_en": "The de se question; which formations are centers on the base; graded significance across standpoints; an independent philosophical review.",
-    "source": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+    "source": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
     "source_sha256": "0b1a9fa3b6d43566e1c12e49442235352b3560d86e0dd1ce02e10aabd585aa89",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
@@ -1564,7 +1564,7 @@
     "scope_en": "Organization and exposition by AI (Claude), with Ren’s words quoted. Every declaration of the spine has an empty axiom report; the core imports nothing outside itself and compiles from Lean’s prelude alone; premises are definitions or hypotheses in Lean, not axioms. No ethical axiom does not mean no substantive premise, and an empty axiom report does not mean no premises. The chapter adds no proof and cites checked results only.",
     "next_zh": "首要开放问题是整体的演绎必然性：从确定的整体描述推到其分化是同一展开中内在相关的环节；另有普遍实践根据。living 的整段、逐步（活跃且不侵蚀，工作候选）、周期与关系层读法都已在核心上定义并比较，经四次独立审查，生生读作生成的空间，即能形成者的扩大，G0 与 C 共用这一读法（D1、D22）；条件的对应纪律已给出一条（交互），其时间次序、对效果的敏感与对整段读法的陈述、不依赖运行的读法、带数量与更新率的依存网与继续生成的成分仍开放。开放项按四类列出：属于 Ren 的选择、哲学根据、经验对应与进一步的证明；表示的范围列为哲学根据。依 Ren 2026-10-15 的交托，此前留给 Ren 的读法与名称由 AI 决定，Ren 可改动（DELEGATED-CHOICES D1–D39）：其中有那一条公理（P39）、路线 (b)（P40）、反馈与所及（P42）、公理的分解（P43）、生成的空间（P56）的读法，以及重建的读法（曲率只作方法的类比；新是来自部分之外的增益，已在 Becoming.Gain 中证明；公理归于预设，以确切范围采用，不推出不变之步）。仍属 Ren 的：Ren 自己的文本与用语、Ren 是否持有不变之步、Ren 保留的表示决定、两项记录留给 Ren 的审查决定，以及辨识（以 Ren 2026-10-15 与 10-16 的话为准）。交托之后提出的读法：I4b 的三项（每个起源都经过门、有限历史所否证者、有限分支处的提升）Ren 2026-10-16 已取（“agree with other readings”）；P118 的三项，Ren 取了前两项，第三项（一个世界有哪些回路属于它的情境）以细化的形式暂取，待有回路怎样形成的定理再定，该定理由 P122 给出（Becoming.Closing）；Ren 2026-10-16 取了经该定理修订的第三项（回路在展开中由闭合而形成，在其耦合停止处消解），并同意 P121（Becoming.Routes）与 P122 的读法（“alright, agree”）；只读记录的选择已依 Ren 改为经选项模型的选择。P124 的读法 Ren 2026-10-16 已取（“agree in general”）：失控的断裂是回路形成之处，能识其距离的是断裂之前对储量的读；一个形成怎样开始观察储量由 P125 回答（Becoming.Observation：观察是沿读的路线处在下游），其读法是 AI 的，待 Ren。P123 的读法是 AI 的，待 Ren；给定强度的失控有多快（谱半径）仍开放。P126 的读法是 AI 的，待 Ren；命题 WLPO 本身是否给出规则（唯一选择之步）仍开放。P127 的读法是 AI 的，待 Ren；构形无界、分支有限而无从搜索之处的运行仍经一个选择。",
     "next_en": "The first open question is the deductive necessity of the whole: passing from a determinate whole account to the claim that its differentiations are internally related moments of one unfolding; also open is the universal practical warrant. The whole-run, stepwise (active and not undermining, the working candidate), cycle and relation-level readings of living are defined and compared on the core and reviewed independently four times; 生生 is read as the generative space, the widening of what can form, and G0 and C share this reading (D1, D22). One correspondence discipline for conditions (interaction) is stated; its time order, its sensitivity to effect and its statement for the whole-run reading, a run-independent reading, a web of dependence with amounts and renewal rates, and a component of further generation remain open. Open items are sorted into four classes: Ren's choices, philosophical warrant, empirical correspondence and further proofs; the scope of representation is listed as philosophical warrant. On Ren's delegation of 15 October 2026 the readings and names formerly left to Ren are decided by the AI, and Ren can reverse any of them (DELEGATED-CHOICES D1–D39): among them the readings of the one axiom (P39), route (b) (P40), feedback and reach (P42), the axiom decomposed (P43) and the generative space (P56), and the re-founding's readings (curvature only as an analogy of method; novelty as gain from beyond the part, now proved in Becoming.Gain; the axiom coming to the presupposition, adopted with exact scope, the step of invariance not derived). What stays Ren's: Ren's own texts and terms, whether Ren holds the step of invariance, the representation decisions Ren reserved, the decisions of review two records leave to Ren, and identification, which Ren's words of 15 and 16 October settle. Of the readings posed after the delegation, Ren took I4b's three (every origin passing the gate, what a finite history refutes, lifting where branching is finite) on 16 October 2026 (“agree with other readings”); of P118's three, Ren took the first two, and the third (which loops a world has is part of its situation) in its refined form, pending a theorem on how loops form, which P122 gives (Becoming.Closing); on 16 October 2026 Ren took the third reading as revised by that theorem (loops form within the unfolding by closing and dissolve where their couplings stop), together with the readings of P121 (Becoming.Routes) and P122 (“alright, agree”); selection by the record alone is reframed, on Ren's word, as selection through a model of the options. Ren took P124's readings on 16 October 2026 (“agree in general”): a runaway's break is where a loop forms, and what registers the distance is a reading of the stock before the break; how a formation comes to observe a stock is answered by P125 (Becoming.Observation: observing is being downstream along a route of readings), whose readings are the AI's, pending Ren. P123's readings are the AI's, pending Ren; how fast a runaway of given strengths is (a spectral radius) stays open. P126's readings are the AI's, pending Ren; whether the proposition WLPO alone gives the rule (a step of unique choice) stays open. P127's readings are the AI's, pending Ren; runs along unbounded configurations with finite branching and nothing searched still go through a selection.",
-    "source": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+    "source": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
     "source_sha256": "35f9576e1a104cc88a0f1e7bc4daa6dea1da4e8f5d94c513064603c1ffe9f3ee",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
@@ -1693,7 +1693,7 @@
   },
   {
     "id": "the-theory-of-becoming-zhonghua",
-    "source": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "source": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
     "title_zh": "变化论（中华本）",
     "title_en": "The Theory of Becoming in classical Chinese names (中华本)",
     "category": "synthesis",
@@ -1729,7 +1729,7 @@
     "scope_en": "Connections carry their own counts (for example structural copying 34 theorems / 57 audits; reference renewal 34/50; updater replacement 36/57). A direct comparison with a conventional network implementation using the same information and laws yields exact equivalence of finite histories, failures and readouts (11 theorems / 24 audits, 34,768 comparisons), with no distinct prediction or reduction of supplied mechanisms. The earlier empirical programme is retained but is not a completion gate for the present theoretical work.",
     "next_zh": "说明共同活动怎样改变任务、检验关系与参与方式本身，以及工作／能力反馈怎样闭合组织动力学；比较贡献须以独立约束的联合测量证明。",
     "next_en": "Explain how joint activity changes the task, testing relations and means of participation themselves, and how work/capability feedback closes organizational dynamics; a comparative contribution requires independently constrained joint measurements.",
-    "source": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+    "source": "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
     "source_sha256": "ef6b557f1fa92a36677b5465c3859970ad453d22f86636b1e1ad9730b2d60b19",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean",
@@ -2002,7 +2002,7 @@
   },
   {
     "id": "wang-yangming",
-    "source": "theories/becoming/chapters/WANG-YANGMING.md",
+    "source": "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
     "title_zh": "王阳明、一体之仁与工夫的整体整合",
     "title_en": "Wang Yangming, benevolence and situated practice",
     "category": "classical-ethical",
@@ -2029,7 +2029,7 @@
   },
   {
     "id": "wenli-and-becoming",
-    "source": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+    "source": "theories/becoming/history/WENLI-AND-BECOMING.md",
     "title_zh": "文理生生与变化论：文、理与读",
     "title_en": "文理生生 and the theory of becoming: 文, 理 and reading",
     "category": "classical-comparison",
@@ -2066,7 +2066,7 @@
     "scope_en": "First round 11 theorems; response structure 9; goal grounds 7; fallible judgment 5 new applications. The rest is philosophical application and classical comparison, supporting scoped structural overlap while keeping substantive ethical differences. It does not prove that all historical wisdom follows uniquely from the core; local match, constraint compliance and valid inference transfer cannot alone complete the target. Sections 16–31 are philosophical integration and author counterreview reusing completed results, with pure-core adapters for claim fidelity and regrouping (empty axiom reports) and no new empirical work; full necessity remains open.",
     "next_zh": "判断内容与已完成的形成、反馈取得和修订结果的核对已完成（第16–31节）。下一步论证所意指的智慧范围中的共同依存，容许不同实现并省略无关区别；慧根目标保持构成必要性与实际生成两部分。",
     "next_en": "The check of judgment content against completed formation, feedback-acquisition and revision results is done (sections 16–31). Next justify the common dependencies across the intended wisdom scope, allowing differing realizations and omission of irrelevant distinctions; the root-of-wisdom target keeps both constitutive necessity and actual formation.",
-    "source": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md",
+    "source": "theories/becoming/history/WISDOM-AND-CONTEXT.md",
     "source_sha256": "8de72d7281b3d1490e6c5c0311b817bb65a202b24a1d6bf1acc9f8386953de48",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualWisdom.lean",
@@ -2086,7 +2086,7 @@
   },
   {
     "id": "yi-zhuan-and-becoming",
-    "source": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
+    "source": "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
     "title_zh": "易传与生成／变化之论：周易的构形在脊柱上",
     "title_en": "The 易传 and the theory of becoming: the configurations of the 周易 on the spine",
     "category": "classical-comparison",
@@ -2129,7 +2129,7 @@
     "scope_en": "24 checked theorems / 35 declaration audits keep their instrumental scope; no new ethical proof is claimed. The earlier ‘blocked’ audit is retained historically. The G0/J1–J4 route remains a completed result under disclosed premises and is not renamed a zero-axiom result; no impossibility is claimed. Sections 18–23 are AI philosophical argument and counterreview with no new mathematics or independent verification.",
     "next_zh": "未解的认定是：实际生活质量对可回应位置具有实践意义，而先在的关切不是其唯一来源；最强肯定论证尚未在不给定规范承诺的情况下建立其普遍范围。下一步在一次完整给定的目的修订中，裁决对在先根据的承认与据称构成全部实践指向的关切。",
     "next_en": "The unresolved identification is that actual living quality has practical significance for an eligible responder without antecedent concern being its exclusive source; the strongest affirmative argument has not established its universal scope without supplied normative commitments. The next inquiry adjudicates recognition of a prior ground against concern that allegedly constitutes all practical address, within one fully specified purpose revision.",
-    "source": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+    "source": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
     "source_sha256": "55f98d1cc4c55ec83f4b39b810caee478ef9357a76094a479150a68e58750154",
     "lean": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",

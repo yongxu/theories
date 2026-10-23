@@ -101,7 +101,7 @@ Both original author-manuscript HTML files and retrieval provenance are [preserv
 
 The completed bridge is **growth-dependent accessibility of successor compositions and their finite preparation consequences**. The next bridge is **reconstruction and transmission of the operative growth and retention relations themselves**, together with a fracture law responsive to those relations. It must connect an actual prepared state to renewed development, rather than assigning a graph or resetting a mature-state flag. Forces, geometric rearrangement, inherited developmental schedules and support renewal are candidate mechanisms to investigate; none is supplied by a favorable return coefficient.
 
-The independently completed [calibrated updater](../history/root-foundation/EVOLUTION-CALIBRATED-UPDATER.md), memory, assembly and normative studies retain their scopes. Evolutionary persistence supplies no new ethical warrant. The six broader completion conditions of [The Theory of Evolution](../../../../theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md) remain unchanged.
+The independently completed [calibrated updater](../history/root-foundation/EVOLUTION-CALIBRATED-UPDATER.md), memory, assembly and normative studies retain their scopes. Evolutionary persistence supplies no new ethical warrant. The six broader completion conditions of [The Theory of Evolution](../../../../theories/becoming/history/THE-THEORY-OF-EVOLUTION.md) remain unchanged.
 
 ## Verification
 

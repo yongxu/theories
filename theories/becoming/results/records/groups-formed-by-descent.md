@@ -79,8 +79,8 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 | proof | [SelectionTerm.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean) | `Becoming.SelectionTerm.Exact`, `Becoming.SelectionTerm.Generations.family`, `Becoming.SelectionTerm.Generations.raises_exact_iff`, `Becoming.SelectionTerm.Generations.not_lower_step`, `Becoming.SelectionTerm.Generations.not_lower`, `Becoming.SelectionTerm.lowered_exact`, `Becoming.SelectionTerm.discord_zero_of_below`, `Becoming.SelectionTerm.concord_alike`, `Becoming.SelectionTerm.discord_alike` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 
 Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortment`, `由世系形成的组`, `同类聚合`, `Becoming.SelectionLevels.rises_iff_lineages`, `Becoming.GroupEnding.Flow.lineages_not_lower`

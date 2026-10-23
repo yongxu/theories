@@ -36,7 +36,7 @@
 
 13 new Lean theorem declarations/29 declaration audits, with 30 inherited theorems/46 audits separately rebuilt. Includes applications and a definitional identity, not 13 normative-axiom proofs. Author counterreview; no independent-agent acceptance. No empirical validation.
 
-Canonical source: [ETHICAL-LEARNING.md](../../chapters/ETHICAL-LEARNING.md)
+Canonical source: [ETHICAL-LEARNING.md](../../history/ETHICAL-LEARNING.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -64,7 +64,7 @@ One support history forms links, retains a basis and bears an opportunity loss; 
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [ETHICAL-LEARNING.md](../../chapters/ETHICAL-LEARNING.md) | — |
+| statement | [ETHICAL-LEARNING.md](../../history/ETHICAL-LEARNING.md) | — |
 | review | [ETHICAL-LEARNING-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md) | — |
 | provenance | [RelationalOrganization.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalOrganization.lean) | `RelationalOrganization.formation_required_of_improvable_absence`, `RelationalOrganization.coordination_is_required`, `RelationalOrganization.neither_named_route_is_required`, `RelationalOrganization.no_construction_report_only_basis_judge` |
 | receipt | [relational-organization-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/relational-organization-verification.json) | — |

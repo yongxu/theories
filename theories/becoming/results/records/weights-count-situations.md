@@ -87,7 +87,7 @@ Ren, 16 October 2026: “we are describing what everything obeys, but at every m
 | proof | [Joint.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean) | — |
 | proof | [Laws.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean) | `Becoming.Determined` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-16-the-situation-makes-it-true.md](../../../../sources/15-codex-theory-conversations/2026-10-16-the-situation-makes-it-true.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T183102.290672Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |

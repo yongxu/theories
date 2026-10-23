@@ -92,7 +92,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/ANALYSIS-PLAN.md",
       "role": "integration",
-      "sha256": "00a91e0391d73e9f71c80c7f7e7ce6a78b313541bfffac95e678b84c9996ed39"
+      "sha256": "2aebcd36b7aeeeaa5913f85c1d1152ffb69f9ce13bffd4dc2d9ef3d8db1ae03b"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/CODEBOOK-REVISIONS.md",
@@ -115,7 +115,7 @@
       "sha256": "e6b41341f2ee52abc044e32f363506b8513d966013195dce561fe0e56ab2f9e0"
     },
     {
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "path": "theories/becoming/history/WENLI-AND-BECOMING.md",
       "role": "statement",
       "sha256": "d7ed0aace7498f71ad46e71ebf32fc41b90284fa51b857c7128d1c9afb000219"
     },

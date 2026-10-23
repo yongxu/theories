@@ -74,7 +74,7 @@ Turner, Smith, Shah, Critch and Tadepalli (NeurIPS 2021) show optimal policies t
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T085940.676690Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `own widening within the margin`, `余量之内的自身扩大`, `when keeping options open closes another's`, `power-seeking and the margin`, `Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_iff_other_beyond`, `Becoming.Flow.Balances.mixed_of_tight`
 

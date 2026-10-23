@@ -84,7 +84,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | `Becoming.revisits_from`, `Becoming.revisits_within`, `Becoming.sumOver`, `Becoming.le_sumOver` |
 | proof | [Imbalance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean) | `Becoming.Flow.withImbalance`, `Becoming.Flow.withImbalance_balances` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-14-relation-first-refounding.md](../../../../sources/15-codex-theory-conversations/2026-10-14-relation-first-refounding.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T143041.527461Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T150956.178111Z/verification.json) | — |

@@ -27,7 +27,7 @@
     "zh": "构造案例区分增长、服务、转移与突然撤出；同样相关关系可跨智能类型适用。其选择部分重述代理问题：Goodhart（1975）；Amodei et al.（2016）；Manheim and Garrabrant（2018）；Zhuang and Hadfield-Menell（NeurIPS 2020）证明，在资源约束下优化省略效用某些属性的代理可使效用任意低。规律加了回应的闭包（其余者遵循经耦合读取的律，闭包跨时间画出）与池（经成员耦合之并的选择）；它们不给出那种降低的界，也不说训练装入哪个律。",
     "en": "The constructed case distinguishes expansion, service, transfer and abrupt withdrawal; the same relevant relations can apply across intelligence types. Its selection part restates the proxy problem: Goodhart (1975); Amodei et al., \"Concrete Problems in AI Safety\" (2016); Manheim and Garrabrant, \"Categorizing Variants of Goodhart's Law\" (2018); and Zhuang and Hadfield-Menell, \"Consequences of Misaligned AI\" (NeurIPS 2020), who prove that optimizing a proxy omitting attributes of a utility can, under resource constraints, drive the utility arbitrarily low. The laws add the responsive closure (the rest following a law reading through coupling, the closure drawn over time) and the pool (selection through the union of its members' couplings); they give no bound on that degradation and say nothing of which law training installs."
   },
-  "canonical_source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md",
+  "canonical_source": "theories/becoming/history/ALIGNMENT-DIRECTION.md",
   "aliases": [
     "Becoming.alignment_better_iff_betterAt (retired module)",
     "Becoming.alignment_frontier_iff (retired module)",
@@ -57,7 +57,7 @@
           "zh": "AI 对应 E、权限、承担及真实损失仍独立说明；应用而非普遍遵循定理。",
           "en": "AI correspondence E, authority, undertakings and real losses remain explicit; an application, not a universal compliance theorem."
         },
-        "evidence": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md"
+        "evidence": "theories/becoming/history/ALIGNMENT-DIRECTION.md"
       }
     },
     {
@@ -224,7 +224,7 @@
       ]
     },
     {
-      "path": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md",
+      "path": "theories/becoming/history/ALIGNMENT-DIRECTION.md",
       "role": "statement",
       "sha256": "b17f797280cb97b927d0b975e77e50c9ca77e4164a2b5f33f96dac505c903654",
       "declarations": []
@@ -380,7 +380,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "review",
-      "sha256": "33e95e080c428f516e2f67d4d3e976a2e637ace91f5a434f2e85e9997395093b",
+      "sha256": "ba6ed198c6a413310463809542fb4a2ada2e062230a04a6eb95d48387fd1e062",
       "declarations": []
     },
     {

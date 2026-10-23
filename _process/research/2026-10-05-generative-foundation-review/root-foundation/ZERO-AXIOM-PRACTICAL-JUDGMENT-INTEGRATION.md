@@ -2,11 +2,11 @@
 
 > Some passages exist only in the [Chinese edition](ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.zh.md): 70 passages in 18 sections, mainly “Testing the fulfillment question”; “22.7 一个理论：目的的形成、选择的持续与规范的修订”; “22.2 展开一项能够改变自身目的的活动”; “21.3 正面论证：说明目的的内容为何值得形成”; “21.2 同一次改变可以兼有认识与创造”.
 
-8 October 2026, Asia/Bangkok. AI-authored. [Ren's latest instruction](../../../../sources/15-codex-theory-conversations/2026-10-08-zero-axiom-practical-judgment.md) reopens the stronger target after explicit clarification that the accepted Practical judgment account is conditional. [Current bilingual investigation](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md). **Execution blocked after the §8 audit; zero-axiom grounding not established.** The prior axiom route and other sessions retain their authorization and results.
+8 October 2026, Asia/Bangkok. AI-authored. [Ren's latest instruction](../../../../sources/15-codex-theory-conversations/2026-10-08-zero-axiom-practical-judgment.md) reopens the stronger target after explicit clarification that the accepted Practical judgment account is conditional. [Current bilingual investigation](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md). **Execution blocked after the §8 audit; zero-axiom grounding not established.** The prior axiom route and other sessions retain their authorization and results.
 
 ## 1. Affirmative reconstruction and dependency audit
 
-The proposed route locates practical force within judging as an activity that forms action, responds to consequences and arises through shared conditions. It seeks to explain a constitutive relation, not connect fundamentally separate factual and ethical realities. The [nondual method](../../../../theories/becoming/chapters/NONDUAL-METHOD.md) requires retaining that stronger proposal before evaluating a local model's limits.
+The proposed route locates practical force within judging as an activity that forms action, responds to consequences and arises through shared conditions. It seeks to explain a constitutive relation, not connect fundamentally separate factual and ethical realities. The [nondual method](../../../../theories/becoming/history/NONDUAL-METHOD.md) requires retaining that stronger proposal before evaluating a local model's limits.
 
 The prior [constitutive-answer integration](../history/root-foundation/CONSTITUTIVE-ANSWER-INTEGRATION.md), [whole-continuation audit](../history/root-foundation/WHOLE-CONTINUATION-WARRANT-INTEGRATION.md) and [universal derivation audit](../history/root-foundation/UNIVERSAL-METAETHICS-LEAN-INTEGRATION.md) already show why duplicate authorization, another faithful representation or another efficient controller cannot replace the first ethical identification. Their analyses were consulted rather than presented as new discoveries. The new question is whether the specific G0/J1–J4 of the now completed Practical judgment candidate can be discharged.
 
@@ -102,7 +102,7 @@ The full objective has not passed completion audit. The justified execution stat
 
 ## 9. Ren's cognitive and informational correction
 
-8 October 2026. [The new direct input](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md) locates the proposed normative structure within cognition and information, with meme/memeplex only partly corresponding. The [current theory §8](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#8-认知与信息中的规范结构--normative-structure-in-cognition-and-information) reconstructs this as a new direction beyond the historical impasse. The goal tool's previous blocked status is not a verdict on this subsequent proposal, and no completion is claimed.
+8 October 2026. [The new direct input](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md) locates the proposed normative structure within cognition and information, with meme/memeplex only partly corresponding. The [current theory §8](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#8-认知与信息中的规范结构--normative-structure-in-cognition-and-information) reconstructs this as a new direction beyond the historical impasse. The goal tool's previous blocked status is not a verdict on this subsequent proposal, and no completion is claimed.
 
 The correction changes the explanatory object. An account of normative structure must follow its actual formation, retention, interpretation, enactment and transformation within the same histories as the lives it concerns. Felt demand, social recognition and warrant are analytically distinguishable relations to explain, not independently existing substances. Nor does describing a judgment's neural realization settle the content or warrant of what it judges. No measured neural mechanism is supplied by this conceptual correction.
 
@@ -114,7 +114,7 @@ This credits the existing cognition chapter's treatment of representations as ev
 
 ## 10. Operative normative structure and a discriminating case
 
-8 October 2026. Ren's follow-up “please” authorizes development of the preceding reconstruction. [Current theory §9](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#9-规范如何成为有作用的结构--how-a-norm-becomes-an-operative-structure) develops a candidate explanatory object: formed relations through which situations are apprehended as demanding responses, with content, uptake, enactment, participant standing and subsequent re-formation. It is not a definition certifying all such structures as ethically valid.
+8 October 2026. Ren's follow-up “please” authorizes development of the preceding reconstruction. [Current theory §9](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#9-规范如何成为有作用的结构--how-a-norm-becomes-an-operative-structure) develops a candidate explanatory object: formed relations through which situations are apprehended as demanding responses, with content, uptake, enactment, participant standing and subsequent re-formation. It is not a definition certifying all such structures as ethically valid.
 
 ### Positive development and genealogy
 
@@ -176,7 +176,7 @@ The normative structure is likewise studied within the activity's organized rela
 
 ## 13. Constructive continuation: normative differentiation in one activity
 
-8 October 2026. Ren asks whether the new direction permits a construction and authorizes continuation if it makes sense. [The developed construction](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#11-从整体活动构造规范分化--constructing-normative-differentiation-within-whole-activity) answers affirmatively at the level of an explanatory candidate. It retains the whole-activity starting point, permits scoped causal distinctions, and does not require a norm to produce action.
+8 October 2026. Ren asks whether the new direction permits a construction and authorizes continuation if it makes sense. [The developed construction](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#11-从整体活动构造规范分化--constructing-normative-differentiation-within-whole-activity) answers affirmatively at the level of an explanatory candidate. It retains the whole-activity starting point, permits scoped causal distinctions, and does not require a norm to produce action.
 
 ### What is constructed
 
@@ -188,7 +188,7 @@ The constructive comparison supplies two possible continuations of the same kind
 
 ### Dependencies and inherited evidence
 
-The argument supplies comparison skills, content formation, retention, a locally specified reference and the described opportunities for checking. It does not derive all cognition from bare signaling, or claim that physical fit by itself establishes a moral requirement. The newly expanded [knowledge account](../../../../theories/becoming/chapters/KNOWLEDGE.md#how-content-becomes-cognitively-available) supplies the candidate relation between a trace and cognitive uptake. [The scale account](../../../../theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md) supplies the compatible part–whole framing. These explanatory contributions are credited rather than counted as independent findings in this study.
+The argument supplies comparison skills, content formation, retention, a locally specified reference and the described opportunities for checking. It does not derive all cognition from bare signaling, or claim that physical fit by itself establishes a moral requirement. The newly expanded [knowledge account](../../../../theories/becoming/history/KNOWLEDGE.md#how-content-becomes-cognitively-available) supplies the candidate relation between a trace and cognitive uptake. [The scale account](../../../../theories/becoming/history/RELATIONS-ACROSS-SCALES.md) supplies the compatible part–whole framing. These explanatory contributions are credited rather than counted as independent findings in this study.
 
 Previously checked correspondence, retained-evidence and correction results remain mathematical support for their specified models. No proof package is expanded by the present conceptual example. The §11 literature comparison remains the empirical/theoretical source assessment; its abstracts, sampled passages and preprint remain at their recorded access scope. There is no new neural experiment, participant dataset or mathematical claim requiring a new Lean run.
 
@@ -210,7 +210,7 @@ The new user input has supplied a substantive constructive direction after the e
 
 ## 14. Checked whole-activity construction
 
-8 October 2026. Ren requests continued exploration with Lean along the way. The new [NormativeActivity source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean), [checker](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_normative_activity.py) and [receipt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-verification.json) support [current theory §12](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#12-整体活动的-lean-构造--lean-construction-of-whole-activity). **34 new theorems / 56 new explicit declarations pass Lean 4.29.1.** The closure also checks the earlier KnowledgeCorrespondence module: 20 inherited theorems / 34 declarations. There are 90 audited explicit declarations in total, not 90 new results.
+8 October 2026. Ren requests continued exploration with Lean along the way. The new [NormativeActivity source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean), [checker](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_normative_activity.py) and [receipt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-verification.json) support [current theory §12](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#12-整体活动的-lean-构造--lean-construction-of-whole-activity). **34 new theorems / 56 new explicit declarations pass Lean 4.29.1.** The closure also checks the earlier KnowledgeCorrespondence module: 20 inherited theorems / 34 declarations. There are 90 audited explicit declarations in total, not 90 new results.
 
 ### Affirmative contribution and exact transition
 
@@ -283,7 +283,7 @@ The next substantive connection is **formation of basis-sensitive uptake and con
 
 ## 15. Understanding, assessment and authority: the requested harder bridge
 
-8 October 2026. Ren explicitly asks to complete the harder bridge named in the preceding response: **how an activity comes to understand and assess a standard, and what justifies its authority**. This is the completion target, not permission to rename computational reliability understanding or to replace the zero-axiom goal with conditional accuracy. [Current theory §13](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#13-理解标准及其根据--understanding-standards-and-their-grounds) gives the positive argument and limits. [Ren's exact request](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#completion-of-the-harder-bridge-requested).
+8 October 2026. Ren explicitly asks to complete the harder bridge named in the preceding response: **how an activity comes to understand and assess a standard, and what justifies its authority**. This is the completion target, not permission to rename computational reliability understanding or to replace the zero-axiom goal with conditional accuracy. [Current theory §13](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#13-理解标准及其根据--understanding-standards-and-their-grounds) gives the positive argument and limits. [Ren's exact request](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#completion-of-the-harder-bridge-requested).
 
 ### Affirmative account and its nondual reconstruction
 
@@ -455,7 +455,7 @@ No imported dataset, new neural finding or independent replication accompanies t
 
 ## 17. Universal practical authority as the central target
 
-8 October 2026. [Ren's exact direction](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#universal-practical-authority-prioritized) is “aim for Universal practical authority”. The [current formulation](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#15-普遍实践权威--universal-practical-authority) therefore puts first practical warrant at the center. Content formation, neural realization and acquired review supply correspondence and recognition conditions; additional successes in those mechanisms cannot stand in for this result. This round supplies a focused affirmative argument, two inspected primary comparisons and a substantive self-counterreview. It is not an independent completion review.
+8 October 2026. [Ren's exact direction](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#universal-practical-authority-prioritized) is “aim for Universal practical authority”. The [current formulation](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#15-普遍实践权威--universal-practical-authority) therefore puts first practical warrant at the center. Content formation, neural realization and acquired review supply correspondence and recognition conditions; additional successes in those mechanisms cannot stand in for this result. This round supplies a focused affirmative argument, two inspected primary comparisons and a substantive self-counterreview. It is not an independent completion review.
 
 ### 17.1 The target and its genealogy
 
@@ -645,7 +645,7 @@ The mathematical method is a predicate-based response-refinement characterizatio
 
 ## 19. Direct audit of the remaining central claim
 
-8 October 2026. [Ren requests completion of the remaining central claim](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#completion-of-the-remaining-central-claim-requested). This attempt addresses first ethical warrant directly. It does not add a formation mechanism, another assistance example or an instrumental preservation theorem. The [current bilingual formulation](../../../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#17-第一规范根据的直接审计--direct-audit-of-first-normative-warrant) reports that the requested proof remains unachieved.
+8 October 2026. [Ren requests completion of the remaining central claim](../../../../sources/15-codex-theory-conversations/2026-10-08-normative-force-and-informational-generation.md#completion-of-the-remaining-central-claim-requested). This attempt addresses first ethical warrant directly. It does not add a formation mechanism, another assistance example or an instrumental preservation theorem. The [current bilingual formulation](../../../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#17-第一规范根据的直接审计--direct-audit-of-first-normative-warrant) reports that the requested proof remains unachieved.
 
 ### 19.1 Correct the completion criterion
 

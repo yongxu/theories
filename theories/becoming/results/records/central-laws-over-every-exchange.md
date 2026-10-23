@@ -79,8 +79,8 @@ Chapter §8.1 item 1, the formal part of the first target as restated on 20 Octo
 | integration | [COVERAGE.json](../completion/COVERAGE.json) | — |
 | integration | [completion.py](../../../../tools/research/completion.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [BECOMING-FOUNDATION.md](../../chapters/BECOMING-FOUNDATION.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `the central laws over every relation of exchange`, `中心规律对每个交换关系成立`, `laws over every law of exchange`, `Becoming.World.ReadOffExchange`, `Becoming.World.ReadOffExchange.dependent`
 

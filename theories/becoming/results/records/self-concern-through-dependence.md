@@ -113,8 +113,8 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
-| statement | [THE-STEP-OF-INVARIANCE.md](../../chapters/THE-STEP-OF-INVARIANCE.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-STEP-OF-INVARIANCE.md](../../history/THE-STEP-OF-INVARIANCE.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-23-one-system.md](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md) | — |
 
 Aliases: `self-concern through dependence`, `经由依存的自我关切`, `Becoming.ownClosure_standpointInvariant_iff_centersWithin`, `Becoming.selfAscribed_iff_withinSome_iff_centersWithin`, `Becoming.forced_member_iff_only`

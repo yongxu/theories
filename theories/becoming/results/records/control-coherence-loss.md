@@ -54,7 +54,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 | provenance | [Instances.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Instances.lean) | `Becoming.Instances.diagonal_no_decoder`, `Becoming.Instances.dephase_no_restore` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/operative-coherence-checks/20261008T184345.613262Z/verification.json) | — |
 | integration | [GROUNDING-INFERENCE-AND-PRESENTATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md) | — |
-| statement | [BECOMING-FOUNDATION.md](../../chapters/BECOMING-FOUNDATION.md) | — |
+| statement | [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md) | — |
 | review | [check_operative_coherence.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/check_operative_coherence.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T221720.428753Z/verification.json) | — |

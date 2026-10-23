@@ -43,7 +43,7 @@
       "hypotheses_en": "A declared process law and interpretation; exact projection assumptions where used.",
       "canonical_sources": [
         "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
-        "theories/becoming/chapters/MATHEMATICAL-CORE.md",
+        "theories/becoming/history/MATHEMATICAL-CORE.md",
         "theories/becoming/history/EXPLANATORY-NECESSITY.md"
       ],
       "reuse_en": "Reuse the core trace/projection lemmas. Changed support, observational adequacy and ontological necessity remain separately stated claims.",
@@ -89,7 +89,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/TimedFeedback.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SituatedTracking.lean",
-        "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md"
+        "theories/becoming/history/RELATIONS-ACROSS-SCALES.md"
       ],
       "reuse_en": "Reuse general error bounds when the same correspondence holds. A measured application and a convergence extension are different contributions.",
       "remaining_en": "Reliable readings, relevance of newly formed relations and justified response limits are not supplied by convergence alone."
@@ -104,7 +104,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FallibleInspection.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvidenceQualifiedCorrection.lean",
         "experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean",
-        "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md"
+        "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md"
       ],
       "reuse_en": "Canonical diagnosis target: FallibleInspection; canonical acquired common-cause test: CommonCauseDiscovery. Keep mechanism-specific counterexamples and reuse inherited protocols.",
       "remaining_en": "Intervention-derived dependence and joint diagnostic envelopes are related but their formal transport is not established here."
@@ -132,7 +132,7 @@
       "claim_en": "G0 and disclosed comparative commitments support scoped preservation, revision, handoff, ending and responsibility.",
       "hypotheses_en": "Normative premises G0/J and independently warranted correspondence, feasible alternatives and authority.",
       "canonical_sources": [
-        "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+        "theories/becoming/history/PRACTICAL-JUDGMENT.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentDirection.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceAdequacy.lean",
@@ -148,7 +148,7 @@
       "claim_en": "The completed explicit-axiom route and stronger zero-axiom or universal-warrant investigations have different completion conditions.",
       "hypotheses_en": "Constitutive, philosophical and empirical warrant must be distinguished from conditional formal inference.",
       "canonical_sources": [
-        "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
         "theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md",
         "theories/becoming/history/PHILOSOPHICAL-ACCOUNT.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md"
@@ -163,9 +163,9 @@
       "claim_en": "Acquired distinctions and concern can influence later activity; epistemic and ethical adequacy require separate warrant.",
       "hypotheses_en": "Specified learning/interpretation mechanisms; development and selection conditions; G0/J for normative applications.",
       "canonical_sources": [
-        "theories/becoming/chapters/ETHICAL-LEARNING.md",
+        "theories/becoming/history/ETHICAL-LEARNING.md",
         "theories/becoming/history/CONCERN-AND-NEW-REASONS.md",
-        "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md",
+        "theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/CompositionalAcquisition.lean"
       ],
       "reuse_en": "Reuse earlier evaluative succession and practical principles. Acquiring compositions, expanding concern and surrendering authority are not identical proofs.",
@@ -178,7 +178,7 @@
       "claim_en": "Growth, transmission, reconstruction and calibration have connected conditional constructions.",
       "hypotheses_en": "Supplied local growth, fragmentation, maturation and observation laws; specified reference access and support.",
       "canonical_sources": [
-        "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+        "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
         "theories/becoming/history/EVOLUTIONARY-ORGANIZATION.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean"
@@ -194,7 +194,7 @@
       "hypotheses_en": "Declared logical background, admissible interpretations, stable meaning/access, and operational standards.",
       "canonical_sources": [
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
-        "theories/becoming/chapters/GENERATED-LOGIC.md",
+        "theories/becoming/history/GENERATED-LOGIC.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ROOT-MATHEMATICAL-POTENTIAL-INTEGRATION.md"
       ],
@@ -209,9 +209,9 @@
       "hypotheses_en": "Original textual contexts and explicit correspondence; actual support succession does not itself establish ethical validity.",
       "canonical_sources": [
         "theories/becoming/history/COGNITION-LI-AND-RECIPROCITY.md",
-        "theories/becoming/chapters/DAO-AND-GENERATIVITY.md",
-        "theories/becoming/chapters/WANG-YANGMING.md",
-        "theories/becoming/chapters/LIANGZHI-EVOLUTION.md",
+        "theories/becoming/history/DAO-AND-GENERATIVITY-2026-10-23.md",
+        "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
+        "theories/becoming/history/LIANGZHI-EVOLUTION.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-PRACTICAL-INTEGRATION.md"
       ],
       "reuse_en": "Reuse the established nondual method and handoff results; count a source comparison as an argument, not an additional formal theorem.",
@@ -291,7 +291,7 @@
       ],
       "outcome_en": "Acquired knowledge supports unseen combinations in a supplied grammar.",
       "outcome_zh": "取得知识支持给定语法中的新组合。",
-      "primary_source": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md",
+      "primary_source": "theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_03e5dc7a24d592b0016ac7832976cc8191bb8419ad6c4031b5"
@@ -307,7 +307,7 @@
       ],
       "outcome_en": "Observation-dependent local plans compose under projection fidelity and joint executability.",
       "outcome_zh": "观察分支方案在忠实投影和共同可实施条件下组合。",
-      "primary_source": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md",
+      "primary_source": "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_0fb734d219492f23016ac782cb586887d0aa6cf560c8e72c38"
@@ -355,7 +355,7 @@
       ],
       "outcome_en": "Correction margin bounds destructive and protected regimes under the declared market law.",
       "outcome_zh": "给定市场律下的纠正余量与生成／退化区域。",
-      "primary_source": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+      "primary_source": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_04cfe958af7e59b5016ac78227c9b08191be5d2a66860c822a"
@@ -387,7 +387,7 @@
       ],
       "outcome_en": "Existing G0/J reasons extend to relinquishing authority while preserving warranted responsibilities.",
       "outcome_zh": "已有 G0/J 理由应用于交权与有根据责任的接续。",
-      "primary_source": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+      "primary_source": "theories/becoming/history/ETHICAL-LEARNING.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_04cfe958af7e59b5016ac781afcea08191890173f1df26da3d"
@@ -419,7 +419,7 @@
       ],
       "outcome_en": "Near-parity priority requires an additional disclosed normative commitment.",
       "outcome_zh": "近乎平等时的优先力度需要新增公开承诺。",
-      "primary_source": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md",
+      "primary_source": "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_059ff6a37ef3f607016ac77cac600087d0b287603fde9b3bff"
@@ -467,7 +467,7 @@
       ],
       "outcome_en": "Operational identity warrants preservation only under matching content and standards.",
       "outcome_zh": "操作中的同一承接保留内容与认可标准条件。",
-      "primary_source": "theories/becoming/chapters/GENERATED-LOGIC.md",
+      "primary_source": "theories/becoming/history/GENERATED-LOGIC.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_0a708c4fbfbec79f016ac78413c5348191836bb73cbe3b1869"
@@ -483,7 +483,7 @@
       ],
       "outcome_en": "Joint fallible inspection replaces a designated infallible inspector under fault coverage.",
       "outcome_zh": "共同可失实检查在故障覆盖下替代指定无误检查者。",
-      "primary_source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md",
+      "primary_source": "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_01537372d42cc01a016ac77ea79f208191871ba9cfd16eaaef"
@@ -566,7 +566,7 @@
       ],
       "outcome_en": "Direct audit isolates still-unproved universal practical authority.",
       "outcome_zh": "直接审计定位仍未证的普遍实践权威。",
-      "primary_source": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+      "primary_source": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_074ec044b807145f016ac6d2bb1a9c8191bc3064ffb893490a",
@@ -617,7 +617,7 @@
       ],
       "outcome_en": "Religious and philosophical traditions are organized as proposed comparative studies.",
       "outcome_zh": "宗教与哲学传统比较议程；尚无独立整合综述。",
-      "primary_source": "theories/becoming/chapters/WANG-YANGMING.md",
+      "primary_source": "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
       "integration": "discussion-context-only",
       "evidence_message_ids": [
         "msg_00fab280df5a8e04016ac69768221887d0b4cb32f7fa3029cd",
@@ -683,7 +683,7 @@
       ],
       "outcome_en": "Situated responses are discussed as differentiations of a shared generative ground.",
       "outcome_zh": "共同生成根据中的情境回应讨论。",
-      "primary_source": "theories/becoming/chapters/DAO-AND-GENERATIVITY.md",
+      "primary_source": "theories/becoming/history/DAO-AND-GENERATIVITY-2026-10-23.md",
       "integration": "discussion-context-only",
       "evidence_message_ids": [
         "msg_0e1df0c3fc03e75c016ac67746a38087d0aa93065c90e6d8c9",
@@ -875,7 +875,7 @@
       ],
       "outcome_en": "Market nondual reconstruction retains established proofs and their interpretation limits.",
       "outcome_zh": "市场非二元重构保留已有证明与解释限度。",
-      "primary_source": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+      "primary_source": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
       "integration": "canonical",
       "evidence_message_ids": [
         "msg_0f91569e876ef9ae016ac49360160887d097bdbdd9c6c85509",

@@ -173,7 +173,7 @@ Contains 39 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>MarketInstances.lean — 53 explicit declarations</summary>
 
-[Source](../../../../experiments/market-generativity/formal/MarketInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/market-generativity/formal/README.md)
+[Source](../../../../experiments/market-generativity/formal/MarketInstances.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Package notes](../../../../experiments/market-generativity/formal/README.md)
 
 `experiments/market-generativity/formal/MarketInstances.lean`
 
@@ -1763,7 +1763,7 @@ Definitions and types:
 <details>
 <summary>SharedStockInstances.lean — 5 explicit declarations</summary>
 
-[Source](../../../../experiments/market-generativity/meta-attractor/SharedStockInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/market-generativity/meta-attractor/README.md)
+[Source](../../../../experiments/market-generativity/meta-attractor/SharedStockInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/market-generativity/meta-attractor/README.md)
 
 `experiments/market-generativity/meta-attractor/SharedStockInstances.lean`
 
@@ -1889,7 +1889,7 @@ Definitions and types:
 <details>
 <summary>VersionedTaskInstances.lean — 30 explicit declarations</summary>
 
-[Source](../../../../experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/market-generativity/meta-attractor/README.md)
+[Source](../../../../experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/market-generativity/meta-attractor/README.md)
 
 `experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean`
 

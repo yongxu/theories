@@ -23,7 +23,7 @@
     "zh": "先展开形成、受阻、察觉、回应与转型；位置和分析区分由关系说明。区分表示遗漏、实际压制与知情维持伤害；边界的实际作用随生活关系变化，完整描述不自动证明规范成立。普遍性不等于同责、遵循或全部Unrestricted断言。",
     "en": "Begin with formation, obstruction, sensing, response and transformation; explain positions and analytic distinctions relationally. Distinguish representational omission, actual suppression and informed maintenance of harm. A boundary’s role changes with living relations; descriptive completeness does not itself prove normative validity. Universality is not equal duties, compliance or full Unrestricted significance."
   },
-  "canonical_source": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+  "canonical_source": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
   "aliases": [],
   "dependencies": [],
   "related": [
@@ -175,7 +175,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+      "path": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
       "role": "statement",
       "sha256": "da9d61ecc5dfd42f86463924f29165ad9e1ba20b908291f4b8b796d0ce2afd1a",
       "declarations": []
@@ -195,7 +195,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md",
       "role": "integration",
-      "sha256": "1fd670e3defe9f199766a0ad411d60d9307d95ff40ab2c60e115768f4398c569",
+      "sha256": "af1ea2388032d272ac581b0c725d88218fbd207d24fa48581883009d447f4927",
       "declarations": []
     },
     {

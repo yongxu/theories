@@ -200,17 +200,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
       "path": "theories/becoming/OPENING.md",
       "role": "provenance",
-      "sha256": "88e31087d92cebe63f0d3d9e5ecd8cc9f8ad4586c7162f82fa66a70b4912be7d"
+      "sha256": "9f719265444669c8c2086349a9c2e178c6dec11ae5b281b55d417f51a9cb5057"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md",

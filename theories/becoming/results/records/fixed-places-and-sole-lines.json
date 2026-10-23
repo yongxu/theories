@@ -696,7 +696,7 @@
       "sha256": "892cd79092aea2af1ec1dc801955a53bfa8794ba8574a9311ea1ea7092781451"
     },
     {
-      "path": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
+      "path": "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
       "role": "statement",
       "declarations": [],
       "sha256": "314c5f042d9fbb3c8a8e4b83016d8b778a0947df8b6201cfaea0ed9fcff2f0e9"
@@ -717,10 +717,10 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
       "declarations": [],
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "declarations": [],
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"

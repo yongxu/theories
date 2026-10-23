@@ -92,7 +92,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 | proof | [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean) | `Becoming.ExchangeLaw`, `Becoming.ExchangeLaw.Through`, `Becoming.ExchangeLaw.withAct`, `Becoming.ExchangeLaw.course`, `Becoming.ExchangeLaw.levels`, `Becoming.ExchangeLaw.Feasible` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T122313.319851Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-18-the-light-and-alignment-for-all.md](../../../../sources/15-codex-theory-conversations/2026-10-18-the-light-and-alignment-for-all.md) | — |
 | provenance | [2026-10-18-representation-scope-go.md](../../../../sources/15-codex-theory-conversations/2026-10-18-representation-scope-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |

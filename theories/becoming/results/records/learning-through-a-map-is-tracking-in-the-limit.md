@@ -71,7 +71,7 @@ The twentieth review's G5 found two theories of learning in the limit, Learnable
 | proof | [LimitVerification.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean) | `Becoming.Limit.Tracks`, `Becoming.Limit.Identifies`, `Becoming.Limit.identifies_iff_tracks`, `Becoming.Limit.Tracks.agree` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [G-FRONTIER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/twentieth-review/G-FRONTIER.md) | — |
 
 Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tracking in the limit`, `极限中的跟随`, `Becoming.LearnableRuns.learnable_iff_identifies`, `Becoming.LearnableRuns.predicts_iff_tracks`

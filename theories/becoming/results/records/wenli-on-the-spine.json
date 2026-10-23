@@ -61,7 +61,7 @@
     "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
     "zh": "Ren，2026年10月22日：“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”（来历，不是根据）。本章为文立名，把文之认识论对到诸律，并以文理生生对照中华本。读法（AI 的，D63）：古书与汉字中之一线是核心之语言与认识论之一种贴切之表达，每一环有已检之律相对，各写其域；它是否比其他表达更贴近，未经检验。"
   },
-  "canonical_source": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+  "canonical_source": "theories/becoming/history/WENLI-AND-BECOMING.md",
   "aliases": [
     "文理生生",
     "文",
@@ -156,12 +156,12 @@
   ],
   "references": [
     {
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "path": "theories/becoming/history/WENLI-AND-BECOMING.md",
       "role": "statement",
       "sha256": "d7ed0aace7498f71ad46e71ebf32fc41b90284fa51b857c7128d1c9afb000219"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
       "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
     },

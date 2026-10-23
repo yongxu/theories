@@ -62,8 +62,8 @@ Early warning: an intervention changes an outcome only if its signal arrives bef
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
-| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `A source must arrive before the juncture`, `来源须在机前到达`, `Becoming.TimedResponse.same_step_unreached`
 

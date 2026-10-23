@@ -61,7 +61,7 @@
     "en": "Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories” (provenance, not warrant). The chapter places the 脉络 in the theory and tests the thesis judgment by judgment; the 中华本 states the theory in the classical names, with 經, 說 and 證 for each law and the classical passages set beside it. Reading (the AI's, D62): the thesis holds at the root and in most mapped judgments, needs a scope in its universal forms, and fails as a property of every system.",
     "zh": "Ren，2026年10月19日，把数据库扩展到中华文化之后说：“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories”（来历，不是根据）。本章把脉络安放在理论中，并逐条检验论题；中华本以古典之名陈述理论，每条律有经、说、证，并列出相对照的古典文字。读法（AI 的，D62）：论题在根上与大多数已对应的判断中成立，其全称形式需要定域，作为每一体系的性质不成立。"
   },
-  "canonical_source": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+  "canonical_source": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
   "aliases": [
     "《中华思想脉络》 on the spine",
     "中华思想脉络",
@@ -373,12 +373,12 @@
   ],
   "references": [
     {
-      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "path": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
       "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
       "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
     },
@@ -413,7 +413,7 @@
       "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
     },
     {
-      "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+      "path": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "statement",
       "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },

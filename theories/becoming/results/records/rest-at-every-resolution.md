@@ -125,7 +125,7 @@ The rest theorem with a fixed unit (continued-change-needs-openness) is the case
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-pareto-frontier.md](../../../../sources/15-codex-theory-conversations/2026-10-10-pareto-frontier.md) | — |
 | provenance | [2026-10-11-difference-in-becoming.md](../../../../sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md) | — |
 | review | [BECOMING-R1-R2-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-R1-R2-REVIEW.md) | — |

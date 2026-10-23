@@ -27,7 +27,7 @@
     "zh": "引入、承接、辨认和推理根据是同一活动中的不同关系。形式代入刻画给定语言下的求值保持，不直接证明实际指向、历史身份或完整的认识根据。",
     "en": "Introduction, continuation, recognition and inferential warrant distinguish relations within one activity. Formal substitution characterizes evaluation preservation in the supplied language, not actual reference, historical identity or complete epistemic entitlement."
   },
-  "canonical_source": "theories/becoming/chapters/GENERATED-LOGIC.md",
+  "canonical_source": "theories/becoming/history/GENERATED-LOGIC.md",
   "aliases": [],
   "dependencies": [
     {
@@ -104,7 +104,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/GENERATED-LOGIC.md",
+      "path": "theories/becoming/history/GENERATED-LOGIC.md",
       "role": "statement",
       "sha256": "e6a3e25355b2753a9da5d0c864bf4bc26de171f1b521d1b8bd5334bbef98cf03",
       "declarations": []

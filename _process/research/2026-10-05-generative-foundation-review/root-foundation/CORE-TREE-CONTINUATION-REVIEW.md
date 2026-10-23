@@ -1,6 +1,6 @@
 # Core/tree continuation: independent review and scope
 
-6 October 2026. AI-authored internal review under the [project-wide nondual method](../../../../theories/becoming/chapters/NONDUAL-METHOD.md). **Verdict: no blocking defect found in the reviewed source or verification contract.** Acceptance concerns the two stated local results and their public entry. It does not establish nondual ontology, an assumption-free foundation, ethical necessity or new empirical support.
+6 October 2026. AI-authored internal review under the [project-wide nondual method](../../../../theories/becoming/history/NONDUAL-METHOD.md). **Verdict: no blocking defect found in the reviewed source or verification contract.** Acceptance concerns the two stated local results and their public entry. It does not establish nondual ontology, an assumption-free foundation, ethical necessity or new empirical support.
 
 ## Authorship and independent coverage
 

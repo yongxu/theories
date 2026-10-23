@@ -114,7 +114,7 @@ The selection theorems ask which laws the counts obey under a selection of the e
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
 | integration | [ZERO-PREMISE-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ZERO-PREMISE-PLAN.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-11-zero-premise-laws.md](../../../../sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md) | — |
 | provenance | [2026-10-11-one-unified-theory-together.md](../../../../sources/15-codex-theory-conversations/2026-10-11-one-unified-theory-together.md) | — |
 | provenance | [2026-10-10-zero-axiom-part-and-names.md](../../../../sources/15-codex-theory-conversations/2026-10-10-zero-axiom-part-and-names.md) | — |

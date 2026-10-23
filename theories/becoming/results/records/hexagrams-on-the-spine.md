@@ -98,11 +98,11 @@ Ren, 19 October 2026, asked whether the relation of the work to the 周易, abov
 | proof | [Learning.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) | `Becoming.Learning.Lumped` |
 | proof | [LearningRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean) | `Becoming.Learning.goAlike_iff_lumped` |
 | proof | [Unfolding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean) | `Becoming.Frame.claims_recur_iff`, `Becoming.Frame.arises_iff` |
-| statement | [YI-ZHUAN-AND-BECOMING.md](../../chapters/YI-ZHUAN-AND-BECOMING.md) | — |
+| statement | [YI-ZHUAN-AND-BECOMING.md](../../history/YI-ZHUAN-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json) | — |
 | integration | [verify_mapping.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/zhouyi-yizhuan/PROVENANCE.json) | — |
 | provenance | [2026-10-19-the-changes-on-the-spine.md](../../../../sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T092027.048735Z/verification.json) | — |

@@ -79,7 +79,7 @@ Well-foundedness of a strict order, read for dissipative worlds: with dependent 
 | proof | [Space.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 
 Aliases: `rest exactly where falls stop`, `恰在下降停止之处停息`, `no endless fall`, `没有无尽的下降`, `one premise of rest`, `停息的唯一前提`, `Becoming.World.InAmounts.change_stops_iff`, `Becoming.Amounts.NoEndlessFall`, `Becoming.Pass.endless_keeps_from_rest`

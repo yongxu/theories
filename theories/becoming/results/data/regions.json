@@ -1,5 +1,5 @@
 {
- "about": "Regions and bases of the results and Lean modules (board item RA). Curated from the inventory of 23 October 2026 (seventeen readers; bases read from what each item states: old-base = World/Web/Flow, frame = Process/Run, general = any type, grammar = Becoming.Grammar, periphery = Mathlib). Edit to reassign.",
+ "about": "Regions and bases of the results and Lean modules (board item RA). Curated from the inventory of 23 October 2026 (seventeen readers; bases read from what each item states: old-base = World/Web/Flow, frame = Process/Run, general = any type, grammar = Becoming.Grammar, periphery = Mathlib). Regions follow the chapter that states each result (its anchor); bases were corrected from the drafters' reports of 23 October. Edit to reassign.",
  "records": {
   "a-code-formed-between-formations": {
    "region": "collective",
@@ -22,7 +22,7 @@
    "note": "Evolution: goal carried down lineages"
   },
   "a-history-read-off-its-finite-stretches": {
-   "region": "root",
+   "region": "knowing",
    "base": "frame",
    "note": "HistoryIdeals: histories are ideals of finite stretches"
   },
@@ -52,18 +52,18 @@
    "note": "Admission: band between need and cap"
   },
   "a-pattern-lasts-through-passing": {
-   "region": "map",
+   "region": "life",
    "base": "old-base",
    "note": "PatternPassing/Wholes: pattern outlasting brief carriers"
   },
   "a-pool-read-by-its-majority": {
    "region": "collective",
-   "base": "frame",
+   "base": "old-base",
    "note": "SelectionPool: majority reading is a pooled selection"
   },
   "a-pool-that-recruits-through-itself": {
    "region": "collective",
-   "base": "frame",
+   "base": "old-base",
    "note": "PoolCourse: self-recruiting pool reach"
   },
   "a-race-for-position-draws-everything": {
@@ -77,12 +77,12 @@
    "note": "RuleCapture: no ratchet when rule read against share"
   },
   "a-rise-past-the-inflow-is-drawn-from-beyond": {
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "note": "DrawnBeyond: rise bounded by inflow plus draw beyond"
   },
   "a-source-before-a-juncture": {
-   "region": "knowing",
+   "region": "map",
    "base": "frame",
    "note": "Junctures: source must reach reader before juncture"
   },
@@ -158,7 +158,7 @@
   },
   "balance-from-the-first-law": {
    "region": "root",
-   "base": "old-base",
+   "base": "periphery",
    "note": "FL1; EntropyProduction periphery for exergy reading"
   },
   "bands-of-the-three-powers": {
@@ -312,7 +312,7 @@
    "note": "ClosedCapture MA1: loop reading only the share"
   },
   "closing-needs-net-draw": {
-   "region": "map",
+   "region": "significance",
    "base": "old-base",
    "note": "closing needs net draw on required condition"
   },
@@ -362,7 +362,7 @@
    "note": "superseded five-condition review"
   },
   "conditions-kept-together": {
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "note": "JointKeeping: joint keepability not decomposable"
   },
@@ -437,7 +437,7 @@
    "note": "conveyance as reading of related; boundary"
   },
   "copied-witnesses-change-nothing": {
-   "region": "knowing",
+   "region": "collective",
    "base": "general",
    "note": "FaultEnvelopes: copied witnesses add nothing"
   },
@@ -447,7 +447,7 @@
    "note": "Copying: b-fold rounds within stock"
   },
   "counterfactual-is-the-course": {
-   "region": "knowing",
+   "region": "map",
    "base": "old-base",
    "note": "P80: counterfactual = course of the law"
   },
@@ -468,7 +468,7 @@
   },
   "counts-exist-where-decided": {
    "region": "method",
-   "base": "old-base",
+   "base": "general",
    "note": "Decidedness: count exists iff decided (calibration)"
   },
   "coupled-regimes": {
@@ -587,7 +587,7 @@
    "note": "Junctures: loss passes juncture, not-not form"
   },
   "every-origin-passes-the-gate": {
-   "region": "life",
+   "region": "root",
    "base": "frame",
    "note": "Gated/LivingOrganization: origin passes gate"
   },
@@ -622,12 +622,12 @@
    "note": "Continuation: far conveying lowers family stock"
   },
   "feedback-and-reach": {
-   "region": "significance",
+   "region": "knowing",
    "base": "old-base",
    "note": "influence closure, reach (bounded significance)"
   },
   "feeding-closure": {
-   "region": "significance",
+   "region": "map",
    "base": "old-base",
    "note": "least feeding-closed region of a continuation"
   },
@@ -732,7 +732,7 @@
    "note": "part widens, narrows, keeps, mixed"
   },
   "fulfillment-chance-floor": {
-   "region": "knowing",
+   "region": "significance",
    "base": "general",
    "note": "ChanceFloors: same-law chance floor"
   },
@@ -752,7 +752,7 @@
    "note": "GrammarMap OU4/OU5: two grains and branches"
   },
   "generation-is-replenishment": {
-   "region": "map",
+   "region": "life",
    "base": "old-base",
    "note": "arising needs replenishment under dissipation"
   },
@@ -783,7 +783,7 @@
   },
   "growth-constrained-fragmentation": {
    "region": "map",
-   "base": "frame",
+   "base": "periphery",
    "note": "Cuts K1/K2: growth constrains fragmentation"
   },
   "guarded-program-question-recovery": {
@@ -907,7 +907,7 @@
    "note": "joint decomposition lifts under compactness"
   },
   "joint-difference-making": {
-   "region": "knowing",
+   "region": "collective",
    "base": "frame",
    "note": "Joint: but-for test for parts together"
   },
@@ -918,7 +918,7 @@
   },
   "joint-practice-forms-continuation": {
    "region": "collective",
-   "base": "general",
+   "base": "periphery",
    "note": "JointPracticeContinuation: practice machine"
   },
   "joint-target-uniqueness": {
@@ -997,7 +997,7 @@
    "note": "RelativePosition Z1: least parts, equal shares"
   },
   "levels-of-closure": {
-   "region": "significance",
+   "region": "root",
    "base": "old-base",
    "note": "five nested closures"
   },
@@ -1037,7 +1037,7 @@
    "note": "loss beyond nested regions"
   },
   "losses-of-the-sum-over-histories": {
-   "region": "method",
+   "region": "root",
    "base": "general",
    "note": "Weighted P121: truncation, cancellation, memory"
   },
@@ -1052,22 +1052,22 @@
    "note": "RegimeMargin: least level above need"
   },
   "market-finite-support-obstruction": {
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "note": "general drain law; market only an instance"
   },
   "market-partial-correction-boundary": {
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "note": "funnel characterization; market instance"
   },
   "market-protected-continuation": {
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "note": "viability kernel = largest certificate"
   },
   "market-supported-finite-transition": {
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "note": "ladder for lasting n steps; market instance"
   },
@@ -1077,12 +1077,12 @@
    "note": "recipe/pool routing, copying instance"
   },
   "mediated-evidence-transport": {
-   "region": "knowing",
+   "region": "significance",
    "base": "frame",
    "note": "invariants along admitted courses; protocol instances"
   },
   "merge-of-a-part-kept-by-the-rest": {
-   "region": "knowing",
+   "region": "map",
    "base": "general",
    "note": "part×rest count bound under merge-free law"
   },
@@ -1107,7 +1107,7 @@
    "note": "mutation–selection balance s/(s+m)"
   },
   "mutual-dependence-and-its-pace": {
-   "region": "significance",
+   "region": "collective",
    "base": "old-base",
    "note": "MD1 'entangled'; bounded significance; pace"
   },
@@ -1163,11 +1163,11 @@
   },
   "only-the-order-of-change-shows": {
    "region": "root",
-   "base": "general",
+   "base": "old-base",
    "note": "stuttering invariance; rates relative"
   },
   "open-form-realization-under-revision": {
-   "region": "map",
+   "region": "significance",
    "base": "frame",
    "note": "handoff into finite-renewal theorem"
   },
@@ -1192,7 +1192,7 @@
    "note": "P121 routes; orders of carried amount"
   },
   "organizational-formation-from-generative-comparison": {
-   "region": "life",
+   "region": "collective",
    "base": "frame",
    "note": "reviewed-scoped; conditional warrant"
   },
@@ -1222,8 +1222,8 @@
    "note": "OW1 OwnWidening"
   },
   "pending-task-context-applicability": {
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "note": "Stock instance; candidate to fold"
   },
   "place-relations-in-context": {
@@ -1277,7 +1277,7 @@
    "note": "frame/world correspondence, memory gap"
   },
   "projection-carrying-a-law": {
-   "region": "root",
+   "region": "knowing",
    "base": "general",
    "note": "lumping carries law"
   },
@@ -1292,7 +1292,7 @@
    "note": "BasicPriority, Lexical"
   },
   "raising-what-couples-in-draws-from-beyond": {
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "note": "SelectionReach draw beyond"
   },
@@ -1322,13 +1322,13 @@
    "note": "Pace"
   },
   "readings-within-what-they-read": {
-   "region": "method",
+   "region": "knowing",
    "base": "general",
    "note": "Diagonal; liar"
   },
   "recoverable-mediated-change": {
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "note": "overlaps mediated-evidence-transport"
   },
   "recurrence-without-decidedness": {
@@ -1398,7 +1398,7 @@
   },
   "renewing-consuming-formation": {
    "region": "map",
-   "base": "frame",
+   "base": "periphery",
    "note": "no-recovery wear law"
   },
   "repeated-disturbance": {
@@ -1492,7 +1492,7 @@
    "note": "Novelty"
   },
   "returning-where-the-course-branches": {
-   "region": "root",
+   "region": "map",
    "base": "frame",
    "note": "Branching returning"
   },
@@ -1502,7 +1502,7 @@
    "note": "superseded (SG16 into UM)"
   },
   "revision-with-an-undecided-value": {
-   "region": "method",
+   "region": "knowing",
    "base": "general",
    "note": "Kripke-style least fixed point"
   },
@@ -1622,7 +1622,7 @@
    "note": "empirical; reviewed-scoped"
   },
   "slowing-down-before-an-own-end": {
-   "region": "map",
+   "region": "knowing",
    "base": "periphery",
    "note": "CS1 SlowingDown"
   },
@@ -1657,7 +1657,7 @@
    "note": "HS HistorySums"
   },
   "support-from-the-supported": {
-   "region": "map",
+   "region": "significance",
    "base": "old-base",
    "note": "Admission"
   },
@@ -1702,7 +1702,7 @@
    "note": "Distinguishing"
   },
   "the-boundary-of-enough-under-undetermined-laws": {
-   "region": "map",
+   "region": "knowing",
    "base": "general",
    "note": "Enough"
   },
@@ -1737,7 +1737,7 @@
    "note": "Retaining"
   },
   "the-split-that-makes-sense": {
-   "region": "root",
+   "region": "knowing",
    "base": "general",
    "note": "coarsest law-carrying class"
   },
@@ -1802,7 +1802,7 @@
    "note": "Transmission"
   },
   "two-act-worlds-carry-the-difference": {
-   "region": "root",
+   "region": "map",
    "base": "old-base",
    "note": "CourseWorlds counterfactual"
   },
@@ -1813,7 +1813,7 @@
   },
   "two-sided-regulation-and-late-reading": {
    "region": "map",
-   "base": "general",
+   "base": "old-base",
    "note": "Regulation late band"
   },
   "typicality-by-counting": {
@@ -1852,8 +1852,8 @@
    "note": "SG11"
   },
   "versioned-request-completion": {
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "note": "countdown instance; candidate to fold"
   },
   "webs-with-a-recent-giving": {
@@ -1872,7 +1872,7 @@
    "note": "Weightings"
   },
   "wen-in-the-grammar": {
-   "region": "classical",
+   "region": "knowing",
    "base": "grammar",
    "note": "WL2 文同 as core"
   },
@@ -1922,7 +1922,7 @@
    "note": "M3 PoolResponse"
   },
   "what-a-rise-draws-from-beyond": {
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "note": "RB1 DrawnBeyond"
   },
@@ -1972,7 +1972,7 @@
    "note": "Weightings"
   },
   "what-taking-all-excludes": {
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "note": "Exclusion"
   },
@@ -2002,8 +2002,8 @@
    "note": "Settling, LPO limit"
   },
   "where-a-formations-acts-return": {
-   "region": "root",
-   "base": "general",
+   "region": "knowing",
+   "base": "old-base",
    "note": "Centers loops"
   },
   "where-a-level-couples": {
@@ -2037,7 +2037,7 @@
    "note": "first law gain"
   },
   "where-two-courses-rejoin": {
-   "region": "root",
+   "region": "map",
    "base": "old-base",
    "note": "M4 Rejoining"
   },
@@ -2052,7 +2052,7 @@
    "note": "K1 Cuts"
   },
   "whole-drawing-beyond-renewal-ends": {
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "note": "WE1 Wholes"
   },

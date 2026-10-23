@@ -10,7 +10,7 @@ You are one of five read-only mappers. Together you map the relational ontology 
 
 ## Our theory in brief (read more as needed)
 
-- Repository `/Users/ren/theories`. Read `AGENTS.md` (the "Begin with one relational unfolding" section), then `theories/becoming/chapters/THE-THEORY-OF-BECOMING.md` §1–§2 and the glossary, and `theories/becoming/chapters/NONDUAL-METHOD.md`.
+- Repository `/Users/ren/theories`. Read `AGENTS.md` (the "Begin with one relational unfolding" section), then `theories/becoming/history/THE-THEORY-OF-BECOMING.md` §1–§2 and the glossary, and `theories/becoming/history/NONDUAL-METHOD.md`.
 - **The primary ontology is one, and relational.** First comes how relations in the one unfolding form, persist and change. Then comes how actor, patient, knowing, evaluation, capacity and responsibility differentiate within it. No name smuggles in an independent entity.
 - **The formal spine** is the Lean package `Becoming` under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean`. It is a pure core: prelude only, with no axioms. It has two base families:
   - `World`, `Flow` and `Web`: one kind of relatum, with flows, exchanges and webs;
@@ -29,7 +29,7 @@ You are one of five read-only mappers. Together you map the relational ontology 
   - `/private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/ro/spine-modules.md`: every core module, with its one-paragraph summary.
   - `/private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/ro/spine-records.md`: every result record, with its statement and main declarations.
 - **The Yi line on the spine** (do not redo it):
-  - `theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md`;
+  - `theories/becoming/history/YI-ZHUAN-AND-BECOMING.md`;
   - the passage map `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json` (69 passages with kinds agreement, scope and divergence);
   - modules `Becoming.Hexagrams`, `HexagramPlaces`, `HexagramLaws` and `HexagramSites` (Y4, in progress).
 - **Earlier studies from 6–7 October**, written in older vocabulary: build on them and say where they are superseded.

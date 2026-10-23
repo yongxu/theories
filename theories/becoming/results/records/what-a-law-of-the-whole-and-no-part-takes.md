@@ -84,7 +84,7 @@ Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents
 | proof | [Testing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean) | `Becoming.Web.AlikeThroughUpTo` |
 | proof | [World.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean) | `Becoming.Web` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [2026-10-11-zero-premise-laws.md](../../../../sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T224751.654308Z/verification.json) | — |

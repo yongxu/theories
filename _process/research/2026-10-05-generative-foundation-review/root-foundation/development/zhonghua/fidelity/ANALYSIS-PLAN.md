@@ -4,7 +4,7 @@ Design: [FIDELITY.md](../../../../../../../experiments/wenli-reading-transfer/FI
 
 ## Inputs (frozen by the commit that adds this file)
 
-- 中华本 `theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md` and the canonical chapter `theories/becoming/chapters/THE-THEORY-OF-BECOMING.md` at `333c34065`, extracted by `extract_zh.py` and `extract_en.py`.
+- 中华本 `theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md` and the canonical chapter `theories/becoming/history/THE-THEORY-OF-BECOMING.md` at `333c34065`, extracted by `extract_zh.py` and `extract_en.py`.
 - The Lean statements of 4,674 declarations, dumped by `lean_dump.py` from the core build restored from the shared cache (receipt `20261022T110022.458880Z`; 302 steps reused, none rebuilt).
 - The name table (449 names, 37 not adopted) and the glossary §10 (a), (b) as the keys.
 - Sorts from the registered table in `sorts.py`, which adds one sort the design's list lacks (`move`).

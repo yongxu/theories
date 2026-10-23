@@ -102,7 +102,7 @@ Decision D45 (4) joined IdealWarrant with CompletionRole and HistoryIdeals as on
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-19-integrate-all.md](../../../../sources/15-codex-theory-conversations/2026-10-19-integrate-all.md) | — |
 | provenance | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
 | proof | [HistoryIdealsTraces.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean) | `Becoming.HistoryIdealsTraces.HistoryOf`, `Becoming.HistoryIdealsTraces.classification`, `Becoming.HistoryIdealsTraces.course_settles`, `Becoming.HistoryIdealsTraces.run_initial_trace`, `Becoming.HistoryIdealsTraces.run_goesOn`, `Becoming.HistoryIdealsTraces.countdown`, `Becoming.HistoryIdealsTraces.history_without_run` |

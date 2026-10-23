@@ -77,8 +77,8 @@ Fisher 1930's fundamental theorem in its general form, read by Price 1972: the c
 | proof | [SelectionTerm.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean) | `Becoming.SelectionTerm.concord`, `Becoming.SelectionTerm.discord`, `Becoming.SelectionTerm.pairs_cross`, `Becoming.SelectionTerm.pairs_cross'`, `Becoming.SelectionTerm.pairs_add`, `Becoming.SelectionTerm.discord_swap`, `Becoming.SelectionTerm.concord_swap`, `Becoming.SelectionTerm.Generations.mean_step`, `Becoming.SelectionTerm.raised_exact`, `Becoming.SelectionTerm.lowered_exact` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `additive part of Fisher's theorem`, `additive genetic variance`, `Cauchy-Schwarz counted`, `后代数方差的加性部分`, `Becoming.Reproduction.additive_le`, `Becoming.Reproduction.bound_sq`, `Becoming.Reproduction.Generations.response_sq_le`

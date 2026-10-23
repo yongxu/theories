@@ -716,7 +716,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d47-易传在脊柱上的读法--the-readings-of-the-yi-zhuan-on-the-spine"></a>
 ### D47. 易传在脊柱上的读法
 
-所在：[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)及其[逐句对应](development/y1-changes/passages.json)；记录 [hexagrams-on-the-spine](../../../../theories/becoming/results/records/hexagrams-on-the-spine.md)；研究第 192 节。在 D45 的一个说明中决定。
+所在：[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)及其[逐句对应](development/y1-changes/passages.json)；记录 [hexagrams-on-the-spine](../../../../theories/becoming/results/records/hexagrams-on-the-spine.md)；研究第 192 节。在 D45 的一个说明中决定。
 
 **Ren 的原话。** 2026-10-19：“我们的work，和周易，尤其是易传之间的关系，你看得到吗，可以建立起来吗”，然后：“我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md)）。对这一要求的读法是 AI 的，与原话一同记录。
 
@@ -749,7 +749,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d50-爻位之关系的读法--the-readings-of-the-relations-of-the-places"></a>
 ### D50. 爻位之关系的读法
 
-所在：[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)（§2 与 §5，其[逐句对应](development/y1-changes/passages.json)与普查）；记录 [place-relations-in-context](../../../../theories/becoming/results/records/place-relations-in-context.md)；研究第 195 节。在 D45 的一个说明中决定，用 D47 的三种关系。
+所在：[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)（§2 与 §5，其[逐句对应](development/y1-changes/passages.json)与普查）；记录 [place-relations-in-context](../../../../theories/becoming/results/records/place-relations-in-context.md)；研究第 195 节。在 D45 的一个说明中决定，用 D47 的三种关系。
 
 **决定。** 一、**关系。** 正（当位）是一爻之值合于其位之奇偶，六位一律；应是上下两卦同一高度两爻的关系，相异为应，相同为敌应；比是相邻两爻的关系，承与乘是其两个方向；中是中之高度，即二、五两位。每一关系在其所在之处读出，是语境读法（`Becoming.Context`：在一个语境中所示的主张），不是一爻的性质。二、**读法。** 逐句对应中引本模块的 22 条读法各依其所述范围采用。其中：六位時成是一爻上升时其正翻转；未濟“雖不當位，剛柔應也”是蕴涵，不是让步；敵應是两卦粘合之处，感應是两卦处处相异之处；剛中而應与柔中而應是一个关系从其两端读；上下應之与乘五剛读一爻与其余诸爻，比高度与缝的关系宽，是定域。三、**相分保留。** 需上六之不当位与艮六五之中正，与其位之奇偶相分；模块不采初上无位，也不以中为正，因为两者都是另一个关系，而不是对此关系的修正。尊位与爻有等给位排等级，文不當，故吉凶生焉以此关系为吉凶之源；结构中没有等级，动力学不决定意义。四、**不读入的。** 不说彖与象的作者意谓这些律；不论王弼之读，其文未存于本库。
 **理由。** 这些关系在位上成立，所以脊柱对语境中主张的说明正是它们的确切形式，诸律不加前提地得出。普查以经文中一类明言的全部检验读法，而不是挑选的例子，两处例外都保持可见。
@@ -760,7 +760,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d51-卦之诸律的读法--the-readings-of-the-hexagram-laws"></a>
 ### D51. 卦之诸律的读法
 
-所在：[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)（§2、§5、§7 与 §8，其[逐句对应](development/y1-changes/passages.json)）；记录 [hexagram-world-laws](../../../../theories/becoming/results/records/hexagram-world-laws.md)；研究第 198 节。由[早期仓库审读](SSBX-REPOSITORY-REVIEW.md)第 3.1 节之律 H1–H5 提出；工作板项 Y3。在 D45 的一个说明中决定，用 D47 的三种关系。
+所在：[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)（§2、§5、§7 与 §8，其[逐句对应](development/y1-changes/passages.json)）；记录 [hexagram-world-laws](../../../../theories/becoming/results/records/hexagram-world-laws.md)；研究第 198 节。由[早期仓库审读](SSBX-REPOSITORY-REVIEW.md)第 3.1 节之律 H1–H5 提出；工作板项 Y3。在 D45 的一个说明中决定，用 D47 的三种关系。
 
 **决定。** 一、**中爻与互。** 中爻是二至五爻；互读作律而迭用，传统多只取一步；“非其中爻不備”就互之所读为相合，其“辨是與非”是判断，律不承载。二、**卦序首尾。** 互所归之四卦恰是所传卦序之首二卦与末二卦，这是在卦序上检查过的事实，与《序卦》“有天地”与“物不可窮也，故受之以未濟；終焉”并读：互之下既濟、未濟相代而不止。不说卦序由互而排。三、**錯与綜。** 二名读作错卦与倒转，是后世注家之用（来知德）；经文“錯綜其數”说的是数，所以此段是定域。四、**之卦。** 老、少是变与不变，九、六为老，七、八为少；用九、用六是六爻皆老之卦（《左傳》称乾之用九为“乾之坤”，未存于本库，未核对）；在之卦之律内，“窮則變”读作老者一变而久；“吉”“无首”是判断，在律之外。五、**加一**把太极之逐层二分读作数位；邵雍先天之序与莱布尼茨的二进制之读只在模块文档中说明，未证明。六、**消息之六轨**以普查扩充剝之“消息盈虛”。七、**不读入的。** 不说作者意谓这些律，也不读《左傳》或京房的互体。
 **理由。** 每一陈述都是构形之律或关于经文之清单的事实，都已检查；每一读法只说律对此段显示了什么，判断留在外面，与 D47、D50 同。
@@ -780,7 +780,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d53-初上无位与独应之读--the-readings-of-the-fixed-places-and-the-sole-line"></a>
 ### D53. 初上无位与独应之读
 
-所在：[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)（§1、§2、§5、§6，其[逐句对应](development/y1-changes/passages.json)与普查）；记录 [fixed-places-and-sole-lines](../../../../theories/becoming/results/records/fixed-places-and-sole-lines.md)；研究第 202 节。在 D45 的一个说明中决定，用 D47 的三种关系与 D50 的诸关系，并如 D50 末句所预见的那样修订它。
+所在：[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)（§1、§2、§5、§6，其[逐句对应](development/y1-changes/passages.json)与普查）；记录 [fixed-places-and-sole-lines](../../../../theories/becoming/results/records/fixed-places-and-sole-lines.md)；研究第 202 节。在 D45 的一个说明中决定，用 D47 的三种关系与 D50 的诸关系，并如 D50 末句所预见的那样修订它。
 
 **决定。** 一、**两个言位的关系。** 初上无位是二至五位上的第二个关系，在六位之正（D50）之旁；两者不互相修正。言位之句（位、當位、得位、不當位、失位）依第二个关系读，所以需上六之不当位是相合，它与六位之奇偶的相分如其所述保留。二、**独应。** 上下應之、上下應、乘五剛与“成卦之體，在斯一爻”读一爻为其余诸爻所应，王弼之“主”只读作这一关系。三、**相分。** 王弼之“治眾”“主必致一”（此关系是对称的）、位之贵贱尊卑、卦略以阳居阴位为“美”，皆相分，与天尊地卑、尊位之相分同。四、**普查。** 爻辞与大象之“中”依各项普查所见读：爻辞之中多是某物之中间，大象之中是上下两体之关系。五、**不读入的。** 不说王弼之读是作者之意；邢璹之注在此不作证据。
 **理由。** 第二个关系使彖与小象言位之句皆成立，六位之奇偶则有四处不成立；王弼为之所立之论是经文之言的律，不是偏好。独应是模块中已有的两爻之应，从一爻读出，取之不加前提；把“主”读作统治，则加上此关系所没有的方向。
@@ -789,7 +789,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d54-中国思想诸传统在脊柱上的读法--the-readings-of-the-chinese-sources-on-the-spine"></a>
 ### D54. 中国思想诸传统在脊柱上的读法
 
-所在：[《中国思想的关系本体与生成之论》](../../../../theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md)及其[逐句对应](development/ro-relational-sources/passages.json)；记录 [chinese-sources-on-the-spine](../../../../theories/becoming/results/records/chinese-sources-on-the-spine.md)；研究第 207 节。在 D45 的一个说明中决定。
+所在：[《中国思想的关系本体与生成之论》](../../../../theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md)及其[逐句对应](development/ro-relational-sources/passages.json)；记录 [chinese-sources-on-the-spine](../../../../theories/becoming/results/records/chinese-sources-on-the-spine.md)；研究第 207 节。在 D45 的一个说明中决定。
 
 **Ren 的原话。** 2026-10-19，分享易道体系图 v1.3.0 之后：“整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-19-relational-ontology-of-chinese-thought.md)）。对这一要求的读法是 AI 的，与原话一同记录；其中的论题是待检验的，不是前提。
 
@@ -800,7 +800,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d55-传中诸排列之读--the-readings-of-the-arrangements-of-the-傳"></a>
 ### D55. 传中诸排列之读
 
-所在：[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)（§2、§5、§7、§8，其[逐句对应](development/y1-changes/passages.json)）与[《中国思想的关系本体与生成之论》](../../../../theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md)（§5.1、§8，其[对应](development/ro-relational-sources/passages.json)）；记录 [hexagram-arrangements-and-laws](../../../../theories/becoming/results/records/hexagram-arrangements-and-laws.md)；研究第 209 节。在 D45 的一个说明中决定，用 D47 的三种关系。
+所在：[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)（§2、§5、§7、§8，其[逐句对应](development/y1-changes/passages.json)）与[《中国思想的关系本体与生成之论》](../../../../theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md)（§5.1、§8，其[对应](development/ro-relational-sources/passages.json)）；记录 [hexagram-arrangements-and-laws](../../../../theories/becoming/results/records/hexagram-arrangements-and-laws.md)；研究第 209 节。在 D45 的一个说明中决定，用 D47 的三种关系。
 
 **决定。** 一、**卦序。** 序卦在对内的理由读作对内那一步的对称（剝窮上反下是直接轮转，損至益是倒转）；对与对之间的理由是加在清单上的言说，不是构形承载之律，仍为相分。二、**卦变。** 損下益上、損上益下、剛上而柔下、柔上而剛下读作上下两卦各一爻相易；損、益是一次交换的两端，全卦之数不变。彖于所名之卦取哪一种易，是彖的读法，不是律。三、**奇偶。** 陽卦奇，陰卦偶读作阳爻之数的奇偶；多陰、多陽读作数，数不承载律。四、**杂卦与八站。** 杂卦之对即所传卦序之对；说卦第五章之八站只取其次序，不取其时与方。五、**交。** 天地交读作在两值之间读入一个方向（阳在阴下），錯不保持这一读法。六、**不读入的。** 不说传的作者意谓这些律，不以交优于不交、益优于損。
 **理由。** 每一读法都是使该段的结构之说恰为模块之律的读法，并止于律之所止：对与对之间不存在比卦序之表更小的律，所以序卦在那里的理由不能读作律。
@@ -809,7 +809,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d56-在形成之间形成的编码--a-code-formed-between-formations"></a>
 ### D56. 在形成之间形成的编码
 
-所在：[Becoming.SharedCodes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean)；记录 [a-code-formed-between-formations](../../../../theories/becoming/results/records/a-code-formed-between-formations.md)；[《中国思想的关系本体与生成之论》](../../../../theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md) §8 及其逐句对应中的四段（同则同之、名无固宜、说文止戈之释、书同文）；正典一章 §4；研究第 210 节。在 D45 的一个说明中决定；接续 D54。
+所在：[Becoming.SharedCodes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean)；记录 [a-code-formed-between-formations](../../../../theories/becoming/results/records/a-code-formed-between-formations.md)；[《中国思想的关系本体与生成之论》](../../../../theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md) §8 及其逐句对应中的四段（同则同之、名无固宜、说文止戈之释、书同文）；正典一章 §4；研究第 210 节。在 D45 的一个说明中决定；接续 D54。
 
 **决定。** 一、**约定俗成。** 名无固宜，约定俗成谓之宜，以对称之律读之（`never_agrees_of_both`）：既不特许形式、也不特许形成者的律不能解决对称的分歧，解决分歧者打破一个对称。中心事先打破它（荀子之王者制名），偏好之形以形式上的合宜打破它，听取的次序以关系自身的历史打破它（`three_agree`）。约定俗成读作最后一种：名之宜在使用的过程中形成，所成之形由起点与次序固定（`run_agrees_every_start_iff`、`run_shared_iff_in_use`）。二、**同则同之。** 改名既不改变编码所分别者，也不改变它是否承载规律（`run_renamed_tells_apart_iff`、`renamed_carries_iff`）：宜由约定，实不由约定。逐义形成的相合可以合并编码原已分别的义（`TwoFormations.homonym`），所以约定之成可以付出分别。三、**书同文。** 强加的编码是一个中心的编码一举成为众人的：其来源一无所失；其余每个形成失去其编码所分而强加编码所合并者；此后被强加者之间的交换不能恢复；被合并的分别只能从强加之外保留的形式回来（`run_from_imposition`、`outside_needed`、`outside_returns`）。“古文由此絕”读作外面再无人用旧形。四、**说文之止戈。** 写入后人所学之记录的读法即刻静止并自我确认（`written_rests`）；后来的记录读不回此前（`no_reading_recovers`）；只有保留下来的此前记录（止为足的甲骨金文字形）阻止另一种判定（`kept_bars`），只增补的记录使判定失去而不被替换（`added_never_replaced`）。这是 D54（四）把武分两层而读之下的律。五、**原拟的耦合形式。** 缺口所拟“各取其所耦合者中最小编号者之码，恰在每个耦合闭包为全体时静止为同”不成立（`Path.never_agree`）；指针律之下相合是指针之路相遇（`follow_agrees_iff`）。六、**理论自己的术语。** D54（五）把单字术语读作理论使用者之间形成的编码；这些律说明这样的编码保持什么（经封闭的听取而保持的相合，编码相合处的互读），付出什么（被合并的义，被强加术语所失的分别）。七、**不读入的。** 律不说共有的、强加的或保留的编码支持还是损害生生，也不说实际的约定以这种听取方式形成。
 **理由。** 每条读法由它所列的定理论证，带着确切的前提：一条读两个编码的采纳规则，以及听取的次序；不假定中心、意义或形式的真。对称之律把名无固宜从关于任意性的一句话变成关于约定需要什么的陈述，三个见证显示打破对称的每一途都可达到。把止戈读作写回，像 D54 一样不让字形之史由其后的采用决定，并说明是哪些记录让它仍可读。
@@ -818,7 +818,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d57-经由规则的捕获之读--the-readings-of-capture-through-the-rule"></a>
 ### D57. 经由规则的捕获之读
 
-所在：[《中国思想的关系本体与生成之论》](../../../../theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md)（§8，及其[逐句对应](development/ro-relational-sources/passages.json)中的二柄、据有余而制不足与壹）；总章 §4（“Capture through the rule”）与 §10（元闭）；记录 [capture-through-the-rule](../../../../theories/becoming/results/records/capture-through-the-rule.md)；研究第 213 节。在 D45 的一个说明中决定，用 D47 与 D54 的关系类别。
+所在：[《中国思想的关系本体与生成之论》](../../../../theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md)（§8，及其[逐句对应](development/ro-relational-sources/passages.json)中的二柄、据有余而制不足与壹）；总章 §4（“Capture through the rule”）与 §10（元闭）；记录 [capture-through-the-rule](../../../../theories/becoming/results/records/capture-through-the-rule.md)；研究第 213 节。在 D45 的一个说明中决定，用 D47 与 D54 的关系类别。
 
 **决定。** 依所述范围采用。一、**二柄。** 「今君人者释其刑德而使臣用之，则君反制于臣矣」读作一个从所选出者的份额读出的选择规则（`ReadsShare`）：锁定之后回路不回转（`locked_stays`），保持方向的规则之值的扰动在下一读取步被吸收（`perturbation_absorbed`），只有改变规则怎样读才离开（`uniform_locks`）。此段仍为相分：韩非把回路读成利益相反者之间的控制，并把德缩为庆赏；理论把它陈述为一个选择与其规则之间的关系。二、**据有余而制不足。** 依比例读法读：规则按各类所持之比例读出时，持多者被偏向而持更多（`CarrierCounts.proportional_locks`），持少者持更少（`CarrierCounts.proportional_locks_down`）。此段读作依存于一个给予者（`withholding_absorbs`）之读并存；其目的，使国无敌，仍为相分。三、**壹赏、壹刑、壹教。** 读作一个在每个份额都偏向同一方向的读法：每条进程自第二个读取步之后锁定，且确切（`uniform_locks`、`Second.second_exact`）。此段读作同一选择之池（`Web.pooled_iff_member`）之读并存。四、**“胜者塑造规则”。** 读作前提 `ReadsShare`，即对读法所设的假设；所推出的是这样的规则持住结果，而不是任何实际的规则读其所选出的份额。
 
@@ -829,7 +829,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d62-中华思想脉络在脊柱上之读与古典之名--the-readings-of-the-civilization-thought-on-the-spine-and-of-the-classical-names"></a>
 ### D62. 《中华思想脉络》在脊柱上之读与古典之名
 
-所在：[《中华思想脉络》与变化论](../../../../theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md)与[中华本《变化论》](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md)；对应表 [passages.json](development/zhonghua/passages.json) 与名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)；记录 [civilization-thought-on-the-spine](../../../../theories/becoming/results/records/civilization-thought-on-the-spine.md)；研究第 328 节。在 D45 的一个说明中决定；接续 D54。
+所在：[《中华思想脉络》与变化论](../../../../theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md)与[中华本《变化论》](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)；对应表 [passages.json](development/zhonghua/passages.json) 与名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)；记录 [civilization-thought-on-the-spine](../../../../theories/becoming/results/records/civilization-thought-on-the-spine.md)；研究第 328 节。在 D45 的一个说明中决定；接续 D54。
 
 **决定。** 依所述范围采用。一、**关系与层。** D47 之三种关系与 D54 之四种非关系之层施于脉络之每一完整判断；相分另有两种：一条已检查之律所否定之断言，不经耦合之知。二、**读法。** 对应表之 1,300 条读法各以其所述范围采用；一段读出两种结构者有两个条目。三、**论题。** 一个关系之展开是主导之线索，在最早一层最强；全称形式大多需要定域；它不是每一体系之性质，语言也不保证它。四、**名。** 447 个名是理论之用者之间之约定，受所见之义约束（`Becoming.SharedCodes`）；每名写出所取之义与所不带之义；不采之字不是名。五、**RO 与易传之对应。** 两表读同一段之同一结构而类别不同者五段，采定域。六、**本编自身之读。** 中华本中无先前决定所及之读，标此号（讀（AI，D62）），各以其所述范围采用。
 
@@ -840,7 +840,7 @@ L1、S1 与 S2 是 D40-D42。
 <a id="d63-以文名一历之状经一象逐步之值与文之认识论--the-course-named-wen-and-the-epistemology-of-wen"></a>
 ### D63. 以文名一历之状经一象逐步之值，与文之认识论
 
-所在：[《文理生生与变化论》](../../../../theories/becoming/chapters/WENLI-AND-BECOMING.md)；中华本一·二十一（[《变化论》](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md)）；名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)（第七次之改，[seventh-pass.json](development/zhonghua/work/seventh-pass.json)）；记录 [wenli-on-the-spine](../../../../theories/becoming/results/records/wenli-on-the-spine.md)；研究第 346 节。在 D45 的一个说明中决定；接续 D62。
+所在：[《文理生生与变化论》](../../../../theories/becoming/history/WENLI-AND-BECOMING.md)；中华本一·二十一（[《变化论》](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)）；名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)（第七次之改，[seventh-pass.json](development/zhonghua/work/seventh-pass.json)）；记录 [wenli-on-the-spine](../../../../theories/becoming/results/records/wenli-on-the-spine.md)；研究第 346 节。在 D45 的一个说明中决定；接续 D62。
 
 **决定。** 依所述范围采用。一、**名。** 文名一历之状经一象逐步之值（`Becoming.Parting.course`、`Becoming.Learnable.course`）；凡逐步之值皆文；二状于一法经一象逐步之值皆同，谓之文同（`Becoming.Law.SameFuture`）。名取「通其变，遂成天下之文」。二、**文与历。** 同一沿步之序列，作所给之状与动为历（其律为自然之法），作所读之值而自读其状与法为文。一行之往，是其诸移（状、动、次状）逐步所成之文之前段；二行至涯而同，是其状之文至涯（含）、其动之文于涯前皆同。三、**理。** 理不是文，只在一义自文读出：守值而载法之类只并文同之状；又并凡文同之状者为正名（`Becoming.Law.identifiesAlike_of_law`），所以守值之理中最粗者恰并文同之状（四条已检之律之合，非一条定理）。四、**认识论。** 内在生成之解释、读书百遍其义自见及其失效、压缩与推广同一类、最小之读、知在展开之中，皆本章所引已检之律之读法，各以其所述范围采用；不说任何实际之书或读者满足其条件。五、**文理生生。** 其文之三义读为一文（可读之纹、书写）与一理（所读之构）；其观／证读为展开之中之读（识），不是在上之一层；二十九处异读依本章所记而决；其文之工作定义、构式卡与微型模型、八字有类型规则图、图谱存关系之法、八卦之结果与 15 号至 17 号，依本章所记按结构对照，无一移作脊柱之律（微型模型是其构造之例）。六、**不决。** 文理生生或古汉语是否为核心最好之表达，未经检验；所设计之检验只比较所运行之码。文理生生之 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移）是关于读者之较窄假说，本章设计其检验而未运行。
 

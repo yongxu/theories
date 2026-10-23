@@ -83,9 +83,9 @@ Closes the third gap of the map of the Chinese sources onto the spine (record ch
 | proof | [Ideals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ideals.lean) | `Becoming.Ideals.Preorder` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T151254.157652Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
-| integration | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| integration | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |

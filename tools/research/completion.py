@@ -2,7 +2,7 @@
 """The completion criterion K1-K7 (adopted 20 October 2026, study section 218; made to run by R39).
 
 Reads theories/becoming/results/completion/COVERAGE.json with the current core receipt, the theorem-connectivity
-measure, the records and chapter section 8.1, and reports each criterion met or not, with its reasons:
+measure, the records and the method chapter's open items, and reports each criterion met or not, with its reasons:
 
   K1 coverage        each row names central declarations that exist in the receipt's core, are theorems or
                      definitions of the spine, are not apart (connectivity class), and records that exist
@@ -15,11 +15,11 @@ measure, the records and chapter section 8.1, and reports each criterion met or 
                      meeting it, the proof that it is never refuted, and a calibration by an omniscience principle
   K4 representation  each central statement's modelling choices, and every natural-number law listed has a form
                      over dense amounts or a counterexample
-  K5 enclosure       every parameter a central statement leaves supplied is a named condition that chapter
-                     section 0 states
+  K5 enclosure       every parameter a central statement leaves supplied is a named condition that the
+                     method chapter's premise card states
   K6 ethics chain    the last step reaches every earlier step through its proof (the source's references),
                      so the steps are one derivation of it; every normative hypothesis they use is named
-  K7 open register   each item of chapter 8.1 has one class from the register, a distinct title and an open part
+  K7 open register   each of the method chapter's open items, ranked, has one class from the register, a distinct title and an open part
 
 An unmet criterion is a finding, not an error. Errors are what makes the report meaningless: a malformed
 coverage file, a central name or record that does not exist, a row with no declarations. `research.py check`
@@ -45,7 +45,24 @@ COVERAGE = 'theories/becoming/results/completion/COVERAGE.json'
 REPORT = 'theories/becoming/results/completion/COMPLETION.md'
 RECEIPT = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
 CONNECTIVITY = '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json'
-CHAPTER = 'theories/becoming/chapters/THE-THEORY-OF-BECOMING.md'
+CHAPTER = 'theories/becoming/chapters/08-METHOD.md'  # since RA (23 October 2026); earlier the canonical chapter's sections 0 and 8.1
+
+
+def _section(text, title):
+    """The body under the first heading whose text contains `title`, up to the next heading of the same or a
+    higher level; None where no heading has it. Headings are matched by text, not by number."""
+    lines = text.split('\n')
+    for i, line in enumerate(lines):
+        marks = len(line) - len(line.lstrip('#'))
+        if 0 < marks <= 6 and line[marks:marks + 1] == ' ' and title in line:
+            body = []
+            for nxt in lines[i + 1:]:
+                level = len(nxt) - len(nxt.lstrip('#'))
+                if 0 < level <= marks and nxt[level:level + 1] == ' ':
+                    break
+                body.append(nxt)
+            return '\n'.join(body)
+    return None
 RECORDS = 'theories/becoming/results/records'
 LEAN_ROOT = Path(RECEIPT).parent.parent
 PURE = ('core', 'instance', 'application', 'foundation')
@@ -413,11 +430,11 @@ def k4(cov, decls):
 
 def k5(cov, decls, chapter):
     findings, found = [], collections.defaultdict(set)
-    section0 = chapter.split('## 0. Premise card', 1)[-1].split('\n## ', 1)[0]
+    section0 = _section(chapter, 'Premise card') or ''
     params = cov['enclosure']['parameters']
     for p in params:
         if f'`{p["section0"]}' not in section0:
-            findings.append(f'{p["name"]}: chapter section 0 does not state {p["section0"]}')
+            findings.append(f'{p["name"]}: the premise card does not state {p["section0"]}')
     for rid, name in _central(cov):
         st = reading(decls.get(name, {}))
         for p in params:
@@ -505,10 +522,9 @@ def k6(cov, decls):
 
 def k7(cov, chapter):
     findings, items = [], []
-    sec = chapter.split('### 8.1 Open items, ranked', 1)
-    if len(sec) < 2:
-        return ['chapter: section 8.1 not found'], items
-    body = sec[1].split('\n### ', 1)[0].split('\n## ', 1)[0]
+    body = _section(chapter, 'Open items, ranked')
+    if body is None:
+        return ['chapter: the open items, ranked, not found'], items
     classes = cov['open_register']['classes']
     for m in re.finditer(r'^(\d+)\. \*\*([^*]+)\*\* \(([^)]*)\)\.(.*)$', body, re.M):
         n, title, rest = int(m.group(1)), m.group(2).strip(), m.group(4)
@@ -526,7 +542,7 @@ def k7(cov, chapter):
             findings.append(f'item "{title}" listed {k} times')
     open_refs = {n for row in cov['rows'] for n in row.get('open_items', [])}
     for n in sorted(open_refs - set(numbers)):
-        findings.append(f'coverage names open item {n}, which section 8.1 does not have')
+        findings.append(f'coverage names open item {n}, which the open items do not have')
     return findings, items
 
 
@@ -615,7 +631,7 @@ def render_report(result: dict) -> str:
         if k == 'K5':
             out += ['Only the parameters the coverage file lists are looked for; a parameter of another name is not found.', '']
         if k == 'K5' and result['parameters']:
-            out += ['Supplied parameters found in central statements, each a named condition of section 0: ' + '; '.join(
+            out += ['Supplied parameters found in central statements, each a named condition of the premise card: ' + '; '.join(
                 f'{p} ({len(v)})' for p, v in sorted(result['parameters'].items())) + '.', '']
         if k == 'K6':
             steps = [result['chain_start']] + [b for b, _ in result['chain']]

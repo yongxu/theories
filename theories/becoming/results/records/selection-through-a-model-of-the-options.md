@@ -77,7 +77,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | provenance | [BUILD.md](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/inquiry-warrant/BUILD.md) | — |
 | integration | [PLURAL-CLAIMS-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/PLURAL-CLAIMS-INTEGRATION.md) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-16-i4-decisions.md](../../../../sources/15-codex-theory-conversations/2026-10-16-i4-decisions.md) | — |
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [2026-10-16-joined-module-names.md](../../../../sources/15-codex-theory-conversations/2026-10-16-joined-module-names.md) | — |

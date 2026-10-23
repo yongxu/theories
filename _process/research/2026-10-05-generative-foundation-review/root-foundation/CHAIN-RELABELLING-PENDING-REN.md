@@ -10,7 +10,7 @@ On 17 October Ren asked for the old labels to go from live text ([source](../../
 
 > no need for keeping "G0", "Part I", we should rename/revise/remove a lot of these noise, just make sure you commit all before doing this. My words should not hinder the most significant direction, and we are pushing the frontier, not my frontier
 
-That relabel (`1038a699e`) covered the chapters, records and generated pages. It left the chain alone, because the chain is his curation. Ren's answer of 19 October, recorded as [D45](DELEGATED-CHOICES.md#d45-一个说明中的读法--the-readings-in-one-account), settles the readings in one account and keeps the chain apart: it changes "only through proposals to Ren" (D45 (6)). So the chain still uses the retired labels. Its pages now read differently from the chapter, which explains those labels only in its glossary ([Retired labels](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#retired-labels)).
+That relabel (`1038a699e`) covered the chapters, records and generated pages. It left the chain alone, because the chain is his curation. Ren's answer of 19 October, recorded as [D45](DELEGATED-CHOICES.md#d45-一个说明中的读法--the-readings-in-one-account), settles the readings in one account and keeps the chain apart: it changes "only through proposals to Ren" (D45 (6)). So the chain still uses the retired labels. Its pages now read differently from the chapter, which explains those labels only in its glossary ([Retired labels](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#retired-labels)).
 
 ## What A3 changed and what it left
 

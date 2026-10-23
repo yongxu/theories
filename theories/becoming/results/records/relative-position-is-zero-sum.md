@@ -82,7 +82,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | proof | [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean) | `Becoming.Clearing.clearer_loses_dweller` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T110924.527968Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [OPENING.md](../../OPENING.md) | — |
 | provenance | [OPENING-V7-PROPOSAL.md](../../../../drafts/2026-10-10-opening/history/OPENING-V7-PROPOSAL.md) | — |
 | provenance | [2026-10-19-opening-v7.md](../../../../sources/15-codex-theory-conversations/2026-10-19-opening-v7.md) | — |

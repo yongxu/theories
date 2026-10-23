@@ -708,7 +708,7 @@
       "declarations": []
     },
     {
-      "path": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md",
+      "path": "theories/becoming/history/WISDOM-AND-CONTEXT.md",
       "role": "integration",
       "sha256": "dc2845cc4c222ebdcb6522688a745e642ee1f34f3bf79b1aa8fd48deb4d92542",
       "declarations": []
@@ -1266,7 +1266,7 @@
       ]
     },
     {
-      "path": "theories/becoming/chapters/KNOWLEDGE.md",
+      "path": "theories/becoming/history/KNOWLEDGE.md",
       "role": "review",
       "sha256": "6bad6ec6e081f03e4817edfbe468c87afee08058f47f7043da7e882d4abbd54c",
       "declarations": []

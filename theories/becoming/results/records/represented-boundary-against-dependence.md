@@ -85,7 +85,7 @@ A region of conditions is a parameter of the statement, and nothing here models 
 | proof | [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-centers-within-the-dynamics.md](../../../../sources/15-codex-theory-conversations/2026-10-10-centers-within-the-dynamics.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json) | — |

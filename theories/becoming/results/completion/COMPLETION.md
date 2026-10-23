@@ -70,7 +70,7 @@ No finding.
 
 Only the parameters the coverage file lists are looked for; a parameter of another name is not found.
 
-Supplied parameters found in central statements, each a named condition of section 0: a law of exchange (8); a valuation (2); observation (10); significance (10); standpoints and their own regions (15); the naming (1); the rest relatum (1).
+Supplied parameters found in central statements, each a named condition of the premise card: a law of exchange (8); a valuation (2); observation (10); significance (10); standpoints and their own regions (15); the naming (1); the rest relatum (1).
 
 No finding.
 

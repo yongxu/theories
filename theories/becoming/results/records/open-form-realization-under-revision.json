@@ -219,11 +219,11 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md",
       "role": "integration",
-      "sha256": "95efdb9a532d7c261f0be4f6cd84ad5e35d626581c376d3df21eff871c0ee02a",
+      "sha256": "00dcf78a080f74a1c8513c038e8ba2e6a3e1a36e8b882f906e6232dc6ba79bb1",
       "declarations": []
     },
     {
-      "path": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md",
+      "path": "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
       "role": "statement",
       "sha256": "60b20bfce9699bf4154369a41c4668747b9c55a68c8ea0d1950e10cebd15c9b0",
       "declarations": []

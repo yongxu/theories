@@ -77,7 +77,7 @@ Stock accounting over an open system: a stock rises by at most what flows in and
 | proof | [DrawnBeyond.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean) | `Becoming.Flow.Balances.beyond_falls_inflow`, `Becoming.Flow.Balances.breaks_beyond_inflow`, `Becoming.Flow.Balances.rise_bounded_by_beyond_inflow`, `Becoming.Flow.Balances.rise_breaks_beyond_inflow`, `Becoming.Flow.Balances.rise_lowers_beyond_inflow`, `Becoming.Flow.favours_breaking_beyond_inflow`, `Becoming.Flow.reaches_inflow` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `a rise past the inflow is drawn from beyond`, `超过流入的上升取自其外`, `Becoming.Flow.inflow`, `Becoming.Flow.favours_reaching_beyond_inflow`, `Becoming.Flow.Balances.rise_draws_beyond_inflow`
 

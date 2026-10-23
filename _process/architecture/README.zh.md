@@ -15,7 +15,7 @@
 | 旧路径 | 现路径 |
 |---|---|
 | `theories/shengsheng-buxi-generative-existence/` | [`theories/becoming/`](../../theories/becoming/README.md) |
-| `theories/shengsheng-buxi-generative-existence/unified-2026-10-05/` | [`theories/becoming/chapters/`](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md) |
+| `theories/shengsheng-buxi-generative-existence/unified-2026-10-05/` | [`theories/becoming/chapters/`](../../theories/becoming/history/THE-THEORY-OF-BECOMING.md) |
 
 ```sh
 python3 -B _process/architecture/check_rename.py

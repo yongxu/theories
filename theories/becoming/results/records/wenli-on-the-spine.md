@@ -33,7 +33,7 @@
 
 verify_zh.py passes: 1342 quotations in their frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.
 
-Canonical source: [WENLI-AND-BECOMING.md](../../chapters/WENLI-AND-BECOMING.md)
+Canonical source: [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -69,8 +69,8 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [WENLI-AND-BECOMING.md](../../chapters/WENLI-AND-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](../../chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | — |
+| statement | [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](../../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | — |
 | integration | [names-decisions.tsv](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv) | — |
 | integration | [seventh-pass.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/seventh-pass.json) | — |
 | integration | [crosswalk.tsv](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/crosswalk.tsv) | — |

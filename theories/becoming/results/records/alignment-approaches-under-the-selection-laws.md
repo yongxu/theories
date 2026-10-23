@@ -104,7 +104,7 @@ Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitut
 | proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Clearing.centers_retain_yet_loses`, `Becoming.Weighting.increasing_prior`, `Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_score` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json) | — |
 | review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `alignment approaches`, `RLHF under the selection laws`, `debate under the selection laws`, `interpretability under the selection laws`, `guaranteed-safe AI under the selection laws`, `impact measures under the selection laws`, `对齐路径`
 

@@ -102,7 +102,7 @@ Also noted, not entered (it belongs to another slice): 韓非 「杀戮之谓刑
 
 ## 4. The earlier studies: kept, extended, superseded
 
-- **`theories/becoming/chapters/HANZI-AND-THEORY-TREE.md` (6 October).**
+- **`theories/becoming/history/HANZI-AND-THEORY-TREE-2026-10-23.md` (6 October).**
   - *Kept:* the four levels of correspondence (graph composition, sense in context, compound, theory dependence); the acceptance criteria of §5 (consistent naming, faithful sense, preserved relations, compositional testability); and the 武 caution (two layers, the 左传 still endorses some campaigns).
   - *Superseded:*
     - the working gloss 「武→有约束的保护能力」;

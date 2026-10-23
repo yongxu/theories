@@ -988,7 +988,7 @@ Definitions and types:
 <details>
 <summary>LivingOrganizationCorrespondence.lean — 5 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean`
 
@@ -1225,7 +1225,7 @@ Definitions and types:
 <details>
 <summary>PreparationCorrespondence.lean — 27 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean`
 
@@ -2422,7 +2422,7 @@ Definitions and types:
 <details>
 <summary>LearningCorrespondence.lean — 19 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean) · [Theory](../../chapters/COGNITION-LEARNING-AND-EVOLUTION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean`
 
@@ -2460,7 +2460,7 @@ Definitions and types:
 <details>
 <summary>TransmissionCorrespondence.lean — 20 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean`
 
@@ -2664,7 +2664,7 @@ Definitions and types:
 <details>
 <summary>AggregationContext.lean — 15 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AggregationContext.lean) · [Theory](../../chapters/CHOICE-AND-GENERATIVE-CONTEXT.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AggregationContext.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AggregationContext.lean`
 
@@ -2722,7 +2722,7 @@ Definitions and types:
 <details>
 <summary>AlignmentDirection.lean — 16 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentDirection.lean) · [Theory](../../chapters/ALIGNMENT-DIRECTION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentDirection.lean) · [Theory](../../history/ALIGNMENT-DIRECTION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentDirection.lean`
 
@@ -2942,7 +2942,7 @@ Definitions and types:
 <details>
 <summary>ChanceRevision.lean — 15 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceRevision.lean) · [Theory](../../chapters/CHOICE-AND-GENERATIVE-CONTEXT.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceRevision.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceRevision.lean`
 
@@ -3099,7 +3099,7 @@ Definitions and types:
 <details>
 <summary>CopyingInstances.lean — 98 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean`
 
@@ -3404,7 +3404,7 @@ Definitions and types:
 <details>
 <summary>CorrectionInquiry.lean — 8 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean`
 
@@ -3573,7 +3573,7 @@ Definitions and types:
 <details>
 <summary>CorrectionReconfiguration.lean — 48 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean`
 
@@ -4570,7 +4570,7 @@ Definitions and types:
 <details>
 <summary>FormedGrounds.lean — 45 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean) · [Theory](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean`
 
@@ -5056,7 +5056,7 @@ Definitions and types:
 <details>
 <summary>MachineInstances.lean — 124 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean`
 
@@ -5342,7 +5342,7 @@ Definitions and types:
 <details>
 <summary>NormativeActivity.lean — 56 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean) · [Theory](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean`
 
@@ -5630,7 +5630,7 @@ Definitions and types:
 <details>
 <summary>OrganizationCorrespondence.lean — 3 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean`
 
@@ -5807,7 +5807,7 @@ Definitions and types:
 <details>
 <summary>PracticalPriorityIdentification.lean — 21 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean`
 
@@ -5847,7 +5847,7 @@ Definitions and types:
 <details>
 <summary>PracticalReach.lean — 35 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalReach.lean) · [Theory](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalReach.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalReach.lean`
 
@@ -5945,7 +5945,7 @@ Definitions and types:
 <details>
 <summary>ProtocolInstances.lean — 31 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean`
 
@@ -6386,7 +6386,7 @@ Definitions and types:
 <details>
 <summary>RenewingCorrespondence.lean — 13 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean`
 
@@ -6592,7 +6592,7 @@ Definitions and types:
 <details>
 <summary>RetrodictionInstances.lean — 27 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean`
 
@@ -6638,7 +6638,7 @@ Definitions and types:
 <details>
 <summary>RiskConditioning.lean — 21 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskConditioning.lean) · [Theory](../../chapters/CHOICE-AND-GENERATIVE-CONTEXT.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskConditioning.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskConditioning.lean`
 
@@ -6678,7 +6678,7 @@ Definitions and types:
 <details>
 <summary>RiskPriority.lean — 21 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskPriority.lean) · [Theory](../../chapters/CHOICE-AND-GENERATIVE-CONTEXT.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskPriority.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RiskPriority.lean`
 
@@ -6866,7 +6866,7 @@ Definitions and types:
 <details>
 <summary>StandardsBridge.lean — 39 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean) · [Theory](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean`
 

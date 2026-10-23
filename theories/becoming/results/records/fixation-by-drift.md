@@ -77,8 +77,8 @@ The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 
 | proof | [Typicality.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean) | `Becoming.Typicality.courses`, `Becoming.Typicality.weight`, `Becoming.Typicality.total_extend`, `Becoming.Typicality.total_weight`, `Becoming.Typicality.total_congr_mem` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 
 Aliases: `fixation by drift`, `neutral fixation probability`, `漂变导致的固定`, `genetic drift over generations`, `Becoming.Drift.fixation`, `Becoming.Drift.sampled_count`, `Becoming.Drift.varied_vanishes`

@@ -84,7 +84,7 @@ The earlier treatise's 机 (补篇一 §八, §十一), two continuations leadin
 | proof | [Undecided.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T102354.824114Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [SSBX-REPOSITORY-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md) | — |
 | provenance | [03_卷二_发生.md](../../../../sources/07-shengsheng-buxi/ssbx-repo/史料/生生不息论_三本文完整版/03_补篇一_间开本_致知版/03_卷二_发生.md) | — |
 | provenance | [04_卷三_判准.md](../../../../sources/07-shengsheng-buxi/ssbx-repo/史料/生生不息论_三本文完整版/03_补篇一_间开本_致知版/04_卷三_判准.md) | — |

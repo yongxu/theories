@@ -1,6 +1,6 @@
 # Alignment through change: proof and execution package
 
-8 October 2026. [Theory paper](../../../../../../../theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md), [integration and counterreview](../../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-CONTINUITY-INTEGRATION.md).
+8 October 2026. [Theory paper](../../../../../../../theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md), [integration and counterreview](../../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-CONTINUITY-INTEGRATION.md).
 
 The [passing receipt](alignment-continuity-verification.json) records 59 new theorems, 102 explicit declaration audits and 14,295 comparisons against independently expressed Python arithmetic and exhaustive enumeration. Standard dependencies are recorded per declaration; no new custom axioms or unfinished proofs occur. Inherited theorems are compiled as dependencies and retain their old counts.
 

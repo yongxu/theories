@@ -88,7 +88,7 @@ Of levels Ren wrote: “i think it should be the whole, and a weaker version is 
 | proof | [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | provenance | [2026-10-10-centers-within-the-dynamics.md](../../../../sources/15-codex-theory-conversations/2026-10-10-centers-within-the-dynamics.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json) | — |

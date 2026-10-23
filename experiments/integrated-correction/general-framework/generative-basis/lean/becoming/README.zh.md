@@ -3,7 +3,7 @@
 
 > **中文版（2026-10-17）。** 正典文本是[英文版](README.md)；本版由重构时从双语原文拆出，不与英文同步维护，两者有出入时以英文为准。
 
-一个关系展开，只陈述一次。本目录是 Lean 包 `Becoming`。理论叙述见[正典章节 §9](../../../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#9-the-formal-spine)，方向与阶段见[统一计划](../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md)。
+一个关系展开，只陈述一次。本目录是 Lean 包 `Becoming`。理论叙述见[正典章节 §9](../../../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine)，方向与阶段见[统一计划](../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md)。
 
 <a id="三环--three-rings"></a>
 ## 三环

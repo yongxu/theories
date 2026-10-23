@@ -9,7 +9,7 @@
 
 ## From formation to regulation
 
-Begin with the activities and their achieved dependencies, following [system individuation](../becoming/history/SYSTEM-INDIVIDUATION.md) and the [nondual method](../becoming/chapters/NONDUAL-METHOD.md). A common organization is warranted by what its relationships help realize. Mere simultaneous occurrence, a common label or a shared scalar score is insufficient. Its boundaries express which relationships the explanation follows; they need not divide a ready-made controller from an independently constituted controlled object.
+Begin with the activities and their achieved dependencies, following [system individuation](../becoming/history/SYSTEM-INDIVIDUATION.md) and the [nondual method](../becoming/history/NONDUAL-METHOD.md). A common organization is warranted by what its relationships help realize. Mere simultaneous occurrence, a common label or a shared scalar score is insufficient. Its boundaries express which relationships the explanation follows; they need not divide a ready-made controller from an independently constituted controlled object.
 
 The existing material study provides a specific route. Damage permits formation from available precursor. Association gives a formed component a situated repair role. Repair changes whether source capture can occur. Capture makes support available for subsequent activity. These roles are distinguished by their contributions within the same event history. The analyst's copy-count statistic does not instruct the reactions. The supplied reaction rules explain this local possibility; they do not explain their own chemical origin or guarantee that the preparation occurs spontaneously.
 

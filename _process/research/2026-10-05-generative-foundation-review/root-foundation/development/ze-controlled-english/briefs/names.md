@@ -5,7 +5,7 @@ AI-written task brief. You are building one table: an English name for every nam
 ## Inputs (read only these)
 
 - `data/names-input.jsonl` in this kit: the 449 rows of `../zhonghua/work/names-decisions.tsv`, in order. Fields: `row`, `zh` (the name), `pian` (its chapter, C01–C17), `sense_zh` (所名: the sense taken, usually with the English term in parentheses), `anchors_raw` (锚, the Lean anchors, verbatim), `anchors` (normalized), `note_zh` (注: provenance and what the name does not carry, 不带/不取), `glossary_same_anchor` (terms of the canonical English chapter's glossary §10 (a), (b) that share an anchor with the row, with their meaning).
-- You may consult `../zhonghua/NAMES-ZH.md` (the same table, by chapter, with headings) and the glossary §10 of `theories/becoming/chapters/THE-THEORY-OF-BECOMING.md` (lines 1570–1790) when a row is unclear. Do not edit either.
+- You may consult `../zhonghua/NAMES-ZH.md` (the same table, by chapter, with headings) and the glossary §10 of `theories/becoming/history/THE-THEORY-OF-BECOMING.md` (lines 1570–1790) when a row is unclear. Do not edit either.
 
 ## Output
 

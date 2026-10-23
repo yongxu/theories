@@ -107,7 +107,7 @@ Answering Ren's “what is that "make sense" itself? what makes a pair, a pair?�
 | proof | [LearningRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean) | `Becoming.Learning.goAlike_iff_lumped` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-framing-and-pairs.md](../../../../sources/15-codex-theory-conversations/2026-10-12-framing-and-pairs.md) | — |
 | provenance | [README.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-framing-evidence/README.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json) | — |

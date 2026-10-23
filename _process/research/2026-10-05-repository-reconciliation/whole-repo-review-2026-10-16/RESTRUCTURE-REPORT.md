@@ -24,7 +24,7 @@ Checks at the end: `make research-check` reports no errors and no source drift, 
    - `research.py move`: plans, receipts, `--check` and `--keep-references`, with live links, path mentions and record JSON paths rewritten.
    - `research.py links`, `research.py secrets`, `paths.py` and `split_languages.py`.
    - History-aware catalogues and generated indexes (`indexes.py`).
-4. **The canonical chapter.** [The Theory of Becoming](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md) is now English, with every earlier anchor kept and the review's overclaim corrections applied, so that each statement says what the Lean proves. The long declaration lists and the module table are in [the reference file](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md). The Chinese text of 17 October is kept as a labelled edition, `THE-THEORY-OF-BECOMING.zh.md`, and the superseded §6 passages are in `theories/becoming/history/`.
+4. **The canonical chapter.** [The Theory of Becoming](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md) is now English, with every earlier anchor kept and the review's overclaim corrections applied, so that each statement says what the Lean proves. The long declaration lists and the module table are in [the reference file](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md). The Chinese text of 17 October is kept as a labelled edition, `THE-THEORY-OF-BECOMING.zh.md`, and the superseded §6 passages are in `theories/becoming/history/`.
 5. **History moves.** These ran in seven batches (H1–H7) plus two replacement batches:
    - September corpus pages: MAP and GLOSSARY now have short current pages.
    - The 4–5 October studies.

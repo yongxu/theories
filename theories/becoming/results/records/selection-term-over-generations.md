@@ -84,7 +84,7 @@ Price's equation (Price 1970): with mean offspring number w̄, w̄Δz̄ = Cov(w,
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T072647.879143Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `the selection term proper, over generations`, `真正的选择项及其在世代中的进程`, `covariance form of Price's equation`, `response to selection over generations`, `Becoming.SelectionTerm.covariation`, `Becoming.SelectionTerm.offspring_covariation`, `Becoming.SelectionTerm.Flow.support_not_lower`
 

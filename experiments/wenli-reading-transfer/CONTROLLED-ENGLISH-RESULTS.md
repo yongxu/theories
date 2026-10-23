@@ -67,7 +67,7 @@ What can be said is narrower than either "the language does it" or "the discipli
 
 `Becoming.SharedCodes.renamed_carries_iff` (a one-to-one renaming carries the same law) already made it likely that nothing in the measure binds the gain to the script; the control confirms that for the Claude coder.
 
-This bears on the WL chapter's claim ([WENLI-AND-BECOMING](../../theories/becoming/chapters/WENLI-AND-BECOMING.md)). The fitting reading layer is the disciplined code: a name table with stated exclusions and anchors, used in full statements. On this evidence the classical code is one fitting instance of it, and a controlled English code is another of about equal measured fidelity.
+This bears on the WL chapter's claim ([WENLI-AND-BECOMING](../../theories/becoming/history/WENLI-AND-BECOMING.md)). The fitting reading layer is the disciplined code: a name table with stated exclusions and anchors, used in full statements. On this evidence the classical code is one fitting instance of it, and a controlled English code is another of about equal measured fidelity.
 
 ## What limits the result
 

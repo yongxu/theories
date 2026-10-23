@@ -86,7 +86,7 @@ Ren, 15 October 2026: “"What this line doesn’t reach" is also worth doing”
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | `Becoming.mem_cons_split` |
 | proof | [Parting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean) | `Becoming.Parting.freeRun`, `Becoming.Parting.free_parts_after` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-15-situational-and-the-whole-core.md](../../../../sources/15-codex-theory-conversations/2026-10-15-situational-and-the-whole-core.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T173702.509759Z/verification.json) | — |
 | provenance | [2026-10-16-the-situation-makes-it-true.md](../../../../sources/15-codex-theory-conversations/2026-10-16-the-situation-makes-it-true.md) | — |

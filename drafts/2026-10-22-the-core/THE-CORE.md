@@ -1,6 +1,6 @@
 # More future, not less: the core of the Theory of Becoming
 
-AI draft, 22 October 2026, written to be rewritten in Ren's own words; second version, rewritten so that every pair the text uses is one relation read from its two ends. Part 1 states the core in about two pages, Part 2 sets it beside its nearest prior work. Each law cites its Lean statement and its standing; nothing here goes beyond what the [canonical chapter](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md) and its records hold.
+AI draft, 22 October 2026, written to be rewritten in Ren's own words; second version, rewritten so that every pair the text uses is one relation read from its two ends. Part 1 states the core in about two pages, Part 2 sets it beside its nearest prior work. Each law cites its Lean statement and its standing; nothing here goes beyond what the [canonical chapter](../../theories/becoming/history/THE-THEORY-OF-BECOMING.md) and its records hold.
 
 ## Words
 
@@ -49,7 +49,7 @@ Valuing is part of the same unfolding: a pattern that continues relates to conti
 - *counting*: every continuing counts (the continuation condition). It fixes which closings count and by itself orders nothing (§6.4);
 - *ordering*: widening is better (C). It is the only commitment that ranks (§6.5).
 
-Valuing that holds a continuing significant already counts everything that continuing runs through, with no commitment added (`forced_iff_within`). Counting also the continuings whose closing returns to no closure that valued them is the step of invariance, argued and not proved ([THE-STEP-OF-INVARIANCE](../../theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md)).
+Valuing that holds a continuing significant already counts everything that continuing runs through, with no commitment added (`forced_iff_within`). Counting also the continuings whose closing returns to no closure that valued them is the step of invariance, argued and not proved ([THE-STEP-OF-INVARIANCE](../../theories/becoming/history/THE-STEP-OF-INVARIANCE.md)).
 
 ### What it says about the present
 
@@ -85,7 +85,7 @@ Most prior work in this area is framed around an agent and its options, or a per
 3. **One account from physics to alignment, with every commitment named.** A contribution of method and synthesis, not a discovery.
 4. **Not yet distinct, but the most promising:** the second-order direction of 生生, a range whose widening keeps widening. Kauffman's adjacent possible is its nearest neighbour.
 
-The chapter's own test stands: what would change these verdicts is a theorem a specialist would not foresee from the definitions, a prediction about an actual system that could fail and does not, or a commitment derived from something weaker than the literature has ([relation to known results](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results)).
+The chapter's own test stands: what would change these verdicts is a theorem a specialist would not foresee from the definitions, a prediction about an actual system that could fail and does not, or a commitment derived from something weaker than the literature has ([relation to known results](../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#relation-to-known-results)).
 
 ### The test that would tell
 

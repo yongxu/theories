@@ -491,7 +491,7 @@ Ren 授权本会话自行作出最优选择（[来源](../../../../../../sources
 
 - 来源：[minimum-grammar-of-becoming.md](../../../../../../sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/minimum-grammar-of-becoming.md)、[three-minima.md](../../../../../../sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/three-minima.md)（另一 AI 所写，Ren 转来）。
 - 古文与注疏：§5.3 所列。
-- 仓库内：[間与文言作为形式语言](../../../../../../theories/jian-and-wenyan-as-formal-language/README.md)；[YI-ZHUAN-AND-BECOMING](../../../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md)；[WENLI-AND-BECOMING](../../../../../../theories/becoming/chapters/WENLI-AND-BECOMING.md)；中华本诸记录（一实、化、六相、相续）。
+- 仓库内：[間与文言作为形式语言](../../../../../../theories/jian-and-wenyan-as-formal-language/README.md)；[YI-ZHUAN-AND-BECOMING](../../../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md)；[WENLI-AND-BECOMING](../../../../../../theories/becoming/history/WENLI-AND-BECOMING.md)；中华本诸记录（一实、化、六相、相续）。
 - 续与同一：K. Lewin (1922)；A. N. Whitehead (1929)；D. Parfit (1984)。
 - 缘网：M. Nielsen, G. Plotkin, G. Winskel (1981)；L. Bombelli, J. Lee, D. Meyer, R. Sorkin (1987)。
 - 关系与过程的代数：A. Tarski (1941)；A. Tarski, S. Givant (1987)；P. Freyd, A. Scedrov (1990)；D. Kozen (1994, 1997)；M. Carneiro (2019)。

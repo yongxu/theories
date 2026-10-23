@@ -13,9 +13,9 @@
 1. Coherent inclusion: pooling processes that share interpretations keeps exactly the union of their histories iff it is closed under joining at the shared boundary; a checked coherence constraint, not the universal constitutive warrant. [study](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#16-inclusive-becoming-and-coherent-continuation)
 2. Operative relations and causal order: after a primary quantum-process comparison, the candidate distinguishes operative constitution from a definite causal order at every interface; the existing trace theorems keep their scope. [study](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#17-operative-relations-without-a-presupposed-global-order)
 3. Local loss in a retained whole: a checked restricted control calculation (quantum inputs supplied) derives local loss through a reversible wider interaction, separating reduced access from retained joint relations; not universal grounding. [study](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#18-a-checked-operative-loss-and-a-retained-whole)
-4. Whole and manifold: following Ren’s correction, the necessity target is Becoming as a whole, with generativity within its manifold; the completion audit no longer gates on universal generativity. [study](../../chapters/BECOMING-FOUNDATION.md#whole-and-manifold)
+4. Whole and manifold: following Ren’s correction, the necessity target is Becoming as a whole, with generativity within its manifold; the completion audit no longer gates on universal generativity. [study](../../history/BECOMING-FOUNDATION.md#whole-and-manifold)
 5. From inclusion to relation: the direct whole-inclusion argument is assessed and still lacks the passage to relational constitution; a primary Hegel comparison separates a category of becoming from a causal mechanism. [study](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#19-the-whole-deduction-and-the-passage-from-inclusion-to-relation)
-6. Spine evidence: each audit row cites the spine’s laws of the whole, its parts carved by premises (seven shown met by some worlds and not others, eight shown independent) and countermodels, locating the remainder without discharging it. [study](../../chapters/BECOMING-FOUNDATION.md#5-completion-audit-and-next-central-inference)
+6. Spine evidence: each audit row cites the spine’s laws of the whole, its parts carved by premises (seven shown met by some worlds and not others, eight shown independent) and countermodels, locating the remainder without discharging it. [study](../../history/BECOMING-FOUNDATION.md#5-completion-audit-and-next-central-inference)
 7. Living significance is no adopted axiom: in the theory without axiom it is a condition of the laws that use it, with its definition and characterizations kept; the reading of positive relevance is an open reading. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#67-折叠-g0p51)
 8. Relation first: laws stated on the levels alone, the premises read off the exchange (premises-read-off-the-exchange) and readings in context forming one world (unity-of-readings); the representation's commitments remain. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#125-从关系开始的重建只用水平的规律从交换读出的前提语境中的读法becomingnoveltybecomingreadingbecomingreadings)
 9. The theory asserts no axiom: that everything is significant is only the condition of the conditional section, under which living significance follows; the step of invariance remains to be stated. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#162-第二部分折叠进第一部分一个条件小节p128)
@@ -47,7 +47,7 @@
 
 Reused evidence: the checked finite-history coherence result and the checked 27-theorem restricted control calculation, with receipts in their records; the operational-order assessment against a primary quantum-process source; and the Becoming spine’s checked laws, parts and countermodels, cited in each row of the completion audit. The whole-deduction assessment rests on primary Hegel passages and author counterreview. This record adds no mathematical proof.
 
-Canonical source: [BECOMING-FOUNDATION.md](../../chapters/BECOMING-FOUNDATION.md)
+Canonical source: [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -83,7 +83,7 @@ The whole deduction must warrant relational unity and differentiation, including
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [BECOMING-FOUNDATION.md](../../chapters/BECOMING-FOUNDATION.md) | — |
+| statement | [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md) | — |
 | integration | [GROUNDING-INFERENCE-AND-PRESENTATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md) | — |
 | provenance | [2026-10-09-theory-of-becoming-continuation.md](../../../../sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-continuation.md) | — |
 | provenance | [2026-10-08-theory-of-becoming-priority.md](../../../../sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md) | — |

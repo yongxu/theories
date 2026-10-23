@@ -383,7 +383,7 @@
    "title_zh": "从有限片段读出的历史",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "knowing",
    "base": "frame",
    "page": "theories/becoming/results/records/a-history-read-off-its-finite-stretches.md"
   },
@@ -455,7 +455,7 @@
    "title_zh": "比承载者更持久的样式经传递而持续",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/a-pattern-lasts-through-passing.md"
   },
@@ -468,7 +468,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "collective",
-   "base": "frame",
+   "base": "old-base",
    "page": "theories/becoming/results/records/a-pool-read-by-its-majority.md"
   },
   {
@@ -480,7 +480,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "collective",
-   "base": "frame",
+   "base": "old-base",
    "page": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md"
   },
   {
@@ -515,7 +515,7 @@
    "title_zh": "超过流入的上升取自其外",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md"
   },
@@ -527,7 +527,7 @@
    "title_zh": "来源须在机前到达",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "map",
    "base": "frame",
    "page": "theories/becoming/results/records/a-source-before-a-juncture.md"
   },
@@ -708,7 +708,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
-   "base": "old-base",
+   "base": "periphery",
    "page": "theories/becoming/results/records/balance-from-the-first-law.md"
   },
   {
@@ -1079,7 +1079,7 @@
    "title_zh": "关闭需要净汲取",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/closing-needs-net-draw.md"
   },
@@ -1199,7 +1199,7 @@
    "title_zh": "共同保持的条件，以及保持一个部分",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/conditions-kept-together.md"
   },
@@ -1379,7 +1379,7 @@
    "title_zh": "抄录之见证不改任何检查",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "collective",
    "base": "general",
    "page": "theories/becoming/results/records/copied-witnesses-change-nothing.md"
   },
@@ -1403,7 +1403,7 @@
    "title_zh": "反事实是规律的进程",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/counterfactual-is-the-course.md"
   },
@@ -1452,7 +1452,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "method",
-   "base": "old-base",
+   "base": "general",
    "page": "theories/becoming/results/records/counts-exist-where-decided.md"
   },
   {
@@ -1739,7 +1739,7 @@
    "title_zh": "每个起源都经过门",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "life",
+   "region": "root",
    "base": "frame",
    "page": "theories/becoming/results/records/every-origin-passes-the-gate.md"
   },
@@ -1823,7 +1823,7 @@
    "title_zh": "反馈与所及",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "significance",
+   "region": "knowing",
    "base": "old-base",
    "page": "theories/becoming/results/records/feedback-and-reach.md"
   },
@@ -1835,7 +1835,7 @@
    "title_zh": "供给闭包",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "significance",
+   "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/feeding-closure.md"
   },
@@ -2087,7 +2087,7 @@
    "title_zh": "实际履行导出同律机会下界",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "significance",
    "base": "general",
    "page": "theories/becoming/results/records/fulfillment-chance-floor.md"
   },
@@ -2135,7 +2135,7 @@
    "title_zh": "生成即补充",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/generation-is-replenishment.md"
   },
@@ -2208,7 +2208,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "map",
-   "base": "frame",
+   "base": "periphery",
    "page": "theories/becoming/results/records/growth-constrained-fragmentation.md"
   },
   {
@@ -2507,7 +2507,7 @@
    "title_zh": "共同活动中的差别制造",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/joint-difference-making.md"
   },
@@ -2532,7 +2532,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "collective",
-   "base": "general",
+   "base": "periphery",
    "page": "theories/becoming/results/records/joint-practice-forms-continuation.md"
   },
   {
@@ -2723,7 +2723,7 @@
    "title_zh": "闭包的五个层次",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "significance",
+   "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/levels-of-closure.md"
   },
@@ -2819,7 +2819,7 @@
    "title_zh": "历史之和的损失",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "method",
+   "region": "root",
    "base": "general",
    "page": "theories/becoming/results/records/losses-of-the-sum-over-histories.md"
   },
@@ -2855,7 +2855,7 @@
    "title_zh": "有限支持下无法及时恢复的正区间",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/market-finite-support-obstruction.md"
   },
@@ -2867,7 +2867,7 @@
    "title_zh": "部分纠正的精确到达边界",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/market-partial-correction-boundary.md"
   },
@@ -2879,7 +2879,7 @@
    "title_zh": "市场保护证书下的持续运行",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/market-protected-continuation.md"
   },
@@ -2891,7 +2891,7 @@
    "title_zh": "有支持的有限纠正与保护交接",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/market-supported-finite-transition.md"
   },
@@ -2915,7 +2915,7 @@
    "title_zh": "实际指令接续候选证据",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "significance",
    "base": "frame",
    "page": "theories/becoming/results/records/mediated-evidence-transport.md"
   },
@@ -2927,7 +2927,7 @@
    "title_zh": "部分的合并由其余部分承接",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "knowing",
+   "region": "map",
    "base": "general",
    "page": "theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.md"
   },
@@ -2987,7 +2987,7 @@
    "title_zh": "相互依存，与耦合回路给出的指数步速",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "significance",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/mutual-dependence-and-its-pace.md"
   },
@@ -3120,7 +3120,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
-   "base": "general",
+   "base": "old-base",
    "page": "theories/becoming/results/records/only-the-order-of-change-shows.md"
   },
   {
@@ -3131,7 +3131,7 @@
    "title_zh": "开放形态下的规则修订与实际生成",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "significance",
    "base": "frame",
    "page": "theories/becoming/results/records/open-form-realization-under-revision.md"
   },
@@ -3191,7 +3191,7 @@
    "title_zh": "完整生成比较下的组织形成要求",
    "status": "reviewed-scoped",
    "kind": "argument",
-   "region": "life",
+   "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/organizational-formation-from-generative-comparison.md"
   },
@@ -3263,8 +3263,8 @@
    "title_zh": "在途任务的适用条件与有支持接续",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "page": "theories/becoming/results/records/pending-task-context-applicability.md"
   },
   {
@@ -3395,7 +3395,7 @@
    "title_zh": "承载规律的投影",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/projection-carrying-a-law.md"
   },
@@ -3431,7 +3431,7 @@
    "title_zh": "抬高所耦合者取自其外",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/raising-what-couples-in-draws-from-beyond.md"
   },
@@ -3503,7 +3503,7 @@
    "title_zh": "在所读之中的读法族",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "method",
+   "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/readings-within-what-they-read.md"
   },
@@ -3515,8 +3515,8 @@
    "title_zh": "中断改变后的证据恢复与停止入口的界",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "page": "theories/becoming/results/records/recoverable-mediated-change.md"
   },
   {
@@ -3684,7 +3684,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "map",
-   "base": "frame",
+   "base": "periphery",
    "page": "theories/becoming/results/records/renewing-consuming-formation.md"
   },
   {
@@ -3911,7 +3911,7 @@
    "title_zh": "分支过程的返回",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "map",
    "base": "frame",
    "page": "theories/becoming/results/records/returning-where-the-course-branches.md"
   },
@@ -3935,7 +3935,7 @@
    "title_zh": "带未定值的修正",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "method",
+   "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/revision-with-an-undecided-value.md"
   },
@@ -4223,7 +4223,7 @@
    "title_zh": "条件自身终止之前的慢化",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "knowing",
    "base": "periphery",
    "page": "theories/becoming/results/records/slowing-down-before-an-own-end.md"
   },
@@ -4307,7 +4307,7 @@
    "title_zh": "来自被支持者的支持",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/support-from-the-supported.md"
   },
@@ -4415,7 +4415,7 @@
    "title_zh": "不确定之律下够的边界",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/the-boundary-of-enough-under-undetermined-laws.md"
   },
@@ -4499,7 +4499,7 @@
    "title_zh": "有意义的切分与从历史读出的状态",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/the-split-that-makes-sense.md"
   },
@@ -4655,7 +4655,7 @@
    "title_zh": "两种作为之世界的差别",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/two-act-worlds-carry-the-difference.md"
   },
@@ -4680,7 +4680,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "map",
-   "base": "general",
+   "base": "old-base",
    "page": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md"
   },
   {
@@ -4775,8 +4775,8 @@
    "title_zh": "保留路线的在途请求完成",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
-   "base": "frame",
+   "region": "significance",
+   "base": "periphery",
    "page": "theories/becoming/results/records/versioned-request-completion.md"
   },
   {
@@ -4823,7 +4823,7 @@
    "title_zh": "文入续之文法",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "classical",
+   "region": "knowing",
    "base": "grammar",
    "page": "theories/becoming/results/records/wen-in-the-grammar.md"
   },
@@ -4943,7 +4943,7 @@
    "title_zh": "上升从其外汲取什么",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/what-a-rise-draws-from-beyond.md"
   },
@@ -5063,7 +5063,7 @@
    "title_zh": "取尽所给所排除的",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/what-taking-all-excludes.md"
   },
@@ -5135,8 +5135,8 @@
    "title_zh": "中心之形成：形成之行动回返之处",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
-   "base": "general",
+   "region": "knowing",
+   "base": "old-base",
    "page": "theories/becoming/results/records/where-a-formations-acts-return.md"
   },
   {
@@ -5219,7 +5219,7 @@
    "title_zh": "两个进程在何处重合",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "root",
+   "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/where-two-courses-rejoin.md"
   },
@@ -5255,7 +5255,7 @@
    "title_zh": "汲取其部分之生起超过更新的整体终结",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "map",
+   "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/whole-drawing-beyond-renewal-ends.md"
   },
@@ -26026,6 +26026,2478 @@
    "role": "grammar-theorem",
    "form": "薪尽（细之类下亡）而火传（火之类下续）：亡于细者不必亡于粗",
    "region": "classical"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-continuation-relative-to-a-class"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-negation-change-and-stable-cases",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-negation-change-and-stable-cases"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-place-transition-nets-on-the-spine"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-laws-with-noise",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-laws-with-noise"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-map-of-premises",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-map-of-premises"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-space-and-its-parts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-space-and-its-parts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-transmission-independent-where-it-binds",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-transmission-independent-where-it-binds"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-premises-read-off-the-exchange",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-premises-read-off-the-exchange"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-census-read-off-the-exchange",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-census-read-off-the-exchange"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-premises-that-are-states-of-the-law",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-premises-that-are-states-of-the-law"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-requirement-over-open-exchanges",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-requirement-over-open-exchanges"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-requirement-is-the-weakest-sound-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-requirement-is-the-weakest-sound-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-central-laws-over-every-exchange",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-central-laws-over-every-exchange"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-imbalance-as-relatum",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-imbalance-as-relatum"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-unity-of-readings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-unity-of-readings"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-the-first-law",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-balance-from-the-first-law"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-conservation-along-a-relation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-balance-from-conservation-along-a-relation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-level-couples",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-where-a-level-couples"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-what-dependence-alone-carries-of-a-level",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-what-dependence-alone-carries-of-a-level"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-coming-and-ceasing-keep-pace",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-coming-and-ceasing-keep-pace"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-decidedness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-recurrence-without-decidedness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-rising-and-falling-in-one-exchange",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-rising-and-falling-in-one-exchange"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-configurations-alike-by-relation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-determinacy-up-to-likeness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-determinacy-up-to-likeness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-joint-correlation-reduced-dynamics",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-joint-correlation-reduced-dynamics"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-separation-loses-the-relation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-separation-loses-the-relation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-process-and-frame-as-readings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-process-and-frame-as-readings"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-worlds-are-runs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-worlds-are-runs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-histories-fix-law-up-to-dead-ends",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-histories-fix-law-up-to-dead-ends"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-move-is-formed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-where-a-move-is-formed"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-trace-law-equivalence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-trace-law-equivalence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-finite-trace-transport",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-finite-trace-transport"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-derived-history-law-exactness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-derived-history-law-exactness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-becoming-context-coherence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-becoming-context-coherence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-recurrence-without-premise"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-run-goes-on",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-where-a-run-goes-on"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-what-a-commuting-law-keeps-apart"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-every-origin-passes-the-gate"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-census-balance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-census-balance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-ceasing-needs-arising",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-ceasing-needs-arising"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-bounded-census-keeps-pace",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-bounded-census-keeps-pace"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-census-balance-under-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-census-balance-under-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-whole-law-of-counting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-whole-law-of-counting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-counting-where-the-counts-exist",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-counting-where-the-counts-exist"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-counting-under-enclosure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-counting-under-enclosure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-counting-standing-and-dependence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-counting-standing-and-dependence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-only-the-order-of-change-shows",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-only-the-order-of-change-shows"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-exchanges-commute-unless-joined",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-exchanges-commute-unless-joined"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-is-the-invariant",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-order-of-exchanges-is-the-invariant"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-least-footprint-where-idleness-decided",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-least-footprint-where-idleness-decided"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-normal-forms-need-decided-apartness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-normal-forms-need-decided-apartness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-sharing-a-relatum",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-order-of-exchanges-sharing-a-relatum"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-step-index-from-own-courses",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-step-index-from-own-courses"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-world-an-interleaving-builds",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-world-an-interleaving-builds"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-laws-of-one-step",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-laws-of-one-step"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-laws-of-one-step-complete",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-laws-of-one-step-complete"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-one-step-missing-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-one-step-missing-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-runs-on-families-chosen-step-by-step",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-runs-on-families-chosen-step-by-step"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-laws-at-coarser-steps",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-laws-at-coarser-steps"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-laws-at-finer-units",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-laws-at-finer-units"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-continuous-time-as-tower",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-continuous-time-as-tower"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-sum-over-histories-exact",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-sum-over-histories-exact"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-losses-of-the-sum-over-histories",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-losses-of-the-sum-over-histories"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-weights-count-situations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-weights-count-situations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-move-alone-underdetermines"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-identity-across-steps",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-identity-across-steps"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-classes-along-a-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-classes-along-a-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-levels-of-closure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-levels-of-closure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-which-links-a-closure-needs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-which-links-a-closure-needs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-exclusive-footprint-support",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-exclusive-footprint-support"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-joint-decomposition-lifting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-joint-decomposition-lifting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-joint-code-plan-lifting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-joint-code-plan-lifting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-code-plan-global-support",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-code-plan-global-support"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-finite-joining-tree-lifting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-finite-joining-tree-lifting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-generation-and-degeneration-at-two-grains"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-attraction-is-not-returning"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-basins-of-a-determined-law"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-returning-where-the-course-branches",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-returning-where-the-course-branches"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-necessarily-drawn-is-not-returning",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-necessarily-drawn-is-not-returning"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-every-loss-passes-a-juncture",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-every-loss-passes-a-juncture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-source-before-a-juncture",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-source-before-a-juncture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-reaching-before-and-after-a-juncture",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-reaching-before-and-after-a-juncture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-endpoint-loss-and-return",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-endpoint-loss-and-return"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-effective-capacity-and-eventual-reachability",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-effective-capacity-and-eventual-reachability"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-control-coherence-loss",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-control-coherence-loss"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-relational-renewal-classification",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-relational-renewal-classification"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-becoming-renewal-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-renewal-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-becoming-dependence-dynamics",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-dependence-dynamics"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-becoming-return-grades",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-return-grades"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-becoming-finite-horizon"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-substitution-preserves-consumption",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-substitution-preserves-consumption"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-supported-renewal-recovery"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-renewing-consuming-formation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-renewing-consuming-formation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-represented-boundary-against-dependence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-unceasing-generation-needs-renewal",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-unceasing-generation-needs-renewal"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-more-needs-renewers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-more-needs-renewers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-no-finite-part-bears-taking",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-no-finite-part-bears-taking"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-continuing-self-fed-from-beyond"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-far-conveying-runs-the-family-down",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-far-conveying-runs-the-family-down"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-arising-needs-change",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-arising-needs-change"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-support-passed-on",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-support-passed-on"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-whole-persists-through-generation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-whole-persists-through-generation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-whole-carried-by-lasting-parts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-whole-carried-by-lasting-parts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-whole-of-every-part",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-whole-of-every-part"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-least-loss-rest",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-least-loss-rest"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-from-a-finite-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-from-a-finite-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-merge-of-a-part-kept-by-the-rest"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-continued-change-needs-openness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-theorem-in-any-amounts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-theorem-in-any-amounts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-exactly-where-falls-stop",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-exactly-where-falls-stop"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-by-balance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-by-balance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-least-loss-from-entropy-production",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-least-loss-from-entropy-production"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-entropy-history-and-record"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-returning-novelty-forgetting-on-levels"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-where-novelty-gain-comes-from"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-at-every-resolution",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-at-every-resolution"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-with-refinement-counted",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-with-refinement-counted"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-need-with-a-cap",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-need-with-a-cap"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-margin-of-a-regime"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-threshold-in-the-state-plane"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-regime-point-under-adjusting-giving",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-regime-point-under-adjusting-giving"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-where-a-run-of-a-regime-comes-to-rest"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-regime-in-any-amounts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-regime-in-any-amounts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-coupled-regimes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-coupled-webs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-coupled-webs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-rest-on-coupled-webs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-rest-on-coupled-webs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-thresholds-beyond-a-band",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-thresholds-beyond-a-band"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-webs-with-a-recent-giving",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-webs-with-a-recent-giving"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-feeding-closure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-feeding-closure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-consumption-ends-with-feeders",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-consumption-ends-with-feeders"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-growth-constrained-fragmentation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-growth-constrained-fragmentation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-where-a-rising-take-ends"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-counterfactual-is-the-course"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-where-two-courses-rejoin",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-where-two-courses-rejoin"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-differences-below-threshold",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-differences-below-threshold"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-how-much-difference-arrives",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-how-much-difference-arrives"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-two-act-worlds-carry-the-difference",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-two-act-worlds-carry-the-difference"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-how-a-carried-difference-grows"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-what-a-cut-loses",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-what-a-cut-loses"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-orders-as-a-sum-over-histories",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-orders-as-a-sum-over-histories"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-sums-over-histories-by-support-horizon-and-order",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-sums-over-histories-by-support-horizon-and-order"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-how-loops-form",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-how-loops-form"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-loops-within-what-a-law-reads",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-loops-within-what-a-law-reads"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-whether-a-loop-closes-a-difference"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-how-often-couplings-act",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-how-often-couplings-act"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-coupling-saturated-by-what-it-has-carried",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-coupling-saturated-by-what-it-has-carried"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-repeated-disturbance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-repeated-disturbance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-runaway-distance-uncoupled"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-two-sided-regulation-and-late-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-regulation-from-one-side-and-locally",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-regulation-from-one-side-and-locally"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-how-fast-a-rule-may-change"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-reserve-defers-ending"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-dormancy-over-a-stretch"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-target-capture",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-target-capture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-capture-through-the-rule"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-two-rules-lock-together",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-two-rules-lock-together"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-reading-against-the-share-does-not-ratchet"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-closed-capture"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-through-couplings"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-own-course",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-formations-own-course"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-through-a-model-of-the-options"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-right-exactly-where-read",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-right-exactly-where-read"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-observation-is-a-route"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-feedback-and-reach",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-feedback-and-reach"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-one-reader-several-conditions",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-one-reader-several-conditions"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-timely-response-necessity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-timely-response-necessity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-center-can-know-by-a-step",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-center-can-know-by-a-step"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-where-a-formations-acts-return",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-where-a-formations-acts-return"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-testing-within-the-net",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-testing-within-the-net"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-testing-within-couplings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-testing-within-couplings"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-experiment-needs-return"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-causal-models-as-processes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-causal-models-as-processes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-sensitivity-is-the-least-coupling"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-tests-fix-likeness-where-determined",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-tests-fix-likeness-where-determined"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-branching-tests-bisimulation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-branching-tests-bisimulation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-branching-target-uniqueness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-branching-target-uniqueness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-joint-target-uniqueness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-joint-target-uniqueness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-projection-carrying-a-law",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-projection-carrying-a-law"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-law-through-a-projection-along-one-run",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-law-through-a-projection-along-one-run"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-history-read-off-its-finite-stretches",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-history-read-off-its-finite-stretches"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-finite-history-refutes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-finite-history-refutes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-finite-stretch-verifies",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-finite-stretch-verifies"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-method-comes-to-say-in-the-limit",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-method-comes-to-say-in-the-limit"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-through-a-map-is-tracking-in-the-limit",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-learning-through-a-map-is-tracking-in-the-limit"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-learning-by-refutation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-generalization-through-lumping"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-identification-where-bounded",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-identification-where-bounded"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-learnable-through-a-map",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-learnable-through-a-map"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-an-extrapolation-given-nothing-fixes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-an-extrapolation-given-nothing-fixes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-finitely-many-labels-fix",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-finitely-many-labels-fix"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-identification-where-runs-part",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-identification-where-runs-part"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-typicality-by-counting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-typicality-by-counting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-split-that-makes-sense"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-readings-within-what-they-read"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-revision-with-an-undecided-value",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-revision-with-an-undecided-value"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-claims-shown-in-context"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-gluing-under-parity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-gluing-under-parity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-wen-in-the-grammar",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-wen-in-the-grammar"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-transition-grouping-word-partition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-transition-grouping-word-partition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-binding-compositional-use",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-acquired-binding-compositional-use"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-enacted-scene-binding",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-enacted-scene-binding"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-encounter-selection-and-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-retrospective-source-binding",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-retrospective-source-binding"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-historical-source-binding",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-historical-source-binding"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-naming-attention-coverage",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-naming-attention-coverage"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-encounter-control-and-retention",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-encounter-control-and-retention"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-situated-recovery-empirical-correspondence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-situated-recovery-empirical-correspondence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-context-sensitive-updating-correspondence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-context-sensitive-updating-correspondence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-seeking-boundary"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-boundary-of-enough-under-undetermined-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-under-registration-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-under-registration-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-consequence-revised-reference-plan",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-consequence-revised-reference-plan"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-recurring-reference-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-recurring-reference-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-formed-goal-revision-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-acquired-revision-of-pending-task"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-fallible-inquiry-necessity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-finite-fallible-inquiry-necessity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-fallible-witness-diagnosability",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-fallible-witness-diagnosability"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-continuation-plans",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-finite-continuation-plans"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-risk-certificate-outcome-distinction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-risk-certificate-outcome-distinction"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-incidence-common-refinement",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-incidence-common-refinement"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-joining-open-map-factor",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-joining-open-map-factor"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-functional-joining-common-structure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-functional-joining-common-structure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-multivalued-joining-common-structure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-multivalued-joining-common-structure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-joining-questions-survive-encoding",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-joining-questions-survive-encoding"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-retained-reference-joining-recovery",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-retained-reference-joining-recovery"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-unanchored-incidence-collapse",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-unanchored-incidence-collapse"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-granularity-question-recovery",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-finite-granularity-question-recovery"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-guarded-program-question-recovery",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-guarded-program-question-recovery"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-prefix-observation-loss",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-prefix-observation-loss"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-residual-continuation-correspondence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-residual-continuation-correspondence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-binding-preserving-substitution",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-binding-preserving-substitution"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-constitutive-binding-assessment",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-constitutive-binding-assessment"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-wisdom-root-without-axiom",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-wisdom-root-without-axiom"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-wisdom-root",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-wisdom-root"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-scientific-inquiry-foundation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-scientific-inquiry-foundation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-slowing-down-before-an-own-end"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-life-as-condition-of-life"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-generation-is-replenishment",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-generation-is-replenishment"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-living-on-and-descent",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-living-on-and-descent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-conveyance-crosses-the-boundary",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-conveyance-crosses-the-boundary"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-a-pattern-lasts-through-passing"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-transmission-is-inheritance-and-need",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-transmission-is-inheritance-and-need"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-forming-anew-necessary-and-sufficient",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-forming-anew-necessary-and-sufficient"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-dependence-formed-from-drawing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-dependence-formed-from-drawing"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-need-drift-along-a-lineage",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-need-drift-along-a-lineage"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-a-goal-along-a-lineage",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-a-goal-along-a-lineage"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-copying-b-fold",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-copying-b-fold"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-inherited-structural-copying",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-inherited-structural-copying"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-registration",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-formed-copying-registration"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-correction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-formed-copying-correction"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-material-preparation-output",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-material-preparation-output"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-recurrent-chain-assembly",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-recurrent-chain-assembly"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-evolution-on-descent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-term-over-generations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-selection-term-over-generations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-what-bounds-offspring-numbers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-additive-part-of-offspring-variance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-additive-part-of-offspring-variance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-the-breeding-value"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups-of-any-sizes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-selection-within-and-among-groups-of-any-sizes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-selection-within-and-among-groups"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-groups-formed-by-descent",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-groups-formed-by-descent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-selection-among-groups-by-ending"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-groups-whose-conditions-are-coupled"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-selection-with-returns-to-groupmates"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-confined-rise-within-a-whole"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-drift-offspring-sampled",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-drift-offspring-sampled"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-fixation-by-drift",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-fixation-by-drift"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-fixation-with-selection",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-fixation-with-selection"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-mutation-and-the-balance-it-sets",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-mutation-and-the-balance-it-sets"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-organizational-rule-inheritance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-learned-procedure-transmission"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-difference-making",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-joint-difference-making"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-own-count-misses-joint-excess"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-whole-drawing-beyond-renewal-ends"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-taking-all-excludes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-the-rest-outruns-the-renewal"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-draws-on-a-shared-stock",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-draws-on-a-shared-stock"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-division-by-exclusive-footprints"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-mutual-dependence-and-its-pace"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-relative-position-is-zero-sum"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-position-reads",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-position-reads"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-least-parts-and-equal-shares",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-least-parts-and-equal-shares"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-conditions-kept-together"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-giving-that-waits-on-giving"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-restoring-giving-from-the-worst-start"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-thresholds-of-waiting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-tolerance-monotone-across-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-tolerance-monotone-across-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-raising-what-couples-in-draws-from-beyond"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-rise-past-the-inflow-is-drawn-from-beyond"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-a-rise-draws-from-beyond"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-an-optimum-does-beyond-what-couples-in"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-others-drawing-first-end-the-base"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-drawers-in-turn"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-race-for-position-draws-everything"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-room-read-off-the-exchange",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-room-read-off-the-exchange"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-several-optimizers-drain-by-their-joint-capacity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-re-optimizing-above-a-renewal-ends-it"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-horizon-optima-hold-the-greatest-renewal"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-the-horizon",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-valuing-what-is-left-at-the-horizon"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-any-worth",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-valuing-what-is-left-at-any-worth"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-keeping-forgoes-the-renewal-at-the-need",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-keeping-forgoes-the-renewal-at-the-need"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-step-coupling-keeps-at-every-horizon"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-steps-met-again-after-a-fall",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-steps-met-again-after-a-fall"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-weighting-faster-than-renewal-ends-the-base"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-optima-rebuild-a-depleted-base"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-pooled-coupling-reaches"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-reading-anothers-couplings-is-pooling"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-a-pools-acts-respond-to"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-pool-that-recruits-through-itself"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-pool-read-by-its-majority"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reading-through-a-pool",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-reading-through-a-pool"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-code-formed-between-formations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-imposing-a-code-breaks-the-symmetry"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-synonyms-and-coined-forms"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-taking-what-most-hold",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-taking-what-most-hold"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-copied-witnesses-change-nothing"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-joint-practice-forms-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-market-protected-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-partial-correction-boundary",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-market-partial-correction-boundary"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-market-supported-finite-transition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-finite-support-obstruction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-market-finite-support-obstruction"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-joint-plan-composition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-formed-software-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-organizational-formation-from-generative-comparison"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-classical-definitions-in-the-grammar"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-candidate-theorems-of-the-corpus",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-candidate-theorems-of-the-corpus"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-hexagrams-on-the-spine"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-place-relations-in-context",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-place-relations-in-context"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-world-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-hexagram-world-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fixed-places-and-sole-lines",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-fixed-places-and-sole-lines"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-arrangements-and-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-hexagram-arrangements-and-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-censuses-of-the-xiang-and-tuan",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-censuses-of-the-xiang-and-tuan"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-bands-of-the-three-powers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-bands-of-the-three-powers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-one-search-one-line",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-one-search-one-line"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-chinese-sources-on-the-spine"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-civilization-thought-on-the-spine"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-fidelity-of-the-classical-statements"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-fidelity-under-one-discipline"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-wenli-on-the-spine",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-wenli-on-the-spine"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-dynamics-leave-open"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-rivals-bounded-in-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-rivals-bounded-in-time"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-closing-needs-net-draw",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-closing-needs-net-draw"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-four-cases-of-a-part"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-support-from-the-supported"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-retained-within-margin",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-significance-retained-within-margin"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-loss-beyond-a-region"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-run-classes-and-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-within-reach",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-comparison-within-reach"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-comparison-where-the-rest-responds"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-along-a-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-widening-along-a-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-comparison-content-under-regrouping"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-metaethical-core-characterization"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-living-significance-on-held-lives",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-living-significance-on-held-lives"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-good-to-reachable-living-significance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-own-good-to-reachable-living-significance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-becoming-stepwise-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-becoming-stepwise-reading"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-condition-correspondence-discipline",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-condition-correspondence-discipline"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-continuation-condition-yields-living-significance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-continuation-condition-yields-living-significance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-positioned-positive-reason",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-positioned-positive-reason"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-positive-ground-open-futures",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-positive-ground-open-futures"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-open-form-realization-under-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-open-form-realization-under-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-derived-extent-limits"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-closure-verdict-meets-continuation-condition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-closure-verdict-meets-continuation-condition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-feeding-from-a-step"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-first-and-bounded-centers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-whole-first-and-bounded-centers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-continuation-condition-decomposition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-continuation-condition-decomposition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-presupposition-scopes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-presupposition-scopes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-step-across-standpoints-reaches"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-self-concern-through-dependence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-widening-as-what-every-weighting-ranks"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-by-widening",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-comparison-by-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-weights-within-a-ratio-agree-past-it"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-self-concern-alone-ranks"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-graded-significance-and-priority"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-ranking-under-readings"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-stepwise-law-of-easing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-stepwise-law-of-easing"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relation-level-law-of-easing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-relation-level-law-of-easing"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-basic-priority-step-by-step"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-practical-judgment-under-living-significance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-fulfillment-chance-floor",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-fulfillment-chance-floor"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-protection-priority-excludes-uniform-aggregation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-protection-priority-excludes-uniform-aggregation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-claims-do-not-read",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-claims-do-not-read"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-classification-robust-generative-comparison",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-classification-robust-generative-comparison"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relational-generative-comparison",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-relational-generative-comparison"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relational-reading-comparison",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-relational-reading-comparison"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-finite-aggregation-within-restorable-basic-losses",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-finite-aggregation-within-restorable-basic-losses"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-training-installs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-gap-for-ones-own-act"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-own-widening-within-the-margin"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-alignment-approaches-under-the-selection-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-coupling-closures-of-training-pipelines"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-alignment-direction-under-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-reserved-shutdown-during-recovery"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-assured-route-criterion",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-assured-route-criterion"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-versioned-request-completion",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-versioned-request-completion"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-recoverable-mediated-change"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-mediated-evidence-transport"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-pending-task-context-applicability",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-pending-task-context-applicability"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-narrowing-above-its-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-universal-practical-warrant"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-derivation-soundness",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-derivation-soundness"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-finite-basis-common-interpretation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-finite-basis-common-interpretation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-proposition-identity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-proposition-identity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-what-discrete-steps-and-whole-amounts-represent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-counts-exist-where-decided",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-counts-exist-where-decided"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-listing-once-is-decided-identity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-listing-once-is-decided-identity"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-relata-counted-up-to-indiscernibility",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-relata-counted-up-to-indiscernibility"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-when-the-runs-of-a-process-settle"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-the-last-change-of-a-run",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-the-last-change-of-a-run"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-what-a-law-of-the-whole-and-no-part-takes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-what-a-law-of-the-whole-and-no-part-takes"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-lifting-where-branching-is-finite",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-lifting-where-branching-is-finite"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-becoming-spine-instances",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-becoming-spine-instances"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-fidelity-coders-on-own-and-other-texts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-theory-of-becoming-foundation",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-theory-of-becoming-foundation"
   }
  ],
  "edges": [
@@ -48568,6 +51040,2066 @@
    "from": "record:worlds-are-runs",
    "to": "record:where-a-run-goes-on",
    "type": "related"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-conservation-along-a-relation",
+   "to": "record:balance-from-conservation-along-a-relation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-the-first-law",
+   "to": "record:balance-from-the-first-law",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-becoming-context-coherence",
+   "to": "record:becoming-context-coherence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-bounded-census-keeps-pace",
+   "to": "record:bounded-census-keeps-pace",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-ceasing-needs-arising",
+   "to": "record:ceasing-needs-arising",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-census-balance",
+   "to": "record:census-balance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-census-balance-under-continuation",
+   "to": "record:census-balance-under-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-census-read-off-the-exchange",
+   "to": "record:census-read-off-the-exchange",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-central-laws-over-every-exchange",
+   "to": "record:central-laws-over-every-exchange",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-classes-along-a-continuation",
+   "to": "record:classes-along-a-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-code-plan-global-support",
+   "to": "record:code-plan-global-support",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-coming-and-ceasing-keep-pace",
+   "to": "record:coming-and-ceasing-keep-pace",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+   "to": "record:configurations-alike-by-relation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-continuous-time-as-tower",
+   "to": "record:continuous-time-as-tower",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-counting-standing-and-dependence",
+   "to": "record:counting-standing-and-dependence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-counting-under-enclosure",
+   "to": "record:counting-under-enclosure",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-counting-where-the-counts-exist",
+   "to": "record:counting-where-the-counts-exist",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-derived-history-law-exactness",
+   "to": "record:derived-history-law-exactness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-determinacy-up-to-likeness",
+   "to": "record:determinacy-up-to-likeness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate",
+   "to": "record:every-origin-passes-the-gate",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-exchanges-commute-unless-joined",
+   "to": "record:exchanges-commute-unless-joined",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-exclusive-footprint-support",
+   "to": "record:exclusive-footprint-support",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-finite-joining-tree-lifting",
+   "to": "record:finite-joining-tree-lifting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-finite-trace-transport",
+   "to": "record:finite-trace-transport",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-histories-fix-law-up-to-dead-ends",
+   "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-identity-across-steps",
+   "to": "record:identity-across-steps",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-imbalance-as-relatum",
+   "to": "record:imbalance-as-relatum",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-joint-code-plan-lifting",
+   "to": "record:joint-code-plan-lifting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-joint-correlation-reduced-dynamics",
+   "to": "record:joint-correlation-reduced-dynamics",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-joint-decomposition-lifting",
+   "to": "record:joint-decomposition-lifting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-laws-at-coarser-steps",
+   "to": "record:laws-at-coarser-steps",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-laws-at-finer-units",
+   "to": "record:laws-at-finer-units",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-laws-of-one-step",
+   "to": "record:laws-of-one-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-laws-of-one-step-complete",
+   "to": "record:laws-of-one-step-complete",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-laws-with-noise",
+   "to": "record:laws-with-noise",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-least-footprint-where-idleness-decided",
+   "to": "record:least-footprint-where-idleness-decided",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-levels-of-closure",
+   "to": "record:levels-of-closure",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-losses-of-the-sum-over-histories",
+   "to": "record:losses-of-the-sum-over-histories",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-map-of-premises",
+   "to": "record:map-of-premises",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-negation-change-and-stable-cases",
+   "to": "record:negation-change-and-stable-cases",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-normal-forms-need-decided-apartness",
+   "to": "record:normal-forms-need-decided-apartness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-one-step-missing-laws",
+   "to": "record:one-step-missing-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-only-the-order-of-change-shows",
+   "to": "record:only-the-order-of-change-shows",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-is-the-invariant",
+   "to": "record:order-of-exchanges-is-the-invariant",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-sharing-a-relatum",
+   "to": "record:order-of-exchanges-sharing-a-relatum",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
+   "to": "record:place-transition-nets-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-premises-read-off-the-exchange",
+   "to": "record:premises-read-off-the-exchange",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-premises-that-are-states-of-the-law",
+   "to": "record:premises-that-are-states-of-the-law",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-process-and-frame-as-readings",
+   "to": "record:process-and-frame-as-readings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-decidedness",
+   "to": "record:recurrence-without-decidedness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+   "to": "record:recurrence-without-premise",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-requirement-is-the-weakest-sound-reading",
+   "to": "record:requirement-is-the-weakest-sound-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-requirement-over-open-exchanges",
+   "to": "record:requirement-over-open-exchanges",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-rising-and-falling-in-one-exchange",
+   "to": "record:rising-and-falling-in-one-exchange",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-runs-on-families-chosen-step-by-step",
+   "to": "record:runs-on-families-chosen-step-by-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-separation-loses-the-relation",
+   "to": "record:separation-loses-the-relation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-space-and-its-parts",
+   "to": "record:space-and-its-parts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-sum-over-histories-exact",
+   "to": "record:sum-over-histories-exact",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
+   "to": "record:the-move-alone-underdetermines",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-step-index-from-own-courses",
+   "to": "record:the-step-index-from-own-courses",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-world-an-interleaving-builds",
+   "to": "record:the-world-an-interleaving-builds",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-trace-law-equivalence",
+   "to": "record:trace-law-equivalence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-transmission-independent-where-it-binds",
+   "to": "record:transmission-independent-where-it-binds",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-unity-of-readings",
+   "to": "record:unity-of-readings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-weights-count-situations",
+   "to": "record:weights-count-situations",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart",
+   "to": "record:what-a-commuting-law-keeps-apart",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-what-dependence-alone-carries-of-a-level",
+   "to": "record:what-dependence-alone-carries-of-a-level",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-level-couples",
+   "to": "record:where-a-level-couples",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-move-is-formed",
+   "to": "record:where-a-move-is-formed",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-where-a-run-goes-on",
+   "to": "record:where-a-run-goes-on",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-which-links-a-closure-needs",
+   "to": "record:which-links-a-closure-needs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-whole-law-of-counting",
+   "to": "record:whole-law-of-counting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-worlds-are-runs",
+   "to": "record:worlds-are-runs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-coupling-saturated-by-what-it-has-carried",
+   "to": "record:a-coupling-saturated-by-what-it-has-carried",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-need-with-a-cap",
+   "to": "record:a-need-with-a-cap",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+   "to": "record:a-reading-against-the-share-does-not-ratchet",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-source-before-a-juncture",
+   "to": "record:a-source-before-a-juncture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-whole-carried-by-lasting-parts",
+   "to": "record:a-whole-carried-by-lasting-parts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-whole-of-every-part",
+   "to": "record:a-whole-of-every-part",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-arising-needs-change",
+   "to": "record:arising-needs-change",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+   "to": "record:attraction-is-not-returning",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+   "to": "record:basins-of-a-determined-law",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-becoming-dependence-dynamics",
+   "to": "record:becoming-dependence-dynamics",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+   "to": "record:becoming-finite-horizon",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-becoming-renewal-reading",
+   "to": "record:becoming-renewal-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-becoming-return-grades",
+   "to": "record:becoming-return-grades",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+   "to": "record:capture-through-the-rule",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "to": "record:closed-capture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-consumption-ends-with-feeders",
+   "to": "record:consumption-ends-with-feeders",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+   "to": "record:continued-change-needs-openness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+   "to": "record:continuing-self-fed-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-control-coherence-loss",
+   "to": "record:control-coherence-loss",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+   "to": "record:counterfactual-is-the-course",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+   "to": "record:coupled-regimes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-coupled-webs",
+   "to": "record:coupled-webs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-differences-below-threshold",
+   "to": "record:differences-below-threshold",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
+   "to": "record:dormancy-over-a-stretch",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-effective-capacity-and-eventual-reachability",
+   "to": "record:effective-capacity-and-eventual-reachability",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-endpoint-loss-and-return",
+   "to": "record:endpoint-loss-and-return",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record",
+   "to": "record:entropy-history-and-record",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-every-loss-passes-a-juncture",
+   "to": "record:every-loss-passes-a-juncture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-far-conveying-runs-the-family-down",
+   "to": "record:far-conveying-runs-the-family-down",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-feeding-closure",
+   "to": "record:feeding-closure",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-growth-constrained-fragmentation",
+   "to": "record:growth-constrained-fragmentation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows",
+   "to": "record:how-a-carried-difference-grows",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+   "to": "record:how-fast-a-rule-may-change",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-how-loops-form",
+   "to": "record:how-loops-form",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-how-much-difference-arrives",
+   "to": "record:how-much-difference-arrives",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-how-often-couplings-act",
+   "to": "record:how-often-couplings-act",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-least-loss-from-entropy-production",
+   "to": "record:least-loss-from-entropy-production",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-least-loss-rest",
+   "to": "record:least-loss-rest",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-loops-within-what-a-law-reads",
+   "to": "record:loops-within-what-a-law-reads",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+   "to": "record:margin-of-a-regime",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+   "to": "record:merge-of-a-part-kept-by-the-rest",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-more-needs-renewers",
+   "to": "record:more-needs-renewers",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-necessarily-drawn-is-not-returning",
+   "to": "record:necessarily-drawn-is-not-returning",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-no-finite-part-bears-taking",
+   "to": "record:no-finite-part-bears-taking",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-orders-as-a-sum-over-histories",
+   "to": "record:orders-as-a-sum-over-histories",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-reaching-before-and-after-a-juncture",
+   "to": "record:reaching-before-and-after-a-juncture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-regime-in-any-amounts",
+   "to": "record:regime-in-any-amounts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-regime-point-under-adjusting-giving",
+   "to": "record:regime-point-under-adjusting-giving",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-regulation-from-one-side-and-locally",
+   "to": "record:regulation-from-one-side-and-locally",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-relational-renewal-classification",
+   "to": "record:relational-renewal-classification",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-renewing-consuming-formation",
+   "to": "record:renewing-consuming-formation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-repeated-disturbance",
+   "to": "record:repeated-disturbance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence",
+   "to": "record:represented-boundary-against-dependence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+   "to": "record:reserve-defers-ending",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-at-every-resolution",
+   "to": "record:rest-at-every-resolution",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-by-balance",
+   "to": "record:rest-by-balance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-exactly-where-falls-stop",
+   "to": "record:rest-exactly-where-falls-stop",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-from-a-finite-reading",
+   "to": "record:rest-from-a-finite-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-on-coupled-webs",
+   "to": "record:rest-on-coupled-webs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-theorem-in-any-amounts",
+   "to": "record:rest-theorem-in-any-amounts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-rest-with-refinement-counted",
+   "to": "record:rest-with-refinement-counted",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
+   "to": "record:returning-novelty-forgetting-on-levels",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-returning-where-the-course-branches",
+   "to": "record:returning-where-the-course-branches",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+   "to": "record:runaway-distance-uncoupled",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-substitution-preserves-consumption",
+   "to": "record:substitution-preserves-consumption",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-sums-over-histories-by-support-horizon-and-order",
+   "to": "record:sums-over-histories-by-support-horizon-and-order",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-support-passed-on",
+   "to": "record:support-passed-on",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery",
+   "to": "record:supported-renewal-recovery",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-target-capture",
+   "to": "record:target-capture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
+   "to": "record:threshold-in-the-state-plane",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-thresholds-beyond-a-band",
+   "to": "record:thresholds-beyond-a-band",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-two-act-worlds-carry-the-difference",
+   "to": "record:two-act-worlds-carry-the-difference",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-two-rules-lock-together",
+   "to": "record:two-rules-lock-together",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-unceasing-generation-needs-renewal",
+   "to": "record:unceasing-generation-needs-renewal",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-webs-with-a-recent-giving",
+   "to": "record:webs-with-a-recent-giving",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-what-a-cut-loses",
+   "to": "record:what-a-cut-loses",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends",
+   "to": "record:where-a-rising-take-ends",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
+   "to": "record:where-a-run-of-a-regime-comes-to-rest",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+   "to": "record:where-novelty-gain-comes-from",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-where-two-courses-rejoin",
+   "to": "record:where-two-courses-rejoin",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+   "to": "record:whether-a-loop-closes-a-difference",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-whole-persists-through-generation",
+   "to": "record:whole-persists-through-generation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-own-course",
+   "to": "record:a-formations-own-course",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-history-read-off-its-finite-stretches",
+   "to": "record:a-history-read-off-its-finite-stretches",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-law-through-a-projection-along-one-run",
+   "to": "record:a-law-through-a-projection-along-one-run",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-binding-compositional-use",
+   "to": "record:acquired-binding-compositional-use",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
+   "to": "record:acquired-revision-of-pending-task",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-binding-preserving-substitution",
+   "to": "record:binding-preserving-substitution",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-branching-target-uniqueness",
+   "to": "record:branching-target-uniqueness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-branching-tests-bisimulation",
+   "to": "record:branching-tests-bisimulation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-causal-models-as-processes",
+   "to": "record:causal-models-as-processes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+   "to": "record:claims-shown-in-context",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-consequence-revised-reference-plan",
+   "to": "record:consequence-revised-reference-plan",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-constitutive-binding-assessment",
+   "to": "record:constitutive-binding-assessment",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-context-sensitive-updating-correspondence",
+   "to": "record:context-sensitive-updating-correspondence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-enacted-scene-binding",
+   "to": "record:enacted-scene-binding",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-encounter-control-and-retention",
+   "to": "record:encounter-control-and-retention",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision",
+   "to": "record:encounter-selection-and-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+   "to": "record:experiment-needs-return",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-fallible-witness-diagnosability",
+   "to": "record:fallible-witness-diagnosability",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-feedback-and-reach",
+   "to": "record:feedback-and-reach",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-continuation-plans",
+   "to": "record:finite-continuation-plans",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-fallible-inquiry-necessity",
+   "to": "record:finite-fallible-inquiry-necessity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-granularity-question-recovery",
+   "to": "record:finite-granularity-question-recovery",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
+   "to": "record:formed-goal-revision-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-functional-joining-common-structure",
+   "to": "record:functional-joining-common-structure",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping",
+   "to": "record:generalization-through-lumping",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-gluing-under-parity",
+   "to": "record:gluing-under-parity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-guarded-program-question-recovery",
+   "to": "record:guarded-program-question-recovery",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-historical-source-binding",
+   "to": "record:historical-source-binding",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-identification-where-bounded",
+   "to": "record:identification-where-bounded",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-identification-where-runs-part",
+   "to": "record:identification-where-runs-part",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-incidence-common-refinement",
+   "to": "record:incidence-common-refinement",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-joining-open-map-factor",
+   "to": "record:joining-open-map-factor",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-joining-questions-survive-encoding",
+   "to": "record:joining-questions-survive-encoding",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-joint-target-uniqueness",
+   "to": "record:joint-target-uniqueness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-learnable-through-a-map",
+   "to": "record:learnable-through-a-map",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation",
+   "to": "record:learning-by-refutation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-through-a-map-is-tracking-in-the-limit",
+   "to": "record:learning-through-a-map-is-tracking-in-the-limit",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-multivalued-joining-common-structure",
+   "to": "record:multivalued-joining-common-structure",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-naming-attention-coverage",
+   "to": "record:naming-attention-coverage",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route",
+   "to": "record:observation-is-a-route",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-one-reader-several-conditions",
+   "to": "record:one-reader-several-conditions",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-prefix-observation-loss",
+   "to": "record:prefix-observation-loss",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-projection-carrying-a-law",
+   "to": "record:projection-carrying-a-law",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "to": "record:readings-within-what-they-read",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-recurring-reference-revision",
+   "to": "record:recurring-reference-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-residual-continuation-correspondence",
+   "to": "record:residual-continuation-correspondence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-retained-reference-joining-recovery",
+   "to": "record:retained-reference-joining-recovery",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-retrospective-source-binding",
+   "to": "record:retrospective-source-binding",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-revision-with-an-undecided-value",
+   "to": "record:revision-with-an-undecided-value",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-risk-certificate-outcome-distinction",
+   "to": "record:risk-certificate-outcome-distinction",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-scientific-inquiry-foundation",
+   "to": "record:scientific-inquiry-foundation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+   "to": "record:seeking-boundary",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-right-exactly-where-read",
+   "to": "record:selection-right-exactly-where-read",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "to": "record:selection-through-couplings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-under-registration-revision",
+   "to": "record:selection-under-registration-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
+   "to": "record:sensitivity-is-the-least-coupling",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-situated-recovery-empirical-correspondence",
+   "to": "record:situated-recovery-empirical-correspondence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+   "to": "record:slowing-down-before-an-own-end",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-testing-within-couplings",
+   "to": "record:testing-within-couplings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-testing-within-the-net",
+   "to": "record:testing-within-the-net",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-tests-fix-likeness-where-determined",
+   "to": "record:tests-fix-likeness-where-determined",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+   "to": "record:the-boundary-of-enough-under-undetermined-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
+   "to": "record:the-split-that-makes-sense",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-timely-response-necessity",
+   "to": "record:timely-response-necessity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-transition-grouping-word-partition",
+   "to": "record:transition-grouping-word-partition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-typicality-by-counting",
+   "to": "record:typicality-by-counting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-unanchored-incidence-collapse",
+   "to": "record:unanchored-incidence-collapse",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-wen-in-the-grammar",
+   "to": "record:wen-in-the-grammar",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-center-can-know-by-a-step",
+   "to": "record:what-a-center-can-know-by-a-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-finite-history-refutes",
+   "to": "record:what-a-finite-history-refutes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-finite-stretch-verifies",
+   "to": "record:what-a-finite-stretch-verifies",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-method-comes-to-say-in-the-limit",
+   "to": "record:what-a-method-comes-to-say-in-the-limit",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-an-extrapolation-given-nothing-fixes",
+   "to": "record:what-an-extrapolation-given-nothing-fixes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-finitely-many-labels-fix",
+   "to": "record:what-finitely-many-labels-fix",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-where-a-formations-acts-return",
+   "to": "record:where-a-formations-acts-return",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-wisdom-root",
+   "to": "record:wisdom-root",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-wisdom-root-without-axiom",
+   "to": "record:wisdom-root-without-axiom",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-a-goal-along-a-lineage",
+   "to": "record:a-goal-along-a-lineage",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+   "to": "record:a-pattern-lasts-through-passing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-additive-part-of-offspring-variance",
+   "to": "record:additive-part-of-offspring-variance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+   "to": "record:confined-rise-within-a-whole",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-conveyance-crosses-the-boundary",
+   "to": "record:conveyance-crosses-the-boundary",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-copying-b-fold",
+   "to": "record:copying-b-fold",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-dependence-formed-from-drawing",
+   "to": "record:dependence-formed-from-drawing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-drift-offspring-sampled",
+   "to": "record:drift-offspring-sampled",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
+   "to": "record:evolution-on-descent",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-fixation-by-drift",
+   "to": "record:fixation-by-drift",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-fixation-with-selection",
+   "to": "record:fixation-with-selection",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-correction",
+   "to": "record:formed-copying-correction",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-registration",
+   "to": "record:formed-copying-registration",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-forming-anew-necessary-and-sufficient",
+   "to": "record:forming-anew-necessary-and-sufficient",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-generation-is-replenishment",
+   "to": "record:generation-is-replenishment",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-groups-formed-by-descent",
+   "to": "record:groups-formed-by-descent",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+   "to": "record:groups-whose-conditions-are-coupled",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-inherited-structural-copying",
+   "to": "record:inherited-structural-copying",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
+   "to": "record:learned-procedure-transmission",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+   "to": "record:life-as-condition-of-life",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-living-on-and-descent",
+   "to": "record:living-on-and-descent",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-material-preparation-output",
+   "to": "record:material-preparation-output",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-mutation-and-the-balance-it-sets",
+   "to": "record:mutation-and-the-balance-it-sets",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-need-drift-along-a-lineage",
+   "to": "record:need-drift-along-a-lineage",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+   "to": "record:organizational-rule-inheritance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-recurrent-chain-assembly",
+   "to": "record:recurrent-chain-assembly",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+   "to": "record:selection-among-groups-by-ending",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-selection-term-over-generations",
+   "to": "record:selection-term-over-generations",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+   "to": "record:selection-with-returns-to-groupmates",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups",
+   "to": "record:selection-within-and-among-groups",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups-of-any-sizes",
+   "to": "record:selection-within-and-among-groups-of-any-sizes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+   "to": "record:the-breeding-value",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-transmission-is-inheritance-and-need",
+   "to": "record:transmission-is-inheritance-and-need",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
+   "to": "record:what-bounds-offspring-numbers",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+   "to": "record:a-code-formed-between-formations",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
+   "to": "record:a-pool-read-by-its-majority",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+   "to": "record:a-pool-that-recruits-through-itself",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+   "to": "record:a-race-for-position-draws-everything",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond",
+   "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+   "to": "record:a-step-coupling-keeps-at-every-horizon",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base",
+   "to": "record:a-weighting-faster-than-renewal-ends-the-base",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+   "to": "record:conditions-kept-together",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+   "to": "record:copied-witnesses-change-nothing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints",
+   "to": "record:division-by-exclusive-footprints",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn",
+   "to": "record:drawers-in-turn",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-draws-on-a-shared-stock",
+   "to": "record:draws-on-a-shared-stock",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+   "to": "record:formed-software-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+   "to": "record:giving-that-waits-on-giving",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal",
+   "to": "record:horizon-optima-hold-the-greatest-renewal",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry",
+   "to": "record:imposing-a-code-breaks-the-symmetry",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-difference-making",
+   "to": "record:joint-difference-making",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition",
+   "to": "record:joint-plan-composition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
+   "to": "record:joint-practice-forms-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-keeping-forgoes-the-renewal-at-the-need",
+   "to": "record:keeping-forgoes-the-renewal-at-the-need",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-least-parts-and-equal-shares",
+   "to": "record:least-parts-and-equal-shares",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-finite-support-obstruction",
+   "to": "record:market-finite-support-obstruction",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-partial-correction-boundary",
+   "to": "record:market-partial-correction-boundary",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+   "to": "record:market-protected-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+   "to": "record:market-supported-finite-transition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base",
+   "to": "record:optima-rebuild-a-depleted-base",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+   "to": "record:organizational-formation-from-generative-comparison",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
+   "to": "record:others-drawing-first-end-the-base",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+   "to": "record:own-count-misses-joint-excess",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
+   "to": "record:raising-what-couples-in-draws-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+   "to": "record:re-optimizing-above-a-renewal-ends-it",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+   "to": "record:reading-anothers-couplings-is-pooling",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reading-through-a-pool",
+   "to": "record:reading-through-a-pool",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+   "to": "record:relative-position-is-zero-sum",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start",
+   "to": "record:restoring-giving-from-the-worst-start",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-room-read-off-the-exchange",
+   "to": "record:room-read-off-the-exchange",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+   "to": "record:several-optimizers-drain-by-their-joint-capacity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-steps-met-again-after-a-fall",
+   "to": "record:steps-met-again-after-a-fall",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+   "to": "record:synonyms-and-coined-forms",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-taking-what-most-hold",
+   "to": "record:taking-what-most-hold",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+   "to": "record:the-rest-outruns-the-renewal",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "to": "record:thresholds-of-waiting",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-tolerance-monotone-across-laws",
+   "to": "record:tolerance-monotone-across-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-any-worth",
+   "to": "record:valuing-what-is-left-at-any-worth",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-the-horizon",
+   "to": "record:valuing-what-is-left-at-the-horizon",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to",
+   "to": "record:what-a-pools-acts-respond-to",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+   "to": "record:what-a-rise-draws-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+   "to": "record:what-pooled-coupling-reaches",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-position-reads",
+   "to": "record:what-position-reads",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes",
+   "to": "record:what-taking-all-excludes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends",
+   "to": "record:whole-drawing-beyond-renewal-ends",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-bands-of-the-three-powers",
+   "to": "record:bands-of-the-three-powers",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-candidate-theorems-of-the-corpus",
+   "to": "record:candidate-theorems-of-the-corpus",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-censuses-of-the-xiang-and-tuan",
+   "to": "record:censuses-of-the-xiang-and-tuan",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+   "to": "record:chinese-sources-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+   "to": "record:civilization-thought-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
+   "to": "record:classical-definitions-in-the-grammar",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements",
+   "to": "record:fidelity-of-the-classical-statements",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline",
+   "to": "record:fidelity-under-one-discipline",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fixed-places-and-sole-lines",
+   "to": "record:fixed-places-and-sole-lines",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-arrangements-and-laws",
+   "to": "record:hexagram-arrangements-and-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-world-laws",
+   "to": "record:hexagram-world-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine",
+   "to": "record:hexagrams-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-one-search-one-line",
+   "to": "record:one-search-one-line",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-place-relations-in-context",
+   "to": "record:place-relations-in-context",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-wenli-on-the-spine",
+   "to": "record:wenli-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
+   "to": "record:a-narrowing-above-its-widening",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws",
+   "to": "record:alignment-approaches-under-the-selection-laws",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+   "to": "record:alignment-direction-under-widening",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-assured-route-criterion",
+   "to": "record:assured-route-criterion",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+   "to": "record:basic-priority-step-by-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-becoming-stepwise-reading",
+   "to": "record:becoming-stepwise-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-classification-robust-generative-comparison",
+   "to": "record:classification-robust-generative-comparison",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-closing-needs-net-draw",
+   "to": "record:closing-needs-net-draw",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-closure-verdict-meets-continuation-condition",
+   "to": "record:closure-verdict-meets-continuation-condition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-by-widening",
+   "to": "record:comparison-by-widening",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
+   "to": "record:comparison-content-under-regrouping",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
+   "to": "record:comparison-where-the-rest-responds",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-within-reach",
+   "to": "record:comparison-within-reach",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-condition-correspondence-discipline",
+   "to": "record:condition-correspondence-discipline",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-continuation-condition-decomposition",
+   "to": "record:continuation-condition-decomposition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-continuation-condition-yields-living-significance",
+   "to": "record:continuation-condition-yields-living-significance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines",
+   "to": "record:coupling-closures-of-training-pipelines",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
+   "to": "record:derived-extent-limits",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
+   "to": "record:feeding-from-a-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-finite-aggregation-within-restorable-basic-losses",
+   "to": "record:finite-aggregation-within-restorable-basic-losses",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part",
+   "to": "record:four-cases-of-a-part",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-fulfillment-chance-floor",
+   "to": "record:fulfillment-chance-floor",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
+   "to": "record:graded-significance-and-priority",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-living-significance-on-held-lives",
+   "to": "record:living-significance-on-held-lives",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region",
+   "to": "record:loss-beyond-a-region",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+   "to": "record:mediated-evidence-transport",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization",
+   "to": "record:metaethical-core-characterization",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-open-form-realization-under-revision",
+   "to": "record:open-form-realization-under-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-good-to-reachable-living-significance",
+   "to": "record:own-good-to-reachable-living-significance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin",
+   "to": "record:own-widening-within-the-margin",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-pending-task-context-applicability",
+   "to": "record:pending-task-context-applicability",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-positioned-positive-reason",
+   "to": "record:positioned-positive-reason",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-positive-ground-open-futures",
+   "to": "record:positive-ground-open-futures",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+   "to": "record:practical-judgment-under-living-significance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-presupposition-scopes",
+   "to": "record:presupposition-scopes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-protection-priority-excludes-uniform-aggregation",
+   "to": "record:protection-priority-excludes-uniform-aggregation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+   "to": "record:ranking-under-readings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
+   "to": "record:recoverable-mediated-change",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relation-level-law-of-easing",
+   "to": "record:relation-level-law-of-easing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relational-generative-comparison",
+   "to": "record:relational-generative-comparison",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-relational-reading-comparison",
+   "to": "record:relational-reading-comparison",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
+   "to": "record:reserved-shutdown-during-recovery",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-rivals-bounded-in-time",
+   "to": "record:rivals-bounded-in-time",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
+   "to": "record:self-concern-through-dependence",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-retained-within-margin",
+   "to": "record:significance-retained-within-margin",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-stepwise-law-of-easing",
+   "to": "record:stepwise-law-of-easing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
+   "to": "record:support-from-the-supported",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
+   "to": "record:the-gap-for-ones-own-act",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening",
+   "to": "record:the-run-classes-and-widening",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant",
+   "to": "record:universal-practical-warrant",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-versioned-request-completion",
+   "to": "record:versioned-request-completion",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
+   "to": "record:weights-within-a-ratio-agree-past-it",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+   "to": "record:what-self-concern-alone-ranks",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-claims-do-not-read",
+   "to": "record:what-the-claims-do-not-read",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+   "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-first-and-bounded-centers",
+   "to": "record:whole-first-and-bounded-centers",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-along-a-reading",
+   "to": "record:widening-along-a-reading",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-becoming-spine-instances",
+   "to": "record:becoming-spine-instances",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-counts-exist-where-decided",
+   "to": "record:counts-exist-where-decided",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-derivation-soundness",
+   "to": "record:derivation-soundness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
+   "to": "record:fidelity-coders-on-own-and-other-texts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-finite-basis-common-interpretation",
+   "to": "record:finite-basis-common-interpretation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-lifting-where-branching-is-finite",
+   "to": "record:lifting-where-branching-is-finite",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-listing-once-is-decided-identity",
+   "to": "record:listing-once-is-decided-identity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-proposition-identity",
+   "to": "record:proposition-identity",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-relata-counted-up-to-indiscernibility",
+   "to": "record:relata-counted-up-to-indiscernibility",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-the-last-change-of-a-run",
+   "to": "record:the-last-change-of-a-run",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-theory-of-becoming-foundation",
+   "to": "record:theory-of-becoming-foundation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-what-a-law-of-the-whole-and-no-part-takes",
+   "to": "record:what-a-law-of-the-whole-and-no-part-takes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+   "to": "record:what-discrete-steps-and-whole-amounts-represent",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle",
+   "to": "record:when-the-runs-of-a-process-settle",
+   "type": "states"
   },
   {
    "from": "text:JSZ-C-123",

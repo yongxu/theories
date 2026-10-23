@@ -166,7 +166,7 @@ Each connection of independently specified wisdom content to the core’s formal
 | provenance | [2026-10-08-result-centered-repository.md](../../../../sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md) | — |
 | integration | [WISDOM-FALLIBLE-JUDGMENT.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/WISDOM-FALLIBLE-JUDGMENT.md) | — |
 | provenance | [2026-10-08-wisdom-paper-direction.md](../../../../sources/15-codex-theory-conversations/2026-10-08-wisdom-paper-direction.md) | — |
-| integration | [WISDOM-AND-CONTEXT.md](../../chapters/WISDOM-AND-CONTEXT.md) | — |
+| integration | [WISDOM-AND-CONTEXT.md](../../history/WISDOM-AND-CONTEXT.md) | — |
 | provenance | [GenerativeClosure.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean) | `InquiryRoot.derivation_sound`, `InquiryRoot.entire_closure_necessary_iff_basis`, `InquiryRoot.all_relative_descendants_necessary` |
 | proof | [Derivation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean) | `Becoming.Derivation.Derives.sound`, `Becoming.Derivation.closure_throughout_iff`, `Becoming.Derivation.relative_throughout`, `Becoming.Derivation.common_basis_iff_common_closure`, `Becoming.Derivation.pointwise_iff_common` |
 | provenance | [JointInterpretation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean) | `InquiryRoot.JointInterpretation.common_basis_iff_common_closure`, `InquiryRoot.JointInterpretation.pointwise_closure_iff_common` |
@@ -226,7 +226,7 @@ Each connection of independently specified wisdom content to the core’s formal
 | proof | [Response.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean) | `Becoming.Loop.escalation`, `Becoming.Loop.quiet`, `Becoming.Loop.web`, `Becoming.Loop.quietWeb` |
 | proof | [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean) | `Becoming.counterfactual_is_course`, `Becoming.comparison_with_act`, `Becoming.Loop.courses_fixed` |
 | proof | [CounterfactualRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean) | `Becoming.Run.beyond_shown_iff`, `Becoming.ExchangeLaw.closedBy_course` |
-| review | [KNOWLEDGE.md](../../chapters/KNOWLEDGE.md) | — |
+| review | [KNOWLEDGE.md](../../history/KNOWLEDGE.md) | — |
 | review | [KNOWLEDGE-REASONS-AND-STANDARDS.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/KNOWLEDGE-REASONS-AND-STANDARDS.md) | — |
 | review | [KNOWLEDGE-CONTENT-AND-ERROR.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/KNOWLEDGE-CONTENT-AND-ERROR.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json) | — |

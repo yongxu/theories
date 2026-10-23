@@ -90,12 +90,12 @@
     {
       "path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
       "role": "statement",
-      "sha256": "bb1e5265cddb8e37fc8248e7f0e990134461a842338c23389e1937c58bd945d1"
+      "sha256": "f90c6c2cba9849581d3ebb0a4d02c8551516a20148017dc739539849d80a4498"
     },
     {
       "path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH.md",
       "role": "statement",
-      "sha256": "c0b9c58028c02b6fffc761c433b1c3044123d2451649539970577971a2a7958a"
+      "sha256": "b96b2de6b3a9bcc60286133fd44ab736242accfb4622ed1514aa5c234c182dda"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/ANALYSIS-PLAN.md",

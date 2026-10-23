@@ -89,8 +89,8 @@ The map of Chinese sources onto the spine found no law for a level held from bot
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T152617.511553Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
-| provenance | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| provenance | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | review | [simulate.py](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/rg-regulation/simulate.py) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |

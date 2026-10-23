@@ -23,7 +23,7 @@
     "en": "Map independent scientific achievements to the shared spine’s discrimination, coupling, testing, generalization, identification and structural-reconstruction results; distinguish conditional law, actual correspondence and full-core indispensability. Different representations can preserve a relation; the complete test family is not a finite experimental record. Structural necessity uses the complete specified test family, move/claim correspondence and branching conditions; identification uses its stated state bounds and other conditions. Existence of a path, actual command execution and implementable testing have separate correspondence obligations; one experiment does not supply the full modal scope. The assessment of scientific standing is interpretation, not a new formal deduction. Ren directed that this be pursued as a revisable hypothesis (“请按这个方向不断推进”, in the referenced source).",
     "zh": "逐项连接独立科学成就与共同脊柱的辨别、耦合、检验、推广、辨识及结构重构结果；区分条件规律、实际对应与完整核心的不可缺少性。不同表示可保存同一关系，完整检验族不等于有限实验记录。结构必要性须有完整的既定检验族、动作与主张对应及分支条件；辨识须有状态界等所列条件。路径存在、实际指令执行及可实施测试分别对应，不从单个实验推出全模态范围。科学性评估是哲学解释，非新的形式推出。按 Ren 的指示（“请按这个方向不断推进”，见所引来源）作为可修正的假说推进。"
   },
-  "canonical_source": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+  "canonical_source": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
   "aliases": [],
   "dependencies": [
     {
@@ -282,7 +282,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+      "path": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
       "role": "statement",
       "sha256": "1803ea46cff814c21f30143c4a2784534a35428d8437a61f663a863127056f1c",
       "declarations": []
