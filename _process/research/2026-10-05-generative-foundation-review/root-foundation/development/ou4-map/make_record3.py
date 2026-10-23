@@ -86,10 +86,10 @@ laws = [
      "order keeps the next order's pattern from ending on every branch.",
      "对缘有常之粗类，自有前之点无终；故有前而终者，其粗类不有常。一串类在每一阶读生成，某阶之生成使上一阶之样式不诸支皆尽。",
      d('«有常则无终»', '«有终则粗不有常»', '«阶全生成»', '«阶全生成则上无终»', '«阶生成»', '«阶生成则上不退化»')),
-    ("On the old base's continuation relations, with occurrences as pairs of a step and a formation: carrying renewal "
-     "is a step into an occurrence whose formation did not carry on as itself; under passing, generation makes "
-     "carriers arise at arbitrarily late steps; read by names alone nothing generates; consumption still held, a "
-     "family drawn beyond renewal and passing that stops refute going on every branch; the relay renews and ends.",
+    ("On the old base (occurrences: a step and a formation): carrying renewal steps into a formation that did not "
+     "carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing "
+     "generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; "
+     "the relay renews and ends.",
      "在旧基底的延续关系上（事为步与形成之对）：传是步入一个其形成未以自身延续之事；在传递之下，生成使载者迟迟生起；只按名读则无生成；所耗仍持、家族超出更新、传之止皆否诸支之不穷；中继复生而终。",
      di('Web.carries_iff', 'Web.passing_carries_iff', 'Web.generation_renews_late', 'Web.generation_arises_late',
         'Web.keeping_of_carried_on', 'Web.itself_not_generation', 'Web.always_keeps', 'Web.degenerates_of_gone',

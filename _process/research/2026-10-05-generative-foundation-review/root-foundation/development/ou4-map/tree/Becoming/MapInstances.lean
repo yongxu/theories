@@ -99,7 +99,7 @@ theorem reached_later {E : «际» (Nat × F)} {x y : Nat × F}
   | .inr line => Nat.le_of_lt (line_advances line)
 
 /-- What the pattern's line reaches from an active occurrence is active. -/
-theorem active_along {x y : Nat × F} (start : W.active x.1 x.2)
+theorem active_along_line {x y : Nat × F} (start : W.active x.1 x.2)
     (reached : «所及» (continuationStep R) W.activityClass x y) : W.active y.1 y.2 :=
   match reached with
   | .inl same => Eq.subst (motive := fun z : Nat × F => W.active z.1 z.2) same start
@@ -185,7 +185,7 @@ theorem generation_arises_late {V : Web F C} {passes : Nat → F → F → Prop}
     V.Unceasing :=
   fun N => match generation_renews_late h N with
   | ⟨(s, b), (_, a), hz, later, c⟩ =>
-    match (carries_iff (active_along (x := x) (y := (s, b)) start hz)).mp c with
+    match (carries_iff (active_along_line (x := x) (y := (s, b)) start hz)).mp c with
     | ⟨⟨next, _⟩, after, fresh⟩ =>
       ⟨s, a, later, fun before => fresh ⟨before, .inl rfl⟩,
        Eq.subst (motive := fun s' => V.active s' a) next after⟩
@@ -201,7 +201,7 @@ theorem keeping_of_carried_on {x : Nat × F} {S : Nat} (start : W.active x.1 x.2
     «全守» (continuationStep R) W.activityClass W.carrierClass x :=
   match reaches_onward endless S with
   | ⟨y, hy, at_⟩ => ⟨endless, y, hy, fun z w hz c =>
-      match (carries_iff (active_along start («所及之传递» hy hz))).mp c with
+      match (carries_iff (active_along_line start («所及之传递» hy hz))).mp c with
       | ⟨⟨next, _⟩, after, fresh⟩ =>
         fresh (on z.1 w.2
           (Nat.le_trans (Eq.subst (motive := fun s => S ≤ s) at_.symm (Nat.le_add_left S x.1))
@@ -248,7 +248,7 @@ theorem not_endless_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) 
     ¬ «不穷» (continuationStep R) W.activityClass x :=
   fun endless => match le_dest le with
   | ⟨k, at_⟩ => match reaches_onward endless k with
-    | ⟨y, hy, at'⟩ => gone y hy (at'.trans at_.symm) (active_along start hy)
+    | ⟨y, hy, at'⟩ => gone y hy (at'.trans at_.symm) (active_along_line start hy)
 
 /-- **Where going on is decided, such a line degenerates**: it reaches an end. -/
 theorem degenerates_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
@@ -261,7 +261,7 @@ theorem degenerates_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) 
   match le_dest le with
   | ⟨k, at_⟩ => match ends_or_reaches decided k with
     | .inl d => d
-    | .inr ⟨y, hy, at'⟩ => absurd (active_along start hy) (gone y hy (at'.trans at_.symm))
+    | .inr ⟨y, hy, at'⟩ => absurd (active_along_line start hy) (gone y hy (at'.trans at_.symm))
 
 /-- **Consumption of what the line depends on ends it.** Where activity needs support, the level
 of `c` stays below the need of `g`'s dependence on it at `T` from `T` on (with that dependence held
@@ -340,7 +340,7 @@ theorem shifted_generates (t : Nat) :
       shifted.carrierClass (t, Pulse.half t) :=
   have onward : ∀ y, «所及» (Web.continuationStep (Web.passingContinuation passesOdd))
       shifted.activityClass (t, Pulse.half t) y → Pulse.half y.1 = y.2 :=
-    fun _ hy => Web.active_along (W := shifted) (x := (t, Pulse.half t)) rfl hy
+    fun _ hy => Web.active_along_line (W := shifted) (x := (t, Pulse.half t)) rfl hy
   ⟨fun ⟨s, n⟩ hy => match parity : odd s with
      | true => ⟨_, (shifted_pass s n (onward _ hy) parity).1⟩
      | false => ⟨_, shifted_carry s n (onward _ hy) parity⟩,
