@@ -61,3 +61,12 @@ Forty results change home (table in the packets). The receiving chapter states t
 ## 8. Length
 
 Up to 12,500 words (06: up to 24,000 Chinese characters). Compress by tables and by sending detail to the records, never by dropping a result or a hypothesis.
+
+## 9. One voice (the integration round)
+
+- **Opening.** Every chapter opens the same way: its title; a paragraph beginning **Thesis.** (at most about 150 words: what the chapter shows, with "claimed" and "open" kept apart); a paragraph **Where this chapter sits.** (what it takes from earlier chapters and hands on, with links); a paragraph **Bases.** (which bases its laws are on, which premises its labels name, and, where the chapter touches evaluation, the ethics' two premises with their roles). 01 keeps its **What is claimed** and **Not assumed** after these. 06 uses **论题。**, **本章所在。**, **基与标。**
+- **A result.** One paragraph or one table row: the label and base in bold, then the mechanism in words, then the precise statement with its hypotheses, then the Lean names and the record link. Label form: `**Theorem** (World).`, `**Theorem** (any process; witness).`, `**Conditional** (the condition; C).`, `**Calibration.**`, `**Reading** [AI reading, Dn].`
+- **No process notes** in live text: nothing addressed to an integrator, no "first round", "moved here", "stays here until", "number for the integrator", no counts of words.
+- **Readings** registered in D65 read `[AI reading, D65]`.
+- **One statement per result.** Where two chapters still say the same law at length, the home states it and the other links.
+- **Endings.** "What this chapter does not show" and "Open", as short lists; 06: 未示 and 未决.
