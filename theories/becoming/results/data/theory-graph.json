@@ -4540,6 +4540,18 @@
    "page": "theories/becoming/results/records/the-run-classes-and-widening.md"
   },
   {
+   "id": "record:the-source-texts-test-systems",
+   "type": "result",
+   "record": "the-source-texts-test-systems",
+   "title": "Test systems of the source texts as small witnesses",
+   "title_zh": "来源二篇之检验系统之小见证",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-source-texts-test-systems.md"
+  },
+  {
    "id": "record:the-split-that-makes-sense",
    "type": "result",
    "record": "the-split-that-makes-sense",
@@ -8853,6 +8865,17 @@
    "level": "L1",
    "theorems": 30,
    "region": "significance",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarCases",
+   "type": "module",
+   "name": "Becoming.GrammarCases",
+   "level": "L1",
+   "theorems": 22,
+   "region": "root",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -26218,6 +26241,12 @@
    "anchor": "r-what-dependence-alone-carries-of-a-level"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-source-texts-test-systems"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-coming-and-ceasing-keep-pace",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -29628,6 +29657,16 @@
   {
    "from": "module:Becoming.GrammarCandidates",
    "to": "module:Becoming.GrammarReadings",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarCases",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarCases",
+   "to": "module:Becoming.GrammarTesting",
    "type": "imports"
   },
   {
@@ -47516,6 +47555,36 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-source-texts-test-systems",
+   "to": "module:Becoming.GrammarCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:reach-past-ones-own-end",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:testing-within-the-net",
+   "type": "related"
+  },
+  {
    "from": "record:the-split-that-makes-sense",
    "to": "module:Becoming.Description",
    "type": "proved-in"
@@ -51578,6 +51647,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
    "to": "record:the-move-alone-underdetermines",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+   "to": "record:the-source-texts-test-systems",
    "type": "states"
   },
   {

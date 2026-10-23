@@ -452,7 +452,7 @@ python3 -B tools/research/research.py render
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 647,
+  "changed_outside_cited": 649,
   "reading_drift": 95,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."

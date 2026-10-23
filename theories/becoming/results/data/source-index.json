@@ -80,6 +80,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
@@ -1740,6 +1741,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
@@ -2016,6 +2018,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
@@ -4280,6 +4283,18 @@
         "experiments/valuation-development/lean/perspectival/Audit.lean",
         "experiments/valuation-development/lean/perspectival/TrajectoryFidelity.lean",
         "experiments/valuation-development/lean/perspectival/verification-output.txt"
+      ]
+    },
+    "theories/becoming/chapters/01-ROOT.md": {
+      "title": "The root: continuation relative to a class",
+      "local_links": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+        "sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/minimum-grammar-of-becoming.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/03-KNOWING.md",
+        "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md"
       ]
     },
     "theories/becoming/chapters/03-KNOWING.md": {

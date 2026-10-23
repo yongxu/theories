@@ -61,7 +61,7 @@ Generation as a pattern continuing through the renewal of its parts is close to 
   - Input: A fine and a coarse class on one net.
   - Preserved conditions: None beyond the grammar. [GrammarMap.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean)
 
-**Used by:** [reach-past-ones-own-end](reach-past-ones-own-end.md)
+**Used by:** [reach-past-ones-own-end](reach-past-ones-own-end.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md)
 
 <a id="sources--来源"></a>
 ### Sources

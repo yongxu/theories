@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-423 registered results: 393 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 965 curated edges join 373 results to the results they draw on.
+424 registered results: 394 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 969 curated edges join 374 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -321,6 +321,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
 - [the-rest-outruns-the-renewal][] ← <a id="the-rest-outruns-the-renewal--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="the-rest-outruns-the-renewal--what-taking-all-excludes"></a>[what-taking-all-excludes][]
 - [the-run-classes-and-widening][] ← <a id="the-run-classes-and-widening--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="the-run-classes-and-widening--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="the-run-classes-and-widening--life-as-condition-of-life"></a>[life-as-condition-of-life][]
+- [the-source-texts-test-systems][] ← <a id="the-source-texts-test-systems--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-source-texts-test-systems--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="the-source-texts-test-systems--reach-past-ones-own-end"></a>[reach-past-ones-own-end][] · <a id="the-source-texts-test-systems--rules-that-change-themselves-in-the-grammar"></a>[rules-that-change-themselves-in-the-grammar][]
 - [the-split-that-makes-sense][] ← <a id="the-split-that-makes-sense--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="the-split-that-makes-sense--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="the-split-that-makes-sense--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="the-split-that-makes-sense--readings-within-what-they-read"></a>[readings-within-what-they-read][]
 - [the-world-an-interleaving-builds][] ← <a id="the-world-an-interleaving-builds--the-step-index-from-own-courses"></a>[the-step-index-from-own-courses][] · <a id="the-world-an-interleaving-builds--worlds-are-runs"></a>[worlds-are-runs][] · <a id="the-world-an-interleaving-builds--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][]
 - [theory-of-becoming-foundation][] ← <a id="theory-of-becoming-foundation--becoming-context-coherence"></a>[becoming-context-coherence][] *(interpretive)* · <a id="theory-of-becoming-foundation--control-coherence-loss"></a>[control-coherence-loss][] *(interpretive)*
@@ -724,6 +725,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-move-alone-underdetermines]: theories/becoming/results/records/the-move-alone-underdetermines.md
 [the-rest-outruns-the-renewal]: theories/becoming/results/records/the-rest-outruns-the-renewal.md
 [the-run-classes-and-widening]: theories/becoming/results/records/the-run-classes-and-widening.md
+[the-source-texts-test-systems]: theories/becoming/results/records/the-source-texts-test-systems.md
 [the-split-that-makes-sense]: theories/becoming/results/records/the-split-that-makes-sense.md
 [the-step-index-from-own-courses]: theories/becoming/results/records/the-step-index-from-own-courses.md
 [the-world-an-interleaving-builds]: theories/becoming/results/records/the-world-an-interleaving-builds.md

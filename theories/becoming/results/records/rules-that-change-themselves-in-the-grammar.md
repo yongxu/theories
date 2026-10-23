@@ -60,6 +60,8 @@ The root chapter's open item on self-changing conditions, narrowed: a rule chang
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常之逐点», «类有常当且仅当含于核».
 - **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). Law.unending_iff_steps, Law.unending_alike.
 
+**Used by:** [the-source-texts-test-systems](the-source-texts-test-systems.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -56,6 +56,8 @@ PW §4-§5: the self as a line, and whether a living line's core is wider than i
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «所及», «相续之续».
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The condition on the root, of which this is the question of the class.
 
+**Used by:** [the-source-texts-test-systems](the-source-texts-test-systems.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
