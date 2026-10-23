@@ -67,7 +67,7 @@ GS2's owner took candidate (3) and pointed to two laws of `Becoming.GrammarRegul
 - `«守理则不穷»`: a step continuing under the core is followed by another under it.
 - `«亡前理变»`: where `E` is a class, the step into an end leaves the core.
 
-So the organism's end leaves the core of the organism's class. §5's last point then splits into two cases. Let `E′` be a coarser class, such as descent, under which the line goes on past that end.
+So the organism's end leaves the core of the organism's class. Under a coarser class the same occurrence can still go on to a new member (`«亡于细者不必亡于粗»`: what ends under a finer class need not end under a coarser one), whether or not that step lies in the coarser class's core. Which of the two holds is open, and GS2 is to state and witness it. §5's last point then splits into two cases. Let `E′` be a coarser class, such as descent, under which the line goes on past that end.
 
 - **Within the core.** If the step from the member's last moment to what continues it lies within `E′`'s core, the dynamics fix the class that carries the line past the end, and §5's second argument for stands.
 - **Outside the core.** If that step lies only within `E′` and outside its core, the line goes on past the end under a class the dynamics do not single out. Then the reach past one's end rests on choosing the class, and the crux of 07 §4.2 returns unanswered.
