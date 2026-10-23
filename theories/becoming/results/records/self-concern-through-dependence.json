@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-23T08:53:47+00:00",
+  "reviewed_at_utc": "2026-10-23T09:25:33+00:00",
   "statement": {
-    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures, as centers sharing one condition do; drawn along need, it reaches a copy of what it needs exactly where the others could not together give what is drawn.",
-    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此；沿“所需”来画，它恰在其余者合起来给不出所汲取者之处达到其所需的该副本。"
+    "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures; drawn along need, it reaches a copy of what it needs exactly where the others could not together give what is drawn, and what feeds the top of any hierarchy it draws past.",
+    "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；沿“所需”来画，它恰在其余者合起来给不出所汲取者之处达到其所需的该副本，并达到它汲取超出其所持有的任何层级之顶层的供给者。"
   },
   "laws": [
     {
@@ -252,6 +252,73 @@
         "Becoming.SharedCopies.needs_some",
         "Becoming.SharedCopies.none_needed"
       ]
+    },
+    {
+      "en": "What the formations taking part give a family, each passing on at most what it takes from a supply, is at most what is taken from the supply; the supply after the step, with what it passed on, holds at most what it held and was given, so a supply that nothing feeds passes on at most what it loses, and an exhausted one nothing.",
+      "zh": "参与的构成给予某族者，若各自所给不超过它从某供给处所取，则至多是从供给处所取之量；该步之后供给处连同所传出者，至多是它原有的与所得的，所以无所供给的供给处至多传出它失去的，耗尽者什么也传不出。",
+      "declarations": [
+        "Becoming.Flow.PassesOn",
+        "Becoming.Flow.replenishment_le_uptake",
+        "Becoming.Flow.passed_le_supply",
+        "Becoming.Flow.passed_le_drop",
+        "Becoming.Flow.passed_zero_of_exhausted"
+      ]
+    },
+    {
+      "en": "Where each feeder gives the family at most what it takes from its own store, which nothing feeds, its capacity at a step is the store's fall, read off the web; with the stores its own, outside the family and not rising in the stretch, a consumer needs a feeder's giving exactly where the other active feeders' stores together fall short of the demand. Witness OwnStores: a store running out leaves its feeder no copy.",
+      "zh": "每个供给者给该族的不超过它从自己的、无所供给的库存所取时，它某步的容量就是库存的下降量，从依存网读出；库存各属其主、在该族之外且在这段步内不上升时，消耗者恰在其余活跃供给者的库存下降量合计少于需求之处需要某供给者的给予。见证 OwnStores：库存耗尽的供给者不再是副本。",
+      "declarations": [
+        "Becoming.Web.storeFall",
+        "Becoming.Flow.FedFromStores",
+        "Becoming.Flow.take_le_storeFall",
+        "Becoming.Flow.fedFromStores_within",
+        "Becoming.Flow.storeDrawn",
+        "Becoming.Flow.storeDrawn_balancesOn",
+        "Becoming.Flow.storeDrawn_given_store",
+        "Becoming.Flow.storeDrawn_taken_store",
+        "Becoming.Flow.storeDrawn_balances_store",
+        "Becoming.Flow.storeDrawn_fedFromStores",
+        "Becoming.Flow.storeDrawn_drawsPast",
+        "Becoming.Flow.storeDrawn_not_gives",
+        "Becoming.Flow.needs_giver_iff_store_short",
+        "Becoming.OwnStores.level",
+        "Becoming.OwnStores.web",
+        "Becoming.OwnStores.store",
+        "Becoming.OwnStores.decActive",
+        "Becoming.OwnStores.distinct",
+        "Becoming.OwnStores.apart",
+        "Becoming.OwnStores.user_outside",
+        "Becoming.OwnStores.own",
+        "Becoming.OwnStores.separate",
+        "Becoming.OwnStores.first_steady",
+        "Becoming.OwnStores.second_steady",
+        "Becoming.OwnStores.steady",
+        "Becoming.OwnStores.second_store_spent",
+        "Becoming.OwnStores.second_spent",
+        "Becoming.OwnStores.needs_first",
+        "Becoming.OwnStores.not_needs_second"
+      ]
+    },
+    {
+      "en": "Over a hierarchy of families, each given only what is passed on from the one above, what is drawn from the bottom across a stretch is at most what the whole hierarchy held and what was given to its top; so drawing past what the whole hierarchy holds needs giving into its top. Witness TwoTiers: a user needs the giving of its feeder's source.",
+      "zh": "在一个层级的诸族之上，若每族只得到从其上一族传来者，那么一段步内从底层取走的，至多是整个层级原有的与其顶层所得的；所以汲取超出整个层级所持有者需要向其顶层的给予。见证 TwoTiers：使用者需要其供给者之来源的给予。",
+      "declarations": [
+        "Becoming.topTier",
+        "Becoming.Web.stockTiers",
+        "Becoming.Flow.BalancesTiers",
+        "Becoming.Flow.PassesTiers",
+        "Becoming.Flow.uptake_le_tiers",
+        "Becoming.Flow.FedThroughTiers",
+        "Becoming.Flow.DrawsPastTiers",
+        "Becoming.Flow.needsSome_tiers",
+        "Becoming.TwoTiers.Part",
+        "Becoming.TwoTiers.Place",
+        "Becoming.TwoTiers.web",
+        "Becoming.TwoTiers.chain",
+        "Becoming.TwoTiers.drawn_not_supply",
+        "Becoming.TwoTiers.possible",
+        "Becoming.TwoTiers.needs_source"
+      ]
     }
   ],
   "hypotheses": [
@@ -274,6 +341,10 @@
     {
       "en": "For the exact law with capacities: the class listed without repetition, so that each member's capacity is counted once; activity and identity decided.",
       "zh": "就有容量时的精确之律：类列出而无重复，使每个成员的容量只计一次；活动与同一可判定。"
+    },
+    {
+      "en": "For stores: each member's store its own and outside the family, nothing feeding the stores, the stores not rising within the stretch. For a hierarchy: its families in order, each given only what is passed on from the one above.",
+      "zh": "就库存：每个成员的库存属其自身且在该族之外，无物供给库存，库存在这段步内不上升。就层级：其诸族有序，每族只得到从其上一族传来者。"
     }
   ],
   "does_not_show": [
@@ -309,8 +380,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Which web an actual family has, or what each formation can give: the capacities are supplied with the web, not read off its levels or off what a feeder itself holds or draws on.",
-      "zh": "实际的条件族有怎样的依存网，或每个构成能给多少：容量随依存网给定，并非从其水平或从供给者自身所持有、所汲取者读出。",
+      "en": "Which web an actual family has, which stores feed which formations, and which families form a hierarchy: the laws read capacities and bounds off a given web, and the arrangement of stores and tiers is supplied.",
+      "zh": "实际的条件族有怎样的依存网、哪些库存供给哪些构成、哪些族构成层级：这些规律从给定的依存网读出容量与界限，库存与层级的安排是给定的。",
       "kind": "scope"
     },
     {
@@ -361,6 +432,20 @@
         "en": "SharedCopies: one condition rising by one at every step, the user and three copies active throughout, each copy able to give one unit, so every step demands two. No copy can feed alone (SharedCopies.none_alone), the user needs some copy's giving (SharedCopies.needs_some), and no copy's (SharedCopies.none_needed).",
         "zh": "SharedCopies：一个每步上升一个单位的条件，使用者与三个副本始终活跃，每个副本能给一个单位，所以每步需要两个。没有副本能单独供给（SharedCopies.none_alone），使用者需要某个副本的给予（SharedCopies.needs_some），而不需要哪一个的（SharedCopies.none_needed）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "OwnStores: two feeders on their own stores, the first holding three and falling by one a step, the second holding one; the user draws one a step. Once its store is empty the second gives nothing (OwnStores.second_spent), so the user needs the first feeder and not the second (OwnStores.needs_first, OwnStores.not_needs_second).",
+        "zh": "OwnStores：两个各依自己库存的供给者，第一个持有三、每步降一，第二个持有一；使用者每步汲取一。库存耗尽后第二个什么也给不出（OwnStores.second_spent），所以使用者需要第一个而不需要第二个（OwnStores.needs_first、OwnStores.not_needs_second）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "TwoTiers: a user draws on a condition a feeder gives to, passing on what it takes from its supply, which a source gives to; both stand empty. The chain is possible (TwoTiers.possible), and the user needs the source's giving to the supply (TwoTiers.needs_source).",
+        "zh": "TwoTiers：使用者汲取某条件，一个供给者给予它并传出从自身供给处所取者，一个来源给予该供给处；两者都空着。这一链条是可能的（TwoTiers.possible），使用者需要来源对供给处的给予（TwoTiers.needs_source）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -372,12 +457,12 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T085035.683962Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382, 383 and 384; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T085035.683962Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382、383 与 384 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T092142.312824Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382, 383, 384 and 385; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T092142.312824Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382、383、384 与 385 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "A capacity read off the levels of what a feeder itself holds or draws on, joining its capacity to its own dependence; graded need, under which a feeder is needed in degree; an independent review.",
-    "zh": "从供给者自身所持有、所汲取者的水平读出容量，使其容量与其自身的依存相连；分级的“所需”，使供给者按程度被需要；独立审查。"
+    "en": "Capacities across a hierarchy whose upper tier divides its giving among several stores; graded need, under which a feeder is needed in degree; an independent review.",
+    "zh": "上层把给予分给多个库存的层级中的容量；分级的“所需”，使供给者按程度被需要；独立审查。"
   },
   "correspondence": {
     "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting exactly at copies. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
@@ -519,11 +604,17 @@
         "Becoming.FeedersInTurn.decActive",
         "Becoming.FeedersInTurn.needs_both",
         "Becoming.FeedersInTurn.web",
+        "Becoming.Flow.BalancesTiers",
         "Becoming.Flow.DrawsPast",
+        "Becoming.Flow.DrawsPastTiers",
+        "Becoming.Flow.FedFromStores",
         "Becoming.Flow.FedOnlyBy",
         "Becoming.Flow.FedOnlyOn",
         "Becoming.Flow.FedOnlyWithin",
+        "Becoming.Flow.FedThroughTiers",
         "Becoming.Flow.GivesWithin",
+        "Becoming.Flow.PassesOn",
+        "Becoming.Flow.PassesTiers",
         "Becoming.Flow.centersWithin_feeding_of_common",
         "Becoming.Flow.centersWithin_influence_of_common",
         "Becoming.Flow.demand_le_replenishment",
@@ -533,6 +624,7 @@
         "Becoming.Flow.drawnAcross_drawsPast",
         "Becoming.Flow.drawnAcross_fedOnlyOn",
         "Becoming.Flow.drawnAcross_gives",
+        "Becoming.Flow.fedFromStores_within",
         "Becoming.Flow.feedsAlone_iff",
         "Becoming.Flow.firstActiveOther",
         "Becoming.Flow.firstActiveOther_active",
@@ -548,17 +640,23 @@
         "Becoming.Flow.leastDrawn_gives",
         "Becoming.Flow.needsSome_of_drawsPast",
         "Becoming.Flow.needsSome_on",
+        "Becoming.Flow.needsSome_tiers",
         "Becoming.Flow.needsSome_within",
         "Becoming.Flow.needs_giver_iff_alone",
         "Becoming.Flow.needs_giver_iff_only",
         "Becoming.Flow.needs_giver_iff_only_on",
         "Becoming.Flow.needs_giver_iff_only_within",
         "Becoming.Flow.needs_giver_iff_short",
+        "Becoming.Flow.needs_giver_iff_store_short",
         "Becoming.Flow.needs_giver_of_short",
         "Becoming.Flow.ownClosure_feeding_invariant_of_common",
         "Becoming.Flow.ownClosure_influence_invariant_of_common",
         "Becoming.Flow.partAlone_on",
         "Becoming.Flow.partAlone_within_iff",
+        "Becoming.Flow.passed_le_drop",
+        "Becoming.Flow.passed_le_supply",
+        "Becoming.Flow.passed_zero_of_exhausted",
+        "Becoming.Flow.replenishment_le_uptake",
         "Becoming.Flow.rise_le_given",
         "Becoming.Flow.sharedDrawn",
         "Becoming.Flow.sharedDrawn_acting",
@@ -570,6 +668,16 @@
         "Becoming.Flow.sharedDrawn_gives",
         "Becoming.Flow.sharedDrawn_not_gives",
         "Becoming.Flow.sharedDrawn_quiet",
+        "Becoming.Flow.storeDrawn",
+        "Becoming.Flow.storeDrawn_balancesOn",
+        "Becoming.Flow.storeDrawn_balances_store",
+        "Becoming.Flow.storeDrawn_drawsPast",
+        "Becoming.Flow.storeDrawn_fedFromStores",
+        "Becoming.Flow.storeDrawn_given_store",
+        "Becoming.Flow.storeDrawn_not_gives",
+        "Becoming.Flow.storeDrawn_taken_store",
+        "Becoming.Flow.take_le_storeFall",
+        "Becoming.Flow.uptake_le_tiers",
         "Becoming.Marked",
         "Becoming.Needs",
         "Becoming.Needs.refl",
@@ -577,6 +685,22 @@
         "Becoming.NeedsPart",
         "Becoming.NeedsSome",
         "Becoming.NeedsSomePart",
+        "Becoming.OwnStores.apart",
+        "Becoming.OwnStores.decActive",
+        "Becoming.OwnStores.distinct",
+        "Becoming.OwnStores.first_steady",
+        "Becoming.OwnStores.level",
+        "Becoming.OwnStores.needs_first",
+        "Becoming.OwnStores.not_needs_second",
+        "Becoming.OwnStores.own",
+        "Becoming.OwnStores.second_spent",
+        "Becoming.OwnStores.second_steady",
+        "Becoming.OwnStores.second_store_spent",
+        "Becoming.OwnStores.separate",
+        "Becoming.OwnStores.steady",
+        "Becoming.OwnStores.store",
+        "Becoming.OwnStores.user_outside",
+        "Becoming.OwnStores.web",
         "Becoming.PartAlone",
         "Becoming.SharedCopies.apart",
         "Becoming.SharedCopies.calls",
@@ -592,6 +716,13 @@
         "Becoming.SharedCopies.user_outside",
         "Becoming.SharedCopies.web",
         "Becoming.SharedCopies.without_two",
+        "Becoming.TwoTiers.Part",
+        "Becoming.TwoTiers.Place",
+        "Becoming.TwoTiers.chain",
+        "Becoming.TwoTiers.drawn_not_supply",
+        "Becoming.TwoTiers.needs_source",
+        "Becoming.TwoTiers.possible",
+        "Becoming.TwoTiers.web",
         "Becoming.Web.CallsForGiving",
         "Becoming.Web.CanFeedAlone",
         "Becoming.Web.callsForGiving_iff_demand_pos",
@@ -605,6 +736,8 @@
         "Becoming.Web.otherCapacity",
         "Becoming.Web.otherCapacity_le",
         "Becoming.Web.shares",
+        "Becoming.Web.stockTiers",
+        "Becoming.Web.storeFall",
         "Becoming.Web.total_demandAt",
         "Becoming.Web.total_drawnUnit",
         "Becoming.decSomeEq",
@@ -620,6 +753,7 @@
         "Becoming.pairUp",
         "Becoming.repeatOnto",
         "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
+        "Becoming.topTier",
         "Becoming.total_eq_at",
         "Becoming.total_pairUp_fst",
         "Becoming.total_pairUp_snd_le",
@@ -630,17 +764,17 @@
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "a06b1a1ccc37ca2531c1915eaf8e2b0f16f375e085bcc58c98e79a1f2028f3a8"
+      "sha256": "e35155425e21ddb996d79f74f3b116a197fb212770af01056e5acefdb9c78c43"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T085035.683962Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json",
       "role": "receipt",
-      "sha256": "02aba7cf1f784f45b4f7d76eb60f337a5a5a62996cc9013a4bdea0806ea6082e"
+      "sha256": "4ad129785992fd18ddb54464b6143683a8af22dbe451900b4749fd522b5db259"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "85b07f20ee6483914130b2902d7d271854017fffbb6c59b112a4b3e26f7aab56"
+      "sha256": "560475eeb69c5fe4f4bf39fc05539af121852f2296761c6bd74692e018ed164d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -650,17 +784,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "a3d277e7a89edb573235c0988181b6cc9288fb0a19d857d6d6c29b638f218d5d"
+      "sha256": "a4dad518e8794e2c1f364c7efb6aade60a6ff7131c534a54442289ad9cdbe9c9"
     },
     {
       "path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
       "role": "statement",
-      "sha256": "340947f75848626494cefdba2eb3ee4f9b700cde1761abedd9eefcf737be0c07"
+      "sha256": "2c818f6988afbace3e98353475bc72982ad1655b99d412b41a16ce9a173aba56"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b8b904891551a608d8578c84c16f32757794f30765ee53eee04e589b214c8cc7"
+      "sha256": "cc83d3ba693a26bb10eca79e6bce870ee49e7081a75d9c0aa8119197fb472bd5"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -671,7 +805,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T085035.683962Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -697,6 +831,10 @@
     {
       "en": "23 October 2026: extended (IV3e): the shares and the flow sharing the giving within capacities; need with capacities exact (a feeder needed exactly where the others could not together give the demand); the SharedCopies witness; the statement's capacity clause made exact and the converse removed from the boundaries; study section 384.",
       "zh": "2026年10月23日：扩展（IV3e）：配对份额与在容量之内分担给予之流；有容量时的“所需”成为精确之律（供给者恰在其余者合起来给不出需求之处被需要）；SharedCopies 见证；陈述的容量一句改为精确，逆向从边界中移除；研究第 384 节。"
+    },
+    {
+      "en": "23 October 2026: extended (IV3f): what a feeder can give, read off its own supply (the supply bounds, capacities read off the feeders' own stores and the exact law with them); need up a hierarchy; the OwnStores and TwoTiers witnesses; the statement gained the hierarchy; study section 385.",
+      "zh": "2026年10月23日：扩展（IV3f）：从供给者自身的供给读出它能给多少（供给之界、从各自库存读出的容量及其下的精确之律）；“所需”沿层级上溯；OwnStores 与 TwoTiers 见证；陈述增加了层级；研究第 385 节。"
     }
   ]
 }

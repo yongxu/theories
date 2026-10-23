@@ -1,11 +1,11 @@
 {
- "commit": "0c4af38a7832170c8746f5be922a87be08cdacfe",
+ "commit": "7f06b4ae66b0cf751d059f6660918d8bbf3bb8c9",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T081501.790566Z",
+ "core_receipt_at_commit": "20261023T085035.683962Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 316,
- "constants": 42980,
- "spine_theorems": 14320,
+ "constants": 43122,
+ "spine_theorems": 14351,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 1056,
   "statement on Process/Frame/Run/Trace": 2953,
-  "statement on World/Flow/Web": 3416,
+  "statement on World/Flow/Web": 3441,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 181,
-  "used by a theorem on the base": 5169,
+  "used by a theorem on the base": 5175,
   "instance on the base recorded": 153,
   "apart: own vocabulary": 1040,
   "apart: prelude-only statement": 91
@@ -160,7 +160,7 @@
  "apart_by_module": {
   "Becoming.Weightings": [
    97,
-   258
+   289
   ],
   "Becoming.Reproduction": [
    80,
@@ -670,15 +670,15 @@
  "rings": {
   "core": {
    "modules": 300,
-   "theorems": 13560,
+   "theorems": 13591,
    "apart": 1037,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2742,
-    "statement on World/Flow/Web": 3391,
+    "statement on World/Flow/Web": 3416,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 170,
-    "used by a theorem on the base": 4810,
+    "used by a theorem on the base": 4816,
     "instance on the base recorded": 153,
     "apart: own vocabulary": 947,
     "apart: prelude-only statement": 90
@@ -11977,6 +11977,22 @@
   "Becoming.Flow.sharedDrawn_drawsPast": "statement on World/Flow/Web",
   "Becoming.Flow.sharedDrawn_not_gives": "statement on World/Flow/Web",
   "Becoming.Flow.needs_giver_iff_short": "statement on World/Flow/Web",
+  "Becoming.Flow.replenishment_le_uptake": "statement on World/Flow/Web",
+  "Becoming.Flow.passed_le_supply": "statement on World/Flow/Web",
+  "Becoming.Flow.passed_le_drop": "statement on World/Flow/Web",
+  "Becoming.Flow.passed_zero_of_exhausted": "statement on World/Flow/Web",
+  "Becoming.Flow.uptake_le_tiers": "statement on World/Flow/Web",
+  "Becoming.Flow.needsSome_tiers": "statement on World/Flow/Web",
+  "Becoming.Flow.take_le_storeFall": "statement on World/Flow/Web",
+  "Becoming.Flow.fedFromStores_within": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_balancesOn": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_given_store": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_taken_store": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_balances_store": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_fedFromStores": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_drawsPast": "statement on World/Flow/Web",
+  "Becoming.Flow.storeDrawn_not_gives": "statement on World/Flow/Web",
+  "Becoming.Flow.needs_giver_iff_store_short": "statement on World/Flow/Web",
   "Becoming.Feeders.mem_pair": "used by a theorem on the base",
   "Becoming.Feeders.fedOnlyBy_withFirst": "statement on World/Flow/Web",
   "Becoming.Feeders.fedOnlyBy_withSecond": "statement on World/Flow/Web",
@@ -12010,6 +12026,21 @@
   "Becoming.SharedCopies.none_alone": "statement on World/Flow/Web",
   "Becoming.SharedCopies.needs_some": "statement on World/Flow/Web",
   "Becoming.SharedCopies.none_needed": "statement on World/Flow/Web",
+  "Becoming.TwoTiers.drawn_not_supply": "used by a theorem on the base",
+  "Becoming.TwoTiers.possible": "statement on World/Flow/Web",
+  "Becoming.TwoTiers.needs_source": "statement on World/Flow/Web",
+  "Becoming.OwnStores.distinct": "used by a theorem on the base",
+  "Becoming.OwnStores.apart": "used by a theorem on the base",
+  "Becoming.OwnStores.user_outside": "used by a theorem on the base",
+  "Becoming.OwnStores.own": "used by a theorem on the base",
+  "Becoming.OwnStores.separate": "used by a theorem on the base",
+  "Becoming.OwnStores.first_steady": "statement on World/Flow/Web",
+  "Becoming.OwnStores.second_steady": "statement on World/Flow/Web",
+  "Becoming.OwnStores.steady": "statement on World/Flow/Web",
+  "Becoming.OwnStores.second_store_spent": "statement on World/Flow/Web",
+  "Becoming.OwnStores.second_spent": "statement on World/Flow/Web",
+  "Becoming.OwnStores.needs_first": "statement on World/Flow/Web",
+  "Becoming.OwnStores.not_needs_second": "statement on World/Flow/Web",
   "Becoming.Weighting.increasingInOwn_of_increasing": "apart: own vocabulary",
   "Becoming.Weighting.increasingInOwn_iff_increasing": "apart: own vocabulary",
   "Becoming.Weighting.widensOwn_iff_every_increasingInOwn": "used by a theorem on the base",

@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261023T085035.683962Z",
+  "utc": "20261023T092142.312824Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261023T085035.683962Z",
+  "retained_run": "becoming-checks/20261023T092142.312824Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -1831,7 +1831,7 @@
     "Becoming.JoiningRoles": "721bbba16a2eed321383c4183954f41425ca91b92fc3f25ee8f4c6147b4bcb96",
     "Becoming.Postponement": "7d7fb8f831c6bcd93788e4b5d8c396720ee7f9d80b708bd93a83a4ec63f268d2",
     "Becoming.Boundaries": "6f80291124914c32ad379e25853eea9bb56cf46138b870b7ef06988579ec1c72",
-    "Becoming.Weightings": "a06b1a1ccc37ca2531c1915eaf8e2b0f16f375e085bcc58c98e79a1f2028f3a8",
+    "Becoming.Weightings": "e35155425e21ddb996d79f74f3b116a197fb212770af01056e5acefdb9c78c43",
     "Becoming.Reading": "597a696fe502aa1fd1d667cef4788e2144612343e162d4fabd05f9fbee71ed16",
     "Becoming.ExchangePremises": "e0acae7f7a2010316afdc30e920c4b939d44e71874e0d40bd1aa53605ddd12a0",
     "Becoming.Thresholds": "062babfffda150c6165c8bd8c120bcdd804c51960d19161109a418c6f5a4147d",
@@ -1914,14 +1914,14 @@
     "Becoming.Coverage": "cb6bfd626354610d1bcf6c7a6be3518dd54bd3246db56c806fefb26f8c5d75a6",
     "Becoming.PlaceTransitionNets": "e6293a8d5ca23f901278b557e5f627df8237ca81f1ea4b376fc49001751130fc",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "1cbb1bf0b2d1fa8580f9d1439926b04074e7db43d88bc44fdd55920e118efbd2"
+    "Becoming": "6da804a84d46a1dd87b9e4a15a7c1c0c5703cba261fcde9ee2c34a9735d06010"
   },
   "checker_sha256": {
     "check_becoming.py": "b422921cda1ce320cf01596fb32a15a19f99009d289a46eb9cd6c56762cf4fd8",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "source_commit": {
-    "main": "0c4af38a7832170c8746f5be922a87be08cdacfe",
+    "main": "7f06b4ae66b0cf751d059f6660918d8bbf3bb8c9",
     "copied": [
       "Becoming.Weightings.lean",
       "Becoming.lean"
@@ -4716,11 +4716,11 @@
         "retained": "/Users/ren/theories/.claude/worktrees/agent-a239cfcdeaeb002f7/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T054022.933262Z"
       },
       "Becoming.Weightings.log": {
-        "utc": "20261023T084738.598514Z",
+        "utc": "20261023T091720.199580Z",
         "retained": "scratch build, not retained: /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/tree"
       },
       "BecomingWeightingsAxiomAudit.log": {
-        "utc": "20261023T084738.598514Z",
+        "utc": "20261023T091720.199580Z",
         "retained": "scratch build, not retained: /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/tree"
       },
       "Becoming.Reading.log": {
@@ -7658,9 +7658,9 @@
       "Becoming.Boundaries.log": "60c59d8e377190c6746b2cfd6d30b7b73bda7f15c385c1c6e702c732e3bc0c3f",
       "BecomingBoundariesAxiomAudit.log": "0043848d2625f6050c38ef0a81b87632d7639d4869f239bfa0106e2b47ad31b9",
       "BecomingBoundariesSignatures.log": "55b913b088fd0d280606729d2bffc2b5c0cb72e8e79e6599bcb8ade890859588",
-      "Becoming.Weightings.log": "b8a3d30d9d2f751945bf488432530866dcd67bf76141c57d9394c8e0ed2cd61c",
-      "BecomingWeightingsAxiomAudit.log": "bf00857d642c1d5ef11456a7f2511dcea1fddbd4cd04e9ab1eb334d687faf889",
-      "BecomingWeightingsSignatures.log": "3db51ccb135d75477b4c251c0a563f464974e829c1fa888eae627c4e26a35d95",
+      "Becoming.Weightings.log": "912280fb8dbb65664e34ec38083f9c7ce9ae6aaa0b34100a8734da13679e8f69",
+      "BecomingWeightingsAxiomAudit.log": "a7050a6cc11820c4b12dc76126695cc06842fa80aaf991d085ca607c3104e0c0",
+      "BecomingWeightingsSignatures.log": "50d433cae4b5e6c7f199a69f1c8130ad69ede7c13d787d9595a6f3fd8ecb1cbe",
       "Becoming.Reading.log": "bebc718511d589c59c731200985701e1f0db727cb8575e283924fb75f04fd9cc",
       "BecomingReadingAxiomAudit.log": "0e7845561dc120c1d4fcbd649c1e49fb9d2427e70f7870300e511f90b1fae177",
       "BecomingReadingSignatures.log": "72ff9a0d652f3689dc0f308c5bf31c1ee771aeef4054730ec5bb9326c9ab2b30",
@@ -7907,11 +7907,11 @@
       "Becoming.ResponseLearning.log": "d6f98737ef2804a70c7e97a841dff9b85031f45edafd3666d2de458fc45f4252",
       "BecomingResponseLearningAxiomAudit.log": "6201ad97f02f327286cab93e11eeeb54e5b92786f30f2e08404e36b1d856b948",
       "BecomingResponseLearningSignatures.log": "a4f425e17700e4c306151117e7d6f27e1a2eb84d175b657bfcd49631c987d785",
-      "Becoming.log": "8879f670621b3a21dcfb18c2b684cd8b2842eb57fb81892643a575d62d02607b",
-      "BecomingAxiomAudit.log": "6215557dde6b1922c5e2c1e6ad0beafaa2713c2cc6065401766db0c518d9818b",
-      "BecomingSignatures.log": "04cc55dac71cf1180fea8270ae718634a057c77b2d866c988f864f32ed696fae",
-      "EnvironmentAudit.log": "17d6852a074951c689ce7af6f9b6afe51cc900e4f459925f17a12a062530739d",
-      "Controls.log": "f23d7183ddd51378747577e8062924da988e3da409c753cbbffce03442e8d420",
+      "Becoming.log": "5bb09cc9dd6f1dfd3989a29509cae4b4afb5623a41b7c0cf15f9ce75145f4c41",
+      "BecomingAxiomAudit.log": "4208b7150f74041260b3affa2410207df206382b73f1a9c3a67c26f2b929bde2",
+      "BecomingSignatures.log": "72235e571d75b907d86cf083c858f8a1e009c16894514517f88277b333d794dd",
+      "EnvironmentAudit.log": "977cb108eceaea24499179de8a04c0310842fe6aea3d816354344137ce42b721",
+      "Controls.log": "d2edf3fdc7c1f9bdadb4da85c1dd0d09035c94790e4b87a4c0905c582a61cc87",
       "Becoming.Grammar.PreludeOnly.log": "aa8504223d3aab13f627b8bdb3e02007980a1d88b379d86c2bcd45f79d5abe59",
       "Becoming.GrammarReadings.PreludeOnly.log": "6a1701884061823945c1b9ff53cc7b80fc90b0d8dfdb9f13d79731170a786ae9",
       "Becoming.GrammarMap.PreludeOnly.log": "4d3da615b4634efa6e9180c76c50366c7a32b382a4e0ebc3a707c3910d3c957e",
@@ -8144,7 +8144,7 @@
       "Becoming.JoiningRoles.PreludeOnly.log": "e348f0c02227776cd8f44a10bfa61154785a2f1d1a25948caeea6143d00d8df0",
       "Becoming.Postponement.PreludeOnly.log": "becb66592fffde389f6a84f0d119d25f62b61569e5b88550ff19b8d2dfe662bc",
       "Becoming.Boundaries.PreludeOnly.log": "1ba3b29ca06dde1ae1f5be9b267b65f4bf252cb5084a8bc15e2af9c6522a526e",
-      "Becoming.Weightings.PreludeOnly.log": "fcd2dc415ea1da1a68e93cf77885f80ed9ff1a222d94f58e94b0d042e732002d",
+      "Becoming.Weightings.PreludeOnly.log": "6d2641b44845459638c120a40423145298c9c1919359355d667ff7cb79f8fde6",
       "Becoming.Reading.PreludeOnly.log": "1dd9475d3d35fc5cb1a8ac95fd45f11c896b1f4babc7e20d0710379cb1ab9f65",
       "Becoming.ExchangePremises.PreludeOnly.log": "75f25a5bd18fd5c3045d3882e2d0b028614ad8333423ada965dfacb4fc16a353",
       "Becoming.Thresholds.PreludeOnly.log": "9e1ada479d7f4b1b9ef4063b4b266683e26f8ee25126db5bc53b28005a55f9f3",
@@ -8227,7 +8227,7 @@
       "Becoming.Coverage.PreludeOnly.log": "fcf5e570cbb44edadf46958c37d2d6d2f46fa3d61a317a1a07a3553c1058fe86",
       "Becoming.PlaceTransitionNets.PreludeOnly.log": "25e53d250e301cb5163aece1e9d77a8c14e275784f07ecc72cf4dd075e593764",
       "Becoming.ResponseLearning.PreludeOnly.log": "21ecfb9a3923ebe1de8488c2f4a7b20858c9cb102a100117e38f168fbfc33fbd",
-      "Becoming.PreludeOnly.log": "4f5518a600b5b0e0c22cc79a5525979cb9dbf37b4e97e1ddd08a05b9e7e7c008"
+      "Becoming.PreludeOnly.log": "6a1265eb7f1eb04e29f652906e6d01d231caebb154958ca8685417478aa53712"
     }
   },
   "superseded_modules": {
@@ -9695,6 +9695,12 @@
     "Becoming.Flow.Balances.rise_paid_from_beyond": [
       "paid"
     ],
+    "Becoming.OwnStores.second_store_spent": [
+      "spent"
+    ],
+    "Becoming.OwnStores.second_spent": [
+      "spent"
+    ],
     "Becoming.Coverage.charge": [
       "charge"
     ]
@@ -9935,7 +9941,7 @@
     "Becoming.JoiningRoles": 48,
     "Becoming.Postponement": 46,
     "Becoming.Boundaries": 87,
-    "Becoming.Weightings": 689,
+    "Becoming.Weightings": 831,
     "Becoming.Reading": 69,
     "Becoming.ExchangePremises": 189,
     "Becoming.Thresholds": 62,
@@ -89059,7 +89065,7 @@
       "module": "Becoming.Weightings",
       "spine": true,
       "layer": "core",
-      "theorems": 258,
+      "theorems": 289,
       "declarations": [
         {
           "kind": "def",
@@ -90091,6 +90097,110 @@
         },
         {
           "kind": "def",
+          "name": "Becoming.Flow.PassesOn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.replenishment_le_uptake"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.passed_le_supply"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.passed_le_drop"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.passed_zero_of_exhausted"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.topTier"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Web.stockTiers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Web.storeFall"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.BalancesTiers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.PassesTiers"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.uptake_le_tiers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.FedThroughTiers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.DrawsPastTiers"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.needsSome_tiers"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.FedFromStores"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.take_le_storeFall"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.fedFromStores_within"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.Flow.storeDrawn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_balancesOn"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_given_store"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_taken_store"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_balances_store"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_fedFromStores"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_drawsPast"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.storeDrawn_not_gives"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.Flow.needs_giver_iff_store_short"
+        },
+        {
+          "kind": "def",
           "name": "Becoming.Feeders.withFirst"
         },
         {
@@ -90280,6 +90390,98 @@
         {
           "kind": "theorem",
           "name": "Becoming.SharedCopies.none_needed"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.TwoTiers.Part"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.TwoTiers.Place"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.TwoTiers.web"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.TwoTiers.chain"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.TwoTiers.drawn_not_supply"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.TwoTiers.possible"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.TwoTiers.needs_source"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OwnStores.level"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OwnStores.web"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OwnStores.store"
+        },
+        {
+          "kind": "instance",
+          "name": "Becoming.OwnStores.decActive"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.distinct"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.apart"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.user_outside"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.own"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.separate"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.first_steady"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.second_steady"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.steady"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.second_store_spent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.second_spent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.needs_first"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OwnStores.not_needs_second"
         },
         {
           "kind": "def",
@@ -90776,6 +90978,32 @@
         "Becoming.Flow.sharedDrawn_drawsPast": [],
         "Becoming.Flow.sharedDrawn_not_gives": [],
         "Becoming.Flow.needs_giver_iff_short": [],
+        "Becoming.Flow.PassesOn": [],
+        "Becoming.Flow.replenishment_le_uptake": [],
+        "Becoming.Flow.passed_le_supply": [],
+        "Becoming.Flow.passed_le_drop": [],
+        "Becoming.Flow.passed_zero_of_exhausted": [],
+        "Becoming.topTier": [],
+        "Becoming.Web.stockTiers": [],
+        "Becoming.Web.storeFall": [],
+        "Becoming.Flow.BalancesTiers": [],
+        "Becoming.Flow.PassesTiers": [],
+        "Becoming.Flow.uptake_le_tiers": [],
+        "Becoming.Flow.FedThroughTiers": [],
+        "Becoming.Flow.DrawsPastTiers": [],
+        "Becoming.Flow.needsSome_tiers": [],
+        "Becoming.Flow.FedFromStores": [],
+        "Becoming.Flow.take_le_storeFall": [],
+        "Becoming.Flow.fedFromStores_within": [],
+        "Becoming.Flow.storeDrawn": [],
+        "Becoming.Flow.storeDrawn_balancesOn": [],
+        "Becoming.Flow.storeDrawn_given_store": [],
+        "Becoming.Flow.storeDrawn_taken_store": [],
+        "Becoming.Flow.storeDrawn_balances_store": [],
+        "Becoming.Flow.storeDrawn_fedFromStores": [],
+        "Becoming.Flow.storeDrawn_drawsPast": [],
+        "Becoming.Flow.storeDrawn_not_gives": [],
+        "Becoming.Flow.needs_giver_iff_store_short": [],
         "Becoming.Feeders.withFirst": [],
         "Becoming.Feeders.withSecond": [],
         "Becoming.Feeders.web": [],
@@ -90824,6 +91052,29 @@
         "Becoming.SharedCopies.none_alone": [],
         "Becoming.SharedCopies.needs_some": [],
         "Becoming.SharedCopies.none_needed": [],
+        "Becoming.TwoTiers.Part": [],
+        "Becoming.TwoTiers.Place": [],
+        "Becoming.TwoTiers.web": [],
+        "Becoming.TwoTiers.chain": [],
+        "Becoming.TwoTiers.drawn_not_supply": [],
+        "Becoming.TwoTiers.possible": [],
+        "Becoming.TwoTiers.needs_source": [],
+        "Becoming.OwnStores.level": [],
+        "Becoming.OwnStores.web": [],
+        "Becoming.OwnStores.store": [],
+        "Becoming.OwnStores.decActive": [],
+        "Becoming.OwnStores.distinct": [],
+        "Becoming.OwnStores.apart": [],
+        "Becoming.OwnStores.user_outside": [],
+        "Becoming.OwnStores.own": [],
+        "Becoming.OwnStores.separate": [],
+        "Becoming.OwnStores.first_steady": [],
+        "Becoming.OwnStores.second_steady": [],
+        "Becoming.OwnStores.steady": [],
+        "Becoming.OwnStores.second_store_spent": [],
+        "Becoming.OwnStores.second_spent": [],
+        "Becoming.OwnStores.needs_first": [],
+        "Becoming.OwnStores.not_needs_second": [],
         "Becoming.Weighting.AddsOwn": [],
         "Becoming.Weighting.IncreasingInOwn": [],
         "Becoming.Weighting.increasingInOwn_of_increasing": [],
@@ -112681,19 +112932,19 @@
   "artifact_sha256": {
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.Weightings.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.Weightings.lean": "a06b1a1ccc37ca2531c1915eaf8e2b0f16f375e085bcc58c98e79a1f2028f3a8",
-    "Becoming.lean": "1cbb1bf0b2d1fa8580f9d1439926b04074e7db43d88bc44fdd55920e118efbd2",
+    "Becoming.Weightings.lean": "e35155425e21ddb996d79f74f3b116a197fb212770af01056e5acefdb9c78c43",
+    "Becoming.lean": "6da804a84d46a1dd87b9e4a15a7c1c0c5703cba261fcde9ee2c34a9735d06010",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingWeightingsSignatures.lean": "79f2c36b20d001cd5b20b65dc28b268d5b45886e739a43815e4929d888642485",
-    "BecomingWeightingsSignatures.log": "bf065a1e274298d93cf76ebe189fb820305dd77fa25a81e1379798f346ea10fb",
+    "BecomingWeightingsSignatures.lean": "ad3a960a3b1ae2fd30615953428709a4984c17c9b8b6ffdeff4df45d3b4992c0",
+    "BecomingWeightingsSignatures.log": "896aca9cc3b3f28a2945d6ac1ed6d0583dff4c263fff456a94e45530e50b7ced",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "EnvironmentAudit.lean": "0c03d6315b47187a916786a1fe58d8e940e7e4285d9e7feecac86d7b946a90d7",
-    "EnvironmentAudit.log": "2f4c63dbdd930ef055e177eb26dcc7a9f8f941c7c09f17bb70aac55b128af13b",
+    "EnvironmentAudit.log": "4047da450726efec3733cb0aa373d4551214ef82c277b445b71bdc32d13aac21",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

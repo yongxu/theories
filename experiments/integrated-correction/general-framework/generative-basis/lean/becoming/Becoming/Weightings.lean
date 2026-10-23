@@ -193,6 +193,32 @@ order every standpoint shares when each weighs what can form in its own way.
   `SharedCopies` three copies of one unit each meet a demand of two: none can feed alone, the user
   needs some copy's giving, and no copy's (`SharedCopies.none_alone`, `SharedCopies.needs_some`,
   `SharedCopies.none_needed`).
+* **What a feeder can give, read off its own supply.** Where what the formations taking part give a
+  family is passed on from a supply, each giving at most what it takes from it (`Flow.PassesOn`),
+  the family is given at a step at most what is taken from the supply
+  (`Flow.replenishment_le_uptake`); the supply after the step, with what it passed on, holds at
+  most what it held and was given (`Flow.passed_le_supply`), so a supply that nothing feeds passes
+  on at most what it loses (`Flow.passed_le_drop`), and an exhausted one nothing
+  (`Flow.passed_zero_of_exhausted`). Where each feeder gives what it takes from its own store, which
+  nothing feeds (`Flow.FedFromStores`), what it takes is at most what the store falls
+  (`Flow.take_le_storeFall`), so the flows are read off the web with capacities, each feeder's
+  capacity at a step being its store's fall (`Web.storeFall`, `Flow.fedFromStores_within`): the
+  capacity is read off the web. Where the stores are the feeders' own, lie outside the family and
+  do not rise within the stretch, the exact law of need holds with these capacities
+  (`Flow.needs_giver_iff_store_short`, by `Flow.storeDrawn`, the shared flow in which each feeder
+  also takes its store's fall). In `OwnStores` the second feeder's store runs out after one step,
+  from then on it gives nothing (`OwnStores.second_spent`), and the user needs the first feeder and
+  not the second (`OwnStores.needs_first`, `OwnStores.not_needs_second`).
+* **Need up a hierarchy.** A hierarchy is a family with families above it, in order (`topTier`,
+  `Web.stockTiers`). Over a stretch in which every family balances and is given only what is passed
+  on from the family above it (`Flow.BalancesTiers`, `Flow.PassesTiers`), what is drawn from the
+  bottom is at most what the whole hierarchy held and what was given to its top
+  (`Flow.uptake_le_tiers`). So, where only active formations give and only a class gives to the top
+  (`Flow.FedThroughTiers`), a formation drawing past what the whole hierarchy holds
+  (`Flow.DrawsPastTiers`) needs some member of that class (`Flow.needsSome_tiers`); with no family
+  above the bottom it is `Flow.needsSome_on`. In `TwoTiers` a user draws on a condition a feeder
+  gives to, passing on what it takes from its supply, which a source gives to: the user needs the
+  source's giving to the supply (`TwoTiers.needs_source`, `TwoTiers.possible`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -253,7 +279,10 @@ so with many such copies the presupposition reaches the class and none of them, 
 reaches that one. With capacities a copy counts by what it can give: self-concern reaches a feeder
 exactly where the others together could not give what a step demands, so two copies that can each
 give only part of it are both reached, three of one unit each against a demand of two leave none
-reached, and redundancy is a matter of capacity, not of number. Read an order increasing in
+reached, and redundancy is a matter of capacity, not of number. Read a feeder's capacity as what
+its own supply passes on: a feeder whose store runs out is no copy from then on, and self-concern,
+drawn along need past what a hierarchy holds, reaches what feeds its top, so its reach is not
+bounded by the families a center draws on directly. Read an order increasing in
 its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
@@ -286,8 +315,10 @@ dispersed its weights are, each measurable and none derived; that the impartial 
 every standpoint shares rather than one privileged weighting; which formations are centers; the
 step of invariance itself; which relation a continuation is carried along, whether actual centers
 depend on one another, which webs actual families have and what each formation can give at a step
-(the capacities are supplied with the web), the decision of activity and identity the exact law of
-need uses, and that a standpoint's order is increasing in its own continuation.
+(the capacities are supplied with the web, or read off stores the web is given with), which
+families form a hierarchy and that nothing enters one below its top, the decision of activity and
+identity the exact law of need uses, and that a standpoint's order is increasing in its own
+continuation.
 The representation commits to finite listings of steps and formations, two-valued admission and
 natural-number weights. No ethical predicate or axiom occurs.
 -/
@@ -2857,6 +2888,388 @@ theorem needs_giver_iff_short [DecidableEq F] [DecidableEq C] {W : Web F C}
 
 end Flow
 
+/-! ## What a feeder can give, read off its own supply, and need up a hierarchy -/
+
+namespace Flow
+
+variable {C : Type}
+
+/-- What the formations taking part give `cs` across the step from `t` is passed on from `ds`:
+each gives `cs` at most what it takes from `ds`. -/
+def PassesOn (L : Flow F C) (cs ds : List C) (t : Nat) : Prop :=
+  ∀ x, x ∈ L.present t → total cs (L.give t x) ≤ total ds (L.take t x)
+
+/-- **What a family is given, passed on from a supply, is at most what is taken from the
+supply.** -/
+theorem replenishment_le_uptake {L : Flow F C} {cs ds : List C} {t : Nat}
+    (passes : L.PassesOn cs ds t) : L.replenishment cs t ≤ L.uptake ds t :=
+  Nat.le_trans (Nat.le_of_eq (total_swap (fun x c => L.give t x c) cs (L.present t)).symm)
+    (Nat.le_trans (total_le (L.present t) passes)
+      (Nat.le_of_eq (total_swap (fun x d => L.take t x d) ds (L.present t))))
+
+/-- **A supply keeps, with what it passed on, at most what it held and was given.** Where `ds`
+balances across the step from `t` and what `cs` is given there is passed on from `ds`, the stock
+of `ds` after the step with what `cs` was given is at most its stock before with what `ds` was
+given. -/
+theorem passed_le_supply {L : Flow F C} {W : Web F C} {cs ds : List C} {t : Nat}
+    (balances : L.BalancesOn W ds t) (passes : L.PassesOn cs ds t) :
+    W.stock ds (t + 1) + L.replenishment cs t ≤ W.stock ds t + L.replenishment ds t :=
+  Nat.le_trans (Nat.add_le_add_left (replenishment_le_uptake passes) _) (Nat.le_of_eq balances.over)
+
+/-- **A supply that nothing feeds passes on at most what it loses.** -/
+theorem passed_le_drop {L : Flow F C} {W : Web F C} {cs ds : List C} {t : Nat}
+    (balances : L.BalancesOn W ds t) (passes : L.PassesOn cs ds t)
+    (unfed : L.replenishment ds t = 0) : W.stock ds (t + 1) + L.replenishment cs t ≤ W.stock ds t :=
+  Nat.le_trans (passed_le_supply balances passes)
+    (Nat.le_of_eq ((congrArg (W.stock ds t + ·) unfed).trans (Nat.add_zero _)))
+
+/-- **An exhausted supply that nothing feeds passes on nothing.** -/
+theorem passed_zero_of_exhausted {L : Flow F C} {W : Web F C} {cs ds : List C} {t : Nat}
+    (balances : L.BalancesOn W ds t) (passes : L.PassesOn cs ds t)
+    (unfed : L.replenishment ds t = 0) (exhausted : W.stock ds t = 0) : L.replenishment cs t = 0 :=
+  Nat.eq_zero_of_le_zero (Nat.le_trans (Nat.le_add_left _ _)
+    (Nat.le_trans (passed_le_drop balances passes unfed) (Nat.le_of_eq exhausted)))
+
+end Flow
+
+/-- The top of a hierarchy of families: `cs` where nothing lies above it, and otherwise the top
+of what lies above. -/
+def topTier {C : Type} : List C → List (List C) → List C
+  | cs, [] => cs
+  | _, ds :: ups => topTier ds ups
+
+namespace Web
+
+variable {C : Type}
+
+/-- What a hierarchy of families holds at `t`: the stocks of its families. -/
+def stockTiers (W : Web F C) (t : Nat) : List C → List (List C) → Nat
+  | cs, [] => W.stock cs t
+  | cs, ds :: ups => W.stock cs t + stockTiers W t ds ups
+
+/-- What `h`'s own store falls across the step from `t`. -/
+def storeFall (W : Web F C) (store : F → C) (t : Nat) (h : F) : Nat :=
+  fall (fun s => W.level s (store h)) t
+
+end Web
+
+namespace Flow
+
+variable {C : Type}
+
+/-- Every family of a hierarchy balances across the step from `t`. -/
+def BalancesTiers (L : Flow F C) (W : Web F C) (t : Nat) : List C → List (List C) → Prop
+  | cs, [] => L.BalancesOn W cs t
+  | cs, ds :: ups => L.BalancesOn W cs t ∧ BalancesTiers L W t ds ups
+
+/-- Each family of a hierarchy is given, across the step from `t`, only what is passed on from
+the family above it. -/
+def PassesTiers (L : Flow F C) (t : Nat) : List C → List (List C) → Prop
+  | _, [] => True
+  | cs, ds :: ups => L.PassesOn cs ds t ∧ PassesTiers L t ds ups
+
+/-- **What is drawn from the bottom of a hierarchy across a stretch is at most what the hierarchy
+held at its start and what was given to its top.** -/
+theorem uptake_le_tiers {L : Flow F C} {W : Web F C} (T N : Nat) :
+    ∀ (cs : List C) (ups : List (List C)),
+      (∀ t, T ≤ t → t < T + N → L.BalancesTiers W t cs ups) →
+      (∀ t, T ≤ t → t < T + N → L.PassesTiers t cs ups) →
+      total (steps T N) (L.uptake cs) ≤
+        W.stockTiers T cs ups + total (steps T N) (L.replenishment (topTier cs ups))
+  | cs, [], balances, _ =>
+    Nat.le_trans (Nat.le_add_left _ (W.stock cs (T + N))) (Nat.le_of_eq (accumulates_on T N balances))
+  | cs, ds :: ups, balances, passes =>
+    have here : total (steps T N) (L.uptake cs) ≤
+        W.stock cs T + total (steps T N) (L.replenishment cs) :=
+      Nat.le_trans (Nat.le_add_left _ (W.stock cs (T + N)))
+        (Nat.le_of_eq (accumulates_on T N fun t from_ to => (balances t from_ to).1))
+    have passed : total (steps T N) (L.replenishment cs) ≤ total (steps T N) (L.uptake ds) :=
+      Amounts.total_steps_le T N fun t from_ to => replenishment_le_uptake (passes t from_ to).1
+    have above := uptake_le_tiers T N ds ups (fun t from_ to => (balances t from_ to).2)
+      (fun t from_ to => (passes t from_ to).2)
+    Nat.le_trans here (Nat.le_trans (Nat.add_le_add_left (Nat.le_trans passed above) _)
+      (Nat.le_of_eq (Nat.add_assoc _ _ _).symm))
+
+/-- The flows read off a web for a hierarchy fed at its top only from `K`: within the stretch
+every family of the hierarchy balances and is given only what is passed on from the family above
+it, only active formations give, and only members of `K` give to the top. -/
+def FedThroughTiers (W : Web F C) (cs : List C) (ups : List (List C)) (K : F → Prop) (T n : Nat)
+    (L : Flow F C) : Prop :=
+  (∀ t, T ≤ t → t < T + n → L.BalancesTiers W t cs ups) ∧ L.Acting W ∧
+    (∀ t, T ≤ t → t < T + n → L.PassesTiers t cs ups) ∧
+    ∀ t g c, c ∈ topTier cs ups → g ∈ L.present t → 0 < L.give t g c → K g
+
+/-- `f` draws past what a hierarchy holds: across a stretch longer than the stocks of all its
+families together, `f` is active, takes part and takes from the bottom family at every step. -/
+def DrawsPastTiers (cs : List C) (ups : List (List C)) (T n : Nat) (ω : Flow F C × Web F C)
+    (f : F) : Prop :=
+  ω.2.stockTiers T cs ups < n ∧ ∀ t, T ≤ t → t < T + n →
+    ω.2.active t f ∧ f ∈ ω.1.present t ∧ 0 < total cs (ω.1.take t f)
+
+/-- **Need climbs a hierarchy.** Over the flows of a hierarchy fed at its top only from `K`, a
+formation drawing past what the whole hierarchy holds needs some member of `K`: what is taken from
+the bottom beyond the stocks of all its families was given to its top. With no family above the
+bottom it is `needsSome_on`. -/
+theorem needsSome_tiers (W : Web F C) (cs : List C) (ups : List (List C)) (K : F → Prop)
+    (T n : Nat) (f : F) :
+    NeedsSomePart (FedThroughTiers W cs ups K T n) (fun L => DrawsPastTiers cs ups T n (L, W))
+      (fun L => GivesWithin (topTier cs ups) T n (L, W)) f K :=
+  fun L ⟨balances, _, passes, only⟩ ⟨below, draws⟩ =>
+    have taken : n ≤ total (steps T n) (L.uptake cs) :=
+      Nat.le_trans (Nat.le_trans (Nat.le_of_eq (Nat.one_mul n).symm)
+          (steps_ge (q := fun _ => 1) T n fun _ _ => Nat.le_refl 1))
+        (total_le (steps T n) fun t mem => match between_of_mem_steps mem with
+          | ⟨from_, to⟩ => uptake_pos (draws t from_ to).2.1 (draws t from_ to).2.2)
+    have given : 0 < total (steps T n) (L.replenishment (topTier cs ups)) :=
+      Nat.pos_of_ne_zero fun zero => Nat.lt_irrefl (W.stockTiers T cs ups)
+        (Nat.lt_of_lt_of_le below (Nat.le_trans taken (Nat.le_trans
+          (uptake_le_tiers T n cs ups balances passes)
+          (Nat.le_of_eq ((congrArg (W.stockTiers T cs ups + ·) zero).trans (Nat.add_zero _))))))
+    match total_pos (steps T n) given with
+    | ⟨t, mem, replenished⟩ => match between_of_mem_steps mem with
+      | ⟨from_, to⟩ => match total_pos (topTier cs ups) replenished with
+        | ⟨c, inside, positive⟩ => match total_pos (L.present t) positive with
+          | ⟨g, present, gives⟩ =>
+            ⟨g, only t g c inside present gives, t, from_, to, present,
+             total_pos_of_mem inside gives⟩
+
+/-- The flows read off a web for a family fed only from the members of `ks`, each giving what it
+takes from its own store, which nothing feeds: read off the web for the family, with the
+formations taking part distinct at each step of the stretch, each member's store balancing and
+given nothing, and each member giving the family at most what it takes from its own store. -/
+def FedFromStores (W : Web F C) (store : F → C) (cs : List C) (ks : List F) (T n : Nat)
+    (L : Flow F C) : Prop :=
+  FedOnlyOn W cs (· ∈ ks) T n L ∧ ∀ t, T ≤ t → t < T + n →
+    Distinct (L.present t) ∧ ∀ h, h ∈ ks →
+      L.BalancesOn W [store h] t ∧ L.given t (store h) = 0 ∧
+        (h ∈ L.present t → total cs (L.give t h) ≤ L.take t h (store h))
+
+/-- **What a feeder takes from its own store, which nothing feeds, is at most what the store
+falls.** -/
+theorem take_le_storeFall {L : Flow F C} {W : Web F C} {store : F → C} {t : Nat} {h : F}
+    (balances : L.BalancesOn W [store h] t) (unfed : L.given t (store h) = 0)
+    (present : h ∈ L.present t) : L.take t h (store h) ≤ W.storeFall store t h :=
+  have taken : W.level (t + 1) (store h) + L.taken t (store h) = W.level t (store h) :=
+    (balances (store h) (.head [])).trans
+      ((congrArg (W.level t (store h) + ·) unfed).trans (Nat.add_zero _))
+  Nat.le_trans (le_total_of_mem (q := fun x => L.take t x (store h)) present)
+    (le_of_add_le_add_left_core (S := W.level (t + 1) (store h))
+      (Nat.le_trans (Nat.le_of_eq taken) (Nat.le_trans (Nat.le_add_right _ _)
+        (Nat.le_of_eq (across (fun s => W.level s (store h)) t).symm))))
+
+/-- **The flows of a family fed from its feeders' own stores are flows read off the web with
+capacities, each feeder's capacity at a step being what its store falls there.** -/
+theorem fedFromStores_within {W : Web F C} {store : F → C} {cs : List C} {ks : List F}
+    {T n : Nat} {L : Flow F C} (fed : FedFromStores W store cs ks T n L) :
+    FedOnlyWithin W (W.storeFall store) cs (· ∈ ks) T n L :=
+  ⟨fed.1, fun t from_ to => match fed.2 t from_ to with
+    | ⟨distinct, own⟩ => ⟨distinct, fun x present =>
+      match Nat.decEq (total cs (L.give t x)) 0 with
+      | isTrue zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _)
+      | isFalse pos => match total_pos cs (Nat.pos_of_ne_zero pos) with
+        | ⟨c, inside, gives⟩ => match own x (fed.1.2.2 t x c inside present gives) with
+          | ⟨balances, unfed, passes⟩ =>
+            Nat.le_trans (passes present) (take_le_storeFall balances unfed present)⟩⟩
+
+/-- Across a stretch, the shared flow with capacities read off the members' own stores, in which
+each member also takes from its own store what the store falls. -/
+def storeDrawn [DecidableEq F] [DecidableEq C] (W : Web F C) [∀ t x, Decidable (W.active t x)]
+    (store : F → C) (cs : List C) (c₀ : C) (ks : List F) (T n : Nat) (f g : F) : Flow F C :=
+  { sharedDrawn W (W.storeFall store) cs c₀ ks T n f g with
+    take := fun t x c => if x = f ∧ (∃ d, d ∈ cs ∧ d = c) then
+        fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c
+      else if (∃ h, h ∈ ks ∧ h = x) ∧ c = store x then W.storeFall store t x else 0 }
+
+section Stored
+
+variable [DecidableEq F] [DecidableEq C] {W : Web F C} [∀ t x, Decidable (W.active t x)]
+  {store : F → C} {cs : List C} {c₀ : C} {ks : List F} {T n : Nat} {f g : F}
+
+/-- The shared flow from the stores balances on the family at every step of the stretch, where
+the members' capacity covers the demand there, `f` is not a member and no store is in the
+family. -/
+theorem storeDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks) (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (covers : ∀ t, T ≤ t → t < T + n →
+      W.demand cs t ≤ W.capacityWithout (W.storeFall store) ks g t) :
+    ∀ t, T ≤ t → t < T + n → (storeDrawn W store cs c₀ ks T n f g).BalancesOn W cs t := by
+  intro t from_ to c member
+  have present : (storeDrawn W store cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+  have takeSelf : (storeDrawn W store cs c₀ ks T n f g).take t f c =
+      fall (fun s => W.level s c) t + W.drawnUnit cs c₀ t c := if_pos ⟨rfl, ⟨c, member, rfl⟩⟩
+  have takeOthers : total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x c) = 0 :=
+    total_eq_zero fun x inks =>
+      (if_neg fun both => outside (Eq.subst (motive := fun y => y ∈ ks) both.1 inks)).trans
+        (if_neg fun both => separate x inks (Eq.subst (motive := fun y => y ∈ cs) both.2 member))
+  have giveSelf : (storeDrawn W store cs c₀ ks T n f g).give t f c = 0 :=
+    eq_zero_of_not_pos fun pos => outside (sharedDrawn_gives (W := W) (cap := W.storeFall store)
+      (cs := cs) (c₀ := c₀) (ks := ks) (T := T) (n := n) (f := f) (g := g) pos).2.1
+  have giveOthers : total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).give t x c) =
+      rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
+    sharedDrawn_given_members (W := W) (cap := W.storeFall store) (T := T) (n := n) (f := f)
+      distinct inside apart (covers t from_ to) member
+  show W.level (t + 1) c + total ((storeDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x c) =
+    W.level t c + total ((storeDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (storeDrawn W store cs c₀ ks T n f g).give t x c)
+  rw [present]
+  show W.level (t + 1) c + ((storeDrawn W store cs c₀ ks T n f g).take t f c +
+      total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x c)) =
+    W.level t c + ((storeDrawn W store cs c₀ ks T n f g).give t f c +
+      total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).give t x c))
+  rw [takeSelf, takeOthers, giveSelf, giveOthers]
+  exact (congrArg (W.level (t + 1) c + ·) (Nat.add_zero _)).trans ((Nat.add_assoc _ _ _).symm.trans
+    ((congrArg (· + W.drawnUnit cs c₀ t c) (across (fun s => W.level s c) t)).trans
+      ((Nat.add_assoc _ _ _).trans (congrArg (W.level t c + ·) (Nat.zero_add _).symm))))
+
+/-- In the shared flow from the stores nothing is given to a member's store, which is not in the
+family. -/
+theorem storeDrawn_given_store (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs) {t : Nat} {h : F}
+    (member : h ∈ ks) : (storeDrawn W store cs c₀ ks T n f g).given t (store h) = 0 :=
+  total_eq_zero fun _ _ => eq_zero_of_not_pos fun pos => separate h member
+    (sharedDrawn_gives (W := W) (cap := W.storeFall store) (cs := cs) (c₀ := c₀) (ks := ks) (T := T)
+      (n := n) (f := f) (g := g) pos).1
+
+/-- **What each member takes from its own store in the shared flow from the stores is what the
+store falls**, and nothing else takes from it, where the stores are the members' own and not in
+the family. -/
+theorem storeDrawn_taken_store (apart : Distinct ks) (outside : ¬ f ∈ ks)
+    (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs) {t : Nat} {h : F} (member : h ∈ ks) :
+    total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x (store h)) =
+      W.storeFall store t h :=
+  have inFamily : ¬ ∃ d, d ∈ cs ∧ d = store h := fun ⟨_, dIn, same⟩ =>
+    separate h member (Eq.subst (motive := fun y => y ∈ cs) same dIn)
+  (total_eq_at (a := h) (fun x pos =>
+      match (instDecidableAnd : Decidable (x = f ∧ ∃ d, d ∈ cs ∧ d = store h)) with
+      | isTrue both => absurd both.2 inFamily
+      | isFalse first =>
+        match (instDecidableAnd : Decidable ((∃ h', h' ∈ ks ∧ h' = x) ∧ store h = store x)) with
+        | isTrue ⟨⟨_, mem, same⟩, stores⟩ =>
+          (own h x member (Eq.subst (motive := fun y => y ∈ ks) same mem) stores).symm
+        | isFalse second => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
+            ((if_neg first).trans (if_neg second)))) (Nat.lt_irrefl 0))
+    apart member).trans
+    ((if_neg fun both => outside (Eq.subst (motive := fun y => y ∈ ks) both.1 member)).trans
+      (if_pos ⟨⟨h, member, rfl⟩, rfl⟩))
+
+/-- Each member's store balances in the shared flow from the stores, where the store does not
+rise across the step. -/
+theorem storeDrawn_balances_store (apart : Distinct ks) (outside : ¬ f ∈ ks)
+    (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs) {t : Nat} (from_ : T ≤ t) (to : t < T + n)
+    {h : F} (member : h ∈ ks) (steady : ¬ W.Rises t (store h)) :
+    (storeDrawn W store cs c₀ ks T n f g).BalancesOn W [store h] t := by
+  intro c mem
+  have same : c = store h := match mem_cons_cases mem with
+    | .inl same => same
+    | .inr empty => nomatch empty
+  subst same
+  have present : (storeDrawn W store cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+  have takeSelf : (storeDrawn W store cs c₀ ks T n f g).take t f (store h) = 0 :=
+    (if_neg fun both => match both.2 with
+      | ⟨_, dIn, same⟩ => separate h member (Eq.subst (motive := fun y => y ∈ cs) same dIn)).trans
+      (if_neg fun both => match both.1 with
+        | ⟨_, mem', same⟩ => outside (Eq.subst (motive := fun y => y ∈ ks) same mem'))
+  have flat : rise (fun s => W.level s (store h)) t = 0 :=
+    eq_zero_of_not_pos fun pos => steady (excess_pos.mp pos)
+  show W.level (t + 1) (store h) + total ((storeDrawn W store cs c₀ ks T n f g).present t)
+      (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x (store h)) =
+    W.level t (store h) + (storeDrawn W store cs c₀ ks T n f g).given t (store h)
+  rw [present, storeDrawn_given_store separate member]
+  show W.level (t + 1) (store h) + ((storeDrawn W store cs c₀ ks T n f g).take t f (store h) +
+      total ks (fun x => (storeDrawn W store cs c₀ ks T n f g).take t x (store h))) =
+    W.level t (store h) + 0
+  rw [takeSelf, storeDrawn_taken_store apart outside own separate member]
+  exact (congrArg (W.level (t + 1) (store h) + ·) (Nat.zero_add _)).trans
+    ((across (fun s => W.level s (store h)) t).trans (congrArg (W.level t (store h) + ·) flat))
+
+/-- The shared flow from the stores is a flow of the family fed from its feeders' own stores,
+where the members' capacity covers the demand at every step of the stretch, `f` is not a member,
+the stores are the members' own and not in the family, and no store rises within the stretch. -/
+theorem storeDrawn_fedFromStores (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
+    (outside : ¬ f ∈ ks) (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (steady : ∀ t, T ≤ t → t < T + n → ∀ h, h ∈ ks → ¬ W.Rises t (store h))
+    (covers : ∀ t, T ≤ t → t < T + n →
+      W.demand cs t ≤ W.capacityWithout (W.storeFall store) ks g t) :
+    FedFromStores W store cs ks T n (storeDrawn W store cs c₀ ks T n f g) :=
+  ⟨⟨storeDrawn_balancesOn distinct inside apart outside separate covers,
+    fun _ _ _ _ gives => (sharedDrawn_gives (W := W) (cap := W.storeFall store) (cs := cs)
+      (c₀ := c₀) (ks := ks) (T := T) (n := n) (f := f) (g := g) gives).2.2.1,
+    fun _ _ _ _ _ gives => (sharedDrawn_gives (W := W) (cap := W.storeFall store) (cs := cs)
+      (c₀ := c₀) (ks := ks) (T := T) (n := n) (f := f) (g := g) gives).2.1⟩,
+   fun t from_ to =>
+    have present : (storeDrawn W store cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+    ⟨Eq.subst (motive := fun l => Distinct l) present.symm ⟨outside, apart⟩, fun h member =>
+      ⟨storeDrawn_balances_store apart outside own separate from_ to member (steady t from_ to h member),
+       storeDrawn_given_store separate member,
+       fun _ => Nat.le_trans (sharedDrawn_given_le (W := W) (cap := W.storeFall store) (c₀ := c₀)
+           (T := T) (n := n) (f := f) distinct apart t h)
+         (Nat.le_trans (Web.otherCapacity_le (W.storeFall store) g t h)
+           (Nat.le_of_eq ((if_pos ⟨⟨h, member, rfl⟩, rfl⟩).symm.trans
+             (if_neg fun both => outside (Eq.subst (motive := fun y => y ∈ ks) both.1 member)).symm)))⟩⟩⟩
+
+/-- In the shared flow from the stores `f` draws past the family's stock, where it is active
+across a stretch longer than the stock and the family holds `c₀`. -/
+theorem storeDrawn_drawsPast (inside : c₀ ∈ cs)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    DrawsPast cs T n (storeDrawn W store cs c₀ ks T n f g, W) f :=
+  ⟨below, fun t from_ to =>
+    have present : (storeDrawn W store cs c₀ ks T n f g).present t = f :: ks := if_pos ⟨from_, to⟩
+    ⟨alive t from_ to, Eq.subst (motive := fun l => f ∈ l) present.symm (.head _),
+     match W.decSomeFalls cs t with
+     | isTrue ⟨c, mem, falls⟩ =>
+       total_pos_of_mem (q := (storeDrawn W store cs c₀ ks T n f g).take t f) mem
+        (Nat.lt_of_lt_of_le (excess_pos.mpr falls) (Nat.le_trans (Nat.le_add_right _ _)
+          (Nat.le_of_eq (if_pos ⟨rfl, ⟨c, mem, rfl⟩⟩).symm)))
+     | isFalse steady =>
+       total_pos_of_mem (q := (storeDrawn W store cs c₀ ks T n f g).take t f) inside
+        (Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_trans (Nat.le_add_left _ _)
+          (Nat.le_trans (Nat.le_of_eq (congrArg (fall (fun s => W.level s c₀) t + ·)
+            (if_pos ⟨rfl, steady⟩)).symm)
+            (Nat.le_of_eq (if_pos ⟨rfl, ⟨c₀, inside, rfl⟩⟩).symm))))⟩⟩
+
+/-- In the shared flow from the stores `g` never gives to the family. -/
+theorem storeDrawn_not_gives (distinct : Distinct cs) (apart : Distinct ks) :
+    ¬ GivesWithin cs T n (storeDrawn W store cs c₀ ks T n f g, W) g :=
+  fun gives => sharedDrawn_not_gives (W := W) (cap := W.storeFall store) (c₀ := c₀) (T := T)
+    (n := n) (f := f) distinct apart gives
+
+end Stored
+
+/-- **A feeder is needed exactly where what the others' own stores fall falls short of the
+demand.** Over the flows of a family fed from its feeders' own stores, which nothing feeds, which
+are not in the family and which do not rise within the stretch, with activity and identity
+decided and the family and the class listed without repetition, let `f`, not a member, be active
+across a stretch longer than the family's stock. Then `f` drawing past the stock needs `g`'s
+giving exactly where, at some step of the stretch, what the stores of the other active members
+fall together falls short of the step's demand: the capacities of the exact law, read off the web. -/
+theorem needs_giver_iff_store_short [DecidableEq F] [DecidableEq C] {W : Web F C}
+    [∀ t x, Decidable (W.active t x)] {store : F → C} {cs : List C} (distinct : Distinct cs)
+    {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} (apart : Distinct ks) {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (alive : ∀ t, T ≤ t → t < T + n → W.active t f)
+    (below : W.stock cs T < n) (own : ∀ h h', h ∈ ks → h' ∈ ks → store h = store h' → h = h')
+    (separate : ∀ h, h ∈ ks → ¬ store h ∈ cs)
+    (steady : ∀ t, T ≤ t → t < T + n → ∀ h, h ∈ ks → ¬ W.Rises t (store h)) :
+    NeedsPart (FedFromStores W store cs ks T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔
+      ∃ t, T ≤ t ∧ t < T + n ∧ W.capacityWithout (W.storeFall store) ks g t < W.demand cs t :=
+  ⟨fun needs => match decideSome
+      (p := fun t => W.capacityWithout (W.storeFall store) ks g t < W.demand cs t) (steps T n) with
+    | isTrue ⟨t, mem, short⟩ => match between_of_mem_steps mem with
+      | ⟨from_, to⟩ => ⟨t, from_, to, short⟩
+    | isFalse covered =>
+      absurd (needs _ (storeDrawn_fedFromStores (c₀ := c₀) distinct inside apart outside own separate
+          steady fun t from_ to => Nat.ge_of_not_lt fun short =>
+            covered ⟨t, mem_steps_of_between from_ to, short⟩)
+        (storeDrawn_drawsPast inside alive below))
+        (storeDrawn_not_gives distinct apart),
+   fun short L fed draws =>
+    needs_giver_of_short (cap := W.storeFall store) short L (fedFromStores_within fed) draws⟩
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -3256,6 +3669,199 @@ theorem none_needed {g : Nat} (member : g ∈ [1, 2, 3]) :
       (Eq.subst (motive := fun w => w < web.demand [()] t) (without_two member t) short))
 
 end SharedCopies
+
+namespace TwoTiers
+
+/-- A user, a feeder and its source. -/
+inductive Part where
+  | user
+  | feeder
+  | source
+
+/-- The condition the user draws on, and the feeder's supply. -/
+inductive Place where
+  | drawn
+  | supply
+
+/-- Both conditions stand empty, and every formation is active. -/
+def web : Web Part Place :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ _ _ => True, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- At every step the user takes one unit of what it draws on, the feeder gives it one and takes
+one from its supply, and the source gives the supply one. -/
+def chain : Flow Part Place where
+  present := fun _ => [.user, .feeder, .source]
+  take := fun _ x c => match x, c with
+    | .user, .drawn => 1
+    | .user, .supply => 0
+    | .feeder, .drawn => 0
+    | .feeder, .supply => 1
+    | .source, .drawn => 0
+    | .source, .supply => 0
+  give := fun _ x c => match x, c with
+    | .user, .drawn => 0
+    | .user, .supply => 0
+    | .feeder, .drawn => 1
+    | .feeder, .supply => 0
+    | .source, .drawn => 0
+    | .source, .supply => 1
+
+/-- What the user draws on is not the supply. -/
+theorem drawn_not_supply : ¬ Place.drawn ∈ [Place.supply] :=
+  fun mem => match mem_cons_cases mem with
+  | .inl same => Place.noConfusion same
+  | .inr empty => nomatch empty
+
+/-- **The chain is a flow of the hierarchy fed at its top only by the source, in which the user
+draws past what the hierarchy holds.** -/
+theorem possible :
+    Flow.FedThroughTiers web [.drawn] [[.supply]] (· = Part.source) 0 1 chain ∧
+      Flow.DrawsPastTiers [.drawn] [[.supply]] 0 1 (chain, web) .user :=
+  ⟨⟨fun _ _ _ => ⟨fun c _ => match c with
+        | .drawn => rfl
+        | .supply => rfl, fun c _ => match c with
+        | .drawn => rfl
+        | .supply => rfl⟩,
+    fun _ _ _ _ _ => trivial,
+    fun _ _ _ => ⟨fun x _ => match x with
+        | .user => Nat.le_refl _
+        | .feeder => Nat.le_refl _
+        | .source => Nat.le_refl _, trivial⟩,
+    fun _ g c inside _ gives => match g, c, inside, gives with
+      | .user, .drawn, inside, _ => absurd inside drawn_not_supply
+      | .user, .supply, _, gives => absurd gives (Nat.lt_irrefl 0)
+      | .feeder, .drawn, inside, _ => absurd inside drawn_not_supply
+      | .feeder, .supply, _, gives => absurd gives (Nat.lt_irrefl 0)
+      | .source, .drawn, _, _ => rfl
+      | .source, .supply, _, _ => rfl⟩,
+   ⟨Nat.one_pos, fun _ _ _ => ⟨trivial, .head _, Nat.one_pos⟩⟩⟩
+
+/-- **The user needs the source's giving to the feeder's supply**: drawing past what the
+hierarchy holds needs giving into its top. -/
+theorem needs_source :
+    NeedsPart (Flow.FedThroughTiers web [.drawn] [[.supply]] (· = Part.source) 0 1)
+      (fun L => Flow.DrawsPastTiers [.drawn] [[.supply]] 0 1 (L, web))
+      (fun L => Flow.GivesWithin [.supply] 0 1 (L, web)) .user .source :=
+  fun L fed draws =>
+    match Flow.needsSome_tiers web [.drawn] [[.supply]] (· = Part.source) 0 1 .user L fed draws with
+    | ⟨_, same, gives⟩ =>
+      Eq.subst (motive := fun x => Flow.GivesWithin [Place.supply] 0 1 (L, web) x) same gives
+
+end TwoTiers
+
+namespace OwnStores
+
+/-- Formation `0` is the user and `1`, `2` two feeders; condition `0` is what the user draws on
+and condition `h` is feeder `h`'s store. What the user draws on stands empty; the first store
+holds three and falls by one at each of steps 0, 1 and 2, the second holds one and falls at step 0
+only. -/
+def level (t c : Nat) : Nat :=
+  match c with
+  | 0 => 0
+  | 1 => (match t with
+    | 0 => 3
+    | 1 => 2
+    | 2 => 1
+    | _ + 3 => 0)
+  | 2 => (match t with
+    | 0 => 1
+    | _ + 1 => 0)
+  | _ + 3 => 0
+
+/-- The levels, every formation active. -/
+def web : Web Nat Nat :=
+  ⟨level, fun _ _ => True, fun _ _ _ => True, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- Each feeder's store is the condition of its own number. -/
+def store (h : Nat) : Nat := h
+
+instance decActive : ∀ t x, Decidable (web.active t x) := fun _ _ => instDecidableTrue
+
+theorem distinct : Distinct [(0 : Nat)] := ⟨(fun empty => nomatch empty), trivial⟩
+
+/-- The feeders are listed without repetition. -/
+theorem apart : Distinct [(1 : Nat), 2] :=
+  ⟨(fun mem => match mem_cons_cases mem with
+      | .inl same => absurd same (by decide)
+      | .inr empty => nomatch empty), (fun empty => nomatch empty), trivial⟩
+
+/-- The user is no feeder. -/
+theorem user_outside : ¬ (0 : Nat) ∈ [1, 2] :=
+  fun mem => match mem_cons_cases mem with
+  | .inl same => absurd same (by decide)
+  | .inr rest => match mem_cons_cases rest with
+    | .inl same => absurd same (by decide)
+    | .inr empty => nomatch empty
+
+/-- Each feeder's store is its own. -/
+theorem own : ∀ h h', h ∈ [(1 : Nat), 2] → h' ∈ [(1 : Nat), 2] → store h = store h' → h = h' :=
+  fun _ _ _ _ same => same
+
+/-- No store is what the user draws on. -/
+theorem separate : ∀ h, h ∈ [(1 : Nat), 2] → ¬ store h ∈ [(0 : Nat)] :=
+  fun _ member inZero => match mem_cons_cases inZero with
+  | .inl same => user_outside (Eq.subst (motive := fun x => x ∈ [(1 : Nat), 2]) same member)
+  | .inr empty => nomatch empty
+
+/-- The first store does not rise within the first three steps. -/
+theorem first_steady : ∀ t, t < 0 + 3 → ¬ web.Rises t (store 1)
+  | 0, _ => (by decide : ¬ ((3 : Nat) < 2))
+  | 1, _ => (by decide : ¬ ((2 : Nat) < 1))
+  | 2, _ => (by decide : ¬ ((1 : Nat) < 0))
+  | _ + 3, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 3 _))
+
+/-- The second store does not rise within the first three steps. -/
+theorem second_steady : ∀ t, t < 0 + 3 → ¬ web.Rises t (store 2)
+  | 0, _ => (by decide : ¬ ((1 : Nat) < 0))
+  | 1, _ => (by decide : ¬ ((0 : Nat) < 0))
+  | 2, _ => (by decide : ¬ ((0 : Nat) < 0))
+  | _ + 3, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 3 _))
+
+/-- No store rises within the first three steps. -/
+theorem steady : ∀ t, 0 ≤ t → t < 0 + 3 → ∀ h, h ∈ [(1 : Nat), 2] → ¬ web.Rises t (store h) :=
+  fun t _ to _ member => match mem_cons_cases member with
+  | .inl same => Eq.subst (motive := fun x => ¬ web.Rises t (store x)) same.symm (first_steady t to)
+  | .inr rest => match mem_cons_cases rest with
+    | .inl same =>
+      Eq.subst (motive := fun x => ¬ web.Rises t (store x)) same.symm (second_steady t to)
+    | .inr empty => nomatch empty
+
+/-- After step 0 the second store falls no more. -/
+theorem second_store_spent : ∀ t, 1 ≤ t → web.storeFall store t 2 = 0
+  | 0, from_ => absurd from_ (by decide)
+  | _ + 1, _ => rfl
+
+/-- **After its store runs out, the second feeder gives the user's condition nothing.** -/
+theorem second_spent {L : Flow Nat Nat} (fed : Flow.FedFromStores web store [0] [1, 2] 0 3 L)
+    {t : Nat} (from_ : 1 ≤ t) (to : t < 0 + 3) (present : 2 ∈ L.present t) :
+    total [0] (L.give t 2) = 0 :=
+  Nat.eq_zero_of_le_zero (Nat.le_trans
+    (((Flow.fedFromStores_within fed).2 t (Nat.zero_le t) to).2 2 present)
+    (Nat.le_of_eq (second_store_spent t from_)))
+
+/-- **The user needs the first feeder's giving**: at step 1 the second store is empty, so the
+second feeder can give nothing. -/
+theorem needs_first :
+    NeedsPart (Flow.FedFromStores web store [0] [1, 2] 0 3)
+      (fun L => Flow.DrawsPast [0] 0 3 (L, web)) (fun L => Flow.GivesWithin [0] 0 3 (L, web)) 0 1 :=
+  (Flow.needs_giver_iff_store_short distinct (List.Mem.head []) apart user_outside
+    (fun _ _ _ => trivial) (Nat.zero_lt_succ 2) own separate steady).mpr
+    ⟨1, Nat.zero_le 1, (by decide), (by decide)⟩
+
+/-- **The user does not need the second feeder's giving**: the first store falls by one at every
+step of the stretch, enough for the demand of one. -/
+theorem not_needs_second :
+    ¬ NeedsPart (Flow.FedFromStores web store [0] [1, 2] 0 3)
+      (fun L => Flow.DrawsPast [0] 0 3 (L, web)) (fun L => Flow.GivesWithin [0] 0 3 (L, web)) 0 2 :=
+  fun needs => match (Flow.needs_giver_iff_store_short distinct (List.Mem.head []) apart
+      user_outside (fun _ _ _ => trivial) (Nat.zero_lt_succ 2) own separate steady).mp needs with
+  | ⟨t, _, to, short⟩ => match t, to, short with
+    | 0, _, short => absurd short (by decide)
+    | 1, _, short => absurd short (by decide)
+    | 2, _, short => absurd short (by decide)
+    | _ + 3, to, _ => absurd to (Nat.not_lt_of_le (Nat.le_add_left 3 _))
+
+end OwnStores
 
 /-! ## What self-concern alone ranks -/
 

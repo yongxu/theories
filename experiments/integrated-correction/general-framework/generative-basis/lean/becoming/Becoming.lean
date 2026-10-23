@@ -2060,8 +2060,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   capacities of giving supplied with the web, a feeder can feed the family alone exactly where its
   capacity covers each step's demand (`Flow.feedsAlone_iff`), and it is needed exactly where the
   others active at some step could not together give the demand, since otherwise they can share the
-  giving (`Flow.needs_giver_iff_short`, `Flow.sharedDrawn`; `Capacities`, `SharedCopies`). The
-  readings are the AI's (D59, D60, D64).
+  giving (`Flow.needs_giver_iff_short`, `Flow.sharedDrawn`; `Capacities`, `SharedCopies`). Read
+  off a feeder's own store, which nothing feeds, its capacity at a step is what the store falls, and
+  the exact law holds with it (`Flow.needs_giver_iff_store_short`; `OwnStores`); over a hierarchy of
+  families, each given only what is passed on from the one above, drawing past what the whole
+  hierarchy holds needs giving into its top (`Flow.needsSome_tiers`; `TwoTiers`). The readings are
+  the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

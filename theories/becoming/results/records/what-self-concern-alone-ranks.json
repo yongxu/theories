@@ -196,7 +196,7 @@
         "Becoming.Weighting.some_increasingInOwn_reverses",
         "Becoming.Weighting.widensOwn_iff_every_increasingInOwn"
       ],
-      "sha256": "a06b1a1ccc37ca2531c1915eaf8e2b0f16f375e085bcc58c98e79a1f2028f3a8"
+      "sha256": "e35155425e21ddb996d79f74f3b116a197fb212770af01056e5acefdb9c78c43"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json",
@@ -226,7 +226,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b8b904891551a608d8578c84c16f32757794f30765ee53eee04e589b214c8cc7"
+      "sha256": "cc83d3ba693a26bb10eca79e6bce870ee49e7081a75d9c0aa8119197fb472bd5"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
@@ -250,12 +250,18 @@
       "role": "receipt",
       "sha256": "02aba7cf1f784f45b4f7d76eb60f337a5a5a62996cc9013a4bdea0806ea6082e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json",
+      "role": "receipt",
+      "sha256": "4ad129785992fd18ddb54464b6143683a8af22dbe451900b4749fd522b5db259",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T085035.683962Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T092142.312824Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
