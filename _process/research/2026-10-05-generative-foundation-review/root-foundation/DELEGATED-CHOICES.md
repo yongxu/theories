@@ -102,6 +102,7 @@ On 19 October 2026 Ren answered for the register as a whole, “integrate all, t
 | D62 | the readings of 《中华思想脉络》 on the spine and of the classical names (22 October) | adopted with exact scope: the three kinds of D47 and the four layers of D54 over every judgment of the 脉络; the 1,300 readings with the scope each states; the thesis holds at the root, needs a scope in its universal forms, fails as every system's property; the 447 names as a convention among the theory's users, each with what it does not carry; five RO and 易传 kinds decided for exact scope |
 | D63 | 文 named the course, and the epistemology of 文 (22 October) | adopted with exact scope: 文 = a run's states read through a map step by step (Parting.course, Learnable.course), 文同 = Law.SameFuture, 往 the prefix of a 文; the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 read off the 文 in one sense only) as readings of checked laws with the scope each states; 文理生生's senses of 文 as one 文 and 理; whether classical Chinese is the best expression left untested |
 | D64 | the readings of self-concern through dependence (23 October) | adopted with exact scope: the relation a self is drawn along read as one its continuation is carried along (feeding, need); the centers within one another's closures read as their depending on one another, the de se question deciding nothing within their common closure; need as continuing on every possible course, copies as alternatives each able to carry a continuation alone; an order increasing in its own continuation as self-concern's monotonicity; the planetary case an empirical reading |
+| D65 | the readings of the eight chapters (23 October) | adopted with exact scope: the readings the restructured account writes beside its theorems (the core as what continues of its own, locality and internal relations, 生成 as continuation at two grains, life as continuation renewing its own conditions, the readings of markets, learning, practical judgment and alignment), each with the argument of the paragraph that states it and, where it was carried from an earlier chapter, that chapter's argument |
 
 <a id="1-生生与生成的空间--生生-and-the-generative-space"></a>
 ## 1. 生生 and the generative space
@@ -592,6 +593,7 @@ L1, S1 and S2 are D40-D42.
 - Ren's request of 19 October 2026 for a 中华 edition in the classical symbol system and the 脉络 joined to the theories, “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达” ([words](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)): D62 ([study section 328](BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)).
 - Ren's request of 22 October 2026 to integrate 文理生生 with the epistemology of 文 at the centre and to find the most fitting name for 文, “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” ([words](../../../../sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md)): D63 ([study section 346](BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)).
 - Ren's message of 23 October 2026 on what counts as a system and on there being one planetary system ([words](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md)), taken up by board item IV3: D64 ([study section 373](BECOMING-RENEWAL-READING.md#373-self-concern-through-dependence-iv3)).
+- Ren's message of 23 October 2026 asking for a structured, unified, coherent and indexable repository ([words](../../../../sources/15-codex-theory-conversations/2026-10-23-repository-architecture.md)), taken up by board item RA: D65.
 
 <a id="13-一个说明--one-account"></a>
 ## 13. One account
@@ -869,3 +871,44 @@ Where: the chapter [THE-STEP-OF-INVARIANCE](../../../../theories/becoming/chapte
 **Reasons.** Each reading says no more than the laws it names. The self's presupposition is about continuation, so the relation it is drawn along should be one a continuation is carried along; feeding and need are the two the base and the copies law state, and they part where the others could together give what a feeder gives (in `SharedCopies` no copy can feed alone, yet none is needed), as transmission to facilitative and to necessary means part in the theory of reasons.
 
 **What would change it.** An argument that the self's presupposition is drawn along a relation narrower than what carries its continuation (the organism's own organization, for instance) and does not pass to the conditions of that continuation; then the route reaches only the narrower self. A representation of the class's continuation as a whole; need in degree is now stated (item 11).
+
+<a id="d65-the-readings-of-the-eight-chapters"></a>
+### The readings of the eight chapters
+
+Where: the eight chapters of the restructured account ([01](../../../../theories/becoming/chapters/01-ROOT.md) … [08](../../../../theories/becoming/chapters/08-METHOD.md)), written for board item RA on 23 October 2026, where these readings stood labelled `[AI reading, new]` until this entry gave them a number. Several were carried from earlier chapters, whose arguments they keep (named below); the rest are written beside the theorems they interpret.
+
+**Decision.** Adopted with exact scope, each with the argument of the paragraph that states it.
+1. **The core** (01 §4). The core is what continues of its own, the regularity a line carries by itself: an interpretation of indistinguishability under matched conditioning, asserting no causal independence and no mechanism of self-maintenance.
+2. **Locality** (01 §8.3). Requirement is read as necessary response because read off the current level of what is required, being required would depend on being met.
+3. **Internal relations** (01 §8.3; 08 links it). A relation is internal where it holds by what its terms are; read off one exchange, balance, only active giving and taking, and activity needing support are internal so; the moments stay distinct (carried from BECOMING-FOUNDATION §9.1, XL1).
+4. **生成** (02 §1). The map's generation is continuation at two grains, a pattern going on through carrying renewal, with no premise on what the pattern is; it is not 生生 and never overlaps degeneration.
+5. **Recorders** (02 §4). Learners, archives and genomes are recorders of bounded size, which do not keep their whole history and go on.
+6. **The wider meta-attractor** (02 §9). The corpus's meta-attractor is an organization whose consequences take part in rebuilding the conditions that select it, across changes of its carriers; continuation across carriers is the part the laws reach.
+7. **Three boundaries** (02 §9, from the market study). Ethical loss, the applicability of a returning mechanism and a state region's retention or departure are three boundaries, none implying another.
+8. **Orders of learning** (03 §8). Regulation, learning, meta-learning and reflective inquiry as changes of a condition, of a disposition to respond, of how such changes occur, and of the standards themselves (carried from COGNITION-LEARNING-AND-EVOLUTION).
+9. **Obscuration and reopening** (03 §8; 偏蔽, 复通). Locked seeking forms when a once-useful habit, identity or arrangement becomes the fixed measure of later cases; reopening restores feedback to the measure (carried from NONINSTRUMENTAL-CONCERN).
+10. **Life** (04, opening). Life is continuation that renews its own conditions, at the grain of formations and the conditions they depend on; that this is necessary or sufficient for biological life is not shown.
+11. **Lineage** (04, opening). A life is a line of continuation relative to a class, and a lineage such lines joined by descent.
+12. **Consequences select the organization that learns** (04 §8). An argument, not a theorem (carried from COGNITION-LEARNING-AND-EVOLUTION).
+13. **Part and whole** (04 §8). Inclusion, functional participation and dependence are distinct relations.
+14. **Development** (04 §8). An inherited organization carries no adult psychology apart from development; four linked questions for a disposition.
+15. **Deferred maintenance** (05 §10). A hypothetical case: where buyers cannot tell future reliability, a provider deferring maintenance can outgrow one maintaining it.
+16. **Regions and routes of a market** (05 §10). A negative margin says a degenerate region can appear, not that every history enters it; four routes of transition are distinct, none by itself a proved phase transition.
+17. **Capture through a shared interface** (05 §10). Running a shared interface and controlling its modification is a route of capture besides paid influence; a historical correspondence, no theorem.
+18. **No prior duty to contract or licence to grow** (05 §11). Whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms; any ranking is C's.
+19. **天地之大德曰生** (06 §十一). Read as the statement of a comparison commitment, like C, not as a theorem.
+20. **Three grounds** (07 §1). Accuracy, epistemic support and a requirement to act have different grounds; coming to care can recognize a prior reason and create new ones (carried from ZERO-AXIOM-PRACTICAL-JUDGMENT §13, §19).
+21. **Omission, fault and informed harm** (07 §3.3). Kept apart: an omission of the representation, a fault in organized relations, and informed harm.
+22. **Mixed endings** (07 §3.4). Predation, apoptosis and ending a cancer read as mixed: losing something and opening something; telling harm from non-harm among them needs a measure.
+23. **Conscious experience** (07 §3.4). It differentiates significance within the living whole without being the only admission condition (carried from ETHICAL-LEARNING).
+24. **J1's defence** (07 §5). Basic priority defended by non-substitution, at the cost of compensation across layers (carried from PRACTICAL-JUDGMENT).
+25. **Symmetry names no one** (07 §5). Under exact symmetry, undertakings, rotations or a warranted procedure must differentiate who contributes.
+26. **Diagnosing closure first** (07 §6). Factual error, lack of capacity, evaluative or practical closure and real conflict are told apart before assessment.
+27. **Options that disempower** (07 §6). Keeping one's options open disempowers others exactly where the net draw goes beyond the margin for a formation outside one's region.
+28. **Which formations count, and how** (07 §6). By the relation discerned, not by rank rising with complexity (carried from ETHICAL-LEARNING).
+29. **What the direction asks of AI** (07 §7). Enabling actual realization, not outputs, copies or scores; disclosed comparisons and limits; effective challenge and revision (carried from ALIGNMENT-DIRECTION).
+30. **The passage from inclusion to relation** (08 §9). The method chapter's statement of item 3, linked to 01.
+
+**Reasons.** Each reading interprets content the chapter checks against its Lean and says no more than the laws it names; where it rests on no theorem, the chapter says so (an argument, a hypothetical case, a historical correspondence). The readings carried from earlier chapters keep those chapters' arguments, which stay readable in history. Registering them here, rather than leaving them unnumbered, keeps the rule that no reading is open.
+
+**What would change it.** A reading found to claim more than the laws it names, or to conflict with another reading of the one account, is revised in the chapter and here.
