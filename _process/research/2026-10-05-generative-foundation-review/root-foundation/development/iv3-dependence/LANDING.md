@@ -49,3 +49,9 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 1. `integrate_f.py`; core checker; connectivity `--check` (register any new apart roots) and `--write`.
 2. `apply_text_f.py N RECEIPT`, `canonical_f.py`, `section9_f.py RECEIPT MAIN N`, `update_records_f.py RECEIPT N` (lint the record before render), `sh repoint_f.sh RECEIPT`.
 3. The scratch copy of the module goes; `board_f.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.
+
+## IV3g
+
+1. `integrate_g.py`; core checker; connectivity `--check` and `--write`.
+2. `apply_text_g.py N RECEIPT` (also removes two stale "(new …)" markers in THE-STEP-OF-INVARIANCE §1, from the RA defect list), `canonical_g.py`, `section9_g.py RECEIPT MAIN N`, `update_records_g.py RECEIPT N` (lint first), `sh repoint_g.sh RECEIPT`.
+3. The scratch copy of the module goes; `board_g.py land RECEIPT N THEOREMS DECLS`; render, check, links and test; commit; merge main if it moved, render and fast-forward.
