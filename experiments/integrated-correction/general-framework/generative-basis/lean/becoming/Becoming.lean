@@ -312,6 +312,7 @@ import Becoming.RuleHandoff
 import Becoming.GrammarCourse
 import Becoming.GrammarRegularity
 import Becoming.GrammarScope
+import Becoming.GrammarCases
 
 /-!
 # The Theory of Becoming: the formal core
@@ -3255,6 +3256,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   end (`«过亡而续»`); a class's core continues something exactly where some line under it goes on
   without end (`«核有续当且仅当有不穷»`); two lines of descent, one endless and one that ends
   (`LineOfDescent`).
+* `Becoming.GrammarCases` (L1): test systems of the source texts as small witnesses of the grammar
+  (board item GS3), the behaviour in question supplied in each net. Decay: an alteration in a net with
+  no cycle; in the net of possibilities "intact or not" is constant, so the step is not in its
+  regularity, while a history within that net has the time left before the decay in it (`Decay`).
+  No clear boundary: two overlapping identities, each a class, an occurrence's positions differing by
+  class, their union not a class (`Overlap`). A line of descent generating at two grains
+  (`LineOfDescent.Endless.generates`). Two family lines, the class of one strictly between a member's
+  and the one, constant, its core going on through each birth, the other family not reached
+  (`TwoLines`). A belief whose rate of spread grows with its number, the rate read in its
+  regularity (`Belief`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

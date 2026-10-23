@@ -1756,6 +1756,11 @@
    "base": "old-base",
    "note": "Retaining"
   },
+  "the-source-texts-test-systems": {
+   "region": "root",
+   "base": "grammar",
+   "note": "GrammarCases: decay, overlap, line of descent, belief as small witnesses"
+  },
   "the-split-that-makes-sense": {
    "region": "knowing",
    "base": "general",
@@ -2607,6 +2612,11 @@
    "region": "classical",
    "base": "grammar",
    "note": "59 corpus candidates: 38 proved, 15 conditional, 3 refuted (OU2c)"
+  },
+  "Becoming.GrammarCases": {
+   "region": "root",
+   "base": "grammar",
+   "note": "test systems of the source texts as small witnesses (GS3)"
   },
   "Becoming.GrammarCourse": {
    "region": "classical",

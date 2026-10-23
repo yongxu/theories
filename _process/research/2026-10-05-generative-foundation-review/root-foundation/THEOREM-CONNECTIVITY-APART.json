@@ -3501,6 +3501,71 @@
    "module": "Becoming.GrammarScope",
    "category": "model-witness",
    "reason": "the one reaches the second member past the first's end: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.Decay.both_open": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: stay and decay both open at every intact moment: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.decay_alters": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the decay an alteration under the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the two intact moments of one history apart in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_within": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the history lies within the net of possibilities: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.possible_acyclic": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: no occurrence reaches itself: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.time_not_in_core": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: every two intact moments alike in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.LineOfDescent.Endless.generates": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line of descent generates at two grains: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.b_positions": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: positions differing by class: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.continues_each": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: two overlapping classes: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.tolerance_line_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: the union not a class, its line leaving it: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.between": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family class between a member's and the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.core_through_birth": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family core going on through each birth: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.other_line_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the other family not reached: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
   }
  },
  "instances": {
