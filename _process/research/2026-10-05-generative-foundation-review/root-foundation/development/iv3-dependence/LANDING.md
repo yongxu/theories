@@ -25,3 +25,9 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 2. `apply_text_b.py N RECEIPT`, `section9_b.py RECEIPT MAIN N`, `update_records_b.py RECEIPT N`, `sh repoint_b.sh RECEIPT` (drift filtered to the paths IV3b changed).
 3. The scratch copy of the module goes (`tree/Becoming/Weightings.lean`; the IV3 landing had left it); `board_b.py land RECEIPT N THEOREMS DECLS`.
 4. Render, check, links and test with logs outside the repository; commit; merge main, render and fast-forward.
+
+## IV3c
+
+1. `integrate_c.py`; core checker (a first run found `Shifts` taken in `Becoming.Wholes`, which the scratch build does not import; the witness was renamed `FeedersInTurn` and the run repeated); connectivity `--check` (no new apart roots) and `--write`.
+2. `apply_text_c.py N RECEIPT`, `section9_c.py RECEIPT MAIN N`, `update_records_c.py RECEIPT N`, `sh repoint_c.sh RECEIPT`.
+3. The scratch copy of the module goes; `board_c.py land RECEIPT N THEOREMS DECLS`; render, check, links and test with logs outside the repository; commit; fast-forward.

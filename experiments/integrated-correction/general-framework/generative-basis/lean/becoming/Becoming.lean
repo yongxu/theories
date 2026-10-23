@@ -2053,7 +2053,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   member needed exactly where it is the only one (`needsPart_iff_only`); on the base, a formation
   drawing past its family's stock needs some feeder's giving, and a feeder's exactly where it is the
   only one (`Flow.needsSome_of_drawsPast`, `Flow.needs_giver_iff_only`, `Feeders`); and the coupled
-  ending is ranked below by self-concern in one theorem (`Flow.coupled_ending_ranked_below`). The
+  ending is ranked below by self-concern in one theorem (`Flow.coupled_ending_ranked_below`). Read
+  off a web, a feeder can feed a family alone where it is active at every step calling for giving
+  (`Flow.partAlone_on`), and a consumer needs a feeder's giving exactly where, at some step calling
+  for giving, it is the only one active (`Flow.needs_giver_iff_alone`; `FeedersInTurn`). The
   readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;

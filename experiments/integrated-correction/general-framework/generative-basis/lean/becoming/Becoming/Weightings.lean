@@ -146,6 +146,20 @@ order every standpoint shares when each weighs what can form in its own way.
   member that can feed the family alone (`Flow.needs_giver_iff_only`); on `Feeders`, two flows of
   one condition each fed by one copy, the user needs some feeder's giving and neither feeder's
   (`Feeders.two_feeders`).
+* **Which feeders can feed alone, read off a web.** Fix the web and read the possible flows off
+  it: each balances on the family within the stretch, only active formations give and only members
+  of the class give to the family (`Flow.FedOnlyOn`); the base law holds over them
+  (`Flow.needsSome_on`), the law above being its case. A step calls for giving where some
+  condition of the family rises or none falls (`Web.CallsForGiving`); there a consumer drawing on
+  the family forces giving (`Flow.given_pos_of_calls`), elsewhere it can take the falls with nothing
+  given. The flow drawn across the stretch with a picked giver (`Flow.drawnAcross`) shows that every
+  member active at every step calling for giving can feed the family alone
+  (`Flow.partAlone_on`), so the copies law holds over the web with nothing supplied
+  (`Flow.needs_giver_iff_only_on`). Exactly: with activity and identity of formations decided, a
+  consumer drawing past the stock needs a member's giving exactly where, at some step of the
+  stretch calling for giving, that member is the only one active (`Flow.needs_giver_iff_alone`).
+  On `Feeders`' web neither copy is needed (`Feeders.two_feeders_on`); in `FeedersInTurn`, two
+  copies active in turn, both are (`FeedersInTurn.needs_both`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -234,10 +248,10 @@ sets of a case, whether its sign measured apart is the sign of the joint increme
 dispersed its weights are, each measurable and none derived; that the impartial order is what
 every standpoint shares rather than one privileged weighting; which formations are centers; the
 step of invariance itself; which relation a continuation is carried along, whether actual centers
-depend on one another, which courses are possible, which feeders can feed a family alone
-(`PartAlone` is supplied, not derived from a web), and that a standpoint's order is increasing in
-its own continuation. The representation commits to finite listings of steps and formations,
-two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
+depend on one another, which webs actual families have, the decision of activity and identity
+the exact law of need uses, and that a standpoint's order is increasing in its own continuation.
+The representation commits to finite listings of steps and formations, two-valued admission and
+natural-number weights. No ethical predicate or axiom occurs.
 -/
 
 namespace Becoming
@@ -1689,30 +1703,46 @@ the family. -/
 def GivesWithin (cs : List C) (T n : Nat) (ω : Flow F C × Web F C) (g : F) : Prop :=
   ∃ t, T ≤ t ∧ t < T + n ∧ g ∈ ω.1.present t ∧ 0 < total cs (ω.1.give t g)
 
-/-- **A formation drawing past its family's stock needs some member of what feeds it.** On every
-course of a family fed only from `K`, a formation that draws past the family's stock across a
-stretch has some member of `K` giving to the family within the stretch: what was taken beyond
-the stock was given. -/
-theorem needsSome_of_drawsPast (cs : List C) (K : F → Prop) (T n : Nat) (f : F) :
-    NeedsSomePart (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f K :=
-  fun ω ⟨balances, _, only⟩ ⟨below, draws⟩ =>
-    have taken : n ≤ total (steps T n) (ω.1.uptake cs) :=
+/-- The flows read off a web for a family fed only from `K` across a stretch: with the web fixed, a
+flow balances on the family at every step of the stretch, only active formations give, and only
+members of `K` give to the family. -/
+def FedOnlyOn (W : Web F C) (cs : List C) (K : F → Prop) (T n : Nat) (L : Flow F C) : Prop :=
+  (∀ t, T ≤ t → t < T + n → L.BalancesOn W cs t) ∧ L.Acting W ∧
+    ∀ t g c, c ∈ cs → g ∈ L.present t → 0 < L.give t g c → K g
+
+/-- **Over the flows read off a web, a formation drawing past its family's stock needs some
+member of what feeds it.** What was taken beyond the stock across the stretch was given, and the
+giver is found by finite search over the stretch, the family and the formations taking part. -/
+theorem needsSome_on (W : Web F C) (cs : List C) (K : F → Prop) (T n : Nat) (f : F) :
+    NeedsSomePart (FedOnlyOn W cs K T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f K :=
+  fun L ⟨balances, _, only⟩ ⟨below, draws⟩ =>
+    have taken : n ≤ total (steps T n) (L.uptake cs) :=
       Nat.le_trans (Nat.le_trans (Nat.le_of_eq (Nat.one_mul n).symm)
           (steps_ge (q := fun _ => 1) T n fun _ _ => Nat.le_refl 1))
         (total_le (steps T n) fun t mem => match between_of_mem_steps mem with
           | ⟨from_, to⟩ => uptake_pos (draws t from_ to).2.1 (draws t from_ to).2.2)
-    have given : 0 < total (steps T n) (ω.1.replenishment cs) :=
-      Nat.pos_of_ne_zero fun zero => Nat.lt_irrefl (ω.2.stock cs T)
+    have given : 0 < total (steps T n) (L.replenishment cs) :=
+      Nat.pos_of_ne_zero fun zero => Nat.lt_irrefl (W.stock cs T)
         (Nat.lt_of_lt_of_le below (Nat.le_trans taken (Nat.le_trans (Nat.le_add_left _ _)
-          (Nat.le_of_eq ((balances.accumulates cs T n).trans
-            ((congrArg (ω.2.stock cs T + ·) zero).trans (Nat.add_zero _)))))))
+          (Nat.le_of_eq ((accumulates_on T n balances).trans
+            ((congrArg (W.stock cs T + ·) zero).trans (Nat.add_zero _)))))))
     match total_pos (steps T n) given with
     | ⟨t, mem, replenished⟩ => match between_of_mem_steps mem with
       | ⟨from_, to⟩ => match total_pos cs replenished with
-        | ⟨c, inside, positive⟩ => match total_pos (ω.1.present t) positive with
+        | ⟨c, inside, positive⟩ => match total_pos (L.present t) positive with
           | ⟨g, present, gives⟩ =>
             ⟨g, only t g c inside present gives, t, from_, to, present,
              total_pos_of_mem inside gives⟩
+
+/-- **A formation drawing past its family's stock needs some member of what feeds it.** On every
+course of a family fed only from `K`, a formation that draws past the family's stock across a
+stretch has some member of `K` giving to the family within the stretch: the case of
+`needsSome_on` for a flow with its own web, which balances at every step. -/
+theorem needsSome_of_drawsPast (cs : List C) (K : F → Prop) (T n : Nat) (f : F) :
+    NeedsSomePart (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f K :=
+  fun ω ⟨balances, acting, only⟩ draws =>
+    needsSome_on ω.2 cs K T n f ω.1 ⟨fun t _ _ => balances.on cs t, acting, only⟩ draws
 
 /-- **On the base, a feeder is needed exactly where it is the only one.** Where each member of
 `K` can feed the family alone while `f` draws past its stock, `f` needs the giving of the member
@@ -1722,6 +1752,302 @@ theorem needs_giver_iff_only {cs : List C} {K : F → Prop} {T n : Nat} {f g : F
     (member : K g) :
     NeedsPart (FedOnlyBy cs K) (DrawsPast cs T n) (GivesWithin cs T n) f g ↔ ∀ h, K h → h = g :=
   needsPart_iff_only (needsSome_of_drawsPast cs K T n f) alone member
+
+end Flow
+
+
+/-! ## Which feeders can feed a family alone, read off a web -/
+
+namespace Web
+
+variable {C : Type} (W : Web F C)
+
+/-- The step from `t` calls for giving to the family: some condition of it rises, or none falls.
+Where it does not, no condition rises and some falls, so a consumer can take the falls with
+nothing given. -/
+def CallsForGiving (cs : List C) (t : Nat) : Prop :=
+  (∃ c, c ∈ cs ∧ W.Rises t c) ∨ ¬ ∃ c, c ∈ cs ∧ W.Falls t c
+
+instance decCallsForGiving (cs : List C) (t : Nat) : Decidable (W.CallsForGiving cs t) :=
+  @instDecidableOr _ _
+    (decideSome (p := fun c => W.Rises t c)
+      (decide := fun c => Nat.decLt (W.level t c) (W.level (t + 1) c)) cs)
+    (@instDecidableNot _ (decideSome (p := fun c => W.Falls t c)
+      (decide := fun c => Nat.decLt (W.level (t + 1) c) (W.level t c)) cs))
+
+end Web
+
+/-- A total over two members is their sum. -/
+theorem total_two {α : Type} (q : α → Nat) (a b : α) : total [a, b] q = q a + q b :=
+  congrArg (q a + ·) (Nat.add_zero (q b))
+
+/-- A step between the ends of a stretch is a member of it. -/
+theorem mem_steps_of_between : ∀ {T n t : Nat}, T ≤ t → t < T + n → t ∈ steps T n
+  | T, 0, _, from_, to => absurd (Nat.lt_of_le_of_lt from_ to) (Nat.lt_irrefl T)
+  | T, n + 1, t, from_, to => match Nat.lt_or_ge T t with
+    | .inl later => .tail T (mem_steps_of_between later
+        (Nat.lt_of_lt_of_le to (Nat.le_of_eq (Nat.succ_add T n).symm)))
+    | .inr earlier => Eq.subst (motive := fun s => s ∈ steps T (n + 1))
+        (Nat.le_antisymm from_ earlier) (.head (steps (T + 1) n))
+
+namespace Flow
+
+variable {C : Type}
+
+/-- **A step calling for giving forces giving.** Where the flow balances on the family across
+the step from `t` and `f`, taking part, takes from the family, a step calling for giving has some
+condition of the family given to. -/
+theorem given_pos_of_calls {L : Flow F C} {W : Web F C} {cs : List C} {t : Nat} {f : F}
+    (balances : L.BalancesOn W cs t) (present : f ∈ L.present t)
+    (takes : 0 < total cs (L.take t f)) (calls : W.CallsForGiving cs t) :
+    ∃ c, c ∈ cs ∧ 0 < L.given t c :=
+  match calls with
+  | .inl ⟨c, inside, rises⟩ => ⟨c, inside, Nat.pos_of_ne_zero fun zero =>
+      Nat.lt_irrefl (W.level t c) (Nat.lt_of_lt_of_le rises
+        (Nat.le_trans (Nat.le_add_right _ (L.taken t c))
+          (Nat.le_of_eq ((balances c inside).trans
+            ((congrArg (W.level t c + ·) zero).trans (Nat.add_zero _))))))⟩
+  | .inr steady => match total_pos cs takes with
+    | ⟨c, inside, taking⟩ => ⟨c, inside, Nat.pos_of_ne_zero fun zero =>
+        have flat : W.level t c ≤ W.level (t + 1) c :=
+          match Nat.lt_or_ge (W.level (t + 1) c) (W.level t c) with
+          | .inl falls => absurd ⟨c, inside, falls⟩ steady
+          | .inr ge => ge
+        have taken : 0 < L.taken t c :=
+          Nat.lt_of_lt_of_le taking (le_total_of_mem (q := fun x => L.take t x c) present)
+        have back : L.taken t c + W.level (t + 1) c ≤ 0 + W.level (t + 1) c :=
+          Nat.le_trans (Nat.le_of_eq ((Nat.add_comm _ _).trans ((balances c inside).trans
+            ((congrArg (W.level t c + ·) zero).trans (Nat.add_zero _)))))
+            (Nat.le_trans flat (Nat.le_of_eq (Nat.zero_add _).symm))
+        Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le taken (le_of_add_le_add_right _ back))⟩
+
+/-- Across a stretch, the flow read off a web in which `f` draws and `pick t` gives. At a step
+calling for giving, `f` takes one more than each condition's level and the giver gives one more
+than the condition's next level; at another step `f` takes each condition's fall and nothing is
+given. Outside the stretch nothing takes part. -/
+def drawnAcross [DecidableEq F] (W : Web F C) (cs : List C) (T n : Nat) (f : F)
+    (pick : Nat → F) : Flow F C where
+  present t := if T ≤ t ∧ t < T + n then [f, pick t] else []
+  take t x c := if x = f then
+      (if W.CallsForGiving cs t then W.level t c + 1 else W.level t c - W.level (t + 1) c)
+    else 0
+  give t x c := if x = pick t ∧ W.CallsForGiving cs t then W.level (t + 1) c + 1 else 0
+
+section Drawn
+
+variable [DecidableEq F] {W : Web F C} {cs : List C} {T n : Nat} {f : F} {pick : Nat → F}
+
+/-- What gives in the flow drawn across a stretch is the formation picked at a step calling for
+giving. -/
+theorem drawnAcross_gives {t : Nat} {x : F} {c : C}
+    (gives : 0 < (drawnAcross W cs T n f pick).give t x c) :
+    x = pick t ∧ W.CallsForGiving cs t :=
+  match (instDecidableAnd : Decidable (x = pick t ∧ W.CallsForGiving cs t)) with
+  | isTrue both => both
+  | isFalse no => absurd (Nat.lt_of_lt_of_le gives (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0)
+
+/-- The flow drawn across a stretch balances on the family at every step of it, where the picked
+formation is never `f`. -/
+theorem drawnAcross_balancesOn (apart : ∀ t, pick t ≠ f) :
+    ∀ t, T ≤ t → t < T + n → (drawnAcross W cs T n f pick).BalancesOn W cs t := by
+  intro t from_ to c inside
+  have present : (drawnAcross W cs T n f pick).present t = [f, pick t] := if_pos ⟨from_, to⟩
+  have takeOther : (drawnAcross W cs T n f pick).take t (pick t) c = 0 := if_neg (apart t)
+  have giveSelf : (drawnAcross W cs T n f pick).give t f c = 0 :=
+    if_neg fun both => apart t both.1.symm
+  show W.level (t + 1) c + total ((drawnAcross W cs T n f pick).present t)
+      (fun x => (drawnAcross W cs T n f pick).take t x c) =
+    W.level t c + total ((drawnAcross W cs T n f pick).present t)
+      (fun x => (drawnAcross W cs T n f pick).give t x c)
+  rw [present, total_two, total_two]
+  show W.level (t + 1) c + ((drawnAcross W cs T n f pick).take t f c +
+      (drawnAcross W cs T n f pick).take t (pick t) c) =
+    W.level t c + ((drawnAcross W cs T n f pick).give t f c +
+      (drawnAcross W cs T n f pick).give t (pick t) c)
+  rw [takeOther, giveSelf, Nat.add_zero, Nat.zero_add]
+  exact match Web.decCallsForGiving W cs t with
+  | isTrue calls =>
+    have takeSelf : (drawnAcross W cs T n f pick).take t f c = W.level t c + 1 :=
+      (if_pos rfl).trans (if_pos calls)
+    have giveOther : (drawnAcross W cs T n f pick).give t (pick t) c = W.level (t + 1) c + 1 :=
+      if_pos ⟨rfl, calls⟩
+    (congrArg (W.level (t + 1) c + ·) takeSelf).trans
+      ((Nat.add_left_comm (W.level (t + 1) c) (W.level t c) 1).trans
+        (congrArg (W.level t c + ·) giveOther.symm))
+  | isFalse quiet =>
+    have takeSelf : (drawnAcross W cs T n f pick).take t f c = W.level t c - W.level (t + 1) c :=
+      (if_pos rfl).trans (if_neg quiet)
+    have giveOther : (drawnAcross W cs T n f pick).give t (pick t) c = 0 :=
+      if_neg fun both => quiet both.2
+    have below : W.level (t + 1) c ≤ W.level t c :=
+      match Nat.lt_or_ge (W.level t c) (W.level (t + 1) c) with
+      | .inl rises => absurd (.inl ⟨c, inside, rises⟩) quiet
+      | .inr ge => ge
+    (congrArg (W.level (t + 1) c + ·) takeSelf).trans ((add_sub_of_le below).trans
+      ((Nat.add_zero _).symm.trans (congrArg (W.level t c + ·) giveOther.symm)))
+
+/-- In the flow drawn across a stretch only active formations give, where the picked formation is
+active at every step of the stretch calling for giving. -/
+theorem drawnAcross_acting
+    (active : ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t)) :
+    (drawnAcross W cs T n f pick).Acting W :=
+  fun t x _ present gives => match drawnAcross_gives gives with
+  | ⟨same, calls⟩ => match Nat.decLe T t, Nat.decLt t (T + n) with
+    | isTrue from_, isTrue to => same ▸ active t from_ to calls
+    | isFalse early, _ => absurd (Eq.subst (motive := fun l => x ∈ l)
+        (if_neg fun both => early both.1) present) (fun none => nomatch none)
+    | _, isFalse late => absurd (Eq.subst (motive := fun l => x ∈ l)
+        (if_neg fun both => late both.2) present) (fun none => nomatch none)
+
+/-- The flow drawn across a stretch is read off the web for a family fed only from `K`, where the
+picked formation is never `f`, always in `K`, and active at every step calling for giving. -/
+theorem drawnAcross_fedOnlyOn {K : F → Prop} (apart : ∀ t, pick t ≠ f)
+    (active : ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t))
+    (members : ∀ t, K (pick t)) : FedOnlyOn W cs K T n (drawnAcross W cs T n f pick) :=
+  ⟨drawnAcross_balancesOn apart, drawnAcross_acting active,
+   fun t _ _ _ _ gives => (drawnAcross_gives gives).1 ▸ members t⟩
+
+/-- In the flow drawn across a stretch, `f` draws past the family's stock, where it is active
+across the stretch, the stretch is longer than the stock and the family has a condition. -/
+theorem drawnAcross_drawsPast {c₀ : C} (inside : c₀ ∈ cs)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    DrawsPast cs T n (drawnAcross W cs T n f pick, W) f :=
+  ⟨below, fun t from_ to =>
+    have present : (drawnAcross W cs T n f pick).present t = [f, pick t] := if_pos ⟨from_, to⟩
+    ⟨alive t from_ to, Eq.subst (motive := fun l => f ∈ l) present.symm (.head _),
+     match Web.decCallsForGiving W cs t with
+     | isTrue calls => total_pos_of_mem (q := (drawnAcross W cs T n f pick).take t f) inside
+        (Nat.lt_of_lt_of_le (Nat.succ_pos _)
+          (Nat.le_of_eq ((if_pos rfl).trans (if_pos calls)).symm))
+     | isFalse quiet => match decideSome (p := fun c => W.Falls t c)
+          (decide := fun c => Nat.decLt (W.level (t + 1) c) (W.level t c)) cs with
+       | isTrue ⟨_, mem, falls⟩ => total_pos_of_mem (q := (drawnAcross W cs T n f pick).take t f) mem
+          (Nat.lt_of_lt_of_le (SupportGated.sub_pos_of_lt falls)
+            (Nat.le_of_eq ((if_pos rfl).trans (if_neg quiet)).symm))
+       | isFalse steady => absurd (.inr steady) quiet⟩⟩
+
+end Drawn
+
+/-- **Which feeders can feed a family alone, read off a web.** Where `f`, outside `K`, is active
+across a stretch longer than its family's stock and every member of `K` is active at every step
+of the stretch calling for giving, each member can feed the family alone while `f` draws past the
+stock: the flow drawn across the stretch with that member giving. -/
+theorem partAlone_on [DecidableEq F] {W : Web F C} {cs : List C} {c₀ : C} (inside : c₀ ∈ cs)
+    {K : F → Prop} {T n : Nat} {f : F} (outside : ¬ K f)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n)
+    (able : ∀ g, K g → ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t g) :
+    PartAlone (FedOnlyOn W cs K T n) (fun L => DrawsPast cs T n (L, W))
+      (fun L => GivesWithin cs T n (L, W)) f K :=
+  fun g member =>
+    have apart : ∀ _ : Nat, g ≠ f := fun _ same => outside (same ▸ member)
+    have possible : FedOnlyOn W cs K T n (drawnAcross W cs T n f fun _ => g) :=
+      drawnAcross_fedOnlyOn apart (fun t from_ to calls => able g member t from_ to calls)
+        fun _ => member
+    have draws : DrawsPast cs T n (drawnAcross W cs T n f (fun _ => g), W) f :=
+      drawnAcross_drawsPast inside alive below
+    ⟨drawnAcross W cs T n f fun _ => g, possible, draws,
+     match needsSome_on W cs K T n f _ possible draws with
+     | ⟨_, _, t, from_, to, present, gives⟩ => match total_pos cs gives with
+       | ⟨_, _, positive⟩ => match drawnAcross_gives positive with
+         | ⟨same, _⟩ => ⟨t, from_, to, same ▸ present, same ▸ gives⟩,
+     fun _ _ ⟨_, _, _, _, gives⟩ => match total_pos cs gives with
+       | ⟨_, _, positive⟩ => (drawnAcross_gives positive).1⟩
+
+/-- **The copies law over a web.** Where every member of `K` is active at every step of the
+stretch calling for giving, `f` drawing past its family's stock needs a member's giving exactly
+where that member is the only one: `needsPart_iff_only` with `PartAlone` read off the web. -/
+theorem needs_giver_iff_only_on [DecidableEq F] {W : Web F C} {cs : List C} {c₀ : C}
+    (inside : c₀ ∈ cs) {K : F → Prop} {T n : Nat} {f g : F} (outside : ¬ K f)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n)
+    (able : ∀ g, K g → ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t g)
+    (member : K g) :
+    NeedsPart (FedOnlyOn W cs K T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔ ∀ h, K h → h = g :=
+  needsPart_iff_only (needsSome_on W cs K T n f) (partAlone_on inside outside alive below able) member
+
+/-- The first member of a list active at `t` other than `g`, and `g` where there is none. -/
+def firstActiveOther [DecidableEq F] (W : Web F C) [∀ t x, Decidable (W.active t x)] (g : F)
+    (t : Nat) : List F → F
+  | [] => g
+  | h :: hs => if W.active t h ∧ h ≠ g then h else firstActiveOther W g t hs
+
+section Other
+
+variable [DecidableEq F] {W : Web F C} [∀ t x, Decidable (W.active t x)] {g : F} {t : Nat}
+
+/-- What `firstActiveOther` gives is a member of the list or `g`. -/
+theorem firstActiveOther_mem : ∀ ks : List F,
+    firstActiveOther W g t ks ∈ ks ∨ firstActiveOther W g t ks = g
+  | [] => .inr rfl
+  | h :: hs => match (instDecidableAnd : Decidable (W.active t h ∧ h ≠ g)) with
+    | isTrue yes => .inl (Eq.subst (motive := fun x => x ∈ h :: hs) (if_pos yes).symm (.head hs))
+    | isFalse no => match firstActiveOther_mem hs with
+      | .inl mem => .inl (Eq.subst (motive := fun x => x ∈ h :: hs) (if_neg no).symm
+          (.tail h mem))
+      | .inr same => .inr ((if_neg no).trans same)
+
+/-- Where some member of the list is active at `t` and other than `g`, `firstActiveOther` gives
+one. -/
+theorem firstActiveOther_active : ∀ ks : List F, (∃ h, h ∈ ks ∧ W.active t h ∧ h ≠ g) →
+    W.active t (firstActiveOther W g t ks) ∧ firstActiveOther W g t ks ≠ g
+  | [], ⟨_, mem, _⟩ => nomatch mem
+  | h :: hs, ⟨k, mem, other⟩ => match (instDecidableAnd : Decidable (W.active t h ∧ h ≠ g)) with
+    | isTrue yes => Eq.subst (motive := fun x => W.active t x ∧ x ≠ g) (if_pos yes).symm yes
+    | isFalse no => Eq.subst (motive := fun x => W.active t x ∧ x ≠ g) (if_neg no).symm
+        (firstActiveOther_active hs (match mem_cons_cases mem with
+          | .inl same => absurd (Eq.subst (motive := fun x => W.active t x ∧ x ≠ g) same other) no
+          | .inr inside => ⟨k, inside, other⟩))
+
+end Other
+
+/-- **A feeder is needed exactly where it is alone when giving is called for.** Over the flows
+read off a web for a family fed only from the members of a list, let `f`, not a member, be active
+across a stretch longer than the family's stock. Then `f` drawing past the stock needs the giving
+of the member `g` exactly where, at some step of the stretch calling for giving, `g` is the only
+member active. -/
+theorem needs_giver_iff_alone [DecidableEq F] {W : Web F C} [∀ t x, Decidable (W.active t x)]
+    {cs : List C} {c₀ : C} (inside : c₀ ∈ cs) {ks : List F} {T n : Nat} {f g : F}
+    (outside : ¬ f ∈ ks) (member : g ∈ ks)
+    (alive : ∀ t, T ≤ t → t < T + n → W.active t f) (below : W.stock cs T < n) :
+    NeedsPart (FedOnlyOn W cs (· ∈ ks) T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesWithin cs T n (L, W)) f g ↔
+      ∃ t, T ≤ t ∧ t < T + n ∧ W.CallsForGiving cs t ∧ ∀ h, h ∈ ks → W.active t h → h = g :=
+  ⟨fun needs =>
+    match decideSome (p := fun t => W.CallsForGiving cs t ∧ ¬ ∃ h, h ∈ ks ∧ W.active t h ∧ h ≠ g)
+      (decide := fun t => @instDecidableAnd _ _ (Web.decCallsForGiving W cs t)
+        (@instDecidableNot _ (decideSome (p := fun h => W.active t h ∧ h ≠ g) ks)))
+      (steps T n) with
+    | isTrue ⟨t, mem, calls, lone⟩ => match between_of_mem_steps mem with
+      | ⟨from_, to⟩ => ⟨t, from_, to, calls, fun h inks active => match decEq h g with
+          | isTrue same => same
+          | isFalse other => absurd ⟨h, inks, active, other⟩ lone⟩
+    | isFalse absent =>
+      have other : ∀ t, T ≤ t → t < T + n → W.CallsForGiving cs t →
+          W.active t (firstActiveOther W g t ks) ∧ firstActiveOther W g t ks ≠ g :=
+        fun t from_ to calls => firstActiveOther_active ks
+          (match decideSome (p := fun h => W.active t h ∧ h ≠ g) ks with
+           | isTrue found => found
+           | isFalse lone => absurd ⟨t, mem_steps_of_between from_ to, calls, lone⟩ absent)
+      have members : ∀ t, firstActiveOther W g t ks ∈ ks := fun t =>
+        match firstActiveOther_mem (W := W) (g := g) (t := t) ks with
+        | .inl mem => mem
+        | .inr same => Eq.subst (motive := fun x => x ∈ ks) same.symm member
+      have apart : ∀ t, firstActiveOther W g t ks ≠ f := fun t same =>
+        outside (same ▸ members t)
+      have possible : FedOnlyOn W cs (· ∈ ks) T n
+          (drawnAcross W cs T n f fun t => firstActiveOther W g t ks) :=
+        drawnAcross_fedOnlyOn apart (fun t from_ to calls => (other t from_ to calls).1) members
+      match needs _ possible (drawnAcross_drawsPast inside alive below) with
+      | ⟨t, from_, to, _, gives⟩ => match total_pos cs gives with
+        | ⟨_, _, positive⟩ => match drawnAcross_gives positive with
+          | ⟨same, calls⟩ => ((other t from_ to calls).2 same.symm).elim,
+   fun ⟨t, from_, to, calls, alone⟩ L ⟨balances, acting, only⟩ ⟨_, draws⟩ =>
+     match given_pos_of_calls (balances t from_ to) (draws t from_ to).2.1 (draws t from_ to).2.2
+       calls with
+     | ⟨c, inside', given⟩ => match total_pos (L.present t) given with
+       | ⟨x, present, gives⟩ =>
+         have same : x = g := alone x (only t x c inside' present gives) (acting t x c present gives)
+         ⟨t, from_, to, same ▸ present, same ▸ total_pos_of_mem inside' gives⟩⟩
 
 end Flow
 
@@ -1818,7 +2144,89 @@ theorem two_feeders :
    fun needs => Part.noConfusion
      ((Flow.needs_giver_iff_only partAlone (.inr rfl)).mp needs .first (.inl rfl))⟩
 
+
+instance decEqPart : DecidableEq Part := fun a b => match a, b with
+  | .user, .user => isTrue rfl
+  | .first, .first => isTrue rfl
+  | .second, .second => isTrue rfl
+  | .user, .first => isFalse fun same => Part.noConfusion same
+  | .user, .second => isFalse fun same => Part.noConfusion same
+  | .first, .user => isFalse fun same => Part.noConfusion same
+  | .first, .second => isFalse fun same => Part.noConfusion same
+  | .second, .user => isFalse fun same => Part.noConfusion same
+  | .second, .first => isFalse fun same => Part.noConfusion same
+
+/-- The user is neither copy. -/
+theorem user_outside : ¬ Part.user ∈ [Part.first, .second] :=
+  fun mem => match mem_pair mem with
+  | .inl same => Part.noConfusion same
+  | .inr same => Part.noConfusion same
+
+/-- **Read off the web, neither feeder is needed.** On `web`, every formation is active at every
+step, so each copy can feed the condition alone, and over the flows read off the web the user,
+drawing past the stock, needs neither copy's giving. -/
+theorem two_feeders_on :
+    ¬ NeedsPart (Flow.FedOnlyOn web [()] (· ∈ [Part.first, .second]) 0 1)
+        (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+        .user .first ∧
+      ¬ NeedsPart (Flow.FedOnlyOn web [()] (· ∈ [Part.first, .second]) 0 1)
+        (fun L => Flow.DrawsPast [()] 0 1 (L, web)) (fun L => Flow.GivesWithin [()] 0 1 (L, web))
+        .user .second :=
+  ⟨fun needs => Part.noConfusion ((Flow.needs_giver_iff_only_on (List.Mem.head []) user_outside
+      (fun _ _ _ => trivial) Nat.one_pos (fun _ _ _ _ _ _ => trivial) (.head _)).mp needs .second
+      (.tail _ (.head _))),
+   fun needs => Part.noConfusion ((Flow.needs_giver_iff_only_on (List.Mem.head []) user_outside
+      (fun _ _ _ => trivial) Nat.one_pos (fun _ _ _ _ _ _ => trivial) (.tail _ (.head _))).mp needs
+      .first (.head _))⟩
+
 end Feeders
+
+namespace FeedersInTurn
+
+open Copies (Part)
+
+/-- Who is active at a step: the user always, the first copy at step `0`, the second at step `1`. -/
+def activeAt (t : Nat) : Part → Bool
+  | .user => true
+  | .first => Nat.beq t 0
+  | .second => Nat.beq t 1
+
+/-- The web of the shifts: the condition stands at zero, and the copies are active in turn. -/
+def web : Web Part Unit :=
+  ⟨fun _ _ => 0, fun t x => activeAt t x = true, fun _ _ _ => True, fun _ _ _ => 0,
+   fun _ _ _ => True⟩
+
+instance decActive : ∀ t x, Decidable (web.active t x) :=
+  fun t x => instDecidableEqBool (activeAt t x) true
+
+/-- The condition stands still, so every step calls for giving. -/
+theorem calls (t : Nat) : web.CallsForGiving [()] t :=
+  .inr fun ⟨_, _, falls⟩ => Nat.lt_irrefl 0 falls
+
+/-- **Two feeders in turn: the user needs both.** At step `0` only the first copy is active and at
+step `1` only the second, and both steps call for giving, so over the flows read off the web the
+user, drawing past the stock across the two steps, needs each copy's giving. -/
+theorem needs_both :
+    NeedsPart (Flow.FedOnlyOn web [()] (· ∈ [Part.first, .second]) 0 2)
+        (fun L => Flow.DrawsPast [()] 0 2 (L, web)) (fun L => Flow.GivesWithin [()] 0 2 (L, web))
+        .user .first ∧
+      NeedsPart (Flow.FedOnlyOn web [()] (· ∈ [Part.first, .second]) 0 2)
+        (fun L => Flow.DrawsPast [()] 0 2 (L, web)) (fun L => Flow.GivesWithin [()] 0 2 (L, web))
+        .user .second :=
+  ⟨(Flow.needs_giver_iff_alone (List.Mem.head []) Feeders.user_outside (.head _)
+      (fun _ _ _ => rfl) (Nat.succ_pos 1)).mpr ⟨0, Nat.le_refl 0, Nat.succ_pos 1, calls 0,
+      fun _ inks active => match Feeders.mem_pair inks with
+        | .inl same => same
+        | .inr same => absurd (Eq.subst (motive := fun x => web.active 0 x) same active)
+            (fun on => Bool.noConfusion on)⟩,
+   (Flow.needs_giver_iff_alone (List.Mem.head []) Feeders.user_outside (.tail _ (.head _))
+      (fun _ _ _ => rfl) (Nat.succ_pos 1)).mpr ⟨1, Nat.zero_le 1, Nat.succ_lt_succ (Nat.succ_pos 0),
+      calls 1, fun _ inks active => match Feeders.mem_pair inks with
+        | .inl same => absurd (Eq.subst (motive := fun x => web.active 1 x) same active)
+            (fun on => Bool.noConfusion on)
+        | .inr same => same⟩⟩
+
+end FeedersInTurn
 
 /-! ## What self-concern alone ranks -/
 

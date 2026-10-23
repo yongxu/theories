@@ -15,9 +15,9 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-04-integrated-evolution/` | — | 2 | — | 0 |
 | `2026-10-05-causal-foundations/` | — | 1 | `outputs/ (1)` | 0 |
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
-| `2026-10-05-generative-foundation-review/` | — | 3641 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (3536)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4366 |
+| `2026-10-05-generative-foundation-review/` | — | 3650 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (3545)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4366 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
-| `2026-10-05-repository-reconciliation/` | — | 17 | `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
+| `2026-10-05-repository-reconciliation/` | — | 21 | `architecture/ (3)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
 | `2026-10-05-support-and-shared-generativity/` | — | 24 | `completion/ (24)` | 0 |
 
@@ -64,6 +64,7 @@ No README; its top-level documents:
 
 No README; its top-level documents:
 
+- [ARCHITECTURE-PLAN.md](2026-10-05-repository-reconciliation/ARCHITECTURE-PLAN.md): 仓库架构：一个根、一张图、四层篇幅
 - [whole-repo-review-2026-10-19.md](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-19.md): Whole-repository review, 19 October 2026
 
 ## History

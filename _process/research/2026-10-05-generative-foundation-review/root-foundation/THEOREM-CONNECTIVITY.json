@@ -1,11 +1,11 @@
 {
- "commit": "e1820045cb275ea0f160556ad361889f3bf2be20",
+ "commit": "c1aff4e2e36aef393e2dcf56cf895510ba0afbdb",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T070625.290320Z",
+ "core_receipt_at_commit": "20261023T071926.635620Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 316,
- "constants": 42715,
- "spine_theorems": 14243,
+ "constants": 42787,
+ "spine_theorems": 14261,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 1056,
   "statement on Process/Frame/Run/Trace": 2953,
-  "statement on World/Flow/Web": 3356,
+  "statement on World/Flow/Web": 3371,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 181,
-  "used by a theorem on the base": 5152,
+  "used by a theorem on the base": 5155,
   "instance on the base recorded": 153,
   "apart: own vocabulary": 1040,
   "apart: prelude-only statement": 91
@@ -160,7 +160,7 @@
  "apart_by_module": {
   "Becoming.Weightings": [
    97,
-   181
+   199
   ],
   "Becoming.Reproduction": [
    80,
@@ -670,15 +670,15 @@
  "rings": {
   "core": {
    "modules": 300,
-   "theorems": 13483,
+   "theorems": 13501,
    "apart": 1037,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2742,
-    "statement on World/Flow/Web": 3331,
+    "statement on World/Flow/Web": 3346,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 170,
-    "used by a theorem on the base": 4793,
+    "used by a theorem on the base": 4796,
     "instance on the base recorded": 153,
     "apart: own vocabulary": 947,
     "apart: prelude-only statement": 90
@@ -11924,8 +11924,22 @@
   "Becoming.Copies.user_not_copy": "used by a theorem on the base",
   "Becoming.Copies.carriesAlone": "apart: own vocabulary",
   "Becoming.Copies.two_copies": "apart: own vocabulary",
+  "Becoming.Flow.needsSome_on": "statement on World/Flow/Web",
   "Becoming.Flow.needsSome_of_drawsPast": "statement on World/Flow/Web",
   "Becoming.Flow.needs_giver_iff_only": "statement on World/Flow/Web",
+  "Becoming.total_two": "used by a theorem on the base",
+  "Becoming.mem_steps_of_between": "used by a theorem on the base",
+  "Becoming.Flow.given_pos_of_calls": "statement on World/Flow/Web",
+  "Becoming.Flow.drawnAcross_gives": "statement on World/Flow/Web",
+  "Becoming.Flow.drawnAcross_balancesOn": "statement on World/Flow/Web",
+  "Becoming.Flow.drawnAcross_acting": "statement on World/Flow/Web",
+  "Becoming.Flow.drawnAcross_fedOnlyOn": "statement on World/Flow/Web",
+  "Becoming.Flow.drawnAcross_drawsPast": "statement on World/Flow/Web",
+  "Becoming.Flow.partAlone_on": "statement on World/Flow/Web",
+  "Becoming.Flow.needs_giver_iff_only_on": "statement on World/Flow/Web",
+  "Becoming.Flow.firstActiveOther_mem": "statement on World/Flow/Web",
+  "Becoming.Flow.firstActiveOther_active": "statement on World/Flow/Web",
+  "Becoming.Flow.needs_giver_iff_alone": "statement on World/Flow/Web",
   "Becoming.Feeders.mem_pair": "used by a theorem on the base",
   "Becoming.Feeders.fedOnlyBy_withFirst": "statement on World/Flow/Web",
   "Becoming.Feeders.fedOnlyBy_withSecond": "statement on World/Flow/Web",
@@ -11933,6 +11947,10 @@
   "Becoming.Feeders.drawsPast_withSecond": "statement on World/Flow/Web",
   "Becoming.Feeders.partAlone": "statement on World/Flow/Web",
   "Becoming.Feeders.two_feeders": "statement on World/Flow/Web",
+  "Becoming.Feeders.user_outside": "used by a theorem on the base",
+  "Becoming.Feeders.two_feeders_on": "statement on World/Flow/Web",
+  "Becoming.FeedersInTurn.calls": "statement on World/Flow/Web",
+  "Becoming.FeedersInTurn.needs_both": "statement on World/Flow/Web",
   "Becoming.Weighting.increasingInOwn_of_increasing": "apart: own vocabulary",
   "Becoming.Weighting.increasingInOwn_iff_increasing": "apart: own vocabulary",
   "Becoming.Weighting.widensOwn_iff_every_increasingInOwn": "used by a theorem on the base",
