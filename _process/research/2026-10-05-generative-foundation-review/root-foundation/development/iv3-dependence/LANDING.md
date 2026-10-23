@@ -67,3 +67,11 @@ The history file of the board had been truncated by the XL4 landing; restore_his
 1. `integrate_i.py`; core checker; connectivity `--check` and `--write`.
 2. `apply_text_i.py N RECEIPT`, `section9_i.py RECEIPT MAIN N`, `update_records_i.py RECEIPT N` (lint first), `sh repoint_i.sh RECEIPT`.
 3. The scratch copy goes (`git rm -f` if it was rebuilt after the kit commit); `board_i.py land RECEIPT N THEOREMS DECLS`; render, check, links and test; commit; merge main if it moved (board: take main's and re-land the row, history saved and restored), render and fast-forward.
+
+## IV3j
+
+1. `integrate_j.py`; core checker; connectivity `--check` and `--write`.
+2. `apply_text_j.py N RECEIPT` (07-SIGNIFICANCE §4.3: a row, the witnesses, the reading; D64's where and item 13; the README rows; the study), `receipts_j.py RECEIPT` (08-METHOD's receipt and counts, read from the receipt; the canonical chapter's §9 is history since RA), `update_records_j.py RECEIPT N` (caps asserted), `sh repoint_j.sh RECEIPT`.
+3. The scratch copy goes; `board_j.py land RECEIPT N THEOREMS DECLS`; render, check, links and test; commit; merge main if it moved (board: take main's and re-land the row, history saved and restored), render and fast-forward; where other sessions' edits sit uncommitted in the shared checkout, apply the patch to its index and working tree for these paths only.
+
+The first version of the two-tier law assumed no store rises (kept as `iv3j_region_steady.lean`); the law landed holds with rises.
