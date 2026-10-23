@@ -1,0 +1,1 @@
+| L0 | [`Becoming.GrammarTesting`](Becoming/GrammarTesting.lean) | testing within the net: the core lies in every stage (`«核在每层之内»`), so what a finite stage tells apart is not in the core (`«可分则不在核»`); a balanced room and a thermostat-held room share a core class until the window's opening is in the net (`«恒温与平衡»`) |

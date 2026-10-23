@@ -1,10 +1,12 @@
 * `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
-  grains, a fine class of parts and a coarse class of the pattern they make up. A carrying renewal
-  (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`, 火传). Generation
-  (`«生成»`: the pattern never ends and a carrying renewal lies ahead), keeping (`«守»`: it never
-  ends and stops renewing) and degeneration (`«退化»`: it ends) exclude each other, each is
-  inhabited, and with excluded middle they cover every point (`«三域之周»`); renewal does not decide
-  the region (`Map.Short.renews_and_ends`); a constant coarse class never degenerates from a
-  continued point; telling generation from degeneration on every line is exactly excluded middle
-  (`«生败之定当且仅当排中»`); a chain of classes reads generation at every order (`«阶生成»`). A
-  leaf.
+  grains, a fine class of parts and a coarse class of the pattern they make up, and on branches.
+  A carrying renewal (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`,
+  火传). The pattern goes on along some branch (`«延»`) or ends on every branch (`«尽»`), which
+  exclude each other (`«延尽不并»`); generation (`«生成»`: some branch renews without end), keeping
+  (`«守»`: some branch goes on without renewal) and degeneration (`«退化»`: every branch ends) are
+  read on branches, generation and keeping can hold at one point (`Map.«生守相杂»`, the mixed
+  region) and exclude each other on a single line (`«单行则生守不并»`); the every-branch forms
+  (`«全生成»`, `«全守»`, `«有终»`) are their strong and weak cases. Renewal does not decide the
+  region (`Map.Short.renews_and_ends_everywhere`); telling going on from ending at every point is
+  exactly excluded middle (`«延尽之定当且仅当排中»`); a chain of classes reads generation at every
+  order (`«阶生成»`). A leaf.
