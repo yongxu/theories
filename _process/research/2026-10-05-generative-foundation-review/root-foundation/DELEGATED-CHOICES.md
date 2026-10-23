@@ -913,3 +913,17 @@ Where: the eight chapters of the restructured account ([01](../../../../theories
 **Reasons.** Each reading interprets content the chapter checks against its Lean and says no more than the laws it names; where it rests on no theorem, the chapter says so (an argument, a hypothetical case, a historical correspondence). The readings carried from earlier chapters keep those chapters' arguments, which stay readable in history. Registering them here, rather than leaving them unnumbered, keeps the rule that no reading is open.
 
 **What would change it.** A reading found to claim more than the laws it names, or to conflict with another reading of the one account, is revised in the chapter and here.
+
+<a id="d66-the-work-read-by-its-own-laws"></a>
+### The work read by its own laws
+
+Where: [08 §12](../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws), after the completion criterion; board item WR, 24 October 2026, from [the discussion of that day](../../../../sources/15-codex-theory-conversations/2026-10-24-the-place.md).
+
+**Decision.** Adopted with exact scope, in three parts.
+1. **What the checks reach.** The law that a selection reaches exactly what couples into its selector is read of the work itself. Its selectors (the Lean checker, the completion and record checks, AI reviews) take in no human reader, no coordination among people and no trained system, so no check run inside the work shows that it serves its purpose. This is the argument for weighing an item by what it serves before claiming it.
+2. **Completion is not closure.** By analogy with the law that, under balance and dissipation, a finite family whose embodied members keep arising is not closed from any step on, an account of a generating unfolding is completed by unity on one root, an exact statement of its edge, and readability outside its own selectors, not by sealing.
+3. **Where the ethics hands over.** The proofs make the step of invariance exact up to its edge; past it the step is argued and taken or refused by a reader.
+
+**Reasons.** Part 1 applies a law the theory proves of any selection to a selection the work actually runs. The work is not a formal model of that law, so the application is a reading: it would fail only if some selector inside the work did take in readers, coordination or trained systems. Part 2 is an analogy and says so: the law is about flows, and the work is not one. Part 3 restates what 07 shows (the dynamics leave scope and order open; the open question of the step) and adds only that the step is not a check's to take.
+
+**What would change it.** A selector inside the work that couples readers, coordination or trained systems in, such as a human review answering through the review packet, makes part 1 a statement of what was missing, not of what is. A finished, sealed account of an open unfolding that loses nothing by being sealed would refute part 2.
