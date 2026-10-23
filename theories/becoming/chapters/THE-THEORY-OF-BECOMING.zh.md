@@ -1095,6 +1095,8 @@
 
 整体的演绎必然性；更强的普遍实践根据；科学探究的必要关系根基；生命意义、A 与两种中立的根据；把生成的空间称为好：扩大是否更好（C 的根据，定次序），意义是否不止于任何边界（不变的一步的根据，定范围，不排序）；表示的范围：每个生成／变化能否以离散的步与自然数的量表示。
 
+**自我关切经由依存所及**（[THE-STEP-OF-INVARIANCE §4.4](THE-STEP-OF-INVARIANCE.md#44-where-the-centers-depend-on-one-another)；记录 [self-concern-through-dependence](../results/records/self-concern-through-dependence.md) 与 [what-self-concern-alone-ranks](../results/records/what-self-concern-alone-ranks.md)）。沿延续所凭借者（养之者、所需者）来画自我，从己持有的预设恰在诸中心彼此位于对方闭包之内处对每个立场都相同，共有一个条件的诸中心即如此。沿“所需”来画，它只在某个副本是唯一者时达到该副本。只把增加自身延续的扩大排得更高的次序，已把一切所需者的终结排在每个保留该立场的进程之下。不变之步只在诸中心的共同闭包之外、以及每个中心从他者立场算数处还有工作；C 只在自我关切留下的混合比较中还有工作。实际的诸中心是否彼此依存，是经验问题。
+
 ### 8.6 逻辑承诺
 
 核心不假定任何经典逻辑原理（§0 A 组）。规律需要某个原理之处，原理是它自己的假设，或规律被证明与它等价；下面每个校准只在它说出关于展开的什么时才是结果，否则是需要它的规律的引理。已定性是局部的（`counts_iff_decided`）；排中律（`World.law_iff_em`）、弱排中律（`FrontierFrames.choice_exists_iff_weakly`）、双重否定消去（`Gated.origin_of_propositions_iff`）、LPO（`World.lpo_of_finite_ends`、`LastChange.lpo_iff_settles`）、WLPO（`not_through_sensitive_iff_rule`）、Markov 原理（`refutable_passes_iff_markov`）、LLPO 与依赖选择（`runs_iff_dependentChoice`）各在何处进入，见[英文版 §8.6](THE-THEORY-OF-BECOMING.md#86-the-logical-commitment)。
@@ -1123,15 +1125,15 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261022T145016.701975Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 368 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#368-selection-in-the-draw-mutation-the-breeding-value-and-dependences-formed-from-drawing-ev13-ev16)）。
+**当前回执**是运行 [`20261023T051150.969269Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 373 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#373-self-concern-through-dependence-iv3)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 293 个模块，13,062 条定理 |
+| 核心模块（含根 `Becoming`） | 295 个模块，13,296 条定理 |
 | 实例模块 | 7 个模块，581 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 309 个模块，13,896 条定理 |
+| 闭包（核心、环与根基） | 311 个模块，14,130 条定理 |
 | 审计的脊柱声明 | 18,916 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 204 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |

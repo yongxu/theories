@@ -1887,11 +1887,6 @@
    "category": "general-structure",
    "reason": "the significance of the centers' continuation is unrestricted exactly where every formation is a center: a law of any center map, with no world"
   },
-  "Becoming.forced_iff_within": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "what every significance meeting a standpoint's presupposition at a closure gives is exactly the closure: a law of every significance along any relation; the base supplies relations (feeding, affecting) as cases, and Web.retains_atCenters_iff reads the centers on a web"
-  },
   "Becoming.subTrue_every_of_related": {
    "module": "Becoming.Weightings",
    "category": "general-structure",
@@ -1966,11 +1961,6 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "held de se the presupposition is the condition where every center's closure is the whole: a law of every relation and center map, with no world"
-  },
-  "Becoming.selfAscribed_iff_withinSome": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "the de se and de dicto readings agree exactly where the centers' closures agree: a law of every relation and center map, with no world"
   },
   "Becoming.Weighting.standingInvariant_of_gradeInvariant": {
    "module": "Becoming.Weightings",
@@ -3001,6 +2991,41 @@
    "module": "Becoming.ContinuedClasses",
    "category": "general-structure",
    "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (links are lines under the one)"
+  },
+  "Becoming.Copies.two_copies": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "two copies, each carrying the user alone, so the user needs some copy and neither: a fact about one constructed set of courses, not a law of the unfolding"
+  },
+  "Becoming.Weighting.ended_below": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "the ending of what everything needs is ranked below from every standpoint whose own continuation the other course adds to: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.Weighting.increasingInOwn_iff_increasing": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "where its own continuation marks every listed item, an order is increasing in it exactly when it is increasing in admission: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.Weighting.some_increasingInOwn_reverses": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "where the other course keeps an item beyond, some positive weighting ranks it higher: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.forced_member_iff_only": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "drawn along need, the presupposition reaches a member of a class of alternatives exactly where it is the only member: a law of any formations and any predicate of possible courses, with no world"
+  },
+  "Becoming.selfAscribed_iff_withinSome_iff_centersWithin": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "the de se and de dicto readings agree exactly where the centers lie within one another's closures: a law of any relation and any assignment of centers, with no world"
+  },
+  "Becoming.withinClosure_iff_of_centersWithin": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "centers within one another's closures have one closure: a law of any relation and any assignment of centers, with no world"
   }
  },
  "instances": {

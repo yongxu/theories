@@ -66,7 +66,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 - related, not a proved adapter: [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md). weighed_lt_of_widens is its case with nothing against.
 - related, not a proved adapter: [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md). outweighs and neutral_ranks_by_number are its cases, the ratio past the pair's and the ratio one.
 
-**Used by:** [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md) · [graded-significance-and-priority](graded-significance-and-priority.md) · [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md)
+**Used by:** [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md) · [graded-significance-and-priority](graded-significance-and-priority.md) · [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +82,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 | statement | [THE-STEP-OF-INVARIANCE.md](../../chapters/THE-STEP-OF-INVARIANCE.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T051150.969269Z/verification.json) | — |
 
 Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
 

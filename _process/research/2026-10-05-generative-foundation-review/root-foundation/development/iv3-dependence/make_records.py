@@ -290,6 +290,7 @@ order = {
         {**t('That widening is better, or that a ranking obliges anyone: an order is from a standpoint.',
              '扩大更好，或某个排序约束任何人：次序是从一个立场而言的。'), 'kind': 'non-implication'},
     ],
+    'counterexamples': [],
     'standard_boundaries': ['no-ethical-premise', 'no-evaluation', 'decidability', 'no-definition-by-verdict',
                             'names-provisional', 'formal-not-empirical'],
     'validation_scope': SCOPE,

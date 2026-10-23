@@ -2036,7 +2036,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).
   Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
   each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
-  exceeds both `p / q` and `q / p`. The readings are the AI's (D59, D60).
+  exceeds both `p / q` and `q / p`. Held de se, self-concern is one from every standpoint exactly where
+  the centers lie within one another's closures, and centers that share one condition do
+  (`ownClosure_standpointInvariant_iff_centersWithin`, `Flow.centersWithin_feeding_of_common`); drawn
+  along need it reaches a copy of what it needs exactly where the copy is the only one
+  (`forced_member_iff_only`, `Copies`); an order increasing in its own continuation ranks a course
+  above another, where it adds to that continuation, exactly where the other keeps nothing beyond it,
+  so the ending of what everything needs is ranked below from every standpoint
+  (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise
+  where its own continuation is everything listed. The readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance

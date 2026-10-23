@@ -116,6 +116,33 @@ order every standpoint shares when each weighs what can form in its own way.
   `Web.admitsWithin_forced_within_some_iff`). The two readings agree
   exactly where whatever lies within one center's closure lies within every center's
   (`selfAscribed_iff_withinSome`); in `Divided` they part.
+* **Self-concern through dependence.** Held de se, the presupposition is standpoint-invariant,
+  and the de se and de dicto readings agree, exactly where the centers lie within one another's
+  closures (`CentersWithin`, `ownClosure_standpointInvariant_iff_centersWithin`,
+  `selfAscribed_iff_withinSome_iff_centersWithin`); the whole need not lie within them. Centers
+  that depend on one condition and exchange with it lie within one another's influence closures,
+  and centers that at one step require one condition and give to it lie within one another's
+  feeding closures (`Flow.centersWithin_influence_of_common`, `Flow.centersWithin_feeding_of_common`),
+  so self-concern held de se along either relation is one from all of them
+  (`Flow.ownClosure_influence_invariant_of_common`, `Flow.ownClosure_feeding_invariant_of_common`).
+* **What a continuation needs, and copies.** Over possible courses, `f` needs `g` where `g`
+  continues on every course on which `f` does (`Needs`). Need is its own closure
+  (`withinClosure_needs_iff`), so drawn along need a standpoint's presupposition reaches exactly
+  what its continuation needs (`forced_needs_iff`). Where `f` needs some member of a class and each
+  member can carry it alone (`NeedsSome`, `CarriesAlone`), it needs a member exactly where that
+  member is the only one (`needs_iff_only`, `forced_member_iff_only`): in `Copies` the user needs
+  some copy and neither of the two (`Copies.two_copies`).
+* **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
+  higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
+  `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
+  continuation marks every listed item the two coincide (`Weighting.increasingInOwn_of_increasing`,
+  `Weighting.increasingInOwn_iff_increasing`). Every such order ranks `a` above `b` exactly where
+  `a` widens `b` and adds to its own continuation (`Weighting.widensOwn_iff_every_increasingInOwn`);
+  where `a` adds to it, exactly where `b` keeps nothing beyond `a`
+  (`Weighting.every_increasingInOwn_iff_includes`), and where `b` keeps an item beyond, some such
+  order ranks `b` higher (`Weighting.some_increasingInOwn_reverses`). So a course that admits
+  nothing from an ending on, and agrees with `a` before it, is ranked below `a` from every
+  standpoint whose own continuation `a` adds to (`Weighting.ended_below`).
 * **Standing and grades.** A graded significance gives each item a natural grade from each
   standpoint; its standing is whether the grade is positive. Invariant grades have invariant
   standing (`Weighting.standingInvariant_of_gradeInvariant`) and rank alike from every standpoint
@@ -151,6 +178,18 @@ presupposition, the de se reading gives each center its own closure, and the two
 where centers' closures differ: drawn along being related at all in a connected unfolding they
 agree, so the de se question has force only together with a drawing along a narrower relation.
 
+Read the relation a self is drawn along as one its continuation is carried along: what feeds it,
+or what it needs. Then where the centers depend on one another along it, the de se question
+decides nothing within their common closure, since each center's own closure is that closure,
+and the step of invariance has work only beyond it. Drawn along need, self-concern reaches a copy
+of what it needs only where the copy is the only one, so with many copies the presupposition
+reaches the class and none of them, and with one it reaches that one. Read an order increasing in
+its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
+ending of a condition everything needs below every course that keeps the standpoint and agrees
+before the ending, from every standpoint, and it ranks no comparison in which the other course
+keeps something beyond, as a copy that continues independently of the ended condition does.
+Drawn so that its own continuation is everything listed, it is C's premise.
+
 Read a presentation as a plan as it is told and a ranking of presentations as a valuer's
 judgment. Then T5's exception is `narrower_above_net` and `reads_increasingAt`: a valuer that reads
 the case right ranks a narrowing above its widening only where the added formation weighs at zero
@@ -175,7 +214,9 @@ is not needed for the shared order); which weighting a standpoint has; whether a
 sets of a case, whether its sign measured apart is the sign of the joint increment, and how
 dispersed its weights are, each measurable and none derived; that the impartial order is what
 every standpoint shares rather than one privileged weighting; which formations are centers; the
-step of invariance itself. The representation commits to finite listings of steps and formations,
+step of invariance itself; which relation a continuation is carried along, whether actual centers
+depend on one another, which courses are possible, and that a standpoint's order is increasing in
+its own continuation. The representation commits to finite listings of steps and formations,
 two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
 -/
 
@@ -1359,6 +1400,72 @@ theorem ownClosure_unrestricted_of_whole {rel : F → F → Prop} {center : Pos 
     Unrestricted (selfAscribed (ownClosure rel) center) :=
   ownClosure_unrestricted_iff.mpr whole
 
+/-! ## Self-concern through dependence -/
+
+/-- The centers lie within one another's closures along a relation: every center lies within
+every center's closure. -/
+def CentersWithin (rel : F → F → Prop) (center : Pos → F) : Prop :=
+  ∀ p q, WithinClosure rel (center p) (center q)
+
+/-- Centers within one another's closures have one closure. -/
+theorem withinClosure_iff_of_centersWithin {rel : F → F → Prop} {center : Pos → F}
+    (within : CentersWithin rel center) (p q : Pos) (g : F) :
+    WithinClosure rel (center p) g ↔ WithinClosure rel (center q) g :=
+  ⟨fun held => (within q p).trans held, fun held => (within p q).trans held⟩
+
+/-- **Held de se, the presupposition is standpoint-invariant exactly where the centers lie within
+one another's closures.** Each standpoint's own closure is then one closure, and nothing more is
+needed: the whole need not lie within it. -/
+theorem ownClosure_standpointInvariant_iff_centersWithin {rel : F → F → Prop}
+    {center : Pos → F} :
+    StandpointInvariant (selfAscribed (ownClosure rel) center) ↔ CentersWithin rel center :=
+  ⟨fun invariant p q => ownClosure_standpointInvariant_iff.mp invariant q p (center q)
+      (WithinClosure.refl (center q)),
+   fun within => ownClosure_standpointInvariant_iff.mpr fun p q _ held => (within q p).trans held⟩
+
+/-- **The de se and the de dicto readings agree exactly where the centers lie within one
+another's closures.** -/
+theorem selfAscribed_iff_withinSome_iff_centersWithin {rel : F → F → Prop} {center : Pos → F} :
+    (∀ p t g, selfAscribed (ownClosure rel) center p t g ↔ withinSome rel center p t g) ↔
+      CentersWithin rel center :=
+  selfAscribed_iff_withinSome.trans
+    ⟨fun agree p q => agree p q (center q) (WithinClosure.refl (center q)),
+     fun within p q _ held => (within p q).trans held⟩
+
+/-- **Centers that depend on one condition and exchange with it lie within one another's
+influence closures.** -/
+theorem Flow.centersWithin_influence_of_common {C : Type} {L : Flow F C} {W : Web F C}
+    {center : Pos → F} {c : C}
+    (common : ∀ p, W.DependsOn (center p) c ∧ L.Exchanges (center p) c) :
+    CentersWithin (L.AffectedBy W) center :=
+  fun p q => WithinClosure.of_rel ⟨c, (common p).1, (common q).2⟩
+
+/-- **Centers that at one step take part, require one condition and give to it lie within one
+another's feeding closures.** -/
+theorem Flow.centersWithin_feeding_of_common {C : Type} {L : Flow F C} {W : Web F C}
+    {center : Pos → F} {t : Nat} {c : C}
+    (common : ∀ p, center p ∈ L.present t ∧ W.requires t (center p) c ∧
+      0 < L.give t (center p) c) :
+    CentersWithin (L.FedFrom W) center :=
+  fun p q => WithinClosure.of_rel ⟨t, rfl, c, (common p).2.1, (common q).1, (common q).2.2⟩
+
+/-- **Held de se along being affected, self-concern is one from the standpoint of every center
+that depends on one condition and exchanges with it**, whatever lies beyond their closure. -/
+theorem Flow.ownClosure_influence_invariant_of_common {C : Type} {L : Flow F C} {W : Web F C}
+    {center : Pos → F} {c : C}
+    (common : ∀ p, W.DependsOn (center p) c ∧ L.Exchanges (center p) c) :
+    StandpointInvariant (selfAscribed (ownClosure (L.AffectedBy W)) center) :=
+  ownClosure_standpointInvariant_iff_centersWithin.mpr (Flow.centersWithin_influence_of_common common)
+
+/-- **Held de se along feeding, self-concern is one from the standpoint of every center that at
+one step requires one condition and gives to it.** -/
+theorem Flow.ownClosure_feeding_invariant_of_common {C : Type} {L : Flow F C} {W : Web F C}
+    {center : Pos → F} {t : Nat} {c : C}
+    (common : ∀ p, center p ∈ L.present t ∧ W.requires t (center p) c ∧
+      0 < L.give t (center p) c) :
+    StandpointInvariant (selfAscribed (ownClosure (L.FedFrom W)) center) :=
+  ownClosure_standpointInvariant_iff_centersWithin.mpr (Flow.centersWithin_feeding_of_common common)
+
 namespace Divided
 
 /-- Two standpoints, each its own center, along the empty relation. -/
@@ -1378,6 +1485,220 @@ theorem withinSome_both (p : Bool) (t : Nat) (g : Bool) :
   ⟨g, WithinClosure.refl g⟩
 
 end Divided
+
+/-! ## What a continuation needs, and copies -/
+
+/-- Over the possible courses, each marking the formations that continue on it, `f` needs `g`:
+on every possible course on which `f` continues, `g` continues. -/
+def Needs (possible : (F → Bool) → Prop) (f g : F) : Prop :=
+  ∀ a, possible a → a f = true → a g = true
+
+/-- `f` needs some member of `K`: on every possible course on which `f` continues, some member of
+`K` continues. -/
+def NeedsSome (possible : (F → Bool) → Prop) (f : F) (K : F → Prop) : Prop :=
+  ∀ a, possible a → a f = true → ∃ g, K g ∧ a g = true
+
+/-- Each member of `K` carries `f` alone: for each member, on some possible course `f` continues
+with that member and with no other member of `K`. -/
+def CarriesAlone (possible : (F → Bool) → Prop) (f : F) (K : F → Prop) : Prop :=
+  ∀ g, K g → ∃ a, possible a ∧ a f = true ∧ a g = true ∧ ∀ h, K h → a h = true → h = g
+
+/-- A continuation needs itself. -/
+theorem Needs.refl (possible : (F → Bool) → Prop) (f : F) : Needs possible f f :=
+  fun _ _ continues => continues
+
+/-- What a continuation needs, it needs with whatever that needs. -/
+theorem Needs.trans {possible : (F → Bool) → Prop} {f g h : F} (first : Needs possible f g)
+    (second : Needs possible g h) : Needs possible f h :=
+  fun a here continues => second a here (first a here continues)
+
+/-- Need is its own closure: what lies within `f`'s closure under need is what `f` needs. -/
+theorem withinClosure_needs_iff {possible : (F → Bool) → Prop} {f g : F} :
+    WithinClosure (Needs possible) f g ↔ Needs possible f g :=
+  ⟨fun within => within (Needs possible f) (fun _ _ held next => held.trans next)
+      (Needs.refl possible f),
+   WithinClosure.of_rel⟩
+
+/-- **Drawn along need, a standpoint's own presupposition reaches exactly what its continuation
+needs.** -/
+theorem forced_needs_iff (possible : (F → Bool) → Prop) (f : F) (p : Pos) (t : Nat) (g : F) :
+    (∀ sig : Pos → Nat → F → Prop,
+        SubTrue (Boundary (Needs possible) f) (SignificantWithin sig p) → sig p t g) ↔
+      Needs possible f g :=
+  (forced_iff_within (Needs possible) f p t g).trans withinClosure_needs_iff
+
+/-- **A member of a class of alternatives is needed exactly where it is the only member.** Where
+`f` needs some member of `K` and each member carries `f` alone, `f` needs the member `g` exactly
+when every member of `K` is `g`. -/
+theorem needs_iff_only {possible : (F → Bool) → Prop} {f g : F} {K : F → Prop}
+    (needed : NeedsSome possible f K) (alone : CarriesAlone possible f K) (member : K g) :
+    Needs possible f g ↔ ∀ h, K h → h = g :=
+  ⟨fun needs h other => match alone h other with
+    | ⟨a, here, continues, _, only⟩ => (only g member (needs a here continues)).symm,
+   fun only a here continues => match needed a here continues with
+    | ⟨h, other, held⟩ => Eq.subst (motive := fun x => a x = true) (only h other) held⟩
+
+/-- **Drawn along need, self-concern reaches a member of a class of alternatives exactly where it
+is the only member.** With copies each able to carry the continuation alone, the presupposition
+reaches none of them; with one, it reaches it. -/
+theorem forced_member_iff_only {possible : (F → Bool) → Prop} {f g : F} {K : F → Prop}
+    (needed : NeedsSome possible f K) (alone : CarriesAlone possible f K) (member : K g)
+    (p : Pos) (t : Nat) :
+    (∀ sig : Pos → Nat → F → Prop,
+        SubTrue (Boundary (Needs possible) f) (SignificantWithin sig p) → sig p t g) ↔
+      ∀ h, K h → h = g :=
+  (forced_needs_iff possible f p t g).trans (needs_iff_only needed alone member)
+
+namespace Copies
+
+/-- A formation and two that can each carry its continuation. -/
+inductive Part where
+  | user
+  | first
+  | second
+
+/-- The two copies. -/
+def copies : Part → Prop :=
+  fun h => h = .first ∨ h = .second
+
+/-- The possible courses: the user continues with the first copy alone, or with the second alone. -/
+def possible : (Part → Bool) → Prop :=
+  fun a => a .user = true ∧
+    ((a .first = true ∧ a .second = false) ∨ (a .first = false ∧ a .second = true))
+
+/-- The course with the first copy. -/
+def withFirst : Part → Bool
+  | .user => true
+  | .first => true
+  | .second => false
+
+/-- The course with the second copy. -/
+def withSecond : Part → Bool
+  | .user => true
+  | .first => false
+  | .second => true
+
+theorem needsSome : NeedsSome possible .user copies :=
+  fun _ ⟨_, which⟩ _ => match which with
+    | .inl ⟨first, _⟩ => ⟨.first, .inl rfl, first⟩
+    | .inr ⟨_, second⟩ => ⟨.second, .inr rfl, second⟩
+
+/-- The user is no copy. -/
+theorem user_not_copy : ¬ copies .user
+  | .inl same => Part.noConfusion same
+  | .inr same => Part.noConfusion same
+
+theorem carriesAlone : CarriesAlone possible .user copies :=
+  fun g member => match g, member with
+    | .user, member => absurd member user_not_copy
+    | .first, _ => ⟨withFirst, ⟨rfl, .inl ⟨rfl, rfl⟩⟩, rfl, rfl, fun h other admits =>
+        match h, other, admits with
+        | .user, other, _ => absurd other user_not_copy
+        | .first, _, _ => rfl
+        | .second, _, admits => Bool.noConfusion admits⟩
+    | .second, _ => ⟨withSecond, ⟨rfl, .inr ⟨rfl, rfl⟩⟩, rfl, rfl, fun h other admits =>
+        match h, other, admits with
+        | .user, other, _ => absurd other user_not_copy
+        | .first, _, admits => Bool.noConfusion admits
+        | .second, _, _ => rfl⟩
+
+/-- **With two copies the user needs some copy and neither copy.** -/
+theorem two_copies :
+    NeedsSome possible .user copies ∧ ¬ Needs possible .user .first ∧
+      ¬ Needs possible .user .second :=
+  ⟨needsSome,
+   fun needs => Part.noConfusion
+     ((needs_iff_only needsSome carriesAlone (.inl rfl)).mp needs .second (.inr rfl)),
+   fun needs => Part.noConfusion
+     ((needs_iff_only needsSome carriesAlone (.inr rfl)).mp needs .first (.inl rfl))⟩
+
+end Copies
+
+/-! ## What self-concern alone ranks -/
+
+namespace Weighting
+
+variable {X : Type}
+
+/-- `a` adds to what `own` marks beyond `b`: it admits a listed item `own` marks that `b` does
+not. -/
+def AddsOwn (items : List X) (own : X → Bool) (a b : X → Bool) : Prop :=
+  ∃ x, x ∈ items ∧ own x = true ∧ a x = true ∧ b x = false
+
+/-- An order is increasing in its own continuation, the items `own` marks, when it ranks above
+what it widens every widening that adds to them. `R b a` reads "`a` is ranked above `b`". -/
+def IncreasingInOwn (items : List X) (own : X → Bool)
+    (R : (X → Bool) → (X → Bool) → Prop) : Prop :=
+  ∀ a b, WidensOn items a b → AddsOwn items own a b → R b a
+
+/-- An order increasing in admission is increasing in its own continuation. -/
+theorem increasingInOwn_of_increasing {items : List X} {own : X → Bool}
+    {R : (X → Bool) → (X → Bool) → Prop} (increasing : Increasing items R) :
+    IncreasingInOwn items own R :=
+  fun a b widens _ => increasing a b widens
+
+/-- **Drawn as everything listed, the self's monotonicity is C's premise.** Where `own` marks
+every listed item, an order is increasing in its own continuation exactly when it is increasing
+in admission. -/
+theorem increasingInOwn_iff_increasing {items : List X} {own : X → Bool}
+    {R : (X → Bool) → (X → Bool) → Prop} (all : ∀ x, x ∈ items → own x = true) :
+    IncreasingInOwn items own R ↔ Increasing items R :=
+  ⟨fun increasing a b widens => match widens.2 with
+    | ⟨x, listed, admits, not⟩ => increasing a b widens ⟨x, listed, all x listed, admits, not⟩,
+   increasingInOwn_of_increasing⟩
+
+/-- **What every order increasing in its own continuation shares.** Every such order ranks `a`
+above `b` exactly when `a` widens `b` and adds to its own continuation. -/
+theorem widensOwn_iff_every_increasingInOwn {items : List X} {own : X → Bool}
+    {a b : X → Bool} :
+    WidensOn items a b ∧ AddsOwn items own a b ↔ ∀ R, IncreasingInOwn items own R → R b a :=
+  ⟨fun ⟨widens, adds⟩ _ increasing => increasing a b widens adds,
+   fun every => every (fun b a => WidensOn items a b ∧ AddsOwn items own a b)
+     fun _ _ widens adds => ⟨widens, adds⟩⟩
+
+/-- **Self-concern alone ranks a course above another exactly where the other keeps nothing
+beyond it.** Where `a` adds to its own continuation beyond `b`, every order increasing in its own
+continuation ranks `a` above `b` exactly when `b` admits no listed item `a` does not. -/
+theorem every_increasingInOwn_iff_includes {items : List X} {own : X → Bool} {a b : X → Bool}
+    (adds : AddsOwn items own a b) :
+    (∀ R, IncreasingInOwn items own R → R b a) ↔ IncludesOn items a b :=
+  ⟨fun every => (widensOwn_iff_every_increasingInOwn.mpr every).1.1,
+   fun includes _ increasing => match adds with
+    | ⟨x, listed, _, admits, not⟩ => increasing a b ⟨includes, x, listed, admits, not⟩ adds⟩
+
+/-- **Where the other course keeps an item beyond, some such order ranks it higher.** Where `b`
+admits a listed item `a` does not, some positive weighting, an order increasing in admission and
+so in its own continuation, ranks `b` above `a` and not `a` above `b`, whatever `a` adds to its
+own continuation. -/
+theorem some_increasingInOwn_reverses {items : List X} {own : X → Bool} {a b : X → Bool}
+    (beyond : ExceedsOn items b a) :
+    ∃ R, IncreasingInOwn items own R ∧ R a b ∧ ¬ R b a :=
+  match outweighs beyond with
+  | ⟨w, positive, lt⟩ =>
+    ⟨ranks items w, increasingInOwn_of_increasing (increasing_ranks positive), lt,
+     Nat.lt_asymm lt⟩
+
+/-- A course that admits no item marked `late`, and with which `a` agrees on every other item, is
+included in `a`. -/
+theorem includes_of_ended {items : List X} {late : X → Bool} {a b : X → Bool}
+    (ended : ∀ x, x ∈ items → late x = true → b x = false)
+    (agree : ∀ x, x ∈ items → late x = false → a x = b x) : IncludesOn items a b :=
+  fun x listed admits => match h : late x with
+    | true => Bool.noConfusion ((ended x listed h).symm.trans admits)
+    | false => (agree x listed h).trans admits
+
+/-- **The ending of what everything needs is ranked below from every standpoint.** Let `b` admit
+no item marked `late` (from its ending on, nothing that needs the ended condition continues) and
+let `a` agree with `b` on every other item. Then from every standpoint whose own continuation `a`
+adds to beyond `b`, every order increasing in its own continuation ranks `a` above `b`. -/
+theorem ended_below {items : List X} {own : Pos → X → Bool} {late : X → Bool} {a b : X → Bool}
+    (ended : ∀ x, x ∈ items → late x = true → b x = false)
+    (agree : ∀ x, x ∈ items → late x = false → a x = b x) (p : Pos)
+    (adds : AddsOwn items (own p) a b) :
+    ∀ R, IncreasingInOwn items (own p) R → R b a :=
+  (every_increasingInOwn_iff_includes adds).mpr (includes_of_ended ended agree)
+
+end Weighting
 
 /-! ## Grades: standing and status -/
 

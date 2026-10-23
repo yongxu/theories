@@ -1,24 +1,30 @@
-## 373. The map: generation, keeping and degeneration at two grains (OU4)
+## 373. The map: generation, keeping and degeneration at two grains and on branches (OU4)
 
 ```text
 Result(s): new record generation-and-degeneration-at-two-grains.
-Delta: the map of the one-unfolding plan (PLAN.md §七) in the grammar (Becoming.GrammarMap). Renewal alone
-       («复生») cannot tell renewal that sustains a pattern from turnover that ends it; read at two grains, a fine
-       class of parts and a coarse class of the pattern, it can. A carrying renewal («传») continues the pattern
-       while a part begins, and is an alteration (火传). Generation («生成»: the pattern's line never ends and a
-       carrying renewal lies ahead of every point), keeping («守»: endless, renewal stops) and degeneration
-       («退化»: it ends) exclude each other, are each inhabited, and with excluded middle cover every point
-       («三域之周»); generation holds along its line and degeneration reaches back; a line can renew and still
-       end (Map.Short.renews_and_ends); a constant coarse class never degenerates from a continued point; telling
-       generation from degeneration on every line, in every model, is exactly excluded middle
-       («生败之定当且仅当排中»): the boundary between the regions is where going on is not decided. A chain of
-       classes reads generation at every order («阶生成»).
-Premises / correspondence: none beyond the grammar; the covering law takes excluded middle as a hypothesis.
-Evidence: core receipt RECEIPT_ID (Becoming.GrammarMap, THEOREMS theorems in DECLS declarations, empty axiom reports).
-Boundary: generation here is a pattern continuing through renewal of its parts, with no premise on what the pattern
-       is or whether its going on is good; the old map's regimes (renewal, consumption, capture, the five
-       questions of 势) are not yet stated as regions of this map.
-Output → input: the plan's §七 map, steps 5 to 7; next, the old regimes as regions on the old base's readings.
+Delta: the map of the one-unfolding plan (PLAN.md §七) in the grammar (Becoming.GrammarMap), and the old base's
+       regimes on it (Becoming.MapInstances). Renewal alone («复生») cannot tell renewal that sustains a pattern
+       from turnover that ends it; read at two grains, a fine class of parts and a coarse class of the pattern,
+       it can, and the regions are read on branches. A carrying renewal («传») continues the pattern while a
+       part begins (火传). The pattern goes on along some branch («延», coinductive) or ends on every branch
+       («尽», inductive), which exclude each other; generation (some branch renews without end), keeping (some
+       branch goes on without renewal) and degeneration (every branch ends) are read so. Generation and keeping
+       can hold at one point (Map.«生守相杂»: the mixed region) and exclude each other on a single line
+       («单行则生守不并»). The every-branch forms («全生成», «全守», «有终») are their strong and weak cases,
+       exclusive and, with excluded middle, covering. Renewal does not decide the region; telling going on from
+       ending at every point, in every model, is exactly excluded middle («延尽之定当且仅当排中»). A chain of
+       classes reads generation at every order («阶生成»). On the old base: carrying renewal is a step into a
+       formation that did not carry on as itself; generation under passing makes carriers arise late; by names
+       nothing generates; consumption still held, a family drawn beyond renewal and passing that stops refute
+       going on every branch; the relay renews and still ends.
+Premises / correspondence: none beyond the grammar; the covering law of the every-branch forms takes excluded
+       middle as a hypothesis.
+Evidence: core receipt RECEIPT_ID (Becoming.GrammarMap, THEOREMS theorems in DECLS declarations, and
+       Becoming.MapInstances; empty axiom reports); MapInstances written by an Opus coder (development/ou4-instances/).
+Boundary: generation is a pattern continuing through renewal of its parts, with no premise on what the pattern is
+       or whether its going on is good; Lasting, Capture and ClosedCapture are not regions of this map (they
+       concern guards, shares and rules, not lines of occurrences).
+Output → input: the plan's §七 map; next, generation at the coarse grain read as selection of the fine.
 ```
 
-**Why two grains.** Under one class the grammar's renewal is either impossible (under the one) or trivial (under identity every occurrence with a successor renews). What the theory needs to separate is the renewal of parts that keeps a whole going (cells and an organism, flames and a fire, members and an institution) from turnover that ends it. With the parts' class finer than the pattern's, a step that continues the pattern while a part begins is a carrying renewal, and the region of a point is read off the pattern's line: it goes on and keeps renewing (generation), goes on without renewing (keeping), or ends (degeneration). The meta-attractor of the plan is a generating pattern: the pattern conditions the beginnings of its own parts (the condition of each new part lies in the pattern's class), and it goes on through them.
+**Why branches.** The first form of the map read a pattern's line through «不穷», which asks every branch to go on; the coder of the instances found that a relay then degenerates although the pattern is present at every step, and a species would degenerate because its members die. So the regions are read on branches: going on along some branch is a family closed under continuation (coinductive), ending on every branch is inductive, and the two exclude each other constructively. Where lines branch, a point can renew along one branch and keep along another; that mixed region is part of the map, not an error of it, and on a single line it is empty.
