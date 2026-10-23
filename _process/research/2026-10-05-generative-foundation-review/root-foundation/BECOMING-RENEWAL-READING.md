@@ -16620,3 +16620,48 @@ Output → input: THE-STEP-OF-INVARIANCE (a new §4.4, §5, §7, §8, In brief);
 **Order.** An order increasing in its own continuation is the weakest monotonicity a self-concerned standpoint can have: it ranks higher only widenings that add to its own continuation. What all such orders share is exactly those widenings. Where a course keeps the standpoint and the other keeps nothing beyond it, every such order ranks the first above; this is the ruin comparison, since a course on which a condition everything needs has ended admits nothing from that ending on. Where the other course keeps something beyond (a group that depended on none of the ended conditions), the comparison is mixed and some such order ranks it the other way. The dynamics say when the ruin course admits nothing: groups whose conditions are coupled end together and nothing is selected among them (`GroupEnding.Flow.coupled_end_together`), and after a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants (`Founding.Flow.survivors_independent`). The two are joined by argument here, not by one theorem. Drawn so that its own continuation is everything listed, as the self drawn along feeding is in a mutually fed flow, the order is increasing in admission: C's premise is then self-concern's monotonicity in its own continuation, so scope and order both rest on one premise, self-concern monotone in what carries it. That locates C's premise more narrowly; it does not warrant it.
 
 **Self-review.** (1) The iffs are two-sided as stated; `ownClosure_standpointInvariant_iff_centersWithin` needs nothing about the whole, so it is strictly more general than the whole-world laws of `Becoming.MutualDependence`, which it does not reprove (they bound significance by each closure; this law is about the de se reading). (2) The base instances use the existing relations `Flow.AffectedBy` and `Flow.FedFrom` and their premises are the ones `Flow.mutuallyDependent_of_common` and `Flow.feeding_whole_of_common` use, restricted to the centers. (3) `Needs` quantifies over a supplied predicate of possible courses; the base supplies no such predicate yet, so the copies law is general structure with a constructed witness, and its reading on the base (a condition fed by many formations, each able to sustain it alone) is not proved. (4) The ruin law's premise that the ended course admits nothing from the ending on is the dynamics' conclusion only where every formation listed depends on the coupled family; it is not derived for any actual system. (5) No ethical predicate occurs; significance and orders are parameters, and the presupposition, invariance and monotonicity are hypotheses. (6) What is new is the placement: the convergence of anthropocentric and nonanthropocentric policy within what humans need (Norton 1991) is the agreement of the de se and de dicto readings within the common closure, and the objection that convergence fails for what is not needed (Steverson 1995) is the copies law and the region beyond the closure. (7) Not done: a predicate of possible courses read off a web, so that need, and copies, are stated on the base; the ruin law composed with the dynamics in one theorem; graded need (how much a copy contributes), which would carry status.
+
+## 374. 文 in the grammar of continuation (WL3)
+
+```text
+Result(s): new record wen-in-the-grammar; related to wenli-on-the-spine, the-split-that-makes-sense,
+       configurations-alike-by-relation, identification-where-bounded, learnable-through-a-map and
+       continuation-relative-to-a-class (claims unchanged).
+Delta: the 文 line and the grammar of the one-unfolding root state one structure. A determined law's step is
+       缘 (Law.step) and a map's values a class (sameValue); a relation is constant under the step exactly
+       where the law keeps it (Law.constant_iff_keeps). Then 文同 is the core of the value class
+       (Law.core_is_sameFuture), likeness by bisimulation in the frame by the map is that core
+       (Law.alike_iff_core), and a class keeping the values and carrying the law contains the core exactly
+       where it is the core (Law.coarsest_iff_core, from contains_core_iff): WL2's coarsest class is the root
+       theorem read on a law. Along one 文, two moments are one state exactly where they lie in one class of
+       its core along the steps (SameAhead.is_core); a state goes on as itself by the core's constancy
+       (SameAhead.next_by_root); along a law's course the two cores agree (course_core_iff); a 文 with a new
+       value at every moment has no continuation under its core (SameAhead.no_continuation, the flame's form).
+       New positions on a 文: a line under the value class ends exactly where the value changes
+       (Law.ends_iff_changes), never ends exactly where the course is constant from there (Law.unending_iff),
+       and a step continues under the core exactly there (Law.continues_in_core_iff, for every law and every
+       type of values; Change.continues_in_core_iff_buqiong is its two-valued parallel); where the value
+       class is constant it is its own core and a course keeping its value one step keeps it for good
+       (Law.constant_iff_core, Law.stays_of_constant). The bounded laws (statesBelow_iff_core, core_iff_below,
+       Law.core_iff_below; two 文 as one net on Nat ⊕ Nat, TwoCourses.core_iff, core_iff_bounded, core_exact)
+       and learnability (Law.learnable_iff_core, Law.learnable_of_core_within, core_within_core_iff) are
+       restated through the core.
+Premises / correspondence: none beyond the grammar and the modules joined; equality of values is the model's
+       commitment, as equality on the carrier is in the grammar. The mapping, notion by notion, is
+       development/wl3-wen-grammar/MAPPING.md.
+Evidence: core receipt 20261023T054251.279347Z (Becoming.GrammarCourse, 32 theorems in 36 declarations, every
+       declaration with an empty axiom report). Author review only.
+Boundary: 文同 and the states of a 文 are the grammar's 理 (the core), not its 续: continuation under the value
+       class is one step that keeps the value. The 文 line's classes are kernels of maps; the two-valued
+       class of Arising and Change (Prop, ↔) is not an instance without propext. 缘 here is a function; the
+       branching of a nondeterministic process is not read as a net of possibilities. The prefix (往), the
+       bounds as numbers, the extrapolations and learnability's "from some step on" have no counterpart in
+       the grammar and are stated beside the core.
+Output → input: the 文 line now rests on the grammar's core; two proposals for OU's owner (board row WL3): move
+       core_within_core_iff and contains_core_iff, which hold for every carrier, into Becoming.Grammar, and
+       cite Law.alike_iff_core where «闭合当且仅当有常»'s docstring leaves the bisimulation correspondence unproved.
+```
+
+**Why the core and not continuation.** The grammar has two ways in which a 文 could be "one": continuation (`«续»`), a single step that keeps the class, and the core (`«核»`), the greatest symmetric relation inside the class that the step keeps. The 文 line's sameness, 文同, compares whole courses, so it is the core: `Law.core_is_sameFuture` proves it, with `Law.constant_iff_keeps` translating the 文 line's "the law keeps the relation" (`Law.KeepsRelation`) into the grammar's constancy. Continuation under the core is then exactly a course that never changes again (`Law.continues_in_core_iff`), the grammar's flame lesson (`«以核为判据则火无续»`) seen on a 文: a course that changes at every moment has no continuation under its core (`SameAhead.no_continuation`). So the coarsest 理 that keeps the values in the 文 line's sense (WL2: a class that keeps the map's values and that the law carries) is the plan's 理 of the class of values, its core (PLAN §4.1, 「理是它之类（有常之核）」); the 文 line's other 理, classes that keep the values but are finer, are the symmetric constant relations inside the core.
+
+**Two 文 as one net.** The bounded law for two courses (`Identification.bounded_agree`) compares two sequences, while the grammar's core relates occurrences of one net. Taking the moments of both courses side by side, each going to its own next moment (`TwoCourses.next` on `Nat ⊕ Nat`, values `TwoCourses.value`), puts the comparison inside one net: the first moments lie in one class of the core exactly where the courses agree everywhere (`TwoCourses.core_iff`), so the bounded law and its exactness are laws of that core (`TwoCourses.core_iff_bounded`, `TwoCourses.core_exact`).

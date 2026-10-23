@@ -67,10 +67,10 @@ row_en = ('| L1 | [`Becoming.GrammarCourse`](Becoming/GrammarCourse.lean) | 文 
 row_zh = ('| L1 | [`Becoming.GrammarCourse`](Becoming/GrammarCourse.lean) | 文入续之文法（不加前提）：法之步为缘，象之值为类；'
           '经象文同即值之类之核（`Law.core_is_sameFuture`），象所示之系辞中之同即此核（`Law.alike_iff_core`）；守值之最粗之类即核'
           '（`Law.coarsest_iff_core`）；文之状即其沿步之核（`SameAhead.is_core`）；有界之律、二文合为一网与可知皆经核而述 |')
-for name, row in (('README.md', row_en), ('README.zh.md', row_zh)):
+for name, row, after in (('README.md', row_en, 'IdentificationRuns'), ('README.zh.md', row_zh, 'LearnableRuns')):
     path = PKG / name
     lines = path.read_text(encoding='utf-8').split('\n')
-    at = [i for i, line in enumerate(lines) if line.startswith('| L1 | [`Becoming.IdentificationRuns`]')]
+    at = [i for i, line in enumerate(lines) if line.startswith(f'| L1 | [`Becoming.{after}`]')]
     assert len(at) == 1, (name, at)
     lines.insert(at[0] + 1, row)
     path.write_text('\n'.join(lines), encoding='utf-8')

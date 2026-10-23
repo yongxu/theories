@@ -103,10 +103,7 @@ record = {
     'family': 'F01',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': "Read with a determined law's step as 缘 and a map's values as a class, the same course through the map "
-              "(文同) is the core of the value class, likeness by bisimulation is that core, the coarsest value-keeping "
-              "class is the core, and two moments of a 文 are one state exactly where they lie in one class of its core "
-              "along the steps; the bounded laws and learnability are restated through the core.",
+        'en': "Read with a law's step as 缘 and a map's values as a class, 文同 is the core of the value class and so is likeness by bisimulation; the coarsest value-keeping class is the core; the states of a 文 are its core along the steps; the bounded laws and learnability are restated through the core.",
         'zh': '以法之步为缘、象之值同为类而读：经象文同即值之类之核，系辞中之同即此核，守值之最粗之类即核，文之二步为一状恰当它们在其沿步之核之一类中；'
               '有界之律与可知经核而述。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': sorted(decls)} for en, zh, decls in laws],

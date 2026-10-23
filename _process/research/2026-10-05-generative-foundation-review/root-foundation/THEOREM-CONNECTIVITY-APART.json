@@ -3026,6 +3026,21 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "centers within one another's closures have one closure: a law of any relation and any assignment of centers, with no world"
+  },
+  "Becoming.Law.ends_iff_changes": {
+   "module": "Becoming.GrammarCourse",
+   "category": "general-structure",
+   "reason": "a law of every determined law and map on any type: under the class of the map's values a line of continuation ends exactly where the value changes at the next step; the base reads no course through the grammar's ending yet"
+  },
+  "Becoming.Steps.next_is_step": {
+   "module": "Becoming.GrammarCourse",
+   "category": "support",
+   "reason": "a one-line unpacking: the steps of one course (Steps.next) are the step of the successor law (Law.step Nat.succ), pointwise by definition"
+  },
+  "Becoming.core_within_core_iff": {
+   "module": "Becoming.GrammarCourse",
+   "category": "general-structure",
+   "reason": "a law of every relation and class on any carrier, from the root theorem: a core lies in another class's core exactly where it lies in that class; the base compares no two classes' cores yet"
   }
  },
  "instances": {
