@@ -293,7 +293,7 @@ The laws of selection now stand on the Becoming spine with the flow: Price's equ
 
 **State:** `unmarked` · **Scope:** The original universal-intelligence session and explicitly authorized continuations; not automatically every repository task’s objective.
 
-Prove a universal metaethics of all intelligence, explaining interconnection and differentiated agency formed within the whole. The 8 October continuation uses living significance to establish positive generative warrant and revisable practical direction from formed relational positions and supported visible futures. The work is now part of the Theory of Becoming (section 6, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence.
+Prove a universal metaethics of all intelligence, explaining interconnection and differentiated agency formed within the whole. The 8 October continuation uses living significance to establish positive generative warrant and revisable practical direction from formed relational positions and supported visible futures. The work is now part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence.
 
 **Premises:** Normative universality, actual compliance and exclusive necessity of this formulation need separate arguments. Preserve both real generative possibilities and evidence-responsive revision; complete integration, omniscience and strict whole improvement are not premises of positive warrant.
 
@@ -303,7 +303,7 @@ Prove a universal metaethics of all intelligence, explaining interconnection and
 
 **README overview:** Developing significance, comparison and practical judgment
 
-We are developing the significance-and-comparison core (section 6) into increasingly specific ethics. Under the continuation condition, living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.
+We are developing the significance-and-comparison core (chapter 7) into increasingly specific ethics. Under the continuation condition, living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.
 
 **Next:** Extend justified comparisons where serious losses and fair chances conflict; establish the particular living relationships that change a concrete choice, including when a changed situation warrants revising an undertaking.
 
