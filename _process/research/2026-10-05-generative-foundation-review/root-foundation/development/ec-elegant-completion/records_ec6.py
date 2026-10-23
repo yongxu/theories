@@ -105,6 +105,7 @@ new = {
         {'en': 'The comparison orders the counts at the end; it does not order what each drew at each step.',
          'zh': '比较给出段末计数的次序；不给出每步各自所取的次序。', 'kind': 'non-implication'},
     ],
+    'counterexamples': [],
     'standard_boundaries': ['discrete-steps', 'decidability', 'no-ethical-premise', 'no-evaluation',
                             'formal-not-empirical', 'names-provisional'],
     'validation_scope': {
@@ -175,7 +176,7 @@ new = {
         {'path': src('LastChange'), 'role': 'proof', 'sha256': sha(src('LastChange')), 'declarations': CASES['LastChange']},
         {'path': src('RegimeMargin'), 'role': 'proof', 'sha256': sha(src('RegimeMargin')),
          'declarations': CASES['RegimeMargin']},
-        {'path': STUDY, 'role': 'study', 'sha256': sha(STUDY), 'declarations': []},
+        {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY), 'declarations': []},
         {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT), 'declarations': []},
     ],
     'proof_bindings': [binding(m) for m in ('Amounts', 'Prelude', 'Optimum', 'LastChange', 'RegimeMargin')],
