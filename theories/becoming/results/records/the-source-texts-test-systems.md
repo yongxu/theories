@@ -69,6 +69,7 @@ The test systems of the first source text (§7): decay and the system with no cl
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
 
 Aliases: `Test systems of the source texts as small witnesses`, `来源二篇之检验系统之小见证`, `Becoming.Decay.time_not_in_core`
 

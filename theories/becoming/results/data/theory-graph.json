@@ -4480,6 +4480,18 @@
    "page": "theories/becoming/results/records/the-breeding-value.md"
   },
   {
+   "id": "record:the-class-of-being-joined",
+   "type": "result",
+   "record": "the-class-of-being-joined",
+   "title": "The class of being joined",
+   "title_zh": "相连之类",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-class-of-being-joined.md"
+  },
+  {
    "id": "record:the-continuation-condition-on-the-root",
    "type": "result",
    "record": "the-continuation-condition-on-the-root",
@@ -8875,7 +8887,7 @@
    "type": "module",
    "name": "Becoming.GrammarScope",
    "level": "L1",
-   "theorems": 30,
+   "theorems": 37,
    "region": "significance",
    "base": "grammar",
    "on_grammar": true,
@@ -8886,7 +8898,7 @@
    "type": "module",
    "name": "Becoming.GrammarCases",
    "level": "L1",
-   "theorems": 29,
+   "theorems": 42,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -28401,6 +28413,12 @@
    "anchor": "r-reach-through-a-shared-condition"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-class-of-being-joined",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-class-of-being-joined"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -47458,6 +47476,31 @@
    "type": "related"
   },
   {
+   "from": "record:the-class-of-being-joined",
+   "to": "module:Becoming.GrammarCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:reach-through-a-shared-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
+  },
+  {
    "from": "record:the-continuation-condition-on-the-root",
    "to": "module:Becoming.GrammarScope",
    "type": "proved-in"
@@ -53340,6 +53383,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
    "to": "record:support-from-the-supported",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-class-of-being-joined",
+   "to": "record:the-class-of-being-joined",
    "type": "states"
   },
   {

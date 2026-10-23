@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2921 nodes, 4991 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2923 nodes, 4997 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 63 | 48 | 0 |
+| Significance and alignment | 0 | 64 | 48 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
@@ -438,7 +438,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (63):
+Results (64):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -482,6 +482,7 @@ Results (63):
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
+- [The class of being joined](records/the-class-of-being-joined.md) (recorded-checked)
 - [The continuation condition on the root](records/the-continuation-condition-on-the-root.md) (recorded-checked)
 - [The continuation condition yields living significance](records/continuation-condition-yields-living-significance.md) (recorded-checked)
 - [The coupling closures of deployed training pipelines](records/coupling-closures-of-training-pipelines.md) (reviewed-scoped)
