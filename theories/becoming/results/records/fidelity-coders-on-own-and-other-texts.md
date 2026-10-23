@@ -50,6 +50,8 @@ Board item SC1, testing the open observation recorded in FC1's results. Reading 
 
 - **interpretive**: [fidelity-of-the-classical-statements](fidelity-of-the-classical-statements.md). Tests the calibration observation recorded with the fidelity count.
 
+**Used by:** [fidelity-under-one-discipline](fidelity-under-one-discipline.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

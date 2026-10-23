@@ -18,7 +18,7 @@
 - That classical Chinese is the best expression of the core: one English text is compared, in another register.
 - That the result survives a human audit or a second coder on the main-set 經: neither was run, and the coder of the main-set 經 wrote them.
 - Anything about readers (H2): the reading test is not run.
-- That the gain belongs to classical Chinese rather than to the name table's discipline (each name states what it does not carry and is anchored on a declaration): no controlled English edition under the same discipline was measured.
+- That the gain belongs to classical Chinese rather than to the name table's discipline: the control run afterwards (ZE, record fidelity-under-one-discipline) finds it does not survive against a controlled English under the same discipline for the Claude coder, and a residual for the GPT coder on 60 pairs.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -37,7 +37,7 @@ Canonical source: [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-tr
 <a id="next--下一步"></a>
 ## Next
 
-A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and the authoring model's own-text test on the 經 under the name table (on English statements it found no author-specific deficit: fidelity-coders-on-own-and-other-texts).
+The second coder on the main-set 經 and a human audit; F3, F4 and the reading test; the authoring model's own-text test on the 經 under the name table (on English statements it found no author-specific deficit: fidelity-coders-on-own-and-other-texts). The controlled English control is run (fidelity-under-one-discipline).
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -51,7 +51,7 @@ Board item FC1, on Ren's request to run the fidelity count; the scope was cut by
 
 - **interpretive**: [wenli-on-the-spine](wenli-on-the-spine.md). Tests the WL chapter's claim that the classical code is a fitting reading layer.
 
-**Used by:** [fidelity-coders-on-own-and-other-texts](fidelity-coders-on-own-and-other-texts.md) (interpretive)
+**Used by:** [fidelity-coders-on-own-and-other-texts](fidelity-coders-on-own-and-other-texts.md) (interpretive) · [fidelity-under-one-discipline](fidelity-under-one-discipline.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -76,7 +76,8 @@ Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 - 22 October 2026: added (FC1); study section 370.
 - 23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.
 - 23 October 2026: the calibration observation tested on English statements (SC1, record fidelity-coders-on-own-and-other-texts): no author-specific deficit, the coders differ as coders; the next step narrowed to the 經 under the name table.
+- 23 October 2026: the controlled English control run (ZE, record fidelity-under-one-discipline, study section 377); the scope item on language and discipline and the next step updated.
 
 </details>
 
-Documentary review UTC: `2026-10-22T15:58:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-23T06:36:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

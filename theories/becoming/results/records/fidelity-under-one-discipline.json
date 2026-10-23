@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "id": "fidelity-under-one-discipline",
+  "title": {
+    "en": "The fidelity count under one discipline: the classical statements against a controlled English code",
+    "zh": "同一纪律下之忠实之测：中华本之经对受控英文之码"
+  },
+  "kind": "assessment",
+  "status": "reviewed-scoped",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T06:36:45+00:00",
+  "statement": {
+    "en": "Under the Claude coder, English written as full statements in the 中华本's name-table discipline introduces no more referents the Lean lacks than the 經 (經 − CE +0.023, CI [-0.010, +0.055]); the GPT coder on 60 pairs leaves a residual for the 經 (-0.27); LLM-coded, provisional.",
+    "zh": "在 FC1 之 270 條、672 对上，以中华本之纪律（每名之所取、所不带、同样之锚）写成之完整英文陈述，依 Claude 编码者，所引入之 Lean 所无之所指不多于经（差 +0.023）；GPT 编码者于 60 对上仍见经略少（−0.27），而二者于此不一致；大模型编码，暂定。"
+  },
+  "hypotheses": [
+    {
+      "en": "FC1's codebook v1.1 and brief, table pass; FC1's Lean table with one level of unfolding and its final alignment of 經 clauses to declarations; the controlled English key gives each English name's sense and anchors, as the Chinese key does; CE is a translation of the 經 with the Lean as a key to the reading.",
+      "zh": "FC1 之编码本 v1.1 与说明，名表一遍；FC1 之 Lean 表，展开一层，及经之子句与声明之终对齐；受控英文之键给每一英文名之所取与锚，同中文之键；受控英文是经之译文，以 Lean 为读法之钥。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That classical Chinese adds nothing beyond the discipline: the GPT coder leaves a residual for the 經, and the two coders do not agree on X where both coded.",
+      "zh": "古汉语于纪律之外无所加：GPT 编码者仍见经略少，二编码者于共编之处在 X 上不一致。",
+      "kind": "scope"
+    },
+    {
+      "en": "That discipline rather than register does it: CE matches the 經 in both, and the genre-matched comparison (F3) was not run.",
+      "zh": "是纪律而非体裁：受控英文于二者皆同于经，体裁对照（F3）未运行。",
+      "kind": "scope"
+    },
+    {
+      "en": "That an English text written directly from the Lean in the same table would score the same: CE was translated from the 經.",
+      "zh": "直接依 Lean 以同一名表写成之英文得分相同：受控英文译自经。",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about readers (H2) or about which code is best.",
+      "zh": "任何关于读者（H2）或何码最好之事。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Name table checked (449 distinct names, 881 anchors resolved in the newest core receipt, a not-carried field on every row); edition checked clause by clause against the 經; analysis plan and scorer committed before any CE coding (9811339e2); 644 CE codings by 7 Opus subagents, 120 by GPT (gpt-6-astra through cx, blind, separate language packets), all validated against the schema; cluster bootstrap over 條, B = 10,000; no human audit.",
+    "zh": "名表经检（449 个不同之名，881 个锚在最新核心回执中可解，每行有所不带）；译本逐句对经检；分析计划与计分程序于编受控英文之前提交（9811339e2）；受控英文 644 份由 7 个 Opus 子代理编，GPT 编 120 份（经 cx 之 gpt-6-astra，盲，分语言），皆对模式校验；按條之聚类自助，B = 10,000；无人工复核。"
+  },
+  "next_delta": {
+    "en": "A controlled English written from the Lean in the same table; the separation of discipline from register (F3); adjudication or a human audit of the coders' disagreement on X; the H2 reading test with the classical and the controlled English codes.",
+    "zh": "依 Lean 以同一名表直接写成之受控英文；纪律与体裁之分（F3）；二编码者于 X 之分歧之裁定或人工复核；以古典之码与受控英文之码作 H2 阅读试验。"
+  },
+  "correspondence": {
+    "en": "Board item ZE, the control named in FC1's limits. Reading (the AI's, D63): the fidelity FC1 measured belongs mostly or wholly to the discipline of the name table and full statements; the classical code and a controlled English code are two instances of one fitting reading layer.",
+    "zh": "看板项 ZE，即 FC1 限度中所称之对照。读法（AI 的，D63）：FC1 所测之忠实大部或全部属于名表之纪律与完整之陈述；古典之码与受控英文之码是同一贴切读法层之二例。"
+  },
+  "canonical_source": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
+  "aliases": [
+    "ZE",
+    "controlled English edition",
+    "English name table",
+    "受控英文本"
+  ],
+  "dependencies": [
+    {
+      "id": "fidelity-of-the-classical-statements",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Runs the control named in the fidelity count's limits, on its pairs and codings.",
+        "zh": "在忠实之测之对与编码上，运行其限度中所称之对照。"
+      }
+    },
+    {
+      "id": "fidelity-coders-on-own-and-other-texts",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Its finding that the coders differ by threshold bears on the cross-family disagreement here.",
+        "zh": "其「二编码者之别在阈值」之所见，关乎此处之跨家族分歧。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
+      "role": "statement",
+      "sha256": "bb1e5265cddb8e37fc8248e7f0e990134461a842338c23389e1937c58bd945d1"
+    },
+    {
+      "path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH.md",
+      "role": "statement",
+      "sha256": "c0b9c58028c02b6fffc761c433b1c3044123d2451649539970577971a2a7958a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/ANALYSIS-PLAN.md",
+      "role": "integration",
+      "sha256": "d1e7831aed66523a83937eb2738749516ccb19135d5a5d0e1d73ff265faa4d46"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/names-en.tsv",
+      "role": "integration",
+      "sha256": "453812a522862eb64bfb3f2ee6e49f7edbd789830beef3b45cadbc7b971c8e6d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/controlled-english.jsonl",
+      "role": "integration",
+      "sha256": "99b4922ecce955c66412613adacd749630d1cc74b8be48e683e7f65500b7d961"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/ze_score.py",
+      "role": "integration",
+      "sha256": "90988e68e9de887637eb3edc80752f793d7b91326a9a2c6044dbe6cf0385bc84"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/data/results.json",
+      "role": "integration",
+      "sha256": "67271bbb787e5660b55ed12759c04bf28f9677420ca689edb1797547281c04de"
+    },
+    {
+      "path": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
+      "role": "statement",
+      "sha256": "63e066a5c9d6a40016e6c016a1c3ffbe53e6c0f19ab83cd5241c80511b355393"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "review",
+      "sha256": "60108bbe0f0c93b740e6b7f07013c95d56e0d54fb8a725912834b8e056d22f7b"
+    }
+  ],
+  "proof_bindings": [],
+  "progress": [
+    {
+      "en": "The control built and measured.",
+      "zh": "对照建成并测之。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#377-the-controlled-english-control-ze"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026: added (ZE); study section 377.",
+      "zh": "2026年10月23日：新增（ZE）；研究第 377 节。"
+    }
+  ]
+}

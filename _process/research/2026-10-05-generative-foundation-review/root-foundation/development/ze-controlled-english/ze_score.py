@@ -130,6 +130,18 @@ def main():
         rel[side]['mean_X'] = {c: (sum(cnt[c][s]['X'] for s in sids) / len(sids) if sids else None) for c in ('claude', 'gpt')}
     g['reliability'] = rel
     res['gpt_sample'] = g
+    # exploratory, added after the planned results were read: the sample's pairs whose E1 segment FC1's GPT coder
+    # coded (fidelity/data/coded/codex/table_main), so that the GPT coder's share recovered can be formed
+    GE = coded([FID / 'data/coded/codex/table_main'])
+    ge = {k: F.counts(v, S[k]['D'], L) for k, v in GE.items() if k in S and S[k]['kind'] == 'en'}
+    ov = [u for u in su if u['en'] in ge]
+    fx = lambda side: (lambda u: (ge if side == 'en' else cnt['gpt'])[u[side]]['X'])
+    res['exploratory_gpt_with_E1'] = {
+        'units': len(ov), 'tiao': len({u['tiao'] for u in ov}),
+        'jing_vs_ce': F.compare(ov, fx('jing'), fx('ce'), '經 − CE, X (GPT)'),
+        'ce_vs_en': F.compare(ov, fx('ce'), fx('en'), 'CE − E1, X (GPT)'),
+        'jing_vs_en': F.compare(ov, fx('jing'), fx('en'), '經 − E1, X (GPT)'),
+        'share_recovered': ratio_ci(ov, fx('jing'), fx('ce'), fx('en'))}
     m = out['main']
     res['decisions'] = {
         'primary (Claude, main set, X)': verdict(m['jing_vs_ce']['X']['ci95']),

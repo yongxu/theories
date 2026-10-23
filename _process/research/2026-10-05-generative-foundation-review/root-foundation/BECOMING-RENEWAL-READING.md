@@ -16738,3 +16738,34 @@ The test asks whether the calibration's discrepancy sits in the author of a text
 *Reading* [AI reading]. In English the difference between the two coders is the coder's threshold, not authorship, and the Claude coder's zero on the 經 fits its zero on GPT's English. The observation's tie to `Becoming.Web.SelectsThrough` (a judge does not mark what its coupling does not reach) is not supported here as an author effect. The law itself is untouched.
 
 **Output → input.** The open observation in FIDELITY-RESULTS now points to this result. Still open: the same crossing on the 經 under the name table, and adjudication or human audit of unplanted excess.
+
+## 377. The controlled English control (ZE)
+
+```text
+Result(s): fidelity-under-one-discipline (new); fidelity-of-the-classical-statements (scope and next step: the
+       control run; history note); wenli-on-the-spine (scope: the gain is mostly the discipline; history note)
+Delta: the control FC1 lacked. An English name table with the 中华本's discipline (449 names: English name,
+       sense, what it does not carry, the same anchors; 157 from the glossary) and a controlled English
+       rendering of the 經 of all 394 條 clause by clause (1,698 clauses), one source with the Chinese.
+       FC1's table pass re-run on the same 672 pairs: under the Claude coder 經 0.095, CE 0.071 excess
+       referents per pair, 經 − CE +0.023, 95% CI [-0.010, +0.055]: the 經's advantage does not survive
+       (registered rule); discipline in English recovers 1.03 [0.98, 1.09] of FC1's advantage over E1.
+       GPT coder on a stratified 60 pairs: 經 0.61, CE 0.88, -0.27 [-0.50, -0.06], mostly entities;
+       the coders' X counts unrelated there (alpha 0.03, -0.01)
+Supplied premises / correspondence: codebook v1.1 and FC1's brief unchanged; FC1's Lean table (sha256
+       478c555f...) with one level of unfolding; FC1's final alignment; CE is a translation of the 經 with
+       the Lean as a key to the reading
+Evidence: analysis plan and scorer committed before any coding of CE (9811339e2); 644 + 120 codings, all
+          validated against FC1's schema; cluster bootstrap over 條, B = 10,000; 11 Claude agents, 6 GPT runs
+Boundary: one AI family wrote both texts and is the primary coder; cross-family check 60 pairs with no
+          coder agreement on X; discipline and register not separated; translation, not an independent
+          English text; no human audit
+```
+
+FC1 could not tell whether the 經 introduce fewer excess referents because they are classical Chinese or because they were written in a name table that states, name by name, the sense taken and the senses excluded, as full statements. The control writes English the same way and measures it the same way: same clauses, same declarations, same codebook, same coder family ([plan](development/ze-controlled-english/ANALYSIS-PLAN.md), [edition](../../../../experiments/wenli-reading-transfer/CONTROLLED-ENGLISH.md), [results](../../../../experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md)).
+
+**What was found.** Under the planned coder the two disciplined codes are level on every count (excess referents, agents, omitted binders, connective mismatches). The 經 score worse only on relata, on predicate excess and on matches made only through unfolding: their names point at defined constants that the English spells out. The other family's coder finds more excess on both sides and less on the 經 side. But on the same pairs its counts do not track the Claude coder's at all, and SC1 (section 376) showed the two differ by threshold.
+
+*Reading* [AI reading, D63]. The fidelity FC1 measured belongs mostly or wholly to the discipline: a name table with stated exclusions and anchors, used in full statements. Whether classical Chinese adds anything beyond it depends on the coder. The WL claim stands in its narrower form: the disciplined code is a fitting reading layer, and the classical code and a controlled English code are two instances of it.
+
+**Output → input.** FIDELITY-RESULTS and WENLI-AND-BECOMING's testing section point to the result, and the controlled English edition is a candidate code for the H2 reading test. Still open: a controlled English written from the Lean rather than translated from the 經; the separation of discipline from register (F3); adjudication or a human audit of the coders' disagreement on X.
