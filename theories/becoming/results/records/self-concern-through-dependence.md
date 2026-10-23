@@ -74,7 +74,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T201939.645046Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 386, 388 and 391; an independent AI reader checked the line through study section 386, its findings fixed in section 387.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T201939.645046Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 386, 388 and 392; an independent AI reader checked the line through study section 386, its findings fixed in section 387.
 
 Canonical source: [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
@@ -134,7 +134,7 @@ Aliases: `self-concern through dependence`, `经由依存的自我关切`, `Beco
 - 23 October 2026: extended (IV3g): need in degree (the shortfall; the least a feeder gives while the consumer draws past the stock, attained; need as a positive degree); the Capacities degree witness; study section 386.
 - 23 October 2026: corrected and extended (IV3h) after an independent review against the Lean: the statement now says "what a step demands", not "what is drawn", and states need, not reach; the base copies law states its premise; "no other member is active", not "the only one active"; the degree where a flow is possible; the possibility law and giving without end added; the boundary on giving without end replaced; study section 387.
 - 23 October 2026: extended (IV3i): need in degree with capacities read off the stores, by the graded flow from the stores; the OwnStores degree witness; study section 388.
-- 24 October 2026: extended (IV3j): need across two tiers, the upper members dividing their giving among the stores and giving the stores' rises; the Routing witness; study section 391.
+- 24 October 2026: extended (IV3j): need across two tiers, the upper members dividing their giving among the stores and giving the stores' rises; the Routing witness; study section 392.
 
 </details>
 

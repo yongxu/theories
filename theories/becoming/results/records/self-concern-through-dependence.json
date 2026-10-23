@@ -583,8 +583,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T201939.645046Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 386, 388 and 391; an independent AI reader checked the line through study section 386, its findings fixed in section 387.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T201939.645046Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386、388 与 391 节；一个独立的 AI 读者核对了至第 386 节的部分，其发现在第 387 节修正。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T201939.645046Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. The literature check is the significance review's dependence check. Author review in study sections 373, 378, 382 to 386, 388 and 392; an independent AI reader checked the line through study section 386, its findings fixed in section 387.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T201939.645046Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386、388 与 392 节；一个独立的 AI 读者核对了至第 386 节的部分，其发现在第 387 节修正。"
   },
   "next_delta": {
     "en": "Whether need across a stretch reaches what is active only after it, and the feeding closure read with time; then more tiers, each tier's capacity read off its own supply.",
@@ -962,7 +962,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "f1b998f7e58dab9e34a9ebbdea30e30f7d6e883297c22fd0093ab0a18bd690f1"
+      "sha256": "ae0e4a9aa5f7567dd9e5180e8c3d404b346ad4ce2035ca927c329e642ee3a9ce"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -1037,8 +1037,8 @@
       "zh": "2026年10月23日：扩展（IV3i）：以从库存读出的容量计的被需要程度，借由库存的分级之流；OwnStores 的程度见证；研究第 388 节。"
     },
     {
-      "en": "24 October 2026: extended (IV3j): need across two tiers, the upper members dividing their giving among the stores and giving the stores' rises; the Routing witness; study section 391.",
-      "zh": "2026年10月24日：扩展（IV3j）：跨两层的“所需”，上层成员把给予分给诸库存并补足其上升；Routing 见证；研究第 391 节。"
+      "en": "24 October 2026: extended (IV3j): need across two tiers, the upper members dividing their giving among the stores and giving the stores' rises; the Routing witness; study section 392.",
+      "zh": "2026年10月24日：扩展（IV3j）：跨两层的“所需”，上层成员把给予分给诸库存并补足其上升；Routing 见证；研究第 392 节。"
     }
   ]
 }
