@@ -1,0 +1,2 @@
+# cx transcripts (the parsed JSON beside each is kept)
+data/**/*.raw.txt

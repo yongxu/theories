@@ -337,40 +337,49 @@ theorem still_succ {s : S} {N : Nat} (still : StillFrom (Law.run next (next s)) 
   rw [Nat.add_right_comm N 1 k, Law.orbit_shift next s (N + k + 1), Law.orbit_shift next s (N + k)]
   exact still k
 
+/-- What a bound leaves above a mark, with the mark's rise, is what it left above the mark before. -/
+theorem room_balance {a b B : Nat} (le : a ≤ b) (top : b ≤ B) : B - b + (b - a) = B - a :=
+  Naturals.add_right_cancel (k := a)
+    ((Nat.add_assoc _ _ _).trans ((congrArg (B - b + ·) (Naturals.sub_add_cancel le)).trans
+      ((Naturals.sub_add_cancel top).trans (Naturals.sub_add_cancel (Nat.le_trans le top)).symm)))
+
+/-- Where the law leaves the configuration a run reaches at a step as it is, the run is still from
+that step. -/
+theorem still_of_fixed_at {s : S} {N : Nat} (fixed : next (Law.orbit next s N) = Law.orbit next s N) :
+    StillFrom (Law.run next s) N :=
+  have stays : ∀ n, Law.orbit next (Law.orbit next s N) n = Law.orbit next s N := fun n =>
+    (congrArg (Law.orbit next (Law.orbit next s N)) (Nat.one_mul n)).symm.trans
+      (Law.orbit_mul (next := next) (s := Law.orbit next s N) (p := 1) fixed n)
+  fun k => by
+    show Law.orbit next s (N + k + 1) = Law.orbit next s (N + k)
+    exact (Law.orbit_add next s N (k + 1)).trans
+      ((stays (k + 1)).trans ((stays k).symm.trans (Law.orbit_add next s N k).symm))
+
 /-- **A law's run with a bounded mark comes to rest within the bound.** Where a quantity `q` marks
 the changes of a law's run (it never falls along the run and rises wherever the configuration
 changes) and stays at most `B` along it, and `B` is at most `d` above the mark at the start, the run
 is still from some step at most `d`. Whether the law leaves a configuration as it is is decided at
 each step, so no omniscience is needed: each change raises the mark by at least one, and the mark
-has at most `d` to rise. -/
+has at most `d` to rise. The case of rest by balance, decided (`Amounts.unmarked_within`): the room
+the bound leaves above the mark, with the mark's rise, is the room before, and it loses at least one
+at each change. -/
 theorem still_within [DecidableEq S] {q : S → Nat} {B : Nat} :
     ∀ (d : Nat) (s : S), B ≤ d + q s → Marks q (Law.orbit next s) →
-      (∀ n, q (Law.orbit next s n) ≤ B) → ∃ N, N ≤ d ∧ StillFrom (Law.run next s) N := by
-  intro d
-  induction d with
-  | zero =>
-    intro s fuel marks bounded
-    refine ⟨0, Nat.le_refl 0, still_of_fixed ?_⟩
-    exact Decidable.byContradiction fun moves =>
-      have rises : q s < q (next s) := (marks 0).2 moves
-      have top : B ≤ q s := Nat.le_trans fuel (Nat.le_of_eq (Nat.zero_add (q s)))
-      Nat.lt_irrefl _ (Nat.lt_of_lt_of_le rises (Nat.le_trans (bounded 1) top))
-  | succ d ih =>
-    intro s fuel marks bounded
-    exact if fixed : next s = s then ⟨0, Nat.zero_le _, still_of_fixed fixed⟩ else
-      have rises : q s + 1 ≤ q (next s) := (marks 0).2 fixed
-      have fuel' : B ≤ d + q (next s) :=
-        Nat.le_trans fuel (Nat.le_trans
-          (Nat.le_of_eq ((Nat.add_right_comm d 1 (q s)).trans (Nat.add_assoc d (q s) 1)))
-          (Nat.add_le_add_left rises d))
-      have shifted : ∀ n, Law.orbit next (next s) n = Law.orbit next s (n + 1) :=
-        fun n => (Law.orbit_shift next s n).symm
-      have marks' : Marks q (Law.orbit next (next s)) := fun n => by
-        rw [shifted n, shifted (n + 1)]
-        exact marks (n + 1)
-      have ⟨N, le, still⟩ :=
-        ih (next s) fuel' marks' (fun n => by rw [shifted n]; exact bounded (n + 1))
-      ⟨N + 1, Nat.succ_le_succ le, still_succ still⟩
+      (∀ n, q (Law.orbit next s n) ≤ B) → ∃ N, N ≤ d ∧ StillFrom (Law.run next s) N :=
+  fun _ s fuel marks bounded =>
+    match Amounts.unmarked_within (q := fun n => B - q (Law.orbit next s n))
+        (x := fun n => q (Law.orbit next s (n + 1)) - q (Law.orbit next s n)) (y := fun _ => 0)
+        (P := fun n => Law.orbit next s (n + 1) ≠ Law.orbit next s n)
+        (fun n => if same : Law.orbit next s (n + 1) = Law.orbit next s n then .inr fun moves => moves same
+          else .inl same)
+        0 (fun n _ => (room_balance (marks n).1 (bounded (n + 1))).trans (Nat.add_zero _).symm)
+        (fun n _ moves => Nat.le_trans (Nat.le_of_eq (Nat.zero_add 1))
+          (Naturals.le_sub_of_add_le ((marks n).2 moves))) with
+    | ⟨N, _, within, unmoved⟩ =>
+      ⟨N, Nat.le_trans within (Nat.le_trans (Nat.le_of_eq (Nat.zero_add _))
+          (Naturals.le_of_add_le_add_right (k := q s)
+            (Nat.le_trans (Nat.le_of_eq (Naturals.sub_add_cancel (bounded 0))) fuel))),
+        still_of_fixed_at (Decidable.byContradiction unmoved)⟩
 
 end LawRuns
 

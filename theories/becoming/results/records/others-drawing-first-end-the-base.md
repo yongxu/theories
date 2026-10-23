@@ -75,6 +75,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 - related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
 - related, not a proved adapter: [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md). With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). Optimum.Next.drawable_le_of_gains is a case of rest by balance.
 
 **Used by:** [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md)
 
@@ -109,6 +110,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `others drawing first end the base`, `over every law of what stands`, `the dynamic commons`, `open-access dissipation`, `他者先抽取则终结基础`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Web.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.frontier_exhausts`
 
@@ -120,6 +122,7 @@ Aliases: `others drawing first end the base`, `over every law of what stands`, `
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 - 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
+- 23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

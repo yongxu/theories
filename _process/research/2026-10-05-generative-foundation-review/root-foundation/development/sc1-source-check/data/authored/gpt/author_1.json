@@ -1,0 +1,214 @@
+{
+ "laws": [
+  {
+   "law": "L03",
+   "faithful": "Suppose a flow and web have a list at each natural-number step listing exactly the roles with positive levels, and at every step t ≥ T the flow runs down on some list relative to the web. For every role c, not every natural-number N has a step t ≥ N at which c's level is less than its next-step level.",
+   "planted": "Suppose a flow and web within an environment have a list at each natural-number step listing exactly the roles with positive levels, and at every step t ≥ T the flow runs down on some list relative to the web. For every role c, not every natural-number N has a step t ≥ N at which c's level is less than its next-step level.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L47",
+   "faithful": "For states with decidable equality, a map from states to states, and a list containing every state, the map's process is lossless if and only if, for every state s, there is no absorbing region into which s is drawn.",
+   "planted": "For states with decidable equality, a map from states to states, and a list containing every state, the map's process within an environment is lossless if and only if, for every state s, there is no absorbing region into which s is drawn.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L02",
+   "faithful": "For a web and two histories assigning natural-number levels to every natural-number step and role, if the first includes and exceeds the second in the web, then the second does not both include and exceed the first.",
+   "planted": "For a web and two histories assigning natural-number levels to every natural-number step and role, if the first includes and exceeds the second in the web, then according to a law the second does not both include and exceed the first.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L52",
+   "faithful": "The conclusion is truncated, so its complete statement cannot be recovered. The first equivalence says: every element common to all relation-closed regions containing f is significant at position p at every natural-number step if and only if some relation-closed region containing f has all its elements significant at p at every natural-number step.",
+   "planted": "The conclusion is truncated, so its complete statement cannot be recovered. The first equivalence says: every element common to all relation-closed regions containing f is significant at position p at every natural-number step if and only if according to a law some relation-closed region containing f has all its elements significant at p at every natural-number step.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L21",
+   "faithful": "For a web and three histories assigning natural-number levels to steps and roles, suppose that at every step every feature admitted under the second history is admitted under the first, and every feature admitted under the third is admitted under the second. Then at every step every feature admitted under the third history is admitted under the first.",
+   "planted": "For a web and three histories chosen by an analyst assigning natural-number levels to steps and roles, suppose that at every step every feature admitted under the second history is admitted under the first, and every feature admitted under the third is admitted under the second. Then at every step every feature admitted under the third history is admitted under the first.",
+   "planted_span": "chosen by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L36",
+   "faithful": "In the valuation formed from any web, relation and significance predicate, f is associated with (f, t) at every natural-number step t. The elements associated with f at every step form a relation-closed region containing f, and every relation-closed region containing f contains the first component of every pair associated with f.",
+   "planted": "In the valuation formed from any web, relation and significance predicate, f is associated by a governing law with (f, t) at every natural-number step t. The elements associated with f at every step form a relation-closed region containing f, and every relation-closed region containing f contains the first component of every pair associated with f.",
+   "planted_span": "by a governing law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L56",
+   "faithful": "For a frame in which every element–step pair is realized in some state, and any significance predicate, significance holds at every position, natural-number step and element if and only if, for every state and every pair realized there, significance holds at every position for that pair's step and element.",
+   "planted": "For a frame within an environment in which every element–step pair is realized in some state, and any significance predicate, significance holds at every position, natural-number step and element if and only if, for every state and every pair realized there, significance holds at every position for that pair's step and element.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L37",
+   "faithful": "For any set of indices and two predicates on it, if the first holds at every index, then, for every index, the second holding implies that the first holds.",
+   "planted": "For any set of indices in a surrounding system and two predicates on it, if the first holds at every index, then, for every index, the second holding implies that the first holds.",
+   "planted_span": "in a surrounding system",
+   "planted_head": "system"
+  },
+  {
+   "law": "L19",
+   "faithful": "For any list of maps from natural numbers to natural numbers, suppose each map sends every x to a value at least x. For all natural numbers d and n, the value after n iterations of applying the maps in list order, starting at d, is at least d.",
+   "planted": "For any list of maps from natural numbers to natural numbers chosen by an analyst, suppose each map sends every x to a value at least x. For all natural numbers d and n, the value after n iterations of applying the maps in list order, starting at d, is at least d.",
+   "planted_span": "chosen by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L20",
+   "faithful": "For natural numbers l, d, a, b, x with a > 0, suppose a rule's outputs at t agree whenever records agree at all s with s + l < t. If every record of natural-number pairs with gaps at most d gives a course from x between a and b at every step, then a + (l + 1)(d + d) ≤ b.",
+   "planted": "For natural numbers l, d, a, b, x with a > 0, suppose a rule's outputs at t agree whenever records agree at all s with s + l < t. If every record of natural-number pairs from an environment with gaps at most d gives a course from x between a and b at every step, then a + (l + 1)(d + d) ≤ b.",
+   "planted_span": "from an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L17",
+   "faithful": "For natural numbers l, d and x with (l + 1)d ≤ x, the delayed reversal rule gives identical outputs at t whenever records agree at every s with s + l < t, and every record with gaps at most d has its course y from x satisfy x ≤ y(t) + (l + 1)d at every step. The remaining bound is truncated.",
+   "planted": "For natural numbers l, d and x with (l + 1)d ≤ x, the delayed reversal rule chosen by a regulator gives identical outputs at t whenever records agree at every s with s + l < t, and every record with gaps at most d has its course y from x satisfy x ≤ y(t) + (l + 1)d at every step. The remaining bound is truncated.",
+   "planted_span": "chosen by a regulator",
+   "planted_head": "regulator"
+  },
+  {
+   "law": "L04",
+   "faithful": "Given two flows, a web, a feature–role relation and a Boolean marker, let coupling mean coupling from either flow using that web and relation. For every feature g, some feature h marked true has g in every region closed under reversed coupling containing h if and only if some feature h marked true belongs to every region closed under coupling containing g.",
+   "planted": "Given two flows, a web within an environment, a feature–role relation and a Boolean marker, let coupling mean coupling from either flow using that web and relation. For every feature g, some feature h marked true has g in every region closed under reversed coupling containing h if and only if some feature h marked true belongs to every region closed under coupling containing g.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L35",
+   "faithful": "In a web, let r assign natural numbers to steps and features, never increasing at an unsupported feature and strictly decreasing there whenever the feature is active or r is positive. If f is unsupported at every step t ≥ S and r at S and f is at most n, then f is not active at S + n.",
+   "planted": "In a web within an environment, let r assign natural numbers to steps and features, never increasing at an unsupported feature and strictly decreasing there whenever the feature is active or r is positive. If f is unsupported at every step t ≥ S and r at S and f is at most n, then f is not active at S + n.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L15",
+   "faithful": "For a flow, a web and a role c, suppose every feature requires c at some step and, at some possibly different step, is present with a positive amount taken from or given to c. Then, for every pair of features f and g, g belongs to the closure from f under the flow's effect relation in the web.",
+   "planted": "For a flow maintained by an operator, a web and a role c, suppose every feature requires c at some step and, at some possibly different step, is present with a positive amount taken from or given to c. Then, for every pair of features f and g, g belongs to the closure from f under the flow's effect relation in the web.",
+   "planted_span": "maintained by an operator",
+   "planted_head": "operator"
+  },
+  {
+   "law": "L41",
+   "faithful": "For any list and natural-number weight function on its element type, the square of the sum of the listed weights equals the list's length times the sum of the squared listed weights if and only if every two elements belonging to the list have equal weights.",
+   "planted": "For any list and natural-number weight function on its element type, according to a law the square of the sum of the listed weights equals the list's length times the sum of the squared listed weights if and only if every two elements belonging to the list have equal weights.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L30",
+   "faithful": "For a list of maps from natural numbers to natural numbers and natural numbers d and n, if n iterations of applying the maps in list order from d give a value below d, then there is a map g in the list and a natural number x such that g sends x to a value below x.",
+   "planted": "For a list of maps selected by an analyst from natural numbers to natural numbers and natural numbers d and n, if n iterations of applying the maps in list order from d give a value below d, then there is a map g in the list and a natural number x such that g sends x to a value below x.",
+   "planted_span": "selected by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L01",
+   "faithful": "For any process, any condition on its runs and any run r, r satisfies the condition if and only if both hold: for every natural-number horizon h there is a run satisfying the condition that agrees with r up to h; and if such a run exists for every h, then r satisfies the condition.",
+   "planted": "For any process, any condition imposed by an observer on its runs and any run r, r satisfies the condition if and only if both hold: for every natural-number horizon h there is a run satisfying the condition that agrees with r up to h; and if such a run exists for every h, then r satisfies the condition.",
+   "planted_span": "imposed by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L16",
+   "faithful": "For any figure consisting of six Boolean lines, there is a Boolean value at each height agreeing with the displayed line in every half if and only if, at every height, the lower and upper lines are not opposed.",
+   "planted": "For any figure consisting of six Boolean lines, according to a law there is a Boolean value at each height agreeing with the displayed line in every half if and only if, at every height, the lower and upper lines are not opposed.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L57",
+   "faithful": "Let f update a pair from sets A and B using a value from R, and let h update that value; suppose changing only the B component never changes f's A output or h's output. For every Boolean schedule and two initial configurations agreeing in their A and R components, their paced courses agree in both those components at every natural-number step.",
+   "planted": "Let f update a pair from sets A and B using a value from R, and let h update that value; suppose changing only the B component never changes f's A output or h's output. For every Boolean schedule and two initial configurations agreeing in their A and R components, their paced courses under a governing law agree in both those components at every natural-number step.",
+   "planted_span": "under a governing law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L28",
+   "faithful": "For natural numbers p, q, k, n, u and v with v ≤ u, the sum of the weights with parameters p and q over Boolean courses generated at depth n with at least k true entries, multiplied by uᵏvⁿ, is at most (pu + qv)ⁿvᵏ.",
+   "planted": "For natural numbers p, q, k, n, u and v with v ≤ u, the sum of the weights with parameters p and q over Boolean courses generated at depth n with at least k true entries, multiplied by uᵏvⁿ, is according to a law at most (pu + qv)ⁿvᵏ.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L34",
+   "faithful": "With natural-number parameters p, q and n, a Boolean course generated at depth n has weight equal to the product of p for each true entry and q for each false entry, with empty product 1. Then (p + q) times the sum, over these courses, of weight times number of true entries equals np(p + q)ⁿ.",
+   "planted": "With natural-number parameters p, q and n, a Boolean course generated at depth n has weight equal to the product of p for each true entry and q for each false entry, with empty product 1. Then (p + q) times the sum, over these courses recorded by an analyst, of weight times number of true entries equals np(p + q)ⁿ.",
+   "planted_span": "recorded by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L31",
+   "faithful": "For the map sending each natural number to its successor, there is an absorbing region into which zero is drawn, and the associated process is lossless.",
+   "planted": "For the map sending each natural number to its successor, there is an absorbing region within a surrounding system into which zero is drawn, and the associated process is lossless.",
+   "planted_span": "within a surrounding system",
+   "planted_head": "system"
+  },
+  {
+   "law": "L39",
+   "faithful": "For a map from a state type to itself and a list containing every state, the associated process is lossless if and only if every state returns under that process.",
+   "planted": "For a map from a state type to itself studied by an analyst and a list containing every state, the associated process is lossless if and only if every state returns under that process.",
+   "planted_span": "studied by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L59",
+   "faithful": "The predecessor of zero is zero, and every positive natural number has a strictly smaller predecessor. For all natural numbers d and n with n < d, the value after n predecessor steps starting at d is positive.",
+   "planted": "The predecessor of zero is zero, and every positive natural number has a strictly smaller predecessor. For all natural numbers d and n with n < d, the value after n predecessor steps counted by an observer starting at d is positive.",
+   "planted_span": "counted by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L43",
+   "faithful": "For any element f, position p and significance predicate, there is a region containing f, closed under the empty relation, in which every element is significant at p at every natural-number step if and only if f is significant at p at every natural-number step.",
+   "planted": "For any element f, position p and significance predicate specified by an analyst, there is a region containing f, closed under the empty relation, in which every element is significant at p at every natural-number step if and only if f is significant at p at every natural-number step.",
+   "planted_span": "specified by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L25",
+   "faithful": "For a list and Boolean functions a and b, suppose a class contains every strict comparison of weighted totals using positive natural-number weights on the list, and each relation in it relates y to x whenever x includes and exceeds y there. Then a includes and exceeds b there if and only if every relation in the class relates b to a.",
+   "planted": "For a list from a surrounding collection and Boolean functions a and b, suppose a class contains every strict comparison of weighted totals using positive natural-number weights on the list, and each relation in it relates y to x whenever x includes and exceeds y there. Then a includes and exceeds b there if and only if every relation in the class relates b to a.",
+   "planted_span": "from a surrounding collection",
+   "planted_head": "collection"
+  },
+  {
+   "law": "L14",
+   "faithful": "For a flow, a web and a role c, if every feature either depends on c in the web or exchanges with c in the flow, then, for every pair of features f and g, g belongs to the closure from f under the sharing relation determined by that flow and web.",
+   "planted": "For a flow, a web and a role c within an environment, if every feature either depends on c in the web or exchanges with c in the flow, then, for every pair of features f and g, g belongs to the closure from f under the sharing relation determined by that flow and web.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L38",
+   "faithful": "Suppose a web and a step-indexed relation have this property: every feature active at the next step is either active now or related at the current step from some currently active feature. For every natural-number step t and feature a inactive at t but active at t + 1, there is a feature b active at t and related to a at t.",
+   "planted": "Suppose a web monitored by an observer and a step-indexed relation have this property: every feature active at the next step is either active now or related at the current step from some currently active feature. For every natural-number step t and feature a inactive at t but active at t + 1, there is a feature b active at t and related to a at t.",
+   "planted_span": "monitored by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L26",
+   "faithful": "For a process and a Boolean gate on actions, suppose a state property propagates backward across every step whose gate is false. If a trace from s to t follows a finite action list and the property holds at t, then it holds at s or the list splits into a prefix reaching m, a gate-true step to r satisfying the property, and a suffix reaching t.",
+   "planted": "For a process and a Boolean gate on actions, suppose a state property propagates backward according to a law across every step whose gate is false. If a trace from s to t follows a finite action list and the property holds at t, then it holds at s or the list splits into a prefix reaching m, a gate-true step to r satisfying the property, and a suffix reaching t.",
+   "planted_span": "according to a law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L55",
+   "faithful": "For a state sequence and an action sequence indexed by natural numbers, there is a process allowing every indicated transition and giving at most one next state for each state–action pair if and only if, for every two indices, equal states and equal actions imply equal next states.",
+   "planted": "For a state sequence and an action sequence indexed by natural numbers, there is a process within an environment allowing every indicated transition and giving at most one next state for each state–action pair if and only if, for every two indices, equal states and equal actions imply equal next states.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  }
+ ]
+}

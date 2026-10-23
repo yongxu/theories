@@ -216,6 +216,13 @@
         "en": "Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.",
         "zh": "两个条件各从两者所余中给出：带内相互支持下，一个条件的不归点是不随伙伴上升而升的最小水平；依赖者在其伙伴之后终结；体制即未耦合情形。"
       }
+    },
+    {
+      "id": "rest-by-balance",
+      "detail": {
+        "en": "RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.",
+        "zh": "RegimeMargin.Adjusted.orbit_bound 是由平衡而停息的情形。"
+      }
     }
   ],
   "references": [
@@ -270,7 +277,7 @@
         "Becoming.RegimeMargin.step_ge",
         "Becoming.RegimeMargin.Adjusted.step_holds"
       ],
-      "sha256": "50f28d79a676ad30d9b637be3f549151f2907983a3cf7d589e066d8bc54bc138"
+      "sha256": "16b148405dfddb4e6f8d2b454254b3fdaa7ab0b0b9e61c16906f5f832a079d73"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -362,12 +369,18 @@
       "role": "receipt",
       "sha256": "1e74422727acd0467bc4e68475b978f5397a2059a38c3f83b1ec1850a948e309",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -413,6 +426,10 @@
     {
       "en": "21 October 2026: MQ6 (study section 314), a frozen test on yeast driven past its fold: the level is the state at a constant draw and carries across experiments, and the regime margin forecasts the level away from the break, but the breaks came early; the scope and the next step are revised.",
       "zh": "2026年10月21日：MQ6（研究第 314 节），在被推过折叠的酵母上的冻结检验：恒定汲取下水平即状态，且跨实验相符，体制的余量在远离破断处预测水平，但破断来得早；范围与下一步据此修订。"
+    },
+    {
+      "en": "23 October 2026, EC6 (study section 375): RegimeMargin.Adjusted.orbit_bound is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
+      "zh": "2026年10月23日，EC6（研究第 375 节）：RegimeMargin.Adjusted.orbit_bound 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
     }
   ]
 }

@@ -305,6 +305,7 @@ import Becoming.ProfileReach
 import Becoming.RenewalBound
 import Becoming.Handoff
 import Becoming.RuleHandoff
+import Becoming.GrammarCourse
 
 /-!
 # The Theory of Becoming: the formal core
@@ -2036,7 +2037,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).
   Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
   each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
-  exceeds both `p / q` and `q / p`. The readings are the AI's (D59, D60).
+  exceeds both `p / q` and `q / p`. Held de se, self-concern is one from every standpoint exactly where
+  the centers lie within one another's closures, and centers that share one condition do
+  (`ownClosure_standpointInvariant_iff_centersWithin`, `Flow.centersWithin_feeding_of_common`); drawn
+  along need it reaches a copy of what it needs exactly where the copy is the only one
+  (`forced_member_iff_only`, `Copies`); an order increasing in its own continuation ranks a course
+  above another, where it adds to that continuation, exactly where the other keeps nothing beyond it,
+  so the ending of what everything needs is ranked below from every standpoint
+  (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise
+  where its own continuation is everything listed. The readings are the AI's (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance
@@ -3146,6 +3155,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   couplings up to a step is one prefix of its own course, a selection through them selects by that
   prefix, and own courses with at most N and N' states fix what it tells apart within N + N' - 1
   steps, a bound attained.
+* `Becoming.GrammarCourse` (L1): 文 in the grammar of continuation (board item WL3). A determined
+  law's step is 缘 and a map's values a class; a relation is constant under the step exactly where
+  the law keeps it, so the same course through the map is the core of the value class
+  (`Law.core_is_sameFuture`), likeness by bisimulation is that core (`Law.alike_iff_core`), and the
+  coarsest class keeping the values and carrying the law is the core (`Law.coarsest_iff_core`).
+  Two moments of a 文 are one state exactly where they lie in one class of its core along the steps
+  (`SameAhead.is_core`); a step continues under the core exactly where the line under the value
+  class never ends (`Law.continues_in_core_iff`); the bounded laws, two 文 read as one net, and
+  learnability are restated through the core where exact. The prefix, the bounds as numbers and
+  eventual agreement have no counterpart in the grammar.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

@@ -53,8 +53,8 @@
     "zh": "对齐由二编码者为之（κ 0.952）；672 对由 Claude 编码，校准集与 320 段英文由 GPT 编码（盲，分语言）；X 之 α 英文 0.69，中文 0.53（校准）；按條之聚类自助法、Wilcoxon、McNemar、聚类稳健之 Poisson；计划与修订皆定于读主结果之前。"
   },
   "next_delta": {
-    "en": "A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and a test of the calibration observation that the authoring model finds less in its own text than another family does.",
-    "zh": "同样纪律下之受控英文本，以同样程序测之；主集之经之第二编码者与人工复核；F3、F4 与阅读试验；并检验校准中之观察：作者模型于己文所检出少于他家模型。"
+    "en": "A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and the authoring model's own-text test on the 經 under the name table (on English statements it found no author-specific deficit: fidelity-coders-on-own-and-other-texts).",
+    "zh": "同样纪律下之受控英文本，以同样程序测之；主集之经之第二编码者与人工复核；F3、F4 与阅读试验；并在名表下之经上检验作者模型于己文之检出（在英文陈述上未见作者特有之短缺：fidelity-coders-on-own-and-other-texts）。"
   },
   "correspondence": {
     "en": "Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run (provenance, not warrant). Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.",
@@ -82,7 +82,7 @@
     {
       "path": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
       "role": "statement",
-      "sha256": "9fa8a67cce39b1a34b91e8ddd724d8a52ff28b8bd4586c4eb5808a76eaefa5e6"
+      "sha256": "9d630754f895c9b9b6dd5004c5edf67059231125fea5cadde2b1c5be7295445a"
     },
     {
       "path": "experiments/wenli-reading-transfer/FIDELITY.md",
@@ -141,6 +141,10 @@
     {
       "en": "23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.",
       "zh": "2026年10月23日：语言与名表纪律之混淆及其对照（受控英文本）补入范围与下一步；作者编码者之盲点作为开放观察记于结果。"
+    },
+    {
+      "en": "23 October 2026: the calibration observation tested on English statements (SC1, record fidelity-coders-on-own-and-other-texts): no author-specific deficit, the coders differ as coders; the next step narrowed to the 經 under the name table.",
+      "zh": "2026年10月23日：校准之观察在英文陈述上检验（SC1，记录 fidelity-coders-on-own-and-other-texts）：无作者特有之短缺，二编码者之别在编码者；下一步收至名表下之经。"
     }
   ]
 }

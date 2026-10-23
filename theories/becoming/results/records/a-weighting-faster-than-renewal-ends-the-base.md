@@ -74,6 +74,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 - related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). Optimum.Next.drawable_le_of_gains is a case of rest by balance.
 
 **Used by:** [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
 
@@ -109,6 +110,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `a weighting falling faster than renewal ends the base`, `an order weighting later draws less`, `discounting ends the base`, `the modified golden rule on the spine`, `权重下降快于更新时终结基础`, `Becoming.Optimum.frontier_gains_weighted`, `Becoming.Optimum.frontier_exhausts`, `Becoming.Web.frontier_exhausts`
 
@@ -121,6 +123,7 @@ Aliases: `a weighting falling faster than renewal ends the base`, `an order weig
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
+- 23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

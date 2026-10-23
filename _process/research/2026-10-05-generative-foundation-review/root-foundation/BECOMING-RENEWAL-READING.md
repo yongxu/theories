@@ -16558,3 +16558,183 @@ Output → input: the grammar is no longer a leaf: base theorems use it; next, t
 **The old family as instances.** In each lifted module the carrier is occurrences, pairs of a step and a relatum, and 缘 is the relation the module already uses: the same relatum's next step (`Steps.along`, Arising), a continuation relation (`Web.continuationStep R`, Identity), a passing of a pattern (`Web.passingContinuation`, PatternPassing). The class is read off the module: alike in activity (`Web.activityClass`), alike in carrying, alike in state. Under these readings the module's notions are the grammar's: `Web.arises_iff_sheng`, `Web.ceases_iff_wang`, `Web.arisesFrom_iff_sheng`, `Web.ceasesFrom_iff_wang`, `Web.lineage_iff_line`, `Web.continuing_iff_line`, `Web.split_fission`, `Web.merge_candles`, `Web.passing_fire` (the carrier ends under the carrier class and the pattern continues under its own class: «亡于细者不必亡于粗» in the old base), `Web.fallsDormant_alters`, `Hibernation.positions`, and `World.law_iff_positions`. Several old laws are derived from the grammar's laws as new theorems (the split and merge laws, the persistence laws through a weaker law needing only decided positions, the strict order of reach along steps), each beside the old proof.
 
 **What did not connect.** The counting laws (census balance, `forces_iff_noSplit`), the amount laws (rises, falls, stock), recurrence, and renaming: the grammar states no counting and no map of carriers. Their premises are connected where they are lines; the laws themselves wait.
+
+## 373. Self-concern through dependence (IV3)
+
+Asked on 23 October 2026 what counts as a system, and whether there being one planetary system bears on the step of invariance ([Ren's words](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md); the argument below is the AI's). The step was left at one question (IV2, §260): is the self's presupposition held de se of a self drawn along a privileged relation narrower than being related at all? This section answers the relation half of that question with the relation a continuation is carried along, and proves what that answer gives. The literature check is the significance review's [dependence check](BECOMING-SIGNIFICANCE-REVIEW.md#dependence-check).
+
+```text
+Result(s): new records self-concern-through-dependence and what-self-concern-alone-ranks; reuses
+       what-the-step-across-standpoints-reaches (ownClosure, selfAscribed_iff_withinSome, forced_iff_within),
+       widening-as-what-every-weighting-ranks (WidensOn, Increasing, outweighs, increasing_ranks) and the base
+       relations of Becoming.Feedback (AffectedBy, FedFrom); the whole-world case is
+       mutual-dependence-and-its-pace (Flow.MutuallyDependent.unrestricted, Flow.MutuallyFed.unrestricted).
+Delta: (1) shared scope. Held de se, the presupposition is standpoint-invariant, and the de se and de dicto
+       readings agree, exactly where every center lies within every center's closure (CentersWithin,
+       ownClosure_standpointInvariant_iff_centersWithin, selfAscribed_iff_withinSome_iff_centersWithin; one
+       closure, withinClosure_iff_of_centersWithin). Only the centers need depend on one another, not the whole.
+       Centers that at one step require one condition and give to it lie within one another's feeding closures;
+       centers that depend on one condition and exchange with it, within one another's influence closures
+       (Flow.centersWithin_feeding_of_common, Flow.centersWithin_influence_of_common), so self-concern held de
+       se along either is one from all of them (Flow.ownClosure_feeding_invariant_of_common,
+       Flow.ownClosure_influence_invariant_of_common).
+       (2) need and copies. Over possible courses, f needs g where g continues on every course on which f does
+       (Needs). Need is its own closure (withinClosure_needs_iff), so drawn along need the presupposition reaches
+       exactly what the continuation needs (forced_needs_iff). Where f needs some member of a class and each
+       member can carry it alone (NeedsSome, CarriesAlone), f needs a member exactly where it is the only one
+       (needs_iff_only, forced_member_iff_only); in Copies the user needs some copy and neither of two.
+       (3) what self-concern alone ranks. An order increasing in its own continuation ranks higher every
+       widening that adds to the items its continuation marks (AddsOwn, IncreasingInOwn). Every order
+       increasing in admission is one, and the two coincide where its own continuation is everything listed
+       (increasingInOwn_of_increasing, increasingInOwn_iff_increasing). Every such order ranks a above b
+       exactly where a widens b and adds to its continuation (widensOwn_iff_every_increasingInOwn); where a adds
+       to it, exactly where b keeps nothing beyond a (every_increasingInOwn_iff_includes), and where b keeps
+       something beyond, some such order ranks b higher (some_increasingInOwn_reverses). So a course admitting
+       nothing from an ending on, agreeing with a before it, is ranked below a from every standpoint whose
+       continuation a adds to (includes_of_ended, ended_below).
+Supplied premises / correspondence: standpoints and centers given; the relation a self is drawn along supplied
+       (read as one its continuation is carried along: feeding or need); possible courses a supplied
+       predicate on Bool-valued markings; finite listings, two-valued admission; orders as relations, neither
+       complete nor transitive; a standpoint's own continuation a supplied marking. Whether actual centers
+       depend on one another, and on conditions of which there is one, is empirical. Correspondence: Næss
+       1987; Jonas 1979; Norton 1984, 1991; Raz 2005; Kiesewetter 2015; Kolodny 2018; Walker 1992, 1995;
+       Simon 1962; Peters 2019.
+Evidence: Becoming.Weightings; core receipt 20261023T051150.969269Z, every axiom report empty.
+Boundary: along affecting the shared scope is a formal fact without the means-end warrant (a competitor
+       affects one's continuation and is not needed); with copies the presupposition reaches the class and no
+       member, and no significance of a single formation states what the class's continuation is owed; what
+       lies beyond every center's closure (Clearing's dweller) and each center counting from another's
+       standpoint are left to the step; the composition of the order law with the dynamics of coupled ending
+       is an argument joining two checked theorems, not one theorem; dependence is contingent, and a center
+       that makes itself independent of a common condition leaves the common closure.
+Output → input: THE-STEP-OF-INVARIANCE (a new §4.4, §5, §7, §8, In brief); the canonical chapter §8.5 (EN,
+       ZH) and §9; D64; the package README row (EN, ZH); the root module's doc.
+```
+
+**What was built.** In `Becoming.Weightings`: `CentersWithin`, `withinClosure_iff_of_centersWithin`, `ownClosure_standpointInvariant_iff_centersWithin`, `selfAscribed_iff_withinSome_iff_centersWithin`, `Flow.centersWithin_influence_of_common`, `Flow.centersWithin_feeding_of_common`, `Flow.ownClosure_influence_invariant_of_common`, `Flow.ownClosure_feeding_invariant_of_common`; `Needs`, `NeedsSome`, `CarriesAlone`, `Needs.refl`, `Needs.trans`, `withinClosure_needs_iff`, `forced_needs_iff`, `needs_iff_only`, `forced_member_iff_only`; the witness `Copies` (`Part`, `copies`, `possible`, `withFirst`, `withSecond`, `user_not_copy`, `needsSome`, `carriesAlone`, `two_copies`); `Weighting.AddsOwn`, `Weighting.IncreasingInOwn`, `Weighting.increasingInOwn_of_increasing`, `Weighting.increasingInOwn_iff_increasing`, `Weighting.widensOwn_iff_every_increasingInOwn`, `Weighting.every_increasingInOwn_iff_includes`, `Weighting.some_increasingInOwn_reverses`, `Weighting.includes_of_ended`, `Weighting.ended_below`. No earlier declaration changed. The module has 170 theorems in 234 declarations (146 in 199 before).
+
+**The route.** The case against the step needs the de se reading together with a relation whose closures differ from center to center. The relation is not free: the presupposition is about continuation, and a continuation is carried along what feeds it and what it needs, so a standpoint that holds its own continuation significant holds significant, at least as conditions of it, the continuation of what its continuation needs. That is the means-end step (to hold an end is to hold what it needs), much weaker than invariance; THE-STEP-OF-INVARIANCE §6.3 already counted covering by feeding as the defensible part of covering. Grant the critic the de se reading and draw the self along feeding or need: where the centers lie within one another's closures, the de se and de dicto readings agree on everything within their common closure, so the critic's reading changes nothing there. What is left to the step is exactly what lies beyond that closure, and each center counting from another's standpoint beyond its part as a condition.
+
+**Need, copies and the class.** Need over possible courses is reflexive and transitive, so its closure is itself and the presupposition drawn along it reaches exactly what is needed. With copies (several alternatives, each able to carry the continuation alone) no member is needed, so the means-end step reaches none of them; it reaches the class, which a significance of single formations does not state. With one copy, the copy is needed. This is the redundancy point of conservation biology (Walker 1992, 1995: a functional group with one or few species is where a loss loses the function) and the line between transmission to necessary means and transmission to facilitative means in the theory of reasons (Kiesewetter 2015; Raz 2005), placed in the step: along need the presupposition reaches a copy only when it is alone, along feeding (Raz's side) it reaches every copy that actually feeds.
+
+**Order.** An order increasing in its own continuation is the weakest monotonicity a self-concerned standpoint can have: it ranks higher only widenings that add to its own continuation. What all such orders share is exactly those widenings. Where a course keeps the standpoint and the other keeps nothing beyond it, every such order ranks the first above; this is the ruin comparison, since a course on which a condition everything needs has ended admits nothing from that ending on. Where the other course keeps something beyond (a group that depended on none of the ended conditions), the comparison is mixed and some such order ranks it the other way. The dynamics say when the ruin course admits nothing: groups whose conditions are coupled end together and nothing is selected among them (`GroupEnding.Flow.coupled_end_together`), and after a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants (`Founding.Flow.survivors_independent`). The two are joined by argument here, not by one theorem. Drawn so that its own continuation is everything listed, as the self drawn along feeding is in a mutually fed flow, the order is increasing in admission: C's premise is then self-concern's monotonicity in its own continuation, so scope and order both rest on one premise, self-concern monotone in what carries it. That locates C's premise more narrowly; it does not warrant it.
+
+**Self-review.** (1) The iffs are two-sided as stated; `ownClosure_standpointInvariant_iff_centersWithin` needs nothing about the whole, so it is strictly more general than the whole-world laws of `Becoming.MutualDependence`, which it does not reprove (they bound significance by each closure; this law is about the de se reading). (2) The base instances use the existing relations `Flow.AffectedBy` and `Flow.FedFrom` and their premises are the ones `Flow.mutuallyDependent_of_common` and `Flow.feeding_whole_of_common` use, restricted to the centers. (3) `Needs` quantifies over a supplied predicate of possible courses; the base supplies no such predicate yet, so the copies law is general structure with a constructed witness, and its reading on the base (a condition fed by many formations, each able to sustain it alone) is not proved. (4) The ruin law's premise that the ended course admits nothing from the ending on is the dynamics' conclusion only where every formation listed depends on the coupled family; it is not derived for any actual system. (5) No ethical predicate occurs; significance and orders are parameters, and the presupposition, invariance and monotonicity are hypotheses. (6) What is new is the placement: the convergence of anthropocentric and nonanthropocentric policy within what humans need (Norton 1991) is the agreement of the de se and de dicto readings within the common closure, and the objection that convergence fails for what is not needed (Steverson 1995) is the copies law and the region beyond the closure. (7) Not done: a predicate of possible courses read off a web, so that need, and copies, are stated on the base; the ruin law composed with the dynamics in one theorem; graded need (how much a copy contributes), which would carry status.
+
+## 374. 文 in the grammar of continuation (WL3)
+
+```text
+Result(s): new record wen-in-the-grammar; related to wenli-on-the-spine, the-split-that-makes-sense,
+       configurations-alike-by-relation, identification-where-bounded, learnable-through-a-map and
+       continuation-relative-to-a-class (claims unchanged).
+Delta: the 文 line and the grammar of the one-unfolding root state one structure. A determined law's step is
+       缘 (Law.step) and a map's values a class (sameValue); a relation is constant under the step exactly
+       where the law keeps it (Law.constant_iff_keeps). Then 文同 is the core of the value class
+       (Law.core_is_sameFuture), likeness by bisimulation in the frame by the map is that core
+       (Law.alike_iff_core), and a class keeping the values and carrying the law contains the core exactly
+       where it is the core (Law.coarsest_iff_core, from contains_core_iff): WL2's coarsest class is the root
+       theorem read on a law. Along one 文, two moments are one state exactly where they lie in one class of
+       its core along the steps (SameAhead.is_core); a state goes on as itself by the core's constancy
+       (SameAhead.next_by_root); along a law's course the two cores agree (course_core_iff); a 文 with a new
+       value at every moment has no continuation under its core (SameAhead.no_continuation, the flame's form).
+       New positions on a 文: a line under the value class ends exactly where the value changes
+       (Law.ends_iff_changes), never ends exactly where the course is constant from there (Law.unending_iff),
+       and a step continues under the core exactly there (Law.continues_in_core_iff, for every law and every
+       type of values; Change.continues_in_core_iff_buqiong is its two-valued parallel); where the value
+       class is constant it is its own core and a course keeping its value one step keeps it for good
+       (Law.constant_iff_core, Law.stays_of_constant). The bounded laws (statesBelow_iff_core, core_iff_below,
+       Law.core_iff_below; two 文 as one net on Nat ⊕ Nat, TwoCourses.core_iff, core_iff_bounded, core_exact)
+       and learnability (Law.learnable_iff_core, Law.learnable_of_core_within, core_within_core_iff) are
+       restated through the core.
+Premises / correspondence: none beyond the grammar and the modules joined; equality of values is the model's
+       commitment, as equality on the carrier is in the grammar. The mapping, notion by notion, is
+       development/wl3-wen-grammar/MAPPING.md.
+Evidence: core receipt 20261023T054251.279347Z (Becoming.GrammarCourse, 32 theorems in 36 declarations, every
+       declaration with an empty axiom report). Author review only.
+Boundary: 文同 and the states of a 文 are the grammar's 理 (the core), not its 续: continuation under the value
+       class is one step that keeps the value. The 文 line's classes are kernels of maps; the two-valued
+       class of Arising and Change (Prop, ↔) is not an instance without propext. 缘 here is a function; the
+       branching of a nondeterministic process is not read as a net of possibilities. The prefix (往), the
+       bounds as numbers, the extrapolations and learnability's "from some step on" have no counterpart in
+       the grammar and are stated beside the core.
+Output → input: the 文 line now rests on the grammar's core; two proposals for OU's owner (board row WL3): move
+       core_within_core_iff and contains_core_iff, which hold for every carrier, into Becoming.Grammar, and
+       cite Law.alike_iff_core where «闭合当且仅当有常»'s docstring leaves the bisimulation correspondence unproved.
+```
+
+**Why the core and not continuation.** The grammar has two ways in which a 文 could be "one": continuation (`«续»`), a single step that keeps the class, and the core (`«核»`), the greatest symmetric relation inside the class that the step keeps. The 文 line's sameness, 文同, compares whole courses, so it is the core: `Law.core_is_sameFuture` proves it, with `Law.constant_iff_keeps` translating the 文 line's "the law keeps the relation" (`Law.KeepsRelation`) into the grammar's constancy. Continuation under the core is then exactly a course that never changes again (`Law.continues_in_core_iff`), the grammar's flame lesson (`«以核为判据则火无续»`) seen on a 文: a course that changes at every moment has no continuation under its core (`SameAhead.no_continuation`). So the coarsest 理 that keeps the values in the 文 line's sense (WL2: a class that keeps the map's values and that the law carries) is the plan's 理 of the class of values, its core (PLAN §4.1, 「理是它之类（有常之核）」); the 文 line's other 理, classes that keep the values but are finer, are the symmetric constant relations inside the core.
+
+**Two 文 as one net.** The bounded law for two courses (`Identification.bounded_agree`) compares two sequences, while the grammar's core relates occurrences of one net. Taking the moments of both courses side by side, each going to its own next moment (`TwoCourses.next` on `Nat ⊕ Nat`, values `TwoCourses.value`), puts the comparison inside one net: the first moments lie in one class of the core exactly where the courses agree everywhere (`TwoCourses.core_iff`), so the bounded law and its exactness are laws of that core (`TwoCourses.core_iff_bounded`, `TwoCourses.core_exact`).
+
+## 375. Rest by balance: the course and regime series as its cases (EC6)
+
+Board item EC, its sixth step (the master law of balance, its rest part). Core receipt `20261023T055339.893510Z`.
+
+**Why.**
+- EC5's measure (study §317) left 63 of 127 central declarations resting on no master law. Among them the optimum series (SG1–SG17) and the regime series (RM1–RM10) prove the same kind of law in separate models, each by its own induction:
+  - a course above its renewal ends within its starting excess (`Optimum.ends_within`, by an induction on the fall);
+  - a course gaining the most draws, weighted, at least what any open course could (`Optimum.Next.drawable_le_of_gains`, by an induction setting two step identities side by side);
+  - a law's run with a bounded mark comes to rest (`LastChange.still_within`, an induction on the room left), on which the regime's rest and its threshold in the plane stand;
+  - below a regime's point of no return the level falls by at least one a step (`RegimeMargin.Adjusted.orbit_bound`, an induction on the level);
+  - a coupled web within a band rests (`RegimeMargin.Coupled.Indexed.rests_by`, an induction on what the draws leave).
+- Each of these is the stretch balance (`balance_over_stretch_on`, EC2) read once more: a level after a step with what is taken is the level before with what is given. Board rule 9 asks for the general law below and the special ones through it.
+
+**What changed.**
+- **One law, in `Becoming.Amounts`, from the stretch balance.** In whole numbers:
+  - a count balanced across each step of a stretch, losing at least one more than it gains at each, falls across it by at least its length (`Amounts.falls_by_stretch`);
+  - where whether a step is marked is decided and each marked step loses at least one more than it gains, an unmarked step comes within what stood at the start (`Amounts.unmarked_within`; the steps up to the bound are searched, so no omniscience is used);
+  - two balanced counts, the first starting within the second, where at each step the first's gain with the second's loss is within the second's gain with the first's loss, end in the same order (`Amounts.le_by_exchange`).
+- **The five laws above are its cases, under their names and with their statements unchanged.**
+  - `Optimum.ends_within`: a course balances with what its step takes (`drawnAt`, moved above it), and at the need or above it is positive and loses at least one more than it is given (`falls_over`).
+  - `Optimum.Next.drawable_le_of_gains`: what a course could draw, with what it drew before, balances across each step (`drawable_step`); the premise `gains` is exactly the exchange condition.
+  - `LastChange.still_within`: the room the bound leaves above the mark, with the mark's rise, is the room before (`LastChange.room_balance`), and it loses at least one at each change; the first unchanged step gives the rest (`LastChange.still_of_fixed_at`).
+  - `RegimeMargin.Adjusted.orbit_bound`: the adjusted step balances, the draw taking all there is up to `H` (`Adjusted.step_balances`); the run stays below the point with the recent giving short (`Adjusted.orbit_inside`), so at each positive level the draw takes at least one more than is given; where the level reaches nothing first, it stays there.
+  - `RegimeMargin.Coupled.Indexed.rests_by`: what the draws leave, added, never rises, so with its fall recorded as what is taken it balances, and it falls at each step that is not alike at every condition.
+- The central declarations that stood on these now stand on balance: `Web.course_lost_iff`, `Web.frontier_exhausts`, `Web.frontier_rebuilds` and `Web.Next.frontier_ends_drawn_first` (each in the degeneration and alignment rows), `RegimeMargin.ends_iff_below`, `RegimeMargin.Adjusted.ends_iff_below`, `RegimeMargin.Adjusted.comes_to_rest`, `RegimeMargin.Adjusted.falls_iff_below` and `RegimeMargin.Coupled.threshold_falls`.
+
+**Delta.**
+- One law for the ending and rest of courses, regimes, runs and coupled webs, and for the comparison of weighted draws; five direct inductions gone.
+- The measure: 63 of 127 central declarations rested on no master law on `b400d3c7f`; 50 do now, and balance carries 52. Defined notions in the central statements: 319 → 319.
+- No statement changed; no record's claim changes.
+
+**Premises and honesty of the reading.** Where the loss is a real exchange (a course's draw, a regime's draw, a weighted draw) the balance is the step law of the model, read as balance. Where the loss is a count's own fall recorded as what it loses (a run's mark, what the draws leave of a web), balance adds no premise: the law there counts the falls of a count that never rises, and its content is the least-loss law of rest in whole numbers decided at each step. The measure counts both as resting on balance; the second kind could equally be counted under finite runs (rest is a case of being drawn), and the anchors are left as EC5 set them.
+
+**Not done here.**
+- `RegimeMargin.Coupled.Indexed.ends_downstream`: the cascade's ending rests on the exact drain (`ends_after`), an identity; reading it through the balance would add a case split and no reason.
+- `Optimum.optimum_beyond` and `Optimum.mutual_beyond`: the outcomes open to a part (`Flow.Outcome`) write the balance equation inline instead of through `Flow.Balances`; stating the step balance once on two levels (a `Flow.BalancesFrom` with `Flow.Balances` defined through it) would join them, at the cost of a change to `Becoming.Flow` that rebuilds nearly the whole spine.
+- `Web.optimum_broken_iff` (an order fact about frontiers) and `RegimeMargin.Drawn.run_shape` (the shape of a run in any amounts, from the order of states) rest on order, not on any of the five laws as stated; whether a law of monotone runs should join the master laws is open.
+- The other 45 declarations on the completion report's list.
+
+**Evidence.** The checker run `20261023T055339.893510Z` passed with every axiom report empty (`Becoming.Amounts`, `Becoming.LastChange`, `Becoming.Optimum`, `Becoming.RegimeMargin` among them); the connectivity measure and `measure.py` were rerun on it.
+
+**Boundary.** A restructuring of proofs with one new law and its helpers; the statements of the five laws and of every central declaration are unchanged. New record `rest-by-balance`; the seven records citing the five laws carry a history note; the other records citing the four changed sources are re-pointed.
+
+**Output → input.** Balance now carries the ending and rest of the optimum and regime series. Next: `Flow.Outcome` through a step balance, and whether monotone runs are a law of their own.
+
+## 376. Coders on their own and the other's texts (SC1)
+
+```text
+Result(s): fidelity-coders-on-own-and-other-texts (new); fidelity-of-the-classical-statements (next step: the
+       calibration observation tested; history note)
+Delta: a crossed, pre-registered test of FC1's calibration observation (the authoring Claude coder found no
+       excess in 26 經, the GPT coder some in 10). Claude and GPT each wrote a faithful plain-English
+       statement of 60 laws and a version with one planted excess referent; both coded all 240 texts
+       blind (codebook v1.1). No author-specific deficit: detection interaction +0.017, 95% CI
+       [-0.050, +0.083]; on faithful X -0.050 [-0.200, +0.083]. Coder effects: GPT detects fewer plants
+       (-0.042 [-0.075, -0.008]) and lists more excess in faithful texts (+0.158 [+0.083, +0.242]); the
+       Claude coder lists none in any faithful text, GPT's included
+Supplied premises / correspondence: codebook v1.1 and FC1's Lean table (sha256 478c555f…); plants made knowingly
+       by their authors as ground truth; English only
+Evidence: DESIGN.md committed before any text was written (e9052d667), texts and blind packets before any coding
+          (23c68a6eb); 480 of 480 codings; cluster bootstrap over laws, B = 10,000
+Boundary: English, no name table (the 經 case untested); no ground truth for unplanted excess; two families
+          identify only the summed self effect; detection near ceiling; no human audit
+```
+
+The test asks whether the calibration's discrepancy sits in the author of a text or in its coder. A blind spot is an interaction: a coder finds less in its own text than in the other's, relative to the other coder. Over-reading and general under-detection are main effects of the coder. Plants give the ground truth for detection that the unplanted count lacks ([design](development/sc1-source-check/DESIGN.md), [results](../../../../experiments/source-check/RESULTS.md)).
+
+**What was found.** Each coder caught its own plants at about the rate it caught the other's: Claude 0.97 own against 1.00 other, GPT 0.97 own against 0.92 other. The Claude coder's two misses were plants that both coders matched to the statement's own proposition or binder. The GPT coder listed more excess everywhere. 9 of its 19 excess referents in faithful texts are bare numerals counting binders, which clarification 1 of the codebook matches (described after the fact, not pre-registered).
+
+*Reading* [AI reading]. In English the difference between the two coders is the coder's threshold, not authorship, and the Claude coder's zero on the 經 fits its zero on GPT's English. The observation's tie to `Becoming.Web.SelectsThrough` (a judge does not mark what its coupling does not reach) is not supported here as an author effect. The law itself is untouched.
+
+**Output → input.** The open observation in FIDELITY-RESULTS now points to this result. Still open: the same crossing on the 經 under the name table, and adjudication or human audit of unplanted excess.

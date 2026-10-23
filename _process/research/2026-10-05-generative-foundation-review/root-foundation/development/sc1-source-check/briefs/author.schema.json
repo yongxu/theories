@@ -1,0 +1,2 @@
+{"type":"object","additionalProperties":false,"required":["laws"],"properties":{"laws":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["law","faithful","planted","planted_span","planted_head"],"properties":{
+"law":{"type":"string"},"faithful":{"type":"string"},"planted":{"type":"string"},"planted_span":{"type":"string"},"planted_head":{"type":"string"}}}}}}

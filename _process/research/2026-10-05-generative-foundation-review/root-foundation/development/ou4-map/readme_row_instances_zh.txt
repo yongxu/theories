@@ -1,0 +1,1 @@
+| L2 | [`Becoming.MapInstances`](Becoming/MapInstances.lean) | 旧基底之诸态在地图上：延续关系上的传（`Web.carries_iff`）；传递之下生成使载者迟迟生起（`Web.generation_arises_late`）；只按名读则无生成（`Web.itself_not_generation`）；所耗仍持、家族超出更新、传之止，皆否诸支之不穷；中继复生而终（`Map.relay_renews_and_ends`） |

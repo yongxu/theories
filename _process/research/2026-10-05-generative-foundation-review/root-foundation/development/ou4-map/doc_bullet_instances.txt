@@ -1,0 +1,9 @@
+* `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
+  step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
+  alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
+  did not carry on as itself (`Web.carries_iff`); under passing, generation makes carriers arise at
+  arbitrarily late steps (`Web.generation_arises_late`); read by names alone nothing generates and
+  an always-active formation keeps (`Web.itself_not_generation`, `Web.always_keeps`); consumption
+  still held, a family drawn beyond renewal and passing that stops refute going on every branch
+  (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
+  the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.

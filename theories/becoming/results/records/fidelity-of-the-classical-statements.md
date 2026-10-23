@@ -37,7 +37,7 @@ Canonical source: [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-tr
 <a id="next--下一步"></a>
 ## Next
 
-A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and a test of the calibration observation that the authoring model finds less in its own text than another family does.
+A controlled English edition under the same discipline, measured the same way; the second coder on the main-set 經 and a human audit; F3, F4 and the reading test; and the authoring model's own-text test on the 經 under the name table (on English statements it found no author-specific deficit: fidelity-coders-on-own-and-other-texts).
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -50,6 +50,8 @@ Board item FC1, on Ren's request to run the fidelity count; the scope was cut by
 ### Dependencies
 
 - **interpretive**: [wenli-on-the-spine](wenli-on-the-spine.md). Tests the WL chapter's claim that the classical code is a fitting reading layer.
+
+**Used by:** [fidelity-coders-on-own-and-other-texts](fidelity-coders-on-own-and-other-texts.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -73,6 +75,7 @@ Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 
 - 22 October 2026: added (FC1); study section 370.
 - 23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.
+- 23 October 2026: the calibration observation tested on English statements (SC1, record fidelity-coders-on-own-and-other-texts): no author-specific deficit, the coders differ as coders; the next step narrowed to the 經 under the name table.
 
 </details>
 

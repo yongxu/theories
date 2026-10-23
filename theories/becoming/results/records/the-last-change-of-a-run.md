@@ -77,6 +77,7 @@ The record when-the-runs-of-a-process-settle left "Whether the limited principle
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `the last change of a run`, `一次运行的最后一次变化`, `fewer than N changes`, `变化少于 N 次`, `not not settled`, `不是不安定`, `settling is deciding whether it changes again`, `安定即判定是否再变化`, `settling is exactly LPO`, `安定恰是 LPO`
 
