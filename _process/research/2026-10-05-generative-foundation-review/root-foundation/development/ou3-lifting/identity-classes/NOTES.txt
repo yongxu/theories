@@ -1,0 +1,91 @@
+OU3a, identity-classes: Becoming.Identity and Becoming.ContinuedClasses as instances of Becoming.Grammar
+(23 October 2026; not committed; the package itself is unchanged)
+
+Files
+  tree/Becoming/Identity.lean          full module, new section at the end ("The grammar's reading of identity across steps")
+  tree/Becoming/ContinuedClasses.lean  full module, new section at the end ("The grammar's reading of classes along a continuation")
+  Imports: each module adds only `import Becoming.Grammar`. No existing statement or proof is changed.
+
+Reading
+  Carrier: occurrences `Nat × F`, the pair (step, formation).
+  缘: `Web.continuationStep R x y := y.1 = x.1 + 1 ∧ R x.1 x.2 y.2`, one step of the continuation
+      relation `R : Nat → F → F → Prop` that both modules already use (`Web.Continues`, `Continuing`, `Linked`).
+  Classes (each a «类», proved):
+    `Web.activityClass W` = "active or not" (alikeBy of activity), the class of `Continues`/`Continued`/
+      `ArisesFrom`/`CeasesFrom`/`Lineage`/`Continuing` (the flame's "flame or not" in the grammar);
+    `«一»` for `Linked` (nothing asked of activity);
+    `Web.dependenceClass W c` = "requires c or not", the class of `holdingOn` and tenure (`MetAboveAlong`).
+  Scope note: under "active or not", two inactive occurrences linked by R also continue each other; so the
+  instance theorems for lines say "from an active occurrence" (a line from an active occurrence stays active).
+  That is a property of the class, stated in every statement where it matters.
+
+New declarations, Becoming.Identity (3 definitions, 31 theorems)
+  Web.continuationStep            def: 缘 read off a continuation (one step, R between the formations)
+  Web.alikeBy, alikeBy_class      def + thm: the class of a property (both have it or neither); it is a «类»
+  Web.activityClass, _class       def + thm: the class "active or not"; it is a «类»
+  Web.occurrence_eq               pairs with equal step and formation are equal
+  Web.hasPred_iff_continues       for active (t+1,f): «有前» ↔ W.Continues R t f
+  Web.hasSucc_iff_continued       for active (t,g): «有后» ↔ W.Continued R t g
+  Web.begins_at_zero              every (0,f) is «生», under every class
+  Web.arisesFrom_iff_sheng        ArisesFrom R t f ↔ active (t+1) f ∧ «生» (t+1,f)
+  Web.ceasesFrom_iff_wang         CeasesFrom R t g ↔ active t g ∧ «亡» (t,g)
+  Web.abides_iff                  for active (t+1,f): «住» ↔ Continues R t f ∧ Continued R (t+1) f
+  Web.arises_iff_sheng / ceases_iff_wang   Arises / Ceases as named = 生 / 亡 under each formation continuing itself
+  Web.ceasesFrom_of_unconditioned DERIVED from «亡于粗则亡于细»: active and continued by nothing under R ⇒ CeasesFrom
+  Web.continuationStep_irrefl     no step relates an occurrence to itself
+  Web.nothing_continues_under_identity   under «静» no occurrence continues another (identity across steps is supplied by a class)
+  Web.positions_not_self_standing DERIVED from «四相无自立»: (t+1,f) abides under «一», begins and ends under «静»
+  Web.reach_advances, line_advances      reach / lines advance the step index
+  Web.continuationStep_acyclic    «无环»
+  Web.reach_strict_order          DERIVED from «无环则及为序»: reach along steps is a strict order
+  Web.noSplit_iff                 NoSplit ↔ an active occurrence has at most one «续» successor under activity
+  Web.noMerge_iff                 NoMerge ↔ an active occurrence continues at most one occurrence
+  Web.split_fission               a split is 分叉: both branches in lines from (t,g), neither in a line from the other, distinct, «同族»
+  Web.merge_candles               DERIVED from «蜡烛之合»: a merge gives both «续» and «同族» of the merged pair
+  Web.Lineage.cons                lineage prefixed by one step (helper)
+  Web.Lineage.line, line_lineage  lineage ⇒ line, line ⇒ lineage of some length
+  Web.steps_cancel                n+m = n+k ⇒ m = k (Nat.add_left_cancel carries propext; this one does not)
+  Web.lineage_iff_line            Lineage R M g (k+1) h ↔ active M g ∧ «相续» (M,g) (M+(k+1),h)   (exact)
+  Identity.Fork.fission           the old Fork witness is a 分叉 instance
+  Tandem.budding_fission          Tandem's budding is a 分叉 at every step
+  Tandem.joining_candles          Tandem's joining is 蜡烛之合 at every step
+
+New declarations, Becoming.ContinuedClasses (1 definition, 22 theorems)
+  Web.line_continuing, Continuing.line   the two directions of:
+  Web.continuing_iff_line         Continuing R t g u h ↔ (t,g)=(u,h) ∨ active t g ∧ «相续» (t,g) (u,h)   (exact)
+  Web.Continuing.mono_by_reach    DERIVED from «及之单调»: the old Continuing.mono, through the grammar
+  Web.renewingAlong_iff_line      RenewingAlong = every occurrence of the line (and itself) renews
+  Web.consumingAlong_iff_line     ConsumingAlong = some occurrence of the line (or itself) draws on a consumed condition
+  Web.RenewingAlong.branches      SPLIT LAW through the grammar: renewing passes into both branches of a split, and they form a fission
+  Web.ConsumingAlong.merged_candles  MERGE LAW through «蜡烛之合»: consuming along the merged occurrence is consuming along both merged into it
+  Web.Linked.line, line_linked, linked_iff_line   Linked R ↔ itself ∨ «相续» under «一»   (exact)
+  Web.dependenceClass, _class     def + thm: the class "requires c or not"; a «类»
+  Web.Linked.held_line, line_held, held_iff_line  from a formation requiring c: Linked (holdingOn R c) ↔ itself ∨ «相续» under dependenceClass c (exact)
+  Web.metAboveAlong_iff_line      tenure along a continuation read off a line under the dependence's class
+  Web.line_image                  generic: a map carrying each «续» to a «续» carries lines
+  Web.carry_step_iff              re-identification: a carried «续» is a «续» between the formations named
+  Web.line_reidentify             lines are unchanged by a re-identification carrying the continuation (exact, both ways)
+  MergeClass.candles              the MergeClass merge is 蜡烛之合
+  MergeClass.both_consume_along   DERIVED via merged_candles: first AND second consume along the merge (generalizes first_consumes_along)
+  Bud.fission                     the bud is a 分叉
+
+Old laws derived from grammar laws (new theorems; old proofs untouched)
+  Continuing.mono (as Continuing.mono_by_reach) from «及之单调»;
+  ConsumingAlong.merged (as ConsumingAlong.merged_candles, for both merged formations) from «蜡烛之合»;
+  RenewingAlong.branch (as RenewingAlong.branches, with the fission) from «及之传递» and split_fission;
+  MergeClass.first_consumes_along (as both_consume_along);
+  a ceasing law from «亡于粗则亡于细»; precedence from «无环则及为序»; relativity of positions from «四相无自立».
+
+Not connected, and why
+  The census balance and its halves (Census.balanceFrom, arisingFrom_of_ceasingFrom, ceasingFrom_of_arisingFrom),
+    forces_iff_noSplit, forced_iff_more, Lineage.unique/ends: counting laws over listed formations; the grammar
+    has no counting. Only their premises (NoSplit, NoMerge, ArisesFrom, CeasesFrom, Lineage) are connected.
+  KeepsActive/KeepsTenure, renaming laws, Turnover, Succession, Dormancy, World.continues_as_alike: these compare
+    two namings; the grammar's counterpart would be a map of carriers. Only carry/lines (line_reidentify) are done.
+  IncludesAcross/ExceedsAcross/WidensAcross: they rest on Linked, now linked_iff_line; their own laws were not restated.
+  «有常», «核», «位核», «异», «复生», «生生», «粗»: no old notion of these two modules matches them exactly
+    (e.g. no module notion of a finer class telling continuations apart); not forced.
+
+Scratch build (python3 -B .../scratch_build.py <tree>, both modules): pass, "unclean": [] (no warnings),
+  Becoming.Identity 150 theorems / 215 declarations, Becoming.ContinuedClasses 74 theorems / 99 declarations,
+  "with_axioms": {} for both (every axiom report empty). No simp/omega/decide; transports by explicit Eq.subst.

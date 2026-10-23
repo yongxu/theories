@@ -1,0 +1,115 @@
+OU3a, folder passing-persistence: Becoming.PatternPassing and Becoming.Persistence as instances of the grammar
+==========================================================================================================
+
+Files: tree/Becoming/PatternPassing.lean, tree/Becoming/Persistence.lean. Each module gets
+`import Becoming.Grammar` and one new section at its end. No existing statement or proof changed.
+
+DEPENDENCY ON THE identity-classes SESSION (read first)
+Both modules import Becoming.Identity, where the identity-classes session (same OU3a brief, not
+yet landed) is adding the occurrence reading: `Web.continuationStep R` (缘 = one step of a
+continuation R on pairs (step, formation)), `Web.alikeBy`, `Web.activityClass W`,
+`hasPred_iff_continues`, `arisesFrom_iff_sheng`, `ceasesFrom_iff_wang`, `arises_iff_sheng`,
+`ceases_iff_wang`, `line_advances`, ... I build on those definitions and do not reprove them
+(board: do not reprove another session's item). So these two modules land AFTER their Identity.lean.
+Built against their file as of sha1 22df7f2fc3e8a4d8095a7d7fc15dfbd902040740
+(identity-classes/tree/Becoming/Identity.lean). Used from it: continuationStep, activityClass,
+activityClass_class, hasPred_iff_continues, line_advances, arises_iff_sheng, ceases_iff_wang,
+arisesFrom_iff_sheng, ceasesFrom_iff_wang. If they rename these, the fix is mechanical.
+
+READING
+Carrier: occurrences Nat × F, (t, a) = formation a at step t (carrier equality is the grammar's
+model commitment). 缘: `Web.continuationStep R` for a continuation R the module already reads.
+
+PatternPassing. R = `Web.passingContinuation passes`: a at t+1 continues b at t where b = a
+(carrying on) or passes t b a. Classes: pattern's class = `V.activityClass` (alike in carrying
+the pattern); carrier class = `V.carrierClass` = activityClass ∧ same formation, finer.
+Persistence. R = the names (fun _ g f => g = f), the identity premise of Becoming.Identity.
+Persisting changes the class, not 缘: holding = `(W.persisting h).activityClass`; state class
+`W.stateClass h` = alike in activity and in holding (active / dormant / absent), finer.
+
+NEW DECLARATIONS, PatternPassing (18 theorems, 3 defs added; general lemmas in namespace Becoming)
+- marked_step_of_apart: any carrier/relation; if each 续 step keeps class K or carries mark P,
+  a line (相续) whose ends K tells apart has a P-step, with its place on the line. Constructive
+  (uses the split, not excluded middle).
+- line_within_class: a line under a class E has E-alike ends.
+- alters_of_begins: 生 under F at y and 续 under E from x to y give 异 R E F x y.
+- Web.passingContinuation, Web.sameFormation, Web.carrierClass (+ _class, _finer).
+- Web.byPassing_iff_continues: ByPassing ↔ every carrying occurrence after a step Continues
+  (Identity's sense) under the passing continuation.
+- Web.byPassing_iff_hasPred: ByPassing ↔ every carrying occurrence at t+1 has 有前 under the
+  pattern's class (nothing begins under it after step 0).
+- Web.arises_iff_sheng_carrier / ceases_iff_wang_carrier: Arises/Ceases ↔ active ∧ 生/亡 under
+  the carrier class.
+- Web.passesAt_of_alters: 异 (pattern class, carrier class) from a carrying occurrence ⇒ PassesAt.
+  One way only: PassesAt counts passing to oneself, no alteration.
+- Web.alters_of_passes: passing to another formation, both ends carrying ⇒ 异.
+- Web.passing_fire (火传, 庄子「指窮於爲薪，火傳也」): a carrier ceasing while it passes ⇒ 亡 under
+  carrier class ∧ ¬亡 under pattern class ∧ 异. The «亡于细者不必亡于粗» shape.
+- Web.ceases_of_pattern_ends: carrying occurrence with 亡 under the pattern class ⇒ Ceases
+  (from «亡于粗则亡于细»).
+- Web.ByPassing.line_back: under ByPassing, an occurrence at S+k+1 lies on a 相续 under the
+  pattern's class from a carrying occurrence at S.
+- Web.ByPassing.passes_within_by_line: exactly the statement of ByPassing.passes_within, derived
+  from line_back + marked_step_of_apart (carrier class tells the line's ends apart by Brief).
+- Web.ByPassing.begins_passed_by_grammar: exactly ByPassing.begins_passed, derived via
+  byPassing_iff_hasPred + alters_of_begins.
+- PatternRelay.shifted_fire: every odd step of `shifted` is a 火传 step.
+- PatternRelay.fire_shape: «则» carrier pattern ∧ 亡 under carrier at (1,0) ∧ ¬亡 under pattern:
+  the grammar's «亡于细者不必亡于粗» inside the module's witness.
+  (In PatternRelay.web each carrier passes at its FIRST step, so its last occurrence ends under
+  both classes: not a 火传 witness.)
+
+NEW DECLARATIONS, Persistence (17 theorems, 1 def added)
+- begins_finer: dual of «亡于粗则亡于细» (生 under coarser ⇒ 生 under finer), any carrier.
+- Web.stateClass (+ _class, _finer: finer than holding).
+- Web.wang_state_of_change / sheng_state_of_change: activity changing across a step ⇒ 亡 before /
+  生 after under the state class (no premise).
+- Web.ceases_iff_wang_state / arises_iff_sheng_state (activity within holding): Ceases/Arises ↔
+  active ∧ 亡/生 under the state class.
+- Web.ceases_of_persisting_ceases: forward half of ceases_persisting_iff, from «亡于粗则亡于细».
+- Web.arises_of_persisting_arises: forward half of arises_persisting_iff's first part, from
+  begins_finer.
+- Web.fallsDormant_alters / wakes_alters: falling dormant (waking) is 亡 (生) under the state
+  class and 异 under holding: falling dormant is not ceasing, waking is not arising.
+- Web.names_line_same: a line along the names keeps one formation.
+- Web.unending_of_holds: holding at every step ⇒ 不穷 under holding.
+- World.arises_fixed_iff_sheng / ceases_fixed_iff_wang: World.arises_fixed_iff / ceases_fixed_iff
+  composed with Identity's arisesFrom_iff_sheng / ceasesFrom_iff_wang: an arising (ceasing) fixed
+  by conservation is 生 (亡) under 缘 = continuationStep w.Conserves, class activity.
+- Hibernation.positions: «则» state holding; 亡 under state ∧ ¬亡 under holding at (0,hibernator);
+  at the dormant step (1,hibernator) 住 under holding and both 生 and 亡 under state; 不穷 under
+  holding from (0,hibernator).
+- Seed.held_classes: same 缘, two choices of h: 不穷 under holding by dependence at every step;
+  亡 at (3,()) under holding by reserve.
+
+OLD LAWS DERIVED FROM GRAMMAR LAWS
+- ByPassing.passes_within (via marked_step_of_apart, a relational law proved here; candidate for
+  the grammar).
+- ByPassing.begins_passed (via alters_of_begins).
+- forward halves of ceases_persisting_iff (via «亡于粗则亡于细») and arises_persisting_iff (via
+  begins_finer).
+- World.arises_fixed_iff / ceases_fixed_iff restated as 生/亡 (composition, not a new derivation).
+
+NOT CONNECTED, AND WHY
+- Web.begins_within: an instance of Web.Covered.arises_within; reads no continuation.
+- ByPassing.trace, present_back, present_earlier, present_of_le, empty_stays, ends_within: about
+  presence at a step (∃ a carrier), and a step is not an occurrence; no grammar term. trace's
+  content is covered by line_back.
+- Persistence: steady_held, named_throughout, renewingIn_held, consumingIn_held, the
+  re-identification and world-naming laws (fixed_iff, still_of_apart, classes_fixed, Shuttle,
+  Lineage): these are about namings of the carrier, which the grammar takes as a model commitment
+  (carrier equality), not about classes on a fixed carrier. persisting_census counts lists.
+- The converse halves of ceases_persisting_iff / arises_persisting_iff are not coarsening laws
+  (they need "not holding after", a fact about the coarse class); left as they are.
+- Candidate grammar laws for the Grammar owner: marked_step_of_apart, line_within_class,
+  alters_of_begins, begins_finer (all stated for every carrier and relation).
+
+SCRATCH BUILD
+Tree: scratchpad copy holding identity-classes' Identity.lean (sha1 above) + symlinks to my two
+files. `scratch_build.py <tree> Becoming.PatternPassing Becoming.Persistence`: pass, unclean [],
+no warnings.
+  Becoming.PatternPassing: 37 theorems, 50 declarations, with_axioms {} (all empty).
+  Becoming.Persistence:    87 theorems, 107 declarations, with_axioms {} (all empty).
+Against the plain checkout (without identity-classes' Identity) the modules do not build: the
+Identity names above are missing there.
+Nothing committed; no file outside this folder edited.
