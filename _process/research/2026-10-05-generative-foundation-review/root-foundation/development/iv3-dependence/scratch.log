@@ -1,0 +1,18 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/tree",
+  "modules": 43,
+  "ran": [
+    "Becoming.Weightings",
+    "BecomingWeightingsAxiomAudit"
+  ],
+  "reused": 42,
+  "unclean": [],
+  "audits": {
+    "Becoming.Weightings": {
+      "theorems": 170,
+      "declarations": 234,
+      "with_axioms": {}
+    }
+  }
+}
+exit 0
