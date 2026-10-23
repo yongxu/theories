@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "id": "the-continuation-condition-on-the-root",
+  "title": {
+    "en": "The continuation condition on the root",
+    "zh": "根上之续存条件"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T22:05:14+00:00",
+  "statement": {
+    "en": "Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
+    "zh": "以相对于类之续而述，条件为：凡事皆在每一中心于此类下之续中；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
+  },
+  "laws": [
+    {
+      "en": "Given a net R, a class E and each standpoint's center, the condition along the net is that every occurrence is reached on every center's line under E, and in families that every occurrence lies in every center's family under E; what a line reaches lies in its family, so the first gives the second.",
+      "zh": "给定网 R、类 E 与各立场之中心：沿网之条件为凡事皆在每一中心于 E 下之线所及；族之条件为凡事皆在每一中心于 E 下之族中；线之所及皆在其族，故前者蕴族者。",
+      "declarations": [
+        "Becoming.«所及则同族»",
+        "Becoming.«族无外»",
+        "Becoming.«相续则同族»",
+        "Becoming.«续无外»",
+        "Becoming.«续无外则族无外»"
+      ]
+    },
+    {
+      "en": "Under a coarser class every family holds the finer class's family, and the condition along the net or in families at a class gives it at every coarser class.",
+      "zh": "较粗之类下，每一族含较细之类之族；条件于一类下（沿网或族）成立，则于每一较粗之类下亦成立。",
+      "declarations": [
+        "Becoming.«同族之粗化»",
+        "Becoming.«族无外之粗化»",
+        "Becoming.«续无外之粗化»"
+      ]
+    },
+    {
+      "en": "Lying within a closure along a relation is being reached on a line under the one of that relation; so the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net, and on the own-closure reading of claims living significance follows, with S0, both neutralities and, where something lives, a seed.",
+      "zh": "在一关系之闭包内，即在该关系之一下之线所及；故依一关系 de se 而持之条件，恰即以该关系为网、于其一下之根之条件；以自闭包读断言者，生之有义由之，并自之有义、二中立，有生则有种。",
+      "declarations": [
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.premises_of_noOutside",
+        "Becoming.withinClosure_iff_reached",
+        "Becoming.withinClosure_of_line"
+      ]
+    },
+    {
+      "en": "Along a net with no cycle the condition holds only with one center: two centers each reached from the other would lie on a cycle, and nothing conditions that center.",
+      "zh": "无环之网中，此条件唯于一中心成立：二中心互相所及则成环，且无物为此中心之缘。",
+      "declarations": [
+        "Becoming.«续无外则中心无缘»",
+        "Becoming.«续无外则同一中心»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: for every carrier, relation and class; the class and the standpoints' centers supplied, not read off the net; for the de se instance a relation on formations taken as the net; for living significance, a reading of claims through the own closure (reads); for the one-center laws, a net with no cycle.",
+      "zh": "不加公理，除各律所带者外不加前提：对一切载体、关系与类；各立场之中心给定；世界之例设形成上之一关系与有义之 de se 自闭包之读；生之有义设 Valuation.premises_of_unrestricted 之断言之读。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual net meets the condition at any class, which class a center's own line runs under, or which occurrences are centers.",
+      "zh": "实有之网于某类下满足此条件，中心之自线在何类下，或何事为中心。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the relations a self is drawn along run with 缘: feeding and influence run to conditions, so read along them the condition reaches what one depends on, not what follows.",
+      "zh": "自所沿之关系与缘同向：馈与影响向条件而行，沿之读，条件及所依者，非所随者。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The free significance parameter of the condition, on the root: it is not lifted, and its non-entailment holds by construction of that parameter.",
+      "zh": "条件之自由之有义参数于根上：未提升，其不蕴涵由该参数之构造而成立。",
+      "kind": "scope"
+    },
+    {
+      "en": "The warrant of the condition, or anything about C, which alone orders.",
+      "zh": "条件之根据，或关于唯一排序之 C 之任何事。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T220231.427406Z): Becoming.GrammarScope, 30 theorems in 37 declarations, every declaration with an empty axiom report; the checker verifies core purity. This record cites 14 of them. Author review in study section 392.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T220231.427406Z）：Becoming.GrammarScope，37 项声明中 30 条定理，公理报告皆空；检查器并核对核心纯净。本记录引其中 14 项。作者审查见研究第 392 节。"
+  },
+  "next_delta": {
+    "en": "The chapter's other theorems that take the condition stated as instances through the root's; the condition for many centers in families; which class a center's own line runs under, argued or modelled.",
+    "zh": "本章以条件为前提之其他定理，经根之条件述为其例；多中心之族之条件；中心之自线在何类下，论证或建模。"
+  },
+  "correspondence": {
+    "en": "SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"nothing lies outside every center's continuing\".",
+    "zh": "SW §3 之结构之读（中心之所计，在其沿一关系之续中者）移于根上；来源之「凡物之续入未来皆有义」读为「凡中心之续无外」。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+  "aliases": [
+    "The continuation condition on the root",
+    "根上之续存条件",
+    "Becoming.«续无外»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«同族», «粗化», «及之单调», «一».",
+        "zh": "«同族»、«粗化»、«及之单调»、«一»。"
+      }
+    },
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ownClosure_unrestricted_iff, selfAscribed, ownClosure.",
+        "zh": "ownClosure_unrestricted_iff、selfAscribed、ownClosure。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "reach-past-ones-own-end",
+      "detail": {
+        "en": "Which class a center's own line runs under, and when the dynamics fix it.",
+        "zh": "中心之自线在何类下，及动力何时定之。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.premises_of_noOutside",
+        "Becoming.withinClosure_iff_reached",
+        "Becoming.withinClosure_of_line",
+        "Becoming.«同族之粗化»",
+        "Becoming.«所及则同族»",
+        "Becoming.«族无外»",
+        "Becoming.«族无外之粗化»",
+        "Becoming.«相续则同族»",
+        "Becoming.«续无外»",
+        "Becoming.«续无外之粗化»",
+        "Becoming.«续无外则中心无缘»",
+        "Becoming.«续无外则同一中心»",
+        "Becoming.«续无外则族无外»"
+      ],
+      "sha256": "c0e261d5f6fe6b08e9f79e65db9c8e96688a40011b8c3542cd2a5f780a883850"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc62ce79c8a68373079a98cfe7686a14a75e8b568543c901555bf286d87ba474"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "c750d82b0e05c8cc8ed15388c1e47077ac7a1a9fffb24925ebb3f21f74a9c94e"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "acbae480304f5d7fb82346128dc00851080a08fa9189c9ff38d8db633658ef01"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.",
+      "zh": "2026年10月24日：新增（GS2），出自根与其二篇来源之对照审查，并取 SW 之提议三与 PW 之第三项；研究第 392 节。"
+    }
+  ]
+}

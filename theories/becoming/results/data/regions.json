@@ -1311,6 +1311,11 @@
    "base": "old-base",
    "note": "DrawnBeyond"
   },
+  "reach-past-ones-own-end": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarScope: reach past a finer line's end; core of descent, endless and ending"
+  },
   "reaching-before-and-after-a-juncture": {
    "region": "map",
    "base": "general",
@@ -1720,6 +1725,11 @@
    "region": "life",
    "base": "general",
    "note": "Reproduction"
+  },
+  "the-continuation-condition-on-the-root": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarScope: nothing outside a center's continuing; the World's condition at the one"
   },
   "the-gap-for-ones-own-act": {
    "region": "significance",
@@ -2617,6 +2627,11 @@
    "region": "root",
    "base": "grammar",
    "note": "kept and left regularity; two-level steps as models (GS1)"
+  },
+  "Becoming.GrammarScope": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "the continuation condition on the root, structurally (GS2)"
   },
   "Becoming.GrammarTesting": {
    "region": "knowing",

@@ -311,6 +311,7 @@ import Becoming.Handoff
 import Becoming.RuleHandoff
 import Becoming.GrammarCourse
 import Becoming.GrammarRegularity
+import Becoming.GrammarScope
 
 /-!
 # The Theory of Becoming: the formal core
@@ -3243,6 +3244,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   while every step alters the loss (`ClosedCapture.lock_line`); a reading that turns against
   favouring past a loss bound leaves the line under favouring not unending
   (`ClosedCapture.loss_ends_line`).
+* `Becoming.GrammarScope` (L1): the continuation condition on the root, structurally (board item
+  GS2): the condition that every occurrence lies on every center's line under a class
+  (`«续无外»`), or in its family (`«族无外»`), either at a class giving it at every coarser class.
+  Lying within a closure along a relation is being reached on a line under the one of it
+  (`withinClosure_iff_reached`), so the condition held de se along a relation is the root's at the
+  one of that relation taken as the net (`ownClosure_unrestricted_iff_noOutside`), and living
+  significance follows on the own-closure reading of claims (`premises_of_noOutside`). Along a net
+  with no cycle the condition holds only with one center, which nothing conditions. Past one's own
+  end (`«过亡而续»`); a class's core continues something exactly where some line under it goes on
+  without end (`«核有续当且仅当有不穷»`); two lines of descent, one endless and one that ends
+  (`LineOfDescent`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
