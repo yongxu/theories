@@ -597,7 +597,12 @@ def main():
             counts[r["unit_type"]] = counts.get(r["unit_type"], 0) + 1
         manifest["texts"].append(dict(text_id=T.text_id, title=T.title, tsv=fn, scope=T.scope, sources=T.sources,
                                       units_total=len(T.rows), units_by_type=counts, problems=T.problems))
-    with open(os.path.join(HERE, "MANIFEST.json"), "w", encoding="utf-8") as f:
+    mp = os.path.join(HERE, "MANIFEST.json")
+    if os.path.exists(mp):  # keep the second round written by build2.py
+        old = json.load(open(mp, encoding="utf-8"))
+        if "second_round" in old:
+            manifest["second_round"] = old["second_round"]
+    with open(mp, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=1)
         f.write("\n")
     for t in manifest["texts"]:

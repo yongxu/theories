@@ -24,7 +24,7 @@ def main():
     man = json.load(open(os.path.join(HERE, "MANIFEST.json"), encoding="utf-8"))
     cache, fails, total, ids = {}, 0, 0, set()
     allunits = []
-    for t in man["texts"]:
+    for t in man["texts"] + man.get("second_round", {}).get("texts", []):
         for s in t["sources"]:
             b = open(os.path.join(REPO, s["path"]), "rb").read()
             h = hashlib.sha256(b).hexdigest()
