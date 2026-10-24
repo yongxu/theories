@@ -658,6 +658,7 @@
         "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
         "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
         "sources/15-codex-theory-conversations/2026-10-23-repository-architecture.md",
+        "sources/15-codex-theory-conversations/2026-10-24-philosophy-dossier.md",
         "sources/15-codex-theory-conversations/2026-10-24-review-packet.md",
         "sources/15-codex-theory-conversations/2026-10-24-significance-a-dualist-word.md",
         "sources/zhouyi-yizhuan/PROVENANCE.json",
@@ -4501,6 +4502,7 @@
         "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/history/MARKET-DYNAMICS-MATH.md",
+        "theories/becoming/review/README.md",
         "tools/research/completion.py"
       ]
     },
