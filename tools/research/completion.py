@@ -2,7 +2,7 @@
 """The completion criterion K1-K7 (adopted 20 October 2026, study section 218; made to run by R39).
 
 Reads theories/becoming/results/completion/COVERAGE.json with the current core receipt, the theorem-connectivity
-measure, the records and chapter section 8.1, and reports each criterion met or not, with its reasons:
+measure, the records and the method chapter's open items, and reports each criterion met or not, with its reasons:
 
   K1 coverage        each row names central declarations that exist in the receipt's core, are theorems or
                      definitions of the spine, are not apart (connectivity class), and records that exist
@@ -15,11 +15,11 @@ measure, the records and chapter section 8.1, and reports each criterion met or 
                      meeting it, the proof that it is never refuted, and a calibration by an omniscience principle
   K4 representation  each central statement's modelling choices, and every natural-number law listed has a form
                      over dense amounts or a counterexample
-  K5 enclosure       every parameter a central statement leaves supplied is a named condition that chapter
-                     section 0 states
+  K5 enclosure       every parameter a central statement leaves supplied is a named condition that the
+                     method chapter's premise card states
   K6 ethics chain    the last step reaches every earlier step through its proof (the source's references),
                      so the steps are one derivation of it; every normative hypothesis they use is named
-  K7 open register   each item of chapter 8.1 has one class from the register, a distinct title and an open part
+  K7 open register   each of the method chapter's open items, ranked, has one class from the register, a distinct title and an open part
 
 An unmet criterion is a finding, not an error. Errors are what makes the report meaningless: a malformed
 coverage file, a central name or record that does not exist, a row with no declarations. `research.py check`
@@ -45,7 +45,24 @@ COVERAGE = 'theories/becoming/results/completion/COVERAGE.json'
 REPORT = 'theories/becoming/results/completion/COMPLETION.md'
 RECEIPT = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
 CONNECTIVITY = '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json'
-CHAPTER = 'theories/becoming/chapters/THE-THEORY-OF-BECOMING.md'
+CHAPTER = 'theories/becoming/chapters/08-METHOD.md'  # since RA (23 October 2026); earlier the canonical chapter's sections 0 and 8.1
+
+
+def _section(text, title):
+    """The body under the first heading whose text contains `title`, up to the next heading of the same or a
+    higher level; None where no heading has it. Headings are matched by text, not by number."""
+    lines = text.split('\n')
+    for i, line in enumerate(lines):
+        marks = len(line) - len(line.lstrip('#'))
+        if 0 < marks <= 6 and line[marks:marks + 1] == ' ' and title in line:
+            body = []
+            for nxt in lines[i + 1:]:
+                level = len(nxt) - len(nxt.lstrip('#'))
+                if 0 < level <= marks and nxt[level:level + 1] == ' ':
+                    break
+                body.append(nxt)
+            return '\n'.join(body)
+    return None
 RECORDS = 'theories/becoming/results/records'
 LEAN_ROOT = Path(RECEIPT).parent.parent
 PURE = ('core', 'instance', 'application', 'foundation')
@@ -315,6 +332,68 @@ def _central(cov):
     return [(row['id'], name) for row in cov['rows'] for name in row['declarations']]
 
 
+def _binders(statement: str) -> str:
+    """The binder groups of a statement: what precedes the colon, at bracket depth zero, that opens its type."""
+    m = re.match(r'\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable)\s+)*(?:theorem|lemma|def|abbrev)\s+\S+', statement)
+    rest = statement[m.end():] if m else statement
+    depth = 0
+    for i, ch in enumerate(rest):
+        if ch in '([{⦃':
+            depth += 1
+        elif ch in ')]}⦄':
+            depth -= 1
+        elif ch == ':' and depth == 0 and not rest[i + 1:i + 2] == '=':
+            return rest[:i]
+    return rest
+
+
+def exchange_forms(cov, decls):
+    """K3's tying premises: each central statement whose binders take one has a form over the exchange, a declaration whose
+    proof reaches the statement and whose binders use none of the tying premises. Returns findings, the forms
+    found, and the premises the forms still take (each a state of the law or the law's own)."""
+    pr = cov['premises']
+    tying = {p['name']: p['pattern'] for p in pr['items'] if p['name'] in pr.get('tying', [])}
+    forms = pr.get('exchange_forms', {})
+    findings, found, kept = [], {}, collections.defaultdict(set)
+    for rid, name in _central(cov):
+        if name in found:
+            continue
+        taken = [n for n, pat in tying.items() if re.search(pat, _binders(decls.get(name, {}).get('statement', '')))]
+        if not taken:
+            continue
+        form = forms.get(name)
+        if not form:
+            findings.append(f'{name}: takes {", ".join(taken)} and lists no form over the exchange')
+            continue
+        if form not in decls:
+            findings.append(f'{name}: its form over the exchange {form} is not a declaration of the receipt')
+            continue
+        hyp = _binders(decls[form].get('statement', ''))
+        left = [n for n, pat in tying.items() if re.search(pat, hyp)]
+        if left:
+            findings.append(f'{name}: its form over the exchange {form} still takes {", ".join(left)}')
+            continue
+        if not reaches(decls, form, name):
+            findings.append(f'{name}: the proof of its form over the exchange {form} does not use it')
+            continue
+        found[name] = form
+        for p in pr['items']:
+            if p['name'] not in tying and re.search(p['pattern'], hyp):
+                kept[p['name']].add(form)
+    reading_ = pr.get('reading')
+    if reading_:
+        for k in ('declaration', 'gives'):
+            if reading_.get(k) and reading_[k] not in decls:
+                findings.append(f'the reading {reading_["name"]}: {reading_[k]} is not a declaration of the receipt')
+        for k in ('meets', 'fails'):
+            if not reading_.get(k):
+                findings.append(f'the reading {reading_["name"]}: no declaration listed that {k[:-1]}s it')
+            for w in reading_.get(k, []):
+                if w not in decls:
+                    findings.append(f'the reading {reading_["name"]}: {w} is not a declaration of the receipt')
+    return findings, found, {k: sorted(v) for k, v in kept.items()}
+
+
 def k3(cov, decls):
     findings, used = [], collections.defaultdict(list)
     for rid, name in _central(cov):
@@ -351,11 +430,11 @@ def k4(cov, decls):
 
 def k5(cov, decls, chapter):
     findings, found = [], collections.defaultdict(set)
-    section0 = chapter.split('## 0. Premise card', 1)[-1].split('\n## ', 1)[0]
+    section0 = _section(chapter, 'Premise card') or ''
     params = cov['enclosure']['parameters']
     for p in params:
         if f'`{p["section0"]}' not in section0:
-            findings.append(f'{p["name"]}: chapter section 0 does not state {p["section0"]}')
+            findings.append(f'{p["name"]}: the premise card does not state {p["section0"]}')
     for rid, name in _central(cov):
         st = reading(decls.get(name, {}))
         for p in params:
@@ -443,10 +522,9 @@ def k6(cov, decls):
 
 def k7(cov, chapter):
     findings, items = [], []
-    sec = chapter.split('### 8.1 Open items, ranked', 1)
-    if len(sec) < 2:
-        return ['chapter: section 8.1 not found'], items
-    body = sec[1].split('\n### ', 1)[0].split('\n## ', 1)[0]
+    body = _section(chapter, 'Open items, ranked')
+    if body is None:
+        return ['chapter: the open items, ranked, not found'], items
     classes = cov['open_register']['classes']
     for m in re.finditer(r'^(\d+)\. \*\*([^*]+)\*\* \(([^)]*)\)\.(.*)$', body, re.M):
         n, title, rest = int(m.group(1)), m.group(2).strip(), m.group(4)
@@ -464,7 +542,7 @@ def k7(cov, chapter):
             findings.append(f'item "{title}" listed {k} times')
     open_refs = {n for row in cov['rows'] for n in row.get('open_items', [])}
     for n in sorted(open_refs - set(numbers)):
-        findings.append(f'coverage names open item {n}, which section 8.1 does not have')
+        findings.append(f'coverage names open item {n}, which the open items do not have')
     return findings, items
 
 
@@ -478,6 +556,8 @@ def evaluate() -> dict:
     if errors:
         return {'errors': errors}
     f3, used = k3(cov, decls)
+    fx, forms, kept = exchange_forms(cov, decls)
+    f3 = f3 + fx
     f4, tags = k4(cov, decls)
     f5, params = k5(cov, decls, chapter)
     f6, links, normative = k6(cov, decls)
@@ -491,7 +571,7 @@ def evaluate() -> dict:
         'receipt': receipt.get('utc'), 'connectivity_commit': conn.get('commit'),
         'connectivity_receipt': conn.get('core_receipt_at_commit'),
         'met': {k: not v for k, v in criteria.items()}, 'findings': criteria,
-        'rows': cov['rows'], 'natural_number_laws': cov['representation']['natural_number_laws'], 'premises_used': used, 'logical_premises': [p for p in cov['premises']['items'] if p.get('kind') == 'logical'], 'modelling': tags, 'parameters': params,
+        'rows': cov['rows'], 'natural_number_laws': cov['representation']['natural_number_laws'], 'premises_used': used, 'exchange_forms': forms, 'exchange_kept': kept, 'exchange_reading': cov['premises'].get('reading'), 'logical_premises': [p for p in cov['premises']['items'] if p.get('kind') == 'logical'], 'modelling': tags, 'parameters': params,
         'chain_start': cov['ethics_chain']['steps'][0], 'chain': links, 'normative_hypotheses': normative, 'open_items': items,
         'master_laws': {'laws': cov['master_laws'], 'measured': conn.get('master_laws')} if cov.get('master_laws') else None,
     }
@@ -523,6 +603,21 @@ def render_report(result: dict) -> str:
         if k == 'K3' and result['premises_used']:
             out += ['Premises found in central statements: ' + '; '.join(
                 f'{p} ({len(v)})' for p, v in sorted(result['premises_used'].items())) + '.', '']
+            if result.get('exchange_forms') is not None:
+                forms = result['exchange_forms']
+                out += [f'Tying premises over the exchange: {len(forms)} central statements take, in their binders, balance, only active relata '
+                        'giving or taking, or activity needing support, and each has its form over what is read off an exchange, '
+                        'whose proof uses it and whose binders take none of the four (`Becoming.OverExchange`): '
+                        + ', '.join(f'`{a.removeprefix("Becoming.")}` → `{b.removeprefix("Becoming.")}`' for a, b in sorted(forms.items())) + '.', '']
+                if result['exchange_kept']:
+                    out += ['What the forms still take, each a state of the law or a law\'s own hypothesis: ' + '; '.join(
+                        f'{p} ({len(v)})' for p, v in sorted(result['exchange_kept'].items())) + '.', '']
+                r = result.get('exchange_reading')
+                if r:
+                    out += [f'The forms over a world read off a relation of exchange take the reading {r["name"]} '
+                            f'(`{r["declaration"].removeprefix("Becoming.")}`), which gives activity needing support '
+                            f'(`{r["gives"].removeprefix("Becoming.")}`); met by ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in r['meets'])
+                            + '; failed by ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in r['fails']) + '.', '']
             for p in result['logical_premises']:
                 out += [f'Logical premise {p["name"]}: ' + '; '.join(
                     f'{k} ' + ', '.join('`' + w.removeprefix('Becoming.') + '`' for w in p.get(k, []))
@@ -536,7 +631,7 @@ def render_report(result: dict) -> str:
         if k == 'K5':
             out += ['Only the parameters the coverage file lists are looked for; a parameter of another name is not found.', '']
         if k == 'K5' and result['parameters']:
-            out += ['Supplied parameters found in central statements, each a named condition of section 0: ' + '; '.join(
+            out += ['Supplied parameters found in central statements, each a named condition of the premise card: ' + '; '.join(
                 f'{p} ({len(v)})' for p, v in sorted(result['parameters'].items())) + '.', '']
         if k == 'K6':
             steps = [result['chain_start']] + [b for b, _ in result['chain']]

@@ -58,7 +58,7 @@ Finite conditional coherence, not universal actual law, physical mechanism, infi
 | proof | [GenerativeCore.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean) | `Generative.trace_map`, `Generative.trace_lift`, `Generative.trace_append_iff` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/becoming-compatibility-checks/20261008T181443.483379Z/verification.json) | — |
 | integration | [GROUNDING-INFERENCE-AND-PRESENTATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md) | — |
-| statement | [BECOMING-FOUNDATION.md](../../chapters/BECOMING-FOUNDATION.md) | — |
+| statement | [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md) | — |
 | review | [check_becoming_compatibility.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/check_becoming_compatibility.py) | — |
 | provenance | [2026-10-09-theory-of-becoming-continuation.md](../../../../sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-continuation.md) | — |
 | proof | [Context.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean) | `Becoming.ChangingContext.ends` |

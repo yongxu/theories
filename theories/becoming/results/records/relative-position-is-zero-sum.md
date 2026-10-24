@@ -69,7 +69,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
   - Preserved conditions: The continuation condition, as a hypothesis. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Where the whole gains nothing (a premise), a rise of an observed family's stock is paid from beyond it; rise_needs_fall is the counterpart for position, with no premise, since position is relative by definition.
 
-**Used by:** [least-parts-and-equal-shares](least-parts-and-equal-shares.md)
+**Used by:** [least-parts-and-equal-shares](least-parts-and-equal-shares.md) · [what-position-reads](what-position-reads.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,7 +82,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | proof | [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean) | `Becoming.Clearing.clearer_loses_dweller` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T110924.527968Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [OPENING.md](../../OPENING.md) | — |
 | provenance | [OPENING-V7-PROPOSAL.md](../../../../drafts/2026-10-10-opening/history/OPENING-V7-PROPOSAL.md) | — |
 | provenance | [2026-10-19-opening-v7.md](../../../../sources/15-codex-theory-conversations/2026-10-19-opening-v7.md) | — |
@@ -91,6 +91,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json) | — |
 
 Aliases: `the game of relative position`, `相对位置的博弈`, `zero-sum game of relative position`, `relative position is zero-sum`, `相对位置是零和的`, `position does not protect`, `Becoming.RelativePosition.change_balances`, `Becoming.RelativePosition.not_all_rise`, `Becoming.Flow.race_ends_greatest`, `Becoming.Flow.ends_at_race_end`
 

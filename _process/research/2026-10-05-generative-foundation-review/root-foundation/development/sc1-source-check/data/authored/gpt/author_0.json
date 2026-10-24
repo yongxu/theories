@@ -1,0 +1,214 @@
+{
+ "laws": [
+  {
+   "law": "L27",
+   "faithful": "For any type, any map from that type to itself, and any configuration s, s returns under the map if and only if there is a positive natural number p such that applying the map p times to s gives s.",
+   "planted": "For any type, any map from that type to itself governed by a recurrence law, and any configuration s, s returns under the map if and only if there is a positive natural number p such that applying the map p times to s gives s.",
+   "planted_span": "governed by a recurrence law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L44",
+   "faithful": "For any relation, element f, significance predicate, and position p, there is a region that is closed under the relation, contains f, and has every member significant at p at every natural time, if and only if every element belonging to every closed region containing f is significant at p at every natural time.",
+   "planted": "For any relation, element f, significance predicate, and position p, there is a region governed by an underlying law that is closed under the relation, contains f, and has every member significant at p at every natural time, if and only if every element belonging to every closed region containing f is significant at p at every natural time.",
+   "planted_span": "governed by an underlying law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L18",
+   "faithful": "For any list and any natural-number-valued weight function, the list's length times the sum of squared weights equals the square of the sum of weights plus the sum, over all ordered pairs of list entries, of the squared excess of the first weight over the second.",
+   "planted": "For any list and any natural-number-valued weight function governed by a law of variation, the list's length times the sum of squared weights equals the square of the sum of weights plus the sum, over all ordered pairs of list entries, of the squared excess of the first weight over the second.",
+   "planted_span": "governed by a law of variation",
+   "planted_head": "law"
+  },
+  {
+   "law": "L05",
+   "faithful": "For any web and any two histories assigning natural levels to roles at natural times, if the first includes the second and exceeds it in that web, then it is not the case that the first includes the second and the second includes the first.",
+   "planted": "For any web studied by an analyst and any two histories assigning natural levels to roles at natural times, if the first includes the second and exceeds it in that web, then it is not the case that the first includes the second and the second includes the first.",
+   "planted_span": "studied by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L11",
+   "faithful": "For any role list, Boolean part map, natural-valued coupling map, time-indexed lists of present items, reading map, and role c, if every item marked false has a false reading at c at every natural time, there is no path starting and ending at c after a positive natural number of steps that is coupled when coupling values are zeroed wherever the destination's reading is false.",
+   "planted": "For any role list, Boolean part map, natural-valued coupling map, time-indexed lists of present items, reading map used by an observer, and role c, if every item marked false has a false reading at c at every natural time, there is no path starting and ending at c after a positive natural number of steps that is coupled when coupling values are zeroed wherever the destination's reading is false.",
+   "planted_span": "used by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L08",
+   "faithful": "If, in a web with decidable role equality, c is unobserved for g and every other required role meets its need through natural time u, there is a natural amount added only to c's level at every time that supports g through u and, at every originally supported time, preserves admission of g in both directions and equality of all levels observed for g.",
+   "planted": "If, in a web embedded in an environment with decidable role equality, c is unobserved for g and every other required role meets its need through natural time u, there is a natural amount added only to c's level at every time that supports g through u and, at every originally supported time, preserves admission of g in both directions and equality of all levels observed for g.",
+   "planted_span": "embedded in an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L24",
+   "faithful": "For a flow balancing next level plus taking with current level plus giving everywhere, if during n steps from T at c, taking ≤ giving + (level − m), giving ≤ taking + (m − level), and net flow strictly opposes any deviation, then the distance from m at T + n is at most its distance at T minus n, with all subtraction truncated at zero.",
+   "planted": "For a flow through a surrounding medium balancing next level plus taking with current level plus giving everywhere, if during n steps from T at c, taking ≤ giving + (level − m), giving ≤ taking + (m − level), and net flow strictly opposes any deviation, then the distance from m at T + n is at most its distance at T minus n, with all subtraction truncated at zero.",
+   "planted_span": "through a surrounding medium",
+   "planted_head": "medium"
+  },
+  {
+   "law": "L40",
+   "faithful": "For any web and any two histories assigning natural levels to roles at natural times, if the first includes the second and exceeds it in that web, then it is not the case that the first exceeds the second and the second exceeds the first.",
+   "planted": "For any web studied by a researcher and any two histories assigning natural levels to roles at natural times, if the first includes the second and exceeds it in that web, then it is not the case that the first exceeds the second and the second exceeds the first.",
+   "planted_span": "studied by a researcher",
+   "planted_head": "researcher"
+  },
+  {
+   "law": "L58",
+   "faithful": "For any web and significance predicate on positions, natural times, and items, the predicate is neutral on such triples if and only if, for every natural-valued level history, item f, and natural time t, admission of f at t under that history implies significance of f at t at every position.",
+   "planted": "For any web and significance predicate specified by an evaluator on positions, natural times, and items, the predicate is neutral on such triples if and only if, for every natural-valued level history, item f, and natural time t, admission of f at t under that history implies significance of f at t at every position.",
+   "planted_span": "specified by an evaluator",
+   "planted_head": "evaluator"
+  },
+  {
+   "law": "L06",
+   "faithful": "For any indexed family of predicates, list of predicates, predicate p, and configuration s, if p is derivable from that family and list, every predicate in the indexed family holds at s, and every predicate in the list holds at s, then p holds at s.",
+   "planted": "For any indexed family of predicates, list of predicates within an environment, predicate p, and configuration s, if p is derivable from that family and list, every predicate in the indexed family holds at s, and every predicate in the list holds at s, then p holds at s.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L09",
+   "faithful": "In any web with decidable role equality, if c is observed for g and d is a positive natural number, then at every natural time, adding d to c's level alone at all times cannot satisfy both equivalence of g's admission before and after and equality of levels at every role observed for g.",
+   "planted": "In any web under a governing law with decidable role equality, if c is observed for g and d is a positive natural number, then at every natural time, adding d to c's level alone at all times cannot satisfy both equivalence of g's admission before and after and equality of levels at every role observed for g.",
+   "planted_span": "under a governing law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L53",
+   "faithful": "For any list and Boolean features a and b, if a exceeds b on the list and b exceeds a, there is a natural-valued weighting positive on every listed element whose sum over entries satisfying a exceeds its sum over entries satisfying b, and there is such a weighting with the reverse strict inequality.",
+   "planted": "For any list and Boolean features a and b governed by a common ordering, if a exceeds b on the list and b exceeds a, there is a natural-valued weighting positive on every listed element whose sum over entries satisfying a exceeds its sum over entries satisfying b, and there is such a weighting with the reverse strict inequality.",
+   "planted_span": "governed by a common ordering",
+   "planted_head": "ordering"
+  },
+  {
+   "law": "L48",
+   "faithful": "For any map from predicates to predicates that preserves inclusion, any natural number n, and any element a, a satisfies the predicate after n iterations from every starting predicate if and only if a satisfies the predicate after n iterations from the predicate that holds for no element.",
+   "planted": "For any map chosen by an analyst from predicates to predicates that preserves inclusion, any natural number n, and any element a, a satisfies the predicate after n iterations from every starting predicate if and only if a satisfies the predicate after n iterations from the predicate that holds for no element.",
+   "planted_span": "chosen by an analyst",
+   "planted_head": "analyst"
+  },
+  {
+   "law": "L22",
+   "faithful": "For any web, significance predicate, position p, and three level histories a, b, and c, if at every natural time and for every item significant at p then, admission under b implies admission under a and admission under c implies admission under b, then at every such time and item, admission under c implies admission under a.",
+   "planted": "For any web, significance predicate, position p selected by an evaluator, and three level histories a, b, and c, if at every natural time and for every item significant at p then, admission under b implies admission under a and admission under c implies admission under b, then at every such time and item, admission under c implies admission under a.",
+   "planted_span": "selected by an evaluator",
+   "planted_head": "evaluator"
+  },
+  {
+   "law": "L51",
+   "faithful": "For any generation sequence whose amount for every element at every natural time equals its offspring count, and any natural time t at which the lowering value is zero, the square of the family size at t + 1 is at most the family size at t multiplied by the family size at t + 2.",
+   "planted": "For any generation sequence governed by a reproductive law whose amount for every element at every natural time equals its offspring count, and any natural time t at which the lowering value is zero, the square of the family size at t + 1 is at most the family size at t multiplied by the family size at t + 2.",
+   "planted_span": "governed by a reproductive law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L32",
+   "faithful": "For any map from states to states, initial state, fixed list containing every iterate, and register map with decidable equality of outputs, it is not the case that there is no natural time T such that, at every natural time t ≥ T, elimination among the enumerated lasso predictors, applied to the first t registered iterates in reverse order, returns a value equal to the registered iterate at t.",
+   "planted": "For any map from states to states governed by a recurrence law, initial state, fixed list containing every iterate, and register map with decidable equality of outputs, it is not the case that there is no natural time T such that, at every natural time t ≥ T, elimination among the enumerated lasso predictors, applied to the first t registered iterates in reverse order, returns a value equal to the registered iterate at t.",
+   "planted_span": "governed by a recurrence law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L49",
+   "faithful": "For any two relations on the same type, the closure under their union agrees with the closure under the first relation for every pair of elements if and only if, whenever the second relates g to h, every region closed under the first and containing g also contains h.",
+   "planted": "For any two relations governed by a common law on the same type, the closure under their union agrees with the closure under the first relation for every pair of elements if and only if, whenever the second relates g to h, every region closed under the first and containing g also contains h.",
+   "planted_span": "governed by a common law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L33",
+   "faithful": "For any state history and action history indexed by natural numbers, the process consisting exactly of their displayed consecutive transitions has at most one next state for each state and action if and only if, for every pair of indices with equal states and equal actions, the states at the following indices are equal.",
+   "planted": "For any state history and action history within an environment indexed by natural numbers, the process consisting exactly of their displayed consecutive transitions has at most one next state for each state and action if and only if, for every pair of indices with equal states and equal actions, the states at the following indices are equal.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L54",
+   "faithful": "For every frame, comparison relation, state s, and nonempty finite list, the visible hypotheses require that the states reachable from s are exactly the listed states, no listed state is better than itself, and comparison is transitive on those states. The conclusion is truncated, so the asserted equivalence cannot be fully stated from this packet.",
+   "planted": "For every frame, comparison relation governed by an ordering principle, state s, and nonempty finite list, the visible hypotheses require that the states reachable from s are exactly the listed states, no listed state is better than itself, and comparison is transitive on those states. The conclusion is truncated, so the asserted equivalence cannot be fully stated from this packet.",
+   "planted_span": "governed by an ordering principle",
+   "planted_head": "principle"
+  },
+  {
+   "law": "L07",
+   "faithful": "For any web, position p, and relation between positions and item–time pairs, if a given pair is active without any undermining role, every ordered pair of level histories preserves all significant admissions and adds none at p under the always-false predicate. Every active, non-undermined pair is significant at every position under the always-true assignment, but this fails under the always-false assignment.",
+   "planted": "For any web studied by an observer, position p, and relation between positions and item–time pairs, if a given pair is active without any undermining role, every ordered pair of level histories preserves all significant admissions and adds none at p under the always-false predicate. Every active, non-undermined pair is significant at every position under the always-true assignment, but this fails under the always-false assignment.",
+   "planted_span": "studied by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L23",
+   "faithful": "For natural numbers p, q, n, h, N, and g satisfying (p + q)h + g = Np, the sum over the course list at n of each course's weight with parameters p and q when its number of true entries times N is at most hn, and zero otherwise, multiplied by n²g², is at most N²npq(p + q)ⁿ.",
+   "planted": "For natural numbers p, q, n, h, N, and g satisfying (p + q)h + g = Np, the sum over the course list at n within an environment of each course's weight with parameters p and q when its number of true entries times N is at most hn, and zero otherwise, multiplied by n²g², is at most N²npq(p + q)ⁿ.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L29",
+   "faithful": "Assume for every process and run predicate K that if each run satisfying K has a finite prefix forcing K on all agreeing runs, then each run satisfying the double negation of K has a finite prefix forcing that double negation on all agreeing runs. Then every Boolean sequence whose entries are not all false has a true entry at some natural index.",
+   "planted": "Assume for every process studied by a researcher and run predicate K that if each run satisfying K has a finite prefix forcing K on all agreeing runs, then each run satisfying the double negation of K has a finite prefix forcing that double negation on all agreeing runs. Then every Boolean sequence whose entries are not all false has a true entry at some natural index.",
+   "planted_span": "studied by a researcher",
+   "planted_head": "researcher"
+  },
+  {
+   "law": "L12",
+   "faithful": "In any web, at any natural time t, f arises if and only if it becomes active, and f ceases if and only if it stops being active; the requirement of c for g forms if and only if it begins to hold, and dissolves if and only if it stops holding, each from t to t + 1. The remaining conclusion is truncated.",
+   "planted": "In any web governed by a law of change, at any natural time t, f arises if and only if it becomes active, and f ceases if and only if it stops being active; the requirement of c for g forms if and only if it begins to hold, and dissolves if and only if it stops holding, each from t to t + 1. The remaining conclusion is truncated.",
+   "planted_span": "governed by a law of change",
+   "planted_head": "law"
+  },
+  {
+   "law": "L45",
+   "faithful": "If amounts equal offspring counts everywhere in a generation sequence, and every child of a family member at natural time t has that member's amount at t as its amount at t + 1, then the square of the family size at t + 1 is less than the product of sizes at t and t + 2 if and only if concordance at t is positive.",
+   "planted": "If amounts equal offspring counts everywhere in a generation sequence within an environment, and every child of a family member at natural time t has that member's amount at t as its amount at t + 1, then the square of the family size at t + 1 is less than the product of sizes at t and t + 2 if and only if concordance at t is positive.",
+   "planted_span": "within an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L42",
+   "faithful": "For any predicate and list, there is a natural number counting the entries satisfying that predicate if and only if, for every element in the list, the predicate holds or does not hold.",
+   "planted": "For any predicate and list stored in a container, there is a natural number counting the entries satisfying that predicate if and only if, for every element in the list, the predicate holds or does not hold.",
+   "planted_span": "stored in a container",
+   "planted_head": "container"
+  },
+  {
+   "law": "L46",
+   "faithful": "For any decidable predicate of elements and natural times, and lists containing exactly its satisfying elements without repetitions at each time, the list length at S + n plus the total number of cessations during the n steps starting at S equals the list length at S plus the total number of beginnings during those steps, for any natural numbers S and n.",
+   "planted": "For any decidable predicate of elements and natural times, and lists within a container containing exactly its satisfying elements without repetitions at each time, the list length at S + n plus the total number of cessations during the n steps starting at S equals the list length at S plus the total number of beginnings during those steps, for any natural numbers S and n.",
+   "planted_span": "within a container",
+   "planted_head": "container"
+  },
+  {
+   "law": "L10",
+   "faithful": "At natural time s in any web with decidable role equality, if c is unobserved for g, two level histories agree on every other role either depended on by g or observed for g, and meeting c's need is equivalent between histories whenever c is required, then g's admission is equivalent between histories and their levels agree at every role observed for g.",
+   "planted": "At natural time s in any web embedded in an environment with decidable role equality, if c is unobserved for g, two level histories agree on every other role either depended on by g or observed for g, and meeting c's need is equivalent between histories whenever c is required, then g's admission is equivalent between histories and their levels agree at every role observed for g.",
+   "planted_span": "embedded in an environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L13",
+   "faithful": "For any relation, elements f and g, and region, if the region is closed under the relation and contains f, and every region closed under that relation containing f contains g, then the given region contains g.",
+   "planted": "For any relation, elements f and g, and region governed by a closure law, if the region is closed under the relation and contains f, and every region closed under that relation containing f contains g, then the given region contains g.",
+   "planted_span": "governed by a closure law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L00",
+   "faithful": "For any process, run predicate K, run r, and natural number h, it is not the case that every run agreeing with r in states through h and actions before h fails the implication from adherence to K to satisfying K.",
+   "planted": "For any process, run predicate K expressing an underlying truth, run r, and natural number h, it is not the case that every run agreeing with r in states through h and actions before h fails the implication from adherence to K to satisfying K.",
+   "planted_span": "expressing an underlying truth",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L50",
+   "faithful": "For any element f, significance predicate, and position p, there is a region containing f and closed under the relation relating every pair, with every member significant at p at every natural time, if and only if every element is significant at p at every natural time.",
+   "planted": "For any element f, significance predicate, and position p selected by an observer, there is a region containing f and closed under the relation relating every pair, with every member significant at p at every natural time, if and only if every element is significant at p at every natural time.",
+   "planted_span": "selected by an observer",
+   "planted_head": "observer"
+  }
+ ]
+}

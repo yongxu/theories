@@ -1,0 +1,6 @@
+    "GrammarCandidates: correlatives as the two ends of one relation are had together; the way back "
+    "from a complement to a mark is exactly double-negation stability; position depends on the class "
+    "exactly where an occurrence is not its own condition; everything ends under identity exactly "
+    "where nothing is its own condition; conditions precede results exactly where the net has no cycle; "
+    "the core is never separated at a finite stage and the converse fails in an infinitely branching "
+    "net. "

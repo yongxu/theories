@@ -1,0 +1,2382 @@
+{
+ "pass": "TABLE",
+ "segments": [
+  {
+   "seg_id": "t8fa20d",
+   "language": "English",
+   "text": "For any decidable predicate of elements and natural times, and lists within a container containing exactly its satisfying elements without repetitions at each time, the list length at S + n plus the total number of cessations during the n steps starting at S equals the list length at S plus the total number of beginnings during those steps, for any natural numbers S and n.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Listed.over_stretch",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "α",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "p",
+       "type": "α → Nat → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "inst",
+       "type": "(a : α) → (t : Nat) → Decidable (p a t)",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "l",
+       "type": "Nat → List α",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "listed",
+       "type": "Becoming.Listed p l",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "S",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "n",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "((l (S + n)).length + Becoming.total (Becoming.steps S n) fun t => Becoming.ceasings (l t) p t) =\n  (l S).length + Becoming.total (Becoming.steps S n) fun t => Becoming.comings (l (t + 1)) p t",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Listed",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "p : α → Nat → Prop",
+        "l : Nat → List α"
+       ],
+       "body": "∀ (t : Nat), Becoming.Distinct (l t) ∧ ∀ (a : α), p a t ↔ a ∈ l t",
+       "fields": null
+      },
+      {
+       "const": "Becoming.total",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.13 : List α",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.14 : α → Nat"
+       ],
+       "body": "List.brecOn (motive := fun x => (α → Nat) → Nat) x✝¹\n  (fun x f x_1 =>\n    (match (motive := (x : List α) → (α → Nat) → List.below (motive := fun x => (α → Nat) → Nat) x → Nat) x, x_1 with\n      | [], x => fun x => 0\n      | a :: as, q => fun x => q a + x.1 q)\n      f)\n  x✝",
+       "fields": null
+      },
+      {
+       "const": "Becoming.steps",
+       "kind": "def",
+       "binders": [
+        "x._@.Becoming.Prelude.2150161048._hygCtx._hyg.8 : Nat",
+        "x._@.Becoming.Prelude.2150161048._hygCtx._hyg.9 : Nat"
+       ],
+       "body": "Nat.brecOn (motive := fun x => Nat → List Nat) x✝\n  (fun x f x_1 =>\n    (match (motive := Nat → (x : Nat) → Nat.below (motive := fun x => Nat → List Nat) x → List Nat) x_1, x with\n      | x, 0 => fun x => []\n      | T, N.succ => fun x => T :: x.1 (T + 1))\n      f)\n  x✝¹",
+       "fields": null
+      },
+      {
+       "const": "Becoming.ceasings",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "as : List α",
+        "p : α → Nat → Prop",
+        "inst._@.Becoming.Change.3964623747._hygCtx._hyg.10 : (a : α) → (t : Nat) → Decidable (p a t)",
+        "t : Nat"
+       ],
+       "body": "Becoming.total as fun a => Becoming.mark (Becoming.CeasesToBe (p a) t)",
+       "fields": null
+      },
+      {
+       "const": "Becoming.comings",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "as : List α",
+        "p : α → Nat → Prop",
+        "inst._@.Becoming.Change.3914700075._hygCtx._hyg.10 : (a : α) → (t : Nat) → Decidable (p a t)",
+        "t : Nat"
+       ],
+       "body": "Becoming.total as fun a => Becoming.mark (Becoming.ComesToBe (p a) t)",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t01d637",
+   "language": "English",
+   "text": "For a web W, a predicate O on positions and form-step pairs, a position p and a pair e whose form is active and not undermining at its step: under the never-satisfied predicate, for all level histories l and l', l retains l' and does not add over it; the web's valuation with O and everywhere-true significance is significant; with everywhere-false significance it is not.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Web.significance_undetermined",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "Pos",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "own",
+       "type": "Pos → F × Nat → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "p",
+       "type": "Pos",
+       "sort": "value",
+       "role": "variable"
+      },
+      {
+       "name": "e",
+       "type": "F × Nat",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "alive",
+       "type": "W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "(∀ (l l' : Nat → C → Nat), W.Retains (fun x x_1 x_2 => False) p l l' ∧ ¬W.Adds (fun x x_1 x_2 => False) p l l') ∧\n  (W.valuation own fun x x_1 => True).Significant ∧ ¬(W.valuation own fun x x_1 => False).Significant",
+     "nested": [
+      {
+       "q": "∀",
+       "name": "l",
+       "type": "Nat → C → Nat"
+      },
+      {
+       "q": "∀",
+       "name": "l'",
+       "type": "Nat → C → Nat"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Dependence.active",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "F : Type",
+        "C : Type",
+        "self : Becoming.Dependence S F C"
+       ],
+       "body": "self.2",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.UnderminingAt",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "t : Nat",
+        "f : F"
+       ],
+       "body": "∃ c, Becoming.Web.UnderminingOn t f c",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.Retains",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "Pos : Type",
+        "W : Becoming.Web F C",
+        "sig : Pos → Nat → F → Prop",
+        "p : Pos",
+        "l : Nat → C → Nat",
+        "l' : Nat → C → Nat"
+       ],
+       "body": "∀ (t : Nat) (f : F), sig p t f → W.Admits (l' t) t f → W.Admits (l t) t f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.Adds",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "Pos : Type",
+        "W : Becoming.Web F C",
+        "sig : Pos → Nat → F → Prop",
+        "p : Pos",
+        "l : Nat → C → Nat",
+        "l' : Nat → C → Nat"
+       ],
+       "body": "∃ t f, sig p t f ∧ W.Admits (l t) t f ∧ ¬W.Admits (l' t) t f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Valuation.Significant",
+       "kind": "def",
+       "binders": [
+        "Pos : Type",
+        "C : Type",
+        "V : Becoming.Valuation Pos C"
+       ],
+       "body": "∀ (p : Pos) (c : C), V.living c → V.sig p c",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.valuation",
+       "kind": "def",
+       "binders": [
+        "Pos : Type",
+        "F : Type",
+        "Cond : Type",
+        "W : Becoming.Web F Cond",
+        "own : Pos → F × Nat → Prop",
+        "sig : Pos → F × Nat → Prop"
+       ],
+       "body": "{ living := fun e => W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst,\n  related := fun e e' => ∃ c, W.Participates e.snd e.fst c ∧ W.Participates e'.snd e'.fst c, own := own, sig := sig }",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t800f90",
+   "language": "English",
+   "text": "For a sequence g of states and a sequence m of labels: the process whose steps are exactly the transitions g and m show (from g at n with label m at n to g at n+1) is deterministic if and only if, whenever two indices have the same state and the same label in the same environment, their next states are equal.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.shown_determined_iff",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "S",
+       "type": "Type u",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "A",
+       "type": "Type v",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "g",
+       "type": "Nat → S",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "m",
+       "type": "Nat → A",
+       "sort": "history or run",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "Becoming.Determined (Becoming.Shown g m) ↔ Becoming.Consistent g m",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Determined",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "P : Generative.Process S A"
+       ],
+       "body": "∀ (s : S) (a : A) (t t' : S), P.step s a t → P.step s a t' → t = t'",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Shown",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "g : Nat → S",
+        "m : Nat → A"
+       ],
+       "body": "{ step := fun s a t => ∃ n, g n = s ∧ m n = a ∧ g (n + 1) = t }",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Consistent",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "g : Nat → S",
+        "m : Nat → A"
+       ],
+       "body": "∀ (i j : Nat), g i = g j → m i = m j → g (i + 1) = g (j + 1)",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t6190a4",
+   "language": "English",
+   "text": "For a map n on states, a state s all of whose iterates lie in a finite list l, and a map g from states to outcomes with decidable equality: it is not the case that no step T exists after which, at every step t, elimination over lasso-shaped candidates applied to knowledge of the first t outcomes of the orbit returns exactly the outcome at t.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Learning.held_rest_unrefuted",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "O",
+       "type": "Type u",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "inst",
+       "type": "DecidableEq O",
+       "sort": null,
+       "role": "decidability instance"
+      },
+      {
+       "name": "S",
+       "type": "Type v",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "next",
+       "type": "S → S",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "s",
+       "type": "S",
+       "sort": "configuration",
+       "role": "variable"
+      },
+      {
+       "name": "l",
+       "type": "List S",
+       "sort": "family or list",
+       "role": "variable"
+      },
+      {
+       "name": "held",
+       "type": "∀ (n : Nat), Becoming.Law.orbit next s n ∈ l",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "reg",
+       "type": "S → O",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "¬¬∃ T,\n      ∀ (t : Nat),\n        T ≤ t →\n          Becoming.Learning.byElimination Becoming.Learning.lassos\n              (Becoming.Learning.prefixOf (fun n => reg (Becoming.Law.orbit next s n)) t) =\n            Option.some (reg (Becoming.Law.orbit next s t))",
+     "nested": [
+      {
+       "q": "∃",
+       "name": "T",
+       "type": "Nat"
+      },
+      {
+       "q": "∀",
+       "name": "t",
+       "type": "Nat"
+      },
+      {
+       "q": "∀",
+       "name": "a._@._internal._hyg.0",
+       "type": "T ≤ t"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.Law.orbit",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "next : S → S",
+        "s : S",
+        "x._@.Becoming.Recurrence.2356073175._hygCtx._hyg.10 : Nat"
+       ],
+       "body": "Nat.brecOn x✝ fun x f =>\n  (match (motive := (x : Nat) → Nat.below x → S) x with\n    | 0 => fun x => s\n    | n.succ => fun x => next x.1)\n    f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Learning.byElimination",
+       "kind": "def",
+       "binders": [
+        "O : Type u",
+        "inst._@.Becoming.Learning.659225376._hygCtx._hyg.3 : DecidableEq O",
+        "H : Nat → List O → Option O",
+        "l : List O"
+       ],
+       "body": "H (Becoming.Learning.indexOn H l) l",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Learning.lassos",
+       "kind": "def",
+       "binders": [
+        "O : Type u",
+        "k : Nat"
+       ],
+       "body": "Becoming.Learning.lasso (Becoming.Learning.pairAt k)",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Learning.prefixOf",
+       "kind": "def",
+       "binders": [
+        "O : Type u",
+        "o : Nat → O",
+        "x._@.Becoming.Learning.1873919784._hygCtx._hyg.10 : Nat"
+       ],
+       "body": "Nat.brecOn x✝ fun x f =>\n  (match (motive := (x : Nat) → Nat.below x → List O) x with\n    | 0 => fun x => []\n    | t.succ => fun x => o t :: x.1)\n    f",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tcee058",
+   "language": "English",
+   "text": "The conclusion is truncated, so its complete statement cannot be recovered. The first equivalence says: every element common to all relation-closed regions containing f is significant at position p at every natural-number step if and only if some relation-closed region containing f has all its elements significant at p at every natural-number step.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.presupposition_scopes",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "Pos",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "rel",
+       "type": "F → F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "f",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "sig",
+       "type": "Pos → Nat → F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "p",
+       "type": "Pos",
+       "sort": "value",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "((∀ (t : Nat) (g : F), (Becoming.SuperTrue (Becoming.Boundary rel f) fun region => region g) → sig p t g) ↔\n    Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p)) ∧\n  (Becoming.SuperTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) ↔ ∀ (t : Nat) (g : F), s …",
+     "nested": [
+      {
+       "q": "∀",
+       "name": "t",
+       "type": "Nat"
+      },
+      {
+       "q": "∀",
+       "name": "g",
+       "type": "F"
+      },
+      {
+       "q": "∀",
+       "name": "a._@._internal._hyg.0",
+       "type": "Becoming.SuperTrue (Becoming.Boundary rel f) fun region => region g"
+      },
+      {
+       "q": "∀",
+       "name": "t",
+       "type": "Nat"
+      },
+      {
+       "q": "∀",
+       "name": "g",
+       "type": "F"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.SuperTrue",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "admissible : (F → Prop) → Prop",
+        "claim : (F → Prop) → Prop"
+       ],
+       "body": "∀ (region : F → Prop), admissible region → claim region",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Boundary",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "rel : F → F → Prop",
+        "f : F",
+        "region : F → Prop"
+       ],
+       "body": "Becoming.ClosedUnder rel region ∧ region f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SubTrue",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "admissible : (F → Prop) → Prop",
+        "claim : (F → Prop) → Prop"
+       ],
+       "body": "∃ region, admissible region ∧ claim region",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SignificantWithin",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "Pos : Type",
+        "sig : Pos → Nat → F → Prop",
+        "p : Pos",
+        "region : F → Prop"
+       ],
+       "body": "∀ (g : F), region g → ∀ (t : Nat), sig p t g",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tb7c3e5",
+   "language": "English",
+   "text": "For flows L and L', a web W, a relation o, a Boolean marking m and an element g: g lies within the response of L and L' to m if and only if there is an h marked true by m such that every region containing g and closed under coupling from either L or L' in W under o contains h.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Flow.withinResponse_iff_coupling",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "L",
+       "type": "Becoming.Flow F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "L'",
+       "type": "Becoming.Flow F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "obs",
+       "type": "F → C → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "part",
+       "type": "F → Bool",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "g",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "L.WithinResponse L' W obs part g ↔ ∃ h, part h = Bool.true ∧ Becoming.WithinClosure (L.CoupledFromEither W L' obs) g h",
+     "nested": [
+      {
+       "q": "∃",
+       "name": "h",
+       "type": "F"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.Flow",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "present : {F C : Type} → Becoming.Flow F C → Nat → List F",
+        "take : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat",
+        "give : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat"
+       ]
+      },
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Flow.WithinResponse",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "L : Becoming.Flow F C",
+        "L' : Becoming.Flow F C",
+        "W : Becoming.Web F C",
+        "obs : F → C → Prop",
+        "part : F → Bool",
+        "g : F"
+       ],
+       "body": "∃ h, part h = Bool.true ∧ Becoming.WithinClosure (fun a b => L.CoupledFromEither W L' obs b a) h g",
+       "fields": null
+      },
+      {
+       "const": "Becoming.WithinClosure",
+       "kind": "def",
+       "binders": [
+        "X : Type u",
+        "rel : X → X → Prop",
+        "f : X",
+        "g : X"
+       ],
+       "body": "∀ (region : X → Prop), Becoming.ClosedUnder rel region → region f → region g",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Flow.CoupledFromEither",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "L : Becoming.Flow F C",
+        "W : Becoming.Web F C",
+        "L' : Becoming.Flow F C",
+        "obs : F → C → Prop",
+        "g : F",
+        "h : F"
+       ],
+       "body": "L.CoupledFrom W obs g h ∨ L'.CoupledFrom W obs g h",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tfb507a",
+   "language": "English",
+   "text": "If amounts equal offspring counts everywhere in a generation sequence within an environment, and every child of a family member at natural time t has that member's amount at t as its amount at t + 1, then the square of the family size at t + 1 is less than the product of sizes at t and t + 2 if and only if concordance at t is positive.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "α",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "G",
+       "type": "Becoming.SelectionTerm.Generations α",
+       "sort": "value",
+       "role": "variable"
+      },
+      {
+       "name": "number",
+       "type": "Becoming.Reproduction.Generations.ByNumber G",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "t",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      },
+      {
+       "name": "exact",
+       "type": "Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "G.size (t + 1) * G.size (t + 1) < G.size t * G.size (t + 1 + 1) ↔ 0 < G.concordAt t",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.SelectionTerm.Generations",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "first : {α : Type} → Becoming.SelectionTerm.Generations α → List α",
+        "kids : {α : Type} → Becoming.SelectionTerm.Generations α → Nat → α → List α",
+        "amount : {α : Type} → Becoming.SelectionTerm.Generations α → Nat → α → Nat"
+       ]
+      },
+      {
+       "const": "Becoming.Reproduction.Generations.ByNumber",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α"
+       ],
+       "body": "∀ (t : Nat) (p : α), G.amount t p = G.offspringNumber t p",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Exact",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "ps : List α",
+        "kids : α → List α",
+        "a : α → Nat",
+        "b : α → Nat"
+       ],
+       "body": "∀ (p : α), p ∈ ps → ∀ (k : α), k ∈ kids p → b k = a p",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.family",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α",
+        "x._@.Becoming.SelectionTerm.1931188202._hygCtx._hyg.9 : Nat"
+       ],
+       "body": "Nat.brecOn x✝ fun x f =>\n  (match (motive := (x : Nat) → Nat.below x → List α) x with\n    | 0 => fun x => G.first\n    | t.succ => fun x => List.flatMap (G.kids t) x.1)\n    f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.kids",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "self : Becoming.SelectionTerm.Generations α"
+       ],
+       "body": "self.2",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.amount",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "self : Becoming.SelectionTerm.Generations α"
+       ],
+       "body": "self.3",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.size",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α",
+        "t : Nat"
+       ],
+       "body": "(G.family t).length",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.concordAt",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α",
+        "t : Nat"
+       ],
+       "body": "Becoming.SelectionTerm.concord (G.family t) (G.offspringNumber t) (G.amount t)",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tef0e82",
+   "language": "English",
+   "text": "Let L be a flow and W a web, let s list at each step the members of C with positive level in W, and suppose L runs down W at every step from T on. Then for any c in C it is not the case that for every N some step t ≥ N has the level of c in W rising after t.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Flow.more_exhausted",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "L",
+       "type": "Becoming.Flow F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "stand",
+       "type": "Nat → List C",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "census",
+       "type": "W.StandingCensus stand",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "T",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      },
+      {
+       "name": "runs",
+       "type": "∀ (t : Nat), T ≤ t → L.RunsDown W t",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "c",
+       "type": "C",
+       "sort": "relatum or role",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Rises t c",
+     "nested": [
+      {
+       "q": "∀",
+       "name": "N",
+       "type": "Nat"
+      },
+      {
+       "q": "∃",
+       "name": "t",
+       "type": "Nat"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.Flow",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "present : {F C : Type} → Becoming.Flow F C → Nat → List F",
+        "take : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat",
+        "give : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat"
+       ]
+      },
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.StandingCensus",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "stand : Nat → List C"
+       ],
+       "body": "Becoming.Listed (fun c t => 0 < W.level t c) stand",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Flow.RunsDown",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "L : Becoming.Flow F C",
+        "W : Becoming.Web F C",
+        "t : Nat"
+       ],
+       "body": "∃ es, L.RunsDownOn W es t",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.Rises",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "t : Nat",
+        "c : C"
+       ],
+       "body": "W.level t c < W.level (t + 1) c",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t79c227",
+   "language": "English",
+   "text": "For a process and a Boolean gate on actions, suppose a state property propagates backward across every step whose gate is false. If a trace from s to t follows a finite action list and the property holds at t, then it holds at s or the list splits into a prefix reaching m, a gate-true step to r satisfying the property, and a suffix reaching t.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Gated.origin",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "S",
+       "type": "Type u",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "A",
+       "type": "Type v",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "P",
+       "type": "Generative.Process S A",
+       "sort": "law or process",
+       "role": "variable"
+      },
+      {
+       "name": "gate",
+       "type": "A → Bool",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "p",
+       "type": "S → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "reflected",
+       "type": "Becoming.Gated.ReflectedBy P gate p",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "s",
+       "type": "S",
+       "sort": "configuration",
+       "role": "variable"
+      },
+      {
+       "name": "t",
+       "type": "S",
+       "sort": "configuration",
+       "role": "variable"
+      },
+      {
+       "name": "plan",
+       "type": "List A",
+       "sort": "family or list",
+       "role": "variable"
+      },
+      {
+       "name": "a",
+       "type": "Generative.Trace P s plan t",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "a",
+       "type": "p t",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "p s ∨\n  ∃ pre a post m m',\n    plan = pre ++ a :: post ∧\n      Generative.Trace P s pre m ∧ P.step m a m' ∧ gate a = Bool.true ∧ p m' ∧ Generative.Trace P m' post t",
+     "nested": [
+      {
+       "q": "∃",
+       "name": "pre",
+       "type": "List A"
+      },
+      {
+       "q": "∃",
+       "name": "a",
+       "type": "A"
+      },
+      {
+       "q": "∃",
+       "name": "post",
+       "type": "List A"
+      },
+      {
+       "q": "∃",
+       "name": "m",
+       "type": "S"
+      },
+      {
+       "q": "∃",
+       "name": "m'",
+       "type": "S"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Generative.Process",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "step : {State : Type u} → {Action : Type v} → Generative.Process State Action → State → Action → State → Prop"
+       ]
+      },
+      {
+       "const": "Becoming.Gated.ReflectedBy",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "P : Generative.Process S A",
+        "gate : A → Bool",
+        "p : S → Prop"
+       ],
+       "body": "∀ (s : S) (a : A) (t : S), P.step s a t → gate a = Bool.false → p t → p s",
+       "fields": null
+      },
+      {
+       "const": "Generative.Trace",
+       "kind": "inductive",
+       "binders": [],
+       "body": null,
+       "fields": null
+      },
+      {
+       "const": "Generative.Process.step",
+       "kind": "def",
+       "binders": [
+        "State : Type u",
+        "Action : Type v",
+        "self : Generative.Process State Action"
+       ],
+       "body": "self.1",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t0d582d",
+   "language": "English",
+   "text": "For a web W and level histories l, l' and l'': if l includes l' in W and l' includes l'' in W, then l includes l'' in W, where l includes l' when, at every step t and for every f, whenever W admits f under l' at t it also admits f under l at t.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Web.Includes.trans",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "l",
+       "type": "Nat → C → Nat",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "l'",
+       "type": "Nat → C → Nat",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "l''",
+       "type": "Nat → C → Nat",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "first",
+       "type": "W.Includes l l'",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "second",
+       "type": "W.Includes l' l''",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "W.Includes l l''",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.Includes",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "l : Nat → C → Nat",
+        "l' : Nat → C → Nat"
+       ],
+       "body": "∀ (t : Nat) (f : F), W.Admits (l' t) t f → W.Admits (l t) t f",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tb13b96",
+   "language": "English",
+   "text": "In any web with decidable role equality, if c is observed for g and d is a positive natural number, then at every natural time, adding d to c's level alone at all times cannot satisfy both equivalence of g's admission before and after and equality of levels at every role observed for g.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Web.observed_raise_couples",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "obs",
+       "type": "F → C → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "g",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "inst",
+       "type": "DecidableEq C",
+       "sort": null,
+       "role": "decidability instance"
+      },
+      {
+       "name": "c",
+       "type": "C",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "observed",
+       "type": "obs g c",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "d",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "pos",
+       "type": "0 < d",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "t",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "¬W.AlikeThrough obs g W.level (W.raise c d).level t",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.AlikeThrough",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "obs : F → C → Prop",
+        "g : F",
+        "l : Nat → C → Nat",
+        "l' : Nat → C → Nat",
+        "t : Nat"
+       ],
+       "body": "(W.Admits (l t) t g ↔ W.Admits (l' t) t g) ∧ ∀ (c : C), obs g c → l t c = l' t c",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Dependence.level",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "F : Type",
+        "C : Type",
+        "self : Becoming.Dependence S F C"
+       ],
+       "body": "self.1",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.raise",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "inst._@.Becoming.Runaway.2810363532._hygCtx._hyg.7 : DecidableEq C",
+        "c : C",
+        "d : Nat"
+       ],
+       "body": "{ level := fun t e => W.level t e + if e = c then d else 0, active := W.active, requires := W.requires, need := W.need,\n  draws := W.draws }",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tba7f1d",
+   "language": "English",
+   "text": "For a relation R on items, an item f and a region closed under R that contains f: every item g that lies in every R-closed region containing f lies in this region.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Boundary.holds",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "rel",
+       "type": "F → F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "f",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "region",
+       "type": "F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "boundary",
+       "type": "Becoming.Boundary rel f region",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "g",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "within",
+       "type": "Becoming.WithinClosure rel f g",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "region g",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Boundary",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "rel : F → F → Prop",
+        "f : F",
+        "region : F → Prop"
+       ],
+       "body": "Becoming.ClosedUnder rel region ∧ region f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.WithinClosure",
+       "kind": "def",
+       "binders": [
+        "X : Type u",
+        "rel : X → X → Prop",
+        "f : X",
+        "g : X"
+       ],
+       "body": "∀ (region : X → Prop), Becoming.ClosedUnder rel region → region f → region g",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t7f77c9",
+   "language": "English",
+   "text": "For sequences g of states and m of labels: some deterministic process (each state and label lead to at most one next state) steps g n with label m n to g (n + 1) for every n if and only if g i = g j and m i = m j always imply g (i + 1) = g (j + 1), whatever the environment.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.exists_law_iff",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "S",
+       "type": "Type u",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "A",
+       "type": "Type v",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "g",
+       "type": "Nat → S",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "m",
+       "type": "Nat → A",
+       "sort": "history or run",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "(∃ Q, Becoming.Determined Q ∧ ∀ (n : Nat), Q.step (g n) (m n) (g (n + 1))) ↔ Becoming.Consistent g m",
+     "nested": [
+      {
+       "q": "∃",
+       "name": "Q",
+       "type": "Generative.Process S A"
+      },
+      {
+       "q": "∀",
+       "name": "n",
+       "type": "Nat"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Generative.Process",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "step : {State : Type u} → {Action : Type v} → Generative.Process State Action → State → Action → State → Prop"
+       ]
+      },
+      {
+       "const": "Becoming.Determined",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "P : Generative.Process S A"
+       ],
+       "body": "∀ (s : S) (a : A) (t t' : S), P.step s a t → P.step s a t' → t = t'",
+       "fields": null
+      },
+      {
+       "const": "Generative.Process.step",
+       "kind": "def",
+       "binders": [
+        "State : Type u",
+        "Action : Type v",
+        "self : Generative.Process State Action"
+       ],
+       "body": "self.1",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Consistent",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "A : Type v",
+        "g : Nat → S",
+        "m : Nat → A"
+       ],
+       "body": "∀ (i j : Nat), g i = g j → m i = m j → g (i + 1) = g (j + 1)",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t9a544f",
+   "language": "English",
+   "text": "Let K be a class of relations between Boolean predicates on X containing, for each weighting positive on the list L, the relation ranking b below a when b's weighted total over L is less than a's, with every member R having R b a whenever a widens b on L. Then a widens b on L, within its environment, if and only if R b a for every R in K.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Weighting.widens_iff_every_of_class",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "X",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "items",
+       "type": "List X",
+       "sort": "family or list",
+       "role": "variable"
+      },
+      {
+       "name": "a",
+       "type": "X → Bool",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "b",
+       "type": "X → Bool",
+       "sort": "map, lumping or feature",
+       "role": "variable"
+      },
+      {
+       "name": "K",
+       "type": "((X → Bool) → (X → Bool) → Prop) → Prop",
+       "sort": "class of functions",
+       "role": "variable"
+      },
+      {
+       "name": "weightings",
+       "type": "∀ (w : X → Nat), Becoming.Weighting.Positive items w → K (Becoming.Weighting.ranks items w)",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "increasing",
+       "type": "∀ (R : (X → Bool) → (X → Bool) → Prop), K R → Becoming.Weighting.Increasing items R",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "Becoming.Weighting.WidensOn items a b ↔ ∀ (R : (X → Bool) → (X → Bool) → Prop), K R → R b a",
+     "nested": [
+      {
+       "q": "∀",
+       "name": "R",
+       "type": "(X → Bool) → (X → Bool) → Prop"
+      },
+      {
+       "q": "∀",
+       "name": "a._@._internal._hyg.0",
+       "type": "K R"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.Weighting.Positive",
+       "kind": "def",
+       "binders": [
+        "X : Type",
+        "items : List X",
+        "w : X → Nat"
+       ],
+       "body": "∀ (x : X), x ∈ items → 0 < w x",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Weighting.ranks",
+       "kind": "def",
+       "binders": [
+        "X : Type",
+        "items : List X",
+        "w : X → Nat",
+        "b : X → Bool",
+        "a : X → Bool"
+       ],
+       "body": "Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Weighting.Increasing",
+       "kind": "def",
+       "binders": [
+        "X : Type",
+        "items : List X",
+        "R : (X → Bool) → (X → Bool) → Prop"
+       ],
+       "body": "∀ (a b : X → Bool), Becoming.Weighting.WidensOn items a b → R b a",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Weighting.WidensOn",
+       "kind": "def",
+       "binders": [
+        "X : Type",
+        "items : List X",
+        "a : X → Bool",
+        "b : X → Bool"
+       ],
+       "body": "Becoming.Weighting.IncludesOn items a b ∧ Becoming.Weighting.ExceedsOn items a b",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tf4dff5",
+   "language": "English",
+   "text": "For generations of items under a law of descent in which each member's amount is its number of offspring, and a step t at which the lowered amount is zero: the square of the generation size at t+1 is at most the size at t times the size at t+2.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Reproduction.Generations.ByNumber.not_lower_step",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "α",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "G",
+       "type": "Becoming.SelectionTerm.Generations α",
+       "sort": "value",
+       "role": "variable"
+      },
+      {
+       "name": "number",
+       "type": "Becoming.Reproduction.Generations.ByNumber G",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "t",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      },
+      {
+       "name": "unlowered",
+       "type": "G.loweredAt t = 0",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "G.size (t + 1) * G.size (t + 1) ≤ G.size t * G.size (t + 1 + 1)",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.SelectionTerm.Generations",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "first : {α : Type} → Becoming.SelectionTerm.Generations α → List α",
+        "kids : {α : Type} → Becoming.SelectionTerm.Generations α → Nat → α → List α",
+        "amount : {α : Type} → Becoming.SelectionTerm.Generations α → Nat → α → Nat"
+       ]
+      },
+      {
+       "const": "Becoming.Reproduction.Generations.ByNumber",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α"
+       ],
+       "body": "∀ (t : Nat) (p : α), G.amount t p = G.offspringNumber t p",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.loweredAt",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α",
+        "t : Nat"
+       ],
+       "body": "Becoming.lowered (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SelectionTerm.Generations.size",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "G : Becoming.SelectionTerm.Generations α",
+        "t : Nat"
+       ],
+       "body": "(G.family t).length",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t111628",
+   "language": "English",
+   "text": "For a flow, a web and a role c, if every feature either depends on c in the web or exchanges with c in the flow, then, for every pair of features f and g, g belongs to the closure from f under the sharing relation determined by that flow and web.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Flow.system_whole_of_common",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "L",
+       "type": "Becoming.Flow F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "c",
+       "type": "C",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "common",
+       "type": "∀ (g : F), L.TakesPart W g c",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "f",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "g",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "L.WithinSystem W f g",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Flow",
+       "kind": "structure",
+       "binders": [],
+       "body": null,
+       "fields": [
+        "present : {F C : Type} → Becoming.Flow F C → Nat → List F",
+        "take : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat",
+        "give : {F C : Type} → Becoming.Flow F C → Nat → F → C → Nat"
+       ]
+      },
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Flow.TakesPart",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "L : Becoming.Flow F C",
+        "W : Becoming.Web F C",
+        "g : F",
+        "c : C"
+       ],
+       "body": "W.DependsOn g c ∨ L.Exchanges g c",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Flow.WithinSystem",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "L : Becoming.Flow F C",
+        "W : Becoming.Web F C",
+        "f : F",
+        "g : F"
+       ],
+       "body": "Becoming.WithinClosure (L.Shares W) f g",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tb8eb68",
+   "language": "English",
+   "text": "With natural-number parameters p, q and n, a Boolean course generated at depth n has weight equal to the product of p for each true entry and q for each false entry, with empty product 1. Then (p + q) times the sum, over these courses, of weight times number of true entries equals np(p + q)ⁿ.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Drift.expected_ones",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "p",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "q",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "n",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "((p + q) *\n    Becoming.total (Becoming.Typicality.courses n) fun w =>\n      Becoming.Typicality.weight p q w * Becoming.Typicality.ones w) =\n  n * p * (p + q) ^ n",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.total",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.13 : List α",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.14 : α → Nat"
+       ],
+       "body": "List.brecOn (motive := fun x => (α → Nat) → Nat) x✝¹\n  (fun x f x_1 =>\n    (match (motive := (x : List α) → (α → Nat) → List.below (motive := fun x => (α → Nat) → Nat) x → Nat) x, x_1 with\n      | [], x => fun x => 0\n      | a :: as, q => fun x => q a + x.1 q)\n      f)\n  x✝",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Typicality.courses",
+       "kind": "def",
+       "binders": [
+        "x._@.Becoming.Typicality.3062025414._hygCtx._hyg.9 : Nat"
+       ],
+       "body": "Nat.brecOn x✝ fun x f =>\n  (match (motive := (x : Nat) → Nat.below x → List (List Bool)) x with\n    | 0 => fun x => [[]]\n    | n.succ => fun x => Becoming.Typicality.extend x.1)\n    f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Typicality.weight",
+       "kind": "def",
+       "binders": [
+        "p : Nat",
+        "q : Nat",
+        "x._@.Becoming.Typicality.4179263664._hygCtx._hyg.8 : List Bool"
+       ],
+       "body": "List.brecOn x✝ fun x f =>\n  (match (motive := (x : List Bool) → List.below x → Nat) x with\n    | [] => fun x => 1\n    | Bool.true :: w => fun x => p * x.1\n    | Bool.false :: w => fun x => q * x.1)\n    f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Typicality.ones",
+       "kind": "def",
+       "binders": [
+        "x._@.Becoming.Typicality.1112262773._hygCtx._hyg.6 : List Bool"
+       ],
+       "body": "List.brecOn x✝ fun x f =>\n  (match (motive := (x : List Bool) → List.below x → Nat) x with\n    | [] => fun x => 0\n    | Bool.true :: w => fun x => x.1 + 1\n    | Bool.false :: w => fun x => x.1)\n    f",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "tcd7858",
+   "language": "English",
+   "text": "At natural time s in any web with decidable role equality, if c is unobserved for g, two level histories agree on every other role either depended on by g or observed for g, and meeting c's need is equivalent between histories whenever c is required, then g's admission is equivalent between histories and their levels agree at every role observed for g.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Web.alike_of_threshold",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "C",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "W",
+       "type": "Becoming.Web F C",
+       "sort": "world, web or flow",
+       "role": "variable"
+      },
+      {
+       "name": "obs",
+       "type": "F → C → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "g",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "l",
+       "type": "Nat → C → Nat",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "l'",
+       "type": "Nat → C → Nat",
+       "sort": "history or run",
+       "role": "variable"
+      },
+      {
+       "name": "inst",
+       "type": "DecidableEq C",
+       "sort": null,
+       "role": "decidability instance"
+      },
+      {
+       "name": "c",
+       "type": "C",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "s",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "unobserved",
+       "type": "¬obs g c",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "others",
+       "type": "∀ (e : C), W.CoupledInto obs g e → e ≠ c → l s e = l' s e",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      },
+      {
+       "name": "threshold",
+       "type": "W.requires s g c → (W.need s g c ≤ l s c ↔ W.need s g c ≤ l' s c)",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "W.AlikeThrough obs g l l' s",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.Web",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type"
+       ],
+       "body": "Becoming.Dependence Nat F C",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.CoupledInto",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "obs : F → C → Prop",
+        "g : F",
+        "c : C"
+       ],
+       "body": "W.DependsOn g c ∨ obs g c",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Dependence.requires",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "F : Type",
+        "C : Type",
+        "self : Becoming.Dependence S F C"
+       ],
+       "body": "self.3",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Dependence.need",
+       "kind": "def",
+       "binders": [
+        "S : Type u",
+        "F : Type",
+        "C : Type",
+        "self : Becoming.Dependence S F C"
+       ],
+       "body": "self.4",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Web.AlikeThrough",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "C : Type",
+        "W : Becoming.Web F C",
+        "obs : F → C → Prop",
+        "g : F",
+        "l : Nat → C → Nat",
+        "l' : Nat → C → Nat",
+        "t : Nat"
+       ],
+       "body": "(W.Admits (l t) t g ↔ W.Admits (l' t) t g) ∧ ∀ (c : C), obs g c → l t c = l' t c",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "t4c2eaa",
+   "language": "English",
+   "text": "For any relation, element f, significance predicate, and position p, there is a region that is closed under the relation, contains f, and has every member significant at p at every natural time, if and only if every element belonging to every closed region containing f is significant at p at every natural time.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.subTrue_significantWithin_iff",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "F",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "Pos",
+       "type": "Type",
+       "sort": null,
+       "role": "type parameter"
+      },
+      {
+       "name": "rel",
+       "type": "F → F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "f",
+       "type": "F",
+       "sort": "relatum or role",
+       "role": "variable"
+      },
+      {
+       "name": "sig",
+       "type": "Pos → Nat → F → Prop",
+       "sort": "claim or predicate",
+       "role": "variable"
+      },
+      {
+       "name": "p",
+       "type": "Pos",
+       "sort": "value",
+       "role": "variable"
+      }
+     ],
+     "conclusion": "Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) ↔\n  ∀ (t : Nat) (g : F), Becoming.WithinClosure rel f g → sig p t g",
+     "nested": [
+      {
+       "q": "∀",
+       "name": "t",
+       "type": "Nat"
+      },
+      {
+       "q": "∀",
+       "name": "g",
+       "type": "F"
+      },
+      {
+       "q": "∀",
+       "name": "a._@._internal._hyg.0",
+       "type": "Becoming.WithinClosure rel f g"
+      }
+     ],
+     "unfold1": [
+      {
+       "const": "Becoming.SubTrue",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "admissible : (F → Prop) → Prop",
+        "claim : (F → Prop) → Prop"
+       ],
+       "body": "∃ region, admissible region ∧ claim region",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Boundary",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "rel : F → F → Prop",
+        "f : F",
+        "region : F → Prop"
+       ],
+       "body": "Becoming.ClosedUnder rel region ∧ region f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.SignificantWithin",
+       "kind": "def",
+       "binders": [
+        "F : Type",
+        "Pos : Type",
+        "sig : Pos → Nat → F → Prop",
+        "p : Pos",
+        "region : F → Prop"
+       ],
+       "body": "∀ (g : F), region g → ∀ (t : Nat), sig p t g",
+       "fields": null
+      },
+      {
+       "const": "Becoming.WithinClosure",
+       "kind": "def",
+       "binders": [
+        "X : Type u",
+        "rel : X → X → Prop",
+        "f : X",
+        "g : X"
+       ],
+       "body": "∀ (region : X → Prop), Becoming.ClosedUnder rel region → region f → region g",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  },
+  {
+   "seg_id": "ted1cb4",
+   "language": "English",
+   "text": "For natural numbers p, q, k, n, u and v with v ≤ u: the total, over all Boolean sequences of length n with at least k trues, of p to the number of trues times q to the number of falses, multiplied by u^k · v^n, is at most (p·u + q·v)^n · v^k.",
+   "candidates": [],
+   "lean": [
+    {
+     "decl": "Becoming.Typicality.concentrated",
+     "kind": "theorem",
+     "binders": [
+      {
+       "name": "p",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "q",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "k",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      },
+      {
+       "name": "n",
+       "type": "Nat",
+       "sort": "step",
+       "role": "variable"
+      },
+      {
+       "name": "u",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "v",
+       "type": "Nat",
+       "sort": "amount",
+       "role": "variable"
+      },
+      {
+       "name": "le",
+       "type": "v ≤ u",
+       "sort": "claim or predicate",
+       "role": "hypothesis"
+      }
+     ],
+     "conclusion": "Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.atLeast p q k) * (u ^ k * v ^ n) ≤\n  (p * u + q * v) ^ n * v ^ k",
+     "nested": [],
+     "unfold1": [
+      {
+       "const": "Becoming.total",
+       "kind": "def",
+       "binders": [
+        "α : Type",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.13 : List α",
+        "x._@.Becoming.Prelude.427846254._hygCtx._hyg.14 : α → Nat"
+       ],
+       "body": "List.brecOn (motive := fun x => (α → Nat) → Nat) x✝¹\n  (fun x f x_1 =>\n    (match (motive := (x : List α) → (α → Nat) → List.below (motive := fun x => (α → Nat) → Nat) x → Nat) x, x_1 with\n      | [], x => fun x => 0\n      | a :: as, q => fun x => q a + x.1 q)\n      f)\n  x✝",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Typicality.courses",
+       "kind": "def",
+       "binders": [
+        "x._@.Becoming.Typicality.3062025414._hygCtx._hyg.9 : Nat"
+       ],
+       "body": "Nat.brecOn x✝ fun x f =>\n  (match (motive := (x : Nat) → Nat.below x → List (List Bool)) x with\n    | 0 => fun x => [[]]\n    | n.succ => fun x => Becoming.Typicality.extend x.1)\n    f",
+       "fields": null
+      },
+      {
+       "const": "Becoming.Typicality.atLeast",
+       "kind": "def",
+       "binders": [
+        "p : Nat",
+        "q : Nat",
+        "k : Nat",
+        "w : List Bool"
+       ],
+       "body": "if k ≤ Becoming.Typicality.ones w then Becoming.Typicality.weight p q w else 0",
+       "fields": null
+      }
+     ]
+    }
+   ],
+   "key": []
+  }
+ ]
+}

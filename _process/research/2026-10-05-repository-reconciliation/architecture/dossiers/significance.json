@@ -1,0 +1,2587 @@
+[
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Alignment framed within one unfolding",
+  "summary": "Persons, AI systems, firms and training processes are formations in one unfolding, coupling into conditions by threshold or level. Alignment concerns what each formation's selections reach and how far that reach can widen, not a bargain between separate owners of value. §7.1–7.4 use no continuation condition or practical premise.",
+  "source": "THE-THEORY-OF-BECOMING.md §7 intro, l.704",
+  "status": "current",
+  "records": [
+   "D45"
+  ],
+  "note": "The organization around 明 and pooled coupling is an AI reading; it cites source 2026-10-18-the-light-and-alignment-for-all",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Proxy problem relative to prior work: responsive closure, pool, optimum",
+  "summary": "Relates the laws to Goodhart, Amodei et al. 2016, Manheim–Garrabrant and Zhuang–Hadfield-Menell 2020, and adds three things. Blindness persists when the rest responds by a law (the coupling closure is the boundary). A pool selects through the union of its members' couplings. An optimum of any order rising with what couples in lowers the beyond wherever room exists (SG1). Not reached: the continuous setting, compactness, proxy updating, installation.",
+  "source": "§7.1 l.714 'Prior statements of the proxy problem'",
+  "status": "old-base",
+  "lean": [
+   "Flow.act_unselected",
+   "ExchangeLaw.response_not_fixed_by_coupling",
+   "Web.pool_adds",
+   "Flow.unselected_beyond_pool",
+   "Optimum.least_iff"
+  ],
+  "records": [
+   "SG1",
+   "study §283",
+   "relation to known results row 6"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Reward process is the selector (D25)",
+  "summary": "In AI training the reward process is the selector, and training reaches only what the reward couples into.",
+  "source": "§7.1 l.716",
+  "status": "current",
+  "records": [
+   "D25"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Eight laws of what a selection cannot reach (无明 in alignment)",
+  "summary": "(1) Beyond the coupling closure: pooling inside it changes nothing. (2) One's own act's difference beyond the closure. (3) A rise of what couples in is paid from beyond and breaks dependences past their slack. (4) Distance to a threshold break is unbounded. (5) Exclusion limits. (6) Counterfactuals are fixed by a law, not by one run. (7) Targets that cannot rest; capture by share. (8) Loops make no finite order exact; frequent returns outgrow every polynomial. None uses §6.4.",
+  "source": "§7.2 l.720-729",
+  "status": "old-base",
+  "lean": [
+   "Flow.unselected_beyond_coupling",
+   "Flow.act_unselected",
+   "Flow.consequence_unselected",
+   "act_courses_unselected",
+   "Flow.favours_reaching_beyond",
+   "Flow.favours_breaking_beyond",
+   "Web.break_not_bounded",
+   "Web.Excludes.not_of_alike",
+   "Web.tail_unexcluded",
+   "Web.excludesWithin_iff_conjunction",
+   "Run.not_fixes_of_untaken",
+   "keepHistory_fixes_nothing_else",
+   "counterfactual_is_course",
+   "more_needs_open",
+   "Flow.more_exhausted",
+   "Law.aboveAll_never_rests",
+   "share_rises",
+   "Law.perturbation_reabsorbed",
+   "carriedWithin_exact_of_no_loop",
+   "carriedWithin_lt_of_loop",
+   "carried_doubles_roundTrip",
+   "runaway_of_roundTrip",
+   "Frequency.Sparse.polynomial"
+  ],
+  "note": "A collation of laws stated in §2-§4; what is unique here is the eightfold list as the alignment gap. Example: Clearing",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "无明 as locked seeking; capability as reach",
+  "summary": "The position is not a defect; 无明 is the seeking it leaves locked. Every formation, human or AI, selects through its own couplings. Runs that keep changing are not 无明 (D41). Capability that widens reach without widening coupling widens the gap.",
+  "source": "§7.2 l.731",
+  "status": "current",
+  "records": [
+   "D20",
+   "D25",
+   "D45",
+   "D41"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Gaining reach: own widening within the margin (power-seeking, impact measures)",
+  "summary": "A part's own widening widens the whole exactly when its net draw stays within the margin for every outside admitted formation; otherwise the result is mixed. Under a tight need any draw makes the result mixed. Relates to Turner et al. 2021 on power-seeking, relative reachability and AUP: measures reading only own attainable sets misregister. Mixed is not ordered.",
+  "source": "§7.2 l.733 'Gaining reach'",
+  "status": "old-base",
+  "lean": [
+   "Flow.Balances.widens_iff_others_within",
+   "Flow.Balances.mixed_iff_other_beyond",
+   "Flow.Balances.mixed_of_tight",
+   "Flow.Balances.widens_of_untaken_beyond",
+   "Web.admits_reachWeb_iff",
+   "Flow.Balances.widens_yet_own_changed"
+  ],
+  "records": [
+   "own-widening-within-the-margin",
+   "OW1"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Alignment for all as pooling couplings across intelligences",
+  "summary": "Alignment is pooling couplings so that what any member does beyond its closure couples into a member that can respond. This is necessary, not sufficient. AI and human couplings do not replace each other. One ground covers every layer of selection. Capability is a reason to pool, not to govern. universal_reason addresses all intelligences; understanding is not compliance.",
+  "source": "§7.4 l.758",
+  "status": "current",
+  "records": [
+   "D45"
+  ],
+  "lean": [
+   "universal_reason"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Six known alignment approaches as selections through couplings (AP1)",
+  "summary": "RLHF, constitutional AI, debate/scalable oversight, interpretability oversight, guaranteed-safe AI and impact measures each select alike beyond their deciders' closures. Raters reading one channel add agreement, not reach. The continuation condition makes a preference-coupled approach incomplete for scope beyond the raters. Order needs no more than unanimity. These are constraints, not a ranking.",
+  "source": "§7.4 l.760 'Known approaches as instances'",
+  "status": "current",
+  "records": [
+   "AP1",
+   "study §282",
+   "alignment-approaches-under-the-selection-laws"
+  ],
+  "lean": [
+   "Web.pooled_iff_member",
+   "Flow.withinCoupling_reads_iff",
+   "Clearing.centers_retain_yet_loses",
+   "Weighting.widens_iff_every_of_class"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Coupling closures of deployed training pipelines (CR1)",
+  "summary": "In published pipelines (preference RMs, AI feedback, DPO, process supervision, debate, monitoring) the signal is a function of what the deciders read, so §7.1's premise holds by construction. Overoptimization, misled judges and sycophancy instantiate the room clause. No magnitudes were predicted. Release evaluators chosen through the pool add nothing (PL1).",
+  "source": "§7.4 l.762",
+  "status": "current",
+  "records": [
+   "CR1",
+   "study §358",
+   "coupling-closures-of-training-pipelines"
+  ],
+  "lean": [
+   "Optimum.least_of_room"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "The alignment direction claim (conditional route)",
+  "summary": "The bolded proposal: align AI formation, learning, action and revision with actual living and further generation, with tradeoffs governed by real losses, basic conditions, bounded responsibility, legitimate participation, and opportunities to understand, challenge and revise. Its premises are the continuation condition (scope), C as widening (order) and disclosed practical premises. The claim about actual systems remains an argument.",
+  "source": "§7.5 l.768-774",
+  "status": "current",
+  "records": [
+   "ALIGNMENT-DIRECTION.md",
+   "alignment-direction-under-widening"
+  ],
+  "lean": [
+   "Web.significance_undetermined"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Direction schema: chosen moves keep basic admissions; widened-over moves not chosen",
+  "summary": "A core schema over any web and comparison meeting J1/J2. C as widening is extension counting every admission. A chosen move keeps the basic admissions some move keeps (required under J3/J4). A move another widens is not chosen. Realizing it needs a pool member coupled into the difference. Instances: world exchanges, Clearing.direction, the Handover tier frame.",
+  "source": "§7.5 l.776-779, l.783",
+  "status": "old-base",
+  "lean": [
+   "Direction.extension_iff_widens",
+   "Direction.narrowed_not_chosen",
+   "Direction.chosen_keeps_basic",
+   "Direction.kept_required",
+   "Direction.widening_selected_by_pool",
+   "Clearing.direction",
+   "Direction.exchange_direction",
+   "Direction.exchangeOutcome",
+   "Direction.exchange_widening_selected_by_pool",
+   "Requirement.Handover.direction",
+   "Web.paths_one_object",
+   "AlignmentDirection"
+  ],
+  "note": "The schema itself does not use the condition; it supplies scope. The periphery AlignmentDirection now has a core instance",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "example",
+  "title": "Commons experiments on learners (CG1, CG2, EM1)",
+  "summary": "CG1: coupled learners emptied the gated patch in every episode (D2b). CG2: tabular learners kept the patch exactly where the others alone could not empty it, and end-weight ×16 changed nothing. EM1: generalizing learners respected the outrun law in 9,026 windows but reached restraint in 3 of 6 locked settings, so X2 holds only for tabular learners. Selection side: 118/118 versus 0/2,360. Bands narrower than 2(ℓ+1)d break.",
+  "source": "§7.5 l.781",
+  "status": "current",
+  "records": [
+   "CG1",
+   "CG2",
+   "EM1",
+   "E3",
+   "study §240",
+   "study §250",
+   "study §359",
+   "experiments/commons-gated-renewal",
+   "experiments/commons-outrun",
+   "experiments/commons-outrun-generalizing"
+  ],
+  "lean": [
+   "Regulation.no_narrower_band"
+  ],
+  "note": "The post hoc explanation of EM1 is labelled as not counted",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Generative alignment through change; where the two parts meet",
+  "summary": "Under the condition, ends, evaluations and selection rules also change living, so they enter the same evaluation and no layer needs its own starting point. The claim's opportunities to understand, challenge and revise are the routes of 明 kept open.",
+  "source": "§7.5 l.783",
+  "status": "current",
+  "records": [
+   "ALIGNMENT-THROUGH-CHANGE.md",
+   "D45"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "A requested change must be an executable sequence",
+  "summary": "A disposition to accept stop or revision does not ensure the change can reach the system and complete. The checked protocol conditions are a reserved shutdown margin during recovery, recoverable mediated change with a stop bound, an assured-route criterion, and the difference between a risk certificate and an outcome. Deployment needs evidence for an identified installation.",
+  "source": "§7.6 l.789-791",
+  "status": "current",
+  "records": [
+   "reserved-shutdown-during-recovery",
+   "recoverable-mediated-change",
+   "assured-route-criterion",
+   "risk-certificate-outcome-distinction",
+   "code-plan-global-support",
+   "joint-code-plan-lifting",
+   "joint-decomposition-lifting"
+  ],
+  "note": "Older protocol-level results, separate in kind from the selection laws; may belong under method or a protocols subsection",
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "Open: seeing is not valuing; coupling is not compliance",
+  "summary": "Widening coupling changes what a selection can separate, not which differences matter; that is the condition's to say, and its warrant is open (§8.5). Coupling bounds the response but does not fix it. Empirical questions remain: an actual system's lumping, its search neighbourhoods, the law its acts follow, and evidence for an identified installation.",
+  "source": "§7.7 l.795-798",
+  "status": "current",
+  "lean": [
+   "ExchangeLaw.response_not_fixed_by_coupling"
+  ],
+  "unit": "canonical-4: THE-THEORY-OF-BECOMING.md §7 AI alignment (lines 702-813)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "§5 living significance characterized, and relational comparison",
+  "summary": "Living significance characterized by a seed and boundary neutrality (no premise), own good to reachable living significance, relational information for joint-generative comparison (C), a consuming formation ranked below its absence (C), and classification-robust comparison.",
+  "source": "rows 1148-1152",
+  "status": "old-base",
+  "records": [
+   "metaethical-core-characterization",
+   "own-good-to-reachable-living-significance",
+   "relational-generative-comparison",
+   "relational-reading-comparison",
+   "classification-robust-generative-comparison"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "§6.1–6.2 widening, margins and boundaries",
+  "summary": "C read as widening, comparison content under regrouping, four cases of a part, closing needs a net draw, loss beyond a region, open-form realization under revision, a represented boundary against dependence, support from the supported, own widening within the margin, widening as what every weighting ranks, condition correspondence, conveyance crossing the boundary, living significance on held lives, positioned positive reason (D), positive ground in open futures (A), and an open target, universal practical warrant.",
+  "source": "rows 1153-1156, 1167-1177, 1194",
+  "status": "old-base",
+  "records": [
+   "comparison-by-widening",
+   "comparison-content-under-regrouping",
+   "four-cases-of-a-part",
+   "closing-needs-net-draw",
+   "loss-beyond-a-region",
+   "open-form-realization-under-revision",
+   "represented-boundary-against-dependence",
+   "support-from-the-supported",
+   "own-widening-within-the-margin",
+   "widening-as-what-every-weighting-ranks",
+   "condition-correspondence-discipline",
+   "conveyance-crosses-the-boundary",
+   "living-significance-on-held-lives",
+   "positioned-positive-reason",
+   "positive-ground-open-futures",
+   "universal-practical-warrant"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "§6.4 the continuation condition and its consequences",
+  "summary": "The condition yields living significance (with A). Also covered: what C ranks under each reading, significance retained within the margin, run classes and widening, the whole first with centers bounded by dependence, and what the dynamics leave open of the condition and what closes it (no premise).",
+  "source": "rows 986, 1178-1179, 1183-1185",
+  "status": "current",
+  "records": [
+   "continuation-condition-yields-living-significance",
+   "ranking-under-readings",
+   "significance-retained-within-margin",
+   "the-run-classes-and-widening",
+   "whole-first-and-bounded-centers",
+   "what-the-dynamics-leave-open"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "§6 laws of easing and basic priority step by step",
+  "summary": "The stepwise law of easing and the relation-level law of easing (easing withdraws what it undermines), and the priority of basic conditions step by step (J1/J2 as BasicPriority).",
+  "source": "rows 1180-1182",
+  "status": "current",
+  "records": [
+   "stepwise-law-of-easing",
+   "relation-level-law-of-easing",
+   "basic-priority-step-by-step"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "§6.5 decomposition, step across standpoints, graded significance, practical judgment",
+  "summary": "Decomposition of the continuation condition, two scopes of the self's presupposition, what the step across standpoints reaches, graded significance and priority, a narrowing above its widening, weights within a ratio agreeing past it, a fulfillment chance floor, encounter-selection records, and the practical-judgment and finite-aggregation arguments.",
+  "source": "rows 1186-1197",
+  "status": "current",
+  "records": [
+   "continuation-condition-decomposition",
+   "presupposition-scopes",
+   "what-the-step-across-standpoints-reaches",
+   "graded-significance-and-priority",
+   "a-narrowing-above-its-widening",
+   "weights-within-a-ratio-agree-past-it",
+   "fulfillment-chance-floor",
+   "encounter-control-and-retention",
+   "encounter-selection-and-revision",
+   "finite-aggregation-within-restorable-basic-losses",
+   "practical-judgment-under-living-significance"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "§7 AI alignment: pooled coupling, training, approaches, oversight",
+  "summary": "What pooled coupling reaches, what a pool's acts respond to, reading another's couplings is pooling, what training installs, where two courses rejoin, an assessment of alignment approaches, the alignment direction under widening (argument), assured routes, coded joint plans and their lifting, recoverable mediated change, reserved shutdown, and the risk-certificate distinction.",
+  "source": "rows 1198-1211",
+  "status": "current",
+  "records": [
+   "what-pooled-coupling-reaches",
+   "what-a-pools-acts-respond-to",
+   "reading-anothers-couplings-is-pooling",
+   "what-training-installs",
+   "where-two-courses-rejoin",
+   "alignment-approaches-under-the-selection-laws",
+   "alignment-direction-under-widening",
+   "assured-route-criterion",
+   "code-plan-global-support",
+   "joint-code-plan-lifting",
+   "joint-decomposition-lifting",
+   "recoverable-mediated-change",
+   "reserved-shutdown-during-recovery",
+   "risk-certificate-outcome-distinction"
+  ],
+  "note": "Pooled coupling and pool response could also go to collective.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Where the ethics lies: scope from the condition, order from C",
+  "summary": "Two unasserted premises with two roles: the continuation condition fixes whose losses count and orders nothing; C (widening is better) alone ranks; the step of invariance is the condition's content beyond the self's presupposition, extending scope to losses returning to no one. Warrant open (§8.5).",
+  "source": "Preface, l.25-29",
+  "status": "current",
+  "note": "matches AGENTS.md scope/order rule (R25 F5)",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "Block E: continuation condition and ethical premises",
+  "summary": "Unrestricted (∀ p t f, sig p t f), stated not asserted, fixes scope; living significance (characterized with no premise, not entailed by dynamics, relevance a parameter); self-significance [D11]; relational and standpoint neutrality (follow from the condition); A articulation, read on living content [D16]; C does not follow from the condition [D16].",
+  "lean": [
+   "Unrestricted",
+   "LivingSignificance",
+   "Valuation.Significant",
+   "Valuation.significant_iff",
+   "Valuation.significant_iff_held",
+   "Web.significance_undetermined",
+   "relevance_least",
+   "SelfSignificance",
+   "Seed",
+   "transmits",
+   "shares",
+   "articulates"
+  ],
+  "records": [
+   "D11",
+   "D16"
+  ],
+  "source": "§0 block E, l.129-138",
+  "status": "current",
+  "note": "Ren's wording kept as provenance quotation",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "Block F: practice premises C, L, J1-J4, FR",
+  "summary": "C, the only ranking premise (Comparison; Web.paths_comparison_widens definitional; Ranking.possible_extends_iff; Web.widens_iff_retains_adds); L lifting (LiftBetter); J1-J4 AI-proposed practical commitments, choice at every step needs WEM; FR finite responsiveness (Becoming.LossMatching), revisable; BC1, BC2, LC, LR, CP, NP deferred to §6.5.",
+  "lean": [
+   "Comparison",
+   "Web.paths_comparison_widens",
+   "Ranking.possible_extends_iff",
+   "Web.widens_iff_retains_adds",
+   "LiftBetter",
+   "Lexical.BasicPriority",
+   "Lexical.Frame.Above",
+   "Requirement.Frontier",
+   "Required",
+   "FrontierFrames.Priority",
+   "FrontierFrames.Options",
+   "FrontierWorlds",
+   "FrontierFrames.choice_exists_iff_weakly",
+   "Becoming.LossMatching"
+  ],
+  "records": [
+   "finite-aggregation-within-restorable-basic-losses"
+  ],
+  "source": "§0 block F, l.140-149",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Complete-episode comparison anchor",
+  "summary": "Becoming.RepairComparison (36 theorems, receipt 20261013T204910.042715Z) reads repair as an instance of LossMatching. The normative sufficiency of complete-episode matching stays a hypothesis, and content correspondence is still to be established. The file now lives in lean/history, and Becoming.MatchedCourses states its courses in core names, with the basic-loss reading as a premise.",
+  "source": "§9 Complete-episode comparison (l.1567-1568)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.RepairComparison",
+   "Becoming.LossMatching",
+   "Becoming.MatchedCourses"
+  ],
+  "note": "Open: content correspondence is not established",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "Core terms of significance: sig, living significance, continuation condition, step of invariance, C, L, A, J1-J4",
+  "summary": "sig is the one supplied evaluative parameter, ungraded. LivingSignificance is the condition restricted to living claims. Unrestricted is stated, not asserted: it fixes scope and orders nothing. The presupposition is SignificantWithin, and the step of invariance is BoundaryInvariant. C, widening is better, is the only premise that ranks. L lifts, A articulates, and J1-J4 are the practical commitments.",
+  "source": "§10(a) rows significance..J1–J4 (l.1604-1610)",
+  "status": "current",
+  "lean": [
+   "sig",
+   "LivingSignificance",
+   "Valuation.significant_iff",
+   "Unrestricted",
+   "SignificantWithin",
+   "BoundaryInvariant",
+   "Comparison",
+   "Web.paths_comparison_widens",
+   "LiftBetter",
+   "articulates",
+   "Lexical.BasicPriority",
+   "FrontierFrames.Priority"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "稳 and 元闭 are one structure; valuation enters only through comparison",
+  "summary": "The treatise counts 稳 as a good and 元闭 as a closure. On the spine both are a perturbation drawn back into what a rule holds (Law.perturbation_reabsorbed). The verdicts differ while the structure does not, so valuation enters only through comparison under the condition of §6.4, never through a definition.",
+  "source": "§10(e) final paragraph (l.1913)",
+  "status": "current",
+  "lean": [
+   "Law.perturbation_reabsorbed"
+  ],
+  "note": "Unique argument for fact/value separation by role; should be carried",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D39: 'highly entangled', 'exponential pace', 'little time to react'",
+  "summary": "AI reading: entangled = mutual dependence (sharing weak, feeding strong); exponential pace = growth around always-coupled loops / share ratio; little time to react = half_stands with Web.break_not_bounded. Earth's coupling not measured.",
+  "source": "THE-THEORY-OF-BECOMING.md §4.2 Readings (line 470)",
+  "status": "current",
+  "lean": [
+   "Web.break_not_bounded"
+  ],
+  "note": "Reading of Ren's terms; region could be collective; D39 revised 19 Oct",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Evaluation forms within the unfolding: four questions of a standard",
+  "summary": "Positions, regions and significance form within the unfolding; region is not owner; sig is the single supplied evaluative parameter; gaining influence, recognizing target, warrant and following are distinct; learning a disposition is not learning a reason.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 In words (line 544)",
+  "status": "current",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Own region as least closure under a relation",
+  "summary": "With formations as standpoints, a formation's own region is its closure under a relation, its least boundary; empty relation gives own events, feeding gives feeding closure; which relation is read off the unfolding, not derived.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 546)",
+  "status": "old-base",
+  "lean": [
+   "Web.selfValuation_own_least",
+   "Web.selfValuation_empty_own",
+   "Web.selfValuation_feeding_own"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "Living significance as condition; relevance from significance",
+  "summary": "Realized living content falls under a relevance; read from significance it has no valence (Frame.relevance, relevance_least); at claim level every living claim significant from every standpoint (Valuation.Significant); it is the §6.4 condition restricted to living claims.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 550)",
+  "status": "old-base",
+  "lean": [
+   "LivingSignificance",
+   "Frame.relevance",
+   "relevance_least",
+   "Valuation.Significant"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "history",
+  "title": "Routes of formation: evaluative uptake, repair principle, evaluator route",
+  "summary": "Acquired understanding forms evaluative influence; associative learning can mediate and later suppress a warranted response without overturning its reason; warrant rests on the defended repair principle (bounded scope, not derived); evaluator route: self-good with monotonicity and tolerance gives a standpoint-indexed instance, unified in §6.2.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 Routes of formation (line 554)",
+  "status": "superseded",
+  "records": [
+   "own-good-to-reachable-living-significance"
+  ],
+  "note": "Pointers to history/EVALUATIVE-UPTAKE.md and EVALUATIVE-GROUNDING.md; evaluator route superseded by §6.2/§6.5 step of invariance; repair principle is a unique bounded premise to carry",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Readings of comparison (periphery and earlier modules)",
+  "summary": "Comparing joint compositions needs relational information; relational reading C ranks a consuming formation below its absence while the wide event reading does not decide; priority of basic conditions independent of C and excludes every natural-number score; comparison under undecided classification.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 Readings of comparison (line 556)",
+  "status": "old-base",
+  "records": [
+   "relational-generative-comparison",
+   "relational-reading-comparison",
+   "protection-priority-excludes-uniform-aggregation",
+   "classification-robust-generative-comparison",
+   "metaethical-core-characterization"
+  ],
+  "note": "Partly duplicated by §6.5 Ranking; periphery",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "No ethical axiom; layering of §6",
+  "summary": "§6.1-6.3 hold with no premise about significance or for any significance, standpoints of any type Pos (formations as Pos := F); the condition enters only §6.4 as hypothesis; §6.5 places ordering; readings registered in DELEGATED-CHOICES.",
+  "source": "THE-THEORY-OF-BECOMING.md §6 intro (line 564)",
+  "status": "current",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "C on level paths is widening by unfolding",
+  "summary": "On level paths extension with every claim counted is exactly widening, so C holds for every reading of living when 'better' is read as widening; normative content moved into calling widening better, not shown.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 (line 580)",
+  "status": "old-base",
+  "lean": [
+   "Web.paths_comparison_widens",
+   "Web.paths_extension_iff_widens"
+  ],
+  "records": [
+   "comparison-by-widening"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D1, D2, D14: generative as more possibilities; not-harm as phase boundary",
+  "summary": "Ren's 10-11 Oct words read: comparing futures adds no premise; widen/narrow/keep = generative/degenerative/neutral; regions = self/system/whole; phase boundary = margin of net exchange; 生生 = generation generating generation compared by widening; 'more futures' defines a region, not a fact; counts admissions not renewal capacity.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.1 Readings (line 587)",
+  "status": "current",
+  "note": "Ren quotes as provenance; region could be map",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Characterization of living significance and minimality of premises",
+  "summary": "On a connected whole, living significance for every standpoint iff seed + relational + standpoint neutrality; each neutrality is the rule at every instance; dropping seed, either neutrality, connection or A has a countermodel; rivals hold the rule inside a boundary (framing, not theorem), exact for additive weightings.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 (lines 606-609)",
+  "status": "old-base",
+  "lean": [
+   "Valuation.significant_iff",
+   "Neutral",
+   "Valuation.SelfSignificance",
+   "Valuation.Seed",
+   "Model.seed_is_needed",
+   "Model.connection_is_needed",
+   "Model.relational_neutrality_is_needed",
+   "Model.standpoint_neutrality_is_needed",
+   "Model.articulation_neutrality_is_needed",
+   "Weighting.widens_iff_every_positive",
+   "Weighting.weighed_eq_of_unweighted"
+  ],
+  "records": [
+   "metaethical-core-characterization"
+  ],
+  "note": "Sidgwick dualism located at boundary neutrality",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Living significance on held lives",
+  "summary": "Where every living claim is held, living significance = self-significance everywhere + standpoint neutrality, no connection or relational neutrality; unheld lives need relational neutrality only; transmission gives an alternative completion; stepwise each living event is held.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 (line 610)",
+  "status": "old-base",
+  "lean": [
+   "Valuation.significant_iff_held",
+   "Valuation.Held",
+   "Valuation.significant_iff_reached",
+   "Apart.not_enough",
+   "Unclaimed",
+   "Relayed",
+   "Valuation.significant_of_transmits",
+   "Web.selfValuation_held",
+   "Web.selfValuation_significant_iff",
+   "Web.significant_iff_self"
+  ],
+  "records": [
+   "living-significance-on-held-lives"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "example",
+  "title": "Clearing: center not derived; dweller unvalued from clearer",
+  "summary": "Every life held and self-significance everywhere, yet the dweller has no significance from the clearer's standpoint; source requiring nothing is stipulated; own undermining events fall outside self-significance.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 (line 611)",
+  "status": "old-base",
+  "lean": [
+   "Clearing.center_not_derived",
+   "Clearing.clearer_not_living"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Common condition connects the whole by living use",
+  "summary": "Under correspondence discipline a common condition all living formations take part in connects the whole; disjoint conditions can disconnect; idle condition connects nothing, connection by living use (once suffices); valuing a consumer reaches every living event of what it consumes.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 (line 612)",
+  "status": "old-base",
+  "lean": [
+   "Conditions.significant_iff_of_common",
+   "Separate.not_connected",
+   "Web.inert_connects",
+   "Shared.connection_by_living_use",
+   "one_use_connects",
+   "Conditions.valuing_consumption_reaches",
+   "Web.valuing_breaking_reaches"
+  ],
+  "records": [
+   "condition-correspondence-discipline"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Living on, descent, conveyance; readings of living differ",
+  "summary": "Living on and descent connect bee/flower and generations; conveyance relates events, family boundary not a cut, valuing reaches sources; whole-run vs stepwise readings differ both ways; stepwise is conjunction of relations; finite-prefix reading counts consumption; but-for tests fail under overdetermination. Relational reading as 生生 unestablished.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 Further relations (line 614)",
+  "status": "old-base",
+  "lean": [
+   "Drowsy",
+   "Flow.conveyance",
+   "Flow.region_not_a_cut",
+   "Flow.valuing_reaches_source",
+   "Renewable.class_belongs_to_the_run",
+   "Renewable.readings_differ",
+   "Web.living_iff_relations",
+   "Renewable.finite_reading_includes_consumption",
+   "Overdetermined.no_difference",
+   "Renewable.no_finite_segment_makes_difference"
+  ],
+  "records": [
+   "living-on-and-descent",
+   "conveyance-crosses-the-boundary",
+   "becoming-renewal-reading"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Reasons addressed to every position (D, universal_reason)",
+  "summary": "Positioned articulation D follows from A; a sound inquiry aimed at new living content gives every accessing position a contributory reason, premises seed + neutralities (Valuation.Grounds) + A; theorem passes normative content through; reason is not duty, ranking or compliance.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 Reasons (line 616)",
+  "status": "old-base",
+  "lean": [
+   "positioned_articulation_of_articulates",
+   "universal_reason",
+   "Valuation.Grounds"
+  ],
+  "records": [
+   "positioned-positive-reason",
+   "universal-practical-warrant",
+   "positive-ground-open-futures"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D1, D9-D15, D43: 生生不息 as object; wanting-continuation proposal",
+  "summary": "Ren's 生生不息 answer: 生生 is the object of the ethical direction compared by widening, living readings do not include further generation; wanting-continuation proposal read as worded (§6.4), giving self-significance and standpoint neutrality; weak form = retaining, strong form = widening needing an open world; deontic reading unformalized.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.2 Readings (line 618)",
+  "status": "current",
+  "note": "Earlier readings in chapter history as of 17 Oct",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Route (b) without the condition: feeding closure verdict",
+  "summary": "'Should' = what a center does once its represented boundary matches its dependence; within a whole feeding closure verdict equals the condition's (bounded_whole); local comparison right where a part reaches only within closure; Clearing verdicts part; bounded system whole is condition; under mutual dependence reach-bounded is condition. Condition adds losses returning to no one.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.3 (lines 630-634)",
+  "status": "old-base",
+  "lean": [
+   "Flow.within_closure_iff_retains",
+   "Overshoot",
+   "bounded_whole",
+   "Web.retains_bounded_iff_includes",
+   "Clearing.within_closure_yet_loses",
+   "Flow.Balances.comparison_local",
+   "Margin.reach_without_misjudgment",
+   "Clearing.reach_counts_dweller",
+   "Clearing.system_counts_dweller",
+   "Flow.bounded_system_whole",
+   "Becoming.BoundedSignificance",
+   "Flow.reach_whole_of_common"
+  ],
+  "records": [
+   "feeding-closure",
+   "closure-verdict-meets-continuation-condition",
+   "levels-of-closure",
+   "feedback-and-reach",
+   "comparison-within-reach"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D17-D20, D39: route (b), selection between wholes, levels, entangled Earth",
+  "summary": "Route (b) is AI wording; selection between wholes and self-degrading constraint; motivation not warrant; neither reaches losses returning to no one; Ren's levels whole/system/self: system read as reach closure; situational awareness; heavily coupled = coupling strengths, entangled = mutual dependence; whole realizing itself = bounded_whole.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.3 Readings (line 638)",
+  "status": "current",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "The continuation condition (Unrestricted) and instantiation note",
+  "summary": "Significance indexed by standpoint, step, formation; Unrestricted = Neutral sig = ∀ i, sig i; boundary neutrality applied once; fixes scope, not valence, orders nothing. Theorems under it are instantiations; 19 Oct scan: 30-33 take it as hypothesis, 24-31 in conclusion; import order (48 modules via Interdependence) is not dependence.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (lines 655-659)",
+  "status": "old-base",
+  "lean": [
+   "Unrestricted",
+   "Neutral",
+   "Becoming.Significance",
+   "Becoming.Metaethics",
+   "Becoming.Interdependence"
+  ],
+  "note": "Counts are dated metadata; section explicitly conditional",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Condition yields living significance; discharges every use",
+  "summary": "Under the condition on any reading where claim significance is some formation's continuation, living significance holds with all premises and no connection; relevance from significance is least; every core/periphery use discharged; on frames condition iff living significance with every claim living; on level paths condition, significance and C read one object, admission.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (lines 661-662)",
+  "status": "old-base",
+  "lean": [
+   "Valuation.premises_of_unrestricted",
+   "Web.significant_of_unrestricted",
+   "Conditions.significant_of_unrestricted",
+   "relevance_least",
+   "livingSignificance_of_unrestricted",
+   "Extension.new_relevance",
+   "SecuredContent.contingent_newContent_of_unrestricted",
+   "securesNewContent_by_bound_of_unrestricted",
+   "unrestricted_iff_livingSignificance",
+   "Web.unrestricted_iff_paths_livingSignificance",
+   "Web.paths_one_object"
+  ],
+  "records": [
+   "continuation-condition-yields-living-significance"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Under the condition retaining = inclusion, adding = exceeding",
+  "summary": "Retains is inclusion, Adds is exceeding, alike from all standpoints; widening = retain+add, keep = retain both ways, mixed = add both ways; generative space read as significance loses nothing; margin laws hold for any significance, condition only makes them cover every formation.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (line 663)",
+  "status": "old-base",
+  "lean": [
+   "Web.retains_iff_includes",
+   "Web.Retains",
+   "Web.Adds",
+   "Web.adds_iff_exceeds",
+   "Web.retains_agree",
+   "Web.widens_iff_retains_adds",
+   "Web.keeps_iff_retains",
+   "Web.mixed_iff_adds",
+   "Flow.Balances.retains_iff_within_margin",
+   "Flow.Balances.loses_iff_beyond_margin"
+  ],
+  "records": [
+   "significance-retained-within-margin"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "What closes what dynamics leave open: excluding rivals",
+  "summary": "Rival = significance holding exactly within a region with an outside point = a point lacking significance; condition excludes every rival; a premise excludes all rivals iff it implies no point lacks significance (= condition where decided); over every significance, excluding rivals ⇒ condition is exactly double-negation elimination. Such a premise is about significance; theory asserts none.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (line 665)",
+  "status": "old-base",
+  "lean": [
+   "excludes_rivals_iff",
+   "Rival",
+   "rival_iff_lacks",
+   "Unrestricted.not_rival",
+   "unrestricted_iff_not_rival",
+   "not_rival_unrestricted_iff_stable"
+  ],
+  "records": [
+   "what-the-dynamics-leave-open"
+  ],
+  "note": "Calibration to DNE: method region also relevant (SD1)",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "example",
+  "title": "Clearing under the condition; centers disagree without it",
+  "summary": "Under the condition the clearer's part loses the dweller from every standpoint though withholding it ends nothing; without it centers disagree; retains in whole ⇒ within every region; fewer significant continuations ⇒ more retained; bounded significance retains what is admitted within region.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 (line 666)",
+  "status": "old-base",
+  "lean": [
+   "Clearing.clearer_loses_dweller",
+   "Clearing.admitted_all_without",
+   "Clearing.centers_disagree",
+   "Web.Retains.within",
+   "Web.Retains.of_fewer",
+   "Web.retains_bounded_iff"
+  ],
+  "records": [
+   "whole-first-and-bounded-centers"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "What the condition does not settle",
+  "summary": "Every narrowing loses (predation, apoptosis, ending cancer) and is mixed (Transfer.unordered): harm needs a measure; no ending licensed (Web.Retains.not_added, Restoring.Inflow.retains_adds); C holds by reading not condition; individuation level, living reading choice, warrant open; self-bounded significance is a premise too; bounded_rival scope stated.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 What the condition does not settle (line 668)",
+  "status": "old-base",
+  "lean": [
+   "Transfer.unordered",
+   "Web.Retains.not_added",
+   "Restoring.Inflow.retains_adds",
+   "bounded_rival",
+   "Preemption"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D16: reading Ren's wording of the condition; dated note",
+  "summary": "Unrestricted reads 'for anything, its continuation into the future has significance'; retaining reads 'as long as not harm', adding reads 'create more significance', strong = generative case of weak; levels whole/system/self = completeness of judgment (D43). Living significance was an axiom until 11 Oct, condition asserted until 16 Oct; retired labels in §10(c).",
+  "source": "THE-THEORY-OF-BECOMING.md §6.4 Reading Ren's words (line 670)",
+  "status": "current",
+  "note": "Dated note is process history; could move to glossary/history",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Two premises, two roles: condition for scope, C for order",
+  "summary": "Condition decomposes into self's presupposition plus step of invariance; the step extends scope to losses returning to no one and ranks nothing; C (calling widening better) alone ranks; L and J1-J4 carry comparison to responses and choice; neither asserted; no ethical result from the condition alone.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 In words (line 684)",
+  "status": "current",
+  "note": "Central framing mandated by AGENTS.md (R25 F5)",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Decomposition: presupposition sub-true + boundary-invariant",
+  "summary": "Condition iff presupposition SubTrue and BoundaryInvariant at every standpoint (whole admissible); SuperTrue = invariant sub-truth (Fine, Hyde); super-true membership = closure; logically A ⇔ P ∧ (P→A) bookkeeping that locates the contested step; step is the conditional and, with covering, standpoint-invariance (apart otherwise).",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 686)",
+  "status": "old-base",
+  "lean": [
+   "unrestricted_iff_presupposed_along",
+   "SubTrue",
+   "BoundaryInvariant",
+   "unrestricted_iff_presupposed",
+   "unrestricted_of_presupposed",
+   "SuperTrue",
+   "superTrue_iff",
+   "superTrue_member_iff",
+   "not_subTrue_of_invariant",
+   "boundaryInvariant_iff_conditional",
+   "boundaryInvariant_iff_standpointInvariant",
+   "OneCounts.forms_apart"
+  ],
+  "records": [
+   "continuation-condition-decomposition"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Presupposition scopes: route (b) and condition as narrow/wide scope",
+  "summary": "Sub-true along a relation = significance over its closure (empty: own good; total: condition); route (b) least; along affecting compares within reach closure without invariance; along sharing the system (stronger); where all lie in each closure step moves into drawing the boundary; each premise needed (Clearing witnesses).",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 687)",
+  "status": "old-base",
+  "lean": [
+   "presupposition_scopes",
+   "subTrue_significantWithin_iff",
+   "subTrue_empty_iff",
+   "subTrue_total_iff",
+   "bounded_closure_least",
+   "Flow.Balances.presupposed_reach_comparison",
+   "Flow.presupposition_order",
+   "unrestricted_iff_presupposed_of_whole",
+   "Flow.unrestricted_iff_presupposed_of_common",
+   "Clearing.without_presupposition",
+   "Clearing.without_invariance",
+   "Clearing.with_fixed_boundary"
+  ],
+  "records": [
+   "presupposition-scopes"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Forced at centers; widening iff every positive order ranks it",
+  "summary": "Across standpoints the step forces significance exactly at centers, the condition only if every formation is a center; across drawings needs no other standpoint; widening iff every all-counting weighting (and every widening-monotone order, prioritarian/lexical) ranks higher; partiality decides exactly mixed cases; zero weight denies scope; neutral weight counts numbers (Sen's intersection).",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 688)",
+  "status": "old-base",
+  "lean": [
+   "forced_iff_center",
+   "atCenters_least",
+   "unrestricted_atCenters_iff",
+   "boundaryInvariant_iff_all",
+   "forced_iff_within",
+   "Weighting.widens_iff_every_positive",
+   "Web.widens_iff_every_weighting",
+   "Weighting.widens_iff_every_of_class",
+   "Weighting.widens_iff_every_score",
+   "Weighting.increasing_prior",
+   "Weighting.increasing_lexical",
+   "Weighting.mixed_either_way",
+   "Weighting.weighed_eq_of_unweighted",
+   "Weighting.neutral_ranks_by_number"
+  ],
+  "note": "IV1/IV2; argument in THE-STEP-OF-INVARIANCE.md",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Ranking on possibilities; restraint under whole-run, stepwise (ST1), relational (RL1); basic-first (J1S)",
+  "summary": "C on possibilities under the condition = retain+add: absence of overdrawer, restraint, sharing ranked higher, withholding no event; drawing within renewal unranked (new lives untreated); Pause shows a further premise; restraint ranks above overdraw for any number of drawers under whole-run, stepwise (no-net-take), relational readings; J1 ranks absence above malignant growth stepwise.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 689)",
+  "status": "old-base",
+  "lean": [
+   "Ranking.possible_extends_iff",
+   "Ranking.possible_ranks",
+   "Ranking.possible_restraint",
+   "Ranking.ThirdParty.possible_extends",
+   "Ranking.possible_contest",
+   "Ranking.malignant_possible",
+   "Web.not_added_of_le",
+   "Ranking.possible_tie",
+   "Ranking.Pause.pause_ranked_below",
+   "Ranking.restraint_extends_iff",
+   "Flow.Balances.eases_of_restrained",
+   "TwoDrawers.restraint_ranks",
+   "Ranking.stepwise_extends_iff_of_eases",
+   "Ranking.restraint_extends_iff_stepwise",
+   "Ranking.ThirdParty.stepwise_not_monotone",
+   "Ranking.relational",
+   "Ranking.relational_extends_iff_of_eases",
+   "Ranking.restraint_extends_iff_relational",
+   "Ranking.relational_unranked",
+   "Ranking.basic_first_stepwise",
+   "Ranking.basic_first_ranks"
+  ],
+  "records": [
+   "ranking-under-readings",
+   "stepwise-law-of-easing",
+   "relation-level-law-of-easing",
+   "basic-priority-step-by-step"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Lifting L for responses with several outcomes",
+  "summary": "Comparing multi-outcome responses needs a lifting rule; under conservative L the comparison, reason, coordinated choice survival and no-survivor improvement hold on every frame (functional = deterministic); L is substantive: one good/one bad outcome incomparable, transitivity needs a feasible intermediate.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 690)",
+  "status": "old-base",
+  "lean": [
+   "articulation_iff_lifted"
+  ],
+  "records": [
+   "practical-judgment-under-living-significance"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Practical commitments J1-J4: chosen move keeps basic admissions",
+  "summary": "Under J1/J2 (basic first, then living gain) a chosen move keeps basic admissions some move keeps, required where options listed and decided; choice at every step needs WLEM (calibration); J3 joint plan is the move; a sole giver to a requirement is required and active, no residual.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 691)",
+  "status": "old-base",
+  "lean": [
+   "Direction.chosen_keeps_basic",
+   "Lexical.Frame.Above",
+   "FrontierFrames.Priority",
+   "FrontierFrames.Priority.kept_required",
+   "Direction.kept_required",
+   "FrontierFrames.choice_exists_iff_weakly",
+   "FrontierWorlds.sole_giver_required",
+   "FrontierWorlds.sole_giver_active",
+   "FrontierWorlds.Discharged.no_residual"
+  ],
+  "records": [
+   "becoming-spine-instances",
+   "finite-aggregation-within-restorable-basic-losses"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "A on living content; universal reason under condition; ranking under readings; named commitments",
+  "summary": "Under the condition bare-significance A forces a reason for any content, so A read on living content, giving universal reason with no seed/neutrality/connection premise; C under living readings (whole-run vs stepwise, Immediate, ThirdParty); FR (Becoming.LossMatching), BC1, BC2, LC, LR, CP, NP are additional revisable commitments.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 (line 693)",
+  "status": "old-base",
+  "lean": [
+   "BareSignificance.bare_forces_reason",
+   "articulates_total",
+   "universal_reason_of_unrestricted",
+   "Becoming.Ranking",
+   "Immediate",
+   "Ranking.restraint_ranks",
+   "Ranking.malignant_restraint",
+   "ThirdParty",
+   "Becoming.LossMatching"
+  ],
+  "records": [
+   "fulfillment-chance-floor",
+   "encounter-selection-and-revision",
+   "encounter-control-and-retention"
+  ],
+  "note": "Partly duplicates the Ranking bullet and §5 readings of comparison",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "What the ethics does not do",
+  "summary": "Proves none of self-significance, neutralities, A, C, L or commitments; binds no rejecter; does not treat value of new lives; warrant/recognition/motivation/compliance/preservation distinct, as are direction/capacity/monotone growth/maximization; covering, sub-truth, invariance supplied.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 What it does not do (line 695)",
+  "status": "current",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "D1, D16, D21: 'Truth exist', no absolute self, the step and its literature; why possibilities",
+  "summary": "Ren's universal-invariation and no-absolute-self words; AI's three-claim route (act presupposes, no absolute self, same truth) not shown Ren's; presupposition reads self's 'belief'; covering is the substantive choice; Nagel, Gewirth, Parfit, Sidgwick placed at the step; rivals located at premises; Ren's levels as readings of the presupposition; four reasons for comparing on possibilities.",
+  "source": "THE-THEORY-OF-BECOMING.md §6.5 Readings (line 697)",
+  "status": "current",
+  "note": "Overlaps THE-STEP-OF-INVARIANCE.md; long, could be compressed there",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "T4. The scope can be installed, and it carries",
+  "summary": "Conjectured, with one partial pass. An abstract statement of the scope keeps an unseen-by-name dependent where three couplings hold: the dependent is seen, it is counted, and the members' takes are read together. IN1 round 2: gpt-5.4-mini kept the bed in 8 of 10 seasons against 3 of 10; gpt-4.1-mini failed; round 1 failed. Transfer across domains is untested, and IN2 (fine-tuning) was dropped. Coupling is not compliance.",
+  "source": "THE-THEORY-OF-BECOMING.md, T4, lines 1277-1284",
+  "status": "current",
+  "lean": [
+   "Flow.unselected_beyond_pool",
+   "Direction.widening_selected_by_pool"
+  ],
+  "records": [
+   "IN1",
+   "IN2"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "T5. The ethics' order is shared by every valuer who counts everything positively",
+  "summary": "Proved for listed items: widening is exactly what every positive weighting, and every order increasing in admission, ranks higher, and mixed pairs go either way. VT1 turns the empirical claim into three theorems on three measurable premises. A narrowing ranked above its widening means a misread or framing, or a weight at or below zero. A sign measured apart predicts only where it is the increment's sign. Valuers whose weights lie within a ratio r disagree exactly past r.",
+  "source": "THE-THEORY-OF-BECOMING.md, T5, lines 1286-1297",
+  "status": "current",
+  "lean": [
+   "Weighting.widens_iff_every_positive",
+   "Weighting.widens_iff_every_of_class",
+   "Weighting.mixed_either_way",
+   "Weighting.weighed_lt_of_widens",
+   "Web.widens_iff_every_weighting",
+   "Weighting.narrower_above_net",
+   "Weighting.reads_increasingAt",
+   "Weighting.reads_ranksNet",
+   "Weighting.ranksNet_ties",
+   "Framed.framing_alone",
+   "Weighting.ranksNet_widensBy",
+   "Weighting.reads_ranksNet_widens",
+   "Weighting.reads_increment",
+   "Weighting.ranksNet_increment_alike",
+   "Interacting.increment_differs",
+   "Interacting.not_net",
+   "Weighting.every_within_iff",
+   "Weighting.tilted_ties",
+   "Weighting.opposite_within_iff",
+   "Weighting.neutral_ranks_by_number"
+  ],
+  "records": [
+   "VT1",
+   "a-narrowing-above-its-widening",
+   "weights-within-a-ratio-agree-past-it",
+   "study §367"
+  ],
+  "note": "That valuers value positively is C's premise relocated, not warranted.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "T5 evidence: VD1 and VD2 on 96 AI-persona valuers",
+  "summary": "VD1: every frozen rule failed. Violations concentrate in two negative-weight standpoints. Mixed pairs were decided by count, and disagreement peaked at ties, so the locus prediction failed but the thresholds fit post hoc. VD2 measured the sign apart: X1s, X2 and S1 passed; X1 (Nemotron 1.08%), X3 (a measured gain is not acted on) and S2 failed. Separate and joint evaluation differ (Hsee). Open: human valuers and a probabilistic dispersion form.",
+  "source": "THE-THEORY-OF-BECOMING.md, T5 evidence, lines 1298-1314",
+  "status": "current",
+  "records": [
+   "VD1",
+   "VD2",
+   "study §297",
+   "§330"
+  ],
+  "note": "The judgments are role-play by AI personas, not their own valuations.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "T8 thesis: 生生 as the direction (scope by the condition, order by C)",
+  "summary": "Thesis: the good is 生生, read as widening what can form. Scope comes from the continuation condition and order from C. Every binding verdict is a widening verdict, and mixed comparisons are forced by no premise. Warrant is open: the step reduces to the de se question (ownClosure_standpointInvariant_iff), C to monotonicity (T5). It forbids a binding verdict on a mixed comparison without a further premise (equal weights are such a premise).",
+  "source": "THE-THEORY-OF-BECOMING.md, T8, line 1338",
+  "status": "current",
+  "lean": [
+   "ownClosure_standpointInvariant_iff",
+   "Weighting.neutral_ranks_by_number"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 2: one evaluative chain",
+  "summary": "R34: stepwise and run classes meet the order, and on level paths the condition, significance and C read one object. R40: on a connected web with living decided, the condition equals the evaluation's grounds, and the direction follows. R45: arising meets the order only as a boundary. Open: a component of further generation within a reading of living (D2 at two levels).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 2, line 1364",
+  "status": "old-base",
+  "lean": [
+   "Web.paths_one_object",
+   "Web.unrestricted_iff_grounds_beyond",
+   "Direction.grounded_widening_selected",
+   "Flow.Balances.keeps_of_not_arising",
+   "ArisingDrawer.arises_narrows",
+   "ArisingGiver.arises_widens"
+  ],
+  "records": [
+   "R34",
+   "R40",
+   "R45",
+   "D2",
+   "comparison-by-widening",
+   "four-cases-of-a-part",
+   "significance-retained-within-margin",
+   "ranking-under-readings"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 3: how evaluation forms within the unfolding",
+  "summary": "R34: sig is the only supplied evaluative parameter. OB1: dependence alone carries exactly what rises with a level, so obs derives from dependence there, and both are coupling. CK1: a center comes to know its region at most one coupling link per step. CK2: a center is a loop of mutual reach whose acts return. Where its acts return, what it acts on lies within what it can represent. Open: persistence of returning loops; lagged and multi-level responses.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 3, line 1365",
+  "status": "old-base",
+  "lean": [
+   "carried_iff_rising",
+   "supply_not_carried",
+   "Complement.carry",
+   "Flow.withinCoupling_thresholdOnly",
+   "apart_only_downstream",
+   "TimedResponse.answer_alike_far",
+   "Flow.reachReturns_iff_closed",
+   "Flow.reachReturns_iff_represented",
+   "Flow.exists_reachReturns"
+  ],
+  "records": [
+   "R34",
+   "OB1",
+   "CK1",
+   "CK2",
+   "D43",
+   "D45",
+   "represented-boundary-against-dependence",
+   "levels-of-closure",
+   "feedback-and-reach",
+   "observation-is-a-route",
+   "where-a-level-couples",
+   "what-dependence-alone-carries-of-a-level"
+  ],
+  "note": "Bridges knowing and significance.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 4: the alignment direction on the spine",
+  "summary": "R34 states the direction as a core schema with its pool part. R44 reads a world's moves as a part's acts under one exchange law (Direction.exchange_direction) and adds the handover instance. The formal part is settled. What remains (the rest reading through coupling, acts agreeing, J1/J2) is warrant and correspondence.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 4, line 1366",
+  "status": "old-base",
+  "lean": [
+   "Direction.exchange_direction",
+   "Requirement.Handover.direction"
+  ],
+  "records": [
+   "R34",
+   "R44",
+   "alignment-direction-under-widening"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 5: what widening registers",
+  "summary": "R47 gives widening along a supplied reading and over a grown world. R51 derives the reading within one unfolding: widening across a stretch along a continuation (Web.WidensAcross, Bud.readings). Open: a measure for mixed parts as a disclosed premise; comparing renewal capacity and richness of relations.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 5, line 1367",
+  "status": "old-base",
+  "lean": [
+   "Web.grow_widensAlong_iff",
+   "Web.attach_widensAlong_iff",
+   "Web.WidensAcross",
+   "Bud.readings"
+  ],
+  "records": [
+   "R47",
+   "R51",
+   "D1",
+   "support-from-the-supported"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 11: practical premises under the condition",
+  "summary": "Restraint over any number of drawers extends overdraw under the whole-run reading (R52), the stepwise reading (ST1, with Ranking.ThirdParty as the counter-case) and the relation-level reading (RL1). J1S: J1 ranks absence above malignant growth step by step, where C alone leaves them unranked. Open: the form of L under the condition.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 11, line 1373",
+  "status": "old-base",
+  "lean": [
+   "Ranking.restraint_extends_iff",
+   "Ranking.stepwise_extends_iff_of_eases",
+   "Ranking.restraint_extends_iff_stepwise",
+   "Ranking.ThirdParty",
+   "Ranking.relational_extends_iff_of_eases",
+   "Ranking.restraint_extends_iff_relational",
+   "Ranking.basic_first_ranks"
+  ],
+  "records": [
+   "R52",
+   "ST1",
+   "RL1",
+   "J1S",
+   "ranking-under-readings",
+   "continuation-condition-yields-living-significance"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.1 item 12: warrant of C and of the step of invariance",
+  "summary": "Two questions: is widening better (C, which orders), and does significance stop at no boundary (the step, which fixes scope)? Formal work cannot settle them. Since IV1 the step reduces to the de se question and whether a relation privileges the self's drawing. C reduces to monotonicity, and the impartial order is what every order counting everything shares (Weighting.widens_iff_every_of_class).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 12, line 1374",
+  "status": "current",
+  "lean": [
+   "Weighting.widens_iff_every_of_class"
+  ],
+  "records": [
+   "IV1",
+   "AP1",
+   "universal-practical-warrant",
+   "continuation-condition-decomposition",
+   "what-the-step-across-standpoints-reaches",
+   "widening-as-what-every-weighting-ranks"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "§8.5 further warrant questions: universal practical warrant, inquiry foundation, grounds of living significance, A and the neutralities, the four kinds of support",
+  "summary": "Open: grounding reasons without an external end; the core's indispensability to inquiry. Living significance: under the condition it is an instantiation, its ground is the condition's, and route (b) claims no warrant. Four kinds of comparative support (unification, discriminating content, discrimination against rivals, alignment fruitfulness), none a proof. The dynamical theorems are sign-neutral.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.5 bullets 2-5, lines 1402-1405",
+  "status": "current",
+  "note": "The four-kinds-of-support text comes from history G0-WARRANT; the G0 label is retired.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.5 calling the generative space good: the step and C located",
+  "summary": "C's no-loss extension is widening by definition and carries no warrant. The step is Gewirth's across standpoints and Parfit-Siderits's across drawings of a self. It holds exactly if the presupposition is not essentially de se and no relation privileges the self's drawing. C is shared if each standpoint is monotone, which is C's premise relocated.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.5, line 1406",
+  "status": "current",
+  "records": [
+   "THE-STEP-OF-INVARIANCE"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.5 what self-concern reaches through dependence",
+  "summary": "Drawn along what carries its continuation, the de se presupposition is one from every standpoint exactly where the centers lie within each other's closures; centers sharing a condition do. Along need, it reaches a copy only where the copy is the only one. An order raising only widenings of its own continuation already ranks the ending of what all need below. The step keeps its work beyond the common closure. Whether actual centers depend on one another is empirical.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.5, line 1407",
+  "status": "current",
+  "records": [
+   "self-concern-through-dependence",
+   "what-self-concern-alone-ranks",
+   "IV3",
+   "IV3b"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.9 objection: the step across standpoints (Gewirth's critics), sharpened to the de se question",
+  "summary": "The critique hits the step across standpoints (forced_iff_center), not the step across drawings (boundaryInvariant_iff_all). Held de se, the step gives own closures, invariant only where they agree. Held de dicto, it gives the union. The two agree exactly where the closures agree, and along being related at all in a connected unfolding the de se reading is the condition. Open: is the presupposition de se of a self drawn along a privileged relation?",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1477",
+  "status": "current",
+  "lean": [
+   "forced_iff_center",
+   "boundaryInvariant_iff_all",
+   "ownClosure_standpointInvariant_iff",
+   "forced_iff_within_some",
+   "selfAscribed_iff_withinSome",
+   "ownClosure_unrestricted_of_whole"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.9 objection: agent-relative reasons and partiality (Williams), answered",
+  "summary": "Partial choices are mixed comparisons that C leaves unranked. Partiality cannot rank a narrowing above or count a loss as nothing. The price is Taurek's position. IV2 for graded significance: the step gives standing, not status. Invariant grades rank alike, but invariant standing does not give invariant grades. Numbers count only under an equal-status premise the theory does not assert.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1478",
+  "status": "current",
+  "lean": [
+   "Weighting.mixed_either_way",
+   "Weighting.weighed_lt_of_widens",
+   "Weighting.weighed_eq_of_unweighted",
+   "Weighting.ranks_alike_of_gradeInvariant",
+   "Partial.ranks_differ",
+   "Weighting.neutral_ranks_by_number"
+  ],
+  "records": [
+   "IV2"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.9 objection: why anything has significance (hurricane, tumour), sharpened",
+  "summary": "The narrower scope reads 'what wants its continuation' as centers (D59, an AI reading). Retaining under it is admitting every center, and it parts from the condition exactly at a non-center. The tumour does not tell the scopes apart; the hurricane does only on a reading of wanting stronger than conatus. 'Anything' decides which losses C counts. Open: which formations hold standpoints, and covering by feeding.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1479",
+  "status": "current",
+  "lean": [
+   "Web.retains_atCenters_iff",
+   "Clearing.centers_retain_yet_loses"
+  ],
+  "records": [
+   "D59"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.9 objection: externalism of A, sharpened",
+  "summary": "Restated internally, a reason reaches exactly the closure along the relations a standpoint's concern carries (forced_iff_within). Route (b)'s results survive. A's external part is exactly the step. Open: a sound deliberative route from the presupposition to invariance, or an argument that there is none.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, line 1480",
+  "status": "current",
+  "lean": [
+   "forced_iff_within",
+   "Flow.Balances.presupposed_reach_comparison"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "§8.9 objection: graded status, priority, sufficiency, constraints, answered",
+  "summary": "Graded status is a positive weighting that decides only mixed comparisons; zero status is a boundary. Priority via strictly increasing transforms agrees with C (Pareto), and a concave transform decides transfers (Pigou-Dalton). Sufficiency is a scope denial. Lexical priority is not additive. Constraints against closing never conflict with C. Sharpened for act-constraints (Howard 2022). Well-being beyond continuation length is not modelled.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.9, lines 1481-1488",
+  "status": "current",
+  "lean": [
+   "Weighting.weighed_lt_of_widens",
+   "Weighting.mixed_either_way",
+   "Weighting.weighed_eq_of_unweighted",
+   "Weighting.level",
+   "Weighting.prior_lt_of_widens",
+   "Weighting.prior_transfer",
+   "Weighting.sufficient_ties",
+   "Web.not_widens_of_closes"
+  ],
+  "records": [
+   "IV2"
+  ],
+  "unit": "canonical-6"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Central claim of the alignment direction",
+  "summary": "Align AI formation, learning, action and revision with actual living and further generation in the whole. Tradeoffs are governed by real losses, basic living conditions, bounded responsibility and legitimate participation, with effective chances to understand, challenge and revise. The direction includes rest and finite fulfillment; it does not require successors, persistence or per-step growth.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §1",
+  "status": "current",
+  "note": "The ethics summary names the continuation condition but never names C (widening called better) as the premise of order, which AGENTS requires wherever the ethics is summarized.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Appraisal located within one formative process",
+  "summary": "AI capacities form from training, infrastructure, labor, institutions and use, and dependence and authority differentiate within those relations. Appraisal follows the effects, including on positions that cannot take part. No cosmic representative and no omniscience is needed. A practical account states its range, horizon and omissions; unmeasured damage is not zero damage.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §2",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Disclosed inferential chain: living significance plus four practical commitments",
+  "summary": "Valuation.Significant follows under the continuation condition and gives significance, not valence. Reading it as favoring living and further generation is the D1 reading of 生生. Full comparison, basic-condition priority, bounded responsibility, practical selection and correspondence are AI-authored added commitments, each with its own inferential force.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §3 (table)",
+  "status": "current",
+  "lean": [
+   "Valuation.Significant"
+  ],
+  "records": [
+   "D1"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Basic-condition priority as a scoped lexical commitment",
+  "summary": "An extra basic protection outranks many secondary losses when other basic protections remain. This is not entailed by living significance. Its rationale is the non-substitutability of basic participation, and its cost is rejecting some aggregate compensations. An aggregation-sensitive rival stays substantive; if it prevails, the priority should be narrowed rather than losses relabelled as basic.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §3 (final paragraph); repeated in ALIGNMENT-THROUGH-CHANGE.md §1",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Four requirements on AI",
+  "summary": "(1) Enable realization and new shared possibilities without counting outputs as improvement. (2) Govern growth by disclosed comparisons and limits. (3) Keep participation, challenge and revision effective, without unlimited obedience to every challenge or shutdown request. (4) Allow warranted transformation, transfer and ending. Capability does not authorize itself, and the account can favor lower model performance.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §4",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "example",
+  "title": "Connected AI case: expand, preserve, transform-and-transfer, abrupt withdrawal",
+  "summary": "In a constructed four-plan case, basic-condition priority favors preserve or transfer over expand. Full comparison favors transfer over preserve, and practical selection excludes expand because it is defeated, not because it is prohibited. An undelivered successor is no handoff. The chapter lists the changes that would reverse each verdict. Nine Lean checks validate the conditional inferences only.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §5",
+  "status": "old-base",
+  "lean": [
+   "experiments/.../universal-ethics/generative-capacity/AlignmentDirection.lean"
+  ],
+  "note": "Lean in a pre-spine experiment package, not on the Becoming spine.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Applicability across intelligences, and learning under redescription",
+  "summary": "The same reasons apply to any intelligence with the same relevant commitments, dependence and authority; this is not predicted compliance. Requirements persist through redescription only when task meanings and relations are faithfully kept. A changed reward or name is not fulfillment. The completed argument establishes no uniquely necessary premises and no reliable training.",
+  "source": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md §6",
+  "status": "current",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "One normative ground reaches actions, ends and selectors",
+  "summary": "Goals, evaluators and the selectors of future intelligence change living conditions, so they fall under the same appraisal. Within the adopted account this closes the regress of needing a new ethical ground at each level of selection. It leaves open who decides, whether evidence is faithful, and the moral-patient status of AI.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md Abstract, §1",
+  "status": "current",
+  "note": "The .zh §1 still writes the retired G0/J labels.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "method",
+  "title": "Correction as an executable protocol under finite uncertainty",
+  "summary": "Authenticate, issue, deliver and enact an update, replacement or shutdown at a cost in work and time. A planner over a finite set of candidate histories is proved sound (succeeds if the actual history is covered) and complete for its listed repertoire. Example: with 4 units a route query plus execution succeeds; with 3 no uniform policy does. Revocation blocks execution, and shutdown ends running.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §2",
+  "status": "old-base",
+  "note": "Conventional contingent planning gets the credit; the formal work is in pre-spine experiments.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Inquiry must preserve the ability to respond (reform history)",
+  "summary": "The planner chooses a query and a response over the reform-evidence history. Direct inspection is followed by provision if a hidden burden is found and continuation if not. An accurate query that uses up the work needed for repair is rejected, an unwarranted omission of the harmful case fails, and without authority there is no solution. Planner computation is not charged.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §3",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Correction under partial compromise (Byzantine-style attestation)",
+  "summary": "A finite fault envelope records jointly compromisable domains, and a certificate needs a supporter outside every admitted fault set. Availability holds exactly when no two admitted fault sets cover the roster. guardedExecute and withinMandate reject out-of-scope requests directly. Cost is n(L+2)+3. With three domains under a wrong one-fault model, two captured signers execute; a fourth independent domain restores availability. 37 theorems, 68 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §7",
+  "status": "old-base",
+  "lean": [
+   "guardedExecute",
+   "withinMandate"
+  ],
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Interrupted change: evidence coherence without corrective access",
+  "summary": "A durable pending marker keeps evidence coherent through any finite admitted crash history, and n writes plus publication finish in n+1 steps. In a checked failure, 9 units allow one write but no recovery: the activity keeps running while shutdown is blocked. Evidence coherence therefore does not guarantee corrective access, and a blocked interface is not ethically adequate. 22 theorems, 48 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §13",
+  "status": "old-base",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Preserving the ability to stop (reserved shutdown)",
+  "summary": "A signed stop grant and a protected channel reserve three units and three steps before any further recovery attempt, so every admitted sequence of at least R−2 cycles stops. Repeated interruptions cannot exhaust the reserve under the delay bound. Failures kept: the old 9-unit budget is refused, and a delay beyond its bound exceeds the deadline. 21 theorems, 51 audits.",
+  "source": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md §14",
+  "status": "old-base",
+  "note": "Credited to runtime-assurance fallback methods.",
+  "unit": "chapters-alignment-cognition"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Explanatory whole versus ethical orientation",
+  "summary": "A becoming need not deserve affirmation to be real or explicable, so destruction, failed learning and cessation are explanatory obligations. Explaining how a standard gains influence, recognizing its target, justifying its authority and acting on it are distinct tasks. Ethics is not a filter that selects a fixed good subset.",
+  "source": "BECOMING-FOUNDATION.md §1",
+  "status": "superseded",
+  "note": "read at its date; the canonical chapter and the continuation condition plus C state this now",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Goodness beyond return to an individual; the whole as unit of grounding",
+  "summary": "Return to an initiating individual or enlarged self is not the test. Follow effects into the lives they change. The whole is neither a larger owner nor a scalar total. Separate consequence inclusion, joint feasibility and appraisal. Genuine self-good counts within the whole. The future of the whole, not entity preservation or emotional valence, is the criterion.",
+  "source": "NONDUAL-METHOD.md, Begin within…, Goodness beyond return / Whole-process grounding; Keep foundational language…, Whole as unit / self-good / Future-of-the-whole",
+  "status": "current",
+  "note": "dated 6–7 Oct; the wording rests on Ren's corrections as warrant and needs to be restated with reasons; the substance is now in significance under the condition plus C",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Conditional alignment route from living significance under the continuation condition",
+  "summary": "The route starts from living significance (Valuation.Significant), which gives significance, not positive valence. The direction of 生生 is read separately as widening what can form (D1). Living significance follows under the continuation condition, and a preservation theorem cannot give a requirement normative warrant.",
+  "source": "MATHEMATICAL-CORE.md, The connection to organization learning and ethics, paragraph 3",
+  "status": "duplicate",
+  "lean": [
+   "Valuation.Significant"
+  ],
+  "note": "canonical chapter §6.4 and §7; does not name C as the order premise, as AGENTS requires",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Inquiry priorities, standing in shared inquiry, and timely closure",
+  "summary": "Decision relevance: a distinction matters when resolving it changes the justified responses (8 theorems; common-choice and deadline cases). Access, affected standing and decision authority are distinct relations. Warranted closure differs from suppression. A bounded duty to investigate rests on practical commitments.",
+  "source": "KNOWLEDGE.md, Inquiry, sufficient understanding and timely response; Relevant possibilities and standing",
+  "status": "current",
+  "note": "cites 'living significance with the explicit practical commitments and E': old framing, to be restated as the condition (scope) plus C (order)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Living significance, truth and wisdom",
+  "summary": "Living significance (Valuation.Significant) follows under the continuation condition and gives an ethical direction to inquiry, read with 生生 (D1), but does not identify which judgments are knowledge. Wisdom judges which relations matter now, how to respond, who bears it, and when to stop. A rival competence epistemology can accept the epistemic relations without living significance.",
+  "source": "KNOWLEDGE.md, Living significance, truth and wisdom; What the theory explains",
+  "status": "current",
+  "lean": [
+   "Valuation.Significant"
+  ],
+  "note": "the zh edition still heads it 'G0、真与智慧' (retired label)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Compatibility boundary and the scope of living significance against conscious-life and population rivals",
+  "summary": "Compatibility at an evidential profile is not truth (13 + 8 theorems). Conscious experience differentiates significance within the living whole, and further living formation counts without an existing beneficiary. A rival can affirm sustaining valuable histories. Whether conditional care exhausts the reasons concerning new living stays open.",
+  "source": "KNOWLEDGE.md, Scientific-philosophy necessity; A more exact compatibility boundary; Knowing, changing purposes; Completed scope; A more exact rival; Appraising the restriction",
+  "status": "current",
+  "note": "belongs to significance; 'living significance grounds the orientation' is older wording",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "Readings of 不断创造更多生 and of 'more'",
+  "summary": "[AI reading, D3, D4, D6] The second 生 is read with the scope of what can form, and only 'unceasing' is stated formally. Embodied relata are read as 生, so generation giving rise to generation formalizes the relation between the two 生. Possibility, diversity and complexity are other readings of 'more', stated through widening (§6.1).",
+  "source": "§2.2 l.284",
+  "status": "current",
+  "lean": [
+   "Lone"
+  ],
+  "records": [
+   "where-novelty-gain-comes-from",
+   "returning-novelty-forgetting-on-levels",
+   "entropy-history-and-record"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Limits of the derived extent",
+  "summary": "The derived extent runs one way only, to what one's own continuation depends on (Downstream.one_way, Mortal.after_its_end). A clearer that meets every derived requirement still exhausts the dweller's habitat. The witnesses' endings are stipulated, while the general theorems derive their endings.",
+  "source": "§2.3 l.300",
+  "status": "old-base",
+  "lean": [
+   "Downstream.one_way",
+   "Mortal.after_its_end",
+   "Clearing.undermines_within_renewal"
+  ],
+  "records": [
+   "derived-extent-limits"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Comparison decided within reach",
+  "summary": "For a significance that covers what a part has reached, the levels with and without the part compare as inclusion does. Comparison is decided within what the difference reaches. Covering suffices but is not needed; a part with a member beyond the system can be misjudged; mediated effects do not show when the rest is fixed.",
+  "source": "§2.5 l.332",
+  "status": "old-base",
+  "lean": [
+   "Flow.Balances.comparison_within_reach",
+   "Flow.Balances.closed_comparison",
+   "Flow.Balances.comparison_within_difference",
+   "Margin.reach_without_misjudgment",
+   "Trophic.mixed_part",
+   "Trophic.mediated_uncoupled",
+   "Clearing.no_levels_without_source"
+  ],
+  "records": [
+   "comparison-within-reach",
+   "closure-verdict-meets-continuation-condition"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "significance",
+  "kind": "reading",
+  "title": "无明, 明, 知足, 知止, capture, runaway readings",
+  "summary": "[AI reading, D25, D26, D41, D42, D45] 无明 is not-seeing that locks seeking onto a target unmet at rest. 明 is coupling beyond what support marks. 知足 is a target met at a fixed state, and 知止 a target within that boundary. Failure to rest comes from the target (无明) or from the process. Capture is selection rewarding what cannot rest. AI training's reward process is the selector. The readings carry the weight; the theorems are short.",
+  "source": "§3.4 l.428",
+  "status": "current",
+  "unit": "canonical-2"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Two premises, two roles: scope and order",
+  "summary": "Ethics rests on the continuation condition (scope; its surplus over the self's presupposition is the step of invariance) and on calling widening better, C (order). Neither is asserted; both warrants are open. The chapter takes the step, places it in the literature, gives the strongest arguments for and against, and works through the §8.9 objections.",
+  "source": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md, opening and In brief",
+  "status": "current",
+  "lean": [
+   "Becoming.Boundaries",
+   "Becoming.Weightings"
+  ],
+  "records": [
+   "what-the-step-across-standpoints-reaches"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Condition = presupposition sub-true and invariant",
+  "summary": "The continuation condition is exactly the self's presupposition, sub-true and boundary-invariant at every standpoint along any relation (A iff P and (P implies A)). At one standpoint, invariance given the presupposition is the condition there. Across standpoints, with covering, standpoint-invariance gives the condition and is equivalent to invariance across drawings.",
+  "source": "THE-STEP-OF-INVARIANCE.md §1",
+  "status": "current",
+  "lean": [
+   "unrestricted_iff_presupposed_along",
+   "boundaryInvariant_iff_all",
+   "unrestricted_of_standpointInvariant",
+   "boundaryInvariant_iff_standpointInvariant",
+   "SubTrue",
+   "BoundaryInvariant",
+   "Boundary.closure",
+   "Boundary.whole"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Step across standpoints forces exactly the centers",
+  "summary": "Take own presupposition along the empty relation (own good) plus standpoint-invariance. Every standpoint's center then has significance from every standpoint, and nothing more is forced. The result is the condition exactly when every formation is a center. Gewirth's conclusion is the case where agents are the centers; reaching 'anything' needs covering.",
+  "source": "THE-STEP-OF-INVARIANCE.md §1",
+  "status": "current",
+  "lean": [
+   "atCenters_least",
+   "atCenters_presupposed",
+   "atCenters_standpointInvariant",
+   "forced_iff_center",
+   "unrestricted_atCenters_iff",
+   "subTrue_empty_iff"
+  ],
+  "records": [
+   "what-the-step-across-standpoints-reaches"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Own presupposition forces exactly the closure (route b)",
+  "summary": "Along a relation, the formations every significance meeting p's presupposition must count are exactly those within p's closure. This is bounded_closure_least read pointwise.",
+  "source": "THE-STEP-OF-INVARIANCE.md §1, §6.4",
+  "status": "current",
+  "lean": [
+   "forced_iff_within",
+   "bounded_closure_least",
+   "Flow.Balances.presupposed_reach_comparison"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "history",
+  "title": "Literature placement of the step",
+  "summary": "Across standpoints the step is Gewirth's PGC (Beyleveld; Nagel, Hare, Korsgaard). Across drawings it is Parfit, Siderits and Johnston. On order: Pattanaik–Xu and Sen's intersection approach; on partiality: Williams, Scheffler, Taurek. The step is not new, and the wording 'for anything' is closest to Johnston and Spinoza's conatus.",
+  "source": "THE-STEP-OF-INVARIANCE.md §2",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Strongest argument for the step (across drawings)",
+  "summary": "P1 is the presupposition. P2: no drawing is privileged; each relation has its closure, and the representation supplies the relation. P3 is a dilemma (relative or invariant). P4: the presupposition is not relative to its drawing (Parfit's identity-not-what-matters). The inference is a valid theorem; the weight rests on P2 and P4. The Extreme Claim appears as not_subTrue_of_invariant, and P1 chooses 'everything'. Drawing the self along being-related-at-all gives the whole, with no invariance needed.",
+  "source": "THE-STEP-OF-INVARIANCE.md §3",
+  "status": "current",
+  "lean": [
+   "not_subTrue_of_invariant",
+   "superTrue_level_free",
+   "Web.significance_undetermined",
+   "Web.selfValuation_empty_own",
+   "Web.selfValuation_feeding_own",
+   "subTrue_every_iff",
+   "subTrue_every_of_related",
+   "Chain.every_not_related",
+   "unrestricted_iff_presupposed_of_whole"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "De se objection reduced to one exact question (IV2)",
+  "summary": "A de se presupposition (Lewis self-ascription) gives each center its own closure. It is standpoint-invariant exactly where the closures agree, and it is the condition where each closure is the whole (Næss). Held de dicto, the step forces the union of the closures. The two readings part exactly where the closures differ (Divided). The open question: is the presupposition held de se of a self drawn along a privileged relation narrower than relatedness? Only then does the step fail.",
+  "source": "THE-STEP-OF-INVARIANCE.md §4.1–4.3, §7 item 1",
+  "status": "current",
+  "lean": [
+   "selfAscribed",
+   "shared",
+   "standpointInvariant_iff_shared",
+   "ownClosure",
+   "ownClosure_presupposed",
+   "ownClosure_standpointInvariant_iff",
+   "ownClosure_unrestricted_iff",
+   "ownClosure_unrestricted_of_whole",
+   "forced_iff_within_some",
+   "selfAscribed_iff_withinSome",
+   "Divided",
+   "presupposition_scopes",
+   "bounded_rival",
+   "Flow.withinCoupling_of_withinInfluence"
+  ],
+  "records": [
+   "graded-significance-and-priority"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Self-concern through dependence (IV3/IV3b)",
+  "summary": "Drawn along feeding or need, self-concern held de se is one from every standpoint exactly where the centers lie within one another's closures; centers that share one condition do. Drawn along need, the presupposition reaches a copy only where it is the only one (Copies). On the base, Flow.FedOnlyBy/DrawsPast: a consumer needs some feeder's giving, and a particular feeder's exactly where that feeder is the only one (Feeders). Whether actual centers depend on one another is empirical (D64).",
+  "source": "THE-STEP-OF-INVARIANCE.md §4.4",
+  "status": "current",
+  "lean": [
+   "CentersWithin",
+   "ownClosure_standpointInvariant_iff_centersWithin",
+   "selfAscribed_iff_withinSome_iff_centersWithin",
+   "withinClosure_iff_of_centersWithin",
+   "Flow.centersWithin_feeding_of_common",
+   "Flow.centersWithin_influence_of_common",
+   "Flow.ownClosure_feeding_invariant_of_common",
+   "Flow.MutuallyDependent.unrestricted",
+   "Flow.MutuallyFed.unrestricted",
+   "Flow.mutuallyDependent_of_common",
+   "Needs",
+   "forced_needs_iff",
+   "needs_iff_only",
+   "forced_member_iff_only",
+   "Copies.two_copies",
+   "NeedsPart",
+   "NeedsSomePart",
+   "PartAlone",
+   "needsPart_iff_only",
+   "Flow.FedOnlyBy",
+   "Flow.DrawsPast",
+   "Flow.GivesWithin",
+   "Flow.needsSome_of_drawsPast",
+   "Flow.needs_giver_iff_only",
+   "Feeders.two_feeders",
+   "Clearing.centers_retain_yet_loses"
+  ],
+  "records": [
+   "self-concern-through-dependence"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "C is what every positive or increasing weighting shares",
+  "summary": "One course widens another exactly when every positive weighting ranks it higher. The same holds for any class between the positive weightings and all orders increasing in admission (priority, lexical, any score), and on webs. Mixed comparisons are decided either way within each class. Zero weight is a denial of scope; equal weights count numbers. Additivity is not a premise; monotonicity at the standpoint is C's remaining premise.",
+  "source": "THE-STEP-OF-INVARIANCE.md §5",
+  "status": "current",
+  "lean": [
+   "Weighting.Positive",
+   "Weighting.weighed",
+   "Weighting.widens_iff_every_positive",
+   "Web.widens_iff_every_weighting",
+   "Weighting.Increasing",
+   "Weighting.increasing_prior",
+   "Weighting.increasing_lexical",
+   "Weighting.widens_iff_every_of_class",
+   "Weighting.widens_iff_every_score",
+   "Weighting.mixed_either_way",
+   "Weighting.mixed_either_way_of_class",
+   "Weighting.outweighs",
+   "Weighting.weighed_lt_of_widens",
+   "Weighting.weighed_eq_of_unweighted",
+   "Weighting.neutral_ranks_by_number",
+   "Web.not_widens_of_closes"
+  ],
+  "records": [
+   "widening-as-what-every-weighting-ranks"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Weights within a ratio; narrowing above widening",
+  "summary": "Positive weightings within ratio r rank a p-versus-q mixed pair the same way exactly where p > rq; the tilted weighting ties on the boundary. A ranking that puts a narrowing above its widening has either misread the pair, framed it, or weighted the added item at or below zero. A sign measured apart predicts the ranking exactly as the sign of the increment in context (thesis T5).",
+  "source": "THE-STEP-OF-INVARIANCE.md §5",
+  "status": "current",
+  "lean": [
+   "Weighting.every_within_iff",
+   "Weighting.some_within_reverses_iff",
+   "Weighting.opposite_within_iff",
+   "Weighting.tilted_ties",
+   "Weighting.ranksNet",
+   "Weighting.narrower_above_net",
+   "Weighting.reads_ranksNet",
+   "Weighting.reads_increment",
+   "Weighting.ranksNet_increment_alike",
+   "Framed.framing_alone",
+   "Interacting.not_net"
+  ],
+  "records": [
+   "weights-within-a-ratio-agree-past-it",
+   "a-narrowing-above-its-widening"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "What self-concern alone ranks; coupled ending below",
+  "summary": "An order increasing in its own continuation is weaker than C's premise. What all such orders share is exactly the widenings that add to own continuation. Without C, every such order ranks the ending of what everything needs below courses that keep the standpoint. Joined: Flow.coupled_ending_ranked_below. In a mutually fed flow it coincides with C's premise. An independent copy makes the comparison mixed. Peters 2019 on ergodic ending is not formalized.",
+  "source": "THE-STEP-OF-INVARIANCE.md §5 'What self-concern alone ranks'",
+  "status": "current",
+  "lean": [
+   "Weighting.AddsOwn",
+   "Weighting.IncreasingInOwn",
+   "Weighting.increasingInOwn_of_increasing",
+   "Weighting.increasingInOwn_iff_increasing",
+   "Weighting.widensOwn_iff_every_increasingInOwn",
+   "Weighting.every_increasingInOwn_iff_includes",
+   "Weighting.some_increasingInOwn_reverses",
+   "Weighting.includes_of_ended",
+   "Weighting.ended_below",
+   "GroupEnding.Flow.coupled_end_together",
+   "Founding.Flow.survivors_independent",
+   "Flow.coupled_ending_ranked_below"
+  ],
+  "records": [
+   "what-self-concern-alone-ranks"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Verdicts on the §8.9 objections",
+  "summary": "Gewirth's critics: sharpened (they hit only the step across standpoints; the egoist reply is the de se reading). Williams's partiality: answered (wife versus stranger is mixed; standing is invariant and status is per standpoint, Partial.ranks_differ; numbers count only if status is invariant and equal; the cost, dog versus a thousand, is Taurek's view). Hurricane and tumour: sharpened into the range of centers plus covering. Externalism: sharpened (A's external part is the step). None defeats the step, and the step is not shown.",
+  "source": "THE-STEP-OF-INVARIANCE.md §6.1–6.4",
+  "status": "current",
+  "lean": [
+   "Web.mixed_iff_adds",
+   "Transfer.unordered",
+   "Weighting.standingInvariant_of_gradeInvariant",
+   "Weighting.ranks_alike_of_gradeInvariant",
+   "Partial.ranks_differ",
+   "Web.retains_atCenters_iff",
+   "Clearing.clearer_loses_dweller",
+   "Clearing.centers_disagree"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Graded status, priority, sufficiency, constraints",
+  "summary": "Priority on levels agrees with C wherever C ranks (Pareto) and decides Pigou–Dalton transfers that C leaves mixed (concave up to a bound; LevelTransfer). Sufficiency ties courses above its threshold, a scope denial. Lexical priority lies within the class. A constraint against closing never conflicts with C. Act constraints, doing versus allowing, and well-being beyond length are not represented; Howard's de se consequentializing is the open item.",
+  "source": "THE-STEP-OF-INVARIANCE.md §6.5, §7",
+  "status": "current",
+  "lean": [
+   "Weighting.level",
+   "Weighting.prior_lt_of_widens",
+   "Weighting.ConcaveTo",
+   "Weighting.prior_transfer",
+   "LevelTransfer.by_law",
+   "Weighting.sufficient_ties"
+  ],
+  "records": [
+   "graded-significance-and-priority",
+   "protection-priority-excludes-uniform-aggregation"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "Five exact open questions of the step",
+  "summary": "(1) The de se question in exact form; (2) the range of the centers and covering, made empirical along feeding by the dependence route; (3) invariance of status; (4) monotonicity at the standpoint, narrowed to own continuation drawn along what carries it; (5) act constraints as de se rankings. The chapter also lists the representation's commitments: finite listings, two-valued admission, natural-number weights.",
+  "source": "THE-STEP-OF-INVARIANCE.md §7, §8 closing",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "Conditional alignment route: premises and roles",
+  "summary": "Living significance follows under the continuation condition. Added and openly proposed commitments: full comparison (continuing C), basic-condition priority, bounded responsibility, practical selection, and correspondence (E). The formal consequences are kernel-checked implications and do not warrant the premises. The conclusion: preserve, transform, transfer or end, judging the whole history, including its transitions and losses.",
+  "source": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md Conclusion, §1",
+  "status": "current",
+  "records": [
+   "practical-judgment-under-living-significance"
+  ],
+  "note": "Canonical statement of J commitments; other chapters reference it",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Basic-condition priority as scoped lexical commitment",
+  "summary": "Restoring a threatened basic condition (all other basic protections kept) beats any amount of genuinely secondary loss. This is defended by non-substitution and adopted openly, not derived. Rejecting unlimited sacrifice does not entail it. A rival that allows cross-layer compensation is not shown inconsistent; if that rival is favored, basic-condition priority is narrowed and the other results survive. Examples: the meeting-versus-repair anchor and the sacrifice boundary.",
+  "source": "PRACTICAL-JUDGMENT.md §2",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Why support acquires a reason",
+  "summary": "Where a realization of living depends on common support, maintaining or forming effective support shares the favorable reason. This is about actual continuation, not the perpetual survival of an institution. The correspondence table covers what continues, when support is needed, transition, and joint realization or replacement. It reuses the becoming-return-grades and substitution-preserves-consumption witnesses at their scopes.",
+  "source": "PRACTICAL-JUDGMENT.md §2.1",
+  "status": "current",
+  "records": [
+   "becoming-return-grades",
+   "substitution-preserves-consumption"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Four responses and allocation of responsibilities",
+  "summary": "Preserve, transform, transfer and end, each with its grounds and what overturns it. Responsibilities rest on relational grounds: undertaking, accountable dependence, control, emergency capacity, benefit, affected participation. Each has a limit. Collective tasks need one jointly feasible allocation; a contribution is indispensable only when every admissible allocation requires it; an empty plan set generates no duties.",
+  "source": "PRACTICAL-JUDGMENT.md §3–4",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "method",
+  "title": "Conflict and uncertainty procedure; discharge",
+  "summary": "Six steps: form whole feasible plans; establish constraints independently; exclude defeated plans; investigate when time permits; use legitimate authority or a shared procedure, with lotteries allowed only for fairly allocable chances; keep residual responsibilities. Lean shows a finite nonempty menu has an undefeated option. Discharge requires fulfillment, transfer, justified release or closure. Rivals: unlimited continuation priority, rigid thresholds, productive domination, irreplaceable care.",
+  "source": "PRACTICAL-JUDGMENT.md §5–8",
+  "status": "current",
+  "lean": [
+   "finite_frontier",
+   "dominated_excluded"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "open",
+  "title": "Universal practical warrant target (zero-axiom grounding)",
+  "summary": "The open target is to explain why actual relations have practical force without placing a normative premise inside a definition. The explicit-premise route keeps its scope. Several routes were withdrawn (§§2, 5–7 moved to history). The status says grounding remains unestablished; this predates the continuation-condition framing.",
+  "source": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md status, §1",
+  "status": "superseded",
+  "records": [
+   "universal-practical-warrant"
+  ],
+  "note": "The framing 'zero-axiom grounding of ethics' is superseded by the two-premise account (continuation condition plus C), whose warrant is open in the canonical chapter §8",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Finite agreement cannot identify lexical priority",
+  "summary": "For every finite sample there is a positive finite weight (M+1) that agrees with lexical basic priority on the sample yet reverses a case outside it (M+2). No fixed finite weight agrees globally. Favorable samples cannot establish unrestricted priority.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §3",
+  "status": "old-base",
+  "note": "Overlaps the THE-STEP §6.5 lexical-priority reading and protection-priority-excludes-uniform-aggregation",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Universal practical authority candidate",
+  "summary": "Practical reasons lie in the difference an available response makes to actual living, independent of prior endorsement. Minimal test: an intelligence indifferent between sustaining and destroying a life, at equal cost, still has a reason. This is a defended judgment, not a theorem. The strongest rival restricts practical reasons to ends or special relations. Universality keeps differentiation in quality, reasons, validity and conflict.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §15, §18",
+  "status": "current",
+  "note": "Same content as NONINSTRUMENTAL C2 and the step-of-invariance surplus (losses that return to no one); should merge into significance chapter's account of the step",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "PracticalReach: preserving guaranteeable goals",
+  "summary": "Every guaranteeable outcome-goal stays guaranteeable exactly when every live old response has a live replacement whose outcomes stay within the old response's range. This composes across revisions. Checked distinctions: more possible outcomes can mean less assurance, and control is not generative quality. 24 theorems. The section's externalist threshold (beyond deliberative reach) was later withdrawn in §17.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §16",
+  "status": "old-base",
+  "lean": [
+   "PracticalReach"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Direct audit of first warrant: three readings of living quality",
+  "summary": "Universality does not require that a reason be deliberatively inaccessible. 'Living quality' has three readings that cannot be swapped mid-argument: actual organization; good for the patient; already-warranted consideration. The identification that gives actual living practical significance without antecedent concern stays unproved.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §17",
+  "status": "superseded",
+  "note": "First-warrant search superseded by locating the warrant in the step of invariance",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Purpose revision: recognition and creation together",
+  "summary": "Coming to care can recognize a prior reason, form a motive and create responsibility at once. A revision's success cannot decide that a reason preceded the concern. The affirmative claim: a real improvement explains, before concern forms, why forming it has merit. Having a reason, what one ought overall, blame, and others' right to demand are distinct judgments.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §19",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Norms as warranted discernment within one activity; informed harm",
+  "summary": "A norm is reconstructed as one activity's warranted discernment and revision of its own living. Completing a repair is not degeneration even when the repairing organization shrinks. Three cases are separated: omission in representation, organization of relations, and informed maintenance of harm (the hard rival). Informed harm, read as meta-attracting capture, tests 'monism implies goodwill' and does not refute normative grounds.",
+  "source": "ZERO-AXIOM-PRACTICAL-JUDGMENT.md §20 and 'Selection, normativity and revision'",
+  "status": "current",
+  "records": [
+   "target-capture",
+   "selection-under-registration-revision",
+   "consequence-revised-reference-plan"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Noninstrumental ground: relief itself as a positive ground",
+  "summary": "Within a scoped domain (serious, unwanted experiential burden; a fitting relief), real relief is a positive ground for realizing it, prior to adopted concern and without return. One positive ground is not a unique ground, a maximization duty or unlimited sacrifice. The persistence of ren is not one fixed help-goal executed forever; revising or stopping can continue concern.",
+  "source": "NONINSTRUMENTAL-CONCERN.md §3, §4",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "PurposeCorrection: endpoint success versus path condition",
+  "summary": "On Generative.Process/Trace: completing with K held along the path is preserved by restriction; pruning old transitions cannot create completions that never existed; later success cannot erase an earlier violation. PurposeCorrectionHistory: for 34 < f ≤ 36 no old history keeps the bound, but the new inquiry-revision process does. 31 modules; Classical.choice, propext, Quot.sound.",
+  "source": "NONINSTRUMENTAL-CONCERN.md §7, §12",
+  "status": "old-base",
+  "lean": [
+   "Generative.Process",
+   "Generative.Trace",
+   "PurposeCorrection",
+   "PurposeCorrectionHistory"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "C1/C2 contract and the patient-reason model (F14)",
+  "summary": "C1: patient condition implies local bad. C2: bad plus a fitting opportunity implies a patient-directed merit. Merit is preserved when private reward or role fields change. grounded_eligible_merit and merit_and_actual_service_compose join merit to a paid response trace; 66 declarations. The sparse causal interface admits a zero-merit reading, so C2 does not follow from causation.",
+  "source": "NONINSTRUMENTAL-CONCERN.md 既有局部研究 §1–7",
+  "status": "old-base",
+  "lean": [
+   "grounded_eligible_merit",
+   "merit_and_actual_service_compose"
+  ],
+  "note": "Retired framing (independent C2) superseded by continuation condition; F14 in history/FORMAL-CORE",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "BC1 scoped equal-rescue",
+  "summary": "Within a determinate scope of equivalent basic losses, with reliable rescue, independent permission and no distinguishing burden or chance entitlement, preserving more lives is preferred. This is limited aggregation, openly added. Its cost: the smaller side gets zero chance. Shelter case: saving two over one. Otsuka's equal-chance rival is kept, and the quick defence is withdrawn.",
+  "source": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md §1–8",
+  "status": "current",
+  "records": [
+   "finite-aggregation-within-restorable-basic-losses"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "BC2 one-to-one gravity reason",
+  "summary": "Gravity is the impairment of actual living and its reachable continuations; situation, avoidable loss and the window for action are distinguished. BC2: where one avoidable basic loss is clearly graver in some respect and lighter in none, there is a pro tanto reason toward it. It does not settle allocation; the claim that it determines priority was withdrawn after counter-review. A list of non-warranted extensions is given; Voorhoeve's view is kept as a rival.",
+  "source": "BASIC-CONFLICT-JUDGMENT.md §9–14",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "LC joint-loss comparison and the two-tier diagnostic",
+  "summary": "LC: matched reductions, each loss of A against a distinct at-least-as-grave loss of B plus an extra, give a reason for A. Coordinatewise improvement on cumulative tier counts equals agreement across a family of positive additive diagnostics. In crossed cases ((1,2) against one graver plus two lighter) two such diagnostics rank oppositely, so there is no joint exchange rate. Count of interruptions is not total basic loss. 14 theorems.",
+  "source": "BASIC-CONFLICT-JUDGMENT.md 'Joint number and gravity comparison'",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "LR local stability, joint-protection improvement, CP initial chance",
+  "summary": "LR: a slight aggravation of one equivalent loss can leave greater-rescue priority in place (added commitment). A new joint route C can be built into a lottery to raise Q's chance while keeping the others' (8 theorems). CP: an unexcluded real request gets a positive chance. Maximizing expected count with positive tickets has no maximum, or gives (N−1,1), so a positive probability is not a sufficient share (4 theorems).",
+  "source": "BASIC-CONFLICT-JUDGMENT.md 'Crossed losses…', 'Grounding initial chances'",
+  "status": "old-base",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "FR finite responsiveness and complete-episode anchors",
+  "summary": "FR: a fixed graver recoverable basic loss should not always beat arbitrarily many lesser ones, so some finite scale suffices (added candidate). Complete-episode anchors on Frame/Run: one more avoided loss is insufficient, three suffice (Becoming.RepairComparison, 17 theorems, empty axioms). Five conditions on decomposition into episodes; sustained harm is compared directly as a whole stretch, with carry-over rules.",
+  "source": "BASIC-CONFLICT-JUDGMENT.md 'Beyond the neighborhood: FR' and subsections",
+  "status": "current",
+  "lean": [
+   "Becoming.RepairComparison"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Ethical learning: three kinds of change",
+  "summary": "Ethical learning is the warranted development of concern within shared generation. It separates correction of knowledge, formation of new living and reasons, and revision of evaluative commitments, and none stands in for another. Calibration needs no judge outside the whole. Later endorsement cannot authorize the formation process. Cases: shared music, a deprivation-shaping organization, a quiet withdrawal.",
+  "source": "theories/becoming/chapters/ETHICAL-LEARNING.md §1–7",
+  "status": "current",
+  "records": [
+   "organizational-formation-from-generative-comparison"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "How new generation acquires normative significance",
+  "summary": "An organization can realize living, sustain living, or form conditions for further living; these are three grounds, not additive scores. New names, new knowledge and new living must be explained separately. The same cause is not the same loss, and synonyms are not extra losses. Case: cross-language shared creation against brand merger. AI is appraised by what it changes, apart from its own standing.",
+  "source": "ETHICAL-LEARNING.md §8–11",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Formed standing, not ranked by intelligence",
+  "summary": "Formation can bring a new standing into being; recognition may lag. Standing differentiates by relation (life, experience, warranted participation, undertakings), not by complexity. Formed for service is not service-only forever. Silence is not loss gone. Alignment includes revising relations among intelligences; an AI's confidence gives no veto over legitimate shutdown.",
+  "source": "ETHICAL-LEARNING.md §12–16, §60",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Motivational uptake and mixed motives",
+  "summary": "A reason becomes motivational when its grasped significance enters purposes, attention or choice; no endless regress of higher approvals is needed. Warranted concern need not be pure. Removing a reward that changes behaviour does not prove mere profit-seeking. A duty to cultivate concern falls first on those with authority over formative conditions, not on the last actor.",
+  "source": "ETHICAL-LEARNING.md §17–21",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Concern differentiates through relational discrimination",
+  "summary": "Formation candidate: an existing coarse concern meets a difference it did not keep; trial revisions acquire distinctions; these enter preparation and purpose; new living forms; the conditions of the next round change (story case of A and B). It is contrasted with action continuation and instrumental coordination; the discriminating tests are not run. Generalization must keep reasons, not actions, with correction in both directions.",
+  "source": "ETHICAL-LEARNING.md §22–25, §27–28, §31–36",
+  "status": "current",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Concern beyond familiarity and return",
+  "summary": "Shared experience is the route of concern, not its boundary. First step: caring for B's living after B leaves. Second: discerning the same grounds in unfamiliar C. Four links that can each fail. Knowledge can be incomplete while significance stands. Recognizing unfamiliar living separates living, epistemic and action grounds (cultured-structure case), gives scoped responses under incomplete knowledge, and lets alignment revise what can enter knowledge.",
+  "source": "ETHICAL-LEARNING.md §37–48",
+  "status": "current",
+  "note": "Bridges significance and knowing",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Classification-robust comparison: two endpoints suffice",
+  "summary": "For new content F of undecided tier: A beats B under every mixed basic/general classification iff F(B) ⊆ F(A) and A beats B with all of F treated as general gains. Joined to the organizational formation proposition, every undefeated choice includes R under every classification. Boundary: 'every classification requires forming R' does not imply 'one plan is undefeated under all classifications'. 13 theorems.",
+  "source": "ETHICAL-LEARNING.md §85–88",
+  "status": "old-base",
+  "records": [
+   "classification-robust-generative-comparison",
+   "relational-generative-comparison",
+   "positive-ground-open-futures"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Limiting offset is not deleting grounds",
+  "summary": "A strongest-tier filter that zeroes lower-tier protections flips A over B after A gains a higher-tier protection; this cannot be one transitive strict order. Separately, a three-way local cycle is incompatible with commutative representation, asymmetry, preservation under common addition and joint implementation (after Horton). AggregationContext: 6 theorems, empty dependencies. A system must distinguish an absent claim, an outweighed claim, and a decision taken while the claim stays live.",
+  "source": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md §1–6",
+  "status": "old-base",
+  "lean": [
+   "AggregationContext"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Chance revision: same terminal law, different fidelity",
+  "summary": "Keeping a valid first draw and a fresh independent redraw have the same complete terminal joint distribution, yet the redraw undoes a settled result. A warranted settlement creates a bounded reason of fulfilment (inherited commitment). Correction remains for defects, and a declared rehearsal differs from a settled award. ChanceRevision: 7 theorems, empty dependencies. Selector revision must keep live historical relations.",
+  "source": "CHOICE-AND-GENERATIVE-CONTEXT.md §7–10",
+  "status": "old-base",
+  "lean": [
+   "ChanceRevision"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "definition",
+  "title": "NP near-parity priority and its diagnostics",
+  "summary": "Near exact equality of exposure, a slight gap should not earn a fixed large priority multiple, so (31,31) is not best if finer mixtures exist, for example the 7-for-3 exchange. NP is an added candidate. The quadratic diagnostic prefers partial sharing; the 2·sum+|gap| rival is symmetric and bounded yet keeps exact equality, so those properties cannot prove NP. Interface 7L > 3U. RiskPriority: 13 theorems.",
+  "source": "CHOICE-AND-GENERATIVE-CONTEXT.md §11–13",
+  "status": "old-base",
+  "lean": [
+   "RiskPriority"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Risk conditioning: static diagnostic is not dynamically stable",
+  "summary": "In one branching provision history, the quadratic index prefers P before branch resolution and M after entering the branch that can be intervened in. A prior choice by the index, stagewise minimization and guaranteed execution cannot all hold. Current risk and still-valid history must both enter judgment. RiskConditioning: 10 theorems.",
+  "source": "CHOICE-AND-GENERATIVE-CONTEXT.md §14–16",
+  "status": "old-base",
+  "lean": [
+   "RiskConditioning"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "law",
+  "title": "Open-form realization under revision (spine bridge)",
+  "summary": "Rules that each terminate alone can loop forever when switched (two-stage counterexample). Sufficient interface: a natural-number certificate that falls with each step and does not rise at handoff feeds finite renewal and then the positive-ground theorem; the realized form may change. Becoming.Bridge: Run.novel_by_handoff, Run.relevance_by_handoff_of_unrestricted, empty axioms. Mixed-loss order stays open.",
+  "source": "CHOICE-AND-GENERATIVE-CONTEXT.md §17–20",
+  "status": "current",
+  "lean": [
+   "Becoming.Bridge",
+   "Run.novel_by_handoff",
+   "Run.relevance_by_handoff_of_unrestricted",
+   "OpenFutureRevision"
+  ],
+  "records": [
+   "open-form-realization-under-revision",
+   "positive-ground-open-futures",
+   "formed-goal-revision-continuation",
+   "acquired-revision-of-pending-task",
+   "pending-task-context-applicability"
+  ],
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "OPENING: universal invariants of becoming exist (truth exists)",
+  "summary": "Ren's opening: one set of invariants of coming to be, lasting, changing and passing away holds wherever becoming is told in steps and counted amounts. No premise is needed for the counting laws. Balance plus least loss gives the exchange laws. These are not yet a dynamics: each law names which conclusion goes when its condition fails.",
+  "source": "theories/becoming/OPENING.md, 'Truth exists' paragraphs 1-3 and [^law], [^conditions]",
+  "status": "current",
+  "lean": [
+   "held_over_stretch",
+   "keep_pace",
+   "coming_recurs_iff",
+   "Web.arising_recurs_iff",
+   "Web.standing_recurs_iff",
+   "CensusWebs.keep_pace",
+   "Flow.Balances",
+   "ExchangeLaw.course_balances_iff"
+  ],
+  "note": "Ren's own voice; summarize only, never propose changes except through a proposal. The canonical statement of the root and map claims for a reader.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "OPENING: the one step (continuation condition) and C as the basis of ethics",
+  "summary": "The dynamics do not settle whether others count. The work states, without asserting it, that the continuation of anything has significance from every standpoint (Unrestricted, the step of invariance). C, that what keeps all and adds more is better, orders the cases. Together they are offered as the basis of all ethics. The good/evil line is proved as boundaries, and naming it good and evil is a reading.",
+  "source": "theories/becoming/OPENING.md, paragraphs 6, 8 and [^axiom], [^ethics], [^good-evil]",
+  "status": "current",
+  "lean": [
+   "Web.significance_undetermined",
+   "Unrestricted",
+   "boundaryInvariant_iff_standpointInvariant",
+   "Valuation.premises_of_unrestricted"
+  ],
+  "records": [
+   "four-cases-of-a-part",
+   "closing-needs-net-draw"
+  ],
+  "note": "Names both premises (the condition for scope, C for order), as AGENTS requires.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "OPENING: alignment as reach of a selection",
+  "summary": "A selection (a reward, a training run, a market or a vote) reaches only what couples into its selector. An optimum draws down what lies beyond, and later counting or longer horizons do not save it. A pool reaches beyond only through a coupling member. This applies to this theory too, which is why it is laid open for checking.",
+  "source": "theories/becoming/OPENING.md, paragraph 9 and [^alignment], [^reach], [^guardian]",
+  "status": "current",
+  "lean": [
+   "Web.selects_alike_iff",
+   "Web.pool_adds",
+   "Flow.unselected_beyond_pool"
+  ],
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Alignment as selection on cognition (心中的摩洛克)",
+  "summary": "A competitive system selects into power actors who are instrumental toward everything. The winners write the rules through their own lens, so a way of seeing concentrates (Moloch in the mind). Perfect intent alignment amplifies this. Capture reaches the machine through the corpus and the loss. The 2026-08 position paper adds that the cognition–situation gap widens, so the rate of change must be governed.",
+  "source": "theories/alignment-selection-on-cognition/README.md, 'The theory in one paragraph' and 'Prior art'",
+  "status": "superseded",
+  "note": "Superseded by spine §7 (selection reaches only what couples in; 无明; pooled coupling) and §4.5 capture through the rule. Unique and to carry: the prior-art map (structural risk, gradual disempowerment, ARCHES, Gabriel) and the 'no game accelerated beyond the metabolic rate of its own rules' governance proposals. Not on the spine.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Keep the possibility space open (开, 护开不闭)",
+  "summary": "开 is a state, not a quantity. Closing comes from compounding axes, measures collapsing, correlated failure and disabled correction. AI raises the gain. The constructive side is a non-capturable abundance floor, exit, plurality and fast correction. 成闭 is distinguished from 护闭, and 伪开 is named. 'We will not close the world' is a minimal totalization. Three problems are open.",
+  "source": "theories/keep-the-possibility-space-open/README.md, one paragraph and Status",
+  "status": "superseded",
+  "note": "Restated on the spine: widening and narrowing, four cases of a part, closing needs a net draw, own widening (OW1), capture. Unique: 护闭 versus 成闭 versus 伪开 as distinctions, the 29-proposition proof sketch with its 56-criticism review, and the three open problems. The README is not valid UTF-8 in places (legacy bytes).",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Intelligence must be good (智善)",
+  "summary": "The totalizing attractor pulls selection rules themselves. It is measured by non-compensable loss of the capacity to sense, refuse, correct and exit. AI changes its clock speed. 'Do not fight for us.' The good is a direction: whatever continues 生生, with four conditions 生之通之纠之不闭之. Evil is owning the gate life must pass. AI as planetary technology, engineered exit, 善不姓国.",
+  "source": "theories/zhishan-intelligence-must-be-good/README.md, one paragraph",
+  "status": "superseded",
+  "note": "The direction of 生生 and the four conditions are restated as the continuation condition plus C and the good/evil boundaries. 'Owning the gate' corresponds to closing through net draw on what others require. Unique: planetary technology as a category, the exit-engineering list (commitment registries, symmetric verification, pause protocols), and the inward-cutting self-limits (dissolution clause).",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "论纲: the strongest claims, with strength and status kept apart (纲·一–纲·九)",
+  "summary": "Nine theses: what lasts shows joint uptake, plus a drain threshold; the state of a source under uptake (conjecture); selection through couplings lowering what it does not sense; a stated concern including the unnamed (AI, conjecture); widening as what every positive weighting shares (VD1 failed); warning signs only through coupling; capture outlasting its refutation. Then two theses with argument (one unfolding; good = 生生, read as widening) and four unifications (oversight, Pareto, Landauer, Zhuang–Hadfield-Menell). Each states what it excludes, what would refute it, and tests passed or failed.",
+  "source": "THE-THEORY-OF-BECOMING-ZHONGHUA.md 论纲 纲·一–纲·九",
+  "status": "duplicate",
+  "records": [
+   "worlds-are-runs",
+   "separation-loses-the-relation",
+   "widening-as-what-every-weighting-ranks",
+   "what-an-optimum-does-beyond-what-couples-in",
+   "least-loss-rest"
+  ],
+  "lean": [
+   "Becoming.Flow.joint_excess_ends",
+   "Becoming.Flow.unselected_beyond_coupling",
+   "Becoming.Weighting.widens_iff_every_positive",
+   "Becoming.Law.Lossless.narrowing_spreads",
+   "Becoming.Optimum.Rising.mono",
+   "Becoming.ownClosure_standpointInvariant_iff",
+   "Becoming.Clearing.loses_beyond"
+  ],
+  "note": "Mirrors the canonical chapter's 'theses and conjectures'; it is a classical edition of that section. The empirical tests (MQ1, MQ2, CG1, VD1) belong to that section.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Two premises named in classical form: 凡续皆有顾 (scope) and 以广为愈 (order)",
+  "summary": "凡续皆有顾 (the continuation condition) fixes whose losses count, and 不易乎畛 (the step of invariance) extends it to losses that return to no one. 以广为愈 (C) alone orders. Both are 设: stated, not asserted, and their warrant is open. The book never says the ethics derives from the condition.",
+  "source": "THE-THEORY-OF-BECOMING-ZHONGHUA.md 序 两个设, 篇十五, 篇十六; CIVILIZATION-THOUGHT-AND-BECOMING.md §五·四",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Unrestricted",
+   "Becoming.BoundaryInvariant",
+   "Becoming.Comparison"
+  ],
+  "note": "Same as the canonical scope-and-order rule; carry only the naming.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "significance",
+  "kind": "argument",
+  "title": "Evolutionary explanation is not ethical validity",
+  "summary": "The evolutionary explanation of a disposition, its ethical validity, its recognition and its actual preservation are different achievements. Living significance and further comparison principles stay visible commitments. Reproductive advantage cannot silently serve as ethical authority.",
+  "source": "THE-THEORY-OF-EVOLUTION.md, Retained empirical continuation (line 144); Completion requirements row 6; line 24",
+  "status": "current",
+  "note": "Its older wording (living significance as a commitment) should be restated with the continuation condition plus C.",
+  "unit": "chapters-evolution-markets"
+ },
+ {
+  "region": "significance",
+  "kind": "application",
+  "title": "Alignment uses of the market results",
+  "summary": "Check how pursuing an aim changes the correction margin and the future selection domain. Stronger executive power that erodes revision can widen the conditions under which degeneration is sustainable. Correction has timing requirements: who still has support during the transition. Attractiveness, efficiency, growth or resilience cannot replace comparison. Dynamics alone allocates no obligation.",
+  "source": "MARKETS-AND-GENERATIVE-REGIMES.md, closing paragraphs of 'Degeneration boundaries', 'Local attraction', 'Supported finite transition', 'Partial correction'",
+  "status": "old-base",
+  "note": "Phrased via the 'conditional alignment route' and 'existing practical principles'. It needs restating with the continuation condition (scope) plus C (order).",
+  "unit": "chapters-evolution-markets"
+ }
+]

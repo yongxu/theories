@@ -256,13 +256,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md",
       "role": "integration",
-      "sha256": "d6011b304fddfe6e6e92816dc6f469180e25891e2bff486c385dd4724b68fb41",
+      "sha256": "1086cc6f52d2b6ccd9286f9307b8b2e1f033fdc451fae798366eeb75f4a82564",
       "declarations": []
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
       "declarations": []
     },
     {

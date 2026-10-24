@@ -204,7 +204,7 @@
       }
     },
     {
-      "path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md",
+      "path": "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md",
       "detail": {
         "zh": "恢复终点相同仍可能遗漏不可重复损失；扩大人数可能破坏支持或增加强加负担，均可使应用失效。有限不等于伦理上可交换。",
         "en": "Equal recovery endpoints can conceal unrepeatable losses; scale can undermine support or increase imposed burdens, defeating application. Finitude does not entail ethical exchangeability."
@@ -311,7 +311,7 @@
           "zh": "额外承担 FR；保留 J2 的基本／可放弃范围及有效机会历史。此规范依赖是解释性接续；P100 的形式复用另列。",
           "en": "Adds FR while retaining J2’s basic/optional scope and valid chance history. This normative dependence is interpretive; P100 formal reuse is listed separately."
         },
-        "evidence": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md"
+        "evidence": "theories/becoming/history/PRACTICAL-JUDGMENT.md"
       }
     },
     {
@@ -372,7 +372,7 @@
   ],
   "references": [
     {
-      "path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md",
+      "path": "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md",
       "role": "statement",
       "sha256": "dc45dd01c9516a2cbfe83c5cbf2368b33fb3eb34b564a0501c7cab5a74856626",
       "declarations": []
@@ -386,11 +386,11 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-INTEGRATION.md",
       "role": "integration",
-      "sha256": "cba619a392b4d78e3ea2035a513a24f31d5f81a704a46431b80b0ab37311c867",
+      "sha256": "786d4332ed7c908ecb5a98838d4affda6401ab338c0f1e29ba655078e5645062",
       "declarations": []
     },
     {
-      "path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+      "path": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
       "role": "statement",
       "sha256": "1c5b6ee6935ff51231d0b3e689dcb0fb3053e4c8e40f1f4f8a5d5d204ab1306e",
       "declarations": []

@@ -71,7 +71,7 @@ An observation about the sample (the AI's; not a dating claim, and 郭店 covers
 
 ## 5. How the earlier repository studies stand
 
-- **`theories/becoming/chapters/DAO-AND-GENERATIVITY.md`** (6 October; older vocabulary).
+- **`theories/becoming/history/DAO-AND-GENERATIVITY-2026-10-23.md`** (6 October; older vocabulary).
   - *Kept:* its central caution that classical propositions are not ready-made theorems, and its choice of chapter 51 as the strongest connection. Chapter 51 is now three checked structures plus an explicit condition.
   - *Kept and sharpened:* its counter-pressures. Chapter 5 is now a scope entry. Chapter 38 is now a divergence with a stated reason (decline from fullness versus loss as merging). Chapter 48 is now a scope with a floor.
   - *Superseded:* the older bridges it reports, which mapped 自然, 无为 and 齐物 to automatic evolution, symmetric relations and model invariants. Each is replaced by a named law with its range. For example, 无为而无不为 is now `TwoClocks.one_course_two_laws`, with the explicit note that the practical claim is not a theorem.

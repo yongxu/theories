@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "id": "testing-within-the-net",
+  "title": {
+    "en": "Testing within the net",
+    "zh": "网内之验"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T07:22:20+00:00",
+  "statement": {
+    "en": "What a finite stage of approximation tells apart is not in the core of a class, and a wider net tells apart what a narrower one does not, with no intervener outside the net.",
+    "zh": "有穷之逼近层所分者不在类之核中；较宽之网分较窄之网所不分者，而网外无干预者。"
+  },
+  "laws": [
+    {
+      "en": "The core of a class is approximated by stages: stage zero is the class, and at the next stage each step from either end is matched by a step from the other at the stage before. The core lies in every stage, so what a finite stage tells apart is not in the core.",
+      "zh": "类之核以层逼近：第零层即类；下一层要求自任一端之每一步，都有自另一端之一步在前一层与之相配。核在每一层之内，故有穷之层所分者不在核中。",
+      "declarations": [
+        "Becoming.«层»",
+        "Becoming.«核在每层之内»",
+        "Becoming.«可分则不在核»"
+      ]
+    },
+    {
+      "en": "A room in balance and a room held by a thermostat share a core class of 'warm or not' while no window opens; with the window's opening in the net, the balanced room's cooling has no warm match from the held room, and the first stage tells them apart.",
+      "zh": "平衡之室与恒温之室，在不开窗时同属“暖与否”之一核类；开窗入网后，平衡之室之变冷在恒温之室无暖者相配，第一层即分之。",
+      "declarations": [
+        "Becoming.Room",
+        "Becoming.Room.closed",
+        "Becoming.Room.opened",
+        "Becoming.Room.warm",
+        "Becoming.Room.alike",
+        "Becoming.Room.same",
+        "Becoming.Room.same_alike",
+        "Becoming.Room.same_symm",
+        "Becoming.Room.same_constant",
+        "Becoming.«恒温与平衡»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "None beyond the grammar.",
+      "zh": "除文法外无前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That what no finite stage tells apart is in the core: that is the Hennessy-Milner direction, which needs finitely many successors and implies LLPO in its limit form.",
+      "zh": "无有穷之层所分者在核中：那是 Hennessy-Milner 之向，要求有穷多后继，其极限形式蕴涵 LLPO。",
+      "kind": "converse"
+    },
+    {
+      "en": "That the open window happens: the wider net is a net of possibilities, and the comparison is counterfactual.",
+      "zh": "开窗确有其事：较宽之网是可能之网，此比较是反事实的。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
+      "detail": {
+        "en": "The balanced and the held room: one core class under the closed net, told apart under the opened net («恒温与平衡»).",
+        "zh": "平衡与恒温之室：闭网下同属一核类，开网下分（«恒温与平衡»）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarTesting, 6 theorems in 13 declarations, each with an empty axiom report. No independent review.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarTesting，13 个声明中 6 条定理，公理报告皆空。无独立审查。"
+  },
+  "next_delta": {
+    "en": "State the converse for nets with finitely many successors as a calibration in the core, and testing equivalence relative to a stated family of observation relations within the net.",
+    "zh": "在核心中为有穷多后继之网陈述其逆为标定；并陈述相对于网内一组观察关系之检验等价。"
+  },
+  "correspondence": {
+    "en": "Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985); intervention in structural causal models (Pearl 2000) read here as comparison within a wider net."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
+  "aliases": [
+    "Becoming.Room",
+    "Becoming.Room.alike",
+    "Becoming.Room.closed",
+    "Becoming.Room.opened",
+    "Becoming.Room.same",
+    "Becoming.Room.same_alike",
+    "Becoming.Room.same_constant",
+    "Becoming.Room.same_symm",
+    "Becoming.Room.warm",
+    "Becoming.«可分则不在核»",
+    "Becoming.«层»",
+    "Becoming.«恒温与平衡»",
+    "Becoming.«核在每层之内»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The core, its root theorem and the pointwise form of constancy are the grammar's.",
+        "zh": "核、根定理与有常之逐点形式皆出自文法。"
+      },
+      "interface": {
+        "output": {
+          "en": "«核», «根», «有常之逐点».",
+          "zh": "«核»、«根»、«有常之逐点»。"
+        },
+        "input": {
+          "en": "Two nets on one carrier, one wider.",
+          "zh": "同一载体上的两网，其一较宽。"
+        },
+        "conditions": {
+          "en": "None beyond the grammar.",
+          "zh": "除文法外无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
+      "role": "proof",
+      "sha256": "81b0193e7a5805d327403bcbe6a18ceaeacf334ccb3aef5b86f93b4cb3422305",
+      "declarations": [
+        "Becoming.Room",
+        "Becoming.Room.alike",
+        "Becoming.Room.closed",
+        "Becoming.Room.opened",
+        "Becoming.Room.same",
+        "Becoming.Room.same_alike",
+        "Becoming.Room.same_constant",
+        "Becoming.Room.same_symm",
+        "Becoming.Room.warm",
+        "Becoming.«可分则不在核»",
+        "Becoming.«层»",
+        "Becoming.«恒温与平衡»",
+        "Becoming.«核在每层之内»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "role": "receipt",
+      "sha256": "f6cd693c9b0301157adf4d71822fb5a78c53c70582cdf71654045a84dfe979ba"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarTesting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026, board item OU5 (study section 380): 验 of the one-unfolding plan, the root theorem's one direction and the thermostat case read within the net.",
+      "zh": "2026年10月23日，工作板条目 OU5（研究第 380 节）：一元计划之验，根定理之一向与恒温之例在网内读之。"
+    }
+  ]
+}

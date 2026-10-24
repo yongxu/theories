@@ -1,0 +1,59 @@
+OU4b: the old base's regimes as regions of the map (Becoming.MapInstances, scratch kit, not committed)
+
+Files
+  tree/Becoming/MapInstances.lean   new module (imports GrammarMap, ContinuedClasses, PatternPassing, Continuation)
+  tree/Becoming/GrammarMap.lean     copied unchanged from ou4-map/tree (cmp identical)
+
+Reading chosen (one throughout, already used by Identity, ContinuedClasses, PatternPassing)
+  carrier  occurrences (t, f);  缘 = Web.continuationStep R (one step of a continuation R)
+  coarse L = Web.activityClass W (the pattern: a coarse line from an active occurrence is a lineage, Web.lineage_iff_line)
+  fine   E = Web.carrierClass W (activity and one formation; existing in PatternPassing)
+  With R = Web.passingContinuation passes this is PatternPassing's 火传 reading; with R = Web.itself it is the name classes.
+
+Declarations (25 theorems, all empty axiom reports)
+  Map.outside_of_not_endless        not 不穷 => neither 生成 nor 守 (generic)
+  Web.reached_later                 what a line reaches lies at the same step or later
+  Web.active_along                  the pattern's line from an active occurrence stays active
+  Web.reaches_onward                不穷 => an occurrence reached at every later step
+  Web.ends_or_reaches               with going on decided on the line: 退化, or an occurrence at every later step
+  Web.carries_iff                   from an active occurrence, 传 <-> R-step into an active occurrence whose formation did not carry on as itself
+  Web.passing_carries_iff           under the passing continuation, 传 <-> a passing to a carrier that arises (火传 at the map's grain)
+  Web.generation_renews_late        生成 => carrying renewals reached beyond every step
+  Web.generation_arises_late        under passing, 生成 from a carrier => Web.Unceasing (carriers arise at arbitrarily late steps)
+  Web.keeping_of_carried_on         endless + from step S every active formation carried on as itself => 守
+  Web.itself_carries_nothing        along Web.itself no step is a 传
+  Web.itself_not_generation         along Web.itself nothing generates
+  Web.itself_keeps                  along Web.itself every endless line keeps
+  Web.always_keeps                  a formation active at every step from t keeps, read by its name
+  Web.not_endless_of_gone           nothing reached at some step N active => not 不穷
+  Web.degenerates_of_gone           the same with going on decided on the line => 退化
+  Web.consumed_held_not_endless     Dependent + level of c below g's need at T from T on (= Consumed with its witness) + line holds that dependence at a later step at no lower need => not 不穷
+  Web.family_excess_not_endless     premises of Flow.family_excess_ends + line depending at step T+n on a member at need >= m => not 不穷 (a whole drawing beyond renewal)
+  Web.stopped_not_endless           ByPassing + brief d + no passing from T on => line from a carrier up to T+d is not 不穷 (from ByPassing.ends_within)
+  Map.shifted_carry                 witness helper: even step of PatternRelay.shifted carries on
+  Map.shifted_pass                  witness helper: odd step of the shifts is a 传
+  Map.shifted_generates             PatternRelay.shifted generates at every occurrence (t, half t)
+  Map.relay_after_two               arithmetic helper: a relay carrier is inactive two steps on
+  Map.relay_renews_and_ends         PatternRelay.web: 新而终 at every (t, t)
+  Map.renewal_undecided             in relay and shifts every carrier renews along the passing continuation (vacuously, no conditions); one renews and ends, the other generates
+
+Which region each regime reaches
+  generation   the shifts (witness); in general generation needs renewal beyond every step and, under passing, unceasing arising (one way)
+  keeping      the name classes when endless (Web.itself), and any endless line whose formations carry on as themselves from some step (one way)
+  degeneration consumption with the dependence held, family excess (Wholes/Continuation), stopped passing: proved as not 不穷 (outside generation and keeping) constructively; reaching an end (退化) follows where going on is decided on the line (degenerates_of_gone). That step is exactly where the map's boundary «生败之定当且仅当排中» sits, so the one-way, refutation form is the honest constructive statement.
+  新而终       the relay (witness); a stopped relay would read the same but was not proved separately (relay suffices).
+
+Not connected, and why
+  RenewingIn / RenewingAlong: read conditions, not whether a line goes on; Map.renewal_undecided shows it is compatible with 新而终 and with 生成. No implication to any region.
+  ConsumingIn / ConsumingAlong: a drawer need not depend on what it draws (Dependence witnesses keep the drawer active), so consumption alone implies no region; only with the dependence held on the line (consumed_held_not_endless).
+  Name classes: RenewingIn = RenewingAlong itself (existing renewingAlong_itself_iff); along itself the map has no generation, so these regimes read only as keeping or degeneration.
+  GroupEnding: its laws are about generations as lists and offspring counts (selection among groups); its ending on the base is Flow.family_childless, i.e. the family-excess law already connected; groups as a class would need a carrier of groups, not occurrences, so not read here.
+  Lasting, Capture, ClosedCapture: laws of guards/levels, shares and rules on configurations, not lines of occurrences under a class; no honest choice of fine/coarse class found.
+  Brief carriers do not force generation on a given line (observation, not proved): with overlapping carriers a line can be continued only by passes to carriers already active, while the arisings lie on parallel lines; passes_within gives a passing on the line, not a 传.
+  Observation about the map: 不穷 asks every branch to go on, so in the relay the carrier's last occurrence ends the line (degeneration) although the pattern is present at every step; the region is a line's, not presence's.
+
+Modelling choices: discrete steps, formations a fixed index type, Prop-valued activity, natural-number levels and needs.
+
+Build
+  python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/scratch_build.py <ou4-instances/tree> Becoming.MapInstances
+  result: ran Becoming.MapInstances + audit, 38 reused, unclean [] (no errors or warnings), 25 theorems in 25 declarations, with_axioms {} (every axiom report empty).

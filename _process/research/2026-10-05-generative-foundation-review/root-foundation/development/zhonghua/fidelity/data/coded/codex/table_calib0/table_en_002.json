@@ -1,0 +1,124 @@
+{
+ "segments": [
+  {
+   "seg_id": "enrec0126",
+   "referents": [
+    {
+     "span": "P",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "configurations",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "S",
+     "rule": "M3",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "moves",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "A",
+     "rule": "M3",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "π",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π; also called a projection and description",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its image",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Becoming.Image P π; also designated by the least process",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a step",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "(Becoming.Image P π).step k a κ, including the proposition of Image.least's hypothesis a",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "a : A",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "k",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "κ",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "κ",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "some step of P",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "P.step s a u in U1 of Becoming.Image and Becoming.FactorsThrough; subsequently called P's step",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a configuration projecting to k",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s in U1 of Becoming.Image, with π s = k",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one projecting to κ",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u in U1 of Becoming.Image, with π u = κ",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "K",
+    "Q",
+    "factors"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  }
+ ]
+}

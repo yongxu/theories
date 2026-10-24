@@ -110,6 +110,31 @@ correspondence. The readings are the AI's, adopted on Ren's delegation of 15 Oct
   half of `inherits_of_drawn`; with depending and drawing coinciding, inheritance, the reading of
   drawing and no descendant depending on what its giver did not draw on are one
   (`Flow.inherits_iff_none_undrawn`).
+* **Where depending and drawing part at the giver.** At a descent whose descendant depends on `c`,
+  the giver's holding alone decides: inherited where it held `c`, formed anew where it did not,
+  whether or not it drew on `c` (`Web.inheritsAt_iff_held`); with holding and drawing decided,
+  the giver held and drew, held without drawing, drew without holding, or did neither
+  (`Web.four_cases`), and forming anew is the last two (`Web.formsAnew_iff_drawn_or_neither`).
+  The reading of drawing at one descent (`Web.DependsOnDrawnAt`) excludes the last
+  (`Web.DependsOnDrawnAt.not_undrawn`), so a dependence forms anew there exactly where the giver
+  drew on what it did not depend on (`Web.formsAnew_iff_drawn_unheld`): a dependence formed by
+  descent is a giver's drawing become its descendant's dependence. The link excludes the third
+  instead (`Web.formsAnew_iff_neither`, of which `Web.formsAnew_iff_undrawn` is the case of
+  drawing what is held), and the two together leave nothing to form anew
+  (`Web.DependsOnDrawnAt.not_formsAnew`). The reading is two laws, the givers drawing on what
+  they pass on and on what forms anew (`Web.dependsOnDrawnAt_iff`, `Flow.FormsFromDrawn`,
+  `Flow.dependsOnDrawn_iff_split`), the second taking inheritance's place where the link is
+  absent (`Flow.Inherits.formsFromDrawn`, `Flow.DependsOnDrawn.formsAnew`). For the flow, with
+  balance at a relatum coming to stand, each dependence it holds was drawn on by something giving
+  to it (`Flow.drawn_by_giver`), one that no giver held by something drawing on it without
+  depending on it (`Flow.formed_from_drawing`), and where nothing taking part draws on `c`
+  nothing coming to stand depends on it, with no link (`Flow.no_dependence_undrawn`); with the
+  link nothing forms anew (`Flow.DependsOnDrawn.none_formsAnew`). In the finite hatch with the
+  parent's dependence on the food dropped, the reading holds and the child's dependence on the
+  food forms anew from the parent's drawing (`World.droppedHatch_formed`); in `novel` it forms
+  from nothing drawn and the reading fails (`World.novel_formed_undrawn`); the first of
+  `TwoGivers` passes on its dependence on the pool without drawing on it
+  (`TwoGivers.passed_undrawn`).
 -/
 
 namespace Becoming
@@ -245,6 +270,96 @@ theorem drawn_necessary_iff {t : Nat} {x g : F} {c : C} :
       (W.requires (t + 1) x c → W.requires t g c → W.draws t g c) :=
   ⟨fun reads depends holds => reads (fun _ => holds) depends,
    fun passes inherits depends => passes depends (inherits depends)⟩
+
+/-! ## Where depending and drawing part at the giver -/
+
+/-- The reading of drawing at one descent across the step from `t`: the descendant `x` depends
+on `c` at its first standing step only where the giver `g` drew on `c` at the giving step. -/
+def DependsOnDrawnAt (t : Nat) (x g : F) (c : C) : Prop :=
+  W.requires (t + 1) x c → W.draws t g c
+
+/-- **The giver's holding alone decides.** Where the descendant depends on `c` at its first
+standing step, inheritance at the descent is the giver's holding `c` at the giving step and
+forming anew its not holding it; whether the giver drew on `c` enters neither. -/
+theorem inheritsAt_iff_held {t : Nat} {x g : F} {c : C} (depends : W.requires (t + 1) x c) :
+    (W.InheritsAt t x g c ↔ W.requires t g c) ∧ (W.FormsAnewAt t x g c ↔ ¬ W.requires t g c) :=
+  ⟨⟨fun inherits => inherits depends, fun held _ => held⟩,
+   ⟨fun new => new.2, fun fresh => ⟨depends, fresh⟩⟩⟩
+
+/-- **The four relations of the giver to what its descendant depends on.** Where the giver's
+holding of and drawing on `c` at the giving step are decided, a descendant depending on `c` at its
+first standing step meets one of four cases: the giver held and drew on `c`, or held it without
+drawing on it, and the dependence is inherited; or the giver drew on `c` without holding it, or
+did neither, and the dependence forms anew. -/
+theorem four_cases {t : Nat} {x g : F} {c : C} [Decidable (W.requires t g c)]
+    [Decidable (W.draws t g c)] (depends : W.requires (t + 1) x c) :
+    (W.requires t g c ∧ W.draws t g c ∧ W.InheritsAt t x g c) ∨
+      (W.requires t g c ∧ ¬ W.draws t g c ∧ W.InheritsAt t x g c) ∨
+      (W.draws t g c ∧ ¬ W.requires t g c ∧ W.FormsAnewAt t x g c) ∨
+      (¬ W.requires t g c ∧ ¬ W.draws t g c ∧ W.FormsAnewAt t x g c) :=
+  if held : W.requires t g c then
+    if drawn : W.draws t g c then .inl ⟨held, drawn, fun _ => held⟩
+    else .inr (.inl ⟨held, drawn, fun _ => held⟩)
+  else if drawn : W.draws t g c then .inr (.inr (.inl ⟨drawn, held, depends, held⟩))
+    else .inr (.inr (.inr ⟨held, drawn, depends, held⟩))
+
+/-- **Forming anew from drawing or from nothing drawn.** Where the giver's drawing on `c` at the
+giving step is decided, a dependence forms anew at a descent exactly where the descendant depends
+on `c` and the giver drew on `c` without depending on it, or neither drew on nor depended on
+it. -/
+theorem formsAnew_iff_drawn_or_neither {t : Nat} {x g : F} {c : C} [Decidable (W.draws t g c)] :
+    W.FormsAnewAt t x g c ↔
+      (W.requires (t + 1) x c ∧ W.draws t g c ∧ ¬ W.requires t g c) ∨
+        (W.requires (t + 1) x c ∧ ¬ W.draws t g c ∧ ¬ W.requires t g c) :=
+  ⟨fun ⟨depends, fresh⟩ => if drawn : W.draws t g c then .inl ⟨depends, drawn, fresh⟩
+     else .inr ⟨depends, drawn, fresh⟩,
+   fun
+    | .inl ⟨depends, _, fresh⟩ => ⟨depends, fresh⟩
+    | .inr ⟨depends, _, fresh⟩ => ⟨depends, fresh⟩⟩
+
+/-- **A dependence formed by descent is the giver's drawing become the descendant's
+dependence.** Under the reading of drawing at the descent, a dependence forms anew exactly where
+the descendant depends on `c` and the giver drew on `c` at the giving step without depending on
+it: the reading excludes forming from nothing drawn. -/
+theorem formsAnew_iff_drawn_unheld {t : Nat} {x g : F} {c : C}
+    (drawn : W.DependsOnDrawnAt t x g c) :
+    W.FormsAnewAt t x g c ↔ W.requires (t + 1) x c ∧ W.draws t g c ∧ ¬ W.requires t g c :=
+  ⟨fun ⟨depends, fresh⟩ => ⟨depends, drawn depends, fresh⟩,
+   fun ⟨depends, _, fresh⟩ => ⟨depends, fresh⟩⟩
+
+/-- The case the reading of drawing excludes: the descendant depending on what its giver did not
+draw on. -/
+theorem DependsOnDrawnAt.not_undrawn {t : Nat} {x g : F} {c : C}
+    (drawn : W.DependsOnDrawnAt t x g c) : ¬ (W.requires (t + 1) x c ∧ ¬ W.draws t g c) :=
+  fun ⟨depends, undrawn⟩ => undrawn (drawn depends)
+
+/-- **With drawing being depending at the giver, a dependence forms anew only from nothing
+drawn**: exactly where the descendant depends on `c` and the giver neither drew on nor depended
+on it. Where the giver also draws on what it holds, not drawing is not holding, and this is
+`formsAnew_iff_undrawn`. -/
+theorem formsAnew_iff_neither {t : Nat} {x g : F} {c : C}
+    (link : W.draws t g c → W.requires t g c) :
+    W.FormsAnewAt t x g c ↔ W.requires (t + 1) x c ∧ ¬ W.draws t g c ∧ ¬ W.requires t g c :=
+  ⟨fun ⟨depends, fresh⟩ => ⟨depends, fun draws => fresh (link draws), fresh⟩,
+   fun ⟨depends, _, fresh⟩ => ⟨depends, fresh⟩⟩
+
+/-- So the reading of drawing and the link exclude the two cases of forming anew between them,
+and together nothing forms anew at the descent. -/
+theorem DependsOnDrawnAt.not_formsAnew {t : Nat} {x g : F} {c : C}
+    (drawn : W.DependsOnDrawnAt t x g c) (link : W.draws t g c → W.requires t g c) :
+    ¬ W.FormsAnewAt t x g c :=
+  fun ⟨depends, fresh⟩ => fresh (link (drawn depends))
+
+/-- **The reading of drawing at a descent is two laws**, where the giver's holding is decided:
+the giver drew on what it held and passes on (the case of `drawn_necessary_iff`), and on what
+forms anew. -/
+theorem dependsOnDrawnAt_iff {t : Nat} {x g : F} {c : C} [Decidable (W.requires t g c)] :
+    W.DependsOnDrawnAt t x g c ↔
+      (W.requires (t + 1) x c → W.requires t g c → W.draws t g c) ∧
+        (W.FormsAnewAt t x g c → W.draws t g c) :=
+  ⟨fun drawn => ⟨fun depends _ => drawn depends, fun new => drawn new.1⟩,
+   fun ⟨passes, forms⟩ depends => if held : W.requires t g c then passes depends held
+     else forms ⟨depends, held⟩⟩
 
 end Web
 
@@ -606,6 +721,79 @@ theorem inherits_iff_none_undrawn {c : X} (link : W.DrawingDepends c)
       (Web.inheritsAt_iff_not_formsAnew (stable t g)).mpr fun new =>
         none t x g descends ((Web.formsAnew_iff_undrawn (link t g) (held t g)).mp new)⟩⟩
 
+/-! ## Where depending and drawing part at the givers -/
+
+/-- The reading of drawing is the reading at each of the flow's descents. -/
+theorem dependsOnDrawn_iff_at {c : X} :
+    L.DependsOnDrawn W c ↔ ∀ t x g, L.DescendsAt W t x g → W.DependsOnDrawnAt t x g c :=
+  Iff.rfl
+
+/-- The givers draw on what forms anew: at every descent, a dependence on `c` forming anew there
+the giver drew on at the giving step. -/
+def FormsFromDrawn (L : Flow X X) (W : Web X X) (c : X) : Prop :=
+  ∀ t x g, L.DescendsAt W t x g → W.FormsAnewAt t x g c → W.draws t g c
+
+/-- **The reading of drawing is two laws**, where the givers' holding is decided: the givers draw
+on what they hold and pass on, and on what forms anew. With drawing being depending the second is
+inheritance (`dependsOnDrawn_iff`); without it, it is what takes inheritance's place. -/
+theorem dependsOnDrawn_iff_split {c : X} [∀ t g, Decidable (W.requires t g c)] :
+    L.DependsOnDrawn W c ↔ L.PassesDrawn W c ∧ L.FormsFromDrawn W c :=
+  ⟨fun drawn => ⟨fun t x g descends => (Web.dependsOnDrawnAt_iff.mp (drawn t x g descends)).1,
+     fun t x g descends => (Web.dependsOnDrawnAt_iff.mp (drawn t x g descends)).2⟩,
+   fun ⟨passes, forms⟩ t x g descends =>
+     Web.dependsOnDrawnAt_iff.mpr ⟨passes t x g descends, forms t x g descends⟩⟩
+
+/-- Inheritance gives that the givers draw on what forms anew, nothing forming anew. -/
+theorem Inherits.formsFromDrawn {c : X} (inherits : L.Inherits W c) : L.FormsFromDrawn W c :=
+  fun t x g descends new => absurd (inherits t x g descends new.1) new.2
+
+/-- **Under the reading of drawing, a dependence forms anew at a descent exactly where the giver
+drew on what it did not depend on.** -/
+theorem DependsOnDrawn.formsAnew {c : X} (drawn : L.DependsOnDrawn W c) {t : Nat} {x g : X}
+    (descends : L.DescendsAt W t x g) :
+    W.FormsAnewAt t x g c ↔ W.requires (t + 1) x c ∧ W.draws t g c ∧ ¬ W.requires t g c :=
+  Web.formsAnew_iff_drawn_unheld (drawn t x g descends)
+
+/-- With balance at a relatum coming to stand and the reading of drawing, each dependence it
+holds after the step was drawn on by something giving to it. -/
+theorem drawn_by_giver {t : Nat} {x c : X}
+    (balances : W.level (t + 1) x + L.taken t x = W.level t x + L.given t x)
+    (drawn : L.DependsOnDrawn W c) (comes : W.ComesToStand t x)
+    (depends : W.requires (t + 1) x c) :
+    ∃ g, L.DescendsAt W t x g ∧ W.draws t g c :=
+  match descends_of_comes balances comes with
+  | ⟨g, descends⟩ => ⟨g, descends, drawn t x g descends depends⟩
+
+/-- **A dependence no giver held was drawn on by a giver.** With balance at a relatum coming to
+stand and the reading of drawing, a dependence it holds after the step that nothing giving to it
+held at the giving step formed anew from a giver's drawing: something giving to it drew on the
+condition without depending on it. -/
+theorem formed_from_drawing {t : Nat} {x c : X}
+    (balances : W.level (t + 1) x + L.taken t x = W.level t x + L.given t x)
+    (drawn : L.DependsOnDrawn W c) (unheld : ∀ g, L.DescendsAt W t x g → ¬ W.requires t g c)
+    (comes : W.ComesToStand t x) (depends : W.requires (t + 1) x c) :
+    ∃ g, L.DescendsAt W t x g ∧ W.draws t g c ∧ ¬ W.requires t g c :=
+  match drawn_by_giver balances drawn comes depends with
+  | ⟨g, descends, draws⟩ => ⟨g, descends, draws, unheld g descends⟩
+
+/-- **Descent forms no dependence on what nothing drew on**, with no link between drawing and
+depending: where nothing taking part in a step draws on `c`, nothing coming to stand across it,
+with balance at it and the reading of drawing, depends on `c` after the step. -/
+theorem no_dependence_undrawn {t : Nat} {x c : X}
+    (balances : W.level (t + 1) x + L.taken t x = W.level t x + L.given t x)
+    (drawn : L.DependsOnDrawn W c) (none : ∀ g, g ∈ L.present t → ¬ W.draws t g c)
+    (comes : W.ComesToStand t x) : ¬ W.requires (t + 1) x c :=
+  fun depends => match drawn_by_giver balances drawn comes depends with
+  | ⟨g, descends, draws⟩ => none g descends.1 draws
+
+/-- Where every giver draws only on what it depends on, the reading of drawing forms nothing
+anew at any descent: it gives inheritance (`inherits_of_drawn`), so the case of drawing without
+holding is empty, and with balance and nothing taking part depending on `c`, descent forms no new
+dependence (`no_new_dependence`). -/
+theorem DependsOnDrawn.none_formsAnew {c : X} (drawn : L.DependsOnDrawn W c)
+    (link : W.DrawingDepends c) : ∀ t x g, L.DescendsAt W t x g → ¬ W.FormsAnewAt t x g c :=
+  fun t x g descends new => new.2 (inherits_of_drawn drawn link t x g descends new.1)
+
 end Flow
 
 /-! ## Worlds -/
@@ -852,6 +1040,40 @@ theorem bearingHatch_derived :
    transmitting_of_drawn finiteHatch_finite finiteHatch_balanced finiteHatch_dissipative
      (fun _ _ => Iff.rfl) dependent drawn link⟩
 
+/-! ## Forming anew from drawing and from nothing drawn -/
+
+/-- **A dependence formed by descent from drawing.** In the finite hatch with the parent's
+dependence on the food at the first step dropped, a finite world meeting every premise but
+transmission and the reading of drawing for every condition, the parent draws on the food at the
+first step without depending on it, and the child, descending from it, depends on the food at its
+first standing step: the dependence forms anew there, the parent's drawing become the child's
+dependence. -/
+theorem droppedHatch_formed :
+    droppedHatch.Finite ∧ droppedHatch.MeetsAllBut Transmitting ∧
+    (∀ c, droppedHatch.flow.DependsOnDrawn droppedHatch.web c) ∧
+    droppedHatch.flow.DescendsAt droppedHatch.web 0 .child .parent ∧
+    droppedHatch.web.draws 0 .parent .food ∧ ¬ droppedHatch.web.requires 0 .parent .food ∧
+    droppedHatch.web.FormsAnewAt 0 .child .parent .food :=
+  have unheld : ¬ droppedHatch.web.requires 0 .parent .food := fun held => held.2 ⟨rfl, rfl, rfl⟩
+  ⟨drawn_without_link.1, drawn_without_link.2.1, drawn_without_link.2.2.1,
+   finiteHatch_descends.1, ⟨rfl, .inl rfl⟩, unheld,
+   ⟨Web.drop_keeps_next finiteHatch_descends.2, unheld⟩⟩
+
+/-- **A dependence formed by descent from nothing drawn.** Without the reading of drawing a
+dependence can form anew in the case the reading excludes: in `novel`, a finite world meeting
+every premise but transmission, the child, descending from the parent, depends on it at its first
+standing step, while the parent at the first step neither depended on itself nor drew on
+itself. -/
+theorem novel_formed_undrawn :
+    novel.Finite ∧ novel.MeetsAllBut Transmitting ∧
+    novel.flow.DescendsAt novel.web 0 .child .parent ∧
+    ¬ novel.web.requires 0 .parent .parent ∧ ¬ novel.web.draws 0 .parent .parent ∧
+    novel.web.FormsAnewAt 0 .child .parent .parent ∧
+    ¬ novel.web.DependsOnDrawnAt 0 .child .parent .parent :=
+  ⟨novel_finite, novel_but, ⟨.head _, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩,
+   fun no => no.elim, fun draws => (nomatch draws.2), ⟨rfl, fun no => no.elim⟩,
+   fun drawn => (nomatch (drawn rfl).2)⟩
+
 end World
 
 /-! ## What transmission carries -/
@@ -978,6 +1200,18 @@ theorem twofold :
    descends_second, ⟨.inr rfl, rfl⟩, lacks,
    Flow.fromSome_supported (t := 0) (x := .child) acting dependent fromSome
      ⟨Nat.lt_irrefl 0, Nat.zero_lt_two⟩ ⟨.inr rfl, rfl⟩⟩
+
+/-- **A dependence passed on without drawing.** The flow balances, only active relata give and
+activity needs support; the first giver depends on the pool at the giving step and draws on
+nothing, and the child, descending from it, depends on the pool after the step: the dependence
+is inherited at the descent without being drawn, so the reading of drawing fails there while
+inheritance holds (`Web.drawn_necessary_iff`). -/
+theorem passed_undrawn :
+    flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ flow.DescendsAt web 0 .child .first ∧
+    web.requires 0 .first .pool ∧ ¬ web.draws 0 .first .pool ∧ web.requires 1 .child .pool ∧
+    web.InheritsAt 0 .child .first .pool ∧ ¬ web.DependsOnDrawnAt 0 .child .first .pool :=
+  ⟨balances, acting, dependent, descends_first, ⟨.inl rfl, rfl⟩, fun no => no, ⟨.inr rfl, rfl⟩,
+   fun _ => ⟨.inl rfl, rfl⟩, fun drawn => drawn ⟨.inr rfl, rfl⟩⟩
 
 end TwoGivers
 

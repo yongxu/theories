@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
+  "reviewed_at_utc": "2026-10-23T06:36:45+00:00",
   "statement": {
     "en": "文 names a run's states read through a map step by step (Parting.course), 文同 two states whose courses agree (Law.SameFuture); the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 and the 文) is tied to checked laws, each with its scope; 文理生生 is compared character by character.",
     "zh": "以文名一历之状经一象逐步之值，文同即二状之文逐步皆同（Law.SameFuture）；文之认识论（律读自展开、读书百遍其义自见、理与文）逐环对到已检之律，各写其域；文理生生逐字对照名表。"
@@ -26,13 +26,18 @@
       "kind": "correspondence"
     },
     {
-      "en": "That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run.",
-      "zh": "文理生生或古汉语是核心最好之表达：未经检验；本章所设计之阅读试验（依文理生生之 H2）只比较所运行之码，且未运行。",
+      "en": "That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run. The fidelity count's control (fidelity-under-one-discipline) finds its measured gain mostly or wholly in the name table's discipline, not the language.",
+      "zh": "文理生生或古汉语是核心最好之表达：未经检验；本章所设计之阅读试验（依文理生生之 H2）只比较所运行之码，且未运行。忠实之测之对照（fidelity-under-one-discipline）见其所测之得大部或全部在名表之纪律，不在语言。",
       "kind": "non-implication"
     },
     {
       "en": "That the coarsest value-keeping law-carrying class merges exactly the states with the same 文 as one theorem: it follows from four checked laws together.",
       "zh": "守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。",
+      "kind": "scope"
+    },
+    {
+      "en": "New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.",
+      "zh": "统一之外之新数学：诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）。WL 为其共同对象立名并串成一条认识论；WL2 把诸律之合陈述为定理。",
       "kind": "scope"
     }
   ],
@@ -49,14 +54,14 @@
     "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
   },
   "next_delta": {
-    "en": "The H2 reading test and the fidelity count (experiments/wenli-reading-transfer); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
-    "zh": "H2 阅读试验与忠实之测（experiments/wenli-reading-transfer）；Lean 中：守值载法之最粗之类作一条定理，文之律接到 Web.AlikeThroughUpTo 与 CrossSituational，各先在看板认领；文理生生之 G1 作脊柱之查询层。"
+    "en": "The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
+    "zh": "H2 阅读试验（忠实之测已运行，fidelity-of-the-classical-statements）；Lean 中：守值载法之最粗之类作一条定理，文之律接到 Web.AlikeThroughUpTo 与 CrossSituational，各先在看板认领；文理生生之 G1 作脊柱之查询层。"
   },
   "correspondence": {
     "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
     "zh": "Ren，2026年10月22日：“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”（来历，不是根据）。本章为文立名，把文之认识论对到诸律，并以文理生生对照中华本。读法（AI 的，D63）：古书与汉字中之一线是核心之语言与认识论之一种贴切之表达，每一环有已检之律相对，各写其域；它是否比其他表达更贴近，未经检验。"
   },
-  "canonical_source": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+  "canonical_source": "theories/becoming/history/WENLI-AND-BECOMING.md",
   "aliases": [
     "文理生生",
     "文",
@@ -140,16 +145,23 @@
         "en": "WL2: 识 reads the prefix of its own course where what couples in is read as values.",
         "zh": "WL2：感读作值时，识所读者是其自身之文之往。"
       }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "detail": {
+        "en": "文同 and the states of a 文 read in the grammar of continuation: the core (WL3).",
+        "zh": "文同与文之状于续之文法中读：核（WL3）。"
+      }
     }
   ],
   "references": [
     {
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "path": "theories/becoming/history/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b"
+      "sha256": "d7ed0aace7498f71ad46e71ebf32fc41b90284fa51b857c7128d1c9afb000219"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
       "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
     },
@@ -181,7 +193,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "review",
-      "sha256": "cb8997aa4420934a8a1e92057d0fc26a07243b2bb8f45f0f9b24749afaf83df2"
+      "sha256": "60108bbe0f0c93b740e6b7f07013c95d56e0d54fb8a725912834b8e056d22f7b"
     },
     {
       "path": "sources/wenli-shengsheng-v0.4/PROVENANCE.json",
@@ -215,6 +227,22 @@
     {
       "en": "22 October 2026, WL2: the chapter's open Lean items proved and cited in place of its caveats; study section 351.",
       "zh": "2026年10月22日，WL2：本章所列之 Lean 项已证，于原注之处引之；研究第 351 节。"
+    },
+    {
+      "en": "22 October 2026 (FC1, study section 370): the fidelity count run; see fidelity-of-the-classical-statements.",
+      "zh": "2026年10月22日（FC1，研究第 370 节）：忠实之测已运行；见 fidelity-of-the-classical-statements。"
+    },
+    {
+      "en": "23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.",
+      "zh": "2026年10月23日：贡献写明以统一为主，并注诸律之已知数学来源；本章注明语言与名表纪律之混淆。"
+    },
+    {
+      "en": "23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.",
+      "zh": "2026年10月23日，WL3：文之线接于一元之根（记录 wen-in-the-grammar，研究第 374 节）；本章 §一 增一段，章首增一条。"
+    },
+    {
+      "en": "23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.",
+      "zh": "2026年10月23日，ZE：受控英文之对照已运行；本章「怎样检验」、章首与未立者第 6 项写其结果。"
     }
   ]
 }

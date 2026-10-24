@@ -1,0 +1,61 @@
+## {N}. Self-concern through dependence (IV3)
+
+Asked on 23 October 2026 what counts as a system, and whether there being one planetary system bears on the step of invariance ([Ren's words](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md); the argument below is the AI's). The step was left at one question (IV2, §260): is the self's presupposition held de se of a self drawn along a privileged relation narrower than being related at all? This section answers the relation half of that question with the relation a continuation is carried along, and proves what that answer gives. The literature check is the significance review's [dependence check](BECOMING-SIGNIFICANCE-REVIEW.md#dependence-check).
+
+```text
+Result(s): new records self-concern-through-dependence and what-self-concern-alone-ranks; reuses
+       what-the-step-across-standpoints-reaches (ownClosure, selfAscribed_iff_withinSome, forced_iff_within),
+       widening-as-what-every-weighting-ranks (WidensOn, Increasing, outweighs, increasing_ranks) and the base
+       relations of Becoming.Feedback (AffectedBy, FedFrom); the whole-world case is
+       mutual-dependence-and-its-pace (Flow.MutuallyDependent.unrestricted, Flow.MutuallyFed.unrestricted).
+Delta: (1) shared scope. Held de se, the presupposition is standpoint-invariant, and the de se and de dicto
+       readings agree, exactly where every center lies within every center's closure (CentersWithin,
+       ownClosure_standpointInvariant_iff_centersWithin, selfAscribed_iff_withinSome_iff_centersWithin; one
+       closure, withinClosure_iff_of_centersWithin). Only the centers need depend on one another, not the whole.
+       Centers that at one step require one condition and give to it lie within one another's feeding closures;
+       centers that depend on one condition and exchange with it, within one another's influence closures
+       (Flow.centersWithin_feeding_of_common, Flow.centersWithin_influence_of_common), so self-concern held de
+       se along either is one from all of them (Flow.ownClosure_feeding_invariant_of_common,
+       Flow.ownClosure_influence_invariant_of_common).
+       (2) need and copies. Over possible courses, f needs g where g continues on every course on which f does
+       (Needs). Need is its own closure (withinClosure_needs_iff), so drawn along need the presupposition reaches
+       exactly what the continuation needs (forced_needs_iff). Where f needs some member of a class and each
+       member can carry it alone (NeedsSome, CarriesAlone), f needs a member exactly where it is the only one
+       (needs_iff_only, forced_member_iff_only); in Copies the user needs some copy and neither of two.
+       (3) what self-concern alone ranks. An order increasing in its own continuation ranks higher every
+       widening that adds to the items its continuation marks (AddsOwn, IncreasingInOwn). Every order
+       increasing in admission is one, and the two coincide where its own continuation is everything listed
+       (increasingInOwn_of_increasing, increasingInOwn_iff_increasing). Every such order ranks a above b
+       exactly where a widens b and adds to its continuation (widensOwn_iff_every_increasingInOwn); where a adds
+       to it, exactly where b keeps nothing beyond a (every_increasingInOwn_iff_includes), and where b keeps
+       something beyond, some such order ranks b higher (some_increasingInOwn_reverses). So a course admitting
+       nothing from an ending on, agreeing with a before it, is ranked below a from every standpoint whose
+       continuation a adds to (includes_of_ended, ended_below).
+Supplied premises / correspondence: standpoints and centers given; the relation a self is drawn along supplied
+       (read as one its continuation is carried along: feeding or need); possible courses a supplied
+       predicate on Bool-valued markings; finite listings, two-valued admission; orders as relations, neither
+       complete nor transitive; a standpoint's own continuation a supplied marking. Whether actual centers
+       depend on one another, and on conditions of which there is one, is empirical. Correspondence: Næss
+       1987; Jonas 1979; Norton 1984, 1991; Raz 2005; Kiesewetter 2015; Kolodny 2018; Walker 1992, 1995;
+       Simon 1962; Peters 2019.
+Evidence: Becoming.Weightings; core receipt RECEIPT_ID, every axiom report empty.
+Boundary: along affecting the shared scope is a formal fact without the means-end warrant (a competitor
+       affects one's continuation and is not needed); with copies the presupposition reaches the class and no
+       member, and no significance of a single formation states what the class's continuation is owed; what
+       lies beyond every center's closure (Clearing's dweller) and each center counting from another's
+       standpoint are left to the step; the composition of the order law with the dynamics of coupled ending
+       is an argument joining two checked theorems, not one theorem; dependence is contingent, and a center
+       that makes itself independent of a common condition leaves the common closure.
+Output → input: THE-STEP-OF-INVARIANCE (a new §4.4, §5, §7, §8, In brief); the canonical chapter §8.5 (EN,
+       ZH) and §9; D64; the package README row (EN, ZH); the root module's doc.
+```
+
+**What was built.** In `Becoming.Weightings`: `CentersWithin`, `withinClosure_iff_of_centersWithin`, `ownClosure_standpointInvariant_iff_centersWithin`, `selfAscribed_iff_withinSome_iff_centersWithin`, `Flow.centersWithin_influence_of_common`, `Flow.centersWithin_feeding_of_common`, `Flow.ownClosure_influence_invariant_of_common`, `Flow.ownClosure_feeding_invariant_of_common`; `Needs`, `NeedsSome`, `CarriesAlone`, `Needs.refl`, `Needs.trans`, `withinClosure_needs_iff`, `forced_needs_iff`, `needs_iff_only`, `forced_member_iff_only`; the witness `Copies` (`Part`, `copies`, `possible`, `withFirst`, `withSecond`, `user_not_copy`, `needsSome`, `carriesAlone`, `two_copies`); `Weighting.AddsOwn`, `Weighting.IncreasingInOwn`, `Weighting.increasingInOwn_of_increasing`, `Weighting.increasingInOwn_iff_increasing`, `Weighting.widensOwn_iff_every_increasingInOwn`, `Weighting.every_increasingInOwn_iff_includes`, `Weighting.some_increasingInOwn_reverses`, `Weighting.includes_of_ended`, `Weighting.ended_below`. No earlier declaration changed. The module has THEOREMS theorems in DECLS declarations (146 in 199 before).
+
+**The route.** The case against the step needs the de se reading together with a relation whose closures differ from center to center. The relation is not free: the presupposition is about continuation, and a continuation is carried along what feeds it and what it needs, so a standpoint that holds its own continuation significant holds significant, at least as conditions of it, the continuation of what its continuation needs. That is the means-end step (to hold an end is to hold what it needs), much weaker than invariance; THE-STEP-OF-INVARIANCE §6.3 already counted covering by feeding as the defensible part of covering. Grant the critic the de se reading and draw the self along feeding or need: where the centers lie within one another's closures, the de se and de dicto readings agree on everything within their common closure, so the critic's reading changes nothing there. What is left to the step is exactly what lies beyond that closure, and each center counting from another's standpoint beyond its part as a condition.
+
+**Need, copies and the class.** Need over possible courses is reflexive and transitive, so its closure is itself and the presupposition drawn along it reaches exactly what is needed. With copies (several alternatives, each able to carry the continuation alone) no member is needed, so the means-end step reaches none of them; it reaches the class, which a significance of single formations does not state. With one copy, the copy is needed. This is the redundancy point of conservation biology (Walker 1992, 1995: a functional group with one or few species is where a loss loses the function) and the line between transmission to necessary means and transmission to facilitative means in the theory of reasons (Kiesewetter 2015; Raz 2005), placed in the step: along need the presupposition reaches a copy only when it is alone, along feeding (Raz's side) it reaches every copy that actually feeds.
+
+**Order.** An order increasing in its own continuation is the weakest monotonicity a self-concerned standpoint can have: it ranks higher only widenings that add to its own continuation. What all such orders share is exactly those widenings. Where a course keeps the standpoint and the other keeps nothing beyond it, every such order ranks the first above; this is the ruin comparison, since a course on which a condition everything needs has ended admits nothing from that ending on. Where the other course keeps something beyond (a group that depended on none of the ended conditions), the comparison is mixed and some such order ranks it the other way. The dynamics say when the ruin course admits nothing: groups whose conditions are coupled end together and nothing is selected among them (`GroupEnding.Flow.coupled_end_together`), and after a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants (`Founding.Flow.survivors_independent`). The two are joined by argument here, not by one theorem. Drawn so that its own continuation is everything listed, as the self drawn along feeding is in a mutually fed flow, the order is increasing in admission: C's premise is then self-concern's monotonicity in its own continuation, so scope and order both rest on one premise, self-concern monotone in what carries it. That locates C's premise more narrowly; it does not warrant it.
+
+**Self-review.** (1) The iffs are two-sided as stated; `ownClosure_standpointInvariant_iff_centersWithin` needs nothing about the whole, so it is strictly more general than the whole-world laws of `Becoming.MutualDependence`, which it does not reprove (they bound significance by each closure; this law is about the de se reading). (2) The base instances use the existing relations `Flow.AffectedBy` and `Flow.FedFrom` and their premises are the ones `Flow.mutuallyDependent_of_common` and `Flow.feeding_whole_of_common` use, restricted to the centers. (3) `Needs` quantifies over a supplied predicate of possible courses; the base supplies no such predicate yet, so the copies law is general structure with a constructed witness, and its reading on the base (a condition fed by many formations, each able to sustain it alone) is not proved. (4) The ruin law's premise that the ended course admits nothing from the ending on is the dynamics' conclusion only where every formation listed depends on the coupled family; it is not derived for any actual system. (5) No ethical predicate occurs; significance and orders are parameters, and the presupposition, invariance and monotonicity are hypotheses. (6) What is new is the placement: the convergence of anthropocentric and nonanthropocentric policy within what humans need (Norton 1991) is the agreement of the de se and de dicto readings within the common closure, and the objection that convergence fails for what is not needed (Steverson 1995) is the copies law and the region beyond the closure. (7) Not done: a predicate of possible courses read off a web, so that need, and copies, are stated on the base; the ruin law composed with the dynamics in one theorem; graded need (how much a copy contributes), which would carry status.

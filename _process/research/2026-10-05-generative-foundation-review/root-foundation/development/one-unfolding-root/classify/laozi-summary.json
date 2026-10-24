@@ -1,0 +1,269 @@
+{
+ "text": "《老子》王弼本經文（LZ）",
+ "tsv": "laozi.tsv",
+ "units": 482,
+ "counts_by_class": {
+  "甲": 40,
+  "乙": 7,
+  "丙一": 41,
+  "丁": 263,
+  "戊": 6,
+  "己": 0,
+  "庚": 121,
+  "未读出": 4
+ },
+ "counts_by_registration": {
+  "相合": 13,
+  "相分": 8,
+  "定域": 3
+ },
+ "counts_by_confidence": {
+  "低": 61,
+  "中": 361,
+  "高": 60
+ },
+ "classified_by": "AI (Claude Opus 5.5), 23 October 2026, following classify/BRIEF.md; every classification is an AI reconstruction",
+ "戊_units": [
+  {
+   "id": "LZ-25-006",
+   "form": "域中有四大，而王居其一",
+   "registration": "相分"
+  },
+  {
+   "id": "LZ-25-007",
+   "form": "人法地，地法天，天法道，道法自然（法之序）",
+   "registration": "相分"
+  },
+  {
+   "id": "LZ-26-001",
+   "form": "重為輕根，靜為躁君",
+   "registration": "相分"
+  },
+  {
+   "id": "LZ-39-003",
+   "form": "貴以賤為本，高以下為基",
+   "registration": "相分"
+  },
+  {
+   "id": "LZ-40-002",
+   "form": "生之序：無 → 有 → 萬物",
+   "registration": "相分"
+  },
+  {
+   "id": "LZ-76-005",
+   "form": "強大處下，柔弱處上",
+   "registration": "相分"
+  }
+ ],
+ "己_units": [],
+ "未读出": [
+  {
+   "id": "LZ-17-002",
+   "reason": "form clear; 信 is an agent attitude the grammar lacks; repeated LZ-23-010"
+  },
+  {
+   "id": "LZ-23-010",
+   "reason": "repeat of LZ-17-002; agent term"
+  },
+  {
+   "id": "LZ-30-002",
+   "reason": "sense unclear between two readings"
+  },
+  {
+   "id": "LZ-47-003",
+   "reason": "needs comparison of amounts and an epistemic predicate the grammar lacks"
+  }
+ ],
+ "commentary_sources": {
+  "王弼": "王弼注 interleaved in sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html (<dl><dd><small>), mapped to the unit whose offset precedes it; a note after a multi-unit passage is cited at each unit it explains",
+  "caveats": "the note after LZ-52-001 is marked in the file as supplied by 樓宇烈 (原脫); the <small> notes after chapter 81 are 音注/版本 notes, not 王弼"
+ },
+ "most_important": [
+  {
+   "id": "LZ-02-003",
+   "why": "有無相生 etc.: the plan's 乙 example; six 相 X of different kinds"
+  },
+  {
+   "id": "LZ-40-002",
+   "why": "有生於無: asymmetric origin in the same text; 王弼 以無為本"
+  },
+  {
+   "id": "LZ-01-004",
+   "why": "同出而異名: 王弼 在首/在終 supports §4.2, but 王弼 adds 同出於玄 (a third, 冥默無有)"
+  },
+  {
+   "id": "LZ-14-002",
+   "why": "不可致詰，故混而為一: indistinguishable → one; the Hennessy–Milner direction that §4.4 only calibrates"
+  },
+  {
+   "id": "LZ-16-004",
+   "why": "歸根曰靜: the plan's test operation (§4.2)"
+  },
+  {
+   "id": "LZ-16-005",
+   "why": "復命曰常: the text's 常 is a return (loop), consonant with 有常 → 续不尽"
+  },
+  {
+   "id": "LZ-55-006",
+   "why": "知和曰常: a second definition of 常 (和)"
+  },
+  {
+   "id": "LZ-25-002",
+   "why": "獨立而不改，周行而不殆: 王弼 返化終始，不失其常 — constancy with unending circulation"
+  },
+  {
+   "id": "LZ-25-004",
+   "why": "大曰逝，逝曰遠，遠曰反: return defined as the limit of going"
+  },
+  {
+   "id": "LZ-40-001",
+   "why": "反者道之動: 反 polysemy (返 / inversion)"
+  },
+  {
+   "id": "LZ-33-006",
+   "why": "死而不亡者壽: 死 under one class, 不亡 under another; supports 亡于细者不必亡于粗"
+  },
+  {
+   "id": "LZ-50-006",
+   "why": "生生之厚: a different 生生 (living for life to excess), to be kept apart from 系辞's 生生"
+  },
+  {
+   "id": "LZ-51-001",
+   "why": "道生之，德畜之，物形之，勢成之: four stages of one course named by what each depends on (王弼 隨其所因，故各有稱焉)"
+  },
+  {
+   "id": "LZ-39-001",
+   "why": "得一: 王弼 居成則失其母 — settling into an achieved state ends a thing"
+  },
+  {
+   "id": "LZ-39-002",
+   "why": "王弼 非用清以清: a property does not keep itself (§4.5 自持/因于)"
+  },
+  {
+   "id": "LZ-28-006",
+   "why": "樸散則為器: 王弼 殊類生 — classes arise from the dispersal of a whole"
+  },
+  {
+   "id": "LZ-30-008",
+   "why": "物壯則老: the plan's 丙一 example; 已 = end"
+  },
+  {
+   "id": "LZ-23-002",
+   "why": "飄風不終朝，驟雨不終日: ending under intensity"
+  },
+  {
+   "id": "LZ-77-004",
+   "why": "天之道，損有餘而補不足 with its counterexample LZ-77-005 (人之道): a 丙一 whose condition is the domain"
+  },
+  {
+   "id": "LZ-56-003",
+   "why": "王弼 可得而親，則可得而疏: a 乙 candidate for correlative pairs"
+  },
+  {
+   "id": "LZ-07-002",
+   "why": "以其不自生，故能長生: continuation conditioned relationally (王弼 自生則與物爭)"
+  },
+  {
+   "id": "LZ-42-001",
+   "why": "道生一: 王弼 reads the count as produced by naming"
+  },
+  {
+   "id": "LZ-14-001",
+   "why": "夷、希、微: names defined by observations that fail to separate (§4.4 验)"
+  },
+  {
+   "id": "LZ-38-006",
+   "why": "失道而後德……: a degeneration chain; 王弼's 本末/母子 frame"
+  },
+  {
+   "id": "LZ-64-004",
+   "why": "合抱之木，生於毫末: 生 as the start of a course (the §4.3 sense), with LZ-63-004"
+  }
+ ],
+ "contradictions_and_strains": [
+  {
+   "plan": "§三 乙 example (有无相生，王弼“不可偏舉”)",
+   "units": [
+    "LZ-02-003",
+    "LZ-40-002",
+    "LZ-01-002",
+    "LZ-52-002",
+    "LZ-38-006"
+   ],
+   "point": "the same text says 有生於無, and 王弼 ranks 无 over 有 (凡有皆始於無; 有之所始，以無為本; 崇本以息末; 守母以存其子). 王弼's 不可偏舉 concerns the six pairs as names; citing him for a symmetric 有/无 needs this qualification. 王弼's 本/末 frame is a hierarchy not yet registered in §5.4"
+  },
+  {
+   "plan": "§4.2 (两者同出而异名 = one course at two positions)",
+   "units": [
+    "LZ-01-004",
+    "LZ-01-005"
+   ],
+   "point": "王弼 supports the two positions (在首/在終) but adds 同出於玄, 玄 = 冥默無有, the source of both, and refuses to fix it (玄之又玄); the plan's reading drops this third term"
+  },
+  {
+   "plan": "§4.4 (验: the converse, 不在核中则可分, is only a calibration)",
+   "units": [
+    "LZ-14-002"
+   ],
+   "point": "不可致詰，故混而為一 asserts “indistinguishable → one”; if 致詰 is finite-stage observation this is the direction the plan does not prove"
+  },
+  {
+   "plan": "§4.1 (类 as given relations)",
+   "units": [
+    "LZ-28-006",
+    "LZ-25-003",
+    "LZ-41-005"
+   ],
+   "point": "王弼: classes (殊類) arise when the 樸 disperses, and naming introduces division (有分則失其極); a generative account of classes, ordered whole → many"
+  },
+  {
+   "plan": "§一 (续 relative to a class) — support",
+   "units": [
+    "LZ-33-006",
+    "LZ-06-001",
+    "LZ-34-003",
+    "LZ-34-004"
+   ],
+   "point": "死而不亡 (王弼: 身沒而道猶存), neither 存 nor 亡 for 谷神, one 道 named 小 and 大 under two readings"
+  },
+  {
+   "plan": "§4.3 (有常则续不尽) — support",
+   "units": [
+    "LZ-16-005",
+    "LZ-25-002",
+    "LZ-39-001"
+   ],
+   "point": "常 defined as return (復命); 不改 with 周行而不殆; 王弼 居成則失其母. A second 常 (知和曰常, LZ-55-006) differs"
+  },
+  {
+   "plan": "§一 / §4.6 (生生)",
+   "units": [
+    "LZ-50-006",
+    "LZ-55-007",
+    "LZ-75-003"
+   ],
+   "point": "生生之厚 is excessive living-for-life leading to death (王弼), and 益生曰祥 an ill omen: 老子's 生生 is not 系辞's; the plan's use must register the polysemy"
+  },
+  {
+   "plan": "§三 立言 / §一 可重构",
+   "units": [
+    "LZ-01-001"
+   ],
+   "point": "可道之道非常道 bounds what naming reaches; the plan does not claim the 常道, so a strain, not a 反读"
+  },
+  {
+   "plan": "丙一 across texts",
+   "units": [
+    "LZ-36-006",
+    "LZ-78-002"
+   ],
+   "point": "柔弱勝剛強 is contradicted by 繫辭 XCX-08-004 (其柔危，其剛勝邪)"
+  }
+ ],
+ "corpus_problems": [
+  "LZ-49-006 contains an escaped newline (\\n) and an ASCII comma inside the unit: a line break inside the <p>",
+  "LZ-63-007 has no terminal punctuation",
+  "LZ-38-005 contains a space before 則",
+  "L.html marks the note to LZ-52-001 as a 樓宇烈 supplement, and appends 音注 notes in the same markup after chapter 81; a script that collects all <small> notes as 王弼 would misattribute them"
+ ]
+}

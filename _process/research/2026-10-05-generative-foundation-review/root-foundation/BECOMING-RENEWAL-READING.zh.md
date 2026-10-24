@@ -96,7 +96,7 @@ Universal Metaethical Core 的前提卡里有三项对应：形成 E、连通、
 
 ## 6. 动态依存与逐步读法（P6）
 
-2026-10-09。Ren 在改名完成后指示：“and after it is elegantly completed, move on to pursue the theory of becoming, and prove the necessary proofs”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-09-pure-core.md#rens-follow-up-finish-the-renames-then-continue-the-theory)）。本节完成第 4 节“未解决”的第 2、3 项，也就是[正典章节](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#8-开放纲领--open-programme) §8 的“动态依存”与“逐步读法”两行。成果记录：[becoming-dependence-dynamics](../../../../theories/becoming/results/records/becoming-dependence-dynamics.md)、[becoming-stepwise-reading](../../../../theories/becoming/results/records/becoming-stepwise-reading.md)。
+2026-10-09。Ren 在改名完成后指示：“and after it is elegantly completed, move on to pursue the theory of becoming, and prove the necessary proofs”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-09-pure-core.md#rens-follow-up-finish-the-renames-then-continue-the-theory)）。本节完成第 4 节“未解决”的第 2、3 项，也就是[正典章节](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#8-开放纲领--open-programme) §8 的“动态依存”与“逐步读法”两行。成果记录：[becoming-dependence-dynamics](../../../../theories/becoming/results/records/becoming-dependence-dynamics.md)、[becoming-stepwise-reading](../../../../theories/becoming/results/records/becoming-stepwise-reading.md)。
 
 ```text
 Result(s): 复用 becoming-renewal-reading、relational-renewal-classification、metaethical-core-characterization；
@@ -142,7 +142,7 @@ Integration: becoming-renewal-reading 的 next_delta 的前两项由新记录承
 
 **解读（审查后收窄，§7）。** 三种结局既不穷尽，也不互斥：恢复是关于条件的事实，终止与转化是关于形成的事实；同一断裂之后，一个形成可以转化、另一个终止，而条件随后恢复。一段历史是“转化”还是“终止加新形成”，由 `F` 规定的形成同一性决定。准确的说法是：在一个形成被给定、各字段除 `Dependent` 外彼此独立的表示中，几种变化方式可以由共同的可观测量定义，并由定理相互约束；终止与转化之分依赖所规定的形成同一性，形成本身的个体化没有被表示。
 
-这与[正典章节 §1](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#1-生成同一展开--becoming-one-unfolding)“形成、维持、转化、退化与消解都是沿运行的关系变化，不是五个阶段”相容，但它是表示内的定义与约束，不是这一主张的证明。它也不完成[根基 §9](../../../../theories/becoming/chapters/BECOMING-FOUNDATION.md#9-the-content-of-the-whole-deduction)的整体演绎：共同纳入一个记录类型，加一条约束，正是那里说的不能代替根据的东西（[整体演绎的审查](../history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#19-the-whole-deduction-and-the-passage-from-inclusion-to-relation)）。
+这与[正典章节 §1](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#1-生成同一展开--becoming-one-unfolding)“形成、维持、转化、退化与消解都是沿运行的关系变化，不是五个阶段”相容，但它是表示内的定义与约束，不是这一主张的证明。它也不完成[根基 §9](../../../../theories/becoming/history/BECOMING-FOUNDATION.md#9-the-content-of-the-whole-deduction)的整体演绎：共同纳入一个记录类型，加一条约束，正是那里说的不能代替根据的东西（[整体演绎的审查](../history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md#19-the-whole-deduction-and-the-passage-from-inclusion-to-relation)）。
 
 ### 6.3 逐步读法
 
@@ -1895,7 +1895,7 @@ Integration: 计划 P22；Ren 的“计入整个空间”在核心上的结构�
 
 *反驳 3：“每个前提都划出真部分”只对七个前提给出。* 是。`Census`、`TransmitsWithin`、`Around` 等其他前提没有逐一给出；前提的组合也没有逐一给出。完整的地图列入下一步。
 
-*反驳 4：这被读成“理论不需要公理”。* 不是。本节显示哪些陈述不需要前提、哪些前提划出哪些部分。规范方向仍经 G0；“不加实质公理的整体演绎必然性”仍是开放的首要目标（[根基章节](../../../../theories/becoming/chapters/BECOMING-FOUNDATION.md)）。
+*反驳 4：这被读成“理论不需要公理”。* 不是。本节显示哪些陈述不需要前提、哪些前提划出哪些部分。规范方向仍经 G0；“不加实质公理的整体演绎必然性”仍是开放的首要目标（[根基章节](../../../../theories/becoming/history/BECOMING-FOUNDATION.md)）。
 
 **边界。** 不含伦理谓词，不评价任何部分；`Living` 只是逐步读法的结构条件；有限世界的规律要求活动可判定；部分的列举不完全；只对离散步的读法陈述；“世界”“生起复现”“止息复现”是 AI 的表述，提议中的“生成的”“退化的”指哪个部分由 Ren 选择（P23c 更正，原文“‘世界’‘生成的’‘退化的’的这些读法是 AI 的表述，名称由 Ren 定”）。本节经第九次独立审查，更正见 §34。
 
@@ -4655,7 +4655,7 @@ Ren 把第 4 问留给 AI：“for 4, you can explore which option is better, th
 **最初的决定。** 起草时 AI 决定：在一类读法中，形成自身的立着算作被识（`ownStanding` 为默认），只识支持（`supportOnly`）是两类读法的情形。理由有三：一类读法中形成与条件是一个关系项，否认自身立着的变化在自身中被识，看起来像把形成拆成观察者与身体；被取用是最直接的承受；形式上无害。
 
 **审查的论证（第 6 节）。** 审查认为这是较弱的选择，理由是：
-1. 经依存，识是一个阈值（`Web.alike_of_threshold`）。`ownStanding` 给形成以对自身水平的精确、完整的量度，别的关系都没有。这是特权的、透明的自我通达。[非二方法](../../../../theories/becoming/chapters/NONDUAL-METHOD.md)要求说明认识怎样在展开中形成，而不是先给出一个认识者。
+1. 经依存，识是一个阈值（`Web.alike_of_threshold`）。`ownStanding` 给形成以对自身水平的精确、完整的量度，别的关系都没有。这是特权的、透明的自我通达。[非二方法](../../../../theories/becoming/history/NONDUAL-METHOD.md)要求说明认识怎样在展开中形成，而不是先给出一个认识者。
 2. 脊柱已有这一关系：`Web.SelfBearing`，以正的所需依存于自身的立着。Roles 把体现与承担自身写作同一对应之下的读法；`ownStanding` 是同类的进一步读法，不是同一对应的推论。
 3. `Prey` 显示的是决定，不是其根据：捕食者在影响闭包之外，只因为猎物不承担自身（`Prey.omits`）。
 4. 在 `ownStanding` 之下，对划作自身立着者之耗竭的阈下不见无法表达（`Gauged.own_is_stock`）。而不被察觉的自我耗竭直到崩溃，正是失控的核心情形：过劳、成瘾、身体缓慢的失去。同一储备划作所持条件时就有阈下不见。结论取决于划法。

@@ -58,7 +58,7 @@ Local recovery and evidential inference, not verification of hardware, compiler,
 | proof | [RecoverableControl.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean) | `RecoverableControl.interrupted_history_preserves_safety`, `RecoverableControl.funded_suffix_publishes`, `RecoverableControl.published_history_to_current_certificate` |
 | receipt | [recoverable-control-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/recoverable-control-verification.json) | — |
 | integration | [MEDIATED-CONTROL-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/MEDIATED-CONTROL-INTEGRATION.md) | — |
-| statement | [ALIGNMENT-THROUGH-CHANGE.md](../../chapters/ALIGNMENT-THROUGH-CHANGE.md) | — |
+| statement | [ALIGNMENT-THROUGH-CHANGE.md](../../history/ALIGNMENT-THROUGH-CHANGE.md) | — |
 | provenance | [2026-10-08-finish-alignment-fruits.md](../../../../sources/15-codex-theory-conversations/2026-10-08-finish-alignment-fruits.md) | — |
 | proof | [MediatedControl.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean) | `MediatedControl.commit_preserves_actual_coverage`, `MediatedControl.commit_records_the_executed_effect` |
 | proof | [RecoverableControlCases.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControlCases.lean) | — |

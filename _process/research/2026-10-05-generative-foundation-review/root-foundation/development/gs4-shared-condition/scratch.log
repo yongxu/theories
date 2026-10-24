@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gs4-shared-condition/tree",
+  "modules": 111,
+  "ran": [
+    "Becoming.GrammarCases",
+    "BecomingGrammarCasesAxiomAudit"
+  ],
+  "reused": 110,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarCases": {
+      "theorems": 29,
+      "declarations": 48,
+      "with_axioms": {}
+    }
+  }
+}

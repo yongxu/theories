@@ -60,7 +60,7 @@ The core, the explicit practical commitments, and warranted AI correspondence pr
 
 The existing independent review accepts the direction argument and independently rebuilt 9 new theorems/16 new audits plus 46 inherited audits. The core schema (Becoming.Direction) is machine-checked with empty axiom reports (receipt 20261020T093308.742793Z, with the direction from the evaluation row since R40 and a world's exchanges as moves and the handover instance since R44); not independently reviewed. In learning commons, CG1 (study section 240): C1 and E3 held, D2b failed; CG2 (section 250): learners follow the rest's draw against the renewal (X1-X3).
 
-Canonical source: [ALIGNMENT-DIRECTION.md](../../chapters/ALIGNMENT-DIRECTION.md)
+Canonical source: [ALIGNMENT-DIRECTION.md](../../history/ALIGNMENT-DIRECTION.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -80,7 +80,7 @@ The constructed case distinguishes expansion, service, transfer and abrupt withd
 - **application**: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Applies the existing principles to declared AI-service relations; the formal example imports PracticalJudgment.
   - Output: Comparison and bounded practical principles under the practical commitments J.
   - Input: Normative application to AI service and transfer cases.
-  - Preserved conditions: AI correspondence E, authority, undertakings and real losses remain explicit; an application, not a universal compliance theorem. [ALIGNMENT-DIRECTION.md](../../chapters/ALIGNMENT-DIRECTION.md)
+  - Preserved conditions: AI correspondence E, authority, undertakings and real losses remain explicit; an application, not a universal compliance theorem. [ALIGNMENT-DIRECTION.md](../../history/ALIGNMENT-DIRECTION.md)
 - **formal-reuse**: [comparison-by-widening](comparison-by-widening.md). Reuses C read as widening on level paths and the one object of admission (Web.paths_one_object).
   - Output: C read as widening; under the condition, every admission a continuation with significance.
   - Input: The order on a web's moves.
@@ -100,7 +100,7 @@ The constructed case distinguishes expansion, service, transfer and abrupt withd
 |---|---|---|
 | proof | [Relevance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean) | `Becoming.Web.paths_one_object` |
 | proof | [Direction.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean) | `Becoming.Direction.frame`, `Becoming.Direction.options_iff`, `Becoming.Direction.extension_iff_widens`, `Becoming.Direction.chosen_keeps_basic`, `Becoming.Direction.kept_required`, `Becoming.Direction.narrowed_not_chosen`, `Becoming.Direction.widening_not_not_better`, `Becoming.Direction.widening_selected_by_pool`, `Becoming.Clearing.spareOutcome`, `Becoming.Clearing.spared_widens`, `Becoming.Clearing.direction`, `Becoming.Web.unrestricted_iff_grounds_beyond`, `Becoming.Direction.grounded_widening_selected`, `Becoming.Direction.exchangeOutcome`, `Becoming.Direction.exchange_widening_selected_by_pool`, `Becoming.Direction.exchange_direction`, `Becoming.Requirement.Handover.direction` |
-| statement | [ALIGNMENT-DIRECTION.md](../../chapters/ALIGNMENT-DIRECTION.md) | — |
+| statement | [ALIGNMENT-DIRECTION.md](../../history/ALIGNMENT-DIRECTION.md) | — |
 | receipt | [alignment-direction-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-direction-verification.json) | — |
 | provenance | [AlignmentDirection.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentDirection.lean) | `AlignmentDirection.transfer_over_expansion`, `AlignmentDirection.promised_successor_without_delivery_fails` |
 | review | [ALIGNMENT-DIRECTION-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-DIRECTION-REVIEW.md) | — |

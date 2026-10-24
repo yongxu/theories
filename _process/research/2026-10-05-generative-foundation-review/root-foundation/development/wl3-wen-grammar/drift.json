@@ -1,0 +1,116 @@
+{
+  "errors": [
+    "wen-in-the-grammar: statement: length: en 390 chars > 300"
+  ],
+  "source_drift": [
+    {
+      "id": "any-number-of-drawers-in-turn",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "central-laws-over-every-exchange",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
+      "reviewed_sha256": "014b1dda05b2650434d8d0b821355fabcff73b8a47ae3aa9e8aae02a3e01640e",
+      "current_sha256": "c5f38593796c85c1f0a2e3a66b95ff6efa20488600d17b56d8913c0c592742fe",
+      "changed_sections": [
+        "## 一、目标",
+        "## 五、古文已有的文法：句式、链、语料"
+      ]
+    },
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "drawers-in-turn-within-capacities",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "laws-with-noise",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "requirement-is-the-weakest-sound-reading",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "revision-comes-to-drawing-everything",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "what-a-center-can-know-by-a-step",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "what-discrete-steps-and-whole-amounts-represent",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "where-a-formations-acts-return",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    },
+    {
+      "id": "widening-along-a-reading",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "079aef55e4a4f1f49b385113c58b7d4be9df22f036e9e6a392d14b77990907ae",
+      "current_sha256": "19a3040e8b9560f8966737ea2e10b83488bfd6202a052ab54befbdea2fa30cf4",
+      "changed_sections": [
+        "## 9. The formal spine"
+      ]
+    }
+  ]
+}

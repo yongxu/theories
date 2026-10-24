@@ -22,10 +22,12 @@
 - 文理生生的 144 字逐字对照名表；两边读法不同的 29 处，据文理生生逐义项之出处复核，改三处；其余二十六处中，十八处在名表之注中补写了文理生生的读法或字义，七个不采之字在不采之理由中补写了文理生生的读法，游无改（见「名表之修订」）。
 - 文理生生的形式部分、十二构式与十三个微型模型，逐项对照；八字有类型规则图十三边中对照六边；八卦对照两边同读与各有所长之处（11 号与 14 号同步之共同终点之反例不对应）；图谱存关系之法见「同读之处」。
 - 文理生生 v0.4 的研究文件与图谱数据，以 SHA-256 绑定导入 `sources/wenli-shengsheng-v0.4/`。
-- 两项检验的设计（H2 的一个阅读试验；一个忠实之测），都还没有运行。
+- 两项检验的设计：H2 的一个阅读试验，还没有运行；一个忠实之测，已运行（看板项 FC1，见「怎样检验」），其所缺之对照（同样纪律下之受控英文本）亦已建成并测过（看板项 ZE，[研究第 377 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#377-the-controlled-english-control-ze)）。
+- 文入续之文法（看板项 WL3，[研究第 374 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#374-文-in-the-grammar-of-continuation-wl3)）：文同即象之值之类之核，文之状即其沿步之核，有界之律与可知经核而述（`Becoming.GrammarCourse`，见第一部分 §一「文入续之文法」）。
 
 **没有建成什么。**
 
 - 本章初成时不新增 Lean。它列为未立的三项 Lean，已由其后的看板项 WL2 证出，引在正文相应之处（第一部分 §四 律 6、§六、§七与总表；[研究第 351 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)）：守值之理中最粗者恰并文同之状，作一条定理；缘感无异与待者自身之文；名之文与通意。嵌入文理生生的 G1，仍是「文理生生的形式部分与八卦」一节所说的可以认领的后续项目。
 - 本章不说文理生生或古汉语是核心之最好的表达。这一点未经检验；本章所设计的检验也只比较所运行的几种表达，不能判定「最好」。文理生生的 H2（理解这些组合可改善对未见实例的结构重建、解释与迁移）是另一个假说，也未经检验。
 - 不说古人意谓这些律。相合不是印证。
+- **本章之贡献以统一为主，新的数学很少。** 第一部分所引之律，多数在 WL 之前已证；WL 以「文」为它们共同的对象立名，把它们串成一条认识论，WL2 再把几处「诸律之合」补成定理。其数学多有已知之源：二文之长 N＋N′－1 属 Fine–Wilf 一类，一文之内 N－1 步是 Moore 之界；文同之最粗类即自动机最小化中的同未来等价（Myhill–Nerode，Moore 机之状态等价）；可知与过则改属 Gold 一脉之极限学习，不测之文是其对角论证。新的是这些结果在同一脊柱上以同一个对象陈述，并经机器检查。

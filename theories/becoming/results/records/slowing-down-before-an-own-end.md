@@ -65,7 +65,7 @@ Critical slowing down: the recovery rate falls to zero at a bifurcation (Wissel 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json) | — |
 | integration | [check_slowing_down.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/check_slowing_down.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `slowing down before an own end`, `T6's seen half`, `critical slowing down on the spine`, `临界慢化`, `Becoming.SlowingDown.stationary_lag1`, `Becoming.SlowingDown.fold_variance_tendsto`, `Becoming.SlowingDown.drawn_multiplier_level`
 

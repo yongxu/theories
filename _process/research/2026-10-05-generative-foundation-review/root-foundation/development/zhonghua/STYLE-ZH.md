@@ -37,7 +37,7 @@
 
 ## 六、篇的格式（21 日补）
 
-全书名《变化论》，存为 `theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md`。每篇一个二级标题，篇内每条一个三级标题，条内三段：
+全书名《变化论》，存为 `theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md`。每篇一个二级标题，篇内每条一个三级标题，条内三段：
 
 ```
 ## 篇三　作、已与续

@@ -1,6 +1,6 @@
 # Surface growth, structural loss and renewed formation
 
-8 October 2026. AI-authored research integration and substantive author self-review for [The Theory of Evolution](../../../../theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md). The preceding goal turn answered the completion question without new research evidence. This continuation retrieves and checks temporal primary evidence for the unresolved developmental connection, advancing requirements 2, 3 and 5 without claiming they are complete.
+8 October 2026. AI-authored research integration and substantive author self-review for [The Theory of Evolution](../../../../theories/becoming/history/THE-THEORY-OF-EVOLUTION.md). The preceding goal turn answered the completion question without new research evidence. This continuation retrieves and checks temporal primary evidence for the unresolved developmental connection, advancing requirements 2, 3 and 5 without claiming they are complete.
 
 **Result.** Surface-associated growth, persistent mat structure and viable continuation must be distinguished within the same material history. A primary study reports recurring surface rafts that fall and reform; separate genetic and pH interventions constrain the mechanism. We preserved four original movies and checked selected-frame extraction. These observations replace a merely hypothetical alternative to terminal mat absence with a documented developmental possibility. They do not establish that this history occurred in the later focal mutL assays or calibrate their first-phase success rate.
 

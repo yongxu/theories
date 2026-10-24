@@ -69,7 +69,7 @@ Closes the third gap of the map of the Chinese sources onto the spine (record ch
 - related, not a proved adapter: [a-history-read-off-its-finite-stretches](a-history-read-off-its-finite-stretches.md). Ideals.Preorder, the order this record's laws are stated for, is defined there.
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop closed: a loss it does not read leaves it locked, a reading of the loss leaves, and the reading read from the share is absorbed as the rule's value is.
 
-**Used by:** [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md) · [closed-capture](closed-capture.md) · [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md) · [two-rules-lock-together](two-rules-lock-together.md)
+**Used by:** [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md) · [closed-capture](closed-capture.md) · [two-rules-lock-together](two-rules-lock-together.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -83,9 +83,9 @@ Closes the third gap of the map of the Chinese sources onto the spine (record ch
 | proof | [Ideals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ideals.lean) | `Becoming.Ideals.Preorder` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T151254.157652Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
-| integration | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| integration | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |

@@ -93,7 +93,7 @@ Ren wrote that being generative is that “its existence creates more possibilit
 | proof | [Space.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean) | `Becoming.Flow.still` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
@@ -111,6 +111,7 @@ Ren wrote that being generative is that “its existence creates more possibilit
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `Becoming.Web.GainsSupport`, `Becoming.Web.LosesSupport`, `Becoming.Web.Unloosened`, `Becoming.Web.Untightened`, `Becoming.Web.GainsSupport.rises`, `Becoming.Web.LosesSupport.falls`, `Becoming.Flow.rise_given_by_supported`, `Becoming.Flow.gains_from_supported`, `Becoming.Flow.unsupported_stays`, `Becoming.Flow.nothing_supported_stays`, `Becoming.Restoring.Adapting.restores`, `Becoming.Restoring.Inflow.restores`, `Becoming.Restoring.Idle.restores`, `Becoming.Restoring.Carried.restores`, `Becoming.Restoring.Spontaneous.restores`
 

@@ -1,0 +1,140 @@
+{
+ "segments": [
+  {
+   "seg_id": "enrec0126",
+   "referents": [
+    {
+     "span": "P",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "P : Generative.Process S A (binder of all four declarations); 'a process' in 'Let P be a process' is the same referent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "configurations",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "S (type parameter, the configurations of P); 'the configuration' in 'a projection (description) of the configuration' is the same referent (domain of π)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "moves",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "A (type parameter, the moves of P)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "π",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π : S → K; 'a projection (description)' is the same referent (glossary: a projection of configurations is a description)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its image",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Becoming.Image P π (constructed term); 'P read through π' and 'the image' are the same referent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a step by a move from k to κ",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "(Becoming.Image P π).step k a κ (hypothesis a of Image.least; the step field of the image); read as a transition, not a natural-number index",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "a : A (binder of Image.least); 'that move' is the same referent",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "k",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "k : K",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "κ",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "κ : K",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "some step of P by that move",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "P.step s a u inside the ∃ of the body of Becoming.Image",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a configuration projecting to k",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s : S bound by ∃ in the body of Becoming.Image (with π s = k)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one projecting to κ",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u : S bound by ∃ in the body of Becoming.Image (with π u = κ)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "P's step",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "P.step (field of Generative.Process; the relation quantified in the FactorsThrough body ∀ s a u, P.step s a u → Q.step (π s) a (π u)); 'the step' is the same referent",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "process the step factors through",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Q : Generative.Process K A of Image.least (with hypothesis factors : FactorsThrough P π Q); also Q of FactorsThrough",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "K"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  }
+ ]
+}

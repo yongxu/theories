@@ -1,0 +1,701 @@
+[
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "§1.5 the Changes and the Chinese sources on the spine",
+  "summary": "An assessment of Chinese sources on the spine. Hexagrams on the spine, hexagram-world laws (nuclear law, cast, symmetries, orbits), what of the arrangements of the 傳 is law, fixed places and sole lines, place relations in context, censuses of 象/彖 against places, and bands of the three powers.",
+  "source": "rows 902-907, 1005-1006",
+  "status": "current",
+  "records": [
+   "chinese-sources-on-the-spine",
+   "hexagrams-on-the-spine",
+   "hexagram-world-laws",
+   "hexagram-arrangements-and-laws",
+   "fixed-places-and-sole-lines",
+   "place-relations-in-context",
+   "censuses-of-the-xiang-and-tuan",
+   "bands-of-the-three-powers"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "The Changes on the spine",
+  "summary": "周易's 64 configurations a premise-free world; 消息 merges nothing so every configuration returns, a broken-line-only law draws all into 坤; complements a lumping, waning breaks the symmetry; place relations glue only where every site agrees; received order is a table's run, no symmetric rule; 248 passages tied (91 agree, 98 scope, 59 diverge).",
+  "lean": [
+   "every_returns_iff",
+   "pairs_goAlike",
+   "Hexagram.wane_breaks",
+   "halves_glues_iff",
+   "runsOrder_not_commutes"
+  ],
+  "records": [
+   "Y1",
+   "Y2",
+   "Y3",
+   "Y4",
+   "Y5",
+   "RO",
+   "hexagrams-on-the-spine",
+   "place-relations-in-context",
+   "hexagram-world-laws",
+   "fixed-places-and-sole-lines",
+   "hexagram-arrangements-and-laws",
+   "chinese-sources-on-the-spine"
+  ],
+  "source": "§1.5, l.229, 233",
+  "status": "old-base",
+  "note": "summary of YI-ZHUAN-AND-BECOMING / CHINESE-SOURCES-AND-BECOMING; avoid duplicating",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Readings of the Changes and Chinese lines",
+  "summary": "无往不復 iff lossless; 窮則變 not a law; 生生之謂易 a scope; 繼之者善 and 天尊地卑 diverge; relational start holds across Chinese lines; universals need scope; four non-relational overlays answered within their tradition.",
+  "records": [
+   "D47",
+   "D50",
+   "D51",
+   "D53",
+   "D54",
+   "D55"
+  ],
+  "source": "§1.5 Readings, l.231",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "九句 crosswalk: return, drawn, never coming round",
+  "summary": "归/不归 mapped to three spine cases: lossless return (不息 without 生生), being drawn (收, 不归), never coming round (only open worlds, alone can be 生); a fixed configuration is rest 静, not 熄 [D49, D45].",
+  "lean": [
+   "Law.Lossless.returns",
+   "Law.Drawn.not_returns",
+   "Law.drawn_iff_lost",
+   "unheld_of_new",
+   "more_needs_open"
+  ],
+  "records": [
+   "D49",
+   "D45",
+   "X1"
+  ],
+  "source": "§1.5, l.235",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "脉络 gap laws ZG1-ZG3",
+  "summary": "Laws answering 脉络 entries: negation change, least parts and equal shares, copying b-fold, far conveying, capped need, tolerance monotone, rivals bounded in time, order at a shared relatum, selection read off a map (ZG1); regulation one-sided/local, repeated disturbance (ZG2); wholes through lasting parts, dormancy, arising needs change, need drift, basins (ZG3). Studies §338-340.",
+  "records": [
+   "ZG1",
+   "ZG2",
+   "ZG3",
+   "negation-change-and-stable-cases",
+   "least-parts-and-equal-shares",
+   "copying-b-fold",
+   "far-conveying-runs-the-family-down",
+   "a-need-with-a-cap",
+   "tolerance-monotone-across-laws",
+   "rivals-bounded-in-time",
+   "order-of-exchanges-sharing-a-relatum",
+   "selection-right-exactly-where-read",
+   "regulation-from-one-side-and-locally",
+   "repeated-disturbance",
+   "a-whole-carried-by-lasting-parts",
+   "dormancy-over-a-stretch",
+   "arising-needs-change",
+   "need-drift-along-a-lineage",
+   "basins-of-a-determined-law"
+  ],
+  "source": "§1.5, l.237-239",
+  "status": "old-base",
+  "note": "laws themselves belong to map/life/collective/knowing regions; classical keeps only the gap correspondence",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "脉络 gap laws ZG4-ZG7",
+  "summary": "Copied witnesses change nothing, synonyms/coined forms, majority taking and imposed codes, move alone underdetermines (ZG4); junctures before/after, reading through a pool, exclusive-footprint division, support passed on (ZG5); 象/彖 censuses, three-power bands, one search one line (ZG6); two rules from one share lock, no ratchet, pool by majority, comparison cannot weigh unread, care withdraws as feeding stops, goal descends, source before juncture (ZG7). Studies §341-344.",
+  "records": [
+   "ZG4",
+   "ZG5",
+   "ZG6",
+   "ZG7",
+   "copied-witnesses-change-nothing",
+   "synonyms-and-coined-forms",
+   "taking-what-most-hold",
+   "imposing-a-code-breaks-the-symmetry",
+   "the-move-alone-underdetermines",
+   "reaching-before-and-after-a-juncture",
+   "reading-through-a-pool",
+   "division-by-exclusive-footprints",
+   "support-passed-on",
+   "censuses-of-the-xiang-and-tuan",
+   "bands-of-the-three-powers",
+   "one-search-one-line",
+   "two-rules-lock-together",
+   "a-reading-against-the-share-does-not-ratchet",
+   "a-pool-read-by-its-majority",
+   "what-the-claims-do-not-read",
+   "feeding-from-a-step",
+   "a-goal-along-a-lineage",
+   "a-source-before-a-juncture"
+  ],
+  "source": "§1.5, l.241-247",
+  "status": "old-base",
+  "note": "l.245 says one note stays open, superseded by l.249 (ZG8 closes it); wording inconsistent",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Readings of 生生, 理, 识, 无明/明",
+  "summary": "生生 is life in the whole and its continuing generation, compared by widening, and is not the predicate living (D1). 理 is the modeling of laws of structure and change, a lumping (D26). 识 is a formation's own further course through the lumping its couplings make (D45). 无明 is seeking locked onto a target that cannot rest; 明 is coupling joined to a selection reaching beyond support. All are AI readings.",
+  "source": "§10(a) rows 生生, 理, 识, 无明 (l.1611-1614)",
+  "status": "current",
+  "lean": [
+   "Web.Widens",
+   "Lumped",
+   "goAlike_iff_lumped",
+   "Web.SelectsThrough",
+   "Law.rests_iff",
+   "Web.observed_raise_couples"
+  ],
+  "records": [
+   "D1",
+   "D26",
+   "D45"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Crosswalk to the corpus glossary",
+  "summary": "Corpus senses set against chapter terms (AI readings). 生生不息; 成生/绝生 (destructive became degenerative on 28 April); 开 has four marks, while the chapter's openness is the mark 未 only; 闭/成闭 against lock-in; possibility space against what can form next; 理, two senses; 道 is not formalized; 善/恶 and 智 have no formal predicate; point of enough is Law.rests_iff; meta-attractor is hijacking or runaway; relational self is Boundary; 位/际, 一 and membrane are Web.roles or Cut.",
+  "source": "§10(d) Crosswalk to the corpus glossary (l.1855-1879)",
+  "status": "current",
+  "lean": [
+   "Law.rests_iff",
+   "Boundary",
+   "Web.roles",
+   "Web.relations",
+   "Lineage",
+   "Succession",
+   "Cut",
+   "FedFromBeyond",
+   "Lumped"
+  ],
+  "records": [
+   "D1"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "classical",
+  "kind": "argument",
+  "title": "Closure typology on the spine: 闭, 成闭, 护闭, 元闭, 伪开 I-III, limits",
+  "summary": "闭 is an absorbing region and is not a loss by its form (returning_absorbing). 成闭 is lock-in (never_back, lost_drawn). 护闭 is keeping at a juncture (Becoming.Junctures, D52). 元闭 is a rule that holds the outcome (Becoming.Capture). 伪开 I: a part does not decide the whole (joint_excess_ends, Coarse, Switching). 伪开 II: no horizon decides the class (prefix_does_not_decide, break_not_bounded). 伪开 III: perturbation reabsorbed. 成生之限/绝生之限 is read as 护闭 versus 成闭.",
+  "source": "§10(e) Closure table (l.1881-1899)",
+  "status": "old-base",
+  "lean": [
+   "Law.Absorbing",
+   "Law.drawn_iff_not_returns",
+   "Law.returning_absorbing",
+   "Law.DrawnInto.never_back",
+   "Law.lost_drawn",
+   "Invariant.locks_out",
+   "Run.locked_in",
+   "Becoming.Junctures",
+   "Becoming.Capture",
+   "Pair.own_not_joint",
+   "Flow.joint_excess_ends",
+   "Coarse.carries",
+   "Switching.no_state_law",
+   "Renewable.prefix_does_not_decide",
+   "Web.break_not_bounded",
+   "Law.rule_absorbing",
+   "Captured.state_perturbation_drawn",
+   "Law.perturbation_reabsorbed"
+  ],
+  "records": [
+   "D52",
+   "X1"
+  ],
+  "note": "Unique content: the earlier texts' typology placed on the laws; carry it into the classical and map chapters",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "classical",
+  "kind": "argument",
+  "title": "The four marks of 开 on the spine, and their dependence",
+  "summary": "未 is World.arising_opens and Flow.new_beyond_every. 可 is Onward.run_iff_continues. 应 is ExchangeLaw.RespondsTo, with the response not fixed by coupling. 转 has three senses: return (Branching.Returns, Web.Restored), turning (Dependence) and revision (closes_through_coupling_apart). 开非更多 is Branching.Transit.keeps_not_returns. Against 不可缺一, the marks are not independent: 转 as return gives 可 (run_of_returning), and on finite configurations 可 is reaching a return (run_iff_returning).",
+  "source": "§10(e) Openness table and following paragraph (l.1901-1911)",
+  "status": "old-base",
+  "lean": [
+   "World.arising_opens",
+   "Flow.new_beyond_every",
+   "Onward.run_iff_continues",
+   "ExchangeLaw.RespondsTo",
+   "ExchangeLaw.response_not_fixed_by_coupling",
+   "Branching.Returns",
+   "Web.Restored",
+   "Flow.closes_through_coupling_apart",
+   "Branching.Transit.keeps_not_returns",
+   "Onward.run_of_returning",
+   "Onward.run_iff_returning",
+   "unheld_of_new"
+  ],
+  "note": "A genuine counter-result to the earlier texts' independence of the four marks; unique here",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "D48/D56-D58: capture and codes in Chinese texts; meta-attractor; Goodhart",
+  "summary": "Second/third-order corruption as loops reaching routes of 明; 约定俗成 as order of use, 王者制名 a centre, 书同文 imposed code, 止戈为武 reading written back; 韩非 二柄 as rule read from share (opposed-interest framing kept as divergence), 管子 proportional, 商君书 uniform; 元吸引子 = closed capture; Goodhart explained; exit is change of law (明).",
+  "source": "THE-THEORY-OF-BECOMING.md §4.5 Readings (line 529)",
+  "status": "current",
+  "records": [
+   "joint-practice-forms-continuation",
+   "joint-plan-composition",
+   "organizational-formation-from-generative-comparison"
+  ],
+  "note": "Spans classical, collective and map (meta-attractor); unique cross-reading",
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "一体之仁 reconstructed as co-formation",
+  "summary": "Ren (仁) of one body: relief, fulfillment and measured treatment of concrete lives take part in forming and correcting ends, understanding and response, and are not only means for the responder. It draws on Wang Yangming's 大学问, 责善 and 答顾东桥书, keeping his strong claims within their scope. Ren is placed inside the generative tree, not licensed by a finished core.",
+  "source": "theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md 一体之仁的生成解释, §1–2, §5",
+  "status": "old-base",
+  "note": "Chinese-only chapter; overlaps WANG-YANGMING.md",
+  "unit": "chapters-significance"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "OPENING: the sages' reciprocity and the Dao/dharma as readings of the one step",
+  "summary": "Laozi, Confucius, the Buddha, Jesus and Muhammad each said parts of it. Their widest agreement (己所不欲勿施于人, love your neighbour) is read as the standpoint-invariance step. Calling the law the Dao or the dharma is a reading. Laozi's 损不足以奉有余 is read as the meta-attractor's old root.",
+  "source": "theories/becoming/OPENING.md, paragraphs 7, 8, 12 and [^sages], [^dao]",
+  "status": "current",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "classical",
+  "kind": "argument",
+  "title": "間 and 文言 as formal language",
+  "summary": "文言 grammar is a formal system. 实词 are polymorphic primitives typed by position, and 虚词 are typed edges. A nine-particle kernel (者之也而即非凡令是) is proposed as STLC-complete. Pre-Qin formal vocabulary (墨家, 名家, 易传) is read as one cut lineage. The ontology has one primitive (間→系→一) with duals 位⟷际 and 化. Banners dated 6 October point to the PRE-QIN, HANZI and COGNITION chapters.",
+  "source": "theories/jian-and-wenyan-as-formal-language/README.md, banners and one paragraph",
+  "status": "superseded",
+  "note": "The ontology is superseded by the grammar root (relation, 缘, class) and the classical work (RO, WL 文理生生, ZH). The completeness claim is unproved and the banners say so. Unique: the particle-kernel proposal and the 文言 typing analysis as a candidate for classical-region tests.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "classical",
+  "kind": "argument",
+  "title": "Thesis test: classical Chinese thought carries a relational ontology (three-layer verdict)",
+  "summary": "Tested passage by passage. (1) At its starting point and in observation the thesis holds, and not only in one school. (2) In universal form it often needs a scope. (3) As a property of every system it fails: 19% of mapped judgements diverge, concentrated in four non-relational layers. The relational line is dominant and strongest in the earliest layer; it is also one position inside each tradition.",
+  "source": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md §1; CIVILIZATION-THOUGHT-AND-BECOMING.md §四·四; THE-THEORY-OF-BECOMING-ZHONGHUA.md 序",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "Stated three times: RO, 脉络 and the 中华本 序. Carry one statement, with RO's counts (91/98/59) and 脉络's (453/647/200 entries; 81% agree or scoped).",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "method",
+  "title": "Three relations: 相合 / 定域 / 相分",
+  "summary": "相合: the text's structure has a checked law of the same shape (this is not confirmation). 定域: the spine gives the exact scope in which the sentence holds and corrects its universal form (this is not negation). 相分: the text asserts what the theory does not assert, conflicts with a law, or sets up a non-relational layer (this does not say it is wrong).",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §4; YI-ZHUAN-AND-BECOMING.md §3; CIVILIZATION-THOUGHT-AND-BECOMING.md §二; WENLI-AND-BECOMING.md 体例; ZHONGHUA 凡·二十六–二十八",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "Defined five times; keep one definition, the 中华本 凡例 or RO §4, and point to it.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "argument",
+  "title": "Four non-relational layers and the replies from inside each tradition",
+  "summary": "Four layers do not read relationally: a prior ground; a pre-given nature or value; a will or single centre; contest and hierarchy. Each is answered from inside the same tradition (Xunzi's 天论, Dai Zhen, Wang Fuzhi's 乾坤并建, Pei Wei, 中论, 和而不同). Military and Legalist method is relational but its direction is contest.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §2, §7; CIVILIZATION-THOUGHT-AND-BECOMING.md §四·三",
+  "status": "current",
+  "records": [
+   "configurations-alike-by-relation"
+  ],
+  "lean": [
+   "Becoming.World.run_world",
+   "Becoming.Clearing.center_not_derived",
+   "Becoming.RelativePosition.rise_needs_fall",
+   "Becoming.Web.significance_undetermined",
+   "Becoming.SharedCodes.impose_loses_iff"
+  ],
+  "note": "Unique to RO; 脉络 adds a Lean witness for each layer.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "RO passage-level correspondence across nine traditions (248 passages)",
+  "summary": "Nine traditions, 248 passages: Yi zhuan beyond Y1–Y4 (49), Laozi with three commentaries and the Guodian and Mawangdui texts (50), Confucian (50), script (49), Zhuangzi and xuanxue (11), Mohist and School of Names (12), military, Legalist and Guanzi (13), Chinese Buddhism (10), other (4). Each passage is checked against stored text and bound to 487 audited declarations and 117 records. Variants change readings, for example Guodian 40 has 生于有，生于亡.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §3, §5.1–§5.9, 附 逐句对应; verify_ro.py",
+  "status": "current",
+  "records": [
+   "two-sided-regulation-and-late-reading",
+   "a-code-formed-between-formations",
+   "capture-through-the-rule"
+  ],
+  "lean": [
+   "Becoming.HexagramSequences",
+   "Becoming.RelativePosition",
+   "Becoming.RuleCapture",
+   "Becoming.SharedCodes",
+   "Becoming.Tolerance.gives_needs_sparing"
+  ],
+  "note": "Reading decision D54; reclassification ZHK (four passages from 相合 to 定域).",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Laozi 51 (生而不有，为而不恃，长而不宰) as the strongest link",
+  "summary": "Three structures match. 宰 is a part's own policy driving the rest, 不恃 is that a part's difference belongs to the joint activity, and 不有 is that the spine has no relation of ownership. Going from 不宰 to 'ought not to 宰' needs the continuation condition, a comparison commitment and the step of invariance; neither the text nor the spine supplies them.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §5.2; DAO-AND-GENERATIVITY.md §2",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "DAO repeats it; RO is the home.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "止戈为武: script history and value reading kept apart",
+  "summary": "Script history (止 is a foot, so 武 is 'bearing a halberd and marching') is kept apart from Chu Zhuangwang's value gloss. Components cannot fix a reading (CodeAcquisition.primitives_no_exact). The gloss's relational content is the force loop closing only through a link that gives back less than it takes, joint keeping, and two seekers of 'above all' never resting together. Its frame is a frame of power, kept as 相分.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §6; HANZI-AND-THEORY-TREE.md §1, 原文各节的去向",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.CodeAcquisition.primitives_no_exact",
+   "Becoming.Widening",
+   "Becoming.JointKeeping",
+   "Becoming.Retrodiction",
+   "Becoming.CrossSituational"
+  ],
+  "note": "Supersedes HANZI's old working gloss 武→有约束的保护能力.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "The script as a reading system: relational, though glyphs are not",
+  "summary": "形声 pairs two coarse readings; 假借 can only be decided from usage (CrossSituational.stands_iff); a radical is a lumping; a phonetic is a loaded code that drifts; 阙如 is silence; the most cosmological glyph glosses (王, 始一终亥) are centred. A controlled single-character term is therefore a convention, not something recovered from history.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §1 文字另有一层, §5.4; HANZI-AND-THEORY-TREE.md 判断",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.CrossSituational.stands_iff",
+   "Becoming.SharedCodes.never_agrees_of_both",
+   "Becoming.SharedCodes.kept_iff"
+  ],
+  "note": "",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "open",
+  "title": "Gaps the classical texts raised (RO seven, 脉络 ten classes)",
+  "summary": "RO §8 lists seven gaps. RG (Regulation), SC (SharedCodes), RC (RuleCapture) and Y5 (HexagramSequences) are proved. Three are still open: ranking by closure level and whether it is the same for every standpoint; 分 across several conditions (a Hall-type condition); comparing tolerance across laws. 脉络 §八's classes 1–10 are proved by WH1, SAT1 and ZG1–ZG8; 14 are scope notes and none remain open. Simultaneous mutual dependence goes to MD1.",
+  "source": "CHINESE-SOURCES-AND-BECOMING.md §8, §11; CIVILIZATION-THOUGHT-AND-BECOMING.md §八",
+  "status": "current",
+  "records": [
+   "a-whole-of-every-part",
+   "a-coupling-saturated-by-what-it-has-carried",
+   "regulation-from-one-side-and-locally",
+   "least-parts-and-equal-shares",
+   "copying-b-fold",
+   "copied-witnesses-change-nothing",
+   "reaching-before-and-after-a-juncture",
+   "reading-through-a-pool",
+   "a-pool-read-by-its-majority",
+   "forming-anew-necessary-and-sufficient",
+   "two-rules-lock-together"
+  ],
+  "lean": [
+   "Becoming.Regulation",
+   "Becoming.SharedCodes",
+   "Becoming.RuleCapture",
+   "Becoming.Web.AllWhole",
+   "Becoming.Saturation.stops_iff",
+   "Becoming.RelativePosition.equal_share_iff",
+   "Becoming.Copying.copying_iff",
+   "Becoming.Web.formsAnew_iff_undrawn"
+  ],
+  "note": "RO §11 may be stale on whether gaps 4–6 are open (ZG may have covered 'graded by closure level' as a scope note); check before carrying.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "definition",
+  "title": "The world of the Changes as a pure-core world (Y1, Becoming.Hexagrams)",
+  "summary": "Sixty-four configurations, one-line change, 消息 (waxWane: lossless, every hexagram returns, six steps give the complement, twelve give the identity), the 12-hexagram 消息 cycle, a merging wane law with 坤 absorbing, received order paired 非覆即變. Symmetries: complement pairs are lumped, yang count is not. Lines read as claims, frame and world (arising and ceasing recur). 71 theorems, no axioms.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §2 卦的世界",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Hexagrams",
+   "Becoming.Hexagram.waxWane_returns",
+   "Becoming.Hexagram.wane_not_returns",
+   "Becoming.Hexagram.pairs_goAlike",
+   "Becoming.Hexagram.yang_not_goAlike",
+   "Becoming.Law.lossless_iff_returns"
+  ],
+  "note": "D47",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "Relations of line positions as contextual readings (Y2, HexagramPlaces)",
+  "summary": "正/应/比/承/乘/中 hold at sites, not of a line alone. They glue into a reading of the whole hexagram only in 既濟 and 未濟 and similar cases. 应 is determined by 正. 应 is the difference between two contexts (the two trigrams), so no context-free frame fits. Behaviour under complement, reversal, one-line change and 消息 (the parity of the in-place count flips each step; 应 is a lumping the law respects, with a six-step cycle). Four censuses of the text agree except 需上六 and 艮六五. 108 theorems.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §2 爻位之间的关系, §5",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.HexagramPlaces",
+   "Becoming.Hexagram.atSites_glues_iff",
+   "Becoming.Hexagram.opposed_iff_phase",
+   "Becoming.Hexagram.halves_no_free_frame",
+   "Becoming.Hexagram.opposition_goAlike",
+   "Becoming.Hexagram.placeStatements_agree"
+  ],
+  "note": "D50",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "Hexagram laws: 互, changing lines, 錯綜 group, add-one, six orbits of 消息 (Y3, HexagramLaws)",
+  "summary": "互 merges and is decided by the middle lines. Its attractor is 乾 and 坤 fixed plus a two-cycle of 既濟 and 未濟, with basins of 16, 16 and 32 decided by lines 3–4; these are exactly the first two and last two of the received order. 錯綜 is a four-element group with 20 classes. Changing lines settle in one step; the 之卦, not the 本卦, is the lumping the law respects. Add-one has a single 64-step orbit. 消息 has six orbits with an invariant change count (1, 3, 5). 130 theorems.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §2 互、之卦…, §5",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.HexagramLaws",
+   "Becoming.Hexagram.basin_iff",
+   "Becoming.Hexagram.process_returns_iff_ends",
+   "Becoming.Hexagram.MarkedLines.onward_goAlike",
+   "Becoming.Hexagram.changesAround_invariant",
+   "Becoming.Hexagram.qian_not_reach_jiJi"
+  ],
+  "note": "D51",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "Wang Bi's readings: the end lines have no fixed place, and the sole answering line (Y4, HexagramSites)",
+  "summary": "上位 can have no parity (乾上九 against 需上六). A second relation, 'in place' on lines 2–5, makes all 28 place statements hold and the 彖 whole-hexagram statements hold. The ends are where lines enter and leave. 独应 (one line differing from the other five) explains the 上下應 passages, 夬 and 履六三. The relation is symmetric, so 治眾 is 相分. It lasts no step under 消息. 103 theorems.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §2 王弼之读, §5, §6",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.HexagramSites",
+   "Becoming.Hexagram.top_no_parity",
+   "Becoming.Hexagram.placeStatements_hold",
+   "Becoming.Hexagram.sole_iff_flip",
+   "Becoming.Hexagram.answers_symm",
+   "Becoming.Hexagram.soleAny_waxWane"
+  ],
+  "note": "D53",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "law",
+  "title": "Arrangements in the 傳: received order a table, not a rule (Y5, HexagramSequences)",
+  "summary": "Laws running the received order agree except at 未濟. Every line reads every line, and none commutes with the symmetries, so no local or rearrange-and-mask rule runs it; reasons between pairs are speech. 卦变 is a two-line swap, an exchange step that balances. 陽卦奇 is the parity lumping. 雜卦 keeps the same 32 pairs. 消息 never rests. The 八站 commute with nothing. 泰 and 否 differ only by a reading of direction (交). 98 theorems.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §2 传中诸排列, §5, §8",
+  "status": "current",
+  "records": [
+   "hexagram-arrangements-and-laws"
+  ],
+  "lean": [
+   "Becoming.HexagramSequences",
+   "Becoming.Hexagram.runsOrder_agrees",
+   "Becoming.Hexagram.runsOrder_reads",
+   "Becoming.Hexagram.rearrange_not_runsOrder",
+   "Becoming.Hexagram.exchangeWorld_balances",
+   "Becoming.Hexagram.yangOdd_goAlike",
+   "Becoming.Hexagram.meets_tai_pi"
+  ],
+  "note": "D55; corrects the earlier claim that the order is not the orbit of any law.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Key Yi zhuan readings on the spine",
+  "summary": "无往不復 and 日新 are two readings of one law: returns exactly when lossless, and with history never returns. 穷则变 is not a universal law. 一阴一阳 as a law over every world is as strong as excluded middle (World.law_iff_em). 易简 holds where the simplification is a lumping the law respects. 感与几 stop at what couples in. 生生之谓易 is 定域, since change is wider than 生生. 自强不息 needs external supply. 道器: the law is read from the unfolding.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §5",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Law.withHistory_never_returns",
+   "Becoming.World.law_iff_em",
+   "Becoming.Learning.goAlike_iff_lumped",
+   "Becoming.Web.break_not_bounded",
+   "Becoming.World.arising_opens",
+   "Becoming.Flow.fed_from_beyond",
+   "Becoming.shown_le_iff"
+  ],
+  "note": "The excluded-middle calibration of 一阴一阳 is a method item; carry it.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Where the Yi zhuan diverges (相分)",
+  "summary": "继之者善, 天地之大德曰生 and 復见天地之心 fall to significance_undetermined. 天尊地卑, 贵贱之位 and 爻有等 give hierarchy, but the structure has none: 位 is a context index. Wang Bi's 位者列贵贱 and 治眾, 陽處陰位為美 and 大衍 or divination are not in the spine; every finite-prefix predictor misses.",
+  "source": "YI-ZHUAN-AND-BECOMING.md §6",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Web.significance_undetermined",
+   "Becoming.livingSignificance_of_unrestricted",
+   "Becoming.Contextual.indexed_fits",
+   "Becoming.Learning.diagonal_misses"
+  ],
+  "note": "",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "中华思想脉络: all 5,673 judgements mapped (17 clusters, three reads)",
+  "summary": "Of 5,673 judgements, 3,499 are tagged and 2,174 have no readable structure. The tagged ones form 1,300 entries (453 相合, 647 定域, 200 相分), each passing mapper, reviser and checker. The second read rewrote most entries; one share was corrected only on the third read (21 changed relation), so two reads are unreliable. Divergence by domain runs from 名辩 1% to 法 33%. The era table is not evidence of a historical trend. Checked by verify_zh.py.",
+  "source": "CIVILIZATION-THOUGHT-AND-BECOMING.md §一–§四, §九–§十",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "Supersedes RO as the widest test; RO stays as the passage-level, selective account. Five passages reclassified in RO and Yi (D62, ZHK).",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "变化论 中华本: the whole theory restated in classical names",
+  "summary": "Sixteen 篇, from 大化 and 待 through 作已续, 流与衡, 复闭恒, 生生, 类与理, 时与位, 感识知, 名, 择之所及与明, 环, 传, 群与分, 顾 and 权. Each article gives 經 (in 文言, using only the name table), 說 (modern explanation) and 證 (Lean and records), with four kinds of status. Not a translation. Each 篇 closes with a 对照 of classical texts.",
+  "source": "THE-THEORY-OF-BECOMING-ZHONGHUA.md 序, 篇一–篇十六",
+  "status": "old-base",
+  "records": [],
+  "lean": [
+   "Becoming.Web",
+   "Becoming.Flow",
+   "Becoming.World"
+  ],
+  "note": "A parallel edition of the canonical chapter, stated on the World, Flow and web base, not on Becoming.Grammar; it must be re-rooted whenever the canonical chapters are. Its content duplicates the canonical chapter by design; what is unique is the 經 and 對照.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "application",
+  "title": "文理生生 v0.4 compared with the name table (144 characters, 12 constructions, the trigrams)",
+  "summary": "Two independently built projects: 59 characters isomorphic, 13 partly, 22 same character with different structure. Both refuse 道, 气, 性 and 仁. Twelve constructions are compared with their rejected inferences, and six of thirteen typed-rule edges. Bagua readings agree, including that a coarsening creates a cycle that is not there (image_exact_iff). Each side has things the other lacks; the table gained three corrections and the WL table revision.",
+  "source": "WENLI-AND-BECOMING.md 两个项目的对照, 名表之修订, 文理生生的形式部分与八卦",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.image_exact_iff",
+   "Becoming.MatchesThrough",
+   "Becoming.Hexagram.waxWane"
+  ],
+  "note": "Independence is partial (same classics, both AI-written).",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Dao: four judgements in 'does the theory articulate the Dao'",
+  "summary": "The question asked is at the level of the Dao: yes. Structural agreement with classical Dao texts: yes, checked passage by passage. Whether it grasps real order: an empirical question, with the assumptions in the modelling. Whether it is the unique complete Dao and has derived the good: no; dynamics do not fix significance. The first two do not testify for the last two.",
+  "source": "DAO-AND-GENERATIVITY.md §1",
+  "status": "current",
+  "records": [],
+  "lean": [
+   "Becoming.Web.significance_undetermined"
+  ],
+  "note": "Unique framing; small.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "德 and 无为 (AI readings); rest, completion and ending",
+  "summary": "德 is a formed, still revisable capacity to respond; reliable execution can also harm reliably. 无为 questions overcontrol and is not inaction: one course is compatible with two laws of 'whose act'. 利出一孔 against two suppliers. Under the condition, every ending is a narrowing and loses something; which ending is better needs a measure.",
+  "source": "DAO-AND-GENERATIVITY.md §2–§4",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "Residue page; small unique readings plus Chan and Hansen on modern disagreement and the unmapped Laozi 34/57 and Zhongyong 1/13.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "method",
+  "title": "Hanzi: four kinds of correspondence and four acceptance criteria for one-to-one mapping",
+  "summary": "Keep apart glyph composition, word sense, structure of the combination, and theoretical dependence. Two-character terms are often more exact. Acceptance has four rising levels: consistent naming, faithful sense, relations preserved, composition testable on held-out samples. An arbitrary code is also one-to-one, so a stronger hypothesis about relation-preserving characters stays open.",
+  "source": "HANZI-AND-THEORY-TREE.md §1, §4, §5, §6",
+  "status": "current",
+  "records": [
+   "how-fast-a-rule-may-change"
+  ],
+  "lean": [
+   "Becoming.CrossSituational.stands_iff",
+   "Becoming.CodeAcquisition.primitives_no_exact",
+   "Becoming.Pace"
+  ],
+  "note": "The criteria are the standard the 449-name table was built to; carry them into the method chapter's naming section.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Pre-Qin and wenyan: findings outside RO",
+  "summary": "Concern has several entry points, and a reward-labelled model does not explain it. Correcting a rule differs from what reaches the rule (Pace.rule_until_reading, rule_unreached). Same-word counterexamples (韩非 二柄, 商君书 弱民) must enter the account. Also: 管子内业; 吕氏 察今; 王充, 韩愈, 黄宗羲 with four distinctions; the 维摩经; genres; testing wenyan as a formal language.",
+  "source": "PRE-QIN-AND-WENYAN.md §1–§4",
+  "status": "current",
+  "records": [
+   "how-fast-a-rule-may-change"
+  ],
+  "lean": [
+   "Becoming.Pace.rule_until_reading",
+   "Becoming.Pace.rule_unreached",
+   "Becoming.Clearing.pool_closes_gap"
+  ],
+  "note": "Residue page.",
+  "unit": "chapters-classical"
+ },
+ {
+  "region": "classical",
+  "kind": "reading",
+  "title": "Wang Yangming: 一体之仁, 知行合一, 致良知 read relationally",
+  "summary": "一体 has ethical content. 心即理 is the responding side of a relation, not an ontology of mind. 行是知之成 matches the experiment law. Real situations correct means, ends and identification. Clever control can still lack 仁, since selection reaches only what couples in. Graded care, refusal and self-care are stated as relations. The rival reading is a narrowing under the condition, which the theory does not refute. Status: 相分.",
+  "source": "WANG-YANGMING.md §1–§8",
+  "status": "current",
+  "records": [],
+  "lean": [],
+  "note": "The §7 periphery module SituatedPractice (12 declarations, 8 with empty axiom reports, choice used) is not on the spine and must be ported before being cited.",
+  "unit": "chapters-classical"
+ }
+]

@@ -77,7 +77,7 @@ Completes a conditional local method–reference–apparatus–use interface, wi
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T121014.405728Z/verification.json) | — |
 | integration | [META-ATTRACTOR-RECONCILIATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md) | — |
 | statement | [COMMON-ORGANIZATION.md](../../../meta-attractor/COMMON-ORGANIZATION.md) | — |
-| integration | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| integration | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | review | [CONSEQUENCE-INQUIRY-SELECTION-MECHANISM.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CONSEQUENCE-INQUIRY-SELECTION-MECHANISM.md) | — |
 | proof | [Revision.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T122414.398959Z/verification.json) | — |

@@ -8,7 +8,7 @@
 
 ## 1. 本轮接续什么
 
-[BC1/BC2](../../../../theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md)与[LC](../history/root-foundation/UNEQUAL-BASIC-LOSSES-INTEGRATION.md)已有各自完成范围。本轮进行中，[有限合并的情境研究](../history/root-foundation/AGGREGATION-CONTEXT-INTEGRATION.md)也完成了六项定理／十五项审计、升级翻转和拼接障碍，以及“限制抵偿不等于删除根据”的正面修正。直接复用这些结果；本轮没有再次发现一般聚合循环、重新推导 J4，或把 LC 的比较理由升级为确定选择。
+[BC1/BC2](../../../../theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md)与[LC](../history/root-foundation/UNEQUAL-BASIC-LOSSES-INTEGRATION.md)已有各自完成范围。本轮进行中，[有限合并的情境研究](../history/root-foundation/AGGREGATION-CONTEXT-INTEGRATION.md)也完成了六项定理／十五项审计、升级翻转和拼接障碍，以及“限制抵偿不等于删除根据”的正面修正。直接复用这些结果；本轮没有再次发现一般聚合循环、重新推导 J4，或把 LC 的比较理由升级为确定选择。
 
 现在要推进的是：数量与严重性反向时，能否正面支持至少一些判断，并说明真实新方案怎样改变机会。普遍目标要求这类选择约束能够解释其关系根据，而不能只服务于特定身份、文化或初始偏好。但具体损失跨生活形式的比较仍须证明适用；几种有限构造不等于普遍伦理已经完成。
 
@@ -56,4 +56,4 @@ LR 因而给出一种正面的、带新增承诺的交叉比较路线，而不�
 
 本轮 **8 项新定理／23 项声明审计**已通过 Lean 4.29.1 实查；原实践模块的30项定理／46项审计作继承分列，另一个具体应用例不计新定理。确切范围、实际编译、源快照和依赖审计见[证明说明](../history/root-foundation/CROSSED-CLAIMS-PROOF.md)及其回执；LR 的伦理辩护不由该数学模块证明。[独立反审](../history/root-foundation/CROSSED-CLAIMS-REVIEW.md)分别审查正面论证、对手、源文本和形式回执，要求补明严格机会改善的正概率前提，本稿已据此修订。本轮没有新增经验测量。
 
-独立评审已按声明范围接受修订后的论证与形式产物；形式部分为独立源文件／回执核验，没有声称另跑一次编译。当前论述接入[基本冲突章节](../../../../theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md#crossed-claims-and-new-opportunities)。[维护检查](../history/root-foundation/CROSSED-CLAIMS-CHECKS.json)核对本轮文件、链接、证明绑定和双语索引，不能据此认证未复核的并行来源或整个理论的真理。
+独立评审已按声明范围接受修订后的论证与形式产物；形式部分为独立源文件／回执核验，没有声称另跑一次编译。当前论述接入[基本冲突章节](../../../../theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md#crossed-claims-and-new-opportunities)。[维护检查](../history/root-foundation/CROSSED-CLAIMS-CHECKS.json)核对本轮文件、链接、证明绑定和双语索引，不能据此认证未复核的并行来源或整个理论的真理。

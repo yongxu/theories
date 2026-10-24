@@ -1,0 +1,566 @@
+{
+ "text": "《金師子章》T1881：法藏章文（本文）與承遷注分層",
+ "source_tsv": "corpus/jinshizizhang.tsv",
+ "output_tsv": "classify/jinshizizhang.tsv",
+ "classification_is": "AI reconstruction (Claude), not human-audited; 本文 units are 法藏, 注 units are 承遷 and are never attributed to 法藏",
+ "commentary_sources": "Only 承遷’s notes in the file. Each 注 unit is anchored to the 本文 unit it follows in the combined file FO2-KS.txt (column commentary); every anchor agrees with the layer order. 五教章 and 清涼 are not in the repository.",
+ "counts_base_text": {
+  "庚": 23,
+  "丙一": 8,
+  "甲": 39,
+  "戊": 12,
+  "未读出": 7,
+  "乙": 3,
+  "己": 1,
+  "丁": 3
+ },
+ "counts_commentary_chengqian": {
+  "庚": 57,
+  "戊": 25,
+  "丙一": 7,
+  "丁": 11,
+  "未读出": 10,
+  "甲": 9,
+  "己": 4,
+  "乙": 1
+ },
+ "units": 220,
+ "counts": {
+  "庚": 80,
+  "丙一": 15,
+  "甲": 48,
+  "戊": 37,
+  "未读出": 17,
+  "乙": 4,
+  "己": 5,
+  "丁": 14
+ },
+ "counts_by_unit_type": {
+  "题": {
+   "庚": 2
+  },
+  "本文": {
+   "庚": 21,
+   "丙一": 8,
+   "甲": 39,
+   "戊": 12,
+   "未读出": 7,
+   "乙": 3,
+   "己": 1,
+   "丁": 3
+  },
+  "注": {
+   "庚": 57,
+   "戊": 25,
+   "丙一": 7,
+   "丁": 11,
+   "未读出": 10,
+   "甲": 9,
+   "己": 4,
+   "乙": 1
+  }
+ },
+ "registrations": {
+  "相合": 34,
+  "相分": 40,
+  "定域": 9
+ },
+ "wu_units": [
+  {
+   "id": "JSZ-P-02-002",
+   "form": "師子相虛",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-02-003",
+   "form": "唯是真金",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-02-004",
+   "form": "師子不有",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-02-005",
+   "form": "金體不無",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-04-002",
+   "form": "以金收師子盡",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-04-003",
+   "form": "金外更無師子可得",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-05-002",
+   "form": "師子生時，但是金生",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-05-003",
+   "form": "金外更無一物",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-05-004",
+   "form": "師子雖有生滅，金體本無增減",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-06-002",
+   "form": "五教之等（聲聞、始、終、頓、圓）",
+   "registration": "判教：相分"
+  },
+  {
+   "id": "JSZ-P-07-035",
+   "form": "說師子，用表無明",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-P-07-036",
+   "form": "論金體，具彰真性",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-003",
+   "form": "金 況 法界體，師子 喻 法界用",
+   "registration": "體用：相分"
+  },
+  {
+   "id": "JSZ-C-006",
+   "form": "幻法紛然 / 真空不動",
+   "registration": "真空/幻法：相分"
+  },
+  {
+   "id": "JSZ-C-017",
+   "form": "喻真理不變",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-018",
+   "form": "喻真理隨緣成諸事法",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-019",
+   "form": "真理不動，動即事",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-020",
+   "form": "金喻一真之性，師子喻緣起事法",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-021",
+   "form": "理本無生，隨諸緣法成差別相",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-022",
+   "form": "相起繁興，理即無生",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-030",
+   "form": "緣起幻色不是實有",
+   "registration": "色/空：相分"
+  },
+  {
+   "id": "JSZ-C-031",
+   "form": "真空常存",
+   "registration": "色/空：相分"
+  },
+  {
+   "id": "JSZ-C-042",
+   "form": "圓而不減，成而不增",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-043",
+   "form": "師子雖則相殊，金且不隨殊變",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-050",
+   "form": "喻理奪事",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-051",
+   "form": "緣起事法當體本虛",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-052",
+   "form": "離真理外無片事可得",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-058",
+   "form": "喻真理隨緣成諸事法",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-059",
+   "form": "離真理之外無別事相…無生生也",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-060",
+   "form": "無生之理本無生滅",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-072",
+   "form": "以理奪事，事隱理顯",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-075",
+   "form": "師子相盡，真金現前",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-076",
+   "form": "事事皆金",
+   "registration": "金/師子：相分"
+  },
+  {
+   "id": "JSZ-C-085",
+   "form": "雖相容，本不動",
+   "registration": "本/末：相分"
+  },
+  {
+   "id": "JSZ-C-097",
+   "form": "以理成事，事法不定，互相容攝",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-098",
+   "form": "真理隨緣成諸事法，各各不實",
+   "registration": "理/事：相分"
+  },
+  {
+   "id": "JSZ-C-109",
+   "form": "師子相不實，當體是金，不可壞",
+   "registration": "金/師子：相分"
+  }
+ ],
+ "ji_units": [
+  {
+   "id": "JSZ-P-09-002",
+   "form": "拒：有為諸法待壞而滅；本來寂滅",
+   "note": "polysemy of 壞; rejects ceasing as something that must come; plan answer open (perhaps the reading under the total class, where nothing is distinguished to arise or cease)"
+  },
+  {
+   "id": "JSZ-C-056",
+   "form": "拒：法有自生；法本無生，從緣有故",
+   "note": "承遷 on gate 5 heading; plan answer: 生 relative to class and through 缘; agrees that there is no self-standing 生"
+  },
+  {
+   "id": "JSZ-C-057",
+   "form": "拒：有自體之生；生而無生",
+   "note": "承遷"
+  },
+  {
+   "id": "JSZ-C-061",
+   "form": "拒：生為自性之生；由緣生非生方得名生",
+   "note": "承遷 on P-05-005"
+  },
+  {
+   "id": "JSZ-C-065",
+   "form": "拒：生時有生",
+   "note": "承遷"
+  }
+ ],
+ "weidu_reasons": [
+  {
+   "id": "JSZ-P-06-011",
+   "reason": "reason: 名言路絕 (beyond names); the grammar has no form for what no sentence reaches"
+  },
+  {
+   "id": "JSZ-P-06-016",
+   "reason": "reason: 相即 (all is one) is not class equivalence (that would collapse the distinctions JSZ-P-06-015, -017 keep); needs an operation the grammar lacks"
+  },
+  {
+   "id": "JSZ-P-06-017",
+   "reason": "reason as P-06-016; 因果歷然 keeps causal order"
+  },
+  {
+   "id": "JSZ-P-07-010",
+   "reason": "reason: each hair contains the whole lion: whole-in-part containment; the grammar has no containment relation; a candidate is a greatest fixed point (non-wellfounded), §4.7"
+  },
+  {
+   "id": "JSZ-P-07-011",
+   "reason": "reason as P-07-010"
+  },
+  {
+   "id": "JSZ-P-07-012",
+   "reason": "reason: infinite mutual nesting (重重無盡); cf. 不穷 needs dependent choice (§4.2)"
+  },
+  {
+   "id": "JSZ-P-07-019",
+   "reason": "reason: 眼即耳 (identity of distinct parts, 相即) is not available; class equivalence would erase the parts' difference"
+  },
+  {
+   "id": "JSZ-C-008",
+   "reason": "承遷 couplet on gate 4; reason: paradox 相即無相，非相即相"
+  },
+  {
+   "id": "JSZ-C-009",
+   "reason": "承遷 couplet on gate 5; reason: 生即無生 asserts and denies 生 of one event; readable only if the two are relative to two classes (the plan's answer), which the line does not state"
+  },
+  {
+   "id": "JSZ-C-011",
+   "reason": "承遷 on gate 7; reason: mutual reflection (交映, 重重) needs containment"
+  },
+  {
+   "id": "JSZ-C-012",
+   "reason": "承遷 on gate 8; reason: 舉一即多 (相即)"
+  },
+  {
+   "id": "JSZ-C-088",
+   "reason": "承遷 on P-07-010; reason: 小中含大 (containment)"
+  },
+  {
+   "id": "JSZ-C-089",
+   "reason": "承遷; reason: containment"
+  },
+  {
+   "id": "JSZ-C-090",
+   "reason": "承遷; reason: containment"
+  },
+  {
+   "id": "JSZ-C-093",
+   "reason": "承遷 on P-07-018; reason: 相即相遍"
+  },
+  {
+   "id": "JSZ-C-100",
+   "reason": "承遷 on P-07-027; reason: 一即多 (相即)"
+  },
+  {
+   "id": "JSZ-C-107",
+   "reason": "承遷 (not 法藏) on P-08-003; reason: 無孤單法 is a model property stated without definition, and 一一相中含無盡相 needs containment; strains the plan, which admits isolated events (§4.3)"
+  }
+ ],
+ "most_important": [
+  {
+   "id": "JSZ-P-01-004",
+   "line": "緣起 := 起但是緣: the arising is nothing but the 缘 (法藏)"
+  },
+  {
+   "id": "JSZ-P-01-002",
+   "line": "謂以金無自性: in 法藏’s text the gold too lacks self-nature"
+  },
+  {
+   "id": "JSZ-C-017",
+   "line": "承遷 on P-01-002: 喻真理不變: the commentary turns 金無自性 into an unchanging 理"
+  },
+  {
+   "id": "JSZ-P-04-002",
+   "line": "以金收師子盡 (相分, 法藏)"
+  },
+  {
+   "id": "JSZ-P-04-003",
+   "line": "金外更無師子可得 (相分, 法藏)"
+  },
+  {
+   "id": "JSZ-P-05-002",
+   "line": "師子生時，但是金生: 生 under the lion reading is 住 under the gold reading (the plan’s class relativity); the text ranks the gold reading as 正見"
+  },
+  {
+   "id": "JSZ-P-05-004",
+   "line": "師子雖有生滅，金體本無增減 (相分, 法藏)"
+  },
+  {
+   "id": "JSZ-P-07-022",
+   "line": "主伴交輝，理事齊現 (nondual, 法藏), beside the 相分 lines"
+  },
+  {
+   "id": "JSZ-P-07-035",
+   "line": "說師子，用表無明 (with P-07-036 金體彰真性): 法藏 himself values the two sides"
+  },
+  {
+   "id": "JSZ-P-08-001",
+   "line": "總相/別相: whole and parts at one time"
+  },
+  {
+   "id": "JSZ-P-08-002",
+   "line": "同相 by one 緣起, 異相 by 各不相到"
+  },
+  {
+   "id": "JSZ-P-08-003",
+   "line": "成相 諸根合會 / 壞相 諸緣各住自位: two synchronic readings at two grains, not 生 then 亡"
+  },
+  {
+   "id": "JSZ-P-07-007",
+   "line": "若看師子…則師子顯金隱 (with -008, -009): what is manifest depends on the reading"
+  },
+  {
+   "id": "JSZ-P-07-029",
+   "line": "九世有隔不同，相由成立: times established through each other"
+  },
+  {
+   "id": "JSZ-P-07-030",
+   "line": "同為一念: the mutual dependence of times gives one co-present cluster (cf. §4.1 环为同时之聚)"
+  },
+  {
+   "id": "JSZ-P-06-003",
+   "line": "聲聞教 := 緣生之法念念生滅: the view nearest the plan is ranked lowest of five (判教, 戊 via P-06-002)"
+  },
+  {
+   "id": "JSZ-P-06-009",
+   "line": "頓教: 二相互奪兩亡 (mutual)"
+  },
+  {
+   "id": "JSZ-C-072",
+   "line": "承遷 on P-06-009: 以理奪事，事隱理顯 (one-sided)"
+  },
+  {
+   "id": "JSZ-P-10-001",
+   "line": "入涅槃: 見師子與金二相俱盡: in the end the gold is not privileged either"
+  },
+  {
+   "id": "JSZ-C-020",
+   "line": "金喻一真之性，師子喻緣起事法: 承遷, not 法藏"
+  },
+  {
+   "id": "JSZ-C-021",
+   "line": "理本無生: 承遷, not 法藏"
+  },
+  {
+   "id": "JSZ-C-107",
+   "line": "顯法界中無孤單法: 承遷, not 法藏; denies isolated dharmas, which the plan admits"
+  },
+  {
+   "id": "JSZ-P-07-037",
+   "line": "理事合論 況阿賴耶識: link to 起信論 QXL-JS-030"
+  },
+  {
+   "id": "JSZ-C-064",
+   "line": "承遷: 生與無生互成互奪，奪則無生，成乃緣生: 生 relative to two operations"
+  },
+  {
+   "id": "JSZ-C-120",
+   "line": "承遷 quoting 僧肇: 功流萬世而常存: continuation valued positively, opposite in sign to 起信論’s 相續 = 無明"
+  }
+ ],
+ "strains_with_plan": [
+  {
+   "ids": [
+    "JSZ-P-04-002",
+    "JSZ-P-04-003",
+    "JSZ-P-05-002",
+    "JSZ-P-05-003",
+    "JSZ-P-05-004",
+    "JSZ-P-07-035",
+    "JSZ-P-07-036"
+   ],
+   "plan": "§4.1 化与理, §5.4 金师子章",
+   "strain": "The 相分 is 法藏’s own (confirmed in the base layer), and P-07-035/036 add a valuation: 師子 表無明, 金 彰真性. §5.4 should add these two lines."
+  },
+  {
+   "ids": [
+    "JSZ-P-01-002",
+    "JSZ-P-02-007",
+    "JSZ-P-07-002",
+    "JSZ-P-07-022",
+    "JSZ-P-10-001"
+   ],
+   "plan": "§5.4 金师子章",
+   "strain": "法藏’s base text also weakens the split: 金無自性 (gate 1), 空無自性…不礙幻存 (gate 2), 同時成立, 理事齊現, and at the end 二相俱盡. The 相分 and the 不二 are in the same text, as §5.4 says; gate 1 and gate 10 should be cited with 理事齊現."
+  },
+  {
+   "ids": [
+    "JSZ-C-017",
+    "JSZ-C-020",
+    "JSZ-C-021",
+    "JSZ-C-050",
+    "JSZ-C-072",
+    "JSZ-C-109"
+   ],
+   "plan": "§5.4 注之句",
+   "strain": "承遷 consistently hardens the split: 金無自性 → 真理不變; 互奪兩亡 → 以理奪事; 不待壞 → 不可壞. Lines quoted in plan versions before v10 as 法藏’s (金喻一真之性, 理本無生, 無孤單法) are all 承遷 (confirmed by layer and position)."
+  },
+  {
+   "ids": [
+    "JSZ-P-08-001",
+    "JSZ-P-08-002",
+    "JSZ-P-08-003",
+    "JSZ-P-09-002",
+    "JSZ-C-054",
+    "JSZ-C-109"
+   ],
+   "plan": "§一 成与坏",
+   "strain": "Confirms §一: 成/壞 are synchronic readings of parts and whole. 壞 is polysemous within the file: P-08-003 壞相 (各住自位), P-09-002 更不待壞 (destruction over time), C-054 壞波, C-109 不可壞; the plan must cite only P-08-003 for 壞相."
+  },
+  {
+   "ids": [
+    "JSZ-P-05-002"
+   ],
+   "plan": "§一 位置不自立，而相对于类",
+   "strain": "Best support in either text for position relative to class: 師子生時，但是金生 is 生 under one reading and 住 under the other; but the text ranks the gold reading (正見), which the plan does not."
+  },
+  {
+   "ids": [
+    "JSZ-P-06-002",
+    "JSZ-P-06-003"
+   ],
+   "plan": "§一 续 at the centre",
+   "strain": "法藏 places 緣生之法念念生滅 (the plan’s moment-to-moment continuation) in the lowest teaching; the plan’s centre is, for 法藏, a partial view. Registered 戊 (判教)."
+  },
+  {
+   "ids": [
+    "JSZ-P-07-026",
+    "JSZ-P-07-029",
+    "JSZ-P-07-030"
+   ],
+   "plan": "§4.1 时, §5.4 刹那",
+   "strain": "Supports time from mutual 缘 (相由成立) and cycles as one co-present cluster (同為一念); also commits to discrete moments (剎那之間分為三際), to be registered with 刹那 as a separate commitment."
+  },
+  {
+   "ids": [
+    "JSZ-P-07-007",
+    "JSZ-P-07-008",
+    "JSZ-P-07-009",
+    "JSZ-P-07-014",
+    "JSZ-P-07-015"
+   ],
+   "plan": "§4.1 (no observer words)",
+   "strain": "Relativity is expressed with 看 and 收 (looking, taking in): observer words the plan replaces by classes."
+  },
+  {
+   "ids": [
+    "JSZ-P-06-016",
+    "JSZ-P-06-017",
+    "JSZ-P-07-010",
+    "JSZ-P-07-011",
+    "JSZ-P-07-012",
+    "JSZ-P-07-019",
+    "JSZ-C-107"
+   ],
+   "plan": "§4.7 文法有多强",
+   "strain": "相即 and whole-in-part containment (一即一切, 眼即耳, 重重無盡) are not readable: class equivalence would erase the differences the text keeps (參而不雜, 因果歷然). A candidate is a non-wellfounded (greatest fixed point) containment; open. 承遷’s 無孤單法 contradicts the grammar’s isolated events."
+  },
+  {
+   "ids": [
+    "JSZ-C-059"
+   ],
+   "plan": "§4.6 生生",
+   "strain": "承遷 writes 無生生 (no arising-of-arising): a different sense of 生生 from the plan’s; polysemy to note."
+  }
+ ],
+ "corpus_problems": [
+  "JSZ-P-07-009 reads 俱顯俱顯 in both FO2-KS-P.txt and FO2-KS.txt; the Taishō reading 俱隱俱顯 is from memory and was not checked.",
+  "JSZ-C-081 contains the private-use character U+F1367 (Supplementary Private Use Area-A) for 迴 in 由心?轉善成門; the base unit JSZ-P-07-032 has 迴轉.",
+  "JSZ-P-000 is not a contiguous string of FO2-KS.txt: there each gate name is followed by a 承遷 couplet (JSZ-C-005..014); the layer file joins the names. Anchored accordingly.",
+  "FO2-KS-C.txt has no gate labels; anchors in the commentary column come from position in FO2-KS.txt (all consistent with layer order).",
+  "JSZ-C-001..004 precede the 法藏 attribution line: they are 承遷 on the title."
+ ]
+}

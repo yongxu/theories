@@ -1,0 +1,17 @@
+@Becoming.«化之二说同形» : ∀ {α : Type u_1} (R E F : Becoming.«际» α), Becoming.«谓» (Becoming.«化» R E F) (Becoming.«异» R E F)
+@Becoming.«化为有缘之成坏» : ∀ {α : Type u_1} (R E F : Becoming.«际» α),
+  Becoming.«谓» (Becoming.«化» R E F) (Becoming.«合» R (Becoming.«成坏» E F))
+@Becoming.«同于为类» : ∀ {α : Type u_1} {S : Becoming.«际» α},
+  (∀ (x : α), ∃ z, S x z) → (∀ {x z z' : α}, S x z → S x z' → z = z') → Becoming.«类» (Becoming.«同于» S)
+Becoming.«同于不必传递» : ∃ S, Becoming.«同于» S 0 1 ∧ Becoming.«同于» S 1 2 ∧ ¬Becoming.«同于» S 0 2
+@Becoming.«相续之末有前» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α}, Becoming.«相续» R E x y → Becoming.«有前» R E y
+@Becoming.«复者住» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α}, Becoming.«复» R E x → Becoming.«住» R E x
+@Becoming.«有常则通» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«有常» R E → ∀ {x : α}, Becoming.«有前» R E x → Becoming.«通» R E x
+@Becoming.«非一非异» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  (∀ (z : α), ¬R z z) →
+    (∀ (x y : α), ¬Becoming.«续» R Becoming.«静» x y) ∧
+      ∀ {x y : α}, R x y → ∃ E, Becoming.«类» E ∧ Becoming.«化» R E Becoming.«静» x y
+@Becoming.«因灭而续» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  (∀ (z : α), ¬R z z) →
+    ∀ {x y : α}, R x y → E x y → Becoming.«亡» R Becoming.«静» x ∧ Becoming.«生» R Becoming.«静» y ∧ Becoming.«续» R E x y

@@ -1,0 +1,534 @@
+{
+ "plan": "../PLAN.md §5.3 (first batch)",
+ "built_by": "build.py",
+ "checked_by": "verify.py",
+ "conventions": {
+  "offsets": "Python str indices (Unicode code points) into the source file decoded as UTF-8; 's-e' half-open; several ranges joined by ';' are concatenated without separator",
+  "segmentation": "a unit ends after one of 。；？！ plus any immediately following closing marks 」』”’）》〉 or further terminators; also at a paragraph/line end in line-based files; verse units (偈) end only at 。？！ or the closing 」",
+  "tsv_escaping": "text fields escape \\ as \\\\, tab as \\t, newline as \\n, CR as \\r",
+  "unit_types": "经 传 偈 释 注 本文 说 序 题 (说 = 經說; 序 = preface; 题 = title/attribution lines)",
+  "normalization": "none"
+ },
+ "texts": [
+  {
+   "text_id": "XC",
+   "title": "《周易·繫辭》上下",
+   "tsv": "xici.tsv",
+   "scope": "繫辭上、繫辭下全篇（維基文庫 wikitext，章次依文件）",
+   "sources": [
+    {
+     "path": "sources/zhouyi-yizhuan/yizhuan/xici-shang.json",
+     "sha256": "f3d5c0fd01e1663e6ad19a3e5cb81cf6df197210e88056340bd66812d0cf4f2a",
+     "script": "繁（「八卦相荡」作简体「荡」，余繁体）",
+     "edition_marks_in_file": "Wikisource API JSON; page title 易傳/繫辭上; revid 2611140; timestamp 2025-11-02T05:36:59Z; Header template gives author=孔子, times=東周 (attribution, not an edition); no 底本 stated"
+    },
+    {
+     "path": "sources/zhouyi-yizhuan/yizhuan/xici-xia.json",
+     "sha256": "ae839b81aa145be8224fd8c88701a3ff299e8d3cc5983d84b1fd9e506935b474",
+     "script": "繁",
+     "edition_marks_in_file": "Wikisource API JSON; page title 易傳/繫辭下; revid 2611136; timestamp 2025-11-02T05:29:36Z; Header template gives author=孔子, times=東周 (attribution, not an edition); no 底本 stated"
+    }
+   ],
+   "units_total": 351,
+   "units_by_type": {
+    "传": 351
+   },
+   "problems": [
+    "XCX: the file divides 繫辭下 into 9 chapters (第一章–第九章), not the 12 of 朱熹's arrangement; chapter numbers in ids follow the file.",
+    "XCX: the wikitext keeps wiki links such as 蓋取諸[[周易/離|離]] inside the text; units keep them byte for byte (flagged in the note column).",
+    "XCS: chapter numbering follows the file (12 chapters).",
+    "XC: the raw files are JSON; paragraph breaks are the two-character escape \\n, which is never inside a unit; offsets index the raw JSON file."
+   ]
+  },
+  {
+   "text_id": "LZ",
+   "title": "《老子》王弼本經文",
+   "tsv": "laozi.tsv",
+   "scope": "八十一章經文（<p> 元素）；王弼注（<dl><dd><small>）不收",
+   "sources": [
+    {
+     "path": "sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html",
+     "sha256": "1215fe781fb379a0a529659aaa736936618985cb596c6cce09569f7ef15dd45f",
+     "script": "繁",
+     "edition_marks_in_file": "page title 道德經 (王弼本) (Wikisource, wgRevisionId 2354026); body heads: 老子《道德經》上篇 / 下篇, 華亭張氏原本, 晉　王弼注; chapter 2 reads 長短相較 (王弼本 reading confirmed)"
+    }
+   ],
+   "units_total": 482,
+   "units_by_type": {
+    "经": 482
+   },
+   "problems": [
+    "LZ: 經文 in the file is cut into <p> pieces at the points where 王弼注 is inserted, often mid-sentence; a unit that runs across a note is stored as several ranges (note column)."
+   ]
+  },
+  {
+   "text_id": "MJ",
+   "title": "《墨經》經上、經說上",
+   "tsv": "mojing.tsv",
+   "scope": "經上全篇（MI1-S-JS.txt）；經說上全篇（MI1-S-SS.txt），同一集合（civilization-thought-v1.0, ming）；M.html 作經上第二見證",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/ming/MI1-S-JS.txt",
+     "sha256": "c06ca012dc03188049f3668006fe559081bc6af5f18f66f49619050e2c6eedf6",
+     "script": "繁",
+     "edition_marks_in_file": "not stated (bare text, one line, no item numbers)",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source MI1-S-JS: 墨子/經上, permalink https://zh.wikisource.org/w/index.php?title=墨子/經上&oldid=2637042, accessed 2026-10-19; edition_note 依据传世网页转录，不是影印或现代校勘定本；断句与疑字保持所见",
+     "role": "經上 (segmented)"
+    },
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/ming/MI1-S-SS.txt",
+     "sha256": "2bd8fce02c29a57790110d3e62e19b4f91614099ebee32577a81c47f84a26f23",
+     "script": "繁",
+     "edition_marks_in_file": "not stated (bare text, one 說 entry per paragraph, no numbers)",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source MI1-S-SS: 墨子/經說上, permalink https://zh.wikisource.org/w/index.php?title=墨子/經說上&oldid=2637044, accessed 2026-10-19; same edition_note",
+     "role": "經說上 (segmented)"
+    },
+    {
+     "path": "sources/wenli-shengsheng-v0.4/research/corpus/sources/M.html",
+     "sha256": "7f2b3d2b28594cf76363bd83d9ce26c57a9b52a1decc47008a3c8a2976773022",
+     "script": "繁",
+     "edition_marks_in_file": "page title 墨子/經上 (Wikisource HTML); header 作者：墨翟; no 底本 or item numbering stated",
+     "role": "second witness of 經上, not segmented; its 經上 <p> text is identical character for character to MI1-S-JS.txt (751 characters)"
+    }
+   ],
+   "units_total": 267,
+   "units_by_type": {
+    "经": 101,
+    "说": 166
+   },
+   "problems": [
+    "MJ: 經上 (MI1-S-JS.txt) has no item numbers; each 。-unit is taken as one 經 item (101 items). This may split or merge items relative to scholarly numberings (e.g. 孫詒讓); 經上 items 聞/循所聞/言/執所言 are separate units here.",
+    "MJ: plan §5.3 lists M.html, which holds 經上 only; by the coordinator's correction 經上 and 經說上 are taken from one collection (MI1-S-JS.txt, MI1-S-SS.txt, Wikisource oldid 2637042 / 2637044). M.html is recorded as a second witness of 經上: its text is identical to MI1-S-JS.txt, no differences. A simplified copy of 經說上 (sources/chinese-classical-texts/atlas-v9.1/evidence/texts/MS13.txt) exists and is not used.",
+    "MJ: 經說上 paragraphs (91) were linked to 經上 items by sequence alignment on the 牒字 (first character, traditional/simplified folded by a small table in build.py); 9 links are uncertain or missing and are marked in the note column: 說段6→J-006 (智/𢜔); 說段16→J-016 (誚/𧨜); 說段32→J-032 (言/故); 說段39→J-039 (同/侗); 說段70→J-076 (辯勝/辯); 說段77→J-083 (名/所以謂); 說段81→J-087 (欲正權利/仗者); 說段87→J-097 (服執誽巧轉/援執服); 說段91→J-101 (正/若聖人)"
+   ]
+  },
+  {
+   "text_id": "XZ",
+   "title": "《荀子·正名》",
+   "tsv": "xunzi-zhengming.tsv",
+   "scope": "正名篇全篇（文件第4至第23非空行）",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ22.txt",
+     "sha256": "d5010f6b43861156c7993c26250e067439b4e4680a79c733049d9ae6f6ff20e9",
+     "script": "简",
+     "edition_marks_in_file": "file head: 荀子正名篇第二十二 with navigation 解蔽篇第二十一 / 性恶篇第二十三; no 底本 stated",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source RU2-S-XZ22: url https://zh.wikisource.org/zh-hans/荀子/正名篇; edition_note 维基文库公开传世文本；非权威校勘定本；采用页面简体转换字形，标点为整理者所加"
+    }
+   ],
+   "units_total": 196,
+   "units_by_type": {
+    "本文": 196
+   },
+   "problems": [
+    "XZ: simplified script; plan §一 quotes the passage in traditional script, so quotations match only after script folding.",
+    "XZ: completeness of the chapter not checked against another edition (none frozen here)."
+   ]
+  },
+  {
+   "text_id": "ZZ",
+   "title": "《莊子·養生主》",
+   "tsv": "zhuangzi-yangshengzhu.tsv",
+   "scope": "養生主全篇（文件即全篇，火傳一段為末句）",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S03.txt",
+     "sha256": "bf31a79052872d37cbd9ca57f4f68cc2fe499e154c836c414653ebd28b95ff65",
+     "script": "繁（含「无」「爲」等字形，未轉換）",
+     "edition_marks_in_file": "not stated (file is bare text)",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source ZH1-S03: title 庄子·養生主, url https://zh.wikisource.org/wiki/莊子/養生主, retrieved 2026-10-19; edition_note 维基文库逐篇转录的不转换字形见证；仅取正文p元素"
+    }
+   ],
+   "units_total": 38,
+   "units_by_type": {
+    "本文": 38
+   },
+   "problems": [
+    "ZZ: located by grep for 指窮於爲薪；other repository copies (sources/chinese-classical-texts/atlas-v9.1/evidence/texts/DS06.txt, simplified) not used."
+   ]
+  },
+  {
+   "text_id": "QXL",
+   "title": "《大乘起信論》",
+   "tsv": "qixinlun.tsv",
+   "scope": "全篇，含卷首 智愷序（unit_type 序）與題署（题）",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-QX.txt",
+     "sha256": "34cf1a1a13441279799dad7acc891d7009e9a2a60c0c461c64e2060132be811b",
+     "script": "繁",
+     "edition_marks_in_file": "No.1666[No.1667] (大正藏 numbering as given); 題署 大乘起信論序揚州僧智愷作; 大乘起信論一卷馬鳴菩薩造梁西印度三藏法師真諦譯; 尾題 大乘起信論一卷",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source FO2-QX: url https://cbetaonline.dila.edu.tw/zh/T32n1666_001; edition_note CBETA官方xml-p5固定提交；保留lem正文，去note/rdg/back、目录mulu与排版空白"
+    }
+   ],
+   "units_total": 589,
+   "units_by_type": {
+    "题": 4,
+    "序": 14,
+    "偈": 3,
+    "本文": 568
+   },
+   "problems": [
+    "QXL: the file is one line with no layout; 卷首偈 and 迴向偈 are not marked and were typed 偈 by position and metre (note column). Section labels come from the file's own 初說/次說…分 sentences; a unit carrying 已說X分。次說Y分 starts before the marker and keeps the earlier label only if it starts before it.",
+    "QXL: 智愷序 is included as unit_type 序; its authenticity question is not addressed."
+   ]
+  },
+  {
+   "text_id": "JSZ",
+   "title": "《金師子章》（法藏章文與承遷注分層）",
+   "tsv": "jinshizizhang.tsv",
+   "scope": "法藏章文（FO2-KS-P.txt）與承遷注文（FO2-KS-C.txt）分別切分；合排本 FO2-KS.txt 僅作分層核對；卷首序不收",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-KS.txt",
+     "sha256": "eaf07a68799f40ff61a48883cd0fd30b879498eebaf69e0892b1b740e05140dd",
+     "script": "繁",
+     "edition_marks_in_file": "No. 1881; 金師子章序 (unattributed preface); 大方廣佛華嚴經金師子章; 五臺山真容院沙門承遷註; 唐崇福寺賢首法師法藏述; 尾題 大方廣佛華嚴經金師子章一卷",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source FO2-KS: title 华严经金师子章注; url https://cbetaonline.dila.edu.tw/zh/T45n1881_001; CBETA xml-p5",
+     "role": "combined layout (章文 and 注 interleaved, hard-wrapped CBETA lines; layers not marked); used only to check the layer files"
+    },
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-P.txt",
+     "sha256": "9fe1bfbfe21ea2ee43fcdac07f2a0a11b20df95d43d86e3bd0d02dadbe03ade6",
+     "script": "繁",
+     "edition_marks_in_file": "file head 金師子章唐崇福寺賢首法師法藏述; no number stated in the file",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/PROVENANCE.json, FO2-KS-P: 法藏《金师子章》章文（从承迁注本分层提取）, url https://cbetaonline.dila.edu.tw/zh/T45n1881_001",
+     "role": "章文 layer → unit_type 本文"
+    },
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-C.txt",
+     "sha256": "ca40d793b9cc6a30e59a1c7ddd0863c33a5f9c99d5f993bec58bf93a5eb28dc1",
+     "script": "繁",
+     "edition_marks_in_file": "not stated (bare text)",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/PROVENANCE.json, FO2-KS-C: 承迁《金师子章注》注文（分层提取）",
+     "role": "注 layer → unit_type 注"
+    }
+   ],
+   "units_total": 220,
+   "units_by_type": {
+    "题": 2,
+    "本文": 94,
+    "注": 124
+   },
+   "problems": [
+    "JSZ: FO2-KS.txt (the path in plan §5.3) interleaves 章文 and 承遷注 with no markup separating them (hard-wrapped CBETA lines, e.g. 謂以金無自性。喻真理不變也。 on one line). The separation used here is the repository's own layered extraction FO2-KS-P.txt / FO2-KS-C.txt (PROVENANCE: 从承迁注本分层提取, from CBETA T45n1881 TEI); the TEI raw file is not in the repository, so the layer boundary cannot be rechecked here beyond verify.py's check that each layer is an in-order subsequence of FO2-KS.txt.",
+    "JSZ: in the layer files, 顯法界中無孤單法 (quoted in plan §5.2 as part of the 六相 passage) belongs to the 注 layer (承遷), not to 法藏's 章文; the 章文 六相 passage ends 諸緣各住自位是壞相。",
+    "JSZ: the commentary file is a single run without the gate headings; 注 units carry no gate label. The unattributed 金師子章序 at the head of FO2-KS.txt is outside scope and not segmented.",
+    "JSZ: the 十門 list in the 章文 (初、明緣起二、辨色空…十、入涅槃) has no sentence punctuation and is kept as one unit JSZ-P-000."
+   ]
+  },
+  {
+   "text_id": "ZL",
+   "title": "《中論》四品（偈與青目釋）",
+   "tsv": "zhonglun.tsv",
+   "scope": "觀因緣品第一、觀去來品第二、觀三相品第七、觀成壞品第二十一",
+   "sources": [
+    {
+     "path": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+     "sha256": "bc4d8f5f8ea7465b3c35b1636e776f525e483316ad68aaac1a41484b1883e9f8",
+     "script": "繁",
+     "edition_marks_in_file": "No.1564[cf.Nos.1565-1567]; 中論卷第一; 釋僧叡序; 龍樹菩薩造梵志青目釋姚秦三藏鳩摩羅什譯",
+     "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source FO1-S-MMK: url https://cbetaonline.dila.edu.tw/zh/T30n1564_001; edition_note 复用旧v9.1已冻结CBETA XML；仅提取body，保留lem，跳过note/rdg/back"
+    }
+   ],
+   "units_total": 854,
+   "units_by_type": {
+    "题": 5,
+    "偈": 110,
+    "释": 739
+   },
+   "problems": [
+    "ZL: the file is one line with no layout; 偈 are identified as quotations 「…」 whose every clause (split at ，；。？！：) has five characters (89 quoted verses) plus 1 unquoted opening verse of chapter 1. Quotations failing the metre test stay inside 释 units (flagged). Verse units split only at 。？！ and at the closing 」, not at ； (hemistich mark).",
+    "ZL: the text before a quoted verse in the same sentence (e.g. 答曰：, 復次：, 如偈說) becomes its own short 释 unit without terminal punctuation.",
+    "ZL: 卷 marks and the attribution line that stand between chapter 6 and 7 (中論卷第一中論卷第二龍樹…譯) and between 20/21 and 22 are outside the chapter ranges; the attribution after 觀因緣品第一 is kept as a 题 unit."
+   ]
+  }
+ ],
+ "second_round": {
+  "plan": "../PLAN.md §5.3 (rows 待冻结 / 待定位)",
+  "built_by": "build2.py",
+  "checked_by": "verify.py",
+  "conventions": "as the first round (top-level 'conventions'); new unit types 颂 (成唯識論 頌) and the passage windows below",
+  "texts": [
+   {
+    "text_id": "ZL2",
+    "title": "《中論》四品，第二輪（偈與青目釋）",
+    "tsv": "zhonglun-2.tsv",
+    "scope": "觀燃可燃品第十、觀業品第十七、觀時品第十九、觀四諦品第二十四",
+    "sources": [
+     {
+      "path": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+      "sha256": "bc4d8f5f8ea7465b3c35b1636e776f525e483316ad68aaac1a41484b1883e9f8",
+      "script": "繁",
+      "edition_marks_in_file": "No.1564[cf.Nos.1565-1567]; 中論卷第一; 釋僧叡序; 龍樹菩薩造梵志青目釋姚秦三藏鳩摩羅什譯",
+      "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source FO1-S-MMK: url https://cbetaonline.dila.edu.tw/zh/T30n1564_001; edition_note 复用旧v9.1已冻结CBETA XML；仅提取body，保留lem，跳过note/rdg/back"
+     }
+    ],
+    "units_total": 578,
+    "units_by_type": {
+     "题": 4,
+     "释": 471,
+     "偈": 103
+    },
+    "problems": [
+     "ZL2: same verse test as the first round (71 quoted verses in the four chapters; 0 释 units contain a quotation that failed the metre test).",
+     "ZL2: the speaker in the note column is a heuristic from the 問曰 / 答曰 frame (a turn lasts until the next 問曰 or 答曰); a verse that Nāgārjuna states as the opponent's view without a 問曰 (e.g. the 不失法 verses of chapter 17) is not caught by it; the classification notes correct it where it matters.",
+     "ZL2: the text before a quoted verse in the same sentence (答曰：, 復次：, 是故：) is its own short 释 unit without terminal punctuation, as in the first round."
+    ]
+   },
+   {
+    "text_id": "CWS",
+    "title": "《成唯識論》相續、種子、瀑流、三法展轉諸段",
+    "tsv": "chengweishi.tsv",
+    "scope": "located passages, each core with about 300 characters of context on each side; overlapping windows merged; see 'passages'",
+    "sources": [
+     {
+      "path": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-CY.txt",
+      "sha256": "c73afbd4884db9a02db131e0ff41236222c3d4cf4376bbb5e242c690f20645df",
+      "script": "繁",
+      "edition_marks_in_file": "No.1585[cf.Nos.1586,1587]; 成唯識論卷第一–第十 (卷 marks at each 卷 end and start); 護法等菩薩造三藏法師玄奘奉詔譯; 頌 numbered with full-width digits",
+      "repository_provenance_record": "sources/civilization-thought-v1.0/data/model.json, source FO1-S-CY (locator T31n1585)"
+     }
+    ],
+    "units_total": 410,
+    "units_by_type": {
+     "本文": 405,
+     "颂": 2,
+     "题": 3
+    },
+    "problems": [
+     "CWS: occurrences of 恒隨轉 in the file at 13797",
+     "CWS: occurrences of 一類相續 in the file at 2202, 13805, 14186, 25603, 26818, 34114",
+     "CWS: occurrences of 「恒」言遮斷 in the file at 18996",
+     "CWS: occurrences of 猶如瀑流 in the file at 19010, 22372",
+     "CWS: occurrences of 三法展轉因果同時 in the file at 14701",
+     "CWS: occurrences of 如炷生焰、焰生焦炷 in the file at 14710",
+     "CWS: occurrences of 蘆束 in the file at 14722, 26367, 26424",
+     "CWS: 「「恒」言遮斷，「轉」表非常，猶如瀑流」 is at 18996 (P4); 「三法展轉因果同時，如炷生焰、焰生焦炷，亦如蘆束更互相依」 is one sentence at 14701 (P3); the second 蘆束 (識緣名色) is P7; 一類相續 at 2202, 13805, 14186, 25603, 26818, 34114 is covered by P1, P3, P6, P8, P9.",
+     "CWS: the 頌 of 唯識三十頌 are inline, numbered with full-width digits (３, ４) that stand inside sentences; units starting with 頌曰 are typed 颂, the verse lines are not split from the 論曰 that follows within one sentence.",
+     "CWS: 卷 boundaries (成唯識論卷第三成唯識論卷第四護法等菩薩造三藏法師玄奘奉詔譯) fall inside the merged window P6+P7+P8; they are 题 units.",
+     "CWS: window starts and ends are snapped outward to the nearest sentence end, so context is 300 characters or a little more."
+    ],
+    "passages": [
+     {
+      "passage": "P1",
+      "title": "本識一類相續任持種子（破實我）",
+      "core": [
+       2192,
+       2432
+      ],
+      "window": [
+       1849,
+       2779
+      ],
+      "core_starts": "然諸有情，各有本識",
+      "core_ends": "求趣涅槃。",
+      "core_chars": 240,
+      "context_before": 343,
+      "context_after": 347,
+      "merged_window": "P1"
+     },
+     {
+      "passage": "P2",
+      "title": "頌：恒轉如瀑流，阿羅漢位捨",
+      "core": [
+       11061,
+       11138
+      ],
+      "window": [
+       10730,
+       11457
+      ],
+      "core_starts": "且初能變其相云何？頌曰：初阿賴耶識",
+      "core_ends": "阿羅漢位捨。",
+      "core_chars": 77,
+      "context_before": 331,
+      "context_after": 319,
+      "merged_window": "P2"
+     },
+     {
+      "passage": "P3",
+      "title": "種子六義（恒隨轉：一類相續）、熏習四義、三法展轉因果同時（炷焰、蘆束）",
+      "core": [
+       13614,
+       14813
+      ],
+      "window": [
+       13299,
+       15134
+      ],
+      "core_starts": "然種子義，略有六種。",
+      "core_ends": "是謂略說一切種相。",
+      "core_chars": 1199,
+      "context_before": 315,
+      "context_after": 321,
+      "merged_window": "P3"
+     },
+     {
+      "passage": "P4",
+      "title": "阿賴耶識非斷非常，以恒轉故，猶如瀑流；因果相續如流",
+      "core": [
+       18890,
+       19883
+      ],
+      "window": [
+       18581,
+       20185
+      ],
+      "core_starts": "阿賴耶識為斷？為常？",
+      "core_ends": "阿羅漢位方究竟捨。",
+      "core_chars": 993,
+      "context_before": 309,
+      "context_after": 302,
+      "merged_window": "P4"
+     },
+     {
+      "passage": "P5",
+      "title": "《解深密經》：一切種子如瀑流",
+      "core": [
+       22234,
+       22516
+      ],
+      "window": [
+       21925,
+       22821
+      ],
+      "core_starts": "《解深密經》亦作是說：「阿陀那識",
+      "core_ends": "故知別有第八識性。",
+      "core_chars": 282,
+      "context_before": 309,
+      "context_after": 305,
+      "merged_window": "P5"
+     },
+     {
+      "passage": "P6",
+      "title": "壽、煖、識三更互依持，一類相續",
+      "core": [
+       25487,
+       25802
+      ],
+      "window": [
+       25156,
+       26114
+      ],
+      "core_starts": "又契經說：壽、煖、識三",
+      "core_ends": "彼識即是此第八識。",
+      "core_chars": 315,
+      "context_before": 331,
+      "context_after": 312,
+      "merged_window": "P6+P7+P8"
+     },
+     {
+      "passage": "P7",
+      "title": "識緣名色，名色緣識，二法展轉相依，譬如蘆束",
+      "core": [
+       26341,
+       26527
+      ],
+      "window": [
+       26020,
+       26827
+      ],
+      "core_starts": "又契經說：識緣名色",
+      "core_ends": "故彼識言，顯第八識。",
+      "core_chars": 186,
+      "context_before": 321,
+      "context_after": 300,
+      "merged_window": "P6+P7+P8"
+     },
+     {
+      "passage": "P8",
+      "title": "識食：一類相續執持勝故",
+      "core": [
+       26769,
+       26827
+      ],
+      "window": [
+       26462,
+       27140
+      ],
+      "core_starts": "四者、識食，執持為相。",
+      "core_ends": "一類相續執持勝故。",
+      "core_chars": 58,
+      "context_before": 307,
+      "context_after": 313,
+      "merged_window": "P6+P7+P8"
+     },
+     {
+      "passage": "P9",
+      "title": "末那緣藏識見分：一類相續似常、一",
+      "core": [
+       34097,
+       34152
+      ],
+      "window": [
+       33797,
+       34471
+      ],
+      "core_starts": "應知此意但緣藏識見分非餘",
+      "core_ends": "說我所言。",
+      "core_chars": 55,
+      "context_before": 300,
+      "context_after": 319,
+      "merged_window": "P9"
+     }
+    ]
+   },
+   {
+    "text_id": "WJZ",
+    "title": "《華嚴一乘教義分齊章》（五教章）第四、六相圓融義",
+    "tsv": "wujiaozhang-liuxiang.tsv",
+    "scope": "第四、六相圓融義 to the end of 卷第四 (end of file), with about 300 characters of context before; nothing follows the passage in the file but the 尾題",
+    "sources": [
+     {
+      "path": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-FQ.txt",
+      "sha256": "2b85009d3a62fdc7135a905d5b0d66aa8f065f66dc22cf8ac7b022bf3ddb8ba3",
+      "script": "繁",
+      "edition_marks_in_file": "No.1866; 華嚴一乘教義分齊章卷第一–第四; 唐大薦福寺沙門法藏述; 尾題 華嚴一乘教義分齊章卷第四",
+      "repository_provenance_record": "sources/civilization-thought-v1.0/PROVENANCE.json, FO2-FQ: 华严一乘教义分齐章, url https://cbetaonline.dila.edu.tw/zh/T45n1866_001; tei header evidence/tei-headers/FO2-FQ.teiHeader.xml",
+      "role": "segmented"
+     },
+     {
+      "path": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/R5BU003.txt",
+      "sha256": "2b85009d3a62fdc7135a905d5b0d66aa8f065f66dc22cf8ac7b022bf3ddb8ba3",
+      "script": "繁",
+      "edition_marks_in_file": "same as FO2-FQ.txt",
+      "role": "second copy, byte-identical to FO2-FQ.txt (same sha256), not segmented"
+     }
+    ],
+    "units_total": 131,
+    "units_by_type": {
+     "本文": 128,
+     "偈": 2,
+     "题": 1
+    },
+    "problems": [
+     "WJZ: the 六相 passage is the last section of 卷第四 and of the file; after-context is only the 尾題 (题 unit).",
+     "WJZ: 問「…」答「…」 dialogues are 法藏's own text (not an opponent's), typed 本文; the closing 頌 (seven-character lines) is typed 偈 by form.",
+     "WJZ: other mentions of 六相 in the file (20002, 35292, 41601–41758, 46158, 48675) are outside the frozen window; 35292 and 41915 are in the 十玄 section."
+    ],
+    "passages": [
+     {
+      "passage": "P1",
+      "title": "六相圓融義（總別同異成壞；舍與椽）",
+      "core": [
+       49246,
+       51335
+      ],
+      "window": [
+       48937,
+       51335
+      ],
+      "core_starts": "第四、六相圓融義。",
+      "core_ends": "華嚴一乘教義分齊章卷第四",
+      "core_chars": 2089,
+      "context_before": 309,
+      "context_after": 0,
+      "merged_window": "P1"
+     }
+    ]
+   }
+  ],
+  "not_in_repository": []
+ }
+}

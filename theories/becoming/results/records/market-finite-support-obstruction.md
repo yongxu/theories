@@ -68,7 +68,7 @@ The delta_N interval is a conservative obstruction, not an exact viability bound
 | proof | [RegimeTransition.lean](../../../../experiments/market-generativity/formal/RegimeTransition.lean) | `RegimeTransition.share_growth_upper`, `RegimeTransition.positive_seed_finite_landing` |
 | receipt | [finite-support-verification.json](../../../../experiments/market-generativity/formal/finite-support-verification.json) | — |
 | review | [MARKET-INTERNET-DEGENERATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md) | — |
-| integration | [MARKETS-AND-GENERATIVE-REGIMES.md](../../chapters/MARKETS-AND-GENERATIVE-REGIMES.md) | — |
+| integration | [MARKETS-AND-GENERATIVE-REGIMES.md](../../history/MARKETS-AND-GENERATIVE-REGIMES.md) | — |
 | proof | [Lasting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean) | `Becoming.Lasting.Drains`, `Becoming.Lasting.Drains.along`, `Becoming.Lasting.Drains.leaves`, `Becoming.Lasting.Collapse.level_not_lasting`, `Becoming.Lasting.below_orbit`, `Becoming.Lasting.stays_below_iff`, `Becoming.Lasting.exhausts`, `Becoming.Lasting.guarded_none_iff` |
 | proof | [MarketInstances.lean](../../../../experiments/market-generativity/formal/MarketInstances.lean) | `Becoming.MarketInstances.scheduled`, `Becoming.MarketInstances.run_eq`, `Becoming.MarketInstances.guarded_eq`, `Becoming.MarketInstances.orbit_growth`, `Becoming.MarketInstances.forces_failure_instance`, `Becoming.MarketInstances.obstructed_seeds_instance` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |

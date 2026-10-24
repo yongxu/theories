@@ -69,7 +69,7 @@ Contains 21 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>BoundaryModels.lean — 22 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean) · [Theory](../../chapters/MATHEMATICAL-CORE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean`
 
@@ -1014,7 +1014,7 @@ Contains 32 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>FallibleInquiry.lean — 37 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean`
 
@@ -1070,7 +1070,7 @@ Definitions and types:
 <details>
 <summary>AcquiredSupportUse.lean — 31 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUse.lean) · [Theory](../../chapters/GENERATED-LOGIC.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUse.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUse.lean`
 
@@ -1122,7 +1122,7 @@ Contains 15 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>AcquiredSupportUseCases.lean — 23 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUseCases.lean) · [Theory](../../chapters/GENERATED-LOGIC.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUseCases.lean) · [Theory](../../history/GENERATED-LOGIC.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/AcquiredSupportUseCases.lean`
 
@@ -1166,7 +1166,7 @@ Contains 13 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>BecomingCompatibility.lean — 30 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean) · [Theory](../../chapters/BECOMING-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean`
 
@@ -1248,7 +1248,7 @@ Definitions and types:
 <details>
 <summary>ContextualLeaseRules.lean — 21 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLeaseRules.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLeaseRules.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLeaseRules.lean`
 
@@ -1290,7 +1290,7 @@ Contains 16 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ContextualLogicAbstraction.lean — 27 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLogicAbstraction.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLogicAbstraction.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualLogicAbstraction.lean`
 
@@ -1424,7 +1424,7 @@ Contains 18 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ContractionMechanisms.lean — 42 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean`
 
@@ -1487,7 +1487,7 @@ Contains 24 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>CorePredication.lean — 16 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/CorePredication.lean) · [Theory](../../chapters/MATHEMATICAL-CORE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/CorePredication.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/CorePredication.lean`
 
@@ -3056,7 +3056,7 @@ Contains 20 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ExplanatoryLeaseDynamics.lean — 20 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryLeaseDynamics.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryLeaseDynamics.lean) · [Theory](../../history/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryLeaseDynamics.lean`
 
@@ -3910,7 +3910,7 @@ Contains 36 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>GeneratedContraction.lean — 20 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean`
 
@@ -3951,7 +3951,7 @@ Contains 14 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>GeneratedPaths.lean — 14 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean) · [Theory](../../chapters/MATHEMATICAL-CORE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean`
 
@@ -4014,7 +4014,7 @@ Contains 4 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>HistoryRealization.lean — 9 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean) · [Theory](../../chapters/MATHEMATICAL-CORE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean`
 
@@ -4123,7 +4123,7 @@ Contains 9 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>JudgingCorrespondence.lean — 7 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean`
 
@@ -4312,7 +4312,7 @@ Definitions and types:
 <details>
 <summary>ProductTower.lean — 10 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean) · [Theory](../../chapters/MATHEMATICAL-CORE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean`
 
@@ -4341,7 +4341,7 @@ Contains 7 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>RecognitionalBinding.lean — 11 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean`
 
@@ -4373,7 +4373,7 @@ Contains 7 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>ReconfigurableSupportLogic.lean — 39 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean) · [Theory](../../chapters/GENERATED-LOGIC.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean`
 
@@ -4433,7 +4433,7 @@ Contains 24 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>ReflectiveIdentity.lean — 17 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean) · [Theory](../../chapters/GENERATED-LOGIC.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean`
 
@@ -4844,7 +4844,7 @@ Contains 28 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>SubstitutionCorrespondence.lean — 10 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean`
 
@@ -5640,7 +5640,7 @@ Definitions and types:
 <details>
 <summary>RegimeReals.lean — 17 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean`
 
@@ -5668,6 +5668,87 @@ Definitions and types:
 - `def` [Becoming.RegimeMargin.Drawn.reals](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L44) (L44)
 - `def` [Becoming.RegimeMargin.Drawn.Falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L180) (L180)
 - `def` [Becoming.RegimeMargin.Drawn.Relaxation.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L200) (L200)
+
+</details>
+
+<a id="module-cac9de43b3e1"></a>
+
+<details>
+<summary>Representation.lean — 62 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean) · [Theory](../../chapters/08-METHOD.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean`
+
+Imports: `Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus`, `Mathlib.Analysis.SpecificLimits.Basic`, `Mathlib.Analysis.SpecificLimits.Normed`, `Mathlib.Data.Fintype.Pi`, `Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv`, `Mathlib.Analysis.Normed.Algebra.TrivSqZeroExt`, `Becoming.Frequency`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Representation.Course.balance_over](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L113) | 113 |
+| [Becoming.Representation.Course.sample_balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L129) | 129 |
+| [Becoming.Representation.Course.givenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L136) | 136 |
+| [Becoming.Representation.Course.takenOver_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L144) | 144 |
+| [Becoming.Representation.Oscillation.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L165) | 165 |
+| [Becoming.Representation.Oscillation.summable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L175) | 175 |
+| [Becoming.Representation.Oscillation.still_at_steps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L180) | 180 |
+| [Becoming.Representation.Oscillation.changes_between](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L186) | 186 |
+| [Becoming.Representation.Oscillation.still_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L195) | 195 |
+| [Becoming.Representation.no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L206) | 206 |
+| [Becoming.Representation.halving_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L218) | 218 |
+| [Becoming.Representation.reals_no_whole_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L224) | 224 |
+| [Becoming.Representation.unit_reading](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L228) | 228 |
+| [Becoming.Representation.new_without_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L237) | 237 |
+| [Becoming.Representation.close_of_cell](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L244) | 244 |
+| [Becoming.Representation.separated_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L259) | 259 |
+| [Becoming.Representation.separated_exceeds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L278) | 278 |
+| [Becoming.Representation.held_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L299) | 299 |
+| [Becoming.Representation.selfLoop_cast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L311) | 311 |
+| [Becoming.Representation.held_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L322) | 322 |
+| [Becoming.Representation.every_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L350) | 350 |
+| [Becoming.Representation.every_bounded_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L358) | 358 |
+| [Becoming.Representation.every_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L374) | 374 |
+| [Becoming.Representation.rate_bdd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L393) | 393 |
+| [Becoming.Representation.rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L396) | 396 |
+| [Becoming.Representation.pow_rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L400) | 400 |
+| [Becoming.Representation.unbounded_of_one_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L406) | 406 |
+| [Becoming.Representation.vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L412) | 412 |
+| [Becoming.Representation.rate_real](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L445) | 445 |
+| [Becoming.Representation.webCarried_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L460) | 460 |
+| [Becoming.Representation.web_polynomial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L471) | 471 |
+| [Becoming.Representation.every_vanishes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L503) | 503 |
+| [Becoming.Representation.dampedWeb_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L530) | 530 |
+| [Becoming.Representation.dampedWeb_vanishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L549) | 549 |
+| [Becoming.Representation.rate_pow_le_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L576) | 576 |
+| [Becoming.Representation.dampedWeb_unbounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L585) | 585 |
+| [Becoming.Representation.rate_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L617) | 617 |
+| [Becoming.Representation.rate_smul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L621) | 621 |
+| [Becoming.Representation.subexponential](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L631) | 631 |
+| [Becoming.Representation.rate_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L643) | 643 |
+| [Becoming.Representation.shear_pow_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L652) | 652 |
+| [Becoming.Representation.shear_rate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L658) | 658 |
+| [Becoming.Representation.expected_balance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L684) | 684 |
+| [Becoming.Representation.RandomEnd.rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L698) | 698 |
+| [Becoming.Representation.RandomEnd.summable_weighted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L704) | 704 |
+| [Becoming.Representation.RandomEnd.expected](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L714) | 714 |
+| [Becoming.Representation.RandomEnd.rest_not_in_expectation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L726) | 726 |
+
+Definitions and types:
+
+- `structure` [Becoming.Representation.Course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L84) (L84)
+- `def` [Becoming.Representation.Course.Balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L95) (L95)
+- `def` [Becoming.Representation.Course.Summable'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L99) (L99)
+- `def` [Becoming.Representation.Course.givenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L104) (L104)
+- `def` [Becoming.Representation.Course.takenOver](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L107) (L107)
+- `def` [Becoming.Representation.Course.sample](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L123) (L123)
+- `def` [Becoming.Representation.Oscillation.course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L161) (L161)
+- `def` [Becoming.Representation.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L290) (L290)
+- `def` [Becoming.Representation.Polynomial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L295) (L295)
+- `def` [Becoming.Representation.rate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L390) (L390)
+- `def` [Becoming.Representation.webCarried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L454) (L454)
+- `def` [Becoming.Representation.dampedWeb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L523) (L523)
+- `def` [Becoming.Representation.shear](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L650) (L650)
+- `def` [Becoming.Representation.RandomEnd.level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L695) (L695)
+- `def` [Becoming.Representation.RandomEnd.weight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L702) (L702)
 
 </details>
 

@@ -74,7 +74,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 - related, not a proved adapter: [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md). Derives this record's premise that a selection goes through the pooled coupling for what a pool decides by its acts, where each member's law reads through its coupling, and turns the gap for a pool's act into the gap for its response.
 - related, not a proved adapter: [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md). Reading another's couplings by level is pooling with it.
 
-**Used by:** [a-pool-read-by-its-majority](a-pool-read-by-its-majority.md) · [alignment-approaches-under-the-selection-laws](alignment-approaches-under-the-selection-laws.md) (application) · [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md)
+**Used by:** [a-pool-read-by-its-majority](a-pool-read-by-its-majority.md) · [a-pool-that-recruits-through-itself](a-pool-that-recruits-through-itself.md) · [alignment-approaches-under-the-selection-laws](alignment-approaches-under-the-selection-laws.md) (application) · [reading-anothers-couplings-is-pooling](reading-anothers-couplings-is-pooling.md) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -92,7 +92,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 | proof | [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean) | `Becoming.ExchangeLaw`, `Becoming.ExchangeLaw.Through`, `Becoming.ExchangeLaw.withAct`, `Becoming.ExchangeLaw.course`, `Becoming.ExchangeLaw.levels`, `Becoming.ExchangeLaw.Feasible` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T122313.319851Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-18-the-light-and-alignment-for-all.md](../../../../sources/15-codex-theory-conversations/2026-10-18-the-light-and-alignment-for-all.md) | — |
 | provenance | [2026-10-18-representation-scope-go.md](../../../../sources/15-codex-theory-conversations/2026-10-18-representation-scope-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |
@@ -121,6 +121,7 @@ Aliases: `what pooled coupling reaches`, `合起来的耦合及于什么`, `the 
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Decidedness.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Decidedness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 21 October 2026, AP1: reading another's couplings is pooling with it (record reading-anothers-couplings-is-pooling, study section 282); this record's laws and their statements are unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosureOf, WithinClosureOf.of_member, closedUnder_withinClosureOf, withinClosureOf_iff, withinClosureOf_single to Becoming.Frame; ClosedUnder, WithinClosure, WithinClosure.refl, WithinClosure.trans, WithinClosure.of_rel to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-pooled-coupling-reaches.json).
 
 <a id="earlier-text--早期文本"></a>

@@ -1,6 +1,6 @@
 # Acquired discriminator and its subsequent use
 
-6 October 2026. Prospective bounded causal study, written before execution. AI-authored under the [nondual method](../../../../../../../theories/becoming/chapters/NONDUAL-METHOD.md). It tests an operative distinction already implemented by the ancestor's standard observation-table learner. No ancestor source is edited and no new native stopping controller is proposed.
+6 October 2026. Prospective bounded causal study, written before execution. AI-authored under the [nondual method](../../../../../../../theories/becoming/history/NONDUAL-METHOD.md). It tests an operative distinction already implemented by the ancestor's standard observation-table learner. No ancestor source is edited and no new native stopping controller is proposed.
 
 ## Fixed target, contract and comparisons
 

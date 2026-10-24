@@ -105,6 +105,13 @@ whether an exchange can lose nothing, where the spine's least loss per exchange
   `Law.succ_open` merges nothing and never returns), the present forgets the kept history
   (`Flow.Balances.present_forgets`), and an arrow or dissipation rules out a law merging
   nothing (`Flow.Balances.not_conserving_of_arrow`, `Flow.Balances.not_conserving_of_dissipates`).
+* **What a family gains, graded.** A family's inflow across a step (`Flow.inflow`) is what each
+  formation taking part gives it beyond what it takes from it; it is zero exactly where the family
+  gains nothing (`Flow.gainlessOn_iff_inflow`). In a balanced flow, across every step, the stock
+  after it with what the family loses is the stock before with what it gains
+  (`Flow.Balances.stock_gained`), which is at most the inflow (`Flow.gained_le_inflow`,
+  `Flow.Balances.stock_inflow`); over a stretch the stock rises by at most the stretch's inflow
+  (`Flow.Balances.stock_over_inflow`). `Flow.Balances.stock_lost` is the case of no inflow.
 * **An arrow drawn from beyond.** In `Gathering` a record takes one unit from a new relatum
   at every step: every exchange conserves exactly, every step is enclosed, the exchange
   recurs, and the record's level is an arrow without end. The record gains by exchange
@@ -568,12 +575,55 @@ with its record conserves exactly (`Flow.GainlessOn.residues_lost`). -/
 def dissipated (L : Flow F C) (cs : List C) (T N : Nat) : Nat :=
   total (steps T N) (L.lost cs)
 
-/-- Gaining nothing, the family gets back at most what is taken from it. -/
+/-! ## The inflow -/
+
+/-- The family's inflow across the step from `t`: what each formation taking part gives it beyond
+what it takes from it, summed over the formations. It is zero exactly where the family gains
+nothing (`Flow.gainlessOn_iff_inflow`), and what the family gains across the step is at most it
+(`Flow.gained_le_inflow`). -/
+def inflow (L : Flow F C) (cs : List C) (t : Nat) : Nat :=
+  total (L.present t) fun f => excess (total cs (L.give t f)) (total cs (L.take t f))
+
+/-- An amount is at most another with its excess over it. -/
+theorem le_add_excess (a b : Nat) : a ≤ b + excess a b :=
+  Nat.le_trans (Nat.le_add_right a (excess b a)) (Nat.le_of_eq (excess_balance a b))
+
+/-- What exceeds `x` by at most `y` has excess over `x` at most `y`. -/
+theorem excess_le_of_le_add : ∀ {u x y : Nat}, u ≤ x + y → excess u x ≤ y
+  | 0, _, _, _ => Nat.zero_le _
+  | _ + 1, 0, y, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add y))
+  | u + 1, x + 1, y, le => excess_le_of_le_add (u := u) (x := x) (y := y)
+      (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.add_right_comm x 1 y))))
+
+/-- **A family gains nothing exactly where its inflow is zero.** -/
+theorem gainlessOn_iff_inflow : L.GainlessOn cs t ↔ L.inflow cs t = 0 :=
+  ⟨fun gainless => total_eq_zero fun f present => excess_zero_of_le (gainless f present),
+   fun zero _ present => Nat.ge_of_not_lt fun lt => Nat.not_lt_of_le
+     (Nat.le_trans (le_total_of_mem (q := fun f => excess (total cs (L.give t f))
+        (total cs (L.take t f))) present) (Nat.le_of_eq zero))
+     (excess_pos.mpr lt)⟩
+
+/-- **What a family is given is at most what is taken from it and its inflow.** -/
+theorem replenishment_le_inflow (L : Flow F C) (cs : List C) (t : Nat) :
+    L.replenishment cs t ≤ L.uptake cs t + L.inflow cs t :=
+  Nat.le_trans (Nat.le_of_eq (total_swap (fun c f => L.give t f c) (L.present t) cs))
+    (Nat.le_trans (total_le _ fun _ _ => le_add_excess _ _)
+      (Nat.le_of_eq ((total_add (fun f => total cs (L.take t f))
+          (fun f => excess (total cs (L.give t f)) (total cs (L.take t f))) (L.present t)).trans
+        (congrArg (· + L.inflow cs t) (total_swap (fun f c => L.take t f c) cs (L.present t))))))
+
+/-- **What a family gains is at most its inflow**: the excess of what it is given over what is
+taken from it across a step. -/
+theorem gained_le_inflow (L : Flow F C) (cs : List C) (t : Nat) :
+    excess (L.replenishment cs t) (L.uptake cs t) ≤ L.inflow cs t :=
+  excess_le_of_le_add (L.replenishment_le_inflow cs t)
+
+/-- Gaining nothing, the family gets back at most what is taken from it: the case of no inflow. -/
 theorem GainlessOn.replenishment_le (gainless : L.GainlessOn cs t) :
     L.replenishment cs t ≤ L.uptake cs t :=
-  Nat.le_trans (Nat.le_of_eq (total_swap (fun c f => L.give t f c) (L.present t) cs))
-    (Nat.le_trans (total_le _ gainless)
-      (Nat.le_of_eq (total_swap (fun f c => L.take t f c) cs (L.present t))))
+  Nat.le_trans (L.replenishment_le_inflow cs t)
+    (Nat.le_of_eq ((congrArg (L.uptake cs t + ·) (gainlessOn_iff_inflow.mp gainless)).trans
+      (Nat.add_zero _)))
 
 /-- Gaining nothing, what the family gets back and what it loses make up what is taken from
 it. -/
@@ -583,17 +633,50 @@ theorem GainlessOn.replenishment_lost (gainless : L.GainlessOn cs t) :
     ((congrArg (L.uptake cs t + ·) (excess_zero_of_le gainless.replenishment_le)).trans
       (Nat.add_zero _))
 
-/-- In a balanced flow, across a step at which the family gains nothing, its stock falls by
-exactly what it loses. -/
-theorem Balances.stock_lost (balances : L.Balances W) (gainless : L.GainlessOn cs t) :
-    W.stock cs (t + 1) + L.lost cs t = W.stock cs t :=
+/-- **What a family gains and loses, exactly.** In a balanced flow, across every step, the family's
+stock after it with what it loses is its stock before with what it gains, the excess of what it is
+given over what is taken from it, which is at most its inflow (`Flow.gained_le_inflow`). -/
+theorem Balances.stock_gained (balances : L.Balances W) (cs : List C) (t : Nat) :
+    W.stock cs (t + 1) + L.lost cs t =
+      W.stock cs t + excess (L.replenishment cs t) (L.uptake cs t) :=
   add_right_cancel (L.replenishment cs t) (calc
     W.stock cs (t + 1) + L.lost cs t + L.replenishment cs t
         = W.stock cs (t + 1) + (L.replenishment cs t + L.lost cs t) :=
           (Nat.add_assoc _ _ _).trans (congrArg (W.stock cs (t + 1) + ·) (Nat.add_comm _ _))
-    _ = W.stock cs (t + 1) + L.uptake cs t :=
-          congrArg (W.stock cs (t + 1) + ·) gainless.replenishment_lost
-    _ = W.stock cs t + L.replenishment cs t := balances.over cs t)
+    _ = W.stock cs (t + 1) + (L.uptake cs t + excess (L.replenishment cs t) (L.uptake cs t)) :=
+          congrArg (W.stock cs (t + 1) + ·) (excess_balance _ _)
+    _ = W.stock cs (t + 1) + L.uptake cs t + excess (L.replenishment cs t) (L.uptake cs t) :=
+          (Nat.add_assoc _ _ _).symm
+    _ = W.stock cs t + L.replenishment cs t + excess (L.replenishment cs t) (L.uptake cs t) :=
+          congrArg (· + _) (balances.over cs t)
+    _ = W.stock cs t + excess (L.replenishment cs t) (L.uptake cs t) + L.replenishment cs t :=
+          Nat.add_right_comm _ _ _)
+
+/-- **Within the inflow.** In a balanced flow, across every step, the family's stock after it with
+what it loses is at most its stock before with its inflow. -/
+theorem Balances.stock_inflow (balances : L.Balances W) (cs : List C) (t : Nat) :
+    W.stock cs (t + 1) + L.lost cs t ≤ W.stock cs t + L.inflow cs t :=
+  Nat.le_trans (Nat.le_of_eq (balances.stock_gained cs t))
+    (Nat.add_le_add_left (L.gained_le_inflow cs t) _)
+
+/-- **Over a stretch, within its inflow.** In a balanced flow, a family's stock at the end of a
+stretch is at most its stock at the start with the inflow across every step of the stretch. -/
+theorem Balances.stock_over_inflow (balances : L.Balances W) (cs : List C) :
+    ∀ S N, W.stock cs (S + N) ≤ W.stock cs S + total (steps S N) (L.inflow cs)
+  | _, 0 => Nat.le_add_right _ _
+  | S, N + 1 => Nat.le_trans
+      (Nat.le_trans (Nat.le_add_right _ (L.lost cs (S + N))) (balances.stock_inflow cs (S + N)))
+      (Nat.le_trans (Nat.add_le_add_right (balances.stock_over_inflow cs S N) _)
+        (Nat.le_of_eq ((Nat.add_assoc _ _ _).trans (congrArg (W.stock cs S + ·)
+          (total_steps_add (L.inflow cs) S N 1).symm))))
+
+/-- In a balanced flow, across a step at which the family gains nothing, its stock falls by
+exactly what it loses: the case of `Flow.Balances.stock_gained` with nothing gained. -/
+theorem Balances.stock_lost (balances : L.Balances W) (gainless : L.GainlessOn cs t) :
+    W.stock cs (t + 1) + L.lost cs t = W.stock cs t :=
+  (balances.stock_gained cs t).trans
+    ((congrArg (W.stock cs t + ·) (excess_zero_of_le gainless.replenishment_le)).trans
+      (Nat.add_zero _))
 
 /-- Dissipated on, the family loses at least one unit for each formation taking from it. -/
 theorem DissipatesOn.takers_le_lost (dissipates : L.DissipatesOn cs t) :

@@ -1,0 +1,741 @@
+{
+  "schema_version": 2,
+  "id": "continuation-relative-to-a-class",
+  "title": {
+    "en": "Continuation relative to a class",
+    "zh": "相对于类的续"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T04:06:08+00:00",
+  "statement": {
+    "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the old base's arising, ceasing, lineage and passing are its instances.",
+    "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核；旧基底之生起、终止、世系与传是其实例。"
+  },
+  "laws": [
+    {
+      "en": "Continuation is 缘 met with a class: one occurrence continues another under a class where the first is a condition of the second and the two are alike under the class. A line is the reach of continuation, and an occurrence begins, abides or ends in it where it has no predecessor, both, or no successor; beginning and abiding exclude each other, as do abiding and ending, and every line runs along the reach of 缘.",
+      "zh": "续是缘与类之合：一事在一个类下续另一事，当前者为后者之缘且二者在此类下相同。一条线是续之可及；一事在其中无前者为生，前后皆有为住，无后者为亡；生与住不并，住与亡不并；每条线都沿缘之可及。",
+      "declarations": [
+        "Becoming.«续»",
+        "Becoming.«相续»",
+        "Becoming.«有前»",
+        "Becoming.«有后»",
+        "Becoming.«生»",
+        "Becoming.«住»",
+        "Becoming.«亡»",
+        "Becoming.«异»",
+        "Becoming.«续含于缘»",
+        "Becoming.«相续含于及»",
+        "Becoming.«生住不并»",
+        "Becoming.«住亡不并»"
+      ]
+    },
+    {
+      "en": "No position stands by itself: the positions depend on the class. Under the one, continuation is 缘 itself, and an occurrence begins exactly where nothing conditions it; in a net without self-conditioning, an occurrence with a condition and a consequence abides under the one and both begins and ends under identity.",
+      "zh": "无一位自立：诸位依于类。在“一”之下，续即缘本身，一事恰在无物为其缘时为生；在无自缘之网中，有缘有果之事，在“一”之下为住，在相等之下既生又亡。",
+      "declarations": [
+        "Becoming.«一之续»",
+        "Becoming.«一之生»",
+        "Becoming.«四相无自立»"
+      ]
+    },
+    {
+      "en": "Coarsening: under a coarser class every continuation remains one, so what ends under the coarser class ends under the finer and what abides under the finer abides under the coarser; something can end under the finer class while it abides under the coarser.",
+      "zh": "粗化：在较粗的类下，每一续仍是续；故在粗类下亡者在细类下亦亡，在细类下住者在粗类下亦住；可有一事在细类下亡而在粗类下住。",
+      "declarations": [
+        "Becoming.«粗化»",
+        "Becoming.«亡于粗则亡于细»",
+        "Becoming.«住于细则住于粗»",
+        "Becoming.«亡于细者不必亡于粗»"
+      ]
+    },
+    {
+      "en": "A class constant under 缘 (E˘;R ⊆ R;E˘) never lets a continuation end: whatever continues something is continued, symmetric class or not. So a class under which some line ends is not constant, and a line that ends has its own regularity in its class's core, not in the class.",
+      "zh": "对缘有常之类（E˘;R ⊆ R;E˘），其续永不终了：凡续某事者，自身亦被续，类对称与否皆然。故有线终了之类不有常，一条终了之线，其理在其类之核，不在其类。",
+      "declarations": [
+        "Becoming.«有常»",
+        "Becoming.«有常之逐点»",
+        "Becoming.«有常则续不尽»",
+        "Becoming.«有常则相续不尽»",
+        "Becoming.«有亡之续则不有常»"
+      ]
+    },
+    {
+      "en": "The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant relation inside it: it is the greatest one, and the core of a class is a class. Read both ways, constant under 缘 and under its converse, the core fixes positions: what shares it shares beginning and ending.",
+      "zh": "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。双向读之（对缘及其逆皆有常），核定位：同位者，生与亡皆同。",
+      "declarations": [
+        "Becoming.«核»",
+        "Becoming.«根»",
+        "Becoming.«核为类»",
+        "Becoming.«有常可复合»",
+        "Becoming.«静有常»",
+        "Becoming.«位核»",
+        "Becoming.«位根»",
+        "Becoming.«位核含于核»",
+        "Becoming.«亡于核下不变»",
+        "Becoming.«生于位核下不变»",
+        "Becoming.«位同则四相同»"
+      ]
+    },
+    {
+      "en": "Continuation is not defined through the core: in a flame of three moments ending in ash, the moments continue one another under 'flame or not', yet under that class's core no two occurrences continue one another, since the moments' futures differ by how long is left.",
+      "zh": "续不由核来定义：三刻之火终于灰，诸刻在“火与否”之类下相续，而在此类之核下无两事相续，因诸刻之未来以所余之长短而异。",
+      "declarations": [
+        "Becoming.Flame",
+        "Becoming.Flame.step",
+        "Becoming.Flame.burns",
+        "Becoming.Flame.alike",
+        "Becoming.Flame.alike_class",
+        "Becoming.Flame.not_core_f₁",
+        "Becoming.Flame.not_core_f₀",
+        "Becoming.«以核为判据则火无续»"
+      ]
+    },
+    {
+      "en": "For a class, constancy is exactly closure of the coarse net: E;R;E ⊆ R;E. Read without taking classes apart, every 缘 inside a class becomes a loop at both its ends; the coarse net therefore takes 缘 between classes, and it joins only different classes.",
+      "zh": "对一个类，有常恰是粗网之闭合：E;R;E ⊆ R;E。不分开类而读，类内每一缘在其两端成环；故粗网取类与类之间的缘，它只连不同之类。",
+      "declarations": [
+        "Becoming.«闭合当且仅当有常»",
+        "Becoming.«类内之缘成环»",
+        "Becoming.«粗»",
+        "Becoming.«粗只连异类»"
+      ]
+    },
+    {
+      "en": "Renewal: an occurrence renews where it is a condition of a beginning that goes on; renewal at the grain of a class reads the same relation at that grain, and every renewal is one at every grain. Renewal without end is the greatest family each member of which renews into a line reaching the family again; it renews. Under the one there is neither.",
+      "zh": "复生：一事为一个继续下去之生之缘，谓之复生；以一个类之粒度读同一关系，为粗复生，凡复生皆是各粒度之复生。生生是最大之族，其每一员都复生出一条再到此族之线；生生必复生。在“一”之下二者皆无。",
+      "declarations": [
+        "Becoming.«复生»",
+        "Becoming.«粗复生»",
+        "Becoming.«复生则粗复生»",
+        "Becoming.«一之下无复生»",
+        "Becoming.«生生»",
+        "Becoming.«生生之展»",
+        "Becoming.«生生最大»",
+        "Becoming.«生生则复生»",
+        "Becoming.«一之下无生生»"
+      ]
+    },
+    {
+      "en": "Boundaries in the grammar itself: that every occurrence, in every model, either begins or has a predecessor is exactly excluded middle; under fission, sameness read along lines either way is not transitive; every single 缘 is a continuation under some class, and two alike conditions of one occurrence make a merge; reach is an order of precedence only where nothing reaches itself.",
+      "zh": "文法自身的边界：“每一事或生或有前，对一切模型”恰是排中律；有分叉时，沿线双向所读之同不传递；每一条缘在某个类下都是续，一事的两个相同之缘成合；可及只在无物可及自身时才是先后之序。",
+      "declarations": [
+        "Becoming.«四相之定当且仅当排中»",
+        "Becoming.«分叉»",
+        "Becoming.«同族»",
+        "Becoming.«同族为类»",
+        "Becoming.«任一缘可为续»",
+        "Becoming.«蜡烛之合»",
+        "Becoming.«无环»",
+        "Becoming.«无环则及为序»",
+        "Becoming.«不穷»"
+      ]
+    },
+    {
+      "en": "Lines: a line under a class stays within it; a beginning under a finer class continued under a coarser one is an alteration; what begins under a coarser class begins under the finer; and where every step keeps a class or carries a mark, a line whose ends the class tells apart has a marked step.",
+      "zh": "线：类下之线不出其类；在细类下生而在粗类下续者为异；在粗类下生者在细类下亦生；凡每一步或保一类或带一标者，其两端为此类所分之线，必有带标之一步。",
+      "declarations": [
+        "Becoming.«线内同类»",
+        "Becoming.«生于细而续于粗则异»",
+        "Becoming.«生于粗则生于细»",
+        "Becoming.«两端分则中有标»"
+      ]
+    },
+    {
+      "en": "Holding, mutual need and leaning-on through constancy apply only to lines that do not end; through the core they apply to all: a class suffices for another's regularity where what is alike under both is alike under the other's core. The constancy forms imply the core forms, a class is constant exactly where it lies in its core, and a flame's regularity lies in fire and fuel.",
+      "zh": "以有常定义的自持、相须、因于只适用于不终了之线；以核定义的适用于每条线：两类俱同者在其一之核下同，则此类足以定其一之理。以有常者蕴涵以核者；一个类恰在含于其核时有常；核随类单调。火之理在火与薪。",
+      "declarations": [
+        "Becoming.«自持»",
+        "Becoming.«相须»",
+        "Becoming.«因于»",
+        "Becoming.«有常之同谓»",
+        "Becoming.«相须之对称»",
+        "Becoming.«无自相须»",
+        "Becoming.«核之单调»",
+        "Becoming.«类有常当且仅当含于核»",
+        "Becoming.«足以定理»",
+        "Becoming.«因于核»",
+        "Becoming.«相须核»",
+        "Becoming.«合有常则足以定理»",
+        "Becoming.«因于则因于核»",
+        "Becoming.«相须则相须核»",
+        "Becoming.Flame.fuel",
+        "Becoming.Flame.sameFuel",
+        "Becoming.Flame.joint_eq",
+        "Becoming.«火因于薪»"
+      ]
+    },
+    {
+      "en": "Ceasing: nothing on the line from an occurrence renews. Renewal without end does not cease (生生不息), and under the one everything ceases.",
+      "zh": "息：自一事起之线上无物复生。生生不息；在“一”之下皆息。",
+      "declarations": [
+        "Becoming.«息»",
+        "Becoming.«生生不息»",
+        "Becoming.«一之下皆息»"
+      ]
+    },
+    {
+      "en": "The old base's arising and ceasing along one relatum are beginning and ending under 'alike in activity', occurrences being pairs of a step and a relatum; ceasing to be is an ending and coming to be a beginning; the finite-world law of arising and ceasing is exactly the decidability of the positions.",
+      "zh": "旧基底在同一关系项上的生起与终止，是“活动相同”之类下的生与亡（事为步与关系项之对）；不再是为亡，成为为生；有穷世界的生灭之律恰是诸位之可判定。",
+      "declarations": [
+        "Becoming.Web.arises_iff_sheng",
+        "Becoming.Web.unceasing_iff_late_beginnings",
+        "Becoming.Web.renews_iff",
+        "Becoming.Steps.next",
+        "Becoming.Steps.along",
+        "Becoming.Web.activityClass",
+        "Becoming.ceasesToBe_iff_wang",
+        "Becoming.comesToBe_iff_sheng",
+        "Becoming.Web.ceases_iff_wang",
+        "Becoming.positions_iff_em",
+        "Becoming.persists_of_positions",
+        "Becoming.core_iff_same_course",
+        "Becoming.Web.flash_positions",
+        "Becoming.World.law_iff_positions",
+        "Becoming.World.law_iff_grammar_positions"
+      ]
+    },
+    {
+      "en": "Relative to a continuation of the old base, arising and ceasing are its beginning and ending; a split is fission and a merge the candles' merge; lineages, continuing, links and holding are lines, unchanged by re-identification.",
+      "zh": "相对于旧基底的一个延续，生起与终止是其生与亡；分裂是分叉，合并是蜡烛之合；世系、延续、联系与持有都是线，不因重新认定而变。",
+      "declarations": [
+        "Becoming.Web.continuationStep",
+        "Becoming.Web.arisesFrom_iff_sheng",
+        "Becoming.Web.ceasesFrom_iff_wang",
+        "Becoming.Web.split_fission",
+        "Becoming.Web.merge_candles",
+        "Becoming.Web.lineage_iff_line",
+        "Becoming.Web.positions_not_self_standing",
+        "Becoming.Web.reach_strict_order",
+        "Becoming.Web.continuing_iff_line",
+        "Becoming.Web.linked_iff_line",
+        "Becoming.Web.held_iff_line",
+        "Becoming.Web.RenewingAlong.branches",
+        "Becoming.Web.ConsumingAlong.merged_candles",
+        "Becoming.Web.line_reidentify"
+      ]
+    },
+    {
+      "en": "Passing a pattern on while the carrier ceases is an alteration, ending under the carrier class and continuing under the pattern's (火传); falling dormant is an alteration under holding, and choosing what holds is choosing a class.",
+      "zh": "载者终止而传其样式是异：在载者之类下亡，在样式之类下续（火传）；休眠在持有之下是异，择其所持即择一类。",
+      "declarations": [
+        "Becoming.Web.carrierClass",
+        "Becoming.Web.byPassing_iff_hasPred",
+        "Becoming.Web.passing_fire",
+        "Becoming.PatternRelay.fire_shape",
+        "Becoming.Web.stateClass",
+        "Becoming.Web.fallsDormant_alters",
+        "Becoming.Web.ceases_of_persisting_ceases",
+        "Becoming.Hibernation.positions",
+        "Becoming.Seed.held_classes"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "None beyond the grammar: every carrier and every relation; where a theorem speaks of a class, the class is an equivalence relation.",
+      "zh": "除文法外无前提：每个载体与每个关系；凡定理言类者，类是等价关系。"
+    },
+    {
+      "en": "Equality on the carrier is a commitment of the model, used where identity is a class (the positions under identity, the flame, the merge).",
+      "zh": "载体之相等是模型的承诺，用于以相等为类之处（相等下的诸位、火、合）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a class is warranted: constancy says only that a class agrees with 缘; under the full relation every class is constant.",
+      "zh": "一个类有根据：有常只说一个类与缘相容；在全关系下每个类都有常。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That continuation contained in 缘 tells a fire passed on from one fire ending and another starting: every single 缘 is a continuation under some class, and two alike conditions make a merge.",
+      "zh": "续含于缘，能分开火之传与一火灭、一火生：每一条缘在某个类下都是续，两个相同之缘成合。",
+      "kind": "non-implication",
+      "witness": "Becoming.«任一缘可为续»"
+    },
+    {
+      "en": "That renewal without end tells renewal that sustains life from turnover that destroys it.",
+      "zh": "生生分开维持生命之更新与毁灭之更替。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That reach orders occurrences where conditions are mutual: it is then a preorder.",
+      "zh": "条件互相之处可及给出事之次序：那时它只是预序。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the old base's counting, amounts, recurrence and renaming laws are instances: the grammar states no counting and no map of carriers, so only their premises are connected.",
+      "zh": "旧基底的计数、量、复现与改名之律是实例：文法不陈述计数，也无载者之映射，故只连其前提。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "detail": {
+        "en": "A flame of three moments ending in ash continues under 'flame or not' and has no continuation under that class's core («以核为判据则火无续»).",
+        "zh": "三刻之火终于灰，在“火与否”之下相续，在此类之核下无续（«以核为判据则火无续»）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "detail": {
+        "en": "Fission: one occurrence continued by two that go no further makes sameness along lines intransitive («分叉»).",
+        "zh": "分叉：一事为二事所续而二事不再续，使沿线之同不传递（«分叉»）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 64 theorems in 106 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，106 个声明中 64 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。"
+  },
+  "next_delta": {
+    "en": "Lift the master laws onto the grammar with their owner, and the theorems that read activity only; state the counting of lines; and give generation and degeneration the content that continuation and renewal alone do not carry.",
+    "zh": "与其主一同把主律提升到文法上，并提升只读活动之定理；陈述线之计数；给生成与退化以续与复生单独不带之内容。"
+  },
+  "correspondence": {
+    "en": "For a class, constancy is bisimulation equivalence (Park 1981; Milner 1989) and the core the greatest bisimulation inside the class; reach is the transitive closure of the calculus of relations (Tarski 1941). Continuation relative to a class is close to genidentity (Lewin 1922) and to Whitehead's enduring objects (1929); the closure law is the relational analogue of lumpability (Kemeny and Snell 1960) and of computational closure (Rosas et al. 2024), a correspondence not proved here. The classical readings (四相 in 《大乘起信论》, 六相 in 《金师子章》, 一实 in 《荀子·正名》, the refutation of 相續 in 《中论》) are registered with their losses in the plan."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+  "aliases": [
+    "Becoming.Flame",
+    "Becoming.Flame.alike",
+    "Becoming.Flame.alike_class",
+    "Becoming.Flame.burns",
+    "Becoming.Flame.fuel",
+    "Becoming.Flame.joint_eq",
+    "Becoming.Flame.not_core_f₀",
+    "Becoming.Flame.not_core_f₁",
+    "Becoming.Flame.sameFuel",
+    "Becoming.Flame.step",
+    "Becoming.Hibernation.positions",
+    "Becoming.PatternRelay.fire_shape",
+    "Becoming.Seed.held_classes",
+    "Becoming.Steps.along",
+    "Becoming.Steps.next",
+    "Becoming.Web.ConsumingAlong.merged_candles",
+    "Becoming.Web.RenewingAlong.branches",
+    "Becoming.Web.activityClass",
+    "Becoming.Web.arisesFrom_iff_sheng",
+    "Becoming.Web.arises_iff_sheng",
+    "Becoming.Web.byPassing_iff_hasPred",
+    "Becoming.Web.carrierClass",
+    "Becoming.Web.ceasesFrom_iff_wang",
+    "Becoming.Web.ceases_iff_wang",
+    "Becoming.Web.ceases_of_persisting_ceases",
+    "Becoming.Web.continuationStep",
+    "Becoming.Web.continuing_iff_line",
+    "Becoming.Web.fallsDormant_alters",
+    "Becoming.Web.flash_positions",
+    "Becoming.Web.held_iff_line",
+    "Becoming.Web.line_reidentify",
+    "Becoming.Web.lineage_iff_line",
+    "Becoming.Web.linked_iff_line",
+    "Becoming.Web.merge_candles",
+    "Becoming.Web.passing_fire",
+    "Becoming.Web.positions_not_self_standing",
+    "Becoming.Web.reach_strict_order",
+    "Becoming.Web.renews_iff",
+    "Becoming.Web.split_fission",
+    "Becoming.Web.stateClass",
+    "Becoming.Web.unceasing_iff_late_beginnings",
+    "Becoming.World.law_iff_grammar_positions",
+    "Becoming.World.law_iff_positions",
+    "Becoming.ceasesToBe_iff_wang",
+    "Becoming.comesToBe_iff_sheng",
+    "Becoming.core_iff_same_course",
+    "Becoming.persists_of_positions",
+    "Becoming.positions_iff_em",
+    "Becoming.«一之下无复生»",
+    "Becoming.«一之下无生生»",
+    "Becoming.«一之下皆息»",
+    "Becoming.«一之生»",
+    "Becoming.«一之续»",
+    "Becoming.«不穷»",
+    "Becoming.«两端分则中有标»",
+    "Becoming.«亡»",
+    "Becoming.«亡于核下不变»",
+    "Becoming.«亡于粗则亡于细»",
+    "Becoming.«亡于细者不必亡于粗»",
+    "Becoming.«以核为判据则火无续»",
+    "Becoming.«任一缘可为续»",
+    "Becoming.«位同则四相同»",
+    "Becoming.«位核»",
+    "Becoming.«位核含于核»",
+    "Becoming.«位根»",
+    "Becoming.«住»",
+    "Becoming.«住于细则住于粗»",
+    "Becoming.«住亡不并»",
+    "Becoming.«分叉»",
+    "Becoming.«合有常则足以定理»",
+    "Becoming.«同族»",
+    "Becoming.«同族为类»",
+    "Becoming.«四相之定当且仅当排中»",
+    "Becoming.«四相无自立»",
+    "Becoming.«因于»",
+    "Becoming.«因于则因于核»",
+    "Becoming.«因于核»",
+    "Becoming.«复生»",
+    "Becoming.«复生则粗复生»",
+    "Becoming.«异»",
+    "Becoming.«息»",
+    "Becoming.«无环»",
+    "Becoming.«无环则及为序»",
+    "Becoming.«无自相须»",
+    "Becoming.«有亡之续则不有常»",
+    "Becoming.«有前»",
+    "Becoming.«有后»",
+    "Becoming.«有常»",
+    "Becoming.«有常之同谓»",
+    "Becoming.«有常之逐点»",
+    "Becoming.«有常则相续不尽»",
+    "Becoming.«有常则续不尽»",
+    "Becoming.«有常可复合»",
+    "Becoming.«核»",
+    "Becoming.«核为类»",
+    "Becoming.«核之单调»",
+    "Becoming.«根»",
+    "Becoming.«火因于薪»",
+    "Becoming.«生»",
+    "Becoming.«生于位核下不变»",
+    "Becoming.«生于粗则生于细»",
+    "Becoming.«生于细而续于粗则异»",
+    "Becoming.«生住不并»",
+    "Becoming.«生生»",
+    "Becoming.«生生不息»",
+    "Becoming.«生生之展»",
+    "Becoming.«生生则复生»",
+    "Becoming.«生生最大»",
+    "Becoming.«相续»",
+    "Becoming.«相续含于及»",
+    "Becoming.«相须»",
+    "Becoming.«相须之对称»",
+    "Becoming.«相须则相须核»",
+    "Becoming.«相须核»",
+    "Becoming.«类内之缘成环»",
+    "Becoming.«类有常当且仅当含于核»",
+    "Becoming.«粗»",
+    "Becoming.«粗化»",
+    "Becoming.«粗只连异类»",
+    "Becoming.«粗复生»",
+    "Becoming.«线内同类»",
+    "Becoming.«续»",
+    "Becoming.«续含于缘»",
+    "Becoming.«自持»",
+    "Becoming.«蜡烛之合»",
+    "Becoming.«足以定理»",
+    "Becoming.«闭合当且仅当有常»",
+    "Becoming.«静有常»"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "classes-along-a-continuation",
+      "detail": {
+        "en": "There formation classes are read along a given continuation of the old base, with splits and merges; here continuation itself is 缘 met with a class, for every carrier and relation.",
+        "zh": "那里在旧基底的给定延续上读形成之类，含分与合；这里续本身是缘与类之合，对每个载体与关系。"
+      }
+    },
+    {
+      "id": "a-pattern-lasts-through-passing",
+      "detail": {
+        "en": "A pattern outlasting its carriers there is a line under a class here; lifting it is the next step.",
+        "zh": "那里比其载者更长久的样式，在这里是一个类下的一条线；提升它是下一步。"
+      }
+    },
+    {
+      "id": "branching-tests-bisimulation",
+      "detail": {
+        "en": "Bisimulation there is between labelled processes; here the core is the greatest symmetric relation constant under one relation inside a class.",
+        "zh": "那里的互拟在带标的过程之间；这里核是一个类之内、在一个关系下有常的最大对称关系。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "sha256": "8ba3bc84c22c36e437dad8a54db0bf3105920840866c86a6fd26be28b18cb4ca",
+      "declarations": [
+        "Becoming.Flame",
+        "Becoming.Flame.alike",
+        "Becoming.Flame.alike_class",
+        "Becoming.Flame.burns",
+        "Becoming.Flame.fuel",
+        "Becoming.Flame.joint_eq",
+        "Becoming.Flame.not_core_f₀",
+        "Becoming.Flame.not_core_f₁",
+        "Becoming.Flame.sameFuel",
+        "Becoming.Flame.step",
+        "Becoming.«一»",
+        "Becoming.«一为类»",
+        "Becoming.«一之下无复生»",
+        "Becoming.«一之下无生生»",
+        "Becoming.«一之下皆息»",
+        "Becoming.«一之生»",
+        "Becoming.«一之续»",
+        "Becoming.«不穷»",
+        "Becoming.«两端分则中有标»",
+        "Becoming.«亡»",
+        "Becoming.«亡于核下不变»",
+        "Becoming.«亡于粗则亡于细»",
+        "Becoming.«亡于细者不必亡于粗»",
+        "Becoming.«以核为判据则火无续»",
+        "Becoming.«任一缘可为续»",
+        "Becoming.«位同则四相同»",
+        "Becoming.«位核»",
+        "Becoming.«位核含于核»",
+        "Becoming.«位根»",
+        "Becoming.«住»",
+        "Becoming.«住于细则住于粗»",
+        "Becoming.«住亡不并»",
+        "Becoming.«分叉»",
+        "Becoming.«则»",
+        "Becoming.«则之传递»",
+        "Becoming.«则之自反»",
+        "Becoming.«及»",
+        "Becoming.«及之传递»",
+        "Becoming.«及之单调»",
+        "Becoming.«合»",
+        "Becoming.«合有常则足以定理»",
+        "Becoming.«同族»",
+        "Becoming.«同族为类»",
+        "Becoming.«四相之定当且仅当排中»",
+        "Becoming.«四相无自立»",
+        "Becoming.«因于»",
+        "Becoming.«因于则因于核»",
+        "Becoming.«因于核»",
+        "Becoming.«复生»",
+        "Becoming.«复生则粗复生»",
+        "Becoming.«异»",
+        "Becoming.«息»",
+        "Becoming.«无环»",
+        "Becoming.«无环则及为序»",
+        "Becoming.«无自相须»",
+        "Becoming.«有亡之续则不有常»",
+        "Becoming.«有前»",
+        "Becoming.«有后»",
+        "Becoming.«有常»",
+        "Becoming.«有常之同谓»",
+        "Becoming.«有常之逐点»",
+        "Becoming.«有常则相续不尽»",
+        "Becoming.«有常则续不尽»",
+        "Becoming.«有常可复合»",
+        "Becoming.«核»",
+        "Becoming.«核为类»",
+        "Becoming.«核之单调»",
+        "Becoming.«根»",
+        "Becoming.«火因于薪»",
+        "Becoming.«生»",
+        "Becoming.«生于位核下不变»",
+        "Becoming.«生于粗则生于细»",
+        "Becoming.«生于细而续于粗则异»",
+        "Becoming.«生住不并»",
+        "Becoming.«生生»",
+        "Becoming.«生生不息»",
+        "Becoming.«生生之展»",
+        "Becoming.«生生则复生»",
+        "Becoming.«生生最大»",
+        "Becoming.«相续»",
+        "Becoming.«相续含于及»",
+        "Becoming.«相须»",
+        "Becoming.«相须之对称»",
+        "Becoming.«相须则相须核»",
+        "Becoming.«相须核»",
+        "Becoming.«类»",
+        "Becoming.«类内之缘成环»",
+        "Becoming.«类有常当且仅当含于核»",
+        "Becoming.«粗»",
+        "Becoming.«粗化»",
+        "Becoming.«粗只连异类»",
+        "Becoming.«粗复生»",
+        "Becoming.«线内同类»",
+        "Becoming.«续»",
+        "Becoming.«续含于缘»",
+        "Becoming.«而»",
+        "Becoming.«自持»",
+        "Becoming.«蜡烛之合»",
+        "Becoming.«谓»",
+        "Becoming.«足以定理»",
+        "Becoming.«逆»",
+        "Becoming.«闭合当且仅当有常»",
+        "Becoming.«际»",
+        "Becoming.«静»",
+        "Becoming.«静有常»",
+        "Becoming.«非»"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
+      "role": "statement",
+      "sha256": "63a0b13cbd93f45b1281ba54768e959df7e96e580b2e23995c2d0b026acb2e38"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
+      "role": "proof",
+      "sha256": "8cbe05184cce5042da4800c11bd3cf4a7158369d9ca81c2ba21235115fa9468a",
+      "declarations": [
+        "Becoming.Steps.along",
+        "Becoming.Steps.next",
+        "Becoming.Web.activityClass",
+        "Becoming.Web.arises_iff_sheng",
+        "Becoming.Web.renews_iff",
+        "Becoming.Web.unceasing_iff_late_beginnings"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "declarations": [
+        "Becoming.Web.ceases_iff_wang",
+        "Becoming.Web.flash_positions",
+        "Becoming.ceasesToBe_iff_wang",
+        "Becoming.comesToBe_iff_sheng",
+        "Becoming.core_iff_same_course",
+        "Becoming.persists_of_positions",
+        "Becoming.positions_iff_em"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "role": "proof",
+      "sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "declarations": [
+        "Becoming.Web.arisesFrom_iff_sheng",
+        "Becoming.Web.ceasesFrom_iff_wang",
+        "Becoming.Web.continuationStep",
+        "Becoming.Web.lineage_iff_line",
+        "Becoming.Web.merge_candles",
+        "Becoming.Web.positions_not_self_standing",
+        "Becoming.Web.reach_strict_order",
+        "Becoming.Web.split_fission"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "role": "proof",
+      "sha256": "dce4cb423a51e73dd7746368da1c55c5687d7abe34bfefbdd1d5e3fda99fc1ee",
+      "declarations": [
+        "Becoming.Web.ConsumingAlong.merged_candles",
+        "Becoming.Web.RenewingAlong.branches",
+        "Becoming.Web.continuing_iff_line",
+        "Becoming.Web.held_iff_line",
+        "Becoming.Web.line_reidentify",
+        "Becoming.Web.linked_iff_line"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+      "role": "proof",
+      "sha256": "32cf59f492d1b2a90d1331b966bc3028836bd1050082d8ddcb93dd63b036bfcf",
+      "declarations": [
+        "Becoming.PatternRelay.fire_shape",
+        "Becoming.Web.byPassing_iff_hasPred",
+        "Becoming.Web.carrierClass",
+        "Becoming.Web.passing_fire"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "role": "proof",
+      "sha256": "a89f199b819de0a979e55a15a3f899d6bf189a71ef3f7d95f795e445a79bb4ac",
+      "declarations": [
+        "Becoming.Hibernation.positions",
+        "Becoming.Seed.held_classes",
+        "Becoming.Web.ceases_of_persisting_ceases",
+        "Becoming.Web.fallsDormant_alters",
+        "Becoming.Web.stateClass"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "role": "proof",
+      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "declarations": [
+        "Becoming.World.law_iff_grammar_positions",
+        "Becoming.World.law_iff_positions"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Grammar",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Arising",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Identity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Persistence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Space",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026, board item OU1 (study section 371): the root of the one-unfolding plan in its tenth version, continuation relative to a class at its centre, after Ren's direction of that day and three reviews of the ninth version; the earlier claim that a line's regularity is its class being constant is corrected by «有常则续不尽».",
+      "zh": "2026年10月23日，工作板条目 OU1（研究第 371 节）：一元计划第十版之根，以相对于类的续为中心，承 Ren 当日之方向与第九版的三份审查；先前“一条线之理在其类有常”之说由 «有常则续不尽» 更正。"
+    },
+    {
+      "en": "23 October 2026, board items OU2 and OU3a (study section 372): the grammar gains holding, mutual need and leaning-on through the core for lines that end, ceasing and 生生不息, and four laws of lines moved down from PatternPassing and Persistence; the old continuation family is stated as its instances. The claim is widened to name the instances; the earlier laws are unchanged.",
+      "zh": "2026年10月23日，工作板条目 OU2 与 OU3a（研究第 372 节）：文法增以核定义的自持、相须、因于（适用于终了之线）、息与生生不息，并自 PatternPassing 与 Persistence 移下四条线之律；旧续之族陈述为其实例。论断扩及实例，先前之律不变。"
+    }
+  ]
+}

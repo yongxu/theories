@@ -1,3 +1,4 @@
+import Becoming.Grammar
 import Becoming.Identity
 import Becoming.Unfolding
 import Becoming.Witnesses
@@ -1140,5 +1141,221 @@ theorem Hibernation.world_readings :
    fun renewing => Hibernation.exchanged_not_renewing
      ((World.ofRoles_reidentify_renewingIn Flow.still Hibernation.web Hibernation.exchange
        .hibernator).mp renewing)⟩
+
+
+/-! ## The grammar's reading: holding as a coarser class than activity
+
+`Becoming.Grammar` states continuation (续) for every carrier and every relation. Here, as in
+`Becoming.Identity`'s reading, the carrier is the occurrences of formations, pairs `(t, f)`, and
+缘 is one step of a continuation (`Web.continuationStep`); for persistence the continuation is the
+names, each formation continuing as itself (`fun _ g f => g = f`). What `Web.persisting h` changes
+is not 缘 but the class: read through what holds, the class is alike in holding
+(`(W.persisting h).activityClass`); read through activity alongside what holds, it is alike in
+activity and in holding (`Web.stateClass W h`: active, dormant or absent), which is finer. So which
+relation holds a formation through dormancy, the choice of `h`, is a choice of class, and arising
+and ceasing read through it are beginning (生) and ending (亡) under that class
+(`Web.arises_iff_sheng_itself` and `Web.ceases_iff_wang_itself` of `Becoming.Identity`, applied to
+`W.persisting h`).
+
+* Where activity lies within holding, arising and ceasing in activity are beginning and ending
+  under the state class (`Web.arises_iff_sheng_state`, `Web.ceases_iff_wang_state`).
+* **Falling dormant is not ceasing; waking is not arising.** A formation falling dormant ends under
+  the state class and continues under holding: the step is an alteration (异)
+  (`Web.fallsDormant_alters`); waking, the converse (`Web.wakes_alters`). This is the shape of
+  `«亡于细者不必亡于粗»`, realized by the hibernator (`Hibernation.positions`): at its dormant
+  step it abides (住) under holding and both begins and ends under the state class, positions
+  relative to a class.
+* **Derived from grammar laws.** The halves of `Web.ceases_persisting_iff` and
+  `Web.arises_persisting_iff` that go from holding to activity follow from `«亡于粗则亡于细»` and
+  its dual `«生于粗则生于细»` (`Web.ceases_of_persisting_ceases`, `Web.arises_of_persisting_arises`).
+* **Holding at every step is a line without end (不穷)** under holding (`Web.unending_of_holds`).
+  Which `h` holds is a choice of class (`Seed.held_classes`): the spent seed's line never ends
+  under holding by dependence and ends at the fourth step under holding by its reserve.
+* **Conservation.** In a balanced world with decidable equality of relata, a formation arises
+  under every naming keeping it balanced exactly where its occurrence begins under the 缘 that
+  conservation induces, in the class of activity (`World.arises_fixed_iff_sheng`), and ceases so
+  exactly where it ends there (`World.ceases_fixed_iff_wang`).
+
+Not connected: the laws of re-identification (`Web.steady_held`, `Web.renewingIn_held` and the
+classes fixed under conservation) concern namings of the carrier, which the grammar takes as a
+model commitment (equality on the carrier); the census laws (`Web.persisting_census`) count lists,
+which the grammar does not state.
+-/
+
+namespace Web
+
+variable (W : Web F C)
+
+/-- The state class: alike in activity and alike in holding, read through `h` (active, dormant or
+absent where activity lies within holding). -/
+def stateClass (h : Nat → F → Prop) : «际» (Nat × F) :=
+  «合» W.activityClass (W.persisting h).activityClass
+
+theorem stateClass_class (h : Nat → F → Prop) : «类» (W.stateClass h) :=
+  ⟨fun _ => ⟨Iff.rfl, Iff.rfl⟩, fun same => ⟨same.1.symm, same.2.symm⟩,
+   fun same same' => ⟨same.1.trans same'.1, same.2.trans same'.2⟩⟩
+
+/-- The state class is finer than holding. -/
+theorem stateClass_finer (h : Nat → F → Prop) :
+    «则» (W.stateClass h) (W.persisting h).activityClass :=
+  fun _ _ same => same.2
+
+variable {W} {h : Nat → F → Prop}
+
+/-- Where activity changes across the step from `t`, the occurrence before it ends (亡) under the
+state class. -/
+theorem wang_state_of_change {t : Nat} {f : F} (change : ¬ (W.active t f ↔ W.active (t + 1) f)) :
+    «亡» (continuationStep fun _ g f => g = f) (W.stateClass h) (t, f) :=
+  fun ⟨y, ⟨next, same⟩, ⟨alike, _⟩⟩ => change
+    (Eq.subst (motive := fun s => W.active t f ↔ W.active s f) next
+      (Eq.subst (motive := fun g => W.active t f ↔ W.active y.1 g) same.symm alike))
+
+/-- and the occurrence after it begins (生) under the state class. -/
+theorem sheng_state_of_change {t : Nat} {f : F} (change : ¬ (W.active t f ↔ W.active (t + 1) f)) :
+    «生» (continuationStep fun _ g f => g = f) (W.stateClass h) (t + 1, f) :=
+  fun ⟨x, ⟨next, same⟩, ⟨alike, _⟩⟩ => change
+    (Eq.subst (motive := fun s => W.active s f ↔ W.active (t + 1) f) (Nat.succ.inj next).symm
+      (Eq.subst (motive := fun g => W.active x.1 g ↔ W.active (t + 1) f) same alike))
+
+/-- **Ceasing in activity is ending (亡) under the state class**, where activity lies within
+holding. -/
+theorem ceases_iff_wang_state (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F} :
+    W.Ceases t f ↔ W.active t f ∧
+      «亡» (continuationStep fun _ g f => g = f) (W.stateClass h) (t, f) :=
+  ⟨fun ⟨before, gone⟩ => ⟨before, wang_state_of_change fun alike => gone (alike.mp before)⟩,
+   fun ⟨before, ends⟩ => ⟨before, fun after => ends ⟨(t + 1, f), ⟨rfl, rfl⟩,
+     ⟨⟨fun _ => after, fun _ => before⟩, ⟨fun _ => within _ _ after, fun _ => within _ _ before⟩⟩⟩⟩⟩
+
+/-- **Arising in activity is beginning (生) under the state class**, where activity lies within
+holding. -/
+theorem arises_iff_sheng_state (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F} :
+    W.Arises t f ↔ W.active (t + 1) f ∧
+      «生» (continuationStep fun _ g f => g = f) (W.stateClass h) (t + 1, f) :=
+  ⟨fun ⟨before, after⟩ => ⟨after, sheng_state_of_change fun alike => before (alike.mpr after)⟩,
+   fun ⟨after, begins⟩ => ⟨fun before => begins ⟨(t, f), ⟨rfl, rfl⟩,
+     ⟨⟨fun _ => after, fun _ => before⟩, ⟨fun _ => within _ _ after, fun _ => within _ _ before⟩⟩⟩,
+    after⟩⟩
+
+/-- **Derived from `«亡于粗则亡于细»`.** A formation active before a step that ceases to hold across
+it ceases in activity: ending under holding is ending under the finer state class. (The forward
+half of `Web.ceases_persisting_iff`.) -/
+theorem ceases_of_persisting_ceases (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F}
+    (ceases : (W.persisting h).Ceases t f) (before : W.active t f) : W.Ceases t f :=
+  (ceases_iff_wang_state within).mpr ⟨before,
+    «亡于粗则亡于细» _ (W.stateClass_finer h) (ceases_iff_wang_itself.mp ceases).2⟩
+
+/-- **Derived from `«生于粗则生于细»`.** A formation coming to hold across a step, active after it,
+arises in activity. (The forward half of the first part of `Web.arises_persisting_iff`.) -/
+theorem arises_of_persisting_arises (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F}
+    (arises : (W.persisting h).Arises t f) (after : W.active (t + 1) f) : W.Arises t f :=
+  (arises_iff_sheng_state within).mpr ⟨after,
+    «生于粗则生于细» _ (W.stateClass_finer h) (arises_iff_sheng_itself.mp arises).2⟩
+
+/-- **Falling dormant is an alteration (异), not an ending.** A formation active before a step,
+inactive and holding after it, ends under the state class and continues under holding: the
+shape of `«亡于细者不必亡于粗»`. -/
+theorem fallsDormant_alters (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F}
+    (before : W.active t f) (dormant : ¬ W.active (t + 1) f) (held : h (t + 1) f) :
+    «亡» (continuationStep fun _ g f => g = f) (W.stateClass h) (t, f) ∧
+    «异» (continuationStep fun _ g f => g = f) (W.persisting h).activityClass (W.stateClass h)
+      (t, f) (t + 1, f) :=
+  ⟨wang_state_of_change fun alike => dormant (alike.mp before),
+   ⟨⟨⟨rfl, rfl⟩, ⟨fun _ => held, fun _ => within _ _ before⟩⟩,
+    fun ⟨alike, _⟩ => dormant (alike.mp before)⟩⟩
+
+/-- **Waking is an alteration (异), not a beginning.** A formation holding and inactive before a
+step, active after it, begins under the state class and continues under holding. -/
+theorem wakes_alters (within : ∀ t f, W.active t f → h t f) {t : Nat} {f : F}
+    (held : h t f) (dormant : ¬ W.active t f) (after : W.active (t + 1) f) :
+    «生» (continuationStep fun _ g f => g = f) (W.stateClass h) (t + 1, f) ∧
+    «异» (continuationStep fun _ g f => g = f) (W.persisting h).activityClass (W.stateClass h)
+      (t, f) (t + 1, f) :=
+  ⟨sheng_state_of_change fun alike => dormant (alike.mpr after),
+   ⟨⟨⟨rfl, rfl⟩, ⟨fun _ => within _ _ after, fun _ => held⟩⟩,
+    fun ⟨alike, _⟩ => dormant (alike.mpr after)⟩⟩
+
+/-- A line along the names stays with one formation. -/
+theorem names_line_same {E : «际» (Nat × F)} {x y : Nat × F}
+    (line : «相续» (continuationStep fun _ g f => g = f) E x y) : x.2 = y.2 := by
+  induction line with
+  | one c => exact c.1.2
+  | more c _ ih => exact c.1.2.trans ih
+
+/-- **Holding at every step is a line without end (不穷)** under holding. -/
+theorem unending_of_holds {f : F} (always : ∀ s, h s f) (t : Nat) :
+    «不穷» (continuationStep fun _ g f => g = f) (W.persisting h).activityClass (t, f) :=
+  fun y reached =>
+    have same : y.2 = f := match reached with
+      | .inl at_ => (congrArg Prod.snd at_).symm
+      | .inr line => (names_line_same line).symm
+    ⟨(y.1 + 1, y.2), ⟨rfl, rfl⟩,
+     ⟨fun _ => Eq.subst (motive := fun g => h (y.1 + 1) g) same.symm (always (y.1 + 1)),
+      fun _ => Eq.subst (motive := fun g => h y.1 g) same.symm (always y.1)⟩⟩
+
+end Web
+
+namespace World
+
+variable {w : World}
+
+/-- **An arising fixed by conservation is a beginning (生)** under the 缘 conservation induces, in
+the class of activity: `World.arises_fixed_iff` read through `Web.arisesFrom_iff_sheng`. -/
+theorem arises_fixed_iff_sheng [dec : DecidableEq w.Relatum] (balanced : w.Balanced) (t : Nat)
+    (f : w.Relatum) :
+    (∀ σ : Reidentify w.Relatum w.Relatum, (w.reidentify σ).Balanced →
+      (w.reidentify σ).web.Arises t (σ.new (t + 1) f)) ↔
+      w.web.active (t + 1) f ∧ «生» (Web.continuationStep w.Conserves) w.web.activityClass (t + 1, f) :=
+  (arises_fixed_iff balanced t f).trans Web.arisesFrom_iff_sheng
+
+/-- **A ceasing fixed by conservation is an ending (亡)** under the 缘 conservation induces. -/
+theorem ceases_fixed_iff_wang [dec : DecidableEq w.Relatum] (balanced : w.Balanced) (t : Nat)
+    (g : w.Relatum) :
+    (∀ σ : Reidentify w.Relatum w.Relatum, (w.reidentify σ).Balanced →
+      (w.reidentify σ).web.Ceases t (σ.new t g)) ↔
+      w.web.active t g ∧ «亡» (Web.continuationStep w.Conserves) w.web.activityClass (t, g) :=
+  (ceases_fixed_iff balanced t g).trans Web.ceasesFrom_iff_wang
+
+end World
+
+namespace Hibernation
+
+/-- **Positions of the hibernator relative to a class.** The state class is finer than holding.
+Before its dormancy the hibernator's occurrence ends under the state class and not under holding
+(`«亡于细者不必亡于粗»`); at its dormant step it abides (住) under holding while it both begins and
+ends under the state class; and under holding its line from the first step never ends (不穷). -/
+theorem positions :
+    «则» (web.stateClass web.Holds) (web.persisting web.Holds).activityClass ∧
+    «亡» (Web.continuationStep fun _ g f => g = f) (web.stateClass web.Holds) (0, .hibernator) ∧
+    ¬ «亡» (Web.continuationStep fun _ g f => g = f) (web.persisting web.Holds).activityClass
+      (0, .hibernator) ∧
+    «住» (Web.continuationStep fun _ g f => g = f) (web.persisting web.Holds).activityClass
+      (1, .hibernator) ∧
+    «生» (Web.continuationStep fun _ g f => g = f) (web.stateClass web.Holds) (1, .hibernator) ∧
+    «亡» (Web.continuationStep fun _ g f => g = f) (web.stateClass web.Holds) (1, .hibernator) ∧
+    «不穷» (Web.continuationStep fun _ g f => g = f) (web.persisting web.Holds).activityClass
+      (0, .hibernator) :=
+  have within : ∀ t f, web.active t f → web.Holds t f := fun _ _ active => .inl active
+  have falls := Web.fallsDormant_alters within (t := 0) (f := .hibernator) trivial id
+    (holds_always 1)
+  ⟨web.stateClass_finer web.Holds, falls.1, fun ends => ends ⟨_, falls.2.1⟩,
+   ⟨⟨(0, .hibernator), ⟨rfl, rfl⟩, ⟨fun _ => holds_always 1, fun _ => holds_always 0⟩⟩,
+    ⟨(2, .hibernator), ⟨rfl, rfl⟩, ⟨fun _ => holds_always 2, fun _ => holds_always 1⟩⟩⟩,
+   Web.sheng_state_of_change (t := 0) fun alike => alike.mp trivial,
+   Web.wang_state_of_change (t := 1) fun alike => alike.mpr trivial,
+   Web.unending_of_holds holds_always 0⟩
+
+end Hibernation
+
+/-- **Which relation holds a formation is a choice of class.** Along the same 缘 (the seed's
+name), the spent seed's line never ends (不穷) under holding by dependence, and it ends (亡) at the
+fourth step under holding by its reserve (`Seed.held_readings`). -/
+theorem Seed.held_classes :
+    (∀ t, «不穷» (Web.continuationStep fun _ g f => g = f)
+      (Seed.web.persisting Seed.web.Holds).activityClass (t, ())) ∧
+    «亡» (Web.continuationStep fun _ g f => g = f)
+      (Seed.web.persisting fun t f => Seed.web.active t f ∨ 0 < Seed.reserve t).activityClass
+      (3, ()) :=
+  ⟨Web.unending_of_holds Seed.held_readings.2.2.1,
+   (Web.ceases_iff_wang_itself.mp Seed.held_readings.2.2.2.2.2).2⟩
 
 end Becoming

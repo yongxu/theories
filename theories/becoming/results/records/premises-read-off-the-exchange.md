@@ -71,7 +71,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
 - related, not a proved adapter: [premises-that-are-states-of-the-law](premises-that-are-states-of-the-law.md). Of the states of parts left here, dissipation, embodiment and bounded transmission are states of the law.
 - related, not a proved adapter: [requirement-over-open-exchanges](requirement-over-open-exchanges.md). This record's next delta: requirement as response where several exchanges are open.
 
-**Used by:** [census-read-off-the-exchange](census-read-off-the-exchange.md) · [premises-that-are-states-of-the-law](premises-that-are-states-of-the-law.md) · [requirement-over-open-exchanges](requirement-over-open-exchanges.md) · [unity-of-readings](unity-of-readings.md) · [worlds-are-runs](worlds-are-runs.md)
+**Used by:** [census-read-off-the-exchange](census-read-off-the-exchange.md) · [central-laws-over-every-exchange](central-laws-over-every-exchange.md) · [premises-that-are-states-of-the-law](premises-that-are-states-of-the-law.md) · [requirement-over-open-exchanges](requirement-over-open-exchanges.md) · [unity-of-readings](unity-of-readings.md) · [worlds-are-runs](worlds-are-runs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -87,7 +87,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.Flow.Acting`, `Becoming.Flow.Taking` |
 | proof | [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean) | `Becoming.Web.Dependent`, `Becoming.Web.Supported` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-14-relation-first-refounding.md](../../../../sources/15-codex-theory-conversations/2026-10-14-relation-first-refounding.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T143041.527461Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |

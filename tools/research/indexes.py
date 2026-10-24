@@ -25,7 +25,8 @@ from tools.research.reading_catalogue import english
 
 ROOT = path_roles.ROOT
 CHAPTERS = 'theories/becoming/chapters'
-CANONICAL = CHAPTERS + '/THE-THEORY-OF-BECOMING.md'
+CANONICAL = 'theories/becoming/THE-THEORY-OF-BECOMING.md'  # the overview (RA, 23 October 2026)
+NUMBERED = re.compile(r'^(\d\d)-[A-Z0-9-]+\.md$')  # the eight chapters, 01-ROOT.md … 08-METHOD.md
 STUDIES = '_process/research'
 ROOT_FOUNDATION = '_process/research/2026-10-05-generative-foundation-review/root-foundation'
 SOURCES = 'sources'
@@ -120,6 +121,8 @@ def chapter_status(name: str, table: dict, generated: set[str]) -> tuple[str, st
     kind, note = table.get(name, ('', ''))
     if path == CANONICAL:
         return 'canonical', 'The canonical entry: states the theory.'
+    if NUMBERED.match(name):
+        return 'chapter', f'Chapter {int(NUMBERED.match(name).group(1))} of the theory: each result of its region stated once, in its home section.'
     if name.endswith('.zh.md'):
         return 'Chinese edition', f'Of [{name[:-6]}]({name[:-6]}.md); the English file governs.'
     if name.endswith('-REFERENCE.md'):
@@ -135,18 +138,18 @@ def chapters_index(root: Path = ROOT, generated: set[str] | None = None) -> str:
     generated = set() if generated is None else generated
     table = chapter_table(root)
     names = sorted(p.name for p in (root / CHAPTERS).glob('*.md') if p.name != 'README.md')
-    order = {'canonical': 0, 'reference': 1, 'kept': 2, 'generated': 3, 'Chinese edition': 4}
+    order = {'canonical': 0, 'chapter': 0, 'reference': 1, 'kept': 2, 'generated': 3, 'Chinese edition': 4}
     rows = []
     for name in names:
         status, note = chapter_status(name, table, generated)
-        rows.append((order[status], name, status, table.get(name, ('', ''))[0] if status != 'canonical' else 'Canonical', note))
+        rows.append((order[status], name, status, table.get(name, ('', ''))[0] if status not in ('canonical', 'chapter') else status.capitalize(), note))
     counts = Counter(r[2] for r in rows)
-    lines = ['# Chapters of the Theory of Becoming', '', marker('Edit the chapters, the canonical chapter’s section 11 or the move receipts, not this page.'), '',
-             f'The [canonical chapter](THE-THEORY-OF-BECOMING.md) states the theory; its [section 11](THE-THEORY-OF-BECOMING.md#11-where-the-earlier-chapters-stand) says where each earlier chapter stands, and the role column below repeats it. The [reading catalogue](../results/README.md) gives each chapter’s argument, significance, scope and next question.', '',
-             'Status: **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.', '',
+    lines = ['# Chapters of the Theory of Becoming', '', marker('Edit the chapters or the move receipts, not this page.'), '',
+             f'The [overview](../THE-THEORY-OF-BECOMING.md) states the theory in one account, and [the one page](../ONE-PAGE.md) in a page. The eight numbered chapters below state every result once, in its home section, anchored by its record id; [the theory graph](../results/THEORY-GRAPH.md) joins sections, results, Lean modules and texts. The chapters they replace are in history (below), bytes unchanged.', '',
+             'Status: **chapter** is one of the eight chapters of the theory; **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.', '',
              '## Files in this directory', '',
              ', '.join(f'{counts[k]} {k}' for k in sorted(counts, key=lambda k: order[k])) + '.', '',
-             '| File | Title | Status | Role in section 11 | Note |', '|---|---|---|---|---|']
+             '| File | Title | Status | Role | Note |', '|---|---|---|---|---|']
     for _, name, status, kind, note in sorted(rows):
         lines.append(f'| [{name}]({name}) | {cell(title(CHAPTERS + "/" + name, root))} | {status} | {cell(kind) or "—"} | {cell(note)} |')
     moved = moved_chapters(root)

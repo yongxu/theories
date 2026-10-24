@@ -1,0 +1,124 @@
+{
+ "segments": [
+  {
+   "seg_id": "enrec0126",
+   "referents": [
+    {
+     "span": "P",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "configurations",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "moves",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "A",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "π",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its image",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Becoming.Image P π",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a step by a move from k to κ",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "(Becoming.Image P π).step k a κ",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "a : A",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "k",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "κ",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "κ",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "some step of P by that move",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "P.step s a u in the U1 body of Becoming.Image",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a configuration projecting to k",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s in the U1 body of Becoming.Image",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one projecting to κ",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u in the U1 body of Becoming.Image",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Q",
+    "factors",
+    "a (hypothesis in Becoming.Image.least)"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  }
+ ]
+}

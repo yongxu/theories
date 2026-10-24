@@ -52,7 +52,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 | proof | [InferentialGrounds.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialGrounds.lean) | `Generative.InferentialGrounds.extract`, `Generative.InferentialGrounds.application_after_abstraction` |
 | receipt | [receipt.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/inferential-substitution-checks/20261008T181823.552825Z/receipt.json) | — |
 | integration | [RECOGNITIONAL-BINDING-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECOGNITIONAL-BINDING-INTEGRATION.md) | — |
-| statement | [GENERATED-LOGIC.md](../../chapters/GENERATED-LOGIC.md) | — |
+| statement | [GENERATED-LOGIC.md](../../history/GENERATED-LOGIC.md) | — |
 | provenance | [2026-10-08-generative-logic-investigation.md](../../../../sources/15-codex-theory-conversations/2026-10-08-generative-logic-investigation.md) | — |
 | proof | [Readout.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean) | `Becoming.Readout.ThroughParts`, `Becoming.Readout.ReadsDirectly`, `Becoming.Readout.agree_iff_parts`, `Becoming.Readout.supplied_agree_iff_parts` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json) | — |

@@ -1,0 +1,590 @@
+id	class	form	terms	commentary	registration	confidence	note
+QXL-T-001	庚			none		高	title line (大正藏 number)
+QXL-T-002	庚			none		高	title of 智愷's preface
+QXL-XU-001	庚		緣起=如理緣起（序者之語）	none		高	智愷's preface, not 馬鳴; frames the treatise as 緣起之義
+QXL-XU-002	庚		用=作用；本=所依	none	體用	中	preface; 寂而無相/用廣大: 體用 framing by the preface writer
+QXL-XU-003	庚			none		高	智愷 preface: narrative
+QXL-XU-004	庚			none		高	智愷 preface: narrative
+QXL-XU-005	庚			none		高	智愷 preface: narrative of 馬鳴 (緣起深理 named by the preface writer)
+QXL-XU-006	庚			none		高	智愷 preface: narrative
+QXL-XU-007	庚			none		高	智愷 preface: narrative
+QXL-XU-008	庚			none		高	智愷 preface: narrative
+QXL-XU-009	庚			none		高	智愷 preface: narrative
+QXL-XU-010	庚			none		高	智愷 preface: narrative
+QXL-XU-011	庚			none		高	智愷 preface: narrative
+QXL-XU-012	庚			none		高	智愷 preface: narrative
+QXL-XU-013	庚			none		高	智愷 preface: narrative
+QXL-XU-014	庚			none		高	智愷 preface: narrative
+QXL-T-003	庚			none		高	title and attribution
+QXL-G-001	庚			none		高	opening verse of refuge
+QXL-G-002	丁			none		中	verse stating purpose (除疑捨邪執); evaluative aim
+QXL-L-001	庚			none		高	purpose frame
+QXL-L-002	庚			none		高	division into five parts
+QXL-L-003	庚			none		高	frame
+QXL-L-004	庚	分：五分		none		高	list
+QXL-YY-001	庚			none		高	section frame
+QXL-YY-002	庚			none		高	問曰 frame
+QXL-YY-003	庚		因緣=造論之緣由（非§4.1之缘）	none		高	answer frame; 因緣 here means reasons for writing
+QXL-YY-004	庚			none		高	frame
+QXL-YY-005	丁		因緣總相=總的緣由	none		高	purpose: 離苦得樂; evaluative
+QXL-YY-006	丁			none		中	purpose list item
+QXL-YY-007	丁			none		中	purpose list item
+QXL-YY-008	丁			none		中	purpose list item
+QXL-YY-009	丁			none		中	purpose list item
+QXL-YY-010	丁			none		中	purpose list item
+QXL-YY-011	丁			none		中	purpose list item
+QXL-YY-012	丁			none		中	purpose list item
+QXL-YY-013	庚			none		高	closing of list
+QXL-YY-014	庚			none		高	問曰
+QXL-YY-015	庚		緣=受解之條件	none		中	answer: audiences differ
+QXL-YY-016	庚			none		中	narrative; contains 則不須論 (rhetorical conditional)
+QXL-YY-017	庚			none		高	audience type
+QXL-YY-018	庚			none		高	audience type
+QXL-YY-019	庚			none		高	audience type
+QXL-YY-020	庚			none		高	audience type
+QXL-YY-021	庚			none		高	conclusion of answer
+QXL-YY-022	庚			none		高	frame
+QXL-LY-001	庚			none		高	frame
+QXL-LY-002	庚	分：法、義		none		高	division
+QXL-LY-003	庚			none		高	frame
+QXL-LY-004	庚	分：法、義		none		高	list
+QXL-LY-005	甲	法 := 眾生心；心攝一切世間、出世間法	法=所立之體（非法則）；攝=總含	none	唯心	高	scope claim: 心 contains all dharmas; registered 定域 (§5.4); the grammar's 一 is not a mind
+QXL-LY-006	庚			none		高	
+QXL-LY-007	庚			none		高	frame
+QXL-LY-008	甲	心真如相 示 體	相=相狀（lakṣaṇa）；體=所依	none	體用（真如/生滅二相）：相合	中	with LY-009 one 心 shows 體 and 相用 through its two aspects
+QXL-LY-009	甲	心生滅因緣相 示 自體相用	因緣=生滅之緣	none	體用：相合	中	the 生滅 aspect also shows the 體: the two aspects are of one 心 (cf. JS-005, JS-010)
+QXL-LY-010	庚			none		高	
+QXL-LY-011	庚			none		高	frame
+QXL-LY-012	甲	體大 := 一切法真如平等不增減	不增減=無增無減（不變）	none	體相用：相合	中	不增減 parallels 金體本無增減 (JSZ-P-05-004); invariance asserted of 真如
+QXL-LY-013	甲	相大 := 如來藏具足無量性功德	相=德相；性功德	none	體相用：相合	中	丁 aspect (功德)
+QXL-LY-014	甲	用大 := 能生一切世間出世間善因果	生=能生；善因果	none	體相用：相合	中	丁 aspect (善)
+QXL-LY-015	庚			none		中	soteriological statement
+QXL-LY-016	庚			none		高	
+QXL-JS-001	庚			none		高	
+QXL-JS-002	庚			none		高	
+QXL-JS-003	庚			none		高	frame
+QXL-JS-004	庚	分：顯示正義、對治邪執、分別發趣道相	分別=分辨（列目）	none		高	list
+QXL-JS-005	甲	正義 := 依一心法有二門	門=讀法之門；一心=一（所依）	none	一心二門：相合	中	the nondual form (§5.4); with JS-008, JS-010. Read: one, two readings, each total; AI reading, loses 心 as mind
+QXL-JS-006	庚			none		高	frame
+QXL-JS-007	庚	分：心真如門、心生滅門		none	一心二門：相合	高	list of the two 門
+QXL-JS-008	乙	二門各總攝一切法（两种读法，各覆全体）	總攝=全覆	none	一心二門：相合	低	if a 門 is a class on the whole carrier, covering everything is analytic; proposed only; AI reading
+QXL-JS-009	庚			none		高	frame
+QXL-JS-010	乙	二門不相離	不相離=不可分離	none	一心二門：相合	低	given as the reason for JS-008; two readings of one carrier cannot be separated; proposed only
+QXL-JS-011	甲	心真如 := 一法界大總相法門體	總相=總的相（全）；體=所依	none		中	大總相 reads as the coarsest reading (the whole), cf. JSZ-P-08-001 總相
+QXL-JS-012	丙一	Z=離妄念，Y=無一切境界之相；差別 依 妄念	差別=分殊；妄念=迷妄之念	none	唯心：定域	中	戊 aspect: 心性不生不滅 (unchanging) against 差別 from 妄念; strains plan's 类: distinction is produced by deluded thought (the reason 分别 was renamed 类, §4.1)
+QXL-JS-013	乙	在全类（平等）之下无异：無有變異	平等=無差別；變異=改變	none		低	AI reading: 真如 as the total class (plan's 一之类), under which no 异 can hold; lost: 離言說相/離名字相 (the unit denies that names apply), its soteriology
+QXL-JS-014	甲	真如 := 唯是一心；言說假名無實	假名=施設之名	none		中	names are 假名 (cf. 中論 亦為是假名); scope 唯心
+QXL-JS-015	未读出			none		中	reason: says the name 真如 itself has no mark; the grammar has no operation for a term exempt from every predicate
+QXL-JS-016	庚		遣=除遣	none		中	argumentative step (因言遣言); 一切法悉皆真
+QXL-JS-017	庚		立=施立	none		中	argumentative step; 一切法皆同如
+QXL-JS-018	甲	真如 := 一切法不可說不可念		none		中	definition by negation; 未读出 aspect (ineffability)
+QXL-JS-019	庚			none		高	問曰
+QXL-JS-020	甲	隨順 := 知雖說無能說可說，雖念無能念可念	能/可=能所	none		中	丁 aspect (path); denies the knower/known split (能說/可說)
+QXL-JS-021	甲	得入 := 離於念		none		中	丁 aspect
+QXL-JS-022	庚		分別=言說之分（非§4.1之类）	none	真如二義（依言說）：定域	中	the two senses hold only 依言說分別: scope of language
+QXL-JS-023	庚			none		高	frame
+QXL-JS-024	甲	如實空 := 能究竟顯實	空=無妄染	none		中	
+QXL-JS-025	甲	如實不空 := 有自體，具足無漏性功德	自體=自身之體	none		中	strain: 有自體 asserted of 真如, against the plan's 無自立; 戊 aspect
+QXL-JS-026	甲	空 := 一切染法不相應；離一切法差別之相	相應=相合；差別=分殊	none		中	空 = free of difference marks; the 差別 belong to 妄心念
+QXL-JS-027	未读出			none		中	reason: tetralemma over 有/無 and 一/異 (非有相、非無相、非非有相…); needs a negation of both and of neither that the grammar (constructive or classical) lacks; compare the plan's 非一非异 relative to classes (§一), which is not this
+QXL-JS-028	丙一	Z=有妄心念念分別，Y=說為空；若離妄心則無可空	分別=妄念之分（非类）	none		中	空 is predicated relative to a standpoint (妄心): a predicate relative to a reading, as positions are relative to class in the plan; the standpoint is 妄
+QXL-JS-029	甲	不空 := 真心常恒不變淨法滿足		none		中	戊 aspect: 常恒不變 (unchanging 真心)
+QXL-JS-030	甲	阿梨耶識 := 不生不滅與生滅和合，非一非異；依如來藏故有生滅心	依=所依（单向）；和合=相合；非一非異	none	不生滅/生滅：相合；如來藏/生滅心：相分（所依之不对称）	高	key: 非一非異 is the plan's word for its answer to the 中观 dilemma (§一), but here it joins 不生滅 and 生滅, not two links of one 续; 依 is one-way (§5.4 registers the asymmetry); link JSZ-P-07-037 (理事合論 況阿賴耶識)
+QXL-JS-031	庚		攝=含；生=能生	none		中	thesis: the 識 contains and produces all dharmas (唯心, 定域)
+QXL-JS-032	庚			none		高	frame
+QXL-JS-033	庚	分：覺、不覺		none	覺/不覺：相合	高	list; their mutual dependence in JS-038, JS-072, JS-073
+QXL-JS-034	甲	覺 := 心體離念	離念=無念	none		高	
+QXL-JS-035	甲	本覺 := 依法身所說之覺；離念相等虛空界	相=相狀	none		中	
+QXL-JS-036	庚			none		高	
+QXL-JS-037	甲	本覺 對 始覺 而說；始覺即同本覺	對=相待	none		中	乙 aspect: correlatives defined against each other (相待, like 有無相生)
+QXL-JS-038	乙	依本覺有不覺，依不覺說有始覺（相待之链）	依=相依	none	覺/不覺：相合	中	correlative chain; proposed as 乙 (correlatives); loses the soteriological order
+QXL-JS-039	甲	究竟覺 := 覺心源；非究竟覺 := 不覺心源	心源=心之源	none		中	
+QXL-JS-040	庚			none		高	
+QXL-JS-041	甲	覺（名而實不覺）:= 覺知前念起惡，止後念不起	念=一念	法藏《起信論義記》、元曉疏（凭记忆，仓库无原文）		中	first of four grades; by the commentarial tradition (法藏《義記》、元曉, from memory, not in repo) it corresponds to 滅相: the four grades know the four marks in reverse order; link JS-042..044
+QXL-JS-042	甲	相似覺 := 覺於念異，念無異相	異=異相（四相之一）	法藏《起信論義記》、元曉疏（凭记忆，仓库无原文）		中	the 異 mark is known as absent once known; reverse-order reading (JS-041 note)
+QXL-JS-043	甲	隨分覺 := 覺於念住，念無住相	住=住相（四相之一）	法藏《起信論義記》、元曉疏（凭记忆，仓库无原文）		中	the 住 mark known as absent
+QXL-JS-044	甲	究竟覺 := 覺心初起，心無初相，心即常住	初起=生相；初相=始之相	法藏《起信論義記》、元曉疏（凭记忆，仓库无原文）		高	key: knowing proceeds backward along the four marks and finds the 生 position empty (無初相); 戊 aspect: 心即常住
+QXL-JS-045	丁			none		中	sutra citation: 觀無念 → 向佛智 (soteriological conditional)
+QXL-JS-046	甲	知初相 := 無念；心起者無有初相可知	初相=生之相	none		高	key: model property: no event is 生 (§5.2); the grammar's 生 has no instance in this model
+QXL-JS-047	甲	無始無明 := 念念相續未曾離念	相續=念念相連不斷；無明=不覺	none	反读	高	key: 相續 is valued as 無明 (beginningless ignorance); plan uses 续 neutrally (§5.4 registers the reversal); 丁 aspect
+QXL-JS-048	丙一	Z=得無念，Y=知心相生住異滅	心相=心之四相；生住異滅=四相（相=標記）	none	唯心：定域	中	the four marks are known only from 無念, i.e. from outside the continuation; epistemic, not a law of the marks
+QXL-JS-049	乙	四相俱時而有，皆無自立（位依于读法，不自立）	俱時=同时；自立=自己成立；四相=一念之四標記	none		低	key: matches the plan's 乙 "四相无自立" only structurally (同一事同時居不同之位, §4.3); in the text each thought has all four marks at once and they lack standing because all is 同一覺; lost: 心相, 不覺, the synchronic sense against diachronic positions
+QXL-JS-050	庚		隨染=隨順染緣	none	本覺/二相：相合	中	division (智淨相, 不思議業相), 不相捨離
+QXL-JS-051	庚			none		高	frame
+QXL-JS-052	庚	分：智淨相、不思議業相		none		高	list
+QXL-JS-053	甲	智淨相 := 依法力熏習…破和合識相、滅相續心相	相續心相=相續之心相；熏習=薰染	none	反读	高	key: the aim is to end the 相續心相 (§5.4); 丁 aspect
+QXL-JS-054	庚			none		高	
+QXL-JS-055	未读出		相=相狀	none	無明/覺性：相合（不離）	中	reason: 非可壞非不可壞 needs a both-negation the grammar lacks; 不離 readable as 相合; 心識之相皆是無明 is evaluative
+QXL-JS-056	庚	喻：水相風相不相捨離；風止則動相滅，濕性不壞	性=不變之性；相=相狀	none	水/風：相合；濕性/動相：相分	中	simile for JS-057/058; sets an unchanging 性 under a ceasing 相 (戊 aspect), the 金/師子 shape
+QXL-JS-057	庚	喻之合：心與無明俱無形相、不相捨離，心非動性	動性=動之性	none	心/無明：相合	中	application of the simile; 戊 aspect (心非動性)
+QXL-JS-058	丙一	Z=無明滅，Y=相續滅；智性不壞	相續=念念相續（無明）；不壞=不毀	none	反读	高	key: the continuation ends when its 缘 (無明) ends; plan-compatible as a conditional (§4.3 灭); valuation reversed; 戊 aspect (智性不壞)
+QXL-JS-059	甲	不思議業相 := 依智淨作勝妙境界，功德之相常無斷絕		none		中	丁 aspect; 常無斷絕: an unending continuation valued positively
+QXL-JS-060	庚			none		高	
+QXL-JS-061	庚			none		高	frame
+QXL-JS-062	庚			none		高	heading
+QXL-JS-063	甲	如實空鏡 := 遠離一切心境界相，無法可現		none		中	
+QXL-JS-064	庚			none		高	heading
+QXL-JS-065	甲	因熏習鏡 := 如實不空，境界於中現，不出不入不失不壞，常住一心	現=顯現；常住	none		中	戊 aspect: an unchanging mirror in which 境界 appear
+QXL-JS-066	甲	（因熏習鏡）染法不能染，智體不動		none		中	戊 aspect
+QXL-JS-067	庚			none		高	heading
+QXL-JS-068	甲	法出離鏡 := 不空法出煩惱礙智礙，離和合相		none		中	
+QXL-JS-069	庚			none		高	heading
+QXL-JS-070	甲	緣熏習鏡 := 依法出離，遍照眾生之心，令修善根	緣=外緣	none		中	丁 aspect
+QXL-JS-071	甲	不覺 := 不如實知真如法一，不覺心起而有其念；念無自相不離本覺	自相=自己之相；依方故迷=喻	none	覺/不覺：相合	高	念無自相: no self-standing mark of thought (cf. JS-049)
+QXL-JS-072	乙	依覺故迷；若離覺性則無不覺（相待）	依=相依	none	覺/不覺：相合	中	correlatives; proposed 乙
+QXL-JS-073	乙	若離不覺之心，則無真覺自相可說（相待）		none	覺/不覺：相合	中	converse of JS-072; with it, 覺 and 不覺 stand only together (cf. 有無相生)
+QXL-JS-074	丙一	Z=不覺，Y=生三種相；相應不離	依=缘（单向）；生=起	none		中	chain JS-077..085 (三細)
+QXL-JS-075	庚			none		高	frame
+QXL-JS-076	庚			none		高	heading
+QXL-JS-077	甲	業 := 依不覺故心動	業=動；動=心動	none		高	業 defined as motion
+QXL-JS-078	丙一	Z=覺，Y=不動		none		中	with JS-077: 動 holds iff 不覺
+QXL-JS-079	丙一	Z=動，Y=有苦；果不離因	苦=苦受	none		中	丁 aspect (苦); 果不離因 as reason
+QXL-JS-080	庚			none		高	heading
+QXL-JS-081	丙一	Z=動，Y=能見	依=缘	none		中	
+QXL-JS-082	丙一	Z=不動，Y=無見		none		中	converse of JS-081
+QXL-JS-083	庚			none		高	heading
+QXL-JS-084	丙一	Z=能見，Y=境界妄現	現=顯現；妄=不實	none		中	
+QXL-JS-085	丙一	Z=離見，Y=無境界		none		中	with JS-084: 境界 holds iff 見; one-way dependence 不覺→動→見→境界
+QXL-JS-086	丙一	Z=有境界緣，Y=生六種相	緣=境界為緣（所緣義）	none		中	strain: 緣 here is the object as condition (所緣緣), the sense the plan excludes (§4.1)
+QXL-JS-087	庚			none		高	frame
+QXL-JS-088	庚			none		高	heading
+QXL-JS-089	甲	智相 := 依境界心起分別愛與不愛	分別=分辨愛憎	none		中	丁 aspect (愛/不愛)
+QXL-JS-090	庚		相續=相續相（六麁之二）	none		高	heading; no 、 after 二者 in the file
+QXL-JS-091	甲	相續相 := 依智生苦樂，覺心起念相應不斷	相續=念與念相應不斷；相應=相合	none	反读	高	key: 相續 := 相應不斷 is close to the plan's 续 (连而同类，不断), but it is a mark of 不覺; 丁 aspect (苦樂)
+QXL-JS-092	庚			none		高	heading
+QXL-JS-093	甲	執取相 := 依相續緣念境界，住持苦樂，心起著	住持=保持；緣=攀緣	none		中	相續 is the 缘 of 執取 (chain of the 六麁)
+QXL-JS-094	庚			none		高	heading
+QXL-JS-095	甲	計名字相 := 依妄執分別假名言相	假名=施設之名	none		中	naming arises from 妄執: strains a grammar of names
+QXL-JS-096	庚			none		高	heading
+QXL-JS-097	甲	起業相 := 依名字尋名取著，造種種業		none		中	
+QXL-JS-098	庚			none		高	heading
+QXL-JS-099	甲	業繫苦相 := 依業受果不自在		none		中	丁 aspect
+QXL-JS-100	丙一	Z=無明，Y=生一切染法；染法皆不覺相	生=能生；染=不淨	none		低	丁 aspect (染)
+QXL-JS-101	庚			none		高	
+QXL-JS-102	庚			none		高	frame
+QXL-JS-103	庚	分：同相、異相		none		高	list
+QXL-JS-104	甲	同相 := 種種瓦器皆同微塵性相（粗读：同于一类）	同=同一类；性相=性與相	none	覺/不覺：相合	高	key: coarsening in the text itself: under the class 微塵 the vessels are one; with JS-107 the same things at two grains (cf. JSZ-P-08 成/壞)
+QXL-JS-105	庚			none		中	soteriological statement (眾生本來涅槃, 菩提非可修相)
+QXL-JS-106	庚			none		中	見色相者 唯是隨染業幻所作
+QXL-JS-107	甲	異相 := 種種瓦器各各不同（细读：各异）	異=不同类	none	覺/不覺：相合	高	key: the fine reading of JS-104; difference is 隨染幻差別, i.e. assigned to 染 (valuation the plan does not share)
+QXL-JS-108	甲	生滅因緣 := 眾生依心，意、意識轉	轉=轉起	none		中	
+QXL-JS-109	庚			none		高	
+QXL-JS-110	甲	意 := 依阿梨耶識有無明不覺而起，能見能現能取境界，起念相續	相續=起念相續	none	反读	中	相續 again under 無明
+QXL-JS-111	庚			none		高	
+QXL-JS-112	庚			none		高	frame
+QXL-JS-113	甲	業識 := 無明力不覺心動		none		高	
+QXL-JS-114	甲	轉識 := 依動心能見相		none		高	
+QXL-JS-115	甲	現識 := 能現一切境界，如明鏡現色像		none		高	
+QXL-JS-116	庚	現識：五塵對至即現，無有前後	前後=時序	none		中	無有前後: appearance without temporal order (俱有); relevant to §4.1 時 as strict part of 及
+QXL-JS-117	甲	智識 := 分別染淨法	分別=分辨	none		高	
+QXL-JS-118	甲	相續識 := 念相應不斷；住持過去善惡業令不失；成熟現在未來苦樂報	相續=念念相連而攜業；住持=保持	none	反读	高	key: the nearest to the plan's 续 in the text: carries the past into the future without loss; valued as 不覺 (妄慮); 丁 aspect (善惡)
+QXL-JS-119	丙一	Z=離心，Y=無六塵境界；三界唯心所作	唯心=唯是心作	none	唯心：定域	高	key: §5.4 registers 唯心 as 定域; 戊 aspect: one-way 境 依 心, against mutual 缘
+QXL-JS-120	庚			none		高	
+QXL-JS-121	甲	分別 := 分別自心；心不見心無相可得	分別=妄分別	none	唯心：定域	中	every distinction is a distinction of the mind itself
+QXL-JS-122	丙一	Z=無明妄心，Y=境界住持；一切法如鏡中像無體	住持=得以存續	none	唯心：定域	中	the persistence (住持) of 境界 depends on 妄心
+QXL-JS-123	丙一	Z=心生，Y=種種法生；Z=心滅，Y=種種法滅	生、滅=起、息	none	唯心：定域	高	key: 生/滅 of dharmas indexed by those of 心; within 唯心 scope
+QXL-JS-124	甲	意識 := 即相續識，計我我所，分別六塵；亦名分離識	分離=分別離散	none		中	
+QXL-JS-125	甲	分別事識 := （意識之又名）依見愛煩惱增長	事=六塵之事	none		中	
+QXL-JS-126	庚			none		中	
+QXL-JS-127	庚			none		中	
+QXL-JS-128	庚			none		高	
+QXL-JS-129	戊	心自性清淨 / 無明所染	染=污染	none	淨/染：相分	中	split: a pure nature under defilement
+QXL-JS-130	戊	雖有染心而常恒不變	常恒不變=不變	none	淨/染：相分	中	key: an unchanging nature under change, the 金體無增減 shape (JSZ-P-05-004)
+QXL-JS-131	甲	不變 := 心性常無念；無明 := 不達一法界，心不相應，忽然念起	忽然=無端而起	none		高	無明 is a sudden arising (忽然), named without 缘
+QXL-JS-132	庚			none		高	
+QXL-JS-133	庚			none		高	frame
+QXL-JS-134	庚		相應=心所相應	none		中	list of six 染心 with the stages of their removal (soteriological)
+QXL-JS-135	庚			none		中	list item
+QXL-JS-136	庚			none		中	list item
+QXL-JS-137	庚			none		中	list item
+QXL-JS-138	庚			none		中	list item
+QXL-JS-139	庚			none		中	list item
+QXL-JS-140	庚			none		中	stage of removal
+QXL-JS-141	甲	相應 := 心念法異，依染淨差別而知相緣相同	緣=所緣	none		中	
+QXL-JS-142	甲	不相應 := 即心不覺常無別異，不同知相緣相		none		中	
+QXL-JS-143	甲	煩惱礙 := 染心，能障真如根本智		none		中	
+QXL-JS-144	甲	智礙 := 無明，能障世間自然業智		none		中	
+QXL-JS-145	庚			none		高	
+QXL-JS-146	庚			none		中	reason
+QXL-JS-147	戊	一切法常靜無起相 / 無明妄與法違	起=生起	none	靜/起：相分	中	arising itself is set against the real (常靜); strains the plan's 化
+QXL-JS-148	庚			none		中	
+QXL-JS-149	庚			none		高	
+QXL-JS-150	庚			none		高	frame
+QXL-JS-151	甲	麁 := 與心相應	麁=粗	none		高	麁/細 are two grains of 生滅
+QXL-JS-152	甲	細 := 與心不相應	細=細	none		高	
+QXL-JS-153	戊	麁中之麁 屬凡夫境界		none	知者之等：相分	中	grains ranked by kinds of knower (凡夫/菩薩/佛); cf. 青目's 世間/聖人
+QXL-JS-154	戊	麁中之細、細中之麁 屬菩薩境界		none	知者之等：相分	中	
+QXL-JS-155	戊	細中之細 是佛境界		none	知者之等：相分	中	
+QXL-JS-156	丙一	Z=無明熏習，Y=二種生滅；依因、依緣	因=親因；緣=助緣	none		中	
+QXL-JS-157	甲	依因 := 不覺		none		高	
+QXL-JS-158	甲	依緣 := 妄作境界	緣=境界之緣	none		高	
+QXL-JS-159	丙一	Z=因滅，Y=緣滅；因滅則不相應心滅，緣滅則相應心滅	滅=息	none		高	the 緣 here depends on the 因; ending propagates (cf. §4.3 灭与补)
+QXL-JS-160	庚		相續=心之相續	none		高	question: if mind ceases, how does it continue? a 续/灭 dilemma inside the text (cf. 中論 為滅已相續); answered JS-162..167
+QXL-JS-161	庚			none		高	second half of the question
+QXL-JS-162	甲	滅 := 唯心相滅，非心體滅	相=相狀；體=體	none	心體/心相：相分	高	key: ceasing is assigned to the mark, never to the 體; 戊 aspect (the 金/師子 shape)
+QXL-JS-163	庚	喻：風依水而有動相		none		中	simile
+QXL-JS-164	庚	喻：若水滅則風相斷絕無所依止		none		中	simile (counterfactual)
+QXL-JS-165	庚	喻：水不滅故風相相續；風滅則動相隨滅	相續=相續（中性）	none		中	simile; here 相續 is grounded in the unchanging water
+QXL-JS-166	丙一	Z=心體滅，Y=眾生斷絕無所依止（反事實）	依止=所依	none		中	counterfactual; Z is denied by the text
+QXL-JS-167	丙一	Z=體不滅，Y=心得相續；Z=癡滅，Y=心相隨滅	相續=心之相續（非無明義）	none	體/相：相分	高	key: a second sense of 相續, not ignorance: the mind continues because its 體 does not cease; compare the plan's 有常则续不尽 (steady_continues, §4.3), but grounded in a substance, not a class
+QXL-JS-168	丙一	Z=四法熏習，Y=染法淨法起不斷絕	熏習=相互薰染；不斷絕=續不盡	none		中	key: 熏習 (mutual conditioning) as what keeps both 染 and 淨 going
+QXL-JS-169	庚			none		高	frame
+QXL-JS-170	甲	淨法 := 真如		none		高	
+QXL-JS-171	甲	一切染因 := 無明		none		高	
+QXL-JS-172	甲	妄心 := 業識		none		高	
+QXL-JS-173	甲	妄境界 := 六塵		none		高	
+QXL-JS-174	庚	喻：衣本無香，以香熏習則有香氣		none		高	simile for 熏習
+QXL-JS-175	丙一	Z=無明熏習（真如），Y=有染相；真如實無於染	熏習=缘（相互）	none	真如/無明：相合（互熏）	中	mutual 熏習 is a mutual 缘 (§4.1 缘可以互相); 實無於染 keeps a 相分 aspect
+QXL-JS-176	丙一	Z=真如熏習（無明），Y=有淨用		none	真如/無明：相合（互熏）	中	converse of JS-175
+QXL-JS-177	庚			none		高	question
+QXL-JS-178	丙一	依真如有無明；無明熏習真如	依=所依；熏習=缘	none		中	first half of the cycle (with JS-179)
+QXL-JS-179	丙一	Z=熏習，Y=有妄心；妄心熏習無明（成环）		none		中	key: a closed cycle of 缘 (真如→無明→妄心→無明…) keeps 染法 不斷: a cycle sustains the continuation (§4.5 环)
+QXL-JS-180	丙一	Z=不了真如，Y=不覺念起現妄境界		none		中	
+QXL-JS-181	丙一	Z=妄境界染法緣，Y=熏習妄心，念著造業受苦		none		中	丁 aspect (苦)
+QXL-JS-182	庚			none		高	
+QXL-JS-183	庚			none		高	frame
+QXL-JS-184	庚	分：增長念熏習、增長取熏習		none		高	list
+QXL-JS-185	庚			none		高	
+QXL-JS-186	庚			none		高	frame
+QXL-JS-187	甲	業識根本熏習 := 能受阿羅漢辟支佛菩薩生滅苦		none		中	
+QXL-JS-188	甲	增長分別事識熏習 := 能受凡夫業繫苦		none		中	
+QXL-JS-189	庚			none		高	
+QXL-JS-190	庚			none		高	frame
+QXL-JS-191	甲	根本熏習 := 能成就業識		none		中	
+QXL-JS-192	甲	所起見愛熏習 := 能成就分別事識		none		中	
+QXL-JS-193	庚			none		高	question
+QXL-JS-194	丙一	Z=真如熏習無明，Y=妄心厭生死樂涅槃		none		中	丁 aspect
+QXL-JS-195	丙一	Z=妄心厭求因緣，Y=熏習真如		none		中	the reverse direction: the 淨 cycle
+QXL-JS-196	丙一	Z=久遠熏習力，Y=無明則滅		none		中	丁 aspect (修遠離法, prescriptive)
+QXL-JS-197	丙一	Z=無明滅，Y=心無起；Z=無起，Y=境界滅；因緣俱滅，心相皆盡	盡=盡（亡）	none	反读	高	key: the chain of endings; the end (亡) of the continuation is the goal (涅槃): valuation reversed
+QXL-JS-198	庚			none		高	
+QXL-JS-199	庚			none		高	frame
+QXL-JS-200	甲	分別事識熏習 := 凡夫二乘厭生死苦，漸趣無上道		none		中	丁 aspect
+QXL-JS-201	甲	意熏習 := 菩薩發心速趣涅槃		none		中	丁 aspect
+QXL-JS-202	庚			none		高	
+QXL-JS-203	庚			none		高	frame
+QXL-JS-204	庚	分：自體相熏習、用熏習		none		高	list
+QXL-JS-205	甲	自體相熏習 := 從無始世來具無漏法，作境界之性	無始=無前際	none		中	
+QXL-JS-206	丙一	Z=二義恒常熏習，Y=眾生厭生死、發心修行		none		中	丁 aspect
+QXL-JS-207	庚			none		高	question: if all have 真如, why differences?
+QXL-JS-208	庚			none		高	
+QXL-JS-209	戊	真如本一 / 無明無量差別	差別=分殊	none	一/多：相分	中	difference assigned wholly to 無明, unity to 真如
+QXL-JS-210	庚			none		中	
+QXL-JS-211	庚			none		中	
+QXL-JS-212	丙一	Z=因緣具足，Y=成辦	因=正因；緣=助緣	none		高	key: joint sufficiency of many 缘 (§4.1 缘多对多)
+QXL-JS-213	庚	喻：木中火性是正因，無人知、不假方便則不能自燒	火性=火之性	none		中	fire example: a disposition in the wood needs an outside 缘; relevant to 火传 (§5.2)
+QXL-JS-214	丙一	Z=不值遇緣，Y=不能自斷煩惱		none		中	丁 aspect
+QXL-JS-215	丙一	Z=有外緣而無內熏習，Y=不能究竟厭苦		none		中	丁 aspect
+QXL-JS-216	丙一	Z=因緣具足，Y=能起厭苦之心，信有涅槃		none		中	丁 aspect
+QXL-JS-217	丙一	Z=修善根成熟，Y=值諸佛菩薩，進趣涅槃		none		低	丁 aspect
+QXL-JS-218	甲	用熏習 := 眾生外緣之力	緣=外緣	none		高	
+QXL-JS-219	庚			none		高	
+QXL-JS-220	庚			none		高	frame
+QXL-JS-221	庚	分：差別緣、平等緣		none		高	list
+QXL-JS-222	甲	差別緣 := 諸佛菩薩以種種身（眷屬、怨家…）為眾生之緣	緣=助緣	none		中	丁 aspect; even an enemy (怨家) is a 缘
+QXL-JS-223	庚			none		高	
+QXL-JS-224	庚			none		高	frame
+QXL-JS-225	甲	近緣 := 速得度		none		中	
+QXL-JS-226	甲	遠緣 := 久遠得度		none		中	
+QXL-JS-227	庚			none		高	
+QXL-JS-228	庚			none		高	frame
+QXL-JS-229	庚	分：增長行緣、受道緣		none		高	list
+QXL-JS-230	甲	平等緣 := 諸佛菩薩願度一切，自然熏習恒常不捨		none		中	丁 aspect
+QXL-JS-231	庚			none		中	
+QXL-JS-232	庚			none		中	
+QXL-JS-233	庚			none		高	
+QXL-JS-234	庚			none		高	frame
+QXL-JS-235	甲	未相應 := 凡夫二乘初發意菩薩，依信力修行	相應=與體用相合	none		中	
+QXL-JS-236	庚			none		中	reason
+QXL-JS-237	甲	已相應 := 法身菩薩得無分別心，熏習真如，滅無明		none		中	丁 aspect
+QXL-JS-238	丙一	Z=得佛，Y=染法熏習斷；染法無始熏習不斷	無始=無生（无前际）	none	染/淨：相分	中	key: a continuation without 生 (無始) that has a 亡; with JS-239 the two continuations are asymmetric
+QXL-JS-239	戊	淨法熏習無有斷，盡於未來		none	染/淨：相分	中	key: a continuation without 亡; asymmetry of 染 (ends) and 淨 (never ends)
+QXL-JS-240	庚			none		高	
+QXL-JS-241	丙一	Z=真如常熏習，Y=妄心滅，法身顯現，起用熏習無斷	常=恒常	none		中	key: an endless continuation because of a constant (常熏習): compare §4.3 有常则续不尽
+QXL-JS-242	戊	真如自體相：無有增減，非前際生、非後際滅，畢竟常恒	前際=始；後際=終	none	真如/生滅：相分	高	key: neither 生 nor 亡 of 真如: in the plan a 续 with no 生 and no 亡; here an unchanging substance, the 金體 shape
+QXL-JS-243	丁			none		中	evaluative (功德)
+QXL-JS-244	丁			none		中	evaluative (常樂我淨)
+QXL-JS-245	甲	如來藏 := 具足不離不斷不異不思議佛法；亦名如來法身		none		高	丁 aspect
+QXL-JS-246	庚			none		高	question: one 真如 and many 功德?
+QXL-JS-247	乙	多德而無差別之相，等同一味（全类之下无分）	一味=同一	none		低	answer: many predicates hold while nothing is distinguished: readable as the total class; lost: 功德; with JS-252 difference is shown only relative to 業識
+QXL-JS-248	庚			none		高	
+QXL-JS-249	庚			none		中	
+QXL-JS-250	庚			none		中	是故無二
+QXL-JS-251	庚			none		高	question
+QXL-JS-252	丙一	Z=依業識，Y=差別（生滅相）得示	示=顯示	none		中	key: difference is relative to a reading (業識); compare positions relative to class; the reading is 妄
+QXL-JS-253	庚			none		高	
+QXL-JS-254	甲	無明 := 有妄心不覺起念見諸境界；一切法本來唯心		none	唯心：定域	高	
+QXL-JS-255	甲	大智慧光明義 := 心性不起		none		中	correlative glosses JS-255..262
+QXL-JS-256	丙一	Z=心起見，Y=有不見之相		none		低	乙 possibility: any seeing sets up a complement (cf. 有無相生)
+QXL-JS-257	甲	遍照法界義 := 心性離見		none		中	
+QXL-JS-258	丙一	Z=心有動，Y=非常樂我淨，衰變不自在	衰變=衰而變	none		中	丁 aspect: motion valued negatively
+QXL-JS-259	丙一	Z=心性無動，Y=淨功德相示現		none		中	丁 aspect
+QXL-JS-260	丙一	Z=心有起更見前法可念，Y=有所少		none		低	
+QXL-JS-261	甲	淨法無量功德 := 一心，更無所念		none		中	
+QXL-JS-262	甲	法身如來之藏（名）		none		中	naming
+QXL-JS-263	甲	真如用 := 諸佛本在因地發大慈悲，攝化眾生		none		中	丁 aspect
+QXL-JS-264	丁			none		中	vow
+QXL-JS-265	丁			none		中	
+QXL-JS-266	庚			none		高	
+QXL-JS-267	丁			none		中	也含 真如平等無別異
+QXL-JS-268	庚			none		高	
+QXL-JS-269	甲	用 := 但隨眾生見聞得益故說；第一義諦無世諦境界		none	二諦：定域	中	用 is predicated relative to beings' seeing
+QXL-JS-270	庚			none		高	
+QXL-JS-271	庚			none		高	frame
+QXL-JS-272	甲	應身 := 依分別事識，凡夫二乘心所見		none		中	
+QXL-JS-273	庚			none		中	
+QXL-JS-274	甲	報身 := 依業識，菩薩心所見		none		中	
+QXL-JS-275	庚			none		中	description
+QXL-JS-276	甲	報身（說為）:= 波羅蜜無漏行熏所成，具足樂相		none		中	丁 aspect
+QXL-JS-277	甲	應身（說為）:= 凡夫所見麁色，隨六道各見不同		none		中	
+QXL-JS-278	庚			none		中	唯依心現
+QXL-JS-279	庚			none		中	
+QXL-JS-280	丁			none		中	
+QXL-JS-281	丙一	Z=離業識，Y=無見相		none		中	
+QXL-JS-282	庚			none		高	question
+QXL-JS-283	甲	法身 是 色體，故能現色		none		中	
+QXL-JS-284	甲	智身 := 色性即智故色體無形；色心不二		none	色/心：相合	中	
+QXL-JS-285	甲	法身 := 智性即色，遍一切處		none	色/心：相合	中	
+QXL-JS-286	庚			none		中	
+QXL-JS-287	庚			none		中	
+QXL-JS-288	庚			none		高	key frame: passage from the 生滅門 into the 真如門 (one carrier, two readings)
+QXL-JS-289	庚			none		中	
+QXL-JS-290	庚	喻：迷謂東為西，方實不轉		none		高	simile
+QXL-JS-291	戊	心實不動 / 無明迷謂心為念	動=動；念=念	none	心/念：相分	中	motion is error; strains the plan's 化 at the 真如 reading
+QXL-JS-292	丁			none		中	若能觀察知心無念 → 入真如門 (path conditional)
+QXL-JS-293	丙一	Z=離我（見），Y=無邪執；邪執依我見		none		中	丁 aspect
+QXL-JS-294	庚			none		高	
+QXL-JS-295	庚			none		高	frame
+QXL-JS-296	庚	分：人我見、法我見		none		高	
+QXL-JS-297	庚			none		高	
+QXL-JS-298	庚			none		高	frame
+QXL-JS-299	庚			none		中	wrong view 1 (虛空是如來性)
+QXL-JS-300	庚			none		高	
+QXL-JS-301	庚			none		中	虛空相 以對色故有 (with JS-303)
+QXL-JS-302	未读出		色=色法	none	唯心：定域	中	reason: identity 色=心 needs a carrier that is mind; the grammar's 一 is not 心; registered 定域
+QXL-JS-303	乙	若無色則無虛空之相（虛空/色 相待）	對=相待	none		中	correlatives (with JS-301)
+QXL-JS-304	丙一	Z=心離於妄動，Y=一切境界滅		none	唯心：定域	中	
+QXL-JS-305	庚			none		中	
+QXL-JS-306	庚			none		中	wrong view 2
+QXL-JS-307	庚			none		中	
+QXL-JS-308	庚			none		高	frame
+QXL-JS-309	庚		自體=自身之體	none		中	correction: 真如法身自體不空 (strains 無自立, cf. JS-025)
+QXL-JS-310	庚			none		中	wrong view 3
+QXL-JS-311	庚			none		中	
+QXL-JS-312	庚			none		高	frame
+QXL-JS-313	丙一	Z=因生滅染義，Y=說差別；唯依真如義說		none		低	difference relative to a reading (cf. JS-252)
+QXL-JS-314	庚		依=所依	none	如來藏/生死：相分	中	report of a sutra thesis: 生死染法 依如來藏而有 (asymmetry)
+QXL-JS-315	庚			none		中	wrong view 4
+QXL-JS-316	庚			none		高	frame
+QXL-JS-317	戊	如來藏 唯有淨功德，不離不斷不異真如		none	淨/染：相分	中	
+QXL-JS-318	戊	染法 唯是妄有，未曾與如來藏相應	相應=相合（相連）	none	淨/染：相分	高	key: 染 and 如來藏 never 相應, i.e. no relation between them; this conflicts with mutual 熏習 (JS-175, JS-178) within the text
+QXL-JS-319	庚			none		中	reductio
+QXL-JS-320	庚			none		中	sutra: 依如來藏故有生死、得涅槃
+QXL-JS-321	庚		始=初始	none		中	wrong view 5: 眾生有始
+QXL-JS-322	庚		終盡=亡	none		中	wrong view: from a beginning, an end of 涅槃
+QXL-JS-323	庚			none		高	frame
+QXL-JS-324	丙一	Z=如來藏無前際，Y=無明之相亦無有始	前際=始	none		中	key: no 生 (無始) of 無明: a model property (cf. JS-046)
+QXL-JS-325	己	拒：三界外更有眾生始起	始起=絕對之生	none		中	rejects an absolute first arising of beings; plan answer: 生 is relative to a class, and a 無始 model simply has no 生 for that class
+QXL-JS-326	丙一	Z=如來藏無後際，Y=涅槃與之相應無後際	後際=終	none		中	
+QXL-JS-327	庚			none		中	
+QXL-JS-328	庚			none		中	wrong view: 見有五陰生滅之法
+QXL-JS-329	庚			none		高	
+QXL-JS-330	己	拒：五陰生滅自性實有；自性不生則無有滅	自性=自己之性	none		中	rejects 生滅 as self-natured; plan answer: 生 and 亡 are relative to class, not 自性 (as for 中論, §一); the 不生則無滅 step is not a theorem of the grammar (an event can be 住 and later 亡)
+QXL-JS-331	乙	染法淨法皆悉相待，無有自相可說	相待=相依而立	none	染/淨：相合	中	key: correlatives without self-mark; 未读出 part: 非有非無 (tetralemma)
+QXL-JS-332	丁		言說=方便	none		中	the text treats its own speech as expedient (方便) aimed at 離念: a grammar reading of it reads its 方便 layer
+QXL-JS-333	甲	分別發趣道相 := 諸佛所證之道，菩薩發心修行趣向	分別=分辨	none		中	
+QXL-JS-334	庚			none		高	
+QXL-JS-335	庚			none		高	frame
+QXL-JS-336	庚	分：信成就、解行、證 發心		none		高	
+QXL-JS-337	庚			none		高	question
+QXL-JS-338	丁			none		中	path
+QXL-JS-339	丁			none		中	
+QXL-JS-340	丁			none		中	
+QXL-JS-341	甲	住如來種中正因相應（名）		none		中	丁 aspect
+QXL-JS-342	丁			none		中	
+QXL-JS-343	丁			none		中	
+QXL-JS-344	丁			none		中	
+QXL-JS-345	丁			none		中	
+QXL-JS-346	丁			none		中	
+QXL-JS-347	丁			none		中	
+QXL-JS-348	丁			none		中	遇惡因緣 → 退失 (path conditional)
+QXL-JS-349	庚			none		高	question
+QXL-JS-350	庚			none		高	
+QXL-JS-351	庚			none		高	frame
+QXL-JS-352	甲	直心 := 正念真如		none		中	丁 aspect
+QXL-JS-353	甲	深心 := 樂集諸善行		none		中	丁 aspect
+QXL-JS-354	甲	大悲心 := 欲拔眾生苦		none		中	丁 aspect
+QXL-JS-355	庚			none		高	question
+QXL-JS-356	庚	喻：摩尼寶有鑛穢之垢		none		高	simile
+QXL-JS-357	庚	喻：不磨治終無得淨		none		高	simile
+QXL-JS-358	庚			none		中	application
+QXL-JS-359	丁			none		中	prescriptive
+QXL-JS-360	丁			none		中	
+QXL-JS-361	丁			none		中	
+QXL-JS-362	庚			none		高	
+QXL-JS-363	庚			none		高	frame
+QXL-JS-364	庚			none		高	heading
+QXL-JS-365	丁			none		中	觀一切法自性無生, 不住生死 (practice gloss; 甲 aspect)
+QXL-JS-366	丁			none		中	key-ish: 因緣和合、業果不失 held with 自性無生 (JS-365): a karmic continuation affirmed in practice
+QXL-JS-367	庚			none		高	heading
+QXL-JS-368	丁			none		中	
+QXL-JS-369	庚			none		高	heading
+QXL-JS-370	丁			none		中	
+QXL-JS-371	丁			none		中	
+QXL-JS-372	庚			none		高	heading
+QXL-JS-373	丁			none		中	隨順法性無斷絕: endless vow valued positively
+QXL-JS-374	丁			none		中	
+QXL-JS-375	丁			none		中	
+QXL-JS-376	庚			none		高	list of eight acts (narrative)
+QXL-JS-377	庚			none		中	
+QXL-JS-378	庚			none		中	
+QXL-JS-379	丁			none		中	
+QXL-JS-380	丁			none		中	
+QXL-JS-381	丁			none		中	
+QXL-JS-382	庚			none		中	
+QXL-JS-383	丁	以知法性P故修Q		none		中	prescriptive (檀)
+QXL-JS-384	丁	以知法性P故修Q		none		中	(尸)
+QXL-JS-385	丁	以知法性P故修Q		none		中	(羼提)
+QXL-JS-386	丁	以知法性P故修Q		none		中	(毘梨耶)
+QXL-JS-387	丁	以知法性P故修Q		none		中	(禪)
+QXL-JS-388	丁	以知法性P故修Q		none		中	(般若)
+QXL-JS-389	庚			none		高	question
+QXL-JS-390	甲	法身 := 唯真如智；境界 依轉識說，證者無境界		none		中	境界 relative to 轉識
+QXL-JS-391	丁			none		中	
+QXL-JS-392	庚			none		中	expedient teaching
+QXL-JS-393	庚			none		中	
+QXL-JS-394	庚			none		中	
+QXL-JS-395	庚			none		中	
+QXL-JS-396	庚			none		高	
+QXL-JS-397	庚			none		高	frame
+QXL-JS-398	甲	真心 := 無分別		none		中	
+QXL-JS-399	甲	方便心 := 自然遍行利益眾生		none		中	丁 aspect
+QXL-JS-400	甲	業識心 := 微細起滅		none		中	even at 證發心 a subtle arising and ceasing remains
+QXL-JS-401	庚			none		中	
+QXL-JS-402	甲	一切種智 := 一念相應慧，無明頓盡	頓盡=一时尽	none		中	丁 aspect; 頓盡 (ending at once)
+QXL-JS-403	庚			none		高	question
+QXL-JS-404	庚		分齊=界限	none		高	
+QXL-JS-405	庚			none		高	
+QXL-JS-406	丙一	Z=眾生妄見境界，Y=心有分齊；一切境界本來一心	分齊=界限、分隔	none	唯心：定域	中	key: boundaries (分齊) come from deluded seeing; strains the plan's neutral classes
+QXL-JS-407	甲	諸法之性 := 諸佛離於見想無所不遍之心		none		低	
+QXL-JS-408	甲	一切種智（得名）		none		中	
+QXL-JS-409	庚			none		高	question
+QXL-JS-410	庚			none		高	
+QXL-JS-411	庚			none		中	
+QXL-JS-412	庚			none		中	但依眾生心現
+QXL-JS-413	庚	喻：鏡有垢則色像不現		none		高	simile
+QXL-JS-414	丙一	Z=眾生心有垢，Y=法身不現		none		低	application of the simile
+QXL-JS-415	庚			none		高	
+QXL-XX-001	庚			none		高	frame
+QXL-XX-002	庚			none		高	frame
+QXL-XX-003	庚			none		高	frame
+QXL-XX-004	庚			none		高	frame
+QXL-XX-005	庚			none		高	
+QXL-XX-006	庚			none		高	frame
+QXL-XX-007	甲	信根本 := 樂念真如法		none		中	丁 aspect (faith)
+QXL-XX-008	甲	信佛 := 信佛有無量功德，常念親近供養		none		中	丁 aspect
+QXL-XX-009	甲	信法 := 信法有大利益，常念修行		none		中	丁 aspect
+QXL-XX-010	甲	信僧 := 信僧能正修行自利利他		none		中	丁 aspect
+QXL-XX-011	庚			none		高	
+QXL-XX-012	庚			none		高	frame
+QXL-XX-013	庚	分：施、戒、忍、進、止觀		none		高	list
+QXL-XX-014	庚			none		高	frame
+QXL-XX-015	丁			none		高	practice of giving
+QXL-XX-016	丁			none		高	
+QXL-XX-017	丁			none		高	
+QXL-XX-018	丁			none		高	
+QXL-XX-019	庚			none		高	frame
+QXL-XX-020	丁			none		高	precepts
+QXL-XX-021	丁			none		高	
+QXL-XX-022	丁			none		高	
+QXL-XX-023	丁			none		高	
+QXL-XX-024	庚			none		高	frame
+QXL-XX-025	丁			none		高	
+QXL-XX-026	丁			none		高	
+QXL-XX-027	庚			none		高	frame
+QXL-XX-028	丁			none		高	
+QXL-XX-029	丁			none		高	
+QXL-XX-030	庚			none		中	narrative of obstacles
+QXL-XX-031	丁			none		高	
+QXL-XX-032	庚			none		高	frame
+QXL-XX-033	甲	止 := 止一切境界相	止=止息	none		中	丁 aspect
+QXL-XX-034	甲	觀 := 分別因緣生滅相	分別=分辨（此处为正面之用）；因緣生滅相=缘起之生灭	none		高	key: discerning causal arising and ceasing is valued positively as 觀 (paired with 止, XX-036, XX-090); softens the 反读 of 相續 = 無明: the plan's own activity has a place in the text
+QXL-XX-035	庚			none		高	frame
+QXL-XX-036	丁	止觀不相捨離，雙現前		none	止/觀：相合	中	
+QXL-XX-037	丁			none		高	instruction for 止
+QXL-XX-038	丁		念念=刹那	none		中	instruction; contains the thesis 一切法本來無相，念念不生念念不滅 (己 aspect: denies arising and ceasing of thought-moments, at the 止 reading)
+QXL-XX-039	丁			none		高	
+QXL-XX-040	丁			none	唯心：定域	中	唯心，無外境界
+QXL-XX-041	丁			none		中	心亦無自相，念念不可得
+QXL-XX-042	丁			none		中	
+QXL-XX-043	庚			none		中	
+QXL-XX-044	丁			none		中	依三昧知法界一相
+QXL-XX-045	甲	一行三昧 := 知諸佛法身與眾生身平等無二		none		中	丁 aspect
+QXL-XX-046	丁			none		中	
+QXL-XX-047	丁			none		中	魔事; 當念唯心則境界滅
+QXL-XX-048	庚			none		中	narrative of deceptive appearances
+QXL-XX-049	庚			none		中	narrative
+QXL-XX-050	庚			none		中	narrative
+QXL-XX-051	庚			none		中	narrative
+QXL-XX-052	庚			none		中	narrative
+QXL-XX-053	庚			none		中	narrative
+QXL-XX-054	丁			none		中	evaluative (外道所得，非真三昧)
+QXL-XX-055	庚			none		中	narrative
+QXL-XX-056	庚			none		中	narrative
+QXL-XX-057	丁			none		高	
+QXL-XX-058	丁			none		高	
+QXL-XX-059	丁			none		中	
+QXL-XX-060	甲	真如三昧 := 不住見相不住得相，出定無懈慢		none		中	丁 aspect
+QXL-XX-061	丁			none		中	
+QXL-XX-062	丁			none		中	
+QXL-XX-063	丁			none		中	
+QXL-XX-064	丁			none		高	
+QXL-XX-065	庚			none		高	frame
+QXL-XX-066	丁			none		高	benefit list
+QXL-XX-067	丁			none		高	
+QXL-XX-068	丁			none		高	
+QXL-XX-069	丁			none		高	
+QXL-XX-070	丁			none		高	
+QXL-XX-071	丁			none		高	
+QXL-XX-072	丁			none		高	
+QXL-XX-073	丁			none		高	
+QXL-XX-074	丁			none		高	
+QXL-XX-075	丁			none		高	
+QXL-XX-076	丁			none		中	唯修止 → 心沈沒; 是故修觀 (path conditional)
+QXL-XX-077	丁		念念生滅=刹那生灭；變壞=变而坏	none	反读	高	key: impermanence (無得久停須臾變壞，念念生滅) is valued as 苦: the descriptive content the plan reads neutrally is given a negative sign
+QXL-XX-078	丁			none		中	past 如夢, present 電光, future 如雲忽爾而起: three times in practice
+QXL-XX-079	丁			none		中	無明熏習 → 心生滅 → 苦
+QXL-XX-080	丁			none		中	
+QXL-XX-081	丁			none		中	
+QXL-XX-082	丁			none		中	vow
+QXL-XX-083	丁			none		中	
+QXL-XX-084	丁			none		中	
+QXL-XX-085	丁			none		中	
+QXL-XX-086	丁		自性不生=无自性之生；不失不壞=续而不失	none	二諦（止/觀）：定域	高	key: both at once: 自性不生 and karmic continuation 苦樂等報不失不壞; the positive continuation of 業報 is affirmed alongside 無生
+QXL-XX-087	丁			none		中	converse of XX-086
+QXL-XX-088	丁			none		中	
+QXL-XX-089	丁			none		中	
+QXL-XX-090	丁	止觀二門共相助成，不相捨離		none	止/觀：相合	中	
+QXL-XX-091	丁			none		中	
+QXL-XX-092	庚			none		中	
+QXL-XX-093	庚			none		中	
+QXL-XX-094	丁			none		中	
+QXL-XX-095	丁			none		中	
+QXL-XX-096	丁			none		中	sutra on 往生
+QXL-XX-097	丁			none		中	
+QXL-XX-098	庚			none		高	frame
+QXL-QX-001	庚			none		高	frame
+QXL-QX-002	庚			none		高	
+QXL-QX-003	丁			none		高	
+QXL-QX-004	丁			none		高	
+QXL-QX-005	丁			none		高	
+QXL-QX-006	丁			none		高	
+QXL-QX-007	丁			none		高	
+QXL-QX-008	庚			none		高	frame
+QXL-QX-009	丁			none		中	法性功德無有盡
+QXL-QX-010	丁			none		中	
+QXL-QX-011	丁			none		高	
+QXL-QX-012	丁			none		高	
+QXL-QX-013	丁			none		高	
+QXL-G2-001	丁			none		中	dedicatory verse (迴此功德)
+QXL-T-004	庚			none		高	end title

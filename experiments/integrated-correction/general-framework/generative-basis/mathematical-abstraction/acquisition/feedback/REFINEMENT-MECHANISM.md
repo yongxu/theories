@@ -1,6 +1,6 @@
 # Acquired consequences can require a finer application distinction
 
-6 October 2026. AI-authored continuation under the [nondual method](../../../../../../../theories/becoming/chapters/NONDUAL-METHOD.md). Named connection: **acquired evidence of an application dependency → refinement of the operative application distinction → subsequent activity governed by that refinement**. This is a local construction with explicit contact, memory and revision laws. It does not establish an assumption-free foundation or ethical necessity.
+6 October 2026. AI-authored continuation under the [nondual method](../../../../../../../theories/becoming/history/NONDUAL-METHOD.md). Named connection: **acquired evidence of an application dependency → refinement of the operative application distinction → subsequent activity governed by that refinement**. This is a local construction with explicit contact, memory and revision laws. It does not establish an assumption-free foundation or ethical necessity.
 
 **Status:** the [prospective protocol](REFINEMENT-PROTOCOL.md), [additive implementation](refinement.py) and [sixteen saved cases](refinement-results.json) realize this conditional connection, accepted by [independent reconstruction and review](../../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/APPLICATION-DISTINCTION-REVIEW.md). The accepted [preceding feedback study](MECHANISM.md) remains unchanged.
 

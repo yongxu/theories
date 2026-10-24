@@ -33,7 +33,7 @@
 
 Author counterreview and primary-source comparison with Carroll and Boghossian; zero new mathematical claims. The source bindings of three existing Lean receipts (reflective identity, recognitional binding, inferential substitution) were rechecked, as recorded in the study's BINDING-CONSTITUTION-CHECKS.json; this record binds none of them, and nothing was recompiled or independently accepted.
 
-Canonical source: [GENERATED-LOGIC.md](../../chapters/GENERATED-LOGIC.md)
+Canonical source: [GENERATED-LOGIC.md](../../history/GENERATED-LOGIC.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -62,7 +62,7 @@ Introduction, continuation, recognition and inferential warrant distinguish rela
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [GENERATED-LOGIC.md](../../chapters/GENERATED-LOGIC.md) | — |
+| statement | [GENERATED-LOGIC.md](../../history/GENERATED-LOGIC.md) | — |
 | review | [RECOGNITIONAL-BINDING-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECOGNITIONAL-BINDING-INTEGRATION.md) | — |
 | provenance | [2026-10-08-generative-logic-investigation.md](../../../../sources/15-codex-theory-conversations/2026-10-08-generative-logic-investigation.md) | — |
 

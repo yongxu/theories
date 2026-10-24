@@ -1,0 +1,214 @@
+{
+ "laws": [
+  {
+   "law": "L03",
+   "faithful": "Let L be a flow and W a web, let s list at each step the members of C with positive level in W, and suppose L runs down W at every step from T on. Then for any c in C it is not the case that for every N some step t ≥ N has the level of c in W rising after t.",
+   "planted": "Let L be a flow and W a web, let s list at each step the members of C with positive level in W, and suppose L runs down W at every step from T on. Then for any c in C it is not the case that for every N some step t ≥ N has the level of c in W rising after t with inflow from the environment.",
+   "planted_span": "with inflow from the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L47",
+   "faithful": "Let f be a map on a type S with decidable equality, and let the list a contain every element of S. Then f is lossless if and only if no element x is drawn under f, that is, for no x is there an absorbing set into which f draws x.",
+   "planted": "Let f be a map on a type S with decidable equality, and let the list a contain every element of S. Then f is lossless if and only if no element x is drawn under f, that is, for no x is there an absorbing set, shared with the rest of the system, into which f draws x.",
+   "planted_span": "shared with the rest of the system",
+   "planted_head": "rest"
+  },
+  {
+   "law": "L02",
+   "faithful": "For a web W and two level histories l and l', if l widens l' in W (it includes l' and exceeds it), then l' does not widen l in W.",
+   "planted": "For a web W and two level histories l and l', if l widens l' in W (it includes l' and exceeds it), then, by the nature of widening, l' does not widen l in W.",
+   "planted_span": "by the nature of widening",
+   "planted_head": "nature"
+  },
+  {
+   "law": "L52",
+   "faithful": "For a relation r, element f, predicate σ and position p: σ p t g holds for all t and all g lying in every region closed under r containing f if and only if some such region has σ p t g for all t and members g; and every such region has this if and only if σ p t g holds for all t and g.",
+   "planted": "For a relation r, element f, predicate σ and position p: σ p t g holds for all t and all g lying in every region closed under r containing f if and only if some such region has σ p t g for all t and members g; and every such region has this if and only if σ p t g holds, as a general truth, for all t and g.",
+   "planted_span": "as a general truth",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L21",
+   "faithful": "For a web W and level histories l, l' and l'': if l includes l' in W and l' includes l'' in W, then l includes l'' in W, where l includes l' when, at every step t and for every f, whenever W admits f under l' at t it also admits f under l at t.",
+   "planted": "For a web W and level histories l, l' and l'': if l includes l' in W and l' includes l'' in W, then l includes l'' in W, where l includes l' when, at every step t and for every f, whenever an observer finds that W admits f under l' at t it also admits f under l at t.",
+   "planted_span": "an observer finds that",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L36",
+   "faithful": "For a web W, a relation r, a predicate σ and an element f, the own part at f of W's valuation built from r and σ contains (f, t) for every step t; the elements g with (g, t) in it for every t form a region closed under r containing f; and every region closed under r containing f contains the first component of every pair in it.",
+   "planted": "For a web W, a relation r, a predicate σ and an element f, the own part at f of W's valuation built from r and σ contains (f, t) for every step t; the elements g with (g, t) in it for every t form, by nature, a region closed under r containing f; and every region closed under r containing f contains the first component of every pair in it.",
+   "planted_span": "by nature",
+   "planted_head": "nature"
+  },
+  {
+   "law": "L56",
+   "faithful": "Let M be a frame whose contents are pairs of an element and a step, with every such pair realized at some state of M. Then σ p t g holds for all p, t and g if and only if, for every state s and every pair (g, t) that M realizes at s, σ p t g holds for every p.",
+   "planted": "Let M be a frame whose contents are pairs of an element and a step, with every such pair realized at some state of M within its environment. Then σ p t g holds for all p, t and g if and only if, for every state s and every pair (g, t) that M realizes at s, σ p t g holds for every p.",
+   "planted_span": "within its environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L37",
+   "faithful": "If a predicate P on I holds for every i, then for any predicate B on I, P holds for every i that satisfies B.",
+   "planted": "If a predicate P on I holds for every i, then for any predicate B on I, P holds for every i that satisfies B, as well as for the rest.",
+   "planted_span": "as well as for the rest",
+   "planted_head": "rest"
+  },
+  {
+   "law": "L19",
+   "faithful": "Let G be a list of maps on natural numbers, none of which lowers its argument (x ≤ g x for every g in G and every x). Then for every d and n, the state at step n of the run started at d that, at each step, passes the amount through all the maps of G in order is at least d.",
+   "planted": "Let G be a list of maps on natural numbers, none of which lowers its argument (x ≤ g x for every g in G and every x). Then for every d and n, the state at step n of the run started by an operator at d that, at each step, passes the amount through all the maps of G in order is at least d.",
+   "planted_span": "by an operator",
+   "planted_head": "operator"
+  },
+  {
+   "law": "L20",
+   "faithful": "Let ρ be a rule whose output at step t depends only on record entries at steps s with s + ℓ < t, and let 0 < a. If, for every record δ whose entries' components differ by at most d, the amount from x₀ changed each step by ρ's and δ's additions and removals stays between a and b, then a + (ℓ + 1)(d + d) ≤ b.",
+   "planted": "Let ρ be a rule whose output at step t depends only on record entries at steps s with s + ℓ < t, and let 0 < a. If, for every record δ of disturbances from the environment whose entries' components differ by at most d, the amount from x₀ changed each step by ρ's and δ's additions and removals stays between a and b, then a + (ℓ + 1)(d + d) ≤ b.",
+   "planted_span": "of disturbances from the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L17",
+   "faithful": "Suppose (ℓ + 1)d ≤ x₀. The rule that, after step ℓ, reverses the record entry from ℓ + 1 steps earlier depends only on entries at steps s with s + ℓ < t; and for every record whose entries each have components differing by at most d, the amount starting at x₀ under that rule and record stays within (ℓ + 1)d of x₀ at every step.",
+   "planted": "Suppose (ℓ + 1)d ≤ x₀. The rule that, after step ℓ, reverses for its operator the record entry from ℓ + 1 steps earlier depends only on entries at steps s with s + ℓ < t; and for every record whose entries each have components differing by at most d, the amount starting at x₀ under that rule and record stays within (ℓ + 1)d of x₀ at every step.",
+   "planted_span": "for its operator",
+   "planted_head": "operator"
+  },
+  {
+   "law": "L04",
+   "faithful": "For flows L and L', a web W, a relation o, a Boolean marking m and an element g: g lies within the response of L and L' to m if and only if there is an h marked true by m such that every region containing g and closed under coupling from either L or L' in W under o contains h.",
+   "planted": "For flows L and L', a web W, a relation o, a Boolean marking m and an element g: g lies within the response of L and L' to m if and only if there is an h marked true by m such that every region containing g and closed under coupling from either L or L', or a third flow, in W under o contains h.",
+   "planted_span": "or a third flow",
+   "planted_head": "flow"
+  },
+  {
+   "law": "L35",
+   "faithful": "Let r assign an amount to each element at each step so that, while an element is unsupported in W, its amount never increases, strictly decreases when the element is active, and strictly decreases when positive. If f is unsupported at every step from S on and r at S for f is at most n, then f is not active in W at step S + n.",
+   "planted": "Let r assign an amount to each element at each step so that, while an element is unsupported in W, its amount never increases, strictly decreases when the element is active, and strictly decreases when positive. If f is unsupported by its environment at every step from S on and r at S for f is at most n, then f is not active in W at step S + n.",
+   "planted_span": "by its environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L15",
+   "faithful": "Let L be a flow, W a web and c a member of C such that every element depends on c in W and exchanges c in L (at some step it is present with a positive take or give of c). Then for any f and g, every region containing f and closed under L's affecting relation in W contains g.",
+   "planted": "Let L be a flow, W a web and c a member of C such that every element depends on c in W and exchanges c with its owner in L (at some step it is present with a positive take or give of c). Then for any f and g, every region containing f and closed under L's affecting relation in W contains g.",
+   "planted_span": "with its owner",
+   "planted_head": "owner"
+  },
+  {
+   "law": "L41",
+   "faithful": "For a list P and a weight w assigning a natural number to each member: the square of the total weight of P equals the length of P times the total of the squared weights if and only if w gives every two members of P the same value.",
+   "planted": "For a list P and a weight w assigning a natural number to each member: the square of the total weight of P equals the length of P times the total of the squared weights, by the law of averages, if and only if w gives every two members of P the same value.",
+   "planted_span": "by the law of averages",
+   "planted_head": "law"
+  },
+  {
+   "law": "L30",
+   "faithful": "Let G be a list of maps on natural numbers. If the state at step n of the run started at d that, at each step, passes the amount through all the maps of G in order is less than d, then some map in G lowers some argument: there are g in G and x with g x < x.",
+   "planted": "Let G be a list of maps on natural numbers. If the state at step n of the run started by a controller at d that, at each step, passes the amount through all the maps of G in order is less than d, then some map in G lowers some argument: there are g in G and x with g x < x.",
+   "planted_span": "by a controller",
+   "planted_head": "controller"
+  },
+  {
+   "law": "L01",
+   "faithful": "For a process P, a property K of its runs and a run r: K holds of r if and only if both (i) for every length h some run satisfying K agrees with r up to h, and (ii) if (i) holds, then K holds of r.",
+   "planted": "For a process P, a property K of its runs and a run r: K holds of r if and only if both (i) for every length h some run satisfying K agrees with r up to h, as far as an observer can see, and (ii) if (i) holds, then K holds of r.",
+   "planted_span": "as far as an observer can see",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L16",
+   "faithful": "For a hexagram s: its two halves glue, meaning there is a single assignment of lines to heights shown by both the lower and the upper half, if and only if at every height the line of the lower half and the line of the upper half are not opposed.",
+   "planted": "For a hexagram s: its two halves glue, meaning there is a single assignment of lines to heights, one underlying order, shown by both the lower and the upper half, if and only if at every height the line of the lower half and the line of the upper half are not opposed.",
+   "planted_span": "one underlying order",
+   "planted_head": "order"
+  },
+  {
+   "law": "L57",
+   "faithful": "Let f update a pair (a, b) given r, and h update r given (a, b), where neither the first component of f's result nor h's result depends on b. Then for any Boolean sequence e and any two starting configurations that agree on a and on r, the paced courses from them under f, h and e agree on a and on r at every step t.",
+   "planted": "Let f update a pair (a, b) given r, and h update r given (a, b), where neither the first component of f's result nor h's result depends on b. Then for any Boolean sequence e and any two starting configurations that agree on a and on r, whatever the truth about b, the paced courses from them under f, h and e agree on a and on r at every step t.",
+   "planted_span": "whatever the truth about b",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L28",
+   "faithful": "For natural numbers p, q, k, n, u and v with v ≤ u: the total, over all Boolean sequences of length n with at least k trues, of p to the number of trues times q to the number of falses, multiplied by u^k · v^n, is at most (p·u + q·v)^n · v^k.",
+   "planted": "For natural numbers p, q, k, n, u and v with v ≤ u: the total, over all Boolean sequences of length n with at least k trues, of p to the number of trues times q to the number of falses, multiplied by u^k · v^n, is at most (p·u + q·v)^n · v^k, a bound set by the law of large numbers.",
+   "planted_span": "a bound set by the law of large numbers",
+   "planted_head": "law"
+  },
+  {
+   "law": "L34",
+   "faithful": "For natural numbers p, q and n: p + q times the total, over all Boolean sequences of length n, of each sequence's weight (p to the number of trues times q to the number of falses) times its number of trues equals n · p · (p + q)^n.",
+   "planted": "For natural numbers p, q and n: p + q times the total, over all Boolean sequences of length n that a sampler might draw, of each sequence's weight (p to the number of trues times q to the number of falses) times its number of trues equals n · p · (p + q)^n.",
+   "planted_span": "that a sampler might draw",
+   "planted_head": "sampler"
+  },
+  {
+   "law": "L31",
+   "faithful": "Under the successor map on natural numbers, 0 is drawn (there is an absorbing set into which the successor draws 0), and the successor map is lossless.",
+   "planted": "Under the successor map on natural numbers, 0 is drawn (there is an absorbing set into which the successor draws 0 from its surroundings), and the successor map is lossless.",
+   "planted_span": "from its surroundings",
+   "planted_head": "surroundings"
+  },
+  {
+   "law": "L39",
+   "faithful": "Let f be a map on a type S, and let the list a contain every element of S. Then f is lossless if and only if every element x returns under f.",
+   "planted": "Let f be a map on a type S, and let the list a contain every element of S. Then f is lossless if and only if, as an observer following f would find, every element x returns under f.",
+   "planted_span": "as an observer following f would find",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L59",
+   "faithful": "The predecessor map sends 0 to 0 and lowers every positive number; and for all d and n with n < d, the state at step n of the run started at d that applies the predecessor at each step is positive.",
+   "planted": "The predecessor map sends 0 to 0 and lowers every positive number; and for all d and n with n < d, the state at step n of the run started by an operator at d that applies the predecessor at each step is positive.",
+   "planted_span": "by an operator",
+   "planted_head": "operator"
+  },
+  {
+   "law": "L43",
+   "faithful": "For an element f, a predicate σ and a position p: some region containing f (every region being closed under the empty relation) has σ p t g for every step t and every member g if and only if σ p t f holds for every step t.",
+   "planted": "For an element f, a predicate σ and a position p: some region containing f (every region being closed under the empty relation), chosen by an evaluator, has σ p t g for every step t and every member g if and only if σ p t f holds for every step t.",
+   "planted_span": "chosen by an evaluator",
+   "planted_head": "evaluator"
+  },
+  {
+   "law": "L25",
+   "faithful": "Let K be a class of relations between Boolean predicates on X containing, for each weighting positive on the list L, the relation ranking b below a when b's weighted total over L is less than a's, with every member R having R b a whenever a widens b on L. Then a widens b on L if and only if R b a for every R in K.",
+   "planted": "Let K be a class of relations between Boolean predicates on X containing, for each weighting positive on the list L, the relation ranking b below a when b's weighted total over L is less than a's, with every member R having R b a whenever a widens b on L. Then a widens b on L, within its environment, if and only if R b a for every R in K.",
+   "planted_span": "within its environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L14",
+   "faithful": "Let L be a flow, W a web and c a member of C such that every element takes part in c: it depends on c in W or has a positive take or give of c in L. Then for any f and g, every region containing f and closed under L's sharing relation in W contains g.",
+   "planted": "Let L be a flow, W a web and c a member of C such that every element takes part in c: it depends on c in W or has a positive take or give of c from the environment in L. Then for any f and g, every region containing f and closed under L's sharing relation in W contains g.",
+   "planted_span": "from the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L38",
+   "faithful": "Let V be a web and π a passing relation such that whatever is active at step t + 1 was active at t or is passed to by some element active at t. If a arises at t (inactive at t, active at t + 1), then some b active at t passes to a at t.",
+   "planted": "Let V be a web and π a passing relation such that whatever is active at step t + 1 was active at t or is passed to by some element active at t. If a arises at t (inactive at t, active at t + 1), then some sender b active at t passes to a at t.",
+   "planted_span": "sender",
+   "planted_head": "sender"
+  },
+  {
+   "law": "L26",
+   "faithful": "Let P be a process and γ mark some labels, with p holding before every unmarked step after which it holds. If a trace along label list l leads from s to t with p at t, then p holds at s, or l splits as u, a marked label a, v, with u leading from s to m, a from m to m' where p holds, and v from m' to t.",
+   "planted": "Let P be a process and γ mark some labels, with p holding before every unmarked step after which it holds. If a trace along label list l leads from s to t with p at t, then p holds at s, or, as the truth of p must enter somewhere, l splits as u, a marked label a, v, with u leading from s to m, a from m to m' where p holds, and v from m' to t.",
+   "planted_span": "as the truth of p must enter somewhere",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L55",
+   "faithful": "For sequences g of states and m of labels: some deterministic process (each state and label lead to at most one next state) steps g n with label m n to g (n + 1) for every n if and only if g i = g j and m i = m j always imply g (i + 1) = g (j + 1).",
+   "planted": "For sequences g of states and m of labels: some deterministic process (each state and label lead to at most one next state) steps g n with label m n to g (n + 1) for every n if and only if g i = g j and m i = m j always imply g (i + 1) = g (j + 1), whatever the environment.",
+   "planted_span": "whatever the environment",
+   "planted_head": "environment"
+  }
+ ]
+}

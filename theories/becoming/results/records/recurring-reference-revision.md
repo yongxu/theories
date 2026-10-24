@@ -61,7 +61,7 @@ Proves formation and continuing revision under specified open production and tas
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T130233.156038Z/verification.json) | — |
 | review | [META-ATTRACTOR-RECONCILIATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md) | — |
 | statement | [COMMON-ORGANIZATION.md](../../../meta-attractor/COMMON-ORGANIZATION.md) | — |
-| integration | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| integration | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-13-meta-attractor-completion-and-main.md](../../../../sources/15-codex-theory-conversations/2026-10-13-meta-attractor-completion-and-main.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T131556.258659Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T131750.258973Z/verification.json) | — |

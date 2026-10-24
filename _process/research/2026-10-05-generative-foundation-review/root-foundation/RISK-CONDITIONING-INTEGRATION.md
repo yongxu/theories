@@ -128,7 +128,7 @@ Lean 4.29.1冻结并编译7个模块：新增10项定理／19项声明审计，1
 
 核读 Leslie Lamport，[“Proving the Correctness of Multiprocess Programs”](https://lamport.azurewebsites.net/pubs/proving.pdf)，*IEEE Transactions on Software Engineering* SE-3(2)，1977，125–143页；实际范围为125页导论与134–135页§III开头。其保持性质与最终发生性质的区分、执行假设及组合条件是本次借用的证明背景。下降证书不是新发明的伦理原则；仅知道各部分能够正确工作，不等于已证明其实际交互。本次原创范围仅是仓库结果的具体组合、反例及规范解释。未把全篇标为核读，未引入其原文为 G0、许可或现实执行可靠性的证据。
 
-**局部连接现已完成：**规则逐步进展与证书交接→有限实际形成→开放形态的 G0 正面根据。形式成果以[新规范记录](../../../../theories/becoming/results/records/open-form-realization-under-revision.json)维护，[当前理论](../../../../theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md#open-form-realization-under-revision)接入解释。旧的有限完成、实际更新、有限正面根据均归为复用成果，不列作下一次研究任务。
+**局部连接现已完成：**规则逐步进展与证书交接→有限实际形成→开放形态的 G0 正面根据。形式成果以[新规范记录](../../../../theories/becoming/results/records/open-form-realization-under-revision.json)维护，[当前理论](../../../../theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md#open-form-realization-under-revision)接入解释。旧的有限完成、实际更新、有限正面根据均归为复用成果，不列作下一次研究任务。
 
 下一实质连接应针对**具体目的改变时，什么真实生成内容使新目的值得支持，又怎样与同一历史中仍有效的特定承担相接**，直接复用实践判断与机会成果。更好的完成证书不能独自回答这个问题；多证明一个机制也不能代替它。若研究回到有损分担，则依第7节选定真实支持与阶段后作规范比较，不用本结果假装得到比例。两者是不同后续问题，不把完成全部未来积分、每步单调增长或无公理普遍证明增设为本轮的验收门槛。
 

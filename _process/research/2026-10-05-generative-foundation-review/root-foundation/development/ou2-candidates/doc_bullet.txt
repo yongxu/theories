@@ -1,0 +1,9 @@
+* `Becoming.GrammarCandidates` (L0): the corpus's 59 candidate theorems of the grammar, tested
+  (the OU2c kit's `outcomes.tsv`: 38 proved, 15 needing a premise, 3
+  refuted, 2 misclassified, 1 not expressible). Correlatives that are the two ends of one relation
+  are had together (`«能所相待»`, `«三法相因待»`); a mark gives its complement a mark, and the way
+  back holds for every carrier exactly under double-negation stability (`«相待之还当且仅当双非可还»`);
+  an occurrence's position depends on the class exactly where it is not its own condition
+  (`«定性之判»`), and everything ends under identity exactly where nothing is its own condition
+  (`«念念灭当且仅当无自缘»`); every condition precedes its result exactly where the net has no cycle
+  (`«缘先果后当且仅当无环»`). A leaf.

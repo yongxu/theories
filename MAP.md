@@ -6,11 +6,7 @@ A guide for visitors: what this repository is, where to begin, how its history i
 
 The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of what follows for ethics and for AI alignment.
 
-Three kinds of statement are kept apart throughout:
-
-- **Laws proved in Lean.** Each holds under the hypotheses it names, with the commitments of the representation (discrete steps, natural-number amounts). The core's source declarations have empty axiom reports, so each law holds constructively; that is not an absence of premises. The laws that need no premise about the unfolding are identities by definition, arithmetic and consequences of finiteness; the dynamical content is in the conditional laws, and results saying that something can happen are shown by constructed examples.
-- **Readings and judgments.** What the laws mean for people, ethics and AI, labelled as readings.
-- **Open questions.** Including whether the one ethical step the theory states as a condition, that the continuation of anything has significance, can itself be derived.
+Every statement carries its standing: a **theorem**, with where it is proved (for every relation; for every process; on the World model, its premises named; or with Mathlib, its axioms reported); a **conditional** result, its premises named; a **calibration**, where a law needs an omniscience principle; a **thesis**, an empirical claim with what would refute it; an **assessment**; a **reading**, labelled as an interpretation; or **open**. The core's source declarations have empty axiom reports, so each law holds constructively; that is not an absence of premises, and the real assumptions lie in the modelling, stated where a law depends on them. The ethics rests on two premises with two roles, neither asserted: the continuation condition (that the continuation of anything has significance) fixes whose losses count, and calling widening better orders; whether either can be warranted is open.
 
 The footnotes of the README's opening say, sentence by sentence, which kind each claim is. Original words are kept verbatim with their source in [`sources/`](sources/README.md) and quoted as provenance, not as the warrant for a claim.
 
@@ -18,11 +14,16 @@ The work is not licensed: [knowledge is a common good](COMMONS.md).
 
 ## Where to start
 
-1. [README](README.md): the opening, then the established results.
-2. [The Theory of Becoming](theories/becoming/chapters/THE-THEORY-OF-BECOMING.md): the canonical chapter. It is long; begin with [the premise card](theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#0-前提卡--premise-card) and sections 1–6, the theory with no axiom, then the conditional §6.15.
-3. [The nondual method](theories/becoming/chapters/NONDUAL-METHOD.md): how the theory is worked.
-4. [Results](RESULTS.md): every registered result, each bound to its Lean proof or evidence, and [open questions](OPEN-QUESTIONS.md).
-5. [Goals](GOALS.md) and the [directive register](_process/RESEARCH-DIRECTIVES.md): scope and the directions behind it.
+The theory is written in four layers, each of which can be read through on its own:
+
+1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): what the theory is, what it claims, where the evidence is and what is not yet done.
+2. [The Theory of Becoming](theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)): the overview, the whole argument in one account, each paragraph linking to the chapter that states it.
+3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
+4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (every concept, result, Lean module and text, with how they connect), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
+
+Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, and a blind re-coding of a sample of the corpus classification.
+
+The [README](README.md) opens with a statement of the whole in the first person. [Goals](GOALS.md) and the [directive register](_process/RESEARCH-DIRECTIVES.md) give scope and the directions behind it; the [glossary](GLOSSARY.md) gives each word its one sense.
 
 ## How it got here
 
@@ -54,7 +55,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 
 | Path | What it holds |
 |---|---|
-| `theories/becoming/` | The current theory: chapter, kept chapters, records (`results/records/`), generated results pages, `history/` |
+| `theories/becoming/` | The current theory: the one page, the overview, the eight chapters (`chapters/`), records (`results/records/`), the theory graph and generated results pages, `history/` |
 | `theories/<folder>/` | The earlier theory folders (below); each now reads as a stratum the Theory of Becoming gathers |
 | `experiments/` | Executable research; the Lean package Becoming is under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/` |
 | `_process/` | Studies (`research/`), the work board, directives, workflow, architecture receipts, `history/` |

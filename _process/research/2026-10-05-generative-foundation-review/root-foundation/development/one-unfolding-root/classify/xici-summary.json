@@ -1,0 +1,261 @@
+{
+ "text": "《周易·繫辭》上下（XC）",
+ "tsv": "xici.tsv",
+ "units": 351,
+ "counts_by_class": {
+  "甲": 52,
+  "乙": 0,
+  "丙一": 14,
+  "丁": 130,
+  "戊": 7,
+  "己": 0,
+  "庚": 144,
+  "未读出": 4
+ },
+ "counts_by_registration": {
+  "相分": 11,
+  "定域": 16,
+  "相合": 23
+ },
+ "counts_by_confidence": {
+  "高": 118,
+  "中": 218,
+  "低": 15
+ },
+ "classified_by": "AI (Claude Opus 5.5), 23 October 2026, following classify/BRIEF.md; every classification is an AI reconstruction",
+ "戊_units": [
+  {
+   "id": "XCS-01-001",
+   "form": "戊：尊/卑之等 → 乾坤定",
+   "registration": "相分"
+  },
+  {
+   "id": "XCS-01-002",
+   "form": "戊：卑高陳 → 貴賤位",
+   "registration": "相分"
+  },
+  {
+   "id": "XCS-03-006",
+   "form": "列貴賤者存乎位（等级）；其余 X 存乎 Y",
+   "registration": "相分"
+  },
+  {
+   "id": "XCS-11-015",
+   "form": "崇高莫大乎富貴",
+   "registration": "相分"
+  },
+  {
+   "id": "XCX-03-009",
+   "form": "陽一君而二民，君子之道；陰二君而一民，小人之道",
+   "registration": "相分"
+  },
+  {
+   "id": "XCX-03-010",
+   "form": "陽一君而二民，君子之道；陰二君而一民，小人之道",
+   "registration": "相分"
+  },
+  {
+   "id": "XCX-08-003",
+   "form": "三與五同功而異位……貴賤之等也",
+   "registration": "相分"
+  }
+ ],
+ "己_units": [],
+ "未读出": [
+  {
+   "id": "XCS-01-010",
+   "reason": "form clear; Y are agent-relative modalities (知, 從) the grammar lacks; chain XCS-01-010→013"
+  },
+  {
+   "id": "XCS-01-011",
+   "reason": "same reason"
+  },
+  {
+   "id": "XCS-01-012",
+   "reason": "candidate 丙一 (久 = 续不尽, conditioned on 有親 = being related), but modal 可 and 親 need terms the grammar lacks; not forced"
+  },
+  {
+   "id": "XCS-01-014",
+   "reason": "得 is epistemic; 理 = order of things, not the plan's 理 (核) by itself; second function 丁"
+  }
+ ],
+ "commentary_sources": {
+  "H4/H5/H11/H12": "孔穎達《周易正義》繫辭上 卷七之四、七之五、七之十一、七之十二（韓康伯注 is the unmarked text after each base sentence; [疏] is 孔疏): sources/civilization-thought-v1.0/evidence/texts/YWH-H4.txt, YWH-H5.txt, YWH-H11.txt, YWH-H12.txt (H4, H11 also in sources/chinese-classical-texts/yidao-v1.3/evidence/texts/)",
+  "外传第N章": "王夫之《周易外傳》卷五（繫辭上傳，章次依朱子本義，与语料文件之繫辭上章次一致）: sources/zhouyi-yizhuan/commentary/waizhuan-5.json",
+  "coverage": "韩注/孔疏 in the repository cover only XCS-04-004..XCS-07-004 and XCS-11-011..XCS-12-021; nothing for 繫辭下. sources/zhouyi-yizhuan/commentary/ holds 周易正義/10 (序卦) and 外传卷五 only, not 韩/孔 on 繫辭. Units outside coverage have commentary none; one memory-based gloss is marked 待核 (XCS-01-008)."
+ },
+ "most_important": [
+  {
+   "id": "XCS-05-005",
+   "why": "生生之謂易: 孔疏 “後生次於前生” = 续而复生 (§4.6), and “故云生不云死” shows the choice of 生 is evaluative (exhortation); 神 := 陰陽不測 matches §4.6 神; 韩 “化之無主” = no external agent"
+  },
+  {
+   "id": "XCS-11-009",
+   "why": "一闔一闢謂之變: the plan's 一X一Y = 交替; 乾坤 as two movements of one door (相合)"
+  },
+  {
+   "id": "XCS-11-010",
+   "why": "往來不窮謂之通: relation + converse + 不尽; a second definition of 通 at XCS-12-013"
+  },
+  {
+   "id": "XCS-12-013",
+   "why": "形而上/下: 孔疏 相分 (先道而後形) against 外传 相合 (上下皆名也，天下惟器); 變 := 化而裁之 is a second definition of 變 (a cut of continuous 化)"
+  },
+  {
+   "id": "XCS-05-001",
+   "why": "一陰一陽之謂道: no commentary in the repository reads 一X一Y here as alternation (韩/孔: 一 = 无; 外传: 主持而分剂); 繼之者善 ties continuation to 善 (外传 “繼之則善矣，不繼則不善矣”)"
+  },
+  {
+   "id": "XCX-02-008",
+   "why": "窮則變，變則通，通則久: the plan's 丙一 example; the chain ends in 久 (continuation conditioned on 通); no counterexample in the corpus"
+  },
+  {
+   "id": "XCX-06-019",
+   "why": "困，窮而通: the plan's counterexample is not one (困 彖 “困而不失其所，亨”, hexagrams/47.json)"
+  },
+  {
+   "id": "XCS-12-012",
+   "why": "乾坤毀則无以見易，易不可見則乾坤或幾乎息: two-way dependence, the 相须 shape (§4.5); 息 = ceasing"
+  },
+  {
+   "id": "XCX-04-004",
+   "why": "日月相推而明生: alternation at the fine grain gives a coarser thing; one relation at two grains (§4.6)"
+  },
+  {
+   "id": "XCX-04-005",
+   "why": "寒暑相推而歲成: as XCX-04-004; 歲 as a coarse unit of an alternation"
+  },
+  {
+   "id": "XCX-08-009",
+   "why": "物相雜，故曰文: definition of 文 by 相 X; bears on 成文 (§三)"
+  },
+  {
+   "id": "XCX-08-001",
+   "why": "同功而異位: same under one class, different under another (§一 class-relativity), in the text's own words"
+  },
+  {
+   "id": "XCX-01-011",
+   "why": "天下之動，貞夫一者也: all motion constant to the one; cf. §4.3 四相无自立 under the class 一 (no commentary in repo)"
+  },
+  {
+   "id": "XCS-01-003",
+   "why": "動靜有常，剛柔斷矣: textual source of the word 有常, read alone a 丙一; plan §5.4 registers it as 相分"
+  },
+  {
+   "id": "XCS-04-004",
+   "why": "精氣為物，遊魂為變: 韩 聚極則散; 孔疏 變 = 死, 敗 or 變為異類 (亡 and 异 relative to a class)"
+  },
+  {
+   "id": "XCX-07-002",
+   "why": "上下无常……不可為典要，唯變所適, read with XCX-07-005 既有典常: no fixed rule for the moves, a constant canon for the reading"
+  },
+  {
+   "id": "XCX-04-041",
+   "why": "幾者，動之微: definition of the slight onset, readable before the coarse change"
+  },
+  {
+   "id": "XCS-11-011",
+   "why": "易有太極，是生兩儀: 韩 有必始於無 (相分-leaning) against 外传 非別有一太極 (相合)"
+  },
+  {
+   "id": "XCX-01-007",
+   "why": "變通者，趣時者也: 变通 defined through time"
+  },
+  {
+   "id": "XCX-06-020",
+   "why": "井，居其所而遷: continuation under the class of place, change under another"
+  },
+  {
+   "id": "XCS-02-002",
+   "why": "剛柔相推而生變化: the text's own “Z 而 Y 生” form with 相 X"
+  },
+  {
+   "id": "XCX-08-003",
+   "why": "貴賤之等: 戊 (爻有等, §5.4)"
+  },
+  {
+   "id": "XCX-08-008",
+   "why": "爻有等，故曰物: 甲 by form, registered 相分 (plan lists under 戊)"
+  },
+  {
+   "id": "XCX-07-006",
+   "why": "原始要終以為質: the book takes the start and end of a course as its matter"
+  },
+  {
+   "id": "XCX-01-017",
+   "why": "天地之大德曰生: 生 = production of things, not §4.3 生; polysemy to keep apart"
+  }
+ ],
+ "contradictions_and_strains": [
+  {
+   "plan": "§4.2 (一 X 一 Y = 交替)",
+   "units": [
+    "XCS-05-001",
+    "XCS-11-009",
+    "XCS-01-006"
+   ],
+   "point": "supported by 一闔一闢 and 一寒一暑, but for 一陰一陽 韩/孔 read 一 as 无 (道 beyond 阴阳) and 外传 as 主持而分剂; the operation is not uniform across the 一X一Y sentences"
+  },
+  {
+   "plan": "§三 丙一 example (穷则变，反例：困，穷而通)",
+   "units": [
+    "XCX-02-008",
+    "XCX-06-019"
+   ],
+   "point": "而 marks sequence or concession and 困 彖 reads 困而不失其所，亨: 通 = 亨 kept by keeping one's place, compatible with 窮→變→通; a counterexample would need 窮 without 變. None found in 繫辭"
+  },
+  {
+   "plan": "§5.2 (王夫之《周易外传》卷五, 待核)",
+   "units": [
+    "XCS-01-008",
+    "XCS-05-001"
+   ],
+   "point": "both lines are in the repository: “萬變之理，相類相續而後成乎其章” (waizhuan-5.json, 第1章) and “繼之則善矣，不繼則不善矣” (第5章); 外传 also reads 不相繼 of 念 and 事 as the origin of 恶. Continuation is valued positively here, opposite to 起信论 (相续 = 无明, §5.4): the corpus evaluates continuation both ways, which supports keeping 续 neutral in the grammar and the evaluation apart"
+  },
+  {
+   "plan": "§5.4 (形而上下与道器, registration by commentary)",
+   "units": [
+    "XCS-12-013"
+   ],
+   "point": "孔疏 is 相分 (凡有從無而生，先道而後形), 外传 相合 (上下皆名也，道者器之道); the registration depends on the commentary chosen"
+  },
+  {
+   "plan": "§5.4 (动静有常 registered with 天尊地卑 as 相分)",
+   "units": [
+    "XCS-01-003"
+   ],
+   "point": "read alone the unit is a conditional with the text's own 有常 as condition; the text's 有常 (of 动静) differs from the plan's (a class under 缘)"
+  },
+  {
+   "plan": "§一 / §4.6 (生生)",
+   "units": [
+    "XCS-05-005",
+    "XCX-01-017"
+   ],
+   "point": "孔疏 supports 生生 as continuation and recurrence but states that 易 names 生 and not 死 for exhortation: the term already carries an evaluative selection; 天地之大德曰生 uses 生 as production"
+  },
+  {
+   "plan": "§4.1 (理 = 类之核)",
+   "units": [
+    "XCS-01-014",
+    "XCS-05-004"
+   ],
+   "point": "the text's 理 is order (天下之理) or a verb (韩: 事之所以理); the nearest support for 理 through classes and continuations is 外传 (相類相續而後成乎其章), a commentary"
+  },
+  {
+   "plan": "§4.6 (神 另立)",
+   "units": [
+    "XCS-05-005",
+    "XCS-11-010"
+   ],
+   "point": "神 := 陰陽不測 matches the plan; 神 := 利用出入民咸用之 is a second sense in the same text"
+  }
+ ],
+ "corpus_problems": [
+  "XCS-12-006 is a fragment (也。」): segmentation at the 。 inside the quotation of XCS-12-005",
+  "XCX-02-011, -012, -014..-018, XCX-06-004, -013, -022 begin with \":\" (wikitext indentation markup kept in the text, not flagged in the corpus note column); XCX-02-018 has an unpiped link [[周易/夬]]",
+  "XCX-06-003 (是故：) has no terminal punctuation (flagged)",
+  "the brief points to sources/zhouyi-yizhuan/commentary/ for 韩/孔 on 繫辭; that folder holds 周易正義/10 (序卦) and 外传卷五 only; the 韩/孔 pages are in sources/civilization-thought-v1.0/evidence/texts/YWH-H4, H5, H11, H12",
+  "外传第11章 quotes 閔戶之謂乾，闢戶之謂坤, the reverse of the base text's assignment (XCS-11-009)"
+ ]
+}

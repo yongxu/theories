@@ -118,7 +118,7 @@ Ren’s reading of 理 and the formal integration of the laws are retained. Corr
 | Role | Source | Declarations |
 |---|---|---|
 | review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | proof | [Testing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean) | `Becoming.Web.Excludes.not_of_alike`, `Becoming.Web.tail_unexcluded`, `Becoming.Web.excludesWithin_iff_conjunction`, `Becoming.Clearing.tested_by_dweller`, `Becoming.Clearing.pooled` |
 | proof | [LabelledRoles.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LabelledRoles.lean) | `Becoming.Web.class_judge_iff` |
 | proof | [Inquiry.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean) | `Becoming.commonResponse_judge_iff` |

@@ -75,7 +75,7 @@ Necessary bound, not sufficient control, complete knowledge or a universal scien
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json) | — |
 | integration | [SCIENTIFIC-INQUIRY-CONDITIONS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md) | — |
 | review | [SCIENTIFIC-INQUIRY-EVIDENCE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-EVIDENCE.md) | — |
-| statement | [SCIENTIFIC-PHILOSOPHY.md](../../chapters/SCIENTIFIC-PHILOSOPHY.md) | — |
+| statement | [SCIENTIFIC-PHILOSOPHY.md](../../history/SCIENTIFIC-PHILOSOPHY.md) | — |
 | review | [SCIENTIFIC-INQUIRY-TIMING-REVIEW.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-TIMING-REVIEW.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json) | — |

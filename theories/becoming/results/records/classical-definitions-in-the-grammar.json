@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "id": "classical-definitions-in-the-grammar",
+  "title": {
+    "en": "Classical definitions in the grammar",
+    "zh": "古文之定义写入文法"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T04:06:08+00:00",
+  "statement": {
+    "en": "Definitions of the frozen corpus written in the grammar hold for every carrier and relation: the 墨经's and 荀子's 化 are one form and are 成坏 along 缘, 同 is a class only where belonging is single, and continuation is neither identity nor mere difference.",
+    "zh": "冻结语料中的定义写入文法后，对每个载体与关系成立：墨经与荀子之化同形，是沿缘之成坏；同只在所属唯一时为类；续非一非异。"
+  },
+  "laws": [
+    {
+      "en": "化, read from the 墨经 (「化，徵易也」) and the 荀子 (「状变而实无别而为异者，谓之化」), is one form: continuing under the class of the thing while the class of its marks tells the two apart, which is the grammar's alteration.",
+      "zh": "墨经（「化，徵易也」）与荀子（「状变而实无别而为异者，谓之化」）之化同为一形：在其物之类下续，而其征之类分之，即文法之异。",
+      "declarations": [
+        "Becoming.«化»",
+        "Becoming.«化之二说同形»"
+      ]
+    },
+    {
+      "en": "成坏, read from the 金师子章 (「諸根合會是成相，諸緣各住自位是壞相」), is at once alike under a coarse class and apart under a fine one; 化 is 成坏 along 缘.",
+      "zh": "金师子章之成坏（「諸根合會是成相，諸緣各住自位是壞相」）是一时之中在粗类下同、在细类下异；化是沿缘之成坏。",
+      "declarations": [
+        "Becoming.«成坏»",
+        "Becoming.«化为有缘之成坏»"
+      ]
+    },
+    {
+      "en": "同, read from the 墨经 (「同，異而俱於之一也」), is sameness in belonging to one; it is a class exactly where each belongs to one and one only, and otherwise need not be transitive.",
+      "zh": "墨经之同（「同，異而俱於之一也」）是同属于一；恰在各属唯一时为类，否则不必传递。",
+      "declarations": [
+        "Becoming.«同于»",
+        "Becoming.«同于为类»",
+        "Becoming.«同于不必传递»"
+      ]
+    },
+    {
+      "en": "复, read from the 老子 (「復命曰常」), is a line returning to where it was; what returns abides. 通, read from the 系辞 (「往來不窮謂之通」), is a line that never ends; under a constant class a line with a past passes through.",
+      "zh": "老子之复（「復命曰常」）是线之返其所始；复者住。系辞之通（「往來不窮謂之通」）是不终之线；在有常之类下，有前之线即通。",
+      "declarations": [
+        "Becoming.«复»",
+        "Becoming.«相续之末有前»",
+        "Becoming.«复者住»",
+        "Becoming.«通»",
+        "Becoming.«有常则通»"
+      ]
+    },
+    {
+      "en": "Neither one nor other: in a net without self-conditioning there is no continuation under identity, and every 缘 is a continuation under some class while identity tells its ends apart. The 中论's 「滅更不生故，因即為斷滅」 holds under identity while the same 缘 is a continuation under a coarser class.",
+      "zh": "非一非异：无自缘之网中，相等之类下无续，而每一缘在某类下为续、其两端为相等所分。中论「滅更不生故，因即為斷滅」在相等之类下成立，而同一缘在较粗之类下为续。",
+      "declarations": [
+        "Becoming.«非一非异»",
+        "Becoming.«因灭而续»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Each reading of a sentence as a definition is an AI reconstruction following the commentary named in the classification; the sense lost in it is recorded in the plan.",
+      "zh": "把一句读作定义，是依分类中所注之注疏的 AI 重构；其中失去之义记于计划。"
+    },
+    {
+      "en": "Equality on the carrier is a model commitment where identity is the class.",
+      "zh": "以相等为类之处，载体之相等是模型的承诺。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That these readings are the texts' own sense: the 墨经's 化 is also one of six kinds of action, and the 金师子章's 成坏 is read synchronically against the 中论's 「成壞相違，云何一時有」.",
+      "zh": "这些读法即文本自身之义：墨经之化又是六种为之一；金师子章之成坏以共时读之，与中论「成壞相違，云何一時有」相对。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the 中论's dilemma is answered: whether a condition must still be present when what it conditions arises is not expressible without a relation of co-presence, which the grammar lacks.",
+      "zh": "中论之两难已答：缘在其所缘生时是否须仍在，没有同在之关系便不能表达，而文法没有。",
+      "kind": "scope"
+    },
+    {
+      "en": "That every kind of 同 in the 墨经 is a class: 類同 is not transitive by itself.",
+      "zh": "墨经之每种同都是类：类同本身不传递。",
+      "kind": "non-implication",
+      "witness": "Becoming.«同于不必传递»"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
+      "detail": {
+        "en": "Belonging to two: 0 and 1 share 10, 1 and 2 share 20, 0 and 2 share nothing («同于不必传递»).",
+        "zh": "属于二者：0 与 1 同属 10，1 与 2 同属 20，0 与 2 无所同属（«同于不必传递»）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 9 theorems in 14 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarReadings，14 个声明中 9 条定理，公理报告皆空。句子来自冻结之第一批语料，经四位 Opus 编者分类；无人审。"
+  },
+  "next_delta": {
+    "en": "Write the rest of the corpus's 517 definitional units in the grammar where they read relationally, and prove the 59 grammar-theorem candidates or show where they fail.",
+    "zh": "把语料 517 个定义单元中能以关系读之者写入文法，并证明 59 个文法定理之候选，或示其不成之处。"
+  },
+  "correspondence": {
+    "en": "Units: 墨经 MJ-J-045, MJ-J-039; 荀子 XZ-ZM-063, XZ-ZM-064; 金师子章 JSZ-P-08-003; 老子 LZ-16-005; 系辞 「往來不窮謂之通」; 中论 ZL-21-122, ZL-01 (青目 「若一則無緣，若異則無相續」). The 墨经's four kinds of 同 (MJ-S-089) and the 中论's refutations are registered with the classification."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
+  "aliases": [
+    "Becoming.«化»",
+    "Becoming.«化为有缘之成坏»",
+    "Becoming.«化之二说同形»",
+    "Becoming.«同于»",
+    "Becoming.«同于不必传递»",
+    "Becoming.«同于为类»",
+    "Becoming.«因灭而续»",
+    "Becoming.«复»",
+    "Becoming.«复者住»",
+    "Becoming.«成坏»",
+    "Becoming.«有常则通»",
+    "Becoming.«相续之末有前»",
+    "Becoming.«通»",
+    "Becoming.«非一非异»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Continuation, alteration, lines, constancy and the identity class are the grammar's.",
+        "zh": "续、异、线、有常与相等之类皆出自文法。"
+      },
+      "interface": {
+        "output": {
+          "en": "«续», «异», «相续», «有常», «有常则续不尽», «任一缘可为续».",
+          "zh": "«续»、«异»、«相续»、«有常»、«有常则续不尽»、«任一缘可为续»。"
+        },
+        "input": {
+          "en": "Definitions read from the corpus.",
+          "zh": "读自语料之定义。"
+        },
+        "conditions": {
+          "en": "A net without self-conditioning where identity is the class.",
+          "zh": "以相等为类处，网中无自缘。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
+      "role": "proof",
+      "sha256": "22a76b389829c6262f0e89e808669d12e7f484f5f7e28342b74601538993b39f",
+      "declarations": [
+        "Becoming.«化»",
+        "Becoming.«化为有缘之成坏»",
+        "Becoming.«化之二说同形»",
+        "Becoming.«同于»",
+        "Becoming.«同于不必传递»",
+        "Becoming.«同于为类»",
+        "Becoming.«因灭而续»",
+        "Becoming.«复»",
+        "Becoming.«复者住»",
+        "Becoming.«成坏»",
+        "Becoming.«有常则通»",
+        "Becoming.«相续之末有前»",
+        "Becoming.«通»",
+        "Becoming.«非一非异»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/classify/REPORT.md",
+      "role": "statement",
+      "sha256": "eb8669a96fc7becda6ec4a8f227973c8950a28a6d18285fcd3231e6c94e7862e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarReadings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 October 2026, board item OU2 (study section 372): the first definitions of the frozen corpus written in the grammar, after the classification of the first batch.",
+      "zh": "2026年10月23日，工作板条目 OU2（研究第 372 节）：第一批语料归类之后，首批定义写入文法。"
+    }
+  ]
+}

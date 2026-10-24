@@ -209,6 +209,13 @@
         "en": "Groups on conditions of their own; here groups on coupled conditions.",
         "zh": "依存于自身条件的组；此处为依存于耦合条件的组。"
       }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "detail": {
+        "en": "A lineage within a whole confined to one family of conditions in excess has no member once it ends, whatever selection within had raised it to.",
+        "zh": "整体内局限于一族过度之条件的世系在其终结后不再有成员，无论组内选择曾把它抬到多高。"
+      }
     }
   ],
   "references": [
@@ -361,17 +368,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
@@ -412,6 +419,10 @@
     {
       "en": "20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.",
       "zh": "2026年10月20日：新增（EV6），读作一体的条件族上的联合计入与门控终结，以及条件相互耦合的组；研究第 265 节。"
+    },
+    {
+      "en": "22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.",
+      "zh": "2026年10月22日，CA1：与 confined-rise-within-a-whole 相关（研究第 366 节）；本记录的定律与陈述不变。"
     }
   ]
 }

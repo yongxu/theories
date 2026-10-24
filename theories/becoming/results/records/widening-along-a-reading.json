@@ -204,19 +204,19 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "f0afd67aaafaa6b76f91b49d12284d7cf4ac4d3352fda41bf043221106bdb3e9",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
       "declarations": []
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b260ac41826fda0643e70ee883733c087e2d3ac6f6e3ed9c068ec063933252a4",
+      "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878",
       "declarations": []
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
       "role": "proof",
-      "sha256": "563fbf32b7533cb2fc9883b68304bc66a1af3990dc60113d1dd1dab75ddc0c95",
+      "sha256": "dce4cb423a51e73dd7746368da1c55c5687d7abe34bfefbdd1d5e3fda99fc1ee",
       "declarations": [
         "Becoming.Web.IncludesAcross",
         "Becoming.Web.ExceedsAcross",
@@ -244,6 +244,12 @@
       "role": "receipt",
       "sha256": "e97ac5ef8593192fab0d7ac6fd9950f9c236f1f036edb8a546173dda7fd3086d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -256,7 +262,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -278,6 +284,10 @@
     {
       "en": "20 October 2026, R51 (study section 271): law 4 added, widening across a stretch along a continuation (the reading derived within one unfolding); does_not_show item 1 and next_delta updated.",
       "zh": "2026 年 10 月 20 日，R51（研究第 271 节）：加第 4 条，沿延续关系跨一段的扩大（一个展开之内导出的读法）；第一个未表明项与 next_delta 更新。"
+    },
+    {
+      "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
     }
   ]
 }

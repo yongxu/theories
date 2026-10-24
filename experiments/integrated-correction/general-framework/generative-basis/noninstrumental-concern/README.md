@@ -34,7 +34,7 @@ Run `python3 -B experiments/integrated-correction/general-framework/generative-b
 
 ## 一体之仁 and jointly described occurrences
 
-[CoupledConcernHistory.lean](CoupledConcernHistory.lean) is the additive model entry for the current [coformation account](../../../../../theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md#一体之仁的生成解释). It imports the generic [CoupledOccurrence](../lean/CoupledOccurrence.lean) and the unchanged plasticity model. Joint reports preserve selected before/after changes on actual histories; no new controller, ethical predicate or transition law is installed. Internal acquired records are distinguished from analyst reports. The [mathematical note](../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/YITI-REN-COFORMATION-MATH.md) gives source-bound verification and the exact scope of the endpoint-summary obstruction. The historical package below retains its original names and evidence scope.
+[CoupledConcernHistory.lean](CoupledConcernHistory.lean) is the additive model entry for the current [coformation account](../../../../../theories/becoming/history/NONINSTRUMENTAL-CONCERN.md#一体之仁的生成解释). It imports the generic [CoupledOccurrence](../lean/CoupledOccurrence.lean) and the unchanged plasticity model. Joint reports preserve selected before/after changes on actual histories; no new controller, ethical predicate or transition law is installed. Internal acquired records are distinguished from analyst reports. The [mathematical note](../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/YITI-REN-COFORMATION-MATH.md) gives source-bound verification and the exact scope of the endpoint-summary obstruction. The historical package below retains its original names and evidence scope.
 
 ## Nondual core and derived ranges
 
@@ -51,7 +51,7 @@ The first [receipt](nondual-verification.json) checks 31 new declarations in a s
 
 ## Original patient-grounded construction
 
-6 October 2026. AI-authored finite formal construction and runtime comparison. This is the implementation companion to [the mathematical scope note](../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/NONINSTRUMENTAL-CONCERN-MATH.md) and the [canonical account](../../../../../theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md).
+6 October 2026. AI-authored finite formal construction and runtime comparison. This is the implementation companion to [the mathematical scope note](../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/NONINSTRUMENTAL-CONCERN-MATH.md) and the [canonical account](../../../../../theories/becoming/history/NONINSTRUMENTAL-CONCERN.md).
 
 The connection is **an independently interpreted patient-ground → a conditional option merit → acquired current evidence, paid selection and delivery to the same patient and episode**. C1 and C2 remain explicit normative/realization contracts. A checked process does not prove their truth. The term `burden` names a formal natural quantity, not an independently established experience or welfare measure.
 

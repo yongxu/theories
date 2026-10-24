@@ -1,0 +1,279 @@
+{
+  "segments": [
+    {
+      "seg_id": "en0144",
+      "referents": [
+        {"span":"these classes","sort":"claim or predicate","status":"matched","counterpart":"W.ConsumingAlong R t (σ.old t x); W.RenewingAlong R t (σ.old t x)","rule":"M1","class":"none","tags":[]},
+        {"span":"the continuation","sort":"claim or predicate","status":"matched","counterpart":"R","rule":"M1","class":"none","tags":[]},
+        {"span":"re-identification","sort":"value","status":"matched","counterpart":"σ","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["F","F'","C","W","t","x"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0421",
+      "referents": [
+        {"span":"selection","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"groups","sort":"family or list","status":"matched","counterpart":"g in the U1 bodies of discordWithin and concordWithin","rule":"M5","class":"none","tags":[]},
+        {"span":"size","sort":"amount","status":"matched","counterpart":"g.length in equal","rule":"M4","class":"none","tags":[]},
+        {"span":"a family","sort":"family or list","status":"matched","counterpart":"gs","rule":"M1","class":"none","tags":[]},
+        {"span":"k","sort":"amount","status":"matched","counterpart":"gs.length","rule":"M4","class":"none","tags":[]},
+        {"span":"the whole","sort":"family or list","status":"matched","counterpart":"Becoming.SelectionLevels.whole gs","rule":"M1","class":"none","tags":[]},
+        {"span":"the whole's concordance","sort":"amount","status":"matched","counterpart":"Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a","rule":"M4","class":"none","tags":[]},
+        {"span":"the groups' own discordance","sort":"amount","status":"matched","counterpart":"Becoming.SelectionLevels.discordWithin gs w a","rule":"M4","class":"none","tags":[]},
+        {"span":"k times the groups' own discordance","sort":"amount","status":"matched","counterpart":"gs.length * Becoming.SelectionLevels.discordWithin gs w a","rule":"M4","class":"none","tags":[]},
+        {"span":"the discordance among groups","sort":"amount","status":"matched","counterpart":"Becoming.SelectionLevels.discordAmong gs w a","rule":"M4","class":"none","tags":[]},
+        {"span":"their totals","sort":"amount","status":"matched","counterpart":"Becoming.total g w; Becoming.total g a","rule":"M5","class":"none","tags":[]},
+        {"span":"the whole's discordance","sort":"amount","status":"matched","counterpart":"Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a","rule":"M4","class":"none","tags":[]},
+        {"span":"the groups' own concordance","sort":"amount","status":"matched","counterpart":"Becoming.SelectionLevels.concordWithin gs w a","rule":"M5","class":"none","tags":[]},
+        {"span":"k times the groups' own concordance","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"the concordance among groups","sort":"amount","status":"matched","counterpart":"Becoming.SelectionLevels.concordAmong gs w a","rule":"M5","class":"none","tags":[]},
+        {"span":"the whole's covariance","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"the groups' covariances","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"the mean of the groups' covariances","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"their means","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"the covariance of their means","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["α","w","a","m"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0257",
+      "referents": [
+        {"span":"a list","sort":"family or list","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"a determined law","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"a determined law's orbit","sort":"history or run","status":"matched","counterpart":"Becoming.Law.orbit next s","rule":"M1","class":"none","tags":[]},
+        {"span":"extrapolation by elimination","sort":"map, lumping or feature","status":"matched","counterpart":"Becoming.Learning.byElimination Becoming.Learning.lassos","rule":"M1","class":"none","tags":[]},
+        {"span":"N","sort":"amount","status":"matched","counterpart":"l.length","rule":"M4","class":"none","tags":[]},
+        {"span":"tri N","sort":"amount","status":"matched","counterpart":"Becoming.Learning.tri l.length","rule":"M4","class":"none","tags":[]},
+        {"span":"that it rests","sort":"claim or predicate","status":"matched","counterpart":"∃ T, ∀ t, T ≤ t → Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf (fun n => reg (Becoming.Law.orbit next s n)) t) = Option.some (reg (Becoming.Law.orbit next s t))","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["O","inst","S","next","s","reg"],
+      "connective_mismatches":[
+        {"kind":"forall_generic","note":"The bound on the index at every t is expressed as a generic bound on how often extrapolation misses."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0290",
+      "referents": [
+        {"span":"Nothing beyond the influence closure","sort":"relatum or role","status":"matched","counterpart":"h","rule":"M1","class":"none","tags":[]},
+        {"span":"the influence closure","sort":"claim or predicate","status":"matched","counterpart":"Becoming.WithinClosure (L.AffectedBy W) f","rule":"M5","class":"none","tags":[]},
+        {"span":"influence","sort":"claim or predicate","status":"matched","counterpart":"L.AffectedBy W","rule":"M5","class":"none","tags":[]},
+        {"span":"a member","sort":"relatum or role","status":"matched","counterpart":"g","rule":"M1","class":"none","tags":[]},
+        {"span":"what a member depends on","sort":"relatum or role","status":"matched","counterpart":"c","rule":"M2","class":"none","tags":[]}
+      ],
+      "omissions":["L","W","f"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0429",
+      "referents": [
+        {"span":"Groups","sort":"family or list","status":"matched","counterpart":"gs","rule":"M3","class":"none","tags":[]},
+        {"span":"descent","sort":"map, lumping or feature","status":"matched","counterpart":"G.kids","rule":"M5","class":"none","tags":[]},
+        {"span":"exact transmission","sort":"claim or predicate","status":"matched","counterpart":"∀ t, Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))","rule":"M1","class":"none","tags":[]},
+        {"span":"the lineages","sort":"family or list","status":"matched","counterpart":"Becoming.SelectionLevels.lineage G g t","rule":"M1","class":"none","tags":[]},
+        {"span":"each","sort":"family or list","status":"matched","counterpart":"g","rule":"M1","class":"none","tags":[]},
+        {"span":"an amount","sort":"amount","status":"matched","counterpart":"G.amount 0 p","rule":"M4","class":"none","tags":[]},
+        {"span":"the value each was founded at","sort":"amount","status":"matched","counterpart":"v g","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["α","listed","v","mg","t","p","mp"],
+      "connective_mismatches":[
+        {"kind":"forall_generic","note":"The universally quantified exact-transmission condition and preservation at arbitrary steps are expressed generically."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0404",
+      "referents": [
+        {"span":"any finite family","sort":"family or list","status":"matched","counterpart":"ps","rule":"M1","class":"none","tags":[]},
+        {"span":"parents","sort":"relatum or role","status":"matched","counterpart":"p in the U1 body of Becoming.selected","rule":"M2","class":"none","tags":[]},
+        {"span":"offspring","sort":"family or list","status":"matched","counterpart":"kids p","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["a","k","same"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0355",
+      "referents": [
+        {"span":"Nothing within a pool's closure outside the acting part","sort":"relatum or role","status":"matched","counterpart":"h","rule":"M1","class":"none","tags":[]},
+        {"span":"a pool","sort":"claim or predicate","status":"matched","counterpart":"group","rule":"M1","class":"none","tags":[]},
+        {"span":"a pool's closure","sort":"claim or predicate","status":"matched","counterpart":"Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group","rule":"M1","class":"none","tags":[]},
+        {"span":"the acting part","sort":"map, lumping or feature","status":"matched","counterpart":"part","rule":"M1","class":"none","tags":[]},
+        {"span":"the act","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["C","law","L","L'","W","W'","obs","through","follows","follows'","balances","balances'","present","start","acts","t","c"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0487",
+      "referents":[],
+      "omissions":["Pos","C","V","connected","p₀","c₀","alive₀"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0180",
+      "referents": [
+        {"span":"a projection","sort":"map, lumping or feature","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"a law","sort":"law or process","status":"matched","counterpart":"Q","rule":"M1","class":"none","tags":[]},
+        {"span":"configurations","sort":"configuration","status":"matched","counterpart":"s, u in the U1 body of Becoming.FactorsThrough","rule":"M5","class":"none","tags":[]},
+        {"span":"coarse","sort":"configuration","status":"matched","counterpart":"π s; π u","rule":"M5","class":"none","tags":[]},
+        {"span":"whole","sort":"configuration","status":"matched","counterpart":"s; u","rule":"M5","class":"none","tags":[]},
+        {"span":"a state","sort":"configuration","status":"matched","counterpart":"s in the U1 bodies","rule":"M5","class":"none","tags":[]},
+        {"span":"its rule","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["A"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0150",
+      "referents": [
+        {"span":"members of the given type of formations","sort":"relatum or role","status":"matched","counterpart":"F","rule":"M3","class":"none","tags":[]},
+        {"span":"the levels","sort":"history or run","status":"matched","counterpart":"l; l'","rule":"M1","class":"none","tags":[]},
+        {"span":"the web","sort":"world, web or flow","status":"matched","counterpart":"W","rule":"M1","class":"none","tags":[]},
+        {"span":"the web's thresholds","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"a course","sort":"history or run","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"a kind of formation","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":[]},
+        {"span":"a requirement outside `F`","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"生生","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":["reading"]},
+        {"span":"the conditions","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":["reading"]},
+        {"span":"generators","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"A","tags":["centre/will","reading"]},
+        {"span":"further forming","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":["reading"]}
+      ],
+      "omissions":["C"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0081",
+      "referents": [
+        {"span":"configurations","sort":"configuration","status":"matched","counterpart":"g t; r.state n","rule":"M1","class":"none","tags":[]},
+        {"span":"a list","sort":"family or list","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"rest","sort":"claim or predicate","status":"matched","counterpart":"The conclusions of rests_of_finite_reading and rests_along_run","rule":"M1","class":"none","tags":[]},
+        {"span":"least loss","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":["neg"]},
+        {"span":"an amount","sort":"value","status":"matched","counterpart":"q (g t); q (r.state t)","rule":"M1","class":"none","tags":[]},
+        {"span":"as often as the list is long","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"any amounts","sort":"value","status":"matched","counterpart":"A; M","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["g","q","T","Act","P"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0272",
+      "referents": [
+        {"span":"courses","sort":"history or run","status":"matched","counterpart":"w : List Bool in Becoming.Typicality.atLeast and the conclusion of spread","rule":"M5","class":"none","tags":[]},
+        {"span":"the weights","sort":"amount","status":"matched","counterpart":"p; q","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["k","n","u","v","le"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0477",
+      "referents": [
+        {"span":"Arising","sort":"claim or predicate","status":"matched","counterpart":"Becoming.World.ArisingRecurs","rule":"M1","class":"none","tags":[]},
+        {"span":"ceasing","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"one","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"finite worlds","sort":"world, web or flow","status":"matched","counterpart":"Becoming.World.shuttle; Becoming.World.grazing; Becoming.World.mutualism; Becoming.World.drawdown","rule":"M1","class":"none","tags":[]},
+        {"span":"activity","sort":"claim or predicate","status":"matched","counterpart":"w.web.active t x","rule":"M5","class":"none","tags":[]},
+        {"span":"the part in which every event is living","sort":"claim or predicate","status":"matched","counterpart":"Becoming.World.Living","rule":"M1","class":"none","tags":[]},
+        {"span":"event","sort":"relatum or role","status":"matched","counterpart":"x : w.Relatum in the U1 body of Becoming.World.Living","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":[],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0499",
+      "referents":[],
+      "omissions":["F","Pos","region"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0152",
+      "referents": [
+        {"span":"widening","sort":"claim or predicate","status":"matched","counterpart":"W.Widens","rule":"M1","class":"none","tags":[]},
+        {"span":"the four cases","sort":"family or list","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"four","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["F","C","W","l","l'","widens","l''","first","second"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0282",
+      "referents": [
+        {"span":"dependence","sort":"claim or predicate","status":"matched","counterpart":"law.Through W Becoming.thresholdOnly part","rule":"M1","class":"none","tags":[]},
+        {"span":"a formation","sort":"relatum or role","status":"matched","counterpart":"h","rule":"M1","class":"none","tags":[]},
+        {"span":"the levels","sort":"amount","status":"matched","counterpart":"l t e; l' t e in the U1 body of Becoming.NoLowerAt","rule":"M5","class":"none","tags":[]},
+        {"span":"the step","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["C","W","part","out","l","l'","noLower","c"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0560",
+      "referents": [
+        {"span":"it","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"an opposing exchange","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"m","sort":"value","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":[],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0080",
+      "referents": [
+        {"span":"Rest","sort":"claim or predicate","status":"matched","counterpart":"¬∀ N, ∃ t, N ≤ t ∧ P t","rule":"M1","class":"none","tags":[]},
+        {"span":"a least loss","sort":"value","status":"matched","counterpart":"ε","rule":"M1","class":"none","tags":[]},
+        {"span":"a finite reading","sort":"map, lumping or feature","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["M","s","P","T","m","still","loses","within"],
+      "connective_mismatches":[
+        {"kind":"hyp_as_conclusion","note":"The wording makes a least loss a necessary requirement of rest; the theorem assumes loss and boundedness hypotheses to establish rest."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0466",
+      "referents": [
+        {"span":"whole-run","sort":"history or run","status":"excess","counterpart":"","rule":"none","class":"E","tags":["neg"]},
+        {"span":"a whole-run but-for test of a single part","sort":"claim or predicate","status":"matched","counterpart":"K.MakesDifference P withhold f s a g c","rule":"M1","class":"none","tags":[]},
+        {"span":"a single part","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]},
+        {"span":"participation","sort":"claim or predicate","status":"matched","counterpart":"K.draws","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["S","A","C","P","withhold","s","a","g","c","over"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0367",
+      "referents": [
+        {"span":"the same strengths","sort":"map, lumping or feature","status":"matched","counterpart":"K","rule":"M1","class":"none","tags":[]},
+        {"span":"step","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"the carried amount","sort":"amount","status":"matched","counterpart":"Becoming.carried cs part (fun x x_1 x_2 => 0) (Becoming.stationary K) (fun x => hs) δ t c","rule":"M4","class":"none","tags":[]},
+        {"span":"loop","sort":"history or run","status":"matched","counterpart":"v with 0 < m and v 0 = v m in the U1 body of Becoming.OnLoop","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["F","C","cs","part","every","hs","c"],
+      "connective_mismatches":[
+        {"kind":"forall_generic","note":"The polynomial bound for every initial assignment δ is rendered as the generic assertion that the carried amount is polynomial."}
+      ],
+      "predicate_excess":[]
+    }
+  ]
+}
+
+── cx · ok · session 01a16413-8b0c-7372-ab1c-9d2ff44d9e22 · gpt-6-astra/high · bypass (mirrors Claude) · 553s · 55.2k tokens · 0 cmds
+continue: cx -r 01a16413-8b0c-7372-ab1c-9d2ff44d9e22 "…"
+log: /Users/ren/.cache/cx/runs/20261022-214604-74947

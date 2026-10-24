@@ -124,3 +124,45 @@ class RepositoryTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ExchangeFormTests(unittest.TestCase):
+    """K3's tying premises: a central statement whose binders take one needs a form over the exchange."""
+
+    def cov(self, forms):
+        return {'rows': [{'id': 'r', 'declarations': ['Becoming.law', 'Becoming.about']}],
+                'premises': {'items': [{'name': 'balance', 'pattern': r'\bBalances\b|\.Balanced\b'},
+                                       {'name': 'dissipation', 'pattern': r'\bDissipative\b'}],
+                             'tying': ['balance'], 'exchange_forms': forms}}
+
+    def decls(self):
+        return {
+            'Becoming.law': {'statement': 'theorem law (balances : L.Balances W) (d : L.Dissipative) : True',
+                             'proof': 'trivial'},
+            'Becoming.about': {'statement': 'theorem about : w.Balanced ↔ True', 'proof': 'Iff.rfl'},
+            'Becoming.form': {'statement': 'theorem form (d : w.withRest.flow.Dissipative) : True',
+                              'proof': 'law withRest_balanced d'},
+            'Becoming.bad': {'statement': 'theorem bad (b : w.Balanced) : True', 'proof': 'law b'},
+            'Becoming.unrelated': {'statement': 'theorem unrelated : True', 'proof': 'trivial'},
+        }
+
+    def test_binders_stop_at_the_type(self):
+        self.assertEqual(completion._binders('theorem t (a : A) {b : B} : C a := x').strip(), '(a : A) {b : B}')
+
+    def test_a_form_is_checked_and_its_kept_states_reported(self):
+        findings, found, kept = completion.exchange_forms(self.cov({'Becoming.law': 'Becoming.form'}), self.decls())
+        self.assertEqual(findings, [])
+        self.assertEqual(found, {'Becoming.law': 'Becoming.form'})
+        self.assertEqual(kept, {'dissipation': ['Becoming.form']})
+
+    def test_a_statement_about_a_premise_needs_no_form(self):
+        _, found, _ = completion.exchange_forms(self.cov({'Becoming.law': 'Becoming.form'}), self.decls())
+        self.assertNotIn('Becoming.about', found)
+
+    def test_missing_premise_taking_and_unused_forms_are_found(self):
+        for forms, words in (({}, 'lists no form'), ({'Becoming.law': 'Becoming.bad'}, 'still takes balance'),
+                             ({'Becoming.law': 'Becoming.unrelated'}, 'does not use it'),
+                             ({'Becoming.law': 'Becoming.absent'}, 'not a declaration')):
+            findings, _, _ = completion.exchange_forms(self.cov(forms), self.decls())
+            self.assertEqual(len(findings), 1, findings)
+            self.assertIn(words, findings[0])

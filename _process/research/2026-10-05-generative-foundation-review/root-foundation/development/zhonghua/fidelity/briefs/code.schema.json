@@ -1,0 +1,12 @@
+{"type":"object","additionalProperties":false,"required":["segments"],"properties":{"segments":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["seg_id","referents","omissions","connective_mismatches","predicate_excess"],"properties":{
+"seg_id":{"type":"string"},
+"referents":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["span","sort","status","counterpart","rule","class","tags"],"properties":{
+  "span":{"type":"string"},"sort":{"type":"string"},
+  "status":{"type":"string","enum":["matched","excess"]},
+  "counterpart":{"type":"string"},
+  "rule":{"type":"string","enum":["M1","M2","M3","M4","M5","M6","none"]},
+  "class":{"type":"string","enum":["A","R","E","none"]},
+  "tags":{"type":"array","items":{"type":"string","enum":["ground","nature","centre/will","rank","neg","reading","hazard"]}}}}},
+"omissions":{"type":"array","items":{"type":"string"}},
+"connective_mismatches":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["kind","note"],"properties":{"kind":{"type":"string","enum":["iff_one_way","forall_generic","dneg_plain","exists_as_forall","negation_scope","hyp_as_conclusion"]},"note":{"type":"string"}}}},
+"predicate_excess":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["span","note"],"properties":{"span":{"type":"string"},"note":{"type":"string"}}}}}}}}}

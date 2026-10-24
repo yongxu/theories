@@ -14,7 +14,7 @@
     "source": "theories/becoming/README.md",
     "lean": [],
     "evidence": [
-      "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "theories/becoming/README.md"
     ],
     "scope_zh": "本条重述该分支的论证与状态；旧原文的强表述保持其原有证据范围。Lean 对应见下方说明，不由相近术语推定。",

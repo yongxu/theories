@@ -57,7 +57,7 @@ Completes the specified operational connection; does not make the old ordinary w
 | proof | [ReservedShutdown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean) | `ReservedShutdown.every_supported_schedule_finishes`, `ReservedShutdown.cycle_keeps_access_or_stops`, `ReservedShutdown.stop_executes_current_authorized_command` |
 | receipt | [reserved-shutdown-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/reserved-shutdown-verification.json) | — |
 | integration | [MEDIATED-CONTROL-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/MEDIATED-CONTROL-INTEGRATION.md) | — |
-| statement | [ALIGNMENT-THROUGH-CHANGE.md](../../chapters/ALIGNMENT-THROUGH-CHANGE.md) | — |
+| statement | [ALIGNMENT-THROUGH-CHANGE.md](../../history/ALIGNMENT-THROUGH-CHANGE.md) | — |
 | provenance | [2026-10-08-finish-alignment-fruits.md](../../../../sources/15-codex-theory-conversations/2026-10-08-finish-alignment-fruits.md) | — |
 | proof | [RecoverableControl.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean) | `RecoverableControl.prepare_preserves_safety`, `RecoverableControl.tick_preserves_safety`, `RecoverableControl.crash_preserves_safety` |
 | provenance | [EffectiveCommand.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EffectiveCommand.lean) | `EffectiveCommand.protocol_exact` |

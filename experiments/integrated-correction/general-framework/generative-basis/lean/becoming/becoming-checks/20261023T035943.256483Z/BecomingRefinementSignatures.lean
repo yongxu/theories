@@ -1,0 +1,11 @@
+import Becoming.Refinement
+#check @Becoming.DistinctUnder.mono
+#check @Becoming.DistinctUnder.unique
+#check @Becoming.remove_mem
+#check @Becoming.DistinctUnder.length_le
+#check @Becoming.not_not_within
+#check @Becoming.Refining.grow
+#check @Becoming.Refining.steady_or_grown
+#check @Becoming.Refining.steady_within
+#check @Becoming.DistinctUnder.single
+#check @Becoming.le_pred_of_succ_le

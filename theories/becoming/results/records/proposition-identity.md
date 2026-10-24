@@ -73,7 +73,7 @@ Lean's propext and proof irrelevance; the extensionality of propositions in Mart
 | review | [stuck.log](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/stuck/stuck.log) | — |
 | provenance | [Propext.lean](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/Propext.lean) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | review | [Uses.lean](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/Uses.lean) | — |
 | review | [summary.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/summary.json) | — |
 | review | [machine-instances.log](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/machine-instances.log) | — |

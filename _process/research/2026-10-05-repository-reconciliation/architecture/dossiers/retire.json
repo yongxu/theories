@@ -1,0 +1,46 @@
+[
+ {
+  "region": "retire",
+  "kind": "law",
+  "title": "Superseded laws through coupling along a run",
+  "summary": "Two records are marked superseded in the table: a law through changing coupling along a run, and a law through what a formation couples into along a run.",
+  "source": "rows 1031-1032",
+  "status": "superseded",
+  "records": [
+   "a-law-through-changing-coupling-along-one-run",
+   "a-law-through-coupling-along-one-run"
+  ],
+  "note": "Superseded by a-law-through-a-projection-along-one-run.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "retire",
+  "kind": "history",
+  "title": "Five-condition acceptance of the conditional foundation",
+  "summary": "A record marked superseded in the table (§8.1).",
+  "source": "row 1212",
+  "status": "superseded",
+  "records": [
+   "conditional-foundation-assessment"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "retire",
+  "kind": "history",
+  "title": "Earlier modules outside the spine kept at scope (§1.1 records)",
+  "summary": "Records endpoint-loss-and-return, effective-capacity-and-eventual-reachability, joint-correlation-reduced-dynamics, control-coherence-loss, trace-law-equivalence, finite-trace-transport listed as earlier modules kept at their scope.",
+  "records": [
+   "endpoint-loss-and-return",
+   "effective-capacity-and-eventual-reachability",
+   "joint-correlation-reduced-dynamics",
+   "control-coherence-loss",
+   "trace-law-equivalence",
+   "finite-trace-transport"
+  ],
+  "source": "§1.1 Records, l.174",
+  "status": "superseded",
+  "note": "check each for unique content before retiring; likely history",
+  "unit": "canonical-1"
+ }
+]

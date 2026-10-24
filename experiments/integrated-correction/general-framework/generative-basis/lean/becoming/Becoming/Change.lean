@@ -1,4 +1,5 @@
 import Becoming.Flow
+import Becoming.Grammar
 
 /-!
 # Change: what holds of every unfolding
@@ -648,5 +649,343 @@ theorem Flow.excess_zero_of_le : ∀ {a b : Nat}, a ≤ b → excess a b = 0
   | 0, _, _ => rfl
   | _ + 1, 0, le => absurd le (Nat.not_succ_le_zero _)
   | a + 1, b + 1, le => Flow.excess_zero_of_le (a := a) (b := b) (Nat.le_of_succ_le_succ le)
+
+/-! ## The grammar's reading: coming to be and ceasing to be as positions under a class
+
+Read in `Becoming.Grammar` along the steps (`Steps.next`, with the two-valued class
+`Steps.alike p` of a determination, stated in `Becoming.Arising`):
+
+* **Ceasing to be is an ending, coming to be a beginning, at the value they hold.** A determination
+  ceases to be across the step from `t` exactly where it holds at `t` and the line under its class
+  ends there (`ceasesToBe_iff_wang`, 亡); it comes to be exactly where it holds after the step and
+  the line begins there (`comesToBe_iff_sheng`, 生). The same positions read at the other value are
+  the negation's changes (`comesToBe_not_iff_sheng`, `ceasesToBe_not_iff_wang`). Since 缘 along the
+  steps is one-to-one, an ending is the next step's beginning, which gives `CeasesToBe.not_comes`
+  and `ComesToBe.not_ceases` again through the grammar (`CeasesToBe.not_comes_by_grammar`,
+  `ComesToBe.not_ceases_by_grammar`). Their converses need stability (`ComesToBe.of_not`) because
+  the class sees only that the value changed: which value held before is read from the value after,
+  and from `¬ p (t + 1)` and a change only `¬ ¬ p t` follows. With the determination decided, a
+  beginning is exactly a coming to be or a ceasing to be (`sheng_iff_change`): the one change of
+  `Web.change_readings` is one position, read at two values.
+* **A line that never ends is a determination that never changes.** The line from `S` never ends
+  (`«不穷»`) exactly where the determination keeps its value at `S` at every later step
+  (`buqiong_alike_iff`), and then nothing comes to be or ceases to be from `S` on
+  (`still_of_buqiong`). What fails and comes to be at no later step makes such a line with no
+  premise (`buqiong_of_stays_failing`).
+* **Deciding positions is what persistence needs.** Where the position of each later step is
+  decided (it begins, or has a predecessor), what holds and ceases to be at no later step holds on
+  (`persists_of_positions`), with no decidability of the determination. `persists` and
+  `persists_of_em` follow (`persists_by_grammar`, `persists_of_em_by_grammar`): decidability
+  decides positions, and so does excluded middle through `«四相之定当且仅当排中»`. Deciding the
+  position of a step after another is deciding whether the determination changes across it
+  (`positions_iff_change`), and asked of every determination along the steps it is still exactly
+  excluded middle (`positions_iff_em`). `World.law_iff_em` in `Becoming.Space` calibrates the
+  finite-world law of arising and ceasing to the same principle, so the two are equivalent as
+  principles; within that law's proof, excluded middle decides positions only where it gives
+  `persists_of_em`, and elsewhere it decides questions about unboundedly many steps.
+* **The core of the class is the whole course.** Two steps lie in one class of the core of
+  `Steps.alike p` (`«核»`) exactly when the determination agrees at them and at every pair of steps
+  equally far after them (`core_iff_same_course`). So a step continues under the core exactly where
+  the line under the class never ends from it (`continues_in_core_iff_buqiong`): taking the core as
+  the criterion, only a determination that never changes again continues, as the grammar's flame
+  shows (`«以核为判据则火无续»`).
+* **On a web.** A formation ceases across the step from `t` exactly where it is active at `t` and
+  its occurrence ends under the class of activity (`Web.ceases_iff_wang`); its ceasing is the
+  beginning, at the next step, of an inactive line (`Web.ceases_iff_inactive_sheng`), which is how
+  the grammar reads `Web.ceasing_readings`. With activity decided, a beginning on the web is an
+  arising or a ceasing (`Web.sheng_iff_arises_or_ceases`). A formation active for one step only
+  holds different positions under different classes at once (`Web.flash_positions`, from
+  `«四相无自立»`).
+-/
+
+/-- Two equalities of steps carry an equivalence of a determination at them. -/
+theorem Steps.iff_of_eqs (p : Nat → Prop) {a b c d : Nat} (h₁ : a = b) (h₂ : c = d)
+    (h : p b ↔ p d) : p a ↔ p c := by
+  cases h₁; cases h₂; exact h
+
+section GrammarReading
+
+variable {p : Nat → Prop} {t : Nat}
+
+/-- **Ceasing to be is an ending (亡) at the value held.** -/
+theorem ceasesToBe_iff_wang : CeasesToBe p t ↔ p t ∧ «亡» Steps.next (Steps.alike p) t :=
+  ⟨fun ⟨holds, fails⟩ => ⟨holds, fun hs => fails (Iff.mp (Steps.hasSucc_iff.mp hs) holds)⟩,
+   fun ⟨holds, ends⟩ =>
+    ⟨holds, fun next => ends (Steps.hasSucc_iff.mpr ⟨fun _ => next, fun _ => holds⟩)⟩⟩
+
+/-- **Coming to be is a beginning (生) at the value held.** -/
+theorem comesToBe_iff_sheng :
+    ComesToBe p t ↔ p (t + 1) ∧ «生» Steps.next (Steps.alike p) (t + 1) :=
+  ⟨fun ⟨fails, next⟩ => ⟨next, fun hp => fails (Iff.mpr (Steps.hasPred_iff.mp hp) next)⟩,
+   fun ⟨next, begins⟩ =>
+    ⟨fun holds => begins (Steps.hasPred_iff.mpr ⟨fun _ => next, fun _ => holds⟩), next⟩⟩
+
+/-- A beginning read at the value that fails after it is the negation's coming to be. -/
+theorem comesToBe_not_iff_sheng :
+    ComesToBe (fun s => ¬ p s) t ↔ ¬ p (t + 1) ∧ «生» Steps.next (Steps.alike p) (t + 1) :=
+  ⟨fun ⟨notNot, fails⟩ =>
+    ⟨fails, fun hp => notNot fun holds => fails (Iff.mp (Steps.hasPred_iff.mp hp) holds)⟩,
+   fun ⟨fails, begins⟩ =>
+    ⟨fun failed => begins (Steps.hasPred_iff.mpr
+      ⟨fun holds => absurd holds failed, fun next => absurd next fails⟩), fails⟩⟩
+
+/-- An ending read at the value that fails before it is the negation's ceasing to be. -/
+theorem ceasesToBe_not_iff_wang :
+    CeasesToBe (fun s => ¬ p s) t ↔ ¬ p t ∧ «亡» Steps.next (Steps.alike p) t :=
+  ⟨fun ⟨fails, notNot⟩ =>
+    ⟨fails, fun hs => notNot fun next => fails (Iff.mpr (Steps.hasSucc_iff.mp hs) next)⟩,
+   fun ⟨fails, ends⟩ =>
+    ⟨fails, fun failsNext => ends (Steps.hasSucc_iff.mpr
+      ⟨fun holds => absurd holds fails, fun next => absurd next failsNext⟩)⟩⟩
+
+/-- `CeasesToBe.not_comes` through the grammar: the ending at `t` is the beginning at `t + 1`, read
+at the value that fails there. -/
+theorem CeasesToBe.not_comes_by_grammar (ceases : CeasesToBe p t) :
+    ComesToBe (fun s => ¬ p s) t :=
+  comesToBe_not_iff_sheng.mpr
+    ⟨ceases.2, Steps.wang_iff_sheng_next.mp (ceasesToBe_iff_wang.mp ceases).2⟩
+
+/-- `ComesToBe.not_ceases` through the grammar: the beginning at `t + 1` is the ending at `t`,
+read at the value that fails there. -/
+theorem ComesToBe.not_ceases_by_grammar (comes : ComesToBe p t) :
+    CeasesToBe (fun s => ¬ p s) t :=
+  ceasesToBe_not_iff_wang.mpr
+    ⟨comes.1, Steps.wang_iff_sheng_next.mpr (comesToBe_iff_sheng.mp comes).2⟩
+
+/-- **One change, one position.** With the determination decided, a step after another begins
+under the class exactly where the determination comes to be or ceases to be across the step. -/
+theorem sheng_iff_change [dp : ∀ s, Decidable (p s)] :
+    «生» Steps.next (Steps.alike p) (t + 1) ↔ ComesToBe p t ∨ CeasesToBe p t :=
+  ⟨fun begins => match dp t with
+    | .isTrue holds =>
+      .inr ⟨holds, fun next => begins (Steps.hasPred_iff.mpr ⟨fun _ => next, fun _ => holds⟩)⟩
+    | .isFalse fails => match dp (t + 1) with
+      | .isTrue next => .inl ⟨fails, next⟩
+      | .isFalse failsNext => absurd (Steps.hasPred_iff.mpr
+          ⟨fun holds => absurd holds fails, fun next => absurd next failsNext⟩) begins,
+   fun changes => match changes with
+    | .inl comes => (comesToBe_iff_sheng.mp comes).2
+    | .inr ceases => Steps.wang_iff_sheng_next.mp (ceasesToBe_iff_wang.mp ceases).2⟩
+
+/-- Reach along the steps from `s` reaches only later steps. -/
+theorem Steps.reach_later {E : «际» Nat} {s y : Nat} (h : «相续» Steps.next E s y) :
+    ∃ n, y = s + n + 1 := by
+  induction h with
+  | one c => exact ⟨0, c.1⟩
+  | @more x m _ c _ ih =>
+    match ih with
+    | ⟨n, hy⟩ =>
+      exact ⟨n + 1, hy.trans ((congrArg (fun k => k + n + 1) c.1).trans
+        (congrArg (· + 1) (Nat.add_right_comm x 1 n)))⟩
+
+/-- Where the line along the steps from `S` never ends, it reaches every later step. -/
+theorem Steps.reached_of_buqiong {E : «际» Nat} {S : Nat} (h : «不穷» Steps.next E S) :
+    ∀ n, «相续» Steps.next E S (S + n + 1)
+  | 0 => .one ⟨rfl, Steps.hasSucc_iff.mp (h S (.inl rfl))⟩
+  | n + 1 => «及之传递» (Steps.reached_of_buqiong h n)
+      (.one ⟨rfl, Steps.hasSucc_iff.mp (h (S + n + 1) (.inr (Steps.reached_of_buqiong h n)))⟩)
+
+/-- The line along the steps from `S` never ends (不穷) exactly when every later step is alike to
+the next. -/
+theorem Steps.buqiong_iff {E : «际» Nat} {S : Nat} :
+    «不穷» Steps.next E S ↔ ∀ n, E (S + n) (S + n + 1) :=
+  ⟨fun h n => match n with
+    | 0 => Steps.hasSucc_iff.mp (h S (.inl rfl))
+    | m + 1 => Steps.hasSucc_iff.mp (h (S + m + 1) (.inr (Steps.reached_of_buqiong h m))),
+   fun alike y hy => match hy with
+    | .inl same => by cases same; exact Steps.hasSucc_iff.mpr (alike 0)
+    | .inr r => match Steps.reach_later r with
+      | ⟨n, hy'⟩ => by cases hy'; exact Steps.hasSucc_iff.mpr (alike (n + 1))⟩
+
+/-- A determination alike across every step from `S` keeps its value at `S`. -/
+theorem Steps.keeps_of_alike {p : Nat → Prop} {S : Nat} (h : ∀ n, (p (S + n) ↔ p (S + n + 1))) :
+    ∀ n, (p (S + n) ↔ p S)
+  | 0 => Iff.rfl
+  | n + 1 => (h n).symm.trans (Steps.keeps_of_alike h n)
+
+/-- **A line that never ends is a determination that never changes:** under the class of `p`, the
+line from `S` never ends exactly where `p` at every later step is as at `S`. -/
+theorem buqiong_alike_iff {S : Nat} :
+    «不穷» Steps.next (Steps.alike p) S ↔ ∀ n, (p (S + n) ↔ p S) :=
+  ⟨fun h => Steps.keeps_of_alike (Steps.buqiong_iff.mp h),
+   fun h => Steps.buqiong_iff.mpr fun n => (h n).trans (h (n + 1)).symm⟩
+
+/-- Where the line from `S` never ends, nothing comes to be or ceases to be from `S` on. -/
+theorem still_of_buqiong {S : Nat} (h : «不穷» Steps.next (Steps.alike p) S) :
+    ∀ t, S ≤ t → ¬ ComesToBe p t ∧ ¬ CeasesToBe p t :=
+  fun t later => match Nat.le.dest later with
+  | ⟨m, same⟩ => by
+    cases same
+    exact ⟨fun ⟨fails, next⟩ => fails (Iff.mpr (Steps.buqiong_iff.mp h m) next),
+      fun ⟨holds, fails⟩ => fails (Iff.mp (Steps.buqiong_iff.mp h m) holds)⟩
+
+/-- What fails and comes to be at no later step makes a line that never ends; no decidability is
+needed (`stays_failing`). -/
+theorem buqiong_of_stays_failing {S : Nat} (fails : ¬ p S)
+    (still : ∀ t, S ≤ t → ¬ ComesToBe p t) : «不穷» Steps.next (Steps.alike p) S :=
+  buqiong_alike_iff.mpr fun n =>
+    ⟨fun holds => absurd holds (stays_failing fails still n), fun holds => absurd holds fails⟩
+
+/-- **Persistence needs decided positions only.** Where each later step's position is decided (it
+begins, or has a predecessor, under the class), what holds and ceases to be at no later step
+holds on. Nothing is asked of the determination itself. -/
+theorem persists_of_positions {S : Nat}
+    (positions : ∀ n, «生» Steps.next (Steps.alike p) (S + n + 1) ∨
+      «有前» Steps.next (Steps.alike p) (S + n + 1))
+    (holds : p S) (unceasing : ∀ t, S ≤ t → ¬ CeasesToBe p t) : ∀ n, p (S + n)
+  | 0 => holds
+  | n + 1 => match positions n with
+    | .inr hp => Iff.mp (Steps.hasPred_iff.mp hp) (persists_of_positions positions holds unceasing n)
+    | .inl begins =>
+      have was := persists_of_positions positions holds unceasing n
+      absurd ⟨was, fun next => begins (Steps.hasPred_iff.mpr ⟨fun _ => next, fun _ => was⟩)⟩
+        (unceasing (S + n) (Nat.le_add_right S n))
+
+/-- A decided determination decides the position of every step after another. -/
+theorem positions_of_decided [dp : ∀ s, Decidable (p s)] (t : Nat) :
+    «生» Steps.next (Steps.alike p) (t + 1) ∨ «有前» Steps.next (Steps.alike p) (t + 1) :=
+  match dp t, dp (t + 1) with
+  | .isTrue h₀, .isTrue h₁ => .inr (Steps.hasPred_iff.mpr ⟨fun _ => h₁, fun _ => h₀⟩)
+  | .isFalse n₀, .isFalse n₁ =>
+    .inr (Steps.hasPred_iff.mpr ⟨fun h => absurd h n₀, fun h => absurd h n₁⟩)
+  | .isTrue h₀, .isFalse n₁ =>
+    .inl fun hp => n₁ (Iff.mp (Steps.hasPred_iff.mp hp) h₀)
+  | .isFalse n₀, .isTrue h₁ =>
+    .inl fun hp => n₀ (Iff.mpr (Steps.hasPred_iff.mp hp) h₁)
+
+/-- `persists`, derived through the positions: decidability decides them. -/
+theorem persists_by_grammar [∀ s, Decidable (p s)] {S : Nat} (holds : p S)
+    (unceasing : ∀ t, S ≤ t → ¬ CeasesToBe p t) : ∀ n, p (S + n) :=
+  persists_of_positions (fun n => positions_of_decided (S + n)) holds unceasing
+
+/-- `persists_of_em`, derived through the positions: excluded middle decides them
+(`«四相之定当且仅当排中»`). -/
+theorem persists_of_em_by_grammar (em : ∀ P : Prop, P ∨ ¬ P) {S : Nat} (holds : p S)
+    (unceasing : ∀ t, S ≤ t → ¬ CeasesToBe p t) : ∀ n, p (S + n) :=
+  persists_of_positions
+    (fun n => «四相之定当且仅当排中».mpr em Nat Steps.next (Steps.alike p) (S + n + 1))
+    holds unceasing
+
+/-- Deciding the position of a step after another is deciding whether the determination changes
+across the step. -/
+theorem positions_iff_change :
+    («生» Steps.next (Steps.alike p) (t + 1) ∨ «有前» Steps.next (Steps.alike p) (t + 1)) ↔
+      (¬ (p t ↔ p (t + 1)) ∨ (p t ↔ p (t + 1))) :=
+  ⟨fun h => match h with
+    | .inl begins => .inl fun alike => begins (Steps.hasPred_iff.mpr alike)
+    | .inr hp => .inr (Steps.hasPred_iff.mp hp),
+   fun h => match h with
+    | .inl changes => .inl fun hp => changes (Steps.hasPred_iff.mp hp)
+    | .inr alike => .inr (Steps.hasPred_iff.mpr alike)⟩
+
+end GrammarReading
+
+/-- A determination that holds at the first step and is `Q` after it. -/
+def Steps.firstThen (Q : Prop) : Nat → Prop :=
+  fun s => Nat.casesOn (motive := fun _ => Prop) s True fun _ => Q
+
+/-- **The grammar's calibration along the steps.** That the position of every step of every
+determination is decided is exactly excluded middle: the determination true at the first step and
+`Q` after it begins at the second step exactly where `Q` fails. -/
+theorem positions_iff_em :
+    (∀ (p : Nat → Prop) (t : Nat), «生» Steps.next (Steps.alike p) t ∨
+      «有前» Steps.next (Steps.alike p) t) ↔ ∀ Q : Prop, Q ∨ ¬ Q :=
+  ⟨fun decided Q => match decided (Steps.firstThen Q) (0 + 1) with
+    | .inl begins => .inr fun q => begins (Steps.hasPred_iff.mpr ⟨fun _ => q, fun _ => trivial⟩)
+    | .inr hp => .inl (Iff.mp (Steps.hasPred_iff.mp hp) trivial),
+   fun em p t => «四相之定当且仅当排中».mpr em Nat Steps.next (Steps.alike p) t⟩
+
+/-- A constant relation along the steps carries its pairs along every later step. -/
+theorem Steps.course_of_constant {S : «际» Nat} (constant : «有常» Steps.next S) {s s' : Nat}
+    (h : S s s') : ∀ n, S (s + n) (s' + n)
+  | 0 => h
+  | n + 1 =>
+    match («有常之逐点» Steps.next S).mp constant (s + n) (s' + n)
+      (Steps.course_of_constant constant h n) (s + n + 1) rfl with
+    | ⟨_, hv, hS⟩ => by cases hv; exact hS
+
+/-- **The core of the class is the whole course (核).** Two steps lie in one class of the core of
+`Steps.alike p` exactly when `p` agrees at every pair of steps equally far after them. -/
+theorem core_iff_same_course {p : Nat → Prop} {s s' : Nat} :
+    «核» Steps.next (Steps.alike p) s s' ↔ ∀ n, (p (s + n) ↔ p (s' + n)) :=
+  ⟨fun ⟨_, inside, _, constant, h⟩ n => inside _ _ (Steps.course_of_constant constant h n),
+   fun h => ⟨fun u u' => ∀ n, (p (u + n) ↔ p (u' + n)),
+    fun _ _ same => same 0,
+    fun _ _ same n => (same n).symm,
+    («有常之逐点» Steps.next _).mpr fun u u' same v hv =>
+      ⟨u' + 1, rfl, by
+        cases hv
+        exact fun n => Steps.iff_of_eqs p (Nat.add_right_comm u 1 n)
+          (Nat.add_right_comm u' 1 n) (same (n + 1))⟩,
+    h⟩⟩
+
+/-- **Continuing under the core is never ending under the class.** A step continues to the next
+under the core of `Steps.alike p` exactly where the line under the class never ends from it. -/
+theorem continues_in_core_iff_buqiong {p : Nat → Prop} {s : Nat} :
+    «续» Steps.next («核» Steps.next (Steps.alike p)) s (s + 1) ↔
+      «不穷» Steps.next (Steps.alike p) s :=
+  ⟨fun ⟨_, core⟩ => Steps.buqiong_iff.mpr fun n =>
+    Steps.iff_of_eqs p rfl (Nat.add_right_comm s 1 n).symm (core_iff_same_course.mp core n),
+   fun never => ⟨rfl, core_iff_same_course.mpr fun n =>
+    Steps.iff_of_eqs p rfl (Nat.add_right_comm s 1 n) (Steps.buqiong_iff.mp never n)⟩⟩
+
+/-- Under a class constant along the steps, a determination unchanged across one step is
+unchanged across the next (`«有常则续不尽»`). -/
+theorem still_stays_of_constant {p : Nat → Prop} {t : Nat}
+    (constant : «有常» Steps.next (Steps.alike p)) (still : p t ↔ p (t + 1)) :
+    p (t + 1) ↔ p (t + 1 + 1) :=
+  Steps.hasSucc_iff.mp («有常则续不尽» constant ⟨t, rfl, still⟩)
+
+namespace Web
+
+variable {F C : Type} {W : Web F C} {t : Nat} {f : F}
+
+/-- **A formation ceasing is an ending (亡)** of its active occurrence under the class of
+activity. -/
+theorem ceases_iff_wang : W.Ceases t f ↔ W.active t f ∧ «亡» Steps.along W.activityClass (t, f) :=
+  ⟨fun ceases => match (ceasesToBe_iff_wang (p := (W.active · f))).mp ceases with
+    | ⟨active, ends⟩ => ⟨active, wang_iff_steps.mpr ends⟩,
+   fun ⟨active, ends⟩ =>
+    (ceasesToBe_iff_wang (p := (W.active · f))).mpr ⟨active, wang_iff_steps.mp ends⟩⟩
+
+/-- A formation ceasing is the beginning (生), at the next step, of a line of inactivity: the
+grammar's form of `ceasing_readings`. -/
+theorem ceases_iff_inactive_sheng :
+    W.Ceases t f ↔ W.active t f ∧ «生» Steps.along W.activityClass (t + 1, f) :=
+  ⟨fun ceases => match ceases_iff_wang.mp ceases with
+    | ⟨active, ends⟩ =>
+      ⟨active, sheng_iff_steps.mpr (Steps.wang_iff_sheng_next.mp (wang_iff_steps.mp ends))⟩,
+   fun ⟨active, begins⟩ => ceases_iff_wang.mpr
+    ⟨active, wang_iff_steps.mpr (Steps.wang_iff_sheng_next.mpr (sheng_iff_steps.mp begins))⟩⟩
+
+/-- With activity decided, an occurrence after the first step begins under the class of activity
+exactly where the formation arises or ceases across the step before it. -/
+theorem sheng_iff_arises_or_ceases [∀ s g, Decidable (W.active s g)] :
+    «生» Steps.along W.activityClass (t + 1, f) ↔ W.Arises t f ∨ W.Ceases t f :=
+  sheng_iff_steps.trans (sheng_iff_change (p := (W.active · f)))
+
+/-- A condition ceasing to stand is an ending of the determination "standing" along the steps. -/
+theorem ceasesToStand_iff_wang {c : C} :
+    W.CeasesToStand t c ↔ 0 < W.level t c ∧ «亡» Steps.next (Steps.alike (0 < W.level · c)) t :=
+  ceasesToBe_iff_wang (p := (0 < W.level · c))
+
+/-- A dependence dissolving is an ending of the determination "depends" along the steps. -/
+theorem dissolves_iff_wang {c : C} :
+    W.Dissolves t f c ↔ W.requires t f c ∧ «亡» Steps.next (Steps.alike (W.requires · f c)) t :=
+  ceasesToBe_iff_wang (p := (W.requires · f c))
+
+/-- **A flash holds different positions at once (`«四相无自立»`).** A formation that arises across
+the step from `t` and ceases across the next is, at step `t + 1`, abiding under the one, beginning
+and ending under identity, and beginning and ending under the class of activity. -/
+theorem flash_positions (arises : W.Arises t f) (ceases : W.Ceases (t + 1) f) :
+    «住» Steps.along «一» (t + 1, f) ∧ «生» Steps.along «静» (t + 1, f) ∧
+      «亡» Steps.along «静» (t + 1, f) ∧ «生» Steps.along W.activityClass (t + 1, f) ∧
+      «亡» Steps.along W.activityClass (t + 1, f) :=
+  match «四相无自立» (R := Steps.along) Steps.along_irrefl (x := (t, f)) (y := (t + 1, f))
+    (z := (t + 1 + 1, f)) ⟨rfl, rfl⟩ ⟨rfl, rfl⟩ with
+  | ⟨abides, begins, ends⟩ =>
+    ⟨abides, begins, ends, (arises_iff_sheng.mp arises).2, (ceases_iff_wang.mp ceases).2⟩
+
+end Web
 
 end Becoming

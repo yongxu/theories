@@ -1,0 +1,127 @@
+OU3a, change-arising: Becoming.Change and Becoming.Arising as instances of Becoming.Grammar
+==========================================================================================
+
+Files
+  tree/Becoming/Arising.lean   full module; `import Becoming.Grammar` added, new section at the end
+  tree/Becoming/Change.lean    full module; `import Becoming.Grammar` added, new section at the end
+  probe/Becoming/LineUpProbe.lean   scratch probe (imports Becoming.Space; not a proposed module)
+No existing declaration, statement or proof changed (diff against the checkout: additions only).
+Import order: Grammar (prelude only) -> Arising -> ... -> Flow -> Change -> ... -> Space. Change
+uses the definitions added to Arising; nothing new imports downward.
+
+Reading chosen
+--------------
+1. Along the steps of one determination (for ComesToBe / CeasesToBe, p : Nat -> Prop).
+   carrier  Nat (the step index)
+   缘       Steps.next s t := t = s + 1  (step s is a condition of the next step)
+   class    Steps.alike p s t := (p s <-> p t)  (the two-valued class of p; a 类: Steps.alike_class)
+2. On a web (for Arises / Ceases / Unceasing).
+   carrier  Nat x F (occurrence = step, formation)
+   缘       Steps.along x y := y.1 = x.1 + 1 /\ y.2 = x.2  (the same formation's next step)
+   class    Web.activityClass W x y := (W.active x.1 x.2 <-> W.active y.1 y.2)  (a 类)
+   Omission: no dependence, drawing or flow is taken as 缘; what conditions an occurrence here is only
+   the same formation's previous step. The web's positions are exactly the positions of each
+   formation's activity read along the steps (Web.sheng_iff_steps, Web.wang_iff_steps).
+   Not invented: the modules compare activity at t and t+1 of one formation and nothing else.
+Along the steps 缘 is one-to-one, so an ending at t is a beginning at t+1 (Steps.wang_iff_sheng_next);
+PLAN 4.3 "灭与补" (end_not_beginning) is about many-to-many 缘 and does not apply here.
+
+New declarations, Arising (4 defs, 15 theorems)
+  Steps.next, Steps.alike, Steps.alike_class        缘 along steps; two-valued class; it is a class
+  Steps.hasSucc_iff / hasPred_iff                    有后 at t iff E t (t+1); 有前 at t+1 iff E t (t+1)
+  Steps.sheng_zero                                   step 0 begins under every class
+  Steps.wang_iff_sheng_next                          亡 at t iff 生 at t+1 (any class)
+  Steps.along, along_irrefl, along_hasSucc_iff, along_hasPred_iff, along_sheng_zero   same, on pairs
+  Web.activityClass, Web.activityClass_class         class of activity; it is a class
+  Web.sheng_iff_steps, Web.wang_iff_steps            web positions = positions of (W.active . f)
+  Web.arises_iff_sheng      Arises t f <-> active (t+1) f /\ 生 (t+1,f)   [exact, instance]
+  Web.unceasing_iff_late_beginnings  Unceasing <-> active beginnings y with N < y.1 for every N  [exact]
+  Web.renews_iff            复生 (t,f) /\ active (t+1) f <-> Arises t f /\ active (t+2) f  [exact]
+                            (Arises asks nothing of the next step; the grammar's renewal does)
+
+New declarations, Change (1 def, 31 theorems)
+  Steps.iff_of_eqs                       transport of p along two equalities of steps (helper)
+  ceasesToBe_iff_wang                    CeasesToBe p t <-> p t /\ 亡 t            [exact, instance]
+  comesToBe_iff_sheng                    ComesToBe p t <-> p (t+1) /\ 生 (t+1)     [exact, instance]
+  comesToBe_not_iff_sheng                ComesToBe (not p) t <-> not p (t+1) /\ 生 (t+1)   [exact]
+  ceasesToBe_not_iff_wang                CeasesToBe (not p) t <-> not p t /\ 亡 t           [exact]
+  CeasesToBe.not_comes_by_grammar        old CeasesToBe.not_comes, derived via 亡 t = 生 (t+1)
+  ComesToBe.not_ceases_by_grammar        old ComesToBe.not_ceases, derived the same way
+  sheng_iff_change [decided p]           生 (t+1) <-> ComesToBe p t \/ CeasesToBe p t
+                                         (the "one change" of Web.change_readings is one position
+                                         read at two values; the converse readings need stability
+                                         because the class sees only that the value changed)
+  Steps.reach_later                      a line along the steps reaches only later steps
+  Steps.reached_of_buqiong, Steps.buqiong_iff   不穷 from S <-> every later step alike to the next
+  Steps.keeps_of_alike, buqiong_alike_iff       不穷 from S <-> p (S+n) <-> p S for all n
+  still_of_buqiong                       不穷 => nothing comes to be or ceases from S on
+  buqiong_of_stays_failing               old stays_failing gives a never-ending line, no premise
+  persists_of_positions                  NEW law: decided positions (生 or 有前 at each later step)
+                                         suffice for persistence; no decidability of p
+  positions_of_decided                   decidable p decides every position
+  persists_by_grammar                    old `persists`, derived from persists_of_positions
+  persists_of_em_by_grammar              old `persists_of_em`, derived via «四相之定当且仅当排中».mpr
+  positions_iff_change                   deciding the position at t+1 = deciding whether p changes
+  Steps.firstThen                        p true at 0 and Q after (witness)
+  positions_iff_em                       (all p, t: 生 \/ 有前 along the steps) <-> EM
+  Steps.course_of_constant               a constant relation is carried along every later step
+  core_iff_same_course                   核 of Steps.alike p relates s, s' <-> p agrees at s+n, s'+n
+  continues_in_core_iff_buqiong          续 under the core s -> s+1 <-> 不穷 under the class from s
+                                         (the flame of «以核为判据则火无续», for any determination)
+  still_stays_of_constant                instance of «有常则续不尽»: constant class, unchanged once
+                                         => unchanged at the next step
+  Web.ceases_iff_wang                    Ceases t f <-> active t f /\ 亡 (t,f)     [exact, instance]
+  Web.ceases_iff_inactive_sheng          Ceases t f <-> active t f /\ 生 (t+1,f): ceasing is the
+                                         beginning of an inactive line (grammar form of ceasing_readings)
+  Web.sheng_iff_arises_or_ceases [decided]  生 (t+1,f) <-> Arises t f \/ Ceases t f
+  Web.ceasesToStand_iff_wang, Web.dissolves_iff_wang   CeasesToStand / Dissolves as 亡 of their
+                                         determinations (standing; depending), by ceasesToBe_iff_wang
+  Web.flash_positions                    derived from «四相无自立»: a formation active one step only
+                                         abides under 一, begins and ends under 静 and under activity
+
+Old laws derived from grammar laws: CeasesToBe.not_comes, ComesToBe.not_ceases (one-to-one 缘),
+persists and persists_of_em (through persists_of_positions; the EM one through
+«四相之定当且仅当排中»), stays_failing's line (buqiong_of_stays_failing); grammar laws instantiated:
+«四相无自立» (flash_positions), «有常则续不尽» (still_stays_of_constant), the core and its flame
+(core_iff_same_course, continues_in_core_iff_buqiong). All instance theorems are pointwise iffs.
+
+The excluded-middle calibrations, exactly
+-----------------------------------------
+* «四相之定当且仅当排中»: deciding 生-or-有前 at every occurrence of every carrier, relation and
+  class is EM. positions_iff_em: still EM when restricted to determinations along the steps (the
+  -> direction is new: firstThen Q at step 1 begins iff not Q, has a predecessor iff Q).
+* World.law_iff_em: the finite-world law ArisingRecurs <-> CeasingRecurs, asked of all finite
+  worlds, is EM. So the two are equivalent as principles; checked in scratch (probe, empty axiom
+  reports): World.law_iff_positions := law_iff_em.trans positions_iff_em.symm, and
+  World.law_iff_grammar_positions := law_iff_em.trans «四相之定当且仅当排中».symm. These would go in
+  Space (or below it) when Space's owner wants them; I did not edit Space.
+* What this says about the unfolding: deciding a position at one step is deciding whether activity
+  changes across that step (positions_iff_change). In law_decides, the ceasing that the law hands
+  over is an ending of an active occurrence (Web.ceases_iff_wang), and the undecided world carries Q
+  at one step's position, as firstThen Q does. In law_of_em, EM is used four ways; only one,
+  persists_of_em, is local, and it needs only decided positions (persists_of_positions). The other
+  three (em on CeasingRecurs, exists_not_of_em, quiet_of_once) decide questions about unboundedly
+  many steps, which no single position decides. Not shown: whether, for a fixed finite world,
+  decided positions imply the law or the converse.
+
+Not connected, and why
+----------------------
+* Rises, Falls, Still, Depletes, RenewedBy, ActiveRenewer, stock and every law about them
+  (depletion_not_recurring, Unceasing.rises, substitution_defers, ...), and Change's counting laws
+  (marks, rise/fall, over_stretch, held_over_stretch, keep_pace, coming_recurs_iff,
+  arising_recurs_iff, unceasing_iff): they read amounts and counts; the grammar has no amounts.
+* LPO results named in Change's header live elsewhere; continues_in_core_iff_buqiong is where
+  settling (deciding whether a run changes again) meets the core, but no LPO calibration is proved.
+* Recurs, Accretion, Attrition: recurrence over arbitrarily late steps has no grammar term yet.
+
+Scratch build
+-------------
+python3 -B .../scratch_build.py <this folder>/tree   (Becoming.Arising, Becoming.Change):
+  pass, unclean [] (no errors or warnings).
+  Becoming.Arising: 44 theorems, 79 declarations, with_axioms {}.
+  Becoming.Change:  90 theorems, 108 declarations, with_axioms {}.
+Downstream check in scratch (copies + probe, scratchpad tree): Becoming.Space rebuilt over the
+edited modules (11 modules between Arising and Space recompiled), pass, Space 60 theorems /
+124 declarations, with_axioms {}; probe 2 theorems, with_axioms {}.
+Name clashes: every new name grepped across Becoming/*.lean, none; Grammar's names occur in no
+other module, so importing it into Arising's downstream adds no ambiguity.

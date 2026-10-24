@@ -86,7 +86,7 @@ The four laws were listed as candidates (W1–W4) by the review of the explorato
 | proof | [Routes.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean) | `Becoming.Weights.within`, `Becoming.Weights.within_exact`, `Becoming.Routes.SelfLoop.within_eq` |
 | proof | [Loops.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Loops.lean) | `Becoming.Loops.binom`, `Becoming.Loops.binom_zero`, `Becoming.Loops.pow_step` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [SSBX-REPOSITORY-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |

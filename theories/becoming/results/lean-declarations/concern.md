@@ -17,7 +17,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 <details>
 <summary>AcquiredActivityScope.lean — 43 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredActivityScope.lean) · [Theory](../../chapters/NONINSTRUMENTAL-CONCERN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredActivityScope.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredActivityScope.lean`
 
@@ -143,7 +143,7 @@ Contains 13 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>AcquiredPurposeCriterion.lean — 74 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredPurposeCriterion.lean) · [Theory](../../chapters/NONINSTRUMENTAL-CONCERN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredPurposeCriterion.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/AcquiredPurposeCriterion.lean`
 
@@ -535,7 +535,7 @@ Contains 32 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>PurposeCorrection.lean — 26 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrection.lean) · [Theory](../../chapters/NONINSTRUMENTAL-CONCERN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrection.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrection.lean`
 
@@ -582,7 +582,7 @@ Contains 20 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>PurposeCorrectionHistory.lean — 29 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrectionHistory.lean) · [Theory](../../chapters/NONINSTRUMENTAL-CONCERN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrectionHistory.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/PurposeCorrectionHistory.lean`
 
@@ -690,7 +690,7 @@ Contains 24 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>SituatedPractice.lean — 23 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/SituatedPractice.lean) · [Theory](../../chapters/WANG-YANGMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/SituatedPractice.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/SituatedPractice.lean`
 

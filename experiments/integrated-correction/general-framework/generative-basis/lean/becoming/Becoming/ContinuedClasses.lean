@@ -1,5 +1,6 @@
 import Becoming.Persistence
 import Becoming.Admission
+import Becoming.Grammar
 
 /-!
 # Classes along a continuation: splits and merges
@@ -645,5 +646,318 @@ theorem readings : web.WidensAcross Web.itself web.level 0 1 ∧ ¬ web.WidensAc
   ⟨widens_by_name, fun ⟨_, exceeds⟩ => bud_adds_nothing exceeds⟩
 
 end Bud
+
+/-! ## The grammar's reading of classes along a continuation
+
+With the reading of `Becoming.Identity`'s last section (occurrences `(t, f)`, 缘 one step of a
+continuation `R`, `Web.continuationStep R`), the notions of this module are the grammar's.
+
+* **Continuing is a line (相续).** `Continuing W R t g u h` holds exactly where `(t, g)` is
+  `(u, h)` or `g` is active at `t` and `(u, h)` lies in a line under activity from `(t, g)`
+  (`continuing_iff_line`). So renewing along a continuation is renewing at every occurrence of the
+  line, and consuming along it is drawing on a consumed condition at some occurrence of it
+  (`renewingAlong_iff_line`, `consumingAlong_iff_line`). That more links make more continuing is
+  the monotonicity of reach (`Continuing.mono_by_reach`, from `«及之单调»`).
+* **Links are lines under the one.** `Linked R`, with nothing asked of activity, is a line under
+  the one class (`«一»`) (`linked_iff_line`), where continuation is 缘 itself (`«一之续»`).
+* **Tenure is a line under the dependence's class.** Links across which a dependence on `c` holds,
+  from a formation requiring `c`, are lines under the class "requires `c` or not"
+  (`Web.dependenceClass`) (`held_iff_line`), so tenure along a continuation is a need met at an
+  occurrence of such a line ending at the event (`metAboveAlong_iff_line`).
+* **The split and merge laws, from the grammar.** Renewing along an occurrence passes into both
+  branches of a split, which form a fission (分叉) (`RenewingAlong.branches`); consuming along a
+  merged occurrence is consuming along both occurrences merged into it, from the two candles
+  (蜡烛之合) (`ConsumingAlong.merged_candles`). In `MergeClass` the merge is the two candles and
+  both merged formations consume along it (`MergeClass.candles`, `MergeClass.both_consume_along`);
+  in `Bud` the old formation's bud is a fission (`Bud.fission`).
+* **Re-identification.** A step of a continuation carried through a re-identification is a step
+  of the original between the formations named (`carry_step_iff`), so lines correspond exactly
+  (`line_reidentify`): the classes, read off lines, are the continuation's, not the names'.
+-/
+
+namespace Web
+
+variable {W : Web F C} {R : Nat → F → F → Prop}
+
+/-- A line under activity from an active occurrence is a continuing. -/
+theorem line_continuing {x y : Nat × F}
+    (line : «及» («续» (continuationStep R) W.activityClass) x y) :
+    W.active x.1 x.2 → W.Continuing R x.1 x.2 y.1 y.2 := by
+  induction line with
+  | @one a b k =>
+    intro before
+    have after : W.active (a.1 + 1) b.2 :=
+      Eq.subst (motive := fun s => W.active s b.2) k.1.1 (k.2.mp before)
+    exact Eq.subst (motive := fun s => W.Continuing R a.1 a.2 s b.2) k.1.1.symm
+      (.next before k.1.2 after (.here (a.1 + 1) b.2))
+  | @more a b z k _ ih =>
+    intro before
+    have after : W.active (a.1 + 1) b.2 :=
+      Eq.subst (motive := fun s => W.active s b.2) k.1.1 (k.2.mp before)
+    exact .next before k.1.2 after
+      (Eq.subst (motive := fun s => W.Continuing R s b.2 z.1 z.2) k.1.1 (ih (k.2.mp before)))
+
+/-- A continuing is the occurrence itself or a line (相续) under activity from it. -/
+theorem Continuing.line : ∀ {t : Nat} {g : F} {u : Nat} {h : F}, W.Continuing R t g u h →
+    (t, g) = (u, h) ∨ W.active t g ∧ «相续» (continuationStep R) W.activityClass (t, g) (u, h)
+  | _, _, _, _, .here _ _ => .inl rfl
+  | t, g, _, _, .next (f := f) before continues after rest =>
+    have k : «续» (continuationStep R) W.activityClass (t, g) (t + 1, f) :=
+      ⟨⟨rfl, continues⟩, ⟨fun _ => after, fun _ => before⟩⟩
+    match Continuing.line rest with
+    | .inl same => .inr ⟨before, Eq.subst
+        (motive := fun y => «相续» (continuationStep R) W.activityClass (t, g) y) same (.one k)⟩
+    | .inr ⟨_, line⟩ => .inr ⟨before, .more k line⟩
+
+/-- **Continuing is a line (相续).** `f` at `u` continues `g` at `t` exactly where the two
+occurrences are one, or `g` is active at `t` and `(u, f)` lies in a line under activity from
+`(t, g)`. -/
+theorem continuing_iff_line {t : Nat} {g : F} {u : Nat} {h : F} :
+    W.Continuing R t g u h ↔
+      (t, g) = (u, h) ∨ W.active t g ∧ «相续» (continuationStep R) W.activityClass (t, g) (u, h) :=
+  ⟨Continuing.line, fun along => match along with
+    | .inl same => Eq.subst (motive := fun y => W.Continuing R t g y.1 y.2) same (.here t g)
+    | .inr ⟨before, line⟩ => line_continuing line before⟩
+
+/-- **More links, more continuing**, derived from the monotonicity of reach (`«及之单调»`). -/
+theorem Continuing.mono_by_reach {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {g : F} {u : Nat} {h : F} (continuing : W.Continuing R t g u h) :
+    W.Continuing S t g u h :=
+  match continuing_iff_line.mp continuing with
+  | .inl same => continuing_iff_line.mpr (.inl same)
+  | .inr ⟨before, line⟩ => continuing_iff_line.mpr (.inr ⟨before,
+      «及之单调» (R := «续» (continuationStep R) W.activityClass)
+        (S := «续» (continuationStep S) W.activityClass)
+        (fun _ _ k => ⟨⟨k.1.1, within _ _ _ k.1.2⟩, k.2⟩) _ _ line⟩)
+
+/-- **Renewing along a continuation is renewing along its line**: every relation taken part in
+at the occurrence or at any occurrence of its line under activity is renewed. -/
+theorem renewingAlong_iff_line {t : Nat} {g : F} :
+    W.RenewingAlong R t g ↔ ∀ y : Nat × F,
+      ((t, g) = y ∨ W.active t g ∧ «相续» (continuationStep R) W.activityClass (t, g) y) →
+      ∀ c, W.Participates y.1 y.2 c → W.Renewed c :=
+  ⟨fun renewing y along => renewing y.1 y.2 (continuing_iff_line.mpr along),
+   fun renewing u h continuing => renewing (u, h) (continuing_iff_line.mp continuing)⟩
+
+/-- **Consuming along a continuation is consuming along its line**: the occurrence or one of
+its line under activity draws on a consumed condition. -/
+theorem consumingAlong_iff_line {t : Nat} {g : F} :
+    W.ConsumingAlong R t g ↔ ∃ y : Nat × F,
+      ((t, g) = y ∨ W.active t g ∧ «相续» (continuationStep R) W.activityClass (t, g) y) ∧
+      ∃ c, W.draws y.1 y.2 c ∧ W.Consumed c :=
+  ⟨fun ⟨u, h, c, continuing, drawn, consumed⟩ =>
+     ⟨(u, h), continuing_iff_line.mp continuing, c, drawn, consumed⟩,
+   fun ⟨y, along, c, drawn, consumed⟩ =>
+     ⟨y.1, y.2, c, continuing_iff_line.mpr along, drawn, consumed⟩⟩
+
+/-- **The split law from the grammar.** Where `g` active at `t` continues as two formations
+active after the step, renewing along `g` passes into both branches, and the branches form a
+fission (分叉): neither lies in a line from the other. -/
+theorem RenewingAlong.branches {t : Nat} {g f f' : F} (renewing : W.RenewingAlong R t g)
+    (before : W.active t g) (r : R t g f) (r' : R t g f') (after : W.active (t + 1) f)
+    (after' : W.active (t + 1) f') (apart : f ≠ f') :
+    W.RenewingAlong R (t + 1) f ∧ W.RenewingAlong R (t + 1) f' ∧
+      ¬ «相续» (continuationStep R) W.activityClass (t + 1, f) (t + 1, f') ∧
+      ¬ «相续» (continuationStep R) W.activityClass (t + 1, f') (t + 1, f) :=
+  match split_fission before r r' after after' apart with
+  | ⟨line, line', apart₁, apart₂, _, _⟩ =>
+    have onward : ∀ {b : Nat × F},
+        «相续» (continuationStep R) W.activityClass (t, g) b → W.RenewingAlong R b.1 b.2 :=
+      fun toB => renewingAlong_iff_line.mpr fun y along =>
+        renewingAlong_iff_line.mp renewing y (.inr ⟨before, match along with
+          | .inl same => Eq.subst
+              (motive := fun z => «相续» (continuationStep R) W.activityClass (t, g) z) same toB
+          | .inr ⟨_, further⟩ => «及之传递» toB further⟩)
+    ⟨onward (b := (t + 1, f)) line, onward (b := (t + 1, f')) line', apart₁, apart₂⟩
+
+/-- **The merge law from the two candles (蜡烛之合).** Where `g` and `g'` active at `t` both
+continue as `f` active after the step, consuming along `f` is consuming along both. -/
+theorem ConsumingAlong.merged_candles {t : Nat} {g g' f : F} (before : W.active t g)
+    (before' : W.active t g') (r : R t g f) (r' : R t g' f) (after : W.active (t + 1) f)
+    (consuming : W.ConsumingAlong R (t + 1) f) :
+    W.ConsumingAlong R t g ∧ W.ConsumingAlong R t g' :=
+  have candles := merge_candles before before' r r' after
+  have through : ∀ {x : Nat × F}, W.active x.1 x.2 →
+      «续» (continuationStep R) W.activityClass x (t + 1, f) → W.ConsumingAlong R x.1 x.2 :=
+    fun active k => match consumingAlong_iff_line.mp consuming with
+      | ⟨y, along, drawn⟩ => consumingAlong_iff_line.mpr ⟨y, .inr ⟨active, match along with
+          | .inl same => Eq.subst
+              (motive := fun z => «相续» (continuationStep R) W.activityClass _ z) same (.one k)
+          | .inr ⟨_, line⟩ => .more k line⟩, drawn⟩
+  ⟨through (x := (t, g)) before candles.1, through (x := (t, g')) before' candles.2.1⟩
+
+/-- A link chain is the occurrence itself or a line under the one. -/
+theorem Linked.line : ∀ {t : Nat} {g : F} {u : Nat} {h : F}, Linked R t g u h →
+    (t, g) = (u, h) ∨ «相续» (continuationStep R) «一» (t, g) (u, h)
+  | _, _, _, _, .here _ _ => .inl rfl
+  | t, g, _, _, .next (f := f) step rest =>
+    have k : «续» (continuationStep R) «一» (t, g) (t + 1, f) := ⟨⟨rfl, step⟩, trivial⟩
+    match Linked.line rest with
+    | .inl same => .inr (Eq.subst
+        (motive := fun y => «相续» (continuationStep R) «一» (t, g) y) same (.one k))
+    | .inr line => .inr (.more k line)
+
+/-- A line under the one is a link chain. -/
+theorem line_linked {x y : Nat × F} (line : «及» («续» (continuationStep R) «一») x y) :
+    Linked R x.1 x.2 y.1 y.2 := by
+  induction line with
+  | @one a b k =>
+    exact Eq.subst (motive := fun s => Linked R a.1 a.2 s b.2) k.1.1.symm
+      (.next k.1.2 (.here (a.1 + 1) b.2))
+  | @more a b z k _ ih =>
+    exact .next k.1.2 (Eq.subst (motive := fun s => Linked R s b.2 z.1 z.2) k.1.1 ih)
+
+/-- **Links are lines under the one (`«一»`).** With nothing asked of activity, `Linked R` is
+the occurrence itself or a line under the one class. -/
+theorem linked_iff_line {t : Nat} {g : F} {u : Nat} {h : F} :
+    Linked R t g u h ↔ (t, g) = (u, h) ∨ «相续» (continuationStep R) «一» (t, g) (u, h) :=
+  ⟨Linked.line, fun along => match along with
+    | .inl same => Eq.subst (motive := fun y => Linked R t g y.1 y.2) same (.here t g)
+    | .inr line => line_linked line⟩
+
+/-- The class of a dependence on `c`: two occurrences are alike when both formations require `c`
+at their steps or neither does. -/
+def dependenceClass (W : Web F C) (c : C) : «际» (Nat × F) :=
+  alikeBy fun x => W.requires x.1 x.2 c
+
+theorem dependenceClass_class (W : Web F C) (c : C) : «类» (W.dependenceClass c) :=
+  alikeBy_class _
+
+/-- Links across which a dependence holds are the occurrence itself or a line under its class
+from a formation requiring it. -/
+theorem Linked.held_line {c : C} : ∀ {s : Nat} {h : F} {t : Nat} {g : F},
+    Linked (W.holdingOn R c) s h t g → (s, h) = (t, g) ∨
+      W.requires s h c ∧ «相续» (continuationStep R) (W.dependenceClass c) (s, h) (t, g)
+  | _, _, _, _, .here _ _ => .inl rfl
+  | s, h, _, _, .next (f := f) ⟨step, held, held'⟩ rest =>
+    have k : «续» (continuationStep R) (W.dependenceClass c) (s, h) (s + 1, f) :=
+      ⟨⟨rfl, step⟩, ⟨fun _ => held', fun _ => held⟩⟩
+    match Linked.held_line rest with
+    | .inl same => .inr ⟨held, Eq.subst
+        (motive := fun y => «相续» (continuationStep R) (W.dependenceClass c) (s, h) y) same
+        (.one k)⟩
+    | .inr ⟨_, line⟩ => .inr ⟨held, .more k line⟩
+
+/-- A line under a dependence's class from a formation requiring it is a chain of links across
+which the dependence holds. -/
+theorem line_held {c : C} {x y : Nat × F}
+    (line : «及» («续» (continuationStep R) (W.dependenceClass c)) x y) :
+    W.requires x.1 x.2 c → Linked (W.holdingOn R c) x.1 x.2 y.1 y.2 := by
+  induction line with
+  | @one a b k =>
+    intro held
+    have held' : W.requires (a.1 + 1) b.2 c :=
+      Eq.subst (motive := fun s => W.requires s b.2 c) k.1.1 (k.2.mp held)
+    exact Eq.subst (motive := fun s => Linked (W.holdingOn R c) a.1 a.2 s b.2) k.1.1.symm
+      (.next ⟨k.1.2, held, held'⟩ (.here (a.1 + 1) b.2))
+  | @more a b z k _ ih =>
+    intro held
+    have held' : W.requires (a.1 + 1) b.2 c :=
+      Eq.subst (motive := fun s => W.requires s b.2 c) k.1.1 (k.2.mp held)
+    exact .next ⟨k.1.2, held, held'⟩
+      (Eq.subst (motive := fun s => Linked (W.holdingOn R c) s b.2 z.1 z.2) k.1.1
+        (ih (k.2.mp held)))
+
+/-- **Holding is a line under the dependence's class.** From a formation requiring `c`, links
+across which the dependence holds are exactly the occurrence itself or a line under the class
+"requires `c` or not". -/
+theorem held_iff_line {c : C} {s : Nat} {h : F} {t : Nat} {g : F} (held : W.requires s h c) :
+    Linked (W.holdingOn R c) s h t g ↔
+      (s, h) = (t, g) ∨ «相续» (continuationStep R) (W.dependenceClass c) (s, h) (t, g) :=
+  ⟨fun linked => match Linked.held_line linked with
+     | .inl same => .inl same
+     | .inr ⟨_, line⟩ => .inr line,
+   fun along => match along with
+     | .inl same => Eq.subst (motive := fun y => Linked (W.holdingOn R c) s h y.1 y.2) same
+         (.here s h)
+     | .inr line => line_held line held⟩
+
+/-- **Tenure along a continuation is read off a line under the dependence's class**: some
+occurrence requiring `c`, the event itself or one with a line under "requires `c` or not" to it,
+met at its step a need above `m`. -/
+theorem metAboveAlong_iff_line {t : Nat} {g : F} {c : C} {m : Nat} :
+    W.MetAboveAlong R t g c m ↔ ∃ s h,
+      ((s, h) = (t, g) ∨ «相续» (continuationStep R) (W.dependenceClass c) (s, h) (t, g)) ∧
+      W.requires s h c ∧ W.need s h c ≤ W.level s c ∧ m < W.need s h c :=
+  ⟨fun ⟨s, h, linked, held, met, above⟩ =>
+     ⟨s, h, (held_iff_line held).mp linked, held, met, above⟩,
+   fun ⟨s, h, along, held, met, above⟩ =>
+     ⟨s, h, (held_iff_line held).mpr along, held, met, above⟩⟩
+
+/-- The image of a line under a map carrying each continuation to a continuation is a line. -/
+theorem line_image {α β : Type} {R₁ E₁ : «际» α} {R₂ E₂ : «际» β} (φ : α → β)
+    (step : ∀ x y, «续» R₁ E₁ x y → «续» R₂ E₂ (φ x) (φ y)) {x y : α}
+    (line : «相续» R₁ E₁ x y) : «相续» R₂ E₂ (φ x) (φ y) := by
+  induction line with
+  | one k => exact .one (step _ _ k)
+  | more k _ ih => exact .more (step _ _ k) ih
+
+/-- **A carried step is a step between the formations named.** Through a re-identification, a
+continuation (续) under activity of the carried continuation is one of the original between the
+formations the new names name. -/
+theorem carry_step_iff (σ : Reidentify F F') {x y : Nat × F'} :
+    «续» (continuationStep (σ.carry R)) (W.reidentify σ).activityClass x y ↔
+      «续» (continuationStep R) W.activityClass (x.1, σ.old x.1 x.2) (y.1, σ.old y.1 y.2) :=
+  ⟨fun ⟨⟨next, r⟩, alike⟩ => ⟨⟨next,
+     Eq.subst (motive := fun s => R x.1 (σ.old x.1 x.2) (σ.old s y.2)) next.symm r⟩, alike⟩,
+   fun ⟨⟨next, r⟩, alike⟩ => ⟨⟨next,
+     Eq.subst (motive := fun s => R x.1 (σ.old x.1 x.2) (σ.old s y.2))
+       (next : y.1 = x.1 + 1) r⟩, alike⟩⟩
+
+/-- **Lines are unchanged by a re-identification** carrying the continuation: a line between two
+occurrences under the new names is a line between the formations they name. -/
+theorem line_reidentify (σ : Reidentify F F') {t u : Nat} {x y : F'} :
+    «相续» (continuationStep (σ.carry R)) (W.reidentify σ).activityClass (t, x) (u, y) ↔
+      «相续» (continuationStep R) W.activityClass (t, σ.old t x) (u, σ.old u y) :=
+  ⟨line_image (fun p => (p.1, σ.old p.1 p.2)) (fun _ _ k => (carry_step_iff σ).mp k),
+   fun line =>
+     have named : ∀ p : Nat × F, (p.1, σ.old p.1 (σ.new p.1 p.2)) = p :=
+       fun p => occurrence_eq rfl (σ.old_new p.1 p.2)
+     have back := line_image (R₂ := continuationStep (σ.carry R))
+       (E₂ := (W.reidentify σ).activityClass) (fun p => (p.1, σ.new p.1 p.2))
+       (fun p q k => (carry_step_iff σ).mpr
+         (Eq.subst (motive := fun a => «续» (continuationStep R) W.activityClass a
+             (q.1, σ.old q.1 (σ.new q.1 q.2))) (named p).symm
+           (Eq.subst (motive := fun b => «续» (continuationStep R) W.activityClass p b)
+             (named q).symm k))) line
+     Eq.subst (motive := fun a => «相续» (continuationStep (σ.carry R))
+         (W.reidentify σ).activityClass (t, a) (u, y)) (σ.new_old t x)
+       (Eq.subst (motive := fun b => «相续» (continuationStep (σ.carry R))
+           (W.reidentify σ).activityClass (t, σ.new t (σ.old t x)) (u, b)) (σ.new_old u y) back)⟩
+
+end Web
+
+/-- **The merge is the two candles (蜡烛之合).** In `MergeClass` the first and the second both
+continue as the merged formation. -/
+theorem MergeClass.candles :
+    «续» (Web.continuationStep MergeClass.merge) MergeClass.web.activityClass
+        (0, MergeClass.Formation.first) (1, MergeClass.Formation.merged) ∧
+      «续» (Web.continuationStep MergeClass.merge) MergeClass.web.activityClass
+        (0, MergeClass.Formation.second) (1, MergeClass.Formation.merged) ∧
+      «同族» (Web.continuationStep MergeClass.merge) MergeClass.web.activityClass
+        (0, MergeClass.Formation.first) (0, MergeClass.Formation.second) :=
+  Web.merge_candles (W := MergeClass.web) (R := MergeClass.merge) trivial trivial rfl rfl trivial
+
+/-- **Both merged formations consume along the merge**, from the merge law of the two candles:
+`MergeClass.first_consumes_along` derived through the grammar, and the same for the second. -/
+theorem MergeClass.both_consume_along :
+    MergeClass.web.ConsumingAlong MergeClass.merge 0 .first ∧
+      MergeClass.web.ConsumingAlong MergeClass.merge 0 .second :=
+  Web.ConsumingAlong.merged_candles (W := MergeClass.web) (R := MergeClass.merge) (t := 0)
+    (f := MergeClass.Formation.merged) trivial trivial rfl rfl trivial
+    ⟨1, MergeClass.Formation.merged, MergeClass.Place.spent, .here 1 MergeClass.Formation.merged,
+     trivial, MergeClass.spent_consumed⟩
+
+/-- **The bud is a fission (分叉).** In `Bud` the old formation continues as itself and as the
+fresh one across the first step: both lie in lines from it, neither in a line from the other. -/
+theorem Bud.fission :
+    «相续» (Web.continuationStep Bud.bud) Bud.web.activityClass (0, .old) (1, .old) ∧
+      «相续» (Web.continuationStep Bud.bud) Bud.web.activityClass (0, .old) (1, .fresh) ∧
+      ¬ «相续» (Web.continuationStep Bud.bud) Bud.web.activityClass (1, .old) (1, .fresh) ∧
+      ¬ «相续» (Web.continuationStep Bud.bud) Bud.web.activityClass (1, .fresh) (1, .old) ∧
+      ((1, .old) : Nat × Bud.Formation) ≠ (1, .fresh) ∧
+      «同族» (Web.continuationStep Bud.bud) Bud.web.activityClass (1, .old) (1, .fresh) :=
+  Web.split_fission (W := Bud.web) (R := Bud.bud) (t := 0) (g := .old) (f := .old) (f' := .fresh)
+    trivial (.inl rfl) (.inr ⟨rfl, rfl⟩) trivial trivial (fun same => Bud.Formation.noConfusion same)
 
 end Becoming

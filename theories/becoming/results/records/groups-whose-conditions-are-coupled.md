@@ -64,8 +64,9 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
   - Preserved conditions: Only active formations give; descent. [GroupEnding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Its one-condition laws, now the family of one.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Groups on conditions of their own; here groups on coupled conditions.
+- related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). A lineage within a whole confined to one family of conditions in excess has no member once it ends, whatever selection within had raised it to.
 
-**Used by:** [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
+**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -76,8 +77,8 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
 | proof | [GroupEnding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean) | `Becoming.GroupEnding.Ended`, `Becoming.GroupEnding.Flow.all_end`, `Becoming.GroupEnding.Flow.coupled_end_together`, `Becoming.GroupEnding.Flow.ended_of_family`, `Becoming.GroupEnding.Flow.ended_of_inactive`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.family_childless`, `Becoming.GroupEnding.Flow.group_childless`, `Becoming.GroupEnding.Flow.inactive_childless`, `Becoming.GroupEnding.Flow.offspring_zero`, `Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.rises_iff_inactive`, `Becoming.GroupEnding.Outweighed.keeping_rises`, `Becoming.GroupEnding.Outweighed.offspring`, `Becoming.GroupEnding.Outweighed.outweighed`, `Becoming.GroupEnding.Outweighs.offspring`, `Becoming.GroupEnding.Outweighs.outweighs`, `Becoming.GroupEnding.among_not_against`, `Becoming.GroupEnding.equal`, `Becoming.GroupEnding.excess_pos_of_lt`, `Becoming.GroupEnding.keepingFirst`, `Becoming.GroupEnding.keeps`, `Becoming.GroupEnding.mem_whole`, `Becoming.GroupEnding.not_against_of_ended`, `Becoming.GroupEnding.pairs_pos`, `Becoming.GroupEnding.rises_iff_ended`, `Becoming.GroupEnding.rises_of_ended`, `Becoming.GroupEnding.uniform` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
@@ -88,6 +89,7 @@ Aliases: `groups whose conditions are coupled`, `条件相互耦合的组`, `cou
 ### History
 
 - 20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.
+- 22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.
 
 </details>
 

@@ -336,7 +336,7 @@ Contains 8 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>ConsequenceTransmission.lean — 34 explicit declarations</summary>
 
-[Source](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean) · [Theory](../../chapters/LIANGZHI-EVOLUTION.md) · [Package notes](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/README.md)
+[Source](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/README.md)
 
 `experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean`
 
@@ -391,7 +391,7 @@ Contains 19 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>SupportHandoff.lean — 54 explicit declarations</summary>
 
-[Source](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/handoff/SupportHandoff.lean) · [Theory](../../chapters/LIANGZHI-EVOLUTION.md) · [Package notes](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/handoff/README.md)
+[Source](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/handoff/SupportHandoff.lean) · [Theory](../../history/ARGUMENTS-A-L-2026-10-08.md) · [Package notes](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/handoff/README.md)
 
 `experiments/shared-renewal-capability/regulation/retention/formation/evolution/handoff/SupportHandoff.lean`
 

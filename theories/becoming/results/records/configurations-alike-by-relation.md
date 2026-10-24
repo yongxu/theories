@@ -88,7 +88,7 @@ Following Ren's “yes, put it on the board and start”: the split “configura
 - related, not a proved adapter: [tests-fix-likeness-where-determined](tests-fix-likeness-where-determined.md). The conditions under which tests fix likeness: both frames determined up to likeness for linear tests, both finite and decided for branching tests.
 - related, not a proved adapter: [determinacy-up-to-likeness](determinacy-up-to-likeness.md). The Part I theorems stated with Determined restated up to likeness, with witnesses where equality is needed.
 
-**Used by:** [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md) (interpretive) · [determinacy-up-to-likeness](determinacy-up-to-likeness.md) · [identification-where-bounded](identification-where-bounded.md) · [identity-across-steps](identity-across-steps.md) · [learnable-through-a-map](learnable-through-a-map.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [tests-fix-likeness-where-determined](tests-fix-likeness-where-determined.md) · [the-split-that-makes-sense](the-split-that-makes-sense.md) · [wisdom-root](wisdom-root.md)
+**Used by:** [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md) (interpretive) · [determinacy-up-to-likeness](determinacy-up-to-likeness.md) · [identification-where-bounded](identification-where-bounded.md) · [identity-across-steps](identity-across-steps.md) · [learnable-through-a-map](learnable-through-a-map.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [tests-fix-likeness-where-determined](tests-fix-likeness-where-determined.md) · [the-split-that-makes-sense](the-split-that-makes-sense.md) · [wen-in-the-grammar](wen-in-the-grammar.md) · [wisdom-root](wisdom-root.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -107,7 +107,7 @@ Following Ren's “yes, put it on the board and start”: the split “configura
 | provenance | [ExplanatoryBranching.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-relational-starting-point.md](../../../../sources/15-codex-theory-conversations/2026-10-12-relational-starting-point.md) | — |
 | provenance | [2026-10-12-no-two-realities.md](../../../../sources/15-codex-theory-conversations/2026-10-12-no-two-realities.md) | — |
 | provenance | [Saying.lean](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-framing-evidence/Saying.lean) | — |

@@ -1,0 +1,287 @@
+{
+ "text": "xunzi-zhengming",
+ "title": "《荀子·正名》",
+ "classified_by": "Claude (AI), OU0 step 0, plan version 10 §三",
+ "provenance_note": "All classifications, forms and readings are AI reconstruction (Claude); commentary readings marked 记忆 are from memory and unverified (待核).",
+ "units": 196,
+ "counts_by_class": {
+  "甲": 39,
+  "乙": 3,
+  "丙一": 17,
+  "丁": 70,
+  "戊": 4,
+  "己": 0,
+  "庚": 63,
+  "未读出": 0
+ },
+ "wu_units_戊": [
+  {
+   "id": "XZ-ZM-030",
+   "note": "文本以贵贱之等为制名所以然之一：二分与等级；分别在此不是佛典之妄念义"
+  },
+  {
+   "id": "XZ-ZM-031",
+   "note": "复述 XZ-030；丁为第二功能"
+  },
+  {
+   "id": "XZ-ZM-076",
+   "note": "君与民之知不对称：等级"
+  },
+  {
+   "id": "XZ-ZM-131",
+   "note": "心对欲之制：不对称之等；也可读为一人之内的两个关系（定域）"
+  }
+ ],
+ "ji_units_己": [],
+ "weiduchu_未读出": [],
+ "ji_note": "No unit rejects a thesis of the plan explicitly.",
+ "most_important": [
+  {
+   "id": "XZ-ZM-063",
+   "why": "化 := 状变而实无别而为异: different under the class of shape, not distinct under the class of 实 (§一)"
+  },
+  {
+   "id": "XZ-ZM-064",
+   "why": "一实 := 有化而无别: the criterion is 实无别, not 同所; strains §一 '一实以所计'"
+  },
+  {
+   "id": "XZ-ZM-062",
+   "why": "二实 := 状同而为异所: 所 is used to count two, not stated as the criterion of one"
+  },
+  {
+   "id": "XZ-ZM-061",
+   "why": "状 and 所 cross: two classes that can disagree (乙 proposal, low)"
+  },
+  {
+   "id": "XZ-ZM-065",
+   "why": "稽实定数: counting 实 belongs to 制名; carrier equality as a commitment of naming (§二)"
+  },
+  {
+   "id": "XZ-ZM-058",
+   "why": "宜 := 约定俗成: a name's fitness is conventional"
+  },
+  {
+   "id": "XZ-ZM-059",
+   "why": "实名 by convention: which 实 a name fixes is agreed, not given"
+  },
+  {
+   "id": "XZ-ZM-033",
+   "why": "缘天官: the ground of 同异 is the sense relation; the plan excludes this sense of 缘 (§4.1) but its 验/类 grounding (§4.4) has the same structure"
+  },
+  {
+   "id": "XZ-ZM-034",
+   "why": "同类同情者，其天官之意物也同: a reading depends on the class of the reader (丙一)"
+  },
+  {
+   "id": "XZ-ZM-044",
+   "why": "征知 requires the 天官 first to register the kind: the heart's knowing composes with the sense relation (丙一, necessary condition)"
+  },
+  {
+   "id": "XZ-ZM-053",
+   "why": "物，大共名: the coarsest name, like the class 一"
+  },
+  {
+   "id": "XZ-ZM-054",
+   "why": "推而共之…至于无共然后止: iterated coarsening to the top; the top exists analytically, termination needs finiteness"
+  },
+  {
+   "id": "XZ-ZM-057",
+   "why": "推而别之…至于无别然后至: iterated refinement; the finest class (静) exists, reaching it by steps needs finiteness"
+  },
+  {
+   "id": "XZ-ZM-051",
+   "why": "异实异名、同实同名: holds only at one level of naming (共名/别名), i.e. relative to a class; contrasts 墨经 重同 二名一实"
+  },
+  {
+   "id": "XZ-ZM-030",
+   "why": "戊: 制名 is to 明贵贱 as well as 辨同异: the text sets rank as a purpose of names; 分别 here means distinguishing, not 妄念"
+  },
+  {
+   "id": "XZ-ZM-085",
+   "why": "名 := 所以期累实"
+  },
+  {
+   "id": "XZ-ZM-083",
+   "why": "名之丽 := 累而成文: names compose into 文 (§三 成文)"
+  },
+  {
+   "id": "XZ-ZM-087",
+   "why": "辨说 := 不异实名以喻动静之道: a name's reference must stay fixed through an argument"
+  },
+  {
+   "id": "XZ-ZM-126",
+   "why": "有欲无欲 belongs to the class 生死, not 治乱: a distinction has sense relative to one class (定域)"
+  },
+  {
+   "id": "XZ-ZM-008",
+   "why": "事 := 正利而为: 事 is purposive action, not the plan's 事 (a related position)"
+  },
+  {
+   "id": "XZ-ZM-138",
+   "why": "亡于情之所欲: 亡 = 无 (does not lie in), another sense of 亡"
+  },
+  {
+   "id": "XZ-ZM-002",
+   "why": "性 := 生之所以然者 (and a second 性 at XZ-ZM-003): 生 = life / what is produced"
+  },
+  {
+   "id": "XZ-ZM-140",
+   "why": "Chain 性 := 天之就, 情 := 性之质, 欲 := 情之应 (XZ-ZM-140–142): definitions by relation"
+  },
+  {
+   "id": "XZ-ZM-164",
+   "why": "衡不正 → 读数误: a reading is relative to its standard (丙一)"
+  },
+  {
+   "id": "XZ-ZM-026",
+   "why": "王者起 → 循于旧名 ∧ 作于新名: names themselves continue and arise"
+  }
+ ],
+ "polysemy_register": {
+  "缘": [
+   "XZ-ZM-027/032/046/071 所缘 = the ground by which",
+   "XZ-ZM-033 缘天官 = rely on",
+   "XZ-ZM-043 缘耳 = through"
+  ],
+  "生": [
+   "XZ-ZM-002 life / what is born",
+   "XZ-ZM-003 所生 = produced",
+   "XZ-ZM-126/132/133 life vs death"
+  ],
+  "化": [
+   "XZ-ZM-063 change of shape with the 实 unchanged",
+   "XZ-ZM-078 be transformed by teaching"
+  ],
+  "亡": [
+   "XZ-ZM-138/139 = 无, not lie in; never 'end' in this chapter"
+  ],
+  "尽": [
+   "XZ-ZM-094 尽故 exhaust the reasons",
+   "XZ-ZM-146/147/149 fully satisfy, approach the full (近尽)"
+  ],
+  "穷": [
+   "XZ-ZM-099 冥穷 stuck",
+   "XZ-ZM-117 穷藉 unclear"
+  ],
+  "事": [
+   "XZ-ZM-008 purposive action (defined)",
+   "XZ-ZM-029 affairs",
+   "XZ-ZM-065 this matter/work"
+  ],
+  "理": [
+   "XZ-ZM-091 经理 = pattern of order",
+   "XZ-ZM-103 长少之理 = order of rank",
+   "XZ-ZM-135/137/179/181 reason, right pattern"
+  ],
+  "分别": [
+   "XZ-ZM-030 to distinguish (neutral, positive), unlike the Buddhist 妄念 sense that motivated the plan's renaming"
+  ],
+  "兼": [
+   "XZ-ZM-048 compound name",
+   "XZ-ZM-086 combine",
+   "XZ-ZM-097/098 all-embracing",
+   "XZ-ZM-186 take together"
+  ],
+  "性/伪/知/能": [
+   "each defined twice (XZ-ZM-002/003, 006/007, 010/011, 012/013): a capacity and its realized fit (所以X之在人者 / X有所合)"
+  ]
+ },
+ "strains_with_plan": [
+  {
+   "plan": "§一 '一实以“所”（处所）计' and §5.2 一实",
+   "units": [
+    "XZ-ZM-061",
+    "XZ-ZM-062",
+    "XZ-ZM-063",
+    "XZ-ZM-064"
+   ],
+   "point": "The text uses 异所 to count two (二实) but defines 一实 by 化而无别 (实无别), and says 异状而同所者 '可别也'. It never states 同所 ⇒ 一实; 实 is presupposed, not counted by 所. The plan's 'in the class of place, continuation' reads more than the text states."
+  },
+  {
+   "plan": "§4.1 化",
+   "units": [
+    "XZ-ZM-063",
+    "XZ-ZM-078"
+   ],
+   "point": "荀子 化 is change of shape with the 实 undistinguished (or moral transformation); narrower than the plan's 化 = 进."
+  },
+  {
+   "plan": "§4.1 缘 excludes 荀子's sense",
+   "units": [
+    "XZ-ZM-033",
+    "XZ-ZM-034",
+    "XZ-ZM-043",
+    "XZ-ZM-044",
+    "XZ-ZM-071"
+   ],
+   "point": "The excluded sense (ground of 同异 in the sense relation) is the structure the plan uses for grounding a class in 'a relation one has 缘 with' (§4.3 item 4, §4.4 验). Excluding the word is fine; the structure is an ally, and 验之所缘以同异 (XZ-ZM-071, verified) is close to §4.4."
+  },
+  {
+   "plan": "§5.4 / monist hypothesis",
+   "units": [
+    "XZ-ZM-030",
+    "XZ-ZM-031",
+    "XZ-ZM-076",
+    "XZ-ZM-131"
+   ],
+   "point": "戊: rank (贵贱) as a purpose of naming; 君/民 asymmetry of knowing; 心 regulating 欲 from 天. Register as 相分."
+  },
+  {
+   "plan": "§4.3 四相 (亡 = end of a 续)",
+   "units": [
+    "XZ-ZM-138",
+    "XZ-ZM-139"
+   ],
+   "point": "亡 in this chapter means 无 (absent), not ceasing."
+  },
+  {
+   "plan": "§4.1 位 / 事",
+   "units": [
+    "XZ-ZM-008"
+   ],
+   "point": "事 is defined as purposive action (正利而为); the plan's 事 as a relationally located position should be marked as a term of art."
+  }
+ ],
+ "supports_for_plan": [
+  {
+   "plan": "§二 载体之相等是模型的承诺",
+   "units": [
+    "XZ-ZM-058",
+    "XZ-ZM-059",
+    "XZ-ZM-065"
+   ]
+  },
+  {
+   "plan": "plural classes; class relative reading",
+   "units": [
+    "XZ-ZM-034",
+    "XZ-ZM-036",
+    "XZ-ZM-041",
+    "XZ-ZM-051",
+    "XZ-ZM-126",
+    "XZ-ZM-127"
+   ]
+  },
+  {
+   "plan": "coarsest / finest class (一 / 静)",
+   "units": [
+    "XZ-ZM-053",
+    "XZ-ZM-054",
+    "XZ-ZM-056",
+    "XZ-ZM-057"
+   ]
+  },
+  {
+   "plan": "§4.4 验",
+   "units": [
+    "XZ-ZM-069",
+    "XZ-ZM-071",
+    "XZ-ZM-073"
+   ]
+  }
+ ],
+ "corpus_problems": [
+  "Simplified script (as MANIFEST says); quotations in the plan in traditional script match after folding. Units checked against plan §一 and §5.2 quotations: present (XZ-ZM-061–066, XZ-ZM-071).",
+  "No commentary (杨倞) in the repository; commentary column is 'none'."
+ ]
+}

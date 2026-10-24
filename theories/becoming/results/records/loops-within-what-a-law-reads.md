@@ -101,7 +101,7 @@ P118's third reading as Ren took it on 16 October 2026, and P122, left open “w
 | proof | [Feedback.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean) | `Becoming.Web.DependsOn` |
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | `Becoming.le_succ_cases` |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-16-loop-formation-and-policies-go.md](../../../../sources/15-codex-theory-conversations/2026-10-16-loop-formation-and-policies-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T214555.207438Z/verification.json) | — |
 | provenance | [2026-10-16-thresholds-readings-and-measure-question.md](../../../../sources/15-codex-theory-conversations/2026-10-16-thresholds-readings-and-measure-question.md) | — |

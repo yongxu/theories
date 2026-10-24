@@ -1,3 +1,4 @@
+import Becoming.Grammar
 import Becoming.Wholes
 
 /-!
@@ -308,6 +309,271 @@ theorem shifts : shifted.ByPassing passesOdd ∧ (∀ n, shifted.Brief 2 n) ∧
    fun t => ⟨Pulse.half t, rfl⟩,
    ⟨fun _ even ⟨_, _, _, ⟨odd', _⟩, _⟩ => (nomatch even.symm.trans odd'),
    fun t even _ arises => arises.1 ((Shifts.half_even t even).symm.trans arises.2)⟩⟩
+
+end PatternRelay
+
+
+/-! ## The grammar's reading: lasting through passing as continuation relative to a class (火传)
+
+`Becoming.Grammar` states continuation (续) for every carrier and every relation. Here the carrier
+is the occurrences of carrying, pairs `(t, a)` of a step and a formation, and 缘 is one step of
+the continuation this module's passing premise reads (`Web.passingContinuation`): across the step
+from `t`, `a` continues `b` where `a` is `b` carrying on or `b` gives the pattern to `a`. Its
+occurrence relation is `Web.continuationStep` of `Becoming.Identity`. Two classes are used, both
+read off the web: the pattern's class is activity (`Web.activityClass V`: alike in carrying the
+pattern or not), and the carrier class is finer (`Web.carrierClass V`: alike in carrying and one
+formation). Nothing else is supplied.
+
+* **The passing premise is that nothing begins under the pattern's class after the first step**:
+  every carrying occurrence after it has a predecessor (有前) under the pattern's class
+  (`Web.byPassing_iff_hasPred`), which is Identity's `Continues` under the passing continuation
+  (`Web.byPassing_iff_continues`).
+* **A carrier begins (生) and ends (亡) under the carrier class** exactly where it arises and
+  ceases (`Web.arises_iff_sheng_carrier`, `Web.ceases_iff_wang_carrier`). An alteration (异) of a
+  carrying occurrence, continuation under the pattern's class told apart by the carrier class, is
+  a passing (`Web.passesAt_of_alters`); a passing to another formation is an alteration
+  (`Web.alters_of_passes`).
+* **火传.** 《庄子·养生主》「指窮於爲薪，火傳也」: a carrier that ceases while it passes the pattern
+  on ends under the carrier class and does not end under the pattern's class: it alters
+  (`Web.passing_fire`). This is the shape of the grammar's `«亡于细者不必亡于粗»`, and
+  `PatternRelay.shifted` realizes it at every odd step (`PatternRelay.shifted_fire`,
+  `PatternRelay.fire_shape`). In `PatternRelay.web` each carrier passes the pattern at its first
+  step, so its last occurrence ends under both classes: there the passing is not a handing over at
+  the end.
+* **The pattern's line.** Under the passing premise every carrying occurrence lies on a line
+  (相续) under the pattern's class from a carrying occurrence at every earlier step
+  (`Web.ByPassing.line_back`).
+* **Derived from grammar laws.** `Web.ByPassing.passes_within` (the pattern lasts only through
+  passing) follows from a relational law stated here for every carrier and relation
+  (`«两端分则中有标»`: a line whose ends a class tells apart, every step of which keeps the
+  class or carries a mark, has a marked step on it) applied to the carrier class
+  (`Web.ByPassing.passes_within_by_line`). `Web.ByPassing.begins_passed` follows from
+  `«生于细而续于粗则异»` (a beginning under a finer class, continued under a coarser one, is an
+  alteration) (`Web.ByPassing.begins_passed_by_grammar`). An occurrence with no continuation under
+  the pattern's class ends under the carrier class, by `«亡于粗则亡于细»`: its carrier ceases
+  (`Web.ceases_of_pattern_ends`).
+
+Not connected: `Web.begins_within` is an instance of `Web.Covered.arises_within` and reads no
+continuation; `Web.ByPassing.ends_within`, `present_back` and `empty_stays` are read about
+presence at a step, which is not a grammar term (a step is not an occurrence). `PassesAt` counts a
+formation passing the pattern to itself, which is no alteration; so an alteration gives a passing,
+not conversely.
+-/
+
+namespace Web
+
+/-- The continuation the passing premise reads: across the step from `t`, `a` continues `b` where
+`a` is `b` carrying on, or `b` gives the pattern to `a`. -/
+def passingContinuation (passes : Nat → F → F → Prop) (t : Nat) (b a : F) : Prop :=
+  b = a ∨ passes t b a
+
+/-- Two occurrences of one formation. -/
+def sameFormation : «际» (Nat × F) := fun x y => x.2 = y.2
+
+/-- The carrier class: alike in carrying the pattern, and of one formation. Finer than the
+pattern's class `activityClass`. -/
+def carrierClass (V : Web F C) : «际» (Nat × F) := «合» V.activityClass sameFormation
+
+theorem carrierClass_class (V : Web F C) : «类» V.carrierClass :=
+  ⟨fun _ => ⟨Iff.rfl, rfl⟩, fun same => ⟨same.1.symm, same.2.symm⟩,
+   fun same same' => ⟨same.1.trans same'.1, same.2.trans same'.2⟩⟩
+
+/-- The carrier class is finer than the pattern's class. -/
+theorem carrierClass_finer (V : Web F C) : «则» V.carrierClass V.activityClass :=
+  fun _ _ same => same.1
+
+variable {V : Web F C} {passes : Nat → F → F → Prop}
+
+/-- **The passing premise is a continuation.** It says exactly that every formation carrying the
+pattern after a step continues, under the passing continuation, a formation carrying it before
+the step. -/
+theorem byPassing_iff_continues :
+    V.ByPassing passes ↔ ∀ t a, V.active (t + 1) a → V.Continues (passingContinuation passes) t a :=
+  ⟨fun byPassing t a after => match byPassing t a after with
+    | .inl before => ⟨a, before, .inl rfl⟩
+    | .inr ⟨b, carrier, given⟩ => ⟨b, carrier, .inr given⟩,
+   fun continues t a after => match continues t a after with
+    | ⟨_, carrier, .inl same⟩ => .inl (Eq.subst (motive := fun f => V.active t f) same carrier)
+    | ⟨b, carrier, .inr given⟩ => .inr ⟨b, carrier, given⟩⟩
+
+/-- **The passing premise: nothing begins under the pattern's class after the first step.** Every
+occurrence carrying the pattern after a step has a predecessor (有前) under the pattern's class. -/
+theorem byPassing_iff_hasPred :
+    V.ByPassing passes ↔ ∀ t a, V.active (t + 1) a →
+      «有前» (continuationStep (passingContinuation passes)) V.activityClass (t + 1, a) :=
+  byPassing_iff_continues.trans
+    ⟨fun continues t a after => (hasPred_iff_continues after).mpr (continues t a after),
+     fun pred t a after => (hasPred_iff_continues after).mp (pred t a after)⟩
+
+/-- **A carrier begins (生) under the carrier class exactly where it arises.** -/
+theorem arises_iff_sheng_carrier {t : Nat} {a : F} :
+    V.Arises t a ↔ V.active (t + 1) a ∧
+      «生» (continuationStep (passingContinuation passes)) V.carrierClass (t + 1, a) :=
+  ⟨fun ⟨before, after⟩ => ⟨after, fun ⟨x, ⟨next, _⟩, ⟨alike, same⟩⟩ =>
+     before (Eq.subst (motive := fun s => V.active s a) (Nat.succ.inj next).symm
+       (Eq.subst (motive := fun f => V.active x.1 f) same (alike.mpr after)))⟩,
+   fun ⟨after, begins⟩ => ⟨fun before =>
+     begins ⟨(t, a), ⟨rfl, .inl rfl⟩, ⟨⟨fun _ => after, fun _ => before⟩, rfl⟩⟩, after⟩⟩
+
+/-- **A carrier ends (亡) under the carrier class exactly where it ceases.** -/
+theorem ceases_iff_wang_carrier {t : Nat} {b : F} :
+    V.Ceases t b ↔ V.active t b ∧
+      «亡» (continuationStep (passingContinuation passes)) V.carrierClass (t, b) :=
+  ⟨fun ⟨before, gone⟩ => ⟨before, fun ⟨y, ⟨next, _⟩, ⟨alike, same⟩⟩ =>
+     gone (Eq.subst (motive := fun s => V.active s b) next
+       (Eq.subst (motive := fun f => V.active y.1 f) same.symm (alike.mp before)))⟩,
+   fun ⟨before, ends⟩ => ⟨before, fun after =>
+     ends ⟨(t + 1, b), ⟨rfl, .inl rfl⟩, ⟨⟨fun _ => after, fun _ => before⟩, rfl⟩⟩⟩⟩
+
+/-- **An alteration (异) of a carrying occurrence is a passing.** Continuation under the pattern's
+class that the carrier class tells apart, from a formation carrying the pattern, is some carrier
+passing it across the step. One way only: `PassesAt` also counts a formation passing the pattern
+to itself, which alters nothing. -/
+theorem passesAt_of_alters {x y : Nat × F} (carrying : V.active x.1 x.2)
+    (alters : «异» (continuationStep (passingContinuation passes)) V.activityClass V.carrierClass
+      x y) : V.PassesAt passes x.1 :=
+  match alters with
+  | ⟨⟨⟨next, kind⟩, alike⟩, apart⟩ => match kind with
+    | .inl same => absurd ⟨alike, same⟩ apart
+    | .inr given => ⟨x.2, y.2, carrying, given,
+        Eq.subst (motive := fun s => V.active s y.2) next (alike.mp carrying)⟩
+
+/-- **A passing to another formation is an alteration (异).** -/
+theorem alters_of_passes {t : Nat} {b a : F} (carrier : V.active t b) (given : passes t b a)
+    (carried : V.active (t + 1) a) (other : ¬ b = a) :
+    «异» (continuationStep (passingContinuation passes)) V.activityClass V.carrierClass
+      (t, b) (t + 1, a) :=
+  ⟨⟨⟨rfl, .inr given⟩, ⟨fun _ => carried, fun _ => carrier⟩⟩, fun same => other same.2⟩
+
+/-- **火传 (《庄子·养生主》「指窮於爲薪，火傳也」).** A carrier that ceases across a step while it
+passes the pattern to a formation carrying it after the step ends (亡) under the carrier class and
+does not end under the pattern's class: the step is an alteration (异). The firewood is used up;
+the fire is passed on. -/
+theorem passing_fire {t : Nat} {b a : F} (ceases : V.Ceases t b) (given : passes t b a)
+    (carried : V.active (t + 1) a) :
+    «亡» (continuationStep (passingContinuation passes)) V.carrierClass (t, b) ∧
+    ¬ «亡» (continuationStep (passingContinuation passes)) V.activityClass (t, b) ∧
+    «异» (continuationStep (passingContinuation passes)) V.activityClass V.carrierClass
+      (t, b) (t + 1, a) :=
+  have alters := alters_of_passes ceases.1 given carried fun same =>
+    ceases.2 (Eq.subst (motive := fun f => V.active (t + 1) f) same.symm carried)
+  ⟨(ceases_iff_wang_carrier.mp ceases).2, fun ends => ends ⟨_, alters.1⟩, alters⟩
+
+/-- **Derived from `«亡于粗则亡于细»`.** An occurrence carrying the pattern that nothing continues
+under the pattern's class (it neither carries on nor passes the pattern to any carrier) ends under
+the carrier class: its carrier ceases. -/
+theorem ceases_of_pattern_ends {t : Nat} {b : F} (carrying : V.active t b)
+    (ends : «亡» (continuationStep (passingContinuation passes)) V.activityClass (t, b)) :
+    V.Ceases t b :=
+  ceases_iff_wang_carrier.mpr ⟨carrying, «亡于粗则亡于细» _ (carrierClass_finer V) ends⟩
+
+/-- **The pattern's line (相续).** Under the passing premise, an occurrence carrying the pattern
+`k + 1` steps after `S` lies on a line under the pattern's class from an occurrence carrying it at
+`S`. -/
+theorem ByPassing.line_back (byPassing : V.ByPassing passes) {S : Nat} :
+    ∀ {k : Nat} {a : F}, V.active (S + (k + 1)) a →
+      ∃ b, V.active S b ∧
+        «相续» (continuationStep (passingContinuation passes)) V.activityClass (S, b)
+          (S + (k + 1), a)
+  | 0, a, after => match byPassing S a after with
+    | .inl before => ⟨a, before, .one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩⟩
+    | .inr ⟨b, carrier, given⟩ =>
+      ⟨b, carrier, .one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩⟩
+  | k + 1, a, after => match byPassing (S + (k + 1)) a after with
+    | .inl before => match line_back byPassing before with
+      | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
+          (.one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩)⟩
+    | .inr ⟨_, carrier, given⟩ => match line_back byPassing carrier with
+      | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
+          (.one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩)⟩
+
+/-- **The pattern lasts only through passing, derived from the grammar.** The statement of
+`Web.ByPassing.passes_within`, proved through `ByPassing.line_back` and `«两端分则中有标»`:
+the pattern's line from step `S` to step `S + d` has ends the carrier class tells apart (no
+carrier carries at two steps `d` apart), and every step of continuation keeps the carrier class or
+is a passing, so a passing lies on it, between `S` and `S + d`. -/
+theorem ByPassing.passes_within_by_line (byPassing : V.ByPassing passes) {d T : Nat}
+    (present : ∀ t, T ≤ t → V.Present t) (brief : ∀ a, V.Brief d a) {S : Nat}
+    (after : T ≤ S) : ∃ j, j < d ∧ V.PassesAt passes (S + j) :=
+  match d, present, brief with
+  | 0, present, brief => match present S after with
+    | ⟨a, carrying⟩ => absurd carrying (brief a S carrying)
+  | k + 1, present, brief =>
+    match present (S + (k + 1)) (Nat.le_trans after (Nat.le_add_right S (k + 1))) with
+    | ⟨a, carried⟩ => match byPassing.line_back carried with
+      | ⟨b, start, line⟩ =>
+        have apart : ¬ V.carrierClass (S, b) (S + (k + 1), a) := fun ⟨_, same⟩ =>
+          brief a S (Eq.subst (motive := fun f => V.active S f) same start) carried
+        have split : ∀ x y, «续» (continuationStep (passingContinuation passes)) V.activityClass
+            x y → V.carrierClass x y ∨ passes x.1 x.2 y.2 := fun _ _ ⟨⟨_, kind⟩, alike⟩ =>
+          match kind with
+          | .inl same => .inl ⟨alike, same⟩
+          | .inr given => .inr given
+        match «两端分则中有标» (carrierClass_class V) split line apart with
+        | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, to⟩ =>
+          have reached : V.activityClass (S, b) u := match from_ with
+            | .inl same => Eq.subst (motive := fun w => V.activityClass (S, b) w) same Iff.rfl
+            | .inr line' => «线内同类» (activityClass_class V) line'
+          have carrying : V.active u.1 u.2 := reached.mp start
+          have later : S ≤ u.1 := match from_ with
+            | .inl same => Nat.le_of_eq (congrArg Prod.fst same)
+            | .inr line' => Nat.le_of_lt (line_advances line')
+          have before : v.1 ≤ S + (k + 1) := match to with
+            | .inl same => Nat.le_of_eq (congrArg Prod.fst same)
+            | .inr line' => Nat.le_of_lt (line_advances line')
+          match le_dest later with
+          | ⟨j, at_⟩ =>
+            ⟨j, Naturals.le_of_add_le_add_left (k := S)
+                (Eq.subst (motive := fun s => s + 1 ≤ S + (k + 1)) at_
+                  (Eq.subst (motive := fun s => s ≤ S + (k + 1)) next before)),
+             Eq.subst (motive := fun s => V.PassesAt passes s) at_
+               ⟨u.2, v.2, carrying, given,
+                Eq.subst (motive := fun s => V.active s v.2) next (alike.mp carrying)⟩⟩
+
+/-- **Every beginning is a passing, derived from the grammar.** The statement of
+`Web.ByPassing.begins_passed`, proved through `«生于细而续于粗则异»`: a carrier's beginning is a
+beginning (生) under the carrier class, the passing premise gives it a predecessor under the
+pattern's class, so the step is an alteration (异), which is a passing. -/
+theorem ByPassing.begins_passed_by_grammar (byPassing : V.ByPassing passes) {t : Nat} {a : F}
+    (begins : V.Arises t a) : ∃ b, V.active t b ∧ passes t b a :=
+  match byPassing_iff_hasPred.mp byPassing t a begins.2 with
+  | ⟨x, continues⟩ =>
+    match «生于细而续于粗则异» (arises_iff_sheng_carrier (passes := passes).mp begins).2 continues with
+    | ⟨⟨⟨next, kind⟩, alike⟩, apart⟩ =>
+      have same : x.1 = t := (Nat.succ.inj next).symm
+      have carrier : V.active t x.2 :=
+        Eq.subst (motive := fun s => V.active s x.2) same (alike.mpr begins.2)
+      match kind with
+      | .inl same' => absurd ⟨alike, same'⟩ apart
+      | .inr given => ⟨x.2, carrier, Eq.subst (motive := fun s => passes s x.2 a) same given⟩
+
+end Web
+
+namespace PatternRelay
+
+/-- **火传 in the shifts.** Across every odd step the carrier of the shift ceases and passes the
+pattern to the next: its occurrence ends (亡) under the carrier class and alters (异) under the
+pattern's class. -/
+theorem shifted_fire (t : Nat) (parity : odd t = true) :
+    «亡» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.carrierClass
+      (t, Pulse.half t) ∧
+    ¬ «亡» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.activityClass
+      (t, Pulse.half t) ∧
+    «异» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.activityClass
+      shifted.carrierClass (t, Pulse.half t) (t + 1, Pulse.half t + 1) :=
+  Web.passing_fire
+    ⟨rfl, fun after => Nat.succ_ne_self (Pulse.half t) ((half_odd t parity).symm.trans after)⟩
+    ⟨parity, rfl, rfl⟩ (half_odd t parity)
+
+/-- **The grammar's `«亡于细者不必亡于粗»`, in the module's own witness.** The carrier class is
+finer than the pattern's class, and the occurrence of the first carrier at its last step ends
+under the carrier class and not under the pattern's. -/
+theorem fire_shape :
+    «则» shifted.carrierClass shifted.activityClass ∧
+    «亡» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.carrierClass (1, 0) ∧
+    ¬ «亡» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.activityClass
+      (1, 0) :=
+  ⟨Web.carrierClass_finer shifted, (shifted_fire 1 rfl).1, (shifted_fire 1 rfl).2.1⟩
 
 end PatternRelay
 

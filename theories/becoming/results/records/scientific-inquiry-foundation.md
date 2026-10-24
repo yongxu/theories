@@ -50,7 +50,7 @@
 
 Correspondence arguments and author counterreview; scoped readings of three primary sources each for restrictions, continuation and scientific standing, with access limits, and nine conceptual counterchecks. Formal results are reused from finite-fallible-inquiry-necessity and timely-response-necessity, whose receipts are in those records; the concrete balance-premise test and the proof of a weaker sufficient condition are among them. No experiment, cross-domain classifier validation or independent review; an earlier proposed test remains unrun.
 
-Canonical source: [SCIENTIFIC-PHILOSOPHY.md](../../chapters/SCIENTIFIC-PHILOSOPHY.md)
+Canonical source: [SCIENTIFIC-PHILOSOPHY.md](../../history/SCIENTIFIC-PHILOSOPHY.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -90,7 +90,7 @@ Map independent scientific achievements to the shared spine’s discrimination, 
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [SCIENTIFIC-PHILOSOPHY.md](../../chapters/SCIENTIFIC-PHILOSOPHY.md) | — |
+| statement | [SCIENTIFIC-PHILOSOPHY.md](../../history/SCIENTIFIC-PHILOSOPHY.md) | — |
 | integration | [SCIENTIFIC-INQUIRY-CONDITIONS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md) | — |
 | provenance | [2026-10-08-knowledge-content-continuation.md](../../../../sources/15-codex-theory-conversations/2026-10-08-knowledge-content-continuation.md) | — |
 | review | [SCIENTIFIC-FOUNDATION-CORRESPONDENCE-REVIEW.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-FOUNDATION-CORRESPONDENCE-REVIEW.json) | — |

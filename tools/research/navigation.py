@@ -20,7 +20,7 @@ HISTORY = ROOT / '_process/architecture/history-manifest.json'
 MANIFEST = ROOT / '_process/architecture/generated-manifest.json'
 THEORY = 'theories/becoming'
 CHAPTERS = THEORY + '/chapters'
-CANONICAL = CHAPTERS + '/THE-THEORY-OF-BECOMING.md'
+CANONICAL = THEORY + '/THE-THEORY-OF-BECOMING.md'  # the overview (RA, 23 October 2026); the eight chapters are in CHAPTERS
 # Documents a view links by their first path; moves.current_path follows the move receipts
 # once a document is moved (and keeps the path when a replacement is written there).
 FOUNDATION_COMPOSITION = '_process/research/2026-10-05-generative-foundation-review/root-foundation/FOUNDATION-COMPOSITION.md'
@@ -324,7 +324,7 @@ PAGES = [('README.md', 'The Theory of Becoming', None, 'home'),
          (THEORY + '/README.md', 'The Theory of Becoming', 'The Theory of Becoming / 生成／变化之论', 'stub'),
          (CHAPTERS + '/CLAIMS.md', 'Registered claims and historical ledger', '已登记主张与历史账本 / Registered claims and historical ledger', 'stub'),
          (THEORY + '/results/ROADMAP.md', 'Current research directions', '当前研究路线 / Current research directions', 'roadmap')]
-NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), ('RESULTS.md', 'Results'), ('GOALS.md', 'Scopes'), ('DEPENDENCIES.md', 'Connections'),
+NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), (THEORY + '/ONE-PAGE.md', 'One page'), (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), ('RESULTS.md', 'Results'), ('GOALS.md', 'Scopes'), ('DEPENDENCIES.md', 'Connections'),
        ('OPEN-QUESTIONS.md', 'Open questions'), ('_process/RESULT-WORKFLOW.md', 'Contribute')]
 WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
@@ -422,8 +422,8 @@ def render_views(records):
                     lines += result_block(r, path, '####')
             if conditional:
                 first, rest = conditional[0], conditional[1:]
-                lines += [H('###', 'Under the continuation condition (section 6.4)', 'Under the condition of section 6.15'), '',
-                          'The theory does not assert this condition; ' + link(CANONICAL + '#64-the-continuation-condition', path, 'section 6.4')
+                lines += [H('###', 'Under the continuation condition', 'Under the continuation condition (section 6.4)'), '',
+                          'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
                           'The ethics rests on two premises with two roles: the condition fixes scope, whose losses count, and C, calling widening better, alone orders; '
@@ -446,7 +446,7 @@ def render_views(records):
             lines += ['## Research and repository', '']
         if kind in ('home', 'brief'):
             if kind == 'brief':
-                lines += ['Canonical entry: ' + link(CANONICAL, path, 'The Theory of Becoming') + ', with its premise card, the argument once (sections 1–7, the continuation condition in section 6.4), the theorem map, the open programme, the formal spine and the place of earlier chapters. ' + link('_process/BECOMING-WORKBOARD.md', path, 'The work board') + ' holds claims and the landing queue.', '']
+                lines += ['Canonical entry: ' + link(CANONICAL, path, 'The Theory of Becoming') + ', the overview, which states the theory in one account and leads to the eight chapters (' + link(CHAPTERS + '/01-ROOT.md', path, 'the root') + ' first, ' + link(CHAPTERS + '/08-METHOD.md', path, 'method') + ' last), each result stated once in its home section; ' + link(THEORY + '/ONE-PAGE.md', path, 'the one page') + ' says it in a page. ' + link('_process/BECOMING-WORKBOARD.md', path, 'The work board') + ' holds claims and the landing queue.', '']
             repository = markdown_file('readme_repository', path, config)
             if repository:
                 lines += [repository, '']

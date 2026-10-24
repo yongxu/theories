@@ -66,7 +66,7 @@
 
 | # | 项 | 早期出处 | 现行脊柱上的对应 | 去处 | 注意 |
 |---|---|---|---|---|---|
-| A1 | **闭的词汇对照**：伪开三型（I 局部开而全局闭；II 短期开而长期闭；III 表开而元闭），以及成闭、护闭、元闭 | 间生论·四；补篇一 §十一；正篇 卷六 | I：`Becoming.Continuation`、`Coarse`、`Switching`；II：`Becoming.Horizon`、`Web.break_not_bounded`；III：`Law.rule_absorbing`、`Captured.state_perturbation_drawn`、`Law.perturbation_reabsorbed`；成闭：`Law.DrawnInto.never_back` | 章节词汇表。现行章节自承三套闭的词汇「without a crosswalk. This table does not resolve that」（[THE-THEORY-OF-BECOMING.md](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md) l.1791） | 去掉按焦点分配的开度 O_a（分配给各自独立的所有者），只留结构类型 |
+| A1 | **闭的词汇对照**：伪开三型（I 局部开而全局闭；II 短期开而长期闭；III 表开而元闭），以及成闭、护闭、元闭 | 间生论·四；补篇一 §十一；正篇 卷六 | I：`Becoming.Continuation`、`Coarse`、`Switching`；II：`Becoming.Horizon`、`Web.break_not_bounded`；III：`Law.rule_absorbing`、`Captured.state_perturbation_drawn`、`Law.perturbation_reabsorbed`；成闭：`Law.DrawnInto.never_back` | 章节词汇表。现行章节自承三套闭的词汇「without a crosswalk. This table does not resolve that」（[THE-THEORY-OF-BECOMING.md](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md) l.1791） | 去掉按焦点分配的开度 O_a（分配给各自独立的所有者），只留结构类型 |
 | A2 | **开 = 未·可·应·转** | 间生论·四；补篇一 §十；正篇 六一 | 未／开维：`World.arising_opens`、`Flow.new_beyond_every`；可：`Onward.run_iff_continues`；应：`ExchangeLaw.RespondsTo`；转：`Returns`、`Becoming.Dependence`、`Becoming.Rejoining`；「开非更多」：`Branching.Transit.keeps_not_returns` | 词汇表对照行，加一条读法 | 现行的 openness 只对应「未／开维」。若把「转」读作回归，它蕴含「可」，四者便不独立。「稳」（扰后不坍，判为好）与「元闭」（判为坏）是同一结构，都是扰动被吸回；价值写在定义里，正说明价值只应经 §6.15 进入 |
 | A3 | **九句的「归／不归」** | README 古文前言 | 脊柱把它分为三种：无损的回归（`Lossless.returns`）有不息而无生生；被吸引者不归（`Law.Drawn.not_returns`、`Law.drawn_iff_lost`），是「收」；永不重访只在开放世界中可能（`unheld_of_new`、`more_needs_open`），这才是「续而生」 | 章节 D5 旁的读法。九句原文逐字保留，读法标 AI | 早期的二分把回归与被吸引混在一起。「极」若读作静，并不是「熄」（静≠停） |
 | A4 | **反诛心**：评判只可比较言与行，不可推断内心；不一致时应当问，而不是判 | `Core/Sincerity.lean`；义理 U | `Web.selects_alike_iff`（两段历史在评判者的耦合下相同，则一切经由这些耦合的选择都同样对待它们）；问 = 把被评判者纳入合耦（`Web.separates_all_iff_member`）；`Web.class_judge_iff` | §7.3、§3 的读法；可选一个实例模块（世界含言、行、内情三项） | `ConsentedSincerity` 是同意／权利的框架，不取 |
@@ -78,7 +78,7 @@
 | A10 | **人类命运共同体的三条件**：共开、共续、非夺共续 | `Core/Renlei.lean`；共同体之证 | 共开即合耦；共续即整体层面的生生不息（D5）；非夺共续即不取他者之续所依（`Flow.favours_reaching_beyond`） | §4 读法 | 早期是三个 Bool 字段，判词内置；共同体不可先立为实体 |
 | A11 | **墨经的四同、小故与大故** | 义理·形式逻辑 | 重同 `name_identifiesAlike`；体同 Wholes、Joining；合同 Situations；类同 Lumped；小故大故 Counterfactual、Dependence | 读法：每一种「同」都写明其关系依据 | 「合同」读作同处一境，不读作空间上同处 |
 | A12 | **积与礼：塑形与锁定；混→沌→灭** | 间生论·三、七、十二；补篇一 §二十六 | 锁定即 Capture 的吸收规则区；速率见 Frequency；损失之后的三种出路见 Dependence；`Law.lost_stays` | 读法 | 「德 := 积朝向护开」把价值写进了定义 |
-| A13 | **虚词表与「是」的拆分** | `wenyan-operators.md` §十一（l.715–853）、以（l.544）、isness（l.847） | 中文版已大量使用这些虚词：之 1,565、所 1,372、者 1,113、以 760、于 495、而 407、则 195、故 13 次；[HANZI-AND-THEORY-TREE](../../../../theories/becoming/chapters/HANZI-AND-THEORY-TREE.md) §6 说还需要关系标记 | 命名研究加一节：每个虚词在本理论中的一种结构关系，按 HANZI §5 的四条验收 | 早期 Lean 把 故≡则、未≡不 合并，正是这张表要防的。学派、五伦等行不取 |
+| A13 | **虚词表与「是」的拆分** | `wenyan-operators.md` §十一（l.715–853）、以（l.544）、isness（l.847） | 中文版已大量使用这些虚词：之 1,565、所 1,372、者 1,113、以 760、于 495、而 407、则 195、故 13 次；[HANZI-AND-THEORY-TREE](../../../../theories/becoming/history/HANZI-AND-THEORY-TREE-2026-10-23.md) §6 说还需要关系标记 | 命名研究加一节：每个虚词在本理论中的一种结构关系，按 HANZI §5 的四条验收 | 早期 Lean 把 故≡则、未≡不 合并，正是这张表要防的。学派、五伦等行不取 |
 | A14 | **社会吸引子笔记**（原仓库未提交，字节相同的副本已存于 [sources/07](../../../../sources/07-shengsheng-buxi/ssbx-repo/docs-next/10_formal_形式/r-attractor-capitalism.md)） | `docs-next/10_formal_形式/r-attractor-capitalism.md` | 吸引子只在给定更新律之后出现；有限的非单射律成盆，可逆律成环：Recurrence、Attraction；`q ∘ f = g ∘ q`：`Learning.goAlike_iff_lumped`；「看得见的相等不是全部相等」：Remainder；规则吸收：Capture | 应用读法，放在 §7 或应用章节。它把科层、法律、社交媒体、学术、军令与资本都读作「投影→选择→递归」 | 定理名不取金融或社会词；此为应用，不是核心 |
 
 ## 3. 纯核心的定理候选
@@ -161,7 +161,7 @@
 - **占位状态与「不主张」栏。** 早期账本（`claim-status-ledger.md`）分七种状态，并设「尚不可主张」一栏。现行记录已精确写出范围，但还没有两样东西：一个「占位」类别，指在承重处为空的陈述；一个明写的「不主张」栏。还可以加一个检查启发式，标出主张有内容、函数体却是 `id`、`True` 或常值的地方。早期仓库自己违反了这条纪律，正好作为警示样本。
 - **失败的模式。** 把判词写进定义、空的谓词、按定义成立却冠以大名的定理。现行的规则（判词不入定义；主张只说 Lean 所证；公理报告为空）正对着这些。
 - **量子读法的护栏。** 量子 ≠ 意识，纠缠 ≠ 心灵感应，不确定 ≠ 不可知，SU(3) ≠ 八卦（`量子物理语言 · 从虚到测` §十三），可用于章节中的量子读法。
-- **前人工作的分层。** `docs-next/00_start/research-position.md` 把易的形式化分为三层：已有学术成果（八卦的 (Z/2)³、序卦配对、邵雍、莱布尼茨）、边缘或启发性的、本工作原创的。[《易传与生成／变化之论》](../../../../theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md) 应据此注明前人：例如卦序「二二相耦，非覆即變」是孔颖达已说的。
+- **前人工作的分层。** `docs-next/00_start/research-position.md` 把易的形式化分为三层：已有学术成果（八卦的 (Z/2)³、序卦配对、邵雍、莱布尼茨）、边缘或启发性的、本工作原创的。[《易传与生成／变化之论》](../../../../theories/becoming/history/YI-ZHUAN-AND-BECOMING.md) 应据此注明前人：例如卦序「二二相耦，非覆即變」是孔颖达已说的。
 
 ## 5. 不应并入
 

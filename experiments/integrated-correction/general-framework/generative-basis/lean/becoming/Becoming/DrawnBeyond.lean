@@ -49,6 +49,18 @@ This module states them. The conditions beyond are listed apart from the family 
   (`Flow.Balances.rise_bounded_by_beyond`); a rise above all the whole held needs a step at which
   it is open, gaining from outside it (`Flow.Balances.open_of_rise_above`). In `Spreading` the
   store never stands above two (`Spreading.store_bounded`).
+* **Graded by the inflow.** Without the premise that the whole gains nothing, each law holds past
+  the whole's inflow (`Flow.inflow`), the gainless law being its case of no inflow: the two stocks
+  after the step with the loss are at most the two before with the inflow
+  (`Flow.Balances.beyond_falls_inflow`), so the beyond falls by at least the rise less the inflow
+  (`Flow.Balances.rise_lowers_beyond_inflow`); a rise above the slack and the inflow breaks a
+  dependence beyond (`Flow.Balances.breaks_beyond_inflow`, `Flow.Balances.rise_breaks_beyond_inflow`)
+  and a selection rewarding it favours the break (`Flow.favours_breaking_beyond_inflow`); a
+  formation giving the family more than it takes from it by more than it gives the whole beyond
+  what it takes from it takes from the beyond (`Flow.reaches_inflow`); over a stretch the family
+  rises by at most what the beyond lost and the stretch's inflow
+  (`Flow.Balances.rise_bounded_by_beyond_inflow`). An open whole, fed from outside, is not exempt:
+  only the part of a rise the inflow covers need not be drawn from beyond.
 
 **Reading (the AI's).** What a rise draws from beyond is depended on as soon as the rise, with
 what the exchange loses, exceeds the slack of the dependences there; the selection that rewards
@@ -134,11 +146,30 @@ theorem Balances.beyond_falls_exactly (balances : L.Balances W)
   (congrArg (· + L.lost (ds ++ rest) t) (total_append (W.level (t + 1)) rest ds).symm).trans
     ((balances.stock_lost gainless).trans (total_append (W.level t) rest ds))
 
-/-- **The beyond falls by at least the rise.** -/
+/-- **Within the inflow, the beyond falls by the rise and the loss.** In a balanced flow, across
+every step, the family's stock and the beyond's after the step, with what the whole loses across it,
+are at most the two before with the whole's inflow. -/
+theorem Balances.beyond_falls_inflow (balances : L.Balances W) :
+    W.stock ds (t + 1) + W.stock rest (t + 1) + L.lost (ds ++ rest) t ≤
+      W.stock ds t + W.stock rest t + L.inflow (ds ++ rest) t :=
+  Nat.le_trans (Nat.le_of_eq (congrArg (· + L.lost (ds ++ rest) t)
+      (total_append (W.level (t + 1)) rest ds).symm))
+    (Nat.le_trans (balances.stock_inflow (ds ++ rest) t)
+      (Nat.le_of_eq (congrArg (· + L.inflow (ds ++ rest) t) (total_append (W.level t) rest ds))))
+
+/-- **The beyond falls by at least the rise less the inflow.** -/
+theorem Balances.rise_lowers_beyond_inflow (balances : L.Balances W) :
+    W.stock ds (t + 1) + W.stock rest (t + 1) ≤
+      W.stock ds t + W.stock rest t + L.inflow (ds ++ rest) t :=
+  Nat.le_trans (Nat.le_add_right _ _) balances.beyond_falls_inflow
+
+/-- **The beyond falls by at least the rise**, where the whole gains nothing. -/
 theorem Balances.rise_lowers_beyond (balances : L.Balances W)
     (gainless : L.GainlessOn (ds ++ rest) t) :
     W.stock ds (t + 1) + W.stock rest (t + 1) ≤ W.stock ds t + W.stock rest t :=
-  Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (balances.beyond_falls_exactly gainless))
+  Nat.le_trans balances.rise_lowers_beyond_inflow
+    (Nat.le_of_eq ((congrArg (W.stock ds t + W.stock rest t + ·)
+      (gainlessOn_iff_inflow.mp gainless)).trans (Nat.add_zero _)))
 
 /-- **Under dissipation, by more than the rise:** at least one unit more for each formation
 taking from the whole. -/
@@ -149,15 +180,35 @@ theorem Balances.rise_lowers_beyond_dissipating (balances : L.Balances W)
   Nat.le_trans (Nat.add_le_add_left dissipates.takers_le_lost _)
     (Nat.le_of_eq (balances.beyond_falls_exactly dissipates.gainlessOn))
 
+/-- **Above the slack and the inflow, a dependence beyond breaks.** In a balanced flow, where each
+condition beyond is depended on at a need it meets, if the family's rise with what the whole loses
+exceeds the slack of those dependences and the whole's inflow, one of them is broken across the
+step. -/
+theorem Balances.breaks_beyond_inflow {dep : C → F} (balances : L.Balances W)
+    (met : W.MetOn dep rest t)
+    (exceeds : W.stock ds t + W.slack dep rest t + L.inflow (ds ++ rest) t <
+      W.stock ds (t + 1) + L.lost (ds ++ rest) t) :
+    ∃ c, c ∈ rest ∧ W.Broken t (dep c) c :=
+  met.breaks_of_falls balances.beyond_falls_inflow exceeds
+
+/-- **A rise above the slack and the inflow breaks a dependence beyond.** -/
+theorem Balances.rise_breaks_beyond_inflow {dep : C → F} (balances : L.Balances W)
+    (met : W.MetOn dep rest t)
+    (rises : W.stock ds t + W.slack dep rest t + L.inflow (ds ++ rest) t < W.stock ds (t + 1)) :
+    ∃ c, c ∈ rest ∧ W.Broken t (dep c) c :=
+  balances.breaks_beyond_inflow met (Nat.lt_of_lt_of_le rises (Nat.le_add_right _ _))
+
 /-- **Above the slack, a dependence beyond breaks.** In a balanced flow, where the whole gains
 nothing across a step and each condition beyond is depended on at a need it meets, if the
 family's rise with what the whole loses exceeds the slack of those dependences, one of them is
-broken across the step. -/
+broken across the step: the case of `Flow.Balances.breaks_beyond_inflow` with no inflow. -/
 theorem Balances.breaks_beyond {dep : C → F} (balances : L.Balances W)
     (gainless : L.GainlessOn (ds ++ rest) t) (met : W.MetOn dep rest t)
     (exceeds : W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t) :
     ∃ c, c ∈ rest ∧ W.Broken t (dep c) c :=
-  met.breaks_of_falls (m := 0) (Nat.le_of_eq (balances.beyond_falls_exactly gainless)) exceeds
+  balances.breaks_beyond_inflow met (Nat.lt_of_le_of_lt (Nat.le_of_eq
+    ((congrArg (W.stock ds t + W.slack dep rest t + ·) (gainlessOn_iff_inflow.mp gainless)).trans
+      (Nat.add_zero _))) exceeds)
 
 /-- **What nothing depends on counts in full.** Where the whole also holds conditions on which no
 dependence is named, their stock counts beside the slack: in a balanced flow where the whole gains
@@ -212,12 +263,33 @@ theorem Balances.breaks_beyond_ends {dep : C → F} (balances : L.Balances W)
   | ⟨c, mem, broken, unsettled⟩ =>
     ⟨c, mem, broken, fun active => unsettled ⟨active, (fixed c mem).1, (fixed c mem).2⟩⟩
 
+/-- **Selection favours breaking beyond, past the inflow.** In a balanced flow, let every condition a
+member of a group couples into be in the family, the conditions beyond lie outside it, and each
+condition beyond be depended on at a need it meets. Then every selection that holds of the flow's
+levels only where the family rises above the slack beyond and the whole's inflow, and holds of them,
+holds only where a formation outside the group has its dependence broken, on a condition no member
+of the group couples into. -/
+theorem favours_breaking_beyond_inflow {dep : C → F} {obs : F → C → Prop} {members : F → Prop}
+    {select : (Nat → C → Nat) → Prop} (balances : L.Balances W) (met : W.MetOn dep rest t)
+    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds)
+    (listed : ∀ h c, members h → W.CoupledInto obs h c → c ∈ ds)
+    (rewards : select W.level →
+      W.stock ds t + W.slack dep rest t + L.inflow (ds ++ rest) t < W.stock ds (t + 1))
+    (holds : select W.level) :
+    ∃ c, c ∈ rest ∧ W.Broken t (dep c) c ∧ ¬ members (dep c) ∧
+      ∀ h, members h → ¬ W.CoupledInto obs h c :=
+  match balances.rise_breaks_beyond_inflow met (rewards holds) with
+  | ⟨c, mem, broken⟩ =>
+    have unseen : ∀ h, members h → ¬ W.CoupledInto obs h c :=
+      fun h member couples => apart c mem (listed h c member couples)
+    ⟨c, mem, broken, fun member => unseen (dep c) member (.inl ⟨t, broken.1⟩), unseen⟩
+
 /-- **Selection favours breaking beyond.** In a balanced flow, let every condition a member of a
 group couples into be in the family, the conditions beyond lie outside it, the whole gain
 nothing across a step, and each condition beyond be depended on at a need it meets. Then every
 selection that holds of the flow's levels only where the family rises above the slack beyond,
 and holds of them, holds only where a formation outside the group has its dependence broken, on
-a condition no member of the group couples into. -/
+a condition no member of the group couples into: the case of `Flow.favours_breaking_beyond_inflow` with no inflow. -/
 theorem favours_breaking_beyond {dep : C → F} {obs : F → C → Prop} {members : F → Prop}
     {select : (Nat → C → Nat) → Prop} (balances : L.Balances W)
     (gainless : L.GainlessOn (ds ++ rest) t) (met : W.MetOn dep rest t)
@@ -227,22 +299,31 @@ theorem favours_breaking_beyond {dep : C → F} {obs : F → C → Prop} {member
     (holds : select W.level) :
     ∃ c, c ∈ rest ∧ W.Broken t (dep c) c ∧ ¬ members (dep c) ∧
       ∀ h, members h → ¬ W.CoupledInto obs h c :=
-  match balances.rise_breaks_beyond gainless met (rewards holds) with
-  | ⟨c, mem, broken⟩ =>
-    have unseen : ∀ h, members h → ¬ W.CoupledInto obs h c :=
-      fun h member couples => apart c mem (listed h c member couples)
-    ⟨c, mem, broken, fun member => unseen (dep c) member (.inl ⟨t, broken.1⟩), unseen⟩
+  favours_breaking_beyond_inflow balances met apart listed (fun held => Nat.lt_of_le_of_lt
+    (Nat.le_of_eq ((congrArg (W.stock ds t + W.slack dep rest t + ·)
+      (gainlessOn_iff_inflow.mp gainless)).trans (Nat.add_zero _))) (rewards held)) holds
 
 /-! ## Without openness -/
 
-/-- Over a stretch at every step of which a family gains nothing, its stock does not rise. -/
-theorem Balances.stock_not_rises_over (balances : L.Balances W) {cs : List C} {S : Nat} :
-    ∀ N, (∀ t, S ≤ t → t < S + N → L.GainlessOn cs t) → W.stock cs (S + N) ≤ W.stock cs S
-  | 0, _ => Nat.le_refl _
-  | N + 1, gainless => Nat.le_trans
-      (balances.nonrising (gainless (S + N) (Nat.le_add_right S N) (Nat.lt_succ_self _)))
-      (Balances.stock_not_rises_over balances N fun t early late =>
-        gainless t early (Nat.lt_succ_of_lt late))
+/-- Over a stretch at every step of which a family gains nothing, its stock does not rise: the
+case of `Flow.Balances.stock_over_inflow` with no inflow. -/
+theorem Balances.stock_not_rises_over (balances : L.Balances W) {cs : List C} {S : Nat} (N : Nat)
+    (gainless : ∀ t, S ≤ t → t < S + N → L.GainlessOn cs t) : W.stock cs (S + N) ≤ W.stock cs S :=
+  Nat.le_trans (balances.stock_over_inflow cs S N)
+    (Nat.le_of_eq ((congrArg (W.stock cs S + ·) (total_eq_zero fun t mem =>
+      gainlessOn_iff_inflow.mp (gainless t (between_of_mem_steps mem).1
+        (between_of_mem_steps mem).2))).trans (Nat.add_zero _)))
+
+/-- **Over a stretch, the beyond bounds the rise past the inflow.** In a balanced flow, the family's
+stock at the end of a stretch, with the beyond's, is at most the two at its start with the whole's
+inflow across every step of the stretch. -/
+theorem Balances.rise_bounded_by_beyond_inflow (balances : L.Balances W) (S N : Nat) :
+    W.stock ds (S + N) + W.stock rest (S + N) ≤
+      W.stock ds S + W.stock rest S + total (steps S N) (L.inflow (ds ++ rest)) :=
+  Nat.le_trans (Nat.le_of_eq (total_append (W.level (S + N)) rest ds).symm)
+    (Nat.le_trans (balances.stock_over_inflow (ds ++ rest) S N)
+      (Nat.le_of_eq (congrArg (· + total (steps S N) (L.inflow (ds ++ rest)))
+        (total_append (W.level S) rest ds))))
 
 /-- **Without openness, the beyond bounds the rise.** Over a stretch at every step of which the
 family with the conditions beyond it gains nothing, the family's stock at the end, with the
@@ -283,16 +364,30 @@ theorem sign_of_pos : ∀ {x : Nat}, 0 < x → sign x = 1
 theorem reach_of_pos {f : F} (pos : 0 < total rest (L.take t f)) : L.reach rest t f = 1 :=
   sign_of_pos pos
 
-/-- **Raising from nothing new is reaching beyond.** Where the whole gains nothing across a
-step, a formation taking part that gives the family more than it takes from it takes from the
+/-- **Raising past what it adds is reaching beyond.** A formation that gives the family more than
+it takes from it by more than it gives the whole beyond what it takes from the whole takes from the
 conditions beyond. -/
-theorem RaisesOn.reaches (gainless : L.GainlessOn (ds ++ rest) t) {f : F}
-    (present : f ∈ L.present t) (raises : L.RaisesOn ds t f) : 0 < total rest (L.take t f) :=
-  have chain : total ds (L.take t f) < total ds (L.take t f) + total rest (L.take t f) :=
+theorem reaches_inflow {f : F}
+    (raises : total ds (L.take t f) + excess (total (ds ++ rest) (L.give t f))
+      (total (ds ++ rest) (L.take t f)) < total ds (L.give t f)) : 0 < total rest (L.take t f) :=
+  have chain : total ds (L.take t f) + excess (total (ds ++ rest) (L.give t f))
+      (total (ds ++ rest) (L.take t f)) < total ds (L.take t f) + total rest (L.take t f) +
+      excess (total (ds ++ rest) (L.give t f)) (total (ds ++ rest) (L.take t f)) :=
     Nat.lt_of_lt_of_le raises (Nat.le_trans (Nat.le_add_right _ (total rest (L.give t f)))
       (Nat.le_trans (Nat.le_of_eq (total_append (L.give t f) rest ds).symm)
-        (Nat.le_trans (gainless f present) (Nat.le_of_eq (total_append (L.take t f) rest ds)))))
-  Nat.lt_of_add_lt_add_left (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.add_zero _)) chain)
+        (Nat.le_trans (le_add_excess _ _) (Nat.le_of_eq (congrArg (· + excess
+          (total (ds ++ rest) (L.give t f)) (total (ds ++ rest) (L.take t f)))
+          (total_append (L.take t f) rest ds))))))
+  Nat.lt_of_add_lt_add_left (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.add_zero _))
+    (Nat.lt_of_lt_of_le chain (Nat.le_of_eq (Nat.add_right_comm _ _ _))))
+
+/-- **Raising from nothing new is reaching beyond.** Where the whole gains nothing across a
+step, a formation taking part that gives the family more than it takes from it takes from the
+conditions beyond: the case of `Flow.reaches_inflow` with nothing added. -/
+theorem RaisesOn.reaches (gainless : L.GainlessOn (ds ++ rest) t) {f : F}
+    (present : f ∈ L.present t) (raises : L.RaisesOn ds t f) : 0 < total rest (L.take t f) :=
+  reaches_inflow (Nat.lt_of_le_of_lt (Nat.le_of_eq ((congrArg (total ds (L.take t f) + ·)
+    (excess_zero_of_le (gainless f present))).trans (Nat.add_zero _))) raises)
 
 /-- A reading at least where another is positive, as signs. -/
 theorem sign_le_of_pos : ∀ {x y : Nat}, (0 < x → 0 < y) → sign x ≤ sign y

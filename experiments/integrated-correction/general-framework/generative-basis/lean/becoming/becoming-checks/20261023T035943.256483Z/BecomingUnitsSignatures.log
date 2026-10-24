@@ -1,0 +1,111 @@
+@Becoming.Flow.BalancesAt.on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W → ∀ (cs : List C) (t : Nat), L.BalancesAtOn r W cs t
+@Becoming.Flow.balancesAtOn_one : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat},
+  L.BalancesAtOn (fun x => 1) W cs t ↔ L.BalancesOn W cs t
+@Becoming.Flow.BalancesAtOn.over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat},
+  L.BalancesAtOn r W cs t → W.stock cs (t + 1) + L.uptake cs t = r t * W.stock cs t + L.replenishment cs t
+@Becoming.Flow.BalancesAtOn.lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat},
+  L.BalancesAtOn r W cs t → L.DissipatesOn cs t → W.stock cs (t + 1) + L.takers cs t ≤ r t * W.stock cs t
+@Becoming.Web.risesAt_one : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {c : C},
+  W.RisesAt (fun x => 1) t c ↔ W.Rises t c
+@Becoming.Web.fallsAt_one : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {c : C},
+  W.FallsAt (fun x => 1) t c ↔ W.Falls t c
+@Becoming.Flow.BalancesAtOn.comesToStand_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat} {c : C},
+  L.BalancesAtOn r W cs t → c ∈ cs → (W.ComesToStand t c ↔ W.level t c = 0 ∧ L.taken t c < L.given t c)
+@Becoming.Flow.BalancesAtOn.ceasesToStand_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat} {c : C},
+  L.BalancesAtOn r W cs t →
+    c ∈ cs → (W.CeasesToStand t c ↔ 0 < W.level t c ∧ L.taken t c = r t * W.level t c + L.given t c)
+@Becoming.Flow.BalancesAtOn.rise_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat} {c : C}, L.BalancesAtOn r W cs t → c ∈ cs → W.RisesAt r t c → 0 < L.given t c
+@Becoming.Flow.BalancesAtOn.fall_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat} {c : C}, L.BalancesAtOn r W cs t → c ∈ cs → W.FallsAt r t c → 0 < L.taken t c
+@Becoming.Flow.BalancesAtOn.rises_iff_gives : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat},
+  L.BalancesAtOn r W cs t →
+    (∀ (c : C), c ∈ cs → L.taken t c = 0) →
+      ((∃ c, c ∈ cs ∧ W.RisesAt r t c) ↔ ∃ f c, f ∈ L.present t ∧ c ∈ cs ∧ 0 < L.give t f c)
+@Becoming.Flow.DissipatesOn.still_untaken_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.BalancesAtOn r W cs t → (∀ (c : C), c ∈ cs → L.taken t c = 0) → ¬∃ c, c ∈ cs ∧ W.RisesAt r t c
+@Becoming.Flow.BalancesAtOn.taking_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat},
+  L.BalancesAtOn r W cs t →
+    L.DissipatesOn cs t →
+      ∀ {f : F}, f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.stock cs (t + 1) < r t * W.stock cs t
+@Becoming.Flow.BalancesAtOn.fall_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat} {c : C},
+  L.BalancesAtOn r W cs t → L.DissipatesOn cs t → c ∈ cs → W.FallsAt r t c → W.stock cs (t + 1) < r t * W.stock cs t
+@Becoming.Flow.BalancesAtOn.rise_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {cs : List C} {t : Nat} {c : C},
+  L.BalancesAtOn r W cs t → L.DissipatesOn cs t → c ∈ cs → W.RisesAt r t c → W.stock cs (t + 1) < r t * W.stock cs t
+@Becoming.Flow.risesAt_of_comesToStand : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → Nat} {t : Nat} {c : C},
+  W.ComesToStand t c → W.RisesAt r t c
+@Becoming.Flow.BalancesAtOn.comes_from_standing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {cs : List C} {t : Nat} {c : C},
+  L.BalancesAtOn r W cs t → L.DissipatesOn cs t → c ∈ cs → W.ComesToStand t c → 0 < W.stock cs t
+@Becoming.Flow.BalancesAtOn.arises_given : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {r : Nat → Nat}
+  {xs : List X} {t : Nat} {x : X},
+  L.BalancesAtOn r W xs t →
+    x ∈ xs →
+      (W.active t x ↔ 0 < W.level t x) →
+        (W.active (t + 1) x ↔ 0 < W.level (t + 1) x) →
+          (∀ (f : X), f ∈ L.present t → 0 < L.give t f x → W.active t f) →
+            W.Arises t x → ∃ f, W.active t f ∧ f ∈ L.present t ∧ 0 < L.give t f x ∧ f ≠ x
+@Becoming.Flow.runsDownOnAt_one : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C},
+  L.RunsDownOnAt (fun x => 1) W es t ↔ L.RunsDownOn W es t
+@Becoming.Flow.RunsDownOnAt.changes_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat}
+  {t : Nat} {es : List C},
+  L.RunsDownOnAt r W es t → ((∃ c, W.RisesAt r t c ∨ W.FallsAt r t c) ↔ W.stock es (t + 1) < r t * W.stock es t)
+Becoming.Doubling.double_pos : ∀ (n : Nat), 0 < Becoming.Doubling.double n
+Becoming.Doubling.runsDown : ∀ (t : Nat), Becoming.Doubling.flow.RunsDownOnAt (fun x => 2) Becoming.Doubling.web [()] t
+Becoming.Doubling.raw_reading_fails : ∀ (t : Nat),
+  Becoming.Doubling.web.Rises t () ∧
+    (¬∃ c, Becoming.Doubling.web.RisesAt (fun x => 2) t c ∨ Becoming.Doubling.web.FallsAt (fun x => 2) t c) ∧
+      ¬Becoming.Doubling.web.stock [()] (t + 1) < 2 * Becoming.Doubling.web.stock [()] t
+Becoming.unitFactor_one : ∀ (T k : Nat), Becoming.unitFactor (fun x => 1) T k = 1
+@Becoming.Web.supported_unchanged_by_split : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → Nat} {t : Nat} {g : F},
+  0 < r t →
+    (∀ (c : C), W.requires (t + 1) g c ↔ W.requires t g c) →
+      (∀ (c : C), W.requires t g c → W.need (t + 1) g c = r t * W.need t g c) →
+        (∀ (c : C), W.requires t g c → W.level (t + 1) c = r t * W.level t c) →
+          (W.Supported (t + 1) g ↔ W.Supported t g)
+@Becoming.Web.continuing_restores_in_unit : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → Nat} {T k : Nat} {g : F}
+  {c : C},
+  W.Supported (T + k) g →
+    W.requires (T + k) g c →
+      Becoming.unitFactor r T k * W.need T g c ≤ W.need (T + k) g c →
+        Becoming.unitFactor r T k * W.need T g c ≤ W.level (T + k) c
+@Becoming.Web.consumed_continues_transformed_in_unit : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → Nat} {T k : Nat}
+  {g : F} {c : C},
+  W.level (T + k) c < Becoming.unitFactor r T k * W.need T g c →
+    W.Supported (T + k) g → ¬(W.requires (T + k) g c ∧ Becoming.unitFactor r T k * W.need T g c ≤ W.need (T + k) g c)
+@Becoming.Web.inactive_below_in_unit : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → Nat} {t : Nat} {g : F} {c : C},
+  (W.active (t + 1) g → W.Supported (t + 1) g) →
+    W.level (t + 1) c < r t * W.need t g c →
+      W.requires (t + 1) g c → r t * W.need t g c ≤ W.need (t + 1) g c → ¬W.active (t + 1) g
+@Becoming.Flow.BalancesAtOn.rise_given_by_supported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat} {t : Nat} {c : C},
+  L.BalancesAtOn r W [c] t →
+    L.GiversSupported W t c → W.RisesAt r t c → ∃ g, g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g
+Becoming.Feeding.endless : Becoming.Feeding.flow.BalancesAt (fun x => 2) Becoming.Feeding.web ∧
+  (∀ (t : Nat), Becoming.Feeding.flow.DissipatesOn [()] t) ∧
+    (∀ (t : Nat),
+        Becoming.Feeding.web.active t () ∧
+          0 < Becoming.Feeding.flow.take t () () ∧ Becoming.Feeding.flow.given t () = 0) ∧
+      ∀ (t : Nat), Becoming.Feeding.web.Supported t ()
+@Becoming.DependenceWebs.continuing_restores_fixed_unit : ∀ {F C : Type} {W : Becoming.Web F C} {T k : Nat} {g : F}
+  {c : C},
+  W.Supported (T + k) g → W.requires (T + k) g c → W.need T g c ≤ W.need (T + k) g c → W.need T g c ≤ W.level (T + k) c
+@Becoming.DependenceWebs.chain_ends_at_once : ∀ {X : Type} {W : Becoming.Web X X},
+  W.Dependent →
+    ∀ {chain : Nat → X} {n : Nat},
+      (∀ (k : Nat), k < n → W.Embodied (chain k)) →
+        ∀ {T : Nat},
+          (∀ (k t : Nat),
+              k < n → T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) →
+            (∀ (t : Nat), T ≤ t → ¬W.active t (chain 0)) →
+              ∀ (k : Nat), k ≤ n → ∀ (t : Nat), T ≤ t → ¬W.active t (chain k)

@@ -76,6 +76,7 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at one mutual best response; here at every step of a course.
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). The joint excess T1's laws take as given, and the constructed gap between each drawer's own count and the joint draw, derived here for optimizers.
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). An order ranking whole courses over a horizon, against a renewal varying with the level.
+- related, not a proved adapter: [rest-by-balance](rest-by-balance.md). Optimum.ends_within is a case of rest by balance.
 
 **Used by:** [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md)
 
@@ -97,7 +98,7 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json) | — |
@@ -116,6 +117,9 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T045034.169350Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T051213.108860Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T052909.207642Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 
 Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing steps`, `open access over a renewing condition`, `the gate decides the draw`, `在更新之上重新优化将其终结`, `Becoming.Optimum.Reoptimizes`, `Becoming.Optimum.course_beyond`, `Becoming.Web.course_lost_iff`
 
@@ -124,6 +128,7 @@ Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing ste
 
 - 21 October 2026: added (SG4), a course of re-optimizing steps against a renewal: a dependence beyond is lost exactly where the draw exceeds the renewal, for good, and kept within it, with no gate; the renewal below the need decides only the drawers' take, bounded where it stops and at least the renewal a step where it does not; several optimizers jointly above it lose it; study section 291.
 - 21 October 2026, SG5: an optimizer ranking courses over a horizon, against a renewal given by a law of the level, holds a level of greatest renewal and leaves nothing at the horizon; level_add_drawn is now the case of level_add_drawn_of_within (record horizon-optima-hold-the-greatest-renewal, study section 292); this record's laws and their statements are unchanged.
+- 23 October 2026, EC6 (study section 375): Optimum.ends_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 
 </details>
 

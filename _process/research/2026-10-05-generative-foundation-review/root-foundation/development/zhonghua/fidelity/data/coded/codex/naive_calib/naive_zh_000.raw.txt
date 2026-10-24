@@ -1,0 +1,353 @@
+{
+  "segments": [
+    {
+      "seg_id": "jing0217",
+      "referents": [
+        {"span":"所触","sort":"relatum or role","status":"matched","counterpart":"x in Contains","rule":"M5","class":"none","tags":[]},
+        {"span":"一取与","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"另一取与","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"其步","sort":"step","status":"matched","counterpart":"n in Contains","rule":"M5","class":"none","tags":[]},
+        {"span":"有穷之一段","sort":"step","status":"matched","counterpart":"m","rule":"M4","class":"none","tags":[]},
+        {"span":"其步之始","sort":"step","status":"matched","counterpart":"n in Contains","rule":"M5","class":"none","tags":[]},
+        {"span":"终","sort":"step","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"另一取与所触之物","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":[]},
+        {"span":"重排","sort":"history or run","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"先后","sort":"claim or predicate","status":"matched","counterpart":"i < j and π i < π j in Keeps","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["S","σ"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0080",
+      "referents": [
+        {"span":"域之兼","sort":"world, web or flow","status":"matched","counterpart":"W","rule":"M3","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"待者","sort":"relatum or role","status":"matched","counterpart":"w","rule":"M2","class":"none","tags":[]},
+        {"span":"一运者","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"A","tags":["centre/will"]}
+      ],
+      "omissions":["C","parts"],
+      "connective_mismatches":[],
+      "predicate_excess":[
+        {"span":"运","note":"Motion is attributed to the matched whole; the supplied Whole declaration has no displayed body or movement relation."},
+        {"span":"待","note":"The waiting role can match w, but no relation defining that role is displayed in this segment's L(D)."}
+      ]
+    },
+    {
+      "seg_id": "jing0040",
+      "referents": [
+        {"span":"结","sort":"claim or predicate","status":"matched","counterpart":"W.Forms t g c","rule":"M1","class":"none","tags":[]},
+        {"span":"一待","sort":"claim or predicate","status":"matched","counterpart":"W.requires t g c","rule":"M5","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"matched","counterpart":"1 in t + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"步首","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"步后","sort":"step","status":"matched","counterpart":"t + 1","rule":"M5","class":"none","tags":[]},
+        {"span":"解","sort":"claim or predicate","status":"matched","counterpart":"W.Dissolves t g c","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["F","C","g","c","f"],
+      "connective_mismatches":[
+        {"kind":"iff_one_way","note":"The Forms and Dissolves equivalences in change_readings are expressed as plain definitional assertions."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0319",
+      "referents": [
+        {"span":"扰域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinInfluence W f g, read extensionally as the affected domain","rule":"M1","class":"none","tags":[]},
+        {"span":"及域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinReach W f g, read extensionally as the reachable domain","rule":"M1","class":"none","tags":[]},
+        {"span":"群域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinSystem W f g, read extensionally as the system domain","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["F","C","L","W","f","g"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0593",
+      "referents": [
+        {"span":"一衡流","sort":"world, web or flow","status":"matched","counterpart":"Becoming.Preemption.flow","rule":"M1","class":"none","tags":[]},
+        {"span":"运者","sort":"relatum or role","status":"matched","counterpart":"f in Acting and Taking","rule":"M2","class":"none","tags":[]},
+        {"span":"其所资","sort":"relatum or role","status":"matched","counterpart":"c in Taking","rule":"M2","class":"none","tags":[]},
+        {"span":"资之者","sort":"relatum or role","status":"matched","counterpart":"Bool.true","rule":"M2","class":"none","tags":[]},
+        {"span":"首步","sort":"step","status":"matched","counterpart":"0","rule":"M4","class":"none","tags":[]},
+        {"span":"其事","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"恒之内","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":["nature","ground"]},
+        {"span":"全行","sort":"history or run","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"其体","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":["nature"]},
+        {"span":"偏去其体之积之历","sort":"history or run","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"积之历","sort":"history or run","status":"matched","counterpart":"Becoming.Preemption.web.level","rule":"M1","class":"none","tags":[]},
+        {"span":"续","sort":"history or run","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"顾","sort":"significance","status":"excess","counterpart":"","rule":"none","class":"E","tags":["centre/will"]},
+        {"span":"每一方","sort":"standpoint","status":"excess","counterpart":"","rule":"none","class":"E","tags":["centre/will"]}
+      ],
+      "omissions":["Pos","sig","unrestricted","p"],
+      "connective_mismatches":[],
+      "predicate_excess":[
+        {"span":"资之者","note":"In the plain supplier reading, this gives Bool.true a supplying role; its displayed witness behavior takes one and gives zero."}
+      ]
+    },
+    {
+      "seg_id": "jing0488",
+      "referents": [
+        {"span":"衡","sort":"claim or predicate","status":"matched","counterpart":"L.Balances W","rule":"M1","class":"none","tags":[]},
+        {"span":"T","sort":"step","status":"matched","counterpart":"T","rule":"M4","class":"none","tags":[]},
+        {"span":"n","sort":"step","status":"matched","counterpart":"n","rule":"M4","class":"none","tags":[]},
+        {"span":"所与","sort":"amount","status":"matched","counterpart":"L.given (T + i) c","rule":"M1","class":"none","tags":[]},
+        {"span":"一所待 c","sort":"relatum or role","status":"matched","counterpart":"c","rule":"M2","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"matched","counterpart":"j","rule":"M4","class":"none","tags":[]},
+        {"span":"共取","sort":"amount","status":"matched","counterpart":"L.taken (T + j) c","rule":"M1","class":"none","tags":[]},
+        {"span":"自第 T 步至其前于 c 之共取之和","sort":"amount","status":"matched","counterpart":"Becoming.drawnBefore (fun i => L.taken (T + i) c) j","rule":"M1","class":"none","tags":[]},
+        {"span":"c 之积","sort":"amount","status":"matched","counterpart":"W.level (T + j) c","rule":"M1","class":"none","tags":[]},
+        {"span":"第 T 步之积","sort":"amount","status":"matched","counterpart":"W.level T c","rule":"M1","class":"none","tags":[]},
+        {"span":"第 T 步之积之半","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"二","sort":"amount","status":"matched","counterpart":"2","rule":"M4","class":"none","tags":[]},
+        {"span":"二之 n 次方","sort":"amount","status":"matched","counterpart":"2 ^ n","rule":"M4","class":"none","tags":[]},
+        {"span":"一","sort":"amount","status":"matched","counterpart":"1 in W.level T c + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"二之 n 次方减一","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["F"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0487",
+      "referents": [
+        {"span":"一环","sort":"history or run","status":"matched","counterpart":"v","rule":"M1","class":"none","tags":[]},
+        {"span":"感","sort":"claim or predicate","status":"matched","counterpart":"Becoming.CouplesAlways cs part k present (v i) (v (i + 1))","rule":"M5","class":"none","tags":[]},
+        {"span":"m","sort":"step","status":"matched","counterpart":"m","rule":"M4","class":"none","tags":[]},
+        {"span":"m＋1","sort":"step","status":"matched","counterpart":"m + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"1","sort":"step","status":"matched","counterpart":"1 in m + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"T","sort":"step","status":"matched","counterpart":"T","rule":"M4","class":"none","tags":[]},
+        {"span":"R","sort":"amount","status":"matched","counterpart":"R","rule":"M4","class":"none","tags":[]},
+        {"span":"T＋(m＋1)R","sort":"step","status":"matched","counterpart":"T + (m + 1) * R","rule":"M4","class":"none","tags":[]},
+        {"span":"环所在之所待","sort":"relatum or role","status":"matched","counterpart":"e","rule":"M2","class":"none","tags":[]},
+        {"span":"可致","sort":"amount","status":"matched","counterpart":"Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ (T + (m + 1) * R) e","rule":"M1","class":"none","tags":[]},
+        {"span":"其第 T 步之可致","sort":"amount","status":"matched","counterpart":"Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ T e","rule":"M1","class":"none","tags":[]},
+        {"span":"二","sort":"amount","status":"matched","counterpart":"2","rule":"M4","class":"none","tags":[]},
+        {"span":"二之 R 次方","sort":"amount","status":"matched","counterpart":"2 ^ R","rule":"M4","class":"none","tags":[]},
+        {"span":"其第 T 步之可致之二之 R 次方倍","sort":"amount","status":"matched","counterpart":"2 ^ R * Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ T e","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["F","cs","part","k","present","δ","M","D","bounded","into"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0486",
+      "referents": [
+        {"span":"体","sort":"relatum or role","status":"matched","counterpart":"h in inflow","rule":"M5","class":"none","tags":[]},
+        {"span":"起始之差","sort":"amount","status":"matched","counterpart":"δ c","rule":"M1","class":"none","tags":[]},
+        {"span":"D","sort":"amount","status":"matched","counterpart":"D","rule":"M4","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"matched","counterpart":"t in into","rule":"M4","class":"none","tags":[]},
+        {"span":"每一所待","sort":"relatum or role","status":"matched","counterpart":"c","rule":"M2","class":"none","tags":[]},
+        {"span":"应倍","sort":"amount","status":"matched","counterpart":"k t h c s d","rule":"M5","class":"none","tags":[]},
+        {"span":"应倍之和","sort":"amount","status":"matched","counterpart":"Becoming.inflow cs part k present t c","rule":"M1","class":"none","tags":[]},
+        {"span":"M","sort":"amount","status":"matched","counterpart":"M","rule":"M4","class":"none","tags":[]},
+        {"span":"t","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"可致","sort":"amount","status":"matched","counterpart":"Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c","rule":"M1","class":"none","tags":[]},
+        {"span":"1","sort":"amount","status":"matched","counterpart":"1","rule":"M4","class":"none","tags":[]},
+        {"span":"1＋M","sort":"amount","status":"matched","counterpart":"1 + M","rule":"M4","class":"none","tags":[]},
+        {"span":"1＋M 之 t 次方","sort":"amount","status":"matched","counterpart":"(1 + M) ^ t","rule":"M4","class":"none","tags":[]},
+        {"span":"D 乘 1＋M 之 t 次方","sort":"amount","status":"matched","counterpart":"D * (1 + M) ^ t","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["cs","part","k","present","δ"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0257",
+      "referents": [
+        {"span":"变","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]},
+        {"span":"二异者","sort":"configuration","status":"matched","counterpart":"x","rule":"M1","class":"none","tags":[]},
+        {"span":"二异者","sort":"configuration","status":"matched","counterpart":"y","rule":"M1","class":"none","tags":[]},
+        {"span":"行","sort":"history or run","status":"matched","counterpart":"r; 往 resumes its past history","rule":"M1","class":"none","tags":[]},
+        {"span":"此步","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"一状","sort":"configuration","status":"matched","counterpart":"s","rule":"M1","class":"none","tags":[]},
+        {"span":"一动","sort":"move","status":"matched","counterpart":"b","rule":"M1","class":"none","tags":[]},
+        {"span":"其果","sort":"configuration","status":"matched","counterpart":"u","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["determined"],
+      "connective_mismatches":[],
+      "predicate_excess":[
+        {"span":"采","note":"The plain choosing or selecting sense is attributed to the run; Takes records occurrence of a state/action pair, without a choice relation."}
+      ]
+    },
+    {
+      "seg_id": "jing0197",
+      "referents": [
+        {"span":"许变经此类之每步者","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"A","tags":["centre/will"]},
+        {"span":"变","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]},
+        {"span":"此类","sort":"map, lumping or feature","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"变经此类之每步","sort":"claim or predicate","status":"matched","counterpart":"P.step s a u and its image through π in FactorsThrough","rule":"M5","class":"none","tags":[]},
+        {"span":"状","sort":"configuration","status":"matched","counterpart":"s in FactorsThrough and Image","rule":"M5","class":"none","tags":[]},
+        {"span":"其类","sort":"value","status":"matched","counterpart":"π s","rule":"M5","class":"none","tags":[]},
+        {"span":"以其类代状之变","sort":"law or process","status":"matched","counterpart":"Becoming.Image P π","rule":"M1","class":"none","tags":[]},
+        {"span":"以其类代状之变之每步","sort":"claim or predicate","status":"matched","counterpart":"(Becoming.Image P π).step k a κ","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["A","Q","factors","k","a (move)","κ"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0320",
+      "referents": [
+        {"span":"唯以阈感入者","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M2","class":"none","tags":[]},
+        {"span":"阈","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"感","sort":"claim or predicate","status":"matched","counterpart":"obs in WithinCoupling, instantiated by Becoming.thresholdOnly","rule":"M5","class":"none","tags":[]},
+        {"span":"感域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinCoupling W Becoming.thresholdOnly f g, read extensionally","rule":"M1","class":"none","tags":[]},
+        {"span":"扰域","sort":"claim or predicate","status":"matched","counterpart":"L.WithinInfluence W f g, read extensionally","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["C","L","W","g"],
+      "connective_mismatches":[
+        {"kind":"iff_one_way","note":"即 presents the two domains as simply identical, rather than stating the displayed biconditional."}
+      ],
+      "predicate_excess":[
+        {"span":"感入","note":"The matched participant is presented as sensing and entering; the displayed thresholdOnly body is False and supplies no perceiving or entering relation."}
+      ]
+    },
+    {
+      "seg_id": "jing0001",
+      "referents": [
+        {"span":"所推出之辞","sort":"claim or predicate","status":"matched","counterpart":"p","rule":"M1","class":"none","tags":[]},
+        {"span":"据","sort":"claim or predicate","status":"matched","counterpart":"basis","rule":"M1","class":"none","tags":[]},
+        {"span":"若","sort":"family or list","status":"matched","counterpart":"context","rule":"M1","class":"none","tags":[]},
+        {"span":"据与若皆然之状","sort":"configuration","status":"matched","counterpart":"s","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["Index"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0128",
+      "referents": [
+        {"span":"变","sort":"law or process","status":"matched","counterpart":"P; Becoming.Law.process next in the Law declaration's U1","rule":"M5","class":"none","tags":[]},
+        {"span":"一行","sort":"history or run","status":"matched","counterpart":"r; Becoming.Law.orbit next s","rule":"M1","class":"none","tags":[]},
+        {"span":"状","sort":"configuration","status":"matched","counterpart":"r.state n; Becoming.Law.orbit next s n","rule":"M1","class":"none","tags":[]},
+        {"span":"一族","sort":"family or list","status":"matched","counterpart":"l; all","rule":"M1","class":"none","tags":[]},
+        {"span":"一量","sort":"map, lumping or feature","status":"matched","counterpart":"q","rule":"M1","class":"none","tags":[]},
+        {"span":"每步","sort":"step","status":"matched","counterpart":"n quantified in falls","rule":"M4","class":"none","tags":[]},
+        {"span":"每步之后","sort":"step","status":"matched","counterpart":"n + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"其值","sort":"value","status":"matched","counterpart":"q (r.state (n + 1)); q (Becoming.Law.orbit next s (n + 1))","rule":"M1","class":"none","tags":[]},
+        {"span":"此步所减","sort":"value","status":"matched","counterpart":"d n","rule":"M1","class":"none","tags":[]},
+        {"span":"步前之值","sort":"value","status":"matched","counterpart":"q (r.state n); q (Becoming.Law.orbit next s n)","rule":"M1","class":"none","tags":[]},
+        {"span":"有一步","sort":"step","status":"matched","counterpart":"n, the declaration's witness step","rule":"M4","class":"none","tags":[]},
+        {"span":"零","sort":"value","status":"matched","counterpart":"M.zero","rule":"M1","class":"none","tags":[]},
+        {"span":"同归","sort":"claim or predicate","status":"matched","counterpart":"The common-target transition relation in Branching.Lossless U1","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["Act","d","next","every","s"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0256",
+      "referents": [
+        {"span":"行","sort":"history or run","status":"matched","counterpart":"r; 往 resumes its past history","rule":"M1","class":"none","tags":[]},
+        {"span":"此步","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"一状","sort":"configuration","status":"matched","counterpart":"r.state n","rule":"M1","class":"none","tags":[]},
+        {"span":"一动","sort":"move","status":"matched","counterpart":"r.act n","rule":"M1","class":"none","tags":[]},
+        {"span":"其果","sort":"configuration","status":"matched","counterpart":"r.state (n + 1)","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["P","n"],
+      "connective_mismatches":[],
+      "predicate_excess":[
+        {"span":"采","note":"Selecting an action adds intentional agency to the matched run; the displayed state, act and step fields only record the action and transition."}
+      ]
+    },
+    {
+      "seg_id": "jing0592",
+      "referents": [
+        {"span":"资之者","sort":"relatum or role","status":"matched","counterpart":"Bool.true","rule":"M2","class":"none","tags":[]},
+        {"span":"首步","sort":"step","status":"matched","counterpart":"0; 此步 resumes this step","rule":"M4","class":"none","tags":[]},
+        {"span":"其事","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"恒之内","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":["nature","ground"]},
+        {"span":"全行","sort":"history or run","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"其体","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":["nature"]},
+        {"span":"偏去其体之积之历","sort":"history or run","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"积之历","sort":"history or run","status":"matched","counterpart":"Becoming.Preemption.web.level","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["Pos","sig","unrestricted","p"],
+      "connective_mismatches":[],
+      "predicate_excess":[
+        {"span":"资之者","note":"The plain supplier reading attributes supplying to Bool.true; the displayed witness takes one and gives zero."}
+      ]
+    },
+    {
+      "seg_id": "jing0196",
+      "referents": [
+        {"span":"变","sort":"law or process","status":"matched","counterpart":"P","rule":"M1","class":"none","tags":[]},
+        {"span":"类","sort":"map, lumping or feature","status":"matched","counterpart":"π","rule":"M1","class":"none","tags":[]},
+        {"span":"一法","sort":"law or process","status":"matched","counterpart":"Q","rule":"M1","class":"none","tags":[]},
+        {"span":"变之每步","sort":"claim or predicate","status":"matched","counterpart":"P.step s a u","rule":"M5","class":"none","tags":[]},
+        {"span":"理","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":["nature"]}
+      ],
+      "omissions":["S","A","K"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0398",
+      "referents": [
+        {"span":"诸阶","sort":"step","status":"matched","counterpart":"j","rule":"M4","class":"none","tags":[]},
+        {"span":"诸阶之可致","sort":"amount","status":"matched","counterpart":"Becoming.carriedWithin cs part σ k present δ j τ c","rule":"M1","class":"none","tags":[]},
+        {"span":"诸路","sort":"family or list","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"诸路之和","sort":"amount","status":"matched","counterpart":"Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c)","rule":"M1","class":"none","tags":[]},
+        {"span":"至一步","sort":"step","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"j+1","sort":"step","status":"matched","counterpart":"j + 1","rule":"M4","class":"none","tags":[]},
+        {"span":"1","sort":"step","status":"matched","counterpart":"1 in j + 1","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["F","C","cs","part","σ","k","present","δ","T","τ","a","c"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0162",
+      "referents": [
+        {"span":"一步","sort":"step","status":"matched","counterpart":"t","rule":"M4","class":"none","tags":[]},
+        {"span":"积","sort":"map, lumping or feature","status":"matched","counterpart":"l, the stock assigned across conditions","rule":"M1","class":"none","tags":[]},
+        {"span":"每所待","sort":"relatum or role","status":"matched","counterpart":"c in le and Admits","rule":"M2","class":"none","tags":[]},
+        {"span":"他积","sort":"map, lumping or feature","status":"matched","counterpart":"l'","rule":"M1","class":"none","tags":[]},
+        {"span":"他积之所容","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M2","class":"none","tags":[]}
+      ],
+      "omissions":["W"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0126",
+      "referents": [
+        {"span":"法","sort":"law or process","status":"matched","counterpart":"Becoming.Law.process next","rule":"M5","class":"none","tags":[]},
+        {"span":"每状","sort":"configuration","status":"matched","counterpart":"x in tells","rule":"M1","class":"none","tags":[]},
+        {"span":"二状","sort":"configuration","status":"matched","counterpart":"y in tells, distinct from the first state","rule":"M1","class":"none","tags":[]},
+        {"span":"其体","sort":"relatum or role","status":"matched","counterpart":"part x; part (Becoming.Law.orbit next (h i) n)","rule":"M1","class":"none","tags":[]},
+        {"span":"其余","sort":"relatum or role","status":"matched","counterpart":"rest x; rest (Becoming.Law.orbit next (h i) n)","rule":"M1","class":"none","tags":[]},
+        {"span":"k","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"两两相异之状","sort":"configuration","status":"matched","counterpart":"h i and h j","rule":"M1","class":"none","tags":[]},
+        {"span":"n","sort":"step","status":"matched","counterpart":"n","rule":"M4","class":"none","tags":[]},
+        {"span":"一族","sort":"family or list","status":"matched","counterpart":"ps","rule":"M1","class":"none","tags":[]},
+        {"span":"另一族","sort":"family or list","status":"matched","counterpart":"es; later 凡含诸其余之族 resumes this family","rule":"M1","class":"none","tags":[]},
+        {"span":"员数","sort":"amount","status":"matched","counterpart":"ps.length","rule":"M4","class":"none","tags":[]},
+        {"span":"员数","sort":"amount","status":"matched","counterpart":"es.length","rule":"M4","class":"none","tags":[]},
+        {"span":"二族之员数相乘","sort":"amount","status":"matched","counterpart":"ps.length * es.length","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["next","part","rest","h","k"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "jing0127",
+      "referents": [
+        {"span":"法","sort":"law or process","status":"matched","counterpart":"Becoming.Law.process next","rule":"M5","class":"none","tags":[]},
+        {"span":"凡状","sort":"configuration","status":"matched","counterpart":"x in reset; 诸状 also ranges over s in the conclusion","rule":"M1","class":"none","tags":[]},
+        {"span":"一步","sort":"step","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"同一者 p","sort":"relatum or role","status":"matched","counterpart":"p; the bodies after reset are identified with p","rule":"M1","class":"none","tags":[]},
+        {"span":"一状","sort":"configuration","status":"matched","counterpart":"y","rule":"M1","class":"none","tags":[]},
+        {"span":"一状之体","sort":"relatum or role","status":"matched","counterpart":"part y","rule":"M1","class":"none","tags":[]},
+        {"span":"族","sort":"family or list","status":"matched","counterpart":"all","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["next","part"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    }
+  ]
+}
+
+── cx · ok · session 01a163dc-f277-75e3-971c-c962052a2f2b · gpt-6-astra/high · bypass (mirrors Claude) · 764s · 64.1k tokens · 0 cmds
+continue: cx -r 01a163dc-f277-75e3-971c-c962052a2f2b "…"
+log: /Users/ren/.cache/cx/runs/20261022-204626-61905

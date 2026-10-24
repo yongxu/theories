@@ -32,7 +32,7 @@
 
 verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once, every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables. Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times. All readers were AI; no collation with a printed edition.
 
-Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md)
+Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -99,15 +99,15 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](../../chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | — |
+| statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](../../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | integration | [coverage.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json) | — |
 | integration | [names-decisions.tsv](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv) | — |
 | integration | [verify_zh.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py) | — |
 | integration | [build_tables.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py) | — |
 | review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/civilization-thought-v1.0/PROVENANCE.json) | — |
 | provenance | [2026-10-19-zhonghua-edition.md](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md) | — |
 

@@ -71,7 +71,7 @@ Price's equation (Price 1970): with mean offspring number w̄, w̄Δz̄ = Cov(w,
 - related, not a proved adapter: [selection-within-and-among-groups](selection-within-and-among-groups.md). The selection term divided into selection within groups and among them, for groups of equal size.
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). Drift: a sampled next generation undoes a step that Raises with a bounded weight.
 
-**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [drift-offspring-sampled](drift-offspring-sampled.md) · [selection-within-and-among-groups](selection-within-and-among-groups.md) · [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md) · [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md)
+**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [drift-offspring-sampled](drift-offspring-sampled.md) · [mutation-and-the-balance-it-sets](mutation-and-the-balance-it-sets.md) · [selection-within-and-among-groups](selection-within-and-among-groups.md) · [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md) · [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -84,7 +84,7 @@ Price's equation (Price 1970): with mean offspring number w̄, w̄Δz̄ = Cov(w,
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T072647.879143Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `the selection term proper, over generations`, `真正的选择项及其在世代中的进程`, `covariance form of Price's equation`, `response to selection over generations`, `Becoming.SelectionTerm.covariation`, `Becoming.SelectionTerm.offspring_covariation`, `Becoming.SelectionTerm.Flow.support_not_lower`
 

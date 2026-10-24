@@ -110,7 +110,7 @@ In “Truth exist” Ren wrote: “There is a set of universal invariations, tha
 | proof | [Standpoints.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean) | `Becoming.Valuation.significant_iff_held` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | review | [BECOMING-P42-P43-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P42-P43-REVIEW.md) | — |
 | provenance | [2026-10-10-strongest-claims-direction.md](../../../../sources/15-codex-theory-conversations/2026-10-10-strongest-claims-direction.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |

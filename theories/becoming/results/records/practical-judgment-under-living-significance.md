@@ -29,7 +29,7 @@ Living significance with the explicit practical commitments supports preservatio
 - Support relations specify the object of a practical reason but do not independently determine its priority.
 - Need windows, transition, replacement coverage and real losses still require correspondence.
 - It does not supply a complete mixed ranking.
-- **Counterexample:** The strength of the priority of basic conditions is an additional revisable commitment; crossed basic losses may remain incomparable, with no universal utility score. [source](../../chapters/PRACTICAL-JUDGMENT.md)
+- **Counterexample:** The strength of the priority of basic conditions is an additional revisable commitment; crossed basic losses may remain incomparable, with no universal utility score. [source](../../history/PRACTICAL-JUDGMENT.md)
 
 **Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
 
@@ -37,7 +37,7 @@ Living significance with the explicit practical commitments supports preservatio
 ## Progress
 
 1. Bridges closed: first mixed comparison, finite sacrifice limit, the four responses, responsibility, joint obligations, actual succession, conflict under imperfect evidence and faithful revision each receive principles with qualifications. [study](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/PRACTICAL-JUDGMENT-INTEGRATION.md#2-what-closes-the-previously-named-gaps)
-2. Timely continuation: return grades, substitution and actual handoff give need-relative support, replacement coverage and scoped comparison reasons; a favorable reason is kept distinct from the priority of basic conditions. [study](../../chapters/PRACTICAL-JUDGMENT.md#timely-continuation-and-support)
+2. Timely continuation: return grades, substitution and actual handoff give need-relative support, replacement coverage and scoped comparison reasons; a favorable reason is kept distinct from the priority of basic conditions. [study](../../history/PRACTICAL-JUDGMENT.md#timely-continuation-and-support)
 3. J1–J4 in the pure core: Becoming.Lexical states J1/J2 as the condition BasicPriority and Becoming.Frontier states J3/J4, every PracticalJudgment declaration with a core counterpart and an empty axiom report; FrontierFrames reads them on a frame, the options of a configuration being what one move reaches, and FrontierWorlds reads service across a handover in a world. The one classical step of PracticalJudgment (finite_frontier) is weak excluded middle, now a hypothesis calibrated on frames (choice_exists_iff_weakly). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#196-theorems-apart-from-the-base-largest-groups-first-the-practical-commitments-in-the-core-u3-u4)
 4. Assignment and discharge read in a world (U5): the joint plan at a step is the world's move, a relatum assigned the giving to a condition where it takes part and gives to it. Where a formation requires the condition at some step, someone gives at each such step and only one relatum does, its giving is required (sole_giver_required), and where only active formations give it is active there (sole_giver_active); an undertaking to give to what a formation requires is discharged where at every required step it is given or the formation no longer acts, and leaves no residual step (Discharged.no_residual). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#208-general-laws-read-on-the-base-joint-plans-inspection-narrowing-and-the-histories-of-words-u5)
 
@@ -46,7 +46,7 @@ Living significance with the explicit practical commitments supports preservatio
 
 Independent completion review accepted the explicit-commitment scope; the 30 theorems of the original package concern its form, not normative warrant. Since 19 October 2026 (receipt 20261019T092027.048735Z) J1–J4 are stated in the pure core (Lexical, Frontier) and read on frames and worlds (FrontierFrames, 22 theorems; FrontierWorlds, 8 since U5), all with empty axiom reports; choice_exists_iff_weakly calibrates the choice at every step as weak excluded middle. Timely continuation is interpretive application. The commitments stay argued, not proved.
 
-Canonical source: [PRACTICAL-JUDGMENT.md](../../chapters/PRACTICAL-JUDGMENT.md)
+Canonical source: [PRACTICAL-JUDGMENT.md](../../history/PRACTICAL-JUDGMENT.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -82,7 +82,7 @@ Roles arise through shared living and formed dependence; causation, benefit and 
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [PRACTICAL-JUDGMENT.md](../../chapters/PRACTICAL-JUDGMENT.md) | — |
+| statement | [PRACTICAL-JUDGMENT.md](../../history/PRACTICAL-JUDGMENT.md) | — |
 | receipt | [practical-judgment-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/practical-judgment-verification.json) | — |
 | provenance | [PracticalJudgment.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean) | `PracticalJudgment.better_trans`, `PracticalJudgment.transfer_requires_actual_successor`, `PracticalJudgment.competing_claims_incomparable` |
 | review | [PRACTICAL-JUDGMENT-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/PRACTICAL-JUDGMENT-REVIEW.md) | — |

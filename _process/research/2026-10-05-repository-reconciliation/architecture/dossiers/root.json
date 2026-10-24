@@ -1,0 +1,1162 @@
+[
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "§0 premises read off the exchange",
+  "summary": "Premises of the base read off a supplied law of exchange. Dissipation, embodiment and transmission are states of the law. Requirement is response where several exchanges are open.",
+  "source": "theorem map rows 829-831",
+  "status": "old-base",
+  "records": [
+   "premises-read-off-the-exchange",
+   "premises-that-are-states-of-the-law",
+   "requirement-over-open-exchanges"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "§1.1 one unfolding read in context",
+  "summary": "Relational identity and readings: a configuration is how it relates, separation loses exactly the relation, process and frame are readings of one unfolding, unity of readings, every base is a run, histories fix the law up to dead ends, trace and step-law equivalence, gluing under parity, context coherence, control-coherence loss, endpoint loss, joint-correlation reduction, and finite-trace transport (periphery).",
+  "source": "rows 832-846",
+  "status": "old-base",
+  "records": [
+   "configurations-alike-by-relation",
+   "separation-loses-the-relation",
+   "process-and-frame-as-readings",
+   "unity-of-readings",
+   "worlds-are-runs",
+   "histories-fix-law-up-to-dead-ends",
+   "trace-law-equivalence",
+   "gluing-under-parity",
+   "tests-fix-likeness-where-determined",
+   "becoming-context-coherence",
+   "control-coherence-loss",
+   "effective-capacity-and-eventual-reachability",
+   "endpoint-loss-and-return",
+   "joint-correlation-reduced-dynamics",
+   "finite-trace-transport"
+  ],
+  "note": "Root candidates. Need restating on the Grammar root.",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "§1.2 laws of every law of change",
+  "summary": "Recurrence under every law of change and without decidedness, attraction is not returning, possibly vs necessarily drawn, determinacy up to likeness, every loss passes a juncture, every origin passes the gate, lifting where branching is finite, coming and ceasing keep pace, what a commuting law keeps apart, and where a run goes on. All without premise.",
+  "source": "rows 847-858",
+  "status": "old-base",
+  "records": [
+   "recurrence-without-premise",
+   "recurrence-without-decidedness",
+   "attraction-is-not-returning",
+   "necessarily-drawn-is-not-returning",
+   "determinacy-up-to-likeness",
+   "every-loss-passes-a-juncture",
+   "every-origin-passes-the-gate",
+   "lifting-where-branching-is-finite",
+   "coming-and-ceasing-keep-pace",
+   "returning-where-the-course-branches",
+   "what-a-commuting-law-keeps-apart",
+   "where-a-run-goes-on"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "§1.3 counting, census and the rest theorem",
+  "summary": "The tally is the whole law of counting. Also: counting is a relation, counts exist where decided, the census balance (also under a continuation and read off the exchange), relata counted up to indiscernibility, listing once is decided identity, laws at coarser steps and finer units, time as a tower of discrete readings, and the map of premises. The rest theorem: openness is needed; rest under dissipation at every resolution, in any amounts and exactly where falls stop; rest from a finite reading; least loss as a premise of rest; refinement counted as a giving.",
+  "source": "rows 859-888",
+  "status": "old-base",
+  "records": [
+   "whole-law-of-counting",
+   "counts-exist-where-decided",
+   "counting-where-the-counts-exist",
+   "census-balance",
+   "census-balance-under-continuation",
+   "census-read-off-the-exchange",
+   "bounded-census-keeps-pace",
+   "ceasing-needs-arising",
+   "counting-standing-and-dependence",
+   "counting-under-enclosure",
+   "imbalance-as-relatum",
+   "relata-counted-up-to-indiscernibility",
+   "listing-once-is-decided-identity",
+   "laws-at-coarser-steps",
+   "laws-at-finer-units",
+   "continuous-time-as-tower",
+   "map-of-premises",
+   "merge-of-a-part-kept-by-the-rest",
+   "continued-change-needs-openness",
+   "rest-at-every-resolution",
+   "rest-from-a-finite-reading",
+   "rest-theorem-in-any-amounts",
+   "rest-exactly-where-falls-stop",
+   "least-loss-rest",
+   "rest-with-refinement-counted",
+   "space-and-its-parts",
+   "continuing-self-fed-from-beyond"
+  ],
+  "note": "The counting and identity laws go to root. The rest-theorem rows go to map (rest and settling).",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Balance derived from physics: first law, continuity, entropy production",
+  "summary": "Balance from the first law (periphery) and balance from conservation along a relation (core). Least loss from entropy production (periphery). These ground the World premise of balance in physical laws.",
+  "source": "rows 874-876",
+  "status": "current",
+  "records": [
+   "balance-from-the-first-law",
+   "balance-from-conservation-along-a-relation",
+   "least-loss-from-entropy-production"
+  ],
+  "note": "Unique physical grounding of a base premise. Fits root (premises as one model) or method (relation to known results, §8.7).",
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "§1.4 laws of one step, order of exchange, sum over histories",
+  "summary": "The laws of one step and their completeness, what they miss, independent exchanges commute unless joined, the order of exchanges is the invariant, only the order of change shows, normal forms need decided apartness, least footprint, the exact sum over histories and its losses, the step index from own courses, and interleavings building a world.",
+  "source": "rows 889-901",
+  "status": "old-base",
+  "records": [
+   "laws-of-one-step",
+   "laws-of-one-step-complete",
+   "one-step-missing-laws",
+   "exchanges-commute-unless-joined",
+   "order-of-exchanges-is-the-invariant",
+   "only-the-order-of-change-shows",
+   "normal-forms-need-decided-apartness",
+   "least-footprint-where-idleness-decided",
+   "sum-over-histories-exact",
+   "losses-of-the-sum-over-histories",
+   "the-step-index-from-own-courses",
+   "the-world-an-interleaving-builds",
+   "runs-on-families-chosen-step-by-step",
+   "order-of-exchanges-sharing-a-relatum"
+  ],
+  "unit": "canonical-5: THE-THEORY-OF-BECOMING.md lines 814-1221 (the theorem map)"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "In one sentence: what the Theory of Becoming explains",
+  "summary": "How relations form, persist, transform, degenerate and dissolve within one relational unfolding, and how life, evolution, knowing and evaluation differentiate within it, without assuming becoming is good.",
+  "source": "THE-THEORY-OF-BECOMING.md, Preface, l.14",
+  "status": "current",
+  "note": "candidate opening line of the new root chapter",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "history",
+  "title": "Ten central results list",
+  "summary": "Ten results carrying the argument: one change three readings; recurrence and attraction; premises carve parts; rest needs least loss or finite reading; order of what can form; closures and selection; joint excess and relative position; learning and identification; significance not in the dynamics; loops. None is new mathematics.",
+  "source": "Preface, Central results, l.31-45",
+  "status": "old-base",
+  "note": "index into §1-§6; each listed again in its section; regroup by new regions",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Representation: discrete steps, one shared index",
+  "summary": "Activity, level, exchange indexed by natural-number steps; no causal order beyond the index assumed; for local exchanges index read off own courses; real-valued time represented exactly for balance (Representation.Course.sample_balances, givenOver_coarse, XL2 study §365); within-step change not shown.",
+  "lean": [
+   "Interleavings.LocalLaw.world_index",
+   "world_reads_alike",
+   "renumber_reindexes",
+   "world_renumber_reads",
+   "Pair.apart_differs",
+   "Representation.Course.sample_balances",
+   "Representation.Course.givenOver_coarse",
+   "Representation.Oscillation.still_reading"
+  ],
+  "records": [
+   "XL2"
+  ],
+  "source": "§0 block A, l.75",
+  "status": "old-base",
+  "note": "overlaps §1.4; say once",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Representation: natural-number amounts and what depends on it",
+  "summary": "Levels, needs, takes, gives are naturals; least loss, loop doubling, novelty-needs-gain depend on it; general form Amounts.rests; in any amounts rest needs the census total to stop falling; no whole reading of an endlessly falling amount; over reals novelty needs gain exactly at least separation, held/damped loop laws.",
+  "lean": [
+   "Amounts.rests",
+   "Amounts.no_whole_reading",
+   "Halving.approaches_without_reaching",
+   "Halving.new_without_gain",
+   "Dyadic.half_return",
+   "World.InAmounts.change_stops_iff",
+   "Pass.endless_keeps_from_rest",
+   "Representation.separated_exceeds",
+   "Representation.held_polynomial_iff",
+   "Representation.every_bounded_iff",
+   "Becoming.LeastLoss",
+   "Becoming.InAmounts"
+  ],
+  "source": "§0 block A, l.76",
+  "status": "old-base",
+  "note": "duplicates §1.3 rest-in-any-amounts content",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Representation: Prop-valued activity, one kind of relatum, roles, thresholds, identity, pointwise",
+  "summary": "active : Nat → F → Prop (counting laws need decidedness; some laws exactly EM); one kind of relatum with flow and web, formations and conditions as roles (World.ofRoles); shared index of conditions by relabel; requirements as thresholds need ≤ level; identity across steps by naming; pointwise properties since no funext (Counts.unique).",
+  "lean": [
+   "Web.active",
+   "World.ofRoles",
+   "Becoming.Roles",
+   "relabel",
+   "Web.requires",
+   "Web.need",
+   "Web.Supported",
+   "Becoming.Identity",
+   "Pointwise",
+   "Counts.unique",
+   "Becoming.CensusCounts"
+  ],
+  "source": "§0 block A, l.77-83",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "The eight World premises",
+  "summary": "Activity needing support (Dependent), balance, only active give (Acting), only active take from what they draw on (Taking), dissipation (least whole-unit loss), embodiment, census (Counted), bounded transmission; weaker forms Carried and ArisingEmbodied; World.acting_across.",
+  "lean": [
+   "World.Dependent",
+   "World.Balanced",
+   "World.Acting",
+   "World.Taking",
+   "World.Dissipative",
+   "World.Embodied",
+   "World.Counted",
+   "World.Transmitting",
+   "World.Carried",
+   "World.ArisingEmbodied",
+   "World.acting_across"
+  ],
+  "records": [
+   "map-of-premises"
+  ],
+  "source": "§0 block C, l.94-107",
+  "status": "old-base",
+  "note": "to become one model of the grammar",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Premises contingent and independent",
+  "summary": "Seven premises each met and failed by some worlds (World.contingent); the eight independent (World.independent, World.none_follows); in hatch all hold and bind (World.hatch_binds); no finite world binds the census. Independence measures freedom of World's fields, not contingency in becoming.",
+  "lean": [
+   "World.contingent",
+   "World.independent",
+   "World.none_follows",
+   "World.hatch_binds",
+   "World.Finite.not_binds"
+  ],
+  "records": [
+   "map-of-premises"
+  ],
+  "source": "§0 block C, l.109-110",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Premises read off one exchange: five by construction, three states of the law",
+  "summary": "With the rest counted, balance, only-active giving/taking and (for a law) activity-needing-support hold by construction; balance holds iff rest never active, iff course feasible (nothing from nothing located in the law); census where a named family closes each step, LPO at every step; dissipation, embodiment, transmission are loss, no dormancy, heredity of response.",
+  "lean": [
+   "Becoming.Reading",
+   "Becoming.ExchangePremises",
+   "World.withRest",
+   "ExchangeLaw.readWorld_glue",
+   "World.withRest_closed_iff",
+   "ExchangeLaw.readWorld_closed_iff",
+   "ExchangeLaw.course_balances_iff",
+   "World.withRest_counted",
+   "Flow.listed_iff_lpo",
+   "ExchangeLaw.contingent",
+   "World.withRest_embodied_iff",
+   "ExchangeLaw.spreading_not_enclosed"
+  ],
+  "records": [
+   "E1",
+   "premises-read-off-the-exchange",
+   "census-read-off-the-exchange",
+   "premises-that-are-states-of-the-law"
+  ],
+  "source": "§0 block C, l.111-112",
+  "status": "old-base",
+  "note": "root re-rooting work (E1); unique, carry",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Balance from conservation along a relation and first-law reading",
+  "summary": "Levels balance exactly where no store generates entropy (balances_iff_stores_generate_nothing); over finitely many relata, balancing transfers along a relation exist iff total conserved on every family the relation closes (Continuity.balancing_iff, conservedOn_of_law; FL2 study §354).",
+  "lean": [
+   "balances_iff_stores_generate_nothing",
+   "Continuity.balancing_iff",
+   "Continuity.conservedOn_of_law"
+  ],
+  "records": [
+   "FL1",
+   "FL2"
+  ],
+  "source": "§0 block C, l.111",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Requirement over open exchanges: necessary response as weakest sound reading",
+  "summary": "Requirement read as necessary response gives activity-needing-support on every run, possible response does not; necessary response is the weakest such reading not reading the current level; a noisy law is a relation of exchange (XL4, study §369).",
+  "lean": [
+   "ExchangeRelation.reading_glue",
+   "ExchangeRelation.free_unsupported",
+   "ExchangeRelation.respondsBelow_weakest",
+   "ExchangeRelation.mayRespond_not_supports",
+   "NoisyLaw.readOffExchange"
+  ],
+  "records": [
+   "XL4",
+   "requirement-over-open-exchanges"
+  ],
+  "source": "§0 block C, l.113",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Central laws over every relation of exchange",
+  "summary": "Each of 33 central declarations taking balance or activity premises holds over what is read off an exchange with those premises discharged (Becoming.OverExchange; XL1, study §364); what remains a hypothesis is a state of the law; K3 checks every form.",
+  "lean": [
+   "Becoming.OverExchange",
+   "World.withRest_renewedBy",
+   "World.withRest_comes_to_rest_unrefuted",
+   "World.ReadOffExchange",
+   "ExchangeRelation.Runs.readOffExchange",
+   "ExchangeLaw.readWorld_readOffExchange",
+   "World.withRest_rest_idle"
+  ],
+  "records": [
+   "XL1"
+  ],
+  "source": "§0 block C, l.114",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Block D: process and correspondence premises",
+  "summary": "Process as a view of the one unfolding; observables, formation E, connection (Valuation.Connected, given by common conditions/interaction) as application obligations; readings of living (whole-run, stepwise, relation level), a disclosed choice no comparison uses; Held reads 'what wants its continuation' [D11]; 生生 read as generation generating generation compared by widening [D1].",
+  "lean": [
+   "Generative.Process",
+   "Frame.realized",
+   "Conditions",
+   "Valuation.Connected",
+   "Conditions.valuation",
+   "Web.valuation",
+   "Web.relations",
+   "Valuation.Held",
+   "Valuation.significant_iff_reached"
+  ],
+  "records": [
+   "D1",
+   "D11"
+  ],
+  "source": "§0 block D, l.118-127",
+  "status": "old-base",
+  "note": "correspondence rows belong to significance/method; process row to root",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Not assumed",
+  "summary": "Not assumed: becoming is good; inevitable improvement or growth; fixed common utility; independent owners of value; every change generative; a definite global causal order (only order of change used).",
+  "source": "§0, l.151",
+  "status": "current",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "One unfolding and its views (process, frame, world)",
+  "summary": "Start is one unfolding of relata; process, frame, world are views returning to it: a move is part of the configuration, a law read off its history, a claim a relatum; the base is the run, a world is a run by its type. World is the view where views glue, not the start.",
+  "source": "§1.1 In words, l.160-162, 170",
+  "status": "old-base",
+  "note": "core of the new root; to be restated over Becoming.Grammar",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "A history fixes the law it shows",
+  "summary": "Every history is a run of the least law it runs; a prior law adds only moves not taken; laws up to dead ends correspond to splice-closed families of histories.",
+  "lean": [
+   "shown_le_iff",
+   "shown_determined_iff",
+   "exists_law_iff",
+   "family_iff",
+   "same_histories_iff"
+  ],
+  "records": [
+   "histories-fix-law-up-to-dead-ends"
+  ],
+  "source": "§1.1, l.164",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "The move is part of the unfolding; a world is a run",
+  "summary": "Reading the move within the configuration changes no run (withMove_determined_iff); a world balances iff its levels run by the law of exchange (World.balances_iff_exchange); World is a run of the all-steps process, Web F C = Dependence Nat F C by rfl.",
+  "lean": [
+   "withMove_determined_iff",
+   "World.balances_iff_exchange",
+   "World.run_world",
+   "Run.world_webAt",
+   "Law.lossless_iff",
+   "Law.returns_iff"
+  ],
+  "records": [
+   "process-and-frame-as-readings",
+   "worlds-are-runs"
+  ],
+  "source": "§1.1, l.165-166",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "A configuration is how it relates (likeness by bisimulation)",
+  "summary": "Bisimilar configurations are alike; a description makes sense iff it identifies alike configurations, then unique and carries a law; tests fix likeness where frames determined (alike_iff_sameTests) and constructively for finite decided frames.",
+  "lean": [
+   "Alike.tests",
+   "identifiesAlike_iff",
+   "IdentifiesAlike.carries",
+   "alike_iff_sameTests",
+   "alike_iff_sameBranchingTests"
+  ],
+  "records": [
+   "configurations-alike-by-relation",
+   "tests-fix-likeness-where-determined",
+   "determinacy-up-to-likeness"
+  ],
+  "source": "§1.1, l.167, 170",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Separation loses the relation",
+  "summary": "Describing two parts separately recovers the whole iff the whole is rectangular, else loses exactly the relation (extra combinations); three parts can be related while every two are free.",
+  "lean": [
+   "separation_faithful_iff",
+   "separation_admits_extra",
+   "whole_not_in_pairs"
+  ],
+  "records": [
+   "separation-loses-the-relation"
+  ],
+  "source": "§1.1, l.168",
+  "status": "old-base",
+  "note": "key nondual result for root",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "reading",
+  "title": "Readings of §1.1: law and history, pair as least split",
+  "summary": "Law and history one unfolding read two ways; gap is memory, splice is its absence; action not a second cause; names carry nothing; root is the run; a pair is by relation, the least split not the least relation (Motion.neither_alone).",
+  "lean": [
+   "Motion.neither_alone"
+  ],
+  "records": [
+   "D23",
+   "D32",
+   "D33",
+   "D43"
+  ],
+  "source": "§1.1 Readings, l.172",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "One change, three readings; coming and ceasing keep pace",
+  "summary": "change_readings (Iff.rfl) and over_stretch tally with no premise; finitely many falling conditions keep rising (rising_recurs); finite decided worlds: arising recurs iff ceasing does; Accretion and Attrition show finiteness does the work.",
+  "lean": [
+   "change_readings",
+   "over_stretch",
+   "rising_recurs",
+   "World.arising_iff_ceasing",
+   "Accretion",
+   "Attrition"
+  ],
+  "records": [
+   "coming-and-ceasing-keep-pace"
+  ],
+  "source": "§1.2, l.178-180",
+  "status": "old-base",
+  "note": "central result 1",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Recurrence: lossless iff every configuration returns",
+  "summary": "Within finitely many configurations a determined law merges nothing iff every configuration returns; keeping history admits only that history and never returns (Run.keepHistory_shown, Becoming.Recurrence).",
+  "lean": [
+   "Law.lossless_iff_returns",
+   "Run.keepHistory_shown",
+   "Becoming.Recurrence"
+  ],
+  "records": [
+   "recurrence-without-premise",
+   "recurrence-without-decidedness"
+  ],
+  "source": "§1.2, l.181",
+  "status": "old-base",
+  "note": "central result 2",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Gate, onward, commuting laws",
+  "summary": "Every origin passes a decided gate (Gated.origin; DNE if gate is a proposition); within finitely many configurations a run exists iff a course reaches a return, no choice (run_iff_continues, run_iff_returning; searchedRun; in general exactly dependent choice); a law commuting with a moving map never merges a configuration with its image (symmetry breaking needed to merge).",
+  "lean": [
+   "Becoming.Gated",
+   "Gated.origin",
+   "Becoming.Onward",
+   "run_iff_continues",
+   "run_iff_returning",
+   "searchedRun",
+   "runs_iff_dependentChoice",
+   "Becoming.Commuting",
+   "Law.Commutes.apart",
+   "Law.Commutes.breaks"
+  ],
+  "records": [
+   "every-origin-passes-the-gate",
+   "where-a-run-goes-on",
+   "what-a-commuting-law-keeps-apart",
+   "lifting-where-branching-is-finite"
+  ],
+  "source": "§1.2, l.186",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Counting where the counts exist",
+  "summary": "A count is a relation existing iff what it counts is decided; census counts are a tally and counting laws hold under each premise subset, enclosure, finite worlds; with decided activity under each of 256 subsets laws are tally or tally plus nothing-arising; bounded census keeps pace even infinitely; in general exactly EM.",
+  "lean": [
+   "World.counting_under_counted",
+   "World.counting_under",
+   "World.law_iff_em"
+  ],
+  "records": [
+   "counting-where-the-counts-exist",
+   "bounded-census-keeps-pace",
+   "census-balance",
+   "whole-law-of-counting",
+   "counts-exist-where-decided",
+   "counting-under-enclosure",
+   "counting-standing-and-dependence",
+   "census-balance-under-continuation"
+  ],
+  "source": "§1.3, l.196",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "reading",
+  "title": "Readings of §1.3: theorems to the whole, premises to parts",
+  "summary": "Theorems belong to the whole, premises to parts; living is one part; 生起/止息 name activity starting/stopping, kept apart from generative/degenerative which do not overlap; a count is a relation; stepwise self-drawing verdict unused by comparisons.",
+  "records": [
+   "D2",
+   "D6",
+   "D43"
+  ],
+  "source": "§1.3 Readings, l.204",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "history",
+  "title": "Resolution and coarser-step records listed under §1.3",
+  "summary": "imbalance-as-relatum, rest-at-every-resolution, rest-with-refinement-counted, laws-at-finer-units, laws-at-coarser-steps, continuous-time-as-tower: listed only as records, not argued in text.",
+  "records": [
+   "imbalance-as-relatum",
+   "rest-at-every-resolution",
+   "rest-with-refinement-counted",
+   "laws-at-finer-units",
+   "laws-at-coarser-steps",
+   "continuous-time-as-tower",
+   "R4"
+  ],
+  "source": "§1.3 Records, l.206",
+  "status": "old-base",
+  "note": "content not stated in chapter; check records for whether to carry into map or method",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Order of change: disjoint exchanges commute",
+  "summary": "Commuting neighbouring exchanges with disjoint footprints keeps premises and reaches exactly renumberings keeping the partial order of joined exchanges; stuttering and idle-step removal keep premises; least footprint iff idleness decided; normal form needs decided apartness (Becoming.OrderNormal).",
+  "lean": [
+   "Footprinted.sorts_iff",
+   "Becoming.OrderNormal",
+   "Becoming.Reordering"
+  ],
+  "records": [
+   "only-the-order-of-change-shows",
+   "exchanges-commute-unless-joined",
+   "order-of-exchanges-is-the-invariant",
+   "normal-forms-need-decided-apartness",
+   "least-footprint-where-idleness-decided"
+  ],
+  "source": "§1.4, l.212",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Step index from own courses; interleavings and renumbering",
+  "summary": "Local laws; own courses fix configuration and fix the interleaving iff every two exchanges share a relatum; scheduler completes iff an interleaving exists; interleavings build balanced Worlds; index map makes standings read through own steps interleaving-invariant; where every exchange touches a relatum one renumbering carries one world to the other; apart relata differ (Pair.apart_differs); around-footprint keeps only identity.",
+  "lean": [
+   "run_of_courses",
+   "unique_iff",
+   "LocalLaw",
+   "ownCourse",
+   "Interleaves",
+   "schedule_iff",
+   "world_balances",
+   "world_swap",
+   "standings_of_courses",
+   "world_index",
+   "world_reads_alike",
+   "world_own",
+   "indexMap",
+   "index_matches",
+   "renumber_reindexes",
+   "world_renumber_reads",
+   "occurrence_matches",
+   "renumber_renumber",
+   "world_renumber_active",
+   "Pair.apart_differs",
+   "Pair.idle_unmatched",
+   "renumber_keeps",
+   "around_keeps_identity",
+   "touch_contains_iff",
+   "world_renumber_correspondence"
+  ],
+  "records": [
+   "R1",
+   "the-step-index-from-own-courses",
+   "the-world-an-interleaving-builds"
+  ],
+  "source": "§1.4, l.213-217",
+  "status": "old-base",
+  "note": "Becoming.Interleavings (R1)",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Laws of one step; sum over histories",
+  "summary": "A one-step pattern is realized iff it obeys the every-step law and each named local condition; running down adds continuity at positive levels; sum over histories equals stepwise transfer, exact preservation is one-step lumpability, with boundary witnesses.",
+  "lean": [
+   "OneStep.every_iff",
+   "OneStep.step_runsDown_iff",
+   "Weights.sum_courses",
+   "Weights.lumped_iff"
+  ],
+  "records": [
+   "laws-of-one-step-complete",
+   "laws-of-one-step",
+   "one-step-missing-laws",
+   "runs-on-families-chosen-step-by-step",
+   "sum-over-histories-exact",
+   "losses-of-the-sum-over-histories"
+  ],
+  "source": "§1.4, l.218-219",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "open",
+  "title": "Not shown about the step index",
+  "summary": "No Foata/unbounded normal form, continuous time, separate read/change footprints, endless courses, untouched exchanges, between-steps activity reading, whether every becoming has a local law (§8.5), whole-run counts. Reading [D30, D43]: index is a reading of relations, derived where exchanges share relata, else a representation choice moving only where apart standings fall.",
+  "records": [
+   "D30",
+   "D43"
+  ],
+  "source": "§1.4, l.221-223",
+  "status": "old-base",
+  "unit": "canonical-1"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Prelude and EdgeClosure: closure from a seed",
+  "summary": "The Prelude states each lemma on numbers, lists and options once, by recursion and without propext. EdgeClosure: reach from a seed contains the seed, is closed under the edges and lies within every kept property. The core's closure of a relation equals this closure (withinClosure_iff_closure, reach_iff_withinClosure). No premise is needed.",
+  "source": "§9 zh-table rows Prelude, EdgeClosure (l.1532,1536)",
+  "status": "old-base",
+  "lean": [
+   "Becoming.Prelude",
+   "Becoming.EdgeClosure",
+   "Closure.induction",
+   "withinClosure_iff_closure",
+   "reach_iff_withinClosure"
+  ],
+  "records": [
+   "F1"
+  ],
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Core terms: unfolding, relatum roles, run, views, law, configuration, exchange, web",
+  "summary": "The one relational unfolding. Formation and condition are two roles of one relatum (Web.roles, relabel). A run is an infinite execution. Process, frame and world are views. A law is a rule of change read off its history (shown_le_iff). Exchange and balance; support and admission; the dependence web. Chinese renderings: 展开, 生成/变化 (D2, D45).",
+  "source": "§10(a) rows unfolding..dependence (l.1580-1588)",
+  "status": "old-base",
+  "lean": [
+   "Web.roles",
+   "Flow.roles",
+   "relabel",
+   "Run",
+   "World.run_world",
+   "Generative.Process",
+   "Frame",
+   "World",
+   "Law",
+   "shown_le_iff",
+   "Flow.Balances",
+   "World.balances_iff_exchange",
+   "Web.Supported",
+   "Web.Admits",
+   "Web.requires"
+  ],
+  "records": [
+   "D2",
+   "D45"
+  ],
+  "note": "Stated on the old World base; the new root is Becoming.Grammar",
+  "unit": "canonical-7: THE-THEORY-OF-BECOMING.md lines 1494-1964 (§9 formal spine, §10 glossary, §11 earlier chapters)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "obs as second supplied relation, derivable from dependence (OB1)",
+  "summary": "Coupling laws read obs (level coupling into a formation); it derives from dependence where response rises with level or level has a complement at fixed total; a genuine second relation only for falling response with no complement.",
+  "source": "THE-THEORY-OF-BECOMING.md §5 (line 552)",
+  "status": "old-base",
+  "lean": [
+   "carried_iff_rising",
+   "Complement.carry"
+  ],
+  "records": [
+   "OB1"
+  ],
+  "unit": "canonical-3: THE-THEORY-OF-BECOMING.md lines 445-701 (§4 Collective dynamics, §5 How evaluation forms, §6 Significance, comparison and practical judgment)"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "T8 thesis: one relational unfolding",
+  "summary": "Thesis, argued. Whatever is, is how it relates within one unfolding, and every distinction is drawn along relations. The representation needs only relations (identifiesAlike_iff, shown_le_iff, separation_faithful_iff). Five World premises hold by construction of a reading of one exchange and three are states of its law, and the central laws hold over exchange. This shows that no independent entity is needed, not that none exists. Neighbours: ontic structural realism, Whitehead, pratityasamutpada.",
+  "source": "THE-THEORY-OF-BECOMING.md, T8, line 1337",
+  "status": "old-base",
+  "lean": [
+   "identifiesAlike_iff",
+   "shown_le_iff",
+   "separation_faithful_iff",
+   "Becoming.ExchangePremises",
+   "Becoming.OverExchange"
+  ],
+  "note": "Its formal evidence is on the World base. Restate on Becoming.Grammar so the root chapter can state the thesis directly.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "root",
+  "kind": "open",
+  "title": "§8.1 item 1: one base, and the laws over every law of exchange",
+  "summary": "The base is one by definition (R28). The World family reaches the Process family and not conversely (families_reach_each_other). The other directions hold by construction (R43). The shared index is a reading for interleavings (R38, R46); a law reading relata no exchange connects stays on a chosen interleaving. XL1: the 33 central declarations have forms over exchange (Becoming.OverExchange). Open: which law holds (item 7) and the representation (item 6).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 1, line 1363",
+  "status": "old-base",
+  "lean": [
+   "families_reach_each_other",
+   "Frame.world_fixes_run",
+   "World.of_web",
+   "World.of_flow",
+   "Interleavings.LocalLaw.world_reads_alike",
+   "world_renumber_reads",
+   "Pair.apart_differs",
+   "Becoming.OverExchange"
+  ],
+  "records": [
+   "R28",
+   "R38",
+   "R43",
+   "R46",
+   "XL1",
+   "S4",
+   "theory-of-becoming-foundation",
+   "worlds-are-runs",
+   "premises-that-are-states-of-the-law",
+   "process-and-frame-as-readings",
+   "study §219",
+   "§233",
+   "§239",
+   "§252",
+   "§364"
+  ],
+  "note": "The new architecture (World as one model of Becoming.Grammar) supersedes this framing. Carry the exchange results; retire the R38 connectivity counts (925 statements, 503 of 11,552) as history.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "root",
+  "kind": "open",
+  "title": "§8.1 item 8: identity from continuity, not naming",
+  "summary": "R48: arising is forced along continuations exactly on counts. Material continuity is read by conservation, which fixes identity except where standings coincide. R49: renewing and consuming classes along splits and merges. R50: tenure and undermining along a continuation; where standings coincide, no record decides. The formal part is settled for conservation-read continuations. Open: informational and organizational continuations.",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.1 item 8, line 1370",
+  "status": "old-base",
+  "lean": [
+   "ListedWebs.forcedAlong_iff_more",
+   "ListedWebs.forcedAlong_of_eventually_noSplit",
+   "World.Conserves",
+   "World.fixed_iff",
+   "Becoming.ContinuedClasses",
+   "Web.underminingAlong_reidentify",
+   "Web.underminingAlong_mono",
+   "World.continues_as_alike"
+  ],
+  "records": [
+   "R48",
+   "R49",
+   "R50",
+   "identity-across-steps",
+   "classes-along-a-continuation",
+   "study §261",
+   "§262",
+   "§269"
+  ],
+  "note": "Root: continuation relative to a class; the grammar's lines and families should absorb this.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "§8.5 deductive necessity of the whole / internal relations",
+  "summary": "The open part of the warrant: the determinations are internally related moments of one unfolding. This is argued for the World premises' determinations (four ties hold by what the readings are). Open: every becoming has such an exchange law (items 6, 7). Requirement reduces to one step: necessary response is the weakest reading not reading the current level (ExchangeRelation.respondsBelow_weakest).",
+  "source": "THE-THEORY-OF-BECOMING.md, §8.5 first bullet, line 1401; §8.9 internal-relations bullet, line 1490",
+  "status": "old-base",
+  "lean": [
+   "ExchangeRelation.respondsBelow_weakest",
+   "Becoming.OverExchange"
+  ],
+  "note": "Duplicated by the §8.9 objection 'internal-relations thesis'.",
+  "unit": "canonical-6"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Candidate statement: activity forms, sustains, transforms and dissolves operative relations in one unfolding",
+  "summary": "Generation, loss and mixed consequences belong to one unfolding. Organization, life, inherited change, knowing and evaluation are differentiated achievements whose relations must be explained, not named substances. The temporal order an explanation uses must be warranted, not read off the order a model lists events in.",
+  "source": "theories/becoming/chapters/BECOMING-FOUNDATION.md, opening paragraph",
+  "status": "current",
+  "note": "duplicates the canonical chapter §1; the root chapter should state it once",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "The whole is wider than its generative forms",
+  "summary": "The foundational deduction concerns Becoming as a whole and must not require every becoming to be generative. Generation, persistence, transformation, degeneration and dissolution can overlap in one activity. A loss need not become beneficial or produce a successor; whether a change is generative is a substantive question.",
+  "source": "BECOMING-FOUNDATION.md, The whole and its generative forms; §1; §9 opening",
+  "status": "duplicate",
+  "note": "stated by the canonical chapter §1 (whole and manifold), as the chapter's own status note says",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Context coherence: pooling steps preserves histories iff the union is closed under joining at the shared boundary",
+  "summary": "For a nonempty family of processes over the same state and event interpretations, pooling their steps preserves exactly the union of endpoint histories if and only if that union is closed under joining at the shared represented boundary. Otherwise pooling invents unsupported histories. The positive construction retains the operative context, and the context can change by a joint event.",
+  "source": "BECOMING-FOUNDATION.md §2, §4, §6",
+  "status": "superseded",
+  "records": [
+   "becoming-context-coherence"
+  ],
+  "lean": [
+   "BecomingCompatibility (experiments/.../deeper/BecomingCompatibility.lean)"
+  ],
+  "note": "the record now states it; pre-spine module (20 theorems, one propext); credits NFA union (Sipser)",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "open",
+  "title": "Completion audit: remaining inference for each whole-scope requirement",
+  "summary": "For one unfolding, formed conditions, life, evolution and evaluation, strong zero-axiom warrant, and kept failures, it states what remains: establish relational unity and differentiation; explain each mode through its relations; earn interfaces; deduce the substantive whole claim; narrow claims on genuine counterexamples.",
+  "source": "BECOMING-FOUNDATION.md §5, last column",
+  "status": "current",
+  "records": [
+   "theory-of-becoming-foundation",
+   "coming-and-ceasing-keep-pace",
+   "space-and-its-parts",
+   "life-as-condition-of-life",
+   "evolution-on-descent",
+   "map-of-premises",
+   "continued-change-needs-openness",
+   "bounded-census-keeps-pace"
+  ],
+  "note": "the evidence column is superseded by the theorem map; the remaining-inference column is unique",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "Operative relations and causal order: no definite order required at every interface",
+  "summary": "Separates calculation order, implementation timing and the causal order attributed to operations. A definite causal order must not be required at every interface (quantum switch, Branciard). A continuing effect is a relation to establish, not a universal memory postulate.",
+  "source": "BECOMING-FOUNDATION.md §7",
+  "status": "superseded",
+  "records": [
+   "theory-of-becoming-foundation"
+  ],
+  "note": "the chapter says the records now state §7",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "Three claims compressed into 'the whole'",
+  "summary": "Separates inclusive scope (an undertaking), relational unity and differentiation (constitution within one unfolding, not shared inclusion in a description), and particular operative forms (no single generative mechanism everywhere). The missing deduction lies in relational unity at whole scope. A comparison with Hegel separates the category of becoming from a supplied cause.",
+  "source": "BECOMING-FOUNDATION.md §9",
+  "status": "current",
+  "note": "unique, per the chapter's status note",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "argument",
+  "title": "XL1: from inclusion to internal relation, by reading determinations off one exchange",
+  "summary": "With World fields chosen separately, the eight premises are independent and the whole is a collection. Read off one exchange instead (activity as exchanging, requirement as necessary response, the rest counted as a relatum), and balance, giving only by active relata, and activity needing support become internal. The 33 central laws then hold of every exchange (OverExchange, K3).",
+  "source": "BECOMING-FOUNDATION.md §9.1",
+  "status": "old-base",
+  "lean": [
+   "World.independent",
+   "Becoming.Reading",
+   "World.ReadOffExchange.dependent",
+   "World.takingUnsupported_not_readOff",
+   "Becoming.OverExchange"
+  ],
+  "records": [],
+  "note": "study §364; the strongest root argument in this unit; restate against the grammar",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Contingency lies in the law; differentiation is kept",
+  "summary": "Closure, dissipation, embodiment, bounded transmission and enclosure are states of the exchange law, met by some laws and failed by others with the ties holding (ExchangeLaw.contingent). Requirement is a counterfactual that no course fixes. Activity and standing come apart in dormancy, and losses count where they fall.",
+  "source": "BECOMING-FOUNDATION.md §9.1",
+  "status": "old-base",
+  "lean": [
+   "ExchangeLaw.contingent",
+   "ExchangeLaw.requirement_beyond_course",
+   "ExchangeLaw.still_not_embodied"
+  ],
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Trace composition and reachability as the least reflexive-transitive closure",
+  "summary": "Trace(s, u++v, t) holds iff some m has Trace(s, u, m) and Trace(m, v, t): the suffix starts where the prefix ends. Reach is the least reflexive-transitive relation containing the steps. With no steps, Reach is equality: composition manufactures no dynamics.",
+  "source": "MATHEMATICAL-CORE.md, Deriving finite histories; Reachability and the precise minimality result",
+  "status": "current",
+  "lean": [
+   "Generative.trace_append_iff",
+   "reach_without_steps_iff",
+   "GeneratedPaths"
+  ],
+  "note": "pre-spine; spine equivalents (Interleavings, Routes) likely restate these",
+  "unit": "chapters-foundation-method"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Identity across steps and classes along a continuation",
+  "summary": "Under a reading of holding, the class of a formation that holds throughout does not change. A re-identification keeps balance exactly where it stays within the conservation relation, and two relata that stand alike are not decided apart by any record. When more forces arising along a run is characterized exactly. Renewing and consuming read along continuations are invariant under re-identification, and a merge can flip the class. Open: sufficient conditions for a mixed census.",
+  "source": "§2.2 l.280",
+  "status": "old-base",
+  "lean": [
+   "Web.persisting",
+   "Web.steady_held",
+   "Dormancy.held_both",
+   "World.balanced_reidentify_iff",
+   "World.fixed_iff",
+   "World.continues_as_alike",
+   "ListedWebs.forcedAlong_iff_more",
+   "ListedWebs.forcedAlong_of_eventually_noSplit",
+   "Web.renewingAlong_iff",
+   "Web.consumingAlong_reidentify",
+   "MergeClass.readings",
+   "Web.underminingAlong_mono",
+   "Lineage.world_readings"
+  ],
+  "records": [
+   "identity-across-steps",
+   "classes-along-a-continuation",
+   "census-balance-under-continuation",
+   "living-on-and-descent"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Wholes of some part, of every part, and graded wholes (WH1)",
+  "summary": "Three wholes are defined. Web.Whole is active while some part is. AllWhole is active while every part is, so it ends when one part ends. The two coincide exactly where the parts are in step. Grade counts the active parts where activity is decided; an at-least-j whole arises and ceases only through a part, and a whole is diminished exactly where some parts are active but not all. 华严 and 墨经 passages are read onto these [D45].",
+  "source": "§2.2 l.282",
+  "status": "current",
+  "lean": [
+   "Becoming.Wholes",
+   "Web.AllWhole.ends_of_part",
+   "Web.AllWhole.persists_iff",
+   "Web.Whole.same_iff_inStep",
+   "Web.Grade",
+   "Web.Grade.across_step",
+   "Web.AtLeastWhole.arises_part",
+   "Web.diminished_iff"
+  ],
+  "records": [
+   "a-whole-of-every-part",
+   "whole-persists-through-generation"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Five levels of closure as one closure of a relation (EC1)",
+  "summary": "Own events, feeding, influence, reach and system are one closure (WithinClosure) under five relations. A process's reach is the same closure under its steps, the inclusions can be strict, and influence and reach point in opposite directions (Trophic). One common condition makes every system the whole.",
+  "source": "§2.5 l.330",
+  "status": "old-base",
+  "lean": [
+   "Flow.withinSystem_of_withinInfluence",
+   "Flow.withinInfluence_of_withinFeeding",
+   "WithinClosure",
+   "reach_iff_withinClosure",
+   "withinClosure_iff_closure",
+   "Clearing.levels",
+   "Trophic.mediates",
+   "Flow.system_whole_of_common",
+   "Flow.feeding_unrestricted_of_common"
+  ],
+  "records": [
+   "levels-of-closure"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "Which links a closure needs (cuts)",
+  "summary": "Removing links leaves every closure unchanged exactly where each removed link is bypassed. In a relation grown by attachment, every link separates its ends. On the base, every condition of a world grown by attachment is needed. GrownFragmentation's cuts are periphery instances.",
+  "source": "§2.5 l.333",
+  "status": "current",
+  "lean": [
+   "Cuts.closure_unchanged_iff_bypassed",
+   "Cuts.joined_cut_unchanged_iff",
+   "Flow.GrownBy.condition_needed"
+  ],
+  "records": [
+   "which-links-a-closure-needs"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "A move formed within the unfolding",
+  "summary": "A move is the part's own exactly where it is formed through the part's configuration (MoveFormation).",
+  "source": "§2.6 l.354",
+  "status": "old-base",
+  "lean": [
+   "Becoming.MoveFormation"
+  ],
+  "records": [
+   "where-a-move-is-formed"
+  ],
+  "unit": "canonical-2"
+ },
+ {
+  "region": "root",
+  "kind": "definition",
+  "title": "Spirit, Token, Space → Yi substrate",
+  "summary": "A society is spirits holding tokens in spaces. Building it showed the three are not disjoint, so it collapses to one primitive, Yi (a bare addressable root). Being is kind-bindings, truths are context-owned facts, and roles are read off context. A register of refusals (no universal table, no inherited permission). A host can operate without owning the constitution. Implemented in Bonfire.",
+  "source": "theories/spirit-space-token-and-yi-substrate/README.md, one paragraph and Status",
+  "status": "current",
+  "note": "Engineering ontology. It parallels the root move from separate entities to relations and classes read off a relation. Unique and not on the spine. Carry as an application; possibly an instance of the grammar's 'roles read off relations'.",
+  "unit": "earlier-folders (16 earlier theory folders under theories/, plus theories/becoming/OPENING.md and theories/becoming/README.md)"
+ },
+ {
+  "region": "root",
+  "kind": "law",
+  "title": "文 in the grammar of continuation (WL3)",
+  "summary": "With a law's step as 缘 and same value as the class, 文同 is exactly that class's core (Law.core_is_sameFuture). The coarsest value-keeping class is the core. Two steps of a 文 are one state exactly when they lie in one class of its step core. The bounded laws and learnability are stated through the core. A 文 with a new value at every step has no continuation (the fire case).",
+  "source": "WENLI-AND-BECOMING.md 第一部分 §一 文入续之文法",
+  "status": "current",
+  "records": [
+   "wen-in-the-grammar"
+  ],
+  "lean": [
+   "Becoming.GrammarCourse",
+   "Becoming.Law.core_is_sameFuture",
+   "Becoming.Law.coarsest_iff_core",
+   "Becoming.SameAhead.is_core",
+   "Becoming.SameAhead.no_continuation",
+   "Becoming.statesBelow_iff_core",
+   "Becoming.Law.learnable_iff_core"
+  ],
+  "note": "The only item in this unit already stated on the grammar root; it is the bridge from the knowing line to the root.",
+  "unit": "chapters-classical"
+ }
+]

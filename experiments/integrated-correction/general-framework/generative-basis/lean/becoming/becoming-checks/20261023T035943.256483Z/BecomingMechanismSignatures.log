@@ -1,0 +1,76 @@
+@Becoming.factors_image : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process S A) (π : S → K),
+  Becoming.FactorsThrough P π (Becoming.Image P π)
+@Becoming.Image.least : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K}
+  {Q : Generative.Process K A},
+  Becoming.FactorsThrough P π Q → ∀ {k : K} {a : A} {κ : K}, (Becoming.Image P π).step k a κ → Q.step k a κ
+@Becoming.image_determined_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K}, Becoming.Determined (Becoming.Image P π) ↔ Becoming.GoAlike P π
+@Becoming.carries_law_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  (∃ Q, Becoming.Determined Q ∧ Becoming.FactorsThrough P π Q) ↔ Becoming.GoAlike P π
+@Becoming.goAlike_id_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.GoAlike P id ↔ Becoming.Determined P
+@Becoming.goAlike_const : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process S A) (k : K),
+  Becoming.GoAlike P fun x => k
+@Becoming.goAlike_image_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K}
+  {L : Type u_4} {ρ : K → L}, Becoming.GoAlike (Becoming.Image P π) ρ ↔ Becoming.GoAlike P (ρ ∘ π)
+@Becoming.GoAlike.runs_agree : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  Becoming.GoAlike P π →
+    ∀ (r r' : Becoming.Run P),
+      (∀ (n : Nat), r.act n = r'.act n) → π (r.state 0) = π (r'.state 0) → ∀ (n : Nat), π (r.state n) = π (r'.state n)
+@Becoming.DependsOnlyOn.goAlike : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K}, Becoming.DependsOnlyOn P π → Becoming.GoAlike P π
+@Becoming.DependsOnlyOn.reabsorbed : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K},
+  Becoming.DependsOnlyOn P π →
+    ∀ (r r' : Becoming.Run P),
+      (∀ (n : Nat), r.act n = r'.act n) →
+        π (r.state 0) = π (r'.state 0) → ∀ (n : Nat), r.state (n + 1) = r'.state (n + 1)
+@Becoming.Law.dependsOnlyOn_iff : ∀ {S : Type u_1} {K : Type u_2} {next : S → S} {π : S → K},
+  Becoming.DependsOnlyOn (Becoming.Law.process next) π ↔ ∀ (s s' : S), π s = π s' → next s = next s'
+@Becoming.Law.reabsorbed : ∀ {S : Type u_1} {K : Type u_2} {next : S → S} {π : S → K},
+  (∀ (s s' : S), π s = π s' → next s = next s') →
+    ∀ {s s' : S}, π s = π s' → ∀ (n : Nat), Becoming.Law.orbit next s (n + 1) = Becoming.Law.orbit next s' (n + 1)
+@Becoming.adaptive_determined : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} (F : R → X → U → X) (G : R → X → R),
+  Becoming.Determined (Becoming.adaptive F G)
+@Becoming.adaptive_state_law_iff : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X} {G : R → X → R},
+  Becoming.GoAlike (Becoming.adaptive F G) Prod.fst ↔ ∀ (g g' : R) (x : X) (u : U), F g x u = F g' x u
+@Becoming.adaptive_state_carries_iff : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X}
+  {G : R → X → R},
+  (∃ Q, Becoming.Determined Q ∧ Becoming.FactorsThrough (Becoming.adaptive F G) Prod.fst Q) ↔
+    ∀ (g g' : R) (x : X) (u : U), F g x u = F g' x u
+@Becoming.ruleLaw_determined : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} (F : R → X → U → X) (g : R),
+  Becoming.Determined (Becoming.ruleLaw F g)
+@Becoming.Run.steps_by_rule : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X} {G : R → X → R}
+  (r : Becoming.Run (Becoming.adaptive F G)) {g : R} {t : Nat},
+  (∀ (n : Nat), n < t → (r.state n).snd = g) → r.StepsThrough Prod.fst (Becoming.ruleLaw F g) t
+@Becoming.Run.stepsThrough_retarget : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {Q : Generative.Process K A} {t : Nat},
+  r.StepsThrough π Q t →
+    ∀ {k : K} {a : A}, ¬r.TakesThrough π t k a → ∀ (κ₀ : K), r.StepsThrough π (Becoming.retarget Q k a κ₀) t
+@Becoming.Run.not_fixesThrough_of_untaken : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {t : Nat} {k : K} {a : A},
+  (∃ Q, Becoming.Determined Q ∧ r.StepsThrough π Q t) →
+    ¬r.TakesThrough π t k a → ∀ {κ₁ κ₂ : K}, κ₁ ≠ κ₂ → ¬∃ κ, r.FixesThrough π t k a κ
+@Becoming.Run.not_fixesThrough_of_goAlike : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K},
+  Becoming.GoAlike P π →
+    ∀ {t : Nat} {k : K} {a : A}, ¬r.TakesThrough π t k a → ∀ {κ₁ κ₂ : K}, κ₁ ≠ κ₂ → ¬∃ κ, r.FixesThrough π t k a κ
+@Becoming.inputs_determined : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} (F : X → U → E → X),
+  Becoming.Determined (Becoming.inputs F)
+@Becoming.inputs_intervention_unfixed : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} {F : X → U → E → X}
+  (r : Becoming.Run (Becoming.inputs F)) {t : Nat} {x : X} {u' : U} {e' : E},
+  ¬r.Takes t x (u', e') → ∀ {y z : X}, y ≠ z → ¬∃ w, r.Fixes t x (u', e') w
+@Becoming.inputs_model_fixes : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} (F : X → U → E → X) (x : X) (u' : U)
+  (e' : E),
+  (Becoming.inputs F).step x (u', e') (F x u' e') ∧ ∀ (w : X), (Becoming.inputs F).step x (u', e') w → w = F x u' e'
+@Becoming.forget_inputs_determined_iff : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} {F : X → U → E → X},
+  Becoming.Determined (Becoming.forget (Becoming.inputs F)) ↔ ∀ (x : X) (u : U) (e e' : E), F x u e = F x u e'
+Becoming.Coarse.not_determined : ¬Becoming.Determined Becoming.Coarse.process
+Becoming.Coarse.goAlike : Becoming.GoAlike Becoming.Coarse.process Prod.fst
+Becoming.Coarse.carries : ¬Becoming.Determined Becoming.Coarse.process ∧
+  Becoming.FactorsThrough Becoming.Coarse.process Prod.fst (Becoming.Law.process not) ∧
+    Becoming.Determined (Becoming.Law.process not)
+Becoming.Switching.determined : Becoming.Determined Becoming.Switching.process
+Becoming.Switching.not_goAlike : ¬Becoming.GoAlike Becoming.Switching.process Prod.fst
+@Becoming.Switching.no_state_law : ∀ {t : Nat},
+  2 ≤ t → ¬∃ Q, Becoming.Determined Q ∧ Becoming.Switching.run.StepsThrough Prod.fst Q t

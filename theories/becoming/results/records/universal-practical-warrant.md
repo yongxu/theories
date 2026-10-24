@@ -42,7 +42,7 @@
 
 Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, registration and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.
 
-Canonical source: [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
+Canonical source: [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](../../history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -74,7 +74,7 @@ Begin with formation, obstruction, sensing, response and transformation; explain
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](../../chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) | — |
+| statement | [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](../../history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) | — |
 | integration | [UNIFIED-ETHICAL-GROUNDING.md](../../history/UNIFIED-ETHICAL-GROUNDING.md) | — |
 | provenance | [2026-10-08-result-centered-repository.md](../../../../sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md) | — |
 | integration | [ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md) | — |

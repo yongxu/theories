@@ -57,7 +57,7 @@ Boundary source: [OrderNormal.lean](../../../../experiments/integrated-correctio
 | proof | [Reordering.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean) | `Becoming.Footprinted`, `Becoming.Footprinted.Contains`, `Becoming.Web.Unmoved`, `Becoming.Footprinted.Joined.mono`, `Becoming.Footprinted.Precedes.mono`, `Becoming.Footprinted.Keeps`, `Becoming.Footprinted.sorts_iff` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [provenance.json](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-p88-landing/provenance.json) | — |
 | provenance | [TASK.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-p88-landing/evidence/TASK.md) | — |

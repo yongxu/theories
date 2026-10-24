@@ -188,6 +188,20 @@
         "en": "The selection term proper, bounded here by the spreads.",
         "zh": "真正的选择项，此处受离散度约束。"
       }
+    },
+    {
+      "id": "mutation-and-the-balance-it-sets",
+      "detail": {
+        "en": "Mutation, the transmission side of the same step.",
+        "zh": "突变，同一步的传递一侧。"
+      }
+    },
+    {
+      "id": "the-breeding-value",
+      "detail": {
+        "en": "Several carried amounts at once: the breeding value.",
+        "zh": "同时经由多个所载之量：育种值。"
+      }
     }
   ],
   "references": [
@@ -287,7 +301,7 @@
         "Becoming.Reproduction.twice_mul",
         "Becoming.Reproduction.variation"
       ],
-      "sha256": "3f1a5fb1f6697a96a0002c167a4e93a16de0bc1c9832e7cef26309abdc8f0ae9"
+      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -314,23 +328,29 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "c972d396cc37b695c54342289fc4959470e5e730c276c789f9d814c6466df608"
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -347,6 +367,14 @@
     {
       "en": "20 October 2026: added (EV10), the additive part of Fisher's theorem through one carried amount: counted Cauchy-Schwarz, the additive variance at most the whole, the response over generations bounded; study section 279.",
       "zh": "2026年10月20日：新增（EV10），经由一个所载之量的 Fisher 定理加性部分：计数形式的 Cauchy-Schwarz、加性方差至多为全部、世代响应有界；研究第 279 节。"
+    },
+    {
+      "en": "22 October 2026, EV13-EV16: related record mutation-and-the-balance-it-sets added (study section 368); its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV13-EV16：加入相关记录 mutation-and-the-balance-it-sets（研究第 368 节）；定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, EV13-EV16: related record the-breeding-value added (study section 368); its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV13-EV16：加入相关记录 the-breeding-value（研究第 368 节）；定律及其陈述不变。"
     }
   ]
 }

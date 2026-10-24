@@ -1,0 +1,273 @@
+{
+  "segments": [
+    {
+      "seg_id": "en0440",
+      "referents": [
+        {"span":"the histories","sort":"history or run","status":"matched","counterpart":"w in U1 of Becoming.Drift.sampled","rule":"M5","class":"none","tags":[]},
+        {"span":"the first kind","sort":"relatum or role","status":"excess","counterpart":"","rule":"none","class":"R","tags":[]},
+        {"span":"N","sort":"amount","status":"matched","counterpart":"N","rule":"M4","class":"none","tags":[]},
+        {"span":"a share","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"N·r^k/(N^N)^k","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"r","sort":"amount","status":"matched","counterpart":"r","rule":"M4","class":"none","tags":[]},
+        {"span":"k","sort":"step","status":"matched","counterpart":"k","rule":"M4","class":"none","tags":[]},
+        {"span":"h","sort":"step","status":"matched","counterpart":"h","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["two","within"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0203",
+      "referents": [
+        {"span":"a law","sort":"law or process","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"moves","sort":"family or list","status":"matched","counterpart":"moves","rule":"M1","class":"none","tags":[]},
+        {"span":"situations","sort":"value","status":"matched","counterpart":"the A × S × Nat entries in U1 of Becoming.Situations.coarse","rule":"M5","class":"none","tags":[]},
+        {"span":"the finer courses","sort":"family or list","status":"matched","counterpart":"Becoming.Situations.finer weight moves all n s","rule":"M1","class":"none","tags":[]},
+        {"span":"the sum over histories","sort":"amount","status":"matched","counterpart":"Becoming.counting.sum (Becoming.courses moves all n) (fun c => Becoming.counting.along weight (fun x => 1) s c * g c)","rule":"M1","class":"none","tags":[]},
+        {"span":"histories","sort":"history or run","status":"matched","counterpart":"c bound in the conclusion's summand","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["S","weight","all","n","s","g"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0491",
+      "referents": [
+        {"span":"two","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"one","sort":"relatum or role","status":"matched","counterpart":"e in U1 of Becoming.Web.interaction","rule":"M5","class":"none","tags":[]},
+        {"span":"the other","sort":"relatum or role","status":"matched","counterpart":"e' in U1 of Becoming.Web.interaction","rule":"M5","class":"none","tags":[]},
+        {"span":"a condition","sort":"relatum or role","status":"matched","counterpart":"c in U1 of Becoming.Web.interaction","rule":"M5","class":"none","tags":[]},
+        {"span":"a positive level","sort":"amount","status":"matched","counterpart":"W.level t c in U1 of Becoming.Web.adjoin","rule":"M5","class":"none","tags":[]},
+        {"span":"an idle condition","sort":"relatum or role","status":"matched","counterpart":"Becoming.Web.Condition.inert","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["Pos","own","sig"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0038",
+      "referents": [
+        {"span":"requirements","sort":"claim or predicate","status":"matched","counterpart":"W.requires t f c","rule":"M1","class":"none","tags":[]},
+        {"span":"a formation","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]},
+        {"span":"support","sort":"claim or predicate","status":"matched","counterpart":"W.Supported (t + 1) f in U1 of Becoming.Web.GainsSupport","rule":"M5","class":"none","tags":[]},
+        {"span":"a rise","sort":"amount","status":"matched","counterpart":"L.give t g c","rule":"M4","class":"none","tags":[]},
+        {"span":"someone supported","sort":"relatum or role","status":"matched","counterpart":"g, the giver in the conclusion","rule":"M2","class":"none","tags":[]}
+      ],
+      "omissions":["C","balances","acting","dependent","t"],
+      "connective_mismatches":[
+        {"kind":"dneg_plain","note":"The negated universal denying that every qualifying giver is unsupported is rendered as a positive supported-giver assertion."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0493",
+      "referents": [
+        {"span":"connection","sort":"claim or predicate","status":"matched","counterpart":"((Becoming.Shared.web Becoming.Shared.steady).interaction own sig).Connected","rule":"M1","class":"none","tags":[]},
+        {"span":"living use","sort":"claim or predicate","status":"matched","counterpart":"living and W.Interacts c e e' in U1 of Becoming.Web.interaction","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["own","sig"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0268",
+      "referents": [
+        {"span":"extrapolation","sort":"map, lumping or feature","status":"matched","counterpart":"pred","rule":"M1","class":"none","tags":[]},
+        {"span":"nothing","sort":"value","status":"matched","counterpart":"the Unit observation () supplied by fun x => ()","rule":"M1","class":"none","tags":[]},
+        {"span":"every learnable feature","sort":"map, lumping or feature","status":"matched","counterpart":"fun x => b","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":[],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0404",
+      "referents": [
+        {"span":"any finite family","sort":"family or list","status":"matched","counterpart":"ps","rule":"M3","class":"none","tags":[]},
+        {"span":"parents","sort":"relatum or role","status":"matched","counterpart":"p in U1 of Becoming.selected","rule":"M2","class":"none","tags":[]},
+        {"span":"offspring","sort":"family or list","status":"matched","counterpart":"kids p in U1 of Becoming.selected","rule":"M5","class":"none","tags":[]},
+        {"span":"the weighted total","sort":"amount","status":"matched","counterpart":"Becoming.selected ps kids a","rule":"M1","class":"none","tags":[]},
+        {"span":"the selection term proper","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":["neg"]}
+      ],
+      "omissions":["a","k","same"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0147",
+      "referents": [
+        {"span":"the name classes","sort":"family or list","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"each formation","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["C","W","always"],
+      "connective_mismatches":[
+        {"kind":"iff_one_way","note":"The equivalence between RenewingAlong itself and RenewingIn is replaced by a plain identification using 'are'."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0195",
+      "referents": [
+        {"span":"A scheduler","sort":"map, lumping or feature","status":"matched","counterpart":"law.schedule","rule":"M1","class":"none","tags":[]},
+        {"span":"some interleaving","sort":"family or list","status":"matched","counterpart":"L in ∃ L, law.Interleaves c L","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["X","E","σ","law","inst","xs","listed","c"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0489",
+      "referents": [
+        {"span":"the seed","sort":"claim or predicate","status":"matched","counterpart":"V.Seed","rule":"M1","class":"none","tags":[]},
+        {"span":"either neutrality","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Neutral V.shares","rule":"M1","class":"none","tags":[]},
+        {"span":"either neutrality","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Neutral V.transmits","rule":"M1","class":"none","tags":[]},
+        {"span":"connection","sort":"claim or predicate","status":"matched","counterpart":"V.Connected","rule":"M1","class":"none","tags":[]},
+        {"span":"A","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"a consistent countermodel","sort":"value","status":"matched","counterpart":"the constructed valuations Becoming.Model.valuation Becoming.Model.linked Becoming.Model.ownRegion and Becoming.Model.valuation Becoming.Model.linked Becoming.Model.ownStandpoint","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":[],
+      "connective_mismatches":[
+        {"kind":"negation_scope","note":"The wording includes dropping seed and connection, whereas both supplied countermodels affirm Seed and Connected; the supplied failures concern neutrality."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0029",
+      "referents": [
+        {"span":"Claims","sort":"claim or predicate","status":"matched","counterpart":"c : C in U1 of Becoming.Contextual.FitsFree and Becoming.Contextual.Glues","rule":"M5","class":"none","tags":[]},
+        {"span":"contexts","sort":"value","status":"matched","counterpart":"k : K in U1 of Becoming.Contextual.Glues","rule":"M5","class":"none","tags":[]},
+        {"span":"a context-free frame","sort":"value","status":"matched","counterpart":"F in the conclusion's existential","rule":"M1","class":"none","tags":[]},
+        {"span":"what contexts show","sort":"value","status":"matched","counterpart":"X.shows s k c","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["S","A","P","home","covers"],
+      "connective_mismatches":[
+        {"kind":"forall_generic","note":"The conclusion requires gluing for every s : S; the wording states generically that what contexts show glues."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0409",
+      "referents": [
+        {"span":"active formations","sort":"relatum or role","status":"matched","counterpart":"f in U1 of Becoming.Flow.Acting","rule":"M5","class":"none","tags":[]},
+        {"span":"activity","sort":"claim or predicate","status":"matched","counterpart":"W.active t f in U1 of Becoming.Web.Dependent","rule":"M5","class":"none","tags":[]},
+        {"span":"support","sort":"claim or predicate","status":"matched","counterpart":"W.Supported t f","rule":"M5","class":"none","tags":[]},
+        {"span":"a reading","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"the supported parents","sort":"family or list","status":"matched","counterpart":"ps, with supported members specified in top","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["t","kids","descend","s","top"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0217",
+      "referents": [
+        {"span":"a claim","sort":"claim or predicate","status":"matched","counterpart":"claim","rule":"M1","class":"none","tags":[]},
+        {"span":"its rival","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"something","sort":"relatum or role","status":"matched","counterpart":"the coupled condition, as specified for this wording in worked example 1","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["F","W","g","l","l'","t","meets","alike"],
+      "connective_mismatches":[
+        {"kind":"negation_scope","note":"The theorem denies exclusion under the alike hypothesis; the wording instead asserts a necessary difference between a claim and a rival."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0291",
+      "referents": [
+        {"span":"a formation","sort":"relatum or role","status":"matched","counterpart":"f","rule":"M1","class":"none","tags":[]},
+        {"span":"feeding closure","sort":"claim or predicate","status":"matched","counterpart":"Becoming.WithinClosure (L.FedFrom W) f, the membership predicate in U1 of Becoming.Flow.WithinFeeding","rule":"M5","class":"none","tags":[]},
+        {"span":"feeding","sort":"claim or predicate","status":"matched","counterpart":"L.FedFrom W in U1 of Becoming.Flow.WithinFeeding","rule":"M5","class":"none","tags":[]},
+        {"span":"nothing beyond it","sort":"relatum or role","status":"matched","counterpart":"h under beyond","rule":"M1","class":"none","tags":[]},
+        {"span":"a member","sort":"relatum or role","status":"matched","counterpart":"g under within","rule":"M1","class":"none","tags":[]},
+        {"span":"what a member requires","sort":"relatum or role","status":"matched","counterpart":"c under requires","rule":"M2","class":"none","tags":[]}
+      ],
+      "omissions":["t","present"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0386",
+      "referents": [
+        {"span":"it","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"an opposing exchange","sort":"world, web or flow","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]},
+        {"span":"m","sort":"amount","status":"excess","counterpart":"","rule":"none","class":"E","tags":[]}
+      ],
+      "omissions":["t","n"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0523",
+      "referents": [
+        {"span":"the condition","sort":"relatum or role","status":"matched","counterpart":"c in U1 of Becoming.Flow.WithheldLevels","rule":"M5","class":"none","tags":[]},
+        {"span":"the clearer's part","sort":"map, lumping or feature","status":"matched","counterpart":"Becoming.Clearing.clearerPart","rule":"M1","class":"none","tags":[]},
+        {"span":"the clearer","sort":"relatum or role","status":"matched","counterpart":"Becoming.Clearing.Formation.clearer","rule":"M5","class":"none","tags":[]},
+        {"span":"the dweller","sort":"relatum or role","status":"matched","counterpart":"Becoming.Clearing.Formation.dweller","rule":"M5","class":"none","tags":[]},
+        {"span":"every standpoint","sort":"standpoint","status":"matched","counterpart":"p : Pos","rule":"M1","class":"none","tags":[]},
+        {"span":"the levels without it","sort":"history or run","status":"matched","counterpart":"l","rule":"M1","class":"none","tags":[]},
+        {"span":"every formation","sort":"relatum or role","status":"matched","counterpart":"f in U1 of Becoming.Web.Adds","rule":"M5","class":"none","tags":[]}
+      ],
+      "omissions":["without","sig","unrestricted"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0571",
+      "referents": [
+        {"span":"rivals","sort":"map, lumping or feature","status":"matched","counterpart":"w : X → Nat","rule":"M1","class":"none","tags":[]},
+        {"span":"what can form","sort":"relatum or role","status":"matched","counterpart":"x in U1 of Becoming.Weighting.Positive","rule":"M5","class":"none","tags":[]},
+        {"span":"C","sort":"claim or predicate","status":"matched","counterpart":"Becoming.Weighting.WidensOn items a b","rule":"M1","class":"none","tags":[]},
+        {"span":"mixed comparisons","sort":"claim or predicate","status":"excess","counterpart":"","rule":"none","class":"E","tags":["rank"]},
+        {"span":"one that gives some formation weight zero","sort":"map, lumping or feature","status":"matched","counterpart":"w : X → Nat, considered outside the Positive antecedent","rule":"M1","class":"none","tags":[]},
+        {"span":"weight","sort":"amount","status":"matched","counterpart":"w x in U1 of Becoming.Weighting.Positive","rule":"M5","class":"none","tags":[]},
+        {"span":"zero","sort":"amount","status":"matched","counterpart":"0 in U1 of Becoming.Weighting.Positive and Becoming.Weighting.weighed","rule":"M4","class":"none","tags":[]}
+      ],
+      "omissions":["items","a","b"],
+      "connective_mismatches":[
+        {"kind":"iff_one_way","note":"The wording describes how positive weightings rank, but does not state the converse from agreement of every positive weighting to WidensOn."},
+        {"kind":"forall_generic","note":"The universal quantification over weightings is rendered generically as 'a weighting'."}
+      ],
+      "predicate_excess":[
+        {"span":"decides only mixed comparisons","note":"The supplied statement does not give a decision relation on mixed comparisons."}
+      ]
+    },
+    {
+      "seg_id": "en0190",
+      "referents": [
+        {"span":"a relatum","sort":"relatum or role","status":"matched","counterpart":"x","rule":"M1","class":"none","tags":[]},
+        {"span":"its own course","sort":"family or list","status":"matched","counterpart":"the List E result of Becoming.Interleavings.LocalLaw.ownCourse law x a","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["E","σ","law","a"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0274",
+      "referents": [
+        {"span":"a feature","sort":"map, lumping or feature","status":"matched","counterpart":"val","rule":"M1","class":"none","tags":[]},
+        {"span":"a table","sort":"family or list","status":"matched","counterpart":"tbl","rule":"M1","class":"none","tags":[]},
+        {"span":"N","sort":"amount","status":"matched","counterpart":"l.length","rule":"M4","class":"none","tags":[]},
+        {"span":"labelled names","sort":"value","status":"matched","counterpart":"e : List R × V","rule":"M1","class":"none","tags":[]},
+        {"span":"N − 1","sort":"amount","status":"matched","counterpart":"l.length - 1","rule":"M4","class":"none","tags":[]},
+        {"span":"1","sort":"amount","status":"matched","counterpart":"1 in l.length - 1","rule":"M4","class":"none","tags":[]},
+        {"span":"values","sort":"family or list","status":"matched","counterpart":"e.fst : List R","rule":"M1","class":"none","tags":[]}
+      ],
+      "omissions":["S","inst","next","reg","l","world"],
+      "connective_mismatches":[
+        {"kind":"forall_generic","note":"Prediction for every state s is rendered generically as learning the feature."}
+      ],
+      "predicate_excess":[]
+    },
+    {
+      "seg_id": "en0513",
+      "referents": [],
+      "omissions":["F","C","Pos","W","sig","unrestricted","p","l","l'"],
+      "connective_mismatches":[],
+      "predicate_excess":[]
+    }
+  ]
+}
+
+── cx · ok · session 01a16423-a761-71f2-a97c-a8c8ebf74df3 · gpt-6-astra/high · bypass (mirrors Claude) · 817s · 55.9k tokens · 0 cmds
+continue: cx -r 01a16423-a761-71f2-a97c-a8c8ebf74df3 "…"
+log: /Users/ren/.cache/cx/runs/20261022-220340-6927

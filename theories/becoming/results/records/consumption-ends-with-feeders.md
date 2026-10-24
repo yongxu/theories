@@ -84,7 +84,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 - **interpretive**: [derived-extent-limits](derived-extent-limits.md). There, in Mortal, a life's taking ends the renewal of a shared condition and a successor ends after it has ended; here an ending returns through a feeder to the taker itself.
   - Output: The horizon of the want.
   - Input: An ending returning to the taker.
-  - Preserved conditions: The AI's reading, adopted on Ren's delegation (DELEGATED-CHOICES D17). [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md)
+  - Preserved conditions: The AI's reading, adopted on Ren's delegation (DELEGATED-CHOICES D17). [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md)
 - **formal-reuse**: [laws-of-one-step](laws-of-one-step.md). The local laws assume balance only at the steps and conditions they use, Flow.BalancesOn of laws-of-one-step (singleton families); global balance gives it through Flow.Balances.on, so the original theorems are corollaries.
   - Output: Balance on a finite family across one step (Flow.BalancesOn); global balance implies it (Flow.Balances.on).
   - Input: This record's local laws assume it at the conditions and steps they use.
@@ -106,7 +106,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 | proof | [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean) | `Becoming.Web.Supported`, `Becoming.Web.Dependent`, `Becoming.Web.UnderminingAt` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | proof | [Feeding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feeding.lean) | `Becoming.Flow.meets_after_iff_at`, `Becoming.Flow.stays_met_iff_at`, `Becoming.Flow.meets_over_iff_at`, `Becoming.Flow.active_covered_at`, `Becoming.Flow.unfed_meets_iff_at`, `Becoming.Flow.fed_beyond_level_at`, `Becoming.Flow.meets_without_iff_at`, `Becoming.Redundant.Formation`, `Becoming.Redundant.unit`, `Becoming.Redundant.draw`, `Becoming.Redundant.stands`, `Becoming.Redundant.flow`, `Becoming.Redundant.web`, `Becoming.Redundant.balances`, `Becoming.Redundant.acting`, `Becoming.Redundant.taking`, `Becoming.Redundant.dependent`, `Becoming.Redundant.either_suffices`, `Becoming.Redundant.neither_ends`, `Becoming.Redundant.firstPart`, `Becoming.Redundant.secondPart`, `Becoming.Redundant.bothParts`, `Becoming.Redundant.withheld_either`, `Becoming.Redundant.withheld_both` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json) | — |

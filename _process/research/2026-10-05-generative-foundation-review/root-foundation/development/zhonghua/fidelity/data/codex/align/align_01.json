@@ -1,0 +1,1173 @@
+{
+ "tiao_alignments": [
+  {
+   "tiao": "九·二十一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.FactorsThrough"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Run.generalizes"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Confound.misattributes"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Confound.confounded"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Confound.varied_refutes"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "四·五",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.Depletes"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.Balances.depletes"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Flow.Balances.falls_of_taking"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Flow.rise_with_fall"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "五·二十六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.RenewingAlong"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.ConsumingAlong"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": []
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Web.renewingAlong_iff"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Web.consumingAlong_iff"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.Web.continuing_reidentify",
+      "Becoming.Web.renewingAlong_reidentify",
+      "Becoming.Web.consumingAlong_reidentify",
+      "Becoming.Web.underminingAlong_reidentify"
+     ]
+    },
+    {
+     "clause": 7,
+     "declarations": [
+      "Becoming.Web.renewingIn_held",
+      "Becoming.Web.consumingIn_held"
+     ]
+    },
+    {
+     "clause": 8,
+     "declarations": [
+      "Becoming.Web.renewingAlong_itself_iff",
+      "Becoming.Web.consumingAlong_itself_iff"
+     ]
+    },
+    {
+     "clause": 9,
+     "declarations": [
+      "Becoming.Web.underminingAlong_itself_iff"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十三·七",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.raised",
+      "Becoming.lowered"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.price"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.selected_uniform"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "三·十",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Law.rests_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.LastChange.settles_iff_decided"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.LastChange.not_not_settles"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.LastChange.still_within"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.LastChange.still_same"
+     ]
+    },
+    {
+     "clause": 7,
+     "declarations": [
+      "Becoming.LastChange.lpo_iff_settles"
+     ]
+    },
+    {
+     "clause": 8,
+     "declarations": [
+      "Becoming.TailRuns.lpo_iff_runs"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "六·十三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Flow.Balances.includes_of_renewed",
+      "Becoming.Flow.Balances.not_narrows_of_renewed"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": []
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Flow.Balances.narrows_of_consumed"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Flow.Balances.keeps_of_not_arising"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "七·二",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.GoAlike"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.carries_law_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.image_determined_iff"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.factors_image"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Image.least"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.Learning.goAlike_iff_lumped"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十四·三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.reach_whole_of_common",
+      "Becoming.Flow.mutuallyDependent_of_common"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十六·一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Preemption.not_undermining_yet_loses"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Preemption.not_undermining_yet_loses"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Preemption.within_renewal_yet_loses",
+      "Becoming.Preemption.not_undermining_yet_loses",
+      "Becoming.Preemption.renewingAt_consuming_narrows"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Preemption.not_undermining_yet_loses"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十二·十八",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Regulation.relay"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Regulation.relay_threshold"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十三·九",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations.kept_step_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations.rises_step_iff"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations.moved_unbalanced"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations.moved_by_selection"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.SelectionTerm.Generations.moved_by_transmission"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十一·十六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.AboveAll"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.aboveAll_unique"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Law.aboveAll_never_rests"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "六·十八",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.widens_iff_every_weighting",
+      "Becoming.Weighting.widens_iff_every_positive"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.widens_iff_every_of_class",
+      "Becoming.Weighting.widens_iff_every_increasing"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Weighting.mixed_either_way"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Weighting.weighed_eq_of_unweighted"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Weighting.neutral_ranks_by_number"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "四·十一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Successive.relay"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十三·十三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Reproduction.Flow.born_le_given"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Reproduction.Flow.born_within_stock"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Reproduction.Flow.lineage_ends"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Reproduction.Flow.closed_lineage_lowered"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "一·八",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Consistent"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.shown_determined_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.exists_law_iff"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Shown.agrees"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "五·三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Law.lossless_iff_returns",
+      "Becoming.Law.returns_iff_keeps"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Law.rise_not_lossless"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Law.Lossless.unlisted"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十五·三十",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.boundaryInvariant_iff_standpointInvariant"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.unrestricted_of_standpointInvariant"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "凡·十七",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    }
+   ]
+  },
+  {
+   "tiao": "十二·九",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.LoopReturn.returnMap"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.LoopReturn.never_closes_of_no_less"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.LoopReturn.closing_needs_less"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.LoopReturn.closes_within"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.LoopReturn.closes_within_exact"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.LoopReturn.loop_kept"
+     ]
+    },
+    {
+     "clause": 7,
+     "declarations": [
+      "Becoming.LoopReturn.runs_away",
+      "Becoming.LoopReturn.runs_away_unbounded"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十二·六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.CouplingRecurs"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": []
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.carried_eq_carriedWithin_add"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.carriedWithin_lt_of_recurring_loop"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.exact_of_reading_before"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.routeSum_eq_carriedWithin"
+     ]
+    },
+    {
+     "clause": 7,
+     "declarations": [
+      "Becoming.routeSum_eq_carriedWithin"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "八·十七",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Hexagram.atSites_glues_iff"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Hexagram.halves_glues_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Hexagram.halves_no_free_frame",
+      "Becoming.Hexagram.halves_indexed"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Hexagram.phases_glue_iff"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Hexagram.oppositions_glue_iff"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.Hexagram.seams_glue_iff"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "二·十三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.SelfBearing"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.SelfBearing.stands"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Web.SelfBearing.met_iff"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Web.Embodied.ending_breaks"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Mutualism.apart_relabelled"
+     ]
+    },
+    {
+     "clause": 6,
+     "declarations": [
+      "Becoming.Mutualism.apart_relabelled"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "四·十七",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.World.comes_to_rest_unrefuted"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.World.lpo_of_finite_ends"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十三·十九",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": []
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Relabel.Equivariant"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Relabel.selected_alike_iff",
+      "Becoming.Learning.selects_through_lumping"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Relabel.singled_iff_untied"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Learning.selects_not_right_of_parted"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十二·十五",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Flow.Opposes"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.gap_falls"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Flow.regulates"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Flow.settles"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Flow.restores_exactly"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十一·十二",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Flow.favours_reaching_beyond"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.favours_breaking_beyond"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "五·二",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Law.Merges"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Law.merged_stays",
+      "Becoming.Law.Merges.not_both_return"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Law.lost_stays"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Law.Merges.loses"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "八·三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Interleavings.LocalLaw.unique_iff"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Interleavings.LocalLaw.schedule_iff"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十一·十九",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.more_new",
+      "Becoming.more_needs_open"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "三·一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.Arises"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.Ceases",
+      "Becoming.Web.change_readings"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十五·十",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Flow.descent_reaches"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.ancestry_reaches"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "纲·六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.break_not_bounded",
+      "Becoming.Flow.policy_uses_after_failure"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.break_not_bounded",
+      "Becoming.Flow.policy_uses_after_failure"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": []
+    },
+    {
+     "clause": 4,
+     "declarations": []
+    },
+    {
+     "clause": 5,
+     "declarations": []
+    },
+    {
+     "clause": 6,
+     "declarations": []
+    },
+    {
+     "clause": 7,
+     "declarations": []
+    },
+    {
+     "clause": 8,
+     "declarations": []
+    }
+   ]
+  },
+  {
+   "tiao": "九·十二",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.Excludes"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.Excludes.not_of_alike"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Web.Excludes.not_meets"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Web.Excludes.later"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Web.Excludes.widen"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十六·三",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Extension",
+      "Becoming.Comparison"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.paths_extension_iff_widens"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Web.paths_comparison_widens"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Extension.irrefl",
+      "Becoming.Extension.trans"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "四·一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Flow.uptake_needs_replenishment"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Flow.More.replenishment_unbounded"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Flow.More.renewers_unbounded"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十五·六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Valuation"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.valuation"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十五·二十五",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.retains_iff_includes"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Web.adds_iff_exceeds"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Web.retains_agree"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Web.widens_iff_retains_adds",
+      "Becoming.Web.keeps_iff_retains",
+      "Becoming.Web.mixed_iff_adds"
+     ]
+    },
+    {
+     "clause": 5,
+     "declarations": [
+      "Becoming.Web.Retains.within"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "八·十一",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Situations.finerLaw_determined"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": [
+      "Becoming.Situations.finerLaw_step_iff"
+     ]
+    },
+    {
+     "clause": 3,
+     "declarations": [
+      "Becoming.Situations.sum_finer"
+     ]
+    },
+    {
+     "clause": 4,
+     "declarations": [
+      "Becoming.Situations.situations_of_course_listed"
+     ]
+    }
+   ]
+  },
+  {
+   "tiao": "十一·二十六",
+   "clauses": [
+    {
+     "clause": 1,
+     "declarations": [
+      "Becoming.Web.observed_raise_couples"
+     ]
+    },
+    {
+     "clause": 2,
+     "declarations": []
+    },
+    {
+     "clause": 3,
+     "declarations": []
+    }
+   ]
+  }
+ ]
+}

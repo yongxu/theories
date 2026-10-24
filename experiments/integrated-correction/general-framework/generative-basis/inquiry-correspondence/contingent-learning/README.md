@@ -1,6 +1,6 @@
 # Encounter control, retained change and later use
 
-8 October 2026. Exploratory secondary analysis and substantive author counterreview for the [continuing cognitive account](../../../../../../theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md). Reuses `encounter-selection-and-revision` and `naming-attention-coverage`. The new contribution tests the selection-to-later-use correspondence with an observed learning outcome; it does not create another generic learning mechanism.
+8 October 2026. Exploratory secondary analysis and substantive author counterreview for the [continuing cognitive account](../../../../../../theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.md). Reuses `encounter-selection-and-revision` and `naming-attention-coverage`. The new contribution tests the selection-to-later-use correspondence with an observed learning outcome; it does not create another generic learning mechanism.
 
 ## Result and uncertainty
 

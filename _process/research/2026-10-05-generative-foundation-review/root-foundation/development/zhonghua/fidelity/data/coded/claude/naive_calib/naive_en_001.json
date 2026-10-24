@@ -1,0 +1,349 @@
+{
+ "segments": [
+  {
+   "seg_id": "en0273",
+   "referents": [
+    {
+     "span": "the clearer",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "Becoming.CrossSituational.candidates bears offers rep (rs ++ more) (plain comparative nominal: the clearer case, the one with more situations, whose candidate list is the narrower one)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "R",
+    "M",
+    "bears",
+    "offers",
+    "rep",
+    "rs",
+    "more",
+    "m",
+    "later"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0234",
+   "referents": [
+    {
+     "span": "determinacy",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "determined : Becoming.Determined P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the record",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "r's states and acts before t (r.StepsOf Q t in U1 of Run.Fixes; Run fields state/act); same referent as 'its whole history'",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "b : A (also 'that move', 'one's own act')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move's outcome",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u (∃-bound in the conclusion ¬∃ u, r.Fixes t s b u); same referent as 'what one's own act would have done otherwise'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the run",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "r : Becoming.Run P (also 'a run', 'it')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the configuration",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s : S (also 'there')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one",
+     "sort": "standpoint",
+     "status": "excess",
+     "counterpart": "none (no standpoint binder in L(D))",
+     "rule": "none",
+     "class": "A",
+     "tags": [
+      "centre/will"
+     ]
+    },
+    {
+     "span": "what it did",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "r.act n for n < t in the U1 body of Run.Takes",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "P",
+    "t",
+    "x",
+    "y",
+    "two"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "dneg_plain",
+     "note": "L(D) is ¬Takes → ¬∃u Fixes; the wording renders its contrapositive 'is fixed only where the configuration returns' (Fixes → Takes), which constructively asserts plain Takes where the Lean gives only ¬¬Takes; the hypothesis and conclusion negations are absorbed into 'only where'"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0289",
+   "referents": [
+    {
+     "span": "the coupling closure",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.WithinClosure (L.CoupledFrom W obs) f g, the U1 body of L.WithinCoupling W obs f g (plain sense: what coupling encloses, a set of relata)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "it",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "L.WithinInfluence W f g (hypothesis within; right side of the ↔ in withinCoupling_thresholdOnly)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "observation",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "obs : F → C → Prop (decl 1); Becoming.thresholdOnly as no observation (decl 2); observation matches a coupling relation by allowed coarsening",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "L",
+    "W",
+    "f",
+    "g"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0450",
+   "referents": [
+    {
+     "span": "balance",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "balances : L.Balances W",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "nothing given",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.given (T + i) c = 0 in hypothesis unfed",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a draw",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.taken (T + j) c in hypothesis exceeds (also 'it')",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "everything drawn before it",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Becoming.drawnBefore (fun i => L.taken (T + i) c) j",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the starting stock",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.level T c (also 'a stock')",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "half the starting stock",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none (no halving or remaining-stock bound in L(D) or U1)",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "j (∀ j < n in hypothesis exceeds), step T + j",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "n",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n : Nat ('n steps', and the n of 2^n)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "2^n − 1",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "2 ^ n in the conclusion 2 ^ n ≤ W.level T c + 1",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "c"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0179",
+   "referents": [
+    {
+     "span": "a model of structure",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π : S → K (also 'a lumping', 'a model of change', 'the two')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "structure",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s : S, λ-bound in fun s => π (next s) (plain sense: arrangement, a configuration)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "change",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "next : S → S",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the step",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "step := fun s x t => t = next s, the U1 body of Becoming.Law.process next",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "K"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "iff_one_way",
+     "note": "the ↔ between GoAlike (Law.process next) π and Lumped π (π ∘ next) is rendered as the plain identity copula 'the two are one'"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0009",
+   "referents": [
+    {
+     "span": "the one change",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.ComesToBe / Becoming.CeasesToBe (¬p t ∧ p (t + 1)), the U1 bodies every reading in the conclusion reduces to",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the tally",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none (no count in change_readings; over_stretch is not in L(D))",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "W",
+    "t",
+    "f",
+    "g",
+    "c"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "iff_one_way",
+     "note": "the conjunction of ↔ readings in the conclusion is rendered only as the noun phrase 'the one change', an identity with no direction stated"
+    }
+   ],
+   "predicate_excess": []
+  }
+ ]
+}

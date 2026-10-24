@@ -1,0 +1,13 @@
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "a-formations-own-course": {
+   "paths": [
+    "theories/becoming/chapters/WENLI-AND-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

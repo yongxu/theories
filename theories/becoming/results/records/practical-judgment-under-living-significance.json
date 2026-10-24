@@ -27,7 +27,7 @@
     "zh": "角色在共同生活与依存形成中说明；因果、受益和能力不独自分配无限义务。支承对应具体化为实际需要时段、过渡中的接续、替代覆盖与共同可行；回程、焦点存续及终点相同各不足以独自认证共同修复。",
     "en": "Roles arise through shared living and formed dependence; causation, benefit and capacity alone do not assign unlimited duty. Support correspondence is specified through actual need windows, continuation through transition, replacement coverage and joint feasibility; return, focal persistence and equal endpoints alone do not certify common repair."
   },
-  "canonical_source": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+  "canonical_source": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
   "aliases": [
     "Practical judgment G0/J1–J4",
     "Becoming.Judgment.better_iff_betterAt",
@@ -114,7 +114,7 @@
   ],
   "counterexamples": [
     {
-      "path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+      "path": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
       "detail": {
         "zh": "基本保护优先的强度是附加可修订承诺；交叉基本损失可不排序，不输出通用总效用。",
         "en": "The strength of the priority of basic conditions is an additional revisable commitment; crossed basic losses may remain incomparable, with no universal utility score."
@@ -150,7 +150,7 @@
     {
       "zh": "及时接续：回程等级、替代与实际交接给出按需要的支承、替代覆盖与有范围的比较理由；有利理由与基本保护优先分开。",
       "en": "Timely continuation: return grades, substitution and actual handoff give need-relative support, replacement coverage and scoped comparison reasons; a favorable reason is kept distinct from the priority of basic conditions.",
-      "source": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md#timely-continuation-and-support"
+      "source": "theories/becoming/history/PRACTICAL-JUDGMENT.md#timely-continuation-and-support"
     },
     {
       "en": "J1–J4 in the pure core: Becoming.Lexical states J1/J2 as the condition BasicPriority and Becoming.Frontier states J3/J4, every PracticalJudgment declaration with a core counterpart and an empty axiom report; FrontierFrames reads them on a frame, the options of a configuration being what one move reaches, and FrontierWorlds reads service across a handover in a world. The one classical step of PracticalJudgment (finite_frontier) is weak excluded middle, now a hypothesis calibrated on frames (choice_exists_iff_weakly).",
@@ -169,7 +169,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+      "path": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
       "role": "statement",
       "sha256": "1c5b6ee6935ff51231d0b3e689dcb0fb3053e4c8e40f1f4f8a5d5d204ab1306e",
       "declarations": []
@@ -216,7 +216,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md",
       "role": "integration",
-      "sha256": "d6011b304fddfe6e6e92816dc6f469180e25891e2bff486c385dd4724b68fb41",
+      "sha256": "1086cc6f52d2b6ccd9286f9307b8b2e1f033fdc451fae798366eeb75f4a82564",
       "declarations": []
     },
     {
@@ -377,7 +377,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
       "declarations": []
     },
     {

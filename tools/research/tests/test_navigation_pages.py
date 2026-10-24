@@ -133,7 +133,7 @@ class FeaturedTests(unittest.TestCase):
         self.assertLess(root.index('### Laws of the theory without axiom (sections 1–6)'), root.index('#### law title'))
         self.assertIn('law does this.', root)
         self.assertIn('**Status:** `recorded-checked`', root)
-        self.assertLess(root.index('### Under the continuation condition (section 6.4)'), root.index('#### cond title'))
+        self.assertLess(root.index('### Under the continuation condition'), root.index('#### cond title'))
         self.assertIn('[more title](theories/results/records/more.md) (`recorded-checked`)', root)
         self.assertIn('leading-results', anchors_from_text(root))
         self.assertNotIn('Part I', root)

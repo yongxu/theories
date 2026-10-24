@@ -38,14 +38,14 @@ Canonical source: [Exclusion.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist; an independent review.
+A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist, now known to depend on the learner (EM1: learners that generalize reached restraint where tabular learners did not); a frozen test with every training episode starting at step 0; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a member is pivotal exactly where the rest alone does not cross the margin before the reading. Coordination at a known threshold (Barrett 2013; Diekert 2017); the folk theorem for stochastic games (Dutta 1995); extinction in equilibrium past a player-number threshold (Mitra and Sorger 2014); risk-dominant selection under learning (Kandori, Mailath and Rob 1993). CG2, on tabular learners in a Harvest-style commons (Perolat et al. 2017): X1_boundary_is_the_rest held; X2_end_weight_does_not_open held; X3_reading_before_the_end_opens_above_vstar held; X4_sharing_opens_only_with_renewal failed; X5_joint_reading failed.
+Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a member is pivotal exactly where the rest alone does not cross the margin before the reading. Coordination at a known threshold (Barrett 2013; Diekert 2017); the folk theorem for stochastic games (Dutta 1995); extinction in equilibrium past a player-number threshold (Mitra and Sorger 2014); risk-dominant selection under learning (Kandori, Mailath and Rob 1993). CG2, on tabular learners in a Harvest-style commons (Perolat et al. 2017): X1_boundary_is_the_rest held; X2_end_weight_does_not_open held; X3_reading_before_the_end_opens_above_vstar held; X4_sharing_opens_only_with_renewal failed; X5_joint_reading failed. EM1, on policy-gradient learners that generalize across states (experiments/commons-outrun-generalizing, frozen at 42cf03228; study section 359): the law held on every course (no violation in 9,026 outrun windows); E1 failed (three of six locked settings kept, the end reading weighted 32 among them), E2 and E3 passed, so X2 is a finding about tabular learners.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -60,7 +60,7 @@ Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a membe
   - Preserved conditions: The two apart and taking part. [Exclusion.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean)
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The gap read on the rest: the member's act differs only where its reading no longer looks once the rest has ended the condition, so no selection through that reading tells its acts apart.
 
-**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md)
+**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md) · [what-training-installs](what-training-installs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -75,6 +75,7 @@ Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a membe
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| review | [README.md](../../../../experiments/commons-outrun-generalizing/README.md) | — |
 
 Aliases: `the rest outruns the renewal`, `其余者超出更新`, `restraint invisible after the rest's end`, `Becoming.Flow.outrun_below`, `Becoming.Flow.outrun_reading_alike`
 
@@ -82,6 +83,7 @@ Aliases: `the rest outruns the renewal`, `其余者超出更新`, `restraint inv
 ### History
 
 - 20 October 2026: added (CG2), the condition on the rest that CG1's D2b failure turned on, after a literature check (significance review, "restraint as an equilibrium on a gated renewal"), and tested on learners with predictions frozen before any run; study section 250.
+- 22 October 2026: EM1's verdicts added to the correspondence and Next; study section 359.
 
 </details>
 

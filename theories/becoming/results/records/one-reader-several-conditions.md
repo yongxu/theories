@@ -76,7 +76,7 @@ Pinwheel scheduling (Holte, Mok, Rosier, Tulchinsky and Varvel 1989), motivated 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 
 Aliases: `one reader, several conditions`, `一个读者，多个条件`, `pinwheel scheduling as oversight`, `keeping is reading within the window`, `Becoming.ReadingSchedule.keeps_iff_within`, `Becoming.ReadingSchedule.spare_not_enough`, `Becoming.ReadingSchedule.keeps_of_half`
 

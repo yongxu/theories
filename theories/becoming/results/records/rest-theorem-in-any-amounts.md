@@ -67,7 +67,7 @@ Termination of a finite-state system under a potential that never rises and fall
 - related, not a proved adapter: [space-and-its-parts](space-and-its-parts.md). The rest theorem there in whole numbers is the case this one reads in any amounts.
 - related, not a proved adapter: [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md). Rest over any amounts, exactly where the total stops falling.
 
-**Used by:** [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md)
+**Used by:** [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md) · [what-discrete-steps-and-whole-amounts-represent](what-discrete-steps-and-whole-amounts-represent.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -80,7 +80,7 @@ Termination of a finite-state system under a potential that never rises and fall
 | proof | [Amounts.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 

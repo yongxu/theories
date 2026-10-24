@@ -75,7 +75,7 @@ A conditional composition with substantive counterexamples, not a universal prod
 | provenance | [check_open_future_revision.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_open_future_revision.py) | — |
 | proof | [Controls.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/open-future-revision-checks/20261008T131727.086965Z/Controls.lean) | — |
 | integration | [RISK-CONDITIONING-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md) | — |
-| statement | [CHOICE-AND-GENERATIVE-CONTEXT.md](../../chapters/CHOICE-AND-GENERATIVE-CONTEXT.md) | — |
+| statement | [CHOICE-AND-GENERATIVE-CONTEXT.md](../../history/CHOICE-AND-GENERATIVE-CONTEXT.md) | — |
 | provenance | [2026-10-08-positive-generative-direction.md](../../../../sources/15-codex-theory-conversations/2026-10-08-positive-generative-direction.md) | — |
 | provenance | [Bridge.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean) | `Becoming.Run.novel_by_handoff`, `Becoming.Run.relevance_by_handoff_of_unrestricted`, `Becoming.positive_ground_by_bound_of_unrestricted`, `Becoming.revised_generation_by_bound_of_unrestricted` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json) | — |

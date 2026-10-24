@@ -75,14 +75,14 @@ Ren's statement of the continuation condition, which Ren then called an axiom, i
 - **interpretive**: [derived-extent-limits](derived-extent-limits.md). There, on the stepwise reading, the center is shown not derived along dependence (the clearer's witness); here centers bounded by their dependence disagree and license the free rider, and under the continuation condition they do not disagree.
   - Output: The center along dependence is not derived.
   - Input: Significance bounded by dependence is a premise, supplied as the continuation condition is.
-  - Preserved conditions: The reading taken by Ren on 18 October 2026, DELEGATED-CHOICES D43. [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md)
+  - Preserved conditions: The reading taken by Ren on 18 October 2026, DELEGATED-CHOICES D43. [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md)
 - related, not a proved adapter: [represented-boundary-against-dependence](represented-boundary-against-dependence.md). There represented boundaries are compared with actual dependence; here a center whose represented boundary is exactly its actual dependence still licenses the free rider.
 - related, not a proved adapter: [feeding-closure](feeding-closure.md). Clearing.dependenceRegion is exactly each formation's feeding closure (Clearing.dependenceRegion_iff).
 - related, not a proved adapter: [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md). Without the continuation condition, the verdict bounded by the feeding closure is the condition's where the closure is the whole; in the clearer's web the two part.
 - related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). The order of Retains.within reads as three readings of the presupposition: super-true; sub-true along affecting, at the reach closure; sub-true along the empty relation, at the self (Flow.presupposition_order; the AI's reading, adopted on Ren's delegation).
 - related, not a proved adapter: [levels-of-closure](levels-of-closure.md). The reach closure, not the system, reads Ren's middle level “the system that one is in” (adopted on Ren's delegation): one common condition makes the system the whole.
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [rivals-bounded-in-time](rivals-bounded-in-time.md)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [rivals-bounded-in-time](rivals-bounded-in-time.md) · [what-a-center-can-know-by-a-step](what-a-center-can-know-by-a-step.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -96,7 +96,7 @@ Ren's statement of the continuation condition, which Ren then called an axiom, i
 | proof | [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-10-axiom-route-levels-and-possibilities.md](../../../../sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md) | — |
 | provenance | [2026-10-10-centers-within-the-dynamics.md](../../../../sources/15-codex-theory-conversations/2026-10-10-centers-within-the-dynamics.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json) | — |

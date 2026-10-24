@@ -1,0 +1,483 @@
+id	text_id	section	unit_type	text	source	offsets	note
+LZ-01-001	LZ	一章	经	道可道，非常道，名可名，非常名；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	77883-77899	
+LZ-01-002	LZ	一章	经	無名，天地之始，有名，萬物之母。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	78137-78153	
+LZ-01-003	LZ	一章	经	故常無欲，以觀其妙，常有欲，以觀其徼；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	78446-78456;78703-78712	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-01-004	LZ	一章	经	此兩者，同出而異名，同謂之玄。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	78963-78978	
+LZ-01-005	LZ	一章	经	玄之又玄，眾妙之門。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	78978-78988	
+LZ-02-001	LZ	二章	经	天下皆知美之為美，斯惡已。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	79716-79729	
+LZ-02-002	LZ	二章	经	皆知善之為善，斯不善已。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	79729-79741	
+LZ-02-003	LZ	二章	经	故有無相生，難易相成，長短相較，高下相傾，音聲相和，前後相隨。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	79741-79772	
+LZ-02-004	LZ	二章	经	是以聖人處無為之事，行不言之教；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	80054-80064;80282-80288	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-02-005	LZ	二章	经	萬物作焉而不辭，生而不有，為而不恃，功成而弗居。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	80288-80306;80525-80531	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-02-006	LZ	二章	经	夫唯弗居，是以不去。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	80754-80764	
+LZ-03-001	LZ	三章	经	不尚賢，使民不爭；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	81361-81370	
+LZ-03-002	LZ	三章	经	不貴難得之貨，使民不為盜；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	81370-81383	
+LZ-03-003	LZ	三章	经	不見可欲，使民心不亂。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	81383-81394	
+LZ-03-004	LZ	三章	经	是以聖人之治，虛其心，實其腹，弱其志，強其骨。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	81696-81711;81937-81945	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-03-005	LZ	三章	经	常使民無知無欲。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	82173-82181	
+LZ-03-006	LZ	三章	经	使夫智者不敢為也。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	82395-82404	
+LZ-03-007	LZ	三章	经	為無為，則無不治。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	82619-82628	
+LZ-04-001	LZ	四章	经	道沖而用之或不盈，淵兮似萬物之宗；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	83014-83031	
+LZ-04-002	LZ	四章	经	挫其銳，解其紛，和其光，同其塵，湛兮似或存。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	83031-83053	
+LZ-04-003	LZ	四章	经	吾不知誰之子，象帝之先。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	83053-83065	
+LZ-05-001	LZ	五章	经	天地不仁，以萬物為芻狗；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	83910-83922	
+LZ-05-002	LZ	五章	经	聖人不仁，以百姓為芻狗。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	84254-84266	
+LZ-05-003	LZ	五章	经	天地之間，其猶橐籥乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	84490-84501	
+LZ-05-004	LZ	五章	经	虛而不屈，動而愈出。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	84501-84511	
+LZ-05-005	LZ	五章	经	多言數窮，不如守中。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	84782-84792	
+LZ-06-001	LZ	六章	经	谷神不死，是謂玄牝。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	85454-85464	
+LZ-06-002	LZ	六章	经	玄牝之門，是謂天地根。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	85464-85475	
+LZ-06-003	LZ	六章	经	緜緜若存，用之不勤。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	85475-85485	
+LZ-07-001	LZ	七章	经	天長地久。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	86217-86222	
+LZ-07-002	LZ	七章	经	天地所以能長且久者，以其不自生，故能長生。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	86222-86238;86460-86465	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-07-003	LZ	七章	经	是以聖人後其身而身先；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	86465-86476	
+LZ-07-004	LZ	七章	经	外其身而身存。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	86476-86483	
+LZ-07-005	LZ	七章	经	非以其無私邪，故能成其私。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	86483-86496	
+LZ-08-001	LZ	八章	经	上善若水。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	87104-87109	
+LZ-08-002	LZ	八章	经	水善利萬物而不爭，處眾人之所惡，故幾於道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	87109-87125;87337-87342	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-08-003	LZ	八章	经	居善地，心善淵，與善仁，言善信，正善治，事善能，動善時。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	87560-87588	
+LZ-08-004	LZ	八章	经	夫唯不爭，故無尤。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	87588-87597	
+LZ-09-001	LZ	九章	经	持而盈之，不如其已；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	88191-88201	
+LZ-09-002	LZ	九章	经	揣而梲之，不可長保。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	88449-88459	
+LZ-09-003	LZ	九章	经	金玉滿堂，莫之能守；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	88690-88700	
+LZ-09-004	LZ	九章	经	富貴而驕，自遺其咎。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	88912-88922	
+LZ-09-005	LZ	九章	经	功遂身退，天之道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	89135-89144	
+LZ-10-001	LZ	十章	经	載營魄抱一，能無離乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	89739-89750	
+LZ-10-002	LZ	十章	经	專氣致柔，能嬰兒乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	90006-90016	
+LZ-10-003	LZ	十章	经	滌除玄覽，能無疵乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	90264-90274	
+LZ-10-004	LZ	十章	经	愛國治民，能無知乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	90521-90531	
+LZ-10-005	LZ	十章	经	天門開闔，能為雌乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	90791-90801	
+LZ-10-006	LZ	十章	经	明白四達，能無為乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	91079-91089	
+LZ-10-007	LZ	十章	经	生之，畜之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	91337-91340;91553-91556	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-10-008	LZ	十章	经	生而不有，為而不恃，長而不宰，是謂玄德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	91769-91789	
+LZ-11-001	LZ	十一章	经	三十輻共一轂，當其無，有車之用。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	92455-92471	
+LZ-11-002	LZ	十一章	经	埏埴以為器，當其無，有器之用。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	92708-92723	
+LZ-11-003	LZ	十一章	经	鑿戶牖以為室，當其無，有室之用。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	92723-92739	
+LZ-11-004	LZ	十一章	经	故有之以為利，無之以為用。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	92739-92752	
+LZ-12-001	LZ	十二章	经	五色令人目盲，五音令人耳聾，五味令人口爽，馳騁畋獵令人心發狂，難得之貨令人行妨。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	93386-93417;93675-93684	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-12-002	LZ	十二章	经	是以聖人為腹不為目，故去彼取此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	93908-93924	
+LZ-13-001	LZ	十三章	经	寵辱若驚，貴大患若身。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	94545-94556	
+LZ-13-002	LZ	十三章	经	何謂寵辱若驚？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	94556-94563	
+LZ-13-003	LZ	十三章	经	寵為下，得之若驚，失之若驚，是謂寵辱若驚。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	94563-94584	
+LZ-13-004	LZ	十三章	经	何謂貴大患若身？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	94829-94837	
+LZ-13-005	LZ	十三章	经	吾所以有大患者，為吾有身，及吾無身，吾有何患？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	95090-95103;95316-95321;95534-95539	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-13-006	LZ	十三章	经	故貴以身為天下，若可寄天下；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	95539-95553	
+LZ-13-007	LZ	十三章	经	愛以身為天下，若可託天下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	95781-95794	
+LZ-14-001	LZ	十四章	经	視之不見名曰夷，聽之不聞名曰希，搏之不得名曰微。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	96436-96460	
+LZ-14-002	LZ	十四章	经	此三者，不可致詰，故混而為一。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	96460-96475	
+LZ-14-003	LZ	十四章	经	其上不皦，其下不昧。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	96732-96742	
+LZ-14-004	LZ	十四章	经	繩繩不可名，復歸於無物。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	96742-96754	
+LZ-14-005	LZ	十四章	经	是謂無狀之狀，無物之象，是謂惚恍。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	96754-96766;97009-97014	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-14-006	LZ	十四章	经	迎之不見其首，隨之不見其後。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	97228-97242	
+LZ-14-007	LZ	十四章	经	執古之道，以御今之有。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	97242-97253	
+LZ-14-008	LZ	十四章	经	能知古始，是謂道紀。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	97466-97476	
+LZ-15-001	LZ	十五章	经	古之善為士者，微妙玄通，深不可識。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	98144-98161	
+LZ-15-002	LZ	十五章	经	夫唯不可識，故強為之容。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	98161-98173	
+LZ-15-003	LZ	十五章	经	豫焉若冬涉川，猶兮若畏四鄰，儼兮其若容，渙兮若冰之將釋，敦兮其若樸，曠兮其若谷，混兮其若濁。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	98173-98180;98413-98420;98669-98701	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-15-004	LZ	十五章	经	孰能濁以靜之徐清？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	98926-98935	
+LZ-15-005	LZ	十五章	经	孰能安以久動之徐生？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	98935-98945	
+LZ-15-006	LZ	十五章	经	保此道者不欲盈，夫唯不盈，故能蔽不新成。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	99200-99208;99420-99432	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-16-001	LZ	十六章	经	致虛極，守靜篤。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100035-100043	
+LZ-16-002	LZ	十六章	经	萬物並作，吾以觀復。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100266-100276	
+LZ-16-003	LZ	十六章	经	夫物芸芸，各復歸其根。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100524-100535	
+LZ-16-004	LZ	十六章	经	歸根曰靜，是謂復命。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100535-100545	
+LZ-16-005	LZ	十六章	经	復命曰常，知常曰明。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100545-100550;100791-100796	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-16-006	LZ	十六章	经	不知常，妄作凶。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	100796-100804	
+LZ-16-007	LZ	十六章	经	知常容，容乃公，公乃全，全乃天，天乃道，道乃久，沒身不殆。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	101085-101089;101303-101307;101530-101534;101757-101761;101983-101987;102213-102217;102443-102448	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-17-001	LZ	十七章	经	太上，下知有之，其次，親而譽之，其次，畏之，其次，侮之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	103092-103100;103364-103372;103606-103612;103834-103840	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-17-002	LZ	十七章	经	信不足焉，有不信焉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	104078-104088	
+LZ-17-003	LZ	十七章	经	悠兮其貴言，功成事遂，百姓皆謂：我自然。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	104345-104365	
+LZ-18-001	LZ	十八章	经	大道廢，有仁義；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	105042-105050	
+LZ-18-002	LZ	十八章	经	智慧出，有大偽；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	105275-105283	
+LZ-18-003	LZ	十八章	经	六親不和，有孝慈；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	105520-105529	
+LZ-18-004	LZ	十八章	经	國家昏亂，有忠臣。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	105529-105538	
+LZ-19-001	LZ	十九章	经	絕聖棄智，民利百倍；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106202-106212	
+LZ-19-002	LZ	十九章	经	絕仁棄義，民復孝慈；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106212-106222	
+LZ-19-003	LZ	十九章	经	絕巧棄利，盜賊無有。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106222-106232	
+LZ-19-004	LZ	十九章	经	此三者以為文不足，故令有所屬﹕見素抱樸，少私寡欲。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106232-106257	
+LZ-20-001	LZ	二十章	经	絕學無憂，唯之與阿，相去幾何？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106929-106944	
+LZ-20-002	LZ	二十章	经	善之與惡，相去若何？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106944-106954	
+LZ-20-003	LZ	二十章	经	人之所畏，不可不畏。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	106954-106964	
+LZ-20-004	LZ	二十章	经	荒兮其未央哉﹗眾人熙熙，如享太牢，如春登臺。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	107307-107314;107530-107545	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-20-005	LZ	二十章	经	我獨泊兮其未兆，如嬰兒之未孩；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	107783-107798	
+LZ-20-006	LZ	二十章	经	儽儽兮若無所歸。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	108030-108038	
+LZ-20-007	LZ	二十章	经	眾人皆有餘，而我獨若遺。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	108250-108262	
+LZ-20-008	LZ	二十章	经	我愚人之心也哉﹗沌沌兮，俗人昭昭，我獨昏昏。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	108506-108514;108752-108756;108973-108978;109190-109195	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-20-009	LZ	二十章	经	俗人察察，我獨悶悶。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	109195-109200;109413-109418	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-20-010	LZ	二十章	经	澹兮其若海，飂兮若無止。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	109418-109424;109636-109642	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-20-011	LZ	二十章	经	眾人皆有以，而我獨頑似鄙。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	109854-109860;110080-110087	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-20-012	LZ	二十章	经	我獨異於人，而貴食母。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	110316-110327	
+LZ-21-001	LZ	二十一章	经	孔德之容，惟道是從。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	110968-110978	
+LZ-21-002	LZ	二十一章	经	道之為物，惟恍惟惚。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	111205-111215	
+LZ-21-003	LZ	二十一章	经	惚兮恍兮，其中有象；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	111432-111442	
+LZ-21-004	LZ	二十一章	经	恍兮惚兮，其中有物。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	111442-111452	
+LZ-21-005	LZ	二十一章	经	窈兮冥兮，其中有精；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	111704-111714	
+LZ-21-006	LZ	二十一章	经	其精甚真，其中有信。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	111969-111979	
+LZ-21-007	LZ	二十一章	经	自今及古，其名不去，以閱眾甫。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	112224-112234;112485-112490	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-21-008	LZ	二十一章	经	吾何以知眾甫之狀哉？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	112714-112724	
+LZ-21-009	LZ	二十一章	经	以此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	112724-112727	
+LZ-22-001	LZ	二十二章	经	曲則全，枉則直，窪則盈，敝則新，少則得，多則惑。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	113362-113366;113582-113586;113802-113806;114022-114026;114242-114250	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-22-002	LZ	二十二章	经	是以聖人抱一為天下式。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	114502-114513	
+LZ-22-003	LZ	二十二章	经	不自見故明，不自是故彰，不自伐故有功，不自矜故長。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	114734-114759	
+LZ-22-004	LZ	二十二章	经	夫唯不爭，故天下莫能與之爭。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	114759-114773	
+LZ-22-005	LZ	二十二章	经	古之所謂曲則全者，豈虛言哉！	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	114773-114787	
+LZ-22-006	LZ	二十二章	经	誠全而歸之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	114787-114793	
+LZ-23-001	LZ	二十三章	经	希言自然。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115204-115209	
+LZ-23-002	LZ	二十三章	经	故飄風不終朝，驟雨不終日。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115470-115483	
+LZ-23-003	LZ	二十三章	经	孰為此者？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115483-115488	
+LZ-23-004	LZ	二十三章	经	天地。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115488-115491	
+LZ-23-005	LZ	二十三章	经	天地尚不能久，而況於人乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115491-115504	
+LZ-23-006	LZ	二十三章	经	故從事於道者，道者同於道，德者同於德，失者同於失。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	115720-115733;116004-116010;116247-116253	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-23-007	LZ	二十三章	经	同於道者，道亦樂得之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	116492-116503	
+LZ-23-008	LZ	二十三章	经	同於德者，德亦樂得之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	116503-116514	
+LZ-23-009	LZ	二十三章	经	同於失者，失亦樂得之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	116514-116525	
+LZ-23-010	LZ	二十三章	经	信不足焉，有不信焉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	116744-116754	
+LZ-24-001	LZ	二十四章	经	企者不立，跨者不行，自見者不明，自是者不彰，自伐者無功，自矜者不長。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	117376-117381;117603-117632	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-24-002	LZ	二十四章	经	其在道也，曰餘食贅行。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	117632-117643	
+LZ-24-003	LZ	二十四章	经	物或惡之，故有道者不處。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	117896-117908	
+LZ-25-001	LZ	二十五章	经	有物混成，先天地生。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	118319-118329	
+LZ-25-002	LZ	二十五章	经	寂兮寥兮，獨立而不改，周行而不殆，可以為天下母。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	118571-118582;118824-118837	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-25-003	LZ	二十五章	经	吾不知其名，字之曰道，強為之名曰大。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	119070-119076;119308-119313;119556-119563	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-25-004	LZ	二十五章	经	大曰逝，逝曰遠，遠曰反。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	119829-119833;120065-120073	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-25-005	LZ	二十五章	经	故道大，天大，地大，王亦大。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	120319-120333	
+LZ-25-006	LZ	二十五章	经	域中有四大，而王居其一焉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	120577-120583;120885-120892	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-25-007	LZ	二十五章	经	人法地，地法天，天法道，道法自然。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	121106-121123	
+LZ-26-001	LZ	二十六章	经	重為輕根，靜為躁君。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	121910-121920	
+LZ-26-002	LZ	二十六章	经	是以聖人終日行不離輜重。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	122168-122180	
+LZ-26-003	LZ	二十六章	经	雖有榮觀，燕處超然。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	122396-122406	
+LZ-26-004	LZ	二十六章	经	奈何萬乘之主，而以身輕天下？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	122619-122633	
+LZ-26-005	LZ	二十六章	经	輕則失本，躁則失君。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	122633-122643	
+LZ-27-001	LZ	二十七章	经	善行無轍迹，善言無瑕讁；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	123276-123282;123510-123516	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-27-002	LZ	二十七章	经	善數不用籌策；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	123743-123750	
+LZ-27-003	LZ	二十七章	经	善閉無關楗而不可開，善結無繩約而不可解。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	123967-123987	
+LZ-27-004	LZ	二十七章	经	是以聖人常善救人，故無棄人；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	124240-124254	
+LZ-27-005	LZ	二十七章	经	常善救物，故無棄物，是謂襲明。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	124549-124564	
+LZ-27-006	LZ	二十七章	经	故善人者，不善人之師；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	124564-124575	
+LZ-27-007	LZ	二十七章	经	不善人者，善人之資。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	124795-124805	
+LZ-27-008	LZ	二十七章	经	不貴其師，不愛其資，雖智大迷，是謂要妙。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	125044-125059;125294-125299	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-28-001	LZ	二十八章	经	知其雄，守其雌，為天下谿。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	125710-125723	
+LZ-28-002	LZ	二十八章	经	為天下谿，常德不離，復歸於嬰兒。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	125723-125739	
+LZ-28-003	LZ	二十八章	经	知其白，守其黑，為天下式。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	126005-126018	
+LZ-28-004	LZ	二十八章	经	為天下式，常德不忒，復歸於無極。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	126231-126241;126453-126459	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-28-005	LZ	二十八章	经	知其榮，守其辱，為天下谷，常德乃足，復歸於樸。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	126671-126694	
+LZ-28-006	LZ	二十八章	经	樸散則為器，聖人用之，則為官長，故大制不割。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	126941-126957;127220-127226	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-29-001	LZ	二十九章	经	將欲取天下而為之，吾見其不得已。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	127852-127868	
+LZ-29-002	LZ	二十九章	经	天下神器，不可為也，為者敗之，執者失之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	127868-127873;128106-128121	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-29-003	LZ	二十九章	经	故物或行或隨，或歔或吹。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	128381-128393	
+LZ-29-004	LZ	二十九章	经	或強或羸，或挫或隳。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	128393-128403	
+LZ-29-005	LZ	二十九章	经	是以聖人去甚，去奢，去泰。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	128403-128416	
+LZ-30-001	LZ	三十章	经	以道佐人主者，不以兵強天下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	129082-129096	
+LZ-30-002	LZ	三十章	经	其事好還。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	129328-129333	
+LZ-30-003	LZ	三十章	经	師之所處，荊棘生焉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	129570-129580	
+LZ-30-004	LZ	三十章	经	大軍之後，必有凶年。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	129580-129590	
+LZ-30-005	LZ	三十章	经	善有果而已，不敢以取強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	129832-129844	
+LZ-30-006	LZ	三十章	经	果而勿矜，果而勿伐，果而勿驕。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	130081-130096	
+LZ-30-007	LZ	三十章	经	果而不得已，果而勿強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	130324-130335	
+LZ-30-008	LZ	三十章	经	物壯則老，是謂不道，不道早已。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	130580-130595	
+LZ-31-001	LZ	三十一章	经	夫佳兵者，不祥之器，物或惡之，故有道者不處。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131243-131265	
+LZ-31-002	LZ	三十一章	经	君子居則貴左，用兵則貴右。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131265-131278	
+LZ-31-003	LZ	三十一章	经	兵者不祥之器，非君子之器，不得已而用之，恬淡為上。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131278-131303	
+LZ-31-004	LZ	三十一章	经	勝而不美，而美之者，是樂殺人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131303-131318	
+LZ-31-005	LZ	三十一章	经	夫樂殺人者，則不可以得志於天下矣。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131318-131335	
+LZ-31-006	LZ	三十一章	经	吉事尚左，凶事尚右。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131335-131345	
+LZ-31-007	LZ	三十一章	经	偏將軍居左，上將軍居右，言以喪禮處之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131345-131364	
+LZ-31-008	LZ	三十一章	经	殺人之眾，以哀悲泣之，戰勝，以喪禮處之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131364-131384	
+LZ-32-001	LZ	三十二章	经	道常無名，樸雖小，天下莫能臣也。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131795-131811	
+LZ-32-002	LZ	三十二章	经	侯王若能守之，萬物將自賓。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	131811-131824	
+LZ-32-003	LZ	三十二章	经	天地相合，以降甘露，民莫之令而自均。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	132170-132188	
+LZ-32-004	LZ	三十二章	经	始制有名，名亦既有，夫亦將知止，知止所以不殆。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	132427-132450	
+LZ-32-005	LZ	三十二章	经	譬道之在天下，猶川谷之於江海。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	132746-132761	
+LZ-33-001	LZ	三十三章	经	知人者智，自知者明。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	133426-133436	
+LZ-33-002	LZ	三十三章	经	勝人者有力，自勝者強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	133663-133674	
+LZ-33-003	LZ	三十三章	经	知足者富。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	133955-133960	
+LZ-33-004	LZ	三十三章	经	強行者有志。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	134177-134183	
+LZ-33-005	LZ	三十三章	经	不失其所者久。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	134409-134416	
+LZ-33-006	LZ	三十三章	经	死而不亡者壽。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	134644-134651	
+LZ-34-001	LZ	三十四章	经	大道氾兮，其可左右。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	135293-135303	
+LZ-34-002	LZ	三十四章	经	萬物恃之而生而不辭，功成不名有。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	135537-135553	
+LZ-34-003	LZ	三十四章	经	衣養萬物而不為主，常無欲，可名於小；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	135553-135571	
+LZ-34-004	LZ	三十四章	经	萬物歸焉而不為主，可名為大。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	135823-135837	
+LZ-34-005	LZ	三十四章	经	以其終不自為大，故能成其大。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	136074-136088	
+LZ-35-001	LZ	三十五章	经	執大象，天下往。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	136709-136717	
+LZ-35-002	LZ	三十五章	经	往而不害，安平太。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	136963-136972	
+LZ-35-003	LZ	三十五章	经	樂與餌，過客止。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137200-137208	
+LZ-35-004	LZ	三十五章	经	道之出口，淡乎其無味，視之不足見，聽之不足聞，用之不足既。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137208-137237	
+LZ-36-001	LZ	三十六章	经	將欲歙之，必固張之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137935-137945	
+LZ-36-002	LZ	三十六章	经	將欲弱之，必固強之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137945-137955	
+LZ-36-003	LZ	三十六章	经	將欲廢之，必固興之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137955-137965	
+LZ-36-004	LZ	三十六章	经	將欲奪之，必固與之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137965-137975	
+LZ-36-005	LZ	三十六章	经	是謂微明。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	137975-137980	
+LZ-36-006	LZ	三十六章	经	柔弱勝剛強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	138272-138278	
+LZ-36-007	LZ	三十六章	经	魚不可脫於淵，國之利器不可以示人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	138278-138295	
+LZ-37-001	LZ	三十七章	经	道常無為而無不為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	138987-138991;139203-139208	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-37-002	LZ	三十七章	经	侯王若能守之，萬物將自化。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	139428-139441	
+LZ-37-003	LZ	三十七章	经	化而欲作，吾將鎮之以無名之樸。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	139441-139456	
+LZ-37-004	LZ	三十七章	经	無名之樸，夫亦將無欲。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	139687-139698	
+LZ-37-005	LZ	三十七章	经	不欲以靜，天下將自定。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	139910-139921	
+LZ-38-001	LZ	三十八章	经	上德不德，是以有德；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140834-140844	
+LZ-38-002	LZ	三十八章	经	下德不失德，是以無德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140844-140855	
+LZ-38-003	LZ	三十八章	经	上德無為而無以為，下德為之而有以為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140855-140873	
+LZ-38-004	LZ	三十八章	经	上仁為之而無以為，上義為之而有以為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140873-140891	
+LZ-38-005	LZ	三十八章	经	上禮為之而莫之應， 則攘臂而扔之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140891-140908	
+LZ-38-006	LZ	三十八章	经	故失道而後德，失德而後仁，失仁而後義，失義而後禮。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140908-140933	
+LZ-38-007	LZ	三十八章	经	夫禮者，忠信之薄，而亂之首。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140933-140947	
+LZ-38-008	LZ	三十八章	经	前識者，道之華，而愚之始。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140947-140960	
+LZ-38-009	LZ	三十八章	经	是以大丈夫處其厚，不居其薄；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140960-140974	
+LZ-38-010	LZ	三十八章	经	處其實，不居其華。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140974-140983	
+LZ-38-011	LZ	三十八章	经	故去彼取此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	140983-140989	
+LZ-39-001	LZ	三十九章	经	昔之得一者，天得一以清，地得一以寧，神得一以靈，谷得一以盈，萬物得一以生，侯王得一以為天下貞。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	142863-142869;143139-143180	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-39-002	LZ	三十九章	经	其致之，天無以清將恐裂，地無以寧將恐發，神無以靈將恐歇，谷無以盈將恐竭，萬物無以生將恐滅，侯王無以貴高將恐蹶。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143180-143184;143409-143417;143677-143720	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-39-003	LZ	三十九章	经	故貴以賤為本，高以下為基。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143720-143733	
+LZ-39-004	LZ	三十九章	经	是以侯王自稱孤﹑寡﹑不穀。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143733-143746	
+LZ-39-005	LZ	三十九章	经	此非以賤為本邪？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143746-143754	
+LZ-39-006	LZ	三十九章	经	非乎？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143754-143757	
+LZ-39-007	LZ	三十九章	经	故致數輿無輿，不欲琭琭如玉，珞珞如石。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	143757-143776	
+LZ-40-001	LZ	四十章	经	反者道之動，弱者道之用。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	144456-144462;144715-144721	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-40-002	LZ	四十章	经	天下萬物生於有，有生於無。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	144938-144951	
+LZ-41-001	LZ	四十一章	经	上士聞道，勤而行之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	145591-145601	
+LZ-41-002	LZ	四十一章	经	中士聞道，若存若亡；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	145812-145822	
+LZ-41-003	LZ	四十一章	经	下士聞道，大笑之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	145822-145831	
+LZ-41-004	LZ	四十一章	经	不笑不足以為道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	145831-145839	
+LZ-41-005	LZ	四十一章	经	故建言有之﹕明道若昧，進道若退，夷道若纇，上德若谷，大白若辱，廣德若不足，建德若偷，質真若渝，大方無隅，大器晚成，大音希聲，大象無形，道隱無名。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	145839-145845;146058-146063;146275-146280;146501-146506;146748-146753;146970-146975;147197-147203;147425-147430;147661-147666;147885-147890;148107-148112;148335-148340;148594-148599;148835-148840	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-41-006	LZ	四十一章	经	夫唯道，善貸且成。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	148840-148849	
+LZ-42-001	LZ	四十二章	经	道生一，一生二，二生三，三生萬物。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	149564-149581	
+LZ-42-002	LZ	四十二章	经	萬物負陰而抱陽，沖氣以為和。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	149581-149595	
+LZ-42-003	LZ	四十二章	经	人之所惡，唯孤﹑寡﹑不穀，而王公以為稱。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	149595-149615	
+LZ-42-004	LZ	四十二章	经	故物或損之而益，或益之而損。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	149615-149629	
+LZ-42-005	LZ	四十二章	经	人之所教，我亦教之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	150018-150028	
+LZ-42-006	LZ	四十二章	经	強梁者不得其死，吾將以為教父。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	150291-150306	
+LZ-43-001	LZ	四十三章	经	天下之至柔，馳騁天下之至堅。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	150983-150997	
+LZ-43-002	LZ	四十三章	经	無有入無間，吾是以知無為之有益。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	151218-151234	
+LZ-43-003	LZ	四十三章	经	不言之教，無為之益，天下希及之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	151477-151493	
+LZ-44-001	LZ	四十四章	经	名與身孰親？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	151904-151910	
+LZ-44-002	LZ	四十四章	经	身與貨孰多？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	152127-152133	
+LZ-44-003	LZ	四十四章	经	得與亡孰病？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	152350-152356	
+LZ-44-004	LZ	四十四章	经	是故甚愛必大費，多藏必厚亡，知足不辱，知止不殆，可以長久。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	152577-152591;152834-152849	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-45-001	LZ	四十五章	经	大成若缺，其用不弊。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	153260-153270	
+LZ-45-002	LZ	四十五章	经	大盈若沖，其用不窮。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	153492-153502	
+LZ-45-003	LZ	四十五章	经	大直若屈，其用不居。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	153729-153739	
+LZ-45-004	LZ	四十五章	经	大巧若拙，其用不輟。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	153961-153971	
+LZ-45-005	LZ	四十五章	经	大辯若訥，其用不差。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	154199-154209	
+LZ-45-006	LZ	四十五章	经	躁勝寒，靜勝熱。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	154433-154441	
+LZ-45-007	LZ	四十五章	经	清靜為天下正。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	154441-154448	
+LZ-46-001	LZ	四十六章	经	天下有道，卻走馬以糞。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	155112-155123	
+LZ-46-002	LZ	四十六章	经	天下無道，戎馬生於郊。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	155362-155373	
+LZ-46-003	LZ	四十六章	经	禍莫大於不知足；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	155603-155611	
+LZ-46-004	LZ	四十六章	经	咎莫大於欲得。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	155611-155618	
+LZ-46-005	LZ	四十六章	经	故知足之足，常足矣。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	155618-155628	
+LZ-47-001	LZ	四十七章	经	不出戶，知天下；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	156039-156047	
+LZ-47-002	LZ	四十七章	经	不闚牖，見天道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	156047-156055	
+LZ-47-003	LZ	四十七章	经	其出彌遠，其知彌少。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	156330-156340	
+LZ-47-004	LZ	四十七章	经	是以聖人不行而知，不見而名，不為而成。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	156600-156614;156857-156862	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-48-001	LZ	四十八章	经	為學日益，為道日損。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	157491-157496;157715-157720	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-48-002	LZ	四十八章	经	損之又損，以至於無為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	157934-157945	
+LZ-48-003	LZ	四十八章	经	無為而無不為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	157945-157952	
+LZ-48-004	LZ	四十八章	经	取天下常以無事，及其有事，不足以取天下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	158176-158184;158396-158401;158613-158620	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-49-001	LZ	四十九章	经	聖人無常心，以百姓心為心。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159234-159247	
+LZ-49-002	LZ	四十九章	经	善者，吾善之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159459-159466	
+LZ-49-003	LZ	四十九章	经	不善者，吾亦善之，德善。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159466-159475;159692-159695	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-49-004	LZ	四十九章	经	信者，吾信之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159907-159914	
+LZ-49-005	LZ	四十九章	经	不信者，吾亦信之，德信。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159914-159926	
+LZ-49-006	LZ	四十九章	经	聖人在天下歙歙，為天下渾其心，百姓皆注其耳目,\n聖人皆孩之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	159926-159941;160153-160168	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-50-001	LZ	五十章	经	出生入死。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161194-161199	
+LZ-50-002	LZ	五十章	经	生之徒，十有三；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161414-161422	
+LZ-50-003	LZ	五十章	经	死之徒，十有三；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161422-161430	
+LZ-50-004	LZ	五十章	经	人之生，動之死地，亦十有三。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161430-161444	
+LZ-50-005	LZ	五十章	经	夫何故？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161444-161448	
+LZ-50-006	LZ	五十章	经	以其生生之厚。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161448-161455	
+LZ-50-007	LZ	五十章	经	蓋聞善攝生者，陸行不遇兕虎，入軍不被甲兵；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161455-161476	
+LZ-50-008	LZ	五十章	经	兕無所投其角，虎無所措其爪，兵無所容其刃。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161476-161497	
+LZ-50-009	LZ	五十章	经	夫何故？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161497-161501	
+LZ-50-010	LZ	五十章	经	以其無死地。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	161501-161507	
+LZ-51-001	LZ	五十一章	经	道生之，德畜之，物形之，勢成之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	162368-162384	
+LZ-51-002	LZ	五十一章	经	是以萬物莫不尊道而貴德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	162716-162728	
+LZ-51-003	LZ	五十一章	经	道之尊，德之貴，夫莫之命而常自然。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	162976-162993	
+LZ-51-004	LZ	五十一章	经	故道生之，德畜之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	163205-163214	
+LZ-51-005	LZ	五十一章	经	長之育之，亭之毒之，蓋之覆之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	163214-163229	
+LZ-51-006	LZ	五十一章	经	生而不有，為而不恃，長而不宰。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	163453-163463;163675-163680	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-51-007	LZ	五十一章	经	是謂玄德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	163680-163685	
+LZ-52-001	LZ	五十二章	经	天下有始，以為天下母。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	164316-164327	
+LZ-52-002	LZ	五十二章	经	既得其母，以知其子，既知其子，復守其母，沒身不殆。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	164574-164599	
+LZ-52-003	LZ	五十二章	经	塞其兌，閉其門，終身不勤。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	164830-164838;165064-165069	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-52-004	LZ	五十二章	经	開其兌，濟其事，終身不救。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	165288-165301	
+LZ-52-005	LZ	五十二章	经	見小曰明，守柔曰強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	165524-165534	
+LZ-52-006	LZ	五十二章	经	用其光，復歸其明，無遺身殃，是為習常。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	165770-165774;165988-165993;166205-166215	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-53-001	LZ	五十三章	经	使我介然有知，行於大道，唯施是畏。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	166829-166846	
+LZ-53-002	LZ	五十三章	经	大道甚夷，而民好徑。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	167078-167088	
+LZ-53-003	LZ	五十三章	经	朝甚除，田甚蕪，倉甚虛；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	167343-167347;167566-167574	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-53-004	LZ	五十三章	经	服文綵，帶利劍，厭飲食，財貨有餘；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	167802-167819	
+LZ-53-005	LZ	五十三章	经	是為盜夸。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	167819-167824	
+LZ-53-006	LZ	五十三章	经	非道也哉！	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	167824-167829	
+LZ-54-001	LZ	五十四章	经	善建者不拔，善抱者不脫，子孫以祭祀不輟。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	168485-168491;168712-168718;168940-168948	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-54-002	LZ	五十四章	经	修之於身，其德乃真；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169168-169178	
+LZ-54-003	LZ	五十四章	经	修之於家，其德乃餘；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169178-169188	
+LZ-54-004	LZ	五十四章	经	修之於鄉，其德乃長；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169424-169434	
+LZ-54-005	LZ	五十四章	经	修之於國，其德乃豐；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169434-169444	
+LZ-54-006	LZ	五十四章	经	修之於天下，其德乃普。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169444-169455	
+LZ-54-007	LZ	五十四章	经	故以身觀身，以家觀家，以鄉觀鄉，以國觀國，以天下觀天下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169455-169476;169688-169695	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-54-008	LZ	五十四章	经	吾何以知天下然哉？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169933-169942	
+LZ-54-009	LZ	五十四章	经	以此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	169942-169945	
+LZ-55-001	LZ	五十五章	经	含德之厚，比於赤子。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	170595-170605	
+LZ-55-002	LZ	五十五章	经	蜂蠆虺蛇不螫，猛獸不據，攫鳥不搏。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	170605-170622	
+LZ-55-003	LZ	五十五章	经	骨弱筋柔而握固。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	170872-170880	
+LZ-55-004	LZ	五十五章	经	未知牝牡之合而全作，精之至也。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	171099-171109;171367-171372	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-55-005	LZ	五十五章	经	終日號而不嗄，和之至也。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	171372-171379;171602-171607	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-55-006	LZ	五十五章	经	知和曰常，知常曰明。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	171607-171612;171833-171838	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-55-007	LZ	五十五章	经	益生曰祥。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	172071-172076	
+LZ-55-008	LZ	五十五章	经	心使氣曰強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	172294-172300	
+LZ-55-009	LZ	五十五章	经	物壯則老，謂之不道，不道早已。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	172517-172532	
+LZ-56-001	LZ	五十六章	经	知者不言，言者不知。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	172943-172948;173160-173165	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-56-002	LZ	五十六章	经	塞其兌，閉其門，挫其銳，解其分，和其光，同其塵，是謂玄同。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	173377-173389;173601-173605;173817-173821;174041-174045;174265-174270	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-56-003	LZ	五十六章	经	故不可得而親，不可得而疏；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	174270-174283	
+LZ-56-004	LZ	五十六章	经	不可得而利，不可得而害；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	174502-174514	
+LZ-56-005	LZ	五十六章	经	不可得而貴，不可得而賤。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	174733-174745	
+LZ-56-006	LZ	五十六章	经	故為天下貴。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	174964-174970	
+LZ-57-001	LZ	五十七章	经	以正治國，以奇用兵，以無事取天下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	175587-175604	
+LZ-57-002	LZ	五十七章	经	吾何以知其然哉？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	175932-175940	
+LZ-57-003	LZ	五十七章	经	以此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	175940-175943	
+LZ-57-004	LZ	五十七章	经	天下多忌諱，而民彌貧；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	175943-175954	
+LZ-57-005	LZ	五十七章	经	民多利器，國家滋昬；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	175954-175964	
+LZ-57-006	LZ	五十七章	经	人多伎巧，奇物滋起；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	176190-176200	
+LZ-57-007	LZ	五十七章	经	法令滋彰，盜賊多有。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	176424-176434	
+LZ-57-008	LZ	五十七章	经	故聖人云﹕「我無為而民自化，我好靜而民自正，我無事而民自富，我無欲而民自樸。」	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	176694-176733	
+LZ-58-001	LZ	五十八章	经	其政悶悶，其民淳淳；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	177382-177392	
+LZ-58-002	LZ	五十八章	经	其政察察，其民缺缺。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	177657-177667	
+LZ-58-003	LZ	五十八章	经	禍兮福之所倚，福兮禍之所伏。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	177912-177926	
+LZ-58-004	LZ	五十八章	经	孰知其極？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	177926-177931	
+LZ-58-005	LZ	五十八章	经	其無正。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	177931-177935	
+LZ-58-006	LZ	五十八章	经	正復為奇，善復為妖。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	178176-178181;178410-178415	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-58-007	LZ	五十八章	经	人之迷，其日固久。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	178638-178647	
+LZ-58-008	LZ	五十八章	经	是以聖人方而不割，廉而不劌，直而不肆，光而不燿。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	178875-178884;179114-179119;179363-179368;179603-179608	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-59-001	LZ	五十九章	经	治人事天，莫若嗇。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	180259-180268	
+LZ-59-002	LZ	五十九章	经	夫唯嗇，是謂早服；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	180539-180548	
+LZ-59-003	LZ	五十九章	经	早服謂之重積德；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	180761-180769	
+LZ-59-004	LZ	五十九章	经	重積德則無不克，無不克則莫知其極；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	181008-181025	
+LZ-59-005	LZ	五十九章	经	莫知其極，可以有國；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	181237-181247	
+LZ-59-006	LZ	五十九章	经	有國之母，可以長久；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	181467-181477	
+LZ-59-007	LZ	五十九章	经	是謂深根固柢，長生久視之道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	181713-181727	
+LZ-60-001	LZ	六十章	经	治大國，若烹小鮮。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	182126-182135	
+LZ-60-002	LZ	六十章	经	以道莅天下，其鬼不神；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	182378-182389	
+LZ-60-003	LZ	六十章	经	非其鬼不神，其神不傷人；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	182617-182629	
+LZ-60-004	LZ	六十章	经	非其神不傷人，聖人亦不傷人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	182866-182880	
+LZ-60-005	LZ	六十章	经	夫兩不相傷，故德交歸焉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	183181-183193	
+LZ-61-001	LZ	六十一章	经	大國者下流，天下之交。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	183845-183851;184095-184100	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-61-002	LZ	六十一章	经	天下之牝，牝常以靜勝牡，以靜為下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	184314-184319;184537-184549	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-61-003	LZ	六十一章	经	故大國以下小國，則取小國；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	184801-184809;185030-185035	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-61-004	LZ	六十一章	经	小國以下大國，則取大國。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	185248-185260	
+LZ-61-005	LZ	六十一章	经	故或下以取，或下而取。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	185473-185484	
+LZ-61-006	LZ	六十一章	经	大國不過欲兼畜人，小國不過欲入事人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	185705-185723	
+LZ-61-007	LZ	六十一章	经	夫兩者各得其所欲，大者宜為下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	185723-185738	
+LZ-62-001	LZ	六十二章	经	道者萬物之奧。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	186391-186398	
+LZ-62-002	LZ	六十二章	经	善人之寶，不善人之所保。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	186619-186624;186837-186844	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-62-003	LZ	六十二章	经	美言可以市，尊行可以加人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	187056-187069	
+LZ-62-004	LZ	六十二章	经	人之不善，何棄之有？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	187346-187356	
+LZ-62-005	LZ	六十二章	经	故立天子，置三公，雖有拱璧以先駟馬，不如坐進此道。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	187572-187581;187795-187811	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-62-006	LZ	六十二章	经	古之所以貴此道者何？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	188084-188094	
+LZ-62-007	LZ	六十二章	经	不曰以求得，有罪以免邪？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	188094-188106	
+LZ-62-008	LZ	六十二章	经	故為天下貴。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	188106-188112	
+LZ-63-001	LZ	六十三章	经	為無為，事無事，味無味。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	188746-188758	
+LZ-63-002	LZ	六十三章	经	大小多少，報怨以德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	188988-188998	
+LZ-63-003	LZ	六十三章	经	圖難於其易，為大於其細；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189234-189246	
+LZ-63-004	LZ	六十三章	经	天下難事必作於易，天下大事必作於細。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189246-189264	
+LZ-63-005	LZ	六十三章	经	是以聖人終不為大，故能成其大。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189264-189279	
+LZ-63-006	LZ	六十三章	经	夫輕諾必寡信，多易必多難。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189279-189292	
+LZ-63-007	LZ	六十三章	经	是以聖人猶難之，故終無難矣	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189292-189300;189540-189545	unit spans several <p> elements separated by 王弼注; ranges concatenated; no terminal punctuation at unit end
+LZ-64-001	LZ	六十四章	经	其安易持，其未兆易謀。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	189956-189967	
+LZ-64-002	LZ	六十四章	经	其脆易泮，其微易散。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190199-190209	
+LZ-64-003	LZ	六十四章	经	為之於未有，治之於未亂。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190505-190511;190725-190731	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-64-004	LZ	六十四章	经	合抱之木，生於毫末；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190943-190953	
+LZ-64-005	LZ	六十四章	经	九層之臺，起於累土；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190953-190963	
+LZ-64-006	LZ	六十四章	经	千里之行，始於足下。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190963-190973	
+LZ-64-007	LZ	六十四章	经	為者敗之，執者失之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	190973-190983	
+LZ-64-008	LZ	六十四章	经	是以聖人無為故無敗，無執故無失。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191229-191245	
+LZ-64-009	LZ	六十四章	经	民之從事，常於幾成而敗之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191245-191258	
+LZ-64-010	LZ	六十四章	经	慎終如始，則無敗事。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191470-191480	
+LZ-64-011	LZ	六十四章	经	是以聖人欲不欲，不貴難得之貨；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191480-191495	
+LZ-64-012	LZ	六十四章	经	學不學，復眾人之所過。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191727-191738	
+LZ-64-013	LZ	六十四章	经	以輔萬物之自然，而不敢為。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	191976-191989	
+LZ-65-001	LZ	六十五章	经	古之善為道者，非以明民，將以愚之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	192400-192417	
+LZ-65-002	LZ	六十五章	经	民之難治，以其智多。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	192648-192658	
+LZ-65-003	LZ	六十五章	经	故以智治國，國之賊，不以智治國，國之福。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	192875-192885;193196-193206	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-65-004	LZ	六十五章	经	知此兩者亦稽式。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	193206-193214	
+LZ-65-005	LZ	六十五章	经	常知稽式，是謂玄德。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	193214-193224	
+LZ-65-006	LZ	六十五章	经	玄德深矣，遠矣，與物反矣，然後乃至大順。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	193224-193232;193474-193479;193691-193698	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-66-001	LZ	六十六章	经	江海所以能為百谷王者，以其善下之，故能為百谷王。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194109-194133	
+LZ-66-002	LZ	六十六章	经	是以欲上民，必以言下之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194133-194145	
+LZ-66-003	LZ	六十六章	经	欲先民，必以身後之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194145-194155	
+LZ-66-004	LZ	六十六章	经	是以聖人處上而民不重，處前而民不害。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194155-194173	
+LZ-66-005	LZ	六十六章	经	是以天下樂推而不厭，以其不爭，故天下莫能與之爭。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194173-194197	
+LZ-67-001	LZ	六十七章	经	天下皆謂我道大，似不肖。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194608-194620	
+LZ-67-002	LZ	六十七章	经	夫唯大，故似不肖。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194620-194629	
+LZ-67-003	LZ	六十七章	经	若肖，久矣其細也夫！	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194629-194639	
+LZ-67-004	LZ	六十七章	经	我有三寶，持而保之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194882-194892	
+LZ-67-005	LZ	六十七章	经	一曰慈，二曰儉，三曰不敢為天下先。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194892-194909	
+LZ-67-006	LZ	六十七章	经	慈故能勇，儉故能廣，不敢為天下先，故能成器長。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	194910-194915;195140-195145;195367-195380	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-67-007	LZ	六十七章	经	今舍慈且勇，舍儉且廣，舍後且先，死矣！	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	195616-195622;195835-195848	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-67-008	LZ	六十七章	经	夫慈以戰則勝，以守則固。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	195849-195856;196075-196080	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-67-009	LZ	六十七章	经	天將救之，以慈衛之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	196080-196090	
+LZ-68-001	LZ	六十八章	经	善為士者不武，善戰者不怒，善勝敵者不與，善用人者為之下，是謂不爭之德，是謂用人之力，是謂配天古之極。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	196501-196508;196730-196736;196958-196965;197177-197199;197421-197429	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-69-001	LZ	六十九章	经	用兵有言﹕「吾不敢為主而為客，不敢進寸而退尺。」	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	197840-197864	
+LZ-69-002	LZ	六十九章	经	是謂行無行，攘無臂，扔無敵，執無兵。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	197864-197870;198082-198090;198345-198349	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-69-003	LZ	六十九章	经	禍莫大於輕敵，輕敵幾喪吾寶。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	198350-198364	
+LZ-69-004	LZ	六十九章	经	故抗兵相加，哀者勝矣。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	198626-198637	
+LZ-70-001	LZ	七十章	经	吾言甚易知，甚易行。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	199261-199271	
+LZ-70-002	LZ	七十章	经	天下莫能知，莫能行。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	199271-199281	
+LZ-70-003	LZ	七十章	经	言有宗，事有君。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	199544-199552	
+LZ-70-004	LZ	七十章	经	夫唯無知，是以不我知。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	199775-199786	
+LZ-70-005	LZ	七十章	经	知我者希，則我者貴。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	200017-200027	
+LZ-70-006	LZ	七十章	经	是以聖人被褐懷玉。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	200266-200275	
+LZ-71-001	LZ	七十一章	经	知不知上，不知知病。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	200931-200941	
+LZ-71-002	LZ	七十一章	经	夫唯病病，是以不病。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	201159-201169	
+LZ-71-003	LZ	七十一章	经	聖人不病，以其病病，是以不病。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	201169-201184	
+LZ-72-001	LZ	七十二章	经	民不畏威，則大威至。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	201595-201605	
+LZ-72-002	LZ	七十二章	经	無狎其所居，無厭其所生。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	201605-201617	
+LZ-72-003	LZ	七十二章	经	夫唯不厭，是以不厭。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	201926-201931;202143-202148	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-72-004	LZ	七十二章	经	是以聖人自知不自見，自愛不自貴；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	202367-202377;202598-202604	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-72-005	LZ	七十二章	经	故去彼取此。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	202820-202826	
+LZ-73-001	LZ	七十三章	经	勇於敢則殺，勇於不敢則活。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	203237-203243;203457-203464	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-73-002	LZ	七十三章	经	此兩者，或利或害。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	203676-203685	
+LZ-73-003	LZ	七十三章	经	天之所惡，孰知其故？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	203914-203924	
+LZ-73-004	LZ	七十三章	经	是以聖人猶難之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	203924-203932	
+LZ-73-005	LZ	七十三章	经	天之道，不爭而善勝，不言而善應，不召而自來，繟然而善謀。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	204194-204204;204425-204431;204653-204659;204873-204879	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-73-006	LZ	七十三章	经	天網恢恢，疏而不失。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	205121-205131	
+LZ-74-001	LZ	七十四章	经	民不畏死，奈何以死懼之？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	205542-205554	
+LZ-74-002	LZ	七十四章	经	若使民常畏死，而為奇者，吾得執而殺之，孰敢？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	205554-205576	
+LZ-74-003	LZ	七十四章	经	常有司殺者殺，夫代司殺者殺，是謂代大匠斲。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	205792-205813	
+LZ-74-004	LZ	七十四章	经	夫代大匠斲者，希有不傷其手矣。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	205814-205829	
+LZ-75-001	LZ	七十五章	经	民之饑，以其上食稅之多，是以饑。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	206466-206482	
+LZ-75-002	LZ	七十五章	经	民之難治，以其上之有為，是以難治。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	206482-206499	
+LZ-75-003	LZ	七十五章	经	民之輕死，以其上求生之厚，是以輕死。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	206499-206517	
+LZ-75-004	LZ	七十五章	经	夫唯無以生為者，是賢於貴生。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	206517-206531	
+LZ-76-001	LZ	七十六章	经	人之生也柔弱，其死也堅強。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	207167-207180	
+LZ-76-002	LZ	七十六章	经	萬物草木之生也柔脆，其死也枯槁。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	207181-207197	
+LZ-76-003	LZ	七十六章	经	故堅強者死之徒，柔弱者生之徒。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	207198-207213	
+LZ-76-004	LZ	七十六章	经	是以兵強則不勝，木強則兵。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	207214-207222;207450-207455	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-76-005	LZ	七十六章	经	強大處下，柔弱處上。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	207667-207672;207884-207889	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-77-001	LZ	七十七章	经	天之道，其猶張弓與？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208503-208513	
+LZ-77-002	LZ	七十七章	经	高者抑之，下者舉之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208513-208523	
+LZ-77-003	LZ	七十七章	经	有餘者損之，不足者補之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208523-208535	
+LZ-77-004	LZ	七十七章	经	天之道，損有餘而補不足。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208535-208547	
+LZ-77-005	LZ	七十七章	经	人之道則不然，損不足以奉有餘。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208548-208555;208814-208822	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-77-006	LZ	七十七章	经	孰能有餘以奉天下？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208823-208832	
+LZ-77-007	LZ	七十七章	经	唯有道者。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208832-208837	
+LZ-77-008	LZ	七十七章	经	是以聖人為而不恃，功成而不處，其不欲見賢。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	208838-208859	
+LZ-78-001	LZ	七十八章	经	天下莫柔弱於水，而攻堅強者，莫之能勝，其無以易之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	209512-209537	
+LZ-78-002	LZ	七十八章	经	弱之勝強，柔之勝剛，天下莫不知莫能行。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	209770-209789	
+LZ-78-003	LZ	七十八章	经	是以聖人云﹕「受國之垢，是謂社稷主；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	209789-209807	
+LZ-78-004	LZ	七十八章	经	受國不祥，是為天下王。」	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	209807-209819	
+LZ-78-005	LZ	七十八章	经	正言若反。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	209819-209824	
+LZ-79-001	LZ	七十九章	经	和大怨，必有餘怨，安可以為善？	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	210235-210244;210480-210486	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-79-002	LZ	七十九章	经	是以聖人執左契，而不責於人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	210486-210494;210712-210718	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-79-003	LZ	七十九章	经	有德司契，無德司徹。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	210718-210723;210950-210955	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-79-004	LZ	七十九章	经	天道無親，常與善人。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	211170-211180	
+LZ-80-001	LZ	八十章	经	小國寡民，使有什伯之器而不用，使民重死而不遠徙。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	211579-211584;211820-211830;212057-212066	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-80-002	LZ	八十章	经	雖有舟輿，無所乘之；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	212302-212312	
+LZ-80-003	LZ	八十章	经	雖有甲兵，無所陳之。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	212312-212322	
+LZ-80-004	LZ	八十章	经	使人復結繩而用之，甘其食，美其服，安其居，樂其俗。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	212323-212348	
+LZ-80-005	LZ	八十章	经	鄰國相望，雞犬之聲相聞，民至老死，不相往來。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	212348-212370	
+LZ-81-001	LZ	八十一章	经	信言不美，美言不信。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	212984-212989;213201-213206	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-81-002	LZ	八十一章	经	善者不辯，辯者不善。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	213418-213428	
+LZ-81-003	LZ	八十一章	经	知者不博，博者不知。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	213429-213434;213646-213651	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-81-004	LZ	八十一章	经	聖人不積，既以為人己愈有，既以與人己愈多。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	213652-213657;213879-213887;214099-214107	unit spans several <p> elements separated by 王弼注; ranges concatenated
+LZ-81-005	LZ	八十一章	经	天之道，利而不害；	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	214319-214328	
+LZ-81-006	LZ	八十一章	经	聖人之道，為而不爭。	sources/wenli-shengsheng-v0.4/research/corpus/sources/L.html	214542-214552	

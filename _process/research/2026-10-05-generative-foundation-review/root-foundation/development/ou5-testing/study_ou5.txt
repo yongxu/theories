@@ -1,0 +1,20 @@
+## 374. Testing within the net (OU5)
+
+```text
+Result(s): new record testing-within-the-net.
+Delta: 验 of the one-unfolding plan (PLAN.md §4.4) in the grammar (Becoming.GrammarTesting). The core of a class
+       is approximated by stages («层»); the core lies in every stage («核在每层之内»), so what a finite stage
+       tells apart is not in the core («可分则不在核»). A room in balance and a room held by a thermostat share a
+       core class of "warm or not" while no window opens, and the window's opening, read as part of the net,
+       tells them apart at the first stage («恒温与平衡»).
+Premises / correspondence: none beyond the grammar; the converse (what no finite stage tells apart lies in the
+       core) is the Hennessy–Milner direction, which needs finitely many successors and implies LLPO in its
+       limit form; it is a calibration, not stated here.
+Evidence: core receipt RECEIPT_ID (Becoming.GrammarTesting, THEOREMS theorems in DECLS declarations, empty axiom
+       reports).
+Boundary: the net with the window's opening is a net of possibilities (its successors are alternatives); in one
+       history the open window either happens or not, and the comparison is counterfactual.
+Output → input: the plan's 穷理 (explanatory minimum): 验 is the root theorem's one direction.
+```
+
+**Why no intervener.** The source texts that prompted plan version 9 read the thermostat case through intervention (do(·)). In the grammar the window is not an act from outside: it is a relation of the net read, and two mechanisms are told apart where the wider net's relations tell their occurrences apart. 《荀子·正名》's 「验之所缘以同异」 names the same: one tests by what sameness and difference are conditioned by.

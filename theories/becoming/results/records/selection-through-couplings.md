@@ -94,7 +94,7 @@ On 12 October 2026 Ren asked “hows cause–effect system comparing to our theo
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). There the gap for one's own act is a general theorem: the response premise of Flow.unselected_beyond_coupling_responsive derived from a law of exchange, for any act whose difference stays beyond the closure.
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). There favouring reaching beyond is a general law: where a family containing what couples in gains nothing, a rise of what couples in is drawn from beyond it, so a selection rewarding the rise rewards the draw; Diversion is its instance.
 
-**Used by:** [a-formations-own-course](a-formations-own-course.md) · [generalization-through-lumping](generalization-through-lumping.md) · [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md) · [selection-under-registration-revision](selection-under-registration-revision.md) · [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md) · [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md) · [wisdom-root-without-axiom](wisdom-root-without-axiom.md) (interpretive)
+**Used by:** [a-formations-own-course](a-formations-own-course.md) · [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md) · [generalization-through-lumping](generalization-through-lumping.md) · [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md) · [selection-under-registration-revision](selection-under-registration-revision.md) · [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md) · [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md) · [what-training-installs](what-training-installs.md) · [wisdom-root-without-axiom](wisdom-root-without-axiom.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -108,7 +108,7 @@ On 12 October 2026 Ren asked “hows cause–effect system comparing to our theo
 | proof | [Frame.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean) | `Becoming.Run`, `Becoming.WithinClosure`, `Becoming.ClosedUnder` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-cause-effect-comparison.md](../../../../sources/15-codex-theory-conversations/2026-10-12-cause-effect-comparison.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json) | — |

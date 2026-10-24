@@ -33,7 +33,7 @@
 
 verify_ro.py passes: 248 passages (91 agreements, 98 exact scopes, 59 divergences), every fragment verbatim in its preserved text (93 files bound by SHA-256), 604 declarations in the current receipt, 122 records, the atlas ids in an excerpt rebuilt from the two archives, and the chapter's tables. Five mappers drafted; the integrator checked every quotation, declaration and record and read every reading, correcting six (study section 207). Not independently reviewed; no collation with a printed edition. Four agreements became exact scopes under D62 (board item ZHK).
 
-Canonical source: [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md)
+Canonical source: [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md)
 
 <a id="next--下一步"></a>
 ## Next
@@ -66,12 +66,12 @@ Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国�
 
 | Role | Source | Declarations |
 |---|---|---|
-| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../chapters/CHINESE-SOURCES-AND-BECOMING.md) | — |
+| statement | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | integration | [verify_ro.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py) | — |
 | integration | [atlas-excerpt.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/atlas-excerpt.json) | — |
 | review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/chinese-classical-texts/PROVENANCE.json) | — |
 | provenance | [2026-10-19-relational-ontology-of-chinese-thought.md](../../../../sources/15-codex-theory-conversations/2026-10-19-relational-ontology-of-chinese-thought.md) | — |
 

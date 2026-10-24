@@ -31,7 +31,7 @@
     "zh": "LibreOffice版本接入Ubuntu beta，过渡协会早于基金会法人；Narwhal由未完成计划到公开接续与发布，其主帖明示未来API涨价顾虑影响年度／月度承诺选择。前者是产品—分发接口，后者是声明的条件—承诺规则对应；没有反馈闭环识别或x、β、C适配。",
     "en": "LibreOffice enters Ubuntu beta before foundation incorporation under interim association support; Narwhal progresses from an incomplete plan to public continuation and release, with its main post explicitly relating anticipated API increases to annual/monthly commitments. These are product-distribution and stated condition-commitment correspondences, not identified feedback closure or x/beta/C adapters."
   },
-  "canonical_source": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+  "canonical_source": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
   "aliases": [],
   "dependencies": [
     {
@@ -128,7 +128,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+      "path": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
       "role": "statement",
       "sha256": "1b5e9b2651532c1bd7326dd173010b554d28fa23557a5701237240b399fc4af3",
       "declarations": []

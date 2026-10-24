@@ -114,13 +114,13 @@ Laws H1 to H5 of the review of the earlier 生生不息 repository (SSBX review,
 | proof | [Frame.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean) | `Becoming.Run` |
 | proof | [Commuting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Commuting.lean) | `Becoming.Law.Commutes`, `Becoming.Law.Commutes.iterate`, `Becoming.Law.Commutes.apart` |
 | proof | [HexagramCommuting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean) | `Becoming.Hexagram.complement_moves` |
-| statement | [YI-ZHUAN-AND-BECOMING.md](../../chapters/YI-ZHUAN-AND-BECOMING.md) | — |
+| statement | [YI-ZHUAN-AND-BECOMING.md](../../history/YI-ZHUAN-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json) | — |
 | integration | [verify_mapping.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py) | — |
 | integration | [hexcount.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/y3/hexcount.py) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [SSBX-REPOSITORY-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/zhouyi-yizhuan/PROVENANCE.json) | — |
 | provenance | [2026-10-19-the-changes-on-the-spine.md](../../../../sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |

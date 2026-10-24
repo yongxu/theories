@@ -1,0 +1,1205 @@
+@Becoming.steps_succ_map : ∀ {α : Type} (g : Nat → α) (T n : Nat),
+  List.map g (Becoming.steps (T + 1) n) = List.map (fun i => g (i + 1)) (Becoming.steps T n)
+@Becoming.sign_eq_one : ∀ {n : Nat}, 0 < n → Becoming.sign n = 1
+@Becoming.sign_total_le : ∀ {α : Type} (q : α → Nat) (as : List α),
+  Becoming.sign (Becoming.total as q) ≤ Becoming.total as fun a => Becoming.sign (q a)
+@Becoming.pos_of_sign_le : ∀ {n k : Nat}, Becoming.sign n ≤ k → 0 < n → 0 < k
+@Becoming.Passage.ext_of : ∀ {p q : Becoming.Passage},
+  p.before = q.before → p.after = q.after → p.taken = q.taken → p.given = q.given → p = q
+@Becoming.Passage.Balanced.given_pos : ∀ {p : Becoming.Passage}, p.Balanced → p.before < p.after → 0 < p.given
+@Becoming.Passage.Balanced.taken_pos : ∀ {p : Becoming.Passage}, p.Balanced → p.after < p.before → 0 < p.taken
+@Becoming.Passage.balanced_total : ∀ {P : List Becoming.Passage},
+  (∀ (p : Becoming.Passage), p ∈ P → p.Balanced) →
+    Becoming.total P Becoming.Passage.after + Becoming.total P Becoming.Passage.taken =
+      Becoming.total P Becoming.Passage.before + Becoming.total P Becoming.Passage.given
+@Becoming.Flow.sign_uptake_le_takers : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  Becoming.sign (L.uptake cs t) ≤ L.takers cs t
+@Becoming.Flow.exchangesAt_of_uptake : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  0 < L.uptake cs t → L.ExchangesAt t
+@Becoming.Flow.exchangesAt_of_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  0 < L.replenishment cs t → L.ExchangesAt t
+@Becoming.Flow.BalancesOn.taken_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → L.taken t c ≤ W.level t c + L.given t c
+@Becoming.Flow.ExchangesAt.closed : ∀ {F C : Type} {L : Becoming.Flow F C} {es : List C} {t : Nat},
+  L.ClosedAt es t → L.ExchangesAt t → 0 < L.uptake es t ∨ 0 < L.replenishment es t
+@Becoming.Flow.RunsDownOn.taken_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {es : List C}
+  {t : Nat}, L.RunsDownOn W es t → ((∃ c, c ∈ es ∧ 0 < L.taken t c) ↔ W.stock es (t + 1) < W.stock es t)
+@Becoming.Flow.Realizes.total_eq : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e →
+    ∀ (q : Becoming.Passage → Nat), Becoming.total P q = Becoming.total es fun c => q (L.passage W t c)
+@Becoming.Flow.Realizes.uptake : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → Becoming.total P Becoming.Passage.taken = L.uptake es t
+@Becoming.Flow.Realizes.replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → Becoming.total P Becoming.Passage.given = L.replenishment es t
+@Becoming.Flow.Realizes.stock_before : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → Becoming.total P Becoming.Passage.before = W.stock es t
+@Becoming.Flow.Realizes.stock_after : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → Becoming.total P Becoming.Passage.after = W.stock es (t + 1)
+@Becoming.Flow.Realizes.member : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → ∀ {p : Becoming.Passage}, p ∈ P → ∃ c, c ∈ es ∧ L.passage W t c = p
+@Becoming.OneStep.fall_iff_given : ∀ {P : List Becoming.Passage} {k : Nat},
+  (∀ (p : Becoming.Passage), p ∈ P → p.Balanced) →
+    (Becoming.total P Becoming.Passage.after + k ≤ Becoming.total P Becoming.Passage.before ↔
+      Becoming.total P Becoming.Passage.given + k ≤ Becoming.total P Becoming.Passage.taken)
+@Becoming.Flow.Realizes.every : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop}, L.Realizes W t es P k e → Becoming.OneStep.Every P k e
+@Becoming.Flow.Realizes.balance : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → L.BalancesOn W es t → Becoming.OneStep.Balance P k e
+@Becoming.Flow.Realizes.runsDown : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → L.RunsDownOn W es t → Becoming.OneStep.RunsDown P k e
+@Becoming.Flow.Realizes.closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → L.ClosedAt es t → Becoming.OneStep.Closed P k e
+@Becoming.Flow.Realizes.runsDownClosed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → L.RunsDownOn W es t → L.ClosedAt es t → Becoming.OneStep.RunsDownClosed P k e
+@Becoming.Flow.roles_passage : ∀ {F C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C) (t : Nat) (c : C),
+  L.roles.passage W.roles t (Sum.inr c) = L.passage W t c
+@Becoming.Flow.roles_exchangesAt : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.roles.ExchangesAt t ↔ L.ExchangesAt t
+@Becoming.Flow.Realizes.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C}
+  {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  L.Realizes W t es P k e → L.roles.Realizes W.roles t (List.map Sum.inr es) P k e
+@Becoming.Flow.BalancesOn.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C},
+  L.BalancesOn W es t → L.roles.BalancesOn W.roles (List.map Sum.inr es) t
+@Becoming.Flow.DissipatesOn.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {es : List C},
+  L.DissipatesOn es t → L.roles.DissipatesOn (List.map Sum.inr es) t
+@Becoming.Flow.RunsDownOn.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {es : List C},
+  L.RunsDownOn W es t → L.roles.RunsDownOn W.roles (List.map Sum.inr es) t
+@Becoming.Flow.ClosedAt.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {es : List C},
+  L.ClosedAt es t → L.roles.ClosedAt (List.map Sum.inr es) t
+@Becoming.OneStep.Chained.lengths : ∀ {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chained P → ∀ (t : Nat), (P t).length = (P 0).length
+Becoming.OneStep.Witness.pick_steps : ∀ (P : List Becoming.Passage),
+  List.map (Becoming.OneStep.Witness.pick P) (Becoming.steps 0 P.length) = P
+Becoming.OneStep.Witness.total_pick : ∀ (P : List Becoming.Passage) (q : Becoming.Passage → Nat),
+  (Becoming.total (Becoming.steps 0 P.length) fun i => q (Becoming.OneStep.Witness.pick P i)) = Becoming.total P q
+@Becoming.OneStep.Witness.pick_lt : ∀ {q : Becoming.Passage → Nat},
+  q Becoming.Passage.idle = 0 →
+    ∀ (P : List Becoming.Passage) (i : Nat), 0 < q (Becoming.OneStep.Witness.pick P i) → i < P.length
+Becoming.OneStep.Witness.pick_mem : ∀ (P : List Becoming.Passage) (i : Nat),
+  i < P.length → Becoming.OneStep.Witness.pick P i ∈ P
+Becoming.OneStep.Witness.pick_beyond : ∀ (P : List Becoming.Passage) (i : Nat),
+  P.length ≤ i → Becoming.OneStep.Witness.pick P i = Becoming.Passage.idle
+@Becoming.OneStep.Witness.pick_map : ∀ {f g : Becoming.Passage → Nat},
+  f Becoming.Passage.idle = g Becoming.Passage.idle →
+    ∀ (P Q : List Becoming.Passage),
+      List.map f P = List.map g Q →
+        ∀ (i : Nat), f (Becoming.OneStep.Witness.pick P i) = g (Becoming.OneStep.Witness.pick Q i)
+Becoming.OneStep.Witness.least_excess : ∀ (a b : Nat), Becoming.OneStep.Witness.least a b + Becoming.excess a b = a
+Becoming.OneStep.Witness.excess_zero : ∀ (a : Nat), Becoming.excess a 0 = a
+Becoming.OneStep.Witness.least_excess_other : ∀ (a b : Nat),
+  Becoming.OneStep.Witness.least a b + Becoming.excess b a = b
+@Becoming.OneStep.Witness.excess_le_of : ∀ {u x y : Nat}, u ≤ x + y → Becoming.excess u x ≤ y
+Becoming.OneStep.Witness.rest_units : ∀ (P : List Becoming.Passage) (u i : Nat),
+  Becoming.OneStep.Witness.rest P u i + Becoming.OneStep.Witness.units P u i = (Becoming.OneStep.Witness.pick P i).taken
+Becoming.OneStep.Witness.total_rest_units : ∀ (P : List Becoming.Passage) (u : Nat),
+  Becoming.total (Becoming.steps 0 P.length) (Becoming.OneStep.Witness.rest P u) +
+      Becoming.total (Becoming.steps 0 P.length) (Becoming.OneStep.Witness.units P u) =
+    Becoming.total P Becoming.Passage.taken
+Becoming.OneStep.Witness.total_units : ∀ (P : List Becoming.Passage) (u : Nat),
+  u ≤ Becoming.total P Becoming.Passage.taken →
+    Becoming.total (Becoming.steps 0 P.length) (Becoming.OneStep.Witness.units P u) = u
+Becoming.OneStep.Witness.unitList_length : ∀ (P : List Becoming.Passage) (u : Nat),
+  u ≤ Becoming.total P Becoming.Passage.taken → (Becoming.OneStep.Witness.unitList P u).length = u
+Becoming.OneStep.Witness.unitList_units : ∀ (P : List Becoming.Passage) (u : Nat) (f : Becoming.OneStep.Witness.Part),
+  f ∈ Becoming.OneStep.Witness.unitList P u → ∃ i j, f = Becoming.OneStep.Witness.Part.unit i j ∧ i < P.length
+Becoming.OneStep.Witness.unitTake_up_zero : ∀ (g : Becoming.OneStep.Witness.Part),
+  Becoming.OneStep.Witness.unitTake g.up 0 = 0
+Becoming.OneStep.Witness.unitTake_up_succ : ∀ (c : Nat) (g : Becoming.OneStep.Witness.Part),
+  Becoming.OneStep.Witness.unitTake g.up (c + 1) = Becoming.OneStep.Witness.unitTake g c
+Becoming.OneStep.Witness.total_unitTake : ∀ (P : List Becoming.Passage) (u c : Nat),
+  (Becoming.total (Becoming.OneStep.Witness.unitList P u) fun f => Becoming.OneStep.Witness.unitTake f c) =
+    Becoming.OneStep.Witness.units P u c
+Becoming.OneStep.Witness.hit_self : ∀ (i : Nat), Becoming.OneStep.Witness.hit i i = 1
+Becoming.OneStep.Witness.hit_pos : ∀ (s t : Nat), 0 < Becoming.OneStep.Witness.hit s t → s = t
+Becoming.OneStep.Witness.unit_injective : ∀ (i j j' : Nat),
+  Becoming.OneStep.Witness.Part.unit i j = Becoming.OneStep.Witness.Part.unit i j' → j = j'
+@Becoming.OneStep.Witness.up_unit_injective : ∀ {i j i' j' : Nat},
+  Becoming.OneStep.Witness.Part.unit (i + 1) j = Becoming.OneStep.Witness.Part.unit (i' + 1) j' →
+    Becoming.OneStep.Witness.Part.unit i j = Becoming.OneStep.Witness.Part.unit i' j'
+Becoming.OneStep.Witness.distinct_unitList : ∀ (P : List Becoming.Passage) (u : Nat),
+  Becoming.Distinct (Becoming.OneStep.Witness.unitList P u)
+Becoming.OneStep.Witness.distinct_present : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t : Nat), Becoming.Distinct ((Becoming.OneStep.Witness.flow P u o).present t)
+@Becoming.OneStep.Witness.member_injective : ∀ {o : Nat → Prop} (i j : Nat),
+  Becoming.OneStep.Witness.Place.member i = Becoming.OneStep.Witness.Place.member j → i = j
+Becoming.OneStep.Witness.distinct_family : ∀ (m : Nat) (o : Nat → Prop),
+  Becoming.Distinct (Becoming.OneStep.Witness.family m o)
+Becoming.OneStep.Witness.total_family : ∀ (m : Nat) {o : Nat → Prop} (q : Becoming.OneStep.Witness.Place o → Nat),
+  Becoming.total (Becoming.OneStep.Witness.family m o) q =
+    Becoming.total (Becoming.steps 0 m) fun i => q (Becoming.OneStep.Witness.Place.member i)
+@Becoming.OneStep.Witness.member_mem : ∀ {m i : Nat} {o : Nat → Prop},
+  i < m → Becoming.OneStep.Witness.Place.member i ∈ Becoming.OneStep.Witness.family m o
+@Becoming.OneStep.Witness.of_mem_family : ∀ {m : Nat} {o : Nat → Prop} {c : Becoming.OneStep.Witness.Place o},
+  c ∈ Becoming.OneStep.Witness.family m o → ∃ i, i < m ∧ c = Becoming.OneStep.Witness.Place.member i
+@Becoming.OneStep.Witness.whole_count : ∀ {M X k : Nat},
+  Becoming.sign X ≤ k → k ≤ X → M + k.pred = X → Becoming.sign M + k.pred = k
+Becoming.OneStep.Witness.whole_total : ∀ (Q : List Becoming.Passage) {k : Nat},
+  k ≤ Becoming.total Q Becoming.Passage.taken →
+    Becoming.total (Becoming.steps 0 Q.length) (Becoming.OneStep.Witness.rest Q k.pred) + k.pred =
+      Becoming.total Q Becoming.Passage.taken
+@Becoming.OneStep.Witness.whole_bound : ∀ {X Y M k : Nat},
+  Becoming.sign X ≤ k → Y + k ≤ X → M + k.pred = X → Y + Becoming.sign M ≤ M
+Becoming.OneStep.Witness.take_units : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t i : Nat),
+  (Becoming.total (Becoming.OneStep.Witness.unitList (P t) (u t)) fun f =>
+      (Becoming.OneStep.Witness.flow P u o).take t f (Becoming.OneStep.Witness.Place.member i)) =
+    Becoming.OneStep.Witness.units (P t) (u t) i
+Becoming.OneStep.Witness.give_units : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t i : Nat),
+  (Becoming.total (Becoming.OneStep.Witness.unitList (P t) (u t)) fun f =>
+      (Becoming.OneStep.Witness.flow P u o).give t f (Becoming.OneStep.Witness.Place.member i)) =
+    0
+Becoming.OneStep.Witness.taken_member : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t i : Nat),
+  (Becoming.OneStep.Witness.flow P u o).taken t (Becoming.OneStep.Witness.Place.member i) =
+    (Becoming.OneStep.Witness.pick (P t) i).taken
+Becoming.OneStep.Witness.given_member : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t i : Nat),
+  (Becoming.OneStep.Witness.flow P u o).given t (Becoming.OneStep.Witness.Place.member i) =
+    (Becoming.OneStep.Witness.pick (P t) i).given
+Becoming.OneStep.Witness.level_after : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    ∀ (i : Nat),
+      (Becoming.OneStep.Witness.web P o).level (t + 1) (Becoming.OneStep.Witness.Place.member i) =
+        (Becoming.OneStep.Witness.pick (P t) i).after
+Becoming.OneStep.Witness.passage_member : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    ∀ (i : Nat),
+      (Becoming.OneStep.Witness.flow P u o).passage (Becoming.OneStep.Witness.web P o) t
+          (Becoming.OneStep.Witness.Place.member i) =
+        Becoming.OneStep.Witness.pick (P t) i
+Becoming.OneStep.Witness.passages : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    List.map ((Becoming.OneStep.Witness.flow P u o).passage (Becoming.OneStep.Witness.web P o) t)
+        (Becoming.OneStep.Witness.family (P t).length o) =
+      P t
+Becoming.OneStep.Witness.uptake_family : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  (Becoming.OneStep.Witness.flow P u o).uptake (Becoming.OneStep.Witness.family (P t).length o) t =
+    Becoming.total (P t) Becoming.Passage.taken
+Becoming.OneStep.Witness.replenishment_family : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t : Nat),
+  (Becoming.OneStep.Witness.flow P u o).replenishment (Becoming.OneStep.Witness.family (P t).length o) t =
+    Becoming.total (P t) Becoming.Passage.given
+Becoming.OneStep.Witness.takers_eq : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  u t ≤ Becoming.total (P t) Becoming.Passage.taken →
+    (Becoming.OneStep.Witness.flow P u o).takers (Becoming.OneStep.Witness.family (P t).length o) t =
+      Becoming.sign (Becoming.total (Becoming.steps 0 (P t).length) (Becoming.OneStep.Witness.rest (P t) (u t))) + u t
+Becoming.OneStep.Witness.takers_count : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat) {k : Nat → Nat},
+  Becoming.sign (Becoming.total (P t) Becoming.Passage.taken) ≤ k t →
+    k t ≤ Becoming.total (P t) Becoming.Passage.taken →
+      (Becoming.OneStep.Witness.flow P (fun s => (k s).pred) o).takers (Becoming.OneStep.Witness.family (P t).length o)
+          t =
+        k t
+Becoming.OneStep.Witness.outer_mem : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  Becoming.OneStep.Witness.Part.outer ∈ (Becoming.OneStep.Witness.flow P u o).present t
+Becoming.OneStep.Witness.beyond_moves : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat)
+  (f : Becoming.OneStep.Witness.Part) {s : Nat} {h : o s},
+  0 < (Becoming.OneStep.Witness.flow P u o).take t f (Becoming.OneStep.Witness.Place.beyond s h) ∨
+      0 < (Becoming.OneStep.Witness.flow P u o).give t f (Becoming.OneStep.Witness.Place.beyond s h) →
+    s = t
+Becoming.OneStep.Witness.exchangesAt_iff : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop)
+  (t : Nat),
+  (Becoming.OneStep.Witness.flow P u o).ExchangesAt t ↔
+    0 < Becoming.total (P t) Becoming.Passage.taken ∨ 0 < Becoming.total (P t) Becoming.Passage.given ∨ o t
+Becoming.OneStep.Witness.balancesOn : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    (∀ (p : Becoming.Passage), p ∈ P t → p.Balanced) →
+      (Becoming.OneStep.Witness.flow P u o).BalancesOn (Becoming.OneStep.Witness.web P o)
+        (Becoming.OneStep.Witness.family (P t).length o) t
+Becoming.OneStep.Witness.stands_before : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat)
+  {c : Becoming.OneStep.Witness.Place o},
+  0 < (Becoming.OneStep.Witness.web P o).level t c → c ∈ Becoming.OneStep.Witness.family (P t).length o
+Becoming.OneStep.Witness.stands_after : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    ∀ {c : Becoming.OneStep.Witness.Place o},
+      0 < (Becoming.OneStep.Witness.web P o).level (t + 1) c → c ∈ Becoming.OneStep.Witness.family (P t).length o
+Becoming.OneStep.Witness.dissipatesOn : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat) {k : Nat → Nat},
+  Becoming.sign (Becoming.total (P t) Becoming.Passage.taken) ≤ k t →
+    Becoming.total (P t) Becoming.Passage.given + k t ≤ Becoming.total (P t) Becoming.Passage.taken →
+      (Becoming.OneStep.Witness.flow P (fun s => (k s).pred) o).DissipatesOn
+        (Becoming.OneStep.Witness.family (P t).length o) t
+Becoming.OneStep.Witness.runsDownOn : ∀ (P : Nat → List Becoming.Passage) (o : Nat → Prop) (t : Nat) {k : Nat → Nat},
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    (∀ (p : Becoming.Passage), p ∈ P t → p.Balanced) →
+      Becoming.sign (Becoming.total (P t) Becoming.Passage.taken) ≤ k t →
+        Becoming.total (P t) Becoming.Passage.given + k t ≤ Becoming.total (P t) Becoming.Passage.taken →
+          (Becoming.OneStep.Witness.flow P (fun s => (k s).pred) o).RunsDownOn (Becoming.OneStep.Witness.web P o)
+            (Becoming.OneStep.Witness.family (P t).length o) t
+Becoming.OneStep.Witness.closedAt : ∀ (P : Nat → List Becoming.Passage) (u : Nat → Nat) (o : Nat → Prop) (t : Nat),
+  ¬o t → (Becoming.OneStep.Witness.flow P u o).ClosedAt (Becoming.OneStep.Witness.family (P t).length o) t
+@Becoming.OneStep.Witness.shows : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat} (t : Nat),
+  List.map Becoming.Passage.after (P t) = List.map Becoming.Passage.before (P (t + 1)) →
+    Becoming.sign (Becoming.total (P t) Becoming.Passage.taken) ≤ k t →
+      k t ≤ Becoming.total (P t) Becoming.Passage.taken →
+        ∀ (o : Nat → Prop),
+          Becoming.Distinct ((Becoming.OneStep.Witness.world P k o).flow.present t) ∧
+            (Becoming.OneStep.Witness.world P k o).flow.Realizes (Becoming.OneStep.Witness.world P k o).web t
+              (List.map Sum.inr (Becoming.OneStep.Witness.family (P t).length o)) (P t) (k t)
+              (0 < Becoming.total (P t) Becoming.Passage.taken ∨ 0 < Becoming.total (P t) Becoming.Passage.given ∨ o t)
+Becoming.OneStep.Witness.once_chain : ∀ (P : List Becoming.Passage),
+  List.map Becoming.Passage.after (Becoming.OneStep.Witness.once P 0) =
+    List.map Becoming.Passage.before (Becoming.OneStep.Witness.once P (0 + 1))
+@Becoming.OneStep.exchange_open : ∀ {X Y : Nat} {e : Prop}, (0 < X ∨ 0 < Y → e) → (0 < X ∨ 0 < Y ∨ e ↔ e)
+@Becoming.OneStep.exchange_closed : ∀ {X Y : Nat} {e : Prop}, (e ↔ 0 < X ∨ 0 < Y) → (0 < X ∨ 0 < Y ∨ False ↔ e)
+@Becoming.OneStep.Witness.realizedOnce : ∀ {P : List Becoming.Passage} {k : Nat} {e : Prop},
+  Becoming.OneStep.Every P k e →
+    ∀ (o : Prop),
+      (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given ∨ o ↔ e) →
+        ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+          cond (Becoming.OneStep.Witness.world (Becoming.OneStep.Witness.once P) (fun x => k) fun x => o) 0
+              (List.map Sum.inr (Becoming.OneStep.Witness.family P.length fun x => o)) →
+            Becoming.OneStep.Realized cond P k e
+Becoming.OneStep.every_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun x x_1 x_2 => True) P k e ↔ Becoming.OneStep.Every P k e
+Becoming.OneStep.balance_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔ Becoming.OneStep.Balance P k e
+Becoming.OneStep.runsDown_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔ Becoming.OneStep.RunsDown P k e
+Becoming.OneStep.closed_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun w t es => w.flow.ClosedAt es t) P k e ↔ Becoming.OneStep.Closed P k e
+Becoming.OneStep.runsDownClosed_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
+    Becoming.OneStep.RunsDownClosed P k e
+Becoming.OneStep.runsDown_passages_iff : ∀ (P : List Becoming.Passage) (e : Prop),
+  (∃ k, Becoming.OneStep.Realized (fun w t es => w.flow.RunsDownOn w.web es t) P k e) ↔
+    (∀ (p : Becoming.Passage), p ∈ P → p.Balanced) ∧
+      Becoming.total P Becoming.Passage.after + Becoming.sign (Becoming.total P Becoming.Passage.taken) ≤
+          Becoming.total P Becoming.Passage.before ∧
+        (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given → e)
+@Becoming.OneStep.laws : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {Law : List Becoming.Passage → Nat → Prop → Prop},
+  (∀ (P : List Becoming.Passage) (k : Nat) (e : Prop), Becoming.OneStep.Realized cond P k e ↔ Law P k e) →
+    ∀ {Q : List Becoming.Passage → Nat → Prop → Prop},
+      Becoming.OneStep.Respects Q →
+        ((∀ (w : Becoming.World) (t : Nat) (es : List w.Relatum),
+            cond w t es →
+              Becoming.Distinct (w.flow.present t) →
+                Q (List.map (w.flow.passage w.web t) es) (w.flow.takers es t) (w.flow.ExchangesAt t)) ↔
+          ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop), Law P k e → Q P k e)
+@Becoming.OneStep.RunRealized.chained : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.RunRealized cond P k e → Becoming.OneStep.Chained P
+@Becoming.OneStep.RunRealized.exchange : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e e' : Nat → Prop},
+  (∀ (t : Nat), e t ↔ e' t) → Becoming.OneStep.RunRealized cond P k e → Becoming.OneStep.RunRealized cond P k e'
+@Becoming.OneStep.Witness.showsRun : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat},
+  Becoming.OneStep.Chained P →
+    (∀ (t : Nat),
+        Becoming.sign (Becoming.total (P t) Becoming.Passage.taken) ≤ k t ∧
+          k t ≤ Becoming.total (P t) Becoming.Passage.taken) →
+      ∀ (o : Nat → Prop) {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+        (∀ (t : Nat),
+            cond (Becoming.OneStep.Witness.world P k o) t
+              (List.map Sum.inr (Becoming.OneStep.Witness.family (P t).length o))) →
+          Becoming.OneStep.RunRealized cond P k fun t =>
+            0 < Becoming.total (P t) Becoming.Passage.taken ∨ 0 < Becoming.total (P t) Becoming.Passage.given ∨ o t
+Becoming.OneStep.run_every_iff : ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealized (fun x x_1 x_2 => True) P k e ↔
+    Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Becoming.OneStep.Every (P t) (k t) (e t)
+Becoming.OneStep.run_balance_iff : ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔
+    Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Becoming.OneStep.Balance (P t) (k t) (e t)
+Becoming.OneStep.run_runsDown_iff : ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔
+    Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Becoming.OneStep.RunsDown (P t) (k t) (e t)
+Becoming.OneStep.run_closed_iff : ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealized (fun w t es => w.flow.ClosedAt es t) P k e ↔
+    Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Becoming.OneStep.Closed (P t) (k t) (e t)
+Becoming.OneStep.run_runsDownClosed_iff : ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
+    Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Becoming.OneStep.RunsDownClosed (P t) (k t) (e t)
+@Becoming.OneStep.run_laws : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {Law : List Becoming.Passage → Nat → Prop → Prop},
+  (∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+      Becoming.OneStep.RunRealized cond P k e ↔ Becoming.OneStep.Chained P ∧ ∀ (t : Nat), Law (P t) (k t) (e t)) →
+    ∀ {Q : (Nat → List Becoming.Passage) → (Nat → Nat) → (Nat → Prop) → Prop},
+      Becoming.OneStep.RunRespects Q →
+        ((∀ (w : Becoming.World) (es : List w.Relatum),
+            (∀ (t : Nat), cond w t es ∧ Becoming.Distinct (w.flow.present t)) →
+              Q (fun t => List.map (w.flow.passage w.web t) es) (fun t => w.flow.takers es t) fun t =>
+                w.flow.ExchangesAt t) ↔
+          ∀ (P : Nat → List Becoming.Passage) (k : Nat → Nat) (e : Nat → Prop),
+            Becoming.OneStep.Chained P → (∀ (t : Nat), Law (P t) (k t) (e t)) → Q P k e)
+Becoming.OneStep.runsDownClosed_iff_stated : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.RunsDownClosed P k e ↔
+    Becoming.OneStep.Stated P k e ∧ Becoming.sign (Becoming.total P Becoming.Passage.taken) ≤ k
+Becoming.OneStep.stated_not_realized : Becoming.OneStep.Stated [{ before := 1, after := 1, taken := 1, given := 1 }] 0
+    False ∧
+  ¬Becoming.OneStep.Realized (fun x x_1 x_2 => True) [{ before := 1, after := 1, taken := 1, given := 1 }] 0 False
+Becoming.OneStep.standing_iff : ∀ (a x y : Nat) (comes ceases : Prop),
+  (∃ w t c,
+      w.flow.BalancesOn w.web [c] t ∧
+        w.web.level t c = a ∧
+          w.flow.taken t c = x ∧
+            w.flow.given t c = y ∧ (w.web.ComesToStand t c ↔ comes) ∧ (w.web.CeasesToStand t c ↔ ceases)) ↔
+    x ≤ a + y ∧ (comes ↔ a = 0 ∧ x < y) ∧ (ceases ↔ 0 < a ∧ x = a + y)
+Becoming.OneStep.standing_bound_needed : ((False ↔ 0 = 0 ∧ 1 < 0) ∧ (False ↔ 0 < 0 ∧ 1 = 0 + 0)) ∧
+  ¬∃ w t c,
+      w.flow.BalancesOn w.web [c] t ∧
+        w.web.level t c = 0 ∧
+          w.flow.taken t c = 1 ∧
+            w.flow.given t c = 0 ∧ (w.web.ComesToStand t c ↔ False) ∧ (w.web.CeasesToStand t c ↔ False)
+Becoming.total_steps_shift : ∀ (q : Nat → Nat) (c T n : Nat),
+  Becoming.total (Becoming.steps (T + c) n) q = Becoming.total (Becoming.steps T n) fun m => q (m + c)
+@Becoming.OneStep.Chain.none_ne_some : ∀ {i : Nat}, none = some i → False
+@Becoming.OneStep.Chain.some_inj : ∀ {a b : Nat}, some a = some b → a = b
+Becoming.OneStep.Chain.hit_cases : ∀ (a b : Nat),
+  Becoming.OneStep.Witness.hit a b = 0 ∨ Becoming.OneStep.Witness.hit a b = 1
+@Becoming.OneStep.Chain.hit_lt : ∀ {a b : Nat}, a < b → Becoming.OneStep.Witness.hit a b = 0
+@Becoming.OneStep.Chain.hit_of_eq : ∀ {a b : Nat}, a = b → Becoming.OneStep.Witness.hit a b = 1
+Becoming.OneStep.Chain.total_hit : ∀ (L j : Nat),
+  j < L → (Becoming.total (Becoming.steps 0 L) fun i => Becoming.OneStep.Witness.hit j i) = 1
+Becoming.OneStep.Chain.least_le_left : ∀ (a b : Nat), Becoming.OneStep.Witness.least a b ≤ a
+Becoming.OneStep.Chain.least_le_right : ∀ (a b : Nat), Becoming.OneStep.Witness.least a b ≤ b
+@Becoming.OneStep.Chain.least_pos : ∀ {a b : Nat}, 0 < a → 0 < b → 0 < Becoming.OneStep.Witness.least a b
+Becoming.OneStep.Chain.least_cases : ∀ (a b : Nat),
+  Becoming.OneStep.Witness.least a b = a ∧ a ≤ b ∨ Becoming.OneStep.Witness.least a b = b ∧ b ≤ a
+@Becoming.OneStep.Chain.add_excess : ∀ {a b : Nat}, b ≤ a → b + Becoming.excess a b = a
+@Becoming.OneStep.Chain.sign_le_sign : ∀ {a b : Nat}, (0 < a → 0 < b) → Becoming.sign a ≤ Becoming.sign b
+Becoming.OneStep.Chain.entry_beyond : ∀ (l : List Nat) (i : Nat), l.length ≤ i → Becoming.OneStep.Chain.entry l i = 0
+@Becoming.OneStep.Chain.entry_steps : ∀ {q : Nat → Nat},
+  q 0 = 0 →
+    ∀ (l : List Nat) (N : Nat),
+      l.length ≤ N →
+        (Becoming.total (Becoming.steps 0 N) fun a => q (Becoming.OneStep.Chain.entry l a)) = Becoming.total l q
+@Becoming.OneStep.Chain.entry_map : ∀ {q : Becoming.Passage → Nat},
+  q Becoming.Passage.idle = 0 →
+    ∀ (P : List Becoming.Passage) (j : Nat),
+      Becoming.OneStep.Chain.entry (List.map q P) j = q (Becoming.OneStep.Witness.pick P j)
+Becoming.OneStep.Chain.entry_steps_map : ∀ (f : Nat → Nat) (k a : Nat),
+  a < k → Becoming.OneStep.Chain.entry (List.map f (Becoming.steps 0 k)) a = f a
+Becoming.OneStep.Chain.within_lt : ∀ (rest : Nat → Nat) {b m : Nat}, m < b → Becoming.OneStep.Chain.within rest b m = 0
+Becoming.OneStep.Chain.within_add : ∀ (rest : Nat → Nat) (b m : Nat),
+  Becoming.OneStep.Chain.within rest b (m + b) = rest m + 1
+@Becoming.OneStep.Chain.within_bound : ∀ {rest : Nat → Nat} {S L : Nat},
+  (∀ (m : Nat), m < S → rest m < L) → ∀ (b m : Nat), m < b + S → Becoming.OneStep.Chain.within rest b m < L + 1
+Becoming.OneStep.Chain.slot_lt : ∀ (bs : List Nat) (m : Nat),
+  (m < Becoming.total bs fun x => x) → Becoming.OneStep.Chain.slot bs m < bs.length
+Becoming.OneStep.Chain.blocks : ∀ (bs : List Nat) (i : Nat),
+  (Becoming.total (Becoming.steps 0 (Becoming.total bs fun x => x)) fun m =>
+      Becoming.OneStep.Witness.hit (Becoming.OneStep.Chain.slot bs m) i) =
+    Becoming.OneStep.Chain.entry bs i
+@Becoming.OneStep.Chain.cell_rows : ∀ {d s : List Nat},
+  ((Becoming.total d fun x => x) = Becoming.total s fun x => x) →
+    ∀ {L : Nat},
+      s.length ≤ L →
+        ∀ (a : Nat),
+          Becoming.total (Becoming.steps 0 L) (Becoming.OneStep.Chain.cell d s a) = Becoming.OneStep.Chain.entry d a
+@Becoming.OneStep.Chain.cell_columns : ∀ {d s : List Nat},
+  ((Becoming.total d fun x => x) = Becoming.total s fun x => x) →
+    ∀ {N : Nat},
+      d.length ≤ N →
+        ∀ (i : Nat),
+          (Becoming.total (Becoming.steps 0 N) fun a => Becoming.OneStep.Chain.cell d s a i) =
+            Becoming.OneStep.Chain.entry s i
+Becoming.OneStep.Chain.cell_beyond : ∀ (d : List Nat) {s : List Nat} {i : Nat},
+  s.length ≤ i → ∀ (a : Nat), Becoming.OneStep.Chain.cell d s a i = 0
+Becoming.OneStep.Chain.total_entry_one : ∀ (x : Nat) {k : Nat},
+  0 < k ∨ x = 0 → Becoming.total (Becoming.steps 0 k) (Becoming.OneStep.Chain.entry [x]) = x
+@Becoming.OneStep.Chain.total_lift : ∀ {g : List Nat} {k x : Nat},
+  g.length ≤ k →
+    0 < k ∨ x = 0 →
+      (Becoming.total (Becoming.OneStep.Chain.lift g k x) fun y => y) = (Becoming.total g fun y => y) + k + x
+Becoming.OneStep.Chain.count_lift : ∀ (g : List Nat) (k x : Nat),
+  (Becoming.count (Becoming.OneStep.Chain.lift g k x) fun y => y) = k
+Becoming.OneStep.Chain.lift_length : ∀ (g : List Nat) (k x : Nat), (Becoming.OneStep.Chain.lift g k x).length = k
+@Becoming.OneStep.Chain.lift_dissipates : ∀ {g : List Nat} {k : Nat},
+  g.length ≤ k →
+    ∀ (x a : Nat),
+      Becoming.OneStep.Chain.entry g a +
+          Becoming.sign (Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.lift g k x) a) ≤
+        Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.lift g k x) a
+Becoming.OneStep.Chain.fill_length : ∀ (cap Y r : Nat), (Becoming.OneStep.Chain.fill cap Y r).length = r
+Becoming.OneStep.Chain.fill_spec : ∀ (cap r Y : Nat),
+  r ≤ Y →
+    Y ≤ cap * r →
+      (Becoming.total (Becoming.OneStep.Chain.fill cap Y r) fun y => y) = Y ∧
+        (Becoming.count (Becoming.OneStep.Chain.fill cap Y r) fun y => y) = r ∧
+          ∀ (a : Nat), Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.fill cap Y r) a ≤ cap
+Becoming.OneStep.Chain.fill_entry_le : ∀ (cap : Nat) {r Y : Nat},
+  r ≤ Y → Y ≤ cap * r → ∀ (a : Nat), Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.fill cap Y r) a ≤ cap
+@Becoming.Flow.sign_replenishment_le_renewers : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  Becoming.sign (L.replenishment cs t) ≤ L.renewers cs t
+@Becoming.Flow.renewers_le_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  L.renewers cs t ≤ L.replenishment cs t
+@Becoming.Flow.DissipatesOn.renewers_le_takers : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.renewers cs t ≤ L.takers cs t
+@Becoming.Flow.capacity_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {g : Nat},
+  L.Capacity cs g ↔ ∀ (t : Nat), L.CapacityAt cs t g
+@Becoming.Flow.acting_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W ↔ ∀ (t : Nat), L.ActingAt W t
+@Becoming.Flow.taking_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Taking W ↔ ∀ (t : Nat), L.TakingAt W t
+@Becoming.Flow.CapacityAt.replenishment_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t g : Nat},
+  L.CapacityAt cs t g → L.replenishment cs t ≤ g * L.renewers cs t
+@Becoming.Flow.RealizesGivers.givers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  L.RealizesGivers W t es P k r e → Becoming.OneStep.Givers P r
+@Becoming.Flow.RealizesGivers.takers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  L.RealizesGivers W t es P k r e → L.DissipatesOn es t → r ≤ k
+@Becoming.Flow.RealizesGivers.capacity : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  L.RealizesGivers W t es P k r e → ∀ {g : Nat}, L.CapacityAt es t g → Becoming.total P Becoming.Passage.given ≤ g * r
+@Becoming.Flow.RealizesGivers.exchange : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  L.RealizesGivers W t es P k r e → ∀ {e' : Prop}, (e ↔ e') → L.RealizesGivers W t es P k r e'
+@Becoming.Flow.RealizesGivers.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  L.RealizesGivers W t es P k r e → L.roles.RealizesGivers W.roles t (List.map Sum.inr es) P k r e
+@Becoming.Flow.CapacityAt.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {es : List C} {g : Nat},
+  L.CapacityAt es t g → L.roles.CapacityAt (List.map Sum.inr es) t g
+@Becoming.Flow.ActingAt.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  L.ActingAt W t → L.roles.ActingAt W.roles t
+@Becoming.Flow.TakingAt.roles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  L.TakingAt W t → L.roles.TakingAt W.roles t
+Becoming.OneStep.Chain.later_self : ∀ (b : Nat), Becoming.OneStep.Chain.later b b = some 0
+Becoming.OneStep.Chain.later_add : ∀ (b n : Nat), Becoming.OneStep.Chain.later b (n + b) = some n
+@Becoming.OneStep.Chain.later_lt : ∀ {b s : Nat}, s < b → Becoming.OneStep.Chain.later b s = none
+Becoming.OneStep.Chain.track_add : ∀ (σ ρ : Nat → Nat → Option Nat) (b j n : Nat),
+  Becoming.OneStep.Chain.track σ ρ (b, j) (n + b) = Becoming.OneStep.Chain.run σ ρ b j n
+Becoming.OneStep.Chain.track_self : ∀ (σ ρ : Nat → Nat → Option Nat) (b j : Nat),
+  Becoming.OneStep.Chain.track σ ρ (b, j) b = Becoming.OneStep.Chain.start ρ b j
+Becoming.OneStep.Chain.track_lt : ∀ (σ ρ : Nat → Nat → Option Nat) {b j s : Nat},
+  s < b → Becoming.OneStep.Chain.track σ ρ (b, j) s = none
+Becoming.OneStep.Chain.tracked_from : ∀ (σ ρ : Nat → Nat → Option Nat) {x : Nat × Nat} {s i : Nat},
+  Becoming.OneStep.Chain.track σ ρ x s = some i → x.fst ≤ s
+Becoming.OneStep.Chain.track_succ_add : ∀ (σ ρ : Nat → Nat → Option Nat) (b j n : Nat),
+  Becoming.OneStep.Chain.track σ ρ (b, j) (n + b + 1) =
+    (Becoming.OneStep.Chain.track σ ρ (b, j) (n + b)).bind (σ (n + b))
+Becoming.OneStep.Chain.track_succ : ∀ (σ ρ : Nat → Nat → Option Nat) {x : Nat × Nat} {s : Nat},
+  x.fst ≤ s → Becoming.OneStep.Chain.track σ ρ x (s + 1) = (Becoming.OneStep.Chain.track σ ρ x s).bind (σ s)
+@Becoming.OneStep.Chain.originStep_le : ∀ {prev : Nat → Nat × Nat} {t : Nat},
+  (∀ (i : Nat), (prev i).fst ≤ t) →
+    ∀ (j : Nat) (o : Option Nat), (Becoming.OneStep.Chain.originStep prev (t + 1) j o).fst ≤ t + 1
+Becoming.OneStep.Chain.origin_le : ∀ (ρ : Nat → Nat → Option Nat) (t j : Nat),
+  (Becoming.OneStep.Chain.origin ρ t j).fst ≤ t
+Becoming.OneStep.Chain.track_originStep : ∀ (σ ρ : Nat → Nat → Option Nat),
+  (∀ (t i j : Nat), ρ t j = some i → σ t i = some j) →
+    ∀ {t j : Nat},
+      (∀ (i : Nat), Becoming.OneStep.Chain.track σ ρ (Becoming.OneStep.Chain.origin ρ t i) t = some i) →
+        ∀ (o : Option Nat),
+          ρ t j = o →
+            Becoming.OneStep.Chain.track σ ρ
+                (Becoming.OneStep.Chain.originStep (Becoming.OneStep.Chain.origin ρ t) (t + 1) j o) (t + 1) =
+              some j
+Becoming.OneStep.Chain.track_origin : ∀ (σ ρ : Nat → Nat → Option Nat),
+  (∀ (t i j : Nat), ρ t j = some i → σ t i = some j) →
+    ∀ (t j : Nat), Becoming.OneStep.Chain.track σ ρ (Becoming.OneStep.Chain.origin ρ t j) t = some j
+Becoming.OneStep.Chain.origin_born : ∀ (ρ : Nat → Nat → Option Nat) {b i0 j : Nat} (o : Option Nat),
+  ρ b i0 = o → Becoming.OneStep.Chain.born i0 o = some j → Becoming.OneStep.Chain.origin ρ (b + 1) j = (b + 1, i0)
+Becoming.OneStep.Chain.origin_start : ∀ (ρ : Nat → Nat → Option Nat) (b : Nat) {i0 j : Nat},
+  Becoming.OneStep.Chain.start ρ b i0 = some j → Becoming.OneStep.Chain.origin ρ b j = (b, i0)
+Becoming.OneStep.Chain.origin_step : ∀ (σ ρ : Nat → Nat → Option Nat),
+  (∀ (t i j : Nat), σ t i = some j → ρ t j = some i) →
+    ∀ {b i0 n j : Nat},
+      (∀ (i : Nat),
+          Becoming.OneStep.Chain.run σ ρ b i0 n = some i → Becoming.OneStep.Chain.origin ρ (n + b) i = (b, i0)) →
+        ∀ (o : Option Nat),
+          Becoming.OneStep.Chain.run σ ρ b i0 n = o →
+            o.bind (σ (n + b)) = some j → Becoming.OneStep.Chain.origin ρ (n + 1 + b) j = (b, i0)
+Becoming.OneStep.Chain.origin_of_run : ∀ (σ ρ : Nat → Nat → Option Nat),
+  (∀ (t i j : Nat), σ t i = some j → ρ t j = some i) →
+    ∀ (b i0 n j : Nat),
+      Becoming.OneStep.Chain.run σ ρ b i0 n = some j → Becoming.OneStep.Chain.origin ρ (n + b) j = (b, i0)
+Becoming.OneStep.Chain.origin_of_track : ∀ (σ ρ : Nat → Nat → Option Nat),
+  (∀ (t i j : Nat), σ t i = some j → ρ t j = some i) →
+    ∀ {x : Nat × Nat} {t j : Nat},
+      Becoming.OneStep.Chain.track σ ρ x t = some j → Becoming.OneStep.Chain.origin ρ t j = x
+Becoming.OneStep.Chain.numbered_injective : ∀ (a b : Nat),
+  Becoming.OneStep.Chain.Relatum.numbered a = Becoming.OneStep.Chain.Relatum.numbered b → a = b
+@Becoming.OneStep.Chain.total_present : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat) (q : Becoming.OneStep.Chain.Relatum → Nat),
+  Becoming.total ((Becoming.OneStep.Chain.flow σ ρ P d g o).present t) q =
+    (Becoming.total (Becoming.steps 0 ((d t).length + (g t).length)) fun a =>
+        q (Becoming.OneStep.Chain.Relatum.numbered a)) +
+      q Becoming.OneStep.Chain.Relatum.outer
+@Becoming.OneStep.Chain.distinct_present : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  Becoming.Distinct ((Becoming.OneStep.Chain.flow σ ρ P d g o).present t)
+@Becoming.OneStep.Chain.outer_mem : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  Becoming.OneStep.Chain.Relatum.outer ∈ (Becoming.OneStep.Chain.flow σ ρ P d g o).present t
+@Becoming.OneStep.Chain.numbered_mem : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} {t a : Nat},
+  a < (d t).length + (g t).length →
+    Becoming.OneStep.Chain.Relatum.numbered a ∈ (Becoming.OneStep.Chain.flow σ ρ P d g o).present t
+@Becoming.OneStep.Chain.cellAt_total : ∀ {dd s : List Nat},
+  ((Becoming.total dd fun y => y) = Becoming.total s fun y => y) →
+    ∀ {N : Nat},
+      dd.length ≤ N →
+        ∀ {q : Becoming.Passage → Nat},
+          q Becoming.Passage.idle = 0 →
+            ∀ {Q : List Becoming.Passage},
+              s = List.map q Q →
+                ∀ (oo : Option Nat),
+                  (Becoming.total (Becoming.steps 0 N) fun a => Becoming.OneStep.Chain.cellAt dd s a oo) =
+                    Becoming.OneStep.Chain.readAt q Q oo
+@Becoming.OneStep.Chain.taken_node : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat) (x : Nat × Nat),
+  (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+    (Becoming.OneStep.Chain.flow σ ρ P d g o).taken t (Becoming.OneStep.Chain.Site.node x) =
+      Becoming.OneStep.Chain.readAt Becoming.Passage.taken (P t) (Becoming.OneStep.Chain.track σ ρ x t)
+@Becoming.OneStep.Chain.given_node : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat) (x : Nat × Nat),
+  (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+    (Becoming.OneStep.Chain.flow σ ρ P d g o).given t (Becoming.OneStep.Chain.Site.node x) =
+      Becoming.OneStep.Chain.readAt Becoming.Passage.given (P t) (Becoming.OneStep.Chain.track σ ρ x t)
+@Becoming.OneStep.Chain.total_family : ∀ {ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage} {o : Nat → Prop}
+  (t : Nat) (q : Becoming.OneStep.Chain.Site o → Nat),
+  Becoming.total (Becoming.OneStep.Chain.family ρ P o t) q =
+    Becoming.total (Becoming.steps 0 (P t).length) fun j =>
+      q (Becoming.OneStep.Chain.Site.node (Becoming.OneStep.Chain.origin ρ t j))
+@Becoming.OneStep.Chain.take_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        ∀ (a : Nat),
+          Becoming.total (Becoming.OneStep.Chain.family ρ P o t)
+              ((Becoming.OneStep.Chain.flow σ ρ P d g o).take t (Becoming.OneStep.Chain.Relatum.numbered a)) =
+            Becoming.OneStep.Chain.entry (d t) a
+@Becoming.OneStep.Chain.give_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+        ∀ (a : Nat),
+          Becoming.total (Becoming.OneStep.Chain.family ρ P o t)
+              ((Becoming.OneStep.Chain.flow σ ρ P d g o).give t (Becoming.OneStep.Chain.Relatum.numbered a)) =
+            Becoming.OneStep.Chain.entry (g t) a
+@Becoming.OneStep.Chain.take_family_outer : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  Becoming.total (Becoming.OneStep.Chain.family ρ P o t)
+      ((Becoming.OneStep.Chain.flow σ ρ P d g o).take t Becoming.OneStep.Chain.Relatum.outer) =
+    0
+@Becoming.OneStep.Chain.give_family_outer : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  Becoming.total (Becoming.OneStep.Chain.family ρ P o t)
+      ((Becoming.OneStep.Chain.flow σ ρ P d g o).give t Becoming.OneStep.Chain.Relatum.outer) =
+    0
+@Becoming.OneStep.Chain.takers_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.OneStep.Chain.flow σ ρ P d g o).takers (Becoming.OneStep.Chain.family ρ P o t) t =
+          Becoming.count (d t) fun y => y
+@Becoming.OneStep.Chain.renewers_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+        (Becoming.OneStep.Chain.flow σ ρ P d g o).renewers (Becoming.OneStep.Chain.family ρ P o t) t =
+          Becoming.count (g t) fun y => y
+@Becoming.OneStep.Chain.levelAt_originStep : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {s j : Nat} (oo : Option Nat),
+      ρ s j = oo →
+        Becoming.OneStep.Chain.afterAt (P s)
+            (Becoming.OneStep.Chain.beforeAt (P (s + 1))
+              (Becoming.OneStep.Chain.track σ ρ
+                (Becoming.OneStep.Chain.originStep (Becoming.OneStep.Chain.origin ρ s) (s + 1) j oo) (s + 1)))
+            (Becoming.OneStep.Chain.track σ ρ
+              (Becoming.OneStep.Chain.originStep (Becoming.OneStep.Chain.origin ρ s) (s + 1) j oo) s) =
+          (Becoming.OneStep.Witness.pick (P (s + 1)) j).before
+@Becoming.OneStep.Chain.levelAt_origin : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ (t j : Nat),
+      Becoming.OneStep.Chain.levelAt σ ρ P (Becoming.OneStep.Chain.origin ρ t j) t =
+        (Becoming.OneStep.Witness.pick (P t) j).before
+@Becoming.OneStep.Chain.levelAt_origin_succ : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ (t j : Nat),
+      Becoming.OneStep.Chain.levelAt σ ρ P (Becoming.OneStep.Chain.origin ρ t j) (t + 1) =
+        (Becoming.OneStep.Witness.pick (P t) j).after
+@Becoming.OneStep.Chain.passage_member : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          ∀ (j : Nat),
+            (Becoming.OneStep.Chain.flow σ ρ P d g o).passage (Becoming.OneStep.Chain.web σ ρ P o) t
+                (Becoming.OneStep.Chain.Site.node (Becoming.OneStep.Chain.origin ρ t j)) =
+              Becoming.OneStep.Witness.pick (P t) j
+@Becoming.OneStep.Chain.passages : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          List.map ((Becoming.OneStep.Chain.flow σ ρ P d g o).passage (Becoming.OneStep.Chain.web σ ρ P o) t)
+              (Becoming.OneStep.Chain.family ρ P o t) =
+            P t
+@Becoming.OneStep.Chain.distinct_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P → ∀ (t : Nat), Becoming.Distinct (Becoming.OneStep.Chain.family ρ P o t)
+@Becoming.OneStep.Chain.mem_family : ∀ {ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage} {o : Nat → Prop}
+  {t j : Nat},
+  j < (P t).length →
+    Becoming.OneStep.Chain.Site.node (Becoming.OneStep.Chain.origin ρ t j) ∈ Becoming.OneStep.Chain.family ρ P o t
+@Becoming.OneStep.Chain.of_mem_family : ∀ {ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop} {t : Nat} {c : Becoming.OneStep.Chain.Site o},
+  c ∈ Becoming.OneStep.Chain.family ρ P o t →
+    ∃ j, j < (P t).length ∧ c = Becoming.OneStep.Chain.Site.node (Becoming.OneStep.Chain.origin ρ t j)
+@Becoming.OneStep.Chain.node_mem : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {x : Nat × Nat} {t j : Nat},
+      Becoming.OneStep.Chain.track σ ρ x t = some j →
+        j < (P t).length → Becoming.OneStep.Chain.Site.node x ∈ Becoming.OneStep.Chain.family ρ P o t
+@Becoming.OneStep.Chain.uptake_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.OneStep.Chain.flow σ ρ P d g o).uptake (Becoming.OneStep.Chain.family ρ P o t) t =
+          Becoming.total (P t) Becoming.Passage.taken
+@Becoming.OneStep.Chain.replenishment_family : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+        (Becoming.OneStep.Chain.flow σ ρ P d g o).replenishment (Becoming.OneStep.Chain.family ρ P o t) t =
+          Becoming.total (P t) Becoming.Passage.given
+@Becoming.OneStep.Chain.readAt_pos : ∀ {q : Becoming.Passage → Nat} {Q : List Becoming.Passage} {oo : Option Nat},
+  0 < Becoming.OneStep.Chain.readAt q Q oo → ∃ j, oo = some j ∧ 0 < q (Becoming.OneStep.Witness.pick Q j)
+@Becoming.OneStep.Chain.total_pos_of_read : ∀ {q : Becoming.Passage → Nat},
+  q Becoming.Passage.idle = 0 →
+    ∀ {Q : List Becoming.Passage} {j : Nat}, 0 < q (Becoming.OneStep.Witness.pick Q j) → 0 < Becoming.total Q q
+@Becoming.OneStep.Chain.beyond_moves : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat) (f : Becoming.OneStep.Chain.Relatum) {s : Nat} {h : o s},
+  0 < (Becoming.OneStep.Chain.flow σ ρ P d g o).take t f (Becoming.OneStep.Chain.Site.beyond s h) ∨
+      0 < (Becoming.OneStep.Chain.flow σ ρ P d g o).give t f (Becoming.OneStep.Chain.Site.beyond s h) →
+    s = t
+@Becoming.OneStep.Chain.exchangesAt_iff : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          ((Becoming.OneStep.Chain.flow σ ρ P d g o).ExchangesAt t ↔
+            0 < Becoming.total (P t) Becoming.Passage.taken ∨ 0 < Becoming.total (P t) Becoming.Passage.given ∨ o t)
+@Becoming.OneStep.Chain.shows : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          Becoming.Distinct ((Becoming.OneStep.Chain.world σ ρ P d g o).flow.present t) ∧
+            (Becoming.OneStep.Chain.world σ ρ P d g o).flow.RealizesGivers
+              (Becoming.OneStep.Chain.world σ ρ P d g o).web t
+              (List.map Sum.inr (Becoming.OneStep.Chain.family ρ P o t)) (P t) (Becoming.count (d t) fun y => y)
+              (Becoming.count (g t) fun y => y)
+              (0 < Becoming.total (P t) Becoming.Passage.taken ∨ 0 < Becoming.total (P t) Becoming.Passage.given ∨ o t)
+@Becoming.OneStep.Chain.balancesOn : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          (∀ (p : Becoming.Passage), p ∈ P t → p.Balanced) →
+            (Becoming.OneStep.Chain.flow σ ρ P d g o).BalancesOn (Becoming.OneStep.Chain.web σ ρ P o)
+              (Becoming.OneStep.Chain.family ρ P o t) t
+@Becoming.OneStep.Chain.dissipatesOn : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          (∀ (a : Nat),
+              Becoming.OneStep.Chain.entry (g t) a + Becoming.sign (Becoming.OneStep.Chain.entry (d t) a) ≤
+                Becoming.OneStep.Chain.entry (d t) a) →
+            (Becoming.OneStep.Chain.flow σ ρ P d g o).DissipatesOn (Becoming.OneStep.Chain.family ρ P o t) t
+@Becoming.OneStep.Chain.capacityAt : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+        ∀ {cap : Nat},
+          (∀ (a : Nat), Becoming.OneStep.Chain.entry (g t) a ≤ cap) →
+            (Becoming.OneStep.Chain.flow σ ρ P d g o).CapacityAt (Becoming.OneStep.Chain.family ρ P o t) t cap
+@Becoming.OneStep.Chain.actingAt : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  (Becoming.OneStep.Chain.flow σ ρ P d g o).ActingAt (Becoming.OneStep.Chain.web σ ρ P o) t
+@Becoming.OneStep.Chain.takingAt : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop} (t : Nat),
+  (Becoming.OneStep.Chain.flow σ ρ P d g o).TakingAt (Becoming.OneStep.Chain.web σ ρ P o) t
+@Becoming.OneStep.Chain.cellAt_outside : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {x : Nat × Nat} {t : Nat},
+      ¬Becoming.OneStep.Chain.Site.node x ∈ Becoming.OneStep.Chain.family ρ P o t →
+        ∀ (dd : List Nat) (q : Becoming.Passage → Nat) (a : Nat) (oo : Option Nat),
+          Becoming.OneStep.Chain.track σ ρ x t = oo → Becoming.OneStep.Chain.cellAt dd (List.map q (P t)) a oo = 0
+@Becoming.OneStep.Chain.closedAt : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat}, ¬o t → (Becoming.OneStep.Chain.flow σ ρ P d g o).ClosedAt (Becoming.OneStep.Chain.family ρ P o t) t
+@Becoming.OneStep.Chain.beforeAt_pos : ∀ {Q : List Becoming.Passage} {oo : Option Nat},
+  0 < Becoming.OneStep.Chain.beforeAt Q oo → ∃ j, oo = some j ∧ 0 < (Becoming.OneStep.Witness.pick Q j).before
+@Becoming.OneStep.Chain.stands_before_zero : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {c : Becoming.OneStep.Chain.Site o},
+      0 < (Becoming.OneStep.Chain.web σ ρ P o).level 0 c → c ∈ Becoming.OneStep.Chain.family ρ P o 0
+@Becoming.OneStep.Chain.stands_before_step : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {s : Nat} {x : Nat × Nat},
+      (∀ (i : Nat), 0 < (Becoming.OneStep.Witness.pick (P s) i).after → ∃ j, σ s i = some j) →
+        ∀ (oo : Option Nat),
+          Becoming.OneStep.Chain.track σ ρ x s = oo →
+            0 <
+                Becoming.OneStep.Chain.afterAt (P s)
+                  (Becoming.OneStep.Chain.beforeAt (P (s + 1)) (Becoming.OneStep.Chain.track σ ρ x (s + 1))) oo →
+              Becoming.OneStep.Chain.Site.node x ∈ Becoming.OneStep.Chain.family ρ P o (s + 1)
+@Becoming.OneStep.Chain.stands_before_succ : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {s : Nat},
+      (∀ (i : Nat), 0 < (Becoming.OneStep.Witness.pick (P s) i).after → ∃ j, σ s i = some j) →
+        ∀ {c : Becoming.OneStep.Chain.Site o},
+          0 < (Becoming.OneStep.Chain.web σ ρ P o).level (s + 1) c → c ∈ Becoming.OneStep.Chain.family ρ P o (s + 1)
+@Becoming.OneStep.Chain.stands_after_step : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat} {x : Nat × Nat},
+      (∀ (j : Nat), 0 < (Becoming.OneStep.Witness.pick (P (t + 1)) j).before → ∃ i, ρ t j = some i) →
+        ∀ (oo : Option Nat),
+          Becoming.OneStep.Chain.track σ ρ x t = oo →
+            0 <
+                Becoming.OneStep.Chain.afterAt (P t)
+                  (Becoming.OneStep.Chain.beforeAt (P (t + 1)) (Becoming.OneStep.Chain.track σ ρ x (t + 1))) oo →
+              Becoming.OneStep.Chain.Site.node x ∈ Becoming.OneStep.Chain.family ρ P o t
+@Becoming.OneStep.Chain.stands_after : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (∀ (j : Nat), 0 < (Becoming.OneStep.Witness.pick (P (t + 1)) j).before → ∃ i, ρ t j = some i) →
+        ∀ {c : Becoming.OneStep.Chain.Site o},
+          0 < (Becoming.OneStep.Chain.web σ ρ P o).level (t + 1) c → c ∈ Becoming.OneStep.Chain.family ρ P o t
+@Becoming.OneStep.Chain.stands_before : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    (∀ (s i : Nat), 0 < (Becoming.OneStep.Witness.pick (P s) i).after → ∃ j, σ s i = some j) →
+      ∀ (t : Nat) (c : Becoming.OneStep.Chain.Site o),
+        0 < (Becoming.OneStep.Chain.web σ ρ P o).level t c → c ∈ Becoming.OneStep.Chain.family ρ P o t
+@Becoming.OneStep.Chain.runsDownOn : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage}
+  {d g : Nat → List Nat} {o : Nat → Prop},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {t : Nat},
+      (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken →
+        (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given →
+          (∀ (p : Becoming.Passage), p ∈ P t → p.Balanced) →
+            (∀ (a : Nat),
+                Becoming.OneStep.Chain.entry (g t) a + Becoming.sign (Becoming.OneStep.Chain.entry (d t) a) ≤
+                  Becoming.OneStep.Chain.entry (d t) a) →
+              (∀ (c : Becoming.OneStep.Chain.Site o),
+                  0 < (Becoming.OneStep.Chain.web σ ρ P o).level t c → c ∈ Becoming.OneStep.Chain.family ρ P o t) →
+                (∀ (j : Nat), 0 < (Becoming.OneStep.Witness.pick (P (t + 1)) j).before → ∃ i, ρ t j = some i) →
+                  (Becoming.OneStep.Chain.flow σ ρ P d g o).RunsDownOn (Becoming.OneStep.Chain.web σ ρ P o)
+                    (Becoming.OneStep.Chain.family ρ P o t) t
+Becoming.OneStep.Chain.unlinked_links : ∀ (P : Nat → List Becoming.Passage),
+  Becoming.OneStep.Chain.Links Becoming.OneStep.Chain.unlinked Becoming.OneStep.Chain.unlinked P
+@Becoming.OneStep.Chain.identical_links : ∀ {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chained P →
+    Becoming.OneStep.Chain.Links Becoming.OneStep.Chain.identical Becoming.OneStep.Chain.identical P
+Becoming.OneStep.Chain.origin_identical : ∀ (t j : Nat),
+  Becoming.OneStep.Chain.origin Becoming.OneStep.Chain.identical t j = (0, j)
+@Becoming.OneStep.Chain.family_identical : ∀ {P : Nat → List Becoming.Passage} {o : Nat → Prop},
+  Becoming.OneStep.Chained P →
+    ∀ (t : Nat),
+      Becoming.OneStep.Chain.family Becoming.OneStep.Chain.identical P o t =
+        List.map (fun j => Becoming.OneStep.Chain.Site.node (0, j)) (Becoming.steps 0 (P 0).length)
+@Becoming.OneStep.Chain.guard_some : ∀ {a j j' : Nat}, Becoming.OneStep.Chain.guard a j = some j' → 0 < a ∧ j = j'
+@Becoming.OneStep.Chain.guard_pos : ∀ {a : Nat} (j : Nat), 0 < a → Becoming.OneStep.Chain.guard a j = some j
+@Becoming.OneStep.Chain.below_succ : ∀ {q : Becoming.Passage → Nat} {v : Nat} (p : Becoming.Passage)
+  (Q : List Becoming.Passage) (i : Nat),
+  Becoming.OneStep.Chain.below q (p :: Q) v (i + 1) =
+    Becoming.OneStep.Witness.hit (q p) v + Becoming.OneStep.Chain.below q Q v i
+@Becoming.OneStep.Chain.nth_spec : ∀ {q : Becoming.Passage → Nat} {v : Nat} (Q : List Becoming.Passage) (n : Nat),
+  n < Becoming.OneStep.Chain.tally q Q v →
+    Becoming.OneStep.Chain.nth q v Q n < Q.length ∧
+      q (Becoming.OneStep.Witness.pick Q (Becoming.OneStep.Chain.nth q v Q n)) = v ∧
+        Becoming.OneStep.Chain.below q Q v (Becoming.OneStep.Chain.nth q v Q n) = n
+@Becoming.OneStep.Chain.nth_below : ∀ {q : Becoming.Passage → Nat} {v : Nat} (Q : List Becoming.Passage) (i : Nat),
+  i < Q.length →
+    q (Becoming.OneStep.Witness.pick Q i) = v →
+      Becoming.OneStep.Chain.nth q v Q (Becoming.OneStep.Chain.below q Q v i) = i
+@Becoming.OneStep.Chain.below_lt_tally : ∀ {q : Becoming.Passage → Nat} {v : Nat} (Q : List Becoming.Passage) (i : Nat),
+  i < Q.length →
+    q (Becoming.OneStep.Witness.pick Q i) = v →
+      Becoming.OneStep.Chain.below q Q v i < Becoming.OneStep.Chain.tally q Q v
+@Becoming.OneStep.Chain.match_back : ∀ {q q' : Becoming.Passage → Nat},
+  q Becoming.Passage.idle = 0 →
+    ∀ {Q Q' : List Becoming.Passage},
+      (∀ (v : Nat), 0 < v → Becoming.OneStep.Chain.tally q Q v = Becoming.OneStep.Chain.tally q' Q' v) →
+        ∀ {i j : Nat},
+          Becoming.OneStep.Chain.guard (q (Becoming.OneStep.Witness.pick Q i))
+                (Becoming.OneStep.Chain.nth q' (q (Becoming.OneStep.Witness.pick Q i)) Q'
+                  (Becoming.OneStep.Chain.below q Q (q (Becoming.OneStep.Witness.pick Q i)) i)) =
+              some j →
+            Becoming.OneStep.Chain.guard (q' (Becoming.OneStep.Witness.pick Q' j))
+                  (Becoming.OneStep.Chain.nth q (q' (Becoming.OneStep.Witness.pick Q' j)) Q
+                    (Becoming.OneStep.Chain.below q' Q' (q' (Becoming.OneStep.Witness.pick Q' j)) j)) =
+                some i ∧
+              q (Becoming.OneStep.Witness.pick Q i) = q' (Becoming.OneStep.Witness.pick Q' j)
+@Becoming.OneStep.Chained.continues : ∀ {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chained P → Becoming.OneStep.Continues P
+@Becoming.OneStep.Chain.rank_links : ∀ {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Continues P →
+    Becoming.OneStep.Chain.Links (Becoming.OneStep.Chain.rankNext P) (Becoming.OneStep.Chain.rankPrev P) P
+Becoming.OneStep.Chain.rankNext_onward : ∀ (P : Nat → List Becoming.Passage) (s i : Nat),
+  0 < (Becoming.OneStep.Witness.pick (P s) i).after → ∃ j, Becoming.OneStep.Chain.rankNext P s i = some j
+Becoming.OneStep.Chain.rankPrev_backward : ∀ (P : Nat → List Becoming.Passage) (t j : Nat),
+  0 < (Becoming.OneStep.Witness.pick (P (t + 1)) j).before → ∃ i, Becoming.OneStep.Chain.rankPrev P t j = some i
+@Becoming.OneStep.Chain.covered_tally : ∀ {X : Type} {lev : X → Nat} {l m : List X},
+  Becoming.Distinct l →
+    Becoming.Distinct m →
+      (∀ (c : X), 0 < lev c → c ∈ l) →
+        (∀ (c : X), 0 < lev c → c ∈ m) →
+          ∀ {v : Nat},
+            0 < v →
+              (Becoming.total l fun c => Becoming.OneStep.Witness.hit (lev c) v) =
+                Becoming.total m fun c => Becoming.OneStep.Witness.hit (lev c) v
+@Becoming.OneStep.Chain.pos_or_none : ∀ {X k x : Nat}, Becoming.sign X ≤ k → (X = 0 → x = 0) → 0 < k ∨ x = 0
+@Becoming.OneStep.Chain.excess_of_zero : ∀ {X : Nat} (y : Nat), X = 0 → Becoming.excess X y = 0
+@Becoming.OneStep.Chain.taking_shares : ∀ {X k : Nat},
+  Becoming.sign X ≤ k →
+    k ≤ X →
+      (Becoming.total (Becoming.OneStep.Chain.lift [] k (Becoming.excess X k)) fun y => y) = X ∧
+        (Becoming.count (Becoming.OneStep.Chain.lift [] k (Becoming.excess X k)) fun y => y) = k
+@Becoming.OneStep.Chain.running_shares : ∀ {X Y k : Nat} {gl : List Nat},
+  Becoming.sign X ≤ k →
+    gl.length ≤ k →
+      (Becoming.total gl fun y => y) = Y →
+        Y + k ≤ X →
+          (Becoming.total (Becoming.OneStep.Chain.lift gl k (Becoming.excess X (Y + k))) fun y => y) = X ∧
+            (Becoming.count (Becoming.OneStep.Chain.lift gl k (Becoming.excess X (Y + k))) fun y => y) = k ∧
+              ∀ (a : Nat),
+                Becoming.OneStep.Chain.entry gl a +
+                    Becoming.sign
+                      (Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.lift gl k (Becoming.excess X (Y + k))) a) ≤
+                  Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.lift gl k (Becoming.excess X (Y + k))) a
+@Becoming.OneStep.Chain.self_le_mul : ∀ {Y r : Nat}, Becoming.sign Y ≤ r → Y ≤ Y * r
+@Becoming.OneStep.Chain.solo_shows : ∀ {P : List Becoming.Passage} {d g : List Nat} {o : Prop},
+  (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+    (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+      Becoming.Distinct ((Becoming.OneStep.Chain.solo P d g o).flow.present 0) ∧
+        (Becoming.OneStep.Chain.solo P d g o).flow.RealizesGivers (Becoming.OneStep.Chain.solo P d g o).web 0
+          (Becoming.OneStep.Chain.soloFamily P o) P (Becoming.count d fun y => y) (Becoming.count g fun y => y)
+          (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given ∨ o)
+@Becoming.OneStep.Chain.solo_balancesOn : ∀ {P : List Becoming.Passage} {d g : List Nat} {o : Prop},
+  (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+    (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+      (∀ (p : Becoming.Passage), p ∈ P → p.Balanced) →
+        (Becoming.OneStep.Chain.solo P d g o).flow.BalancesOn (Becoming.OneStep.Chain.solo P d g o).web
+          (Becoming.OneStep.Chain.soloFamily P o) 0
+@Becoming.OneStep.Chain.solo_runsDownOn : ∀ {P : List Becoming.Passage} {d g : List Nat} {o : Prop},
+  (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+    (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+      (∀ (p : Becoming.Passage), p ∈ P → p.Balanced) →
+        (∀ (a : Nat),
+            Becoming.OneStep.Chain.entry g a + Becoming.sign (Becoming.OneStep.Chain.entry d a) ≤
+              Becoming.OneStep.Chain.entry d a) →
+          (Becoming.OneStep.Chain.solo P d g o).flow.RunsDownOn (Becoming.OneStep.Chain.solo P d g o).web
+            (Becoming.OneStep.Chain.soloFamily P o) 0
+@Becoming.OneStep.Chain.solo_capacityAt : ∀ {P : List Becoming.Passage} {d g : List Nat} {o : Prop},
+  (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+    ∀ {cap : Nat},
+      (∀ (a : Nat), Becoming.OneStep.Chain.entry g a ≤ cap) →
+        (Becoming.OneStep.Chain.solo P d g o).flow.CapacityAt (Becoming.OneStep.Chain.soloFamily P o) 0 cap
+Becoming.OneStep.Chain.solo_closedAt : ∀ (P : List Becoming.Passage) (d g : List Nat),
+  (Becoming.OneStep.Chain.solo P d g False).flow.ClosedAt (Becoming.OneStep.Chain.soloFamily P False) 0
+Becoming.OneStep.Chain.solo_active : ∀ (P : List Becoming.Passage) (d g : List Nat) (o : Prop),
+  (Becoming.OneStep.Chain.solo P d g o).flow.ActingAt (Becoming.OneStep.Chain.solo P d g o).web 0 ∧
+    (Becoming.OneStep.Chain.solo P d g o).flow.TakingAt (Becoming.OneStep.Chain.solo P d g o).web 0
+@Becoming.OneStep.RealizedGivers.weaken : ∀ {cond cond' : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+  (∀ (w : Becoming.World) (t : Nat) (es : List w.Relatum), cond w t es → cond' w t es) →
+    ∀ {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+      Becoming.OneStep.RealizedGivers cond P k r e → Becoming.OneStep.RealizedGivers cond' P k r e
+Becoming.OneStep.realized_iff_givers : ∀ (cond : (w : Becoming.World) → Nat → List w.Relatum → Prop)
+  (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized cond P k e ↔ ∃ r, Becoming.OneStep.RealizedGivers cond P k r e
+@Becoming.OneStep.Chain.realizedOnce : ∀ {P : List Becoming.Passage} {k r : Nat} {e : Prop} {d g : List Nat},
+  (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+    (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+      (Becoming.count d fun y => y) = k →
+        (Becoming.count g fun y => y) = r →
+          ∀ (o : Prop),
+            (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given ∨ o ↔ e) →
+              ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+                cond (Becoming.OneStep.Chain.solo P d g o) 0 (Becoming.OneStep.Chain.soloFamily P o) →
+                  Becoming.OneStep.RealizedGivers cond P k r e
+@Becoming.OneStep.Chain.realizedOpen : ∀ {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  Becoming.OneStep.Every P k e →
+    Becoming.OneStep.Givers P r →
+      ∀ {cap : Nat},
+        Becoming.total P Becoming.Passage.given ≤ cap * r →
+          ∀ (o : Prop),
+            (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given ∨ o ↔ e) →
+              ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+                (∀ (d g : List Nat),
+                    (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+                      (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+                        (∀ (a : Nat), Becoming.OneStep.Chain.entry g a ≤ cap) →
+                          cond (Becoming.OneStep.Chain.solo P d g o) 0 (Becoming.OneStep.Chain.soloFamily P o)) →
+                  Becoming.OneStep.RealizedGivers cond P k r e
+@Becoming.OneStep.Chain.realizedRunning : ∀ {P : List Becoming.Passage} {k r : Nat} {e : Prop},
+  Becoming.OneStep.RunsDown P k e →
+    Becoming.OneStep.Givers P r →
+      r ≤ k →
+        ∀ {cap : Nat},
+          Becoming.total P Becoming.Passage.given ≤ cap * r →
+            ∀ (o : Prop),
+              (0 < Becoming.total P Becoming.Passage.taken ∨ 0 < Becoming.total P Becoming.Passage.given ∨ o ↔ e) →
+                ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+                  (∀ (d g : List Nat),
+                      (Becoming.total d fun y => y) = Becoming.total P Becoming.Passage.taken →
+                        (Becoming.total g fun y => y) = Becoming.total P Becoming.Passage.given →
+                          (∀ (a : Nat), Becoming.OneStep.Chain.entry g a ≤ cap) →
+                            (∀ (a : Nat),
+                                Becoming.OneStep.Chain.entry g a + Becoming.sign (Becoming.OneStep.Chain.entry d a) ≤
+                                  Becoming.OneStep.Chain.entry d a) →
+                              cond (Becoming.OneStep.Chain.solo P d g o) 0 (Becoming.OneStep.Chain.soloFamily P o)) →
+                    Becoming.OneStep.RealizedGivers cond P k r e
+Becoming.OneStep.every_givers_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun x x_1 x_2 => True) P k r e ↔
+    Becoming.OneStep.Every P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.balance_givers_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.BalancesOn w.web es t) P k r e ↔
+    Becoming.OneStep.Balance P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.runsDown_givers_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
+    Becoming.OneStep.RunsDown P k e ∧ Becoming.OneStep.Givers P r ∧ r ≤ k
+Becoming.OneStep.closed_givers_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.ClosedAt es t) P k r e ↔
+    Becoming.OneStep.Closed P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.runsDownClosed_givers_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k r e ↔
+    Becoming.OneStep.RunsDownClosed P k e ∧ Becoming.OneStep.Givers P r ∧ r ≤ k
+Becoming.OneStep.every_capacity_iff : ∀ (cap : Nat) (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.CapacityAt es t cap) P k r e ↔
+    Becoming.OneStep.Every P k e ∧ Becoming.OneStep.Givers P r ∧ Becoming.total P Becoming.Passage.given ≤ cap * r
+Becoming.OneStep.balance_capacity_iff : ∀ (cap : Nat) (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.BalancesOn w.web es t ∧ w.flow.CapacityAt es t cap) P k r e ↔
+    Becoming.OneStep.Balance P k e ∧ Becoming.OneStep.Givers P r ∧ Becoming.total P Becoming.Passage.given ≤ cap * r
+Becoming.OneStep.runsDown_capacity_iff : ∀ (cap : Nat) (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.CapacityAt es t cap) P k r e ↔
+    Becoming.OneStep.RunsDown P k e ∧
+      Becoming.OneStep.Givers P r ∧ r ≤ k ∧ Becoming.total P Becoming.Passage.given ≤ cap * r
+Becoming.OneStep.closed_capacity_iff : ∀ (cap : Nat) (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t es => w.flow.ClosedAt es t ∧ w.flow.CapacityAt es t cap) P k r e ↔
+    Becoming.OneStep.Closed P k e ∧ Becoming.OneStep.Givers P r ∧ Becoming.total P Becoming.Passage.given ≤ cap * r
+Becoming.OneStep.runsDownClosed_capacity_iff : ∀ (cap : Nat) (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers
+      (fun w t es => (w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) ∧ w.flow.CapacityAt es t cap) P k r e ↔
+    Becoming.OneStep.RunsDownClosed P k e ∧
+      Becoming.OneStep.Givers P r ∧ r ≤ k ∧ Becoming.total P Becoming.Passage.given ≤ cap * r
+Becoming.OneStep.every_active_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers (fun w t x => w.flow.ActingAt w.web t ∧ w.flow.TakingAt w.web t) P k r e ↔
+    Becoming.OneStep.Every P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.balance_active_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers
+      (fun w t es => w.flow.BalancesOn w.web es t ∧ w.flow.ActingAt w.web t ∧ w.flow.TakingAt w.web t) P k r e ↔
+    Becoming.OneStep.Balance P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.runsDown_active_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers
+      (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ActingAt w.web t ∧ w.flow.TakingAt w.web t) P k r e ↔
+    Becoming.OneStep.RunsDown P k e ∧ Becoming.OneStep.Givers P r ∧ r ≤ k
+Becoming.OneStep.closed_active_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers
+      (fun w t es => w.flow.ClosedAt es t ∧ w.flow.ActingAt w.web t ∧ w.flow.TakingAt w.web t) P k r e ↔
+    Becoming.OneStep.Closed P k e ∧ Becoming.OneStep.Givers P r
+Becoming.OneStep.runsDownClosed_active_iff : ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop),
+  Becoming.OneStep.RealizedGivers
+      (fun w t es =>
+        (w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) ∧ w.flow.ActingAt w.web t ∧ w.flow.TakingAt w.web t)
+      P k r e ↔
+    Becoming.OneStep.RunsDownClosed P k e ∧ Becoming.OneStep.Givers P r ∧ r ≤ k
+@Becoming.OneStep.laws_givers : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {Law : List Becoming.Passage → Nat → Nat → Prop → Prop},
+  (∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop), Becoming.OneStep.RealizedGivers cond P k r e ↔ Law P k r e) →
+    ∀ {Q : List Becoming.Passage → Nat → Nat → Prop → Prop},
+      Becoming.OneStep.RespectsGivers Q →
+        ((∀ (w : Becoming.World) (t : Nat) (es : List w.Relatum),
+            cond w t es →
+              Becoming.Distinct (w.flow.present t) →
+                Q (List.map (w.flow.passage w.web t) es) (w.flow.takers es t) (w.flow.renewers es t)
+                  (w.flow.ExchangesAt t)) ↔
+          ∀ (P : List Becoming.Passage) (k r : Nat) (e : Prop), Law P k r e → Q P k r e)
+@Becoming.OneStep.RunRealizedGivers.run : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.RunRealizedGivers cond P k r e → Becoming.OneStep.RunRealized cond P k e
+@Becoming.OneStep.RunRealizedGivers.steps : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.RunRealizedGivers cond P k r e → Becoming.OneStep.StepRealized cond P k r e
+@Becoming.OneStep.StepRealized.continues : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop},
+  (∀ (w : Becoming.World) (t : Nat) (es : List w.Relatum), cond w t es → w.flow.RunsDownOn w.web es t) →
+    Becoming.OneStep.StepRealized cond P k r e → Becoming.OneStep.Continues P
+@Becoming.OneStep.Chain.showsAll : ∀ {σ ρ : Nat → Nat → Option Nat} {P : Nat → List Becoming.Passage},
+  Becoming.OneStep.Chain.Links σ ρ P →
+    ∀ {k r : Nat → Nat} {e : Nat → Prop} {d g : Nat → List Nat},
+      (∀ (t : Nat), (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken) →
+        (∀ (t : Nat), (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given) →
+          (∀ (t : Nat), (Becoming.count (d t) fun y => y) = k t) →
+            (∀ (t : Nat), (Becoming.count (g t) fun y => y) = r t) →
+              ∀ (o : Nat → Prop),
+                (∀ (t : Nat),
+                    0 < Becoming.total (P t) Becoming.Passage.taken ∨
+                        0 < Becoming.total (P t) Becoming.Passage.given ∨ o t ↔
+                      e t) →
+                  ∀ (t : Nat),
+                    Becoming.Distinct ((Becoming.OneStep.Chain.world σ ρ P d g o).flow.present t) ∧
+                      (Becoming.OneStep.Chain.world σ ρ P d g o).flow.RealizesGivers
+                        (Becoming.OneStep.Chain.world σ ρ P d g o).web t
+                        (List.map Sum.inr (Becoming.OneStep.Chain.family ρ P o t)) (P t) (k t) (r t) (e t)
+@Becoming.OneStep.Chain.openTaken_spec : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  (∀ (t : Nat), Becoming.OneStep.Every (P t) (k t) (e t)) →
+    ∀ (t : Nat),
+      (Becoming.total (Becoming.OneStep.Chain.openTaken P k t) fun y => y) =
+          Becoming.total (P t) Becoming.Passage.taken ∧
+        (Becoming.count (Becoming.OneStep.Chain.openTaken P k t) fun y => y) = k t
+@Becoming.OneStep.Chain.openGiven_spec : ∀ {P : Nat → List Becoming.Passage} {r : Nat → Nat},
+  (∀ (t : Nat), Becoming.OneStep.Givers (P t) (r t)) →
+    ∀ (t : Nat),
+      (Becoming.total (Becoming.OneStep.Chain.openGiven P r t) fun y => y) =
+          Becoming.total (P t) Becoming.Passage.given ∧
+        (Becoming.count (Becoming.OneStep.Chain.openGiven P r t) fun y => y) = r t
+@Becoming.OneStep.Chain.runningTaken_spec : ∀ {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop},
+  (∀ (t : Nat), Becoming.OneStep.RunsDown (P t) (k t) (e t)) →
+    (∀ (t : Nat), Becoming.OneStep.Givers (P t) (r t)) →
+      (∀ (t : Nat), r t ≤ k t) →
+        ∀ (t : Nat),
+          (Becoming.total (Becoming.OneStep.Chain.runningTaken P k r t) fun y => y) =
+              Becoming.total (P t) Becoming.Passage.taken ∧
+            (Becoming.count (Becoming.OneStep.Chain.runningTaken P k r t) fun y => y) = k t ∧
+              ∀ (a : Nat),
+                Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.openGiven P r t) a +
+                    Becoming.sign (Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.runningTaken P k r t) a) ≤
+                  Becoming.OneStep.Chain.entry (Becoming.OneStep.Chain.runningTaken P k r t) a
+@Becoming.OneStep.Chain.realizedSteps : ∀ {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop}
+  {d g : Nat → List Nat},
+  (∀ (t : Nat), (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken) →
+    (∀ (t : Nat), (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given) →
+      (∀ (t : Nat), (Becoming.count (d t) fun y => y) = k t) →
+        (∀ (t : Nat), (Becoming.count (g t) fun y => y) = r t) →
+          ∀ (o : Nat → Prop),
+            (∀ (t : Nat),
+                0 < Becoming.total (P t) Becoming.Passage.taken ∨
+                    0 < Becoming.total (P t) Becoming.Passage.given ∨ o t ↔
+                  e t) →
+              ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop} {σ ρ : Nat → Nat → Option Nat},
+                Becoming.OneStep.Chain.Links σ ρ P →
+                  (∀ (t : Nat),
+                      cond (Becoming.OneStep.Chain.world σ ρ P d g o) t
+                        (List.map Sum.inr (Becoming.OneStep.Chain.family ρ P o t))) →
+                    Becoming.OneStep.StepRealized cond P k r e
+@Becoming.OneStep.Chain.realizedRun : ∀ {P : Nat → List Becoming.Passage} {k r : Nat → Nat} {e : Nat → Prop}
+  {d g : Nat → List Nat},
+  (∀ (t : Nat), (Becoming.total (d t) fun y => y) = Becoming.total (P t) Becoming.Passage.taken) →
+    (∀ (t : Nat), (Becoming.total (g t) fun y => y) = Becoming.total (P t) Becoming.Passage.given) →
+      (∀ (t : Nat), (Becoming.count (d t) fun y => y) = k t) →
+        (∀ (t : Nat), (Becoming.count (g t) fun y => y) = r t) →
+          ∀ (o : Nat → Prop),
+            (∀ (t : Nat),
+                0 < Becoming.total (P t) Becoming.Passage.taken ∨
+                    0 < Becoming.total (P t) Becoming.Passage.given ∨ o t ↔
+                  e t) →
+              ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop},
+                Becoming.OneStep.Chained P →
+                  (∀ (t : Nat),
+                      cond
+                        (Becoming.OneStep.Chain.world Becoming.OneStep.Chain.identical Becoming.OneStep.Chain.identical
+                          P d g o)
+                        t (List.map Sum.inr (Becoming.OneStep.Chain.family Becoming.OneStep.Chain.identical P o t))) →
+                    Becoming.OneStep.RunRealizedGivers cond P k r e
+Becoming.OneStep.run_every_givers_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealizedGivers (fun x x_1 x_2 => True) P k r e ↔
+    Becoming.OneStep.Chained P ∧
+      ∀ (t : Nat), Becoming.OneStep.Every (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.run_balance_givers_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealizedGivers (fun w t es => w.flow.BalancesOn w.web es t) P k r e ↔
+    Becoming.OneStep.Chained P ∧
+      ∀ (t : Nat), Becoming.OneStep.Balance (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.run_runsDown_givers_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
+    Becoming.OneStep.Chained P ∧
+      ∀ (t : Nat), Becoming.OneStep.RunsDown (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t) ∧ r t ≤ k t
+Becoming.OneStep.run_closed_givers_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealizedGivers (fun w t es => w.flow.ClosedAt es t) P k r e ↔
+    Becoming.OneStep.Chained P ∧
+      ∀ (t : Nat), Becoming.OneStep.Closed (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.run_runsDownClosed_givers_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.RunRealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k r e ↔
+    Becoming.OneStep.Chained P ∧
+      ∀ (t : Nat), Becoming.OneStep.RunsDownClosed (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t) ∧ r t ≤ k t
+Becoming.OneStep.step_every_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.StepRealized (fun x x_1 x_2 => True) P k r e ↔
+    ∀ (t : Nat), Becoming.OneStep.Every (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.step_balance_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.StepRealized (fun w t es => w.flow.BalancesOn w.web es t) P k r e ↔
+    ∀ (t : Nat), Becoming.OneStep.Balance (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.step_closed_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.StepRealized (fun w t es => w.flow.ClosedAt es t) P k r e ↔
+    ∀ (t : Nat), Becoming.OneStep.Closed (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t)
+Becoming.OneStep.step_runsDown_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.StepRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
+    Becoming.OneStep.Continues P ∧
+      ∀ (t : Nat), Becoming.OneStep.RunsDown (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t) ∧ r t ≤ k t
+Becoming.OneStep.step_runsDownClosed_iff : ∀ (P : Nat → List Becoming.Passage) (k r : Nat → Nat) (e : Nat → Prop),
+  Becoming.OneStep.StepRealized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k r e ↔
+    Becoming.OneStep.Continues P ∧
+      ∀ (t : Nat), Becoming.OneStep.RunsDownClosed (P t) (k t) (e t) ∧ Becoming.OneStep.Givers (P t) (r t) ∧ r t ≤ k t
+@Becoming.OneStep.stepRun_iff_givers : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.StepRunRealized cond P k e ↔ ∃ r, Becoming.OneStep.StepRealized cond P k r e
+Becoming.OneStep.givers_sign : ∀ (Q : List Becoming.Passage),
+  Becoming.OneStep.Givers Q (Becoming.sign (Becoming.total Q Becoming.Passage.given))
+@Becoming.OneStep.RunsDown.sign_given_le : ∀ {Q : List Becoming.Passage} {k' : Nat} {e' : Prop},
+  Becoming.OneStep.RunsDown Q k' e' → Becoming.sign (Becoming.total Q Becoming.Passage.given) ≤ k'
+@Becoming.OneStep.stepRun_runsDown_iff : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.StepRunRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔
+    Becoming.OneStep.Continues P ∧ ∀ (t : Nat), Becoming.OneStep.RunsDown (P t) (k t) (e t)
+@Becoming.OneStep.stepRun_runsDownClosed_iff : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.StepRunRealized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
+    Becoming.OneStep.Continues P ∧ ∀ (t : Nat), Becoming.OneStep.RunsDownClosed (P t) (k t) (e t)
+@Becoming.OneStep.stepRun_balance_iff : ∀ {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.StepRunRealized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔
+    ∀ (t : Nat), Becoming.OneStep.Balance (P t) (k t) (e t)
+Becoming.OneStep.swapped_continues : Becoming.OneStep.Continues Becoming.OneStep.swapped
+Becoming.OneStep.swapped_runsDown : ∀ (t : Nat),
+  Becoming.OneStep.RunsDown (Becoming.OneStep.swapped t) 0 False ∧
+    Becoming.OneStep.Givers (Becoming.OneStep.swapped t) 0 ∧ 0 ≤ 0
+Becoming.OneStep.steps_not_run : (Becoming.OneStep.StepRealized (fun w t es => w.flow.RunsDownOn w.web es t)
+    Becoming.OneStep.swapped (fun x => 0) (fun x => 0) fun x => False) ∧
+  ¬Becoming.OneStep.RunRealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t) Becoming.OneStep.swapped (fun x => 0)
+      (fun x => 0) fun x => False
+Becoming.OneStep.vanishing_not_continues : ¬Becoming.OneStep.Continues Becoming.OneStep.vanishing
+Becoming.OneStep.vanishing_steps : (Becoming.OneStep.StepRealized (fun w t es => w.flow.BalancesOn w.web es t)
+    Becoming.OneStep.vanishing (fun x => 0) (fun x => 0) fun x => False) ∧
+  ¬Becoming.OneStep.StepRealized (fun w t es => w.flow.RunsDownOn w.web es t) Becoming.OneStep.vanishing (fun x => 0)
+      (fun x => 0) fun x => False
+Becoming.PassageWorlds.runsDownClosed_realized_iff : ∀ (P : List Becoming.Passage) (k : Nat) (e : Prop),
+  Becoming.OneStep.Realized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
+    Becoming.OneStep.Stated P k e ∧ Becoming.sign (Becoming.total P Becoming.Passage.taken) ≤ k
+@Becoming.PassageWorlds.stated_of_runsDownClosed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {es : List C} {t : Nat},
+  L.RunsDownOn W es t →
+    L.ClosedAt es t → Becoming.OneStep.Stated (List.map (L.passage W t) es) (L.takers es t) (L.ExchangesAt t)
+@Becoming.PassageWorlds.passages_continue : ∀ {F C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C) (es : List C),
+  Becoming.OneStep.Continues fun t => List.map (L.passage W t) es
+@Becoming.PassageWorlds.RunRealized.continues : ∀ {cond : (w : Becoming.World) → Nat → List w.Relatum → Prop}
+  {P : Nat → List Becoming.Passage} {k : Nat → Nat} {e : Nat → Prop},
+  Becoming.OneStep.RunRealized cond P k e → Becoming.OneStep.Continues P

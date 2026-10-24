@@ -107,7 +107,8 @@ class IndexTests(unittest.TestCase):
     def test_chapter_status(self):
         table = {'K.md': ('Statement source', 'Cited by §3.')}
         status = lambda n, g=frozenset(): indexes.chapter_status(n, table, set(g))[0]
-        self.assertEqual(status('THE-THEORY-OF-BECOMING.md'), 'canonical')
+        self.assertEqual(status('01-ROOT.md'), 'chapter')
+        self.assertEqual(status('THE-THEORY-OF-BECOMING.md'), 'kept')  # the overview lives one level up
         self.assertEqual(status('THE-THEORY-OF-BECOMING-REFERENCE.md'), 'reference')
         self.assertEqual(status('K.zh.md'), 'Chinese edition')
         self.assertEqual(status('K.md'), 'kept')

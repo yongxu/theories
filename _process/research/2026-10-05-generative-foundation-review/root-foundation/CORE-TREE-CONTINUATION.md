@@ -1,6 +1,6 @@
 # Continuing within the nonduality of core and tree
 
-6 October 2026. AI-authored continuation of [Ren's correction in this chat](../../../../sources/15-codex-theory-conversations/2026-10-06-core-tree-nondual-continuation.md), using the existing [project-wide nondual method](../../../../theories/becoming/chapters/NONDUAL-METHOD.md). The correction is already part of the project's governing practice. This round applies it to the preceding receipt study and to the mathematical articulation of the theory tree; it does not announce nonduality for the first time.
+6 October 2026. AI-authored continuation of [Ren's correction in this chat](../../../../sources/15-codex-theory-conversations/2026-10-06-core-tree-nondual-continuation.md), using the existing [project-wide nondual method](../../../../theories/becoming/history/NONDUAL-METHOD.md). The correction is already part of the project's governing practice. This round applies it to the preceding receipt study and to the mathematical articulation of the theory tree; it does not announce nonduality for the first time.
 
 **Named connection:** accumulated formation → situated response and retained difference → changed conditions of further formation. These name distinguishable relations within one unfolding. The work does not start with an independent core, an external observer, and a tree of applications that must somehow be attached to them.
 

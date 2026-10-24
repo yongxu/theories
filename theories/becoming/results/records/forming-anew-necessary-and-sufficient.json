@@ -97,6 +97,13 @@
         "en": "States a gap its map found (entries weishi-shiqi-wu-yin).",
         "zh": "陈述其对应所发现之缺口（条目 weishi-shiqi-wu-yin）。"
       }
+    },
+    {
+      "id": "dependence-formed-from-drawing",
+      "detail": {
+        "en": "Where depending and drawing part at the giver.",
+        "zh": "给予者处依存与汲取相分之处。"
+      }
     }
   ],
   "references": [
@@ -112,7 +119,7 @@
         "Becoming.Web.formsAnew_iff_undrawn",
         "Becoming.Web.inheritsAt_iff_not_formsAnew"
       ],
-      "sha256": "5258995b79e2de66a66f046e5808f7690a5ca0ea513b68916a9d89e706ad70bf"
+      "sha256": "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
@@ -122,12 +129,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "a5b9cc1b0ed99010f4eb11a022bc71879dc5e944f6bea247b40f33ef3e5cc204"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "integration",
-      "sha256": "3280d17798e98add6c70161abffad8037c618a0411a8a712cc867958cb2625a5"
+      "sha256": "ba6ed198c6a413310463809542fb4a2ada2e062230a04a6eb95d48387fd1e062"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
@@ -135,20 +142,26 @@
       "sha256": "c32cc989794d54f344c652545597c844c1e24878ab657c4e244bfd664dc84701"
     },
     {
-      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "path": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
       "role": "statement",
       "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Transmission",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -158,6 +171,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 345.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 345 节。"
+    },
+    {
+      "en": "22 October 2026, EV13-EV16: related record dependence-formed-from-drawing added (study section 368); its laws and their statements are unchanged.",
+      "zh": "2026年10月22日，EV13-EV16：加入相关记录 dependence-formed-from-drawing（研究第 368 节）；定律及其陈述不变。"
     }
   ]
 }

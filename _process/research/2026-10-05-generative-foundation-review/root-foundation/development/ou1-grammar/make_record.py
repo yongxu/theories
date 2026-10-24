@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""OU1: write the record continuation-relative-to-a-class bound to the core receipt, and relate the records of the
+old continuation family to it (one history note each; their claims unchanged).
+usage (from the checkout root): python3 -B make_record.py STUDY_SECTION RECEIPT"""
+import datetime
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path.cwd()
+N, RECEIPT = sys.argv[1], sys.argv[2]
+PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+SRC = f'{PKG}/Becoming/Grammar.lean'
+REC = f'{PKG}/becoming-checks/{RECEIPT}/verification.json'
+RECORDS = ROOT / 'theories/becoming/results/records'
+RID = 'continuation-relative-to-a-class'
+NOW = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+PLAN = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md'
+
+
+def sha(path):
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+
+
+R = json.loads((ROOT / REC).read_text())
+assert R['status'] == 'passed'
+mod = next(m for m in R['modules'] if m['module'] == 'Becoming.Grammar')
+assert not any(mod['axiom_dependencies'].values())
+names = {d['name'] for d in mod['declarations']}
+
+
+def bare(n):
+    return n.replace('«', '').replace('»', '')
+
+
+by_bare = {bare(n): n for n in names}
+
+
+def d(*xs):
+    out = []
+    for x in xs:
+        full = 'Becoming.' + x
+        hit = full if full in names else by_bare.get(bare(full))
+        assert hit, ('not in the receipt', full)
+        out.append(hit)
+    return out
+
+
+laws = [
+    ("Continuation is 缘 met with a class: one occurrence continues another under a class where the first is a "
+     "condition of the second and the two are alike under the class. A line is the reach of continuation, and an "
+     "occurrence begins, abides or ends in it where it has no predecessor, both, or no successor; beginning and "
+     "abiding exclude each other, as do abiding and ending, and every line runs along the reach of 缘.",
+     "续是缘与类之合：一事在一个类下续另一事，当前者为后者之缘且二者在此类下相同。一条线是续之可及；一事在其中无前者为生，前后皆有为住，"
+     "无后者为亡；生与住不并，住与亡不并；每条线都沿缘之可及。",
+     d('«续»', '«相续»', '«有前»', '«有后»', '«生»', '«住»', '«亡»', '«异»', '«续含于缘»', '«相续含于及»',
+       '«生住不并»', '«住亡不并»')),
+    ("No position stands by itself: the positions depend on the class. Under the one, continuation is 缘 itself, and "
+     "an occurrence begins exactly where nothing conditions it; in a net without self-conditioning, an occurrence "
+     "with a condition and a consequence abides under the one and both begins and ends under identity.",
+     "无一位自立：诸位依于类。在“一”之下，续即缘本身，一事恰在无物为其缘时为生；在无自缘之网中，有缘有果之事，在“一”之下为住，"
+     "在相等之下既生又亡。",
+     d('«一之续»', '«一之生»', '«四相无自立»')),
+    ("Coarsening: under a coarser class every continuation remains one, so what ends under the coarser class ends "
+     "under the finer and what abides under the finer abides under the coarser; something can end under the finer "
+     "class while it abides under the coarser.",
+     "粗化：在较粗的类下，每一续仍是续；故在粗类下亡者在细类下亦亡，在细类下住者在粗类下亦住；可有一事在细类下亡而在粗类下住。",
+     d('«粗化»', '«亡于粗则亡于细»', '«住于细则住于粗»', '«亡于细者不必亡于粗»')),
+    ("A class constant under 缘 (E˘;R ⊆ R;E˘) never lets a continuation end: whatever continues something is "
+     "continued, symmetric class or not. So a class under which some line ends is not constant, and a line that ends "
+     "has its own regularity in its class's core, not in the class.",
+     "对缘有常之类（E˘;R ⊆ R;E˘），其续永不终了：凡续某事者，自身亦被续，类对称与否皆然。故有线终了之类不有常，一条终了之线，其理在其类之核，"
+     "不在其类。",
+     d('«有常»', '«有常之逐点»', '«有常则续不尽»', '«有常则相续不尽»', '«有亡之续则不有常»')),
+    ("The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant "
+     "relation inside it: it is the greatest one, and the core of a class is a class. Read both ways, constant under "
+     "缘 and under its converse, the core fixes positions: what shares it shares beginning and ending.",
+     "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。双向读之（对缘及其逆皆有常），"
+     "核定位：同位者，生与亡皆同。",
+     d('«核»', '«根»', '«核为类»', '«有常可复合»', '«静有常»', '«位核»', '«位根»', '«位核含于核»',
+       '«亡于核下不变»', '«生于位核下不变»', '«位同则四相同»')),
+    ("Continuation is not defined through the core: in a flame of three moments ending in ash, the moments continue "
+     "one another under 'flame or not', yet under that class's core no two occurrences continue one another, since "
+     "the moments' futures differ by how long is left.",
+     "续不由核来定义：三刻之火终于灰，诸刻在“火与否”之类下相续，而在此类之核下无两事相续，因诸刻之未来以所余之长短而异。",
+     d('Flame', 'Flame.step', 'Flame.burns', 'Flame.alike', 'Flame.alike_class', 'Flame.not_core_f₁',
+       'Flame.not_core_f₀', '«以核为判据则火无续»')),
+    ("For a class, constancy is exactly closure of the coarse net: E;R;E ⊆ R;E. Read without taking classes apart, "
+     "every 缘 inside a class becomes a loop at both its ends; the coarse net therefore takes 缘 between classes, "
+     "and it joins only different classes.",
+     "对一个类，有常恰是粗网之闭合：E;R;E ⊆ R;E。不分开类而读，类内每一缘在其两端成环；故粗网取类与类之间的缘，它只连不同之类。",
+     d('«闭合当且仅当有常»', '«类内之缘成环»', '«粗»', '«粗只连异类»')),
+    ("Renewal: an occurrence renews where it is a condition of a beginning that goes on; renewal at the grain of a "
+     "class reads the same relation at that grain, and every renewal is one at every grain. Renewal without end is "
+     "the greatest family each member of which renews into a line reaching the family again; it renews. Under the "
+     "one there is neither.",
+     "复生：一事为一个继续下去之生之缘，谓之复生；以一个类之粒度读同一关系，为粗复生，凡复生皆是各粒度之复生。生生是最大之族，"
+     "其每一员都复生出一条再到此族之线；生生必复生。在“一”之下二者皆无。",
+     d('«复生»', '«粗复生»', '«复生则粗复生»', '«一之下无复生»', '«生生»', '«生生之展»', '«生生最大»',
+       '«生生则复生»', '«一之下无生生»')),
+    ("Boundaries in the grammar itself: that every occurrence, in every model, either begins or has a predecessor is "
+     "exactly excluded middle; under fission, sameness read along lines either way is not transitive; every single "
+     "缘 is a continuation under some class, and two alike conditions of one occurrence make a merge; reach is an "
+     "order of precedence only where nothing reaches itself.",
+     "文法自身的边界：“每一事或生或有前，对一切模型”恰是排中律；有分叉时，沿线双向所读之同不传递；每一条缘在某个类下都是续，"
+     "一事的两个相同之缘成合；可及只在无物可及自身时才是先后之序。",
+     d('«四相之定当且仅当排中»', '«分叉»', '«同族»', '«同族为类»', '«任一缘可为续»', '«蜡烛之合»', '«无环»',
+       '«无环则及为序»', '«不穷»')),
+]
+cited = sorted({x for _, _, ds in laws for x in ds})
+alldecl = sorted(names)
+rec = {
+    "schema_version": 2,
+    "id": RID,
+    "title": {"en": "Continuation relative to a class", "zh": "相对于类的续"},
+    "kind": "theorem", "status": "recorded-checked", "family": "F01", "reviewed_at_utc": NOW,
+    "statement": {
+        "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a "
+              "class constant under 缘 never lets a continuation end, and a line's own regularity is the class's core.",
+        "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核。"},
+    "laws": [{"en": a, "zh": b, "declarations": c} for a, b, c in laws],
+    "hypotheses": [
+        {"en": "None beyond the grammar: every carrier and every relation; where a theorem speaks of a class, the class is "
+               "an equivalence relation.",
+         "zh": "除文法外无前提：每个载体与每个关系；凡定理言类者，类是等价关系。"},
+        {"en": "Equality on the carrier is a commitment of the model, used where identity is a class (the positions under "
+               "identity, the flame, the merge).",
+         "zh": "载体之相等是模型的承诺，用于以相等为类之处（相等下的诸位、火、合）。"}],
+    "does_not_show": [
+        {"en": "That a class is warranted: constancy says only that a class agrees with 缘; under the full relation every "
+               "class is constant.",
+         "zh": "一个类有根据：有常只说一个类与缘相容；在全关系下每个类都有常。", "kind": "non-implication"},
+        {"en": "That continuation contained in 缘 tells a fire passed on from one fire ending and another starting: every "
+               "single 缘 is a continuation under some class, and two alike conditions make a merge.",
+         "zh": "续含于缘，能分开火之传与一火灭、一火生：每一条缘在某个类下都是续，两个相同之缘成合。", "kind": "non-implication",
+         "witness": d('«任一缘可为续»')[0]},
+        {"en": "That renewal without end tells renewal that sustains life from turnover that destroys it.",
+         "zh": "生生分开维持生命之更新与毁灭之更替。", "kind": "non-implication"},
+        {"en": "That reach orders occurrences where conditions are mutual: it is then a preorder.",
+         "zh": "条件互相之处可及给出事之次序：那时它只是预序。", "kind": "scope"},
+        {"en": "That the old theory's continuation family holds as instances of this grammar: those modules are not yet "
+               "stated through it.",
+         "zh": "旧理论的续之族作为本文法之实例成立：那些模块尚未经它陈述。", "kind": "scope"}],
+    "counterexamples": [
+        {"path": SRC, "detail": {
+            "en": "A flame of three moments ending in ash continues under 'flame or not' and has no continuation under "
+                  "that class's core («以核为判据则火无续»).",
+            "zh": "三刻之火终于灰，在“火与否”之下相续，在此类之核下无续（«以核为判据则火无续»）。"}},
+        {"path": SRC, "detail": {
+            "en": "Fission: one occurrence continued by two that go no further makes sameness along lines intransitive "
+                  "(«分叉»).",
+            "zh": "分叉：一事为二事所续而二事不再续，使沿线之同不传递（«分叉»）。"}}],
+    "standard_boundaries": ["no-ethical-premise", "no-evaluation", "formal-not-empirical"],
+    "validation_scope": {
+        "en": f"Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, {mod['theorems']} "
+              f"theorems in {len(mod['declarations'])} declarations, each with an empty axiom report. The plan it "
+              "realizes was reviewed in its ninth version by GPT astra and two Opus reviewers, the formal one checking "
+              "the same statements in its own scratch file.",
+        "zh": f"由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，{len(mod['declarations'])} 个声明中 "
+              f"{mod['theorems']} 条定理，公理报告均为空。它所实现的计划第九版经 GPT astra 与两位 Opus 审查者审查，形式审查者在自己的草稿中检查了相同的陈述。"},
+    "next_delta": {
+        "en": "Lift the old base's continuation family onto this grammar: pattern passing, identity, change, arising, "
+              "persistence and classes along a continuation, each derived as an instance; and compare the cores of joint "
+              "classes for lines that end.",
+        "zh": "把旧基底的续之族提升到本文法上：样式之传、同一、变、生起、持存、沿延续之类，各作为实例推出；并为会终了之线比较合类之核。"},
+    "correspondence": {
+        "en": "For a class, constancy is bisimulation equivalence (Park 1981; Milner 1989) and the core the greatest "
+              "bisimulation inside the class; reach is the transitive closure of the calculus of relations (Tarski "
+              "1941). Continuation relative to a class is close to genidentity (Lewin 1922) and to Whitehead's enduring "
+              "objects (1929); the closure law is the relational analogue of lumpability (Kemeny and Snell 1960) and of "
+              "computational closure (Rosas et al. 2024), a correspondence not proved here. The classical readings "
+              "(四相 in 《大乘起信论》, 六相 in 《金师子章》, 一实 in 《荀子·正名》, the refutation of 相續 in 《中论》) are "
+              "registered with their losses in the plan."},
+    "canonical_source": SRC,
+    "aliases": cited,
+    "dependencies": [],
+    "related": [
+        {"id": "classes-along-a-continuation", "detail": {
+            "en": "There formation classes are read along a given continuation of the old base, with splits and merges; "
+                  "here continuation itself is 缘 met with a class, for every carrier and relation.",
+            "zh": "那里在旧基底的给定延续上读形成之类，含分与合；这里续本身是缘与类之合，对每个载体与关系。"}},
+        {"id": "a-pattern-lasts-through-passing", "detail": {
+            "en": "A pattern outlasting its carriers there is a line under a class here; lifting it is the next step.",
+            "zh": "那里比其载者更长久的样式，在这里是一个类下的一条线；提升它是下一步。"}},
+        {"id": "branching-tests-bisimulation", "detail": {
+            "en": "Bisimulation there is between labelled processes; here the core is the greatest symmetric relation "
+                  "constant under one relation inside a class.",
+            "zh": "那里的互拟在带标的过程之间；这里核是一个类之内、在一个关系下有常的最大对称关系。"}}],
+    "references": [
+        {"path": SRC, "role": "proof", "sha256": sha(SRC), "declarations": alldecl},
+        {"path": REC, "role": "receipt", "sha256": sha(REC)},
+        {"path": PLAN, "role": "statement", "sha256": sha(PLAN)}],
+    "proof_bindings": [{"source": SRC, "receipt": REC, "sha256_pointer": "/source_sha256/Becoming.Grammar",
+                        "success_pointer": "/status", "success_value": "passed"}],
+    "history": [{
+        "en": f"23 October 2026, board item OU1 (study section {N}): the root of the one-unfolding plan in its tenth "
+              "version, continuation relative to a class at its centre, after Ren's direction of that day and three "
+              "reviews of the ninth version; the earlier claim that a line's regularity is its class being constant is "
+              "corrected by «有常则续不尽».",
+        "zh": f"2026年10月23日，工作板条目 OU1（研究第 {N} 节）：一元计划第十版之根，以相对于类的续为中心，承 Ren 当日之方向与第九版的三份审查；"
+              "先前“一条线之理在其类有常”之说由 «有常则续不尽» 更正。"}],
+}
+assert R['source_sha256'].get('Becoming.Grammar') == sha(SRC), 'receipt does not bind the current source'
+(RECORDS / f'{RID}.json').write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
+print('wrote', RID, len(cited), 'cited of', len(alldecl))

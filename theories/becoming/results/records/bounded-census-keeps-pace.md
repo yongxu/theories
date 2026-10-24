@@ -116,7 +116,7 @@ The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-09-complete-theory-of-becoming.md](../../../../sources/15-codex-theory-conversations/2026-10-09-complete-theory-of-becoming.md) | — |
 | provenance | [2026-10-09-arising-ceasing-names.md](../../../../sources/15-codex-theory-conversations/2026-10-09-arising-ceasing-names.md) | — |
 | review | [BECOMING-P25B-P29-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P25B-P29-REVIEW.md) | — |
@@ -136,6 +136,7 @@ The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasing`, `Becoming.Web.unceasing_iff_bounded`, `Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`, `Becoming.World.Finite.countedWithin`, `Becoming.World.procession_world`, `Becoming.World.accretion_unbounded`, `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`, `Becoming.Listed.ceasing_of_returning`, `Becoming.Listed.ceasing_of_outpacing`, `Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`, `Becoming.World.slow`, `Becoming.World.slow_world`, `Becoming.World.Finite.census_bounded`
 

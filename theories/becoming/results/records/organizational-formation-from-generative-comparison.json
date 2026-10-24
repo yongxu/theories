@@ -27,7 +27,7 @@
     "zh": "同一支持历史形成连接、保留基础并承担休闲损失；甲乙是作用路径。具体模型的合格谓词只表示物理可行，不能独自认证现实权限。",
     "en": "One support history forms links, retains a basis and bears an opportunity loss; the two carriers are routes. Concrete eligibility means physical feasibility only and does not certify real authority."
   },
-  "canonical_source": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+  "canonical_source": "theories/becoming/history/ETHICAL-LEARNING.md",
   "aliases": [
     "Becoming.undominated_has_iff",
     "Becoming.Judgment.required_of_bettered (retired module)",
@@ -117,7 +117,7 @@
   },
   "references": [
     {
-      "path": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+      "path": "theories/becoming/history/ETHICAL-LEARNING.md",
       "role": "statement",
       "sha256": "bf220ade443da1bf5f9c87a650b011d8d35525ce20d5b7cff9acd61eb58ab112",
       "declarations": []
@@ -125,7 +125,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md",
       "role": "review",
-      "sha256": "d6011b304fddfe6e6e92816dc6f469180e25891e2bff486c385dd4724b68fb41",
+      "sha256": "1086cc6f52d2b6ccd9286f9307b8b2e1f033fdc451fae798366eeb75f4a82564",
       "declarations": []
     },
     {

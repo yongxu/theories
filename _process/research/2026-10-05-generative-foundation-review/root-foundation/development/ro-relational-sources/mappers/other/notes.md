@@ -183,7 +183,7 @@ The atlas labels its 29 mechanisms `modern_editorial_model`, "不构成古人共
 
 ## 7. How the earlier repo studies stand
 
-**`theories/becoming/chapters/PRE-QIN-AND-WENYAN.md` (6 October).**
+**`theories/becoming/history/PRE-QIN-AND-WENYAN-2026-10-23.md` (6 October).**
 - *Kept:* the findings and the counterexamples it keeps: 《二柄》 德 = 庆赏, 《弱民》 以有道称弱民, the 察今 contrast and the 维摩经 reading.
 - *Superseded:*
   - its framing as "竞争解释" among positions;

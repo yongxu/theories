@@ -182,20 +182,20 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "721514bfa17552922843632bd503596e9e8a9ab20cde3de9ff61f91ddc1f802c"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "path": "theories/becoming/history/WENLI-AND-BECOMING.md",
       "role": "statement",
-      "sha256": "8feb7702f776e792cd0231628a874a0376c93739503c8e937d9b964926afc62b"
+      "sha256": "d7ed0aace7498f71ad46e71ebf32fc41b90284fa51b857c7128d1c9afb000219"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
       "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
     }

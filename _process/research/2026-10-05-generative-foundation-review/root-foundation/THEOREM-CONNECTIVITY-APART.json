@@ -312,11 +312,6 @@
    "category": "general-structure",
    "reason": "a law of every valuation or rule on any claims; the base supplies no reading of living, own or significance (the theory states them as conditions, chapter §6.15), so an instance on a world's relata would only fix the type"
   },
-  "Becoming.bounded_rival": {
-   "module": "Becoming.Significance",
-   "category": "general-structure",
-   "reason": "a law of every bounded significance on any formations: it is not the continuation condition where a formation lies outside a region; the regions are supplied, not read off a world"
-  },
   "Becoming.configurations_examples": {
    "module": "Becoming.Entropy",
    "category": "support",
@@ -1552,11 +1547,6 @@
    "category": "general-structure",
    "reason": "the family law of rest for any amounts, with the bound of the stock by m least losses named; the base reads amounts only as whole numbers, where it is used in its Archimedean form, Amounts.family_rests_of_archimedean, by Flow.taking_not_recurring_whole"
   },
-  "Becoming.Dyadic.half_below": {
-   "module": "Becoming.LeastLoss",
-   "category": "model-witness",
-   "reason": "density of the dyadic amounts: below every amount above nothing lies its half, above nothing; a fact about one constructed model of the amounts, which the base does not read"
-  },
   "Becoming.Amounts.whole_losing_steps": {
    "module": "Becoming.Amounts",
    "category": "general-structure",
@@ -1897,11 +1887,6 @@
    "category": "general-structure",
    "reason": "the significance of the centers' continuation is unrestricted exactly where every formation is a center: a law of any center map, with no world"
   },
-  "Becoming.forced_iff_within": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "what every significance meeting a standpoint's presupposition at a closure gives is exactly the closure: a law of every significance along any relation; the base supplies relations (feeding, affecting) as cases, and Web.retains_atCenters_iff reads the centers on a web"
-  },
   "Becoming.subTrue_every_of_related": {
    "module": "Becoming.Weightings",
    "category": "general-structure",
@@ -1976,11 +1961,6 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "held de se the presupposition is the condition where every center's closure is the whole: a law of every relation and center map, with no world"
-  },
-  "Becoming.selfAscribed_iff_withinSome": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "the de se and de dicto readings agree exactly where the centers' closures agree: a law of every relation and center map, with no world"
   },
   "Becoming.Weighting.standingInvariant_of_gradeInvariant": {
    "module": "Becoming.Weightings",
@@ -2451,6 +2431,1191 @@
    "module": "Becoming.Continuity",
    "category": "model-witness",
    "reason": "The same swap reads both relata, and along the full relation the routed transfers balance it from every configuration: the constructed law meeting the premises of conservedOn_of_law and route_balancing (FL2)."
+  },
+  "Becoming.Optimum.InTurn.Stopping.not_least": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "Stopping's law of what stands next, two from nothing and nothing from anything left, has what stands from nothing above what stands from one unit: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.position_perfect_ends fails there."
+  },
+  "Becoming.Optimum.InTurn.Stopping.zero_not_perfect": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping, with two drawers over two steps, drawing everything is not perfect for position: a fact about one constructed law showing that the premise G t 0 ≤ G t x of Optimum.InTurn.zero_position_perfect binds."
+  },
+  "Becoming.Optimum.InTurn.Stopping.perfect_keeps": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "In Stopping every profile perfect for position has the second drawer keep the unit it is given at the first step, stopping what the first would draw next: a fact about one constructed law, the witness that without G t 0 ≤ G t x a race for position need not draw everything."
+  },
+  "Becoming.Optimum.InTurn.position_one": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "With one drawer every profile is perfect for position, its draw being all that is drawn: the case k = 1 of the model, showing that the premise of two drawers in Optimum.InTurn.position_perfect_ends binds."
+  },
+  "Becoming.Training.Commons.drawing_responds": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "the drawing law of the computed commons takes one where the stock stands at three and nothing where it stands at none, and restraint takes nothing: a fact about two constructed act laws, read on the learner's courses by Training.start_decides"
+  },
+  "Becoming.Training.Commons.outrun_drawing_settles": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest drawing two a step against a renewal of one, the drawing law is settled at every weight: a computed fact about one model, the witness of Training.outrun_settles_iff"
+  },
+  "Becoming.Training.Commons.outrun_neighbourhood_decides": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest outrunning the renewal, restraint is settled at no weight, a local search with empty neighbourhoods rests at it and one with every candidate a neighbour leaves it: one model witnessing that a parameterization can install what no reward weight installs"
+  },
+  "Becoming.Training.Commons.renewed_restraint_settles_iff": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons with the rest drawing within the renewal, restraint is settled exactly at weights of at least one: the contrast case of one model"
+  },
+  "Becoming.Training.Commons.start_decides": {
+   "module": "Becoming.Training",
+   "category": "model-witness",
+   "reason": "in the computed commons at weight one every improving search keeps the law it starts from, one responding to the stock and one not: Training.settled_stays read on one model"
+  },
+  "Becoming.Training.LocalSearch.improving": {
+   "module": "Becoming.Training",
+   "category": "general-structure",
+   "reason": "a local search over any neighbourhood relation on any type of candidates is an improving search; the candidates are read on the spine through Training.levels, the search law itself ranges over any type"
+  },
+  "Becoming.Training.comes_to_rest": {
+   "module": "Becoming.Training",
+   "category": "general-structure",
+   "reason": "an improving search under a reward at most B rests by step B + 1 from every start, for candidates of any type: the search runs on Law.orbit, and the base supplies no reading of the candidates beyond Training.levels"
+  },
+  "Becoming.ReadsOnlyDynamics.admits_rival": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every statement whose truth does not change with the significance: it admits a rival significance; it ranges over any dynamics type and any significance, and the base supplies no reading of the statement"
+  },
+  "Becoming.ReadsOnlyDynamics.not_entails": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every statement whose truth does not change with the significance: none entails the continuation condition where a standpoint and a formation exist; over any dynamics type"
+  },
+  "Becoming.excludes_rivals_iff": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every premise on significance over any formations: it excludes every rival exactly where it implies that no point lacks significance"
+  },
+  "Becoming.not_rival_unrestricted_iff_stable": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "over every significance on any formations, that excluding every rival gives the continuation condition is exactly double-negation elimination; the significance is supplied, not read off a world"
+  },
+  "Becoming.readsOnlyDynamics_of": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a statement whose truth is given without the significance reads only the dynamics: an unpacking over any dynamics type"
+  },
+  "Becoming.unrestricted_iff_not_rival": {
+   "module": "Becoming.Significance",
+   "category": "general-structure",
+   "reason": "a law of every significance on any formations decided at each point: excluding every rival is the continuation condition; the significance is supplied, not read off a world"
+  },
+  "Becoming.Dyadic.half_return": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "in the dyadic model of the amounts a return of strength one half rises and stays below twice what it was: the dense counterexample to carried_doubles_roundTrip, a fact about one constructed model the base does not read (it uses half_below, the density of the dyadics)"
+  },
+  "Becoming.Halving.new_without_gain": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the halving stock of the dyadic model is new at every step, never rises and stays within one: the dense counterexample to Web.rises_late_of_new, a fact about one constructed model the base does not read"
+  },
+  "Becoming.Halving.no_whole_reading": {
+   "module": "Becoming.WholeAmounts",
+   "category": "model-witness",
+   "reason": "the dyadic amounts have no whole-number reading keeping strict falls, the instance of Amounts.no_whole_reading at the halving model"
+  },
+  "Becoming.Founding.Nested.raises_iff_carried": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "the mean founding value rises across a generation of wholes exactly where selection among wholes, with the change carried within the wholes to the next founders as the transmission term, comes out positive: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Nested.varied_within": {
+   "module": "Becoming.Founding",
+   "category": "general-structure",
+   "reason": "within each whole of a founded reading, selection at a step needs transmission that raised or lowered the amount at some step before it: a law of any wholes read over generations, each founded by one part and founding the next from its members, with no world"
+  },
+  "Becoming.Founding.Body.spread_outlasts": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the spreading lineage, whose descendant depends on a condition outside the body, has a member at the second generation: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_founded": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "the reading with the next founders drawn from the variants is founded: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.within_against": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "within the first whole a variant arises from the founder and selection within goes against holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.sequestered_rises": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founder from the line carrying the founder's value, the mean founding value rises: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Founding.Germline.unsequestered_falls": {
+   "module": "Becoming.Founding",
+   "category": "model-witness",
+   "reason": "with the next founders from the variants, the mean founding value falls although selection among wholes goes for holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Weighting.narrower_above_net": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a ranking of presentations putting a narrowing above its widening by one item does not read the pair as a net weighting ranks the sets, or the item weighs at zero or below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a net weighting puts a narrowing above its widening by one item exactly where the item weighs below zero: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_ranksNet_widens": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right on every pair, a net weighting with every item above zero never ranks a widening below: a law of any finite listing, any net weighting and any ranking of any presentations, with no world"
+  },
+  "Becoming.Weighting.reads_increment": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "read right, a sign measured apart fixes the verdict exactly where it is the sign of the increment in the pair's context: a law of any order on courses, any ranking of any presentations and any sign, with no world"
+  },
+  "Becoming.Weighting.ranksNet_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a net weighting ranks a widening by one item weighing zero neither above nor below: a law of any finite listing and any net weighting, with no world"
+  },
+  "Becoming.Weighting.every_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "every positive weighting within n / d ranks a above b exactly where n q < d p: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.opposite_within_iff": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "two positive weightings within n / d rank a pair opposite ways exactly where d q < n p and d p < n q: a law of any finite listing and any ratio bound, with no world"
+  },
+  "Becoming.Weighting.tilted_ties": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "on the boundary n q = d p the weighting tilted toward the smaller side ties the two courses: a law of any finite listing and any ratio, with no world"
+  },
+  "Becoming.Weighting.widensOn_of_widensBy": {
+   "module": "Becoming.Weightings",
+   "category": "support",
+   "reason": "a widening by one item alone is a widening: a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.Framed.framing_alone": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "one item weighing one for and nothing against, where a framed presentation keeping nothing is ranked above an unframed one keeping the item; a fact about one constructed ranking, not a law of the unfolding"
+  },
+  "Becoming.Interacting.not_net": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "two items, adding one raising a course keeping nothing and lowering one keeping the other, an order no net weighting gives; a fact about one constructed order, not a law of the unfolding"
+  },
+  "Becoming.Drift.Favoured.two_members": {
+   "module": "Becoming.Drift",
+   "category": "model-witness",
+   "reason": "two members: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Drift.Replacement.favoured_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.favoured_share_above": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "favoured share above: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.fixation": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "fixation: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.lost_ge": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "lost ge: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Drift.Replacement.neutral_share": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "neutral share: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world"
+  },
+  "Becoming.Reproduction.Additive.additive": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "additive: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Breeding.one_amount": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "one amount: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Breeding.response_rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "response rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Interaction.interaction": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "interaction: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.Mutation.above_always": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "above always: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.falls_of_outrun": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "falls of outrun: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.kept_share": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "kept share: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.lowered_count": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "lowered count: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.never_rises": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "never rises: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.not_falls_below": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "not falls below: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Mutation.rises_iff": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "rises iff: a law of finite families read with offspring numbers and carried amounts (mutation counts or the breeding value), with no world"
+  },
+  "Becoming.Reproduction.Threshold.at_threshold": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "at threshold: a fact about one constructed population or world, not a law of the unfolding"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_local": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_supports": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.ExchangeRelation.respondsBelow_weakest": {
+   "module": "Becoming.OverExchange",
+   "category": "general-structure",
+   "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
+  },
+  "Becoming.«核为类»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "the core of a class is a class; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«位根»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "the two-way core is the greatest symmetric relation inside a class constant under a relation and its converse; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«位同则四相同»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "what shares a position under the two-way core shares beginning and ending; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«闭合当且仅当有常»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "for a class, constancy is exactly closure of the coarse net; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«类内之缘成环»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "reading a relation at a class without taking classes apart puts every inner relation on a loop; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«粗只连异类»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "the coarse net joins only different classes; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«一之续»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "continuation under the full class is the relation itself; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«一之生»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "under the full class an occurrence begins exactly where nothing conditions it; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«一之下无生生»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "under the full class there is no renewal without end; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«住于细则住于粗»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "what abides under a finer class abides under a coarser; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«生住不并»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "beginning and abiding exclude each other; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«住亡不并»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "abiding and ending exclude each other; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«复生则粗复生»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "every renewal is a renewal at the grain of every class; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«生生最大»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "renewal without end is the greatest renewing family; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
+  },
+  "Becoming.«则之传递»": {
+   "module": "Becoming.Grammar",
+   "category": "support",
+   "reason": "inclusion of relations is transitive: a one-line unpacking of the grammar's own definition"
+  },
+  "Becoming.«分叉»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "one constructed net where an occurrence is continued by two that go no further: sameness along lines is not transitive"
+  },
+  "Becoming.«亡于细者不必亡于粗»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "one constructed net of two occurrences ending under identity and abiding under the full class"
+  },
+  "Becoming.«以核为判据则火无续»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the flame of three moments ending in ash: continuing under \"flame or not\", no continuation under that class's core"
+  },
+  "Becoming.Flame.alike_class": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the class \"flame or not\" of the flame witness is a class"
+  },
+  "Becoming.«一之下皆息»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; under the full class everything ceases"
+  },
+  "Becoming.«因于则因于核»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; leaning-on through constancy is leaning-on through the core"
+  },
+  "Becoming.«相须则相须核»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; mutual need through constancy is mutual need through the core"
+  },
+  "Becoming.«相须之对称»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; mutual need is symmetric"
+  },
+  "Becoming.«无自相须»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; nothing needs itself"
+  },
+  "Becoming.«生生不息»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; renewal without end does not cease"
+  },
+  "Becoming.«火因于薪»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the flame witness: its regularity lies in fire and fuel"
+  },
+  "Becoming.«化之二说同形»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; the 墨经 and 荀子 readings of 化 are one form"
+  },
+  "Becoming.«化为有缘之成坏»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; 化 is 成坏 along 缘"
+  },
+  "Becoming.«同于为类»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; sameness in belonging is a class where belonging is single"
+  },
+  "Becoming.«同于不必传递»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "model-witness",
+   "reason": "one constructed relation on numbers where belonging to two makes sameness intransitive"
+  },
+  "Becoming.«复者住»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; what returns abides"
+  },
+  "Becoming.«有常则通»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; under a constant class a line with a past never ends"
+  },
+  "Becoming.«非一非异»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; continuation is neither identity nor mere difference"
+  },
+  "Becoming.«因灭而续»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier; the conditioning occurrence ends under identity while the line continues under a coarser class"
+  },
+  "Becoming.CeasesToBe.not_comes_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "CeasesToBe.not_comes derived through the grammar"
+  },
+  "Becoming.ComesToBe.not_ceases_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "ComesToBe.not_ceases derived through the grammar"
+  },
+  "Becoming.persists_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "persists derived through persists_of_positions"
+  },
+  "Becoming.persists_of_em_by_grammar": {
+   "module": "Becoming.Change",
+   "category": "restates",
+   "reason": "persists_of_em derived through persists_of_positions"
+  },
+  "Becoming.still_stays_of_constant": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (constancy never lets the line end)"
+  },
+  "Becoming.still_of_buqiong": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (a line that never ends stays still)"
+  },
+  "Becoming.buqiong_of_stays_failing": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (a predicate that stays false never ends its line)"
+  },
+  "Becoming.continues_in_core_iff_buqiong": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (continuing under the core is never ending)"
+  },
+  "Becoming.positions_iff_change": {
+   "module": "Becoming.Change",
+   "category": "general-structure",
+   "reason": "a law of every predicate along the step index read through the grammar; the base supplies no reading of the predicate (deciding a position is deciding a change)"
+  },
+  "Becoming.Steps.alike_class": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "alike in a predicate is a class: a one-line unpacking"
+  },
+  "Becoming.Steps.sheng_zero": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "the first step begins: a one-line unpacking"
+  },
+  "Becoming.Steps.along_sheng_zero": {
+   "module": "Becoming.Arising",
+   "category": "support",
+   "reason": "along a relatum the first step begins: a one-line unpacking"
+  },
+  "Becoming.Web.begins_at_zero": {
+   "module": "Becoming.Identity",
+   "category": "support",
+   "reason": "along a continuation the first step begins: a one-line unpacking"
+  },
+  "Becoming.Web.nothing_continues_under_identity": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (nothing continues under identity)"
+  },
+  "Becoming.Web.positions_not_self_standing": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (no position stands by itself)"
+  },
+  "Becoming.Web.reach_strict_order": {
+   "module": "Becoming.Identity",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (reach along steps is a strict order)"
+  },
+  "Becoming.Web.linked_iff_line": {
+   "module": "Becoming.ContinuedClasses",
+   "category": "general-structure",
+   "reason": "a law of every continuation relation on (step, relatum) occurrences read through the grammar; it reads no web (links are lines under the one)"
+  },
+  "Becoming.Copies.two_copies": {
+   "module": "Becoming.Weightings",
+   "category": "model-witness",
+   "reason": "two copies, each carrying the user alone, so the user needs some copy and neither: a fact about one constructed set of courses, not a law of the unfolding"
+  },
+  "Becoming.Weighting.ended_below": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "the ending of what everything needs is ranked below from every standpoint whose own continuation the other course adds to: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.Weighting.increasingInOwn_iff_increasing": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "where its own continuation marks every listed item, an order is increasing in it exactly when it is increasing in admission: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.Weighting.some_increasingInOwn_reverses": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "where the other course keeps an item beyond, some positive weighting ranks it higher: a law of any finite listing and any order on courses, with no world"
+  },
+  "Becoming.forced_member_iff_only": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "drawn along need, the presupposition reaches a member of a class of alternatives exactly where it is the only member: a law of any formations and any predicate of possible courses, with no world"
+  },
+  "Becoming.selfAscribed_iff_withinSome_iff_centersWithin": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "the de se and de dicto readings agree exactly where the centers lie within one another's closures: a law of any relation and any assignment of centers, with no world"
+  },
+  "Becoming.withinClosure_iff_of_centersWithin": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "centers within one another's closures have one closure: a law of any relation and any assignment of centers, with no world"
+  },
+  "Becoming.Law.ends_iff_changes": {
+   "module": "Becoming.GrammarCourse",
+   "category": "general-structure",
+   "reason": "a law of every determined law and map on any type: under the class of the map's values a line of continuation ends exactly where the value changes at the next step; the base reads no course through the grammar's ending yet"
+  },
+  "Becoming.Steps.next_is_step": {
+   "module": "Becoming.GrammarCourse",
+   "category": "support",
+   "reason": "a one-line unpacking: the steps of one course (Steps.next) are the step of the successor law (Law.step Nat.succ), pointwise by definition"
+  },
+  "Becoming.core_within_core_iff": {
+   "module": "Becoming.GrammarCourse",
+   "category": "general-structure",
+   "reason": "a law of every relation and class on any carrier, from the root theorem: a core lies in another class's core exactly where it lies in that class; the base compares no two classes' cores yet"
+  },
+  "Becoming.Map.Endless.generates": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Endless.generation": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Short.renews_and_ends": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Short.renews_and_ends_everywhere": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Still.keeping": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.Still.keeps": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.Map.outside_of_not_endless": {
+   "module": "Becoming.MapInstances",
+   "category": "general-structure",
+   "reason": "a law of the map on the old base's continuation relations that reads no web"
+  },
+  "Becoming.Map.«生守相杂»": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«三法相因待»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«不可致诘而有常则混而为一»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«不相外则相尽当且仅当双非可还»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«二值之相待»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«二际可偏举»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«互之对称»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«从缘生非文法之理»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«他依于自»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«传则异»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«住因于续»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«俱有为一念»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«全三域之周»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全守有终不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生成之所及亦全生成»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生成全守不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«全生有终之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«前后相随»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«单行则生守不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«及之两端»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«同异交得»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«同根则不可偏举»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«四相俱时»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«因果互即»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«始觉依不觉»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«守退化不并»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«尺与尺可相尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«尺与端或尽或不尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«尽则非不穷»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«平等无异»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«延尽之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«必或不当当且仅当弱排中»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«念念灭当且仅当无自缘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«恒温与平衡»": {
+   "module": "Becoming.GrammarTesting",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«断则无相续»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无为无别相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无果则皆非能»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无果则缘非缘皆无»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无色则无虚空之相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«是不俱当»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有成坏当且仅当不自缘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有生不必有亡»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«有相则非亦有相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«有终之所前亦有终»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«有终则粗不有常»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«有自不必有他»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«核则不可致诘»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«状所可别»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«生亡对偶»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«相尽则不相外»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«相待之还当且仅当双非可还»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
+  },
+  "Becoming.«相由则俱有»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«知相则有其非»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离方无迷»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离觉则皆不觉»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«离非无相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«端与端俱尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«缘先果后当且仅当无环»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«缘生而不自生则无定性»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«自他随位»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«自缘则常»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«至于无共然后止»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«至于无别然后至»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«致诘不尽»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
+  },
+  "Becoming.«薪尽火传»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«遍而无相»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«门摄一切»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«阶全生成则上无终»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«阶生成则上不退化»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
+  },
+  "Becoming.«有亡之线末步离核»": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "general-structure",
+   "reason": "the last step of a line that ends leaves the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
+  },
+  "Becoming.«有亡之线两端理异»": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "general-structure",
+   "reason": "the ends of a line that ends lie apart in the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
+  },
+  "Becoming.ClosedCapture.lockedAlike_class": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "support",
+   "reason": "a one-line check that being locked or not is a class; the lock line is stated without needing it"
+  },
+  "Becoming.ClosedCapture.Beyond.open_line_ends": {
+   "module": "Becoming.GrammarRegularity",
+   "category": "model-witness",
+   "reason": "the witness read from the loss: its line under favouring ends at the first step, computed on the witness"
+  },
+  "Becoming.«续无外则族无外»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition along the net gives it in families: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外之粗化»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition along the net at a class gives it at every coarser class: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«族无外之粗化»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition in families at a class gives it at every coarser class: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外则同一中心»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "along a net with no cycle the condition holds only with one center: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外则中心无缘»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "and nothing conditions that center: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«核有续当且仅当有不穷»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a core continues something exactly where some line under it never ends: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.premises_of_noOutside": {
+   "module": "Becoming.GrammarScope",
+   "category": "support",
+   "reason": "one instance of Valuation.premises_of_unrestricted at the de se own-closure significance, through ownClosure_unrestricted_iff_noOutside"
+  },
+  "Becoming.LineOfDescent.Endless.descent_unending": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "the core of descent goes on for good from each birth: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Endless.member_class": {
+   "module": "Becoming.GrammarScope",
+   "category": "support",
+   "reason": "a one-line check that same member is a class"
+  },
+  "Becoming.LineOfDescent.Endless.descent_no_outside": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "with the first birth as the only center the condition holds under the one: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Endless.member_outside": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "under the member's class it fails: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Last.core_no_continuation": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "in descent that ends no core continues anything: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Last.descent_past_end": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "the one reaches the second member past the first's end: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.Decay.both_open": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: stay and decay both open at every intact moment: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.decay_alters": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the decay an alteration under the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the two intact moments of one history apart in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_within": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the history lies within the net of possibilities: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.possible_acyclic": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: no occurrence reaches itself: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.time_not_in_core": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: every two intact moments alike in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.LineOfDescent.Endless.generates": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line of descent generates at two grains: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.b_positions": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: positions differing by class: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.continues_each": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: two overlapping classes: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.tolerance_line_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: the union not a class, its line leaving it: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.between": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family class between a member's and the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.core_through_birth": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family core going on through each birth: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.other_line_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the other family not reached: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.SharedCondition.affecting_reaches_other": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line under the one reaches the other family through the condition: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.affecting_member_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "under a member or not the other family is not reached: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.fed_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.«族之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«续即缘当且仅当含族»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the finest class with 缘 as its continuation: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«遍有后则核之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a line under the core of the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.ThirdThing.fixed_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "joined to nothing, outside the class of being joined: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdThing.fixed_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the class of being joined reaches the other family: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.finer_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a finer constant class reaches the same: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.third_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "support",
+   "reason": "a one-line check that the third thing or not is a class"
+  },
+  "Becoming.ThirdFed.constant_takes_third": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a constant class takes in what the condition feeds: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
   }
  },
  "instances": {

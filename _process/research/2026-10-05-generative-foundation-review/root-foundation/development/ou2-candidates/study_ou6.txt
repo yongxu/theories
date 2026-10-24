@@ -1,0 +1,21 @@
+## 375. The corpus's candidate theorems of the grammar, tested (OU2c)
+
+```text
+Result(s): new record candidate-theorems-of-the-corpus.
+Delta: the first batch's 59 units of class 乙 (candidate theorems of the grammar) read in Lean
+       (Becoming.GrammarCandidates): OUTCOMES. Proved: correlatives as the two ends of one relation are had
+       together («能所相待», «三法相因待»); 無為 has no positions («无为无别相»). Needing a premise (really 丙一):
+       有無相生 needs double-negation stability for its way back («相待之还当且仅当双非可还»); 四相俱時 and
+       several 中论 lines on no fixed nature need that nothing is its own condition («定性之判»,
+       «念念灭当且仅当无自缘»); 果後緣先 is exactly the absence of cycles («缘先果后当且仅当无环»); 不可致詰故混而為一
+       fails in an infinitely branching net («致诘不尽»). Refuted: two lines in contact can each lie wholly in
+       the other (MJ-S-068.1, .5), and 一切物皆從眾緣生 is a condition on a model, not a law (ZL-07-285).
+Premises / correspondence: none beyond the grammar for the proved; the conditional name their premise.
+Evidence: core receipt RECEIPT_ID (Becoming.GrammarCandidates, THEOREMS theorems in DECLS declarations, empty axiom
+       reports); outcomes per unit in development/ou2-candidates/outcomes.tsv; written by an Opus coder.
+Boundary: the readings are AI reconstructions; what the grammar lacks most often is own nature (自性), naming, 空,
+       extent, knowledge, and classical stability of the logic.
+Output → input: plan §三 (the 乙 class tested, not assumed); the plan's own examples 有無相生 and 四相俱時 move to 丙一.
+```
+
+**What the test says about the plan.** Both examples the plan gave of class 乙 need a premise. 有無相生 holds one way for every carrier (a mark gives its complement a mark) and the other way only under double-negation stability: the constructive core keeps the asymmetry 王弼's 本末 reading has. 四相俱時, read as positions depending on the class, needs that nothing is its own condition; the same premise carries the 中论's 「從眾緣生故無定性」. The grammar does not assume it: a self-conditioning occurrence abides under every class («自缘则常»), and whether the unfolding has such occurrences is a question of the model.

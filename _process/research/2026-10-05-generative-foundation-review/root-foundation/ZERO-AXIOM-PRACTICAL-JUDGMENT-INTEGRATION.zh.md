@@ -293,7 +293,7 @@
 
 ### 22.7 一个理论：目的的形成、选择的持续与规范的修订
 
-Ren先指出本节的知情伤害情形属于meta-attractor案例，再[明确这些就是一个理论](../../../../sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md)。本轮据此修正“外部案例接到规范论证”的表述；正典入口原已规定[一个生成理论](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md)，不将这次落实登记成另一次理论创立。
+Ren先指出本节的知情伤害情形属于meta-attractor案例，再[明确这些就是一个理论](../../../../sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md)。本轮据此修正“外部案例接到规范论证”的表述；正典入口原已规定[一个生成理论](../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md)，不将这次落实登记成另一次理论创立。
 
 同一活动形成相对持续的组织及其选择关系；其后果参与形成下一轮的组织、目的、认识和评价。Meta-attractor是其中跨承载者反复形成的一类组织：后果帮助再生产选择该活动的条件。破坏性不是该名称的定义；须说明所形成的关系怎样损伤生活、替代与纠正。在本节的支持关系中，若维持依赖取得的控制又阻止替代、选择更愿维持这种安排的承载者，则应沿这条实际回路解释。只有一次知情拒绝，尚未提供复现、传递和再生产的证据。
 

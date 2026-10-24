@@ -415,20 +415,20 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4bd52c8b4cb6b6f55209cde165cdad6e9b89046d130febbd32b851dc5d4ebd1e"
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "f612265624809b32f0a324f557c44bd03941f14658670e8fa2dc1fa3cde41237"
+      "sha256": "e2a7256ca1c1bc187832d0d68887fc255dcfa520f26ae19495df736d45be4028"
     },
     {
-      "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+      "path": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
       "role": "integration",
       "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef"
     },

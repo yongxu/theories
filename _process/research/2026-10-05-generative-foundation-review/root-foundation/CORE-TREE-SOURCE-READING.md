@@ -1,6 +1,6 @@
 # Core and tree: source reading for the next connection
 
-6 October 2026. AI-authored source reading for Ren's [current continuation instruction](../../../../sources/15-codex-theory-conversations/2026-10-06-core-tree-nondual-continuation.md). This note identifies an inherited substantive relationship that can guide further work. The project-wide [nondual method](../../../../theories/becoming/chapters/NONDUAL-METHOD.md) already governs the method; this note does not replace it. No source was edited, experiment rerun or new formal result established.
+6 October 2026. AI-authored source reading for Ren's [current continuation instruction](../../../../sources/15-codex-theory-conversations/2026-10-06-core-tree-nondual-continuation.md). This note identifies an inherited substantive relationship that can guide further work. The project-wide [nondual method](../../../../theories/becoming/history/NONDUAL-METHOD.md) already governs the method; this note does not replace it. No source was edited, experiment rerun or new formal result established.
 
 ## 1. The relationship already present in Ren's words
 

@@ -1,0 +1,1884 @@
+{
+ "segments": [
+  {
+   "seg_id": "enrec0197",
+   "referents": [
+    {
+     "span": "Concentration",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "conclusion of Typicality.concentrated (total over courses n of atLeast p q k, times u^k*v^n, at most (p*u+q*v)^n*v^k)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "each one",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "Bool.true entries of w (bodies of Typicality.weight / ones)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "u",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "u",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "each zero",
+     "sort": "value",
+     "status": "matched",
+     "counterpart": "Bool.false entries of w (bodies of Typicality.weight / zeros)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "v",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "v",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the weights",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Typicality.weight p q w, weight u v w, weight (p*u) (q*v) w (weight_mul)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "successive positions of the list in the recursion of Typicality.weight",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the courses",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "Typicality.courses n (its members w; ws)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "k",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "uᵏ·vⁿ",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "u ^ k * v ^ n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "n",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "(p·u + q·v)ⁿ·vᵏ",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "(p * u + q * v) ^ n * v ^ k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "p",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "p",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "q",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "q",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "1",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "atLeast 1 1 k in few_far_ahead",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "3ᵏ",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "3 ^ k (few_far_ahead)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "4ⁿ",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "4 ^ n (few_far_ahead)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a share",
+     "sort": "value",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "0.88ⁿ",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "3n/4",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "2ⁿ/3^(3n/4)",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Naturals.mul_mul_mul_comm.a",
+    "Naturals.mul_mul_mul_comm.b",
+    "Naturals.mul_mul_mul_comm.c",
+    "Naturals.mul_mul_mul_comm.d",
+    "Naturals.pow_add.b",
+    "Naturals.pow_add.x",
+    "Naturals.pow_add.y",
+    "Typicality.tilt_le.b",
+    "Typicality.total_congr_mem.f",
+    "Typicality.total_congr_mem.g",
+    "Typicality.total_congr_mem.a",
+    "Typicality.total_le_mem.f",
+    "Typicality.total_le_mem.g",
+    "Typicality.total_le_mem.a"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0032",
+   "referents": [
+    {
+     "span": "agreement",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "the hearings",
+     "sort": "history or run",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "L",
+    "W",
+    "t",
+    "g",
+    "c",
+    "balances"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0275",
+   "referents": [
+    {
+     "span": "hearing",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "acts t : SharedCodes.Hearing I M",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "form",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "elements of F (a, b; values r.state k i m)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "agreement",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "∀ i j, r.state k i m = r.state k j m",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the hearings",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "SharedCodes.hearings acts 0 k",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "an order",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "acts, the order of hearings (hearings acts 0 k); key sense of 'order' (carriedWithin) is a homonym here",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every start",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "initial state of each run r (Run.state field), ∀ r",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every formation",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "i, j : I",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one origin",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "SharedCodes.origin m (hearings acts 0 k) i",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the shared one",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "r.state k i m (the common form)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "M",
+    "inst : DecidableEq I",
+    "inst : DecidableEq M",
+    "apart",
+    "k",
+    "m"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0403",
+   "referents": [
+    {
+     "span": "Restraint",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "hypothesis restrained (L'.taken t c ≤ L.taken t c)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "drawers",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f : F with W.draws t f c (drawsLess)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the whole-run reading",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Ranking.wholeRun U",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "two balanced flows",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "L, L' with balances, balances'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "levels",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.level, W'.level ((U w).level)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the start",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "step 0 in hypothesis start",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the restrained one",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "L'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "each condition",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "c : C",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "dependences",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.requires / W'.requires (asks)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "needs",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.need / W'.need (needs)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "draws",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.draws / W'.draws (drawsLess)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the restrained course",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "W' / U w'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the other",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "W / U w (also 'the overdrawing course')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "activity",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "(U w).active in the body of Ranking.wholeRun",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "support",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Supported in Ranking.ActiveWhereSupported (U w') / (U w).Dependent",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "an event",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "∃ e : F × Nat",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every comparison",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Better",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "C",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "hypothesis ranks : Ranking.ComparisonUnder (wholeRun U) Better",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "two drawers",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "TwoDrawers.Formation.first, second",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a third formation",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "TwoDrawers.Formation.held",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Flow.Balances.level_succ_le.higher"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0561",
+   "referents": [
+    {
+     "span": "a chosen move",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "λ-bound t ranging over Requirement.Frontier (Options F s) better (Required body)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the basic admissions",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "c with basic c (isBasic) and F.realized _ c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "some move",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u with Options F s u (option, keeps, realizes)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "options",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "FrontierFrames.Options F s",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "comparisons",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "better t t'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the keeping",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "task fun t => F.realized t c in Requirement.Required (key sense Branching.keeping is a homonym here)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "A",
+    "living",
+    "priority",
+    "s",
+    "x",
+    "rest",
+    "decided"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "dneg_plain",
+     "note": "'comparisons decided' renders the hypothesis weakly (WeaklyDecided = ¬p ∨ ¬¬p) as plain decidedness"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0346",
+   "referents": [
+    {
+     "span": "its boundary",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "region bounded by Flow.WithinPoolCoupling W obs group (beyond)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the coupling closure",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "WithinClosureOf (L.CoupledFrom W obs) group (WithinPoolCoupling body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "both flows",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "L and L.withhold part (WithheldLevels body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "time",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the selector",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "group",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what the selector observes now",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "conditions c with obs g c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "consequences",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "a pool",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "pool",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its members",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "g : F with pool g",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "couplings",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Web.CoupledInto obs g c / CoupledFrom W obs",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the union of its members' couplings",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Web.SelectsThroughAll obs pool t select",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the meet of their equivalences",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.AlikeThroughAll obs group l l' t in SelectsThroughAll body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "distributed knowledge",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "what any member couples apart",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "l, l' in SelectsThroughAll body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its gap",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "part beyond the pool closure (beyond); key sense Diagonal.gap is a homonym here",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the union of their closures",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Flow.WithinPoolCoupling W obs group",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "W",
+    "l",
+    "without",
+    "balanced",
+    "members"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "hyp_as_conclusion",
+     "note": "'a pool selects through the union of its members' couplings' asserts the hypothesis through (SelectsThroughAll obs pool t select) as a fact; the conclusion select W.level ↔ select l is not stated"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0079",
+   "referents": [
+    {
+     "span": "a configuration",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s (also 'One that does not return', 'it')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what lies ahead of it",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "Law.Ahead next s",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the first step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "orbit index in DrawnInto / next s in Ahead body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Law.drawnInto_ahead.next",
+    "Law.drawn_iff_not_returns.next"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0291",
+   "referents": [
+    {
+     "span": "the rest",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Option.none relatum of World.withRest (withRest/restFlow body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every world",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "World.withRest_counted.w",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "formations taking part",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "w.flow.present t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "steps",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t in distinct / closed",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a named family",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "family",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a census",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "alive with w.web.Census alive (World.Counted body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every finite world",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "World.Finite.withRest_counted.w with finite",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "World.Finite.withRest_counted.distinct"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0073",
+   "referents": [
+    {
+     "span": "finite part",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "ds",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "taking",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.takers cs t / L.take (recurs)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "W",
+    "balances",
+    "dissipative",
+    "cs",
+    "distinct",
+    "within",
+    "T"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "negation_scope",
+     "note": "Lean negates eventual closure (¬∀ t, T ≤ t → ClosedAt ds t) given recurring taking; the wording negates 'bears taking', moving the negation onto the hypothesis recurs"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0415",
+   "referents": [
+    {
+     "span": "the additive part",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "(concord ps w w + discord ps w w) * (concord ps w w + discord ps w w)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the variance",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "SelectionTerm.concord ps w w",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "offspring number",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "w",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the amount",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "a in concord/discord, instantiated as w",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the whole",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "concord ps w w * concord ps w w (the whole variance)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "α",
+    "ps"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0046",
+   "referents": [
+    {
+     "span": "each formation",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f in Flow.Capacity body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the family",
+     "sort": "family or list",
+     "status": "matched",
+     "counterpart": "cs",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a fixed amount",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "g",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t in Flow.Capacity body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the number of renewers",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.renewers cs t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the same averaged sense",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Becoming.total (steps S N) (L.renewers cs) in renewers_over",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "eventual bound",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "M with T₀ (renewers_unbounded)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "zero",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Pulse.flow.renewers [()] t = 0",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "infinitely many steps",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "∀ T ∃ t ≥ T in Pulse.pulsed",
+     "rule": "M6",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Flow.Balances.renewers_over.W",
+    "Flow.Balances.renewers_over.K",
+    "Flow.Balances.renewers_over.S",
+    "Flow.Balances.renewers_over.balances",
+    "Flow.Balances.renewers_over.many",
+    "Flow.Balances.renewers_over.N",
+    "Flow.More.renewers_unbounded.W",
+    "Flow.More.renewers_unbounded.balances",
+    "Flow.More.renewers_unbounded.more"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0106",
+   "referents": [
+    {
+     "span": "the boundary",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "right side of the ↔ (the inequality at every required condition)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "f",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "t",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every condition",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "c with W.requires t f c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its need",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.need t f c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what the part has taken from the condition so far",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "total (steps 0 t) (fun s => L.partTaken part s c)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the part",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "part",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the level without the part",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "l t c",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what the part has given it so far",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "total (steps 0 t) (fun s => L.partGiven part s c)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the part's cumulative net draw",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "the two sums of partTaken and partGiven in the conclusion (rearranged)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the margin",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "l t c against W.need t f c (glossary anchor is this declaration)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "balances"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0388",
+   "referents": [
+    {
+     "span": "balance",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "level change = in minus out in the body of Regulation.course",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the exchange",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "δ : Regulation.Record (keeps)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "evenness",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Becoming.gap (δ s).fst (δ s).snd in NetWithin body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the gap",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "d",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the next level",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "course ρ δ x₀ (t+1) (course body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "`m`",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "the level",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Regulation.course ρ δ x₀ t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the bound",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Regulation.NetWithin d δ",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "overshoot",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": [
+      "neg"
+     ]
+    },
+    {
+     "span": "an opposing exchange",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "ρ : Regulation.Rule",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one-sided restoring",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "ρ : Regulation.Rule",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "ℓ",
+    "a",
+    "b",
+    "late",
+    "x₀",
+    "pos",
+    "keeps"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0531",
+   "referents": [
+    {
+     "span": "the whole",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "region fun x => True in hypothesis whole",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "it",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "BoundaryInvariant admissible (SignificantWithin sig p)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the conditional",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "SubTrue admissible (SignificantWithin sig p) → ∀ t g, sig p t g",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the presupposition",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "SubTrue admissible (SignificantWithin sig p)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the condition",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "∀ t g, sig p t g",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "Pos",
+    "p"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "iff_one_way",
+     "note": "BoundaryInvariant … ↔ (SubTrue … → ∀ t g, sig p t g) rendered as plain 'it is the conditional'"
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0470",
+   "referents": [
+    {
+     "span": "the formations",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "elements of F (f, g)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the standpoints",
+     "sort": "standpoint",
+     "status": "matched",
+     "counterpart": "position type F of W.valuation in Web.selfValuation body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a formation",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "f",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "own region",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "(W.selfValuation rel sig).own f",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its closure",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "WithinClosure rel f (selfValuation body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a relation",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "rel",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the unfolding",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "W",
+     "rule": "M3",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its least boundary",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "Boundary rel f (fun g => ∀ t, own f (g, t)) and leastness clause",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the web",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "W",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the web's stepwise reading",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "W.valuation in Web.selfValuation body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the empty relation",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "rel (an instance)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the formation's own events",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "(f, t) with own f (f, t)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "feeding",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "rel (an instance)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the feeding closure",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "WithinClosure rel f with rel the feeding relation",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "C",
+    "sig"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0310",
+   "referents": [
+    {
+     "span": "Room",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Optimum.Room ds rest (Above …)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "exchange",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "L (take/give)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the outcomes",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "o : C → Nat in Optimum.Above / Room body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a part",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "part",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "members",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "elements of F with part = true",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "their capacity",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "cap",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the rest",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "elements of F with part = false, exchanging by L",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "floors",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "floor",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "C",
+    "l",
+    "ds",
+    "rest",
+    "inst : DecidableEq F",
+    "inst : DecidableEq C",
+    "distinct",
+    "cdistinct",
+    "apart",
+    "d",
+    "inside"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "enrec0091",
+   "referents": [
+    {
+     "span": "the passing premise",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "by_passing : V.ByPassing passes",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a step",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "t (empty_stays), with later step t'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "carrier",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "a : F with V.active t a (Web.Present body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "d",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "d",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "passing",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "passes / V.PassesAt passes t (stopped)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "T",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "T",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "formation",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "a : F in Web.Present body",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "it",
+     "sort": "map, lumping or feature",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "T + d",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "T + d in hypothesis later",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "Web.ByPassing.empty_stays.C",
+    "Web.ByPassing.empty_stays.V",
+    "Web.ByPassing.ends_within.C",
+    "Web.ByPassing.ends_within.V",
+    "Web.ByPassing.present_back.C",
+    "Web.ByPassing.present_back.V"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0180",
+   "referents": [
+    {
+     "span": "a projection",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a law",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "∃ Q : Generative.Process K A with Determined Q",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "configurations",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s, u : S in FactorsThrough / GoAlike bodies",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the image",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Q",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a state",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "π s : K",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its rule",
+     "sort": "law or process",
+     "status": "excess",
+     "counterpart": "none",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "a law of its own",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Q",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "A",
+    "P"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0236",
+   "referents": [
+    {
+     "span": "the rest",
+     "sort": "relatum or role",
+     "status": "matched",
+     "counterpart": "h : F with part h = false (Flow.Follows body)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one law",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "law : ExchangeLaw F C",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what has stood",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "W.level / W'.level read by law (follows, follows')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "two balanced flows",
+     "sort": "world, web or flow",
+     "status": "matched",
+     "counterpart": "L, L' with balances, balances'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the part",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "part",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the same course",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "∀ t c, W.level t c = W'.level t c (and equal take/give)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "C",
+    "present"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0108",
+   "referents": [
+    {
+     "span": "it",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "RegimeMargin.Adjusted.threshold A H hi r",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the recent giving",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "r, r' (le : r ≤ r')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "A",
+    "H",
+    "hi",
+    "rises",
+    "band",
+    "given"
+   ],
+   "connective_mismatches": [],
+   "predicate_excess": []
+  }
+ ]
+}

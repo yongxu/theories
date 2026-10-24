@@ -61,6 +61,8 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 - related, not a proved adapter: [returning-where-the-course-branches](returning-where-the-course-branches.md). Branching processes where the configuration fixes only which steps are admissible; here which exchanges are open under a level history.
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Progress on the first target: what a reading of the exchange makes necessary, and where becoming is contingent in the law.
 
+**Used by:** [central-laws-over-every-exchange](central-laws-over-every-exchange.md) · [requirement-is-the-weakest-sound-reading](requirement-is-the-weakest-sound-reading.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -71,7 +73,7 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 | proof | [Counterfactual.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T100412.397267Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 

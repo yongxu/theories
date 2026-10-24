@@ -1,0 +1,6 @@
+* `Becoming.GrammarTesting` (L0): testing within the net (验). The core of a class is approximated
+  by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
+  apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
+  calibration and is not stated. A room in balance and a room held by a thermostat share a core
+  class while no window opens and are told apart once the window's opening is in the net
+  (`«恒温与平衡»`): no intervener outside the net. A leaf.

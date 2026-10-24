@@ -272,7 +272,7 @@ def index(chapters: list[dict], branches: list[dict], drift: dict | None = None)
              '| Historical mathematics | Retains its original hand-proof, computation or historical-check scope. |',
              '| Empirical or synthetic evidence | Real studies, correspondence and finite simulations keep distinct scopes. |',
              '| Open research | Targets, conjectures and proposed tests, not completed results. |', '',
-             'Under the shared [nondual method](../chapters/NONDUAL-METHOD.md), roles, boundaries, knowing and evaluation are differentiated relations within one unfolding. The catalogue’s categories organize reading; they do not split reality into independent domains. Positive results, losses and counterexamples remain visible.', '',
+             'Under the shared [nondual method](../chapters/08-METHOD.md#beginning-within-the-one-unfolding), roles, boundaries, knowing and evaluation are differentiated relations within one unfolding. The catalogue’s categories organize reading; they do not split reality into independent domains. Positive results, losses and counterexamples remain visible.', '',
              H('##', 'Complete chapter list', '逐项列表 / Complete chapter list'), '',
              'Identifiers follow source filenames. A Lean link identifies a particular correspondence; it does not certify the entire philosophical claim.', '',
              '| ID | Title | Category |', '|---|---|---|']

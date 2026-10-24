@@ -1,6 +1,6 @@
 # Original microscopy: calibrated coordinates, capture times and identity limits
 
-8 October 2026. Continuation of [The Theory of Evolution](../../../../theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md), advancing requirements 3 and 5 through the empirical correspondence needed for a formation-to-outcome prediction. AI-authored analysis and substantive author counterreview; no independent-agent acceptance, new mathematical theorem or new biological experiment is claimed.
+8 October 2026. Continuation of [The Theory of Evolution](../../../../theories/becoming/history/THE-THEORY-OF-EVOLUTION.md), advancing requirements 3 and 5 through the empirical correspondence needed for a formation-to-outcome prediction. AI-authored analysis and substantive author counterreview; no independent-agent acceptance, new mathematical theorem or new biological experiment is claimed.
 
 **Result.** Five original acquisitions now have source-bound image scale, complete image-directory coverage, decoded common timestamps, and inspected first/last capture records for every scene. Imaging positions within one nominal time point were acquired sequentially, with observed offsets reaching 225.89 seconds. Two rescue acquisitions retain the same scene names, region identifiers, centers, scale and boundary stage/focus positions; their corresponding boundary captures are separated by about 337.39 seconds. This supplies a recoverable observation history. It does not supply a treatment-to-well key, exact inoculation time, colony-workbook identifiers or linked later descendants.
 

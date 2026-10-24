@@ -1,0 +1,427 @@
+{
+ "segments": [
+  {
+   "seg_id": "en0273",
+   "referents": [
+    {
+     "span": "the clearer",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none: in its plain sense the headless comparative 'the clearer [one]' posits something clearer (clarity, an epistemic quality); L(D) has only lists (rs, rs ++ more, rep), maps (bears, offers), a move m and the candidate filter, none of that sort",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "R",
+    "M",
+    "bears",
+    "offers",
+    "rep",
+    "rs",
+    "more",
+    "m",
+    "later"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "forall_generic",
+     "note": "The universal over bears, offers, rep, rs, more and m, with the hypothesis 'later' (m a candidate after rs ++ more), is rendered as the generic present 'narrows'."
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0234",
+   "referents": [
+    {
+     "span": "determinacy",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "determined : Becoming.Determined P (also Determined Q in the U1 body of Run.Fixes)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the record",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "r, its steps before t (r.StepsOf Q t in the U1 body of Run.Fixes)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "b : A (also 'that move')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a move's outcome",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u : S, bound by the ∃ in ¬∃ u, r.Fixes t s b u",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the run",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "r : Becoming.Run P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the configuration",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "s : S (also the deictic 'there', resolved to s)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "one",
+     "sort": "relatum or role",
+     "status": "excess",
+     "counterpart": "none: personal referent (the owner of 'one's own act'); L(D) has no standpoint binder",
+     "rule": "none",
+     "class": "A",
+     "tags": [
+      "centre/will"
+     ]
+    },
+    {
+     "span": "one's own act",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "b : A, the untaken move (hypothesis untaken)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what one's own act would have done otherwise",
+     "sort": "configuration",
+     "status": "matched",
+     "counterpart": "u (∃ u in the negated conclusion; u' with Q.step s b u' in the U1 body of Run.Fixes)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a run keeping its whole history",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "r : Becoming.Run P",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "its whole history",
+     "sort": "history or run",
+     "status": "matched",
+     "counterpart": "the fields state and act of r (U1 of Becoming.Run)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "what it did",
+     "sort": "move",
+     "status": "matched",
+     "counterpart": "r.act n with n < t (U1 body of Run.Takes)",
+     "rule": "M5",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "S",
+    "A",
+    "P",
+    "t",
+    "x",
+    "y",
+    "two"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "forall_generic",
+     "note": "The universal over P, r, t, s and b is rendered as the generic 'the record fixes a move's outcome exactly where ...' and 'a run ... fixes only what it did'. (Also note: 'exactly where' states a biconditional, but L(D) proves only one direction, untaken → no fixed outcome. None of the listed kinds covers this.)"
+    }
+   ],
+   "predicate_excess": [
+    {
+     "span": "one's own act",
+     "note": "ownership by a personal agent ('own') attached to the matched move b; L(D) has no relation of owning or of an agent to the move"
+    }
+   ]
+  },
+  {
+   "seg_id": "en0289",
+   "referents": [
+    {
+     "span": "the coupling closure",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "L.WithinCoupling W obs = WithinClosure (L.CoupledFrom W obs) (with obs = thresholdOnly in the second declaration)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "it",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "L.WithinInfluence W (the hypothesis within; the right side of the ↔ in withinCoupling_thresholdOnly); both occurrences of 'it'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "observation",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "obs : F → C → Prop (the allowed coarsening 'observation' = coupling relation; absent observation = Becoming.thresholdOnly)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "withinCoupling_of_withinInfluence: F",
+    "withinCoupling_of_withinInfluence: C",
+    "withinCoupling_of_withinInfluence: L",
+    "withinCoupling_of_withinInfluence: W",
+    "withinCoupling_of_withinInfluence: f",
+    "withinCoupling_of_withinInfluence: g",
+    "withinCoupling_thresholdOnly: F",
+    "withinCoupling_thresholdOnly: C",
+    "withinCoupling_thresholdOnly: L",
+    "withinCoupling_thresholdOnly: W",
+    "withinCoupling_thresholdOnly: f",
+    "withinCoupling_thresholdOnly: g"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "forall_generic",
+     "note": "The universals over L, W, obs, f and g in both declarations are rendered as the generic 'the coupling closure holds it' and 'only observation widens it'."
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0450",
+   "referents": [
+    {
+     "span": "balance",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "balances : L.Balances W",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "nothing given",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.given (T + i) c = 0 (hypothesis unfed)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "a draw",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "L.taken (T + j) c (hypothesis exceeds); also the pronouns 'it'",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "everything drawn before it",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "Becoming.drawnBefore (fun i => L.taken (T + i) c) j",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "half the starting stock",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none: L(D) and its U1 form no half of W.level T c; the claim that the draw leaves more than half the starting stock at every step is not stated in L(D)",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "the starting stock",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "W.level T c (also 'a stock' in 'needs a stock of at least')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "every step it is met",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "T + j with j < n (in exceeds)",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "n steps",
+     "sort": "step",
+     "status": "matched",
+     "counterpart": "n : Nat",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "2^n − 1",
+     "sort": "amount",
+     "status": "matched",
+     "counterpart": "2 ^ n in the conclusion 2 ^ n ≤ W.level T c + 1",
+     "rule": "M4",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "c"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "forall_generic",
+     "note": "The universal over L, W, c, T and n, under the hypotheses balances, unfed and exceeds, is rendered as the generic 'a draw exceeding ... leaves ... and lasting n steps needs ...'."
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0179",
+   "referents": [
+    {
+     "span": "a model of structure",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π : S → K (identified by 'is a lumping'; Learning.Lumped π (fun s => π (next s)))",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "structure",
+     "sort": "claim or predicate",
+     "status": "excess",
+     "counterpart": "none: in the plain sense, 'structure' is an abstract arrangement of things that the model represents; L(D) has no referent of that sort (only the map π, the step map next and the type parameters)",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    },
+    {
+     "span": "a model of change",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "π under Becoming.GoAlike (Becoming.Law.process next) π ('a lumping across which the step goes alike')",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "change",
+     "sort": "law or process",
+     "status": "matched",
+     "counterpart": "Becoming.Law.process next",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the step",
+     "sort": "map, lumping or feature",
+     "status": "matched",
+     "counterpart": "next : S → S (step := fun s x t => t = next s, U1 of Law.process)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "S",
+    "K"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "iff_one_way",
+     "note": "The ↔ between GoAlike (Law.process next) π and Lumped π (π ∘ next) is rendered as the identity 'the two are one' (as a plain 'is')."
+    },
+    {
+     "kind": "forall_generic",
+     "note": "The universal over next and π is rendered as a generic definition-like statement ('a model of structure is a lumping, a model of change a lumping ...')."
+    }
+   ],
+   "predicate_excess": []
+  },
+  {
+   "seg_id": "en0009",
+   "referents": [
+    {
+     "span": "the one change",
+     "sort": "claim or predicate",
+     "status": "matched",
+     "counterpart": "Becoming.ComesToBe / Becoming.CeasesToBe of a reading (right sides of the conjoined ↔: ComesToBe (fun x => W.active x f) t, etc.)",
+     "rule": "M1",
+     "class": "none",
+     "tags": []
+    },
+    {
+     "span": "the tally",
+     "sort": "amount",
+     "status": "excess",
+     "counterpart": "none: a count over a stretch; L(D) holds only change_readings, which forms no tally (over_stretch is not in the packet)",
+     "rule": "none",
+     "class": "E",
+     "tags": []
+    }
+   ],
+   "omissions": [
+    "F",
+    "C",
+    "W",
+    "t",
+    "f",
+    "g",
+    "c"
+   ],
+   "connective_mismatches": [
+    {
+     "kind": "iff_one_way",
+     "note": "The conjunction of ↔ (Arises ↔ ComesToBe ..., Ceases ↔ CeasesToBe ..., Forms ↔ ..., Dissolves ↔ ..., ...) is rendered as the identity 'the one change' (as a plain 'is')."
+    }
+   ],
+   "predicate_excess": []
+  }
+ ]
+}

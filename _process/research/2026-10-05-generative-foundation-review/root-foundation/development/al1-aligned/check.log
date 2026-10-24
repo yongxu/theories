@@ -1,0 +1,372 @@
+{
+  "errors": [
+    "drawers-in-turn: invalid reviewed hash experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T124517.078456Z/verification.json",
+    "drawers-in-turn: invalid proof receipt binding: declarations not elaborated in Becoming.Optimum: Becoming.Optimum.AtOnce.drain_most, Becoming.Optimum.AtOnce.drain_perfect_iff, Becoming.Optimum.AtOnce.drained_add_le, Becoming.Optimum.AtOnce.holding_draws_more, Becoming.Optimum.AtOnce.last_draws, Becoming.Optimum.AtOnce.later_drained, Becoming.Optimum.AtOnce.portion_falls, Becoming.Optimum.AtOnce.steps_after, Becoming.Optimum.AtOnce.whole_not_drained, Becoming.Optimum.AtOnce.whole_perfect_iff, Becoming.Optimum.Holding.half, Becoming.Optimum.Holding.halfMore, Becoming.Optimum.Holding.half_double, Becoming.Optimum.Holding.half_le, Becoming.Optimum.Holding.half_le_succ, Becoming.Optimum.Holding.half_mono, Becoming.Optimum.Holding.halves, Becoming.Optimum.Holding.halves_held, Becoming.Optimum.Holding.halves_hold, Becoming.Optimum.Holding.halves_race, Becoming.Optimum.Holding.halves_return, Becoming.Optimum.Holding.leavesAllButOne, Becoming.Web.at_once_beyond, Becoming.Web.drain_perfect_broken, Becoming.Web.whole_drain_broken"
+  ],
+  "source_drift": [
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "any-number-of-drawers-in-turn",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 7. AI alignment",
+        "## 8. Open programme",
+        "## 9. The formal spine",
+        "## The theorem map"
+      ]
+    },
+    {
+      "id": "drawers-in-turn",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "drawers-in-turn",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 8. Open programme",
+        "## The theorem map"
+      ]
+    },
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 7. AI alignment",
+        "## 8. Open programme",
+        "## 9. The formal spine",
+        "## The theorem map"
+      ]
+    },
+    {
+      "id": "drawers-in-turn-within-capacities",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 7. AI alignment",
+        "## 8. Open programme",
+        "## 9. The formal spine",
+        "## The theorem map"
+      ]
+    },
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "others-drawing-first-end-the-base",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "others-drawing-first-end-the-base",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "raising-what-couples-in-draws-from-beyond",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "relative-position-is-zero-sum",
+      "path": "theories/becoming/OPENING.md",
+      "reviewed_sha256": "9cd50ab55e4f7e9884b4827ac42bba523f2ad55c2d2fa917cc018090cd37cd07",
+      "current_sha256": "d8f1a9317ce11c42674a6cf8b4e343d2bd35bc758e2bd2c81abe405db4d25399",
+      "changed_sections": [
+        "## Truth exists"
+      ]
+    },
+    {
+      "id": "revision-comes-to-drawing-everything",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 7. AI alignment",
+        "## 8. Open programme",
+        "## 9. The formal spine",
+        "## The theorem map"
+      ]
+    },
+    {
+      "id": "room-read-off-the-exchange",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "room-read-off-the-exchange",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "steps-met-again-after-a-fall",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "steps-met-again-after-a-fall",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "valuing-what-is-left-at-any-worth",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "valuing-what-is-left-at-any-worth",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "valuing-what-is-left-at-the-horizon",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "valuing-what-is-left-at-the-horizon",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "88525d39c06a891054d26fe4dcc0477361f271cb830bd641db76f54a6a9b2084",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "3f6b7cc313e5dddc79cd1841ffd12c1785ecb371baf5a182f0d8f9ab445056d9",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 8. Open programme"
+      ]
+    },
+    {
+      "id": "what-the-dynamics-leave-open",
+      "path": "theories/becoming/OPENING.md",
+      "reviewed_sha256": "a6307c8252397edecbaa23235c8534d67e77cab909d0e02405f4a11b40953a3a",
+      "current_sha256": "d8f1a9317ce11c42674a6cf8b4e343d2bd35bc758e2bd2c81abe405db4d25399",
+      "changed_sections": [
+        "## Truth exists"
+      ]
+    },
+    {
+      "id": "where-a-run-of-a-regime-comes-to-rest",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "reviewed_sha256": "ef390a6e5daf84b11af1b5c945b0232cb30b73ab1a3857aabd229853314ebfb6",
+      "current_sha256": "3698e8bf3a0cff77ef1ca75708411feea9d0108161ffd2af2014f7d38876b873",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "widening-along-a-reading",
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "reviewed_sha256": "b2baa7f50d55a75d0f6217de8788fc7a7f40982c0c1f783e4fee3c6b72250f05",
+      "current_sha256": "11f11e09965888b6b4dd2b467f3193e8dce0274a2422a410dfe9b996790673f4",
+      "changed_sections": [
+        "## 3. Knowing and inquiry",
+        "## 7. AI alignment",
+        "## 8. Open programme",
+        "## 9. The formal spine",
+        "## The theorem map"
+      ]
+    }
+  ]
+}

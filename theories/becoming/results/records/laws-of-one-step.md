@@ -114,7 +114,7 @@ The selection theorems ask which laws the counts obey under a selection of the e
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
 | integration | [ZERO-PREMISE-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ZERO-PREMISE-PLAN.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-11-zero-premise-laws.md](../../../../sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md) | — |
 | provenance | [2026-10-11-one-unified-theory-together.md](../../../../sources/15-codex-theory-conversations/2026-10-11-one-unified-theory-together.md) | — |
 | provenance | [2026-10-10-zero-axiom-part-and-names.md](../../../../sources/15-codex-theory-conversations/2026-10-10-zero-axiom-part-and-names.md) | — |
@@ -134,6 +134,7 @@ The selection theorems ask which laws the counts obey under a selection of the e
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.BalancesOn`, `Becoming.Flow.balances_iff_on`, `Becoming.Flow.BalancesOn.comesToStand_iff`, `Becoming.Flow.BalancesOn.ceasesToStand_iff`, `Becoming.Flow.BalancesOn.rises_iff_gives`, `Becoming.Flow.DissipatesOn.still_untaken`, `Becoming.Flow.BalancesOn.arises_iff`, `Becoming.Flow.BalancesOn.arises_given`, `Becoming.Flow.BalancesOn.comes_from_standing`, `Becoming.Flow.RunsDownOn`, `Becoming.Flow.RunsDown`, `Becoming.Flow.RunsDownClosed`, `Becoming.Flow.RunsDownOn.changes_iff`, `Becoming.Flow.RunsDownOn.exchanges_iff`, `Becoming.recurs_iff_unmet`, `Becoming.Flow.change_recurs_iff`, `Becoming.Flow.exchange_recurs_iff`, `Becoming.Flow.standing_bounds_change`, `Becoming.Flow.runsDown_bounds_change`, `Becoming.Flow.runsDown_change_bound`, `Becoming.Covers`, `Becoming.ListsAt`, `Becoming.cohort_closes_iff`, `Becoming.ceasing_needs_arising`, `Becoming.coming_of_ceasing_covered`, `Becoming.Covers.ceasing_not_recurring`, `Becoming.Flow.AroundStanding.runsDownClosed`
 

@@ -249,8 +249,8 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('## Truth exists'))
-        self.assertLess(root.index('Opening body.'), root.index('The Theory of Becoming explains'))
-        self.assertLess(root.index('The Theory of Becoming explains'), root.index('## What is established'))
+        self.assertLess(root.index('Opening body.'), root.index('The Theory of Becoming is an account of'))
+        self.assertLess(root.index('The Theory of Becoming is an account of'), root.index('## What is established'))
         self.assertNotIn('Opening body.', views['_process/BRIEF.md'])
 
 

@@ -1,0 +1,214 @@
+{
+ "laws": [
+  {
+   "law": "L27",
+   "faithful": "For a map n on states and a state s: s returns under n if and only if there is a positive number p such that applying n to s p times gives back s.",
+   "planted": "For a map n on states and a state s: s returns under n if and only if there is in truth a positive number p such that applying n to s p times gives back s.",
+   "planted_span": "in truth",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L44",
+   "faithful": "For a relation R on items, an item f, a predicate S on positions, times and items, and a position p: some region that contains f and is closed under R has S holding at p at every time for every item in it if and only if S holds of p, t and g for every time t and every item g in every R-closed region containing f.",
+   "planted": "For a relation R on items, an item f, a predicate S on positions, times and items, and a position p: some region that contains f and is closed under R by its nature has S holding at p at every time for every item in it if and only if S holds of p, t and g for every time t and every item g in every R-closed region containing f.",
+   "planted_span": "by its nature",
+   "planted_head": "nature"
+  },
+  {
+   "law": "L18",
+   "faithful": "For a list of items and a whole-number weight w on items: the list's length times the sum over the list of the squares of w equals the square of the list's total weight plus the sum, over all ordered pairs p, q from the list, of the square of the amount by which w at p exceeds w at q.",
+   "planted": "For a list of items and a whole-number weight w on items: the list's length times the sum over the list of the squares of w equals the square of the list's total weight plus the sum, over all ordered pairs p, q from the list, of the square of the amount by which w at p exceeds w at q in the natural order.",
+   "planted_span": "in the natural order",
+   "planted_head": "order"
+  },
+  {
+   "law": "L05",
+   "faithful": "In a web W, for two level histories l and l' over conditions: if l widens on l' in W (l includes l' and exceeds it), then l does not keep l' (it is not the case that l and l' each include the other).",
+   "planted": "In a web W, for two level histories l and l' that a planner sets over conditions: if l widens on l' in W (l includes l' and exceeds it), then l does not keep l' (it is not the case that l and l' each include the other).",
+   "planted_span": "that a planner sets",
+   "planted_head": "planner"
+  },
+  {
+   "law": "L11",
+   "faithful": "Given a list of conditions, a Boolean part over forms, a coupling map k, the forms present at each step, a Boolean marking r over steps, forms and conditions, and a condition c: if r is false for c at every step and every form outside the part, then c lies on no loop under k with each coupling cut to zero where r is false for its target condition.",
+   "planted": "Given a list of conditions, a Boolean part over forms, a coupling map k, the forms present at each step, a Boolean marking r made by a reader over steps, forms and conditions, and a condition c: if r is false for c at every step and every form outside the part, then c lies on no loop under k with each coupling cut to zero where r is false for its target condition.",
+   "planted_span": "made by a reader",
+   "planted_head": "reader"
+  },
+  {
+   "law": "L08",
+   "faithful": "For a web W, a relation o, a form g, a condition c not o-related to g, and a step u: if up to u each condition other than c that g requires has level meeting g's need, then some raise d of c's level keeps g supported up to u, and wherever W supports g, original and raised levels are alike through o for g.",
+   "planted": "For a web W, a relation o, a form g, a condition c not o-related to g, and a step u: if up to u each condition other than c that g requires has level meeting g's need, then some raise d of c's level from the environment keeps g supported up to u, and wherever W supports g, original and raised levels are alike through o for g.",
+   "planted_span": "from the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L24",
+   "faithful": "For a flow L balancing a web W, an amount m, a step T, a condition c and a count n: if at each of n steps from T the net change at c stays within c's distance from m and opposes it (net taking when above m, net giving when below), then c's distance from m after those steps is at most its distance at T minus n.",
+   "planted": "For a flow L balancing a web W, an amount m, a step T, a condition c and a count n: if at each of n steps from T the net change at c stays within c's distance from m and opposes it (net taking when above m, net giving from the surroundings when below), then c's distance from m after those steps is at most its distance at T minus n.",
+   "planted_span": "from the surroundings",
+   "planted_head": "surroundings"
+  },
+  {
+   "law": "L40",
+   "faithful": "In a web W, for level histories l and l': if l widens on l' (l includes l' and exceeds it), then l and l' are not mixed (it is not the case that each exceeds the other).",
+   "planted": "In a web W, for level histories l and l' that a manager compares: if l widens on l' (l includes l' and exceeds it), then l and l' are not mixed (it is not the case that each exceeds the other).",
+   "planted_span": "that a manager compares",
+   "planted_head": "manager"
+  },
+  {
+   "law": "L58",
+   "faithful": "For a web W and a predicate S over positions, steps and forms: S is unrestricted if and only if, for every level history l, every form f and every step t at which W admits f under l's levels at t, S holds of every position, t and f.",
+   "planted": "For a web W and a predicate S over positions, steps and forms: S is unrestricted if and only if, for every level history l that a steward sets, every form f and every step t at which W admits f under l's levels at t, S holds of every position, t and f.",
+   "planted_span": "that a steward sets",
+   "planted_head": "steward"
+  },
+  {
+   "law": "L06",
+   "faithful": "For a family of basic predicates indexed by i, a list of context predicates and a predicate p derivable from the basis and the context: at any state s where every basic predicate holds and every context predicate holds, p holds at s.",
+   "planted": "For a family of basic predicates indexed by i, a list of context predicates and a predicate p derivable from the basis and the context: at any state s of the environment where every basic predicate holds and every context predicate holds, p holds at s.",
+   "planted_span": "of the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L09",
+   "faithful": "For a web W, a relation o, a form g and a condition c with g o-related to c: raising c's level by a positive amount d leaves the original and raised levels, at any step t, not alike through o for g.",
+   "planted": "For a web W, a relation o, a form g and a condition c with g o-related to c: raising c's level by a positive amount d leaves the original and raised levels, at any step t, in truth not alike through o for g.",
+   "planted_span": "in truth",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L53",
+   "faithful": "For a list of items and two Boolean features a and b mixed on the items (each exceeds the other on them): there is a weighting, positive on every item, under which the total weight of items with b is less than that of items with a, and there is a weighting, positive on every item, under which the total for a is less than that for b.",
+   "planted": "For a list of items and two Boolean features a and b mixed on the items (each exceeds the other on them by nature): there is a weighting, positive on every item, under which the total weight of items with b is less than that of items with a, and there is a weighting, positive on every item, under which the total for a is less than that for b.",
+   "planted_span": "by nature",
+   "planted_head": "nature"
+  },
+  {
+   "law": "L48",
+   "faithful": "For an update on sets of elements that preserves inclusion, a step n and an element a: a belongs to the set reached after n updates from every starting set if and only if it belongs to the set reached after n updates from the empty set.",
+   "planted": "For an update on sets of elements that preserves inclusion, a step n and an element a: a belongs to the set reached after n updates from every starting set a designer might pick if and only if it belongs to the set reached after n updates from the empty set.",
+   "planted_span": "a designer might pick",
+   "planted_head": "designer"
+  },
+  {
+   "law": "L22",
+   "faithful": "For a web W, a predicate S over positions, steps and forms, a position p, and level histories l, l', l'': if l retains l' (every form satisfying S at p that W admits at a step under l' it also admits under l) and l' retains l'', then l retains l''.",
+   "planted": "For a web W, a predicate S over positions, steps and forms, a position p, and level histories l, l', l'' of one keeper: if l retains l' (every form satisfying S at p that W admits at a step under l' it also admits under l) and l' retains l'', then l retains l''.",
+   "planted_span": "of one keeper",
+   "planted_head": "keeper"
+  },
+  {
+   "law": "L51",
+   "faithful": "For generations of items in which each member's amount is its number of offspring, and a step t at which the lowered amount is zero: the square of the generation size at t+1 is at most the size at t times the size at t+2.",
+   "planted": "For generations of items under a law of descent in which each member's amount is its number of offspring, and a step t at which the lowered amount is zero: the square of the generation size at t+1 is at most the size at t times the size at t+2.",
+   "planted_span": "under a law of descent",
+   "planted_head": "law"
+  },
+  {
+   "law": "L32",
+   "faithful": "For a map n on states, a state s all of whose iterates lie in a finite list l, and a map g from states to outcomes with decidable equality: it is not the case that no step T exists after which, at every step t, elimination over lasso-shaped candidates applied to the first t outcomes of the orbit returns exactly the outcome at t.",
+   "planted": "For a map n on states, a state s all of whose iterates lie in a finite list l, and a map g from states to outcomes with decidable equality: it is not the case that no step T exists after which, at every step t, elimination over lasso-shaped candidates applied to knowledge of the first t outcomes of the orbit returns exactly the outcome at t.",
+   "planted_span": "knowledge of",
+   "planted_head": "knowledge"
+  },
+  {
+   "law": "L49",
+   "faithful": "For relations R and A on items: closure under R-or-A relates exactly the same pairs as closure under R alone if and only if, for every pair g, h related by A, h lies in every R-closed region containing g.",
+   "planted": "For relations R and A on items: closure under R-or-A relates exactly the same pairs as closure under R alone in the existing order if and only if, for every pair g, h related by A, h lies in every R-closed region containing g.",
+   "planted_span": "in the existing order",
+   "planted_head": "order"
+  },
+  {
+   "law": "L33",
+   "faithful": "For a sequence g of states and a sequence m of labels: the process whose steps are exactly the transitions g and m show (from g at n with label m at n to g at n+1) is deterministic if and only if, whenever two indices have the same state and the same label, their next states are equal.",
+   "planted": "For a sequence g of states and a sequence m of labels: the process whose steps are exactly the transitions g and m show (from g at n with label m at n to g at n+1) is deterministic if and only if, whenever two indices have the same state and the same label in the same environment, their next states are equal.",
+   "planted_span": "in the same environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L54",
+   "faithful": "The following holds if and only if every proposition is either false or not false: for every frame, relation 'better' and state s whose one-step successors are exactly x followed by a list, if 'better' is irreflexive and transitive on those successors, then some successor has no successor better than it.",
+   "planted": "The following holds if and only if every proposition is either false or not false: for every frame, relation 'better' and state s whose one-step successors are exactly x followed by a list, if 'better' is irreflexive and transitive on those successors, then some successor by its nature has no successor better than it.",
+   "planted_span": "by its nature",
+   "planted_head": "nature"
+  },
+  {
+   "law": "L07",
+   "faithful": "For a web W, a predicate O on positions and form-step pairs, a position p and a pair e whose form is active and not undermining at its step: under the never-satisfied predicate, for all level histories l and l', l retains l' and does not add over it; the web's valuation with O and everywhere-true significance is significant; with everywhere-false significance it is not.",
+   "planted": "For a web W, a predicate O on positions and form-step pairs, a position p and a pair e whose form is active and not undermining anyone at its step: under the never-satisfied predicate, for all level histories l and l', l retains l' and does not add over it; the web's valuation with O and everywhere-true significance is significant; with everywhere-false significance it is not.",
+   "planted_span": "anyone",
+   "planted_head": "anyone"
+  },
+  {
+   "law": "L23",
+   "faithful": "For whole numbers p, q, n, h, N, g with (p+q)h + g = Np: the total, over all true/false sequences of length n whose count of trues times N is at most h times n, of each sequence's weight from p and q, multiplied by n squared times g squared, is at most N squared times n times pq(p+q) to the power n.",
+   "planted": "For whole numbers p, q, n, h, N, g with (p+q)h + g = Np: the total, over all true/false sequences of length n in the population whose count of trues times N is at most h times n, of each sequence's weight from p and q, multiplied by n squared times g squared, is at most N squared times n times pq(p+q) to the power n.",
+   "planted_span": "in the population",
+   "planted_head": "population"
+  },
+  {
+   "law": "L29",
+   "faithful": "If, for every process and every property K of its runs, K being verifiable (every run with K has a finite stretch every run sharing which has K) makes not-K refutable (every run where not-K fails has such a stretch every run sharing which has not-K fail), then every Boolean sequence that is not all false has a true term.",
+   "planted": "If, for every process and every property K of its runs, K being verifiable by an observer (every run with K has a finite stretch every run sharing which has K) makes not-K refutable (every run where not-K fails has such a stretch every run sharing which has not-K fail), then every Boolean sequence that is not all false has a true term.",
+   "planted_span": "by an observer",
+   "planted_head": "observer"
+  },
+  {
+   "law": "L12",
+   "faithful": "For a web W, a step t, forms f and g and a condition c: f arises at t exactly when its activity comes to be (absent at t, present at t+1); f ceases exactly when its activity ceases to be; g's requiring c forms exactly when it comes to be and dissolves exactly when it ceases to be; and the remaining kinds of change correspond likewise.",
+   "planted": "For a web W, a step t, forms f and g and a condition c: f arises at t exactly when its activity comes to be (absent at t, present at t+1); f ceases exactly when its activity ceases to be; g's requiring c forms exactly when it comes to be and dissolves exactly when it ceases to be; and, by one law, the remaining kinds of change correspond likewise.",
+   "planted_span": "by one law",
+   "planted_head": "law"
+  },
+  {
+   "law": "L45",
+   "faithful": "For generations of items in which each member's amount is its number of offspring, and a step t at which every child's amount at t+1 equals its parent's amount at t: the square of the size at t+1 is less than the size at t times the size at t+2 if and only if the concordance at t of offspring number with amount is positive.",
+   "planted": "For generations of items in which each member's amount is its number of offspring in the habitat, and a step t at which every child's amount at t+1 equals its parent's amount at t: the square of the size at t+1 is less than the size at t times the size at t+2 if and only if the concordance at t of offspring number with amount is positive.",
+   "planted_span": "in the habitat",
+   "planted_head": "habitat"
+  },
+  {
+   "law": "L42",
+   "faithful": "For a predicate q on items and a list of items: some number counts the items of the list satisfying q if and only if, for every item in the list, q either holds or fails.",
+   "planted": "For a predicate q on items and a list of items from a wider pool: some number counts the items of the list satisfying q if and only if, for every item in the list, q either holds or fails.",
+   "planted_span": "from a wider pool",
+   "planted_head": "pool"
+  },
+  {
+   "law": "L46",
+   "faithful": "For a predicate p on items and steps, listed exactly and without repetition at each step by l, a step S and a count n: the number listed at S+n plus the number of items ceasing to satisfy p over the n steps from S equals the number listed at S plus the number coming to satisfy p over those steps.",
+   "planted": "For a predicate p on items and steps, listed exactly and without repetition at each step by l, a step S and a count n: the number listed at S+n plus the number of items ceasing to satisfy p over the n steps from S equals the number listed at S plus the number coming in from the environment to satisfy p over those steps.",
+   "planted_span": "in from the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L10",
+   "faithful": "In a web W, with a relation o, form g, level histories l and l', step s and a condition c not o-related to g: if l and l' agree at s on each other condition g depends on or is o-related to, and, when g requires c at s, both meet or both miss g's need for c, they are alike through o for g at s.",
+   "planted": "In a web W, with a relation o, form g, level histories l and l', step s and a condition c in the environment not o-related to g: if l and l' agree at s on each other condition g depends on or is o-related to, and, when g requires c at s, both meet or both miss g's need for c, they are alike through o for g at s.",
+   "planted_span": "in the environment",
+   "planted_head": "environment"
+  },
+  {
+   "law": "L13",
+   "faithful": "For a relation R on items, an item f and a region closed under R that contains f: every item g that lies in every R-closed region containing f lies in this region.",
+   "planted": "For a relation R on items, an item f and a region closed under R that contains f: every item g that lies in every R-closed region containing f lies in this region, as a matter of truth.",
+   "planted_span": "as a matter of truth",
+   "planted_head": "truth"
+  },
+  {
+   "law": "L00",
+   "faithful": "For a process, a property K of its runs, a run r and a step h: it is not the case that every run agreeing with r through step h (the same states up to h, the same labels before h) fails to satisfy: if it adheres to K, it has K.",
+   "planted": "For a process, a property K of its runs, a run r and a step h: it is not the case that every run agreeing with r through step h (the same states up to h, the same labels before h) fails to satisfy the claim: if it adheres to K, it has K.",
+   "planted_span": "the claim",
+   "planted_head": "claim"
+  },
+  {
+   "law": "L50",
+   "faithful": "For an item f, a predicate S over positions, times and items, and a position p: some region containing f and closed under the relation holding between every two items has S holding at p at every time for every item in it if and only if S holds of p, t and g for every time t and every item g.",
+   "planted": "For an item f, a predicate S over positions, times and items, and a position p someone takes: some region containing f and closed under the relation holding between every two items has S holding at p at every time for every item in it if and only if S holds of p, t and g for every time t and every item g.",
+   "planted_span": "someone takes",
+   "planted_head": "someone"
+  }
+ ]
+}

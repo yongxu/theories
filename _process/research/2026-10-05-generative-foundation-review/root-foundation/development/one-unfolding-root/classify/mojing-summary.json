@@ -1,0 +1,494 @@
+{
+ "text": "mojing",
+ "title": "《墨經》經上、經說上",
+ "classified_by": "Claude (AI), OU0 step 0, plan version 10 §三",
+ "provenance_note": "All classifications, forms and readings are AI reconstruction (Claude); commentary readings marked 记忆 are from memory and unverified (待核).",
+ "units": 267,
+ "counts_by_class": {
+  "甲": 179,
+  "乙": 8,
+  "丙一": 0,
+  "丁": 10,
+  "戊": 1,
+  "己": 0,
+  "庚": 51,
+  "未读出": 18
+ },
+ "wu_units_戊": [
+  {
+   "id": "MJ-S-009",
+   "note": "文本立贵贱之等以说礼；甲（J-009）之说明为第二功能"
+  }
+ ],
+ "ji_units_己": [],
+ "weiduchu_未读出": [
+  {
+   "id": "MJ-J-047",
+   "reason": "二字无说，义不明（或为\"益，大也\"之讹，记忆）；读不进"
+  },
+  {
+   "id": "MJ-J-048",
+   "reason": "有定义之形，义不明（说\"昫民也\"亦不明）"
+  },
+  {
+   "id": "MJ-J-049",
+   "reason": "有定义之形，义不明；说\"區穴若斯，貌常\"亦不明"
+  },
+  {
+   "id": "MJ-S-012",
+   "reason": "文字讹乱（\"弱子亥足將入止容\"），义不明"
+  },
+  {
+   "id": "MJ-S-015",
+   "reason": "\"與人遇，人衆，𢝺\"义不明"
+  },
+  {
+   "id": "MJ-S-016",
+   "reason": "牒字𧨜读为誚不定；\"爲是之台彼也，弗爲也\"义不明"
+  },
+  {
+   "id": "MJ-S-017",
+   "reason": "\"知其也𦖷也\"义不明"
+  },
+  {
+   "id": "MJ-S-022",
+   "reason": "或读\"盈之生，常不可必也\"（孙诒让，记忆，待核），则说生（形知同处）不必常；原文义不明"
+  },
+  {
+   "id": "MJ-S-023",
+   "reason": "说只有牒字，无内容"
+  },
+  {
+   "id": "MJ-S-024",
+   "reason": "说只有牒字，无内容"
+  },
+  {
+   "id": "MJ-S-048",
+   "reason": "\"昫民也\"义不明"
+  },
+  {
+   "id": "MJ-S-049",
+   "reason": "\"區穴若斯，貌常\"义不明"
+  },
+  {
+   "id": "MJ-S-069",
+   "reason": "\"兩目端，而后可\"义不明"
+  },
+  {
+   "id": "MJ-S-076.4",
+   "reason": "\"不若，若犬\"文字讹（通行作\"不當若犬\"，记忆）"
+  },
+  {
+   "id": "MJ-S-086.1",
+   "reason": "\"合，正立反\"义不明"
+  },
+  {
+   "id": "MJ-S-096",
+   "reason": "列项之义不明"
+  },
+  {
+   "id": "MJ-S-097",
+   "reason": "语料之连接不定；文义不明"
+  },
+  {
+   "id": "MJ-S-101.2",
+   "reason": "义不明"
+  }
+ ],
+ "counts_by_unit_type": {
+  "经": {
+   "甲": 93,
+   "未读出": 3,
+   "丁": 4,
+   "乙": 1
+  },
+  "说": {
+   "甲": 86,
+   "庚": 51,
+   "戊": 1,
+   "未读出": 15,
+   "乙": 7,
+   "丁": 6
+  }
+ },
+ "ji_note": "No 墨经 unit rejects a thesis of the plan explicitly; the strains below are tensions, not 反读.",
+ "most_important": [
+  {
+   "id": "MJ-J-001",
+   "why": "故 := 所得而后成; with 说 小故 (necessary, not sufficient) it is the 墨经's counterpart of 缘 as a necessary condition (§4.3 修正 2)"
+  },
+  {
+   "id": "MJ-S-001.1",
+   "why": "小故: 有之不必然，无之必不然; 'without it, necessarily not' is counterfactual, so only the possible-network reading (§4.1) can state it"
+  },
+  {
+   "id": "MJ-J-039",
+   "why": "同 := 異而俱於之一: sameness built from difference plus a shared relation to one thing, i.e. R;R˘ off the diagonal; an equivalence only when R is single-valued (a class as the kernel of a reading)"
+  },
+  {
+   "id": "MJ-J-089",
+   "why": "同，重、體、合、類 verified (§5.2 待核 resolved); four kinds of sameness"
+  },
+  {
+   "id": "MJ-S-089.4",
+   "why": "類同 := 有以同: not transitive unless the respect (以) is fixed; one kind of 同 is a family of classes, not one class (§4.1)"
+  },
+  {
+   "id": "MJ-J-091",
+   "why": "同異交得: same and different obtain together; with S-091 it is the text's own version of 'same under one class, different under another' (乙 proposal)"
+  },
+  {
+   "id": "MJ-S-091.12",
+   "why": "身處、志往，存亡也: one person present under the class of the body, gone under the class of intention: one thing in two positions under two classes at once"
+  },
+  {
+   "id": "MJ-S-033",
+   "why": "自前曰且，自後曰已: the same event is 且 from before and 已 from after; position depends on standpoint, not on the event alone (§4.3 四相无自立)"
+  },
+  {
+   "id": "MJ-J-078",
+   "why": "已，成、亡 with 说 爲衣成也、治病亡也: one ending read as 成 or 亡 according to what is tracked (garment or illness): a class-relative reading of an end"
+  },
+  {
+   "id": "MJ-J-046",
+   "why": "損，偏去也 with S-046.2 謂其存者損: the remaining whole is what is 'diminished', i.e. it continues while a part is gone (§一 续不要求成分不变)"
+  },
+  {
+   "id": "MJ-J-052",
+   "why": "必，不已也: necessity defined as not-ceasing, the same shape as 有常则续不尽 (AI correspondence); 已 here = cease"
+  },
+  {
+   "id": "MJ-J-042",
+   "why": "窮 / 無窮 (S-042.2 莫不容尺): unboundedness as 'every front admits one more', the same ∀∃ shape as §4.2 不穷, over extent rather than 缘"
+  },
+  {
+   "id": "MJ-J-044",
+   "why": "始，當時也 with S-044 始當無久 (verified): 始 is a durationless time, defined from 时, whereas the plan's 生 is a relational position"
+  },
+  {
+   "id": "MJ-J-040",
+   "why": "久，彌異時也: the 墨经 takes 时 as given and defines duration from it; the plan defines 时 from 缘 (§4.1), the reverse direction"
+  },
+  {
+   "id": "MJ-J-045",
+   "why": "化，徵易也 (说 若鼃爲鶉): change of marks; narrower than the plan's 化 = 进 (§4.1)"
+  },
+  {
+   "id": "MJ-J-088",
+   "why": "爲，存、亡、易、蕩、治、化: 存/亡/易/化 are kinds of doing, agent-relative; the plan's 住/亡/异 are agentless positions"
+  },
+  {
+   "id": "MJ-J-022",
+   "why": "生，刑與知處也: 生 = being alive (body and knowing together), a state, not the start of a continuation"
+  },
+  {
+   "id": "MJ-J-043",
+   "why": "盡，莫不然也: 盡 is a universal quantifier here, not 'end'"
+  },
+  {
+   "id": "MJ-J-080",
+   "why": "名，達、類、私 with S-080.2/4/6: names covering every 实, a class, one 实 correspond to the class 一, a class, and 静 (equality)"
+  },
+  {
+   "id": "MJ-S-083.2",
+   "why": "實 := 所謂: the 实 is defined relationally, as what a name picks out; bears on 荀子 一实/二实 and on carrier equality as a commitment"
+  },
+  {
+   "id": "MJ-S-076.3",
+   "why": "不俱當，必或不當: for a contradictory pair this is weak excluded middle (¬A ∨ ¬¬A), not provable in the pure core; the 墨经's 辯 presupposes it (also S-052.2 是非必也)"
+  },
+  {
+   "id": "MJ-J-062",
+   "why": "端，體之無序而最前者: 'foremost, with nothing before' has the shape of the plan's 生 (no predecessor), in extent"
+  },
+  {
+   "id": "MJ-J-070",
+   "why": "次，無閒而不攖: adjacency without gap or overlap; a spatial 无间, possible model material after 等无间缘 was dropped (§4.3)"
+  },
+  {
+   "id": "MJ-J-051",
+   "why": "止，以久也 with S-051.2 有久之不止 (人過梁): the plan's 住 (has before and after) is 有久之不止, not 止"
+  },
+  {
+   "id": "MJ-J-100",
+   "why": "止 (in disputation) with S-100: stop an inference by citing a 不然 case, the counterexample practice the plan asks of 丙一"
+  }
+ ],
+ "four_kinds_of_同": {
+  "source": "MJ-J-089 with MJ-S-089.1–4; complements MJ-J-090 with MJ-S-090.1–4; definition of 同 at MJ-J-039",
+  "重同": {
+   "unit": "MJ-S-089.1",
+   "def": "二名一實",
+   "relation": "on names: x 同 y iff both pick out the same 实; an equivalence (the kernel of naming)",
+   "complement": "MJ-S-090.1 二必異"
+  },
+  "體同": {
+   "unit": "MJ-S-089.2",
+   "def": "不外於兼",
+   "relation": "both are parts of one 兼; an equivalence only for a fixed partition into wholes; with overlapping wholes it is not transitive",
+   "complement": "MJ-S-090.2 不連屬"
+  },
+  "合同": {
+   "unit": "MJ-S-089.3",
+   "def": "俱處於室",
+   "relation": "co-located in one 所; an equivalence relative to a fixed division of places",
+   "complement": "MJ-S-090.3 不同所"
+  },
+  "類同": {
+   "unit": "MJ-S-089.4",
+   "def": "有以同",
+   "relation": "sharing something in some respect; a tolerance relation, not transitive in general; an equivalence once the respect 以 is fixed",
+   "complement": "MJ-S-090.4 不有同"
+  },
+  "reading": "All four have the shape of MJ-J-039 (different things related together to one): R;R˘. Each kind is a family of classes indexed by what is shared (one name's referent, one whole, one room, one respect), not one class. Plan §4.1's 'each is one class' holds only after the index is fixed."
+ },
+ "polysemy_register": {
+  "生": [
+   "MJ-J-022 alive: 刑與知處 (body and knowing together)",
+   "MJ-S-022 楹之生 unclear",
+   "MJ-S-091.5 死生 as a correlative pair",
+   "never 'start of a continuation' in this corpus; 始 (MJ-J-044) is the time of a start"
+  ],
+  "已": [
+   "MJ-J-052 cease (必，不已)",
+   "MJ-J-078 end, read as 成 or 亡 (MJ-S-078.1/.2)",
+   "MJ-S-033 the already-so, seen from after (opposite of 且)"
+  ],
+  "盡": [
+   "MJ-J-043 universal quantifier (莫不然)",
+   "MJ-J-054, MJ-S-068.1–.5 exact coincidence (相盡/俱盡)",
+   "MJ-J-085, MJ-S-085.2 seeing the whole",
+   "MJ-S-088.4 霄盡 dissipate",
+   "not 'end' in the 墨经 corpus; 'end' only in 庄子 ZZ-YSZ-038"
+  ],
+  "窮": [
+   "MJ-J-042, MJ-S-042.1/.2 bound of an extent (有窮/無窮)",
+   "MJ-J-077 窮知: knowledge exhausted, at its limit"
+  ],
+  "化": [
+   "MJ-J-045 change of marks (徵易), 说 鼃爲鶉",
+   "MJ-J-088, MJ-S-088.6 one of six kinds of 爲 (doing)"
+  ],
+  "同": [
+   "MJ-J-039 different things related to one",
+   "MJ-J-089 four kinds",
+   "MJ-J-053/054/055/059 metric sameness (同高, 同長)",
+   "MJ-J-098 法同: same standard",
+   "MJ-S-062 端，是無同 unclear"
+  ],
+  "久": [
+   "MJ-J-040 duration (彌異時)",
+   "MJ-J-051, MJ-S-051.1/.2 duration needed for 止",
+   "MJ-S-044 有久/無久 of a time"
+  ],
+  "宇": [
+   "MJ-J-041 extent of place (彌異所)",
+   "MJ-S-041 the directions"
+  ],
+  "始": [
+   "MJ-J-044 當時, MJ-S-044 a durationless time"
+  ],
+  "體": [
+   "MJ-J-002 part (分於兼)",
+   "MJ-J-007 體愛 unclear (embodied or partial)",
+   "MJ-J-062 segment whose 端 is foremost",
+   "MJ-J-085, MJ-S-085.1 partial seeing",
+   "MJ-J-089/MJ-S-089.2 體同, MJ-J-090 不體",
+   "MJ-S-001.1 小故 is a part",
+   "MJ-S-068.5 體攖"
+  ],
+  "兼": [
+   "MJ-J-002, MJ-S-046.1 whole",
+   "MJ-S-089.2 不外於兼"
+  ],
+  "知": [
+   "MJ-J-003 faculty",
+   "MJ-J-005 contact (接)",
+   "MJ-J-082 sources (聞說親)",
+   "MJ-J-023 knowing nothing while the faculty remains"
+  ],
+  "爲": [
+   "MJ-J-010 to do",
+   "MJ-J-077 defined: 窮知而𠐴於欲",
+   "MJ-J-088 six kinds",
+   "MJ-S-083.4 志行"
+  ],
+  "實": [
+   "MJ-J-011 inner substance (榮)",
+   "MJ-J-031, MJ-S-083.2 what is referred to (所謂)",
+   "MJ-S-089.1 二名一實"
+  ],
+  "平": [
+   "MJ-J-025 calm of mind",
+   "MJ-J-053 equal height"
+  ],
+  "佴": [
+   "MJ-J-015 自作",
+   "MJ-J-072 所然 (probably two different characters)"
+  ],
+  "及": [
+   "MJ-S-064.3 及非齊之及: 及 as reaching vs being level; the plan's 及 is reaching"
+  ],
+  "必": [
+   "MJ-J-052 not-ceasing",
+   "MJ-S-052.2 holds without exception",
+   "MJ-S-086.4 非彼必不有 (necessary condition)",
+   "MJ-S-086.5 可勿疑"
+  ]
+ },
+ "strains_with_plan": [
+  {
+   "plan": "§4.1 类 (四种同，每一种是一个类)",
+   "units": [
+    "MJ-S-089.2",
+    "MJ-S-089.3",
+    "MJ-S-089.4",
+    "MJ-J-039"
+   ],
+   "point": "Only 重同 is an equivalence outright; 體同, 合同, 類同 are equivalences only after fixing the whole, the room or the respect. 類同 (有以同) is a tolerance relation. Each kind is an indexed family of classes; the plan should say 'each kind, for a fixed respect, is a class'."
+  },
+  {
+   "plan": "§4.1 类 as primitive equivalence",
+   "units": [
+    "MJ-J-039",
+    "MJ-S-039"
+   ],
+   "point": "The 墨经 defines 同 from 異 and a shared relation to one thing (二人俱見是楹): 同 = R;R˘ minus the diagonal. Supports §4.3 '一个类的根据在于它本身由关系读出' but makes 类 derived, not primitive; the derived relation is irreflexive by definition (異而...)."
+  },
+  {
+   "plan": "§4.1 化与理 ('化是它之进')",
+   "units": [
+    "MJ-J-045",
+    "MJ-J-088",
+    "MJ-S-088.6"
+   ],
+   "point": "墨经 化 is a change of marks and a kind of doing; it does not mean the unfolding's progress. Already noted in §5.2 for the agentive list."
+  },
+  {
+   "plan": "§4.1 时 (时由缘定义)",
+   "units": [
+    "MJ-J-040",
+    "MJ-J-044",
+    "MJ-S-044"
+   ],
+   "point": "The 墨经 takes 時 (and 所) as given and defines 久, 宇 and 始 from them; the plan derives time from 缘. Not a contradiction, but the 墨经 offers no support for deriving time."
+  },
+  {
+   "plan": "§4.3 四个位置 (生 = 续之始)",
+   "units": [
+    "MJ-J-022",
+    "MJ-J-044",
+    "MJ-S-044"
+   ],
+   "point": "墨经 生 = alive (a state like 住); 始 = a durationless time. The plan's 生 is a term of art whose name crosses the 墨经 sense."
+  },
+  {
+   "plan": "§4.3 住",
+   "units": [
+    "MJ-J-051",
+    "MJ-S-051.1",
+    "MJ-S-051.2"
+   ],
+   "point": "墨经 止 needs duration and excludes passing; 有久之不止 (a person crossing a bridge) is the plan's 住. Do not gloss 住 as 止."
+  },
+  {
+   "plan": "§4.3 生住异灭 as agentless positions",
+   "units": [
+    "MJ-J-088",
+    "MJ-S-088.2"
+   ],
+   "point": "In the 墨经, 存/亡/易/化 are kinds of 爲 (doing, defined through 知 and 欲, MJ-J-077); 亡 is making something cease (病亡). Matching names, different category."
+  },
+  {
+   "plan": "§4.3 四分 needs excluded middle; pure core",
+   "units": [
+    "MJ-J-074",
+    "MJ-S-076.2",
+    "MJ-S-076.3",
+    "MJ-S-052.2"
+   ],
+   "point": "MJ-J-074 (不可兩不可) and S-076.2 (不俱當) are intuitionistically valid for a contradictory pair; S-076.3 (必或不當) is weak excluded middle and S-052.2 (是非，必也) is excluded middle. The 墨经's 辯 presupposes decidability that the pure core does not assume; Lean will place these as calibrations."
+  },
+  {
+   "plan": "§5.2 《墨经》 quotations",
+   "units": [
+    "MJ-J-089",
+    "MJ-S-044",
+    "MJ-J-088",
+    "MJ-J-022",
+    "MJ-J-078",
+    "MJ-J-043",
+    "MJ-J-042",
+    "MJ-J-002",
+    "MJ-S-089.4",
+    "MJ-J-045",
+    "MJ-S-045"
+   ],
+   "point": "All §5.2 quotations verified in the corpus; the two marked 待核 (同，重、體、合、類; 始當無久) are present. 化 in the 爲 list: the 说 reads 鼃買，化也 (S-088.6), 買 probably for 爲 (cf. S-045)."
+  },
+  {
+   "plan": "§4.7 配对与幂",
+   "units": [
+    "MJ-J-002",
+    "MJ-S-002",
+    "MJ-S-046.1"
+   ],
+   "point": "Confirms the plan: 體/兼 is part and whole (若二之一，尺之端), not a functional projection."
+  }
+ ],
+ "supports_for_plan": [
+  {
+   "plan": "§一 位置不自立 / §4.3 四相无自立",
+   "units": [
+    "MJ-S-033",
+    "MJ-J-078",
+    "MJ-S-091.12",
+    "MJ-J-091"
+   ]
+  },
+  {
+   "plan": "§一 续不要求成分不变",
+   "units": [
+    "MJ-J-046",
+    "MJ-S-046.2"
+   ]
+  },
+  {
+   "plan": "§4.3 修正 2 缘是必要条件",
+   "units": [
+    "MJ-J-001",
+    "MJ-S-001.1",
+    "MJ-S-086.4"
+   ]
+  },
+  {
+   "plan": "§4.2 不穷",
+   "units": [
+    "MJ-S-042.2"
+   ]
+  },
+  {
+   "plan": "§4.3 有常则续不尽 (shape only)",
+   "units": [
+    "MJ-J-052"
+   ]
+  },
+  {
+   "plan": "classes 一 / 类 / 静",
+   "units": [
+    "MJ-J-080",
+    "MJ-S-080.2",
+    "MJ-S-080.4",
+    "MJ-S-080.6"
+   ]
+  }
+ ],
+ "corpus_problems": [
+  "MJ-S-076.1 (辯，或謂之牛，或謂之非牛，是爭彼也) restates MJ-J-075 (辯，爭彼也) and belongs to it; the corpus links all of MJ-S-076.1–.4 to MJ-J-076 and leaves MJ-J-075 without a 说. Likely S-076.2–.4 explain J-076 (辯勝，當也).",
+  "MJ-J-083 is punctuated 名，實、合、爲 in the source, which makes 名 look like the defined word; its 说 (MJ-S-083.1–4) defines all four of 名, 實, 合, 爲, so the unit is a list of four (traditionally read with the 知 item before it; from memory).",
+  "Empty 说: MJ-S-023 (卧。) and MJ-S-024 (夢。) carry only the 牒字.",
+  "Repeated 说: MJ-S-036 and MJ-S-038 repeat their 经 word for word.",
+  "MJ-J-015 and MJ-J-072 have the same head character 佴 with unrelated definitions; probably two characters in the original.",
+  "Garbled or obscure 说 (classed 未读出): S-012, S-015, S-016, S-017, S-022, S-048, S-049, S-069, S-076.4, S-086.1, S-096, S-097, S-101.2."
+ ]
+}

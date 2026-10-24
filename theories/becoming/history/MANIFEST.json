@@ -39,6 +39,15 @@
       "plan_entry": "theories/becoming/chapters/ALIGNMENT-COMPLETION.md"
     },
     {
+      "old_path": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md",
+      "new_path": "theories/becoming/history/ALIGNMENT-DIRECTION.md",
+      "sha256": "b17f797280cb97b927d0b975e77e50c9ca77e4164a2b5f33f96dac505c903654",
+      "blob": "fb2ba8ab2b6b939c5fa7a6e2a910ddc1fde026f9",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/ALIGNMENT-DIRECTION.zh.md",
       "new_path": "theories/becoming/history/ALIGNMENT-DIRECTION.zh.md",
       "sha256": "0efb30dc7a3398e674a987e6f004c9725a42ae89d64320de708873afa6e8c638",
@@ -46,6 +55,24 @@
       "batch": "R35-B1-chapters",
       "reason": "R35 (20 October 2026), batch B1: E5, an unmaintained Chinese edition (G0 8 times) of a chapter whose English edition is canonical; a live document may be English only",
       "plan_entry": "theories/becoming/chapters/ALIGNMENT-DIRECTION.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md",
+      "new_path": "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
+      "sha256": "5fb23b83c318a5e4d50e41c533113bfcc0437c51ab19b232d30b7447adeb2226",
+      "blob": "76775a4deaf82d00885bb22d2a08f010d48b039f",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.zh.md",
+      "new_path": "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.zh.md",
+      "sha256": "4654fcbea004c5dcd623c3d219b05ae8c65661ad3a7b1d4300637768df14b029",
+      "blob": "dacb4b8eda608106a2c9e02c1379bb0e57f23f3f",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.zh.md"
     },
     {
       "old_path": "theories/becoming/chapters/ARCHITECTURE-FORMATION.md",
@@ -111,6 +138,15 @@
       "plan_entry": "theories/becoming/chapters/AUTONOMOUS-METHOD-FORMATION.md"
     },
     {
+      "old_path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md",
+      "new_path": "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md",
+      "sha256": "dc45dd01c9516a2cbfe83c5cbf2368b33fb3eb34b564a0501c7cab5a74856626",
+      "blob": "34ad73ba1fcdafcca644f5df650753c896322875",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.zh.md",
       "new_path": "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.zh.md",
       "sha256": "e4a303ece4d17f0f75812035ff62b065a358a5cd83b115d53902b28ce9a94478",
@@ -118,6 +154,42 @@
       "batch": "R35-B1-chapters",
       "reason": "R35 (20 October 2026), batch B1: E5, an unmaintained Chinese edition (G0 13 times) of a chapter whose English edition is canonical; a live document may be English only",
       "plan_entry": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+      "new_path": "theories/becoming/history/BECOMING-FOUNDATION.md",
+      "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324",
+      "blob": "19866a433adb5c2e9f08b6e7d436a0ddc5378b65",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/BECOMING-FOUNDATION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/BECOMING-FOUNDATION.zh.md",
+      "new_path": "theories/becoming/history/BECOMING-FOUNDATION.zh.md",
+      "sha256": "4c439b535d5e0483cd4abd4201d4e18704a4ffe4da62f85a4519db4ac81d1802",
+      "blob": "9dd2210c67ce7d66f2a77960f0373426d75acac7",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/BECOMING-FOUNDATION.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+      "new_path": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
+      "sha256": "6a22e68dac3149cba39301b3079d5a3593b7f7be8e1f396d3dc332b93c7787ef",
+      "blob": "ca7a055a66eb8b30b0b4288daff765399f8bda3d",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md",
+      "new_path": "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
+      "sha256": "60b20bfce9699bf4154369a41c4668747b9c55a68c8ea0d1950e10cebd15c9b0",
+      "blob": "51149d9e3c1fed1730a6e91cf0f82393fa6fb982",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md"
     },
     {
       "old_path": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.zh.md",
@@ -129,6 +201,15 @@
       "plan_entry": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.zh.md"
     },
     {
+      "old_path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "new_path": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68",
+      "blob": "e39c2017c55a879a2cfdc694dd8bb48df3ffb42c",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/CLAIMS-AND-PAID-ACTION.md",
       "new_path": "theories/becoming/history/CLAIMS-AND-PAID-ACTION.md",
       "sha256": "e41c4db2ec8f10df14a7ebfcc674c52bf187c31ae039e6ecfb1c8ea2b784f594",
@@ -136,6 +217,24 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/CLAIMS-AND-PAID-ACTION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md",
+      "new_path": "theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.md",
+      "sha256": "1e9d0d4f8b3742289a61faec6aa42e7d7b85165caf22a4a22306a5256ea4d757",
+      "blob": "a3596194b50428bec369d895873bc2a8fee2ff6b",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.zh.md",
+      "new_path": "theories/becoming/history/COGNITION-LEARNING-AND-EVOLUTION.zh.md",
+      "sha256": "6720051694e9d7b26d8d085f8bcd8c88c07ee06585de9fe0c775c545fcbf1dd2",
+      "blob": "3af1e28b67b7791f7255e38d161d1780b64a2883",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/COGNITION-LEARNING-AND-EVOLUTION.zh.md"
     },
     {
       "old_path": "theories/becoming/chapters/COGNITION-LI-AND-RECIPROCITY.md",
@@ -220,6 +319,15 @@
     },
     {
       "old_path": "theories/becoming/chapters/DAO-AND-GENERATIVITY.md",
+      "new_path": "theories/becoming/history/DAO-AND-GENERATIVITY-2026-10-23.md",
+      "sha256": "b5f1dac991d2a0fc7e49cb9deea223f4a4fbe545e5531d56682c78dc04097c46",
+      "blob": "c0d3f276da117c54e0430b9c8d5281dc10659e17",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/DAO-AND-GENERATIVITY.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/DAO-AND-GENERATIVITY.md",
       "new_path": "theories/becoming/history/DAO-AND-GENERATIVITY.md",
       "sha256": "6aea89d065086e39f159e310450b469e6fe865c08093e6fa73ccd06a4107174a",
       "blob": "3341facd082cf069d61d2d1f959ff37473709e5a",
@@ -253,6 +361,24 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/ETHICAL-FOUNDATION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+      "new_path": "theories/becoming/history/ETHICAL-LEARNING.md",
+      "sha256": "bf220ade443da1bf5f9c87a650b011d8d35525ce20d5b7cff9acd61eb58ab112",
+      "blob": "207b4c727105339b7a9de529906b7c1eb0b2d649",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ETHICAL-LEARNING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ETHICAL-LEARNING.zh.md",
+      "new_path": "theories/becoming/history/ETHICAL-LEARNING.zh.md",
+      "sha256": "bf37a437adbcf857cd3100bafa0107ff644d8fd9be690115e06f00917b784916",
+      "blob": "00ba11bf51e0fb17b5cd86d78b9e7a3816a2664d",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ETHICAL-LEARNING.zh.md"
     },
     {
       "old_path": "theories/becoming/chapters/EVALUATION-AND-FAITHFUL-REPORTING.md",
@@ -426,6 +552,24 @@
       "plan_entry": "theories/becoming/chapters/G0-WARRANT.zh.md"
     },
     {
+      "old_path": "theories/becoming/chapters/GENERATED-LOGIC.md",
+      "new_path": "theories/becoming/history/GENERATED-LOGIC.md",
+      "sha256": "e6a3e25355b2753a9da5d0c864bf4bc26de171f1b521d1b8bd5334bbef98cf03",
+      "blob": "af0d905d16cf11fb18a88d4dc281948de7ad3070",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/GENERATED-LOGIC.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/GENERATED-LOGIC.zh.md",
+      "new_path": "theories/becoming/history/GENERATED-LOGIC.zh.md",
+      "sha256": "f120758627e4c7e82d5df92cc1c7cad283195dea187bcd69b37e072fe67de55c",
+      "blob": "b4e6f41f95c5e72ffe29363ca0e3b37ae16c0c84",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/GENERATED-LOGIC.zh.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/GENERATED-SELF-AND-ETHICS.md",
       "new_path": "theories/becoming/history/GENERATED-SELF-AND-ETHICS.md",
       "sha256": "6f342b5c12b6d8619a5938a390791af13b7a29616fdd82ddee6cb3eee4d83ad6",
@@ -487,6 +631,15 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/GOAL-FORMATION-AND-REVISION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/HANZI-AND-THEORY-TREE.md",
+      "new_path": "theories/becoming/history/HANZI-AND-THEORY-TREE-2026-10-23.md",
+      "sha256": "2489083fc2254c0e95211184b20085417966c0202f2d04b36fa224ef0e100461",
+      "blob": "a26c6da65ef66624aff611efce12d040b7eef018",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/HANZI-AND-THEORY-TREE.md"
     },
     {
       "old_path": "theories/becoming/chapters/HANZI-AND-THEORY-TREE.md",
@@ -570,6 +723,24 @@
       "plan_entry": "theories/becoming/chapters/JOINT-PRIOR-ART.md"
     },
     {
+      "old_path": "theories/becoming/chapters/KNOWLEDGE.md",
+      "new_path": "theories/becoming/history/KNOWLEDGE.md",
+      "sha256": "6bad6ec6e081f03e4817edfbe468c87afee08058f47f7043da7e882d4abbd54c",
+      "blob": "6e60b1252ac83e15c9f83ae9afa5d74d9493f2da",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/KNOWLEDGE.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/KNOWLEDGE.zh.md",
+      "new_path": "theories/becoming/history/KNOWLEDGE.zh.md",
+      "sha256": "9714b1c5cfeed6fc03cd63bb8ca905d32c4aff8f5ac3c978671c8a19eed54099",
+      "blob": "58564c2ec55d35a90cd38f17d609a3ce286dac30",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/KNOWLEDGE.zh.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/LEARNING-INTERFACE.md",
       "new_path": "theories/becoming/history/LEARNING-INTERFACE.md",
       "sha256": "8ff48e6cfd2ef3d6b57a653328c137dbce4446e1a092e901ece65fc4446d8c61",
@@ -588,6 +759,15 @@
       "plan_entry": "theories/becoming/chapters/LEARNING-ROUTE-REVISION.md"
     },
     {
+      "old_path": "theories/becoming/chapters/LIANGZHI-EVOLUTION.md",
+      "new_path": "theories/becoming/history/LIANGZHI-EVOLUTION.md",
+      "sha256": "aab50a09814217f9f0b89e42ebb1b141d7187611ba673356333db9b02706626b",
+      "blob": "fa243e9a24067b3717e58de34af2ccc4f8db356f",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/LIANGZHI-EVOLUTION.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/LIVING-DEPENDENCIES.md",
       "new_path": "theories/becoming/history/LIVING-DEPENDENCIES.md",
       "sha256": "1e2093982cc2478de5d2ba3220f6aca3c5af573a8cb6058aea7222ad32fe9f2f",
@@ -595,6 +775,33 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/LIVING-DEPENDENCIES.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/MARKET-DYNAMICS-MATH.md",
+      "new_path": "theories/becoming/history/MARKET-DYNAMICS-MATH.md",
+      "sha256": "43da5db0d97ce2365bd38ae947bdc775b67481666afe427dc4154f9e0eab3319",
+      "blob": "644abbaf32be0327ed3ed3ed5b32ca750ac59e08",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/MARKET-DYNAMICS-MATH.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+      "new_path": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
+      "sha256": "1b5e9b2651532c1bd7326dd173010b554d28fa23557a5701237240b399fc4af3",
+      "blob": "860dce08fbb51491c458ee2ecdc25cf6e67d36bd",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.zh.md",
+      "new_path": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.zh.md",
+      "sha256": "e4f2dfa0089a915cb43402cac0ecef9fc0e020e81bc13e8071f8364d41d9d55a",
+      "blob": "be457e43b21373555859c7511ffc426d19afb54b",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.zh.md"
     },
     {
       "old_path": "theories/becoming/chapters/MATERIAL-PREDICTION-COMPOSITION.md",
@@ -622,6 +829,15 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/MATERIAL-UPDATER-COMPOSITION.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/MATHEMATICAL-CORE.md",
+      "new_path": "theories/becoming/history/MATHEMATICAL-CORE.md",
+      "sha256": "e59941943cdf39be53b5314d8e01275959ba9fff2cf316c2fee30b13c6407df3",
+      "blob": "7925fecfbce608823ed14a93f8f34983beb475c9",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/MATHEMATICAL-CORE.md"
     },
     {
       "old_path": "theories/becoming/chapters/MATHEMATICAL-ROOT-FRONTIER.md",
@@ -705,6 +921,24 @@
       "plan_entry": "theories/becoming/chapters/NEW-POSSIBILITIES.md"
     },
     {
+      "old_path": "theories/becoming/chapters/NONDUAL-METHOD.md",
+      "new_path": "theories/becoming/history/NONDUAL-METHOD.md",
+      "sha256": "c589a04a73ea9e928bf8a992151b24ee8d3813d8159756cfbb7ed0ab3b20066d",
+      "blob": "ba3fd095e148318a4ea1f9ae70dcf14a1f2d1e5f",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/NONDUAL-METHOD.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md",
+      "new_path": "theories/becoming/history/NONINSTRUMENTAL-CONCERN.md",
+      "sha256": "9ba598b45d73005e3cbdd1a2d7786782536f9a0d122b68926a5b7b079080be3f",
+      "blob": "319f16464ea8f150e76d9e7c65243ec866fcb768",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/PAID-PREIMPORT-EVIDENCE.md",
       "new_path": "theories/becoming/history/PAID-PREIMPORT-EVIDENCE.md",
       "sha256": "fcf8e41e2070650fd8d6f0ff264d0ec2dcfce3e17dd2ee4c90b14e8c7a8a697d",
@@ -741,6 +975,15 @@
       "plan_entry": "theories/becoming/chapters/PLURAL-SYSTEMS-AND-CORRECTION.zh.md"
     },
     {
+      "old_path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+      "new_path": "theories/becoming/history/PRACTICAL-JUDGMENT.md",
+      "sha256": "1c5b6ee6935ff51231d0b3e689dcb0fb3053e4c8e40f1f4f8a5d5d204ab1306e",
+      "blob": "532063cb9d263e78018de127464684414adcf947",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.zh.md",
       "new_path": "theories/becoming/history/PRACTICAL-JUDGMENT.zh.md",
       "sha256": "fa2c370b54e2df0035350fd19687190dd74766e4db20ba1ceb5c45963e3c73fa",
@@ -748,6 +991,15 @@
       "batch": "R35-B1-chapters",
       "reason": "R35 (20 October 2026), batch B1: E5, an unmaintained Chinese edition (G0 18 times) of a chapter whose English edition is canonical; a live document may be English only",
       "plan_entry": "theories/becoming/chapters/PRACTICAL-JUDGMENT.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/PRE-QIN-AND-WENYAN.md",
+      "new_path": "theories/becoming/history/PRE-QIN-AND-WENYAN-2026-10-23.md",
+      "sha256": "9716fe89688398b411be4e7c356ffed45bd12e8077dd18e62cc2add654e767b9",
+      "blob": "61f0a968a78603e71438331a69b1edf550468f7d",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/PRE-QIN-AND-WENYAN.md"
     },
     {
       "old_path": "theories/becoming/chapters/PRE-QIN-AND-WENYAN.md",
@@ -885,6 +1137,24 @@
       "plan_entry": "theories/becoming/chapters/RECORDED-REASONS.md"
     },
     {
+      "old_path": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md",
+      "new_path": "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
+      "sha256": "8e1b1f309d884314b50a4b7cbed9f8b5929fb18af693e2353d3fe95949a8f8f4",
+      "blob": "8a63ea175072aa4129283d935c2512ca673a7c66",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.zh.md",
+      "new_path": "theories/becoming/history/RELATIONS-ACROSS-SCALES.zh.md",
+      "sha256": "b2f2cb87172176c9cba15a08d32383e147b5a54e00977ba72c10bcec50605cb7",
+      "blob": "e56324405acb7b97c44e72b4c048568e1e4129da",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/RELATIONS-ACROSS-SCALES.zh.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/REVISABLE-CONCERN-SETTLEMENT.md",
       "new_path": "theories/becoming/history/REVISABLE-CONCERN-SETTLEMENT.md",
       "sha256": "c7fb103d8a24c36f0651f354454b493e94f6c8772060e702b77c14594fa6616b",
@@ -910,6 +1180,24 @@
       "batch": "H4",
       "reason": "earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11 and the area reviews",
       "plan_entry": "theories/becoming/chapters/ROUTE-DIAGNOSTICS.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+      "new_path": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
+      "sha256": "1803ea46cff814c21f30143c4a2784534a35428d8437a61f663a863127056f1c",
+      "blob": "48f369125efc4f6c51ada2be0b4ee63be2a54649",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.zh.md",
+      "new_path": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.zh.md",
+      "sha256": "77b452534fb3c8ae5d96d45b650a1b00570d726e4991f2804b40f8886db0de95",
+      "blob": "d7a23c3595fa1f527b650ccca943db693e94968e",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.zh.md"
     },
     {
       "old_path": "theories/becoming/chapters/SELECTOR-REVISION.md",
@@ -1047,6 +1335,15 @@
       "plan_entry": "theories/becoming/chapters/SYSTEMS-COMPLEXITY-CHAOS.md"
     },
     {
+      "old_path": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md",
+      "new_path": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
+      "sha256": "8fafc90c90b97d7bc6d50f0c4ef0f6a3c1ce405217b92fef64ddf1207e55662e",
+      "blob": "efb2209400a0f75ed4b6aba6959cc2ffd4903725",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md"
+    },
+    {
       "old_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "new_path": "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
       "sha256": "292171145506933482fb609f13c3e736d808ba64630ea8575c572d6b8783cdad",
@@ -1072,6 +1369,42 @@
       "batch": "R35-B2-reference",
       "reason": "R35 (20 October 2026), batch B2: E2: verbatim pre-restructure lists (l.1-113) are history; the declaration catalogue (l.114-218) and module table (l.219-475) duplicate LEAN-INDEX and the Lean README; whole file moves, nothing kept live",
       "plan_entry": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-REFERENCE.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "new_path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22",
+      "blob": "f95296aded645f79328e7e71944fd8debfc8c5c4",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "new_path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878",
+      "blob": "f9b94046085f9c5c483b8b16b24ee18d9ee74578",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the canonical chapter, replaced by the overview (theories/becoming/THE-THEORY-OF-BECOMING.md) and the eight chapters, which state each of its results once; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.zh.md",
+      "new_path": "theories/becoming/history/THE-THEORY-OF-BECOMING.zh.md",
+      "sha256": "9479928a7911dfdb54ee6cd3f92343a64e86d61ce2d6a8b171989173b269b87a",
+      "blob": "38ddd9f6da79ff0e446517b69991954cb00ced05",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the Chinese edition of the canonical chapter; kept, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "new_path": "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
+      "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708",
+      "blob": "26a799924bbeb189239ffbca7526add23f29c7ea",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md"
     },
     {
       "old_path": "theories/becoming/results/THEORY-MAP.md",
@@ -1165,12 +1498,39 @@
     },
     {
       "old_path": "theories/becoming/chapters/WANG-YANGMING.md",
+      "new_path": "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
+      "sha256": "67e09eb1e5d7cab1a27fdd06d4904850c824d2d889821d1197599d44b31b6bc5",
+      "blob": "9dc74301520698d4caaa869c98f139c998940727",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/WANG-YANGMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/WANG-YANGMING.md",
       "new_path": "theories/becoming/history/WANG-YANGMING.md",
       "sha256": "ab0a5fffb46dcf2b9013d78aa26dd06de4344d69c116620dee7e58556963d5d9",
       "blob": "9450f54617d1b6cdf3c8dd98c8c70d2e03feb8f9",
       "batch": "RH-chinese-chapters",
       "reason": "the chapter on 王阳明 as written on 7 October 2026, before the spine; its formal entry through the periphery module SituatedPractice and its old project framing (本然良知 from the generative core, 生成树) are superseded (CHINESE-SOURCES-AND-BECOMING sections 5.3 and 9: 知行合一 on the experiment laws, 心外无事 a divergence); the readings that hold only here (大学问, 心即理 in conduct, 知行, 致良知, 偏蔽 and 复通, 差等 and refusal, the competing explanation) are kept in current terms in a new file at the old path",
       "plan_entry": "theories/becoming/chapters/WANG-YANGMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/WENLI-AND-BECOMING.md",
+      "new_path": "theories/becoming/history/WENLI-AND-BECOMING.md",
+      "sha256": "d7ed0aace7498f71ad46e71ebf32fc41b90284fa51b857c7128d1c9afb000219",
+      "blob": "2284f82e18074f6c22044113a78e2bf5c1509ca9",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/WENLI-AND-BECOMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md",
+      "new_path": "theories/becoming/history/WISDOM-AND-CONTEXT.md",
+      "sha256": "dc2845cc4c222ebdcb6522688a745e642ee1f34f3bf79b1aa8fd48deb4d92542",
+      "blob": "874245df07b480b0b54f8e04ec374114144d95c9",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md"
     },
     {
       "old_path": "theories/becoming/chapters/WISDOM-AND-CONTEXT.zh.md",
@@ -1180,6 +1540,33 @@
       "batch": "R35-B1-chapters",
       "reason": "R35 (20 October 2026), batch B1: E5, an unmaintained Chinese edition (G0 9 times) of a chapter whose English edition is canonical; a live document may be English only",
       "plan_entry": "theories/becoming/chapters/WISDOM-AND-CONTEXT.zh.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md",
+      "new_path": "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
+      "sha256": "314c5f042d9fbb3c8a8e4b83016d8b778a0947df8b6201cfaea0ed9fcff2f0e9",
+      "blob": "b591ab27e301d8085c5db6ebe495101944f19958",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+      "new_path": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+      "sha256": "da9d61ecc5dfd42f86463924f29165ad9e1ba20b908291f4b8b796d0ce2afd1a",
+      "blob": "7915c433af260773c7ba93bbeae0f0acd00ae500",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
+    },
+    {
+      "old_path": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.zh.md",
+      "new_path": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.zh.md",
+      "sha256": "4e38d2f900497868b9fb13b4a8fc11eaee8994e82d520835ee45e4114f28a456",
+      "blob": "554e1c53013972b605b4d74e9d78790f34259564",
+      "batch": "moves-2026-10-23-moves-ra",
+      "reason": "RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged",
+      "plan_entry": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.zh.md"
     },
     {
       "old_path": "theories/becoming/results/lean-declarations/becoming-bridge.md",
