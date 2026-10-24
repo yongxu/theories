@@ -34,7 +34,7 @@ A selection *reads* a quantity when its signal depends on it: a reward, a score,
 
 6. **When the loss is read decides whether a lock can still be left.** Suppose the rule is the pooled reading of readers drawn from those it selected.
    - Where each reader favours its own kind at least as much as the others do, the rule's being read from the share is derived, not assumed.
-   - Suppose only the members the selection thins read a loss. From the step after they read it, the course locks for good in whichever direction the pool then reads. So the same readers reading the same loss turn the course if they read it in time, and leave it locked if they read it late (MA2).
+   - Suppose only the members the selection thins read a loss. Then the same readers reading the same loss turn the course if they read it in time. Once the selection has left them no more than the carriers, they leave it locked for good (`Thinned.kept_iff`, `Thinned.turned_iff`; witness: one carrier to eight others under a four-to-one rule; MA2, whose home section will be in chapter 2).
 
 7. **Capacity to shape the rule is selected exactly where its return is kept.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
    - The rule favours shaping exactly where c ≤ s, and p decides nothing (`RuleShaping.favours_iff`, `favours_alike`).

@@ -44,7 +44,15 @@ Two further rules come from how public text has failed a cold read before:
 ## 5. Order
 
 1. The page drafted now, for Ren's reading.
-2. After MA3 and MA2 land, the standings fixed and the readings for 07 (AJ2) quoted from their home section.
+2. After MA3 and MA2 land, the standings are fixed and AJ2 is written, handed to this session by AJ's owner on 24 October.
+   - AJ2 is the four readings for 07's alignment section. Before drafting, check 07's owner rows on the board.
+   - Each reading says what it rests on, and none rests on more:
+     - help that lowers the cost of shaping raises the selection for control, by `cheaper_raises`;
+     - an assistant joined to its principal adds capacity and no coupling, by the joint-capacity record, not MA3;
+     - a counter-rule read from its own share locks like the rule it replaced, by `RuleCapture` and closed capture, not MA3;
+     - shared rule-making gives shaping no advantage, and a cost then selects against it, by `favours_alike` and `open_falls`, with the `ComesBack` witness.
+   - The page then quotes the readings from their home section.
+   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, study §398, and its core receipt.
 3. The citation check.
 4. The dossier, checked by script as the other dossiers are.
 5. A cold read by an independent reader before landing.
@@ -72,7 +80,7 @@ Praise, counts and attention are not checks. Each response is answered on what i
 
 | Item | Owner |
 |---|---|
-| AJ4 | fork 3 of the unification-and-coherence conversation |
-| AJ, AJ2, MA2's landing | fork 2 of the same conversation |
+| AJ4, AJ2 | fork 3 of the unification-and-coherence conversation (AJ2 handed over by fork 2, 24 October) |
+| AJ, MA2's landing | fork 2 of the same conversation |
 | MA3 | fork 1 of the same conversation |
 | The packet's scope, sending, model usage | Ren |
