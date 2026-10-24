@@ -1,0 +1,58 @@
+# RP2: the philosophy dossier, kit
+
+Board item RP2, 24 October 2026 ([Ren's choice](../../../../../../sources/15-codex-theory-conversations/2026-10-24-philosophy-dossier.md)). The dossier is [`theories/becoming/review/PHILOSOPHY.md`](../../../../../../theories/becoming/review/PHILOSOPHY.md), the packet's fourth, in the format of the [logic dossier](../../../../../../theories/becoming/review/LOGIC.md). AI-authored throughout.
+
+## How it was built
+
+- **Sources.** Chapter 7 as it stood after IV3k (`4b385daac`), GS2–GS5 and SW; the glossary; PW's note §6f as corrected on 24 October (steps 4–5 witnessed, their general form open) and PW's [item on the crux](../pw-step-forward/CRUX-ITEM-FOR-RP2.md), taken and adapted as P-20 (board rule 2); SW's note §1–§2.
+- **Lean.** [`lean_statements.py`](lean_statements.py) copies statements from the core sources, theorems cut at `:=`, definitions whole. Every block in the dossier was compared with the sources after writing: no mismatch.
+- **Quotations and names.** The packet's [`check_dossiers.py`](../review-packet/check_dossiers.py) checks every `Quote [path]: "…"` against its file and every backticked Lean name: 0 problems for the dossier and for the whole packet.
+- **Review.** An independent reader (a separate AI agent with no part in writing it) checked faithfulness to chapter 7 and the Lean, the literature, neutrality of the questions, clarity and coverage, in two passes; what it found and what was taken is in study §398.
+
+## References, as checked on 24 October 2026
+
+Each against a publisher, catalogue, PhilPapers or proceedings record found by web search; page ranges only where the record gave them.
+
+| Work | Record checked | Note |
+|---|---|---|
+| Gewirth 1978, *Reason and Morality* | University of Chicago Press listing; Penn and CiNii catalogues | xii+393 pp. |
+| Goodpaster 1978 | PhilPapers: *Journal of Philosophy* 75(6):308–325 | |
+| Jonas 1984 | NYPL, Penn and USI catalogues (University of Chicago Press, 1984; trans. with David Herr; original 1979) | |
+| Johnston 2010, *Surviving Death* | Princeton University Press; De Gruyter record | Hempel Lecture Series |
+| Korsgaard 1996 | Cambridge Core book page; Tanner Lectures 1992 | |
+| Lewis 1979 | *Philosophical Review* 88(4):513–543 (JSTOR 2184843, PhilArchive) | |
+| Næss, "Self-realization" | Keith Roby Memorial Lecture, Murdoch University, 12 March 1986 (archived copy); Shambhala 1995 catalogue record of Sessions (ed.), *Deep Ecology for the 21st Century* | A 1987 *Trumpeter* 4(3) printing, cited in AI recall, was **not** found in any record and is not cited. Pages in Sessions not confirmed. |
+| Nagel 1970 | BnF and university catalogues; *Canadian Journal of Philosophy* critical notice (Clarendon Press, 148 pp.) | |
+| Parfit 1984 | standard; parts cited, not chapters | |
+| Parfit 1997 | PhilPapers: *Ratio* 10(3):202–221 | |
+| Perry 1979 | PhilPapers: *Noûs* 13(1):3–21 | |
+| Prior 1960, Schurz 1997, Sen 1970 | as checked for the logic dossier | |
+| Scheffler 2013 | OUP record (ISBN 9780199982509, ed. Niko Kolodny, with Wolf, Frankfurt, Shiffrin, Kolodny) | |
+| Siderits 2003 | university catalogues (Ashgate World Philosophies Series) | |
+| Taylor 1986 | Princeton University Press; catalogues | |
+| Turner, Smith, Shah, Critch, Tadepalli 2021 | NeurIPS 2021 proceedings page; arXiv 1912.01683 | |
+| Williams 1976 | catalogue of Rorty (ed.), *The Identities of Persons* (University of California Press, 1976), listing the essay | Pages not confirmed. |
+| Crisp 2003 | *Ethics* 113(4):745–763 (bibliographic records; Temkin's reply in the same volume) | |
+| Dreier 1993 | *The Monist* 76(1):22–40 (stafforini record; OUP Monist issue) | |
+| Fine 1975 | PhilPapers: *Synthese* 30(3–4):265–300 | |
+| Frankfurt 1987 | *Ethics* 98(1):21–43 (JSTOR 2381290) | |
+| Hare 1981 | Oxford Academic book page; CiNii (Clarendon Press, 1981) | |
+| Hyde 1997 | PhilPapers: *Mind* 106(424):641–660 | |
+| Kagan 2019 | *Utilitas* review record (OUP, 2019, x+309) | |
+| Kamm 1993 | OUP book page; *Canadian Journal of Philosophy* notice (New York: OUP, 1993) | |
+| Kiesewetter 2015 | Bielefeld and ANU repositories: *Ethics* 125(4):921–946 | |
+| Krakovna and others 2018 | arXiv 1806.01186 (titles and revision history) | |
+| McMahan 1981 | University of Chicago Press page, doi 10.1086/292301: *Ethics* 92(1):96–127 | |
+| Moore 1903 | fair-use.org text of §§59–62 | the argument runs across §§59–62, not §59 alone |
+| Narveson 1967 | stafforini record; Cambridge Core: *Mind* 76(301):62–72 | |
+| Portmore 2011 | Oxford Academic book page; *NDPR* review | |
+| Raz 2005 | *JESP* journal page, vol. 1 no. 1 | |
+| Restall and Russell 2010 | PhilPapers RESBTI; Restall's page (Pigden (ed.), Palgrave, 243–259) | author order Restall first; also titled "Barriers to Consequence" |
+| Scanlon 1998 | library catalogues; *Economics and Philosophy* review (Belknap, ix+420) | |
+| Scheffler 2018 | catalogues; *Utilitas* review (OUP, viii+146) | |
+| Shue 1980 | catalogues (Princeton University Press, 1980) | |
+| Sidgwick 1907 | the Book IV, chapter II text (laits.utexas.edu) | edition of that text not stated; 7th edition is the standard citation |
+| Taurek 1977 | stafforini record and PhilPapers: *Philosophy & Public Affairs* 6(4):293–316 | |
+| Turner, Hadfield-Menell and Tadepalli 2019 | arXiv 1902.09725 | venue beyond arXiv not confirmed, so not given |
+| Voorhoeve 2014 | LSE repository and PhilArchive: *Ethics* 125(1):64–87, doi 10.1086/677022 | |
+| Williams 1981 | catalogue records and the reprint in *Moral Luck*, pp. 101–113 | first published in Harrison (ed.), *Rational Action*; its year is given as 1979 or 1980 |

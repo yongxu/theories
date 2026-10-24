@@ -669,7 +669,7 @@ The pure core assumes no principle of classical logic ([§3](#pure-core-and-peri
 <a id="review-status"></a>
 ### Review status
 
-Every review so far is by AI ([§11](#reviews)) and checked existing results. Not yet reviewed: the joins of 17 October 2026 that put every spine theorem on the base and joined the periphery to it, everything landed after `b88c2d972` (19 October 2026), and these eight chapters. A review packet is planned (the one page, three reader dossiers, a sampled re-coding of the corpus classification), asking for independent review of the Lean statements against the prose and of the arguments, beginning with [significance](07-SIGNIFICANCE.md), and for scholars of the texts and logicians to review the [classical readings](06-CLASSICAL-TEXTS.md).
+Every review so far is by AI ([§11](#reviews)) and checked existing results. Not yet reviewed: the joins of 17 October 2026 that put every spine theorem on the base and joined the periphery to it, everything landed after `b88c2d972` (19 October 2026), and these eight chapters. The [review packet](../review/README.md) asks for it: dossiers for scholars of classical Chinese texts and of Buddhist thought on the [classical readings](06-CLASSICAL-TEXTS.md), for logicians on the Lean statements against the prose, and for philosophers on the arguments of [significance](07-SIGNIFICANCE.md), and a sampled re-coding of the corpus classification.
 
 <a id="does-not-show"></a>
 ## What this chapter does not show

@@ -28,4 +28,4 @@
 - The root and the ethics are one account only in part: held de se along a relation, the continuation condition is the root's condition that nothing lies outside every center's line under the full class of that relation, and along a net with no cycle it holds only with one center ([significance](chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)). The free significance is not lifted onto the root, and which class a center's own line runs under is open.
 - Whether either premise of the ethics can be warranted is open.
 - The test systems the theory should meet first (radioactive decay, an organism, an institution, a belief system) have no models yet.
-- No human has yet reviewed the work; review by scholars of the classical texts, of Buddhist thought and of logic is the next step ([the review packet](review/README.md)).
+- No human has yet reviewed the work; review by scholars of the classical texts, of Buddhist thought, of logic and of philosophy is the next step ([the review packet](review/README.md)).
