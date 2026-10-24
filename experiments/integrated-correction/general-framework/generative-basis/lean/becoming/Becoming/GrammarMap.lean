@@ -12,25 +12,31 @@ pattern from turnover that ends it; read at two grains it can.
 | name | reading |
 |---|---|
 | `«传»` | carrying renewal: the coarse pattern continues from `x` to `y` while a fine line begins at `y` (火传) |
-| `«全生成»` | generation: the coarse line never ends and a carrying renewal lies ahead of every point of it |
-| `«全守»` | keeping: the coarse line never ends, and from some point no carrying renewal lies ahead |
-| `«有终»` | degeneration: the coarse line reaches an end |
+| `«全生成»` | generation in the strong form: the coarse line never ends and a carrying renewal lies ahead of every point of it |
+| `«全守»` | keeping in the strong form: the coarse line never ends, and from some point no carrying renewal lies ahead |
+| `«有终»` | reaching an end: some point the coarse line reaches ends (not degeneration, `«退化»`, which is ending on every branch) |
 | `«新而有终»` | renewing and still ending: a carrying renewal on a line that ends |
 
-The regions exclude each other (`«全生成有终不并»`, `«全生成全守不并»`, `«全守有终不并»`), and each is
-inhabited (`Map.Endless.generation`, `Map.Still.keeping`, `Map.Short.degeneration`), and where going
-on and renewal are decided they cover every point (`«全三域之周»`). Generation holds along its own line
-(`«全生成之所及亦全生成»`) and degeneration reaches back along it (`«有终之所前亦有终»`). A carrying
-renewal is an alteration (`«传则异»`). A coarse class constant under 缘 never degenerates from a
-continued point (`«有常则无终»`), so what degenerates has a coarse class that is not constant
-(`«有终则粗不有常»`): its own regularity lies in the core. Renewal does not decide the region: a line
-can renew and still end (`Map.Short.renews_and_ends`). Telling generation from degeneration on
-every line, in every model, is exactly excluded middle (`«全生有终之定当且仅当排中»`): the boundary
-between them is where a line's going on is not decided.
+The strong forms exclude each other (`«全生成有终不并»`, `«全生成全守不并»`, `«全守有终不并»`), each is
+inhabited (`Map.Endless.generation`, `Map.Still.keeping`, `Map.Short.degeneration`; the last states
+only an end, 有终, and that the same point degenerates is `Map.Short.ends`), and with excluded
+middle as a hypothesis they cover every point (`«全三域之周»`). 全生成 holds along its own line
+(`«全生成之所及亦全生成»`) and an end reaches back along it (`«有终之所前亦有终»`). A carrying renewal
+is an alteration (`«传则异»`). A coarse class constant under 缘 has no end from a continued point
+(`«有常则无终»`), so what reaches an end after a continued step has a coarse class that is not
+constant (`«有终则粗不有常»`): its own regularity lies in the core. Renewal does not decide the
+region: a line can renew and still end (`Map.Short.renews_and_ends`). Telling a coarse line that never ends from
+one that reaches an end, at every point of every model, is exactly excluded middle
+(`«不穷有终之定当且仅当排中»`), and so is placing every point in one of the three strong forms
+(`«全三域之定当且仅当排中»`): the boundary between them is where a line's going on is not decided.
 
-Higher orders: a chain of classes, each finer than the next, reads generation at every order at
-once (`«阶全生成»`); generation at order `k` is the order-`k + 1` pattern continuing through order-`k`
-renewals, and the grammar's coarse net reads the same relation at each grain.
+Higher orders: a sequence of classes `Es` reads generation at order `k` as the order-`k + 1` pattern
+continuing through order-`k` renewals (`«阶全生成»`); no order between the classes is assumed, and the
+reading is meant for each class finer than the next. Every order reads the same relation `R`; the
+grammar's coarse net (`«粗»`) is not used here.
+
+Read along renewing into under the one, renewal without end (`«生生»` of `Becoming.Grammar`) is
+going on along some branch (`«生生即延»`) and ceasing (`«息»`) is ending on every branch (`«息即尽»`).
 
 Every declaration has an empty axiom report.
 -/
@@ -61,54 +67,55 @@ theorem «所及之传递» {R L : «际» α} {x y z : α} (h₁ : «所及» R
   | h, .inl e => by cases e; exact h
   | .inr a, .inr b => .inr («及之传递» a b)
 
-/-- Generation (生成): the coarse line from `x` never ends, and ahead of every point of it lies a
-carrying renewal. -/
+/-- Generation in the strong form (全生成): the coarse line from `x` never ends, and ahead of every
+point of it lies a carrying renewal. -/
 def «全生成» (R L E : «际» α) (x : α) : Prop :=
   «不穷» R L x ∧ ∀ y, «所及» R L x y → ∃ z w, «所及» R L y z ∧ «传» R L E z w
 
-/-- Keeping (守): the coarse line from `x` never ends, and from some point on no carrying renewal
-lies ahead. -/
+/-- Keeping in the strong form (全守): the coarse line from `x` never ends, and from some point on no
+carrying renewal lies ahead. -/
 def «全守» (R L E : «际» α) (x : α) : Prop :=
   «不穷» R L x ∧ ∃ y, «所及» R L x y ∧ ∀ z w, «所及» R L y z → ¬ «传» R L E z w
 
-/-- Degeneration (退化): the coarse line from `x` reaches an end. -/
+/-- Reaching an end (有终): some point the coarse line from `x` reaches ends. This is not degeneration
+(`«退化»`, ending on every branch). -/
 def «有终» (R L : «际» α) (x : α) : Prop := ∃ y, «所及» R L x y ∧ «亡» R L y
 
 /-- Renewing and still ending (新而终): a carrying renewal on a coarse line that ends. -/
 def «新而有终» (R L E : «际» α) (x : α) : Prop :=
   «有终» R L x ∧ ∃ z w, «所及» R L x z ∧ «传» R L E z w
 
-/-- Generation and degeneration exclude each other. -/
+/-- 全生成 and an end exclude each other. -/
 theorem «全生成有终不并» {R L E : «际» α} {x : α} : ¬ («全生成» R L E x ∧ «有终» R L x) :=
   fun ⟨⟨endless, _⟩, ⟨y, hy, ends⟩⟩ => ends (endless y hy)
 
-/-- Generation and keeping exclude each other. -/
+/-- 全生成 and 全守 exclude each other. -/
 theorem «全生成全守不并» {R L E : «际» α} {x : α} : ¬ («全生成» R L E x ∧ «全守» R L E x) :=
   fun ⟨⟨_, ahead⟩, ⟨_, ⟨y, hy, noRenewal⟩⟩⟩ =>
     match ahead y hy with
     | ⟨z, w, hz, c⟩ => noRenewal z w hz c
 
-/-- Keeping and degeneration exclude each other. -/
+/-- 全守 and an end exclude each other. -/
 theorem «全守有终不并» {R L E : «际» α} {x : α} : ¬ («全守» R L E x ∧ «有终» R L x) :=
   fun ⟨⟨endless, _⟩, ⟨y, hy, ends⟩⟩ => ends (endless y hy)
 
-/-- A coarse class constant under 缘 never degenerates from a continued point. -/
+/-- A coarse class constant under 缘 has no end from a continued point. -/
 theorem «有常则无终» {R L : «际» α} (hc : «有常» R L) {x : α} (hx : «有前» R L x) :
     ¬ «有终» R L x :=
   fun ⟨y, hy, ends⟩ => ends (match hy with
     | .inl e => by cases e; exact «有常则续不尽» hc hx
     | .inr l => «有常则相续不尽» hc l)
 
-/-- What degenerates after a continued step has a coarse class that is not constant: its course
+/-- What reaches an end after a continued step has a coarse class that is not constant: its course
 lies in the core, not in the class. -/
 theorem «有终则粗不有常» {R L : «际» α} {x : α} (hx : «有前» R L x) (h : «有终» R L x) :
     ¬ «有常» R L :=
   fun hc => («有常则无终» hc hx) h
 
-/-- **Telling generation from degeneration is exactly excluded middle.** That every coarse line,
-in every model, either never ends or reaches an end decides every proposition: the boundary between
-generation and degeneration is where a line's going on is not decided. -/
-theorem «全生有终之定当且仅当排中» :
+/-- **Telling a line that never ends from one that ends is exactly excluded middle.** That from
+every point, in every model, the coarse line either never ends or reaches an end decides every
+proposition: the boundary is where a line's going on is not decided. -/
+theorem «不穷有终之定当且仅当排中» :
     (∀ (β : Type) (R L : «际» β) (x : β), «不穷» R L x ∨ «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P := by
   constructor
   · intro h P
@@ -126,19 +133,20 @@ theorem «全生有终之定当且仅当排中» :
       | .inl s => exact s
       | .inr ns => exact absurd ⟨y, hy, ns⟩ nd
 
-/-- Generation holds along its own line: what a generating line reaches generates too. -/
+/-- 全生成 holds along its own line: what such a line reaches is 全生成 too. -/
 theorem «全生成之所及亦全生成» {R L E : «际» α} {x y : α} (h : «全生成» R L E x) (hy : «所及» R L x y) :
     «全生成» R L E y :=
   ⟨fun z hz => h.1 z («所及之传递» hy hz), fun z hz => h.2 z («所及之传递» hy hz)⟩
 
-/-- Degeneration reaches back along the line: what reaches a degenerating point degenerates. -/
+/-- An end reaches back along the line: what reaches a point whose line reaches an end reaches one too. -/
 theorem «有终之所前亦有终» {R L : «际» α} {x y : α} (hy : «所及» R L x y) (h : «有终» R L y) :
     «有终» R L x :=
   match h with
   | ⟨z, hz, ends⟩ => ⟨z, «所及之传递» hy hz, ends⟩
 
-/-- **The regions cover every point where going on and renewal are decided.** With excluded middle,
-every point of every coarse line generates, keeps or degenerates. -/
+/-- **With excluded middle the strong forms cover every point.** Every point of every coarse line is
+全生成, 全守 or reaches an end; that this holds in every model is excluded middle
+(`«全三域之定当且仅当排中»`). -/
 theorem «全三域之周» (em : ∀ P : Prop, P ∨ ¬ P) (R L E : «际» α) (x : α) :
     «全生成» R L E x ∨ «全守» R L E x ∨ «有终» R L x := by
   match em («有终» R L x) with
@@ -156,12 +164,31 @@ theorem «全三域之周» (em : ∀ P : Prop, P ∨ ¬ P) (R L E : «际» α)
       | .inl a => exact a
       | .inr na => exact absurd ⟨y, hy, fun z w hz c => na ⟨z, w, hz, c⟩⟩ nk
 
-/-- Higher orders (阶): a chain of classes `Es`, each finer than the next, reads generation at
-order `k` as the order-`k + 1` pattern continuing through order-`k` renewals. -/
+/-- **Placing every point in one of the three strong forms is exactly excluded middle.** That every
+point of every model is 全生成, 全守 or reaches an end decides every proposition; with excluded
+middle every point is so placed (`«全三域之周»`). -/
+theorem «全三域之定当且仅当排中» :
+    (∀ (β : Type) (R L E : «际» β) (x : β), «全生成» R L E x ∨ «全守» R L E x ∨ «有终» R L x) ↔
+      ∀ P : Prop, P ∨ ¬ P := by
+  constructor
+  · intro h P
+    have going : «不穷» (fun _ _ : Unit => P) «一» () → P := fun endless =>
+      match endless () (.inl rfl) with
+      | ⟨_, hp, _⟩ => hp
+    match h Unit (fun _ _ => P) «一» «一» () with
+    | .inl g => exact .inl (going g.1)
+    | .inr (.inl k) => exact .inl (going k.1)
+    | .inr (.inr ⟨_, _, ends⟩) => exact .inr fun hp => ends ⟨(), hp, trivial⟩
+  · intro em β R L E x
+    exact «全三域之周» em R L E x
+
+/-- Higher orders (阶): a sequence of classes `Es` reads generation at order `k` as the order-`k + 1`
+pattern continuing through order-`k` renewals. No order between the classes is assumed; the reading
+is meant for each class finer than the next. -/
 def «阶全生成» (R : «际» α) (Es : Nat → «际» α) (k : Nat) (x : α) : Prop :=
   «全生成» R (Es (k + 1)) (Es k) x
 
-/-- Generation at an order keeps the next order's line going: it cannot degenerate there. -/
+/-- 全生成 at an order keeps the next order's line from reaching an end. -/
 theorem «阶全生成则上无终» {R : «际» α} {Es : Nat → «际» α} {k : Nat} {x : α}
     (h : «阶全生成» R Es k x) : ¬ «有终» R (Es (k + 1)) x :=
   fun d => «全生成有终不并» ⟨h, d⟩
@@ -170,8 +197,11 @@ theorem «阶全生成则上无终» {R : «际» α} {Es : Nat → «际» α} 
 
 A pattern whose parts branch (a species whose members die, a fire passed along several fuels) has
 lines that end while it goes on. So the regions are read on branches: the pattern goes on along some
-branch (`«延»`, coinductive) or ends on every branch (`«尽»`, inductive), and the every-branch forms
-above (`«全生成»`, `«全守»`, `«有终»`) are their strong and weak cases. -/
+branch (`«延»`, coinductive) or ends on every branch (`«尽»`, inductive). The forms above that read
+the whole coarse line are stronger and weaker than these: `«全生成»` and `«全守»` ask every point
+reached to go on (`«不穷»`), which gives `«延»` (`«不穷则延»`), and `«有终»` asks an end at one point
+reached, where `«尽»` asks one on every branch. How they stand to the regions below (`«生成»`, `«守»`,
+`«退化»`) is not stated: `«全守»` allows a carrying renewal before its point, which `«守»` forbids. -/
 
 /-- A line under `L` continued by a continuation is a line. -/
 theorem «相续之续» {R L : «际» α} {x z w : α} (h : «相续» R L x z) (c : «续» R L z w) : «相续» R L x w :=
@@ -292,6 +322,23 @@ theorem «阶生成则上不退化» {R : «际» α} {Es : Nat → «际» α} 
     (h : «阶生成» R Es k x) : ¬ «退化» R (Es (k + 1)) x :=
   fun d => «生成退化不并» ⟨h, d⟩
 
+/-- **Renewal without end is going on along some branch of renewing into (生生即延).** -/
+theorem «生生即延» {R E : «际» α} {x : α} : «生生» R E x ↔ «延» («复生至» R E) «一» x :=
+  ⟨fun ⟨S, hS, hx⟩ => ⟨S, hx, fun z hz => match hS z hz with
+      | ⟨y, w, hr, hb, hl, hw⟩ => ⟨w, hw, ⟨y, hr, hb, hl⟩, trivial⟩⟩,
+   fun ⟨S, hx, hS⟩ => ⟨S, fun z hz => match hS z hz with
+      | ⟨w, hw, ⟨y, hr, hb, hl⟩, _⟩ => ⟨y, w, hr, hb, hl, hw⟩, hx⟩⟩
+
+/-- **Ceasing is ending on every branch of renewing into (息即尽).** -/
+theorem «息即尽» {R E : «际» α} {x : α} : «息» R E x ↔ «尽» («复生至» R E) «一» x := by
+  constructor
+  · intro h
+    induction h with
+    | mk _ ih => exact .mk fun w c => ih w c.1
+  · intro h
+    induction h with
+    | mk _ ih => exact .mk fun w c => ih w ⟨c, trivial⟩
+
 end Map
 
 /-! ## The three regions, inhabited -/
@@ -306,7 +353,7 @@ theorem step_irrefl : ∀ n, ¬ step n n
   | 0, h => Nat.noConfusion h
   | n + 1, h => step_irrefl n (Nat.succ.inj h)
 
-/-- Generation is inhabited: the endless chain generates under the one, renewing at every step. -/
+/-- 全生成 is inhabited: the endless chain, under the one, renews at every step. -/
 theorem Endless.generation : «全生成» step «一» «静» 0 := by
   refine ⟨fun y _ => ⟨y + 1, rfl, trivial⟩, fun y _ => ⟨y, y + 1, .inl rfl, ⟨rfl, trivial⟩, ?_⟩⟩
   intro ⟨z, hz, e⟩
@@ -316,7 +363,7 @@ theorem Endless.generation : «全生成» step «一» «静» 0 := by
 /-- A pattern that stays as it is: one occurrence conditioning itself. -/
 def still : «际» Unit := fun _ _ => True
 
-/-- Keeping is inhabited: the still pattern never ends and never renews. -/
+/-- 全守 is inhabited: the still pattern never ends and never renews. -/
 theorem Still.keeping : «全守» still «一» «一» () :=
   ⟨fun _ _ => ⟨(), trivial, trivial⟩, ⟨(), .inl rfl, fun _ _ _ ⟨_, hb⟩ => hb ⟨(), trivial, trivial⟩⟩⟩
 
@@ -326,7 +373,8 @@ def short : «际» Bool := fun a b => a = false ∧ b = true
 theorem short_end : «亡» short «一» true :=
   fun ⟨_, h, _⟩ => Bool.noConfusion h.1
 
-/-- Degeneration is inhabited: the short life ends. -/
+/-- An end is inhabited: the short life reaches an end (有终). The name is older than the distinction;
+that the same point degenerates is `Map.Short.ends`. -/
 theorem Short.degeneration : «有终» short «一» false :=
   ⟨true, .inr (.one ⟨⟨rfl, rfl⟩, trivial⟩), short_end⟩
 

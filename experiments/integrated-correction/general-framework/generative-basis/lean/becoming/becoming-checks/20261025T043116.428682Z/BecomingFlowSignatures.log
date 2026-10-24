@@ -1,0 +1,237 @@
+Becoming.sign_le : ∀ (n : Nat), Becoming.sign n ≤ n
+@Becoming.eq_zero_of_not_pos : ∀ {n : Nat}, ¬0 < n → n = 0
+Becoming.sign_le_one : ∀ (n : Nat), Becoming.sign n ≤ 1
+@Becoming.le_mul_sign : ∀ {g : Nat} (n : Nat), n ≤ g → n ≤ g * Becoming.sign n
+@Becoming.total_le : ∀ {α : Type} {p q : α → Nat} (as : List α),
+  (∀ (a : α), a ∈ as → p a ≤ q a) → Becoming.total as p ≤ Becoming.total as q
+@Becoming.total_add : ∀ {α : Type} (p q : α → Nat) (as : List α),
+  (Becoming.total as fun a => p a + q a) = Becoming.total as p + Becoming.total as q
+@Becoming.total_zero : ∀ {α : Type} (as : List α), (Becoming.total as fun x => 0) = 0
+@Becoming.total_mul : ∀ {α : Type} (g : Nat) (q : α → Nat) (as : List α),
+  (Becoming.total as fun a => g * q a) = g * Becoming.total as q
+@Becoming.total_swap : ∀ {α β : Type} (q : α → β → Nat) (bs : List β) (as : List α),
+  (Becoming.total as fun a => Becoming.total bs (q a)) = Becoming.total bs fun b => Becoming.total as fun a => q a b
+@Becoming.total_map : ∀ {α β : Type} (g : α → β) (q : β → Nat) (as : List α),
+  Becoming.total (List.map g as) q = Becoming.total as fun a => q (g a)
+@Becoming.total_congr : ∀ {α : Type} {p q : α → Nat},
+  (∀ (a : α), p a = q a) → ∀ (as : List α), Becoming.total as p = Becoming.total as q
+@Becoming.total_ones : ∀ {α : Type} (as : List α), (Becoming.total as fun x => 1) = as.length
+@Becoming.total_append : ∀ {α : Type} (q : α → Nat) (bs as : List α),
+  Becoming.total (as ++ bs) q = Becoming.total as q + Becoming.total bs q
+@Becoming.total_pos_of_mem : ∀ {α : Type} {q : α → Nat} {a : α} {as : List α},
+  a ∈ as → 0 < q a → 0 < Becoming.total as q
+@Becoming.le_total_of_mem : ∀ {α : Type} {q : α → Nat} {a : α} {as : List α}, a ∈ as → q a ≤ Becoming.total as q
+@Becoming.total_pos : ∀ {α : Type} {q : α → Nat} (as : List α), 0 < Becoming.total as q → ∃ a, a ∈ as ∧ 0 < q a
+@Becoming.count_le : ∀ {α : Type} (q : α → Nat) (as : List α), Becoming.count as q ≤ Becoming.total as q
+@Becoming.total_zero_of_count : ∀ {α : Type} {q : α → Nat} (as : List α),
+  Becoming.count as q = 0 → Becoming.total as q = 0
+@Becoming.total_le_count : ∀ {α : Type} {q : α → Nat} {g : Nat} (as : List α),
+  (∀ (a : α), a ∈ as → q a ≤ g) → Becoming.total as q ≤ g * Becoming.count as q
+@Becoming.steps_ge : ∀ {q : Nat → Nat} {K : Nat} (T N : Nat),
+  (∀ (t : Nat), T ≤ t → K ≤ q t) → K * N ≤ Becoming.total (Becoming.steps T N) q
+@Becoming.steps_le : ∀ {q : Nat → Nat} {R : Nat} (T N : Nat),
+  (∀ (t : Nat), T ≤ t → q t ≤ R) → Becoming.total (Becoming.steps T N) q ≤ R * N
+@Becoming.Web.ComesToStand.rises : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {c : C},
+  W.ComesToStand t c → W.Rises t c
+@Becoming.Web.rising_of_coming : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C},
+  (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.ComesToStand t c) → ∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.Rises t c
+@Becoming.lt_iff_pos : ∀ {a g b : Nat}, b = a + g → (a < b ↔ 0 < g)
+@Becoming.Flow.Acting.giversSupported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W → W.Dependent → ∀ (t : Nat) (c : C), L.GiversSupported W t c
+@Becoming.Flow.Balances.over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ (cs : List C) (t : Nat), W.stock cs (t + 1) + L.uptake cs t = W.stock cs t + L.replenishment cs t
+@Becoming.Flow.Balances.on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ (cs : List C) (t : Nat), L.BalancesOn W cs t
+@Becoming.Flow.balances_iff_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W ↔ ∀ (cs : List C) (t : Nat), L.BalancesOn W cs t
+@Becoming.Flow.BalancesOn.over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat},
+  L.BalancesOn W cs t → W.stock cs (t + 1) + L.uptake cs t = W.stock cs t + L.replenishment cs t
+@Becoming.Flow.BalancesOn.rise_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → W.Rises t c → 0 < L.given t c
+@Becoming.Flow.BalancesOn.fall_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → W.Falls t c → 0 < L.taken t c
+@Becoming.Flow.BalancesOn.rises_iff_gives : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  L.BalancesOn W cs t →
+    (∀ (c : C), c ∈ cs → L.taken t c = 0) →
+      ((∃ c, c ∈ cs ∧ W.Rises t c) ↔ ∃ f c, f ∈ L.present t ∧ c ∈ cs ∧ 0 < L.give t f c)
+@Becoming.Flow.accumulates_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} (T N : Nat),
+  (∀ (t : Nat), T ≤ t → t < T + N → L.BalancesOn W cs t) →
+    W.stock cs (T + N) + Becoming.total (Becoming.steps T N) (L.uptake cs) =
+      W.stock cs T + Becoming.total (Becoming.steps T N) (L.replenishment cs)
+@Becoming.Flow.Balances.accumulates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (cs : List C) (T N : Nat),
+      W.stock cs (T + N) + Becoming.total (Becoming.steps T N) (L.uptake cs) =
+        W.stock cs T + Becoming.total (Becoming.steps T N) (L.replenishment cs)
+@Becoming.Flow.Balances.rise_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {t : Nat} {c : C}, W.Rises t c → 0 < L.given t c
+@Becoming.Flow.Balances.renewedBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → L.Acting W → W.RenewedBy fun t f c => f ∈ L.present t ∧ 0 < L.give t f c
+@Becoming.Flow.Balances.fall_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {t : Nat} {c : C}, W.Falls t c → 0 < L.taken t c
+@Becoming.Flow.Balances.takenBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Taking W →
+      ∀ {t : Nat} {c : C}, W.Falls t c → ∃ f, f ∈ L.present t ∧ 0 < L.take t f c ∧ W.active t f ∧ W.draws t f c
+@Becoming.Flow.takers_le_uptake : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  L.takers cs t ≤ L.uptake cs t
+@Becoming.Flow.uptake_pos : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat} {f : F},
+  f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → 0 < L.uptake cs t
+@Becoming.Flow.replenishment_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.renewers cs t = 0 → L.replenishment cs t = 0
+@Becoming.Flow.replenishment_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {g : Nat},
+  L.Capacity cs g → ∀ (t : Nat), L.replenishment cs t ≤ g * L.renewers cs t
+@Becoming.Flow.uptake_needs_replenishment_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.uptake cs t) → ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.uptake_needs_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.uptake cs t) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.replenishment_recurs_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.renewing_recurs_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ¬∀ (t : Nat), T ≤ t → L.renewers cs t = 0
+@Becoming.Flow.replenishment_recurs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.renewing_recurs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.renewers cs t = 0
+@Becoming.Flow.BalancesOn.standing_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → W.ComesToStand t c → W.level (t + 1) c ≤ L.given t c
+@Becoming.Flow.Balances.standing_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {t : Nat} {c : C}, W.ComesToStand t c → W.level (t + 1) c ≤ L.given t c
+@Becoming.Flow.BalancesOn.rise_replenishes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → W.Rises t c → 0 < L.replenishment cs t
+@Becoming.Flow.Balances.rise_replenishes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {cs : List C} {c : C}, c ∈ cs → ∀ {t : Nat}, W.Rises t c → 0 < L.replenishment cs t
+@Becoming.Flow.Balances.standing_replenishes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {cs : List C} {c : C}, c ∈ cs → ∀ {t : Nat}, W.ComesToStand t c → 0 < L.replenishment cs t
+@Becoming.Flow.rising_needs_replenishment_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.Rises t c) → ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.standing_needs_replenishment_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.ComesToStand t c) → ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.rising_needs_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Balances W →
+    (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.Rises t c) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.standing_needs_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Balances W →
+    (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ cs ∧ W.ComesToStand t c) →
+      ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.replenishment cs t = 0
+@Becoming.Flow.replenished_over_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {K S N : Nat},
+  (∀ (t : Nat), S ≤ t → t < S + N → L.BalancesOn W cs t) →
+    (∀ (t : Nat), S ≤ t → K ≤ L.takers cs t) →
+      K * N ≤ W.stock cs S + Becoming.total (Becoming.steps S N) (L.replenishment cs)
+@Becoming.Flow.Balances.replenished_over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {K S : Nat},
+  L.Balances W →
+    (∀ (t : Nat), S ≤ t → K ≤ L.takers cs t) →
+      ∀ (N : Nat), K * N ≤ W.stock cs S + Becoming.total (Becoming.steps S N) (L.replenishment cs)
+@Becoming.Flow.renewers_over_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {g K S N : Nat},
+  (∀ (t : Nat), S ≤ t → t < S + N → L.BalancesOn W cs t) →
+    L.Capacity cs g →
+      (∀ (t : Nat), S ≤ t → K ≤ L.takers cs t) →
+        K * N ≤ W.stock cs S + g * Becoming.total (Becoming.steps S N) (L.renewers cs)
+@Becoming.Flow.Balances.renewers_over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {g K S : Nat},
+  L.Balances W →
+    L.Capacity cs g →
+      (∀ (t : Nat), S ≤ t → K ≤ L.takers cs t) →
+        ∀ (N : Nat), K * N ≤ W.stock cs S + g * Becoming.total (Becoming.steps S N) (L.renewers cs)
+@Becoming.Flow.More.replenishment_unbounded_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {T₀ : Nat},
+  (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W cs t) → L.More cs → ∀ (R : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.replenishment cs t ≤ R
+@Becoming.Flow.More.replenishment_unbounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C}, L.Balances W → L.More cs → ∀ (R T₀ : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.replenishment cs t ≤ R
+@Becoming.Flow.More.renewers_unbounded_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {g T₀ : Nat},
+  (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W cs t) →
+    L.Capacity cs g → L.More cs → ∀ (M : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.renewers cs t ≤ M
+@Becoming.Flow.More.renewers_unbounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {g : Nat}, L.Balances W → L.Capacity cs g → L.More cs → ∀ (M T₀ : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.renewers cs t ≤ M
+Becoming.Growing.balances : Becoming.Growing.flow.Balances Becoming.Growing.web
+Becoming.Growing.growing : Becoming.Growing.flow.Balances Becoming.Growing.web ∧
+  (∀ (t : Nat), Becoming.Growing.web.Rises t ()) ∧
+    (∀ (t : Nat), ¬Becoming.Growing.web.ComesToStand t ()) ∧ ∀ (t : Nat), 0 < Becoming.Growing.flow.given t ()
+Becoming.Expansion.taken_eq : ∀ (t : Nat), Becoming.Expansion.flow.taken t () = t
+Becoming.Expansion.given_eq : ∀ (t : Nat), Becoming.Expansion.flow.given t () = t
+Becoming.Expansion.takers_eq : ∀ (t : Nat), Becoming.Expansion.flow.takers [()] t = t
+Becoming.Expansion.present_active : ∀ (t : Nat) (f : Becoming.Expansion.Kind × Nat),
+  f ∈ Becoming.Expansion.present t → f.snd < t
+Becoming.Expansion.more : Becoming.Expansion.flow.Balances Becoming.Expansion.web ∧
+  Becoming.Expansion.flow.Acting Becoming.Expansion.web ∧
+    Becoming.Expansion.flow.Capacity [()] 1 ∧
+      Becoming.Expansion.web.Dependent ∧
+        (∀ (t : Nat), Becoming.Expansion.web.Arises t (Becoming.Expansion.Kind.renewer, t)) ∧
+          Becoming.Expansion.web.Unceasing ∧ Becoming.Expansion.flow.More [()]
+Becoming.Expansion.growers_take : Becoming.Expansion.flow.Taking Becoming.Expansion.web ∧
+  ∀ (t : Nat), Becoming.Expansion.flow.ArisesTaking Becoming.Expansion.web [()] t (Becoming.Expansion.Kind.grower, t)
+Becoming.Expansion.undepleted : Becoming.Expansion.web.Unceasing ∧
+  (∀ (t : Nat), ¬Becoming.Expansion.web.Rises t ()) ∧
+    ¬Becoming.Expansion.web.Depletes [()] fun t => ∃ f, Becoming.Expansion.web.Arises t f
+Becoming.Steady.steady : Becoming.Steady.flow.Balances Becoming.Steady.web ∧
+  Becoming.Steady.flow.Acting Becoming.Steady.web ∧
+    Becoming.Steady.flow.Taking Becoming.Steady.web ∧
+      Becoming.Steady.web.Dependent ∧
+        (∀ (t : Nat), 0 < Becoming.Steady.flow.uptake [()] t) ∧
+          (∀ (t : Nat) (f : Bool), ¬Becoming.Steady.web.Arises t f) ∧
+            ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → Becoming.Steady.flow.replenishment [()] t = 0
+Becoming.Oscillation.balances : ∀ (t : Nat),
+  Becoming.Oscillation.web.level (t + 1) () + Becoming.Oscillation.flow.taken t () =
+    Becoming.Oscillation.web.level t () + Becoming.Oscillation.flow.given t ()
+Becoming.Oscillation.takes_when_active : ∀ (t : Nat),
+  2 ≤ Becoming.Oscillation.charge t → 0 < 2 * (Becoming.Oscillation.charge t - 1)
+Becoming.Oscillation.active_when_taking : ∀ (t : Nat),
+  0 < 2 * (Becoming.Oscillation.charge t - 1) → 2 ≤ Becoming.Oscillation.charge t
+Becoming.Oscillation.takes : Becoming.Oscillation.flow.Taking Becoming.Oscillation.web ∧
+  ∀ (t : Nat) (f : Becoming.Oscillation.Formation),
+    Becoming.Oscillation.web.Arises t f → Becoming.Oscillation.flow.ArisesTaking Becoming.Oscillation.web [()] t f
+Becoming.Oscillation.takers_le : ∀ (t : Nat), Becoming.Oscillation.flow.takers [()] t ≤ 1
+Becoming.Oscillation.not_more : Becoming.Oscillation.flow.Balances Becoming.Oscillation.web ∧
+  Becoming.Oscillation.flow.Acting Becoming.Oscillation.web ∧
+    Becoming.Oscillation.flow.Capacity [()] 1 ∧
+      Becoming.Oscillation.web.Unceasing ∧ ¬Becoming.Oscillation.flow.More [()]
+Becoming.Cycle.ones : ∀ (t : Nat), (Becoming.total (Becoming.Cycle.present t) fun x => 1) = t
+Becoming.Cycle.present_lt : ∀ (t n : Nat), n ∈ Becoming.Cycle.present t → n < t
+Becoming.Cycle.closed_more : Becoming.Cycle.flow.Balances Becoming.Cycle.web ∧
+  Becoming.Cycle.flow.Acting Becoming.Cycle.web ∧
+    Becoming.Cycle.flow.Taking Becoming.Cycle.web ∧
+      Becoming.Cycle.flow.Capacity [()] 1 ∧
+        Becoming.Cycle.web.Dependent ∧
+          Becoming.Cycle.web.Unceasing ∧
+            Becoming.Cycle.flow.More [()] ∧
+              (∀ (t : Nat), Becoming.Cycle.web.stock [()] (t + 1) = Becoming.Cycle.web.stock [()] t) ∧
+                ∀ (t : Nat), Becoming.Cycle.flow.renewers [()] t = Becoming.Cycle.flow.takers [()] t
+@Becoming.Pulse.total_kind : ∀ {q : Becoming.Expansion.Kind × Nat → Nat} {k : Becoming.Expansion.Kind} {v : Nat},
+  (∀ (i : Nat), q (k, i) = v) → ∀ (n : Nat), Becoming.total (Becoming.Pulse.kind k n) q = n * v
+Becoming.Pulse.half_even : ∀ (m : Nat), Becoming.Pulse.half (2 * m) = m
+Becoming.Pulse.half_odd : ∀ (m : Nat), Becoming.Pulse.half (2 * m + 1) = m
+Becoming.Pulse.even_even : ∀ (m : Nat), Becoming.Pulse.even (2 * m) = true
+Becoming.Pulse.even_odd : ∀ (m : Nat), Becoming.Pulse.even (2 * m + 1) = false
+Becoming.Pulse.half_ge : ∀ (K t : Nat), 2 * K ≤ t → K ≤ Becoming.Pulse.half t
+Becoming.Pulse.parity : ∀ (t : Nat), (∃ m, t = 2 * m) ∨ ∃ m, t = 2 * m + 1
+Becoming.Pulse.taken_eq : ∀ (t : Nat), Becoming.Pulse.flow.taken t () = Becoming.Pulse.half t
+Becoming.Pulse.given_eq : ∀ (t : Nat), Becoming.Pulse.flow.given t () = Becoming.Pulse.pulse t
+Becoming.Pulse.takers_eq : ∀ (t : Nat), Becoming.Pulse.flow.takers [()] t = Becoming.Pulse.half t
+Becoming.Pulse.renewers_eq : ∀ (t : Nat), Becoming.Pulse.flow.renewers [()] t = Becoming.Pulse.pulse t
+Becoming.Pulse.balances : ∀ (t : Nat),
+  Becoming.Pulse.web.level (t + 1) () + Becoming.Pulse.flow.taken t () =
+    Becoming.Pulse.web.level t () + Becoming.Pulse.flow.given t ()
+Becoming.Pulse.pulsed : Becoming.Pulse.flow.Balances Becoming.Pulse.web ∧
+  Becoming.Pulse.flow.Acting Becoming.Pulse.web ∧
+    Becoming.Pulse.flow.Capacity [()] 1 ∧
+      Becoming.Pulse.flow.More [()] ∧
+        ∀ (T : Nat), ∃ t, T ≤ t ∧ Becoming.Pulse.flow.renewers [()] t = 0 ∧ Becoming.Pulse.flow.replenishment [()] t = 0

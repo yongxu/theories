@@ -1,0 +1,359 @@
+@Becoming.Hexagram.all_sound : ∀ {α : Type} (p : α → Bool) {l : List α}, l.all p = true → ∀ (x : α), x ∈ l → p x = true
+@Becoming.Hexagram.all_complete : ∀ {α : Type} (p : α → Bool) {l : List α},
+  (∀ (x : α), x ∈ l → p x = true) → l.all p = true
+@Becoming.Hexagram.all_congr : ∀ {α : Type} {p q : α → Bool}, (∀ (x : α), p x = q x) → ∀ (l : List α), l.all p = l.all q
+Becoming.Hexagram.same_comm : ∀ (x y : Bool), Becoming.Hexagram.same x y = Becoming.Hexagram.same y x
+Becoming.Hexagram.fixedPhase_between : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  Becoming.Hexagram.betweenEnds k = true → s.fixedPhase k = some (s.inPhase k)
+Becoming.Hexagram.fixedPhase_end : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  Becoming.Hexagram.betweenEnds k = false → s.fixedPhase k = none
+Becoming.Hexagram.holdsPlace_iff : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.holdsPlace k = true ↔ s.fixedPhase k = some true
+@Becoming.Hexagram.holdsPlace_inPhase : ∀ {s : Becoming.Hexagram} {k : Becoming.Hexagram.Place},
+  s.holdsPlace k = true → s.inPhase k = true
+Becoming.Hexagram.holdsPlace_ends : ∀ (s : Becoming.Hexagram),
+  s.holdsPlace Becoming.Hexagram.Place.p1 = false ∧ s.holdsPlace Becoming.Hexagram.Place.p6 = false
+@Becoming.Hexagram.one_in_phase_of_parity : ∀ {x y : Bool},
+  x ≠ y → ∀ (b : Bool), Becoming.Hexagram.same x b = true ∨ Becoming.Hexagram.same y b = true
+Becoming.Hexagram.top_no_parity : ¬∃ b,
+    Becoming.Hexagram.same (Becoming.Hexagram.xu.line Becoming.Hexagram.Place.p6) b = false ∧
+      Becoming.Hexagram.same (Becoming.Hexagram.qian.line Becoming.Hexagram.Place.p6) b = false
+@Becoming.Hexagram.parity_of_statement : ∀ {x b q : Bool},
+  Becoming.Hexagram.same x b = q → b = Becoming.Hexagram.parityOf x q
+Becoming.Hexagram.statements_fix_parity : ∀ (par : Becoming.Hexagram.Place → Bool),
+  (∀ (q : Nat × Becoming.Hexagram.Place × Bool),
+      q ∈ Becoming.Hexagram.placeStatements →
+        Becoming.Hexagram.same ((Becoming.Hexagram.number q.fst).line q.snd.fst) (par q.snd.fst) = q.snd.snd) →
+    par Becoming.Hexagram.Place.p3 = Becoming.Hexagram.odd Becoming.Hexagram.Place.p3 ∧
+      par Becoming.Hexagram.Place.p4 = Becoming.Hexagram.odd Becoming.Hexagram.Place.p4 ∧
+        par Becoming.Hexagram.Place.p5 = Becoming.Hexagram.odd Becoming.Hexagram.Place.p5
+Becoming.Hexagram.centre_fixes_parity : ∀ (par : Becoming.Hexagram.Place → Bool),
+  (∀ (q : Nat × Becoming.Hexagram.Place),
+      q ∈ Becoming.Hexagram.centreStatements →
+        Becoming.Hexagram.same ((Becoming.Hexagram.number q.fst).line q.snd) (par q.snd) = true) →
+    par Becoming.Hexagram.Place.p2 = Becoming.Hexagram.odd Becoming.Hexagram.Place.p2
+Becoming.Hexagram.placeStatements_between : ∀ (q : Nat × Becoming.Hexagram.Place × Bool),
+  q ∈ Becoming.Hexagram.placeStatements → Becoming.Hexagram.betweenEnds q.snd.fst = true
+Becoming.Hexagram.placeStatements_hold : ∀ (q : Nat × Becoming.Hexagram.Place × Bool),
+  q ∈ Becoming.Hexagram.placeStatements ++ Becoming.Hexagram.topStatements →
+    (Becoming.Hexagram.number q.fst).holdsPlace q.snd.fst = q.snd.snd
+Becoming.Hexagram.xu_top_no_place : Becoming.Hexagram.xu.fixedPhase Becoming.Hexagram.Place.p6 = none ∧
+  Becoming.Hexagram.xu.holdsPlace Becoming.Hexagram.Place.p6 = false ∧
+    Becoming.Hexagram.xu.inPhase Becoming.Hexagram.Place.p6 = true
+Becoming.Hexagram.qian_top : Becoming.Hexagram.qian.inPhase Becoming.Hexagram.Place.p6 = false ∧
+  Becoming.Hexagram.qian.holdsPlace Becoming.Hexagram.Place.p6 = false
+Becoming.Hexagram.tuanPlaceStatements_agree : ∀ (q : Nat × Becoming.Hexagram.Place × Bool),
+  q ∈ Becoming.Hexagram.tuanPlaceStatements →
+    Becoming.Hexagram.betweenEnds q.snd.fst = true ∧
+      (Becoming.Hexagram.number q.fst).inPhase q.snd.fst = q.snd.snd ∧
+        (Becoming.Hexagram.number q.fst).holdsPlace q.snd.fst = q.snd.snd
+Becoming.Hexagram.tuanWhole_between : ∀ (q : Nat × Bool),
+  q ∈ Becoming.Hexagram.tuanWholeStatements → (Becoming.Hexagram.number q.fst).wholeBetween q.snd = true
+Becoming.Hexagram.tuanWhole_six : Becoming.Hexagram.jian3.wholeSix true = false ∧
+  Becoming.Hexagram.jian4.wholeSix true = false ∧
+    Becoming.Hexagram.guiMei.wholeSix false = false ∧
+      Becoming.Hexagram.jiJi.wholeSix true = true ∧
+        Becoming.Hexagram.weiJi.wholeSix false = true ∧
+          Becoming.Hexagram.jian3.inPhase Becoming.Hexagram.Place.p1 = false ∧
+            Becoming.Hexagram.jian4.inPhase Becoming.Hexagram.Place.p1 = false ∧
+              Becoming.Hexagram.jian4.inPhase Becoming.Hexagram.Place.p6 = false ∧
+                Becoming.Hexagram.guiMei.inPhase Becoming.Hexagram.Place.p1 = true ∧
+                  Becoming.Hexagram.guiMei.inPhase Becoming.Hexagram.Place.p6 = true
+Becoming.Hexagram.allHold_iff : ∀ (s : Becoming.Hexagram),
+  s.allHold = true ↔
+    s = Becoming.Hexagram.jiJi ∨
+      s = Becoming.Hexagram.jian3 ∨ s = Becoming.Hexagram.jian4 ∨ s = Becoming.Hexagram.jiaRen
+Becoming.Hexagram.noneHold_iff : ∀ (s : Becoming.Hexagram),
+  s.noneHold = true ↔
+    s = Becoming.Hexagram.weiJi ∨ s = Becoming.Hexagram.guiMei ∨ s = Becoming.Hexagram.xie ∨ s = Becoming.Hexagram.kui
+Becoming.Hexagram.allHold_sites : ∀ (s : Becoming.Hexagram),
+  s.allHold = true ↔ ∀ (q : Becoming.Hexagram.Between), s.betweenPhase q = true
+Becoming.Hexagram.noneHold_sites : ∀ (s : Becoming.Hexagram),
+  s.noneHold = true ↔ ∀ (q : Becoming.Hexagram.Between), s.betweenPhase q = false
+Becoming.Hexagram.between_glues_iff : ∀ (s : Becoming.Hexagram),
+  (Becoming.Hexagram.atSites Becoming.Hexagram.betweenPhase).Glues s ↔ s.allHold = true ∨ s.noneHold = true
+@Becoming.Hexagram.between_no_free_frame : ∀ {A : Type} (P : Generative.Process Becoming.Hexagram A),
+  ¬∃ F, F.P = P ∧ (Becoming.Hexagram.atSites Becoming.Hexagram.betweenPhase).FitsFree F
+@Becoming.Hexagram.sameBetween_phase : ∀ {s t : Becoming.Hexagram},
+  s.SameBetween t → ∀ {k : Becoming.Hexagram.Place}, Becoming.Hexagram.betweenEnds k = true → s.inPhase k = t.inPhase k
+Becoming.Hexagram.falls_iff_phase : ∀ (s : Becoming.Hexagram) (j : Becoming.Hexagram.Seam),
+  s.falls j =
+    (Becoming.Hexagram.same (s.inPhase (Becoming.Hexagram.below j))
+        (Becoming.Hexagram.odd (Becoming.Hexagram.below j)) &&
+      Becoming.Hexagram.same (s.inPhase (Becoming.Hexagram.above j))
+        (Becoming.Hexagram.odd (Becoming.Hexagram.below j)))
+Becoming.Hexagram.rises_iff_phase : ∀ (s : Becoming.Hexagram) (j : Becoming.Hexagram.Seam),
+  s.rises j =
+    (Becoming.Hexagram.same (s.inPhase (Becoming.Hexagram.below j))
+        !Becoming.Hexagram.odd (Becoming.Hexagram.below j) &&
+      Becoming.Hexagram.same (s.inPhase (Becoming.Hexagram.above j)) !Becoming.Hexagram.odd (Becoming.Hexagram.below j))
+Becoming.Hexagram.alternates_iff_phase : ∀ (s : Becoming.Hexagram) (j : Becoming.Hexagram.Seam),
+  s.alternates j =
+    Becoming.Hexagram.same (s.inPhase (Becoming.Hexagram.below j)) (s.inPhase (Becoming.Hexagram.above j))
+@Becoming.Hexagram.opposed_mid_told : ∀ {s t : Becoming.Hexagram},
+  s.SameBetween t → s.opposed Becoming.Hexagram.Height.mid = t.opposed Becoming.Hexagram.Height.mid
+@Becoming.Hexagram.inner_seams_told : ∀ {s t : Becoming.Hexagram},
+  s.SameBetween t →
+    ∀ (j : Becoming.Hexagram.Seam),
+      Becoming.Hexagram.betweenEnds (Becoming.Hexagram.below j) = true →
+        Becoming.Hexagram.betweenEnds (Becoming.Hexagram.above j) = true →
+          s.falls j = t.falls j ∧ s.rises j = t.rises j ∧ s.alternates j = t.alternates j
+Becoming.Hexagram.sameBetween_flip_end : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Hexagram.betweenEnds k = false → (Becoming.Hexagram.flip k s).SameBetween s
+Becoming.Hexagram.alternates_flip_bottom : ∀ (s : Becoming.Hexagram),
+  (Becoming.Hexagram.flip Becoming.Hexagram.Place.p1 s).alternates Becoming.Hexagram.Seam.s12 =
+    !s.alternates Becoming.Hexagram.Seam.s12
+Becoming.Hexagram.alternates_flip_top : ∀ (s : Becoming.Hexagram),
+  (Becoming.Hexagram.flip Becoming.Hexagram.Place.p6 s).alternates Becoming.Hexagram.Seam.s56 =
+    !s.alternates Becoming.Hexagram.Seam.s56
+Becoming.Hexagram.ends_not_told : ∀ (s : Becoming.Hexagram),
+  ((Becoming.Hexagram.flip Becoming.Hexagram.Place.p1 s).SameBetween s ∧
+      (Becoming.Hexagram.flip Becoming.Hexagram.Place.p1 s).opposed Becoming.Hexagram.Height.low =
+          !s.opposed Becoming.Hexagram.Height.low ∧
+        (Becoming.Hexagram.flip Becoming.Hexagram.Place.p1 s).alternates Becoming.Hexagram.Seam.s12 =
+          !s.alternates Becoming.Hexagram.Seam.s12) ∧
+    (Becoming.Hexagram.flip Becoming.Hexagram.Place.p6 s).SameBetween s ∧
+      (Becoming.Hexagram.flip Becoming.Hexagram.Place.p6 s).opposed Becoming.Hexagram.Height.high =
+          !s.opposed Becoming.Hexagram.Height.high ∧
+        (Becoming.Hexagram.flip Becoming.Hexagram.Place.p6 s).alternates Becoming.Hexagram.Seam.s56 =
+          !s.alternates Becoming.Hexagram.Seam.s56
+Becoming.Hexagram.fixedPhase_complement : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.complement.fixedPhase k = Option.map (fun b => !b) (s.fixedPhase k)
+Becoming.Hexagram.fixedPhase_reverse : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.reverse.fixedPhase k.mirror = Option.map (fun b => !b) (s.fixedPhase k)
+Becoming.Hexagram.fixedPhase_flip_self : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Hexagram.betweenEnds k = true →
+    (Becoming.Hexagram.flip k s).fixedPhase k = Option.map (fun b => !b) (s.fixedPhase k)
+Becoming.Hexagram.placedCount_complement : ∀ (s : Becoming.Hexagram), s.complement.placedCount + s.placedCount = 4
+Becoming.Hexagram.fixedPhase_waxWane_enters : ∀ (s : Becoming.Hexagram),
+  s.waxWane.fixedPhase Becoming.Hexagram.Place.p2 = some !s.inPhase Becoming.Hexagram.Place.p1
+Becoming.Hexagram.fixedPhase_waxWane_rises : ∀ (s : Becoming.Hexagram) (j : Becoming.Hexagram.Seam),
+  Becoming.Hexagram.betweenEnds (Becoming.Hexagram.below j) = true →
+    Becoming.Hexagram.betweenEnds (Becoming.Hexagram.above j) = true →
+      s.waxWane.fixedPhase (Becoming.Hexagram.above j) =
+        Option.map (fun b => !b) (s.fixedPhase (Becoming.Hexagram.below j))
+Becoming.Hexagram.placedCount_waxWane : ∀ (s : Becoming.Hexagram),
+  s.waxWane.placedCount + s.placedCount + (s.inPhase Becoming.Hexagram.Place.p1).toNat =
+    4 + (s.inPhase Becoming.Hexagram.Place.p5).toNat
+Becoming.Hexagram.betweenPhases_not_lumped : ¬Becoming.Learning.Lumped Becoming.Hexagram.betweenPhases fun s =>
+    s.waxWane.betweenPhases
+Becoming.Hexagram.betweenPhases_not_goAlike : ¬Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.waxWane)
+    Becoming.Hexagram.betweenPhases
+Becoming.Hexagram.course_between : ∀ (s : Becoming.Hexagram),
+  ((Becoming.Law.orbit Becoming.Hexagram.waxWane s 1).holdsPlace Becoming.Hexagram.Place.p2).toNat +
+          ((Becoming.Law.orbit Becoming.Hexagram.waxWane s 2).holdsPlace Becoming.Hexagram.Place.p3).toNat +
+        ((Becoming.Law.orbit Becoming.Hexagram.waxWane s 3).holdsPlace Becoming.Hexagram.Place.p4).toNat +
+      ((Becoming.Law.orbit Becoming.Hexagram.waxWane s 4).holdsPlace Becoming.Hexagram.Place.p5).toNat =
+    2
+Becoming.Hexagram.answers_symm : ∀ (s : Becoming.Hexagram) (k k' : Becoming.Hexagram.Place),
+  s.answers k k' = s.answers k' k
+Becoming.Hexagram.answers_self : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place), s.answers k k = false
+Becoming.Hexagram.opposed_answers : ∀ (s : Becoming.Hexagram) (h : Becoming.Hexagram.Height),
+  s.opposed h =
+    s.answers (Becoming.Hexagram.place Becoming.Hexagram.Half.lower h)
+      (Becoming.Hexagram.place Becoming.Hexagram.Half.upper h)
+Becoming.Hexagram.alternates_answers : ∀ (s : Becoming.Hexagram) (j : Becoming.Hexagram.Seam),
+  s.alternates j = s.answers (Becoming.Hexagram.below j) (Becoming.Hexagram.above j)
+Becoming.Hexagram.answers_complement : ∀ (s : Becoming.Hexagram) (k k' : Becoming.Hexagram.Place),
+  s.complement.answers k k' = s.answers k k'
+@Becoming.Hexagram.mem_others : ∀ {k k' : Becoming.Hexagram.Place}, k' ≠ k → k' ∈ Becoming.Hexagram.others k
+@Becoming.Hexagram.sole_answered : ∀ {s : Becoming.Hexagram} {k : Becoming.Hexagram.Place},
+  s.sole k = true → ∀ {k' : Becoming.Hexagram.Place}, k' ≠ k → s.answers k k' = true
+Becoming.Hexagram.not_mem_others_self : ∀ (k : Becoming.Hexagram.Place), ¬k ∈ Becoming.Hexagram.others k
+@Becoming.Hexagram.sole_of_answered : ∀ {s : Becoming.Hexagram} {k : Becoming.Hexagram.Place},
+  (∀ (k' : Becoming.Hexagram.Place), k' ≠ k → s.answers k k' = true) → s.sole k = true
+Becoming.Hexagram.sole_count : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.sole k = (s.line k && s.yang == 1 || !s.line k && s.yang == 5)
+Becoming.Hexagram.soleAny_count : ∀ (s : Becoming.Hexagram), s.soleAny = (s.yang == 1 || s.yang == 5)
+@Becoming.Hexagram.sole_any : ∀ {s : Becoming.Hexagram} {k : Becoming.Hexagram.Place},
+  s.sole k = true → s.soleAny = true
+@Becoming.Hexagram.none_sole : ∀ {s : Becoming.Hexagram},
+  s.soleAny = false → ∀ (k : Becoming.Hexagram.Place), s.sole k = false
+@Becoming.Hexagram.sole_unique : ∀ {s : Becoming.Hexagram} {k k' : Becoming.Hexagram.Place},
+  s.sole k = true → s.sole k' = true → k = k'
+Becoming.Hexagram.sole_iff_flip : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.sole k = true ↔ s = Becoming.Hexagram.flip k (Becoming.Hexagram.uniform !s.line k)
+Becoming.Hexagram.sole_flip : ∀ (k : Becoming.Hexagram.Place) (b : Bool),
+  (Becoming.Hexagram.flip k (Becoming.Hexagram.uniform b)).sole k = true
+Becoming.Hexagram.sole_complement : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.complement.sole k = s.sole k
+Becoming.Hexagram.sole_reverse : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.reverse.sole k.mirror = s.sole k
+Becoming.Hexagram.sole_any_phase : ∀ (k : Becoming.Hexagram.Place) (v : Bool), ∃ s, s.sole k = true ∧ s.inPhase k = v
+Becoming.Hexagram.sole_places : (List.filter (fun q => q.fst.holdsPlace q.snd) Becoming.Hexagram.soleList).length = 4 ∧
+  (List.filter (fun q => Becoming.Hexagram.betweenEnds q.snd && !q.fst.inPhase q.snd)
+          Becoming.Hexagram.soleList).length =
+      4 ∧
+    (List.filter (fun q => !Becoming.Hexagram.betweenEnds q.snd) Becoming.Hexagram.soleList).length = 4
+Becoming.Hexagram.sole_opposition : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.sole k = true → s.opposition = Becoming.Hexagram.heightMark (Becoming.Hexagram.heightOf k)
+Becoming.Hexagram.jie_one_opposed : Becoming.Hexagram.jie.opposition =
+    Becoming.Hexagram.heightMark Becoming.Hexagram.Height.low ∧
+  Becoming.Hexagram.jie.soleAny = false
+Becoming.Hexagram.sole_broken_seams : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.sole k = true →
+    s.line k = false →
+      (∀ (j : Becoming.Hexagram.Seam), Becoming.Hexagram.above j = k → s.falls j = true) ∧
+        (∀ (j : Becoming.Hexagram.Seam), Becoming.Hexagram.below j = k → s.rises j = true) ∧
+          s.fallCount + Becoming.Hexagram.bottomMark k = 1 ∧ s.riseCount + Becoming.Hexagram.topMark k = 1
+Becoming.Hexagram.sole_unbroken_seams : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  s.sole k = true →
+    s.line k = true →
+      (∀ (j : Becoming.Hexagram.Seam), Becoming.Hexagram.above j = k → s.rises j = true) ∧
+        (∀ (j : Becoming.Hexagram.Seam), Becoming.Hexagram.below j = k → s.falls j = true) ∧
+          s.riseCount + Becoming.Hexagram.bottomMark k = 1 ∧ s.fallCount + Becoming.Hexagram.topMark k = 1
+Becoming.Hexagram.guai_iff : ∀ (s : Becoming.Hexagram),
+  s.sole Becoming.Hexagram.Place.p6 = true ∧ s.line Becoming.Hexagram.Place.p6 = false ↔ s = Becoming.Hexagram.guai
+Becoming.Hexagram.guai_sole : Becoming.Hexagram.guai.sole Becoming.Hexagram.Place.p6 = true ∧
+  Becoming.Hexagram.guai.line Becoming.Hexagram.Place.p6 = false ∧ Becoming.Hexagram.guai.fallCount = 1
+Becoming.Hexagram.soleAny_waxWane : ∀ (s : Becoming.Hexagram), (s.soleAny && s.waxWane.soleAny) = false
+@Becoming.Hexagram.sole_waxWane_none : ∀ {s : Becoming.Hexagram} {k : Becoming.Hexagram.Place},
+  s.sole k = true → ∀ (k' : Becoming.Hexagram.Place), s.waxWane.sole k' = false
+Becoming.Hexagram.sole_six : ∀ (s : Becoming.Hexagram) (k : Becoming.Hexagram.Place),
+  (Becoming.Law.orbit Becoming.Hexagram.waxWane s 6).sole k = s.sole k
+Becoming.Hexagram.sole_top_passes : ∀ (s : Becoming.Hexagram),
+  s.sole Becoming.Hexagram.Place.p6 = true →
+    (s.waxWane = Becoming.Hexagram.uniform true ∨ s.waxWane = Becoming.Hexagram.uniform false) ∧
+      (Becoming.Law.orbit Becoming.Hexagram.waxWane s 2).sole Becoming.Hexagram.Place.p1 = true
+Becoming.Hexagram.answeredStatements_sole : ∀ (q : Nat × Becoming.Hexagram.Place),
+  q ∈ Becoming.Hexagram.answeredStatements → (Becoming.Hexagram.number q.fst).sole q.snd = true
+Becoming.Hexagram.lv_sole : Becoming.Hexagram.lv.sole Becoming.Hexagram.Place.p3 = true ∧
+  Becoming.Hexagram.lv.answers Becoming.Hexagram.Place.p3 Becoming.Hexagram.Place.p4 = true ∧
+    Becoming.Hexagram.lv.answers Becoming.Hexagram.Place.p3 Becoming.Hexagram.Place.p5 = true ∧
+      Becoming.Hexagram.lv.answers Becoming.Hexagram.Place.p3 Becoming.Hexagram.Place.p6 = true
+Becoming.Hexagram.feng_no_sole : Becoming.Hexagram.feng.soleAny = false
+Becoming.Hexagram.xiaoXu_answered : Becoming.Hexagram.xiaoXu.sole Becoming.Hexagram.Place.p4 = true ∧
+  Becoming.Hexagram.xiaoXu.opposition = Becoming.Hexagram.heightMark Becoming.Hexagram.Height.low
+Becoming.Hexagram.daYou_answered : Becoming.Hexagram.daYou.sole Becoming.Hexagram.Place.p5 = true ∧
+  Becoming.Hexagram.daYou.opposition = Becoming.Hexagram.heightMark Becoming.Hexagram.Height.mid
+Becoming.Hexagram.lineTextMiddle_places : (∀ (q : Nat × Becoming.Hexagram.Place),
+    q ∈ Becoming.Hexagram.lineTextMiddle → Becoming.Hexagram.betweenEnds q.snd = true) ∧
+  (List.filter (fun q => Becoming.Hexagram.middle q.snd) Becoming.Hexagram.lineTextMiddle).length = 5 ∧
+    (List.filter (fun q => Becoming.Hexagram.middle q.snd) Becoming.Hexagram.middleCourseLines).length = 2
+Becoming.Hexagram.lineTextPlace_holds : ∀ (q : Nat × Becoming.Hexagram.Place),
+  q ∈ Becoming.Hexagram.lineTextPlace →
+    Becoming.Hexagram.middle q.snd = true ∧
+      (Becoming.Hexagram.number q.fst).inPhase q.snd = true ∧ (Becoming.Hexagram.number q.fst).holdsPlace q.snd = true
+Becoming.Hexagram.run_between_rises : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).fixedPhase Becoming.Hexagram.Place.p2 =
+      some !((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).inPhase Becoming.Hexagram.Place.p1 ∧
+    ∀ (j : Becoming.Hexagram.Seam),
+      Becoming.Hexagram.betweenEnds (Becoming.Hexagram.below j) = true →
+        Becoming.Hexagram.betweenEnds (Becoming.Hexagram.above j) = true →
+          ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).fixedPhase (Becoming.Hexagram.above j) =
+            Option.map (fun b => !b)
+              (((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).fixedPhase (Becoming.Hexagram.below j))
+Becoming.Hexagram.run_placedCount : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).placedCount +
+        ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).placedCount +
+      (((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).inPhase Becoming.Hexagram.Place.p1).toNat =
+    4 + (((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).inPhase Becoming.Hexagram.Place.p5).toNat
+Becoming.Hexagram.run_course_between : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).holdsPlace Becoming.Hexagram.Place.p2).toNat +
+          (((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 2)).holdsPlace Becoming.Hexagram.Place.p3).toNat +
+        (((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 3)).holdsPlace Becoming.Hexagram.Place.p4).toNat +
+      (((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 4)).holdsPlace Becoming.Hexagram.Place.p5).toNat =
+    2
+Becoming.Hexagram.run_between_six : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (∀ (k : Becoming.Hexagram.Place),
+      ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 6)).fixedPhase k =
+        Option.map (fun b => !b) (((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).fixedPhase k)) ∧
+    ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 6)).placedCount +
+        ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).placedCount =
+      4
+Becoming.Hexagram.backward_between : ∀ (s : Becoming.Hexagram) (n : Nat) (k : Becoming.Hexagram.Place),
+  ((Becoming.Law.run Becoming.Hexagram.unwaxWane s.reverse).state n).fixedPhase k.mirror =
+    Option.map (fun b => !b) (((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).fixedPhase k)
+Becoming.Hexagram.changes_run_between : ∀ (r : Becoming.Run Becoming.Hexagram.changes) (n : Nat),
+  (Becoming.Hexagram.betweenEnds (r.act n) = false → (r.state (n + 1)).SameBetween (r.state n)) ∧
+    (Becoming.Hexagram.betweenEnds (r.act n) = true →
+      (r.state (n + 1)).fixedPhase (r.act n) = Option.map (fun b => !b) ((r.state n).fixedPhase (r.act n)))
+@Becoming.Hexagram.between_shown_along_runs : ∀ {A B : Type} {P : Generative.Process Becoming.Hexagram A}
+  {Q : Generative.Process Becoming.Hexagram B} (r : Becoming.Run P) (r' : Becoming.Run Q) (n m : Nat),
+  ((r.state n).SameBetween (r'.state m) →
+      (r.state n).opposed Becoming.Hexagram.Height.mid = (r'.state m).opposed Becoming.Hexagram.Height.mid ∧
+        ∀ (j : Becoming.Hexagram.Seam),
+          Becoming.Hexagram.betweenEnds (Becoming.Hexagram.below j) = true →
+            Becoming.Hexagram.betweenEnds (Becoming.Hexagram.above j) = true →
+              (r.state n).falls j = (r'.state m).falls j ∧
+                (r.state n).rises j = (r'.state m).rises j ∧ (r.state n).alternates j = (r'.state m).alternates j) ∧
+    (∀ (k : Becoming.Hexagram.Place), (r.state n).holdsPlace k = true ↔ (r.state n).fixedPhase k = some true) ∧
+      (∀ (k : Becoming.Hexagram.Place), (r.state n).holdsPlace k = true → (r.state n).inPhase k = true) ∧
+        (∀ (k : Becoming.Hexagram.Place), Becoming.Hexagram.betweenEnds k = false → (r.state n).fixedPhase k = none) ∧
+          (r.state n).holdsPlace Becoming.Hexagram.Place.p1 = false ∧
+            (r.state n).holdsPlace Becoming.Hexagram.Place.p6 = false ∧
+              (∀ (j : Becoming.Hexagram.Seam),
+                  (r.state n).falls j =
+                    (Becoming.Hexagram.same ((r.state n).inPhase (Becoming.Hexagram.below j))
+                        (Becoming.Hexagram.odd (Becoming.Hexagram.below j)) &&
+                      Becoming.Hexagram.same ((r.state n).inPhase (Becoming.Hexagram.above j))
+                        (Becoming.Hexagram.odd (Becoming.Hexagram.below j)))) ∧
+                (∀ (j : Becoming.Hexagram.Seam),
+                    (r.state n).rises j =
+                      (Becoming.Hexagram.same ((r.state n).inPhase (Becoming.Hexagram.below j))
+                          !Becoming.Hexagram.odd (Becoming.Hexagram.below j) &&
+                        Becoming.Hexagram.same ((r.state n).inPhase (Becoming.Hexagram.above j))
+                          !Becoming.Hexagram.odd (Becoming.Hexagram.below j))) ∧
+                  ∀ (j : Becoming.Hexagram.Seam),
+                    (r.state n).alternates j =
+                      Becoming.Hexagram.same ((r.state n).inPhase (Becoming.Hexagram.below j))
+                        ((r.state n).inPhase (Becoming.Hexagram.above j))
+@Becoming.Hexagram.between_glue_along_run : ∀ {A : Type} {P : Generative.Process Becoming.Hexagram A}
+  (r : Becoming.Run P) (n : Nat),
+  (Becoming.Hexagram.atSites Becoming.Hexagram.betweenPhase).Glues (r.state n) ↔
+    (r.state n = Becoming.Hexagram.jiJi ∨
+        r.state n = Becoming.Hexagram.jian3 ∨
+          r.state n = Becoming.Hexagram.jian4 ∨ r.state n = Becoming.Hexagram.jiaRen) ∨
+      r.state n = Becoming.Hexagram.weiJi ∨
+        r.state n = Becoming.Hexagram.guiMei ∨ r.state n = Becoming.Hexagram.xie ∨ r.state n = Becoming.Hexagram.kui
+Becoming.Hexagram.changes_run_ends : ∀ (r : Becoming.Run Becoming.Hexagram.changes) (n : Nat),
+  (r.act n = Becoming.Hexagram.Place.p1 →
+      (r.state (n + 1)).SameBetween (r.state n) ∧
+        (r.state (n + 1)).opposed Becoming.Hexagram.Height.low = !(r.state n).opposed Becoming.Hexagram.Height.low ∧
+          (r.state (n + 1)).alternates Becoming.Hexagram.Seam.s12 =
+            !(r.state n).alternates Becoming.Hexagram.Seam.s12) ∧
+    (r.act n = Becoming.Hexagram.Place.p6 →
+      (r.state (n + 1)).SameBetween (r.state n) ∧
+        (r.state (n + 1)).opposed Becoming.Hexagram.Height.high = !(r.state n).opposed Becoming.Hexagram.Height.high ∧
+          (r.state (n + 1)).alternates Becoming.Hexagram.Seam.s56 = !(r.state n).alternates Becoming.Hexagram.Seam.s56)
+@Becoming.Hexagram.sole_shown_along_run : ∀ {A : Type} {P : Generative.Process Becoming.Hexagram A} (r : Becoming.Run P)
+  (n : Nat) (k : Becoming.Hexagram.Place),
+  (r.state n).sole k = ((r.state n).line k && (r.state n).yang == 1 || !(r.state n).line k && (r.state n).yang == 5) ∧
+    (r.state n).soleAny = ((r.state n).yang == 1 || (r.state n).yang == 5) ∧
+      ((r.state n).sole k = true ↔ ∀ (k' : Becoming.Hexagram.Place), k' ≠ k → (r.state n).answers k k' = true) ∧
+        ((r.state n).sole k = true ↔
+            r.state n = Becoming.Hexagram.flip k (Becoming.Hexagram.uniform !(r.state n).line k)) ∧
+          ((r.state n).sole k = true →
+              (∀ (k' : Becoming.Hexagram.Place), (r.state n).sole k' = true → k = k') ∧
+                (r.state n).opposition = Becoming.Hexagram.heightMark (Becoming.Hexagram.heightOf k) ∧
+                  ((r.state n).line k = false →
+                      (r.state n).fallCount + Becoming.Hexagram.bottomMark k = 1 ∧
+                        (r.state n).riseCount + Becoming.Hexagram.topMark k = 1) ∧
+                    ((r.state n).line k = true →
+                      (r.state n).riseCount + Becoming.Hexagram.bottomMark k = 1 ∧
+                        (r.state n).fallCount + Becoming.Hexagram.topMark k = 1)) ∧
+            ((r.state n).sole Becoming.Hexagram.Place.p6 = true ∧ (r.state n).line Becoming.Hexagram.Place.p6 = false ↔
+              r.state n = Becoming.Hexagram.guai)
+@Becoming.Hexagram.answers_shown_along_run : ∀ {A : Type} {P : Generative.Process Becoming.Hexagram A}
+  (r : Becoming.Run P) (n : Nat),
+  (∀ (k k' : Becoming.Hexagram.Place), (r.state n).answers k k' = (r.state n).answers k' k) ∧
+    (∀ (k : Becoming.Hexagram.Place), (r.state n).answers k k = false) ∧
+      (∀ (h : Becoming.Hexagram.Height),
+          (r.state n).opposed h =
+            (r.state n).answers (Becoming.Hexagram.place Becoming.Hexagram.Half.lower h)
+              (Becoming.Hexagram.place Becoming.Hexagram.Half.upper h)) ∧
+        (∀ (j : Becoming.Hexagram.Seam),
+            (r.state n).alternates j = (r.state n).answers (Becoming.Hexagram.below j) (Becoming.Hexagram.above j)) ∧
+          ∀ (k k' : Becoming.Hexagram.Place), (r.state n).complement.answers k k' = (r.state n).answers k k'
+Becoming.Hexagram.backward_sole : ∀ (s : Becoming.Hexagram) (n : Nat) (k : Becoming.Hexagram.Place),
+  ((Becoming.Law.run Becoming.Hexagram.unwaxWane s.reverse).state n).sole k.mirror =
+    ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).sole k
+Becoming.Hexagram.run_sole : ∀ (s : Becoming.Hexagram) (n : Nat) (k : Becoming.Hexagram.Place),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).sole k = true →
+    (∀ (k' : Becoming.Hexagram.Place), ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 1)).sole k' = false) ∧
+      ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 6)).sole k = true ∧
+        (k = Becoming.Hexagram.Place.p6 →
+          ((Becoming.Law.run Becoming.Hexagram.waxWane s).state (n + 2)).sole Becoming.Hexagram.Place.p1 = true)
+Becoming.Hexagram.changes_run_sole : ∀ (r : Becoming.Run Becoming.Hexagram.changes) (n : Nat),
+  ((r.state n).sole (r.act n) = true → r.state (n + 1) = Becoming.Hexagram.uniform !(r.state n).line (r.act n)) ∧
+    ∀ (b : Bool), r.state n = Becoming.Hexagram.uniform b → (r.state (n + 1)).sole (r.act n) = true

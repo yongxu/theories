@@ -57,8 +57,8 @@
       ]
     },
     {
-      "en": "The every-branch forms: generation along every branch, keeping along every branch and an end on some branch exclude each other and, with excluded middle, cover every point; generation holds along its line and an end reaches back along it; telling them apart on every line is exactly excluded middle.",
-      "zh": "诸支之形：诸支之生成、诸支之守与某支之终两两互斥，有排中律时覆盖每一点；生成沿其线成立，终沿其线向前传；在每条线上分辨它们恰是排中律。",
+      "en": "The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; coverage by the some-branch regions is not proved. Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it.",
+      "zh": "强形读整条粗线：全生成（线不穷，且自其所及之每一点，前有传）、全守（不穷，且自某点起前无传，此前之传不论）与有终（其所及之某点终，此非退化）彼此排斥，以排中律则覆盖每一点；某支诸域之覆盖未证。把每一模型之每一点都置于强形之一，恰是排中律；分开不穷之线与有终之线，亦恰是排中律；全生成沿其线而存，有终沿其线而回溯。",
       "declarations": [
         "Becoming.«全生成»",
         "Becoming.«全守»",
@@ -70,7 +70,8 @@
         "Becoming.«全三域之周»",
         "Becoming.«全生成之所及亦全生成»",
         "Becoming.«有终之所前亦有终»",
-        "Becoming.«全生有终之定当且仅当排中»"
+        "Becoming.«不穷有终之定当且仅当排中»",
+        "Becoming.«全三域之定当且仅当排中»"
       ]
     },
     {
@@ -94,8 +95,8 @@
       ]
     },
     {
-      "en": "A coarse class constant under 缘 has no end from a continued point, so what ends after a continued step has a coarse class that is not constant. A chain of classes reads generation at every order, and generation at an order keeps the next order's pattern from ending on every branch.",
-      "zh": "对缘有常之粗类，自有前之点无终；故有前而终者，其粗类不有常。一串类在每一阶读生成，某阶之生成使上一阶之样式不诸支皆尽。",
+      "en": "A coarse class constant under 缘 has no end from a continued point, so what ends after a continued step has a coarse class that is not constant. A sequence of classes, no order between them assumed, reads generation at every order, and generation at an order keeps the next order's pattern from ending on every branch.",
+      "zh": "对缘有常之粗类，自有前之点无终；故有前而终者，其粗类不有常。一串类（不设其间之序）在每一阶读生成，某阶之生成使上一阶之样式不诸支皆尽。",
       "declarations": [
         "Becoming.«有常则无终»",
         "Becoming.«有终则粗不有常»",
@@ -123,6 +124,14 @@
         "Becoming.Map.shifted_generates",
         "Becoming.Map.relay_renews_and_ends",
         "Becoming.Map.renewal_undecided"
+      ]
+    },
+    {
+      "en": "Read along renewing into under the one, renewal without end is going on along some branch, and ceasing is ending on every branch.",
+      "zh": "在“一”之下沿复生至而读，生生即某一支上之延，息即诸支皆尽。",
+      "declarations": [
+        "Becoming.«生生即延»",
+        "Becoming.«息即尽»"
       ]
     }
   ],
@@ -172,8 +181,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 36 theorems in 55 declarations, and Becoming.MapInstances, 25 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，55 个声明中 36 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 39 theorems in 58 declarations, and Becoming.MapInstances, 25 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，58 个声明中 39 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "State the old map's regimes (renewal, consumption, capture, the five questions of 势) as regions of this map on the old base's readings, and the meta-attractor's reading of selection at the coarse grain.",
@@ -216,16 +225,17 @@
     "Becoming.Web.passing_carries_iff",
     "Becoming.Web.stopped_not_endless",
     "Becoming.«不穷则延»",
+    "Becoming.«不穷有终之定当且仅当排中»",
     "Becoming.«传»",
     "Becoming.«传则异»",
     "Becoming.«全三域之周»",
+    "Becoming.«全三域之定当且仅当排中»",
     "Becoming.«全守»",
     "Becoming.«全守有终不并»",
     "Becoming.«全生成»",
     "Becoming.«全生成之所及亦全生成»",
     "Becoming.«全生成全守不并»",
     "Becoming.«全生成有终不并»",
-    "Becoming.«全生有终之定当且仅当排中»",
     "Becoming.«单行则族含所及»",
     "Becoming.«单行则生守不并»",
     "Becoming.«守»",
@@ -236,6 +246,7 @@
     "Becoming.«延»",
     "Becoming.«延尽不并»",
     "Becoming.«延尽之定当且仅当排中»",
+    "Becoming.«息即尽»",
     "Becoming.«所及»",
     "Becoming.«所及之传递»",
     "Becoming.«新而尽»",
@@ -247,6 +258,7 @@
     "Becoming.«生成»",
     "Becoming.«生成则延»",
     "Becoming.«生成退化不并»",
+    "Becoming.«生生即延»",
     "Becoming.«相续之续»",
     "Becoming.«退化»",
     "Becoming.«阶全生成»",
@@ -284,7 +296,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "96d053e0a6903883e2cb32aed977ac874db9eff4bce5437c9bc7a1304f9d6089",
+      "sha256": "1fb25d2f7ce4d6e3471a11619413e02e4963f9965966132f20207273d8e02636",
       "declarations": [
         "Becoming.Map.Branch",
         "Becoming.Map.Endless.generates",
@@ -304,16 +316,17 @@
         "Becoming.Map.still",
         "Becoming.Map.«生守相杂»",
         "Becoming.«不穷则延»",
+        "Becoming.«不穷有终之定当且仅当排中»",
         "Becoming.«传»",
         "Becoming.«传则异»",
         "Becoming.«全三域之周»",
+        "Becoming.«全三域之定当且仅当排中»",
         "Becoming.«全守»",
         "Becoming.«全守有终不并»",
         "Becoming.«全生成»",
         "Becoming.«全生成之所及亦全生成»",
         "Becoming.«全生成全守不并»",
         "Becoming.«全生成有终不并»",
-        "Becoming.«全生有终之定当且仅当排中»",
         "Becoming.«单行则族含所及»",
         "Becoming.«单行则生守不并»",
         "Becoming.«守»",
@@ -324,6 +337,7 @@
         "Becoming.«延»",
         "Becoming.«延尽不并»",
         "Becoming.«延尽之定当且仅当排中»",
+        "Becoming.«息即尽»",
         "Becoming.«所及»",
         "Becoming.«所及之传递»",
         "Becoming.«新而尽»",
@@ -335,6 +349,7 @@
         "Becoming.«生成»",
         "Becoming.«生成则延»",
         "Becoming.«生成退化不并»",
+        "Becoming.«生生即延»",
         "Becoming.«相续之续»",
         "Becoming.«退化»",
         "Becoming.«阶全生成»",
@@ -346,7 +361,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
-      "sha256": "02e903f61518361f89d19ab26576aa803b7e552c42babcd82962c05e4d03f112",
+      "sha256": "5f66a2f3fa4afb314d3f5a6bb5ec13194e81c0c1a234aa10b723aaa74141a932",
       "declarations": [
         "Becoming.Map.outside_of_not_endless",
         "Becoming.Map.relay_after_two",
@@ -383,20 +398,26 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
       "role": "statement",
-      "sha256": "63a0b13cbd93f45b1281ba54768e959df7e96e580b2e23995c2d0b026acb2e38"
+      "sha256": "2ec5de856104d4246adf64cf17267bff259e490732bec7b0527bc91c5428d510"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
+      "role": "receipt",
+      "sha256": "e68755a739bf1219288f3192f7a182617c75421baf4458633ef2f17ce3d61318",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapInstances",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -406,6 +427,10 @@
     {
       "en": "23 October 2026, board item OU4 (study section 379): the map of the one-unfolding plan, generation and degeneration with the region between them and its boundary, at two grains and at every order.",
       "zh": "2026年10月23日，工作板条目 OU4（研究第 379 节）：一元计划之地图，生成与退化及其间之域与边界，以两种粒度及每一阶读之。"
+    },
+    {
+      "en": "25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): the excluded-middle theorem renamed «不穷有终之定当且仅当排中», since it is about a line that never ends against one that ends, and the theorem for the three regions added («全三域之定当且仅当排中»); the higher orders said to assume no order between the classes; renewal without end and ceasing joined to 延 and 尽; the every-branch forms restated as strong forms with their quantifiers, as DEFECTS-FOUND asked from chapter 02. The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.",
+      "zh": "2026年10月25日，工作板条目 OU6（据对文法与其来源之审所作之更正，研究第 400 节）：排中之定理改名为 «不穷有终之定当且仅当排中»，因其所论是不穷之线与有终之线；增三域之定理（«全三域之定当且仅当排中»）；阶之诸类不设其间之序；生生与息接于延与尽；诸支皆然之形依缺陷录（第二章）改述为强形，并写出其量词。凡名或读法说过了 Lean 者，论断收窄；新定理增入；其余之律不变。"
     }
   ]
 }

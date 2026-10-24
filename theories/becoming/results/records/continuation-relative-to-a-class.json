@@ -42,8 +42,8 @@
       ]
     },
     {
-      "en": "Coarsening: under a coarser class every continuation remains one, so what ends under the coarser class ends under the finer and what abides under the finer abides under the coarser; something can end under the finer class while it abides under the coarser.",
-      "zh": "粗化：在较粗的类下，每一续仍是续；故在粗类下亡者在细类下亦亡，在细类下住者在粗类下亦住；可有一事在细类下亡而在粗类下住。",
+      "en": "Coarsening: under a coarser class every continuation remains one, so what ends under the coarser class ends under the finer and what abides under the finer abides under the coarser; something can end under the finer class and not end under the coarser.",
+      "zh": "粗化：在较粗的类下，每一续仍是续；故在粗类下亡者在细类下亦亡，在细类下住者在粗类下亦住；可有一事在细类下亡而在粗类下不亡。",
       "declarations": [
         "Becoming.«粗化»",
         "Becoming.«亡于粗则亡于细»",
@@ -63,8 +63,8 @@
       ]
     },
     {
-      "en": "The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant relation inside it: it is the greatest one, and the core of a class is a class. Read both ways, constant under 缘 and under its converse, the core fixes positions: what shares it shares beginning and ending.",
-      "zh": "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。双向读之（对缘及其逆皆有常），核定位：同位者，生与亡皆同。",
+      "en": "The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant relation inside it: it is the greatest one, and the core of a class is a class. Read both ways, constant under 缘 and under its converse, the core carries beginning, abiding and ending: for a class, what the two-way core relates shares beginning, abiding and ending (altering, a relation between two occurrences with a finer class, is not a mark of one occurrence).",
+      "zh": "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。双向读之（对缘及其逆皆有常），对一个类，双向之核所关联者生同、住同、亡同（异是两事之间带较细之类之关系，不是一事之相）。",
       "declarations": [
         "Becoming.«核»",
         "Becoming.«根»",
@@ -76,7 +76,8 @@
         "Becoming.«位核含于核»",
         "Becoming.«亡于核下不变»",
         "Becoming.«生于位核下不变»",
-        "Becoming.«位同则四相同»"
+        "Becoming.«位同则生亡同»",
+        "Becoming.«位同则住同»"
       ]
     },
     {
@@ -144,8 +145,8 @@
       ]
     },
     {
-      "en": "Holding, mutual need and leaning-on through constancy apply only to lines that do not end; through the core they apply to all: a class suffices for another's regularity where what is alike under both is alike under the other's core. The constancy forms imply the core forms, a class is constant exactly where it lies in its core, and a flame's regularity lies in fire and fuel.",
-      "zh": "以有常定义的自持、相须、因于只适用于不终了之线；以核定义的适用于每条线：两类俱同者在其一之核下同，则此类足以定其一之理。以有常者蕴涵以核者；一个类恰在含于其核时有常；核随类单调。火之理在火与薪。",
+      "en": "Holding, mutual need and leaning-on through constancy apply only to lines that do not end; through the core they apply to all: a class suffices for another's regularity where what is alike under both is alike under the other's core. The constancy forms imply the core forms, mutual need through constancy is symmetric and nothing needs itself, a class is constant exactly where it lies in its core, and the core is monotone in the class. In the flame of three moments and its ash, \"flame or not\" and \"the same fuel left\" need each other through the core, and every class that with \"flame or not\" tells its four occurrences apart suffices for its regularity, so the witness singles out neither fuel nor a direction; in two flames side by side the fuel left suffices for the regularity of \"flame or not\" while the joint class relates two distinct occurrences (the two flames at one moment), and sameness of flame does not suffice.",
+      "zh": "以有常言之自持、相须、因于，只适用于不终了之线；以核言之，则适用于一切：两类俱同者在其一之核下亦同，则另一类足以定此类之理。以有常者蕴涵以核者；相须对称，无物自相须；一个类恰在含于其核时有常；核随类单调。三刻之火及其灰中，“火与否”与“余薪同”以核相须，凡与“火与否”合而能分开此四事之类皆足以定火之理，故此见证既不挑出薪，也不定方向；两火并燃之中，余薪同足以定“火与否”之理，而二类之合关联两个不同之事（同刻之两火）；同火则不足。",
       "declarations": [
         "Becoming.«自持»",
         "Becoming.«相须»",
@@ -164,15 +165,26 @@
         "Becoming.Flame.fuel",
         "Becoming.Flame.sameFuel",
         "Becoming.Flame.joint_eq",
-        "Becoming.«火因于薪»"
+        "Becoming.TwoFlames",
+        "Becoming.TwoFlames.step",
+        "Becoming.TwoFlames.alike",
+        "Becoming.TwoFlames.sameFuel",
+        "Becoming.TwoFlames.sameFlame",
+        "Becoming.«火薪相须»",
+        "Becoming.«火之见证不择类»",
+        "Becoming.«两火以薪定理»",
+        "Becoming.«两火同火不足以定理»"
       ]
     },
     {
-      "en": "Ceasing: nothing on the line from an occurrence renews. Renewal without end does not cease (生生不息), and under the one everything ceases.",
-      "zh": "息：自一事起之线上无物复生。生生不息；在“一”之下皆息。",
+      "en": "Renewing into: an occurrence conditions a beginning whose line reaches another. Ceasing, defined positively and inductively along renewing into: an occurrence ceases where everything it renews into ceases, the least property so closed. Renewal without end, the greatest family each member of which renews into a member, does not cease (生生不息). Ceasing concerns what an occurrence renews into, not its line: one that does not itself renew ceases, so one on whose line nothing renews ceases; under the one everything ceases.",
+      "zh": "复生至：一事为一始之缘，而此始之线达于另一事。息，正面而沿复生至以归纳定义：一事所复生至者皆息，则此事息；息是如此封闭之最小之性。生生是每一员皆复生至族中一员之最大之族，在此族中者不息（生生不息）。息所论是一事所复生至者，不是其线：自身不复生之事息，故其线上无物复生之事息；在“一”之下皆息。",
       "declarations": [
+        "Becoming.«复生至»",
         "Becoming.«息»",
         "Becoming.«生生不息»",
+        "Becoming.«自不复生则息»",
+        "Becoming.«不复生则息»",
         "Becoming.«一之下皆息»"
       ]
     },
@@ -293,8 +305,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 64 theorems in 106 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，106 个声明中 64 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 68 theorems in 116 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，116 个声明中 68 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Lift the master laws onto the grammar with their owner, and the theorems that read activity only; state the counting of lines; and give generation and degeneration the content that continuation and renewal alone do not carry.",
@@ -320,6 +332,11 @@
     "Becoming.Seed.held_classes",
     "Becoming.Steps.along",
     "Becoming.Steps.next",
+    "Becoming.TwoFlames",
+    "Becoming.TwoFlames.alike",
+    "Becoming.TwoFlames.sameFlame",
+    "Becoming.TwoFlames.sameFuel",
+    "Becoming.TwoFlames.step",
     "Becoming.Web.ConsumingAlong.merged_candles",
     "Becoming.Web.RenewingAlong.branches",
     "Becoming.Web.activityClass",
@@ -358,7 +375,10 @@
     "Becoming.«一之下皆息»",
     "Becoming.«一之生»",
     "Becoming.«一之续»",
+    "Becoming.«不复生则息»",
     "Becoming.«不穷»",
+    "Becoming.«两火以薪定理»",
+    "Becoming.«两火同火不足以定理»",
     "Becoming.«两端分则中有标»",
     "Becoming.«亡»",
     "Becoming.«亡于核下不变»",
@@ -366,7 +386,8 @@
     "Becoming.«亡于细者不必亡于粗»",
     "Becoming.«以核为判据则火无续»",
     "Becoming.«任一缘可为续»",
-    "Becoming.«位同则四相同»",
+    "Becoming.«位同则住同»",
+    "Becoming.«位同则生亡同»",
     "Becoming.«位核»",
     "Becoming.«位核含于核»",
     "Becoming.«位根»",
@@ -384,6 +405,7 @@
     "Becoming.«因于核»",
     "Becoming.«复生»",
     "Becoming.«复生则粗复生»",
+    "Becoming.«复生至»",
     "Becoming.«异»",
     "Becoming.«息»",
     "Becoming.«无环»",
@@ -402,7 +424,8 @@
     "Becoming.«核为类»",
     "Becoming.«核之单调»",
     "Becoming.«根»",
-    "Becoming.«火因于薪»",
+    "Becoming.«火之见证不择类»",
+    "Becoming.«火薪相须»",
     "Becoming.«生»",
     "Becoming.«生于位核下不变»",
     "Becoming.«生于粗则生于细»",
@@ -428,6 +451,7 @@
     "Becoming.«线内同类»",
     "Becoming.«续»",
     "Becoming.«续含于缘»",
+    "Becoming.«自不复生则息»",
     "Becoming.«自持»",
     "Becoming.«蜡烛之合»",
     "Becoming.«足以定理»",
@@ -462,7 +486,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "8ba3bc84c22c36e437dad8a54db0bf3105920840866c86a6fd26be28b18cb4ca",
+      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940",
       "declarations": [
         "Becoming.Flame",
         "Becoming.Flame.alike",
@@ -474,6 +498,11 @@
         "Becoming.Flame.not_core_f₁",
         "Becoming.Flame.sameFuel",
         "Becoming.Flame.step",
+        "Becoming.TwoFlames",
+        "Becoming.TwoFlames.alike",
+        "Becoming.TwoFlames.sameFlame",
+        "Becoming.TwoFlames.sameFuel",
+        "Becoming.TwoFlames.step",
         "Becoming.«一»",
         "Becoming.«一为类»",
         "Becoming.«一之下无复生»",
@@ -481,7 +510,10 @@
         "Becoming.«一之下皆息»",
         "Becoming.«一之生»",
         "Becoming.«一之续»",
+        "Becoming.«不复生则息»",
         "Becoming.«不穷»",
+        "Becoming.«两火以薪定理»",
+        "Becoming.«两火同火不足以定理»",
         "Becoming.«两端分则中有标»",
         "Becoming.«亡»",
         "Becoming.«亡于核下不变»",
@@ -489,7 +521,8 @@
         "Becoming.«亡于细者不必亡于粗»",
         "Becoming.«以核为判据则火无续»",
         "Becoming.«任一缘可为续»",
-        "Becoming.«位同则四相同»",
+        "Becoming.«位同则住同»",
+        "Becoming.«位同则生亡同»",
         "Becoming.«位核»",
         "Becoming.«位核含于核»",
         "Becoming.«位根»",
@@ -514,6 +547,7 @@
         "Becoming.«因于核»",
         "Becoming.«复生»",
         "Becoming.«复生则粗复生»",
+        "Becoming.«复生至»",
         "Becoming.«异»",
         "Becoming.«息»",
         "Becoming.«无环»",
@@ -532,7 +566,8 @@
         "Becoming.«核为类»",
         "Becoming.«核之单调»",
         "Becoming.«根»",
-        "Becoming.«火因于薪»",
+        "Becoming.«火之见证不择类»",
+        "Becoming.«火薪相须»",
         "Becoming.«生»",
         "Becoming.«生于位核下不变»",
         "Becoming.«生于粗则生于细»",
@@ -560,6 +595,7 @@
         "Becoming.«续»",
         "Becoming.«续含于缘»",
         "Becoming.«而»",
+        "Becoming.«自不复生则息»",
         "Becoming.«自持»",
         "Becoming.«蜡烛之合»",
         "Becoming.«谓»",
@@ -575,7 +611,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
       "role": "statement",
-      "sha256": "63a0b13cbd93f45b1281ba54768e959df7e96e580b2e23995c2d0b026acb2e38"
+      "sha256": "2ec5de856104d4246adf64cf17267bff259e490732bec7b0527bc91c5428d510"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
@@ -668,12 +704,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
       "role": "receipt",
       "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
+      "role": "receipt",
+      "sha256": "e68755a739bf1219288f3192f7a182617c75421baf4458633ef2f17ce3d61318",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Grammar",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -736,6 +778,10 @@
     {
       "en": "23 October 2026, board items OU2 and OU3a (study section 372): the grammar gains holding, mutual need and leaning-on through the core for lines that end, ceasing and 生生不息, and four laws of lines moved down from PatternPassing and Persistence; the old continuation family is stated as its instances. The claim is widened to name the instances; the earlier laws are unchanged.",
       "zh": "2026年10月23日，工作板条目 OU2 与 OU3a（研究第 372 节）：文法增以核定义的自持、相须、因于（适用于终了之线）、息与生生不息，并自 PatternPassing 与 Persistence 移下四条线之律；旧续之族陈述为其实例。论断扩及实例，先前之律不变。"
+    },
+    {
+      "en": "25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): the theorem on the two-way core renamed «位同则生亡同», since it shows only that beginning and ending carry over; the flame witness restated as mutual need through the core («火薪相须»), with the theorem that it picks no class and a two-flame model in which the fuel left is singled out against sameness of flame; ceasing defined positively, inductively, on renewing into («复生至»): what does not itself renew ceases («自不复生则息»), and the old reading implies the new («不复生则息»); the law on ending under a coarser class narrowed to what its theorem shows (not ending), and the law on the two-way core stated for a class, with abiding carried over too («位同则住同»). The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.",
+      "zh": "2026年10月25日，工作板条目 OU6（据对文法与其来源之审所作之更正，研究第 400 节）：双向之核之定理改名为 «位同则生亡同»，因其只示生与亡相传；火之见证改述为以核相须（«火薪相须»），并证此见证不择类，又立两火之模型，其中余薪同相对于同火而被挑出；息改为正面、以归纳在复生至上定义（«复生至»）：自身不复生者息（«自不复生则息»），旧读蕴含之（«不复生则息»）；粗类下之亡一律收窄为其定理所示（不亡），双向之核一律对一个类而说，住亦相传（«位同则住同»）。凡名或读法说过了 Lean 者，论断收窄；新定理增入；其余之律不变。"
     }
   ]
 }

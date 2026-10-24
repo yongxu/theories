@@ -1,0 +1,240 @@
+@Becoming.Run.ofWithMove_toWithMove : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (n : Nat), r.toWithMove.ofWithMove.state n = r.state n ∧ r.toWithMove.ofWithMove.act n = r.act n
+@Becoming.Run.toWithMove_ofWithMove : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run (Becoming.withMove P)) (n : Nat), r.ofWithMove.toWithMove.state n = r.state n
+@Becoming.withMove_open : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {x : S × A} {i : Unit} {t : S}
+  {b : A}, (Becoming.withMove P).step x i (t, b) → ∀ (b' : A), (Becoming.withMove P).step x i (t, b')
+@Becoming.closedBy_withMove : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {policy : S → A} {x : S × A}
+  {i : Unit} {y : S × A}, (Becoming.closedBy P policy).step x i y → (Becoming.withMove P).step x i y
+@Becoming.unlabelled_product_le : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {T : Type u_3}
+  {Q : Generative.Process T A} {x : S × T} {i : Unit} {y : S × T},
+  (Becoming.unlabelled (Generative.productProcess P Q)).step x i y →
+    (Generative.productProcess (Becoming.unlabelled P) (Becoming.unlabelled Q)).step x i y
+Becoming.Labelled.Circulation.standings_leave_exchange : (Becoming.exchange Unit).step Becoming.Labelled.Circulation.one
+    Becoming.Labelled.Circulation.round Becoming.Labelled.Circulation.one ∧
+  (Becoming.exchange Unit).step Becoming.Labelled.Circulation.one Becoming.Labelled.Circulation.idle
+      Becoming.Labelled.Circulation.one ∧
+    Becoming.Labelled.Circulation.round.present ≠ Becoming.Labelled.Circulation.idle.present
+Becoming.Labelled.Circulation.start_needed : ∃ r r',
+  (∀ (n : Nat), r.act n = r'.act n) ∧ ∀ (n : Nat), r.state n () ≠ r'.state n ()
+@Becoming.shown_le_iff : ∀ {S : Type u_1} {A : Type u_2} {g : Nat → S} {m : Nat → A} {Q : Generative.Process S A},
+  (∀ (s : S) (a : A) (t : S), (Becoming.Shown g m).step s a t → Q.step s a t) ↔
+    ∀ (n : Nat), Q.step (g n) (m n) (g (n + 1))
+@Becoming.same_steps_iff_traces : ∀ {S : Type u_1} {A : Type u_2} {P Q : Generative.Process S A},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ Q.step s a t) ↔
+    ∀ (s : S) (as : List A) (t : S), Generative.Trace P s as t ↔ Generative.Trace Q s as t
+@Becoming.Run.shown_le : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P) (s : S)
+  (a : A) (t : S), (Becoming.Shown r.state r.act).step s a t → P.step s a t
+@Becoming.eq_of_new : ∀ {S : Type u_1} {g : Nat → S},
+  (∀ (i j : Nat), i < j → g i ≠ g j) → ∀ {i j : Nat}, g i = g j → i = j
+@Becoming.Shown.runs_of_new : ∀ {S : Type u_1} {A : Type u_2} {g : Nat → S} {m : Nat → A},
+  (∀ (i j : Nat), i < j → g i ≠ g j) →
+    ∀ (r : Becoming.Run (Becoming.Shown g m)) {k : Nat}, r.state 0 = g k → ∀ (n : Nat), r.state n = g (k + n)
+Becoming.Splice.loop_step : ∀ (n : Nat),
+  (Becoming.Shown Becoming.Splice.history fun x => ()).step (Becoming.Splice.loop n) () (Becoming.Splice.loop (n + 1))
+Becoming.Splice.spliced : (∃ r, ∀ (n : Nat), r.state n = Becoming.Splice.loop n) ∧
+  ∀ (k : Nat), ∃ n, Becoming.Splice.loop n ≠ Becoming.Splice.history (k + n)
+Becoming.DeadEnd.no_history : Becoming.DeadEnd.law.step false () true ∧ ∀ (a : Becoming.Run Becoming.DeadEnd.law), False
+@Becoming.Frame.world_active : ∀ {S : Type u_1} {A : Type u_2} {C : Type} {F : Becoming.Frame S A C}
+  {r : Becoming.Run F.P} {t : Nat} {c : C}, (F.world r).web.active t c ↔ F.realized (r.state t) c
+@Becoming.Frame.world_fixes_run : ∀ {A : Type u_1} {S : Type} {P : Generative.Process S A}
+  (r r' : Becoming.Run (Becoming.Frame.configurations P).P),
+  (∀ (t : Nat) (c : ((Becoming.Frame.configurations P).world r).Relatum),
+      ((Becoming.Frame.configurations P).world r).web.active t c ↔
+        ((Becoming.Frame.configurations P).world r').web.active t c) →
+    ∀ (t : Nat), r.state t = r'.state t
+@Becoming.Bisimulation.eq : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C),
+  Becoming.Bisimulation F F fun s s' => s = s'
+@Becoming.Bisimulation.converse : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {B : S → S' → Prop},
+  Becoming.Bisimulation F G B → Becoming.Bisimulation G F fun s' s => B s s'
+@Becoming.Bisimulation.comp : ∀ {S : Type u_1} {S' : Type u_4} {S'' : Type u_5} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C} {B : S → S' → Prop}
+  {B' : S' → S'' → Prop},
+  Becoming.Bisimulation F G B →
+    Becoming.Bisimulation G H B' → Becoming.Bisimulation F H fun s s'' => ∃ s', B s s' ∧ B' s' s''
+@Becoming.Alike.refl : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S),
+  Becoming.Alike F F s s
+@Becoming.Alike.symm : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'}, Becoming.Alike F G s s' → Becoming.Alike G F s' s
+@Becoming.Alike.trans : ∀ {S : Type u_1} {S' : Type u_4} {S'' : Type u_5} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C} {s : S} {s' : S'} {s'' : S''},
+  Becoming.Alike F G s s' → Becoming.Alike G H s' s'' → Becoming.Alike F H s s''
+@Becoming.Alike.realized : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'}, Becoming.Alike F G s s' → ∀ (c : C), F.realized s c ↔ G.realized s' c
+@Becoming.Alike.step : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.Alike F G s s' → ∀ {a : A} {t : S}, F.P.step s a t → ∃ t', G.P.step s' a t' ∧ Becoming.Alike F G t t'
+@Becoming.Bisimulation.trace : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {B : S → S' → Prop},
+  Becoming.Bisimulation F G B →
+    ∀ {s t : S} {as : List A},
+      Generative.Trace F.P s as t → ∀ {s' : S'}, B s s' → ∃ t', Generative.Trace G.P s' as t' ∧ B t t'
+@Becoming.Alike.trace : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.Alike F G s s' →
+    ∀ {as : List A} {t : S}, Generative.Trace F.P s as t → ∃ t', Generative.Trace G.P s' as t' ∧ Becoming.Alike F G t t'
+@Becoming.Alike.tests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.Alike F G s s' →
+    ∀ (as : List A) (c : C),
+      (∃ t, Generative.Trace F.P s as t ∧ F.realized t c) ↔ ∃ t', Generative.Trace G.P s' as t' ∧ G.realized t' c
+@Becoming.DeterminedAt.transfer : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.Alike F G s s' → Becoming.DeterminedAt F s → Becoming.DeterminedAt G s'
+@Becoming.DeterminedAt.goAlike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C} {s s' : S},
+  Becoming.Alike F F s s' →
+    Becoming.DeterminedAt F s' → ∀ {a : A} {t t' : S}, F.P.step s a t → F.P.step s' a t' → Becoming.Alike F F t t'
+@Becoming.identifiesAlike_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4} {F : Becoming.Frame S A C}
+  {π : S → K},
+  Becoming.IdentifiesAlike F π ↔
+    (Becoming.Bisimulation F F fun s s' => π s = π s') ∧ ∀ (s s' : S), Becoming.Alike F F s s' → π s = π s'
+@Becoming.IdentifiesAlike.unique : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4} {K' : Type u_5}
+  {F : Becoming.Frame S A C} {π : S → K} {ρ : S → K'},
+  Becoming.IdentifiesAlike F π → Becoming.IdentifiesAlike F ρ → ∀ (s s' : S), π s = π s' ↔ ρ s = ρ s'
+@Becoming.identifiesAlike_id_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  Becoming.IdentifiesAlike F id ↔ ∀ (s s' : S), Becoming.Alike F F s s' → s = s'
+@Becoming.exchange_pointwise_bisimulation : ∀ {R : Type},
+  Becoming.Bisimulation (Becoming.exchangeFrame R) (Becoming.exchangeFrame R) fun level level' =>
+    ∀ (c : R), level c = level' c
+@Becoming.exchange_alike_of_pointwise : ∀ {R : Type} {level level' : R → Nat},
+  (∀ (c : R), level c = level' c) → Becoming.Alike (Becoming.exchangeFrame R) (Becoming.exchangeFrame R) level level'
+@Becoming.exchange_pointwise_of_alike : ∀ {R : Type} {level level' : R → Nat},
+  Becoming.Alike (Becoming.exchangeFrame R) (Becoming.exchangeFrame R) level level' → ∀ (c : R), level c = level' c
+@Becoming.exchange_alike_iff : ∀ {R : Type} {level level' : R → Nat},
+  Becoming.Alike (Becoming.exchangeFrame R) (Becoming.exchangeFrame R) level level' ↔ ∀ (c : R), level c = level' c
+@Becoming.Run.not_of_depletion : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (reserve : S → Nat),
+  (∀ (s : S) (a : A) (t : S), P.step s a t → reserve t < reserve s) → ∀ (r : Becoming.Run P), False
+@Becoming.no_execution_of_depletion : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (reserve : S → Nat),
+  (∀ (s : S) (a : A) (t : S), P.step s a t → reserve t < reserve s) →
+    ¬∃ states actions, ∀ (n : Nat), P.step (states n) (actions n) (states (n + 1))
+@Becoming.Run.renewal_recurs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (rank : S → Nat) (renewal : Nat → Prop),
+  (∀ (n : Nat), ¬renewal n → rank (r.state (n + 1)) < rank (r.state n)) →
+    ∀ (start : Nat), ¬∀ (n : Nat), start ≤ n → ¬renewal n
+@Becoming.Conditions.drawdown_not_recurring : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Conditions S F C) {P : Generative.Process S A} (r : Becoming.Run P) (f : F) (c : C) (T : Nat),
+  (∀ (t : Nat), T ≤ t → K.level (r.state (t + 1)) c ≤ K.level (r.state t) c) →
+    (∀ (t : Nat), T ≤ t → K.active (r.state t) f → K.level (r.state (t + 1)) c < K.level (r.state t) c) →
+      ¬∀ (N : Nat), ∃ t, N ≤ t ∧ K.active (r.state t) f
+Becoming.Renewable.class_belongs_to_the_run : Becoming.Renewable.withinRenewal.state 0 =
+    Becoming.Renewable.beyondRenewal.state 0 ∧
+  (∀ (t : Nat),
+      Becoming.Renewable.conditions.active (Becoming.Renewable.withinRenewal.state t)
+          Becoming.Renewable.Formation.focal ∧
+        Becoming.Renewable.conditions.active (Becoming.Renewable.beyondRenewal.state t)
+          Becoming.Renewable.Formation.focal) ∧
+    RelationalRenewal.RenewingIn (Becoming.Renewable.conditions.along Becoming.Renewable.withinRenewal)
+        Becoming.Renewable.Formation.focal ∧
+      RelationalRenewal.ConsumingIn (Becoming.Renewable.conditions.along Becoming.Renewable.beyondRenewal)
+          Becoming.Renewable.Formation.focal ∧
+        ∀ (t : Nat),
+          1 ≤ t →
+            ¬Becoming.Renewable.conditions.active (Becoming.Renewable.beyondRenewal.state t)
+                Becoming.Renewable.Formation.sustaining
+@Becoming.Web.conditions_along : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} (K : Becoming.Conditions S F C)
+  {P : Generative.Process S A} (r : Becoming.Run P), K.dependence.along r = Becoming.Web.static (K.along r)
+Becoming.Crossing.ending_dependent : (Becoming.Crossing.dependence.along Becoming.Crossing.ending).Dependent
+Becoming.Crossing.transforming_dependent : (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).Dependent
+Becoming.Crossing.restoring_dependent : (Becoming.Crossing.dependence.along Becoming.Crossing.restoring).Dependent
+Becoming.Crossing.loss_does_not_decide : Becoming.Crossing.ending.state 0 = Becoming.Crossing.transforming.state 0 ∧
+  Becoming.Crossing.transforming.state 0 = Becoming.Crossing.restoring.state 0 ∧
+    (Becoming.Crossing.dependence.along Becoming.Crossing.ending).Broken 0 () Becoming.Crossing.Source.first ∧
+      (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).Broken 0 () Becoming.Crossing.Source.first ∧
+        (Becoming.Crossing.dependence.along Becoming.Crossing.restoring).Broken 0 () Becoming.Crossing.Source.first ∧
+          (Becoming.Crossing.dependence.along Becoming.Crossing.ending).Lost Becoming.Crossing.Source.first ∧
+            (∀ (t : Nat), 0 < t → ¬(Becoming.Crossing.dependence.along Becoming.Crossing.ending).active t ()) ∧
+              (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).Lost Becoming.Crossing.Source.first ∧
+                (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).Dissolves 0 ()
+                    Becoming.Crossing.Source.first ∧
+                  (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).Forms 0 ()
+                      Becoming.Crossing.Source.second ∧
+                    (∀ (t : Nat), (Becoming.Crossing.dependence.along Becoming.Crossing.transforming).active t ()) ∧
+                      ¬(Becoming.Crossing.dependence.along Becoming.Crossing.restoring).Consumed
+                            Becoming.Crossing.Source.first ∧
+                        ∀ (t : Nat),
+                          2 ≤ t →
+                            (Becoming.Crossing.dependence.along Becoming.Crossing.restoring).active t () ∧
+                              (Becoming.Crossing.dependence.along Becoming.Crossing.restoring).requires t ()
+                                  Becoming.Crossing.Source.first ∧
+                                (Becoming.Crossing.dependence.along Becoming.Crossing.restoring).Kept t ()
+                                  Becoming.Crossing.Source.first
+Becoming.Renewable.stepwise_includes_before_escalation : (Becoming.Renewable.conditions.dependence.along
+        Becoming.Renewable.escalating).ConsumingIn
+    Becoming.Renewable.Formation.focal ∧
+  Becoming.Web.RenewingAt 0 Becoming.Renewable.Formation.focal ∧
+    ¬Becoming.Web.RenewingAt 1 Becoming.Renewable.Formation.focal
+Becoming.Renewable.dip_breaks_without_consuming : ¬(Becoming.Renewable.conditions.dependence.along
+          Becoming.Renewable.dipping).ConsumingIn
+      Becoming.Renewable.Formation.focal ∧
+  ¬Becoming.Web.RenewingAt 0 Becoming.Renewable.Formation.focal
+Becoming.Renewable.broken_formation : (Becoming.Renewable.conditions.dependence.along
+        Becoming.Renewable.escalating).active
+    1 Becoming.Renewable.Formation.sustaining ∧
+  (Becoming.Renewable.conditions.dependence.along Becoming.Renewable.escalating).Broken 1
+      Becoming.Renewable.Formation.sustaining () ∧
+    ¬Becoming.Web.RenewingAt 1 Becoming.Renewable.Formation.sustaining ∧
+      ¬Becoming.Web.UnderminingAt 1 Becoming.Renewable.Formation.sustaining
+Becoming.Renewable.drawing_after_loss : (∀ (t : Nat),
+    0 < t →
+      ¬Becoming.Web.BreakingAt t Becoming.Renewable.Formation.focal ∧
+        Becoming.Web.UnderminingAt t Becoming.Renewable.Formation.focal) ∧
+  Becoming.Renewable.pausing.state 0 = Becoming.Renewable.beyondRenewal.state 0 ∧
+    Becoming.Renewable.pausing.act 0 = Becoming.Renewable.beyondRenewal.act 0 ∧
+      ¬(Becoming.Renewable.conditions.dependence.along Becoming.Renewable.pausing).Consumed ()
+Becoming.Pinned.undermining_without_effect : (∀ (t : Nat),
+    (Becoming.Pinned.dependence.along Becoming.Pinned.taking).level t () =
+      (Becoming.Pinned.dependence.along Becoming.Pinned.resting).level t ()) ∧
+  (∀ (t : Nat), 1 ≤ t → Becoming.Web.UnderminingAt t Becoming.Pinned.Formation.drawer) ∧
+    (Becoming.Pinned.dependence.along Becoming.Pinned.taking).ConsumingIn Becoming.Pinned.Formation.drawer ∧
+      ∀ (t : Nat),
+        ¬(Becoming.Pinned.dependence.along Becoming.Pinned.resting).draws t Becoming.Pinned.Formation.drawer ()
+Becoming.Renewable.dip_within_two : (Becoming.Renewable.conditions.dependence.along
+        Becoming.Renewable.dipping).RenewingInWithin
+    2 Becoming.Renewable.Formation.focal ∧
+  ¬(Becoming.Renewable.conditions.dependence.along Becoming.Renewable.dipping).UnderminingFor 2 0
+        Becoming.Renewable.Formation.focal ∧
+    Becoming.Web.BreakingAt 0 Becoming.Renewable.Formation.focal
+Becoming.Renewable.escalation_undermines_for_every_cycle : ¬(Becoming.Renewable.conditions.dependence.along
+          Becoming.Renewable.escalating).UnderminingFor
+      1 0 Becoming.Renewable.Formation.focal ∧
+  ∀ (p : Nat),
+    (Becoming.Renewable.conditions.dependence.along Becoming.Renewable.escalating).UnderminingFor p 1
+      Becoming.Renewable.Formation.focal
+Becoming.Renewable.renewal_without_arising : (Becoming.Renewable.conditions.dependence.along
+        Becoming.Renewable.withinRenewal).Renewed
+    () ∧
+  ∀ (t : Nat) (f : Becoming.Renewable.Formation),
+    ¬(Becoming.Renewable.conditions.dependence.along Becoming.Renewable.withinRenewal).Arises t f
+@Becoming.Run.revisits_from : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {l : List S}, (∀ (n : Nat), r.state n ∈ l) → ∀ (T : Nat), ∃ i j, T ≤ i ∧ i < j ∧ r.state i = r.state j
+@Becoming.Run.change_not_recurring : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ {q : S → Nat}, Becoming.Marks q r.state → ¬∀ (T : Nat), ∃ k, T ≤ k ∧ r.state (k + 1) ≠ r.state k
+@Becoming.Reach.lost_stays : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {t u t' : S},
+  ¬Becoming.Reach P t u → Becoming.Reach P t t' → ¬Becoming.Reach P t' u
+@Becoming.keeps_reach_iff_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  (∀ (u : S), Becoming.Reach P s u → Becoming.Reach P t u) ↔ Becoming.Reach P t s
+@Becoming.same_reach_iff_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  Becoming.Reach P s t → ((∀ (u : S), Becoming.Reach P s u ↔ Becoming.Reach P t u) ↔ Becoming.Reach P t s)
+@Becoming.not_returns_iff_loses : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  ¬Becoming.Reach P t s ↔ ∃ u, Becoming.Reach P s u ∧ ¬Becoming.Reach P t u
+@Becoming.WithinMoves.before : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {s m : S} {a : A} {n : Nat},
+  P.step s a m → Becoming.WithinMoves P realized m n bundle → Becoming.WithinMoves P realized s (n + 1) bundle
+@Becoming.WithinMoves.after_course : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {n : Nat} {s t : S} {xs : List A},
+  Generative.Trace P s xs t →
+    Becoming.WithinMoves P realized t n bundle → Becoming.WithinMoves P realized s (xs.length + n) bundle
+@Becoming.withinMoves_iff_reach : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {s : S},
+  (∃ n, Becoming.WithinMoves P realized s n bundle) ↔ ∃ t, Becoming.Reach P s t ∧ ∀ (c : C), bundle c → realized t c
+@Becoming.together_after_reach : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {s t : S},
+  Becoming.Reach P s t →
+    (∃ n, Becoming.WithinMoves P realized t n bundle) → ∃ n, Becoming.WithinMoves P realized s n bundle
+@Becoming.lost_together_not_returns : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {s t : S},
+  (∃ n, Becoming.WithinMoves P realized s n bundle) →
+    (¬∃ n, Becoming.WithinMoves P realized t n bundle) → ¬Becoming.Reach P t s

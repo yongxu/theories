@@ -23,6 +23,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 |---|---|
 | A carrying renewal is an alteration (异). | `«传则异»` |
 | Going on along some branch and ending on every branch exclude each other; a line with no end anywhere goes on along some branch. | `«延尽不并»`, `«不穷则延»` |
+| Read along renewing into (复生至) under the one, renewal without end (生生) of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
 | Generation and keeping each exclude degeneration. | `«生成退化不并»`, `«守退化不并»` |
 | Generation and keeping can share a point along different branches (生守相杂, the mixed region; witness: a root with a renewing chain on one branch and a still occurrence on the other). | `Map.«生守相杂»` |
 | On a single line, each occurrence conditioning at most one other, they exclude each other. | `«单行则生守不并»` |
@@ -34,7 +35,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 
 **Open.** Coverage by the three regions: 守 forbids renewal throughout its family where 全守 allows an earlier one, so a line that renews once and then goes on still is 全守 and, at its start, appears to be none of 生成, 守, 退化 (a hand check, not in the Lean).
 
-**Calibration.** That every point of every model goes on along some branch or ends on every branch is exactly excluded middle (`«延尽之定当且仅当排中»`), and so is that every coarse line of every model is without end (不穷) or reaches an end (有终) (`«全生有终之定当且仅当排中»`, a dichotomy of 不穷 against 有终, not of 全生成 against 有终): the boundary between going on and ending is where a line's going on is not decided, and a law placing a point in a region supplies that decision.
+**Calibration.** That every point of every model goes on along some branch or ends on every branch is exactly excluded middle (`«延尽之定当且仅当排中»`), and so is that every coarse line of every model is without end (不穷) or reaches an end (有终) (`«不穷有终之定当且仅当排中»`, a dichotomy of 不穷 against 有终, not of 全生成 against 有终), and so is placing every point of every model in one of 全生成, 全守 and 有终 (`«全三域之定当且仅当排中»`): the boundary between going on and ending is where a line's going on is not decided, and a law placing a point in a region supplies that decision.
 
 **Theorem** (World). Read the World with occurrences `(t, f)` as carrier, a continuation's step as 缘, activity as the coarse class and activity with one formation as the fine (`Becoming.MapInstances`). From an active occurrence, a carrying renewal is a continuation's step into an active occurrence whose formation did not carry on as itself (`Web.carries_iff`); under a pattern's passing continuation, a passing to a carrier arising across the step (`Web.passing_carries_iff`). So, under the passing continuation, a line from an active carrier in the strong form 全生成 has carriers arising at arbitrarily late steps (`Web.generation_arises_late`); under any continuation its carrying renewals lie beyond every step (`Web.generation_renews_late`). Read by names alone nothing is 全生成, and every line with no end anywhere is 全守 (`Web.itself_not_generation`, `Web.itself_keeps`). These instance the strong forms; the some-branch regions are not read on the World ([record](../results/records/generation-and-degeneration-at-two-grains.md)).
 

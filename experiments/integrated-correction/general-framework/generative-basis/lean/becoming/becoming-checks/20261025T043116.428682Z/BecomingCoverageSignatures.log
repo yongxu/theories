@@ -1,0 +1,60 @@
+@Becoming.Coverage.Perm.length_eq : ∀ {C : Type u_1} {l l' : List C}, l.Perm l' → l.length = l'.length
+@Becoming.Coverage.Perm.eq_nil : ∀ {C : Type u_1} {l : List C}, l.Perm [] → l = []
+@Becoming.Coverage.trace_global : ∀ {C : Type u_1} {tile : C → C → Prop} {board last : List C} {ts : List (C × C)},
+  Generative.Trace (Becoming.Coverage.placement tile) board ts last → Becoming.Coverage.Global tile board ts last
+@Becoming.Coverage.global_realized : ∀ {C : Type u_1} {tile : C → C → Prop} {board rest : List C} {ts : List (C × C)},
+  Becoming.Coverage.Global tile board ts rest → Becoming.Coverage.Realizes tile board ts rest
+@Becoming.Coverage.realizes_iff_global : ∀ {C : Type u_1} (tile : C → C → Prop) (board : List C) (ts : List (C × C))
+  (rest : List C), Becoming.Coverage.Realizes tile board ts rest ↔ Becoming.Coverage.Global tile board ts rest
+@Becoming.Coverage.complete_trace_iff : ∀ {C : Type u_1} (tile : C → C → Prop) (board : List C) (ts : List (C × C)),
+  Generative.Trace (Becoming.Coverage.placement tile) board ts [] ↔ Becoming.Coverage.Global tile board ts []
+@Becoming.Coverage.two_tile_orders : ∀ {C : Type u_1} (tile : C → C → Prop) (a b c d : C),
+  tile a b →
+    tile c d →
+      Generative.Trace (Becoming.Coverage.placement tile) [a, b, c, d] [(a, b), (c, d)] [] ∧
+        Generative.Trace (Becoming.Coverage.placement tile) [a, b, c, d] [(c, d), (a, b)] []
+@Becoming.Coverage.balance_perm : ∀ {C : Type u_1} (color : C → Bool) {xs ys : List C},
+  xs.Perm ys → Becoming.Coverage.balance color xs = Becoming.Coverage.balance color ys
+@Becoming.Coverage.opposite_pair_balance : ∀ {C : Type u_1} (color : C → Bool) (a b : C) (rest : List C),
+  color b = !color a → Becoming.Coverage.balance color (a :: b :: rest) = Becoming.Coverage.balance color rest
+@Becoming.Coverage.legal_balance : ∀ {C : Type u_1} (tile : C → C → Prop) (color : C → Bool),
+  (∀ (a b : C), tile a b → color b = !color a) →
+    ∀ {ts : List (C × C)},
+      Becoming.Coverage.Legal tile ts →
+        ∀ (rest : List C),
+          Becoming.Coverage.balance color (Becoming.Coverage.cells ts ++ rest) = Becoming.Coverage.balance color rest
+@Becoming.Coverage.global_balance : ∀ {C : Type u_1} (tile : C → C → Prop) (color : C → Bool),
+  (∀ (a b : C), tile a b → color b = !color a) →
+    ∀ {board rest : List C} {ts : List (C × C)},
+      Becoming.Coverage.Global tile board ts rest →
+        Becoming.Coverage.balance color board = Becoming.Coverage.balance color rest
+@Becoming.Coverage.unbalanced_no_cover : ∀ {C : Type u_1} (tile : C → C → Prop) (color : C → Bool),
+  (∀ (a b : C), tile a b → color b = !color a) →
+    ∀ (board : List C), Becoming.Coverage.balance color board ≠ 0 → ¬∃ ts, Becoming.Coverage.Global tile board ts []
+@Becoming.Coverage.unbalanced_no_placement_history : ∀ {C : Type u_1} (tile : C → C → Prop) (color : C → Bool),
+  (∀ (a b : C), tile a b → color b = !color a) →
+    ∀ (board : List C),
+      Becoming.Coverage.balance color board ≠ 0 → ¬∃ ts, Generative.Trace (Becoming.Coverage.placement tile) board ts []
+Becoming.Coverage.adjacent_opposite : ∀ (a b : Becoming.Coverage.Square),
+  Becoming.Coverage.adjacent a b → Becoming.Coverage.chessColor b = !Becoming.Coverage.chessColor a
+Becoming.Coverage.mutilated_balance : Becoming.Coverage.balance Becoming.Coverage.chessColor
+    Becoming.Coverage.mutilated =
+  -2
+Becoming.Coverage.mutilated_no_cover : ¬∃ ts,
+    Becoming.Coverage.Global Becoming.Coverage.adjacent Becoming.Coverage.mutilated ts []
+Becoming.Coverage.mutilated_no_history : ¬∃ ts,
+    Generative.Trace (Becoming.Coverage.placement Becoming.Coverage.adjacent) Becoming.Coverage.mutilated ts []
+Becoming.Coverage.separated_balanced : Becoming.Coverage.balance Becoming.Coverage.chessColor
+    Becoming.Coverage.separated =
+  0
+@Becoming.Coverage.first_or_fourth : ∀ {x : Becoming.Coverage.Square},
+  x ∈ Becoming.Coverage.separated → x = ⟨0, ⋯⟩ ∨ x = ⟨3, ⋯⟩
+@Becoming.Coverage.separated_apart : ∀ {a b : Becoming.Coverage.Square},
+  a ∈ Becoming.Coverage.separated → b ∈ Becoming.Coverage.separated → ¬Becoming.Coverage.adjacent a b
+Becoming.Coverage.separated_not_coverable : ¬∃ ts,
+    Becoming.Coverage.Global Becoming.Coverage.adjacent Becoming.Coverage.separated ts []
+Becoming.Coverage.balance_does_not_determine_coverability : Becoming.Coverage.balance Becoming.Coverage.chessColor
+      Becoming.Coverage.separated =
+    Becoming.Coverage.balance Becoming.Coverage.chessColor [] ∧
+  (∃ ts, Becoming.Coverage.Global Becoming.Coverage.adjacent [] ts []) ∧
+    ¬∃ ts, Becoming.Coverage.Global Becoming.Coverage.adjacent Becoming.Coverage.separated ts []

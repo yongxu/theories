@@ -2737,11 +2737,6 @@
    "category": "general-structure",
    "reason": "the two-way core is the greatest symmetric relation inside a class constant under a relation and its converse; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«位同则四相同»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "what shares a position under the two-way core shares beginning and ending; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«闭合当且仅当有常»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -2852,11 +2847,6 @@
    "category": "general-structure",
    "reason": "a law of every relation on any carrier; renewal without end does not cease"
   },
-  "Becoming.«火因于薪»": {
-   "module": "Becoming.Grammar",
-   "category": "model-witness",
-   "reason": "the flame witness: its regularity lies in fire and fuel"
-  },
   "Becoming.«化之二说同形»": {
    "module": "Becoming.GrammarReadings",
    "category": "general-structure",
@@ -2881,11 +2871,6 @@
    "module": "Becoming.GrammarReadings",
    "category": "general-structure",
    "reason": "a law of every relation on any carrier; what returns abides"
-  },
-  "Becoming.«有常则通»": {
-   "module": "Becoming.GrammarReadings",
-   "category": "general-structure",
-   "reason": "a law of every relation on any carrier; under a constant class a line with a past never ends"
   },
   "Becoming.«非一非异»": {
    "module": "Becoming.GrammarReadings",
@@ -3127,11 +3112,6 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«全三域之周»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
   "Becoming.«全守有终不并»": {
    "module": "Becoming.GrammarMap",
    "category": "general-structure",
@@ -3146,11 +3126,6 @@
    "module": "Becoming.GrammarMap",
    "category": "general-structure",
    "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
-  "Becoming.«全生有终之定当且仅当排中»": {
-   "module": "Becoming.GrammarMap",
-   "category": "calibration",
-   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
   },
   "Becoming.«前后相随»": {
    "module": "Becoming.GrammarCandidates",
@@ -3616,6 +3591,86 @@
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
    "reason": "a constant class takes in what the condition feeds: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.«一之下无复生»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "under the one nothing begins from a condition, so nothing renews (no longer used by the proof of «一之下皆息», which is now by construction); a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«不复生则息»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "where nothing on the line renews, the occurrence ceases (the earlier reading of 息 implies the inductive one); a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«不穷有终之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle); a lemma of the item that needs it"
+  },
+  "Becoming.«两向有常则通»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "general-structure",
+   "reason": "constant both ways, what abides passes through (通, going and coming); a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«两火以薪定理»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the two-flame witness: the fuel left suffices while relating two distinct occurrences"
+  },
+  "Becoming.«两火同火不足以定理»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the two-flame witness: sameness of flame does not suffice"
+  },
+  "Becoming.«位同则生亡同»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "for a class, what shares a position under the two-way core shares beginning and ending; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«全三域之定当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle); a lemma of the item that needs it"
+  },
+  "Becoming.«息即尽»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "ceasing is ending on every branch of renewing into, read under the one; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«昼夜往来不穷»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "model-witness",
+   "reason": "day and night go and come without end"
+  },
+  "Becoming.«有常而不通»": {
+   "module": "Becoming.GrammarReadings",
+   "category": "model-witness",
+   "reason": "counting up from zero: constant one way, going never ends, and coming ends: not 通"
+  },
+  "Becoming.«火之见证不择类»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the one-flame witness picks no class: every class that with \"flame or not\" tells the moments apart suffices"
+  },
+  "Becoming.«火薪相须»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "the one-flame witness: \"flame or not\" and \"the same fuel left\" need each other through the core"
+  },
+  "Becoming.«生生则复生»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "renewal without end renews (no longer used by the proof of «生生不息», which is now by induction); a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«生生即延»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "renewal without end is going on along some branch of renewing into, read under the one; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«位同则住同»": {
+   "module": "Becoming.Grammar",
+   "category": "general-structure",
+   "reason": "for a class, what shares a position under the two-way core shares abiding; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
   }
  },
  "instances": {

@@ -1,0 +1,44 @@
+@Becoming.Web.includes_iff_within_whole : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' ↔ ∀ (t : Nat), W.AdmitsWithin (fun x => True) (l t) (l' t) t
+@Becoming.Web.AdmitsWithin.narrow : ∀ {F C : Type} {W : Becoming.Web F C} {region region' : F → Prop} {l l' : C → Nat}
+  {t : Nat}, (∀ (f : F), region' f → region f) → W.AdmitsWithin region l l' t → W.AdmitsWithin region' l l' t
+@Becoming.Web.LosesBeyond.narrow : ∀ {F C : Type} {W : Becoming.Web F C} {region region' : F → Prop} {l l' : C → Nat}
+  {t : Nat}, (∀ (f : F), region' f → region f) → W.LosesBeyond region l l' t → W.LosesBeyond region' l l' t
+@Becoming.Web.not_losesBeyond_whole : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : C → Nat} {t : Nat},
+  ¬W.LosesBeyond (fun x => True) l l' t
+@Becoming.Web.AdmitsWithin.not_losesBeyond : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : C → Nat} {t : Nat},
+  W.AdmitsWithin (fun x => True) l l' t → ∀ (region : F → Prop), ¬W.LosesBeyond region l l' t
+@Becoming.Web.admitsWithin_self : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : C → Nat} {t : Nat} {f : F},
+  W.AdmitsWithin (fun x => x = f) l l' t ↔ W.Admits l' t f → W.Admits l t f
+@Becoming.Web.Widens.not_reverse : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → ¬W.Widens l' l
+@Becoming.Web.Widens.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.Widens l l' → W.Widens l' l'' → W.Widens l l''
+@Becoming.Web.Keeps.symm : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}, W.Keeps l l' → W.Keeps l' l
+@Becoming.Web.Mixed.symm : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}, W.Mixed l l' → W.Mixed l' l
+@Becoming.Web.Widens.not_keeps : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → ¬W.Keeps l l'
+@Becoming.Web.Widens.not_mixed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → ¬W.Mixed l l'
+@Becoming.Web.Keeps.not_mixed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Keeps l l' → ¬W.Mixed l l'
+@Becoming.Web.includes_iff_within_every : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' ↔ ∀ (region : F → Prop) (t : Nat), W.AdmitsWithin region (l t) (l' t) t
+@Becoming.Web.RenewingAt.over : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  Becoming.Web.RenewingAt t f → ∀ (region : C → Prop), W.RenewingOver region t f
+@Becoming.Web.RenewingOver.at : ∀ {F C : Type} {W : Becoming.Web F C} {region : C → Prop} {t : Nat} {f : F},
+  (∀ (c : C), W.Participates t f c → region c) → W.RenewingOver region t f → Becoming.Web.RenewingAt t f
+@Becoming.Web.renewingAt_iff_over_all : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  Becoming.Web.RenewingAt t f ↔ W.RenewingOver (fun x => True) t f
+@Becoming.Web.RenewingOver.narrow : ∀ {F C : Type} {W : Becoming.Web F C} {region region' : C → Prop} {t : Nat} {f : F},
+  (∀ (c : C), region' c → region c) → W.RenewingOver region t f → W.RenewingOver region' t f
+@Becoming.Web.RenewingOver.keeps_own : ∀ {F C : Type} {W : Becoming.Web F C} {region : C → Prop} {t : Nat} {f : F},
+  (∀ (c : C), W.requires t f c → region c) → W.Untightened t f → W.RenewingOver region t f → W.Supported (t + 1) f
+Becoming.Omitted.loses_own : Becoming.Omitted.flow.Balances Becoming.Omitted.web ∧
+  Becoming.Omitted.flow.Acting Becoming.Omitted.web ∧
+    Becoming.Omitted.flow.Taking Becoming.Omitted.web ∧
+      Becoming.Omitted.web.Dependent ∧
+        Becoming.Omitted.web.RenewingOver (fun x => x = false) 0 () ∧
+          Becoming.Omitted.web.Untightened 0 () ∧
+            Becoming.Omitted.web.requires 0 () true ∧
+              Becoming.Web.UnderminingAt 0 () ∧ ¬Becoming.Omitted.web.Supported 1 ()

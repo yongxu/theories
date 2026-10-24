@@ -14,13 +14,16 @@ reconstruction, recorded with its losses in the plan (`PLAN.md` §5).
 | `«成坏»` | JSZ-P-08-003 「諸根合會是成相，諸緣各住自位是壞相」 | at once, alike under the coarse class and apart under the fine one |
 | `«同于»` | MJ-J-039 「同，異而俱於之一也」 | alike in belonging to one: related to a common one |
 | `«复»` | LZ-16-005 「復命曰常」 | a line returns to where it was |
-| `«通»` | XCS 「往來不窮謂之通」 | the line from an occurrence never ends |
+| `«通»` | XCS-11-010 「往來不窮謂之通」 | going and coming never end: the line from an occurrence never ends along 缘, nor along its converse |
 
 The 墨经's and 荀子's 化 are one form (`«化之二说同形»`), and 化 is 成坏 along 缘 (`«化为有缘之成坏»`):
 the synchronic reading of the 金师子章 and the diachronic reading of the 墨经 differ only by 缘.
-同 is a class exactly where belonging is to one only (`«同于为类»`), and otherwise need not be
+同 is a class where each thing belongs to one and to one only (`«同于为类»`), and otherwise need not be
 transitive (`«同于不必传递»`), as the 墨经's 類同 is not. A returning occurrence abides (`«复者住»`);
-under a constant class a line with a past never ends (`«有常则通»`). The first horn of the 中论's
+under a constant class a line with a past never ends going (`«有常则往不穷»`), and what abides
+passes through, going and coming, where a class is constant both ways (`«两向有常则通»`); constancy
+one way is not enough (`«有常而不通»`), and under the one day and night go and come without end
+(`«昼夜往来不穷»`). The first horn of the 中论's
 dilemma, 「若一則無緣，若異則無相續」, holds of identity and of no class between: in a net without
 self-conditioning there is no continuation under identity, yet every 缘 is a continuation under
 some class while identity tells its ends apart (`«非一非异»`). The second horn, whether a
@@ -104,15 +107,43 @@ theorem «复者住» {R E : «际» α} {x : α} (h : «复» R E x) : «住» 
     | .one c => ⟨_, c⟩
     | .more c _ => ⟨_, c⟩⟩
 
-/-- Passing through (通), read from the 系辞's 「往來不窮謂之通」: the line from `x` never ends. -/
-def «通» (R E : «际» α) (x : α) : Prop := «不穷» R E x
+/-- Passing through (通), read from the 系辞's 「往來不窮謂之通」 (XCS-11-010), with 往來 read as a
+relation and its converse and 不窮 as never ending (the classification's reading of the unit): from
+`x`, going (往, along 缘) never ends and coming (來, along its converse) never ends. -/
+def «通» (R E : «际» α) (x : α) : Prop := «不穷» R E x ∧ «不穷» («逆» R) E x
 
-/-- Under a constant class, a line with a past never ends: what has been continued passes
-through. -/
-theorem «有常则通» {R E : «际» α} (hc : «有常» R E) {x : α} (hx : «有前» R E x) : «通» R E x :=
+/-- Under a constant class, a line with a past never ends going: what has been continued goes on. -/
+theorem «有常则往不穷» {R E : «际» α} (hc : «有常» R E) {x : α} (hx : «有前» R E x) : «不穷» R E x :=
   fun _ hy => match hy with
     | .inl e => by cases e; exact «有常则续不尽» hc hx
     | .inr l => «有常则相续不尽» hc l
+
+/-- **Passing through, going and coming (两向有常则通).** Where a class is constant under 缘 and under
+its converse, an occurrence that abides passes through: going never ends, and coming never ends. -/
+theorem «两向有常则通» {R E : «际» α} (hE : «类» E) (hc : «有常» R E) (hc' : «有常» («逆» R) E) {x : α}
+    (hx : «住» R E x) : «通» R E x :=
+  ⟨«有常则往不穷» hc hx.1, «有常则往不穷» hc' (match hx.2 with
+    | ⟨y, hr, he⟩ => ⟨y, hr, hE.symm he⟩)⟩
+
+/-- **Constancy one way is not passing through (有常而不通).** Counting up from zero under the one: the
+class is constant and the line from one never ends going, yet coming back it ends at zero. -/
+theorem «有常而不通» :
+    ∃ (R : «际» Nat), «有常» R «一» ∧ «有前» R «一» 1 ∧ «不穷» R «一» 1 ∧ ¬ «通» R «一» 1 := by
+  let R : «际» Nat := fun m n => n = m + 1
+  have hc : «有常» R «一» := by
+    apply («有常之逐点» R «一»).mpr
+    intro u u' _ v _
+    exact ⟨u' + 1, rfl, trivial⟩
+  have hp : «有前» R «一» 1 := ⟨0, rfl, trivial⟩
+  refine ⟨R, hc, hp, «有常则往不穷» hc hp, fun ⟨_, back⟩ => ?_⟩
+  match back 0 (.inr (.one ⟨rfl, trivial⟩)) with
+  | ⟨w, hw, _⟩ => exact Nat.noConfusion hw
+
+/-- **Day and night go and come without end (昼夜往来不穷).** Two occurrences, each the condition of
+the other, under the one: every occurrence passes through. -/
+theorem «昼夜往来不穷» (x : Bool) : «通» (fun a b : Bool => b = !a) «一» x := by
+  refine ⟨fun y _ => ⟨!y, rfl, trivial⟩, fun y _ => ⟨!y, ?_, trivial⟩⟩
+  cases y <;> rfl
 
 /-- **Neither one nor other (非一非异).** In a net without self-conditioning, there is no
 continuation under identity (「若一則無緣」), and every 缘 is a continuation under some class

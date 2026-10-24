@@ -6869,7 +6869,7 @@ Definitions and types:
 <a id="module-6f8602838f87"></a>
 
 <details>
-<summary>Grammar.lean — 106 explicit declarations</summary>
+<summary>Grammar.lean — 118 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -6877,115 +6877,127 @@ Definitions and types:
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.«则之自反»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L88) | 88 |
-| [Becoming.«则之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L90) | 90 |
-| [Becoming.«及之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L93) | 93 |
-| [Becoming.«及之单调»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L99) | 99 |
-| [Becoming.«一为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L105) | 105 |
-| [Becoming.«续含于缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L148) | 148 |
-| [Becoming.«相续含于及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L151) | 151 |
-| [Becoming.«一之续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L155) | 155 |
-| [Becoming.«粗化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L159) | 159 |
-| [Becoming.«亡于粗则亡于细»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L163) | 163 |
-| [Becoming.«住于细则住于粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L168) | 168 |
-| [Becoming.«亡于细者不必亡于粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L174) | 174 |
-| [Becoming.«四相之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L183) | 183 |
-| [Becoming.«分叉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L197) | 197 |
-| [Becoming.«无环则及为序»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L216) | 216 |
-| [Becoming.«同族为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L230) | 230 |
-| [Becoming.«一之生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L239) | 239 |
-| [Becoming.«一之下无复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L243) | 243 |
-| [Becoming.«生生之展»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L256) | 256 |
-| [Becoming.«生生最大»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L264) | 264 |
-| [Becoming.«生生则复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L270) | 270 |
-| [Becoming.«一之下无生生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L278) | 278 |
-| [Becoming.«生住不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L283) | 283 |
-| [Becoming.«住亡不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L287) | 287 |
-| [Becoming.«四相无自立»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L293) | 293 |
-| [Becoming.«任一缘可为续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L301) | 301 |
-| [Becoming.«蜡烛之合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L309) | 309 |
-| [Becoming.«有常之逐点»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L326) | 326 |
-| [Becoming.«有常则续不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L339) | 339 |
-| [Becoming.«有常则相续不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L346) | 346 |
-| [Becoming.«有亡之续则不有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L353) | 353 |
-| [Becoming.«根»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L363) | 363 |
-| [Becoming.«有常可复合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L374) | 374 |
-| [Becoming.«静有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L384) | 384 |
-| [Becoming.«核为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L389) | 389 |
-| [Becoming.«闭合当且仅当有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L419) | 419 |
-| [Becoming.«类内之缘成环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L439) | 439 |
-| [Becoming.«粗只连异类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L449) | 449 |
-| [Becoming.«复生则粗复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L461) | 461 |
-| [Becoming.«位根»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L479) | 479 |
-| [Becoming.«位核含于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L496) | 496 |
-| [Becoming.«亡于核下不变»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L501) | 501 |
-| [Becoming.«生于位核下不变»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L510) | 510 |
-| [Becoming.«位同则四相同»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L520) | 520 |
-| [Becoming.«有常之同谓»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L542) | 542 |
-| [Becoming.«相须之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L547) | 547 |
-| [Becoming.«无自相须»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L551) | 551 |
-| [Becoming.«核之单调»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L555) | 555 |
-| [Becoming.«类有常当且仅当含于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L559) | 559 |
-| [Becoming.«合有常则足以定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L580) | 580 |
-| [Becoming.«因于则因于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L590) | 590 |
-| [Becoming.«相须则相须核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L595) | 595 |
-| [Becoming.«生生不息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L604) | 604 |
-| [Becoming.«一之下皆息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L608) | 608 |
-| [Becoming.«两端分则中有标»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L622) | 622 |
-| [Becoming.«线内同类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L643) | 643 |
-| [Becoming.«生于细而续于粗则异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L650) | 650 |
-| [Becoming.«生于粗则生于细»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L656) | 656 |
-| [Becoming.Flame.alike_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L686) | 686 |
-| [Becoming.Flame.not_core_f₁](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L689) | 689 |
-| [Becoming.Flame.not_core_f₀](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L700) | 700 |
-| [Becoming.«以核为判据则火无续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L716) | 716 |
-| [Becoming.Flame.joint_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L742) | 742 |
-| [Becoming.«火因于薪»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L755) | 755 |
+| [Becoming.«则之自反»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L89) | 89 |
+| [Becoming.«则之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L91) | 91 |
+| [Becoming.«及之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L94) | 94 |
+| [Becoming.«及之单调»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L100) | 100 |
+| [Becoming.«一为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L106) | 106 |
+| [Becoming.«续含于缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L149) | 149 |
+| [Becoming.«相续含于及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L152) | 152 |
+| [Becoming.«一之续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L156) | 156 |
+| [Becoming.«粗化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L160) | 160 |
+| [Becoming.«亡于粗则亡于细»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L164) | 164 |
+| [Becoming.«住于细则住于粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L169) | 169 |
+| [Becoming.«亡于细者不必亡于粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L176) | 176 |
+| [Becoming.«四相之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L185) | 185 |
+| [Becoming.«分叉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L199) | 199 |
+| [Becoming.«无环则及为序»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L218) | 218 |
+| [Becoming.«同族为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L232) | 232 |
+| [Becoming.«一之生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L241) | 241 |
+| [Becoming.«一之下无复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L245) | 245 |
+| [Becoming.«生生之展»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L258) | 258 |
+| [Becoming.«生生最大»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L266) | 266 |
+| [Becoming.«生生则复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L272) | 272 |
+| [Becoming.«一之下无生生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L280) | 280 |
+| [Becoming.«生住不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L285) | 285 |
+| [Becoming.«住亡不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L289) | 289 |
+| [Becoming.«四相无自立»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L295) | 295 |
+| [Becoming.«任一缘可为续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L303) | 303 |
+| [Becoming.«蜡烛之合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L311) | 311 |
+| [Becoming.«有常之逐点»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L328) | 328 |
+| [Becoming.«有常则续不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L341) | 341 |
+| [Becoming.«有常则相续不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L348) | 348 |
+| [Becoming.«有亡之续则不有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L355) | 355 |
+| [Becoming.«根»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L365) | 365 |
+| [Becoming.«有常可复合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L376) | 376 |
+| [Becoming.«静有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L386) | 386 |
+| [Becoming.«核为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L391) | 391 |
+| [Becoming.«闭合当且仅当有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L421) | 421 |
+| [Becoming.«类内之缘成环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L441) | 441 |
+| [Becoming.«粗只连异类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L451) | 451 |
+| [Becoming.«复生则粗复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L463) | 463 |
+| [Becoming.«位根»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L481) | 481 |
+| [Becoming.«位核含于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L498) | 498 |
+| [Becoming.«亡于核下不变»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L503) | 503 |
+| [Becoming.«生于位核下不变»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L512) | 512 |
+| [Becoming.«位同则生亡同»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L523) | 523 |
+| [Becoming.«位同则住同»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L530) | 530 |
+| [Becoming.«有常之同谓»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L557) | 557 |
+| [Becoming.«相须之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L562) | 562 |
+| [Becoming.«无自相须»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L566) | 566 |
+| [Becoming.«核之单调»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L570) | 570 |
+| [Becoming.«类有常当且仅当含于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L574) | 574 |
+| [Becoming.«合有常则足以定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L595) | 595 |
+| [Becoming.«因于则因于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L605) | 605 |
+| [Becoming.«相须则相须核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L610) | 610 |
+| [Becoming.«生生不息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L632) | 632 |
+| [Becoming.«自不复生则息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L643) | 643 |
+| [Becoming.«不复生则息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L650) | 650 |
+| [Becoming.«一之下皆息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L655) | 655 |
+| [Becoming.«两端分则中有标»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L669) | 669 |
+| [Becoming.«线内同类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L690) | 690 |
+| [Becoming.«生于细而续于粗则异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L697) | 697 |
+| [Becoming.«生于粗则生于细»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L703) | 703 |
+| [Becoming.Flame.alike_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L733) | 733 |
+| [Becoming.Flame.not_core_f₁](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L736) | 736 |
+| [Becoming.Flame.not_core_f₀](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L747) | 747 |
+| [Becoming.«以核为判据则火无续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L763) | 763 |
+| [Becoming.Flame.joint_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L789) | 789 |
+| [Becoming.«火薪相须»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L803) | 803 |
+| [Becoming.«火之见证不择类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L820) | 820 |
+| [Becoming.«两火以薪定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L849) | 849 |
+| [Becoming.«两火同火不足以定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L863) | 863 |
 
 Definitions and types:
 
-- `abbrev` [Becoming.«际»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L46) (L46)
-- `def` [Becoming.«而»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L53) (L53)
-- `def` [Becoming.«逆»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L56) (L56)
-- `def` [Becoming.«则»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L59) (L59)
-- `def` [Becoming.«谓»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L62) (L62)
-- `def` [Becoming.«合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L65) (L65)
-- `def` [Becoming.«一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L68) (L68)
-- `def` [Becoming.«静»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L71) (L71)
-- `def` [Becoming.«非»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L74) (L74)
-- `inductive` [Becoming.«及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L77) (L77)
-- `structure` [Becoming.«类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L83) (L83)
-- `def` [Becoming.«续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L119) (L119)
-- `def` [Becoming.«相续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L122) (L122)
-- `def` [Becoming.«有前»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L125) (L125)
-- `def` [Becoming.«有后»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L128) (L128)
-- `def` [Becoming.«生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L131) (L131)
-- `def` [Becoming.«亡»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L134) (L134)
-- `def` [Becoming.«住»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L137) (L137)
-- `def` [Becoming.«异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L140) (L140)
-- `def` [Becoming.«复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L145) (L145)
-- `def` [Becoming.«无环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L213) (L213)
-- `inductive` [Becoming.«同族»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L224) (L224)
-- `def` [Becoming.«不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L235) (L235)
-- `def` [Becoming.«生生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L251) (L251)
-- `def` [Becoming.«有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L323) (L323)
-- `def` [Becoming.«核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L358) (L358)
-- `def` [Becoming.«粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L446) (L446)
-- `def` [Becoming.«粗复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L457) (L457)
-- `def` [Becoming.«位核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L475) (L475)
-- `def` [Becoming.«自持»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L532) (L532)
-- `def` [Becoming.«相须»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L536) (L536)
-- `def` [Becoming.«因于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L539) (L539)
-- `def` [Becoming.«足以定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L569) (L569)
-- `def` [Becoming.«因于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L572) (L572)
-- `def` [Becoming.«相须核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L575) (L575)
-- `def` [Becoming.«息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L601) (L601)
-- `inductive` [Becoming.Flame](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L665) (L665)
-- `def` [Becoming.Flame.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L670) (L670)
-- `def` [Becoming.Flame.burns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L677) (L677)
-- `def` [Becoming.Flame.alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L684) (L684)
-- `def` [Becoming.Flame.fuel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L731) (L731)
-- `def` [Becoming.Flame.sameFuel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L738) (L738)
+- `abbrev` [Becoming.«际»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L47) (L47)
+- `def` [Becoming.«而»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L54) (L54)
+- `def` [Becoming.«逆»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L57) (L57)
+- `def` [Becoming.«则»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L60) (L60)
+- `def` [Becoming.«谓»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L63) (L63)
+- `def` [Becoming.«合»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L66) (L66)
+- `def` [Becoming.«一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L69) (L69)
+- `def` [Becoming.«静»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L72) (L72)
+- `def` [Becoming.«非»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L75) (L75)
+- `inductive` [Becoming.«及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L78) (L78)
+- `structure` [Becoming.«类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L84) (L84)
+- `def` [Becoming.«续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L120) (L120)
+- `def` [Becoming.«相续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L123) (L123)
+- `def` [Becoming.«有前»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L126) (L126)
+- `def` [Becoming.«有后»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L129) (L129)
+- `def` [Becoming.«生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L132) (L132)
+- `def` [Becoming.«亡»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L135) (L135)
+- `def` [Becoming.«住»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L138) (L138)
+- `def` [Becoming.«异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L141) (L141)
+- `def` [Becoming.«复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L146) (L146)
+- `def` [Becoming.«无环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L215) (L215)
+- `inductive` [Becoming.«同族»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L226) (L226)
+- `def` [Becoming.«不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L237) (L237)
+- `def` [Becoming.«生生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L253) (L253)
+- `def` [Becoming.«有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L325) (L325)
+- `def` [Becoming.«核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L360) (L360)
+- `def` [Becoming.«粗»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L448) (L448)
+- `def` [Becoming.«粗复生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L459) (L459)
+- `def` [Becoming.«位核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L477) (L477)
+- `def` [Becoming.«自持»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L547) (L547)
+- `def` [Becoming.«相须»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L551) (L551)
+- `def` [Becoming.«因于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L554) (L554)
+- `def` [Becoming.«足以定理»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L584) (L584)
+- `def` [Becoming.«因于核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L587) (L587)
+- `def` [Becoming.«相须核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L590) (L590)
+- `def` [Becoming.«复生至»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L618) (L618)
+- `inductive` [Becoming.«息»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L626) (L626)
+- `inductive` [Becoming.Flame](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L712) (L712)
+- `def` [Becoming.Flame.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L717) (L717)
+- `def` [Becoming.Flame.burns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L724) (L724)
+- `def` [Becoming.Flame.alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L731) (L731)
+- `def` [Becoming.Flame.fuel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L778) (L778)
+- `def` [Becoming.Flame.sameFuel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L785) (L785)
+- `abbrev` [Becoming.TwoFlames](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L827) (L827)
+- `def` [Becoming.TwoFlames.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L832) (L832)
+- `def` [Becoming.TwoFlames.alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L835) (L835)
+- `def` [Becoming.TwoFlames.sameFuel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L838) (L838)
+- `def` [Becoming.TwoFlames.sameFlame](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean#L841) (L841)
 
 </details>
 
@@ -7244,7 +7256,7 @@ Definitions and types:
 <a id="module-3c1996315d3a"></a>
 
 <details>
-<summary>GrammarMap.lean — 55 explicit declarations</summary>
+<summary>GrammarMap.lean — 58 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -7254,71 +7266,74 @@ Imports: `Becoming.Grammar`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.«传则异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L51) | 51 |
-| [Becoming.«所及之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L57) | 57 |
-| [Becoming.«全生成有终不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L82) | 82 |
-| [Becoming.«全生成全守不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L86) | 86 |
-| [Becoming.«全守有终不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L92) | 92 |
-| [Becoming.«有常则无终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L96) | 96 |
-| [Becoming.«有终则粗不有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L104) | 104 |
-| [Becoming.«全生有终之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L111) | 111 |
-| [Becoming.«全生成之所及亦全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L130) | 130 |
-| [Becoming.«有终之所前亦有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L135) | 135 |
-| [Becoming.«全三域之周»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L142) | 142 |
-| [Becoming.«阶全生成则上无终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L165) | 165 |
-| [Becoming.«相续之续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L177) | 177 |
-| [Becoming.«延尽不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L190) | 190 |
-| [Becoming.«不穷则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L198) | 198 |
-| [Becoming.«尽则非不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L205) | 205 |
-| [Becoming.«生成则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L225) | 225 |
-| [Becoming.«守则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L228) | 228 |
-| [Becoming.«生成退化不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L232) | 232 |
-| [Becoming.«守退化不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L236) | 236 |
-| [Becoming.«单行则族含所及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L241) | 241 |
-| [Becoming.«单行则生守不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L253) | 253 |
-| [Becoming.«延尽之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L266) | 266 |
-| [Becoming.«阶生成则上不退化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L291) | 291 |
-| [Becoming.Map.step_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L305) | 305 |
-| [Becoming.Map.Endless.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L310) | 310 |
-| [Becoming.Map.Still.keeping](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L320) | 320 |
-| [Becoming.Map.short_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L326) | 326 |
-| [Becoming.Map.Short.degeneration](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L330) | 330 |
-| [Becoming.Map.Short.renews_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L335) | 335 |
-| [Becoming.Map.Endless.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L342) | 342 |
-| [Becoming.Map.Still.keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L348) | 348 |
-| [Becoming.Map.Short.ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L353) | 353 |
-| [Becoming.Map.Short.renews_and_ends_everywhere](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L359) | 359 |
-| [Becoming.Map.fork_chain_begins](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L379) | 379 |
-| [Becoming.Map.«生守相杂»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L384) | 384 |
+| [Becoming.«传则异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L57) | 57 |
+| [Becoming.«所及之传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L63) | 63 |
+| [Becoming.«全生成有终不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L89) | 89 |
+| [Becoming.«全生成全守不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L93) | 93 |
+| [Becoming.«全守有终不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L99) | 99 |
+| [Becoming.«有常则无终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L103) | 103 |
+| [Becoming.«有终则粗不有常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L111) | 111 |
+| [Becoming.«不穷有终之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L118) | 118 |
+| [Becoming.«全生成之所及亦全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L137) | 137 |
+| [Becoming.«有终之所前亦有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L142) | 142 |
+| [Becoming.«全三域之周»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L150) | 150 |
+| [Becoming.«全三域之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L170) | 170 |
+| [Becoming.«阶全生成则上无终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L192) | 192 |
+| [Becoming.«相续之续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L207) | 207 |
+| [Becoming.«延尽不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L220) | 220 |
+| [Becoming.«不穷则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L228) | 228 |
+| [Becoming.«尽则非不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L235) | 235 |
+| [Becoming.«生成则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L255) | 255 |
+| [Becoming.«守则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L258) | 258 |
+| [Becoming.«生成退化不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L262) | 262 |
+| [Becoming.«守退化不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L266) | 266 |
+| [Becoming.«单行则族含所及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L271) | 271 |
+| [Becoming.«单行则生守不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L283) | 283 |
+| [Becoming.«延尽之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L296) | 296 |
+| [Becoming.«阶生成则上不退化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L321) | 321 |
+| [Becoming.«生生即延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L326) | 326 |
+| [Becoming.«息即尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L333) | 333 |
+| [Becoming.Map.step_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L352) | 352 |
+| [Becoming.Map.Endless.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L357) | 357 |
+| [Becoming.Map.Still.keeping](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L367) | 367 |
+| [Becoming.Map.short_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L373) | 373 |
+| [Becoming.Map.Short.degeneration](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L378) | 378 |
+| [Becoming.Map.Short.renews_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L383) | 383 |
+| [Becoming.Map.Endless.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L390) | 390 |
+| [Becoming.Map.Still.keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L396) | 396 |
+| [Becoming.Map.Short.ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L401) | 401 |
+| [Becoming.Map.Short.renews_and_ends_everywhere](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L407) | 407 |
+| [Becoming.Map.fork_chain_begins](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L427) | 427 |
+| [Becoming.Map.«生守相杂»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L432) | 432 |
 
 Definitions and types:
 
-- `def` [Becoming.«传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L48) (L48)
-- `def` [Becoming.«所及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L55) (L55)
-- `def` [Becoming.«全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L66) (L66)
-- `def` [Becoming.«全守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L71) (L71)
-- `def` [Becoming.«有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L75) (L75)
-- `def` [Becoming.«新而有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L78) (L78)
-- `def` [Becoming.«阶全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L161) (L161)
-- `def` [Becoming.«延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L182) (L182)
-- `inductive` [Becoming.«尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L186) (L186)
-- `def` [Becoming.«生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L210) (L210)
-- `def` [Becoming.«守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L215) (L215)
-- `def` [Becoming.«退化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L219) (L219)
-- `def` [Becoming.«新而尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L222) (L222)
-- `def` [Becoming.«阶生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L287) (L287)
-- `def` [Becoming.Map.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L303) (L303)
-- `def` [Becoming.Map.still](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L317) (L317)
-- `def` [Becoming.Map.short](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L324) (L324)
-- `inductive` [Becoming.Map.Branch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L364) (L364)
-- `def` [Becoming.Map.fork](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L368) (L368)
+- `def` [Becoming.«传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L54) (L54)
+- `def` [Becoming.«所及»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L61) (L61)
+- `def` [Becoming.«全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L72) (L72)
+- `def` [Becoming.«全守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L77) (L77)
+- `def` [Becoming.«有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L82) (L82)
+- `def` [Becoming.«新而有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L85) (L85)
+- `def` [Becoming.«阶全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L188) (L188)
+- `def` [Becoming.«延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L212) (L212)
+- `inductive` [Becoming.«尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L216) (L216)
+- `def` [Becoming.«生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L240) (L240)
+- `def` [Becoming.«守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L245) (L245)
+- `def` [Becoming.«退化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L249) (L249)
+- `def` [Becoming.«新而尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L252) (L252)
+- `def` [Becoming.«阶生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L317) (L317)
+- `def` [Becoming.Map.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L350) (L350)
+- `def` [Becoming.Map.still](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L364) (L364)
+- `def` [Becoming.Map.short](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L371) (L371)
+- `inductive` [Becoming.Map.Branch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L412) (L412)
+- `def` [Becoming.Map.fork](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean#L416) (L416)
 
 </details>
 
 <a id="module-ae9784542ef0"></a>
 
 <details>
-<summary>GrammarReadings.lean — 14 explicit declarations</summary>
+<summary>GrammarReadings.lean — 17 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean) · [Theory](../../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -7328,23 +7343,26 @@ Imports: `Becoming.Grammar`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.«化之二说同形»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L49) | 49 |
-| [Becoming.«化为有缘之成坏»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L59) | 59 |
-| [Becoming.«同于为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L67) | 67 |
-| [Becoming.«同于不必传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L77) | 77 |
-| [Becoming.«相续之末有前»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L96) | 96 |
-| [Becoming.«复者住»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L102) | 102 |
-| [Becoming.«有常则通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L112) | 112 |
-| [Becoming.«非一非异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L121) | 121 |
-| [Becoming.«因灭而续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L133) | 133 |
+| [Becoming.«化之二说同形»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L52) | 52 |
+| [Becoming.«化为有缘之成坏»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L62) | 62 |
+| [Becoming.«同于为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L70) | 70 |
+| [Becoming.«同于不必传递»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L80) | 80 |
+| [Becoming.«相续之末有前»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L99) | 99 |
+| [Becoming.«复者住»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L105) | 105 |
+| [Becoming.«有常则往不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L116) | 116 |
+| [Becoming.«两向有常则通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L123) | 123 |
+| [Becoming.«有常而不通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L130) | 130 |
+| [Becoming.«昼夜往来不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L144) | 144 |
+| [Becoming.«非一非异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L152) | 152 |
+| [Becoming.«因灭而续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L164) | 164 |
 
 Definitions and types:
 
-- `def` [Becoming.«化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L46) (L46)
-- `def` [Becoming.«成坏»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L55) (L55)
-- `def` [Becoming.«同于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L64) (L64)
-- `def` [Becoming.«复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L93) (L93)
-- `def` [Becoming.«通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L108) (L108)
+- `def` [Becoming.«化»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L49) (L49)
+- `def` [Becoming.«成坏»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L58) (L58)
+- `def` [Becoming.«同于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L67) (L67)
+- `def` [Becoming.«复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L96) (L96)
+- `def` [Becoming.«通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean#L113) (L113)
 
 </details>
 
@@ -12497,31 +12515,31 @@ Imports: `Becoming.GrammarMap`, `Becoming.ContinuedClasses`, `Becoming.PatternPa
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.Map.outside_of_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L80) | 80 |
-| [Becoming.Web.reached_later](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L95) | 95 |
-| [Becoming.Web.active_along_line](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L102) | 102 |
-| [Becoming.Web.reaches_onward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L109) | 109 |
-| [Becoming.Web.ends_or_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L119) | 119 |
-| [Becoming.Web.carries_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L137) | 137 |
-| [Becoming.Web.passing_carries_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L152) | 152 |
-| [Becoming.Web.generation_renews_late](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L170) | 170 |
-| [Becoming.Web.generation_arises_late](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L182) | 182 |
-| [Becoming.Web.keeping_of_carried_on](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L198) | 198 |
-| [Becoming.Web.itself_carries_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L213) | 213 |
-| [Becoming.Web.itself_not_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L218) | 218 |
-| [Becoming.Web.itself_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L224) | 224 |
-| [Becoming.Web.always_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L230) | 230 |
-| [Becoming.Web.not_endless_of_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L245) | 245 |
-| [Becoming.Web.degenerates_of_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L254) | 254 |
-| [Becoming.Web.consumed_held_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L270) | 270 |
-| [Becoming.Web.family_excess_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L287) | 287 |
-| [Becoming.Web.stopped_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L305) | 305 |
-| [Becoming.Map.shifted_carry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L322) | 322 |
-| [Becoming.Map.shifted_pass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L329) | 329 |
-| [Becoming.Map.shifted_generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L338) | 338 |
-| [Becoming.Map.relay_after_two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L355) | 355 |
-| [Becoming.Map.relay_renews_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L364) | 364 |
-| [Becoming.Map.renewal_undecided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L385) | 385 |
+| [Becoming.Map.outside_of_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L81) | 81 |
+| [Becoming.Web.reached_later](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L96) | 96 |
+| [Becoming.Web.active_along_line](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L103) | 103 |
+| [Becoming.Web.reaches_onward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L110) | 110 |
+| [Becoming.Web.ends_or_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L120) | 120 |
+| [Becoming.Web.carries_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L138) | 138 |
+| [Becoming.Web.passing_carries_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L153) | 153 |
+| [Becoming.Web.generation_renews_late](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L171) | 171 |
+| [Becoming.Web.generation_arises_late](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L183) | 183 |
+| [Becoming.Web.keeping_of_carried_on](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L199) | 199 |
+| [Becoming.Web.itself_carries_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L214) | 214 |
+| [Becoming.Web.itself_not_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L219) | 219 |
+| [Becoming.Web.itself_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L225) | 225 |
+| [Becoming.Web.always_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L231) | 231 |
+| [Becoming.Web.not_endless_of_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L246) | 246 |
+| [Becoming.Web.degenerates_of_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L256) | 256 |
+| [Becoming.Web.consumed_held_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L272) | 272 |
+| [Becoming.Web.family_excess_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L289) | 289 |
+| [Becoming.Web.stopped_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L307) | 307 |
+| [Becoming.Map.shifted_carry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L324) | 324 |
+| [Becoming.Map.shifted_pass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L331) | 331 |
+| [Becoming.Map.shifted_generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L340) | 340 |
+| [Becoming.Map.relay_after_two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L357) | 357 |
+| [Becoming.Map.relay_renews_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L366) | 366 |
+| [Becoming.Map.renewal_undecided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean#L387) | 387 |
 
 </details>
 
