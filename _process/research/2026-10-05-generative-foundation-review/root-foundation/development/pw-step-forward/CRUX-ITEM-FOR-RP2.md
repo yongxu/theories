@@ -38,7 +38,7 @@ The narrow self, the organism, is a class under which a line ends, and such a cl
 - Johnston, *Surviving Death* (2010): the self as wide as the relations it lives by; goodness as living on in others.
 - Scheffler, *Death and the Afterlife* (2013): much of what we value presupposes that others live on after us (the "collective afterlife"). This is the nearest existing statement of the regularity side.
 - Williams, "Persons, Character and Morality" (1976): categorical desires that give reason to go on.
-- Næss, "Self-Realization: An Ecological Approach to Being in the World" (1987): the ecological Self.
+- Næss, "Self-Realization: An Ecological Approach to Being in the World": the ecological Self. RP2's check found no record of a 1987 journal printing. Cite the Keith Roby Memorial Lecture (Murdoch University, 12 March 1986) and its reprint in Sessions (ed.), *Deep Ecology for the 21st Century* (Shambhala 1995).
 - Perry (1979) and Lewis (1979) on the essential indexical and de se content.
 - Gewirth, *Reason and Morality* (1978), for the step itself.
 
