@@ -1,17 +1,22 @@
 # Draft for 07-SIGNIFICANCE: §4.6 and a pointer in §4
 
-Proposed by PW for the IV3 line's owner, who decides on 07 §4 text (board rule 2; PW's row). Everything below the rule is the proposed chapter text; links are written as they would resolve from `theories/becoming/chapters/`. No theorem is new. The joining of the steps is argued. Steps 3 and 4 rest on witnesses whose general forms are not proved, and the text says so.
+Proposed by PW for the IV3 line's owner, who decides on 07 §4 text (board rule 2; PW's row). Everything below the rule is the proposed chapter text; the proposed text is kept in fenced blocks, with links written as they will resolve from `theories/becoming/chapters/`, so that this file's own link check does not read them. No theorem is new. The joining of the steps is argued. Steps 3 and 4 rest on witnesses whose general forms are not proved, and the text says so.
 
 **Pointer**, one sentence to add after the paragraph below §4's table ("Neither is asserted. …"):
 
-> Read with time, what returns to no present center includes everything after every present center has ended; [§4.6](#future-path) gives one path by which part of that future is reached without the step.
+````markdown
+Read with time, what returns to no present center includes everything after every present center has ended; [§4.6](#future-path) gives one path by which part of that future is reached without the step.
+````
 
 **Open item**, for 07's Open list:
 
-> - Whether a class holding a member with the conditions its line runs through takes in, wherever it is constant, what those conditions feed, in general and not only in `ThirdFed` ([§4.6](#future-path)).
+````markdown
+- Whether a class holding a member with the conditions its line runs through takes in, wherever it is constant, what those conditions feed, in general and not only in `ThirdFed` ([§4.6](#future-path)).
+````
 
 ---
 
+````markdown
 <a id="future-path"></a>
 ### 4.6 The future without the step: one path
 
@@ -40,3 +45,4 @@ Steps:
 - **P3 is a correspondence.** The laws of renewal support it ([04](04-LIFE.md#r-generation-is-replenishment)), but it is not shown for actual selves. Nor is it shown that the actual net is joined, or in which direction.
 
 The argument is set out with its history in [PW's note](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md#6f-where-pw-stands-24-october-2026-ai-reading).
+````
