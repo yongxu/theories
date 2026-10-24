@@ -36,4 +36,4 @@ Asked "Shall I land MA2 here now, without waiting for its claim to lapse?", Ren 
 
 > Yes: land MA2 here now, before its claim lapses. Merge main into ma2, re-home its text into the new chapters, run the core checker, take the queue.
 
-Context (AI-authored): MA2 was verified on branch `ma2` on 22 October and never reached main; its owner session had been idle since then, and under board rule 4 the claim would have lapsed only after three days. The reply authorizes taking the landing over before that. What the landing carried and changed is in study section 398.
+Context (AI-authored): MA2 was verified on branch `ma2` on 22 October and never reached main; its owner session had been idle since then, and under board rule 4 the claim would have lapsed only after three days. The reply authorizes taking the landing over before that. What the landing carried and changed is in study section 399.

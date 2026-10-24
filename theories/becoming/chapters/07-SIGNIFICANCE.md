@@ -170,6 +170,8 @@ A self acting for its own continuation presupposes that some continuation has si
 
 Neither is asserted. The condition alone ranks nothing: under it living significance follows, the reasons of [§3.2](#yields) only with A or D and correspondence, and every ranking needs C.
 
+Read with time, what returns to no present center includes everything after every present center has ended; [§4.6](#future-path) gives one path by which part of that future is reached without the step.
+
 <a id="decomposition"></a>
 ### 4.1 The condition decomposed
 
@@ -294,6 +296,35 @@ The root reads every subject as [continuation relative to a class](01-ROOT.md#r-
 **Theorem** (root; any type, and witnesses). *The class of being joined.* The class of being joined by 缘 read either way, the family under the one (`«同族» R «一»`), is defined from the net alone. Under it continuation is 缘 itself (`«族之续即缘»`), so its lines reach exactly what the one's reach (`«族之所及即一之所及»`), and it is the finest class under which every condition is a continuation: a class has 缘 as its continuation exactly where it contains this one (`«续即缘当且仅当含族»`). Where every occurrence conditions something it is constant (`«遍有后则族有常»`), so its core holds both ends of every condition, every step of 缘 being a step under the core (`«遍有后则缘在族核»`), and a line under the core reaches what the one's reaches (`«遍有后则核之所及即一之所及»`). Three witnesses add a third thing to the shared-condition witness above. Joined to nothing, conditioning nothing and conditioned by nothing but its own earlier stage, it lies outside the class of being joined, which is then narrower than the one and still reaches the second family (`ThirdThing.fixed_class`, `ThirdThing.fixed_class_reaches`). Affecting the shared condition, it makes the class of being joined the one, while the constant class "the third thing or not" leaves it out and still reaches the second family (`ThirdAffects.finer_class_reaches`). Fed by the shared condition, it is taken in by every constant class holding a stage of the condition with a member (`ThirdFed.constant_takes_third`). In the shared-condition witness above, whose net is joined, the class of being joined is the one ([record](../results/records/the-class-of-being-joined.md)).
 
 **Reading** [AI reading, new]. In the results above stated through continuation under the one (what a line reaches, where it ends, the condition along the net), the one can be replaced by the class of being joined with nothing changed: continuation under the two is the same relation. Held de se along a line under it, the presupposition of one's continuation reaches exactly what a line under the one reaches: what one conditions and what that conditions in turn, the conditions one affects and those they later feed among it; not what only conditions one, and nothing no chain joins; with no step of invariance. Keeping every condition fixes nothing beyond the net: the finest class under which every condition is a continuation is the class of being joined, and every class containing it reaches the same; but a finer constant class can reach the same too, as where a third thing affects the shared condition, and constancy, unlike being joined, reads which way a thing is joined. Whether one's own line runs under such a class or a finer one, an organism's, is the de se question. Where the net is joined the class of being joined is the one; that the actual unfolding is joined in this sense is a correspondence, not shown, and on it the class gives nothing narrower than the one.
+
+<a id="future-path"></a>
+### 4.6 The future without the step: one path
+
+The step of invariance extends scope to losses that return to no one. Read with time, those losses include everything after every present center has ended, the future that the condition's "continuation into the future" names. This section joins §4.3 and §4.5 into one path that reaches part of that future with no step of invariance, and says where it can be denied.
+
+**Argument** [AI reading, new; each step cites its Lean, the joining of the steps is argued, and steps 3–4 rest on witnesses]. Premises:
+
+- (P1) Held de se, acting presupposes that one's own continuation has significance ([§4.1](#decomposition)).
+- (P2) The self whose continuation is presupposed is a line under a class on the root ([§4.5](#condition-on-the-root)), and that class is constant: a regularity of its own.
+- (P3) One's line runs through its conditions: one's next stage is conditioned through what one takes in and affects.
+
+Steps:
+
+1. *Need does not reach the future.* A formation active at no step of the stretch a continuation is read across is needed only where nothing lets that continuation go on (`Flow.needs_iff_none_of_inactive`). Read with time, the feeding closure holds only what gives by then (`Flow.gives_of_withinFeedingUpTo`), and read across every step it overreaches (`Overlapping.closure_overreaches`) ([§4.3](#r-need-and-feeding-read-with-time)). So the future is reached, if at all, along a line, not along need.
+2. *A line goes on past a member's end.* Under a coarser class, what continues an occurrence at which a finer line ends is reached (`«过亡而续»`). A class narrower than the one, a family line, is constant and carries the line with its core through each birth while each member's line ends (`TwoLines.core_through_birth`); where two family lines share nothing, even the line under the one from one family reaches no member of the other (`TwoLines.other_line_outside`; [01](01-ROOT.md#r-the-source-texts-test-systems)). In time, self-concern alone is kin-shaped.
+3. *The class must hold the conditions the line runs through.* In the shared-condition witness, a class holding both families' members without the condition reaches no member of the other family (`SharedCondition.affecting_member_outside`).
+4. *Through a condition one affects, the line reaches those it later feeds.* Under the one, the line reaches the other family's later members through the condition its members affect (`SharedCondition.affecting_reaches_other`), and through a common cause it reaches none (`SharedCondition.fed_outside`). A constant class holding a stage of the condition with a member takes in what the condition feeds (`ThirdFed.constant_takes_third`). What only affects the condition can be left out (`ThirdAffects.finer_class_reaches`).
+
+*Conclusion.* Under P1–P3, one's concern for one's own continuation reaches what the conditions one's line runs through later feed, across lines and past one's own end: exactly so in the witnesses of steps 2–4, and in general where the open form of steps 3–4 holds. It needs no step of invariance and does not choose the one. Steps 1 and 2 are general laws or exact witnesses. Steps 3 and 4 are shown in witnesses only, and their general form, that a constant class holding a member with the conditions its line runs through takes in what they feed, is open ([Open](#open)).
+
+*What the path does not reach.* Each center counting from another's standpoint beyond its part as a condition. What affects one's conditions without being fed by them, counted as more than a cause. Present beings beyond every closure. Whatever no chain joins. These remain the step's.
+
+*Where it can be denied.*
+
+- **P2 is the crux.** A class under which some line ends is not constant (`«有亡之续则不有常»`). So the narrow self, the organism's, is a class that is no regularity of its own: under it nothing of the self follows its end. Denying P2 is coherent, since one can presuppose the significance of a line that ends, and the path does not refute it. The question it leaves, put to philosophers in the [review packet](../review/README.md): *in acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going?*
+- **P3 is a correspondence.** The laws of renewal support it ([04](04-LIFE.md#r-generation-is-replenishment)), but it is not shown for actual selves. Nor is it shown that the actual net is joined, or in which direction.
+
+The argument is set out with its history in [PW's note](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md#6f-where-pw-stands-24-october-2026-ai-reading).
 
 <a id="practical-judgment"></a>
 ## 5. Practical judgment
@@ -525,4 +556,5 @@ No objection is shown to defeat the step, nor the step shown ([record](../result
 - **Monotonicity at the standpoint** (C's premise relocated), and **constraints on acts** read as de se rankings of outcomes.
 - **Installation**: which lumping an actual system makes, how pools are admitted and resist capture, and transfer of an installed scope (T4).
 - **The condition on the root's grammar, beyond one instance**: held de se along a relation the condition is the [root's](#r-the-continuation-condition-on-the-root) at the one of that relation; the free significance of §1 is not lifted, and the chapter's other laws are instances not yet stated on the root.
+- **The class that takes in what one's conditions feed** ([§4.6](#future-path)): whether a class holding a member with the conditions its line runs through takes in, wherever it is constant, what those conditions feed, in general and not only in `ThirdFed`.
 - <a id="r-universal-practical-warrant"></a>**A universal practical warrant**: grounding practical reasons with zero substantive premises, as one account of ends, selection, knowing and revision within becoming; supplied local norms, behavioural convergence or fuller description do not substitute for it. Since, where there is a standpoint and a formation, no satisfiable statement reading only the dynamics entails the condition ([§1](#r-what-the-dynamics-leave-open)), such a warrant, where it would ground the condition, cannot come from the laws of the dynamics alone. ([record](../results/records/universal-practical-warrant.md))

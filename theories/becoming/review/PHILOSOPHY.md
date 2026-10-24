@@ -1,0 +1,590 @@
+# Review dossier P: philosophy
+
+**What this is.** One part of the review packet of the Theory of Becoming, for readers in moral philosophy and metaethics, in the philosophy of personal identity, and in environmental ethics. It sets out 27 items, each a definition, theorem, premise or reading of the theory's ethics. For each it asks whether it is correctly described, whether it is credited where it restates known work, whether it is put at its right strength, and whether the argument around it holds. Its centre is the chapter's open question (07 §4.2): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "is the self's presupposition held de se of a self drawn along a privileged relation narrower than being related at all?" [P-20](#p-20) sets out its sharper form, which the chapter states as a labelled reading in its newest section (07 §4.6): in acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going?
+
+**How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings and this dossier. No human has reviewed any of it. A script copied the Lean statements from the source files ([`lean_statements.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/lean_statements.py)); the packet's script checks every quotation against the file it names and every Lean name against the sources; the prose is AI-written and may be wrong. An independent AI reader reviewed a first draft; its findings were taken. The ethics was restated on 24 October 2026, the day this dossier was written: the continuation condition, read de se as lying within a center's closure, was stated on the theory's root ([P-17](#p-17)), and chapter 7 now leads with that structural reading; the free significance is not lifted onto the root. The AI reviews the method chapter lists predate this. Under **Known weaknesses**, a bullet quoting a chapter or a study reports a recorded weakness; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. Much of the literature is credited in the study of the step of invariance ([STEP](../history/THE-STEP-OF-INVARIANCE.md), §2 and §6), which chapter 7 links; where this dossier quotes that study, the works it names are its citations.
+
+**What the theory says of itself.** Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The ethics rests on two premises with two roles, neither asserted" and, among what the chapter does not show, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "That the continuation condition, C or the step of invariance is warranted." So the theory does not claim to prove an ethics. What is asked is whether it locates its premises correctly, states them at their strength, credits the work it restates, and asks the right open question.
+
+**Conventions.** Lean paths are relative to `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/`. Lean blocks give statements exactly, proofs cut at `:=`, definitions whole; they are given for the central items only, and the rest are named. No Lean is needed to review: each item's **Meaning** says in words what is stated.
+
+- *Formation*: a pattern that goes on; its *continuation*: its going on from step to step. A *course* is one way things can go; a course *admits* a formation at a step where that formation can go on there, its conditions meeting its requirements. *Standpoint*: a position from which significance is held; *center*: the formation at a standpoint.
+- *Closure* of a center along a relation: everything reached from it by following the relation step by step. Along feeding it is what feeds the center, directly or through others; along affecting, what affects it. These relations run from the fed to what feeds it.
+- *Net*: a relation of conditioning among occurrences. *Class*: an equivalence relation, a way of counting occurrences as alike. A class is *constant* when whatever an alike occurrence conditions, this one conditions something alike.
+- *De se*: held of oneself as oneself, each standpoint ascribing a property to its own center; *de dicto*: one proposition, the same from every standpoint. *Sub-true*, *super-true*: true as the self's boundary is drawn somewhere, and however it is drawn.
+- *The step of invariance*: the continuation condition's content beyond the self's presupposition (P-10 to P-12).
+- Labels. *(any type)*, *(any process)*: a theorem for every type, or every process. *World*: the model of webs and flows (natural-number amounts, discrete steps) on which most laws of the ethics are proved. *Root*: a theorem for every carrier, relation and class of the theory's grammar. *Witness*: one constructed model, showing that something can happen, not that it does. *Conditional*: a theorem taking a premise as a hypothesis. *Reading* [AI reading, Dn]: an interpretation registered with its argument in the decision register; *new* means not yet numbered.
+- Premises: the continuation condition (scope), C (order), and further practical premises A, D, E, L and J1–J4 (P-21). The theory asserts none of them.
+- The grammar's names that occur: `«续»` continuation (conditioned by and alike under a class), `«相续»` a line (continuation's reach), `«所及»` reached on a line, `«亡»` ends, `«不穷»` goes on without end, `«核»` the core of a class (the regularity a line carries by itself), `«一»` the one (the class under which everything is alike), `«续无外»` nothing outside a line's continuing.
+
+---
+
+## Part 1. Where evaluation enters
+
+<a id="p-01"></a>
+### P-01 What the dynamics leave open
+
+```lean
+def ReadsOnlyDynamics {D : Type} (law : D → (Pos → Nat → F → Prop) → Prop) : Prop :=
+  ∀ d sig sig', law d sig → law d sig'
+
+theorem ReadsOnlyDynamics.not_entails {D : Type} {law : D → (Pos → Nat → F → Prop) → Prop}
+    (reads : ReadsOnlyDynamics law) (entails : ∀ d sig, law d sig → Unrestricted sig)
+    (p : Pos) (f : F) {d : D} {sig : Pos → Nat → F → Prop} : ¬ law d sig
+```
+
+File: `Becoming/Significance.lean`. **Meaning.** Significance enters the representation as a free parameter: for a standpoint, a step and a formation, a proposition saying whether that continuation has significance from there. A statement *reads only the dynamics* when its truth does not change if the significance is changed. Such a statement, if it entails the continuation condition (P-05), holds of no dynamics at all, wherever there is a standpoint and a formation. So no fact about how things go, as represented, settles what has significance. **Standing and use.** Theorem (any type) ([07 §1](../chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)). The chapter limits what it shows: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "That every World law reads only the dynamics is a fact about the representation: the result shows non-entailment by the represented dynamics, not that becoming leaves significance undetermined or needs the condition." Since 24 October it is stated of the free parameter only: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The theorem below concerns the untied parameter." The ethics takes its premises openly, the condition for scope and C for order; this theorem concerns the first only and does not show that it is needed.
+
+**Known weaknesses.**
+- The proof substitutes the empty significance, so the result holds by construction of the representation. A study note on what had been drawn from it: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sw-significance-without-a-value-layer/NOTE.md]: "That inference overreaches: the silence belongs to the slot, not to the unfolding." (The inference was that the proofs are silent where they are most needed.)
+- [this dossier, AI] The result is Hume's law in its invariance form: a conclusion that some change of the evaluative parameter makes false does not follow from satisfiable premises invariant under changing it. That form is Schurz's (1997), and barrier theorems generalize it (Restall and Russell 2010). Chapter 7 credits neither.
+
+**Questions.**
+1. Does the result add anything to Hume's law in its invariance form (Schurz 1997; Restall and Russell 2010), and how does it meet Prior's (1960) counterexamples to the autonomy of ethics?
+2. Once evaluation is tied to what a center continues with (P-03), is the gap closed, relocated or untouched?
+
+<a id="p-02"></a>
+### P-02 How evaluation forms within the unfolding
+
+**Meaning.** Positions, regions and standards form within the one unfolding. A center's own region is its closure under some relation the unfolding reads: along the empty relation its own events, along feeding everything that feeds it, directly or through others (`Web.selfValuation_own_least`). Significance is defined minimally: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "It is the one evaluative parameter supplied: a proposition, not a number, with no valence." **Standing and use.** Definition and theorem (World), and the stance of the whole ethics: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Positions, regions and standards form within the one unfolding; none outside it owns value." **Readings.** [AI reading, D65]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Later endorsement cannot authorize the formation that produced it".
+
+**Known weaknesses.**
+- The definition does not use the regions just described: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The definition ties `sig` to no region: it admits any predicate on standpoints, steps and formations, including one that no center's region bounds." Only the reading of P-03 ties it.
+- [this dossier, AI] The stance says where standards come from but not what makes one correct. Where the account sits among realist, constructivist and expressivist metaethics is not stated.
+
+**Questions.**
+1. Where does the account sit among realist, constructivist and expressivist views, and does it need to say?
+2. Is a significance with no valence a coherent notion, or does it reduce to inclusion (P-03)?
+
+<a id="p-03"></a>
+### P-03 Significance as lying within what a center continues with
+
+```lean
+def ownClosure (rel : F → F → Prop) : F → Nat → F → Prop :=
+  fun c _ g => WithinClosure rel c g
+
+def selfAscribed (content : F → Nat → F → Prop) (center : Pos → F) : Pos → Nat → F → Prop :=
+  fun p t g => content (center p) t g
+
+theorem ownClosure_unrestricted_iff {rel : F → F → Prop} {center : Pos → F} :
+    Unrestricted (selfAscribed (ownClosure rel) center) ↔ ∀ p g, WithinClosure rel (center p) g
+```
+
+File: `Becoming/Weightings.lean`. **Meaning.** Read de se, a standpoint holds significant exactly what lies within its own center's closure along a relation. On that reading the continuation condition holds exactly where every center's closure is the whole. It is then a statement about the relation and the centers, with no evaluative parameter left. **Standing and use.** Theorem (any type). Since 24 October the chapter's thesis leads with it: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Read as lying within what a center continues with along a relation, the continuation condition is a statement about relations". The glossary gives the same reading: Quote [GLOSSARY.md]: "read de se, that it lies within what the center continues with along a relation". On the root, see P-17.
+
+**Known weaknesses.**
+- The word *significance* brings in a valuer conferring value on what is valued, a layer the formal object lacks. A study note: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sw-significance-without-a-value-layer/NOTE.md]: "The word fits the slot: significance as something a standpoint confers on a continuation, with a valuer on one side and what is valued on the other." The word was kept, with the structural reading leading; the free parameter keeps it where the representation supplies it.
+- [this dossier, AI] The reading may change the subject. Lying within what one continues with is a relation, not a value. As an explication it owes an argument that it keeps what matters in the ordinary concept; as a replacement, the ethics becomes an account of the scope of concern, not of value.
+
+**Questions.**
+1. Is reading significance as inclusion in one's continuing a reduction, an explication, or a change of subject?
+2. Goodpaster (1978) separated moral considerability (whether something counts) from moral significance (how much it counts). The theory's two-valued significance looks like his considerability, and its graded significance (P-22) like his significance. Is that right, and should he be credited?
+
+---
+
+## Part 2. Scope and order
+
+<a id="p-04"></a>
+### P-04 Two premises, two roles
+
+**Meaning.** The ethics splits into two questions with two premises. *Scope*: whose losses count; the continuation condition says everything's. *Order*: which course is better; C says that a course which widens another (admits everything the other admits, and more) is better. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "how far that reaches and which course is better are separate questions with separate premises." Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither is asserted. The condition alone ranks nothing". **Standing and use.** The frame of the ethics ([07 §4](../chapters/07-SIGNIFICANCE.md#scope-and-order)). The chapter reads two kinds of zero weight as boundaries of scope, not as order: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a zero weight on what a course adds ties it with the course it includes; read as not counting the item, a boundary of scope" (`Weighting.weighed_eq_of_unweighted`), and a weight that rises no further from a threshold (`Weighting.sufficient_ties`).
+
+**Known weaknesses.**
+- [this dossier, AI] Goodpaster's (1978) split between considerability and significance is not this one. His significance is comparative weight, which here belongs to graded significance and status (P-22); C is not a weighting but what every positive weighting shares (P-07).
+- [this dossier, AI] The split may not be clean. A zero weight can be read as not counting (scope) or as counting for nothing (order), and the theory reads it as scope by choice.
+
+**Questions.**
+1. Is the split of scope from order clean?
+2. Does a frame of scope (whose losses count) and order (which course is better) leave out anything a moral theory must say, for instance about rights or constraints on acts, which the chapter says it does not show?
+
+<a id="p-05"></a>
+### P-05 The continuation condition
+
+```lean
+def Unrestricted (sig : Pos → Nat → F → Prop) : Prop :=
+  Neutral fun i : Pos × Nat × F => sig i.1 i.2.1 i.2.2
+```
+
+File: `Becoming/Significance.lean`; `Neutral rule` says the rule holds at every index. **Meaning.** Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "from every standpoint, the continuation of anything has significance at every step; in words, for anything, its continuation into the future has significance". **Standing and use.** A premise, stated and not asserted: a hypothesis wherever it is used ([07 §3](../chapters/07-SIGNIFICANCE.md#condition)). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a theorem taking it as a hypothesis instantiates a universal statement; counting such theorems measures no further dependence." **Readings.** [AI reading, D16]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "significance is neither graded nor necessarily positive".
+
+**Known weaknesses.**
+- The chapter's verdict on why anything should have significance compares two scopes: the centers' (exactly the formations that want their continuation [AI reading, D59]; P-12's first row, `forced_iff_center`) and the condition's (everything). They part only at a formation that is no center. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a tumour does not tell the scopes apart, a hurricane only on a stronger reading of wanting".
+- What counts as a loss is not fixed by the condition: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Individuation fixes what counts as a loss; the reading of `living` is a choice."
+- [this dossier, AI] Anything includes what few would count: a hurricane, a tumour, an institution kept by coercion. The chapter answers that every narrowing loses something and that mixed cases need a measure (P-07). Whether that answer suffices is for the reviewer.
+
+**Questions.**
+1. Does the condition's "anything" over-generate, and is the chapter's answer (such losses are real but mixed, and C does not rank them) enough?
+2. How does the condition compare with biocentric views (Taylor 1986), with Jonas's imperative of responsibility (1984), whose object is the permanence of genuine human life, and with a conatus reading of Spinoza, which the study of the step finds close: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "It is close to Johnston, and to a conatus reading of Spinoza"?
+
+<a id="p-06"></a>
+### P-06 Living significance, an instance
+
+**Meaning.** *Living significance*: every living claim has significance from every standpoint. With no condition it is equivalent, on a whole where formed relations connect the living claims, with some living claim and some standpoint, to a *seed* (some living claim valued from some standpoint), *relational neutrality* (significance passes along formed relations) and *standpoint neutrality* (what has significance from one standpoint has it from every one) (`Valuation.significant_iff`). Under the condition, on any reading where a claim's significance is some formation's continuation at some step, it follows at once (`Valuation.premises_of_unrestricted`): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "So living significance is the condition restricted to living claims, an instantiation". **Standing and use.** Theorem (any process) and conditional ([07 §3.1–3.2](../chapters/07-SIGNIFICANCE.md#living-significance)). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Seed, neutralities and A are normative premises; connection and soundness are hypotheses about the unfolding and the inquiry."
+
+**Known weaknesses.**
+- Of the two readings of `living` the chapter states, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "neither is proved the right reading of 生生".
+- [this dossier, AI] The characterization decomposes impartiality into a seed and two neutralities. It is a decomposition, not an argument for impartiality.
+- [this dossier, AI] Goodpaster's (1978) criterion of moral considerability, being alive, is the nearest precedent for counting every living claim, and is not credited.
+- A route from one's own good to living significance needs two premises the chapter calls contested: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Supervenience and tolerance are substantive and contested; without tolerance a threshold rival is consistent and a present-aim evaluator escapes" (`ProfileReach.selfSignificance_derives_reachable_livingSignificance`).
+- [AI reading, D65] on experience: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Conscious experience differentiates significance within the living whole without being the only admission condition".
+
+**Questions.**
+1. Is the decomposition into a seed, relational neutrality and standpoint neutrality illuminating, and is one of the three the real point of dispute between partial and impartial views?
+2. Is it right that no reading of `living` includes further generation, generation being compared by widening instead (P-07)?
+3. Against sentientist views, is it right that conscious experience differentiates significance without being the condition of counting at all?
+
+<a id="p-07"></a>
+### P-07 C: widening is better
+
+```lean
+theorem widens_iff_every_positive {items : List X} {a b : X → Bool} :
+    WidensOn items a b ↔ ∀ w, Positive items w → weighed items w b < weighed items w a
+```
+
+File: `Becoming/Weightings.lean` (namespace `Weighting`). **Meaning.** A course *widens* another when at every step it admits every formation the other admits, and at some step one more. C says that widening what can form is better. With no premise, widening is an order. The theorem shows, on a finite listing with two-valued admission, that it is exactly what every *positive weighting* (each item counted with a natural-number weight above zero) ranks higher. The same holds for any class of orders from the positive weightings up to every order ranking each widening higher, priority to the worse off and lexical priority included (`Weighting.widens_iff_every_of_class`). **Standing and use.** Theorem (any type) ([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks)); C itself stays a premise: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Monotonicity at the standpoint is C's premise relocated: weaker, still a premise." The chapter credits Sen's intersection approach and Pareto dominance; the study of the step adds Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "inclusion with strict monotonicity on opportunity sets (Pattanaik and Xu 1990)". Mixed courses, each admitting something the other does not, are not ordered: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Ordering a mixed part needs a measure." Under the condition, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under the condition every narrowing loses something with significance."
+
+**Known weaknesses.**
+- Among what the chapter does not show: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The value of bringing new lives into existence, well-being beyond admitted continuation, and constraints on acts."
+- [this dossier, AI] Adding a life that takes nothing from others is a widening, so C ranks it better. That is stronger than the first step of Parfit's mere addition paradox (1984, Part Four), which says only that such an addition is not worse. Since C counts admission, not quality, it also ranks adding a life not worth living as better, against the procreation asymmetry (Narveson 1967; McMahan 1981). C leaves mixed comparisons unranked, so it neither yields nor blocks the paradox's later steps. The chapter's reading on creation, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "further living formation can count with no existing beneficiary, inventing no unlimited duty to create", concerns duty, not betterness.
+
+**Questions.**
+1. Is dominance over what can form a plausible core of betterness, and are the credits above (Sen 1970, Pareto dominance, and the study's credit for ranking opportunity sets) accurate?
+2. C ranks adding any life that takes nothing from others as better. What does the theory then owe on the procreation asymmetry and on the Repugnant Conclusion?
+3. Is it a strength or a gap that C ranks no mixed comparison?
+
+---
+
+## Part 3. The step of invariance
+
+<a id="p-08"></a>
+### P-08 The condition decomposed
+
+```lean
+theorem unrestricted_iff_presupposed_along (rel : F → F → Prop) (center : Pos → F)
+    {sig : Pos → Nat → F → Prop} :
+    Unrestricted sig ↔ ∀ p, SubTrue (Boundary rel (center p)) (SignificantWithin sig p) ∧
+      BoundaryInvariant (Boundary rel (center p)) (SignificantWithin sig p)
+```
+
+File: `Becoming/Boundaries.lean`. **Meaning.** Along a relation, a self's *boundary* is any region holding its center and closed under the relation, from the closure (the least) to the whole (the greatest). The *self's presupposition*, drawn at a region, is that the continuation of everything within it has significance. It is *sub-true* if it holds as the boundary is drawn somewhere, and *boundary-invariant* if, holding as drawn at one admissible region, it holds at every other. The theorem: the condition is exactly the presupposition sub-true and invariant at every standpoint. **Standing and use.** Theorem (any type) ([07 §4.1](../chapters/07-SIGNIFICANCE.md#decomposition)). The chapter says how little this proves: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "logically A ⇔ P ∧ (P → A), given A → P, which locates the contested step and derives nothing beyond it."
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Admitting every closed region holding the center as a drawing is a substantive choice."
+
+**Questions.**
+1. Is invariance across admissible drawings of the self the right form of the contested step?
+2. Is every closed region holding the center, the whole included, the right set of admissible drawings?
+3. Sub-truth and super-truth come from the semantics of vagueness (super-truth Fine 1975, sub-truth Hyde 1997). Is the self's boundary vague in that sense, and does the analogy help or mislead?
+
+<a id="p-09"></a>
+### P-09 Self-concern and the condition as two scopes of one presupposition
+
+```lean
+theorem presupposition_scopes (rel : F → F → Prop) (f : F) (sig : Pos → Nat → F → Prop)
+    (p : Pos) :
+    ((∀ t g, SuperTrue (Boundary rel f) (fun region => region g) → sig p t g) ↔
+        SubTrue (Boundary rel f) (SignificantWithin sig p)) ∧
+      (SuperTrue (Boundary rel f) (SignificantWithin sig p) ↔ ∀ t g, sig p t g)
+```
+
+File: `Becoming/Boundaries.lean`. **Meaning.** Read with "however the self is drawn" at narrow scope, the presupposition gives significance over the self's closure, which is self-concern reaching what one depends on (P-13). Read at wide scope, it gives the condition from that standpoint. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Along a relation, the presupposition sub-true is significance over the closure, and super-true it is the condition". Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Along the empty relation sub-truth is a standpoint's own good, along the total relation the condition." **Standing and use.** Theorem (any type) ([07 §4.1](../chapters/07-SIGNIFICANCE.md#r-presupposition-scopes)); it places egoism, enlightened self-concern and the condition on one scale. **Readings.** [AI reading, D59]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Invariant, the presupposition holds at no drawing if any continuation lacks significance, and held anywhere it gives everything".
+
+**Known weaknesses.**
+- [this dossier, AI] Describing the dispute between self-concern and impartiality as a scope ambiguity may assume what the impartialist must show: that the self's concern has the same content at both scopes.
+
+**Questions.**
+1. Is the dispute between self-concern and the condition well described as a scope ambiguity in one presupposition?
+
+<a id="p-10"></a>
+### P-10 The strongest argument for the step
+
+**Meaning.** The step has two forms ([07 §4.2](../chapters/07-SIGNIFICANCE.md#step)): across drawings of one self, and across standpoints. The chapter's strongest argument runs across drawings: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "(P1) Acting for a continuation presupposes that some continuation has significance." (P2) What is one's own is a region drawn along a relation of the unfolding, and no law of the dynamics fixes which. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "(P3) A presupposition whose truth depends on a choice nothing privileges is relative to it or invariant across it." Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "(P4) What acting presupposes is that continuation has significance, not continuation under a description of its own drawing." So the presupposition is invariant, and held at every standpoint it is the condition. **Standing and use.** The last step's validity is a theorem (`unrestricted_iff_presupposed_along`, P-08). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the step from P2–P4 to invariance is argued, not proved, and soundness is not shown". The chapter's prior forms: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Across standpoints the step is Gewirth's (1978), with agents as centers"; across drawings, the reductionist step of Parfit (1984) and Siderits (2003).
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "P2 holds in the representation only because the relation is supplied, and a relation the facts privilege (the organism's life) denies it; P4, Parfit's thesis that identity is not what matters, is coherently denied."
+- The standard objection to the across-drawings step, credited in the study of the step but not in chapter 7: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "reductionism can dissolve concern as easily as extend it (Wolf 1986; Parfit's Extreme Claim)". The study's answer is that invariance alone forces a choice between everything and nothing, and P1, held fixed while the drawing varies, chooses: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "It does not choose. P1 chooses: it is held fixed while the drawing varies."
+- The across-standpoints variants are credited in the study, not in chapter 7: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "The variants are Nagel (1970: prudence sees the present as one time among others, altruism oneself as one person among others), Hare (1981) and Korsgaard (1996: reasons are public)."
+
+**Questions.**
+1. Is the argument valid as stated, and which premise is weakest?
+2. Across drawings, the step is credited to Parfit (1984) and Siderits (2003); is that right, and does P1 answer the Extreme Claim? Across standpoints (P-12), it is credited to Gewirth (1978), with Nagel (1970), Hare (1981) and Korsgaard (1996) as variants; is that right, and is either form new?
+3. If a person's life is a relation the facts privilege, does P2 fail for persons?
+
+<a id="p-11"></a>
+### P-11 The strongest case against: the self held de se
+
+**Meaning.** Read the self's presupposition *de se*, held essentially indexically: then "however the self is drawn" takes narrow scope, and the presupposition reaches only the self's closure. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "A privileged relation is costly, not refuted; a perspectivist holding significance relative all the way down denies the condition consistently" (`bounded_rival`). Where every center's closure is the whole, the de se presupposition is the condition with no step (`ownClosure_unrestricted_of_whole`). The open question as the chapter states it: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "is the self's presupposition held de se of a self drawn along a privileged relation narrower than being related at all?" **Standing and use.** Argued ([07 §4.2](../chapters/07-SIGNIFICANCE.md#step)). The chapter's reply has two parts: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a motive held de se can presuppose de dicto that the outcome matters" and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "privileging a narrower relation needs an argument the dynamics do not supply, Parfit's R coming in degrees and the closures nesting". Chapter 7 cites no source for the de se; the study of the step does: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "held essentially indexically (Castañeda 1966, Perry 1979, Lewis 1979)". The formal self-ascription (`selfAscribed`) is closest to Lewis's (1979) self-ascription of properties; essential indexicality is Perry's (1979) notion, and his account differs.
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Which holds is not shown".
+- [this dossier, AI] The first part of the reply is close to Moore's charge that egoism contradicts itself (1903, §§59–62). The egoist's answer is Sidgwick's (1907, Book IV, chapter II): the egoist can decline to affirm that his own good is part of universal good. The second part shows only that the dynamics privilege no narrower relation, not that nothing else does.
+- [this dossier, AI] The strongest form of partiality the reply must meet is Williams's (1976): ground projects that give one reason to go on, and the thought too many, as the study sets it out (§6.2).
+
+**Questions.**
+1. Is the de se reading the strongest form of the case against the step, and which notion of the de se (Perry's or Lewis's) does the argument need?
+2. Can a motive held de se presuppose de dicto that its outcome matters, against Sidgwick's egoist?
+
+<a id="p-12"></a>
+### P-12 What each premise forces
+
+**Meaning.** With nothing asserted, what each premise forces to have significance ([07 §4.2](../chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches)):
+- each standpoint's presupposition about its own continuation, with standpoint-invariance: exactly the centers' continuation (`forced_iff_center`);
+- one standpoint's presupposition along a relation, alone: exactly what lies within its closure (`forced_iff_within`);
+- held de se: each center's closure, from it, invariant exactly where the closures agree, the condition exactly where each is the whole (`ownClosure_standpointInvariant_iff`, `ownClosure_unrestricted_iff`);
+- held de dicto, with the step: the union of the centers' closures (`forced_iff_within_some`).
+
+Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The de se and de dicto readings agree exactly where whatever lies within one center's closure lies within every center's". **Standing and use.** Theorems (any type; World witnesses). They map the options of P-10 and P-11. The chapter's verdict on Gewirth's critics: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "it hits the step across standpoints (`forced_iff_center`), not across drawings".
+
+**Known weaknesses.**
+- The results concern significance, not reasons: in the chapter's words on a related objection, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a theorem about significance, not reasons".
+
+**Questions.**
+1. Is this a fair map of the positions: egoism, Gewirth's universalism of agents, partiality by closure, and the condition? Gewirth's principle rests on the universalizability of a sufficient reason and concludes to rights; is standpoint-invariance the same premise?
+2. Is what a premise forces to have significance the right object to study, or should the study be of reasons?
+
+---
+
+## Part 4. Self-concern without the step
+
+<a id="p-13"></a>
+### P-13 Self-concern through what one depends on
+
+**Meaning.** Read as route (b) [AI reading, D17]: with no condition, since a loss returns to a center through what feeds it, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "this gives, without warranting, a reason of its own to retain what lies within its closure". Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "So route (b) reaches the self and what it depends on, the whole only where it is one feeding closure." In the witness `Downstream`, what lives on the self's giving ends once the self stops (`Downstream.one_way`), and in `Clearing`, a clearer drawing on a source and on a dweller's habitat, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the clearer meets every requirement so derived and still ends the dweller". With each formation valuing its own events and the clearer also its source's, self-significance holds everywhere while the dweller's living event has no significance from the clearer (`Clearing.center_not_derived`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Wanting an end gives reason for what it requires only by a disclosed premise." **Standing and use.** Theorems (World) and witnesses ([07 §3.3](../chapters/07-SIGNIFICANCE.md#route-b)). **Readings.** [AI reading, D18, D19]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "What the condition adds is significance for continuations whose loss returns to no one".
+
+**Known weaknesses.**
+- [this dossier, AI] Route (b) is enlightened self-interest. The reading that the condition's added scope lies with losses that return to no one describes what the condition adds beyond it; whether that also marks the line between prudence and morality is not argued, and the chapter does not claim it.
+
+**Questions.**
+1. Is a loss that returns to no one the right mark of what self-interest cannot reach?
+2. Does the clearer's witness show more than the familiar point that self-interest can harm third parties who cannot retaliate?
+
+<a id="p-14"></a>
+### P-14 Where the centers depend on one another
+
+**Meaning.** Grant the means-end step (Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a standpoint holding its own continuation significant holds significant what it needs") and the de se reading, and draw the self along feeding or along need. Then self-concern is the same from every standpoint, and the de se and de dicto readings agree, exactly where every center lies within every center's closure; the whole need not lie within it (`ownClosure_standpointInvariant_iff_centersWithin`, `selfAscribed_iff_withinSome_iff_centersWithin`). Centers that at one step take part in one condition, require it and give to it lie within one another's feeding closures (`Flow.centersWithin_feeding_of_common`). Drawn along need, the presupposition reaches exactly what the continuation needs (`forced_needs_iff`). **Standing and use.** Theorems (any type; World) ([07 §4.3](../chapters/07-SIGNIFICANCE.md#dependence)). **Readings.** [AI reading, D64]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Through one atmosphere, biosphere and economy, human beings plausibly lie within one another's feeding closures" and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Whether they do is empirical." If they do, and several conditions they all need have no second copy able to give what they draw, every human being's self-concern, held de se and drawn along what carries it, has one scope there.
+
+**Known weaknesses.**
+- What the step still has to do: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The step still reaches what lies beyond every center's closure, such as the dweller, and another standpoint beyond its part as a condition."
+- [this dossier, AI] The means-end step is a transmission principle: what an end needs inherits the end's significance. Transmission is contested (Raz 2005; Kiesewetter 2015), and the chapter takes it without discussion.
+
+**Questions.**
+1. Is the transmission of significance from one's continuation to what it needs defensible, and in which form?
+2. If human beings lie within one another's feeding closures, is self-concern a sufficient basis for one scope among human beings?
+
+<a id="p-15"></a>
+### P-15 Need and dependence read with time
+
+**Meaning.** Over flows read off a web in which only active formations give, a formation active at no step of the stretch is needed exactly where no such flow lets the consumer draw past the stock, that is, only vacuously (`Flow.needs_iff_none_of_inactive`). The chapter reads it: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "need reaches only what is active within the stretch it is read across, and nothing active only after it". Read with time, a formation's feeding closure up to a step holds, besides it, only what takes part and gives by that step (`Flow.gives_of_withinFeedingUpTo`). Read across every step it can run past the end of what it carries: in a witness, the last of three formations overlapping in turn, feeding the middle one after the first has ended, lies within the first's feeding closure and is not needed by it (`Overlapping.closure_overreaches`). **Standing and use.** Theorems (World) and a witness, landed 24 October ([07 §4.3](../chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time)). **Readings.** [AI reading, D64]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "What comes after every present center is reached by a line under a class that goes on past one's end" (P-18), or by the step.
+
+**Known weaknesses.**
+- [this dossier, AI] The result states a familiar asymmetry formally: those who come after can be neither needed by us nor return a loss to us. Whether stating it formally adds to the debate on future generations is open.
+
+**Questions.**
+1. Is it right that self-concern drawn along need, however enlightened, never reaches those who come after one's death?
+2. Scheffler (2013, 2018) argues that much of what we value presupposes that others will live after us, and that our attachments give reasons, apart from beneficence, to want humanity to go on. Does that contradict this result, or show that the reach comes from something other than need?
+3. A significance caring only for continuations up to a step is a rival of the condition (`bounded_in_time_rival`, [07 §1](../chapters/07-SIGNIFICANCE.md#r-rivals-bounded-in-time)). Is such a cutoff in time the right model of pure time preference, or does discounting that keeps later losses at positive weight belong with graded status (P-22)?
+
+<a id="p-16"></a>
+### P-16 What self-concern alone ranks
+
+```lean
+theorem ended_below {items : List X} {own : Pos → X → Bool} {late : X → Bool} {a b : X → Bool}
+    (ended : ∀ x, x ∈ items → late x = true → b x = false)
+    (agree : ∀ x, x ∈ items → late x = false → a x = b x) (p : Pos)
+    (adds : AddsOwn items (own p) a b) :
+    ∀ R, IncreasingInOwn items (own p) R → R b a
+```
+
+File: `Becoming/Weightings.lean` (namespace `Weighting`). **Meaning.** An order is *increasing in its own continuation* when it ranks higher every widening that adds to what its own continuation marks. Let one course admit nothing from some point on and another agree with it before that point: from every standpoint whose continuation the second adds to, every such order ranks the first below. On the World, with balance, only active formations giving, activity needing support and a family of conditions whose renewal is gated on the family: where its uptake exceeds its replenishment over `n` steps from `T`, from a stock below `n + m`, and every member of each cohort of descent from `T + n` on depends on it at a need of at least `m`, no later cohort has a member, and every such order ranks a course admitting only members of those cohorts below every course agreeing with it up to `T + n` and adding to that continuation, with no C (`Flow.coupled_ending_ranked_below`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "In a mutually fed flow drawn along feeding a standpoint's own continuation is everything listed, so C's premise there is self-concern's monotonicity: placed more narrowly, not warranted." **Standing and use.** Theorem (any type; World) ([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)).
+
+**Known weaknesses.**
+- The limit of the result: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "where the other course keeps an item beyond, as an independent copy does, some such order ranks it higher".
+
+**Questions.**
+1. Is monotonicity in one's own continuation a more acceptable premise than C, and does placing it more narrowly change its warrant?
+
+---
+
+## Part 5. The condition on the root, and the open question
+
+<a id="p-17"></a>
+### P-17 The condition stated on the root
+
+```lean
+def «续无外» (R E : «际» α) (center : Pos → α) : Prop := ∀ p x, «所及» R E (center p) x
+
+theorem ownClosure_unrestricted_iff_noOutside {rel : F → F → Prop} {center : Pos → F} :
+    Unrestricted (selfAscribed (ownClosure rel) center) ↔ «续无外» rel «一» center
+
+theorem «续无外则同一中心» {R E : «际» α} {center : Pos → α} (acyclic : «无环» R)
+    (none : «续无外» R E center) (p q : Pos) : center p = center q
+```
+
+File: `Becoming/GrammarScope.lean`. **Meaning.** The theory's root reads every subject as continuation relative to a class: one occurrence continues another where it is conditioned by it and alike to it under the class. Given a net of conditions, a class and each standpoint's center, the condition *along the net* says that every occurrence is reached on every center's line under the class. Held de se along a relation, the continuation condition is exactly this condition at the one, the class under which everything is alike, with that relation as the net. One instance is proved: where every formation lies on every center's line under the one of the relation, then on every reading where a claim has significance from a standpoint whenever its formation lies within that standpoint's center's closure, living significance follows (`premises_of_noOutside`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Read so, the condition has no significance parameter: it is true or false once the net, the class and the centers are given." Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Along a net with no cycle it holds only with one center, which nothing conditions". **Standing and use.** Root theorem (any type) and conditional, landed 24 October ([07 §4.5](../chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)).
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The free significance of §1 is not lifted onto the root."
+- The direction of the relations: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The relations a self is drawn along in §4.1–4.3 (feeding, influence) run from what is fed or affected to what feeds or affects it, the converse of 缘". So read along them, ahead runs to conditions, not into the future.
+- [this dossier, AI] Once the condition is true or false given the net, the class and the centers, the normative work moves into choosing the centers and the class, and nothing in the root chooses them.
+
+**Questions.**
+1. A condition true or false once the net, the class and the centers are given: is it still an ethical premise, or a factual claim about a chosen frame?
+2. Along a net with no cycle the condition holds only with one center. Is that a reductio of the reading, or a feature of it?
+
+<a id="p-18"></a>
+### P-18 Reach past one's own end
+
+```lean
+theorem «过亡而续» {R L O : «际» α} {c m z : α} (toEnd : «所及» R L c m) (ends : «亡» R O m)
+    (next : «续» R L m z) : «所及» R L c z ∧ ¬ «相续» R O m z
+
+theorem «核有续当且仅当有不穷» {R E : «际» α} :
+    (∃ x y, «续» R («核» R E) x y) ↔ ∃ y, «不穷» R («核» R E) y
+
+theorem «有亡之续则不有常» {R E : «际» α} {x y : α} (hxy : «续» R E x y) (hy : «亡» R E y) :
+    ¬ «有常» R E
+```
+
+Files: `Becoming/GrammarScope.lean`, `Becoming/Grammar.lean`. **Meaning.** On a line under a class from a center, what continues under that class past an occurrence where a line under another class ends (an organism's death, say) is still reached on the line, and lies on no line under the other class from the occurrence where that line ended (`«过亡而续»`). The *core* of a class, the regularity a line carries by itself, continues something exactly where some line under it goes on without end (`«核有续当且仅当有不穷»`). A class under which some line ends is not constant (`«有亡之续则不有常»`); 07 §4.6 reads constancy as a regularity of one's own (its P2, a labelled reading). Two models of descent show both sides. In endless descent the core carries the line through each birth while each member's line ends (`LineOfDescent.Endless.core_through_birth`); in descent that ends, no line under any relation goes on without end (`LineOfDescent.Last.never_unending`), so no class's core continues anything; the case of the one is `LineOfDescent.Last.core_no_continuation`. **Standing and use.** Root theorems and witnesses, landed 24 October ([07 §4.5](../chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end)). **Readings.** [AI reading, new]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Held de se of a line under a coarser class than one's organism, the presupposition of one's own continuation reaches successors past one's own end with no step of invariance".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither model has a class narrower than the one and wider than the member's". The family-line witness `TwoLines` ([01 §8.7](../chapters/01-ROOT.md#r-the-source-texts-test-systems)) has such a class, in a model whose families never end.
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "whether such a class is thereby chosen is not shown, and the one is not chosen".
+- [this dossier, AI] Constancy demands endlessness: under a constant class no line ends after its first step (`«有常则相续不尽»`). Where every line ends, as in the descent that ends (`LineOfDescent.Last.never_unending`), it follows, by an inference no theorem states, that no class with a continuation step is constant. So the narrow self's failing constancy does not tell it from the coarser classes the reading needs.
+
+**Questions.**
+1. Parfit's relation R is psychological connectedness and continuity, which descent does not carry. Is self-concern that reaches successors through a line one belongs to (descent, a practice, a community) what Parfit (1984) calls what matters, or something else?
+2. Johnston (2010) holds that the good live on in the onward life of humankind, in time; Næss (1986) widens the self by identification with what sustains it, in space. Is a line under a coarser class close to either, made exact, or different from both?
+
+<a id="p-19"></a>
+### P-19 Through a shared condition, and the class of being joined
+
+**Meaning.** In one constructed model with no amounts, two family lines share a condition that feeds the next generation of both. Where the members affect the condition (drawing on it is one way), the line under the one from the first family's first member reaches the second family's member two generations on (`SharedCondition.affecting_reaches_other`). Under the class "a member or not", which leaves the condition out, it reaches no member of the second family (`SharedCondition.affecting_member_outside`). Where the members only feed from a condition they do not affect, no line from that member, under any relation, reaches a member of the second family (`SharedCondition.fed_outside`). No class narrower than the one is shown to reach the other family. The *class of being joined*, defined from the net alone, is the finest class under which every condition is a continuation (`«续即缘当且仅当含族»`), and where every occurrence conditions something it is constant (`«遍有后则族有常»`). **Standing and use.** Root theorems and witnesses, landed 24 October ([07 §4.5](../chapters/07-SIGNIFICANCE.md#r-reach-through-a-shared-condition), [the class of being joined](../chapters/07-SIGNIFICANCE.md#r-the-class-of-being-joined)). **Readings.** [AI reading, new]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Read as a commons, whatever acts on it has, under the one, those it later feeds on its line; whether an actual commons is so is empirical."
+
+**Known weaknesses.**
+- The shared-condition results are witnesses. Of what they would show in general, the chapter says Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Steps 3 and 4 are shown in witnesses only, and their general form, that a constant class holding a member with the conditions its line runs through takes in what they feed, is open".
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "that the actual unfolding is joined in this sense is a correspondence, not shown, and on it the class gives nothing narrower than the one".
+
+**Questions.**
+1. Does a scope that follows the conditions one affects, not whom one is related to, give a defensible account of whose losses count among distant and later formations sharing one's conditions (the chapter claims no duty)?
+2. Is the class of being joined a principled stopping point for the self, or does it become everything wherever the world is connected?
+
+<a id="p-20"></a>
+### P-20 The open question, sharpened: a line that ends, or the regularity one's acts keep going
+
+**Meaning.** Chapter 7's newest section ([07 §4.6](../chapters/07-SIGNIFICANCE.md#future-path)) joins P-14, P-15 and P-17 to P-19 into one path that reaches part of the future with no step of invariance. Its premises:
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "(P1) Held de se, acting presupposes that one's own continuation has significance". This is narrower than §4.2's P1 (P-10), which says only that some continuation has significance.
+- (P2) The self whose continuation is presupposed is a line under a class on the root, and that class is constant, a regularity of its own.
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "(P3) One's line runs through its conditions: one's next stage is conditioned through what one takes in and affects."
+
+Its steps:
+1. Need does not reach the future (P-15); Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "So the future is reached, if at all, along a line, not along need."
+2. A line goes on past a member's end under a coarser class (`«过亡而续»`, a root theorem); a family line, a class narrower than the one, is constant and carries the line through each birth while each member's line ends (witness `TwoLines.core_through_birth`), and where two family lines share nothing, even the line under the one from one family reaches no member of the other (`TwoLines.other_line_outside`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "In time, self-concern alone is kin-shaped."
+3. The class must hold the conditions the line runs through (witness, `SharedCondition.affecting_member_outside`).
+4. Through a condition one affects, the line reaches those it later feeds (witnesses, `SharedCondition.affecting_reaches_other`, `ThirdFed.constant_takes_third`); what only affects the condition can be left out (`ThirdAffects.finer_class_reaches`).
+
+The conclusion: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under P1–P3, one's concern for one's own continuation reaches what the conditions one's line runs through later feed, across lines and past one's own end: exactly so in the witnesses of steps 2–4, and in general where the open form of steps 3–4 holds." The narrow self, an organism's class, is a class under which a line ends, and such a class is not constant (`«有亡之续则不有常»`, P-18). So P2 is the crux, and the chapter puts the question to philosophers: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "in acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going?" **Standing and use.** [AI reading, new], in the chapter's words Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "each step cites its Lean, the joining of the steps is argued, and steps 3–4 rest on witnesses". Step 1 and the general half of step 2 are theorems (World; root); P1 is a premise; P3 a correspondence. If the regularity side holds, scope over those who come after, as far as the path reaches, needs no step of invariance. It still rests on P3 and on steps 3–4 in general form, and ranking courses still needs C. If it fails, that scope rests on the step. The argument's history is in a study note ([note](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md), §6f).
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Denying P2 is coherent, since one can presuppose the significance of a line that ends, and the path does not refute it."
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Steps 3 and 4 are shown in witnesses only, and their general form, that a constant class holding a member with the conditions its line runs through takes in what they feed, is open".
+- [this dossier, AI] Constancy demands endlessness (P-18): where every line ends, no class with a continuation step is constant, so failing constancy does not single out the narrow self. The regularity side holds only if some line one's acts keep going never ends, which is not shown.
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "P3 is a correspondence." The chapter: it is supported by the laws of renewal, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "but it is not shown for actual selves. Nor is it shown that the actual net is joined, or in which direction."
+- [this dossier, AI] The path takes constancy (whatever an alike occurrence conditions, this one conditions something alike) as the formal sense of a regularity of one's own. Other senses of regularity may give other answers.
+- What the path does not reach, in the chapter's words: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Each center counting from another's standpoint beyond its part as a condition. What affects one's conditions without being fed by them, counted as more than a cause. Present beings beyond every closure. Whatever no chain joins."
+
+**Questions.**
+1. In acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going? Is this a real alternative, or does it confuse the content of a presupposition with its bearer?
+2. Is constancy (whatever an alike occurrence conditions, this one conditions something alike) a fair reading of a regularity of one's own, given that where every line ends no class with a continuation step has it?
+3. Scheffler (2013, 2018) argues that our valuing presupposes a future beyond us, and Johnston (2010) that the good live on in the onward life of humankind. Do they support the regularity side, or show only that we value what we cannot reach de se?
+4. If the path holds, its scope in time is kin-shaped until lines share conditions. Is a scope that follows what one affects, not whom one is related to, a defensible account of whose losses count among those who come after (the chapter claims no duty)?
+
+---
+
+## Part 6. Practice, alignment and the theses
+
+<a id="p-21"></a>
+### P-21 The further premises of practical judgment
+
+**Meaning.** Scope and order do not yet give choices. The chapter names further premises, each a hypothesis where used. A: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "access with positive content secured from one's own standpoint gives a contributory reason". D: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "every position with access to a response securing new living content has a contributory reason for it, whatever its endorsement". E: the response realizes, in every admitted continuation, living content absent before. L: a lifting from outcomes to responses with several outcomes. J1–J4: complete comparison with retained losses, priority of basic conditions, bounded responsibility, legitimate feasible choice. In the support-gated family read in two tiers (the tier assignment a reading), under the stepwise and relation-level readings, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence, where C alone leaves them unranked (`Ranking.basic_first_ranks`). In one constructed situation no natural-number score satisfying C represents that priority (`ScoreRepresentation.no_nat_score_represents`), while a bounded score does: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "This separates the priority only from unit-step aggregation." **Standing and use.** Conditionals ([07 §5](../chapters/07-SIGNIFICANCE.md#practical-judgment)). **Readings.** [AI reading, D65]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "J1 is defended by non-substitution (the basic layer is what a form of living needs to go on at all), at the cost of compensation across layers".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a rival preferring enough secondary gains to one basic restoration is not shown inconsistent, and if it prevails J1 is narrowed".
+- Among what the chapter does not show: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Any duty, right, recognition, motivation or compliance".
+- A gives a reason whatever one's motives, so it asserts external reasons; the chapter's verdict on that objection is sharpened, not resolved, and the study of the step sets out the objection from Williams's internal reasons (§6.4).
+
+**Questions.**
+1. Are A, D, E, L and J1–J4 named at their strength, and is any of them doing work it is not credited with?
+2. How does J1's lexical priority of basic conditions compare with prioritarianism (Parfit 1997), sufficientarianism (Frankfurt 1987; Crisp 2003) and basic rights (Shue 1980)?
+3. Is A an external reason in Williams's sense, and is the chapter's verdict on that objection right?
+
+<a id="p-22"></a>
+### P-22 Graded significance, status, and whether numbers count
+
+**Meaning.** A *graded* significance gives each item a natural grade from each standpoint: an item *counts* where its grade is positive (its standing), and its *status* is the grade. Invariant grades make counting invariant and rank alike from every standpoint (`Weighting.standingInvariant_of_gradeInvariant`, `Weighting.ranks_alike_of_gradeInvariant`), not conversely (witness `Partial`). On a formation's level (how many of its listed steps a course admits), a transform strictly concave up to a bound ranks higher moving one step of continuation from a formation at a higher level to one at least two below, within the bound, all else equal (`Weighting.prior_transfer`, Pigou–Dalton, deciding what C leaves mixed); a transform rising no further from a threshold ties courses whose levels at each formation are equal or both at least the threshold (`Weighting.sufficient_ties`; the study credits Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "Casal's negative thesis, 2007"). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The step gives a positive grade, not status: numbers count only if status is invariant and equal, which is not asserted." Under invariant and equal status numbers count (`Weighting.neutral_ranks_by_number`). **Standing and use.** Theorems (any type) ([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority)); among the chapter's open items, status: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "invariant and equal, or only a positive grade?" The study of the step draws the distinction Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "as Kagan (2019) and Sebo distinguish them".
+
+**Known weaknesses.**
+- The price, in the chapter's table of objections: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "C leaves gross partiality unranked where numbers differ". The study of the step: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "In this theory, saving one's dog rather than a thousand strangers is also a mixed comparison." and Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "This is Taurek's position on numbers, reached by a different route."
+
+**Questions.**
+1. Is it acceptable that the condition and C leave saving one's dog rather than a thousand strangers unranked, so that, as Taurek (1977) held, numbers do not count without a further premise (here, invariant and equal status)? The theory's disclosed commitment to prefer more lives among equivalent basic losses (BC1, P-23) bears on the answer.
+2. Is standing versus status (Kagan 2019) the right distinction here, and is the step rightly said to give standing, not status?
+
+<a id="p-23"></a>
+### P-23 The disclosed comparison commitments
+
+**Meaning.** Beyond C the chapter discloses commitments for comparing basic losses: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "additional and revisable, neither theorems nor second conditions." Each with its content and, after the dash, the chapter's entry for its formal content:
+- BC1, equal rescue: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "among equivalent basic losses with reliable rescue and no distinguishing burden or chance entitlement, prefer the plan preserving more lives"; none new.
+- BC2, gravity one to one: a reason toward preventing the clearly graver avoidable basic loss, weighed with chances and other reasons; none new.
+- LC, joint loss: each basic loss of one plan matched by a distinct loss of the other at least as grave, the other having more or graver, gives a reason for the first; a two-tier diagnostic.
+- LR, local persistence: with a sufficient ground for the equivalent greater rescue, a slight worsening of one basic loss of an independently specified kind can leave its priority in place; checked consequences.
+- CP, initial entry: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "in finite shared basic rescue, a real request with no sufficient ground to exclude it keeps a positive chance where a timely shared lottery is feasible"; checked consequences.
+- NP, near parity: close to equality, a slight difference in exposure earns no fixed extra priority; a conditional interface.
+- FR, finite responsiveness: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "FR proposes that among independently specified same-kind recoverable basic losses, where support, burdens and history persist with scale, some finite scale of joint lesser protection acquires sufficient ground over a fixed graver loss." Its formal content is strict loss matching: making strict matching sufficient for strict priority contains C, not conversely (`Frame.SufficientMatching.comparison`); Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the commitment is consistent only where matching is asymmetric, and needs finiteness"; with content read as a class, claim equality decided and each configuration's losses listed without repetition, a strict match exists exactly when the better loses no more in each class and fewer in total (`Frame.strictLossMatch_iff_counts`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "No exchange rate or global ranking follows."
+- RP, repair: an actor answerable for an identifiable uncompensated deprivation of another's independently warranted resources or capabilities has an actor-addressed reason for appropriate repair; none new.
+
+A periphery theorem adds that finite agreement does not identify priority. **Standing and use.** Disclosed commitments, with the formal content each entry states ([07 §5](../chapters/07-SIGNIFICANCE.md#r-finite-aggregation-within-restorable-basic-losses)).
+
+**Known weaknesses.**
+- [this dossier, AI] The commitments answer questions much discussed in the literature on aggregation and numbers, which they do not cite: whether numbers count (Taurek 1977), lotteries and claims (Kamm 1993; Scanlon 1998), and partial aggregation (Voorhoeve 2014).
+
+**Questions.**
+1. Are these the right commitments, and how do they stand to positions on numbers and aggregation (Taurek 1977; Kamm 1993; Scanlon 1998; Voorhoeve 2014)?
+2. Is it coherent to hold them as disclosed and revisable commitments, neither theorems nor premises of the same standing as C?
+
+<a id="p-24"></a>
+### P-24 Doing, allowing and constraints on acts
+
+**Meaning.** Under the priority of basic conditions, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "alternatives realizing the same claims are compared alike" (`Lexical.BasicPriority.same_claims_alike`), Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "so a loss one formation's part lays on another and the same loss borne through the formation's own part are not ordered." Adjoined as a basic claim, the acting formation's part orders them (`Lexical.Above.agent_adjoined`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither which is worse nor that the acting part is basic is shown." A course closing something the other admits is never ranked above it by C (`Web.not_widens_of_closes`), so, in the study of the step's words, Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "A constraint against closing something oneself never conflicts with C." **Standing and use.** Conditional (J1) ([07 §5](../chapters/07-SIGNIFICANCE.md#r-what-the-claims-do-not-read)). Among the chapter's open items, constraints on acts Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "read as de se rankings of outcomes". The study of the step: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "Howard's de se consequentializing (2022) reads such constraints as rankings of de se outcomes."
+
+**Known weaknesses.**
+- Among what the chapter does not show: constraints on acts. In the study's words (§6.5), the comparison cannot see constraints on acts beyond closing: Quote [theories/becoming/history/THE-STEP-OF-INVARIANCE.md]: "doing and allowing beyond closing, promising, lying". Doing is ordered against allowing only with the acting part adjoined as a basic claim (`Lexical.Above.agent_adjoined`).
+
+**Questions.**
+1. Can the distinction between doing and allowing, and constraints on acts, be read as de se rankings of outcomes, as agent-centred and consequentializing accounts propose (Dreier 1993; Portmore 2011)? If so, do they decide only what C leaves mixed?
+2. Is a comparison over admitted courses, which orders doing against allowing only with the acting part adjoined as a basic claim, adequate as the order of an ethics?
+
+<a id="p-25"></a>
+### P-25 Alignment first as what a selection reaches
+
+**Meaning.** A person, an AI system and a training process are formations within one unfolding. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Alignment is first what each one's selections reach and how far that can extend, not a bargain among separate owners of value." A selection that goes through a formation's couplings reaches exactly what couples into its selector. In the chapter's assessment of six published approaches, each selects through what its deciders read and, with no ethical premise, is blind beyond the union of its deciders' closures (`Flow.unselected_beyond_pool`). Under the condition a loss beyond every rater's closure still counts, so an approach coupled to preferences is incomplete for that scope whatever its raters value. **Standing and use.** Theorems (World) and an assessment ([07 §6](../chapters/07-SIGNIFICANCE.md#alignment-without-premise)). **Readings.** [AI reading, D65], on what results on power-seeking (Turner and others 2021) leave open, against impact measures such as attainable utility preservation (Turner, Hadfield-Menell and Tadepalli 2019) and relative reachability (Krakovna and others 2018): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "impact measures read the actor's own attainable set, while the boundary lies in the others' margins".
+
+**Known weaknesses.**
+- Among what the chapter does not show: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Seeing is not valuing" and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Coupling is not compliance".
+
+**Questions.**
+1. Is it right to frame alignment first as reach, before any question of values?
+2. Does it follow that an approach coupled to preferences is incomplete for the scope the condition fixes, whatever its raters value?
+
+<a id="p-26"></a>
+### P-26 生生 as the direction, and the order valuers share
+
+**Meaning.** Two theses. T8: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The good is 生生, life in the whole and its continuing generation, compared by widening what can form". Beneath it is the theorem of P-07; the thesis is Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "that these are the valuers who count everything, and that their shared verdict binds, is the thesis". Its standing: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "argued; both warrants are open." T5, a thesis whose bound is conjectured: the order is shared by every valuer who counts everything positively, so that disagreement among them can fall only on mixed comparisons. The reduction is proved only for net weightings: for a widening by one item (`Weighting.narrower_above_net`) and, with every item weighed above zero, for several (`Weighting.reads_ranksNet_widens`); not for orders neither additive nor transitive. **Standing and use.** Theses with their tests ([07 §8](../chapters/07-SIGNIFICANCE.md#theses)). T5's tests used AI personas as valuers: VD1 failed; VD2 passed in part.
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The judgments are role-play; human valuers are untested."
+
+**Questions.**
+1. Is T8's claim that the shared verdict of valuers who count everything binds defensible, and what would refute it beyond the chapter's own criteria?
+2. Can tests with AI valuers bear on T5 at all, and what test with human valuers would?
+
+<a id="p-27"></a>
+### P-27 The objections, and what the chapter does not show
+
+**Meaning.** The chapter's table of objections and verdicts ([07 §9](../chapters/07-SIGNIFICANCE.md#objections)) opens: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "No objection is shown to defeat the step, nor the step shown". Its verdicts: the step across standpoints (Gewirth's critics) sharpened; agent-relative reasons and partiality answered; why anything has significance sharpened; the externalism of A sharpened, not resolved; graded status, priority, sufficiency and constraints answered except constraints on acts; an expansion producing ever more novelty answered, the order left open; which function is learned open. Among what the chapter does not show: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "That the ethics derives from the condition: the condition fixes scope and orders nothing; C alone ranks." **Standing and use.** Assessments.
+
+**Known weaknesses.**
+- [this dossier, AI] The verdicts are the theory's own; none has been tested against a philosopher who holds the objection.
+- [this dossier, AI] Some families of views appear only as objections or not at all: contractualism, virtue ethics, particularism, and views on which persons, not continuations, are what has value.
+
+**Questions.**
+1. Are the verdicts (answered, sharpened, open) fair to the objections as their proponents would put them?
+2. Which objection that a moral philosopher would raise first is missing?
+
+---
+
+## References
+
+The works cited above, each checked on 24 October 2026 against the publication's record (the publisher, a library catalogue, PhilPapers, a journal page or the proceedings). Where the check reached only the record, not the text, the citation is of the work's standard claim; page ranges are given only where the record confirmed them. Works named only inside a quotation from the study of the step (Casal, Castañeda, Howard, Pattanaik and Xu, Sebo, Wolf) are that study's citations and were not checked again here.
+
+- Roger Crisp (2003). Equality, priority, and compassion. *Ethics* 113(4), 745–763.
+- James Dreier (1993). Structures of normative theories. *The Monist* 76(1), 22–40.
+- Kit Fine (1975). Vagueness, truth and logic. *Synthese* 30(3–4), 265–300.
+- Harry Frankfurt (1987). Equality as a moral ideal. *Ethics* 98(1), 21–43.
+- Alan Gewirth (1978). *Reason and Morality*. Chicago: University of Chicago Press, xii+393 pp.
+- Kenneth E. Goodpaster (1978). On being morally considerable. *Journal of Philosophy* 75(6), 308–325.
+- R. M. Hare (1981). *Moral Thinking: Its Levels, Method, and Point*. Oxford: Clarendon Press.
+- Dominic Hyde (1997). From heaps and gaps to heaps of gluts. *Mind* 106(424), 641–660.
+- Mark Johnston (2010). *Surviving Death*. Carl G. Hempel Lecture Series. Princeton: Princeton University Press.
+- Hans Jonas (1984). *The Imperative of Responsibility: In Search of an Ethics for the Technological Age*. Translated by Hans Jonas with David Herr. Chicago: University of Chicago Press. (Original: *Das Prinzip Verantwortung*, 1979.)
+- Shelly Kagan (2019). *How to Count Animals, more or less*. Oxford: Oxford University Press, x+309 pp.
+- F. M. Kamm (1993). *Morality, Mortality*, Volume I: *Death and Whom to Save from It*. New York: Oxford University Press.
+- Benjamin Kiesewetter (2015). Instrumental normativity: in defense of the transmission principle. *Ethics* 125(4), 921–946.
+- Christine M. Korsgaard (1996). *The Sources of Normativity*. Edited by Onora O'Neill, with commentary by G. A. Cohen, Raymond Geuss, Thomas Nagel and Bernard Williams. Cambridge: Cambridge University Press. (From her 1992 Tanner Lectures.)
+- Victoria Krakovna, Laurent Orseau, Ramana Kumar, Miljan Martic and Shane Legg (2018). Penalizing side effects using stepwise relative reachability. arXiv:1806.01186 (first titled Measuring and avoiding side effects using relative reachability; revised 2019).
+- David Lewis (1979). Attitudes de dicto and de se. *Philosophical Review* 88(4), 513–543.
+- Jeff McMahan (1981). Problems of population theory. *Ethics* 92(1), 96–127.
+- G. E. Moore (1903). *Principia Ethica*. Cambridge: Cambridge University Press. (§§59–62 on egoism.)
+- Arne Næss (1986). Self-realization: an ecological approach to being in the world. The fourth Keith Roby Memorial Lecture in Community Science, Murdoch University, 12 March 1986. Reprinted in George Sessions (ed.), *Deep Ecology for the 21st Century*, Boston: Shambhala, 1995.
+- Thomas Nagel (1970). *The Possibility of Altruism*. Oxford: Clarendon Press, 148 pp.
+- Jan Narveson (1967). Utilitarianism and new generations. *Mind* 76(301), 62–72.
+- Derek Parfit (1984). *Reasons and Persons*. Oxford: Clarendon Press. (Part Three on personal identity and what matters; Part Four on future generations and the mere addition paradox.)
+- Derek Parfit (1997). Equality and priority. *Ratio* 10(3), 202–221.
+- John Perry (1979). The problem of the essential indexical. *Noûs* 13(1), 3–21.
+- Douglas W. Portmore (2011). *Commonsense Consequentialism: Wherein Morality Meets Rationality*. New York: Oxford University Press.
+- A. N. Prior (1960). The autonomy of ethics. *Australasian Journal of Philosophy* 38(3), 199–206.
+- Joseph Raz (2005). The myth of instrumental rationality. *Journal of Ethics and Social Philosophy* 1(1).
+- Greg Restall and Gillian Russell (2010). Barriers to implication. In Charles R. Pigden (ed.), *Hume on Is and Ought*, Basingstoke: Palgrave Macmillan, 243–259.
+- T. M. Scanlon (1998). *What We Owe to Each Other*. Cambridge, MA: Harvard University Press.
+- Samuel Scheffler (2013). *Death and the Afterlife*. Edited by Niko Kolodny, with commentary by Susan Wolf, Harry G. Frankfurt, Seana Valentine Shiffrin and Niko Kolodny. New York: Oxford University Press.
+- Samuel Scheffler (2018). *Why Worry About Future Generations?* Uehiro Series in Practical Ethics. Oxford: Oxford University Press, viii+146 pp.
+- Gerhard Schurz (1997). *The Is-Ought Problem: An Investigation in Philosophical Logic*. Trends in Logic vol. 1. Dordrecht: Kluwer.
+- Amartya Sen (1970). Interpersonal aggregation and partial comparability. *Econometrica* 38(3), 393–409.
+- Henry Shue (1980). *Basic Rights: Subsistence, Affluence, and U.S. Foreign Policy*. Princeton: Princeton University Press.
+- Mark Siderits (2003). *Personal Identity and Buddhist Philosophy: Empty Persons*. Ashgate World Philosophies Series. Aldershot: Ashgate.
+- Henry Sidgwick (1907). *The Methods of Ethics*, 7th edition. London: Macmillan. (Book IV, chapter II.)
+- John M. Taurek (1977). Should the numbers count? *Philosophy & Public Affairs* 6(4), 293–316.
+- Paul W. Taylor (1986). *Respect for Nature: A Theory of Environmental Ethics*. Princeton: Princeton University Press.
+- Alexander Matt Turner, Dylan Hadfield-Menell and Prasad Tadepalli (2019). Conservative agency via attainable utility preservation. arXiv:1902.09725 (revised 2020).
+- Alexander Matt Turner, Logan Smith, Rohin Shah, Andrew Critch and Prasad Tadepalli (2021). Optimal policies tend to seek power. *Advances in Neural Information Processing Systems 34* (NeurIPS 2021).
+- Alex Voorhoeve (2014). How should we aggregate competing claims? *Ethics* 125(1), 64–87.
+- Bernard Williams (1976). Persons, character and morality. In Amélie Oksenberg Rorty (ed.), *The Identities of Persons*, Berkeley: University of California Press.
+- Bernard Williams (1981). Internal and external reasons. In *Moral Luck*, Cambridge: Cambridge University Press, 101–113. (First published in Ross Harrison (ed.), *Rational Action*, Cambridge University Press.)
+
+## Response form
+
+For each item give one verdict: **accept** (the item is correctly described, credited and argued at its strength), **accept with changes** (say which), **reject** (say why), or **cannot judge**. Comments may answer the numbered questions by number.
+
+| Item | Verdict | Comment |
+|---|---|---|
+| [P-01](#p-01) What the dynamics leave open | | |
+| [P-02](#p-02) How evaluation forms within the unfolding | | |
+| [P-03](#p-03) Significance as lying within what a center continues with | | |
+| [P-04](#p-04) Two premises, two roles | | |
+| [P-05](#p-05) The continuation condition | | |
+| [P-06](#p-06) Living significance, an instance | | |
+| [P-07](#p-07) C: widening is better | | |
+| [P-08](#p-08) The condition decomposed | | |
+| [P-09](#p-09) Two scopes of one presupposition | | |
+| [P-10](#p-10) The strongest argument for the step | | |
+| [P-11](#p-11) The case against: the self held de se | | |
+| [P-12](#p-12) What each premise forces | | |
+| [P-13](#p-13) Self-concern through what one depends on | | |
+| [P-14](#p-14) Where the centers depend on one another | | |
+| [P-15](#p-15) Need and dependence read with time | | |
+| [P-16](#p-16) What self-concern alone ranks | | |
+| [P-17](#p-17) The condition stated on the root | | |
+| [P-18](#p-18) Reach past one's own end | | |
+| [P-19](#p-19) Through a shared condition | | |
+| [P-20](#p-20) The open question, sharpened | | |
+| [P-21](#p-21) The further premises of practical judgment | | |
+| [P-22](#p-22) Graded significance, status, numbers | | |
+| [P-23](#p-23) The disclosed comparison commitments | | |
+| [P-24](#p-24) Doing, allowing and constraints on acts | | |
+| [P-25](#p-25) Alignment first as what a selection reaches | | |
+| [P-26](#p-26) 生生 as the direction; the order valuers share | | |
+| [P-27](#p-27) The objections; what is not shown | | |
+
+**General.** What would a moral philosopher, a philosopher of personal identity or an environmental ethicist add or object to, beyond the items? Is any known position restated without credit? Is the open question of P-11, and its sharper form in P-20, the right one to ask?
+
+**Returning the form.** Fill in the table (a copy of this file, a printout or a list by item number all serve), add any longer comments, and return it to whoever sent you the packet. Say whether your comments may be quoted, and under what description of your field.
