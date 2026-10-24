@@ -81,3 +81,9 @@ GS1 landed first with study §390. The branch merged main, took main's generated
 RP then landed with §391, so `renumber_j.py 391 RECEIPT` moved the section to §392 (receipt unchanged: RP changed no Lean).
 
 More landings followed (GS2 to GS5, HC, NR, SW) before the fast-forward: main merged once more, the checker re-run on the merged tree, and `move_j.py FROM OLD NEW` moved the section to the next free number and the record to the new receipt; then `receipts_j.py`, connectivity, `board_j.py land`, re-pointing, render, check, links and test.
+
+## IV3k
+
+1. `integrate_k.py`; core checker; connectivity `--check` and `--write`.
+2. `apply_text_k.py N RECEIPT` (07's thesis line and §1 in SW's order, §4.3 the new record's home and the planetary reading read with time; D64 items 1, 5 and 14; the README rows; regions.json; the study), `receipts_j.py RECEIPT` (08's counts), `make_record_k.py RECEIPT N` (the new record need-and-feeding-read-with-time, caps asserted), `sh repoint_k.sh RECEIPT`.
+3. `board_k.py land RECEIPT N THEOREMS DECLS`; render (a generated page the render refuses is reset to main's and rendered again), check, links and test; commit; merge main if it moved, then fast-forward.

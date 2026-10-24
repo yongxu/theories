@@ -1,11 +1,11 @@
 {
- "commit": "26c760ea8e8dc242a1ad08e076dfc8dc07ff3ce2",
+ "commit": "64127a32f544b3155d9e1699a541e8d71717ade3",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T201939.645046Z",
+ "core_receipt_at_commit": "20261024T021740.570138Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 319,
- "constants": 43714,
- "spine_theorems": 14541,
+ "constants": 43764,
+ "spine_theorems": 14556,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,7 +28,7 @@
  "classes": {
   "statement on both families": 1056,
   "statement on Process/Frame/Run/Trace": 2962,
-  "statement on World/Flow/Web": 3503,
+  "statement on World/Flow/Web": 3518,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 185,
   "used by a theorem on the base": 5204,
@@ -160,7 +160,7 @@
  "apart_by_module": {
   "Becoming.Weightings": [
    97,
-   375
+   390
   ],
   "Becoming.Reproduction": [
    80,
@@ -682,12 +682,12 @@
  "rings": {
   "core": {
    "modules": 303,
-   "theorems": 13781,
+   "theorems": 13796,
    "apart": 1123,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2751,
-    "statement on World/Flow/Web": 3478,
+    "statement on World/Flow/Web": 3493,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 174,
     "used by a theorem on the base": 4845,
@@ -12090,6 +12090,13 @@
   "Becoming.Flow.routedDrawn_drawsPast": "statement on World/Flow/Web",
   "Becoming.Flow.routedDrawn_not_gives": "statement on World/Flow/Web",
   "Becoming.Flow.needs_iff_through_short": "statement on World/Flow/Web",
+  "Becoming.Flow.active_of_givesWithin": "statement on World/Flow/Web",
+  "Becoming.Flow.active_of_givesInto": "statement on World/Flow/Web",
+  "Becoming.Flow.needs_iff_none_of_inactive": "statement on World/Flow/Web",
+  "Becoming.Flow.needs_into_iff_none_of_inactive": "statement on World/Flow/Web",
+  "Becoming.Flow.gives_of_withinFeedingUpTo": "statement on World/Flow/Web",
+  "Becoming.Flow.active_of_withinFeedingUpTo": "statement on World/Flow/Web",
+  "Becoming.Flow.withinFeeding_of_upTo": "statement on World/Flow/Web",
   "Becoming.Feeders.mem_pair": "used by a theorem on the base",
   "Becoming.Feeders.fedOnlyBy_withFirst": "statement on World/Flow/Web",
   "Becoming.Feeders.fedOnlyBy_withSecond": "statement on World/Flow/Web",
@@ -12164,6 +12171,14 @@
   "Becoming.Routing.tops_not_needed": "statement on World/Flow/Web",
   "Becoming.Routing.rise_needs_top": "statement on World/Flow/Web",
   "Becoming.Routing.fill_needs_top": "statement on World/Flow/Web",
+  "Becoming.Overlapping.give_pos": "statement on World/Flow/Web",
+  "Becoming.Overlapping.acting": "statement on World/Flow/Web",
+  "Becoming.Overlapping.fed": "statement on World/Flow/Web",
+  "Becoming.Overlapping.draws": "statement on World/Flow/Web",
+  "Becoming.Overlapping.fed_first": "statement on World/Flow/Web",
+  "Becoming.Overlapping.fed_middle": "statement on World/Flow/Web",
+  "Becoming.Overlapping.last_quiet": "statement on World/Flow/Web",
+  "Becoming.Overlapping.closure_overreaches": "statement on World/Flow/Web",
   "Becoming.Weighting.increasingInOwn_of_increasing": "apart: own vocabulary",
   "Becoming.Weighting.increasingInOwn_iff_increasing": "apart: own vocabulary",
   "Becoming.Weighting.widensOwn_iff_every_increasingInOwn": "used by a theorem on the base",

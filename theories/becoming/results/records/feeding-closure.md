@@ -87,7 +87,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 - related, not a proved adapter: [represented-boundary-against-dependence](represented-boundary-against-dependence.md). There represented boundaries are compared with dependence at one step; the feeding closure gives dependence over several steps, compared with a represented boundary in Overshoot (consumption-ends-with-feeders).
 - related, not a proved adapter: [levels-of-closure](levels-of-closure.md). The feeding closure is the closure under being fed and lies within the influence closure; the influence and reach closures lie within the system (Flow.withinFeeding_iff, Flow.withinInfluence_of_withinFeeding).
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [continuation-condition-decomposition](continuation-condition-decomposition.md) · [levels-of-closure](levels-of-closure.md) · [presupposition-scopes](presupposition-scopes.md)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [continuation-condition-decomposition](continuation-condition-decomposition.md) · [levels-of-closure](levels-of-closure.md) · [need-and-feeding-read-with-time](need-and-feeding-read-with-time.md) · [presupposition-scopes](presupposition-scopes.md)
 
 <a id="sources--来源"></a>
 ### Sources

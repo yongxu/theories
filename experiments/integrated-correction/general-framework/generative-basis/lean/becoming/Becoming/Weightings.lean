@@ -274,6 +274,18 @@ order every standpoint shares when each weighs what can form in its own way.
   and then each (`Routing.rise_needs_top`). Where a store rises that only one upper member can
   give, the user needs that member though the others could feed it through the hierarchy
   (`Routing.fill_needs_top`): need is read off the whole web as given.
+* **Need and feeding, read with time.** Over any flows read off a web in which only active
+  formations give, a formation active at no step of the stretch is needed exactly where no such flow
+  lets the consumer draw past the stock (`Flow.needs_iff_none_of_inactive`; across two tiers
+  `Flow.needs_into_iff_none_of_inactive`): need reaches only what is active within the stretch it is
+  read across. Read with time, each link no later than the one it feeds (`Flow.FedUpTo`,
+  `Flow.WithinFeedingUpTo`), a formation's feeding closure up to a step holds, besides it, only what
+  takes part and gives at some step up to that one (`Flow.gives_of_withinFeedingUpTo`), so where only
+  active formations give, only what is active by then (`Flow.active_of_withinFeedingUpTo`); it lies
+  within the feeding closure read across every step (`Flow.withinFeeding_of_upTo`), which can run
+  past the end of what it carries: of three formations overlapping in turn, the last lies within the
+  first's feeding closure but not within that closure read with time up to the first's last step, and
+  the first does not need its giving (`Overlapping.closure_overreaches`).
 * **What self-concern alone ranks.** An order is increasing in its own continuation when it ranks
   higher every widening that adds to the items its own continuation marks (`Weighting.AddsOwn`,
   `Weighting.IncreasingInOwn`). Every order increasing in admission is one, and where its own
@@ -4797,6 +4809,104 @@ theorem needs_iff_through_short [DecidableEq F] [DecidableEq C] {W : Web F C}
 
 end Flow
 
+/-! ## Need and feeding, read with time -/
+
+namespace Flow
+
+variable {C : Type}
+
+/-- In a flow in which only active formations give, a formation giving to a family within a stretch
+is active at some step of it. -/
+theorem active_of_givesWithin {L : Flow F C} {W : Web F C} (acting : L.Acting W) {cs : List C}
+    {T n : Nat} {e : F} (gives : GivesWithin cs T n (L, W) e) :
+    ∃ t, T ≤ t ∧ t < T + n ∧ W.active t e :=
+  match gives with
+  | ⟨t, from_, to, present, pos⟩ => match total_pos cs pos with
+    | ⟨c, _, positive⟩ => ⟨t, from_, to, acting t e c present positive⟩
+
+/-- In a flow in which only active formations give, a formation giving into a two-tier hierarchy
+within a stretch is active at some step of it. -/
+theorem active_of_givesInto {L : Flow F C} {W : Web F C} (acting : L.Acting W) {cs : List C}
+    {ks : List F} {store : F → C} {T n : Nat} {e : F} (gives : GivesInto cs ks store T n (L, W) e) :
+    ∃ t, T ≤ t ∧ t < T + n ∧ W.active t e :=
+  match gives with
+  | ⟨t, from_, to, present, pos⟩ => match pos_or_of_add_pos pos with
+    | .inl family => match total_pos cs family with
+      | ⟨c, _, positive⟩ => ⟨t, from_, to, acting t e c present positive⟩
+    | .inr stores => match total_pos ks stores with
+      | ⟨h, _, positive⟩ => ⟨t, from_, to, acting t e (store h) present positive⟩
+
+/-- **Need ends at the end.** Over any flows read off a web in which only active formations give, a
+formation active at no step of the stretch is needed exactly where no such flow lets the consumer
+draw past the stock: need reaches only what is active within the stretch it is read across, and
+nothing active only before or after it. -/
+theorem needs_iff_none_of_inactive {W : Web F C} {possible : Flow F C → Prop}
+    (acting : ∀ L, possible L → L.Acting W) {cs : List C} {T n : Nat} {f e : F}
+    (inactive : ∀ t, T ≤ t → t < T + n → ¬ W.active t e) :
+    NeedsPart possible (fun L => DrawsPast cs T n (L, W)) (fun L => GivesWithin cs T n (L, W)) f e ↔
+      ¬ ∃ L, possible L ∧ DrawsPast cs T n (L, W) f :=
+  ⟨fun needs ⟨L, here, draws⟩ => match active_of_givesWithin (acting L here) (needs L here draws) with
+    | ⟨t, from_, to, active⟩ => inactive t from_ to active,
+   fun none L here draws => absurd ⟨L, here, draws⟩ none⟩
+
+/-- **Need ends at the end, across two tiers**: a formation active at no step of the stretch is
+needed for its giving into a two-tier hierarchy exactly where no flow of the hierarchy lets the
+consumer draw past the stock. -/
+theorem needs_into_iff_none_of_inactive {W : Web F C} {store : F → C} {cs : List C}
+    {ks js : List F} {cap₂ : Nat → F → Nat} {T n : Nat} {f e : F}
+    (inactive : ∀ t, T ≤ t → t < T + n → ¬ W.active t e) :
+    NeedsPart (FedThroughStores W store cs ks js cap₂ T n) (fun L => DrawsPast cs T n (L, W))
+        (fun L => GivesInto cs ks store T n (L, W)) f e ↔
+      ¬ ∃ L, FedThroughStores W store cs ks js cap₂ T n L ∧ DrawsPast cs T n (L, W) f :=
+  ⟨fun needs ⟨L, fed, draws⟩ => match active_of_givesInto fed.1.2.1 (needs L fed draws) with
+    | ⟨t, from_, to, active⟩ => inactive t from_ to active,
+   fun none L fed draws => absurd ⟨L, fed, draws⟩ none⟩
+
+/-- `h` feeds `g`'s continuation at a step no later than the step `g` is read at: the link of a
+feeding closure read with time. -/
+def FedUpTo (L : Flow F C) (W : Web F C) (e e' : F × Nat) : Prop :=
+  e'.2 ≤ e.2 ∧ L.FedBy W (e.1, e'.2) e'
+
+/-- `g` lies within `f`'s feeding closure read with time up to `T`: from `f` read at `T`, it is
+reached at some step by links each no later than the one before. -/
+def WithinFeedingUpTo (L : Flow F C) (W : Web F C) (f : F) (T : Nat) (g : F) : Prop :=
+  ∃ s, WithinClosure (L.FedUpTo W) (f, T) (g, s)
+
+/-- **Read with time, a feeding closure holds only what gives up to the step it is read up to.**
+Every formation within `f`'s feeding closure up to `T`, other than `f`, takes part and gives at
+some step no later than `T`. -/
+theorem gives_of_withinFeedingUpTo {L : Flow F C} {W : Web F C} {f : F} {T : Nat} {g : F}
+    (within : L.WithinFeedingUpTo W f T g) :
+    g = f ∨ ∃ s, s ≤ T ∧ g ∈ L.present s ∧ ∃ c, 0 < L.give s g c :=
+  match within with
+  | ⟨s, reached⟩ =>
+    match (reached (fun e => e.2 ≤ T ∧ (e.1 = f ∨ (e.1 ∈ L.present e.2 ∧ ∃ c, 0 < L.give e.2 e.1 c)))
+        (fun _ _ ⟨before, _⟩ ⟨earlier, _, c, _, present, gives⟩ =>
+          ⟨Nat.le_trans earlier before, .inr ⟨present, c, gives⟩⟩)
+        ⟨Nat.le_refl T, .inl rfl⟩ : s ≤ T ∧ (g = f ∨ (g ∈ L.present s ∧ ∃ c, 0 < L.give s g c))) with
+    | ⟨_, .inl same⟩ => .inl same
+    | ⟨by_, .inr ⟨present, c, gives⟩⟩ => .inr ⟨s, by_, present, c, gives⟩
+
+/-- Where only active formations give, every formation within `f`'s feeding closure up to `T`, other
+than `f`, is active at some step no later than `T`: a formation active only after `T` lies outside
+it. -/
+theorem active_of_withinFeedingUpTo {L : Flow F C} {W : Web F C} (acting : L.Acting W) {f : F}
+    {T : Nat} {g : F} (within : L.WithinFeedingUpTo W f T g) :
+    g = f ∨ ∃ s, s ≤ T ∧ W.active s g :=
+  match gives_of_withinFeedingUpTo within with
+  | .inl same => .inl same
+  | .inr ⟨s, by_, present, c, gives⟩ => .inr ⟨s, by_, acting s g c present gives⟩
+
+/-- The feeding closure read with time lies within the feeding closure read across every step. -/
+theorem withinFeeding_of_upTo {L : Flow F C} {W : Web F C} {f : F} {T : Nat} {g : F}
+    (within : L.WithinFeedingUpTo W f T g) : L.WithinFeeding W f g :=
+  match within with
+  | ⟨_, reached⟩ => fun region closed holds =>
+    reached (fun e => region e.1) (fun e e' inside ⟨_, fed⟩ => closed e.1 e'.1 inside ⟨e'.2, fed⟩)
+      holds
+
+end Flow
+
 namespace Feeders
 
 open Copies (Part copies)
@@ -5693,6 +5803,161 @@ theorem fill_needs_top :
    by decide⟩
 
 end Routing
+
+namespace Overlapping
+
+/-- Condition `0`, what formation `0` draws on, holds one unit at step 0 and none after; every
+other level stands at zero. -/
+def level (t c : Nat) : Nat :=
+  match c with
+  | 0 => (match t with
+    | 0 => 1
+    | _ + 1 => 0)
+  | _ + 1 => 0
+
+/-- Three formations overlapping in turn: formation `0` is active at steps 0 and 1, formation `1`
+at steps 1 and 2, formation `2` at steps 2 and 3. -/
+def active (t x : Nat) : Prop :=
+  match x with
+  | 0 => t ≤ 1
+  | 1 => 1 ≤ t ∧ t ≤ 2
+  | 2 => 2 ≤ t ∧ t ≤ 3
+  | _ + 3 => False
+
+/-- Formation `0` requires condition `0` and formation `1` condition `1`. -/
+def web : Web Nat Nat :=
+  ⟨level, active, fun _ x c => x = c ∧ x ≤ 1, fun _ _ _ => 0, fun _ _ _ => True⟩
+
+/-- Formation `0` takes one unit of condition `0` at steps 0 and 1. -/
+def take (t x c : Nat) : Nat :=
+  match x with
+  | 0 => (match c with
+    | 0 => (match t with
+      | 0 => 1
+      | 1 => 1
+      | _ + 2 => 0)
+    | _ + 1 => 0)
+  | _ + 1 => 0
+
+/-- Formation `1` gives condition `0` one unit at step 1; formation `2` gives condition `1` one unit
+at step 2. -/
+def give (t x c : Nat) : Nat :=
+  match x with
+  | 0 => 0
+  | 1 => (match c with
+    | 0 => (match t with
+      | 0 => 0
+      | 1 => 1
+      | _ + 2 => 0)
+    | _ + 1 => 0)
+  | 2 => (match c with
+    | 0 => 0
+    | 1 => (match t with
+      | 0 => 0
+      | 1 => 0
+      | 2 => 1
+      | _ + 3 => 0)
+    | _ + 2 => 0)
+  | _ + 3 => 0
+
+/-- The three formations take part at every step. -/
+def flow : Flow Nat Nat :=
+  ⟨fun _ => [0, 1, 2], take, give⟩
+
+/-- Where something is given, it is the middle formation's unit at step 1 or the last formation's
+at step 2. -/
+theorem give_pos {t x c : Nat} (pos : 0 < flow.give t x c) :
+    (x = 1 ∧ c = 0 ∧ t = 1) ∨ (x = 2 ∧ c = 1 ∧ t = 2) :=
+  match x, c, t, pos with
+  | 0, _, _, pos => absurd pos (Nat.lt_irrefl 0)
+  | 1, 0, 0, pos => absurd pos (Nat.lt_irrefl 0)
+  | 1, 0, 1, _ => .inl ⟨rfl, rfl, rfl⟩
+  | 1, 0, _ + 2, pos => absurd pos (Nat.lt_irrefl 0)
+  | 1, _ + 1, _, pos => absurd pos (Nat.lt_irrefl 0)
+  | 2, 0, _, pos => absurd pos (Nat.lt_irrefl 0)
+  | 2, 1, 0, pos => absurd pos (Nat.lt_irrefl 0)
+  | 2, 1, 1, pos => absurd pos (Nat.lt_irrefl 0)
+  | 2, 1, 2, _ => .inr ⟨rfl, rfl, rfl⟩
+  | 2, 1, _ + 3, pos => absurd pos (Nat.lt_irrefl 0)
+  | 2, _ + 2, _, pos => absurd pos (Nat.lt_irrefl 0)
+  | _ + 3, _, _, pos => absurd pos (Nat.lt_irrefl 0)
+
+/-- Only active formations give. -/
+theorem acting : flow.Acting web :=
+  fun t x _ _ pos => match give_pos pos with
+  | .inl ⟨sx, _, st⟩ => Eq.subst (motive := fun y => web.active t y) sx.symm
+      (Eq.subst (motive := fun s => web.active s 1) st.symm
+        (show (1 : Nat) ≤ 1 ∧ (1 : Nat) ≤ 2 from ⟨Nat.le_refl 1, by decide⟩))
+  | .inr ⟨sx, _, st⟩ => Eq.subst (motive := fun y => web.active t y) sx.symm
+      (Eq.subst (motive := fun s => web.active s 2) st.symm
+        (show (2 : Nat) ≤ 2 ∧ (2 : Nat) ≤ 3 from ⟨Nat.le_refl 2, by decide⟩))
+
+/-- The flow of the first formation's drawing: across steps 0 and 1 it balances on condition `0`,
+only active formations give, and only the later two give to condition `0`. -/
+theorem fed : Flow.FedOnlyOn web [0] (· ∈ [1, 2]) 0 2 flow :=
+  ⟨fun t _ to c mem => match t, to, mem_cons_cases mem with
+    | 0, _, .inl same => Eq.subst (motive := fun c => web.level 1 c + flow.taken 0 c =
+          web.level 0 c + flow.given 0 c) same.symm (by decide)
+    | 1, _, .inl same => Eq.subst (motive := fun c => web.level 2 c + flow.taken 1 c =
+          web.level 1 c + flow.given 1 c) same.symm (by decide)
+    | _ + 2, to, _ => absurd to (Nat.not_lt_of_le (Nat.le_add_left 2 _))
+    | _, _, .inr empty => (nomatch empty),
+   acting,
+   fun _ g _ _ _ pos => match give_pos pos with
+    | .inl ⟨sx, _, _⟩ => Eq.subst (motive := fun y => y ∈ [1, 2]) sx.symm (List.Mem.head _)
+    | .inr ⟨sx, _, _⟩ => Eq.subst (motive := fun y => y ∈ [1, 2]) sx.symm
+        (List.Mem.tail _ (List.Mem.head _))⟩
+
+/-- The first formation draws past its condition's stock across steps 0 and 1. -/
+theorem draws : Flow.DrawsPast [0] 0 2 (flow, web) 0 :=
+  ⟨by decide, fun t _ to => match t, to with
+    | 0, _ => ⟨Nat.zero_le 1, List.Mem.head _, by decide⟩
+    | 1, _ => ⟨Nat.le_refl 1, List.Mem.head _, by decide⟩
+    | _ + 2, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 2 _))⟩
+
+/-- The middle formation feeds the first's continuation at step 1. -/
+theorem fed_first : flow.FedBy web (0, 1) (1, 1) :=
+  ⟨rfl, 0, ⟨rfl, by decide⟩, List.Mem.tail _ (List.Mem.head _), by decide⟩
+
+/-- The last formation feeds the middle one's continuation at step 2. -/
+theorem fed_middle : flow.FedBy web (1, 2) (2, 2) :=
+  ⟨rfl, 1, ⟨rfl, by decide⟩, List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _)), by decide⟩
+
+/-- Formation `2` gives nothing at steps 0 and 1. -/
+theorem last_quiet : ∀ s c, s ≤ 1 → flow.give s 2 c = 0
+  | 0, 0, _ => rfl
+  | 0, 1, _ => rfl
+  | 0, _ + 2, _ => rfl
+  | 1, 0, _ => rfl
+  | 1, 1, _ => rfl
+  | 1, _ + 2, _ => rfl
+  | _ + 2, _, le => absurd le (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (by decide : 1 < 2)
+      (Nat.le_add_left 2 _)))
+
+/-- **Read across every step, the feeding closure runs forward past the end of what it carries; read
+with time, it does not, and need does not reach past that end.** The last formation lies within the
+first's feeding closure, since it feeds the middle one after the first has ended, but not within the
+first's feeding closure read with time up to its last step, which holds the middle one; and the
+first, drawing past its condition's stock across its two steps, does not need the last's giving. -/
+theorem closure_overreaches :
+    flow.WithinFeeding web 0 2 ∧ ¬ flow.WithinFeedingUpTo web 0 1 2 ∧
+      flow.WithinFeedingUpTo web 0 1 1 ∧
+      ¬ NeedsPart (Flow.FedOnlyOn web [0] (· ∈ [1, 2]) 0 2) (fun L => Flow.DrawsPast [0] 0 2 (L, web))
+        (fun L => Flow.GivesWithin [0] 0 2 (L, web)) 0 2 :=
+  ⟨(Flow.WithinFeeding.of_fedBy fed_first).trans (Flow.WithinFeeding.of_fedBy fed_middle),
+   fun within => match Flow.gives_of_withinFeedingUpTo within with
+    | .inl same => absurd same (by decide)
+    | .inr ⟨s, by_, _, c, gives⟩ =>
+      absurd (Nat.lt_of_lt_of_le gives (Nat.le_of_eq (last_quiet s c by_))) (Nat.lt_irrefl 0),
+   ⟨1, WithinClosure.of_rel ⟨Nat.le_refl 1, fed_first⟩⟩,
+   fun needs => (Flow.needs_iff_none_of_inactive (fun _ on => on.2.1)
+      (fun t _ to => match t, to with
+        | 0, _ => fun active => absurd active.1 (by decide)
+        | 1, _ => fun active => absurd active.1 (by decide)
+        | _ + 2, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 2 _)))).mp needs
+      ⟨flow, fed, draws⟩⟩
+
+end Overlapping
 
 /-! ## What self-concern alone ranks -/
 

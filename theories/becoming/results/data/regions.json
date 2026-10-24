@@ -1126,6 +1126,11 @@
    "base": "frame",
    "note": "drawn = not returning"
   },
+  "need-and-feeding-read-with-time": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "IV3k Weightings"
+  },
   "need-drift-along-a-lineage": {
    "region": "life",
    "base": "old-base",

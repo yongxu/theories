@@ -3028,6 +3028,18 @@
    "page": "theories/becoming/results/records/necessarily-drawn-is-not-returning.md"
   },
   {
+   "id": "record:need-and-feeding-read-with-time",
+   "type": "result",
+   "record": "need-and-feeding-read-with-time",
+   "title": "Need and feeding, read with time",
+   "title_zh": "带着时间来读的所需与供养",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/need-and-feeding-read-with-time.md"
+  },
+  {
    "id": "record:need-drift-along-a-lineage",
    "type": "result",
    "record": "need-drift-along-a-lineage",
@@ -6742,7 +6754,7 @@
    "type": "module",
    "name": "Becoming.Weightings",
    "level": "L2",
-   "theorems": 375,
+   "theorems": 390,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
@@ -28365,6 +28377,12 @@
    "anchor": "r-self-concern-through-dependence"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-need-and-feeding-read-with-time"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -42116,6 +42134,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:need-and-feeding-read-with-time",
+   "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:need-and-feeding-read-with-time",
+   "to": "record:feeding-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:need-and-feeding-read-with-time",
+   "to": "record:feeding-from-a-step",
+   "type": "related"
+  },
+  {
+   "from": "record:need-and-feeding-read-with-time",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:need-and-feeding-read-with-time",
+   "to": "record:self-concern-through-dependence",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:need-drift-along-a-lineage",
    "to": "module:Becoming.Evolution",
    "type": "proved-in"
@@ -53273,6 +53316,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization",
    "to": "record:metaethical-core-characterization",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time",
+   "to": "record:need-and-feeding-read-with-time",
    "type": "states"
   },
   {

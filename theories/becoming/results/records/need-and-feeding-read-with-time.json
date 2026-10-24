@@ -1,0 +1,224 @@
+{
+  "schema_version": 2,
+  "id": "need-and-feeding-read-with-time",
+  "title": {
+    "en": "Need and feeding, read with time",
+    "zh": "带着时间来读的所需与供养"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-24T02:46:18+00:00",
+  "statement": {
+    "en": "Over flows where only active formations give, a formation active at no step of a stretch is needed only where nothing lets the consumer draw past the stock; read with time, a feeding closure up to a step holds only what gives by then, though read across every step it can run past what it carries.",
+    "zh": "在只有活跃构成给予的流上，区间内无一步活跃的构成只在无流使消耗者汲取超出存量处被需要；带着时间来读，至某步的供养闭包只含到那时为止给予者，跨一切步来读则可越过所承担者。"
+  },
+  "laws": [
+    {
+      "en": "Need ends at the end: over any class of flows read off a web in which only active formations give, a formation active at no step of the stretch is needed exactly where no flow of the class lets the consumer draw past the stock; across two tiers likewise for giving into the hierarchy.",
+      "zh": "所需止于终结：在只有活跃构成给予的任一类读自依存网的流上，区间内无一步活跃的构成，恰在该类中无流使消耗者汲取超出存量处被需要；跨两层者，对向层级的给予亦然。",
+      "declarations": [
+        "Becoming.Flow.active_of_givesWithin",
+        "Becoming.Flow.active_of_givesInto",
+        "Becoming.Flow.needs_iff_none_of_inactive",
+        "Becoming.Flow.needs_into_iff_none_of_inactive"
+      ]
+    },
+    {
+      "en": "Read with time, each link no later than the one it feeds, a formation's feeding closure up to a step holds, besides it, only what takes part and gives at some step up to that one, so only what is active by then where only active formations give; it lies within the feeding closure read across every step.",
+      "zh": "带着时间来读，每一环不晚于它所供养的那一环，构成至某步的供养闭包，除它自己外，只含在至该步为止某步参与并给予者；只有活跃构成给予时，只含到那时为止活跃者；它在跨一切步来读的供养闭包之内。",
+      "declarations": [
+        "Becoming.Flow.FedUpTo",
+        "Becoming.Flow.WithinFeedingUpTo",
+        "Becoming.Flow.gives_of_withinFeedingUpTo",
+        "Becoming.Flow.active_of_withinFeedingUpTo",
+        "Becoming.Flow.withinFeeding_of_upTo"
+      ]
+    },
+    {
+      "en": "Witness Overlapping: of three formations overlapping in turn, the last lies within the first's feeding closure but not within it read with time up to the first's last step, which holds the middle one, and the first, drawing past its condition's stock, does not need the last's giving.",
+      "zh": "见证 Overlapping：三个依次交叠的构成，最后者在第一者的供养闭包之内，却不在带着时间读至第一者最后一步的闭包之内（后者含中间者）；第一者汲取超出其条件的存量，却不需要最后者的给予。",
+      "declarations": [
+        "Becoming.Overlapping.level",
+        "Becoming.Overlapping.active",
+        "Becoming.Overlapping.web",
+        "Becoming.Overlapping.take",
+        "Becoming.Overlapping.give",
+        "Becoming.Overlapping.flow",
+        "Becoming.Overlapping.give_pos",
+        "Becoming.Overlapping.acting",
+        "Becoming.Overlapping.fed",
+        "Becoming.Overlapping.draws",
+        "Becoming.Overlapping.fed_first",
+        "Becoming.Overlapping.fed_middle",
+        "Becoming.Overlapping.last_quiet",
+        "Becoming.Overlapping.closure_overreaches"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The class of possible flows supplied, each with only active formations giving; the stretch a continuation is read across supplied; for the closure, the flow and the web given; discrete steps and natural-number amounts.",
+      "zh": "不加公理。可能之流的类为所设，其中每个流只有活跃构成给予；延续所读的区间为所设；对闭包，流与依存网给定；离散之步，自然数之量。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That nothing reaches successors: what comes after every present center's end is reached by a line under a class that goes on past it, or by the step of invariance.",
+      "zh": "无物达到后来者：凡在一切现存中心终结之后者，由过其终结而续的一类下之线达到，或由不变之步达到。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "How far actual lives overlap, or which actual formations feed which: the laws read a given web and flow.",
+      "zh": "实有之生命交叠多远，实有之构成谁供养谁：诸律读给定的依存网与流。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "An exact law of need for a continuation without end: giving without end is shown, not which member gives.",
+      "zh": "对无终延续的精确之“所需”律：已示无终之给予，未示何成员给予。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "detail": {
+        "en": "Overlapping: the first formation active at steps 0 and 1, the middle at 1 and 2, the last at 2 and 3; the middle feeds the first at step 1, the last the middle at step 2. The last lies within the first's feeding closure, not within it read with time up to step 1, and is not needed by the first though among its possible feeders (Overlapping.closure_overreaches).",
+        "zh": "Overlapping：第一个构成在第 0、1 步活跃，中间者在第 1、2 步，最后者在第 2、3 步；中间者在第 1 步供养第一者，最后者在第 2 步供养中间者。最后者在第一者的供养闭包之内，不在带着时间读至第 1 步的闭包之内；虽在其可能的供给者之中，却不为第一者所需（Overlapping.closure_overreaches）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261024T024337.158597Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. Author review in study section 397.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261024T024337.158597Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。作者审查见研究第 397 节。"
+  },
+  "next_delta": {
+    "en": "Feeding carried across steps, read with time; an exact law of need for a continuation without end; which class a center's own line runs under, so that its reach past its end is fixed.",
+    "zh": "跨步承载的供养，带着时间来读；无终延续的精确“所需”律；中心自身之线在何类下，以定其过终之所及。"
+  },
+  "correspondence": {
+    "en": "PW note §2-§3: need reaches contemporaries and predecessors, never successors, and the feeding closure reaches the future only read without time; made exact here. Parfit: what matters passes to successors in degrees; here need does not pass at all, and the reach past one's end is a question of classes (GS2).",
+    "zh": "PW 笔记 §2-§3：所需达到同时代者与前人，从不达到后来者；供养闭包只在不带时间来读时达到未来；此处使之精确。帕菲特：重要者以程度传给后来者；此处所需全不传递，过己之终的所及是类的问题（GS2）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "aliases": [
+    "Need and feeding, read with time",
+    "带着时间来读的所需与供养",
+    "Becoming.Flow.needs_iff_none_of_inactive",
+    "Becoming.Flow.WithinFeedingUpTo",
+    "Becoming.Overlapping.closure_overreaches"
+  ],
+  "dependencies": [
+    {
+      "id": "self-concern-through-dependence",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses NeedsPart, the flows read off a web (Flow.FedOnlyOn), Flow.DrawsPast, Flow.GivesWithin, the two-tier flows (Flow.FedThroughStores, Flow.GivesInto) and pos_or_of_add_pos; read with Flow.needsSome_without_end.",
+        "zh": "复用 NeedsPart、读自依存网的流（Flow.FedOnlyOn）、Flow.DrawsPast、Flow.GivesWithin、两层之流（Flow.FedThroughStores、Flow.GivesInto）与 pos_or_of_add_pos；与 Flow.needsSome_without_end 合读。"
+      }
+    },
+    {
+      "id": "feeding-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses feeding at a common step (Flow.FedBy) and the feeding closure (Flow.WithinFeeding, Flow.WithinFeeding.of_fedBy, Flow.WithinFeeding.trans).",
+        "zh": "复用同步供养（Flow.FedBy）与供养闭包（Flow.WithinFeeding、Flow.WithinFeeding.of_fedBy、Flow.WithinFeeding.trans）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "feeding-from-a-step",
+      "detail": {
+        "en": "The closure from a step, shrinking as feeding stops; here the closure up to a step, holding only what gives by then.",
+        "zh": "自某步起的闭包，随供养停止而缩小；此处为至某步的闭包，只含到那时为止给予者。"
+      }
+    },
+    {
+      "id": "reach-past-ones-own-end",
+      "detail": {
+        "en": "Where the reach past one's own end comes from instead: a line under a class that goes on past it.",
+        "zh": "过己之终的所及另有来处：过其终而续的一类下之线。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.FedUpTo",
+        "Becoming.Flow.WithinFeedingUpTo",
+        "Becoming.Flow.active_of_givesInto",
+        "Becoming.Flow.active_of_givesWithin",
+        "Becoming.Flow.active_of_withinFeedingUpTo",
+        "Becoming.Flow.gives_of_withinFeedingUpTo",
+        "Becoming.Flow.needs_iff_none_of_inactive",
+        "Becoming.Flow.needs_into_iff_none_of_inactive",
+        "Becoming.Flow.withinFeeding_of_upTo",
+        "Becoming.Overlapping.acting",
+        "Becoming.Overlapping.active",
+        "Becoming.Overlapping.closure_overreaches",
+        "Becoming.Overlapping.draws",
+        "Becoming.Overlapping.fed",
+        "Becoming.Overlapping.fed_first",
+        "Becoming.Overlapping.fed_middle",
+        "Becoming.Overlapping.flow",
+        "Becoming.Overlapping.give",
+        "Becoming.Overlapping.give_pos",
+        "Becoming.Overlapping.last_quiet",
+        "Becoming.Overlapping.level",
+        "Becoming.Overlapping.take",
+        "Becoming.Overlapping.web"
+      ],
+      "sha256": "c0fc54802fc30473db5a2f6f28e11071523085665c64a063c12938d13ec12762"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "role": "receipt",
+      "sha256": "eccef2960be674d8ed01fcd661d1e2757e8df2ac8e01c6416fcf4db5ac57f0a9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "12b8f30a5ac47a6c16baf4bbc6553378c46f1310b362d96e6a65090db71e155f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "role": "integration",
+      "sha256": "43cbb0bcfe0879aad68d133217e6f23c85a3d80549927fa16e6bac35f1f6ffc1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md",
+      "role": "provenance",
+      "sha256": "4ab0eeb164d987ea3edae99ab4433a9fe124a08a603a19cdc04449a0c8bb3f2c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sw-significance-without-a-value-layer/NOTE.md",
+      "role": "provenance",
+      "sha256": "901b49167864c3ae5c6aaec9729c88c8f7819d0a51b37b9967c1fc775aa3c838"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (IV3k), from PW's candidates (1) and (2); study section 397.",
+      "zh": "2026年10月24日：新增（IV3k），出自 PW 的候选（1）与（2）；研究第 397 节。"
+    }
+  ]
+}

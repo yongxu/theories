@@ -106,6 +106,8 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). What lies beyond every center's closure, as Clearing's dweller does, is left to the step.
 - related, not a proved adapter: [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md). The same route's order: what self-concern alone ranks, given the scope fixed here.
 
+**Used by:** [need-and-feeding-read-with-time](need-and-feeding-read-with-time.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -119,6 +121,7 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 | statement | [THE-STEP-OF-INVARIANCE.md](../../history/THE-STEP-OF-INVARIANCE.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-23-one-system.md](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json) | — |
 
 Aliases: `self-concern through dependence`, `经由依存的自我关切`, `Becoming.ownClosure_standpointInvariant_iff_centersWithin`, `Becoming.selfAscribed_iff_withinSome_iff_centersWithin`, `Becoming.forced_member_iff_only`
 

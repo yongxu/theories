@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2923 nodes, 4997 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2925 nodes, 5003 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 64 | 48 | 0 |
+| Significance and alignment | 0 | 65 | 48 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
@@ -438,7 +438,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (64):
+Results (65):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -466,6 +466,7 @@ Results (64):
 - [Living significance on held lives](records/living-significance-on-held-lives.md) (recorded-checked)
 - [Living significance on the Becoming spine, characterized by a seed and boundary neutrality](records/metaethical-core-characterization.md) (recorded-checked)
 - [Loss beyond a region](records/loss-beyond-a-region.md) (recorded-checked)
+- [Need and feeding, read with time](records/need-and-feeding-read-with-time.md) (recorded-checked)
 - [One line reaching another through a shared condition](records/reach-through-a-shared-condition.md) (recorded-checked)
 - [Own widening within the margin](records/own-widening-within-the-margin.md) (recorded-checked)
 - [Past one's own end: the reach of a line under a class](records/reach-past-ones-own-end.md) (recorded-checked)

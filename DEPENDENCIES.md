@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-426 registered results: 396 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 973 curated edges join 376 results to the results they draw on.
+427 registered results: 397 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 975 curated edges join 377 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -206,6 +206,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [mutual-dependence-and-its-pace][] ← <a id="mutual-dependence-and-its-pace--levels-of-closure"></a>[levels-of-closure][] · <a id="mutual-dependence-and-its-pace--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="mutual-dependence-and-its-pace--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="mutual-dependence-and-its-pace--target-capture"></a>[target-capture][]
 - [naming-attention-coverage][] ← <a id="naming-attention-coverage--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)*
 - [necessarily-drawn-is-not-returning][] ← <a id="necessarily-drawn-is-not-returning--attraction-is-not-returning"></a>[attraction-is-not-returning][] · <a id="necessarily-drawn-is-not-returning--target-capture"></a>[target-capture][] · <a id="necessarily-drawn-is-not-returning--returning-where-the-course-branches"></a>[returning-where-the-course-branches][]
+- [need-and-feeding-read-with-time][] ← <a id="need-and-feeding-read-with-time--self-concern-through-dependence"></a>[self-concern-through-dependence][] · <a id="need-and-feeding-read-with-time--feeding-closure"></a>[feeding-closure][]
 - [need-drift-along-a-lineage][] ← <a id="need-drift-along-a-lineage--transmission-is-inheritance-and-need"></a>[transmission-is-inheritance-and-need][]
 - [negation-change-and-stable-cases][] ← <a id="negation-change-and-stable-cases--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="negation-change-and-stable-cases--counts-exist-where-decided"></a>[counts-exist-where-decided][]
 - [no-finite-part-bears-taking][] ← <a id="no-finite-part-bears-taking--more-needs-renewers"></a>[more-needs-renewers][] · <a id="no-finite-part-bears-taking--becoming-renewal-reading"></a>[becoming-renewal-reading][]
@@ -604,6 +605,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [mutual-dependence-and-its-pace]: theories/becoming/results/records/mutual-dependence-and-its-pace.md
 [naming-attention-coverage]: theories/becoming/results/records/naming-attention-coverage.md
 [necessarily-drawn-is-not-returning]: theories/becoming/results/records/necessarily-drawn-is-not-returning.md
+[need-and-feeding-read-with-time]: theories/becoming/results/records/need-and-feeding-read-with-time.md
 [need-drift-along-a-lineage]: theories/becoming/results/records/need-drift-along-a-lineage.md
 [negation-change-and-stable-cases]: theories/becoming/results/records/negation-change-and-stable-cases.md
 [no-finite-part-bears-taking]: theories/becoming/results/records/no-finite-part-bears-taking.md

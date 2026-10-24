@@ -2080,7 +2080,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   what they take from their own stores and upper members giving the stores within their capacities, a
   formation's giving into the hierarchy is needed exactly where, at some step, the other upper members
   cannot give what the stores rise or the others cannot give the demand through the hierarchy
-  (`Flow.needs_iff_through_short`; `Routing`). The readings are the AI's (D59, D60, D64).
+  (`Flow.needs_iff_through_short`; `Routing`). Read with time, need reaches only what is active within
+  the stretch it is read across (`Flow.needs_iff_none_of_inactive`), and a feeding closure up to a step
+  only what gives by then (`Flow.gives_of_withinFeedingUpTo`), while the closure read across every step
+  can run past the end of what it carries (`Overlapping.closure_overreaches`). The readings are the AI's
+  (D59, D60, D64).
 * `Becoming.Relevance` (L2): the uses of living significance under the continuation condition. Read from significance,
   positive relevance is realized living content whose continuation has significance;
   under the continuation condition living significance holds on every frame for every reading of `living`, this relevance
