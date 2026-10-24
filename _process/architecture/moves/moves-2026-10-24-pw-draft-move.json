@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-24-pw-draft-move",
+  "date": "2026-10-24T07:41:56+00:00",
+  "base_commit": "65366835255f0eda6061b0631cf8ef829ff70abd",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/DRAFT-07-4.6.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history/DRAFT-07-4.6.md",
+      "sha256": "fa8a993aeb12102217ad7c7024b109958bbae980bea688be3be6324d127a12af",
+      "blob": "3c831e989a0e35134a6d878b999265799102b73a",
+      "reason": "superseded: its text landed, revised, as 07 §4.6 (d04de263d)",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/DRAFT-07-4.6.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

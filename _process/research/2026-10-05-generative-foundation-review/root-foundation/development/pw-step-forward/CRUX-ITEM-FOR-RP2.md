@@ -22,7 +22,7 @@ Material from PW for RP2's owner, who builds `theories/becoming/review/PHILOSOPH
 - (P2) the self is a line under a *constant* class, a regularity of its own;
 - (P3) one's line runs through its conditions.
 
-The narrow self, the organism, is a class under which a line ends, and such a class is provably not constant. So the disagreement with the critic of the step comes down to P2. *Use:* if P2 holds, the future-generations part of the ethics needs no premise beyond the self's own presupposition. If it fails, that part rests on the step. ([07 §4.5](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#condition-on-the-root); the path as proposed for 07 §4.6 is in `DRAFT-07-4.6.md` beside this file.)
+The narrow self, the organism, is a class under which a line ends, and such a class is provably not constant. So the disagreement with the critic of the step comes down to P2. *Use:* if P2 holds, the future-generations part of the ethics needs no premise beyond the self's own presupposition. If it fails, that part rests on the step. ([07 §4.5](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#condition-on-the-root); the path itself is [07 §4.6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#future-path), landed `d04de263d`, whose conclusion holds exactly in the witnesses of steps 2–4 and in general only where the open form of steps 3–4 holds.)
 
 **Known weaknesses.**
 
