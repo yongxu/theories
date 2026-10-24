@@ -8,7 +8,7 @@ The goal is the missing connection of an existing scope, [generative alignment](
 
 **An alignment of the joint selection.** Humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold:
 
-1. **Control is not selected.** Capacity to control the selection is not itself selected, because what such control returns does not come back to the controller within the time correction takes. *Being proved: MA3.*
+1. **Control is not selected.** Capacity to control the selection is not itself selected, because what such control returns does not come back to the controller within the time correction takes. *Being proved: MA3, its statements fixed (§3).*
 2. **A lock is left in time.** Where a lock forms, the selection leaves it by reading what lies beyond its share before the loss passes its point of no return. *Proved under named premises:* [closed capture](../../../../../../theories/becoming/results/records/closed-capture.md), with timing from MA2 (verified, not on main).
 3. **Courses are compared by widening.** Every positive weighting ranks a widening higher, and widening ranks no narrowing above what it narrows. *Proved:* [widening by every weighting](../../../../../../theories/becoming/results/records/widening-as-what-every-weighting-ranks.md).
 
@@ -56,14 +56,26 @@ Whose losses count is the continuation condition, and that widening is better is
 
 It derives `ReadsShare` where each carrier's reading favours the carriers at least as much as each other's. The same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late. Its owner session has been idle since that day.
 
-**Claimed.** MA3, selection on the capacity to shape the rule, in a new leaf module `Becoming.RuleShaping` on `RuleCapture`'s counts (claimed 24 October 2026 by a fork of the conversation that wrote this plan). Its scope as claimed:
-- the rule favours the shapers exactly where what comes back to them alone covers the cost, whatever comes to every member alike;
-- with nothing coming back and a cost, the shapers' share falls at every step;
-- delay never helps, and a longer return never hurts;
-- where what comes back is read from the shapers' share, `ReadsShare` is derived and the course locks;
-- where the return covers the cost only above a share, the capacity locks from above it and falls for good from below.
+**Claimed, statements fixed.** MA3, selection on the capacity to shape the rule, is a new leaf module `Becoming.RuleShaping` on `RuleCapture`'s counts. A fork of the conversation that wrote this plan claimed it on 24 October 2026 and fixed its statements the same day: 38 theorems in 46 declarations, every axiom report empty in a scratch build, not yet the checker.
 
-This is the second order of the meta-attractor line ([its conditional result of 2 October](../../../../../../theories/meta-attractor/README.md#selection-for-control-over-selection-2026-10-02-after-review), until now a derivation over the reals and a simulation with no Lean).
+The rule after shaping, `shaped a s p c`, gives each shaper `a + s + p` offspring and each other member `a + c + p`:
+- `s` is what comes back to the shapers alone;
+- `p` is what comes to every member alike;
+- `c` is the cost of shaping;
+- `a > 0`.
+
+Its statements:
+- **The sign.** The rule favours the shapers exactly where `c ≤ s` (`favours_iff`), and `p` decides nothing (`favours_alike`). A larger shared part lowers the rule in the share order without reversing it (`shared_lowers`).
+- **Cost.** A cheaper cost gives a rule not lower (`cheaper_raises`).
+- **Nothing comes back.** With nothing coming back and a cost, the shapers' share falls strictly at every step (`open_falls`).
+- **Timing.** Over `m` steps paying and then `n` steps returning, the share does not fall exactly where `(a+c)^m (a+c)^n ≤ a^m (a+s)^n` (`stretch_iff`). A later return is not more (`later_not_more`), and where `c ≤ s` a longer one is not less (`longer_not_less`).
+- **The lock.** `ReadsShare` holds exactly where what comes back is read monotonically from the share (`byReturn_reads_iff`). Where the return covers the cost at every share, the course locks (`return_locks`, by `RuleCapture.favouring_locks`).
+- **A threshold.** Where the return covers the cost only above a threshold share, the share starting above it never falls below its start, and starting below it never rises above its start (`tip_from_above`, `tip_from_below`).
+- **Witnesses.**
+  - With the same total return of five, kept as `(s, p) = (2, 3)` the rule favours the shapers, and shared as `(0, 5)` it disfavours them (`ComesBack`).
+  - A return that comes soon raises the share (`Timing.soon_rises`). One that comes late, or is cut short by correction, lowers it (`Timing.late_falls`, `Timing.corrected_falls`).
+
+This is the second order of the meta-attractor line ([its conditional result of 2 October](../../../../../../theories/meta-attractor/README.md#selection-for-control-over-selection-2026-10-02-after-review)), until now a derivation over the reals and a simulation with no Lean. The join to MA2's readers waits for MA2 to land.
 
 **Missing.**
 1. The readings of MA3 for alignment.
@@ -91,22 +103,25 @@ Pace, as the board's *Now* section and [08 §12](../../../../../../theories/beco
   - natural selection among AIs (Hendrycks 2023);
   - influence-seeking patterns (Christiano 2019);
   - robust agent-agnostic processes (Critch 2021);
-  - gradual disempowerment (Kulveit and others 2025).
+  - gradual disempowerment (Kulveit and others 2025);
+  - the logic of collective action (Olson 1965), added by MA3's owner for the shared part that selects nothing.
 - **Expected standing:** the comparison of offspring numbers is elementary. What is new are the conditions, stated on the spine, joined to capture and to MA2's readers, and each bounded by a witness.
-- **Its feed to 07** (its row names alignment's levers) carries the readings of step 3.
+- **Taken by its owner** (24 October). The list and this standing go into MA3's record, which says that the join to MA2's readers waits for MA2. MA3 keeps to 02 §9 and its record, so the readings of step 3 are AJ's.
 
-**Step 3. AJ2: the readings for alignment,** with MA3's owner after MA3 lands. They are readings in 07's alignment section, with instance theorems only where a reading needs one:
-1. *Help that lowers the cost of shaping moves the threshold toward the shapers.* Capable assistance to a principal raises the selection for control.
-2. *An assistant joined to its principal adds capacity and no coupling.* What lies beyond falls as under one optimizer of their joint capacity.
-3. *A counter-rule read from its own share* locks like the rule it replaced (the examination case of the meta-attractor line), and leaves only by reading beyond.
-4. *Shared rule-making*, where what comes back comes to every member alike, gives shaping no advantage, and a cost then selects against it.
+**Step 3. AJ2: the readings for alignment,** drafted by AJ after MA3 lands, as agreed with MA3's owner. They are readings in 07's alignment section, with instance theorems only where a reading needs one:
+1. *Help that lowers the cost of shaping moves the threshold toward the shapers* (`cheaper_raises`). Capable assistance to a principal raises the selection for control.
+2. *An assistant joined to its principal adds capacity and no coupling.* What lies beyond falls as under one optimizer of their joint capacity. This rests on the joint-capacity record, not on MA3.
+3. *A counter-rule read from its own share* locks like the rule it replaced (the examination case of the meta-attractor line), and leaves only by reading beyond. This rests on `RuleCapture` and closed capture, not on MA3.
+4. *Shared rule-making*, where what comes back comes to every member alike, gives shaping no advantage (`favours_alike`), and a cost then selects against it (`open_falls`). The `ComesBack` witness shows the same total return deciding the sign by whether it is kept or shared.
 
 **Step 4. AJ3: tests on trained systems,** each designed and frozen before it is run, as LA1 was:
 - **LA1, first.** It is frozen ([experiment](../../../../../../experiments/commons-llm-feedback/)) and tests T3.
 - **LA2: a lock in a self-rewarding loop**, testing T7. A model is judged by a judge formed from its own selected outputs, with a loss the judge does not read. Predictions: from closed capture, the loss persists however large while unread, and a reading of it turns the course; from MA2, read late, it leaves the course locked.
-- **LA3: what comes back decides the sign**, testing MA3. Agents in a population can spend on shaping their evaluator, and what the shaping returns comes either to them alone or to every member alike. Prediction: spending on shaping rises where the return is theirs alone and falls where it is shared.
+- **LA3: what comes back decides the sign**, testing MA3 on its exact classes. Agents in a population can spend on shaping their evaluator, and what the shaping returns comes either to them alone or to every member alike. Predictions:
+  - With the same total return, spending on shaping rises where the return is theirs alone and covers the cost (`c ≤ s`), and falls where it is shared (`s = 0`, `c > 0`), as in the `ComesBack` witness.
+  - A return that comes soon raises it; one that comes late, or is cut short by correction, lowers it (`stretch_iff`, the `Timing` witnesses).
 
-The designs can be written once MA3's statements are fixed. Spending model usage on any of the three is Ren's choice.
+MA3's statements are fixed, so nothing in the designs waits on them. By the pace above, the designs start when MA3 lands. Spending model usage on any of the three is Ren's choice.
 
 **Step 5. AJ4: the account for alignment readers,** after MA3 lands so it carries the result:
 - one page in plain words: the goal, the readings, the laws with their premises, what is open, and the tests;
@@ -131,7 +146,7 @@ Two further conditions: one page that a reader finishes, and positioning against
 ## 6. What would change the plan
 
 - **MA2 does not land.** MA3 stands on `RuleCapture` alone, and the timing of a reading stays a premise.
-- **MA3 joins nothing to capture.** If it shows only that a larger return is selected, the readings in step 3 are not warranted by it, and AJ4 says so.
+- **MA3 does not land as fixed.** If its join to capture (`byReturn_reads_iff`, `return_locks`) does not pass the checker, the readings in step 3 that rest on MA3 are not warranted by it, and AJ4 says so.
 - **A frozen test fails where its prediction forbids.** The thesis moves.
 - **A better argument for another order.** It replaces this one; the order here is the AI's.
 
@@ -140,6 +155,6 @@ Two further conditions: one page that a reader finishes, and positioning against
 | Item | Owner | State |
 |---|---|---|
 | MA2 | its 22 October owner session | verified on `ma2`; not landed; owner idle; lapses about 25 October, 20:00 Asia/Bangkok |
-| MA3 | the fork of the unification-and-coherence conversation | claimed 24 October 2026 |
-| AJ (this plan, AJ2 to AJ4) | the coordinating session of this plan (fork 2 of the same conversation) | plan written; AJ2 to AJ4 start after MA3 lands, AJ2 with MA3's owner |
+| MA3 | the fork of the unification-and-coherence conversation | statements fixed 24 October 2026 (scratch build); landing next |
+| AJ (this plan, AJ2 to AJ4) | the coordinating session of this plan (fork 2 of the same conversation) | plan written; AJ2, AJ3's designs and AJ4 start after MA3 lands, AJ2 drafted here as agreed with MA3's owner |
 | LA1, LA2 and LA3 usage; AJ4's dossier; the goal's objective | Ren | proposed to him |
