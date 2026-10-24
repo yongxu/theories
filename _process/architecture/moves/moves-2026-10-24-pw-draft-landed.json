@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-24-pw-draft-landed",
+  "date": "2026-10-24T06:53:57+00:00",
+  "base_commit": "af709321f4b0375ad5462ea548451fb40c38b613",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/DRAFT-07-4.6.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history/DRAFT-07-4.6.md",
+      "sha256": "0502750661ec06a1e5771bd8ae16c239d68abc84fdaa3c4dd4ad4cbc7fff58eb",
+      "blob": "e5e63b4325ecc8df3583b0fc41c52513c2dbccdc",
+      "reason": "landed as 07 §4.6 (future-path) with the IV3 line owner's revisions; the draft is superseded",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/DRAFT-07-4.6.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

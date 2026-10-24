@@ -4419,6 +4419,7 @@
     "theories/becoming/chapters/07-SIGNIFICANCE.md": {
       "title": "Significance, ethics and alignment",
       "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md",
         "experiments/commons-outrun-generalizing/README.md",
         "experiments/direction-installation/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
@@ -4445,7 +4446,8 @@
         "theories/becoming/history/NONINSTRUMENTAL-CONCERN.md",
         "theories/becoming/history/PRACTICAL-JUDGMENT.md",
         "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
-        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
+        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+        "theories/becoming/review/README.md"
       ]
     },
     "theories/becoming/chapters/08-METHOD.md": {
