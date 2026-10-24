@@ -146,10 +146,10 @@ Constancy reads which way a thing is joined; being joined does not. That the act
 
 ## 6f. Where PW stands (24 October 2026) [AI reading]
 
-Four of the five candidates landed in one day (GS2–GS5). Taken together with §2–3 they give one route for the future that uses no step of invariance. Each premise is stated so that it can be denied.
+All five candidates landed in one day (GS2–GS5, IV3k). Taken together with §2–3 they give one route for the future that uses no step of invariance. Each premise is stated so that it can be denied.
 
 1. **Held de se**, acting presupposes that one's own continuation has significance.
-2. **Need never reaches past one's end** (§2; candidate (1), with the IV3 line's owner). So the future is reached, if at all, along the line one's continuation runs on, not along what it needs.
+2. **Need never reaches past one's end** (§2; landed as IV3k, `4b385daac`, 07 §4.3: a formation active at no step of the stretch is needed exactly where no flow lets the consumer draw past the stock, `Flow.needs_iff_none_of_inactive`; read with time, the feeding closure holds only what gives by then, and the timeless closure overreaches, `Overlapping.closure_overreaches`; D64 now reads a shared scope among those whose lives overlap, not over those after). So the future is reached, if at all, along the line one's continuation runs on, not along what it needs.
 3. **The line goes on past a member's end** under a coarser class (`«过亡而续»`). A class between the member's and the one can have a core that carries it through each birth while reaching no other family (`TwoLines`): this is kin partiality, and it is what self-concern alone gives in time.
 4. **Where a line runs through its conditions**, a class under which it goes on must hold them. A class holding the members without the condition breaks the line at the condition (`SharedCondition.affecting_member_outside`).
 5. **A constant class that holds a condition with a member takes in whatever that condition feeds** (`ThirdFed.constant_takes_third`). Through the conditions one affects, it reaches the other lines' members that those conditions later feed (`SharedCondition.affecting_reaches_other`). A common cause reaches nothing (`fed_outside`).
