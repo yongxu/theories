@@ -150,3 +150,15 @@ This closes finding 7 for the overview. Each paragraph of §§1–8 that opened 
 The overview's reading rule was "a sentence summarizing a law keeps the hypotheses that change what holds". It now reads "a paragraph opens with its point in plain words; the sentences after it state each law with the hypotheses that change what holds". A lead may leave a hypothesis to the exact statement that follows it, but no lead says more than that statement. The leads were checked against the sentences they introduce.
 
 Not done here: chapter 7's results since round three are not yet summarized in the overview. These are need and feeding read with time (IV3k), two lines that share a condition (GS4) and the class of being joined (GS5). Chapter 7 states them; the overview's §7 has no sentence for them yet.
+
+## Fifth round, 24 October: the overview catches up with chapter 7
+
+Two paragraphs are added to the overview's §7, in English and Chinese, after the paragraph on self-concern through dependence. Each leads with its point and states its results at the standing chapter 7 gives them ([`development/nr-front-pages/nr5_edits.py`](development/nr-front-pages/nr5_edits.py)).
+
+- **Need read with time (IV3k).** Need reaches only what is active while it lasts, never what comes only after. A feeding closure read across every step can run past the end of what it carries.
+- **How far a line reaches on the root (GS4, GS5).**
+  - A line reaches another family through a condition its members affect, not through a common cause they only share.
+  - The class of being joined, defined from the net alone, reaches exactly what lines under the full class reach.
+  - Chapter 7's reading of both is kept as a reading: held de se, the presupposition reaches what one conditions and what that conditions in turn, with no step of invariance. Whether one's own line runs under such a class is the de se question.
+
+With this, the overview summarizes every result chapter 7 states.
