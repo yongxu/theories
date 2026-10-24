@@ -12,28 +12,29 @@ The results below are theorems in Lean 4 about models with discrete steps and na
 
 ## What is proved
 
-A selection *reads* a quantity when its signal depends on it: a reward, a score, a price, a count of descendants. A quantity the signal does not depend on is *unread*.
+A selection *reads* a quantity when its signal depends on it, directly or through other quantities the signal depends on. The signal may be a reward, a score, a price or a count of descendants. A quantity it does not read is *unread*.
 
-1. **A selection is blind to what it does not read.** Histories that look alike through what the selector reads are selected alike. So, with everything else fixed, nothing it does not read can be selected for (`Flow.unselected_beyond_coupling`; [record](../../../../../../theories/becoming/results/records/selection-through-couplings.md)).
+1. **A selection is blind to what it does not read.** A selection selects two histories alike exactly when they are alike in what it reads. So, with everything else fixed, nothing it does not read can be selected for (`Flow.unselected_beyond_coupling`; [record](../../../../../../theories/becoming/results/records/selection-through-couplings.md)).
 
-2. **With room, an optimum drains what it does not read.** Call it *room* when any option that leaves more of an unread condition than another is beaten, on what is read, by some option. With room, every optimum of every ranking that rises with what is read leaves the condition at its least level. An optimum breaks exactly the dependences on the condition that some available outcome breaks. Without room, keeping the condition can be optimal; a witness shows it (`Optimum.least_of_room`, `Web.optimum_broken_iff`; [record](../../../../../../theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md)).
+2. **With room, an optimum drains what it does not read.** Call it *room* when any option that leaves more of an unread condition than another is beaten, on what is read, by some option. With room, every optimum of every ranking that rises with what is read leaves the condition at its least level. Of the dependences on the condition that are met before the step, an optimum breaks exactly those that some available outcome breaks. Without room, keeping the condition can be optimal; a witness shows it (`Optimum.least_of_room`, `Web.optimum_broken_iff`; [record](../../../../../../theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md)).
 
-3. **A far-sighted optimizer keeps its own base, which is not alignment.** Suppose an optimizer ranks its whole course by what it draws from a renewing resource.
-   - It holds the resource at the level where renewal is greatest until the last step of its horizon, and then takes everything.
-   - Any dependent that needs more than that level is broken at the first step.
-   - Two courses that tie in the optimizer's ranking can differ in whether a dependent survives (`Optimum.Holding.gated_alike`; [record](../../../../../../theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md)).
+3. **A far-sighted optimizer keeps its own base, which is not alignment.** Suppose an optimizer ranks its whole course by what it draws from a renewing resource over a finite horizon, and its capacity to draw lies within the bounds the record states.
+   - It holds the resource at a level where renewal is greatest until the last step of its horizon, and then takes everything.
+   - Take a dependent that is met at the start and whose need lies above every level of greatest renewal. Every optimum breaks it at the first step, and it stays unmet through the horizon.
+   - Where renewal is equally greatest at several levels, two optimal courses can take exactly the same while one keeps a dependent and the other breaks it. A witness shows this (`Optimum.Holding.gated_alike`; [record](../../../../../../theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md)).
 
    This is the resource-keeping form of instrumental convergence. It protects the optimizer's base, not what else depends on the resource.
 
 4. **Several optimizers drain as one.** Suppose several optimizers each rank by what they read and reach a mutual best response. They then lower a condition outside all of them as one optimizer of their combined capacity would (`Optimum.mutual_as_one`; [record](../../../../../../theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.md)).
 
 5. **A rule read from what it selects locks, and outlives a loss it does not read.**
-   - Suppose the rule that selects is read, monotonically, from the share it selected. Under the record's start condition the loop then locks: neither share nor rule falls again. A change to the rule that keeps its direction is absorbed at the next reading, and only a change in how the rule is read gets out (`RuleCapture.favouring_locks`; [record](../../../../../../theories/becoming/results/records/capture-through-the-rule.md)).
+   - Suppose the rule that selects is read, monotonically, from the share it selected, and the starting rule and every rule read favour the selected. Then the loop locks from the step after its first reading, and neither share nor rule falls again (`RuleCapture.favouring_locks`; [record](../../../../../../theories/becoming/results/records/capture-through-the-rule.md)).
+   - From a locked state, a change to the rule that keeps it favouring is absorbed at the next reading. Where the reading favours at every share, nothing short of a change of law leaves the lock for long: a change in how the rule is read, or in the selection itself. Where it favours only above a threshold, a change that carries the share across the threshold also leaves.
    - Suppose how the rule is read is also formed from the share. Then a loss the loop does not read leaves it locked, however large the loss grows (`ClosedCapture.lock_outlives_loss`; [record](../../../../../../theories/becoming/results/records/closed-capture.md)).
    - Each result has a witness where it fails. Without the start condition, the loop alternates forever. Read from the loss instead of the share, the loop turns.
 
 6. **When the loss is read decides whether a lock can still be left.** Suppose the rule is the pooled reading of readers drawn from those it selected.
-   - Where each reader favours its own kind at least as much as the others do, the rule's being read from the share is derived, not assumed.
+   - Where each carrier's reading favours the carriers at least as much as each other member's reading does, the rule's being read from the share is derived, not assumed.
    - Suppose only the members the selection thins read a loss. Then the same readers reading the same loss turn the course if they read it in time. Once the selection has left them no more than the carriers, they leave it locked for good (`Thinned.kept_iff`, `Thinned.turned_iff`; witness: one carrier to eight others under a four-to-one rule; MA2, whose home section will be in chapter 2).
 
 7. **Capacity to shape the rule is selected exactly where its return is kept.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
@@ -41,7 +42,7 @@ A selection *reads* a quantity when its signal depends on it: a reward, a score,
    - Where nothing is kept and shaping has any cost, the shapers' share falls at every step (`open_falls`).
    - Over m steps that pay the cost and then n steps that return, the share holds exactly where (a+c)^(m+n) ≤ a^m (a+s)^n. So a later return never helps (`stretch_iff`, `later_not_more`).
    - Where what comes back is read from the shapers' share, the rule's being read from the share is derived, and the course locks (`byReturn_reads_iff`, `return_locks`).
-   - Witness: the same total return of 5, kept as (s, p) = (2, 3), favours shaping; shared as (0, 5), it selects against shaping (MA3).
+   - Witness, with a = 1 and c = 1: the same total return of 5, kept as (s, p) = (2, 3), favours shaping; shared as (0, 5), it selects against shaping (MA3).
 
 The known forms of these results are listed under *Closest work*, item by item. The comparisons themselves are elementary. What is added is the conditions, the joins between results, the witness at each edge, and one statement that holds across fields that state these results separately.
 
@@ -50,9 +51,16 @@ The known forms of these results are listed under *Closest work*, item by item. 
 These are readings. Each rests on the results named.
 
 - **The unit is the joint selection.** Results 1 to 7 hold of any selector. They apply alike to a rater, a training run, a developer, a market or a state, and to any combination of them.
-- **Obedience adds capacity, not reading.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads. By result 4, what the principal does not read then falls as it would under one optimizer of their joint capacity. By result 7, help that lowers the cost of shaping rules raises the selection for shaping (`cheaper_raises`). So an assistant aligned only to its principal can strengthen the dynamic that results 5 and 7 describe.
-- **What keeps control from being selected.** From result 7: the returns of shaping the rules are shared alike by all members rather than kept by the shaper, correction cuts the return short, or the cost exceeds what is kept. From result 6: the loss is read, before the lock, by those the rule does not select.
-- **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule alone is absorbed. From result 6: the change has to come in time.
+- **Obedience adds capacity, not reading.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads.
+  - Read with result 4: where principal and assistant act as optimizers at a mutual best response, what the principal does not read falls as it would under one optimizer of their joint capacity.
+  - Read with result 7: help that lowers the cost of shaping gives a rule no less favourable to shaping (`cheaper_raises`), and moves the threshold c ≤ s toward the shapers.
+
+  So an assistant aligned only to its principal can strengthen the dynamic that results 5 and 7 describe.
+- **What keeps control from being selected.**
+  - From result 7: shaping is selected against where what comes back to the shapers alone falls short of its cost (s < c). That is the case when its returns are shared alike by all members and it has any cost.
+  - A witness shows that a return cut short by correction can turn the sign.
+  - From result 6: a loss read in time turns the course, even when only those the selection thins read it.
+- **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule's value alone is absorbed, and so is a reform of the reading where the reading is itself formed from the share. From result 6: the change has to come in time.
 - **Instrumental convergence, located.** Result 3 is its one-agent form. Results 5 and 7 together are its form for a population of practices: a means that wins locally becomes the rule.
 - **Compare courses by widening, not by a score.**
   - One course widens another when at every step it allows everything the other allows, and at some step more.

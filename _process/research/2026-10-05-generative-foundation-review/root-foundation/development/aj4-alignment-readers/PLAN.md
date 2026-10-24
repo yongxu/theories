@@ -35,6 +35,28 @@ Two further rules come from how public text has failed a cold read before:
 - **Plain words.** Field-standard terms are used, and no coined word, metaphor or allusion appears in the text. Each term of the work is replaced, or explained once where the page needs it.
 - **No names in the argument.** Persons and organizations appear only in the section that gives credit. Citations taken from the AI's knowledge are marked so until they are checked against the sources.
 
+**What RP2's two review passes found** (the philosophers' dossier, `65d5fe530`, reported by the board's coordinator on 24 October 2026). The independent reader found the same fault throughout:
+- witnesses stated as laws;
+- hypotheses dropped ("exactly where", "at one step", "only vacuously");
+- theorems cited for claims of a different strength.
+
+A second pass after the fixes found eleven more. One citation recalled by the AI did not exist.
+
+So AJ4 does four things:
+- It checks quotations and Lean names with `check_dossiers.py`, and copies Lean statements exactly with the kit's `lean_statements.py` (`development/rp2-philosophy/`).
+- It checks every reference outside a quotation against a publication record, and logs the check.
+- It quotes what the chapters state only as readings as readings.
+- It treats these faults as the first thing the cold read looks for.
+
+The draft was revised for them on 24 October. The changes:
+- the definition of reading now includes what the signal depends on indirectly;
+- the "met before the step" hypothesis is restored in result 2;
+- the bounds, the "met at the start" hypothesis and the witness are restored in result 3;
+- the start condition and the threshold case are restored in result 5;
+- the exact condition in result 6;
+- the witness's values in result 7;
+- in the readings, "raises" became "gives a rule no less favourable", a witness is no longer stated as a law, and each reading says which result it is read with.
+
 ## 4. Deliverables
 
 1. **The page.** One page, readable in ten minutes: the claim, the results with their conditions and standing, the readings for alignment, what is not claimed, the tests, how to check, the closest work. Its draft is in this folder.
