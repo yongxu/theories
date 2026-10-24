@@ -69,12 +69,17 @@ The draft was revised for them on 24 October. The changes:
 2. After MA3 and MA2 land, the standings are fixed and AJ2 is written, handed to this session by AJ's owner on 24 October.
    - AJ2 is the four readings for 07's alignment section. Before drafting, check 07's owner rows on the board.
    - Each reading says what it rests on, and none rests on more:
-     - help that lowers the cost of shaping raises the selection for control, by `cheaper_raises`;
+     - help that lowers the cost of shaping gives a rule no less favourable to control, by `lower_c_raises`;
      - an assistant joined to its principal adds capacity and no coupling, by the joint-capacity record, not MA3;
      - a counter-rule read from its own share locks like the rule it replaced, by `RuleCapture` and closed capture, not MA3;
-     - shared rule-making gives shaping no advantage, and a cost then selects against it, by `favours_alike` and `open_falls`, with the `ComesBack` witness.
+     - shared rule-making gives shaping no advantage at a step, and with nothing back to the shapers at any step a cost selects against it over any stretch, by `favours_alike` and `nothing_back_falls`, with the `Split` witness. Where something comes back, the shared part can turn the verdict across a stretch (`SharedFlips`), so the reading never says the shared part selects nothing however large.
+   - MA3's names and three of its claims changed after an independent review on 24 October (AJ's plan, `aede9e490`):
+     - `byBack_reads_iff` is an equivalence, not a derivation of `ReadsShare`;
+     - only the number of steps of each kind matters, not their order, and timing binds only where the steps with something back are bounded;
+     - the verdict across a stretch depends on the base a;
+     - "correction" is retired as a dualist word.
    - The page then quotes the readings from their home section.
-   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, study §398, and its core receipt.
+   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, study §399 (RP2 took §398), and its core receipt.
 3. The citation check.
 4. The dossier, checked by script as the other dossiers are.
 5. A cold read by an independent reader before landing.

@@ -1,6 +1,6 @@
 # When selection favours control over its own rules
 
-*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Of the two results it uses that are not yet on the main line, MA2 is checked on its branch and being merged, and MA3's statements are fixed in a scratch build that has not yet been through the checker.*
+*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Two of the results it uses are not yet on the main line. MA2 is checked on its branch, merged with main and in the landing queue. MA3's statements were revised after an independent review and now stand at 51 theorems in 57 declarations, in a scratch build that has not yet been through the checker.*
 
 ## The question
 
@@ -37,12 +37,16 @@ A selection *reads* a quantity when its signal depends on it, directly or throug
    - Where each carrier's reading favours the carriers at least as much as each other member's reading does, the rule's being read from the share is derived, not assumed.
    - Suppose only the members the selection thins read a loss. Then the same readers reading the same loss turn the course if they read it in time. Once the selection has left them no more than the carriers, they leave it locked for good (`Thinned.kept_iff`, `Thinned.turned_iff`; witness: one carrier to eight others under a four-to-one rule; MA2, whose home section will be in chapter 2).
 
-7. **Capacity to shape the rule is selected exactly where its return is kept.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
-   - The rule favours shaping exactly where c ≤ s, and p decides nothing (`RuleShaping.favours_iff`, `favours_alike`).
-   - Where nothing is kept and shaping has any cost, the shapers' share falls at every step (`open_falls`).
-   - Over m steps that pay the cost and then n steps that return, the share holds exactly where (a+c)^(m+n) ≤ a^m (a+s)^n. So a later return never helps (`stretch_iff`, `later_not_more`).
-   - Where what comes back is read from the shapers' share, the rule's being read from the share is derived, and the course locks (`byReturn_reads_iff`, `return_locks`).
-   - Witness, with a = 1 and c = 1: the same total return of 5, kept as (s, p) = (2, 3), favours shaping; shared as (0, 5), it selects against shaping (MA3).
+7. **At a step, capacity to shape the rule is selected exactly where what comes back to the shapers alone covers its cost.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
+   - **At a step.** The rule favours shaping exactly where c ≤ s, and p decides nothing (`RuleShaping.favours_iff`, `favours_alike`).
+   - **Nothing back.** Where nothing comes back to the shapers alone and shaping has any cost, the shapers' share falls at every step, whatever is shared (`nothing_back_falls`).
+   - **Across a stretch.**
+     - Take m steps with nothing back (`shaped a 0 p c`) and n steps with something back (`shaped a s p c`). The share holds exactly where (a+c+p)^(m+n) ≤ (a+p)^m (a+s+p)^n (`stretch_iff`).
+     - Only the number of steps of each kind matters, not their order. More steps with nothing back never help (`wait_not_more`). Where c ≤ s, more steps with something back never hurt (`back_longer_not_less`).
+     - The verdict depends on the base a, and timing binds only where the steps with something back are bounded.
+   - **The shared part across a stretch.** It decides nothing at a step, but across a stretch it can turn the verdict. With a = 1, c = 1, s = 2, m = 2 and n = 3, the share falls at p = 0 and rises at p = 1 (`SharedFlips`).
+   - **The lock.** The rule is read from the share exactly where what comes back is monotone in the share (`byBack_reads_iff`). Where what comes back covers the cost at every share, the course locks (`covering_locks`).
+   - **Witness,** with a = 1 and c = 1. The same total return of 5, kept as (s, p) = (2, 3), favours shaping at a step; shared as (0, 5), it selects against shaping (`Split`; MA3).
 
 The known forms of these results are listed under *Closest work*, item by item. The comparisons themselves are elementary. What is added is the conditions, the joins between results, the witness at each edge, and one statement that holds across fields that state these results separately.
 
@@ -53,12 +57,14 @@ These are readings. Each rests on the results named.
 - **The unit is the joint selection.** Results 1 to 7 hold of any selector. They apply alike to a rater, a training run, a developer, a market or a state, and to any combination of them.
 - **Obedience adds capacity, not reading.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads.
   - Read with result 4: where principal and assistant act as optimizers at a mutual best response, what the principal does not read falls as it would under one optimizer of their joint capacity.
-  - Read with result 7: help that lowers the cost of shaping gives a rule no less favourable to shaping (`cheaper_raises`), and moves the threshold c ≤ s toward the shapers.
+  - Read with result 7: help that lowers the cost of shaping gives a rule no less favourable to shaping (`lower_c_raises`), and moves the threshold c ≤ s toward the shapers at each step.
 
   So an assistant aligned only to its principal can strengthen the dynamic that results 5 and 7 describe.
 - **What keeps control from being selected.**
-  - From result 7: shaping is selected against where what comes back to the shapers alone falls short of its cost (s < c). That is the case when its returns are shared alike by all members and it has any cost.
-  - A witness shows that a return cut short by correction can turn the sign.
+  - From result 7: at a step, the rule does not favour shaping where what comes back to the shapers alone falls short of its cost (s < c).
+  - Where nothing comes back to the shapers at any step and shaping has a cost, as when all its returns are shared alike, the shapers' share falls over any stretch (`nothing_back_falls`).
+  - Where something does come back, the shared part can still turn the verdict across a stretch (`SharedFlips`).
+  - A witness shows that fewer steps with something back can turn the sign (`Timing.shorter_falls`).
   - From result 6: a loss read in time turns the course, even when only those the selection thins read it.
 - **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule's value alone is absorbed, and so is a reform of the reading where the reading is itself formed from the share. From result 6: the change has to come in time.
 - **Instrumental convergence, located.** Result 3 is its one-agent form. Results 5 and 7 together are its form for a population of practices: a means that wins locally becomes the rule.
