@@ -79,3 +79,5 @@ The first version of the two-tier law assumed no store rises (kept as `iv3j_regi
 GS1 landed first with study §390. The branch merged main, took main's generated pages, board and study, re-ran the core checker on the merged tree (receipt `20261023T201939.645046Z`, 317 modules), and `rebase_j.py OLD NEW` appended the section as §391 and moved D64 item 13 and the record to the merged receipt; then `receipts_j.py`, connectivity, `board_j.py land`, re-pointing (another session's drift on 01-ROOT.md left to its owner), render, check, links and test.
 
 RP then landed with §391, so `renumber_j.py 391 RECEIPT` moved the section to §392 (receipt unchanged: RP changed no Lean).
+
+More landings followed (GS2 to GS5, HC, NR, SW) before the fast-forward: main merged once more, the checker re-run on the merged tree, and `move_j.py FROM OLD NEW` moved the section to the next free number and the record to the new receipt; then `receipts_j.py`, connectivity, `board_j.py land`, re-pointing, render, check, links and test.

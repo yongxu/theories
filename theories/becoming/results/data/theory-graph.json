@@ -3472,6 +3472,30 @@
    "page": "theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md"
   },
   {
+   "id": "record:reach-past-ones-own-end",
+   "type": "result",
+   "record": "reach-past-ones-own-end",
+   "title": "Past one's own end: the reach of a line under a class",
+   "title_zh": "过己之亡：一类下之线之所及",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/reach-past-ones-own-end.md"
+  },
+  {
+   "id": "record:reach-through-a-shared-condition",
+   "type": "result",
+   "record": "reach-through-a-shared-condition",
+   "title": "One line reaching another through a shared condition",
+   "title_zh": "经共之条件一线及于他线",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/reach-through-a-shared-condition.md"
+  },
+  {
    "id": "record:reaching-before-and-after-a-juncture",
    "type": "result",
    "record": "reaching-before-and-after-a-juncture",
@@ -4456,6 +4480,30 @@
    "page": "theories/becoming/results/records/the-breeding-value.md"
   },
   {
+   "id": "record:the-class-of-being-joined",
+   "type": "result",
+   "record": "the-class-of-being-joined",
+   "title": "The class of being joined",
+   "title_zh": "相连之类",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-class-of-being-joined.md"
+  },
+  {
+   "id": "record:the-continuation-condition-on-the-root",
+   "type": "result",
+   "record": "the-continuation-condition-on-the-root",
+   "title": "The continuation condition on the root",
+   "title_zh": "根上之续存条件",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-continuation-condition-on-the-root.md"
+  },
+  {
    "id": "record:the-gap-for-ones-own-act",
    "type": "result",
    "record": "the-gap-for-ones-own-act",
@@ -4514,6 +4562,18 @@
    "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/the-run-classes-and-widening.md"
+  },
+  {
+   "id": "record:the-source-texts-test-systems",
+   "type": "result",
+   "record": "the-source-texts-test-systems",
+   "title": "Test systems of the source texts as small witnesses",
+   "title_zh": "来源二篇之检验系统之小见证",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-source-texts-test-systems.md"
   },
   {
    "id": "record:the-split-that-makes-sense",
@@ -8817,6 +8877,28 @@
    "name": "Becoming.GrammarRegularity",
    "level": "L1",
    "theorems": 25,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarScope",
+   "type": "module",
+   "name": "Becoming.GrammarScope",
+   "level": "L1",
+   "theorems": 37,
+   "region": "significance",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarCases",
+   "type": "module",
+   "name": "Becoming.GrammarCases",
+   "level": "L1",
+   "theorems": 42,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -26183,6 +26265,12 @@
    "anchor": "r-what-dependence-alone-carries-of-a-level"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-source-texts-test-systems"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-coming-and-ceasing-keep-pace",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -28307,6 +28395,30 @@
    "anchor": "r-graded-significance-and-priority"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-continuation-condition-on-the-root"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-reach-past-ones-own-end"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-through-a-shared-condition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-reach-through-a-shared-condition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-class-of-being-joined",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-class-of-being-joined"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29584,6 +29696,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarCases",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarCases",
+   "to": "module:Becoming.GrammarTesting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.GrammarCourse",
    "to": "module:Becoming.Arising",
    "type": "imports"
@@ -29621,6 +29743,21 @@
   {
    "from": "module:Becoming.GrammarRegularity",
    "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarScope",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -43934,6 +44071,61 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:reach-past-ones-own-end",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:a-regularity-kept-and-changed",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-past-ones-own-end",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "module:Becoming.GrammarCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:the-source-texts-test-systems",
+   "type": "related"
+  },
+  {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:reaching-before-and-after-a-juncture",
    "to": "module:Becoming.Junctures",
    "type": "proved-in"
@@ -47284,6 +47476,51 @@
    "type": "related"
   },
   {
+   "from": "record:the-class-of-being-joined",
+   "to": "module:Becoming.GrammarCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:reach-through-a-shared-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:the-continuation-condition-on-the-root",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-gap-for-ones-own-act",
    "to": "module:Becoming.Counterfactual",
    "type": "proved-in"
@@ -47407,6 +47644,36 @@
    "from": "record:the-run-classes-and-widening",
    "to": "record:significance-retained-within-margin",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "module:Becoming.GrammarCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:reach-past-ones-own-end",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-source-texts-test-systems",
+   "to": "record:testing-within-the-net",
+   "type": "related"
   },
   {
    "from": "record:the-split-that-makes-sense",
@@ -49575,6 +49842,11 @@
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-step-across-standpoints-reaches",
    "to": "record:widening-as-what-every-weighting-ranks",
    "type": "related"
   },
@@ -51469,6 +51741,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+   "to": "record:the-source-texts-test-systems",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-step-index-from-own-courses",
    "to": "record:the-step-index-from-own-courses",
    "type": "states"
@@ -53049,6 +53326,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end",
+   "to": "record:reach-past-ones-own-end",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-through-a-shared-condition",
+   "to": "record:reach-through-a-shared-condition",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
    "to": "record:recoverable-mediated-change",
    "type": "states"
@@ -53096,6 +53383,16 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
    "to": "record:support-from-the-supported",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-class-of-being-joined",
+   "to": "record:the-class-of-being-joined",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root",
+   "to": "record:the-continuation-condition-on-the-root",
    "type": "states"
   },
   {

@@ -1,0 +1,243 @@
+{
+  "schema_version": 2,
+  "id": "the-class-of-being-joined",
+  "title": {
+    "en": "The class of being joined",
+    "zh": "相连之类"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T23:09:10+00:00",
+  "statement": {
+    "en": "The class of being joined by 缘 read either way has 缘 as its continuation and is the finest class that does; where every occurrence conditions something it is constant and its core holds every condition; a finer constant class can reach as far, depending on how the rest is joined.",
+    "zh": "以缘相连（正反皆读）之类以缘为其续，为如此之最细之类；凡事皆为某事之缘时，此类有常，其核含每一缘；较细之有常之类亦可及同远，视余者如何相连。"
+  },
+  "laws": [
+    {
+      "en": "Every condition joins its two ends in one family under the one; under that class, the class of being joined, continuation is 缘 itself, and its lines reach exactly what the one's reach.",
+      "zh": "凡缘皆使其两端在一之下之同族中；于此类（相连之类）下，续即缘本身，其线之所及恰即一之线之所及。",
+      "declarations": [
+        "Becoming.«族之所及即一之所及»",
+        "Becoming.«族之续即缘»",
+        "Becoming.«缘在族中»"
+      ]
+    },
+    {
+      "en": "A class has 缘 as its continuation exactly where it contains the class of being joined by 缘 read either way: that class is the finest under which every condition is a continuation.",
+      "zh": "一类以缘为其续，恰当其含以缘相连（正反皆读）之类：此类为凡缘皆为续之最细之类。",
+      "declarations": [
+        "Becoming.«续即缘当且仅当含族»"
+      ]
+    },
+    {
+      "en": "Where every occurrence conditions something, the class of being joined is constant, its core holds both ends of every condition, and a line under the core reaches exactly what a line under the one reaches.",
+      "zh": "凡事皆为某事之缘时，相连之类有常，其核含每一缘之两端，核下之线之所及恰即一之线之所及。",
+      "declarations": [
+        "Becoming.«遍有后则族有常»",
+        "Becoming.«遍有后则核之所及即一之所及»",
+        "Becoming.«遍有后则缘在族核»"
+      ]
+    },
+    {
+      "en": "With a third thing joined to nothing beside two families and their shared condition, the class of being joined holds the first family's first member with the condition and with the second family's member two generations on and keeps every stage of the third thing apart, so it is narrower than the one; it is constant and its line reaches the second family's member.",
+      "zh": "二家与其共之条件之旁，另有一与诸事皆不相连之第三物：相连之类含首家首成员与此条件及次家二代后之成员，而别第三物之每一阶段，故窄于一；此类有常，其线及于次家之成员。",
+      "declarations": [
+        "Becoming.ThirdThing.Occ",
+        "Becoming.ThirdThing.family_keeps_third",
+        "Becoming.ThirdThing.fixed_class",
+        "Becoming.ThirdThing.fixed_class_reaches",
+        "Becoming.ThirdThing.step",
+        "Becoming.ThirdThing.step_keeps_third",
+        "Becoming.ThirdThing.third",
+        "Becoming.ThirdThing.total"
+      ]
+    },
+    {
+      "en": "With the third thing affecting the shared condition, the class of being joined is the one, while the constant class \"the third thing or not\" leaves it out and its line from the first family's first member reaches the second family's member two generations on.",
+      "zh": "第三物影响共之条件时，相连之类即一；而「第三物与否」之类有常，不含第三物，其线自首家首成员及于次家二代后之成员。",
+      "declarations": [
+        "Becoming.ThirdAffects.Occ",
+        "Becoming.ThirdAffects.condition_joined",
+        "Becoming.ThirdAffects.finer_class_reaches",
+        "Becoming.ThirdAffects.joined_to_start",
+        "Becoming.ThirdAffects.rest_to_rest",
+        "Becoming.ThirdAffects.step",
+        "Becoming.ThirdAffects.succ_of_kind",
+        "Becoming.ThirdAffects.third",
+        "Becoming.ThirdAffects.third_class",
+        "Becoming.ThirdAffects.third_constant"
+      ]
+    },
+    {
+      "en": "With the shared condition feeding the third thing, every constant class holding a stage of the condition with a member takes in the stage the condition feeds, alike with the member's next generation or the condition's next stage.",
+      "zh": "共之条件养第三物时，凡含条件之一阶段与一成员之有常之类，皆纳此条件所养之阶段，与成员之次代或条件之次态同类。",
+      "declarations": [
+        "Becoming.ThirdFed.Occ",
+        "Becoming.ThirdFed.constant_takes_third",
+        "Becoming.ThirdFed.step"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: for every carrier and relation; for constancy and the core, every occurrence conditions something; the witness's net supplied, with discrete steps and equality on its carrier.",
+      "zh": "不加公理，除各律所带者外不加前提：对一切载体与关系；有常与核设凡事皆为某事之缘；见证之网为所给，设离散之步与载体上之相等。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a center's own line runs under the class of being joined rather than a finer one: the de se question.",
+      "zh": "中心之自线在相连之类下而非较细之类下：de se 之问。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the class of being joined is the only class that reaches: a finer constant class can, where a third thing affects the shared condition.",
+      "zh": "相连之类为唯一能及之类：第三物影响共之条件时，较细之有常之类亦能。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the actual unfolding is joined, so that the class it fixes is the one.",
+      "zh": "实有之展开为相连者，故其所定之类即一。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Constancy where some occurrence conditions nothing.",
+      "zh": "有事不为任何事之缘时之有常。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T230635.949992Z): Becoming.GrammarScope and Becoming.GrammarCases, every declaration with an empty axiom report; this record cites 7 declarations of the first and 21 of the second. Author review in study section 395.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T230635.949992Z）：Becoming.GrammarScope 与 Becoming.GrammarCases，公理报告皆空；本记录引前者 7 项、后者 21 项。作者审查见研究第 395 节。"
+  },
+  "next_delta": {
+    "en": "Constancy of the class of being joined where some occurrences condition nothing; a law over every net of the directional cases: which constant classes leave out what affects a shared condition, and which must take in what it feeds.",
+    "zh": "有事不为任何事之缘时，相连之类之有常；对一切网之方向之律：何种有常之类别影响共之条件者，何种必纳其所养者。"
+  },
+  "correspondence": {
+    "en": "PW NOTE §7 item 5, in part: the class of being joined holds the living with the conditions they affect and are fed by, and with everything any chain of 缘 joins to these; narrower than the one only where the net has unjoined parts; which constant class singles out the living with their conditions turns on how the rest is joined.",
+    "zh": "PW NOTE §7 第五项之一部：相连之类含生者及其所影响与所受养之条件，并含任何缘之链所连者；唯网有不相连之部分时窄于一；何种有常之类单取生者与其条件，视余者如何相连。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+  "aliases": [
+    "The class of being joined",
+    "相连之类",
+    "Becoming.«续即缘当且仅当含族»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«同族», «同族为类», «一», «有常之逐点», «类有常当且仅当含于核», «及之单调».",
+        "zh": "«同族»、«同族为类»、«一»、«有常之逐点»、«类有常当且仅当含于核»、«及之单调»。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "detail": {
+        "en": "The condition along the net, read with the class of being joined.",
+        "zh": "以相连之类读沿网之条件。"
+      }
+    },
+    {
+      "id": "reach-through-a-shared-condition",
+      "detail": {
+        "en": "The two families and their shared condition, here with a third thing joined three ways.",
+        "zh": "二家及其共之条件，此处另加以三种方式相连之第三物。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.«族之所及即一之所及»",
+        "Becoming.«族之续即缘»",
+        "Becoming.«续即缘当且仅当含族»",
+        "Becoming.«缘在族中»",
+        "Becoming.«遍有后则族有常»",
+        "Becoming.«遍有后则核之所及即一之所及»",
+        "Becoming.«遍有后则缘在族核»"
+      ],
+      "sha256": "8ee86ef22f31682a00b708252539b8ba2e15f61ec07d573e5132d320a36fec30"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ThirdAffects.Occ",
+        "Becoming.ThirdAffects.condition_joined",
+        "Becoming.ThirdAffects.finer_class_reaches",
+        "Becoming.ThirdAffects.joined_to_start",
+        "Becoming.ThirdAffects.rest_to_rest",
+        "Becoming.ThirdAffects.step",
+        "Becoming.ThirdAffects.succ_of_kind",
+        "Becoming.ThirdAffects.third",
+        "Becoming.ThirdAffects.third_class",
+        "Becoming.ThirdAffects.third_constant",
+        "Becoming.ThirdFed.Occ",
+        "Becoming.ThirdFed.constant_takes_third",
+        "Becoming.ThirdFed.step",
+        "Becoming.ThirdThing.Occ",
+        "Becoming.ThirdThing.family_keeps_third",
+        "Becoming.ThirdThing.fixed_class",
+        "Becoming.ThirdThing.fixed_class_reaches",
+        "Becoming.ThirdThing.step",
+        "Becoming.ThirdThing.step_keeps_third",
+        "Becoming.ThirdThing.third",
+        "Becoming.ThirdThing.total"
+      ],
+      "sha256": "756728bd0d26a2dc26949eb85be3c55f6bb8ec875a45608b877d68a251523bda"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "role": "receipt",
+      "sha256": "80395060726ea826a45ba114e74723738b07cb60413ed8c0366f81e139ffb1fe"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "6e6c8c0c6984a708f779211eb23a4289439e61b360be17d237da925f8d07f79a"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "61d6141b484bd96281a5f16ea18cdbf5e5f665f2adde49568cb295e5e820cb7e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarCases",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (GS5), PW's item 5; study section 395.",
+      "zh": "2026年10月24日：新增（GS5），PW 之第五项；研究第 395 节。"
+    }
+  ]
+}

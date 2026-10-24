@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/gs2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gs2-condition-on-continuation/tree",
+  "modules": 109,
+  "ran": [
+    "Becoming.GrammarScope",
+    "BecomingGrammarScopeAxiomAudit"
+  ],
+  "reused": 108,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarScope": {
+      "theorems": 30,
+      "declarations": 37,
+      "with_axioms": {}
+    }
+  }
+}

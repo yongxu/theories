@@ -1,0 +1,67 @@
+Becoming.Decay.intactAlike_class : Becoming.«类» Becoming.Decay.intactAlike
+@Becoming.Decay.reach_rises : ∀ {x y : Becoming.Decay.Occ}, Becoming.«及» Becoming.Decay.possible x y → x.fst < y.fst
+Becoming.Decay.possible_acyclic : Becoming.«无环» Becoming.Decay.possible
+Becoming.Decay.both_open : ∀ (t : Nat),
+  Becoming.Decay.possible (t, false) (t + 1, false) ∧ Becoming.Decay.possible (t, false) (t + 1, true)
+Becoming.Decay.decay_alters : ∀ (t : Nat),
+  Becoming.«异» Becoming.Decay.possible Becoming.«一» Becoming.Decay.intactAlike (t, false) (t + 1, true)
+Becoming.Decay.possible_constant : Becoming.«有常» Becoming.Decay.possible Becoming.Decay.intactAlike
+Becoming.Decay.time_not_in_core : ∀ (t t' : Nat),
+  Becoming.«核» Becoming.Decay.possible Becoming.Decay.intactAlike (t, false) (t', false)
+Becoming.Decay.history_within : Becoming.«则» Becoming.Decay.history Becoming.Decay.possible
+Becoming.Decay.history_apart : ¬Becoming.«核» Becoming.Decay.history Becoming.Decay.intactAlike (0, false) (1, false)
+Becoming.Overlap.continues_each : Becoming.«类» (Becoming.sameValue Becoming.Overlap.first) ∧
+  Becoming.«类» (Becoming.sameValue Becoming.Overlap.second) ∧
+    Becoming.«续» Becoming.Overlap.step (Becoming.sameValue Becoming.Overlap.first) Becoming.Overlap.Occ.a
+        Becoming.Overlap.Occ.b ∧
+      Becoming.«续» Becoming.Overlap.step (Becoming.sameValue Becoming.Overlap.second) Becoming.Overlap.Occ.b
+        Becoming.Overlap.Occ.c
+Becoming.Overlap.b_positions : Becoming.«亡» Becoming.Overlap.step (Becoming.sameValue Becoming.Overlap.first)
+    Becoming.Overlap.Occ.b ∧
+  Becoming.«生» Becoming.Overlap.step (Becoming.sameValue Becoming.Overlap.second) Becoming.Overlap.Occ.b
+Becoming.Overlap.tolerance_line_apart : Becoming.Overlap.either Becoming.Overlap.Occ.a Becoming.Overlap.Occ.b ∧
+  Becoming.Overlap.either Becoming.Overlap.Occ.b Becoming.Overlap.Occ.c ∧
+    ¬Becoming.Overlap.either Becoming.Overlap.Occ.a Becoming.Overlap.Occ.c ∧
+      Becoming.«相续» Becoming.Overlap.step Becoming.Overlap.either Becoming.Overlap.Occ.a Becoming.Overlap.Occ.c
+Becoming.LineOfDescent.Endless.generates : Becoming.«全生成» Becoming.LineOfDescent.Endless.step Becoming.«一»
+  Becoming.LineOfDescent.Endless.member (0, false)
+Becoming.TwoLines.family_class : Becoming.«类» Becoming.TwoLines.family
+Becoming.TwoLines.between : Becoming.«则» Becoming.TwoLines.member Becoming.TwoLines.family ∧
+  ¬Becoming.«则» Becoming.TwoLines.family Becoming.TwoLines.member ∧ ¬Becoming.«则» Becoming.«一» Becoming.TwoLines.family
+Becoming.TwoLines.total : ∀ (x : Becoming.TwoLines.Occ), ∃ y, Becoming.TwoLines.step x y ∧ Becoming.TwoLines.family x y
+Becoming.TwoLines.family_constant : Becoming.«有常» Becoming.TwoLines.step Becoming.TwoLines.family
+Becoming.TwoLines.core_through_birth : ∀ (f : Bool) (n : Nat),
+  Becoming.«续» Becoming.TwoLines.step (Becoming.«核» Becoming.TwoLines.step Becoming.TwoLines.family) (f, n, true)
+      (f, n + 1, false) ∧
+    Becoming.«亡» Becoming.TwoLines.step Becoming.TwoLines.member (f, n, true)
+@Becoming.TwoLines.line_in_family : ∀ {E : Becoming.«际» Becoming.TwoLines.Occ} {x y : Becoming.TwoLines.Occ},
+  Becoming.«相续» Becoming.TwoLines.step E x y → y.fst = x.fst
+Becoming.TwoLines.other_line_outside : ¬Becoming.«所及» Becoming.TwoLines.step Becoming.«一» (true, 0, false)
+    (false, 0, false)
+Becoming.SharedCondition.affecting_reaches_other : Becoming.«所及» Becoming.SharedCondition.affecting Becoming.«一»
+  (Becoming.SharedCondition.Occ.a 0) (Becoming.SharedCondition.Occ.b 2)
+@Becoming.SharedCondition.affecting_member_step : ∀ {m : Nat} {y : Becoming.SharedCondition.Occ},
+  Becoming.«续» Becoming.SharedCondition.affecting (Becoming.sameValue Becoming.SharedCondition.living)
+      (Becoming.SharedCondition.Occ.a m) y →
+    ∃ k, y = Becoming.SharedCondition.Occ.a k
+@Becoming.SharedCondition.affecting_member_stays : ∀ {x y : Becoming.SharedCondition.Occ},
+  Becoming.«相续» Becoming.SharedCondition.affecting (Becoming.sameValue Becoming.SharedCondition.living) x y →
+    ∀ (m : Nat), x = Becoming.SharedCondition.Occ.a m → ∃ k, y = Becoming.SharedCondition.Occ.a k
+Becoming.SharedCondition.affecting_member_outside : ∀ (n : Nat),
+  ¬Becoming.«所及» Becoming.SharedCondition.affecting (Becoming.sameValue Becoming.SharedCondition.living)
+      (Becoming.SharedCondition.Occ.a 0) (Becoming.SharedCondition.Occ.b n)
+@Becoming.SharedCondition.fed_step : ∀ {E : Becoming.«际» Becoming.SharedCondition.Occ} {m : Nat}
+  {y : Becoming.SharedCondition.Occ},
+  Becoming.«续» Becoming.SharedCondition.fed E (Becoming.SharedCondition.Occ.a m) y →
+    ∃ k, y = Becoming.SharedCondition.Occ.a k
+@Becoming.SharedCondition.fed_stays : ∀ {E : Becoming.«际» Becoming.SharedCondition.Occ}
+  {x y : Becoming.SharedCondition.Occ},
+  Becoming.«相续» Becoming.SharedCondition.fed E x y →
+    ∀ (m : Nat), x = Becoming.SharedCondition.Occ.a m → ∃ k, y = Becoming.SharedCondition.Occ.a k
+Becoming.SharedCondition.fed_outside : ∀ (E : Becoming.«际» Becoming.SharedCondition.Occ) (n : Nat),
+  ¬Becoming.«所及» Becoming.SharedCondition.fed E (Becoming.SharedCondition.Occ.a 0) (Becoming.SharedCondition.Occ.b n)
+Becoming.Belief.rate_changes_on_step : Becoming.moveRel (Becoming.adaptive Becoming.Belief.spread Becoming.Belief.grow)
+  () (1, 0) (1, 1)
+Becoming.Belief.rate_read_in_regularity : ¬Becoming.«核»
+    (Becoming.moveRel (Becoming.adaptive Becoming.Belief.spread Becoming.Belief.grow) ()) (Becoming.sameValue Prod.fst)
+    (1, 0) (1, 1)

@@ -1311,6 +1311,16 @@
    "base": "old-base",
    "note": "DrawnBeyond"
   },
+  "reach-past-ones-own-end": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarScope: reach past a finer line's end; core of descent, endless and ending"
+  },
+  "reach-through-a-shared-condition": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarCases: one line reaching another through a condition it affects"
+  },
   "reaching-before-and-after-a-juncture": {
    "region": "map",
    "base": "general",
@@ -1721,6 +1731,16 @@
    "base": "general",
    "note": "Reproduction"
   },
+  "the-class-of-being-joined": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarScope: the class of being joined, finest with 缘 as continuation"
+  },
+  "the-continuation-condition-on-the-root": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarScope: nothing outside a center's continuing; the World's condition at the one"
+  },
   "the-gap-for-ones-own-act": {
    "region": "significance",
    "base": "old-base",
@@ -1745,6 +1765,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "Retaining"
+  },
+  "the-source-texts-test-systems": {
+   "region": "root",
+   "base": "grammar",
+   "note": "GrammarCases: decay, overlap, line of descent, belief as small witnesses"
   },
   "the-split-that-makes-sense": {
    "region": "knowing",
@@ -2598,6 +2623,11 @@
    "base": "grammar",
    "note": "59 corpus candidates: 38 proved, 15 conditional, 3 refuted (OU2c)"
   },
+  "Becoming.GrammarCases": {
+   "region": "root",
+   "base": "grammar",
+   "note": "test systems of the source texts as small witnesses (GS3)"
+  },
   "Becoming.GrammarCourse": {
    "region": "classical",
    "base": "grammar",
@@ -2617,6 +2647,11 @@
    "region": "root",
    "base": "grammar",
    "note": "kept and left regularity; two-level steps as models (GS1)"
+  },
+  "Becoming.GrammarScope": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "the continuation condition on the root, structurally (GS2)"
   },
   "Becoming.GrammarTesting": {
    "region": "knowing",

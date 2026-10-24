@@ -17387,7 +17387,167 @@ Output → input: the reviews, each answered where it concerns (a chapter, a rec
 
 **What the reviews of the packet found.** The classical reviewer found a quotation that dropped 無 and so reversed its line, passed by the first checker because Wikisource markup split the source text; the checker now strips the markup and rejects short omissions. It found the dossiers printing the AI's classes for sampled units, which would break the blinding; re-coders are asked to code first, and the analysis reports every figure without those units. It found a counter-model misdescribed and a manuscript variant (帛书乙「死而不忘者壽也」) not told. The codebook's reviewer found rules the AI coders never had; they are kept, marked and declared as a confound.
 
-## 392. Need across two tiers, the upper dividing its giving among the stores (IV3j)
+## 392. The continuation condition on the root, and the reach past one's own end (GS2)
+
+The review of the root against its two source texts ([note](development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md), §4) found the continuation condition stated on the significance formalism, not on 续, so that the root and the ethics were not one account. Two handovers shaped the design. SW ([note](development/sw-significance-without-a-value-layer/NOTE.md), proposal 3), after [Ren's remark](../../../../sources/15-codex-theory-conversations/2026-10-24-significance-a-dualist-word.md) that significance was a dualist word, proposed stating the condition as inclusion in what a line under a class continues with, with no separate significance formalism. PW ([note](development/pw-step-forward/NOTE.md), §7 item 3) proposed the reach past one's own end with two witnesses of descent. Both are taken. An independent review of the first texts (a separate Claude Opus agent reading the Lean and every text) found the Lean sound and the texts overstated; what it changed is at the end.
+
+```text
+Result(s): new records the-continuation-condition-on-the-root and reach-past-ones-own-end;
+       what-the-step-across-standpoints-reaches gains a related entry.
+Delta: (1) the condition on the root: given a net R, a class E and the standpoints' centers, every occurrence on
+       every center's line under E («续无外») or in every center's family («族无外»); the first gives the second;
+       either at a class gives it at every coarser class.
+       (2) held de se: lying within a closure along a relation is being reached on a line under the one of it
+       (withinClosure_iff_reached), so Unrestricted (selfAscribed (ownClosure rel) center) is exactly
+       «续无外» rel «一» center (ownClosure_unrestricted_iff_noOutside); one instance of the chapter's theorems,
+       living significance on the own-closure reading of claims (premises_of_noOutside).
+       (3) along a net with no cycle the condition holds only with one center («续无外则同一中心»), which nothing
+       conditions («续无外则中心无缘»).
+       (4) past one's own end («过亡而续»); the core continues something exactly where some line under it goes on
+       without end («核有续当且仅当有不穷»), so with no such line it continues nothing («无不穷则核无续»).
+       (5) two lines of descent with the one as the class of descent: endless (the core continuing through each
+       birth, the member's line ending; the condition holding under the one with the first birth as the only
+       center, failing under the member's class) and ending (no class's core continuing anything, the one reaching
+       the second member past the first's end).
+Supplied premises / correspondence: SW §3's reading (what counts for a center is what lies within its continuing
+       along a relation), with the relation taken as the net; for living significance, the reading of claims
+       through the own closure; the models commit to discrete steps and equality on their carriers.
+Evidence: Becoming.GrammarScope; core receipt 20261023T220231.427406Z, every axiom report empty.
+Boundary: the free significance of chapter 7 §1 is not lifted, and the chapter's other laws are instances not yet
+       stated on the root; which class a center's own line runs under, and which occurrences are centers, are
+       not settled; neither model has a class between the member's and the one; that any actual lineage is
+       endless is not shown; C is untouched.
+Output → input: 07 §4.5 (new) and its Open items; 01-ROOT's Open item; regions; the package README row (EN, ZH);
+       the root module's doc. The thesis line of 07 and the front pages are their owners' (SW's owner and NR's
+       owner, told).
+```
+
+**What was built.** `Becoming.GrammarScope`, a leaf: `«续无外»`, `«族无外»`, `«相续则同族»`, `«所及则同族»`, `«续无外则族无外»`, `«同族之粗化»`, `«续无外之粗化»`, `«族无外之粗化»`, `«过亡而续»`, `«核有续当且仅当有不穷»`, `«无不穷则核无续»`, `«续无外则同一中心»`, `«续无外则中心无缘»`; `withinClosure_of_line`, `withinClosure_iff_reached`, `ownClosure_unrestricted_iff_noOutside`, `premises_of_noOutside`; `LineOfDescent.Endless` (`Occ`, `step`, `member`, `member_class`, `total`, `member_ends`, `descent_constant`, `core_through_birth`, `descent_unending`, `descent_reaches_both`, `descent_reaches`, `descent_no_outside`, `member_line`, `member_outside`) and `LineOfDescent.Last` (`Occ`, `step`, `last_ends`, `never_unending`, `core_no_continuation`, `descent_past_end`). No definition of an earlier module changes.
+
+**Why no value parameter.** A first draft put a significance on the root, `Pos → «际» α → α → Prop`, with the condition over every class and a non-entailment copied from the free one. SW's argument holds against it: such a parameter is fixed by nothing else in the representation, by construction. Read de se, what counts for a center is what lies within its continuing; on the root that is what its line reaches. The draft was built in scratch and never landed.
+
+**What the root adds.** Two findings that the free formalism hid. First, along a net with no cycle the condition can hold only with one center that nothing conditions: two centers each reached from the other would lie on a cycle. So for many standpoints, read along 缘, the condition fails, and what remains is the family reading, which asks only that the net be joined. Second, the relations chapter 7 draws a self along (feeding, influence) run toward conditions, the converse of 缘; read along them the own closure reaches what one depends on, not what follows one (as PW §2–3 argues of need). The future of one's own line is reached along 缘, past one's end, under a coarser class (`«过亡而续»`), and the core carries that line only where its line goes on without end (`«核有续当且仅当有不穷»`). Whether a living line's core is wider than its organism is made exact here, not answered: both sides are witnessed, each with the one as its class of descent.
+
+**Constructivity.** No omniscience principle is used. `LineOfDescent.Last.never_unending` follows each occurrence's only successors to the last. A first build used `Nat.succ_ne_zero`, whose proof reports `propext`; it was replaced by `Nat.noConfusion`.
+
+**The review, and what was taken.** Errors fixed: living significance stated without its reading of claims (now stated, and called one instance); a claim that the condition has no slot the net does not read (the class and the centers are supplied); two wrong docstrings in the witnesses and one on the wrong declaration; a record law that made the member's line go on for good; the condition asserted in the root module's bullet. Lean changed: `«诸线皆尽则核无续»`, whose hypothesis was equivalent to its conclusion and whose name used 尽 in a sense the grammar defines otherwise, became the exact `«核有续当且仅当有不穷»` with the corollary `«无不穷则核无续»`; `«续无外则同一中心»` and `«续无外则中心无缘»` added. Readings labelled and narrowed: that the dynamics fix a class only through its core, that what lies on no line of one's own is reached only by the step, that a feeding closure reaches ahead, and that PW §5 is answered. The text moved from §3 to a new §4.5, after the de se readings it uses.
+
+**Self-review.** (1) Each sentence of §4.5 was read against its declaration after the review. (2) The Open bullet on the de se question now carries the question of classes; the bullet on the condition on the root says what remains beyond the one instance. (3) Not done: the items in Boundary.
+
+## 393. Test systems of the source texts as small witnesses (GS3)
+
+The review of the root against its two source texts ([note](development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md), §4 and §6) found the texts' test systems without models. This item gives small witnesses for two of them as stated, decay and a system with no clear boundary, and for two narrower stand-ins, a line of descent and a belief whose rate grows with its number; an institution kept by consent or by penalty is read, not restated. An independent review of the first draft (a separate Claude Opus agent) found the Lean sound and the texts and two model names overstated; what it changed is at the end.
+
+```text
+Result(s): new record the-source-texts-test-systems.
+Delta: (1) decay: the decay an alteration in a net with no cycle (the steps rise); in the net of possibilities,
+       both stay and decay open at every intact moment, "intact or not" constant and every two intact moments alike
+       in its core; a history within that net, decaying at its second step, with its two intact moments apart.
+       (2) no clear boundary: two overlapping identities, each a class; an occurrence ending under one and
+       beginning under the other; their union not a class, its line from the first occurrence reaching the third
+       with its ends apart.
+       (3) a line of descent generating at two grains (on GS2's endless line of descent).
+       (3a) two family lines: the class of one family line strictly between a member's and the one, constant, its
+       core going on through each birth while the member's line ends; from one family's first birth no member of
+       the other family reached, even under the one.
+       (4) a belief whose rate of spread grows with its number: on the step the rate changes with the number, and
+       one holder at two rates lie apart in the core of same number.
+Supplied premises / correspondence: each net is supplied with the behaviour in question; discrete steps, equality
+       on the carriers, natural-number counts and linear laws for the belief.
+Evidence: Becoming.GrammarCases; core receipt 20261023T221345.406636Z, every axiom report empty.
+Boundary: a vortex; an institution's identity through replaced people, rules and purposes; self-maintenance and
+       adaptive regulation, and an organism that ends; a belief system whose content or law of spread changes; a
+       graded boundary; decay with its probabilities; models read off actual data.
+Output → input: 01-ROOT §8.7 (new) and its Open item on test systems; regions; the package README row (EN, ZH);
+       the root module's doc.
+```
+
+**What was built.** `Becoming.GrammarCases`, a leaf of witnesses: `Decay` (`Occ`, `possible`, `intactAlike`, `intactAlike_class`, `reach_rises`, `possible_acyclic`, `both_open`, `decay_alters`, `possible_constant`, `time_not_in_core`, `history`, `history_within`, `history_apart`); `Overlap` (`Occ`, `step`, `first`, `second`, `continues_each`, `b_positions`, `either`, `tolerance_line_apart`); `LineOfDescent.Endless.generates`; `TwoLines` (`Occ`, `step`, `member`, `family`, `family_class`, `between`, `total`, `family_constant`, `core_through_birth`, `line_in_family`, `other_line_outside`); `Belief` (`spread`, `grow`, `rate_changes_on_step`, `rate_read_in_regularity`).
+
+**What the witnesses answer of the texts' questions.** "Must every transformation involve feedback or reciprocal interaction?" The grammar does not require it: the decay is an alteration in a net where no occurrence reaches itself; but every net indexed by rising steps has no cycle, a feedback system run over time included, so the absence of a cycle lies in the indexing, and the nucleus's lack of inner interaction is an omission of the model. "Can persistence be explained without fixed components?" The line of descent continues under the one while each member's line begins and ends: the one is constant, and since each member's line ends at old age, "same member" is not («有亡之续则不有常»); the flame answers otherwise (§5 of 01): its moments continue under "flame or not", that class is not constant, and its course is fixed by fire with fuel. "Can the grammar handle overlapping and observer-dependent identities?" As several classes, with positions relative to each and observer-dependence as the choice of class; a sameness that does not compose is not a class, and the grammar says what fails then. "Can patterns transform the conditions governing their own propagation?" In one narrow sense: a rate that grows with the number it spreads, both laws supplied and fixed. The source's organism question (deriving self-maintenance and adaptive regulation) and its institution question (identity through replaced parts) are not answered; the consent-or-penalty pair is the thermostat witness renamed. The two family lines answer a question GS2's witnesses left (PW's, after §4.5 of 07 landed): a class strictly between a member's and the one can have a core that goes on through births, and reaching one's successors along 缘 is then not reaching everything. The decay witness adds one point: which net a model declares, of possibilities or one history within it, decides whether the time is in the regularity.
+
+**Constructivity.** No omniscience principle. A first build had `propext` in definitions written with overlapping patterns (`| _, _ => False`); every case is now written out, as `Becoming.GrammarTesting` writes its room.
+
+**The review, and what was taken.** Errors fixed: "whether a condition fixes the timing depends on how the net is read" (two nets were written, not one net read two ways; now said of which net a model declares); the history, which let a decayed nucleus become intact (now a branch within the net of possibilities, `Decay.history_within`); the flame said to have a constant class (it has none); the organism reading, which contradicted GS2's reading of the same net (dropped; what remains is that the line of descent generates); the Open bullet, which closed questions the witnesses do not answer (now listing them); the institution, the thermostat witness renamed (now a reading, not a law). Imprecisions narrowed: "no condition fixes the timing" (the step is not in the regularity of one class; that no occurrence forces the decay is the net's definition); the absence of a cycle (from the indexing); the belief (the rate changes on the step; one holder at two rates; the laws fixed); "small witnesses" for what are witnesses, not models of the systems.
+
+**Self-review.** (1) Each sentence of §8.7 was read against its declaration after the review. (2) Not done: the items in Boundary.
+
+## 394. One line reaching another through a shared condition (GS4)
+
+After GS3's two family lines landed, PW ([note](development/pw-step-forward/NOTE.md), §7 item 4) asked whether a class across two lines that share a condition carries each past a member's end so that one line's future reaches the other's, or whether sharing yields no such reach and the future of other lines is what the step still has to do. This item answers the first side at the one only (no class narrower than the one, no member's end and no core is modelled), and the second for a condition the members do not affect. An independent review of the first draft (a separate Claude Opus agent) found the Lean sound and the texts claiming a core, later members and "drawing" that nothing proved; what it changed is at the end.
+
+```text
+Result(s): new record reach-through-a-shared-condition.
+Delta: (1) two family lines and a condition feeding both; where the members affect it (each a condition of its next
+       state), the line under the one from the first family's first member reaches the second family's member two
+       generations on, through the condition.
+       (2) under "a member or not", which holds both families' members alike and the condition apart, the line
+       reaches no member of the second family.
+       (3) where the members only feed from a condition they do not affect, under any relation the line reaches no
+       member of the second family.
+Supplied premises / correspondence: each net supplied; discrete steps and equality on the carrier; affecting read
+       as a member being a condition of the shared condition's next state, with no amounts.
+Evidence: Becoming.GrammarCases; core receipt 20261023T224011.475686Z, every axiom report empty.
+Boundary: a class strictly between a member's and the one whose line reaches the other family through the condition,
+       with its core; the general form of (2) for any class holding the condition apart from the members; amounts
+       and depletion; whether self-concern is held along such a class (the de se question of 07 §4.5).
+Output → input: 07 §4.5 (an added paragraph and a labelled reading, after the existing reading); the record; the
+       package README rows and root module doc; the-source-texts-test-systems re-pointed to the module's new bytes,
+       its declarations unchanged; 01-ROOT §8.7's "a further question" is the question this item answers at the one.
+```
+
+**What was built.** In `Becoming.GrammarCases`, namespace `SharedCondition`: `Occ`, `affecting`, `fed`, `living`, `affecting_reaches_other`, `affecting_member_step`, `affecting_member_stays`, `affecting_member_outside`, `fed_step`, `fed_stays`, `fed_outside`. No earlier statement of the module changes.
+
+**What it says.** In the witness, under the one, the first family's first member reaches the second family's member two generations on, through a condition the first family's members affect and that feeds the second; under any relation, a source that no member affects joins none. Under "a member or not", a class across both lines that holds the condition apart, the line stays in the first family: holding both lines together is not enough; the class must hold the condition with them. [AI reading] This is the coupling of 07 §4.3 read forward along 缘: the witness adds the time index, not a new route.
+
+**Constructivity.** No omniscience principle; the receipt's empty axiom report is the evidence.
+
+**The review, and what was taken.** Errors fixed: "later members" (one pair is proved); a core said to carry the line (no core is computed; `drawn_constant` and `drawn_total`, which said only that every occurrence has a successor, were removed); "witnesses for both sides" (the first side only at the one); a Chinese gloss saying the member class does not contain the condition (it holds it apart); the reading's "successors that draw on it" (reached because fed). Renamed: `drawn` to `affecting`, since the model shows affecting a condition, not drawing amounts from it. Narrowed: "joined" (one direction), "a class that leaves the condition out" (one class), the commons reading (labelled, and as acting on, not drawing), and the correspondence with the route through dependence (labelled). The new paragraph and its reading sit after §4.5's existing reading.
+
+**Self-review.** (1) Each sentence was read against its declaration after the review. (2) Not done: the items in Boundary.
+
+## 395. The class of being joined (GS5)
+
+PW ([note](development/pw-step-forward/NOTE.md), §7 item 5) asked, after GS4, whether a class narrower than the one holds the living together with the conditions they affect and are fed by, constant, with a core that carries each line on, and proposed testing it with a third thing that neither family affects nor is fed by. The answer has a general part and a part that turns on how the third thing is joined. An independent review of the first draft (a separate Claude Opus agent) found the Lean sound, the name "the class the net fixes" and the reading overclaiming, and the witness only the degenerate case; it changed the item, as listed at the end.
+
+```text
+Result(s): new record the-class-of-being-joined; the-continuation-condition-on-the-root, reach-past-ones-own-end,
+       the-source-texts-test-systems and reach-through-a-shared-condition re-pointed to their modules' new bytes,
+       their declarations unchanged.
+Delta: (1) in Becoming.GrammarScope, for every carrier and relation: every condition joins its ends in one family
+       under the one («缘在族中»); under that family class, the class of being joined, continuation is 缘
+       («族之续即缘»), and its lines reach what the one's reach («族之所及即一之所及»); a class has 缘 as its
+       continuation exactly where it contains the class of being joined («续即缘当且仅当含族»); where every
+       occurrence conditions something, it is constant («遍有后则族有常»), its core holds both ends of every
+       condition («遍有后则缘在族核») and a line under the core reaches what the one's reaches
+       («遍有后则核之所及即一之所及»).
+       (2) in Becoming.GrammarCases, three witnesses on GS4's two families and their shared condition with a third
+       thing: joined to nothing, outside the class of being joined, which is narrower than the one and reaches the
+       second family (ThirdThing); affecting the shared condition, the class of being joined is the one while the
+       constant class "the third thing or not" leaves it out and reaches the second family (ThirdAffects); fed by
+       the shared condition, taken in by every constant class holding a stage of the condition with a member
+       (ThirdFed).
+Supplied premises / correspondence: (1) for constancy and the core, every occurrence conditions something; for the
+       witnesses, the nets supplied, discrete steps and equality on the carriers.
+Evidence: Becoming.GrammarScope and Becoming.GrammarCases; core receipt 20261023T230635.949992Z, every axiom report empty.
+Boundary: whether a center's own line runs under the class of being joined, a finer constant class, or a finer one
+       still (the de se question); constancy where some occurrence conditions nothing; that the actual unfolding is
+       joined.
+Output → input: 07 §4.5 (an added paragraph and a labelled reading at its end); the record; the package README rows
+       and root module doc; four records re-pointed.
+```
+
+**What was built.** In `Becoming.GrammarScope`: `«缘在族中»`, `«族之续即缘»`, `«族之所及即一之所及»`, `«续即缘当且仅当含族»`, `«遍有后则族有常»`, `«遍有后则缘在族核»`, `«遍有后则核之所及即一之所及»`. In `Becoming.GrammarCases`: `ThirdThing` (`Occ`, `step`, `third`, `total`, `step_keeps_third`, `family_keeps_third`, `fixed_class`, `fixed_class_reaches`), `ThirdAffects` (`Occ`, `step`, `third`, `third_class`, `rest_to_rest`, `succ_of_kind`, `third_constant`, `condition_joined`, `joined_to_start`, `finer_class_reaches`) and `ThirdFed` (`Occ`, `step`, `constant_takes_third`). No earlier statement changes.
+
+**What it says of PW's question.** The class of being joined holds the living with the conditions they affect and are fed by, and with everything joined to these by any chain of 缘; it is narrower than the one only where the net has parts no chain joins, and it does not separate life with its conditions from anything else joined to them. So PW's question turns on which way the third thing is joined, and the three witnesses give the cases. Joined to nothing, it is left out by the class of being joined. Affecting the shared condition, it is left out by a finer constant class, "the third thing or not", which still reaches the other family: so the class that reaches is not unique, and a constant class narrower than the class of being joined can single out the living with their conditions. Fed by the shared condition, it is taken in by every constant class holding a member with the condition. Constancy reads the direction of joining; being joined does not. The one in GS2 and GS4 is not arbitrary in what it reaches: it reaches what every class keeping every condition reaches, and in their nets, which are joined, it is the finest such class.
+
+**Constructivity.** No omniscience principle; the receipt's empty axiom report is the evidence.
+
+**The review, and what was taken.** Renamed: "the class the net fixes" to "the class of being joined", since the net also fixes the one, identity and every core, and what singles this class out is `«续即缘当且仅当含族»`. Errors fixed: the reading's "reaches what conditioning joins one to" (a line runs forward; it reaches what a line under the one reaches); "the class that reaches is not a choice" (a finer constant class reaches the same where the third thing affects the condition, now proved); the correspondence "holds the living with the conditions" (it holds whatever any chain joins). Lean added: `«遍有后则核之所及即一之所及»` for "a line under the core reaches what the one's reaches", and the witnesses `ThirdAffects` and `ThirdFed`, which the review found by hand. Narrowed: "a third thing that shares no condition" (joined to nothing); what `fixed_class` proves (three pairs and a narrower class); the replaceability of the one (for results through continuation, not about its own constancy); "where the net is joined, as one unfolding is" (a correspondence, not shown).
+
+**Self-review.** (1) Each sentence of the paragraph was read against its declaration after the review. (2) Not done: the items in Boundary.
+
+## 396. Need across two tiers, the upper dividing its giving among the stores (IV3j)
 
 Continues §385 (IV3f), where the capacity of a feeder was read off its own store and a hierarchy needed giving into its top without saying which member's, and §388 (IV3i), whose record named this as next ([Ren's words](../../../../sources/15-codex-theory-conversations/2026-10-23-one-system.md); the work below is the AI's). Here the exact law of need holds across two tiers with capacities, the stores' rises included.
 
@@ -17430,7 +17590,7 @@ Supplied premises / correspondence: the upper members' capacities supplied with 
        stores their own, outside the family, given only by upper members; balance on the family and on every
        store within the stretch; the consumer outside both tiers. Stores may rise or fall: no steadiness
        premise.
-Evidence: Becoming.Weightings; core receipt 20261023T201939.645046Z, every axiom report empty.
+Evidence: Becoming.Weightings; core receipt 20261024T021740.570138Z, every axiom report empty.
 Boundary: more than two tiers with capacities, and the upper members' capacities read off their own supply, are
        not stated; the degree of need across two tiers is not stated. Need here is read off the whole web: a
        formation needed only to give a rising store counts as needed, since every flow of that web, the

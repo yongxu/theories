@@ -255,6 +255,13 @@
         "en": "The same section's order: once scope is fixed, C is what every positive weighting ranks higher.",
         "zh": "同一节中的序：范围一旦确定，C 即每个正的加权都排得更高者。"
       }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "detail": {
+        "en": "The de se own-closure condition read on the root: the root's condition at the one of the relation (GS2).",
+        "zh": "de se 之自闭包之条件于根上读：根于该关系之一下之条件（GS2）。"
+      }
     }
   ],
   "references": [
@@ -526,6 +533,10 @@
     {
       "en": "22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.",
       "zh": "2026年10月22日，VT1：Becoming.Weightings 扩充（净加权、对表述的排序、比值之内的权重）；被去掉的五项声明（outweighing 及其四条引理）移出引用列表；本记录的规律不变；研究第 367 节。"
+    },
+    {
+      "en": "24 October 2026, GS2: read on the root (record the-continuation-condition-on-the-root, study section 392); no statement of this record changed.",
+      "zh": "2026年10月24日，GS2：于根上读（记录 the-continuation-condition-on-the-root，研究第 392 节）；本记录之陈述未变。"
     }
   ]
 }

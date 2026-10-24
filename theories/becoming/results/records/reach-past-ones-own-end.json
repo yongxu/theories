@@ -1,0 +1,216 @@
+{
+  "schema_version": 2,
+  "id": "reach-past-ones-own-end",
+  "title": {
+    "en": "Past one's own end: the reach of a line under a class",
+    "zh": "过己之亡：一类下之线之所及"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-23T22:05:14+00:00",
+  "statement": {
+    "en": "On a line under a class, what continues past the end of a finer line lies within the line's continuing; a class's core continues something exactly where some line under it goes on without end.",
+    "zh": "一类下之线上，凡过较细之线之终而续者，皆在此线之续中；一类之核有续，恰当其下有一线不尽。"
+  },
+  "laws": [
+    {
+      "en": "On a line under a class L from a center, what continues under L an occurrence at which the line under a relation O ends is reached on the line under L and lies on no line under O from that occurrence; a class's core continues something exactly where some line under it goes on without end, so with no such line it continues nothing.",
+      "zh": "自一中心于类 L 下之线上，凡于 L 下续一事、而某关系 O 下之线于此事终者，皆在 L 下之线所及，且不在自此事起之任何 O 下之线上；一类之核有续，恰当其下有一线不尽；无此线则核无续。",
+      "declarations": [
+        "Becoming.«无不穷则核无续»",
+        "Becoming.«核有续当且仅当有不穷»",
+        "Becoming.«过亡而续»"
+      ]
+    },
+    {
+      "en": "In endless descent, each member young, then old, then the parent of the next, every occurrence conditions a successor, so the one is constant; its core continues through each birth, and its line under the core goes on for good from each birth, while the member's line ends at old age; with the first birth as the only center the condition holds under the one and fails under the member's class.",
+      "zh": "无尽之传承（每一成员先少后老，老而为次一成员之亲）：凡事皆为一后继之缘，故一有常；其核于每一出生处续，自每一出生起核下之续不尽，而成员之线终于老；以首次出生为唯一之中心，一之下条件成立，成员之类下不成立。",
+      "declarations": [
+        "Becoming.LineOfDescent.Endless.Occ",
+        "Becoming.LineOfDescent.Endless.core_through_birth",
+        "Becoming.LineOfDescent.Endless.descent_constant",
+        "Becoming.LineOfDescent.Endless.descent_no_outside",
+        "Becoming.LineOfDescent.Endless.descent_reaches",
+        "Becoming.LineOfDescent.Endless.descent_reaches_both",
+        "Becoming.LineOfDescent.Endless.descent_unending",
+        "Becoming.LineOfDescent.Endless.member",
+        "Becoming.LineOfDescent.Endless.member_class",
+        "Becoming.LineOfDescent.Endless.member_ends",
+        "Becoming.LineOfDescent.Endless.member_line",
+        "Becoming.LineOfDescent.Endless.member_outside",
+        "Becoming.LineOfDescent.Endless.step",
+        "Becoming.LineOfDescent.Endless.total"
+      ]
+    },
+    {
+      "en": "In descent that ends, two members with the second childless, no line under any relation goes on without end, so no class's core continues anything, while the one reaches the second member past the first's end.",
+      "zh": "有尽之传承（二成员，次者无子）：任一关系下皆无不尽之线，故无类之核有续；而一过首成员之终、及于次成员。",
+      "declarations": [
+        "Becoming.LineOfDescent.Last.Occ",
+        "Becoming.LineOfDescent.Last.core_no_continuation",
+        "Becoming.LineOfDescent.Last.descent_past_end",
+        "Becoming.LineOfDescent.Last.last_ends",
+        "Becoming.LineOfDescent.Last.never_unending",
+        "Becoming.LineOfDescent.Last.step"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: for every carrier and relation; the witnesses commit to discrete steps and to equality on their carriers.",
+      "zh": "不加公理，除各律所带者外不加前提：对一切载体与关系；见证设离散之步与载体上之相等。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That one's own line runs under a class coarser than one's organism: the reach is conditional on the class.",
+      "zh": "自线在较己之生体为粗之类下：所及以类为条件。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That any actual lineage is endless, or that its core continues through births.",
+      "zh": "实有之传承无尽，或其核于出生处续。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "A class narrower than the one and wider than the member's whose core goes on: both models use the one.",
+      "zh": "较一为窄、较成员之类为宽、而其核不尽之类：二模型皆用一。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a class whose core does not carry a step past one's end is thereby chosen.",
+      "zh": "其核不载过己之终之一步之类，即为所择。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T220231.427406Z): Becoming.GrammarScope, 30 theorems in 37 declarations, every declaration with an empty axiom report; the checker verifies core purity. This record cites 23 of them. Author review in study section 392.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T220231.427406Z）：Becoming.GrammarScope，37 项声明中 30 条定理，公理报告皆空；检查器并核对核心纯净。本记录引其中 23 项。作者审查见研究第 392 节。"
+  },
+  "next_delta": {
+    "en": "A model of an actual lineage or practice with its class read off the net; the step of invariance asked of classes: whether a class narrower than the one is a center's own.",
+    "zh": "实有之传承或实践之模型，其类读自网；以类问不变之步：较一为窄之类是否中心之所自有。"
+  },
+  "correspondence": {
+    "en": "PW §4-§5: the self as a line, and whether a living line's core is wider than its organism; made exact here, not answered: the core carries a line past a member's end only where its line from there never ends, both cases witnessed with the one.",
+    "zh": "PW §4-§5：自为一线，及生之线之核是否宽于其生体；此处使之精确而未答：核载线过成员之终，唯于其自此不尽处；二情形以一为见证。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+  "aliases": [
+    "Past one's own end",
+    "过己之亡",
+    "Becoming.«过亡而续»"
+  ],
+  "dependencies": [
+    {
+      "id": "a-regularity-kept-and-changed",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«守理则不穷», «相续之始有后».",
+        "zh": "«守理则不穷»、«相续之始有后»。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«有常», «核», «类有常当且仅当含于核», «一为类».",
+        "zh": "«有常»、«核»、«类有常当且仅当含于核»、«一为类»。"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«所及», «相续之续».",
+        "zh": "«所及»、«相续之续»。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "detail": {
+        "en": "The condition on the root, of which this is the question of the class.",
+        "zh": "根上之条件；此为其类之问。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LineOfDescent.Endless.Occ",
+        "Becoming.LineOfDescent.Endless.core_through_birth",
+        "Becoming.LineOfDescent.Endless.descent_constant",
+        "Becoming.LineOfDescent.Endless.descent_no_outside",
+        "Becoming.LineOfDescent.Endless.descent_reaches",
+        "Becoming.LineOfDescent.Endless.descent_reaches_both",
+        "Becoming.LineOfDescent.Endless.descent_unending",
+        "Becoming.LineOfDescent.Endless.member",
+        "Becoming.LineOfDescent.Endless.member_class",
+        "Becoming.LineOfDescent.Endless.member_ends",
+        "Becoming.LineOfDescent.Endless.member_line",
+        "Becoming.LineOfDescent.Endless.member_outside",
+        "Becoming.LineOfDescent.Endless.step",
+        "Becoming.LineOfDescent.Endless.total",
+        "Becoming.LineOfDescent.Last.Occ",
+        "Becoming.LineOfDescent.Last.core_no_continuation",
+        "Becoming.LineOfDescent.Last.descent_past_end",
+        "Becoming.LineOfDescent.Last.last_ends",
+        "Becoming.LineOfDescent.Last.never_unending",
+        "Becoming.LineOfDescent.Last.step",
+        "Becoming.«无不穷则核无续»",
+        "Becoming.«核有续当且仅当有不穷»",
+        "Becoming.«过亡而续»"
+      ],
+      "sha256": "8ee86ef22f31682a00b708252539b8ba2e15f61ec07d573e5132d320a36fec30"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc62ce79c8a68373079a98cfe7686a14a75e8b568543c901555bf286d87ba474"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "6e6c8c0c6984a708f779211eb23a4289439e61b360be17d237da925f8d07f79a"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "61d6141b484bd96281a5f16ea18cdbf5e5f665f2adde49568cb295e5e820cb7e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "role": "receipt",
+      "sha256": "80395060726ea826a45ba114e74723738b07cb60413ed8c0366f81e139ffb1fe",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.",
+      "zh": "2026年10月24日：新增（GS2），出自根与其二篇来源之对照审查，并取 SW 之提议三与 PW 之第三项；研究第 392 节。"
+    }
+  ]
+}

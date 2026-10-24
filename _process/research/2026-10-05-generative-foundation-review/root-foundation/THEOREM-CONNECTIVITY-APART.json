@@ -2802,11 +2802,6 @@
    "category": "support",
    "reason": "inclusion of relations is transitive: a one-line unpacking of the grammar's own definition"
   },
-  "Becoming.«同族为类»": {
-   "module": "Becoming.Grammar",
-   "category": "support",
-   "reason": "the equivalence closure of continuation is a class: its constructors are the class laws"
-  },
   "Becoming.«分叉»": {
    "module": "Becoming.Grammar",
    "category": "model-witness",
@@ -3417,11 +3412,6 @@
    "category": "general-structure",
    "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
   },
-  "Becoming.«守理则不穷»": {
-   "module": "Becoming.GrammarRegularity",
-   "category": "general-structure",
-   "reason": "a kept regularity can always be kept: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
-  },
   "Becoming.«有亡之线末步离核»": {
    "module": "Becoming.GrammarRegularity",
    "category": "general-structure",
@@ -3441,6 +3431,191 @@
    "module": "Becoming.GrammarRegularity",
    "category": "model-witness",
    "reason": "the witness read from the loss: its line under favouring ends at the first step, computed on the witness"
+  },
+  "Becoming.«续无外则族无外»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition along the net gives it in families: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外之粗化»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition along the net at a class gives it at every coarser class: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«族无外之粗化»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the condition in families at a class gives it at every coarser class: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外则同一中心»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "along a net with no cycle the condition holds only with one center: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«续无外则中心无缘»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "and nothing conditions that center: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.«核有续当且仅当有不穷»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a core continues something exactly where some line under it never ends: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
+  },
+  "Becoming.premises_of_noOutside": {
+   "module": "Becoming.GrammarScope",
+   "category": "support",
+   "reason": "one instance of Valuation.premises_of_unrestricted at the de se own-closure significance, through ownClosure_unrestricted_iff_noOutside"
+  },
+  "Becoming.LineOfDescent.Endless.descent_unending": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "the core of descent goes on for good from each birth: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Endless.member_class": {
+   "module": "Becoming.GrammarScope",
+   "category": "support",
+   "reason": "a one-line check that same member is a class"
+  },
+  "Becoming.LineOfDescent.Endless.descent_no_outside": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "with the first birth as the only center the condition holds under the one: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Endless.member_outside": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "under the member's class it fails: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Last.core_no_continuation": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "in descent that ends no core continues anything: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.LineOfDescent.Last.descent_past_end": {
+   "module": "Becoming.GrammarScope",
+   "category": "model-witness",
+   "reason": "the one reaches the second member past the first's end: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
+  },
+  "Becoming.Decay.both_open": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: stay and decay both open at every intact moment: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.decay_alters": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the decay an alteration under the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the two intact moments of one history apart in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.history_within": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: the history lies within the net of possibilities: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.possible_acyclic": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: no occurrence reaches itself: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Decay.time_not_in_core": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "decay: every two intact moments alike in the core: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.LineOfDescent.Endless.generates": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line of descent generates at two grains: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.b_positions": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: positions differing by class: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.continues_each": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: two overlapping classes: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.Overlap.tolerance_line_apart": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "no clear boundary: the union not a class, its line leaving it: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.between": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family class between a member's and the one: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.core_through_birth": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the family core going on through each birth: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.TwoLines.other_line_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "two family lines: the other family not reached: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
+  },
+  "Becoming.SharedCondition.affecting_reaches_other": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the line under the one reaches the other family through the condition: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.affecting_member_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "under a member or not the other family is not reached: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.SharedCondition.fed_outside": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+  },
+  "Becoming.«族之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«续即缘当且仅当含族»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "the finest class with 缘 as its continuation: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.«遍有后则核之所及即一之所及»": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a line under the core of the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
+  },
+  "Becoming.ThirdThing.fixed_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "joined to nothing, outside the class of being joined: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdThing.fixed_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "the class of being joined reaches the other family: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.finer_class_reaches": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a finer constant class reaches the same: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
+  },
+  "Becoming.ThirdAffects.third_class": {
+   "module": "Becoming.GrammarCases",
+   "category": "support",
+   "reason": "a one-line check that the third thing or not is a class"
+  },
+  "Becoming.ThirdFed.constant_takes_third": {
+   "module": "Becoming.GrammarCases",
+   "category": "model-witness",
+   "reason": "a constant class takes in what the condition feeds: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
   }
  },
  "instances": {

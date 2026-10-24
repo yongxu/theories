@@ -54,7 +54,7 @@ The source texts' "a regularity can be temporarily self-maintaining without bein
 - **formal-reuse**: [wen-in-the-grammar](wen-in-the-grammar.md). Law.step, Law.step_hasSucc_iff, Law.line_on_orbit.
 - related, not a proved adapter: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). The same module reads two-level steps, closed capture among them, as models; the lock line uses the orbit laws here.
 
-**Used by:** [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md)
+**Used by:** [reach-past-ones-own-end](reach-past-ones-own-end.md) · [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md)
 
 <a id="sources--来源"></a>
 ### Sources

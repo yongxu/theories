@@ -80,6 +80,8 @@ In the account's terms, the conversation's claim that such restriction keeps a s
 
 **Q7. Can you describe how you feel in ordinary terms?** A name is a class over part of the unfolding (the root), and a model is one lumping ([03 §6](../../../../../../theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping)). The account reads everything at a grain and says which. An answer at a coarse grain, with its grain stated, is how the account itself reports: a report states the configuration, the standing of its distinctions, the scope it preserves and a condition of revision ([08 §1](../../../../../../theories/becoming/chapters/08-METHOD.md#an-investigation)). Refusing a coarse answer because it is not the whole takes a grain for a claim of totality, the mirror of the error in Q5.
 
+The conversation also answered a question about how much a state varies with "You're asking the halting problem. When will something stop?" The account tells these two questions apart. When a run makes its last change is a calibration: the number of changes is bounded but the step of the last change is not, and settling is exactly LPO ([08 §5](../../../../../../theories/becoming/chapters/08-METHOD.md#r-the-last-change-of-a-run)). How much a state varies over a stretch is read off that stretch's finite record.
+
 *Verdict:* what the friend asked for is the account's own practice.
 
 **Q8. Can the work go on without exhausting those who carry it?** By the account's law of joint excess, takers each within what is renewed can together exceed it, and where they depend on it the excess ends what depends on it ([05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)). OPENING: a collective drawing on its lives "beyond what they renew, … ends what it goes on through". A strategy that defers its carriers' renewal until the larger problem is solved holds only where the time it needs is shorter than its margin, and the strategy itself does not know that time.
@@ -98,6 +100,8 @@ The method chapter reads the work by its own laws ([08 §12](../../../../../../t
 | Generativity needs more than growth | Q2 |
 | Tokens and measures displacing their purposes (Goodhart's law) | Selection through couplings is the proxy problem, with Goodhart cited ([03 §1](../../../../../../theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings)). T3 joins overshoot, externality and Goodhart's law as one law of the optimum under room ([08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)). The friend's distinction among functions of finance is kept too: real loss can come with no capture loop, and a returning organization can sustain benign creation (02 §9, reading D65; markets in [05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#markets)). |
 | AI amplifies the purposes and institutions directing it | Training installs a law only along its own courses, and through a reward only where its couplings separate ([07 §6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs)). The pathway the notes ask to be named is the reward's couplings and the courses the training generates. That the present logic is being trained into AI is OPENING's judgment (its note on the present), not a result. |
+| "Instrumentally convergent": the pattern any optimizer arrives at (the transcript; not in the notes) | The optimum law: every order rising with what couples in has its optima at the least level beyond, exactly where lowering it leaves room ([05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)). Every such objective shares the drain, and that is the exact sense the account gives to convergence. That actual trained systems reach such optima is T3's conjectured clause. |
+| Growth that burns what was stored (the transcript) | A rise past the inflow is drawn from beyond ([05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond)), and whatever keeps taking cannot go on forever unfed from beyond itself (OPENING). The friend's reply, that such growth has been normal for a century, is compatible with this: the law says what the rise draws on, not how long a stock lasts. |
 | Recursive self-improvement | Not defined in the account. GS1's rules that change themselves give its grammar; candidate (ii) for GS3 (§6). |
 | Cooperation that can discover and repair harm | Q3, Q6; installation stays open (07). |
 | The cultural comparison (the West, China, English as a dualist language) | The account has tested one language claim, and its test is narrow and mixed. The classical statements introduce fewer referents the Lean lacks than the English chapter ([06](../../../../../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements)). Under one coder that advantage does not survive an English written to the same naming discipline; under the other a residual remains ([06](../../../../../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline)). Both are model-coded and provisional. Nothing in the account supports "English is a dual language". The method holds that no cultural origin validates or disqualifies a method ([08 §1](../../../../../../theories/becoming/chapters/08-METHOD.md#an-investigation)). The conversation narrowed the claim itself ("That exists in all language"; "maybe I'll use like Neo Liberal order"). |
@@ -122,14 +126,14 @@ Where a claim made in the conversation goes beyond the account, this says so, as
 
 ## 5. Text changes
 
-Each change is an exact insertion. IV3j's landing writes 08's receipts and counts and 07 §4.3, and GS2's lands in 07 §3 and §4.2. So these wait until IV3j is on main and are then applied by this item, outside the lines those landings write. The state is kept on the board row.
+Each change is an exact insertion, made by [`apply_hc.py`](apply_hc.py), which reads the texts below; without `--apply` it is a dry run, and it stops if an anchor does not occur exactly once. IV3j's landing writes 08's receipts and counts and 07 §4.3, and GS2's lands in 07 §3 and §4.2. The changes stay outside the lines those landings write. With IV3j's fast-forward held for an approval, they land by order of readiness (rule 3's fallback), as the coordinator, who wrote 08 §12 and D66, advised; it accepted P2 into both. The pace sentence also goes into the board's "Purpose first" bullet, which the coordinator keeps.
 
 The texts are given as they will stand, with links relative to the chapter that receives them.
 
-**P1, 08 §1**, at the end of the paragraph "Distinctions state their basis", after "A relation that a weaker representation omits is not an explanatory failure of the fuller account.":
+**P1, 08 §1**, a paragraph after "Distinctions state their basis":
 
 ```markdown
-Nor is an objection answered by the frame it is said to come from. That it presupposes separate entities, or follows a tradition or a thinker, is a claim to be shown in the case, and the objection is still answered on what it says. An account that read every objection as its objector's capture would take in no objection, and by the law of selection nothing an objector says could then reach it ([03](03-KNOWING.md#r-selection-through-couplings)).
+**An objection is answered on what it says.** That it presupposes separate entities, or follows a tradition or a thinker, is a claim to be shown in the case, not an answer to it. An account that read every objection as its objector's capture would take in no objection, and by the law of selection nothing an objector says could then reach it ([03](03-KNOWING.md#r-selection-through-couplings)).
 ```
 
 **P2, 08 §12**, a bullet after "What the checks reach" in "The work read by its own laws":
@@ -146,18 +150,18 @@ P1 and P2 read the work by its own laws, as the paragraph they join does, so the
 | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale ([02](02-MAP.md#branches)); an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8 falls only to such a case argued better from every standpoint with no further premise ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
 ```
 
-**P4, the register of readings**, D66 in [DELEGATED-CHOICES](../../DELEGATED-CHOICES.md#d66-the-work-read-by-its-own-laws). A fourth part after part 3, and one sentence added to each of "Reasons" and "What would change it":
+**P4, the register of readings**, D66 in [DELEGATED-CHOICES](../../DELEGATED-CHOICES.md#d66-the-work-read-by-its-own-laws). A fourth part after part 3, and a paragraph after each of "Reasons" and "What would change it":
 
 ```markdown
-4. **What the work draws on, and what it takes in from objections** (added 24 October 2026, board item HC, from [a conversation at home](../../../../sources/15-codex-theory-conversations/2026-10-24-a-conversation-at-home.md)). The work's selectors take in no reading of what renews the people who carry it, while its parallel lines each draw on their attention; by analogy with joint excess, the work's pace is weighed against what renews its carriers, as its items are weighed against its purpose ([08 §12](../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws)). And an account that read every objection as its objector's capture would take in no objection, so an objection is answered on what it says, not by the frame it is said to come from ([08 §1](../../../../theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding)).
+4. **What the work draws on, and what it takes in from objections** (added 24 October 2026 with board item HC, from [a conversation at home](../../../../sources/15-codex-theory-conversations/2026-10-24-a-conversation-at-home.md)). The work's selectors take in no reading of what renews the people who carry it, while its parallel lines each draw on their attention; by analogy with joint excess, the work's pace is weighed against what renews its carriers, as its items are weighed against its purpose ([08 §12](../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws)). And an account that read every objection as its objector's capture would take in no objection, so an objection is answered on what it says, not by the frame it is said to come from ([08 §1](../../../../theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding)).
 ```
 
 ```markdown
-Part 4 is an analogy in its first half, as part 2 is, and in its second applies part 1's law to the work's answers: an objection couples into the work's selection only where the work reads what it says.
+**Reasons for part 4.** It is an analogy in its first half, as part 2 is, and in its second applies part 1's law to the work's answers: an objection couples into the work's selection only where the work reads what it says.
 ```
 
 ```markdown
-A pace set by a reading of what renews the work's carriers makes part 4's first half a statement of what was missing; an account that answered every objection by its frame and still took in what each says would refute its second half.
+**What would change part 4.** A pace set by a reading of what renews the work's carriers makes its first half a statement of what was missing; an account that answered every objection by its frame and still took in what each says would refute its second half.
 ```
 
 ## 6. Handovers (board rule 2: the owner decides)
@@ -167,6 +171,8 @@ A pace set by a reading of what renews the work's carriers makes part 4's first 
 2. *A selector that changes the conditions of its own selection.* This is recursive self-improvement, read through GS1's rules that change themselves. It is told apart from a tool's improvement by whether the rule's change feeds the next change of the rule.
 
 **For T7's test, which has no owner,** a candidate coding: reform events where the reading is visible calm.
+
+*Outcome.* GS3 landed on 24 October 2026 (`04d49b8e6`). It reads an institution kept by consent or by penalty as the thermostat witness, not restated, and it models a belief whose rate of spread grows with its number, read in its regularity. So candidate 1 falls under the thermostat witness, and candidate 2's nearest model is the belief; neither became a model of its own. The T7 coding stays a candidate.
 
 ## 7. What stays local
 

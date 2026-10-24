@@ -311,6 +311,8 @@ import Becoming.Handoff
 import Becoming.RuleHandoff
 import Becoming.GrammarCourse
 import Becoming.GrammarRegularity
+import Becoming.GrammarScope
+import Becoming.GrammarCases
 
 /-!
 # The Theory of Becoming: the formal core
@@ -3246,6 +3248,35 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   while every step alters the loss (`ClosedCapture.lock_line`); a reading that turns against
   favouring past a loss bound leaves the line under favouring not unending
   (`ClosedCapture.loss_ends_line`).
+* `Becoming.GrammarScope` (L1): the continuation condition on the root, structurally (board item
+  GS2): the condition that every occurrence lies on every center's line under a class
+  (`«续无外»`), or in its family (`«族无外»`), either at a class giving it at every coarser class.
+  Lying within a closure along a relation is being reached on a line under the one of it
+  (`withinClosure_iff_reached`), so the condition held de se along a relation is the root's at the
+  one of that relation taken as the net (`ownClosure_unrestricted_iff_noOutside`), and living
+  significance follows on the own-closure reading of claims (`premises_of_noOutside`). Along a net
+  with no cycle the condition holds only with one center, which nothing conditions. Past one's own
+  end (`«过亡而续»`); a class's core continues something exactly where some line under it goes on
+  without end (`«核有续当且仅当有不穷»`); two lines of descent, one endless and one that ends
+  (`LineOfDescent`). The class of being joined by 缘 read either way has 缘 as its continuation, is
+  the finest class that does, and is constant where every occurrence conditions something
+  (`«续即缘当且仅当含族»`, `«遍有后则族有常»`; board item GS5).
+* `Becoming.GrammarCases` (L1): test systems of the source texts as small witnesses of the grammar
+  (board item GS3), the behaviour in question supplied in each net. Decay: an alteration in a net with
+  no cycle; in the net of possibilities "intact or not" is constant, so the step is not in its
+  regularity, while a history within that net has the time left before the decay in it (`Decay`).
+  No clear boundary: two overlapping identities, each a class, an occurrence's positions differing by
+  class, their union not a class (`Overlap`). A line of descent generating at two grains
+  (`LineOfDescent.Endless.generates`). Two family lines, the class of one strictly between a member's
+  and the one, constant, its core going on through each birth, the other family not reached
+  (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
+  reaches the other's through it under the one, not under "a member or not"; where they only feed
+  from it, under no relation (`SharedCondition`, board item GS4). A third thing joined to nothing lies
+  outside the class of being joined; one affecting the condition is left out by a finer constant class
+  that still reaches; one the condition feeds is taken in by every constant class holding a member
+  with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
+  grows with its number, the rate read in its
+  regularity (`Belief`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

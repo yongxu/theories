@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/gs3/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gs3-test-systems/tree",
+  "modules": 111,
+  "ran": [
+    "Becoming.GrammarCases",
+    "BecomingGrammarCasesAxiomAudit"
+  ],
+  "reused": 110,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarCases": {
+      "theorems": 22,
+      "declarations": 37,
+      "with_axioms": {}
+    }
+  }
+}

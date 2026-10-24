@@ -1,11 +1,11 @@
 {
- "commit": "48b33fc24437ee51d87afd8c6833a83489e6cdae",
+ "commit": "26c760ea8e8dc242a1ad08e076dfc8dc07ff3ce2",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261023T194747.611176Z",
+ "core_receipt_at_commit": "20261023T201939.645046Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 317,
- "constants": 43376,
- "spine_theorems": 14462,
+ "tracked_modules": 319,
+ "constants": 43714,
+ "spine_theorems": 14541,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,18 +27,18 @@
  },
  "classes": {
   "statement on both families": 1056,
-  "statement on Process/Frame/Run/Trace": 2960,
+  "statement on Process/Frame/Run/Trace": 2962,
   "statement on World/Flow/Web": 3503,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 185,
   "used by a theorem on the base": 5204,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1049,
+  "apart: own vocabulary": 1126,
   "apart: prelude-only statement": 91
  },
- "apart": 1140,
- "apart_general_structure_by_design": 478,
- "apart_otherwise": 662,
+ "apart": 1217,
+ "apart_general_structure_by_design": 484,
+ "apart_otherwise": 733,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 90,
   "of them on the base": 72,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 685,
- "apart_roots": 685,
+ "apart_used_by_nothing": 720,
+ "apart_roots": 720,
  "apart_roots_by_category": {
-  "model-witness": 304,
-  "support": 105,
-  "general-structure": 244,
+  "model-witness": 329,
+  "support": 107,
+  "general-structure": 252,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 7
@@ -181,6 +181,14 @@
   "Becoming.SelectionLevels": [
    47,
    78
+  ],
+  "Becoming.GrammarCases": [
+   40,
+   42
+  ],
+  "Becoming.GrammarScope": [
+   37,
+   37
   ],
   "Becoming.GrammarMap": [
    35,
@@ -673,18 +681,18 @@
  },
  "rings": {
   "core": {
-   "modules": 301,
-   "theorems": 13702,
-   "apart": 1046,
+   "modules": 303,
+   "theorems": 13781,
+   "apart": 1123,
    "classes": {
     "statement on both families": 1042,
-    "statement on Process/Frame/Run/Trace": 2749,
+    "statement on Process/Frame/Run/Trace": 2751,
     "statement on World/Flow/Web": 3478,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 174,
     "used by a theorem on the base": 4845,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 956,
+    "apart: own vocabulary": 1033,
     "apart: prelude-only statement": 90
    }
   },
@@ -796,13 +804,13 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 76,
-  "statement on Process/Frame/Run/Trace": 134,
+  "statement on Process/Frame/Run/Trace": 135,
   "statement on World/Flow/Web": 127,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
   "used by a theorem on the base": 11,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 24
+  "apart: own vocabulary": 28
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -896,6 +904,18 @@
    ]
   },
   {
+   "id": "reach-past-ones-own-end",
+   "modules": [
+    "Becoming.GrammarScope"
+   ]
+  },
+  {
+   "id": "reach-through-a-shared-condition",
+   "modules": [
+    "Becoming.GrammarCases"
+   ]
+  },
+  {
    "id": "selection-right-exactly-where-read",
    "modules": [
     "Becoming.Learning"
@@ -929,6 +949,19 @@
    "id": "the-breeding-value",
    "modules": [
     "Becoming.Reproduction"
+   ]
+  },
+  {
+   "id": "the-class-of-being-joined",
+   "modules": [
+    "Becoming.GrammarCases",
+    "Becoming.GrammarScope"
+   ]
+  },
+  {
+   "id": "the-continuation-condition-on-the-root",
+   "modules": [
+    "Becoming.GrammarScope"
    ]
   },
   {
@@ -15428,6 +15461,85 @@
   "Becoming.ClosedCapture.loss_ends_line": "proof through a base family",
   "Becoming.ClosedCapture.Beyond.closed_line": "proof through a base family",
   "Becoming.ClosedCapture.Beyond.open_line_ends": "apart: own vocabulary",
+  "Becoming.«相续则同族»": "apart: own vocabulary",
+  "Becoming.«所及则同族»": "apart: own vocabulary",
+  "Becoming.«续无外则族无外»": "apart: own vocabulary",
+  "Becoming.«同族之粗化»": "apart: own vocabulary",
+  "Becoming.«续无外之粗化»": "apart: own vocabulary",
+  "Becoming.«族无外之粗化»": "apart: own vocabulary",
+  "Becoming.«缘在族中»": "apart: own vocabulary",
+  "Becoming.«族之续即缘»": "apart: own vocabulary",
+  "Becoming.«族之所及即一之所及»": "apart: own vocabulary",
+  "Becoming.«续即缘当且仅当含族»": "apart: own vocabulary",
+  "Becoming.«遍有后则族有常»": "apart: own vocabulary",
+  "Becoming.«遍有后则缘在族核»": "apart: own vocabulary",
+  "Becoming.«遍有后则核之所及即一之所及»": "apart: own vocabulary",
+  "Becoming.«过亡而续»": "apart: own vocabulary",
+  "Becoming.«核有续当且仅当有不穷»": "apart: own vocabulary",
+  "Becoming.«无不穷则核无续»": "apart: own vocabulary",
+  "Becoming.«续无外则同一中心»": "apart: own vocabulary",
+  "Becoming.«续无外则中心无缘»": "apart: own vocabulary",
+  "Becoming.withinClosure_of_line": "apart: own vocabulary",
+  "Becoming.withinClosure_iff_reached": "apart: own vocabulary",
+  "Becoming.ownClosure_unrestricted_iff_noOutside": "apart: own vocabulary",
+  "Becoming.premises_of_noOutside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.member_class": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.total": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.member_ends": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.descent_constant": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.core_through_birth": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.descent_unending": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.descent_reaches_both": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.descent_reaches": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.descent_no_outside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.member_line": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.member_outside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Last.last_ends": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Last.never_unending": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Last.core_no_continuation": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Last.descent_past_end": "apart: own vocabulary",
+  "Becoming.Decay.intactAlike_class": "apart: own vocabulary",
+  "Becoming.Decay.reach_rises": "apart: own vocabulary",
+  "Becoming.Decay.possible_acyclic": "apart: own vocabulary",
+  "Becoming.Decay.both_open": "apart: own vocabulary",
+  "Becoming.Decay.decay_alters": "apart: own vocabulary",
+  "Becoming.Decay.possible_constant": "apart: own vocabulary",
+  "Becoming.Decay.time_not_in_core": "apart: own vocabulary",
+  "Becoming.Decay.history_within": "apart: own vocabulary",
+  "Becoming.Decay.history_apart": "apart: own vocabulary",
+  "Becoming.Overlap.continues_each": "apart: own vocabulary",
+  "Becoming.Overlap.b_positions": "apart: own vocabulary",
+  "Becoming.Overlap.tolerance_line_apart": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.generates": "apart: own vocabulary",
+  "Becoming.TwoLines.family_class": "apart: own vocabulary",
+  "Becoming.TwoLines.between": "apart: own vocabulary",
+  "Becoming.TwoLines.total": "apart: own vocabulary",
+  "Becoming.TwoLines.family_constant": "apart: own vocabulary",
+  "Becoming.TwoLines.core_through_birth": "apart: own vocabulary",
+  "Becoming.TwoLines.line_in_family": "apart: own vocabulary",
+  "Becoming.TwoLines.other_line_outside": "apart: own vocabulary",
+  "Becoming.SharedCondition.affecting_reaches_other": "apart: own vocabulary",
+  "Becoming.SharedCondition.affecting_member_step": "apart: own vocabulary",
+  "Becoming.SharedCondition.affecting_member_stays": "apart: own vocabulary",
+  "Becoming.SharedCondition.affecting_member_outside": "apart: own vocabulary",
+  "Becoming.SharedCondition.fed_step": "apart: own vocabulary",
+  "Becoming.SharedCondition.fed_stays": "apart: own vocabulary",
+  "Becoming.SharedCondition.fed_outside": "apart: own vocabulary",
+  "Becoming.ThirdThing.total": "apart: own vocabulary",
+  "Becoming.ThirdThing.step_keeps_third": "apart: own vocabulary",
+  "Becoming.ThirdThing.family_keeps_third": "apart: own vocabulary",
+  "Becoming.ThirdThing.fixed_class": "apart: own vocabulary",
+  "Becoming.ThirdThing.fixed_class_reaches": "apart: own vocabulary",
+  "Becoming.ThirdAffects.third_class": "apart: own vocabulary",
+  "Becoming.ThirdAffects.rest_to_rest": "apart: own vocabulary",
+  "Becoming.ThirdAffects.succ_of_kind": "apart: own vocabulary",
+  "Becoming.ThirdAffects.third_constant": "apart: own vocabulary",
+  "Becoming.ThirdAffects.condition_joined": "apart: own vocabulary",
+  "Becoming.ThirdAffects.joined_to_start": "apart: own vocabulary",
+  "Becoming.ThirdAffects.finer_class_reaches": "apart: own vocabulary",
+  "Becoming.ThirdFed.constant_takes_third": "apart: own vocabulary",
+  "Becoming.Belief.rate_changes_on_step": "statement on Process/Frame/Run/Trace",
+  "Becoming.Belief.rate_read_in_regularity": "statement on Process/Frame/Run/Trace",
   "Becoming.Hexagram.same_eq": "used by a theorem on the base",
   "Becoming.Hexagram.same_self": "used by a theorem on the base",
   "Becoming.Hexagram.eq_of_eqb": "used by a theorem on the base",

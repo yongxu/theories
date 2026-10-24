@@ -2,17 +2,17 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2911 nodes, 4960 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2923 nodes, 4997 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 29 | 75 | 62 | 0 |
+| The root: relation, condition, class, continuation, core | 29 | 76 | 63 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 85 | 70 | 0 |
 | Knowing and testing | 0 | 78 | 71 | 0 |
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 60 | 47 | 0 |
+| Significance and alignment | 0 | 64 | 48 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
@@ -49,7 +49,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (75):
+Results (76):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -101,6 +101,7 @@ Results (75):
 - [Separation loses exactly the relation](records/separation-loses-the-relation.md) (recorded-checked)
 - [Step laws and endpoint traces](records/trace-law-equivalence.md) (recorded-checked)
 - [Step-preserving maps transport finite traces](records/finite-trace-transport.md) (recorded-checked)
+- [Test systems of the source texts as small witnesses](records/the-source-texts-test-systems.md) (recorded-checked)
 - [The census balance](records/census-balance.md) (recorded-checked)
 - [The census balance under a continuation](records/census-balance-under-continuation.md) (recorded-checked)
 - [The census read off the exchange](records/census-read-off-the-exchange.md) (recorded-checked)
@@ -127,7 +128,7 @@ Results (75):
 - [Where a run goes on](records/where-a-run-goes-on.md) (recorded-checked)
 - [Which links a closure needs](records/which-links-a-closure-needs.md) (recorded-checked)
 
-Modules (62, 7 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarRegularity`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presentations`, `Reading`, `Readings`, `Regions`, `Renewal`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `World`
+Modules (63, 8 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarRegularity`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presentations`, `Reading`, `Readings`, `Regions`, `Renewal`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `World`
 
 
 ## The map: generation, keeping, degeneration, orders
@@ -437,7 +438,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (60):
+Results (64):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -465,7 +466,9 @@ Results (60):
 - [Living significance on held lives](records/living-significance-on-held-lives.md) (recorded-checked)
 - [Living significance on the Becoming spine, characterized by a seed and boundary neutrality](records/metaethical-core-characterization.md) (recorded-checked)
 - [Loss beyond a region](records/loss-beyond-a-region.md) (recorded-checked)
+- [One line reaching another through a shared condition](records/reach-through-a-shared-condition.md) (recorded-checked)
 - [Own widening within the margin](records/own-widening-within-the-margin.md) (recorded-checked)
+- [Past one's own end: the reach of a line under a class](records/reach-past-ones-own-end.md) (recorded-checked)
 - [Pending-task applicability and supported continuation](records/pending-task-context-applicability.md) (recorded-checked)
 - [Positive reasons addressed to every situated position](records/positioned-positive-reason.md) (recorded-checked)
 - [Practical judgment under living significance and the practical commitments](records/practical-judgment-under-living-significance.md) (reviewed-scoped)
@@ -479,6 +482,8 @@ Results (60):
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
+- [The class of being joined](records/the-class-of-being-joined.md) (recorded-checked)
+- [The continuation condition on the root](records/the-continuation-condition-on-the-root.md) (recorded-checked)
 - [The continuation condition yields living significance](records/continuation-condition-yields-living-significance.md) (recorded-checked)
 - [The coupling closures of deployed training pipelines](records/coupling-closures-of-training-pipelines.md) (reviewed-scoped)
 - [The gap for one's own act](records/the-gap-for-ones-own-act.md) (recorded-checked)
@@ -500,7 +505,7 @@ Results (60):
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 
-Modules (47, 0 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
+Modules (48, 1 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
 
 
 ## Method and the formal core
@@ -540,4 +545,4 @@ Results (7):
 
 ## Not yet on the root
 
-298 of 313 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+298 of 315 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
