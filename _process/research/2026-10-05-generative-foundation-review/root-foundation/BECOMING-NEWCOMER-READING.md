@@ -142,3 +142,11 @@ GS2 landed in `acb1c2a52`, putting the continuation condition on the root in cha
   - the free significance is not lifted onto the root, and the chapter's other laws are instances not yet stated on it;
   - which class a center's own line runs under is open.
 - **The ethics lead.** The ethics lead on the one page and the overview's §7 paragraph name the open question as which class a center's own line runs under, as §4.5 does, not which relation is a center's own. The overview adds the theorem on reaching past one's own end (`«过亡而续»`) and chapter 7's reading of it, labelled as a reading.
+
+## Fourth round, 24 October: each overview paragraph opens with its point
+
+This closes finding 7 for the overview. Each paragraph of §§1–8 that opened with a definition or a hypothesis now opens with its point in plain words, in English and Chinese: 23 paragraph leads, plus 4 openings rewritten in place (the laws that hold on every model, the flow bounding descent, the commons, and the reading rule in "How to read this"). Paragraphs that already led with a plain sentence are unchanged. The edits are in [`development/nr-front-pages/nr4_edits.py`](development/nr-front-pages/nr4_edits.py).
+
+The overview's reading rule was "a sentence summarizing a law keeps the hypotheses that change what holds". It now reads "a paragraph opens with its point in plain words; the sentences after it state each law with the hypotheses that change what holds". A lead may leave a hypothesis to the exact statement that follows it, but no lead says more than that statement. The leads were checked against the sentences they introduce.
+
+Not done here: chapter 7's results since round three are not yet summarized in the overview. These are need and feeding read with time (IV3k), two lines that share a condition (GS4) and the class of being joined (GS5). Chapter 7 states them; the overview's §7 has no sentence for them yet.
