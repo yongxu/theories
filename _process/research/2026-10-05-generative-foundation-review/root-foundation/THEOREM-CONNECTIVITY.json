@@ -1,11 +1,11 @@
 {
- "commit": "a18f980817820cccdc63ad8119b56d8fe6639626",
- "sources_match_commit": true,
- "core_receipt_at_commit": "20261025T045617.350224Z",
+ "commit": "8146707004f39943dddf09593fceacab33d071d4",
+ "sources_match_commit": false,
+ "core_receipt_at_commit": "20261025T071027.387418Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 320,
- "constants": 44015,
- "spine_theorems": 14640,
+ "tracked_modules": 321,
+ "constants": 44083,
+ "spine_theorems": 14689,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,18 +27,18 @@
  },
  "classes": {
   "statement on both families": 1056,
-  "statement on Process/Frame/Run/Trace": 2977,
+  "statement on Process/Frame/Run/Trace": 2985,
   "statement on World/Flow/Web": 3519,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 186,
-  "used by a theorem on the base": 5223,
+  "used by a theorem on the base": 5231,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1174,
-  "apart: prelude-only statement": 91
+  "apart: own vocabulary": 1201,
+  "apart: prelude-only statement": 97
  },
- "apart": 1265,
- "apart_general_structure_by_design": 496,
- "apart_otherwise": 769,
+ "apart": 1298,
+ "apart_general_structure_by_design": 502,
+ "apart_otherwise": 796,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 91,
   "of them on the base": 72,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 749,
- "apart_roots": 749,
+ "apart_used_by_nothing": 768,
+ "apart_roots": 769,
  "apart_roots_by_category": {
-  "model-witness": 347,
-  "support": 108,
-  "general-structure": 261,
+  "model-witness": 358,
+  "support": 111,
+  "general-structure": 267,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 8
@@ -182,13 +182,13 @@
    47,
    78
   ],
-  "Becoming.GrammarCases": [
-   40,
-   42
-  ],
   "Becoming.GrammarMap": [
    38,
    39
+  ],
+  "Becoming.GrammarCases": [
+   38,
+   40
   ],
   "Becoming.GrammarScope": [
    37,
@@ -197,6 +197,10 @@
   "Becoming.GrammarPath": [
    36,
    36
+  ],
+  "Becoming.RuleShaping": [
+   35,
+   51
   ],
   "Becoming.HexagramPlaces": [
    32,
@@ -685,19 +689,19 @@
  },
  "rings": {
   "core": {
-   "modules": 304,
-   "theorems": 13880,
-   "apart": 1171,
+   "modules": 305,
+   "theorems": 13929,
+   "apart": 1204,
    "classes": {
     "statement on both families": 1042,
-    "statement on Process/Frame/Run/Trace": 2766,
+    "statement on Process/Frame/Run/Trace": 2774,
     "statement on World/Flow/Web": 3494,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 175,
-    "used by a theorem on the base": 4864,
+    "used by a theorem on the base": 4872,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1081,
-    "apart: prelude-only statement": 90
+    "apart: own vocabulary": 1108,
+    "apart: prelude-only statement": 96
    }
   },
   "instances": {
@@ -808,7 +812,7 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 76,
-  "statement on Process/Frame/Run/Trace": 136,
+  "statement on Process/Frame/Run/Trace": 137,
   "statement on World/Flow/Web": 128,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
@@ -9259,6 +9263,57 @@
   "Becoming.ClosedCapture.Thinned.late_majority": "statement on Process/Frame/Run/Trace",
   "Becoming.ClosedCapture.Thinned.late_kept": "statement on Process/Frame/Run/Trace",
   "Becoming.ClosedCapture.Thinned.late_reads_loss": "proof through a base family",
+  "Becoming.RuleShaping.eq_of_counts": "apart: own vocabulary",
+  "Becoming.RuleShaping.favours_iff": "used by a theorem on the base",
+  "Becoming.RuleShaping.disfavours_iff": "used by a theorem on the base",
+  "Becoming.RuleShaping.favours_alike": "apart: own vocabulary",
+  "Becoming.RuleShaping.shared_lowers": "apart: own vocabulary",
+  "Becoming.RuleShaping.shared_lowers_strictly": "apart: own vocabulary",
+  "Becoming.RuleShaping.shared_raises": "apart: own vocabulary",
+  "Becoming.RuleShaping.lower_c_raises": "apart: own vocabulary",
+  "Becoming.RuleShaping.shaped_shift": "apart: own vocabulary",
+  "Becoming.RuleShaping.falls_strictly": "used by a theorem on the base",
+  "Becoming.RuleShaping.present_along": "apart: own vocabulary",
+  "Becoming.RuleShaping.present_of_le": "used by a theorem on the base",
+  "Becoming.RuleShaping.nothing_back_falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.c_zero_favours": "apart: own vocabulary",
+  "Becoming.RuleShaping.neutral_steady": "apart: own vocabulary",
+  "Becoming.RuleShaping.select_thenBy": "apart: own vocabulary",
+  "Becoming.RuleShaping.pow_pos_of_pos": "apart: prelude-only statement",
+  "Becoming.RuleShaping.orbit_held": "apart: own vocabulary",
+  "Becoming.RuleShaping.le_select_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.lt_select_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.stretch_eq": "apart: own vocabulary",
+  "Becoming.RuleShaping.stretch_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.stretch_lt_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.wait_not_more": "apart: prelude-only statement",
+  "Becoming.RuleShaping.back_longer_not_less": "apart: prelude-only statement",
+  "Becoming.RuleShaping.byBack_reads_iff": "used by a theorem on the base",
+  "Becoming.RuleShaping.covering_locks": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.thresholdBack_above": "used by a theorem on the base",
+  "Becoming.RuleShaping.thresholdBack_below": "used by a theorem on the base",
+  "Becoming.RuleShaping.thresholdBack_mono": "used by a theorem on the base",
+  "Becoming.RuleShaping.threshold_from_above": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_from_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_rule_above": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_rule_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_rises": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_present_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.threshold_falls": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.Split.one_pos": "apart: prelude-only statement",
+  "Becoming.RuleShaping.Split.favours": "apart: own vocabulary",
+  "Becoming.RuleShaping.Split.shared_disfavours": "apart: own vocabulary",
+  "Becoming.RuleShaping.Split.rises": "apart: own vocabulary",
+  "Becoming.RuleShaping.Split.falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.SharedFlips.one_pos": "apart: prelude-only statement",
+  "Becoming.RuleShaping.SharedFlips.without_falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.SharedFlips.with_rises": "apart: own vocabulary",
+  "Becoming.RuleShaping.Timing.two_pos": "apart: prelude-only statement",
+  "Becoming.RuleShaping.Timing.soon_rises": "apart: own vocabulary",
+  "Becoming.RuleShaping.Timing.late_falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.Timing.shorter_falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.Timing.seven_falls": "apart: own vocabulary",
+  "Becoming.RuleShaping.Timing.eight_rises": "apart: own vocabulary",
   "Becoming.Web.carrying_active": "statement on World/Flow/Web",
   "Becoming.Web.carrying_iff": "statement on World/Flow/Web",
   "Becoming.Web.begins_within": "statement on World/Flow/Web",
@@ -15592,11 +15647,9 @@
   "Becoming.TwoLines.line_in_family": "apart: own vocabulary",
   "Becoming.TwoLines.other_line_outside": "apart: own vocabulary",
   "Becoming.SharedCondition.affecting_reaches_other": "apart: own vocabulary",
-  "Becoming.SharedCondition.affecting_member_step": "apart: own vocabulary",
-  "Becoming.SharedCondition.affecting_member_stays": "apart: own vocabulary",
+  "Becoming.SharedCondition.first_left_into_condition": "apart: own vocabulary",
   "Becoming.SharedCondition.affecting_member_outside": "apart: own vocabulary",
-  "Becoming.SharedCondition.fed_step": "apart: own vocabulary",
-  "Becoming.SharedCondition.fed_stays": "apart: own vocabulary",
+  "Becoming.SharedCondition.first_never_left": "apart: own vocabulary",
   "Becoming.SharedCondition.fed_outside": "apart: own vocabulary",
   "Becoming.ThirdThing.total": "apart: own vocabulary",
   "Becoming.ThirdThing.step_keeps_third": "apart: own vocabulary",

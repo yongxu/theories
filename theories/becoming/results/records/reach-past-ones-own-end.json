@@ -123,8 +123,8 @@
       "id": "continuation-relative-to-a-class",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«有常», «核», «类有常当且仅当含于核», «一为类».",
-        "zh": "«有常»、«核»、«类有常当且仅当含于核»、«一为类»。"
+        "en": "«有常», «核», «类有常当且仅当含于核», «一为类», «线内同类».",
+        "zh": "«有常»、«核»、«类有常当且仅当含于核»、«一为类»、«线内同类»。"
       }
     },
     {
@@ -174,7 +174,7 @@
         "Becoming.«核有续当且仅当有不穷»",
         "Becoming.«过亡而续»"
       ],
-      "sha256": "8ee86ef22f31682a00b708252539b8ba2e15f61ec07d573e5132d320a36fec30"
+      "sha256": "c197a5e999ad41115de1899f1b368d756d37dd95eeed41e738fec33e28215348"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
@@ -196,12 +196,18 @@
       "role": "receipt",
       "sha256": "80395060726ea826a45ba114e74723738b07cb60413ed8c0366f81e139ffb1fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "role": "receipt",
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -211,6 +217,10 @@
     {
       "en": "24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.",
       "zh": "2026年10月24日：新增（GS2），出自根与其二篇来源之对照审查，并取 SW 之提议三与 PW 之第三项；研究第 392 节。"
+    },
+    {
+      "en": "25 October 2026: LineOfDescent.Endless.member_line proved by «线内同类» (GS6, board rule 9), its statement unchanged; the dependency detail names the law; study section 404.",
+      "zh": "2026年10月25日：LineOfDescent.Endless.member_line 由 «线内同类» 证得（GS6，看板第九条），陈述不变；依赖之说明列此律；研究第 404 节。"
     }
   ]
 }

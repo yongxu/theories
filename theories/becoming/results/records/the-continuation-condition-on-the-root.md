@@ -66,6 +66,7 @@ SW §3's structural reading (what counts for a center is what lies within its co
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 
 Aliases: `The continuation condition on the root`, `根上之续存条件`, `Becoming.«续无外»`
 

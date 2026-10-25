@@ -392,7 +392,8 @@ theorem first_never_left (u v : Occ) (inside : firstFamily u = true) (s : fed u 
 /-- **Where the members only feed from a condition they do not affect, no relation reaches the other
 line**: under every relation, the line from the first family's first member reaches no member of the
 second. A line under any relation is a line under the one, and along `fed` the first family is never
-left, so the one has nothing outside it to pass (`«所经不同则不及»` with no exit). -/
+left, so under the one the first family has no exit to pass (`«所经不同则不及»` with an empty set
+of exits). -/
 theorem fed_outside (E : «际» Occ) (n : Nat) : ¬ «所及» fed E (.a 0) (.b n) := fun reached =>
   «所经不同则不及» (P := firstFamily) (C := fun _ => False) «一为类»
     (fun u v inside s outside => first_never_left u v inside s.1 outside) rfl rfl

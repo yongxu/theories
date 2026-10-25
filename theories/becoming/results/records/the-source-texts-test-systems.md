@@ -53,7 +53,7 @@ The test systems of the first source text (§7): decay and the system with no cl
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常», «核», «根», «亡于核下不变», «类有常当且仅当含于核», «无环», «异».
+- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常», «核», «根», «亡于核下不变», «类有常当且仅当含于核», «无环», «异», «线内同类», «及之单调».
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «全生成», «传».
 - **formal-reuse**: [reach-past-ones-own-end](reach-past-ones-own-end.md). LineOfDescent.Endless.
 - **formal-reuse**: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). moveRel, adaptive_core_apart.
@@ -70,6 +70,7 @@ The test systems of the first source text (§7): decay and the system with no cl
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 
 Aliases: `Test systems of the source texts as small witnesses`, `来源二篇之检验系统之小见证`, `Becoming.Decay.time_not_in_core`
 
@@ -77,6 +78,7 @@ Aliases: `Test systems of the source texts as small witnesses`, `来源二篇之
 ### History
 
 - 24 October 2026: added (GS3), from the review of the root against its two source texts; study section 393.
+- 25 October 2026: TwoLines.line_in_family proved by «线内同类» (GS6, board rule 9), its statement unchanged; the dependency detail names the law; study section 404.
 
 </details>
 

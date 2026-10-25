@@ -7155,88 +7155,87 @@ Definitions and types:
 <a id="module-eb5da91cd5d4"></a>
 
 <details>
-<summary>GrammarCases.lean — 69 explicit declarations</summary>
+<summary>GrammarCases.lean — 68 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean) · [Theory](../../chapters/01-ROOT.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean`
 
-Imports: `Becoming.GrammarScope`, `Becoming.GrammarTesting`
+Imports: `Becoming.GrammarScope`, `Becoming.GrammarTesting`, `Becoming.GrammarPath`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.Decay.intactAlike_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L99) | 99 |
-| [Becoming.Decay.reach_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L102) | 102 |
-| [Becoming.Decay.possible_acyclic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L108) | 108 |
-| [Becoming.Decay.both_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L111) | 111 |
-| [Becoming.Decay.decay_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L116) | 116 |
-| [Becoming.Decay.possible_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L120) | 120 |
-| [Becoming.Decay.time_not_in_core](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L128) | 128 |
-| [Becoming.Decay.history_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L137) | 137 |
-| [Becoming.Decay.history_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L148) | 148 |
-| [Becoming.Overlap.continues_each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L185) | 185 |
-| [Becoming.Overlap.b_positions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L192) | 192 |
-| [Becoming.Overlap.tolerance_line_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L210) | 210 |
-| [Becoming.LineOfDescent.Endless.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L225) | 225 |
-| [Becoming.TwoLines.family_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L259) | 259 |
-| [Becoming.TwoLines.between](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L263) | 263 |
-| [Becoming.TwoLines.total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L268) | 268 |
-| [Becoming.TwoLines.family_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L275) | 275 |
-| [Becoming.TwoLines.core_through_birth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L282) | 282 |
-| [Becoming.TwoLines.line_in_family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L290) | 290 |
-| [Becoming.TwoLines.other_line_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L297) | 297 |
-| [Becoming.SharedCondition.affecting_reaches_other](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L348) | 348 |
-| [Becoming.SharedCondition.affecting_member_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L354) | 354 |
-| [Becoming.SharedCondition.affecting_member_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L362) | 362 |
-| [Becoming.SharedCondition.affecting_member_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L378) | 378 |
-| [Becoming.SharedCondition.fed_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L385) | 385 |
-| [Becoming.SharedCondition.fed_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L393) | 393 |
-| [Becoming.SharedCondition.fed_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L409) | 409 |
-| [Becoming.ThirdThing.total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L453) | 453 |
-| [Becoming.ThirdThing.step_keeps_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L460) | 460 |
-| [Becoming.ThirdThing.family_keeps_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L479) | 479 |
-| [Becoming.ThirdThing.fixed_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L489) | 489 |
-| [Becoming.ThirdThing.fixed_class_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L498) | 498 |
-| [Becoming.ThirdAffects.third_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L542) | 542 |
-| [Becoming.ThirdAffects.rest_to_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L545) | 545 |
-| [Becoming.ThirdAffects.succ_of_kind](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L561) | 561 |
-| [Becoming.ThirdAffects.third_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L569) | 569 |
-| [Becoming.ThirdAffects.condition_joined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L575) | 575 |
-| [Becoming.ThirdAffects.joined_to_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L580) | 580 |
-| [Becoming.ThirdAffects.finer_class_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L590) | 590 |
-| [Becoming.ThirdFed.constant_takes_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L629) | 629 |
-| [Becoming.Belief.rate_changes_on_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L651) | 651 |
-| [Becoming.Belief.rate_read_in_regularity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L655) | 655 |
+| [Becoming.Decay.intactAlike_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L104) | 104 |
+| [Becoming.Decay.reach_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L107) | 107 |
+| [Becoming.Decay.possible_acyclic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L113) | 113 |
+| [Becoming.Decay.both_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L116) | 116 |
+| [Becoming.Decay.decay_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L121) | 121 |
+| [Becoming.Decay.possible_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L125) | 125 |
+| [Becoming.Decay.time_not_in_core](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L133) | 133 |
+| [Becoming.Decay.history_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L142) | 142 |
+| [Becoming.Decay.history_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L153) | 153 |
+| [Becoming.Overlap.continues_each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L190) | 190 |
+| [Becoming.Overlap.b_positions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L197) | 197 |
+| [Becoming.Overlap.tolerance_line_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L215) | 215 |
+| [Becoming.LineOfDescent.Endless.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L230) | 230 |
+| [Becoming.TwoLines.family_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L264) | 264 |
+| [Becoming.TwoLines.between](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L268) | 268 |
+| [Becoming.TwoLines.total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L273) | 273 |
+| [Becoming.TwoLines.family_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L280) | 280 |
+| [Becoming.TwoLines.core_through_birth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L287) | 287 |
+| [Becoming.TwoLines.line_in_family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L296) | 296 |
+| [Becoming.TwoLines.other_line_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L301) | 301 |
+| [Becoming.SharedCondition.affecting_reaches_other](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L352) | 352 |
+| [Becoming.SharedCondition.first_left_into_condition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L364) | 364 |
+| [Becoming.SharedCondition.affecting_member_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L377) | 377 |
+| [Becoming.SharedCondition.first_never_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L383) | 383 |
+| [Becoming.SharedCondition.fed_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L397) | 397 |
+| [Becoming.ThirdThing.total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L443) | 443 |
+| [Becoming.ThirdThing.step_keeps_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L450) | 450 |
+| [Becoming.ThirdThing.family_keeps_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L471) | 471 |
+| [Becoming.ThirdThing.fixed_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L478) | 478 |
+| [Becoming.ThirdThing.fixed_class_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L487) | 487 |
+| [Becoming.ThirdAffects.third_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L531) | 531 |
+| [Becoming.ThirdAffects.rest_to_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L534) | 534 |
+| [Becoming.ThirdAffects.succ_of_kind](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L550) | 550 |
+| [Becoming.ThirdAffects.third_constant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L558) | 558 |
+| [Becoming.ThirdAffects.condition_joined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L564) | 564 |
+| [Becoming.ThirdAffects.joined_to_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L569) | 569 |
+| [Becoming.ThirdAffects.finer_class_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L579) | 579 |
+| [Becoming.ThirdFed.constant_takes_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L618) | 618 |
+| [Becoming.Belief.rate_changes_on_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L640) | 640 |
+| [Becoming.Belief.rate_read_in_regularity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L644) | 644 |
 
 Definitions and types:
 
-- `abbrev` [Becoming.Decay.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L90) (L90)
-- `def` [Becoming.Decay.possible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L94) (L94)
-- `def` [Becoming.Decay.intactAlike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L97) (L97)
-- `def` [Becoming.Decay.history](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L133) (L133)
-- `inductive` [Becoming.Overlap.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L163) (L163)
-- `def` [Becoming.Overlap.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L166) (L166)
-- `def` [Becoming.Overlap.first](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L172) (L172)
-- `def` [Becoming.Overlap.second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L178) (L178)
-- `def` [Becoming.Overlap.either](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L206) (L206)
-- `abbrev` [Becoming.TwoLines.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L246) (L246)
-- `def` [Becoming.TwoLines.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L250) (L250)
-- `def` [Becoming.TwoLines.member](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L254) (L254)
-- `def` [Becoming.TwoLines.family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L257) (L257)
-- `inductive` [Becoming.SharedCondition.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L309) (L309)
-- `def` [Becoming.SharedCondition.affecting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L314) (L314)
-- `def` [Becoming.SharedCondition.fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L327) (L327)
-- `def` [Becoming.SharedCondition.living](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L340) (L340)
-- `inductive` [Becoming.ThirdThing.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L423) (L423)
-- `def` [Becoming.ThirdThing.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L427) (L427)
-- `def` [Becoming.ThirdThing.third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L446) (L446)
-- `inductive` [Becoming.ThirdAffects.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L515) (L515)
-- `def` [Becoming.ThirdAffects.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L517) (L517)
-- `def` [Becoming.ThirdAffects.third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L536) (L536)
-- `inductive` [Becoming.ThirdFed.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L606) (L606)
-- `def` [Becoming.ThirdFed.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L608) (L608)
-- `def` [Becoming.Belief.spread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L644) (L644)
-- `def` [Becoming.Belief.grow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L647) (L647)
+- `abbrev` [Becoming.Decay.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L95) (L95)
+- `def` [Becoming.Decay.possible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L99) (L99)
+- `def` [Becoming.Decay.intactAlike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L102) (L102)
+- `def` [Becoming.Decay.history](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L138) (L138)
+- `inductive` [Becoming.Overlap.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L168) (L168)
+- `def` [Becoming.Overlap.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L171) (L171)
+- `def` [Becoming.Overlap.first](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L177) (L177)
+- `def` [Becoming.Overlap.second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L183) (L183)
+- `def` [Becoming.Overlap.either](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L211) (L211)
+- `abbrev` [Becoming.TwoLines.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L251) (L251)
+- `def` [Becoming.TwoLines.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L255) (L255)
+- `def` [Becoming.TwoLines.member](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L259) (L259)
+- `def` [Becoming.TwoLines.family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L262) (L262)
+- `inductive` [Becoming.SharedCondition.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L313) (L313)
+- `def` [Becoming.SharedCondition.affecting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L318) (L318)
+- `def` [Becoming.SharedCondition.fed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L331) (L331)
+- `def` [Becoming.SharedCondition.living](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L344) (L344)
+- `def` [Becoming.SharedCondition.firstFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L358) (L358)
+- `inductive` [Becoming.ThirdThing.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L413) (L413)
+- `def` [Becoming.ThirdThing.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L417) (L417)
+- `def` [Becoming.ThirdThing.third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L436) (L436)
+- `inductive` [Becoming.ThirdAffects.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L504) (L504)
+- `def` [Becoming.ThirdAffects.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L506) (L506)
+- `def` [Becoming.ThirdAffects.third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L525) (L525)
+- `inductive` [Becoming.ThirdFed.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L595) (L595)
+- `def` [Becoming.ThirdFed.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L597) (L597)
+- `def` [Becoming.Belief.spread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L633) (L633)
+- `def` [Becoming.Belief.grow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean#L636) (L636)
 
 </details>
 
@@ -7577,11 +7576,11 @@ Imports: `Becoming.GrammarRegularity`, `Becoming.GrammarMap`, `Becoming.Weightin
 | [Becoming.LineOfDescent.Endless.descent_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L349) | 349 |
 | [Becoming.LineOfDescent.Endless.descent_no_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L355) | 355 |
 | [Becoming.LineOfDescent.Endless.member_line](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L359) | 359 |
-| [Becoming.LineOfDescent.Endless.member_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L365) | 365 |
-| [Becoming.LineOfDescent.Last.last_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L388) | 388 |
-| [Becoming.LineOfDescent.Last.never_unending](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L397) | 397 |
-| [Becoming.LineOfDescent.Last.core_no_continuation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L441) | 441 |
-| [Becoming.LineOfDescent.Last.descent_past_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L447) | 447 |
+| [Becoming.LineOfDescent.Endless.member_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L363) | 363 |
+| [Becoming.LineOfDescent.Last.last_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L386) | 386 |
+| [Becoming.LineOfDescent.Last.never_unending](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L395) | 395 |
+| [Becoming.LineOfDescent.Last.core_no_continuation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L439) | 439 |
+| [Becoming.LineOfDescent.Last.descent_past_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L445) | 445 |
 
 Definitions and types:
 
@@ -7590,8 +7589,8 @@ Definitions and types:
 - `abbrev` [Becoming.LineOfDescent.Endless.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L293) (L293)
 - `def` [Becoming.LineOfDescent.Endless.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L296) (L296)
 - `def` [Becoming.LineOfDescent.Endless.member](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L300) (L300)
-- `abbrev` [Becoming.LineOfDescent.Last.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L379) (L379)
-- `def` [Becoming.LineOfDescent.Last.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L383) (L383)
+- `abbrev` [Becoming.LineOfDescent.Last.Occ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L377) (L377)
+- `def` [Becoming.LineOfDescent.Last.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean#L381) (L381)
 
 </details>
 

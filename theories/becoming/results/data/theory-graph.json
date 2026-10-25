@@ -8973,7 +8973,7 @@
    "type": "module",
    "name": "Becoming.GrammarCases",
    "level": "L1",
-   "theorems": 42,
+   "theorems": 40,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -29807,6 +29807,11 @@
   },
   {
    "from": "module:Becoming.GrammarCases",
+   "to": "module:Becoming.GrammarPath",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarCases",
    "to": "module:Becoming.GrammarScope",
    "type": "imports"
   },
@@ -44291,6 +44296,11 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:reach-through-a-shared-condition",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:reaching-before-and-after-a-juncture",
    "to": "module:Becoming.Junctures",
    "type": "proved-in"
@@ -47729,6 +47739,11 @@
    "from": "record:the-class-of-being-joined",
    "to": "record:the-continuation-condition-on-the-root",
    "type": "related"
+  },
+  {
+   "from": "record:the-class-of-being-joined",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:the-continuation-condition-on-the-root",

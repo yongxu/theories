@@ -42,7 +42,7 @@ Canonical source: [GrammarPath.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-A witness or law on whether a class holding a member's intended effects, and not its other effects, can be constant up to the net's end; SharedCondition.affecting_member_outside as a corollary of «所经不同则不及», with its owner.
+A witness or law on whether a class holding a member's intended effects, and not its other effects, can be constant up to the net's end.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -55,9 +55,11 @@ A witness or law on whether a class holding a member's intended effects, and not
 ### Dependencies
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «类», «有常», «有常之逐点», «亡», «线内同类», «一»; «所及» from the map.
-- related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside is the first law's case.
+- related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside and fed_outside are proved from the first law (GS6).
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
+
+**Used by:** [reach-through-a-shared-condition](reach-through-a-shared-condition.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -76,6 +78,7 @@ Aliases: `What a line must hold, and what a regularity takes in`, `线所必含�
 ### History
 
 - 25 October 2026: added (PF), finishing 07 §4.6's steps 3 and 4; study section 402.
+- 25 October 2026: SharedCondition.affecting_member_outside and fed_outside proved from «所经不同则不及» in Becoming.GrammarCases, which now imports this module (GS6); the corollary leaves the next step; study section 404.
 
 </details>
 

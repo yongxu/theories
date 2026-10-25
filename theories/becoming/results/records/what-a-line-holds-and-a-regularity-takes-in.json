@@ -149,8 +149,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T060618.754321Z）：Becoming.GrammarPath，公理报告皆空；本记录引其全部 57 项。独立 AI 审查与作者审查见研究第 402 节。"
   },
   "next_delta": {
-    "en": "A witness or law on whether a class holding a member's intended effects, and not its other effects, can be constant up to the net's end; SharedCondition.affecting_member_outside as a corollary of «所经不同则不及», with its owner.",
-    "zh": "唯持一员所意之所缘、不持其余之类能否至网之终有常之见证或律；SharedCondition.affecting_member_outside 作为 «所经不同则不及» 之推论，由其主决。"
+    "en": "A witness or law on whether a class holding a member's intended effects, and not its other effects, can be constant up to the net's end.",
+    "zh": "唯持一员所意之所缘、不持其余之类能否至网之终有常之见证或律。"
   },
   "correspondence": {
     "en": "07 §4.6's steps 3 and 4 in general form; its P2 read as constancy up to the net's end; holding one's effects its P4, read as whose losses count. A first round of philosophical work is in the PF study.",
@@ -178,8 +178,8 @@
     {
       "id": "reach-through-a-shared-condition",
       "detail": {
-        "en": "Its affecting_member_outside is the first law's case.",
-        "zh": "其 affecting_member_outside 为首律之一例。"
+        "en": "Its affecting_member_outside and fed_outside are proved from the first law (GS6).",
+        "zh": "其 affecting_member_outside 与 fed_outside 皆由首律证得（GS6）。"
       }
     },
     {
@@ -270,7 +270,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "4e1c9a39abbd2b090d3bb73be34ebece080791f8d9b84f9247eaa05b796aaafc"
+      "sha256": "9a41058caa626e00e7c25ac9ffc64427e6650c98277f8e5c42f034b0ad6114b7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
@@ -280,7 +280,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "d80e94613c77a552587f7a5601cfa6a3a81dee23bd82aa4ccd20588e96d0a0e1"
+      "sha256": "a18b6c51b4be8645c41a49ec16ca5d0bc081c435376ba8dfd8f9a717fbe13e5b"
     }
   ],
   "proof_bindings": [
@@ -296,6 +296,10 @@
     {
       "en": "25 October 2026: added (PF), finishing 07 §4.6's steps 3 and 4; study section 402.",
       "zh": "2026年10月25日：新增（PF），完成 07 §4.6 之第三、四步；研究第 402 节。"
+    },
+    {
+      "en": "25 October 2026: SharedCondition.affecting_member_outside and fed_outside proved from «所经不同则不及» in Becoming.GrammarCases, which now imports this module (GS6); the corollary leaves the next step; study section 404.",
+      "zh": "2026年10月25日：SharedCondition.affecting_member_outside 与 fed_outside 于 Becoming.GrammarCases 中由 «所经不同则不及» 证得，彼模块今引此模块（GS6）；此推论去后续；研究第 404 节。"
     }
   ]
 }

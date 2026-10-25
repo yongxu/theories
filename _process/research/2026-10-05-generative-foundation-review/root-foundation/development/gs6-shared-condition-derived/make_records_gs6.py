@@ -86,11 +86,12 @@ r['validation_scope'] = {
     'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarCases，{len(names)} 项声明中 {theorems} 条定理，'
           f'公理报告皆空；本记录引 SharedCondition 命名空间之 {len(in_namespace)} 项。作者审查见研究第 394 与 {N} 节。'}
 r['next_delta'] = {
-    'en': 'A core for a class narrower than the one whose line reaches the other family through the condition '
-          '(ThirdAffects.finer_class_reaches and FiniteSharedCondition give such classes in other nets; neither computes '
-          'a core); amounts and depletion.',
-    'zh': '较一为窄、其线经条件及于他家之类之核（ThirdAffects.finer_class_reaches 与 FiniteSharedCondition 于他网给此类；'
-          '皆不算其核）；量与耗竭。'}
+    'en': 'In this net, a class narrower than the one whose line reaches the other family through the condition, with '
+          'its core (other nets give such classes: ThirdThing.fixed_class_reaches, the class of being joined, constant, '
+          'its core continuing the first step; ThirdAffects.finer_class_reaches; FiniteSharedCondition); amounts and '
+          'depletion.',
+    'zh': '于此网中，较一为窄、其线经条件及于他家之类，连同其核（他网给此类：ThirdThing.fixed_class_reaches，相连之类，'
+          '有常，其核续首步；ThirdAffects.finer_class_reaches；FiniteSharedCondition）；量与耗竭。'}
 r['history'].append({
     'en': f'25 October 2026: both negative results proved from «所经不同则不及» (GS6, board rule 9, on PF\'s proposal and '
           f'its review); affecting_member_step, affecting_member_stays, fed_step and fed_stays replaced by firstFamily, '
@@ -111,8 +112,9 @@ p = json.loads(path.read_text(encoding='utf-8'))
 cut = {'en': '; SharedCondition.affecting_member_outside as a corollary of «所经不同则不及», with its owner',
        'zh': '；SharedCondition.affecting_member_outside 作为 «所经不同则不及» 之推论，由其主决'}
 for lang, s in cut.items():
-    assert p['next_delta'][lang].count(s) <= 1
+    assert p['next_delta'][lang].count(s) == 1, (lang, 'the corollary clause was reworded; edit by hand')
     p['next_delta'][lang] = p['next_delta'][lang].replace(s, '')
+    assert 'affecting_member_outside' not in p['next_delta'][lang]
 rel = next(x for x in p['related'] if x['id'] == 'reach-through-a-shared-condition')
 if rel['detail']['en'] == "Its affecting_member_outside is the first law's case.":
     rel['detail'] = {'en': "Its affecting_member_outside and fed_outside are proved from the first law (GS6).",
@@ -130,3 +132,42 @@ for x in p['references']:
         x['sha256'] = sha(CH7)
 path.write_text(json.dumps(p, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('record: what-a-line-holds-and-a-regularity-takes-in, the corollary done')
+
+# the three records whose proofs changed, statements and declarations unchanged: dependency details and a history line
+extra = {
+    'the-source-texts-test-systems': ('continuation-relative-to-a-class',
+        '«有常», «核», «根», «亡于核下不变», «类有常当且仅当含于核», «无环», «异».',
+        ('«有常», «核», «根», «亡于核下不变», «类有常当且仅当含于核», «无环», «异», «线内同类», «及之单调».',
+         '«有常»、«核»、«根»、«亡于核下不变»、«类有常当且仅当含于核»、«无环»、«异»、«线内同类»、«及之单调»。'),
+        ('TwoLines.line_in_family', '«线内同类»')),
+    'reach-past-ones-own-end': ('continuation-relative-to-a-class',
+        '«有常», «核», «类有常当且仅当含于核», «一为类».',
+        ('«有常», «核», «类有常当且仅当含于核», «一为类», «线内同类».',
+         '«有常»、«核»、«类有常当且仅当含于核»、«一为类»、«线内同类»。'),
+        ('LineOfDescent.Endless.member_line', '«线内同类»')),
+}
+for rid, (dep_id, old_en, (en, zh), (decl, law)) in extra.items():
+    path = RECORDS / f'{rid}.json'
+    q = json.loads(path.read_text(encoding='utf-8'))
+    dep = next(d for d in q['dependencies'] if d['id'] == dep_id)
+    assert dep['detail']['en'] == old_en, rid
+    dep['detail'] = {'en': en, 'zh': zh}
+    q['history'].append({
+        'en': f'25 October 2026: {decl} proved by {law} (GS6, board rule 9), its statement unchanged; the dependency '
+              f'detail names the law; study section {N}.',
+        'zh': f'2026年10月25日：{decl} 由 {law} 证得（GS6，看板第九条），陈述不变；依赖之说明列此律；研究第 {N} 节。'})
+    path.write_text(json.dumps(q, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print('record:', rid, 'dependency detail and history')
+path = RECORDS / 'the-class-of-being-joined.json'
+q = json.loads(path.read_text(encoding='utf-8'))
+assert not any(d['id'] == 'wen-in-the-grammar' for d in q['dependencies'])
+q['dependencies'].append({'id': 'wen-in-the-grammar', 'relation': 'formal-reuse',
+                          'detail': {'en': 'sameValue, sameValue_class.', 'zh': 'sameValue、sameValue_class。'}})
+q['history'].append({
+    'en': f'25 October 2026: ThirdThing.family_keeps_third proved by «续即缘当且仅当含族» (GS6, board rule 9), its statement '
+          f'unchanged; the dependency on wen-in-the-grammar (sameValue, sameValue_class), which ThirdAffects already used, '
+          f'recorded; study section {N}.',
+    'zh': f'2026年10月25日：ThirdThing.family_keeps_third 由 «续即缘当且仅当含族» 证得（GS6，看板第九条），陈述不变；'
+          f'记其对 wen-in-the-grammar 之依赖（sameValue、sameValue_class，ThirdAffects 已用之）；研究第 {N} 节。'})
+path.write_text(json.dumps(q, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print('record: the-class-of-being-joined dependency and history')

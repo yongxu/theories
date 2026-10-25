@@ -3305,8 +3305,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and the one, constant, its core going on through each birth, the other family not reached
   (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
   reaches the other's through it under the one, not under "a member or not"; where they only feed
-  from it, under no relation (`SharedCondition`, board item GS4; both of these derived from
-  `«所经不同则不及»`, board item GS6). A third thing joined to nothing lies
+  from it, under no relation (`SharedCondition`, board item GS4; the two negative results, under
+  "a member or not" and where the members only feed from it, derived from `«所经不同则不及»`, board
+  item GS6). A third thing joined to nothing lies
   outside the class of being joined; one affecting the condition is left out by a finer constant class
   that still reaches; one the condition feeds is taken in by every constant class holding a member
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread

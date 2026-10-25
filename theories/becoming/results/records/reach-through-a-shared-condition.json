@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T22:42:37+00:00",
+  "reviewed_at_utc": "2026-10-25T08:12:13+00:00",
   "statement": {
     "en": "In witnesses of two family lines, one line's future reaches the other's along 缘 through a condition its members affect and that feeds the other, under the one and not under the class \"a member or not\"; through a common source none of them affects, under no relation.",
     "zh": "于二家族之线之见证中：一线成员所影响、而养他线之条件，使一线之未来沿缘及于他线，于一之下而不于「成员与否」之类下；无一成员影响之共源，则于任何关系下皆不及。"
@@ -28,8 +28,8 @@
       "zh": "于「成员与否」之类下（二家成员同类，条件别于成员），自首家首成员之线不及次家之任何成员。",
       "declarations": [
         "Becoming.SharedCondition.affecting_member_outside",
-        "Becoming.SharedCondition.affecting_member_stays",
-        "Becoming.SharedCondition.affecting_member_step",
+        "Becoming.SharedCondition.firstFamily",
+        "Becoming.SharedCondition.first_left_into_condition",
         "Becoming.SharedCondition.living"
       ]
     },
@@ -39,8 +39,8 @@
       "declarations": [
         "Becoming.SharedCondition.fed",
         "Becoming.SharedCondition.fed_outside",
-        "Becoming.SharedCondition.fed_stays",
-        "Becoming.SharedCondition.fed_step"
+        "Becoming.SharedCondition.firstFamily",
+        "Becoming.SharedCondition.first_never_left"
       ]
     }
   ],
@@ -62,8 +62,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "A class narrower than the one whose line reaches the other family, a core, or amounts and depletion.",
-      "zh": "较一为窄而其线及于他家之类、核，或量与耗竭。",
+      "en": "In this net, a class narrower than the one whose line reaches the other family, or a core; amounts and depletion.",
+      "zh": "于此网中，较一为窄而其线及于他家之类，或核；量与耗竭。",
       "kind": "scope"
     },
     {
@@ -82,12 +82,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T224011.475686Z): Becoming.GrammarCases, 29 theorems in 48 declarations, every declaration with an empty axiom report; this record cites the 11 of namespace SharedCondition. Author review in study section 394.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T224011.475686Z）：Becoming.GrammarCases，48 项声明中 29 条定理，公理报告皆空；本记录引 SharedCondition 命名空间之 11 项。作者审查见研究第 394 节。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T080929.528151Z): Becoming.GrammarCases, 40 theorems in 68 declarations, every declaration with an empty axiom report; this record cites the 10 of namespace SharedCondition. Author review in study sections 394 and 404.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T080929.528151Z）：Becoming.GrammarCases，68 项声明中 40 条定理，公理报告皆空；本记录引 SharedCondition 命名空间之 10 项。作者审查见研究第 394 与 404 节。"
   },
   "next_delta": {
-    "en": "A class strictly between a member's and the one whose line reaches the other family through the condition, with its core; the general form of the member-class result for any class holding the condition apart from the members.",
-    "zh": "严在成员之类与一之间、其线经条件及于他家之类，连同其核；成员之类之结果对凡别条件于成员之类之一般形式。"
+    "en": "In this net, a class narrower than the one whose line reaches the other family through the condition, with its core (other nets give such classes: ThirdThing.fixed_class_reaches, the class of being joined, constant, its core continuing the first step; ThirdAffects.finer_class_reaches; FiniteSharedCondition); amounts and depletion.",
+    "zh": "于此网中，较一为窄、其线经条件及于他家之类，连同其核（他网给此类：ThirdThing.fixed_class_reaches，相连之类，有常，其核续首步；ThirdAffects.finer_class_reaches；FiniteSharedCondition）；量与耗竭。"
   },
   "correspondence": {
     "en": "PW NOTE §7 item 4: its first alternative answered at the one; its second for a condition the members do not affect.",
@@ -104,8 +104,8 @@
       "id": "continuation-relative-to-a-class",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«续», «相续», «一».",
-        "zh": "«续»、«相续»、«一»。"
+        "en": "«续», «相续», «一», «一为类», «及之单调».",
+        "zh": "«续»、«相续»、«一»、«一为类»、«及之单调»。"
       }
     },
     {
@@ -122,6 +122,14 @@
       "detail": {
         "en": "sameValue, sameValue_class.",
         "zh": "sameValue、sameValue_class。"
+      }
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«所经不同则不及», by which both negative results are proved.",
+        "zh": "«所经不同则不及»，二否定之结果皆由之而证。"
       }
     }
   ],
@@ -149,43 +157,36 @@
         "Becoming.SharedCondition.Occ",
         "Becoming.SharedCondition.affecting",
         "Becoming.SharedCondition.affecting_member_outside",
-        "Becoming.SharedCondition.affecting_member_stays",
-        "Becoming.SharedCondition.affecting_member_step",
         "Becoming.SharedCondition.affecting_reaches_other",
         "Becoming.SharedCondition.fed",
         "Becoming.SharedCondition.fed_outside",
-        "Becoming.SharedCondition.fed_stays",
-        "Becoming.SharedCondition.fed_step",
+        "Becoming.SharedCondition.firstFamily",
+        "Becoming.SharedCondition.first_left_into_condition",
+        "Becoming.SharedCondition.first_never_left",
         "Becoming.SharedCondition.living"
       ],
-      "sha256": "756728bd0d26a2dc26949eb85be3c55f6bb8ec875a45608b877d68a251523bda"
+      "sha256": "20f9a503ab4215d1691877881d8d56a9c67304e1f28624691b5de42b541d8193"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "role": "receipt",
-      "sha256": "bc17fbb7cec7b7fc8faa026e6c6b6f84fbd33743ad61c05150ff32fd8238b82b"
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "fb50764892a348f25e42abb965690b8c8ba852ad68a64ba79b53c0037095a9c9"
+      "sha256": "9a41058caa626e00e7c25ac9ffc64427e6650c98277f8e5c42f034b0ad6114b7"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "a29512c66c458a2cb425316c80ee980c251526114f5c9304a0f2a1a300f1a10a"
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
-      "role": "receipt",
-      "sha256": "80395060726ea826a45ba114e74723738b07cb60413ed8c0366f81e139ffb1fe",
-      "declarations": []
+      "sha256": "a18b6c51b4be8645c41a49ec16ca5d0bc081c435376ba8dfd8f9a717fbe13e5b"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCases",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -195,6 +196,10 @@
     {
       "en": "24 October 2026: added (GS4), PW's item 4; study section 394.",
       "zh": "2026年10月24日：新增（GS4），PW 之第四项；研究第 394 节。"
+    },
+    {
+      "en": "25 October 2026: both negative results proved from «所经不同则不及» (GS6, board rule 9, on PF's proposal and its review); affecting_member_step, affecting_member_stays, fed_step and fed_stays replaced by firstFamily, first_left_into_condition and first_never_left, statements unchanged; the next step's general form of the member-class result is that law (Becoming.GrammarPath), not restated for this net, and leaves the next step; does_not_show scoped to this net; study section 404.",
+      "zh": "2026年10月25日：二否定之结果皆由 «所经不同则不及» 证得（GS6，看板第九条，依 PF 之提议及其审查）；affecting_member_step、affecting_member_stays、fed_step、fed_stays 代以 firstFamily、first_left_into_condition、first_never_left，陈述不变；后续之「成员之类之结果之一般形式」即此律（Becoming.GrammarPath），不于此网重述，故去之；does_not_show 限于此网；研究第 404 节。"
     }
   ]
 }

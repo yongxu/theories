@@ -55,6 +55,7 @@ PW NOTE §7 item 5, in part: the class of being joined holds the living with the
 ### Dependencies
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «同族», «同族为类», «一», «有常之逐点», «类有常当且仅当含于核», «及之单调».
+- **formal-reuse**: [wen-in-the-grammar](wen-in-the-grammar.md). sameValue, sameValue_class.
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The condition along the net, read with the class of being joined.
 - related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). The two families and their shared condition, here with a third thing joined three ways.
 
@@ -68,6 +69,7 @@ PW NOTE §7 item 5, in part: the class of being joined holds the living with the
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 
 Aliases: `The class of being joined`, `相连之类`, `Becoming.«续即缘当且仅当含族»`
 
@@ -75,6 +77,7 @@ Aliases: `The class of being joined`, `相连之类`, `Becoming.«续即缘当�
 ### History
 
 - 24 October 2026: added (GS5), PW's item 5; study section 395.
+- 25 October 2026: ThirdThing.family_keeps_third proved by «续即缘当且仅当含族» (GS6, board rule 9), its statement unchanged; the dependency on wen-in-the-grammar (sameValue, sameValue_class), which ThirdAffects already used, recorded; study section 404.
 
 </details>
 

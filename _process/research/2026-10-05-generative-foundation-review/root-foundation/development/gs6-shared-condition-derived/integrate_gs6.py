@@ -5,6 +5,7 @@ SharedCondition.fed_outside from «所经不同则不及» (Becoming.GrammarPath
 LineOfDescent.Endless.member_line from «线内同类», ThirdThing.family_keeps_third from «续即缘当且仅当含族». Say so in the
 root module's bullets for GrammarCases and GrammarPath and in their package README rows (EN, ZH); the root bullets of
 GrammarMap and GrammarTesting, which GS2 and GS3 made importers of, no longer call them leaves.
+Run before lean_docs_gs6.py, which revises the GrammarCases bullet written here (second review).
 usage (from the checkout root of the landing worktree): python3 -B <kit>/integrate_gs6.py"""
 import shutil
 from pathlib import Path

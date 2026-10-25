@@ -3447,11 +3447,6 @@
    "category": "model-witness",
    "reason": "the core of descent goes on for good from each birth: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
   },
-  "Becoming.LineOfDescent.Endless.member_class": {
-   "module": "Becoming.GrammarScope",
-   "category": "support",
-   "reason": "a one-line check that same member is a class"
-  },
   "Becoming.LineOfDescent.Endless.descent_no_outside": {
    "module": "Becoming.GrammarScope",
    "category": "model-witness",
@@ -3545,22 +3540,17 @@
   "Becoming.SharedCondition.affecting_member_outside": {
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
-   "reason": "under a member or not the other family is not reached: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+   "reason": "under a member or not the other family is not reached: a witness of two lines sharing a condition, proved from «所经不同则不及» on its supplied net (Becoming.GrammarCases, GS4)"
   },
   "Becoming.SharedCondition.fed_outside": {
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
-   "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, computed on its supplied net (Becoming.GrammarCases, GS4)"
+   "reason": "from a condition no member affects, no relation reaches the other family: a witness of two lines sharing a condition, proved from «所经不同则不及» on its supplied net (Becoming.GrammarCases, GS4)"
   },
   "Becoming.«族之所及即一之所及»": {
    "module": "Becoming.GrammarScope",
    "category": "general-structure",
    "reason": "the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
-  },
-  "Becoming.«续即缘当且仅当含族»": {
-   "module": "Becoming.GrammarScope",
-   "category": "general-structure",
-   "reason": "the finest class with 缘 as its continuation: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
   },
   "Becoming.«遍有后则核之所及即一之所及»": {
    "module": "Becoming.GrammarScope",
@@ -3672,25 +3662,20 @@
    "category": "general-structure",
    "reason": "for a class, what shares a position under the two-way core shares abiding; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
   },
-  "Becoming.«所经不同则不及»": {
-   "module": "Becoming.GrammarPath",
-   "category": "general-structure",
-   "reason": "nothing beyond is reached where the class holds none of what the line must pass: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
-  },
   "Becoming.«常闭则所缘同类»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
-   "reason": "under a constant class, what is alike to a member whose effects it holds conditions only what is alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+   "reason": "under a constant class, what is alike to a member whose effects it holds conditions only what is alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (of this module, Becoming.GrammarCases uses only «所经不同则不及», since GS6)"
   },
   "Becoming.«常闭则所及皆及»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
-   "reason": "under a constant class, a line reaching what is alike to such a member reaches all that follows: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+   "reason": "under a constant class, a line reaching what is alike to such a member reaches all that follows: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (of this module, Becoming.GrammarCases uses only «所经不同则不及», since GS6)"
   },
   "Becoming.«常类之闭当且仅当后皆同类»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
-   "reason": "under constancy, holding a member's effects is equivalent to all downstream being alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+   "reason": "under constancy, holding a member's effects is equivalent to all downstream being alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (of this module, Becoming.GrammarCases uses only «所经不同则不及», since GS6)"
   },
   "Becoming.Unclosed.constant": {
    "module": "Becoming.GrammarPath",

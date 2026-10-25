@@ -52,7 +52,7 @@ PW §4-§5: the self as a line, and whether a living line's core is wider than i
 ### Dependencies
 
 - **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). «守理则不穷», «相续之始有后».
-- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常», «核», «类有常当且仅当含于核», «一为类».
+- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常», «核», «类有常当且仅当含于核», «一为类», «线内同类».
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «所及», «相续之续».
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The condition on the root, of which this is the question of the class.
 
@@ -68,6 +68,7 @@ PW §4-§5: the self as a line, and whether a living line's core is wider than i
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 
 Aliases: `Past one's own end`, `过己之亡`, `Becoming.«过亡而续»`
 
@@ -75,6 +76,7 @@ Aliases: `Past one's own end`, `过己之亡`, `Becoming.«过亡而续»`
 ### History
 
 - 24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.
+- 25 October 2026: LineOfDescent.Endless.member_line proved by «线内同类» (GS6, board rule 9), its statement unchanged; the dependency detail names the law; study section 404.
 
 </details>
 

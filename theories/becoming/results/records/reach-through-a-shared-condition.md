@@ -11,8 +11,8 @@
 ## Laws
 
 1. Two family lines and a condition feeding both: where the members affect it, each a condition of its next state, the line under the one from the first family's first member reaches the second family's member two generations on, through the condition. (`Becoming.SharedCondition.Occ`, `Becoming.SharedCondition.affecting`, `Becoming.SharedCondition.affecting_reaches_other`)
-2. Under the class "a member or not", which holds both families' members alike and the condition apart, the line from the first family's first member reaches no member of the second family. (`Becoming.SharedCondition.affecting_member_outside`, `Becoming.SharedCondition.affecting_member_stays`, `Becoming.SharedCondition.affecting_member_step`, `Becoming.SharedCondition.living`)
-3. Where the members only feed from a condition they do not affect, the line from the first family's first member, under any relation, reaches no member of the second family. (`Becoming.SharedCondition.fed`, `Becoming.SharedCondition.fed_outside`, `Becoming.SharedCondition.fed_stays`, `Becoming.SharedCondition.fed_step`)
+2. Under the class "a member or not", which holds both families' members alike and the condition apart, the line from the first family's first member reaches no member of the second family. (`Becoming.SharedCondition.affecting_member_outside`, `Becoming.SharedCondition.firstFamily`, `Becoming.SharedCondition.first_left_into_condition`, `Becoming.SharedCondition.living`)
+3. Where the members only feed from a condition they do not affect, the line from the first family's first member, under any relation, reaches no member of the second family. (`Becoming.SharedCondition.fed`, `Becoming.SharedCondition.fed_outside`, `Becoming.SharedCondition.firstFamily`, `Becoming.SharedCondition.first_never_left`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -24,7 +24,7 @@
 
 - That this holds of every net, or that every later member of the other line is reached: the witness gives one pair.
 - That self-concern is held along a class holding the shared condition: the open de se question.
-- A class narrower than the one whose line reaches the other family, a core, or amounts and depletion.
+- In this net, a class narrower than the one whose line reaches the other family, or a core; amounts and depletion.
 - That an actual commons puts those it feeds on the line of whatever acts on it.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -32,14 +32,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261023T224011.475686Z): Becoming.GrammarCases, 29 theorems in 48 declarations, every declaration with an empty axiom report; this record cites the 11 of namespace SharedCondition. Author review in study section 394.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T080929.528151Z): Becoming.GrammarCases, 40 theorems in 68 declarations, every declaration with an empty axiom report; this record cites the 10 of namespace SharedCondition. Author review in study sections 394 and 404.
 
 Canonical source: [GrammarCases.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-A class strictly between a member's and the one whose line reaches the other family through the condition, with its core; the general form of the member-class result for any class holding the condition apart from the members.
+In this net, a class narrower than the one whose line reaches the other family through the condition, with its core (other nets give such classes: ThirdThing.fixed_class_reaches, the class of being joined, constant, its core continuing the first step; ThirdAffects.finer_class_reaches; FiniteSharedCondition); amounts and depletion.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -51,9 +51,10 @@ PW NOTE §7 item 4: its first alternative answered at the one; its second for a 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «一».
+- **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «一», «一为类», «及之单调».
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «所及».
 - **formal-reuse**: [wen-in-the-grammar](wen-in-the-grammar.md). sameValue, sameValue_class.
+- **formal-reuse**: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). «所经不同则不及», by which both negative results are proved.
 - related, not a proved adapter: [the-source-texts-test-systems](the-source-texts-test-systems.md). Two family lines that share nothing reach nothing of each other (TwoLines).
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). The reach past one's own end along a line under a class.
 
@@ -62,11 +63,10 @@ PW NOTE §7 item 4: its first alternative answered at the one; its second for a 
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [GrammarCases.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean) | `Becoming.SharedCondition.Occ`, `Becoming.SharedCondition.affecting`, `Becoming.SharedCondition.affecting_member_outside`, `Becoming.SharedCondition.affecting_member_stays`, `Becoming.SharedCondition.affecting_member_step`, `Becoming.SharedCondition.affecting_reaches_other`, `Becoming.SharedCondition.fed`, `Becoming.SharedCondition.fed_outside`, `Becoming.SharedCondition.fed_stays`, `Becoming.SharedCondition.fed_step`, `Becoming.SharedCondition.living` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T224011.475686Z/verification.json) | — |
+| proof | [GrammarCases.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean) | `Becoming.SharedCondition.Occ`, `Becoming.SharedCondition.affecting`, `Becoming.SharedCondition.affecting_member_outside`, `Becoming.SharedCondition.affecting_reaches_other`, `Becoming.SharedCondition.fed`, `Becoming.SharedCondition.fed_outside`, `Becoming.SharedCondition.firstFamily`, `Becoming.SharedCondition.first_left_into_condition`, `Becoming.SharedCondition.first_never_left`, `Becoming.SharedCondition.living` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
 
 Aliases: `One line reaching another through a shared condition`, `经共之条件一线及于他线`, `Becoming.SharedCondition.affecting_reaches_other`
 
@@ -74,7 +74,8 @@ Aliases: `One line reaching another through a shared condition`, `经共之条�
 ### History
 
 - 24 October 2026: added (GS4), PW's item 4; study section 394.
+- 25 October 2026: both negative results proved from «所经不同则不及» (GS6, board rule 9, on PF's proposal and its review); affecting_member_step, affecting_member_stays, fed_step and fed_stays replaced by firstFamily, first_left_into_condition and first_never_left, statements unchanged; the next step's general form of the member-class result is that law (Becoming.GrammarPath), not restated for this net, and leaves the next step; does_not_show scoped to this net; study section 404.
 
 </details>
 
-Documentary review UTC: `2026-10-23T22:42:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T08:12:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

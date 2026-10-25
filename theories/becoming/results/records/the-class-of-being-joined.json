@@ -141,6 +141,14 @@
         "en": "«同族», «同族为类», «一», «有常之逐点», «类有常当且仅当含于核», «及之单调».",
         "zh": "«同族»、«同族为类»、«一»、«有常之逐点»、«类有常当且仅当含于核»、«及之单调»。"
       }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "sameValue, sameValue_class.",
+        "zh": "sameValue、sameValue_class。"
+      }
     }
   ],
   "related": [
@@ -172,7 +180,7 @@
         "Becoming.«遍有后则核之所及即一之所及»",
         "Becoming.«遍有后则缘在族核»"
       ],
-      "sha256": "8ee86ef22f31682a00b708252539b8ba2e15f61ec07d573e5132d320a36fec30"
+      "sha256": "c197a5e999ad41115de1899f1b368d756d37dd95eeed41e738fec33e28215348"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
@@ -200,7 +208,7 @@
         "Becoming.ThirdThing.third",
         "Becoming.ThirdThing.total"
       ],
-      "sha256": "756728bd0d26a2dc26949eb85be3c55f6bb8ec875a45608b877d68a251523bda"
+      "sha256": "20f9a503ab4215d1691877881d8d56a9c67304e1f28624691b5de42b541d8193"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
@@ -216,19 +224,25 @@
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
       "sha256": "a29512c66c458a2cb425316c80ee980c251526114f5c9304a0f2a1a300f1a10a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "role": "receipt",
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCases",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -238,6 +252,10 @@
     {
       "en": "24 October 2026: added (GS5), PW's item 5; study section 395.",
       "zh": "2026年10月24日：新增（GS5），PW 之第五项；研究第 395 节。"
+    },
+    {
+      "en": "25 October 2026: ThirdThing.family_keeps_third proved by «续即缘当且仅当含族» (GS6, board rule 9), its statement unchanged; the dependency on wen-in-the-grammar (sameValue, sameValue_class), which ThirdAffects already used, recorded; study section 404.",
+      "zh": "2026年10月25日：ThirdThing.family_keeps_third 由 «续即缘当且仅当含族» 证得（GS6，看板第九条），陈述不变；记其对 wen-in-the-grammar 之依赖（sameValue、sameValue_class，ThirdAffects 已用之）；研究第 404 节。"
     }
   ]
 }
