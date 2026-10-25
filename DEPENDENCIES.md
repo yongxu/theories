@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-431 registered results: 401 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 986 curated edges join 381 results to the results they draw on.
+432 registered results: 402 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 987 curated edges join 382 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -367,6 +367,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-bounds-offspring-numbers][] ← <a id="what-bounds-offspring-numbers--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-bounds-offspring-numbers--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-discrete-steps-and-whole-amounts-represent][] ← <a id="what-discrete-steps-and-whole-amounts-represent--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][]
+- [what-leaves-a-class-follows-its-line][] ← <a id="what-leaves-a-class-follows-its-line--what-a-line-holds-and-a-regularity-takes-in"></a>[what-a-line-holds-and-a-regularity-takes-in][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-position-reads][] ← <a id="what-position-reads--relative-position-is-zero-sum"></a>[relative-position-is-zero-sum][]
 - [what-self-concern-alone-ranks][] ← <a id="what-self-concern-alone-ranks--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][] · <a id="what-self-concern-alone-ranks--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][]
@@ -781,6 +782,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-bounds-offspring-numbers]: theories/becoming/results/records/what-bounds-offspring-numbers.md
 [what-dependence-alone-carries-of-a-level]: theories/becoming/results/records/what-dependence-alone-carries-of-a-level.md
 [what-discrete-steps-and-whole-amounts-represent]: theories/becoming/results/records/what-discrete-steps-and-whole-amounts-represent.md
+[what-leaves-a-class-follows-its-line]: theories/becoming/results/records/what-leaves-a-class-follows-its-line.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-position-reads]: theories/becoming/results/records/what-position-reads.md
 [what-self-concern-alone-ranks]: theories/becoming/results/records/what-self-concern-alone-ranks.md

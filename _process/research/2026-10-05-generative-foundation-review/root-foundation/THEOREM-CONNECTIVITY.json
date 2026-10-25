@@ -1,11 +1,11 @@
 {
- "commit": "b88f8ade777b758708d4d3c090608fa9151b661c",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T080929.528151Z",
+ "commit": "843c4ffec6e7db2e2c22bedb61ebb2a0d7e192f1",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261025T103820.622467Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 322,
- "constants": 44133,
- "spine_theorems": 14724,
+ "constants": 44210,
+ "spine_theorems": 14734,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 186,
   "used by a theorem on the base": 5240,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1208,
+  "apart: own vocabulary": 1218,
   "apart: prelude-only statement": 97
  },
- "apart": 1305,
+ "apart": 1315,
  "apart_general_structure_by_design": 504,
- "apart_otherwise": 801,
+ "apart_otherwise": 811,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 91,
   "of them on the base": 72,
@@ -73,10 +73,10 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 774,
- "apart_roots": 775,
+ "apart_used_by_nothing": 778,
+ "apart_roots": 779,
  "apart_roots_by_category": {
-  "model-witness": 361,
+  "model-witness": 365,
   "support": 112,
   "general-structure": 269,
   "restates": 13,
@@ -182,6 +182,10 @@
    47,
    78
   ],
+  "Becoming.GrammarPath": [
+   46,
+   46
+  ],
   "Becoming.GrammarMap": [
    38,
    39
@@ -193,10 +197,6 @@
   "Becoming.GrammarScope": [
    37,
    37
-  ],
-  "Becoming.GrammarPath": [
-   36,
-   36
   ],
   "Becoming.RuleShaping": [
    35,
@@ -694,8 +694,8 @@
  "rings": {
   "core": {
    "modules": 306,
-   "theorems": 13964,
-   "apart": 1211,
+   "theorems": 13974,
+   "apart": 1221,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2787,
@@ -704,7 +704,7 @@
     "proof through a base family": 175,
     "used by a theorem on the base": 4881,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1115,
+    "apart: own vocabulary": 1125,
     "apart: prelude-only statement": 96
    }
   },
@@ -822,7 +822,7 @@
   "proof through a base family": 4,
   "used by a theorem on the base": 11,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 29
+  "apart: own vocabulary": 30
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -986,6 +986,12 @@
    "id": "what-discrete-steps-and-whole-amounts-represent",
    "modules": [
     "Becoming.WholeAmounts"
+   ]
+  },
+  {
+   "id": "what-leaves-a-class-follows-its-line",
+   "modules": [
+    "Becoming.GrammarPath"
    ]
   },
   {
@@ -15716,6 +15722,9 @@
   "Becoming.«常闭则后皆续»": "apart: own vocabulary",
   "Becoming.«至终常闭则所及皆及»": "apart: own vocabulary",
   "Becoming.«常闭则所及皆及»": "apart: own vocabulary",
+  "Becoming.«出类随行»": "apart: own vocabulary",
+  "Becoming.«出类随线»": "apart: own vocabulary",
+  "Becoming.«出类不随则不至终有常»": "apart: own vocabulary",
   "Becoming.«至终常类之闭当且仅当后皆同类»": "apart: own vocabulary",
   "Becoming.«常类之闭当且仅当后皆同类»": "apart: own vocabulary",
   "Becoming.Unclosed.same_class": "apart: own vocabulary",
@@ -15741,6 +15750,13 @@
   "Becoming.FiniteSharedCondition.member_not_constant_to_end": "apart: own vocabulary",
   "Becoming.FiniteSharedCondition.reaches_other_past_end": "apart: own vocabulary",
   "Becoming.FiniteSharedCondition.fourth_outside": "apart: own vocabulary",
+  "Becoming.CleanStep.own_class": "apart: own vocabulary",
+  "Becoming.CleanStep.not_constant_to_end": "apart: own vocabulary",
+  "Becoming.FiniteWake.own_class": "apart: own vocabulary",
+  "Becoming.FiniteWake.constant_to_end": "apart: own vocabulary",
+  "Becoming.FiniteWake.not_constant": "apart: own vocabulary",
+  "Becoming.FiniteWake.not_held": "apart: own vocabulary",
+  "Becoming.FiniteWake.wake_follows": "apart: own vocabulary",
   "Becoming.Hexagram.same_eq": "used by a theorem on the base",
   "Becoming.Hexagram.same_self": "used by a theorem on the base",
   "Becoming.Hexagram.eq_of_eqb": "used by a theorem on the base",

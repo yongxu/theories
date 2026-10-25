@@ -260,7 +260,7 @@
         "Becoming.«至终常闭则所缘同类»",
         "Becoming.«至终有常»"
       ],
-      "sha256": "63ac06cd24544c4e9e5fa784d2dc887405f3b6dfdffd337e5e244071701e1391"
+      "sha256": "6a4d88db74f10be794ff3ac845fe4e297c2ce9d0426b24a902a0516c7a978427"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T060618.754321Z/verification.json",
@@ -270,7 +270,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "9a41058caa626e00e7c25ac9ffc64427e6650c98277f8e5c42f034b0ad6114b7"
+      "sha256": "c5e279a91625efefaab3fd196fd3309a57b99e988eb7821b40236f1893f731c3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
@@ -280,13 +280,19 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "a18b6c51b4be8645c41a49ec16ca5d0bc081c435376ba8dfd8f9a717fbe13e5b"
+      "sha256": "826f886620d87c834c46757a830921144243d1cfbaa518af524cedc180e38f2d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T133822.941968Z/verification.json",
+      "role": "receipt",
+      "sha256": "826571069b65d92fb424e8c0847c41e8d8803607f5858f16bbb9913aaf401a9d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T060618.754321Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T133822.941968Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"

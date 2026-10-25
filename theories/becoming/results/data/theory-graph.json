@@ -5180,6 +5180,18 @@
    "page": "theories/becoming/results/records/what-finitely-many-labels-fix.md"
   },
   {
+   "id": "record:what-leaves-a-class-follows-its-line",
+   "type": "result",
+   "record": "what-leaves-a-class-follows-its-line",
+   "title": "What leaves a class follows its line",
+   "title_zh": "出类者随其线",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-leaves-a-class-follows-its-line.md"
+  },
+  {
    "id": "record:what-pooled-coupling-reaches",
    "type": "result",
    "record": "what-pooled-coupling-reaches",
@@ -9007,7 +9019,7 @@
    "type": "module",
    "name": "Becoming.GrammarPath",
    "level": "L1",
-   "theorems": 36,
+   "theorems": 46,
    "region": "unassigned",
    "base": "",
    "on_grammar": true,
@@ -28556,6 +28568,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-what-a-line-holds-and-a-regularity-takes-in"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-leaves-a-class-follows-its-line",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-leaves-a-class-follows-its-line"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
@@ -49995,6 +50013,21 @@
    "type": "related"
   },
   {
+   "from": "record:what-leaves-a-class-follows-its-line",
+   "to": "module:Becoming.GrammarPath",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-leaves-a-class-follows-its-line",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "related"
+  },
+  {
+   "from": "record:what-leaves-a-class-follows-its-line",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:what-pooled-coupling-reaches",
    "to": "module:Becoming.Clearing",
    "type": "proved-in"
@@ -53817,6 +53850,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-line-holds-and-a-regularity-takes-in",
    "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-leaves-a-class-follows-its-line",
+   "to": "record:what-leaves-a-class-follows-its-line",
    "type": "states"
   },
   {

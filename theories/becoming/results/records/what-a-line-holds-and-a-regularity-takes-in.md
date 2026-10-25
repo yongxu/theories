@@ -59,7 +59,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
 
-**Used by:** [reach-through-a-shared-condition](reach-through-a-shared-condition.md)
+**Used by:** [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [what-leaves-a-class-follows-its-line](what-leaves-a-class-follows-its-line.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -71,6 +71,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | provenance | [PHILOSOPHY-ROUND-1.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T133822.941968Z/verification.json) | — |
 
 Aliases: `What a line must hold, and what a regularity takes in`, `线所必含，与理之所纳`, `Becoming.«常闭则后皆续»`, `Becoming.«所经必同»`, `Becoming.«至终有常»`
 

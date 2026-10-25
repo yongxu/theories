@@ -2016,6 +2016,11 @@
    "base": "old-base",
    "note": "Labels"
   },
+  "what-leaves-a-class-follows-its-line": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarPath: under constancy up to the net's end, what leaves the class follows each alike step"
+  },
   "what-pooled-coupling-reaches": {
    "region": "collective",
    "base": "old-base",
