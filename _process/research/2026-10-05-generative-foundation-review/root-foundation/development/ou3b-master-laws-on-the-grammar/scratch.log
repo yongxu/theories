@@ -1,0 +1,36 @@
+$ cd experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree Becoming.GrammarLaws Becoming.GrammarLawsInstances
+Sun Oct 25 15:45:06 UTC 2026
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree",
+  "modules": 96,
+  "ran": [],
+  "reused": 98,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 77,
+      "declarations": 91,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarLawsInstances": {
+      "theorems": 38,
+      "declarations": 39,
+      "with_axioms": {}
+    }
+  }
+}
+--- correspondence check (scratch tree with OU3bCheck.lean: 14 examples, each original = its _by_grammar theorem by rfl)
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/568486ee-fafd-4bf5-b667-a3da885f62a8/scratchpad/ou3bcheck",
+  "modules": 112,
+  "ran": [],
+  "reused": 113,
+  "unclean": [],
+  "audits": {
+    "Becoming.OU3bCheck": {
+      "theorems": 1,
+      "declarations": 1,
+      "with_axioms": {}
+    }
+  }
+}

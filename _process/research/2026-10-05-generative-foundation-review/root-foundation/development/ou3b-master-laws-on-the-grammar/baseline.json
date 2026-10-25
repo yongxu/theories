@@ -1,0 +1,983 @@
+{
+ "central_declarations": 127,
+ "reaching_the_grammar": 0,
+ "by_master_law_resting_and_reaching_grammar": {
+  "closure": [
+   16,
+   0
+  ],
+  "balance": [
+   52,
+   0
+  ],
+  "return": [
+   14,
+   0
+  ],
+  "order": [
+   9,
+   0
+  ],
+  "lumping": [
+   1,
+   0
+  ]
+ },
+ "anchors_reach_grammar": {
+  "closure": {
+   "Becoming.WithinClosure": false
+  },
+  "balance": {
+   "Becoming.Flow.Balances": false,
+   "Becoming.Flow.BalancesOn": false,
+   "Becoming.balance_over_stretch_on": false
+  },
+  "return": {
+   "Becoming.Branching.Returns": false,
+   "Becoming.Branching.Lossless": false,
+   "Becoming.revisits_within": false,
+   "Becoming.Amounts.rests": false,
+   "Becoming.Amounts.FallsStop": false
+  },
+  "order": {
+   "Becoming.Web.Widens": false,
+   "Becoming.Weighting.WidensOn": false
+  },
+  "lumping": {
+   "Becoming.GoAlikeUnder": false
+  }
+ },
+ "rows": [
+  {
+   "row": "generation",
+   "declaration": "Becoming.Web.Unceasing.rises",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Flow.uptake_needs_replenishment",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "return"
+   ]
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Web.Embodied.replenishes",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Flow.new_beyond_every",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "return"
+   ]
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.onLoop_of_closing",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.restores",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.Balances.renewedBy",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.More.replenishment_unbounded",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "return"
+   ]
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Tolerance.answers_restores_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Viability.kernel_and_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Law.drawn_iff_not_returns",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Law.lossless_iff_returns",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Flow.change_recurs_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.World.balanced_reidentify_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Pace.rule_until_reading",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.Dissipative.opens",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "return"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.continuing_excludes",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.outrun_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Branching.loss_passes_juncture",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RuleCapture.favouring_locks",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.ends_iff_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_broken",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Amounts.rests",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.World.comes_to_rest_unrefuted",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Web.Carries.active_not_recurring",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Listed.coming_of_ceasing",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.CensusWebs.keep_pace",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.Web.roles_supported",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.Dependence.differenceOnlyTogether_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.counterfactual_is_course",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.partForms_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Web.roles_dependent",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Flow.beyond_gives_nothing",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.responses_le_missBound",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Flow.unexcluded_beyond_coupling",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Run.not_fixes_of_untaken",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Ideals.verifiableBy_iff_interior",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Learnable.learnable_iff",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.apart_only_downstream",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.carried_iff_rising",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Valuation.significant_iff",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Valuation.significant_iff_held",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.selfValuation_significant_iff",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.significance_undetermined",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.renewingAt_iff_over_all",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.forced_iff_center",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.WithinMoves.after_course",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Renewable.no_exact_finite_reading",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Web.paths_extension_iff_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "order"
+   ]
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Flow.act_unselected",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.act_courses_unselected",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Flow.Balances.comparison_within_response",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.presupposition_scopes",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Dependence.Overdetermined.only_together",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.roles_alive",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.living_on_reaches",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Flow.descent_reaches",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.selection_within",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.transmitted_supported",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.selected_le",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Web.transmits_at_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.no_new_dependence",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.covariation",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.number_within_take",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.lineage_ends",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionLevels.levels_sized",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.family_childless",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.all_end",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Drift.falls_back",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learning.goAlike_iff_lumped",
+   "grammar": false,
+   "laws": [
+    "lumping"
+   ]
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learnable.learnable_iff",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
+   "grammar": false,
+   "laws": [
+    "return"
+   ]
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Limit.identifies_iff_tracks",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learning.Training.unselected_beyond_data",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Withholding.withholding_spreads",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.SharedCodes.run_agrees_every_start_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.RelativePosition.rise_needs_fall",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.RuleCapture.uniform_locks",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Web.Whole.family_excess_ends",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.unrestricted_iff_livingSignificance",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.widens_iff_retains_adds",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.paths_comparison_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.paths_one_object",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Weighting.widens_iff_every_positive",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.unselected_beyond_coupling",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.optimum_broken_iff",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.optimum_beyond",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.mutual_beyond",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_broken",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.unselected_beyond_pool",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+   "grammar": false,
+   "laws": [
+    "closure"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.act_selected_by_pool",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+   "grammar": false,
+   "laws": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Direction.extension_iff_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Direction.widening_selected_by_pool",
+   "grammar": false,
+   "laws": [
+    "closure",
+    "balance",
+    "order"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "order"
+   ]
+  }
+ ]
+}

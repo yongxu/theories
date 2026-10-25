@@ -1,0 +1,25 @@
+import Becoming.GrammarLawsInstances
+import Becoming.GrammarScope
+
+namespace Becoming
+open Generative
+
+example {X : Type} {rel : X → X → Prop} {f g : X} :
+    (WithinClosure rel f g ↔ «所及» rel «一» f g) := withinClosure_iff_reached_by_grammar
+example : @withinClosure_iff_reached.{0} = @withinClosure_iff_reached_by_grammar.{0} := rfl
+example : @closure_iff_certified.{0} = @closure_iff_certified_by_grammar.{0} := rfl
+example : @Law.drawn_iff_not_returns.{0} = @Law.drawn_iff_not_returns_by_grammar.{0} := rfl
+example : @Law.lossless_iff_returns.{0} = @Law.lossless_iff_returns_by_grammar.{0} := rfl
+example : @RecurrenceRuns.lossless_iff_returns.{0} = @RecurrenceRuns.lossless_iff_returns_by_grammar.{0} := rfl
+example : @constant_of_goAlike.{0,0,0} = @constant_of_goAlike_by_grammar.{0,0,0} := rfl
+example : @goAlike_of_constant.{0,0,0} = @goAlike_of_constant_by_grammar.{0,0,0} := rfl
+example : @Law.sameFuture_of_goAlike.{0,0} = @Law.sameFuture_of_goAlike_by_grammar.{0,0} := rfl
+example : @Web.Widens.not_reverse = @Web.Widens.not_reverse_by_grammar := rfl
+example : @Web.Widens.trans = @Web.Widens.trans_by_grammar := rfl
+example : @Web.Widens.not_keeps = @Web.Widens.not_keeps_by_grammar := rfl
+example : @Web.Widens.not_mixed = @Web.Widens.not_mixed_by_grammar := rfl
+example : @Web.Keeps.not_mixed = @Web.Keeps.not_mixed_by_grammar := rfl
+
+theorem ou3b_check_marker : True := trivial
+
+end Becoming
