@@ -66,7 +66,7 @@ The draft was revised for them on 24 October. The changes:
 ## 5. Order
 
 1. The page drafted now, for Ren's reading.
-2. After MA3 and MA2 land, the standings are fixed and AJ2 is written, handed to this session by AJ's owner on 24 October.
+2. After MA3 and MA2 land, the standings are fixed and AJ2 is written, handed to this session by AJ's owner on 24 October. Done on 25 October 2026: both landed, the page carries their receipts, and AJ2's four readings stand in 07 §6 as decision D68.
    - AJ2 is the four readings for 07's alignment section. Before drafting, check 07's owner rows on the board.
    - Each reading says what it rests on, and none rests on more:
      - help that lowers the cost of shaping gives a rule no less favourable to control, by `lower_c_raises`;

@@ -1,6 +1,6 @@
 # When selection favours control over its own rules
 
-*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) was revised after an independent review and stands at 51 theorems in 57 declarations, in a scratch build that has not yet been through the checker.*
+*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) landed the same day, after an independent review revised its names and three of its claims: 51 theorems in 57 declarations, core receipt `20261025T071027.387418Z`, every axiom report empty. Chapter 7 states the readings below as decision D68.*
 
 ## The question
 
@@ -39,7 +39,7 @@ A selection *reads* a quantity when its signal depends on it, directly or throug
    - **Witness:** one carrier to eight others under a four-to-one rule. Read from the start, the loss turns the course. Read from step 3, it leaves the course locked for good, even though that late reading reads beyond the share (`inTime_turned`, `late_kept`, `late_reads_loss`).
    - **Not shown:** that actual rules are such pools, or that each kind reads in its own favour.
 
-7. **At a step, capacity to shape the rule is selected exactly where what comes back to the shapers alone covers its cost.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
+7. **At a step, capacity to shape the rule is selected exactly where what comes back to the shapers alone covers its cost** ([record](../../../../../../theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md)). Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
    - **At a step.** The rule favours shaping exactly where c ≤ s, and p decides nothing (`RuleShaping.favours_iff`, `favours_alike`).
    - **Nothing back.** Where nothing comes back to the shapers alone and shaping has any cost, the shapers' share falls at every step, whatever is shared (`nothing_back_falls`).
    - **Across a stretch.**
@@ -54,7 +54,7 @@ The known forms of these results are listed under *Closest work*, item by item. 
 
 ## What follows for alignment
 
-These are readings. Each rests on the results named.
+These are readings. Each rests on the results named. The four readings on assistance, obedience, counter-rules and shared rule-making are stated in [chapter 7, §6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#6-what-a-selection-reaches-alignment-with-no-premise) as decision D68.
 
 - **The unit is the joint selection.** Results 1 to 7 hold of any selector. They apply alike to a rater, a training run, a developer, a market or a state, and to any combination of them.
 - **Obedience adds capacity, not reading.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads.

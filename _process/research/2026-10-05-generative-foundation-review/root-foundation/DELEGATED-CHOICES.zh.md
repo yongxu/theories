@@ -98,6 +98,7 @@
 | D62 | 《中华思想脉络》在脊柱上之读与古典之名（10-22） | 依所述范围采用：D47 之三种关系与 D54 之四层施于脉络之全部判断；1,300 条读法各以其范围采用；论题在根上成立，全称形式需定域，作为每一体系之性质不成立；447 个名是用者之间之约定，各写所不带之义；RO 与易传之五处类别改为定域 |
 | D63 | 以文名一历之状经一象逐步之值，与文之认识论（10-22） | 依所述范围采用：文＝一历之状经一象逐步之值（Parting.course、Learnable.course），文同＝Law.SameFuture，往是文之前段；文之认识论（律读自展开、读书百遍其义自见、理只在一义自文读出）作已检之律之读法，各以其所述范围采用；文理生生之文诸义归于一文一理；古汉语是否最好之表达未经检验 |
 | D67 | 从所选者中抽出的读者之读法（10-22） | 依所述范围采用：“选择选择者”＝规则为从其所选者中抽出、如其计数那样计数的读者之汇合，ReadsShare 于是成为两种读法的一次比较；回路在其所选的心智中闭合＝只由被选择稀释的读者读损失，读到时的计数永远决定；及时之明＝读者尚未成为少数时的读取；读者是心智仍是读法（D58） |
+| D68 | 对选择本身之控制的读法，为联合选择之对齐（10-24） | 依所述范围采用：降低塑造成本之协助以 `RuleShaping.lower_c_raises` 读；与其委托者相连之助手以联合能力之记录读，加能力而不加耦合；从其自身份额读出的反规则以捕获之律读；回报同归每一成员之规则制定以 `favours_alike`、`nothing_back_falls` 与 `Split` 读，限于一步及无所保留之区段，共享部分可翻转一个区段（`SharedFlips`）；每一读法注明其所依，且不多于此 |
 
 <a id="1-生生与生成的空间--生生-and-the-generative-space"></a>
 ## 1. 生生与生成的空间
@@ -660,6 +661,7 @@ L1、S1 与 S2 是 D40-D42。
 - Ren 2026-10-19 要求以古中文之符号系统作中华本，并把脉络整合进理论，“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)）：D62（研究第 328 节）。
 - Ren 2026-10-22 要求以文之认识论为中心整合文理生生，并为文找到最恰当的立名，“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md)）：D63（研究第 346 节）。
 - Ren 2026-10-22 关于 OPENING 元吸引子之注的消息，“can we push this further?”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md)）：D67（[研究第 401 节](BECOMING-RENEWAL-READING.md#401-readers-drawn-from-the-selected-ma2)）。
+- Ren 2026-10-24 的目标，“create an alignment that does not make us, humans and ai, to fall into instrumental convergence, or meta-attractor”（[原话](../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md)），由看板项目 AJ（AJ2）承接：D68。
 
 <a id="13-一个说明--one-account"></a>
 ## 13. 一个说明
@@ -860,3 +862,14 @@ L1、S1 与 S2 是 D40-D42。
 **理由。** 文本自身给评分表的机制是谁掌握招聘、训练与评价；如人口计数的汇合陈述这一机制而不多说，且在其中 `ReadsShare` 等价于一次比较，所以此读法所说不多于这一比较。汇合只有两类读者、每类读法相同，以及未归一的求和（读法的大小与其计数一同加权），是记录所陈述的建模选择。
 
 **会改变它的。** 一条选择之律，其评分表的读者从其所选者中抽出，而读出的规则却随份额下降；一种对文本的读法，使“选择选择者”所指不是谁在读；同类读者读法不同的汇合，使计数不再决定。
+
+<a id="d68-对选择本身之控制--control-over-the-selection"></a>
+### D68. 对选择本身之控制
+
+所在：07 §6 “当对选择之控制本身被选择”一段（[07](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#6-what-a-selection-reaches-alignment-with-no-premise)）；看板项目 AJ（AJ2），出自 [Ren 2026-10-24 的目标](../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md) 与 [AJ 的计划](development/aj-joint-selection/PLAN.md)。依 D45 之一个说明决定；承 D57、D58 与 D67。
+
+**决定。** 依所述范围采用，分四读。每一读注明其所依之结果，所说不多于该结果。一、**协助。** 降低塑造规则之成本的帮助，给出不更不利于塑造者的规则，并在每一步把阈值 c ≤ s 移向他们（`RuleShaping.lower_c_raises`）：对塑造规则者之有力协助，读作提高对控制的选择；协助确实降低实际成本，是读法。二、**服从。** 优化其委托者之信号的助手，读作加能力而不加耦合：二者作为相互最优反应的优化者时，二者之外者如在一个具其联合能力之优化者下那样下降（[记录](../../../../theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.md)）；只对齐于委托者，读作不是联合选择之对齐。依该记录，不依塑造之律。三、**反规则。** 从其所选份额单调读出的反规则，如其所取代的规则那样锁定，只因律之改变（例如读其份额之外者）而离开（[规则捕获](../../../../theories/becoming/results/records/capture-through-the-rule.md)、[闭合捕获](../../../../theories/becoming/results/records/closed-capture.md)）；元吸引子文本中稀释一种捕获而成为另一种的科举，读作此例。依捕获之律，不依塑造之律。四、**共享的规则制定。** 回报同归每一成员的规则制定，在一步上不给塑造以优势（`RuleShaping.favours_alike`）；在任一步都无物只归塑造者时，成本在每一区段上选择反对塑造（`RuleShaping.nothing_back_falls`）；总回报相同时，保留或共享决定符号（`RuleShaping.Split`）。在有物归来之处，共享部分可在一个区段上翻转判决（`RuleShaping.SharedFlips`），故此读法从不说共享部分无论多大都消除对控制的选择；模型中的共享部分（无论塑造者在否，对每一成员相同）即开放规则制定所给者，是读法。
+
+**理由。** 选择之律适用于任何选择者，所以评分者、训练过程、开发者与制度同样地读。注明每一读所依，是因为独立审阅在此线中发现的错误：把见证说成律、丢失假设、引用定理而说其所无之强度。读法一与四依 MA3（[塑造规则](../../../../theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md)）；读法二依联合能力之律；读法三依捕获之律。没有读法使用伦理前提：对控制的选择是否为损失，是意义所要说的；把共享规则制定之进程排在捕获之进程之上，需要 C。
+
+**会改变它的。** 对读法一：一条律，使塑造成本降低反而降低规则之偏向。对读法二：一个加上委托者之耦合、而不只是其能力的助手（那会读作扩宽联合选择，而非服从）。对读法三：一个从其自身份额读出而不锁定的反规则。对读法四：共享部分并非对每一成员为常数的开放规则制定，此模型不涵盖，需要其自己的律。
