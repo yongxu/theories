@@ -8,12 +8,13 @@ Files:
 - [`tree/Becoming/Typicality.lean`](tree/Becoming/Typicality.lean): the change to the landed module under board rule 9 (§2).
 - [`periphery/ConditionalWeightsReals.lean`](periphery/ConditionalWeightsReals.lean): the periphery draft, Gibbs' inequality with Mathlib (§3). It replaces `periphery/VariationalBound.lean`, whose bytes stay in history at `4c1639402`.
 - [`scratch.log`](scratch.log) and [`periphery/periphery.log`](periphery/periphery.log): the builds.
+- The landing scripts, modelled on UE1's landed kit and listed in order in [LANDING.md](LANDING.md) §7: [`integrate_ue2.py`](integrate_ue2.py), [`texts_ue2.py`](texts_ue2.py), [`make_records_ue2.py`](make_records_ue2.py), [`update_typicality_record_ue2.py`](update_typicality_record_ue2.py), [`register_ue2.py`](register_ue2.py), [`board_ue2.py`](board_ue2.py) and the study section [`study_ue2.txt`](study_ue2.txt). None has been run here beyond a parse check.
 
 ## 1. What is proved
 
 Scratch build ([log](scratch.log)), with the six core modules downstream of Typicality built against the changed Typicality:
 
-- `Becoming.ConditionalWeights`: 92 theorems in 109 declarations;
+- `Becoming.ConditionalWeights`: 93 theorems in 110 declarations;
 - `Becoming.Typicality`: 52 theorems in 72 declarations (40 in 52 landed);
 - TypicalRuns, Situations, Drift, FinerTraces, SituationTraces and HistorySums: counts unchanged.
 
@@ -34,7 +35,7 @@ All statements are on `mass` of `Becoming.Weighted` (a listed domain, a natural 
 
 - `Share` (part, whole), `Share.le` and `Share.Same` by cross-multiplication, `Share.mul` (parts and wholes multiply), `Share.reciprocal` (whole over part). By the definitions, the reciprocal of a product is the product of the reciprocals. `share l w e` = ⟨mass of `e`, whole mass⟩.
 - `Share.le_refl`, `Share.le_trans`: a preorder on shares with a positive whole.
-- `Share.zero_whole`: ⟨0, 0⟩ is at most and at least every share and the same ratio as any. `share_zero_whole`: an event's share with a zero whole is ⟨0, 0⟩. `Witness.le_not_transitive`: through ⟨0, 0⟩ the order is not transitive. So the laws given a record say nothing where the record weighs nothing.
+- `Share.zero_whole`: ⟨0, 0⟩ is at most and at least every share and the same ratio as any. `share_zero_whole`: an event's share with a zero whole is ⟨0, 0⟩. `Witness.le_not_transitive`: through ⟨0, 0⟩ the order is not transitive. So the laws given a record say nothing where the record weighs nothing. Only ⟨0, 0⟩ compares either way: `Witness.positive_part_zero_whole` shows ⟨1, 0⟩ above ⟨0, 1⟩ and not below it, and the reciprocal of an event no course meets is such a share.
 - `share_le_of_included`: a wider event has no smaller share (from `mass_mono`). `share_within`: part ≤ whole.
 - `restrict_two_ways`: share(h given r) × share(r) and share(r given h) × share(h) are the same ratio (Bayes's theorem; both count the courses meeting h and r). Where record and hypothesis weigh something it says what Bayes's theorem says; otherwise one side is degenerate.
 - Generative model, courses `openSteps hs os`, weight `pairWeight prior lik (h, o) = prior h · lik h o`:
@@ -55,7 +56,7 @@ All statements are on `mass` of `Becoming.Weighted` (a listed domain, a natural 
 - `independentWeight w s`: `counting.along` with a step weight that reads only the step; `meetsEach es`: one event at each step.
 - `mass_meetsEach`, `whole_courses`, `share_meetsEach`: over Weighted's `courses moves all n`, the share of a conjunction of step events is the product of the step shares (equal as pairs).
 
-**The exit from a margin** (Typicality's courses, weights `p` and `q`, a level `m` above a need, raised `q` by a one and lowered `p` by a zero; its weighted rises and falls are equal by Drift's binomial means `expected_ones` and `expected_zeros`):
+**The exit from a margin** (Typicality's courses, weights `p` and `q`, a level `m` above a need, raised `q` by a one and lowered `p` by a zero; its weighted rises and falls are equal, so no mean change wears the margin down, by arithmetic from Drift's binomial means `expected_ones` and `expected_zeros`, not a theorem of this module):
 
 - `deviates_bound`: the deviation bound at the horizon. The courses whose deviation at the horizon reaches `m` either way weigh, times m·m, at most n·p·q·(p + q)ⁿ (from `Typicality.typical`).
 - `fallsTo`, `fallsWithin`: the level reaches the need or falls below it, at the horizon or at some step.
@@ -102,11 +103,7 @@ Typicality's owner (the session that landed P116) is inactive and no definition 
 
 - **The binomial mean.** The kit's `rises_balance_falls` and its two step lemmas restated Drift's `expected_ones` and `expected_zeros`. They are dropped, and `fallsTo`'s docstring cites Drift.
 - **The margin square.** It is now in Typicality, below `two_mul_le_of_le`. `Drift.far_back` is its scaled form; Drift's owner can take `far_back`'s identity from `square_gap` (LANDING.md, optional).
-- **The total weight.** `whole_courses` generalizes `Typicality.transfer_weight`, the two-valued case through `Weights.sum_courses`, and lands above it. Two things keep it in this leaf for now:
-  - Moving it down means moving `whole_courses` and `mass_meetsEach`, with `independentWeight`, `meetsEach` and the mass helpers they use, into `Becoming.Weighted`. That is Weighted's owner's decision.
-  - Weighted is imported by most of the core, so the move recompiles most of it.
-
-  Until that decision, `transfer_weight` keeps its direct proof and the board row says so.
+- **The total weight.** `whole_courses` generalizes `Typicality.transfer_weight`, the two-valued case through `Weights.sum_courses`, and lands above it. Moving it down means moving `whole_courses` and `mass_meetsEach`, with `independentWeight`, `meetsEach` and the mass helpers they use, into `Becoming.Weighted`, on which 33 of the 306 core modules at the current receipt depend. That is Weighted's owner's decision, and it is the reason the law stays in this leaf. Until it is made, `transfer_weight` keeps its direct proof and the board row says so.
 - **The share order.** `Share.le_trans` repeats the transitivity calc of `RuleCapture.CarrierCounts.order`, the same cross-multiplication order on a structure with a positive second count. RuleCapture lies outside ConditionalWeights' closure. Stating that transitivity once, as a lemma on naturals in `Becoming.Prelude`, would let both use it; that consolidation is left for a later pass.
 - **The mass helpers.** They are now derived from Weighted's sum laws (§1, helpers). `total_append` and `total_map`, stated in `Becoming.Flow`, are the same laws for Prelude's `total`.
 
@@ -154,7 +151,7 @@ It compiles with no error or warning against the pinned Mathlib (`lake env lean`
 - In the core: real weights, densities, surprisal as a number, entropy and free energy. In the periphery draft causes are finite, and q must be zero wherever the joint weight is.
 - Conditioning beyond natural weightings: for possibility, restriction is conditioning without shares; signed counts cancel, so a restricted signed weighting has no share.
 - Graded evidence on a general domain: records are Boolean. A likelihood weighting multiplying a prior appears only as the generative model's `pairWeight`.
-- Exits for a level with a drift (renewal unequal to the draw), more than two values, or steps that are not independent. A drift moves the margin linearly in the steps and is not treated.
+- Exits for a level whose rises and falls do not balance (renewal unequal to the draw), more than two values, or steps that are not independent. A mean change moves the margin linearly in the steps and is not treated.
 - Exponential exit bounds. One on ending fallen follows from `Typicality.concentrated`. One on reaching the need within the horizon needs its maximal form, stopping the tilted weights as `typical_throughout` stops the square; it is not proved.
 - The surprisal reading of the exit bound says something only where m·m exceeds n·p·q.
 - Sequential conditioning on records of Weighted's general courses: the record law is stated for Typicality's two-valued courses only.
@@ -170,7 +167,7 @@ It compiles with no error or warning against the pinned Mathlib (`lake env lean`
    - the share order's transitivity stated once in Prelude.
 4. **Extensions:**
    - The one-sided (Cantelli) form of Kolmogorov's inequality (review finding 11). The courses reaching the need within the horizon weigh, times n·p·q + m·m, at most n·p·q·(p + q)ⁿ. This is never above one and always below n·p·q/m². Its proof is `typical_throughout`'s stopping argument, with two changes: it stops at the first fall, and it bounds the stopped square of y − x + c, with c = n·p·q/m scaled to whole numbers, using a stopped form of the balanced mean.
-   - A drifting level, with renewal against the draw.
+   - A level whose rises and falls do not balance, with renewal against the draw.
    - The exponential exit within the horizon.
    - Graded records on general domains.
    - `restrict` once for every `Weights`, with `support` commuting with it, so that `Learning`'s elimination reads as a case of conditioning (finding 4, optional).
@@ -200,3 +197,15 @@ It compiles with no error or warning against the pinned Mathlib (`lake env lean`
 | 17 | Checker and join (suggestion) | In LANDING.md, with `regime/check_regime_reals.py` as the template and the join as the target. |
 | 18 | The new bullet's title (overclaim) | "The deviation stays within the bound at every step", with the frequency reading; the theorem's docstring and the section title likewise. |
 | 19 | The landing list | LANDING.md. |
+
+## 8. The re-check and what was done
+
+The reviewer's re-check of the revision (REVIEW-UE2.md, "Re-check of the revision") found 18 findings addressed, finding 12 partly, and five new issues, none blocking the core.
+
+| # | Issue | What was done |
+|---|---|---|
+| N1 | Only ⟨0, 0⟩ compares either way with every share; ⟨1, 0⟩ does not | The module docstring, `Share.zero_whole`'s and `share_zero_whole`'s docstrings and LANDING's record (a) say so; `Witness.positive_part_zero_whole` added (the re-check's probe). |
+| N2 | Weighted is not imported by "most" of the core | §2 states the number, 33 of the 306 core modules at the current receipt, and gives Weighted's owner's decision as the reason that stands. Finding 12 is then complete. |
+| N3 | Record fields | LANDING's records: drift-offspring-sampled and margin-of-a-regime as related, not dependencies; fulfillment-chance-floor as the formal reuse of `mass`, `mass_mono` and `IncludedOn`; §409 noted. The landing scripts follow it. |
+| N4 | The core docstring when it lands without the periphery | Free energy and its bound "drafted for the periphery, over the reals, with no receipt yet". |
+| N5 | "Drift" in two senses | "no mean change wears the margin down (arithmetic from `Drift.expected_ones` and `Drift.expected_zeros`, not a theorem here)", and "a level whose rises and falls do not balance". |

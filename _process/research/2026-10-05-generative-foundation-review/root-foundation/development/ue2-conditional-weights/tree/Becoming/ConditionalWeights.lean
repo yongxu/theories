@@ -5,12 +5,12 @@ import Becoming.Typicality
 
 `Becoming.Weighted` sums over histories for every weighting of steps and weighs an event on a listed
 domain by its mass (`mass`), with natural weights; every weighting there is a premise.
-`Becoming.Typicality` counts the courses of `n` steps on two values with natural weights `p` and `q`,
-with Chebyshev's bound at the horizon (`Typicality.typical`) and Kolmogorov's bound at every step
-(`Typicality.typical_throughout`). Neither says what a record does to a natural weighting, what share
-of the courses an event takes, or how much weight the courses leaving a margin carry. This module
-states these on the two layers, with no premise beyond the weighting each statement names, and with
-no division, real number or logarithm.
+`Becoming.Typicality` counts the courses of `n` steps on two values with natural weights `p` and
+`q`, with Chebyshev's bound at the horizon (`Typicality.typical`) and Kolmogorov's bound at every
+step (`Typicality.typical_throughout`). Neither says what a record does to a natural weighting, what
+share of the courses an event takes, or how much weight the courses leaving a margin carry. This
+module states these on the two layers, with no premise beyond the weighting each statement names,
+and with no division, real number or logarithm.
 
 * **Conditional weights** (near-definitional: identities of counting). The weighting restricted to a
   record keeps the weight of each course agreeing with the record and gives every other course
@@ -22,32 +22,33 @@ no division, real number or logarithm.
   in either order (`restrict_restrict`, `restrict_comm`).
 * **Bayes's rule in counting form** (near-definitional: identities of counting). A share is a part
   of a whole, two naturals compared by cross-multiplication (`Share`, `Share.le`, `Share.Same`); the
-  share of an event is its mass out of the whole mass (`share`). A share with nothing in its whole
-  compares either way with every share and is the same ratio as any (`Share.zero_whole`), and an
-  event's share with a zero whole is `⟨0, 0⟩` (`share_zero_whole`); so the laws given a record
-  (`restrict_two_ways`, `restrict_independent`, `record_share`, `record_bound`) say nothing where the
-  record weighs nothing. A hypothesis's share under the weighting restricted to a record, taken with
-  the record's share, is the record's share under the weighting restricted to the hypothesis, taken
-  with the hypothesis's share, as ratios (`restrict_two_ways`): both count the courses meeting the
-  hypothesis and the record. In a generative model, each listed hypothesis with each listed record
-  (`openSteps`), a course weighs the hypothesis's prior weight times the record's weight under it
-  (`pairWeight`). The pair weight factors (`mass_pairWeight`); the weight of the courses agreeing
-  with a record is the sum over the hypotheses of each one's prior weight times the record's weight
-  under it (`evidence`); a hypothesis listed once has, given the record, the share whose part is its
-  prior weight times the record's weight under it and whose whole is that sum (`posterior_single`).
-  So two hypotheses, or two classes of them, compare after the record as prior weights times
-  likelihood weights (`posterior_le_iff_single`, `posterior_le_iff`), and a record can turn their
-  order (`Witness.record_reverses`). A prior weight is the hypothesis's share before any record where
-  every listed hypothesis's likelihood weights have one total (`prior_share`), and in general not
-  otherwise: a hypothesis's share is its prior weight times its own likelihood total, over the whole
-  (`mass_pairWeight`), and equal prior weights with totals 1 and 3 weigh 1 and 3
-  (`Witness.prior_not_share`).
+  share of an event is its mass out of the whole mass (`share`). `⟨0, 0⟩`, the share of an event
+  whose whole is nothing (`share_zero_whole`), compares either way with every share and is the same
+  ratio as any (`Share.zero_whole`); so the laws given a record (`restrict_two_ways`,
+  `restrict_independent`, `record_share`, `record_bound`) say nothing where the record weighs
+  nothing. A positive part over nothing does not compare so: `⟨1, 0⟩` lies above `⟨0, 1⟩` and not
+  below it (`Witness.positive_part_zero_whole`). A hypothesis's share under the weighting restricted
+  to a record, taken with the record's share, is the record's share under the weighting restricted
+  to the hypothesis, taken with the hypothesis's share, as ratios (`restrict_two_ways`): both count
+  the courses meeting the hypothesis and the record. In a generative model, each listed hypothesis
+  with each listed record (`openSteps`), a course weighs the hypothesis's prior weight times the
+  record's weight under it (`pairWeight`). The pair weight factors (`mass_pairWeight`); the weight
+  of the courses agreeing with a record is the sum over the hypotheses of each one's prior weight
+  times the record's weight under it (`evidence`); a hypothesis listed once has, given the record,
+  the share whose part is its prior weight times the record's weight under it and whose whole is
+  that sum (`posterior_single`). So two hypotheses, or two classes of them, compare after the record
+  as prior weights times likelihood weights (`posterior_le_iff_single`, `posterior_le_iff`), and a
+  record can turn their order (`Witness.record_reverses`). A prior weight is the hypothesis's share
+  before any record where every listed hypothesis's likelihood weights have one total
+  (`prior_share`), and in general not otherwise: a hypothesis's share is its prior weight times its
+  own likelihood total, over the whole (`mass_pairWeight`), and equal prior weights with totals 1
+  and 3 weigh 1 and 3 (`Witness.prior_not_share`).
 * **Shares and surprise.** Less share is more surprise (near-definitional): one share is at most
   another exactly where the other's reciprocal, the whole over the part, is at most its own
   (`Share.le_iff_reciprocal`). The order is reflexive (`Share.le_refl`) and transitive through a
-  share with a positive whole (`Share.le_trans`), a preorder on shares with a positive whole; through
-  `⟨0, 0⟩` it is not transitive (`Witness.le_not_transitive`). A wider event has no smaller share
-  (`share_le_of_included`). Over the pairs of two listed domains weighted by products, two
+  share with a positive whole (`Share.le_trans`), a preorder on shares with a positive whole;
+  through `⟨0, 0⟩` it is not transitive (`Witness.le_not_transitive`). A wider event has no smaller
+  share (`share_le_of_included`). Over the pairs of two listed domains weighted by products, two
   independent events weigh the product of their masses (`mass_product`) and take the product of
   their shares, as pairs of naturals (`share_product`). Both are at least as surprising as either
   (`share_product_le`, `share_product_le_right`), and a record of one part leaves the share of an
@@ -59,22 +60,22 @@ no division, real number or logarithm.
   through a logarithm, which the core does not take, this is pointwise surprisal adding over
   independent events.
 * **The exit from a margin.** On the courses of `Becoming.Typicality`, read a level standing `m`
-  above a need, raised `q` by each one and lowered `p` by each zero. Weighed by `p` and `q`, its rises
-  add up to what its falls add up to, by the binomial means of `Becoming.Drift`
-  (`Drift.expected_ones`, `Drift.expected_zeros`), so no drift wears the margin down. The courses of
-  `n` steps whose deviation at the horizon reaches `m` either way weigh, times `m·m`, at most
-  `n·p·q·(p + q)^n`, the weighted squared spread (`deviates_bound`, from `Typicality.typical`). The
-  level reaches the need or falls below it where the fall `y` reaches the rise `x` with `m` more
-  (`fallsTo` at the horizon, `fallsWithin` at some step within it). The courses in which it does so
-  within the horizon weigh, times `m·m`, at most the same (`fallsWithin_bound`, from
-  `Typicality.typical_throughout`, through `Typicality.margin_square`), and those in which it does so
-  at the horizon are among them (`fallsTo_bound`). As shares: they take at most `n·p·q` over `m·m`
-  of the weight (`fallsWithin_share`), so the reciprocal of their share is at least `m·m` over
-  `n·p·q` (`fallsWithin_reciprocal`). Standing at the need is not a break, since the core counts a
-  need within the level as supported; a break, the level below the need, is reaching it from `m + 1`
-  (`fallsTo_succ`), so its share within the horizon is at most `n·p·q` over `(m + 1)·(m + 1)`. The
-  count at some step can exceed the count at the horizon: a course can fall and recover
-  (`Witness.within_exceeds_end`).
+  above a need, raised `q` by each one and lowered `p` by each zero. Weighed by `p` and `q`, its
+  rises add up to what its falls add up to, so no mean change wears the margin down (arithmetic from
+  the binomial means `Drift.expected_ones` and `Drift.expected_zeros` of `Becoming.Drift`, not a
+  theorem here). The courses of `n` steps whose deviation at the horizon reaches `m` either way
+  weigh, times `m·m`, at most `n·p·q·(p + q)^n`, the weighted squared spread (`deviates_bound`, from
+  `Typicality.typical`). The level reaches the need or falls below it where the fall `y` reaches the
+  rise `x` with `m` more (`fallsTo` at the horizon, `fallsWithin` at some step within it). The
+  courses in which it does so within the horizon weigh, times `m·m`, at most the same
+  (`fallsWithin_bound`, from `Typicality.typical_throughout`, through `Typicality.margin_square`),
+  and those in which it does so at the horizon are among them (`fallsTo_bound`). As shares: they
+  take at most `n·p·q` over `m·m` of the weight (`fallsWithin_share`), so the reciprocal of their
+  share is at least `m·m` over `n·p·q` (`fallsWithin_reciprocal`). Standing at the need is not a
+  break, since the core counts a need within the level as supported; a break, the level below the
+  need, is reaching it from `m + 1` (`fallsTo_succ`), so its share within the horizon is at most
+  `n·p·q` over `(m + 1)·(m + 1)`. The count at some step can exceed the count at the horizon: a
+  course can fall and recover (`Witness.within_exceeds_end`).
 * **What a record of the course so far says of the exit.** A course of `k + n` steps is a course of
   `n` later steps after a course of `k` earlier ones (`courses_add`; a course lists its latest step
   first). Take a record of the earliest `k` steps every course of `k` steps agreeing with which
@@ -96,7 +97,7 @@ and `evidence` over the whole is the marginal likelihood. Surprisal is `log (1 /
 is taken here; the reciprocal share orders as pointwise surprisal does (`Share.le_iff_reciprocal`),
 and its products are surprisal's sums. Averages of surprisal, such as entropy and free energy, have
 no reciprocal-share form, since an average of logarithms is not the logarithm of an average; free
-energy and its bound are stated only in the periphery, over the reals
+energy and its bound are drafted for the periphery, over the reals, with no receipt yet
 (`development/ue2-conditional-weights/periphery`). The free-energy principle bounds the surprisal of
 a system's states by a variational free energy and reads persisting as keeping that surprisal low.
 The exit bound is the case that reading is measured against: a balanced level that nothing reads
@@ -105,23 +106,23 @@ surprisal at least `log (m·m / (n·p·q))` where `m·m` exceeds `n·p·q`. The 
 `n = m·m / (p·q)`, and such a level leaves every margin in time (a balanced walk recurs; not proved
 here); persisting longer needs a giving that reads the level. The bound reads the weighting, the
 counting form of a generative density, only through its spread; no belief (recognition density)
-enters, as one does in free energy. `record_share` is the counting form of the half of 03's thesis T6
-that is seen: where a record holds the level and the need, the exit reads off the margin the record
-shows, the steps it leaves and the spread of the weighting, which the record does not show. The
-weighting is the independently warranted model T6 allows; given it, nothing else in the record
+enters, as one does in free energy. `record_share` is the counting form of the half of 03's thesis
+T6 that is seen: where a record holds the level and the need, the exit reads off the margin the
+record shows, the steps it leaves and the spread of the weighting, which the record does not show.
+The weighting is the independently warranted model T6 allows; given it, nothing else in the record
 matters, the steps being independent. That a record not holding the level bounds nothing, T6's
 invisible half, is not touched here.
 
 What is not derived: which weighting an actual unfolding has, or that the course which happens is
 typical (as in `Becoming.Typicality`); real weights, densities, logarithms, surprisal as a number,
 entropy, free energy or its bound. Conditioning is stated for natural weightings only: for
-possibility, restriction is conditioning without shares; signed counts cancel, so a restricted signed
-weighting has no share. Records are Boolean; graded evidence, a likelihood weighting multiplying a
-weighting course by course, is the generative model's case only. The exit is stated for one level on
-two values whose rises and falls balance under the weights (each one raising it `q`, each zero
-lowering it `p`, with weights `p` and `q`); a level with a drift, several values or steps that are not
-independent are not treated. The representation commits to discrete steps and natural weights. No
-ethical predicate, ranking or axiom occurs.
+possibility, restriction is conditioning without shares; signed counts cancel, so a restricted
+signed weighting has no share. Records are Boolean; graded evidence, a likelihood weighting
+multiplying a weighting course by course, is the generative model's case only. The exit is stated
+for one level on two values whose rises and falls balance under the weights (each one raising it
+`q`, each zero lowering it `p`, with weights `p` and `q`); a level whose rises and falls do not
+balance, several values or steps that are not independent are not treated. The representation
+commits to discrete steps and natural weights. No ethical predicate, ranking or axiom occurs.
 -/
 
 namespace Becoming
@@ -376,8 +377,8 @@ theorem le_trans {a b c : Share} (pos : 0 < b.whole) (ab : a.le b) (bc : b.le c)
       _ ≤ c.part * b.whole * a.whole := Nat.mul_le_mul_right _ bc
       _ = c.part * a.whole * b.whole := Naturals.mul_right_comm _ _ _) pos
 
-/-- **A share with nothing in its whole compares either way with every share.** `⟨0, 0⟩` is at
-most and at least every share, and the same ratio as any. -/
+/-- **`⟨0, 0⟩` compares either way with every share**: it is at most and at least every share, and
+the same ratio as any. A positive part over nothing does not (`Witness.positive_part_zero_whole`). -/
 theorem zero_whole (a : Share) : (⟨0, 0⟩ : Share).le a ∧ a.le ⟨0, 0⟩ ∧ (⟨0, 0⟩ : Share).Same a :=
   ⟨show 0 * a.whole ≤ a.part * 0 by rw [Nat.zero_mul]; exact Nat.zero_le _,
    show a.part * 0 ≤ 0 * a.whole from Nat.zero_le _,
@@ -425,8 +426,8 @@ theorem share_within (l : List Ω) (w : Ω → Nat) (e : Ω → Bool) :
     (share l w e).part ≤ (share l w e).whole :=
   mass_mono w fun _ _ _ => rfl
 
-/-- **An event's share with nothing in its whole is `⟨0, 0⟩`**, which compares either way with
-every share (`Share.zero_whole`). -/
+/-- **An event's share with nothing in its whole is `⟨0, 0⟩`**, its part being within its whole;
+`⟨0, 0⟩` compares either way with every share (`Share.zero_whole`). -/
 theorem share_zero_whole (l : List Ω) (w : Ω → Nat) (e : Ω → Bool)
     (zero : (share l w e).whole = 0) : share l w e = ⟨0, 0⟩ :=
   congr (congrArg Share.mk (Nat.eq_zero_of_le_zero (zero ▸ share_within l w e))) zero
@@ -789,9 +790,9 @@ def deviates (p q m : Nat) (w : List Bool) : Bool :=
   decide (ahead q w + m ≤ behind p w) || decide (behind p w + m ≤ ahead q w)
 
 /-- **A level standing `m` above a need reaches it or falls below it.** Raised `q` by each one and
-lowered `p` by each zero, so that weighed by `p` and `q` its rises and falls balance (the binomial
-means `Drift.expected_ones` and `Drift.expected_zeros`), the level ends the course at the need or
-below it: `x + m ≤ y`. -/
+lowered `p` by each zero, so that weighed by `p` and `q` its rises and falls balance (arithmetic
+from the binomial means `Drift.expected_ones` and `Drift.expected_zeros`), the level ends the
+course at the need or below it: `x + m ≤ y`. -/
 def fallsTo (p q m : Nat) (w : List Bool) : Bool := decide (ahead q w + m ≤ behind p w)
 
 /-- **A break is reaching the need from one more than the margin**: `fallsTo p q (m + 1)` tests
@@ -1130,6 +1131,12 @@ not `⟨1, 1⟩ ≤ ⟨0, 1⟩`. -/
 theorem le_not_transitive :
     (⟨1, 1⟩ : Share).le ⟨0, 0⟩ ∧ (⟨0, 0⟩ : Share).le ⟨0, 1⟩ ∧ ¬ (⟨1, 1⟩ : Share).le ⟨0, 1⟩ :=
   ⟨Nat.le_refl 0, Nat.le_refl 0, fun h => (by decide : ¬ (1 * 1 ≤ 0 * 1)) h⟩
+
+/-- **A positive part over nothing does not compare either way**: `⟨0, 1⟩ ≤ ⟨1, 0⟩`, and not
+`⟨1, 0⟩ ≤ ⟨0, 1⟩`. Only `⟨0, 0⟩` compares either way with every share (`Share.zero_whole`). -/
+theorem positive_part_zero_whole :
+    (⟨0, 1⟩ : Share).le ⟨1, 0⟩ ∧ ¬ (⟨1, 0⟩ : Share).le ⟨0, 1⟩ :=
+  ⟨Nat.zero_le _, fun h => (by decide : ¬ (1 * 1 ≤ 0 * 0)) h⟩
 
 /-- **Counting the courses that reach the need at some step can count more than counting those
 that end there or below.** With weights one and one, a level one above the need over two steps

@@ -1,10 +1,10 @@
-# UE2 scratch build (revision after REVIEW-UE2.md)
-utc: 20261025T143258Z
+# UE2 scratch build (after the re-check)
+utc: 20261025T151301Z
 command: python3 -B scratch_build.py /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree Becoming.Typicality Becoming.ConditionalWeights Becoming.TypicalRuns Becoming.Situations Becoming.Drift Becoming.FinerTraces Becoming.SituationTraces Becoming.HistorySums
-tree sha256: Typicality.lean 9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98, ConditionalWeights.lean 311e058675bb5fcc59f12b4469694c2fcdccaa700c2c55c05afcd1ad1c938c16
+tree sha256: Typicality.lean 9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98, ConditionalWeights.lean 479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f
 landed Typicality.lean sha256 (base of the change): 904976890149379d5d5e061cebf97235035ed94091985003ff51801b52e1d8a3
-checkout: 646ec00bc
-the six core modules downstream of Typicality are built from the checkout against the tree's Typicality; steps whose inputs match a passed step are restored from the shared cache (the revision's earlier runs compiled them; this pass reuses them)
+checkout: 85d279b36
+the six core modules downstream of Typicality are built from the checkout against the tree's Typicality; steps whose inputs match a passed step are restored from the shared cache (this revision's earlier run compiled the changed module; this pass reuses it)
 ---
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree",
@@ -19,8 +19,8 @@ the six core modules downstream of Typicality are built from the checkout agains
       "with_axioms": {}
     },
     "Becoming.ConditionalWeights": {
-      "theorems": 92,
-      "declarations": 109,
+      "theorems": 93,
+      "declarations": 110,
       "with_axioms": {}
     },
     "Becoming.TypicalRuns": {
