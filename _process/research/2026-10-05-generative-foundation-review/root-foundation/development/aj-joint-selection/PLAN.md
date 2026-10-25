@@ -62,7 +62,7 @@ Whose losses count is the continuation condition, and that widening is better is
 **Missing:**
 1. A frozen follow-up that tells LA1's two readings of its locked-side failure apart (feedback that barely resolves the best threshold; a restraint the model brings from training).
 2. The one page for alignment readers (AJ4's draft, `development/aj4-alignment-readers/DRAFT-ONE-PAGE.md`).
-3. MA4b: a reading of a loss by the disfavoured once the shapers pass the critical mass (where MA2's timing meets MA4). It is the way out of the lock that MA4 leaves open, since every course read from the share alone is locked one way or the other.
+3. MA4b: a reading of a loss by the disfavoured once the shapers pass the critical mass (where MA2's timing meets MA4). It is the way out of the lock that MA4 leaves open, since every course read from the share alone is locked one way or the other. Claimed 26 October 2026 (step 7).
 
 ## 4. The path
 
@@ -87,6 +87,16 @@ Pace, as the board's *Now* section and [08 §12](../../../../../../theories/beco
 - witnesses: three read as coming back at a cost of one selects the capacity from one shaper to each other and not from one to three, where the course is still locked, the other way; and without `lo ≤ hi` a favoured start need not be locked.
 
 Standing after the review: elementary. Where `lo < c < hi` it is the stag hunt, its critical mass the mixed equilibrium; reading at every step is discrete-time replicator selection; the threshold models of Schelling (1973, 1978) and Granovetter (1978) and Arthur's lock-in (1989) are credited, and so is the noise bound: under rare mutation the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), capture by the shapers wherever `2c < hi + lo`. The lock half is near-definitional; what is new on the spine is the critical-mass computation. It does not show the two conditions independent: every course read from the share alone is locked one way or the other, so leaving needs a reading beyond the share, which is MA2's timing and is not joined (a candidate MA4b, §3).
+
+**Step 7. MA4b: the loss read in time by the others, joined to the critical mass** (claimed 26 October 2026 by this plan's session; design in `development/ma4b-read-in-time/NOTE.md`). This is condition 2 in the joined model.
+
+The others among the readers read the loss once it reaches a bound, reading what comes back to the shapers as `lo'` from then on (MA2's `Thinned.lossPool` with three of MA3's rules). To be proved:
+- read while the rule in force favours the shapers, the lock is kept for good exactly where the late reading favours them at the share then;
+- with the one-step lag, the course is turned for good exactly where the late reading also disfavours them at the share one step later;
+- once the late reading would favour the shapers at a step of MA4's course, a reading at any later step keeps the lock;
+- with the strongest reading of this form, none turns it past `x.other·c ≤ x.carrier·(hi − c)`.
+
+In the witness, a reading at step 2 turns the course and one at step 3 comes too late. Expected standing: elementary, Collingridge's dilemma (1980) in this model. It will not show that the others read the loss, or that their reading has this form.
 
 ## 5. What a good job is, as its readers will judge it
 
