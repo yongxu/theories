@@ -57,12 +57,12 @@ In the account's terms, the theory explains reality as one unfolding where four 
 
   These are containments with their first two parts and, mostly, no third.
 - **Unifications claimed as theses.** Four results known in substance are claimed as one law across fields ([08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim)): selection through couplings across reward, training, natural selection, prices and votes (T3); C as the whole of the order (T5); one merge across computation, heat, extinction and forgetting; and overshoot, externality and Goodhart's law as one law of the optimum. As theses they forbid what the source fields leave open, and their tests are the objective's evidence.
-- **The first new containment.** The free-energy principle (UE1), in kit: its premises on the card, and `Becoming.HabitCapture`. Three things it forbids that the principle leaves open:
-  - closed self-evidencing locks above an exact threshold and outlives any loss it does not read;
-  - counting the posterior instead of the choice removes that lock;
-  - a collective of self-evidencers sharing beliefs stays blind beyond the union of its members' closures.
+- **The first new containment, a restatement so far.** The free-energy principle (UE1), in kit: its premises on the card, and `Becoming.ChoiceCountCapture`. Its review found the kit sound and the third part, as first stated, not surviving:
+  - the lock of a rule read from the count of its choices is the lock-in of increasing returns (Arthur 1989), which active inference's own simulation of devaluation already shows (Friston and others 2016, §5.2), and counting the action taken is psychology's value-free habit;
+  - the contrast with counting the posterior at the time of choosing concerns a rule active inference does not use: it counts the end-of-trial posterior, close to the executed policy;
+  - the pooling result is a reading of the pool law under its hypotheses.
 
-  Its shape matches a published simulation of habit and devaluation ([note](../ue1-fep-bridge/NOTE.md#4-what-the-kit-proves) §4).
+  What the kit adds is exactness for a simplified model and the edges of that exactness (a moved count, a stale rule, a change of score read late). A real third part needs a statement in the principle's literature that the theory forbids; the first candidate is a claim that belief sharing lets a collective respond to what no member couples to ([note](../ue1-fep-bridge/NOTE.md) §7).
 
 - **What the audit found (UE0, [audit](../ue0-third-parts/AUDIT.md)).** Of the 21 rows of 08 §8 and §9, four have a third part, three of them distinct:
   - gated joint excess (row 7);
@@ -106,7 +106,7 @@ The overview's open list names what a full explanation must face ([§10](../../.
 
 - A containment whose third part stays empty after an honest search: there, the theory restates the framework, and the record says so.
 - A framework's central result that cannot be stated in the grammar under any named premise: an expressive limit. Self-changing conditions and presence in time are the known candidates.
-- A frozen test of a forbidden statement that fails, for example UE1's test of when a habit persists.
+- A frozen test of a forbidden statement that fails, for example UE1's test of whether a count of choices reverses under a standing score.
 - Readers from the contained field finding a containment trivial or wrong. The human review is the check no internal selector can run ([08 §12](../../../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws)).
 
 ## 7. What it serves
