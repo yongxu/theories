@@ -78,7 +78,7 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). The same laws over a family of conditions read as one, from which these are now derived.
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). The joint excess and the gap between own and joint draw, derived for optimizers along a course.
 
-**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md)
+**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md) · [what-a-set-point-optimum-does-beyond](what-a-set-point-optimum-does-beyond.md)
 
 <a id="sources--来源"></a>
 ### Sources

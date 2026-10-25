@@ -294,6 +294,7 @@ import Becoming.SelectionReach
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
+import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
 import Becoming.Training
@@ -1563,6 +1564,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   part's capacity there, or at its floor: no drive where no member may take, the drain exactly
   where one may and something stands, and on a web a dependence beyond broken exactly where its
   need exceeds what the rest leaves less the capacity.
+  One law carries the drain read off the exchange: an optimum takes the whole capacity at a
+  condition beyond wherever its order ranks above it the outcome with one unit moved from there
+  into the family (`Above.full_of_ranked`, `Above.floor_or_full_of_ranked`, `beyond_of_ranked`),
+  as every rising order does.
   Several optimizers at a mutual best response, each alone by its own order rising with its own
   family, leave a condition beyond every family at what the formations outside them leave less
   their joint capacity, or at nothing, as one part made of all of them would; where something
@@ -1671,6 +1676,27 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   is perfect and holding the level draws each more at every later step, holding draws each
   more over a long horizon, and for a drawer given the whole drawing everything is not perfect where the whole
   returns more than one for one.
+* `Becoming.SetPointOptimum` (L1): what an order with a set point does beyond what couples in. An
+  order nearing a set point of the family ranks above every outcome lying, at each condition,
+  between the set point and the other and nearer at one (`Nearing`, by `Regulation.Between`):
+  strictly single-peaked at the set point condition by condition. Where the family holds a
+  condition, no asymmetric nearing order is rising (`Nearing.not_rising`). Where an eligible
+  outcome reaches the set point every optimum stands at it (`atSetPoint_of_reach`), and nearing
+  alone asks nothing more of what lies beyond (`optima_iff`, `least_at_iff`; near-definitional);
+  below the set point the order rises and the drain of `Optimum` returns (`least_below_iff`; in an
+  exchange `nearing_beyond`, from `Optimum.beyond_of_ranked`). In a balanced step in which the
+  whole gains nothing the beyond falls by the family's shortfall from its set point with the loss
+  (`Flow.Balances.atSetPoint_draws`), a dependence on one condition beyond breaking exactly where
+  that exceeds its slack (`Flow.Balances.atSetPoint_broken_iff`), for several optimizers as for
+  one with their joint set point (`Flow.Balances.mutual_atSetPoint_breaks`). A term counted after
+  the set point leaves the most beyond, in total, that any way of reaching it leaves
+  (`counted_after_most`, near-definitional); counting less, it drains
+  (`Topped.counted_less_drains`); after an aspiration level it keeps too
+  (`Drain.satisficingThen_keeps`): the plateau decides, not the set point. Formations holding their
+  families' stocks take at least their loss and end a gated condition jointly, no order or choice
+  entering (`Flow.held_draws`, `Flow.held_excess_ends`, from `Flow.joint_excess_ends`). A leaf: its
+  laws are cases of `Optimum`'s, `DrawnBeyond`'s and `Continuation`'s on one class of orders, read
+  on active inference (board item UE1b).
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

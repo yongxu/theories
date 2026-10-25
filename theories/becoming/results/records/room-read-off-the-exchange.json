@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T22:26:12+00:00",
+  "reviewed_at_utc": "2026-10-25T17:35:57+00:00",
   "statement": {
     "en": "Over one step of exchange, where a part's members take at most their capacity and give at most what they take, room holds; every optimum of every order rising with what couples in stands beyond at what the rest leaves less the part's capacity, lowering a condition just where the part has capacity.",
     "zh": "一步交换中，部分的成员至多取其容量、所给不多于所取时，余地成立；每个随耦合入者升高的序的最优，在之外立于其余者所留减去容量处，部分无可取处不动。"
@@ -70,9 +70,12 @@
       "en": "Above its floor, at every step to an optimum of every order rising with the family, each member takes its whole capacity at a condition beyond and gives nothing there, so the optimum stands at its floor or at what the rest leaves less the capacity; with no floor, every optimum stands at each condition beyond at the level before with what the rest gives, less what it takes, less the part's capacity, or at nothing.",
       "zh": "在底线之上，达到每个随族升高之序的最优的每一步，每个成员在之外条件上取其全部容量且不给予，故最优立于其底线，或立于其余者所留减去容量处；无底线时，每个最优在之外每个条件上立于先前水平加其余者所给、减其所取、减部分的容量处，或为零。",
       "declarations": [
+        "Becoming.Optimum.Above.full_of_ranked",
         "Becoming.Optimum.Above.full",
+        "Becoming.Optimum.Above.floor_or_full_of_ranked",
         "Becoming.Optimum.Above.floor_or_full",
         "Becoming.Optimum.above_nothing",
+        "Becoming.Optimum.beyond_of_ranked",
         "Becoming.Optimum.optimum_beyond"
       ]
     },
@@ -154,8 +157,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T222228.243650Z): the 53 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 288; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T222228.243650Z）：Becoming.Optimum 新增的 53 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 288 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T222228.243650Z): the 53 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 288; not independently reviewed by a person. The three general laws of the exchange that the fourth law lists since UE1b were checked at core receipt 20261025T173410.671057Z, with empty axiom reports, and reviewed independently with UE1b (AI, read-only, its findings taken).",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T222228.243650Z）：Becoming.Optimum 新增的 53 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 288 节；未经人的独立审查。第四条定律自 UE1b 起所列的交换之三条一般定律于核心回执 20261025T173410.671057Z 实查，公理报告为空，并随 UE1b 经独立审查（AI，只读，所见皆采）。"
   },
   "next_delta": {
     "en": "Optima over a course of steps, the optimizer choosing again at each, with the rest responding and the beyond renewing; capacities from a law of the formations; an independent review.",
@@ -287,7 +290,9 @@
         "Becoming.Flow.restTaken",
         "Becoming.Optimum.Above",
         "Becoming.Optimum.Above.floor_or_full",
+        "Becoming.Optimum.Above.floor_or_full_of_ranked",
         "Becoming.Optimum.Above.full",
+        "Becoming.Optimum.Above.full_of_ranked",
         "Becoming.Optimum.Above.room",
         "Becoming.Optimum.Above.transfer",
         "Becoming.Optimum.Drain.before",
@@ -307,6 +312,7 @@
         "Becoming.Optimum.Rising",
         "Becoming.Optimum.Room",
         "Becoming.Optimum.above_nothing",
+        "Becoming.Optimum.beyond_of_ranked",
         "Becoming.Optimum.member_below",
         "Becoming.Optimum.optimum_beyond",
         "Becoming.Optimum.optimum_lowers_iff",
@@ -319,7 +325,7 @@
         "Becoming.total_raise_at",
         "Becoming.total_split"
       ],
-      "sha256": "3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f"
+      "sha256": "6b8c4e2024cf6f5d8b1ffc1dd5cf8849f032e2bc118c23ed76c4f20f9eaeb6dc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -561,12 +567,18 @@
       "role": "receipt",
       "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc70343e92d50746484fb1eb8b06fe18850765e06ff8737b1b51ed2c5300006a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -647,6 +659,10 @@
     {
       "en": "21 October 2026, SG4: a course of re-optimizing steps against a renewal, each step read off by this record's law (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG4：对更新的重新优化过程，每步由本记录之律读出（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "25 October 2026, UE1b (board rule 9): Optimum.Above.full, Optimum.Above.floor_or_full and Optimum.optimum_beyond are now corollaries of Optimum.Above.full_of_ranked, Optimum.Above.floor_or_full_of_ranked and Optimum.beyond_of_ranked, which take as hypothesis that the order ranks above the optimum the outcome with one unit moved from the condition beyond into the family, in place of the rising order; the three are added to the fourth law and its references; statements and this record's laws unchanged. Optimum.lean rebound to core receipt 20261025T173410.671057Z after reading the change (record what-a-set-point-optimum-does-beyond, study section 415).",
+      "zh": "2026年10月25日，UE1b（看板规则 9）：Optimum.Above.full、Optimum.Above.floor_or_full 与 Optimum.optimum_beyond 现为 Optimum.Above.full_of_ranked、Optimum.Above.floor_or_full_of_ranked 与 Optimum.beyond_of_ranked 的推论；后三者以其序把自之外该条件移入族一单位的结果排在最优之上为假设，代替升高的序；三者加入第四条定律及其引用；陈述与本记录的定律不变。读过改动后 Optimum.lean 改绑核心回执 20261025T173410.671057Z（记录 what-a-set-point-optimum-does-beyond，研究第 415 节）。"
     }
   ]
 }

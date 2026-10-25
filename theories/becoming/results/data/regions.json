@@ -2011,6 +2011,11 @@
    "base": "old-base",
    "note": "RB1 DrawnBeyond"
   },
+  "what-a-set-point-optimum-does-beyond": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "SetPointOptimum UE1b: what an order with a set point does beyond what couples in"
+  },
   "what-an-extrapolation-given-nothing-fixes": {
    "region": "knowing",
    "base": "old-base",
@@ -3171,7 +3176,7 @@
   "Becoming.Optimum": {
    "region": "collective",
    "base": "old-base",
-   "note": "SG1-SG17 optima at least level beyond; 503 thms"
+   "note": "SG1-SG17 optima at least level beyond; 506 thms (UE1b: one law of the exchange)"
   },
   "Becoming.OrderNormal": {
    "region": "root",
@@ -3577,6 +3582,11 @@
    "region": "knowing",
    "base": "old-base",
    "note": "sensitivity on webs and flows"
+  },
+  "Becoming.SetPointOptimum": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "UE1b set-point orders: the drain below the set point, the draw at it, joint excess for holders"
   },
   "Becoming.Settling": {
    "region": "map",

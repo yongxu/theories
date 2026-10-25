@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2954 nodes, 5116 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2957 nodes, 5132 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 90 | 73 | 0 |
 | Knowing and testing | 0 | 79 | 72 | 0 |
 | Life and evolution | 0 | 34 | 16 | 0 |
-| Collectives and selection | 0 | 53 | 15 | 0 |
+| Collectives and selection | 0 | 54 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 69 | 50 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
@@ -362,7 +362,7 @@ Modules (16, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (53):
+Results (54):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
@@ -413,12 +413,13 @@ Results (53):
 - [Valuing what is left at the horizon](records/valuing-what-is-left-at-the-horizon.md) (recorded-checked)
 - [What a pool's acts respond to](records/what-a-pools-acts-respond-to.md) (recorded-checked)
 - [What a rise draws from beyond](records/what-a-rise-draws-from-beyond.md) (recorded-checked)
+- [What a set-point optimum does beyond what couples in](records/what-a-set-point-optimum-does-beyond.md) (recorded-checked)
 - [What an optimum does beyond what couples in](records/what-an-optimum-does-beyond-what-couples-in.md) (recorded-checked)
 - [What pooled coupling reaches](records/what-pooled-coupling-reaches.md) (recorded-checked)
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (15, 0 stated on the grammar): `Centers`, `Exclusion`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SharedCodes`, `Tolerance`, `Withholding`
+Modules (16, 0 stated on the grammar): `Centers`, `Exclusion`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
 
 
 ## The classical texts
@@ -563,4 +564,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-304 of 322 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+305 of 323 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

@@ -17,13 +17,13 @@ It states free energy and its bound only in the periphery, over the reals. Entro
 
 **As written:** where the step can lose what it takes, "nothing protects what lies beyond", and a term counted after the set point "keeps the most beyond"; joint excess "holds for choosers held at set points".
 
-**Corrected** (UE1b's [review](../ue1b-set-points/REVIEW-UE1b.md), findings 1, 2 and on joint excess). The reading rests on UE1b's kit, which is being revised and has not landed. In its corrected form:
+**Corrected** (UE1b's [review](../ue1b-set-points/REVIEW-UE1b.md) and the landed kit, `Becoming.SetPointOptimum`, record [what-a-set-point-optimum-does-beyond](../../../../../../theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md)):
 
-- An order greatest at a set point is not rising, so the optimum law does not reach it as such. Below its set point it rises, and its optima drain as a maximizer's do.
+- Where the family holds a condition, no asymmetric order nearing a set point is rising (`Optimum.Nearing.not_rising`), so the optimum law does not reach it as stated. Below its set point it rises, and its optima drain as a maximizer's do (`Optimum.least_below`, `Optimum.nearing_beyond`).
+- Where the set point can be reached, every optimum stands at it, and nearing alone asks nothing more of what lies beyond (`Optimum.optima_iff`). In a balanced step in which the whole gains nothing, what lies beyond falls by the family's shortfall from its set point with the loss (`Flow.Balances.atSetPoint_draws`).
 - Where the step can lose what it takes, the set point alone does not protect what lies beyond: the order by distance has the draining step among its optima, beside the keeping one (`Topped.nearing_either`). A term on what lies beyond, counted after the set point, does protect it there (`Topped.counted_after_keeps`).
-- That term leaves what lies beyond, in total, at the most any eligible way of reaching the set point leaves (`Optimum.counted_after_most`). With several conditions beyond, maximizing the total can empty one of them.
-- What protects is how the choice among equal optima is made, not the set point.
-- A level held fixed, by any means, takes at least its loss from what feeds it, and joint excess applies to any takers. That the holders are set-point choosers re-optimizing at every step is a reading.
+- That term leaves what lies beyond, in total, at the most any eligible way of reaching the set point leaves (`Optimum.counted_after_most`). With several conditions beyond, it can empty one of them (`Spread.counted_after_empties`). Counting less, it drains (`Topped.counted_less_drains`). After an aspiration level it keeps too (`Drain.satisficingThen_keeps`). What protects is how the choice among equal optima is made, not the set point.
+- A formation holding its family's stock, by any means, takes at least its loss from what feeds it (`Flow.held_draws`), and joint excess applies to any such holders (`Flow.held_excess_ends`). That the holders are set-point choosers re-optimizing at every step is a reading.
 
 ## 3. The third part (NOTE §7(b))
 

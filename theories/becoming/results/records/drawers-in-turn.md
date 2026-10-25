@@ -79,6 +79,7 @@ The optimality condition of dynamic programming (Bellman 1957); the common-prope
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
 
 Aliases: `drawers in turn`, `one model of drawers in turn`, `轮流的抽取者`, `Becoming.Optimum.InTurn.kept_returns`, `Becoming.Optimum.InTurn.revisions_reach_floors`
 

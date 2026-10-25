@@ -5168,6 +5168,18 @@
    "page": "theories/becoming/results/records/what-a-rise-draws-from-beyond.md"
   },
   {
+   "id": "record:what-a-set-point-optimum-does-beyond",
+   "type": "result",
+   "record": "what-a-set-point-optimum-does-beyond",
+   "title": "What a set-point optimum does beyond what couples in",
+   "title_zh": "设定点最优对耦合入者之外做什么",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md"
+  },
+  {
    "id": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "result",
    "record": "what-an-extrapolation-given-nothing-fixes",
@@ -8837,7 +8849,18 @@
    "type": "module",
    "name": "Becoming.Optimum",
    "level": "L1",
-   "theorems": 503,
+   "theorems": 506,
+   "region": "collective",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.SetPointOptimum",
+   "type": "module",
+   "name": "Becoming.SetPointOptimum",
+   "level": "L1",
+   "theorems": 82,
    "region": "collective",
    "base": "old-base",
    "on_grammar": false,
@@ -28164,6 +28187,12 @@
    "anchor": "r-what-an-optimum-does-beyond-what-couples-in"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-a-set-point-optimum-does-beyond"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -31934,6 +31963,16 @@
   {
    "from": "module:Becoming.SensitivityWebs",
    "to": "module:Becoming.Tail",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SetPointOptimum",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SetPointOptimum",
+   "to": "module:Becoming.Regulation",
    "type": "imports"
   },
   {
@@ -50247,6 +50286,71 @@
    "type": "related"
   },
   {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.Continuation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.DrawnBeyond",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.Optimum",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.Propagation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.Regulation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "module:Becoming.SetPointOptimum",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:capture-by-counted-choices",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:own-count-misses-joint-excess",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:room-read-off-the-exchange",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:several-optimizers-drain-by-their-joint-capacity",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:what-a-rise-draws-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:what-an-extrapolation-given-nothing-fixes",
    "to": "module:Becoming.Unrolling",
    "type": "proved-in"
@@ -53899,6 +54003,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
    "to": "record:what-a-rise-draws-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+   "to": "record:what-a-set-point-optimum-does-beyond",
    "type": "states"
   },
   {

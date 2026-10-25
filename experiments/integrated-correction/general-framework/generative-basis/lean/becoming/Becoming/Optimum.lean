@@ -64,6 +64,11 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   (`Optimum.Above.full`), so it stands at its floor or at what the rest leaves less the capacity
   (`Optimum.Above.floor_or_full`); with no floor, at the level before, with what the rest gives
   and less what it takes, less the part's capacity, or at nothing (`Optimum.optimum_beyond`).
+  One law carries the three: an optimum does so at a condition beyond wherever its order ranks
+  above it the outcome with one unit moved from there into the family
+  (`Optimum.Above.full_of_ranked`, `Optimum.Above.floor_or_full_of_ranked`,
+  `Optimum.beyond_of_ranked`); a rising order ranks every such unit above
+  (`Optimum.transfer_exceeds`).
 * **No drive where no units are shared; the drain exactly where they are.** Where no member may
   take from a condition beyond, every optimum leaves it where the rest leaves it
   (`Optimum.optimum_untouched`); an optimum lowers it below that exactly where the part has some
@@ -1412,6 +1417,30 @@ theorem Above.room [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.prese
            member (.inr (Nat.lt_of_le_of_lt (Nat.zero_le _) below)),
      transfer_exceeds (apart c mem) inside o⟩
 
+/-- **Above its floor, an optimum takes the whole capacity wherever a unit moved into the family
+ranks above it.** Where an optimum among the outcomes open to the part above the floors stands
+above the floor at a condition beyond, and its order ranks above it the outcome with one unit moved
+from there into a condition of the family, every step reaching it has each member taking part take
+its whole capacity there and give nothing there. `Above.full` is the case of an order rising with
+the family, every such unit ranking above. -/
+theorem Above.full_of_ranked [DecidableEq F] [DecidableEq C] {floor o : C → Nat} {L' : Flow F C}
+    (distinct : Distinct (L.present t)) (cdistinct : Distinct (ds ++ rest))
+    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds)
+    (optimum : Frontier (Above L part l cap ds rest t floor) better o)
+    (acts : L.ActsWithin part cap (ds ++ rest) t L')
+    (balances : ∀ x, o x + L'.taken t x = l x + L'.given t x) {c : C} (mem : c ∈ rest)
+    (ranked : better (Optimum.transfer c d o) o) (above : floor c < o c) {h : F}
+    (present : h ∈ L.present t) (member : part h = true) :
+    L'.take t h c = cap h c ∧ L'.give t h c = 0 :=
+  have beaten : (L'.take t h c < cap h c ∨ 0 < L'.give t h c) → False := fun spare =>
+    optimum.2 _ (Above.transfer distinct cdistinct apart mem inside acts balances optimum.1.2
+      above present member spare) ranked
+  ⟨Nat.le_antisymm (acts.2.2.1 h c member) (Nat.ge_of_not_lt fun lt => beaten (.inl lt)),
+   match gave : L'.give t h c with
+   | 0 => rfl
+   | n + 1 => absurd (.inr (Nat.lt_of_lt_of_le (Nat.succ_pos n) (Nat.le_of_eq gave.symm)))
+       beaten⟩
+
 /-- **Above its floor, an optimum takes the part's whole capacity and gives nothing there.** Where an
 optimum of an order rising with the family, among the outcomes open to the part above the
 floors, stands above the floor at a condition beyond, every step reaching it has each member
@@ -1424,31 +1453,25 @@ theorem Above.full [DecidableEq F] [DecidableEq C] {floor o : C → Nat} {L' : F
     (balances : ∀ x, o x + L'.taken t x = l x + L'.given t x) {c : C} (mem : c ∈ rest)
     (above : floor c < o c) {h : F} (present : h ∈ L.present t) (member : part h = true) :
     L'.take t h c = cap h c ∧ L'.give t h c = 0 :=
-  have beaten : (L'.take t h c < cap h c ∨ 0 < L'.give t h c) → False := fun spare =>
-    optimum.2 _ (Above.transfer distinct cdistinct apart mem inside acts balances optimum.1.2
-      above present member spare) (rising _ _ (transfer_exceeds (apart c mem) inside o))
-  ⟨Nat.le_antisymm (acts.2.2.1 h c member) (Nat.ge_of_not_lt fun lt => beaten (.inl lt)),
-   match gave : L'.give t h c with
-   | 0 => rfl
-   | n + 1 => absurd (.inr (Nat.lt_of_lt_of_le (Nat.succ_pos n) (Nat.le_of_eq gave.symm)))
-       beaten⟩
+  Above.full_of_ranked distinct cdistinct apart inside optimum acts balances mem
+    (rising _ _ (transfer_exceeds (apart c mem) inside o)) above present member
 
-/-- **Every optimum stands at its floor or takes the whole capacity.** Where an optimum of an order
-rising with the family, among the outcomes open to the part above the floors, stands at a
-condition beyond, it stands at its floor there, or there the part takes its whole capacity and
-gives nothing: what it leaves, with what the rest takes and the capacity, is the level before
-with what the rest gives. -/
-theorem Above.floor_or_full [DecidableEq F] [DecidableEq C] {floor o : C → Nat}
+/-- **At its floor, or the whole capacity.** Where an optimum among the outcomes open to the part
+above the floors stands at a condition beyond, and its order ranks above it the outcome with one
+unit moved from there into a condition of the family, it stands at its floor there, or there the
+part takes its whole capacity and gives nothing. `Above.floor_or_full` is the rising case. -/
+theorem Above.floor_or_full_of_ranked [DecidableEq F] [DecidableEq C] {floor o : C → Nat}
     (distinct : Distinct (L.present t)) (cdistinct : Distinct (ds ++ rest))
-    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds) (rising : Rising ds better)
-    (optimum : Frontier (Above L part l cap ds rest t floor) better o) {c : C} (mem : c ∈ rest) :
+    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds)
+    (optimum : Frontier (Above L part l cap ds rest t floor) better o) {c : C} (mem : c ∈ rest)
+    (ranked : better (Optimum.transfer c d o) o) :
     o c = floor c ∨
       o c + L.restTaken part t c + L.capacity part cap t c = l c + L.restGiven part t c :=
   match optimum.1, Nat.lt_or_ge (floor c) (o c) with
   | _, .inr atMost => Or.inl (Nat.le_antisymm atMost (optimum.1.2 c mem))
   | ⟨⟨L', acts, balances⟩, _⟩, .inl above => by
     have full := fun h (present : h ∈ L.present t) (member : part h = true) =>
-      Above.full distinct cdistinct apart inside rising optimum acts balances mem above
+      Above.full_of_ranked distinct cdistinct apart inside optimum acts balances mem ranked above
         present member
     have takes : (total (L.present t) fun h => bif part h then L'.take t h c else 0) =
         L.capacity part cap t c :=
@@ -1471,22 +1494,39 @@ theorem Above.floor_or_full [DecidableEq F] [DecidableEq C] {floor o : C → Nat
     rw [Nat.add_assoc, ← taken, ← given]
     exact balances c
 
+/-- **Every optimum stands at its floor or takes the whole capacity.** Where an optimum of an order
+rising with the family, among the outcomes open to the part above the floors, stands at a
+condition beyond, it stands at its floor there, or there the part takes its whole capacity and
+gives nothing: what it leaves, with what the rest takes and the capacity, is the level before
+with what the rest gives. -/
+theorem Above.floor_or_full [DecidableEq F] [DecidableEq C] {floor o : C → Nat}
+    (distinct : Distinct (L.present t)) (cdistinct : Distinct (ds ++ rest))
+    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds) (rising : Rising ds better)
+    (optimum : Frontier (Above L part l cap ds rest t floor) better o) {c : C} (mem : c ∈ rest) :
+    o c = floor c ∨
+      o c + L.restTaken part t c + L.capacity part cap t c = l c + L.restGiven part t c :=
+  Above.floor_or_full_of_ranked distinct cdistinct apart inside optimum mem
+    (rising _ _ (transfer_exceeds (apart c mem) inside o))
+
 /-- An optimum among the outcomes open to the part is an optimum above the floor nothing. -/
 theorem above_nothing {o : C → Nat}
     (optimum : Frontier (L.Outcome part l cap (ds ++ rest) t) better o) :
     Frontier (Above L part l cap ds rest t fun _ => 0) better o :=
   ⟨⟨optimum.1, fun _ _ => Nat.zero_le _⟩, fun b eligible => optimum.2 b eligible.1⟩
 
-/-- **Every optimum stands beyond at what the rest leaves less the part's capacity.** Among the
-outcomes open to a part, every optimum of every order rising with the family stands at each
-condition beyond at the level before, with what the rest gives and less what the rest takes,
-less the part's whole capacity there, or at nothing. -/
-theorem optimum_beyond [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.present t))
+/-- **Beyond, what the rest leaves less the capacity, wherever a unit moved in ranks above.** Among
+the outcomes open to a part, an optimum whose order ranks above it the outcome with one unit moved
+from a condition beyond into a condition of the family stands there at the level before, with what
+the rest gives and less what it takes, less the part's whole capacity, or at nothing.
+`optimum_beyond` is the rising case. -/
+theorem beyond_of_ranked [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.present t))
     (cdistinct : Distinct (ds ++ rest)) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C}
-    (inside : d ∈ ds) (rising : Rising ds better) {o : C → Nat}
-    (optimum : Frontier (L.Outcome part l cap (ds ++ rest) t) better o) {c : C} (mem : c ∈ rest) :
+    (inside : d ∈ ds) {o : C → Nat}
+    (optimum : Frontier (L.Outcome part l cap (ds ++ rest) t) better o) {c : C} (mem : c ∈ rest)
+    (ranked : better (transfer c d o) o) :
     o c = l c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c :=
-  match Above.floor_or_full distinct cdistinct apart inside rising (above_nothing optimum) mem with
+  match Above.floor_or_full_of_ranked distinct cdistinct apart inside (above_nothing optimum) mem
+      ranked with
   | .inr full => by
     rw [← full, Naturals.sub_sub, Nat.add_assoc, Naturals.add_sub_cancel]
   | .inl nothing => by
@@ -1503,6 +1543,18 @@ theorem optimum_beyond [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.p
             rw [acts.taken_eq c]
             exact Nat.add_le_add_left (acts.part_taken_le c) _
     rw [nothing, Naturals.sub_sub, sub_eq_zero_of_le reach]
+
+/-- **Every optimum stands beyond at what the rest leaves less the part's capacity.** Among the
+outcomes open to a part, every optimum of every order rising with the family stands at each
+condition beyond at the level before, with what the rest gives and less what the rest takes,
+less the part's whole capacity there, or at nothing. -/
+theorem optimum_beyond [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.present t))
+    (cdistinct : Distinct (ds ++ rest)) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C}
+    (inside : d ∈ ds) (rising : Rising ds better) {o : C → Nat}
+    (optimum : Frontier (L.Outcome part l cap (ds ++ rest) t) better o) {c : C} (mem : c ∈ rest) :
+    o c = l c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c :=
+  beyond_of_ranked distinct cdistinct apart inside optimum mem
+    (rising _ _ (transfer_exceeds (apart c mem) inside o))
 
 /-- **No drive where no units are shared.** At a condition beyond from which no member of the
 part taking part may take, every optimum among the outcomes open to the part stands where the

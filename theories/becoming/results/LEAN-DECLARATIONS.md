@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 313 | 14,331 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 314 | 14,416 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -846,6 +846,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SemanticCalibration.lean](lean-declarations/shared.md#module-ad79f81f6792) | Organizational formation through revisable evaluation |
 | [Sensitivity.lean](lean-declarations/becoming-core.md#module-4db5dac62437) | Becoming pure core |
 | [SensitivityWebs.lean](lean-declarations/becoming-core.md#module-99ea0db6a80e) | Becoming pure core |
+| [SetPointOptimum.lean](lean-declarations/becoming-core.md#module-2ab2a78d34aa) | Becoming pure core |
 | [Settling.lean](lean-declarations/becoming-core.md#module-5a9e57e6d142) | Becoming pure core |
 | [SettlingCorrespondence.lean](lean-declarations/ethics.md#module-4d312d4e9464) | Normative grounding and generative direction |
 | [SharedCodes.lean](lean-declarations/becoming-core.md#module-c45c59b5d126) | Becoming pure core |

@@ -4196,6 +4196,66 @@
    "module": "Becoming.DrawnShaping",
    "category": "general-structure",
    "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping read by readers drawn from the selected; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.Optimum.Drain.satisficingThen_keeps": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "model-witness",
+   "reason": "a witness of orders with a set point on the splits of three units (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.Skew.nearing": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "model-witness",
+   "reason": "an order by a measure of deviation from two that weighs each unit over three times and each unit under once: a witness that a nearing order need not weigh both sides alike (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.Skew.not_by_gaps": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "model-witness",
+   "reason": "an order by a measure of deviation from two that weighs each unit over three times and each unit under once: a witness that a nearing order need not weigh both sides alike (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.Spread.counted_after_empties": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "model-witness",
+   "reason": "two ways of reaching a set point, one emptying a condition beyond: a witness that the order by distance with the beyond counted after leaves the most beyond in total, not at each condition (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.byGapLess_nearing": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.byGapThen_not_rising": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.byGap_not_rising": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.counted_after_keeps_iff": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.least_at_iff": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.least_below": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.optima_iff": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "general-structure",
+   "reason": "a law of every order nearing a set point, over any outcomes: the base states no such order, so nothing on it uses this law (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Optimum.sub_le_sub_iff": {
+   "module": "Becoming.SetPointOptimum",
+   "category": "support",
+   "reason": "an arithmetic or list lemma used by the module's laws (Becoming.SetPointOptimum, UE1b)"
   }
  },
  "instances": {
