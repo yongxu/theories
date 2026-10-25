@@ -149,9 +149,8 @@ theorem fallsStop_iff {s : Nat → A} {T : Nat} :
 
 /-- **Falls that end stop**: where an amount does not rise from `T` on, as far as can be refuted,
 and every course from its value at `T` of no rise then a strict fall ends (`«尽»`), its strict falls
-stop: the grammar's law of rest (`«尽则不或屡»`) at the amounts. The converse, from falls stopping
-along every line to their ending, would build an endless course from endlessly many falls, which
-needs dependent choice, and is not stated. -/
+stop: the grammar's law of rest (`«尽则不或屡»`) at the amounts. No converse, from falls stopping
+along a line to the ending of the courses, is established. -/
 theorem fallsStop_of_ends {s : Nat → A} {T : Nat} (still : ∀ t, T ≤ t → ¬¬ M.le (s (t + 1)) (s t))
     (ends : «尽» («而» («所闭» (fun a b => M.le b a)) (fun a b => ¬ M.le a b)) «一» (s T)) :
     M.FallsStop s T :=
