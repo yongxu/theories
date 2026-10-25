@@ -1,0 +1,207 @@
+{
+ "old_receipt": "20261025T163242.561061Z",
+ "new_receipt": "20261025T172255.378622Z",
+ "modules": {
+  "Frame": {
+   "old": 28,
+   "new": 30,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.closedUnder_iff_closed",
+    "Becoming.withinClosure_iff_within"
+   ],
+   "definitions_rewritten": [
+    "Becoming.ClosedUnder",
+    "Becoming.WithinClosure"
+   ],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Recurrence": {
+   "old": 71,
+   "new": 82,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Branching.Lossless.returns_of_total",
+    "Becoming.Branching.lossless_iff_fixedBefore",
+    "Becoming.Branching.returns_iff_reaches",
+    "Becoming.Law.lossless_iff_fixedBefore",
+    "Becoming.Law.next_fixed",
+    "Becoming.Law.next_total",
+    "Becoming.Law.reaches_iff_orbit",
+    "Becoming.Law.reaches_of_orbit",
+    "Becoming.Law.returns_iff_reaches",
+    "Becoming.Law.step_fixed",
+    "Becoming.Law.steps_orbit"
+   ],
+   "definitions_rewritten": [
+    "Becoming.skipAt"
+   ],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Attraction": {
+   "old": 54,
+   "new": 56,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Law.absorbing_iff_closed",
+    "Becoming.Law.drawn_iff_drawnIn"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Laws": {
+   "old": 3,
+   "new": 5,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.determined_iff_fixed",
+    "Becoming.goAlikeUnder_iff_alike"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Mechanism": {
+   "old": 30,
+   "new": 31,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.image_step_iff"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "IdentificationRuns": {
+   "old": 58,
+   "new": 58,
+   "changed": [],
+   "gone": [],
+   "added": [],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "GrammarRegularity": {
+   "old": 25,
+   "new": 25,
+   "changed": [],
+   "gone": [],
+   "added": [],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "GrammarScope": {
+   "old": 37,
+   "new": 38,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.eq_or_reach_iff_reached"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Regions": {
+   "old": 20,
+   "new": 23,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Web.keeps_iff",
+    "Becoming.Web.mixed_iff",
+    "Becoming.Web.widens_iff"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Admission": {
+   "old": 51,
+   "new": 53,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Web.exceeds_iff",
+    "Becoming.Web.includes_iff"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": [
+    "Becoming.Web.admitted"
+   ]
+  },
+  "Flow": {
+   "old": 97,
+   "new": 102,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Flow.BalancesOn.units_over",
+    "Becoming.Flow.balancesOn_iff_units",
+    "Becoming.Flow.balances_iff_units",
+    "Becoming.Flow.balances_of_matched",
+    "Becoming.Flow.over_iff_units"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Amounts": {
+   "old": 36,
+   "new": 37,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Amounts.falls_end"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "InAmounts": {
+   "old": 89,
+   "new": 91,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Amounts.fallsStop_iff",
+    "Becoming.Amounts.fallsStop_of_ends"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Weightings": {
+   "old": 391,
+   "new": 397,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Weighting.WidensOn.not_reverse",
+    "Becoming.Weighting.WidensOn.trans",
+    "Becoming.Weighting.exceedsOn_iff",
+    "Becoming.Weighting.includesOn_iff",
+    "Becoming.Weighting.mixedOn_iff",
+    "Becoming.Weighting.widensOn_iff"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": [
+    "Becoming.Weighting.admittedOn"
+   ]
+  }
+ }
+}
+definitions whose bodies changed (expected: ClosedUnder, WithinClosure, skipAt; bodies equal by rfl): {'Frame': ['Becoming.ClosedUnder', 'Becoming.WithinClosure'], 'Recurrence': ['Becoming.skipAt']}
+statements unchanged in every changed module

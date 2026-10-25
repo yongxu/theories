@@ -1,0 +1,36 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean
+index 4a6c3bf0bfdd1f5e6ff2f6b9bd56946ba045ab97..7cbf0d4d7a97d48f2d805bc2d917abc27f5cfea6 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean
+@@ -16,6 +16,11 @@ modules reading them need not import one another for them.
+ * **Going alike.** Configurations whose descriptions a relation `E` relates go, by one move, to
+   configurations whose descriptions it relates (`GoAlikeUnder`, the kernel schema); going alike
+   under a projection is its case at equality (`GoAlike`, defined as `GoAlikeUnder P π Eq`).
++* **On the grammar.** A process is determined exactly where each move has a fixed successor
++  (`determined_iff_fixed`), and going alike under a description is the grammar's going alike
++  (`«同行»` of `Becoming.GrammarLaws`) at each move, with the description pulled back along the map,
++  with no hypothesis (`goAlikeUnder_iff_alike`); so the laws of going alike in the later modules
++  are the grammar's lumping laws at the moves.
+ 
+ Every declaration moved here unchanged, with its name, in R31 (20 October 2026): `Determined` from
+ `Becoming.Joint`, the laws of change from `Becoming.Assurance`, `GoAlikeUnder` from
+@@ -101,4 +106,19 @@ alike, the same move takes them to configurations that project alike. -/
+ def GoAlike (P : Process S A) (π : S → K) : Prop :=
+   GoAlikeUnder P π Eq
+ 
++/-! ## On the grammar -/
++
++/-- **A process is determined exactly where each move has a fixed successor.** -/
++theorem determined_iff_fixed {P : Process S A} :
++    Determined P ↔ ∀ a, «定后» (fun s t => P.step s a t) :=
++  ⟨fun determined a t t' ⟨s, step, step'⟩ => determined s a t t' step step',
++   fun fixed s a t t' step step' => fixed a t t' ⟨s, step, step'⟩⟩
++
++/-- **Going alike under a description is the grammar's going alike**, at each move, with the
++description pulled back along the map, with no hypothesis. -/
++theorem goAlikeUnder_iff_alike {P : Process S A} {π : S → K} {E : K → K → Prop} :
++    GoAlikeUnder P π E ↔ ∀ a, «同行» (fun s t => P.step s a t) (fun s s' => E (π s) (π s')) :=
++  ⟨fun alike a => «同行之逐点».mpr fun s s' e u u' step step' => alike s s' a u u' e step step',
++   fun alike s s' a u u' e step step' => «同行之逐点».mp (alike a) s s' e u u' step step'⟩
++
+ end Becoming

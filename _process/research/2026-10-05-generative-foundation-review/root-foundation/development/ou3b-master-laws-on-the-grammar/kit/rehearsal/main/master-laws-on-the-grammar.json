@@ -1,0 +1,1048 @@
+{
+  "schema_version": 2,
+  "id": "master-laws-on-the-grammar",
+  "title": {
+    "en": "The master laws on the grammar",
+    "zh": "文法上的主律"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T18:11:34+00:00",
+  "statement": {
+    "en": "The five master laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
+    "zh": "五条主律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
+  },
+  "laws": [
+    {
+      "en": "Closure. Lying within a relation's closure (every region closed under it that holds x holds y) is being x or reached from x. The closure is reflexive, transitive, holds every step, grows with the relation, is symmetric for a symmetric one and closed, nothing within it bears the relation beyond it, and a region is x's closure exactly where it holds x, is closed and lies within it.",
+      "zh": "闭包：在一关系之闭包内（凡对其封闭而含 x 之域皆含 y），即是 x 本身或为 x 所及。闭包自反、可传递、含每一步、随关系增大、对称关系下对称、自身封闭，其内者不以此关系及于其外；一域恰在含 x、封闭且在闭包内时为 x 之闭包。",
+      "declarations": [
+        "Becoming.«闭»",
+        "Becoming.«所闭»",
+        "Becoming.«所闭之自反»",
+        "Becoming.«所闭之传递»",
+        "Becoming.«缘在所闭»",
+        "Becoming.«所闭之闭»",
+        "Becoming.«所闭之单调»",
+        "Becoming.«所闭之对称»",
+        "Becoming.«所闭之界»",
+        "Becoming.«闭含所闭»",
+        "Becoming.«所闭之证»",
+        "Becoming.«闭而外则不所闭»",
+        "Becoming.«闭之及»",
+        "Becoming.«及之所闭»",
+        "Becoming.«所闭当且仅当同一或及»",
+        "Becoming.«及当且仅当一步而所闭»"
+      ]
+    },
+    {
+      "en": "The frame's closed region and closure are the grammar's, by definition, and lying within a closure along a relation is being the start or reached on a line under the one of it.",
+      "zh": "框架之封闭域与闭包即文法之所闭，依定义；沿一关系在闭包之内，即是起点本身或在其「一」之下的相续上为其所及。",
+      "declarations": [
+        "Becoming.closedUnder_iff_closed",
+        "Becoming.withinClosure_iff_within",
+        "Becoming.eq_or_reach_iff_reached"
+      ]
+    },
+    {
+      "en": "Lemmas on numbers and lists that the line laws use, each proved once here, below the frame: pigeonhole with no decidability (a list holding the first l.length + 1 values of a sequence holds two at one place), the numbers other than a given one, splitting a joined list, a value put in front of a sequence, and totals that agree pointwise.",
+      "zh": "诸线律所用的数与列表之引理，各于此（框架之下）证一次：无须可判定的鸽笼（持一序列前 l.length + 1 个值之列表在同一位持其二）、异于某一给定数之诸数、拆分相接之列表、置于序列之前的一值、逐点相同之总和。",
+      "declarations": [
+        "Becoming.GrammarLaws.length_insert",
+        "Becoming.GrammarLaws.length_replicate",
+        "Becoming.GrammarLaws.le_succ_cases",
+        "Becoming.GrammarLaws.gap_of_lt",
+        "Becoming.GrammarLaws.mem_cons_split",
+        "Becoming.GrammarLaws.skipAt",
+        "Becoming.GrammarLaws.skipAt_ne",
+        "Becoming.GrammarLaws.skipAt_le",
+        "Becoming.GrammarLaws.skipAt_lt",
+        "Becoming.GrammarLaws.split_at_head",
+        "Becoming.GrammarLaws.revisits_within",
+        "Becoming.GrammarLaws.split_append",
+        "Becoming.GrammarLaws.prepend",
+        "Becoming.GrammarLaws.total_congr"
+      ]
+    },
+    {
+      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional.",
+      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。",
+      "declarations": [
+        "Becoming.«对»",
+        "Becoming.«对之长»",
+        "Becoming.«等长则一对»",
+        "Becoming.«一之对»",
+        "Becoming.«对之单调»",
+        "Becoming.«对之自反»",
+        "Becoming.«对之左插»",
+        "Becoming.«对则守数»",
+        "Becoming.«守数当且仅当可对»",
+        "Becoming.«等长而不对之例»"
+      ]
+    },
+    {
+      "en": "Pairings read backward are pairings under the converse; they compose under the composite (under a transitive relation, under itself), join, and swap under a reflexive one; over a finite family the members' pairings gather; over a stretch, pairings at each step under R give one under R's closure; and the count law over a stretch is exactly a pairing of units over it.",
+      "zh": "配对逆读即逆关系下之配对；配对在复合关系下可接（可传递关系下即在其自身之下），可并，在自反关系下可换；有限一族中诸成员之配对可聚；一段中每步于 R 下之配对给出 R 之闭包下的一个配对；一段上之守数律恰是该段上单位之配对。",
+      "declarations": [
+        "Becoming.«对之逆»",
+        "Becoming.«对之取»",
+        "Becoming.«对之接»",
+        "Becoming.«对之传»",
+        "Becoming.«对之并»",
+        "Becoming.«对之换»",
+        "Becoming.«聚»",
+        "Becoming.«对之族»",
+        "Becoming.«对之程»",
+        "Becoming.«聚之长»",
+        "Becoming.«程守数当且仅当可对»"
+      ]
+    },
+    {
+      "en": "Balance represented in Flow, both ways: a flow balances exactly where, at each step and condition, the units of the level before and what is given pair one to one with those of the level after and what is taken; so at a family's members and over the family, the members' pairings gathered; under any relation a pairing gives balance. Represented, not derived: the consumers stay arithmetic.",
+      "zh": "Flow 中平衡之表示，两向：一流平衡，恰在每步每条件上先前水平与所给之单位与其后水平与所取之单位一一配对；于一族之诸成员及整族亦然，诸成员之配对相聚；任一关系下之配对给出平衡。表示而不推出：其消费者仍用算术。",
+      "declarations": [
+        "Becoming.Flow.balances_iff_units",
+        "Becoming.Flow.balances_of_matched",
+        "Becoming.Flow.balancesOn_iff_units",
+        "Becoming.Flow.over_iff_units",
+        "Becoming.Flow.BalancesOn.units_over"
+      ]
+    },
+    {
+      "en": "Steps: the successor fixed, the predecessor fixed (merging nothing, a fixed successor read backward), n steps as the n-fold composite, reaching as some positive number of steps, steps composing, a loop of p steps a loop of every multiple; with the successor fixed at what x reaches, n steps from x lead to one place, and merging nothing, n steps to one place come from one.",
+      "zh": "诸步：定后、定前（不并，即逆读之定后）、n 步即 n 重复合、及即若干正数步、步可接、p 步之环即其每一倍数步之环；于 x 所及处定后，自 x 之 n 步至于一处；不并时，至一处之 n 步来自一处。",
+      "declarations": [
+        "Becoming.«定后»",
+        "Becoming.«定前»",
+        "Becoming.«定后之逐点»",
+        "Becoming.«定前之逐点»",
+        "Becoming.«定前即逆之定后»",
+        "Becoming.«迭»",
+        "Becoming.«迭则及»",
+        "Becoming.«及即迭»",
+        "Becoming.«迭之接»",
+        "Becoming.«迭之周»",
+        "Becoming.«定后于»",
+        "Becoming.«定后则定后于»",
+        "Becoming.«定后于之后»",
+        "Becoming.«迭之定于»",
+        "Becoming.«迭之定»",
+        "Becoming.«迭之定前»"
+      ]
+    },
+    {
+      "en": "Being drawn. For every relation, x is drawn in exactly where it reaches something that does not reach back, and with a successor that does not reach itself it is drawn. With the successor fixed at what x reaches, x reaching itself is not drawn, and with some successor drawn is not reaching itself; the global forms follow. Witnesses: neither hypothesis can be omitted, and the global one is more than the law uses.",
+      "zh": "入：对每一关系，x 恰在及于不返者时入；有后而不自返则入。于 x 所及处定后，自返之 x 不入；有后时入即不自返；全局之形为推论。见证：二假设皆不可省，全局之假设多于此律所用。",
+      "declarations": [
+        "Becoming.«入»",
+        "Becoming.«入当且仅当有不返»",
+        "Becoming.«定后于环则所及皆返»",
+        "Becoming.«定后环则所及皆返»",
+        "Becoming.«定后于则返者不入»",
+        "Becoming.«定后则返者不入»",
+        "Becoming.«有后不返则入»",
+        "Becoming.«定后于有后则入当且仅当不返»",
+        "Becoming.«定后有后则入当且仅当不返»",
+        "Becoming.«无后者不入亦不返»",
+        "Becoming.«入而返之例»",
+        "Becoming.«非定后返而不入之例»"
+      ]
+    },
+    {
+      "en": "Return. Along a line whose places a list holds, merging nothing at its places brings it back to its start within the list's length, by pigeonhole with no decidability, so its start reaches itself; with the successor fixed at what its start reaches, its last place does. On a listed carrier with a successor everywhere, merging nothing makes every place reach itself, and under a fixed successor the two are one.",
+      "zh": "返：列表持其诸位之线，若于其诸位不并，则在列表之长内回到其始（无须可判定的鸽笼），故其始自返；于其始所及处定后，其末位自返。于有列表、处处有后之载体上，不并则每处自返，定后之下二者为一。",
+      "declarations": [
+        "Becoming.«遍后则有线»",
+        "Becoming.«线不并»",
+        "Becoming.«定前则线不并»",
+        "Becoming.«线不并则可退»",
+        "Becoming.«定前则线可退»",
+        "Becoming.«线则及»",
+        "Becoming.«线则所闭»",
+        "Becoming.«线有限不并则回»",
+        "Becoming.«线有限不并则返»",
+        "Becoming.«线有限定前则返»",
+        "Becoming.«定后于线有限则末返»",
+        "Becoming.«有限遍后定前则皆返»",
+        "Becoming.«定后于二返则不并»",
+        "Becoming.«皆返定后则定前»",
+        "Becoming.«有限遍后定后则定前当且仅当皆返»"
+      ]
+    },
+    {
+      "en": "Return and being drawn read on the models, both ways: a process's return is reaching itself under its steps and merging nothing is its predecessor fixed; a law's orbit is its line, reaching is some orbit and return is reaching; absorbing is closed and being drawn is the grammar's. A total lossless process within a list returns everywhere.",
+      "zh": "于模型上读返与入，两向：过程之返即在其步下自及，不并即其定前；一律之轨道即其线，及即某一轨道，返即及；吸收即封闭，入即文法之入。在一列表内、全而不并之过程处处返。",
+      "declarations": [
+        "Becoming.Branching.returns_iff_reaches",
+        "Becoming.Branching.lossless_iff_fixedBefore",
+        "Becoming.Branching.Lossless.returns_of_total",
+        "Becoming.Law.next_fixed",
+        "Becoming.Law.next_total",
+        "Becoming.Law.reaches_of_orbit",
+        "Becoming.Law.reaches_iff_orbit",
+        "Becoming.Law.returns_iff_reaches",
+        "Becoming.Law.lossless_iff_fixedBefore",
+        "Becoming.Law.steps_orbit",
+        "Becoming.Law.step_fixed",
+        "Becoming.Law.absorbing_iff_closed",
+        "Becoming.Law.drawn_iff_drawnIn"
+      ]
+    },
+    {
+      "en": "Rest. Where the steps of a line from T are steps of Q (no rise), and every course of Q steps then an F step (a least fall) ends from its place there, the F steps do not recur, as far as can be refuted and outright, with no decision and no choice. The ending is sufficient, not what rest is. Rest is not being drawn either way: a fixed point at rest and not drawn, a place drawn while its marked steps recur.",
+      "zh": "止：一线自 T 起之步皆为 Q 之步（不升），且自其处每一「若干 Q 步继以一 F 步（最小之降）」之程皆尽，则 F 之步不复屡，就可驳而言及径直皆然，无判定无选择。尽为充分，非止本身。止非入，两向：不动点止而不入；一处入而其所标之步屡见。",
+      "declarations": [
+        "Becoming.«屡»",
+        "Becoming.«或屡»",
+        "Becoming.«屡则或屡»",
+        "Becoming.«线或在所闭»",
+        "Becoming.«尽则不或屡»",
+        "Becoming.«尽则不屡»",
+        "Becoming.«止而不入之例»",
+        "Becoming.«入而屡之例»"
+      ]
+    },
+    {
+      "en": "Rest at amounts: within fewer than m least losses, every course of no rise then a least fall ends, so the law of rest over amounts is the grammar's; an amount's strict falls stopping is, by definition, their non-recurrence on the grammar, and falls whose courses end stop. No converse is established.",
+      "zh": "量上之止：在少于 m 个最小损失之内，每一「不升继以最小之降」之程皆尽，故量上之止律即文法之止律；一量之严格下降停止，依定义即其在文法上不复屡；诸程皆尽之降停止。未立其逆。",
+      "declarations": [
+        "Becoming.Amounts.falls_end",
+        "Becoming.Amounts.fallsStop_iff",
+        "Becoming.Amounts.fallsStop_of_ends"
+      ]
+    },
+    {
+      "en": "Lumping. E goes alike under R (R˘;E;R ⊆ E) where E-alike places go to E-alike ones. With the successor fixed where E leads, constancy is exactly going alike with a successor available there; the global forms are corollaries. A class going alike lies in its core, going alike keeps lines of every length alike, and a map's image has a fixed successor exactly where sameness under the map goes alike.",
+      "zh": "归并：E 在 R 下同行（R˘;E;R ⊆ E），即 E 下相同者去往 E 下相同者。于 E 所至处定后，有常恰是同行而彼处有后可续；全局之形为推论。同行之类含于其核；同行使每一长度之线保持相同；映射之像定后，恰在其下之同同行。",
+      "declarations": [
+        "Becoming.«同行»",
+        "Becoming.«同行之逐点»",
+        "Becoming.«有常局定后则同行»",
+        "Becoming.«有常定后则同行»",
+        "Becoming.«有常则可续»",
+        "Becoming.«同行可续则有常»",
+        "Becoming.«同行遍后则有常»",
+        "Becoming.«局定后则有常当且仅当同行可续»",
+        "Becoming.«同行当且仅当有常»",
+        "Becoming.«类同行遍后则含于核»",
+        "Becoming.«同行之迭»",
+        "Becoming.«同行于迭»",
+        "Becoming.«像»",
+        "Becoming.«像定后当且仅当同行»"
+      ]
+    },
+    {
+      "en": "Lumping read on the models: a determined process has a fixed successor at each move, a description goes alike under a process exactly where it goes alike at each move, and the image of a step along a projection is the grammar's image.",
+      "zh": "于模型上读归并：确定之过程在每一移动上定后；一描述在一过程下同行，恰在其于每一移动上同行；一步沿投影之像即文法之像。",
+      "declarations": [
+        "Becoming.determined_iff_fixed",
+        "Becoming.goAlikeUnder_iff_alike",
+        "Becoming.image_step_iff"
+      ]
+    },
+    {
+      "en": "Order. Widening of relations (including and exceeding) is irreflexive, one-way and transitive and excludes keeping the same and being mixed; keeping is pointwise equivalence and symmetric, mixed symmetric. Where inclusion or exceeding is decided both ways one of the four cases holds, and deciding it for every pair of relations is exactly excluded middle.",
+      "zh": "序：关系之扩大（包含且逾越）非自反、单向、可传递，排除保持相同与相杂；保持相同即逐点等价且对称，相杂对称。包含或逾越两向可判定之处，四种情形之一成立；对每一对关系皆可判定，恰是排中律。",
+      "declarations": [
+        "Becoming.«逾»",
+        "Becoming.«广»",
+        "Becoming.«齐»",
+        "Becoming.«杂»",
+        "Becoming.«逾则不则»",
+        "Becoming.«广则不则»",
+        "Becoming.«广非自»",
+        "Becoming.«广不可逆»",
+        "Becoming.«广之传递»",
+        "Becoming.«齐即谓»",
+        "Becoming.«齐之对称»",
+        "Becoming.«杂之对称»",
+        "Becoming.«广则非齐»",
+        "Becoming.«广则非杂»",
+        "Becoming.«齐则非杂»",
+        "Becoming.«四比之周»",
+        "Becoming.«则逾之定当且仅当排中»"
+      ]
+    },
+    {
+      "en": "Order read on the models, both ways: what a level path admits, and what a course admits among listed items, is a coreflexive relation (a partial identity), and the models' inclusion, exceeding, widening, keeping and mixing are the grammar's of these; widening over a listing goes one way and is transitive, from the grammar's laws.",
+      "zh": "于模型上读序，两向：一水平路径所纳者，及一进程于所列诸项中所纳者，皆为余自反关系（部分同一）；模型之包含、逾越、扩大、保持与相杂即文法对之所言；列表上之扩大单向且可传递，由文法之律而得。",
+      "declarations": [
+        "Becoming.Web.admitted",
+        "Becoming.Web.includes_iff",
+        "Becoming.Web.exceeds_iff",
+        "Becoming.Web.widens_iff",
+        "Becoming.Web.keeps_iff",
+        "Becoming.Web.mixed_iff",
+        "Becoming.Weighting.admittedOn",
+        "Becoming.Weighting.includesOn_iff",
+        "Becoming.Weighting.exceedsOn_iff",
+        "Becoming.Weighting.widensOn_iff",
+        "Becoming.Weighting.mixedOn_iff",
+        "Becoming.Weighting.WidensOn.not_reverse",
+        "Becoming.Weighting.WidensOn.trans"
+      ]
+    },
+    {
+      "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof.",
+      "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。",
+      "declarations": [
+        "Becoming.WithinClosure.refl",
+        "Becoming.WithinClosure.trans",
+        "Becoming.WithinClosure.of_rel",
+        "Becoming.WithinClosure.mono",
+        "Becoming.WithinClosure.symm",
+        "Becoming.WithinClosure.not_rel",
+        "Becoming.closedUnder_withinClosure",
+        "Becoming.closure_iff_certified",
+        "Becoming.not_within_of_closed",
+        "Becoming.withinClosure_iff_reached",
+        "Becoming.withinClosure_of_line",
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.Lossless.returns",
+        "Becoming.Law.lossless_of_returns",
+        "Becoming.Law.Lossless.cancel",
+        "Becoming.Law.returns_of_reachable",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Branching.Lossless.returns",
+        "Becoming.Branching.Lossless.cancel",
+        "Becoming.Branching.Lossless.comes_back",
+        "Becoming.Law.drawn_iff_not_returns",
+        "Becoming.Law.Drawn.not_returns",
+        "Becoming.Amounts.rests_unrefuted",
+        "Becoming.image_determined_iff",
+        "Becoming.constant_of_goAlike",
+        "Becoming.goAlike_of_constant",
+        "Becoming.Law.sameFuture_of_goAlike",
+        "Becoming.Web.Includes.refl",
+        "Becoming.Web.Includes.trans",
+        "Becoming.Web.Includes.not_exceeded",
+        "Becoming.Web.Widens.not_reverse",
+        "Becoming.Web.Widens.trans",
+        "Becoming.Web.Widens.not_keeps",
+        "Becoming.Web.Widens.not_mixed",
+        "Becoming.Web.Keeps.not_mixed",
+        "Becoming.Web.Keeps.symm",
+        "Becoming.Web.Mixed.symm",
+        "Becoming.le_succ_cases",
+        "Becoming.gap_of_lt",
+        "Becoming.mem_cons_split",
+        "Becoming.skipAt",
+        "Becoming.skipAt_ne",
+        "Becoming.skipAt_le",
+        "Becoming.skipAt_lt",
+        "Becoming.split_at_head",
+        "Becoming.revisits_within",
+        "Becoming.total_congr"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "None beyond the grammar and the models' representation: every carrier and relation, counting entering only through finite lists as in the models. Each global form takes a fixed successor, merging nothing, a successor everywhere or a list of the carrier, as a corollary of a local form that asks it only where the proof uses it.",
+      "zh": "除文法与诸模型之表示外不加前提：对每一载体与关系，计数只经有限列表而入，如诸模型。每一全局之形取定后、不并、处处有后或载体之列表，为一局部之形之推论，后者只在证明所用之处要求之。"
+    },
+    {
+      "en": "The bridges read each anchor at its model's relation: a process's steps, a law's map, what a level path or a listed course admits as a coreflexive relation, a flow's levels, takes and gives as lists of units, and an amount's no rise and least fall as steps.",
+      "zh": "诸桥于其模型之关系上读每一锚：过程之步、律之映射、水平路径或所列进程之所纳（作为余自反关系）、流之水平与取给（作为单位列表）、量之不升与最小之降（作为步）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any model's relation is functional, total or listed: the models supply these, and the global forms take them as hypotheses.",
+      "zh": "任一模型之关系为函数、为全或有列表：此由模型提供，全局之形以之为假设。",
+      "kind": "scope"
+    },
+    {
+      "en": "A derivation of balance: the pairing is supplied by the representation rather than drawn from the unfolding, and gives no trajectory of units; balance's consumers keep their arithmetic.",
+      "zh": "平衡之推出：配对由表示给定，而非得自展开，不给出单位之轨迹；平衡之消费者仍用算术。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A converse of the law of rest, from rest along a line to the ending of the courses: none is established, and one would have to say which step relations it compares and on what logic.",
+      "zh": "止律之逆，即由沿线之止至诸程之尽：未立；若立之，须说明所比之步关系及所用之逻辑。",
+      "kind": "converse",
+      "witness": "Becoming.«尽则不或屡»"
+    },
+    {
+      "en": "That rest is a case of being drawn, or being drawn a case of rest.",
+      "zh": "止为入之一例，或入为止之一例。",
+      "kind": "non-implication",
+      "witness": "Becoming.«止而不入之例»"
+    },
+    {
+      "en": "That a pairing under continuation adds anything to equal count, or the n-step law for lines of different lengths.",
+      "zh": "续之下之配对于等长之外有所增益，或不同长度之线的 n 步之律。",
+      "kind": "scope"
+    },
+    {
+      "en": "The models' other laws on the grammar: they are proved on their models and not yet restated on it.",
+      "zh": "诸模型之其他律在文法上：它们在其模型上证明，尚未在文法上重述。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "detail": {
+        "en": "Equal count without a pairing: under the empty relation two one-place lists have one length and no pairing («等长而不对之例»).",
+        "zh": "等长而无配对：空关系下两个单位列表等长而无配对（«等长而不对之例»）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "detail": {
+        "en": "Drawn and returning where the successor is not fixed («入而返之例»); returning and not drawn with no fixed successor anywhere («非定后返而不入之例»).",
+        "zh": "后不定处既入且返（«入而返之例»）；处处不定后而返且不入（«非定后返而不入之例»）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "detail": {
+        "en": "Rest is not being drawn: a fixed point is at rest and not drawn («止而不入之例»), and along the successor on the whole numbers 0 is drawn while its marked steps recur («入而屡之例»).",
+        "zh": "止非入：不动点止而不入（«止而不入之例»）；沿自然数之后继，0 入而其所标之步屡见（«入而屡之例»）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T180839.731606Z): Becoming.GrammarLaws, 113 theorems in 133 declarations, and 40 representation and bridge declarations in fourteen model modules, every one with an empty axiom report, all cited; every theorem of the fourteen keeps its printed statement. Three independent read-only AI reviews, every finding taken, in study section 417; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T180839.731606Z）：Becoming.GrammarLaws，133 项声明中 113 条定理，及十四个模型模块中 40 项表示与桥接声明，公理报告皆空，本记录全引；十四模块之每条定理其所印陈述不变。三次独立只读 AI 审查，所见皆采，见研究第 417 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
+    "zh": "平衡之推出：在模型之平衡于「一」以外之关系下读出之处，配对沿给定之缘而接；诸模型其他核心律在文法上重述；止律之逆，须说明所比之步关系及其逻辑；人之审查。"
+  },
+  "correspondence": {
+    "en": "Closure is the reflexive-transitive closure of a relation read as the least closed region; balance on the grammar is the cardinality reading of a natural-number equation by a bijection of finite lists; return and being drawn are the finite-state facts of a relation's paths, by pigeonhole; going alike (R˘;E;R ⊆ E) is the relational condition under which a quotient of a deterministic system is again one, as in lumpability; widening is strict inclusion with a witness. The readings are the AI's, in development/ou3b-master-laws-on-the-grammar (DESIGN, OU3b2-NOTES, AUDIT), with its three reviews.",
+    "zh": "闭包即关系之自反传递闭包，读作最小封闭域；文法上之平衡，以有限列表之双射读自然数等式之基数；返与入即关系路径之有限状态事实（鸽笼）；同行（R˘;E;R ⊆ E）即确定系统之商仍为确定系统之关系条件，如可归并性；扩大即带见证之严格包含。读法皆 AI 之读，载于 development/ou3b-master-laws-on-the-grammar（DESIGN、OU3b2-NOTES、AUDIT），附其三次审查。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+  "aliases": [
+    "The master laws on the grammar",
+    "文法上的主律",
+    "master laws on the grammar",
+    "the five master laws on the grammar",
+    "Becoming.«所闭当且仅当同一或及»",
+    "Becoming.«守数当且仅当可对»",
+    "Becoming.«尽则不或屡»",
+    "Becoming.«像定后当且仅当同行»",
+    "Becoming.«广之传递»"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Becoming.Grammar's relations, the one, reach, composition, the converse, constancy and the core, in which every law here is stated.",
+        "zh": "Becoming.Grammar 之关系、「一」、及、复合、逆、有常与核，此处诸律皆以之陈述。"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Ending on every branch («尽»), the premise of the law of rest.",
+        "zh": "诸支皆尽（«尽»），止律之前提。"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ClosedUnder and WithinClosure at the frame, now the grammar's «闭» and «所闭» by definition; their laws proved from the grammar's.",
+        "zh": "框架之 ClosedUnder 与 WithinClosure，今依定义即文法之 «闭» 与 «所闭»；其律由文法之律证出。"
+      }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "withinClosure_iff_reached and withinClosure_of_line, proved from «所闭当且仅当同一或及».",
+        "zh": "withinClosure_iff_reached 与 withinClosure_of_line，由 «所闭当且仅当同一或及» 证出。"
+      }
+    },
+    {
+      "id": "census-balance",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "balance_over_stretch_on, the one stretch balance, represented by «程守数当且仅当可对».",
+        "zh": "balance_over_stretch_on，唯一之跨段平衡，以 «程守数当且仅当可对» 表示。"
+      }
+    },
+    {
+      "id": "more-needs-renewers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.Balances, Flow.BalancesOn and Flow.Balances.over, represented as pairings of units.",
+        "zh": "Flow.Balances、Flow.BalancesOn 与 Flow.Balances.over，以单位之配对表示。"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.lossless_iff_returns, revisits_within and the orbit laws, now proved from the line laws.",
+        "zh": "Law.lossless_iff_returns、revisits_within 与诸轨道之律，今由诸线律证出。"
+      }
+    },
+    {
+      "id": "where-a-run-goes-on",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Branching.Returns and Branching.Lossless, read as reaching itself and the predecessor fixed.",
+        "zh": "Branching.Returns 与 Branching.Lossless，读作自及与定前。"
+      }
+    },
+    {
+      "id": "attraction-is-not-returning",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.Drawn and Law.drawn_iff_not_returns, now the grammar's «入» and its law.",
+        "zh": "Law.Drawn 与 Law.drawn_iff_not_returns，今即文法之 «入» 及其律。"
+      }
+    },
+    {
+      "id": "least-loss-rest",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Amounts.rests_unrefuted and Amounts.rests, now proved from «尽则不或屡» with Amounts.falls_end.",
+        "zh": "Amounts.rests_unrefuted 与 Amounts.rests，今由 «尽则不或屡» 与 Amounts.falls_end 证出。"
+      }
+    },
+    {
+      "id": "rest-exactly-where-falls-stop",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Amounts.FallsStop, by definition the grammar's non-recurrence of strict falls.",
+        "zh": "Amounts.FallsStop，依定义即文法上严格下降之不复屡。"
+      }
+    },
+    {
+      "id": "projection-carrying-a-law",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GoAlikeUnder, image_determined_iff and carries_law_iff, now from «像定后当且仅当同行».",
+        "zh": "GoAlikeUnder、image_determined_iff 与 carries_law_iff，今由 «像定后当且仅当同行» 而得。"
+      }
+    },
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "constant_of_goAlike and goAlike_of_constant, now from the lumping laws.",
+        "zh": "constant_of_goAlike 与 goAlike_of_constant，今由归并之律而得。"
+      }
+    },
+    {
+      "id": "four-cases-of-a-part",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Includes, Web.Exceeds and Web.Admits, read as the grammar's comparisons of coreflexive relations.",
+        "zh": "Web.Includes、Web.Exceeds 与 Web.Admits，读作文法对余自反关系之比较。"
+      }
+    },
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Weighting.IncludesOn, ExceedsOn, WidensOn and MixedOn, read as the grammar's over the listed items.",
+        "zh": "Weighting.IncludesOn、ExceedsOn、WidensOn 与 MixedOn，读作文法于所列诸项上之比较。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "balance-from-conservation-along-a-relation",
+      "detail": {
+        "en": "Transfers along a relation balance a step exactly where the total is conserved on every family it closes: where a derivation of balance under a relation other than the one would begin.",
+        "zh": "沿一关系之转移平衡一步，恰在其所闭之每一族上总量守恒之处：于「一」以外之关系下推出平衡，当由此始。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GrammarLaws.gap_of_lt",
+        "Becoming.GrammarLaws.le_succ_cases",
+        "Becoming.GrammarLaws.length_insert",
+        "Becoming.GrammarLaws.length_replicate",
+        "Becoming.GrammarLaws.mem_cons_split",
+        "Becoming.GrammarLaws.prepend",
+        "Becoming.GrammarLaws.revisits_within",
+        "Becoming.GrammarLaws.skipAt",
+        "Becoming.GrammarLaws.skipAt_le",
+        "Becoming.GrammarLaws.skipAt_lt",
+        "Becoming.GrammarLaws.skipAt_ne",
+        "Becoming.GrammarLaws.split_append",
+        "Becoming.GrammarLaws.split_at_head",
+        "Becoming.GrammarLaws.total_congr",
+        "Becoming.«一之对»",
+        "Becoming.«像»",
+        "Becoming.«像定后当且仅当同行»",
+        "Becoming.«入»",
+        "Becoming.«入当且仅当有不返»",
+        "Becoming.«入而屡之例»",
+        "Becoming.«入而返之例»",
+        "Becoming.«则逾之定当且仅当排中»",
+        "Becoming.«及之所闭»",
+        "Becoming.«及即迭»",
+        "Becoming.«及当且仅当一步而所闭»",
+        "Becoming.«同行»",
+        "Becoming.«同行之迭»",
+        "Becoming.«同行之逐点»",
+        "Becoming.«同行于迭»",
+        "Becoming.«同行可续则有常»",
+        "Becoming.«同行当且仅当有常»",
+        "Becoming.«同行遍后则有常»",
+        "Becoming.«四比之周»",
+        "Becoming.«守数当且仅当可对»",
+        "Becoming.«定前»",
+        "Becoming.«定前之逐点»",
+        "Becoming.«定前则线不并»",
+        "Becoming.«定前则线可退»",
+        "Becoming.«定前即逆之定后»",
+        "Becoming.«定后»",
+        "Becoming.«定后之逐点»",
+        "Becoming.«定后于»",
+        "Becoming.«定后于之后»",
+        "Becoming.«定后于二返则不并»",
+        "Becoming.«定后于则返者不入»",
+        "Becoming.«定后于有后则入当且仅当不返»",
+        "Becoming.«定后于环则所及皆返»",
+        "Becoming.«定后于线有限则末返»",
+        "Becoming.«定后则定后于»",
+        "Becoming.«定后则返者不入»",
+        "Becoming.«定后有后则入当且仅当不返»",
+        "Becoming.«定后环则所及皆返»",
+        "Becoming.«对»",
+        "Becoming.«对之传»",
+        "Becoming.«对之单调»",
+        "Becoming.«对之取»",
+        "Becoming.«对之左插»",
+        "Becoming.«对之并»",
+        "Becoming.«对之换»",
+        "Becoming.«对之接»",
+        "Becoming.«对之族»",
+        "Becoming.«对之程»",
+        "Becoming.«对之自反»",
+        "Becoming.«对之逆»",
+        "Becoming.«对之长»",
+        "Becoming.«对则守数»",
+        "Becoming.«尽则不屡»",
+        "Becoming.«尽则不或屡»",
+        "Becoming.«局定后则有常当且仅当同行可续»",
+        "Becoming.«屡»",
+        "Becoming.«屡则或屡»",
+        "Becoming.«广»",
+        "Becoming.«广不可逆»",
+        "Becoming.«广之传递»",
+        "Becoming.«广则不则»",
+        "Becoming.«广则非杂»",
+        "Becoming.«广则非齐»",
+        "Becoming.«广非自»",
+        "Becoming.«或屡»",
+        "Becoming.«所闭»",
+        "Becoming.«所闭之传递»",
+        "Becoming.«所闭之单调»",
+        "Becoming.«所闭之对称»",
+        "Becoming.«所闭之界»",
+        "Becoming.«所闭之自反»",
+        "Becoming.«所闭之证»",
+        "Becoming.«所闭之闭»",
+        "Becoming.«所闭当且仅当同一或及»",
+        "Becoming.«无后者不入亦不返»",
+        "Becoming.«有后不返则入»",
+        "Becoming.«有常则可续»",
+        "Becoming.«有常定后则同行»",
+        "Becoming.«有常局定后则同行»",
+        "Becoming.«有限遍后定前则皆返»",
+        "Becoming.«有限遍后定后则定前当且仅当皆返»",
+        "Becoming.«杂»",
+        "Becoming.«杂之对称»",
+        "Becoming.«止而不入之例»",
+        "Becoming.«皆返定后则定前»",
+        "Becoming.«程守数当且仅当可对»",
+        "Becoming.«等长则一对»",
+        "Becoming.«等长而不对之例»",
+        "Becoming.«类同行遍后则含于核»",
+        "Becoming.«线不并»",
+        "Becoming.«线不并则可退»",
+        "Becoming.«线则及»",
+        "Becoming.«线则所闭»",
+        "Becoming.«线或在所闭»",
+        "Becoming.«线有限不并则回»",
+        "Becoming.«线有限不并则返»",
+        "Becoming.«线有限定前则返»",
+        "Becoming.«缘在所闭»",
+        "Becoming.«聚»",
+        "Becoming.«聚之长»",
+        "Becoming.«迭»",
+        "Becoming.«迭之周»",
+        "Becoming.«迭之定»",
+        "Becoming.«迭之定于»",
+        "Becoming.«迭之定前»",
+        "Becoming.«迭之接»",
+        "Becoming.«迭则及»",
+        "Becoming.«逾»",
+        "Becoming.«逾则不则»",
+        "Becoming.«遍后则有线»",
+        "Becoming.«闭»",
+        "Becoming.«闭之及»",
+        "Becoming.«闭含所闭»",
+        "Becoming.«闭而外则不所闭»",
+        "Becoming.«非定后返而不入之例»",
+        "Becoming.«齐»",
+        "Becoming.«齐之对称»",
+        "Becoming.«齐则非杂»",
+        "Becoming.«齐即谓»"
+      ],
+      "sha256": "8ea6d1471e1b5bc1334fc16344d02c5430890387aac3a057f8174317739a3964"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.WithinClosure.mono",
+        "Becoming.WithinClosure.not_rel",
+        "Becoming.WithinClosure.of_rel",
+        "Becoming.WithinClosure.refl",
+        "Becoming.WithinClosure.symm",
+        "Becoming.WithinClosure.trans",
+        "Becoming.closedUnder_iff_closed",
+        "Becoming.closedUnder_withinClosure",
+        "Becoming.closure_iff_certified",
+        "Becoming.not_within_of_closed",
+        "Becoming.withinClosure_iff_within"
+      ],
+      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Branching.Lossless.cancel",
+        "Becoming.Branching.Lossless.comes_back",
+        "Becoming.Branching.Lossless.returns",
+        "Becoming.Branching.Lossless.returns_of_total",
+        "Becoming.Branching.lossless_iff_fixedBefore",
+        "Becoming.Branching.returns_iff_reaches",
+        "Becoming.Law.Lossless.cancel",
+        "Becoming.Law.Lossless.returns",
+        "Becoming.Law.lossless_iff_fixedBefore",
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.lossless_of_returns",
+        "Becoming.Law.next_fixed",
+        "Becoming.Law.next_total",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Law.reaches_iff_orbit",
+        "Becoming.Law.reaches_of_orbit",
+        "Becoming.Law.returns_iff_reaches",
+        "Becoming.Law.returns_of_reachable",
+        "Becoming.Law.step_fixed",
+        "Becoming.Law.steps_orbit",
+        "Becoming.gap_of_lt",
+        "Becoming.le_succ_cases",
+        "Becoming.mem_cons_split",
+        "Becoming.revisits_within",
+        "Becoming.skipAt",
+        "Becoming.skipAt_le",
+        "Becoming.skipAt_lt",
+        "Becoming.skipAt_ne",
+        "Becoming.split_at_head"
+      ],
+      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.Drawn.not_returns",
+        "Becoming.Law.absorbing_iff_closed",
+        "Becoming.Law.drawn_iff_drawnIn",
+        "Becoming.Law.drawn_iff_not_returns"
+      ],
+      "sha256": "eaa2f89b8cbcb52b6347962600700d18a96c6d3864cd9d2582ffae0d7ff963ec"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.determined_iff_fixed",
+        "Becoming.goAlikeUnder_iff_alike"
+      ],
+      "sha256": "4592f6aecfe22717a8b28ae60369687c5c9b2d92f1d69c804e76087f2d8ca4ac"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.image_determined_iff",
+        "Becoming.image_step_iff"
+      ],
+      "sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.sameFuture_of_goAlike"
+      ],
+      "sha256": "f856ebcbc2cd8e034600f54e35f619372136e16c414c2fe14d0cc11ad495bc79"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.constant_of_goAlike",
+        "Becoming.goAlike_of_constant"
+      ],
+      "sha256": "b24f3482898c95886d483c1eeb868ccb7412459eafa24d0dce70646a3884d79f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.eq_or_reach_iff_reached",
+        "Becoming.withinClosure_iff_reached",
+        "Becoming.withinClosure_of_line"
+      ],
+      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Keeps.not_mixed",
+        "Becoming.Web.Keeps.symm",
+        "Becoming.Web.Mixed.symm",
+        "Becoming.Web.Widens.not_keeps",
+        "Becoming.Web.Widens.not_mixed",
+        "Becoming.Web.Widens.not_reverse",
+        "Becoming.Web.Widens.trans",
+        "Becoming.Web.keeps_iff",
+        "Becoming.Web.mixed_iff",
+        "Becoming.Web.widens_iff"
+      ],
+      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Includes.not_exceeded",
+        "Becoming.Web.Includes.refl",
+        "Becoming.Web.Includes.trans",
+        "Becoming.Web.admitted",
+        "Becoming.Web.exceeds_iff",
+        "Becoming.Web.includes_iff"
+      ],
+      "sha256": "767d9a4b834fff22258376d97242e8ed4f71203005f350088cf5297ce40736f0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.BalancesOn.units_over",
+        "Becoming.Flow.balancesOn_iff_units",
+        "Becoming.Flow.balances_iff_units",
+        "Becoming.Flow.balances_of_matched",
+        "Becoming.Flow.over_iff_units",
+        "Becoming.total_congr"
+      ],
+      "sha256": "88cfbe49dcc3e30dcca82c262af37063d1ec8b7c7c7b3d900f01be07d7d46641"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts.falls_end",
+        "Becoming.Amounts.rests_unrefuted"
+      ],
+      "sha256": "6025329d5dc58597e6feb76454ed4475a58b85b8da981f2ad8143b0153dfddd5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts.fallsStop_iff",
+        "Becoming.Amounts.fallsStop_of_ends"
+      ],
+      "sha256": "cb019033b8e58f42661a7584a552d646034cbe007e9c7a70545087f37cdea9cb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Weighting.WidensOn.not_reverse",
+        "Becoming.Weighting.WidensOn.trans",
+        "Becoming.Weighting.admittedOn",
+        "Becoming.Weighting.exceedsOn_iff",
+        "Becoming.Weighting.includesOn_iff",
+        "Becoming.Weighting.mixedOn_iff",
+        "Becoming.Weighting.widensOn_iff"
+      ],
+      "sha256": "fe507d9adf7ac5a5e1f8a6d959368ecccfc60e7db7773798f10a3f6de8fcfdfe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "role": "receipt",
+      "sha256": "ff86e9dd6259761f01c3e492fcd0832402f80d7e2cdc090949eaf9eda7c43eba"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b9e8b163c0bd130a349841ed047cb3b5f89dfb3ca8acb3c78d25dfc1a9c0ebec"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3b2-NOTES.md",
+      "role": "integration",
+      "sha256": "894e7978d23162744ecc162cb07e8e82a20c7e4137ed790d23d2d36ab5a52da2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/AUDIT.md",
+      "role": "integration",
+      "sha256": "4899a5014a219b494247a6e2bd6fded52f6272a4843b1e1bd369947845fed4cc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-OU3b2.md",
+      "role": "review",
+      "sha256": "14deaaf294eb1c703768118369f03dd25fbdb8a58bd1e556cb411b71b94db53e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "role": "review",
+      "sha256": "ac4a24d28b57aea87288201a8e90939b2a0c0c18ec462024830d3d61b40f80c8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-3.md",
+      "role": "review",
+      "sha256": "dbd150cd879c039dfb97b51feb694de2f0729126e04b014a2e47ac41349e73b3"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "e75067f3a305d31a7bc341c86ef57ddaa001774a1bd866b09d72357e032a6f7c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Attraction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Laws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Mechanism",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Regions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Amounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (OU3b, with OU3b-2 and OU3b-3), the five master laws on the grammar and the models' laws proved from them, balance represented and not derived; three independent reviews taken; study section 417.",
+      "zh": "2026年10月26日：新增（OU3b，含 OU3b-2 与 OU3b-3），文法上之五条主律，模型之律由之证出，平衡表示而不推出；三次独立审查皆采；研究第 417 节。"
+    }
+  ]
+}

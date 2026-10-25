@@ -1,0 +1,70 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean
+index d8fd23e0996c99c624076d8929a8798bfc841476..4275c34d80243b51c7371f574da8eddd939374b4 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean
+@@ -1,4 +1,5 @@
+ import Becoming.Prelude
++import Becoming.GrammarLaws
+ 
+ /-!
+ # Amounts: rest over amounts that may be dense
+@@ -10,7 +11,8 @@ laws are its whole-number instance: `Becoming.Renewal` proves `falls_not_recurri
+ `Amounts.rests`, `Becoming.Space` proves `falls_stop_unrefuted` from `Amounts.rests_unrefuted`, and
+ `Becoming.Dissipation` and `Becoming.Openness` prove the family laws and the stopping of change from
+ `Amounts.family_rests_of_archimedean`, `Amounts.losses_within` and `Amounts.rests_unrefuted`. It
+-imports only `Becoming.Prelude`, so it lies below every module that reads a level.
++imports only `Becoming.Prelude` and the grammar's master laws (`Becoming.GrammarLaws`), so it lies
++below every module that reads a level.
+ 
+ * **Amounts.** An addition, associative and commutative with nothing as its unit, and an order
+   that addition keeps and that cancels, with nothing least (`Amounts`). Nothing more is asked:
+@@ -37,7 +39,12 @@ imports only `Becoming.Prelude`, so it lies below every module that reads a leve
+   as can be refuted, it is not the case that after every step from `T` on a later such step stays
+   unrefuted (`Amounts.rests_unrefuted`). The two premises are the least loss `ε` and the bound of
+   the stock by finitely many least losses. In Archimedean amounts the bound holds for every `ε`
+-  above nothing, so a least loss alone brings rest (`Amounts.rests_of_archimedean`).
++  above nothing, so a least loss alone brings rest (`Amounts.rests_of_archimedean`). The law is
++  the grammar's law of rest (`«尽则不或屡»`) at the amounts: read the amounts as occurrences, not
++  rising as `Q` (`M.le b a`) and a least fall as `F` (`M.le (b + ε) a`); within fewer than `m`
++  least losses every course of no rise then a least fall ends (`Amounts.falls_end`, an `«尽»`), and
++  falls that end do not recur. The bound is one way to the ending, not the only one: the grammar's
++  law asks only that the courses end.
+ * **A family at rest.** Read a family's stock, uptake and replenishment as amounts: where from
+   `T` on the stock after a step with the uptake is within the stock before with the
+   replenishment, the replenishment is within the uptake, at each step at which `P` holds the
+@@ -181,18 +188,32 @@ theorem loses_times {s : Nat → A} {ε : A} {P : Nat → Prop} {T : Nat}
+                         (Eq.subst (motive := fun x => M.le (s x) (s u)) same down))
+                       within))⟩
+ 
++/-- **Within fewer than `m` least losses, falls end.** Where `m` copies of `ε` are not within `a`,
++every course from `a` of no rise (`M.le b a`, closed under the grammar's closure) then a fall by at
++least `ε` ends (`«尽»`): each such course lowers by `ε` the number of copies the amount can still
++hold. -/
++theorem falls_end {ε : A} : ∀ (m : Nat) (a : A), ¬ M.le (M.times m ε) a →
++    «尽» («而» («所闭» (fun a b => M.le b a)) (fun a b => M.le (M.add b ε) a)) «一» a
++  | 0, a, within => absurd (M.zero_le a) within
++  | m + 1, a, within => .mk fun y ⟨⟨_, below, fall⟩, _⟩ => falls_end m y fun le =>
++      within (M.le_trans (M.add_le_add_right ε le) (M.le_trans fall
++        (below (fun z => M.le z a) (fun _ _ inside step => M.le_trans step inside) (M.le_refl a))))
++
+ /-- **The least-loss law of rest.** Where an amount does not rise from `T` on, falls by at least
+ `ε` across each step at which `P` holds, each as far as can be refuted, and `m` copies of `ε` are
+ not within its value at `T`, it is not the case that after every step from `T` on a later step at
+ which `P` holds stays unrefuted. Two premises carry the conclusion: the least loss `ε` at each
+-step at which `P` holds, and the amount at `T` lying within fewer than `m` least losses. -/
++step at which `P` holds, and the amount at `T` lying within fewer than `m` least losses. It is the
++grammar's law of rest (`«尽则不或屡»`) at the amounts, the falls ending by `Amounts.falls_end`. -/
+ theorem rests_unrefuted {s : Nat → A} {ε : A} {P : Nat → Prop} {T m : Nat}
+     (still : ∀ t, T ≤ t → ¬¬ M.le (s (t + 1)) (s t))
+     (loses : ∀ t, T ≤ t → P t → ¬¬ M.le (M.add (s (t + 1)) ε) (s t))
+     (within : ¬ M.le (M.times m ε) (s T)) :
+     ¬ ∀ N, T ≤ N → ¬¬ ∃ t, N ≤ t ∧ P t :=
+-  fun recurs => loses_times still loses recurs m fun ⟨u, _, le⟩ =>
+-    within (M.le_trans (le_add_left (M.times m ε) (s u)) le)
++  fun recurs => «尽则不或屡» (Q := fun a b => M.le b a) (F := fun a b => M.le (M.add b ε) a)
++    (g := s) still (falls_end m (s T) within)
++    (fun N from_ no => recurs N from_ fun ⟨t, later, holds⟩ =>
++      loses t (Nat.le_trans from_ later) holds fun fall => no ⟨t, later, fall⟩)
+ 
+ /-- So, with the premises holding outright, steps at which `P` holds do not recur. -/
+ theorem rests {s : Nat → A} {ε : A} {P : Nat → Prop} {T m : Nat}

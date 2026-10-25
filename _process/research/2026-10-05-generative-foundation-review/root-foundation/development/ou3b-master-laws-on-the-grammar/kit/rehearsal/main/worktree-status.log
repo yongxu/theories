@@ -1,0 +1,51 @@
+worktree base: ba3e42d27
+ M DEPENDENCIES.md
+ M RESULTS.md
+ M _process/BECOMING-WORKBOARD.md
+ M _process/architecture/generated-manifest.json
+ M _process/architecture/rebinds.jsonl
+ M _process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md
+ M _process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md
+ M _process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md
+ M _process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json
+ M _process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json
+ M _process/research/README.md
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json
+ M experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+ M theories/becoming/chapters/01-ROOT.md
+ M theories/becoming/chapters/08-METHOD.md
+ M theories/becoming/results/LEAN-DECLARATIONS.md
+ M theories/becoming/results/LEAN-INDEX.md
+ M theories/becoming/results/RESULT-REGISTER.md
+ M theories/becoming/results/THEORY-GRAPH.md
+ M theories/becoming/results/completion/COMPLETION.md
+ M theories/becoming/results/completion/COVERAGE.json
+ M theories/becoming/results/data/lean-index.json
+ M theories/becoming/results/data/regions.json
+ M theories/becoming/results/data/source-index.json
+ M theories/becoming/results/data/theory-graph.json
+ M theories/becoming/results/lean-declarations/becoming-core.md
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/LANDING.md
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/after.json
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/kit/
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T180839.731606Z/
+records changed or added: 345
+ 386 files changed, 10424 insertions(+), 12935 deletions(-)

@@ -1,0 +1,72 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean
+index 6103a4e89d5e76c3001fe5f75cc89723686c616c..d0d8e93662ff8bb9092af7cd18838bfc9ff0dd96 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean
+@@ -395,6 +395,10 @@ depend on one another, which webs actual families have and what each formation c
+ families form a hierarchy and that nothing enters one below its top, the decision of activity and
+ identity the exact law of need uses, and that a standpoint's order is increasing in its own
+ continuation.
++Read as coreflexive relations on the listed items (`Weighting.admittedOn`), including, exceeding,
++widening and being mixed are the grammar's (`Weighting.includesOn_iff`, `Weighting.exceedsOn_iff`,
++`Weighting.widensOn_iff`, `Weighting.mixedOn_iff`, of `Becoming.GrammarLaws`), and widening's
++order laws are the grammar's (`Weighting.WidensOn.not_reverse`, `Weighting.WidensOn.trans`).
+ The representation commits to finite listings of steps and formations, two-valued admission and
+ natural-number weights. No ethical predicate or axiom occurs.
+ -/
+@@ -432,6 +436,56 @@ def WidensOn (items : List X) (a b : X → Bool) : Prop :=
+ def MixedOn (items : List X) (a b : X → Bool) : Prop :=
+   ExceedsOn items a b ∧ ExceedsOn items b a
+ 
++/-! ### The comparisons on the grammar
++
++What a course admits among the listed items is a coreflexive relation (a partial identity, the
++standard representation of a set by a relation): each listed item it admits is related to itself
++and nothing else is related (`admittedOn`). Read so, including, exceeding, widening and being
++mixed are the grammar's `«则»`, `«逾»`, `«广»` and `«杂»`, both ways and with no hypothesis, and
++the order laws of widening are the grammar's (`«广不可逆»`, `«广之传递»`), as for the paths of a
++web (`Web.admitted`). -/
++
++/-- What `a` admits among the listed items, as a coreflexive relation. -/
++def admittedOn (items : List X) (a : X → Bool) : «际» X :=
++  fun x y => x = y ∧ x ∈ items ∧ a x = true
++
++/-- **Including on the listed items is the grammar's inclusion** (`«则»`), both ways. -/
++theorem includesOn_iff {items : List X} {a b : X → Bool} :
++    IncludesOn items a b ↔ «则» (admittedOn items b) (admittedOn items a) :=
++  ⟨fun includes _ _ ⟨e, listed, admits⟩ => ⟨e, listed, includes _ listed admits⟩,
++   fun inside x listed admits => (inside x x ⟨rfl, listed, admits⟩).2.2⟩
++
++/-- **Exceeding on the listed items is the grammar's** (`«逾»`), both ways. -/
++theorem exceedsOn_iff {items : List X} {a b : X → Bool} :
++    ExceedsOn items a b ↔ «逾» (admittedOn items a) (admittedOn items b) :=
++  ⟨fun ⟨x, listed, admits, not⟩ => ⟨x, x, ⟨rfl, listed, admits⟩,
++      fun ⟨_, _, other⟩ => Bool.noConfusion (not.symm.trans other)⟩,
++   fun ⟨x, _, ⟨e, listed, admits⟩, not⟩ => ⟨x, listed, admits, match h : b x with
++      | true => absurd ⟨e, listed, h⟩ not
++      | false => rfl⟩⟩
++
++/-- **Widening on the listed items is the grammar's** (`«广»`), both ways. -/
++theorem widensOn_iff {items : List X} {a b : X → Bool} :
++    WidensOn items a b ↔ «广» (admittedOn items a) (admittedOn items b) :=
++  ⟨fun ⟨includes, exceeds⟩ => ⟨includesOn_iff.mp includes, exceedsOn_iff.mp exceeds⟩,
++   fun ⟨inside, exceeds⟩ => ⟨includesOn_iff.mpr inside, exceedsOn_iff.mpr exceeds⟩⟩
++
++/-- **Being mixed on the listed items is the grammar's** (`«杂»`), both ways. -/
++theorem mixedOn_iff {items : List X} {a b : X → Bool} :
++    MixedOn items a b ↔ «杂» (admittedOn items a) (admittedOn items b) :=
++  ⟨fun ⟨one, other⟩ => ⟨exceedsOn_iff.mp one, exceedsOn_iff.mp other⟩,
++   fun ⟨one, other⟩ => ⟨exceedsOn_iff.mpr one, exceedsOn_iff.mpr other⟩⟩
++
++/-- Widening on the listed items goes one way (`«广不可逆»`). -/
++theorem WidensOn.not_reverse {items : List X} {a b : X → Bool} (widens : WidensOn items a b) :
++    ¬ WidensOn items b a :=
++  fun back => «广不可逆» (widensOn_iff.mp widens) (widensOn_iff.mp back)
++
++/-- Widening on the listed items is transitive (`«广之传递»`). -/
++theorem WidensOn.trans {items : List X} {a b c : X → Bool} (first : WidensOn items a b)
++    (second : WidensOn items b c) : WidensOn items a c :=
++  widensOn_iff.mpr («广之传递» (widensOn_iff.mp first) (widensOn_iff.mp second))
++
+ theorem term_le {w : Nat} : ∀ {a b : Bool}, (b = true → a = true) → cond b w 0 ≤ cond a w 0
+   | _, false, _ => Nat.zero_le _
+   | true, true, _ => Nat.le_refl w

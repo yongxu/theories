@@ -1,0 +1,33 @@
+OU3b: proposed lines for the one page and the overview (optional; not applied by the kit)
+
+AI-written, 26 October 2026. These pages belong to NR, so the kit does not edit them. Each pair gives the exact
+current line (as on main at 21d67b95d) and its proposed replacement; apply a pair only if its old line is still
+there, byte for byte. The link target is the new record's home section, which the kit writes into 01 §7. There is no
+Chinese edition of 01, so the Chinese pages link the English chapter, as they already do for 01.
+
+== theories/becoming/ONE-PAGE.md, line 27
+OLD:
+- Most laws are proved on the models, not yet restated on the grammar itself.
+NEW:
+- Most laws are proved on the models, not yet restated on the grammar itself. The five master laws are: the models' laws of closure, finite runs, lumping and order are proved from them, and balance is represented, not derived ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
+
+== theories/becoming/ONE-PAGE.zh.md, line 27
+OLD:
+- 多数律是在模型上证明的，尚未在文法本身上重新陈述。
+NEW:
+- 多数律是在模型上证明的，尚未在文法本身上重新陈述。五条主律已在文法上陈述：模型上闭包、有限运行、归并与序之律由之证出，平衡则只表示、不推出（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
+
+== theories/becoming/THE-THEORY-OF-BECOMING.md, line 225
+OLD:
+- **Lifting.** Most laws are proved on the World or on processes and not yet restated on the grammar, which has no amounts yet ([08](chapters/08-METHOD.md#expressible-is-not-derived)).
+NEW:
+- **Lifting.** Most laws are proved on the World or on processes and not yet restated on the grammar, which has no amounts yet ([08](chapters/08-METHOD.md#expressible-is-not-derived)). The five master laws are restated on it, the models' laws proved from them and balance represented by pairing units, not derived ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
+
+== theories/becoming/THE-THEORY-OF-BECOMING.zh.md, line 227
+OLD:
+- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。
+NEW:
+- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。五条主律已在文法上重新陈述，模型之律由之证出，平衡以单位之配对表示，不推出（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
+
+Records citing these pages will drift where a line they cite changes; read them and re-point with
+tools/research/repoint.py --paths <the page> --ids <the records>, as for any text change.
